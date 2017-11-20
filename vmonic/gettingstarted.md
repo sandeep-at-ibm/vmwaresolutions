@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-09-28"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -14,7 +14,7 @@ Review important information about requirements and user accounts before startin
 
 ## {{site.data.keyword.vmwaresolutions_short}} console
 
-The {{site.data.keyword.vmwaresolutions_short}} console is the interface where you order and manage your deployments. Each deployment is managed as an instance in the console. The console is a stand-alone user interface that is separate from the IBM Bluemix Infrastructure (SoftLayer) Customer Portal.
+The {{site.data.keyword.vmwaresolutions_short}} console is the interface where you order and manage your deployments. Each deployment is managed as an instance in the console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.slportal_full}}.
 
 **Note**: {{site.data.keyword.vmwaresolutions_short}} is an English-only release. Therefore, all features on the console, including the product documentation, are available in English only.
 
@@ -22,18 +22,18 @@ The {{site.data.keyword.vmwaresolutions_short}} console is the interface where y
 
 To access the {{site.data.keyword.vmwaresolutions_short}} console, you must have an **IBMid**.
 
-{{site.data.keyword.vmwaresolutions_short}} is provided as an infrastructure solution in the Bluemix® catalog. Therefore, to use your **IBMid** to log in to the {{site.data.keyword.vmwaresolutions_short}} console, you must associate the **IBMid** with a Bluemix account.
+{{site.data.keyword.vmwaresolutions_short}} is provided as an infrastructure solution in the {{site.data.keyword.cloud}} catalog. Therefore, to use your **IBMid** to log in to the {{site.data.keyword.vmwaresolutions_short}} console, you must associate the **IBMid** with an {{site.data.keyword.cloud_notm}} account.
 
-When you log in to the console for the first time, you are guided to either associate your **IBMid** with a Bluemix account, or
-to sign up for a new Bluemix account that is automatically associated with your **IBMid**. You need to go through this process only once.
+When you log in to the console for the first time, you are guided to either associate your **IBMid** with an {{site.data.keyword.cloud_notm}} account, or
+to sign up for a new {{site.data.keyword.cloud_notm}} account that is automatically associated with your **IBMid**. You need to go through this process only once.
 
-If you have problems associating your **IBMid** with a Bluemix account, see [Troubleshooting for accessing Bluemix](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html){:new_window}.
+If you have problems associating your **IBMid** with an {{site.data.keyword.cloud_notm}} account, see [Troubleshooting for accessing {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html){:new_window}.
 
-## Bluemix Infrastructure (SoftLayer) account
+## {{site.data.keyword.cloud_notm}} account
 
-To use the deployment offerings, you must have an IBM Bluemix Infrastructure (SoftLayer) account. The cost of the physical and virtual infrastructure and the resulting licenses are charged to your Bluemix Infrastructure account. For more information about account requirements, see [Bluemix Infrastructure account requirements](slaccountrequirement.html).
+To use the deployment offerings, you must have an {{site.data.keyword.cloud_notm}} account. The cost of the physical and virtual infrastructure and the resulting licenses are charged to your {{site.data.keyword.cloud_notm}} account. For more information about account requirements, see [{{site.data.keyword.cloud_notm}} account requirements](slaccountrequirement.html).
 
-**Note**: You can associate only one Bluemix Infrastructure account to an {{site.data.keyword.vmwaresolutions_short}} account.
+**Note**: You can associate only one {{site.data.keyword.cloud_notm}} account to an {{site.data.keyword.vmwaresolutions_short}} account.
 
 ## Browser and resolution requirements
 

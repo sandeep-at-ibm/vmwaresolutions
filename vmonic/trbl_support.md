@@ -4,23 +4,22 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-09-29"
+lastupdated: "2017-11-10"
 
 ---
 
 # Contacting IBM Support
 
-If you need assistance with {{site.data.keyword.vmwaresolutions_full}}, create a Bluemix Support ticket to get assistance through one of the following channels:
+If you need assistance with {{site.data.keyword.vmwaresolutions_full}}, create an {{site.data.keyword.cloud_notm}} Support ticket to get assistance through one of the following channels:
 
-## From the {{site.data.keyword.vmwaresolutions_short}} console
-
+## From the IBM Cloud for VMware Solutions console
 To contact IBM Support from the {{site.data.keyword.vmwaresolutions_short}} console, complete the following steps:
 
 1. Go to
    https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
 2. Log in to the console with your **IBMid** account.
 3. At the upper-right corner of the console, click **Support > Add Ticket**.
-4. On the IBM Bluemix Infrastructure (SoftLayer) portal page, click **Log in with IBMid**, and then you are automatically logged in to the portal.
+4. On the {{site.data.keyword.slportal_full}} page, click **Log in with IBMid**, and then you are automatically logged in to the portal.
 5. Review the _IBM Bluemix® Infrastructure and Platform Services Support Policy_, and then click **Acknowledge**.
 6. Click **Support > Add Ticket** on the banner.
 7. On the **Add Ticket** page, provide the following information:
@@ -38,9 +37,9 @@ To contact IBM Support from the {{site.data.keyword.vmwaresolutions_short}} cons
    ticket after you create it.  
 8. Click **Add Ticket** to submit.
 
-## From the Bluemix Infrastructure (SoftLayer) portal
+## From the IBM Cloud infrastructure customer portal
 
-To contact IBM Support from the Bluemix Infrastructure (SoftLayer) portal, complete the following steps:
+To contact IBM Support from the {{site.data.keyword.slportal_full}}, complete the following steps:
 
 1. Go to https://control.softlayer.com.
 2. Log in to the portal with your **IBMid** account.

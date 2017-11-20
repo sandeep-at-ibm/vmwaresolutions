@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-09-26"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -18,7 +18,7 @@ For vCenter Server instances, the Zerto disaster recovery service is installed o
 
 On the additional clusters, you must install Zerto disaster recovery separately.
 
-Open a Bluemix Support ticket and work with IBM Support to obtain available IP addresses for you to install the VRAs from the Zerto console, instead of the {{site.data.keyword.vmwaresolutions_full}} console.
+Open an {{site.data.keyword.cloud_notm}} Support ticket and work with IBM Support to obtain available IP addresses for you to install the VRAs from the Zerto console, instead of the {{site.data.keyword.vmwaresolutions_full}} console.
 
 To access the Zerto console, click the Zerto card from the **Services** tab of the instance and click **View Details** then, **View Zerto Console**.
 
