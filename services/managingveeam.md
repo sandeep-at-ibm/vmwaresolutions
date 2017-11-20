@@ -4,32 +4,32 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-09-26"
+lastupdated: "2017-11-09"
 
 ---
 
 # Managing Veeam on IBM Cloud
 
-For instances that were deployed in releases earlier than V1.8, you must replace the existing Veeam VSI in the instances with the new Veeam on IBM® Cloud service. After the service is deployed into your instance, you can access the Veeam console by using RDP to manage the backup and restore of all the virtual machines in your environment, including the backup and restore of the management components. You can also upgrade the service by downloading and installing the Veeam updates from the Veeam website.
+For instances that were deployed in releases earlier than V1.8, you must replace the existing Veeam VSI in the instances with the new Veeam on {{site.data.keyword.cloud}} service. After the service is deployed into your instance, you can access the Veeam console by using RDP to manage the backup and restore of all the virtual machines in your environment, including the backup and restore of the management components. You can also upgrade the service by downloading and installing the Veeam updates from the Veeam website.
 
 ## Replacing the Veeam VSI of pre-V1.8 instances with Veeam on IBM Cloud
 
-The new Veeam on IBM Cloud service, which can back up both management components and workloads, supersedes the previous Veeam VSI that was integrated into VMware Cloud Foundation and VMware vCenter Server in releases earlier than V1.8 for the backup of management components only. Because of this change, the previous **Backup and Restore** tab on the instance details page is removed and the backup points for the instances are no longer available in the {{site.data.keyword.vmwaresolutions_full}} console, although the Veeam VSI in the pre-V1.8 instances keeps working. You must create a Bluemix Support ticket to get assistance with a restore. In addition, the license of the Veeam VSI in pre-V1.8 instances expires on October 14, 2017. Therefore, you must replace the previous Veeam VSI with the new Veeam on IBM Cloud service at your earliest convenience.
+The new Veeam on {{site.data.keyword.cloud_notm}} service, which can back up both management components and workloads, supersedes the previous Veeam VSI that was integrated into VMware Cloud Foundation and VMware vCenter Server in releases earlier than V1.8 for the backup of management components only. Because of this change, the previous **Backup and Restore** tab on the instance details page is removed and the backup points for the instances are no longer available in the {{site.data.keyword.vmwaresolutions_full}} console, although the Veeam VSI in the pre-V1.8 instances keeps working. You must create an {{site.data.keyword.cloud_notm}} Support ticket to get assistance with a restore. In addition, the license of the Veeam VSI in pre-V1.8 instances expires on October 14, 2017. Therefore, you must replace the previous Veeam VSI with the new Veeam on {{site.data.keyword.cloud_notm}} service at your earliest convenience.
 
-To replace the Veeam VSI of pre-V1.8 instances with the new Veeam on IBM Cloud service, complete the following steps:
+To replace the Veeam VSI of pre-V1.8 instances with the new Veeam on {{site.data.keyword.cloud_notm}} service, complete the following steps:
 1. In the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane, and then click the target instance.
 2. On the instance details page, click the **Update and Patch** tab. Ensure that you upgraded the instance to the V1.8 release.
 3. Click the **Services** tab.
-4. On the **Add Services** tab, install the Veeam on IBM Cloud service.
+4. On the **Add Services** tab, install the Veeam on {{site.data.keyword.cloud_notm}} service.
 
-After the new Veeam on IBM Cloud service is deployed and a successful backup of your management components is completed, you can remove the existing Veeam VSI from your account by creating a Bluemix Support ticket. IBM Support will then identify and delete the existing Veeam VSI and storage.
+After the new Veeam on {{site.data.keyword.cloud_notm}} service is deployed and a successful backup of your management components is completed, you can remove the existing Veeam VSI from your account by creating an {{site.data.keyword.cloud_notm}} Support ticket. IBM Support will then identify and delete the existing Veeam VSI and storage.
 
 ## Accessing the Veeam console by using RDP
 
-To manage the Veeam on IBM Cloud service, you must access the Veeam console by completing the following steps:
-1. Use Remote Desktop Protocol (RDP) to connect to the Windows IP address that you can find on the Veeam on IBM Cloud service details page.
-2. Log in to the Windows console by using the Administrator credentials that you can find on the Veeam on IBM Cloud service details page.
-3. Access the Veeam console from the Windows console by using the Administrator credentials that you can find on the Veeam on IBM Cloud service details page.
+To manage the Veeam on {{site.data.keyword.cloud_notm}} service, you must access the Veeam console by completing the following steps:
+1. Use Remote Desktop Protocol (RDP) to connect to the Windows IP address that you can find on the Veeam on {{site.data.keyword.cloud_notm}} service details page.
+2. Log in to the Windows console by using the Administrator credentials that you can find on the Veeam on {{site.data.keyword.cloud_notm}} service details page.
+3. Access the Veeam console from the Windows console by using the Administrator credentials that you can find on the Veeam on {{site.data.keyword.cloud_notm}} service details page.
 
 For more information, see the following topics:
 * [Ordering and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
@@ -37,7 +37,7 @@ For more information, see the following topics:
 
 ## Backing up and restoring management components for instances with Veeam on IBM Cloud installed
 
-The Veeam on IBM Cloud service is preconfigured with a management backup job that automatically runs to back up the following management components daily with up to 14 points of restoration:
+The Veeam on {{site.data.keyword.cloud_notm}} service is preconfigured with a management backup job that automatically runs to back up the following management components daily with up to 14 points of restoration:
 * VMware vCenter Server
 * Platform Services Controller (PSC)
 * IBM CloudDriver
@@ -49,12 +49,12 @@ When failures occur on the management components, you can restore the management
 
 ## Upgrading Veeam on IBM Cloud
 
-To upgrade the Veeam on IBM Cloud service, download the Veeam updates from the Veeam website, copy the updates to the Veeam
+To upgrade the Veeam on {{site.data.keyword.cloud_notm}} service, download the Veeam updates from the Veeam website, copy the updates to the Veeam
 VSI, and then install them.
 
 ## Related links
 
-* [Components and considerations for Veeam on IBM Cloud](veeamconsiderations.html)
+* [Components and considerations for Veeam on {{site.data.keyword.cloud_notm}}](veeamconsiderations.html)
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)

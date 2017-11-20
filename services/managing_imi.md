@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-02"
+lastupdated: "2017-11-09"
 
 ---
 
@@ -22,7 +22,7 @@ IMI provides managed services for your Cloud Foundation instances, which include
 2. Scroll down the page and, under **Add services to your instance**, click **Learn More** on the **Managed Services from IMI** service card.
 3. On the **Managed Services from IMI** page, on the **Engage IMI Pre-Sales** box, enter a description of your requirements for IMI services and click **Request a consultation**.
 
-An IMI Pre-Sales representative will contact you via your Bluemix contact information and help you with the services that you need.
+An IMI Pre-Sales representative will contact you via your {{site.data.keyword.cloud_notm}} contact information and help you with the services that you need.
 
 ## Related links
 
