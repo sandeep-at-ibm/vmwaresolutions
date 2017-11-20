@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-11"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2017-10-11"
 
 Review the following requirements before you order your VMware vCenter Server instances. Plan your instance based on the IBM Cloud data center location, your workload capacity requirements, and additional service requirements.
 
-## IBM Bluemix Infrastructure (SoftLayer) account requirements
+## IBM Cloud infrastructure account requirements
 
-The Bluemix Infrastructure (SoftLayer) account that you are using must meet certain requirements. For more information, see [Bluemix Infrastructure (SoftLayer) account requirements](../vmonic/slaccountrequirement.html).
+The {{site.data.keyword.cloud}} infrastructure account that you are using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} account requirements](../vmonic/slaccountrequirement.html).
 
 ## Data centers availability
 
@@ -78,9 +78,13 @@ This service is selected by default and is configured to back up the management 
 
 This service optimizes performance and ensures availability and security for applications with the F5 BIG-IP Virtual Edition (VE). For more information, see [Managing F5 on IBM Cloud](../services/managing_f5.html).
 
-### Fortinet on IBM Cloud
+### FortiGate Security Appliance on IBM Cloud
 
-This service deploys an HA-pair of FortiGate Security Appliance (FSA) 300 series devices that can provide firewall, routing, NAT, and VPN services to protect the public network connection to your environment. For more information, see [Managing Fortinet on IBM Cloud](../services/managingfsa.html).
+This service deploys an HA-pair of FortiGate Security Appliance (FSA) 300 series devices that can provide firewall, routing, NAT, and VPN services to protect the public network connection to your environment. For more information, see [Managing FortiGate Security Appliance on IBM Cloud](../services/managingfsa.html).
+
+### FortiGate Virtual Appliance on IBM Cloud
+
+This service deploys an HA-pair of FortiGate Virtual Appliances that can allow you to reduce risk by implementing critical security controls within your virtual infrastructure. For more information, see [Managing FortiGate Virtual Appliance on IBM Cloud](../services/managingfortinetvm.html).
 
 ### Zerto on IBM Cloud
 

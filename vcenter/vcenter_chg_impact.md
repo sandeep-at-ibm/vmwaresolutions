@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-10"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -16,7 +16,7 @@ Changing resources or subnets that are reserved for {{site.data.keyword.vmwareso
 
 The following table lists the operations that might be impacted if the SSO administrator changes VMware vCenter Server resources outside of the {{site.data.keyword.vmwaresolutions_short}} console. If a solution to recover is available, it is provided as well.
 
-This table is applicable to versions V1.8 and earlier only. For V1.9 and later, if the VMware vCenter Server instance is in a **Ready to Use** state, you can modify the VMware virtual datacenter, cluster, switches, port groups, and data store names from the VMware vSphere Web Client.
+This table is applicable to versions V1.8 and earlier only. For V1.9 and later, if the VMware vCenter Server instance is in a **Ready to Use** state, you can modify the VMware virtual datacenter, cluster, switches, port groups, and customer datastore names from the VMware vSphere Web Client. However, you must not change the name of the management datastore from it's default, **management-datastore**.
 
 Table 1. Operations that are impacted by changing VMware resources
 

@@ -4,9 +4,11 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-05"
+lastupdated: "2017-10-23"
 
 ---
+
+{:tip: .tip}
 
 # Applying updates to vCenter Server instances
 
@@ -42,19 +44,22 @@ Before an update operation is started, a backup of the management virtual machin
 3. Click the **Update and Patch** tab.
 4. For license upgrades, click **Upgrade License** to upgrade to one of the available NSX editions.
 
-    **Note**: The license upgrade replaces all existing NSX licenses in your IBM Bluemix Infrastructure (SoftLayer) account with the new license. Additional charges may be incurred from an overlap of old and new licenses if you upgrade in the middle of a billing cycle. Upgrade the license at the end of the billing cycle to avoid additional charges.
+    **Note**: The license upgrade replaces all existing NSX licenses in your  {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account with the new license. Additional charges may be incurred from an overlap of old and new licenses if you upgrade in the middle of a billing cycle. Upgrade the license at the end of the billing cycle to avoid additional charges.
 
 5. For software updates, click the down arrow to expand the update that you want to apply and then complete one of the following steps:
    *  To start the update immediately, click the overflow menu icon in the **Actions** column of the update entry, and then click
    **Update Now**.
    *  To schedule a future update, click the overflow menu icon in the **Actions** column of the update entry, and then click **Schedule
    Update**. Select the date, time, and time zone when you want the update to be started. Click **OK**.
+6. If you are applying updates to vCenter servers instances in multi-site deployment configuration, a section titled **Steps Required to Update** is displayed. This section lists the update operations required for all instances in the multi-site deployment. You must complete the steps in sequence by clicking **Apply Update** for each step. You must wait for the previous step to complete before you start the next step.   
 
 ## Results
 
 After you apply an update, a record appears in the software update status list, where you can view the detailed progress and status of
-the update. To retrieve the most recent status for an update job, click the refresh icon, which is in the upper right of the software
-updates list. When the update is completed successfully, a record appears in the installed software updates list.
+the update. When the update is completed successfully, a record appears in the installed software updates list.
+
+To retrieve the most recent status for an update job, click the refresh icon in the upper right of the page.
+{:tip}
 
 If the update process fails at a specific step, [contact IBM Support](../vmonic/trbl_support.html) for assistance. You will be advised how to resolve the problem and guided to attempt the upgrade again from the step that failed.
 
