@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-09-28"
+lastupdated: "2017-11-19"
 
 ---
 
@@ -23,8 +23,8 @@ The removal process of the Zerto on IBM® Cloud service is automated. The follow
    1. Remove the Zerto Virtual Replication Appliances that were deployed to all ESXi servers.
    2. Uninstall Zerto Virtual Replication.
    3. Delete the Windows VSI (Virtual Service Instance) on which Zerto Virtual Replication was installed.
-   4. Return the private portable subnet that was ordered for Zerto Virtual Replication communication to IBM Bluemix Infrastructure (SoftLayer).   
-   5. Remove the charges of the Zerto disaster recovery service from your IBM Bluemix® billing statement.
+   4. Return the private portable subnet that was ordered for Zerto Virtual Replication communication to IBM Cloud  infrastructure.   
+   5. Remove the charges of the Zerto disaster recovery service from your IBM Cloud billing statement.
 
       **Note**: You are billed until the end of the billing cycle for the removed Zerto disaster recovery service.
 
