@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-17"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -61,22 +61,15 @@ Storage settings are based on your selection of either vSAN or NFS.
 
 For vSAN, you select the User customized Bare Metal Server configuration and you can customize the VMware vSAN storage for your instance by specifying the following settings under **Storage**:
 
-* **Number of vSAN Capacity Disks**: Specify the number of disks for the vSAN shared storage that you want to add. The disks must be in the range 2 - 8.
-
-<<<<<<< HEAD
-Specify the number of disks for the vSAN shared storage that you want to add. The disk quanitity must be 2, 4, 6, or 8.
-=======
+* **Number of vSAN Capacity Disks**: Specify the number of disks for the vSAN shared storage that you want to add. The disk quanitity must be 2, 4, 6, or 8.
 * **Disk Type and Size for vSAN Capacity Disks**: Select the capacity that meets your shared storage needs.
->>>>>>> 4ab74e7d1e8f5bc90d3e1eaa9ccd775db45bf2a6
 
 ### NFS
 
 You can add file-level shared storage for the cluster and specify the following settings.
 
 * **Number of File Shares**: Specify the number of file shares for the shared storage that you want to add. The number of file shares must be in the range 1 - 32.
-
 * **Size**: Select the capacity that meets your shared storage needs.
-
 * **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements. The performance levels available to you depend on the size you selected and the data center location.
 
 <!--### NFS Version
