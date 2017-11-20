@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-16"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -26,10 +26,10 @@ Table 1. Available data centers for NetApp ONTAP Select instances
 |:-----|:----------------| :---------------------------|
 | AMS03 | Amsterdam | High Capacity
 | CHE01 | Chennai | High Capacity
-| DAL09 | Dallas | Medium Performance, High Capacity
-| DAL10 | Dallas | Medium Performance, High Capacity
-| DAL12 | Dallas | Medium Performance, High Capacity
-| DAL13 | Dallas | Medium Performance, High Capacity
+| DAL09 | Dallas | High Performance (Medium), High Capacity
+| DAL10 | Dallas | High Performance (Medium), High Capacity
+| DAL12 | Dallas | High Performance (Medium), High Capacity
+| DAL13 | Dallas | High Performance (Medium), High Capacity
 | FRA02 | Frankfurt | High Capacity
 | HKG02 | Hong Kong | High Capacity
 | LON02 | London | High Capacity
@@ -43,16 +43,16 @@ Table 1. Available data centers for NetApp ONTAP Select instances
 | PAR01 | Paris | High Capacity
 | SAO01 | Sao Paulo | High Capacity
 | SEO01 | Seoul | High Capacity
-| SJC03 | San Jose | Medium Performance, High Capacity
-| SJC04 | San Jose | Medium Performance, High Capacity
+| SJC03 | San Jose | High Performance (Medium), High Capacity
+| SJC04 | San Jose | High Performance (Medium), High Capacity
 | SNG01 | Singapore | High Capacity
 | SYD01 | Sydney | High Capacity
 | SYD04 | Sydney | High Capacity
 | TOK02 | Tokyo | High Capacity
 | TOR01 | Toronto | High Capacity
-| WDC04 | Washington, DC | Medium Performance, High Capacity
-| WDC06 | Washington, DC | Medium Performance, High Capacity
-| WDC07 | Washington, DC | Medium Performance, High Capacity
+| WDC04 | Washington, DC | High Performance (Medium), High Capacity
+| WDC06 | Washington, DC | High Performance (Medium), High Capacity
+| WDC07 | Washington, DC | High Performance (Medium), High Capacity
 
 <!--## Capacity considerations-->
 
