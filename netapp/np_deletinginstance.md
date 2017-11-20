@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-02"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -20,7 +20,7 @@ When you delete a NetApp ONTAP Select instance, the following components are rel
 5. Subnets
 6. VLANs
 
-Because of resource dependencies, the components in your instance are not released immediately when you delete the instance. For example, the subnets and VLANs cannot be deleted until the ESXi servers are fully reclaimed by IBM Bluemix Infrastructure (SoftLayer), which happens at the end of the Bluemix Infrastructure billing cycle. At the end of the billing cycle, which is typically 30 days, the subnets and VLANs are reclaimed and the instance deletion is completed.
+Because of resource dependencies, the components in your instance are not released immediately when you delete the instance. For example, the subnets and VLANs cannot be deleted until the ESXi servers are fully reclaimed by {{site.data.keyword.cloud}} infrastructure, which happens at the end of the {{site.data.keyword.cloud_notm}} billing cycle. At the end of the billing cycle, which is typically 30 days, the subnets and VLANs are reclaimed and the instance deletion is completed.
 
 **Attention:** You are billed until the end of the billing cycle for the deleted instance.
 
