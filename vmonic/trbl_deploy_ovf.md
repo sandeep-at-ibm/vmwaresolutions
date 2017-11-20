@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-09-29"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -31,7 +31,7 @@ To deploy an `.ovf` file using the vSphere Web Client, you must add the host inf
     10.131.7.48   host3.myinstance.mydomain.com
     10.131.9.196  vcenter-1.myinstance.mydomain.com
     ```
-3. Ensure that you have access to all the necessary VPNs (Virtual Private Networks) in the IBM Bluemix Infrastructure (SoftLayer) portal. In this example, it would be `10.131.7.xx` and `10.131.9.xxx`.
+3. Ensure that you have access to all the necessary VPNs (Virtual Private Networks) in the {{site.data.keyword.slportal_full}}. In this example, it would be `10.131.7.xx` and `10.131.9.xxx`.
 4. Sign in the VPN for your data center.
 5. Click **vCenter** to access the the vSphere Web Client.
 6. Right-click on a host and deploy an `.ovf` file.

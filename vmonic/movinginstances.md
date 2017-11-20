@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-09-28"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -17,7 +17,7 @@ The instance network topology in V1.4 and later releases is different from relea
 ## Resolution
 
 In V1.4 and later releases, several network topology enhancements are available for your instances:
-* (Applies to all instances): Optimized networking configuration. Because the IBM Bluemix Infrastructure (SoftLayer) account that you are using must be either a VRF (Virtual Routing and Forwarding) account or must have VLAN spanning enabled if it is a classic (non-VRF) account, a second portable IP address is not needed. Only the primary Bluemix Infrastructure (SoftLayer) portable IP address is required for deployment.
+* (Applies to all instances): Optimized networking configuration. Because the {{site.data.keyword.cloud_notm}} infrastructure account that you are using must be either a VRF (Virtual Routing and Forwarding) account or must have VLAN spanning enabled if it is a classic (non-VRF) account, a second portable IP address is not needed. Only the primary {{site.data.keyword.cloud_notm}} infrastructure portable IP address is required for deployment.
 * (Applies to Cloud Foundation instances only): Multi-site deployment capability with Microsoft Windows AD SSO (Active Directory Single Sign-On) and Domain Name System (DNS) server.
 
 If you have not migrated or deleted your instances from pre-V1.4 releases, they might still be visible on the {{site.data.keyword.vmwaresolutions_full}} console in view-only mode. These instances are marked on the user interface as **Deprecated** with a warning symbol icon.
@@ -28,7 +28,7 @@ The following actions are available on the pre-V1.4 instances:
 *  View the information on the instance details page.
 *  View instance backup information.
 *  Open the vSphere Web Client and use the instance in vCenter.
-*  Request instance restore by opening a Bluemix Support ticket.
+*  Request instance restore by opening an {{site.data.keyword.cloud_notm}} Support ticket.
 *  Delete instance.
 
 All other actions on pre-V1.4 instances are no longer available.
