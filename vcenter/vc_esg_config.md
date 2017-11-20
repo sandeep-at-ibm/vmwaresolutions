@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-05"
+lastupdated: "2017-11-19"
 
 ---
 
@@ -16,7 +16,7 @@ VMware NSX is a network virtualization platform that allows the virtualization o
 services such as switches, routing, and firewalls. For more information about NSX, see [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
 
 As part of the ordering process for your vCenter Server instance, the following actions are completed on your behalf:
-* A private customer subnet is ordered to be used by your VMs (virtual machines) to access the IBM Bluemix Infrastructure (SoftLayer) private network.
+* A private customer subnet is ordered to be used by your VMs (virtual machines) to access the {{site.data.keyword.cloud}} infrastructure (SoftLayer) private network.
 * A public customer subnet is ordered to allow your VMs to access the internet.
 * NSX is deployed and configured in your vCenter Server instance.
 * A sample NSX Logical Switch is deployed to be used by the customer workload VMs.
@@ -68,7 +68,7 @@ To identify the details for the customer subnets so you can use the IP addresses
 2. On the navigator pane, click **NSX Edges** and double-click the **customer-nsx-edge edge**.
 3. On the **Summary** tab for this edge, review the edge description, which contains the subnet identifiers for both the private and public customer subnets.
 
-Additionally, you can find more details about the customer subnets by completing the following steps in the Bluemix Infrastructure (SoftLayer) portal:
+Additionally, you can find more details about the customer subnets by completing the following steps in the IBM Cloud infrastructure customer portal:
 
 1. Click **Networking > IP Management > Subnets**.
 2. Click the filter menu and in the Subnet field enter the identifier as seen in the description of the **customer-nsx-edge** edge on the **Summary** tab in the VMware vSphere Web Client.

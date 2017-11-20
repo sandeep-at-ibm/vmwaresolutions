@@ -4,23 +4,21 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-12"
+lastupdated: "2017-11-18"
 
 ---
 
 # vCenter Server overview
 
-VMware vCenter Server on IBM® Cloud is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of three Bluemix® bare metal servers, shared file-level storage, and includes the automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX.
+VMware vCenter Server on {{site.data.keyword.cloud}} is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of three {{site.data.keyword.baremetal_long}}, shared storage (NFS or vSAN), and includes the automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX.
 
-The entire environment can be provisioned in a matter of hours, and the elastic bare metal infrastructure can scale out the compute
-capacity rapidly when needed.
+The entire environment can be provisioned in a matter of hours, and the elastic bare metal infrastructure can scale out the compute capacity rapidly when needed.
 
-Post-deployment, you can order additional NFS (Network File System) file shares from the IBM Bluemix Infrastructure (SoftLayer) portal and manually attach them across hosts. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.
+Post-deployment, you can order additional NFS (Network File System) file shares from the {{site.data.keyword.slportal_full}} and manually attach them across hosts. To increase vSAN based storage capacity of a vSAN cluster, additional hosts can be added post deployment. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.
 
 If you purchased IBM-provided VMware licensing, you can upgrade the VMware NSX Base edition to Advanced or to Enterprise edition, and you can purchase additional VMware components, such as VMware vRealize Operations.
 
-IBM Cloud Professional Services and Managed Services are also available to help you accelerate your journey to the cloud with offerings
-like migration, implementation, and onboarding services.
+IBM Cloud Professional Services and Managed Services are also available to help you accelerate your journey to the cloud with migration, implementation, and onboarding services.
 
 ## vCenter Server architecture
 
@@ -42,7 +40,7 @@ This layer virtualizes the physical infrastructure through different VMware prod
 
 ### Virtualization management
 
-This layer consists of vCenter Server virtual appliance, NSX Manager, two NSX ESGs, 3 NSX Controllers, Platform Services Controller (PSC) virtual appliance, vCSA, and the IBM® CloudDriver virtual machine.
+This layer consists of vCenter Server virtual appliance, NSX Manager, two NSX ESGs, three NSX Controllers, Platform Services Controller (PSC) virtual appliance, vCSA, and the IBM® CloudDriver virtual machine.
 
 The base offering is deployed with a vCenter Server appliance that is sized to support an environment with up to 100 hosts and up to 1000 VMs. The same vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
 
@@ -58,14 +56,15 @@ The following components are included in your vCenter Server instance.
 
 ### Hardware
 
-Three or more IBM Cloud bare metal servers with the following hardware options to choose from:
+You can order three or more {{site.data.keyword.baremetal_long}} with one of the following configurations:
 *  Small (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz / 128 GB RAM / 2 disks)
 *  Medium (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz / 256 GB RAM / 2 disks)
 *  Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz / 512 GB RAM / 2 disks)
-*  User customized (the user selects the CPU and RAM options)
+*  User customized (the user selects the CPU and RAM options. If you select vSAN storage, it requires four {{site.data.keyword.baremetal_long}}.
 
 ### Networking
 
+The following networking components are ordered:
 *  Three VLANs (Virtual LANs): one public VLAN and two private VLANs
 *  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching additional VXLANs to new logical interfaces on the DLR.
 *  Two VMware NSX Edge Services Gateways:
@@ -76,52 +75,59 @@ Three or more IBM Cloud bare metal servers with the following hardware options t
 
 ### Virtual Server Instances
 
-The following VSIs (Virtual Server Instances):
+The following VSIs (Virtual Server Instances) are ordered:
 * A VSI for IBM CloudBuilder, which is shut down after the instance deployment is completed.
 * (For instances V1.9 and later) A Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and virtual machines are registered, is deployed and can be looked up.
 * (For instances V1.8 and earlier) A VSI for the snapshot-based backup of the management components, which keeps running after the instance deployment is completed.
 
-
 ### Storage
 
-* (For instances V1.8 and earlier) Shared file-level storage for backups: one 2 TB shared file-level storage that can be scaled up to 12 TB
+The following storage is ordered, based on the {{site.data.keyword.baremetal_short}} configuration that you select:
+* One 2 TB, 4 IOPS/GB file share for management components.
+* One 2 TB shared file-level storage for backups, which can be scaled up to 12 TB. You can choose whether you want storage for backups by selecting or deselecting the Veeam on IBM Cloud service.
 
-  **Note**: With the introduction of the Veeam on IBM Cloud service, the storage for backups is no longer a standard component of vCenter Server instances. When you order an instance, you can choose whether you want storage for backups by selecting or deselecting the Veeam on IBM Cloud service.
-* Shared file-level storage for management components: one 2 TB, 4 IOPS/GB file share
+You also have a choice between NFS and vSAN storage types:
+* The NFS storage option offers customized shared file-level storage for workloads with various options for size and performance:
+  * Size: 1, 2, 4, 8, or 12 TB
+  * Performance: 2, 4 , or 10 IOPS/GB. The 10 IOPS/GB option is available for certain data centers only.
+* The vSAN storage option offers customized CPU model and RAM configurations, with various options for disk type and quantity:
+  * Disk quantity: 2, 4, 6, or 8
+  * Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SED. **Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
 
-### Licenses and fees
+### Licenses (IBM-provided or BYOL) and fees
 
-*  VMware vSphere 6.0 Standard edition
-*  VMware vCenter Server 6.0
-*  VMware NSX Base for Service Providers edition
-*  Support and Services fee
+* VMware vSphere Enterprise Plus 6.5u1
+* VMware vCenter Server 6.5
+* VMware NSX Base for Service Providers Edition 6.3
+* (Optional) VMware vSAN Advanced or Enterprise 6.6
+* Support and Services fees
 
 ## vCenter Server expansion node components
 
-Each vCenter Server expansion node will deploy and incur charges for the following components in your IBM Bluemix Infrastructure (SoftLayer) account.
+Each vCenter Server expansion node will deploy and incur charges for the following components in your {{site.data.keyword.cloud_notm}} account.
 
 ### Hardware for expansion nodes
 
-One IBM Cloud bare metal server with the configuration presented in [vCenter Server instance  components](../vcenter/vc_vcenterserveroverview.html#vcenter-server-components).
+One IBM Cloud Bare Metal Server with the configuration presented in [vCenter Server instance  components](../vcenter/vc_vcenterserveroverview.html#vcenter-server-components).
 
 ### Licenses and fees for expansion nodes
 
-* One VMware vSphere 6.0 Enterprise Plus edition
-* One VMware NSX Base for Service Providers edition
+* One VMware vSphere Enterprise Plus 6.5u1
+* One VMware NSX Base for Service Providers Edition 6.3
 * One Support and Services fee
 
 For details about the components, see the _Bill of Materials_ document in
 the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform){:new_window}.
 
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your Bluemix Infrastructure (SoftLayer) account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the Bluemix Infrastructure (SoftLayer) portal or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal_full}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
-**CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your Bluemix Infrastructure (SoftLayer) account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
+**CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance, from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components
 *  Expanding or contracting instance capacity through adding or removing ESXi servers
 *  Powering off components
 *  Restarting services
 
-   Exceptions to these activities include managing the shared storage file shares from the Bluemix Infrastructure (SoftLayer) portal. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
+   Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
 ## Related links
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-10"
+lastupdated: "2017-11-17"
 
 ---
 
@@ -30,7 +30,7 @@ The cluster name must meet the following requirements:
 
 ### Bare Metal Server Configuration
 
-You can select a Bare Metal Server specification that is different from the specification of the default cluster. If you selected **User customized**, you must specify the CPU model and RAM for the bare metal server.
+You can select a Bare Metal Server configuration that is different than the configuration of the default cluster. If you select **User customized**, you must specify the CPU model and RAM for the bare metal server.
 
 Table 1. CPU and RAM options
 
@@ -41,31 +41,43 @@ Table 1. CPU and RAM options
 
 ### Number of Bare Metal Servers
 
-A minimum of 2 bare metal servers is required for a cluster. You can add up to 20 bare metal servers for a cluster. All bare metal servers share the same configuration.
+A minimum of 2 bare metal servers is required for a cluster and you can add up to 32 bare metal servers, which will share the same configuration.
+
+The number of the bare metal servers that you can add at a time is as follows:
+* For the **Small**, **Medium**, and **Large** configurations, you can add 1 - 10 ESXi servers at a time.
+* For the **User customized** configuration, you can add 1 - 20 ESXi servers at a time. After deployment, you can create up to four more clusters. If you select the **User customized** configuration with vSAN storage, four servers are required for both the initial order and after deployment.
 
 ### Data Center Location
 
-By default, the data center location of the cluster is set to the data center of the vCenter Server instance.
+The data center location of the cluster is set to the data center of the vCenter Server instance by default. You can deploy the cluster to a different data center than the deployed instance, but you must ensure that the network latency between the two data centers is less than 150 ms. To check the network latency, you can use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-For V1.9 and later, you can deploy the cluster to a different data center than the deployed instance. Ensure that there is less than a 150 ms network latency between the two data centers. Use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} to check the network latency.
-
-If deploying to a different IBM Cloud data center, or Bluemix Infrastructure (SoftLayer) pod, three additional VLANs are ordered for use with the ordered bare metal servers.
+If you deploy the cluster to a different data center or {{site.data.keyword.cloud}} infrastructure (SoftLayer) pod, three additional VLANs are ordered for use with the ordered bare metal servers.
 
 ## Storage settings
 
+Storage settings are based on your selection of either vSAN or NFS.
+
+### vSAN
+
+For vSAN, you select the User customized Bare Metal Server configuration and you can customize the VMware vSAN storage for your instance by specifying the following settings under **Storage**:
+
+* **Number of vSAN Capacity Disks**: Specify the number of disks for the vSAN shared storage that you want to add. The disks must be in the range 2 - 8.
+
+<<<<<<< HEAD
+Specify the number of disks for the vSAN shared storage that you want to add. The disk quanitity must be 2, 4, 6, or 8.
+=======
+* **Disk Type and Size for vSAN Capacity Disks**: Select the capacity that meets your shared storage needs.
+>>>>>>> 4ab74e7d1e8f5bc90d3e1eaa9ccd775db45bf2a6
+
+### NFS
+
 You can add file-level shared storage for the cluster and specify the following settings.
 
-### Number of File Shares
+* **Number of File Shares**: Specify the number of file shares for the shared storage that you want to add. The number of file shares must be in the range 1 - 32.
 
-Specify the number of file shares for the shared storage that you want to add. The number of file shares must be in the range 1 - 32.
+* **Size**: Select the capacity that meets your shared storage needs.
 
-### Size
-
-Select the capacity that meets your shared storage needs.
-
-### Performance
-
-Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements. The performance levels available to you depend on the size you selected and the data center location.
+* **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements. The performance levels available to you depend on the size you selected and the data center location.
 
 <!--### NFS Version
 
@@ -73,8 +85,8 @@ NFS (Network File System) v3 is set by default and you cannot change it. NFS v3 
 
 ## Procedure
 
-1. Click **Deployed Instances** from the left navigation pane. Click the **vCenter Server** tab.
-2. Click the instance to view the clusters in it or to add clusters to it.
+1. Click **Deployed Instances** from the left navigation pane.
+2. In the **vCenter Server Instances** table, click the instance to view the clusters in it or to add clusters to it.
 
    **Note**: If you want to add clusters to this instance, ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
 3. Click the **Infrastructure** tab. View the summary about the clusters:
@@ -82,6 +94,8 @@ NFS (Network File System) v3 is set by default and you cannot change it. NFS v3 
    * **ESXi servers**: The number of ESXi servers in the cluster.
    * **CPU**: The CPU specification of the ESXi servers in the cluster.
    * **Memory**: The total memory size of the ESXi servers in the cluster.
+   * **Data center location**: The data center where the cluster is hosted.
+   * **Pod**: The pod where the cluster is deployed.
    * **Status**: The status of the cluster. The status can have one of the following values:
      <dl class="dl">
          <dt class="dt dlterm">Initializing</dt>
@@ -91,14 +105,14 @@ NFS (Network File System) v3 is set by default and you cannot change it. NFS v3 
          <dt class="dt dlterm">Ready to Use</dt>
          <dd class="dd">The cluster is ready to use.</dd>
      </dl>
-4. To add a cluster, click **Add**, and then complete the following steps in the **Add Cluster** area:
+4. To add a cluster, click **Add** at the upper-right corner of the **CLUSTERS** table, and then complete the following steps in the **Add Cluster** area:
    1. Enter the cluster name.
-   2. Select the bare metal server specification.
+   2. Select the bare metal server configuration.
    3. If you selected **User customized**, select the CPU and RAM specifications based on your requirements.
    4. Specify the number of bare metal servers.
    5. Review the data center location that is automatically filled in.
 
-   You can select a different data center other than the data center where the instance is deployed.  If you select a user-customized hardware configuration, you can deploy to a different Bluemix Infrastructure (SoftLayer) pod for data centers containing additional pods. This is useful if the default Bluemix Infrastructure (SoftLayer) pod where the initial instance is deployed has reached capacity. Pre-built, standardized **Small**, **Medium**, and **Large** bare metal server options use a default pod that cannot be changed.
+      You can select a different data center other than the data center where the instance is deployed. If you select a user-customized bare metal server configuration, you can deploy the cluster to a different  {{site.data.keyword.cloud_notm}} infrastructure  (SoftLayer) pod for data centers containing additional pods. This is useful when the default  {{site.data.keyword.cloud_notm}} infrastructure  (SoftLayer) pod where the initial instance is deployed has reached capacity. Pre-built, standardized **Small**, **Medium**, and **Large** bare metal server options use a default pod that cannot be changed.
 
    6. Under **Storage**, configure the file-level shared storage by selecting the number, size, and performance.
    7. Click **Calculate Price** under **Estimated Cost** to get the pricing of your order.
@@ -108,18 +122,22 @@ NFS (Network File System) v3 is set by default and you cannot change it. NFS v3 
 
 5. After the cluster is ready to use, you can click the cluster name to view its details:
    * The list of ESXi servers with their details:
-     * **Name**: The name of the ESXi server is in the format `hostname.vmonic.local`, where:
+     * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_prefix>.<root_domain>`, where:
 
-       `hostname` is the host name in the format `instancename-esxn`, where `instancename` is the name of the instance and `n` is the sequence of the server.
+       `host_prefix` is the host name prefix,
+       `n` is the sequence of the server,
+       `subdomain_prefix` is the subdomain prefix, and
+       `root_domain` is the root domain name.
 
-       `vmonic.local` is the domain name.
      * **Version**: The version of the ESXi server.
      * **Credentials**: The user name and password to access the ESXi server.
      * **Private IP**: The private IP address of the ESXi server.
      * **Status**: The status of the ESXi server, which can be one of the following values:
         <dl class="dl">
-        <dt class="dt dlterm">Active</dt>
-        <dd class="dd">The ESXi server is ready for use. </dd>
+        <dt class="dt dlterm">Added</dt>
+        <dd class="dd">The ESXi server is added and is ready for use. </dd>
+        <dt class="dt dlterm">Adding</dt>
+        <dd class="dd">The ESXi server is being added. </dd>
         <dt class="dt dlterm">Deleting</dt>
         <dd class="dd">The ESXi server is being deleted.</dd>
         </dl>
