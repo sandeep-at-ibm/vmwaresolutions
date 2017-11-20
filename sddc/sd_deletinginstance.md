@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-05"
+lastupdated: "2017-11-09"
 
 ---
 
@@ -20,9 +20,9 @@ When you delete a Cloud Foundation instance, the following components are releas
 5. Subnets
 6. VLANs
 
-Because of resource dependencies, the components in your instance are not released immediately when you delete the instance. For example, the subnets and VLANs cannot be deleted until the ESXi servers are fully reclaimed by IBM Bluemix Infrastructure (SoftLayer), which happens at the end of the Bluemix Infrastructure (SoftLayer) billing cycle. At the end of the Bluemix Infrastructure (SoftLayer) billing cycle, which is typically 30 days, the subnets and VLANs are deleted and the instance deletion is completed.
+Because of resource dependencies, the components in your instance are not released immediately when you delete the instance. For example, the subnets and VLANs cannot be deleted until the ESXi servers are fully reclaimed by the {{site.data.keyword.cloud}} infrastructure, which happens at the end of the {{site.data.keyword.cloud_notm}} billing cycle. At the end of the {{site.data.keyword.cloud_notm}} billing cycle, which is typically 30 days, the subnets and VLANs are deleted and the instance deletion is completed.
 
-**Attention**: You are billed until the end of the Bluemix Infrastructure (SoftLayer) billing cycle for the deleted instance.
+**Attention**: You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cycle for the deleted instance.
 
 ## Procedure
 

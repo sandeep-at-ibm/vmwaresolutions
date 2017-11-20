@@ -4,9 +4,11 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-13"
+lastupdated: "2017-10-23"
 
 ---
+
+{:tip: .tip}
 
 # Applying updates to Cloud Foundation instances
 
@@ -60,8 +62,10 @@ system:
 ## Results
 
 After you apply an update, a record appears in the software update status list, where you can view the detailed progress and status of
-the update. To retrieve the most recent status for an update job, click the refresh icon, which is in the upper right of the software
-updates list. When the update is completed successfully, a record appears in the installed software updates list.
+the update. When the update is completed successfully, a record appears in the installed software updates list.
+
+To retrieve the most recent status for an update job, click the refresh icon in the upper right of the page.
+{:tip}
 
 If the update process fails at a specific step, [contact IBM Support](../vmonic/trbl_support.html) for assistance. You will be advised how to resolve the problem and guided to restart the upgrade from the step that failed.
 
