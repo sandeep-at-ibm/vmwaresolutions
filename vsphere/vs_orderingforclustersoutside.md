@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-05"
+lastupdated: "2017-11-10"
 
 ---
 
@@ -15,7 +15,7 @@ You can use the VMware vSphere Cluster offering to scale existing clusters, whic
 ## Requirements
 
 Ensure that you completed the following tasks:
-*  You configured the IBM Bluemix Infrastructure (SoftLayer) credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
+*  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
 *  You meet the requirements and you reviewed the considerations in [Requirements and planning for vSphere clusters](vs_planning.html).
 
 ## Procedure
