@@ -10,6 +10,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Release notes
+        vmonic/relnotes_v20.md
         vmonic/relnotes_v19.md
         vmonic/relnotes_v18.md
         vmonic/relnotes_v17.md
@@ -41,9 +42,11 @@ IBM Cloud for VMware Solutions
     Cloud Foundation on IBM Cloud
         sddc/sd_cloudfoundationoverview.md
         sddc/sd_planning.md
+        sddc/sd_networkingoncloudfoundation.md
         sddc/sd_multisite.md
         sddc/sd_orderinginstance.md
         sddc/sd_viewinginstances.md
+        sddc/sd_addingviewingclusters.md
         sddc/sd_addingremovingservers.md
         sddc/sd_applyingupdates.md
         sddc/sd_addingremovingservices.md
@@ -54,7 +57,9 @@ IBM Cloud for VMware Solutions
     vCenter Server on IBM Cloud
         vcenter/vc_vcenterserveroverview.md
         vcenter/vc_planning.md
+        vcenter/vc_networkingonvcenterserver.md
         vcenter/vc_esg_config.md
+        vcenter/vc_multisite.md
         vcenter/vc_orderinginstance.md
         vcenter/vc_viewinginstances.md
         vcenter/vc_addingviewingclusters.md
@@ -62,6 +67,7 @@ IBM Cloud for VMware Solutions
         vcenter/vc_applyingupdates.md
         vcenter/vc_addingremovingservices.md
         vcenter/vc_deletinginstance.md
+        vcenter/vc_deletinginstance_multi.md
 
     {: .topicgroup}
     VMware vSphere on IBM Cloud
@@ -81,9 +87,14 @@ IBM Cloud for VMware Solutions
         netapp/np_deletinginstance.md
 
     {: .topicgroup}
-    Fortinet on IBM Cloud
+    FortiGate Security Appliance on IBM Cloud
         services/fsa_considerations.md
         services/managingfsa.md
+
+    {: .topicgroup}
+    FortiGate Virtual Appliance on IBM Cloud
+        services/fortinetvm_considerations.md
+        services/managingfortinetvm.md
 
     {: .topicgroup}
     F5 on IBM Cloud
@@ -118,6 +129,7 @@ IBM Cloud for VMware Solutions
         sddc/cf_chg_impact.md
         vcenter/vcenter_chg_impact.md
         vmonic/trbl_timeout_vc_console.md
+        vmonic/trbl_automation_user_pswd_expir.md
         vmonic/trbl_mixed_multisite.md
         vmonic/trbl_cfupdatesfail.md
         vmonic/trbl_add_ha_cluster_config.md
