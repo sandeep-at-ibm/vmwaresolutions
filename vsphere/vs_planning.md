@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-10"
+lastupdated: "2017-11-16"
 
 ---
 
@@ -14,13 +14,15 @@ Review the following requirements before you order VMware vSphere on IBM Cloud. 
 
 **Note**: You are responsible for setting up the environment, installing, and configuring various VMware components after the ESXi servers are deployed. Such components are: VMware vCenter Server, VMware NSX, and VMware vSAN.
 
-## IBM Bluemix Infrastructure account requirements
+## IBM Cloud infrastructure account requirements
 
-The Bluemix Infrastructure (SoftLayer) account that you are using must meet certain requirements. For more information, see [Bluemix Infrastructure account requirements](../vmonic/slaccountrequirement.html).
+The {{site.data.keyword.cloud}} infrastructure account that you are using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} account requirements](../vmonic/slaccountrequirement.html).
 
 ## Data centers availability
 
-The vSphere deployment has strict requirements on the physical infrastructure. Therefore, you can deploy clusters only in IBM® Cloud data centers that meet the requirements. The following data centers are available for vSphere deployment:
+The vSphere deployment has strict requirements on the physical infrastructure. Therefore, you can deploy clusters only in IBM® Cloud data centers that meet the requirements. The following data centers are available for vSphere deployment.
+
+**Note:** If you select a vSAN component, the location list is filtered by SSD availablity.
 
 Table 1. Available data centers for vSphere clusters
 
