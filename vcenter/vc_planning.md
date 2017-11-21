@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2017-11-10"
 
 Review the following requirements before you order your VMware vCenter Server instances. Plan your instance based on the IBM Cloud data center location, your workload capacity requirements, and additional service requirements.
 
-## IBM Cloud infrastructure account requirements
+## IBM Cloud account requirements
 
-The {{site.data.keyword.cloud}} infrastructure account that you are using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} account requirements](../vmonic/slaccountrequirement.html).
+The {{site.data.keyword.cloud}} account that you are using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} account requirements](../vmonic/slaccountrequirement.html).
 
 ## Data centers availability
 
@@ -24,31 +24,31 @@ Table 1. Available data centers for vCenter Server instances
 
 | Data center | Location | Standardized server options |
 |:-----|:----------------| :---------------------------|
-| AMS03 | Amsterdam | Small, Medium, Large, Custom |
-| CHE01 | Chennai | Small, Medium, Large, Custom |
+| AMS03 | Amsterdam | Custom |
+| CHE01 | Chennai | Custom |
 | DAL09 | Dallas | Custom |
 | DAL10 | Dallas | Small, Medium, Large, Custom |
 | DAL12 | Dallas | Custom |
 | DAL13 | Dallas | Custom |
 | FRA02 | Frankfurt | Small, Medium, Large, Custom |
-| HKG02 | Hong Kong | Small, Medium, Large, Custom |
-| LON02 | London | Small, Medium, Large, Custom |
+| HKG02 | Hong Kong | Custom |
+| LON02 | London | Custom |
 | LON04 | London | Custom |
-| LON06 | London | Custom |
-| MEL01 | Melbourne | Small, Medium, Large, Custom |
-| MEX01 | Queretaro | Small, Medium, Large, Custom |
-| MIL01 | Milan | Small, Medium, Large, Custom |
-| MON01 | Montreal | Small, Medium, Large, Custom |
-| OSL01 | Oslo | Small, Medium, Large, Custom |
-| PAR01 | Paris | Small, Medium, Large, Custom |
-| SAO01 | Sao Paulo | Small, Medium, Large, Custom |
+| LON06 | London | Small, Medium, Large, Custom |
+| MEL01 | Melbourne | Custom |
+| MEX01 | Queretaro | Custom |
+| MIL01 | Milan | Custom |
+| MON01 | Montreal | Custom |
+| OSL01 | Oslo | Custom |
+| PAR01 | Paris | Custom |
+| SAO01 | Sao Paulo | Custom |
 | SEO01 | Seoul | Custom |
 | SJC03 | San Jose | Small, Medium, Large, Custom |
 | SJC04 | San Jose | Custom |
-| SNG01 | Singapore | Small, Medium, Large, Custom |
-| SYD01 | Sydney | Small, Medium, Large, Custom |
-| SYD04 | Sydney | Small, Medium, Large, Custom |
-| TOK02 | Tokyo | Small, Medium, Large, Custom |
+| SNG01 | Singapore | Custom |
+| SYD01 | Sydney | Custom |
+| SYD04 | Sydney | Custom |
+| TOK02 | Tokyo | Custom |
 | TOR01 | Toronto | Small, Medium, Large, Custom |
 | WDC04 | Washington, DC | Small, Medium, Large, Custom |
 | WDC06 | Washington, DC | Custom |
