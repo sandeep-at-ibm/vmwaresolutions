@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -24,31 +24,31 @@ Table 1. Available data centers and {{site.data.keyword.baremetal_long}} configu
 
 | Data center | Location | Bare Metal Server configurations |
 |:-----|:----------------| :---------------------------|
-| AMS03 | Amsterdam | Small, Large, Custom |
-| CHE01 | Chennai | Small, Large, Custom |
+| AMS03 | Amsterdam | Custom |
+| CHE01 | Chennai | Custom |
 | DAL09 | Dallas | Custom |
 | DAL10 | Dallas | Small, Large, Custom |
 | DAL12 | Dallas | Custom |
 | DAL13 | Dallas | Custom |
 | FRA02 | Frankfurt | Small, Large, Custom |
-| HKG02 | Hong Kong | Small, Large, Custom |
-| LON02 | London | Small, Large, Custom |
+| HKG02 | Hong Kong | Custom |
+| LON02 | London | Custom |
 | LON04 | London | Custom |
-| LON06 | London | Custom |
-| MEL01 | Melbourne | Small, Large, Custom |
-| MEX01 | Queretaro | Small, Large, Custom |
-| MIL01 | Milan | Small, Large, Custom |
-| MON01 | Montreal | Small, Large, Custom |
-| OSL01 | Oslo | Small, Large, Custom |
-| PAR01 | Paris | Small, Large, Custom |
-| SAO01 | Sao Paulo | Small, Large, Custom |
-| SEO01 | Seoul | Small, Large, Custom |
+| LON06 | London | Small, Large, Custom |
+| MEL01 | Melbourne | Custom |
+| MEX01 | Queretaro | Custom |
+| MIL01 | Milan | Custom |
+| MON01 | Montreal | Custom |
+| OSL01 | Oslo | Custom |
+| PAR01 | Paris | Custom |
+| SAO01 | Sao Paulo | Custom |
+| SEO01 | Seoul | Custom |
 | SJC03 | San Jose | Small, Large, Custom |
 | SJC04 | San Jose | Custom |
-| SNG01 | Singapore | Small, Large, Custom |
-| SYD01 | Sydney | Small, Large, Custom |
-| SYD04 | Sydney | Small, Large, Custom |
-| TOK02 | Tokyo | Small, Large, Custom |
+| SNG01 | Singapore | Custom |
+| SYD01 | Sydney | Custom |
+| SYD04 | Sydney | Custom |
+| TOK02 | Tokyo | Custom |
 | TOR01 | Toronto | Small, Large, Custom |
 | WDC04 | Washington, DC | Small, Large, Custom |
 | WDC06 | Washington, DC | Custom |
