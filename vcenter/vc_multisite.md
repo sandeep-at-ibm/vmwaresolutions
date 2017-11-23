@@ -4,13 +4,17 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-17"
+lastupdated: "2017-11-21"
 
 ---
 
 # Multi-site configuration for vCenter Server on IBM Cloud instances
 
-{{site.data.keyword.vmwaresolutions_full}} allows instances to be deployed across different locations and have them up and running in a short time. Multi-site configuration for vCenter Server only applies to V2.0 and later vCenter Server instances. Review the topology and components of the vCenter Server deployment for multi-site configuration.
+{{site.data.keyword.vmwaresolutions_full}} allows instances to be deployed across different locations and have them up and running in a short time.
+
+**Notes**:
+* Multi-site configuration for vCenter Server instances is supported only to V2.0 and later instances.
+* You cannot link between VMware Cloud Foundation and VMware vCenter Server instances in a multi-site configuration.
 
 ## Multi-site deployment components
 
@@ -26,8 +30,7 @@ A multi-site deployment consists of the following components.
    *  DNS subdomain that is linked to the root domain on the primary instance
    *  DNS and AD replication set-up between the AD virtual machines on the primary and secondary instances.
    *  PSC (Platform Services Controller) deployed and configured to replicate with the PSC on the primary instance.
-   *  VMware vCenter on the secondary instances are set up with Enhanced Link Mode to the vCenter on the primary instance.
-   *  The NSX Managers on the secondary instances are set up as secondary NSX Managers linked to the NSX Manager on the primary instance.
+   *  VMware vCenter on the secondary instances are set up with Enhanced Linked Mode to the vCenter on the primary instance.
 
 ## vCenter Server multi-site deployment
 

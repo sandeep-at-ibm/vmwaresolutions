@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-20"
+lastupdated: "2017-11-21"
 
 ---
 
@@ -22,39 +22,39 @@ The vCenter Server deployment has strict requirements on the physical infrastruc
 
 Table 1. Available data centers for vCenter Server instances
 
-| Data center | Location | Standardized server options |
+| Data center | Location | Server options |
 |:-----|:----------------| :---------------------------|
-| AMS03 | Amsterdam | Custom |
-| CHE01 | Chennai | Custom |
-| DAL09 | Dallas | Custom |
-| DAL10 | Dallas | Small, Medium, Large, Custom |
-| DAL12 | Dallas | Custom |
-| DAL13 | Dallas | Custom |
-| FRA02 | Frankfurt | Small, Medium, Large, Custom |
-| HKG02 | Hong Kong | Custom |
-| LON02 | London | Custom |
-| LON04 | London | Custom |
-| LON06 | London | Small, Medium, Large, Custom |
-| MEL01 | Melbourne | Custom |
-| MEX01 | Queretaro | Custom |
-| MIL01 | Milan | Custom |
-| MON01 | Montreal | Custom |
-| OSL01 | Oslo | Custom |
-| PAR01 | Paris | Custom |
-| SAO01 | Sao Paulo | Custom |
-| SEO01 | Seoul | Custom |
-| SJC03 | San Jose | Small, Medium, Large, Custom |
-| SJC04 | San Jose | Custom |
-| SNG01 | Singapore | Custom |
-| SYD01 | Sydney | Custom |
-| SYD04 | Sydney | Custom |
-| TOK02 | Tokyo | Custom |
-| TOR01 | Toronto | Small, Medium, Large, Custom |
-| WDC04 | Washington, DC | Small, Medium, Large, Custom |
-| WDC06 | Washington, DC | Custom |
-| WDC07 | Washington, DC | Custom |
+| AMS03 | Amsterdam | User customized |
+| CHE01 | Chennai | User customized |
+| DAL09 | Dallas | User customized |
+| DAL10 | Dallas | Small, Medium, Large, User customized |
+| DAL12 | Dallas | User customized |
+| DAL13 | Dallas | User customized |
+| FRA02 | Frankfurt | Small, Medium, Large, User customized |
+| HKG02 | Hong Kong | User customized |
+| LON02 | London | User customized |
+| LON04 | London | User customized |
+| LON06 | London | Small, Medium, Large, User customized |
+| MEL01 | Melbourne | User customized |
+| MEX01 | Queretaro | User customized |
+| MIL01 | Milan | User customized |
+| MON01 | Montreal | User customized |
+| OSL01 | Oslo | User customized |
+| PAR01 | Paris | User customized |
+| SAO01 | Sao Paulo | User customized |
+| SEO01 | Seoul | User customized |
+| SJC03 | San Jose | Small, Medium, Large, User customized |
+| SJC04 | San Jose | User customized |
+| SNG01 | Singapore | User customized |
+| SYD01 | Sydney | User customized |
+| SYD04 | Sydney | User customized |
+| TOK02 | Tokyo | User customized |
+| TOR01 | Toronto | Small, Medium, Large, User customized |
+| WDC04 | Washington, DC | Small, Medium, Large, User customized |
+| WDC06 | Washington, DC | User customized |
+| WDC07 | Washington, DC | User customized |
 
-A large subset of IBM Cloud data centers offer pre-built, standardized **Small**, **Medium**, and **Large** bare metal server options. Depending on availability and inventory supply, IBM Cloud data centers might display a status indicator in the {{site.data.keyword.vmwaresolutions_full}} console to help you plan your deployments.
+A small subset of IBM Cloud data centers offer pre-built, standardized **Small**, **Medium**, and **Large** bare metal server options. Depending on availability and inventory supply, IBM Cloud data centers might display a status indicator in the {{site.data.keyword.vmwaresolutions_full}} console to help you plan your deployments.
 
 Table 2. Status indicators for data centers when ordering vCenter Server instances
 

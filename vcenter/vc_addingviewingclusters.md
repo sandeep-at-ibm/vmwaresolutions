@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-20"
+lastupdated: "2017-11-22"
 
 ---
 
@@ -45,7 +45,7 @@ A minimum of 2 bare metal servers is required for a cluster and you can add up t
 
 The number of the bare metal servers that you can add at a time is as follows:
 * For the **Small**, **Medium**, and **Large** configurations, you can add 1 - 10 ESXi servers at a time.
-* For the **User customized** configuration, you can add 1 - 20 ESXi servers at a time. After deployment, you can create up to four more clusters. If you select the **User customized** configuration with vSAN storage, four servers are required for both the initial order and after deployment.
+* For the **User customized** configuration, you can add 1 - 20 ESXi servers at a time. After deployment, you can create up to four more clusters. If you select the **User customized** configuration with VMware vSAN storage, four servers are required for both the initial order and after deployment.
 
 ### Data Center Location
 
@@ -57,12 +57,14 @@ If you deploy the cluster to a different data center or {{site.data.keyword.clou
 
 Storage settings are based on your selection of either vSAN or NFS.
 
-### vSAN
+### VMware vSAN
 
-For vSAN, you select the User customized Bare Metal Server configuration and you can customize the VMware vSAN storage for your instance by specifying the following settings under **Storage**:
+For vSAN, you select the **User customized** Bare Metal Server configuration and you can customize the vSAN storage for your instance by specifying the following settings under **Storage**:
 
-* **Number of vSAN Capacity Disks**: Specify the number of disks for the vSAN shared storage that you want to add. The disk quanitity must be 2, 4, 6, or 8.
-* **Disk Type and Size for vSAN Capacity Disks**: Select the capacity that meets your shared storage needs.
+* **Number of vSAN Capacity Disks**: Specify the number of disks for the vSAN shared storage that you want to add. The disk quantity must be 2, 4, 6, or 8.
+* **Disk Type and Size for vSAN Capacity Disks**: Select the capacity that meets your shared storage needs. Depending on the data center selected, the capacity choices are: 960 GB, 1.9 TB and 3.8 TB. Two cache disks of 960 GB are ordered per ESXi server.
+
+If adding clusters and your initial cluster was vSAN, any additional vSAN clusters will use the same vSAN license and have the same configuration as the initial vSAN cluster. This is also true if any cluster in the instance has vSAN chosen to be deployed on it (initial or additional). The first time you are prompted for the vSAN license (BYOL or purchased) and the edition. The next time you select vSAN for an additional cluster, whatever you chose initially is reused.
 
 ### NFS
 
@@ -98,20 +100,20 @@ NFS (Network File System) v3 is set by default and you cannot change it. NFS v3 
          <dt class="dt dlterm">Ready to Use</dt>
          <dd class="dd">The cluster is ready to use.</dd>
      </dl>
-4. To add a cluster, click **Add** at the upper-right corner of the **CLUSTERS** table, and then complete the following steps in the **Add Cluster** area:
+4. To add a cluster, click **Add** at the upper-right corner of the **CLUSTERS** table. Complete the following steps in the **Add Cluster** area:
    1. Enter the cluster name.
    2. Select the bare metal server configuration.
    3. If you selected **User customized**, select the CPU and RAM specifications based on your requirements.
    4. Specify the number of bare metal servers.
    5. Review the data center location that is automatically filled in.
-
-      You can select a different data center other than the data center where the instance is deployed. If you select a user-customized bare metal server configuration, you can deploy the cluster to a different  {{site.data.keyword.cloud_notm}} infrastructure  (SoftLayer) pod for data centers containing additional pods. This is useful when the default  {{site.data.keyword.cloud_notm}} infrastructure  (SoftLayer) pod where the initial instance is deployed has reached capacity. Pre-built, standardized **Small**, **Medium**, and **Large** bare metal server options use a default pod that cannot be changed.
-
-   6. Under **Storage**, configure the file-level shared storage by selecting the number, size, and performance.
-   7. Click **Calculate Price** under **Estimated Cost** to get the pricing of your order.
-   8. Review the estimated cost of the cluster by clicking the price link under **Estimated Cost**. To save or print your order summary,
-   click the **Print** or **Download** icon on the upper right of the PDF window.
-   9. Click **Add**.
+      You can select a different data center other than the data center where the instance is deployed. If you select a user-customized bare metal server configuration, you can deploy the cluster to a different  {{site.data.keyword.cloud_notm}} infrastructure pod for data centers containing additional pods. This is useful when the default pod where the initial instance is deployed has reached capacity. Pre-built, standardized **Small**, **Medium**, and **Large** bare metal server options use a default pod that cannot be changed.
+   6. Under **Storage**, select either vSAN or NFS.
+   7. If you selected NFS, specify the **Number of File Shares**, **Size**, and
+       **Performance**.
+       If you selected vSAN, specify the **Number of Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
+   8. Click **Calculate Price** under **Estimated Cost** to get the pricing of your order.
+   9. Review the estimated cost of the cluster by clicking the price link under **Estimated Cost**. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+   10. Click **Add**.
 
 5. After the cluster is ready to use, you can click the cluster name to view its details:
    * The list of ESXi servers with their details:

@@ -4,21 +4,23 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-18"
+lastupdated: "2017-11-21"
 
 ---
 
 # vCenter Server overview
 
-VMware vCenter Server on {{site.data.keyword.cloud}} is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of three {{site.data.keyword.baremetal_long}}, shared storage (NFS or vSAN), and includes the automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX.
+VMware vCenter Server on {{site.data.keyword.cloud}} is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of two (recommended three) {{site.data.keyword.baremetal_long}}, offers shared network-attached storage and dedicated software-defined storage options, and it includes the automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX.
 
-The entire environment can be provisioned in a matter of hours, and the elastic bare metal infrastructure can scale out the compute capacity rapidly when needed.
+The entire environment can be provisioned in a matter of hours, and the bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed.
 
-Post-deployment, you can order additional NFS (Network File System) file shares from the {{site.data.keyword.slportal_full}} and manually attach them across hosts. To increase vSAN based storage capacity of a vSAN cluster, additional hosts can be added post deployment. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.
+Post-deployment, you can increase shared storage by ordering additional NFS (Network File System) file shares from the  {{site.data.keyword.slportal_full}} and manually attach them across all ESXi servers in a cluster. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.
+
+VMware vSAN is also available as a dedicated storage option. To increase the vSAN-based storage capacity of a vSAN cluster, you can add more ESXi servers post-deployment.
 
 If you purchased IBM-provided VMware licensing, you can upgrade the VMware NSX Base edition to Advanced or to Enterprise edition, and you can purchase additional VMware components, such as VMware vRealize Operations.
 
-IBM Cloud Professional Services and Managed Services are also available to help you accelerate your journey to the cloud with migration, implementation, and onboarding services.
+You can add IBM Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS or application layers. The IBM Cloud Professional Services team is also available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
 
 ## vCenter Server architecture
 
@@ -60,7 +62,7 @@ You can order three or more {{site.data.keyword.baremetal_long}} with one of the
 *  Small (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz / 128 GB RAM / 2 disks)
 *  Medium (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz / 256 GB RAM / 2 disks)
 *  Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz / 512 GB RAM / 2 disks)
-*  User customized (the user selects the CPU and RAM options. If you select vSAN storage, it requires four {{site.data.keyword.baremetal_long}}.
+*  User customized (the user selects the CPU, RAM, and storage options). If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_long}}.
 
 ### Networking
 
@@ -82,24 +84,28 @@ The following VSIs (Virtual Server Instances) are ordered:
 
 ### Storage
 
-The following storage is ordered, based on the {{site.data.keyword.baremetal_short}} configuration that you select:
-* One 2 TB, 4 IOPS/GB file share for management components.
-* One 2 TB shared file-level storage for backups, which can be scaled up to 12 TB. You can choose whether you want storage for backups by selecting or deselecting the Veeam on IBM Cloud service.
+During initial deployment, you can choose between NFS and vSAN storage options.
 
-You also have a choice between NFS and vSAN storage types:
-* The NFS storage option offers customized shared file-level storage for workloads with various options for size and performance:
-  * Size: 1, 2, 4, 8, or 12 TB
-  * Performance: 2, 4 , or 10 IOPS/GB. The 10 IOPS/GB option is available for certain data centers only.
-* The vSAN storage option offers customized CPU model and RAM configurations, with various options for disk type and quantity:
-  * Disk quantity: 2, 4, 6, or 8
-  * Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SED. **Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
+The NFS option offers customized shared file-level storage for workloads with various options for size and performance:
+* Size: 1, 2, 4, 8, or 12 TB
+* Performance: 2, 4 , or 10 IOPS/GB. The 10 IOPS/GB option is available for certain data centers only.
+
+If you choose the NFS option, the following file shares are ordered:
+* One 2 TB, 4 IOPS/GB file share for management components.
+* One 2 TB shared block-level storage for backups, which can be scaled up to 12 TB. You can choose whether you want storage for backups by selecting or deselecting the Veeam on IBM Cloud service.
+
+The vSAN option offers customized CPU model and RAM configurations, with various options for disk type and quantity:
+* Disk quantity: 2, 4, 6, or 8
+* Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SED.
+  In addition, 2 cache disks of 960 GB are also ordered per host.
+  **Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
 
 ### Licenses (IBM-provided or BYOL) and fees
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Base for Service Providers Edition 6.3
-* (Optional) VMware vSAN Advanced or Enterprise 6.6
+* VMware NSX Base for Service Providers 6.3
+* (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 * Support and Services fees
 
 ## vCenter Server expansion node components
@@ -113,8 +119,9 @@ One IBM Cloud Bare Metal Server with the configuration presented in [vCenter Ser
 ### Licenses and fees for expansion nodes
 
 * One VMware vSphere Enterprise Plus 6.5u1
-* One VMware NSX Base for Service Providers Edition 6.3
+* One VMware NSX Base for Service Providers 6.3
 * One Support and Services fee
+* (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
 For details about the components, see the _Bill of Materials_ document in
 the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform){:new_window}.
