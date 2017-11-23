@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-17"
+lastupdated: "2017-11-22"
 
 ---
 
 # Expanding and contracting capacity for vCenter Server instances
 
-You can expand or contract the capacity of your VMware vCenter Server instance according to your business needs, by adding or removing ESXi servers. A vCenter Server instance can have up to 5 clusters, one of which is the default one, and each cluster can have up to 32 ESXi servers.
+You can expand or contract the capacity of your VMware vCenter Server instance according to your business needs, by adding or removing ESXi servers. A vCenter Server instance can have up to 5 clusters, one of which is the default one, and each cluster can have up to 32 ESXi servers. If your intial cluster has vSAN as its storage, adding an additional host post deployment increases cluster storage capacity.
 
 ## Before you begin
 
@@ -22,8 +22,9 @@ You can expand or contract the capacity of your VMware vCenter Server instance a
 * A vCenter Server instance with NFS storage must have at least 2 ESXi servers. You can expand the platform to a maximum of 32 ESXi servers. However, the number of the bare metal servers that you can add at a time is as follows:
    * For the **Small**, **Medium**, and **Large** configurations, you can add 1 - 10 ESXi servers at a time.
    * For the **User customized** configuration, you can add 1 - 20 ESXi servers at a time.
+For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
 
-  A vCenter Server instance with vSAN storage must have at least 4 ESXi servers. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
+*  A vCenter Server instance with vSAN storage must have at least 4 ESXi servers.
 
 ## Procedure
 

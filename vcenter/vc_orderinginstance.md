@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-19"
+lastupdated: "2017-11-23"
 
 ---
 
@@ -114,7 +114,6 @@ Storage settings are based on your selection of either vSAN or NFS.
 For vSAN, you select the User customized Bare Metal Server configuration and you can customize the VMware vSAN storage for your instance by specifying the following settings under **Storage**:
 
 * **Number of vSAN Capacity Disks**: Specify the number of disks for the vSAN shared storage that you want to add. The disk quantities must be 2, 4, 6, or 8.
-
 * **Disk Type and Size for vSAN Capacity Disks**: Select the capacity that meets your shared storage needs.
 
 ### NFS
@@ -122,12 +121,10 @@ For vSAN, you select the User customized Bare Metal Server configuration and you
 For NFS, you can add file-level shared storage for your instance and specify the following settings under **Storage**:
 
 * **Number of file shares**: Specify the number of file shares for the NFS shared storage that you want to add. The number of file shares must be in the range 1 - 32.
-
 * **Size**: Select the capacity that meets your shared storage needs.
-
 * **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements. The performance levels available to you depend on the data center that you select.
 
-Table 3. Performance level options
+Table 3. NFS performance level options
 
 | Option        | Details       |
   |:------------- |:------------- |
@@ -136,7 +133,6 @@ Table 3. Performance level options
   | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share, and it is supported only for the following IBM Cloud Data Centers: AMS03, DAL09, DAL10, DAL12, DAL13, FRA02, HKG01, LON02, LON04, LON06, MEL01, MEX01, MON01, OSL01, PAR01, SJC03, SJC04, SYD01, TOK02, TOR01, WDC04, WDC06, and WDC07. |
 
 <!--### NFS version
-
 NFS (Network File System) v3 is set by default and you cannot change it. NFS v3 supports SDRS (Storage Distributed Resource Scheduler) and SIOC (Storage I/O Control), and it does not include NFS multipathing.-->
 
 ## Services
@@ -157,9 +153,11 @@ When you order a vCenter Server instance, you can also order additional services
     1. Enter the instance name, root domain name, subdomain prefix, and host name prefix.
     2. Select the Bare Metal Server configuration.
     3. If you selected **User customized** for the Bare Metal Server configuration, specify the **CPU Model** and the amount of **RAM**.
-    4. Specify the number of bare metal servers.
+    4. Specify the number of bare metal servers. vSAN will always use 4 bare metal servers.
     5. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
-    6. Click **Next**.
+    6. Select vSAN or NFS for **Storage**.
+    7. If you selected NFS, specify the **Number of File Shares**, **Size**, and **Performance**. If you selected vSAN, specify the **Number of Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
+    8. Click **Next**.
 
    If you selected the **Secondary** instance type, provide the following information:
 
@@ -171,7 +169,9 @@ When you order a vCenter Server instance, you can also order additional services
      6. If you selected **User customized** for the bare metal server configuration, specify the **CPU Model** and the amount of **RAM**.
      7. Specify the number of bare metal servers.
      8. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
-     9. Click **Next**.
+     9. Select vSAN or NFS for **Storage**.
+     10. If you selected NFS, specify the **Number of File Shares**, **Size**, and **Performance**. If you selected vSAN, specify the **Number of Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
+     11. Click **Next**.
 
 5. If you selected the **Secondary** instance type, review the following information on the **Authentication** page:
 
@@ -180,7 +180,6 @@ When you order a vCenter Server instance, you can also order additional services
    3. If the password validation fails, enter the correct PSC password, and click **Next** again.
 
 6. On the **Licensing** page, specify the licensing choice for each of the VMware components in the instance, including VMware vCenter Server, VMware vSphere, VMware NSX, and VMware vSAN (if you selected vSAN storage) and then click **Next**.
-  * If your primary instance uses vSAN storage, your secondary instance will also use vSAN storage and it will use the same license as the primary instance.
   * If you want new licenses to be purchased on your behalf, select **Include with purchase** for the components. For VMware NSX and vSAN, also select the license edition.
   * If you want to use your own VMware license for a component, select **I will provide** and enter the license key for the component.
 
@@ -229,10 +228,10 @@ When you order a secondary instance, the VMware vSphere Web Client for the prima
 
 View and manage the vCenter Server instance that you ordered.
 
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_full}} components that are created in your IBM Cloud infrastructure account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the IBM Cloud infrastructure customer portal or any other means outside of the console.
+**Important**: You must manage the {{site.data.keyword.vmwaresolutions_full}} components that are created in your IBM Cloud account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the IBM Cloud infrastructure customer portal or any other means outside of the console.
 If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
-**CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your IBM Cloud infrastructure account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
+**CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your IBM Cloud account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components
 *  Expanding or contracting instance capacity through adding or removing ESXi servers
 *  Powering off components
@@ -242,7 +241,7 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 
 ## Related links
 
-* [Signing up for an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account](../vmonic/signing_softlayer_account.html)
+* [Signing up for an {{site.data.keyword.cloud_notm}} account](../vmonic/signing_softlayer_account.html)
 * [Viewing vCenter Server instances](vc_viewinginstances.html)
 * [Adding and viewing clusters for vCenter Server instances](vc_addingviewingclusters.html)
 * [Expanding and contracting capacity for vCenter Server instances](vc_addingremovingservers.html)
