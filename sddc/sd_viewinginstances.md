@@ -103,7 +103,7 @@ Use this procedure to view the VMware Cloud Foundation instances that you ordere
   * **Date**: The date and time when the instance status is changed.
   * **Summary**: The details of the change.
 
-    If errors occur during instance deployment or instance deletion, an {{site.data.keyword.cloud}} ticket is created automatically on your behalf. You can click the ticket link to check its status and progress.
+    If errors occur during instance deployment or instance deletion, an {{site.data.keyword.cloud}} Support ticket is created automatically on your behalf. You can click the ticket link to check its status and progress.
 
 ## What to do next
 

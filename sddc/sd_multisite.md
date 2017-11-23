@@ -4,13 +4,18 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-07"
+lastupdated: "2017-11-21"
 
 ---
 
 # Multi-site configuration for Cloud Foundation instances
 
-{{site.data.keyword.vmwaresolutions_full}} allows instances to be deployed across different locations and have them up and running in a short time. Review the topology and components of the Cloud Foundation deployment for multi-site configuration.
+{{site.data.keyword.vmwaresolutions_full}} allows instances to be deployed across different locations and have them up and running in a short time.
+
+**Notes**:
+* You cannot link between VMware Cloud Foundation and VMware vCenter Server instances in a multi-site configuration.
+* You cannot link instances that are deployed in V2.0 with instances from earlier releases (even if they were upgraded to V2.0).
+
 
 ## Multi-site deployment components
 
@@ -26,8 +31,7 @@ A multi-site deployment consists of the following components.
    *  DNS subdomain that is linked to the root domain on the primary instance
    *  DNS and AD replication is set up between the AD virtual machines on the primary and secondary instances
    *  PSC (Platform Services Controller) deployed and configured to replicate with the PSC on the primary instance
-   *  VMware vCenter on the secondary instances are set up with Enhanced Link Mode to the vCenter on the primary instance
-   *  The NSX Managers on the secondary instances are set up as secondary NSX Managers linked to the NSX Manager on the primary instance
+   *  VMware vCenter on the secondary instances are set up with Enhanced Linked Mode to the vCenter on the primary instance
 
 ## Cloud Foundation multi-site deployment
 
