@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-09"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -31,7 +31,7 @@ As part of the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 
 ## Considerations when installing FortiGate Security Appliance on IBM Cloud
 
 Review the following considerations before you install the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service:
-* Ensure that the {{site.data.keyword.cloud_notm}} infrastructure account that you are using has the **Hardware Firewall** permission. This permission is required to edit or view firewall logs and settings for the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service of your instance.
+* Ensure that the {{site.data.keyword.cloud_notm}} account that you are using has the **Hardware Firewall** permission. This permission is required to edit or view firewall logs and settings for the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service of your instance.
 * If you want to add the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service to a deployed instance, ensure that there is no other firewall from {{site.data.keyword.cloud_notm}} infrastructure already in place on the public VLAN of the instance.
 * Installing the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service will add a new public VLAN.
 * During the service deployment, your instance might not be able to access the internet temporarily.
