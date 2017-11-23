@@ -12,9 +12,9 @@ lastupdated: "2017-11-20"
 
 Review the following requirements before you order your NetApp ONTAP Select instances. Plan your instance based on the IBM Cloud data center location and your workload performance and capacity requirements.
 
-## IBM Cloud infrastructure account requirements
+## IBM Cloud account requirements
 
-The {{site.data.keyword.cloud}} infrastructure account that you are using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} account requirements](../vmonic/slaccountrequirement.html).
+The {{site.data.keyword.cloud}} account that you are using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} account requirements](../vmonic/slaccountrequirement.html).
 
 ## Data centers availability
 
