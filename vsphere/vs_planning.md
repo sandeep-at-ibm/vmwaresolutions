@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-16"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -14,9 +14,9 @@ Review the following requirements before you order VMware vSphere on IBM Cloud. 
 
 **Note**: You are responsible for setting up the environment, installing, and configuring various VMware components after the ESXi servers are deployed. Such components are: VMware vCenter Server, VMware NSX, and VMware vSAN.
 
-## IBM Cloud infrastructure account requirements
+## IBM Cloud account requirements
 
-The {{site.data.keyword.cloud}} infrastructure account that you are using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} account requirements](../vmonic/slaccountrequirement.html).
+The {{site.data.keyword.cloud}} account that you are using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} account requirements](../vmonic/slaccountrequirement.html).
 
 ## Data centers availability
 
