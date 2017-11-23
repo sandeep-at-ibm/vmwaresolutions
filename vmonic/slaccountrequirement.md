@@ -4,19 +4,21 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-26"
+lastupdated: "2017-11-20"
 
 ---
 
-# IBM Cloud account requirements
+# Requirements for the IBM Cloud account
 
-To order instances, you must have an {{site.data.keyword.cloud}} account. The cost of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
+To use {{site.data.keyword.vmwaresolutions_full}} to order instances, you must have an {{site.data.keyword.cloud}} account. The cost of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud}} account.
 
-## {{site.data.keyword.cloud_notm}} permissions
+**Note**: The {{site.data.keyword.cloud_notm}} account was previously known as the IBM SoftLayer account.
 
-The {{site.data.keyword.cloud_notm}} account that you are using must have certain permissions to be able to order the components in your instances and perform operations on your behalf. The permission requirements are applicable to both VMware Cloud Foundation instances and VMware vCenter Server instances.
+## Permissions for the IBM Cloud account
 
-Authorized users can verify and update the {{site.data.keyword.cloud_notm}} user permissions on the {{site.data.keyword.slportal_full}}. For more information, see [Edit a User's Customer Portal Permissions](https://knowledgelayer.softlayer.com/procedure/edit-users-customer-portal-permissions){:new_window}.
+The {{site.data.keyword.cloud_notm}} account that you are using must have certain permissions to be able to order the components in your instances and perform operations on your behalf. The permission requirements are applicable to all types of instances and services you are ordering from the {{site.data.keyword.vmwaresolutions_short}} console.
+
+Authorized users can verify and update the permissions for an {{site.data.keyword.cloud_notm}} account on the {{site.data.keyword.slportal_full}}. For more information, see [Edit a User's Customer Portal Permissions](https://knowledgelayer.softlayer.com/procedure/edit-users-customer-portal-permissions){:new_window}.
 
 Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} account
 
@@ -32,7 +34,7 @@ Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} account
 | Order Compute with  Public Network Port | This permission is required to order hardware and VSIs (Virtual Server Instances) with public network ports. |
 | Add Tickets | This permission is required to open service tickets on your behalf. Tickets might be created for the following operations: to initiate restore operations and to initiate problem resolution processes automatically when issues are found. |
 | Edit Tickets | This permission is required to edit the service tickets that are created on your behalf. |
-| View Tickets | This permission is required to monitor the service tickets that are related to the components provisioned in your instance for {{site.data.keyword.cloud_notm}} infrastucture provisioning delays and problems. |
+| View Tickets | This permission is required to monitor the service tickets that are related to the components in your instance for {{site.data.keyword.cloud_notm}} infrastructure provisioning delays and problems. |
 | View Hardware Details | This permission is required to retrieve the hardware details, which are needed for order validation and automated configuration. |
 | View Licenses | This permission is required to retrieve and validate the licenses that are used by your instance. |
 

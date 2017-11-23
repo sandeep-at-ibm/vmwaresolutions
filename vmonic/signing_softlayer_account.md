@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-26"
+lastupdated: "2017-11-20"
 
 ---
 
 # Signing up for an IBM Cloud account
 
 To sign up for an {{site.data.keyword.cloud}} account, upgrade your {{site.data.keyword.cloud_notm}} account to a Pay-As-You-Go account.
+
+**Note**: The {{site.data.keyword.cloud_notm}} account was previously known as the IBM SoftLayer account.
 
 ## Procedure
 
