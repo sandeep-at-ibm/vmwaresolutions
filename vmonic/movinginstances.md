@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -17,7 +17,7 @@ The instance network topology in V1.4 and later releases is different from relea
 ## Resolution
 
 In V1.4 and later releases, several network topology enhancements are available for your instances:
-* (Applies to all instances): Optimized networking configuration. Because the {{site.data.keyword.cloud_notm}} infrastructure account that you are using must be either a VRF (Virtual Routing and Forwarding) account or must have VLAN spanning enabled if it is a classic (non-VRF) account, a second portable IP address is not needed. Only the primary {{site.data.keyword.cloud_notm}} infrastructure portable IP address is required for deployment.
+* (Applies to all instances): Optimized networking configuration. Because the {{site.data.keyword.cloud_notm}} account that you are using must be either a VRF (Virtual Routing and Forwarding) account or must have VLAN spanning enabled if it is a classic (non-VRF) account, a second portable IP address is not needed. Only the primary {{site.data.keyword.cloud_notm}} infrastructure portable IP address is required for deployment.
 * (Applies to Cloud Foundation instances only): Multi-site deployment capability with Microsoft Windows AD SSO (Active Directory Single Sign-On) and Domain Name System (DNS) server.
 
 If you have not migrated or deleted your instances from pre-V1.4 releases, they might still be visible on the {{site.data.keyword.vmwaresolutions_full}} console in view-only mode. These instances are marked on the user interface as **Deprecated** with a warning symbol icon.
@@ -43,4 +43,4 @@ To move your pre-V1.4 instances to new instances, complete the following steps i
 
 For information about exporting and importing VMs, see your VMware vSphere documentation.
 
-If you need assistance with {{site.data.keyword.vmwaresolutions_short}}, contact IBM Support through one of the support channels. For more information, see [Contacting IBM Support](trbl_support.html).
+If you need assistance with {{site.data.keyword.vmwaresolutions_short}}, [contact IBM Support](trbl_support.html) through one of the support channels.

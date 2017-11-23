@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -20,7 +20,7 @@ Bring Your Own License, which is known as BYOL, is a feature available to Cloud 
 * vSAN
 * NSX
 
-If you select to use your own license for a VMware component and provide a valid license key for it, no license is ordered from IBM for this component and no monthly license charges are incurred to your {{site.data.keyword.cloud_notm}} infrastructure account for this component.
+If you select to use your own license for a VMware component and provide a valid license key for it, no license is ordered from IBM for this component and no monthly license charges are incurred to your {{site.data.keyword.cloud_notm}} account for this component.
 
 ## What license editions and CPU quantities are required for BYOL?
 

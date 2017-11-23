@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-17"
+lastupdated: "2017-11-21"
 
 ---
 
@@ -15,15 +15,15 @@ Find answers to the questions that you might have about {{site.data.keyword.vmwa
 ## What user accounts do I need for IBM Cloud for VMware Solutions?
 
 * **IBMid account**. This account is required to access the {{site.data.keyword.vmwaresolutions_short}} console. This console is a stand-alone user interface that is separate from the {{site.data.keyword.slportal_full}}. For more information, see [Getting started](../index.html).
-* **{{site.data.keyword.cloud_notm}} infrastructure account**. This account is required for provisioning. You can sign up for an {{site.data.keyword.cloud_notm}} infrastructure account by upgrading your **IBMid account** to a Pay-As-You-Go account. The {{site.data.keyword.cloud_notm}} infrastructure account that you are using must meet certain requirements. For more information, see [Signing up for an {{site.data.keyword.cloud_notm}} infrastructure account](signing_softlayer_account.html) and [{{site.data.keyword.cloud_notm}} infrastructure account requirements](slaccountrequirement.html).
+* **{{site.data.keyword.cloud_notm}} account**. This account is required for provisioning. You can sign up for an {{site.data.keyword.cloud_notm}} infrastructure account by upgrading your **IBMid account** to a Pay-As-You-Go account. The {{site.data.keyword.cloud_notm}} infrastructure account that you are using must meet certain requirements. For more information, see [Signing up for an {{site.data.keyword.cloud_notm}} account](signing_softlayer_account.html) and [{{site.data.keyword.cloud_notm}} account requirements](slaccountrequirement.html).
 
 ## How do I associate my IBM Cloud credentials with the IBM Cloud for VMware Solutions console?
 
-When you order your instance for the first time, follow the instructions on the {{site.data.keyword.cloud_notm}} infrastructure credentials page to locate and copy the {{site.data.keyword.cloud_notm}} infrastructure user name and API key from the {{site.data.keyword.slportal}}. The {{site.data.keyword.cloud_notm}} infrastructure credentials are stored in the {{site.data.keyword.vmwaresolutions_short}} console after the first order. Future orders automatically inherit these credentials.
+When you order your instance for the first time, follow the instructions on the {{site.data.keyword.cloud_notm}}  credentials page to locate and copy the {{site.data.keyword.cloud_notm}} user name and API key from the {{site.data.keyword.slportal}}. The {{site.data.keyword.cloud_notm}} credentials are stored in the {{site.data.keyword.vmwaresolutions_short}} console after the first order. Future orders automatically inherit these credentials.
 
 ## How are my VMware virtual platform consumptions billed?
 
-All costs for the physical and virtual infrastructure and the licenses resulting from the instance are charged to your {{site.data.keyword.cloud_notm}} infrastructure account. When you order an instance, you must have an {{site.data.keyword.cloud_notm}} infrastructure account and provide the {{site.data.keyword.slapi_short}} key that is associated with the account.
+All costs for the physical and virtual infrastructure and the licenses resulting from the instance are charged to your {{site.data.keyword.cloud_notm}} account. When you order an instance, you must have an {{site.data.keyword.cloud_notm}} account and provide the {{site.data.keyword.slapi_short}} key that is associated with the account.
 
 ## What are the supported languages?
 
@@ -84,8 +84,7 @@ You can check the status of the instance deployment by viewing the deployment hi
 
 ## How many ESXi servers can I add to my instances?
 
-* For Cloud Foundation instances, the standard configuration has four ESXi servers. You can add a maximum of 27 servers (to a total of 31 servers). For Cloud Foundation instances in a multi-site configuration, you can have a maximum of 128 ESXi servers across all instances.
-
+* For Cloud Foundation instances, the standard configuration has four ESXi servers. You can add a maximum of 28 servers (to a total of 32 servers). For Cloud Foundation instances in a multi-site configuration, you can have a maximum of 128 ESXi servers across all instances.
 * For vCenter Server instances, you can configure the number of ESXi servers in the range 2 - 20 per cluster. Each deployed instance can have a maximum of 128 nodes across all clusters.
 
 **Note**: If your configuration requires a multi-site deployment with more than 128 nodes, [contact IBM Support](trbl_support.html) for assistance.
@@ -103,14 +102,6 @@ After an order to create a new cluster for VMware vSphere on {{site.data.keyword
 ## How can I view the list of all notifications?
 
 To view the complete notification history, click **Notifications** from the left navigation pane. Notifications with a severity level of **Informational** and **Warning** are listed.
-
-## How many backups can I have?
-
-An instance, either Cloud Foundation instance or vCenter Server instance, can have a maximum of 14 backups.
-
-## How long does a backup take?
-
-A backup operation can take 2 - 3 hours, depending on various factors, such as how heavily the environment is being used and what the network speed is.
 
 ## What if I have a problem with IBM Cloud for VMware Solutions?
 
