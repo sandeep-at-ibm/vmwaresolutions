@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-20"
+lastupdated: "2017-11-21"
 
 ---
 
@@ -22,37 +22,37 @@ The Cloud Foundation deployment has strict requirements on the physical infrastr
 
 Table 1. Available data centers and {{site.data.keyword.baremetal_long}} configurations for Cloud Foundation instances
 
-| Data center | Location | Bare Metal Server configurations |
+| Data center | Location | Server configurations |
 |:-----|:----------------| :---------------------------|
-| AMS03 | Amsterdam | Custom |
-| CHE01 | Chennai | Custom |
-| DAL09 | Dallas | Custom |
-| DAL10 | Dallas | Small, Large, Custom |
-| DAL12 | Dallas | Custom |
-| DAL13 | Dallas | Custom |
-| FRA02 | Frankfurt | Small, Large, Custom |
-| HKG02 | Hong Kong | Custom |
-| LON02 | London | Custom |
-| LON04 | London | Custom |
-| LON06 | London | Small, Large, Custom |
-| MEL01 | Melbourne | Custom |
-| MEX01 | Queretaro | Custom |
-| MIL01 | Milan | Custom |
-| MON01 | Montreal | Custom |
-| OSL01 | Oslo | Custom |
-| PAR01 | Paris | Custom |
-| SAO01 | Sao Paulo | Custom |
-| SEO01 | Seoul | Custom |
-| SJC03 | San Jose | Small, Large, Custom |
-| SJC04 | San Jose | Custom |
-| SNG01 | Singapore | Custom |
-| SYD01 | Sydney | Custom |
-| SYD04 | Sydney | Custom |
-| TOK02 | Tokyo | Custom |
-| TOR01 | Toronto | Small, Large, Custom |
-| WDC04 | Washington, DC | Small, Large, Custom |
-| WDC06 | Washington, DC | Custom |
-| WDC07 | Washington, DC | Custom |
+| AMS03 | Amsterdam | User customized |
+| CHE01 | Chennai | User customized |
+| DAL09 | Dallas | User customized |
+| DAL10 | Dallas | Small, Large, User customized |
+| DAL12 | Dallas | User customized |
+| DAL13 | Dallas | User customized |
+| FRA02 | Frankfurt | Small, Large, User customized |
+| HKG02 | Hong Kong | User customized |
+| LON02 | London | User customized |
+| LON04 | London | User customized |
+| LON06 | London | Small, Large, User customized |
+| MEL01 | Melbourne | User customized |
+| MEX01 | Queretaro | User customized |
+| MIL01 | Milan | User customized |
+| MON01 | Montreal | User customized |
+| OSL01 | Oslo | User customized |
+| PAR01 | Paris | User customized |
+| SAO01 | Sao Paulo | User customized |
+| SEO01 | Seoul | User customized |
+| SJC03 | San Jose | Small, Large, User customized |
+| SJC04 | San Jose | User customized |
+| SNG01 | Singapore | User customized |
+| SYD01 | Sydney | User customized |
+| SYD04 | Sydney | User customized |
+| TOK02 | Tokyo | User customized |
+| TOR01 | Toronto | Small, Large, User customized |
+| WDC04 | Washington, DC | Small, Large, User customized |
+| WDC06 | Washington, DC | User customized |
+| WDC07 | Washington, DC | User customized |
 
 Depending on availability and inventory supply, {{site.data.keyword.CloudDataCents_notm}} might display a status indicator in the {{site.data.keyword.vmwaresolutions_full}} console to help you plan your deployments.
 

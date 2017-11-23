@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -37,7 +37,7 @@ For information about how to set up NSX:
 
 Review the following considerations before you change the passwords for the NSX Manager, NSX Controllers, and NSX Edge:
 * Do not change the NSX Manager password. You can find this password on the **Summary** tab of the instance details page in the {{site.data.keyword.vmwaresolutions_short}} console.
-* You can change passwords for NSX Controllers. For instructions on how to change passwords for NSX Controllers, see [Change Controller Password]{https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html}.
+* You can change passwords for NSX Controllers. For instructions on how to change passwords for NSX Controllers, see [Change Controller Password](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html).
 * Do not change the password for the management VMware NSX Edge Services Gateway (ESG).
 
 ## Related links
