@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-10-26"
+lastupdated: "2017-11-20"
 
 ---
 
@@ -46,13 +46,15 @@ When you log in to the console for the first time, you are guided to either asso
 
 If you have problems associating your **IBMid** account with an {{site.data.keyword.cloud_notm}} account, see [Troubleshooting for accessing {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html){:new_window}.
 
-### {{site.data.keyword.cloud_notm}} account
+### IBM Cloud account
 
 To use the deployment offerings, you must have an {{site.data.keyword.cloud_notm}} account. The cost of the physical and virtual infrastructure and the resulting licenses are charged to your {{site.data.keyword.cloud_notm}} account. For more information about the requirements that your {{site.data.keyword.cloud_notm}} account must meet, see [{{site.data.keyword.cloud_notm}} account requirements](vmonic/slaccountrequirement.html).
 
+**Note**: The {{site.data.keyword.cloud_notm}} account was previously known as the IBM SoftLayer account.
+
 You can associate only one {{site.data.keyword.cloud_notm}} account to an {{site.data.keyword.vmwaresolutions_short}} account.
 
-## Accessing the {{site.data.keyword.vmwaresolutions_short}} console
+## Accessing the IBM Cloud for VMware Solutions console
 
 To access the console from the {{site.data.keyword.cloud_notm}} catalog, complete the following steps:
 1. Go to https://console.ng.bluemix.net/.

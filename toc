@@ -32,10 +32,10 @@ IBM Cloud for VMware Solutions
     {: .navgroup id="howto"}
     {: .topicgroup}
     First steps
-        vmonic/loginmethod.md
-        vmonic/useraccount.md
         vmonic/slaccountrequirement.md
         vmonic/signing_softlayer_account.md
+        vmonic/loginmethod.md
+        vmonic/useraccount.md
         vmonic/notifications.md
 
     {: .topicgroup}
