@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-17"
+lastupdated: "2017-11-28"
 
 ---
 
@@ -101,7 +101,7 @@ Each Cloud Foundation expansion node will deploy and incur charges for the follo
 
 ### Hardware for expansion nodes
 
-One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration presented in [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-components).
+One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration presented in [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
 
 ### Licenses and fees for expansion nodes
 

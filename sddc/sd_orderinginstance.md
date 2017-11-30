@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-19"
+lastupdated: "2017-11-28"
 
 ---
 
@@ -202,7 +202,7 @@ When you order a Cloud Foundation instance, you can also order additional servic
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [Cloud Foundation instance  components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-components) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **SDDC-Cluster** by default. If you ordered additional services, the deployment of the services starts after your order is completed.
+When the instance is successfully deployed, the components that are described in [Cloud Foundation instance  components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **SDDC-Cluster** by default. If you ordered additional services, the deployment of the services starts after your order is completed.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
