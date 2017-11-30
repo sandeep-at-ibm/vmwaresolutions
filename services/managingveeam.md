@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-09"
+lastupdated: "2017-11-28"
 
 ---
 
@@ -54,7 +54,7 @@ VSI, and then install them.
 
 ## Related links
 
-* [Components and considerations for Veeam on {{site.data.keyword.cloud_notm}}](veeamconsiderations.html)
+* [Components and considerations for Veeam on {{site.data.keyword.cloud_notm}}](veeam_considerations.html#components-and-considerations-for-veeam-on-ibm-cloud)
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)
