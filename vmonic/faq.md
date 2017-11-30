@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-21"
+lastupdated: "2017-11-28"
 
 ---
 
@@ -33,12 +33,12 @@ All costs for the physical and virtual infrastructure and the licenses resulting
 
 Both instance types provide deployment choices for VMware virtual environments. However, the difference is standardized versus customized.
 
-* When you order a VMware Cloud Foundation instance, you deploy a unified software-defined data center (SDDC) platform. For more information about what is deployed on a Cloud Foundation platform, see [Cloud Foundation instance  components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-components).
+* When you order a VMware Cloud Foundation instance, you deploy a unified software-defined data center (SDDC) platform. For more information about what is deployed on a Cloud Foundation platform, see [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
 * When you order a VMware vCenter Server instance, you deploy a VMware virtual environment with customized compute, storage, and network resources. For more information about what is deployed on a vCenter Server platform, see [vCenter Server instance components](../vcenter/vc_vcenterserveroverview.html#vcenter-server-instance-components).
 
 ## What is included in a Cloud Foundation instance?
 
-For more information, see [Cloud Foundation instance  components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-components).
+For more information, see [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
 
 ## What is included in a vCenter Server instance?
 
