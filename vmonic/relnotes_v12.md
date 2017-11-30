@@ -33,7 +33,7 @@ For more information, see:
 * [Viewing Cloud Foundation instances](../sddc/sd_viewinginstances.html)
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
 * [Viewing vCenter Server instances](../vcenter/vc_viewinginstances.html)
-* [Zerto disaster recovery](addingzertodr.html)
+* [Zerto disaster recovery](../services/addingzertodr.html)
 
 ## Pricing information
 

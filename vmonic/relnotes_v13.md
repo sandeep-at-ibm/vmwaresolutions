@@ -22,7 +22,7 @@ Whether you ordered Zerto disaster recovery as part of your instance or added it
 
 For more information, see:
 
-* [Disaster recovery removal](removingzertodr.html)
+* [Disaster recovery removal](../services/removingzertodr.html)
 * [Viewing Cloud Foundation instances](../sddc/sd_viewinginstances.html)
 * [Viewing vCenter Server instances](../vcenter/vc_viewinginstances.html)
 
@@ -37,7 +37,7 @@ machines. This ESG is deployed in a Large configuration, and only IBM Support ca
 
 For more information, see:
 
-* [Cloud Foundation instance  components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-components)
+* [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)
 * [Does the management services NSX Edge pose a security risk?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 

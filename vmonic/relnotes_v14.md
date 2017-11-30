@@ -87,7 +87,7 @@ For more information, see [Multi-site configuration for Cloud Foundation instanc
 * For Cloud Foundation instances, the deployment of Zerto disaster recovery is automated rather than handled through a support ticket. All Zerto components, such as a private portable subnet, a Windows VSI (Virtual Service Instance), and the Zerto license charges are listed on the estimated cost, so you can review before you place your order.
 * For vCenter Server instances, the deployment of Zerto disaster recovery is done through a support ticket, as in the previous release. However, NSX Edge and the public portable subnet are no longer needed, since they are now included in the base deployment. The charges for a private portable subnet, a Windows VSI (Virtual Service Instance), and the Zerto license still apply.
 
-For more information, see [Zerto disaster recovery](addingzertodr.html).
+For more information, see [Zerto disaster recovery](../services/addingzertodr.html).
 
 ## Instance order process
 

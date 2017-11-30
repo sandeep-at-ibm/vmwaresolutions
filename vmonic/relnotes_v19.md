@@ -26,8 +26,8 @@ This release introduces the NetApp ONTAP Select on IBM Cloud offering, a virtual
 It hosts your storage on dedicated infrastructure and provides NetApp capabilities, such as deduplication, compression and encryption of data at rest. With this offering, you can provision storage resources with agility and flexibility while protecting data by using advanced data management functions, such as the fast and efficient NetApp Snapshot® copies, FlexClone® copies, and SnapMirror® replication.
 
 For more information, see:
-* [NetApp ONTAP Select overview](../netapp/np_netappoverview.html#netapp-ontap-select-overview)
-* [Ordering NetApp ONTAP Select instances](../netapp/np_orderinginstances.html#ordering-netapp-ontap-select-instances)
+* [NetApp ONTAP Select overview](../netapp/np_netappoverview.html)
+* [Ordering NetApp ONTAP Select instances](../netapp/np_orderinginstances.html)
 
 ## F5 on IBM Cloud service
 
@@ -35,8 +35,8 @@ The F5 BIG-IP Virtual Edition (VE) on IBM Cloud service is now available to both
 You can order instances with the F5 BIG-IP Virtual Edition (VE) on IBM Cloud service included right from the start, or add this service to your existing instances later from the **Services** tab on the instance property details page of the {{site.data.keyword.vmwaresolutions_short}} console. Depending on your requirements, you can select one of three licensing options for BIG-IP VEs.
 
 For more information, see:
-* [Considerations for F5 on IBM Cloud](../services/f5_considerations.html#components-and-considerations-for-f5-on-ibm-cloud)
-* [Managing F5 on IBM Cloud](../services/managing_f5.html#managing-f5-on-ibm-cloud)
+* [Considerations for F5 on IBM Cloud](../services/f5_considerations.html)
+* [Managing F5 on IBM Cloud](../services/managing_f5.html)
 
 ## Managed services from IBM Integrated Managed Infrastructure
 
