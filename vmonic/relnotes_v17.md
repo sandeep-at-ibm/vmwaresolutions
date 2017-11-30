@@ -26,7 +26,7 @@ This update applies the following upgrades and improvements:
 
 * VMware Cloud Foundation deployments that were deployed prior to May 22 and are therefore using V3 servers will now order V4 servers when adding a new node to the instance. These servers have 256 GB of memory; if you require 512 GB of memory, after adding the servers, open a support ticket to request a server upgrade to 512 GB of memory. For information on contacting IBM Support, see [Contacting IBM Support](trbl_support.html).
 
-For more information on components, see [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-components).
+For more information on components, see [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
 
 ### Update process requirements
 
