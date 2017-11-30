@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-16"
+lastupdated: "2017-11-28"
 
 ---
 
@@ -55,7 +55,7 @@ The following components are included in your NetApp ONTAP Select instance.
 
 ### Storage
 
-* Three options: **High Performance (Medium)**, **High Performance (Large)**, and **High Capacity (Large)**
+* Three options: **High Performance (Medium)**, **High Performance (Large)**, and **High Capacity**
 * RAID 5 with hot spare
 * Two 1-TB SATA drives ESXi OS – RAID 1
 * Management datastore – 500 GB for management VMs
@@ -65,13 +65,13 @@ The following components are included in your NetApp ONTAP Select instance.
 Four {{site.data.keyword.baremetal_long}} with the following configuration options:
 * **High Performance (Medium)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 1.9 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 59 TB
 * **High Performance (Large)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 3.8 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 118 TB
-* **High Capacity (Large)** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.10 GHz) / 64 GB RAM / Twenty Two 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 60 TB
+* **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.10 GHz) / 64 GB RAM / Ten 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 60 TB
 
 **Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
 
 ### Hardware
 
-* Three RAM and disk options: **High Performance (Medium)**, **High Performance (Large)**, and **High Capacity (Large)**
+* Three RAM and disk options: **High Performance (Medium)**, **High Performance (Large)**, and **High Capacity**
 * Two 1 TB SATA drives ESXi OS
 * One RAID disk controller
 * VMware Server Virtualization 6.5

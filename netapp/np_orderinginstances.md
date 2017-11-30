@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2017
 
-lastupdated: "2017-11-20"
+lastupdated: "2017-11-28"
 
 ---
 
@@ -63,7 +63,7 @@ The host name prefix must meet the following requirements:
 You can select a bare metal server configuration depending on your requirements:
 * **High Performance (Medium)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 1.9 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 59 TB
 * **High Performance (Large)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 3.8 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 118 TB
-* **High Capacity (Medium)** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.10 GHz) / 64 GB RAM / Ten 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 60 TB
+* **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.10 GHz) / 64 GB RAM / Ten 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 60 TB
 
 **Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
 
