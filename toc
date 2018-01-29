@@ -140,6 +140,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Troubleshooting
+        vmonic/trbl_fix_spectre.md
         sddc/cf_chg_impact.md
         vcenter/vcenter_chg_impact.md
         vmonic/trbl_timeout_vc_console.md
