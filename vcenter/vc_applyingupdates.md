@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-20"
+lastupdated: "2018-01-19"
 
 ---
 
@@ -14,14 +14,12 @@ lastupdated: "2017-11-20"
 
 The {{site.data.keyword.vmwaresolutions_full}} console periodically detects and lists the available software updates and patches that you can apply to your VMware virtual environment.
 
-An available update is a record in the software updates list of the instance, which can be applied immediately or scheduled for a later time. The update is a bundle that contains one or more packages for updating the IBM management components.
-
 ## Before you begin
 
 Before you attempt to apply an update, expand the update entry by clicking the down arrow and verify the following information:
 *  The version of the update. You must apply the updates in chronological sequence that is from the earliest one to the most recent one. Ensure that you applied all the previous updates before you apply the most recent one. For example, you must apply the V1.6 update before attempting to apply the V1.7 update.
 *  Whether downtime is required.
-*  The total estimated time of the update.
+*  The total estimated time to complete the update.
 *  The impact of the update on the VMware virtual environment. The following list shows how different levels of impact affect the system:
 
     <dl class="dl"><dt class="dt dlterm">Low</dt>
@@ -37,14 +35,18 @@ Before you attempt to apply an update, expand the update entry by clicking the d
 
 Before an update operation is started, a backup of the management virtual machines is done automatically, if your instance has the optional [Veeam service](vc_addingremovingservices.html#available-services-for-vcenter-server-instances) installed. After the backup is completed, the update is applied.
 
+The automatic application of VMware ESXi patches and updates is now implemented in V2.1, and later, VMware vCenter Server (VCS) instances.  The **Update and Patch** tab only contains the one or more packages for updating the IBM management components. It does not contain VMware updates. The {{site.data.keyword.vmwaresolutions_full}} only applies VMware updates to vCenter, PSC, and ESXi servers when bringing up the vCenter Server instance, or newly added ESXi servers, from add host or add cluster operations in V2.1 and later. Customers are encouraged to apply VMware updates themselves on the older  instances.
+
 ## Procedure
+
+This procedure is used for V2.0 and earlier. V2.1 and later implements the automatic application of VMware ESXi patches and updates.
 
 1. Click **Deployed Instances** from the left navigation pane. Click the **vCenter Server** tab.
 2. Click the instance to update.
 3. Click the **Update and Patch** tab.
-4. For license upgrades, click **Upgrade License** to upgrade to one of the available NSX editions.
+4. For license upgrades, click **Upgrade License**. Select the edition you wish to upgrade to from the dropdown list. Pricing is also displayed. License edition downgrades are not available.
 
-    **Note**: The license upgrade replaces all existing NSX licenses in your {{site.data.keyword.cloud_notm}} account with the new license. Additional charges may be incurred from an overlap of old and new licenses if you upgrade in the middle of a billing cycle. Upgrade the license at the end of the billing cycle to avoid additional charges.
+    **Note**: The license upgrade replaces all existing NSX licenses on the instance. Additional charges may be incurred from an overlap of old and new licenses if you upgrade in the middle of a billing cycle. Upgrade the license at the end of the billing cycle to avoid additional charges.
 
 5. For software updates, click the down arrow to expand the update that you want to apply and then complete one of the following steps:
    *  To start the update immediately, click the overflow menu icon in the **Actions** column of the update entry, and then click
@@ -81,3 +83,10 @@ before you reapply the update.</dd>
 <dt class="dt dlterm">Unknown</dt>
 <dd class="dd">The status of the update job cannot be obtained. Contact IBM Support for assistance.</dd>
 </dl>
+
+## Related links
+
+* [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html)
+* [Veeam on IBM Cloud](../services/veeam_considerations.html)
+* [Contacting IBM Support](../vmonic/trbl_support.html)
+* [FAQs](../vmonic/faq.html)

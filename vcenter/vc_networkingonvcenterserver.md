@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
 lastupdated: "2017-11-10"
 
@@ -25,7 +25,7 @@ If you are using NSX Distributed Firewalls (DFW), review the following requireme
 
 ## Using NSX with your Virtual Machines
 
-During vCenter Server instance deployment, VMWare NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
+During vCenter Server instance deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
 
 An NSX Edge Services Gateway is also deployed to be used by your workload VMs. For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 

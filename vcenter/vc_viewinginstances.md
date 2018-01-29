@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-19"
+lastupdated: "2018-01-26"
 
 ---
 
@@ -55,7 +55,7 @@ Use this procedure to view the VMware vCenter Server instances that you ordered 
 
     **Note**: There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct.
 
-  **NSX for vSphere**: The VMware NSX for vSphere product version.
+  * **NSX for vSphere**: The VMware NSX for vSphere product version.
   * _**VMware component**_ **License**: If you selected to use your own VMware license for any of the VMware components on the **Licensing** page when you were ordering the instance, the VMware component name and the license key string you entered for the component are displayed.
 
     Examples of VMware component licenses can include **NSX License**, **vCenter Server License**, and **vSAN License**.
@@ -75,18 +75,22 @@ Use this procedure to view the VMware vCenter Server instances that you ordered 
 
   * **AD/DNS IP**: The IP address of the AD server.
   * **AD/DNS FQDN**: The AD/DNS server fully qualified domain name.
-  * **AD/DNS (Remote Desktop)**: The user name and password that you can use to access the AD server via a remote desktop connection.
+  * **AD/DNS ADMIN (Remote Desktop)**: For primary instances, this field displays the user name and password that you can use to access the AD server via a remote desktop connection.
+
+    For secondary instances, click the **View on primary instance** link to be directed to the user name and password information on the primary instance.
+
+    **Note**: After the secondary instance is added to the primary DNS domain and replication occurs, the local administrator password on the primary instance might overwrite the local administrator password on the secondary instance. By clicking the **View on primary instance** link, you will get access to the correct administrator password.
   * **NSX Manager IP**: The IP address of the NSX Manager.
   * **NSX Manager FQDN**: The NSX Manager fully qualified domain name (FQDN).
-  * **NSX Manager (HTTP)**: The user name and password that you can use to access the NSX Manager web console.
+  * **NSX Manager HTTP**: The user name and password that you can use to access the NSX Manager web console.
   * **PSC IP**: The IP address of the Platform Services Controller (PSC).
   * **PSC FQDN**: The PSC fully qualified domain name (FQDN).
-  * **PSC (ADMIN)**: The VMware vCenter Single Sign-On user name and password that you can use to access the PSC web console.
-  * **PSC (SSH)**: The user name and password that you can use to access the PSC VM via SSH connection.
+  * **PSC ADMIN**: The VMware vCenter Single Sign-On user name and password that you can use to access the PSC web console.
+  * **PSC SSH**: The user name and password that you can use to access the PSC VM via SSH connection.
   * **vCenter IP**: The IP address of the vCenter Server.
   * **vCenter FQDN**: The vCenter Server fully qualified domain name (FQDN).
-  * **vCenter (ADMIN)**: The VMware vCenter Single Sign-On user name and password that you can use to log in to the vCenter Server by using the vSphere Web Client.
-  * **vCenter (SSH)**: The user name and password that you can use to access the vCenter Server VM via SSH connection.  
+  * **vCenter ADMIN**: The VMware vCenter Single Sign-On user name and password that you can use to log in to the vCenter Server by using the vSphere Web Client.
+  * **vCenter SSH**: The user name and password that you can use to access the vCenter Server VM via SSH connection.  
 
 4. View the deployment history for the instance.
 

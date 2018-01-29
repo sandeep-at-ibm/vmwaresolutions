@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-28"
+lastupdated: "2018-01-25"
 
 ---
 
@@ -15,7 +15,7 @@ To deploy a flexible and customizable VMware virtualized platform that best fits
 ## Requirements
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
 *  You meet the requirements and you reviewed the considerations in [vCenter Server requirements](vc_planning.html).
 
 **Important: Do not modify any values that are set during ordering and instance deployment. Doing so can result in your instance becoming unusable. For example, public networking may shut down, servers and Virtual Server Instances (VSIs) may move behind a Vyatta mid-provision, or the IBM CloudBuilder VSI may stop or be deleted.**
@@ -46,6 +46,21 @@ The root domain name must meet the following requirements:
 
 **Note:** The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (virtual machines) is 50 characters. Domain names must accomodate for this maximum length.
 
+### Subdomain label
+
+The subdomain label must meet the following requirements:
+*  Only alphanumeric and dash (-) characters are allowed.
+*  The subdomain label must start and end with an alphanumeric character.
+*  The maximum length of the subdomain label is 10 characters.
+*  The subdomain label must be unique within your account.
+
+### Host name prefix
+
+The host name prefix must meet the following requirements:
+*  Only alphanumeric and dash (-) characters are allowed.
+*  The host name prefix must start and end with an alphanumeric character.
+*  The maximum length of the host name prefix is 10 characters.
+
 ### Instance and domain name format
 
 The vCenter Server instance name and the root domain name use the format in the following table.
@@ -56,50 +71,42 @@ Table 1. Value format for instance and domain names
   |:------------- |:------------- |
   | Domain name | `<root_domain>` |  
   | vCenter Server login user name | `<user_id>@<root_domain>` (Microsoft Active Directory user) or `administrator@vsphere.local` |
-  | vCenter Server FQDN | `vcenter.<instance_name>.<subdomain_prefix>.<root_domain>`. The maximum length is 50 characters. |
-  | Single Sign-On (SSO) site name | `<instance_name>` |
-  | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_prefix>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |  
-  | PSC FQDN | `psc-<instance_name>.<subdomain_prefix>.<root_domain>`. The maximum length is 50 characters. |   
-
-### Subdomain prefix
-
-The subdomain prefix must meet the following requirements:
-*  Only alphanumeric and dash (-) characters are allowed.
-*  The subdomain prefix must start and end with an alphanumeric character.
-*  The maximum length of the subdomain prefix is 10 characters.
-*  The subdomain prefix must be unique within your account.
-
-### Hostname prefix
-
-The host name prefix must meet the following requirements:
-*  Only alphanumeric and dash (-) characters are allowed.
-*  The host name prefix must start and end with an alphanumeric character.
-*  The maximum length of the host name prefix is 10 characters.
+  | vCenter Server FQDN | `vcenter.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
+  | Single Sign-On (SSO) site name | `<subdomain_label>` |
+  | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |  
+  | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
 
 ### Bare Metal Server configuration
 
-You can select a bare metal server configuration depending on your requirements:
+You can select a Bare Metal Server configuration depending on your requirements:
 * Small (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz / 128 GB RAM / 2 disks)
 * Medium (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz / 256 GB RAM / 2 disks)
 * Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz / 512 GB RAM / 2 disks)
-* User customized: you can specify the CPU model and RAM for the bare metal server
+* User customized: you can specify the CPU model and RAM for the Bare Metal Server
 
-Table 2. CPU and RAM options for the user-customized configuration
+Table 2. Dual Intel Xeon CPU and RAM options for the user-customized configuration
 
 | Item          | Options       |
 |:------------- |:------------- |
 | CPU | <ul><li>Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz</li><li>Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz</li><li>Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz</li></ul>|
 | RAM | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB|
 
-For guidance on what bare metal server configuration to choose, see the _Bill of Materials_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform){:new_window}.
+Table 3. Dual Intel Xeon Gold CPU and RAM options for the user-customized configuration
+
+| Item        | Options       |
+|:------------- |:------------- |
+| CPU | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz|
+| RAM | 96 GB, 192 GB, 384 GB, 768 GB, 1.5 TB|
+
+For guidance on what Bare Metal Server configuration to choose, see the _Bill of Materials_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform){:new_window}.
 
 ### Number of Bare Metal Servers
 
 For the initial cluster in the instance, you can configure the number of ESXi servers as follows:
 * If you selected **Small**, **Medium**, or **Large** Bare Metal Server configuration, you can configure the number of ESXi servers in the range 2 - 10.
-* If you selected to customize the Bare Metal Server configuration, you can configure the number of ESXi servers in the range 2 - 20.
+* If you selected **User customized** Bare Metal Server configuration, you can configure the number of ESXi servers in the range 2 - 20.
 
-All ESXi servers share the same configuration. In post-deployment, you can create up to four more clusters. If selecting the User Customized configuration for vSAN, four servers are required for both initial and post-deployment. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+All ESXi servers share the same configuration. In post-deployment, you can add four more clusters. If you selected the **User customized** configuration for vSAN, 4 ESXi servers are required for both the initial and post-deployment clusters. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ### Data center location
 
@@ -118,11 +125,13 @@ For vSAN, you select the User customized Bare Metal Server configuration and you
 
 ### NFS
 
-For NFS, you can add file-level shared storage for your instance and specify the following settings under **Storage**:
+For NFS, you can add file-level shared storage for your instance. Specify the following settings under **Storage**:
 
-* **Number of file shares**: Specify the number of file shares for the NFS shared storage that you want to add. The number of file shares must be in the range 1 - 32.
+* **File Shares**: Specify the number of file shares for the NFS shared storage that you want to add. The number of file shares must be in the range of 1 to 32.
 * **Size**: Select the capacity that meets your shared storage needs.
 * **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements. The performance levels available to you depend on the data center that you select.
+* **Configure file shares individually**: Optionally select to complete individual file share configuration.
+* **Add NFS**: Optionally select if you are configuring your file shares individually and need to add additional file shares.
 
 Table 3. NFS performance level options
 
@@ -139,51 +148,60 @@ NFS (Network File System) v3 is set by default and you cannot change it. NFS v3 
 
 When you order a vCenter Server instance, you can also order additional services. For more information about the available services, see [Services for vCenter Server instances](vc_planning.html#services-for-vcenter-server-instances).
 
+## Estimated Cost
+
+You can calculate an estimated cost and generate a detailed PDF from each panel as you provide details for your instance order. Complete the fields on the panel and click **Caluculate Cost** at the bottom of the panel to generate a cost estimate. Additionally, click the calculated cost estimate link to generate a PDF that provides the estimate details.
+
+**Note:** The estimated cost displayed on the panel and the cost estimate details provided in the PDF are only for the items that you have completed on your order. The cost increases as you complete each panel for your instance order.
+
 ## Procedure
 
-1. Click **Getting Started** or **Order Instance** from the left navigation pane.
+1. Click **Getting Started** on the left navigation pane.
 2. On the **VMware vCenter Server on IBM Cloud** card, click **Order Instance**.
 3. On the **Order a vCenter Server Instance** page, select the instance type:
-   *  To deploy a single instance in the environment or to deploy the first instance in a multi-site topology, click **Primary**.
-   *  To connect the instance with an existing (primary) instance in the environment for high availability, click **Secondary**.
+   *  To deploy a single instance in the environment or to deploy the first instance in a multi-site topology, ensure that **Primary** is selected and click **Next**.
+   *  To connect the instance with an existing (primary) instance in the environment for high availability, select  **Secondary** and click **Next**.
 4. On the **Basics** page, specify the required information based on the instance type you selected.
 
    If you selected the **Primary** instance type, provide the following information:
 
-    1. Enter the instance name, root domain name, subdomain prefix, and host name prefix.
-    2. Select the Bare Metal Server configuration.
-    3. If you selected **User customized** for the Bare Metal Server configuration, specify the **CPU Model** and the amount of **RAM**.
-    4. Specify the number of bare metal servers. vSAN will always use 4 bare metal servers.
-    5. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
-    6. Select vSAN or NFS for **Storage**.
-    7. If you selected NFS, specify the **Number of File Shares**, **Size**, and **Performance**. If you selected vSAN, specify the **Number of Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
-    8. Click **Next**.
+    1. Enter the root domain name, subdomain label, instance name, and data center location.
+    2. Select your Bare Metal Server configuration.
+       * If you selected **Custom**, specify the **CPU Model** and the amount of **RAM**.
+       * If you selected **Preconfigured**, specify the **Bare Metal Server Configuration**.
+    3. Specify the number of {{site.data.keyword.baremetal_short}}. vSAN will always use 4 {{site.data.keyword.baremetal_short}}.
+    4. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
+    5. Select vSAN or NFS for **Storage**.
+       * If you selected vSAN, specify the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
+       * If you selected NFS, specify the **File Shares**, **Size**, and **Performance**. Optionally select **Configure shares individually** to complete individual file configuration. Use the **Add NFS** option to add additional file shares, if necessary.
+    6. Click **Next**.
 
    If you selected the **Secondary** instance type, provide the following information:
 
-     1. Enter the secondary instance name.
-     2. Select the primary instance that you want the secondary instance to be connected with.
-     3. Review the root domain name that is automatically filled in.
-     4. Enter the subdomain prefix and host name prefix.
-     5. Select the bare metal server configuration.
-     6. If you selected **User customized** for the bare metal server configuration, specify the **CPU Model** and the amount of **RAM**.
-     7. Specify the number of bare metal servers.
-     8. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
-     9. Select vSAN or NFS for **Storage**.
-     10. If you selected NFS, specify the **Number of File Shares**, **Size**, and **Performance**. If you selected vSAN, specify the **Number of Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
-     11. Click **Next**.
+    1. Enter the secondary instance name.
+    2. Select the primary instance that you want the secondary instance to be connected with.
+    3. Review the root domain name that is automatically filled in.
+    4. Enter the subdomain label and host name prefix.
+    5. Select the Bare Metal Server configuration.
+    6. If you selected **User customized** for the Bare Metal Server configuration, specify the **CPU Model** and the amount of **RAM**.
+    7. Specify the number of {{site.data.keyword.baremetal_short}}.
+    8. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
+    9. Select vSAN or NFS for **Storage**.
+       * If you selected vSAN, specify the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
+       * If you selected NFS, specify the **File Shares**, **Size**, and **Performance**. Optionally select **Configure shares individually** to complete individual file configuration. Use the **Add NFS** option to add additional file shares, if necessary.  
+    10. Click **Next**.
 
 5. If you selected the **Secondary** instance type, review the following information on the **Authentication** page:
 
-   1. In the **Primary Instance PSC Administrator Password** field, the Platform Services Controller (PSC) password of the selected primary instance is automatically filled in.
-   2. Click **Next** to verify the password.
-   3. If the password validation fails, enter the correct PSC password, and click **Next** again.
+    1. In the **Primary Instance PSC Administrator Password** field, the Platform Services Controller (PSC) password of the selected primary instance is automatically filled in.
+    2. Click **Next** to verify the password.
+    3. If the password validation fails, enter the correct PSC password, and click **Next** again.
 
 6. On the **Licensing** page, specify the licensing choice for each of the VMware components in the instance, including VMware vCenter Server, VMware vSphere, VMware NSX, and VMware vSAN (if you selected vSAN storage) and then click **Next**.
-  * If you want new licenses to be purchased on your behalf, select **Include with purchase** for the components. For VMware NSX and vSAN, also select the license edition.
-  * If you want to use your own VMware license for a component, select **I will provide** and enter the license key for the component.
+   * If you want new licenses to be purchased on your behalf, select **Include with purchase** for the components. For VMware NSX and vSAN, also select the license edition.
+   * If you want to use your own VMware license for a component, select **I will provide** and enter the license key for the component.
 
-  **Attention**:
+   **Attention**:
    * Only one license choice is supported for each VMware component. Both purchasing and providing licenses for the same VMware component is not supported. The license choice selected for a VMware component applies for the life of the instance.
    * A license with a minimum of 8 CPUs is required, which is for 4 servers with 2 CPUs per server. The license choice for each VMware component applies to the base instance and to any ESXi servers that you add to the instance later. Therefore, you must ensure that your license supports future capacity expansion in your infrastructure.
    * The minimum license editions are indicated on the user interface. If different component editions are supported, you can select the edition that you want. You are responsible to ensure that the license key provided is correct for each VMware component selected.
@@ -206,13 +224,19 @@ When you order a vCenter Server instance, you can also order additional services
       * **Name**: Specify a unique name for the service instance to distinguish it from the additional service instances that you might install later.
       * **Deployment Size**: Select **Small**, **Medium**, or **Large** with different CPU and RAM specifications for the FortiGate Virtual Appliances.
       * **Monthly Subscription License Model**: Select **Standard FW**, **Standard FW + UTM**, or **Standard FW + Enterprise** according to your requirements. For more information about what is provided in each license option, click **Learn More** on the **FortiGate Virtual Appliance on IBM Cloud** service card.
-   5. Select any other services that you want to install, or, to proceed without deploying any service, including Veeam on {{site.data.keyword.cloud_notm}}, click **Selected Service** on the service card. Click **Next**.
+   5. If you want to install HCX on {{site.data.keyword.cloud_notm}}, select the **Public endpoint certificate type** in the **Configure HCX on IBM Cloud** area. If you select **CA Certificate**, sepecify the following settings:
+      * **Certificate Contents**: Enter the contents of the CA certificate.
+      * **Private Key**: Enter the private key of the CA certificate.
+      * (Optional) **Password**: Enter the password for the private key if it is encrypted.
+      * (Optional) **Reenter Password**: Enter the password for the private key again.
+      * (Optional) **Hostname**: Enter the host name to be mapped to the common name (CN) of the CA certificate. HCX requires the CA certificate to be in a format that is accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+   6. Select any other services that you want to install, or, to proceed without deploying any service, including Veeam on {{site.data.keyword.cloud_notm}}, click **Selected Service** on the service card. Click **Next**.
 
 8. On the **Summary** page, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
    2. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the instance.
-   3. Review the estimated cost of the instance by clicking the price link under **Estimated Cost**. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   4. Click **Place Order**.
+   3. Review the estimated cost of the instance by clicking the cost link under **Estimated Cost**. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+   4. Click **Create**.
 
 ## Results
 
@@ -228,16 +252,16 @@ When you order a secondary instance, the VMware vSphere Web Client for the prima
 
 View and manage the vCenter Server instance that you ordered.
 
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_full}} components that are created in your IBM Cloud account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the IBM Cloud infrastructure customer portal or any other means outside of the console.
+**Important**: You must manage the {{site.data.keyword.vmwaresolutions_full}} components that are created in your {{site.data.keyword.cloud_notm}} account	 only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}} or any other means outside of the console.
 If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
-**CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your IBM Cloud account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
+**CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account	 when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components
 *  Expanding or contracting instance capacity through adding or removing ESXi servers
 *  Powering off components
 *  Restarting services
 
-   Exceptions to these activities include managing the shared storage file shares from the IBM Cloud infrastructure customer portal. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
+   Exceptions to these activities include managing the shared storage file shares from the 	{{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
 ## Related links
 
