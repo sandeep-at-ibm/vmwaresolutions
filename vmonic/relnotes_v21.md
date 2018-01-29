@@ -12,7 +12,7 @@ lastupdated: "2018-01-28"
 
 This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_full}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
-<!--## Spectre and Meltdown remediation
+## Spectre and Meltdown remediation
 
 {{site.data.keyword.vmwaresolutions_full}} has released patches from VMware in response to the vulnerabilities known as Spectre and Meltdown (CVE-2017-5753, CVE-2017-5715 and CVE-2017-5754).
 
@@ -20,7 +20,7 @@ This release includes new features, component updates, usability enhancements, a
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-For more information, see [Addressing Spectre and Meltdown vulnerabilities](../vmonic/trbl_fix_spectre.html).-->
+For more information, see [Addressing Spectre and Meltdown vulnerabilities](../vmonic/trbl_fix_spectre.html).
 
 ## VMware HCX on IBM Cloud
 
