@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-19"
+lastupdated: "2018-01-19"
 
 ---
 
@@ -23,7 +23,7 @@ As part of the ordering process for your vCenter Server instance, the following 
 * A sample NSX Distributed Logical Router (DLR) is deployed for potential east-west communication between local workloads that are connected to layer 2 (L2) networks.
 * An NSX Edge appliance is deployed and configured to perform network address translation (NAT) from the range of IP addresses of the
 workload logical switch to a public IP address on the NAT rules.
-* The NSX Manager is configured to do a daily backup of the NSX configurations. For more information, see [Considerations when installing Veeam on IBM Cloud](../services/veeam_considerations.html#considerations-when-installing-the-veeam-on-ibm-cloud-service).
+* The NSX Manager is configured to do a daily backup of the NSX configurations. For more information, see [Considerations when installing Veeam on IBM Cloud](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
 
 
 ## Configuring the networking settings for your VMs
@@ -68,7 +68,7 @@ To identify the details for the customer subnets so you can use the IP addresses
 2. On the navigator pane, click **NSX Edges** and double-click the **customer-nsx-edge edge**.
 3. On the **Summary** tab for this edge, review the edge description, which contains the subnet identifiers for both the private and public customer subnets.
 
-Additionally, you can find more details about the customer subnets by completing the following steps in the IBM Cloud infrastructure customer portal:
+Additionally, you can find more details about the customer subnets by completing the following steps in the 	{{site.data.keyword.slportal}}:
 
 1. Click **Networking > IP Management > Subnets**.
 2. Click the filter menu and in the Subnet field enter the identifier as seen in the description of the **customer-nsx-edge** edge on the **Summary** tab in the VMware vSphere Web Client.
@@ -79,4 +79,7 @@ Additionally, you can find more details about the customer subnets by completing
 
 ## Related links
 
+* [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html)
+* [Troubleshooting](../vcenter/vcenter_chg_impact.html)
+* [FAQs](../vmonic/faq.html)
 * [NSX Edge Services Gateway](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/nsx-esg){:new_window}

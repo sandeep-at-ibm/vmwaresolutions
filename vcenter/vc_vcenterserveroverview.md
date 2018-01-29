@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-30"
+lastupdated: "2018-01-25"
 
 ---
 
@@ -42,11 +42,11 @@ This layer virtualizes the physical infrastructure through different VMware prod
 
 ### Virtualization management
 
-This layer consists of vCenter Server virtual appliance, NSX Manager, two NSX ESGs, three NSX Controllers, Platform Services Controller (PSC) virtual appliance, vCSA, and the IBM® CloudDriver virtual machine.
+This layer consists of vCenter Server Appliance (vCSA), NSX Manager, two NSX ESGs, three NSX Controllers, Platform Services Controller (PSC) virtual appliance, vCSA, and the IBM® CloudDriver virtual machine.
 
-The base offering is deployed with a vCenter Server appliance that is sized to support an environment with up to 100 hosts and up to 1000 VMs. The same vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
+The base offering is deployed with a vCenter Server appliance that is sized to support an environment with up to 400 hosts and up to 4000 VMs. The same vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
 
-In total, the base offering requires 34 vCPU and 59 GB vRAM that are reserved for the virtualization management layer. The remaining host capacity for your VMs depends on several factors, such as oversubscription rate, VM sizing, and workload performance requirements.
+In total, the base offering requires 38 vCPU and 67 GB vRAM that are reserved for the virtualization management layer. The remaining host capacity for your VMs depends on several factors, such as oversubscription rate, VM sizing, and workload performance requirements.
 
 For details about the architecture, see the _Reference architecture_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform){:new_window}.
 
@@ -58,11 +58,15 @@ The following components are included in your vCenter Server instance.
 
 ### Hardware
 
-You can order three or more {{site.data.keyword.baremetal_long}} with one of the following configurations:
+You can order three or more {{site.data.keyword.baremetal_short}} with one of the following configurations:
 *  Small (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz / 128 GB RAM / 2 disks)
 *  Medium (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz / 256 GB RAM / 2 disks)
 *  Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz / 512 GB RAM / 2 disks)
-*  User customized (the user selects the CPU, RAM, and storage options). If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_long}}.
+*  User customized. The user selects the CPU, RAM, and storage options.
+
+**Notes for the User customized configuration**:
+* Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz is also available for **User customized** configurations.
+* If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
 
 ### Networking
 
@@ -84,27 +88,29 @@ The following VSIs (Virtual Server Instances) are ordered:
 
 ### Storage
 
-During initial deployment, you can choose between NFS and vSAN storage options.
+During initial deployment, you can choose between vSAN and NFS storage options.
+
+The vSAN option offers customized CPU model and RAM configurations, with various options for disk type and quantity:
+* Disk quantity: 2, 4, 6, or 8
+* Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED.
+
+  In addition, 2 cache disks of 960 GB are also ordered per host.
+  **Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
 
 The NFS option offers customized shared file-level storage for workloads with various options for size and performance:
 * Size: 1, 2, 4, 8, or 12 TB
-* Performance: 2, 4 , or 10 IOPS/GB. The 10 IOPS/GB option is available for certain data centers only.
+* Performance: 2, 4, or 10 IOPS/GB. The 10 IOPS/GB option is available for certain data centers only.
+* Individually configure file shares.
 
 If you choose the NFS option, the following file shares are ordered:
 * One 2 TB, 4 IOPS/GB file share for management components.
 * One 2 TB shared block-level storage for backups, which can be scaled up to 12 TB. You can choose whether you want storage for backups by selecting or deselecting the Veeam on IBM Cloud service.
 
-The vSAN option offers customized CPU model and RAM configurations, with various options for disk type and quantity:
-* Disk quantity: 2, 4, 6, or 8
-* Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SED.
-  In addition, 2 cache disks of 960 GB are also ordered per host.
-  **Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
-
 ### Licenses (IBM-provided or BYOL) and fees
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Base for Service Providers 6.3
+* VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 * Support and Services fees
 
@@ -114,12 +120,12 @@ Each vCenter Server expansion node will deploy and incur charges for the followi
 
 ### Hardware for expansion nodes
 
-One IBM Cloud Bare Metal Server with the configuration presented in [vCenter Server instance  components](../vcenter/vc_vcenterserveroverview.html#vcenter-server-instance-components).
+One Bare Metal Server with the configuration presented in [vCenter Server instance  components](../vcenter/vc_vcenterserveroverview.html#vcenter-server-instance-components).
 
 ### Licenses and fees for expansion nodes
 
 * One VMware vSphere Enterprise Plus 6.5u1
-* One VMware NSX Base for Service Providers 6.3
+* One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
 * One Support and Services fee
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
@@ -140,4 +146,4 @@ the [Architecture Center](https://www.ibm.com/devops/method/content/architecture
 
 * [Planning vCenter Server instances](vc_planning.html)
 * [Ordering vCenter Server instances](vc_orderinginstance.html)
-* [Bluemix file and block storage](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/sharedStorage){:new_window}
+* [{{site.data.keyword.cloud_notm}} file and block storage](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/sharedStorage){:new_window}

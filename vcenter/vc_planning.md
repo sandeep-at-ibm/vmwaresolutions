@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-21"
+lastupdated: "2017-12-29"
 
 ---
 
@@ -85,6 +85,10 @@ This service deploys an HA-pair of FortiGate Security Appliance (FSA) 300 series
 ### FortiGate Virtual Appliance on IBM Cloud
 
 This service deploys an HA-pair of FortiGate Virtual Appliances that can allow you to reduce risk by implementing critical security controls within your virtual infrastructure. For more information, see [Managing FortiGate Virtual Appliance on IBM Cloud](../services/managingfortinetvm.html).
+
+### HCX on IBM Cloud
+
+This service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change. For more information, see [Managing HCX on IBM Cloud](../services/managinghcx.html).
 
 ### Zerto on IBM Cloud
 

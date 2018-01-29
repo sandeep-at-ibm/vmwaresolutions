@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-22"
+lastupdated: "2018-01-26"
 
 ---
 
@@ -32,26 +32,39 @@ The cluster name must meet the following requirements:
 
 You can select a Bare Metal Server configuration that is different than the configuration of the default cluster. If you select **User customized**, you must specify the CPU model and RAM for the bare metal server.
 
-Table 1. CPU and RAM options
+Table 1. Dual Intel Xeon CPU and RAM options
 
 | Item        | Options       |
 |:------------- |:------------- |
 | CPU | <ul><li>Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz</li><li>Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz</li><li>Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz</li></ul>|
-| RAM | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB|   
+| RAM | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB|  
+
+Table 2. Dual Intel Xeon Gold CPU and RAM options
+
+| Item        | Options       |
+|:------------- |:------------- |
+| CPU | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz|
+| RAM | 96 GB, 192 GB, 384 GB, 768 GB, 1.5 TB|
 
 ### Number of Bare Metal Servers
 
-A minimum of 2 bare metal servers is required for a cluster and you can add up to 32 bare metal servers, which will share the same configuration.
+A minimum of 2 {{site.data.keyword.baremetal_short}} is required for a cluster.
 
-The number of the bare metal servers that you can add at a time is as follows:
-* For the **Small**, **Medium**, and **Large** configurations, you can add 1 - 10 ESXi servers at a time.
-* For the **User customized** configuration, you can add 1 - 20 ESXi servers at a time. After deployment, you can create up to four more clusters. If you select the **User customized** configuration with VMware vSAN storage, four servers are required for both the initial order and after deployment.
+For vCenter Server instances that are deployed in V2.1 or later, you can add up to 59 {{site.data.keyword.baremetal_short}} for a cluster, and you can add 1 - 59 ESXi servers at a time.
+
+For vCenter Server instances that were deployed in V2.0 or earlier, you can add up to 32 {{site.data.keyword.baremetal_short}} for a cluster. The number of the {{site.data.keyword.baremetal_short}} that you can add at a time is as follows:
+* For the **Small**, **Medium**, and **Large** Bare Metal Server configurations, you can add 1 - 10 ESXi servers at a time.
+* For the **User customized** Bare Metal Server configuration, you can add 1 - 20 ESXi servers at a time.
+
+After deployment, you can create up to four more clusters. If you select the **User customized** Bare Metal Server configuration with VMware vSAN storage, 4 servers are required for both the initial cluster and post-deployment clusters.
+
+When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.
 
 ### Data Center Location
 
 The data center location of the cluster is set to the data center of the vCenter Server instance by default. You can deploy the cluster to a different data center than the deployed instance, but you must ensure that the network latency between the two data centers is less than 150 ms. To check the network latency, you can use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-If you deploy the cluster to a different data center or {{site.data.keyword.cloud}} infrastructure (SoftLayer) pod, three additional VLANs are ordered for use with the ordered bare metal servers.
+If you deploy the cluster to a different data center or {{site.data.keyword.cloud}} infrastructure (SoftLayer) pod, three additional VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
 ## Storage settings
 
@@ -100,28 +113,44 @@ NFS (Network File System) v3 is set by default and you cannot change it. NFS v3 
          <dt class="dt dlterm">Ready to Use</dt>
          <dd class="dd">The cluster is ready to use.</dd>
      </dl>
-4. To add a cluster, click **Add** at the upper-right corner of the **CLUSTERS** table. Complete the following steps in the **Add Cluster** area:
-   1. Enter the cluster name.
-   2. Select the bare metal server configuration.
-   3. If you selected **User customized**, select the CPU and RAM specifications based on your requirements.
-   4. Specify the number of bare metal servers.
-   5. Review the data center location that is automatically filled in.
-      You can select a different data center other than the data center where the instance is deployed. If you select a user-customized bare metal server configuration, you can deploy the cluster to a different  {{site.data.keyword.cloud_notm}} infrastructure pod for data centers containing additional pods. This is useful when the default pod where the initial instance is deployed has reached capacity. Pre-built, standardized **Small**, **Medium**, and **Large** bare metal server options use a default pod that cannot be changed.
-   6. Under **Storage**, select either vSAN or NFS.
-   7. If you selected NFS, specify the **Number of File Shares**, **Size**, and
-       **Performance**.
-       If you selected vSAN, specify the **Number of Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
-   8. Click **Calculate Price** under **Estimated Cost** to get the pricing of your order.
-   9. Review the estimated cost of the cluster by clicking the price link under **Estimated Cost**. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   10. Click **Add**.
+4. To add a cluster, click **Add** at the upper-right corner of the **CLUSTERS** table.
+5. If you select a **user customized** configuration, in the **Add Cluster** area, complete the following steps:
 
-5. After the cluster is ready to use, you can click the cluster name to view its details:
+      1. Enter the cluster name.
+      2. Select the bare metal server configuration.
+      3. Select the CPU and RAM specifications based on your requirements.
+      4. Specify the number of {{site.data.keyword.baremetal_short}}.
+      5. Review the data center location that is automatically filled in. You can select a different data center other than the data center where the instance is deployed. If you select a user-customized {{site.data.keyword.baremetal_short}} configuration, you can deploy the cluster to a different  {{site.data.keyword.cloud_notm}} infrastructure pod for data centers containing additional pods. This is useful when the default pod where the initial instance is deployed has reached capacity.
+      6. Select either vSAN or NFS under **Storage**.
+      7. For vSAN storage, specify the required settings for disk type and capacity. Under **Licenses**, indicate how your license key is provided:
+
+        * If you select **vSphere License - Enterprise Plus** to include with purchase, continue to the next license key.
+        * If you select **vSAN License** to include with purchase, pick the Advanced or Enterprise license edition from the drop down list.
+        * If you indicate you will provide the license key, enter your license key.
+
+      8. For **NFS** storage, specify the required settings for the file shares. To configure shares individually, select that check box and configure the size and performance of each share.
+      Under **Licenses**, indicate how your license key is provided. You can either include the **vSphere License - Enterprise Plus** license with your purchase or provide your own license by entering the license key.
+
+6. If you select a user **Preconfigured** configuration, in the **Add Cluster** area, complete the following steps:
+      1. Enter the cluster name.
+      2. Select the the standardized **Small**, **Medium**, or **Large** {{site.data.keyword.baremetal_short}} configuration.
+      3. Specify the number of {{site.data.keyword.baremetal_short}}.
+      4. Review the data center location that is automatically filled in. Pre-built, standardized **Small**, **Medium**, and **Large** bare metal server options use a default pod that cannot be changed.
+      5. Under Storage, specify the **Number of File Shares**, **Size**, and **Performance**.
+      **Note**: NFS is the default under **Storage**.
+      6. To configure shares individually, select that check box and configure the size and performance of each share.
+      7. Under **Licenses**, indicate how your license key is provided. You can either include the **vSphere License - Enterprise Plus** license with purchase or provide your own license by entering the license key.  
+7. Click **Calculate Price** under **Estimated Cost** to get the pricing of your order.
+8. Review the **Estimated Cost** of the cluster by clicking the **Calculate Cost** link. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+9. Click **Add** to add your cluster.
+10. After the cluster is ready to use, you can click the cluster name to view its details:
+
    * The list of ESXi servers with their details:
-     * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_prefix>.<root_domain>`, where:
+     * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
 
        `host_prefix` is the host name prefix,
        `n` is the sequence of the server,
-       `subdomain_prefix` is the subdomain prefix, and
+       `subdomain_label` is the subdomain label, and
        `root_domain` is the root domain name.
 
      * **Version**: The version of the ESXi server.
