@@ -10,6 +10,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Release notes
+        vmonic/relnotes_v21.md
         vmonic/relnotes_v20.md
         vmonic/relnotes_v19.md
         vmonic/relnotes_v18.md
@@ -25,8 +26,10 @@ IBM Cloud for VMware Solutions
     Related links
         [Resources and videos](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture/1_0)
         [Take a look under the hood](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
-        [Platform extension: vRealize Automation](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/vRealizeAutomation)
-        [Security and compliance - HyTrust](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust)
+        [vRealize automation](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/vRealizeAutomation)
+        [Secure virtualization](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/secure-virtualization)
+        [Attach dedicated storage to NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+        [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -39,21 +42,6 @@ IBM Cloud for VMware Solutions
         vmonic/notifications.md
 
     {: .topicgroup}
-    Cloud Foundation on IBM Cloud
-        sddc/sd_cloudfoundationoverview.md
-        sddc/sd_planning.md
-        sddc/sd_networkingoncloudfoundation.md
-        sddc/sd_multisite.md
-        sddc/sd_orderinginstance.md
-        sddc/sd_viewinginstances.md
-        sddc/sd_addingviewingclusters.md
-        sddc/sd_addingremovingservers.md
-        sddc/sd_applyingupdates.md
-        sddc/sd_addingremovingservices.md
-        sddc/sd_deletinginstance.md
-        sddc/sd_deletinginstance_multi.md
-
-    {: .topicgroup}
     vCenter Server on IBM Cloud
         vcenter/vc_vcenterserveroverview.md
         vcenter/vc_planning.md
@@ -61,13 +49,28 @@ IBM Cloud for VMware Solutions
         vcenter/vc_esg_config.md
         vcenter/vc_multisite.md
         vcenter/vc_orderinginstance.md
-        vcenter/vc_viewinginstances.md
         vcenter/vc_addingviewingclusters.md
         vcenter/vc_addingremovingservers.md
         vcenter/vc_applyingupdates.md
         vcenter/vc_addingremovingservices.md
+        vcenter/vc_viewinginstances.md
         vcenter/vc_deletinginstance.md
         vcenter/vc_deletinginstance_multi.md
+
+    {: .topicgroup}
+    Cloud Foundation on IBM Cloud
+        sddc/sd_cloudfoundationoverview.md
+        sddc/sd_planning.md
+        sddc/sd_networkingoncloudfoundation.md
+        sddc/sd_multisite.md
+        sddc/sd_orderinginstance.md
+        sddc/sd_addingviewingclusters.md
+        sddc/sd_addingremovingservers.md
+        sddc/sd_applyingupdates.md
+        sddc/sd_addingremovingservices.md
+        sddc/sd_viewinginstances.md
+        sddc/sd_deletinginstance.md
+        sddc/sd_deletinginstance_multi.md
 
     {: .topicgroup}
     VMware vSphere on IBM Cloud
@@ -111,6 +114,16 @@ IBM Cloud for VMware Solutions
         services/managingveeam.md
 
     {: .topicgroup}
+    HCX on IBM Cloud
+        services/hcx_considerations.md
+        services/managinghcx.md
+        services/standalone_considerations.md
+        services/standalone_orderingserviceinstances.md
+        services/standalone_viewingserviceinstances.md
+        services/standalone_deletingserviceinstances.md
+        services/hcx_glossary.md
+
+    {: .topicgroup}
     Zerto on IBM Cloud
         services/addingzertodr.md
         services/managingzertodr.md
@@ -122,6 +135,7 @@ IBM Cloud for VMware Solutions
     {: .topicgroup}
     FAQs
         vmonic/faq.md
+        vmonic/faq_esxi.md
         vmonic/faq_byol.md
 
     {: .topicgroup}
@@ -130,7 +144,6 @@ IBM Cloud for VMware Solutions
         vcenter/vcenter_chg_impact.md
         vmonic/trbl_timeout_vc_console.md
         vmonic/trbl_sec_inst_not_visible.md
-        vmonic/trbl_automation_user_pswd_expir.md
         vmonic/trbl_mixed_multisite.md
         vmonic/trbl_cfupdatesfail.md
         vmonic/trbl_add_ha_cluster_config.md
