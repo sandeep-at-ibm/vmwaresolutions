@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-28"
+lastupdated: "2018-01-24"
 
 ---
 
@@ -43,13 +43,13 @@ The root domain name must meet the following requirements:
 
 **Note:** The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (virtual machines) is 50 characters. Domain names must accomodate for this maximum length.
 
-### Subdomain prefix
+### Subdomain label
 
-The subdomain prefix must meet the following requirements:
+The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
-*  The subdomain prefix must start and end with an alphanumeric character.
-*  The maximum length of the subdomain prefix is 10 characters.
-*  The subdomain prefix must be unique within your account.
+*  The subdomain label must start and end with an alphanumeric character.
+*  The maximum length of the subdomain label is 10 characters.
+*  The subdomain label must be unique within your account.
 
 ### Host name prefix
 
@@ -69,35 +69,35 @@ You can select a bare metal server configuration depending on your requirements:
 
 <!--For guidance on what bare metal server configuration to choose, see the _Bill of Materials_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture/virtualizationRefArch){:new_window}.-->
 
-### Number of bare metal servers
+### Number of Bare Metal Servers
 
 The number of ESXi servers of a NetApp ONTAP Select instance is 4 by default. You cannot change it. All the ESXi servers share the same configuration.
 
 ### Data center location
 
-You must select the IBM Cloud data center where the instance is to be hosted. Only the data centers that meet the bare metal server specification you selected previously are displayed.
+You must select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted. Only the data centers that meet the bare metal server specification you selected previously are displayed.
 
 ## Licensing settings
 
-You must upload four NetApp licensing files, because each of the four bare metal servers requires one license. Contact your NetApp sales team to procure the appropriate licensing for your high performance or high capacity deployment.
+You must upload four NetApp licensing files, because each of the four {{site.data.keyword.baremetal_short}} requires one license. Contact your NetApp sales team to procure the appropriate licensing for your high performance or high capacity deployment.
 
 ## Procedure
 
-1. Click **Getting Started** or **Order Instance** from the left navigation pane.
+1. Click **Getting Started** on the left navigation pane.
 2. On the **NetApp ONTAP Select** card, click **Order Instance**.
 3. On the **Basics** page under **System**, provide the following information:
    1. Enter the instance name.
-   2. Enter the root domain name, subdomain prefix, and host name prefix.
+   2. Enter the root domain name, subdomain label, and host name prefix.
    3. Select the bare metal server configuration.
-   4. Review the number of bare metal servers, that is 4.
-   5. Select the IBM Cloud data center to host the instance.
-4. On the **Basics** page under **Licensing**, click **Add files** to upload four NetApp license files that are required by the four bare metal servers.  Click **Next**.
+   4. Review the number of {{site.data.keyword.baremetal_short}}, that is 4.
+   5. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
+4. On the **Basics** page under **Licensing**, click **Add files** to upload four NetApp license files that are required by the four {{site.data.keyword.baremetal_short}}.  Click **Next**.
 5. On the **Summary** page, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
    2. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the instance.
    3. Review the estimated cost of the instance by clicking the price link under **Estimated Cost**. To save or print your order
    summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   4. Click **Place Order**.
+   4. Click **Create**.
 
 ## Results
 
@@ -123,4 +123,5 @@ View and manage the NetApp ONTAP Select instance that you ordered.
 
 * [Viewing NetApp ONTAP Select instances](np_viewinginstances.html)
 * [Deleting NetApp ONTAP Select instances](np_deletinginstance.html)
-* [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){:new_window}
+* [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
+* [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
