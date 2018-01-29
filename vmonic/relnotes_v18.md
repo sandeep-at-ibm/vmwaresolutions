@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
 lastupdated: "2017-08-28"
 
@@ -12,7 +12,7 @@ lastupdated: "2017-08-28"
 
 This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_full}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
-## Fortinet on IBM® Cloud service
+## Fortinet on IBM Cloud service
 
 The Fortinet on IBM Cloud service is now available to both Cloud Foundation and vCenter Server instances. This service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances. You can order instances with the Fortinet service included right from the start, or add this service to your existing instances later from the instance details page.
 
@@ -64,12 +64,11 @@ For more information, see:
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
 * [Adding and viewing clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html)
 
-### Updates to data centers (Updated August 28, 2017)
+### Updates to data centers
 
 The following new data centers are available for deployment: **DAL-09, DAL-12, DAL-13 - Dallas**; **LON-04, LON-06 - London**; **SJC-04 - San Jose**; **WDC-06, WDC-07 - Washington, DC**
 
-For more information, see:
-* [Requirements and planning for vCenter Server instances](../vcenter/vc_planning.html)
+For more information, see [Requirements and planning for vCenter Server instances](../vcenter/vc_planning.html)
 
 ## Usability enhancements
 

@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
 lastupdated: "2017-10-13"
 
@@ -22,7 +22,7 @@ For more information, see:
 
 ## NetApp ONTAP Select on IBM Cloud
 
-This release introduces the NetApp ONTAP Select on IBM Cloud offering, a virtual appliance for software-defined storage, which implements NetApp ONTAP Select as a service on IBM Cloud’s dedicated bare metal servers. NetApp ONTAP Select on IBM Cloud is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.
+This release introduces the NetApp ONTAP Select on IBM Cloud offering, a virtual appliance for software-defined storage, which implements NetApp ONTAP Select as a service on IBM Cloud’s dedicated {{site.data.keyword.baremetal_short}}. NetApp ONTAP Select on IBM Cloud is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.
 It hosts your storage on dedicated infrastructure and provides NetApp capabilities, such as deduplication, compression and encryption of data at rest. With this offering, you can provision storage resources with agility and flexibility while protecting data by using advanced data management functions, such as the fast and efficient NetApp Snapshot® copies, FlexClone® copies, and SnapMirror® replication.
 
 For more information, see:
@@ -65,7 +65,7 @@ For more information, see [Ordering Cloud Foundation instances](../sddc/sd_order
 
 ### Cross data center cluster support
 
-In order to enhance the scale out of your hosted VMware environment, you can now create a new cluster in a different IBM Bluemix Infrastructure (SoftLayer) pod, or a different IBM Cloud data center than the initial cluster deployed in the instance.
+In order to enhance the scale out of your hosted VMware environment, you can now create a new cluster in a different {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) pod, or a different IBM Cloud data center than the initial cluster deployed in the instance.
 
 For more information, see [Adding and viewing clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html).
 

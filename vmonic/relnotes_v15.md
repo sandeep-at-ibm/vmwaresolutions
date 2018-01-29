@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
 lastupdated: "2017-03-30"
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-30"
 
 This release includes new features, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_full}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
-## VRF versus classic SoftLayer account requirements (Updated Mar 30, 2017)
+## VRF versus classic SoftLayer account requirements
 
 For classic SoftLayer® accounts, VLAN spanning is a setting that can be enabled at the account level. {{site.data.keyword.vmwaresolutions_short}} requires that VLAN spanning is enabled.
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-20"
+lastupdated: "2018-01-03"
 
 ---
 
@@ -19,7 +19,7 @@ To access the console directly, complete the following steps:
    https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
 2. Log in to the console with your **IBMid** account.
 
-## Accessing from the {{site.data.keyword.cloud_notm}} catalog
+## Accessing from the IBM Cloud catalog
 
 To access the console from the {{site.data.keyword.cloud}} catalog, complete the following steps:
 1. Go to https://console.ng.bluemix.net/.
@@ -33,8 +33,8 @@ To access the console from the ibm.com website, complete the following steps:
 1. Go to http://www.ibm.com.
 2. Click **Products > Cloud > Cloud managed services**.
 3. On the {{site.data.keyword.cloud_notm}} page, click **Solutions** from the banner.
-4. On the {{site.data.keyword.vmwaresolutions_short}} page, scroll down and click **VMware**.
-5. Click **Get started**.
+4. On the {{site.data.keyword.cloud_notm}} solutions page, scroll down and click **VMware**.
+5. Click **Get Started**.
 6. Log in to the console with your **IBMid** account.
 
 ## Related links

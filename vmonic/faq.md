@@ -2,24 +2,24 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-28"
+lastupdated: "2018-01-25"
 
 ---
 
-# FAQ about IBM Cloud for VMware Solutions
+# General FAQ about IBM Cloud for VMware Solutions
 
-Find answers to the questions that you might have about {{site.data.keyword.vmwaresolutions_full}}.
+Find answers to frequently asked questions about {{site.data.keyword.vmwaresolutions_full}}.
 
 ## What user accounts do I need for IBM Cloud for VMware Solutions?
 
-* **IBMid account**. This account is required to access the {{site.data.keyword.vmwaresolutions_short}} console. This console is a stand-alone user interface that is separate from the {{site.data.keyword.slportal_full}}. For more information, see [Getting started](../index.html).
-* **{{site.data.keyword.cloud_notm}} account**. This account is required for provisioning. You can sign up for an {{site.data.keyword.cloud_notm}} infrastructure account by upgrading your **IBMid account** to a Pay-As-You-Go account. The {{site.data.keyword.cloud_notm}} infrastructure account that you are using must meet certain requirements. For more information, see [Signing up for an {{site.data.keyword.cloud_notm}} account](signing_softlayer_account.html) and [{{site.data.keyword.cloud_notm}} account requirements](slaccountrequirement.html).
+* **IBMid account**. This account is required to access the {{site.data.keyword.vmwaresolutions_short}} console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.slportal_full}}. For more information, see [Getting started](../index.html).
+* **{{site.data.keyword.cloud_notm}} account**. This account is required for provisioning. You can sign up for an {{site.data.keyword.cloud_notm}} account by upgrading your **IBMid account** to a Pay-As-You-Go account. The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Signing up for an {{site.data.keyword.cloud_notm}} account](signing_softlayer_account.html) and [{{site.data.keyword.cloud_notm}} account requirements](slaccountrequirement.html).
 
-## How do I associate my IBM Cloud credentials with the IBM Cloud for VMware Solutions console?
+## How do I associate my IBM Cloud infrastructure credentials with the IBM Cloud for VMware Solutions console?
 
-When you order your instance for the first time, follow the instructions on the {{site.data.keyword.cloud_notm}}  credentials page to locate and copy the {{site.data.keyword.cloud_notm}} user name and API key from the {{site.data.keyword.slportal}}. The {{site.data.keyword.cloud_notm}} credentials are stored in the {{site.data.keyword.vmwaresolutions_short}} console after the first order. Future orders automatically inherit these credentials.
+When you order your instance for the first time, follow the instructions on the {{site.data.keyword.cloud_notm}} infrastructure credentials page to locate and copy the {{site.data.keyword.cloud_notm}} user name and API key from the {{site.data.keyword.slportal}}. The {{site.data.keyword.cloud_notm}} infrastructure credentials are stored in the {{site.data.keyword.vmwaresolutions_short}} console after the first order. Future orders automatically use the stored credentials.
 
 ## How are my VMware virtual platform consumptions billed?
 
@@ -33,8 +33,29 @@ All costs for the physical and virtual infrastructure and the licenses resulting
 
 Both instance types provide deployment choices for VMware virtual environments. However, the difference is standardized versus customized.
 
-* When you order a VMware Cloud Foundation instance, you deploy a unified software-defined data center (SDDC) platform. For more information about what is deployed on a Cloud Foundation platform, see [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
-* When you order a VMware vCenter Server instance, you deploy a VMware virtual environment with customized compute, storage, and network resources. For more information about what is deployed on a vCenter Server platform, see [vCenter Server instance components](../vcenter/vc_vcenterserveroverview.html#vcenter-server-instance-components).
+* When you order a VMware Cloud Foundation instance, you deploy a unified software-defined data center (SDDC) platform. For more information about the deployed components, see [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+* When you order a VMware vCenter Server instance, you deploy a VMware virtual environment with customized compute, storage, and network resources. For more information about the deployed components, see [vCenter Server instance components](../vcenter/vc_vcenterserveroverview.html#vcenter-server-instance-components).
+* The functions that are supported for Cloud Foundation instances and vCenter Server instances are different:
+
+Table 1. Supported functions for Cloud Foundation versus vCenter Server instances
+
+| Function                          | Cloud Foundation    | vCenter Server |
+|:----------------------------------|:--------------------|:----------------------|
+| **Storage options**        | vSAN                | vSAN or Shared File-level Storage |
+| **Minimum number of ESXi servers** | 4 | vSAN: 4 or NFS: 2 (3 strongly recommended) |
+| **Maximum number of ESXi servers** | 32 per cluster      | 59 per cluster     |
+| **Cloud automated multi-site deployment** | Supported | Supported     |
+| **Add ESXi servers**              | Supported           | Supported    |
+| **Remove ESXi servers**           | Supported           | Supported |
+| **Multi-cluster support**         | 5 clusters | 5 clusters |
+| **Update and patch**              | IBM CloudDriver and VMware updates | IBM CloudDriver |
+| **Backup and restore**            | Supported | Supported  |
+| **Software-defined networking**   | NSX Enterprise   | NSX Base, Advanced, or Enterprise |
+| **BYOL for vSphere and vSAN** | Fully supported per cluster   | Fully supported per cluster     |
+| **BYOL for vCenter and NSX** | Fully supported per instance   | Fully supported per instance     |
+| **NSX license upgrade options**           | None   | Upgrade available from NSX Base to Advanced or Enterprise, and from NSX Advanced to Enterprise  |
+| **vSAN license editions**         | vSAN Advanced or Enterprise  | vSAN Advanced or Enterprise  |
+| **Add-on services**               | Supported  | Supported |
 
 ## What is included in a Cloud Foundation instance?
 
@@ -48,11 +69,38 @@ For more information, see [vCenter Server instance components](../vcenter/vc_vce
 
 It is strongly recommended to deploy production workloads into environments that have at least three nodes.
 
-Although VMware vSphere DRS (Distributed Resource Scheduler) and VMware HA (High Availability) are enabled by default, best practices from VMware suggests that each of the three NSX Controllers is placed on an individual node.
+Although VMware vSphere DRS (Distributed Resource Scheduler) and VMware HA (High Availability) are enabled by default, best practices from VMware suggest that you place each of the three NSX Controllers on an individual node.
 
-In the two-node minimum deployment, one node has one NSX Controller, and the other node has two NSX Controllers. If the node with two NSX Controllers goes down, NSX Controller operations are placed in read-only mode, and new VMs (virtual machines) or vMotion VMs may experience networking issues.
+In the two-node minimum deployment, one node has one NSX Controller, and the other node has two NSX Controllers. If the node with two NSX Controllers goes down, NSX Controller operations are placed in read-only mode, and new VMs (virtual machines) or vMotion VMs might experience networking issues.
 
 When a third node is added to a two-node cluster, vCenter Server automatically rebalances the three NSX Controllers across the three nodes and creates a highly available environment.
+
+## Can I set up VMware vCenter 6.5 HA configuration?
+
+No, it is not recommended. Failures in the {{site.data.keyword.vmwaresolutions_short}} functions might occur.
+
+## Can clusters be renamed?
+
+For vCenter Server instances, the first cluster that is created during deployment has a default name of **cluster1**. You can rename the default cluster in the VMware vSphere Client. When you add a new cluster to a vCenter Server instance, you can specify the name that you want on the {{site.data.keyword.vmwaresolutions_short}} console.
+
+**Note**: For Cloud Foundation instances, the default cluster name cannot be changed.
+
+##How are patches being managed?
+
+IBM provides ongoing updates to the IBM CloudDriver component which are made available through the {{site.data.keyword.cloud_notm}} for VMware Solutions console. IBM does not provide ongoing updates to add-on services such as Zerto on {{site.data.keyword.cloud_notm}} and Veeam on {{site.data.keyword.cloud_notm}}. Obtaining and installing these updates is your responsibility.
+
+VMware updates are applied in a different manner based on the type of VMware instance you have deployed:
+
+* For VMware Cloud Foundation instances, the updates to vSphere ESXi, NSX, vCenter, Platform Services Controller, and SDDC Manager components are provided through the {{site.data.keyword.vmwaresolutions_short}} console.
+* For VMware vCenter Server instances:
+  * For instances deployed at, or upgraded to, V2.1 or higher, newly deployed ESXi servers and clusters will be patched with recent, but not necessarily the latest, ESXi updates from VMware.
+  * You are responsible for all other updates to VMware components, including ensuring that newly deployed ESXi servers and clusters have all the most recent updates you require.
+  * For instances that were deployed at V2.0 or higher, VMware Update Manager (VUM) is integrated into your vCenter server. You may configure VUM to download ESXi updates from VMware.
+
+For more information, see:
+* [VMware Support](https://www.vmware.com/support.html)
+* [Applying updates to vCenter Server instances](../vcenter/vc_applyingupdates.html)
+* [Applying updates to Cloud Foundation instances](../sddc/sd_applyingupdates.html)
 
 ## Does the management services NSX Edge pose a security risk?
 
@@ -75,31 +123,20 @@ Although the customer-managed NSX Edge is connected to the public VLAN, security
 The unified Cloud Foundation and vCenter Server deployments have strict requirements on the physical infrastructure. The physical infrastructure varies among {{site.data.keyword.CloudDataCents_notm}}. Therefore, you can deploy instances only in data centers that meet the requirements. The available data centers are listed when you order your instances, and you can select the one that you want from the list.
 
 For more information, see the _Available data centers_ sections in:
-* [Requirements and planning for Cloud Foundation instances](../sddc/sd_planning.html).
-* [Requirements and planning for vCenter Server instances](../vcenter/vc_planning.html).
+* [Requirements and planning for Cloud Foundation instances](../sddc/sd_planning.html)
+* [Requirements and planning for vCenter Server instances](../vcenter/vc_planning.html)
 
 ## How long does it take for my instance to be deployed?
 
 You can check the status of the instance deployment by viewing the deployment history on the instance details page from the {{site.data.keyword.vmwaresolutions_short}} console.
 
-## How many ESXi servers can I add to my instances?
+## Does VMware vSphere on IBM Cloud use automation to install, configure, and bring up the VMware stack?
 
-* For Cloud Foundation instances, the standard configuration has four ESXi servers. You can add a maximum of 28 servers (to a total of 32 servers). For Cloud Foundation instances in a multi-site configuration, you can have a maximum of 128 ESXi servers across all instances.
-* For vCenter Server instances, you can configure the number of ESXi servers in the range 2 - 20 per cluster. Each deployed instance can have a maximum of 128 nodes across all clusters.
+No. VMware vSphere on {{site.data.keyword.cloud_notm}} does not leverage the advanced automation found in the Cloud Foundation and vCenter Server platforms. Based on what you order, the platform delivers optional VMware licenses, ESXi servers, and, optionally, an HA-pair of FortiGate physical firewalls. If a new cluster is created, three new VLANs are also provisioned: a public one and two private ones.
 
-**Note**: If your configuration requires a multi-site deployment with more than 128 nodes, [contact IBM Support](trbl_support.html) for assistance.
+VMware ESXi is automatically installed on each bare metal server, but you are responsible for installing any additional VMware components like vCenter Server or NSX. While vSphere on {{site.data.keyword.cloud_notm}} ensures that VMware-compatible hardware is ordered based on the VMware components selected, there is no automation in place to configure and bring up the VMware environment. You are responsible for designing and architecting the IBM-hosted environment.
 
-## Does VMware vSphere on IBM Cloud leverage automation to install, configure, and bring up the VMware stack?
-
-No. VMware vSphere on {{site.data.keyword.cloud_notm}} does not leverage the advanced automation found in the Cloud Foundation and vCenter Server  platforms. Based on what you order, the platform delivers optional VMware licenses, ESXi servers, and optional HA-pair of FortiGate physical firewalls. If a new cluster is created, one new public and two new private VLANs are also provisioned.
-
-VMware ESXi is automatically installed on each bare metal server, but you are responsible for installing any additional VMware components like vCenter Server or NSX. While vSphere on {{site.data.keyword.cloud_notm}} helps ensure that VMware-compatible hardware is ordered based on the VMware components selected, there is no automation in place to configure and bring up the VMware environment. You are responsible for designing and architecting the IBM-hosted environment.
-
-## Where do I manage the VMware licenses, ESXi servers, and other networking components that are ordered through VMware vSphere on IBM Cloud?
-
-After an order to create a new cluster for VMware vSphere on {{site.data.keyword.cloud_notm}} is placed, the licenses, servers, and any other components are delivered and can be managed from the {{site.data.keyword.slportal}}. After deployment, return to the {{site.data.keyword.vmwaresolutions_short}} console to scale the new cluster using the saved configuration. For more information on scaling, see [Scaling existing vSphere clusters](../vsphere/vs_scalingexistingclusters.html).
-
-## How can I view the list of all notifications?
+## How can I view a list of all notifications?
 
 To view the complete notification history, click **Notifications** from the left navigation pane. Notifications with a severity level of **Informational** and **Warning** are listed.
 

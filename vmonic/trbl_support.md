@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-12-29"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2017-11-10"
 If you need assistance with {{site.data.keyword.vmwaresolutions_full}}, create an {{site.data.keyword.cloud_notm}} Support ticket to get assistance through one of the following channels:
 
 ## From the IBM Cloud for VMware Solutions console
+
 To contact IBM Support from the {{site.data.keyword.vmwaresolutions_short}} console, complete the following steps:
 
 1. Go to
@@ -20,7 +21,7 @@ To contact IBM Support from the {{site.data.keyword.vmwaresolutions_short}} cons
 2. Log in to the console with your **IBMid** account.
 3. At the upper-right corner of the console, click **Support > Add Ticket**.
 4. On the {{site.data.keyword.slportal_full}} page, click **Log in with IBMid**, and then you are automatically logged in to the portal.
-5. Review the _IBM Bluemix® Infrastructure and Platform Services Support Policy_, and then click **Acknowledge**.
+5. Review the _{{site.data.keyword.cloud}} Infrastructure and Platform Services Support Policy_, and then click **Acknowledge**.
 6. Click **Support > Add Ticket** on the banner.
 7. On the **Add Ticket** page, provide the following information:
    1. From the **Subject** list, select **VMware Solutions**. If this option is not available, select **Other: Administrative**.   
