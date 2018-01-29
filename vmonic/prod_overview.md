@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-10-25"
+lastupdated: "2018-01-09"
 
 ---
 
@@ -15,10 +15,9 @@ to the {{site.data.keyword.cloud}} by using the scalable, secure, and high-perfo
 
 {{site.data.keyword.vmwaresolutions_short}} allows you to easily deploy your VMware virtual environments and manage the infrastructure resources on {{site.data.keyword.cloud_notm}}. At the same time, you can still use your familiar native VMware product console to manage the VMware workloads.
 
-## {{site.data.keyword.vmwaresolutions_short}} benefits
+## IBM Cloud for VMware Solutions benefits
 
 {{site.data.keyword.vmwaresolutions_short}} provides the following major benefits:
-
 * **Global reach**: Allows you to expand your hybrid cloud footprint to up to 30 enterprise-class {{site.data.keyword.CloudDataCents}} around the world.
 * **Seamless integration**: Enables seamless integration across the hybrid cloud with the {{site.data.keyword.cloud_notm}} infrastructure.
 * **Rapid provisioning**: Automates the deployment and configuration of the VMware environment, which allows you to quickly deploy an enterprise-class VMware environment with on-demand {{site.data.keyword.baremetal_long}} and virtual servers.
@@ -29,10 +28,68 @@ to the {{site.data.keyword.cloud}} by using the scalable, secure, and high-perfo
 ## Deployment offerings
 
 {{site.data.keyword.vmwaresolutions_short}} provides standardized and customizable deployment choices of VMware virtual environments. The following deployment types are offered:
-* **VMware Cloud Foundation on IBM Cloud**: The Cloud Foundation offering provides a unified VMware virtual environment by using standard {{site.data.keyword.cloud_notm}} compute, storage, and network resources that are dedicated to each user deployment.
 * **VMware vCenter Server on IBM Cloud**: The vCenter Server offering allows you to deploy a VMware virtual environment by using custom compute, storage, and network resources to best fit your business needs.
-* **VMware vSphere on IBM Cloud**: The vSphere on IBM Cloud offering provides a customizable virtualization service that combines VMware-compatible bare metal servers, hardware components, and licenses, to build your own IBM-hosted VMware environment.
+* **VMware Cloud Foundation on IBM Cloud**: The Cloud Foundation offering provides a unified VMware virtual environment by using standard {{site.data.keyword.cloud_notm}} compute, storage, and network resources that are dedicated to each user deployment.
+* **VMware vSphere on IBM Cloud**: The vSphere on IBM Cloud offering provides a customizable virtualization service that combines VMware-compatible {{site.data.keyword.baremetal_short}}, hardware components, and licenses, to build your own IBM-hosted VMware environment.
 * **NetApp ONTAP Select**: The NetApp ONTAP Select offering allows you to deploy a software-defined storage cluster that addresses your needs for a dedicated and highly available storage appliance based on NetApp ONTAP Select.
+
+## Additional services
+
+{{site.data.keyword.vmwaresolutions_short}} allows you to add various services at instance order time or after instance deployment. The following services are offered:
+
+### Veeam on IBM Cloud
+
+This service integrates seamlessly with your VMware environment to help you manage the backup and restore of all virtual machines (VMs) in your environment, including the backup and restore of the management components. It can provide a recovery point objective (RPO) of less than 15 minutes upon configuration for your data.
+
+This service is selected by default and is configured to back up the management VMs immediately after the deployment of your instance. If you do not order this service, there is no backup of the management VMs.
+
+This service is available only to instances that are deployed in V1.8 or later releases.
+
+For more information, see [Managing Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html).
+
+### F5 on IBM Cloud
+
+This service optimizes performance and ensures availability and security for applications with the F5 BIG-IP Virtual Edition (VE).
+
+This service is available only to instances that are deployed in V1.9 or later releases.
+
+For more information, see [Managing F5 on {{site.data.keyword.cloud_notm}}](../services/managing_f5.html).
+
+### FortiGate Security Appliance on IBM Cloud
+
+This service deploys an HA-pair of FortiGate Security Appliance (FSA) 300 series devices that can provide firewall, routing, NAT, and VPN services to protect the public network connection to your environment.
+
+This service is available only to instances that are deployed in V1.8 or later releases.
+
+For more information, see [Managing FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfsa.html).
+
+### FortiGate Virtual Appliance on IBM Cloud
+
+This service deploys an HA-pair of FortiGate Virtual Appliances that can allow you to reduce risk by implementing critical security controls within your virtual infrastructure.
+
+This service is available only to instances that are deployed in V2.0 or later releases.
+
+For more information, see [Managing FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html).
+
+### HCX on IBM Cloud
+
+This service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
+
+This service is available only to instances that are deployed in (or upgraded to) V2.1 or later releases.
+
+For more information, see [Managing HCX on IBM Cloud](../services/managinghcx.html).
+
+### Zerto on IBM Cloud
+
+This service provides replication and disaster recovery capabilities to help protect your workloads. For more information, see [Managing Zerto on {{site.data.keyword.cloud_notm}}](../services/managingzertodr.html).
+
+### Managed Services from IMI
+
+These services enable IBM Integrated Managed Infrastructure (IMI) to deliver dynamic remote management services for a broad range of cloud infrastructures.
+
+These services are available for Cloud Foundation instances only.
+
+For more information, see [Requesting managed services from IMI](../services/managing_imi.html).
 
 ## Related links
 

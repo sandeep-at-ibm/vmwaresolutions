@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-10"
+lastupdated: "2017-12-29"
 
 ---
 
@@ -28,6 +28,6 @@ The {{site.data.keyword.cloud_notm}} infrastructure virtual server that is used 
 
 * A CentOS 7 public node VSI (Virtual Service Instance) is used with 1 CPU and 1 GB of RAM.
 * The VSI is deployed in the same data center on the same primary public and private VLAN that the instance is on.
-*  A postinstallation script is used with the VSI deployment to set firewall rules that allow only incoming SSH connections from a specific set of IP addresses that are owned and used by the {{site.data.keyword.vmwaresolutions_short}} Support team.
+* A post-installation script is used with the VSI deployment to set firewall rules that allow only incoming SSH connections from a specific set of IP addresses that are owned and used by the {{site.data.keyword.vmwaresolutions_short}} Support team.
 * The support launch system that uses those IP addresses runs on an {{site.data.keyword.cloud_notm}} infrastructure VM that is accessible only through a private {{site.data.keyword.cloud_notm}} infrastructure network and is secured with a pair of HA (High Availability) {{site.data.keyword.cloud_notm}} infrastructure Vyatta systems.
 * IBM Security tools, such as QRadar®, Nessus and IBM BigFix®, are used to monitor the support launch system against any security threats.

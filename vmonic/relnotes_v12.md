@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
 lastupdated: "2016-12-12"
 
@@ -16,7 +16,7 @@ This release includes new features, usability enhancements, and bug fixes. For a
 
 The new version of VMware ESXi is vSphere 6.0 u2 p03, updated from ESXi 6.0 u2 in the previous release.
 
-## IBMid and IBM Bluemix accounts association
+## IBMid and Bluemix accounts association
 
 {{site.data.keyword.vmwaresolutions_full}} is provided as an infrastructure solution in the IBM Bluemix® catalog. Therefore, to use your **IBMid** account to log in to the {{site.data.keyword.vmwaresolutions_short}} console, you must associate the **IBMid** account with a Bluemix account.
 

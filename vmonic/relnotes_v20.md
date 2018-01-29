@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
 lastupdated: "2017-11-20"
 
@@ -113,7 +113,7 @@ The current release applies the following component updates for new deployments:
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
 
-**Note:** vCenter Server customized orders with or without the VMware vSAN component always include a 12-disk chassis server which reflects a slightly higher cost for the bare metal servers for the non-vSAN order case in the price estimate PDF.
+**Note:** vCenter Server customized orders with or without the VMware vSAN component always include a 12-disk chassis server which reflects a slightly higher cost for the {{site.data.keyword.baremetal_short}} for the non-vSAN order case in the price estimate PDF.
 
 For more information on components, see [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html).
 
@@ -140,16 +140,16 @@ For more information, see:
 
 ## Updates for VMware vSphere on IBM Cloud
 
-### New disk types for bare metal servers
+### New disk types for Bare Metal Servers
 
-For the VMware vSAN component, the following disk types are now available for bare metal servers:
+For the VMware vSAN component, the following disk types are now available for {{site.data.keyword.baremetal_short}}:
 * 960 GB SSD SED
 * 1.9 TB SSD SED
 * 3.8 TB SSD SED
 
 **Notes:**
 * 3.8 TB SSD SED drives will be supported when they are made generally available in a data center.
-* Orders with or without the VMware vSAN component always include a 12-disk chassis server which reflects a slightly higher cost for the bare metal servers for the non-vSAN order case in the price estimate PDF.
+* Orders with or without the VMware vSAN component always include a 12-disk chassis server which reflects a slightly higher cost for the {{site.data.keyword.baremetal_short}} for the non-vSAN order case in the price estimate PDF.
 
 For more information, see [Ordering new vSphere clusters](../vsphere/vs_orderinginstances.html).
 

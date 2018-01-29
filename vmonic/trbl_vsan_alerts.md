@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
 lastupdated: "2017-06-29"
 
@@ -13,8 +13,8 @@ lastupdated: "2017-06-29"
 ## Problem
 On the VMware vSphere Web Client **Monitor** page, you might see alerts and warnings that relate to Virtual SAN Health issues.
 
-## Resolution 
-These warnings are non-issues and do not indicate functional problems. However, if you want to clear the warnings from the vSphere Web Client, 
+## Resolution
+These warnings are non-issues and do not indicate functional problems. However, if you want to clear the warnings from the vSphere Web Client,
 use the following procedure.
 
 1. Go to http://partnerweb.vmware.com/service/vsan/all.json and save the JSON file, with the name `all.json`, on your local system.
