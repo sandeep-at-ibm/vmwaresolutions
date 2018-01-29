@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-21"
+lastupdated: "2018-01-09"
 
 ---
 
@@ -68,6 +68,10 @@ Table 2. Status indicators for data centers when ordering Cloud Foundation insta
 
 When you order a Cloud Foundation instance, you can also order additional services.
 
+### Managed Services from IMI
+
+These services enable IBM Integrated Managed Infrastructure (IMI) to deliver dynamic remote management services for a broad range of cloud infrastructures. For more information, see [Requesting managed services from IMI](../services/managing_imi.html).
+
 ### Veeam on IBM Cloud
 
 This service integrates seamlessly with your VMware environment to help you manage the backup and restore of all the virtual machines (VMs) in your environment, including the backup and restore of the management components. It can help provide a recovery point objective (RPO) of less than 15 minutes upon configuration for your data.
@@ -86,9 +90,9 @@ This service deploys an HA-pair of FortiGate Security Appliance (FSA) 300 series
 
 This service deploys an HA-pair of FortiGate Virtual Appliances that can allow you to reduce risk by implementing critical security controls within your virtual infrastructure. For more information, see [Managing FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html).
 
-### Managed Services from IMI
+### HCX on IBM Cloud
 
-These services enable IBM Integrated Managed Infrastructure (IMI) to deliver dynamic remote management services for a broad range of cloud infrastructures. For more information, see [Requesting managed services from IMI](../services/managing_imi.html).
+This service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change. For more information, see [Managing HCX on IBM Cloud](../services/managinghcx.html).
 
 ### Zerto on IBM Cloud
 

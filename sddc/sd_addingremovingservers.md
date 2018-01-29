@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-17"
+lastupdated: "2017-12-13"
 
 ---
 
@@ -19,11 +19,11 @@ You can expand or contract the capacity of your VMware Cloud Foundation instance
 
    **Note**: Do not add or remove ESXi servers from the VMware vSphere Web Client. The changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
 
-* The base platform that you ordered has 4 ESXi servers by default. You can expand the platform to a maximum of 32 ESXi servers. However, the number of the bare metal servers that you can add at a time is as follows:
+* The base platform that you ordered has 4 ESXi servers by default. You can expand the platform to a maximum of 32 ESXi servers. However, the number of the {{site.data.keyword.baremetal_short}} that you can add at a time is as follows:
    * For the **Small** and **Large** configuration, you can add 1 - 10 ESXi servers at a time.
-   * For the **User customized** configruation, you can add 1 - 20 ESXi servers at a time.
+   * For the **User customized** configuration, you can add 1 - 20 ESXi servers at a time.
 
-  You can remove the servers that you added. You cannot remove the default ESXi servers.
+  You can remove the ESXi servers that you added. You cannot remove the default ESXi servers.
 
 ## Procedure
 

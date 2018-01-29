@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-16"
+lastupdated: "2018-01-25"
 
 ---
 
@@ -61,6 +61,17 @@ When you order this service, configure the following settings:
 
 For more information, see [Managing FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html).
 
+### HCX on IBM Cloud
+
+This service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
+
+When you order this service, select the **Public endpoint certificate type**. If you select **CA Certificate**, configure the following settings:
+* **Certificate Contents**: Enter the contents of the CA certificate.
+* **Private Key**: Enter the private key of the CA certificate.
+* (Optional) **Password**: Enter the password for the private key if it is encrypted.
+* (Optional) **Reenter Password**: Enter the password for the private key again.
+* (Optional) **Hostname**: Enter the host name to be mapped to the common name (CN) of the CA certificate. HCX requires the CA certificate to be in a format that is accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+
 ### Zerto on IBM Cloud
 
 This service provides replication and disaster recovery capabilities to help protect your workloads. For more information, see [Managing Zerto on {{site.data.keyword.cloud_notm}}](../services/managingzertodr.html).
@@ -72,13 +83,14 @@ This service provides replication and disaster recovery capabilities to help pro
 3. Click the **Services** tab.
 4. To install services, complete the following steps:
    1. On the **Add Services** tab, find the services that you want to install and click **Select Service** on the service cards.
-   2. If you accept the default selection for Veeam on {{site.data.keyword.cloud_notm}}, specify the required settings in the **Configure Veeam on IBM Cloud** area.
+   2. If you want to install Veeam on {{site.data.keyword.cloud_notm}}, specify the required settings in the **Configure Veeam on IBM Cloud** area.
    3. If you want to install F5 on {{site.data.keyword.cloud_notm}}, specify the required settings in the **Configure F5 on IBM Cloud** area.
    4. If you want to install FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, specify the required settings in the **Configure FortiGate Virtual Appliance on IBM Cloud** area.
-   5. After completing all selections for the services you want, scroll down on the **Add Services** page and click **Install**.
-   6. In the **Order Summary** window, click the link or links of the terms that apply to the services, and ensure that you agree with the terms before you install the services.
-   6. Review the estimated cost of the services by clicking the price link under **Estimated Cost**.
-   7. Click **Place Order**. After your request to install the services is accepted, the status of the services is changed to **Installing**.
+   5. If you want to install HCX on {{site.data.keyword.cloud_notm}}, specify the required settings in the **Configure HCX on IBM Cloud** area.
+   6. After completing all selections for the services you want, scroll down on the **Add Services** page and click **Install**.
+   7. In the **Order Summary** window, click the link or links of the terms that apply to the services, and ensure that you agree with the terms before you install the services.
+   8. Review the estimated cost of the services by clicking the price link under **Estimated Cost**.
+   9. Click **Place Order**. After your request to install the services is accepted, the status of the services is changed to **Installing**.
 5. To install additional instances of a service, which is only applicable to the F5 on {{site.data.keyword.cloud_notm}} service and the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service, complete the following steps:
    1. Click the **Installed Services** tab. Ensure that the existing instances of the service are in the **Installed** status.
    2. Click the **Add Services** tab, find the service, and then click **Select Service** on the service card.
@@ -96,7 +108,8 @@ This service provides replication and disaster recovery capabilities to help pro
    4. For F5 on {{site.data.keyword.cloud_notm}}, you can log in to the primary or secondary console with the credentials provided on this page to manage the service by clicking **View BIG-IP Primary Web UI** or **View BIG-IP Secondary Web UI**.
    5. For FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}, you can log in to the FortiGate 300 series console with the credentials provided on this page to manage the service by clicking **View FortiGate Console**.
    6. For FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, you can log in to the FortiGate console of the primary or secondary FortiGate VM with the credentials provided on this page to manage the service by clicking **View Primary Web UI** or **View Secondary Web UI**.
-   7. For Zerto on {{site.data.keyword.cloud_notm}}, you can log in to the Zerto console with your vCenter credentials to manage the service by clicking **View Zerto Console**.
+   7. For HCX on {{site.data.keyword.cloud_notm}}, you can log in to the HCX management consoles with your vCenter credentials or with the credentials provided on this page to manage the service by clicking **View HCX Cloud Console** or **View HCX Manager Admin Console**.
+   8. For Zerto on {{site.data.keyword.cloud_notm}}, you can log in to the Zerto console with your vCenter credentials to manage the service by clicking **View Zerto Console**.
 7. To remove a service or an instance of a service, complete the following steps:
    1. On the **Installed Services** tab, find the service or the specific instance of a service that you want to remove.
    2. Click the overflow menu icon in the upper right of the service card, and then click **Remove Service**.

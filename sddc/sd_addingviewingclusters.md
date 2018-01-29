@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-17"
+lastupdated: "2018-01-09"
 
 ---
 
@@ -16,9 +16,11 @@ You can add clusters to your VMware Cloud Foundation instances to expand the com
 
 ## Before you begin
 
-The ESXi servers that you configured when you ordered an instance are grouped as **SDDC-Cluster** by default. You can add up to five clusters to an instance.
+The ESXi servers that you configured when you ordered an instance are grouped under a default cluster. The default cluster name is:
+* For instances that are deployed in V2.1 or later: **MGMT-Cluster-<subdomain_label>**
+* For instances that are deployed in V2.0 or earlier: **SDDC-Cluster**
 
-When you add a cluster for a Cloud Foundation instance, you must specify or review the following settings.
+You can add up to five clusters to an instance. When you add a cluster for a Cloud Foundation instance, you must specify or review the following settings.
 
 ## System settings
 
@@ -32,12 +34,12 @@ The cluster name must meet the following requirements:
 
 ### Bare Metal Server Configuration
 
-The Bare Metal Server configuration options available to you depend on the data center selected for deployment. Therefore, the Bare Metal Server cofiguration options available to you by default include only the ones that are supported by the cluster's default data center which is automatically filled in. You must select **Select a different location** under **Data Center Location** to display all the Bare Metal Server configuration options, including:
+The Bare Metal Server configuration options available to you depend on the data center selected for deployment. The  default data center for the cluster is automatically filled in.
+
+To display all the Bare Metal Server configuration options, click **Select a different location** under **Data Center Location**. The configuration options include:
 * Small (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz / 128 GB RAM / 12 disks)
 * Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz / 512 GB RAM / 12 disks)
-* User customized
-
-You can select a Bare Metal Server configuration that is different from the configuration of the default instance. If you select **User customized**, you must specify the CPU model and RAM for the bare metal server.
+* User customized. If you select **User customized**, you must specify the CPU model and RAM for the bare metal server.
 
 Table 1. CPU and RAM options
 
@@ -46,27 +48,19 @@ Table 1. CPU and RAM options
 | CPU | <ul><li>Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz</li><li>Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz</li><li>Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz</li></ul>|
 | RAM | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB|   
 
-### Number of Bare Metal Servers
-
-A minimum of 2 bare metal servers is required for a cluster and you can add up to 32 bare metal servers, which will share the same configuration.
-
-The number of the bare metal servers that you can add at a time is as follows:
-* For the **Small**, **Medium**, and **Large** configurations, you can add 1 - 10 ESXi servers at a time.
-* For the **User customized** configuration, you can add 1 - 20 ESXi servers at a time. After deployment, you can create up to four more clusters.
-
 ### Data Center Location
 
 The data center of the cluster is set to the data center of the Cloud Foundation instance by default. You can deploy the cluster to a different data center than the deployed instance, but you must ensure that the network latency between the two data centers is less than 150 ms. To check the network latency, you can use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-The data centers available to you depend on the Bare Metal Server configuration selected for deployment. If you selected the user-customized Bare Metal Server configuration, you can also deploy the cluster to a different {{site.data.keyword.cloud}} infrastructure pod for data centers containing additional pods. This is useful when the default {{site.data.keyword.cloud_notm}} infrastructure pod where the initial instance is deployed has reached capacity.
+The data centers available to you depend on the Bare Metal Server configuration selected for deployment. If you selected the **User customized** configuration, you can also deploy the cluster to a different {{site.data.keyword.cloud}} infrastructure pod, fi the selected data center contains additional pods. This is useful when the default {{site.data.keyword.cloud_notm}} infrastructure pod where the initial instance is deployed has reached its maximum capacity.
 
-**Note**: Pre-built, standardized **Small** and **Large** Bare Metal Server configurations use a default pod that cannot be changed.
+**Note**: The standardized **Small** and **Large** Bare Metal Server configurations use a default pod that cannot be changed.
 
-If you deploy the cluster to a different data center or pod, three additional VLANs are ordered for use with the ordered bare metal servers.
+If you deploy the cluster to a different data center or pod, three additional VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
 ## Storage settings
 
-The storage settings for the **Small** and **Large** standardized Bare Metal Server configurations cannot be changed:
+The storage settings for the **Small** and **Large** Bare Metal Server configurations cannot be changed:
 * For the **Small** Bare Metal Server configuration, two disk drives of 1.9 TB SSD SED are ordered.
 * For the **Large** Bare Metal Server configuration, four disk drives of 3.8 TB SSD SED are ordered.
 
@@ -104,23 +98,30 @@ Select the type and capacity that meets your storage needs.
          <dd class="dd">The cluster is ready to use.</dd>
      </dl>
 4. To add a cluster, click **Add** at the upper-right corner of the **CLUSTERS** table, and then complete the following steps in the **Add Cluster** area:
-   1. Enter the cluster name.
-   2. Select **Select a different location** under **Data center location** to ensure that all the **Bare Metal Server Configuration** options are available to you, and then select the Bare Metal Server configuration.
-   3. If you selected the **User customized** Bare Metal Server configuration, select the CPU and RAM specifications based on your requirements.
-   4. Select the data center where the cluster is to be deployed.
-   5. If you want to deploy the cluster to a different pod when you selected a user-customized bare metal server configuration and the selected data center contains additional pods, select **Deploy to a non-default pod**.
-   6. If you selected the **User customized** Bare Metal Server configuration, select the number of disk drives, and the disk type and capacity under **vSAN Storage**.
-   7. Click **Calculate Price** under **Estimated Cost** to get the pricing of your order.
-   8. Review the estimated cost of the cluster by clicking the price link under **Estimated Cost**. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   9. Click **Add**.
+   1. Enter the **Cluster Name**.
+   2. If you selected the **User customized** Bare Metal Server configuration, select the **CPU Model** and **RAM** specifications based on your requirements.
+   3. Select **Select a different location** under **Data center location** to ensure that all the **Bare Metal Server Configuration** options are available to you and select the data center where the cluster is to be deployed.
+   4. Review the data center location that is automatically filled in. You can select a different data center other than the data center where the instance is deployed. If you select a user-customized {{site.data.keyword.baremetal_short}} configuration and the selected data center contains additional pods, select **Deploy to a non-default pod**. You can deploy the cluster to a different  {{site.data.keyword.cloud_notm}} infrastructure pod for data centers containing additional pods. This is useful when the default pod where the initial instance is deployed has reached capacity.
+   5. Select the **Number of Bare Metal Servers**.
+   6. Select either **vSAN** or **NFS** under **Storage**.
+   7. For **vSAN** storage, specify the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks** from the dropdown menus. Under **Licenses**, indicate how your license keys are provided:
+
+     * If you select **vSphere License - Enterprise Plus** to include with purchase, continue to the next license key.
+     * If you select **vSAN License** to include with purchase, pick the Advanced or Enterprise license edition from the drop down list.
+     * If you indicate you will provide the license key, enter your license key.
+
+   8. For **NFS** storage, specify the required settings for the file shares. To configure shares individually, select that check box and configure the size and performance of each share.
+   Under **Licenses**, indicate how your license key is provided. You can either include the **vSphere License - Enterprise Plus** license with your purchase or provide your own license by entering the license key.
+   9. Review the **Estimated Cost** of the cluster by clicking the **Calculate Cost** link. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+   10. Click **Add** to add your cluster.
 
 5. After the cluster is ready to use, you can click the cluster name to view its details, which includes the list of ESXi servers with their details:
 
-    * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_prefix>.<root_domain>`, where:
+    * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
 
       `host_prefix` is the host name prefix,
       `n` is the sequence of the ESXi server,
-      `subdomain_prefix` is the subdomain prefix, and
+      `subdomain_label` is the subdomain label, and
       `root_domain` is the root domain name.
 
    * **Version**: The version of the ESXi server.

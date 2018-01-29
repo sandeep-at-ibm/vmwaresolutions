@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-09"
+lastupdated: "2017-12-20"
 
 ---
 
@@ -28,17 +28,22 @@ Because of resource dependencies, the components in your instance are not releas
 
 ### Deleting from the Deployed Instances page
 
-1. Click **Deployed Instances** from the left navigation pane and locate the instance to delete.
-2. In the **Actions** column, click the delete icon. The status of the instance is changed to **Deleting**.
-3. When the instance is deleted successfully and its status is changed to **Deleted**, click the delete icon in the **Actions** column again.
-4. In the **Delete Instance** window, click **OK** to remove the instance from the {{site.data.keyword.vmwaresolutions_short}} console.
+1. Click **Deployed Instances** from the left navigation pane.
+2. In the **Cloud Foundation Instances** table, find the instance to delete.
+3. In the **Actions** column, click the delete icon. The status of the instance is changed to **Deleting**. When the instance is deleted successfully, the components of the instance are released, and the status of the instance is changed to **Deleted**.
+4. If you want to remove the instance record from the {{site.data.keyword.vmwaresolutions_short}} console, complete the following steps:
+   1. In the **Actions** column, click the delete icon again.
+   2. In the **Delete Instance** window, click **OK**.
 
-### Deleting from the instance detail page
+### Deleting from the instance details page
 
 1. Click **Deployed Instances** from the left navigation pane.
-2. Click the instance to delete.
+2. In the **Cloud Foundation Instances** table, click the instance to delete.
 3. Click the overflow menu icon to the right of **vCenter console**.
-4. Click **Delete Instance**.
+4. Click **Delete Instance**. The status of the instance is changed to **Deleting**. When the instance is deleted successfully, the components of the instance are released, and the status of the instance is changed to **Deleted**.
+5. If you want to remove the instance record from the {{site.data.keyword.vmwaresolutions_short}} console, complete the following steps:
+   1. Click the overflow menu icon to the right of **vCenter console** again.
+   2. In the **Delete Instance** window, click **OK**.
 
 ## Related links
 
