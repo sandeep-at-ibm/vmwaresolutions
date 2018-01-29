@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-28"
+lastupdated: "2018-01-25"
 
 ---
 
@@ -15,10 +15,10 @@ To deploy a unified software-defined data center (SDDC) platform with standard c
 ## Requirements
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud}} credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
+*  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
 *  You meet the requirements and you reviewed the considerations in [Cloud Foundation requirements](sd_planning.html).
 
-**Important:** Do not modify any values that are set during ordering and instance deployment. Doing so can result in your instance becoming unusable. In addition, do not change the instance name, root domain name, subdomain prefix, or host name prefix, after the instance is deployed.
+**Important:** Do not modify any values that are set during ordering and instance deployment. Doing so can result in your instance becoming unusable. In addition, do not change the instance name, root domain name, subdomain label, or host name prefix, after the instance is deployed.
 
 ## System settings
 
@@ -47,6 +47,21 @@ The root domain name must meet the following requirements:
 
 **Note:** The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (virtual machines) is 50 characters. Domain names must accomodate for this maximum length.
 
+### Subdomain label
+
+The subdomain label must meet the following requirements:
+*  Only alphanumeric and dash (-) characters are allowed.
+*  The subdomain label must start and end with an alphanumeric character.
+*  The maximum length of the subdomain label is 10 characters.
+*  The subdomain label must be unique within your account.
+
+### Host name prefix
+
+The host name prefix must meet the following requirements:
+*  Only alphanumeric and dash (-) characters are allowed.
+*  The host name prefix must start and end with an alphanumeric character.
+*  The maximum length of the host name prefix is 10 characters.
+
 ### Instance and domain name format
 
 The Cloud Foundation instance name and the root domain name use the format in the following table.
@@ -56,29 +71,14 @@ Table 1. Value format for instance and domain names
 | Name        | Value Format      |
   |:------------- |:------------- |
   | Domain name | `<root_domain>` |  
-  | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_prefix>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |   
+  | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |   
   | vCenter Server login user name | `<user_id>@<root_domain>` (Microsoft Active Directory user) or `administrator@vsphere.local` |
-  | vCenter Server FQDN | `vcenter-1.<instance_name>.<subdomain_prefix>.<root_domain>`. The maximum length is 50 characters. |  
-  | SDDC Manager FQDN | `sddcmanager.<instance_name>.<subdomain_prefix>.<root_domain>`. The maximum length is 50 characters. |
-  | Single Sign-On (SSO) site name | `<instance_name>`
-  | PSC FQDN | `PSC-<instance_name>.<subdomain_prefix>.<root_domain>`. The maximum length is 50 characters. |  
+  | vCenter Server FQDN | `vcenter-1.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |  
+  | SDDC Manager FQDN | `sddcmanager.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
+  | Single Sign-On (SSO) site name | `<subdomain_label>`
+  | PSC FQDN | `PSC-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |  
 
   The SDDC Manager FQDN cannot be publicly resolvable. Otherwise, the Cloud Foundation instance configuration might fail and is not recoverable. Before you specify a domain name, review [Considerations when choosing a root domain name](../vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances).
-
-### Subdomain prefix
-
-The subdomain prefix must meet the following requirements:
-*  Only alphanumeric and dash (-) characters are allowed.
-*  The subdomain prefix must start and end with an alphanumeric character.
-*  The maximum length of the subdomain prefix is 10 characters.
-*  The subdomain prefix must be unique within your account.
-
-### Hostname prefix
-
-The hostname prefix must meet the following requirements:
-*  Only alphanumeric and dash (-) characters are allowed.
-*  The host name prefix must start and end with an alphanumeric character.
-*  The maximum length of the host name prefix is 10 characters.
 
 ### Bare Metal Server configuration
 
@@ -128,17 +128,23 @@ When you order a Cloud Foundation instance, you can also order the appropriate c
 
 When you order a Cloud Foundation instance, you can also order additional services. For more information about the available services, see [Services for Cloud Foundation instances](sd_planning.html#services-for-cloud-foundation-instances).
 
+## Estimated Cost
+
+You can calculate an estimated cost and generate a detailed PDF from each panel as you provide details for your instance order. Complete the fields on the panel and click **Caluculate Cost** at the bottom of the panel to generate a cost estimate. Additionally, click the calculated cost estimate link to generate a PDF that provides the estimate details.
+
+**Note:** The estimated cost displayed on the panel and the cost estimate details provided in the PDF are only for the items that you have completed on your order. The cost increases as you complete each panel for your instance order.
+
 ## Procedure
 
-1. Click **Getting Started** or **Order Instance** from the left navigation pane.
+1. Click **Getting Started** on the left navigation pane.
 2. On the **VMware Cloud Foundation on IBM Cloud** card, click **Order Instance**.
 3. On the **Order a Cloud Foundation Instance** page, select the instance type:
-   *  To deploy a single instance in the environment or to deploy the first instance in a multi-site topology, click **Primary**.
-   *  To connect the instance with an existing (primary) instance in the environment for high availability, click **Secondary**.
+   *  To deploy a single instance in the environment or to deploy the first instance in a multi-site topology, ensure that **Primary** is selected and click **Next**.
+   *  To connect the instance with an existing (primary) instance in the environment for high availability, select  **Secondary** and click **Next**.
 4. On the **Basics** page, specify the required information based on the instance type you selected.
 
    If you selected the **Primary** instance type, provide the following information:
-     1. Enter the instance name, root domain name, subdomain prefix, and host name prefix.
+     1. Enter the instance name, root domain name, subdomain label, and host name prefix.
      2. Select the Bare Metal Server configuration.
      3. If you selected **User customized** for the Bare Metal Server configuration, specify the **CPU Model** and the amount of **RAM**.
      4. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
@@ -149,7 +155,7 @@ When you order a Cloud Foundation instance, you can also order additional servic
      1. Enter the secondary instance name.
      2. Select the primary instance that you want the secondary instance to be connected with.
      3. Review the root domain name that is automatically filled in.
-     4. Enter the subdomain prefix and host name prefix.
+     4. Enter the subdomain label and host name prefix.
      5. Select the Bare Metal Server configuration.
      6. If you selected **User customized** for the Bare Metal Server configuration, specify the **CPU Model** and the amount of **RAM**.
      7. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
@@ -176,8 +182,8 @@ When you order a Cloud Foundation instance, you can also order additional servic
 
 7. On the **Add Service** page, complete the following steps:
 
-  1. To deploy a service into your instance, click **Select Service** on the corresponding service card.
-  2. If you accepted the default selection for Veeam on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure Veeam on IBM Cloud** area:
+   1. To deploy a service into your instance, click **Select Service** on the corresponding service card.
+   2. If you accepted the default selection for Veeam on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure Veeam on IBM Cloud** area:
       * **Number of VMs to License**: A minimum of 4 VMs for licenses is required for management.
       * **Storage Size**: The capacity that meets your storage needs. A minimum of 2,000 GB of storage is required for management. For considerations when estimating storage size, see [Estimating Repository Capacity](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
       * **Storage Performance**: The IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
@@ -189,14 +195,20 @@ When you order a Cloud Foundation instance, you can also order additional servic
       * **Name**: Specify a unique name for the service instance to distinguish it from the additional service instances that you might install later.
       * **Deployment Size**: Select **Small**, **Medium**, or **Large** with different CPU and RAM specifications for the FortiGate Virtual Appliances.
       * **Monthly Subscription License Model**: Select **Standard FW**, **Standard FW + UTM**, or **Standard FW + Enterprise** according to your requirements. For more information about what is provided in each license option, click **Learn More** on the **FortiGate Virtual Appliance on IBM Cloud** service card.
-   5. Select any other services that you want to install, or, to proceed without deploying any service, including Veeam on {{site.data.keyword.cloud_notm}}, click **Selected Service** on the service card. Click **Next**.
+   5. If you want to install HCX on {{site.data.keyword.cloud_notm}}, select the **Public endpoint certificate type** in the **Configure HCX on IBM Cloud** area. If you select **CA Certificate**, sepecify the following settings:      
+      * **Certificate Contents**: Enter the contents of the CA certificate.
+      * **Private Key**: Enter the private key of the CA certificate.
+      * (Optional) **Password**: Enter the password for the private key if it is encrypted.
+      * (Optional) **Reenter Password**: Enter the password for the private key again.
+      * (Optional) **Hostname**: Enter the host name to be mapped to the common name (CN) of the CA certificate. HCX requires the CA certificate to be in a format that is accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+   6. Select any other services that you want to install, or, to proceed without deploying any service, including Veeam on {{site.data.keyword.cloud_notm}}, click **Selected Service** on the service card. Click **Next**.
 
 8. On the **Summary** page, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
    2. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the instance.
-   3. Review the estimated cost of the instance by clicking the price link under **Estimated Cost**. To save or print your order
+   3. Review the estimated cost of the instance by clicking the cost link under **Estimated Cost**. To save or print your order
    summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   4. Click **Place Order**.
+   4. Click **Create**.
 
 ## Results
 

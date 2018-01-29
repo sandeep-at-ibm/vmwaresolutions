@@ -2,17 +2,17 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-09"
+lastupdated: "2017-12-27"
 
 ---
 
-# Impacts of changing components for Cloud Foundation instances
+# Impacts of changing artifacts for Cloud Foundation instances
 
 Changing resources or subnets that are reserved for {{site.data.keyword.vmwaresolutions_full}} can impact management operations for VMware Cloud Foundation instances.
 
-## Changing VMware resources and their impact on the system
+## VMware resources for Cloud Foundation instances
 
 The following table lists the operations that might be impacted if you change VMware resources outside of the {{site.data.keyword.vmwaresolutions_short}} console. If a solution to recover is available, it is provided as well.
 
@@ -27,7 +27,7 @@ Table 1. Operations that are impacted for the SSO admin (customer)
 | Change the VSAN datastore name. | Adding an ESXi server might fail. | Important | Change the VSAN datastore name back to the original name, **vsanDatastore**.
 | Change the instance name or the domain name. | Instance is unusable. | Critical | N/A
 
-## Management subnets and their impact on the system
+## Management subnets for Cloud Foundation instances
 
 The following information discusses the subnets that are ordered by {{site.data.keyword.vmwaresolutions_short}} and it provides options for you to order extra subnets for your own use.
 

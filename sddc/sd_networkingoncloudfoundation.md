@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
 lastupdated: "2017-11-20"
 
@@ -25,7 +25,7 @@ If you are using NSX Distributed Firewalls (DFW), review the following requireme
 
 ## Using VMware NSX with your VMs
 
-During Cloud Foundation instance deployment, VMWare NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
+During Cloud Foundation instance deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
 
 However, if your workload VMs need to communicate with each other and to access the Internet, it is your responsibility to configure NSX for use by your VMs.
 
