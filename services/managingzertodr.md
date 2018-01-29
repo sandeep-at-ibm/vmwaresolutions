@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-10"
+lastupdated: "2018-01-26"
 
 ---
 
@@ -30,13 +30,13 @@ Because Zerto replication does not support Network Address Translation (NAT) tra
 
 To update Zerto Virtual Replication, log in to the Zerto Virtual Replication console.
 
-## Deploying Zerto Virtual Replication Appliances to newly added ESXi servers
+## Deploying VRAs to newly added ESXi servers
 
-When you add or remove ESXi servers for your instance, Zerto Virtual Replication Appliances are automatically deployed or removed.
+When you add or remove ESXi servers for the primary cluster of your instance, VRAs are automatically deployed or removed. VRAs are not automatically deployed to ESXi servers in the secondary clusters of your instance, but you can deploy them yourself from the Zerto Virtual Replication console.
 
 ## Related links
 
-* [Zerto on {{site.data.keyword.cloud_notm}}d components](addingzertodr.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} components](addingzertodr.html)
 * [zerto.com website](https://www.zerto.com){:new_window}
 * [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
 * [Zerto disaster recovery](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/zerto){:new_window}

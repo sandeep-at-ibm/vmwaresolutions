@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-09"
+lastupdated: "2018-01-08"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-11-09"
 
 The FortiGate Virtual Appliance on {{site.data.keyword.cloud}} service deploys a high-availability (HA) pair of FortiGate Virtual Appliances to your environment, which can help you reduce risk by implementing critical security controls within your virtual infrastructure. You can manage this service by using the FortiOS Web Client or the command line interface via SSH.
 
-This service is available only to V2.0 and later instances.
+This service is available only to instances that are deployed in V2.0 or later releases.
 
 You can order an instance with the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service included. For more information, see:
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
@@ -44,13 +44,13 @@ Review the following considerations before you install the FortiGate Virtual App
     * Small (2 vCPUs / 4 GB RAM)
     * Medium (4 vCPUs / 6 GB RAM)
     * Large (8 vCPUs / 12 GB RAM)
-  
-  In addition, 100% of CPU and RAM for the two FortiGate VMs are also reserved because these VMs are in the data plane of the network 
+
+  In addition, 100% of CPU and RAM for the two FortiGate VMs are also reserved because these VMs are in the data plane of the network
   communications and it is critical that resources is still available for them.
 
   To calculate the CPU and RAM reservation for a single FortiGate VM, use the following formula:
    * `CPU reservation = CPU speed of ESXi server * number of vCPUs`
-   * `RAM reservation = RAM size` 
+   * `RAM reservation = RAM size`
 * When you deploy an HA-pair of FortiGate Virtual Appliances to you instance, SNAT and firewall rules are defined on the Management NSX Edge Services Gateway (ESG) along with static routes on the FortiGate Virtual Appliances to allow outbound HTTPS communications from your instance to the public network for license activation and for acquiring latest security policies and content.
 * You cannot change the license level after service installation. To change the license level, you must remove the existing service and then reinstall the service by selecting a different license option.
 * You must meet the following requirements to avoid failures with FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}:
@@ -58,13 +58,13 @@ Review the following considerations before you install the FortiGate Virtual App
    * The two active ESXi servers have enough resources available so that one FortiGate VM can be hosted on each ESXi server with 100% CPU and RAM reservation.
    * VMware vSphere HA has enough resources to host two FortiGate VMs with 100% CPU and RAM.
 
-  Due to these requirements, you must plan for the space needed for FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}. If needed, before ordering FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, add 1 - 2 ESXi servers to your instance, or reduce vSphere HA CPU reservation for failover, 
+  Due to these requirements, you must plan for the space needed for FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}. If needed, before ordering FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, add 1 - 2 ESXi servers to your instance, or reduce vSphere HA CPU reservation for failover,
   or both.
 
 ### Reservation example
 
 You order a VMware vCenter Server **Small** instance with 2 ESXi servers with the following configuration: 16 cores at 2.10 GHz each with 128 GB RAM. For FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, you select the **Large** (8 vCPUs / 12 GB RAM) for deployment size and any subscription license model.
- 
+
 In this case, a single FortiGate VM requires, on each server:
 * 2.1 GHz * 8 vCPU = 16.8 GHz of CPU, and
 * 12 GB RAM
@@ -72,13 +72,13 @@ In this case, a single FortiGate VM requires, on each server:
 In total, that is 33.6 GHz CPU and 24 GB RAM for two FortiGate VMs.
 
 Each ESXi server has a capacity of 16 cores * 2.1 GHz = 33.6 GHz, so we meet the first two requirements if both servers are active and there is at least 16.8 GHz of CPU and 12 GB RAM available on each server.
- 
-By default however, vSphere HA reserves 50% of CPU and RAM for failover on vCenter Server instances that were initially deployed with 2 ESXi servers, so we only have: 
+
+By default however, vSphere HA reserves 50% of CPU and RAM for failover on vCenter Server instances that were initially deployed with 2 ESXi servers, so we only have:
 
 `50% of 2 * 16 cores * 2.1 GHz = 33.6 GHz available`
- 
-Since there will be other workloads present on the ESXi servers, for example, IBM CloudDriver, VMware NSX Controller, VMWare NSX Edge, using these resources we cannot satisfy the third requirement, because we need 33.6 GHz of CPU and 24 GB RAM for the two FortiGate VMs.
- 
+
+Since there will be other workloads present on the ESXi servers, for example, IBM CloudDriver, VMware NSX Controller, VMware NSX Edge, using these resources we cannot satisfy the third requirement, because we need 33.6 GHz of CPU and 24 GB RAM for the two FortiGate VMs.
+
 In this case, the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installation might fail, unless at least one ESXi server is added to the environment and vShpere HA failover reservations are updated appropriately to ensure that there is enough resources for two FortiGate VMs. If additional resources is needed to run the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service, you can add more ESXi servers before installing the service.
 
 ## Considerations when removing FortiGate Virtual Appliance on IBM Cloud

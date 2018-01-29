@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-28"
+lastupdated: "2017-12-29"
 
 ---
 
@@ -14,7 +14,7 @@ For instances that were deployed in releases earlier than V1.8, you must replace
 
 ## Replacing the Veeam VSI of pre-V1.8 instances with Veeam on IBM Cloud
 
-The new Veeam on {{site.data.keyword.cloud_notm}} service, which can back up both management components and workloads, supersedes the previous Veeam VSI that was integrated into VMware Cloud Foundation and VMware vCenter Server in releases earlier than V1.8 for the backup of management components only. Because of this change, the previous **Backup and Restore** tab on the instance details page is removed and the backup points for the instances are no longer available in the {{site.data.keyword.vmwaresolutions_full}} console, although the Veeam VSI in the pre-V1.8 instances keeps working. You must create an {{site.data.keyword.cloud_notm}} Support ticket to get assistance with a restore. In addition, the license of the Veeam VSI in pre-V1.8 instances expires on October 14, 2017. Therefore, you must replace the previous Veeam VSI with the new Veeam on {{site.data.keyword.cloud_notm}} service at your earliest convenience.
+The Veeam on {{site.data.keyword.cloud_notm}} service, which can back up both management components and workloads, supersedes the previous Veeam VSI that was integrated into VMware Cloud Foundation and VMware vCenter Server in releases earlier than V1.8 for the backup of management components only. Because of this change, the previous **Backup and Restore** tab on the instance details page is removed and the backup points for the instances are no longer available in the {{site.data.keyword.vmwaresolutions_full}} console, although the Veeam VSI in the pre-V1.8 instances keeps working. You must create an {{site.data.keyword.cloud_notm}} Support ticket to get assistance with a restore. In addition, the license of the Veeam VSI in pre-V1.8 instances expires on October 14, 2017. Therefore, you must replace the previous Veeam VSI with the new Veeam on {{site.data.keyword.cloud_notm}} service at your earliest convenience.
 
 To replace the Veeam VSI of pre-V1.8 instances with the new Veeam on {{site.data.keyword.cloud_notm}} service, complete the following steps:
 1. In the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane, and then click the target instance.
@@ -35,7 +35,7 @@ For more information, see the following topics:
 * [Ordering and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
 * [Ordering and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
 
-## Backing up and restoring management components for instances with Veeam on IBM Cloud installed
+## Backing up and restoring management components for instances that have Veeam on IBM Cloud installed
 
 The Veeam on {{site.data.keyword.cloud_notm}} service is preconfigured with a management backup job that automatically runs to back up the following management components daily with up to 14 points of restoration:
 * VMware vCenter Server

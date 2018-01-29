@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-09"
+lastupdated: "2018-01-08"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-11-09"
 
 The F5 on {{site.data.keyword.cloud}} service (F5 BIG-IP® Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access.
 
-This service is available only to V1.9 and later instances.
+This service is available only to instances that are deployed in V1.9 or later releases.
 
 You can order an instance with BIG-IP Virtual Edition (VE) included. For more information, see:
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
@@ -35,9 +35,15 @@ Before you install the F5 on {{site.data.keyword.cloud_notm}} service, review th
 
 Based on the license model and bandwidth that you select, two BIG-IP VE VMs (virtual machines) are deployed with the following configuration:
 
-Figure 1. RAM and CPU deployments for various options chosen
+Table 1: CPU and RAM deployments for different bandwidth and license model selections
 
-![F5 on IBM Cloud deployments](f5-license-model.png)
+| Maximum Bandwidth | License Model: Good | License Model: Better | License Model: Best |
+|:------------------|:--------------------|:----------------------|:--------------------|
+| 25 Mbps           | 2 vCPU, 4 GB RAM    | 4 vCPU, 8 GB RAM      | 8 vCPU, 16 GB RAM   |
+| 200 Mbps          | 2 vCPU, 4 GB RAM    | 4 vCPU, 8 GB RAM      | 8 vCPU, 16 GB RAM   |
+| 1 Gbps            | 2 vCPU, 4 GB RAM    | 4 vCPU, 8 GB RAM      | 8 vCPU, 16 GB RAM   |
+| 3 Gbps            | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
+| 5 Gbps            | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
 
 **Note:** The HA (High Availability) pair of BIG-IP VE VMs will be deployed only into the default cluster.
 
@@ -45,9 +51,9 @@ In addition, 100% of CPU and RAM for the two BIG-IP VE VMs are also reserved bec
 
 To calculate the CPU and RAM reservation for a single BIG-IP VE VM, use the following formula:
 
-`CPU reservation = CPU speed of ESXi server * number of vCPUs` (from Figure 1)
+`CPU reservation = CPU speed of ESXi server * number of vCPUs` (from Table 1)
 
-`RAM reservation = RAM size` (from Figure 1)
+`RAM reservation = RAM size` (from Table 1)
 
 You must meet the following requirements to avoid failures with F5 on {{site.data.keyword.cloud_notm}}:
 * At least two active ESXi servers are available for the two BIG-IP VE VMs to be deployed with the anti-affinity rule of keeping the VMs on separate servers.
@@ -72,13 +78,13 @@ By default however, vSphere HA reserves 50% of CPU and RAM for failover on vCent
 
 `50% of 2 * 16 cores * 2.1 GHz = 33.6 GHz available`
 
-Since there will be other workloads present on the ESXi servers, for example, IBM CloudDriver, VMware NSX Controller, VMWare NSX Edge, using these resources we cannot satisfy the third requirement, because we need 33.6 GHz of CPU and 32 GB RAM for the two BIG-IP VMs.
+Since there will be other workloads present on the ESXi servers, for example, IBM CloudDriver, VMware NSX Controller, VMware NSX Edge, using these resources we cannot satisfy the third requirement, because we need 33.6 GHz of CPU and 32 GB RAM for the two BIG-IP VMs.
 
 In this case, the F5 on {{site.data.keyword.cloud_notm}} installation might fail, unless at least one ESXi server is added to the environment and vShpere HA failover reservations are updated appropriately to ensure that there are enough resources for two BIG-IP VE VMs. If additional resources are needed to run the F5 on {{site.data.keyword.cloud_notm}} service, you can add more ESXi servers before installing F5 on {{site.data.keyword.cloud_notm}}.
 
-### Changing the license level
+### Changing the license model
 
-You cannot change the license level after service installation. To change the license level, you must remove the existing service and reinstall the service using a different license option.
+You cannot change the license model after service installation. To change the license model, you must remove the existing service and reinstall the service using a different license model.
 
 ## Considerations when removing F5 on IBM Cloud
 

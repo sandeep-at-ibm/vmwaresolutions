@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-10"
+lastupdated: "2018-01-08"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-11-10"
 
 The Veeam on {{site.data.keyword.cloud}} service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service can provide recovery points and time objectives of less than 15 minutes upon configuration for your applications and data. By using this service, you can directly control both the backup and restore of all virtual machines for your infrastructure from the Veeam console.
 
-This service is available only to V1.8 and later instances.
+This service is available only to instances deployed in V1.8 or later releases.
 
 You can order an instance with the Veeam on {{site.data.keyword.cloud_notm}} service included. For more information, see:
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
