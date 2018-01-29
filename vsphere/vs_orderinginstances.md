@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-17"
+lastupdated: "2018-01-24"
 
 ---
 
@@ -19,7 +19,7 @@ This workflow will guide you through VMware component, {{site.data.keyword.cloud
 ## Requirements
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
 *  You meet the requirements and you reviewed the considerations in [Requirements and planning for vSphere clusters](vs_planning.html).
 
 ## Main settings
@@ -46,13 +46,13 @@ The domain name is used for all {{site.data.keyword.baremetal_short}} and must m
 * The length of other strings must be in the range 1 - 63 characters.
 * The maximum length of the domain name is 189 characters.
 
-### Subdomain Prefix
+### Subdomain Label
 
-The subdomain prefix must meet the following requirements:
+The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
-*  The subdomain prefix must start and end with an alphanumeric character.
-*  The maximum length of the subdomain prefix is 10 characters.
-*  The subdomain prefix must be unique within your account.
+*  The subdomain label must start and end with an alphanumeric character.
+*  The maximum length of the subdomain label is 10 characters.
+*  The subdomain label must be unique within your account.
 
 ### Host Name Prefix
 
@@ -69,7 +69,7 @@ You can select the following VMware components to be ordered with your cluster:
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
-* VMware vSAN. When you order this component, you must select the **Number of Disk Drives** and **Disk Type and Capacity** in the **Bare Metal Servers** section.
+* VMware vSAN. When you order this component, you must select the **Number of Disk Drives** and **Disk Type and Capacity** in the **{{site.data.keyword.baremetal_short}}** section.
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 * VMware vRealize Operation Enterprise
@@ -87,7 +87,7 @@ If you choose to purchase any license, except for vSphere Enterprise Plus and vC
 
 Review the following details about your order, depending on whether you want to order the **VMware vSAN** component or not:
 * For orders without vSAN, ESXi servers are ordered with a 12-disk chassis, with two disks for the ESXi operating system (OS).
-* For orders with vSAN, ESXi servers are ordered with a 12-disk chassis and four disks ordered: two for the ESXi OS and two reserved for caching. These settings are configured by default and cannot be changed. You can order more capacity disks by selecting the **Number of Disks** in the **Bare Metal Servers** section.
+* For orders with vSAN, ESXi servers are ordered with a 12-disk chassis and four disks ordered: two for the ESXi OS and two reserved for caching. These settings are configured by default and cannot be changed. You can order more capacity disks by selecting the **Number of Disks** in the **{{site.data.keyword.baremetal_short}}** section.
 * For additional information about storage calculations depending on your other selections, see the details displayed under **vSAN Summary** on the console.
 
 ### Data Center Location
@@ -146,12 +146,12 @@ You can also select whether to include the FortiGate Physical Appliance 300 Seri
 
 ## Procedure
 
-1. Click **Getting Started** or **Order Instance** from the left navigation pane.
+1. Click **Getting Started** on the left navigation pane.
 2. On the **VMware vSphere on IBM Cloud** card, click **Order Instance**.
    Ensure that you are on the **Create new cluster** tab and that **(New cluster)** is displayed in the **Cluster Configurations** list.
 3. Enter the cluster name.
 4. Enter the root domain name.
-5. Enter the subdomain prefix.
+5. Enter the subdomain label.
 6. Enter the ESXi server name prefix.
 7. Under **VMware Components**, complete the following steps:
    1. Select the VMware vSphere version from the **VMware vSphere Enterprise Plus** list, and then specify the licensing option for it
@@ -165,12 +165,12 @@ You can also select whether to include the FortiGate Physical Appliance 300 Seri
     follows, and select the edition for them if the option list is available:
       * If you want a new license to be purchased on your behalf for a component, select **Include license with purchase**.
       * If you want to use your own VMware license for a component, select **I will provide the license**.
-8. Under **Bare Metal Servers**, complete the following steps:
+8. Under **{{site.data.keyword.baremetal_short}}**, complete the following steps:
    1. Select the {{site.data.keyword.CloudDataCent}} to host the cluster.
    2. If you selected the VMware vSAN component, select the number of disk drives and review the disk type and capacity.
    3. Select the CPU model.
    4. Select the RAM size.
-   5. Select the number of bare metal servers to add to the cluster.
+   5. Select the number of {{site.data.keyword.baremetal_short}} to add to the cluster.
 9. Under **Network Details**, complete the following steps:
    1. If you want to reuse the existing public and private VLANs when they are available, click **Select Existing Public and Private VLANs**, and then select the public VLAN, the primary subnet, the private VLAN, the primary private subnet, and the secondary private VLAN.
    2. If you want new public and private VLANs to be provisioned, do not click **Select Existing Public and Private VLANs**.
@@ -183,7 +183,7 @@ You can also select whether to include the FortiGate Physical Appliance 300 Seri
    3. Review the estimated cost of the cluster by clicking the price link under **Estimated Cost**. To save or print your order
    summary, click the **Print** or **Download** icon on the upper right of the PDF window.
    4. To save the cluster configuration as a template without placing an order, click **Save Configuration**.
-   5. To place the order, click **Place Order**.
+   5. To place the order, click **Create**.
 
 ## Results
 

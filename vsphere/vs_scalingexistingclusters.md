@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
-lastupdated: "2017-11-10"
+lastupdated: "2018-01-24"
 
 ---
 
@@ -20,12 +20,12 @@ Ensure that you completed the following tasks:
 
 ## Procedure
 
-1. Click **Getting Started** or **Order Instance** from the left navigation pane.
-2. On the **vSphere Cluster** card, click **Order Instance**.
+1. Click **Getting Started** on the left navigation pane.
+2. On the **VMware vSphere on IBM Cloud** card, click **Order Instance**.
 3. On the **Basics** page, click the **Scale existing cluster** tab.
 4. Select the cluster you want to scale from the **Cluster Configurations** list.
 5. Review the cluster settings, which are automatically filled in, such as the cluster name, the selected VMware components and their settings, and the network details.
-6. Under **Bare Metal Servers**, select the number of bare metal servers that you want to add to the cluster.
+6. Under **{{site.data.keyword.baremetal_short}}**, select the number of {{site.data.keyword.baremetal_short}} that you want to add to the cluster.
 7. If the cluster does not include the HA-pair of FortiGate 300 series Security Appliance on its public VLAN, you can order one for it
 by selecting **Include with purchase** under **FortiGate Physical Appliance 300 Series HA Pair**.
 8. Click **Next**.
@@ -35,7 +35,7 @@ by selecting **Include with purchase** under **FortiGate Physical Appliance 300 
    cluster.
    3. Review the estimated cost of the cluster by clicking the price link under **Estimated Cost**. To save or print your order
    summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   4. Click **Place Order**.
+   4. Click **Create**.
 
 ## Results
 

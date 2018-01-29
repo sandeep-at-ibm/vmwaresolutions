@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2018
 
 lastupdated: "2017-11-17"
 
@@ -18,7 +18,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} does not automate the install
 
 Use this offering to create a new cluster of ESXi servers or scale out an existing cluster of ESXi servers in an {{site.data.keyword.CloudDataCent}}. Depending on the VMware components that you select, you can start with just one ESXi server and then scale the cluster later as needed.
 
-## Components of VMware vSphere on {{site.data.keyword.cloud_notm}}
+## Components of VMware vSphere on IBM Cloud
 
 Review the components of VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
