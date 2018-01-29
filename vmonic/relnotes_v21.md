@@ -38,7 +38,7 @@ For more information, see:
 
 ## More flexible Bring Your Own License model for VMware Cloud Foundation and vCenter Server
 
-Previously, if you bring your own license (BYOL) to IBM for a specific VMware component, you could not purchase IBM-provided licensing for that same VMware component. If you BYOL for a specific VMware component in V2.1, you now have the option when creating a new cluster to leverage your existing key, or to rent the license from IBM. At this time, only VMware vSphere Enterprise and VMware vSAN are availible for licensing per cluster.
+Previously, if you bring your own license (BYOL) to IBM for a specific VMware component, you could not purchase IBM-provided licensing for that same VMware component. If you BYOL for a specific VMware component in V2.1, you now have the option when creating a new cluster to leverage your existing key, or to rent the license from IBM. At this time, only VMware vSphere Enterprise and VMware vSAN are available for licensing per cluster.
 
 Additionally, when adding nodes to a cluster that is licensed with your key, the console prompts you to provide a new license key if the number of nodes exceeds the key capacity.
 
