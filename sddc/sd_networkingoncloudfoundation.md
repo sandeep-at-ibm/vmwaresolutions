@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-11-20"
+lastupdated: "2018-01-29"
 
 ---
 
@@ -43,5 +43,5 @@ Review the following considerations before you change the passwords for the NSX 
 ## Related links
 
 * [Overview of NSX](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}
-* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/content/architecture/virtVCenterServerPlatform/nsx-esg){:new_window}
+* [NSX Edge Services Gateway]( https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/nsx-esg){:new_window}
 * [Managing NAT Rules](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}
