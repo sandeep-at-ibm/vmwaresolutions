@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-25"
+lastupdated: "2018-01-29"
 
 ---
 
@@ -95,6 +95,7 @@ The vSAN option offers customized CPU model and RAM configurations, with various
 * Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED.
 
   In addition, 2 cache disks of 960 GB are also ordered per host.
+  
   **Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
 
 The NFS option offers customized shared file-level storage for workloads with various options for size and performance:

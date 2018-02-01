@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-26"
+lastupdated: "2018-01-29"
 
 ---
 
@@ -136,8 +136,9 @@ NFS (Network File System) v3 is set by default and you cannot change it. NFS v3 
       2. Select the the standardized **Small**, **Medium**, or **Large** {{site.data.keyword.baremetal_short}} configuration.
       3. Specify the number of {{site.data.keyword.baremetal_short}}.
       4. Review the data center location that is automatically filled in. Pre-built, standardized **Small**, **Medium**, and **Large** bare metal server options use a default pod that cannot be changed.
-      5. Under Storage, specify the **Number of File Shares**, **Size**, and **Performance**.
-      **Note**: NFS is the default under **Storage**.
+      5. Under **Storage**, specify the **Number of File Shares**, **Size**, and **Performance**.
+      
+         **Note**: NFS is the default under **Storage**.
       6. To configure shares individually, select that check box and configure the size and performance of each share.
       7. Under **Licenses**, indicate how your license key is provided. You can either include the **vSphere License - Enterprise Plus** license with purchase or provide your own license by entering the license key.  
 7. Click **Calculate Price** under **Estimated Cost** to get the pricing of your order.
