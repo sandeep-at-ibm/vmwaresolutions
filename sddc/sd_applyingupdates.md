@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-26"
+lastupdated: "2018-01-31"
 
 ---
 
@@ -41,7 +41,7 @@ system:
 **Notes**:
 
 * Before an update operation is started, a health check for the instance is completed. If the health check fails, you are notified so you can fix the problem before applying the update.
-* Before an update operation is started, a backup of the management virtual machines (VMs) is done automatically, if your instance has the [Veeam service](vc_addingremovingservices.html#available-services-for-vcenter-server-instances) installed. After the backup is completed, the update is applied. During the update operation, do not attempt any provisioning or add ESXi server operations.
+* Before an update operation is started, a backup of the management virtual machines (VMs) is done automatically, if your instance has the [Veeam service](sd_addingremovingservices.html#available-services-for-cloud-foundation-instances) installed. After the backup is completed, the update is applied. During the update operation, do not attempt any provisioning or add ESXi server operations.
 * During updates that include VMware components updates, VMs may need to be migrated from ESXi servers to go into maintenance mode. If a VM has a local datastore, or CD-ROM mounted, this might prevent the VM migration.
 * During the provisioning of a new environment, {{site.data.keyword.vmwaresolutions_short}} creates the **automationuser** ID that is used for instance management, including for applying updates. Do not change the password for this user ID. Changing the password might cause the update to fail.
 
