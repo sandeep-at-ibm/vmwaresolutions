@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-27"
+lastupdated: "2018-01-31"
 
 ---
 
@@ -62,5 +62,5 @@ For more information, see [VMware Hybrid Cloud Extension](https://cloud.vmware.c
 * [Viewing on-premises HCX instances](../services/standalone_viewingserviceinstances.html)
 * [Glossary of HCX terms](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->
+<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf){:new_window}-->
 * [Contacting IBM Support](../vmonic/trbl_support.html)
