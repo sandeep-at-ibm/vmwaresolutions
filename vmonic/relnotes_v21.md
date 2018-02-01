@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-28"
+lastupdated: "2018-01-31"
 
 ---
 
@@ -38,11 +38,9 @@ For more information, see:
 
 ## More flexible Bring Your Own License model for VMware Cloud Foundation and vCenter Server
 
-Previously, if you bring your own license (BYOL) to IBM for a specific VMware component, you could not purchase IBM-provided licensing for that same VMware component. If you BYOL for a specific VMware component in V2.1, you now have the option when creating a new cluster to leverage your existing key, or to rent the license from IBM. At this time, only VMware vSphere Enterprise and VMware vSAN are available for licensing per cluster.
+Bring Your Own License (BYOL) or purchase IBM-provided subscription licensing when creating a new cluster is now available to V2.1 and later VMware Cloud Foundation instances and VMware vCenter Server instances allowing you to leverage your existing component key or to rent the license from IBM. Prior to V2.1, you could not purchase IBM-provided licensing for a specific VMware component if you BYOL. At this time, only VMware vSphere and VMware vSAN are available for licensing per cluster.
 
 Additionally, when adding nodes to a cluster that is licensed with your key, the console prompts you to provide a new license key if the number of nodes exceeds the key capacity.
-
-BYOL or purchase IBM-provided subscription licensing when creating a new cluster is now available to V2.1 and later VMware Cloud Foundation instances and VMware vCenter Server instances.
 
 For more information, see:
 
@@ -94,6 +92,7 @@ You now have the option to configure NFS file shares on an individual basis. Sel
 For more information, see:
 * [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html)
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
+* [Adding and viewing clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html)
 
 ## New and updated documentation
 
@@ -106,7 +105,6 @@ Improvements are made throughout the user interface:
 
 * The **Order Instance** option has been removed from the left navigation pane. Click **Getting Started** to complete the steps to order an instance.
 * The **Subdomain Prefix** field from the **Basics** page when ordering an instance is renamed to **Subdomain Label**.
-* For V2.1 and later vCenter Server instances, the default cluster can now be expanded to have up to 51 ESXi servers, and the non-default clusters can each be expanded to have up to 59 ESXi servers.
 * Various error messages and tooltip enhancements have been made to assist you in selecting the appropriate setting on the user interface.
 * In addition to viewing your cost estimate on the **Summary** page when ordering a primary or secondary vCenter Server or Cloud Foundation instance, you can now calculate a cost estimate on any panel as you provide the details for your instance order.
 * Breadcrumb navigation is added to the **Deployed Instances** page as an alternative method of navigation, thus reducing the number of steps required to reach parent pages on these pages.

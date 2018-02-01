@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-26"
+lastupdated: "2018-01-31"
 
 ---
 
@@ -78,7 +78,7 @@ You can manage your BYOL licenses by using the VMware vSphere Web Client after t
 
 Yes. When you are adding more ESXi servers to a deployed instance, the capacity of your BYOL licenses is automatically checked for the specified number of ESXi servers. If the capacity is not sufficient, the ESXi servers are not added and you get a console notification.
 
-##How can I tell how much license capacity I have available on a cluster with BYOL?
+## How can I tell how much license capacity I have available on a cluster with BYOL?
 
 You can find the number of CPUs available in your license key by going to the **Deployed Instances**, **Infrastructure** section, selecting the instance and then the cluster that you want to check the license capacity.  The number of available CPUs is listed in the **User-Provided License** table.
 
