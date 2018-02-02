@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-09"
+lastupdated: "2018-02-01"
 
 ---
 
@@ -103,17 +103,14 @@ Select the type and capacity that meets your storage needs.
    3. Select **Select a different location** under **Data center location** to ensure that all the **Bare Metal Server Configuration** options are available to you and select the data center where the cluster is to be deployed.
    4. Review the data center location that is automatically filled in. You can select a different data center other than the data center where the instance is deployed. If you select a user-customized {{site.data.keyword.baremetal_short}} configuration and the selected data center contains additional pods, select **Deploy to a non-default pod**. You can deploy the cluster to a different  {{site.data.keyword.cloud_notm}} infrastructure pod for data centers containing additional pods. This is useful when the default pod where the initial instance is deployed has reached capacity.
    5. Select the **Number of Bare Metal Servers**.
-   6. Select either **vSAN** or **NFS** under **Storage**.
-   7. For **vSAN** storage, specify the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks** from the dropdown menus. Under **Licenses**, indicate how your license keys are provided:
+   6. If you select the **User customized** Bare Metal Server configuration, specify the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks** from the dropdown menus. If you select a standardized configuration, these fields are prepopulated.
+   7. Under **Licenses**, indicate how your license keys are provided:
 
      * If you select **vSphere License - Enterprise Plus** to include with purchase, continue to the next license key.
      * If you select **vSAN License** to include with purchase, pick the Advanced or Enterprise license edition from the drop down list.
      * If you indicate you will provide the license key, enter your license key.
-
-   8. For **NFS** storage, specify the required settings for the file shares. To configure shares individually, select that check box and configure the size and performance of each share.
-   Under **Licenses**, indicate how your license key is provided. You can either include the **vSphere License - Enterprise Plus** license with your purchase or provide your own license by entering the license key.
-   9. Review the **Estimated Cost** of the cluster by clicking the **Calculate Cost** link. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   10. Click **Add** to add your cluster.
+   8. Click the **Calculate Cost** link to review the **Estimated Cost** of the cluster. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+   9. Click **Add** to add your cluster.
 
 5. After the cluster is ready to use, you can click the cluster name to view its details, which includes the list of ESXi servers with their details:
 
