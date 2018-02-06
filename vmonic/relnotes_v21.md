@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-31"
+lastupdated: "2018-01-29"
 
 ---
 
@@ -63,7 +63,7 @@ In V2.0 and earlier VMware vCenter Server instances, patches were not automatica
 In V2.1 and later instances, the automation applies patches to new ESXi hosts so that the patch level matches the patch level at the time that the initial instance was provisioned. You are responsible for manually applying any future patches and updates.
 When VMware patches and updates become available in future releases, the automation will scan the ESXi hosts of your existing instances and email you a reminder to apply the latest patches and updates manually.
 
-For more information, see [Applying updates to vCenter Server instances](​​​​​../vcenter/vc_applyingupdates.html).
+For more information, see [Applying updates to vCenter Server instances](../vcenter/vc_applyingupdates.html).
 
 ### Price estimates for VMware NSX license upgrades
 
@@ -94,17 +94,17 @@ For more information, see:
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
 * [Adding and viewing clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html)
 
-## New and updated documentation
-
-* A comparison table with the supported functions for Cloud Foundation versus vCenter Server instances is now available in the documentation. You can see, at a glance, the differences between the functions that each type of instance provides. For more information, see [What is the difference between a Cloud Foundation instance and vCenter Server instance?](faq.html#what-is-the-difference-between-a-cloud-foundation-instance-and-vcenter-server-instance-).
-* A new developerWorks recipe is available with step-by-step instructions on how to attach dedicated storage to existing {{site.data.keyword.vmwaresolutions_full}} deployments using NetApp ONTAP Select on IBM Cloud. For more information, see [Steps to attach dedicated storage to VMware Solutions on IBM  Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).
-
 ## User interface updates and enhancements
 
 Improvements are made throughout the user interface:
 
 * The **Order Instance** option has been removed from the left navigation pane. Click **Getting Started** to complete the steps to order an instance.
 * The **Subdomain Prefix** field from the **Basics** page when ordering an instance is renamed to **Subdomain Label**.
-* Various error messages and tooltip enhancements have been made to assist you in selecting the appropriate setting on the user interface.
 * In addition to viewing your cost estimate on the **Summary** page when ordering a primary or secondary vCenter Server or Cloud Foundation instance, you can now calculate a cost estimate on any panel as you provide the details for your instance order.
 * Breadcrumb navigation is added to the **Deployed Instances** page as an alternative method of navigation, thus reducing the number of steps required to reach parent pages on these pages.
+* Various error messages and tooltip enhancements have been made to assist you in selecting the appropriate setting on the user interface.
+
+## New and updated documentation
+
+* A comparison table with the supported functions for Cloud Foundation versus vCenter Server instances is now available in the documentation. You can see, at a glance, the differences between the functions that each type of instance provides. For more information, see [What is the difference between a Cloud Foundation instance and vCenter Server instance?](faq.html#what-is-the-difference-between-a-cloud-foundation-instance-and-vcenter-server-instance-).
+* A new developerWorks recipe is available with step-by-step instructions on how to attach dedicated storage to existing {{site.data.keyword.vmwaresolutions_full}} deployments using NetApp ONTAP Select on IBM Cloud. For more information, see [Steps to attach dedicated storage to VMware Solutions on IBM  Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).
