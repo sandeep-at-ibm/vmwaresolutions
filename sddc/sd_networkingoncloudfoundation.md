@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-29"
+lastupdated: "2018-02-07"
 
 ---
 
@@ -30,7 +30,7 @@ During Cloud Foundation instance deployment, VMware NSX is ordered, installed, l
 However, if your workload VMs need to communicate with each other and to access the Internet, it is your responsibility to configure NSX for use by your VMs.
 
 For information about how to set up NSX:
-* For a primary (single) Cloud Foundation instance, see [Setting up NSX for workload VMs on VMware vCenter Server on IBM Cloud](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/).
+* For a primary (single) Cloud Foundation instance, see [Setting up NSX for workload VMs on VMware Cloud Foundation on IBM Cloud](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/).
 * For a multi-site Cloud Foundation instance, see [Securely connect your private VMware workloads in the IBM Cloud](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html).
 
 ## Considerations when changing passwords for NSX components
