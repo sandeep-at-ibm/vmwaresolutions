@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-29"
+lastupdated: "2018-02-20"
 
 ---
 
@@ -129,9 +129,6 @@ One Bare Metal Server with the configuration presented in [vCenter Server instan
 * One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
 * One Support and Services fee
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
-
-For details about the components, see the _Bill of Materials_ document in
-the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform){:new_window}.
 
 **Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal_full}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
