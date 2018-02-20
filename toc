@@ -24,12 +24,17 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Related links
-        [Resources and videos](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture/1_0)
-        [Take a look under the hood](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
-        [vRealize automation](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/vRealizeAutomation)
-        [Secure virtualization](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/secure-virtualization)
         [Attach dedicated storage to NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+        [FortiGate Security Appliance](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/fortigate-physical)[NetApp ONTAP Select](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/netapp-ots)
+        [IBM Cloud file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage)
+        [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/nsx-esg)
+        [Resources and videos](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture/1_0)
+        [Secure virtualization](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/secure-virtualization)
+        [Take a look under the hood](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
+        [Veeam backup and replication](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/veeam)
         [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
+        [vRealize automation](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/vRealizeAutomation)
+        [Zerto disaster recovery](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/zerto)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -44,6 +49,7 @@ IBM Cloud for VMware Solutions
     {: .topicgroup}
     vCenter Server on IBM Cloud
         vcenter/vc_vcenterserveroverview.md
+        vcenter/vc_bom.md
         vcenter/vc_planning.md
         vcenter/vc_networkingonvcenterserver.md
         vcenter/vc_esg_config.md
@@ -60,6 +66,7 @@ IBM Cloud for VMware Solutions
     {: .topicgroup}
     Cloud Foundation on IBM Cloud
         sddc/sd_cloudfoundationoverview.md
+        sddc/sd_bom.md
         sddc/sd_planning.md
         sddc/sd_networkingoncloudfoundation.md
         sddc/sd_multisite.md
@@ -75,6 +82,7 @@ IBM Cloud for VMware Solutions
     {: .topicgroup}
     VMware vSphere on IBM Cloud
         vsphere/vs_vsphereclusteroverview.md
+        vsphere/vs_bom.md
         vsphere/vs_planning.md
         vsphere/vs_orderinginstances.md
         vsphere/vs_orderingbasedonexistingconfig.md
@@ -105,15 +113,6 @@ IBM Cloud for VMware Solutions
         services/managing_f5.md
 
     {: .topicgroup}
-    Managed services from IMI
-        services/managing_imi.md
-
-    {: .topicgroup}
-    Veeam on IBM Cloud
-        services/veeam_considerations.md
-        services/managingveeam.md
-
-    {: .topicgroup}
     HCX on IBM Cloud
         services/hcx_considerations.md
         services/managinghcx.md
@@ -122,6 +121,15 @@ IBM Cloud for VMware Solutions
         services/standalone_viewingserviceinstances.md
         services/standalone_deletingserviceinstances.md
         services/hcx_glossary.md
+
+    {: .topicgroup}
+    Managed Services from IMI
+        services/managing_imi.md
+
+    {: .topicgroup}
+    Veeam on IBM Cloud
+        services/veeam_considerations.md
+        services/managingveeam.md
 
     {: .topicgroup}
     Zerto on IBM Cloud
