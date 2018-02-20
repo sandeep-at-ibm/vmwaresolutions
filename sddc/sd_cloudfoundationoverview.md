@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-11-28"
+lastupdated: "2018-02-20"
 
 ---
 
@@ -111,8 +111,6 @@ One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration pr
 * One VMware vSAN Advanced or Enterprise 6.6
 * One SDDC Manager license
 * One Support and Services fee
-
-For details about the components, see the _Bill of Materials_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform){:new_window}.
 
 **Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal_full}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
