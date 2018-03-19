@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-25"
+lastupdated: "2018-03-16"
 
 ---
 
 # Ordering vCenter Server instances
 
-To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server instance. During the initial order, you can also add services, such as [Zerto on IBM Cloud](../services/addingzertodr.html).
+To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server instance. During the initial order, you can also add services, such as [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html).
 
 ## Requirements
 
@@ -24,10 +24,6 @@ Ensure that you completed the following tasks:
 
 When you order a vCenter Server instance, you must specify the following settings under **System**.
 
-### Instance type
-
-You can deploy the instance as a primary (single) instance in your environment, or deploy the instance in a multi-site configuration by linking it with an existing primary instance for high availability. For more information, see [Multi-site configuration for vCenter Server instances](vc_multisite.html).
-
 ### Instance name
 
 The instance name must meet the following requirements:
@@ -35,6 +31,21 @@ The instance name must meet the following requirements:
 * The instance name must start and end with an alphanumeric character.
 * The maximum length of the instance name is 10 characters.
 * The instance name must be unique within your account.
+
+### DNS configuration
+
+Select the Domain Name System (DNS) configuration for your instance:
+
+* **Single Public Windows VSI for Active Directory/DNS**: A single Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and virtual machines are registered, is deployed and can be looked up. This option has been deployed by default for V1.9 and later instances.
+* **Two highly available dedicated Windows Server VMs on the management cluster**: For V2.2 and future releases, two Microsoft Windows virtual machines are deployed, providing additional privacy and the option to back up and restore the virtual machines using the Veeam service.
+
+**Important:** You must provide two Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows virtual machines. Use the Microsoft Windows Server 2012 R2 Standard edition license and/or the Microsoft Windows Server 2012 R2 Datacenter edition license.
+
+Currently, each license can only be assigned to one single physical server and covers up to two physical processors. One Standard edition license is capable of running two virtualized Microsoft Windows virtual machines per 2-processor server. Therefore, two licenses are required since two Microsoft Windows virtual machines are deployed in two different hosts.
+
+You have 30 days to activate the virtual machines.
+
+For more information on ordering Windows licensing, see [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ### Domain name
 
@@ -54,13 +65,6 @@ The subdomain label must meet the following requirements:
 *  The maximum length of the subdomain label is 10 characters.
 *  The subdomain label must be unique within your account.
 
-### Host name prefix
-
-The host name prefix must meet the following requirements:
-*  Only alphanumeric and dash (-) characters are allowed.
-*  The host name prefix must start and end with an alphanumeric character.
-*  The maximum length of the host name prefix is 10 characters.
-
 ### Instance and domain name format
 
 The vCenter Server instance name and the root domain name use the format in the following table.
@@ -76,61 +80,70 @@ Table 1. Value format for instance and domain names
   | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
 
-### Bare Metal Server configuration
+### Host name prefix
 
-You can select a Bare Metal Server configuration depending on your requirements:
+  The host name prefix must meet the following requirements:
+  *  Only alphanumeric and dash (-) characters are allowed.
+  *  The host name prefix must start and end with an alphanumeric character.
+  *  The maximum length of the host name prefix is 10 characters.
+
+### IBM Cloud Data Center location
+
+Select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the {{site.data.keyword.baremetal_long}} specification you selected previously are displayed.-->
+
+## Bare Metal settings
+
+Bare Metal settings are based on your selection of either **Customized** or **Preconfigured**.
+
+<!-- For guidance on what Bare Metal Server configuration to choose, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+
+### Customized
+
+Specify the **CPU Model** and **RAM** for the Bare Metal Server.
+
+Table 2. Options for customized Bare Metal Servers
+
+| CPU options        | RAM options       |
+|:------------- |:------------- |
+| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 96 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+
+### Preconfigured
+
+Based on your requirements, select a **Bare Metal Server Configuration** from the drop down box:
 * Small (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz / 128 GB RAM / 2 disks)
 * Medium (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz / 256 GB RAM / 2 disks)
 * Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz / 512 GB RAM / 2 disks)
-* User customized: you can specify the CPU model and RAM for the Bare Metal Server
-
-Table 2. Dual Intel Xeon CPU and RAM options for the user-customized configuration
-
-| Item          | Options       |
-|:------------- |:------------- |
-| CPU | <ul><li>Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz</li><li>Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz</li><li>Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz</li></ul>|
-| RAM | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB|
-
-Table 3. Dual Intel Xeon Gold CPU and RAM options for the user-customized configuration
-
-| Item        | Options       |
-|:------------- |:------------- |
-| CPU | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz|
-| RAM | 96 GB, 192 GB, 384 GB, 768 GB, 1.5 TB|
-
-For guidance on what Bare Metal Server configuration to choose, see the _Bill of Materials_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform){:new_window}.
 
 ### Number of Bare Metal Servers
 
 For the initial cluster in the instance, you can configure the number of ESXi servers as follows:
-* If you selected **Small**, **Medium**, or **Large** Bare Metal Server configuration, you can configure the number of ESXi servers in the range 2 - 10.
-* If you selected **User customized** Bare Metal Server configuration, you can configure the number of ESXi servers in the range 2 - 20.
+* If you selected **Preconfigured**, you can configure the number of ESXi servers in the range 2 - 10.
+* If you selected **Customized**, you can configure the number of ESXi servers in the range 2 - 20.
 
-All ESXi servers share the same configuration. In post-deployment, you can add four more clusters. If you selected the **User customized** configuration for vSAN, 4 ESXi servers are required for both the initial and post-deployment clusters. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
-
-### Data center location
-
-You must select the IBM Cloud data center where the instance is to be hosted. Only the data centers that meet the bare metal server specification you selected previously are displayed.
+All ESXi servers share the same configuration. In post-deployment, you can add four more clusters. If you selected the **Customized** configuration for vSAN, 4 ESXi servers are required for both the initial and post-deployment clusters. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Storage settings
 
-Storage settings are based on your selection of either vSAN or NFS.
+Storage settings are based on your selection of either **vSAN** or **NFS**.
 
 ### vSAN
 
-For vSAN, you select the User customized Bare Metal Server configuration and you can customize the VMware vSAN storage for your instance by specifying the following settings under **Storage**:
+vSAN is available only if you select the **Customized** Bare Metal configuration. Specify the following storage options:
 
 * **Number of vSAN Capacity Disks**: Specify the number of disks for the vSAN shared storage that you want to add. The disk quantities must be 2, 4, 6, or 8.
 * **Disk Type and Size for vSAN Capacity Disks**: Select the capacity that meets your shared storage needs.
 
 ### NFS
 
-For NFS, you can add file-level shared storage for your instance. Specify the following settings under **Storage**:
+For NFS, you can add file-level shared storage for your instance. Specify the following storage options:
 
 * **File Shares**: Specify the number of file shares for the NFS shared storage that you want to add. The number of file shares must be in the range of 1 to 32.
 * **Size**: Select the capacity that meets your shared storage needs.
-* **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements. The performance levels available to you depend on the data center that you select.
-* **Configure file shares individually**: Optionally select to complete individual file share configuration.
+* **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements. The performance levels available to you depend on the {{site.data.keyword.CloudDataCent_notm}} that you select.
+* **Configure shares individually**: Optionally select to complete individual file share configuration.
 * **Add NFS**: Optionally select if you are configuring your file shares individually and need to add additional file shares.
 
 Table 3. NFS performance level options
@@ -139,10 +152,39 @@ Table 3. NFS performance level options
   |:------------- |:------------- |
   | 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine disk images for a hypervisor. |
   | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
-  | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share, and it is supported only for the following IBM Cloud Data Centers: AMS03, DAL09, DAL10, DAL12, DAL13, FRA02, HKG01, LON02, LON04, LON06, MEL01, MEX01, MON01, OSL01, PAR01, SJC03, SJC04, SYD01, TOK02, TOR01, WDC04, WDC06, and WDC07. |
+  | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share, and it is supported only for the following {{site.data.keyword.CloudDataCents_notm}}: AMS03, DAL09, DAL10, DAL12, DAL13, FRA02, HKG01, LON02, LON04, LON06, MEL01, MEX01, MON01, OSL01, PAR01, SJC03, SJC04, SYD01, TOK02, TOR01, WDC04, WDC06, and WDC07. |
 
 <!--### NFS version
 NFS (Network File System) v3 is set by default and you cannot change it. NFS v3 supports SDRS (Storage Distributed Resource Scheduler) and SIOC (Storage I/O Control), and it does not include NFS multipathing.-->
+
+## Networking
+
+Network settings are based on your selection of either **Order New VLANs** or **Select Existing VLANs**.
+
+One public VLAN and two private VLANs are required for your instance order. The two private VLANs are trunked into each Bare Metal Server.
+
+### Order New VLANs
+
+Select to order one new public VLAN and two new private VLANs.
+
+### Select Existing VLANs
+
+Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
+
+Select to reuse existing public and private VLANs and choose from the available VLANs and subnets.
+
+**Important:**
+* Ensure that the firewall configuration on the selected VLANs does not block the management data traffic.
+* Ensure that all of the VLANs you select are in the same pod, because ESXi servers cannot be provisioned on mixed-pod VLANs.
+
+## Licenses
+
+When you order a vCenter Server instance, you can choose to use the IBM-provided VMware licenses or Bring Your Own License (BYOL) for the following:
+
+* VMware vSphere Enterprise Plus 6.5u1
+* VMware vCenter Server 6.5
+* VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
+* Optional license: VMware vSAN (Advanced or Enterprise) 6.6
 
 ## Services
 
@@ -161,34 +203,42 @@ You can calculate an estimated cost and generate a detailed PDF from each panel 
 3. On the **Order a vCenter Server Instance** page, select the instance type:
    *  To deploy a single instance in the environment or to deploy the first instance in a multi-site topology, ensure that **Primary** is selected and click **Next**.
    *  To connect the instance with an existing (primary) instance in the environment for high availability, select  **Secondary** and click **Next**.
-4. On the **Basics** page, specify the required information based on the instance type you selected.
+4. On the **Basics** page, specify the following required information based on the instance type you selected.
 
    If you selected the **Primary** instance type, provide the following information:
 
-    1. Enter the root domain name, subdomain label, instance name, and data center location.
-    2. Select your Bare Metal Server configuration.
-       * If you selected **Custom**, specify the **CPU Model** and the amount of **RAM**.
-       * If you selected **Preconfigured**, specify the **Bare Metal Server Configuration**.
-    3. Specify the number of {{site.data.keyword.baremetal_short}}. vSAN will always use 4 {{site.data.keyword.baremetal_short}}.
+    1. Enter the instance name.
+    2. Select the DNS configuration.
+    3. Enter the root domain name, subdomain label, and host name prefix.
     4. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
-    5. Select vSAN or NFS for **Storage**.
-       * If you selected vSAN, specify the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
-       * If you selected NFS, specify the **File Shares**, **Size**, and **Performance**. Optionally select **Configure shares individually** to complete individual file configuration. Use the **Add NFS** option to add additional file shares, if necessary.
-    6. Click **Next**.
+    5. Select the Bare Metal configuration.
+       * If you selected **Customized**, specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
+       * If you selected **Preconfigured**, specify the **Bare Metal Server Configuration**, and the **Number of {{site.data.keyword.baremetal_short}}**. If you are planning to use vSAN as your storage solution, note that a minimum of 4 {{site.data.keyword.baremetal_short}} are needed.
+    6. Select the storage configuration.
+       * If you selected **vSAN**, specify the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
+       * If you selected **NFS**, specify the **File Shares**, **Size**, and **Performance**. Optionally select **Configure shares individually** to complete individual file configuration. Use the **Add NFS** option to add additional file shares, if necessary.
+    7. Complete the network configuration.
+         1. If you want to order new public and private VLANs, click **Order New VLANs**.
+         2. If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs**, and then select the public VLAN, the primary subnet, the private VLAN, the primary private subnet, and the secondary private VLAN.
+    8. Click **Next**.
 
    If you selected the **Secondary** instance type, provide the following information:
 
     1. Enter the secondary instance name.
-    2. Select the primary instance that you want the secondary instance to be connected with.
-    3. Review the root domain name that is automatically filled in.
-    4. Enter the subdomain label and host name prefix.
-    5. Select the Bare Metal Server configuration.
-    6. If you selected **User customized** for the Bare Metal Server configuration, specify the **CPU Model** and the amount of **RAM**.
-    7. Specify the number of {{site.data.keyword.baremetal_short}}.
-    8. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
-    9. Select vSAN or NFS for **Storage**.
-       * If you selected vSAN, specify the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
-       * If you selected NFS, specify the **File Shares**, **Size**, and **Performance**. Optionally select **Configure shares individually** to complete individual file configuration. Use the **Add NFS** option to add additional file shares, if necessary.  
+    2. Select the DNS configuration.
+    3. Select the primary instance that you want the secondary instance to be connected with.
+    4. Review the root domain name that is automatically filled in.
+    5. Enter the subdomain label and host name prefix.
+    6. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
+    7. Select the Bare Metal configuration.
+    * If you selected **Customized**, specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
+    * If you selected **Preconfigured**, specify the **Bare Metal Server Configuration**, and the **Number of {{site.data.keyword.baremetal_short}}**. If you are planning to use vSAN as your storage solution, note that a minimum of 4 {{site.data.keyword.baremetal_short}} are needed.
+    8. Select storage configuration.
+       * If you selected **vSAN**, specify the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
+       * If you selected **NFS**, specify the **File Shares**, **Size**, and **Performance**. Optionally select **Configure shares individually** to complete individual file configuration. Use the **Add NFS** option to add additional file shares, if necessary.
+    9. Under **Network Details**, complete the following steps:
+         1. If you want to order new public and private VLANs, click **Order New VLANs**.
+         2. If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs**, and then select the public VLAN, the primary subnet, the private VLAN, the primary private subnet, and the secondary private VLAN.
     10. Click **Next**.
 
 5. If you selected the **Secondary** instance type, review the following information on the **Authentication** page:
@@ -211,26 +261,39 @@ You can calculate an estimated cost and generate a detailed PDF from each panel 
 
 7. On the **Add Service** page, complete the following steps:
 
-   1. To deploy a service into your instance, click **Select Service** on the corresponding service card.
-   2. If you accepted the default selection for Veeam on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure Veeam on IBM Cloud** area:
+   1. To deploy a service into your instance, click **Select Service** on the corresponding service card. Then scroll down the page to specify any required settings in the corresponding configuration area.
+   2. To install IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure IBM Spectrum Protect Plus on IBM Cloud** area:
+      * **Number of Storage Volumes**: The number of volumes that meet your storage needs.
+      * **Storage Size per Volume**: The storage capacity per volume. A minimum of 500 GB per volume is required for management.
+      * **Storage Performance**: The IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
+      * If you want to order licenses for IBM Spectrum Protect Plus, specify the **Number of VMs to License** on the **Order Licenses** tab. A minimum of 10 VMs is required for license management.
+      * If you want to Bring Your Own License (BYOL), click the **IBM Spectrum Protect Plus license** tab, and then click **Add files** to upload the IBM Spectrum Protect Plus license files that you own.
+   3. To install Veeam on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure Veeam on IBM Cloud** area:
       * **Number of VMs to License**: A minimum of 4 VMs for licenses is required for management.
       * **Storage Size**: The capacity that meets your storage needs. A minimum of 2,000 GB of storage is required for management. For considerations when estimating storage size, see [Estimating Repository Capacity](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
       * **Storage Performance**: The IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
-   3. If you want to install F5 on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure F5 on IBM Cloud** area:
+      * **Managed Service by IBM Resiliency Services (Priced Separately)**: Select to order the fully-managed backup service using Veeam backup software to protect critical business data.
+   4. To install F5 on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure F5 on IBM Cloud** area:
       * **Name**: Specify a unique name for the service instance to distinguish it from the additional service instances that you might install later.
       * **License Model**: Select **Good**, **Better**, or **Best** according to your requirements. For more information about what is provided for each license option, click **Learn More** on the **F5 on IBM Cloud** service card.
       * **Maximum Bandwidth**: Select the maximum data transfer rate for the network connection.
-   4. If you want to install FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure FortiGate Virtual Appliance on IBM Cloud** area:
+   5. To install FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure FortiGate Virtual Appliance on IBM Cloud** area:
       * **Name**: Specify a unique name for the service instance to distinguish it from the additional service instances that you might install later.
       * **Deployment Size**: Select **Small**, **Medium**, or **Large** with different CPU and RAM specifications for the FortiGate Virtual Appliances.
       * **Monthly Subscription License Model**: Select **Standard FW**, **Standard FW + UTM**, or **Standard FW + Enterprise** according to your requirements. For more information about what is provided in each license option, click **Learn More** on the **FortiGate Virtual Appliance on IBM Cloud** service card.
-   5. If you want to install HCX on {{site.data.keyword.cloud_notm}}, select the **Public endpoint certificate type** in the **Configure HCX on IBM Cloud** area. If you select **CA Certificate**, sepecify the following settings:
+   6. To install HCX on {{site.data.keyword.cloud_notm}}, select the **Public endpoint certificate type** in the **Configure HCX on IBM Cloud** area. If you select **CA Certificate**, sepecify the following settings:
       * **Certificate Contents**: Enter the contents of the CA certificate.
       * **Private Key**: Enter the private key of the CA certificate.
       * (Optional) **Password**: Enter the password for the private key if it is encrypted.
       * (Optional) **Reenter Password**: Enter the password for the private key again.
       * (Optional) **Hostname**: Enter the host name to be mapped to the common name (CN) of the CA certificate. HCX requires the CA certificate to be in a format that is accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
-   6. Select any other services that you want to install, or, to proceed without deploying any service, including Veeam on {{site.data.keyword.cloud_notm}}, click **Selected Service** on the service card. Click **Next**.
+   7. To install KMIP for VMware on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure KMIP for VMware on IBM Cloud** area:
+      * **Service Region**: Select the {{site.data.keyword.cloud_notm}} region where your KMIP for VMware {{site.data.keyword.cloud_notm}} service instance is to be hosted.
+      * **Client SSL Certificate**: This field is optional at the time of initial configuration. You can leave this field blank at this time because the client certificate of the Key Management Server (KMS) in vCenter Server is known after your instance is deployed. But you must enter the cerficate after your instance is deployed, so that your vCenter Server connection to the KMS can be completed successfully.
+      * **API Key for Service ID**: Enter the API key for the {{site.data.keyword.cloud_notm}} Service ID that is used to access the IBM Key Protect Service instances.
+      * **Key Protect Instance**: Click **Retrieve** to get a list of all available IBM Key Protect Service instances and then select the one that is used for key management.
+      * **Customer Root Key**: Click **Retrieve** to get the customer root key that is stored in the IBM Key Protect instance selected above.
+   8. After each service selection, click **Next**.
 
 8. On the **Summary** page, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
@@ -252,7 +315,7 @@ When you order a secondary instance, the VMware vSphere Web Client for the prima
 
 View and manage the vCenter Server instance that you ordered.
 
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_full}} components that are created in your {{site.data.keyword.cloud_notm}} account	 only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}} or any other means outside of the console.
+**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account	 only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}} or any other means outside of the console.
 If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
 **CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account	 when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
@@ -267,6 +330,7 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 
 * [Signing up for an {{site.data.keyword.cloud_notm}} account](../vmonic/signing_softlayer_account.html)
 * [Viewing vCenter Server instances](vc_viewinginstances.html)
+* [Multi-site configuration for vCenter Server instances](vc_multisite.html)
 * [Adding and viewing clusters for vCenter Server instances](vc_addingviewingclusters.html)
 * [Expanding and contracting capacity for vCenter Server instances](vc_addingremovingservers.html)
 * [Ordering and removing services for vCenter Server instances](vc_addingremovingservices.html)

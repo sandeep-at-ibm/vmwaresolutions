@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-02-20"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -14,7 +14,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} is a hosted private cloud t
 
 The entire environment can be provisioned in a matter of hours, and the bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed.
 
-Post-deployment, you can increase shared storage by ordering additional NFS (Network File System) file shares from the  {{site.data.keyword.slportal_full}} and manually attach them across all ESXi servers in a cluster. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.
+Post-deployment, you can increase shared storage by ordering additional NFS (Network File System) file shares from the  {{site.data.keyword.slportal}} and manually attach them across all ESXi servers in a cluster. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.
 
 VMware vSAN is also available as a dedicated storage option. To increase the vSAN-based storage capacity of a vSAN cluster, you can add more ESXi servers post-deployment.
 
@@ -32,7 +32,7 @@ Figure 1. vCenter Server high-level architecture for a three-node cluster
 
 ### Physical infrastructure
 
-This layer provides the physical compute, storage, and network resources to be used by the virtual infrastructure.
+This layer provides the physical infrastructure (compute, storage, and network resources) to be used by the virtual infrastructure.
 
 ### Virtualization infrastructure (Compute and Network)
 
@@ -48,24 +48,22 @@ The base offering is deployed with a vCenter Server appliance that is sized to s
 
 In total, the base offering requires 38 vCPU and 67 GB vRAM that are reserved for the virtualization management layer. The remaining host capacity for your VMs depends on several factors, such as oversubscription rate, VM sizing, and workload performance requirements.
 
-For details about the architecture, see the _Reference architecture_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform){:new_window}.
+For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.
 
 ## vCenter Server instance components
 
 The following components are included in your vCenter Server instance.
 
-**Note**: The availability and pricing of standardized hardware configurations might vary based on the data center that is selected for deployment.
+**Note**: The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
 
 ### Hardware
 
 You can order three or more {{site.data.keyword.baremetal_short}} with one of the following configurations:
-*  Small (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz / 128 GB RAM / 2 disks)
-*  Medium (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz / 256 GB RAM / 2 disks)
-*  Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz / 512 GB RAM / 2 disks)
-*  User customized. The user selects the CPU, RAM, and storage options.
+*  **Customized**: You can select the CPU, RAM, and storage options.
+*  **Preconfigured**: **Small** (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz / 128 GB RAM / 2 disks), **Medium** (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz / 256 GB RAM / 2 disks), or **Large** (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz / 512 GB RAM / 2 disks).
 
-**Notes for the User customized configuration**:
-* Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz is also available for **User customized** configurations.
+**Notes** for the **Customized** configuration:
+* Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz is also available for the **Customized** configurations.
 * If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
 
 ### Networking
@@ -74,10 +72,10 @@ The following networking components are ordered:
 *  Three VLANs (Virtual LANs): one public VLAN and two private VLANs
 *  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching additional VXLANs to new logical interfaces on the DLR.
 *  Two VMware NSX Edge Services Gateways:
-  * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-edge-services-gateway-with-your-vms).
+  * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     **Important**: This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, note that using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
-  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
+  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 ### Virtual Server Instances
 
@@ -95,17 +93,17 @@ The vSAN option offers customized CPU model and RAM configurations, with various
 * Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED.
 
   In addition, 2 cache disks of 960 GB are also ordered per host.
-  
+
   **Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
 
 The NFS option offers customized shared file-level storage for workloads with various options for size and performance:
 * Size: 1, 2, 4, 8, or 12 TB
 * Performance: 2, 4, or 10 IOPS/GB. The 10 IOPS/GB option is available for certain data centers only.
-* Individually configure file shares.
+* Individual configuration of file shares.
 
 If you choose the NFS option, the following file shares are ordered:
 * One 2 TB, 4 IOPS/GB file share for management components.
-* One 2 TB shared block-level storage for backups, which can be scaled up to 12 TB. You can choose whether you want storage for backups by selecting or deselecting the Veeam on IBM Cloud service.
+* One 2 TB shared block-level storage for backups, which can be scaled up to 12 TB. You can choose whether you want storage for backups by selecting a backup service.
 
 ### Licenses (IBM-provided or BYOL) and fees
 
@@ -142,6 +140,7 @@ One Bare Metal Server with the configuration presented in [vCenter Server instan
 
 ## Related links
 
+* [vCenter Server Software Bill of Materials](vc_bom.html)
 * [Planning vCenter Server instances](vc_planning.html)
 * [Ordering vCenter Server instances](vc_orderinginstance.html)
-* [{{site.data.keyword.cloud_notm}} file and block storage](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/sharedStorage){:new_window}
+* [{{site.data.keyword.cloud_notm}} file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
