@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-24"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -58,24 +58,28 @@ The host name prefix must meet the following requirements:
 *  The host name prefix must start and end with an alphanumeric character.
 *  The maximum length of the host name prefix is 10 characters.
 
-### Bare metal server configuration
+### IBM Cloud Data Center location
 
-You can select a bare metal server configuration depending on your requirements:
+You must select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the Bare Metal Server specification you selected previously are displayed.-->
+
+## Bare Metal settings
+
+Specify the following settings under **Bare Metal**.
+
+### Bare Metal Server configuration
+
+You can select a Bare Metal Server configuration depending on your requirements:
 * **High Performance (Medium)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 1.9 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 59 TB
 * **High Performance (Large)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 3.8 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 118 TB
-* **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.10 GHz) / 64 GB RAM / Ten 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 60 TB
+* **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 64 GB RAM / Thirty Four 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 190 TB
 
-**Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
+**Note:** 3.8 TB SSD drives will be supported when they are made generally available in an {{site.data.keyword.CloudDataCent_notm}}.
 
-<!--For guidance on what bare metal server configuration to choose, see the _Bill of Materials_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture/virtualizationRefArch){:new_window}.-->
+<!--For guidance on what bare metal server configuration to choose, see the _Bill of Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
 
 ### Number of Bare Metal Servers
 
 The number of ESXi servers of a NetApp ONTAP Select instance is 4 by default. You cannot change it. All the ESXi servers share the same configuration.
-
-### Data center location
-
-You must select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted. Only the data centers that meet the bare metal server specification you selected previously are displayed.
 
 ## Licensing settings
 
@@ -85,12 +89,13 @@ You must upload four NetApp licensing files, because each of the four {{site.dat
 
 1. Click **Getting Started** on the left navigation pane.
 2. On the **NetApp ONTAP Select** card, click **Order Instance**.
-3. On the **Basics** page under **System**, provide the following information:
+3. On the **Basics** page, specify the following required information:
    1. Enter the instance name.
    2. Enter the root domain name, subdomain label, and host name prefix.
-   3. Select the bare metal server configuration.
-   4. Review the number of {{site.data.keyword.baremetal_short}}, that is 4.
-   5. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
+   3. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
+   4. Complete the Bare Metal configuration.
+    1. Select the Bare Metal Server configuration.
+    2. For **Number of {{site.data.keyword.baremetal_short}}**, four ESXi servers are required and added by default.
 4. On the **Basics** page under **Licensing**, click **Add files** to upload four NetApp license files that are required by the four {{site.data.keyword.baremetal_short}}.  Click **Next**.
 5. On the **Summary** page, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
@@ -111,7 +116,7 @@ When the instance is ready to use, the status of the instance is changed to **Re
 
 View and manage the NetApp ONTAP Select instance that you ordered.
 
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_full}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
 **CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components

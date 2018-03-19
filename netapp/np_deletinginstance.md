@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-11-10"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -32,7 +32,7 @@ To delete a NetApp ONTAP Select instance from the **Deployed Instances** page, u
    3. In the **Actions** column, click the delete icon. The status of the instance is changed to **Deleting**.
    4. When the instance is deleted successfully and its status is changed to **Deleted**, click the delete icon in the **Actions**
    column again.
-   5. In the **Delete Instance** window, click **OK** to remove the instance from the {{site.data.keyword.vmwaresolutions_full}}
+   5. In the **Delete Instance** window, click **OK** to remove the instance from the {{site.data.keyword.vmwaresolutions_short}}
    console.
 
 To delete a NetApp ONTAP Select instance from the instance details page, use the following procedure:
