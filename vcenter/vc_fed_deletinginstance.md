@@ -4,23 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-02-22"
+lastupdated: "2018-02-26"
 
 ---
 
-# Deleting vCenter Server instances
+# Deleting VMware Federal VMware instances
 
-To release the components that you ordered in a VMware vCenter Server instance, delete the instance.
+To release the components that you ordered in a VMware Federal instance, delete the instance.
 
-When you delete a vCenter Server instance, the following components are released sequentially:
-1. All deployed services
-2. Support and Services fee
-3. VMware product licenses
-4. ESXi servers
-5. Subnets
-6. VLANs
+When you delete a VMware Federal instance, the following components are released sequentially:
 
-Because of resource dependencies, the components in your instance are not released immediately when you delete the instance. For example, the subnets and VLANs cannot be deleted until the ESXi servers are fully reclaimed by {{site.data.keyword.cloud}} infrastructure (SoftLayer), which happens at the end of the {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) billing cycle. At the end of the {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) billing cycle, which is typically 30 days, the subnets and VLANs are deleted and the instance deletion is completed.
+1. VMware product licenses
+2. ESXi servers
+3. Subnets
+
+Because of resource dependencies, the components in your instance are not released immediately when you delete the instance. For example, the subnets cannot be deleted until the ESXi servers are fully reclaimed by {{site.data.keyword.cloud}} infrastructure (SoftLayer), which happens at the end of the {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) billing cycle. At the end of the {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) billing cycle, which is typically 30 days, the subnets are deleted and the instance deletion is completed.
 
 **Attention:** You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) billing cycle for the deleted instance.
 
@@ -47,8 +45,8 @@ Because of resource dependencies, the components in your instance are not releas
 
 ## Related links
 
-* [Deleting vCenter Server instances in a multi-site configuration](vc_deletinginstance_multi.html)
-* [Ordering vCenter Server instances](vc_orderinginstance.html)
-* [Viewing vCenter Server instances](vc_viewinginstances.html)
-* [Expanding and contracting capacity for vCenter Server instances](vc_addingremovingservers.html)
+* [VMware Federal on IBM Cloud overview](vc_fed_overview.html)
+* [Ordering VMware Federal instances](vc_fed_orderinginstance.html)
+* [Securing VMware Federal instances](vc_fed_securinginstance.html)
+* [Viewing VMware Federal instances](vc_fed_viewinginstance.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)

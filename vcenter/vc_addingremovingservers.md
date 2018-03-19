@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-26"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -21,14 +21,15 @@ If your initial cluster has vSAN as its storage, adding one or more ESXi servers
 
    **Note:** Do not add or remove ESXi servers from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
 
+* Before you remove ESXi servers with the IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service installed, ensure that there are no active (failed or in progress) backup or restore operations, because these active operations might prevent the ESXi servers to be removed.
 * A vCenter Server instance with NFS storage must have at least 2 ESXi servers. For instances that are deployed in V2.1 or later, you can expand the default cluster to have up to 51 ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers.
 
-For vCenter Server instances that were deployed in V2.0 or earlier, you can expand each cluster to have up to 32 ESXi servers. The number of {{site.data.keyword.baremetal_short}} that you can add at a time is as follows:
+* For vCenter Server instances that were deployed in V2.0 or earlier, you can expand each cluster to have up to 32 ESXi servers. The number of {{site.data.keyword.baremetal_short}} that you can add at a time is as follows:
    * For the **Small**, **Medium**, and **Large** configurations, you can add 1 - 10 ESXi servers at a time.
-   * For the **User customized** configuration, you can add 1 - 20 ESXi servers at a time. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+   * For the **Customized** configuration, you can add 1 - 20 ESXi servers at a time. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 *  A vCenter Server instance with vSAN storage must have at least 4 ESXi servers.
-* When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.
+* When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.
 
 ## Procedure
 
@@ -45,7 +46,7 @@ For vCenter Server instances that were deployed in V2.0 or earlier, you can expa
 
 After starting the add or remove operation you might experience a slight delay in the instance status while it changes from **Ready to Use** to **Modifying**. Allow the operation to fully complete before making additional changes to the instance.
 
-You are notified by email that your request to add or remove ESXi servers is being processed. The status of the cluster associated with the ESXi servers is changed to **Modifying**. When you remove servers, note that the ESXi servers are fully reclaimed by {{site.data.keyword.cloud}} infrastructure (SoftLayer) at the end of the {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) billing cycle, which is typically 30 days.
+You are notified by email that your request to add or remove ESXi servers is being processed. The status of the cluster associated with the ESXi servers is changed to **Modifying**. When you remove servers, note that the ESXi servers are fully reclaimed by {{site.data.keyword.cloud_notm}} infrastructure at the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle, which is typically 30 days.
 
 **Attention:** You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the removed ESXi servers.
 
@@ -53,10 +54,8 @@ If you do not see the new ESXi servers added to the list in the cluster, check t
 
 ## Related links
 
+* [vCenter Server Bill of Materials](vc_bom.html)
 * [Requirements and planning for vCenter Server instances](vc_planning.html)
-* [Ordering vCenter Server instances](vc_orderinginstance.html)
-* [Viewing vCenter Server instances](vc_viewinginstances.html)
 * [Adding and viewing clusters for vCenter Server instances](vc_addingviewingclusters.html)
-* [Deleting vCenter Server instances](vc_deletinginstance.html)
 * [Place a host in maintenance mode](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
