@@ -7,9 +7,11 @@ IBM Cloud for VMware Solutions
     {: .navgroup id="learn"}
     index.md
     vmonic/prod_overview.md
+    vmonic/inst_comp_chart.md
 
     {: .topicgroup}
     Release notes
+        vmonic/relnotes_v22.md
         vmonic/relnotes_v21.md
         vmonic/relnotes_v20.md
         vmonic/relnotes_v19.md
@@ -28,7 +30,8 @@ IBM Cloud for VMware Solutions
         [FortiGate Security Appliance](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/fortigate-physical)[NetApp ONTAP Select](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/netapp-ots)
         [IBM Cloud file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage)
         [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/nsx-esg)
-        [Resources and videos](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture/1_0)
+        [Resources and videos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources)
+        [Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)
         [Secure virtualization](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/secure-virtualization)
         [Take a look under the hood](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
         [Veeam backup and replication](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/veeam)
@@ -98,6 +101,20 @@ IBM Cloud for VMware Solutions
         netapp/np_deletinginstance.md
 
     {: .topicgroup}
+    VMware Federal on IBM Cloud
+        vcenter/vc_fed_overview.md
+        vcenter/vc_fed_planning.md
+        vcenter/vc_fed_orderinginstance.md
+        vcenter/vc_fed_viewinginstance.md
+        vcenter/vc_fed_securinginstance.md
+        vcenter/vc_fed_deletinginstance.md
+
+    {: .topicgroup}
+    F5 on IBM Cloud
+        services/f5_considerations.md
+        services/managing_f5.md
+
+    {: .topicgroup}
     FortiGate Security Appliance on IBM Cloud
         services/fsa_considerations.md
         services/managingfsa.md
@@ -106,11 +123,6 @@ IBM Cloud for VMware Solutions
     FortiGate Virtual Appliance on IBM Cloud
         services/fortinetvm_considerations.md
         services/managingfortinetvm.md
-
-    {: .topicgroup}
-    F5 on IBM Cloud
-        services/f5_considerations.md
-        services/managing_f5.md
 
     {: .topicgroup}
     HCX on IBM Cloud
@@ -123,8 +135,19 @@ IBM Cloud for VMware Solutions
         services/hcx_glossary.md
 
     {: .topicgroup}
-    Managed Services from IMI
+    IBM Spectrum Protect Plus on IBM Cloud
+        services/spp_considerations.md
+        services/managingspp.md
+
+    {: .topicgroup}
+    KMIP for VMware on IBM Cloud
+        services/kmip_considerations.md
+
+    {: .topicgroup}
+    Managed Services
         services/managing_imi.md
+        services/managing_veeam_services.md
+        services/managing_zerto_services.md
 
     {: .topicgroup}
     Veeam on IBM Cloud
