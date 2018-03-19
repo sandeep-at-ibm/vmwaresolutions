@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-08"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -42,6 +42,7 @@ Before you remove the Veeam on {{site.data.keyword.cloud_notm}} service, note th
 ## Related links
 
 * [Managing Veeam on {{site.data.keyword.cloud_notm}}](managingveeam.html)
+* [Requesting managed services for Veeam on {{site.data.keyword.cloud_notm}}](managing_veeam_services.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)
 * [FAQ](../vmonic/faq.html)
 * [Veeam website](https://www.veeam.com/){:new_window}
