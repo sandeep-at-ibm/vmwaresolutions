@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-24"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-01-24"
 
 To deploy a highly customizable VMware virtualized platform, order VMware vSphere on {{site.data.keyword.cloud}}. Use this procedure to define a new VMware vSphere cluster.
 
-This workflow will guide you through VMware component, {{site.data.keyword.cloud_notm}} bare metal server, and networking choices, to create a new cluster. After you place the order, the cluster configuration is captured so that you can come back and continue to scale out the cluster as needed. Once the order is completed, you can manually build the VMware cluster based on your requirements.
+This workflow will guide you through VMware component, {{site.data.keyword.cloud_notm}} Bare Metal Server, and networking choices, to create a new cluster. After you place the order, the cluster configuration is captured so that you can come back and continue to scale out the cluster as needed. Once the order is completed, you can manually build the VMware cluster based on your requirements.
 
 ## Requirements
 
@@ -65,15 +65,41 @@ The host name prefix must meet the following requirements:
 
 ## VMware Components
 
-You can select the following VMware components to be ordered with your cluster:
+Select VMware components to be ordered with your cluster.
+
+### Component bundles
+
+Business Partner users can now select from four component license bundles when ordering a new vSphere cluster. Select one of the following bundles:
+
+Table 1. Business Partner component bundles for vSphere clusters
+
+| Bundle | Components                   |
+|:-------------------------|:-----------------------|
+| Basic                    | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise                 |
+| Advanced                 | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vCloud Director, NSX Base |
+| Advanced with Networking | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
+| Enterprise               | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, NSX Enterprise |
+
+You can also include the following additional VMware components to your order:
+* VMware vSAN
+* VMware Site Recovery Manager
+* VMware vRealize Automation Enterprise
+
+**Note:** Business Partner users do not have the option to Bring Your Own License. The **I will provide the license** option is not available when completing your order.
+
+### Individual components
+
+You can select the following VMware components to order with your cluster:
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
-* VMware vSAN. When you order this component, you must select the **Number of Disk Drives** and **Disk Type and Capacity** in the **{{site.data.keyword.baremetal_short}}** section.
+* VMware vSAN
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
+
+**Note:** The VMware vSAN component is not available when you order VMware vSphere Enterprise Plus 6.0. If you plan to use your own license for VMware vSphere Enterprise Plus 6.0, an {{site.data.keyword.cloud_notm}} infrastructure ticket will be opened on your behalf requesting that the vSphere licenses of the ordered {{site.data.keyword.baremetal_short}} are replaced with your provided licenses.
 
 You have the following options for licensing the selected VMware components:
 * **Include license with purchase**: In this case, a new license for the VMware component is purchased on your behalf. A combined VMware license is generated to match the cluster size of the order.
@@ -87,22 +113,22 @@ If you choose to purchase any license, except for vSphere Enterprise Plus and vC
 
 Review the following details about your order, depending on whether you want to order the **VMware vSAN** component or not:
 * For orders without vSAN, ESXi servers are ordered with a 12-disk chassis, with two disks for the ESXi operating system (OS).
-* For orders with vSAN, ESXi servers are ordered with a 12-disk chassis and four disks ordered: two for the ESXi OS and two reserved for caching. These settings are configured by default and cannot be changed. You can order more capacity disks by selecting the **Number of Disks** in the **{{site.data.keyword.baremetal_short}}** section.
+* For orders with vSAN, ESXi servers are ordered with a 12-disk chassis and four disks ordered: two for the ESXi OS and two reserved for caching. These settings are configured by default and cannot be changed. You can order more capacity disks by selecting the **Number of vSAN Capacity Disks** in the **{{site.data.keyword.baremetal_short}}** section.
 * For additional information about storage calculations depending on your other selections, see the details displayed under **vSAN Summary** on the console.
 
-### Data Center Location
+### IBM Cloud Data Center Location
 
-Select the {{site.data.keyword.CloudDataCent}} where the cluster is to be hosted.
+Select the {{site.data.keyword.CloudDataCent_notm}} where the cluster is to be hosted.
 
 **Note:** If you select a vSAN component, the location list is filtered by SSD availablity.
 
-### Number of Disk Drives
+### Number of vSAN Capacity Disks
 
 The number of disk drive values are displayed only for the VMware vSAN component. The disk quantity options include 2, 4, 6, and 8.
 
 **Note:** This option applies only to the VMware vSAN component.
 
-### Disk Type and Capacity
+### Disk Type and Size for vSAN Capacity Disks
 
 The following disk types are available for {{site.data.keyword.baremetal_short}}:
 * 960 GB SSD SED
@@ -132,15 +158,23 @@ The number of ESXi servers that you want add to the vSphere cluster. All the ESX
 
 ## Network Details
 
+Network settings are based on your selection of either **Order New VLANs** or **Select Existing VLANs**.
+
 One public VLAN and two private VLANs are required for your cluster order. The two private VLANs are trunked into each Bare Metal Server.
 
+### Order New VLANs
+
+Select to order one new public VLAN and two new private VLANs.
+
+### Select Existing VLANs
+
 Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
-* If you want to reuse existing public and private VLANs, click **Select Existing Public and Private VLANs** and choose from the available VLANs and subnets. Ensure that all the VLANs chosen are in the same pod, because ESXi servers cannot be provisioned on mixed-pod VLANs.
 
-To find out the pod ID of a VLAN, review the VLAN format on the user interface. The format is `<bcr/fcr><pod_id>.<datacenter_shortname>.<vlan_number>`. For example, for a private VLAN, the VLAN ID might be `bcr01a.mex01.1247` and for a public VLAN, the ID might be `fcr01a.mex01.1253`. In both these examples, the pod ID is `01a`.
-{:tip}
+Select to reuse existing public and private VLANs and choose from the available VLANs and subnets.
 
-* When no existing VLANs are available, three VLANs are provisioned: a public one and two private ones.
+**Important:**
+* Ensure that the firewall configuration on the selected VLANs does not block the management data traffic.
+* Ensure that all of the VLANs you select are in the same pod, because ESXi servers cannot be provisioned on mixed-pod VLANs.
 
 You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair in your cluster.
 
@@ -153,25 +187,27 @@ You can also select whether to include the FortiGate Physical Appliance 300 Seri
 4. Enter the root domain name.
 5. Enter the subdomain label.
 6. Enter the ESXi server name prefix.
-7. Under **VMware Components**, complete the following steps:
-   1. Select the VMware vSphere version from the **VMware vSphere Enterprise Plus** list, and then specify the licensing option for it
+7. Select the VMware components.
+   * Business Partner users only, select a license bundle and any additional available VMware components.
+   * Other users, select the VMware vSphere version from the **VMware vSphere Enterprise Plus** list, and then specify the licensing option for it
     as follows:
       * If you want new licenses for this VMware component to be purchased on your behalf, select **Include license with purchase**.
       * If you want to use your own VMware licenses for this VMware component, select **I will provide the license**. An {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to request the default vSphere licenses on your ordered {{site.data.keyword.baremetal_short}} to be replaced with your provided licenses.
+      **Note:** This option is not available to Business Partner users.
 
       **Important**: You are responsible to follow up with the ticket to ensure that you replace the vSphere license on the newly ordered ESXi servers so that the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
 
-   2. Select other VMware components that you want to integrate with your cluster, specify the licensing options for them as
+   3. Select other VMware components that you want to integrate with your cluster, specify the licensing options for them as
     follows, and select the edition for them if the option list is available:
       * If you want a new license to be purchased on your behalf for a component, select **Include license with purchase**.
       * If you want to use your own VMware license for a component, select **I will provide the license**.
-8. Under **{{site.data.keyword.baremetal_short}}**, complete the following steps:
-   1. Select the {{site.data.keyword.CloudDataCent}} to host the cluster.
-   2. If you selected the VMware vSAN component, select the number of disk drives and review the disk type and capacity.
+8. Complete the Bare Metal Server configuration:
+   1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the cluster.
+   2. If you selected the VMware vSAN component, select the number of disk drives and the disk type.
    3. Select the CPU model.
    4. Select the RAM size.
    5. Select the number of {{site.data.keyword.baremetal_short}} to add to the cluster.
-9. Under **Network Details**, complete the following steps:
+9. Complete the network configuration.
    1. If you want to reuse the existing public and private VLANs when they are available, click **Select Existing Public and Private VLANs**, and then select the public VLAN, the primary subnet, the private VLAN, the primary private subnet, and the secondary private VLAN.
    2. If you want new public and private VLANs to be provisioned, do not click **Select Existing Public and Private VLANs**.
    3. If you want a FortiGate high availability (HA) appliance to be installed on the public VLAN, select **Include with purchase** under

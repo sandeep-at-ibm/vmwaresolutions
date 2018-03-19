@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-24"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -15,7 +15,7 @@ You can scale out an existing VMware vSphere cluster that you ordered or saved i
 ## Requirements
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
 *  You meet the requirements and you reviewed the considerations in [Requirements and planning for vSphere clusters](vs_planning.html).
 
 ## Procedure
@@ -25,7 +25,7 @@ Ensure that you completed the following tasks:
 3. On the **Basics** page, click the **Scale existing cluster** tab.
 4. Select the cluster you want to scale from the **Cluster Configurations** list.
 5. Review the cluster settings, which are automatically filled in, such as the cluster name, the selected VMware components and their settings, and the network details.
-6. Under **{{site.data.keyword.baremetal_short}}**, select the number of {{site.data.keyword.baremetal_short}} that you want to add to the cluster.
+6. Select the number of {{site.data.keyword.baremetal_short}} that you want to add to the cluster.
 7. If the cluster does not include the HA-pair of FortiGate 300 series Security Appliance on its public VLAN, you can order one for it
 by selecting **Include with purchase** under **FortiGate Physical Appliance 300 Series HA Pair**.
 8. Click **Next**.
