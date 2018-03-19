@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -50,7 +50,7 @@ Use this procedure to view the NetApp ONTAP Select instances that you ordered an
   * **ID**: The ID of the instance.
   * **Name**: The name of the instance.
   * **Location**: The data center where the instance is hosted.
-  * **Current version**: The current version of {{site.data.keyword.vmwaresolutions_full}}.
+  * **Deployed version**: The deployed version of {{site.data.keyword.vmwaresolutions_full}}.
   * **vCenter version**: The version of VMware vCenter Server.
 
     **Note**: There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct.
@@ -133,7 +133,7 @@ Use this procedure to view the NetApp ONTAP Select instances that you ordered an
 
 Manage your instances from the {{site.data.keyword.vmwaresolutions_short}} console, the VMware vSphere Web Client, or the NetApp console.
 
-**Important**: Before you click **vCenter console** on the instance details page to go to the vSphere Web Client and start managing your ESXi servers, you must log in to the VPN portal of the {{site.data.keyword.CloudDataCent}}. Hover over the **vCenter console** button and follow the instructions to ensure that you meet all requirements and you completed the necessary steps before you access the vSphere Web Client.
+**Important**: Before you click **vCenter console** on the instance details page to go to the vSphere Web Client and start managing your ESXi servers, you must log in to the VPN portal of the {{site.data.keyword.CloudDataCent_notm}}. Hover over the **vCenter console** button and follow the instructions to ensure that you meet all requirements and you completed the necessary steps before you access the vSphere Web Client.
 
 Review the following topics for information to help you complete the login instructions:
 
