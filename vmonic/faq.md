@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-25"
+lastupdated: "2018-02-26"
 
 ---
 
@@ -29,33 +29,13 @@ All costs for the physical and virtual infrastructure and the licenses resulting
 
 {{site.data.keyword.vmwaresolutions_short}} is an English-only product. Therefore, all features on the console, including the user documentation, are available in English only.
 
-## What is the difference between a Cloud Foundation instance and vCenter Server instance?
+## What are the differences between a Cloud Foundation instance and vCenter Server instance?
 
 Both instance types provide deployment choices for VMware virtual environments. However, the difference is standardized versus customized.
 
 * When you order a VMware Cloud Foundation instance, you deploy a unified software-defined data center (SDDC) platform. For more information about the deployed components, see [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
 * When you order a VMware vCenter Server instance, you deploy a VMware virtual environment with customized compute, storage, and network resources. For more information about the deployed components, see [vCenter Server instance components](../vcenter/vc_vcenterserveroverview.html#vcenter-server-instance-components).
-* The functions that are supported for Cloud Foundation instances and vCenter Server instances are different:
-
-Table 1. Supported functions for Cloud Foundation versus vCenter Server instances
-
-| Function                          | Cloud Foundation    | vCenter Server |
-|:----------------------------------|:--------------------|:----------------------|
-| **Storage options**        | vSAN                | vSAN or Shared File-level Storage |
-| **Minimum number of ESXi servers** | 4 | vSAN: 4 or NFS: 2 (3 strongly recommended) |
-| **Maximum number of ESXi servers** | 32 per cluster      | 59 per cluster     |
-| **Cloud automated multi-site deployment** | Supported | Supported     |
-| **Add ESXi servers**              | Supported           | Supported    |
-| **Remove ESXi servers**           | Supported           | Supported |
-| **Multi-cluster support**         | 5 clusters | 5 clusters |
-| **Update and patch**              | IBM CloudDriver and VMware updates | IBM CloudDriver |
-| **Backup and restore**            | Supported | Supported  |
-| **Software-defined networking**   | NSX Enterprise   | NSX Base, Advanced, or Enterprise |
-| **BYOL for vSphere and vSAN** | Fully supported per cluster   | Fully supported per cluster     |
-| **BYOL for vCenter and NSX** | Fully supported per instance   | Fully supported per instance     |
-| **NSX license upgrade options**           | None   | Upgrade available from NSX Base to Advanced or Enterprise, and from NSX Advanced to Enterprise  |
-| **vSAN license editions**         | vSAN Advanced or Enterprise  | vSAN Advanced or Enterprise  |
-| **Add-on services**               | Supported  | Supported |
+* The functions that are supported for Cloud Foundation instances and vCenter Server instances are different. For more information, see [Instance comparison chart](inst_comp_chart.html).
 
 ## What is included in a Cloud Foundation instance?
 
@@ -87,7 +67,7 @@ For vCenter Server instances, the first cluster that is created during deploymen
 
 ##How are patches being managed?
 
-IBM provides ongoing updates to the IBM CloudDriver component which are made available through the {{site.data.keyword.cloud_notm}} for VMware Solutions console. IBM does not provide ongoing updates to add-on services such as Zerto on {{site.data.keyword.cloud_notm}} and Veeam on {{site.data.keyword.cloud_notm}}. Obtaining and installing these updates is your responsibility.
+IBM provides ongoing updates to the IBM CloudDriver component which are made available through the {{site.data.keyword.cloud_notm}} for VMware Solutions console. IBM does not provide ongoing updates to add-on services such as Zerto on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}}. Obtaining and installing these updates is your responsibility.
 
 VMware updates are applied in a different manner based on the type of VMware instance you have deployed:
 

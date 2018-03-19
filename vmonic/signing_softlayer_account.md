@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-12-29"
+lastupdated: "2017-03-26"
 
 ---
 
@@ -25,7 +25,7 @@ To sign up for an {{site.data.keyword.cloud}} account, upgrade your {{site.data.
 7. Click **Next**.
 8. Review the personal information, billing address, and credit card information.
 9. Click **Done**. You are notified by email that your account setup is in process.
-10. When you are notified by email that your account is ready, go to the {{site.data.keyword.slportal_full}} and click **Log in with IBMid**.
+10. When you are notified by email that your account is ready, go to the {{site.data.keyword.slportal}} and click **Log in with IBMid**.
     You are then automatically logged in.
 
 ## Related links

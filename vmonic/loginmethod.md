@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-03"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -21,7 +21,7 @@ To access the console directly, complete the following steps:
 
 ## Accessing from the IBM Cloud catalog
 
-To access the console from the {{site.data.keyword.cloud}} catalog, complete the following steps:
+To access the console from the {{site.data.keyword.cloud_notm}} catalog, complete the following steps:
 1. Go to https://console.ng.bluemix.net/.
 2. Log in to {{site.data.keyword.cloud_notm}} with your **IBMid** account.
 3. Click **Catalog**.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-16"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -12,12 +12,27 @@ lastupdated: "2018-01-16"
 
 Find answers to frequently asked questions about the ESXi servers managed on the {{site.data.keyword.vmwaresolutions_full}} console.
 
-## How many ESXi servers can I add to my instances?
+## How many ESXi servers can I add to my instance?
 
-* For vCenter Server instances, you can configure the number of ESXi servers in the range of 2 - 20 per cluster. Each deployed instance can have a maximum of 128 ESXi servers across all clusters.
+* For vCenter Server instances, you can you can expand the default cluster to have up to 51 ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers. Since you can add up to 10 clusters to an instance,  each deployed instance can have a maximum of 51 + 9x59 = 582 ESXi servers across all clusters.
 * For Cloud Foundation instances, the standard configuration has four ESXi servers. You can add a maximum of 28 servers (to a total of 32 servers). For Cloud Foundation instances in a multi-site configuration, you can have a maximum of 128 ESXi servers across all instances.
+  **Note**: If your Cloud Foundation configuration requires a multi-site deployment with more than 128 ESXi servers, [contact IBM Support](trbl_support.html) for assistance.
 
-**Note**: If your configuration requires a multi-site deployment with more than 128 ESXi servers, [contact IBM Support](trbl_support.html) for assistance.
+## How many ESXi servers can I add to a cluster?
+
+For V2.2 and later releases, you can add a maximum of 51 ESXi servers to an initial cluster and a maximum of 59 ESXi servers to additional clusters.
+
+For instances deployed in V2.1 or earlier releases, you must enable the necessary vSAN support to increase the cluster size beyond 32. Complete the following steps to enable the necessary vSAN support:
+
+1. On each deployed ESXi server, run the following commands:
+
+   `esxcli system settings advanced set -o /VSAN/goto11 -i 1`
+
+   `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
+
+2. Restart each ESXi server. For more information, see [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081).
+3. Note that you may need to increase the size of the vCenter Server to accommodate the additional virtual machines and ESXi servers.
+4. Open an IBM Support ticket indicating that you have manually applied the vSAN changes above and that you want to have your upgraded instance enabled for additional ESXi servers beyond 32.
 
 ## Can I change the ESXi server names?
 
