@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-11-20"
+lastupdated: "2018-03-16"
 
 ---
 
 # Managing user accounts and settings
 
-{{site.data.keyword.vmwaresolutions_full}} communicates with the {{site.data.keyword.cloud}} infrastructure through {{site.data.keyword.slapi_short}} calls. To access the {{site.data.keyword.slapi_short}} securely, you must associate the credentials of your {{site.data.keyword.cloud}} account to your {{site.data.keyword.vmwaresolutions_short}} user account.
+{{site.data.keyword.vmwaresolutions_full}} communicates with the {{site.data.keyword.cloud_notm}} infrastructure through {{site.data.keyword.slapi_short}} calls. To access the {{site.data.keyword.slapi_short}} securely, you must associate the credentials of your {{site.data.keyword.cloud_notm}} account to your {{site.data.keyword.vmwaresolutions_short}} user account.
 
 **Note**: The {{site.data.keyword.cloud_notm}} account was previously known as the IBM SoftLayer account.
 

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-12-29"
+lastupdated: "2018-03-16"
 
 ---
 
 # Requirements for the IBM Cloud account
 
-To use {{site.data.keyword.vmwaresolutions_full}} to order instances, you must have an {{site.data.keyword.cloud}} account. The cost of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud}} account.
+To use {{site.data.keyword.vmwaresolutions_full}} to order instances, you must have an {{site.data.keyword.cloud_notm}} account. The cost of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
 
 **Note**: The {{site.data.keyword.cloud_notm}} account was previously known as the IBM SoftLayer account.
 
@@ -24,7 +24,6 @@ Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} account
 
 | Permission         | Details                                 |
 |:-------------------|:----------------------------------------|
-| Add IP Addresses | This permission is required to order portable private subnet ranges on your behalf, which is needed to manage the virtual machines that run in a vSphere cluster. When more services are added to your instance, the portable private IP addresses are assigned to VMware ESXi servers to isolate and allocate bandwidth. |
 | Add Server | This permission is required for the following operations: to order {{site.data.keyword.baremetal_long}} on which VMware ESXi runs and to provision hourly virtual servers that are used for instance configuration, maintenance, and support operations. |
 | Cancel Server | This permission is required to release and reclaim {{site.data.keyword.baremetal_short}} on which VMware ESXi runs. If you delete your instance, the ordered components are automatically released in the correct dependency sequence. |
 | View Virtual Server Details | This permission is required to retrieve the server provisioning details, which are required for order validation and automated configuration. |
@@ -32,11 +31,13 @@ Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} account
 | Manage Storage | This permission is required to manage backup storage and shared storage for the instance. |
 | Hardware Firewall | This permission is required to edit or view firewall log files and settings for the Fortinet on {{site.data.keyword.cloud_notm}} service, if it is installed on your instance. |
 | Order Compute with  Public Network Port | This permission is required to order hardware and VSIs (Virtual Server Instances) with public network ports. |
+| Add IP Addresses | This permission is required to order portable private subnet ranges on your behalf, which is needed to manage the virtual machines that run in a vSphere cluster. When more services are added to your instance, the portable private IP addresses are assigned to VMware ESXi servers to isolate and allocate bandwidth. |
 | Add Tickets | This permission is required to open service tickets on your behalf. Tickets might be created for the following operations: to initiate restore operations and to initiate problem resolution processes automatically when issues are found. |
 | Edit Tickets | This permission is required to edit the service tickets that are created on your behalf. |
 | View Tickets | This permission is required to monitor the service tickets that are related to the components in your instance for {{site.data.keyword.cloud_notm}} infrastructure provisioning delays and problems. |
 | View Hardware Details | This permission is required to retrieve the hardware details, which are needed for order validation and automated configuration. |
 | View Licenses | This permission is required to retrieve and validate the licenses that are used by your instance. |
+| Manage Device Monitoring | This permission is not required to place an order but it is required to retrieve and validate the monitoring status of the {{site.data.keyword.baremetal_long}} on which the VMware ESXi servers are running in your instance. |
 
 ## VLAN spanning for classic (non-VRF) accounts
 
