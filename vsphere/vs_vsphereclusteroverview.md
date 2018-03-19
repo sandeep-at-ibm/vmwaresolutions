@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-11-17"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -16,13 +16,13 @@ The {{site.data.keyword.vmwaresolutions_full}} console filters the hardware auto
 
 VMware vSphere on {{site.data.keyword.cloud_notm}} does not automate the installation, configuration, and bring-up of the optional VMware components and it allows maximum of flexibility to design and build your hosted VMware environment while incorporating VMware-compatible hardware.
 
-Use this offering to create a new cluster of ESXi servers or scale out an existing cluster of ESXi servers in an {{site.data.keyword.CloudDataCent}}. Depending on the VMware components that you select, you can start with just one ESXi server and then scale the cluster later as needed.
+Use this offering to create a new cluster of ESXi servers or scale out an existing cluster of ESXi servers in an {{site.data.keyword.CloudDataCent_notm}}. Depending on the VMware components that you select, you can start with just one ESXi server and then scale the cluster later as needed.
 
 ## Components of VMware vSphere on IBM Cloud
 
 Review the components of VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
-**Note**: The availability and pricing of standardized hardware configurations might vary based on the data center that is selected for deployment.
+**Note**: The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
 
 ### VMware components
 
@@ -39,7 +39,7 @@ Licenses (IBM-provided or BYOL) for the following VMware components:
 
 ### Hardware
 
-One or more {{site.data.keyword.baremetal_long}} with the following options.
+One or more {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with the following options.
 * CPU options:
    * Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz
    * Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz
@@ -67,7 +67,7 @@ User-customized storage for vSAN configuration when the VMware vSAN component is
 
 ## Components of vSphere cluster expansion nodes
 
-Each vSphere cluster expansion node will deploy and incur charges for the following components in your {{site.data.keyword.slportal_full}} account.
+Each vSphere cluster expansion node will deploy and incur charges for the following components in your {{site.data.keyword.slportal}} account.
 
 ### Hardware for expansion nodes
 
@@ -86,6 +86,7 @@ One IBM Cloud Bare Metal Server with the networking configuration presented in [
 
 ## Related links
 
+* [VMware vSphere Software Bill of Materials](vs_bom.html)
 * [Planning vSphere clusters](vs_planning.html)
 * [Ordering vSphere clusters](vs_orderinginstances.html)
 * [Scaling existing vSphere clusters](vs_scalingexistingclusters.html)
