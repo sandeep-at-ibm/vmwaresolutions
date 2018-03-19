@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-02-20"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -22,7 +22,7 @@ Figure 1. Cloud Foundation architecture
 
 ### Physical infrastructure
 
-This layer provides the physical compute, storage, and network resources to be used by the virtual infrastructure.
+This layer provides the physical infrastructure (compute, storage, and network resources) to be used by the virtual infrastructure.
 
 ### Virtualization infrastructure (Compute, Storage, and Network)
 
@@ -33,24 +33,24 @@ This layer virtualizes the physical infrastructure through different VMware prod
 
 ### Virtualization management
 
-This layer consists of vCenter Server, which represents the management layer for the virtualized environment. The same familiar vSphere API-compatible tools and scripts can be used to manage the IBM®-hosted VMware environment.
+This layer consists of vCenter Server, which represents the management layer for the virtualized environment. The same familiar vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
 
-On the {{site.data.keyword.vmwaresolutions_full}} console, you can expand and contract the capacity of your instances using the add and remove ESXi server capability. In addition, lifecycle management functions like applying updates and upgrading the VMware components in the hosted environment are also available.
+On the {{site.data.keyword.vmwaresolutions_short}} console, you can expand and contract the capacity of your instances using the add and remove ESXi server capability. In addition, lifecycle management functions like applying updates and upgrading the VMware components in the hosted environment are also available.
 
-For details about the architecture, see the _Reference architecture_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform){:new_window}.
+For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.
 
 ## Cloud Foundation instance components
 
 The following components are included in your Cloud Foundation instance.
 
-**Note**: Charges that are incurred for the hardware, networking, virtual machines, and storage might vary based on the data center that is selected for deployment.
+**Note**: Charges that are incurred for the hardware, networking, virtual machines, and storage might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
 
 ### Hardware
 
-You can order {{site.data.keyword.baremetal_long}} with one of the following configurations:
-* Small (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz / 128 GB RAM / 12 disks)
-* Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz / 512 GB RAM / 12 disks)
-* User customized (you can specify the CPU model and RAM for the {{site.data.keyword.baremetal_short}})
+You can order {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with one of the following configurations:
+* **Customized**: You can specify the CPU model and RAM for the {{site.data.keyword.baremetal_short}}.
+* **Preconfigured**: **Small** (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz / 128 GB RAM / 12 disks) or **Large** (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz / 512 GB RAM / 12 disks)
+
 
 ### Networking
 
@@ -68,7 +68,7 @@ The following networking components are ordered:
 The following VSIs (Virtual Server Instances) are ordered:
 * A VSI for Microsoft Active Directory (AD) and Domain Name System (DNS) services, which is required for multi-site configuration support. This VSI specification is: Windows 2012 R2 (8 GB RAM / 2 CPU cores / 100 GB disk / Dual 1 Gbps private uplinks).
 * A VSI for IBM CloudBuilder, which is shut down after the instance deployment is completed.
-* (If you are selecting the Veeam on {{site.data.keyword.cloud_notm}} service) A VSI for the Veeam backup service is ordered.
+* (If Veeam on {{site.data.keyword.cloud_notm}} is ordered) A VSI for the Veeam backup service is ordered.
 
 ### Storage
 
@@ -76,15 +76,16 @@ The following storage is ordered, depending on the {{site.data.keyword.baremetal
 * Two 1-TB SATA boot disks
 * Two 960-GB SSD cache disks
 * One RAID disk controller
-* For the **Small** configuration only: Two 1.9 TB SSD capacity disks
-* For the **Large** configuration only: Four 3.8 TB SSD capacity disks
-* For the **User customized** configuration only, you can set the number of disk drives and the disk type and capacity according to your requirements.
+* For the **Customized** configuration only, you can set the number of disk drives and the disk type and capacity according to your requirements.
+* For the **Preconfigured**, **Small** configuration only: Two 1.9 TB SSD capacity disks
+* For the **Preconfigured**, **Large** configuration only: Four 3.8 TB SSD capacity disks
+
 
 ### Storage for backups
 
 One 2-TB shared file-level storage, which can be scaled up to 12 TB, is ordered.
 
-**Note**: The storage for backups is not a standard component for Cloud Foundation instances. When you order an instance, you can choose whether you want storage for backups by selecting or deselecting the Veeam on {{site.data.keyword.cloud_notm}} service.
+**Note**: The storage for backups is not a standard component for Cloud Foundation instances. When you order an instance, you can choose whether you want storage for backups by selecting or deselecting a backup service.
 
 ### Licenses (IBM-provided or BYOL) and fees
 
@@ -112,7 +113,7 @@ One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration pr
 * One SDDC Manager license
 * One Support and Services fee
 
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal_full}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
 **CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance, from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components
@@ -124,6 +125,7 @@ One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration pr
 
 ## Related links
 
+* [Cloud Foundation Software Bill of Materials](sd_bom.html)
 * [Planning Cloud Foundation instances](sd_planning.html)
 * [Ordering Cloud Foundation instances](sd_orderinginstance.html)
 * [VMware vSphere Documentation Center](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}

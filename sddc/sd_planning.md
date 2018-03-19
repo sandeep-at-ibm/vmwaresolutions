@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-09"
+lastupdated: "2018-03-17"
 
 ---
 
@@ -16,71 +16,58 @@ Review the following requirements before you order your VMware Cloud Foundation 
 
 The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} account requirements](../vmonic/slaccountrequirement.html).
 
-## Data centers availability
+## IBM Cloud Data Center availability
 
-The Cloud Foundation deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following data centers are available for Cloud Foundation deployment:
+The Cloud Foundation deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following {{site.data.keyword.CloudDataCents_notm}} are available for Cloud Foundation deployment:
 
-Table 1. Available data centers and {{site.data.keyword.baremetal_long}} configurations for Cloud Foundation instances
+Table 1. Available {{site.data.keyword.CloudDataCents_notm}} and {{site.data.keyword.cloud_notm}} Bare Metal Server configurations for Cloud Foundation instances
 
-| Data center | Location | Server configurations |
+| IBM Cloud Data Center | Location | Server configurations |
 |:-----|:----------------| :---------------------------|
-| AMS03 | Amsterdam | User customized |
-| CHE01 | Chennai | User customized |
-| DAL09 | Dallas | User customized |
-| DAL10 | Dallas | Small, Large, User customized |
-| DAL12 | Dallas | User customized |
-| DAL13 | Dallas | User customized |
-| FRA02 | Frankfurt | Small, Large, User customized |
-| HKG02 | Hong Kong | User customized |
-| LON02 | London | User customized |
-| LON04 | London | User customized |
-| LON06 | London | Small, Large, User customized |
-| MEL01 | Melbourne | User customized |
-| MEX01 | Queretaro | User customized |
-| MIL01 | Milan | User customized |
-| MON01 | Montreal | User customized |
-| OSL01 | Oslo | User customized |
-| PAR01 | Paris | User customized |
-| SAO01 | Sao Paulo | User customized |
-| SEO01 | Seoul | User customized |
-| SJC03 | San Jose | Small, Large, User customized |
-| SJC04 | San Jose | User customized |
-| SNG01 | Singapore | User customized |
-| SYD01 | Sydney | User customized |
-| SYD04 | Sydney | User customized |
-| TOK02 | Tokyo | User customized |
-| TOR01 | Toronto | Small, Large, User customized |
-| WDC04 | Washington, DC | Small, Large, User customized |
-| WDC06 | Washington, DC | User customized |
-| WDC07 | Washington, DC | User customized |
+| AMS03 | Amsterdam | Customized |
+| CHE01 | Chennai | Customized |
+| DAL09 | Dallas | Customized |
+| DAL10 | Dallas | Customized, Small, Large |
+| DAL12 | Dallas | Customized |
+| DAL13 | Dallas | Customized |
+| FRA02 | Frankfurt | Customized, Small, Large |
+| HKG02 | Hong Kong | Customized |
+| LON02 | London | Customized |
+| LON04 | London | Customized |
+| LON06 | London | Customized, Small, Large |
+| MEL01 | Melbourne | Customized |
+| MEX01 | Queretaro | Customized |
+| MIL01 | Milan | Customized |
+| MON01 | Montreal | Customized |
+| OSL01 | Oslo | Customized |
+| PAR01 | Paris | Customized |
+| SAO01 | Sao Paulo | Customized |
+| SEO01 | Seoul | Customized |
+| SJC03 | San Jose | Customized, Small, Large |
+| SJC04 | San Jose | Customized |
+| SNG01 | Singapore | Customized |
+| SYD01 | Sydney | Customized |
+| SYD04 | Sydney | Customized |
+| TOK02 | Tokyo | Customized |
+| TOR01 | Toronto | Customized, Small, Large |
+| WDC03 | Washington, DC | Customized |
+| WDC04 | Washington, DC | Customized, Small, Large |
+| WDC06 | Washington, DC | Customized |
+| WDC07 | Washington, DC | Customized |
 
 Depending on availability and inventory supply, {{site.data.keyword.CloudDataCents_notm}} might display a status indicator in the {{site.data.keyword.vmwaresolutions_full}} console to help you plan your deployments.
 
-Table 2. Status indicators for data centers when ordering Cloud Foundation instances
+Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when ordering Cloud Foundation instances
 
 | Status | Status Details |
 |:------------------------------|:--------------------------------------------------|
-| Coming Soon                   | The data center is not available currently. |
-| Temporarily Out of Inventory  | The data center has no availability at this time. |
-| Limited Inventory             | The data center has limited availability and the order might not be completed. |
+| Coming Soon                   | The {{site.data.keyword.CloudDataCent_notm}} is not available currently. |
+| Temporarily Out of Inventory  | The {{site.data.keyword.CloudDataCent_notm}} has no availability at this time. |
+| Limited Inventory             | The {{site.data.keyword.CloudDataCent_notm}} has limited availability and the order might not be completed. |
 
 ## Services for Cloud Foundation instances
 
-When you order a Cloud Foundation instance, you can also order additional services.
-
-### Managed Services from IMI
-
-These services enable IBM Integrated Managed Infrastructure (IMI) to deliver dynamic remote management services for a broad range of cloud infrastructures. For more information, see [Requesting managed services from IMI](../services/managing_imi.html).
-
-### Veeam on IBM Cloud
-
-This service integrates seamlessly with your VMware environment to help you manage the backup and restore of all the virtual machines (VMs) in your environment, including the backup and restore of the management components. It can help provide a recovery point objective (RPO) of less than 15 minutes upon configuration for your data.
-
-This service is selected by default and is configured to back up the management VMs immediately after the deployment of your instance. If you do not order this service, there is no backup of the management VMs. For more information, see [Managing Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html).
-
-### F5 on IBM Cloud
-
-This service optimizes performance and ensures availability and security for applications with the F5 BIG-IP Virtual Edition (VE). For more information, see [Managing F5 on {{site.data.keyword.cloud_notm}}](../services/managing_f5.html).
+When you order a Cloud Foundation instance, you can order additional services.
 
 ### FortiGate Security Appliance on IBM Cloud
 
@@ -90,17 +77,39 @@ This service deploys an HA-pair of FortiGate Security Appliance (FSA) 300 series
 
 This service deploys an HA-pair of FortiGate Virtual Appliances that can allow you to reduce risk by implementing critical security controls within your virtual infrastructure. For more information, see [Managing FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html).
 
+### F5 on IBM Cloud
+
+This service optimizes performance and ensures availability and security for applications with the F5 BIG-IP Virtual Edition (VE). For more information, see [Managing F5 on {{site.data.keyword.cloud_notm}}](../services/managing_f5.html).
+
 ### HCX on IBM Cloud
 
 This service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change. For more information, see [Managing HCX on IBM Cloud](../services/managinghcx.html).
+
+### KMIP for VMware on IBM Cloud
+
+This service can provide lifecycle management for encryption keys that are used by {{site.data.keyword.cloud_notm}} services or customer built-in applications. For more information, see [KMIP for VMware on IBM Cloud considerations](../services/kmip_considerations.html).
+
+### Managed Services from IMI
+
+These services enable IBM Integrated Managed Infrastructure (IMI) to deliver dynamic remote management services for a broad range of cloud infrastructures. For more information, see [Requesting managed services from IMI](../services/managing_imi.html).
+
+### IBM Spectrum Protect Plus on IBM Cloud
+
+This service provides data protection, data reuse, and recovery tools for virtual environments. It can be implemented as a stand-alone solution or integrated with your IBM Spectrum Protect&trade; Plus environment to offload copies for long-term storage and data governance with scale and efficiency.
+
+The IBM Spectrum Protect Plus on IBM Cloud service provides data protection for the workload VMs only. For more information, see [Managing IBM Spectrum Protect Plus on IBM Cloud](../services/managingspp.html).
+
+### Veeam on IBM Cloud
+
+This service integrates seamlessly with your VMware environment to help you manage the backup and restore of all the VMs in your environment, including the backup and restore of the management components. It can help provide a recovery point objective (RPO) of less than 15 minutes upon configuration for your data. For more information, see [Managing Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html).
 
 ### Zerto on IBM Cloud
 
 This service provides replication and disaster recovery capabilities to help protect your workloads. For more information, see [Managing Zerto on {{site.data.keyword.cloud_notm}}](../services/managingzertodr.html).
 
-## Capacity considerations
+<!-- ## Capacity considerations
 
-For capacity information and considerations, see the _Bill of Materials_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform){:new_window}.
+For capacity information and considerations, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
 
 ## Related links
 
