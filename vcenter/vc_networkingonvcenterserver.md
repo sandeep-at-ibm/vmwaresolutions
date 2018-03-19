@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-19"
 
 ---
 
@@ -19,7 +19,7 @@ To review the networking components that are included in your vCenter Server ins
 ## NSX Firewall considerations
 
 If you are using NSX Distributed Firewalls (DFW), review the following requirements:
-* You must configure rules for all communications from the {{site.data.keyword.ibm}} CloudDriver virtual machine (VM) to allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`.
+* You must configure rules for all communications from the IBM CloudDriver virtual machine (VM) to allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`.
 * You must create a DFW rule that allows for HTTPS traffic from the IBM CloudDriver VM to any destination.
 * The DFW rule must come before any other rules that would block traffic to or from these VMs.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-19"
 
 ---
 
@@ -54,17 +54,14 @@ Table 3. vCenter Server instances property details
 | Name | The name of the instance |
 | Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted |
 | Current version | The current version of {{site.data.keyword.vmwaresolutions_short}} |
-| vCenter version | The VMware vCenter Server version |
-|  | **Note**: There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct.|
+| vCenter version | The VMware vCenter Server version<br>**Note**: There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct. |
 | NSX for vSphere | The VMware NSX for vSphere product version |
-| _VMware component_ license | If you selected to use your own VMware license for any of the VMware components on the **Licensing** page when you ordered the instance, the VMware component name and the license key that you entered for the component are displayed. |
-|  | Examples of VMware component licenses can include: **NSX License**, **vCenter Server License**, and **vSAN License**. |
+| _VMware component_ license | If you selected to use your own VMware license for any of the VMware components on the **Licensing** page when you ordered the instance, the VMware component name and the license key that you entered for the component are displayed.<br>Examples of VMware component licenses can include: **NSX License**, **vCenter Server License**, and **vSAN License**. |
 | NSX license edition | The version and edition of the VMware NSX license |
 | DNS, Root Domain | The root domain name is the DNS (Domain Name System) domain name and the Microsoft Active Directory (AD) forest root name. |
 | DNS, SSO Domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server instances with a value of <samp class="ph codeph">vsphere.local</samp>. |
 | DNS, Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server instance host names reside. The subdomain name is in the format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
-| Status  | The status of the instance |
-|         | The information that is displayed provides an update on the progress of the deployment or the action that is taken on the instance. If there are issues, a message might be displayed to help you investigate and resolve the problem. |
+| Status  | The status of the instance<br>The information that is displayed provides an update on the progress of the deployment or the action that is taken on the instance. If there are issues, a message might be displayed to help you investigate and resolve the problem. |
 
 ## Viewing access information for vCenter Server instances
 
