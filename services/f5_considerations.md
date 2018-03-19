@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-08"
+lastupdated: "2018-02-22"
 
 ---
 
@@ -44,16 +44,20 @@ Table 1: CPU and RAM deployments for different bandwidth and license model selec
 | 1 Gbps            | 2 vCPU, 4 GB RAM    | 4 vCPU, 8 GB RAM      | 8 vCPU, 16 GB RAM   |
 | 3 Gbps            | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
 | 5 Gbps            | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
+| 10 Gbps           | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
 
-**Note:** The HA (High Availability) pair of BIG-IP VE VMs will be deployed only into the default cluster.
+**Notes:**
 
-In addition, 100% of CPU and RAM for the two BIG-IP VE VMs are also reserved because these VMs are in the data plane of the network communications and it is critical that resources are still available for them.
+* F5 BIG–IP limits the appliance throughput based on your chosen maximum bandwidth. Because network performance is affected by many factors, not all configurations and topologies may be able to achieve your chosen maximum bandwidth.
+* The HA (High Availability) pair of BIG-IP VE VMs will be deployed only into the default cluster.
 
-To calculate the CPU and RAM reservation for a single BIG-IP VE VM, use the following formula:
+  In addition, 100% of CPU and RAM for the two BIG-IP VE VMs are also reserved because these VMs are in the data plane of the network communications and it is critical that resources are still available for them.
 
-`CPU reservation = CPU speed of ESXi server * number of vCPUs` (from Table 1)
+  To calculate the CPU and RAM reservation for a single BIG-IP VE VM, use the following formula:
 
-`RAM reservation = RAM size` (from Table 1)
+  `CPU reservation = CPU speed of ESXi server * number of vCPUs` (from Table 1)
+
+  `RAM reservation = RAM size` (from Table 1)
 
 You must meet the following requirements to avoid failures with F5 on {{site.data.keyword.cloud_notm}}:
 * At least two active ESXi servers are available for the two BIG-IP VE VMs to be deployed with the anti-affinity rule of keeping the VMs on separate servers.

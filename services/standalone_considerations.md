@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-31"
+lastupdated: "2018-03-13"
 
 ---
 
@@ -15,6 +15,12 @@ Review the following considerations before you install or delete the HCX instanc
 ## Considerations when installing on-premises HCX instances
 
 The HCX components must be installed both on {{site.data.keyword.cloud}} and in your on-premises vSphere environment. It is recommended that you install the HCX on {{site.data.keyword.cloud_notm}} service into your Cloud Foundation instance or vCenter Server instance on {{site.data.keyword.cloud_notm}} before you install the on-premises HCX instance. For more information, see [Considerations for HCX on IBM Cloud](../services/hcx_considerations.html).
+
+### Requirements on IP addresses
+
+For full HCX functionality, you need at least five private IP addresses and you must allow them to access the Internet.
+
+### Deployment process for on-premises HCX instances
 
 You must complete the following tasks for a successful installation of the on-premises HCX instance:
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, complete the following steps:
@@ -62,5 +68,5 @@ For more information, see [VMware Hybrid Cloud Extension](https://cloud.vmware.c
 * [Viewing on-premises HCX instances](../services/standalone_viewingserviceinstances.html)
 * [Glossary of HCX terms](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf){:new_window}-->
+* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf){:new_window}
 * [Contacting IBM Support](../vmonic/trbl_support.html)
