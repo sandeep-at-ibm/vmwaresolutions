@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-12-20"
+lastupdated: "2018-02-13"
 
 ---
 
@@ -47,6 +47,7 @@ Because of resource dependencies, the components in your instance are not releas
 
 ## Related links
 
+* [Deleting Cloud Foundation instances in a multi-site configuration](sd_deletinginstance_multi.html)
 * [Ordering Cloud Foundation instances](sd_orderinginstance.html)
 * [Viewing Cloud Foundation instances](sd_viewinginstances.html)
 * [Expanding and contracting capacity for Cloud Foundation instances](sd_addingremovingservers.html)
