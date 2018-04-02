@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-30"
 
 ---
 
@@ -20,7 +20,7 @@ The following graphic depicts the overall architecture of the NetApp ONTAP Selec
 
 Figure 1. High-level architecture of NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}
 
-![NetApp ONTAP Select architecture](np_architecture.jpg)
+![NetApp ONTAP Select architecture](np_architecture.svg)
 
 ### Physical infrastructure
 
@@ -37,7 +37,7 @@ The following graphic depicts the components of the NetApp ONTAP Select deployme
 
 Figure 2. NetApp ONTAP Select components
 
-![NetApp ONTAP Select components](np_netappcomponents.jpg)
+![NetApp ONTAP Select components](np_netappcomponents.svg)
 
 ### Virtualization management
 
@@ -67,7 +67,7 @@ Four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with
 * **High Performance (Large)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 3.8 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 118 TB
 * **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 64 GB RAM / Thirty Four 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 190 TB
 
-**Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
+**Note:** 3.8 TB SSD (Solid State Disk) drives will be supported when they are made generally available in a data center.
 
 ### Hardware
 
