@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-12-27"
+lastupdated: "2018-03-19"
 
 ---
 
@@ -33,7 +33,7 @@ The following information discusses the subnets that are ordered by {{site.data.
 
 **CAUTION**: Do not use these components for other purposes, or the stability of your environment is severely compromised.
 
-With each {{site.data.keyword.cloud}} Bare Metal Server order, the following ranges of IP addresses are ordered by default:
+With each {{site.data.keyword.cloud_notm}} Bare Metal Server order, the following ranges of IP addresses are ordered by default:
 
 *  A primary public range of 32 IP addresses
 *  A primary private range of 64 IP addresses

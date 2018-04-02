@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-30"
 
 ---
 
 # Cloud Foundation overview
 
-When you order VMware Cloud Foundation on {{site.data.keyword.cloud}}, an entire VMware environment is deployed automatically. The base deployment consists of four {{site.data.keyword.baremetal_long}} with the VMware Cloud Foundation stack preinstalled and configured to provide a unified software-defined data center (SDDC) platform. Cloud Foundation natively integrates VMware vSphere, VMware NSX, VMware Virtual SAN, and is architected based on VMware-validated designs.
+When you order VMware Cloud Foundation on {{site.data.keyword.cloud}}, an entire VMware environment is deployed automatically. The base deployment consists of four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with the VMware Cloud Foundation stack preinstalled and configured to provide a unified software-defined data center (SDDC) platform. Cloud Foundation natively integrates VMware vSphere, VMware NSX, VMware Virtual SAN, and is architected based on VMware-validated designs.
 
 ## Cloud Foundation architecture
 
@@ -18,7 +18,7 @@ The following graphic depicts the overall architecture and components of the Clo
 
 Figure 1. Cloud Foundation architecture
 
-![Cloud Foundation architecture](sd_architecture.jpg)
+![Cloud Foundation architecture](sd_architecture.svg)
 
 ### Physical infrastructure
 
@@ -37,7 +37,7 @@ This layer consists of vCenter Server, which represents the management layer for
 
 On the {{site.data.keyword.vmwaresolutions_short}} console, you can expand and contract the capacity of your instances using the add and remove ESXi server capability. In addition, lifecycle management functions like applying updates and upgrading the VMware components in the hosted environment are also available.
 
-For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.
+<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
 
 ## Cloud Foundation instance components
 
@@ -74,7 +74,7 @@ The following VSIs (Virtual Server Instances) are ordered:
 
 The following storage is ordered, depending on the {{site.data.keyword.baremetal_short}} configuration that you select:
 * Two 1-TB SATA boot disks
-* Two 960-GB SSD cache disks
+* Two 960-GB SSD (Solid State Disk) cache disks
 * One RAID disk controller
 * For the **Customized** configuration only, you can set the number of disk drives and the disk type and capacity according to your requirements.
 * For the **Preconfigured**, **Small** configuration only: Two 1.9 TB SSD capacity disks

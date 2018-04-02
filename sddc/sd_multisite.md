@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-11-21"
+lastupdated: "2018-03-22"
 
 ---
 
@@ -43,7 +43,7 @@ The following graphic depicts the overall view of the Cloud Foundation multi-sit
 
 Figure 1. Cloud Foundation multi-site deployment
 
-![Cloud Foundation multi-site deployment](multisite-hub-spoke.png)
+![Cloud Foundation multi-site deployment](multisite-hub-spoke.svg)
 
 The model contains the following layers:
 
