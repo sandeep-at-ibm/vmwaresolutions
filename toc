@@ -26,6 +26,8 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Related links
+        [VMware vCenter Server on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+        [VMware Cloud Foundation on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
         [Attach dedicated storage to NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
         [FortiGate Security Appliance](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/fortigate-physical)[NetApp ONTAP Select](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/netapp-ots)
         [IBM Cloud file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage)
@@ -105,6 +107,8 @@ IBM Cloud for VMware Solutions
         vcenter/vc_fed_overview.md
         vcenter/vc_fed_planning.md
         vcenter/vc_fed_orderinginstance.md
+        vcenter/vc_fed_addingviewingclusters.md
+        vcenter/vc_fed_addingremovingservers.md
         vcenter/vc_fed_viewinginstance.md
         vcenter/vc_fed_securinginstance.md
         vcenter/vc_fed_deletinginstance.md
