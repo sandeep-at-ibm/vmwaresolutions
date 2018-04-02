@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-24"
+lastupdated: "2018-03-27"
 
 ---
 
@@ -37,6 +37,8 @@ Ensure that you completed the following tasks:
 If you saved the cluster configuration as a template, you get a console notification that the configuration was saved. You can then find the template in the **Cluster Configurations** list on the **Basics** page.
 
 If you placed an order, the deployment of the cluster starts automatically, and you receive an email confirmation that the order is being processed. When the cluster is ready to use, you are also notified by email.
+
+**Note:** The vSphere clusters are not displayed on the **Deployed Instances** page, together with the vCenter Server and Cloud Foundation instances.
 
 ## Related links
 

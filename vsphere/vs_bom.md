@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-02-19"
+lastupdated: "2018-03-29"
 
 ---
 
-# VMware vSphere Software Bill of Materials
+# VMware vSphere Bill of Materials
 
-The following table details the Bill of Materials (BOM) information for VMware vSphere clusters.
+The following table details the Bill of Materials (BOM) information for VMware vSphere software components.
 
-Table 1. Bill of Materials for VMware vSphere clusters
+Table 1. BOM for VMware vSphere clusters
 
 | Manufacturer | Component                       | Version |
 |:-------------|:--------------------------------|:--------|
