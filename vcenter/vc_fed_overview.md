@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-15"
+lastupdated: "2018-03-22"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2018-03-15"
 
 VMware Federal on {{site.data.keyword.cloud}} provides support for ordering a base vCenter Server instance in the WDC03 Federal on {{site.data.keyword.CloudDataCent_notm}}. In addition to supporting a subset of vCenter Server instance offerings, VMware Federal on {{site.data.keyword.cloud_notm}} provides US Federal Government agencies with the option to secure deployed VMware vCenter Server instances. Selecting the option to secure the deployed instances removes sensitive information stored about the instance and removes the open management connection for ongoing access to the instance for management functions, such as adding and removing hosts and clusters. After selecting the secure option, all management functions are disabled except for a full instance delete.
 
-For more information on vCenter Server architecture, see [vCenter Server overview](vc_vcenterserveroverview.html).
+For more information on VMware vCenter Server on {{site.data.keyword.cloud_notm}} and vCenter Server architecture, see [vCenter Server overview](vc_vcenterserveroverview.html).
 
-**Attention:** VMware Federal on {{site.data.keyword.cloud_notm}} currently offers only a subset of the vCenter Server offerings. Preconfigured {{site.data.keyword.cloud_notm}} Bare Metal Servers, Bring Your Own License, and the option to order additional services are not supported.
+**Attention:** VMware Federal on {{site.data.keyword.cloud_notm}} currently offers only a subset of the vCenter Server offerings. Preconfigured {{site.data.keyword.cloud_notm}} Bare Metal Servers, Bring Your Own License, add cluster, and the option to order additional services are not supported.
 
 ## vCenter Server instance components for VMware Federal on IBM Cloud
 
@@ -69,8 +69,7 @@ If you choose the NFS option, one 2 TB, 4 IOPS/GB file share for management comp
 * VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
-<!--The following is not supported until add host is supported. Planned for future release-->
-<!--## vCenter Server expansion node components
+## vCenter Server expansion node components
 
 Each vCenter Server expansion node will deploy and incur charges for the following components in your {{site.data.keyword.cloud_notm}} account.
 
@@ -91,9 +90,9 @@ One Bare Metal Server with the configuration presented in [vCenter Server instan
 *  Adding, modifying, returning, or removing components
 *  Expanding or contracting instance capacity through adding or removing ESXi servers
 *  Powering off components
-*  Restarting services
+<!--*  Restarting services-->
 
-   Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.-->
+   Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
 ## Related links
 

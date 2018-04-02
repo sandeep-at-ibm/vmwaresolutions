@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-17"
+lastupdated: "2018-03-29"
 
 ---
 
@@ -103,10 +103,10 @@ This service integrates seamlessly with your VMware environment to help you mana
 
 This service provides replication and disaster recovery capabilities to help protect your workloads. For more information, see [Managing Zerto on IBM Cloud](../services/managingzertodr.html).
 
-## Capacity considerations
+<!-- ## Capacity considerations
 
 For capacity information and considerations, see the _Bill of
-Materials_ document on the [Virtual reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.
+Materials_ document on the [Virtual reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
 
 ## Related links
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-29"
 
 ---
 
@@ -105,10 +105,10 @@ Table 2. Options for customized Bare Metal Servers
 
 | CPU options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 96 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 96 GB, 192 GB, 768 GB, 1.5 TB |
 
 ### Preconfigured
 

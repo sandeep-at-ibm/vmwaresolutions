@@ -18,7 +18,7 @@ Review the following important information to understand the results of securing
 
 **Important:**
 
-* Record and save any credentials that you may need for your environment before completing this procedure. All credentials for your environment are erased from the IBM database and cannot be retrieved after the secure action is invoked.
+* Record and save any credentials that you may need for your environment before completing this procedure. All credentials for your environment are erased from the {{site.data.keyword.IBM}} database and cannot be retrieved after the secure action is invoked.
 * With the exception of a full instance delete, all management functions are disabled after the secure action is invoked.
 * The VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic and the IBM CloudDriver virtual machine are deleted as part of the action to secure the deployed VMware Federal instance.
 

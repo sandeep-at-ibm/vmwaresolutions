@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-11-21"
+lastupdated: "2018-03-23"
 
 ---
 
@@ -42,7 +42,7 @@ The following graphic depicts the overall view of the vCenter Server multi-site 
 
 Figure 1. vCenter Server multi-site deployment
 
-![vCenter Server multi-site deployment](../sddc/multisite-hub-spoke.png)
+![vCenter Server multi-site deployment](../sddc/multisite-hub-spoke.svg)
 
 The model contains the following layers:
 
