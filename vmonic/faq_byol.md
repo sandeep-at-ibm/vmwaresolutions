@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-02-07"
+lastupdated: "2018-03-19"
 
 ---
 
@@ -68,7 +68,7 @@ No. Our agreement with VMware requires that we must accept a client’s actual l
 
 ## Can I use the BYOL feature for some VMware components and purchase monthly licenses for others?
 
-Yes. You can use the BYOL feature or purchase licenses for any combination of the four VMware components. The {{site.data.keyword.vmwaresolutions_full}} console makes it straightforward for you to select the licensing option when you order the vCenter Server or Cloud Foundation instance. Your licensing option at the time of initial instance order applies for the lifetime of that instance.
+Yes. You can use the BYOL feature or purchase licenses for any combination of the four VMware components. The {{site.data.keyword.vmwaresolutions_short}} console makes it straightforward for you to select the licensing option when you order the vCenter Server or Cloud Foundation instance. Your licensing option at the time of initial instance order applies for the lifetime of that instance.
 
 ## For a specific VMware component, can I use BYOL for some licenses and buy the rest of licenses from IBM?
 

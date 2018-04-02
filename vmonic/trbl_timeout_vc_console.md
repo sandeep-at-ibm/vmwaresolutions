@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-11-10"
+lastupdated: "2018-03-19"
 
 ---
 
@@ -30,7 +30,7 @@ Use the following steps to troubleshoot and fix the problem.
       ```
 
 2. Take note of the IP address that is displayed, because you need it in one of the next steps.
-3. Ensure that you have access to the {{site.data.keyword.cloud_notm}} infrastructure VPN. Complete the following steps on the {{site.data.keyword.slportal_full}}:
+3. Ensure that you have access to the {{site.data.keyword.cloud_notm}} infrastructure VPN. Complete the following steps on the {{site.data.keyword.slportal}}:
    1. Click **Account > VPN Access**.
    2. Click the **SSL link** in the **VPN Access** column.
    3. On the **VPN Access for username** page, set the **Subnet Access** option to **Manual**.
