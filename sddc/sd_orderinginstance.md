@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-29"
 
 ---
 
@@ -94,9 +94,9 @@ Table 2. Options for customized {{site.data.keyword.baremetal_short}}
 
 | CPU options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz | 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz | 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz | 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 
 ### Preconfigured
 

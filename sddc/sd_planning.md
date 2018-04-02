@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-17"
+lastupdated: "2018-03-19"
 
 ---
 
@@ -55,7 +55,7 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} and {{site.data.key
 | WDC06 | Washington, DC | Customized |
 | WDC07 | Washington, DC | Customized |
 
-Depending on availability and inventory supply, {{site.data.keyword.CloudDataCents_notm}} might display a status indicator in the {{site.data.keyword.vmwaresolutions_full}} console to help you plan your deployments.
+Depending on availability and inventory supply, {{site.data.keyword.CloudDataCents_notm}} might display a status indicator in the {{site.data.keyword.vmwaresolutions_short}} console to help you plan your deployments.
 
 Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when ordering Cloud Foundation instances
 

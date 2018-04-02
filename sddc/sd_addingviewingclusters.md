@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-12"
+lastupdated: "2018-03-28"
 
 ---
 
@@ -117,7 +117,7 @@ You can choose to use the IBM-provided VMware licenses or Bring Your Own License
    * **Name**: The name of the cluster.
    * **ESXi servers**: The number of ESXi servers in the cluster.
    * **CPU**: The CPU specification of the ESXi servers in the cluster.
-   * **Disks**: The number of disk drives in the cluster, and the disk type and capacity.
+   * **Customized vSAN Disks**: The number of vSAN disks in the cluster, including the disk type and capacity.
    * **Memory**: The total memory size of the ESXi servers in the cluster.
    * **Data Center Location**: The data center where the cluster is hosted.
    * **Pod**: The pod where the cluster is deployed.
