@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-29"
 
 ---
 
@@ -69,16 +69,16 @@ Select VMware components to be ordered with your cluster.
 
 ### Component bundles
 
-Business Partner users can now select from four component license bundles when ordering a new vSphere cluster. Select one of the following bundles:
+Business Partner users can select from four component license bundles when ordering a new vSphere cluster. Select one of the following bundles:
 
 Table 1. Business Partner component bundles for vSphere clusters
 
 | Bundle | Components                   |
 |:-------------------------|:-----------------------|
-| Basic                    | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise                 |
+| Standard with Management      | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise                 |
 | Advanced                 | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vCloud Director, NSX Base |
-| Advanced with Networking | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
-| Enterprise               | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, NSX Enterprise |
+| Advanced with Networking      | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
+| Advanced with Networking and Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, vCloud Director, NSX Enterprise |
 
 You can also include the following additional VMware components to your order:
 * VMware vSAN
@@ -221,13 +221,15 @@ You can also select whether to include the FortiGate Physical Appliance 300 Seri
    4. To save the cluster configuration as a template without placing an order, click **Save Configuration**.
    5. To place the order, click **Create**.
 
+   **Note**: Only the {{site.data.keyword.baremetal_short}} are ordered. You are responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.
+
 ## Results
 
 If you saved the cluster configuration as a template, you get a console notification that the configuration is saved successfully, and then you can find the template in the **Cluster Configurations** list on the **Basics** page.
 
 If you placed an order, the deployment of the cluster starts automatically, and you receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email.
 
-**Note**: Only the {{site.data.keyword.baremetal_short}} are ordered. You are responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.
+**Note:** The vSphere clusters are not displayed on the **Deployed Instances** page, together with the vCenter Server and Cloud Foundation instances.
 
 ## Related links
 

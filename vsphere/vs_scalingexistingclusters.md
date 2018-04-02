@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-27"
 
 ---
 
@@ -40,6 +40,8 @@ by selecting **Include with purchase** under **FortiGate Physical Appliance 300 
 ## Results
 
 The scale cluster deployment starts automatically, and you receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email.
+
+**Note:** The vSphere clusters are not displayed on the **Deployed Instances** page, together with the vCenter Server and Cloud Foundation instances.
 
 ## Related links
 

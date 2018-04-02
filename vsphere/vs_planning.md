@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-30"
 
 ---
 
@@ -22,7 +22,7 @@ The {{site.data.keyword.cloud_notm}} account that you are using must meet certai
 
 The vSphere deployment has strict requirements on the physical infrastructure. Therefore, you can deploy clusters only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following {{site.data.keyword.CloudDataCent_notm}} are available for vSphere deployment.
 
-**Note:** If you select a vSAN component, the location list is filtered by SSD availablity.
+**Note:** If you select a vSAN component, the location list is filtered by SSD (Solid State Disk) availability.
 
 Table 1. Available {{site.data.keyword.CloudDataCent_notm}} for vSphere clusters
 
@@ -58,11 +58,6 @@ Table 1. Available {{site.data.keyword.CloudDataCent_notm}} for vSphere clusters
 | WDC04 | Washington, DC |
 | WDC06 | Washington, DC |
 | WDC07 | Washington, DC |
-
-<!--## Capacity considerations-->
-
-<!--For capacity information and considerations, see the _Bill of
-Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
 
 ## Related links
 
