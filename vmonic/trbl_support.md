@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-12-29"
+lastupdated: "2017-03-19"
 
 ---
 
@@ -20,8 +20,8 @@ To contact IBM Support from the {{site.data.keyword.vmwaresolutions_short}} cons
    https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
 2. Log in to the console with your **IBMid** account.
 3. At the upper-right corner of the console, click **Support > Add Ticket**.
-4. On the {{site.data.keyword.slportal_full}} page, click **Log in with IBMid**, and then you are automatically logged in to the portal.
-5. Review the _{{site.data.keyword.cloud}} Infrastructure and Platform Services Support Policy_, and then click **Acknowledge**.
+4. On the {{site.data.keyword.slportal_short}} page, click **Log in with IBMid**, and then you are automatically logged in to the portal.
+5. Review the _{{site.data.keyword.cloud_notm}} Infrastructure and Platform Services Support Policy_, and then click **Acknowledge**.
 6. Click **Support > Add Ticket** on the banner.
 7. On the **Add Ticket** page, provide the following information:
    1. From the **Subject** list, select **VMware Solutions**. If this option is not available, select **Other: Administrative**.   
@@ -40,7 +40,7 @@ To contact IBM Support from the {{site.data.keyword.vmwaresolutions_short}} cons
 
 ## From the IBM Cloud infrastructure customer portal
 
-To contact IBM Support from the {{site.data.keyword.slportal_full}}, complete the following steps:
+To contact IBM Support from the {{site.data.keyword.slportal}}, complete the following steps:
 
 1. Go to https://control.softlayer.com.
 2. Log in to the portal with your **IBMid** account.

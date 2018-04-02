@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-11-20"
+lastupdated: "2018-03-19"
 
 ---
 
@@ -17,10 +17,10 @@ The instance network topology in V1.4 and later releases is different from relea
 ## Resolution
 
 In V1.4 and later releases, several network topology enhancements are available for your instances:
-* (Applies to all instances): Optimized networking configuration. Because the {{site.data.keyword.cloud_notm}} account that you are using must be either a VRF (Virtual Routing and Forwarding) account or must have VLAN spanning enabled if it is a classic (non-VRF) account, a second portable IP address is not needed. Only the primary {{site.data.keyword.cloud_notm}} infrastructure portable IP address is required for deployment.
+* (Applies to all instances): Optimized networking configuration. Because the {{site.data.keyword.cloud}} account that you are using must be either a VRF (Virtual Routing and Forwarding) account or must have VLAN spanning enabled if it is a classic (non-VRF) account, a second portable IP address is not needed. Only the primary {{site.data.keyword.cloud_notm}} infrastructure portable IP address is required for deployment.
 * (Applies to Cloud Foundation instances only): Multi-site deployment capability with Microsoft Windows AD SSO (Active Directory Single Sign-On) and Domain Name System (DNS) server.
 
-If you have not migrated or deleted your instances from pre-V1.4 releases, they might still be visible on the {{site.data.keyword.vmwaresolutions_full}} console in view-only mode. These instances are marked on the user interface as **Deprecated** with a warning symbol icon.
+If you have not migrated or deleted your instances from pre-V1.4 releases, they might still be visible on the {{site.data.keyword.vmwaresolutions_short}} console in view-only mode. These instances are marked on the user interface as **Deprecated** with a warning symbol icon.
 
 **Note**: The information that is displayed in the instance properties reflects the data as of the V1.4 release date and it is no longer refreshed.
 
