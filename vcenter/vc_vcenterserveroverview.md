@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-30"
 
 ---
 
 # vCenter Server overview
 
-VMware vCenter Server on {{site.data.keyword.cloud}} is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of two (recommended three) {{site.data.keyword.baremetal_long}}, offers shared network-attached storage and dedicated software-defined storage options, and it includes the automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX.
+VMware vCenter Server on {{site.data.keyword.cloud}} is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of two (recommended three) {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, offers shared network-attached storage and dedicated software-defined storage options, and it includes the automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX.
 
 The entire environment can be provisioned in a matter of hours, and the bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed.
 
@@ -28,7 +28,7 @@ The following graphic depicts the high-level architecture and components of a th
 
 Figure 1. vCenter Server high-level architecture for a three-node cluster
 
-![vCenter Server architecture](vc_architecture.jpg)
+![vCenter Server architecture](vc_architecture.svg)
 
 ### Physical infrastructure
 
@@ -42,13 +42,13 @@ This layer virtualizes the physical infrastructure through different VMware prod
 
 ### Virtualization management
 
-This layer consists of vCenter Server Appliance (vCSA), NSX Manager, two NSX ESGs, three NSX Controllers, Platform Services Controller (PSC) virtual appliance, vCSA, and the IBM® CloudDriver virtual machine.
+This layer consists of vCenter Server Appliance (vCSA), NSX Manager, two NSX ESGs, three NSX Controllers, Platform Services Controller (PSC) virtual appliance, vCSA, and the IBM CloudDriver virtual machine.
 
 The base offering is deployed with a vCenter Server appliance that is sized to support an environment with up to 400 hosts and up to 4000 VMs. The same vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
 
 In total, the base offering requires 38 vCPU and 67 GB vRAM that are reserved for the virtualization management layer. The remaining host capacity for your VMs depends on several factors, such as oversubscription rate, VM sizing, and workload performance requirements.
 
-For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.
+<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
 
 ## vCenter Server instance components
 
@@ -94,7 +94,7 @@ The vSAN option offers customized CPU model and RAM configurations, with various
 
   In addition, 2 cache disks of 960 GB are also ordered per host.
 
-  **Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
+  **Note:** 3.8 TB SSD (Solid State Disk) drives will be supported when they are made generally available in a data center.
 
 The NFS option offers customized shared file-level storage for workloads with various options for size and performance:
 * Size: 1, 2, 4, 8, or 12 TB

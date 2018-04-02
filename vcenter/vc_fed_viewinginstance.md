@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-21"
 
 ---
 
@@ -60,8 +60,7 @@ Table 3. VMware Federal instance property details
 | Name | The name of the instance. |
 | Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted. |
 | Current version |  The current version of {{site.data.keyword.vmwaresolutions_short}}. |
-| vCenter version | The version of VMware vCenter Server. |
-|  | **Note:** There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct.|
+| vCenter version | The version of VMware vCenter Server.<br><br>**Note:** There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct. |
 | NSX for vSphere | The VMware NSX for vSphere product version. |
 | NSX license edition | The version and edition of the VMware NSX license. |
 | DNS Root Domain | The root domain name is the DNS (Domain Name System) domain name and the Microsoft Active Directory (AD) forest root name. |
