@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-17"
+lastupdated: "2018-03-26"
 
 ---
 
@@ -86,7 +86,7 @@ Review the following considerations before you remove the IBM Spectrum Protect P
 
 ## Related links
 
-<!-- Include this URL for the SPP technote after March 23 when it should become public: [IBM Spectrum Protect Plus on IBM Cloud Preventive Service Planning](http://www.ibm.com/support/docview.wss?uid=swg22012650) -->
+* [IBM Spectrum Protect Plus on IBM Cloud Preventive Service Planning](http://www.ibm.com/support/docview.wss?uid=swg22012650)
 * [Managing IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](managingspp.html)
 * [IBM Spectrum Protect Plus documentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-07"
+lastupdated: "2018-03-19"
 
 ---
 
 # Requesting managed services from IMI
 
-IBM Integrated Managed Infrastructure (IMI) can simplify VMware virtual infrastructure management with modular services. IMI uses advanced automation and analytics to manage critical infrastructure components worldwide and to deliver dynamic remote management services for a broad range of traditional and cloud virtual infrastructures.
+{{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) can simplify VMware virtual infrastructure management with modular services. IMI uses advanced automation and analytics to manage critical infrastructure components worldwide and to deliver dynamic remote management services for a broad range of traditional and cloud virtual infrastructures.
 
 IMI can serve as a single, trusted provider to reduce complexity of monitoring and managing virtual IT infrastructures by offering single-pane-of-glass managed services for VMware Cloud Foundation and VMware vCenter Server environments.
 
