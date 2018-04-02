@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-19"
 
 ---
 
@@ -14,10 +14,10 @@ For instances that were deployed in releases earlier than V1.8, if you want to u
 
 ## Replacing the Veeam VSI of pre-V1.8 instances with Veeam on IBM Cloud
 
-The Veeam on {{site.data.keyword.cloud_notm}} service, which can back up both management components and workloads, supersedes the previous Veeam VSI that was integrated into VMware Cloud Foundation and VMware vCenter Server in releases earlier than V1.8 for the backup of management components only. Because of this change, the previous **Backup and Restore** tab on the instance details page is removed and the backup points for the instances are no longer available in the {{site.data.keyword.vmwaresolutions_full}} console, although the Veeam VSI in the pre-V1.8 instances keeps working. You must create an {{site.data.keyword.cloud_notm}} Support ticket to get assistance with a restore. In addition, the license of the Veeam VSI in pre-V1.8 instances expired on October 14, 2017. Therefore, you must replace the previous Veeam VSI with the new Veeam on {{site.data.keyword.cloud_notm}} service.
+The Veeam on {{site.data.keyword.cloud_notm}} service, which can back up both management components and workloads, supersedes the previous Veeam VSI that was integrated into VMware Cloud Foundation and VMware vCenter Server in releases earlier than V1.8 for the backup of management components only. Because of this change, the previous **Backup and Restore** tab on the instance details page is removed and the backup points for the instances are no longer available in the {{site.data.keyword.vmwaresolutions_short}} console, although the Veeam VSI in the pre-V1.8 instances keeps working. You must create an {{site.data.keyword.cloud_notm}} Support ticket to get assistance with a restore. In addition, the license of the Veeam VSI in pre-V1.8 instances expired on October 14, 2017. Therefore, you must replace the previous Veeam VSI with the new Veeam on {{site.data.keyword.cloud_notm}} service.
 
 Complete the following steps:
-1. In the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane, and then click the target instance.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane, and then click the target instance.
 2. On the instance details page, click the **Update and Patch** tab. Ensure that you upgraded the instance to the V1.8 release.
 3. Click the **Services** tab.
 4. On the **Add Services** tab, install the Veeam on {{site.data.keyword.cloud_notm}} service.
