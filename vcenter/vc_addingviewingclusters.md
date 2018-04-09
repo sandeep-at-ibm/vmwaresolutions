@@ -120,7 +120,7 @@ You can choose to use the IBM-provided VMware licenses or Bring Your Own License
 
 ## Procedure
 
-1. Click **Resources** from the left navigation pane.
+1. Click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to view the clusters in it or to add clusters to it.
 
    **Note**: If you want to add clusters to this instance, ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
