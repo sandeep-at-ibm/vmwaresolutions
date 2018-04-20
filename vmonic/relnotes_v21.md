@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-29"
+lastupdated: "2018-04-16"
 
 ---
 
@@ -55,6 +55,10 @@ For Zerto on {{site.data.keyword.cloud_notm}} service deployed in V2.1 and later
 For more information, see [Zerto on IBM Cloud components](../services/addingzertodr.html).
 
 ## Updates for VMware vCenter Server instances
+
+### Network MTU configuration settings
+
+For V2.1 or later releases, new vCenter Server instances are ordered with the setting Public Distributed Virtual Switch (DVS) as MTU 1500 (default). For more information, see _Network MTU configuration settings_ in [vCenter Server Bill of Materials](../vcenter/vc_bom.html).
 
 ### Automatic application of VMware ESXi patches and updates to hosts
 
