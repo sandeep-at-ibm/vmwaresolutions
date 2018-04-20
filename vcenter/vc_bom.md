@@ -32,12 +32,12 @@ Table 2. BOM for the software components in vCenter Server instances
 
 | Manufacturer | Component                       | Version      |
 |:-------------|:--------------------------------|:-------------|
-| VMware       | vSphere ESXi                    | 6.5 U1g |
-| VMware       | vCenter Server Appliance        | 6.5 Update 1g |
-| VMware       | Platform Services Controller    | 6.5 Update 1g |
+| VMware       | vSphere ESXi                    | 6.5 Patch 02 |
+| VMware       | vCenter Server Appliance        | 6.5 Update 1e |
+| VMware       | Platform Services Controller    | 6.5 Update 1e |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX for vSphere                 | 6.3.5        |
-| {{site.data.keyword.IBM}} | CloudDriver        | 2.3          |
+| {{site.data.keyword.IBM}} | CloudDriver        | 2.2          |
 | Microsoft    | Windows Server Standard edition | 2012R2       |
 
 **Note**: VMware vSAN is an optional component.
