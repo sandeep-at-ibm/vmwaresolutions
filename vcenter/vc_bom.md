@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-29"
+lastupdated: "2018-04-17"
 
 ---
 
@@ -87,6 +87,29 @@ Table 4. NSX and port group configuration settings for vCenter Server instances
 | Port group SDDC-DPortGroup-VSAN (if applicable) | **Active uplinks** set to **uplink1** and **Standby uplinks** set to **uplink2** | **Active uplinks** set to **uplink2** and **Standby uplinks** set to **uplink1** |  
 | Port group SDDC-DPortGroup-Mgmt | **Port binding** set to **Ephermeral - no binding** and **Load balancing** set to **Route based on originating virtual port** | **Port binding** set to **Static binding** and **Load balancing** set to **Route based on physical NIC load** |  
 | Port group SDDC-DPortGroup-External | **Port binding** set to **Ephemeral - no binding** | **Port binding** set to **Static binding** |
+
+## Network MTU configuration settings
+
+The vSphere cluster uses two vSphere Distributed Switches (VDS), one for public network connectivity and the other one for private network connectivity.
+
+The private network connections are configured to use Jumbo Frames MTU (Maximum Transmission Unit) with the size of 9000, which improves performance for large data transfers such as storage and VMware vMotion. This is the maximum MTU allowed within VMware and by IBM Cloud.
+
+In V2.1 or later, the public network connections use a standard Ethernet MTU of 1500. This setting of 1500 must be maintained; any changes might cause packet fragmentation over the internet.
+
+Review the following table for an overview of the Network MTU configuration settings that are applied to the public and private Distributed Virtual Switch (DVS), depending on whether the vCenter Server instance is deployed in V2.1 or later.  
+
+The settings apply to new instances and new clusters from instances deployed in V2.1 or later. The settings also apply to new clusters in cross IBM Cloud Data Centers from instances that were upgraded to V2.1 or later.
+
+The settings do not apply to new clusters in the same IBM Cloud Data Center, for existing instances from V2.0 or earlier or existing instances upgraded to V2.1 or later.
+
+**Note**: For instances that were deployed in V2.0 or earlier, it is recommended that you update the public switch MTU setting to 1500 yourself.  
+
+Table 5. MTU configuration settings for vCenter Server instances and clusters
+
+| Distributed Virtual Switch (DVS) | V2.1 or later  | V2.0 or earlier (or upgraded from V2.0 or earlier) |   
+|:-------------- |:-------------- |:------------- |
+| Public Switch  | 1500 (default) | 9000 (Jumbo Frames) |
+| Private Switch | 9000 (Jumbo Frames) | 9000 (Jumbo Frames) |
 
 ## Related links
 
