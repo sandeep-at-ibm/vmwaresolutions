@@ -14,7 +14,7 @@ This release includes new features, usability enhancements, and bug fixes. For a
 
 ## VLAN spanning requirement
 
-If you are using a classic (non-VRF) SoftLayer® account, VLAN spanning must be enabled. If VLAN spanning is not enabled for classic accounts, the various components of the VMware virtualization environment might not be able to communicate with each other. To enable VLAN spanning in your SoftLayer account, see [Enable or Disable VLAN Spanning](https://knowledgelayer.softlayer.com/procedure/enable-or-disable-vlan-spanning){:new_window}.
+If you are using a classic (non-VRF) SoftLayer® account, VLAN spanning must be enabled. If VLAN spanning is not enabled for classic accounts, the various components of the VMware virtualization environment might not be able to communicate with each other. To enable VLAN spanning in your SoftLayer account, see [Enable or Disable VLAN Spanning](https://knowledgelayer.softlayer.com/node/3691){:new_window}.
 
 ## Email settings and notifications
 
