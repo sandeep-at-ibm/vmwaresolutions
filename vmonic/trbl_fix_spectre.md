@@ -28,8 +28,8 @@ For VMware vSphere 6.5:
 * For all your existing ESXi servers, as well as any clusters or ESXi servers that you continue to deploy before you upgrade to V2.2, you must apply the ESXi650-20171201-SG patch from the [VMware Product Patches site](https://my.vmware.com/group/vmware/patch).
 
 For VMware vCenter Server 6.5:
-* For all your new V2.1 instances, vCenter Server will be deployed with the vCenter 6.5 U1e patch applied.
-* For all existing instances deployed prior to V2.1, you must apply the vCenter 6.5 U1e patch from the [VMware Product Patches site](https://my.vmware.com/group/vmware/patch).
+* For all your new V2.2 instances, vCenter Server will be deployed with the vCenter 6.5 U1e patch applied.
+* For all existing instances deployed prior to V2.2, you must apply the vCenter 6.5 U1e patch from the [VMware Product Patches site](https://my.vmware.com/group/vmware/patch).
 
 
 ### Cloud Foundation instances deployed in V2.0 or later
