@@ -59,6 +59,6 @@ Static routes can be added for storage but the operations must be done with extr
 
 * [Expanding and contracting capacity for vCenter Server instances](../vcenter/vc_addingremovingservers.html)
 * [Expanding and contracting capacity for Cloud Foundation instances](../sddc/sd_addingremovingservers.html)
-* [Adding, viewing, and deleting clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html)
-* [Adding, viewing, and deleting clusters for Cloud Foundation instances](../sddc/sd_addingviewingclusters.html)
+* [Adding and viewing clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html)
+* [Adding and viewing clusters for Cloud Foundation instances](../sddc/sd_addingviewingclusters.html)
 * [Contacting IBM Support](trbl_support.html)
