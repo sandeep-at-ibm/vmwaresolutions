@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-12-29"
+lastupdated: "2018-05-25"
 
 ---
 
@@ -40,7 +40,7 @@ For optimal viewing and working on the {{site.data.keyword.vmwaresolutions_short
 
 To access the {{site.data.keyword.vmwaresolutions_short}} console, you must have an **IBMid** account.
 
-{{site.data.keyword.vmwaresolutions_short}} is provided as an infrastructure solution in the {{site.data.keyword.cloud}} catalog. Therefore, to use your **IBMid** account to log in to the {{site.data.keyword.vmwaresolutions_short}} console, you must associate the **IBMid** account with an {{site.data.keyword.cloud_notm}} account.
+{{site.data.keyword.vmwaresolutions_short}} is provided as an infrastructure solution in the {{site.data.keyword.cloud_notm}} catalog. Therefore, to use your **IBMid** account to log in to the {{site.data.keyword.vmwaresolutions_short}} console, you must associate the **IBMid** account with an {{site.data.keyword.cloud_notm}} account.
 
 When you log in to the console for the first time, you are guided to either associate your **IBMid** account with an {{site.data.keyword.cloud_notm}} account, or to sign up for a new {{site.data.keyword.cloud_notm}} account that is automatically associated with your **IBMid** account. You need to go through this process only once.
 
@@ -56,11 +56,7 @@ You can associate only one {{site.data.keyword.cloud_notm}} account to an {{site
 
 ## Accessing the IBM Cloud for VMware Solutions console
 
-To access the console from the {{site.data.keyword.cloud_notm}} catalog, complete the following steps:
-1. Go to https://console.ng.bluemix.net/.
-2. Log in to {{site.data.keyword.cloud_notm}} with your **IBMid** account.
-3. Click **Catalog**.
-4. Under **VMware**, click **VMware Solutions**.
+To access the console from the {{site.data.keyword.cloud_notm}} catalog, see [Accessing the {{site.data.keyword.vmwaresolutions_short}} console](vmonic/loginmethod.html).
 
 ## Related links
 
