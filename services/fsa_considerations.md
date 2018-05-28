@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-08"
+lastupdated: "2018-05-25"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-01-08"
 
 The FortiGate Security Appliance on {{site.data.keyword.cloud}} service deploys a pair of FortiGate Security Appliance (FSA) service 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances. You can manage this service by using the FortiOS Web Client or the command line interface via SSH.
 
-This service is available only to instances that are deployed in V1.8 or later releases.
+**Availability**: This service is available only to instances that are deployed in V1.8 or later releases.
 
 You can order an instance with the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service included. For more information, see:
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
@@ -22,7 +22,7 @@ You can also deploy the FortiGate Security Appliance on {{site.data.keyword.clou
 * [Ordering and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
 * [Ordering and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
 
-## FortiGate Security Appliance on IBM Cloud components
+## Components of FortiGate Security Appliance on IBM Cloud
 
 As part of the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service, an HA-pair of FortiGate 300 series Security Appliances is ordered in the default public VLAN.
 

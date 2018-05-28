@@ -4,23 +4,24 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-25"
 
 ---
 
-# Considerations for HCX on IBM Cloud
+# Considerations for VMware HCX on IBM Cloud
 
 The HCX on {{site.data.keyword.cloud}} service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
 
-This service is available only to VMware Cloud Foundation instances and VMware vCenter Server instances that are running vSphere 6.5 and that are deployed in or have been upgraded to V2.1 or later releases.
+**Availability**: This service is available only to VMware vCenter Server on IBM Cloud with Hybridity Bundle instances that are deployed in V2.3 and later releases.
 
-You can order an instance with the HCX on {{site.data.keyword.cloud_notm}} service included. For more information, see:
-* [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
-* [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
+**Note:** A vCenter Server instance with HCX on {{site.data.keyword.cloud_notm}} is limited to three simultaneous connections from on-premises sites.
 
-You can also deploy the HCX on {{site.data.keyword.cloud_notm}} service into your existing instances after initial deployment. For more information, see:
-* [Ordering and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
-* [Ordering and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
+For more information, see:
+
+* [Ordering vCenter Server with Hybridity Bundle instances](../vcenter/vc_hybrid_orderinginstance.html)
+* [Ordering and removing services for vCenter Server with Hybridity Bundle instances](../vcenter/vc_hybrid_addingremovingservices.html)
+
+You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance. For more information on upgrading your instance and deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [Upgrading to the vCenter Server with Hybridity Bundle instance](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance).
 
 ## Considerations when installing HCX on IBM Cloud
 
@@ -32,11 +33,11 @@ The HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into an 
 
 ### Requirements on firewall rules
 
-Before installing the HCX on {{site.data.keyword.cloud_notm}} service, you must add a firewall rule to any existing firewalls to allow all outbound HTTPS traffic so that the HCX Manager virtual appliance (HCX Manager) can register itself. After the HCX Manager installation is completed, you can remove the firewall rule. In addition, you must configure firewall rules to allow HCX to function properly. For more information, see *Appendix A - Port Access Requirements* in [HCX on IBM Cloud Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
+Before installing the HCX on {{site.data.keyword.cloud_notm}} service, you must add a firewall rule to any existing firewalls to allow all outbound HTTPS traffic so that the HCX Manager virtual appliance (HCX Manager) can register itself. After the HCX Manager installation is completed, you can remove the firewall rule. In addition, you must configure firewall rules to allow HCX to function properly. For more information, see *Appendix A - Port Access Requirements* in [HCX on {{site.data.keyword.cloud_notm}} Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
 
 ### Deployment process for HCX on IBM Cloud
 
-The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether you order an instance with this service included or you deploy the service later into your instance, the following procedures are completed for successful deployment:
+The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether you order the vCenter Server with Hybridity Bundle instance with the service included or you deploy the service later into your instance, complete the following procedures for a successful deployment:
 1. Order two subnets for HCX from the {{site.data.keyword.cloud_notm}} infrastructure:
    * One private portable subnet for HCX management
    * One public portable subnet for HCX interconnects

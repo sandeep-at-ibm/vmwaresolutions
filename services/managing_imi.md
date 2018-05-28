@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-05-04"
 
 ---
 
@@ -18,9 +18,9 @@ IMI provides managed services for your Cloud Foundation instances and vCenter Se
 
 ## Procedure
 
-1. Click **Getting Started** from the left navigation pane.
-2. Scroll down the page and, under **Order additional managed services**, click **Learn More** on the **Managed Services from IMI** service card.
-3. On the **Managed Services from IMI** page, on the **Engage IMI Pre-Sales** box, enter a description of your requirements for IMI services and click **Request a consultation**.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Getting Started** from the left navigation pane.
+2. Scroll down the page and, under **Order additional managed services**, click the **Managed Services from IMI** card.
+3. On the **Managed Services from IMI** page, in the **Engage IMI Pre-Sales** box, enter a description of your requirements for IMI services and click **Request a consultation**.
 
 An IMI Pre-Sales representative will contact you via your {{site.data.keyword.cloud_notm}} contact information and help you with the services that you need.
 
