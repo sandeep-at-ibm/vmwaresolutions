@@ -10,7 +10,7 @@ lastupdated: "2017-03-08"
 
 # Release notes for V1.4
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_full}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Component updates for Cloud Foundation instances
 
@@ -42,11 +42,11 @@ For information about the enhancements that are introduced in VMware NSX for vSp
 
 NSX Edge is now included as part of the new vCenter Server instances that you are ordering. NSX Edge provides network edge security and gateway services to isolate a virtualized network.
 
-During instance deployment, a Management VMware NSX Edge Services Gateway (ESG) is deployed by IBM®. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. This ESG is deployed to include two interfaces: one interface is connected to the IBM Cloud private VLAN, and the other one is connected to the IBM Cloud public VLAN.
+During instance deployment, a Management VMware NSX Edge Services Gateway (ESG) is deployed by IBM. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. This ESG is deployed to include two interfaces: one interface is connected to the IBM Cloud private VLAN, and the other one is connected to the IBM Cloud public VLAN.
 
 To ensure security, firewall rules are in place to allow only outbound HTTPS communications that are initiated by the management virtual machines. This ESG is deployed in a Large configuration, and only IBM Support can modify the configuration. For more information, see:
 
-* [vCenter Server instance components](../vcenter/vc_vcenterserveroverview.html#vcenter-server-instance-components)
+* [vCenter Server technical specifications](../vcenter/vc_vcenterserveroverview.html)
 * [Does the management services NSX Edge pose a security risk?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 

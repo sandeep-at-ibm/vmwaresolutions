@@ -10,11 +10,11 @@ lastupdated: "2016-11-04"
 
 # Release notes for V1.1
 
-This release includes new features, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_full}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## VLAN spanning requirement
 
-If you are using a classic (non-VRF) SoftLayer® account, VLAN spanning must be enabled. If VLAN spanning is not enabled for classic accounts, the various components of the VMware virtualization environment might not be able to communicate with each other. To enable VLAN spanning in your SoftLayer account, see [Enable or Disable VLAN Spanning](https://knowledgelayer.softlayer.com/node/3691){:new_window}.
+If you are using a classic (non-VRF) SoftLayer® account, VLAN spanning must be enabled. If VLAN spanning is not enabled for classic accounts, the various components of the VMware virtualization environment might not be able to communicate with each other. To enable VLAN spanning in your SoftLayer account, see [Enable or Disable VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ## Email settings and notifications
 

@@ -10,7 +10,7 @@ lastupdated: "2017-11-20"
 
 # Release notes for V2.0
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_full}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## FortiGate Virtual Appliance on IBM Cloud
 
@@ -95,8 +95,8 @@ You can now select the vSAN license edition that you want during the Cloud Found
 ### New standardized IBM Bare Metal Server configurations for Cloud Foundation instances
 
 The following Bare Metal Server configuration settings are now available:
-* Small (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz / 128 GB RAM / 12 disks)
-* Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz / 512 GB RAM / 12 disks)
+* Small (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 128 GB RAM / 12 disks)
+* Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 12 disks)
 
 **Note**: The chassis has space for 12 disks, however not all slots are filled in. The **Small** configuration provides two 1.9 TB Micron 5100 MAX drives and the **Large** configuration provides four 3.8 TB Micron 5100 PRO drives.
 
@@ -160,7 +160,7 @@ For more information, see [Ordering new vSphere clusters](../vsphere/vs_ordering
 The following bare metal server configuration options are now available:
 * **High Performance (Medium)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 1.9 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 59 TB
 * **High Performance (Large)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 3.8 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 118 TB
-* **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.10 GHz) / 64 GB RAM / Ten 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 60 TB
+* **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 64 GB RAM / Ten 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 60 TB
 
 **Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
 

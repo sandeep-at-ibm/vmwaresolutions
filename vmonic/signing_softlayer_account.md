@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-03-26"
+lastupdated: "2018-05-03"
 
 ---
 
@@ -32,6 +32,6 @@ To sign up for an {{site.data.keyword.cloud}} account, upgrade your {{site.data.
 
 * [FAQ](faq.html)
 * [{{site.data.keyword.cloud_notm}} account requirements](slaccountrequirement.html)
-* [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
+* [Video: How to create an IBM Cloud account](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
 * [Switching to IBMid](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}

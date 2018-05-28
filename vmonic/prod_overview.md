@@ -4,22 +4,22 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-17"
+lastupdated: "2018-05-25"
 
 ---
 
 # About IBM Cloud for VMware Solutions
 
-{{site.data.keyword.vmwaresolutions_full}} enables you to quickly and seamlessly integrate or migrate your on-premises VMware workloads to the {{site.data.keyword.cloud}} by using the scalable, secure, and high-performance {{site.data.keyword.cloud_notm}} infrastructure and the industry-leading VMware hybrid virtualization technology.
+{{site.data.keyword.vmwaresolutions_full}} enables you to quickly and seamlessly integrate or migrate your on-premises VMware workloads to the {{site.data.keyword.cloud_notm}} by using the scalable, secure, and high-performance {{site.data.keyword.cloud_notm}} infrastructure and the industry-leading VMware hybrid virtualization technology.
 
 {{site.data.keyword.vmwaresolutions_short}} allows you to easily deploy your VMware virtual environments and manage the infrastructure resources on {{site.data.keyword.cloud_notm}}. At the same time, you can still use your familiar native VMware product console to manage the VMware workloads.
 
 ## IBM Cloud for VMware Solutions benefits
 
 {{site.data.keyword.vmwaresolutions_short}} provides the following major benefits:
-* **Global reach**: Allows you to expand your hybrid cloud footprint to up to 30 enterprise-class {{site.data.keyword.CloudDataCents}} around the world.
+* **Global reach**: Allows you to expand your hybrid cloud footprint to up to 30 enterprise-class {{site.data.keyword.CloudDataCents_notm}} around the world.
 * **Seamless integration**: Enables seamless integration across the hybrid cloud with the {{site.data.keyword.cloud_notm}} infrastructure.
-* **Rapid provisioning**: Automates the deployment and configuration of the VMware environment, which allows you to quickly deploy an enterprise-class VMware environment with on-demand {{site.data.keyword.baremetal_long}} and virtual servers.
+* **Rapid provisioning**: Automates the deployment and configuration of the VMware environment, which allows you to quickly deploy an enterprise-class VMware environment with on-demand {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} and virtual servers.
 * **Simplification**: Enables you to consume a VMware cloud platform without the need to identify, procure, deploy, and manage the underlying physical infrastructure (compute, storage, and network), and the software licenses.
 * **Expansion and contraction flexibility**: Allows you to easily expand and contract your VMware workloads according to your business needs.
 * **Single management console**: Provides a single console to deploy, access, and manage the VMware environments on {{site.data.keyword.cloud_notm}}.
@@ -28,6 +28,7 @@ lastupdated: "2018-03-17"
 
 {{site.data.keyword.vmwaresolutions_short}} provides standardized and customizable deployment choices of VMware virtual environments. The following deployment types are offered:
 * **VMware vCenter Server on {{site.data.keyword.cloud_notm}}**: The vCenter Server offering allows you to deploy a VMware virtual environment by using custom compute, storage, and network resources to best fit your business needs.
+* **VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle**: The vCenter Server with Hybridity offering is a hosted private cloud that helps quickly and easily extend your on-premises infrastructure into the cloud. The VMware environment is based on IBM-provided VMware Software Defined Data Center licenses and it includes VMware Hybrid Cloud Extension (HCX). Using HCX, you can securely connect a vSphere 5.0+ environment on-premises with IBM Cloud sites for seamless infrastructure hybridity and true application mobility.
 * **VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}**: The Cloud Foundation offering provides a unified VMware virtual environment by using standard {{site.data.keyword.cloud_notm}} compute, storage, and network resources that are dedicated to each user deployment.
 * **VMware vSphere on {{site.data.keyword.cloud_notm}}**: The vSphere on {{site.data.keyword.cloud_notm}} offering provides a customizable virtualization service that combines VMware-compatible {{site.data.keyword.baremetal_short}}, hardware components, and licenses, to build your own IBM-hosted VMware environment.
 * **NetApp ONTAP Select**: The NetApp ONTAP Select offering allows you to deploy a software-defined storage cluster that addresses your needs for a dedicated and highly available storage appliance based on NetApp ONTAP Select.
@@ -61,19 +62,14 @@ This service is available only to instances that are deployed in V1.9 or later r
 
 For more information, see [Managing F5 on {{site.data.keyword.cloud_notm}}](../services/managing_f5.html).
 
-### HCX on IBM Cloud
-
-This service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
-
-This service is available only to instances that are deployed in (or upgraded to) V2.1 or later releases.
-
-For more information, see [Managing HCX on {{site.data.keyword.cloud_notm}}](../services/managinghcx.html).
-
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-This service provides data protection, data reuse, and recovery tools for virtual environments. It can be implemented as a stand-alone solution or integrated with your IBM Spectrum Protect&trade; Plus environment to off-load copies for long term storage and data governance with scale and efficiency. The IBM Spectrum Protect Plus on IBM Cloud service provides data protection for the workload VMs only.
+This service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement it as a stand-alone solution or you can integrate it with your IBM Spectrum Protect&trade; Plus environment to offload copies for long-term storage and data governance.
 
-This service is available only to instances that are deployed in (or upgraded to) V2.2 or later releases.
+**Notes**:
+* This service is available only to instances that are deployed in (or upgraded to) V2.2 or later releases.
+* For instances that are deployed in V2.3 or later releases, IBM Spectrum Protect Plus on IBM Cloud is the default backup service. The service provides backup for management VMs automatically.
+* For instances that are deployed in V2.2, this service provides data protection for the workload VMs only.
 
 For more information, see [Managing IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/managingspp.html).
 

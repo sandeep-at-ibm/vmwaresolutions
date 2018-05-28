@@ -10,7 +10,7 @@ lastupdated: "2017-05-22"
 
 # Release notes for V1.6
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_full}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Updates for VMware Cloud Foundation instances
 
@@ -36,7 +36,7 @@ Starting with the V1.6 release, several enhancements are available for your vCen
 *  Up to seven NFS file shares can be added when you order instances. The management components (vCenter, PSC, NSX Manager and Controllers, CloudDriver) are now running on an NFS file share for high availability.
 *  Automatic deployment and configuration of customer-managed VMware NSX Edge Services Gateway.
 
-Because of these changes, you cannot use as is (or upgrade) your existing vCenter Server instances in the current release. vCenter Server instances from pre-V1.6 releases are still visible on the IBM® Cloud for VMware Solutions console in view-only mode. These instances are marked on the user interface as **Deprecated** with a warning symbol icon.
+Because of these changes, you cannot use as is (or upgrade) your existing vCenter Server instances in the current release. vCenter Server instances from pre-V1.6 releases are still visible on the {{site.data.keyword.vmwaresolutions_short}} console in view-only mode. These instances are marked on the user interface as **Deprecated** with a warning symbol icon.
 
 The following actions are available on the pre-V1.6 vCenter Server instances:
 

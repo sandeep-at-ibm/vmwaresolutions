@@ -4,29 +4,31 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-05-25"
 
 ---
 
-# FAQ about BYOL and licensing
+# FAQ about licensing and BYOL
 
 Find answers to frequently asked questions about licensing, including the Bring Your Own License (BYOL) feature of {{site.data.keyword.vmwaresolutions_full}}.
+
+## What is BYOL?
+
+Bring Your Own License, or BYOL, is a feature available to VMware Cloud Foundation instances in V1.8 and later releases, and to vCenter Server and vSphere clusters in V2.0 and later releases. BYOL allows you to use your own VMware licenses for one or more of the following VMware software components when ordering instances:
+* VMware vCenter Server
+* VMware vSphere
+* VMware NSX
+* VMware vSAN
+
+If you select to use your own license for a VMware component and provide a valid license key for it, no license is ordered from IBM for this component and no monthly license charges are incurred to your {{site.data.keyword.cloud}} infrastructure account for this component.
+
+**Note:** The BYOL feature is not available to Business Partner users.
 
 ## Where do I manage the licenses and components ordered through VMware vSphere on IBM Cloud?
 
 After an order to create a new cluster for VMware vSphere on {{site.data.keyword.cloud_notm}} is placed, the VMware licenses, ESXi servers, and other networking components, are delivered and can be managed from the {{site.data.keyword.slportal}}.
 
 After deployment, go to the {{site.data.keyword.vmwaresolutions_short}} console to scale the new cluster using the saved configuration. For more information on scaling, see [Scaling existing vSphere clusters](../vsphere/vs_scalingexistingclusters.html).
-
-## What is BYOL?
-
-Bring Your Own License, or BYOL, is a feature available to VMware Cloud Foundation instances in V1.8 and later releases, and to VMware vCenter Server and VMware vSphere instances in V2.0 and later releases. BYOL allows you to use your own VMware licenses for one or more of the following VMware software components when ordering instances:
-* VMware vCenter Server
-* VMware vSphere
-* VMware vSAN
-* VMware NSX
-
-If you select to use your own license for a VMware component and provide a valid license key for it, no license is ordered from IBM for this component and no monthly license charges are incurred to your {{site.data.keyword.cloud_notm}} account for this component.
 
 ## What license editions and CPU quantities are required for BYOL?
 
@@ -88,7 +90,7 @@ Yes. When you are adding more ESXi servers to a deployed instance, the capacity 
 
 ## How can I tell how much license capacity I have available on a cluster with BYOL?
 
-You can find the number of CPUs available in your license key by going to the **Deployed Instances**, **Infrastructure** section, selecting the instance and then the cluster that you want to check the license capacity.  The number of available CPUs is listed in the **User-Provided License** table.
+You can find the number of CPUs available in your license key by going to the **Deployed Instances** page, locating and clicking the instance, and then on the **Infrastructure** tab clicking the cluster that you want to check the license capacity for. The number of available CPUs is listed in the **User-Provided License** table.
 
 ## Does IBM provide support if I select the BYOL licensing option?
 
@@ -96,7 +98,7 @@ IBM Support continues to be your point of contact for any instance configuration
 
 ## Why do vSphere license charges show up on the price estimation list if I am using BYOL? Am I being charged for it?
 
-{{site.data.keyword.baremetal_short}} are provisioned with vSphere already installed and with vSphere licenses already included. If you selected BYOL for vSphere, a process is automatically initiated upon instance deployment to remove the included vSphere licenses. Then the license charges are credited to your {{site.data.keyword.cloud_notm}} account. You do not have to do anything in this process.
+{{site.data.keyword.baremetal_short}} are provisioned with VMware vSphere already installed and with vSphere licenses already included. If you selected BYOL for vSphere, a process is automatically initiated upon instance deployment to remove the included vSphere licenses. Then the license charges are credited to your {{site.data.keyword.cloud_notm}} account. You do not have to do anything in this process.
 
 ## Can I still use the existing manual process for BYOL?
 
@@ -106,7 +108,33 @@ With the introduction of the BYOL feature, continued use of the manual process i
 
 No, because these VMware products are not part of the instance deployment. These VMware products might be installed on top of the initial deployment, which requires the clients or their agents to perform the installation and licensing.
 
-## Related links
+## Can I order NFS storage with vCenter Server with Hybridity Bundle?
+
+For newly deployed instances, only vSAN all-flash storage is supported. The vCenter Server with Hybridity Bundle offering includes vSAN Advanced or Enterprise licensing.
+
+If you have a vCenter Server instance with NFS storage, you can upgrade your existing instance to vCenter Server with Hybridity Bundle. While vSAN Advanced licensing is ordered during the upgrade, you are not required to provision an all-flash vSAN cluster.
+
+## Can I use BYOL with vCenter Server with Hybridity Bundle?
+
+You cannot bring your own VMware licensing (BYOL) to {{site.data.keyword.cloud_notm}}. vCenter Server with Hybridity Bundle requires that all VMware licenses are provided by IBM.
+
+## What is the difference between vCenter Server with Hybridity Bundle licensing and vCenter Server licensing?
+
+The individual VMware licenses that are available in vCenter Server are priced per CPU. As with all per-CPU VMware licenses provided by IBM, there is a 1.3x uplift in price across all servers that have more than 16 cores per CPU, for example, for Dual Intel Xeon Gold 6140.
+
+vCenter Server with Hybridity Bundle is a prescribed set of VMware licenses and editions that are licensed per core, and not per CPU. Therefore, the licensing price for these instances does not change.
+
+## Which IBM-provided VMware license components and editions are available for vCenter Server with Hybridity Bundle?
+
+New instances of vCenter Server with Hybridity Bundle include VMware vSphere Enterprise Plus, VMware vCenter Standard, VMware NSX Advanced or Enterprise, VMware vSAN Advanced or Enterprise, and VMware Hybrid Cloud Extension (HCX).
+
+If you have a vCenter Server instance with NSX Base edition, you will be upgraded to NSX Advanced automatically when you order vCenter Server with Hybridity Bundle.
+
+## Can I upgrade the NSX Advanced edition that is included in vCenter Server with Hybridity Bundle to NSX Enterprise edition?
+
+While the vCenter Server with Hybridity Bundle includes NSX Advanced, you can upgrade to the NSX Enterprise edition after ordering the vCenter Server with Hybridity Bundle. To do so, use the **Update and Patch** tab on the instance details page tab of the {{site.data.keyword.vmwaresolutions_short}} console.
+
+### Related links
 
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
 * [Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html)

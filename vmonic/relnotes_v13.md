@@ -10,7 +10,7 @@ lastupdated: "2017-01-23"
 
 # Release notes for V1.3
 
-This release includes new features, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_full}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Shared File-level Storage for vCenter Server instances
 
@@ -18,7 +18,7 @@ You can now add shared NAS (Network Attached Storage) to vCenter Server instance
 
 ## Zerto disaster recovery removal
 
-Whether you ordered Zerto disaster recovery as part of your instance or added it to an existing instance, you can now remove this service when you no longer need it. After you request to remove the service from the console, you are guided by IBM® Support to complete the removal process.
+Whether you ordered Zerto disaster recovery as part of your instance or added it to an existing instance, you can now remove this service when you no longer need it. After you request to remove the service from the console, you are guided by IBM Support to complete the removal process.
 
 For more information, see:
 
