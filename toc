@@ -11,6 +11,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Release notes
+        vmonic/relnotes_v23.md
         vmonic/relnotes_v22.md
         vmonic/relnotes_v21.md
         vmonic/relnotes_v20.md
@@ -69,6 +70,21 @@ IBM Cloud for VMware Solutions
         vcenter/vc_deletinginstance_multi.md
 
     {: .topicgroup}
+    vCenter Server on IBM Cloud with Hybridity Bundle
+        vcenter/vc_hybrid_overview.md
+        vcenter/vc_hybrid_planning.md
+        vcenter/vc_hybrid_networkingonvcenterserver.md
+        vcenter/vc_hybrid_multisite.md
+        vcenter/vc_hybrid_orderinginstance.md
+        vcenter/vc_hybrid_addingviewingclusters.md
+        vcenter/vc_hybrid_addingremovingservers.md
+        vcenter/vc_hybrid_applyingupdates.md
+        vcenter/vc_hybrid_addingremovingservices.md
+        vcenter/vc_hybrid_viewinginstances.md
+        vcenter/vc_hybrid_deletinginstance.md
+        vcenter/vc_hybrid_deletinginstance_multi.md
+
+    {: .topicgroup}
     Cloud Foundation on IBM Cloud
         sddc/sd_cloudfoundationoverview.md
         sddc/sd_bom.md
@@ -106,8 +122,9 @@ IBM Cloud for VMware Solutions
     VMware Federal on IBM Cloud
         vcenter/vc_fed_overview.md
         vcenter/vc_fed_planning.md
+        vcenter/fed_networking.md
         vcenter/vc_fed_orderinginstance.md
-        vcenter/vc_fed_addingviewingclusters.md
+        vcenter/fed_addviewdeleteclusters.md
         vcenter/vc_fed_addingremovingservers.md
         vcenter/vc_fed_viewinginstance.md
         vcenter/vc_fed_securinginstance.md
@@ -129,14 +146,14 @@ IBM Cloud for VMware Solutions
         services/managingfortinetvm.md
 
     {: .topicgroup}
-    HCX on IBM Cloud
-        services/hcx_considerations.md
-        services/managinghcx.md
-        services/standalone_considerations.md
-        services/standalone_orderingserviceinstances.md
-        services/standalone_viewingserviceinstances.md
-        services/standalone_deletingserviceinstances.md
-        services/hcx_glossary.md
+    HyTrust CloudControl on IBM Cloud
+        services/htcc_considerations.md
+        services/managinghtcc.md
+
+    {: .topicgroup}
+    HyTrust DataControl on IBM Cloud
+        services/htdc_considerations.md
+        services/managinghtdc.md
 
     {: .topicgroup}
     IBM Spectrum Protect Plus on IBM Cloud
@@ -148,20 +165,30 @@ IBM Cloud for VMware Solutions
         services/kmip_considerations.md
 
     {: .topicgroup}
-    Managed Services
-        services/managing_imi.md
-        services/managing_veeam_services.md
-        services/managing_zerto_services.md
-
-    {: .topicgroup}
     Veeam on IBM Cloud
         services/veeam_considerations.md
         services/managingveeam.md
 
     {: .topicgroup}
+    VMware HCX on IBM Cloud
+        services/hcx_considerations.md
+        services/managinghcx.md
+        services/standalone_considerations.md
+        services/standalone_orderingserviceinstances.md
+        services/standalone_viewingserviceinstances.md
+        services/standalone_deletingserviceinstances.md
+        services/hcx_glossary.md
+    
+    {: .topicgroup}
     Zerto on IBM Cloud
         services/addingzertodr.md
         services/managingzertodr.md
+
+    {: .topicgroup}
+    Managed Services
+        services/managing_imi.md
+        services/managing_veeam_services.md
+        services/managing_zerto_services.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
