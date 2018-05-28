@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-30"
+lastupdated: "2018-05-24"
 
 ---
 
@@ -24,40 +24,40 @@ The vSphere deployment has strict requirements on the physical infrastructure. T
 
 **Note:** If you select a vSAN component, the location list is filtered by SSD (Solid State Disk) availability.
 
-Table 1. Available {{site.data.keyword.CloudDataCent_notm}} for vSphere clusters
+Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vSphere clusters
 
-| IBM Cloud Data Center | Location |
-|:-----|:----------------|
-| AMS03 | Amsterdam |
-| CHE01 | Chennai |
-| DAL09 | Dallas |
-| DAL10 | Dallas |
-| DAL12 | Dallas |
-| DAL13 | Dallas |
-| FRA02 | Frankfurt |
-| HKG02 | Hong Kong |
-| LON02 | London |
-| LON04 | London |
-| LON06 | London |
-| MEL01 | Melbourne |
-| MEX01 | Queretaro |
-| MIL01 | Milan |
-| MON01 | Montreal |
-| OSL01 | Oslo |
-| PAR01 | Paris |
-| SAO01 | Sao Paulo |
-| SEO01 | Seoul |
-| SJC03 | San Jose |
-| SJC04 | San Jose |
-| SNG01 | Singapore |
-| SYD01 | Sydney |
-| SYD04 | Sydney |
-| TOK02 | Tokyo |
-| TOR01 | Toronto |
-| WDC03 | Washington, DC |
-| WDC04 | Washington, DC |
-| WDC06 | Washington, DC |
-| WDC07 | Washington, DC |
+| {{site.data.keyword.CloudDataCent_notm}} | Location | Region |
+|:----------------------|:---------|:-------|
+| AMS03 | Amsterdam | Europe |
+| CHE01 | Chennai | Asia Pacific |
+| DAL09 | Dallas | NA South |
+| DAL10 | Dallas | NA South |
+| DAL12 | Dallas | NA South |
+| DAL13 | Dallas | NA South |
+| FRA02 | Frankfurt | Europe |
+| FRA04 | Frankfurt | Europe |
+| HKG02 | Hong Kong | Asia Pacific |
+| LON02 | London | Europe |
+| LON04 | London | Europe |
+| LON06 | London | Europe |
+| MEL01 | Melbourne | Asia Pacific |
+| MEX01 | Queretaro | NA South |
+| MIL01 | Milan | Europe |
+| MON01 | Montreal | NA East |
+| OSL01 | Oslo | Europe |
+| PAR01 | Paris | Europe |
+| SAO01 | Sao Paulo | South America |
+| SEO01 | Seoul | Asia Pacific |
+| SJC03 | San Jose | NA West |
+| SJC04 | San Jose | NA West |
+| SNG01 | Singapore | Asia Pacific |
+| SYD01 | Sydney | Asia Pacific |
+| SYD04 | Sydney | Asia Pacific |
+| TOK02 | Tokyo | Asia Pacific |
+| TOR01 | Toronto | NA East |
+| WDC04 | Washington, DC | NA East |
+| WDC06 | Washington, DC | NA East |
+| WDC07 | Washington, DC | NA East |
 
 ## Related links
 
