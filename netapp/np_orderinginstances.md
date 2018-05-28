@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-30"
+lastupdated: "2018-05-07"
 
 ---
 
@@ -16,32 +16,32 @@ To deploy a VMware virtualized platform with a dedicated and highly available so
 
 Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
-*  You meet the requirements and you reviewed the considerations in [Requirements and planning for NetApp ONTAP Select instances](np_planning.html).
+*  You reviewed the requirements and considerations in [Requirements and planning for NetApp ONTAP Select instances](np_planning.html).
 
 **Important: Do not modify any values that are set during ordering and instance deployment. Doing so can result in your instance becoming unusable.**
 
 ## System settings
 
-When you order a NetApp ONTAP Select instance, you must specify the following settings under **System**.
+When you order a NetApp ONTAP Select instance, you must specify the following basic settings.
 
 ### Instance name
 
 The instance name must meet the following requirements:
-* Only alphanumeric characters are allowed.
+* Only alphanumeric and dash (-) characters are allowed.
 * The instance name must start and end with an alphanumeric character.
 * The maximum length of the instance name is 10 characters.
 * The instance name must be unique within your account.
 
-### Domain name
+## Network interface settings
 
-The root domain name must meet the following requirements:
+You must specify the following network interface settings when ordering a NetApp ONTAP Select instance.
+
+### Host name prefix
+
+The host name prefix must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
-*  The name must consist of two or more strings that are separated by period (.)
-*  Only alphanumeric characters are allowed.
-*  Each string must start with an alphabetic character and end with an alphanumeric character, and the last string can contain only alphabetic characters.
-*  The length of the last string must be in the range 2 - 24 characters.
-
-**Note:** The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (virtual machines) is 50 characters. Domain names must accomodate for this maximum length.
+*  The host name prefix must start and end with an alphanumeric character.
+*  The maximum length of the host name prefix is 10 characters.
 
 ### Subdomain label
 
@@ -51,20 +51,26 @@ The subdomain label must meet the following requirements:
 *  The maximum length of the subdomain label is 10 characters.
 *  The subdomain label must be unique within your account.
 
-### Host name prefix
+### Domain name
 
-The host name prefix must meet the following requirements:
-*  Only alphanumeric and dash (-) characters are allowed.
-*  The host name prefix must start and end with an alphanumeric character.
-*  The maximum length of the host name prefix is 10 characters.
+The root domain name must meet the following requirements:
+* The domain name must consist of two or more strings that are separated by period (.)
+* The first string must start with an alphabetic character and end with an alphanumeric character.
+* All strings, except for the last one, can contain only alphanumeric and dash (-) characters.
+* The last string can contain only alphabetic characters.
+* The length of the last string must be in the range 2 - 24 characters.
 
-### IBM Cloud Data Center location
+**Note:** The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (virtual machines) is 50 characters. Domain names must accommodate for this maximum length.
+
+## Licensing settings
+
+You must upload four NetApp licensing files, because each of the four {{site.data.keyword.baremetal_short}} requires one license. Contact your NetApp sales team to procure the appropriate licensing for your high performance or high capacity deployment.
+
+## Bare Metal Server settings
+
+### Data center location
 
 You must select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the Bare Metal Server specification you selected previously are displayed.-->
-
-## Bare Metal settings
-
-Specify the following settings under **Bare Metal**.
 
 ### Bare Metal Server configuration
 
@@ -81,32 +87,26 @@ You can select a Bare Metal Server configuration depending on your requirements:
 
 The number of ESXi servers of a NetApp ONTAP Select instance is 4 by default. You cannot change it. All the ESXi servers share the same configuration.
 
-## Licensing settings
-
-You must upload four NetApp licensing files, because each of the four {{site.data.keyword.baremetal_short}} requires one license. Contact your NetApp sales team to procure the appropriate licensing for your high performance or high capacity deployment.
-
 ## Procedure
 
-1. Click **Getting Started** on the left navigation pane.
-2. On the **NetApp ONTAP Select** card, click **Order Instance**.
-3. On the **Basics** page, specify the following required information:
-   1. Enter the instance name.
-   2. Enter the root domain name, subdomain label, and host name prefix.
-   3. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
-   4. Complete the Bare Metal configuration.
-    1. Select the Bare Metal Server configuration.
-    2. For **Number of {{site.data.keyword.baremetal_short}}**, four ESXi servers are required and added by default.
-4. On the **Basics** page under **Licensing**, click **Add files** to upload four NetApp license files that are required by the four {{site.data.keyword.baremetal_short}}.  Click **Next**.
-5. On the **Summary** page, verify the instance configuration before you place the order.
-   1. Review the settings for the instance.
-   2. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the instance.
-   3. Review the estimated cost of the instance by clicking the price link under **Estimated Cost**. To save or print your order
-   summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   4. Click **Create**.
+1. From the {{site.data.keyword.cloud_notm}} Catalog, click **VMware** on the left navigation pane, and then click **NetApp ONTAP Select** in the **Virtual Data Centers** section.
+2. On the **NetApp ONTAP Select** page, click **Create**.
+3. On the **NetApp ONTAP** page, enter the instance name.
+4. Complete the network interface settings by entering the **Hostname Prefix**, **Subdomain Label**, and **Domain Name**.
+5. Complete the licensing settings by clicking **Add License Files** to upload four NetApp license files that are required by the four {{site.data.keyword.baremetal_short}}.
+6. Complete the Bare Metal Server settings:
+   1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
+   2. Select the Bare Metal Server configuration.
+7. On the **Order Summary** pane, verify the instance configuration before you place the order.
+    1. Review the settings for the instance.
+    2. Review the estimated cost of the instance. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+    3. Ensure that the account to be charged is correct and then select the **I understand that the account listed below will be charged** check box.
+    4. Click the link or links of the terms that apply to your order. Ensure that you agree with these terms and then select the **I have read and agreed to the Third-Party Service Agreements listed below** check box.
+    5. Click **Provision**.
 
 ## Results
 
-The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
+The deployment of the instance starts automatically. You will receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
 When the instance is successfully deployed, the components that are described in [NetApp ONTAP Select instance components](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components) are installed on your VMware virtual platform.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-04-20"
+lastupdated: "2018-05-18"
 
 ---
 
@@ -20,7 +20,7 @@ The following graphic depicts the overall architecture of the NetApp ONTAP Selec
 
 Figure 1. High-level architecture of NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}
 
-![NetApp ONTAP Select architecture](np_architecture.svg)
+![NetApp ONTAP Select architecture](np_architecture.svg "High-level architecture of NetApp ONTAP Select on IBM Cloud")
 
 ### Physical infrastructure
 
@@ -37,11 +37,11 @@ The following graphic depicts the components of the NetApp ONTAP Select deployme
 
 Figure 2. NetApp ONTAP Select components
 
-![NetApp ONTAP Select components](np_netappcomponents.svg)
+![NetApp ONTAP Select components](np_netappcomponents.svg "Components of NetApp ONTAP Select")
 
 ### Virtualization management
 
-This layer consists of vCenter Server Appliance (vCSA), NSX Manager, two NSX ESGs, 3 NSX Controllers, Platform Services Controller (PSC) virtual appliance, and the IBM CloudDriver virtual machine.
+This layer consists of vCenter Server virtual appliance, NSX Manager, two NSX ESGs, 3 NSX Controllers, Platform Services Controller (PSC) virtual appliance, vCenter Server Appliance (vCSA), and the IBM CloudDriver virtual machine.
 
 NetApp ONTAP Select runs in a VMware cluster and virtualizes the local storage on the hosts. NetApp ONTAP Select is deployed in the dedicated model, where other workloads are not expected to share the same cluster with it. As a result, the hardware configuration of the NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} offering is sized only based on the requirements of NetApp ONTAP Select.
 
