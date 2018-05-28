@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-16"
 
 ---
 
@@ -18,32 +18,39 @@ An available update is a record in the software updates list of the instance, wh
 
 ## Before you begin
 
-<!-- **Note**: Because the V1.7 release updates the VMware NSX for vSphere version from 6.2.4 to 6.2.6, it is recommended to review and complete any required steps from the VMware documentation. For more information, see [Preparing for the NSX Upgrade](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.upgrade.doc/GUID-CCA34724-2621-4A5C-B2DC-65596AC46EBB.html){:new_window}. -->
+Before you attempt to apply an update, expand the update entry by clicking the down arrow and verify the following information:
+* The version of the update. You must apply the updates in chronological sequence that is from the earliest one to the most recent one. Ensure that you applied all the previous updates before you apply the most recent one. For example, you must apply the V2.2 update before attempting to apply the V2.3 update.
+* Whether downtime is required.
+* The total estimated time to complete the update.
+* The impact of the update on the VMware virtual environment. Table 1 shows how different levels of impact affect the system.
+* The update details.
 
-1. During the V2.1 to V2.2 upgrade, the IBM CloudDriver virtual machine is redeployed to upgrade the operation system. The upgrade process will temporarily use one of the IP addresses from the management subnets used by the {{site.data.keyword.vmwaresolutions_short}} console. If you are using the management subnets for other purposes, you must ensure that there is at least an IP address available. Otherwise, the upgrade from V2.1 to V2.2 might fail. The upgrade operation does not impact your own workloads.
-
-2. Before you attempt to apply an update, expand the update entry by clicking the down arrow and verify the following information:
-  *  The version of the update. You must apply the updates in chronological sequence that is from the earliest one to the most recent one. Ensure that you applied all the previous updates before you apply the most recent one. For example, you must apply the V1.6 update before attempting to apply the V1.7 update.
-  *  Whether downtime is required.
-  *  The total estimated time to complete the update.
-  *  The impact of the update on the VMware virtual environment. The following list shows how different levels of impact affect the system:
-
-    <dl class="dl"><dt class="dt dlterm">Low</dt>
-    <dd class="dd">This update does not affect any systems. You do not have to apply it during scheduled
-    downtime.</dd>
-    <dt class="dt dlterm">Medium</dt>
-    <dd class="dd">This update might affect some systems. It is recommended that you apply it during scheduled
-    downtime. </dd>
-    <dt class="dt dlterm">Major</dt>
-    <dd class="dd">This update affects some or all systems. You must apply it during scheduled downtime.</dd>
-    </dl>
-  * The update details.
+Table 1. Update levels and impact
+  
+<table>
+  <tr>
+    <th>Update level</th>
+    <th>Impact</th>
+  </tr>
+  <tr>
+    <td>Low</td>
+    <td>This update does not affect any system. You do not have to apply it during scheduled downtime.</td>
+  </tr>
+  <tr>
+    <td>Medium</td>
+  <td>This update might affect some systems. It is recommended that you apply it during scheduled downtime.</td>
+  </tr>
+    <tr>
+    <td>Major</td>
+  <td>This update affects some or all systems. You must apply it during scheduled downtime.</td>
+  </tr>
+</table>
 
 ## Procedure
 
-1. Click **Deployed Instances** from the left navigation pane.
-2. Click the instance to update.
-3. Click the **Summary** tab and then the **Infrastructure** tab. On these tabs, verify that all details are displayed correctly. If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver virtual machine, as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane. All instance resources are displayed.
+2. In the **Cloud Foundation Instances** table, click the instance to update.
+3. Click the **Summary** tab and then the **Infrastructure** tab to verify that all details are displayed correctly on them. If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver virtual machine, as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
 4. Click the **Update and Patch** tab.
 5. Click the down arrow to expand the update that you want to apply and then complete one of the following steps:
    *  To start the update immediately, click the overflow menu icon in the **Actions** column of the update entry, and then click **Update Now**.
@@ -57,30 +64,47 @@ An available update is a record in the software updates list of the instance, wh
 3. During updates that include VMware components updates, VMs may need to be migrated from ESXi servers to go into maintenance mode. If a VM has a local datastore, or CD-ROM mounted, this might prevent the VM migration.
 4. During the provisioning of a new environment, {{site.data.keyword.vmwaresolutions_short}} creates the **automationuser** ID that is used for instance management, including for applying updates. Do not change the password for this user ID. Changing the password might cause the update to fail.
 
-4. After you apply an update, a record appears in the software update status list, where you can view the detailed progress and status of the update. When the update is completed successfully, a record appears in the installed software updates list.
+5. After you apply an update, a record appears in the software update status list, where you can view the detailed progress and status of the update. When the update is completed successfully, a record appears in the installed software updates list.
 
   To retrieve the most recent status for an update job, click the refresh icon in the upper right of the page.
   {:tip}
 
-5. For details about the update statuses, see the following list:
-<dl class="dl">
-<dt class="dt dlterm">Available</dt>
-<dd class="dd">The update is available to be applied. You cannot select an available update until all its previous updates are applied.
-</dd>
-<dt class="dt dlterm">In progress</dt>
-<dd class="dd">The update job is initiated but not finished yet. You cannot apply any other updates until the current update job is
-completed.</dd>
-<dt class="dt dlterm">Installed</dt>
-<dd class="dd">The update job is completed. The corresponding component of the VMware platform is updated.</dd>
-<dt class="dt dlterm">Failed</dt>
-<dd class="dd">The update job fails. The console reports an error for the update failure. Review the error and fix the reported issue
-before you reapply the update.</dd>
-<dt class="dt dlterm">Scheduled</dt>
-<dd class="dd">The update job is scheduled for a later time. The update job starts automatically at the time that you scheduled.</dd><dt class="dt dlterm">Unknown</dt>
-<dd class="dd">The status of the update job cannot be obtained. Contact IBM Support for assistance.</dd>
-</dl>
+6. For details about the update statuses, see the following table.
+   
+   Table 2: Details of update statuses
 
-6. If the update process fails at a specific step, [contact IBM Support](../vmonic/trbl_support.html) for assistance. You will be advised how to resolve the problem and guided to restart the upgrade from the step that failed.
+    <table>
+      <tr>
+        <th>Status</th>
+        <th>Details</th>
+      </tr>
+      <tr>
+        <td>Available</td>
+        <td>The update is available to be applied. You cannot select an available update until all its previous updates are applied.</td>
+      </tr>
+      <tr>
+        <td>In progress</td>
+      <td>The update job is initiated but not finished yet. You cannot apply any other updates until the current update job is completed. </td>
+      </tr>
+        <tr>
+        <td>Installed</td>
+      <td>The update job is completed. The corresponding component of the VMware platform is updated.</td>
+      </tr>
+        <tr>
+        <td>Failed</td>
+      <td>The update job fails. The console reports an error for the update failure. Review the error and fix the reported issue before you reapply the update.</td>
+      </tr>
+          <tr>
+        <td>Scheduled</td>
+      <td>The update job is scheduled for a later time. The update job starts automatically at the time that you scheduled.</td>
+      </tr>
+          <tr>
+        <td>Unknown</td>
+      <td>The status of the update job cannot be obtained. Contact IBM Support for assistance.</td>
+      </tr>
+    </table>
+
+7. If the update process fails at a specific step, [contact IBM Support](../vmonic/trbl_support.html) for assistance. You will be advised how to resolve the problem and guided to restart the upgrade from the step that failed.
 
 ## Related links
 

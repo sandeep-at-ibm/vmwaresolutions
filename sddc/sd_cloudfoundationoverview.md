@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-30"
+lastupdated: "2018-05-25"
 
 ---
 
@@ -18,7 +18,7 @@ The following graphic depicts the overall architecture and components of the Clo
 
 Figure 1. Cloud Foundation architecture
 
-![Cloud Foundation architecture](sd_architecture.svg)
+![Cloud Foundation architecture](sd_architecture.svg "Cloud Foundation architecture")
 
 ### Physical infrastructure
 
@@ -49,7 +49,7 @@ The following components are included in your Cloud Foundation instance.
 
 You can order {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with one of the following configurations:
 * **Customized**: You can specify the CPU model and RAM for the {{site.data.keyword.baremetal_short}}.
-* **Preconfigured**: **Small** (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz / 128 GB RAM / 12 disks) or **Large** (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz / 512 GB RAM / 12 disks)
+* **Preconfigured**: **Small** (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 128 GB RAM / 12 disks) or **Large** (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 12 disks)
 
 
 ### Networking
@@ -61,7 +61,7 @@ The following networking components are ordered:
 
   **Important**: This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the Cloud Foundation instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, note that using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
 
-* The EVC (Enhanced vMotion Compatibility) feature is automatically enabled if you also have an existing cluster with ESXi servers that are supported by the current VMware vSphere version. EVC ensures vMotion compatibility for all hosts in a cluster and that all hosts in a cluster present the same CPU feature set to virtual machines, even if the actual CPUs on the hosts differ. Using EVC prevents migrations with vMotion from failing because of incompatible CPUs.
+* The EVC (Enhanced vMotion Compatibility) feature is automatically enabled if you have an existing cluster with ESXi servers that are supported by the current VMware vSphere version. EVC provides vMotion compatibility for all ESXi servers in a cluster by ensuring that all ESXi servers in a cluster expose the same set of CPU features to virtual machines. By using EVC, the virtual machines can migrate between any ESXi servers in the cluster, even if the actual CPUs on the ESXi servers might be different.
 
 ### Virtual Server Instances
 
@@ -130,3 +130,4 @@ One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration pr
 * [Ordering Cloud Foundation instances](sd_orderinginstance.html)
 * [VMware vSphere Documentation Center](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [VMware NSX 6 Documentation Center](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
+* [EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764)

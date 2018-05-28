@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-29"
+lastupdated: "2018-05-08"
 
 ---
 
@@ -28,24 +28,24 @@ Table 1. BOM for the VLANs in Cloud Foundation instances
 
 The following table details the BOM information for Cloud Foundation software components.
 
-Table 1. BOM for the software components in Cloud Foundation instances
+Table 2. BOM for the software components in Cloud Foundation instances
 
 | Manufacturer | Component                                | Version      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 Patch 02 |
-| VMware       | vCenter Server Appliance                 | 6.5 Update 1e |
-| VMware       | Platform Services Controller             | 6.5 Update 1e |
+| VMware       | vSphere ESXi                             | 6.5 U1g (ESXi 6.5u1 with patch level ESXi650-201803001 applied) |
+| VMware       | vCenter Server Appliance                 | 6.5 Update 1g |
+| VMware       | Platform Services Controller             | 6.5 Update 1g |
 | VMware       | vSAN                                     | 6.6.1        |
-| VMware       | NSX for vSphere                          | 6.3.4        |
+| VMware       | NSX for vSphere                          | 6.3.5        |
 | VMware       | SDDC Manager                             | 2.4          |
-| {{site.data.keyword.IBM}}          | CloudDriver                              | 2.2          |
+| {{site.data.keyword.IBM}} | CloudDriver                 | 2.3          |
 | Microsoft    | Windows Server Standard edition (64-bit) | 2012R2       |
 
 ## Advanced configuration settings for ESXi servers
 
 Review the following table for an overview of the advanced configuration settings that are applied on the ESXi servers depending on whether the Cloud Foundation instance is deployed in V2.2 or later, or upgraded to V2.2 or later from a previous V2.1 or earlier release.
 
-Table 2. ESXi servers advanced configuration settings for Cloud Foundation instances and clusters
+Table 3. ESXi servers advanced configuration settings for Cloud Foundation instances and clusters
 
 | Configuration setting | If newly deployed in V2.2 or later  | If upgraded from V2.1 or earlier |   
 |:------------- |:------------- |:------------- |
