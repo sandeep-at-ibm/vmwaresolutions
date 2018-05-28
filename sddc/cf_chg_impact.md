@@ -4,13 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-05-25"
 
 ---
 
 # Impacts of changing artifacts for Cloud Foundation instances
 
-Changing resources or subnets that are reserved for {{site.data.keyword.vmwaresolutions_full}} can impact management operations for VMware Cloud Foundation instances.
+Changing users, resources, or subnets that are reserved for {{site.data.keyword.vmwaresolutions_full}} can impact management operations for VMware Cloud Foundation instances.
+
+## Service-specific user accounts
+
+Each service creates an internal user account in vCenter Server. This account is necessary so that management operations that are associated to a service can connect to vCenter Server to perform the operations on the service.
+
+**Important**: To prevent outages and connection problems, if you change the user ID, password, or password expiration settings for this user account, ensure that you also update the information in the associated service.
+
+The user ID for this account is in the format `<service_name>-<service_uuid>@VSPHERE.LOCAL`. For example, the user ID that the Veeam on {{site.data.keyword.cloud_notm}} service uses to connect to vCenter Server to perform scheduled backups is `Veeam-<Veeam_uuid>@VSPHERE.LOCAL`.
 
 ## VMware resources for Cloud Foundation instances
 
@@ -24,7 +32,7 @@ Table 1. Operations that are impacted for the SSO admin (customer)
 | Change any port group names.    | Adding an ESXi server might fail. | Important | Change the port group name back to the original name. |
 | Change the cluster name. | Adding an ESXi server might fail. | Important | Change the cluster name back to the original name.
 | Change the public or private Distributed Virtual Switch (DVS) name. | Adding an ESXi server might fail. | Important | Change the DVS name back to the original name.
-| Change the VSAN datastore name. | Adding an ESXi server might fail. | Important | Change the VSAN datastore name back to the original name, **vsanDatastore**.
+| Change the VSAN datastore name. | Adding an ESXi server might fail.<br><br>Upgrading the instance might fail. | Important | Change the VSAN datastore name back to the original name, **vsanDatastore**.
 | Change the instance name or the domain name. | Instance is unusable. | Critical | N/A
 
 ## Management subnets for Cloud Foundation instances

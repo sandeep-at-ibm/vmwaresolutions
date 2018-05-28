@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-25"
 
 ---
 
@@ -14,8 +14,15 @@ You can expand or contract the capacity of your VMware Cloud Foundation instance
 
 ## Before you begin
 
-*  Review the information about capacity in [Planning Cloud Foundation instances](sd_planning.html).
-*  When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the virtual machines (VMs) running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers using the {{site.data.keyword.vmwaresolutions_full}} console.
+* The {{site.data.keyword.cloud_notm}} infrastructure provides an automatic and free upgrade to your CPU model if the configuration that you order is not available. The following table identifies the possible upgrade scenarios.
+
+Table 1. Possible CPU model upgrade options
+
+| Ordered CPU        | Automatic CPU upgrade options       |
+|:------------- |:------------- |
+| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz<br><br>Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz |
+| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz |
+* When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the virtual machines (VMs) running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers using the {{site.data.keyword.vmwaresolutions_full}} console.
 
    **Note**: Do not add or remove ESXi servers from the VMware vSphere Web Client. The changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
 
@@ -28,8 +35,8 @@ You can expand or contract the capacity of your VMware Cloud Foundation instance
 
 ## Procedure
 
-1. Click **Deployed Instances** from the left navigation pane.
-2. Click the instance for which you want to expand or contract capacity.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
+2. In the **Cloud Foundation Instances** table, click the instance for which you want to expand or contract capacity.
 3. Click the **Infrastructure** tab.
 4. Click the cluster in which you want to add ESXi servers, or from which you want to remove ESXi servers.
 5. To add ESXi servers, complete the following steps:
@@ -51,6 +58,6 @@ If you do not see the new ESXi servers added to the list in the cluster, check t
 
 * [Cloud Foundation Bill of Materials](sd_bom.html)
 * [Requirements and planning for Cloud Foundation instances](sd_planning.html)
-* [Adding and viewing clusters for Cloud Foundation instances](sd_addingviewingclusters.html)
+* [Adding, viewing, and deleting clusters for Cloud Foundation instances](sd_addingviewingclusters.html)
 * [Place a host in maintenance mode](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
