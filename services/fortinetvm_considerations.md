@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-08"
+lastupdated: "2018-05-25"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-01-08"
 
 The FortiGate Virtual Appliance on {{site.data.keyword.cloud}} service deploys a high-availability (HA) pair of FortiGate Virtual Appliances to your environment, which can help you reduce risk by implementing critical security controls within your virtual infrastructure. You can manage this service by using the FortiOS Web Client or the command line interface via SSH.
 
-This service is available only to instances that are deployed in V2.0 or later releases.
+**Availability**: This service is available only to instances that are deployed in V2.0 or later releases.
 
 You can order an instance with the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service included. For more information, see:
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
@@ -26,15 +26,19 @@ You can also deploy the FortiGate Virtual Appliance on {{site.data.keyword.cloud
 
 As part of the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service, an HA-pair of FortiGate Virtual Appliances is ordered and provisioned on the management network.
 
-## Licenses model for FortiGate Virtual Appliance on IBM Cloud
+## License model for FortiGate Virtual Appliance on IBM Cloud
 
 The license model for FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} offers the following options:
-* **Standard FW**: This bundle includes Stateful Packet Inspection, VLAN Protection and Advanced Logging, Ingress/Egress Firewall Rules,
-SSL/IPSec VPN Termination, and 24 x 7 support.
-* **Standard FW + UTM**: This bundle includes all standard firewall services in addition to NGFW IPS and Web Filtering, AntiVirus and AntiSpam, IP & Domain Reputation, and core FortiCare security services.
-* **Standard FW + Enterprise**: This bundle includes all standard firewall and UTM services in addition to FortiSandbox Cloud and Mobile Security.
+<dl class="dl">
+        <dt class="dt dlterm">Standard FW</dt>
+        <dd class="dd">This bundle includes Stateful Packet Inspection, VLAN Protection and Advanced Logging, Ingress/Egress Firewall Rules, SSL/IPSec VPN Termination, and 24 x 7 support.</dd>
+        <dt class="dt dlterm">Standard FW + UTM</dt>
+        <dd class="dd">This bundle includes all standard firewall services in addition to NGFW IPS and Web Filtering, AntiVirus and AntiSpam, IP & Domain Reputation, and core FortiCare security services.</dd>
+        <dt class="dt dlterm">Standard FW + Enterprise</dt>
+        <dd class="dd">This bundle includes all standard firewall and UTM services in addition to FortiSandbox Cloud and Mobile Security.</dd>
+</dl>
 
-**Important**: You cannot change the license level after service installation. To change the license level, you must remove the existing service and reinstall the service by selecting a different license option.
+**Important**: You cannot change the license model after service installation. To change the license model, you must remove the existing service and reinstall the service by selecting a different license option.
 
 ## Considerations when installing FortiGate Virtual Appliance on IBM Cloud
 
@@ -61,7 +65,7 @@ Review the following considerations before you install the FortiGate Virtual App
   Due to these requirements, you must plan for the space needed for FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}. If needed, before ordering FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, add 1 - 2 ESXi servers to your instance, or reduce vSphere HA CPU reservation for failover,
   or both.
 
-### Reservation example
+## Example
 
 You order a VMware vCenter Server **Small** instance with 2 ESXi servers with the following configuration: 16 cores at 2.10 GHz each with 128 GB RAM. For FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, you select the **Large** (8 vCPUs / 12 GB RAM) for deployment size and any subscription license model.
 

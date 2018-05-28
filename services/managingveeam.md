@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-05-25"
 
 ---
 
@@ -37,12 +37,7 @@ For more information, see the following topics:
 
 ## Backing up and restoring management components for instances that have Veeam on IBM Cloud installed
 
-The Veeam on {{site.data.keyword.cloud_notm}} service is preconfigured with a management backup job that automatically runs to back up the following management components daily with up to 14 points of restoration:
-* VMware vCenter Server
-* Platform Services Controller (PSC)
-* IBM CloudDriver
-* (Applies to Cloud Foundation instances only) VMware SDDC Manager
-* (Applies to vCenter Server instances with HA AD/DNS only) High-availability pair of AD/DNS
+The Veeam on {{site.data.keyword.cloud_notm}} service is preconfigured with a management backup job that automatically runs to back up the management components daily with up to 14 points of restoration.
 
 You can also back up the management components manually by using the Veeam console. Starting with the V1.8 release, the configuration changes to your environment are not automatically backed up. Therefore, it is recommended that you perform a manual backup of the management components by running the preconfigured management backup job in the Veeam console before you change the configuration of your environment. For more information on how to perform the manual backup job, see the [Veeam technical instructions](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}.
 
