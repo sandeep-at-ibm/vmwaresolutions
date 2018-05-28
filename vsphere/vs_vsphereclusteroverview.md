@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-30"
+lastupdated: "2018-05-25"
 
 ---
 
@@ -41,9 +41,9 @@ Licenses (IBM-provided or BYOL) for the following VMware components:
 
 One or more {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with the following options.
 * CPU options:
-   * Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz
-   * Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz
-   * Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz
+   * Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz
+   * Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz
+   * Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz
 * RAM options: 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1 TB, and 1.5 TB
 
 The options available depend on whether you selected the VMware vSAN component.

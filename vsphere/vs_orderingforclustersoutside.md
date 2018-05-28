@@ -4,42 +4,34 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-27"
+lastupdated: "2018-05-08"
 
 ---
 
 # Scaling clusters created outside of the console
 
-You can use the VMware vSphere Cluster offering to scale existing clusters, which are created outside of the {{site.data.keyword.vmwaresolutions_full}} console, by adding ESXi servers to them.
+You can use the VMware vSphere offering to scale existing vSphere clusters that are created outside of the {{site.data.keyword.vmwaresolutions_full}} console. To scale a vSphere cluster that is created outside of the console, recreate the cluster with the same settings with the console and then scale the cluster.
 
 ## Requirements
 
 Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
-*  You meet the requirements and you reviewed the considerations in [Requirements and planning for vSphere clusters](vs_planning.html).
+*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](vs_planning.html).
 
 ## Procedure
 
-1. Click **Getting Started** on the left navigation pane.
-2. On the **VMware vSphere on IBM Cloud** card, click **Order Instance**. Ensure that you are on the **Create new cluster** tab and that **New cluster** is displayed in the **Cluster Configurations** list.
-3. Configure a new cluster with the same settings as your existing cluster, which was created outside of the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Ordering new vSphere clusters](vs_orderinginstances.html).
-
-   **Note**: You must click **Select Existing Public and Private VLANs** under **Network Details** to specify the VLANs information,
-   which is required for scaling the cluster you created outside of the {{site.data.keyword.vmwaresolutions_short}} console.
-4. Click **Next**.
-5. On the **Summary** page, review the cluster settings and click **Save Configuration**.
-6. Go back to the **Getting Started** page by clicking **Getting Started** on the left navigation pane. Then click **Order Instance** on the **VMware vSphere on IBM Cloud** card.
-7. On the **Basics** page, click the **Scaling existing cluster** tab.
-8. Select the cluster you just created from the **Cluster Configurations** list.
-9. Under **{{site.data.keyword.baremetal_short}}**, select the number of {{site.data.keyword.baremetal_short}} that you want to add to the cluster.
-11. If the cluster does not include the HA-pair of FortiGate 300 series Security Appliance on its public VLAN, you can order one for it by selecting **Include with purchase** under **FortiGate Physical Appliance 300 Series HA Pair**.
-12. Click **Next**.
-13. On the **Summary** page, verify the cluster configuration before you place the order.
-   1. Review the settings for the cluster.
-   2. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you continue.
-   3. Review the estimated cost of the cluster by clicking the price link under **Estimated Cost**. To save or print your order
-   summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   4. Click **Create**.
+1. From the {{site.data.keyword.cloud_notm}} Catalog, click **VMware** on the left navigation pane, and then click **VMware vSphere** in the **Virtual Data Centers** section.
+2. On the **VMware vSphere on IBM Cloud** page, click **Create**.  
+   Ensure that you are on the **Create New** tab and that **New cluster** is displayed in the **Cluster Configurations** list.
+3. Create a new cluster with the same settings as the existing cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Ordering new vSphere clusters](vs_orderinginstances.html).  
+   **Note**: For network interface, to scale a cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console, you must select the existing VLANs for the cluster.  
+4. In the **Order Summary** pane, verify the cluster configuration, and then click **Save Configuration**.   
+5. On the **Getting Started** page, click the **VMware vSphere on IBM Cloud** card.
+6. On the **VMware vSphere on IBM Cloud** page, click **Create**.
+7. Click the **Scale Existing** tab and select the cluster you just created from the **Cluster Configurations** list.
+8. In the **{{site.data.keyword.baremetal_short}}** section, specify the number of {{site.data.keyword.baremetal_short}} that you want to add to the cluster.
+9. If the cluster does not include the FortiGate 300 Series Security Appliance HA Pair on its public VLAN, you can order one by selecting **Include with purchase** under **FortiGate Physical Appliance 300 Series HA Pair**.
+10. In the **Order Summary** pane, verify the instance configuration and the estimated cost, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.
 
 ## Results
 
