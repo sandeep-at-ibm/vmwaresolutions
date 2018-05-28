@@ -4,133 +4,160 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-28"
+lastupdated: "2018-05-09"
 
 ---
 
 # Viewing NetApp ONTAP Select instances
 
-Use this procedure to view the NetApp ONTAP Select instances that you ordered and detailed information about them.
+View the NetApp ONTAP Select instances that you ordered and detailed information about them.
 
-## Procedure
+## Viewing NetApp ONTAP Select instances summary
 
-1. Click **Deployed Instances** from the left navigation pane. In the **NetApp ONTAP Select Instances** table, view the summary about the ordered instances:
+To view a summary of all the NetApp ONTAP Select instances in your environment, complete the following steps:
 
-  * **Name**: The name of the instance.
-  * **ESXi Servers**: The sum of the ESXi servers associated with the instance.
-  * **Location**: The data center where the instance is hosted.
-  * **Creation Time**: The date and time that the instance was created.
-  * **Status**: The status of the instance. The status can have one of the following values:
-     <dl class="dl">
-     <dt class="dt dlterm">Creating</dt>
-     <dd class="dd">The instance is being created.</dd>
-     <dt class="dt dlterm">Building</dt>
-     <dd class="dd">The instance is being configured.</dd>
-     <dt class="dt dlterm">Ready to Use</dt>
-     <dd class="dd">The instance is ready to use.</dd>
-     <dt class="dt dlterm">Modifying </dt>
-     <dd class="dd">The instance is being modified.</dd>
-     <dt class="dt dlterm">Failed</dt>
-     <dd class="dd">The creation, configuration, or modification process failed.</dd>
-     <dt class="dt dlterm">Deleting</dt>
-     <dd class="dd">The instance is being deleted.</dd>
-     <dt class="dt dlterm">Deletion Error</dt>
-     <dd class="dd">An error occurred when the instance was being deleted.</dd>
-     <dt class="dt dlterm">Deleted</dt>
-     <dd class="dd">The instance is deleted.</dd>
-     </dl>
-  * **Actions**: Take the following actions on the instance:
-    <dl class="dl">
-    <dt class="dt dlterm">Delete</dt>
-    <dd class="dd">Delete the instance.</dd>
-    </dl>
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
+2. In the **NetApp ONTAP Select Instances** table, view the summary about the ordered instances:
 
-2. Click an instance to see its general details. Ensure that you are on the **Summary** tab.
+Table 1. NetApp ONTAP Select instances items
 
-  * **ID**: The ID of the instance.
-  * **Name**: The name of the instance.
-  * **Location**: The data center where the instance is hosted.
-  * **Deployed version**: The deployed version of {{site.data.keyword.vmwaresolutions_full}}.
-  * **vCenter version**: The version of VMware vCenter Server.
+| Item        | Description       |  
+|:------------- |:--------------- |
+| Name | The name of the instance. |
+| Version | The version of the instance. |  
+| Location | The data center where the instance is hosted. |
+| Creation time | The date and time that the instance was created. |   
+| Status | The status of the instance. The status can have one of the following values:<ul><li>Creating: The instance is being created.</li><li>Building: The instance is being configured.</li><li>Ready to Use: The instance is ready to use.</li><li>Modifying: The instance is being modified.</li><li>Failed: The creation, configuration, or modification process failed.</li><li>Deleting: The instance is being deleted.</li><li>Deletion Error: An error occurred when the instance was being deleted.</li><li>Deleted: The instance is deleted.</li></ul>|
+| Actions | Click the **Delete** icon to delete the instance. |
 
-    **Note**: There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct.
+## Viewing NetApp ONTAP Select instances property details
 
-  * **NSX for vSphere**: The VMware NSX for vSphere product version.
-  * **NSX license edition**: The version and edition of the VMware NSX license.
-  * **NetApp version**: The version of NetApp ONTAP Select.
-  * **NetApp license type**: The type of the NetApp ONTAP Select license.
-  * **DNS**, **Root Domain**: The root domain name is the DNS (Domain Name System) domain name and the Microsoft Active Directory (AD) forest root name for the instance.
-  * **DNS**, **SSO Domain**: The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is set for all deployed NetApp ONTAP Select instances with a value of `vsphere.local`.
-  * **DNS**, **Subdomain**: The subdomain is the DNS subdomain name of the root domain name where the local NetApp ONTAP
-  Select instance host names reside. The subdomain name is in the format `<subdomain_label>.<root_domain>`.
-  * **Status**: The status of the instance.
+To view the property details of an instance:
 
-3. View the access information for the instance-related components. These passwords are initial passwords that are generated by the system. If you change them outside of the {{site.data.keyword.vmwaresolutions_short}} console, they are not updated on the instance details page.
+1. In the **NetApp ONTAP Select Instances** table, click an instance name.
+2. Under **Properties**, view the details for the instance.
 
-  * **AD/DNS IP**: The IP address of the AD server.
-  * **AD/DNS FQDN**: The AD/DNS server fully qualified domain name.
-  * **AD/DNS ADMIN (Remote Desktop)**: The user name and password that you can use to access the AD server via a remote desktop connection.
-  * **NSX Manager IP**: The IP address of the NSX Manager.
-  * **NSX Manager FQDN**: The NSX Manager fully qualified domain name.
-  * **NSX Manager HTTP**: The user name and password that you can use to access the NSX Manager web console.
-  * **NetApp Cluster IP**: The IP address of the NetApp ONTAP Select cluster.
-  * **NetApp Cluster FQDN**: The NetApp ONTAP cluster fully qualified domain name.
-  * **NetApp Cluster HTTPS**: The user name and password that you can use to access the NetApp ONTAP Select cluster.
-  * **NetApp Deploy Tool IP**: The IP address of the NetApp ONTAP Select Deploy virtual machine.
-  * **NetApp Deploy Tool FQDN**: The NetApp ONTAP Select Deploy fully qualified domain name.
-  * **NetApp Deploy Tool HTTPS**: The user name and password that you can use to access the NetApp ONTAP Select Deploy virtual machine.
-  * **PSC IP**: The IP address of the Platform Services Controller.
-  * **PSC FQDN**: The PSC fully qualified domain name.
-  * **PSC ADMIN**: The VMware vCenter Single Sign-On user name and password that you can use to access the PSC web console.
-  * **PSC SSH**: The user name and password that you can use to access the PSC VM via SSH connection.
-  * **vCenter IP**: The IP address of the vCenter Server.
-  * **vCenter FQDN**: The vCenter Server fully qualified domain name.
-  * **vCenter ADMIN**: The VMware vCenter Single Sign-On user name and password that you can use to log in to the vCenter Server by using the vSphere Web Client.
-  * **vCenter SSH**: The user name and password that you can use to access the vCenter Server VM via SSH connection.
+Table 2. NetApp ONTAP Select instances property details
 
-4. View the deployment history for the instance.
+| Property        | Description       |
+|:--------------- |:----------------- |
+| ID | The ID of the instance. |
+| Name | The name of the instance. |
+| Location | The data center where the instance is hosted. |
+| Deployed version | The deployed version of {{site.data.keyword.vmwaresolutions_full}}. |
+| vCenter version | The version of VMware vCenter Server.<br><br>**Note**: There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct. |
+| NSX for vSphere | The VMware NSX for vSphere product version. |
+| NSX license edition | The version and edition of the VMware NSX license. |
+| NetApp version | The version of NetApp ONTAP Select. |
+| NetApp license type | The type of the NetApp ONTAP Select license. |
+| DNS, Root Domain | The root domain name is the DNS (Domain Name System) domain name and the Microsoft Active Directory (AD) forest root name for the instance. |
+| DNS, SSO Domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is set for all deployed NetApp ONTAP Select instances with a value of `vsphere.local`. |
+| DNS, Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local NetApp ONTAP Select instance host names reside. The subdomain name is in the format `<subdomain_label>.<root_domain>`. |
+| Status | The status of the instance. |
 
-  * **Date**: The date and time when the instance status is changed.
-  * **Summary**: The details of the change.
+## Viewing access information for NetApp ONTAP Select instances
 
-    If errors occur during instance deployment or instance deletion, an {{site.data.keyword.cloud_notm}} Support ticket is created automatically on your behalf. You can click the ticket link to check its status and progress.
+Under **Access Information**, view the access information for the instance-related components. These passwords are initial passwords that are generated by the system. If you change them outside of the {{site.data.keyword.vmwaresolutions_short}} console, they are not updated on the instance details page.
 
-5. Click the **Infrastructure** tab to view the summary about the NetApp ONTAP Select cluster.
-  * **Name**: The name of the cluster.
-  * **ESXi servers**: The number of ESXi servers in the cluster.
-  * **CPU**: The CPU specification of the ESXi servers in the cluster.
-  * **Effective Storage**: The total disk capacity of the ESXi servers in the cluster.
-  * **Memory**: The total memory size of the ESXi servers in the cluster.
-  * **Data Center Location**: The data center where the cluster is hosted. It is same with the data center location of the instance.
-  * **Pod**: The pod in which the cluster is created.
-  * **Status**: The status of the cluster. The status can have one of the following values:
-     <dl class="dl">
-         <dt class="dt dlterm">Initializing</dt>
-         <dd class="dd">The cluster is being created and configured.</dd>
-         <dt class="dt dlterm">Modifying</dt>
-         <dd class="dd">The cluster is being modified.</dd>
-         <dt class="dt dlterm">Ready to Use</dt>
-         <dd class="dd">The cluster is ready to use.</dd>
-     </dl>
+Table 3. Access information for NetApp ONTAP Select instance-related components
 
-6. Click the cluster name to view its ESXi server details.
-     * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
+| Component        | Description       |
+|:---------------- |:----------------- |
+| AD/DNS IPs | The IP addresses of the two AD servers. |
+| AD/DNS FQDN | The AD/DNS server fully qualified domain name. |
+| AD/DNS ADMIN (Remote Desktop) | The user name and password that you can use to access the AD server via a remote desktop connection. |
+| NSX Manager IP | The IP address of the NSX Manager. |
+| NSX Manager FQDN | The NSX Manager fully qualified domain name. |
+| NSX Manager HTTP | The user name and password that you can use to access the NSX Manager web console. |
+| NetApp Cluster IP | The IP address of the NetApp ONTAP Select cluster. |
+| NetApp Cluster FQDN | The NetApp ONTAP cluster fully qualified domain name. |
+| NetApp Cluster HTTPS | The user name and password that you can use to access the NetApp ONTAP Select cluster. |
+| NetApp Deploy Tool IP | The IP address of the NetApp ONTAP Select Deploy virtual machine. |
+| NetApp Deploy Tool FQDN | The NetApp ONTAP Select Deploy fully qualified domain name. |
+| NetApp Deploy Tool HTTPS | The user name and password that you can use to access the NetApp ONTAP Select Deploy virtual machine. |
+| PSC IP | The IP address of the Platform Services Controller. |
+| PSC FQDN | The PSC fully qualified domain name. |
+| PSC ADMIN | The VMware vCenter Single Sign-On user name and password that you can use to access the PSC web console. |
+| PSC SSH | The user name and password that you can use to access the PSC VM via SSH connection. |
+| vCenter IP | The IP address of the vCenter Server. |
+| vCenter FQDN | The vCenter Server fully qualified domain name. |
+| vCenter ADMIN | The VMware vCenter Single Sign-On user name and password that you can use to log in to the vCenter Server by using the vSphere Web Client. |
+| vCenter SSH | The user name and password that you can use to access the vCenter Server VM via SSH connection. |
 
-       `host_prefix` is the host name prefix,
-       `n` is the sequence of the server,
-       `subdomain_label` is the subdomain label, and
-       `root_domain` is the root domain name.
+## Viewing the deployment history for NetApp ONTAP Select instances
 
-     * **Version**: The version of the ESXi server.
-     * **Credentials**: The user name and password to access the ESXi server.
-     * **Private IP**: The private IP address of the ESXi server.
-     * **Status**: The status of the ESXi server, which can be one of the following values:
-        <dl class="dl">
-        <dt class="dt dlterm">Active</dt>
-        <dd class="dd">The ESXi server is ready for use. </dd>
-        <dt class="dt dlterm">Deleting</dt>
-        <dd class="dd">The ESXi server is being deleted.</dd>
-        </dl>
+Under **Deployment History**, view the deployment history for the instance.
+
+Table 4. NetApp ONTAP Select instance deployment history
+
+| Item        | Description       |  
+|:------------|:------------- |
+| Date | The date and time when the instance status is changed |
+| Summary | The details of the change |
+
+If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](../vmonic/trbl_support.html).
+
+## Viewing NetApp ONTAP Select clusters
+
+1. Click the **Infrastructure** tab.
+2. Under **CLUSTERS**, view the summary about the NetApp ONTAP Select clusters.
+
+	Table 5: NetApp ONTAP Select clusters items
+
+	 <table>
+	   <tr>
+	     <th>Item</th>
+	     <th>Description</th>
+	   </tr>
+	   <tr>
+	     <td>Name</td>
+	     <td>The name of the cluster.</td>
+	   </tr>
+	   <tr>
+	     <td>ESXi servers</td>
+	     <td>The number of ESXi servers in the cluster.</td>
+	   </tr>
+	   <tr>
+	      <td>CPU</td>
+	      <td>The CPU specification of the ESXi servers in the cluster.</td>
+	   </tr>
+	   <tr>
+	      <td>Effective storage</td>
+	      <td>The total disk capacity of the ESXi servers in the cluster.</td>
+	   </tr>
+	   <tr>
+	      <td>Memory</td>
+	      <td>The total memory size of the ESXi servers in the cluster.</td>
+	   </tr>
+	   <tr>
+	      <td>Data center location</td>
+	      <td>The data center where the cluster is hosted. It is same with the data center location of the instance.</td>
+	   </tr>
+		 <tr>
+		   <td>Pod</td>
+			 <td>The pod in which the cluster is created.</td>
+		 </tr>
+		 <tr>
+		  <td>Status</td>
+			<td>The status of the cluster. The status can have one of the following values:<ul><li>Initializing: The cluster is being created and configured.</li><li>Modifying: The cluster is being modified.</li><li>Ready to Use: The cluster is ready to use.</li></ul></td>
+		 </tr>
+		 <tr>
+		  <td>Actions</td>
+			<td>Click the **Delete** icon to delete the cluster.</td>
+		 </tr>
+	 </table>
+
+3. Click the cluster name to view its ESXi server details.
+
+Table 6. ESXi server details of a NetApp ONTAP Select cluster
+
+| Item        | Description       |  
+|:------------|:----------------- |
+| Name | The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:<br><br>`host_prefix` is the host name prefix, `n` is the sequence of the server, `subdomain_label` is the subdomain label, and `root_domain` is the root domain name. |
+| Version | The version of the ESXi server. |
+| Credentials | The user name and password to access the ESXi server. |
+| Private IP | The private IP address of the ESXi server. |
+| Status | The status of the ESXi server, which can be one of the following values:<ul><li>Active: The ESXi server is ready for use.</li><li>Deleting: The ESXi server is being deleted.</li></ul> |
 
 ## What to do next
 
