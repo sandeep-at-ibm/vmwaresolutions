@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-02-26"
+lastupdated: "2018-05-23"
 
 ---
 
@@ -29,21 +29,25 @@ All costs for the physical and virtual infrastructure and the licenses resulting
 
 {{site.data.keyword.vmwaresolutions_short}} is an English-only product. Therefore, all features on the console, including the user documentation, are available in English only.
 
-## What are the differences between a Cloud Foundation instance and vCenter Server instance?
+## What are the differences among a vCenter Server instance, Cloud Foundation instance, and VMware vSphere cluster?
 
-Both instance types provide deployment choices for VMware virtual environments. However, the difference is standardized versus customized.
+All instance types provide deployment choices for VMware virtual environments. However, the difference is the extent of customizability and automation.
 
+* When you order a VMware vCenter Server instance, you deploy a VMware virtual environment with customized compute, storage, and network resources. For more information about the deployed components, see the _vCenter Server technical specifications_ section in [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html).
 * When you order a VMware Cloud Foundation instance, you deploy a unified software-defined data center (SDDC) platform. For more information about the deployed components, see [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
-* When you order a VMware vCenter Server instance, you deploy a VMware virtual environment with customized compute, storage, and network resources. For more information about the deployed components, see [vCenter Server instance components](../vcenter/vc_vcenterserveroverview.html#vcenter-server-instance-components).
-* The functions that are supported for Cloud Foundation instances and vCenter Server instances are different. For more information, see [Instance comparison chart](inst_comp_chart.html).
-
-## What is included in a Cloud Foundation instance?
-
-For more information, see [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+* When you order a VMware vSphere cluster, you obtain the maximum of flexibility to design and build your hosted VMware environment while incorporating VMware-compatible hardware. However, {{site.data.keyword.cloud_notm}} does not automate the installation, configuration, and bring-up of the optional VMware components for the VMware vSphere cluster.
+* The functions that are supported for vCenter Server instances, Cloud Foundation instances, and vSphere clusters are different. For more information, see [Offering comparison chart](inst_comp_chart.html).
 
 ## What is included in a vCenter Server instance?
 
-For more information, see [vCenter Server instance components](../vcenter/vc_vcenterserveroverview.html#vcenter-server-instance-components).
+For more information, see the _vCenter Server technical specifications_ section in [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html).
+
+## What is included in a Cloud Foundation instance?
+
+For more information, see [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html).
+
+## What is included in a vSphere cluster?
+For more information, see [Components of VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html).
 
 ## Is a two-node vCenter Server instance highly available?
 
@@ -85,7 +89,7 @@ For more information, see:
 ## Does the management services NSX Edge pose a security risk?
 
 Although the VMware NSX Edge for management services is on a public subnet, security measures are in place to ensure that it does not pose a security risk. These measures are:
-*  The NSX Edge firewall is configured to allow only outgoing HTTPS (port 443) traffic that is initiated by the management virtual machines.
+*  The NSX Edge firewall is configured to allow only outgoing HTTPS (TCP port 443) traffic that is initiated by the management virtual machines.
 *  SNAT (source network address translation) is used so that private IP addresses are not visible outside the private network.
 *  Remote access for the management services NSX Edge appliance is disabled.
 *  Passwords for accessing the management services NSX Edge from the private network are randomized and encrypted.
@@ -100,11 +104,15 @@ Although the customer-managed NSX Edge is connected to the public VLAN, security
 
 ## How do I choose the data centers for my instances?
 
-The unified Cloud Foundation and vCenter Server deployments have strict requirements on the physical infrastructure. The physical infrastructure varies among {{site.data.keyword.CloudDataCents_notm}}. Therefore, you can deploy instances only in data centers that meet the requirements. The available data centers are listed when you order your instances, and you can select the one that you want from the list.
+The instance deployments have strict physical infrastructure requirements, which vary among {{site.data.keyword.CloudDataCents_notm}}. When you place your instance order, the available data centers are listed within regions and you can select the one that you want from the list.
 
-For more information, see the _Available data centers_ sections in:
-* [Requirements and planning for Cloud Foundation instances](../sddc/sd_planning.html)
+For more information, see the _IBM Cloud Data Center availability_ sections in:
 * [Requirements and planning for vCenter Server instances](../vcenter/vc_planning.html)
+* [Requirements and planning for vCenter Server with Hybridity Bundle instances](../vcenter/vc_hybrid_planning.html)
+* [Requirements and planning for Cloud Foundation instances](../sddc/sd_planning.html)
+* [Requirements and planning for VMware vSphere on IBM Cloud](../vsphere/vs_planning.html)
+* [Requirements and planning for NetApp ONTAP Select instances](../netapp/np_planning.html)
+* [Requirements and planning for VMware Federal instances](../vcenter/vc_fed_planning.html)
 
 ## How long does it take for my instance to be deployed?
 
@@ -118,13 +126,13 @@ VMware ESXi is automatically installed on each bare metal server, but you are re
 
 ## How can I view a list of all notifications?
 
-To view the complete notification history, click **Notifications** from the left navigation pane. Notifications with a severity level of **Informational** and **Warning** are listed.
+To view the complete notification history, click **Notifications** from the left navigation pane.
 
 ## What if I have a problem with IBM Cloud for VMware Solutions?
 
 If you need assistance with {{site.data.keyword.vmwaresolutions_short}}, contact IBM Support through one of the support channels. For more information, see [Contacting IBM Support](trbl_support.html).
 
-## Related links
+### Related links
 
 * [Notifications](notifications.html)
 * [Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html)

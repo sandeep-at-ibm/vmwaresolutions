@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-09"
 
 ---
 
@@ -18,7 +18,7 @@ To use {{site.data.keyword.vmwaresolutions_full}} to order instances, you must h
 
 The {{site.data.keyword.cloud_notm}} account that you are using must have certain permissions to be able to order the components in your instances and perform operations on your behalf. The permission requirements are applicable to all types of instances and services you are ordering from the {{site.data.keyword.vmwaresolutions_short}} console.
 
-Authorized users can verify and update the permissions for an {{site.data.keyword.cloud_notm}} account on the {{site.data.keyword.slportal_full}}. For more information, see [Edit a User's Customer Portal Permissions](https://knowledgelayer.softlayer.com/procedure/edit-users-customer-portal-permissions){:new_window}.
+Authorized users can verify and update the permissions for an {{site.data.keyword.cloud_notm}} account on the {{site.data.keyword.slportal_full}}. For more information, see _Editing a user's customer portal permissions_ in [Managing a user profile](../../../customer-portal/cpmanuserprof.html){:new_window}.
 
 Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} account
 
@@ -37,11 +37,12 @@ Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} account
 | View Tickets | This permission is required to monitor the service tickets that are related to the components in your instance for {{site.data.keyword.cloud_notm}} infrastructure provisioning delays and problems. |
 | View Hardware Details | This permission is required to retrieve the hardware details, which are needed for order validation and automated configuration. |
 | View Licenses | This permission is required to retrieve and validate the licenses that are used by your instance. |
+| View Passwords | This permission is required to be able to administer the ordered VSIs. |
 | Manage Device Monitoring | This permission is not required to place an order but it is required to retrieve and validate the monitoring status of the {{site.data.keyword.baremetal_long}} on which the VMware ESXi servers are running in your instance. |
 
 ## VLAN spanning for classic (non-VRF) accounts
 
-If you are using a classic (non-VRF) {{site.data.keyword.cloud_notm}} account, VLAN spanning must be enabled. If VLAN spanning is not enabled for classic accounts, the various components of the VMware virtualization environment might not be able to communicate with each other. To enable VLAN spanning in your {{site.data.keyword.cloud_notm}} account, see [Enable or Disable VLAN Spanning](https://knowledgelayer.softlayer.com/procedure/enable-or-disable-vlan-spanning){:new_window}.
+If you are using a classic (non-VRF) {{site.data.keyword.cloud_notm}} account, VLAN spanning must be enabled. If VLAN spanning is not enabled for classic accounts, the various components of the VMware virtualization environment might not be able to communicate with each other. To enable VLAN spanning in your {{site.data.keyword.cloud_notm}} account, see [Enable or Disable VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ## Related links
 

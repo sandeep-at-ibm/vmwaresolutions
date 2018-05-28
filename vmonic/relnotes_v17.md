@@ -10,7 +10,7 @@ lastupdated: "2017-07-05"
 
 # Release notes for V1.7
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_full}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Updates for VMware Cloud Foundation instances
 
@@ -51,6 +51,6 @@ You can upgrade your NSX license edition from the **Summary** tab of your vCente
 Improvements are made throughout the user interface:
 * The **Properties** tab on the Cloud Foundation instance details page is renamed to **Summary**. You can now view details of the instance, the access information of the instance-related components, and the instance deployment history on this tab.
 * A new **Infrastructure** tab is introduced on the Cloud Foundation instance details page. You can view, add, or remove ESXi servers on this tab.
-* The documentation for {{site.data.keyword.vmwaresolutions_full}} has a new format and is now completely integrated into the Bluemix catalog, together with the Bluemix set of documentation. You can access the documentation in one of the following ways:
+* The documentation for {{site.data.keyword.vmwaresolutions_short}} has a new format and is now completely integrated into the Bluemix catalog, together with the Bluemix set of documentation. You can access the documentation in one of the following ways:
   * From the {{site.data.keyword.vmwaresolutions_short}}, click **Docs** at the left of the banner.
-  * From the Bluemix documentation catalog, scroll down to the **Compute & Services** section and click **{{site.data.keyword.vmwaresolutions_full}}**.
+  * From the Bluemix documentation catalog, scroll down to the **Compute & Services** section and click **{{site.data.keyword.vmwaresolutions_short}}**.

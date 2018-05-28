@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-03"
 
 ---
 
@@ -31,9 +31,9 @@ After you associate the {{site.data.keyword.cloud_notm}} account, the console au
 
 ## Procedure
 
-1. Click **Settings** from the left navigation pane.
-2. If you want to be notified by email when events occur, select the **Enable email notifications** check box.
-3. If you want to be notified on the console when events occur, select the **Enable console notifications** check box.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Settings** from the left navigation pane.
+2. If you want to be notified by email when new events occur, select the **Enable email notifications** check box.
+3. If you want to be notified on the console when new events occur, select the **Enable console notifications** check box.
 4. In the **IBM Cloud infrastructure Credentials** area, enter the user name of your {{site.data.keyword.cloud_notm}}  account, and then follow the instructions on the console to enter the {{site.data.keyword.slapi_short}} key.
 5. Click **Save Credentials**.
 
@@ -47,4 +47,4 @@ The stored {{site.data.keyword.cloud_notm}} account credentials are used in futu
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
 * [Notifications](notifications.html)
-* [SoftLayer Development/API](http://knowledgelayer.softlayer.com/topic/developmentapi){:new_window}
+* [SoftLayer API](../../../customer-portal/cpapi.html){:new_window}

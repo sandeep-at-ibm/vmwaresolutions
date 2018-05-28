@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-04-30"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -14,7 +14,7 @@ Find answers to frequently asked questions about the ESXi servers managed on the
 
 ## How many ESXi servers can I add to my instance?
 
-* For vCenter Server instances, you can you can expand the default cluster to have up to 51 ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers. Since you can add up to 10 clusters to an instance,  each deployed instance can have a maximum of 51 + 9x59 = 582 ESXi servers across all clusters.
+* For vCenter Server instances, you can expand the default cluster to have up to 51 ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers. Since you can add up to 10 clusters to an instance,  each deployed instance can have a maximum of 51 + 9x59 = 582 ESXi servers across all clusters.
 * For Cloud Foundation instances, the standard configuration has four ESXi servers. You can add a maximum of 28 servers (to a total of 32 servers). For Cloud Foundation instances in a multi-site configuration, you can have a maximum of 128 ESXi servers across all instances.
 
   **Note**: If your Cloud Foundation configuration requires a multi-site deployment with more than 128 ESXi servers, [contact IBM Support](trbl_support.html) for assistance.
@@ -55,10 +55,10 @@ Static routes can be added for storage but the operations must be done with extr
 
 **Note**: Adding static routes for vMotion is not supported. Changes in vMotion subnet configuration might result in failures in the {{site.data.keyword.vmwaresolutions_short}} functionality.
 
-## Related links
+### Related links
 
 * [Expanding and contracting capacity for vCenter Server instances](../vcenter/vc_addingremovingservers.html)
 * [Expanding and contracting capacity for Cloud Foundation instances](../sddc/sd_addingremovingservers.html)
-* [Adding and viewing clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html)
-* [Adding and viewing clusters for Cloud Foundation instances](../sddc/sd_addingviewingclusters.html)
+* [Adding, viewing, and deleting clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html)
+* [Adding, viewing, and deleting clusters for Cloud Foundation instances](../sddc/sd_addingviewingclusters.html)
 * [Contacting IBM Support](trbl_support.html)

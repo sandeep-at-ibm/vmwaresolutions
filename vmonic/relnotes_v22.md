@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-04-02"
+lastupdated: "2018-05-18"
 
 ---
 
 # Release notes for V2.2
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_full}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Spectre and Meltdown remediation
 
-{{site.data.keyword.vmwaresolutions_full}} has released patches from VMware in response to the vulnerabilities known as Spectre and Meltdown (CVE-2017-5753, CVE-2017-5715 and CVE-2017-5754).
+{{site.data.keyword.vmwaresolutions_short}} has released patches from VMware in response to the vulnerabilities known as Spectre and Meltdown (CVE-2017-5753, CVE-2017-5715 and CVE-2017-5754).
 
 * CVEID: [CVE-2017-5753](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5753)
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
@@ -46,7 +46,7 @@ For important considerations before securing a VMware Federal instance, see [Sec
 For more information, see:
 
 * [VMware Federal on {{site.data.keyword.cloud_notm}} overview](../vcenter/vc_fed_overview.html)
-* [Viewing the default cluster for VMware Federal instances](../vcenter/vc_fed_addingviewingclusters.html)
+* [Adding, viewing, and deleting clusters for VMware Federal instances](../vcenter/fed_addviewdeleteclusters.html)
 * [Expanding and contracting capacity for VMware Federal instances](../vcenter/vc_fed_addingremovingservers.html)
 
 ## Advanced configuration settings on ESXi servers
@@ -70,9 +70,9 @@ For V2.2 and later releases, you can now increase the number of ESXi servers to 
 
 For vCenter Server and Cloud Foundation instance orders, you now have the option to reuse existing public and private VLANs for your network configuration. When existing VLANs are not available, you continue to have the option to order one new public and two new private VLANs.
 
-For important considerations before selecting existing VLANs, see the *Networking* section in the instance order documentation:
-* [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html#networking)
-* [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html#networking)
+For important considerations before selecting existing VLANs, see the *Network interface settings* sections in:
+* [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
+* [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
 
 ## Updates for VMware vCenter Server instances
 
@@ -100,7 +100,7 @@ You can now add up to 10 clusters to VMware vCenter Server instances that are de
 
 Business Partner users can now select from four component license bundles when ordering a new vSphere cluster. Choose from Standard with Management, Advanced, Advanced with Networking, or Advanced with Networking and Management. You can also include additional VMware components to your order. However, the option to Bring Your Own License is not available.
 
-For more information, see the *VMware Components* section in [Ordering new vSphere clusters](../vsphere/vs_orderinginstances.html#vmware-components).
+For more information, see the *Licensing settings* section in [Ordering new vSphere clusters](../vsphere/vs_orderinginstances.html).
 
 ## Updates for NetApp ONTAP Select instances
 
@@ -128,7 +128,7 @@ For more information, see [Considerations for KMIP for VMware on {{site.data.key
 
 The IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service is now available to instances that are deployed in (or upgraded to) V2.2 or later releases.
 
-This service provides data protection, data reuse, and recovery tools for virtual environments. It can be implemented as a stand-alone solution or integrated with your IBM Spectrum Protect Plus environment to offload copies for long-term storage and data governance with scale and efficiency.
+This service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement it as a stand-alone solution or you can integrate it with your IBM Spectrum Protect&trade; Plus environment to offload copies for long-term storage and data governance.
 
 The IBM Spectrum Protect Plus on IBM Cloud service provides data protection for the workload VMs only.
 
@@ -150,7 +150,7 @@ For more information, see:
 
 ## New and updated documentation
 
-* A comparison table with the supported functions for Cloud Foundation and vCenter Server instances, as well as VMware vSphere clusters, is now available in the documentation. You can see, at a glance, the differences between the functions that each type of instance provides. For more information, see [Instance comparison chart](../vmonic/inst_comp_chart.html).
+* A comparison table with the supported functions for Cloud Foundation and vCenter Server instances, as well as VMware vSphere clusters, is now available in the documentation. You can see, at a glance, the differences between the functions that each type of instance provides. For more information, see [Offering comparison chart](../vmonic/inst_comp_chart.html).
 
 * The VLANs and software Bill of Materials (BOM) is now provided in the documentation for Cloud Foundation and vCenter Server instances, as well as VMware vSphere clusters.
 
