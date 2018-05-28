@@ -4,45 +4,43 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-05-23"
 
 ---
 
-# Multi-site configuration for vCenter Server on IBM Cloud instances
+# Multi-site configuration for vCenter Server with Hybridity Bundle instances
 
 {{site.data.keyword.vmwaresolutions_full}} allows instances to be deployed across different locations and have them up and running in a short time.
 
-**Notes**:
-* Multi-site configuration for vCenter Server instances is supported only to V2.0 and later instances.
-* You cannot link between VMware Cloud Foundation and VMware vCenter Server instances in a multi-site configuration.
+<!--* You cannot link between VMware Cloud Foundation and VMware vCenter Server instances in a multi-site configuration.-->
 
 ## Multi-site deployment components
 
 A multi-site deployment consists of the following components.
 
-* **Primary instance**: The primary VMware vCenter Server instance has the following configuration:
+* **Primary instance**: The primary vCenter Server with Hybridity Bundle instance has the following configuration:
   *  Microsoft Active Directory (AD) and DNS (Domain Name System) root domain
   *  vCenter Server subdomain
   *  SSO (Single Sign-On) domain
   *  SSO site name
-* **Secondary instance or instances**: One or more secondary vCenter Server instances, linked to the primary instance, with the following configuration:
+* **Secondary instance or instances**: One or more secondary vCenter Server with Hybridity Bundle instances, linked to the primary instance, with the following configuration:
    *  SSO site name
    *  DNS subdomain that is linked to the root domain on the primary instance
    *  DNS and AD replication set-up between the AD virtual machines on the primary and secondary instances.
    *  PSC (Platform Services Controller) deployed and configured to replicate with the PSC on the primary instance.
    *  VMware vCenter on the secondary instances are set up with Enhanced Linked Mode to the vCenter on the primary instance.
 
-## vCenter Server multi-site deployment
+## vCenter Server with Hybridity Bundle multi-site deployment
 
 The multi-site configuration feature uses a hub and spoke topology with a primary site and a maximum of seven secondary sites. A single layer of sites is supported, that is, you cannot configure subsequent sites that are linked to other secondary sites. You can have a total of 128 ESXi servers in a multi-site configuration across all instances.
 
 **Note**: If your configuration requires a multi-site deployment with more than 128 ESXi servers, contact IBM Support for assistance. For more information, see [Contacting IBM Support](../vmonic/trbl_support.html).
 
-The following graphic depicts the overall view of the vCenter Server multi-site deployment.
+The following graphic depicts the overall view of the vCenter Server with Hybridity Bundle multi-site deployment.
 
-Figure 1. vCenter Server multi-site deployment
+Figure 1. vCenter Server with Hybridity Bundle multi-site deployment
 
-![vCenter Server multi-site deployment](../sddc/multisite-hub-spoke.svg "vCenter Server multi-site deployment")
+![vCenter Server with Hybridity Bundle multi-site deployment](../sddc/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle multi-site deployment")
 
 The model contains the following layers:
 
@@ -53,7 +51,7 @@ You can assign only one secondary instance to a primary instance at a time. You 
 
 You can have a maximum of 8 (1 primary and 7 secondary) instances that are deployed in a multi-site configuration.
 
-**Note**: Deleting vCenter Server instances that are part of a multi-site configuration requires special planning. For more information, see [Deleting vCenter Server instances in a multi-site configuration](vc_deletinginstance_multi.html).
+**Note**: Deleting vCenter Server with Hybridity Bundle instances that are part of a multi-site configuration requires special planning. For more information, see [Deleting vCenter Server with Hybridity Bundle instances in a multi-site configuration](vc_hybrid_deletinginstance_multi.html).
 
 ## Related links
 

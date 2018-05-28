@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-02-19"
+lastupdated: "2018-05-16"
 
 ---
 
@@ -16,7 +16,7 @@ VMware NSX is a network virtualization platform that allows the virtualization o
 services such as switches, routing, and firewalls. For more information about NSX, see [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
 
 As part of the ordering process for your vCenter Server instance, the following actions are completed on your behalf:
-* A private customer subnet is ordered to be used by your VMs (virtual machines) to access the {{site.data.keyword.cloud}} infrastructure (SoftLayer) private network.
+* A private customer subnet is ordered to be used by your VMs (virtual machines) to access the {{site.data.keyword.cloud}} infrastructure private network.
 * A public customer subnet is ordered to allow your VMs to access the internet.
 * NSX is deployed and configured in your vCenter Server instance.
 * A sample NSX Logical Switch is deployed to be used by the customer workload VMs.
@@ -79,7 +79,6 @@ Additionally, you can find more details about the customer subnets by completing
 
 ## Related links
 
-* [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html)
 * [Troubleshooting](../vcenter/vcenter_chg_impact.html)
 * [FAQs](../vmonic/faq.html)
 * [NSX Edge Services Gateway](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/nsx-esg){:new_window}

@@ -4,17 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-22"
+lastupdated: "2018-05-23"
 
 ---
 
 # VMware Federal on IBM Cloud overview
 
-VMware Federal on {{site.data.keyword.cloud}} provides support for ordering a base vCenter Server instance in the WDC03 Federal on {{site.data.keyword.CloudDataCent_notm}}. In addition to supporting a subset of vCenter Server instance offerings, VMware Federal on {{site.data.keyword.cloud_notm}} provides US Federal Government agencies with the option to secure deployed VMware vCenter Server instances. Selecting the option to secure the deployed instances removes sensitive information stored about the instance and removes the open management connection for ongoing access to the instance for management functions, such as adding and removing hosts and clusters. After selecting the secure option, all management functions are disabled except for a full instance delete.
+VMware Federal on {{site.data.keyword.cloud}} provides support for ordering a base VMware vCenter Server instance in the WDC03 {{site.data.keyword.CloudDataCent_notm}}.
 
-For more information on VMware vCenter Server on {{site.data.keyword.cloud_notm}} and vCenter Server architecture, see [vCenter Server overview](vc_vcenterserveroverview.html).
+In addition to supporting a subset of vCenter Server instance offerings, VMware Federal on {{site.data.keyword.cloud_notm}} provides US Federal Government agencies with the option to secure deployed VMware vCenter Server instances. Selecting the option to secure the deployed instances removes sensitive information stored about the instance and removes the open management connection for ongoing access to the instance for management functions, such as adding and removing hosts and clusters. After selecting the secure option, all management functions are disabled except for a full instance delete.
 
-**Attention:** VMware Federal on {{site.data.keyword.cloud_notm}} currently offers only a subset of the vCenter Server offerings. Preconfigured {{site.data.keyword.cloud_notm}} Bare Metal Servers, Bring Your Own License, add cluster, and the option to order additional services are not supported.
+For more information about vCenter Server on {{site.data.keyword.cloud_notm}} and the vCenter Server architecture, see [vCenter Server overview](vc_vcenterserveroverview.html).
+
+**Attention:** VMware Federal on {{site.data.keyword.cloud_notm}} offers only a subset of the vCenter Server offerings. Multi-site configuration, preconfigured {{site.data.keyword.cloud_notm}} Bare Metal Servers, Bring Your Own License, and the option to order additional services are not supported.
 
 ## vCenter Server instance components for VMware Federal on IBM Cloud
 
@@ -37,26 +39,27 @@ The following networking components are ordered:
     **Important**: This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, note that using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
   * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
-  **Note** The VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic is removed as part of the action to secure your deployed VMware instance. For more information, see [Securing VMware Federal instances](vc_fed_securinginstance.html).
+  **Note**: The VMware NSX Edge Services (ESG) for outbound HTTPS management traffic is removed as part of the action to secure your deployed VMware Federal instance. For more information, see [Securing VMware Federal instances](vc_fed_securinginstance.html).
 
 ### Virtual Server Instances
 
 The following VSIs (Virtual Server Instances) are ordered:
 * A VSI for IBM CloudBuilder, which is shut down after the instance deployment is completed.
-* A Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and virtual machines are registered, is deployed and can be looked up.
+* (For instances V2.3 and later) You can choose to deploy a single Microsoft Windows Server VSI for Microsoft Active Directory (AD) or two high availability Microsoft Windows VMs in the management cluster to help enhance security and robustness.
+* (For V2.2 instances) A Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and virtual machines are registered, is deployed and can be looked up.
 
 ### Storage
 
 During initial deployment, you can choose between vSAN and NFS storage options.
 
-The vSAN option offers customized CPU model and RAM configurations, with various options for disk type and quantity:
-* Disk quantity: 2, 4, 6, or 8
+The vSAN option offers customized configurations, with various options for disk type and quantity:
+* Disk quantity: 2, 4, 6, or 8.
 * Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED.
 
   In addition, 2 cache disks of 960 GB are also ordered per host.
 
 The NFS option offers customized shared file-level storage for workloads with various options for size and performance:
-* Size: 1, 2, 4, 8, or 12 TB
+* Size: 1, 2, 4, 8, or 12 TB.
 * Performance: 2, 4, or 10 IOPS/GB. The 10 IOPS/GB option is available for certain {{site.data.keyword.CloudDataCents_notm}} only.
 * Individually configure file shares.
 
@@ -68,6 +71,7 @@ If you choose the NFS option, one 2 TB, 4 IOPS/GB file share for management comp
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
+* Support and Services fees
 
 ## vCenter Server expansion node components
 
@@ -75,7 +79,7 @@ Each vCenter Server expansion node will deploy and incur charges for the followi
 
 ### Hardware for expansion nodes
 
-One Bare Metal Server with the configuration presented in [vCenter Server instance  components](../vcenter/vc_vcenterserveroverview.html#vcenter-server-instance-components).
+One Bare Metal Server with the configuration presented in [vCenter Server instance components for VMware Federal on IBM Cloud](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud).
 
 ### Licenses and fees for expansion nodes
 
