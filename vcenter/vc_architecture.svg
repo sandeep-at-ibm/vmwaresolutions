@@ -10,19 +10,16 @@
 	.st4{font-family:'Roboto-Light';}
 	.st5{font-size:26px;}
 	.st6{font-size:21px;}
-	.st7{font-size:18px;}
-	.st8{font-size:20px;}
 </style>
 <rect class="st0" width="600" height="100"/>
 <rect y="220" class="st1" width="600" height="100"/>
 <rect y="110" class="st2" width="297.5" height="100"/>
 <rect x="305.3" y="110" class="st2" width="294.7" height="100"/>
-<text transform="matrix(1 0 0 1 152.4775 43.3711)"><tspan x="0" y="0" class="st3 st4 st5">Virtualization Management</tspan><tspan x="39.3" y="34" class="st3 st4 st6">VMware vCenter Server </tspan><tspan x="248.2" y="31" class="st3 st4 st7">®</tspan></text>
-<text transform="matrix(1 0 0 1 19.6601 158.6688)"><tspan x="0" y="0" class="st3 st4 st5">Compute Virtualization</tspan><tspan x="44.9" y="23.9" class="st3 st4 st6">VMware vSphere </tspan><tspan x="197.4" y="20.9" class="st3 st4 st6">®</tspan></text>
-<text transform="matrix(1 0 0 1 333.6861 159.7861)"><tspan x="0" y="0" class="st3 st4 st5">Network Virtualization</tspan><tspan x="58.3" y="23.9" class="st3 st4 st6">VMware NSX</tspan><tspan x="170.5" y="20.9" class="st3 st4 st6">   </tspan></text>
-<text transform="matrix(1 0 0 1 95.4536 263.5371)"><tspan x="0" y="0" class="st3 st4 st5">Physical Infrastructure on IBM </tspan><tspan x="326.3" y="-6" class="st3 st4 st8">®</tspan><tspan x="334.6" y="0" class="st3 st4 st5"> Cloud</tspan><tspan x="404.6" y="0" class="st3 st4 st6"> </tspan></text>
+<text transform="matrix(1 0 0 1 152.4775 43.3711)"><tspan x="0" y="0" class="st3 st4 st5">Virtualization Management</tspan><tspan x="45.3" y="34" class="st3 st4 st6">VMware vCenter Server</tspan></text>
+<text transform="matrix(1 0 0 1 19.6601 158.6688)"><tspan x="0" y="0" class="st3 st4 st5">Compute Virtualization</tspan><tspan x="51.6" y="23.9" class="st3 st4 st6">VMware vSphere</tspan></text>
+<text transform="matrix(1 0 0 1 333.6861 159.7861)"><tspan x="0" y="0" class="st3 st4 st5">Network Virtualization</tspan><tspan x="65" y="23.9" class="st3 st4 st6">VMware NSX</tspan></text>
+<text transform="matrix(1 0 0 1 102.3994 263.5371)"><tspan x="0" y="0" class="st3 st4 st5">Physical Infrastructure on IBM Cloud</tspan><tspan x="390.7" y="0" class="st3 st4 st6"> </tspan></text>
 <text transform="matrix(1 0 0 1 410.2971 302.2838)" class="st3 st4 st6">Network</text>
 <text transform="matrix(1 0 0 1 273.8523 302.8424)" class="st3 st4 st6">Storage</text>
 <text transform="matrix(1 0 0 1 114.1154 302.7475)" class="st3 st4 st6">Compute</text>
-<text transform="matrix(1 0 0 1 521.0831 181.0686)" class="st3 st4 st6">®</text>
 </svg>

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-29"
+lastupdated: "2018-05-24"
 
 ---
 
@@ -22,38 +22,38 @@ The vCenter Server deployment has strict requirements on the physical infrastruc
 
 Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server instances
 
-| IBM Cloud Data Center | Location | Server options |
-|:-----|:----------------| :---------------------------|
-| AMS03 | Amsterdam | Customized |
-| CHE01 | Chennai | Customized |
-| DAL09 | Dallas | Customized |
-| DAL10 | Dallas | Customized, Small, Medium, Large |
-| DAL12 | Dallas | Customized |
-| DAL13 | Dallas | Customized |
-| FRA02 | Frankfurt | Customized, Small, Medium, Large |
-| HKG02 | Hong Kong | Customized |
-| LON02 | London | Customized |
-| LON04 | London | Customized |
-| LON06 | London | Customized, Small, Medium, Large |
-| MEL01 | Melbourne | Customized |
-| MEX01 | Queretaro | Customized |
-| MIL01 | Milan | Customized |
-| MON01 | Montreal | Customized |
-| OSL01 | Oslo | Customized |
-| PAR01 | Paris | Customized |
-| SAO01 | Sao Paulo | Customized |
-| SEO01 | Seoul | Customized |
-| SJC03 | San Jose | Customized, Small, Medium, Large |
-| SJC04 | San Jose | Customized |
-| SNG01 | Singapore | Customized |
-| SYD01 | Sydney | Customized |
-| SYD04 | Sydney | Customized |
-| TOK02 | Tokyo | Customized |
-| TOR01 | Toronto | Customized, Small, Medium, Large |
-| WDC03 | Washington, DC | Customized, Small, Medium, Large |
-| WDC04 | Washington, DC | Customized, Small, Medium, Large |
-| WDC06 | Washington, DC | Customized |
-| WDC07 | Washington, DC | Customized |
+| {{site.data.keyword.CloudDataCent_notm}} | Location | Region | Server options |
+|:----------------------|:---------|:-------|:---------------|
+| AMS03 | Amsterdam | Europe | Customized |
+| CHE01 | Chennai | Asia Pacific | Customized |
+| DAL09 | Dallas | NA South | Customized |
+| DAL10 | Dallas | NA South | Customized, Small, Medium, Large |
+| DAL12 | Dallas | NA South | Customized |
+| DAL13 | Dallas | NA South | Customized |
+| FRA02 | Frankfurt | Europe | Customized, Small, Medium, Large |
+| FRA04 | Frankfurt | Europe | Customized |
+| HKG02 | Hong Kong | Asia Pacific | Customized |
+| LON02 | London | Europe | Customized |
+| LON04 | London | Europe | Customized |
+| LON06 | London | Europe | Customized, Small, Medium, Large |
+| MEL01 | Melbourne | Asia Pacific | Customized |
+| MEX01 | Queretaro | NA South | Customized |
+| MIL01 | Milan | Europe | Customized |
+| MON01 | Montreal | NA East | Customized |
+| OSL01 | Oslo | Europe | Customized |
+| PAR01 | Paris | Europe | Customized |
+| SAO01 | Sao Paulo | South America | Customized |
+| SEO01 | Seoul | Asia Pacific | Customized |
+| SJC03 | San Jose | NA West | Customized, Small, Medium, Large |
+| SJC04 | San Jose | NA West | Customized |
+| SNG01 | Singapore | Asia Pacific | Customized |
+| SYD01 | Sydney | Asia Pacific | Customized |
+| SYD04 | Sydney | Asia Pacific | Customized |
+| TOK02 | Tokyo | Asia Pacific | Customized |
+| TOR01 | Toronto | NA East | Customized, Small, Medium, Large |
+| WDC04 | Washington, DC | NA East | Customized, Small, Medium, Large |
+| WDC06 | Washington, DC | NA East | Customized |
+| WDC07 | Washington, DC | NA East | Customized |
 
 A small subset of IBM Cloud {{site.data.keyword.CloudDataCents_notm}} offer preconfigured **Small**, **Medium**, and **Large** Bare Metal Server options. Depending on availability and inventory supply, {{site.data.keyword.CloudDataCents_notm}} might display a status indicator in the {{site.data.keyword.vmwaresolutions_full}} console to help you plan your deployments.
 
@@ -81,9 +81,13 @@ This service deploys an HA-pair of FortiGate Virtual Appliances that can allow y
 
 This service optimizes performance and ensures availability and security for applications with the F5 BIG-IP Virtual Edition (VE). For more information, see [Managing F5 on IBM Cloud](../services/managing_f5.html).
 
-### HCX on IBM Cloud
+### HyTrust CloudControl on IBM Cloud
 
-This service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change. For more information, see [Managing HCX on IBM Cloud](../services/managinghcx.html).
+This service provides automated security and compliance support, which gives you better visibility and control over your cloud environment and administrators. For more information, see [HyTrust CloudControl on IBM Cloud considerations](../services/htcc_considerations.html).
+
+### HyTrust DataControl on IBM Cloud
+
+This service protects your data with a powerful encryption and key management solution. The service can secure your workloads throughout their lifecycles. For more information, see [HyTrust DataControl on IBM Cloud considerations](../services/htdc_considerations.html).
 
 ### KMIP for VMware on IBM Cloud
 
@@ -91,9 +95,9 @@ This service can provide lifecycle management for encryption keys that are used 
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-This service provides data protection, data reuse, and recovery tools for virtual environments. It can be implemented as a stand-alone solution or integrated with your IBM Spectrum Protect&trade; Plus environment to offload copies for long-term storage and data governance with scale and efficiency.
+This service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement it as a stand-alone solution or you can integrate it with your IBM Spectrum Protect&trade; Plus environment to offload copies for long-term storage and data governance.
 
-The IBM Spectrum Protect Plus on IBM Cloud service provides data protection for the workload VMs only. For more information, see [Managing IBM Spectrum Protect Plus on IBM Cloud](../services/managingspp.html).
+For more information, see [IBM Spectrum Protect Plus on IBM Cloud considerations](../services/spp_considerations.html).
 
 ### Veeam on IBM Cloud
 

@@ -8,13 +8,13 @@ lastupdated: "2018-05-16"
 
 ---
 
-# Networking considerations for vCenter Server instances
+# Networking considerations for VMware Federal instances
 
-Review the following information for details about networking considerations and requirements for your vCenter Server instances. Ensure that you meet the requirements so that your instance functions properly.
+Review the following information for details about networking considerations and requirements for your VMware Federal instances. Ensure that you meet the requirements so that your instance functions properly.
 
-## Networking components for vCenter Server instances
+## Networking components for VMware Federal instances
 
-To review the networking components that are included in your vCenter Server instance, see the _vCenter Server technical specifications_ section in the [vCenter Server overview](vc_vcenterserveroverview.html).
+To review the networking components that are included in your VMware Federal instance, see [vCenter Server instance components for VMware Federal on IBM Cloud](vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud).
 
 ## NSX Firewall considerations
 
@@ -25,7 +25,7 @@ If you are using NSX Distributed Firewalls (DFW), review the following requireme
 
 ## Using NSX with your virtual machines
 
-During vCenter Server instance deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
+During VMware Federal instance deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
 
 An NSX Edge Services Gateway is also deployed to be used by your workload VMs. For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 

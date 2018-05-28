@@ -4,57 +4,22 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-07"
+lastupdated: "2018-05-25"
 
 ---
 
-# Ordering a VMware Federal instance
+# Ordering VMware Federal instances
 
-To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware instance that enables you to disconnect the open management connection and secure your deployed instance.
+To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware Federal instance that enables you to disconnect the open management connection and secure your deployed instance.
 
 **Note:** Only vCenter Server instances support VMware Federal on {{site.data.keyword.cloud}} at this time.
 
 ## Requirements
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
-*  You meet the requirements and you reviewed the considerations in [vCenter Server requirements](vc_planning.html).
-
-**Important: Do not modify any values that are set during ordering and instance deployment. Doing so can result in your instance becoming unusable. For example, public networking may shut down, servers and Virtual Server Instances (VSIs) may move behind a Vyatta mid-provision, or the IBM CloudBuilder VSI may stop or be deleted.**
-
-## System settings
-
-When you order a VMware Federal instance, you must specify the following settings under **System**.
-
-### Instance name
-
-The instance name must meet the following requirements:
-* Only alphanumeric characters are allowed.
-* The instance name must start and end with an alphanumeric character.
-* The maximum length of the instance name is 10 characters.
-* The instance name must be unique within your account.
-
-### Domain name
-
-The root domain name must meet the following requirements:
-*  Only alphanumeric and dash (-) characters are allowed.
-*  The name must consist of two or more strings that are separated by period (.)
-*  Each string must start with an alphabetic character and end with an alphanumeric character, and the last string can contain only alphabetic characters.
-*  The length of the last string must be in the range 2 - 24 characters.
-
-**Note:** The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (virtual machines) is 50 characters. Domain names must accomodate for this maximum length.
-
-### Subdomain label
-
-The subdomain label must meet the following requirements:
-*  Only alphanumeric and dash (-) characters are allowed.
-*  The subdomain label must start and end with an alphanumeric character.
-*  The maximum length of the subdomain label is 10 characters.
-*  The subdomain label must be unique within your account.
-
-### Instance and domain name format
-
-The VMware Federal instance name and the root domain name use the format in the following table.
+* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
+* You reviewed the information in [Requirements and Planning for VMware Federal instances](vc_fed_planning.html).
+* You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
 Table 1. Value format for instance and domain names
 
@@ -67,63 +32,90 @@ Table 1. Value format for instance and domain names
   | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
 
-### Host name prefix
+**Important**: Do not modify any values that are set during ordering and instance deployment. Doing so can result in your instance becoming unusable. For example, public networking might shut down, servers and Virtual Server Instances (VSIs) might move behind a Vyatta when provision is in progress, or the IBM CloudBuilder VSI might stop or be deleted.
 
-  The host name prefix must meet the following requirements:
-  *  Only alphanumeric and dash (-) characters are allowed.
-  *  The host name prefix must start and end with an alphanumeric character.
-  *  The maximum length of the host name prefix is 10 characters.
+## System settings
 
-### IBM Cloud Data Center location
+You must specify the following system settings when ordering a VMware Federal instance.
 
-Only the WDC03 - Washington, DC {{site.data.keyword.CloudDataCent_notm}} is currently available for VMware Federal instances. This setting is automatically set to the default and disabled.
+### Instance name
 
-## Bare Metal settings
+The instance name must meet the following requirements:
+* Only alphanumeric and dash (-) characters are allowed.
+* The instance name must start and end with an alphanumeric character.
+* The maximum length of the instance name is 10 characters.
+* The instance name must be unique within your account.
+
+### Primary or secondary
+
+Order a new primary instance. Deploying a secondary instance for high availability is not supported at this time.
+
+## Licensing settings
+
+IBM-provided VMware licenses for the following:
+
+* VMware vCenter Server 6.5
+* VMware vSphere Enterprise Plus 6.5u1
+* VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
+
+**Attention:**
+
+* The minimum license editions are indicated on the user interface. If different component editions are supported, you can select the edition that you want. You are responsible to ensure that the license key provided is correct for each VMware component selected.
+* For vSphere, a license charge will be incurred at time of order, but the license charge will subsequently be credited to your account.
+
+## Bare Metal Server settings
 
 Bare Metal settings are based on your customized configuration. The option to select a preconfigured configuration is not supported at this time.
 
-<!-- For guidance on what Bare Metal Server configuration to choose, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+### Data center location
+
+The data center location is set by default to the WDC03 - Washington, DC {{site.data.keyword.CloudDataCent_notm}} and it cannot be modified.
 
 ### Customized
 
-Specify the **CPU Model** and **RAM** for the Bare Metal Server.
+Specify the CPU model and RAM for the Bare Metal Server.
 
 Table 2. Options for customized {{site.data.keyword.baremetal_short}}
 
 | CPU options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.10 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.20 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
-| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.60 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
+| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
+| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
+| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
 
 ### Number of Bare Metal Servers
 
 You can configure the number of ESXi servers in the range 2 - 20.
 
-All ESXi servers share the same configuration.
-
-**Note:** For vSAN storage settings, 4 ESXi servers are required. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
+All ESXi servers share the same configuration. In post-deployment, you can add four more clusters. For vSAN storage settings, 4 ESXi servers are required for both the initial and post-deployment clusters. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Storage settings
 
-Storage settings are based on your selection of either **vSAN** or **NFS**.
+Storage settings are based on your selection of vSAN, NFS, or custom NFS storage.
 
-### vSAN
+### vSAN storage
 
-Specify the following storage options:
+For vSAN, specify the following storage options:
 
-* **Number of vSAN Capacity Disks**: Specify the number of disks for the vSAN shared storage that you want to add. The disk quantities must be 2, 4, 6, or 8.
 * **Disk Type and Size for vSAN Capacity Disks**: Select the capacity that meets your shared storage needs.
+* **Number of vSAN Capacity Disks**: Select the number of disks for the vSAN shared storage that you want to add. The disk quantities must be 2, 4, 6, or 8.
+* Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
 
-### NFS
+### NFS storage
 
 For NFS, you can add file-level shared storage for your instance. Specify the following storage options:
 
-* **File Shares**: Specify the number of file shares for the NFS shared storage that you want to add. The number of file shares must be in the range of 1 to 32.
+* **Number of Shares**: Select the number of file shares for the NFS shared storage that you want to add. The number of file shares must be in the range of 1 to 32.
 * **Size**: Select the capacity that meets your shared storage needs.
 * **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements. The performance levels available to you depend on the VMware that you select.
-* **Configure shares individually**: Optionally select to complete individual file share configuration.
-* **Add NFS**: Optionally select if you are configuring your file shares individually and need to add additional file shares.
+
+### Custom NFS storage
+
+For custom NFS storage, you can specify the settings for each individual share of the file-level shared storage. Specify the following options:
+
+* **Add NFS**: Select for each file shares that you want to configure individually.
+* **Size**: Select the capacity that meets your shared storage needs.
+* **Performance**: Select the IOPS per GB based on your workload requirements. The performance levels available to you depend on the VMware that you select.
 
 Table 3. NFS performance level options
 
@@ -136,71 +128,91 @@ Table 3. NFS performance level options
 <!--### NFS version
 NFS (Network File System) v3 is set by default and you cannot change it. NFS v3 supports SDRS (Storage Distributed Resource Scheduler) and SIOC (Storage I/O Control), and it does not include NFS multipathing.-->
 
-## Licenses
+## Network interface settings
 
-Select IBM-provided VMware licenses for the following:
+### Host name prefix
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
-* VMware vSAN (Advanced or Enterprise) 6.6
+The host name prefix must meet the following requirements:
+*  Only alphanumeric and dash (-) characters are allowed.
+*  The host name prefix must start and end with an alphanumeric character.
+*  The maximum length of the host name prefix is 10 characters.
 
-## Estimated Cost
+### Subdomain label
 
-You can calculate an estimated cost and generate a detailed PDF from each panel as you provide details for your instance order. Complete the fields on the panel and click **Calculate Cost** at the bottom of the panel to generate a cost estimate. Additionally, click the calculated cost estimate link to generate a PDF that provides the estimate details.
+The subdomain label must meet the following requirements:
+*  Only alphanumeric and dash (-) characters are allowed.
+*  The subdomain label must start and end with an alphanumeric character.
+*  The maximum length of the subdomain label is 10 characters.
+*  The subdomain label must be unique within your account.
 
-**Note:** The estimated cost displayed on the panel and the cost estimate details provided in the PDF are only for the items that you have completed on your order. The cost increases as you complete each panel for your instance order.
+### Domain name
+
+The root domain name must meet the following requirements:
+* The domain name must consist of two or more strings that are separated by period (.)
+* The first string must start with an alphabetic character and end with an alphanumeric character.
+* All strings, except for the last one, can contain only alphanumeric and dash (-) characters.
+* The last string can contain only alphabetic characters.
+* The length of the last string must be in the range 2 - 24 characters.
+
+**Note:** The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs is 50 characters. Domain names must accommodate for this maximum length.
+
+### DNS configuration
+
+Select the Domain Name System (DNS) configuration for your instance:
+
+* **Single Public Windows VSI for Active Directory/DNS**: A single Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and virtual machines are registered, is deployed and can be looked up.
+* **Two highly available dedicated Windows Server VMs on the management cluster**: For V2.3 and future releases, two Microsoft Windows virtual machines are deployed, helping enhance security and robustness.
+
+**Important:** You must provide two Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows virtual machines. Use the Microsoft Windows Server 2012 R2 Standard edition license and/or the Microsoft Windows Server 2012 R2 Datacenter edition license.
+
+Currently, each license can only be assigned to one single physical server and covers up to two physical processors. One Standard edition license is capable of running two virtualized Microsoft Windows virtual machines per 2-processor server. Therefore, two licenses are required since two Microsoft Windows virtual machines are deployed in two different hosts.
+
+You have 30 days to activate the virtual machines.
+
+For more information on ordering Windows licensing, see [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+
+## Order summary
+
+Based on your selected configuration for the instance, the estimated cost is instantly generated and displayed in the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
 
 ## Procedure
 
-1. Click **Getting Started** on the left navigation pane.
-2. On the **VMware vCenter Server on IBM Cloud** card, click **Order Instance**.
-3. On the **Order a vCenter Server Instance** page, select **Primary** and click **Next**.
-   **Note:** Deploying a secondary instance for high availability is not supported at this time.
-4. On the **System** page, provide the following information:
-
-    1. Enter the instance name, root domain name, subdomain label, and host name prefix.
-    2. Select the Bare Metal configuration:
-       Specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
-    3. Select the storage configuration.
-       * If you selected **vSAN**, specify the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
-       * If you selected **NFS**, specify the **File Shares**, **Size**, and **Performance**. Optionally select **Configure shares individually** to complete individual file configuration. Use the **Add NFS** option to add additional file shares, if necessary.
-    4. Click **Next**.
-5. On the **License** page, specify the license edition for the VMware NSX license and VMware vSAN (if you selected vSAN storage) and then click **Next**.
-
-   **Attention**:
-
-   * The minimum license editions are indicated on the user interface. If different component editions are supported, you can select the edition that you want. You are responsible to ensure that the license key provided is correct for each VMware component selected.
-   * For vSphere, a license charge will be incurred at time of order, but the license charge will subsequently be credited to your account.
-
-6. On the **Summary** page, verify the instance configuration before you place the order.
+1. From the IBM Cloud Catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
+2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server** card and click **Create**.
+3. On the **vCenter Server** page, enter the instance name.
+4. Click **Primary Instance** to deploy a single instance in the environment.
+5. Specify the VMware NSX license edition.
+6. Complete the Bare Metal Server configuration:
+  1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
+  2. Select the **Customized** CPU model and the amount of **RAM**.
+7. Complete the storage configuration.
+      * If you selected **vSAN Storage**, select the **Disk Type and Size for vSAN Capacity Disks**, the **Number of vSAN Capacity Disks**, and VMware vSAN license edition.
+      * If you selected **NFS Storage**, select the **Number of Shares**, **Size**, and **Performance**.
+      * If you selected **Custom NFS Storage**, click the **+** icon next to **Add NFS** for each file share that you want to configure individually and select the **Size** and **Performance** for each file share.
+8. Complete the network interface configuration.
+   1. Enter the host name prefix, subdomain label, and root domain name.
+   2. Select the DNS configuration.
+9. On the **Order Summary** pane, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
-   2. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the instance.
-   3. Review the estimated cost of the instance by clicking the cost link under **Estimated Cost**. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   4. Click **Create**.
+   2. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you order the instance.
+   3. Review the estimated cost of the instance by clicking the cost link under **Calculate Cost**. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+   4. Click **Provision**.
 
 ## Results
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [vCenter Server instance components](../vcenter/vc_vcenterserveroverview.html#vcenter-server-instance-components) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default.
+When the instance is successfully deployed, the components that are described in [VMware Federal instance components](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
+<!--When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.-->
+
 ## What to do next
 
-View and secure the VMware Federal instance that you ordered.
+View, manage, or secure the VMware Federal instance that you ordered.
 
-For more information, see:
-
-* [Viewing VMware Federal instances](vc_fed_viewinginstance.html)
-* [Securing VMware Federal instances](vc_fed_securinginstance.html)
-
-<!--**Important:**
-
-After selecting the secure option, all management functions are disabled except for a full instance delete.
-
-You must manage the {{site.data.keyword.vmwaresolutions_full}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}} or any other means outside of the console.
+**Important:** You must manage the {{site.data.keyword.vmwaresolutions_full}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}} or any other means outside of the console.
 If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
 **CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
@@ -208,11 +220,14 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 *  Expanding or contracting instance capacity through removing ESXi servers
 *  Powering off components
 
-   Exceptions to these activities include managing the shared storage file shares from the 	{{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.-->
+   Exceptions to these activities include managing the shared storage file shares from the 	{{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
 ## Related links
 
 * [Signing up for an {{site.data.keyword.cloud_notm}} account](../vmonic/signing_softlayer_account.html)
-* [VMware Federal on IBM Cloud overview](vc_fed_overview.html)
+* [Viewing VMware Federal instances](vc_fed_viewinginstance.html)
+* [Expanding and contracting capacity for VMware Federal instances](vc_fed_addingremovingservers.html)
+* [Adding, viewing, and deleting clusters for VMware Federal instances](fed_addviewdeleteclusters.html)
+* [Securing VMware Federal instances](vc_fed_securinginstance.html)
 * [Deleting VMware Federal instances](vc_fed_deletinginstance.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)

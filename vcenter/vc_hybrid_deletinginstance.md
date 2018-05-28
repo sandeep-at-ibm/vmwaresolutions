@@ -4,22 +4,23 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-05-23"
 
 ---
 
-# Deleting VMware Federal instances
+# Deleting vCenter Server with Hybridity Bundle instances
 
-To release the components that you ordered in a VMware Federal instance, delete the instance.
+To release the components that you ordered in a VMware vCenter Server with Hybridity Bundle instance, delete the instance.
 
-When you delete a VMware Federal instance, the following components are released sequentially:
+When you delete a vCenter Server with Hybridity Bundle instance, the following components are released sequentially:
+1. All deployed services
+2. Support and Services fee
+3. VMware product licenses
+4. ESXi servers
+5. Subnets
+6. VLANs
 
-1. Support and service fees
-2. VMware product licenses
-3. ESXi servers
-4. Subnets
-
-Because of resource dependencies, the components in your instance are not released immediately when you delete the instance. For example, the subnets cannot be deleted until the ESXi servers are fully reclaimed by {{site.data.keyword.cloud}} infrastructure, which happens at the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle. At the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle, which is typically 30 days, the subnets are deleted and the instance deletion is completed.
+Because of resource dependencies, the components in your instance are not released immediately when you delete the instance. For example, the subnets and VLANs cannot be deleted until the ESXi servers are fully reclaimed by {{site.data.keyword.cloud}} infrastructure, which happens at the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle. At the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle, which is typically 30 days, the subnets and VLANs are deleted and the instance deletion is completed.
 
 **Attention:** You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the deleted instance.
 
@@ -45,8 +46,8 @@ Because of resource dependencies, the components in your instance are not releas
 
 ## Related links
 
-* [VMware Federal on IBM Cloud overview](vc_fed_overview.html)
-* [Ordering VMware Federal instances](vc_fed_orderinginstance.html)
-* [Securing VMware Federal instances](vc_fed_securinginstance.html)
-* [Viewing VMware Federal instances](vc_fed_viewinginstance.html)
+* [Deleting vCenter Server with Hybridity Bundle instances in a multi-site configuration](vc_hybrid_deletinginstance_multi.html)
+* [Ordering vCenter Server with Hybridity Bundle instances](vc_hybrid_orderinginstance.html)
+* [Viewing vCenter Server with Hybridity Bundle instances](vc_hybrid_viewinginstances.html)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservers.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)

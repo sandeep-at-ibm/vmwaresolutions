@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-05-23"
 
 ---
 
-# Networking considerations for vCenter Server instances
+# Networking considerations for vCenter Server with Hybridity Bundle instances
 
-Review the following information for details about networking considerations and requirements for your vCenter Server instances. Ensure that you meet the requirements so that your instance functions properly.
+Review the following information for details about networking considerations and requirements for your VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instances. Ensure that you meet the requirements so that your instance functions properly.
 
-## Networking components for vCenter Server instances
+## Networking components for vCenter Server with Hybridity Bundle instances
 
-To review the networking components that are included in your vCenter Server instance, see the _vCenter Server technical specifications_ section in the [vCenter Server overview](vc_vcenterserveroverview.html).
+To review the networking components that are included in your vCenter Server with Hybridity Bundle instance, see the _vCenter Server with Hybridity Bundle technical specifications_ section in the [vCenter Server with Hybridity Bundle  overview](vc_hybrid_overview.html).
 
 ## NSX Firewall considerations
 
@@ -41,3 +41,4 @@ Review the following considerations before you change the passwords for the NSX 
 * [Overview of NSX](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/nsx-esg){:new_window}
 * [Managing NAT Rules](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}
+* [Considerations for VMware HCX on IBM Cloud](../services/hcx_considerations.html)

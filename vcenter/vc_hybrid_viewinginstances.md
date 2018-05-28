@@ -4,32 +4,34 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-05-25"
 
 ---
 
-# Viewing VMware Federal instances
+# Viewing vCenter Server with Hybridity Bundle instances
 
-Use this procedure to view the VMware Federal instances that you ordered and detailed information about them.
+View the VMware vCenter Server with Hybridity Bundle instances that you ordered and detailed information about them.
 
-## Viewing VMware Federal instances summary
+## Viewing vCenter Server with Hybridity Bundle instances summary
 
+To view a summary of all the vCenter Server with Hybridity Bundle instances in your environment, complete the following steps:
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
-2. In the **vCenter Server** table, view the summary about the ordered instances.
+2. In the **vCenter Server** table, view the summary about the ordered instances:
 
-Table 1. VMware Federal instance items
+Table 1. vCenter Server with Hybridity Bundle instances items
 
 | Item        | Description       |  
 |:------------- |:------------- |
-| Name | The name of the instance. |
-| Version | The release version the instance was deployed in, or upgraded to. |  
-| Location | The {{site.data.keyword.CloudDataCent}} where the instance is hosted. |  
-| Creation Time | The date and time that the instance was created. |  
-| Actions | The option to delete an instance. |
+| Name | The name of the instance |
+| Version | The release version that the instance was deployed in, or upgraded to |  
+| Location | The {{site.data.keyword.CloudDataCent}} where the instance is hosted |  
+| Creation time | The date and time when the instance was created |  
+| Status | The status of the instance |  
+| Actions | Click the **Delete** icon to delete the instance |
 
 The instance **Status** can have a range of options.
 
-Table 2. VMware Federal data center instance status descriptions
+Table 2. vCenter Server with Hybridity Bundle instances status descriptions
 
 | Status        | Description       |
 |:------------- |:------------- |
@@ -37,46 +39,45 @@ Table 2. VMware Federal data center instance status descriptions
 | Building | The instance is being configured. |
 | Ready to Use | The instance is ready to use. |
 | Modifying | The instance is being modified. |
-| Secured | The deployed instance is disconnected from an open management connection and automation.
 | Failed | The creation, configuration, or modification process failed. |
 | Deleting | The instance is being deleted. |
 | Deletion Error | An error occurred when the instance was being deleted. |
 | Deleted | The instance is deleted. |
 
-## Viewing VMware Federal instance property details
+## Viewing vCenter Server with Hybridity Bundle instances property details
 
-To view the property details of an instance:
-
+To view the property details of a vCenter Server with Hybridity Bundle instance:
 1. On the **vCenter Server Instances** table, click an instance name.
 2. Under **Instance Details**, view the details for the instance.
 
-Table 3. VMware Federal instance property details
+Table 3. vCenter Server with Hybridity Bundle instances property details
 
 | Property        | Description       |
 |:------------- |:------------- |
 | ID | The ID of the instance. |
 | Name | The name of the instance. |
 | Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted. |
-| Current version |  The current version of {{site.data.keyword.vmwaresolutions_short}}. |
-| vCenter version | The version of VMware vCenter Server.<br><br>**Note:** There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct. |
+| Current version | The current version of {{site.data.keyword.vmwaresolutions_short}}. |
+| vCenter version | The VMware vCenter Server with Hybridity Bundle version.<br><br>**Note**: There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct. |
 | NSX for vSphere | The VMware NSX for vSphere product version. |
 | NSX license edition | The version and edition of the VMware NSX license. |
-| DNS Root Domain | The root domain name is the DNS (Domain Name System) domain name and the Microsoft Active Directory (AD) forest root name. |
-| DNC SSO Domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server instances with a value of <samp class="ph codeph">vsphere.local</samp>. |
-| DNS Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server instance host names reside. The subdomain name is in the format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
-| Status | The status of the instance. |
+| DNS, Root Domain | The root domain name is the DNS (Domain Name System) domain name and the Microsoft Active Directory (AD) forest root name. |
+| DNS, SSO Domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server with Hybridity Bundle instances with a value of <samp class="ph codeph">vsphere.local</samp>. |
+| DNS, Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server with Hybridity Bundle instance host names reside. The subdomain name is in the format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
+| Hybridity Bundle | Indicates if the vCenter Server with Hybridity Bundle is installed. |
+| Status  | The status of the instance.<br><br>The information that is displayed provides an update on the progress of the deployment or the action that is taken on the instance. If there are issues, a message might be displayed to help you investigate and resolve the problem. |
 
-## Viewing access information for VMware Federal instances
+## Viewing access information for vCenter Server with Hybridity Bundle instances
 
 Under **Access Information**, view the access information for the instance-related components. The passwords displayed are initial passwords that are generated by the system. If you change them outside of the {{site.data.keyword.vmwaresolutions_short}} console, they are not updated on the instance details page.
 
-Table 4. Access information for instance-related components
+Table 4. vCenter Server with Hybridity Bundle access information for instance-related components
 
 | Component        | Description       |
 |:------------- |:------------- |
 | AD/DNS IPs | The IP addresses of the two AD servers. |
 | AD/DNS FQDNs | The AD/DNS server fully qualified domain names.<br><br>**Note**: The same administrator password can be used to connect to all the AD/DNS servers by using a remote desktop connection. |
-| AD/DNS ADMIN (Remote Desktop)  | For primary instances, it displays the user name and password to access the AD server via a remote desktop connection.
+| AD/DNS ADMIN (Remote Desktop)  | For primary instances, it displays the user name and password to access the AD server via a remote desktop connection.<br><br>For secondary instances, click the **View on primary instance** link to be directed to the user name and password information on the primary instance.<br><br>**Note**: After the secondary instance is added to the primary DNS domain and replication occurs, the local administrator password on the primary instance might overwrite the local administrator password on the secondary instance. By clicking the **View on primary instance** link, you will get access to the correct administrator password.  
 | NSX Manager IP  | The IP address of the NSX Manager.  |
 | NSX Manager FQDN  | The NSX Manager fully qualified domain name (FQDN).  |
 | NSX Manager HTTP  | The user name and password used to access the NSX Manager web console. |
@@ -89,18 +90,18 @@ Table 4. Access information for instance-related components
 | vCenter ADMIN  | The VMware vCenter Single Sign-On user name and password that you can use to log in to the vCenter Server by using the vSphere Web Client.  |
 | vCenter SSH  | The user name and password that you can use to access the vCenter Server VM via SSH connection.  |
 
-## Viewing the deployment history for VMware Federal instances
+## Viewing the deployment history for vCenter Server with Hybridity Bundle instances
 
 Under **Deployment History**, view the deployment history for the instance.
 
-Table 5. VMware Federal instance deployment history
+Table 5. vCenter Server with Hybridity Bundle instance deployment history
 
 | Item        | Description       |  
 |:------------- |:------------- |
-| Date | The date and time when the instance status is changed. |
-| Summary | The details of the change. |
+| Date | The date and time when the instance status is changed |
+| Summary | The details of the change |
 
-## What to do if errors occurs
+## What to do if errors occur
 
 If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](../vmonic/trbl_support.html).
 
@@ -117,7 +118,7 @@ Review the following topics for information to help you complete the login instr
 
 ## Related links
 
-* [VMware Federal on IBM Cloud overview](vc_fed_overview.html)
-* [Ordering VMware Federal instances](vc_fed_orderinginstance.html)
-* [Deleting VMware Federal instances](vc_fed_deletinginstance.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
+* [Ordering vCenter Server with Hybridity Bundle instances](vc_hybrid_orderinginstance.html)
+* [Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingviewingclusters.html)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservers.html)
+* [Deleting vCenter Server with Hybridity Bundle instances](vc_hybrid_deletinginstance.html)
