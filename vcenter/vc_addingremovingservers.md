@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-01"
 
 ---
 
@@ -18,7 +18,7 @@ If your initial cluster has vSAN as its storage, adding one or more ESXi servers
 
 * When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the virtual machines (VMs) running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers using the {{site.data.keyword.vmwaresolutions_full}} console.
 
-   **Note:** Do not add or remove ESXi servers from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
+**Note:** Do not add or remove ESXi servers from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
 
 * Before you remove ESXi servers with the IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service installed, ensure that there are no active (failed or in progress) backup or restore operations, because these active operations might prevent the ESXi servers to be removed.
 * A vCenter Server instance with NFS storage must have at least 2 ESXi servers. For instances that are deployed in V2.1 or later, you can expand the default cluster to have up to 51 ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers.
@@ -28,16 +28,6 @@ If your initial cluster has vSAN as its storage, adding one or more ESXi servers
    * For the **Customized** configuration, you can add 1 - 20 ESXi servers at a time. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 *  A vCenter Server instance with vSAN storage must have at least 4 ESXi servers.
-* The {{site.data.keyword.cloud_notm}} infrastructure provides an automatic and free upgrade to your CPU model if the configuration that you order is not available. The following table identifies the possible upgrade scenarios.
-
-Table 1. Possible CPU model upgrade options
-
-| Ordered CPU        | Automatic CPU upgrade options       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz<br><br>Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz<br><br>Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz<br><br>Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz<br><br>Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz |
-| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz |
 
 ## Procedure
 

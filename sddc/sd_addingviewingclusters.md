@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-01"
 
 ---
 
@@ -67,15 +67,6 @@ Table 1. Options for customized {{site.data.keyword.baremetal_short}}
 For the **Preconfigured** setting, you can choose a **Bare Metal Server Configuration** depending on your requirements:
 * Small (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 128 GB RAM / 12 disks)
 * Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 12 disks)
-
-**Note:** The {{site.data.keyword.cloud_notm}} infrastructure provides an automatic and free upgrade to your CPU model if the configuration that you order is not available. The following table identifies the possible upgrade scenarios.
-
-Table 2. Possible CPU model upgrade options
-
-| Ordered CPU        | Automatic CPU upgrade options       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz<br><br>Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz |
 
 ### vSAN storage settings
 

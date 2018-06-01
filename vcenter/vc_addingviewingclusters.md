@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-01"
 
 ---
 
@@ -25,7 +25,7 @@ The number of clusters that can be added to an instance depend on the instance v
 ### System settings
 When you add a cluster for a vCenter Server instance, you must specify the following settings.
 
-**Cluster name**
+#### Cluster name
 
 The cluster name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
@@ -33,7 +33,7 @@ The cluster name must meet the following requirements:
 * The maximum length of the cluster name is 30 characters.
 * The cluster name must be unique within the vCenter Server instance.
 
-**Data center location**
+#### Data center location
 
 The {{site.data.keyword.CloudDataCent}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
@@ -43,7 +43,7 @@ If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}
 
 You can choose either **Customized** or **Preconfigured**.
 
-**Customized**
+#### Customized
 
 For the **Customized** setting, you have a number of options for the **CPU Model** and **RAM**.
 
@@ -58,25 +58,14 @@ Table 1. Options for customized {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
-**Preconfigured**
+#### Preconfigured
 
 For the **Preconfigured** setting, you can choose a **Bare Metal Server Configuration** depending on your requirements:
 * Small (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz / 128 GB RAM / 2 disks)
 * Medium (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 256 GB RAM / 2 disks)
 * Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 2 disks)
 
-**Note:** The {{site.data.keyword.cloud_notm}} infrastructure provides an automatic and free upgrade to your CPU model if the configuration that you order is not available. The following table identifies the possible upgrade scenarios.
-
-Table 2. Possible CPU model upgrade options
-
-| Ordered CPU        | Automatic CPU upgrade options       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz<br><br>Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz<br><br>Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz<br><br>Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz<br><br>Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz |
-| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz |
-
-**Number of Bare Metal Servers**
+#### Number of Bare Metal Servers
 
 A minimum of two {{site.data.keyword.baremetal_short}} is required for a cluster.
 
@@ -92,13 +81,13 @@ After deployment, you can create up to four more clusters. If you select the **C
 
 For your storage, you can use either **vSAN** or **NFS**.
 
-**vSAN**
+#### vSAN
 
 vSAN is available only for the customized Bare Metal configuration. You can customize the VMware vSAN storage by specifying the number of vSAN capacity disks (2, 4, 6, or 8), the disk type and size that meet your storage needs, and the vSAN licensing option.
 
 If your initial cluster was a vSAN cluster, any additional vSAN clusters use the same vSAN license and have the same configuration as the initial one. This is also true if any cluster in the instance has vSAN chosen to be deployed on it (initial or additional). The first time you are prompted for the vSAN license (BYOL or purchased) and the edition. The next time you select vSAN for an additional cluster, the license chosen initially is reused.
 
-**NFS**
+#### NFS
 
 For NFS, you can add file-level shared storage for your instance. Specify the following storage options:
 
@@ -108,7 +97,7 @@ For NFS, you can add file-level shared storage for your instance. Specify the fo
 * **Configure shares individually**: Optionally select to complete individual file share configuration.
 * **Add NFS**: Optionally select if you are configuring your file shares individually and need to add additional file shares.
 
-Table 3. NFS performance level options
+Table 2. NFS performance level options
 
 | Option        | Details       |
   |:------------- |:------------- |
@@ -129,7 +118,7 @@ You can specify the licensing option for the VMware vSphere component in the clu
 
    **Note**: Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
 
-3. Click the **Infrastructure** tab and click **Add** at the upper-right corner of the **CLUSTERS** table.
+3. Click the **Infrastructure** tab and click **Add** on the upper-right corner of the **CLUSTERS** table.
 4. Enter the cluster name.
 5. Optionally, select **Select a different location** and select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
 6. Complete the Bare Metal configuration.
@@ -143,7 +132,7 @@ You can specify the licensing option for the VMware vSphere component in the clu
   * For non-Business Partner users, you can select one of the following options:
       * If you want new licenses to be purchased on your behalf, select **Include with purchase** for the component.
       * If you want to use your own VMware license for the component, select **I will provide** and enter your license key for it.
-9. Click **Calculate Cost** and review the estimated cost of the cluster. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+9. Click **Calculate Cost** and review the estimated cost of the cluster. To save or print your order summary, click the **Print** or **Download** icon on the upper-right corner of the PDF window.
 10. Click **Add** to add your cluster.
 
 ### Results after adding clusters to vCenter Server instances
@@ -178,7 +167,7 @@ You can specify the licensing option for the VMware vSphere component in the clu
         <dt class="dt dlterm">Deleted</dt>
         <dd class="dd">The cluster is deleted.</dd>
     </dl>
-  * **Actions**: Click the Delete icon to delete the cluster.
+  * **Actions**: Click the **Delete** icon to delete the cluster.
 4. Click the cluster name to view the list of ESXi servers and their information:
 
   * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
