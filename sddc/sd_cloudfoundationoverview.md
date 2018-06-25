@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -37,7 +37,7 @@ This layer consists of vCenter Server, which represents the management layer for
 
 On the {{site.data.keyword.vmwaresolutions_short}} console, you can expand and contract the capacity of your instances using the add and remove ESXi server capability. In addition, lifecycle management functions like applying updates and upgrading the VMware components in the hosted environment are also available.
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+For details about the architecture, see [Solution overview](../archiref/solution/solution_overview.html).
 
 ## Cloud Foundation instance components
 
@@ -45,12 +45,16 @@ The following components are included in your Cloud Foundation instance.
 
 **Note**: Charges that are incurred for the hardware, networking, virtual machines, and storage might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
 
-### Hardware
+### Bare Metal Server
 
 You can order {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with one of the following configurations:
-* **Customized**: You can specify the CPU model and RAM for the {{site.data.keyword.baremetal_short}}.
-* **Preconfigured**: **Small** (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 128 GB RAM / 12 disks) or **Large** (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 12 disks)
-
+*  **Customized**: {{site.data.keyword.baremetal_short}} with your selected CPU model and RAM size.   
+   * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
+   * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
+   **Note:** If you plan to use vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
+* **Preconfigured**: 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
+  * **Small** (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 128 GB RAM / 12 disks)
+  * **Large** (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 12 disks)
 
 ### Networking
 

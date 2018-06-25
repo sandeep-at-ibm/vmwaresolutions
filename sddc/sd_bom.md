@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-06-08"
 
 ---
 
@@ -38,7 +38,7 @@ Table 2. BOM for the software components in Cloud Foundation instances
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX for vSphere                          | 6.3.5        |
 | VMware       | SDDC Manager                             | 2.4          |
-| {{site.data.keyword.IBM}} | CloudDriver                 | 2.3          |
+| {{site.data.keyword.IBM}} | CloudDriver                 | 2.4          |
 | Microsoft    | Windows Server Standard edition (64-bit) | 2012R2       |
 
 ## Advanced configuration settings for ESXi servers

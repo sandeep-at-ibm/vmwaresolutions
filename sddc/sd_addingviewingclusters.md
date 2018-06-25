@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-08"
 
 ---
 
@@ -46,21 +46,24 @@ The data centers available to you depend on the Bare Metal Server configuration 
 
 If you deploy the cluster to a different data center or pod, three additional VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
-### Bare Metal settings
+### Bare Metal Server settings
 
-You can choose **Customized** or **Preconfigured**.
+You can choose either **Customized** or **Preconfigured**.
 
 #### Customized
 
-For the **Customized** setting, you have a number of option for the **CPU Model** and **RAM**.
+For the **Customized** setting, you have a number of option for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
 Table 1. Options for customized {{site.data.keyword.baremetal_short}}
 
 | CPU options   | RAM options   |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 #### Preconfigured
 
@@ -74,9 +77,9 @@ For the **Preconfigured** Bare Metal Server configurations, you cannot change th
 * For the **Small** configuration, two disk drives of 1.9 TB SSD SED are ordered.
 * For the **Large** configuration, four disk drives of 3.8 TB SSD SED are ordered.
 
-For the **Customized** Bare Metal Server configuration, you can customize the vSAN storage by specifying the number of vSAN capacity disks, the disk type and size that meet your storage needs.
+For the **Customized** Bare Metal Server configuration, you can customize the vSAN storage by specifying the number of vSAN capacity disks, and the disk type and size that meet your storage needs.
 
-### Licenses settings
+### Licensing settings
 
 You can specify the licensing options for the VMware components in the cluster, including VMware vSphere and VMware vSAN:
 * For Business Partner users, the vSphere license (Enterprise Plus edition) and the vSAN license are included and purchased on your behalf. However, you must specify the edition for the vSAN license.
@@ -89,9 +92,9 @@ You can specify the licensing options for the VMware components in the cluster, 
 
    **Note:** Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
 
-3. Click the **Infrastructure** tab and click **Add** at the upper-right corner of the **CLUSTERS** table.
-4. Enter the cluster name.
-5. (Optional) Select **Select a different location** and select the {{site.data.keyword.CloudDataCent_notm}} to host the cluster.
+3. Click **Infrastructure** on the left navigation pane and click **Add** on the upper-right corner of the **CLUSTERS** table.
+4. On the **Add Cluster** page, enter the cluster name.
+5. If you want to host the cluster in a different {{site.data.keyword.CloudDataCent_notm}} than the one that the instance is hosted in, under **Bare Metal Server**, check the **Select a different location** check box and choose the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
 6. Complete the Bare Metal configuration:
    * If you selected **Customized**, select the **CPU Model** and the **RAM** size.
    * If you selected **Preconfigured**, select the **Bare Metal Server Configuration**.
@@ -103,12 +106,15 @@ You can specify the licensing options for the VMware components in the cluster, 
    * For non-Business Partner users, you can select one of the following options:
        * If you want new licenses to be purchased on your behalf, select **Include with purchase** for the components. For VMware vSAN, also select the license edition.
        * If you want to use your own VMware license for a component, select **I will provide** and enter the license key for the component.
-9. Click **Calculate Cost**, and then review the estimated cost of the cluster by clicking the price link. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-10. Click **Add** to add the cluster.
+9. On the **Order Summary** pane, verify the cluster configuration before you add the cluster.
+   1. Review the settings for the cluster.
+   2. Review the estimated cost of the cluster. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+   3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you add the cluster.
+   4. Click **Provision**.
 
 ### Results after adding clusters to Cloud Foundation instances
 
-1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history from the **Summary** tab on the instance details page.
+1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history on the instance summary page.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
 
 **Important**: You cannot change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
@@ -117,7 +123,7 @@ You can specify the licensing options for the VMware components in the cluster, 
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
 2. In the **Cloud Foundation instances** table, click an instance to view the clusters in it.
-3. Click the **Infrastructure** tab. View the summary about the clusters::
+3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, view the summary about the clusters::
    * **Name**: The name of the cluster.
    * **ESXi servers**: The number of ESXi servers in the cluster.
    * **CPU**: The CPU specification of the ESXi servers in the cluster.
@@ -138,8 +144,8 @@ You can specify the licensing options for the VMware components in the cluster, 
        <dt class="dt dlterm">Deleted</dt>
        <dd class="dd">The cluster is deleted.</dd>
    </dl>
-   * **Actions**: Click the Delete icon to delete the cluster.
-4. Click a cluster name to view its details, which include the list of ESXi servers and their information, as well as the details of licenses:
+   * **Actions**: Click the **Delete** icon to delete the cluster.
+4. Click a cluster name to view the list of ESXi servers and their information:
 
    * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
 
@@ -188,7 +194,7 @@ You might want to delete a cluster from an instance when it is no longer needed.
 
    **Note**: Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot delete clusters from the instance.
 
-3. Click the **Infrastructure** tab. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon.
+3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon.
 4. Confirm that you completed the migration of VMs to other clusters, if appropriate, and that you want to delete the cluster.
 
 ## Related links

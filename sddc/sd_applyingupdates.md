@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-06-08"
 
 ---
 
@@ -19,14 +19,14 @@ An available update is a record in the software updates list of the instance, wh
 ## Before you begin
 
 Before you attempt to apply an update, expand the update entry by clicking the down arrow and verify the following information:
-* The version of the update. You must apply the updates in chronological sequence that is from the earliest one to the most recent one. Ensure that you applied all the previous updates before you apply the most recent one. For example, you must apply the V2.2 update before attempting to apply the V2.3 update.
+* The version of the update. You must apply the updates in chronological sequence that is from the earliest one to the most recent one. Ensure that you applied all the previous updates before you apply the most recent one. For example, you must apply the V2.3 update before attempting to apply the V2.4 update.
 * Whether downtime is required.
 * The total estimated time to complete the update.
 * The impact of the update on the VMware virtual environment. Table 1 shows how different levels of impact affect the system.
 * The update details.
 
 Table 1. Update levels and impact
-  
+
 <table>
   <tr>
     <th>Update level</th>
@@ -48,10 +48,11 @@ Table 1. Update levels and impact
 
 ## Procedure
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane. All instance resources are displayed.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
 2. In the **Cloud Foundation Instances** table, click the instance to update.
-3. Click the **Summary** tab and then the **Infrastructure** tab to verify that all details are displayed correctly on them. If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver virtual machine, as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
-4. Click the **Update and Patch** tab.
+3. On the **Summary** page, verify that all instance details are displayed correctly. Then click **Infrastructure** on the left navigation pane to verify the details on the **Infrastructure** page.
+   If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver virtual machine, as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
+4. Click **Update and Patch** on the left navigation pane.
 5. Click the down arrow to expand the update that you want to apply and then complete one of the following steps:
    *  To start the update immediately, click the overflow menu icon in the **Actions** column of the update entry, and then click **Update Now**.
    *  To schedule a future update, click the overflow menu icon in the **Actions** column of the update entry, and then click **Schedule Update**. Select the date, time, and time zone when you want the update to be started. Click **OK**.
@@ -70,7 +71,7 @@ Table 1. Update levels and impact
   {:tip}
 
 6. For details about the update statuses, see the following table.
-   
+
    Table 2: Details of update statuses
 
     <table>
@@ -109,6 +110,6 @@ Table 1. Update levels and impact
 ## Related links
 
 * [Cloud Foundation overview](../sddc/sd_cloudfoundationoverview.html)
-* [Veeam on IBM Cloud](../services/veeam_considerations.html)
+* [Veeam on IBM Cloud overview](../services/veeam_considerations.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)
 * [FAQs](../vmonic/faq.html)
