@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -80,8 +80,7 @@ Four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with
 
 * 10 Gbps dual public and private network uplinks
 * Three VLANs (Virtual LANs): one public VLAN and two private VLANs
-* One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router)
-* Two secure VMware NSX Edge Services Gateways
+* One secure VMware NSX Edge Services Gateway
 
 ### Virtual Server Instances
 
