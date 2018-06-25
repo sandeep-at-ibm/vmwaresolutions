@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -19,7 +19,7 @@ This procedure guides you through VMware component selecting, {{site.data.keywor
 ## Requirements
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
 *  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](vs_planning.html).
 
 ## System settings
@@ -87,16 +87,22 @@ Select the {{site.data.keyword.CloudDataCent_notm}} where the cluster is to be h
 
 **Note:** If you select a vSAN component, the location list is filtered by SSD availablity.
 
-### CPU Model
+### CPU model and RAM
 
-The following CPU models are available for {{site.data.keyword.baremetal_short}}:
-* Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz
-* Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz
-* Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz
+Specify the CPU model and RAM for the Bare Metal Server.
 
-### RAM
+Table 2. Options for customized {{site.data.keyword.baremetal_short}}
 
-The RAM options include 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1 TB, and 1.5 TB. Options available depend on whether you selected the VMware vSAN component.
+| CPU options        | RAM options       |
+|:------------- |:------------- |
+| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+
+Options available depend on whether you selected the VMware vSAN component.
 
 ### Number of Bare Metal Servers
 
@@ -162,10 +168,10 @@ Network settings are based on your selection of either **Order New VLANs** or **
 
 One public VLAN and two private VLANs are required for your cluster order. The two private VLANs are trunked into each Bare Metal Server.
 
-**Order New VLANs**  
+#### Order New VLANs
 Select to order one new public VLAN and two new private VLANs.
 
-**Select Existing VLANs**  
+#### Select Existing VLANs  
 Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
 
   When you select to reuse existing public and private VLANs, specify the VLANs and subnets:
@@ -179,13 +185,13 @@ Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, exi
 * Ensure that the firewall configuration on the selected VLANs does not block the management data traffic.
 * Ensure that all of the VLANs you select are in the same pod, because ESXi servers cannot be provisioned on mixed-pod VLANs.
 
-**FortiGate Physical Appliance 300 Series HA Pair**
+#### FortiGate Physical Appliance 300 Series HA Pair
 
-You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [Components and considerations for FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html).
+You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Security Appliance on IBM Cloud overview](../services/fsa_considerations.html).
 
 ## Order summary
 
-Based on your configurations, the estimated cost is instantly generated and displayed in the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
+Based on your configurations, the estimated cost is instantly generated and displayed in the **Order Summary** pane on the right. Click **Pricing details** at the bottom of the pane to generate a PDF document that provides the estimate details.
 
 ## Procedure
 
@@ -196,7 +202,7 @@ Based on your configurations, the estimated cost is instantly generated and disp
 4. Select the VMware components:
   * If you are a business partner user, select a license bundle and any additional available VMware components.
   * If you are a non-business partner user, select the component, edition if any, and specify the licensing option.
-  When you choose to bring your own license (BYOL) for VMware vSphere Enterprise Plus, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to request the default vSphere licenses on your ordered {{site.data.keyword.baremetal_short}} to be replaced with your provided licenses.   
+  When you choose to Bring Your Own License (BYOL) for VMware vSphere Enterprise Plus, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to request the default vSphere licenses on your ordered {{site.data.keyword.baremetal_short}} to be replaced with your provided licenses.   
 
     **Important:** You are responsible to follow up with the ticket to ensure that you replace the vSphere license on the newly ordered ESXi servers so that the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
 

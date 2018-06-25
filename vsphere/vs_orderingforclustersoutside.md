@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,8 +15,8 @@ You can use the VMware vSphere offering to scale existing vSphere clusters that 
 ## Requirements
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
-*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](vs_planning.html).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
+*  You reviewed the requirements and considerations in [Requirements and planning for VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_planning.html).
 
 ## Procedure
 

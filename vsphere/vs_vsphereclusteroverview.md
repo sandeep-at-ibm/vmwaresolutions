@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -37,14 +37,11 @@ Licenses (IBM-provided or BYOL) for the following VMware components:
    * VMware vRealize Operations Enterprise
    * VMware vRealize Log Insight
 
-### Hardware
+### Bare Metal Server
 
-One or more {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with the following options.
-* CPU options:
-   * Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz
-   * Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz
-   * Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz
-* RAM options: 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1 TB, and 1.5 TB
+One or more {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with with your selected CPU model and RAM size:
+* 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
+* 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
 
 The options available depend on whether you selected the VMware vSAN component.
 
@@ -82,7 +79,7 @@ One IBM Cloud Bare Metal Server with the networking configuration presented in [
 * One IBM Cloud Bare Metal Server with VMware vSphere Enterprise Plus 6.0u2 or 6.5u1  
 * Optional VMware components presented in [Components of VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
-**Important**: You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console to scale the new cluster using the saved configuration. For more information, see [Scaling existing clusters](vs_scalingexistingclusters.html).
+**Important**: You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console to scale the new cluster using the saved configuration. For more information, see [Scaling existing vSphere clusters](vs_scalingexistingclusters.html).
 
 ## Related links
 
