@@ -32,7 +32,7 @@ For more information, see:
 ## F5 on IBM Cloud service
 
 The F5 BIG-IP Virtual Edition (VE) on IBM Cloud service is now available to both VMware Cloud Foundation and VMware vCenter Server instances. This service provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, secure, and federated application access.
-You can order instances with the F5 BIG-IP Virtual Edition (VE) on IBM Cloud service included right from the start, or add this service to your existing instances later from the **Services** tab on the instance property details page of the {{site.data.keyword.vmwaresolutions_short}} console. Depending on your requirements, you can select one of three licensing options for BIG-IP VEs.
+You can order instances with the F5 BIG-IP Virtual Edition (VE) on IBM Cloud service included when you order your instance, or add this service to your existing instances later from the **Services** tab on the instance property details page of the {{site.data.keyword.vmwaresolutions_short}} console. Depending on your requirements, you can select one of three licensing options for BIG-IP VEs.
 
 For more information, see:
 * [Considerations for F5 on IBM Cloud](../services/f5_considerations.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-05-29"
 
 ---
 
@@ -32,8 +32,8 @@ For instances deployed in V2.1 or earlier releases, you must enable the necessar
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
 2. Restart each ESXi server. For more information, see [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081).
-3. Note that you may need to increase the size of the vCenter Server to accommodate the additional virtual machines and ESXi servers.
-4. Open an IBM Support ticket indicating that you have manually applied the vSAN changes above and that you want to have your upgraded instance enabled for additional ESXi servers beyond 32.
+3. Note that you might need to increase the size of the vCenter Server to accommodate the additional virtual machines and ESXi servers.
+4. Open an IBM Support ticket indicating that you have manually applied the vSAN changes by completing steps 1 to 3 and that you want to have your upgraded instance enabled for additional ESXi servers beyond 32.
 
 ## Can I change the ESXi server names and IP addresses?
 

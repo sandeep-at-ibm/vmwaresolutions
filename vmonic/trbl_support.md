@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-05-18"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -47,6 +47,6 @@ To contact IBM Support from the {{site.data.keyword.slportal}}, complete the fol
 
 1. Go to https://control.softlayer.com.
 2. Log in to the portal with your **IBMid** account.
-3. Complete **Steps 6-8** described above to submit your ticket.
+3. Complete steps 6 to 8 described in the _From the IBM Cloud for VMware Solutions console_ section in this topic to submit your ticket.
 
     **Note**: Regardless of the channel you use to open the support ticket (either the {{site.data.keyword.vmwaresolutions_short}} console or the {{site.data.keyword.slportal}}), the terms of the _{{site.data.keyword.cloud_notm}} Infrastructure and Platform Services Support Policy_ still apply.

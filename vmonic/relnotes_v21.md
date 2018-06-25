@@ -26,7 +26,7 @@ For more information, see [Addressing Spectre and Meltdown vulnerabilities](../v
 
 The HCX on {{site.data.keyword.cloud_notm}} service is now available to VMware Cloud Foundation instances and VMware vCenter Server instances that are running vSphere 6.5 and that are deployed in or upgraded to V2.1 or later releases. This service can seamlessly extend the networks of your on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows bi-directional migration of virtual machines (VMs) between your on-premises data centers and {{site.data.keyword.cloud_notm}} without any change. By establishing a layer 2 bridge, HCX leverages WAN optimization, deduplication, compression, and encryption to more quickly and securely migrate data over a Direct Link or VPN tunnel. The bulk migration of VMs is backwards compatible with VMware vSphere 5.1 or greater. If you use vSphere 6.0 or greater on-premises, you can vMotion live (powered-on) VMs from on-premises to an IBM Cloud data center. You are not required to have VMware NSX installed in your data center when using HCX.
 
-You can order Cloud Foundation or vCenter Server instances with the HCX on {{site.data.keyword.cloud_notm}} service included right from the start, or add this service to your existing instances later from the **Services** tab on the instance details page.
+You can order Cloud Foundation or vCenter Server instances with the HCX on {{site.data.keyword.cloud_notm}} service included when you order your instance, or add this service to your existing instances later from the **Services** tab on the instance details page.
 
 You can also order an on-premises HCX instance for licensing and activation of your on-premises HCX installation.
 
@@ -52,7 +52,7 @@ For more information, see:
 
 For Zerto on {{site.data.keyword.cloud_notm}} service deployed in V2.1 and later Cloud Foundation instances and vCenter Server instances, Zerto Virtual Replication 5.5u2 is provisioned. Zerto virtual replication appliances (VRAs) are now deployed to the management datastore (either vSAN or Endurance) rather than to the local datastore for performance reasons. If you have existing VRAs, you should consider migrating their storage to the management datastore for better performance.
 
-For more information, see [Zerto on IBM Cloud components](../services/addingzertodr.html).
+For more information, see [Zerto on IBM Cloud overview](../services/addingzertodr.html).
 
 ## Updates for VMware vCenter Server instances
 

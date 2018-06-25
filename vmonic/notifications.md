@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-05-30"
 
 ---
 
@@ -69,7 +69,7 @@ You can check notifications for the status of system or user operations. You can
 
 ## Filtering notifications
 
-By default, all notifications are displayed. You can filter the notifications by status, severity, and type. To filter the notifications, click the drop-down lists at the top of the page and select the check boxes only for the items that you want to be displayed.
+By default, all unread notifications are displayed. You can filter the notifications by status, severity, and type. To filter the notifications, select the check boxes only for the items that you want to display in the **Status**, **Severity**, or **Type** drop-down lists.
 
 ## Related links
 

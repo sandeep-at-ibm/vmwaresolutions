@@ -19,7 +19,7 @@ Complete the following steps on the V1.5 primary instance to add the permissions
 1. Log in to the Windows AD server with the **Administrator** password.
 2. Open **Server Manager** and click **Tools -> Active Directory Users and Computers**.
 4. On the **Active Directory Users and Computers** window, click the **Users** section under your root domain.
-5. Right-click the Automation user to open the **Properties** window.
+5. Right-click the automation user to open the **Properties** window.
 6. Click the **Member Of** tab.
 7. Click **Add** and enter the **Enterprise Admins** and **Schema Admins** groups as object names to the list.  
 
