@@ -37,4 +37,4 @@ Because of resource dependencies, the components in your instance are not releas
 ## Related links
 
 * [Deleting Cloud Foundation instances](sd_deletinginstance.html)
-* [Removing services from Cloud Foundation instances](sd_addingremovingservices.html)
+* [Ordering, viewing, and removing services from Cloud Foundation instances](sd_addingremovingservices.html)

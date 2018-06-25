@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ To deploy a unified software-defined data center (SDDC) platform with standard c
 ## Requirements
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
 *  You reviewed the requirements and considerations in [Requirements and planning for Cloud Foundation instances](sd_planning.html).
 
 **Important:** Do not modify any values that are set during ordering and instance deployment. Doing so can result in your instance becoming unusable. In addition, do not change the instance name, root domain name, subdomain label, or host name prefix, after the instance is deployed.
@@ -46,7 +46,7 @@ Specify the licensing options for the following VMware components in the instanc
 
 For Business Partner users, the vCenter Server license (Standard edition), the vSphere license (Enterprise Plus edition), the NSX license, and the vSAN license are included and purchased on your behalf. However, you must specify the edition for the vSAN license.
 
-For non-Business Partner users, you can use the IBM-provided VMware licenses for these components by selecting **Include with purchase**, or you can bring your own license (BYOL) by selecting **I will provide** and entering your own license keys.
+For non-Business Partner users, you can use the IBM-provided VMware licenses for these components by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license keys.
 
 ## Bare Metal Server settings
 
@@ -75,6 +75,9 @@ Table 1. Options for customized {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 <!-- For guidance on what Bare Metal Server configuration to choose, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
 
@@ -126,7 +129,7 @@ The root domain name must meet the following requirements:
 
 The domain name and subdomain label are used to generate the user name and server names of the instance, as shown in the following table.
 
-Table 3. Value format for user names, domain names, and server names
+Table 2. Value format for user names, domain names, and server names
 
 | Name        | Value Format      |
   |:------------- |:------------- |
@@ -198,34 +201,8 @@ Based on your selected configuration for the instance and add-on services, the e
       * If you want to order new public and private VLANs, click **Order New VLANs**.
       * If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs** and specify the VLANs and the subnets.
 
-9. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** in the pop-up configuration window.    
-   * To install IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} (preselected by default), specify the following settings in the **Configure IBM Spectrum Protect Plus on IBM Cloud** window:
-      1. **Number of Storage Volumes**: The number of volumes that meet your storage needs.
-      2. **Storage Size per Volume**: The storage capacity per volume. A minimum of 500 GB per volume is required for management.
-      3. **Storage Performance**: The IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
-      4. Specify licensing settings:
-         * If you want to order licenses for IBM Spectrum Protect Plus, specify the **Number of VMs to License** on the **Order Licenses** tab. A minimum of 10 VMs is required for license management.
-         * If you want to bring your own license (BYOL), click the **IBM Spectrum Protect Plus license** tab, and then click **Add License Files** to upload you own license file.
-      5. Click **Save**.
-   * To install Veeam on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure Veeam on IBM Cloud** window:
-      1. **Number of VMs to License**: A minimum of 4 VMs for licenses is required for management.
-      2. **Storage Size**: The capacity that meets your storage needs. A minimum of 2,000 GB of storage is required for management. For considerations when estimating storage size, see [Estimating Repository Capacity](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
-      3. **Storage Performance**: The IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
-   * To install Zerto on {{site.data.keyword.cloud_notm}}, click the service card. If you want it to be installed as a managed service, select the **Managed Service by IBM Resiliency Services (Priced Separately)** check box in the **Configure Zerto on {{site.data.keyword.cloud_notm}}** window.   
-   * To install F5 on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure F5 on IBM Cloud** window:
-      1. **Name**: Specify a unique name for the service instance to distinguish it from the additional service instances that you might install later.
-      2. **License Model**: Select **Good**, **Better**, or **Best** according to your requirements. For more information about what is provided for each license option, click **Learn More** on the **F5 on IBM Cloud** service card.
-      3. **Maximum Bandwidth**: Select the maximum data transfer rate for the network connection.
-   * To install FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure FortiGate Virtual Appliance on IBM Cloud** window:
-      1. **Name**: Specify a unique name for the service instance to distinguish it from the additional service instances that you might install later.
-      2. **Deployment Size**: Select **Small (2 vCPUs / 4 GB RAM)**, **Medium (4 vCPUs / 6 GB RAM)**, or **Large (8 vCPU / 12 GB RAM)** for the FortiGate Virtual Appliances.
-      3. **Monthly Subscription License Model**: Select **Standard FW**, **Standard FW + UTM**, or **Standard FW + Enterprise** according to your requirements. For more information about what is provided in each license option, click **Learn More** on the **FortiGate Virtual Appliance on IBM Cloud** service card.
-   * To install KMIP for VMware on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure KMIP for VMware on IBM Cloud** window:
-      1. **Service Region**: Select the {{site.data.keyword.cloud_notm}} region where your KMIP for VMware {{site.data.keyword.cloud_notm}} service instance is to be hosted.   
-      2. **Client SSL Certificate**: Specify the certificate to use to secure the connection between the instance and the Key Management Server (KMS). This field is optional at initial deployment. You can leave this field blank at this time because the client certificate of the Key Management Server (KMS) is generated after your instance is deployed. But you must enter the certificate after your instance is deployed, otherwise the connection cannot be established successfully.
-      3. **API Key for Service ID**: Enter the API key for the {{site.data.keyword.cloud_notm}} Service ID that is used to access the IBM Key Protect Service instances.
-      4. **Key Protect Instance**: Click **Retrieve** to get a list of all available IBM Key Protect Service instances and then select the one that is used for key management.
-      5. **Customer Root Key**: Click **Retrieve** to get the customer root key that is stored in the IBM Key Protect instance selected above.
+9. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** in the pop-up configuration window. For information about how to provide settings for a service, see the corresponding service ordering topic.
+
 10. On the **Order Summary** pane, verify the instance configuration before you place the order.
     1. Review the settings for the instance.
     2. Review the estimated cost of the instance. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
@@ -264,6 +241,6 @@ View and manage the Cloud Foundation instance that you ordered.
 * [Viewing Cloud Foundation instances](sd_viewinginstances.html)
 * [Adding, viewing, and deleting clusters for Cloud Foundation instances](sd_addingviewingclusters.html)
 * [Expanding and contracting capacity for Cloud Foundation instances](sd_addingremovingservers.html)
-* [Ordering and removing services for Cloud Foundation instances](sd_addingremovingservices.html)
+* [Ordering, viewing, and removing services for Cloud Foundation instances](sd_addingremovingservices.html)
 * [Deleting Cloud Foundation instances](sd_deletinginstance.html)
 * [FAQ about BYOL](../vmonic/faq_byol.html)
