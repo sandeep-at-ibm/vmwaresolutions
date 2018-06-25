@@ -4,23 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-07"
 
 ---
 
-# Components and considerations for Veeam on IBM Cloud
+# Veeam on IBM Cloud overview
 
 The Veeam on {{site.data.keyword.cloud}} service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service can provide recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you can directly control both the backup and restore of all virtual machines for your infrastructure from the Veeam console.
 
 **Availability**: This service is available only to instances deployed in V1.8 or later releases.
-
-You can order an instance with the Veeam on {{site.data.keyword.cloud_notm}} service included. For more information, see:
-* [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
-* [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
-
-You can also deploy the Veeam on {{site.data.keyword.cloud_notm}} service into your existing instances after initial deployment. For more information, see:
-* [Ordering and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
-* [Ordering and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
 
 ## Components of Veeam on IBM Cloud
 
@@ -48,6 +40,7 @@ Before you remove the Veeam on {{site.data.keyword.cloud_notm}} service, note th
 
 ## Related links
 
+* [Ordering Veeam on {{site.data.keyword.cloud_notm}}](veeam_ordering.html)
 * [Managing Veeam on {{site.data.keyword.cloud_notm}}](managingveeam.html)
 * [Requesting managed services for Veeam on {{site.data.keyword.cloud_notm}}](managing_veeam_services.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)

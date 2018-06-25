@@ -4,37 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-22"
 
 ---
 
-# Considerations for F5 on IBM Cloud
+# F5 on IBM Cloud overview
 
 The F5 on {{site.data.keyword.cloud}} service (F5 BIG-IP® Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access.
 
+You can install multiple instances of this service as needed.
+
 **Availability**: This service is available only to instances that are deployed in V1.9 or later releases.
-
-You can order an instance with BIG-IP Virtual Edition (VE) included. For more information, see:
-* [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
-* [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
-
-You can also deploy BIG-IP VE into your existing instances after initial deployment. For more information, see:
-* [Ordering and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
-* [Ordering and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
-
-## License model for F5 on IBM Cloud
-
-The license model for F5 on {{site.data.keyword.cloud_notm}} service offers the following options:
-<dl class="dl">
-        <dt class="dt dlterm">Good</dt>
-        <dd class="dd">This offer leverages the BIG-IP Local Traffic Manager™ (LTM) VE, operating as a full-proxy architecture, to provide intelligent local traffic management, complete SSL traffic visibility, and analytics and health monitoring to ensure application servers are always available to your users.</dd>
-        <dt class="dt dlterm">Better</dt>
-        <dd class="dd">This offer is built on the benefits of the **Good** option, with the addition of BIG-IP DNS™, BIG-IP Advanced Firewall Manager™ (AFM), and BIG-IP Application Acceleration Manager™ (AAM) modules. It delivers global traffic management services, application performance optimization, and advanced network firewall and Distributed Denial of Service (DDoS) mitigation capabilities.</dd>
-        <dt class="dt dlterm">Best</dt>
-        <dd class="dd">In addition to the **Good** and **Better** offers, BIG-IP Application Security Manager™ (ASM) provides comprehensive application protection against L7 DDoS, Open Web Application Security Project (OWASP) top 10 threats and common application vulnerabilities. BIG-IP Access Policy Manager™ (APM) offers users secure, simplified access to applications located anywhere within a multi-cloud environment, incorporating features such as SSO (Single Sign-On) and MFA (Multi-Factor Authentication).</dd>
-</dl>
-
-**Important**: You cannot change the license model after service installation. To change the license model, you must remove the existing service and reinstall the service using a different license model.
 
 ## Considerations when installing F5 on IBM Cloud
 
@@ -42,7 +22,7 @@ Before you install the F5 on {{site.data.keyword.cloud_notm}} service, review th
 
 Based on the license model and bandwidth that you select, two BIG-IP VE VMs (virtual machines) are deployed with the following configuration:
 
-Table 1: CPU and RAM deployments for different bandwidth and license model selections
+Table 1. CPU and RAM deployments for different bandwidth and license model selections
 
 | Maximum Bandwidth | License Model: Good | License Model: Better | License Model: Best |
 |:------------------|:--------------------|:----------------------|:--------------------|
@@ -74,7 +54,7 @@ You must meet the following requirements to avoid failures with F5 on {{site.dat
 
 Due to these requirements, you must plan for the space needed for F5 on {{site.data.keyword.cloud_notm}}. If needed, before ordering F5 on {{site.data.keyword.cloud_notm}}, add 1-2 ESXi servers to your instance, or reduce vSphere HA CPU reservation for failover, or both.
 
-## Example
+## F5 on IBM Cloud order example
 
 You order a VMware vCenter Server **Small** instance with 2 ESXI servers with the following configuration: 16 cores at 2.10 GHz each with 128 GB RAM. For F5 on {{site.data.keyword.cloud_notm}}, you select the **Best** license model and a value of 5 Gbps for **Maximum Bandwidth**.
 
@@ -96,12 +76,12 @@ In this case, the F5 on {{site.data.keyword.cloud_notm}} installation might fail
 
 ## Considerations when removing F5 on IBM Cloud
 
-Before you remove the F5 on {{site.data.keyword.cloud_notm}} service, ensure that the existing BIG-IP VE configuration is removed correctly. Specifically, network traffic must be routed around BIG-IP VE instead of through BIG-IP VE. Otherwise, the existing data traffic into your environment might be impacted.
+Before you remove the F5 on {{site.data.keyword.cloud_notm}} service, ensure that the existing BIG-IP VE configuration is removed correctly. Specifically, network traffic must be routed around BIG-IP VE instead of through BIG-IP VE. Otherwise, the existing data traffic from your environment might be impacted.
 
 ## Related links
 
+* [Ordering F5 on {{site.data.keyword.cloud_notm}}](f5_ordering.html)
 * [Managing F5 on {{site.data.keyword.cloud_notm}}](managing_f5.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)
 * [FAQ](../vmonic/faq.html)
 * [F5 website](https://f5.com/){:new_window}
-* [F5 Deployment Guides](https://f5.com/solutions/deployment-guides){:new_window}
