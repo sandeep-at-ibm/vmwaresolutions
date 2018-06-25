@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-05-28"
 
 ---
 
@@ -18,8 +18,6 @@ lastupdated: "2018-05-25"
 {: #gettingstarted}
 
 The {{site.data.keyword.vmwaresolutions_full}} console is the interface where you order and manage your deployments. Each deployment is managed as an instance in the console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.slportal_full}}.
-
-**Note**: {{site.data.keyword.vmwaresolutions_short}} is an English-only release. Therefore, all features on the console, including the product documentation, are available in English only.
 
 ## Before you begin
 
