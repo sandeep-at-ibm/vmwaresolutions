@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-05-29"
 
 ---
 
@@ -34,7 +34,7 @@ Use the following steps to troubleshoot and fix the problem.
    1. Click **Account > VPN Access**.
    2. Click the **SSL link** in the **VPN Access** column.
    3. On the **VPN Access for username** page, set the **Subnet Access** option to **Manual**.
-   4. On the same page, locate the subnet for the IP address/host name pair. See **Step 2** above for more information.    
+   4. On the same page, locate the subnet for the IP address/host name pair. See **Step 2** for more information.    
 
       For example, if the IP address for your instance is `xx.yyy.zz.15` and the IP address for vCenter is `xx.yyy.zz.10`, you must grant access for the subnet `xx.yyy.zz.0/26`.
 

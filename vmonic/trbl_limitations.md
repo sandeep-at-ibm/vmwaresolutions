@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-10-05"
+lastupdated: "2018-06-08"
 
 ---
 
-# Limitations and considerations
+# Additional limitations and considerations
 
 Review the following considerations and limitations when you work with {{site.data.keyword.vmwaresolutions_full}}.
 

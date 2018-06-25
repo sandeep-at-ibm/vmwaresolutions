@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-05-28"
 
 ---
 
@@ -26,7 +26,7 @@ For more information, see [Addressing Spectre and Meltdown vulnerabilities](../v
 
 This release introduces the VMware vCenter Server on IBM Cloud with Hybridity Bundle offering. The vCenter Server with Hybridity Bundle is a hosted private cloud that helps quickly and easily extend your on-premises infrastructure into the cloud. The VMware environment is based on IBM-provided VMware Software Defined Data Center licenses and includes the VMware HCX on {{site.data.keyword.cloud_notm}} service that easily and securely connects a vSphere 5.0+ environment on-premises with IBM Cloud sites for seamless infrastructure hybridity and true application mobility.
 
-The HCX on {{site.data.keyword.cloud_notm}} service is available only through the vCenter Server with Hybridity Bundle instance. You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance after first applying the base vCenter Server V2.3 software update. For more information, see [Applying updates to vCenter Server instances](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html).
+The HCX on {{site.data.keyword.cloud_notm}} service is available only through the vCenter Server with Hybridity Bundle instance. You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance after first applying the base vCenter Server V2.3 software update. For more information, see [Applying updates to vCenter Server instances](../vcenter/vc_applyingupdates.html).
 
 For more information on the vCenter Server with Hybridity Bundle, see:
 
@@ -91,7 +91,7 @@ For more information, see [Adding, viewing, and deleting clusters for VMware Fed
 
 The HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service is now available to VMware Cloud Foundation instances and VMware vCenter Server instances that are running vSphere 6.5 and that are deployed in or upgraded to V2.3 or later releases. The service enforces and controls compliance against security standards, and provides role-based access control (RBAC). When combined with HyTrust DataControl, the service can ensure that virtual machines and workload data do not leave a particular region, cluster, or ESXi server within the {{site.data.keyword.cloud_notm}} data center.
 
-You can order instances with the service included right from the start, or add this service to your existing instances later.
+You can order instances with the service included when you order your instance, or add this service to your existing instances later.
 
 For more information, see:
 * [Components and considerations for HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)
@@ -101,7 +101,7 @@ For more information, see:
 
 The HyTrust DataControl on {{site.data.keyword.cloud_notm}} service is now available to VMware Cloud Foundation instances and VMware vCenter Server instances that are running vSphere 6.5 and that are deployed in or upgraded to V2.3 or later releases. The service offers strong encryption with integrated key management to secure workloads throughout their lifecycles. The service can provide encryption at both the operating system level and data level, which means that any directory, folder, or file within a workload can be encrypted and decrypted.
 
-You can order instances with the service included right from the start, or add this service to your existing instances later.
+You can order instances with the service included when you order your instance, or add this service to your existing instances later.
 
 For more information, see:
 * [Components and considerations for HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)
@@ -109,7 +109,7 @@ For more information, see:
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-The current release installs IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} V10.1.1, as the default backup service, on all newly deployed instances. For information about the new features in IBM Spectrum Protect on IBM Cloud V10.1.1, see [IBM Spectrum Protect Plus updates](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+The current release installs IBM Spectrum Protect&trade; Plus V10.1.1, as the default backup service, on all newly deployed instances. For information about the new features in IBM Spectrum Protect Plus V10.1.1, see [IBM Spectrum Protect Plus updates](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ## New and updated documentation
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-12-29"
+lastupdated: "2018-06-07"
 
 ---
 
@@ -15,8 +15,6 @@ Review important information about requirements and user accounts before startin
 ## IBM Cloud for VMware Solutions console
 
 The {{site.data.keyword.vmwaresolutions_short}} console is the interface where you order and manage your deployments. Each deployment is managed as an instance in the console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.slportal_full}}.
-
-**Note**: {{site.data.keyword.vmwaresolutions_short}} is an English-only release. Therefore, all features on the console, including the product documentation, are available in English only.
 
 ## IBMid account
 
@@ -51,5 +49,5 @@ For optimal viewing and working on the {{site.data.keyword.vmwaresolutions_short
 * [About {{site.data.keyword.vmwaresolutions_short}}](vmonic/prod_overview.html)
 * [Cloud Foundation overview](../sddc/sd_cloudfoundationoverview.html)
 * [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html)
-* [Zerto on IBM Cloud](addingzertodr.html)
+* [Zerto on IBM Cloud overview](../services/addingzertodr.html)
 * [Troubleshooting](troubleshooting.html)

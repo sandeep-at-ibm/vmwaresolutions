@@ -48,15 +48,15 @@ All other actions on pre-V1.6 instances are no longer available.
 
 ### Networking enhancements for vCenter Server instances
 
-*  A public subnet with 16 IP addresses on the public VLAN to allow your VMs (virtual machines) to access the internet.
-*  A private subnet with 64 IP addresses on the private VLAN to allow your VMs to access the SoftLayer® internal network.
+*  A public subnet with 16 IP addresses on the public VLAN is ordered on your behalf to allow your VMs (virtual machines) to access the Internet.
+*  A private subnet with 64 IP addresses on the private VLAN is ordered on your behalf to allow your VMs to access the SoftLayer® internal network.
 *  NSX controllers are deployed with anti-affinity rules and run on separate ESXi servers in a 3-node deployment configuration.
 *  New VMware NSX Edge Services Gateway for customer usage.
 
    An additional NSX Edge Services Gateway (ESG) is now deployed as part of the new vCenter Server instances that you are ordering.
 
    This ESG is provided to be used with your own VMs for communications between the private and public subnets that are ordered on your
-   behalf (see above) and it includes two interfaces: one interface is connected to the virtualized VXLANs associated with your VMs and the
+   behalf and it includes two interfaces: one interface is connected to the virtualized VXLANs associated with your VMs and the
    other one is connected to the public VLAN. In addition, the following settings are configured:
    *  Firewall rule to allow all outgoing traffic from the private subnet range of IP addresses.
    *  SNAT (Source Network Address Translation) rule (disabled by default) to translate all IP addresses from the private subnet to a

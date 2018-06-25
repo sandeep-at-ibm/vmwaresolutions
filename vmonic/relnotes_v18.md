@@ -14,12 +14,12 @@ This release includes new features, component updates, usability enhancements, a
 
 ## Fortinet on IBM Cloud service
 
-The Fortinet on IBM Cloud service is now available to both Cloud Foundation and vCenter Server instances. This service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances. You can order instances with the Fortinet service included right from the start, or add this service to your existing instances later from the instance details page.
+The Fortinet on IBM Cloud service is now available to both Cloud Foundation and vCenter Server instances. This service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances. You can order instances with the Fortinet service included when you order your instance, or add this service to your existing instances later from the instance details page.
 
 After the Fortinet service is installed successfully, you can manage and configure firewall rules for the FSA from the FortiGate console. You must ensure that the FSA firewall rules are defined to allow outbound HTTPS communications that are initiated by management components such as the IBM CloudDriver virtual machine or Zerto Virtual Manager to communicate with the external management database on IBM Bluemix® over the internet. The outbound HTTPS communications originate from the public IP address of the management services VMware NSX Edge Services Gateway (ESG) in your instance.
 
 For more information, see:
-* [Components and considerations for Fortinet on IBM Cloud](../services/fsa_considerations.html)
+* [Fortinet on IBM Cloud overview](../services/fsa_considerations.html)
 * [Managing Fortinet on IBM Cloud](../services/managingfsa.html)
 
 ## Veeam on IBM Cloud service
@@ -31,7 +31,7 @@ Because of this change, although the Veeam VSI in the pre-V1.8 instances keeps w
 In addition, the license of the Veeam VSI in pre-V1.8 instances expires on October 14, 2017. Therefore, you must replace the previous Veeam VSI with the new Veeam service at your earliest convenience.
 
 For more information, see:
-* [Components and considerations for Veeam on IBM Cloud](../services/veeam_considerations.html)
+* [Veeam on IBM Cloud overview](../services/veeam_considerations.html)
 * [Managing Veeam on IBM Cloud](../services/managingveeam.html)
 
 ## Updates for VMware Cloud Foundation instances

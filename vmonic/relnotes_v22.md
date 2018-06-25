@@ -130,7 +130,7 @@ The IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service
 
 This service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement it as a stand-alone solution or you can integrate it with your IBM Spectrum Protect&trade; Plus environment to offload copies for long-term storage and data governance.
 
-The IBM Spectrum Protect Plus on IBM Cloud service provides data protection for the workload VMs only.
+The IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service provides data protection for the workload VMs only.
 
 For more information, see [Managing IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/managingspp.html).
 

@@ -16,7 +16,7 @@ This release includes new features, component updates, usability enhancements, a
 
 The FortiGate Virtual Appliance on IBM Cloud service is now available to V2.0 and later VMware Cloud Foundation instances and VMware vCenter Server instances. This service deploys a high-availability (HA) pair of FortiGate Virtual Appliances to your environment, which can help you to reduce risk by implementing critical security controls within your virtual infrastructure.
 
-You can order instances with the FortiGate Virtual Appliance on IBM Cloud service included right from the start, or add this service to your existing instances later from the **Services** tab on the instance details page. Depending on your requirements, you can select one of three deployment sizes and licensing options for this service. After the service is installed successfully, you can manage and configure firewall rules for the FortiGate Virtual Appliances from the FortiGate console.
+You can order instances with the FortiGate Virtual Appliance on IBM Cloud service included when you order your instance, or add this service to your existing instances later from the **Services** tab on the instance details page. Depending on your requirements, you can select one of three deployment sizes and licensing options for this service. After the service is installed successfully, you can manage and configure firewall rules for the FortiGate Virtual Appliances from the FortiGate console.
 
 For more information, see:
 * [Components and considerations for FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html)
@@ -70,7 +70,7 @@ The current release applies the following component updates and improvements for
 * VMware NSX for vSphere 6.3.4
 * VMware ESXi 6.5, Patch Release ESXi650-201710401-BG: Updates esx-base, esx-tboot, vsan and vsanhealth VIBs (2151061). For patch details, see [VMware vCenter Server Appliance Photon OS Security Patches](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window}.
 
-**Note**: Existing instances (from releases V1.9 and earlier) cannot be upgraded to the component versions listed above.
+**Note**: Existing instances (from releases V1.9 and earlier) cannot be upgraded to the component versions in this list.
 
 For more information on components, see [Cloud Foundation overview](../sddc/sd_cloudfoundationoverview.html).
 

@@ -26,7 +26,7 @@ For more information, see:
 
 ## Zerto disaster recovery
 
-You can order both VMware Cloud Foundation instances and VMware vCenter Server instances with Zerto disaster recovery included right from the start. You can also add Zerto disaster recovery to your existing Cloud Foundation instances and vCenter Server instances in the instance details page.
+You can order both VMware Cloud Foundation instances and VMware vCenter Server instances with Zerto disaster recovery included when you order your instance. You can also add Zerto disaster recovery to your existing Cloud Foundation instances and vCenter Server instances in the instance details page.
 
 For more information, see:
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)

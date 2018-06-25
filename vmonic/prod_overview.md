@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2018-05-25"
 * **VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}**: The Cloud Foundation offering provides a unified VMware virtual environment by using standard {{site.data.keyword.cloud_notm}} compute, storage, and network resources that are dedicated to each user deployment.
 * **VMware vSphere on {{site.data.keyword.cloud_notm}}**: The vSphere on {{site.data.keyword.cloud_notm}} offering provides a customizable virtualization service that combines VMware-compatible {{site.data.keyword.baremetal_short}}, hardware components, and licenses, to build your own IBM-hosted VMware environment.
 * **NetApp ONTAP Select**: The NetApp ONTAP Select offering allows you to deploy a software-defined storage cluster that addresses your needs for a dedicated and highly available storage appliance based on NetApp ONTAP Select.
-* **VMware Federal on {{site.data.keyword.cloud_notm}}**: The VMware Federal on {{site.data.keyword.cloud_notm}} offering provides support for ordering a base vCenter Server instance in the WDC03 Federal on IBM Cloud Data Center in addition to providing the option to secure the deployed instances, removing sensitive information and the open management connection for ongoing access to the instance for management functions.
+* **VMware Federal on {{site.data.keyword.cloud_notm}}**: The VMware Federal on {{site.data.keyword.cloud_notm}} offering provides support for ordering a base vCenter Server instance in addition to providing the option to secure the deployed instances, removing sensitive information and the open management connection for ongoing access to the instance for management functions.
 
 ## Additional services
 
@@ -68,7 +68,7 @@ This service provides an efficient and scalable solution for data protection, da
 
 **Notes**:
 * This service is available only to instances that are deployed in (or upgraded to) V2.2 or later releases.
-* For instances that are deployed in V2.3 or later releases, IBM Spectrum Protect Plus on IBM Cloud is the default backup service. The service provides backup for management VMs automatically.
+* For instances that are deployed in V2.3 or later releases, IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} provides backup for management VMs automatically.
 * For instances that are deployed in V2.2, this service provides data protection for the workload VMs only.
 
 For more information, see [Managing IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/managingspp.html).

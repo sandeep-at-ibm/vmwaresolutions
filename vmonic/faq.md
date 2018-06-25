@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-05-28"
 
 ---
 
@@ -24,10 +24,6 @@ When you order your instance for the first time, follow the instructions on the 
 ## How are my VMware virtual platform consumptions billed?
 
 All costs for the physical and virtual infrastructure and the licenses resulting from the instance are charged to your {{site.data.keyword.cloud_notm}} account. When you order an instance, you must have an {{site.data.keyword.cloud_notm}} account and provide the {{site.data.keyword.slapi_short}} key that is associated with the account.
-
-## What are the supported languages?
-
-{{site.data.keyword.vmwaresolutions_short}} is an English-only product. Therefore, all features on the console, including the user documentation, are available in English only.
 
 ## What are the differences among a vCenter Server instance, Cloud Foundation instance, and VMware vSphere cluster?
 
