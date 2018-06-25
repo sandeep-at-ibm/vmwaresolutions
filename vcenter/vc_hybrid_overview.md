@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-07"
 
 ---
 
@@ -51,7 +51,7 @@ The base offering is deployed with a vCenter Server appliance that is sized to s
 
 In total, the base offering requires 38 vCPU and 67 GB vRAM that are reserved for the virtualization management layer. The remaining host capacity for your VMs depends on several factors, such as oversubscription rate, VM sizing, and workload performance requirements.
 
-For additional management resource requirements when deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [Considerations for HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+For additional management resource requirements when deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [VMware HCX on {{site.data.keyword.cloud_notm}} overview](../services/hcx_considerations.html).
 
 ### Infrastructure Hybridity
 
@@ -87,7 +87,7 @@ The following networking components are ordered:
     **Important**: This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server with Hybridity Bundle instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, note that using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
   * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
-For additional information on networking components ordered when deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [Considerations for HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+For additional information on networking components ordered when deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [HCX on {{site.data.keyword.cloud_notm}} overview](../services/hcx_considerations.html).
 
 ### Virtual Server Instances
 
@@ -102,15 +102,6 @@ vSAN storage offers customized configurations, with various options for disk typ
 * Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED.
 
   In addition, 2 cache disks of 960 GB are also ordered per host.
-
-<!--During initial deployment, you can choose between vSAN and NFS storage options.
-
-The NFS option offers customized shared file-level storage for workloads with various options for size and performance:
-* Size: 1, 2, 4, 8, or 12 TB
-* Performance: 2, 4, or 10 IOPS/GB. The 10 IOPS/GB option is available for certain {{site.data.keyword.CloudDataCents_notm}} only.
-* Individually configure file shares.
-
-If you choose the NFS option, one 2 TB, 4 IOPS/GB file share for management components is ordered.-->
 
 ### IBM-provided licenses and fees
 
@@ -153,5 +144,5 @@ One Bare Metal Server with the customized configuration.
 * [vCenter Server Software Bill of Materials](vc_bom.html)
 * [Requirements and planning for vCenter Server with Hybridity Bundle instances](vc_hybrid_planning.html)
 * [Ordering vCenter Server with Hybridity Bundle instances](vc_hybrid_orderinginstance.html)
-* [Considerations for HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)
+* [HCX on {{site.data.keyword.cloud_notm}} overview](../services/hcx_considerations.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)

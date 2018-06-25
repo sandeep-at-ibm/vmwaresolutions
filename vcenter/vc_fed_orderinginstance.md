@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -17,8 +17,8 @@ To deploy a flexible and customizable VMware virtualized platform that best fits
 ## Requirements
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
-* You reviewed the information in [Requirements and Planning for VMware Federal instances](vc_fed_planning.html).
+* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
+* You reviewed the information in [Requirements and planning for VMware Federal instances](vc_fed_planning.html).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
 Table 1. Value format for instance and domain names
@@ -57,6 +57,7 @@ IBM-provided VMware licenses for the following:
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
+* (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
 **Attention:**
 
@@ -69,7 +70,7 @@ Bare Metal settings are based on your customized configuration. The option to se
 
 ### Data center location
 
-The data center location is set by default to the WDC03 - Washington, DC {{site.data.keyword.CloudDataCent_notm}} and it cannot be modified.
+Select the IBM Cloud Data Center where the instance is to be hosted.
 
 ### Customized
 
@@ -79,9 +80,12 @@ Table 2. Options for customized {{site.data.keyword.baremetal_short}}
 
 | CPU options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
-| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
+| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 ### Number of Bare Metal Servers
 
@@ -91,7 +95,7 @@ All ESXi servers share the same configuration. In post-deployment, you can add f
 
 ## Storage settings
 
-Storage settings are based on your selection of vSAN, NFS, or custom NFS storage.
+Storage settings are based on your selection of Bare Metal Server configuration and the storage type.
 
 ### vSAN storage
 
@@ -103,19 +107,15 @@ For vSAN, specify the following storage options:
 
 ### NFS storage
 
-For NFS, you can add file-level shared storage for your instance. Specify the following storage options:
+When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
 
-* **Number of Shares**: Select the number of file shares for the NFS shared storage that you want to add. The number of file shares must be in the range of 1 to 32.
+**Note:** The number of file shares must be in the range of 1 to 32.
+
+* **Configure shares individually**: Select to specify different configuration settings for each file share.
+* **Number of Shares**: When using the same configuration setting for each file share, specify the number of file shares for the NFS shared storage that you want to add.
 * **Size**: Select the capacity that meets your shared storage needs.
-* **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements. The performance levels available to you depend on the VMware that you select.
-
-### Custom NFS storage
-
-For custom NFS storage, you can specify the settings for each individual share of the file-level shared storage. Specify the following options:
-
-* **Add NFS**: Select for each file shares that you want to configure individually.
-* **Size**: Select the capacity that meets your shared storage needs.
-* **Performance**: Select the IOPS per GB based on your workload requirements. The performance levels available to you depend on the VMware that you select.
+* **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
+* **ADD NFS**: Select to add individual file shares that use different configuration settings.
 
 Table 3. NFS performance level options
 
@@ -124,9 +124,6 @@ Table 3. NFS performance level options
   | 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine disk images for a hypervisor. |
   | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
   | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
-
-<!--### NFS version
-NFS (Network File System) v3 is set by default and you cannot change it. NFS v3 supports SDRS (Storage Distributed Resource Scheduler) and SIOC (Storage I/O Control), and it does not include NFS multipathing.-->
 
 ## Network interface settings
 
@@ -173,7 +170,7 @@ For more information on ordering Windows licensing, see [Windows Server 2012 R2 
 
 ## Order summary
 
-Based on your selected configuration for the instance, the estimated cost is instantly generated and displayed in the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
+Based on your selected configuration for the instance, the estimated cost is instantly generated and displayed in the **Order Summary** section on the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
 
 ## Procedure
 
@@ -186,9 +183,9 @@ Based on your selected configuration for the instance, the estimated cost is ins
   1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
   2. Select the **Customized** CPU model and the amount of **RAM**.
 7. Complete the storage configuration.
-      * If you selected **vSAN Storage**, select the **Disk Type and Size for vSAN Capacity Disks**, the **Number of vSAN Capacity Disks**, and VMware vSAN license edition.
-      * If you selected **NFS Storage**, select the **Number of Shares**, **Size**, and **Performance**.
-      * If you selected **Custom NFS Storage**, click the **+** icon next to **Add NFS** for each file share that you want to configure individually and select the **Size** and **Performance** for each file share.
+  * When you select **vSAN Storage**, specify the **Disk Type and Size for vSAN Capacity Disks**, **Number of vSAN Capacity Disks**, and how the **vSAN License** is to be provided.
+  * When you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Size**, and **Performance**.
+  * When you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**, then click the **+** icon beside the **Add NFS** label and select the **Size** and **Performance** for each individual file share. You must select at least one file share.
 8. Complete the network interface configuration.
    1. Enter the host name prefix, subdomain label, and root domain name.
    2. Select the DNS configuration.
@@ -202,7 +199,7 @@ Based on your selected configuration for the instance, the estimated cost is ins
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [VMware Federal instance components](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default.
+When the instance is successfully deployed, the components that are described in [vCenter Server instance components for VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 

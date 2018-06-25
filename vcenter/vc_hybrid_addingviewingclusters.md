@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -19,9 +19,10 @@ You can add clusters to your VMware vCenter Server on {{site.data.keyword.cloud}
 You can add up to 10 clusters to your vCenter Server with Hybridity Bundle instance.
 
 ### System settings
+
 When you add a cluster for a vCenter Server with Hybridity Bundle instance, you must specify the following settings.
 
-**Cluster name**
+#### Cluster name
 
 The cluster name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
@@ -29,17 +30,17 @@ The cluster name must meet the following requirements:
 * The maximum length of the cluster name is 30 characters.
 * The cluster name must be unique within the vCenter Server with Hybridity Bundle instance.
 
-**Data center location**
+#### Data center location
 
 The {{site.data.keyword.CloudDataCent}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
 If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} or {{site.data.keyword.cloud_notm}} infrastructure pod, three additional VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
-### Bare Metal settings
+### Bare Metal Server settings
 
-**Customized**
+#### Customized
 
-Specify the CPU model and RAM for the Bare Metal Server.
+Specify the CPU model and RAM for the Bare Metal Server. Available options might differ depending on the version that your instance was initially deployed in.
 
 Table 2. Options for customized Bare Metal Servers
 
@@ -53,7 +54,7 @@ Table 2. Options for customized Bare Metal Servers
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
-**Number of Bare Metal Servers**
+#### Number of Bare Metal Servers
 
 A minimum of two {{site.data.keyword.baremetal_short}} is required for a cluster.
 
@@ -61,9 +62,7 @@ You can add up to 59 {{site.data.keyword.baremetal_short}} for a cluster, and yo
 
 After deployment, you can create up to four more clusters. For VMware vSAN storage, 4 servers are required for both the initial cluster and post-deployment clusters.
 
-### Storage settings
-
-**vSAN storage**
+### vSAN storage settings
 
 VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle instance order. You must specify either **Advanced** or **Enterprise** for the license edition.
 
@@ -71,12 +70,16 @@ VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle insta
 * **Number of vSAN Capacity Disks**: Select the number of disks for the vSAN shared storage that you want to add. The disk quantities must be 2, 4, 6, or 8.
 * Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
 
-### License settings
+### Licensing settings
 
 IBM-provided VMware licenses for the following:
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
   * VMware NSX Service Providers Edition (Advanced or Enterprise) 6.3
+
+### Order summary
+
+Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane.
 
 ## Procedure to add clusters to vCenter Server with Hybridity Bundle instances
 
@@ -85,18 +88,21 @@ IBM-provided VMware licenses for the following:
 
    **Note**: Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
 
-3. Click the **Infrastructure** tab and click **Add** at the upper-right corner of the **CLUSTERS** table.
-4. Enter the cluster name.
-5. Optionally, select **Select a different location** and select the IBM Cloud Data Center to host the instance.
+3. Click **Infrastructure** on the left navigation pane and click **Add** at the upper-right corner of the **CLUSTERS** table.
+4. On the **Add Cluster** page, enter the cluster name.
+5. If you want to host the cluster in a different {{site.data.keyword.CloudDataCent_notm}} than the one that the instance is hosted in, under **Bare Metal Server**, check the **Select a different location** check box and choose the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
 6. Select the **CPU Model**, the amount of **RAM**, and the **Number of Bare Metal Servers** for the Bare Metal configuration.
-7.  Select **vSAN** and select the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks** for the storage configuration.
+7.  Select **vSAN Storage** and select the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks** for the storage configuration.
 8. Select the license edition for VMware vSAN for the license configuration.
-9. Click **Calculate Cost** and review the estimated cost of the cluster. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-10. Click **Add** to add your cluster.
+9. On the **Order Summary** pane, verify the cluster configuration before you add the cluster.
+   1. Review the settings for the cluster.
+   2. Review the estimated cost of the cluster. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+   3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you add the cluster.
+   4. Click **Provision**.
 
 ### Results after adding clusters to vCenter Server with Hybridity Bundle instances
 
-1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history from the **Summary** tab on the instance details page.
+1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history on the **Summary** page of the instance.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
 
 **Important**: You cannot change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
@@ -105,7 +111,7 @@ IBM-provided VMware licenses for the following:
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to view the clusters in it.
-3. Click the **Infrastructure** tab. In the **CLUSTERS** table, view the summary about the clusters:
+3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, view the summary about the clusters:
   * **Name**: The name of the cluster.
   * **ESXi Servers**: The number of ESXi servers in the cluster.
   * **CPU**: The CPU specification of the ESXi servers in the cluster.
@@ -126,21 +132,23 @@ IBM-provided VMware licenses for the following:
         <dt class="dt dlterm">Deleted</dt>
         <dd class="dd">The cluster is deleted.</dd>
     </dl>
-4. Click a cluster name to view the ESXi server, storage, and license details:
+4. Click a cluster name to view the details of ESXi servers and storage:
 
-  **ESXi servers**
+  * ESXi servers details:
+     * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
 
-  * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
+       `host_prefix` is the host name prefix,
 
-     `host_prefix` is the host name prefix,
-     `n` is the sequence of the server,
-     `subdomain_label` is the subdomain label, and
-     `root_domain` is the root domain name.
+       `n` is the sequence of the server,
 
-   * **Version**: The version of the ESXi server.
-   * **Credentials**: The user name and password to access the ESXi server.
-   * **Private IP**: The private IP address of the ESXi server.
-   * **Status**: The status of the ESXi server, which can be one of the following values:
+       `subdomain_label` is the subdomain label, and
+
+       `root_domain` is the root domain name.
+
+     * **Version**: The version of the ESXi server.
+     * **Credentials**: The user name and password to access the ESXi server.
+     * **Private IP**: The private IP address of the ESXi server.
+     * **Status**: The status of the ESXi server, which can be one of the following values:
         <dl class="dl">
         <dt class="dt dlterm">Added</dt>
         <dd class="dd">The ESXi server is added and is ready for use. </dd>
@@ -149,6 +157,11 @@ IBM-provided VMware licenses for the following:
         <dt class="dt dlterm">Deleting</dt>
         <dd class="dd">The ESXi server is being deleted.</dd>
         </dl>
+  * Storage details:
+    * **Name**: The data store name.
+    * **Size**: The capacity of the storage.
+    * **IOPS/GB**: The performance level of the storage.
+    * **NFS Protocol**: The NFS version of the storage.
 
 ## Deleting clusters from vCenter Server with Hybridity Bundle instances
 
@@ -168,7 +181,7 @@ You might want to delete a cluster from an instance when it is no longer needed.
 
    **Note**: Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot remove clusters from the instance.
 
-3. Click the **Infrastructure** tab. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon.
+3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.
 
 ## Related links
 

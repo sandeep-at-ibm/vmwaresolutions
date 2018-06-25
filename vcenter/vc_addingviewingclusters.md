@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -23,6 +23,7 @@ The number of clusters that can be added to an instance depend on the instance v
 * For instances that were deployed in V2.2 or earlier releases, you can add up to 5 clusters.
 
 ### System settings
+
 When you add a cluster for a vCenter Server instance, you must specify the following settings.
 
 #### Cluster name
@@ -39,13 +40,20 @@ The {{site.data.keyword.CloudDataCent}} location of the cluster is set to the {{
 
 If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} or {{site.data.keyword.cloud_notm}} infrastructure pod, three additional VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
-### Bare Metal settings
+### Bare Metal Server settings
 
-You can choose either **Customized** or **Preconfigured**.
+You can choose either **Preconfigured** or **Customized**.
+
+#### Preconfigured
+
+For the **Preconfigured** setting, you can choose a **Bare Metal Server Configuration** depending on your requirements:
+* Small (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz / 128 GB RAM / 2 disks)
+* Medium (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 256 GB RAM / 2 disks)
+* Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 2 disks)
 
 #### Customized
 
-For the **Customized** setting, you have a number of options for the **CPU Model** and **RAM**.
+For the **Customized** setting, you have a number of options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
 Table 1. Options for customized {{site.data.keyword.baremetal_short}}
 
@@ -57,13 +65,6 @@ Table 1. Options for customized {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-
-#### Preconfigured
-
-For the **Preconfigured** setting, you can choose a **Bare Metal Server Configuration** depending on your requirements:
-* Small (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz / 128 GB RAM / 2 disks)
-* Medium (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 256 GB RAM / 2 disks)
-* Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 2 disks)
 
 #### Number of Bare Metal Servers
 
@@ -79,23 +80,25 @@ After deployment, you can create up to four more clusters. If you select the **C
 
 ### Storage settings
 
-For your storage, you can use either **vSAN** or **NFS**.
+Storage settings are based on your selection of Bare Metal Server configuration and the storage type.
 
-#### vSAN
+#### vSAN storage
 
 vSAN is available only for the customized Bare Metal configuration. You can customize the VMware vSAN storage by specifying the number of vSAN capacity disks (2, 4, 6, or 8), the disk type and size that meet your storage needs, and the vSAN licensing option.
 
 If your initial cluster was a vSAN cluster, any additional vSAN clusters use the same vSAN license and have the same configuration as the initial one. This is also true if any cluster in the instance has vSAN chosen to be deployed on it (initial or additional). The first time you are prompted for the vSAN license (BYOL or purchased) and the edition. The next time you select vSAN for an additional cluster, the license chosen initially is reused.
 
-#### NFS
+#### NFS storage
 
-For NFS, you can add file-level shared storage for your instance. Specify the following storage options:
+When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
 
-* **File Shares**: Specify the number of file shares for the NFS shared storage that you want to add. The number of file shares must be in the range of 1 to 32.
+**Note:** The number of file shares must be in the range of 1 to 32.
+
+* **Configure shares individually**: Select to specify different configuration settings for each file share.
+* **Number of Shares**: When using the same configuration setting for each file share, specify the number of file shares for the NFS shared storage that you want to add.
 * **Size**: Select the capacity that meets your shared storage needs.
-* **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements. The performance levels available to you depend on the {{site.data.keyword.CloudDataCent_notm}} that you select.
-* **Configure shares individually**: Optionally select to complete individual file share configuration.
-* **Add NFS**: Optionally select if you are configuring your file shares individually and need to add additional file shares.
+* **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
+* **ADD NFS**: Select to add individual file shares that will use different configuration settings.
 
 Table 2. NFS performance level options
 
@@ -103,13 +106,17 @@ Table 2. NFS performance level options
   |:------------- |:------------- |
   | 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine disk images for a hypervisor. |
   | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
-  | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share, and it is supported only for the following {{site.data.keyword.CloudDataCents_notm}}: AMS03, DAL09, DAL10, DAL12, DAL13, FRA02, HKG01, LON02, LON04, LON06, MEL01, MEX01, MON01, OSL01, PAR01, SJC03, SJC04, SYD01, TOK02, TOR01, WDC04, WDC06, and WDC07. |
+  | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
 
-### License settings
+### Licensing settings
 
-You can specify the licensing option for the VMware vSphere component in the cluster:
+Specify the licensing option for the VMware vSphere component in the cluster:
 * For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
 * For non-Business Partner users, you can use the IBM-provided VMware licenses for this component by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license key.
+
+### Order summary
+
+Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane.
 
 ## Procedure to add clusters to vCenter Server instances
 
@@ -118,26 +125,30 @@ You can specify the licensing option for the VMware vSphere component in the clu
 
    **Note**: Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
 
-3. Click the **Infrastructure** tab and click **Add** on the upper-right corner of the **CLUSTERS** table.
-4. Enter the cluster name.
-5. Optionally, select **Select a different location** and select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
+3. Click **Infrastructure** on the left navigation pane and click **Add** on the upper-right corner of the **CLUSTERS** table.
+4. On the **Add Cluster** page, enter the cluster name.
+5. If you want to host the cluster in a different {{site.data.keyword.CloudDataCent_notm}} than the one that the instance is hosted in, under **Bare Metal Server**, check the **Select a different location** check box and choose the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
 6. Complete the Bare Metal configuration.
-   * If you selected **Customized**, specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
    * If you selected **Preconfigured**, specify the **Bare Metal Server Configuration**, and the **Number of {{site.data.keyword.baremetal_short}}**. If you are planning to use vSAN as your storage solution, note that a minimum of 4 {{site.data.keyword.baremetal_short}} are needed.
+   * If you selected **Customized**, specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
 7. Complete the storage configuration.
-   * If you selected **vSAN**, specify the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks**.
-   * If you selected **NFS**, specify the **File Shares**, **Size**, and **Performance**. Optionally select **Configure shares individually** to complete individual file configuration. Use the **Add NFS** option to add additional file shares, if necessary.
+  * When you select **vSAN Storage**, specify the **Disk Type and Size for vSAN Capacity Disks**, **Number of vSAN Capacity Disks**, and how the **vSAN License** is to be provided.
+  * When you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Size**, and **Performance**.
+  * When you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**, then click the **+** icon beside the **Add NFS** label and select the **Size** and **Performance** for each individual file share. You must select at least one file share.
 8. Specify how the vSphere license key is provided:
   * For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
   * For non-Business Partner users, you can select one of the following options:
       * If you want new licenses to be purchased on your behalf, select **Include with purchase** for the component.
       * If you want to use your own VMware license for the component, select **I will provide** and enter your license key for it.
-9. Click **Calculate Cost** and review the estimated cost of the cluster. To save or print your order summary, click the **Print** or **Download** icon on the upper-right corner of the PDF window.
-10. Click **Add** to add your cluster.
+9. On the **Order Summary** pane, verify the cluster configuration before you add the cluster.
+   1. Review the settings for the cluster.
+   2. Review the estimated cost of the cluster. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+   3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you add the cluster.
+   4. Click **Provision**.
 
 ### Results after adding clusters to vCenter Server instances
 
-1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history from the **Summary** tab on the instance details page.
+1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history from the **Summary** page of the instance.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
 
 **Important**: You cannot change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
@@ -146,7 +157,7 @@ You can specify the licensing option for the VMware vSphere component in the clu
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click an instance to view the clusters in it.
-3. Click the **Infrastructure** tab. In the **CLUSTERS** table, view the summary about the clusters:
+3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, view the summary about the clusters:
   * **Name**: The name of the cluster.
   * **ESXi Servers**: The number of ESXi servers in the cluster.
   * **CPU**: The CPU specification of the ESXi servers in the cluster.
@@ -168,19 +179,23 @@ You can specify the licensing option for the VMware vSphere component in the clu
         <dd class="dd">The cluster is deleted.</dd>
     </dl>
   * **Actions**: Click the **Delete** icon to delete the cluster.
-4. Click the cluster name to view the list of ESXi servers and their information:
+4. Click a cluster name to view the details of ESXi servers and storage:
 
-  * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
+  * ESXi servers details:
+     * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
 
-     `host_prefix` is the host name prefix,
-     `n` is the sequence of the server,
-     `subdomain_label` is the subdomain label, and
-     `root_domain` is the root domain name.
+       `host_prefix` is the host name prefix,
 
-   * **Version**: The version of the ESXi server.
-   * **Credentials**: The user name and password to access the ESXi server.
-   * **Private IP**: The private IP address of the ESXi server.
-   * **Status**: The status of the ESXi server, which can be one of the following values:
+       `n` is the sequence of the server,
+
+       `subdomain_label` is the subdomain label, and
+
+       `root_domain` is the root domain name.
+
+     * **Version**: The version of the ESXi server.
+     * **Credentials**: The user name and password to access the ESXi server.
+     * **Private IP**: The private IP address of the ESXi server.
+     * **Status**: The status of the ESXi server, which can be one of the following values:
         <dl class="dl">
         <dt class="dt dlterm">Added</dt>
         <dd class="dd">The ESXi server is added and is ready for use. </dd>
@@ -189,7 +204,7 @@ You can specify the licensing option for the VMware vSphere component in the clu
         <dt class="dt dlterm">Deleting</dt>
         <dd class="dd">The ESXi server is being deleted.</dd>
         </dl>
-  * The storage details:
+  * Storage details:
     * **Name**: The data store name.
     * **Size**: The capacity of the storage.
     * **IOPS/GB**: The performance level of the storage.
@@ -215,7 +230,7 @@ You might want to delete a cluster from an instance when it is no longer needed.
 
    **Note**: Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot delete clusters from the instance.
 
-3. Click the **Infrastructure** tab. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon.
+3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.
 4. Confirm that you completed the migration of virtual machines to other clusters, if needed, and that you want to delete the cluster.
 
 ## Related links

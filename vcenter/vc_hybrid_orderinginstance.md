@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ To deploy a flexible and customizable VMware virtualized platform that best fits
 ## Requirements
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
 *  You reviewed the information in [Requirements and planning for vCenter Server with Hybridity Bundle](vc_hybrid_planning.html).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
@@ -161,11 +161,11 @@ For more information on ordering Windows licensing, see [Windows Server 2012 R2 
 
 ## Services settings
 
-When you order a vCenter Server with Hybridity Bundle instance, you can also order additional services. For more information about the available services, see [Services for vCenter Server with Hybridity Bundle  instances](vc_hybrid_planning.html#services-for-vcenter-server-with-hybridity-instances).
+When you order a vCenter Server with Hybridity Bundle instance, you can also order additional services. For more information about the services, see [Available services for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances).
 
 ## Order summary
 
-Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
+Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the **Order Summary** section on the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
 
 ## Procedure
 
@@ -193,38 +193,8 @@ Based on your selected configuration for the instance and add-on services, the e
      *  If you want to order new public and private VLANs, click **Order New VLANs**.
      *  If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs**, and then select the public VLAN, the primary subnet, the private VLAN, the private primary subnet, and the secondary private VLAN.
   3. Select the DNS configuration.
-9. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.
-  * To install IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} (preselected by default), specify the following settings in the **IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}** window:
-    1. **Number of Storage Volumes**: Select the number of volumes that meet your storage needs.
-    2. **Storage Size per Volume**: Select the storage capacity per volume. A minimum of 500 GB per volume is required for management.
-    3. **Storage Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
-  * To install Veeam on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Veeam on {{site.data.keyword.cloud_notm}}** window:
-    1. **Number of VMs to License**: Select the number of virtual machines. A minimum of 4 virtual machines for licenses is required for management.
-    2. **Storage Size**: Select the capacity that meets your storage needs. A minimum of 2,000 GB of storage is required for management. For considerations when estimating storage size, see [Estimating Repository Capacity](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
-    3. **Storage Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
-  * To install Zerto on {{site.data.keyword.cloud_notm}}, click the service card. If you want it installed as a managed service, select the **Managed Service by IBM Resiliency Services (Priced Separately)** check box in the **Zerto on {{site.data.keyword.cloud_notm}}** window.
-  * To install HCX on {{site.data.keyword.cloud_notm}}, specify one of the following settings in the **HCX on {{site.data.keyword.cloud_notm}}** window:
-    1. Select **Self-Signed Certificate** for the public endpoint certificate type.
-    2. Select **CA Certificate** and specify the following settings:
-      * **Certificate Contents**: Enter the contents of the CA certificate.
-      * **Private Key**: Enter the private key of the CA certificate.
-      * (Optional) **Password**: Enter the password for the private key if it is encrypted.
-      * (Optional) **Reenter Password**: Enter the password for the private key again.
-      * (Optional) **Hostname**: Enter the host name to be mapped to the common name (CN) of the CA certificate. HCX on {{site.data.keyword.cloud_notm}} requires the CA certificate to be in a format that is accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
-  * To install F5 on {{site.data.keyword.cloud_notm}}, specify the following settings in the **F5 on {{site.data.keyword.cloud_notm}}** window:
-    1. **Name**: Enter a unique name for the service instance to distinguish it from the additional service instances that you might install later.
-    2. **Maximum Bandwidth**: Select the maximum data transfer rate for the network connection.
-    3. Select **Good**, **Better**, or **Best** according to your requirements. For more information about what is provided for each license option, click **Learn More** on the **F5 on {{site.data.keyword.cloud_notm}}** service card.
-  * To install FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, specify the following settings in the **FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}** window:
-    1. **Name**: Enter a unique name for the service instance to distinguish it from the additional service instances that you might install later.
-    2. **Deployment Size**: Select **Small (2 vCPUs / 4 GB RAM)**, **Medium (4 vCPUs / 6 GB RAM)**, or **Large (8 vCPU / 12 GB RAM)** for the FortiGate Virtual Appliances.
-    3. Select the **Good**, **Better**, or **Best** monthly subscription license model according to your requirements. For more information about what is provided in each license option, click **Learn More** on the **FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}** service card.
-  * To install KMIP for VMware on {{site.data.keyword.cloud_notm}}, specify the following settings in the **KMIP for VMware on {{site.data.keyword.cloud_notm}}** window:
-    1. **Service Region**: Select the {{site.data.keyword.cloud_notm}} region where your KMIP for VMware {{site.data.keyword.cloud_notm}} service instance is to be hosted.
-    2. **Client SSL Certificate**: This field is optional at the time of initial configuration. Leave this field blank if the client certificate of the Key Management Server (KMS) in vCenter Server is not known until after your instance is deployed. However, you must enter the certificate after your instance is deployed so that your vCenter Server connection to the KMS can be completed successfully.
-    3. **API Key for Service ID**: Enter the API key for the {{site.data.keyword.cloud_notm}} Service ID that is used to access the IBM Key Protect Service instances.
-    4. **Key Protect Instance**: Click **Retrieve Instances** to get a list of all available IBM Key Protect Service instances and then select the one that is used for key management.
-    5. **Customer Root Key**: Click **Retrieve Keys** to get the customer root key that is stored in the IBM Key Protect instance selected above.
+9. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.  
+For information about how to provide settings for a service, see the corresponding service ordering topic.
 
 8. On the **Order Summary** pane, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
@@ -264,5 +234,5 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 * [Multi-site configuration for vCenter Server with Hybridity Bundle instances](vc_hybrid_multisite.html)
 * [Adding and viewing clusters for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingviewingclusters.html)
 * [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservers.html)
-* [Ordering and removing services for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservices.html)
+* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservices.html)
 * [Deleting vCenter Server with Hybridity Bundle instances](vc_hybrid_deletinginstance.html)

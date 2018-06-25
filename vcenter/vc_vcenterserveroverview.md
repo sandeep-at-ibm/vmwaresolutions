@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -48,7 +48,7 @@ The base offering is deployed with a vCenter Server appliance that is sized to s
 
 In total, the base offering requires 38 vCPU and 67 GB vRAM that are reserved for the virtualization management layer. The remaining host capacity for your VMs depends on several factors, such as oversubscription rate, VM sizing, and workload performance requirements.
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+For details about the architecture, see [{{site.data.keyword.vmwaresolutions_full}} architecture reference](../archiref/solution/solution_overview.html).
 
 ## vCenter Server technical specifications
 
@@ -62,7 +62,8 @@ You can order three or more {{site.data.keyword.baremetal_short}} with one of th
 *  **Customized**: {{site.data.keyword.baremetal_short}} with your selected CPU model and RAM size.   
    * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
    * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
-**Note:** If you plan to use vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
+
+     **Note:** If you plan to use vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
 *  **Preconfigured**: 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
    * **Small** (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz / 128 GB RAM / 2 disks)
    * **Medium** (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 256 GB RAM / 2 disks)

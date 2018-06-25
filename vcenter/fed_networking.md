@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-06-04"
 
 ---
 
@@ -32,7 +32,7 @@ An NSX Edge Services Gateway is also deployed to be used by your workload VMs. F
 ## Considerations when changing passwords for NSX components
 
 Review the following considerations before you change the passwords for the NSX Manager, NSX Controllers, and NSX Edges:
-* Do not change the NSX Manager's password that you can find on the **Summary** tab of the instance details page in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Do not change the NSX Manager's password that you can find on the **Summary** page of the instance in the {{site.data.keyword.vmwaresolutions_short}} console.
 * You can change passwords for NSX Controllers. For instructions on how to change passwords for NSX Controllers, see [Change Controller Password](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html).
 * You can change the password and SSH settings for the customer-managed VMware NSX Edge Services Gateway (ESG). Do not change the password for the Management VMware NSX Edge Services Gateway (ESG) and related Distributed Logical Router.
 
