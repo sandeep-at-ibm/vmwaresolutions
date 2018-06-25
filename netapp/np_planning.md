@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -14,7 +14,7 @@ Review the following requirements before you order your NetApp ONTAP Select inst
 
 ## IBM Cloud account requirements
 
-The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} account requirements](../vmonic/slaccountrequirement.html).
+The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](../vmonic/slaccountrequirement.html).
 
 ## IBM Cloud Data Center availability
 
