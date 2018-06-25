@@ -4,15 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-11"
 
 ---
 
 # VMware Federal on IBM Cloud overview
 
-VMware Federal on {{site.data.keyword.cloud}} provides support for ordering a base VMware vCenter Server instance in the WDC03 {{site.data.keyword.CloudDataCent_notm}}.
-
-In addition to supporting a subset of vCenter Server instance offerings, VMware Federal on {{site.data.keyword.cloud_notm}} provides US Federal Government agencies with the option to secure deployed VMware vCenter Server instances. Selecting the option to secure the deployed instances removes sensitive information stored about the instance and removes the open management connection for ongoing access to the instance for management functions, such as adding and removing hosts and clusters. After selecting the secure option, all management functions are disabled except for a full instance delete.
+VMware Federal on {{site.data.keyword.cloud}} provides support for ordering a base vCenter Server instance in addition to providing US Federal Government agencies with the option to secure the deployed vCenter Server instances. Selecting the option to secure the deployed instances removes sensitive information stored about the instance and removes the open management connection for ongoing access to the instance for management functions, such as adding and removing hosts and clusters. After selecting the secure option, all management functions are disabled except for a full instance delete.
 
 For more information about vCenter Server on {{site.data.keyword.cloud_notm}} and the vCenter Server architecture, see [vCenter Server overview](vc_vcenterserveroverview.html).
 
@@ -22,9 +20,14 @@ For more information about vCenter Server on {{site.data.keyword.cloud_notm}} an
 
 The following components are included:
 
-### Hardware
+### Bare Metal Server
 
-You can order two or more customized {{site.data.keyword.baremetal_short}}. For NFS storage configuration, the recommended number of {{site.data.keyword.baremetal_short}} is set to the default of three.
+You can order two or more customized {{site.data.keyword.baremetal_short}} with one of the following configurations:
+
+* 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
+* 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
+
+For NFS storage configuration, the recommended number of {{site.data.keyword.baremetal_short}} is set to the default of three.
 
 **Note:** If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
 
@@ -60,7 +63,7 @@ The vSAN option offers customized configurations, with various options for disk 
 
 The NFS option offers customized shared file-level storage for workloads with various options for size and performance:
 * Size: 1, 2, 4, 8, or 12 TB.
-* Performance: 2, 4, or 10 IOPS/GB. The 10 IOPS/GB option is available for certain {{site.data.keyword.CloudDataCents_notm}} only.
+* Performance: 2, 4, or 10 IOPS/GB.
 * Individually configure file shares.
 
 If you choose the NFS option, one 2 TB, 4 IOPS/GB file share for management components is ordered.
@@ -71,7 +74,6 @@ If you choose the NFS option, one 2 TB, 4 IOPS/GB file share for management comp
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
-* Support and Services fees
 
 ## vCenter Server expansion node components
 
@@ -85,7 +87,6 @@ One Bare Metal Server with the configuration presented in [vCenter Server instan
 
 * One VMware vSphere Enterprise Plus 6.5u1
 * One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
-* One Support and Services fee
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
 **Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal_full}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.

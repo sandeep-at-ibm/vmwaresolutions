@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-08"
 
 ---
 
-# Impacts of changing artifacts for vCenter Server instances
+# Considerations about changing vCenter Server artifacts
 
 Changing users, resources, or subnets that are reserved for {{site.data.keyword.vmwaresolutions_full}} can impact management operations.
 

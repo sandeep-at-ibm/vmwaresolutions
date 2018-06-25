@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -36,8 +36,8 @@ Table 2. BOM for the software components in vCenter Server instances
 | VMware       | vCenter Server Appliance        | 6.5 Update 1g |
 | VMware       | Platform Services Controller    | 6.5 Update 1g |
 | VMware       | vSAN                            | 6.6.1        |
-| VMware       | NSX for vSphere                 | 6.3.5        |
-| {{site.data.keyword.IBM}} | CloudDriver        | 2.3          |
+| VMware       | NSX for vSphere                 | 6.3.5       |
+| {{site.data.keyword.IBM}} | CloudDriver        | 2.4          |
 | Microsoft    | Windows Server Standard edition | 2012R2       |
 
 **Note**: VMware vSAN is an optional component.
@@ -90,31 +90,41 @@ Table 4. NSX and port group configuration settings for vCenter Server instances
 
 ## Network MTU configuration settings
 
-The vSphere cluster uses two vSphere Distributed Switches (VDS), one for public network connectivity and the other one for private network connectivity.
+The vSphere cluster uses two vSphere Virtual Distributed Switches (VDS), one for public network connectivity and the other one for private network connectivity.
 
 The private network connections are configured to use Jumbo Frames MTU (Maximum Transmission Unit) with the size of 9000, which improves performance for large data transfers such as storage and VMware vMotion. This is the maximum MTU allowed within VMware and by IBM Cloud.
 
 In V2.1 or later, the public network connections use a standard Ethernet MTU of 1500. This setting of 1500 must be maintained; any changes might cause packet fragmentation over the internet.
 
-Review the following table for an overview of the Network MTU configuration settings that are applied to the public and private Distributed Virtual Switch (DVS), depending on whether the vCenter Server instance is deployed in V2.1 or later.  
+Review the following table for an overview of the Network MTU configuration settings that are applied to the public and private Distributed Virtual Switch (DVS), depending on whether the vCenter Server instance is deployed in V2.1 or later.
+
+Table 5. MTU configuration settings for vCenter Server instances and clusters depending on the instance version
+
+| VDS | V2.1 or later  | V2.0 or earlier (or upgraded from V2.0 or earlier) |
+|:-------------- |:-------------- |:------------- |
+| Public Switch  | 1500 (default) | 9000 (Jumbo Frames) |
+| Private Switch | 9000 (Jumbo Frames) | 9000 (Jumbo Frames) |
 
 The settings apply to new instances and new clusters from instances deployed in V2.1 or later. The settings also apply to new clusters in cross IBM Cloud Data Centers from instances that were upgraded to V2.1 or later.
 
 The settings do not apply to new clusters in the same IBM Cloud Data Center, for existing instances from V2.0 or earlier or existing instances upgraded to V2.1 or later.
 
-**Note**: For instances that were deployed in V2.0 or earlier, it is recommended that you update the public switch MTU setting to 1500 yourself.  
+For instances that were deployed in V2.0 or earlier, it is recommended that you update the Public Switch MTU setting to 1500.
 
-Table 5. MTU configuration settings for vCenter Server instances and clusters
+### Updating the Public Switch MTU setting
 
-| Distributed Virtual Switch (DVS) | V2.1 or later  | V2.0 or earlier (or upgraded from V2.0 or earlier) |   
-|:-------------- |:-------------- |:------------- |
-| Public Switch  | 1500 (default) | 9000 (Jumbo Frames) |
-| Private Switch | 9000 (Jumbo Frames) | 9000 (Jumbo Frames) |
+To update the MTU setting for the Public Switch, complete the following steps in the VMware vSphere Web Client:
+1. Right-click the VDS and click **Edit Settings**.
+2. On the **Properties tab**, select the **Advanced** option.
+3. Ensure that the **Maximum MTU** value is set to 1500.
+
+   **Note**: When changing the MTU size in a vDS, the attached uplinks (physical NICs) are brought down and up again. As a result, a brief outage occurs for the VMs that are using the uplink. Therefore, it is recommended to plan the MTU setting update during scheduled downtime.
 
 ## Related links
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
+* [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 * [vCenter Server overview](vc_vcenterserveroverview.html)
 * [Planning vCenter Server instances](vc_planning.html)

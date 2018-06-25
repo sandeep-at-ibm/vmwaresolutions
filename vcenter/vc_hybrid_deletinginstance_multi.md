@@ -37,4 +37,4 @@ Because of resource dependencies, the components in your instance are not releas
 ## Related links
 
 * [Deleting vCenter Server with Hybridity Bundle instances](vc_hybrid_deletinginstance.html)
-* [Removing services from vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservices.html)
+* [Ordering, viewing, and removing services from vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservices.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ To deploy a flexible and customizable VMware virtualized platform that best fits
 ## Requirements
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
+* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
 * You reviewed the information in [Requirements and planning for vCenter Server instances](vc_planning.html).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
@@ -57,7 +57,7 @@ Specify the licensing options for the following VMware components in the instanc
 
 For Business Partner users, the vCenter Server license (Standard edition), the vSphere license (Enterprise Plus edition), and the NSX license are included and purchased on your behalf. However, you must specify the edition for the NSX license.
 
-For non-Business Partner users, you can use the IBM-provided VMware licenses for these components by selecting **Include with purchase**, or you can bring your own license (BYOL) by selecting **I will provide** and entering your own license keys.
+For non-Business Partner users, you can use the IBM-provided VMware licenses for these components by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license keys.
 
 **Attention**:
 * A license with a minimum of 8 CPUs is required, which is for 4 servers with 2 CPUs per server. The license choice for each VMware component applies to the base instance and to any ESXi servers that you add to the instance later. Therefore, you must ensure that your license supports future capacity expansion in your infrastructure.
@@ -112,25 +112,25 @@ All ESXi servers share the same configuration. After initial deployment, you can
 
 Storage settings are based on your selection of Bare Metal Server configuration and the storage type.
 
-### vSAN
+### vSAN storage
 
 vSAN is available only when you select the **Customized** Bare Metal configuration. Specify the following vSAN options:
 
 * **Number of vSAN Capacity Disks**: Specify the number of disks for the vSAN shared storage that you want to add. The disk quantities must be 2, 4, 6, or 8.
 * **Disk Type and Size for vSAN Capacity Disks**: Select the capacity that meets your shared storage needs.
-* **vSAN License**: Use the IBM-provided VMware license for the vSAN component by selecting **Include with purchase**, or bring your own license (BYOL) by selecting **I will provide** and entering your own license key.
+* **vSAN License**: Use the IBM-provided VMware license for the vSAN component by selecting **Include with purchase**, or Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license key.
 
-### NFS
+### NFS storage
 
-When you select **NFS**, you add file-level shared storage for your instance. All shares use the same settings. Specify the following NFS options:
+When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
 
-* **Number of Shares**: Specify the number of file shares for the NFS shared storage that you want to add. The number of file shares must be in the range of 1 to 32.
+**Note:** The number of file shares must be in the range of 1 to 32.
+
+* **Configure shares individually**: Select to specify different configuration settings for each file share.
+* **Number of Shares**: When using the same configuration setting for each file share, specify the number of file shares for the NFS shared storage that you want to add.
 * **Size**: Select the capacity that meets your shared storage needs.
-* **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements. The performance levels available to you depend on the {{site.data.keyword.CloudDataCent_notm}} that you select.
-
-### Custom NFS
-
-When you select **Custom NFS**, you can specify the settings for each share of the file-level shared storage.
+* **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
+* **ADD NFS**: Select to add individual file shares that use different configuration settings.
 
 Table 3. NFS performance level options
 
@@ -138,7 +138,7 @@ Table 3. NFS performance level options
   |:------------- |:------------- |
   | 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine disk images for a hypervisor. |
   | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
-  | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share, and it is supported only for the following {{site.data.keyword.CloudDataCents_notm}}: AMS03, DAL09, DAL10, DAL12, DAL13, FRA02, HKG01, LON02, LON04, LON06, MEL01, MEX01, MON01, OSL01, PAR01, SJC03, SJC04, SYD01, TOK02, TOR01, WDC04, WDC06, and WDC07. |
+  | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
 
 ## Network interface settings
 
@@ -210,11 +210,11 @@ For more information about Windows licensing, see [Windows Server 2012 R2 docume
 
 ## Services settings
 
-When you order a vCenter Server instance, you can also order additional services. For more information about the available services, see [Services for vCenter Server instances](vc_planning.html#services-for-vcenter-server-instances).
+When you order a vCenter Server instance, you can also order additional services. For more information about the services, see [Available services for vCenter Server instances](vc_addingremovingservices.html#available-services-for-vcenter-server-instances).
 
 ## Order summary
 
-Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
+Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the **Order Summary** section on the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
 
 ## Procedure
 
@@ -237,9 +237,9 @@ Based on your selected configuration for the instance and add-on services, the e
     3. Specify the number of {{site.data.keyword.baremetal_short}}. If you are planning to use vSAN as your storage solution, note that a minimum of 4 {{site.data.keyword.baremetal_short}} are needed.  
 
 7. Complete the storage settings:
-   * When you select **vSAN**, specify the **Number of vSAN Capacity Disks**, **Disk Type and Size for vSAN Capacity Disks** and **vSAN License**.
-   * When you select **NFS**, specify the **Number of Shares**, **Size**, and **Performance**. The settings apply to all file shares.
-   * When you select **Custom NFS**, click **Add NFS** to add one or more file shares and specify the **Size** and **Performance** for each share.
+  * When you select **vSAN Storage**, specify the **Disk Type and Size for vSAN Capacity Disks**, **Number of vSAN Capacity Disks**, and how the **vSAN License** is to be provided.
+  * When you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Size**, and **Performance**.
+  * When you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**, then click the **+** icon beside the **Add NFS** label and select the **Size** and **Performance** for each individual file share. You must select at least one file share.
 
 8. Complete the network interface settings.
    1. Enter the host name prefix, subdomain label, and root domain name. For a secondary instance, the domain name is automatically filled in.
@@ -249,35 +249,9 @@ Based on your selected configuration for the instance and add-on services, the e
    3. Specify the DNS configuration.
 
 9. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.
+For information about how to provide settings for a service, see the corresponding service ordering topic.
 
- * To install IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} (preselected by default), specify the following settings in the **Configure IBM Spectrum Protect Plus on IBM Cloud** window:
-    1. **Number of Storage Volumes**: The number of volumes that meet your storage needs.
-    2. **Storage Size per Volume**: The storage capacity per volume. A minimum of 500 GB per volume is required for management.
-    3. **Storage Performance**: The IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
-    4. Provide licensing settings:
-      * If you want to order licenses for IBM Spectrum Protect Plus, specify the **Number of VMs to License** on the **Order Licenses** tab. A minimum of 10 VMs is required for license management.
-      * If you want to bring your own license (BYOL), click the **IBM Spectrum Protect Plus license** tab, and then click **Add License Files** to upload you own license file.
- * To install Veeam on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure Veeam on IBM Cloud** window:
-    1. **Number of VMs to License**: A minimum of 4 VMs for licenses is required for management.
-    2. **Storage Size**: The capacity that meets your storage needs. A minimum of 2,000 GB of storage is required for management. For considerations when estimating storage size, see [Estimating Repository Capacity](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
-    3. **Storage Performance**: The IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
- * To install Zerto on {{site.data.keyword.cloud_notm}}, click the service card. If you want it installed as a managed service, select the **Managed Service by IBM Resiliency Services (Priced Separately)** check box in the **Zerto on {{site.data.keyword.cloud_notm}}** window.
- * To install F5 on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure F5 on IBM Cloud** window:
-    1. **Name**: Specify a unique name for the service instance to distinguish it from the additional service instances that you might install later.
-    2. **License Model**: Select **Good**, **Better**, or **Best** according to your requirements. For more information about what is provided for each license option, click **Learn More** on the **F5 on IBM Cloud** service card.
-    3. **Maximum Bandwidth**: Select the maximum data transfer rate for the network connection.
- * To install FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure FortiGate Virtual Appliance on IBM Cloud** window:
-    1. **Name**: Specify a unique name for the service instance to distinguish it from the additional service instances that you might install later.
-    2. **Deployment Size**: Select **Small (2 vCPUs / 4 GB RAM)**, **Medium (4 vCPUs / 6 GB RAM)**, or **Large (8 vCPU / 12 GB RAM)** for the FortiGate Virtual Appliances.
-    3. **Monthly Subscription License Model**: Select **Standard FW**, **Standard FW + UTM**, or **Standard FW + Enterprise** according to your requirements. For more information about what is provided in each license option, click **Learn More** on the **FortiGate Virtual Appliance on IBM Cloud** service card.
- * To install KMIP for VMware on {{site.data.keyword.cloud_notm}}, specify the following settings in the **Configure KMIP for VMware on IBM Cloud** window:
-    1. **Service Region**: Select the {{site.data.keyword.cloud_notm}} region where your KMIP for VMware {{site.data.keyword.cloud_notm}} service instance is to be hosted.   
-    2. **Client SSL Certificate**: Specify the certificate to use to secure the connection between the instance and the Key Management Server (KMS). This field is optional at initial deployment. You can leave this field blank at this time because the client certificate of the Key Management Server (KMS) is generated after your instance is deployed. But you must enter the certificate after your instance is deployed, otherwise the connection cannot be established successfully.
-    3. **API Key for Service ID**: Enter the API key for the {{site.data.keyword.cloud_notm}} Service ID that is used to access the IBM Key Protect Service instances.
-    4. **Key Protect Instance**: Click **Retrieve** to get a list of all available IBM Key Protect Service instances and then select the one that is used for key management.
-    5. **Customer Root Key**: Click **Retrieve** to get the customer root key that is stored in the IBM Key Protect instance selected above.
-
-9. On the **Order Summary** pane, verify the instance configuration before you place the order.
+10. On the **Order Summary** pane, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
    2. Review the estimated cost of the instance. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you order the instance.
@@ -315,5 +289,5 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 * [Multi-site configuration for vCenter Server instances](vc_multisite.html)
 * [Adding, viewing, and deleting clusters for vCenter Server instances](vc_addingviewingclusters.html)
 * [Expanding and contracting capacity for vCenter Server instances](vc_addingremovingservers.html)
-* [Ordering and removing services for vCenter Server instances](vc_addingremovingservices.html)
+* [Ordering, viewing, and removing services for vCenter Server instances](vc_addingremovingservices.html)
 * [Deleting vCenter Server instances](vc_deletinginstance.html)

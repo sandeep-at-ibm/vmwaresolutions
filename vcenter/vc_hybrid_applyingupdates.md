@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-06-05"
 
 ---
 
@@ -17,7 +17,7 @@ The process of applying patches and updates to vCenter Server with Hybridity Bun
 ## Before you begin
 
 Before you attempt to apply an update, expand the update entry by clicking the down arrow and verify the following information:
-* The version of the update. You must apply the updates in chronological sequence that is from the earliest one to the most recent one. Ensure that you applied all the previous updates before you apply the most recent one. For example, you must apply the V2.2 update before attempting to apply the V2.3 update.
+* The version of the update. You must apply the updates in chronological sequence that is from the earliest one to the most recent one. Ensure that you applied all the previous updates before you apply the most recent one. For example, you must apply the V2.3 update before attempting to apply the V2.4 update.
 * Whether downtime is required.
 * The total estimated time to complete the update.
 * The impact of the update on the VMware virtual environment.
@@ -36,11 +36,10 @@ Table 1. Update levels and impact
 ## Procedure
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
-
-   **Note:** Verify that all details are displayed correctly. If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver virtual machine, as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
-
 2. In the **vCenter Server Instances** table, click the instance to update.
-3. Click the **Update and Patch** tab.
+3. On the **Summary** page, verify that all instance details are displayed correctly. Then click **Infrastructure** on the left navigation pane to verify the details on the **Infrastructure** page.
+   If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver virtual machine, as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
+4. Click **Update and Patch** on the left navigation pane.
 
    **Note**: The **Update and Patch** page contains only the packages for updating the IBM management components, not the VMware updates. {{site.data.keyword.vmwaresolutions_short}} applies VMware updates for the following operations:
    * When a new vCenter Server instance is deployed.
