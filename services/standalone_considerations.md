@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -57,13 +57,11 @@ Review the following considerations before you delete an HCX on {{site.data.keyw
     2. Ensure that all the extended networks are removed.
     3. Ensure that all the interconnect components with paired cloud sites are removed.
 
-   **Important**: You must complete all the above considerations before you proceed to the next step. Otherwise, the license for the on-premises HCX on {{site.data.keyword.cloud_notm}} instance is canceled, because of which migrations cannot be performed and errors might occur to the HCX components.  
+   **Important**: You must complete all the considerations before you proceed to the next step. Otherwise, the license for the on-premises HCX on {{site.data.keyword.cloud_notm}} instance is canceled, because of which migrations cannot be performed and errors might occur to the HCX components.  
 2. In the {{site.data.keyword.vmwaresolutions_short}} console, delete the on-premises HCX on {{site.data.keyword.cloud_notm}} instance that was ordered to obtain the activation key for the on-premises HCX Manager. Ensure that the deleted instance is no longer available in the console before you proceed to the next step.
 
    For more information, see [Deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](../services/standalone_deletingserviceinstances.html).
 3. In the VMware vSphere Web Client, delete the on-premises HCX Manager.
-
-For more information, see [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx).
 
 ## Related links
 

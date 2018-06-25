@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-05-30"
 
 ---
 
@@ -21,13 +21,13 @@ Ensure that you completed the following tasks:
 ## Procedure
 
 1. Click **Deployed Instances** from the left navigation pane.
-2. Scroll to the **On-premises HCX on {{site.data.keyword.cloud_notm}} Instances** table and click **Order Instance**.
+2. Scroll to the **On-premises HCX Instances** table and click **Order Instance**.
 3. Specify the **On-premises Instance Name** and click **Next**.
 4. Verify the instance configuration before you place the order.
    1. Review the settings for the instance.
    2. Review the monthly billing of the instance.
    3. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the instance.
-7. Click **Place Order**.
+5. Click **Place Order**.
 
 ## Results
 

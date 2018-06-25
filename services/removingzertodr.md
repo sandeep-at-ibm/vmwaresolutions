@@ -34,7 +34,7 @@ After the service removal is completed successfully, you are notified by email a
 
 ## Related links
 
-* [Deployment of Zerto on IBM Cloud](addingzertodr.html)
+* [Ordering Zerto on IBM Cloud](zerto_ordering.html)
 * [Managing Zerto on IBM Cloud](managingzertodr.html)
 * [Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html)
 * [vCenter Server instances](../vcenter/vc_vcenterserveroverview.html)

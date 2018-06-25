@@ -26,6 +26,6 @@ An IMI Pre-Sales representative will contact you via your {{site.data.keyword.cl
 
 ## Related links
 
-* [Ordering and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
+* [Ordering, viewing, and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)
 * [FAQ](../vmonic/faq.html)

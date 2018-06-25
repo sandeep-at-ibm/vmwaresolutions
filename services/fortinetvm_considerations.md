@@ -4,53 +4,37 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-14"
 
 ---
 
-# Components and considerations for FortiGate Virtual Appliance on IBM Cloud
+# FortiGate Virtual Appliance on IBM Cloud overview
 
-The FortiGate Virtual Appliance on {{site.data.keyword.cloud}} service deploys a high-availability (HA) pair of FortiGate Virtual Appliances to your environment, which can help you reduce risk by implementing critical security controls within your virtual infrastructure. You can manage this service by using the FortiOS Web Client or the command line interface via SSH.
+The FortiGate Virtual Appliance on {{site.data.keyword.cloud}} service deploys a pair of FortiGate Virtual Appliances to your environment, which can help you reduce risk by implementing critical security controls within your virtual infrastructure.
+
+You can install multiple instances of this service as needed. You can manage this service by using the FortiOS Web Client or the command line interface via SSH.
 
 **Availability**: This service is available only to instances that are deployed in V2.0 or later releases.
 
-You can order an instance with the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service included. For more information, see:
-* [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
-* [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
+## Components of FortiGate Virtual Appliance on IBM Cloud
 
-You can also deploy the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service into your existing instances after initial deployment. For more information, see:
-* [Ordering and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
-* [Ordering and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
+When you order the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service, a pair of FortiGate Virtual Appliances is deployed with:
+* A network interface configured for the management network.
+* Nine additional network interfaces that you can configure to protect data traffic, as needed.
 
-## FortiGate Virtual Appliance on IBM Cloud components
-
-As part of the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service, an HA-pair of FortiGate Virtual Appliances is ordered and provisioned on the management network.
-
-## License model for FortiGate Virtual Appliance on IBM Cloud
-
-The license model for FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} offers the following options:
-<dl class="dl">
-        <dt class="dt dlterm">Standard FW</dt>
-        <dd class="dd">This bundle includes Stateful Packet Inspection, VLAN Protection and Advanced Logging, Ingress/Egress Firewall Rules, SSL/IPSec VPN Termination, and 24 x 7 support.</dd>
-        <dt class="dt dlterm">Standard FW + UTM</dt>
-        <dd class="dd">This bundle includes all standard firewall services in addition to NGFW IPS and Web Filtering, AntiVirus and AntiSpam, IP & Domain Reputation, and core FortiCare security services.</dd>
-        <dt class="dt dlterm">Standard FW + Enterprise</dt>
-        <dd class="dd">This bundle includes all standard firewall and UTM services in addition to FortiSandbox Cloud and Mobile Security.</dd>
-</dl>
-
-**Important**: You cannot change the license model after service installation. To change the license model, you must remove the existing service and reinstall the service by selecting a different license option.
+The FortiGate Virtual Appliances are not preconfigured as highly available (HA) pair. After deployment, you can configure HA settings, which includes Virtual Router Redundancy Protocol (VRRP) and FortiGate Cluster Protocol (FGCP), according to your needs.
 
 ## Considerations when installing FortiGate Virtual Appliance on IBM Cloud
 
 Review the following considerations before you install the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service:
-* The HA pair of FortiGate virtual machines (VMs) will be deployed only into the default cluster.
+* The FortiGate virtual machines (VMs) will be deployed only into the default cluster.
 * Based on the deployment size and license model that you select, the two FortiGate VMs are deployed with one of the following configurations:
     * Small (2 vCPUs / 4 GB RAM)
     * Medium (4 vCPUs / 6 GB RAM)
     * Large (8 vCPUs / 12 GB RAM)
 
   In addition, 100% of CPU and RAM for the two FortiGate VMs are also reserved because these VMs are in the data plane of the network
-  communications and it is critical that resources is still available for them.
+  communications and it is critical that resources are still available for them.
 
   To calculate the CPU and RAM reservation for a single FortiGate VM, use the following formula:
    * `CPU reservation = CPU speed of ESXi server * number of vCPUs`
@@ -62,10 +46,9 @@ Review the following considerations before you install the FortiGate Virtual App
    * The two active ESXi servers have enough resources available so that one FortiGate VM can be hosted on each ESXi server with 100% CPU and RAM reservation.
    * VMware vSphere HA has enough resources to host two FortiGate VMs with 100% CPU and RAM.
 
-  Due to these requirements, you must plan for the space needed for FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}. If needed, before ordering FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, add 1 - 2 ESXi servers to your instance, or reduce vSphere HA CPU reservation for failover,
-  or both.
+  Due to these requirements, you must plan for the space needed for FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} carefully. If needed, before ordering FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, add 1 - 2 ESXi servers to your instance, or reduce the vSphere HA CPU reservation for failover, or both.
 
-## Example
+## FortiGate Virtual Appliance on IBM Cloud order example
 
 You order a VMware vCenter Server **Small** instance with 2 ESXi servers with the following configuration: 16 cores at 2.10 GHz each with 128 GB RAM. For FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, you select the **Large** (8 vCPUs / 12 GB RAM) for deployment size and any subscription license model.
 
@@ -81,9 +64,11 @@ By default however, vSphere HA reserves 50% of CPU and RAM for failover on vCent
 
 `50% of 2 * 16 cores * 2.1 GHz = 33.6 GHz available`
 
-Since there will be other workloads present on the ESXi servers, for example, IBM CloudDriver, VMware NSX Controller, VMware NSX Edge, using these resources we cannot satisfy the third requirement, because we need 33.6 GHz of CPU and 24 GB RAM for the two FortiGate VMs.
+Since other workloads will exist on the ESXi servers, for example, IBM CloudDriver, VMware NSX Controller, or VMware NSX Edge, by using these resources, the third requirement is not met. This is because we need 33.6 GHz of CPU and 24 GB RAM for the two FortiGate VMs.
 
-In this case, the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installation might fail, unless at least one ESXi server is added to the environment and vShpere HA failover reservations are updated appropriately to ensure that there is enough resources for two FortiGate VMs. If additional resources is needed to run the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service, you can add more ESXi servers before installing the service.
+In this case, the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installation might fail, unless at least one ESXi server is added to the environment and vShpere HA failover reservations are updated appropriately to ensure that there are enough resources for two FortiGate VMs.
+
+If additional resources are needed to run the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service, you can add more ESXi servers before installing the service.
 
 ## Considerations when removing FortiGate Virtual Appliance on IBM Cloud
 
@@ -91,6 +76,7 @@ Before you remove the FortiGate Virtual Appliance on {{site.data.keyword.cloud_n
 
 ## Related links
 
+* [Ordering FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_ordering.html)
 * [Managing FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](managingfortinetvm.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)
 * [FAQ](../vmonic/faq.html)

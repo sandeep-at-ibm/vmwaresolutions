@@ -44,6 +44,6 @@ For more information, see [IBM Resiliency Disaster Recovery as a Service](https:
 
 ## Related links
 
-* [Ordering and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
-* [Ordering and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
+* [Ordering, viewing, and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
+* [Ordering, viewing, and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)

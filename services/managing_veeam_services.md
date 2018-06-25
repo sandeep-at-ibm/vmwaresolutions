@@ -30,7 +30,7 @@ When you request managed services for Veeam on {{site.data.keyword.cloud_notm}},
 
 ## Related links
 
-* [Ordering and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
-* [Ordering and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
+* [Ordering, viewing, and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
+* [Ordering, viewing, and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)
 * [Data Backup and Protection Services](https://www-935.ibm.com/services/business-continuity/backup-and-data-protection-services/)
