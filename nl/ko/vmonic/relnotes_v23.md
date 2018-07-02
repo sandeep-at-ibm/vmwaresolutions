@@ -1,0 +1,125 @@
+---
+
+copyright:
+
+  years:  2016, 2018
+
+lastupdated: "2018-05-28"
+
+---
+
+# V2.3 릴리스 정보
+
+이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 추가 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
+
+## 스펙터(Spectre) 및 멜트다운(Meltdown) 조치 방안
+
+{{site.data.keyword.vmwaresolutions_short}}가 스펙터(Spectre) 및 멜트다운(Meltdown)(CVE-2017-5753, CVE-2017-5715 및 CVE-2017-5754)으로 알려진 취약점에 대한 응답으로 VMware에서 패치를 릴리스했습니다.
+
+* CVEID: [CVE-2017-5753](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5753)
+* CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
+* CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
+
+자세한 정보는 [스펙터(Spectre) 및 멜트다운(Meltdown) 취약점 해결](../vmonic/trbl_fix_spectre.html)을 참조하십시오.
+
+## VMware vCenter Server on IBM Cloud with Hybridity Bundle
+
+이 릴리스에서는 VMware vCenter Server on IBM Cloud with Hybridity Bundle 오퍼링이 도입되었습니다. vCenter Server with Hybridity Bundle은 온프레미스 인프라를 클라우드로 쉽고 빠르게 확장하는 데 도움을 주는 프라이빗 클라우드에서 호스팅됩니다. VMware 환경은 IBM 제공 VMware 소프트웨어 정의 데이터 센터 라이센스를 기반으로 하며 원활한 인프라 하이브리드 및 진정한 애플리케이션 이동성을 달성하기 위해 온프레미스 vSphere 5.0+ 환경을 IBM Cloud 사이트와 쉽고 안전하게 연결하는 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 포함합니다.
+
+HCX on {{site.data.keyword.cloud_notm}} 서비스는 vCenter Server with Hybridity Bundle 인스턴스를 통해서만 사용 가능합니다. 먼저 기본 vCenter Server V2.3 소프트웨어 업데이트를 적용한 후 기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 업데이트 적용](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html)을 참조하십시오.
+
+vCenter Server with Hybridity Bundle에 대한 자세한 정보는 다음 항목을 참조하십시오.
+
+* [vCenter Server with Hybridity Bundle 개요](../vcenter/vc_hybrid_overview.html)
+* [vCenter Server with Hybridity Bundle 인스턴스에 대한 요구사항 및 계획](../vcenter/vc_hybrid_planning.html)
+* [vCenter Server with Hybridity Bundle 인스턴스 주문](../vcenter/vc_hybrid_orderinginstance.html)
+
+## vCenter Server 및 Cloud Foundation 인스턴스에 대한 클러스터 삭제 지원
+
+이제 전체 인스턴스를 삭제할 필요없이 인스턴스에서 클러스터를 삭제할 수 있습니다. V2.2 이하 인스턴스에 배치된 클러스터의 경우에는 인스턴스에 추가한 클러스터를 삭제하려면 인스턴스를 V2.3으로 업그레이드해야 합니다.
+
+자세한 정보는 다음을 참조하십시오.
+
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](../vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
+* [Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제](../sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
+
+## VMware vCenter Server 인스턴스에 대한 업데이트
+
+이 릴리스는 다음 업그레이드 및 개선사항을 적용합니다.
+*	VMware vSphere ESXi 6.5 U1g(패치 레벨 ESXi650-201803001이 적용된 ESXi 6.5u1)
+*	VMware vCenter Server 6.5 업데이트 1g
+
+### vCenter Server 인스턴스 및 클러스터에 대한 개선사항
+
+V2.3 릴리스부터, **사용자 정의됨** Bare Metal Server 설정을 선택할 때 배치에 다음 새 CPU 모델을 사용할 수 있습니다.
+* 듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz
+* 듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz
+
+자세한 정보는 다음을 참조하십시오.
+
+* [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](../vcenter/vc_addingviewingclusters.html)
+
+## VMware Cloud Foundation 인스턴스에 대한 업데이트
+
+이 릴리스는 다음 업그레이드 및 개선사항을 적용합니다.
+*	VMware vSphere ESXi 6.5 U1g(패치 레벨 ESXi650-201803001이 적용된 ESXi 6.5u1)
+*	VMware vCenter Server 6.5 업데이트 1g
+*	VMware NSX for vSphere 6.3.5
+
+## VMware Federal 인스턴스에 대한 업데이트
+
+### VMware Federal 인스턴스에 대한 DNS 구성
+
+이제 Microsoft Active Directory(AD)용 하나의 Microsoft Windows Server Virtual Server Instance(VSI) 또는 관리 클러스터에 있는 두 개의 고가용성 Microsoft Windows 가상 머신의 배치를 선택하는 옵션이 제공됩니다. V2.2의 경우, 기본적으로 하나의 Microsoft AD용 Microsoft Windows VSI가 자동 배치되었습니다. 두 개의 Microsoft Windows 가상 머신을 선택하는 새 옵션은 더 많은 개인정보 보호를 제공하고 Veeam 서비스를 사용하여 가상 머신을 백업하고 복원하는 옵션을 제공합니다.
+
+**참고:** 두 개의 Microsoft Windows 가상 머신을 사용하도록 인스턴스를 구성하는 경우 두 개의 Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스 및/또는 Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스를 사용하십시오. 가상 머신을 활성화할 수 있는 30일의 기간이 제공됩니다.
+
+자세한 정보는 [VMware Federal 인스턴스 주문](../vcenter/vc_fed_orderinginstance.html#network-interface-settings)의 *네트워크 인터페이스 설정* 절을 참조하십시오.
+
+### VMware Federal 인스턴스에 대한 클러스터 추가 및 삭제 지원
+
+이제 더 나은 리소스 관리 및 고가용성을 위해 클러스터를 사용하여 V2.3 이상 릴리스로 배치된 VMware Federal 인스턴스의 ESXi 서버를 관리할 수 있습니다. 인스턴스를 주문할 때 구성한 ESXi 서버는 기본적으로 **cluster1**로 그룹화됩니다. 인스턴스 개요 페이지에서 클러스터 세부사항을 보거나 하나의 인스턴스에 최대 10개의 클러스터를 추가할 수 있습니다. 인스턴스의 용량을 확장하거나 축소하는 경우 ESXi 서버를 추가할 클러스터 또는 ESXi 서버를 제거할 클러스터를 선택할 수 있습니다.
+
+또한 전체 인스턴스를 삭제하지 않고 인스턴스에서 하나 이상의 클러스터를 삭제할 수도 있습니다.
+
+자세한 정보는 [VMware Federal 인스턴스에 대한 클러스터 추가, 보기 및 삭제](../vcenter/fed_addviewdeleteclusters.html)를 참조하십시오.
+
+## 추가 서비스에 대한 업데이트
+
+### HyTrust CloudControl on IBM Cloud
+
+HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSphere 6.5를 실행하며 V2.3 이상 릴리스로 배치되거나 V2.3 이상 릴리스로 업그레이드된 VMware Cloud Foundation 인스턴스 및 VMware vCenter Server 인스턴스에 사용할 수 있습니다. 이 서비스는 보안 표준에 대한 준수를 강제하고 제어하며, 역할 기반 액세스 제어(RBAC)를 제공합니다. HyTrust DataControl과 결합되면, 이 서비스는 가상 머신 및 워크로드 데이터가 특정 지역, 클러스터 또는 {{site.data.keyword.cloud_notm}} 데이터 센터 내의 ESXi 서버를 벗어나지 않도록 할 수 있습니다.
+
+인스턴스를 주문할 때 포함된 서비스와 함께 인스턴스를 주문하거나 나중에 이 서비스를 기존 인스턴스에 추가할 수 있습니다.
+
+자세한 정보는 다음을 참조하십시오.
+* [HyTrust CloudControl on IBM Cloud의 컴포넌트 및 고려사항](../services/htcc_considerations.html)
+* [HyTrust CloudControl on IBM Cloud 관리](../services/managinghtcc.html)
+
+### HyTrust DataControl on IBM Cloud
+
+HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSphere 6.5를 실행하며 V2.3 이상 릴리스로 배치되거나 V2.3 이상 릴리스로 업그레이드된 VMware Cloud Foundation 인스턴스 및 VMware vCenter Server 인스턴스에 사용할 수 있습니다. 이 서비스는 워크로드를 해당 라이프사이클 동안 보호하기 위해 통합된 키 관리 기능을 포함한 강력한 암호화를 제공합니다. 이 서비스는 운영 체제 레벨 및 데이터 레벨 모두에서 암호화를 제공할 수 있으며, 이는 워크로드 내의 모든 디렉토리, 폴더 및 파일이 암호화되거나 복호화될 수 있음을 의미합니다.
+
+인스턴스를 주문할 때 포함된 서비스와 함께 인스턴스를 주문하거나 나중에 이 서비스를 기존 인스턴스에 추가할 수 있습니다.
+
+자세한 정보는 다음을 참조하십시오.
+* [HyTrust DataControl on IBM Cloud의 컴포넌트 및 고려사항](../services/htdc_considerations.html)
+* [HyTrust DataControl on IBM Cloud 관리](../services/managinghtdc.html)
+
+### IBM Spectrum Protect Plus on IBM Cloud
+
+현재 릴리스는 기본 백업 서비스로서 새로 배치된 모든 인스턴스에 IBM Spectrum Protect&trade; Plus on V10.1.1을 설치합니다. IBM Spectrum Protect Plus V10.1.1의 새 기능에 대한 정보는 [IBM Spectrum Protect Plus 업데이트](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}를 참조하십시오.
+
+## 새로 작성되고 업데이트된 문서
+
+배치 후 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}에 스토리지를 추가하는 방법에 대한 단계별 지시사항을 포함하는 새 developerWorks 지침이 사용 가능합니다. 자세한 정보는 [How to increase vsnap storage for IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)를 참조하십시오.
+
+## 사용자 인터페이스 업데이트 및 개선사항
+
+사용자 인터페이스가 업데이트되었으며 다음 개선사항을 제공합니다.
+* **일관성**: 이제 사용자 인터페이스가 IBM Cloud의 다른 서비스와 일관된 룩앤필을 제공합니다.
+* **쉬운 액세스**: 이제 IBM Cloud **카탈로그**에서 직접 VMware 오퍼링에 액세스할 수 있습니다.
+* **간결하고 단순해진 주문 경험**: 이제 하나의 인터페이스에서 VMware 인스턴스 주문 및 해당 추가 기능 서비스 배치를 완료할 수 있습니다. 또한, 비용 계획에 따라 구성을 조정할 수 있도록 동일한 인터페이스에서 예상 비용이 즉시 계산되어 표시됩니다.
+* 비즈니스 파트너 사용자는 인스턴스 주문 또는 클러스터 추가 시에 BYOL(Bring Your Own License) 옵션을 사용할 수 없습니다.
+* 다양한 오류 메시지 및 도구 팁 개선사항은 사용자 인터페이스의 설정을 적절하게 선택하는 데 도움이 됩니다.
