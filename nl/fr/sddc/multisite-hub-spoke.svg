@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="600px" height="325px" viewBox="0.5 0.5 600 325" enable-background="new 0.5 0.5 600 325"
+	 xml:space="preserve">
+<defs>
+</defs>
+<rect x="211.565" y="135.046" fill="#00ABB0" stroke="#00ABB0" stroke-miterlimit="10" width="178.681" height="54.786"/>
+<text transform="matrix(0.9982 0 0 1 231.3291 167.6816)" fill="#FFFFFF" font-family="'Roboto-Regular'" font-size="17.9367">Instance principale</text>
+<rect x="0.5" y="0.5" fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" width="178.681" height="54.786"/>
+<text transform="matrix(0.9982 0 0 1 9.814 33.1348)" fill="#FFFFFF" font-family="'Roboto-Regular'" font-size="17.9367">Instance secondaire</text>
+<rect x="421.82" y="0.5" fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" width="178.68" height="54.786"/>
+<text transform="matrix(0.9982 0 0 1 431.1318 33.1348)" fill="#FFFFFF" font-family="'Roboto-Regular'" font-size="17.9367">Instance secondaire</text>
+<rect x="0.5" y="270.713" fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" width="178.681" height="54.787"/>
+<text transform="matrix(0.9982 0 0 1 9.814 303.3486)" fill="#FFFFFF" font-family="'Roboto-Regular'" font-size="17.9367">Instance secondaire</text>
+<rect x="421.82" y="270.713" fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" width="178.68" height="54.787"/>
+<text transform="matrix(0.9982 0 0 1 431.1318 303.3486)" fill="#FFFFFF" font-family="'Roboto-Regular'" font-size="17.9367">Instance secondaire</text>
+<g>
+	<g>
+		<line fill="none" stroke="#118ACB" stroke-miterlimit="10" x1="182.943" y1="27.893" x2="295.172" y2="129.356"/>
+		<g>
+			<path fill="#118ACB" d="M297.858,131.784c-1.688-0.674-3.979-1.292-5.718-1.323l2.679-1.424l1.147-2.809
+				C296.173,127.955,297.018,130.173,297.858,131.784z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#118ACB" stroke-miterlimit="10" x1="417.61" y1="27.893" x2="305.381" y2="129.356"/>
+		<g>
+			<path fill="#118ACB" d="M302.694,131.784c0.84-1.612,1.685-3.83,1.891-5.556l1.148,2.809l2.679,1.424
+				C306.674,130.493,304.382,131.11,302.694,131.784z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#118ACB" stroke-miterlimit="10" x1="182.943" y1="297.724" x2="295.172" y2="196.262"/>
+		<g>
+			<path fill="#118ACB" d="M297.858,193.833c-0.84,1.611-1.685,3.83-1.891,5.556l-1.148-2.809l-2.679-1.424
+				C293.879,195.125,296.171,194.507,297.858,193.833z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#118ACB" stroke-miterlimit="10" x1="417.61" y1="297.724" x2="305.381" y2="196.262"/>
+		<g>
+			<path fill="#118ACB" d="M302.694,193.833c1.688,0.674,3.979,1.291,5.718,1.322l-2.679,1.425l-1.148,2.809
+				C304.38,197.662,303.535,195.444,302.694,193.833z"/>
+		</g>
+	</g>
+</g>
+<ellipse fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" cx="80.439" cy="107.371" rx="3.179" ry="3.186"/>
+<ellipse fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" cx="80.439" cy="166.617" rx="3.179" ry="3.186"/>
+<ellipse fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" cx="80.439" cy="217.2" rx="3.179" ry="3.186"/>
+<ellipse fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" cx="504.594" cy="114.098" rx="3.179" ry="3.186"/>
+<path fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" d="M507.773,173.346c0,1.759-1.424,3.184-3.18,3.184
+	s-3.179-1.425-3.179-3.184c0-1.762,1.423-3.187,3.179-3.187S507.773,171.584,507.773,173.346z"/>
+<ellipse fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" cx="504.594" cy="223.928" rx="3.179" ry="3.185"/>
+</svg>
