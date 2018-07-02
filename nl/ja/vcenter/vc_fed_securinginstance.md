@@ -1,0 +1,45 @@
+---
+
+copyright:
+
+  years:  2016, 2018
+
+lastupdated: "2018-05-24"
+
+---
+
+# VMware Federal インスタンスの保護
+
+デプロイした VMware Federal インスタンスを保護する (つまり、そのインスタンスへの継続的なアクセスのために開いた状態になっている管理接続を除去する) には、以下の手順を実行します。
+
+## 始める前に
+
+以下の情報を参照し、デプロイされた VMware Federal インスタンスを保護するとどうなるかを理解してください。
+
+* この手順を実行する前に、お客様の環境に必要な資格情報を記録して保存してください。 保護アクションを呼び出すと、現在の環境のすべての資格情報が {{site.data.keyword.vmwaresolutions_full}} データベースから消去され、取得できなくなります。
+* 保護アクションを呼び出すと、インスタンスの完全削除を除くすべての管理機能が無効になります。
+* アウトバウンド HTTPS 管理トラフィック用の VMware NSX Edge Services Gateway (ESG) と IBM CloudDriver 仮想マシンが、デプロイされた VMware Federal インスタンスを保護するアクションの一環として削除されます。
+
+## 手順
+
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+2. **「vCenter Server インスタンス」**テーブルで、保護するインスタンスをクリックします。
+3. **vCenter コンソール**の右側にあるオーバーフロー・メニュー・アイコンをクリックします。
+4. **「インスタンスを保護」**をクリックします。
+5. **「OK」**をクリックして、インスタンスを自動化から切り離すことを確認します。
+   
+   **注**: この手順を実行する前に、『**始める前に**』セクションにある重要な情報を確認してください。
+
+## 結果
+
+インスタンスの状況が**「変更中」**に変わります。
+
+インスタンスが正常に保護されると、インスタンスの状況が**「保護済み」**に変更され、インスタンスのプロパティーとデプロイメント履歴のみが使用可能になります。
+
+## 関連リンク
+
+* [VMware Federal on IBM Cloud の概要](vc_fed_overview.html)
+* [VMware Federal インスタンスの注文](vc_fed_orderinginstance.html)
+* [VMware Federal インスタンスの表示](vc_fed_viewinginstance.html)
+* [VMware Federal インスタンスの削除](vc_fed_deletinginstance.html)
+* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
