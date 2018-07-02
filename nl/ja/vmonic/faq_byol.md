@@ -1,0 +1,143 @@
+---
+
+copyright:
+
+  years:  2016, 2018
+
+lastupdated: "2018-05-25"
+
+---
+
+# ライセンスと BYOL に関するよくある質問
+
+{{site.data.keyword.vmwaresolutions_full}} のライセンス持ち込み (BYOL) 機能など、ライセンスに関するよくある質問への回答をご覧ください。
+
+## BYOL とは何ですか?
+
+BYOL (Bring Your Own License) は、V1.8 以降のリリースの VMware Cloud Foundation インスタンス、および V2.0 以降のリリースの vCenter Server と vSphere クラスターで使用できる機能です。 BYOL を使用すると、所有している VMware ライセンスを、インスタンスの注文時に以下の 1 つ以上の VMware ソフトウェア・コンポーネントに使用できます。
+* VMware vCenter Server
+* VMware vSphere
+* VMware NSX
+* VMware vSAN
+
+自分で所有しているライセンスを VMware コンポーネントで使用することを選択し、有効なライセンス・キーを提供する場合、そのコンポーネントのライセンスは IBM から注文されません。そのコンポーネントの月単位のライセンス料金は、{{site.data.keyword.cloud}} インフラストラクチャー・アカウントに請求されません。
+
+**注:** ビジネス・パートナーであるユーザーは、BYOL 機能を使用できません。
+
+## VMware vSphere on IBM Cloud を通して注文されたライセンスとコンポーネントの管理はどこで行うのでしょうか?
+
+VMware vSphere on {{site.data.keyword.cloud_notm}} で新規クラスター作成の注文を実行すると、VMware ライセンス、ESXi サーバー、およびその他のネットワーキング・コンポーネントが提供されます。これらは、{{site.data.keyword.slportal}}から管理できます。
+
+デプロイメント後に、保管された構成を使用して新規クラスターを拡張するには、{{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスしてください。 拡張方法について詳しくは、[既存の vSphere クラスターの拡張](../vsphere/vs_scalingexistingclusters.html)を参照してください。
+
+## BYOL にはどのエディションのライセンスと CPU 数が必要ですか?
+
+BYOL のライセンス・エディションには、以下の要件が適用されます。
+
+### vCenter Server インスタンスの BYOL 要件
+
+表 1. vCenter Server インスタンスのライセンス・エディションと最少 CPU 数についての要件
+
+  | VMware コンポーネント | 必要なライセンス・エディション | 必要な最少 CPU 数
+  |:-------------  |:-------------  |:-------|
+  | vCenter Server | 標準                | N/A |
+  | vSphere        | Enterprise Plus | CPU 8 個 |
+  | vSAN           | Advanced または Enterprise | CPU 8 個 |
+  | NSX            | Standard、Advanced、Enterprise | CPU 8 個 |
+
+### Cloud Foundation インスタンスの BYOL 要件
+
+表 2. Cloud Foundation インスタンスのライセンス・エディションと最少 CPU 数についての要件
+
+  | VMware コンポーネント | 必要なライセンス・エディション | 必要な最少 CPU 数
+  |:-------------  |:-------------  |:-------|
+  | vCenter Server | 標準 | N/A |
+  | vSphere        | Enterprise Plus | CPU 8 個 |
+  | vSAN           | Advanced または Enterprise | CPU 8 個 |
+  | NSX            | エンタープライズ | CPU 8 個 |
+
+## 提供したライセンス・キーが正しくない場合はどうなりますか?
+
+お客様から提供されたすべてのライセンス・キーは、対応する VMware コンポーネントにとって適切なキーであるか、また、VMware コンポーネントの最小エディションと最少 CPU 数の要件を満たしているか検査されます。 ライセンス・キーの検査に合格しなかった場合は、通知が送られ、インスタンスの注文を先に進めることはできません。
+
+## 8 つを超える CPU のライセンス・キーを提供することはできますか?
+
+はい。 どの VMware コンポーネントも CPU ごとにライセンスが 1 つ必要です。 現在、すべての vCenter Server サーバーと Cloud Foundation サーバーは CPU を 2 つ使用するため、サーバーごとにライセンスが 2 つ必要です。 基本インスタンスと、将来的にインスタンスに追加する拡張ノードに対応できるライセンス・キーを提供することをお勧めします。
+
+## BYOL 機能を使用する場合に SDDC Manager ライセンスは提供できますか?
+
+いいえ。VMware と IBM の契約により、IBM はクライアントの実際のライセンス・キーを許諾する必要があります。 Cloud Foundation のデプロイメントには SDDC Manager のライセンスが含まれていますが、BYOL で許諾および検査できる SDDC Manager のライセンス・キー・ファイルはありません。 したがって、SDDC Manager ライセンス料の請求は、どのインスタンスについても IBM が行います。 SDDC Manager ライセンスは、Cloud Foundation インスタンスの全体のライセンス料金のごく一部です。
+
+## 一部の VMware コンポーネントでは BYOL 機能を使用して、他の VMware コンポーネントでは月単位のライセンスを購入することはできますか?
+
+はい。 4 つの VMware コンポーネントのうち、BYOL 機能を使用するものとライセンスを購入するものを任意に組み合わせられます。 {{site.data.keyword.vmwaresolutions_short}} コンソールで、vCenter Server または Cloud Foundation インスタンスを注文する際に、簡単にライセンス・オプションを選択できます。 最初のインスタンスの注文時のライセンス・オプションが、そのインスタンスの存続期間にわたって適用されます。
+
+## 特定の VMware コンポーネントで、一部のライセンスに BYOL を使用し、他のライセンスを IBM から購入することはできますか?
+
+はい。 特定の VMware コンポーネントに BYOL を選択した場合は、新規クラスターを作成するときに、新規 BYOL キーを入力するか、既存の BYOL キーを使用し続けるか、そのクラスター用に IBM 提供のライセンスを購入するかを選択できます。  現時点では、クラスター単位でライセンスを適用できるのは、VMware vSphere Enterprise と VMware vSAN だけです。
+
+## 新規クラスターを作成するときに BYOL を使用できますか?
+
+はい。 新規クラスターの作成時には、既存の BYOL ライセンスを BYOL することも、新規 BYOL を入力することもできます。 また、新規クラスターの作成時に、IBM 提供のサブスクリプション・ライセンスを購入することもできます。 現時点では、クラスター単位でライセンスを適用できるのは、VMware vSphere Enterprise と VMware vSAN だけです。
+
+## BYOL ライセンスを管理するにはどうすればよいですか?
+
+インスタンスのデプロイメントが完了したら、VMware vSphere Web Client を使用して、BYOL ライセンスを管理できます。
+
+## インスタンスに後から ESXi サーバーを追加するときに、BYOL ライセンスの容量が十分かどうかはインスタンスで検証されますか?
+
+はい。 デプロイ済みのインスタンスに ESXi サーバーを追加するときには、指定された ESXi サーバー数に対応できるか、BYOL ライセンスの容量が自動的に検査されます。 容量が十分でない場合、ESXi サーバーは追加されず、コンソール通知が表示されます。
+
+## BYOL でクラスターに利用できるライセンス・キャパシティーを確認するにはどうすればよいですか?
+
+ライセンス・キーで使用できる CPU の数を確認するには、**「デプロイ済みインスタンス」**ページに進み、インスタンスを見つけてクリックしてから、**「インフラストラクチャー」**タブでライセンス・キャパシティーを確認したいクラスターをクリックします。 使用可能な CPU の数が、**「ユーザー提供ライセンス」**表にリストされます。
+
+## BYOL ライセンス・オプションを選択した場合、IBM からサポートを受けられますか?
+
+インスタンスの構成の問題については、引き続き IBM サポートが窓口になります。 ただし、報告された問題が BYOL の VMware コンポーネントの問題であると判断された場合は、VMware サポートに連絡するように案内します。
+
+## BYOL を使用するのに vSphere ライセンス料が価格見積もりリストに表示されるのはなぜですか? このライセンス料が請求されるのでしょうか?
+
+{{site.data.keyword.baremetal_short}}は、VMware vSphere が既にインストールされ、vSphere ライセンスが既に含まれた状態でプロビジョンされます。 vSphere に BYOL を選択した場合は、インスタンスのデプロイメント時に、含まれている vSphere ライセンスを削除するプロセスが自動的に開始されます。 その後、ライセンス料がお客様の {{site.data.keyword.cloud_notm}} アカウントにクレジットされます。 このプロセスでは、お客様による操作は不要です。
+
+## BYOL に既存の手動プロセスを引き続き使用できますか?
+
+BYOL 機能を導入した場合、手動プロセスを引き続き使用することは推奨されません。 BYOL を使用する場合は、所有しているライセンスを、インスタンスの注文時に提供してください。
+
+## VMware vRealize Automation、VMware vRealize Operations、VMware vRealize Log Insight などの他の VMware 製品でも BYOL はサポートされますか?
+
+いいえ。これらの VMware 製品はインスタンスのデプロイメントに含まれないのでサポートされません。 これらの VMware 製品は、一般に初期デプロイメントの上にインストールされるため、クライアントまたはエージェントが、インストールおよびライセンス適用を行う必要があります。
+
+## vCenter Server with Hybridity Bundle と一緒に NFS ストレージを注文できますか?
+
+新しくデプロイしたインスタンスでは、vSAN オール・フラッシュ・ストレージだけがサポートされています。vCenter Server with Hybridity Bundle のオファリングには、vSAN の Advanced か Enterprise のライセンスが含まれています。
+
+vCenter Server インスタンスで NFS ストレージを使用している場合は、既存のインスタンスを vCenter Server with Hybridity Bundle にアップグレードできます。アップグレード時に vSAN Advanced のライセンスが注文されますが、オール・フラッシュの vSAN クラスターをプロビジョンする必要はありません。
+
+## vCenter Server with Hybridity Bundle で BYOL を使用できますか?
+
+{{site.data.keyword.cloud_notm}} では、VMware ライセンスの持ち込み (BYOL) はできません。vCenter Server with Hybridity Bundle では、すべての VMware ライセンスが IBM 提供ライセンスでなければなりません。
+
+## vCenter Server with Hybridity Bundle のライセンスと vCenter Server のライセンスの違いはどこにありますか?
+
+vCenter Server で利用できる個々の VMware ライセンスは、CPU 単位の価格設定になっています。IBM が提供する CPU 単位のどの VMware ライセンスでも、CPU 1 個あたりのコア数が 16 を超えるサーバー (Dual Intel Xeon Gold 6140 など) では、価格が 1.3x にアップされます。
+
+vCenter Server with Hybridity Bundle は、VMware のライセンスやエディションをあらかじめ組み合わせたセットであり、CPU 単位ではなくコア単位でライセンスが交付されます。したがって、これらのインスタンスのライセンス価格は変わりません。
+
+## vCenter Server with Hybridity Bundle では、IBM 提供 VMware ライセンスのどんなコンポーネントやエディションを利用できますか?
+
+vCenter Server with Hybridity Bundle の新しいインスタンスには、VMware vSphere Enterprise Plus、VMware vCenter Standard、VMware NSX Advanced または Enterprise、VMware vSAN Advanced または Enterprise、VMware Hybrid Cloud Extension (HCX) が含まれています。
+
+vCenter Server インスタンスで NSX Base エディションを使用している場合は、vCenter Server with Hybridity Bundle の注文時に NSX Advanced に自動的にアップグレードされます。
+
+## vCenter Server with Hybridity Bundle に組み込まれている NSX Advanced エディションを NSX Enterprise エディションにアップグレードできますか?
+
+vCenter Server with Hybridity Bundle には NSX Advanced が含まれていますが、vCenter Server with Hybridity Bundle の注文後に NSX Enterprise エディションにアップグレードすることもできます。そのためには、{{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンスの詳細ページ・タブにある**「Update and Patch」**タブを使用します。
+
+### 関連リンク
+
+* [Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)
+* [Cloud Foundation インスタンス](../sddc/sd_cloudfoundationoverview.html)
+* [コンソールへのアクセス](loginmethod.html)
+* [IBM サポートへのお問い合わせ](trbl_support.html)
+* [vRealize Automation](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/vRealizeAutomation){:new_window}
