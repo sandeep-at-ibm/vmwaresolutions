@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 600 320"
+   style="enable-background:new 0 0 600 320;"
+   xml:space="preserve"
+   inkscape:version="0.47 r22583"
+   width="100%"
+   height="100%"
+   sodipodi:docname="hybrid_architecture.svg"><metadata
+   id="metadata3104"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+   id="defs3102"><inkscape:perspective
+     sodipodi:type="inkscape:persp3d"
+     inkscape:vp_x="0 : 160 : 1"
+     inkscape:vp_y="0 : 1000 : 0"
+     inkscape:vp_z="600 : 160 : 1"
+     inkscape:persp3d-origin="300 : 106.66667 : 1"
+     id="perspective3106" /></defs><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1600"
+   inkscape:window-height="838"
+   id="namedview3100"
+   showgrid="false"
+   inkscape:zoom="0.7375"
+   inkscape:cx="300"
+   inkscape:cy="160"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style3048">
+	.st0{fill:#4C84C5;}
+	.st1{fill:#F49C58;}
+	.st2{fill:#959595;}
+	.st3{fill:#1DA78D;}
+	.st4{fill:#FFFFFF;}
+	.st5{font-family:'Roboto-Light';}
+	.st6{font-size:21px;}
+	.st7{font-size:18px;}
+	.st8{font-size:14px;}
+</style>
+<rect
+   y="81.7"
+   class="st0"
+   width="600"
+   height="75.3"
+   id="rect3050" />
+<rect
+   x="0.6"
+   y="0.6"
+   class="st1"
+   width="600"
+   height="74.3"
+   id="rect3052" />
+<rect
+   y="239.7"
+   class="st2"
+   width="600"
+   height="80.3"
+   id="rect3054" />
+<rect
+   y="164"
+   class="st3"
+   width="190"
+   height="68"
+   id="rect3056" />
+<rect
+   x="205"
+   y="163.4"
+   class="st3"
+   width="190"
+   height="68.6"
+   id="rect3058" />
+<rect
+   x="410"
+   y="164"
+   class="st3"
+   width="190"
+   height="68"
+   id="rect3060" />
+<text
+   transform="matrix(1 0 0 1 184.7242 108.3711)"
+   id="text3062"><tspan
+     x="70"
+     y="0"
+     class="st4 st5 st6"
+     id="tspan3064"
+     style="-inkscape-font-specification:SimHei;font-family:SimHei">虚拟化管理</tspan><tspan
+     x="31.5"
+     y="34"
+     class="st4 st5 st7"
+     id="tspan3066">VMware vCenter Server</tspan></text>
+
+
+<text
+   transform="matrix(1 0 0 1 8.5747 191.8755)"
+   id="text3068"><tspan
+     x="40"
+     y="0"
+     class="st4 st5 st7"
+     id="tspan3070"
+     style="-inkscape-font-specification:SimHei;font-family:SimHei">计算虚拟化</tspan><tspan
+     x="37.6"
+     y="23.9"
+     class="st4 st5 st8"
+     id="tspan3072">VMware vSphere</tspan></text>
+
+
+<text
+   transform="matrix(1 0 0 1 223.0037 192.8755)"
+   id="text3074"><tspan
+     x="40"
+     y="0"
+     class="st4 st5 st7"
+     id="tspan3076"
+     style="-inkscape-font-specification:SimHei;font-family:SimHei">存储虚拟化</tspan><tspan
+     x="39.8"
+     y="23.9"
+     class="st4 st5 st8"
+     id="tspan3078">VMware vSAN</tspan></text>
+
+
+<text
+   transform="matrix(1 0 0 1 420.666 193.8755)"
+   id="text3080"><tspan
+     x="40"
+     y="0"
+     class="st4 st5 st7"
+     id="tspan3082"
+     style="-inkscape-font-specification:SimHei;font-family:SimHei">网络虚拟化</tspan><tspan
+     x="45"
+     y="23.9"
+     class="st4 st5 st8"
+     id="tspan3084">VMware NSX</tspan></text>
+
+
+<text
+   transform="matrix(1 0 0 1 146.074 272.5371)"
+   class="st4 st5 st6"
+   id="text3086">IBM Cloud <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3170">上的物理基础架构</tspan></text>
+
+
+<text
+   transform="matrix(1 0 0 1 201.7869 27.4924)"
+   id="text3088"><tspan
+     x="50"
+     y="0"
+     class="st4 st5 st6"
+     id="tspan3090"
+     style="-inkscape-font-specification:SimHei;font-family:SimHei">基础架构混合</tspan><tspan
+     x="-41.9"
+     y="34"
+     class="st4 st5 st7"
+     id="tspan3092">VMware Hybrid Cloud Extension (HCX)</tspan></text>
+
+
+<text
+   transform="matrix(1 0 0 1 273.3247 303.3732)"
+   class="st4 st5 st7"
+   id="text3094"><tspan
+     style="-inkscape-font-specification:SimHei;font-family:SimHei"
+     id="tspan3174">存储</tspan></text>
+
+
+<text
+   transform="matrix(1 0 0 1 406.9552 303.3732)"
+   class="st4 st5 st7"
+   id="text3096"><tspan
+     style="-inkscape-font-specification:SimHei;font-family:SimHei"
+     id="tspan3176">网络</tspan></text>
+
+
+<text
+   transform="matrix(1 0 0 1 134.5858 303.373)"
+   class="st4 st5 st7"
+   id="text3098"><tspan
+     style="-inkscape-font-specification:SimHei;font-family:SimHei"
+     id="tspan3172">计算</tspan></text>
+
+
+</svg>
