@@ -1,0 +1,47 @@
+---
+
+copyright:
+
+  years:  2016, 2018
+
+lastupdated: "2018-05-08"
+
+---
+
+# 基于现有配置订购 vSphere 集群
+
+您可以基于保存的配置模板来订购 VMware vSphere 集群。使用此过程可根据现有集群配置来定义新集群配置。
+
+## 需求
+
+确保已完成以下任务：
+*  已在**设置**页面上配置 {{site.data.keyword.cloud}} 基础架构凭证。有关更多信息，请参阅[用户帐户和设置](../vmonic/useraccount.html)。
+*  已查看[针对 vSphere 集群的需求和规划](vs_planning.html)中的需求和注意事项。
+*  已创建要复用的配置模板。
+
+## 过程
+
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **VMware vSphere**。
+2. 在 **VMware vSphere on IBM Cloud** 页面上，单击**创建**。  
+3. 单击**新建**选项卡，然后从**集群配置**列表中选择配置模板。
+4. 输入新的集群名称。
+5. 复查自动填写的集群设置，并根据需要更新设置。有关设置的更多信息，请参阅[订购新的 vSphere 集群](vs_orderinginstances.html)。
+6. 在**订单摘要**窗格中，验证实例配置和估算成本。
+   * 要将配置另存为模板而不下订单，请单击**保存配置**。
+   * 要下订单，请确保要向其收费的帐户正确，复查并接受条款，然后单击**供应**。
+
+   **注**：这将仅安装 {{site.data.keyword.baremetal_short}}。您负责在集群部署后安装和配置各种组件（例如，VMware vCenter、VMware NSX 和 VMware vSAN）。
+
+## 结果
+
+如果已将集群配置另存为模板，那么会收到控制台通知，指示配置已保存。然后可以在**集群配置**列表中找到该模板。
+
+如果已下订单，那么集群的部署将自动启动，并且您将收到电子邮件确认，指示正在处理订单。集群准备就绪可供使用时，还将通过电子邮件通知您。
+
+**注**：与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**部署的实例**页面。
+
+## 相关链接
+
+* [订购新的 vSphere 集群](vs_orderinginstances.html)
+* [扩展现有 vSphere 集群](vs_scalingexistingclusters.html)
+* [扩展在控制台外部创建的集群](vs_orderingforclustersoutside.html)
