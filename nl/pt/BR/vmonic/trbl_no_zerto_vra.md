@@ -1,0 +1,25 @@
+---
+
+copyright:
+
+  years:  2016, 2018
+
+lastupdated: "2018-03-19"
+
+---
+
+# Os Zerto Virtual Replication Appliances não são exibidos para servidores ESXi recém-criados.
+
+## Problema
+Os Virtual Replication Appliances (VRA) não são exibidos no console do Zerto Virtual Replication depois de incluir servidores ESXi em uma instância do VMware vCenter Server que tem a recuperação de desastre do Zerto instalada.
+
+## Resolução
+Para instâncias do vCenter Server, o serviço de recuperação de desastre Zerto é instalado apenas no servidor ESXi do cluster padrão, **cluster1**. Os clusters adicionais no mesmo ambiente do vCenter Server não têm a recuperação de desastre do Zerto instalada automaticamente quando o cluster adicional é criado nem quando o servidor ESXi é incluído nesse cluster adicional.
+
+Nos clusters adicionais, deve-se instalar a recuperação de desastre do Zerto separadamente.
+
+Abra um chamado de suporte {{site.data.keyword.cloud}} e trabalhe com o Suporte IBM para obter os endereços IP disponíveis para você instalar os VRAs do console do Zerto em vez do console do {{site.data.keyword.vmwaresolutions_short}}.
+
+Para acessar o console do Zerto, clique no cartão Zerto na guia **Serviços** da instância e clique em **Visualizar Detalhes** e em **Visualizar o Console do Zerto**.
+
+Para obter informações sobre como entrar em contato com o Suporte IBM, veja [Entrando em contato com o Suporte IBM](trbl_support.html).
