@@ -1,0 +1,79 @@
+---
+
+copyright:
+
+  years:  2016, 2018
+
+lastupdated: "2018-06-07"
+
+---
+
+# FortiGate Virtual Appliance on IBM Cloud 概觀
+
+FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 FortiGate Virtual Appliance 部署到您的環境，以協助您在虛擬基礎架構內實作重要安全控制來降低風險。
+
+您可以視需要安裝此服務的多個實例。您可以透過 SSH 使用 FortiOS Web Client 或指令行介面，來管理此服務。
+
+**可用性**：只有部署在 2.0 版或更新版本中的實例，才能使用此服務。
+
+## FortiGate Virtual Appliance on IBM Cloud 的元件
+
+當您訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務時，會部署一組 FortiGate Virtual Appliance，其中包含已為管理網路配置的一個網路介面，以及九個可視需要配置來保護資料流量的網路介面。
+
+FortiGate Virtual Appliance 未預先配置成高可用性配對。部署之後，您可以根據需要配置 HA 設定，其中包括「虛擬路由器備援通訊協定 (VRRP)」及「FortiGate 叢集通訊協定 (FGCP)」。
+
+## 安裝 FortiGate Virtual Appliance on IBM Cloud 時的考量
+
+請先檢閱下列考量，再安裝 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務：
+* FortiGate 虛擬機器 (VM) 只會部署至預設叢集。
+* 根據您選取的部署大小及授權模型，會使用下列其中一個配置來部署兩部 FortiGate VM：
+    * 小型（2 個 vCPU/4 GB RAM）
+    * 中型（4 個 vCPU/6 GB RAM）
+    * 大型（8 個 vCPU/12 GB RAM）
+
+  此外，也會保留兩部 FortiGate VM 的 100% CPU 及 RAM，因為這些 VM 位在網路通訊的資料平面中，而且資源仍然可供它們使用是相當重要的。
+
+  若要計算單一 FortiGate VM 的 CPU 及 RAM 保留，請使用下列公式：
+   * `CPU 保留 = ESXi 伺服器的 CPU 速度 * vCPU 數目`
+   * `RAM 保留 = RAM 大小`
+* 當您將 FortiGate Virtual Appliance 的 HA 配對部署至實例時，已在「管理 NSX Edge Services 閘道 (ESG)」上定義 SNAT 及防火牆規則以及 FortiGate Virtual Appliance 上的靜態路徑，以容許從實例到公用網路的出埠 HTTPS 通訊來啟動授權，以及取得最新安全原則及內容。
+* 您無法在安裝服務之後變更授權層次。若要變更授權層次，您必須移除現有服務，然後選取不同的授權選項來重新安裝服務。
+* 您必須符合下列需求，才能避免 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 失敗：
+   * 至少有兩部作用中 ESXi 伺服器，可使用在個別伺服器上保留 VM 的反親緣性規則來部署兩個 FortiGate VM。
+   * 兩部作用中 ESXi 伺服器具有足夠的可用資源，因此，可以在具有 100% CPU 及 RAM 保留的每一部 ESXi 伺服器上管理一個 FortiGate VM。
+   * VMware vSphere HA 具有足夠的資源，可管理兩個具有 100% CPU 及 RAM 的 FortiGate VM。
+
+  基於這些需求，您必須規劃 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 所需的空間。必要的話，訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 之前，請將 1-2 部 ESXi 伺服器新增至實例，以及（或）減少 vSphere HA CPU 保留以進行失效接手。
+
+## FortiGate Virtual Appliance on IBM Cloud 訂購範例
+
+您使用下列配置來訂購具有 2 部 ESXi 伺服器的 VMware vCenter Server **小型**實例：16 個 2.10 GHz 的核心，各有 128 GB RAM。針對 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}，您為部署大小及任何訂閱授權模型選取**大型**（8 個 vCPU/12 GB RAM）。
+
+在此情況下，每一部伺服器上都需要單一 FortiGate VM：
+* 2.1 GHz * 8 個 vCPU = 16.8 GHz 的 CPU，及
+* 12 GB RAM
+
+兩部 FortiGate VM 總共有 33.6 GHz CPU 及 24 GB RAM。
+
+每一部 ESXi 伺服器都有「16 個核心 * 2.1 GHz = 33.6 GHz」的容量，因此，如果兩部伺服器都作用中，而且每部伺服器上都至少有 16.8 GHz 的 CPU 及 12 GB RAM 可用，則符合前兩個需求。
+
+不過，依預設，在一開始部署 2 部 ESXi 伺服器的 vCenter Server 實例上，vSphere HA 會保留 50% 的 CPU 及 RAM 以進行失效接手，因此，我們只會有：
+
+`50% 的 2 * 16 個核心 * 2.1 GHz = 33.6 GHz 可用`
+
+由於使用這些資源的 ESXi 伺服器（例如，IBM CloudDriver、VMware NSX Controller、VMware NSX Edge）上有其他工作負載，我們無法滿足第三個需求，因為兩部 FortiGate VM 需要 33.6 GHz 的 CPU 及 24 GB RAM。
+
+在此情況下，FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 安裝可能會失敗，除非將至少一部 ESXi 伺服器新增至環境，並且適當地更新 vShpere HA 失效接手保留，確保有足夠的資源可供兩部 FortiGate VM 使用。如果需要額外的資源執行 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務，您可以先新增其他 ESXi 伺服器，再安裝服務。
+
+## 移除 FortiGate Virtual Appliance on IBM Cloud 時的考量
+
+在您移除 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務之前，請確定已正確地移除現有 FortiGate Virtual Appliance 的配置。具體而言，網路資料流量必須遞送至 FortiGate Virtual Appliance，而不是透過 FortiGate Virtual Appliance 遞送。否則，您環境內的現有資料流量可能會受到影響。
+
+## 相關鏈結
+
+* [訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_ordering.html)
+* [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](managingfortinetvm.html)
+* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
+* [常見問題](../vmonic/faq.html)
+* [Fortinet 網站](https://www.fortinet.com/){:new_window}
+* [Fortinet 文件庫](http://docs.fortinet.com/fortigate/admin-guides){:new_window}
