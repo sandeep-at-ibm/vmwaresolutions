@@ -1,0 +1,66 @@
+---
+
+copyright:
+
+  years:  2016, 2018
+
+lastupdated: "2018-05-28"
+
+---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+{:pre: .pre}
+
+# Einführung in IBM Cloud for VMware Solutions
+{: #gettingstarted}
+
+Die Konsole von {{site.data.keyword.vmwaresolutions_full}} ist die Schnittstelle, über die Sie Ihre Bereitstellungen bestellen und verwalten. Jede Bereitstellung wird in der Konsole als Instanz verwaltet. Die Konsole ist eine eigenständige und vom {{site.data.keyword.slportal_full}} getrennte Benutzerschnittstelle.
+
+## Vorbereitende Schritte
+
+Lesen Sie die wichtigen Informationen zu Browseranforderungen und Benutzerkonten, bevor Sie mit {{site.data.keyword.vmwaresolutions_short}} arbeiten.
+
+### Browser- und Auflösungsvoraussetzungen
+
+Die folgenden Browser werden unterstützt:
+*  Mozilla Firefox
+*  Google Chrome
+*  Apple Safari
+
+**Hinweis**: Microsoft Internet Explorer wird nicht unterstützt.
+
+Optimale Anzeige- und Arbeitsbedingungen für die {{site.data.keyword.vmwaresolutions_short}}-Konsole erreichen Sie, indem Sie mindestens eine Bildschirmauflösung von 1024 Pixel Breite mal 500 Pixel Höhe verwenden.
+
+### IBMid-Konto
+
+Um auf die {{site.data.keyword.vmwaresolutions_short}}-Konsole zugreifen zu können, müssen Sie über ein **IBMid**-Konto verfügen.
+
+{{site.data.keyword.vmwaresolutions_short}} wird als Infrastrukturlösung im {{site.data.keyword.cloud_notm}}-Katalog bereitgestellt. Damit Sie Ihr **IBMid**-Konto zur Anmeldung bei der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwenden können, müssen Sie daher Ihr **IBMid**-Konto einem {{site.data.keyword.cloud_notm}}-Konto zuordnen.
+
+Wenn Sie sich zum ersten Mal bei der Konsole anmelden, müssen Sie entweder Ihr **IBMid**-Konto einem {{site.data.keyword.cloud_notm}}-Konto zuordnen oder sich für ein neues {{site.data.keyword.cloud_notm}}-Konto registrieren, das dann automatisch Ihrem **IBMid**-Konto zugeordnet wird. Dieses Verfahren müssen Sie nur ein einziges Mal durchlaufen.
+
+Wenn Sie Probleme beim Zuordnen Ihres **IBMid**-Kontos zu einem {{site.data.keyword.cloud_notm}}-Konto haben, lesen Sie die Informationen im Abschnitt [Fehlerbehebung beim Zugriff auf {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html){:new_window}.
+
+### IBM Cloud-Konto
+
+Um die Bereitstellungsangebote nutzen zu können, müssen Sie ein {{site.data.keyword.cloud_notm}}-Konto besitzen. Die Kosten für die physische und virtuelle Infrastruktur sowie die daraus resultierenden Lizenzen werden Ihrem {{site.data.keyword.cloud_notm}}-Konto in Rechnung gestellt. Weitere Informationen zu den Anforderungen, die Ihr {{site.data.keyword.cloud_notm}}-Konto erfüllen muss, finden Sie unter [Voraussetzungen für {{site.data.keyword.cloud_notm}}-Konto](vmonic/slaccountrequirement.html).
+
+**Hinweis**: Das {{site.data.keyword.cloud_notm}}-Konto hieß früher "IBM SoftLayer-Konto".
+
+Sie können nur ein einziges {{site.data.keyword.cloud_notm}}-Konto zu einem {{site.data.keyword.vmwaresolutions_short}}-Konto zuordnen.
+
+## Auf Konsole von IBM Cloud for VMware Solutions zugreifen
+
+Weitere Informationen zum Zugriff auf die Konsole über den {{site.data.keyword.cloud_notm}}-Katalog finden Sie unter [Auf {{site.data.keyword.vmwaresolutions_short}}-Konsole zugreifen](vmonic/loginmethod.html).
+
+## Zugehörige Links
+
+* [Informationen zu {{site.data.keyword.vmwaresolutions_short}}](vmonic/prod_overview.html)
+* [Überblick zu Cloud Foundation](sddc/sd_cloudfoundationoverview.html)
+* [Überblick zu vCenter Server](vcenter/vc_vcenterserveroverview.html)
+* [Fortinet on IBM Cloud](services/fsa_considerations.html)
+* [Veeam on IBM Cloud](services/veeam_considerations.html)
+* [Zerto on IBM Cloud](services/addingzertodr.html)
