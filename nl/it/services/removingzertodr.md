@@ -1,0 +1,42 @@
+---
+
+copyright:
+
+  years:  2016, 2018
+
+lastupdated: "2018-04-05"
+
+---
+
+# Processo di rimozione per Zerto on IBM Cloud
+<!-- Do not remove this topic. Though it's no longer in the TOC, it's referenced from the V1.3 release notes -->
+
+Il processo di rimozione del servizio Zerto on IBM® Cloud è automatizzato. Per la corretta rimozione del servizio Zerto on IBM Cloud, viene completata la seguente procedura.
+
+## Come rimuovere Zerto on IBM Cloud
+
+1. Fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra e seleziona l'istanza da cui vuoi rimuovere il servizio.
+2. Fai clic sulla scheda **Servizi**.
+3. Nella scheda **Servizi installati**, fai clic sull'icona del menu di overflow nella parte superiore destra della scheda del servizio e quindi su **Rimuovi servizio**.
+4. Nella finestra **Rimuovi servizio**, rivedi le possibili considerazioni o avvertenze. Fai clic su **Accetto**.
+5. Dopo che la tua richiesta di rimozione del servizio viene accettata, lo stato del servizio viene modificato in **In fase di rimozione** e vengono completati i seguenti passi di rimozione:   
+   1. Rimuovi i dispositivi Zerto Virtual Replication Appliance che erano stati distribuiti a tutti i server ESXi.
+   2. Disinstalla Zerto Virtual Replication.
+   3. Elimina l'istanza di servizio virtuale (o VSI, Virtual Service Instance) di Windows su cui era installato Zerto Virtual Replication.
+   4. Restituisci la sottorete portatile privata che era stata ordinata per le comunicazioni di Zerto Virtual Replication all'infrastruttura IBM Cloud.   
+   5. Rimuovi i costi del servizio di ripristino di emergenza Zerto dall'istruzione di fatturazione IBM Cloud.
+
+      **Nota**: per il servizio di ripristino di emergenza Zerto rimosso ti vengono addebitati costi fino alla fine del ciclo di fatturazione.
+
+## Risultati
+
+Una volta completata correttamente la rimozione del servizio, riceverai una notifica via e-mail e la voce del servizio verrà eliminata dalla scheda **Servizi installati**.
+
+## Link correlati
+
+* [Ordine di Zerto on IBM Cloud](zerto_ordering.html)
+* [Gestione di Zerto on IBM Cloud](managingzertodr.html)
+* [Istanze Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
+* [Istanze vCenter Server](../vcenter/vc_vcenterserveroverview.html)
+* [Sito web zerto.com](https://www.zerto.com){:new_window}
+* [Documentazione tecnica di Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
