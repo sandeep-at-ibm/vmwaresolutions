@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 320" style="enable-background:new 0 0 600 320;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4C85C5;}
+	.st1{fill:#969696;}
+	.st2{fill:#1DA88E;}
+	.st3{fill:#FFFFFF;}
+	.st4{font-family:'Roboto-Light';}
+	.st5{font-size:26px;}
+	.st6{font-size:21px;}
+	.st7{font-size:18px;}
+	.st8{font-size:14px;}
+</style>
+<rect class="st0" width="600" height="100"/>
+<rect y="220" class="st1" width="600" height="100"/>
+<rect y="110" class="st2" width="190" height="100"/>
+<rect x="205" y="110" class="st2" width="190" height="100"/>
+<rect x="410" y="110" class="st2" width="190" height="100"/>
+<text transform="matrix(1 0 0 1 135.8555 43.3711)"><tspan x="0" y="0" class="st3 st4 st5">Virtualisierungsmanagement</tspan><tspan x="53.4" y="34" class="st3 st4 st6">VMware vCenter-Server </tspan></text>
+<text transform="matrix(1 0 0 1 41.1309 143.8755)"><tspan x="0" y="0" class="st3 st4 st7">Berechnungs-</tspan><tspan x="-0.8" y="21.6" class="st3 st4 st7">virtualisierung</tspan><tspan x="0.8" y="45.5" class="st3 st4 st8">VMware vSphere </tspan></text>
+<text transform="matrix(1 0 0 1 210.5669 155.8755)"><tspan x="0" y="0" class="st3 st4 st7">Speichervirtualisierung</tspan><tspan x="27.5" y="23.9" class="st3 st4 st8">VMware Virtual SAN</tspan></text>
+<text transform="matrix(1 0 0 1 430.9971 155.8755)"><tspan x="0" y="0" class="st3 st4 st7">Netzvirtualisierung</tspan><tspan x="29.6" y="23.9" class="st3 st4 st8">VMware NSX  </tspan></text>
+<text transform="matrix(1 0 0 1 93.1104 263.5371)"><tspan x="0" y="0" class="st3 st4 st5">Physische Infrastruktur in</tspan><tspan x="289.8" y="0" class="st3 st4 st5"> IBM Cloud</tspan></text>
+<text transform="matrix(1 0 0 1 267.3065 300.3732)" class="st3 st4 st6">Speicher</text>
+<text transform="matrix(1 0 0 1 417.735 300.3732)" class="st3 st4 st6">Netz</text>
+<text transform="matrix(1 0 0 1 114.7054 299.2558)" class="st3 st4 st6">Berechnung</text>
+</svg>
