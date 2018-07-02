@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="600px" height="320px" viewBox="0 0 600 320" style="enable-background:new 0 0 600 320;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:#4C85C5;}
+	.st1{font-size:31.4167;}
+	.st2{fill:#1DA88E;}
+	.st3{fill:#969696;}
+	.st4{fill:#FFFFFF;}
+	.st5{font-size:22.8137;}
+	.st6{font-family:'Roboto-Light';}
+	.st7{font-size:21;}
+	.st8{font-size:23;}
+	.st9{font-size:24;}
+	.st10{font-size:26;}
+]]>
+</style>
+<rect class="st0" width="600" height="100"/>
+<rect y="220" class="st3" width="600" height="100"/>
+<rect y="110" class="st2" width="297.5" height="100"/>
+<rect x="305.3" y="110" class="st2" width="294.7" height="100"/>
+<text transform="matrix(1 0 0 1 181.3018 43.3711)"><tspan x="0" y="0" class="st4 st6 st5">Gestione virtualizzazione</tspan><tspan x="14.2" y="34" class="st4 st6 st7">VMware vCenter Server </tspan></text>
+<text transform="matrix(1 0 0 1 18.8931 158.6689)"><tspan x="0" y="0" class="st4 st6 st10">Virtualizzazione calcolo</tspan><tspan x="50.1" y="23.9" class="st4 st6 st7">VMware vSphere </tspan></text>
+<text transform="matrix(1 0 0 1 345.1914 159.7861)"><tspan x="0" y="0" class="st4 st6 st10">Virtualizzazione rete</tspan><tspan x="46.8" y="23.9" class="st4 st6 st7">VMware NSX</tspan><tspan x="159" y="20.9" class="st4 st6 st7">   </tspan></text>
+<text transform="matrix(1 0 0 1 143.0225 263.5371)"><tspan x="0" y="0" class="st4 st6 st8">Infrastruttura fisica su IBM</tspan><tspan x="247.8" y="0" class="st4 st6 st1"> </tspan><tspan x="254.4" y="0" class="st4 st6 st9">Cloud</tspan></text>
+<text transform="matrix(1 0 0 1 428.1475 302.2832)" class="st4 st6 st7">Rete</text>
+<text transform="matrix(1 0 0 1 271.7729 302.8418)" class="st4 st6 st7">Archivio</text>
+<text transform="matrix(1 0 0 1 122.8828 302.748)" class="st4 st6 st7">Calcolo</text>
+</svg>
