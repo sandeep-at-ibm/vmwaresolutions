@@ -1,0 +1,47 @@
+---
+
+copyright:
+
+  years:  2016, 2018
+
+lastupdated: "2018-05-08"
+
+---
+
+# Pedindo clusters do vSphere com base nas configurações existentes
+
+É possível pedir um cluster do VMware vSphere com base em um modelo de configuração que você salvou. Use este procedimento para definir uma nova configuração de cluster com base em uma configuração de cluster existente.
+
+## Requisitos
+
+Assegure-se de que tenha concluído as tarefas a seguir:
+*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](../vmonic/useraccount.html).
+*  Você revisou os requisitos e as considerações em [Requisitos e planejamento para clusters do vSphere](vs_planning.html).
+*  Você criou um modelo de configuração para ser reutilizado.
+
+## Procedimento
+
+1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **VMware vSphere** na seção **Data centers virtuais**.
+2. Na página **VMware vSphere on IBM Cloud**, clique em **Criar**.  
+3. Clique na guia **Criar novo** e selecione um modelo de configuração na lista **Configurações de cluster**.
+4. Insira um novo nome do cluster.
+5. Revise as configurações de cluster preenchidas automaticamente e atualize-as de acordo com suas necessidades. Para obter mais informações sobre as configurações, veja [Pedindo novos clusters do vSphere](vs_orderinginstances.html).
+6. Na área de janela **Resumo do pedido**, verifique a configuração da instância e o custo estimado.
+   * Para salvar a configuração como um modelo sem fazer um pedido, clique em **Salvar configuração**.
+   * Para colocar a ordem, assegure-se de que a conta a ser cobrada esteja correta, revise e aceite os termos e, em seguida, clique em **Provisão**.
+
+   **Nota**: Apenas o {{site.data.keyword.baremetal_short}} são instalados. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como VMware vCenter, VMware NSX, VMware vSAN.
+
+## Resultados
+
+Se salvou a configuração de cluster como um modelo, você receberá uma notificação do console de que a configuração foi salva. É possível então localizar o modelo na lista **Configurações de cluster**.
+
+Se tiver feito um pedido, a implementação do cluster será iniciada automaticamente e você receberá uma confirmação por e-mail de que o pedido está sendo processado. Quando o cluster estiver pronto para uso, você também será notificado por e-mail.
+
+**Nota:** os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Cloud Foundation, não são exibidos na página **Instâncias implementadas**.
+
+## Links relacionados
+
+* [Pedindo novos clusters do vSphere](vs_orderinginstances.html)
+* [Ajustando a escala de clusters existentes do vSphere](vs_scalingexistingclusters.html)
+* [Ajustando a escala de clusters criados fora do console](vs_orderingforclustersoutside.html)
