@@ -1,0 +1,50 @@
+---
+
+copyright:
+
+  years:  2016, 2018
+
+lastupdated: "2018-06-07"
+
+---
+
+# Überblick zu FortiGate Security Appliance on IBM Cloud
+
+Der Service "FortiGate Security Appliance on {{site.data.keyword.cloud}}" stellt ein Paar von Einheiten der FortiGate Security Appliance (FSA) 300-Serie in einem Hochverfügbarkeitsmodus bereit, um Firewall-, Routing-, NAT- und VPN-Services für den Schutz aller Server und virtuellen Maschinen im öffentlichen VLAN Ihrer Instanzen zur Verfügung zu stellen.
+
+Zur Verwaltung dieses Service können Sie FortiOS Web Client oder die Befehlszeilenschnittstelle über SSH verwenden.
+
+**Verfügbarkeit**: Dieser Service ist nur für Instanzen verfügbar, die in V1.8 oder höheren Releases bereitgestellt werden.
+
+## Komponenten von FortiGate Security Appliance on IBM Cloud
+
+Wenn Sie den Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" für Ihre Instanz bestellen, wird ein Hochverfügbarkeitspaar von Einheiten der FortiGate Security Appliances 300-Serie im öffentlichen Standard-VLAN der ursprünglichen Instanz oder des ursprünglichen Clusters bereitgestellt. Der gesamte Datenverkehr zum öffentlichen VLAN Ihrer Instanz wird durch FortiGate Security Appliance geleitet.
+
+**Hinweis:** Wenn Sie zusätzliche Cluster bestellen, enthalten die öffentlichen VLANs für diese neu hinzugefügten Cluster nicht das Hochverfügbarkeitspaar von Security Appliances.
+
+## Wichtige Hinweise zur Installation von FortiGate Security Appliance on IBM Cloud
+
+Lesen Sie die folgenden Hinweise, bevor Sie den Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" installieren:
+* Stellen Sie sicher, dass das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, über die Berechtigung **Hardware Firewall** verfügt. Diese Berechtigung ist erforderlich, um die Firewallprotokolle und -einstellungen des Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" Ihrer Instanz anzuzeigen und zu bearbeiten.
+* Wenn Sie den Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" zu einer bereitgestellten Instanz hinzufügen wollen, müssen Sie sicherstellen, dass noch keine andere Firewall aus der {{site.data.keyword.cloud_notm}}-Infrastruktur im öffentlichen VLAN der Instanz vorhanden ist.
+* Bei der Installation des Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" wird ein neues öffentliches VLAN hinzugefügt.
+* Während der Servicebereitstellung kann Ihre Instanz möglicherweise vorübergehend nicht auf das Internet zugreifen.
+* Nachdem der Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" erfolgreich installiert wurde, können Sie Firewallregeln für FSA über die FortiGate-Konsole verwalten und konfigurieren. Sie müssen sicherstellen, dass die FSA-Firewallregeln definiert sind, um abgehende HTTPS-Übertragungen (TCP-Port 443) zu ermöglichen, die von Managementkomponenten wie der virtuellen Maschine von IBM CloudDriver oder von Zerto Virtual Manager gestartet werden, um mit der externen Managementdatenbank in {{site.data.keyword.cloud_notm}} über das Internet zu kommunizieren. Die abgehende HTTPS-Kommunikation (TCP-Port 443) stammt aus der öffentlichen IP-Adresse der Mangement-Services für VMware NSX Edge Services Gateway (ESG) in Ihrer Instanz.
+* Wenn Sie ein Paar von FortiGate Security Appliance-Einheiten als Teil einer neuen Instanz bereitstellen, werden die FortiGate Security Appliance-Einheiten so konfiguriert, dass nur die erforderliche abgehende Kommunikation aus Ihrer Instanz in das öffentliche Netz zugelassen und jede andere Kommunikation zurückgewiesen wird.
+* Wenn Sie ein Paar von FortiGate Security Appliance-Einheiten als Teil einer vorhandenen Instanz bereitstellen, werden die FortiGate Security Appliance-Einheiten mit einer exliziten Regel so konfiguriert, dass die gesamte erforderliche abgehende Managementkommunikation aus Ihrer Instanz in das öffentliche Netz zugelassen wird. Außerdem werden die FortiGate Security Appliance-Einheiten mit einer zusätzlichen Regel konfiguriert, um jede andere Kommunikationen zuzulassen, damit Ihr vorhandener Anwendungsdatenverkehr nicht unterbrochen wird. Sie müssen die FortiGate Security Appliance-Konfiguration sorgfältig verwalten, damit nur die erforderliche Kommunikation zulässig ist und jede andere Kommunikation zurückgewiesen wird.
+
+## Hinweise zum Entfernen von FortiGate Security Appliance on IBM Cloud
+
+Lesen Sie die folgenden Hinweise, bevor Sie den Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" entfernen:
+* Beim Entfernen des Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" wird das hinzugefügte öffentliche VLAN entfernt.
+* Während des Entfernens des Service kann Ihre Instanz möglicherweise vorübergehend nicht auf das Internet zugreifen.
+* Alle FortiGate-Regeln für das Zulassen, Untersuchen, Blockieren und Weiterleiten von NAT-Datenverkehr werden zusammen mit dem Fortinet-Service entfernt. Falls Sie NAT-Regeln verwendet haben, müssen Sie diese neu konfigurieren.
+
+## Zugehörige Links
+
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} bestellen](fsa_ordering.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} verwalten](managingfsa.html)
+* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
+* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [Fortinet-Website](https://www.fortinet.com/){:new_window}
+* [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}
