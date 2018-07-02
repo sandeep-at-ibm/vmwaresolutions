@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 725 315" style="enable-background:new 0 0 725 315;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4B84C4;}
+	.st1{fill:#959595;}
+	.st2{fill:#1AA78D;}
+	.st3{fill:#F59C57;}
+	.st4{fill:#FFFFFF;}
+	.st5{font-family:'Roboto-Light';}
+	.st6{font-size:21px;}
+	.st7{font-size:15.7941px;}
+	.st8{font-size:22.8137px;}
+	.st9{font-size:18.4264px;}
+	.st10{font-size:12.2843px;}
+	.st11{font-size:10.5294px;}
+	.st12{font-size:23px;}
+	.st13{font-size:31.4167px;}
+	.st14{font-size:24px;}
+	.st15{font-size:19px;}
+</style>
+<rect x="198.5" y="-2.2" class="st0" width="526.5" height="89.1"/>
+<rect x="-2.7" y="194.1" class="st1" width="727.7" height="120.8"/>
+<rect x="198.5" y="95.7" class="st2" width="170.7" height="89.9"/>
+<rect x="375.4" y="96.7" class="st2" width="169.8" height="87.7"/>
+<rect x="551.9" y="96.7" class="st2" width="173.1" height="87.7"/>
+<g id="Layer_2">
+	<rect x="-2.7" y="-2.2" class="st3" width="194.7" height="186.7"/>
+</g>
+<g id="Layer_4">
+	<text transform="matrix(1 0 0 1 5.171 35.8409)" class="st4 st5 st6">Allgemeine Services</text>
+	<text transform="matrix(1 0 0 1 35.6105 75.3497)"><tspan x="0" y="0" class="st4 st5 st7">Authentifizierung</tspan><tspan x="43.2" y="31.4" class="st4 st5 st7">DNS</tspan><tspan x="43.5" y="62.8" class="st4 st5 st7">NTP</tspan><tspan x="-9.1" y="94.3" class="st4 st5 st7">Zertifizierungsstelle</tspan></text>
+</g>
+<text transform="matrix(1 0 0 1 317.7374 35.8409)"><tspan x="0" y="0" class="st4 st5 st8">Virtualisierungsmanagement</tspan><tspan x="46.9" y="29.8" class="st4 st5 st9">VMware vCenter-Server </tspan></text>
+<text transform="matrix(1 0 0 1 234.6212 126.9747)"><tspan x="0" y="0" class="st4 st5 st7">Berechnungs-</tspan><tspan x="-0.7" y="19" class="st4 st5 st7">virtualisierung</tspan><tspan x="0.7" y="39.9" class="st4 st5 st10">VMware vSphere </tspan></text>
+<text transform="matrix(1 0 0 1 558.172 145.4337)" class="st4 st5 st7">NetApp  ONTAP  Select</text>
+<text transform="matrix(1 0 0 1 397.2726 136.9747)"><tspan x="0" y="0" class="st4 st5 st7">Netzvirtualisierung</tspan><tspan x="26.4" y="20.9" class="st4 st5 st10">VMware NSX</tspan><tspan x="97.4" y="18.3" class="st4 st5 st11">  </tspan></text>
+<text transform="matrix(1 0 0 1 177.1891 246.7403)"><tspan x="0" y="0" class="st4 st5 st12">Physische Infrastruktur in IBM</tspan><tspan x="302.1" y="0" class="st4 st5 st13"> </tspan><tspan x="309.7" y="0" class="st4 st5 st14">Cloud</tspan></text>
+<text transform="matrix(1 0 0 1 187.9778 294.1616)" class="st4 st5 st15">Berechnung</text>
+<text transform="matrix(1 0 0 1 328.3803 294.1616)" class="st4 st5 st15">Speicher </text>
+<text transform="matrix(1 0 0 1 463.6169 293.2401)" class="st4 st5 st15">Netz</text>
+</svg>
