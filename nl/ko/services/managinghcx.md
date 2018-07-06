@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -19,7 +19,7 @@ HCX on {{site.data.keyword.cloud}} 서비스를 관리하려면 다음을 수행
 
 자세한 정보는 [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_hybrid_addingremovingservices.html)를 참조하십시오.
 
-## HCX on IBM Cloud 유지보수
+## HCX on IBM Cloud에 업데이트 적용
 
 HCX on {{site.data.keyword.cloud_notm}}는 VMware Hybrid Cloud Extension 기술의 최신 테스트된 빌드를 통해 배치됩니다. VMware는 이러한 빌드에 대한 업데이트를 정기적으로 제공하며, 여기에는 중요 수정사항 및 새 기능이 포함됩니다. 이러한 빌드는 온프레미스 HCX 설치를 포함한 HCX on {{site.data.keyword.cloud}} 설치로 자동으로 푸시됩니다.
 

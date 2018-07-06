@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-06-07"
 
 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud}} 서비스는 가상 환경에서의 데이터 보호, 데이터 재사용 및 데이터 복구를 위한 효율적이고 스케일링 가능한 솔루션을 제공합니다. 사용자는 장기 저장 및 데이터 통제를 위해 사본을 오프로드하기 위하여 서비스를 독립형 솔루션으로 구현하거나 자신의 IBM Spectrum Protect Plus 환경과 통합할 수 있습니다.
 
-**가용성**: 이 서비스는 V2.2 이상 릴리스에 배치된(또는 이 릴리스로 업그레이드된) 인스턴스에서만 사용 가능합니다.
+**가용성**: 이 서비스는 vSphere 6.5를 실행하며 V2.2 이상 릴리스로 배치된(또는 이 릴리스로 업그레이드된) 인스턴스에서만 사용할 수 있습니다. 
 
 **참고:**
-* V2.4 이상 릴리스에 배치된 인스턴스에 대한 기본 서비스 선택을 허용하면 IBM Spectrum Protect Plus V10.1.1 패치 1이 설치됩니다. 서비스는 관리 가상 머신(VM)에 대한 복구 지원을 자동으로 제공합니다.
-* V2.3에 배치된 인스턴스에 대한 기본 서비스 선택을 허용하면 IBM Spectrum Protect Plus V10.1.1이 설치됩니다. 이 서비스는 관리 VM에 대한 백업을 자동으로 제공합니다.
+* V2.4 이상 릴리스로 배치된 인스턴스에 대해 이 서비스를 설치하는 경우에는 IBM Spectrum Protect Plus V10.1.1 패치 1이 설치됩니다. 서비스는 관리 가상 머신(VM)에 대한 복구 지원을 자동으로 제공합니다.
+* V2.3으로 배치된 인스턴스에 대해 이 서비스를 설치하는 경우에는 IBM Spectrum Protect Plus V10.1.1이 설치됩니다. 이 서비스는 관리 VM에 대한 백업을 자동으로 제공합니다.
 * V2.2에 배치된 인스턴스에 대한 서비스를 설치하면 IBM Spectrum Protect Plus V10.1.0이 설치됩니다. 이 서비스는 워크로드 VM에 대한 데이터 보호만 제공합니다.
 
 
@@ -57,7 +57,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 서비스를 설�
 * 인스턴스의 기본 클러스터에서 IBM Spectrum Protect Plus 가상 머신에 충분한 CPU 및 메모리가 있는지 확인하십시오.
 * ESXi 서버의 버전에 따라 ESXi 서버에 사용 가능한 NFS 마운트가 충분한지 확인하십시오.
 
-  V2.2 이상 릴리스에 배치되거나 V2.2 릴리스로 업그레이드된 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스에는 VMware의 `NFS.MaxVolumes` 매개변수 설정이 있습니다. 이 매개변수는 ESXi 서버에서 최대 NFS 마운트 수를 정의하고 ESXi 서버의 버전에 특정한 최대 256의 값으로 설정될 수 있습니다. 자세한 정보는 [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239)를 참조하십시오.
+  V2.2 이상 릴리스로 배치된(또는 이러한 릴리스로 업그레이드된) Cloud Foundation 인스턴스 및 vCenter Server 인스턴스에는 VMware의 `NFS.MaxVolumes` 매개변수 설정이 있습니다. 이 매개변수는 ESXi 서버에서 최대 NFS 마운트 수를 정의하고 ESXi 서버의 버전에 특정한 최대 256의 값으로 설정될 수 있습니다. 자세한 정보는 [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239)를 참조하십시오.
 
   IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 서비스는 인스턴스의 기본 클러스터에서 각 ESXi 서버당 최대 다섯 개의 NFS 볼륨을 사용할 수 있습니다. 또한 서비스는 백업 및 복원을 위해 임시 NFS 마운트를 작성합니다. 그러므로 서비스를 설치하고 작동할 수 있도록 NFS 마운트 수를 최소 64의 값으로 설정해야 합니다.
 
