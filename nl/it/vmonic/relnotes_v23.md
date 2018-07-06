@@ -26,7 +26,7 @@ Per ulteriori informazioni, vedi [Risoluzione delle vulnerabilità Spectre e Mel
 
 Questa release introduce l'offerta VMware vCenter Server on IBM Cloud with Hybridity Bundle. vCenter Server with Hybridity Bundle è un cloud privato ospitato che consente di estendere in modo semplice e rapido la tua infrastruttura in loco nel cloud. L'ambiente VMware è basato sulle licenze Software Defined Data Center VMware fornite da IBM e comprende il servizio VMware HCX on {{site.data.keyword.cloud_notm}} che connette in modo semplice e sicuro un ambiente vSphere 5.0+ in loco con i siti IBM Cloud per un'ibridità dell'infrastruttura senza interruzioni e una reale mobilità dell'applicazione.
 
-Il servizio HCX on {{site.data.keyword.cloud_notm}} è disponibile solo attraverso l'istanza vCenter Server with Hybridity Bundle. Puoi aggiornare la tua istanza vCenter Server esistente a un'istanza vCenter Server with Hybridity Bundle dopo aver applicato l'aggiornamento del software vCenter Server V2.3 di base. Per ulteriori informazioni, vedi [Applicazione di aggiornamenti alle istanze vCenter Server](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html).
+Il servizio HCX on {{site.data.keyword.cloud_notm}} è disponibile solo attraverso l'istanza vCenter Server with Hybridity Bundle. Puoi aggiornare la tua istanza vCenter Server esistente a un'istanza vCenter Server with Hybridity Bundle dopo aver applicato l'aggiornamento del software vCenter Server V2.3 di base. Per ulteriori informazioni, vedi [Applicazione di aggiornamenti alle istanze vCenter Server](../vcenter/vc_applyingupdates.html).
 
 Per ulteriori informazioni su vCenter Server with Hybridity Bundle, vedi:
 

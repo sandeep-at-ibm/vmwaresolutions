@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -34,7 +34,7 @@ Oltre all'inglese, sono supportate le seguenti lingue:
 * Italiano
 * Giapponese
 * Coreano
-* Portoghese brasiliano 
+* Portoghese brasiliano
 * Cinese semplificato
 * Cinese tradizionale
 
@@ -70,7 +70,7 @@ Puoi ora distribuire le istanze VMware Federal al {{site.data.keyword.CloudDataC
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-La release corrente installa IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1, come servizio di backup predefinito, su tutte le istanze appena distribuite. Per informazioni sulle nuove funzioni di IBM Spectrum Protect Plus V10.1.1 Patch 1, vedi [Aggiornamenti di IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+La release corrente installa IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1, su tutte le istanze appena distribuite. Per informazioni sulle nuove funzioni di IBM Spectrum Protect Plus V10.1.1 Patch 1, vedi [Aggiornamenti di IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ### VMware HCX on IBM Cloud
 
@@ -89,8 +89,8 @@ Le informazioni sui servizi sono state ristrutturate e la navigazione è stata m
 Per ulteriori informazioni, vedi:
 
 * [Ordine di F5 on IBM Cloud](../services/f5_ordering.html)
-* [Ordine di FortiGate Security Appliance on IBM Cloud](../services/fortigate_physical_ordering.html)
-* [Ordine di FortiGate Virtual Appliance on IBM Cloud](../services/fortigate_vm_ordering.html)
+* [Ordine di FortiGate Security Appliance on IBM Cloud](../services/fsa_ordering.html)
+* [Ordine di FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_ordering.html)
 * [Ordine di Hytrust CloudControl on IBM Cloud](../services/htcc_ordering.html)
 * [Ordine di Hytrust DataControl on IBM Cloud](../services/htdc_ordering.html)
 * [Ordine di IBM Spectrum Protect Plus on IBM Cloud](../services/spp_ordering.html)
