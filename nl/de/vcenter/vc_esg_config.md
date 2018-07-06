@@ -50,7 +50,7 @@ Falls Ihre Workload-VMs abgehenden Zugriff auf das Internet besitzen sollen, mü
 1. Klicken Sie auf **Home > Networking & Security**.
 2. Klicken Sie im Navigatorfenster auf **NSX Edges** und doppelklicken Sie auf die Edge namens **customer-nsx-edge**.
 3. Klicken Sie auf **Management > NAT**, um die Registerkarte **NAT** zu öffnen.
-4. Wählen Sie die SNAT-Standardregel in der Tabelle aus und klicken Sie auf das grüne Häckchen über der Tabelle, um die Regel zu aktivieren.
+4. Wählen Sie die SNAT-Standardregel in der Tabelle aus und klicken Sie auf das grüne Häkchen über der Tabelle, um die Regel zu aktivieren.
 
 Weitere Informationen zu NAT-Regeln für NSX Edge finden Sie auf der Seite [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 

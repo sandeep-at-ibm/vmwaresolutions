@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -65,7 +65,7 @@ Nach der Implementierung können Sie bis zu vier weitere Cluster erstellen. Für
 
 ### Speichereinstellungen
 
-Die Speichereinstellungen sind davon abhängig, ob Sie entweder vSAN-, NFS- oder den angepassten NFS-Speicher ausgewählt haben.
+Die Speichereinstellungen sind von der Auswahl der Bare Metal Server-Konfiguration und des Speichertyps abhängig.
 
 #### vSAN-Speicher
 
@@ -120,9 +120,9 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 4. Geben Sie auf der Seite **Cluster hinzufügen** den Clusternamen ein.
 5. Wählen Sie das **CPU-Modell**, die Menge des **RAM** und die **Anzahl der Bare Metal Server** für die Bare-Metal-Konfiguration aus.
 6. Führen Sie die Speicherkonfiguration durch.
-  * Wenn Sie **vSAN-Speicher** auswählen, dann wählen Sie **Plattentyp und -größe für vSAN-Kapazitätsplatten** und **Anzahl der vSAN-Kapazitätsplatten** sowie die VMware vSAN-Lizenzedition aus.
-  * Wenn Sie **NFS-Speicher** auswählen, dann wählen Sie **Anzahl der Dateifreigaben**, **Größe** und **Leistung** aus.
-  * Wenn Sie Dateifreigaben einzeln hinzufügen und konfigurieren möchten, wählen Sie die Registerkarte **Angepasster NFS-Speicher** aus, klicken Sie dann auf das Symbol **+** neben **NFS hinzufügen** und wählen Sie **Größe** und **Leistung** für jede der Dateifreigaben aus. Sie müssen mindestens eine Dateifreigabe auswählen.
+  * Wenn Sie **vSAN-Speicher** ausgewählt haben, geben Sie **Plattentyp und -größe für vSAN-Kapazitätsplatten** und **Anzahl der vSAN-Kapazitätsplatten** sowie die Methode an, mit der die **vSAN-Lizenz** bereitgestellt werden soll.
+  * Wenn Sie **NFS-Speicher** ausgewählt haben und für alle Dateifreigaben dieselben Einstellungen hinzufügen und konfigurieren wollen, geben Sie die **Anzahl der Dateifreigaben**, **Größe** und **Leistung** an.
+  * Wenn Sie **NFS-Speicher** ausgewählt haben und Dateifreigaben einzeln hinzufügen und bearbeiten möchten, wählen Sie **Dateifreigaben einzeln konfigurieren** aus, klicken Sie neben der Bezeichnung **NFS hinzufügen** auf das Symbol **+** und wählen Sie dann für jede Dateifreigabe jeweils **Größe** und **Leistung** aus. Sie müssen mindestens eine Dateifreigabe auswählen.
 7. Wählen Sie die Lizenzedition für VMware vSAN für die Lizenzkonfiguration aus.
 8. Überprüfen Sie im Fenster **Bestellübersicht** die Clusterkonfiguration, bevor Sie den Cluster hinzufügen.
    1. Überprüfen Sie die Einstellungen für den Cluster.

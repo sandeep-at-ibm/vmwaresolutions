@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -80,7 +80,7 @@ Nach der Implementierung können Sie bis zu vier weitere Cluster erstellen. Wenn
 
 ### Speichereinstellungen
 
-Für Ihren Speicher können Sie entweder **vSAN** oder **NFS** verwenden.
+Die Speichereinstellungen sind von der Auswahl der Bare Metal Server-Konfiguration und des Speichertyps abhängig.
 
 #### vSAN-Speicher
 
@@ -132,9 +132,9 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
    * Wenn Sie **Vorkonfiguriert** ausgewählt haben, geben Sie die **Bare Metal Server-Konfiguration** und die **Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen** an. Wenn Sie vSAN als Speicherlösung verwenden möchten, beachten Sie, dass mindestens 4 {{site.data.keyword.baremetal_short}}-Instanzen erforderlich sind.
    * Wenn Sie **Angepasst** ausgewählt haben, geben Sie das **CPU-Modell**, die Größe des **RAM** und die **Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen** an.
 7. Führen Sie die Speicherkonfiguration durch.
-   * Wenn Sie **vSAN-Speicher** auswählen, dann geben Sie die **Anzahl der vSAN-Kapazitätsplatten**, **Plattentyp und -größe für vSAN-Kapazitätsplatten** und die Methode an, mit der die **vSAN-Lizenz** bereitgestellt werden soll.
-   * Wenn Sie **NFS-Speicher** auswählen, dann geben Sie **Anzahl der Dateifreigaben**, **Größe** und **Leistung** an.
-   * Wenn Sie Dateifreigaben einzeln hinzufügen und konfigurieren möchten, wählen Sie die Registerkarte **Angepasster NFS-Speicher** aus, klicken Sie dann auf das Symbol **+** neben **NFS hinzufügen** und wählen Sie **Größe** und **Leistung** für jede der Dateifreigaben aus. Sie müssen mindestens eine Dateifreigabe auswählen.
+  * Wenn Sie **vSAN-Speicher** ausgewählt haben, geben Sie **Plattentyp und -größe für vSAN-Kapazitätsplatten** und **Anzahl der vSAN-Kapazitätsplatten** sowie die Methode an, mit der die **vSAN-Lizenz** bereitgestellt werden soll.
+  * Wenn Sie **NFS-Speicher** ausgewählt haben und für alle Dateifreigaben dieselben Einstellungen hinzufügen und konfigurieren wollen, geben Sie die **Anzahl der Dateifreigaben**, **Größe** und **Leistung** an.
+  * Wenn Sie **NFS-Speicher** ausgewählt haben und Dateifreigaben einzeln hinzufügen und bearbeiten möchten, wählen Sie **Dateifreigaben einzeln konfigurieren** aus, klicken Sie neben der Bezeichnung **NFS hinzufügen** auf das Symbol **+** und wählen Sie dann für jede Dateifreigabe jeweils **Größe** und **Leistung** aus. Sie müssen mindestens eine Dateifreigabe auswählen.
 8. Geben Sie an, wie der vSphere-Lizenzschlüssel bereitgestellt wird:
   * Für Benutzer der Kategorie "Business Partner" ist die vSphere-Lizenz (Enterprise Plus Edition) enthalten und wird in Ihrem Namen erworben.
   * Für Nicht-Business-Partner-Benutzer können Sie eine der folgenden Optionen auswählen:

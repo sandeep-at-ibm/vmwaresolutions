@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ Um eine flexible und anpassbare virtualisierte VMware-Plattform bereitzustellen,
 ## Voraussetzungen
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-* Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen](../vmonic/useraccount.html).
+* Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](../vmonic/useraccount.html).
 * Sie haben die Informationen in [Voraussetzungen und Planung für vCenter Server-Instanzen](vc_planning.html) gelesen.
 * Sie haben das Instanz- und Domänennamensformat geprüft. Der Domänenname und die Unterdomänenbezeichnung werden verwendet, um den Benutzernamen und die Servernamen der Instanz zu generieren.
 
@@ -237,9 +237,9 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
     3. Geben Sie die Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen an. Wenn Sie vSAN als Speicherlösung verwenden möchten, beachten Sie, dass mindestens 4 {{site.data.keyword.baremetal_short}}-Instanzen erforderlich sind.  
 
 7. Geben Sie die Speichereinstellungen an:
-   * Wenn Sie **vSAN-Speicher** ausgewählt haben, geben Sie die **Anzahl der vSAN-Kapazitätsplatten**, **Plattentyp und -größe für vSAN-Kapazitätsplatten** und die Methode an, mit der die **vSAN-Lizenz** bereitgestellt werden soll.
-   * Wenn Sie **NFS-Speicher** ausgewählt haben, geben Sie die **Anzahl der Dateifreigaben**, **Größe** und **Leistung** an. Die Einstellungen gelten für alle Dateifreigaben.
-   * Wenn Sie Dateifreigaben einzeln hinzufügen und konfigurieren möchten, wählen Sie die Registerkarte **Angepasster NFS-Speicher** aus, klicken Sie dann auf das Symbol **+** neben **NFS hinzufügen** und wählen Sie **Größe** und **Leistung** für jede der Dateifreigaben aus. Sie müssen mindestens eine Dateifreigabe auswählen.
+  * Wenn Sie **vSAN-Speicher** ausgewählt haben, geben Sie **Plattentyp und -größe für vSAN-Kapazitätsplatten** und **Anzahl der vSAN-Kapazitätsplatten** sowie die Methode an, mit der die **vSAN-Lizenz** bereitgestellt werden soll.
+  * Wenn Sie **NFS-Speicher** ausgewählt haben und für alle Dateifreigaben dieselben Einstellungen hinzufügen und konfigurieren wollen, geben Sie die **Anzahl der Dateifreigaben**, **Größe** und **Leistung** an.
+  * Wenn Sie **NFS-Speicher** ausgewählt haben und Dateifreigaben einzeln hinzufügen und bearbeiten möchten, wählen Sie **Dateifreigaben einzeln konfigurieren** aus, klicken Sie neben der Bezeichnung **NFS hinzufügen** auf das Symbol **+** und wählen Sie dann für jede Dateifreigabe jeweils **Größe** und **Leistung** aus. Sie müssen mindestens eine Dateifreigabe auswählen.
 
 8. Geben Sie die Netzschnittstelleneinstellungen an.
    1. Geben Sie das Hostnamenspräfix, die Unterdomänenbezeichnung und den Rootdomänennamen ein. Für eine sekundäre Instanz wird der Domänenname automatisch eingetragen.

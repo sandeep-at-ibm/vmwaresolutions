@@ -51,7 +51,7 @@ Das Basisangebot wird mit einer vCenter Server-Appliance bereitgestellt, deren G
 
 Insgesamt benötigt das Basisangebot 38 virtuelle CPUs und 67 GB virtuellen RAM, die für die Virtualisierungsmanagementschicht reserviert sind. Die verbleibende Hostkapazität für Ihre VMs hängt von mehreren Faktoren ab, beispielsweise der Übersubskriptionsrate, der VM-Dimensionierung und den Anforderungen an die Workloadleistung.
 
-Informationen zu zusätzlichem Ressourcenbedarf für das Management beim Bereitstellen des Service "HCX on {{site.data.keyword.cloud_notm}}" finden Sie im Abschnitt [Überblick zu HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+Informationen zu zusätzlichem Ressourcenbedarf für das Management beim Bereitstellen des Service "HCX on {{site.data.keyword.cloud_notm}}" finden Sie im Abschnitt [Überblick zu VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
 
 ### Infrastruktur Hybridity
 
@@ -105,7 +105,7 @@ Der vSAN-Speicher bietet angepasste Konfigurationen mit unterschiedlichen Option
 
 ### Von IBM bereitgestellte Lizenzen und Gebühren
 
-Die Bestellung der vCenter Server with Hybridity Bundle-Instanz enthält die folgenden Lizenzen. 
+Die Bestellung der vCenter Server with Hybridity Bundle-Instanz enthält die folgenden Lizenzen.
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5

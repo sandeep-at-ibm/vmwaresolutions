@@ -51,7 +51,7 @@ Tabelle 1. Bei Änderungen von VMware-Ressourcen betroffene Operationen
 
 In der folgenden Tabelle sind die Operationen aufgelistet, die betroffen sein könnten, wenn vCenter Server-Ressourcen vom VC/PSC-Rootbenutzer außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole geändert werden.
 
-Tabelle 1. Durch VC/PSC-Rootzugriff (lokal) betroffene Operationen
+Tabelle 2. Durch VC/PSC-Rootzugriff (lokal) betroffene Operationen
 
 | Versuchte Änderung  | Betroffene Operationen  | Bewertung  | Wiederherstellungsmethode  |
 |:------------- |:------------- |:--------------|:--------------|

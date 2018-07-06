@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -16,7 +16,7 @@ Sie können Cluster zu Ihrer VMware vCenter Server on {{site.data.keyword.cloud}
 
 ## Cluster zu vCenter Server with Hybridity Bundle-Instanzen hinzufügen
 
-Sie können bis zu zehn Cluster zu Ihrer vCenter Server with Hybridity Bundle-Instanz hinzufügen.
+Sie können bis zu 10 Cluster zu Ihrer vCenter Server with Hybridity Bundle-Instanz hinzufügen.
 
 ### Systemeinstellungen
 
@@ -132,21 +132,23 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
         <dt class="dt dlterm">Gelöscht</dt>
         <dd class="dd">Der Cluster wurde gelöscht.</dd>
     </dl>
-4. Klicken Sie auf einen Clusternamen, um die Details zum ESXi-Server, zum Speicher und zur Lizenz anzuzeigen:
+4. Klicken Sie auf einen Clusternamen, um die Details zu ESXi-Servern und Speicher anzuzeigen:
 
-  **ESXi-Server**
+  * ESXi-Serverdetails:
+     * **Name**: Der Name des ESXi-Servers im Format `<host_prefix><n>.<subdomain_label>.<root_domain>`, wobei Folgendes gilt:
 
-  * **Name**: Der Name des ESXi-Servers im Format `<host_prefix><n>.<subdomain_label>.<root_domain>`, wobei Folgendes gilt:
+       `host_prefix` ist das Hostnamenspräfix,
 
-     `host_prefix` ist das Hostnamenspräfix,
        `n` ist die Folgenummer des Servers,
+
        `subdomain_label` ist die Unterdomänenbezeichnung und
+
        `root_domain` ist der Rootdomänenname.
 
-   * **Version**: Die Version des ESXi-Servers.
-   * **Berechtigungsnachweise**: Der Benutzername und das Kennwort für den Zugriff auf den ESXi-Server.
-   * **Private IP**: Die private IP-Adresse des ESXi-Servers.
-   * **Status**: Der Status des ESXi-Servers, der einen der folgenden Werte aufweisen kann:
+     * **Version**: Die Version des ESXi-Servers.
+     * **Berechtigungsnachweise**: Der Benutzername und das Kennwort für den Zugriff auf den ESXi-Server.
+     * **Private IP**: Die private IP-Adresse des ESXi-Servers.
+     * **Status**: Der Status des ESXi-Servers, der einen der folgenden Werte aufweisen kann:
         <dl class="dl">
         <dt class="dt dlterm">Hinzugefügt</dt>
         <dd class="dd">Der ESXi-Server wurde hinzugefügt und kann verwendet werden. </dd>
@@ -155,6 +157,11 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
         <dt class="dt dlterm">Wird gelöscht</dt>
         <dd class="dd">Der ESXi-Server wird gerade gelöscht.</dd>
         </dl>
+  * Speicherdetails:
+    * **Name**: Der Name des Datenspeichers.
+    * **Größe**: Die Kapazität des Speichers.
+    * **IOPS/GB**: Die Leistungsstufe des Speichers.
+    * **NFS-Protokoll**: Die NFS-Version des Speichers.
 
 ## Cluster aus vCenter Server with Hybridity Bundle-Instanzen löschen
 

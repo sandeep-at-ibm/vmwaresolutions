@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -17,7 +17,7 @@ Um eine flexible und anpassbare virtualisierte VMware-Plattform bereitzustellen,
 ## Voraussetzungen
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-* Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen](../vmonic/useraccount.html).
+* Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](../vmonic/useraccount.html).
 * Sie haben die Informationen in [Voraussetzungen und Planung für VMware Federal-Instanzen](vc_fed_planning.html) gelesen.
 * Sie haben das Instanz- und Domänennamensformat geprüft. Der Domänenname und die Unterdomänenbezeichnung werden verwendet, um den Benutzernamen und die Servernamen der Instanz zu generieren.
 
@@ -95,7 +95,7 @@ Alle ESXi-Server nutzen dieselbe Konfiguration gemeinsam. Nach der Bereitstellun
 
 ## Speichereinstellungen
 
-Die Speichereinstellungen sind davon abhängig, ob Sie entweder vSAN-, NFS- oder den angepassten NFS-Speicher ausgewählt haben.
+Die Speichereinstellungen sind von der Auswahl der Bare Metal Server-Konfiguration und des Speichertyps abhängig.
 
 ### vSAN-Speicher
 
@@ -183,9 +183,9 @@ Auf Basis der für die Instanz ausgewählten Konfiguration werden die geschätzt
   1. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
   2. Wählen Sie das CPU-Modell **Angepasst** und die Menge des **RAM** aus.
 7. Führen Sie die Speicherkonfiguration durch.
-      * Wenn Sie **vSAN-Speicher** ausgewählt haben, dann wählen Sie **Plattentyp und -größe für vSAN-Kapazitätsplatten** und **Anzahl der vSAN-Kapazitätsplatten** sowie die VMware vSAN-Lizenzedition aus.
-      * Wenn Sie **NFS-Speicher** ausgewählt haben, dann wählen Sie **Anzahl der Dateifreigaben**, **Größe** und **Leistung** aus.
-      * Wenn Sie Dateifreigaben einzeln hinzufügen und konfigurieren möchten, wählen Sie die Registerkarte **Angepasster NFS-Speicher** aus, klicken Sie dann auf das Symbol **+** neben **NFS hinzufügen** und wählen Sie **Größe** und **Leistung** für jede der Dateifreigaben aus. Sie müssen mindestens eine Dateifreigabe auswählen.
+  * Wenn Sie **vSAN-Speicher** ausgewählt haben, geben Sie **Plattentyp und -größe für vSAN-Kapazitätsplatten** und **Anzahl der vSAN-Kapazitätsplatten** sowie die Methode an, mit der die **vSAN-Lizenz** bereitgestellt werden soll.
+  * Wenn Sie **NFS-Speicher** ausgewählt haben und für alle Dateifreigaben dieselben Einstellungen hinzufügen und konfigurieren wollen, geben Sie die **Anzahl der Dateifreigaben**, **Größe** und **Leistung** an.
+  * Wenn Sie **NFS-Speicher** ausgewählt haben und Dateifreigaben einzeln hinzufügen und bearbeiten möchten, wählen Sie **Dateifreigaben einzeln konfigurieren** aus, klicken Sie neben der Bezeichnung **NFS hinzufügen** auf das Symbol **+** und wählen Sie dann für jede Dateifreigabe jeweils **Größe** und **Leistung** aus. Sie müssen mindestens eine Dateifreigabe auswählen.
 8. Führen Sie die Netzschnittstellenkonfiguration durch.
    1. Geben Sie das Hostnamenspräfix, die Unterdomänenbezeichnung und den Rootdomänennamen ein.
    2. Wählen Sie die DNS-Konfiguration aus.
@@ -199,7 +199,7 @@ Auf Basis der für die Instanz ausgewählten Konfiguration werden die geschätzt
 
 Die Bereitstellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen.
 
-Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Komponenten der VMware Federal-Instanz](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert.
+Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Komponenten der vCenter Server-Instanz für VMware Federal {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 
