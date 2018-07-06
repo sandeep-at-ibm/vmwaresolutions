@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -36,12 +36,12 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 다음 
 * 온프레미스 소스 사이트와 {{site.data.keyword.cloud_notm}} 대상 사이트 간의 상호연결 및 확장된 네트워크가 제거되었는지 확인하십시오. 상호연결 및 확장된 네트워크를 제거하려면 온프레미스 VMware vSphere Web Client에서 HCX 사용자 인터페이스를 사용하십시오.
 * 온프레미스 소스 사이트와 {{site.data.keyword.cloud_notm}} 대상 사이트 간의 사이트 페어링이 제거되었는지 확인하십시오. 사이트 페어링을 제거하려면 온프레미스 VMware vSphere Web Client에서 HCX 사용자 인터페이스를 사용하십시오.
 * HCX on {{site.data.keyword.cloud_notm}}의 제거가 자동화됩니다. 이 서비스를 제거하려면 다음 프로시저를 완료하십시오.
-   * 클라우드 측 HCX Manager에 대해 주문된 HCX 라이센스를 비활성화하십시오.
-   * HCX Manager를 삭제하십시오.
-   * HCX에 대해 예약된 vMotion IP 주소를 해제하십시오.
-   * HCX 관련 리소스 풀이 비어 있는 경우 이를 제거하십시오.
-   * HCX 관련 폴더가 비어 있는 경우 이를 제거하십시오.
-   * HCX 관리 에지 어플라이언스를 삭제하십시오.
+   * 클라우드 측 HCX Manager에 대해 주문된 HCX 라이센스를 비활성화합니다. 
+   * HCX Manager를 삭제합니다. 
+   * HCX에 대해 예약된 vMotion IP 주소를 해제합니다. 
+   * HCX 관련 리소스 풀이 비어 있는 경우 이를 제거합니다. 
+   * HCX 관련 폴더가 비어 있는 경우 이를 제거합니다. 
+   * HCX 관리 에지 어플라이언스를 삭제합니다. 
 
 ## 관련 링크
 

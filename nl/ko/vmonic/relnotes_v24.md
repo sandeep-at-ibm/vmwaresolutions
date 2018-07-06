@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -70,7 +70,7 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-현재 릴리스는 기본 백업 서비스로서 새로 배치된 모든 인스턴스에 IBM Spectrum Protect&trade; Plus on V10.1.1 패치 1을 설치합니다. IBM Spectrum Protect Plus V10.1.1 패치 1의 새 기능에 대한 정보는 [IBM Spectrum Protect Plus 업데이트](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}를 참조하십시오.
+현재 릴리스는 새로 배치된 모든 인스턴스에 IBM Spectrum Protect&trade; Plus V10.1.1 패치 1을 설치합니다. IBM Spectrum Protect Plus V10.1.1 패치 1의 새 기능에 대한 정보는 [IBM Spectrum Protect Plus 업데이트](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}를 참조하십시오.
 
 ### VMware HCX on IBM Cloud
 
@@ -89,8 +89,8 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 자세한 정보는 다음을 참조하십시오.
 
 * [F5 on IBM Cloud 주문](../services/f5_ordering.html)
-* [FortiGate Security Appliance on IBM Cloud 주문](../services/fortigate_physical_ordering.html)
-* [FortiGate Virtual Appliance on IBM Cloud 주문](../services/fortigate_vm_ordering.html)
+* [FortiGate Security Appliance on IBM Cloud 주문](../services/fsa_ordering.html)
+* [FortiGate Virtual Appliance on IBM Cloud 주문](../services/fortinetvm_ordering.html)
 * [Hytrust CloudControl on IBM Cloud 주문](../services/htcc_ordering.html)
 * [Hytrust DataControl on IBM Cloud 주문](../services/htdc_ordering.html)
 * [IBM Spectrum Protect Plus on IBM Cloud 주문](../services/spp_ordering.html)

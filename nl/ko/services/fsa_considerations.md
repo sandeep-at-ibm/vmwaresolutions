@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -18,7 +18,7 @@ SSH를 통해 FortiOS Web Client 또는 명령 인터페이스를 사용하여 �
 
 ## FortiGate Security Appliance on IBM Cloud의 컴포넌트
 
-인스턴스에 대한 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스를 주문할 때 원래 인스턴스 또는 클러스터의 기본 공인 VLAN에 FortiGate 300 시리즈 Security Appliances의 HA 쌍이 배치됩니다. 인스턴스의 공인 VLAN에 대한 모든 트래픽은 FortiGate Security Appliance를 통해 라우팅됩니다.
+인스턴스에 대한 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스를 주문할 때 기존 인스턴스 또는 클러스터의 기본 공인 VLAN에 FortiGate Security Appliance 300 시리즈의 HA 쌍이 배치됩니다. 인스턴스의 공인 VLAN에 대한 모든 트래픽은 FortiGate Security Appliance를 통해 라우팅됩니다.
 
 **참고:** 추가 클러스터를 주문하는 경우 새로 추가된 클러스터에 대한 공인 VLAN에는 Security Appliances의 HA 쌍이 없습니다.
 

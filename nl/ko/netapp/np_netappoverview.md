@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -80,8 +80,7 @@ NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로�
 
 * 10Gbps 듀얼 공용 및 사설 네트워크 업링크
 * 세 개의 VLAN(Virtual LANs): 한 개의 공인 VLAN 및 두 개의 사설 VLAN
-* DLR(Distributed Logical Router)이 포함된 한 개의 VXLAN(Virtual eXtensible LAN)
-* 두 개의 보안 VMware NSX Edge Services Gateway
+* 하나의 안전한 VMware NSX Edge Services Gateway
 
 ### Virtual Server 인스턴스
 

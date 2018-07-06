@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
 # HyTrust DataControl on IBM Cloud 관리
 
-HyTrust DataControl on {{site.data.keyword.cloud}} 서비스(HTDC)를 관리하려면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 HTDC WebGUI에 액세스하거나 vSphere Web Client에서 HTDC 콘솔에 액세스하십시오.
+HyTrust DataControl on {{site.data.keyword.cloud}} 서비스(HTDC)를 관리하려면 {{site.data.keyword.vmwaresolutions_full}} 콘솔에서 HTDC WebGUI에 액세스하거나 vSphere Web Client에서 HTDC 콘솔에 액세스하십시오.
 
 ## IBM Cloud for VMware Solutions 콘솔에서 HyTrust DataControl WebGUI에 액세스
 
-HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에 있는 해당 WebGUI 신임 정보를 사용하여 기본 또는 보조 HTDC 어플라이언스의 WebGUI에 로그인하십시오.
+기본 또는 보조 HTDC 어플라이언스의 WebGUI에 로그인하려면 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 찾을 수 있는 WebGUI 신임 정보를 사용하십시오. 
 
 ## vSphere Web Client에서 HyTrust DataControl 콘솔에 액세스
 

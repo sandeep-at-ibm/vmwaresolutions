@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -18,9 +18,11 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 서비스는 가상 �
 
 ## FortiGate Virtual Appliance on IBM Cloud의 컴포넌트
 
-FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 주문할 때 FortiGate Virtual Appliances 쌍이 필요에 따라 데이터 트래픽을 보호하도록 구성할 수 있는 9개의 네트워크 인터페이스 및 관리 네트워크에 대해 구성된 1개의 네트워크 인터페이스와 함께 배치됩니다.
+FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 주문하면 FortiGate Virtual Appliance 쌍이 다음 항목과 함께 배치됩니다. 
+* ㅌ`관리 네트워크에 대해 구성된 네트워크 인터페이스. 
+* 필요에 따라 데이터 트래픽을 보호하기 위해 구성할 수 있는 9개의 추가 네트워크 인터페이스. 
 
-FortiGate Virtual Appliances는 고가용성 쌍으로 사전 구성되지 않습니다. 배치 후 필요에 따라 VRRP(Virtual Router Redundancy Protocol) 및 FGCP(FortiGate Cluster Protocol)가 포함된 HA 설정을 구성할 수 있습니다.
+FortiGate Virtual Appliance는 고가용성 쌍으로 사전 구성되지 않습니다. 배치 후 필요에 따라 VRRP(Virtual Router Redundancy Protocol) 및 FGCP(FortiGate Cluster Protocol)가 포함된 HA 설정을 구성할 수 있습니다.
 
 ## FortiGate Virtual Appliance on IBM Cloud 설치 시 고려사항
 
@@ -31,8 +33,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 설
     * 중형(4개의 vCPU / 6GB RAM)
     * 대형(8개의 vCPU / 12GB RAM)
 
-  또한 VM이 네트워크 통신의 데이터 플레인 상태에 있고 계속해서 네트워크 통신에 리소스를 사용할 수 있는 점이 중요하므로 두 FortiGate VM에 대한
-   CPU 및 RAM이 100% 예약됩니다.
+  또한 두 FortiGate VM은 네트워크 통신의 데이터 플레인에 있으며 이들이 여전히 리소스를 사용할 수 있어야 하는 점이 중요하므로,
+    이러한 VM에 대해 CPU 및 RAM이 100% 예약됩니다. 
 
   단일 FortiGate VM에 대한 CPU 및 RAM 예약을 계산하려면 다음 공식을 사용하십시오.
    * `CPU 예약 = ESXi 서버의 CPU 속도 * vCPU 수`
@@ -44,7 +46,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 설
    * CPU 및 RAM이 100% 예약된 상태로 각 ESXi 서버에 하나의 FortiGate VM을 호스팅할 수 있도록 두 개의 활성 서버에 사용할 수 있는 충분한 리소스가 있습니다.
    * VMware vSphere HA에는 CPU 및 RAM이 100% 상태로 두 FortiGate VM을 호스팅할 수 있는 충분한 리소스가 있습니다.
 
-  요구사항으로 인해 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}에 필요한 공간에 대해 계획해야 합니다. 필요한 경우 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}를 주문하기 전에 1 - 2개의 ESXi 서버를 인스턴스에 추가하거나 장애 복구를 위해 vSphere HA CPU 예약을 줄이십시오(또는 둘 다 해당).
+  이러한 요구사항이 있으므로, FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}에 필요한 공간은 주의깊게 계획되어야 합니다. 필요한 경우에는 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}를 주문하기 전에 1 - 2개의 ESXi 서버를 인스턴스에 추가하거나, 장애 복구를 위한 vSphere HA CPU 예약을 줄이십시오(또는 둘 다 수행). 
 
 ## FortiGate Virtual Appliance on IBM Cloud 주문 예
 
@@ -62,9 +64,11 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 설
 
 `50% 2개 * 16개의 코어 * 2.1GHz = 33.6GHz 사용 가능`
 
-ESXi 서버에 IBM CloudDriver, VMware NSX Controller, VMware NSX Edge와 같은 다른 워크로드가 있으므로 이 리소스를 사용하여 세 번째 요구사항을 충족시킬 수 없습니다. 두 FortiGate VM에 33.6GHz CPU 및 24GB RAM이 필요하기 때문입니다.
+ESXi 서버에는 IBM CloudDriver, VMware NSX Controller 또는 VMware NSX Edge 등의 다른 워크로드가 있으므로 이러한 자원을 사용하면 세 번째 요구사항을 만족시킬 수 없습니다. 이는 두 FortiGate VM에 대해 33.6GHz의 CPU와 24GB의 RAM이 필요하기 때문입니다. 
 
-이 경우, 최소 하나의 ESXi 서버가 환경에 추가되고 vShpere HA 장애 복구 예약이 두 FortiGate VM에 충분한 리소스가 있도록 적절하게 업데이트되지 않는 한 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 설치에 실패할 수 있습니다. FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 실행하는 데 추가 리소스가 필요한 경우 서비스를 설치하기 전에 더 많은 ESXi 서버를 추가할 수 있습니다.
+이 경우, 두 FortiGate VM에 대해 충분한 리소스를 확보하기 위해 하나 이상의 ESXi 서버를 환경에 추가하고 vShpere HA 장애 복구 예약을 적절히 업데이트하지 않으면 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 설치가 실패할 수 있습니다. 
+
+FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 실행하는 데 추가 리소스가 필요한 경우에는 이 서비스를 설치하기 전에 더 많은 ESXi 서버를 추가할 수 있습니다. 
 
 ## FortiGate Virtual Appliance on IBM Cloud 제거 시 고려사항
 

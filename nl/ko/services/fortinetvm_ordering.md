@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -35,9 +35,9 @@ lastupdated: "2018-06-08"
 ### 배치 크기
 
 IBM Cloud는 다음 배치 크기 옵션을 제공합니다.
-- **소형(2개의 vCPU / 4GB RAM)**
-- **중형(4개의 vCPU / 6GB RAM)**
-- **대형(8개의 vCPU / 12GB RAM)**
+* 소형(2개의 vCPU / 4GB RAM)
+* 중형(4개의 vCPU / 6GB RAM)
+* 대형(8개의 vCPU / 12GB RAM)
 
 ### 라이센스 모델
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -37,7 +37,7 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 ESXi 서버 기능의 추가 및 제거를 사용하여 인스턴스의 기능을 확장하고 축소할 수 있습니다. 또한 호스팅된 환경에서 VMware 컴포넌트의 업데이트 및 업그레이드 적용과 같이 라이프사이클 관리 기능도 사용할 수 있습니다.
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+아키텍처에 대한 세부사항은 [솔루션 개요](../archiref/solution/solution_overview.html)를 참조하십시오. 
 
 ## Cloud Foundation 인스턴스 컴포넌트
 

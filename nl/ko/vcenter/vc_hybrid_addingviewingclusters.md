@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -132,21 +132,23 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
         <dt class="dt dlterm">삭제됨</dt>
         <dd class="dd">클러스터가 삭제되었습니다.</dd>
     </dl>
-4. 클러스터 이름을 클릭하여 ESXi 서버, 스토리지 및 라이센스 세부사항을 보십시오.
+4. 클러스터 이름을 클릭하여 ESXi 서버 및 스토리지의 세부사항을 보십시오.
 
-  **ESXi 서버**
+  * ESXi 서버 세부사항:
+     * **이름**: ESXi 서버의 이름으로, 형식은 `<host_prefix><n>.<subdomain_label>.<root_domain>`이며 여기서
 
-  * **이름**: ESXi 서버의 이름으로, 형식은 `<host_prefix><n>.<subdomain_label>.<root_domain>`이며 여기서
+       `host_prefix`는 호스트 이름 접두부이고
 
-     `host_prefix`는 호스트 이름 접두부입니다.
-       `n`은 서버의 순서입니다.
-       `subdomain_label`은 하위 도메인 레이블입니다.
+       `n`은 서버의 순서이며
+
+       `subdomain_label`은 하위 도메인 레이블이고
+
        `root_domain`은 루트 도메인 이름입니다.
 
-   * **버전**: ESXi 서버의 버전입니다.
-   * **신임 정보**: ESXi 서버에 액세스하는 데 사용되는 사용자 이름 및 비밀번호입니다.
-   * **사설 IP**: ESXi 서버의 사설 IP 주소입니다.
-   * **상태**: ESXi 서버의 상태이며, 다음 값 중 하나가 될 수 있습니다.
+     * **버전**: ESXi 서버의 버전입니다.
+     * **신임 정보**: ESXi 서버에 액세스하는 데 사용되는 사용자 이름 및 비밀번호입니다.
+     * **사설 IP**: ESXi 서버의 사설 IP 주소입니다.
+     * **상태**: ESXi 서버의 상태이며, 다음 값 중 하나가 될 수 있습니다.
         <dl class="dl">
         <dt class="dt dlterm">추가됨</dt>
         <dd class="dd">ESXi 서버가 추가되었으며 사용할 준비가 되었습니다. </dd>
@@ -155,6 +157,11 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
         <dt class="dt dlterm">삭제 중</dt>
         <dd class="dd">ESXi 서버가 삭제 중입니다.</dd>
         </dl>
+  * 스토리지 세부사항:
+    * **이름**: 데이터 저장소 이름입니다.
+    * **크기**: 스토리지의 용량입니다.
+    * **IOPS/GB**: 스토리지의 성능 레벨입니다.
+    * **NFS 프로토콜**: 스토리지의 NFS 버전입니다.
 
 ## vCenter Server with Hybridity Bundle 인스턴스에서 클러스터 삭제
 

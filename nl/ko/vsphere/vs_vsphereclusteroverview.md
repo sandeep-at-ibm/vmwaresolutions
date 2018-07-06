@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -79,7 +79,7 @@ VMware vSAN 컴포넌트가 선택될 때 vSAN 구성을 위한 사용자 정의
 * VMware vSphere Enterprise Plus 6.0u2 또는 6.5u1이 포함된 하나의 IBM Cloud Bare Metal Server  
 * [VMware vSphere on IBM Cloud의 컴포넌트](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)에 표시된 선택적 VMware 컴포넌트
 
-**중요**: 주문되고 {{site.data.keyword.slportal}}에서 {{site.data.keyword.cloud_notm}} 계정으로만 제공되는 ESXi 서버, 선택적 VMware 컴포넌트 및 추가 하드웨어를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 새 클러스터를 작성한 후 콘솔로 돌아가서 저장된 구성을 사용하여 새 클러스터를 스케일링할 수 있습니다. 자세한 정보는 [기존 클러스터 스케일링](vs_scalingexistingclusters.html)을 참조하십시오.
+**중요**: 주문되고 {{site.data.keyword.slportal}}에서 {{site.data.keyword.cloud_notm}} 계정으로만 제공되는 ESXi 서버, 선택적 VMware 컴포넌트 및 추가 하드웨어를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 새 클러스터를 작성한 후 콘솔로 돌아가서 저장된 구성을 사용하여 새 클러스터를 스케일링할 수 있습니다. 자세한 정보는 [기존 vSphere 클러스터 스케일링](vs_scalingexistingclusters.html)을 참조하십시오. 
 
 ## 관련 링크
 
