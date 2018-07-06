@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -79,7 +79,7 @@ Un servidor nativo IBM Cloud con la configuración de red que se presenta en [Co
 * Un servidor nativo IBM Cloud con VMware vSphere Enterprise Plus 6.0u2 o 6.5u1  
 * Componentes opcionales de VMware que se presentan en [Componentes de VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
-**Importante**: debe gestionar los servidores ESXi, los componentes opcionales de VMware y el hardware adicional solicitados y distribuidos a su cuenta de {{site.data.keyword.cloud_notm}} solo desde el {{site.data.keyword.slportal}}. Después de crear un nuevo clúster en la consola de {{site.data.keyword.vmwaresolutions_short}}, puede volver a la consola para escalar el nuevo clúster utilizando la configuración guardada. Para obtener más información, consulte [Escalado de clústeres existentes](vs_scalingexistingclusters.html).
+**Importante**: debe gestionar los servidores ESXi, los componentes opcionales de VMware y el hardware adicional solicitados y distribuidos a su cuenta de {{site.data.keyword.cloud_notm}} solo desde el {{site.data.keyword.slportal}}. Después de crear un nuevo clúster en la consola de {{site.data.keyword.vmwaresolutions_short}}, puede volver a la consola para escalar el nuevo clúster utilizando la configuración guardada. Para obtener más información, consulte [Escalado de clústeres existentes de vSphere](vs_scalingexistingclusters.html).
 
 ## Enlaces relacionados
 

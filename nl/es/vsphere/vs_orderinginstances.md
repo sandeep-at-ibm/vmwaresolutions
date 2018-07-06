@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -19,7 +19,7 @@ Este procedimiento le guía por el componente de VMware para seleccionar los val
 ## Requisitos
 
 Asegúrese de haber realizado las tareas siguientes:
-*  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Cuentas de usuario y valores](../vmonic/useraccount.html).
+*  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
 *  Ha revisado los requisitos y las consideraciones del apartado [Requisitos y planificación de clústeres de vSphere](vs_planning.html).
 
 ## Valores del sistema

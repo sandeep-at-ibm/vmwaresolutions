@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,8 +15,8 @@ Puede utilizar la oferta de VMware vSphere para escalar los clústeres existente
 ## Requisitos
 
 Asegúrese de haber realizado las tareas siguientes:
-*  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Cuentas de usuario y valores](../vmonic/useraccount.html).
-*  Ha revisado los requisitos y las consideraciones del apartado [Requisitos y planificación de clústeres de vSphere](vs_planning.html).
+*  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
+*  Ha revisado los requisitos y las consideraciones del apartado [Requisitos y planificación para VMware vSphere en {{site.data.keyword.cloud_notm}}](vs_planning.html).
 
 ## Procedimiento
 
