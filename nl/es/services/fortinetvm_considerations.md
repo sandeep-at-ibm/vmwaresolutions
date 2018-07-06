@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -18,9 +18,11 @@ Puede instalar varias instancias de este servicio si las necesita. Puede gestion
 
 ## Componentes de FortiGate Virtual Appliance on IBM Cloud
 
-Al solicitar el servicio de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, se desplegará un par de FortiGate Virtual Appliances con una interfaz de red configurada para la red de gestión y nueve interfaces de red que puede configurar para proteger el tráfico de datos según lo necesite.
+Cuando solicita el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, se despliega un par de dispositivos virtuales FortiGate con:
+* Una interfaz de red configurada para la red de gestión.
+* Nueve interfaces de red adicionales que puede configurar para proteger el tráfico de datos según necesite.
 
-Los FortiGate Virtual Appliances no están preconfigurados como par de alta disponibilidad. Después del despliegue, puede configurar los valores de alta disponibilidad, que incluyen Virtual Router Redundancy Protocol (VRRP) y FortiGate Cluster Protocol (FGCP), según sus necesidades.
+Los FortiGate Virtual Appliances no están preconfigurados como par de alta disponibilidad (HA). Después del despliegue, puede configurar los valores de alta disponibilidad, que incluyen Virtual Router Redundancy Protocol (VRRP) y FortiGate Cluster Protocol (FGCP), según sus necesidades.
 
 ## Consideraciones al instalar FortiGate Virtual Appliance on IBM Cloud
 
@@ -36,14 +38,14 @@ Revise las siguientes consideraciones antes de instalar el servicio FortiGate Vi
   Para calcular la reserva de CPU y de RAM para una sola VM FortiGate, utilice la fórmula siguiente:
    * `Reserva de CPU = Velocidad de CPU del servidor ESXi * número de vCPU`
    * `Reserva de RAM = Tamaño de RAM`
-* Cuando despliegue un par de HA FortiGate de dispositivos virtuales FortiGate en su instancia, se definirán reglas de SNAT y de cortafuegos en Management NSX Edge Services Gateway (ESG) junto con las rutas estáticas en los dispositivos virtuales FortiGate para permitir las comunicaciones HTTPS de salida desde su instancia hacia la red pública para la activación de licencias y para adquirir el contenido y las políticas de seguridad más recientes.
+* Cuando despliegue un par de alta disponibilidad (HA) de dispositivos virtuales FortiGate en su instancia, se definirán reglas de SNAT y de cortafuegos en Management NSX Edge Services Gateway (ESG) junto con las rutas estáticas en los dispositivos virtuales FortiGate para permitir las comunicaciones HTTPS de salida desde su instancia hacia la red pública para la activación de licencias y para adquirir el contenido y las políticas de seguridad más recientes.
 * No puede cambiar el nivel de licencia después de la instalación del servicio. Para cambiar el nivel de licencia, debe eliminar el servicio existente y luego reinstalar el servicio seleccionando otra opción de licencia.
 * Debe cumplir los requisitos siguientes para evitar anomalías con FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}:
    * Al menos dos servidores ESXi activos deben estar disponibles para que las dos VM FortiGate se desplieguen con la regla de antiafinidad de mantener las VM en distintos servidores.
    * Los dos servidores ESXi activos deben tener suficientes recursos disponibles para que una VM FortiGate se pueda alojar en cada servidor ESXi con el 100% de reserva de CPU y de RAM.
    * VMware vSphere HA debe tener suficientes recursos para alojar dos VM FortiGate con el 100% de CPU y de RAM.
 
-  Debido a estos requisitos, debe planificar el espacio necesario para FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}. Si es necesario, antes de solicitar FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, añada 1 o 2 servidores ESXi a la instancia o reduzca la reserva de CPU de vSphere HA para la migración tras error, o ambos.
+  Debido a estos requisitos, debe planificar cuidadosamente el espacio necesario para FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}. Si es necesario, antes de solicitar FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, añada 1 o 2 servidores ESXi a la instancia o reduzca la reserva de CPU de vSphere HA para la migración tras error, o ambos.
 
 ## Ejemplo de solicitud de FortiGate Virtual Appliance on IBM Cloud
 
@@ -61,9 +63,11 @@ Sin embargo, de forma predeterminada vSphere HA reserva el 50% de CPU y RAM para
 
 `50% de 2 * 16 núcleos * 2,1 GHz = 33,6 GHz disponibles`
 
-Puesto que habrá otras cargas de trabajo en los servidores ESXi, como por ejemplo IBM CloudDriver, VMware NSX Controller y VMware NSX Edge, utilizando estos recursos no podemos satisfacer el tercer requisito, ya que necesitamos 33,6 GHz de CPU y 24 GB de RAM para las dos VM FortiGate.
+Puesto que existirán otras cargas de trabajo en los servidores ESXi, como por ejemplo IBM CloudDriver, VMware NSX Controller o VMware NSX Edge, utilizando estos recursos no queda satisfecho el tercer requisito. Esto se debe a que se necesitan 33,6 GHz de CPU y 24 GB de RAM para las dos VM de FortiGate.
 
-En este caso, la instalación de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} puede fallar, a menos que se añada al menos un servidor ESXi al entorno y las reservas para migración tras error de vShpere HA se actualicen adecuadamente para garantizar que haya suficientes recursos para las dos VM FortiGate. Si se necesitan recursos adicionales para ejecutar el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, puede añadir más servidores ESXi antes de instalar el servicio.
+En este caso, la instalación de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} puede fallar, a menos que se añada al menos un servidor ESXi al entorno y las reservas para migración tras error de vShpere HA se actualicen adecuadamente para garantizar que haya suficientes recursos para las dos VM FortiGate.
+
+Si se necesitan recursos adicionales para ejecutar el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, puede añadir más servidores ESXi antes de instalar el servicio.
 
 ## Consideraciones al eliminar FortiGate Virtual Appliance on IBM Cloud
 

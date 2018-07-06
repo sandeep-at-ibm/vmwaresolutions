@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -22,7 +22,7 @@ Antes de instalar el servicio F5 on {{site.data.keyword.cloud_notm}}, revise las
 
 En función del modelo de licencia y del ancho de banda que selecciona, se despliegan dos VM (máquinas virtuales) BIG-IP VE con la configuración siguiente:
 
-Tabla 1: Despliegues de CPU y de RAM para distintas las selecciones de ancho de banda y modelo de licencia
+Tabla 1. Despliegues de CPU y de RAM para distintas las selecciones de ancho de banda y modelo de licencia
 
 | Ancho de banda máximo | Modelo de licencia: Good | Modelo de licencia: Better | Modelo de licencia: Best |
 |:------------------|:--------------------|:----------------------|:--------------------|

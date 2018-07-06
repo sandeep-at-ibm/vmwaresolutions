@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -44,9 +44,10 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. Tanto s
    * Una subred portátil pública para interconexiones de HCX si se selecciona **Red pública** para **Tipo de interconexión de HCX**. Esta subred también se utiliza para la activación y el mantenimiento con VMware.
 
    **Importante:** las direcciones IP de las subredes solicitadas para HCX están pensadas para que las gestione el proceso automático de VMware en {{site.data.keyword.cloud_notm}}. Estas direcciones IP no se pueden asignar a recursos de VMware, como VM y NSX Edges, creados por el cliente. Si necesita direcciones IP adicionales para los artefactos de VMware, debe solicitar sus propias subredes de {{site.data.keyword.cloud_notm}}.
-2. Se solicita una clave de activación de HCX desde VMware.
-3. Se crean tres agrupaciones de recursos y carpetas de VM para HCX, que son necesarias para las interconexiones de HCX, los componentes locales de HCX y los componentes remotos de HCX.
-4. Se despliega y se configura un par de VMware NSX Edge Services Gateways (ESG) para el tráfico de gestión de HCX:
+2. Si se ha seleccionado **Red privada** como **Tipo de interconexión de HCX**, se crea un grupo de puertos llamado **SDDC-DPortGroup-HCX-Private** en el conmutador virtual distribuido (DVS).
+3. Se solicita a VMware una clave de activación de HCX.
+4. Se crean tres agrupaciones de recursos y carpetas de VM para HCX, que son necesarias para las interconexiones de HCX, los componentes locales de HCX y los componentes remotos de HCX.
+5. Se despliega y se configura un par de VMware NSX Edge Services Gateways (ESG) para el tráfico de gestión de HCX:
    * Se configuran interfaces de enlaces ascendentes públicos y privados utilizando las subredes solicitadas.
    * Se configuran los ESG como un par de dispositivos de extremo extra grandes con alta disponibilidad (HA) habilitada.
    * Se configuran reglas de cortafuegos y reglas de conversión de direcciones de red (NAT) para permitir el tráfico HTTPS de entrada y de salida procedente y destinado a HCX Manager.
@@ -55,12 +56,12 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. Tanto s
 
    **Importante**: el extremo de gestión HCX se dedica al tráfico de gestión HCX entre los componentes locales de HCX y los componentes en la nube de HCX. No modifique el extremo de gestión de HCX ni lo utilice para extensiones de red de HCX. En su lugar, crear otros extremos para extensiones de red. Además, tenga en cuenta que el uso de un cortafuegos o la inhabilitación de las comunicaciones del extremo de gestión de HCX con componentes de gestión privados de IBM o con Internet pública pueden afectar negativamente a las funciones de HCX.
 
-5. Se despliega, se activa y se configura HCX Manager on {{site.data.keyword.cloud_notm}}:
+6. Se despliega, se activa y se configura HCX Manager on {{site.data.keyword.cloud_notm}}:
    * Se registra HCX Manager con vCenter Server.
    * Se configuran los componentes HCX Manager, vCenter Server, PSC y NSX Manager.
    * Se configura la flota HCX.
    * Se configuran contenedores de despliegue de HCX locales y remotos.
-6. Se registra el nombre de host y la dirección IP de HCX Manager con el servidor DNS de VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
+7. Se registra el nombre de host y la dirección IP de HCX Manager con el servidor DNS de VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 ## Enlaces relacionados
 
