@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -53,7 +53,7 @@ Pour l'option **Préconfigurée**, vous pouvez choisir une **configuration de se
 
 #### Personnalisée
 
-Avec l'option **Personnalisée**, un certain nombre d'options est disponible pour les paramètres **Modèle UC** et **Mémoire RAM**. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée. 
+Avec l'option **Personnalisée**, un certain nombre d'options est disponible pour les paramètres **Modèle UC** et **Mémoire RAM**. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
 
 Tableau 1. Options pour les serveurs {{site.data.keyword.baremetal_short}} personnalisés
 
@@ -80,7 +80,7 @@ Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémenta
 
 ### Paramètres de stockage
 
-Pour votre stockage, vous pouvez utiliser **vSAN** ou **NFS**.
+Les paramètres de stockage varient en fonction de la configuration de serveur bare metal et du type de stockage que vous sélectionnez.
 
 #### Stockage vSAN
 
@@ -92,13 +92,13 @@ Si votre cluster initial était de type vSAN, tous les clusters vSAN supplément
 
 Lorsque vous sélectionnez **Stockage NFS**, vous pouvez ajouter un stockage partagé de niveau fichier pour votre instance dans lequel tous les partages utilisent les mêmes paramètres ou vous pouvez spécifier des paramètres de configuration différents pour chaque partage de fichiers. Spécifiez les options NFS suivantes :
 
-**Remarque :** le nombre de partages de fichiers doit être compris entre 1 et 32. 
+**Remarque :** le nombre de partages de fichiers doit être compris entre 1 et 32.
 
 * **Configurer les partages individuellement** : permet de spécifier des paramètres de configuration différents pour chaque partage de fichiers. 
-* **Nombre de partages** : lorsque vous utilisez le même paramètre de configuration pour chaque partage de fichiers, spécifiez le nombre de partages de fichiers pour le stockage partagé NFS que vous souhaitez ajouter. 
+* **Nombre de partages** : lorsque vous utilisez le même paramètre de configuration pour chaque partage de fichiers, spécifiez le nombre de partages de fichiers pour le stockage partagé NFS que vous souhaitez ajouter.
 * **Taille** : sélectionnez la capacité qui répond à vos besoins de stockage partagé.
-* **Performances** : permet de sélectionner la valeur IOPS (Input/output Operations Per Second) par Go adaptée à vos besoins en matière de charge de travail. 
-* **Ajouter NFS** : permet d'ajouter des partages de fichiers individuels qui utiliseront des paramètres de configuration différents. 
+* **Performances** : permet de sélectionner la valeur IOPS (Input/output Operations Per Second) par Go adaptée à vos besoins en matière de charge de travail.
+* **Ajouter NFS** : permet d'ajouter des partages de fichiers individuels qui utiliseront des paramètres de configuration différents.
 
 Tableau 2. Options de niveau de performance NFS
 
@@ -116,7 +116,7 @@ Spécifiez l'option d'octroi de licence pour le composant VMware vSphere dans le
 
 ### Récapitulatif de la commande
 
-Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. 
+Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite.
 
 ## Procédure d'ajout de clusters à des instances vCenter Server
 
@@ -125,30 +125,30 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 
    **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas ajouter de clusters à l'instance.
 
-3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche et cliquez sur **Ajouter** dans l'angle supérieur droit du tableau **CLUSTERS**. 
-4. Sur la page **Ajouter un cluster**, entrez le nom du cluster. 
+3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche et cliquez sur **Ajouter** dans l'angle supérieur droit du tableau **CLUSTERS**.
+4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
 5. Si vous souhaitez héberger le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui dans lequel l'instance est hébergée, sous **Serveur bare metal**, cochez la case **Sélectionner un autre emplacement** et choisissez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel héberger l'instance.
 6. Procédez à la configuration du serveur bare metal.
    * Si vous avez sélectionné **Préconfigurée**, renseignez les zones **Configuration de serveur bare metal**, et **Nombre de serveurs {{site.data.keyword.baremetal_short}}**. Si vous prévoyez d'utiliser vSAN comme solution de stockage, sachez que 4 serveurs {{site.data.keyword.baremetal_short}} au minimum sont nécessaires.
    * Si vous avez sélectionné **Personnalisée**, renseignez les zones **Modèle UC**, **Mémoire RAM** et **Nombre de serveurs {{site.data.keyword.baremetal_short}}**.
 7. Procédez à la configuration du stockage.
-   * Si vous sélectionnez **Stockage vSAN**, renseignez les zones **Nombre de disques de capacité vSAN**, **Type et taille de disque pour disques de capacité vSAN** et **Licence vSAN**. 
-   * Si vous sélectionnez **Stockage NFS**, renseignez les zones **Nombre de partages**, **Taille** et **Performances**.
-   * Pour ajouter et configurer individuellement des partages de fichiers, sélectionnez l'onglet **Stockage NFS personnalisé**, puis cliquez sur l'icône **+** située en regard de l'intitulé **Ajouter NFS** et renseignez les zones **Taille** et **Performances** pour chaque partage de fichiers. Vous devez sélectionner au moins un partage de fichiers. 
+  * Lorsque vous sélectionnez **Stockage vSAN**, renseignez les zones **Type et taille de disque pour disques de capacité vSAN**, **Nombre de disques de capacité vSAN** et **Licence vSAN**. 
+  * Lorsque vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**. 
+  * Lorsque vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer des partages de fichiers individuellement, renseignez les zones **Configurer les partages individuellement**, puis cliquez sur l'icône **+** en regard de **Ajouter NFS**. Renseignez ensuite les zones **Taille** et **Performances** pour chaque partage de fichiers individuel. Vous devez sélectionner au moins un partage de fichiers.
 8. Spécifiez de quelle manière la clé de licence vSphere est fournie :
   * Si vous êtes un partenaire commercial, la licence vCenter (édition Enterprise Plus) est incluse et achetée en votre nom.
   * Si vous n'êtes pas un partenaire commercial, vous pouvez sélectionnez l'une des options suivantes :
       * Si vous voulez que de nouvelles licences soient achetées en votre nom, sélectionnez **Inclure avec achat** pour le composant.
       * Si vous voulez utiliser votre propre licence VMware pour le composant, sélectionnez **Je fournirai** et entrez la clé de licence pour le composant.
-9. Sur la page **Récapitulatif de la commande**, vérifiez la configuration du cluster avant d'ajouter celui-ci. 
-   1. Passez en revue les paramètres du cluster. 
+9. Sur la page **Récapitulatif de la commande**, vérifiez la configuration du cluster avant d'ajouter celui-ci.
+   1. Passez en revue les paramètres du cluster.
    2. Passez en revue le coût estimé du cluster. Cliquez sur **Détails concernant la tarification** pour générer un récapitulatif au format PDF. Pour sauvegarder ou imprimer votre récapitulatif de commande, cliquez sur l'icône d'**impression** ou de **téléchargement** dans l'angle supérieur droit de la fenêtre du PDF.
-   3. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant d'ajouter le cluster. 
+   3. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant d'ajouter le cluster.
    4. Cliquez sur **Mettre à disposition**.
 
 ### Résultats après l'ajout de clusters à des instances vCenter Server
 
-1. Le déploiement du cluster démarre automatiquement et celui-ci prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page **Récapitulatif** de l'instance. 
+1. Le déploiement du cluster démarre automatiquement et celui-ci prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page **Récapitulatif** de l'instance.
 2. Lorsque le cluster est prêt pour utilisation, il prend le statut **Prêt à l'emploi**. Le cluster qui vient d'être ajouté est activé avec vSphere haute disponibilité et vSphere Distributed Resource Scheduler (DRS).
 
 **Important** : vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
@@ -190,7 +190,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 
        `subdomain_label` est le libellé de sous-domaine, et
 
-       `root_domain` est le nom de domaine racine. 
+       `root_domain` est le nom de domaine racine.
 
      * **Version** : version du serveur ESXi.
      * **Données d'identification** : nom d'utilisateur et mot de passe d'accès au serveur ESXi.
@@ -230,7 +230,7 @@ Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous 
 
    **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas supprimer de clusters de l'instance.
 
-3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, localisez le cluster que vous souhaitez supprimer et cliquez sur l'icône **Supprimer** dans la colonne **Actions**. 
+3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, localisez le cluster que vous souhaitez supprimer et cliquez sur l'icône **Supprimer** dans la colonne **Actions**.
 4. Confirmez que vous avez terminé la migration de machines virtuelles vers d'autres clusters, le cas échéant, et que vous souhaitez supprimer le cluster.
 
 ## Liens connexes

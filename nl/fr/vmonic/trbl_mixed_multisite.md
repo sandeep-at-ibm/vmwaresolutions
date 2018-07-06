@@ -19,8 +19,8 @@ Effectuez les opérations suivantes sur l'instance principale en version 1.5 afi
 1. Connectez-vous au serveur Windows AD avec le mot de passe **administrateur**.
 2. Ouvrez **Gestionnaire de serveur**, puis cliquez sur **Outils -> Utilisateurs et ordinateurs Active Directory**.
 4. Dans la fenêtre **Utilisateurs et ordinateurs Active Directory**, cliquez sur la section **Utilisateurs** sous votre domaine racine.
-5. Cliquez avec le bouton droit de la souris sur l'utilisateur de l'automatisation pour ouvrir la fenêtre **Propriétés**. 
+5. Cliquez avec le bouton droit de la souris sur l'utilisateur de l'automatisation pour ouvrir la fenêtre **Propriétés**.
 6. Cliquez sur l'onglet **Membre de**.
 7. Cliquez sur **Ajouter** et entrez les groupes **Administrateurs de l'entreprise** et **Administrateurs du schéma** comme noms d'objet dans la liste.  
 
-A l'issue de ces étapes, vous pouvez ajouter une instance secondaire V1.7 à une instance principale V1.5. 
+A l'issue de ces étapes, vous pouvez ajouter une instance secondaire V1.7 à une instance principale V1.5.

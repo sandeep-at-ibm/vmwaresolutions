@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -24,7 +24,7 @@ Le déploiement VMware Federal on {{site.data.keyword.cloud_notm}} est soumis à
 
 ## Services pour les instances VMware Federal
 
-VMware Federal on {{site.data.keyword.cloud_notm}} n'offre pas l'option permettant de commander d'autres services. 
+VMware Federal on {{site.data.keyword.cloud_notm}} n'offre pas l'option permettant de commander d'autres services.
 
 ## Liens connexes
 

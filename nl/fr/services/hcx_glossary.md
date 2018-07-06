@@ -10,7 +10,7 @@ lastupdated: "2018-05-23"
 
 # Glossaire des termes HCX
 
-Ce glossaire contient des définitions des termes associés au service VMware HCX on {{site.data.keyword.cloud}}. 
+Ce glossaire contient des définitions des termes associés au service VMware HCX on {{site.data.keyword.cloud}}.
 
 * **HCX on {{site.data.keyword.cloud_notm}}** : service HCX qui s'exécute dans {{site.data.keyword.cloud_notm}}. La mise à disposition du service HCX est automatisée par {{site.data.keyword.vmwaresolutions_short}}.
 * **Site HCX local** : environnement local qui exécute votre déploiement VMware existant. Dans le contexte des migrations, est souvent référencé en tant que site source.

@@ -10,12 +10,12 @@ lastupdated: "2018-06-08"
 
 # Commande de Veeam on IBM Cloud
 
-Vous pouvez commander le service Veeam on {{site.data.keyword.cloud_notm}} lors de la commande d'une nouvelle instance avec le service inclus ou vous pouvez ajouter le service à votre instance existante. 
+Vous pouvez commander le service Veeam on {{site.data.keyword.cloud_notm}} lors de la commande d'une nouvelle instance avec le service inclus ou vous pouvez ajouter le service à votre instance existante.
 
 ## Commande de Veeam on IBM Cloud pour une nouvelle instance
 
 Vous pouvez commander une nouvelle instance avec Veeam on {{site.data.keyword.cloud_notm}} à l'aide de l'une des méthodes suivantes :
-* Depuis la console {{site.data.keyword.vmwaresolutions_full}}, lorsque vous commandez une nouvelle instance, sélectionnez **Veeam on IBM Cloud** dans la section **Services**. 
+* Depuis la console {{site.data.keyword.vmwaresolutions_full}}, lorsque vous commandez une nouvelle instance, sélectionnez **Veeam on IBM Cloud** dans la section **Services**.
 * Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **Veeam on {{site.data.keyword.cloud_notm}}**, spécifiez les paramètres de service et sélectionnez **Ajouter à une nouvelle instance**.
 
 ## Commande de Veeam on IBM Cloud pour une instance existante
@@ -38,7 +38,7 @@ Capacité répondant à vos besoins en matière de stockage. Un minimum de 2 000
 
 ### Performances de stockage
 
-Valeur IOPS (Input/output Operations Per Second) par Go adaptée à vos besoins en matière de charge de travail. 
+Valeur IOPS (Input/output Operations Per Second) par Go adaptée à vos besoins en matière de charge de travail.
 
 
 ## Liens connexes

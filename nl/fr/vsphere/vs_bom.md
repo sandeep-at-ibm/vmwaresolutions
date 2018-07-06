@@ -20,7 +20,7 @@ Tableau 1. Nomenclature pour les clusters VMware vSphere
 
 ## Liens connexes
 
-* [Numéros de génération et versions de VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
+* [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Notes sur l'édition pour VMware ESXi 6.0 Mise à jour 2](https://docs.vmware.com/en/VMware-vSphere/6.0/rn/vsphere-esxi-60u2-release-notes.html)
 * [Présentation de VMware vSphere](vs_vsphereclusteroverview.html)
 * [Planification des clusters vSphere](vs_planning.html)

@@ -33,7 +33,7 @@ IBM Cloud for VMware Solutions
         [Liaison d'un stockage dédié à NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
         [FortiGate Security Appliance](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/fortigate-physical)[NetApp ONTAP Select](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/netapp-ots)
         [Stockage de fichiers et de blocs d'IBM Cloud](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage)
-        [Passerelle NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/nsx-esg)
+        [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/nsx-esg)
         [Ressources et vidéos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources)
         [Engagement technique numérique](https://ibm-dte.mybluemix.net/ibm-vmware)
         [Virtualisation sécurisée](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/secure-virtualization)
@@ -240,4 +240,10 @@ IBM Cloud for VMware Solutions
         archiref/solution/solution_overview.md
         archiref/solution/design_overview.md
         archiref/solution/design_physicalinfrastructure.md
+        archiref/solution/design_virtualinfrastructure.md
+        archiref/solution/design_commonservice.md
+        archiref/solution/design_infrastructuremgmt.md
+        archiref/solution/solution_scaling.md
+        archiref/solution/solution_backingup.md
+        archiref/solution/appendix.md
     {: .navgroup-end}

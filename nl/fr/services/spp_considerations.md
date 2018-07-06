@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-06-07"
 
 Le service IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud}} fournit une solution évolutive et efficace de protection, de réutilisation et de reprise des données pour les environnements virtuels. Vous pouvez implémenter le service en tant que solution autonome ou vous pouvez l'intégrer à votre environnement IBM Spectrum Protect Plus pour décharger des copies de stockage à long terme et pour la gouvernance des données.
 
-**Disponibilité** : ce service est disponible uniquement sur les instances qui sont déployées en (ou mises à niveau vers) la version 2.2 ou dans des éditions ultérieures.
+**Disponibilité :** ce service n'est disponible que pour les instances qui exécutent vSphere 6.5 et qui sont déployées dans (ou mises à niveau vers) la version 2.2 ou des éditions ultérieures.
 
 **Remarques :**
-* Si vous acceptez la sélection de service par défaut pour les instances qui sont déployées en version 2.4 ou dans des éditions ultérieures, IBM Spectrum Protect Plus V10.1.1 Patch 1 est installé. Le service fournit automatiquement la prise en charge de la reprise pour les machines virtuelles de gestion. 
-* Si vous acceptez la sélection de service par défaut pour les instances qui sont déployées en version 2.3, IBM Spectrum Protect Plus V10.1.1 est installé. Le service fournit automatiquement la sauvegarde des machines virtuelles de gestion.
+* Si vous installez le service pour les instances qui sont déployées en version 2.4 ou dans des éditions ultérieures, IBM Spectrum Protect Plus V10.1.1 Patch 1 est installé. Le service fournit automatiquement la prise en charge de la reprise pour les machines virtuelles de gestion.
+* Si vous installez le service pour les instances qui sont déployées en version 2.3, IBM Spectrum Protect Plus V10.1.1 est installé. Le service fournit automatiquement la sauvegarde des machines virtuelles de gestion.
 * Si vous installez le service pour les instances qui sont déployées en version 2.2, IBM Spectrum Protect Plus V10.1.0 est installé. Ce service fournit une protection des données uniquement pour les machines virtuelles de charge de travail.
 
 
@@ -40,11 +40,11 @@ Stockage personnalisable pour les sauvegardes avec les options suivantes :
 
 ### Stockage pour la gestion
 
-Un stockage de fichiers de type Endurance (500 Go, 2 IOPS/Go) hébergeant la machine virtuelle IBM Spectrum Protect Plus et s'exécutant sur le même sous-réseau que le stockage de sauvegarde commandé pour le service. 
+Un stockage de fichiers de type Endurance (500 Go, 2 IOPS/Go) hébergeant la machine virtuelle IBM Spectrum Protect Plus et s'exécutant sur le même sous-réseau que le stockage de sauvegarde commandé pour le service.
 
 ### Utilisation en réseau
 
-Une adresse IP privée portable. 
+Une adresse IP privée portable.
 
 ### Licences et frais
 
@@ -57,7 +57,7 @@ Passez en revue les remarques suivantes avant d'installer le service IBM Spectru
 * Vérifiez que le nombre d'UC et la quantité de mémoire du cluster par défaut de votre instance suffisent pour la machine virtuelle IBM Spectrum Protect Plus.
 * Vérifiez que les montages NFS disponibles sur les serveurs ESXi suffisent compte tenu de la version des serveurs ESXi.
 
-  Les instances Cloud Foundation et vCenter Server déployées en ou mises à niveau vers la version 2.2 et éditions ultérieures disposent d'un paramètre `NFS.MaxVolumes` dans VMware. Ce paramètre définit le nombre maximum de montages NFS sur un serveur ESXi et accepte la valeur maximale de 256 propre à la version du serveur ESXi. Pour plus d'informations, voir [Augmentation de la valeur par défaut qui définit le nombre maximum de montages NFS sur un hôte ESXi/ESX](https://kb.vmware.com/s/article/2239).
+  Les instances Cloud Foundation et vCenter Server déployées dans (ou mises à niveau vers) la version 2.2 ou des éditions ultérieures disposent d'un paramètre `NFS.MaxVolumes`  dans VMware. Ce paramètre définit le nombre maximum de montages NFS sur un serveur ESXi et accepte la valeur maximale de 256 propre à la version du serveur ESXi. Pour plus d'informations, voir [Augmentation de la valeur par défaut qui définit le nombre maximum de montages NFS sur un hôte ESXi/ESX](https://kb.vmware.com/s/article/2239).
 
   Le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} peut consommer jusqu'à cinq des volumes NFS sur chaque serveur ESXi dans le cluster par défaut de votre instance. En outre, le service créera des montages NFS transitoires à des fins de sauvegarde et de restauration. Par conséquent, vous devez définir un minimum de 64 montages NFS pour que le service puisse être installé et fonctionne correctement.
 

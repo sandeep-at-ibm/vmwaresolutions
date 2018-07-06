@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -37,7 +37,7 @@ Cette couche se compose de vCenter Server, qui représente la couche de gestion 
 
 Sur la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez augmenter et réduire la capacité de vos instances à l'aide des fonctions d'ajout et de suppression de serveurs ESXi. De plus, des fonctions de gestion du cycle de vie, telles que l'application de mises à jour et de mises à niveau des composants VMware dans l'environnement hébergé sont également disponibles.
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+Pour plus d'informations sur l'architecture, voir [Présentation de Solution](../archiref/solution/solution_overview.html).
 
 ## Composants de l'instance Cloud Foundation
 

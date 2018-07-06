@@ -21,15 +21,15 @@ Une instance Cloud Foundation peut avoir jusqu'à 5 clusters, dont l'un est celu
    * Pour les configurations **Petite** et **Grande**, vous pouvez ajouter de 1 à 10 serveurs ESXi à la fois.
    * Pour la configuration **Personnalisée**, vous pouvez ajouter de 1 à 20 serveurs ESXi à la fois.
 * Vous pouvez supprimer les serveurs ESXi que vous avez ajoutés. Vous ne pouvez pas supprimer les serveurs ESXi par défaut.
-* Avant de retirer des serveurs ESXi avec le service F5 on {{site.data.keyword.cloud_notm}} ou FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installé, vous devez faire migrer les machines virtuelles F5 BIG-IP et FortiGate vers un autre serveur ESXi que celui sur lequel elles sont hébergées. 
+* Avant de retirer des serveurs ESXi avec le service F5 on {{site.data.keyword.cloud_notm}} ou FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installé, vous devez faire migrer les machines virtuelles F5 BIG-IP et FortiGate vers un autre serveur ESXi que celui sur lequel elles sont hébergées.
 * Avant de supprimer des serveurs ESXi sur lesquels le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} est installé, vérifiez qu'aucune opération de sauvegarde ou de restauration (en échec ou en cours) n'est active, car ce type d'opération pourrait empêcher la suppression des serveurs ESXi.
 
 ## Procédure
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance dont vous souhaitez étendre ou réduire la capacité.
-3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. 
-4. Dans le tableau **CLUSTERS**, cliquez sur le cluster sur lequel vous souhaitez ajouter ou retirer des serveurs ESXi. 
+3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche.
+4. Dans le tableau **CLUSTERS**, cliquez sur le cluster sur lequel vous souhaitez ajouter ou retirer des serveurs ESXi.
 5. Pour ajouter des serveurs ESXi, procédez comme suit :
    1. Dans la section **Serveurs ESXi**, cliquez sur **Ajouter**.
    2. Dans la fenêtre **Ajouter un serveur**, indiquez le nombre de serveurs que vous voulez ajouter, passez en revue le coût estimé, puis cliquez sur **Ajouter**.

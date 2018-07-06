@@ -10,9 +10,9 @@ lastupdated: "2018-06-07"
 
 # Présentation de vCenter Server with Hybridity Bundle
 
-vCenter Server with Hybridity Bundle est une instance disponible en V2.3 et dans les éditions ultérieures. 
+vCenter Server with Hybridity Bundle est une instance disponible en V2.3 et dans les éditions ultérieures.
 
-The VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle est un cloud privé hébergé qui offre la pile VMware vSphere en tant que service. L'environnement VMware, qui est construit par dessus quatre serveurs {{site.data.keyword.baremetal_short}} {{site.data.keyword.cloud_notm}}, inclut VMware vSAN comme stockage dédié, fournit un déploiement et une configuration automatiques d'un pare-feu périphérique logique simple à gérer optimisé pour VMware NSX et comprend le service VMware HCX on {{site.data.keyword.cloud_notm}}. 
+The VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle est un cloud privé hébergé qui offre la pile VMware vSphere en tant que service. L'environnement VMware, qui est construit par dessus quatre serveurs {{site.data.keyword.baremetal_short}} {{site.data.keyword.cloud_notm}}, inclut VMware vSAN comme stockage dédié, fournit un déploiement et une configuration automatiques d'un pare-feu périphérique logique simple à gérer optimisé pour VMware NSX et comprend le service VMware HCX on {{site.data.keyword.cloud_notm}}.
 
 Dans de nombreux cas, l'ensemble de l'environnement peut être mis à disposition en moins d'une journée et l'infrastructure bare metal peut rapidement et de manière élastique augmenter ou diminuer en fonction des besoins de la capacité de calcul.
 
@@ -51,19 +51,19 @@ L'offre de base est déployée avec un dispositif vCenter Server dimensionné de
 
 Au total, l'offre de base nécessite 38 UC virtuelles et 67 Go de vRAM réservés pour la couche de gestion de la virtualisation. La capacité hôte restante pour vos machines virtuelles dépend de plusieurs facteurs, tels que le taux de dépassement de capacité, le dimensionnement des machines virtuelles et les besoins de performances de la charge de travail.
 
-Pour connaître les besoins en ressources de gestion supplémentaires lors du déploiement du service HCX on {{site.data.keyword.cloud_notm}}, voir [Présentation de HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+Pour connaître les besoins en ressources de gestion supplémentaires lors du déploiement du service HCX on {{site.data.keyword.cloud_notm}}, voir [Présentation de VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
 
 ### Hybridité d'infrastructure
 
-Cette couche fournit une abstraction de ressources entre les sites locaux et les sites {{site.data.keyword.cloud_notm}} de sorte que vous pouvez déplacer les charges de travail vers l'arrière et vers l'avant facilement et en toute sécurité sans avoir à modifier les caractéristiques des machines virtuelles, par exemple, leurs adresses IP. 
+Cette couche fournit une abstraction de ressources entre les sites locaux et les sites {{site.data.keyword.cloud_notm}} de sorte que vous pouvez déplacer les charges de travail vers l'arrière et vers l'avant facilement et en toute sécurité sans avoir à modifier les caractéristiques des machines virtuelles, par exemple, leurs adresses IP.
 
-Sur la base de VMware Hybrid Cloud Extension (HCX), vous pouvez créer des interconnexions à couplage lâche entre les sites locaux et les sites IBM Cloud afin d'activer la migration en bloc de machines virtuelles ou le déplacement opérationnel de machines virtuelles via vMotion, sans temps d'indisponibilité. 
+Sur la base de VMware Hybrid Cloud Extension (HCX), vous pouvez créer des interconnexions à couplage lâche entre les sites locaux et les sites IBM Cloud afin d'activer la migration en bloc de machines virtuelles ou le déplacement opérationnel de machines virtuelles via vMotion, sans temps d'indisponibilité.
 
 ## Spécifications techniques de vCenter Server with Hybridity Bundle
 
 Les composants suivants sont inclus dans votre instance vCenter Server with Hybridity Bundle :
 
-**Remarque :** la disponibilité et la tarification des configurations matérielles normalisées peuvent varient en fonction de l'{{site.data.keyword.CloudDataCent}} sélectionné pour le déploiement. 
+**Remarque :** la disponibilité et la tarification des configurations matérielles normalisées peuvent varient en fonction de l'{{site.data.keyword.CloudDataCent}} sélectionné pour le déploiement.
 
 ### Serveur bare metal
 
@@ -105,7 +105,7 @@ Le stockage vSAN offre des configurations personnalisées, avec différentes opt
 
 ### Licences fournies par IBM et frais
 
-Les licences suivantes sont incluses avec votre commande d'instance vCenter Server with Hybridity Bundle. 
+Les licences suivantes sont incluses avec votre commande d'instance vCenter Server with Hybridity Bundle.
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
@@ -120,7 +120,7 @@ Chaque noeud d'extension vCenter Server with Hybridity Bundle déployé génère
 
 ### Matériel pour les noeuds d'extension
 
-Un serveur bare metal avec la configuration personnalisée. 
+Un serveur bare metal avec la configuration personnalisée.
 
 ### Licences et frais pour les noeuds d'extension
 

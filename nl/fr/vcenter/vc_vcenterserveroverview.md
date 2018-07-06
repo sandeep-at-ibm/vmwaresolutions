@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -48,7 +48,7 @@ L'offre de base est déployée avec un dispositif vCenter Server dimensionné de
 
 Au total, l'offre de base nécessite 38 UC virtuelles et 67 Go de vRAM réservés pour la couche de gestion de la virtualisation. La capacité hôte restante pour vos machines virtuelles dépend de plusieurs facteurs, tels que le taux de surabonnement, le dimensionnement des machines virtuelles et les besoins de performances de la charge de travail.
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+Pour plus d'informations sur l'architecture, voir [Référence de l'architecture {{site.data.keyword.vmwaresolutions_full}}](../archiref/solution/solution_overview.html).
 
 ## Spécifications techniques de vCenter Server
 
@@ -85,8 +85,8 @@ Les composants réseau suivants sont commandés :
 
 Les instances de serveur virtuel suivantes sont commandées :
 * Une instance de serveur virtuel pour IBM CloudBuilder, fermée une fois le déploiement de l'instance terminé.
-* (Pour les instances V2.2 et ultérieures) Vous pouvez choisir de déployer une seule instance de serveur virtuel Microsoft Windows Server pour Microsoft Active Directory (AD) ou deux machines virtuelles à haute disponibilité Microsoft Windows dans le cluster de gestion pour plus de sécurité et de robustesse. 
-* (Pour les instances V1.9 à V2.1) Une instance de serveur virtuel Microsoft Windows Server pour Microsoft Active Directory (AD), qui fonctionne en tant que serveur de noms de domaine pour l'instance où sont enregistrés les hôtes et les machines virtuelles, est déployée et peut être interrogée. 
+* (Pour les instances V2.2 et ultérieures) Vous pouvez choisir de déployer une seule instance de serveur virtuel Microsoft Windows Server pour Microsoft Active Directory (AD) ou deux machines virtuelles à haute disponibilité Microsoft Windows dans le cluster de gestion pour plus de sécurité et de robustesse.
+* (Pour les instances V1.9 à V2.1) Une instance de serveur virtuel Microsoft Windows Server pour Microsoft Active Directory (AD), qui fonctionne en tant que serveur de noms de domaine pour l'instance où sont enregistrés les hôtes et les machines virtuelles, est déployée et peut être interrogée.
 * (Pour les instances V1.8 et antérieures) Une instance de serveur virtuel pour la sauvegarde basée sur des instantanés des composants de gestion, qui continue à s'exécuter une fois le déploiement de l'instance terminé.
 
 ### Stockage

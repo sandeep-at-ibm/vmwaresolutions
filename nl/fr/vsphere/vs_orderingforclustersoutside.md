@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,8 +15,8 @@ Vous pouvez utiliser l'offre VMware vSphere pour mettre à l'échelle des cluste
 ## Conditions requises
 
 Assurez-vous que :
-*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Paramètres et comptes utilisateur](../vmonic/useraccount.html).
-*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les clusters vSphere](vs_planning.html).
+*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
+*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_planning.html).
 
 ## Procédure
 

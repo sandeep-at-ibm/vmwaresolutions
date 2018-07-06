@@ -17,7 +17,7 @@ Le processus d'application de modules de correction et de mises à jour aux inst
 ## Avant de commencer
 
 Avant d'appliquer une mise à jour, développez l'entrée de mise à jour en cliquant sur la flèche vers le bas et vérifiez les informations suivantes :
-* La version de la mise à jour. Vous devez appliquer les mises à jour par ordre chronologique, c'est-à-dire de la plus ancienne à la plus récente. Assurez-vous d'avoir appliqué toutes les mises à jour précédentes avant d'appliquer la plus récente. Par exemple, vous devez appliquer la mise à jour V2.3 avant de tenter d'appliquer la mise à jour V2.4. 
+* La version de la mise à jour. Vous devez appliquer les mises à jour par ordre chronologique, c'est-à-dire de la plus ancienne à la plus récente. Assurez-vous d'avoir appliqué toutes les mises à jour précédentes avant d'appliquer la plus récente. Par exemple, vous devez appliquer la mise à jour V2.3 avant de tenter d'appliquer la mise à jour V2.4.
 * Si un temps d'indisponibilité est nécessaire.
 * Le temps total estimé pour effectuer la mise à jour.
 * L'impact de la mise à jour sur l'environnement virtuel VMware.

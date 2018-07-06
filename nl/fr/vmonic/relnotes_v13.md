@@ -18,7 +18,7 @@ Vous pouvez désormais ajouter un stockage NAS (Network Attached Storage) partag
 
 ## Suppression de la reprise après incident Zerto
 
-Que vous ayez commandé la reprise après incident Zerto dans le cadre de votre instance ou l'ayez ajoutée à une instance existante, vous pouvez désormais supprimer ce service lorsque vous n'en avez plus besoin. Après que vous avez demandé le retrait du service à partir de la console, le support IBM vous guide lors de la finalisation du processus de retrait. 
+Que vous ayez commandé la reprise après incident Zerto dans le cadre de votre instance ou l'ayez ajoutée à une instance existante, vous pouvez désormais supprimer ce service lorsque vous n'en avez plus besoin. Après que vous avez demandé le retrait du service à partir de la console, le support IBM vous guide lors de la finalisation du processus de retrait.
 
 Pour plus d'informations, voir :
 

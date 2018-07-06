@@ -16,7 +16,7 @@ Affichez les instances VMware vCenter Server with Hybridity Bundle que vous avez
 
 Pour afficher un récapitulatif de toutes les instances vCenter Server with Hybridity Bundle de votre environnement, procédez comme suit :
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. Dans le tableau **Instances vCenter Server**, affichez la liste de vos instances. 
+2. Dans le tableau **Instances vCenter Server**, affichez la liste de vos instances.
 
 Tableau 1. Eléments d'une instance vCenter Server with Hybridity Bundle
 
@@ -64,11 +64,11 @@ Tableau 3. Propriétés d'instance vCenter Server with Hybridity Bundle
 | Domaine de connexion unique DNS | Il s'agit du domaine de connexion unique (Single Sign-On) vSphere. Le nom de domaine de connexion unique est défini pour toutes les instances vCenter Server with Hybridity Bundle déployées avec la valeur <samp class="ph codeph">vsphere.local</samp>. |
 | Sous-domaine DNS | Il s'agit du sous-domaine DNS du nom de domaine racine où résident les noms d'hôte des instances vCenter Server with Hybridity Bundle locales. Le nom de sous-domaine est au format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 | Hybridity Bundle | Indique si vCenter Server with Hybridity Bundle est installé. |
-| Statut        | Statut de l'instance.<br><br>Les informations affichées fournissent une mise à jour de la progression du déploiement ou de l'action appliquée à l'instance. En cas de problème, un message peut s'afficher pour vous aider à identifier et résoudre le problème. |
+| Statut  | Statut de l'instance.<br><br>Les informations affichées fournissent une mise à jour de la progression du déploiement ou de l'action appliquée à l'instance. En cas de problème, un message peut s'afficher pour vous aider à identifier et résoudre le problème. |
 
 ## Affichage des informations d'accès relatives aux instances vCenter Server with Hybridity Bundle
 
-Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance. 
+Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance.
 
 Tableau 4. Informations d'accès relatives à vCenter Server with Hybridity Bundle pour les composants d'instance
 

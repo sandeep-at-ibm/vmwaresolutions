@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -22,7 +22,7 @@ Avant d'installer le service F5 on {{site.data.keyword.cloud_notm}}, passez en r
 
 En fonction du modèle de licence et de la bande passante que vous sélectionnez, deux machines virtuelles BIG-IP VE sont déployées avec la configuration suivante :
 
-Tableau 1: Déploiements d'UC et de RAM selon la bande passantes et le modèle de licence sélectionnés
+Tableau 1. Déploiements d'UC et de RAM selon la bande passante et le modèle de licence sélectionnés
 
 | Bande passante maximale | Modèle de licence : Bien | Modèle de licence : Mieux | Modèle de licence : Meilleur |
 |:------------------|:--------------------|:----------------------|:--------------------|
@@ -49,14 +49,14 @@ Tableau 1: Déploiements d'UC et de RAM selon la bande passantes et le modèle d
 ### Remarques relatives à la planification
 Vous devez respecter les exigences suivantes afin d'éviter les incidents avec le service F5 on {{site.data.keyword.cloud_notm}} :
 * Au moins deux serveurs ESXi actifs sont disponibles pour les deux machines virtuelles BIG-IP VE à déployer avec la règle d'anti-affinité de conservation des machines virtuelles sur des serveurs distincts.
-* Les deux serveurs ESXi actifs disposent de suffisamment de ressources pour héberger une machine virtuelle BIG-IP VE sur chaque serveur ESXi avec une réservation de 100% d'UC et de RAM.
-* VMware vSphere HA dispose de suffisamment de ressources pour héberger les deux machines virtuelles BIG-IP avec 100% d'UC et de RAM.
+* Les deux serveurs ESXi actifs disposent de suffisamment de ressources pour héberger une machine virtuelle BIG-IP VE sur chaque serveur ESXi avec une réservation de 100 % d'UC et de RAM.
+* VMware vSphere HA dispose de suffisamment de ressources pour héberger les deux machines virtuelles BIG-IP avec 100 % d'UC et de RAM.
 
-Compte tenu de ces exigences, vous devez prévoir l'espace requis pour F5 on {{site.data.keyword.cloud_notm}}. Au besoin, avant de commander F5 on {{site.data.keyword.cloud_notm}}, ajoutez 1 à 2 deux serveurs ESXi à votre instance et/ou réduisez la réservation d'UC pour basculement de vSphere HA.
+Compte tenu de ces exigences, vous devez prévoir l'espace requis pour F5 on {{site.data.keyword.cloud_notm}}. Au besoin, avant de commander F5 on {{site.data.keyword.cloud_notm}}, ajoutez 1 à 2 serveurs ESXi à votre instance et/ou réduisez la réservation d'UC de vSphere HA pour basculement. 
 
 ## Exemple de commande de F5 on IBM Cloud
 
-Vous commandez une instance VMware vCenter Server **Petite** avec deux serveurs 2 ESXI et la configuration suivante : 16 coeurs à 2,10 GHz avec chacun 128 Go de RAM. Pour F5 on {{site.data.keyword.cloud_notm}}, vous sélectionnez le modèle de licence **Meilleur** et une valeur de 5 Gbit/s pour la **bande passante maximale**.
+Vous commandez une instance VMware vCenter Server **Petite** avec 2 serveurs ESXI et la configuration suivante : 16 coeurs à 2,10 GHz avec chacun 128 Go de RAM. Pour F5 on {{site.data.keyword.cloud_notm}}, vous sélectionnez le modèle de licence **Meilleur** et une valeur de 5 Gbit/s pour la **bande passante maximale**.
 
 Dans ce cas, une unique machine virtuelle BIG-IP requiert, sur chaque serveur :
 * 2,1 GHz * 8 UC virtuelles = 16,8 GHz d'UC et
@@ -66,13 +66,13 @@ Au total, 33,6 GHz d'UC et 32 Go de RAM pour les deux machines virtuelles BIG-IP
 
 Chaque serveur ESXi a une capacité de 16 coeurs * 2,1 GHz = 33,6 GHz, de sorte que nous respectons les deux exigences si les deux serveurs sont actifs et qu'au moins 16,8 GHz d'UC et 16 Go de RAM sont disponibles sur chaque serveur.
 
-vSphere HA réserve toutefois par défaut 50% d'UC et de RAM pour le basculement sur les instances vCenter Server initiallement déployées avec 2 serveurs ESXi, de sorte que nous avons uniquement :
+vSphere HA réserve toutefois par défaut 50 % d'UC et de mémoire RAM pour le basculement sur les instances vCenter Server initialement déployées avec 2 serveurs ESXi, de sorte que nous avons uniquement :
 
-`50% de 2 * 16 coeurs * 2,1 GHz = 33,6 GHz disponibles`
+`50 % de 2 * 16 coeurs * 2,1 GHz = 33,6 GHz disponibles`
 
-Etant donné que les serveurs ESXi auront d'autres charges de travail (par exemple, IBM CloudDriver, VMware NSX Controller, VMware NSX Edge) qui utilisent ces ressources, nous ne respectons pas la troisième exigence puisque nous avons besoin de 33,6 GHz d'UC et de 32 Go de RAM pour les deux machines virtuelles BIG-IP.
+Etant donné que d'autres charges de travail figureront sur les serveurs ESXi (par exemple, IBM CloudDriver, VMware NSX Controller, VMware NSX Edge), en utilisantces ressources, nous ne respectons pas la troisième exigence puisque nous avons besoin de 33,6 GHz d'UC et de 32 Go de mémoire RAM pour les deux machines virtuelles BIG-IP.
 
-Dans ce cas, l'installation de F5 on {{site.data.keyword.cloud_notm}} risque d'échouer, sauf si au moins un serveur ESXi est ajouté à l'environnement et que les réservations pour basculement de vShpere HA sont mises à jour de manière à garantir que les ressources disponibles sont suffisantes pour les deux machines virtuelles BIG-IP VE. Si des ressources supplémentaires sont nécessaires pour exécuter le service F5 on {{site.data.keyword.cloud_notm}}, vous pouvez ajouter d'autres serveurs ESXi avant d'installer F5 on {{site.data.keyword.cloud_notm}}.
+Dans ce cas, l'installation de F5 on {{site.data.keyword.cloud_notm}} risque d'échouer, sauf si au moins un serveur ESXi est ajouté à l'environnement et que les réservations de vSphere HA pour basculement sont mises à jour de manière à garantir un nombre suffisant de ressources disponibles pour les deux machines virtuelles BIG-IP VE. Si des ressources supplémentaires sont nécessaires pour exécuter le service F5 on {{site.data.keyword.cloud_notm}}, vous pouvez ajouter d'autres serveurs ESXi avant d'installer F5 on {{site.data.keyword.cloud_notm}}.
 
 ## Remarques relatives au retrait de F5 on IBM Cloud
 

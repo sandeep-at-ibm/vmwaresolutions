@@ -24,9 +24,9 @@ Pour plus d'informations, voir [Résolution des vulnérabilités Spectre et Melt
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
-Cette édition introduit l'offre VMware vCenter Server on IBM Cloud with Hybridity Bundle. vCenter Server with Hybridity Bundle est un cloud privé hébergé qui vous permet de déployer rapidement et facilement votre infrastructure locale dans le cloud. L'environnement VMware est basé sur des licences SDDC (Software Defined Data Center) VMware fournies par IBM et inclut le service VMware HCX on {{site.data.keyword.cloud_notm}} qui permet de connecter très facilement et de manière sécurisée un environnement vSphere 5.0+ local à des sites IBM Cloud pour obtenir une hybridité d'infrastructure transparente et une véritable mobilité d'application. 
+Cette édition introduit l'offre VMware vCenter Server on IBM Cloud with Hybridity Bundle. vCenter Server with Hybridity Bundle est un cloud privé hébergé qui vous permet de déployer rapidement et facilement votre infrastructure locale dans le cloud. L'environnement VMware est basé sur des licences SDDC (Software Defined Data Center) VMware fournies par IBM et inclut le service VMware HCX on {{site.data.keyword.cloud_notm}} qui permet de connecter très facilement et de manière sécurisée un environnement vSphere 5.0+ local à des sites IBM Cloud pour obtenir une hybridité d'infrastructure transparente et une véritable mobilité d'application.
 
-Le service HCX on {{site.data.keyword.cloud_notm}} est disponible uniquement via l'instance vCenter Server with Hybridity Bundle. Vous pouvez mettre à niveau votre instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle après avoir appliqué la mise à jour logicielle vCenter Server V2.3 de base. Pour plus d'informations, voir [Application de mises à jour à des instances vCenter Server](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html).
+Le service HCX on {{site.data.keyword.cloud_notm}} est disponible uniquement via l'instance vCenter Server with Hybridity Bundle. Vous pouvez mettre à niveau votre instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle après avoir appliqué la mise à jour logicielle vCenter Server V2.3 de base. Pour plus d'informations, voir [Application de mises à jour à des instances vCenter Server](../vcenter/vc_applyingupdates.html).
 
 Pour plus d'informations sur l'instance vCenter Server with Hybridity Bundle, voir :
 
@@ -91,7 +91,7 @@ Pour plus d'informations, voir [Ajout, affichage et suppression de clusters pour
 
 Le service HyTrust CloudControl on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances VMware Cloud Foundation et VMware vCenter Server qui exécutent vSphere 6.5 et qui sont déployées dans ou mises à niveau vers la version 2.3 ou des éditions ultérieures. Le service applique et contrôle la conformité par rapport aux normes de sécurité standard et fournit un contrôle d'accès à base de rôles. Combiné à HyTrust DataControl, ce service garantit que les machines virtuelles et les données de charge de travail ne quittent pas une région, un cluster ou un serveur ESXi donnés au sein du centre de données {{site.data.keyword.cloud_notm}}.
 
-Vous pouvez commander des instances avec le service déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes. 
+Vous pouvez commander des instances avec le service déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes.
 
 Pour plus d'informations, voir :
 * [Composants et remarques pour HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)
@@ -101,7 +101,7 @@ Pour plus d'informations, voir :
 
 Le service HyTrust DataControl on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances VMware Cloud Foundation et VMware vCenter Server qui exécutent vSphere 6.5 et qui sont déployées dans ou mises à niveau vers la version 2.3 ou des éditions ultérieures. Le service offre un chiffrement renforcé avec une gestion de clés intégrée permettant de sécuriser les charges de travail tout au long de leur cycle de vie. Le service peut fournir un chiffrement au niveau du système d'exploitation et au niveau des données, ce qui signifie que n'importe quel répertoire, dossier ou fichier d'une charge de travail peut être chiffré et déchiffré.
 
-Vous pouvez commander des instances avec le service déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes. 
+Vous pouvez commander des instances avec le service déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes.
 
 Pour plus d'informations, voir :
 * [Composants et remarques pour HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)

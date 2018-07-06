@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ Pour déployer une plateforme de centre de données définie par logiciels (SDDC
 ## Conditions requises
 
 Assurez-vous que :
-*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Paramètres et comptes utilisateur](../vmonic/useraccount.html).
+*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
 *  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les instances Cloud Foundation](sd_planning.html).
 
 **Important :** ne modifiez aucune des valeurs définies lors de la commande et du déploiement de l'instance. Toute modification risquerait de rendre votre instance inutilisable. De plus, ne modifiez pas le nom d'instance, le nom de domaine racine, le libellé de sous-domaine ou le préfixe de nom d'hôte une fois l'instance déployée.
@@ -201,7 +201,7 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
       * Si vous voulez commander de nouveaux VLAN publics et privés, cliquez sur **Commander de nouveaux VLAN**.
       * Si vous voulez réutiliser les VLAN publics et privés existants lorsqu'ils sont disponibles, cliquez sur **Sélectionner des VLAN existants** et spécifiez les VLAN et les sous-réseaux.
 
-9. Sélectionnez les services complémentaires à déployer dans l'instance en cliquant sur la carte de service correspondante. Si un service nécessite de la configuration, spécifiez les paramètres qui lui sont propres et cliquez sur **Ajouter un service** dans la fenêtre de configuration contextuelle. Pour savoir comment indiquer les paramètres d'un service, voir la rubrique de commande de service correspondante. 
+9. Sélectionnez les services complémentaires à déployer dans l'instance en cliquant sur la carte de service correspondante. Si un service nécessite de la configuration, spécifiez les paramètres qui lui sont propres et cliquez sur **Ajouter un service** dans la fenêtre de configuration contextuelle. Pour savoir comment indiquer les paramètres d'un service, voir la rubrique de commande de service correspondante.
 
 10. Sur la page **Récapitulatif de la commande**, vérifiez la configuration de l'instance avant de passer la commande.
     1. Passez en revue les paramètres de l'instance.

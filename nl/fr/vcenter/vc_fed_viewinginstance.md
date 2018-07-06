@@ -15,7 +15,7 @@ Cette procédure permet d'afficher les instances VMware Federal que vous avez co
 ## Affichage du récapitulatif des instances VMware Federal
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. Dans le tableau **Instances vCenter Server**, affichez la liste de vos instances. 
+2. Dans le tableau **Instances vCenter Server**, affichez la liste de vos instances.
 
 Tableau 1. Eléments d'une instance VMware Federal
 
@@ -56,7 +56,7 @@ Tableau 3. Propriétés d'instance VMware Federal
 | Nom | Nom de l'instance. |
 | ID | ID de l'instance. |
 | Emplacement | {{site.data.keyword.CloudDataCent_notm}} où l'instance est hébergée. |
-| Version en cours | Version en cours d'{{site.data.keyword.vmwaresolutions_short}}. |
+| Version en cours |  Version en cours d'{{site.data.keyword.vmwaresolutions_short}}. |
 | Version de vCenter | Version de VMware vCenter Server.<br><br>**Remarque :** la version vCenter Server affichée sur la console {{site.data.keyword.vmwaresolutions_short}} et celle sur le client Web VMware vSphere sont légèrement différentes. Les deux sont correctes. |
 | NSX for vSphere | Version du produit VMware NSX for vSphere. |
 | Edition de licence NSX | Version et édition de la licence VMware NSX. |
@@ -67,7 +67,7 @@ Tableau 3. Propriétés d'instance VMware Federal
 
 ## Affichage des informations d'accès relatives aux instances VMware Federal
 
-Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance. 
+Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance.
 
 Tableau 4. Informations d'accès relatives aux composants d'instance
 

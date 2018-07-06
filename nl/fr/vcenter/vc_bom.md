@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -90,31 +90,41 @@ Tableau 4. Paramètres de configuration de NSX et des groupes de ports pour des 
 
 ## Paramètres de configuration de MTU réseau
 
-Le cluster vSphere utilise deux commutateurs VDS (vSphere Distributed Switches), un pour la connectivité de réseau public et l'autre pour la connectivité de réseau privé.
+Le cluster vSphere utilise deux commutateurs VDS (vSphere Distributed Switches) vSphere, un pour la connectivité de réseau public et l'autre pour la connectivité de réseau privé.
 
 Les connexions de réseau privé sont configurées pour utiliser 9000 comme taille MTU de trame Jumbo, ce qui permet d'améliorer les performances des transferts d'importantes quantités de données, comme le stockage et VMware vMotion. Il s'agit de la taille MTU maximale autorisée au sein de VMware et par IBM Cloud.
 
 A partir de l'édition V2.1, les connexions de réseau public utilisent 1500 comme taille MTU Ethernet standard. La valeur 1500 doit être conservée ; tout changement peut provoquer une fragmentation des paquets sur Internet.
 
-Consultez le tableau suivant pour obtenir une présentation des paramètres de configuration de MTU réseau appliqués au commutateur Distributed Virtual Switch (DVS) public et privé selon que l'instance vCenter Server est déployée en V2.1 ou dans une édition ultérieure.  
+Consultez le tableau suivant pour obtenir une présentation des paramètres de configuration de MTU réseau appliqués au commutateur Distributed Virtual Switch (DVS) public et privé selon que l'instance vCenter Server est déployée en V2.1 ou dans une édition ultérieure.
+
+Tableau 5. Paramètres de configuration de MTU pour les instances et clusters vCenter Server en fonction de la version d'instance
+
+| Commutateur VDS | V2.1 ou édition ultérieure  | V2.0 ou édition antérieure (ou mise à niveau depuis V2.0 ou une édition antérieure) |
+|:-------------- |:-------------- |:------------- |
+| Commutateur public  | 1500 (valeur par défaut) | 9000 (trames Jumbo) |
+| Commutateur privé | 9000 (trames Jumbo) | 9000 (trames Jumbo) |
 
 Les paramètres s'appliquent aux nouvelles instances et aux nouveaux clusters des instances déployées en V2.1 ou dans une édition ultérieure. Les paramètres s'appliquent également aux nouveaux clusters présents dans des centres de données IBM Cloud à partir d'instances qui ont été mises à niveau vers V2.1 ou une édition ultérieure.
 
 Ils ne s'appliquent pas aux nouveaux clusters présents dans le même centre de données IBM Cloud, pour des instances existantes depuis V2.0 ou une édition antérieure ou des instances existantes mises au niveau vers V2.1 ou une édition ultérieure.
 
-**Remarque** : pour les instances déployées en V2.0 ou dans une édition antérieure, nous vous conseillons de procéder vous même à la mise à niveau du paramètre de MTU de commutateur public vers 1500.  
+Pour les instances déployées en V2.0 ou dans une édition antérieure, nous vous conseillons de mettre à niveau le paramètre de MTU de commutateur public vers 1500.
 
-Tableau 5. Paramètres de configuration de MTU pour les instances et clusters vCenter Server
+### Mise à jour du paramètre de MTU de commutateur public
 
-| Commutateur Distributed Virtual Switch (DVS) | V2.1 ou édition ultérieure  | V2.0 ou édition antérieure (ou mise à niveau depuis V2.0 ou une édition antérieure) |   
-|:-------------- |:-------------- |:------------- |
-| Commutateur public  | 1500 (valeur par défaut) | 9000 (trames Jumbo) |
-| Commutateur privé | 9000 (trames Jumbo) | 9000 (trames Jumbo) |
+Afin de mettre à jour le paramètre de MTU pour le commutateur public, procédez comme suit dans le client Web VMware vSphere :
+1. Cliquez avec le bouton droit de la souris sur le commutateur VDS, puis cliquez sur **Editer les paramètres**.
+2. Sur l'onglet **Propriétés**, sélectionnez l'option **Avancé**.
+3. Assurez-vous que la valeur maximale indiquée pour **MTU** est 1500. 
+
+   **Remarque** : lorsque vous modifiez la taille de MTU dans un commutateur VDS, les liaisons montantes connectées (NIC physiques) sont à nouveau désactivées, puis activées. Il en résulte une brève indisponibilité pour les machines virtuelles qui utilisent la liaison montante. Par conséquent, il est recommandé de planifier la mise à jour du paramètre de MTU durant le temps d'indisponibilité planifié. 
 
 ## Liens connexes
 
-* [Numéros de génération et versions de VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
-* [Numéros de génération et versions de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
+* [Numéros et versions de génération de VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
+* [Numéros et versions de génération de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
+* [Activation de trames Jumbo sur des commutateurs distribués virtuels](https://kb.vmware.com/s/article/1038827)
 * [Feuille de données de protection de VMware vCenter Server on IBM Cloud](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 * [Présentation de vCenter Server](vc_vcenterserveroverview.html)
 * [Planification des instances vCenter Server](vc_planning.html)

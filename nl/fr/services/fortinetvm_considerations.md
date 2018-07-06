@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -18,20 +18,22 @@ Vous pouvez installer plusieurs instances de ce service si besoin. Vous pouvez g
 
 ## Composants de FortiGate Virtual Appliance on IBM Cloud
 
-Lorsque vous commandez le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, une paire de dispositifs FortiGate Virtual Appliance est déployée avec une interface réseau configurée pour le réseau de gestion et neuf interfaces réseau que vous pouvez configurer afin de protéger le trafic de données en fonction de vos besoins. 
+Lorsque vous commandez le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, une paire de dispositifs FortiGate Virtual Appliance est déployée avec les éléments suivants :
+* Une interface réseau configurée pour le réseau de gestion. 
+* Neuf interfaces réseau supplémentaires que vous pouvez configurer pour protéger le trafic de données, si besoin.
 
-Les dispositifs FortiGate Virtual Appliance ne sont pas préconfigurés en tant que paire de dispositifs à haute disponibilité. Après le déploiement, vous pouvez configurer des paramètres à haute disponibilité, à savoir Virtual Router Redundancy Protocol (VRRP) et FortiGate Cluster Protocol (FGCP), en fonction de vos besoins. 
+Les dispositifs FortiGate Virtual Appliance ne sont pas préconfigurés en tant que paire de dispositifs à haute disponibilité. Après le déploiement, vous pouvez configurer des paramètres à haute disponibilité, à savoir Virtual Router Redundancy Protocol (VRRP) et FortiGate Cluster Protocol (FGCP), en fonction de vos besoins.
 
 ## Remarques relatives à l'installation du service FortiGate Virtual Appliance on IBM Cloud
 
 Passez en revue les remarques suivantes avant d'installer le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} :
-* Les machines virtuelles FortiGate ne seront déployées que dans le cluster par défaut. 
+* Les machines virtuelles FortiGate ne seront déployées que dans le cluster par défaut.
 * Selon le modèle de licence et la taille du déploiement sélectionnés, les deux machines virtuelles FortiGate sont déployées dans l'une des configurations suivantes :
     * Petite (2 UC virtuelles/4 Go de RAM)
     * Moyenne (4 UC virtuelles/6 Go de RAM)
     * Grande (8 UC virtuelles/12 Go de RAM)
 
-  De plus, 100% de l'UC et de la RAM des deux machines virtuelles FortiGate est également réservé car ces machines virtuelles se trouvent dans le plan de données des
+  De plus, 100 % de l'UC et de la mémoire RAM des deux machines virtuelles FortiGate sont également réservés car ces machines virtuelles se trouvent dans le plan de données des
   communications réseau et il est essentiel que des ressources soient disponibles pour ces machines.
 
   Pour calculer la réservation d'UC et de RAM pour une seule machine virtuelle FortiGate VE, utilisez la formule suivante :
@@ -44,12 +46,11 @@ Passez en revue les remarques suivantes avant d'installer le service FortiGate V
    * Les deux serveurs ESXi actifs disposent de suffisamment de ressources pour héberger une machine virtuelle FortiGate sur chaque serveur ESXi avec une réservation de 100% d'UC et de RAM.
    * VMware vSphere HA dispose de suffisamment de ressources pour héberger les deux machines virtuelles FortiGate avec 100% d'UC et de RAM.
 
-  Compte tenu de ces exigences, vous devez prévoir l'espace requis pour le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}. Au besoin, avant de commander le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, ajoutez 1 à 2 deux serveurs ESXi à votre instance et/ou réduisez la réservation d'UC pour basculement
-  de vSphere HA.
+  Compte tenu de ces exigences, vous devez soigneusement prévoir l'espace requis pour le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}. Au besoin, avant de commander le dispositif FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, ajoutez 1 à 2 serveurs ESXi à votre instance et/ou réduisez la réservation d'UC de vSphere HA pour basculement. 
 
 ## Exemple de commande de dispositif FortiGate Virtual Appliance on IBM Cloud
 
-Vous commandez une instance VMware vCenter Server **Petite** avec deux serveurs 2 ESXi et la configuration suivante : 16 coeurs à 2,10 GHz avec chacun 128 Go de RAM. Pour le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, vous sélectionnez **Grande** (8 UC virtuelles/12 Go de RAM) comme taille de déploiement et n'importe quel modèle de licence d'abonnement.
+Vous commandez une instance VMware vCenter Server **Petite** avec 2 serveurs ESXi et la configuration suivante : 16 coeurs à 2,10 GHz avec chacun 128 Go de RAM. Pour le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, vous sélectionnez **Grande** (8 UC virtuelles/12 Go de RAM) comme taille de déploiement et n'importe quel modèle de licence d'abonnement.
 
 Dans ce cas, une seule machine virtuelle FortiGate par serveur est requise :
 * 2,1 GHz * 8 UC virtuelles = 16,8 GHz d'UC et
@@ -63,9 +64,11 @@ vSphere HA réserve toutefois par défaut 50% d'UC et de RAM pour le basculement
 
 `50% de 2 * 16 coeurs * 2,1 GHz = 33,6 GHz disponibles`
 
-Etant donné que les serveurs ESXi auront d'autres charges de travail (par exemple, IBM CloudDriver, VMware NSX Controller, VMware NSX Edge) qui utilisent ces ressources, nous ne respectons pas la troisième exigence puisque nous avons besoin de 33,6 GHz d'UC et de 24 Go de RAM pour les deux machines virtuelles FortiGate.
+Etant donné que d'autres charges de travail se trouveront sur les serveurs ESXi (par exemple, IBM CloudDriver, VMware NSX Controller ou VMware NSX Edge), en utilisant ces ressources, nous ne respectons pas la troisième exigence. En effet, nous avons besoin de 33,6 GHz d'UC et de 24 Go de mémoire RAM pour les deux machines virtuelles FortiGate. 
 
-Dans ce cas, l'installation de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} risque d'échouer, sauf si au moins un serveur ESXi est ajouté à l'environnement et que les réservations pour basculement à haute disponibilité vSphere sont mises à jour de manière à garantir un nombre suffisant de ressources disponibles pour les deux machines virtuelles FortiGate. Si des ressources supplémentaires sont nécessaires pour exécuter le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, vous pouvez ajouter d'autres serveurs ESXi avant d'installer le service.
+Dans ce cas, l'installation de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} risque d'échouer, sauf si au moins un serveur ESXi est ajouté à l'environnement et que les réservations de vSphere HA pour basculement sont mises à jour de manière à garantir un nombre suffisant de ressources disponibles pour les deux machines virtuelles FortiGate. 
+
+Si des ressources supplémentaires sont nécessaires pour exécuter le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, vous pouvez ajouter d'autres serveurs ESXi avant d'installer le service.
 
 ## Remarques relatives au retrait du service FortiGate Virtual Appliance on IBM Cloud
 

@@ -28,7 +28,7 @@ Passez en revue les informations suivantes afin de comprendre les résultats de 
 4. Cliquez sur **Sécuriser une instance**.
 5. Cliquez sur **OK** pour confirmer que vous voulez déconnecter l'instance de l'automatisation.
    
-   **Remarque** : avant d'exécuter cette étape, prenez soin de passer en revue les informations contenues dans la section **Avant de commencer**. 
+   **Remarque** : avant d'exécuter cette étape, prenez soin de passer en revue les informations contenues dans la section **Avant de commencer**.
 
 ## Résultats
 

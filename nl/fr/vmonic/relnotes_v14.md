@@ -32,7 +32,7 @@ Les composants suivants sont nouveaux ou ont été mis à jour :
 
 VMware NSX for vSphere 6.2.4 est désormais installé par défaut sur toutes les instances vCenter Server (uniquement les instances sur Cloud Foundation précédemment).
 
-Dans le cadre de l'installation de NSX, le gestionnaire NSX est installé et sous licence sur toutes les nouvelles instances déployées. De plus, un composant NSX Edge est créé pour la gestion des instances, mais vous pouvez, au besoin, créer vos propres composants NSX Edge. Pour plus d'informations sur le composant NSX Edge, voir la section _VMware NSX Edge_ sur cette page. 
+Dans le cadre de l'installation de NSX, le gestionnaire NSX est installé et sous licence sur toutes les nouvelles instances déployées. De plus, un composant NSX Edge est créé pour la gestion des instances, mais vous pouvez, au besoin, créer vos propres composants NSX Edge. Pour plus d'informations sur le composant NSX Edge, voir la section _VMware NSX Edge_ sur cette page.
 
 **Remarque** : le contrôleur NSX n'est pas installé sur les instances vCenter Server (comme il l'est sur les instances Cloud Foundation). Si vous utilisez VXLAN ou des routeurs logiques distribués pour vos instances vCenter Server, alors vous devez installer vous-même le contrôleur NSX.
 

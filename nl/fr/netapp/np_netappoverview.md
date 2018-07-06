@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -80,8 +80,7 @@ Quatre serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.bshort}} av
 
 * Liaisons montantes réseau public et privé double de 10 Gbps
 * Trois VLAN (réseaux locaux virtuels) : un VLAN public et deux VLAN privés
-* Un VXLAN (Virtual eXtensible LAN) avec routeur DLR (Distributed Logical Router)
-* Deux passerelles VMware NSX Edge Services Gateway sécurisées
+* Une passerelle VMware NSX Edge Services Gateway sécurisée
 
 ### Instance de serveur virtuel
 

@@ -27,11 +27,11 @@ Tous les coûts d'infrastructure physique et virtuelle ainsi que des licences is
 
 ## Quelles sont les différences entre une instance vCenter Server, une instance Cloud Foundation et un cluster VMware vSphere ?
 
-Tous les types d'instance fournissent différentes options de déploiement pour les environnements virtuels VMware. Toutefois, la différence entre ces types réside dans l'étendue des possibilités de personnalisation et d'automatisation. 
+Tous les types d'instance fournissent différentes options de déploiement pour les environnements virtuels VMware. Toutefois, la différence entre ces types réside dans l'étendue des possibilités de personnalisation et d'automatisation.
 
 * Lorsque vous commandez une instance VMware vCenter Server, vous déployez un environnement virtuel VMware avec des ressources de calcul, de stockage et de réseau personnalisées. Pour plus d'informations sur les composants déployés, voir la section _Spécifications techniques de vCenter Server_ dans la rubrique [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html).
 * Lorsque vous commandez une instance VMware Cloud Foundation, vous déployez une plateforme unifiée de centre de données défini par les logiciels (SDDC, Software-Defined Data Center). Pour plus d'informations sur les composants déployés, voir [Composants d'instance Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
-* Lorsque vous commandez un cluster VMware vSphere, vous obtenez un maximum de souplesse pour concevoir et créer votre environnement VMware hébergé tout en intégrant du matériel compatible avec VMware. Cela dit, {{site.data.keyword.cloud_notm}} n'automatise pas l'installation, la configuration et l'apport des composants VMware facultatifs pour le cluster VMware vSphere. 
+* Lorsque vous commandez un cluster VMware vSphere, vous obtenez un maximum de souplesse pour concevoir et créer votre environnement VMware hébergé tout en intégrant du matériel compatible avec VMware. Cela dit, {{site.data.keyword.cloud_notm}} n'automatise pas l'installation, la configuration et l'apport des composants VMware facultatifs pour le cluster VMware vSphere.
 * Les fonctions qui sont prises en charge poru les instances vCenter Server, les instances Cloud Foundation et les clusters vSphere sont différentes. Pour plus d'informations, voir [Graphique de comparaison des offres](inst_comp_chart.html).
 
 ## Qu'inclut une instance vCenter Server ?
@@ -100,7 +100,7 @@ Bien que la passerelle NSX Edge gérée par le client soit connectée au VLAN pu
 
 ## Comment choisir les centres de données pour mes instances ?
 
-Les déploiements d'instance sont soumis à des exigences strictes en matière d'infrastructure physique, qui varient en fonction des {{site.data.keyword.CloudDataCents_notm}}. Lorsque vous commandez votre instance, les centres de données disponibles sont répertoriés dans des régions et vous pouvez en sélectionner un dans la liste. 
+Les déploiements d'instance sont soumis à des exigences strictes en matière d'infrastructure physique, qui varient en fonction des {{site.data.keyword.CloudDataCents_notm}}. Lorsque vous commandez votre instance, les centres de données disponibles sont répertoriés dans des régions et vous pouvez en sélectionner un dans la liste.
 
 Pour plus d'informations, voir les sections _Disponibilité d'IBM Cloud Data Center_ dans :
 * [Exigences et planification pour les instances vCenter Server](../vcenter/vc_planning.html)
