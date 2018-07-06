@@ -10,7 +10,7 @@ lastupdated: "2018-05-25"
 
 # Graphique de comparison des offres
 
-Passez en revue le graphique suivant pour comprendre les différentes fonctions prises en charge pour les instances VMware Cloud Foundation, les instances VMware vCenter Server, les instances VMware vCenter Server with Hybridity Bundle et les clusters VMware vSphere. 
+Passez en revue le graphique suivant pour comprendre les différentes fonctions prises en charge pour les instances VMware Cloud Foundation, les instances VMware vCenter Server, les instances VMware vCenter Server with Hybridity Bundle et les clusters VMware vSphere.
 
 Tableau 1. Fonctions prises en charge pour les instances Cloud Foundation, vCenter Server et vCenter Server with Hybridity Bundle et les clusters vSphere
 
@@ -19,7 +19,7 @@ Tableau 1. Fonctions prises en charge pour les instances Cloud Foundation, vCent
 | Optimisée par l'automatisation avancée {{site.data.keyword.IBM}} <sup>1</sup> | Oui | Oui | Oui | Non. Auto générée et configurée |
 | Options de stockage        | vSAN                | Stockage vSAN ou de niveau fichier partagé (NFS) | vSAN | Stockage vSAN ou de niveau fichier partagé (NFS) |
 | Nombre de serveurs ESXi dans le cluster initial | 4 | 4 pour vSAN et 2 au minimum (3 vivement recommandé) pour NFS | 4 | 1 pour mise à l'échelle d'un cluster existant, 4 pour un nouveau cluster vSAN et 3 au minimum pour un nouveau cluster avec NFS |
-|Nombre maximal de serveurs ESXi <sup>2</sup> | 32 par cluster      | 59 par cluster     | 59 par cluster | 60 par cluster     |
+| Nombre maximal de serveurs ESXi <sup>2</sup> | 32 par cluster      | 59 par cluster     | 59 par cluster | 60 par cluster     |
 | Déploiement multisite automatisé par le cloud | Pris en charge pour les nouvelles instances déployées en version 2.0 ou ultérieure | Pris en charge pour les nouvelles instances déployées en version 2.0 ou ultérieure | Pris en charge | Pris en charge. Configuration automatisée non incluse |
 | Ajout de serveurs ESXi              | Pris en charge           | Pris en charge | Pris en charge | Pris en charge. Configuration automatisée non incluse |
 | Suppression de serveurs ESXi           | Pris en charge           | Pris en charge | Pris en charge | Pris en charge. Configuration automatisée non incluse |
@@ -35,7 +35,7 @@ Tableau 1. Fonctions prises en charge pour les instances Cloud Foundation, vCent
 
 **Remarques** :
 
-<sup>1</sup> Conformément à une conception validée et avec une vérification durant le déploiement. 
+<sup>1</sup> Conformément à une conception validée et avec une vérification durant le déploiement.
 
 <sup>2</sup> Vous pouvez augmenter le nombre de serveurs ESXi dans un cluster vSAN et le porter à un maximum de 64. Pour plus d'informations, voir _Combien de serveurs ESXi puis-je ajouter à un cluster ?_ dans la [Foire aux questions sur les serveurs ESXi](faq_esxi.html).
 

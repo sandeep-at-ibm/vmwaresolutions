@@ -20,7 +20,7 @@ Bring Your Own License, ou BYOL, est une fonction disponible pour les instances 
 * VMware NSX
 * VMware vSAN
 
-Si vous choisissez d'utiliser votre propre licence pour un composant VMware et de fournir une clé de licence valide pour celui-ci, aucune licence n'est commandée auprès d'IBM pour ce composant et aucun frais de licence mensuel n'est facturé sur votre compte d'infrastructure {{site.data.keyword.cloud}} pour ce composant. 
+Si vous choisissez d'utiliser votre propre licence pour un composant VMware et de fournir une clé de licence valide pour celui-ci, aucune licence n'est commandée auprès d'IBM pour ce composant et aucun frais de licence mensuel n'est facturé sur votre compte d'infrastructure {{site.data.keyword.cloud}} pour ce composant.
 
 **Remarque :** cette fonction BYOL n'est pas disponible pour les partenaires commerciaux.
 
@@ -110,13 +110,13 @@ Non, parce que ces produits VMware ne font pas partie du déploiement de l'insta
 
 ## Puis-je commander un stockage NFS avec vCenter Server with Hybridity Bundle ?
 
-Pour les instances nouvellement déployées, seul le stockage vSAN All-Flash est pris en charge. L'offre vCenter Server with Hybridity Bundle inclut l'octroi de licence vSAN Advanced ou Enterprise. 
+Pour les instances nouvellement déployées, seul le stockage vSAN All-Flash est pris en charge. L'offre vCenter Server with Hybridity Bundle inclut l'octroi de licence vSAN Advanced ou Enterprise.
 
-Si vous possédez une instance vCenter Server dotée de stockage NFS, vous pouvez mettre à niveau votre instance existante vers vCenter Server with Hybridity Bundle. Bien que l'octroi de licence vSAN Advanced soit commandé durant la mise à niveau, vous n'êtes pas tenu de mettre à disposition un cluster All-flash vSAN. 
+Si vous possédez une instance vCenter Server dotée de stockage NFS, vous pouvez mettre à niveau votre instance existante vers vCenter Server with Hybridity Bundle. Bien que l'octroi de licence vSAN Advanced soit commandé durant la mise à niveau, vous n'êtes pas tenu de mettre à disposition un cluster All-flash vSAN.
 
 ## Puis-je utiliser le mode BYOL avec vCenter Server with Hybridity Bundle ?
 
-Vous ne pouvez pas utiliser votre propre licence VMware (BYOL) sur {{site.data.keyword.cloud_notm}}. vCenter Server with Hybridity Bundle exige que toutes les licences VMware soient fournies par IBM. 
+Vous ne pouvez pas utiliser votre propre licence VMware (BYOL) sur {{site.data.keyword.cloud_notm}}. vCenter Server with Hybridity Bundle exige que toutes les licences VMware soient fournies par IBM.
 
 ## Quelle est la différence entre l'octroi de licence vCenter Server with Hybridity Bundle et l'octroi de licence vCenter Server ?
 
@@ -128,11 +128,11 @@ vCenter Server with Hybridity Bundle est un ensemble prescrit de licences et d'�
 
 Les nouvelles instances de vCenter Server with Hybridity Bundle incluent VMware vSphere Enterprise Plus, VMware vCenter Standard, VMware NSX Advanced ou Enterprise, VMware vSAN Advanced ou Enterprise et VMware Hybrid Cloud Extension (HCX).
 
-Si vous possédez une instance vCenter Server dotée d'une édition NSX Base, une mise à niveau vers l'édition NSX Advanced s'effectuera automatiquement lorsque vous commanderez vCenter Server with Hybridity Bundle. 
+Si vous possédez une instance vCenter Server dotée d'une édition NSX Base, une mise à niveau vers l'édition NSX Advanced s'effectuera automatiquement lorsque vous commanderez vCenter Server with Hybridity Bundle.
 
 ## Puis-je mettre à niveau l'édition NSX Advanced qui est incluse dans vCenter Server with Hybridity Bundle vers l'édition NSX Enterprise ?
 
-Bien que vCenter Server with Hybridity Bundle inclut l'édition NSX Advanced, vous pouvez effectuer une mise à niveau vers l'édition NSX Enterprise après avoir commandé vCenter Server with Hybridity Bundle. Pour ce faire, utilisez l'onglet **Mise à jour et module de correction** de la page des détails d'instance sur la console {{site.data.keyword.vmwaresolutions_short}}. 
+Bien que vCenter Server with Hybridity Bundle inclut l'édition NSX Advanced, vous pouvez effectuer une mise à niveau vers l'édition NSX Enterprise après avoir commandé vCenter Server with Hybridity Bundle. Pour ce faire, utilisez l'onglet **Mise à jour et module de correction** de la page des détails d'instance sur la console {{site.data.keyword.vmwaresolutions_short}}.
 
 ### Liens connexes
 

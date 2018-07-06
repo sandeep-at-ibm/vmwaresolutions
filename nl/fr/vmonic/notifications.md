@@ -29,9 +29,9 @@ Les notifications vous permettent de vérifier le statut des opérations systèm
         <td>Gravité de l'événement signalé par la notification.
           <dl class="dl">
           <dt class="dt dlterm">Critique</dt>
-          <dd class="dd">Un événement critique peut avoir un impact sur l'ensemble du système ou du service. </dd>
+          <dd class="dd">Un événement critique peut avoir un impact sur l'ensemble du système ou du service.</dd>
           <dt class="dt dlterm">Erreur</dt>
-          <dd class="dd">Un événement d'erreur se produit durant une opération qui peut nécessiter une intervention de la part de l'administrateur ou de l'utilisateur final. </dd>
+          <dd class="dd">Un événement d'erreur se produit durant une opération qui peut nécessiter une intervention de la part de l'administrateur ou de l'utilisateur final.</dd>
           <dt class="dt dlterm">Avertissement</dt>
           <dd class="dd">Echec ou fonctionnement inadéquat d'un composant. L'erreur n'interrompt toutefois pas le processus en cours du
        composant.</dd>
@@ -70,7 +70,7 @@ Les notifications vous permettent de vérifier le statut des opérations systèm
 
 ## Filtrage des notifications
 
-Par défaut, toutes les notifications non lues s'affichent. Vous pouvez filtrer les notifications par statut, gravité et type. Pour filtrer les notifications, cochez les cases uniquement pour les éléments que vous souhaitez afficher dans les listes déroulantes **Statut**, **Gravité** ou **Type**. 
+Par défaut, toutes les notifications non lues s'affichent. Vous pouvez filtrer les notifications par statut, gravité et type. Pour filtrer les notifications, cochez les cases uniquement pour les éléments que vous souhaitez afficher dans les listes déroulantes **Statut**, **Gravité** ou **Type**.
 
 ## Liens connexes
 

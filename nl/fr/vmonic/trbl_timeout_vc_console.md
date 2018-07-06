@@ -34,7 +34,7 @@ Procédez comme suit pour identifier et résoudre le problème.
    1. Cliquez sur **Compte > Accès VPN**.
    2. Cliquez sur **Liaison SSL** dans la colonne **Accès VPN**.
    3. Sur la page **Accès VPN pour nom d'utilisateur**, affectez à l'option **Accès de sous-réseau** la valeur **Manuel**.
-   4. Sur la même page, localisez le sous-réseau de la paire adresse IP-nom d'hôte. Pour plus d'informations, voir l'**étape 2**.     
+   4. Sur la même page, localisez le sous-réseau de la paire adresse IP-nom d'hôte. Pour plus d'informations, voir l'**étape 2**.    
 
       Par exemple, si l'adresse IP de votre instance est `xx.yyy.zz.15` et que l'adresse IP de vCenter est `xx.yyy.zz.10`, vous devez accorder l'accès au sous-réseau `xx.yyy.zz.0/26`.
 

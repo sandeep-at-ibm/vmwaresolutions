@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-05"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -29,11 +29,10 @@ Avec {{site.data.keyword.vmwaresolutions_short}} vous pouvez déployer facilemen
 {{site.data.keyword.vmwaresolutions_short}} offrent des choix de déploiements normalisés et personnalisables des environnements virtuels VMware. Les types de déploiement suivants sont proposés :
 * **VMware vCenter Server on {{site.data.keyword.cloud_notm}}** : l'offre vCenter Server vous permet de déployer un environnement virtuel VMware avec les ressources de calcul, de stockage et de réseau les mieux adaptées à vos besoins métier.
 * **VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle** : l'offre vCenter Server with Hybridity est un cloud privé hébergé qui vous permet de déployer rapidement et facilement votre infrastructure locale dans le cloud. L'environnement VMware est basé sur des licences SDDC (Software Defined Data Center) VMware fournies par IBM et inclut VMware Hybrid Cloud Extension (HCX). HCX vous permet de connecter un environnement vSphere 5.0+ local à des sites IBM Cloud de manière sécurisée pour obtenir une hybridité d'infrastructure transparente et une véritable mobilité d'application.
-
 * **VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}** : l'offre Cloud Foundation fournit un environnement virtuel VMware unifié avec les ressources de calcul, de stockage et de réseau {{site.data.keyword.cloud_notm}} standard dédiées à chaque déploiement utilisateur.
 * **VMware vSphere on {{site.data.keyword.cloud_notm}}** : l'offre vSphere on {{site.data.keyword.cloud_notm}} fournit un service de virtualisation personnalisable qui combine des serveurs {{site.data.keyword.baremetal_short}} compatibles VMware, des composants matériels et des licences afin de générer votre propre environnement VMware hébergé sur IBM.
 * **NetApp ONTAP Select** : l'offre NetApp ONTAP Select vous permet de déployer un cluster de stockage défini par les logiciels qui répond à vos besoins en matière de dispositif de stockage dédié à haute disponibilité basé sur NetApp ONTAP Select.
-* **VMware Federal on {{site.data.keyword.cloud_notm}}** : l'offre VMware Federal on {{site.data.keyword.cloud_notm}} fournit la prise en charge permettant de commander une instance vCenter Server de base, fournit l'option de sécurisation des instances déployées et retire les informations sensibles et la connexion de gestion ouverte pour l'accès entrant à l'instance des fonctions de gestion. 
+* **VMware Federal on {{site.data.keyword.cloud_notm}}** : l'offre VMware Federal on {{site.data.keyword.cloud_notm}} fournit la prise en charge permettant de commander une instance vCenter Server de base, fournit l'option de sécurisation des instances déployées et retire les informations sensibles et la connexion de gestion ouverte pour l'accès entrant à l'instance des fonctions de gestion.
 
 ## Services supplémentaires
 
@@ -69,8 +68,8 @@ Ce service fournit une solution évolutive et efficace de protection, de réutil
 
 **Remarques** :
 * Ce service est disponible uniquement pour les instances déployées dans (ou mises à niveau vers) la version 2.2 ou des éditions ultérieures.
-* Pour les instances déployées en version 2.3 ou ultérieure, IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} est le service de sauvegarde par défaut. Le service fournit automatiquement la sauvegarde des machines virtuelles de gestion.
-* Pour les instances déployées dans l'édition V2.2, ce service assure la protection des données uniquement pour les machines virtuelles de charge de travail.
+* Pour les instances déployées en version 2.3 ou dans des éditions ultérieures, IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} fournit automatiquement un service de sauvegarde pour les machines virtuelles de gestion. 
+* Pour les instances déployées en version 2.2, ce service assure la protection des données uniquement pour les machines virtuelles de charge de travail.
 
 Pour plus d'informations, voir [Gestion d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/managingspp.html).
 
@@ -80,7 +79,7 @@ Ce service s'intègre en toute transparence à votre environnement VMware pour v
 
 Ce service est configuré pour effectuer une sauvegarde des machines virtuelles de gestion immédiatement après le déploiement de votre instance.
 
-Ce service est disponible uniquement pour les instances déployées en version 1.8 et éditions ultérieures.
+Ce service est disponible uniquement pour les instances déployées en version 1.8 ou dans les éditions ultérieures.
 
 Pour plus d'informations, voir [Gestion de Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html).
 
