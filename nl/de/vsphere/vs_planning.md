@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-05-24"
 
 ## Voraussetzungen für IBM Cloud-Konto
 
-Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Voraussetzungen für {{site.data.keyword.cloud_notm}}-Konto](../vmonic/slaccountrequirement.html).
+Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Konto](../vmonic/slaccountrequirement.html).
 
 ## Verfügbarkeit des IBM Cloud-Rechenzentrums
 

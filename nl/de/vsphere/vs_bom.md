@@ -8,7 +8,7 @@ lastupdated: "2018-03-29"
 
 ---
 
-# VMware Server-Teileliste
+# VMware vSphere-Teileliste
 
 Die folgende Tabelle enthält Details über die Teileliste (Bill of Materials, BOM) für VMware vSphere-Softwarekomponenten.
 
