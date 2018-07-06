@@ -17,7 +17,7 @@ Affichez les instances NetApp ONTAP Select que vous avez commandées, ainsi que 
 Pour afficher un récapitulatif de toutes les instances NetApp ONTAP Select de votre environnement, procédez comme suit :
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. Dans le tableau **Instances NetApp ONTAP Select**, affichez la liste de vos instances. 
+2. Dans le tableau **Instances NetApp ONTAP Select**, affichez la liste de vos instances.
 
 Tableau 1. Eléments d'une instance NetApp ONTAP Select
 
@@ -56,7 +56,7 @@ Tableau 2. Propriétés d'instance NetApp ONTAP Select
 
 ## Affichage des informations d'accès relatives aux instances NetApp ONTAP Select
 
-Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance. 
+Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance.
 
 Tableau 3. Informations d'accès relatives aux composants des instances NetApp ONTAP Select
 
@@ -98,7 +98,7 @@ Si des erreurs se produisent lors du déploiement ou de la suppression d'une ins
 
 ## Affichage des clusters NetApp ONTAP Select
 
-1. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. 
+1. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche.
 2. Sous **CLUSTERS**, affichez le récapitulatif concernant les clusters NetApp ONTAP Select.
 
 	Tableau 5: Eléments des clusters NetApp ONTAP Select
