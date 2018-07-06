@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,8 +15,8 @@ lastupdated: "2018-05-08"
 ## 要件
 
 以下の作業を完了していることを確認してください。
-*  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定](../vmonic/useraccount.html)を参照してください。
-*  [vSphere クラスターの要件と計画](vs_planning.html)に記載されている要件と考慮事項を確認する。
+*  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](../vmonic/useraccount.html)を参照してください。
+*  [VMware vSphere on {{site.data.keyword.cloud_notm}} の要件と計画](vs_planning.html)に記載されている要件と考慮事項を確認する。
 
 ## 手順
 
