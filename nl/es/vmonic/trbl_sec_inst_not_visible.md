@@ -18,10 +18,10 @@ En una configuración de varios sitios, después de añadir una nueva instancia 
 
 Este es un problema conocido de VMware 6.5.
 
-Para resolver el problema, debe reiniciar el cliente web de vSphere:
+Para resolver el problema, debe rearrancar el cliente web de vSphere:
 
 1. Mediante la cuenta **root**, conéctese sobre **ssh** a la máquina virtual (VM) de vCenter de la instancia solicitada anteriormente.
 2. Escriba ``shell`` para entrar en el shell bash.
 3. Escriba `service-control --stop vsphere-client` para detener el cliente.
-4. Escriba `service-control --start vsphere-client` para reiniciar el cliente.
-5. Una vez reiniciado el cliente web de vSphere de la instancia solicitada anteriormente, confirme que el sistema vCenter Server de la instancia secundaria recién añadida está visible en el cliente web de vSphere.
+4. Escriba `service-control --start vsphere-client` para rearrancar el cliente.
+5. Una vez rearrancado el cliente web de vSphere de la instancia solicitada anteriormente, confirme que el sistema vCenter Server de la instancia secundaria recién añadida está visible en el cliente web de vSphere.

@@ -18,7 +18,7 @@ Para utilizar {{site.data.keyword.vmwaresolutions_full}} para solicitar instanci
 
 La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe tener ciertos permisos para poder solicitar componentes en sus instancias y realizar operaciones en su nombre. Los requisitos sobre permisos se aplican a todos los tipos de instancias y servicios que solicite desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
-Los usuarios autorizados pueden verificar y actualizar los permisos para una cuenta de {{site.data.keyword.cloud_notm}} en el {{site.data.keyword.slportal_full}}. Para obtener más información, consulte _Edición de los permisos de portal de cliente del usuario_ en [Gestión de un perfil de usuario](../../../customer-portal/cpmanuserprof.html){:new_window}.
+Los usuarios autorizados pueden verificar y actualizar los permisos para una cuenta de {{site.data.keyword.cloud_notm}} en el {{site.data.keyword.slportal_full}}. Para obtener más información, consulte _Edición de los permisos del portal de clientes del usuario_ en [Gestión de un perfil de usuario](../../../customer-portal/cpmanuserprof.html){:new_window}.
 
 Tabla 1. Permisos necesarios para la cuenta de {{site.data.keyword.cloud_notm}}
 
@@ -34,7 +34,7 @@ Tabla 1. Permisos necesarios para la cuenta de {{site.data.keyword.cloud_notm}}
 | Añadir direcciones IP | Este permiso es necesario para solicitar rangos de subredes privadas portátiles en su nombre, lo cual es necesario para gestionar las máquinas virtuales que se ejecutan en un clúster de vSphere. Cuando se añaden más servicios a la instancia, las direcciones IP privadas portátiles se están asignados a asignan a los servidores VMware ESXi para aislar y asignar el ancho de banda. |
 | Añadir incidencias | Este permiso es necesario para abrir incidencias de servicio en su nombre. Pueden crearse incidencias para las siguientes operaciones: para iniciar operaciones de restauración y para iniciar procesos de resolución de problemas automáticamente cuando se encuentran problemas. |
 | Editar incidencias | Este permiso es necesario para editar las incidencias de servicio creadas en su nombre. |
-| Ver incidencias | Este permiso es necesario para supervisar las incidencias de servicio relacionadas con los componentes de su instancia en relación a problemas y retrasos de suministro de la infraestructura de {{site.data.keyword.cloud_notm}}. |
+| Ver incidencias | Este permiso es necesario para supervisar las incidencias de servicio relacionadas con los componentes de su instancia en relación con problemas y retrasos de suministro de la infraestructura de {{site.data.keyword.cloud_notm}}. |
 | Ver detalles de hardware | Este permiso es necesario para recuperar detalles de hardware, que se necesitan para la validación de pedidos y para la configuración automática. |
 | Ver licencias | Este permiso es necesario para recuperar y validar las licencias que utiliza su instancia. |
 | Ver contraseñas | Este permiso es necesario para poder administrar las VSI solicitadas. |

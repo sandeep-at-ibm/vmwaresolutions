@@ -72,7 +72,7 @@ No. Nuestro acuerdo con VMware implica que debemos aceptar la clave de licencia 
 
 Sí. Puede utilizar la característica BYOL o adquirir licencias para cualquier combinación de los cuatro componentes de VMware. La consola de {{site.data.keyword.vmwaresolutions_short}} le facilita la selección de la opción de licencia cuando solicita la instancia de vCenter Server o de Cloud Foundation. La opción de licencia en vigor en el momento de realizar el pedido de la instancia inicial se aplica durante todo el tiempo de vida de dicha instancia.
 
-## Para un componente específico de VMware, ¿puedo utilizar BYOL para algunas licencias y comprar el resto de licencias de IBM?
+## Para un componente específico de VMware, ¿puedo utilizar BYOL para algunas licencias y comprar el resto de las licencias de IBM?
 
 Sí. Si ha seleccionado BYOL para un componente VMware específico, cuando cree un nuevo clúster tiene la opción de entrar una nueva clave de BYOL, de seguir utilizando una clave de BYOL existente o de comprar licencias proporcionadas por IBM para dicho clúster.  En este momento, solo VMware vSphere Enterprise y VMware vSAN están disponibles para licencias por clúster.
 

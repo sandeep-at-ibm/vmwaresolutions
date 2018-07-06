@@ -16,7 +16,7 @@ Este release incluye nuevas características, actualizaciones de componentes, me
 
 El servicio FortiGate Virtual Appliance on IBM Cloud ya está disponible para la V2.0 y posteriores de instancias de VMware Cloud Foundation y para instancias de VMware vCenter Server. Este servicio despliega un par de alta disponibilidad (HA) de dispositivos virtuales FortiGate en el entorno, lo que le puede ayudar a reducir el riesgo mediante la implementación de controles de seguridad estrictos en la infraestructura virtual.
 
-Puede solicitar instancias con el servicio FortiGate Virtual Appliance on IBM Cloud incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante desde el separador **Servicios** de la página de detalles de la instancia. Dependiendo de sus necesidades, puede seleccionar uno de los tres tamaños de despliegue y opciones de licencia para este servicio. Después de que se instale correctamente el servicio, podrá gestionar y configurar reglas de cortafuegos para el dispositivo virtual FortiGate desde la consola de FortiGate.
+Puede solicitar instancias con el servicio FortiGate Virtual Appliance on IBM Cloud incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante desde el separador **Servicios** de la página de detalles de la instancia. Dependiendo de sus necesidades, puede seleccionar uno de los tres tamaños de despliegue y opciones de licencia para este servicio. Después de que se instale correctamente el servicio, podrá gestionar y configurar reglas de cortafuegos para los dispositivos virtuales FortiGate desde la consola de FortiGate.
 
 Para obtener más información, consulte:
 * [Componentes y consideraciones sobre FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html)
@@ -119,7 +119,7 @@ Para obtener más información sobre los componentes, consulte [Visión general 
 
 ### Soporte de la configuración de varios sitios para instancias de vCenter Server
 
-Ahora puede desplegar una sola instancia de vCenter Server, además de instancias secundarias que se conectan a una instancia primaria. El modelo de configuración de varios sitios utiliza una topología de estrella ("hub and spoke") con un sitio primario y un máximo se 7 sitios secundarios.
+Ahora puede desplegar una sola instancia de vCenter Server, además de instancias secundarias que se conectan a una instancia primaria. El modelo de configuración de varios sitios utiliza una topología de estrella ("hub and spoke") con un sitio primario y un máximo de 7 sitios secundarios.
 
 Para obtener más información, consulte [Configuración de varios sitios para instancias de vCenter Server](../vcenter/vc_multisite.html).
 

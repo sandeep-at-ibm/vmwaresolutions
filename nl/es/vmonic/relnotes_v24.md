@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -70,7 +70,7 @@ Ahora puede desplegar instancias de VMware Federal en el {{site.data.keyword.Clo
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-El release actual instala IBM Spectrum Protect&trade; Plus V10.1.1 Parche 1 como servicio de copia de seguridad predeterminado en todas las instancias desplegadas recientemente. Para obtener información sobre las nuevas características de IBM Spectrum Protect Plus V10.1.1 Parche 1, consulte [Actualizaciones de IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+El release actual instala IBM Spectrum Protect&trade; Plus V10.1.1 Parche 1 en todas las instancias desplegadas recientemente. Para obtener información sobre las nuevas características de IBM Spectrum Protect Plus V10.1.1 Parche 1, consulte [Actualizaciones de IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ### VMware HCX on IBM Cloud
 
@@ -89,8 +89,8 @@ La información de servicios se ha reestructurado y la navegación se ha mejorad
 Para obtener más información, consulte:
 
 * [Solicitud de F5 on IBM Cloud](../services/f5_ordering.html)
-* [Solicitud de FortiGate Security Appliance on IBM Cloud](../services/fortigate_physical_ordering.html)
-* [Solicitud de FortiGate Virtual Appliance on IBM Cloud](../services/fortigate_vm_ordering.html)
+* [Solicitud de FortiGate Security Appliance on IBM Cloud](../services/fsa_ordering.html)
+* [Solicitud de FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_ordering.html)
 * [Solicitud de Hytrust CloudControl on IBM Cloud](../services/htcc_ordering.html)
 * [Solicitud de Hytrust DataControl on IBM Cloud](../services/htdc_ordering.html)
 * [Solicitud de IBM Spectrum Protect Plus on IBM Cloud](../services/spp_ordering.html)

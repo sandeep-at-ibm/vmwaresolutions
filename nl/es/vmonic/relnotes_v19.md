@@ -97,7 +97,7 @@ Para obtener más información, consulte:
 
 ## Requisitos para la instalación automática de actualizaciones de Windows Server
 
-Microsoft Active Directory (AD) / Domain Name Server (DNS) se configura automáticamente de modo que solo descargue actualizaciones. No instala ni reinicia automáticamente estas actualizaciones. El usuario debe instalar manualmente las actualizaciones y rearrancar en un momento planificado que evite cualquier interrupción de la configuración actual del servidor Active Directory y de otros trabajos de copia de seguridad. Para aplicar las actualizaciones de Windows, instale las actualizaciones manualmente.
+Microsoft Active Directory (AD) / Domain Name Server (DNS) se configura automáticamente de modo que solo descargue actualizaciones. No instala ni rearranca automáticamente estas actualizaciones. El usuario debe instalar manualmente las actualizaciones y rearrancar en un momento planificado que evite cualquier interrupción de la configuración actual del servidor Active Directory y de otros trabajos de copia de seguridad. Para aplicar las actualizaciones de Windows, instale las actualizaciones manualmente.
 
 ## Documentación nueva y actualizada
 

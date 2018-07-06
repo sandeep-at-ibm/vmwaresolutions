@@ -52,7 +52,7 @@ Para obtener más información, consulte:
 ## Valores de configuración avanzada en servidores ESXi
 
 Para V2.2 o releases posteriores, se solicitan nuevas instancias con un nuevo conjunto de valores de configuración avanzada para servidores ESXi.
-Para las instancias que se actualizan desde un release anterior a V2.2 o releases posteriores, algunos valores requieren que se reinicien los servidores ESXi, por lo tanto solo un subconjunto de valores de configuración se aplica automáticamente.
+Para las instancias que se actualizan desde un release anterior a V2.2 o releases posteriores, algunos valores requieren que se rearranquen los servidores ESXi, por lo tanto solo un subconjunto de valores de configuración se aplica automáticamente.
 
 Se recomienda cambiar los valores de configuración restantes por los nuevos valores para mantener la coherencia entre todas las instancias y permitir un soporte adecuado para la ampliación de almacenamiento. IBM tiene intención de realizar pruebas solo con estos nuevos valores para todos los futuros releases de {{site.data.keyword.cloud_notm}} for VMware Solutions.
 

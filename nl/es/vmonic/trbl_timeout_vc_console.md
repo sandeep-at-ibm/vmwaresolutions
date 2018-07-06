@@ -13,7 +13,7 @@ lastupdated: "2018-05-29"
 ## Problema
 Cuando intenta conectar con el cliente web de vSphere, recibe el siguiente error de tiempo de espera excedido:
 
-`The server at <IP_address> is taking too long to respond. (El servidor de <IP_address> está tardando demasiado en responder.)`
+`The server at <IP_address> is taking too long to respond. (El servidor de <IP_address> está tardando demasiado en responder).`
 
 ## Solución
 Siga los pasos siguientes para resolver el problema.
