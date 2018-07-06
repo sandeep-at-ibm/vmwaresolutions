@@ -61,7 +61,7 @@ Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e
 
 **Notas**:
 * El valor **MaxVolumes** es obligatorio para el servicio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} porque el servicio puede utilizar más del número predeterminado de montajes de NFS en el servidor ESXi.
-* El valor **No definido** para un valor de configuración indica que el nuevo valor no se aplica automáticamente porque requiere que se reinicien los servidores ESXi, lo que puede suponer una interrupción.
+* El valor **No definido** para un valor de configuración indica que el nuevo valor no se aplica automáticamente porque requiere que se rearranquen los servidores ESXi, lo que puede suponer una interrupción.
 
   Se recomienda cambiar los valores de configuración **No definido** por los nuevos valores para mantener la coherencia entre todas las instancias y permitir un soporte adecuado para la ampliación de almacenamiento. IBM tiene intención de realizar pruebas solo con estos nuevos valores para {{site.data.keyword.vmwaresolutions_short}} V2.2 y releases posteriores.
 

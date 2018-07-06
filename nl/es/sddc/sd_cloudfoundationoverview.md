@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -37,7 +37,7 @@ Esta capa consta de vCenter Server, que representa la capa de gestión del entor
 
 En la consola de {{site.data.keyword.vmwaresolutions_short}}, puede ampliar y reducir la capacidad de sus instancias mediante la función de adición y eliminación de un servidor ESXi. También están disponibles funciones de gestión de ciclo de vida, como la aplicación de actualizaciones y la actualización de componentes de VMware en el entorno alojado.
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+Para conocer detalles sobre la arquitectura, consulte [Visión general de la solución](../archiref/solution/solution_overview.html).
 
 ## Componentes de una instancia de Cloud Foundation
 
@@ -123,7 +123,7 @@ Un servidor nativo {{site.data.keyword.cloud_notm}} con la configuración que se
 *  Añadir, modificar, devolver o eliminar componentes
 *  Ampliar o reducir la capacidad de la instancia mediante la adición o eliminación de servidores ESXi
 *  Apagar componentes
-*  Reiniciar servicios
+*  rearrancar servicios
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 
