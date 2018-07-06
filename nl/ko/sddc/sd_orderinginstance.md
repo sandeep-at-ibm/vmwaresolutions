@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-06-07"
 ## 요구사항
 
 다음 태스크를 완료했는지 확인하십시오.
-*  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 신임 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정](../vmonic/useraccount.html)을 참조하십시오.
+*  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 신임 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](../vmonic/useraccount.html)를 참조하십시오.
 *  [Cloud Foundation 인스턴스에 대한 요구사항 및 계획](sd_planning.html)의 요구사항 및 고려사항을 검토했습니다.
 
 **중요:** 주문 및 인스턴스 배치 중에 설정된 값을 수정하지 마십시오. 수정하면 인스턴스를 사용할 수 없게 됩니다. 또한 인스턴스가 배치된 후 인스턴스 이름, 루트 도메인 이름, 하위 도메인 레이블 또는 호스트 이름 접두부를 변경하지 마십시오.
