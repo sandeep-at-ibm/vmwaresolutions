@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
 # HyTrust CloudControl on IBM Cloud の管理
 
-HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービス (HTCC) を管理するには、{{site.data.keyword.vmwaresolutions_short}} コンソールから HTCC WebGUI にアクセスするか、vSphere Web Client から HTCC コンソールにアクセスします。
+HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービス (HTCC) を管理するには、{{site.data.keyword.vmwaresolutions_full}} コンソールから HTCC WebGUI にアクセスするか、vSphere Web Client から HTCC コンソールにアクセスします。
 
 ## IBM Cloud for VMware Solutions コンソールから HyTrust CloudControl WebGUI へのアクセス
 
-HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービスの詳細ページに記されている、対応する WebGUI の資格情報を使用して、プライマリーかセカンダリーの HTCC アプライアンスの WebGUI にログインします。
+プライマリーまたはセカンダリーの HTCC アプライアンスの WebGUI にログインするには、HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービスの詳細ページに記されている WebGUI の資格情報を使用します。
 
 ## vSphere Web Client から HyTrust CloudControl コンソールへのアクセス
 

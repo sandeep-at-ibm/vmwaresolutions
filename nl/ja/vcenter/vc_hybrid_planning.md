@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -67,20 +67,20 @@ vCenter Server with Hybridity Bundle のデプロイメントには、物理イ�
 
 ## vCenter Server with Hybridity Bundle インスタンス用のサービス
 
-vCenter Server with Hybridity Bundle インスタンスには VMware Hybrid Cloud Extension (HCX) のライセンスが含まれているので、VMware HCX on IBM Cloud サービスを利用できます。このサービスは、オンプレミス・データ・センターのネットワークを {{site.data.keyword.cloud_notm}} にシームレスに拡張します。これにより、変換や変更を行わずに仮想マシン (VM) を {{site.data.keyword.cloud_notm}} との間で移行できるようになります。
+vCenter Server with Hybridity Bundle インスタンスには VMware Hybrid Cloud Extension (HCX) のライセンスが含まれているので、VMware HCX on IBM Cloud サービスを利用できます。 このサービスは、オンプレミス・データ・センターのネットワークを {{site.data.keyword.cloud_notm}} にシームレスに拡張します。これにより、変換や変更を行わずに仮想マシン (VM) を {{site.data.keyword.cloud_notm}} との間で移行できるようになります。
 
 このサービスをデプロイする際には、以下の設定を行います。
 * **「HCX interconnect type」**を指定します。以下のいずれかのオプションを選択します。
   * **Public network**: HCX がパブリック・ネットワークでサイト間の暗号化接続を作成します。
-  * **Private network**: HCX がプライベート・ネットワークでサイト間の暗号化接続を作成します。 
-* **「Public endpoint certificate type」**を指定します。**「CA 証明書」**を選択する場合、以下の設定を構成してください。
+  * **Private network**: HCX がプライベート・ネットワークでサイト間の暗号化接続を作成します。
+* **「Public endpoint certificate type」**を指定します。 **「CA 証明書」**を選択する場合、以下の設定を構成してください。
   * **証明書の内容**: CA 証明書の内容を入力します。
   * **秘密鍵**: CA 証明書の秘密鍵を入力します。
   * (オプション) **パスワード**: 秘密鍵が暗号化されている場合は、秘密鍵のパスワードを入力します。
   * (オプション) **パスワードの再入力**: 秘密鍵のパスワードをもう一度入力します。
   * (オプション) **ホスト名**: CA 証明書の共通名 (CN) にマップするホスト名を入力します。 HCX on {{site.data.keyword.cloud_notm}} には、NSX Edge で受け入れられる形式の CA 証明書を使用する必要があります。 NSX Edge の証明書の形式について詳しくは、[SSL 証明書のインポート](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)を参照してください。
 
-それぞれのニーズに基づいて、インスタンスの他のアドオン・サービスを注文できます。例えば、災害復旧などがあります。詳しくは、[vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](vc_hybrid_addingremovingservices.html)を参照してください。
+それぞれのニーズに基づいて、インスタンスの他のアドオン・サービスを注文できます。例えば、災害復旧などがあります。 詳しくは、[vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](vc_hybrid_addingremovingservices.html)を参照してください。
 
 ## 関連リンク
 

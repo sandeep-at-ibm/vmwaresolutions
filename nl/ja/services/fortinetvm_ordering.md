@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -35,9 +35,9 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} サービスを注文
 ### デプロイメント・サイズ
 
 IBM Cloud では、デプロイメント・サイズに関して以下のオプションがあります。
-- **スモール (2 vCPU / 4 GB RAM)**
-- **ミディアム (4 vCPU / 6 GB RAM)**
-- **ラージ (8 vCPU / 12 GB RAM)**
+* スモール (2 vCPU / 4 GB RAM)
+* ミディアム (4 vCPU / 6 GB RAM)
+* ラージ (8 vCPU / 12 GB RAM)
 
 ### ライセンス・モデル
 

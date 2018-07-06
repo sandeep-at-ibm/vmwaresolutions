@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -80,8 +80,7 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
 
 * 10 Gbps デュアル・ネットワーク・アップリンク (パブリックとプライベート)
 * VLAN (仮想 LAN) 3 つ: パブリック VLAN 1 つとプライベート VLAN 2 つ
-* 1 つの VXLAN (仮想拡張可能 LAN) と DLR (分散論理ルーター)
-* 2 つの機密保護機能付き VMware NSX Edge Services Gateway
+* セキュア VMware NSX Edge Services Gateway 1 つ
 
 ### 仮想サーバー・インスタンス
 

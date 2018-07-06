@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -19,9 +19,9 @@ HCX on {{site.data.keyword.cloud}} サービスを管理するには、HCX Cloud
 
 詳しくは、[vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](../vcenter/vc_hybrid_addingremovingservices.html)を参照してください。
 
-## HCX on IBM Cloud のメンテナンス
+## HCX on IBM Cloud への更新の適用
 
-HCX on {{site.data.keyword.cloud_notm}} をデプロイすると、VMware Hybrid Cloud Extension テクノロジーのテスト済みの最新ビルドが適用されます。VMware では、そうしたビルドの更新 (重要なフィックスや新機能など) が定期的に配信されます。それらのビルドは、HCX on {{site.data.keyword.cloud}} のインストール済み環境に自動的にプッシュされます。オンプレミスの HCX インストール済み環境の場合も同様です。
+HCX on {{site.data.keyword.cloud_notm}} をデプロイすると、VMware Hybrid Cloud Extension テクノロジーのテスト済みの最新ビルドが適用されます。 VMware では、そうしたビルドの更新 (重要なフィックスや新機能など) が定期的に配信されます。 それらのビルドは、HCX on {{site.data.keyword.cloud}} のインストール済み環境に自動的にプッシュされます。オンプレミスの HCX インストール済み環境の場合も同様です。
 
 ご使用の環境にプッシュされたメンテナンス・フィックスを適用するには、オンプレミスのデータ・センターと、vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスで、HCX Manager の管理コンソールを使用する必要があります。
 

@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
 # HyTrust DataControl on IBM Cloud の管理
 
-HyTrust DataControl on {{site.data.keyword.cloud}} サービス (HTDC) を管理するには、{{site.data.keyword.vmwaresolutions_short}} コンソールから HTDC WebGUI にアクセスするか、vSphere Web Client から HTDC コンソールにアクセスします。
+HyTrust DataControl on {{site.data.keyword.cloud}} サービス (HTDC) を管理するには、{{site.data.keyword.vmwaresolutions_full}} コンソールから HTDC WebGUI にアクセスするか、vSphere Web Client から HTDC コンソールにアクセスします。
 
 ## IBM Cloud for VMware Solutions コンソールから HyTrust DataControl WebGUI へのアクセス
 
-HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスの詳細ページに記されている、対応する WebGUI の資格情報を使用して、プライマリーかセカンダリーの HTDC アプライアンスの WebGUI にログインします。
+プライマリーまたはセカンダリーの HTDC アプライアンスの WebGUI にログインするには、HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスの詳細ページに記されている WebGUI の資格情報を使用します。
 
 ## vSphere Web Client から HyTrust DataControl コンソールへのアクセス
 

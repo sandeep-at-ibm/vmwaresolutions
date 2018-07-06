@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -45,6 +45,6 @@ lastupdated: "2018-05-29"
 
 1. https://control.softlayer.com にアクセスします。
 2. **IBM ID** アカウントでポータルにログインします。
-3. 『**IBM Cloud for VMware Solutions コンソールを使用する**』セクションにある**ステップ 6 から 8** を実行してチケットを送信します。
+3. このトピックの『_IBM Cloud for VMware Solutions コンソールを使用する_』セクションに記載されているステップ 6 から 8 を実行してチケットを送信します。
 
     **注**:『_{{site.data.keyword.cloud_notm}} インフラストラクチャーおよびプラットフォーム・サービスのサポート・ポリシー_』の条件は、どのチャネルでサポート・チケットを開くかにかかわりなく ({{site.data.keyword.vmwaresolutions_short}} コンソールを使用する場合でも、{{site.data.keyword.slportal}}を使用する場合でも) 当てはまります。

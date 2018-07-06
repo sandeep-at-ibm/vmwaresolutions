@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -132,21 +132,23 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、VMware 
         <dt class="dt dlterm">削除済み</dt>
         <dd class="dd">クラスターが削除された場合。</dd>
     </dl>
-4. クラスター名をクリックして ESXi サーバー、ストレージ、ライセンスの詳細情報を確認します。
+4. クラスター名をクリックして、ESXi サーバーとストレージの詳細を表示します。
 
-  **ESXi サーバー**
+  * ESXi サーバーの詳細:
+     * **名前**: ESXi サーバーの名前は、`<host_prefix><n>.<subdomain_label>.<root_domain>` という形式です。各部の意味は次のとおりです。
 
-  * **名前**: ESXi サーバーの名前は、`<host_prefix><n>.<subdomain_label>.<root_domain>` という形式です。各部の意味は次のとおりです。
+       `host_prefix` はホスト名の接頭部です。
 
-     `host_prefix` はホスト名接頭部、
-       `n` はサーバーのシーケンス、
-       `subdomain_label` はサブドメイン・ラベル、
-       `root_domain` はルート・ドメイン・ネームです。
+       `n` はサーバーの順序です。
 
-   * **バージョン**: ESXi サーバーのバージョン。
-   * **資格情報**: ESXi サーバーにアクセスするためのユーザー名とパスワード。
-   * **プライベート IP**: ESXi サーバーのプライベート IP アドレス。
-   * **状況**: ESXi サーバーの状況。以下の値のいずれかになります。
+       `subdomain_label` はサブドメイン・ラベルです。
+
+       `root_domain` はルート・ドメイン名です。
+
+     * **バージョン**: ESXi サーバーのバージョン。
+     * **資格情報**: ESXi サーバーにアクセスするためのユーザー名とパスワード。
+     * **プライベート IP**: ESXi サーバーのプライベート IP アドレス。
+     * **状況**: ESXi サーバーの状況。以下の値のいずれかになります。
         <dl class="dl">
         <dt class="dt dlterm">追加済み</dt>
         <dd class="dd">ESXi サーバーが追加され、使用可能な状態です。 </dd>
@@ -155,6 +157,11 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、VMware 
         <dt class="dt dlterm">削除中</dt>
         <dd class="dd">ESXi サーバーが削除されています。</dd>
         </dl>
+  * ストレージの詳細:
+    * **名前**: データ・ストア名。
+    * **サイズ**: ストレージの容量。
+    * **IOPS/GB**: ストレージのパフォーマンス・レベル。
+    * **NFS プロトコル**: ストレージの NFS バージョン。
 
 ## vCenter Server with Hybridity Bundle インスタンスからのクラスターの削除
 

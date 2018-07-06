@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -79,7 +79,7 @@ VMware vSAN コンポーネントを選択した場合は、vSAN 構成用のユ
 * VMware vSphere Enterprise Plus 6.0u2 または 6.5u1 が適用された IBM Cloud ベア・メタル・サーバー 1 つ。  
 * [VMware vSphere on IBM Cloud のコンポーネント](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)で示されているオプションの VMware コンポーネント。
 
-**重要**: 注文して {{site.data.keyword.cloud_notm}} アカウントに提供された ESXi サーバー、オプションの VMware コンポーネント、追加のハードウェアの管理は、必ず {{site.data.keyword.slportal}}のみから行う必要があります。 {{site.data.keyword.vmwaresolutions_short}} コンソールで新規クラスターを作成した後、コンソールに戻り、保存されている構成を使用して、その新規クラスターを拡張できます。 詳しくは、[既存クラスターの拡張](vs_scalingexistingclusters.html)を参照してください。
+**重要**: 注文して {{site.data.keyword.cloud_notm}} アカウントに提供された ESXi サーバー、オプションの VMware コンポーネント、追加のハードウェアの管理は、必ず {{site.data.keyword.slportal}}のみから行う必要があります。 {{site.data.keyword.vmwaresolutions_short}} コンソールで新規クラスターを作成した後、コンソールに戻り、保存されている構成を使用して、その新規クラスターを拡張できます。 詳しくは、[既存の vSphere クラスターの拡張](vs_scalingexistingclusters.html)を参照してください。
 
 ## 関連リンク
 

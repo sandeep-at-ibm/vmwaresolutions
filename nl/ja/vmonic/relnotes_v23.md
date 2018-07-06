@@ -26,7 +26,7 @@ lastupdated: "2018-05-28"
 
 このリリースでは、VMware vCenter Server on IBM Cloud with Hybridity Bundle オファリングが導入されました。 vCenter Server with Hybridity Bundle は、オンプレミスのインフラストラクチャーを素早く簡単にクラウドに拡張できるホステッド・プライベート・クラウドです。 この VMware 環境は、IBM 提供の VMware Software Defined Data Center ライセンスに基づくものであり、VMware HCX on {{site.data.keyword.cloud_notm}} サービスが含まれています。このサービスを使用すると、オンプレミスの vSphere 5.0+ 環境を IBM Cloud サイトに簡単かつ安全に接続して、シームレスなインフラストラクチャーのハイブリッド化と真のアプリケーション・モビリティーを実現できます。
 
-HCX on {{site.data.keyword.cloud_notm}} サービスは、vCenter Server with Hybridity Bundle インスタンスでのみ利用可能です。 既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードするには、まず基本 vCenter Server V2.3 のソフトウェア更新を適用しなければなりません。詳しくは、[vCenter Server インスタンスへの更新の適用](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html)を参照してください。
+HCX on {{site.data.keyword.cloud_notm}} サービスは、vCenter Server with Hybridity Bundle インスタンスでのみ利用可能です。 既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードするには、まず基本 vCenter Server V2.3 のソフトウェア更新を適用しなければなりません。 詳しくは、[vCenter Server インスタンスへの更新の適用](../vcenter/vc_applyingupdates.html)を参照してください。
 
 vCenter Server with Hybridity Bundle について詳しくは、以下を参照してください。
 
@@ -34,7 +34,7 @@ vCenter Server with Hybridity Bundle について詳しくは、以下を参照�
 * [vCenter Server with Hybridity Bundle インスタンスの要件と計画](../vcenter/vc_hybrid_planning.html)
 * [vCenter Server with Hybridity Bundle インスタンスの注文](../vcenter/vc_hybrid_orderinginstance.html)
 
-## vCenter Server および Cloud Foundation インスタンスのクラスター削除のサポート
+## vCenter Server インスタンスおよび Cloud Foundation インスタンスのクラスター削除のサポート
 
 インスタンス全体を削除しなくても、インスタンスからクラスターを削除できるようになりました。 V2.2 以前のインスタンスでデプロイしたクラスターの場合に、インスタンスに追加したクラスターを削除するには、インスタンスを V2.3 にアップグレードする必要があります。
 
@@ -77,9 +77,9 @@ V2.3 リリース以降、**カスタマイズ型** のベア・メタル設定�
 
 詳しくは、[VMware Federal インスタンスの注文](../vcenter/vc_fed_orderinginstance.html#network-interface-settings)の『*ネットワーク・インターフェースの設定*』セクションを参照してください。
 
-### VMware Federal インスタンスのクラスター・サポートの追加と削除
+### VMware Federal インスタンスのクラスターの追加と削除のサポート
 
-V2.3 以降のリリースでデプロイされた VMware Federal インスタンスでは、クラスターを使用して ESXi サーバーを管理できるので、リソース管理と可用性が向上します。 インスタンスの注文時に構成した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 インスタンスの概要ページでクラスターの詳細を確認したり、合計 10 個のクラスターをインスタンスに追加したりできます。 インスタンスの容量を拡張または縮小する場合は、ESXi サーバーを追加または削除するクラスターを選択できます。
+V2.3 以降のリリースでデプロイされた VMware Federal インスタンスでは、クラスターを使用して ESXi サーバーを管理できるので、リソース管理と可用性が向上します。 インスタンスの注文時に構成した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 インスタンスの概要ページでクラスターの詳細を確認したり、最大で合計 10 個のクラスターをインスタンスに追加したりできます。 インスタンスの容量を拡張または縮小する場合は、ESXi サーバーを追加または削除するクラスターを選択できます。
 
 インスタンス全体を削除することなく 1 つ以上のクラスターをインスタンスから削除することもできます。
 
@@ -89,7 +89,7 @@ V2.3 以降のリリースでデプロイされた VMware Federal インスタ�
 
 ### HyTrust CloudControl on IBM Cloud
 
-V2.3 以降のリリースでデプロイまたは V2.3 以降のリリースにアップグレードされた VMware Cloud Foundation インスタンスと VMware vCenter Server インスタンスで vSphere 6.5 を実行する場合、HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービスを使用できるようになりました。 このサービスは、セキュリティー規格を適用してコンプライアンスを統括し、役割ベースのアクセス制御 (RBAC) を提供します。 このサービスを HyTrust DataControl と組み合わせると、仮想マシンとワークロードのデータを特定の地域、クラスター、または {{site.data.keyword.cloud_notm}} データ・センターの ESXi サーバーから外に出さないようにすることができます。
+V2.3 以降のリリースでデプロイまたは V2.3 以降のリリースにアップグレードされた VMware Cloud Foundation インスタンスと VMware vCenter Server インスタンスで vSphere 6.5 を実行する場合、HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービスを使用できるようになりました。 このサービスは、セキュリティー規格に対するコンプライアンスを実行および制御し役割ベースのアクセス制御 (RBAC) を提供します。 このサービスを HyTrust DataControl と組み合わせると、仮想マシンとワークロードのデータを特定の地域、クラスター、または {{site.data.keyword.cloud_notm}} データ・センターの ESXi サーバーから外に出さないようにすることができます。
 
 このサービスを組み込んだ形でインスタンスを注文することも、後から既存のインスタンスにこのサービスを追加することもできます。
 
@@ -120,6 +120,6 @@ V2.3 以降のリリースでデプロイまたは V2.3 以降のリリースに
 ユーザー・インターフェースが更新され、以下の拡張機能が備えられました。
 * **一貫性**: ユーザー・インターフェースは IBM Cloud 上の他のサービスと一貫性のある外観を提供するようになりました。
 * **アクセスの容易さ**: VMware オファリングに IBM Cloud **Catalog** から直接アクセスできるようになりました。
-* **合理化されて簡単になった注文の操作環境**: VMware インスタンスの注文とアドオン・サービスのデプロイを単一のインターフェースで行えるようになりました。 また、見積もりコストが計算されてすぐに同じインターフェース上に表示されるので、予算に基づいて構成を調整できます。
+* **合理化されて簡単になった注文の操作環境**: VMware インスタンスの注文とアドオン・サービスのデプロイを単一のインターフェースで行えるようになりました。 また、同じインターフェース上で見積もりコストがすぐに計算されて表示されるので、予算に基づいて構成を調整できます。
 * ビジネス・パートナーであるユーザーは、インスタンスの注文時やクラスターの追加時にライセンス持ち込み (BYOL) オプションを使用できません。
 * ユーザー・インターフェースで適切な設定を選択できるように、エラー・メッセージとツールチップにさまざまな改善が行われました。

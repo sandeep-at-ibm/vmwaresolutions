@@ -32,7 +32,7 @@ lastupdated: "2017-10-13"
 ## F5 on IBM Cloud サービス
 
 F5 BIG-IP Virtual Edition (VE) on IBM Cloud サービスを、VMware Cloud Foundation と VMware vCenter Server の両方のインスタンスで使用できるようになりました。 このサービスは、ローカルおよびグローバル規模のインテリジェントな L4-L7 ロード・バランシングとトラフィック管理サービス、堅牢なネットワークと Web アプリケーション・ファイアウォール保護、セキュアなフェデレーテッド・アプリケーション・アクセスを提供します。
-F5 BIG-IP Virtual Edition (VE) on IBM Cloud サービスを組み込んだ形でインスタンスを注文することも、後から {{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンス・プロパティーの詳細ページにある**「サービス」**タブで既存のインスタンスにこのサービスを追加することもできます。要件に応じて、BIG-IP VE の 3 つのライセンス・オプションの中から 1 つを選択できます。
+F5 BIG-IP Virtual Edition (VE) on IBM Cloud サービスを組み込んだ形でインスタンスを注文することも、後から {{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンス・プロパティーの詳細ページにある**「サービス」**タブで既存のインスタンスにこのサービスを追加することもできます。 要件に応じて、BIG-IP VE の 3 つのライセンス・オプションの中から 1 つを選択できます。
 
 詳しくは、以下を参照してください。
 * [F5 on IBM Cloud の考慮事項](../services/f5_considerations.html)

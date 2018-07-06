@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-05"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -67,7 +67,7 @@ Cloud Foundation のデプロイメントには、物理インフラストラク
 
 ## Cloud Foundation インスタンス用サービス
 
-それぞれのニーズに基づいて、インスタンスのアドオン・サービスを注文できます。例えば、災害復旧などがあります。詳しくは、[Cloud Foundation インスタンスのサービスの注文、表示、削除](sd_addingremovingservices.html)を参照してください。
+それぞれのニーズに基づいて、インスタンスのアドオン・サービスを注文できます。例えば、災害復旧などがあります。 詳しくは、[Cloud Foundation インスタンスのサービスの注文、表示、削除](sd_addingremovingservices.html)を参照してください。
 
 <!-- ## Capacity considerations
 
