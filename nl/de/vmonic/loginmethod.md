@@ -23,7 +23,7 @@ Führen Sie die folgenden Schritte aus, um direkt auf die Konsole zuzugreifen:
 
 Führen Sie die folgenden Schritte aus, um über den {{site.data.keyword.cloud_notm}}-Katalog auf die Konsole zuzugreifen:
 1. Rufen Sie die Adresse "https://console.ng.bluemix.net/" auf.
-2. Melden Sie sich mit Ihrem  **IBMid**-Konto bei {{site.data.keyword.cloud_notm}} an.
+2. Melden Sie sich mit Ihrem **IBMid**-Konto bei {{site.data.keyword.cloud_notm}} an.
 3. Klicken Sie auf **Katalog**.
 4. Klicken Sie im linken Navigationsfenster unter **Infrastruktur** auf **VMware**.
 5. Klicken Sie im Abschnitt **Sonstige** auf **VMware-Lösungen**.

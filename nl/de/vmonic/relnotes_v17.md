@@ -28,7 +28,7 @@ Mit diesem Update werden die folgenden Upgrades und Verbesserungen angewendet:
 
 Zusätzliche Informationen zu Komponenten finden Sie im Abschnitt [Komponenten der Cloud Foundation-Instanz](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
 
-### Voraussetzungenen für Updateprozess
+### Voraussetzungen für Updateprozess
 
 Abhängig davon, wie komplex Ihre Cloud Foundation-Instanzbereitstellung ist und ob Sie eine Konfiguration mit mehreren Standorten verwenden, müssen Sie beim Updateprozess möglicherweise eine Reihe von Schritten ausführen, die auf der Registerkarte **Update und Patch** in der Konsole angegeben sind. Weitere Informationen finden Sie unter [Updates auf Cloud Foundation-Instanzen anwenden](../sddc/sd_applyingupdates.html#applying-updates-to-cloud-foundation-instances).
 

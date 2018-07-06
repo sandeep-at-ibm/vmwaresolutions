@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-06-07"
 
 Der Service "IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud}}" bietet eine effiziente und skalierbare Datensicherungs-, Datenwiederverwendungs- und Datenwiederherstellungslösung für virtuelle Umgebungen. Er kann als eigenständige Lösung implementiert oder in Ihre IBM Spectrum Protect Plus-Umgebung integriert werden, um Kopien für die Langzeitspeicherung und Datengovernance auszulagern.
 
-**Verfügbarkeit**: Dieser Service ist nur für Instanzen verfügbar, die in V2.2 oder höheren Releases bereitgestellt werden bzw. für die ein Upgrade auf eine entsprechende Version durchgeführt wurde.
+**Verfügbarkeit:** Dieser Service ist nur für Instanzen verfügbar, auf denen vSphere 6.5 ausgeführt wird und die in V2.2 oder höheren Releases bereitgestellt werden oder für die ein Upgrade auf diese Releases durchgeführt wurde.
 
 **Hinweise:**
-* Wenn Sie die standardmäßige Serviceauswahl für Instanzen übernehmen möchten, die in V2.4 oder einem höheren Release bereitgestellt werden, dann wird IBM Spectrum Protect Plus V10.1.1 Patch 1 installiert. Der Service stellt automatisch Wiederherstellungsunterstützung für Management-VMs bereit.
-* Wenn Sie die standardmäßige Serviceauswahl für Instanzen übernehmen möchten, die in V2.3 bereitgestellt werden, dann wird IBM Spectrum Protect Plus V10.1.1 installiert. Der Service unterstützt die automatische Sicherung von Management-VMs.
+* Wenn Sie den Service für Instanzen installieren, die in V2.4 oder einem höheren Release bereitgestellt werden, dann wird IBM Spectrum Protect Plus V10.1.1 Patch 1 installiert. Der Service stellt automatisch Wiederherstellungsunterstützung für Management-VMs bereit.
+* Wenn Sie den Service für Instanzen installieren, die in V2.3 bereitgestellt werden, dann wird IBM Spectrum Protect Plus V10.1.1 installiert. Der Service unterstützt die automatische Sicherung von Management-VMs.
 * Wenn Sie den Service für Instanzen installieren, die in V2.2 bereitgestellt werden, dann wird IBM Spectrum Protect Plus V10.1.0 installiert. Der Service bietet nur für die Workload-VMs Datenschutz.
 
 
@@ -57,7 +57,7 @@ Lesen Sie die folgenden Hinweise, bevor Sie den Service "IBM Spectrum Protect Pl
 * Stellen Sie sicher, dass die CPU und der Speicher im Standardcluster Ihrer Instanz für die virtuelle Maschine von IBM Spectrum Protect Plus ausreichen.
 * Stellen Sie sicher, dass die NFS-Mounts, die auf den ESXi-Servern verfügbar sind, auf der Basis der Version der ESXi-Server ausreichend sind.
 
-  Cloud Foundation-Instanzen und vCenter Server-Instanzen, die in V2.2 oder höheren Releases bereitgestellt sind bzw. für die ein entsprechendes Upgrade durchgeführt wurde, verfügen über eine Einstellung für den Parameter `NFS.MaxVolumes` in VMware. Dieser Parameter definiert die maximale Anzahl der NFS-Mounts auf einem ESXi-Server und kann je nach Version des ESXi-Servers auf maximal 256 gesetzt werden. Weitere Informationen finden Sie unter [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
+  Cloud Foundation-Instanzen und vCenter Server-Instanzen, die in V2.2 oder höheren Releases bereitgestellt werden (oder für die ein entsprechendes Upgrade durchgeführt wurde), verfügen über eine Einstellung für den Parameter `NFS.MaxVolumes` in VMware. Dieser Parameter definiert die maximale Anzahl der NFS-Mounts auf einem ESXi-Server und kann je nach Version des ESXi-Servers auf maximal 256 gesetzt werden. Weitere Informationen finden Sie unter [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
 
   Der Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" kann bis zu fünf der NFS-Datenträger auf jedem ESXi-Server im Standardcluster Ihrer Instanz belegen. Darüber hinaus erstellt der Service transiente NFS-Mounts für Sicherungs- und Wiederherstellungszwecke. Daher müssen Sie die Anzahl der NFS-Mounts auf mindestens 64 setzen, um sicherzustellen, dass der Service installiert und erfolgreich ausgeführt werden kann.
 

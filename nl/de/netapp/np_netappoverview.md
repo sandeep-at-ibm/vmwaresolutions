@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -63,8 +63,8 @@ Ihre NetApp ONTAP Select-Instanz enthält die folgenden Komponenten.
 ### Voreingestellte Konfigurationen
 
 Vier {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen mit den folgenden Konfigurationsoptionen:
-* **Hohe Leistung (mittel)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 24 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 59 TB
-* **Hohe Leistung (groß)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 24 3,8-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 118 TB
+* **Hohe Leistung (mittel)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 59 TB
+* **Hohe Leistung (groß)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 3,8-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 118 TB
 * **Hohe Kapazität** – Standard-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 64 GB RAM / Kapazität von 34 4-TB-SATA-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 190 TB
 
 **Hinweis:** 3,8-TB-Solid-State-Platten (SSD) werden unterstützt, wenn sie allgemein in einem Rechenzentrum verfügbar gemacht werden.
@@ -80,8 +80,7 @@ Vier {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Inst
 
 * 10-Gbps-Uplinks für öffentliche und private Netze
 * 3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
-* 1 VXLAN (Virtual eXtensible LAN) mit DLR (Distributed Logical Router)
-* 2 sichere VMware NSX Edge Services Gateways
+* 1 sicheres VMware NSX Edge Services Gateway
 
 ### Virtual Server-Instanzen
 

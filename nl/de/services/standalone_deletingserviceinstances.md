@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -21,7 +21,8 @@ Lesen Sie unbedingt alle Hinweise im Abschnitt [Hinweise zum Löschen von lokale
 1. Klicken Sie im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Blättern Sie abwärts zur Tabelle **Lokale HCX-Instanzen** und suchen Sie die Instanz, die gelöscht werden soll.
 3. Klicken Sie in der Spalte **Aktionen** auf das Symbol "Löschen".
-4. Klicken Sie im Fenster **Instanz löschen** auf **OK**. Der Status der Instanz ändert sich in **Wird entfernt**. Nach Abschluss der Instanzlöschung ist die Instanz nicht mehr in der Tabelle **Lokale HCX-Instanzen** verfügbar.
+4. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
+   Der Status der Instanz ändert sich in **Wird entfernt**. Nach Abschluss der Instanzlöschung ist die Instanz nicht mehr in der Tabelle **Lokale HCX-Instanzen** verfügbar.
 
 ## Zugehörige Links
 
@@ -29,4 +30,3 @@ Lesen Sie unbedingt alle Hinweise im Abschnitt [Hinweise zum Löschen von lokale
 * [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen anzeigen](standalone_viewingserviceinstances.html)
 * [Glossar der HCX-Begriffe](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

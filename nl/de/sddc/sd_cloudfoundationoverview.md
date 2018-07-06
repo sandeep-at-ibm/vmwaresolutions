@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -33,11 +33,11 @@ Diese Schicht virtualisiert die physische Infrastruktur durch verschiedene VMwar
 
 ### Virtualisierungsmanagement
 
-Diese Schicht besteht aus vCenter Server und stellt die Managemenschicht für die virtualisierte Umgebung dar. Zum Verwalten der von IBM gehosteten VMware-Umgebung können Sie die geläufigen und mit der vSphere-API kompatiblen Tools und Scripts verwenden.
+Diese Schicht besteht aus vCenter Server und stellt die Managementschicht für die virtualisierte Umgebung dar. Zum Verwalten der von IBM gehosteten VMware-Umgebung können Sie die geläufigen und mit der vSphere-API kompatiblen Tools und Scripts verwenden.
 
 In der {{site.data.keyword.vmwaresolutions_short}}-Konsole können Sie die Kapazität Ihrer Instanzen mithilfe der Funktion zum Hinzufügen und Entfernen von ESXi-Servern erweitern und verringern. Darüber hinaus sind Funktionen für das Lebenszyklusmanagement wie das Anwenden von Updates und das Durchführen von Upgrades für die VMware-Komponenten in der gehosteten Umgebung verfügbar.
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+Ausführliche Informationen zur Architektur enthält der Abschnitt [Lösungsübersicht](../archiref/solution/solution_overview.html).
 
 ## Komponenten der Cloud Foundation-Instanz
 
@@ -61,7 +61,7 @@ Sie können {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short
 Die folgenden Netzkomponenten werden bestellt:
 * 10-Gbps-Uplinks für öffentliche und private Netze
 * 3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
-* Sicheres VMware NSX Edge Services Gateway (ESG) für die Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Über dieses ESG kommunizieren virtuelle IBM Management-Maschinen mit bestimmten externen IBM Managementkomponenten, die mit der Automatisierung zusammenhängen. Weitere Informaation finden Sie im Abschnitt [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* Sicheres VMware NSX Edge Services Gateway (ESG) für die Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Über dieses ESG kommunizieren virtuelle IBM Management-Maschinen mit bestimmten externen IBM Managementkomponenten, die mit der Automatisierung zusammenhängen. Weitere Information finden Sie im Abschnitt [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
   **Wichtig**: Dieses ESG ist für Sie weder zugänglich, noch können Sie es verwenden. Falls Sie es ändern, sind Sie möglicherweise nicht in der Lage, die Cloud Foundation-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Beachten Sie außerdem, dass die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu führt, dass {{site.data.keyword.vmwaresolutions_short}} unbrauchbar wird.
 

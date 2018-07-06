@@ -158,8 +158,8 @@ Weitere Informationen finden Sie unter [Neue vSphere-Cluster bestellen](../vsphe
 ### Neue Bare Metal Server-Optionen
 
 Die folgenden Bare Metal Server-Konfigurationsoptionen sind jetzt verfügbar:
-* **Hohe Leistung (M = Mittel)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 24 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 59 TB
-* **Hohe Leistung (L = Groß)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 24 3,8-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 118 TB
+* **Hohe Leistung (M = Mittel)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 59 TB
+* **Hohe Leistung (L = Groß)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 3,8-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 118 TB
 * **Hohe Kapazität** – Standardlizenz / Dual Intel Xeon E5-2650 v4 (24 Kerne insgesamt, 2,2 GHz) / 64 GB RAM / Kapazität von zehn 4-TB-SATA-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 60 TB
 
 **Hinweis:** 3,8-TB-SSD-Platten werden unterstützt, wenn sie allgemein in einem Rechenzentrum verfügbar gemacht werden.

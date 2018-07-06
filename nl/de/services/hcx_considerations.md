@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -36,12 +36,12 @@ Lesen Sie die folgenden Hinweise, bevor Sie den Service "HCX on {{site.data.keyw
 * Stellen Sie sicher, dass die Verbindungen und erweiterten Netze zwischen dem lokalen Quellenstandort und den {{site.data.keyword.cloud_notm}}-Zielstandorten entfernt wurden. Verwenden Sie zum Entfernen der Verbindungen und erweiterten Netze die HCX-Benutzerschnittstelle in der lokalen Instanz von VMware vSphere Web Client.
 * Stellen Sie sicher, dass die Standortpaarungen zwischen dem lokalen Quellenstandort und den {{site.data.keyword.cloud_notm}}-Zielstandorten entfernt wurden. Verwenden Sie zum Entfernen der Standortpaarungen die HCX-Benutzerschnittstelle in der lokalen Instanz von VMware vSphere Web Client.
 * Das Entfernen von HCX on {{site.data.keyword.cloud_notm}} ist nicht automatisiert. Die folgenden Prozeduren müssen für das erfolgreiche Entfernen dieses Service durchgeführt werden:
-   * Inaktivieren Sie die für den cloudseitigen HCX-Manager bestellte HCX-Lizenz.
-   * Löschen Sie den HCX-Manager.
-   * Geben Sie die vMotion-IP-Adressen frei, die für HCX reserviert wurden.
-   * Entfernen Sie die HCX-bezogenen Ressourcenpools, wenn diese leer sind.
-   * Entfernen Sie die HCX-bezogenen Ordner, wenn diese leer sind.
-   * Löschen Sie die Appliances für das HCX-Management-Edge.
+   * Die für den cloudseitigen HCX-Manager bestellte HCX-Lizenz muss inaktiviert werden.
+   * Der HCX-Manager muss gelöscht werden.
+   * Die für HCX reservierten vMotion-IP-Adressen müssen freigegeben werden.
+   * Alle HCX-bezogenen Ressourcenpools (sofern leer) müssen entfernt werden.
+   * Alle HCX-bezogenen Ordner (sofern leer) müssen entfernt werden.
+   * Die HCX-Management-Edge-Appliances müssen gelöscht werden.
 
 ## Zugehörige Links
 

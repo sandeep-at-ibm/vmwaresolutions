@@ -22,7 +22,7 @@ Wenn Sie eine NetApp ONTAP Select-Instanz löschen, werden die folgenden Kompone
 
 Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz nicht sofort freigegeben, wenn Sie die Instanz löschen. Beispielsweise können die Teilnetze und VLANs erst gelöscht werden, nachdem die ESXi-Server vollständig von der {{site.data.keyword.cloud}}-Infrastruktur zurückgefordert wurden, was am Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus passiert. Am Ende des Abrechnungszyklus, der normalerweise 30 Tage beträgt, werden die Teilnetze und VLANs zurückgefordert und die Instanzlöschung ist abgeschlossen.
 
-**Achtung:** Die gelöschte Instanz wird bis zum Ende des Abrechnunszyklus berechnet.
+**Achtung:** Die gelöschte Instanz wird bis zum Ende des Abrechnungszyklus berechnet.
 
 ## Instanzen auf der Seite "Bereitgestellte Instanzen" löschen
 

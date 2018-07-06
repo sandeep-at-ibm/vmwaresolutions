@@ -75,7 +75,7 @@ VMware-Updates werden abhängig vom Typ der bereitgestellten VMware-Instanz unte
 * Bei VMware vCenter Server-Instanzen gilt Folgendes:
   * Bei Instanzen, die in V2.1 oder höher bereitgestellt wurden bzw. für die ein Upgrade auf eine entsprechende Version durchgeführt wurde, werden als Patches für neu bereitgestellte ESXi-Server und Cluster aktuelle, jedoch nicht zwingend die neuesten ESXi-Updates von VMware verwendet.
   * Für alle anderen Updates von VMware-Komponenten sind Sie selbst verantwortlich; in diesem Zusammenhang müssen Sie auch gewährleisten, dass neu bereitgestellte ESXi-Server und Cluster über die notwendigen neuesten Updates verfügen.
-  * Bei Instanzen, die in V2.0 oder höher bereitgestellt wurden, ist VMware Update Manager (VUM) in Ihre vCenter Server-Instanz integriert. Sie können VUM auf Wunsch so konfigurieren, dass ESXi-Updates von VMware huerntergeladen werden.
+  * Bei Instanzen, die in V2.0 oder höher bereitgestellt wurden, ist VMware Update Manager (VUM) in Ihre vCenter Server-Instanz integriert. Sie können VUM auf Wunsch so konfigurieren, dass ESXi-Updates von VMware heruntergeladen werden.
 
 Weitere Informationen enthalten die folgenden Abschnitte:
 * [VMware Support](https://www.vmware.com/support.html)
@@ -94,7 +94,7 @@ VMware NSX Edge für Management-Services befindet sich zwar in einem öffentlich
 
 Das vom Kunden verwaltete NSX Edge befindet sich zwar im öffentlichen VLAN, aber die bestehenden Sicherheitsmaßnahmen gewährleisten, dass dies kein Sicherheitsrisiko verursacht. Es handelt sich um folgende Maßnahmen:
 *  Es ist eine Firewall-Regel vorhanden, die nur den abgehenden Datenverkehr aus dem privaten Teilnetzbereich von IP-Adressen zulässt.
-*  Durch eine (standardmäßig inaktivierte) SNAT-Regel werden alle IIP-Adressen aus dem privaten Teilnetz in eine einzige IP-Adresse für das öffentliche Teilnetz umgesetzt.
+*  Durch eine (standardmäßig inaktivierte) SNAT-Regel werden alle IP-Adressen aus dem privaten Teilnetz in eine einzige IP-Adresse für das öffentliche Teilnetz umgesetzt.
 *  Der Fernzugriff der Appliance für das vom Kunden verwaltete NSX Edge ist inaktiviert.
 *  Die Kennwörter für den Zugriff auf das vom Kunden verwaltete NSX Edge aus dem privaten Netz sind randomisiert und verschlüsselt.
 

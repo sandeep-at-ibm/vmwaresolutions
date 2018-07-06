@@ -10,7 +10,7 @@ lastupdated: "2018-05-09"
 
 # Voraussetzungen für IBM Cloud-Konto
 
-Um {{site.data.keyword.vmwaresolutions_full}} für die Bestellung von Instanzen verwenden zu können, müssen Sie ein {{site.data.keyword.cloud_notm}}-Konto besitzen. Die Kosten der Komponenten, die in Ihren Instanzen bestellt werden, werden diesem  {{site.data.keyword.cloud_notm}}-Konto in Rechnung gestellt.
+Um {{site.data.keyword.vmwaresolutions_full}} für die Bestellung von Instanzen verwenden zu können, müssen Sie ein {{site.data.keyword.cloud_notm}}-Konto besitzen. Die Kosten der Komponenten, die in Ihren Instanzen bestellt werden, werden diesem {{site.data.keyword.cloud_notm}}-Konto in Rechnung gestellt.
 
 **Hinweis**: Das {{site.data.keyword.cloud_notm}}-Konto hieß früher "IBM SoftLayer-Konto".
 

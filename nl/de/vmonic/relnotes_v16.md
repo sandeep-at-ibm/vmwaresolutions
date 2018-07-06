@@ -40,7 +40,7 @@ Aufgrund dieser Änderungen können Sie die vorhandenen vCenter Server-Instanzen
 
 Für die vCenter Server-Instanzen aus einem Release vor V1.6 sind die folgenden Aktionen verfügbar:
 
-*  Sie können die Informationen auf der Seite mit den Instanzdetails anzeigen. Die in den Instanzeigenschaften angezeigten Informationen geben die Daten gemäß dem Release V1.4 wieder und werden nicht mehr aktualisiert.
+*  Sie können die Informationen auf der Seite mit den Instanzdetails anzeigen. Die in den Instanzeigenschaften angezeigten Informationen geben die Daten gemäß dem Release V1.6 wieder und werden nicht mehr aktualisiert.
 *  Sie können VMware vSphere Web Client öffnen und die Instanz in vCenter verwenden.
 *  Sie können die Instanz löschen.
 
@@ -59,7 +59,7 @@ Alle anderen Aktionen sind für Instanzen aus Releases vor V1.6 nicht mehr verf�
    Namen bestellt werden und enthält zwei Schnittstellen. Eine Schnittstelle ist mit den virtualisierten VXLANs verbunden, die Ihren VMs zugeordnet sind, und die
    andere Schnittstelle ist mit dem öffentlichen VLAN verbunden. Außerdem sind die folgenden Einstellungen konfiguriert:
    *  Es ist eine Firewall-Regel vorhanden, die nur den abgehenden Datenverkehr aus dem privaten Teilnetzbereich von IP-Adressen zulässt.
-   *  Durch eine (standardmäßig inaktivierte) SNAT-Regel werden alle IIP-Adressen aus dem privaten Teilnetz in eine einzige IP-Adresse für das öffentliche Teilnetz umgesetzt.
+   *  Durch eine (standardmäßig inaktivierte) SNAT-Regel werden alle IP-Adressen aus dem privaten Teilnetz in eine einzige IP-Adresse für das öffentliche Teilnetz umgesetzt.
    * VMware HA (HA steht für "High Availability", also Hochverfügbarkeit) ist so konfiguriert, dass eine neue Portgruppe genutzt wird, die von dem Management-ESG und dem vom Kunden verwalteten ESG gemeinsam genutzt wird.
 
    Dieses ESG wird für alle Instanzhardwaretypen bereitgestellt; die Konfiguration kann vom Kunden geändert werden. Weitere Informationen finden Sie in den folgenden Abschnitten:

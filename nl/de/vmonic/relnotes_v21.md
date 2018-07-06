@@ -62,7 +62,7 @@ Für V2.1 oder höhere Releases werden neue vCenter Server-Instanzen mit der Ein
 
 ### Automatische Anwendung von VMware ESXi-Patches und -Updates auf Hosts
 
-In V2.0 und früheren Releases von VMware vCenter Server-Instanzen wuren Patches nicht automatisch auf ESXi-Hosts angewendet, die zu einem Cluster hinzugefügt wurden.
+In V2.0 und früheren Releases von VMware vCenter Server-Instanzen wurden Patches nicht automatisch auf ESXi-Hosts angewendet, die zu einem Cluster hinzugefügt wurden.
 
 Ab V2.1 wendet die Automatisierung Patches auf neue ESXi-Hosts an, damit das Patch-Level mit dem Patch-Level für den Bereitstellungszeitpunkt der ersten Instanz übereinstimmt. Sie müssen dafür sorgen, dass alle künftigen Patches und Updates manuell angewendet werden.
 Sobald VMware-Patches und -Updates in künftigen Releases verfügbar werden, prüft die Automatisierung die ESXi-Hosts Ihrer vorhandenen Instanzen und erinnert Sie in einer E-Mail daran, dass die neuesten Patches und Updates manuell angewendet werden müssen.

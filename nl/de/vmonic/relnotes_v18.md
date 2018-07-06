@@ -16,7 +16,7 @@ Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserung
 
 Der Service "Fortinet on IBM Cloud" ist jetzt für Cloud Foundation- und für vCenter Server-Instanzen verfügbar. Dieser Service stellt ein Paar von Einheiten der FortiGate Security Appliance (FSA) 300-Serie in einem Hochverfügbarkeitsmodus bereit, um Firewall-, Routing-, NAT- und VPN-Services für den Schutz aller Server und virtuellen Maschinen im öffentlichen VLAN Ihrer Instanzen zur Verfügung zu stellen. Sie können Instanzen bestellen, die den Service "Fortinet" enthalten, oder diesen Service zu einem späteren Zeitpunkt über die Seite mit den Instanzdetails zu Ihren vorhandenen Instanzen hinzufügen.
 
-Nachdem der Fortinet-Service erfolgreich installiert wurde, können Sie Firewallregeln für FSA über die FortiGate-Konsole verwalten und konfigurieren. Sie müssen sicherstellen, dass die FSA-Firewallregeln definiert sind, um abgehende HTTPS-Übertragungen zu ermöglichen, die von Managementkomponenten wie der virtuellen Maschine von IBM CloudDriver oder von Zerto Virtual Manager eingeleitet werden, um mit der externen Managementdatenbank in IBM Bluemix® über das Internet zu kommunizieren. Die abgehende HTTPS-Kommunikation stammt aus der öffentlichen IP-Adresse der Mangement-Services für VMware NSX Edge Services Gateway (ESG) in Ihrer Instanz.
+Nachdem der Fortinet-Service erfolgreich installiert wurde, können Sie Firewallregeln für FSA über die FortiGate-Konsole verwalten und konfigurieren. Sie müssen sicherstellen, dass die FSA-Firewallregeln definiert sind, um abgehende HTTPS-Übertragungen zu ermöglichen, die von Managementkomponenten wie der virtuellen Maschine von IBM CloudDriver oder von Zerto Virtual Manager eingeleitet werden, um mit der externen Managementdatenbank in IBM Bluemix® über das Internet zu kommunizieren. Die abgehende HTTPS-Kommunikation stammt aus der öffentlichen IP-Adresse der Management-Services für VMware NSX Edge Services Gateway (ESG) in Ihrer Instanz.
 
 Weitere Informationen enthalten die folgenden Abschnitte:
 * [Überblick zu Fortinet on IBM Cloud](../services/fsa_considerations.html)
@@ -38,7 +38,7 @@ Weitere Informationen enthalten die folgenden Abschnitte:
 
 ### Eigene Instanzen bei der Bestellung von Cloud Foundation-Instanzen verwenden (BYOL)
 
-Ab Release V.1 haben Sie bei der Bestellung einer Cloud Foundation-Instanz zwei Möglichkeiten für die Lizenzierung der VMware-Komponenten der Instanz (inklusive vSphere, vCenter Server, NSX und vSAN). Sie können auswählen, dass in Ihrem Namen neue Lizenzen erworben werden sollen.
+Ab Release V1.8 haben Sie bei der Bestellung einer Cloud Foundation-Instanz zwei Möglichkeiten für die Lizenzierung der VMware-Komponenten der Instanz (inklusive vSphere, vCenter Server, NSX und vSAN). Sie können auswählen, dass in Ihrem Namen neue Lizenzen erworben werden sollen.
 
 Sie können aber auch die Verwendung Ihrer eigenen VMware-Lizenz für eine Komponente auswählen. In diesem Fall müssen Sie die Lizenzschlüssel bereitstellen. Die Unterstützung für die VMware-Komponenten, für die Sie Lizenzen selbst bereitstellen, erhalten Sie dann durch VMware und nicht durch den IBM Support.
 
@@ -58,7 +58,7 @@ Weitere Informationen enthalten die folgenden Abschnitte:
 
 ### Unterstützung für das Hinzufügen von mehr als sieben NFS-Dateifreigaben
 
- Für alle ESXi-Server in einem Cluster können Sie bis zu maximal 32 Dateifreitaben zuordnen.
+ Für alle ESXi-Server in einem Cluster können Sie bis zu maximal 32 Dateifreigaben zuordnen.
 
  Weitere Informationen enthalten die folgenden Abschnitte:
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
@@ -78,4 +78,4 @@ In der gesamten Benutzerschnittstelle wurden Verbesserungen vorgenommen:
 * Die Option zum Durchführen eines Upgrades für Ihre NSX-Lizenzedition befindet sich jetzt auf der Registerkarte **Update und Patch**. Bei der Aktualisierung der Lizenz werden alle vorhandenen NSX-Lizenzen in Ihrem IBM SoftLayer-Konto durch die neue Lizenz ersetzt.
 * Die Registerkarte **Sicherung und Wiederherstellung** auf der Seite mit den Instanzdetails ist nicht mehr verfügbar.
 * Am Beginn einer Bestellung können Sie mehrere Services für die Bereitstellung auswählen. Neben dem Service "Zerto on IBM Cloud" sind Optionen für die Auswahl der Services "Veeam on IBM Cloud" und "Fortinet on IBM Cloud" verfügbar.
-* Die Registerkarte  **Verfügbare Services** auf der Registerkarte **Services** der Seite mit den Instanzdetails heißt jetzt **Services hinzufügen**.
+* Die Registerkarte **Verfügbare Services** auf der Registerkarte **Services** der Seite mit den Instanzdetails heißt jetzt **Services hinzufügen**.

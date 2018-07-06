@@ -22,7 +22,7 @@ Der Zugriff auf IBM CloudDriver ist aus Sicherheitsgründen eingeschränkt. Das 
 
 Anschließend verwendet das {{site.data.keyword.vmwaresolutions_short}}-Support-Team den {{site.data.keyword.slapi_short}}-Schlüssel der {{site.data.keyword.cloud_notm}}-Infrastruktur, der für die Bestellung und Konfiguration der Instanz zur Verfügung gestellt wurde (bzw. erforderlichenfalls den vom Kunden bereitgestellten aktualisierten Schlüssel), um einen Virtual Server der {{site.data.keyword.cloud_notm}}-Infrastruktur mit stündlicher Abrechnung bereitzustellen.
 
-Die Verwendung der Tools von IBM CloudBuilder für Fehlerbehebungszwecke wird dem Kundenkonto in Rechnung gestellt. Nachdem die Fehlerbehebung und Korrektur abgeschlossen ist, wird die IMB CloudBuilder-Komponente freigegeben.
+Die Verwendung der Tools von IBM CloudBuilder für Fehlerbehebungszwecke wird dem Kundenkonto in Rechnung gestellt. Nachdem die Fehlerbehebung und Korrektur abgeschlossen ist, wird die IBM CloudBuilder-Komponente freigegeben.
 
 Der Virtual Server der {{site.data.keyword.cloud_notm}}-Infrastruktur, der für die Fehlerbehebung verwendet wird, wird mit den folgenden Spezifikationen bereitgestellt:
 

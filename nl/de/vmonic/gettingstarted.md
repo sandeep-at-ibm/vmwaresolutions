@@ -24,7 +24,7 @@ Um auf die {{site.data.keyword.vmwaresolutions_short}}-Konsole zugreifen zu kön
 
 Wenn Sie sich zum ersten Mal bei der Konsole anmelden, müssen Sie entweder Ihre **IBMid** einem {{site.data.keyword.cloud_notm}}-Konto zuordnen oder sich für ein neues {{site.data.keyword.cloud_notm}}-Konto registrieren, das dann automatisch Ihrer **IBMid** zugeordnet wird. Dieses Verfahren müssen Sie nur ein einziges Mal durchlaufen.
 
-Wenn Sie Probleme beim Zuordnen Ihrer **IBMid** zu einem {{site.data.keyword.cloud_notm}}-Konto haben, lesen Sie die Informationen im Abschnitt  [Fehlerbehebung beim Zugriff auf {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html){:new_window}.
+Wenn Sie Probleme beim Zuordnen Ihrer **IBMid** zu einem {{site.data.keyword.cloud_notm}}-Konto haben, lesen Sie die Informationen im Abschnitt [Fehlerbehebung beim Zugriff auf {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html){:new_window}.
 
 ## IBM Cloud-Konto
 

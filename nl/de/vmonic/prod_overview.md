@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-05"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -68,7 +68,7 @@ Dieser Service bietet eine effiziente und skalierbare Datensicherungs-, Datenwie
 
 **Hinweise**:
 * Dieser Service ist nur für Instanzen verfügbar, die in V2.2 oder höheren Releases bereitgestellt werden bzw. für die ein Upgrade auf eine entsprechende Version durchgeführt wurde.
-* Für Instanzen, die in V2.3 oder einem höheren Release bereitgestellt werden, stellt IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} den standardmäßigen Sicherungsservice dar. Der Service unterstützt die automatische Sicherung von Management-VMs.
+* Für Instanzen, die in V2.3 oder einem höheren Release bereitgestellt werden, stellt IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} die automatische Sicherung von Management-VMs bereit.
 * Für Instanzen, die in V2.2 bereitgestellt werden, stellt dieser Service den Datenschutz nur für die Workload-VMs zur Verfügung.
 
 Weitere Informationen finden Sie unter [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} verwalten](../services/managingspp.html).
