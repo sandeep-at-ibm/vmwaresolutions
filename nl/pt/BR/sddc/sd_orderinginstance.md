@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ Para implementar uma plataforma unificada de data center definido por software (
 ## Requisitos
 
 Assegure-se de que tenha concluído as tarefas a seguir:
-*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](../vmonic/useraccount.html).
+*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](../vmonic/useraccount.html).
 *  Você revisou os requisitos e considerações em [Requisitos e planejamento para instâncias do Cloud Foundation](sd_planning.html).
 
 **Importante:** não modifique nenhum valor configurado durante o pedido e a implementação da instância. Isso pode fazer com que a instância se torne inutilizável. Além disso, não mude o nome da instância, o nome do domínio-raiz, o rótulo do subdomínio ou o prefixo de nome do host depois que a instância for implementada.

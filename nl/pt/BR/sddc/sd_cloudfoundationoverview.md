@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -37,7 +37,8 @@ Essa camada consiste no vCenter Server, que representa a camada de gerenciamento
 
 No console do {{site.data.keyword.vmwaresolutions_short}}, é possível expandir e contrair a capacidade de suas instâncias usando o recurso para incluir ou remover o servidor ESXi. Além disso, as funções de gerenciamento de ciclo de vida, como aplicar atualizações e fazer upgrade dos componentes do VMware no ambiente hospedado, também estão disponíveis.
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+Para obter detalhes sobre a arquitetura, consulte [Visão geral da
+solução](../archiref/solution/solution_overview.html).
 
 ## Componentes da instância do Cloud Foundation
 

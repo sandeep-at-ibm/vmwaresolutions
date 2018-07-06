@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-05"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -14,7 +14,7 @@ Revise os requisitos a seguir antes de pedir suas instâncias do VMware Cloud Fo
 
 ## Requisitos da conta do IBM Cloud
 
-A conta do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, veja [Requisitos de conta do {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+A conta do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, veja [Requisitos para a conta do {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
 
 ## Disponibilidade do data center do IBM Cloud
 
