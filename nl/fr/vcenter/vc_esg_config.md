@@ -16,7 +16,7 @@ VVMware NSX est une plateforme de virtualisation de réseau qui permet de virtua
 mise en réseau, tels que des commutateurs, des routages et des pare-feu. Pour plus d'informations sur NSX, voir [Présentation de NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
 
 Dans le cadre du processus de commande de votre instance vCenter Server, les actions suivantes sont effectuées pour vous :
-* Commande d'un sous-réseau client privé pour permettre à vos machines virtuelles d'accéder au réseau privé d'infrastructure {{site.data.keyword.cloud}}. 
+* Commande d'un sous-réseau client privé pour permettre à vos machines virtuelles d'accéder au réseau privé d'infrastructure {{site.data.keyword.cloud}}.
 * Commande d'un sous-réseau client public pour permettre à vos machines virtuelles d'accéder à Internet.
 * Déploiement et configuration de NSX dans votre instance vCenter Server.
 * Déploiement d'un exemple de commutateur logique NSX à l'usage des machines virtuelles des charges de travail client.

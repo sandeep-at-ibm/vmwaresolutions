@@ -4,20 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
 # Commande d'instances VMware Federal
 
-Afin de déployer une plateforme virtuelle VMware personnalisable et flexible totalement adaptée à vos besoins en charge de travail, commandez une instance VMware Federal qui vous permet de déconnecter la connexion de gestion ouverte et de sécuriser votre instance déployée. 
+Afin de déployer une plateforme virtuelle VMware personnalisable et flexible totalement adaptée à vos besoins en charge de travail, commandez une instance VMware Federal qui vous permet de déconnecter la connexion de gestion ouverte et de sécuriser votre instance déployée.
 
 **Remarque :** actuellement, seules les instances vCenter Server prennent en charge VMware Federal on {{site.data.keyword.cloud}}.
 
 ## Conditions requises
 
 Assurez-vous que :
-* Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Paramètres et comptes utilisateur](../vmonic/useraccount.html).
+* Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
 * Vous avez passé en revue les informations décrites dans la rubrique [Exigences et planification pour les instances VMware Federal](vc_fed_planning.html).
 * Vous avez passé en revue le format des noms d'instance et de domaine. Le nom de domaine et le libellé de sous-domaine sont utilisés pour générer le nom d'utilisateur et les noms de serveur de l'instance.
 
@@ -70,7 +70,7 @@ Les paramètres de serveur bare metal sont basés sur votre configuration person
 
 ### Emplacement de centre de données
 
-Sélectionnez l'IBM Cloud Data Center où l'instance doit être hébergée. 
+Sélectionnez l'IBM Cloud Data Center où l'instance doit être hébergée.
 
 ### Personnalisée
 
@@ -95,7 +95,7 @@ Tous les serveurs ESXi se partagent la même configuration. Après le déploieme
 
 ## Paramètres de stockage
 
-Les paramètres de stockage varient selon que vous sélectionnez l'option vSAN, NFS ou Stockage NFS personnalisé.
+Les paramètres de stockage varient en fonction de la configuration de serveur bare metal et du type de stockage que vous sélectionnez.
 
 ### Stockage vSAN
 
@@ -109,13 +109,13 @@ Pour vSAN, spécifiez les options de stockage suivantes :
 
 Lorsque vous sélectionnez **Stockage NFS**, vous pouvez ajouter un stockage partagé de niveau fichier pour votre instance dans lequel tous les partages utilisent les mêmes paramètres ou vous pouvez spécifier des paramètres de configuration différents pour chaque partage de fichiers. Spécifiez les options NFS suivantes :
 
-**Remarque :** le nombre de partages de fichiers doit être compris entre 1 et 32. 
+**Remarque :** le nombre de partages de fichiers doit être compris entre 1 et 32.
 
 * **Configurer les partages individuellement** : permet de spécifier des paramètres de configuration différents pour chaque partage de fichiers. 
-* **Nombre de partages** : lorsque vous utilisez le même paramètre de configuration pour chaque partage de fichiers, spécifiez le nombre de partages de fichiers pour le stockage partagé NFS que vous souhaitez ajouter. 
+* **Nombre de partages** : lorsque vous utilisez le même paramètre de configuration pour chaque partage de fichiers, spécifiez le nombre de partages de fichiers pour le stockage partagé NFS que vous souhaitez ajouter.
 * **Taille** : permet de sélectionner la capacité qui répond à vos besoins en matière de stockage partagé.
-* **Performances** : permet de sélectionner la valeur IOPS (Input/output Operations Per Second) par Go adaptée à vos besoins en matière de charge de travail. 
-* **Ajouter NFS** : permet d'ajouter des partages de fichiers individuels qui utilisent des paramètres de configuration différents. 
+* **Performances** : permet de sélectionner la valeur IOPS (Input/output Operations Per Second) par Go adaptée à vos besoins en matière de charge de travail.
+* **Ajouter NFS** : permet d'ajouter des partages de fichiers individuels qui utilisent des paramètres de configuration différents.
 
 Tableau 3. Options de niveau de performance NFS
 
@@ -158,7 +158,7 @@ Le nom du domaine racine qui doit respecter les règles suivantes :
 Sélectionnez la configuration de système de noms de domaine (DNS, Domain Name System) de votre instance :
 
 * **Une instance de serveur virtuel Windows publique pour Active Directory/DNS** : une unique instance de serveur virtuel Windows Microsoft pour Microsoft Active Directory (AD), qui fonctionne en tant que serveur de noms de domaine pour l'instance où sont enregistrés les hôtes et les machines virtuelles, est déployée et peut être interrogée.
-* **Deux machines virtuelles Windows Server dédiées à haute disponibilité sur le cluster de gestion** : à compter de l'édition V2.3, deux machines virtuelles Microsoft Windows virtual sont déployées, pour plus de sécurité et de robustesse. 
+* **Deux machines virtuelles Windows Server dédiées à haute disponibilité sur le cluster de gestion** : à compter de l'édition V2.3, deux machines virtuelles Microsoft Windows virtual sont déployées, pour plus de sécurité et de robustesse.
 
 **Important :** vous devez fournir deux licences Microsoft Windows Server 2012 R2 si vous configurez votre instance de manière à utiliser deux machines virtuelles Microsoft Windows. Utilisez la licence d'édition Microsoft Windows Server 2012 R2 Standard et/ou la licence d'édition Microsoft Windows Server 2012 R2 Datacenter.
 
@@ -183,9 +183,9 @@ Selon la configuration que vous avez sélectionnée pour l'instance, le coût es
   1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger l'instance.
   2. Sélectionnez le modèle d'UC **Personnalisé** et la quantité de mémoire **RAM**.
 7. Procédez à la configuration du stockage.
-      * Si vous avez sélectionné **Stockage vSAN**, renseignez les zones **Type et taille de disque pour disques de capacité vSAN** et **Nombre de disques de capacité vSAN**, ainsi que Edition de licence VMware vSAN.
-      * Si vous avez sélectionné **Stockage NFS**, renseignez les zones **Nombre de partages**, **Taille** et **Performances**.
-      * Pour ajouter et configurer individuellement des partages de fichiers, sélectionnez l'onglet **Stockage NFS personnalisé**, puis cliquez sur l'icône **+** située en regard de l'intitulé **Ajouter NFS** et renseignez les zones **Taille** et **Performances** pour chaque partage de fichiers. Vous devez sélectionner au moins un partage de fichiers. 
+  * Lorsque vous sélectionnez **Stockage vSAN**, renseignez les zones **Type et taille de disque pour disques de capacité vSAN**, **Nombre de disques de capacité vSAN** et **Licence vSAN**. 
+  * Lorsque vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**. 
+  * Lorsque vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer des partages de fichiers individuellement, renseignez les zones **Configurer les partages individuellement**, puis cliquez sur l'icône **+** en regard de **Ajouter NFS**. Renseignez ensuite les zones **Taille** et **Performances** pour chaque partage de fichiers individuel. Vous devez sélectionner au moins un partage de fichiers.
 8. Procédez à la configuration de l'interface réseau.
    1. Renseignez les zones Préfixe de nom d'hôte, Libelle de sous-domaine et Nom de domaine racine.
    2. Sélectionnez la configuration DNS.
@@ -199,7 +199,7 @@ Selon la configuration que vous avez sélectionnée pour l'instance, le coût es
 
 Le déploiement de l'instance commence automatiquement. Vous recevez une confirmation que la commande est en cours de traitement et vous pouvez vérifier l'état du déploiement en affichant les détails de l'instance.
 
-Une fois l'instance correctement déployée, les composants décrits dans la rubrique [Composants de l'instance VMware Federal](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**.
+Une fois l'instance correctement déployée, les composants décrits dans la rubrique [Composants de l'instance vCenter Server pour VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**.
 
 Lorsque l'instance est prête pour utilisation, elle prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -71,8 +71,8 @@ L'instance vCenter Server with Hybridity Bundle inclut la licence VMware Hybrid 
 
 Lorsque vous déployez ce service, définissez les paramètres suivants :
 * Renseignez la zone **Type d'interconnexion HCX** en sélectionnant l'une des options suivantes :
-  * **Réseau public** : HCX crée une connexion chiffrée entre des sites via le réseau public. 
-  * **Réseau privé** : HCX crée une connexion chiffrée entre des sites via le réseau privé.  
+  * **Réseau public** : HCX crée une connexion chiffrée entre des sites via le réseau public.
+  * **Réseau privé** : HCX crée une connexion chiffrée entre des sites via le réseau privé.
 * Renseignez la zone **Type de certificat de noeud final public**. Si vous sélectionnez **Certificat de l'autorité de certification**, configurez les paramètres suivants :
   * **Contenu de certificat** : entrez le contenu du certificat de l'autorité de certification.
   * **Clé privée** : entrez la clé privée du certificat de l'autorité de certification.

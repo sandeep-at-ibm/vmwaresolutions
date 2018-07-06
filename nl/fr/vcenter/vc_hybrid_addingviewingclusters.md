@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -16,7 +16,7 @@ Vous pouvez ajouter des clusters à votre instance VMware vCenter Server on {{si
 
 ## Ajout de clusters à des instances vCenter Server with Hybridity Bundle
 
-Vous pouvez ajouter jusqu'à 10 clusters à votre instance vCenter Server with Hybridity Bundle. 
+Vous pouvez ajouter jusqu'à 10 clusters à votre instance vCenter Server with Hybridity Bundle.
 
 ### Paramètres système
 
@@ -40,7 +40,7 @@ Si vous déployez le cluster dans un autre {{site.data.keyword.CloudDataCent_not
 
 #### Personnalisée
 
-Indiquez le modèle d'UC et la mémoire RAM du serveur bare metal. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée. 
+Indiquez le modèle d'UC et la mémoire RAM du serveur bare metal. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
 
 Tableau 2. Options pour les serveurs bare metal personnalisés
 
@@ -79,7 +79,7 @@ Licences VMware fournies par IBM pour les produits suivants :
 
 ### Récapitulatif de la commande
 
-Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. 
+Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite.
 
 ## Procédure d'ajout de clusters à des instances vCenter Server with Hybridity Bundle
 
@@ -88,21 +88,21 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 
    **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas ajouter de clusters à l'instance.
 
-3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche et cliquez sur **Ajouter** dans l'angle supérieur droit du tableau **CLUSTERS**. 
-4. Sur la page **Ajouter un cluster**, entrez le nom du cluster. 
+3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche et cliquez sur **Ajouter** dans l'angle supérieur droit du tableau **CLUSTERS**.
+4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
 5. Si vous souhaitez héberger le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui dans lequel l'instance est hébergée, sous **Serveur bare metal**, cochez la case **Sélectionner un autre emplacement** et choisissez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel héberger l'instance.
 6. Renseignez les zones **Modèle UC**, **Mémoire RAM** et **Nombre de serveurs bare metal** pour la configuration de serveur bare metal.
-7.  Sélectionnez **Stockage vSAN** et renseignez les zones **Nombre de disques de capacité vSAN**, **Type et taille de disque pour disques de capacité vSAN** ou la configuration de stockage. 
+7.  Sélectionnez **Stockage vSAN** et renseignez les zones **Nombre de disques de capacité vSAN**, **Type et taille de disque pour disques de capacité vSAN** ou la configuration de stockage.
 8. Sélectionnez l'édition de licence pour VMware vSAN pour la configuration de licence.
-9. Sur la page **Récapitulatif de la commande**, vérifiez la configuration du cluster avant d'ajouter celui-ci. 
-   1. Passez en revue les paramètres du cluster. 
+9. Sur la page **Récapitulatif de la commande**, vérifiez la configuration du cluster avant d'ajouter celui-ci.
+   1. Passez en revue les paramètres du cluster.
    2. Passez en revue le coût estimé du cluster. Cliquez sur **Détails concernant la tarification** pour générer un récapitulatif au format PDF. Pour sauvegarder ou imprimer votre récapitulatif de commande, cliquez sur l'icône d'**impression** ou de **téléchargement** dans l'angle supérieur droit de la fenêtre du PDF.
-   3. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant d'ajouter le cluster. 
+   3. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant d'ajouter le cluster.
    4. Cliquez sur **Mettre à disposition**.
 
 ### Résultats après l'ajout de clusters à des instances vCenter Server with Hybridity Bundle
 
-1. Le déploiement du cluster démarre automatiquement et celui-ci prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page **Récapitulatif** de l'instance. 
+1. Le déploiement du cluster démarre automatiquement et celui-ci prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page **Récapitulatif** de l'instance.
 2. Lorsque le cluster est prêt pour utilisation, il prend le statut **Prêt à l'emploi**. Le cluster qui vient d'être ajouté est activé avec vSphere haute disponibilité et vSphere Distributed Resource Scheduler (DRS).
 
 **Important** : vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
@@ -132,21 +132,23 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
         <dt class="dt dlterm">Supprimé</dt>
         <dd class="dd">Le cluster est supprimé.</dd>
     </dl>
-4. Cliquez sur un nom de cluster pour afficher les détails relatifs aux serveurs ESXi, au stockage et aux licences :
+4. Cliquez sur un nom de cluster pour afficher les détails relatifs aux serveurs ESXi et au stockage :
 
-  **Serveurs ESXi**
+  * Détails relatifs aux serveurs ESXi :
+     * **Nom** : nom du serveur ESXi au format `<host_prefix><n>.<subdomain_label>.<root_domain>`, où :
 
-  * **Nom** : nom du serveur ESXi au format `<host_prefix><n>.<subdomain_label>.<root_domain>`, où :
+       `host_prefix` est le préfixe du nom d'hôte,
 
-     `host_prefix` est le préfixe de nom d'hôte,
        `n` est la séquence du serveur,
-       `subdomain_label` est le libellé de sous-domaine et
+
+       `subdomain_label` est le libellé de sous-domaine, et
+
        `root_domain` est le nom de domaine racine.
 
-   * **Version** : version du serveur ESXi.
-   * **Données d'identification** : nom d'utilisateur et mot de passe d'accès au serveur ESXi.
-   * **Adresse IP privée** : adresse IP privée du serveur ESXi.
-   * **Status** :  statut du serveur ESXi, qui peut avoir l'une des valeurs suivantes :
+     * **Version** : version du serveur ESXi.
+     * **Données d'identification** : nom d'utilisateur et mot de passe d'accès au serveur ESXi.
+     * **Adresse IP privée** : adresse IP privée du serveur ESXi.
+     * **Status** :  statut du serveur ESXi, qui peut avoir l'une des valeurs suivantes :
         <dl class="dl">
         <dt class="dt dlterm">Ajouté</dt>
         <dd class="dd">Le serveur ESXi a été ajouté et est prêt pour utilisation. </dd>
@@ -155,6 +157,11 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
         <dt class="dt dlterm">Suppression en cours</dt>
         <dd class="dd">La suppression du serveur ESXi est en cours.</dd>
         </dl>
+  * Détails relatifs au stockage :
+    * **Nom** : nom du magasin de données.
+    * **Taille** : capacité du stockage.
+    * **IOPS/Go** : niveau de performance du stockage.
+    * **Protocole NFS** : version NFS du stockage.
 
 ## Suppression de clusters des instances vCenter Server with Hybridity Bundle
 
@@ -174,7 +181,7 @@ Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous 
 
    **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas retirer de clusters de l'instance.
 
-3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, localisez le cluster que vous souhaitez supprimer et cliquez sur l'icône **Supprimer** dans la colonne **Actions**. 
+3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, localisez le cluster que vous souhaitez supprimer et cliquez sur l'icône **Supprimer** dans la colonne **Actions**.
 
 ## Liens connexes
 

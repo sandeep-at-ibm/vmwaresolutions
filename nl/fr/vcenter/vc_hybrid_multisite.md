@@ -36,7 +36,7 @@ Le modèle de configuration multisite utilise un concentrateur et une topologie 
 
 **Remarque** : si votre configuration nécessite un déploiement multisite de plus de 128 serveurs ESX, contactez le support IBM pour obtenir de l'aide. Pour plus d'informations, voir [Contacter le support IBM](../vmonic/trbl_support.html).
 
-Le graphique suivant décrit la vue globale du déploiement multisite vCenter Server with Hybridity Bundle. 
+Le graphique suivant décrit la vue globale du déploiement multisite vCenter Server with Hybridity Bundle.
 
 Figure 1. Déploiement multisite vCenter Server with Hybridity Bundle
 

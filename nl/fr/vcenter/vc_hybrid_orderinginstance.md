@@ -4,18 +4,18 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
 # Commande d'instances vCenter Server with Hybridity Bundle
 
-Afin de déployer une plateforme virtuelle VMware personnalisable et flexible totalement adaptée à vos besoins en charge de travail, commandez une instance VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle. L'instance vCenter Server with Hybridity Bundle inclut la licence VMware Hybrid Cloud Extension (HCX) qui vous autorise à utiliser le service VMware HCX on IBM Cloud. Vous pouvez également ajouter des services, tels que [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html) pour la reprise après incident. 
+Afin de déployer une plateforme virtuelle VMware personnalisable et flexible totalement adaptée à vos besoins en charge de travail, commandez une instance VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle. L'instance vCenter Server with Hybridity Bundle inclut la licence VMware Hybrid Cloud Extension (HCX) qui vous autorise à utiliser le service VMware HCX on IBM Cloud. Vous pouvez également ajouter des services, tels que [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html) pour la reprise après incident.
 
 ## Conditions requises
 
 Assurez-vous que :
-*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Paramètres et comptes utilisateur](../vmonic/useraccount.html).
+*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
 *  Vous avez passé en revue les informations décrites dans la rubrique [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](vc_hybrid_planning.html).
 * Vous avez passé en revue le format des noms d'instance et de domaine. Le nom de domaine et le libellé de sous-domaine sont utilisés pour générer le nom d'utilisateur et les noms de serveur de l'instance.
 
@@ -148,8 +148,8 @@ Choisissez **Sélectionner des VLAN existants** pour réutiliser des VLAN public
 
 Sélectionnez la configuration de système de noms de domaine (DNS, Domain Name System) de votre instance :
 
-* **Une instance de serveur virtuel Windows publique pour Active Directory/DNS** : une unique instance de serveur virtuel Windows Microsoft pour Microsoft Active Directory (AD), qui fonctionne en tant que serveur de noms de domaine pour l'instance où sont enregistrés les hôtes et les machines virtuelles, est déployée et peut être interrogée. 
-* **Deux machines virtuelles Windows Server dédiées à haute disponibilité sur le cluster de gestion** : deux machines virtuelles Microsoft Windows sont déployées, pour plus de sécurité et de robustesse. 
+* **Une instance de serveur virtuel Windows publique pour Active Directory/DNS** : une unique instance de serveur virtuel Windows Microsoft pour Microsoft Active Directory (AD), qui fonctionne en tant que serveur de noms de domaine pour l'instance où sont enregistrés les hôtes et les machines virtuelles, est déployée et peut être interrogée.
+* **Deux machines virtuelles Windows Server dédiées à haute disponibilité sur le cluster de gestion** : deux machines virtuelles Microsoft Windows sont déployées, pour plus de sécurité et de robustesse.
 
 **Important :** vous devez fournir deux licences Microsoft Windows Server 2012 R2 si vous configurez votre instance de manière à utiliser deux machines virtuelles Microsoft Windows. Utilisez la licence d'édition Microsoft Windows Server 2012 R2 Standard et/ou la licence d'édition Microsoft Windows Server 2012 R2 Datacenter.
 
@@ -194,7 +194,7 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
      *  Si vous voulez réutiliser les VLAN publics et privés existants lorsqu'ils sont disponibles, cliquez sur **Sélectionner des VLAN existants**, puis sélectionnez le VLAN public, le sous-réseau principal, le VLAN privé, le sous-réseau principal privé et le VLAN privé secondaire.
   3. Sélectionnez la configuration DNS.
 9. Sélectionnez les services complémentaires à déployer dans l'instance en cliquant sur la carte de service correspondante. Si un service nécessite de la configuration, spécifiez les paramètres qui lui sont propres et cliquez sur **Ajouter un service** sur la carte.  
-Pour savoir comment indiquer les paramètres d'un service, voir la rubrique de commande de service correspondante. 
+Pour savoir comment indiquer les paramètres d'un service, voir la rubrique de commande de service correspondante.
 
 8. Sur la page **Récapitulatif de la commande**, vérifiez la configuration de l'instance avant de passer la commande.
    1. Passez en revue les paramètres de l'instance.

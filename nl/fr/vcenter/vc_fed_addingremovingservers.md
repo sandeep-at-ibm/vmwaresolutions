@@ -27,8 +27,8 @@ Si votre cluster principal dispose d'un stockage vSAN, l'ajout d'un ou plusieurs
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous souhaitez étendre ou réduire la capacité.
-3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. 
-4. Dans le tableau **CLUSTERS**, cliquez sur le cluster sur lequel vous souhaitez ajouter ou retirer des serveurs ESXi. 
+3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche.
+4. Dans le tableau **CLUSTERS**, cliquez sur le cluster sur lequel vous souhaitez ajouter ou retirer des serveurs ESXi.
 5. Pour ajouter des serveurs ESXi, procédez comme suit :
    1. Dans le tableau **Serveurs ESXi**, cliquez sur **Ajouter**.
    2. Dans la fenêtre **Ajouter un serveur**, indiquez le nombre de serveurs que vous voulez ajouter, cliquez sur le lien correspondant au prix pour passer en revue le coût estimé, puis cliquez sur **Ajouter**.

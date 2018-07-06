@@ -32,7 +32,7 @@ Une passerelle NSX Edge Services Gateway est également déployée pour être ut
 ## Remarques relatives à la modification de mots de passe pour des composants NSX
 
 Passez en revue les remarques suivantes avant de modifier les mots de passe du gestionnaire NSX, des contrôleurs NSX et de la passerelle NSX Edge :
-* Ne modifiez pas le mot de passe du gestionnaire NSX Manager figurant sur la page **Récapitulatif** de l'instance dans la console {{site.data.keyword.vmwaresolutions_short}}. 
+* Ne modifiez pas le mot de passe du gestionnaire NSX Manager figurant sur la page **Récapitulatif** de l'instance dans la console {{site.data.keyword.vmwaresolutions_short}}.
 * Ne modifiez pas les mots de passe des contrôleurs NSX. Pour savoir comment modifier les mots de passe des contrôleurs NSX, voir [Modification du mot de passe d'un contrôleur](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html).
 * Ne modifiez pas le mot de passe et les paramètres SSH de la passerelle VMware NSX ESG (Edge Services Gateway) gérée par le client. Ne modifiez pas le mot de passe de la passerelle VMware NSX ESG (Edge Services Gateway) de gestion et du routeur logique distribué associé.
 

@@ -16,13 +16,13 @@ Le processus d'application de modules de correction et de mises à jour aux inst
 
 ## Avant de commencer
 
-**Important :** lors de la mise à niveau d'une instance vCenter Server vers une instance vCenter Server with Hybridity Bundle, vous devez d'abord appliquer la mise à jour logicielle vCenter Server V2.3 de base avant de pouvoir effectuer la mise à niveau de licence vers Hybridity Bundle. 
+**Important :** lors de la mise à niveau d'une instance vCenter Server vers une instance vCenter Server with Hybridity Bundle, vous devez d'abord appliquer la mise à jour logicielle vCenter Server V2.3 de base avant de pouvoir effectuer la mise à niveau de licence vers Hybridity Bundle.
 
 Avant d'appliquer une mise à jour, développez l'entrée de mise à jour en cliquant sur la flèche vers le bas et vérifiez les informations suivantes :
-* La version de la mise à jour. Vous devez appliquer les mises à jour par ordre chronologique, c'est-à-dire de la plus ancienne à la plus récente. Assurez-vous d'avoir appliqué toutes les mises à jour précédentes avant d'appliquer la plus récente. Par exemple, vous devez appliquer la mise à jour V2.3 avant de tenter d'appliquer la mise à jour V2.4. 
+* La version de la mise à jour. Vous devez appliquer les mises à jour par ordre chronologique, c'est-à-dire de la plus ancienne à la plus récente. Assurez-vous d'avoir appliqué toutes les mises à jour précédentes avant d'appliquer la plus récente. Par exemple, vous devez appliquer la mise à jour V2.3 avant de tenter d'appliquer la mise à jour V2.4.
 * Si un temps d'indisponibilité est nécessaire.
 * Le temps total estimé pour effectuer la mise à jour.
-* L'impact de la mise à jour sur l'environnement virtuel VMware. Le tableau 1 indique comment les différents niveaux d'impact affectent le système. 
+* L'impact de la mise à jour sur l'environnement virtuel VMware. Le tableau 1 indique comment les différents niveaux d'impact affectent le système.
 * Les détails de la mise à jour.
 
 Tableau 1. Niveaux de mise à jour et impact
@@ -74,7 +74,7 @@ Cette procédure s'applique aux instances déployées en version 2.1 et ultérie
 
 ## Mise à niveau vers l'instance vCenter Server with Hybridity Bundle
 
-Durant la mise à niveau de licence vers Hybridity Bundle, une mise à niveau vers l'édition VMware NSX Advanced s'effectue immédiatement si votre instance vCenter Server utilise l'édition VMware NSX Base. 
+Durant la mise à niveau de licence vers Hybridity Bundle, une mise à niveau vers l'édition VMware NSX Advanced s'effectue immédiatement si votre instance vCenter Server utilise l'édition VMware NSX Base.
 
 Procédez comme suit pour mettre à niveau d'une instance vCenter Server vers vCenter Server with Hybridity Bundle :
 
@@ -84,7 +84,7 @@ Procédez comme suit pour mettre à niveau d'une instance vCenter Server vers vC
    S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec la machine virtuelle IBM CloudDriver, lié à une règle de pare-feu ou autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
 4. Cliquez sur **Mise à jour et module de correction** dans le panneau de navigation de gauche.
 5. Appliquez la mise à niveau de licence Hybridity Bundle. Dans le tableau **Mises à niveau de licence**, cliquez sur **Mettre à niveau** dans la colonne **Action**, passez en revue le coût estimé, puis cliquez sur **Mettre à niveau**.
-6. Déployez éventuellement le service VMware HCX on {{site.data.keyword.cloud_notm}}. Lorsque Hybridity Bundle est activé dans le tableau **Mises à niveau de licence**, procédez comme suit : 
+6. Déployez éventuellement le service VMware HCX on {{site.data.keyword.cloud_notm}}. Lorsque Hybridity Bundle est activé dans le tableau **Mises à niveau de licence**, procédez comme suit :
   1. Dans le tableau **Mises à niveau de licence**, cliquez sur **Déployer HCX on {{site.data.keyword.cloud_notm}}** dans la colonne **Action**.
   2. Faites défiler l'écran jusqu'à la carte **HCX on {{site.data.keyword.cloud_notm}}** et cliquez sur **Sélectionner un service**.
   3. Faites défiler l'écran et spécifiez les paramètres requis pour le service, puis cliquez sur **Suivant**.
