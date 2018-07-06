@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -35,9 +35,9 @@ Insira o nome do serviço.
 ### Tamanho de implementação
 
 O IBM Cloud fornece as opções de tamanho de implementação a seguir:
-- **Pequeno (2 vCPUs / 4 GB de RAM)**
-- **Médio (4 vCPUs / 6 GB de RAM)**
-- **Grande (8 vCPU/12 GB de RAM)**
+* Pequeno (2 vCPUs / 4 GB de RAM)
+* Médio (4 vCPUs / 6 GB de RAM)
+* Grande (8 vCPU/12 GB de RAM)
 
 ### Modelo de licença
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -12,11 +12,14 @@ lastupdated: "2018-06-07"
 
 O serviço IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud}} fornece uma solução eficiente e escalável para proteção de dados, reutilização de dados e recuperação de dados para ambientes virtuais. É possível implementar o serviço como uma solução independente ou integrá-lo ao seu ambiente do IBM Spectrum Protect Plus para transferir cópias para armazenamento de longo prazo e controle de dados.
 
-**Disponibilidade**: esse serviço está disponível somente para instâncias que são implementadas na V2.2 ou em liberações mais recentes (ou submetidas a upgrade para elas).
+**Disponibilidade**: esse serviço está disponível apenas para instâncias que estão em execução no vSphere
+6.5 e que sejam implementadas na V2.2 ou em liberações mais recentes (ou que passaram por upgrade para elas).
 
 **Notas:**
-* Se você aceitar a seleção de serviço padrão para instâncias que são implementadas na V2.4 ou liberações mais recentes, o IBM Spectrum Protect Plus V10.1.1 Correção 1 será instalado. O serviço fornece suporte de recuperação para máquinas virtuais (VMs) de gerenciamento automaticamente.
-* Se você aceitar a seleção de serviço padrão para instâncias que são implementadas na V2.3, o IBM Spectrum Protect Plus V10.1.1 será instalado. O serviço fornece backup para VMs de gerenciamento automaticamente.
+* Se você instalar o serviço para instâncias que são implementadas na V2.4 ou em liberações mais recentes, a correção 1 do IBM
+Spectrum Protect Plus V10.1.1 estará instalada. O serviço fornece suporte de recuperação para máquinas virtuais (VMs) de gerenciamento automaticamente.
+* Se você instalar o serviço para instâncias que são implementadas na V2.3, o IBM Spectrum Protect Plus V10.1.1 será
+instalado. O serviço fornece backup para VMs de gerenciamento automaticamente.
 * Se você instalar o serviço para instâncias que são implementadas na V2.2, o IBM Spectrum Protect Plus V10.1.0 será instalado. O serviço fornece proteção de dados somente para VMs de carga de trabalho.
 
 
@@ -57,7 +60,9 @@ Revise as considerações a seguir antes de instalar o serviço IBM Spectrum Pro
 * Assegure-se de que a CPU e a memória no cluster padrão de sua instância sejam suficientes para a máquina virtual do IBM Spectrum Protect Plus.
 * Assegure-se de que as montagens NFS disponíveis nos servidores ESXi sejam suficientes com base na versão dos servidores ESXi.
 
-  As instâncias do Cloud Foundation e do vCenter Server que são implementadas em ou têm upgrade feito para a V2.2 ou liberações mais recentes têm uma configuração de parâmetro `NFS.MaxVolumes` no VMware. Este parâmetro define o número máximo de montagens NFS em um servidor ESXi e pode ser configurado para um máximo de 256, que é específico para a versão do servidor ESXi. Para obter mais informações, veja [Aumentando o valor padrão que define o número máximo de montagens NFS em um host ESXi/ESX](https://kb.vmware.com/s/article/2239).
+  Instâncias do Cloud Foundation e instâncias do vCenter Server que são implementadas na V2.2
+ou em liberações mais recentes (ou que passaram por upgrade para elas) têm uma configuração de parâmetro `NFS.MaxVolumes` no
+VMware. Este parâmetro define o número máximo de montagens NFS em um servidor ESXi e pode ser configurado para um máximo de 256, que é específico para a versão do servidor ESXi. Para obter mais informações, veja [Aumentando o valor padrão que define o número máximo de montagens NFS em um host ESXi/ESX](https://kb.vmware.com/s/article/2239).
 
   O serviço IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} pode consumir até cinco dos volumes NFS em cada servidor ESXi no cluster padrão de sua instância. Além disso, o serviço irá criar montagens NFS temporárias para fins de backup e restauração. Portanto, deve-se configurar o número de montagens NFS para um mínimo de 64 para assegurar que o serviço possa ser instalado e funcionar corretamente.
 

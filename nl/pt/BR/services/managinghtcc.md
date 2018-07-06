@@ -4,17 +4,18 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
 # Gerenciando o HyTrust CloudControl on IBM Cloud
 
-Para gerenciar o serviço HyTrust CloudControl on {{site.data.keyword.cloud_notm}} (HTCC), acesse a WebGUI do HTCC por meio do console do {{site.data.keyword.vmwaresolutions_short}} ou acesse o console do HTCC por meio do vSphere Web Client.
+Para gerenciar o serviço HyTrust CloudControl on {{site.data.keyword.cloud_notm}} (HTCC), acesse a WebGUI do HTCC por meio do console do {{site.data.keyword.vmwaresolutions_full}} ou acesse o console do HTCC por meio do vSphere Web Client.
 
 ## Acessando a WebGUI do HyTrust CloudControl por meio do console do IBM Cloud for VMware Solutions
 
-Use as credenciais correspondentes da WebGUI localizadas na página de detalhes do serviço HyTrust CloudControl on {{site.data.keyword.cloud_notm}} para efetuar login na WebGUI do dispositivo HTCC primário ou secundário.
+Para efetuar login na WebGUI do dispositivo HTCC primário ou secundário, use as credenciais da WebGUI localizadas na página de detalhes do serviço
+HyTrust CloudControl on {{site.data.keyword.cloud_notm}}.
 
 ## Acessando o console do HyTrust CloudControl por meio do vSphere Web Client
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -22,7 +22,7 @@ Antes de instalar o F5 no serviço {{site.data.keyword.cloud_notm}}, revise as c
 
 Com base no modelo de licença e na largura de banda selecionados, duas VMs (máquinas virtuais) do BIG-IP VE são implementadas com a seguinte configuração:
 
-Tabela 1: Implementações de CPU e RAM para diferentes seleções de largura da banda e modelo de licença
+Tabela 1. Implementações de CPU e de RAM para largura da banda diferente e seleções de modelo de licença
 
 | Largura da banda máxima | Modelo de licença: Bom | Modelo de licença: Melhor | Modelo de licença: O Melhor |
 |:------------------|:--------------------|:----------------------|:--------------------|
