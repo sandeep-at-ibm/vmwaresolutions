@@ -10,12 +10,12 @@ lastupdated: "2018-06-08"
 
 # Commande de HyTrust DataControl on IBM Cloud
 
-Vous pouvez commander le service HyTrust DataControl on {{site.data.keyword.cloud_notm}} lors de la commande d'une nouvelle instance avec une paire à haute disponibilité de dispositifs HyTrust DataControl incluse ou vous pouvez ajouter le dispositif HyTrust DataControl à votre instance existante. 
+Vous pouvez commander le service HyTrust DataControl on {{site.data.keyword.cloud_notm}} lors de la commande d'une nouvelle instance avec une paire à haute disponibilité de dispositifs HyTrust DataControl incluse ou vous pouvez ajouter le dispositif HyTrust DataControl à votre instance existante.
 
 ## Commande de HyTrust DataControl on IBM Cloud pour une nouvelle instance
 
 Vous pouvez commander une nouvelle instance avec HyTrust DataControl on {{site.data.keyword.cloud_notm}} à l'aide de l'une des méthodes suivantes :
-* Depuis la console {{site.data.keyword.vmwaresolutions_full}}, lorsque vous commandez une nouvelle instance, sélectionnez **HyTrust DataControl on IBM Cloud** dans la section **Services**. 
+* Depuis la console {{site.data.keyword.vmwaresolutions_full}}, lorsque vous commandez une nouvelle instance, sélectionnez **HyTrust DataControl on IBM Cloud** dans la section **Services**.
 * Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **HyTrust DataControl on {{site.data.keyword.cloud_notm}}**, spécifiez les paramètres de service et sélectionnez **Ajouter à une nouvelle instance**.
 
 ## Commande de HyTrust DataControl on IBM Cloud pour une instance existante

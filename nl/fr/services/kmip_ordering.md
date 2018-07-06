@@ -10,12 +10,12 @@ lastupdated: "2018-06-08"
 
 # Commande de KMIP for VMware on IBM Cloud
 
-Vous pouvez commander le service KMIP for VMware on {{site.data.keyword.cloud_notm}} lors de la commande d'une nouvelle instance avec le service inclus ou vous pouvez ajouter le service à votre instance existante. 
+Vous pouvez commander le service KMIP for VMware on {{site.data.keyword.cloud_notm}} lors de la commande d'une nouvelle instance avec le service inclus ou vous pouvez ajouter le service à votre instance existante.
 
 ## Commande de KMIP for VMware on IBM Cloud pour une nouvelle instance
 
 Vous pouvez commander une nouvelle instance avec KMIP for VMware on {{site.data.keyword.cloud_notm}} à l'aide de l'une des méthodes suivantes :
-* Depuis la console {{site.data.keyword.vmwaresolutions_full}}, lorsque vous commandez une nouvelle instance, sélectionnez **KMIP for VMware on IBM Cloud** dans la section **Services**. 
+* Depuis la console {{site.data.keyword.vmwaresolutions_full}}, lorsque vous commandez une nouvelle instance, sélectionnez **KMIP for VMware on IBM Cloud** dans la section **Services**.
 * Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **KMIP for VMware on {{site.data.keyword.cloud_notm}}**, spécifiez les paramètres de service et sélectionnez **Ajouter à une nouvelle instance**.
 
 ## Commande de KMIP for VMware on IBM Cloud pour une instance existante
@@ -30,7 +30,7 @@ Lorsque vous commandez ce service, indiquez les paramètres suivants :
 
 ### Région de service
 
-Sélectionnez la région {{site.data.keyword.cloud_notm}} dans laquelle votre instance de service KMIP for VMware {{site.data.keyword.cloud_notm}} doit être hébergée. 
+Sélectionnez la région {{site.data.keyword.cloud_notm}} dans laquelle votre instance de service KMIP for VMware {{site.data.keyword.cloud_notm}} doit être hébergée.
 
 {{site.data.keyword.cloud_notm}} gère un noeud final de service KMIP for VMware on {{site.data.keyword.cloud_notm}} à haute disponibilité dans chaque région où le service est disponible.
 
@@ -50,11 +50,11 @@ Ce paramètre est facultatif lors de la configuration initiale. Vous pouvez lais
 
 ### Clé d'API pour ID de service
 
-Entrez la clé d'API pour l'ID de service {{site.data.keyword.cloud_notm}} qui est utilisé afin d'accéder à l'instance de service IBM Key Protect. 
+Entrez la clé d'API pour l'ID de service {{site.data.keyword.cloud_notm}} qui est utilisé afin d'accéder à l'instance de service IBM Key Protect.
 
 ### Instance Key Protect
 
-Cliquez sur **Extraire** pour obtenir la liste d'instances de service IBM Key Protect disponibles et sélectionnez celle qui sera utilisée pour la gestion de clés. 
+Cliquez sur **Extraire** pour obtenir la liste d'instances de service IBM Key Protect disponibles et sélectionnez celle qui sera utilisée pour la gestion de clés.
 
 ### Clé racine de client
 

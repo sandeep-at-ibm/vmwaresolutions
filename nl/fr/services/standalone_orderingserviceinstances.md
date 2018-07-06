@@ -10,7 +10,7 @@ lastupdated: "2018-05-30"
 
 # Commande d'instances VMware HCX on IBM Cloud locales
 
-Vous pouvez commander une instance HCX on {{site.data.keyword.cloud}} locale sans l'associer à une instance vCenter Server with Hybridity Bundle pour l'octroi de licence et l'activation de votre installation HCX on {{site.data.keyword.cloud_notm}} locale. 
+Vous pouvez commander une instance HCX on {{site.data.keyword.cloud}} locale sans l'associer à une instance vCenter Server with Hybridity Bundle pour l'octroi de licence et l'activation de votre installation HCX on {{site.data.keyword.cloud_notm}} locale.
 
 ## Avant de commencer
 

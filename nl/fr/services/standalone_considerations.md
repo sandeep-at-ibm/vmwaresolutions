@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -62,8 +62,6 @@ Passez en revue les remarques suivantes avant de supprimer une instance CX on {{
 
    Pour plus d'informations, voir [Suppression d'instances HCX on {{site.data.keyword.cloud_notm}} locales](../services/standalone_deletingserviceinstances.html).
 3. Dans le client Web VMware vSphere, supprimez le gestionnaire HCX Manager local.
-
-Pour plus d'informations, voir [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx).
 
 ## Liens connexes
 

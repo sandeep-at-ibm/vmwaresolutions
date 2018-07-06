@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -19,11 +19,11 @@ Pour gérer le service HCX on {{site.data.keyword.cloud}}, vous devez accéder �
 
 Pour plus d'informations, voir [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html).
 
-## Gestion de HCX on IBM Cloud
+## Application de mises à jour à HCX on IBM Cloud
 
-HCX on {{site.data.keyword.cloud_notm}} est déployé avec la dernière génération testée de la technologie VMware Hybrid Cloud Extension. VMware expédie régulièrement des mises à jour pour ces générations, avec des correctifs importants et de nouvelles fonctions. Ces générations sont automatiquement envoyées par commande push vers des installations HCX on {{site.data.keyword.cloud}}, y compris vers des installations HCX locales. 
+HCX on {{site.data.keyword.cloud_notm}} est déployé avec la dernière génération testée de la technologie VMware Hybrid Cloud Extension. VMware expédie régulièrement des mises à jour pour ces générations, avec des correctifs importants et de nouvelles fonctions. Ces générations sont automatiquement envoyées par commande push vers des installations HCX on {{site.data.keyword.cloud}}, y compris vers des installations HCX locales.
 
-Pour appliquer des correctifs de maintenance envoyés par commande push vers votre environnement, vous devez utiliser la console HCX Manager Admin dans votre centre de données local et votre instance vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle. 
+Pour appliquer des correctifs de maintenance envoyés par commande push vers votre environnement, vous devez utiliser la console HCX Manager Admin dans votre centre de données local et votre instance vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle.
 
 Si vous ne voyez pas une mise à jour de génération que vous avez attendez, si vous rencontrez des difficultés avec HCX ou si vous souhaitez que la dernière génération de HCX soit immédiatement envoyée par commande push vers votre système, ouvrez un ticket de demande de service en suivant les étapes décrites dans [Contacter le support IBM](../vmonic/trbl_support.html).
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -36,12 +36,12 @@ Passez en revue les remarques suivantes avant de supprimer le service HCX on {{s
 * Vérifiez que les interconnexions et les réseaux étendus entre le site source local et les sites cible {{site.data.keyword.cloud_notm}} sont supprimés. Pour supprimer les interconnexions et les réseaux étendus, utilisez l'interface utilisateur HCX sur le client Web VMware vSphere local.
 * Vérifiez que les appariements de sites entre le site source local et les sites cible {{site.data.keyword.cloud_notm}} sont supprimés. Pour supprimer les appariements de sites, utilisez l'interface utilisateur HCX sur le client Web VMware vSphere local.
 * La suppression du service HCX on {{site.data.keyword.cloud_notm}} est automatisée. Les opérations suivantes sont effectuées pour supprimer avec succès ce service :
-   * Désactivation de la licence HCX commandée pour HCX Manager côté cloud.
-   * Suppression de HCX Manager.
-   * Libération des adresses IP vMotion qui avaient été réservées pour HCX.
-   * Suppression des pools de ressources liés à HCX s'ils sont vides.
-   * Suppression des dossiers liés à HCX s'ils sont vides.
-   * Suppression des dispositifs de serveur de périphérie de gestion HCX.
+   * La licence HCX commandée pour HCX Manager côté cloud est désactivée.
+   * HCX Manager est supprimé.
+   * Les adresses IP vMotion qui étaient réservées pour HCX sont libérées.
+   * S'ils sont vides, les pools de ressources liés au service HCX sont retirés.
+   * S'ils sont vides, les dossiers liés au service HCX sont retirés.
+   * Les dispositifs de serveur de périphérie de gestion HCX sont supprimés.
 
 ## Liens connexes
 
