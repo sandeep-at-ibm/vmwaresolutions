@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -36,12 +36,12 @@ HCX on {{site.data.keyword.cloud_notm}} サービスを削除する前に、以�
 * オンプレミス・ソース・サイトと {{site.data.keyword.cloud_notm}} ターゲット・サイトの間の相互接続と拡張ネットワークを削除しておきます。 相互接続と拡張ネットワークを削除するには、オンプレミスの VMware vSphere Web Client で HCX ユーザー・インターフェースを使用します。
 * オンプレミス・ソース・サイトと {{site.data.keyword.cloud_notm}} ターゲット・サイトの間のサイト・ペアを削除しておきます。 サイト・ペアを削除するには、オンプレミスの VMware vSphere Web Client で HCX ユーザー・インターフェースを使用します。
 * HCX on {{site.data.keyword.cloud_notm}} の削除は自動的に行われます。 このサービスを正しく削除するためには、以下の手順を実行します。
-   * クラウド・サイドの HCX Manager 用に注文した HCX ライセンスを非アクティブにします。
-   * HCX Manager を削除します。
-   * HCX 用に予約されていた vMotion IP アドレスを解放します。
-   * HCX 関連リソース・プールが空であれば、それらを削除します。
-   * HCX 関連フォルダーが空であれば、それらを削除します。
-   * HCX 管理エッジ・アプライアンスを削除します。
+   * クラウド・サイドの HCX Manager 用に注文した HCX ライセンスが非アクティブになります。
+   * HCX Manager が削除されます。
+   * HCX 用に予約されていた vMotion IP アドレスが解放されます。
+   * 空の場合、HCX 関連のリソース・プールが除去されます。
+   * 空の場合、HCX 関連のフォルダーが除去されます。
+   * HCX 管理エッジ・アプライアンスが削除されます。
 
 ## 関連リンク
 

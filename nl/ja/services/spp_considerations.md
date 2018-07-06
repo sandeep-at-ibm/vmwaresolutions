@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -12,12 +12,12 @@ lastupdated: "2018-06-07"
 
 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud}} サービスは、仮想環境のデータ保護、データ再使用、データ・リカバリーのための効率的でスケーラブルなソリューションを提供します。 サービスをスタンドアロン・ソリューションとして実装することも、お客様の IBM Spectrum Protect Plus 環境と統合して長期保管とデータ・ガバナンスのためにコピーをオフロードすることもできます。
 
-**利用可否**: このサービスは、V2.2 以降のリリースでデプロイまたは V2.2 以降のリリースにアップグレードされたインスタンスでのみ使用できます。
+**利用可否**: このサービスは、vSphere 6.5 を実行する、V2.2 以降のリリースでデプロイ (または V2.2 以降のリリースにアップグレード) されたインスタンスでのみ利用できます。
 
 **注:**
-* V2.4 以降のリリースでデプロイしたインスタンスでデフォルト選択のサービスを受け入れると、IBM Spectrum Protect Plus V10.1.1 のパッチ 1 がインストールされます。このサービスには、管理仮想マシン (VM) の自動リカバリー・サポートがあります。
-* V2.3 でデプロイしたインスタンスでデフォルト選択のサービスを受け入れると、IBM Spectrum Protect Plus V10.1.1 がインストールされます。このサービスは、管理 VM を自動的にバックアップします。
-* V2.2 でデプロイしたインスタンスでこのサービスをインストールすると、IBM Spectrum Protect Plus V10.1.0 がインストールされます。このサービスは、ワークロード VM のデータのみを保護します。
+* V2.4 以降のリリースでデプロイされたインスタンスでこのサービスをインストールすると、IBM Spectrum Protect Plus V10.1.1 パッチ 1 がインストールされます。このサービスには、管理仮想マシン (VM) の自動リカバリー・サポートがあります。
+* V2.3 でデプロイされたインスタンスでこのサービスをインストールすると、IBM Spectrum Protect Plus V10.1.1 がインストールされます。このサービスは、管理 VM を自動的にバックアップします。
+* V2.2 でデプロイしたインスタンスでこのサービスをインストールすると、IBM Spectrum Protect Plus V10.1.0 がインストールされます。 このサービスは、ワークロード VM のデータのみを保護します。
 
 
 ## IBM Spectrum Protect Plus on IBM Cloud のコンポーネント
@@ -57,7 +57,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスをイ
 * インスタンスのデフォルト・クラスター内の CPU とメモリーが、IBM Spectrum Protect Plus 仮想マシンを使用するのに十分であることを確認します。
 * ESXi サーバーで使用できる NFS マウントが、ESXi サーバーのバージョンに基づいて十分であることを確認します。
 
-  V2.2 以降のリリースにデプロイまたはアップグレードされた Cloud Foundation インスタンスと vCenter Server インスタンスでは、VMware に `NFS.MaxVolumes` パラメーターの設定があります。 このパラメーターは、ESXi サーバー上の NFS マウントの最大数を定義するもので、最大 256 に設定できます (ESXi サーバーのバージョンに固有)。 詳しくは、[Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239) を参照してください。
+  V2.2 以降のリリースでデプロイ (または V2.2 以降のリリースにアップグレード) された Cloud Foundation インスタンスと vCenter Server インスタンスでは、VMware に `NFS.MaxVolumes` パラメーターの設定があります。このパラメーターは、ESXi サーバー上の NFS マウントの最大数を定義するもので、最大 256 に設定できます (ESXi サーバーのバージョンに固有)。 詳しくは、[Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239) を参照してください。
 
   IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスは、インスタンスのデフォルト・クラスターにおける ESXi サーバーごとに、最大 5 つの NFS ボリュームを消費します。 さらに、このサービスは、バックアップとリストア用の一時的な NFS マウントを作成します。 そのため、確実にサービスを正常にインストールして機能させるためには、NFS マウント数を 64 個以上に設定する必要があります。
 

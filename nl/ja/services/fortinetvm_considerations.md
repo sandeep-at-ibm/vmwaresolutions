@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -12,15 +12,17 @@ lastupdated: "2018-06-07"
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud}} サービスでは、ご使用の環境に FortiGate Virtual Appliances のペアがデプロイされます。これによって、仮想インフラストラクチャー内に重要なセキュリティー管理が実装されるので、リスクを軽減するのに役立ちます。
 
-必要に応じて、このサービスのインスタンスを複数インストールできます。このサービスの管理には、FortiOS Web Client、または SSH を介したコマンド・ライン・インターフェースを使用します。
+必要に応じて、このサービスのインスタンスを複数インストールできます。 このサービスの管理には、FortiOS Web Client、または SSH を介したコマンド・ライン・インターフェースを使用します。
 
 **利用可否**: このサービスは、V2.0 以降のリリースでデプロイされたインスタンスでのみ利用可能です。
 
 ## FortiGate Virtual Appliance on IBM Cloud のコンポーネント
 
-FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを注文すると、FortiGate Virtual Appliance のペアがデプロイされ、管理ネットワーク用に 1 つのネットワーク・インターフェースが構成されます。必要に応じて、データ・トラフィックを保護するために 9 つのネットワーク・インターフェースを構成することもできます。
+FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを注文すると、FortiGate Virtual Appliance のペアが以下のものと共にデプロイされます。
+* 管理ネットワーク用に構成された 1 つのネットワーク・インターフェース。
+* 必要に応じてデータ・トラフィックを保護するために構成できる、9 つの追加のネットワーク・インターフェース。
 
-FortiGate Virtual Appliance は、高可用性ペアとして事前構成されてはいません。デプロイメント後に HA 設定を構成し、必要に応じて Virtual Router Redundancy Protocol (VRRP) と FortiGate Cluster Protocol (FGCP) などを組み込みます。
+FortiGate Virtual Appliance は、高可用性 (HA) ペアとして事前構成されてはいません。デプロイメント後に HA 設定を構成し、必要に応じて Virtual Router Redundancy Protocol (VRRP) と FortiGate Cluster Protocol (FGCP) などを組み込みます。
 
 ## FortiGate Virtual Appliance on IBM Cloud をインストールする際の考慮事項
 
@@ -31,7 +33,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを�
     * ミディアム (4 vCPU / 6 GB RAM)
     * ラージ (8 vCPU / 12 GB RAM)
 
-  また、2 つの FortiGate VM 用に CPU と RAM が 100% 予約されます。これらの VM はネットワーク通信のデータ・プレーンに配置されているので、リソースを使用できるようにしておくことが重要だからです。
+  また、2 つの FortiGate VM 用に CPU と RAM が 100% 予約されます。これらの VM はネットワーク通信のデータ・プレーンに配置されているので、
+  それらのためにリソースを使用できるようにしておくことが重要だからです。
 
   単一の FortiGate VM 用の CPU と RAM の予約を計算するには、次の数式を使用します。
    * `CPU 予約 = ESXi サーバーの CPU 速度 * vCPU の数`
@@ -43,7 +46,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを�
    * CPU と RAM が 100% 予約されるという条件で、ESXi サーバーごとに 1 つの FortiGate VM をホストできるだけのリソースを 2 つのアクティブ ESXi サーバーで使用できる。
    * CPU と RAM を 100% 使用する 2 つの FortiGate VM をホストできるだけのリソースが VMware vSphere HA にある。
 
-  これらの要件を考慮して、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} に必要なスペースの計画を立てる必要があります。 必要であれば、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} を注文する前に、インスタンスに ESXi サーバーを 1、2 台追加するか、フェイルオーバー用の vSphere HA CPU 予約を減らす、あるいはその両方を行ってください。
+  これらの要件を考慮して、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} に必要なスペースの計画を注意深く立てる必要があります。必要であれば、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} を注文する前に、インスタンスに ESXi サーバーを 1、2 台追加するか、フェイルオーバー用の vSphere HA CPU 予約を減らす、あるいはその両方を行ってください。
 
 ## FortiGate Virtual Appliance on IBM Cloud の注文例
 
@@ -61,9 +64,11 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを�
 
 `2 * 16 コア * 2.1 GHz の 50% = 33.6 GHz を使用可能`
 
-ESXi サーバー上には、IBM CloudDriver、VMware NSX Controller、VMware NSX Edge など、他のワークロードも存在するようになるため、これらのリソースを使用しても 3 番目の要件を満たすことができません。2 つの FortiGate VM 用に 33.6 GHz の CPU と 24 GB RAM が必要だからです。
+ESXi サーバー上には、IBM CloudDriver、VMware NSX Controller、VMware NSX Edge などの他のワークロードも存在するようになるため、これらのリソースを使用しても 3 番目の要件を満たすことができません。なぜなら、2 つの FortiGate VM 用に 33.6 GHz の CPU と 24 GB RAM が必要になるためです。
 
-このケースでは、環境に ESXi サーバーを少なくとも 1 つ追加し、vShpere HA フェイルオーバー予約を適切に更新して 2 つの FortiGate VM 用の十分なリソースを確保しない限り、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} のインストールは失敗する可能性があります。 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを実行するために追加のリソースが必要な場合は、サービスをインストールする前に、さらに ESXi サーバーを追加できます。
+このケースでは、環境に ESXi サーバーを少なくとも 1 つ追加し、vShpere HA フェイルオーバー予約を適切に更新して 2 つの FortiGate VM 用の十分なリソースを確保しない限り、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} のインストールは失敗する可能性があります。
+
+FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを実行するために追加のリソースが必要な場合は、サービスをインストールする前に、さらに ESXi サーバーを追加できます。
 
 ## FortiGate Virtual Appliance on IBM Cloud を削除する際の考慮事項
 
