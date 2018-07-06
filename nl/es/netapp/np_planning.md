@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -14,7 +14,7 @@ Revise los siguientes requisitos antes de solicitar sus instancias de NetApp ONT
 
 ## Requisitos de la cuenta de IBM Cloud
 
-La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos de la cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
 
 ## Disponibilidad del centro de datos de IBM Cloud
 

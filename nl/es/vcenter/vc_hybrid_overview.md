@@ -51,7 +51,7 @@ La oferta básica se despliega con un dispositivo vCenter Server cuyo tamaño se
 
 En total, la oferta básica necesita 38 vCPU y 67 GB de vRAM que se reservan para la capa de gestión de virtualización. El resto de la capacidad de host para sus VM depende de varios factores, como la tasa de sobresuscripción, el dimensionamiento de VM y los requisitos de rendimiento de la carga de trabajo.
 
-Para ver los requisitos de recurso de gestión adicionales al desplegar el servicio de HCX on {{site.data.keyword.cloud_notm}}, consulte [Visión general de HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+Para ver los requisitos de recurso de gestión adicionales al desplegar el servicio de HCX on {{site.data.keyword.cloud_notm}}, consulte [Visión general de VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
 
 ### Infraestructura híbrida
 
@@ -135,7 +135,7 @@ Un servidor nativo con la configuración personalizada.
 *  Añadir, modificar, devolver o eliminar componentes
 *  Ampliar o reducir la capacidad de la instancia mediante la adición o eliminación de servidores ESXi
 *  Apagar componentes
-*  Reiniciar servicios
+*  rearrancar servicios
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 

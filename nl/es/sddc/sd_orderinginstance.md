@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ Para desplegar una plataforma unificada de centro de datos definido por software
 ## Requisitos
 
 Asegúrese de haber realizado las tareas siguientes:
-*  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Cuentas de usuario y valores](../vmonic/useraccount.html).
+*  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
 *  Ha revisado los requisitos y las consideraciones del apartado [Requisitos y planificación de instancias de Cloud Foundation](sd_planning.html).
 
 **Importante:** no modifique ningún valor definido durante la solicitud y el despliegue de la instancia. Si lo hace, la instancia podría quedar inutilizable. Tampoco cambie el nombre de la instancia, el nombre del dominio raíz, la etiqueta de subdominio ni el prefijo de nombre de host después de que se haya desplegado la instancia.
@@ -218,7 +218,7 @@ Cuando la instancia se haya desplegado correctamente, los componentes que se des
 
 Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 
-Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se reinicie cuando finalice el pedido de la instancia secundaria.
+Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se rearranque cuando finalice el pedido de la instancia secundaria.
 
 ## Qué hacer a continuación
 
@@ -231,7 +231,7 @@ Puede ver y gestionar la instancia de Cloud Foundation que ha solicitado.
 *  Añadir, modificar, devolver o eliminar componentes
 *  Ampliar o reducir la capacidad de la instancia mediante la adición o eliminación de servidores ESXi
 *  Apagar componentes
-*  Reiniciar servicios
+*  rearrancar servicios
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 

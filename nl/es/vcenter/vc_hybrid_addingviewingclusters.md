@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -132,21 +132,23 @@ En función de la configuración seleccionada para el clúster, el coste estimad
         <dt class="dt dlterm">Suprimido</dt>
         <dd class="dd">El clúster se ha suprimido.</dd>
     </dl>
-4. Pulse un nombre de clúster para ver la información de servidor ESXi, almacenamiento y licencia:
+4. Pulse un nombre de clúster para ver los detalles de los servidores ESXi y el almacenamiento:
 
-  **Servidores ESXi**
+  * Detalles de servidores ESXi:
+     * **Nombre**: el nombre del servidor ESXi está en el formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde:
 
-  * **Nombre**: el nombre del servidor ESXi está en el formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde:
+       `host_prefix` es el prefijo del nombre de host,
 
-     `host_prefix` es el prefijo del nombre de host,
        `n` es la secuencia del servidor,
-       `subdomain_label` es la etiqueta del subdominio y
-       `root_domain` es el nombre del dominio raíz.
 
-   * **Versión**: la versión del servidor ESXi.
-   * **Credenciales**: el nombre de usuario y la contraseña para acceder al servidor ESXi.
-   * **IP privada**: la dirección IP privada del servidor ESXi.
-   * **Estado**: el estado del servidor ESXi, que puede tener uno de estos valores:
+       `subdomain_label` es la etiqueta de subdominio, y
+
+       `root_domain` es el nombre de dominio raíz.
+
+     * **Versión**: la versión del servidor ESXi.
+     * **Credenciales**: el nombre de usuario y la contraseña para acceder al servidor ESXi.
+     * **IP privada**: la dirección IP privada del servidor ESXi.
+     * **Estado**: el estado del servidor ESXi, que puede tener uno de estos valores:
         <dl class="dl">
         <dt class="dt dlterm">Añadido</dt>
         <dd class="dd">El servidor ESXi se ha añadido y está listo para ser utilizado. </dd>
@@ -155,6 +157,11 @@ En función de la configuración seleccionada para el clúster, el coste estimad
         <dt class="dt dlterm">Suprimiendo</dt>
         <dd class="dd">El servidor ESXi se está suprimiendo.</dd>
         </dl>
+  * Detalles de almacenamiento:
+    * **Nombre**: el nombre del almacén de datos.
+    * **Tamaño**: la capacidad del almacenamiento.
+    * **IOPS/GB**: el nivel de rendimiento del almacenamiento.
+    * **Protocolo NFS**: la versión de NFS del almacenamiento.
 
 ## Supresión de clústeres de instancias de vCenter Server con el paquete híbrido (Hybridity)
 

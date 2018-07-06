@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -39,12 +39,12 @@ Para ponerse en contacto con el equipo de soporte de IBM desde la consola de {{s
    7. Para adjuntar capturas de pantalla del problema, pulse **Adjuntar archivos**. Si desea adjuntar más de dos archivos, puede actualizar la incidencia después de crearla.  
 8. Pulse **Añadir incidencia** para enviarla.
 
-## Desde el portal del cliente de la infraestructura IBM Cloud
+## Desde el Portal de clientes de la infraestructura IBM Cloud
 
 Para ponerse en contacto con el equipo de soporte de IBM desde el {{site.data.keyword.slportal}}, siga estos pasos:
 
 1. Vaya a https://control.softlayer.com.
 2. Inicie sesión en el portal con su cuenta de **IBMid**.
-3. Complete los **Pasos 6 a 8** descritos en la sección **Desde la consola de IBM Cloud for VMware Solutions** para presentar la incidencia.
+3. Complete los pasos 6 a 8 descritos en la sección _Desde la consola de IBM Cloud for VMware Solutions_ de este tema para presentar la incidencia.
 
     **Nota**: Independientemente del canal que utilice para abrir la incidencia de soporte (ya sea la consola de {{site.data.keyword.vmwaresolutions_short}} o el {{site.data.keyword.slportal}}), los términos de la _{{site.data.keyword.cloud_notm}} Infrastructure and Platform Services Support Policy_ se seguirán aplicando.

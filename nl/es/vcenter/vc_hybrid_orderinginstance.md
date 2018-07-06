@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ Para desplegar una plataforma virtualizada VMware flexible y personalizable que 
 ## Requisitos
 
 Asegúrese de haber realizado las tareas siguientes:
-*  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Cuentas de usuario y valores](../vmonic/useraccount.html).
+*  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
 *  Ha revisado la información de [Requisitos y planificación para vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_planning.html).
 * Ha revisado el formato del nombre de dominio e instancia. El nombre de dominio y la etiqueta de subdominio se utilizan para generar el nombre de usuario y los nombres de servidor de la instancia.
 
@@ -210,7 +210,7 @@ Cuando la instancia se haya desplegado correctamente, los componentes que se des
 
 Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 
-Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se reinicie cuando finalice el pedido de la instancia secundaria.
+Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se rearranque cuando finalice el pedido de la instancia secundaria.
 
 ## Qué hacer a continuación
 
@@ -223,7 +223,7 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 *  Añadir, modificar, devolver o eliminar componentes
 *  Ampliar o reducir la capacidad de la instancia mediante la adición o eliminación de servidores ESXi
 *  Apagar componentes
-*  Reiniciar servicios
+*  rearrancar servicios
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 

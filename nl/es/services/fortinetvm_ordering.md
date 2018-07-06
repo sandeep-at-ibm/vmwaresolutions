@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -35,9 +35,9 @@ Especifique el nombre de servicio.
 ### Tamaño del despliegue
 
 IBM Cloud proporciona las siguientes opciones de tamaño de despliegue:
-- **Pequeño (2 vCPU / 4 GB de RAM)**
-- **Medio (4 vCPU / 6 GB de RAM)**
-- **Grande (8 vCPU / 12 GB de RAM)**
+* Pequeño (2 vCPU / 4 GB de RAM)
+* Medio (4 vCPU / 6 GB de RAM)
+* Grande (8 vCPU / 12 GB de RAM)
 
 ### Modelo de licencia
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-05"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -68,7 +68,7 @@ Este servicio proporciona una solución eficiente y escalable para la protecció
 
 **Notas**:
 * Este servicio solo está disponible para las instancias que se han desplegado en la V2.2 y posteriores releases o que se han actualizado a estos.
-* Para instancias que se despliegan en V2.3 o releases posteriores, IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} es el servicio de copia de seguridad predeterminado. El servicio proporciona copias de seguridad automáticas para VM de gestión.
+* Para instancias que se despliegan en V2.3 o releases posteriores, IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} proporciona automáticamente copia de seguridad para las máquinas virtuales de gestión.
 * Para instancias que se despliegan en V2.2, este servicio proporciona protección de datos solo para las VM de carga de trabajo.
 
 Para obtener más información, consulte [Gestión de IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/managingspp.html).

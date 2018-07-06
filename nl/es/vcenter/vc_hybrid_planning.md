@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -14,7 +14,7 @@ Revise los siguientes requisitos antes de solicitar su instancia de VMware vCent
 
 ## Requisitos de la cuenta de IBM Cloud
 
-La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos de la cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
 
 ## Disponibilidad del centro de datos de IBM Cloud
 
@@ -72,7 +72,7 @@ La instancia de vCenter Server con el paquete híbrido (Hybridity) incluye la li
 Al desplegar este servicio, siga los valores siguientes:
 * Especifique el **Tipo de interconexión de HCX** seleccionando una de las opciones siguientes:
   * **Red pública**: HCX crea una conexión cifrada entre sitios de la red pública.
-  * **Red privada**: HCX crea una conexión cifrada entre sitios de la red privada. 
+  * **Red privada**: HCX crea una conexión cifrada entre sitios de la red privada.
 * Especifique el **Tipo de certificado de punto final público**. Si selecciona **Certificado de CA**, configure los valores siguientes:
   * **Contenido del certificado**: especifique el contenido del certificado de CA.
   * **Clave privada**: especifique la clave privada del certificado de CA.

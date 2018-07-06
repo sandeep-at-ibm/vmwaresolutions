@@ -105,7 +105,7 @@ Tabla 1. Niveles de actualización e impacto
       </tr>
     </table>
 
-7. Si el proceso de actualización falla en un paso específico, [póngase en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html) para obtener ayuda. Se le informará sobre cómo resolver el problema y se le guiará para que reinicie la actualización desde el paso que ha dado el error.
+7. Si el proceso de actualización falla en un paso específico, [póngase en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html) para obtener ayuda. Se le informará sobre cómo resolver el problema y se le guiará para que rearranque la actualización desde el paso que ha dado el error.
 
 ## Enlaces relacionados
 

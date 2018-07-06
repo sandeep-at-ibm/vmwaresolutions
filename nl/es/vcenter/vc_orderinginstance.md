@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ Para desplegar una plataforma virtualizada VMware flexible y personalizable que 
 ## Requisitos
 
 Asegúrese de haber realizado las tareas siguientes:
-* Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Cuentas de usuario y valores](../vmonic/useraccount.html).
+* Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
 * Ha revisado la información de [Requisitos y planificación de instancias de vCenter Server](vc_planning.html).
 * Ha revisado el formato del nombre de dominio e instancia. El nombre de dominio y la etiqueta de subdominio se utilizan para generar el nombre de usuario y los nombres de servidor de la instancia.
 
@@ -126,7 +126,7 @@ Cuando seleccione **Almacenamiento de NFS**, puede añadir almacenamiento compar
 
 **Nota:** El número de comparticiones de archivo debe estar comprendido entre 1 y 32.
 
-* **Configurar las comparticiones de archivos individualmente**: Seleccione para especificar distintos valores de configuración para cada compartición de archivos.
+* **Configurar las comparticiones individualmente**: Seleccione para especificar distintos valores de configuración para cada compartición de archivos.
 * **Número de unidades compartidas**: Al utilizar el mismo valor de configuración para cada compartición de archivos, especifique el número de comparticiones de archivos para el almacenamiento compartido de NFS que desee añadir.
 * **Almacenamiento**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
 * **Rendimiento**: seleccione el valor de IOPS (operaciones de entrada/salida por segundo) por GB en función de sus requisitos de carga de trabajo.
@@ -237,9 +237,9 @@ En función de la configuración seleccionada para la instancia y los servicios 
     3. Especifique el número de {{site.data.keyword.baremetal_short}}. Si tiene previsto utilizar vSAN como solución de almacenamiento, tenga en cuenta que se necesitan un mínimo de 4 {{site.data.keyword.baremetal_short}}.  
 
 7. Complete los valores de almacenamiento:
-   * Cuando seleccione **Almacenamiento vSAN**, especifique el **Número de discos de capacidad vSAN**, el **Tipo y tamaño de disco para discos de capacidad vSAN**, y cómo se proporciona la **Licencia de vSAN**.
-   * Cuando seleccione **Almacenamiento NFS**, especifique el **Número de unidades compartidas**, el **Tamaño** y el **Rendimiento**. Los valores se aplican a todas las comparticiones de archivo.
-   * Para añadir y configurar las unidades compartidas de archivos individualmente, seleccione el separador **Almacenamiento NFS personalizado**, pulse el icono **+** situado junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivo. Debe seleccionar al menos una unidad compartida de archivo.
+  * Cuando seleccione **Almacenamiento vSAN**, especifique el **Tipo y tamaño de los discos de capacidad vSAN**, el **Número de discos de capacidad vSAN**, y cómo se proporciona la **Licencia de vSAN**.
+  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar los mismos valores a todas las comparticiones de archivos, especifique el **Número de unidades compartidas**, el **Tamaño** y el **Rendimiento**.
+  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar las comparticiones de archivos individualmente, seleccione **Configurar recursos compartidos individualmente** y a continuación pulse sobre el icono **+** junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivos individual. Debe seleccionar al menos una unidad compartida de archivo.
 
 8. Complete los valores de interfaz de red.
    1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio raíz. Para una instancia secundaria, el nombre de dominio se rellena automáticamente.
@@ -265,7 +265,7 @@ Cuando la instancia se haya desplegado correctamente, los componentes que se des
 
 Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 
-Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se reinicie cuando finalice el pedido de la instancia secundaria.
+Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se rearranque cuando finalice el pedido de la instancia secundaria.
 
 ## Qué hacer a continuación
 
@@ -278,7 +278,7 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 *  Añadir, modificar, devolver o eliminar componentes
 *  Ampliar o reducir la capacidad de la instancia mediante la adición o eliminación de servidores ESXi
 *  Apagar componentes
-*  Reiniciar servicios
+*  rearrancar servicios
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 

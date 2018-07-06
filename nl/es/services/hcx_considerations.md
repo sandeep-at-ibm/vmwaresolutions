@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -39,8 +39,8 @@ Revise las siguientes consideraciones antes de eliminar el servicio HCX on {{sit
    * Se desactiva la licencia de HCX solicitada para HCX Manager en la nube.
    * Se suprime HCX Manager.
    * Se liberan las direcciones IP de vMotion que se habían reservado para HCX.
-   * Se eliminan las agrupaciones de recursos relacionadas con HCX si están vacías.
-   * Se eliminan las carpetas relacionadas con HCX si están vacías.
+   * Si están vacías, se eliminan las agrupaciones de recursos relacionadas con HCX.
+   * Si están vacías, se eliminan las carpetas relacionadas con HCX.
    * Se suprimen los dispositivos del extremo de gestión de HCX.
 
 ## Enlaces relacionados

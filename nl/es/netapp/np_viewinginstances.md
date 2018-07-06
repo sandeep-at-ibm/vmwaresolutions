@@ -62,7 +62,7 @@ Tabla 3. Información de acceso correspondiente a los componentes relacionados c
 
 | Componente        | Descripción       |
 |:---------------- |:----------------- |
-| AD/DNS IPs | Las direcciones IP de los dos servidores AD. |
+| AD/DNS IP | Las direcciones IP de los dos servidores AD. |
 | AD/DNS FQDN | El nombre de dominio completo del servidor AD/DNS. |
 | AD/DNS ADMIN (Remote Desktop) | El nombre de usuario y la contraseña que puede utilizar para acceder al servidor AD mediante una conexión remota de escritorio. |
 | NSX Manager IP | La dirección IP de NSX Manager. |

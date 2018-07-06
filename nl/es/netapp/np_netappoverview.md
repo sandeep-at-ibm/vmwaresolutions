@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -80,8 +80,7 @@ Cuatro {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} co
 
 * Enlaces ascendentes de red pública y privada de 10 Gbps
 * Tres VLAN (LAN virtuales): una VLAN pública y dos VLAN privadas
-* Una VXLAN (LAN extensible virtual) con DLR (direccionador lógico distribuido)
-* Dos pasarelas de servicios VMware NSX Edge seguras
+* Una VMware NSX Edge Services Gateway segura
 
 ### Instancias de servidor virtual
 
@@ -104,7 +103,7 @@ Dos VSI (instancias de servidor virtual):
 **ATENCIÓN**: el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 *  Añadir, modificar, devolver, eliminar o apagar componentes
 *  Ampliar o reducir la capacidad de la instancia mediante la adición o eliminación de servidores ESXi
-*  Reiniciar servicios
+*  rearrancar servicios
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 

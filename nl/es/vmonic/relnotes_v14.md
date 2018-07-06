@@ -77,7 +77,7 @@ Este release incluye las siguientes mejoras en la topología de las instancias:
 
 ## Soporte de la configuración de varios sitios para instancias de Cloud Foundation
 
-Ahora puede desplegar una instancia sola instancia de Cloud Foundation, al igual que en releases anteriores o, además, puede desplegar instancias secundarias que se conectan a una instancia primaria. El modelo de configuración de varios sitios utiliza una topología de estrella ("hub and spoke") con un sitio primario y un máximo se 7 sitios secundarios.
+Ahora puede desplegar una instancia sola instancia de Cloud Foundation, al igual que en releases anteriores o, además, puede desplegar instancias secundarias que se conectan a una instancia primaria. El modelo de configuración de varios sitios utiliza una topología de estrella ("hub and spoke") con un sitio primario y un máximo de 7 sitios secundarios.
 
 Para obtener más información, consulte [Configuración de varios sitios para instancias de Cloud Foundation](../sddc/sd_multisite.html).
 
