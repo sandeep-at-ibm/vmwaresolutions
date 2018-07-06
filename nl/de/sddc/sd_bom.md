@@ -22,7 +22,7 @@ Tabelle 1. Teileliste für VLANs in Cloud Foundation-Instanzen
 |:----------|:----------|:-------------|
 | VLAN1     | Öffentlich, Primär | Wird physischen ESXi-Servern für den Zugriff auf öffentliche Netze zugeordnet. Wird nach der Erstbereitstellung nicht mehr verwendet. Für den Internetzugriff verfügbar. |
 | VLAN2     | Privates VLAN A, Primär | Wird durch IBM Cloud zu physischen ESXi-Servern zugeordnet. Wird von der Managementschnittstelle für den VMware vSphere-Managementdatenverkehr verwendet.<br><br>Wird virtuellen Maschinen (VMs) zugeordnet, die als Managementkomponenten fungieren.<br><br>Wird zu VMware NSX VTEP (VXLAN-Tunnelendpunkt) zugeordnet. |
-| VLAN3     | Privates VLAN B, Portierbar | Wird zu VMware vSAN zugeordnet, sofern verwendet.<br><br>Wird zu VMware NFS zugeordnet, sofern verwendet.<br><br>Wird zu VMware vSphere zugeordnet. |
+| VLAN3     | Privates VLAN B, Portierbar | Wird zu VMware vSAN zugeordnet, sofern verwendet.<br><br>Wird zu VMware NFS zugeordnet, sofern verwendet.<br><br>Wird zu VMware vSphere vMotion zugeordnet. |
 
 ## Softwareteileliste für Cloud Foundation-Instanzen
 

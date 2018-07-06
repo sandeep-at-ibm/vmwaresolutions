@@ -55,4 +55,4 @@ Darüber hinaus sind die folgenden Managementteilnetze ebenfalls für {{site.dat
 Wenn Sie weitere Teilnetze verwenden müssen, können Sie zu verwendende IP-Adressen mit einem der folgenden Verfahren anfordern:
 
 * **Option 1 (empfohlen)**: Verwenden Sie VMware NSX-Vorlagen (Overlays) für virtuelle Netze. Bei der Bestellung erhalten Sie eine VXLAN-Beispielvorlage. Diese VXLAN-Vorlage können Sie als Ausgangspunkt bei der SDN-Erstellung verwenden.
-* **Option 2**: Bestellen Sie Ihre eigenen portierbaren öffentlichen oder privaten Teilnetze,  um IP-Adressen zu erhalten. Um die bestellten Teilnetze von den Managementteilnetzen zu unterscheiden, können Sie Hinweise zu allen bestellten Teilnetzen hinzufügen.
+* **Option 2**: Bestellen Sie Ihre eigenen portierbaren öffentlichen oder privaten Teilnetze, um IP-Adressen zu erhalten. Um die bestellten Teilnetze von den Managementteilnetzen zu unterscheiden, können Sie Hinweise zu allen bestellten Teilnetzen hinzufügen.
