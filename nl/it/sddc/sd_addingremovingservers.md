@@ -21,7 +21,7 @@ Un'istanza Cloud Foundation può avere fino a 5 cluster, uno dei quali è il pre
    * Per le configurazioni **Small** e **Large**, puoi aggiungere da 1 a 10 server ESXi alla volta.
    * Per la configurazione **Personalizzato**, puoi aggiungere da 1 a 20 server ESXi alla volta.
 * Puoi rimuovere i server ESXi che hai aggiunto, ma non puoi rimuovere i server ESXi predefiniti.
-* Prima di rimuovere i server ESXi con il servizio F5 on {{site.data.keyword.cloud_notm}} o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installato, devi migrare le VM di F5 BIG-IP e FortiGate su un server ESXi diverso rispetto a quello che ospita attualmente le VM. 
+* Prima di rimuovere i server ESXi con il servizio F5 on {{site.data.keyword.cloud_notm}} o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installato, devi migrare le VM di F5 BIG-IP e FortiGate su un server ESXi diverso rispetto a quello che ospita attualmente le VM.
 * Prima di rimuovere i server ESXi con il servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} installato, assicurati che non vi siano operazioni di backup o ripristino attive (non riuscite o in corso), poiché queste operazioni attive potrebbero impedire la rimozione dei server ESXi.
 
 ## Procedura
