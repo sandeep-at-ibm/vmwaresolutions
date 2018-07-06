@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -22,7 +22,7 @@ Prima di installare il servizio F5 on {{site.data.keyword.cloud_notm}}, esamina 
 
 In base al modello di licenza e alla larghezza di banda che selezioni, vengono distribuite due VM (macchine virtuali) di BIG-IP VE con la seguente configurazione:
 
-Tabella 1: distribuzioni di CPU e RAM per diverse selezioni di larghezza di banda e modello di licenza
+Tabella 1. distribuzioni di CPU e RAM per diverse selezioni di larghezza di banda e modello di licenza
 
 | Larghezza di banda massima | Modello di licenza: Buono | Modello di licenza: Migliore | Modello di licenza: Massimo |
 |:------------------|:--------------------|:----------------------|:--------------------|

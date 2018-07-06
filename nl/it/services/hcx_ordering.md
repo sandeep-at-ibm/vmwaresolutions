@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-06-20"
 
 ---
 
 # Ordine di VMware HCX on IBM Cloud
 
-Puoi ordinare il servizio VMware HCX on {{site.data.keyword.cloud_notm}} mentre ordini una nuova istanza VMware vCenter Server with Hybridity Bundle con il servizio incluso o aggiungendo il servizio alla tua istanza esistente. 
+Puoi ordinare il servizio VMware HCX on {{site.data.keyword.cloud_notm}} mentre ordini una nuova istanza VMware vCenter Server with Hybridity Bundle con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
 
 ## Ordine di VMware HCX on IBM Cloud per una nuova istanza
 
@@ -38,15 +38,16 @@ Per installare HCX on {{site.data.keyword.cloud_notm}}, completa le seguenti imp
 ## Processo di distribuzione per HCX on IBM Cloud
 
 La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Sia che tu scelga di ordinare un'istanza vCenter Server with Hybridity Bundle con il servizio incluso o di distribuire il servizio nella tua istanza in un secondo momento, i seguenti passi sono completati dal processo di automazione {{site.data.keyword.vmwaresolutions_short}}:
-1. Dall'infrastruttura {{site.data.keyword.cloud_notm}}, vengono ordinate tre sottoreti per HCX:
+1. Dall'infrastruttura {{site.data.keyword.cloud_notm}}, vengono ordinate tre sottoreti per HCX: 
    * Una sottorete portatile privata per la gestione HCX.
    * Una sottorete portatile privata per le interconnessioni HCX, se per **Tipo di interconnessione HCX** viene selezionato **Rete privata**.
    * Una sottorete portatile pubblica per le interconnessioni HCX, se per **Tipo di interconnessione HCX** viene selezionato **Rete pubblica**. Questa sottorete viene anche utilizzata per l'attivazione e la manutenzione con VMware.
 
    **Importante:** gli indirizzi IP nelle sottoreti ordinate per HCX sono destinati a essere gestiti dall'automazione di VMware on {{site.data.keyword.cloud_notm}}. Questi indirizzi IP non possono essere assegnati alle risorse VMware, come VM ed Edge NSX, create da te. Se hai bisogno di ulteriori indirizzi IP per le tue risorse VMware, devi ordinare le tue proprie sottoreti da {{site.data.keyword.cloud_notm}}.
-2. Viene ordinata una chiave di attivazione HCX da VMware.
-3. Vengono creati tre pool di risorse e cartelle VM per HCX, necessari per interconnessioni HCX, componenti HCX locali e componenti HCX remoti.
-4. Viene distribuita e configurata una coppia di gateway dei servizi edge (ESG) VMware NSX per il traffico di gestione HCX:
+2. Se è stata seleziona la **Rete privata** per il **Tipo di interconnessione HCX**, viene creato un gruppo di porte denominato **SDDC-DPortGroup-HCX-Private** nel DVS (Distributed Virtual Switch) privato.
+3. Viene ordinata una chiave di attivazione HCX da VMware. 
+4. Vengono creati tre pool di risorse e cartelle VM per HCX, necessari per interconnessioni HCX, componenti HCX locali e componenti HCX remoti. 
+5. Viene distribuita e configurata una coppia di gateway dei servizi edge (ESG) VMware NSX per il traffico di gestione HCX:
    * Le interfacce di uplink pubblico e privato vengono configurate utilizzando le sottoreti ordinate.
    * Gli ESG vengono configurati come una coppia di dispositivi edge di grandi dimensioni con l'alta disponibilità (HA) abilitata.
    * Le regole del firewall e le regole NAT (Network Address Translation) vengono configurate per consentire il traffico HTTPS in entrata e in uscita da e verso HCX Manager.
@@ -55,12 +56,12 @@ La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Si
 
    **Importante**: l'edge di gestione HCX è dedicato al traffico di gestione HCX tra i componenti HCX in loco e i componenti HCX lato cloud. Non modificare l'edge di gestione HCX o utilizzarlo per le estensioni di rete HCX. Crea, invece, edge separati per le estensioni di rete. Inoltre, tieni presente che l'utilizzo di un firewall o la disabilitazione delle comunicazioni dell'edge di gestione HCX ai componenti di gestione IBM privati o all'Internet pubblico potrebbe influire negativamente sulla funzionalità di HCX.
 
-5. HCX Manager on {{site.data.keyword.cloud_notm}} viene distribuito, attivato, e configurato:
+6. HCX Manager on {{site.data.keyword.cloud_notm}} viene distribuito, attivato, e configurato:
    * HCX Manager viene registrato con vCenter Server.
    * Vengono configurati HCX Manager, vCenter Server, PSC e NSX Manager.
    * Viene configurata la flotta HCX.
    * Vengono configurati i contenitori di distribuzione HCX locali e remoti.
-6. Il nome host e l'indirizzo IP di HCX Manager vengono registrati con il server DNS di VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
+7. Il nome host e l'indirizzo IP di HCX Manager vengono registrati con il server DNS di VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 ## Link correlati
 

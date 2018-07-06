@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -80,7 +80,7 @@ Dopo la distribuzione, puoi creare fino a quattro ulteriori cluster. Se selezion
 
 ### Impostazioni di archiviazione
 
-Per la tua archiviazione, puoi utilizzare **vSAN** o **NFS**.
+Le impostazioni di archiviazione si basano sulla tua selezione della configurazione Bare Metal Server e sul tipo di archiviazione.
 
 #### Archiviazione vSAN
 
@@ -94,7 +94,7 @@ Se selezioni **Storage NFS**, puoi aggiungere l'archiviazione condivisa a livell
 
 **Nota:** il numero di condivisioni file deve essere compreso tra 1 e 32.
 
-* **Configura le condivisioni file singolarmente**: seleziona questa opzione per specificare diverse impostazioni di configurazione per ogni condivisione file.
+* **Configura le condivisioni singolarmente**: seleziona questa opzione per specificare diverse impostazioni di configurazione per ogni condivisione file.
 * **Numero di condivisioni**: quando utilizzi la stessa impostazione di configurazione per ogni condivisione file, specifica il numero di condivisioni file per l'archiviazione condivisa NFS che vuoi aggiungere.
 * **Dimensione**: seleziona la capacità che soddisfa le tue esigenze di archiviazione condivisa.
 * **Prestazioni**: seleziona l'IOPS (Input/output Operations Per Second) per GB in base ai tuoi requisiti del carico di lavoro.
@@ -132,9 +132,9 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
    * Se hai selezionato **Preconfigurato**, specifica la **Configurazione Bare Metal Server** e il **Numero di {{site.data.keyword.baremetal_short}}**. Se intendi utilizzare vSAN come soluzione di archiviazione, ricorda che sono richiesti un minimo di 4 {{site.data.keyword.baremetal_short}}.
    * Se hai selezionato **Personalizzato**, specifica il **Modello CPU**, la quantità di **RAM** e il **Numero di {{site.data.keyword.baremetal_short}}**.
 7. Completa la configurazione di archiviazione.
-   * Se selezioni **Storage vSAN**, specifica il **Numero di dischi vSAN**, il **Tipo e dimensioni del disco per i dischi vSAN** e come deve essere fornita la **Licenza vSAN**.
-   * Se selezioni **Storage NFS**, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
-   * Per aggiungere e configurare le condivisioni file singolarmente, seleziona la scheda **Storage NFS personalizzato**, fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni condivisione file. Devi selezionare almeno una condivisione file.
+  * Se selezioni **Storage vSAN**, specifica il **Tipo e dimensioni del disco per i dischi vSAN**, il **Numero di dischi vSAN** e come la **Licenza vSAN** deve essere fornita.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni per tutte le condivisioni file, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**, fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni singola condivisione file. Devi selezionare almeno una condivisione file.
 8. Specifica come viene fornita la chiave di licenza vSphere:
   * Per gli utenti Business Partner, la licenza vSphere (Enterprise Plus edition) viene inclusa e acquistata per tuo conto.
   * Per gli utenti non Business Partner, puoi selezionare una delle seguenti opzioni:

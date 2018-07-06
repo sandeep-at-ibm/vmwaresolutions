@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -18,19 +18,18 @@ Per le istanze vCenter Server with Hybridity Bundle sono disponibili i seguenti 
 
 Tabella 1. Servizi disponibili per le istanze vCenter Server with Hybridity Bundle
 
-| Nome servizio                                                                           | Disponibilità |
+| Nome servizio | Disponibilità | Supporto istanza |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on IBM Cloud](../services/f5_considerations.html)                                 | Sì              |
-| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       | Sì              |
-| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) | Sì              |
-| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              | Sì              |
-| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              | Sì              |
-| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         | Sì              |
-| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  | Sì              |
-| [Veeam on IBM Cloud](../services/veeam_considerations.html)                           | Sì              |
-| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                         | Sì              |
-| [Zerto on IBM Cloud](../services/addingzertodr.html)                                  | Sì              |
-
+| [F5 on IBM Cloud](../services/f5_considerations.html)                                 | Sì | V1.9 e successive |
+| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       | Sì | V1.8 e successive |
+| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) | Sì | V2.0 e successive |
+| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              | Sì | V2.3 e successive |
+| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              | Sì | V2.3 e successive |
+| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         | Sì | V2.2 e successive |
+| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  | Sì | V2.2 e successive |
+| [Veeam on IBM Cloud](../services/veeam_considerations.html)                           | Sì | V1.8 e successive |
+| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                        | Sì | V2.3 e successive |
+| [Zerto on IBM Cloud](../services/addingzertodr.html)                                  | Sì | V1.2 e successive |
 
 ## Aggiunta di servizi alle istanze vCenter Server with Hybridity Bundle
 

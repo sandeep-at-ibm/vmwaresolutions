@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -18,13 +18,15 @@ Il servizio HyTrust CloudControl on {{site.data.keyword.cloud}} applica e contro
 
 Una coppia di dispositivi HyTrust CloudControl (HTCC) ad alta disponibilità (HA) viene distribuita sul cluster predefinito in modalità attiva-passiva.
 
-Ogni coppia di dispositivi HTCC viene distribuita sulla stessa sottorete portatile privata specificata per le macchine virtuali (VM) di gestione, come il gestore NSX, i dispositivi vCenter Server Appliance e Platform Services Controller. La coppia di dispositivi funge da proxy per gli host vSphere, il dispositivo vCenter Server e il gestore NSX di un'istanza. Pertanto, gli utenti accedono agli host vSphere, al dispositivo vCenter Server e al gestore NSX tramite un indirizzo IP pubblicato (PIP) assegnato dall'amministratore anziché l'indirizzo IP reale (RIP) assegnato da IBM Cloud.
+Ogni coppia di dispositivi HTCC viene distribuita sulla stessa sottorete portatile privata specificata per le macchine virtuali (VM) di gestione, come il gestore NSX, i dispositivi vCenter Server Appliance e Platform Services Controller.
 
-I dispositivi HTCC si integrano con Microsoft Active Directory per applicare il controllo degli accessi basato sui ruoli.
+La coppia di dispositivi funge da proxy per gli host vSphere, il dispositivo vCenter Server e il gestore NSX di un'istanza. Pertanto, gli utenti accedono agli host vSphere, al dispositivo vCenter Server e al gestore NSX tramite un indirizzo IP pubblicato (PIP) assegnato dall'amministratore anziché l'indirizzo IP reale (RIP) assegnato da {{site.data.keyword.cloud}}.
+
+I dispositivi HTCC si integrano con Microsoft Active Directory per applicare il controllo degli accessi basato sui ruoli. 
 
 ## Considerazioni sulla rimozione di HyTrust CloudControl on IBM Cloud
 
-Prima di rimuovere il servizio HyTrust CloudControl on {{site.data.keyword.cloud_notm}}, assicurati di disabilitare l'**Archiviazione della password root**, se configurata, e di eliminare tutti gli host protetti da CloudControl.
+Prima di rimuovere il servizio HyTrust CloudControl on {{site.data.keyword.cloud_notm}}, assicurati di disabilitare l'**Archiviazione della password root**, se configurata, e di eliminare tutti gli host protetti da HyTrust CloudControl.
 
 ## Link correlati
 

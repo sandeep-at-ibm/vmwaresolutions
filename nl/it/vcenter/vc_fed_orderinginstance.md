@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -17,7 +17,7 @@ Per distribuire una piattaforma virtualizzata VMware flessibile e personalizzabi
 ## Requisiti
 
 Assicurati di aver completato le seguenti attività:
-* Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](../vmonic/useraccount.html).
+* Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](../vmonic/useraccount.html).
 * Hai esaminato le informazioni in [Requisiti e pianificazione per le istanze VMware Federal](vc_fed_planning.html).
 * Hai esaminato il formato del nome di istanza e di dominio. Il nome del dominio e l'etichetta del dominio secondario vengono utilizzati per generare il nome utente e i nomi server dell'istanza.
 
@@ -95,7 +95,7 @@ Tutti i server ESXi condividono la stessa configurazione. Nella post distribuzio
 
 ## Impostazioni di archiviazione
 
-Le impostazioni di archiviazione si basano sulla tua selezione di archiviazione vSAN, NFS o NFS personalizzata.
+Le impostazioni di archiviazione si basano sulla tua selezione della configurazione Bare Metal Server e sul tipo di archiviazione.
 
 ### Archiviazione vSAN
 
@@ -111,7 +111,7 @@ Se selezioni **Storage NFS**, puoi aggiungere l'archiviazione condivisa a livell
 
 **Nota:** il numero di condivisioni file deve essere compreso tra 1 e 32.
 
-* **Configura le condivisioni file singolarmente**: seleziona questa opzione per specificare diverse impostazioni di configurazione per ogni condivisione file.
+* **Configura le condivisioni singolarmente**: seleziona questa opzione per specificare diverse impostazioni di configurazione per ogni condivisione file.
 * **Numero di condivisioni**: quando utilizzi la stessa impostazione di configurazione per ogni condivisione file, specifica il numero di condivisioni file per l'archiviazione condivisa NFS che vuoi aggiungere.
 * **Dimensione**: seleziona la capacità che soddisfa le tue esigenze di archiviazione condivisa.
 * **Prestazioni**: seleziona l'IOPS (Input/output Operations Per Second) per GB in base ai tuoi requisiti del carico di lavoro.
@@ -183,9 +183,9 @@ In base alla configurazione che hai selezionato per l'istanza, il costo stimato 
   1. Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui ospitare l'istanza.
   2. Seleziona il modello CPU **Personalizzato** e la quantità di **RAM**.
 7. Completa la configurazione di archiviazione.
-      * Se hai selezionato **Storage vSAN**, seleziona il **Tipo e dimensioni del disco per i dischi vSAN**, il **Numero di dischi vSAN** e l'edizione della licenza VMware vSAN.
-      * Se hai selezionato **Storage NFS**, seleziona il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
-      * Per aggiungere e configurare le condivisioni file singolarmente, seleziona la scheda **Storage NFS personalizzato**, fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni condivisione file. Devi selezionare almeno una condivisione file.
+  * Se selezioni **Storage vSAN**, specifica il **Tipo e dimensioni del disco per i dischi vSAN**, il **Numero di dischi vSAN** e come la **Licenza vSAN** deve essere fornita.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni per tutte le condivisioni file, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**, fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni singola condivisione file. Devi selezionare almeno una condivisione file.
 8. Completa la configurazione dell'interfaccia di rete.
    1. Immetti il prefisso del nome host, l'etichetta del dominio secondario e il nome del dominio root.
    2. Seleziona la configurazione DNS.
@@ -199,7 +199,7 @@ In base alla configurazione che hai selezionato per l'istanza, il costo stimato 
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Componenti dell'istanza VMware Federal](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Componenti dell'istanza vCenter Server per VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 

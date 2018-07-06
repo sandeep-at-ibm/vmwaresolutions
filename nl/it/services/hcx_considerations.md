@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -36,12 +36,12 @@ Esamina le seguenti considerazioni prima di rimuovere il servizio HCX on {{site.
 * Assicurati che le interconnessioni e le reti estese tra il sito di origine in loco e i siti di destinazione {{site.data.keyword.cloud_notm}} siano rimossi. Per rimuovere le interconnessioni e le reti estese, utilizza l'interfaccia utente HCX nel client web VMware vSphere installato in loco.
 * Assicurati che gli accoppiamenti di siti tra il sito di origine in loco e i siti di destinazione {{site.data.keyword.cloud_notm}} siano rimossi. Per rimuovere gli accoppiamenti di siti, utilizza l'interfaccia utente HCX nel client web VMware vSphere installato in loco.
 * La rimozione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Per la corretta rimozione di questo servizio vengono completate le seguenti procedure:
-   * Disattiva la licenza HCX ordinata per HCX Manager lato client.
-   * Elimina HCX Manager.
-   * Rilascia gli indirizzi IP vMotion che erano riservati per HCX.
-   * Rimuovi i pool di risorse relativi a HCX, se vuoti.
-   * Rimuovi le cartelle relative a HCX, se vuote.
-   * Elimina i dispositivi edge di gestione HCX.
+   * La licenza HCX ordinata per HCX Manager lato cloud è disattivata. 
+   * HCX Manager è stato eliminato.
+   * Gli indirizzi IP vMotion che erano riservati per HCX sono stati rilasciati. 
+   * Se vuoti, i pool della risorsa correlata a HCX vengono rimossi.
+   * Se vuote, le cartelle correlate a HCX vengono rimosse.
+   * I dispositivi edge di gestione HCX sono stati eliminati
 
 ## Link correlati
 
