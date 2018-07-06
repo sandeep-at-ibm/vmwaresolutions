@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-06-07"
 
 Il servizio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud}} fornisce una soluzione efficiente e scalabile per la protezione dei dati, il riutilizzo dei dati e il recupero dei dati per gli ambienti virtuali. Puoi implementare il servizio come soluzione autonoma o integrarlo con il tuo ambiente IBM Spectrum Protect Plus per scaricare copie per la governance di dati e archiviazione a lungo termine.
 
-**Disponibilità**: questo servizio è disponibile solo per le istanze che sono distribuite o aggiornate alle release della V2.2 o successive.
+**Disponibilità**: questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o aggiornate alle release della V2.2 o successive.
 
 **Note:**
-* Se accetti la selezione del servizio predefinito per le istanze distribuite nelle release della V2.4 o successive, viene installato IBM Spectrum Protect Plus V10.1.1 Patch 1. Il servizio fornisce automaticamente il supporto per il ripristino delle macchine virtuali (VM) di gestione.
-* Se accetti la selezione del servizio predefinito per le istanze distribuite nella V2.3, viene installato IBM Spectrum Protect Plus V10.1.1. Il servizio fornisce automaticamente il backup per le VM di gestione.
+* Se installi il servizio per le istanze distribuite nelle release della V2.4 o successive, viene installato IBM Spectrum Protect Plus V10.1.1 Patch 1. Il servizio fornisce automaticamente il supporto per il ripristino delle macchine virtuali (VM) di gestione.
+* Se installi il servizio per le istanze distribuite nella V2.3, viene installato IBM Spectrum Protect Plus V10.1.1. Il servizio fornisce automaticamente il backup per le VM di gestione.
 * Se installi il servizio per le istanze distribuite nella V2.2, viene installato IBM Spectrum Protect Plus V10.1.0. Il servizio fornisce la protezione dei dati solo per le VM del carico di lavoro.
 
 

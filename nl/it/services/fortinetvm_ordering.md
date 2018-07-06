@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-15"
 
 ---
 
 # Ordine di FortiGate Virtual Appliance on IBM Cloud
 
-Puoi ordinare il servizio FortiGate Virtual Appliance on {{site.data.keyword.cloud}} mentre ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente. 
+Puoi ordinare il servizio FortiGate Virtual Appliance on {{site.data.keyword.cloud}} mentre ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
 
 ## Ordine di FortiGate Virtual Appliance on IBM Cloud per una nuova istanza
 
@@ -35,9 +35,9 @@ Immetti il nome del servizio.
 ### Dimensione distribuzione
 
 IBM Cloud fornisce le seguenti opzioni di dimensioni della distribuzione:
-- **Small (2 vCPU / 4 GB di RAM)**
-- **Medium (4 vCPU / 6 GB di RAM)**
-- **Large (8 vCPU / 12 GB di RAM)**
+* Small (2 vCPU / 4 GB di RAM)
+* Medium (4 vCPU / 6 GB di RAM)
+* Large (8 vCPU / 12 GB di RAM)
 
 ### Modello di licenza
 

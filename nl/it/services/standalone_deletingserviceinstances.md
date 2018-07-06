@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -21,7 +21,8 @@ Assicurati di aver esaminato tutte le considerazioni in [Considerazioni sull'eli
 1. Fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Scorri fino alla tabella **Istanze HCX on-premise** e trova l'istanza da eliminare.
 3. Nella colonna **Azioni**, fai clic sull'icona di eliminazione.
-4. Nella finestra **Elimina istanza**, fai clic su **OK**. Lo stato dell'istanza viene modificato in **In fase di rimozione**. Una volta completata l'eliminazione, l'istanza non sarà più disponibile nella tabella **Istanze HCX on-premise**.
+4. Nella finestra **Elimina istanza**, fai clic su **OK**.
+   Lo stato dell'istanza viene modificato in **In fase di rimozione**. Una volta completata l'eliminazione, l'istanza non sarà più disponibile nella tabella **Istanze HCX on-premise**.
 
 ## Link correlati
 
@@ -29,4 +30,3 @@ Assicurati di aver esaminato tutte le considerazioni in [Considerazioni sull'eli
 * [Visualizzazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](standalone_viewingserviceinstances.html)
 * [Glossario dei termini HCX](hcx_glossary.html)
 * [Documentazione di VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->
