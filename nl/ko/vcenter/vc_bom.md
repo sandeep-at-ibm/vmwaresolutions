@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -90,31 +90,41 @@ VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 �
 
 ## 네트워크 MTU 구성 설정
 
-vSphere 클러스터는 두 개의 VDS(vSphere Distributed Switch)를 사용합니다(하나는 공용 네트워크 연결용, 다른 하나는 사설 네트워크 연결용).
+vSphere 클러스터는 두 개의 VDS(vSphere Distributed Switch)를 사용합니다(공용 네트워크 연결용 및 사설 네트워크 연결용). 
 
 사설 네트워크 연결은 크기가 9000인 점보 프레임 최대 전송 단위(MTU)를 사용하도록 구성되며, 이는 저장 작업 및 VMware vMotion 등에서 발생하는 대규모 데이터 전송의 성능을 향상시킵니다. 이는 VMware 및 IBM Cloud에서 허용하는 최대 MTU입니다.
 
 V2.1 이상에서 공용 네트워크 연결은 크기가 1500인 표준 이더넷 MTU를 사용합니다. 이 1500 설정은 유지해야 하며, 변경되면 인터넷 패킷의 단편화가 발생할 수 있습니다.
 
-다음 표에서 vCenter Server 인스턴스의 배치 버전(V2.1 이상 또는 V2.0 이하)에 따라 공용 및 사설 DVS(Distributed Virtual Switch)에 적용되는 네트워크 MTU 구성 설정의 개요를 검토하십시오.  
+다음 표에서 vCenter Server 인스턴스의 배치 버전(V2.1 이상 또는 V2.0 이하)에 따라 공용 및 사설 DVS(Distributed Virtual Switch)에 적용되는 네트워크 MTU 구성 설정의 개요를 검토하십시오.
+
+표 5. 인스턴스 버전에 따른 vCenter Server 인스턴스 및 클러스터의 MTU 구성 설정
+
+| VDS |V2.1 이상  |V2.0 이하(또는 V2.0 이하에서 업그레이드됨) |
+|:-------------- |:-------------- |:------------- |
+|공용 스위치  |1500(기본값) |9000(점보 프레임) |
+|사설 스위치 |9000(점보 프레임) |9000(점보 프레임) |
 
 이 설정은 새 인스턴스 및 V2.1 이상으로 배치된 인스턴스의 새 클러스터에 적용됩니다. 또한 교차 IBM Cloud Data Center에 있는 V2.1 이상으로 업그레이드된 인스턴스의 새 클러스터에도 적용됩니다.
 
 이 설정은 동일한 IBM Cloud Data Center의 새 클러스터, V2.0 이하의 기존 인스턴스 또는 V2.1 이상으로 업그레이드된 기존 인스턴스에는 적용되지 않습니다.
 
-**참고**: V2.0 이하로 배치된 인스턴스의 경우에는 직접 공용 스위치 MTU 설정을 1500으로 업데이트하는 것이 좋습니다.  
+V2.0 이하로 배치된 인스턴스의 경우에는 공용 스위치 MTU 설정을 1500으로 업데이트하는 것이 좋습니다. 
 
-표 5. vCenter Server 인스턴스 및 클러스터의 MTU 구성 설정
+### 공용 스위치 MTU 설정 업데이트
 
-|Distributed Virtual Switch(DVS) |V2.1 이상  |V2.0 이하(또는 V2.0 이하에서 업그레이드됨) |   
-|:-------------- |:-------------- |:------------- |
-|공용 스위치  |1500(기본값) |9000(점보 프레임) |
-|사설 스위치 |9000(점보 프레임) |9000(점보 프레임) |
+공용 스위치의 MTU 설정을 업데이트하려면 VMware vSphere Web Client에서 다음 단계를 완료하십시오. 
+1. VDS를 마우스 오른쪽 단추로 클릭하고 **설정 편집**을 클릭하십시오. 
+2. **특성 탭**에서 **고급** 옵션을 선택하십시오. 
+3. **최대 MTU** 값이 1500으로 설정되었는지 확인하십시오. 
+
+   **참고**: VDS에서 MTU 크기를 변경할 때는 연결된 업링크(실제 NIC)의 작동이 중지되었다가 재개됩니다. 따라서 해당 업링크를 사용 중인 VM에서 잠시 동안의 가동 중단이 발생합니다. 따라서 MTU 설정 업데이트는 스케줄된 작동 중단 동안 수행하도록 계획하는 것이 좋습니다. 
 
 ## 관련 링크
 
 * [빌드 번호 및 VMware ESXi/ESX(2143832)의 버전](https://kb.vmware.com/s/article/2143832)
 * [빌드 번호 및 VMware vCenter Server(2143838)의 버전](https://kb.vmware.com/s/article/2143838)
+* [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 * [vCenter Server 개요](vc_vcenterserveroverview.html)
 * [vCenter Server 인스턴스 계획](vc_planning.html)

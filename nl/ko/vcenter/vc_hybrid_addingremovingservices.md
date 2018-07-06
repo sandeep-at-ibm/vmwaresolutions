@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -14,23 +14,22 @@ lastupdated: "2018-06-11"
 
 ## vCenter Server with Hybridity Bundle 인스턴스에 사용 가능한 서비스
 
-다음 서비스는 vCenter Server with Hybridity Bundle 인스턴스에 사용 가능합니다. 
+다음 서비스는 vCenter Server with Hybridity Bundle 인스턴스에 사용 가능합니다.
 
 표 1. vCenter Server with Hybridity Bundle 인스턴스에 사용 가능한 서비스
 
-| 서비스 이름                                                                            |    가용성     |
+| 서비스 이름 |    가용성 | 인스턴스 지원 |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on IBM Cloud](../services/f5_considerations.html)                                 |예              |
-| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       |예              |
-| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) |예              |
-| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              |예              |
-| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              |예              |
-| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         |예              |
-| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  |예              |
-| [Veeam on IBM Cloud](../services/veeam_considerations.html)                           |예              |
-| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                         |예              |
-| [Zerto on IBM Cloud](../services/addingzertodr.html)                                  |예              |
-
+| [F5 on IBM Cloud](../services/f5_considerations.html)                                 |예 | V1.9 이상 |
+| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       |예 | V1.8 이상 |
+| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) |예 | V2.0 이상 |
+| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              |예 | V2.3 이상 |
+| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              |예 | V2.3 이상 |
+| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         |예 | V2.2 이상 |
+| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  |예 | V2.2 이상 |
+| [Veeam on IBM Cloud](../services/veeam_considerations.html)                           |예 | V1.8 이상 |
+| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                        |예 | V2.3 이상 |
+| [Zerto on IBM Cloud](../services/addingzertodr.html)                                  |예 | V1.2 이상 |
 
 ## vCenter Server with Hybridity Bundle 인스턴스에 서비스 추가
 

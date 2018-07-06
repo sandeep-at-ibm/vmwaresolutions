@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -48,7 +48,7 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 
 기본 오퍼링에는 가상화 관리 계층에 대해 예약된 총 38개의 vCPU와 67GB vRAM이 필요합니다. VM에 남아 있는 호스트 용량은 초과 구독 비율, VM 크기 조정 및 워크로드 성능 요구사항과 같은 여러 요인에 따라 달라집니다.
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+아키텍처에 대한 세부사항은 [{{site.data.keyword.vmwaresolutions_full}} 아키텍처 참조](../archiref/solution/solution_overview.html)를 참조하십시오. 
 
 ## vCenter Server 기술 스펙
 
