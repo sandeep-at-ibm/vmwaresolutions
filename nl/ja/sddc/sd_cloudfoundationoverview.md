@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -37,7 +37,7 @@ lastupdated: "2018-05-29"
 
 {{site.data.keyword.vmwaresolutions_short}} コンソール上で、ESXi サーバーの追加と削除の機能を使用して、インスタンスの容量を拡張したり縮小したりできます。 さらに、ホスト環境での更新の適用や VMware コンポーネントのアップグレードなどの、ライフサイクル管理機能も使用できます。
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+アーキテクチャーについて詳しくは、[ソリューションの概要](../archiref/solution/solution_overview.html)を参照してください。
 
 ## Cloud Foundation インスタンスのコンポーネント
 
