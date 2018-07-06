@@ -10,7 +10,7 @@ lastupdated: "2018-05-17"
 
 # Suppression d'instances Cloud Foundation
 
-Pour libérer les composants commandés dans le cadre d'une instance VMware Cloud Foundation, supprimez celle-ci. 
+Pour libérer les composants commandés dans le cadre d'une instance VMware Cloud Foundation, supprimez celle-ci.
 
 Lorsque vous supprimez une instance Cloud Foundation, les composants suivants sont libérés, dans cet ordre :
 1. Tous les services déployés
@@ -28,18 +28,20 @@ En raison des dépendances de ressource, les composants de votre instance ne son
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, recherchez l'instance à supprimer.
-3. Dans la colonne **Actions**, cliquez sur l'icône Supprimer. L'instance prend le statut **Suppression en cours**. Une fois l'instance supprimée, ses composants sont libérés et elle prend le statut **Supprimé**.
+3. Dans la colonne **Actions**, cliquez sur l'icône Supprimer.
+   L'instance prend le statut **Suppression en cours**. Une fois l'instance supprimée, ses composants sont libérés et elle prend le statut **Supprimé**.
 4. Si vous voulez supprimer l'enregistrement d'instance depuis la console {{site.data.keyword.vmwaresolutions_short}}, procédez comme suit :
-   1. Dans la colonne **Actions**, cliquez à nouveau sur l'icône Supprimer. 
+   1. Dans la colonne **Actions**, cliquez à nouveau sur l'icône Supprimer.
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
 ## Suppression d'instances depuis la page des details d'instance
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance à supprimer.
-3. Cliquez sur l'icône de menu déroulant dynamique située à droite de **Console vCenter**, puis cliquez sur **Supprimer une instance**. L'instance prend le statut **Suppression en cours**. Une fois l'instance supprimée, ses composants sont libérés et elle prend le statut **Supprimé**.
+3. Cliquez sur l'icône de menu déroulant dynamique située à droite de **Console vCenter**, puis cliquez sur **Supprimer une instance**.
+   L'instance prend le statut **Suppression en cours**. Une fois l'instance supprimée, ses composants sont libérés et elle prend le statut **Supprimé**.
 4. Si vous voulez supprimer l'enregistrement d'instance depuis la console {{site.data.keyword.vmwaresolutions_short}}, procédez comme suit :
-   1. Cliquez sur l'icône de menu déroulant dynamique à droite de **Console vCenter**, puis cliquez sur **Supprimer une instance**. 
+   1. Cliquez sur l'icône de menu déroulant dynamique à droite de **Console vCenter**, puis cliquez sur **Supprimer une instance**.
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
 ## Liens connexes

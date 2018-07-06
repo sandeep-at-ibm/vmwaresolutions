@@ -17,7 +17,7 @@ Affichez les instances VMware Cloud Foundation que vous avez commandées ainsi q
 Pour afficher un récapitulatif de toutes les instances Cloud Foundation de votre environnement, procédez comme suit :
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. Dans le tableau **Instances Cloud Foundation Select**, affichez la liste de vos instances : 
+2. Dans le tableau **Instances Cloud Foundation Select**, affichez la liste de vos instances :
 
 Tableau 1. Eléments d'une instance Cloud Foundation
 
@@ -66,12 +66,12 @@ Tableau 3. Propriétés d'instance Cloud Foundation
 | Domaine racine DNS | Il s'agit du nom de domaine du serveur de noms de domaine (DNS, Domain Name System) et du nom de l'approbation de la racine Microsoft Active Directory (AD). |
 | Domaine de connexion unique DNS | Il s'agit du domaine de connexion unique (Single Sign-On) vSphere. Le nom de domaine SSO est défini pour toutes les instances Cloud Foundation déployées avec la valeur <samp class="ph codeph">vsphere.local</samp>. |
 | Sous-domaine DNS | Il s'agit du sous-domaine DNS du nom de domaine racine où résident les noms d'hôte des instances Cloud Foundation locales. Le nom de sous-domaine est au format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
-| Version de SDDC Manager | Version du gestionnaire SDDC Manager de l'instance |
+| Version de SDDC Manager  |  Version du gestionnaire SDDC Manager de l'instance |
 | Statut  | Statut de l'instance<br><br>Les informations affichées fournissent une mise à jour de la progression du déploiement ou de l'action appliquée à l'instance. En cas de problème, un message peut s'afficher pour vous aider à identifier et résoudre le problème. |
 
 ## Affichage des informations d'accès relatives aux instances Cloud Foundation
 
-Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance. 
+Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance.
 
 Tableau 4. Informations d'accès Cloud Foundation pour les composants liés à l'instance
 

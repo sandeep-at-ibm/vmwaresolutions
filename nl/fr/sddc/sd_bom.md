@@ -69,8 +69,8 @@ Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les inst
 
 ## Liens connexes
 
-* [Numéros de génération et versions de VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
-* [Numéros de génération et versions de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
-* [Feuille de données de protection de VMware Cloud Foundation on IBM Cloud](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
+* [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
+* [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
+* [VMware Cloud Foundation on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
 * [Présentation de Cloud Foundation](sd_cloudfoundationoverview.html)
 * [Planification des instances Cloud Foundation](sd_planning.html)
