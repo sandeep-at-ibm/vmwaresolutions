@@ -10,7 +10,7 @@ lastupdated: "2018-05-04"
 
 # Verwaltete Services für Veeam on IBM Cloud anfordern
 
-Der Service "Veeam on {{site.data.keyword.cloud}}" wird nahtlos in Ihre VMware-Hypervisoren integriert und fördert so die Hochverfügbarkeit in Ihrem Unternehmen. Dieser Service kann Wiederherstellungspunkte und Zeitziele für Ihre Anwendungen und Daten bereitstellen. Die Wiederherstellungspunkte und Zeitziele können innerhalb von weniger als 15 Minuten nach Abschluss der Konfiguration bereitgestellt werden. Durch die Verwendung dieses Service können Sie die Sicherung und Wiederherstelung aller virtuellen Maschinen für Ihre Infrastruktur direkt von der Veeam-Konsole aus steuern.
+Der Service "Veeam on {{site.data.keyword.cloud}}" wird nahtlos in Ihre VMware-Hypervisoren integriert und fördert so die Hochverfügbarkeit in Ihrem Unternehmen. Dieser Service kann Wiederherstellungspunkte und Zeitziele für Ihre Anwendungen und Daten bereitstellen. Die Wiederherstellungspunkte und Zeitziele können innerhalb von weniger als 15 Minuten nach Abschluss der Konfiguration bereitgestellt werden. Durch die Verwendung dieses Service können Sie die Sicherung und Wiederherstellung aller virtuellen Maschinen für Ihre Infrastruktur direkt von der Veeam-Konsole aus steuern.
 
 IBM Resiliency Backup as a Service bietet zur Unterstützung der Ausfallsicherheit von Informationen eine leistungsfähige Palette von lokalen, ausgelagerten und Hybrid-Cloud-basierten Datenschutzlösungen. Weitere Informationen finden Sie unter [IBM Resiliency Backup as a Service](https://www.ibm.com/us-en/marketplace/managed-backup-services).
 

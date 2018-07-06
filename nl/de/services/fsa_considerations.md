@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -29,7 +29,7 @@ Lesen Sie die folgenden Hinweise, bevor Sie den Service "FortiGate Security Appl
 * Wenn Sie den Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" zu einer bereitgestellten Instanz hinzufügen wollen, müssen Sie sicherstellen, dass noch keine andere Firewall aus der {{site.data.keyword.cloud_notm}}-Infrastruktur im öffentlichen VLAN der Instanz vorhanden ist.
 * Bei der Installation des Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" wird ein neues öffentliches VLAN hinzugefügt.
 * Während der Servicebereitstellung kann Ihre Instanz möglicherweise vorübergehend nicht auf das Internet zugreifen.
-* Nachdem der Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" erfolgreich installiert wurde, können Sie Firewallregeln für FSA über die FortiGate-Konsole verwalten und konfigurieren. Sie müssen sicherstellen, dass die FSA-Firewallregeln definiert sind, um abgehende HTTPS-Übertragungen (TCP-Port 443) zu ermöglichen, die von Managementkomponenten wie der virtuellen Maschine von IBM CloudDriver oder von Zerto Virtual Manager gestartet werden, um mit der externen Managementdatenbank in {{site.data.keyword.cloud_notm}} über das Internet zu kommunizieren. Die abgehende HTTPS-Kommunikation (TCP-Port 443) stammt aus der öffentlichen IP-Adresse der Mangement-Services für VMware NSX Edge Services Gateway (ESG) in Ihrer Instanz.
+* Nachdem der Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" erfolgreich installiert wurde, können Sie Firewallregeln für FSA über die FortiGate-Konsole verwalten und konfigurieren. Sie müssen sicherstellen, dass die FSA-Firewallregeln definiert sind, um abgehende HTTPS-Übertragungen (TCP-Port 443) zu ermöglichen, die von Managementkomponenten wie der virtuellen Maschine von IBM CloudDriver oder von Zerto Virtual Manager gestartet werden, um mit der externen Managementdatenbank in {{site.data.keyword.cloud_notm}} über das Internet zu kommunizieren. Die abgehende HTTPS-Kommunikation (TCP-Port 443) stammt aus der öffentlichen IP-Adresse der Management-Services für VMware NSX Edge Services Gateway (ESG) in Ihrer Instanz.
 * Wenn Sie ein Paar von FortiGate Security Appliance-Einheiten als Teil einer neuen Instanz bereitstellen, werden die FortiGate Security Appliance-Einheiten so konfiguriert, dass nur die erforderliche abgehende Kommunikation aus Ihrer Instanz in das öffentliche Netz zugelassen und jede andere Kommunikation zurückgewiesen wird.
 * Wenn Sie ein Paar von FortiGate Security Appliance-Einheiten als Teil einer vorhandenen Instanz bereitstellen, werden die FortiGate Security Appliance-Einheiten mit einer exliziten Regel so konfiguriert, dass die gesamte erforderliche abgehende Managementkommunikation aus Ihrer Instanz in das öffentliche Netz zugelassen wird. Außerdem werden die FortiGate Security Appliance-Einheiten mit einer zusätzlichen Regel konfiguriert, um jede andere Kommunikationen zuzulassen, damit Ihr vorhandener Anwendungsdatenverkehr nicht unterbrochen wird. Sie müssen die FortiGate Security Appliance-Konfiguration sorgfältig verwalten, damit nur die erforderliche Kommunikation zulässig ist und jede andere Kommunikation zurückgewiesen wird.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -18,11 +18,11 @@ Sie können je nach Bedarf mehrere Instanzen dieses Service installieren.
 
 ## Hinweise zur Installation von F5 on IBM Cloud
 
-Lesen Sie vor der Installation des Service "F5 on  {{site.data.keyword.cloud_notm}}" die folgenden Hinweise.
+Lesen Sie vor der Installation des Service "F5 on {{site.data.keyword.cloud_notm}}" die folgenden Hinweise.
 
 Basierend auf dem von Ihnen ausgewählten Lizenzmodell und der ausgewählten Bandbreite werden zwei virtuelle Maschinen für BIG-IP VE mit der folgenden Konfiguration bereitgestellt:
 
-Tabelle 1: CPU- und RAM-Bereitstellungen für unterschiedliche Bandbreiten- und Lizenzmodellauswahl
+Tabelle 1. CPU- und RAM-Bereitstellungen für unterschiedliche Bandbreiten- und Lizenzmodellauswahl
 
 | Maximale Bandbreite | Lizenzmodell: Gut | Lizenzmodell: Besser | Lizenzmodell: Optimal |
 |:------------------|:--------------------|:----------------------|:--------------------|
@@ -58,7 +58,7 @@ Aufgrund dieser Voraussetzungen müssen Sie den für F5 on {{site.data.keyword.c
 
 Sie bestellen eine VMware vCenter Server-Instanz des Typs **S (Klein)** mit 2 ESXi-Servern und der folgenden Konfiguration: 16 Kerne mit 2,10 GHz und jeweils 128 GB RAM. Für F5 on {{site.data.keyword.cloud_notm}} wählen Sie das Lizenzmodell **Optimal** und einen Wert von 5 Gb/s für **Maximale Bandbreite** aus.
 
-In diesem  Fall benötigt eine einzelne virtuelle Maschine für BIG-IP auf jedem Server Folgendes:
+In diesem Fall benötigt eine einzelne virtuelle Maschine für BIG-IP auf jedem Server Folgendes:
 * 2,1 GHz * 8 vCPU = 16,8 GHz CPU sowie
 * 16 GB RAM
 

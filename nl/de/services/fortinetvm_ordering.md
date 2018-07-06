@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -35,9 +35,9 @@ Geben Sie den Servicenamen ein.
 ### Bereitstellungsgröße
 
 IBM Cloud stellt die folgenden Optionen für die Bereitstellungsgröße zur Verfügung:
-- **S (Klein): 2 vCPUs / 4 GB RAM**
-- **M (Mittel): 4 vCPUs / 6 GB RAM**
-- **L (Groß): (8 vCPU / 12 GB RAM)**
+* S (Klein): 2 vCPUs / 4 GB RAM
+* M (Mittel): 4 vCPUs / 6 GB RAM
+* L (Groß): 8 vCPUs / 12 GB RAM
 
 ### Lizenzmodell
 

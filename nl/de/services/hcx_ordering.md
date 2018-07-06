@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -44,9 +44,10 @@ Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert
    * Ein öffentliches portierbares Teilnetz für HCX-Verbindungen, wenn **Öffentliches Netz** als **HCX-Verbindungstyp** ausgewählt wurde. Dieses Teilnetz wird auch für die Aktivierung und Wartung mit VMware verwendet.
 
    **Wichtig:** Die IP-Adresse in den für HCX bestellten Teilnetzen sollten durch die Automatisierung von VMware on {{site.data.keyword.cloud_notm}} verwaltet werden. Diese IP-Adressen können nicht zu VMware-Ressourcen wie VMs und NSX-Edges zugeordnet werden, die von Ihnen erstellt worden sind. Wenn Sie zusätzliche IP-Adressen für Ihre VMware-Artefakte benötigen, müssen Sie Ihre eigenen Teilnetze aus {{site.data.keyword.cloud_notm}} bestellen.
-2. Ein HCX-Aktivierungsschlüssel von VMware wird bestellt.
-3. Drei Ressourcenpools und VM-Ordner für HCX werden erstellt. Sie werden für die HCX-Verbindungen, lokalen HCX-Komponenten und fernen HCX-Komponenten benötigt.
-4. Ein Paar von VMware NSX Edge Services Gateways (ESGs) für den HCX-Managementdatenverkehr wird bereitgestellt und konfiguriert:
+2. Wenn für **HCX-Verbindungstyp** die Option **Privates Netz** ausgewählt wurde, wird auf dem privaten verteilten virtuellen Switch (Distributed Virtual Switch, DVS) eine Portgruppe namens **SDDC-DPortGroup-HCX-Private** erstellt.
+3. Es wird ein HCX-Aktivierungsschlüssel von VMware bestellt.
+4. Es werden drei Ressourcenpools und VM-Ordner für HCX erstellt. Diese werden für die HCX-Verbindungen, die lokalen HCX-Komponenten sowie die fernen HCX-Komponenten benötigt.
+5. Ein Paar von VMware NSX Edge Services Gateways (ESGs) für den HCX-Managementdatenverkehr wird bereitgestellt und konfiguriert:
    * Öffentliche und private Uplink-Schnittstellen werden unter Verwendung der bestellten Teilnetze konfiguriert.
    * Die ESGs werden als ein Paar sehr großer Edge-Appliances mit aktivierter Hochverfügbarkeit konfiguriert.
    * Die Firewallregeln und die Regeln für die Netzadressumsetzung (NAT-Regeln) werden konfiguriert, damit eingehender und abgehender HTTPS-Datenverkehr an den und vom HCX-Manager zulässig ist.
@@ -55,12 +56,12 @@ Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert
 
    **Wichtig**: Das HCX-Management-Edge ist für den HCX-Managementdatenverkehr zwischen den lokalen HCX-Komponenten und den cloudseitigen HCX-Komponenten dediziert. Das HCX-Management-Edge darf weder geändert noch für HCX-Netzerweiterungen verwendet werden. Erstellen Sie für Netzerweiterungen stattdessen separate Edges. Beachten Sie außerdem, dass die Verwendung einer Firewall oder die Inaktivierung der HCX-Edge-Kommunikation mit den privaten IBM Managementkomponenten oder dem öffentlichen Internet die HCX-Funktionalität beeinträchtigen kann.
 
-5. Der HCX-Manager on {{site.data.keyword.cloud_notm}} wird bereitgestellt, aktiviert und konfiguriert:
+6. Der HCX-Manager on {{site.data.keyword.cloud_notm}} wird bereitgestellt, aktiviert und konfiguriert:
    * Der HCX-Manager wird bei vCenter Server registriert.
    * Der HCX-Manager, vCenter Server, PSC und der NSX-Manager werden konfiguriert.
    * Das HCX-Produktpaket wird konfiguriert.
    * Lokale und ferne HCX-Bereitstellungscontainer werden konfiguriert.
-6. Der Hostname und die IP-Adresse des HCX-Managers werden beim DNS-Server von VMware vCenter Server on {{site.data.keyword.cloud_notm}} registriert.
+7. Der Hostname und die IP-Adresse des HCX-Managers werden beim DNS-Server von VMware vCenter Server on {{site.data.keyword.cloud_notm}} registriert.
 
 ## Zugehörige Links
 

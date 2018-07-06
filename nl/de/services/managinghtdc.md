@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
 # HyTrust DataControl on IBM Cloud verwalten
 
-Zum Verwalten des Service "HyTrust DataControl on {{site.data.keyword.cloud}}" (HTDC) greifen Sie über die {{site.data.keyword.vmwaresolutions_short}}-Konsole auf die HTDC-Web-GUI zu oder greifen Sie über den vSphere Web Client auf die HTDC-Konsole zu.
+Zum Verwalten des Service "HyTrust DataControl on {{site.data.keyword.cloud}}" (HTDC) greifen Sie über die {{site.data.keyword.vmwaresolutions_full}}-Konsole auf die HTDC-Web-GUI zu oder greifen Sie über den vSphere Web Client auf die HTDC-Konsole zu.
 
 ## Über die IBM Cloud for VMware Solutions-Konsole auf die HyTrust DataControl-Web-GUI zugreifen
 
-Verwenden Sie die entsprechenden Berechtigungsnachweise für die Web-GUI, die sich auf der Detailseite des Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" befinden, um sich bei der Web-GUI der primären oder sekundären HTDC-Appliance anzumelden.
+Um sich bei der Web-GUI der primären oder sekundären HTDC-Appliance anzumelden, verwenden Sie die Web-GUI-Berechtigungsnachweise, die auf der Seite mit den Details zum Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" enthalten sind.
 
 ## Über vSphere Web Client auf HyTrust DataControl-Konsole zugreifen
 

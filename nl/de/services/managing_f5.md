@@ -12,7 +12,7 @@ lastupdated: "2018-06-07"
 
 ## Auf die Konsolen der BIG-IP-Webbenutzerschnittstelle zugreifen
 
-Zum Verwalten des Service "F5 on {{site.data.keyword.cloud}}" melden Sie sich bei den primären oder sekundären Konsolen der BIG-IP-Webbenutzerschnittstelle mit den entsprechenen Berechtigungsnachweisen an, die Sie auf der Seite mit den Details des Service "F5 on {{site.data.keyword.cloud_notm}}" finden.
+Zum Verwalten des Service "F5 on {{site.data.keyword.cloud}}" melden Sie sich bei den primären oder sekundären Konsolen der BIG-IP-Webbenutzerschnittstelle mit den entsprechenden Berechtigungsnachweisen an, die Sie auf der Seite mit den Details des Service "F5 on {{site.data.keyword.cloud_notm}}" finden.
 
 Weitere Informationen zum Anzeigen der Servicedetails finden Sie in den folgenden Abschnitten:
 * [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
