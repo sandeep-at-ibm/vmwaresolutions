@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -90,31 +90,44 @@ Tabela 4. Definições de configuração do grupo da porta e NSX para instância
 
 ## NetworkMTU as definições de configuração
 
-O cluster do vSphere usa dois vSphere Distributed Switches (VDS), um para conectividade de rede pública e outro para conectividade de rede privada.
+O cluster do vSphere usa dois vSphere Virtual Distributed Switches (VDS), um para conectividade de rede pública e outro para
+conectividade de rede privada.
 
 As conexões de rede privada são configuradas para usar a MTU (Unidade Máxima de Transmissão) de Quadros gigantes com o tamanho de 9000, que melhora o desempenho de grandes transferências de dados, como armazenamento e VMware vMotion. Esta é a MTU máxima permitida dentro do VMware e por IBM Cloud.
 
 Na V2.1 ou mais recente, as conexões de rede pública usam uma MTU de Ethernet padrão de 1500. Essa configuração de 1500 deve ser mantida; quaisquer mudanças podem causar a fragmentação do pacote pela Internet.
 
-Revise a tabela a seguir para obter uma visão geral das definições de configuração de MTU de rede que são aplicadas ao Distributed Virtual Switch (DVS) público e privado, dependendo se a instância do vCenter Server for implementada na V2.1 ou mais recente.  
+Revise a tabela a seguir para obter uma visão geral das definições de configuração de MTU de rede que são aplicadas ao Distributed Virtual Switch (DVS) público e privado, dependendo se a instância do vCenter Server for implementada na V2.1 ou mais recente.
+
+Tabela 5. Definições de configuração de MTU para instâncias e clusters do vCenter Server dependendo da versão da instância
+
+| VDS | V2.1 ou posterior  | V2.0 ou anterior (ou submetido a upgrade da V2.0 ou anterior) |
+|:-------------- |:-------------- |:------------- |
+| Comutador público  | 1500 (padrão) | 9000 (Quadros Jumbo) |
+| Comutador privado | 9000 (Quadros Jumbo) | 9000 (Quadros Jumbo) |
 
 As configurações aplicam-se a novas instâncias e novos clusters de instâncias implementadas na V2.1 ou mais recente. As configurações também se aplicam a novos clusters em IBM Cloud Data Centers de instâncias que foram submetidas a upgrade para a V2.1 ou mais recente.
 
 As configurações não se aplicam a novos clusters no mesmo IBM Cloud Data Center, para instâncias existentes da V2.0 ou anterior ou instâncias existentes submetidas a upgrade para a V2.1 ou mais recente.
 
-**Nota**: para instâncias que foram implementadas na V2.0 ou anterior, é recomendado que você mesmo atualize a configuração de MTU de comutador público para 1500.  
+Para instâncias que foram implementadas na versão V2.0 ou anterior, é recomendado que você atualize o configuração de MTU do
+comutador público para 1500.
 
-Tabela 5. Definições de configuração de MTU para instâncias e clusters do vCenter Server
+### Atualizando a configuração de MTU do comutador público
 
-| Distributed Virtual Switch (DVS) | V2.1 ou posterior  | V2.0 ou anterior (ou submetido a upgrade da V2.0 ou anterior) |   
-|:-------------- |:-------------- |:------------- |
-| Comutador público  | 1500 (padrão) | 9000 (Quadros Jumbo) |
-| Comutador privado | 9000 (Quadros Jumbo) | 9000 (Quadros Jumbo) |
+Para atualizar a configuração de MTU para o comutador público, conclua as seguintes etapas no VMware vSphere Web Client:
+1. Clique com o botão direito no VDS e clique em **Editar configurações**.
+2. Na **guia Propriedades**, selecione a opção **Avançado**.
+3. Certifique-se de que o valor de **MTU máximo** esteja configurado para 1500.
+
+   **Nota**: ao mudar o tamanho do MTU em um vDS, os uplinks conectados (NICs físicos) diminuem e depois aumentam novamente. Como resultado, uma breve interrupção ocorre para as VMs que estão usando o uplink. Portanto, é
+recomendável planejar a atualização de configuração do MTU durante o tempo de inatividade planejado.
 
 ## Links relacionados
 
 * [Números de compilação e versões do VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Números de compilação e versões do VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
+* [Ativando quadros gigantes em comutadores virtuais distribuídos](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 * [Visão geral do vCenter Server](vc_vcenterserveroverview.html)
 * [Planejando instâncias do vCenter Server](vc_planning.html)

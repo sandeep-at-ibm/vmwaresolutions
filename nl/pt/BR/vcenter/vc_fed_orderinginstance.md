@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -17,8 +17,9 @@ Para implementar uma plataforma virtualizada VMware flexível e customizável qu
 ## Requisitos
 
 Assegure-se de que tenha concluído as tarefas a seguir:
-* Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](../vmonic/useraccount.html).
-* Você revisou as informações em [Requisitos e planejamento para instâncias do VMware Federal](vc_fed_planning.html).
+* Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](../vmonic/useraccount.html).
+* Você revisou as informações em [Requisitos e planejamento para instâncias do VMware
+Federal](vc_fed_planning.html).
 * Você revisou o formato de nome da instância e do domínio. O nome do domínio e o rótulo do subdomínio são usados para gerar o nome do usuário e os nomes do servidor da instância.
 
 Tabela 1. Formato de valor para nomes de instância e de domínio
@@ -95,7 +96,7 @@ Todos os servidores ESXi compartilham a mesma configuração. Na pós-implementa
 
 ## Configurações de armazenamento
 
-As configurações de armazenamento se baseiam em sua seleção de vSAN, NFS ou armazenamento NFS customizado.
+As configurações de armazenamento são baseadas em sua seleção de configuração do Bare Metal Server e o tipo de armazenamento.
 
 ### Armazenamento vSAN
 
@@ -111,7 +112,8 @@ Quando você selecionar **Armazenamento do NFS**, será possível incluir armaze
 
 **Nota:** o número de compartilhamentos de arquivos deve estar no intervalo de 1 a 32.
 
-* **Configure compartilhamentos de arquivos individualmente**: selecione para especificar as definições de configuração diferentes para cada compartilhamento de arquivo.
+* **Configurar compartilhamentos individualmente**: selecione para especificar
+diferentes definições de configuração para cada compartilhamento de arquivo.
 * **Número de compartilhamentos**: ao usar a mesma definição de configuração para cada compartilhamento de arquivo, especifique o número de compartilhamentos de arquivos para o armazenamento compartilhado do NFS que você deseja incluir.
 * **Tamanho**: selecione a capacidade que atenda às suas necessidades de armazenamento compartilhado.
 * **Desempenho**: selecione o IOPS (Input/output Operations Per Second) por GB com base em seus requisitos de carga de trabalho.
@@ -183,9 +185,13 @@ Com base em sua configuração selecionada para a instância, o custo estimado �
   1. Selecione o {{site.data.keyword.CloudDataCent_notm}} para hospedar a instância.
   2. Selecione o modelo de CPU **Customizado** e a quantia de **RAM**.
 7. Conclua a configuração de armazenamento.
-      * Se você tiver selecionado **Armazenamento vSAN**, selecione o **Tipo e tamanho de disco para discos de capacidade de vSAN**, o **Número de discos de capacidade de vSAN** e a edição de licença do VMware vSAN.
-      * Se você tiver selecionado **Armazenamento NFS**, selecione o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
-      * Para incluir e configurar compartilhamentos de arquivos individualmente, selecione a guia **Armazenamento do NFS customizado** e, em seguida, clique no ícone **+** ao lado do rótulo **Incluir NFS** e selecione o **Tamanho** e o **Desempenho** para cada compartilhamento de arquivo. Deve-se selecionar pelo menos um compartilhamento de arquivo.
+  * Quando você selecionar **Armazenamento vSAN**, especifique o **Tipo
+e tamanho do disco para discos de capacidade vSAN**, o **Número de discos de
+capacidade vSAN** e como a **Licença vSAN** deve ser fornecida.
+  * Quando você selecionar **Armazenamento NFS** e desejar incluir e definir as mesmas configurações para todos os compartilhamentos de arquivos, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
+  * Quando você selecionar **Armazenamento NFS** e desejar incluir e configurar compartilhamentos de arquivos individualmente, selecione **Configurar compartilhamentos
+individualmente**, em seguida, clique no ícone **+** ao lado do rótulo **Incluir NFS** e selecione o **Tamanho** e o **Desempenho**
+para cada compartilhamento de arquivo individual. Deve-se selecionar pelo menos um compartilhamento de arquivo.
 8. Conclua a configuração da interface de rede.
    1. Insira o prefixo de nome do host, o rótulo do subdomínio e o nome do domínio-raiz.
    2. Selecione a configuração do DNS.
@@ -199,7 +205,10 @@ Com base em sua configuração selecionada para a instância, o custo estimado �
 
 A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
 
-Quando a instância é implementada com êxito, os componentes que são descritos em [Componentes da instância do VMware Federal](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) são instalados em sua plataforma virtual do VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão.
+Quando a instância é implementada com êxito, os componentes que são descritos em
+[Componentes da
+instância do vCenter Server para o VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) são instalados em sua plataforma
+virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão.
 
 Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 

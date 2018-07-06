@@ -109,7 +109,7 @@ Para obter mais informações, veja as seções _Disponibilidade do IBM Cloud Da
 * [Requisitos e planejamento para instâncias do Cloud Foundation](../sddc/sd_planning.html)
 * [Requisitos e planejamento para o VMware vSphere on IBM Cloud](../vsphere/vs_planning.html)
 * [Requisitos e planejamento para instâncias do NetApp ONTAP Select](../netapp/np_planning.html)
-* [Requisitos e planejamento para instâncias do VMware Federal](../vcenter/vc_fed_planning.html)
+* [Requisitos e planejamento para as instâncias do VMware Federal](../vcenter/vc_fed_planning.html)
 
 ## Quanto tempo leva para que minha instância seja implementada?
 

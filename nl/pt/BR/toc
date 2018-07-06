@@ -236,8 +236,14 @@ IBM Cloud for VMware Solutions
 
     {: .navgroup id="reference"}
     {: .topicgroup}
-    Arquitetura do IBM Cloud for VMware Solutions
+    Arquitetura das soluções IBM Cloud for VMware
         archiref/solution/solution_overview.md
         archiref/solution/design_overview.md
         archiref/solution/design_physicalinfrastructure.md
+        archiref/solution/design_virtualinfrastructure.md
+        archiref/solution/design_commonservice.md
+        archiref/solution/design_infrastructuremgmt.md
+        archiref/solution/solution_scaling.md
+        archiref/solution/solution_backingup.md
+        archiref/solution/appendix.md
     {: .navgroup-end}

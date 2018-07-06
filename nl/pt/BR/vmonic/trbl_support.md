@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -47,6 +47,7 @@ Para entrar em contato com o Suporte IBM no {{site.data.keyword.slportal}}, conc
 
 1. Acesse https://control.softlayer.com.
 2. Efetue login no portal com sua conta **IBMid**.
-3. Conclua as **Etapas 6-8** descritas na seção **Do console do IBM Cloud for VMware Solutions** para enviar seu chamado.
+3. Conclua as etapas de 6 a 8 descritas na seção _Do console das soluções IBM Cloud for VMware_ neste tópico para
+enviar o seu chamado.
 
     **Nota**: independentemente do canal que você usa para abrir o chamado de suporte (seja o console do {{site.data.keyword.vmwaresolutions_short}} ou o {{site.data.keyword.slportal}}), os termos da _Política de suporte de serviços de infraestrutura e plataforma do {{site.data.keyword.cloud_notm}}_ ainda se aplicam.

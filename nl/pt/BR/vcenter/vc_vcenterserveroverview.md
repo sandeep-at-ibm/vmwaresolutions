@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -48,7 +48,9 @@ A oferta de base é implementada com um dispositivo vCenter Server que é dimens
 
 No total, a oferta de base requer 38 vCPU e 67 GB de vRAM que são reservados para a camada de gerenciamento de virtualização. A capacidade restante do host para suas VMs depende de vários fatores, como a taxa de alocação excessiva, o dimensionamento da VM e os requisitos de desempenho de carga de trabalho.
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+Para obter detalhes sobre a arquitetura, consulte a
+[Referência da
+arquitetura do {{site.data.keyword.vmwaresolutions_full}}](../archiref/solution/solution_overview.html).
 
 ## VCenter Server especificações técnicas
 

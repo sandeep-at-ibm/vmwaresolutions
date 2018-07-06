@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -65,7 +65,7 @@ Após a implementação, é possível criar até mais quatro clusters. Para conf
 
 ### Configurações de armazenamento
 
-As configurações de armazenamento se baseiam em sua seleção de vSAN, NFS ou armazenamento NFS customizado.
+As configurações de armazenamento são baseadas em sua seleção de configuração do Bare Metal Server e o tipo de armazenamento.
 
 #### Armazenamento vSAN
 
@@ -83,7 +83,8 @@ Quando você selecionar **Armazenamento do NFS**, será possível incluir armaze
 
 **Nota:** o número de compartilhamentos de arquivos deve estar no intervalo de 1 a 32.
 
-* **Configure compartilhamentos de arquivos individualmente**: selecione para especificar as definições de configuração diferentes para cada compartilhamento de arquivo.
+* **Configurar compartilhamentos individualmente**: selecione para especificar
+diferentes definições de configuração para cada compartilhamento de arquivo.
 * **Número de compartilhamentos**: ao usar a mesma definição de configuração para cada compartilhamento de arquivo, especifique o número de compartilhamentos de arquivos para o armazenamento compartilhado do NFS que você deseja incluir.
 * **Tamanho**: selecione a capacidade que atenda às suas necessidades de armazenamento compartilhado.
 * **Desempenho**: selecione o IOPS (Input/output Operations Per Second) por GB com base em seus requisitos de carga de trabalho.
@@ -120,9 +121,13 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 4. Na página **Incluir cluster**, insira o nome do cluster.
 5. Selecione o **Modelo de CPU**, a quantia de **RAM** e o **Número de Bare Metal Servers** para a configuração do Bare Metal.
 6. Conclua a configuração de armazenamento.
-  * Se você selecionar **Armazenamento vSAN**, selecione o **Tipo e tamanho do disco para discos de capacidade de vSAN**, o **Número de discos de capacidade de vSAN** e a edição de licença do VMware vSAN.
-  * Se você selecionar **Armazenamento NFS**, selecione o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
-  * Para incluir e configurar compartilhamentos de arquivos individualmente, selecione a guia **Armazenamento do NFS customizado** e, em seguida, clique no ícone **+** ao lado do rótulo **Incluir NFS** e selecione o **Tamanho** e o **Desempenho** para cada compartilhamento de arquivo. Deve-se selecionar pelo menos um compartilhamento de arquivo.
+  * Quando você selecionar **Armazenamento vSAN**, especifique o **Tipo
+e tamanho do disco para discos de capacidade vSAN**, o **Número de discos de
+capacidade vSAN** e como a **Licença vSAN** deve ser fornecida.
+  * Quando você selecionar **Armazenamento NFS** e desejar incluir e definir as mesmas configurações para todos os compartilhamentos de arquivos, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
+  * Quando você selecionar **Armazenamento NFS** e desejar incluir e configurar compartilhamentos de arquivos individualmente, selecione **Configurar compartilhamentos
+individualmente**, em seguida, clique no ícone **+** ao lado do rótulo **Incluir NFS** e selecione o **Tamanho** e o **Desempenho**
+para cada compartilhamento de arquivo individual. Deve-se selecionar pelo menos um compartilhamento de arquivo.
 7. Selecione a edição de licença para VMware vSAN para a configuração de licença.
 8. Na área de janela **Resumo do pedido**, verifique a configuração de cluster antes de incluir o cluster.
    1. Revise as configurações para o cluster.

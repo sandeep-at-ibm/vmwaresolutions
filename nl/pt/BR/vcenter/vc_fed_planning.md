@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-22"
 
 ---
 
-# Requisitos e planejamento para instâncias do VMware Federal
+# Requisitos e planejamento para as instâncias do VMware Federal
 
 Revise os seguintes requisitos antes de pedir uma instância do VMware Federal. Planeje sua instância com base em seus requisitos de capacidade da carga de trabalho.
 
 ## Requisitos da conta do IBM Cloud
 
-A conta do {{site.data.keyword.cloud}} que você está usando deve atender a determinados requisitos. Para obter mais informações, veja [Requisitos de conta do {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+A conta do {{site.data.keyword.cloud}} que você está usando deve atender a determinados requisitos. Para obter mais informações, veja [Requisitos para a conta do {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
 
 ## Disponibilidade do data center do IBM Cloud
 

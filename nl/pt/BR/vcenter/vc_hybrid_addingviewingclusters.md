@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -132,18 +132,23 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
         <dt class="dt dlterm">Excluído</dt>
         <dd class="dd">O cluster é excluído.</dd>
     </dl>
-4. Clique em um nome de cluster para visualizar os detalhes do servidor ESXi, de armazenamento e de licença:
+4. Clique em um nome de cluster para visualizar os detalhes de servidores ESXi e armazenamento:
 
-  **Servidores ESXi**
+  * Detalhes de servidores ESXi:
+     * **Nome**: o nome do servidor ESXi está no formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que:
 
-  * **Nome**: o nome do servidor ESXi está no formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que:
+       `host_prefix` é o prefixo de nome do host,
 
-     `host_prefix` é o prefixo de nome do host, `n` é a sequência do servidor, `subdomain_label` é o rótulo do subdomínio e `root_domain` é o nome de domínio raiz.
+       `n` é a sequência do servidor,
 
-   * **Versão**: a versão do servidor ESXi.
-   * **Credenciais**: o nome de usuário e a senha para acessar o servidor ESXi.
-   * **IP privado**: o endereço IP privado do servidor ESXi.
-   * **Status**: o status do servidor ESXi, que pode ser um dos valores a seguir:
+       `subdomain_label` é o rótulo do subdomínio e
+
+       `root_domain` é o nome de domínio raiz.
+
+     * **Versão**: a versão do servidor ESXi.
+     * **Credenciais**: o nome de usuário e a senha para acessar o servidor ESXi.
+     * **IP privado**: o endereço IP privado do servidor ESXi.
+     * **Status**: o status do servidor ESXi, que pode ser um dos valores a seguir:
         <dl class="dl">
         <dt class="dt dlterm">Incluído</dt>
         <dd class="dd">O servidor ESXi foi incluído e está pronto para uso. </dd>
@@ -152,6 +157,11 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
         <dt class="dt dlterm">Excluindo</dt>
         <dd class="dd">O servidor ESXi está sendo excluído.</dd>
         </dl>
+  * Detalhes de armazenamento:
+    * **Nome**: o nome do armazenamento de dados.
+    * **Tamanho**: a capacidade do armazenamento.
+    * **IOPS/GB**: o nível de desempenho do armazenamento.
+    * **Protocolo NFS**: a versão NFS do armazenamento.
 
 ## Excluindo os clusters de instâncias do vCenter Server with Hybridity Bundle
 

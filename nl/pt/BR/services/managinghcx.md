@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -19,7 +19,7 @@ Para gerenciar o serviço HCX no {{site.data.keyword.cloud}}, deve-se acessar o 
 
 Para obter mais informações, veja [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html).
 
-## Mantendo o HCX no IBM Cloud
+## Aplicando atualizações ao HCX on IBM Cloud
 
 O HCX on {{site.data.keyword.cloud_notm}} é implementado com a construção mais recente testada da tecnologia VMware Hybrid Cloud Extension. O VMware envia atualizações para essas construções regularmente, que incluem correções importantes e novos recursos. Essas construções são enviadas para instalações do HCX on {{site.data.keyword.cloud}} automaticamente, incluindo instalações do HCX no local.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -18,7 +18,8 @@ O serviço FortiGate Security Appliance on {{site.data.keyword.cloud}} implement
 
 ## Componentes do FortiGate Security Appliance on IBM Cloud
 
-Quando você pede o serviço FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} para sua instância, um par de HA de FortiGate Security Appliances série 300 é implementado na VLAN pública padrão da instância ou do cluster original. Todo o tráfego para a VLAN pública de sua instância é roteado por meio do FortiGate Security Appliance.
+Ao pedir o serviço FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} para
+a sua instância, um par altamente disponível do FortiGate 300 series Security Appliances é implementado na VLAN pública padrão da instância ou do cluster original. Todo o tráfego para a VLAN pública de sua instância é roteado por meio do FortiGate Security Appliance.
 
 **Nota:** se você pedir clusters adicionais, as VLANs públicas para esses clusters recém-incluídos não terão o par de HA de Security Appliances.
 

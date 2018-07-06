@@ -46,7 +46,7 @@ Se não vir os novos servidores ESXi incluídos na lista no cluster, verifique a
 
 ## Links relacionados
 
-* [Requisitos e planejamento para instâncias do VMware Federal](vc_fed_planning.html)
+* [Requisitos e planejamento para as instâncias do VMware Federal](vc_fed_planning.html)
 * [Incluindo, visualizando e excluindo clusters para instâncias do VMware Federal](fed_addviewdeleteclusters.html)
 * [Colocar um host no modo de manutenção](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Suporte ao processador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
