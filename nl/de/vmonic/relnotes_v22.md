@@ -158,7 +158,7 @@ Weitere Informationen enthalten die folgenden Abschnitte:
 
   * [vCenter Server-Teileliste](../vcenter/vc_bom.html)
   * [Cloud Foundation-Teileliste](../sddc/sd_bom.html)
-  * [VMware Server-Teileliste](../vsphere/vs_bom.html)
+  * [VMware vSphere-Teileliste](../vsphere/vs_bom.html)
 
 ## Updates und Erweiterungen der Benutzerschnittstelle
 

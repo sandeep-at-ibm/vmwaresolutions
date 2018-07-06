@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -70,7 +70,7 @@ Sie können VMware Federal-Instanzen nun für das {{site.data.keyword.CloudDataC
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-Das aktuelle Release installiert IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1 als den standardmäßigen Sicherungsservice auf allen neu bereitgestellten Instanzen. Informationen zu den neuen Funktionen in IBM Spectrum Protect Plus V10.1.1 Patch 1 finden Sie unter [Updates für IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+Das aktuelle Release installiert IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1 auf allen neu bereitgestellten Instanzen. Informationen zu den neuen Funktionen in IBM Spectrum Protect Plus V10.1.1 Patch 1 finden Sie unter [Updates für IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ### VMware HCX on IBM Cloud
 
@@ -89,8 +89,8 @@ Die Serviceinformationen wurden neu strukturiert und die Navigation wurde verbes
 Weitere Informationen enthalten die folgenden Abschnitte:
 
 * [F5 on IBM Cloud bestellen](../services/f5_ordering.html)
-* [FortiGate Security Appliance on IBM Cloud bestellen](../services/fortigate_physical_ordering.html)
-* [FortiGate Virtual Appliance on IBM Cloud bestellen](../services/fortigate_vm_ordering.html)
+* [FortiGate Security Appliance on IBM Cloud bestellen](../services/fsa_ordering.html)
+* [FortiGate Virtual Appliance on IBM Cloud bestellen](../services/fortinetvm_ordering.html)
 * [Hytrust CloudControl on IBM Cloud bestellen](../services/htcc_ordering.html)
 * [Hytrust DataControl on IBM Cloud bestellen](../services/htdc_ordering.html)
 * [IBM Spectrum Protect Plus on IBM Cloud bestellen](../services/spp_ordering.html)
