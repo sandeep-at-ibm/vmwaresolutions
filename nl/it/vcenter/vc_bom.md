@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -90,31 +90,41 @@ Tabella 4. Impostazioni di configurazione di NSX e del gruppo di porte per le is
 
 ## Impostazioni di configurazione MTU della rete
 
-Il cluster vSphere utilizza due VDS (vSphere Distributed Switch), uno per la connettività di rete pubblica e l'altro per la connettività di rete privata.
+Il cluster vSphere utilizza due VDS (Virtual Distributed Switches) vSphere, uno per la connettività di rete pubblica e l'altro per la connettività di rete privata.
 
 Le connessioni alla rete privata sono configurate per utilizzare la MTU (Maximum Transmission Unit) dei frame Jumbo con la dimensione di 9000, che migliora le prestazioni per i trasferimenti di dati di grandi dimensioni come l'archiviazione e VMware vMotion. Questa è la MTU massima consentita in VMware e da IBM Cloud.
 
 Nella V2.1 o successive, le connessioni alla rete pubblica utilizzano una MTU Ethernet standard di 1500. Questa impostazione di 1500 deve essere mantenuta; eventuali modifiche potrebbero causare la frammentazione dei pacchetti su Internet.
 
-Riesamina la seguente tabella per una panoramica delle impostazioni di configurazione MTU della rete applicate al DVS (Distributed Virtual Switch) pubblico e privato, a seconda che l'istanza vCenter Server sia distribuita nella V2.1 o successive.  
+Riesamina la seguente tabella per una panoramica delle impostazioni di configurazione MTU della rete applicate al DVS (Distributed Virtual Switch) pubblico e privato, a seconda che l'istanza vCenter Server sia distribuita nella V2.1 o successive.
+
+Tabella 5. Impostazioni di configurazione MTU per le istanze e i cluster vCenter Server a seconda della versione dell'istanza 
+
+| VDS | V2.1 o successive  | V2.0 o precedenti (o aggiornati dalla V2.0 o precedenti) |
+|:-------------- |:-------------- |:------------- |
+| Switch pubblico  | 1500 (predefinito) | 9000 (Frame Jumbo) |
+| Switch privato | 9000 (Frame Jumbo) | 9000 (Frame Jumbo) |
 
 Le impostazioni si applicano alle nuove istanze e ai nuovi cluster delle istanze distribuite nella V2.1 o successive. Le impostazioni si applicano anche ai nuovi cluster tra i data center IBM Cloud che si trovano nelle istanze aggiornate alla V2.1 o successive.
 
 Le impostazioni non si applicano ai nuovi cluster nello stesso data center IBM Cloud, per le istanze esistenti della V2.0 o precedenti o per le istanze esistenti aggiornate alla V2.1 o successive.
 
-**Nota**: per le istanze che sono state distribuite nella V2.0 o precedenti, si consiglia di aggiornare autonomamente l'impostazione MTU dello switch pubblico su 1500.  
+Per le istanze che sono state distribuite nella V2.0 o precedenti, si consiglia di aggiornare l'impostazione MTU dello Switch pubblico su 1500. 
 
-Tabella 5. Impostazioni di configurazione MTU per le istanze e i cluster vCenter Server
+### Aggiornamento dell'impostazione MTU dello Switch pubblico 
 
-| DVS (Distributed Virtual Switch) | V2.1 o successive  | V2.0 o precedenti (o aggiornati dalla V2.0 o precedenti) |   
-|:-------------- |:-------------- |:------------- |
-| Switch pubblico  | 1500 (predefinito) | 9000 (Frame Jumbo) |
-| Switch privato | 9000 (Frame Jumbo) | 9000 (Frame Jumbo) |
+Per aggiornare l'impostazione MTU per lo Switch pubblico, completa la seguente procedura nel client web VMware vSphere:
+1. Fai clic con il tasto destro e su **Modifica impostazioni**.
+2. Nella **scheda Proprietà**, seleziona l'opzione **Avanzate**.
+3. Assicurati che il valore **MTU massimo** sia impostato su 1500.
+
+   **Nota**: quando modifichi la dimensione del MTU in una vDS, gli uplink collegati (NIC fisici) vengono disattivati e riattivati. Di conseguenza, si verifica una breve interruzione per le VM che utilizzano l'uplink. Pertanto, si consiglia si pianificare l'aggiornamento dell'impostazione MTU durante i tempi di inattività pianificati.
 
 ## Link correlati
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
+* [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 * [Panoramica di vCenter Server](vc_vcenterserveroverview.html)
 * [Pianificazione per le istanze vCenter Server](vc_planning.html)

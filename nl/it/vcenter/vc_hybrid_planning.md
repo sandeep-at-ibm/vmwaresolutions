@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -14,7 +14,7 @@ Esamina i seguenti requisiti prima di ordinare la tua istanza VMware vCenter Ser
 
 ## Requisiti dell'account IBM Cloud
 
-L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti dell'account {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
 
 ## Disponibilità dei data center IBM Cloud
 
@@ -72,7 +72,7 @@ L'istanza vCenter Server with Hybridity Bundle include la licenza di VMware Hybr
 Quando distribuisci questo servizio, completa le seguenti impostazioni:
 * Specifica il **Tipo di interconnessione HCX** selezionando una delle seguenti opzioni:
   * **Rete pubblica**: HCX crea una connessione crittografata tra i siti sulla rete pubblica.
-  * **Rete privata**: HCX crea una connessione crittografata tra i siti sulla rete privata. 
+  * **Rete privata**: HCX crea una connessione crittografata tra i siti sulla rete privata.
 * Specifica il **Tipo di certificato endpoint pubblico**. Se selezioni **Certificato CA**, configura le seguenti impostazioni:
   * **Contenuto del certificato**: immetti il contenuto del certificato CA.
   * **Chiave privata**: immetti la chiave privata del certificato CA.

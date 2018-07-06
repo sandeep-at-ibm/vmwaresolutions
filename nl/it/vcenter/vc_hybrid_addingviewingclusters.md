@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -132,21 +132,23 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
         <dt class="dt dlterm">Eliminato</dt>
         <dd class="dd">Il cluster è stato eliminato.</dd>
     </dl>
-4. Fai clic sul nome di un cluster per visualizzare i dettagli del server ESXi, di archiviazione e di licenza:
+4. Fai clic sul nome di un cluster per visualizzare i dettagli dei server ESXi e di archiviazione:
 
-  **Server ESXi**
+  * Dettagli dei server ESXi:
+     * **Nome**: il nome del server ESXi è nel formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, dove:
 
-  * **Nome**: il nome del server ESXi è nel formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, dove:
+       `host_prefix` è il prefisso del nome host,
 
-     `host_prefix` è il prefisso del nome host,
        `n` è la sequenza del server,
+
        `subdomain_label` è l'etichetta del dominio secondario e
+
        `root_domain` è il nome del dominio root.
 
-   * **Versione**: la versione del server ESXi.
-   * **Credenziali**: il nome utente e la password per accedere al server ESXi.
-   * **IP privato**: l'indirizzo IP privato del server ESXi.
-   * **Stato**: lo stato del server ESXi, che può assumere uno dei seguenti valori:
+     * **Versione**: la versione del server ESXi.
+     * **Credenziali**: il nome utente e la password per accedere al server ESXi.
+     * **IP privato**: l'indirizzo IP privato del server ESXi.
+     * **Stato**: lo stato del server ESXi, che può assumere uno dei seguenti valori:
         <dl class="dl">
         <dt class="dt dlterm">Aggiunto</dt>
         <dd class="dd">Il server ESXi è stato aggiunto ed è pronto per l'uso. </dd>
@@ -155,6 +157,11 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
         <dt class="dt dlterm">In fase di eliminazione</dt>
         <dd class="dd">Il server ESXi è in fase di eliminazione.</dd>
         </dl>
+  * Dettagli di archiviazione:
+    * **Nome**: il nome dell'archivio dati.
+    * **Dimensione**: la capacità di archiviazione.
+    * **IOPS/GB**: il livello di prestazioni dell'archiviazione.
+    * **Protocollo NFS**: la versione NFS dell'archiviazione.
 
 ## Eliminazione di cluster dalle istanze vCenter Server with Hybridity Bundle
 

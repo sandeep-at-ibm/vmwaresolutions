@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -48,7 +48,7 @@ L'offerta di base viene distribuita con un dispositivo vCenter Server dimensiona
 
 In totale, l'offerta di base richiede 38 vCPU e 67 GB di vRAM che sono riservati per il livello di gestione della virtualizzazione. La capacità host rimanente per le tue macchine virtuali dipende da diversi fattori, come la percentuale di sottoscrizione eccedente, il dimensionamento della VM e i requisiti delle prestazioni del carico di lavoro.
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+Per i dettagli sull'architettura, consulta [Riferimenti all'architettura {{site.data.keyword.vmwaresolutions_full}}](../archiref/solution/solution_overview.html).
 
 ## Specifiche tecniche per vCenter Server
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ Per distribuire una piattaforma virtualizzata VMware flessibile e personalizzabi
 ## Requisiti
 
 Assicurati di aver completato le seguenti attività:
-* Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](../vmonic/useraccount.html).
+* Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](../vmonic/useraccount.html).
 * Hai esaminato le informazioni in [Requisiti e pianificazione per le istanze vCenter Server](vc_planning.html).
 * Hai esaminato il formato del nome di istanza e di dominio. Il nome del dominio e l'etichetta del dominio secondario vengono utilizzati per generare il nome utente e i nomi server dell'istanza.
 
@@ -126,7 +126,7 @@ Se selezioni **Storage NFS**, puoi aggiungere l'archiviazione condivisa a livell
 
 **Nota:** il numero di condivisioni file deve essere compreso tra 1 e 32.
 
-* **Configura le condivisioni file singolarmente**: seleziona questa opzione per specificare diverse impostazioni di configurazione per ogni condivisione file.
+* **Configura le condivisioni singolarmente**: seleziona questa opzione per specificare diverse impostazioni di configurazione per ogni condivisione file.
 * **Numero di condivisioni**: quando utilizzi la stessa impostazione di configurazione per ogni condivisione file, specifica il numero di condivisioni file per l'archiviazione condivisa NFS che vuoi aggiungere.
 * **Dimensione**: seleziona la capacità che soddisfa le tue esigenze di archiviazione condivisa.
 * **Prestazioni**: seleziona l'IOPS (Input/output Operations Per Second) per GB in base ai tuoi requisiti del carico di lavoro.
@@ -197,7 +197,7 @@ Se scegli di riutilizzare VLAN pubbliche e private esistenti, specifica le VLAN 
 
 Seleziona la configurazione DNS (Domain Name System) per la tua istanza:
 
-* **Singola VSI Windows pubblica per Active Directory/DNS**: viene distribuita una singola VSI di Microsoft Windows Server per Microsoft Active Directory (AD) consultabile, che funziona come DNS per l'istanza in cui sono registrati gli host e le VM.Questa opzione è stata distribuita per impostazione predefinita per le istanze della V1.9 e successive.
+* **Singola VSI Windows pubblica per Active Directory/DNS**: viene distribuita una singola VSI di Microsoft Windows Server per Microsoft Active Directory (AD) consultabile, che funziona come DNS per l'istanza in cui sono registrati gli host e le VM. Questa opzione è stata distribuita per impostazione predefinita per le istanze della V1.9 e successive.
 * **Due VM di Windows Server dedicate e altamente disponibili sul cluster di gestione**: vengono distribuite due VM di Microsoft Windows, che aiutano a migliorare la sicurezza e la solidità.
 
 **Importante:** se configuri la tua istanza per utilizzare le due VM di Microsoft Windows, devi fornire due licenze Microsoft Windows Server 2012 R2. Utilizza la licenza Microsoft Windows Server 2012 R2 Standard Edition o la licenza Microsoft Windows Server 2012 R2 Datacenter Edition o entrambe.
@@ -237,9 +237,9 @@ In base alla configurazione che hai selezionato per l'istanza e i servizi aggiun
     3. Specifica il numero di {{site.data.keyword.baremetal_short}}. Se intendi utilizzare vSAN come soluzione di archiviazione, ricorda che sono richiesti un minimo di 4 {{site.data.keyword.baremetal_short}}.  
 
 7. Completa le impostazioni di archiviazione:
-   * Se selezioni **Storage vSAN**, specifica il **Numero di dischi vSAN**, il **Tipo e dimensioni del disco per i dischi vSAN** e come deve essere fornita la **Licenza vSAN**.
-   * Se selezioni **Storage NFS**, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**. Le impostazioni si applicano a tutte le condivisioni file.
-   * Per aggiungere e configurare le condivisioni file singolarmente, seleziona la scheda **Storage NFS personalizzato**, fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni condivisione file. Devi selezionare almeno una condivisione file.
+  * Se selezioni **Storage vSAN**, specifica il **Tipo e dimensioni del disco per i dischi vSAN**, il **Numero di dischi vSAN** e come la **Licenza vSAN** deve essere fornita.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni per tutte le condivisioni file, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**, fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni singola condivisione file. Devi selezionare almeno una condivisione file.
 
 8. Completa le impostazioni dell'interfaccia di rete.
    1. Immetti il prefisso del nome host, l'etichetta del dominio secondario e il nome del dominio root. Per un'istanza secondaria, il nome di dominio viene compilato automaticamente.
