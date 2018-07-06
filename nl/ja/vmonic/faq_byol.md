@@ -110,19 +110,19 @@ BYOL 機能を導入した場合、手動プロセスを引き続き使用する
 
 ## vCenter Server with Hybridity Bundle と一緒に NFS ストレージを注文できますか?
 
-新しくデプロイしたインスタンスでは、vSAN オール・フラッシュ・ストレージだけがサポートされています。vCenter Server with Hybridity Bundle のオファリングには、vSAN の Advanced か Enterprise のライセンスが含まれています。
+新しくデプロイしたインスタンスでは、vSAN オール・フラッシュ・ストレージだけがサポートされています。 vCenter Server with Hybridity Bundle のオファリングには、vSAN の Advanced か Enterprise のライセンスが含まれています。
 
-vCenter Server インスタンスで NFS ストレージを使用している場合は、既存のインスタンスを vCenter Server with Hybridity Bundle にアップグレードできます。アップグレード時に vSAN Advanced のライセンスが注文されますが、オール・フラッシュの vSAN クラスターをプロビジョンする必要はありません。
+vCenter Server インスタンスで NFS ストレージを使用している場合は、既存のインスタンスを vCenter Server with Hybridity Bundle にアップグレードできます。 アップグレード時に vSAN Advanced のライセンスが注文されますが、オール・フラッシュの vSAN クラスターをプロビジョンする必要はありません。
 
 ## vCenter Server with Hybridity Bundle で BYOL を使用できますか?
 
-{{site.data.keyword.cloud_notm}} では、VMware ライセンスの持ち込み (BYOL) はできません。vCenter Server with Hybridity Bundle では、すべての VMware ライセンスが IBM 提供ライセンスでなければなりません。
+{{site.data.keyword.cloud_notm}} では、VMware ライセンスの持ち込み (BYOL) はできません。 vCenter Server with Hybridity Bundle では、すべての VMware ライセンスが IBM 提供ライセンスでなければなりません。
 
 ## vCenter Server with Hybridity Bundle のライセンスと vCenter Server のライセンスの違いはどこにありますか?
 
-vCenter Server で利用できる個々の VMware ライセンスは、CPU 単位の価格設定になっています。IBM が提供する CPU 単位のどの VMware ライセンスでも、CPU 1 個あたりのコア数が 16 を超えるサーバー (Dual Intel Xeon Gold 6140 など) では、価格が 1.3x にアップされます。
+vCenter Server で利用できる個々の VMware ライセンスは、CPU 単位の価格設定になっています。 IBM が提供する CPU 単位のどの VMware ライセンスでも、CPU 1 個あたりのコア数が 16 を超えるサーバー (Dual Intel Xeon Gold 6140 など) では、価格が 1.3x にアップされます。
 
-vCenter Server with Hybridity Bundle は、VMware のライセンスやエディションをあらかじめ組み合わせたセットであり、CPU 単位ではなくコア単位でライセンスが交付されます。したがって、これらのインスタンスのライセンス価格は変わりません。
+vCenter Server with Hybridity Bundle は、VMware のライセンスやエディションをあらかじめ組み合わせたセットであり、CPU 単位ではなくコア単位でライセンスが交付されます。 したがって、これらのインスタンスのライセンス価格は変わりません。
 
 ## vCenter Server with Hybridity Bundle では、IBM 提供 VMware ライセンスのどんなコンポーネントやエディションを利用できますか?
 
@@ -132,7 +132,7 @@ vCenter Server インスタンスで NSX Base エディションを使用して�
 
 ## vCenter Server with Hybridity Bundle に組み込まれている NSX Advanced エディションを NSX Enterprise エディションにアップグレードできますか?
 
-vCenter Server with Hybridity Bundle には NSX Advanced が含まれていますが、vCenter Server with Hybridity Bundle の注文後に NSX Enterprise エディションにアップグレードすることもできます。そのためには、{{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンスの詳細ページ・タブにある**「Update and Patch」**タブを使用します。
+vCenter Server with Hybridity Bundle には NSX Advanced が含まれていますが、vCenter Server with Hybridity Bundle の注文後に NSX Enterprise エディションにアップグレードすることもできます。 そのためには、{{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンスの詳細ページ・タブにある**「Update and Patch」**タブを使用します。
 
 ### 関連リンク
 

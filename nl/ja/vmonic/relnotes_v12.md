@@ -26,7 +26,7 @@ VMware ESXi のバージョンが、前のリリースの ESXi 6.0 u2 から、�
 
 ## Zerto 災害復旧
 
-VMware Cloud Foundation インスタンスも VMware vCenter Server インスタンスも、Zerto 災害復旧を組み込んだ形での注文が可能です。また、インスタンスの詳細ページで、既存の Cloud Foundation インスタンスおよび vCenter Server インスタンスに Zerto 災害復旧を追加することもできます。
+VMware Cloud Foundation インスタンスも VMware vCenter Server インスタンスも、Zerto 災害復旧を組み込んだ形での注文が可能です。 また、インスタンスの詳細ページで、既存の Cloud Foundation インスタンスおよび vCenter Server インスタンスに Zerto 災害復旧を追加することもできます。
 
 詳しくは、以下を参照してください。
 * [Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)

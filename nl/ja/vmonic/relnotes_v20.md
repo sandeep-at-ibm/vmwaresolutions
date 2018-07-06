@@ -16,7 +16,7 @@ lastupdated: "2017-11-20"
 
 FortiGate Virtual Appliance on IBM Cloud サービスが、V2.0 以降の VMware Cloud Foundation インスタンスと VMware vCenter Server インスタンスで使用できるようになりました。 このサービスは、お客様の環境に FortiGate Virtual Appliance の高可用性 (HA) ペアをデプロイします。これにより、仮想インフラストラクチャー内にクリティカルなセキュリティー制御を実装してリスクを軽減できます。
 
-FortiGate Virtual Appliance on IBM Cloud サービスを組み込んだ形でインスタンスを注文することも、後からインスタンスの詳細ページの**「サービス」**タブで既存のインスタンスにこのサービスを追加することもできます。このサービスでは、デプロイメント・サイズとライセンスについての 3 つのオプションの中から 1 つを要件に応じて選択できます。 サービスが正常にインストールされたら、FortiGate コンソールから FortiGate Virtual Appliance のファイアウォール・ルールを管理および構成できます。
+FortiGate Virtual Appliance on IBM Cloud サービスを組み込んだ形でインスタンスを注文することも、後からインスタンスの詳細ページの**「サービス」**タブで既存のインスタンスにこのサービスを追加することもできます。 このサービスでは、デプロイメント・サイズとライセンスについての 3 つのオプションの中から 1 つを要件に応じて選択できます。 サービスが正常にインストールされたら、FortiGate コンソールから FortiGate Virtual Appliance のファイアウォール・ルールを管理および構成できます。
 
 詳しくは、以下を参照してください。
 * [FortiGate Virtual Appliance on IBM Cloud のコンポーネントと考慮事項](../services/fortinetvm_considerations.html)

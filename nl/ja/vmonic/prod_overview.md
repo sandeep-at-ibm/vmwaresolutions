@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-05"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -28,7 +28,7 @@ lastupdated: "2018-06-05"
 
 {{site.data.keyword.vmwaresolutions_short}} では、VMware 仮想環境のデプロイメントとして、標準化されたデプロイメントとカスタマイズ可能なデプロイメントを選択できます。 以下のデプロイメント・タイプが用意されています。
 * **VMware vCenter Server on {{site.data.keyword.cloud_notm}}**: この vCenter Server オファリングでは、ビジネス・ニーズに最適なカスタムのコンピュート、ストレージ、ネットワークのリソースを使用して、VMware 仮想環境をデプロイできます。
-* **VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle**: この vCenter Server with Hybridity オファリングは、オンプレミスのインフラストラクチャーを素早く簡単にクラウドに拡張できるホステッド・プライベート・クラウドです。 この VMware 環境は、IBM 提供の VMware Software Defined Data Center ライセンスに基づくものであり、VMware Hybrid Cloud Extension (HCX) が含まれています。HCX を使用すると、オンプレミスの vSphere 5.0+ 環境と IBM Cloud サイトを安全に接続して、インフラストラクチャーのシームレスなハイブリッド化と真のアプリケーション・モビリティーを実現できます。
+* **VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle**: この vCenter Server with Hybridity オファリングは、オンプレミスのインフラストラクチャーを素早く簡単にクラウドに拡張できるホステッド・プライベート・クラウドです。 この VMware 環境は、IBM 提供の VMware Software Defined Data Center ライセンスに基づくものであり、VMware Hybrid Cloud Extension (HCX) が含まれています。 HCX を使用すると、オンプレミスの vSphere 5.0+ 環境と IBM Cloud サイトを安全に接続して、インフラストラクチャーのシームレスなハイブリッド化と真のアプリケーション・モビリティーを実現できます。
 * **VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}**: この Cloud Foundation オファリングでは、標準的な {{site.data.keyword.cloud_notm}} コンピュート、ストレージ、ネットワークのリソースを各ユーザー・デプロイメントに専用で使用して、統一された VMware 仮想環境を実現できます。
 * **VMware vSphere on {{site.data.keyword.cloud_notm}}**: この vSphere on {{site.data.keyword.cloud_notm}} オファリングで提供されるカスタマイズ可能な仮想化サービスを使用すると、VMware 互換の{{site.data.keyword.baremetal_short}}、ハードウェア・コンポーネント、ライセンスを組み合わせて、IBM でホストされる独自の VMware 環境を構築できます。
 * **NetApp ONTAP Select**: NetApp ONTAP Select オファリングでは、NetApp ONTAP Select をベースとする可用性の高い専用ストレージ・アプライアンスを必要とするニーズに対応するソフトウェア定義ストレージ・クラスターをデプロイできます。
@@ -68,7 +68,7 @@ lastupdated: "2018-06-05"
 
 **注**:
 * このサービスは、V2.2 以降のリリースでデプロイまたは V2.2 以降のリリースにアップグレードされたインスタンスでのみ使用できます。
-* V2.3 以降のリリースでデプロイされたインスタンスの場合、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} がデフォルトのバックアップ・サービスになります。 このサービスは、管理 VM を自動的にバックアップします。
+* V2.3 以降のリリースでデプロイされたインスタンスの場合、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} は管理 VM のバックアップを自動的に行います。
 * V2.2 でデプロイされたインスタンスの場合、このサービスはワークロード VM のデータのみを保護します。
 
 詳しくは、[IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} の管理](../services/managingspp.html)を参照してください。

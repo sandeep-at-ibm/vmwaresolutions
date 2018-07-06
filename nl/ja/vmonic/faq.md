@@ -27,12 +27,12 @@ lastupdated: "2018-05-28"
 
 ## vCenter Server インスタンスと Cloud Foundation インスタンスと VMware vSphere クラスターの違いはどこにありますか?
 
-どのインスタンス・タイプでも、VMware 仮想環境のデプロイメント方法を選択できます。違いは、カスタマイズと自動化の程度にあります。
+どのインスタンス・タイプでも、VMware 仮想環境のデプロイメント方法を選択できます。 違いは、カスタマイズと自動化の程度にあります。
 
 * VMware vCenter Server インスタンスを注文した場合は、カスタマイズしたコンピュート、ストレージ、ネットワークのリソースを備えた VMware 仮想環境がデプロイされます。 デプロイされるコンポーネントについて詳しくは、[vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html)の『_vCenter Server の技術仕様_』セクションを参照してください。
 * VMware Cloud Foundation インスタンスを注文した場合は、統一されたソフトウェア定義データ・センター (SDDC) プラットフォームがデプロイされます。 デプロイされるコンポーネントについて詳しくは、[Cloud Foundation インスタンスのコンポーネント](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)を参照してください。
-* VMware vSphere クラスターを注文すると、ホスト対象の VMware 環境を、VMware 互換ハードウェアを組み込みながら設計して構築するための柔軟性が最大化されます。ただし、{{site.data.keyword.cloud_notm}} では、VMware vSphere クラスターのオプションの VMware コンポーネントのインストールや構成や起動が自動化されません。
-* vCenter Server インスタンスと Cloud Foundation インスタンスと vSphere クラスターでは、サポートされている機能がそれぞれ違います。詳しくは、[オファリングの比較表](inst_comp_chart.html)を参照してください。
+* VMware vSphere クラスターを注文すると、ホスト対象の VMware 環境を、VMware 互換ハードウェアを組み込みながら設計して構築するための柔軟性が最大化されます。 ただし、{{site.data.keyword.cloud_notm}} では、VMware vSphere クラスターのオプションの VMware コンポーネントのインストールや構成や起動が自動化されません。
+* vCenter Server インスタンスと Cloud Foundation インスタンスと vSphere クラスターでは、サポートされている機能がそれぞれ違います。 詳しくは、[オファリングの比較表](inst_comp_chart.html)を参照してください。
 
 ## vCenter Server インスタンスには何が含まれていますか?
 
@@ -100,7 +100,7 @@ VMware の更新は、デプロイした VMware インスタンスのタイプ�
 
 ## インスタンスのデータ・センターを選択するにはどうすればよいですか?
 
-インスタンスのデプロイメントには、物理インフラストラクチャーに関する厳密な要件があります。ただし、具体的な要件は、{{site.data.keyword.CloudDataCents_notm}}ごとに違います。インスタンスの注文時に、各地域で利用できるデータ・センターのリストが表示され、そのリストの中から 1 つを選択できます。
+インスタンスのデプロイメントには、物理インフラストラクチャーに関する厳密な要件があります。ただし、具体的な要件は、{{site.data.keyword.CloudDataCents_notm}}ごとに違います。 インスタンスの注文時に、各地域で利用できるデータ・センターのリストが表示され、そのリストの中から 1 つを選択できます。
 
 詳しくは、以下の資料にある『_IBM Cloud データ・センターの使用可否_』セクションを参照してください。
 * [vCenter Server インスタンスの要件と計画](../vcenter/vc_planning.html)

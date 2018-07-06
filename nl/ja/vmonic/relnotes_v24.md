@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -58,29 +58,29 @@ V2.4 リリースから、VMware Cloud Foundation on {{site.data.keyword.cloud_n
 
 ### ネットワーク・ファイル・システムのパフォーマンスの強化
 
-ワークロードが非常に大きいタイプの処理に合わせて設計されている 10 IOPS/GB のパフォーマンス・レベルが、特定の {{site.data.keyword.CloudDataCent_notm}}に制限されずに、すべてのデータ・センターで利用できるようになりました。詳しくは、[vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications)の『*ストレージ*』セクションを参照してください。
+ワークロードが非常に大きいタイプの処理に合わせて設計されている 10 IOPS/GB のパフォーマンス・レベルが、特定の {{site.data.keyword.CloudDataCent_notm}}に制限されずに、すべてのデータ・センターで利用できるようになりました。 詳しくは、[vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications)の『*ストレージ*』セクションを参照してください。
 
 ## VMware Federal インスタンスの更新
 
 ### IBM Cloud データ・センターの新しいオプション
 
-VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.CloudDataCent_notm}}にデプロイできるようになりました。詳しくは、[VMware Federal インスタンスの要件と計画](../vcenter/vc_fed_planning.html#ibm-cloud-data-center-availability)の『*IBM Cloud データ・センターの使用可否*』セクションを参照してください。
+VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.CloudDataCent_notm}}にデプロイできるようになりました。 詳しくは、[VMware Federal インスタンスの要件と計画](../vcenter/vc_fed_planning.html#ibm-cloud-data-center-availability)の『*IBM Cloud データ・センターの使用可否*』セクションを参照してください。
 
 ## アドオン・サービスの更新
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-現行リリースでは、新しくデプロイするすべてのインスタンスで、IBM Spectrum Protect&trade; Plus V10.1.1 パッチ 1 がデフォルトのバックアップ・サービスとしてインストールされます。IBM Spectrum Protect Plus V10.1.1 パッチ 1 の新機能については、[IBM Spectrum Protect Plus の更新](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}を参照してください。
+現行リリースでは、新しくデプロイするすべてのインスタンスで、IBM Spectrum Protect&trade; Plus V10.1.1 パッチ 1 がインストールされます。IBM Spectrum Protect Plus V10.1.1 パッチ 1 の新機能については、[IBM Spectrum Protect Plus の更新](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}を参照してください。
 
 ### VMware HCX on IBM Cloud
 
-新しいオプションが用意され、このサービスの注文時に、HCX 相互接続のためにパブリック・ネットワークとプライベート・ネットワークのいずれかを選択できるようになりました。詳しくは、[VMware HCX on IBM Cloud の注文](../services/hcx_ordering.html)を参照してください。
+新しいオプションが用意され、このサービスの注文時に、HCX 相互接続のためにパブリック・ネットワークとプライベート・ネットワークのいずれかを選択できるようになりました。 詳しくは、[VMware HCX on IBM Cloud の注文](../services/hcx_ordering.html)を参照してください。
 
 ## 新規資料および更新された資料
 
 ### リファレンス・アーキテクチャー資料
 
-{{site.data.keyword.vmwaresolutions_short}} のアーキテクチャー資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。リファレンス・アーキテクチャー資料は英語版しかありません。詳しくは、[ソリューションの概要](../archiref/solution/solution_overview.html)を参照してください。
+{{site.data.keyword.vmwaresolutions_short}} のアーキテクチャー資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。 リファレンス・アーキテクチャー資料は英語版しかありません。 詳しくは、[ソリューションの概要](../archiref/solution/solution_overview.html)を参照してください。
 
 ### サービスの資料
 
@@ -89,8 +89,8 @@ VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.Clou
 詳しくは、以下を参照してください。
 
 * [F5 on IBM Cloud の注文](../services/f5_ordering.html)
-* [FortiGate Security Appliance on IBM Cloud の注文](../services/fortigate_physical_ordering.html)
-* [FortiGate Virtual Appliance on IBM Cloud の注文](../services/fortigate_vm_ordering.html)
+* [FortiGate Security Appliance on IBM Cloud の注文](../services/fsa_ordering.html)
+* [FortiGate Virtual Appliance on IBM Cloud の注文](../services/fortinetvm_ordering.html)
 * [Hytrust CloudControl on IBM Cloud の注文](../services/htcc_ordering.html)
 * [Hytrust DataControl on IBM Cloud の注文](../services/htdc_ordering.html)
 * [IBM Spectrum Protect Plus on IBM Cloud の注文](../services/spp_ordering.html)
@@ -103,6 +103,6 @@ VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.Clou
 ユーザー・インターフェースが更新され、以下の拡張機能が備えられました。
 
 * クラスターの追加とサービスの追加のためのペインがページ形式になり、レイアウトの編成が改善された結果、タスクをより効率的に実行できるようになっています。
-* **「デプロイ済みインスタンス」**ページの機能が強化され、検索機能、ページ編集機能、ソート機能が追加されています。こうした機能強化によって、インスタンスをより素早く見つけ出せるようになりました。
+* **「デプロイ済みインスタンス」**ページの機能が強化され、検索機能、ページ編集機能、ソート機能が追加されています。 こうした機能強化によって、インスタンスをより素早く見つけ出せるようになりました。
 * インスタンスの詳細ページの左側にナビゲーション・メニューが付いたので、インスタンス情報へのアクセスがより簡単になりました。
 * ユーザー・インターフェースで適切な設定を選択できるように、エラー・メッセージとツールチップにさまざまな改善が行われました。
