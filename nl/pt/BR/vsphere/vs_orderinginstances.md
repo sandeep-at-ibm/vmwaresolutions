@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -19,7 +19,7 @@ Este procedimento guia você pela seleção de componente do VMware, configuraç
 ## Requisitos
 
 Assegure-se de que tenha concluído as tarefas a seguir:
-*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](../vmonic/useraccount.html).
+*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](../vmonic/useraccount.html).
 *  Você revisou os requisitos e as considerações em [Requisitos e planejamento para clusters do vSphere](vs_planning.html).
 
 ## Configurações do sistema
