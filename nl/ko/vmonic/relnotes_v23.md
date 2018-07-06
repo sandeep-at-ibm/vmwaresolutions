@@ -26,7 +26,7 @@ lastupdated: "2018-05-28"
 
 이 릴리스에서는 VMware vCenter Server on IBM Cloud with Hybridity Bundle 오퍼링이 도입되었습니다. vCenter Server with Hybridity Bundle은 온프레미스 인프라를 클라우드로 쉽고 빠르게 확장하는 데 도움을 주는 프라이빗 클라우드에서 호스팅됩니다. VMware 환경은 IBM 제공 VMware 소프트웨어 정의 데이터 센터 라이센스를 기반으로 하며 원활한 인프라 하이브리드 및 진정한 애플리케이션 이동성을 달성하기 위해 온프레미스 vSphere 5.0+ 환경을 IBM Cloud 사이트와 쉽고 안전하게 연결하는 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 포함합니다.
 
-HCX on {{site.data.keyword.cloud_notm}} 서비스는 vCenter Server with Hybridity Bundle 인스턴스를 통해서만 사용 가능합니다. 먼저 기본 vCenter Server V2.3 소프트웨어 업데이트를 적용한 후 기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 업데이트 적용](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html)을 참조하십시오.
+HCX on {{site.data.keyword.cloud_notm}} 서비스는 vCenter Server with Hybridity Bundle 인스턴스를 통해서만 사용 가능합니다. 먼저 기본 vCenter Server V2.3 소프트웨어 업데이트를 적용한 후 기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 업데이트 적용](../vcenter/vc_applyingupdates.html)을 참조하십시오.
 
 vCenter Server with Hybridity Bundle에 대한 자세한 정보는 다음 항목을 참조하십시오.
 

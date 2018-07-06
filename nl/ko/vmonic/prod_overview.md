@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-05"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -68,7 +68,7 @@ lastupdated: "2018-06-05"
 
 **참고**:
 * 이 서비스는 V2.2 이상 릴리스에 배치된 인스턴스에서만 사용할 수 있습니다.
-* V2.3 이상 릴리스에 배치된 인스턴스의 경우 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}가 기본 백업 서비스입니다. 이 서비스는 관리 VM에 대한 백업을 자동으로 제공합니다.
+* V2.3 이상 릴리스로 배치된 인스턴스의 경우 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}는 관리 VM에 대한 백업을 자동으로 제공합니다. 
 * V2.2로 배치된 인스턴스의 경우 이 서비스는 워크로드 VM에 대한 데이터 보호만 제공합니다.
 
 자세한 정보는 [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 관리](../services/managingspp.html)를 참조하십시오.
