@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ Para implementar uma plataforma virtualizada VMware flexível e customizável qu
 ## Requisitos
 
 Assegure-se de que tenha concluído as tarefas a seguir:
-* Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](../vmonic/useraccount.html).
+* Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](../vmonic/useraccount.html).
 * Você revisou as informações em [Requisitos e planejamento para instâncias do vCenter Server](vc_planning.html).
 * Você revisou o formato de nome da instância e do domínio. O nome do domínio e o rótulo do subdomínio são usados para gerar o nome do usuário e os nomes do servidor da instância.
 
@@ -126,7 +126,8 @@ Quando você selecionar **Armazenamento do NFS**, será possível incluir armaze
 
 **Nota:** o número de compartilhamentos de arquivos deve estar no intervalo de 1 a 32.
 
-* **Configure compartilhamentos de arquivos individualmente**: selecione para especificar as definições de configuração diferentes para cada compartilhamento de arquivo.
+* **Configurar compartilhamentos individualmente**: selecione para especificar
+diferentes definições de configuração para cada compartilhamento de arquivo.
 * **Número de compartilhamentos**: ao usar a mesma definição de configuração para cada compartilhamento de arquivo, especifique o número de compartilhamentos de arquivos para o armazenamento compartilhado do NFS que você deseja incluir.
 * **Tamanho**: selecione a capacidade que atenda às suas necessidades de armazenamento compartilhado.
 * **Desempenho**: selecione o IOPS (Input/output Operations Per Second) por GB com base em seus requisitos de carga de trabalho.
@@ -237,9 +238,13 @@ Com base em sua configuração selecionada para os serviços de instância e com
     3. Especifique o número de {{site.data.keyword.baremetal_short}}. Se estiver planejando usar vSAN como sua solução de armazenamento, observe que será necessário um mínimo de 4 {{site.data.keyword.baremetal_short}}.  
 
 7. Conclua as configurações de armazenamento:
-   * Quando você selecionar **Armazenamento vSAN**, especifique o **Número de discos de capacidade de vSAN**, o **Tipo e tamanho do disco para discos de capacidade de vSAN** e como a **Licença do vSAN** deve ser fornecida.
-   * Quando você selecionar **Armazenamento NFS**, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**. As configurações se aplicam a todos os compartilhamentos de arquivo.
-   * Para incluir e configurar compartilhamentos de arquivos individualmente, selecione a guia **Armazenamento do NFS customizado** e, em seguida, clique no ícone **+** ao lado do rótulo **Incluir NFS** e selecione o **Tamanho** e o **Desempenho** para cada compartilhamento de arquivo. Deve-se selecionar pelo menos um compartilhamento de arquivo.
+  * Quando você selecionar **Armazenamento vSAN**, especifique o **Tipo
+e tamanho do disco para discos de capacidade vSAN**, o **Número de discos de
+capacidade vSAN** e como a **Licença vSAN** deve ser fornecida.
+  * Quando você selecionar **Armazenamento NFS** e desejar incluir e definir as mesmas configurações para todos os compartilhamentos de arquivos, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
+  * Quando você selecionar **Armazenamento NFS** e desejar incluir e configurar compartilhamentos de arquivos individualmente, selecione **Configurar compartilhamentos
+individualmente**, em seguida, clique no ícone **+** ao lado do rótulo **Incluir NFS** e selecione o **Tamanho** e o **Desempenho**
+para cada compartilhamento de arquivo individual. Deve-se selecionar pelo menos um compartilhamento de arquivo.
 
 8. Conclua as configurações da interface de rede.
    1. Insira o prefixo de nome do host, o rótulo do subdomínio e o nome do domínio-raiz. Para uma instância secundária, o nome do domínio é preenchido automaticamente.

@@ -102,7 +102,7 @@ Um Bare Metal Server com a configuração apresentada em [Componentes da instân
 ## Links relacionados
 
 * [Lista de materiais do software vCenter Server](vc_bom.html)
-* [Requisitos e planejamento para instâncias do VMware Federal](vc_fed_planning.html)
+* [Requisitos e planejamento para as instâncias do VMware Federal](vc_fed_planning.html)
 * [Pedindo instâncias do VMware Federal](vc_fed_orderinginstance.html)
 * [Protegendo instâncias do VMware Federal](vc_fed_securinginstance.html)
 * [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)

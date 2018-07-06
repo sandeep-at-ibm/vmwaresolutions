@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -14,7 +14,7 @@ Revise os requisitos a seguir antes de pedir sua instância do VMware vCenter Se
 
 ## Requisitos da conta do IBM Cloud
 
-A conta do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, veja [Requisitos de conta do {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+A conta do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, veja [Requisitos para a conta do {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
 
 ## Disponibilidade do data center do IBM Cloud
 
@@ -72,7 +72,7 @@ A instância do vCenter Server with Hybridity Bundle inclui o licenciamento do V
 Quando você implementar esse serviço, conclua as configurações a seguir:
 * Especifique o **Tipo de interconexão do HCX** selecionando uma das opções a seguir:
   * **Rede pública**: o HCX cria uma conexão criptografada entre sites na rede pública.
-  * **Rede privada**: o HCX cria uma conexão criptografada entre sites na rede privada. 
+  * **Rede privada**: o HCX cria uma conexão criptografada entre sites na rede privada.
 * Especifique o **Tipo de certificado de terminal**. Se selecionar **Certificado de autoridade de certificação**, configure as definições a seguir:
   * **Conteúdo do certificado**: insira o conteúdo do certificado de autoridade de certificação.
   * **Chave privada**: insira a chave privada do certificado de autoridade de certificação.
