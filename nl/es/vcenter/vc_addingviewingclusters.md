@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -80,7 +80,7 @@ Después del despliegue, puede crear un máximo de cuatro clústeres más. Si se
 
 ### Valores de almacenamiento
 
-Para el almacenamiento, puede utilizar, puede utilizar **vSAN** o **NFS**.
+Los valores de almacenamiento dependen de la opción que seleccione de configuración de Servidor nativo y de tipo de almacenamiento.
 
 #### Almacenamiento vSAN
 
@@ -94,7 +94,7 @@ Cuando seleccione **Almacenamiento de NFS**, puede añadir almacenamiento compar
 
 **Nota:** El número de comparticiones de archivo debe estar comprendido entre 1 y 32.
 
-* **Configurar las comparticiones de archivos individualmente**: Seleccione para especificar distintos valores de configuración para cada compartición de archivos.
+* **Configurar las comparticiones individualmente**: Seleccione para especificar distintos valores de configuración para cada compartición de archivos.
 * **Número de unidades compartidas**: Al utilizar el mismo valor de configuración para cada compartición de archivos, especifique el número de comparticiones de archivos para el almacenamiento compartido de NFS que desee añadir.
 * **Almacenamiento**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
 * **Rendimiento**: seleccione el valor de IOPS (operaciones de entrada/salida por segundo) por GB en función de sus requisitos de carga de trabajo.
@@ -129,12 +129,12 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 4. En la página **Añadir clúster**, escriba el nombre de clúster.
 5. Si desea alojar el clúster en un {{site.data.keyword.CloudDataCent_notm}} diferente al que se aloja la instancia, en **Servidor nativo**, marque el recuadro de selección **Seleccione otra ubicación** y elija el {{site.data.keyword.CloudDataCent_notm}} para alojar la instancia.
 6. Complete la configuración del servidor nativo.
-   * Si ha seleccionado **Preconfigurado**, especifique el valor de **Configuración de servidor nativo** y el valor de **Número de servidores nativos**. Si tiene previsto utilizar vSAN como solución de almacenamiento, tenga en cuenta que se necesitan un mínimo de 4 {{site.data.keyword.baremetal_short}}.
-   * Si ha seleccionado **Personalizado**, especifique el valor de **Modelo de CPU**, la cantidad de **RAM** y el valor de **Número de servidores nativos**.
+   * Si ha seleccionado **Preconfigurado**, especifique el valor de **Configuración de servidor nativo** y el valor de **Número de {{site.data.keyword.baremetal_short}}**. Si tiene previsto utilizar vSAN como solución de almacenamiento, tenga en cuenta que se necesitan un mínimo de 4 {{site.data.keyword.baremetal_short}}.
+   * Si ha seleccionado **Personalizado**, especifique el valor de **Modelo de CPU**, la cantidad de **RAM** y el valor de **Número de {{site.data.keyword.baremetal_short}}**.
 7. Complete la configuración del almacenamiento.
-   * Si selecciona **Almacenamiento vSAN**, especifique el **Número de discos de capacidad vSAN**, el **Tipo y tamaño de disco para discos de capacidad vSAN**, y cómo se proporciona la **Licencia de vSAN**.
-   * Si selecciona **Almacenamiento NFS**, especifique el **Número de unidades compartidas**, el **Tamaño** y el **Rendimiento**.
-   * Para añadir y configurar las unidades compartidas de archivos individualmente, seleccione el separador **Almacenamiento NFS personalizado**, pulse el icono **+** situado junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivo. Debe seleccionar al menos una unidad compartida de archivo.
+  * Cuando seleccione **Almacenamiento vSAN**, especifique el **Tipo y tamaño de los discos de capacidad vSAN**, el **Número de discos de capacidad vSAN**, y cómo se proporciona la **Licencia de vSAN**.
+  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar los mismos valores a todas las comparticiones de archivos, especifique el **Número de unidades compartidas**, el **Tamaño** y el **Rendimiento**.
+  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar las comparticiones de archivos individualmente, seleccione **Configurar recursos compartidos individualmente** y a continuación pulse sobre el icono **+** junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivos individual. Debe seleccionar al menos una unidad compartida de archivo.
 8. Especifique cómo se proporciona la clave de licencia de vSphere:
   * Para los usuarios de Business Partners, se incluye y se adquiere en su nombre la licencia de vSphere (edición Enterprise Plus).
   * Para los usuarios que no son Business Partners, puede seleccionar una de las siguientes opciones:

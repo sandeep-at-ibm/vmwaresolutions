@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -17,7 +17,7 @@ Para desplegar una plataforma virtualizada VMware flexible y personalizable que 
 ## Requisitos
 
 Asegúrese de haber realizado las tareas siguientes:
-* Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Cuentas de usuario y valores](../vmonic/useraccount.html).
+* Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
 * Ha revisado la información de [Requisitos y planificación de instancias de VMware Federal](vc_fed_planning.html).
 * Ha revisado el formato del nombre de dominio e instancia. El nombre de dominio y la etiqueta de subdominio se utilizan para generar el nombre de usuario y los nombres de servidor de la instancia.
 
@@ -95,7 +95,7 @@ Todos los servidores ESXi comparten la misma configuración. Después del despli
 
 ## Valores de almacenamiento
 
-Los valores de almacenamiento dependen de si ha seleccionado almacenamiento vSAN, NFS o personalizado.
+Los valores de almacenamiento dependen de la opción que seleccione de configuración de Servidor nativo y de tipo de almacenamiento.
 
 ### Almacenamiento vSAN
 
@@ -111,7 +111,7 @@ Cuando seleccione **Almacenamiento de NFS**, puede añadir almacenamiento compar
 
 **Nota:** El número de comparticiones de archivo debe estar comprendido entre 1 y 32.
 
-* **Configurar las comparticiones de archivos individualmente**: Seleccione para especificar distintos valores de configuración para cada compartición de archivos.
+* **Configurar las comparticiones individualmente**: Seleccione para especificar distintos valores de configuración para cada compartición de archivos.
 * **Número de unidades compartidas**: Al utilizar el mismo valor de configuración para cada compartición de archivos, especifique el número de comparticiones de archivos para el almacenamiento compartido de NFS que desee añadir.
 * **Almacenamiento**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
 * **Rendimiento**: seleccione el valor de IOPS (operaciones de entrada/salida por segundo) por GB en función de sus requisitos de carga de trabajo.
@@ -183,9 +183,9 @@ En función de la configuración seleccionada para la instancia, el coste estima
   1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} que va a alojar la instancia.
   2. Seleccione el modelo de CPU **Personalizado** y la cantidad de **RAM**.
 7. Complete la configuración del almacenamiento.
-      * Si ha seleccionado **Almacenamiento vSAN**, seleccione el **Tipo y tamaño de disco para discos de capacidad vSAN**, el **Número de discos de capacidad vSAN** y la edición de licencia de VMware vSAN.
-      * Si ha seleccionado **Almacenamiento NFS**, seleccione el **Número de unidades compartidas**, el **Tamaño** y el **Rendimiento**.
-      * Para añadir y configurar las unidades compartidas de archivos individualmente, seleccione el separador **Almacenamiento NFS personalizado**, pulse el icono **+** situado junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivo. Debe seleccionar al menos una unidad compartida de archivo.
+  * Cuando seleccione **Almacenamiento vSAN**, especifique el **Tipo y tamaño de los discos de capacidad vSAN**, el **Número de discos de capacidad vSAN**, y cómo se proporciona la **Licencia de vSAN**.
+  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar los mismos valores a todas las comparticiones de archivos, especifique el **Número de unidades compartidas**, el **Tamaño** y el **Rendimiento**.
+  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar las comparticiones de archivos individualmente, seleccione **Configurar recursos compartidos individualmente** y a continuación pulse sobre el icono **+** junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivos individual. Debe seleccionar al menos una unidad compartida de archivo.
 8. Complete la configuración de interfaz de red.
    1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio raíz.
    2. Seleccione la configuración de DNS.
@@ -199,7 +199,7 @@ En función de la configuración seleccionada para la instancia, el coste estima
 
 El despliegue de la instancia comienza automáticamente. Recibirá una confirmación de que el pedido se está procesando y puede comprobar el estado del despliegue consultando los detalles de la instancia.
 
-Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Componentes de la instancia de VMware Federal](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) se instalarán en la plataforma virtual VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**.
+Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Componentes de la instancia de vCenter Server para VMware Federal en {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) se han instalado en la plataforma virtual VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**.
 
 Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 

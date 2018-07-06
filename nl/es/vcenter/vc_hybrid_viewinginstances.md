@@ -74,8 +74,8 @@ Tabla 4. Información de acceso de vCenter Server con el paquete híbrido (Hybri
 
 | Componente        | Descripción       |
 |:------------- |:------------- |
-| AD/DNS IPs | Las direcciones IP de los dos servidores AD. |
-| AD/DNS FQDNs | Los nombres de dominio completos del servidor AD/DNS.<br><br>**Nota:** se puede utilizar la misma contraseña del administrador para conectarse a todos los servidores AD/DNS mediante una conexión de escritorio remoto. |
+| AD/DNS IP | Las direcciones IP de los dos servidores AD. |
+| AD/DNS FQDN | Los nombres de dominio completos del servidor AD/DNS.<br><br>**Nota:** se puede utilizar la misma contraseña del administrador para conectarse a todos los servidores AD/DNS mediante una conexión de escritorio remoto. |
 | AD/DNS ADMIN (Remote Desktop)  | Para las instancias primarias, muestra el nombre de usuario y la contraseña para acceder al servidor AD mediante una conexión remota de escritorio.<br><br>Para instancias secundarias, pulse el enlace **Ver en la instancia primaria** para ir a la información sobre nombre de usuario y contraseña de la instancia primaria.<br><br>**Nota**: después de que la instancia secundaria se añada al dominio DNS primario y de que se produzca la réplica, la contraseña del administrador local de la instancia primaria puede sobrescribir la contraseña del administrador local en la instancia secundaria. Si pulsa el enlace **Ver en la instancia primaria**, accederá a la contraseña correcta del administrador.  
 | NSX Manager IP  | La dirección IP de NSX Manager.  |
 | NSX Manager FQDN  | El nombre de dominio completo de NSX Manager (FQDN).  |

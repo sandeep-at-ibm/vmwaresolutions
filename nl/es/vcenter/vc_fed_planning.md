@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -14,7 +14,7 @@ Revise los siguientes requisitos antes de solicitar una instancia de VMware Fede
 
 ## Requisitos de la cuenta de IBM Cloud
 
-La cuenta de {{site.data.keyword.cloud}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos de la cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+La cuenta de {{site.data.keyword.cloud}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
 
 ## Disponibilidad del centro de datos de IBM Cloud
 

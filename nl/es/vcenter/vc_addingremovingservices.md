@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -18,18 +18,18 @@ La tabla siguiente muestra los servicios que están disponibles para instancias 
 
 Tabla 1. Servicios disponibles para las instancias de vCenter Server
 
-| Nombre de servicio                                                                           | Disponibilidad |
+| Nombre de servicio | Disponibilidad | Soporte instancia |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on IBM Cloud](../services/f5_considerations.html)                                 | Sí              |
-| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       | Sí              |
-| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) | Sí              |
-| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              | Sí              |
-| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              | Sí              |
-| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         | Sí              |
-| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  | Sí              |
-| [Veeam on IBM Cloud](../ services/veeam_considerations.html)                           | Sí              |
-| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                         | No              |
-| [Zerto on IBM Cloud](../services/addingzertodr.html)                                 | Sí              |
+| [F5 on IBM Cloud](../services/f5_considerations.html)                                 | Sí | V1.9 y posterior |
+| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       | Sí | V1.8 y posterior |
+| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) | Sí | V2.0 y posterior |
+| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              | Sí | V2.3 y posterior |
+| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              | Sí | V2.3 y posterior |
+| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         | Sí | V2.2 y posterior |
+| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  | Sí | V2.2 y posterior |
+| [Veeam on IBM Cloud](../services/veeam_considerations.html)                          | Sí | V1.8 y posterior |
+| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                         | No | No es aplicable |
+| [Zerto on IBM Cloud](../services/addingzertodr.html)                                 | Sí | V1.2 y posterior |
 
 
 ## Adición de servicios a instancias de vCenter Server

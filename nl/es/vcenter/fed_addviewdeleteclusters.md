@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -65,7 +65,7 @@ Después del despliegue, puede crear un máximo de cuatro clústeres más. Para 
 
 ### Valores de almacenamiento
 
-Los valores de almacenamiento dependen de si ha seleccionado almacenamiento vSAN, NFS o personalizado.
+Los valores de almacenamiento dependen de la opción que seleccione de configuración de Servidor nativo y de tipo de almacenamiento.
 
 #### Almacenamiento vSAN
 
@@ -83,7 +83,7 @@ Cuando seleccione **Almacenamiento de NFS**, puede añadir almacenamiento compar
 
 **Nota:** El número de comparticiones de archivo debe estar comprendido entre 1 y 32.
 
-* **Configurar las comparticiones de archivos individualmente**: Seleccione para especificar distintos valores de configuración para cada compartición de archivos.
+* **Configurar las comparticiones individualmente**: Seleccione para especificar distintos valores de configuración para cada compartición de archivos.
 * **Número de unidades compartidas**: Al utilizar el mismo valor de configuración para cada compartición de archivos, especifique el número de comparticiones de archivos para el almacenamiento compartido de NFS que desee añadir.
 * **Almacenamiento**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
 * **Rendimiento**: seleccione el valor de IOPS (operaciones de entrada/salida por segundo) por GB en función de sus requisitos de carga de trabajo.
@@ -120,9 +120,9 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 4. En la página **Añadir clúster**, escriba el nombre de clúster.
 5. Seleccione el **Modelo de CPU**, la cantidad de **RAM** y el **Número de servidores nativos** de la configuración del servidor nativo.
 6. Complete la configuración del almacenamiento.
-  * Si selecciona **Almacenamiento vSAN**, seleccione el **Tipo y tamaño de disco para discos de capacidad vSAN**, el **Número de discos de capacidad vSAN** y la edición de licencia de VMware vSAN.
-  * Si selecciona **Almacenamiento NFS**, seleccione el **Número de unidades compartidas**, el **Tamaño** y el **Rendimiento**.
-  * Para añadir y configurar las unidades compartidas de archivos individualmente, seleccione el separador **Almacenamiento NFS personalizado**, pulse el icono **+** situado junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivo. Debe seleccionar al menos una unidad compartida de archivo.
+  * Cuando seleccione **Almacenamiento vSAN**, especifique el **Tipo y tamaño de los discos de capacidad vSAN**, el **Número de discos de capacidad vSAN**, y cómo se proporciona la **Licencia de vSAN**.
+  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar los mismos valores a todas las comparticiones de archivos, especifique el **Número de unidades compartidas**, el **Tamaño** y el **Rendimiento**.
+  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar las comparticiones de archivos individualmente, seleccione **Configurar recursos compartidos individualmente** y a continuación pulse sobre el icono **+** junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivos individual. Debe seleccionar al menos una unidad compartida de archivo.
 7. Seleccione la edición de licencia para vSAN VMware para la configuración de licencia.
 8. En el panel **Resumen del pedido**, verifique la configuración del clúster antes de añadir el clúster.
    1. Revise los valores para el clúster.

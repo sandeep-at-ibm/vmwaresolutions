@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -64,7 +64,7 @@ Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e
 
 **Notas**:
 * El valor **MaxVolumes** es obligatorio para el servicio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} porque el servicio puede utilizar más del número predeterminado de montajes de NFS en el servidor ESXi.
-* El valor **No definido** para un valor de configuración indica que el nuevo valor no se aplica automáticamente porque requiere que se reinicien los servidores ESXi, lo que puede suponer una interrupción.
+* El valor **No definido** para un valor de configuración indica que el nuevo valor no se aplica automáticamente porque requiere que se rearranquen los servidores ESXi, lo que puede suponer una interrupción.
 
   Se recomienda cambiar los valores de configuración **No definido** por los nuevos valores para mantener la coherencia entre todas las instancias y permitir un soporte adecuado para la ampliación de almacenamiento. IBM tiene intención de realizar pruebas solo con estos nuevos valores para {{site.data.keyword.vmwaresolutions_short}} V2.2 y releases posteriores.
 
@@ -90,31 +90,41 @@ Tabla 4. Valores de configuración de grupos de puertos y NSX para instancias de
 
 ## Valores de configuración de MTU de red
 
-El clúster de vSphere utiliza dos conmutadores distribuidos de vSphere (VDS), uno para la conectividad de red pública y el otro para la conectividad de red privada.
+El clúster de vSphere utiliza dos conmutadores virtuales distribuidos de vSphere (VDS), uno para la conectividad de red pública y el otro para la conectividad de red privada.
 
 Las conexiones de red privada están configuradas para utilizar MTU (unidad de transmisión máxima) de tramas Jumbo con un tamaño de 9000, lo que mejora el rendimiento de las grandes transferencias de datos como almacenamiento y VMware vMotion. Esta es la MTU máxima permitida en VMware por IBM Cloud.
 
 En V2.1 o posterior, las conexiones de red pública utilizan una MTU estándar de Ethernet de 1500. Este valor de 1500 debe mantenerse; cualquier cambio puede provocar la fragmentación de paquetes a través de Internet.
 
-Revise la tabla siguiente para obtener una visión general de los valores de configuración de MTU de red que se aplican a los conmutadores virtuales distribuidos (DVS) público y privado en función de si la instancia de vCenter Server se ha desplegado en V2.1 o posterior.  
+Revise la tabla siguiente para obtener una visión general de los valores de configuración de MTU de red que se aplican a los conmutadores virtuales distribuidos (DVS) público y privado en función de si la instancia de vCenter Server se ha desplegado en V2.1 o posterior.
+
+Tabla 5. Valores de configuración de MTU para clústeres e instancias de vCenter Server según la versión de la instancia
+
+| VDS | V2.1 o posterior  | V2.0 o anterior (o actualizado desde V2.0 o anterior) |
+|:-------------- |:-------------- |:------------- |
+| Conmutador público  | 1500 (predeterminado) | 9000 (tramas Jumbo) |
+| Conmutador privado | 9000 (tramas Jumbo) | 9000 (tramas Jumbo) |
 
 Los valores se aplican a instancias nuevas y a clústeres nuevos de instancias desplegadas en V2.1 o posterior. Los valores también se aplican a los clústeres nuevos entre centros de datos de IBM Cloud de instancias que se han actualizado a V2.1 o posterior.
 
 Los valores no se aplican a clústeres nuevos en el mismo centro de datos de IBM Cloud de instancias existentes de V2.0 o anterior ni de instancias existentes actualizadas a V2.1 o posterior.
 
-**Nota**: para instancias desplegadas en V2.0 o anterior, se recomienda que actualice usted mismo el valor de MTU del conmutador público a 1500.  
+Para instancias desplegadas en V2.0 o anterior, se recomienda que actualice usted mismo el valor de MTU del conmutador público a 1500.
 
-Tabla 5. Valores de configuración de MTU para clústeres e instancias de vCenter Server
+### Actualización del valor de MTU del conmutador público
 
-| Conmutador virtual distribuido (DVS) | V2.1 o posterior  | V2.0 o anterior (o actualizado desde V2.0 o anterior) |   
-|:-------------- |:-------------- |:------------- |
-| Conmutador público  | 1500 (predeterminado) | 9000 (tramas Jumbo) |
-| Conmutador privado | 9000 (tramas Jumbo) | 9000 (tramas Jumbo) |
+Para actualizar el valor de MTU del conmutador público, siga estos pasos en el cliente web de VMware vSphere:
+1. Pulse el botón derecho del ratón y luego pulse en **Editar valores**.
+2. En el separador **Propiedades**, seleccione la opción **Avanzadas**.
+3. Asegúrese de que el valor de **MTU máxima** está establecido en 1500.
+
+   **Nota**: Al cambiar el tamaño de MTU en un vDS, los enlaces ascendentes adjuntos (NIC físicas) se detienen y se vuelven a iniciar. Como resultado se produce una breve parada para las máquinas virtuales que están utilizando el enlace ascendente. Por lo tanto se recomienda planear la actualización del valor de la MTU durante una parada planificada.
 
 ## Enlaces relacionados
 
 * [Números de compilación y versiones de VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Números de compilación y versiones de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
+* [Habilitación de tramas de gran tamaño en conmutadores distribuidos virtuales](https://kb.vmware.com/s/article/1038827)
 * [Hoja de datos de VMware vCenter Server on IBM Cloud Protection](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 * [Visión general de vCenter Server](vc_vcenterserveroverview.html)
 * [Planificación de instancias de vCenter Server](vc_planning.html)
