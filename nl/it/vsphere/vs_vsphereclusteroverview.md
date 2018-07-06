@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -79,7 +79,7 @@ Un Bare Metal Server IBM Cloud con la configurazione di rete presentata in [Comp
 * Un Bare Metal Server IBM Cloud con VMware vSphere Enterprise Plus 6.0u2 o 6.5u1  
 * Componenti VMware facoltativi presentati in [Componenti di VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
-**Importante**: devi gestire i server ESXi, i componenti VMware facoltativi e ulteriore hardware ordinato e consegnato al tuo account {{site.data.keyword.cloud_notm}} solo dal {{site.data.keyword.slportal}}. Dopo aver creato un nuovo cluster nella console {{site.data.keyword.vmwaresolutions_short}}, puoi tornare alla console per ridimensionare il nuovo cluster utilizzando la configurazione salvata. Per ulteriori informazioni, vedi [Ridimensionamento di cluster esistenti](vs_scalingexistingclusters.html).
+**Importante**: devi gestire i server ESXi, i componenti VMware facoltativi e ulteriore hardware ordinato e consegnato al tuo account {{site.data.keyword.cloud_notm}} solo dal {{site.data.keyword.slportal}}. Dopo aver creato un nuovo cluster nella console {{site.data.keyword.vmwaresolutions_short}}, puoi tornare alla console per ridimensionare il nuovo cluster utilizzando la configurazione salvata. Per ulteriori informazioni, vedi [Ridimensionamento di cluster vSphere esistenti](vs_scalingexistingclusters.html).
 
 ## Link correlati
 
