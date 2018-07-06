@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -48,7 +48,7 @@ IBM 提供の VMware ライセンスを購入した場合は、VMware NSX Base E
 
 合計で、基本オファリングには、仮想化管理層用に予約される 38 個の vCPU と 67 GB の vRAM が必要です。 VM 用の残りのホスト容量は、オーバーサブスクリプション率、VM サイジング、ワークロードのパフォーマンス要件などのいくつかの要因によって決まります。
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+アーキテクチャーについて詳しくは、[{{site.data.keyword.vmwaresolutions_full}} architecture reference](../archiref/solution/solution_overview.html) を参照してください。
 
 ## vCenter Server の技術仕様
 

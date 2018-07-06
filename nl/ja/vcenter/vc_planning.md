@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -67,7 +67,7 @@ vCenter Server のデプロイメントには、物理インフラストラク�
 
 ## vCenter Server インスタンスのサービス
 
-それぞれのニーズに基づいて、インスタンスのアドオン・サービスを注文できます。例えば、災害復旧などがあります。詳しくは、[vCenter Server インスタンスのサービスの注文、表示、削除](vc_addingremovingservices.html)を参照してください。
+それぞれのニーズに基づいて、インスタンスのアドオン・サービスを注文できます。例えば、災害復旧などがあります。 詳しくは、[vCenter Server インスタンスのサービスの注文、表示、削除](vc_addingremovingservices.html)を参照してください。
 
 <!-- ## Capacity considerations
 

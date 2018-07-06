@@ -51,7 +51,7 @@ VMware NSX Advanced エディションを Enterprise エディションにアッ
 
 合計で、基本オファリングには、仮想化管理層用に予約される 38 個の vCPU と 67 GB の vRAM が必要です。 VM 用の残りのホスト容量は、オーバーサブスクリプション率、VM サイジング、ワークロードのパフォーマンス要件などのいくつかの要因によって決まります。
 
-HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時に発生する追加の管理リソース要件については、[HCX on {{site.data.keyword.cloud_notm}} の概要](../services/hcx_considerations.html)を参照してください。
+HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時の追加の管理リソース要件については、[VMware HCX on {{site.data.keyword.cloud_notm}} の概要](../services/hcx_considerations.html)を参照してください。
 
 ### インフラストラクチャーのハイブリッド化
 
@@ -93,7 +93,7 @@ HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時に注文�
 
 以下の仮想サーバー・インスタンス (VSI) が注文されます。
 * IBM CloudBuilder の VSI。これは、インスタンスのデプロイメントが完了した後にシャットダウンされます。
-* Microsoft Active Directory (AD) 用に 1 つの Microsoft Windows Server VSI をデプロイするか、管理クラスターに 2 つの高可用性 Microsoft Windows VM をデプロイしてセキュリティーと堅牢性を強化するかを選択できます。Veeam サービスを使用して VM のバックアップとリストアを実行するオプションもあります。
+* Microsoft Active Directory (AD) 用に 1 つの Microsoft Windows Server VSI をデプロイするか、管理クラスターに 2 つの高可用性 Microsoft Windows VM をデプロイしてセキュリティーと堅牢性を強化するかを選択できます。 Veeam サービスを使用して VM のバックアップとリストアを実行するオプションもあります。
 
 ### ストレージ
 

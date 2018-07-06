@@ -10,7 +10,7 @@ lastupdated: "2018-06-11"
 
 # VMware Federal on IBM Cloud の概要
 
-VMware Federal on {{site.data.keyword.cloud}} では、基本 vCenter Server インスタンスを注文できるだけでなく、デプロイした vCenter Server インスタンスを保護するための米国連邦政府機関向けのオプションも用意されています。デプロイされたインスタンスを保護するオプションを選択すると、インスタンスに関する保管済みの機密情報が削除され、ホストとクラスターの追加や削除など、管理機能の目的でインスタンスに継続してアクセスするために開かれている管理接続が削除されます。 この保護オプションを選択すると、インスタンスの完全削除を除くすべての管理機能が無効になります。
+VMware Federal on {{site.data.keyword.cloud}} では、基本 vCenter Server インスタンスを注文できるだけでなく、デプロイした vCenter Server インスタンスを保護するための米国連邦政府機関向けのオプションも用意されています。 デプロイされたインスタンスを保護するオプションを選択すると、インスタンスに関する保管済みの機密情報が削除され、ホストとクラスターの追加や削除など、管理機能の目的でインスタンスに継続してアクセスするために開かれている管理接続が削除されます。 この保護オプションを選択すると、インスタンスの完全削除を除くすべての管理機能が無効になります。
 
 vCenter Server on {{site.data.keyword.cloud_notm}} および vCenter Server アーキテクチャーについて詳しくは、[vCenter Server の概要](vc_vcenterserveroverview.html)を参照してください。
 

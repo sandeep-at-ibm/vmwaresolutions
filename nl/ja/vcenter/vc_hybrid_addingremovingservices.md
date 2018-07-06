@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -18,19 +18,18 @@ vCenter Server with Hybridity Bundle インスタンスでは、以下のサー�
 
 表 1. vCenter Server with Hybridity Bundle インスタンスに使用可能なサービス
 
-| サービス名                                                                           | 可用性 |
+| サービス名 | 可用性 | インスタンス・サポート |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on IBM Cloud](../services/f5_considerations.html)                                 | はい              |
-| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       | はい              |
-| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) | はい              |
-| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              | はい              |
-| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              | はい              |
-| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         | はい              |
-| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  | はい              |
-| [Veeam on IBM Cloud](../services/veeam_considerations.html)                           | はい              |
-| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                         | はい              |
-| [Zerto on IBM Cloud](../services/addingzertodr.html)                                  | はい              |
-
+| [F5 on IBM Cloud](../services/f5_considerations.html)                                 | はい | V1.9 以降 |
+| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       | はい | V1.8 以降 |
+| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) | はい | V2.0 以降 |
+| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              | はい | V2.3 以降 |
+| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              | はい | V2.3 以降 |
+| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         | はい | V2.2 以降 |
+| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  | はい | V2.2 以降 |
+| [Veeam on IBM Cloud](../services/veeam_considerations.html)                           | はい | V1.8 以降 |
+| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                        | はい | V2.3 以降 |
+| [Zerto on IBM Cloud](../services/addingzertodr.html)                                  | はい | V1.2 以降 |
 
 ## vCenter Server with Hybridity Bundle インスタンスへのサービスの追加
 
