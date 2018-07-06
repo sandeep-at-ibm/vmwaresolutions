@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -80,8 +80,7 @@ Quattro {{site.data.keyword.baremetal_short}} {{site.data.keyword.cloud_notm}} c
 
 * Doppi uplink di rete privata e pubblica da 10 Gbps
 * Tre VLAN (Virtual LAN): una VLAN pubblica e due VLAN private
-* Una VXLAN (Virtual eXtensible LAN) con DLR (Distributed Logical Router)
-* Due gateway dei servizi edge VMware NSX sicuri
+* Un gateway dei servizi edge VMware NSX sicuro
 
 ### VSI (Virtual Server Instance)
 
