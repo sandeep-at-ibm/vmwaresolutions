@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
 # 管理 HyTrust CloudControl on IBM Cloud
 
-要管理 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务 (HTCC)，请通过 {{site.data.keyword.vmwaresolutions_short}} 控制台访问 HTCC WebGUI，或通过 vSphere Web Client 访问 HTCC 控制台。
+要管理 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务 (HTCC)，请通过 {{site.data.keyword.vmwaresolutions_full}} 控制台访问 HTCC WebGUI，或通过 vSphere Web Client 访问 HTCC 控制台。
 
 ## 通过 IBM Cloud for VMware Solutions 控制台访问 HyTrust CloudControl WebGUI
 
-使用在 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务详细信息页面上找到的对应 WebGUI 凭证登录到主或辅助 HTCC 设备的 WebGUI。
+要登录到主或者辅助 HTCC 设备的 WebGUI，请使用在 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务详细信息页面上找到的 WebGUI 凭证。
 
 ## 通过 vSphere Web Client 访问 HyTrust CloudControl 控制台
 
