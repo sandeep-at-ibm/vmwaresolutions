@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-11"
 
 有关更多信息，请参阅[订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](../vcenter/vc_hybrid_addingremovingservices.html)。
 
-## 维护 HCX on IBM Cloud
+## 对 HCX on IBM Cloud 应用更新
 
 HCX on {{site.data.keyword.cloud_notm}} 通过 VMware Hybrid Cloud Extension 技术的最新测试构建进行部署。VMware 将定期提供这些构建的更新，包括重要修订和新功能。这些构建会自动推送到 HCX on {{site.data.keyword.cloud}} 安装，包括内部部署 HCX 安装。
 

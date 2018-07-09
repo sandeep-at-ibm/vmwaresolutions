@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -39,8 +39,8 @@ HCX on {{site.data.keyword.cloud}} 服务可以将内部部署数据中心的网
    * 停用为云端 HCX Manager 订购的 HCX 许可证。
    * 删除 HCX Manager。
    * 释放保留用于 HCX 的 vMotion IP 地址。
-   * 除去与 HCX 相关的资源池（如果为空）。
-   * 除去与 HCX 相关的文件夹（如果为空）。
+   * 如果为空，那么除去与 HCX 相关的资源池。
+   * 如果为空，那么除去与 HCX 相关的文件夹。
    * 删除 HCX 管理 Edge 设备。
 
 ## 相关链接

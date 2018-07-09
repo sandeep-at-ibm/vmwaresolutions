@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-06-07"
 
 HyTrust DataControl on {{site.data.keyword.cloud}} 服务通过集成密钥管理提供高强度加密功能，以确保工作负载在整个生命周期中的安全。此服务可以提供操作系统级别和数据级别的加密，这意味着可以对工作负载中的任何目录、文件夹或文件进行加密和解密。
 
-**可用性：**此服务仅可用于运行 vSphere 6.5 以及部署在或已升级到 V2.3 或更高发行版的实例。
+**可用性**：此服务仅可用于运行 vSphere 6.5 以及部署在（或升级到）V2.3 或更高发行版的实例。
 
 ## HyTrust DataControl on IBM Cloud 的组件
 
