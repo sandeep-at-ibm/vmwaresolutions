@@ -46,7 +46,7 @@ IBM Cloud for VMware Solutions
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    第一步
+    首要步骤
         vmonic/slaccountrequirement.md
         vmonic/signing_softlayer_account.md
         vmonic/loginmethod.md
@@ -240,4 +240,10 @@ IBM Cloud for VMware Solutions
         archiref/solution/solution_overview.md
         archiref/solution/design_overview.md
         archiref/solution/design_physicalinfrastructure.md
+        archiref/solution/design_virtualinfrastructure.md
+        archiref/solution/design_commonservice.md
+        archiref/solution/design_infrastructuremgmt.md
+        archiref/solution/solution_scaling.md
+        archiref/solution/solution_backingup.md
+        archiref/solution/appendix.md
     {: .navgroup-end}
