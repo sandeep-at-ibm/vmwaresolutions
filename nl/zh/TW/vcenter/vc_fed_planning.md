@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-11"
 
 ## IBM Cloud 帳戶需求
 
-您使用的 {{site.data.keyword.cloud}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶需求](../vmonic/slaccountrequirement.html)。
+您使用的 {{site.data.keyword.cloud}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶的需求](../vmonic/slaccountrequirement.html)。
 
 ## IBM Cloud Data Center 可用性
 

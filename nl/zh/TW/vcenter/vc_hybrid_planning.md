@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-11"
 
 ## IBM Cloud 帳戶需求
 
-您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶需求](../vmonic/slaccountrequirement.html)。
+您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶的需求](../vmonic/slaccountrequirement.html)。
 
 ## IBM Cloud Data Center 可用性
 
@@ -72,7 +72,7 @@ vCenter Server with Hybridity Bundle 實例包括可授權您使用 VMware HCX o
 當您部署此服務時，請完成下列設定：
 * 選取下列其中一個選項，以指定 **HCX 交互連接類型**：
   * **公用網路**：HCX 會透過公用網路建立站台之間的已加密連線。
-  * **專用網路**：HCX 會透過專用網路建立站台之間的已加密連線。 
+  * **專用網路**：HCX 會透過專用網路建立站台之間的已加密連線。
 * 指定**公用端點憑證類型**。如果您選取 **CA 憑證**，請配置下列設定：
   * **憑證內容**：輸入 CA 憑證的內容。
   * **私密金鑰**：輸入 CA 憑證的私密金鑰。

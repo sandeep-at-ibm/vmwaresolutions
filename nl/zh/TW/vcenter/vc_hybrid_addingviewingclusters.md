@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -132,18 +132,23 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。您必
         <dt class="dt dlterm">已刪除</dt>
         <dd class="dd">已刪除叢集。</dd>
     </dl>
-4. 按一下叢集名稱以檢視 ESXi 伺服器、儲存空間及授權詳細資料：
+4. 按一下叢集名稱，以檢視 ESXi 伺服器及儲存空間的詳細資料：
 
-  **ESXi 伺服器**
+  * ESXi 伺服器詳細資料：
+     * **名稱**：ESXi 伺服器的名稱格式為 `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中：
 
-  * **名稱**：ESXi 伺服器的名稱格式為 `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中：
+       `host_prefix` 是主機名稱字首、
 
-     `host_prefix` 是主機名稱字首、`n` 是伺服器的序列、`subdomain_label` 是子網域標籤，而 `root_domain` 是根網域名稱。
+       `n` 是伺服器序列、
 
-   * **版本**：ESXi 伺服器的版本。
-   * **認證**：存取 ESXi 伺服器的使用者名稱及密碼。
-   * **專用 IP**：ESXi 伺服器的專用 IP 位址。
-   * **狀態**：ESXi 伺服器的狀態，可以是下列其中一個值：
+       `subdomain_label` 是子網域標籤，而
+
+       `root_domain` 是根網域名稱。
+
+     * **版本**：ESXi 伺服器的版本。
+     * **認證**：存取 ESXi 伺服器的使用者名稱及密碼。
+     * **專用 IP**：ESXi 伺服器的專用 IP 位址。
+     * **狀態**：ESXi 伺服器的狀態，可以是下列其中一個值：
         <dl class="dl">
         <dt class="dt dlterm">已新增</dt>
         <dd class="dd">已新增 ESXi 伺服器，且隨時可用。</dd>
@@ -152,6 +157,11 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。您必
         <dt class="dt dlterm">正在刪除</dt>
         <dd class="dd">正在刪除 ESXi 伺服器。</dd>
         </dl>
+  * 儲存空間詳細資料：
+    * **名稱**：資料儲存庫名稱。
+    * **大小**：儲存空間的容量。
+    * **IOPS/GB**：儲存空間的效能層次。
+    * **NFS 通訊協定**：儲存空間的 NFS 版本。
 
 ## 從 vCenter Server with Hybridity Bundle 實例中刪除叢集
 

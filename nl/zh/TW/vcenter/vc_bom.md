@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -90,31 +90,41 @@ lastupdated: "2018-06-08"
 
 ## 網路 MTU 配置設定
 
-vSphere 叢集使用兩個 vSphere Distributed Switch (VDS)：一個用於公用網路連線功能，另一個用於專用網路連線功能。
+vSphere 叢集使用兩個 vSphere Virtual Distributed Switch (VDS)：一個用於公用網路連線功能，另一個用於專用網路連線功能。
 
 專用網路連線配置成使用大小為 9000 的「巨大訊框 MTU（最大傳輸單位）」，以改善大型資料傳送（例如儲存空間及 VMware vMotion）的效能。這是 VMware 及 IBM Cloud 容許的最大 MTU。
 
 在 2.1 版或更新版本中，公用網路連線使用標準乙太網路 MTU 1500。必須維護此設定 1500；任何變更都可能會導致透過網際網路進行封包片段化。
 
-請檢閱下表，以取得「網路 MTU」配置設定的概觀，這些設定會根據 vCenter Server 實例是否部署在 2.1 版或更新版本上，而套用至公用及專用「分散式虛擬交換器 (DVS)」。  
+請檢閱下表，以取得「網路 MTU」配置設定的概觀，這些設定會根據 vCenter Server 實例是否部署在 2.1 版或更新版本上，而套用至公用及專用「分散式虛擬交換器 (DVS)」。
+
+表 5. vCenter Server 實例及叢集的 MTU 配置設定（取決於實例版本）
+
+| VDS |2.1 版或更新版本 |2.0 版或更早版本（或從 2.0 版或更早版本升級）|
+|:-------------- |:-------------- |:------------- |
+|公用交換器|1500（預設值）|9000（巨大訊框）|
+|專用交換器|9000（巨大訊框）|9000（巨大訊框）|
 
 這些設定適用於新實例以及部署在 2.1 版或更新版本中的實例的新叢集。這些設定也適用於跨 IBM Cloud Data Center 中已升級至 2.1 版或更新版本的實例內的新叢集。
 
 這些設定不適用於相同 IBM Cloud Data Center 中的新叢集，而新叢集位於 2.0 版或更早版本中的現有實例，或升級至 2.1 版或更新版本的現有實例。
 
-**附註**：對於已部署在 2.0 版或更早版本中的實例，建議您自行將公用交換器 MTU 設定更新為 1500。  
+對於已部署在 2.0 版或更早版本中的實例，建議您將公用交換器 MTU 設定更新為 1500。
 
-表 5. vCenter Server 實例及叢集的 MTU 配置設定
+### 更新公用交換器 MTU 設定
 
-|分散式虛擬交換器 (DVS) |2.1 版或更新版本 |2.0 版或更早版本（或從 2.0 版或更早版本升級）|   
-|:-------------- |:-------------- |:------------- |
-|公用交換器|1500（預設值）|9000（巨大訊框）|
-|專用交換器|9000（巨大訊框）|9000（巨大訊框）|
+若要更新公用交換器的 MTU 設定，請在 VMware vSphere Web Client 中完成下列步驟：
+1. 在 VDS 上按一下滑鼠右鍵，然後按一下**編輯設定**。
+2. 在**內容**標籤上，選取**進階**選項。
+3. 確定**最大 MTU** 值已設為 1500。
+
+   **附註**：在 VDS 中變更 MTU 大小時，附加的上行鏈路（實體 NIC）會卸下再重新連結。因此，使用此上行鏈路的 VM 會短暫的中斷。所以，建議您在排定的關閉時間計劃 MTU 設定更新。
 
 ## 相關鏈結
 
 * [VMware ESXi/ESX 的建置號碼和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware vCenter Server 的建置號碼和版本 (2143838)](https://kb.vmware.com/s/article/2143838)
+* [在虛擬分散式交換器上啟用巨大訊框](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on IBM Cloud Protection 資料表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 * [vCenter Server 概觀](vc_vcenterserveroverview.html)
 * [規劃 vCenter Server 實例](vc_planning.html)
