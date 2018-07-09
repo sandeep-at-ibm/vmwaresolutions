@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -59,13 +59,13 @@ lastupdated: "2018-06-12"
 
 对于在 V2.3 或更高版本中部署的 VMware Federal 实例，可以为一个集群最多添加 59 个 {{site.data.keyword.baremetal_short}}，并且一次可以添加 1 到 59 个 ESXi 服务器。
 
-部署后，最多可以创建四个集群。对于 vSAN 存储设置，初始集群和部署后集群都需要 4 个服务器。
+部署后，最多可以再创建四个集群。对于 vSAN 存储设置，初始集群和部署后集群都需要 4 个服务器。
 
 <!--When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.-->
 
 ### 存储设置
 
-存储设置基于您选择的是 vSAN、NFS 还是定制 NFS 存储器。
+存储设置基于您选择的裸机服务器配置和存储类型。
 
 #### vSAN 存储器
 
@@ -83,7 +83,7 @@ lastupdated: "2018-06-12"
 
 **注：**文件共享数必须在范围 1 到 32 之间。
 
-* **分别配置文件共享**：选择此项以对每个文件共享指定不同的配置设置。
+* **分别配置共享**：选择此项以对每个文件共享指定不同的配置设置。
 * **共享数**：对每个文件共享使用相同的配置设置时，指定要添加的 NFS 共享存储器的文件共享数。
 * **大小**：选择满足共享存储器需求的容量。
 * **性能**：选择基于工作负载需求的 IOPS（每秒输入/输出操作数）/GB。
@@ -120,9 +120,9 @@ lastupdated: "2018-06-12"
 4. 在**添加集群**页面上，输入集群名称。
 5. 针对裸机配置，选择 **CPU 型号**、**RAM** 量和**裸机服务器数**。
 6. 填写存储配置。
-  * 如果选择的是 **vSAN 存储器**，请选择 **vSAN 容量磁盘的磁盘类型和大小**、**vSAN 容量磁盘数**和 VMware vSAN 许可证版本。
-  * 如果选择的是 **NFS 存储器**，请选择**共享数**、**大小**和**性能**。
-  * 要单独添加并配置文件共享，请选择**定制 NFS 存储器**选项卡，单击**添加 NFS** 标签旁边的 **+** 图标，然后为每个文件共享选择**大小**和**性能**。必须至少选择一个文件共享。
+  * 选择 **vSAN 存储器**时，指定 **vSAN 容量磁盘的磁盘类型和大小**、**vSAN 容量磁盘数**以及要如何提供 **vSAN 许可证**。
+  * 选择 **NFS 存储器**并且想要向所有文件共享添加和配置相同设置时，请指定**共享数**、**大小**和**性能**。
+  * 选择 **NFS 存储器**并想要单独添加和配置文件共享时，请选择**单独配置共享**，然后单击**添加 NFS** 标签旁边的 **+** 图标，然后为每个单独的文件共享选择**大小**和**性能**。必须至少选择一个文件共享。
 7. 为 VMware vSAN 选择许可证版本，以进行许可证配置。
 8. 在**订单摘要**窗格上，验证集群配置，然后再添加集群。
    1. 复查集群的设置。

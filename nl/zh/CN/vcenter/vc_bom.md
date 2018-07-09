@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -90,31 +90,41 @@ lastupdated: "2018-06-08"
 
 ## 网络 MTU 配置设置
 
-vSphere 集群使用两个 vSphere 分布式交换机 (VDS)，一个用于公用网络连接，另一个用于专用网络连接。
+vSphere 集群使用两个 vSphere 虚拟分布式交换机 (VDS)，一个用于公用网络连接，另一个用于专用网络连接。
 
 专用网络连接配置为使用大小为 9000 的巨型帧 MTU（最大传输单元），这将提高存储和 VMware vMotion 等大型数据传输的性能。这是 VMware 和 IBM Cloud 中允许的最大 MTU。
 
 在 V2.1 或更高版本中，公用网络连接使用标准以太网 MTU，即 1500。必须保留此设置 1500；对此设置的任何更改都可能导致因特网上发生包分段。
 
-查看下表以了解应用于公用和专用分布式虚拟交换机 (DVS) 的网络 MTU 配置设置的概述，具体取决于 vCenter Server 实例是否部署在 V2.1 或更高版本中。  
+查看下表以了解应用于公用和专用分布式虚拟交换机 (DVS) 的网络 MTU 配置设置的概述，具体取决于 vCenter Server 实例是否部署在 V2.1 或更高版本中。
+
+表 5. 基于实例版本的 vCenter Server 实例和集群的 MTU 配置设置
+
+| VDS |V2.1 或更高版本|V2.0 或更低版本（或从 V2.0 或更低版本升级）|
+|:-------------- |:-------------- |:------------- |
+|公共交换机|1500（缺省值）|9000（巨型帧）|
+|专用交换机|9000（巨型帧）|9000（巨型帧）|
 
 这些设置会应用于新实例以及部署在 V2.1 或更高版本中的实例中的新集群。这些设置还会应用于已升级到 V2.1 或更高版本的实例中多个 IBM Cloud Data Center 中的新集群。
 
 这些设置不会应用于 V2.0 或更低版本中现有实例中同一 IBM Cloud Data Center 中的新集群，也不会应用于升级到 V2.1 或更高版本的现有实例中同一 IBM Cloud Data Center 的新集群。
 
-**注**：对于在 V2.0 或更低版本中部署的实例，建议您自行将公共交换机 MTU 设置更新为 1500。  
+对于在 V2.0 或更低版本中部署的实例，建议将公共交换机 MTU 设置更新为 1500。
 
-表 5. vCenter Server 实例和集群的 MTU 配置设置
+### 更新公共交换机 MTU 设置
 
-|分布式虚拟交换机 (DVS)|V2.1 或更高版本|V2.0 或更低版本（或从 V2.0 或更低版本升级）|   
-|:-------------- |:-------------- |:------------- |
-|公共交换机|1500（缺省值）|9000（巨型帧）|
-|专用交换机|9000（巨型帧）|9000（巨型帧）|
+要更新公共交换机的 MTU 设置，请在 VMware vSphere Web Client 中完成以下步骤：
+1. 右键单击 VDS，然后单击**编辑设置**。
+2. 在**属性**选项卡上，选择**高级**选项。
+3. 确保将**最大 MTU** 值设置为 1500。
+
+   **注**：在更改 vDS 中的 MTU 大小时，连接的上行链路（物理 NIC）将停止，然后重新运行。这样一来，使用上行链路的 VM 会短暂中断。因此，建议在安排的停机时间内规划 MTU 设置更新。
 
 ## 相关链接
 
 * [VMware ESXi/ESX 的构建号和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware vCenter Server 的构建号和版本 (2143838)](https://kb.vmware.com/s/article/2143838)
+* [在虚拟分布式交换机上启用巨型帧](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on IBM Cloud 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 * [vCenter Server 概述](vc_vcenterserveroverview.html)
 * [规划 vCenter Server 实例](vc_planning.html)

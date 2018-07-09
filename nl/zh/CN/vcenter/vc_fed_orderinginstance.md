@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-06-12"
 ## 需求
 
 确保已完成以下任务：
-* 已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[用户帐户和设置](../vmonic/useraccount.html)。
+* 已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
 * 已查看[针对 VMware Federal 实例的需求和规划](vc_fed_planning.html)中的信息。
 * 已复查实例和域名格式。域名和子域标签用于生成实例的用户名和服务器名称。
 
@@ -95,7 +95,7 @@ lastupdated: "2018-06-12"
 
 ## 存储设置
 
-存储设置基于您选择的是 vSAN、NFS 还是定制 NFS 存储器。
+存储设置基于您选择的裸机服务器配置和存储类型。
 
 ### vSAN 存储器
 
@@ -111,7 +111,7 @@ lastupdated: "2018-06-12"
 
 **注：**文件共享数必须在范围 1 到 32 之间。
 
-* **分别配置文件共享**：选择此项以对每个文件共享指定不同的配置设置。
+* **分别配置共享**：选择此项以对每个文件共享指定不同的配置设置。
 * **共享数**：对每个文件共享使用相同的配置设置时，指定要添加的 NFS 共享存储器的文件共享数。
 * **大小**：选择满足共享存储器需求的容量。
 * **性能**：选择基于工作负载需求的 IOPS（每秒输入/输出操作数）/GB。
@@ -183,9 +183,9 @@ lastupdated: "2018-06-12"
   1. 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
   2. 选择**定制** CPU 型号和 **RAM** 量。
 7. 填写存储配置。
-      * 如果选择的是 **vSAN 存储器**，请选择 **vSAN 容量磁盘的磁盘类型和大小**、**vSAN 容量磁盘数**和 VMware vSAN 许可证版本。
-      * 如果选择的是 **NFS 存储器**，请选择**共享数**、**大小**和**性能**。
-      * 要单独添加并配置文件共享，请选择**定制 NFS 存储器**选项卡，单击**添加 NFS** 标签旁边的 **+** 图标，然后为每个文件共享选择**大小**和**性能**。必须至少选择一个文件共享。
+  * 选择 **vSAN 存储器**时，指定 **vSAN 容量磁盘的磁盘类型和大小**、**vSAN 容量磁盘数**以及要如何提供 **vSAN 许可证**。
+  * 选择 **NFS 存储器**并且想要向所有文件共享添加和配置相同设置时，请指定**共享数**、**大小**和**性能**。
+  * 选择 **NFS 存储器**并想要单独添加和配置文件共享时，请选择**单独配置共享**，然后单击**添加 NFS** 标签旁边的 **+** 图标，然后为每个单独的文件共享选择**大小**和**性能**。必须至少选择一个文件共享。
 8. 完成网络接口配置。
    1. 输入主机名前缀、子域标签和根域名。
    2. 选择 DNS 配置。
@@ -199,7 +199,7 @@ lastupdated: "2018-06-12"
 
 实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
 
-成功部署实例后，[VMware Federal 实例组件](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。
+成功部署实例后，[VMware Federal on {{site.data.keyword.cloud_notm}} 的 vCenter Server 实例组件](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。
 
 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 

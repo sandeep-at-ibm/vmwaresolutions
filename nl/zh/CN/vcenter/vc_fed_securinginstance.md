@@ -10,13 +10,13 @@ lastupdated: "2018-05-24"
 
 # 确保 VMware Federal 实例安全
 
-完成以下过程，以确保已部署 VMware Federal 实例的安全，即，除去用于持续对实例进行访问的开放管理连接。
+完成以下过程，以确保已部署 VMware Federal 实例的安全，即，除去用于持续访问实例的开放式管理连接。
 
 ## 开始之前
 
 查看以下信息，以了解确保已部署 VMware Federal 实例安全的结果：
 
-* 在完成此过程之前，记录并保存环境可能需要的任何凭证。调用安全操作后，环境的所有凭证都将从 {{site.data.keyword.vmwaresolutions_full}} 数据库中擦除，并且无法取回。
+* 在完成此过程之前，记录并保存环境可能需要的任何凭证。调用安全操作后，环境的所有凭证都将从 {{site.data.keyword.vmwaresolutions_full}} 数据库中擦除，并且无法恢复。
 * 在调用安全操作之后，将禁用所有管理功能，但完全实例删除操作除外。
 * 在确保已部署 VMware Federal 实例安全的操作过程中，会删除用于出站 HTTPS 管理流量的 VMware NSX Edge 服务网关 (ESG) 和 IBM CloudDriver 虚拟机。
 
