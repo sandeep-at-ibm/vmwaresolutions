@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
 # 管理 HyTrust DataControl on IBM Cloud
 
-若要管理 HyTrust DataControl on {{site.data.keyword.cloud}} 服務 (HTDC)，請從 {{site.data.keyword.vmwaresolutions_short}} 主控台存取 HTDC WebGUI，或從 vSphere Web Client 存取 HTDC 主控台。
+若要管理 HyTrust DataControl on {{site.data.keyword.cloud}} 服務 (HTDC)，請從 {{site.data.keyword.vmwaresolutions_full}} 主控台存取 HTDC WebGUI，或從 vSphere Web Client 存取 HTDC 主控台。
 
 ## 從 IBM Cloud for VMware Solutions 主控台存取 HyTrust DataControl WebGUI
 
-使用 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上找到的對應 WebGUI 認證，以登入主要或次要 HTDC 應用裝置的 WebGUI。
+若要登入主要或次要 HTDC 應用裝置的 WebGUI，請使用在 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上找到的 WebGUI 認證。
 
 ## 從 vSphere Web Client 存取 HyTrust DataControl 主控台
 

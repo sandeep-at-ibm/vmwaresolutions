@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -35,9 +35,9 @@ lastupdated: "2018-06-08"
 ### 部署大小
 
 IBM Cloud 提供下列部署大小選項：
-- **小型（2 個 vCPU/4 GB RAM）**
-- **中型（4 個 vCPU/6 GB RAM）**
-- **大型（8 個 vCPU/12 GB RAM）**
+* 小型（2 個 vCPU/4 GB RAM）
+* 中型（4 個 vCPU/6 GB RAM）
+* 大型（8 個 vCPU/12 GB RAM）
 
 ### 授權模型
 

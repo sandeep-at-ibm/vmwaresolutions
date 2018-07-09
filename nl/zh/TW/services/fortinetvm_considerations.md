@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -18,9 +18,11 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 Fo
 
 ## FortiGate Virtual Appliance on IBM Cloud 的元件
 
-當您訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務時，會部署一組 FortiGate Virtual Appliance，其中包含已為管理網路配置的一個網路介面，以及九個可視需要配置來保護資料流量的網路介面。
+當您訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務時，會部署一組 FortiGate Virtual Appliance，其中包含：
+* 已為管理網路配置的一個網路介面。
+* 九個額外可視需要配置來保護資料流量的網路介面。
 
-FortiGate Virtual Appliance 未預先配置成高可用性配對。部署之後，您可以根據需要配置 HA 設定，其中包括「虛擬路由器備援通訊協定 (VRRP)」及「FortiGate 叢集通訊協定 (FGCP)」。
+FortiGate Virtual Appliance 未預先配置成高可用性 (HA) 配對。部署之後，您可以根據需要配置 HA 設定，其中包括「虛擬路由器備援通訊協定 (VRRP)」及「FortiGate 叢集通訊協定 (FGCP)」。
 
 ## 安裝 FortiGate Virtual Appliance on IBM Cloud 時的考量
 
@@ -43,7 +45,7 @@ FortiGate Virtual Appliance 未預先配置成高可用性配對。部署之後�
    * 兩部作用中 ESXi 伺服器具有足夠的可用資源，因此，可以在具有 100% CPU 及 RAM 保留的每一部 ESXi 伺服器上管理一個 FortiGate VM。
    * VMware vSphere HA 具有足夠的資源，可管理兩個具有 100% CPU 及 RAM 的 FortiGate VM。
 
-  基於這些需求，您必須規劃 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 所需的空間。必要的話，訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 之前，請將 1-2 部 ESXi 伺服器新增至實例，以及（或）減少 vSphere HA CPU 保留以進行失效接手。
+  基於這些需求，您必須仔細規劃 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 所需的空間。必要的話，在訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 之前，請將 1-2 部 ESXi 伺服器新增至實例，以及（或）減少 vSphere HA CPU 保留以進行失效接手。
 
 ## FortiGate Virtual Appliance on IBM Cloud 訂購範例
 
@@ -61,9 +63,11 @@ FortiGate Virtual Appliance 未預先配置成高可用性配對。部署之後�
 
 `50% 的 2 * 16 個核心 * 2.1 GHz = 33.6 GHz 可用`
 
-由於使用這些資源的 ESXi 伺服器（例如，IBM CloudDriver、VMware NSX Controller、VMware NSX Edge）上有其他工作負載，我們無法滿足第三個需求，因為兩部 FortiGate VM 需要 33.6 GHz 的 CPU 及 24 GB RAM。
+由於使用這些資源的 ESXi 伺服器（例如，IBM CloudDriver、VMware NSX Controller 或 VMware NSX Edge）上有其他工作負載，所以我們無法滿足第三個需求。這是因為兩部 FortiGate VM 需要 33.6 GHz 的 CPU 及 24 GB RAM。
 
-在此情況下，FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 安裝可能會失敗，除非將至少一部 ESXi 伺服器新增至環境，並且適當地更新 vShpere HA 失效接手保留，確保有足夠的資源可供兩部 FortiGate VM 使用。如果需要額外的資源執行 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務，您可以先新增其他 ESXi 伺服器，再安裝服務。
+在此情況下，FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 安裝可能會失敗，除非將至少一部 ESXi 伺服器新增至環境，並且適當地更新 vShpere HA 失效接手保留，以確保有足夠的資源可供兩部 FortiGate VM 使用。
+
+如果需要額外的資源執行 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務，您可以先新增其他 ESXi 伺服器，再安裝服務。
 
 ## 移除 FortiGate Virtual Appliance on IBM Cloud 時的考量
 
