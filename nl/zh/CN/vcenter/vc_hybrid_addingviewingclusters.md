@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -60,11 +60,11 @@ lastupdated: "2018-06-08"
 
 可以为一个集群最多添加 59 个 {{site.data.keyword.baremetal_short}}，并且一次可以添加 1 到 59 个 ESXi 服务器。
 
-部署后，最多可以创建四个集群。对于 VMware vSAN 存储器，初始集群和部署后集群都需要 4 个服务器。
+部署后，最多可以再创建四个集群。对于 VMware vSAN 存储器，初始集群和部署后集群都需要 4 个服务器。
 
 ### vSAN 存储器设置
 
-vCenter Server with Hybridity Bundle 实例订购中包含 VMware vSAN 6.6。您必须将许可证版本指定为 **Advanced** 或 **Enterprise**。
+vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。您必须将许可证版本指定为 **Advanced** 或 **Enterprise**。
 
 * **vSAN 容量磁盘的磁盘类型和大小**：选择满足共享存储器需求的容量。
 * **vSAN 容量磁盘数**：选择要添加的 vSAN 共享存储器的磁盘数。磁盘数量必须为 2、4、6 或 8 个。
@@ -132,21 +132,23 @@ vCenter Server with Hybridity Bundle 实例订购中包含 VMware vSAN 6.6。您
         <dt class="dt dlterm">已删除</dt>
         <dd class="dd">集群已删除。</dd>
     </dl>
-4. 单击集群名称以查看 ESXi 服务器、存储和许可证详细信息：
+4. 单击集群名称以查看 ESXi 服务器及其存储的详细信息：
 
-  **ESXi 服务器**
+  * ESXi 服务器详细信息：
+     * **名称**：ESXi 服务器名称的格式为 `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中：
 
-  * **名称**：ESXi 服务器名称的格式为 `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中：
+       `host_prefix` 是主机名前缀，
 
-     `host_prefix` 是主机名前缀，
-     `n` 是服务器的序列，
-     `subdomain_label` 是子域标签，
-     `root_domain` 是根域名。
+       `n` 是服务器的序列，
 
-   * **版本**：ESXi 服务器的版本。
-   * **凭证**：用于访问 ESXi 服务器的用户名和密码。
-   * **专用 IP**：ESXi 服务器的专用 IP 地址。
-   * **状态**：ESXi 服务器的状态，可以是下列其中一个值：
+       `subdomain_label` 是子域标签，
+
+       `root_domain` 是根域名。
+
+     * **版本**：ESXi 服务器的版本。
+     * **凭证**：用于访问 ESXi 服务器的用户名和密码。
+     * **专用 IP**：ESXi 服务器的专用 IP 地址。
+     * **状态**：ESXi 服务器的状态，可以是下列其中一个值：
         <dl class="dl">
         <dt class="dt dlterm">已添加</dt>
         <dd class="dd">ESXi 服务器已添加并准备就绪可供使用。</dd>
@@ -155,6 +157,11 @@ vCenter Server with Hybridity Bundle 实例订购中包含 VMware vSAN 6.6。您
         <dt class="dt dlterm">正在删除</dt>
         <dd class="dd">正在删除 ESXi 服务器。</dd>
         </dl>
+  * 存储详细信息：
+    * **名称**：数据存储名称。
+    * **大小**：存储器的容量。
+    * **IOPS/GB**：存储器的性能级别。
+    * **NFS 协议**：存储器的 NFS 版本。
 
 ## 从 vCenter Server with Hybridity Bundle 实例中删除集群
 

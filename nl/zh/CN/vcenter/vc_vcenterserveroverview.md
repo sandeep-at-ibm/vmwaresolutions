@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -48,7 +48,7 @@ VMware vSAN 还可作为专用存储器选项提供。要增大 vSAN 集群的�
 
 基本产品总计需要 38 个 vCPU 和 67 GB vRAM，这些均保留用于虚拟化管理层。VM 的其余主机容量取决于若干因素，例如超额预订比率、VM 大小设置和工作负载性能需求。
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+有关体系结构的详细信息，请参阅 [{{site.data.keyword.vmwaresolutions_full}} 体系结构参考](../archiref/solution/solution_overview.html)。
 
 ## vCenter Server 技术规范
 

@@ -51,7 +51,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是�
 
 基本产品总计需要 38 个 vCPU 和 67 GB vRAM，这些均保留用于虚拟化管理层。VM 的其余主机容量取决于若干因素，例如超额预订比率、VM 大小设置和工作负载性能需求。
 
-有关部署 HCX on {{site.data.keyword.cloud_notm}} 服务时的其他管理资源需求，请参阅 [HCX on {{site.data.keyword.cloud_notm}} 概述](../services/hcx_considerations.html)。
+有关部署 HCX on {{site.data.keyword.cloud_notm}} 服务时的其他管理资源需求，请参阅 [VMware HCX on {{site.data.keyword.cloud_notm}} 概述](../services/hcx_considerations.html)。
 
 ### 基础架构混合
 
@@ -67,7 +67,7 @@ vCenter Server with Hybridity Bundle 实例中包含以下组件：
 
 ### 裸机服务器
 
-vCenter Server with Hybridity Bundle 实例订购中随附四个定制的 {{site.data.keyword.baremetal_short}}。提供了以下 CPU 型号：
+vCenter Server with Hybridity Bundle 实例订单中随附四个定制的 {{site.data.keyword.baremetal_short}}。提供了以下 CPU 型号：
   * 2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
   * 2 个 Intel Skylake 代 CPU（Intel Xeon 4100/5100/6100 系列）
 
@@ -105,7 +105,7 @@ vSAN 存储器提供定制配置，具有各种磁盘类型和数量的选项：
 
 ### IBM 提供的许可证和费用
 
-vCenter Server with Hybridity Bundle 实例订购中包含以下许可证。
+vCenter Server with Hybridity Bundle 实例订单中包含以下许可证。
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5

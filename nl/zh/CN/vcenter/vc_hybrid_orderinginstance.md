@@ -4,18 +4,18 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
 # 订购 vCenter Server with Hybridity Bundle 实例
 
-要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 实例。vCenter Server with Hybridity Bundle 实例订购包含 VMware Hybrid Cloud Extension (HCX) 许可，并授权您使用 VMware HCX on IBM Cloud 服务。您还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html)。
+要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 实例。vCenter Server with Hybridity Bundle 实例订单中包含 VMware Hybrid Cloud Extension (HCX) 许可，并授权您使用 VMware HCX on IBM Cloud 服务。您还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html)。
 
 ## 需求
 
 确保已完成以下任务：
-*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[用户帐户和设置](../vmonic/useraccount.html)。
+*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
 *  已查看[针对 vCenter Server with Hybridity Bundle 的需求和规划](vc_hybrid_planning.html)中的信息。
 * 已复查实例和域名格式。域名和子域标签用于生成实例的用户名和服务器名称。
 
@@ -50,7 +50,7 @@ lastupdated: "2018-06-07"
 
 ## 许可证设置
 
-vCenter Server with Hybridity Bundle 实例订购中包含以下许可证。您必须将 NSX 许可证版本指定为 **Advanced** 或 **Enterprise**。
+vCenter Server with Hybridity Bundle 实例订单中包含以下许可证。您必须将 NSX 许可证版本指定为 **Advanced** 或 **Enterprise**。
 
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
@@ -91,7 +91,7 @@ vCenter Server with Hybridity Bundle 实例订购中包含以下许可证。您�
 
 ## 存储设置
 
-vCenter Server with Hybridity Bundle 实例订购中包含 VMware vSAN 6.6。订购该实例时，必须指定以下存储设置：
+vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。订购该实例时，必须指定以下存储设置：
 
 * **vSAN 容量磁盘的磁盘类型和大小**：选择满足共享存储器需求的容量。
 * **vSAN 容量磁盘数**：选择要添加的 vSAN 共享存储器的磁盘数。磁盘数量必须为 2、4、6 或 8 个。
