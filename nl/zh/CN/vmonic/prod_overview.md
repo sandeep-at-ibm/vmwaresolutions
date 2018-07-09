@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-05"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -68,7 +68,7 @@ lastupdated: "2018-06-05"
 
 **注**：
 * 此服务仅可用于部署在（或已升级到）V2.2 或更高发行版中的实例。
-* 对于在 V2.3 或更高发行版中部署的实例，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 是缺省备份服务。该服务会自动为管理 VM 提供备份。
+* 对于在 V2.3 或更高发行版中部署的实例，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 自动提供管理 VM 的备份。
 * 对于在 V2.2 中部署的实例，此服务仅为工作负载 VM 提供数据保护。
 
 有关更多信息，请参阅[管理 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/managingspp.html)。
