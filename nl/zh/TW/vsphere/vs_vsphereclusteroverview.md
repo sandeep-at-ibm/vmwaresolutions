@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -79,7 +79,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 * 一部具有 VMware vSphere Enterprise Plus 6.0u2 或 6.5u1 的 IBM Cloud Bare Metal Server  
 * 在 [VMware vSphere on IBM Cloud 的元件](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)中所呈現的選用 VMWare 元件。
 
-**重要事項**：您只能從 {{site.data.keyword.slportal}} 管理 ESXi 伺服器、選用的 VMware 元件和其他已訂購及遞送至您的 {{site.data.keyword.cloud_notm}} 帳戶中的硬體 。在 {{site.data.keyword.vmwaresolutions_short}} 主控台中建立新的叢集之後，您可以回到主控台，利用已儲存的配置來擴充新的叢集。如需相關資訊，請參閱[擴充現有叢集](vs_scalingexistingclusters.html)。
+**重要事項**：您只能從 {{site.data.keyword.slportal}} 管理 ESXi 伺服器、選用的 VMware 元件和其他已訂購及遞送至您的 {{site.data.keyword.cloud_notm}} 帳戶中的硬體 。在 {{site.data.keyword.vmwaresolutions_short}} 主控台中建立新的叢集之後，您可以回到主控台，利用已儲存的配置來擴充新的叢集。如需相關資訊，請參閱[擴充現有 vSphere 叢集](vs_scalingexistingclusters.html)。
 
 ## 相關鏈結
 
