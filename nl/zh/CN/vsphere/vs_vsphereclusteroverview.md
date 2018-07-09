@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -79,7 +79,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 * 一个 IBM Cloud 裸机服务器，带 VMware vSphere Enterprise Plus 6.0u2 或 6.5u1  
 * 可选的 VMware 组件，在 [VMware vSphere on IBM Cloud 的组件](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)中提供。
 
-**重要信息**：您只能在 {{site.data.keyword.slportal}} 中管理订购并交付给您的 {{site.data.keyword.cloud_notm}} 帐户的 ESXi 服务器、可选 VMware 组件以及其他硬件。在 {{site.data.keyword.vmwaresolutions_short}} 控制台中创建新集群后，可以返回到控制台以使用保存的配置扩展新集群。有关更多信息，请参阅[扩展现有集群](vs_scalingexistingclusters.html)。
+**重要信息**：您只能在 {{site.data.keyword.slportal}} 中管理订购并交付给您的 {{site.data.keyword.cloud_notm}} 帐户的 ESXi 服务器、可选 VMware 组件以及其他硬件。在 {{site.data.keyword.vmwaresolutions_short}} 控制台中创建新集群后，可以返回到控制台以使用保存的配置扩展新集群。有关更多信息，请参阅[扩展现有 vSphere 集群](vs_scalingexistingclusters.html)。
 
 ## 相关链接
 
