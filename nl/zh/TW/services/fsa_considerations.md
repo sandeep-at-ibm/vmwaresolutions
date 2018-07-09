@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -18,7 +18,7 @@ FortiGate Security Appliance on {{site.data.keyword.cloud}} 服務會以高可�
 
 ## FortiGate Security Appliance on IBM Cloud 的元件
 
-當您為實例訂購 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務時，會在原始實例或叢集的預設公用 VLAN 上部署 FortiGate 300 系列 Security Appliances 的 HA 配對。會透過 FortiGate Security Appliance 遞送所有進入您實例之公用 VLAN 的資料流量。
+當您為實例訂購 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務時，會在原始實例或叢集的預設公用 VLAN 上部署 FortiGate 300 系列 Security Appliance 的 HA 配對。會透過 FortiGate Security Appliance 遞送所有進入您實例之公用 VLAN 的資料流量。
 
 **附註：**如果您訂購其他叢集，則這些新增叢集的公用 VLAN 不會有 Security Appliance 的 HA 配對。
 

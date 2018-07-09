@@ -12,7 +12,7 @@ lastupdated: "2018-05-04"
 
 {{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) 可以使用模組化服務來簡化 VMware 虛擬基礎架構管理。IMI 使用進階自動化及分析來管理全球重要基礎架構元件，以及為各種不同的傳統及雲端虛擬基礎架構提供動態遠端管理服務。
 
-IMI 可以作為單一信任的提供者，以減少監視及管理虛擬 IT 基礎架構的複雜性，方法是提供 VMware Cloud Foundation 及 VMware vCenter Server 環境的「單一管理畫面 ( single-pane-of-glass)」受管理服務。
+IMI 可以作為單一信任的提供者，以減少監視及管理虛擬 IT 基礎架構的複雜性，方法是提供 VMware Cloud Foundation 及 VMware vCenter Server 環境的「單一管理畫面 (single-pane-of-glass)」受管理服務。
 
 IMI 提供 Cloud Foundation 實例及 vCenter Server 實例的受管理服務，其中包括進階 VMware vSphere 管理、完整 VMware NSX 涵蓋範圍以確保高可用性及安全虛擬網路基礎架構，以及 VMware vSAN 監視以確保資料可用性。
 

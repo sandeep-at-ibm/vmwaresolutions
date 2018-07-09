@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -62,8 +62,6 @@ HCX on {{site.data.keyword.cloud_notm}} 元件必須同時安裝在 {{site.data.
 
    如需相關資訊，請參閱[刪除內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](../services/standalone_deletingserviceinstances.html)。
 3. 在 VMware vSphere Web Client 中，刪除內部部署 HCX Manager。
-
-如需相關資訊，請參閱 [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)。
 
 ## 相關鏈結
 
