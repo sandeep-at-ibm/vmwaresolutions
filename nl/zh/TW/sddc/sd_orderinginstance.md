@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-06-07"
 ## 需求
 
 請確定您已完成下列作業：
-*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[使用者帳戶及設定](../vmonic/useraccount.html)。
+*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](../vmonic/useraccount.html)。
 *  您已檢閱 [Cloud Foundation 實例的需求及規劃](sd_planning.html)中的需求及考量。
 
 **重要事項：**請不要修改在訂購及實例部署期間設定的任何值。這樣做會導致您的實例變成無法使用。此外，在部署實例之後，請不要變更實例名稱、根網域名稱、子網域標籤或主機名稱字首。
