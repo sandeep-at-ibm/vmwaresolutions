@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -80,8 +80,7 @@ NetApp ONTAP Select 实例中包含以下组件。
 
 * 10 Gbps 双公用和专用网络上行链路
 * 三个 VLAN（虚拟 LAN）：一个公用 VLAN 和两个专用 VLAN
-* 一个 VXLAN（虚拟可扩展 LAN），带 DLR（分布式逻辑路由器）
-* 两个安全 VMware NSX Edge 服务网关
+* 一个安全 VMware NSX Edge 服务网关
 
 ### 虚拟服务器实例
 
