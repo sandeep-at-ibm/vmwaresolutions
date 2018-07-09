@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -45,6 +45,6 @@ lastupdated: "2018-05-29"
 
 1. 转至 https://control.softlayer.com。
 2. 使用 **IBM 标识**帐户登录到该门户网站。
-3. 完成**通过 IBM Cloud for VMware Solutions 控制台**部分中所述的**步骤 6-8**，以提交您的凭单。
+3. 完成本主题的_通过 IBM Cloud for VMware Solutions 控制台_部分中描述的步骤 6 到 8，以提交您的凭单。
 
     **注**：无论您使用哪种渠道来开具支持凭单（{{site.data.keyword.vmwaresolutions_short}} 控制台或 {{site.data.keyword.slportal}}），_{{site.data.keyword.cloud_notm}} 基础架构和平台服务支持策略_的条款都依然适用。
