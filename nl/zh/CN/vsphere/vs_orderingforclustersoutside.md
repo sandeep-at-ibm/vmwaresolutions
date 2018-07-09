@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,8 +15,8 @@ lastupdated: "2018-05-08"
 ## 需求
 
 确保已完成以下任务：
-*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[用户帐户和设置](../vmonic/useraccount.html)。
-*  已查看[针对 vSphere 集群的需求和规划](vs_planning.html)中的需求和注意事项。
+*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
+*  已查看[针对 VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求和规划](vs_planning.html)中的需求和注意事项。
 
 ## 过程
 
