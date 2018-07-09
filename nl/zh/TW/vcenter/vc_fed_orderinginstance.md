@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-06-12"
 ## 需求
 
 請確定您已完成下列作業：
-* 您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[使用者帳戶及設定](../vmonic/useraccount.html)。
+* 您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](../vmonic/useraccount.html)。
 * 您已檢閱 [VMware Federal 實例的需求及規劃](vc_fed_planning.html)中的資訊。
 * 您已檢閱實例及網域名稱格式。網域名稱及子網域標籤已用來產生實例的使用者名稱及伺服器名稱。
 
@@ -95,7 +95,7 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
 ## 儲存空間設定
 
-儲存空間設定是根據您選取 vSAN、NFS 或自訂 NFS 儲存空間而定。
+儲存空間設定是根據您選取的 Bare Metal Server 配置及儲存空間類型而定。
 
 ### vSAN 儲存空間
 
@@ -111,7 +111,7 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
 **附註：**檔案共用數目必須在 1 到 32 的範圍內。
 
-* **個別配置檔案共用**：選取以指定每一個檔案共用的不同配置設定。
+* **個別配置共用**：選取以指定每一個檔案共用的不同配置設定。
 * **共用數目**：使用每一個檔案共用的相同配置設定時，請指定您要新增之 NFS 共用儲存空間的檔案共用數目。
 * **大小**：選取符合共用儲存空間需求的容量。
 * **效能**：根據您的工作負載需求，選取每 GB IOPS（每秒輸入/輸出作業數）。
@@ -183,9 +183,9 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
   1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
   2. 選取**自訂** CPU 型號及 **RAM** 數量。
 7. 完成儲存空間配置。
-      * 如果您已選取 **vSAN 儲存空間**，請選取 **vSAN 容量磁碟的磁碟類型及大小**、**vSAN 容量磁碟數目**及 VMware vSAN 授權版本。
-      * 如果您已選取 **NFS 儲存空間**，請選取**共用數目**、**大小**及**效能**。
-      * 若要個別新增及配置檔案共用，請選取**自訂 NFS 儲存空間**標籤，然後按一下**新增 NFS** 標籤旁的 **+** 圖示，並針對每一個檔案共用選取**大小**及**效能**。您必須至少選取一個檔案共用。
+  * 當您選取 **vSAN 儲存空間**時，請指定 **vSAN 容量磁碟的磁碟類型及大小**、**vSAN 容量磁碟數目**，以及如何提供 **vSAN 授權**。
+  * 當您選取 **NFS 儲存空間**且想要對所有檔案共用新增及配置相同的設定時，請指定**共用數目**、**大小**及**效能**。
+  * 當您選取 **NFS 儲存空間**且想要個別新增及配置檔案共用時，請選取**個別配置共用**，然後按一下**新增 NFS** 標籤旁的 **+** 圖示，並針對每一個個別檔案共用選取**大小**及**效能**。您必須至少選取一個檔案共用。
 8. 完成網路介面配置。
    1. 輸入主機名稱字首、子網域標籤及根網域名稱。
    2. 選取 DNS 配置。
@@ -199,7 +199,7 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
 實例的部署會自動啟動。您會收到正在處理訂單的確認，您可以檢視實例詳細資料來檢查部署的狀態。
 
-順利部署實例時，會在 VMware 虛擬平台上安裝 [VMware Federal 實例元件](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud)中所述的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。
+順利部署實例之後，會在 VMware 虛擬平台上安裝 [VMware Federal on {{site.data.keyword.cloud_notm}} 的 vCenter Server 實例元件](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。
 
 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 

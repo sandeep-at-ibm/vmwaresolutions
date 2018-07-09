@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -18,19 +18,18 @@ vCenter Server with Hybridity Bundle 實例可使用下列服務。
 
 表 1. vCenter Server with Hybridity Bundle 實例的可用服務
 
-| 服務名稱                                                                               | 可用性       |
+| 服務名稱                                                                               | 可用性       | 實例支援 |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on IBM Cloud](../services/f5_considerations.html)                                 |是|
-| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       |是|
-| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) |是|
-| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              |是|
-| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              |是|
-| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         |是|
-| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  |是|
-| [Veeam on IBM Cloud](../services/veeam_considerations.html)                           |是|
-| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                         |是|
-| [Zerto on IBM Cloud](../services/addingzertodr.html)                                  |是|
-
+| [F5 on IBM Cloud](../services/f5_considerations.html)                                 |是| 1.9 版以及更新版本 |
+| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       |是| 1.8 版以及更新版本 |
+| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) |是| 2.0 版以及更新版本 |
+| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              |是| 2.3 版以及更新版本 |
+| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              |是| 2.3 版以及更新版本 |
+| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         |是| 2.2 版以及更新版本 |
+| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  |是| 2.2 版以及更新版本 |
+| [Veeam on IBM Cloud](../services/veeam_considerations.html)                           |是| 1.8 版以及更新版本 |
+| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                         |是| 2.3 版以及更新版本 |
+| [Zerto on IBM Cloud](../services/addingzertodr.html)                                  |是| 1.2 版以及更新版本 |
 
 ## 將服務新增至 vCenter Server with Hybridity Bundle 實例
 
