@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -37,7 +37,7 @@ lastupdated: "2018-05-29"
 
 在 {{site.data.keyword.vmwaresolutions_short}} 控制台上，可以使用添加和除去 ESXi 服务器功能来扩展和收缩实例的容量。此外，还提供了生命周期管理功能，例如在托管环境中对 VMware 组件应用更新和升级。
 
-<!-- For details about the architecture, read the _Reference documentation_ on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+有关体系结构的详细信息，请参阅[解决方案概述](../archiref/solution/solution_overview.html)。
 
 ## Cloud Foundation 实例组件
 

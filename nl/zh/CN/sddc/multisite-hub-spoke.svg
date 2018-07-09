@@ -1,57 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   id="Layer_1"
-   x="0px"
-   y="0px"
-   viewBox="0 0 450 247.8"
-   style="enable-background:new 0 0 450 247.8;"
-   xml:space="preserve"
-   inkscape:version="0.47 r22583"
-   width="100%"
-   height="100%"
-   sodipodi:docname="multisite-hub-spoke.svg"><metadata
-   id="metadata3006"><rdf:RDF><cc:Work
-       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
-   id="defs3004"><inkscape:perspective
-     sodipodi:type="inkscape:persp3d"
-     inkscape:vp_x="0 : 123.9 : 1"
-     inkscape:vp_y="0 : 1000 : 0"
-     inkscape:vp_z="450 : 123.9 : 1"
-     inkscape:persp3d-origin="225 : 82.6 : 1"
-     id="perspective3008" /></defs><sodipodi:namedview
-   pagecolor="#ffffff"
-   bordercolor="#666666"
-   borderopacity="1"
-   objecttolerance="10"
-   gridtolerance="10"
-   guidetolerance="10"
-   inkscape:pageopacity="0"
-   inkscape:pageshadow="2"
-   inkscape:window-width="1440"
-   inkscape:window-height="838"
-   id="namedview3002"
-   showgrid="false"
-   inkscape:zoom="1.9047619"
-   inkscape:cx="182.30534"
-   inkscape:cy="138.06174"
-   inkscape:window-x="-8"
-   inkscape:window-y="-8"
-   inkscape:window-maximized="1"
-   inkscape:current-layer="g2932" />
-<style
-   type="text/css"
-   id="style2914">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 450 247.8" style="enable-background:new 0 0 450 247.8;" xml:space="preserve">
+<style type="text/css">
 	.st0{fill:#00ABB0;stroke:#00ABB0;stroke-miterlimit:10;}
 	.st1{fill:#FFFFFF;}
 	.st2{font-family:'Roboto-Regular';}
@@ -60,232 +11,66 @@
 	.st5{fill:none;stroke:#118ACB;stroke-miterlimit:10;}
 	.st6{fill:#118ACB;}
 </style>
-<g
-   id="g2916">
-	<rect
-   x="159"
-   y="102.6"
-   class="st0"
-   width="130.6"
-   height="40.1"
-   id="rect2918" />
-	<text
-   transform="scale(0.99909961,1.0009012)"
-   class="st1 st2 st3"
-   id="text2920"
-   x="206.34526"
-   y="126.33694"
-   style="font-size:13.10189247px;fill:#ffffff;font-family:Roboto-Regular"><tspan
-     style="font-family:SimHei;-inkscape-font-specification:SimHei"
-     id="tspan3014">主实例</tspan></text>
-
-	<g
-   id="g2922">
-		<rect
-   x="4.7"
-   y="4.2"
-   class="st4"
-   width="130.6"
-   height="40.1"
-   id="rect2924" />
-		<text
-   transform="scale(0.99909961,1.0009012)"
-   class="st1 st2 st3"
-   id="text2926"
-   x="45.516869"
-   y="28.056416"
-   style="font-size:13.10189247px;fill:#ffffff;font-family:Roboto-Regular"><tspan
-     style="font-family:SimHei;-inkscape-font-specification:SimHei"
-     id="tspan3010">辅助实例</tspan></text>
-
-		<rect
-   x="312.7"
-   y="4.2"
-   class="st4"
-   width="130.6"
-   height="40.1"
-   id="rect2928" />
-		<text
-   transform="scale(0.99909961,1.0009012)"
-   class="st1 st2 st3"
-   id="text2930"
-   x="353.82477"
-   y="28.056416"
-   style="font-size:13.10189247px;fill:#ffffff;font-family:Roboto-Regular"><tspan
-     style="font-family:SimHei;-inkscape-font-specification:SimHei"
-     id="tspan3012">辅助实例</tspan></text>
-
+<g>
+	<rect x="159" y="102.6" class="st0" width="130.6" height="40.1"/>
+	<text transform="matrix(0.9982 0 0 1 174.1595 126.4508)" class="st1 st2 st3">Primary Instance</text>
+	<g>
+		<rect x="4.7" y="4.2" class="st4" width="130.6" height="40.1"/>
+		<text transform="matrix(0.9982 0 0 1 11.4759 28.0817)" class="st1 st2 st3">Secondary Instance</text>
+		<rect x="312.7" y="4.2" class="st4" width="130.6" height="40.1"/>
+		<text transform="matrix(0.9982 0 0 1 319.5062 28.0817)" class="st1 st2 st3">Secondary Instance</text>
 	</g>
-	<g
-   id="g2932">
-		<rect
-   x="4.7"
-   y="201.8"
-   class="st4"
-   width="130.6"
-   height="40.1"
-   id="rect2934" />
-		<text
-   transform="scale(0.99909961,1.0009012)"
-   class="st1 st2 st3"
-   id="text2936"
-   x="43.515072"
-   y="225.43513"
-   style="font-size:13.10189247px;fill:#ffffff;font-family:Roboto-Regular"><tspan
-     style="font-family:SimHei;-inkscape-font-specification:SimHei"
-     id="tspan3016">辅助实例</tspan></text>
-
-		<rect
-   x="312.7"
-   y="201.8"
-   class="st4"
-   width="130.6"
-   height="40.1"
-   id="rect2938" />
-		<text
-   transform="scale(0.99909961,1.0009012)"
-   class="st1 st2 st3"
-   id="text2940"
-   x="353.82477"
-   y="225.43513"
-   style="font-size:13.10189247px;fill:#ffffff;font-family:Roboto-Regular"><tspan
-     style="font-family:SimHei;-inkscape-font-specification:SimHei"
-     id="tspan3018">辅助实例</tspan></text>
-
+	<g>
+		<rect x="4.7" y="201.8" class="st4" width="130.6" height="40.1"/>
+		<text transform="matrix(0.9982 0 0 1 11.4759 225.6383)" class="st1 st2 st3">Secondary Instance</text>
+		<rect x="312.7" y="201.8" class="st4" width="130.6" height="40.1"/>
+		<text transform="matrix(0.9982 0 0 1 319.5062 225.6383)" class="st1 st2 st3">Secondary Instance</text>
 	</g>
-	<g
-   id="g2942">
-		<g
-   id="g2944">
-			<g
-   id="g2946">
-				<line
-   class="st5"
-   x1="138.1"
-   y1="24.2"
-   x2="219.4"
-   y2="97.8"
-   id="line2948" />
-				<g
-   id="g2950">
-					<path
-   class="st6"
-   d="M222.1,100.2c-1.7-0.7-4-1.3-5.7-1.3l2.7-1.4l1.1-2.8C220.4,96.4,221.2,98.6,222.1,100.2z"
-   id="path2952" />
+	<g>
+		<g>
+			<g>
+				<line class="st5" x1="138.1" y1="24.2" x2="219.4" y2="97.8"/>
+				<g>
+					<path class="st6" d="M222.1,100.2c-1.7-0.7-4-1.3-5.7-1.3l2.7-1.4l1.1-2.8C220.4,96.4,221.2,98.6,222.1,100.2z"/>
 				</g>
 			</g>
 		</g>
-		<g
-   id="g2954">
-			<g
-   id="g2956">
-				<line
-   class="st5"
-   x1="309.6"
-   y1="24.2"
-   x2="228.3"
-   y2="97.8"
-   id="line2958" />
-				<g
-   id="g2960">
-					<path
-   class="st6"
-   d="M225.6,100.2c0.8-1.6,1.7-3.8,1.9-5.6l1.1,2.8l2.7,1.4C229.6,98.9,227.3,99.5,225.6,100.2z"
-   id="path2962" />
+		<g>
+			<g>
+				<line class="st5" x1="309.6" y1="24.2" x2="228.3" y2="97.8"/>
+				<g>
+					<path class="st6" d="M225.6,100.2c0.8-1.6,1.7-3.8,1.9-5.6l1.1,2.8l2.7,1.4C229.6,98.9,227.3,99.5,225.6,100.2z"/>
 				</g>
 			</g>
 		</g>
 	</g>
-	<g
-   id="g2964">
-		<g
-   id="g2966">
-			<g
-   id="g2968">
-				<line
-   class="st5"
-   x1="138.1"
-   y1="221.5"
-   x2="219.4"
-   y2="148"
-   id="line2970" />
-				<g
-   id="g2972">
-					<path
-   class="st6"
-   d="M222.1,145.6c-0.8,1.6-1.7,3.8-1.9,5.6l-1.1-2.8l-2.7-1.4C218.1,146.9,220.4,146.2,222.1,145.6z"
-   id="path2974" />
+	<g>
+		<g>
+			<g>
+				<line class="st5" x1="138.1" y1="221.5" x2="219.4" y2="148"/>
+				<g>
+					<path class="st6" d="M222.1,145.6c-0.8,1.6-1.7,3.8-1.9,5.6l-1.1-2.8l-2.7-1.4C218.1,146.9,220.4,146.2,222.1,145.6z"/>
 				</g>
 			</g>
 		</g>
-		<g
-   id="g2976">
-			<g
-   id="g2978">
-				<line
-   class="st5"
-   x1="309.6"
-   y1="221.5"
-   x2="228.3"
-   y2="148"
-   id="line2980" />
-				<g
-   id="g2982">
-					<path
-   class="st6"
-   d="M225.6,145.6c1.7,0.7,4,1.3,5.7,1.3l-2.7,1.4l-1.1,2.8C227.3,149.4,226.4,147.2,225.6,145.6z"
-   id="path2984" />
+		<g>
+			<g>
+				<line class="st5" x1="309.6" y1="221.5" x2="228.3" y2="148"/>
+				<g>
+					<path class="st6" d="M225.6,145.6c1.7,0.7,4,1.3,5.7,1.3l-2.7,1.4l-1.1,2.8C227.3,149.4,226.4,147.2,225.6,145.6z"/>
 				</g>
 			</g>
 		</g>
 	</g>
-	<g
-   id="g2986">
-		<ellipse
-   class="st4"
-   cx="63.1"
-   cy="82.4"
-   rx="2.3"
-   ry="2.3"
-   id="ellipse2988" />
-		<ellipse
-   class="st4"
-   cx="63.1"
-   cy="125.7"
-   rx="2.3"
-   ry="2.3"
-   id="ellipse2990" />
-		<ellipse
-   class="st4"
-   cx="63.1"
-   cy="162.7"
-   rx="2.3"
-   ry="2.3"
-   id="ellipse2992" />
+	<g>
+		<ellipse class="st4" cx="63.1" cy="82.4" rx="2.3" ry="2.3"/>
+		<ellipse class="st4" cx="63.1" cy="125.7" rx="2.3" ry="2.3"/>
+		<ellipse class="st4" cx="63.1" cy="162.7" rx="2.3" ry="2.3"/>
 	</g>
-	<g
-   id="g2994">
-		<ellipse
-   class="st4"
-   cx="373.2"
-   cy="87.3"
-   rx="2.3"
-   ry="2.3"
-   id="ellipse2996" />
-		<ellipse
-   class="st4"
-   cx="373.2"
-   cy="130.6"
-   rx="2.3"
-   ry="2.3"
-   id="ellipse2998" />
-		<ellipse
-   class="st4"
-   cx="373.2"
-   cy="167.6"
-   rx="2.3"
-   ry="2.3"
-   id="ellipse3000" />
+	<g>
+		<ellipse class="st4" cx="373.2" cy="87.3" rx="2.3" ry="2.3"/>
+		<ellipse class="st4" cx="373.2" cy="130.6" rx="2.3" ry="2.3"/>
+		<ellipse class="st4" cx="373.2" cy="167.6" rx="2.3" ry="2.3"/>
 	</g>
 </g>
 </svg>

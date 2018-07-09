@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-06-07"
 ## 需求
 
 确保已完成以下任务：
-*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[用户帐户和设置](../vmonic/useraccount.html)。
+*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
 *  已查看[针对 Cloud Foundation 实例的需求和规划](sd_planning.html)中的需求和注意事项。
 
 **重要信息**：不要修改在订购和实例部署期间设置的任何值。这样做可能会导致实例变得不可用。此外，在部署实例之后，不要更改实例名称、根域名、子域标签或主机名前缀。
