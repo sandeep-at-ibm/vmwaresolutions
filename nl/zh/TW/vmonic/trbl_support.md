@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -46,6 +46,6 @@ lastupdated: "2018-05-29"
 
 1. 移至 https://control.softlayer.com。
 2. 使用 **IBM ID** 帳戶登入到入口網站。
-3. 完成**從 IBM Cloud for VMware Solutions 主控台**小節中所述的**步驟 6-8**，以提交問題單。
+3. 完成_從 IBM Cloud for VMware Solutions 主控台_ 小節中所述的步驟 6 到 8，以提交問題單。
 
     **附註**：不論您使用哪個通道來開立支援問題單（{{site.data.keyword.vmwaresolutions_short}} 主控台或 {{site.data.keyword.slportal}}），仍然適用 _{{site.data.keyword.cloud_notm}} 基礎架構及平台服務支援原則_ 的條款。

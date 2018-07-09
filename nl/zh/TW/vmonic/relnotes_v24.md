@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-22"
 
 ---
 
@@ -70,7 +70,7 @@ lastupdated: "2018-06-12"
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-現行版本會將 IBM Spectrum Protect&trade; Plus 10.1.1 版 Patch 1 當成預設備份服務安裝至所有新部署的實例。如需 IBM Spectrum Protect Plus 10.1.1 版 Patch 1 中新增特性的相關資訊，請參閱 [IBM Spectrum Protect Plus 更新項目](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}。
+現行版本會將 IBM Spectrum Protect&trade; Plus 10.1.1 版 Patch 1 安裝至所有新部署的實例。如需 IBM Spectrum Protect Plus 10.1.1 版 Patch 1 中新增特性的相關資訊，請參閱 [IBM Spectrum Protect Plus 更新項目](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}。
 
 ### VMware HCX on IBM Cloud
 
@@ -89,8 +89,8 @@ lastupdated: "2018-06-12"
 如需相關資訊，請參閱：
 
 * [訂購 F5 on IBM Cloud](../services/f5_ordering.html)
-* [訂購 FortiGate Security Appliance on IBM Cloud](../services/fortigate_physical_ordering.html)
-* [訂購 FortiGate Virtual Appliance on IBM Cloud](../services/fortigate_vm_ordering.html)
+* [訂購 FortiGate Security Appliance on IBM Cloud](../services/fsa_ordering.html)
+* [訂購 FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_ordering.html)
 * [訂購 Hytrust CloudControl on IBM Cloud](../services/htcc_ordering.html)
 * [訂購 Hytrust DataControl on IBM Cloud](../services/htdc_ordering.html)
 * [訂購 IBM Spectrum Protect Plus on IBM Cloud](../services/spp_ordering.html)

@@ -26,7 +26,7 @@ lastupdated: "2018-05-28"
 
 此版本引進 VMware vCenter Server on IBM Cloud with Hybridity Bundle 供應項目。vCenter Server with Hybridity Bundle 是一種受管理的專用雲端，有助於快速且輕鬆地將內部部署基礎架構擴充到雲端。VMware 環境根據 IBM 提供的「VMware 軟體定義資料中心」授權，並包括 VMware HCX on {{site.data.keyword.cloud_notm}} 服務，以透過內部部署方式輕鬆且安全地連接 vSphere 5.0+ 環境與 IBM Cloud 站台，來獲得無縫的基礎架構混合及實際應用程式行動性。
 
-只有透過 vCenter Server with Hybridity Bundle 實例才能取得 HCX on {{site.data.keyword.cloud_notm}} 服務。在第一次套用基本 vCenter Server 2.3 版軟體更新之後，您可以將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。如需相關資訊，請參閱[將更新套用至 vCenter Server 實例](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html)。
+只有透過 vCenter Server with Hybridity Bundle 實例才能取得 HCX on {{site.data.keyword.cloud_notm}} 服務。在第一次套用基本 vCenter Server 2.3 版軟體更新之後，您可以將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。如需相關資訊，請參閱[將更新套用至 vCenter Server 實例](../vcenter/vc_applyingupdates.html)。
 
 如需 vCenter Server with Hybridity Bundle 的相關資訊，請參閱：
 
