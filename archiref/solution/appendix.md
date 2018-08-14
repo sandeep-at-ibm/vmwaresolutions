@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -23,6 +23,7 @@ Table 1. VMware NSX edition comparison chart
 | NAT                                           | •    | •        | •          |
 | NSX Edge load balancing                       | •    | •        | •          |
 | VPN (IPsec)                                   | •    | •        | •          |
+| VPN (SSL)                                     | •    | •        | •          |
 | API-driven automation                         | •    | •        | •          |
 | Integration with vRealize and OpenStack\*     | •    | •        | •          |
 | Automation of security policies with vRealize |      | •        | •          |
@@ -32,7 +33,6 @@ Table 1. VMware NSX edition comparison chart
 | Integration with Active Directory             |      | •        | •          |
 | Server activity monitoring                    |      | •        | •          |
 | Service insertion (3rd party integration)     |      | •        | •          |
-| VPN (SSL)                                     |      |          | •          |
 | Distributed load balancing                    |      |          | •          |
 | Cross vCenter NSX                             |      |          | •          |
 | Multi-site NSX optimizations                  |      |          | •          |
@@ -62,3 +62,9 @@ Table 2. VMware vSAN edition comparison chart
 | RAID-5/6 erasure coding                         | •        | •          |
 | Data at rest encryption                         |          | •          |
 | Stretched cluster with local failure protection |          | •          |
+
+### Related links
+
+* [Solution overview](solution_overview.html)
+* [Design overview](design_overview.html)
+* [Backing up components](solution_backingup.html)
