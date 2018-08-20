@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -37,10 +37,10 @@ If you have pre-V1.4 instances and you plan to continue to use them, you can upg
 
 To move your pre-V1.4 instances to new instances, complete the following steps in the vSphere Web Client:
 1. From your pre-V1.4 instance, export all VMs (virtual machines).
-2. Create a new instance in the current release.
+2. Create an instance in the current release.
 3. Import all exported VMs from **Step 1**.
-4. Start using your new instance.
+4. Use your new instance.
 
-For information about exporting and importing VMs, see your VMware vSphere documentation.
+For more information about exporting and importing VMs, see your VMware vSphere documentation.
 
 If you need assistance with {{site.data.keyword.vmwaresolutions_short}}, [contact IBM Support](trbl_support.html) through one of the support channels.
