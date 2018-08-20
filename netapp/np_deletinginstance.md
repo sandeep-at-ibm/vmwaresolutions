@@ -4,15 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-19"
 
 ---
 
 # Deleting NetApp ONTAP Select instances
 
-To release the components that you ordered in a NetApp ONTAP Select instance, delete the instance.
-
-When you delete a NetApp ONTAP Select instance, the following components are released sequentially:
+If you delete a NetApp ONTAP Select instance, the following components are released sequentially:
 1. The deployed NetApp ONTAP Select clustered VMs (virtual machines) and the NetApp ONTAP Select Deploy VM
 2. Support and Services fee
 3. VMware product licenses
@@ -44,7 +42,7 @@ Because of resource dependencies, the components in your instance are not releas
    1. Click the overflow menu icon to the right of **vCenter console** again and click **Delete Instance**.
    2. In the **Delete Instance** window, click **OK**.
 
-## Related links
+### Related links
 
 * [Ordering NetApp ONTAP Select instances](np_orderinginstances.html)
 * [Viewing NetApp ONTAP Select instances](np_viewinginstances.html)

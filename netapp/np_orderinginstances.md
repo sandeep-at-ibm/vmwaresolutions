@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-07"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -18,11 +18,11 @@ Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
 *  You reviewed the requirements and considerations in [Requirements and planning for NetApp ONTAP Select instances](np_planning.html).
 
-**Important: Do not modify any values that are set during ordering and instance deployment. Doing so can result in your instance becoming unusable.**
+**Important: Do not modify any values that are set during ordering and instance deployment. Doing so might make your instance unusable.**
 
 ## System settings
 
-When you order a NetApp ONTAP Select instance, you must specify the following basic settings.
+When you order a NetApp ONTAP Select instance, you must specify its basic settings.
 
 ### Instance name
 
@@ -34,7 +34,7 @@ The instance name must meet the following requirements:
 
 ## Network interface settings
 
-You must specify the following network interface settings when ordering a NetApp ONTAP Select instance.
+You must specify the following network interface settings when you order a NetApp ONTAP Select instance.
 
 ### Host name prefix
 
@@ -64,32 +64,30 @@ The root domain name must meet the following requirements:
 
 ## Licensing settings
 
-You must upload four NetApp licensing files, because each of the four {{site.data.keyword.baremetal_short}} requires one license. Contact your NetApp sales team to procure the appropriate licensing for your high performance or high capacity deployment.
+You must upload four NetApp licensing files because each of the four {{site.data.keyword.baremetal_short}} requires one license. Contact your NetApp sales team to procure the appropriate licensing for your high performance or high capacity deployment.
 
 ## Bare Metal Server settings
 
 ### Data center location
 
-You must select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the Bare Metal Server specification you selected previously are displayed.-->
+You must select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.
 
 ### Bare Metal Server configuration
 
-You can select a Bare Metal Server configuration depending on your requirements:
+Select a Bare Metal Server configuration based on your requirements:
 * **High Performance (Medium)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 1.9 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 59 TB
 * **High Performance (Large)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 3.8 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 118 TB
 * **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 64 GB RAM / Thirty Four 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 190 TB
 
-**Note:** 3.8 TB SSD (Solid State Disk) drives will be supported when they are made generally available in an {{site.data.keyword.CloudDataCent_notm}}.
-
-<!--For guidance on what bare metal server configuration to choose, see the _Bill of Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
+**Note:** 3.8 TB SSD (Solid-State Disk) drives will be supported when they are made generally available in an {{site.data.keyword.CloudDataCent_notm}}.
 
 ### Number of Bare Metal Servers
 
-The number of ESXi servers of a NetApp ONTAP Select instance is 4 by default. You cannot change it. All the ESXi servers share the same configuration.
+The number of ESXi servers of a NetApp ONTAP Select instance is 4 by default. You cannot change it. All the ESXi servers share configuration.
 
 ## Procedure
 
-1. From the {{site.data.keyword.cloud_notm}} Catalog, click **VMware** on the left navigation pane, and then click **NetApp ONTAP Select** in the **Virtual Data Centers** section.
+1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** on the left navigation pane, and then click **NetApp ONTAP Select** in the **Virtual Data Centers** section.
 2. On the **NetApp ONTAP Select** page, click **Create**.
 3. On the **NetApp ONTAP** page, enter the instance name.
 4. Complete the network interface settings by entering the **Hostname Prefix**, **Subdomain Label**, and **Domain Name**.
@@ -108,7 +106,7 @@ The number of ESXi servers of a NetApp ONTAP Select instance is 4 by default. Yo
 
 The deployment of the instance starts automatically. You will receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [NetApp ONTAP Select instance components](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components) are installed on your VMware virtual platform.
+When the instance is successfully deployed, the components that are described in [Technical specifications for NetApp ONTAP Select instances](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) are installed on your VMware virtual platform.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
@@ -116,7 +114,7 @@ When the instance is ready to use, the status of the instance is changed to **Re
 
 View and manage the NetApp ONTAP Select instance that you ordered.
 
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
 **CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components
@@ -124,7 +122,7 @@ View and manage the NetApp ONTAP Select instance that you ordered.
 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-## Related links
+### Related links
 
 * [Viewing NetApp ONTAP Select instances](np_viewinginstances.html)
 * [Deleting NetApp ONTAP Select instances](np_deletinginstance.html)

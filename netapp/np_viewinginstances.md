@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-08-14"
 
 ---
 
 # Viewing NetApp ONTAP Select instances
 
-View the NetApp ONTAP Select instances that you ordered and detailed information about them.
+View the summary and detailed information of the NetApp ONTAP Select instances that are provisioned for different user accounts.
 
 ## Viewing NetApp ONTAP Select instances summary
 
-To view a summary of all the NetApp ONTAP Select instances in your environment, complete the following steps:
+To view a summary of all the NetApp ONTAP Select instances that are provisioned for a user account, complete the following steps:
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
-2. In the **NetApp ONTAP Select Instances** table, view the list of your instances.
+1. In the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane.
+2. At the upper-right corner of the console, click your avatar, and then click the **Account** field to select the user account that you want to check instances for.
+3. In the **NetApp ONTAP Select Instances** table, view the list of instances that are provisioned in the selected user account.
 
 Table 1. NetApp ONTAP Select instance items
 
@@ -43,8 +44,8 @@ Table 2. NetApp ONTAP Select instance properties
 | Name | The name of the instance. |
 | ID | The ID of the instance. |
 | Location | The data center where the instance is hosted. |
-| Deployed version | The deployed version of {{site.data.keyword.vmwaresolutions_full}}. |
-| vCenter version | The version of VMware vCenter Server.<br><br>**Note**: There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct. |
+| Deployed version | The deployed version of {{site.data.keyword.vmwaresolutions_short}}. |
+| vCenter version | The version of VMware vCenter Server.<br><br>**Note**: There is a slight variation between the vCenter Server version that is displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct. |
 | NSX for vSphere | The VMware NSX for vSphere product version. |
 | NSX license edition | The version and edition of the VMware NSX license. |
 | NetApp version | The version of NetApp ONTAP Select. |
@@ -85,7 +86,7 @@ Table 3. Access information for NetApp ONTAP Select instance-related components
 
 ## Viewing the deployment history for NetApp ONTAP Select instances
 
-Under **Deployment History**, view the deployment history for the instance.
+Click **Deployment History** from the left navigation pane to view the deployment history for the instance.
 
 Table 4. NetApp ONTAP Select instance deployment history
 
@@ -98,7 +99,7 @@ If errors occur during instance deployment or instance deletion, the {{site.data
 
 ## Viewing NetApp ONTAP Select clusters
 
-1. Click **Infrastructure** on the left navigation pane.
+1. Click **Infrastructure** from the left navigation pane.
 2. Under **CLUSTERS**, view the summary about the NetApp ONTAP Select clusters.
 
 	Table 5: NetApp ONTAP Select clusters items
@@ -164,13 +165,13 @@ Manage your instances from the {{site.data.keyword.vmwaresolutions_short}} conso
 
 **Important**: Before you click **vCenter console** on the instance summary page to go to the vSphere Web Client and start managing your ESXi servers, you must log in to the VPN portal of the {{site.data.keyword.CloudDataCent_notm}}. Hover over the **vCenter console** button and follow the instructions to ensure that you meet all requirements and you completed the necessary steps before you access the vSphere Web Client.
 
-Review the following topics for information to help you complete the login instructions:
+For more information to help you complete the login instructions, review the following topics:
 
 *  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
 *  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network using VPN, see [VPN Access](http://www.softlayer.com/vpn-access){:new_window}.
 *  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
 
-## Related links
+### Related links
 
 * [Ordering NetApp ONTAP Select instances](np_orderinginstances.html)
 * [Deleting NetApp ONTAP Select instances](np_deletinginstance.html)
