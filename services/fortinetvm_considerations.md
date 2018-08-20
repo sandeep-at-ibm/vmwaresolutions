@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -16,24 +16,35 @@ You can install multiple instances of this service as needed. You can manage thi
 
 **Availability**: This service is available only to instances that are deployed in V2.0 or later releases.
 
-## Components of FortiGate Virtual Appliance on IBM Cloud
+## Technical specifications for FortiGate Virtual Appliance on IBM Cloud
 
-When you order the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service, a pair of FortiGate Virtual Appliances is deployed with:
-* A network interface configured for the management network.
-* Nine additional network interfaces that you can configure to protect data traffic, as needed.
+The following components are ordered and included in the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service:
 
-The FortiGate Virtual Appliances are not preconfigured as highly available (HA) pair. After deployment, you can configure HA settings, which includes Virtual Router Redundancy Protocol (VRRP) and FortiGate Cluster Protocol (FGCP), according to your needs.
+### Virtual machines
+
+* All options include a highly available (HA) pair of virtual machines
+* 2, 4, or 8 vCPUs per virtual machine depending on the deployment size and subscription type
+* 4, 6, or 12 GB RAM per virtual machine depending on the deployment size and subscription type
+
+### High availability
+
+Two virtual machines are deployed and ready for HA or Virtual Router Redundancy Protocol (VRRP) configuration.
+
+### Networking
+
+Access to the FortiGate® console is provided through a private management network.
+
+### License and fees
+
+License fees for each virtual machine are applied to each billing cycle depending on the selected deployment size and monthly subscription license model.
+
+**Important:** You cannot change the licensing level after service installation. To change the licensing level, you must remove the existing service and reinstall the service using a different licensing option.
 
 ## Considerations when installing FortiGate Virtual Appliance on IBM Cloud
 
 Review the following considerations before you install the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service:
-* The FortiGate virtual machines (VMs) will be deployed only into the default cluster.
-* Based on the deployment size and license model that you select, the two FortiGate VMs are deployed with one of the following configurations:
-    * Small (2 vCPUs / 4 GB RAM)
-    * Medium (4 vCPUs / 6 GB RAM)
-    * Large (8 vCPUs / 12 GB RAM)
-
-  In addition, 100% of CPU and RAM for the two FortiGate VMs are also reserved because these VMs are in the data plane of the network
+* The FortiGate virtual machines (VMs) are deployed only into the default cluster.
+* 100% of CPU and RAM for the two FortiGate VMs are also reserved because these VMs are in the data plane of the network
   communications and it is critical that resources are still available for them.
 
   To calculate the CPU and RAM reservation for a single FortiGate VM, use the following formula:
@@ -64,7 +75,7 @@ By default however, vSphere HA reserves 50% of CPU and RAM for failover on vCent
 
 `50% of 2 * 16 cores * 2.1 GHz = 33.6 GHz available`
 
-Since other workloads will exist on the ESXi servers, for example, IBM CloudDriver, VMware NSX Controller, or VMware NSX Edge, by using these resources, the third requirement is not met. This is because we need 33.6 GHz of CPU and 24 GB RAM for the two FortiGate VMs.
+Since other workloads exist on the ESXi servers, for example, VMware vCenter Server, VMware NSX Controller, or VMware NSX Edge, by using these resources, the third requirement is not met. This is because we need 33.6 GHz of CPU and 24 GB RAM for the two FortiGate VMs.
 
 In this case, the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installation might fail, unless at least one ESXi server is added to the environment and vShpere HA failover reservations are updated appropriately to ensure that there are enough resources for two FortiGate VMs.
 
@@ -74,7 +85,7 @@ If additional resources are needed to run the FortiGate Virtual Appliance on {{s
 
 Before you remove the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service, ensure that the configuration of the existing FortiGate Virtual Appliances is removed correctly. Specifically, network traffic must be routed around FortiGate Virtual Appliances instead of through FortiGate Virtual Appliances. Otherwise, the existing data traffic within your environment might be impacted.
 
-## Related links
+### Related links
 
 * [Ordering FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_ordering.html)
 * [Managing FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](managingfortinetvm.html)

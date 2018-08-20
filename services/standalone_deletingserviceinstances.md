@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -24,7 +24,7 @@ Ensure that you reviewed all the considerations in [Considerations when deleting
 4. In the **Delete Instance** window, click **OK**.
    The status of the instance is changed to **Removing**. When the instance deletion is completed, the instance is no longer available in the **On-premises HCX Instances** table.
 
-## Related links
+### Related links
 
 * [Ordering on-premises HCX on {{site.data.keyword.cloud_notm}} instances](standalone_orderingserviceinstances.html)
 * [Viewing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](standalone_viewingserviceinstances.html)

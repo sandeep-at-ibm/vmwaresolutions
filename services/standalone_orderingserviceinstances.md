@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -20,14 +20,11 @@ Ensure that you completed the following tasks:
 
 ## Procedure
 
-1. Click **Deployed Instances** from the left navigation pane.
-2. Scroll to the **On-premises HCX Instances** table and click **Order Instance**.
-3. Specify the **On-premises Instance Name** and click **Next**.
-4. Verify the instance configuration before you place the order.
-   1. Review the settings for the instance.
-   2. Review the monthly billing of the instance.
-   3. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the instance.
-5. Click **Place Order**.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+2. Scroll to the **On-premises HCX Instances** table and click **Provision New**.
+3. Specify the **On-premises Instance Name**.
+4. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the instance.
+5. Click **Provision**.
 
 ## Results
 
@@ -39,10 +36,9 @@ When the activation key is ready to use, the status of the instance is changed t
 
 View and manage the on-premises HCX on {{site.data.keyword.cloud_notm}} instance that you ordered.
 
-## Related links
+### Related links
 
 * [Viewing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](standalone_viewingserviceinstances.html)
 * [Deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](standalone_deletingserviceinstances.html)
 * [Glossary of HCX terms](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

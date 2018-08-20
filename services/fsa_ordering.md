@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -15,16 +15,16 @@ You can order the FortiGate Security Appliance on {{site.data.keyword.cloud}} se
 ## Ordering FortiGate Security Appliance on IBM Cloud for a new instance
 
 You can order a new instance with FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} by using one of the following methods:
-* From the {{site.data.keyword.vmwaresolutions_full}} console, when you order a new instance, select **FortiGate Security Appliance on IBM Cloud** in the **Services** section.
-* From the {{site.data.keyword.cloud_notm}} catalog, select **FortiGate Security Appliance on IBM Cloud service**, specify the service settings, and select **Add to New Instance**.
+* From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, select **FortiGate Security Appliance on IBM Cloud** in the **Services** section.
+* From the {{site.data.keyword.cloud_notm}} catalog, select **FortiGate Security Appliance on IBM Cloud**, specify the service settings, and select **Add to New Instance**.
 
 ## Ordering FortiGate Security Appliance on IBM Cloud for an existing instance
 
 You can add the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service into an existing instance by using one the following methods:
-* From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add Service**.
-* From the {{site.data.keyword.cloud_notm}} catalog, select **FortiGate Security Appliance on IBM Cloud service**, specify the service settings and select **Add to Existing Instance**.
+* From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
+* From the {{site.data.keyword.cloud_notm}} catalog, select **FortiGate Security Appliance on IBM Cloud**, specify the service settings and select **Add to Existing Instance**.
 
-## Related links
+### Related links
 
 * [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} overview](fsa_considerations.html)
 * [Managing FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](managingfsa.html)

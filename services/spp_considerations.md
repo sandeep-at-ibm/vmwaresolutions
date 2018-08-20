@@ -4,51 +4,59 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-08-16"
 
 ---
 
 # IBM Spectrum Protect Plus on IBM Cloud overview
 
-The IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud}} service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement the service as a stand-alone solution or you can integrate it with your IBM Spectrum Protect Plus environment to offload copies for long-term storage and data governance.
+The {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement the service as a stand-alone solution or you can integrate it with your IBM Spectrum Protect environment to offload copies for long-term storage and data governance.
 
 **Availability**: This service is available only to instances that are running vSphere 6.5 and that are deployed in (or upgraded to) V2.2 or later releases.
 
 **Notes:**
-* If you install the service for instances that are deployed in V2.4 or later releases, IBM Spectrum Protect Plus V10.1.1 Patch 1 is installed. The service provides recovery support for management virtual machines (VMs) automatically.
-* If you install the service for instances that are deployed in V2.3, IBM Spectrum Protect Plus V10.1.1 is installed. The service provides backup for management VMs automatically.
-* If you install the service for instances that are deployed in V2.2, IBM Spectrum Protect Plus V10.1.0 is installed. The service provides data protection for the workload VMs only.
+* If you install the service for instances that are deployed in V2.4 or later releases, IBM Spectrum Protect Plus V10.1.1 Patch 1 is installed.
+* If you install the service for instances that are deployed in V2.3, IBM Spectrum Protect Plus V10.1.1 is installed.
+* If you install the service for instances that are deployed in V2.2, IBM Spectrum Protect Plus V10.1.0 is installed.
 
 
-## Components of IBM Spectrum Protect Plus on IBM Cloud
+## Technical specifications for IBM Spectrum Protect Plus on IBM Cloud
 
 The following components are ordered and included in the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service:
 
 ### vCenter resources
 
-* A single virtual machine (VM) running the IBM Spectrum Protect Plus server
-* 4 x 2.0 GHz cores
-* 32 GB RAM
-* 370 GB disk
+* Server VM running IBM Spectrum Protect Plus server
+   * OS: Linux 3.10.0-693.11.1.el7.x86_64
+   * 4 x 2.0 GHz cores
+   * 32 GB RAM
+   * 370 GB disk
+* Secondary VM running IBM Spectrum Protect Plus vSnap server and VADP proxy
+   * OS: Linux 3.10.0-693.11.1.el7.x86_64
+   * CPU and RAM configured based on the selected storage size and the [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) sizing guidance
+   * 150 GB disk
 
 ### Storage for backups
 
 Customizable storage for backups with the following options:
-* Number of file storage: 1, 2, 3, or 4
+* Number of file storage: 1 - 10
 * Each endurance file storage: 500, 1000, 2000, 4000, 8000, or 12000 GB
 * Storage performance: 0.25, 2, or 4 IOPS/GB
 
+See the [IBM Spectrum Protect Plus blueprint and sizing tool](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) for planning and sizing.
+
 ### Storage for management
 
-One endurance file storage (500 GB, 2 IOPS/GB) hosting the IBM Spectrum Protect Plus virtual machine and running on the same subnet as the backup storage ordered for the service.
+One 1000 GB, 2 IOPS/GB endurance file storage hosting the IBM Spectrum Protect Plus virtual machine and running on the same subnet as the backup storage.
 
 ### Networking
 
-One portable private IP address.
+Two portable private IP addresses.
 
 ### Licenses and fees
 
-IBM Spectrum Protect Plus can be licensed in the {{site.data.keyword.vmwaresolutions_short}} console for 10 to a maximum of 1000 VMs in increments of 10. You can also Bring Your Own License (BYOL) and upload the license file during the installation process.
+* IBM Spectrum Protect Plus (10 to a maximum of 1000 VM licenses in increments of 10)
+* IBM Spectrum Protect Plus license offered through the {{site.data.keyword.vmwaresolutions_short}} console (number of VMs in packages of 10) or as BYOL
 
 ## Considerations when installing IBM Spectrum Protect Plus on IBM Cloud
 
@@ -59,18 +67,18 @@ Review the following considerations before you install the IBM Spectrum Protect 
 
   Cloud Foundation instances and vCenter Server instances that are deployed in (or upgraded) to V2.2 or later releases have an `NFS.MaxVolumes` parameter setting in VMware. This parameter defines the maximum number of NFS mounts on an ESXi server and can be set to a maximum of 256 which is specific to the version of the ESXi server. For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
 
-  The IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service can consume up to five of the NFS volumes on each ESXi server in the default cluster of your instance. In addition, the service will create transient NFS mounts for backup and restore purposes. Therefore, you must set the number of NFS mounts to a minimum of 64 to ensure that the service can be installed and function successfully.
+  The IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service can consume up to eleven of the NFS volumes on each ESXi server in the default cluster of your instance. In addition, the service will create transient NFS mounts for backup and restore purposes. Therefore, you must set the number of NFS mounts to a minimum of 64 to ensure that the service can be installed and function successfully.
 
 ## Considerations when removing IBM Spectrum Protect Plus on IBM Cloud
 
 Review the following considerations before you remove the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service:
 * Ensure that all the backup job configurations are removed and that there are no active backup or restore operations.
-* When you remove the service, the storage for the backup repository is removed from the IBM Spectrum Protect Plus VM and the storage order is cancelled, which deletes the backup repository data permanently.
+* When you remove the service, the storage for the backup repository is removed from the IBM Spectrum Protect Plus VM and the storage order is canceled, which deletes the backup repository data permanently.
 * When you remove the service, the backup storage ordered for the service is removed too. Therefore, all the backups become inaccessible during service removal.
 
-## Related links
+### Related links
 
-* [IBM Spectrum Protect Plus on IBM Cloud Preventive Service Planning](http://www.ibm.com/support/docview.wss?uid=swg22012650)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service Planning](http://www.ibm.com/support/docview.wss?uid=swg22012650)
 * [Managing IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](managingspp.html)
 * [Ordering IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](spp_ordering.html)
 * [IBM Spectrum Protect Plus documentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)

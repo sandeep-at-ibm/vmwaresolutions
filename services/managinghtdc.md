@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
 # Managing HyTrust DataControl on IBM Cloud
 
-To manage the HyTrust DataControl on {{site.data.keyword.cloud}} service (HTDC), access the HTDC WebGUI from the {{site.data.keyword.vmwaresolutions_full}} console, or access the HTDC console from the vSphere Web Client.
+To manage the HyTrust DataControl on {{site.data.keyword.cloud}} service (HTDC), access the HTDC WebGUI from the {{site.data.keyword.vmwaresolutions_short}} console, or access the HTDC console from the vSphere Web Client.
 
 ## Accessing the HyTrust DataControl WebGUI from the IBM Cloud for VMware Solutions console
 
@@ -27,7 +27,7 @@ For more information, see the following topics:
 * [Ordering, viewing, and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
 * [Ordering, viewing, and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
 
-## Related links
+### Related links
 
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} overview](htcc_considerations.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)

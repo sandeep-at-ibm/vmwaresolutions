@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,7 +18,7 @@ For information about viewing the service details, see the following topics:
 * [Ordering, viewing, and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
 * [Ordering, viewing, and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
 
-## Related links
+### Related links
 
 * [F5 on {{site.data.keyword.cloud_notm}} overview](f5_considerations.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)

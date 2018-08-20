@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -25,12 +25,7 @@ For full HCX functionality, you need at least five private IP addresses and you 
 ### Deployment process for on-premises HCX on IBM Cloud instances
 
 You must complete the following tasks for a successful installation of the on-premises HCX on {{site.data.keyword.cloud_notm}} instance:
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, complete the following steps:
-    1. Click **Deployed Instances** from the left navigation pane.
-    2. Click the vCenter Server with Hybridity Bundle instance with the HCX on {{site.data.keyword.cloud_notm}} service installed. This is the cloud side that you want to connect to from your on-premises vSphere environment.
-    3. On the **Services** tab, click **Installed Services**.
-    4. Click the **HCX on {{site.data.keyword.cloud_notm}}** card.
-    5. Click **View HCX Cloud Console**, and then log in to the console by using the vCenter Server credentials to view the details of the cloud-side HCX on {{site.data.keyword.cloud_notm}} service.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, order the on-premises HCX on {{site.data.keyword.cloud_notm}} instance. For more information, see [Ordering on-premises VMware HCX on IBM Cloud instances](standalone_orderingserviceinstances.html).
 2. In the **HCX Cloud Console**, complete the following steps:
     1. Click the **Administration** tab.
     2. On the **System Updates** tab, click **REQUEST DOWNLOAD LINK**.
@@ -63,7 +58,7 @@ Review the following considerations before you delete an HCX on {{site.data.keyw
    For more information, see [Deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](../services/standalone_deletingserviceinstances.html).
 3. In the VMware vSphere Web Client, delete the on-premises HCX Manager.
 
-## Related links
+### Related links
 
 * [Viewing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](../services/standalone_viewingserviceinstances.html)
 * [Glossary of HCX terms](hcx_glossary.html)

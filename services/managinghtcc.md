@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
 # Managing HyTrust CloudControl on IBM Cloud
 
-To manage the HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service (HTCC), access the HTCC WebGUI from the {{site.data.keyword.vmwaresolutions_full}} console, or access the HTCC console from the vSphere Web Client.
+To manage the HyTrust CloudControl on {{site.data.keyword.cloud}} service (HTCC), access the HTCC WebGUI from the {{site.data.keyword.vmwaresolutions_short}} console, or access the HTCC console from the vSphere Web Client.
 
 ## Accessing the HyTrust CloudControl WebGUI from the IBM Cloud for VMware Solutions console
 
@@ -27,7 +27,7 @@ For more information, see the following topics:
 * [Ordering, viewing, and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
 * [Ordering, viewing, and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
 
-## Related links
+### Related links
 
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} overview](htcc_considerations.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)
