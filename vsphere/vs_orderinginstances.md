@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-08-11"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-22"
 
 To deploy a highly customizable VMware virtualized platform, order a VMware vSphere cluster on {{site.data.keyword.cloud}}. Use this procedure to define a new VMware vSphere cluster.
 
-This procedure guides you through VMware component selecting, {{site.data.keyword.cloud_notm}} Bare Metal Server settings, storage settings, and networking choices, to create a new cluster. After you place the order, the cluster configuration is captured so that you can come back and continue to scale out the cluster as needed. Once the order is completed, you can manually configure the VMware cluster based on your requirements.
+This procedure guides you through the selection of VMware components, {{site.data.keyword.cloud_notm}} Bare Metal Server settings, storage settings, and networking choices, to create a new cluster. After you place the order, the cluster configuration is captured so that you can come back and continue to scale out the cluster as needed. After the order is completed, you can manually configure the VMware cluster based on your requirements.
 
 ## Requirements
 
@@ -24,8 +24,7 @@ Ensure that you completed the following tasks:
 
 ## System settings
 
-<!--**Important: Do not modify any values that are set during ordering and cluster deployment. Doing so can result in your cluster becoming unusable.**-->
-You must specify the following system settings when ordering a new vSphere cluster.
+You must specify the following system settings when you order a new vSphere cluster.
 
 ### Cluster name
 
@@ -35,29 +34,29 @@ The cluster name must be unique within your account.
 
 Select the VMware components to be ordered with your cluster, and specify the licensing option for the components.
 
-### (For business partner users only) Component bundles
+### (For IBM Business Partners only) Component bundles
 
-If you are a business partner user, you can select a component license bundle when ordering a new vSphere cluster. The available bundles are as follows:
+If you're an IBM Business Partner, you can select a component license bundle when you order a new vSphere cluster. The following bundles are available:
 
-Table 1. Business partner component bundles for vSphere clusters
+Table 1. IBM Business Partner component bundles for vSphere clusters
 
 | Bundle | Components                   |
-|:-------------------------|:-----------------------|
+|:------------------------- |:----------------------- |
 | Standard with Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise |
 | Advanced                 | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vCloud Director, NSX Base |
 | Advanced with Networking | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
 | Advanced with Networking and Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, vCloud Director, NSX Enterprise |
 
-You can also include the following additional VMware components to your order:
+You can also include the following VMware components in your order:
 * VMware vSAN
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**Note:** Business partner users do not have the option to Bring Your Own License (BYOL). The **I will provide the license** option is not available when completing your order.
+**Note:** For IBM Business Partners, the Bring Your Own License (BYOL) option is not available.
 
-### (For non-business partner users only) Individual components
+### (For non-Business Partners only) Individual components
 
-If you are a non-business partner user, you can select the following VMware components flexibly for your vSphere cluster:
+If you're a non-Business Partner, you can select the following VMware components flexibly for your vSphere cluster:
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
@@ -67,13 +66,13 @@ If you are a non-business partner user, you can select the following VMware comp
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**Note:** The VMware vSAN component is not available when you order VMware vSphere Enterprise Plus 6.0. If you plan to use your own license for VMware vSphere Enterprise Plus 6.0, an {{site.data.keyword.cloud_notm}} infrastructure ticket will be opened on your behalf requesting that the vSphere licenses of the ordered {{site.data.keyword.baremetal_short}} are replaced with your provided licenses.
+**Note:** The VMware vSAN component is not available when you order VMware vSphere Enterprise Plus 6.0. If you plan to use your own license for VMware vSphere Enterprise Plus 6.0, an {{site.data.keyword.cloud_notm}} infrastructure ticket is opened on your behalf. The ticket requests that the vSphere licenses of the ordered {{site.data.keyword.baremetal_short}} are replaced with your provided licenses.
 
 ### Licensing options
 
 You have the following options for licensing the selected VMware components:
 * **Include license with purchase**: In this case, a new license for the VMware component is purchased on your behalf. A combined VMware license is generated to match the cluster size of the order.
-* **I will provide the license**: In this case, you will use your own license for the VMware component.
+* **I will provide the license**: In this case, you use your own license for the VMware component.
 
 If you choose to purchase any license, except for vSphere Enterprise Plus and vCenter Server, and you order multiple ESXi servers, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to combine license keys. You are responsible to follow up with the ticket to ensure that you use only the license keys that the DevOps team generates.
 
@@ -85,7 +84,7 @@ If you choose to purchase any license, except for vSphere Enterprise Plus and vC
 
 Select the {{site.data.keyword.CloudDataCent_notm}} where the cluster is to be hosted.
 
-**Note:** If you select a vSAN component, the location list is filtered by SSD availablity.
+**Note:** If you select a vSAN component, the location list is filtered by SSD availability.
 
 ### CPU model and RAM
 
@@ -93,7 +92,7 @@ Specify the CPU model and RAM for the Bare Metal Server.
 
 Table 2. Options for customized {{site.data.keyword.baremetal_short}}
 
-| CPU options        | RAM options       |
+| CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
@@ -106,9 +105,9 @@ Options available depend on whether you selected the VMware vSAN component.
 
 ### Number of Bare Metal Servers
 
-The number of ESXi servers that you want add to the vSphere cluster. All the ESXi servers share the same configuration.
-* If you selected the VMware NSX component, a minimum of 3 servers is required.
-* If you selected the VMware vSAN component, a minimum of 4 servers is required.
+The number of ESXi servers that you want add to the vSphere cluster. All the ESXi servers have the same configuration.
+* If you selected the VMware NSX component, a minimum of three servers is required.
+* If you selected the VMware vSAN component, a minimum of four servers is required.
 
 ## Storage settings
 
@@ -133,11 +132,11 @@ This option is available only when you selected the VMware vSAN component. The d
 
 ## Network interface settings
 
-You must specify the following network interface settings when ordering a new vSphere cluster.
+You must specify the following network interface settings when you order a new vSphere cluster.
 
 ### Host name prefix
 
-The host name is used for all bare metal server orders. It is recommended to use the host name for all management virtual machines, such as vCenter Server, NSX, and so on.
+The host name is used for all bare metal server orders. It is recommended to use the host name for all management virtual machines, such as vCenter Server and NSX.
 
 The host name prefix must meet the following requirements:
 * The name must start and end with an alphanumeric character.
@@ -183,37 +182,37 @@ Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, exi
 
 **Important:**
 * Ensure that the firewall configuration on the selected VLANs does not block the management data traffic.
-* Ensure that all of the VLANs you select are in the same pod, because ESXi servers cannot be provisioned on mixed-pod VLANs.
+* Ensure that all VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
 
 #### FortiGate Physical Appliance 300 Series HA Pair
 
-You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Security Appliance on IBM Cloud overview](../services/fsa_considerations.html).
+You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} overview](../services/fsa_considerations.html).
 
 ## Order summary
 
-Based on your configurations, the estimated cost is instantly generated and displayed in the **Order Summary** pane on the right. Click **Pricing details** at the bottom of the pane to generate a PDF document that provides the estimate details.
+Based on your configurations, the estimated cost is instantly generated and displayed in the **Order Summary** pane on the right. Click **Pricing details** to generate a PDF document that provides the estimate details.
 
 ## Procedure
 
-1. From the {{site.data.keyword.cloud_notm}} Catalog, click **VMware** on the left navigation pane, and then click **VMware vSphere** in the **Virtual Data Centers** section.
+1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** on the left navigation pane, and then click **VMware vSphere** in the **Virtual Data Centers** section.
 2. On the **VMware vSphere on IBM Cloud** page, click **Create**.  
    Ensure that you are on the **Create New** tab and that **New cluster** is displayed in the **Cluster Configurations** list.
 3. Enter the cluster name.
 4. Select the VMware components:
-  * If you are a business partner user, select a license bundle and any additional available VMware components.
-  * If you are a non-business partner user, select the component, edition if any, and specify the licensing option.
+  * If you're an IBM Business Partner, select a license bundle and any additional available VMware components.
+  * If you are a non-Business Partner, select the component, edition if any, and specify the licensing option.
   When you choose to Bring Your Own License (BYOL) for VMware vSphere Enterprise Plus, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to request the default vSphere licenses on your ordered {{site.data.keyword.baremetal_short}} to be replaced with your provided licenses.   
 
-    **Important:** You are responsible to follow up with the ticket to ensure that you replace the vSphere license on the newly ordered ESXi servers so that the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
+    **Important:** You are responsible to track the ticket so that you replace the vSphere license on the newly ordered ESXi servers. This way the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
 
 5. Complete the Bare Metal Server settings:
    1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the cluster.
    2. Select the CPU model and RAM size.
-   3. Specify the number of Bare Metal Server.
+   3. Specify the number of Bare Metal Servers.
 6. If you selected the **VMware vSAN** component, complete the vSAN storage settings by selecting the **Disk Type and Size for vSAN Capacity Disks** and **Number of vSAN Capacity Disks**.
 7. Complete the network interface settings:
    1. Enter the host name prefix, subdomain label, and domain name.
-   2. Select the network interface to use:
+   2. Select the network interface that you want to use.
     * If you want to order new public and private VLANs, click **Order New VLANs**.
     * If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs** and specify the VLANs and optionally the subnets.
     3. Specify whether to apply the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment.  
@@ -223,7 +222,7 @@ Based on your configurations, the estimated cost is instantly generated and disp
 
    **Note**: Only the {{site.data.keyword.baremetal_short}} are installed. You are responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.
 
-## Results
+### Results
 
 If you saved the cluster configuration as a template, you get a console notification that the configuration is saved successfully, and then you can find the template in the **Cluster Configurations** list.
 
@@ -231,7 +230,7 @@ If you placed an order, the deployment of the cluster starts automatically, and 
 
 **Note:** The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Deployed Instances** page.
 
-## Related links
+### Related links
 
 * [Ordering vSphere clusters based on existing configurations](vs_orderingbasedonexistingconfig.html)
 * [Scaling existing clusters](vs_scalingexistingclusters.html)
