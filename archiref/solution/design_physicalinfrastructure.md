@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -14,26 +14,26 @@ The physical infrastructure comprises the following components:
 
 <dl class="dl">
   <dt class="dt dlterm">Physical compute</dt>
-  <dd class="dd">The physical compute provides the physical processing and memory that is used by the virtualization infrastructure. For this design, the compute components are provided by {{site.data.keyword.baremetal_long}} and are listed on the [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php).</dd>
+  <dd class="dd">The physical compute provides the physical processing and memory that is used by the virtualization infrastructure. For this design, the compute components are provided by {{site.data.keyword.baremetal_long}} and are listed in the [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php).</dd>
   <dt class="dt dlterm">Physical storage</dt>
-  <dd class="dd">The physical storage provides the raw storage capacity consumed by the virtualization infrastructure. Storage components are provided either by {{site.data.keyword.baremetal_short}} or by shared Network Attached Storage (NAS) array using NFSv3.</dd>
+  <dd class="dd">The physical storage provides the raw storage capacity used by the virtualization infrastructure. Storage components are provided either by {{site.data.keyword.baremetal_short}} or by shared Network Attached Storage (NAS) array using NFS v3.</dd>
   <dt class="dt dlterm">Physical network</dt>
-  <dd class="dd">The physical network provides the network connectivity into the environment that is then consumed by the network virtualization. The network is provided by the IBM Cloud services network and includes additional services such as DNS and NTP.</dd>
+  <dd class="dd">The physical network provides the network connectivity into the environment that is then used by the network virtualization. The network is provided by the {{site.data.keyword.cloud_notm}} services network and it includes additional services such as DNS and NTP.</dd>
 </dl>
 
-For the more information about the physical components, see the Bill of Materials for [Cloud Foundation instance](../../sddc/sd_bom.html) or [vCenter Server instance](../../vcenter/vc_bom.html).
+For more information about the physical components, see the Bill of Materials for [Cloud Foundation instance](../../sddc/sd_bom.html) or [vCenter Server instance](../../vcenter/vc_bom.html).
 
 For more information about storage, see [Shared storage architecture](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
 ## Physical host design
 
-Physical host refers to the {{site.data.keyword.baremetal_short}} in the environment that serve compute resources. The {{site.data.keyword.baremetal_short}} applied in this solution are certified by VMware and listed on the [VMware HCG](http://www.vmware.com/resources/compatibility/search.php).
+Physical host refers to the {{site.data.keyword.baremetal_short}} in the environment that serve compute resources. The {{site.data.keyword.baremetal_short}} applied in this solution are certified by VMware and listed in the [VMware HCG](http://www.vmware.com/resources/compatibility/search.php).
 
-The server configurations available in the solution meet or exceed the minimum requirements to install, configure, and manage vSphere ESXi. Various configurations are available to satisfy different requirements. For the detailed listing of the exact specifications used for the VMware on IBM Cloud solution, see the Bill of Materials for [Cloud Foundation instance](../../sddc/sd_bom.html) or [vCenter Server instance](../../vcenter/vc_bom.html). Note that the  	{{site.data.keyword.baremetal_short}} reside in the {{site.data.keyword.cloud}}.
+The server configurations available in the solution meet or exceed the minimum requirements to install, configure, and manage vSphere ESXi. Various configurations are available to satisfy different requirements. For the detailed listing of the exact specifications used for the VMware on {{site.data.keyword.cloud_notm}} solution, see the Bill of Materials for [Cloud Foundation instance](../../sddc/sd_bom.html) or [vCenter Server instance](../../vcenter/vc_bom.html). Note that the  	{{site.data.keyword.baremetal_short}} reside in the {{site.data.keyword.cloud_notm}}.
 
-Each Cloud Foundation instance begins with a 4-host deployment, and each vCenter Server instance begins with a 3 or 4 host deployment depending on the choice of storage solution.
+Each Cloud Foundation instance begins with a 4-host deployment, and each vCenter Server instance begins with a 3- or 4-host deployment depending on the choice of storage solution.
 
-The physical host employs two locally-attached disks to allocate to the vSphere ESXi hypervisor. You can allocate additional disks by using vSAN as described in the _Physical storage design_ section in this topic or by using NetApp ONTAP as described in [NetApp ONTAP Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Each
+The physical host employs two locally-attached disks to be allocated to the vSphere ESXi hypervisor. You can allocate additional disks by using vSAN as described in the _Physical storage design_ section on this page or by using NetApp ONTAP as described in [NetApp ONTAP Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Each
 physical host has redundant 10 Gbps network connections for both public and private network access.
 
 The technical specifications of the Bare Metal Server are the following:
@@ -46,19 +46,15 @@ The technical specifications of the Bare Metal Server are the following:
 
 This section describes the physical network that is provided by the {{site.data.keyword.cloud_notm}} and the physical host connections (VLANs, MTU) that are associated with the physical hosts.
 
-As shown in the following figure, the physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: public, private, and management.
-
-Figure 1. IBM Cloud high-level network
-
-<img src="physical_networking.gif" alt="IBM Cloud high-level network" style="width: 800px;"/>
+The physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: public, private, and management. For an illustration of the three networks and how they work, see [The {{site.data.keyword.cloud_notm}} Network](https://www.ibm.com/cloud-computing/bluemix/our-network).
 
 ### Public network
 
-{{site.data.keyword.CloudDataCents}} and network points of presence (PoPs) have multiple 1 Gbps or 10 Gbps connections to the top-tier transit and peering network carriers.
+{{site.data.keyword.CloudDataCents_notm}} and network points of presence (PoPs) have multiple 1 Gbps or 10 Gbps connections to the top-tier transit and peering network carriers.
 
-External network traffic from anywhere in the world will connect to the closest network PoP, and will travel directly across the network to its data center, minimizing the number of network hops and handoffs between providers.
+External network traffic from anywhere in the world connects to the closest network PoP, and travels directly across the network to its data center, minimizing the number of network hops and handoffs between providers.
 
-* Inside the data center, {{site.data.keyword.cloud_notm}} provides 1Gbps or 10 Gbps of network bandwidth to individual servers via a pair of separate, peer-aggregated front-end customer switches (FCS). These aggregated switches are attached to a pair of separate front-end customer routers (FCR) for L3 networking.
+Inside the data center, {{site.data.keyword.cloud_notm}} provides 1 Gbps or 10 Gbps of network bandwidth to individual servers via a pair of separate, peer-aggregated front-end customer switches (FCS). These aggregated switches are attached to a pair of separate front-end customer routers (FCR) for L3 networking.
 
 This multi-tier design allows the network to scale across racks, rows, and pods within an {{site.data.keyword.CloudDataCent_notm}}.
 
@@ -96,7 +92,7 @@ The {{site.data.keyword.vmwaresolutions_short}} console cannot detect whether VR
 
 Each physical host in the design has two redundant pairs of 10Gbps Ethernet connections into each {{site.data.keyword.cloud_notm}} Top of Rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 × 10Gbps connections. This allows networking interface card (NIC) connections to work independently from each other.
 
-Figure 2. Physical host NIC connections
+Figure 1. Physical host NIC connections
 
 ![Physical host NIC connections](physical_nic_connection.svg "Physical host NIC connections")
 
@@ -120,19 +116,19 @@ In addition to Private VLAN A, a second private VLAN (here designated Private VL
 
 All subnets configured as part of a vCenter Server or Cloud Foundation automated deployment use {{site.data.keyword.cloud_notm}} managed ranges. This is to ensure that any IP address can be routed to any data center within the {{site.data.keyword.cloud_notm}} account when you need the connection now or in the future.
 
-This is all summarized in [Table 1](#table_vlan_subnet_summary).
+This is all summarized in Table 1.
 
-Table 1. VLAN and subnet summary <a id="table_vlan_subnet_summary"></a>
+Table 1. VLAN and subnet summary
 
-| VLAN  | Type | Description  |
-|-----------|----------|----------------------------------------------------------------------------------------------------------------------------------|
-| Public| Primary  | Assigned to physical hosts for public network access. Not utilized upon initial deployment.  |
+| VLAN | Type | Description |
+|:---- |:---- |:----------- |
+| Public| Primary  | Assigned to physical hosts for public network access. Not utilized upon initial deployment. |
 | Private A | Primary  | Single subnet assigned to physical hosts assigned by {{site.data.keyword.cloud_notm}}. Used by the management interface for vSphere management traffic. |
-| Private A | Portable | Single subnet assigned to virtual machines functioning as management components. |
-| Private A | Portable | Single subnet assigned to NSX VTEP   |
-| Private B | Portable | Single subnet assigned for vSAN, if in use   |
-| Private B | Portable | Single subnet assigned for NAS, if in use|
-| Private B | Portable | Single subnet assigned for vMotion   |
+| Private A | Portable | Single subnet assigned to virtual machines functioning as management components |
+| Private A | Portable | Single subnet assigned to NSX VTEP |
+| Private B | Portable | Single subnet assigned for vSAN, if in use |
+| Private B | Portable | Single subnet assigned for NAS, if in use |
+| Private B | Portable | Single subnet assigned for vMotion |
 
 In this design, all VLAN-backed hosts and virtual machines are configured to point to the {{site.data.keyword.cloud_notm}} back-end “private network” customer router as the default route. Although the vCenter Server and Cloud Foundation instances enable the use of Software-Defined Networking (SDN), network overlays created within a VMware instance that include routing to internal subnets are not known by the {{site.data.keyword.cloud_notm}} managed routers. Therefore, you may need to create static routes within the VMware instance on some or all management components.
 
@@ -160,15 +156,15 @@ For information on the supported configurations, see the Bill of Materials for [
 
 When using shared file-level storage, a 2TB NFS share is attached to the hosts that comprise the initial VMware cluster. This share, known as the management share, is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX. The storage is attached via the NFSv3 protocol and can support up to 4000 IOPS.
 
-Figure 3. NFS shares attached to VMware deployment
+Figure 2. NFS shares attached to VMware deployment
 
 ![NFS shares attached to VMware deployment](physical_nfs.svg "NFS shares attached to VMware deployment: management share and customer specified share")
 
-You can allocate and mount additional file shares for your workloads at the time of purchase or later within the console. You can select from the available {{site.data.keyword.cloud_notm}} Endurance file storage capacity options and performance tiers in the corresponding {{site.data.keyword.CloudDataCent}}. All shares are attached using the NFSv3 protocol. Additionally, it is possible to attach NFSv3 file shares by applying the NetApp ONTAP Select offering.
+You can allocate and mount additional file shares for your workloads at the time of purchase or later within the console. You can select from the available {{site.data.keyword.cloud_notm}} Endurance file storage capacity options and performance tiers in the corresponding {{site.data.keyword.CloudDataCent_notm}}. All shares are attached using the NFSv3 protocol. Additionally, it is possible to attach NFSv3 file shares by applying the NetApp ONTAP Select offering.
 
-{{site.data.keyword.CloudDataCents}} that offer the 10 IOPS/GB performance tier also include provider-managed encryption of data at rest (AES-256 encryption), and are backed by all-flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB. For more information about the shared NAS used in this solution, see the [Shared storage architecture](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
+{{site.data.keyword.CloudDataCents_notm}} that offer the 10 IOPS/GB performance tier also include provider-managed encryption of data at rest (AES-256 encryption), and are backed by all-flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB. For more information about the shared NAS used in this solution, see the [Shared storage architecture](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
-## Related links
+### Related links
 
 * [Cloud Foundation Bill of Materials](../../sddc/sd_bom.html)
 * [vCenter Server Bill of Materials](../../vcenter/vc_bom.html)
