@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -39,7 +39,7 @@ On the {{site.data.keyword.vmwaresolutions_short}} console, you can expand and c
 
 For details about the architecture, see [Solution overview](../archiref/solution/solution_overview.html).
 
-## Cloud Foundation instance components
+## Technical specifications for Cloud Foundation instances
 
 The following components are included in your Cloud Foundation instance.
 
@@ -84,13 +84,6 @@ The following storage is ordered, depending on the {{site.data.keyword.baremetal
 * For the **Preconfigured**, **Small** configuration only: Two 1.9 TB SSD capacity disks
 * For the **Preconfigured**, **Large** configuration only: Four 3.8 TB SSD capacity disks
 
-
-### Storage for backups
-
-One 2-TB shared file-level storage, which can be scaled up to 12 TB, is ordered.
-
-**Note**: The storage for backups is not a standard component for Cloud Foundation instances. When you order an instance, you can choose whether you want storage for backups by selecting or deselecting a backup service.
-
 ### Licenses (IBM-provided or BYOL) and fees
 
 * Four VMware vSphere Enterprise Plus 6.5u1
@@ -100,13 +93,13 @@ One 2-TB shared file-level storage, which can be scaled up to 12 TB, is ordered.
 * Four SDDC Manager licenses (IBM-provided only)
 * Four Support and Services fees
 
-## Cloud Foundation expansion node components
+## Technical specifications for Cloud Foundation expansion nodes
 
 Each Cloud Foundation expansion node will deploy and incur charges for the following components in your {{site.data.keyword.cloud_notm}} account.
 
 ### Hardware for expansion nodes
 
-One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration presented in [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration presented in [Technical specifications for Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Licenses and fees for expansion nodes
 
@@ -127,7 +120,7 @@ One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration pr
 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-## Related links
+### Related links
 
 * [Cloud Foundation Software Bill of Materials](sd_bom.html)
 * [Planning Cloud Foundation instances](sd_planning.html)

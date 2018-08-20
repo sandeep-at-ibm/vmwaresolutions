@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -56,7 +56,7 @@ You can have a maximum of 8 (1 primary and 7 secondary) instances that are deplo
 
 **Note**: Deleting Cloud Foundation instances that are part of a multi-site configuration requires special planning. For more information, see [Deleting Cloud Foundation instances in a multi-site configuration](sd_deletinginstance_multi.html).
 
-## Related links
+### Related links
 
 * [Assign Primary Role to NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configuring Secondary NSX Managers](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}

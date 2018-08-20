@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -34,7 +34,7 @@ Because of resource dependencies, the components in your instance are not releas
 6. Repeat steps 1 to 5 for all secondary Cloud Foundation instances in your multi-site configuration.
 7. After deleting all secondary instances, you can also delete the primary instance from the {{site.data.keyword.vmwaresolutions_short}} console.
 
-## Related links
+### Related links
 
 * [Deleting Cloud Foundation instances](sd_deletinginstance.html)
 * [Ordering, viewing, and removing services from Cloud Foundation instances](sd_addingremovingservices.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -56,7 +56,7 @@ For the **Customized** setting, you have a number of option for the **CPU Model*
 
 Table 1. Options for customized {{site.data.keyword.baremetal_short}}
 
-| CPU options   | RAM options   |
+| CPU model options   | RAM options   |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
@@ -197,7 +197,7 @@ You might want to delete a cluster from an instance when it is no longer needed.
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon.
 4. Confirm that you completed the migration of VMs to other clusters, if appropriate, and that you want to delete the cluster.
 
-## Related links
+### Related links
 
 * [Viewing Cloud Foundation instances](sd_viewinginstances.html)
 * [Expanding and contracting capacity for Cloud Foundation instances](sd_addingremovingservers.html)
