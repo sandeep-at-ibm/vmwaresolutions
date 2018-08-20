@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -14,21 +14,30 @@ The HyTrust CloudControl on {{site.data.keyword.cloud}} service enforces and con
 
 **Availability:** This service is available only to instances that are running vSphere 6.5 and that are deployed in (or upgraded to) V2.3 or later releases.
 
-## Components of HyTrust CloudControl on IBM Cloud
+## Technical specifications for HyTrust CloudControl on IBM Cloud
 
-A highly available (HA) pair of HyTrust CloudControl (HTCC) appliances is deployed on the default cluster in active-passive mode.
+The following components are ordered and included in the HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service:
 
-Each pair of HTCC appliances is deployed on the same private portable subnet that is specified for the management virtual machines (VMs), such as NSX Manager, vCenter Server Appliances, and Platform Services Controller.
+### HyTrust CloudControl appliance
 
-The pair of appliances acts as a proxy for the vSphere hosts, vCenter Server appliance, and NSX manager of an instance. Therefore, users access the vSphere hosts, vCenter Server Appliance, and NSX Manager via a published IP (PIP) address that is assigned by the administrator instead of the real IP address (RIP) that is assigned by {{site.data.keyword.cloud}}.
+* CPU: 4 vCPU
+* RAM: 16 GB
+* Disk: 70 GB VMDK resident on vSAN in converged cluster
+* Network: Placed on VLAN-backed private portable network specified for management
 
-The HTCC appliances integrate with the Microsoft Active Directory to enforce role-based access control.
+### High availability
+
+Two CloudControl appliances are deployed in an active-passive configuration.
+
+### Licenses and fees
+
+Per-host license: A HyTrust CloudControl license is ordered for each host in the environment.
 
 ## Considerations when removing HyTrust CloudControl on IBM Cloud
 
 Before you remove the HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service, ensure that you disable **Root Password Vaulting**, if configured, and that you delete all protected hosts from HyTrust CloudControl.
 
-## Related links
+### Related links
 
 * [Ordering HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](htcc_ordering.html)
 * [Managing HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](managinghtcc.html)

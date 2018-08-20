@@ -4,22 +4,22 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-08-16"
 
 ---
 
 # Ordering VMware HCX on IBM Cloud
 
-You can order the VMware HCX on {{site.data.keyword.cloud_notm}} service while ordering a new VMware vCenter Server with Hybridity Bundle instance with the service included or by adding the service to your existing instance.
+You can order the VMware HCX on {{site.data.keyword.cloud}} service while ordering a new VMware vCenter Server with Hybridity Bundle instance with the service included or by adding the service to your existing instance.
 
 ## Ordering VMware HCX on IBM Cloud for a new instance
 
-To order a new VMware vCenter Server on IBM Cloud with Hybridity Bundle instance with VMware HCX on {{site.data.keyword.cloud_notm}}, select **VMware HCX on IBM Cloud** in the **Services** section when you order the instance from the {{site.data.keyword.vmwaresolutions_full}} console.
+To order a new VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle instance with VMware HCX on {{site.data.keyword.cloud_notm}}, select **VMware HCX on IBM Cloud** in the **Services** section when you order the instance from the {{site.data.keyword.vmwaresolutions_short}} console.
 
 
 ## Ordering VMware HCX on IBM Cloud for an existing instance
 
-To add the VMware HCX on {{site.data.keyword.cloud_notm}} service into an existing VMware vCenter Server on IBM Cloud with Hybridity Bundle instance, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add Service**.
+To add the VMware HCX on {{site.data.keyword.cloud_notm}} service into an existing VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle instance, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
 
 ## VMware HCX on IBM Cloud configuration
 
@@ -40,8 +40,8 @@ To install HCX on {{site.data.keyword.cloud_notm}}, complete the following setti
 The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether you order a vCenter Server with Hybridity Bundle instance with the service included or you deploy the service later into your instance, the following steps are completed by the {{site.data.keyword.vmwaresolutions_short}} automation process:
 1. Three subnets are ordered for HCX from the {{site.data.keyword.cloud_notm}} infrastructure:
    * One private portable subnet for HCX management.
-   * One private portable subnet for HCX interconnects if **Private network** is selected for **HCX interconnect type**.
-   * One public portable subnet for HCX interconnects if **Public network** is selected for **HCX interconnect type**. This subnet is also used for activation and maintenance with VMware.
+   * One private portable subnet for HCX interconnects. This subnet is used when the **Private network** option is selected for **HCX interconnect type**.
+   * One public portable subnet for activation and maintenance with VMware. If the **Public network** option is selected for **HCX interconnect type**, this subnet is also used for HCX interconnects.
 
    **Important:** The IP addresses in the subnets ordered for HCX are intended to be managed by the VMware on {{site.data.keyword.cloud_notm}} automation. These IP addresses cannot be assigned to VMware resources, such as VMs and NSX Edges, that are created by you. If you need additional IP addresses for your VMware artifacts, you must order your own subnets from {{site.data.keyword.cloud_notm}}.
 2. If **Private network** was selected for **HCX interconnect type**, a port group named **SDDC-DPortGroup-HCX-Private** is created on the private Distributed Virtual Switch (DVS).
@@ -63,7 +63,7 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether 
    * Local and remote HCX deployment containers are configured.
 7. The host name and IP address of the HCX Manager is registered with the DNS server of VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
-## Related links
+### Related links
 
 * [HCX on {{site.data.keyword.cloud_notm}} overview](hcx_considerations.html)
 * [Managing HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)

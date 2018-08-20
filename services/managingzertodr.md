@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -34,11 +34,11 @@ To update Zerto Virtual Replication, log in to the Zerto Virtual Replication con
 
 When you add or remove ESXi servers for the primary cluster of your instance, VRAs are automatically deployed or removed. VRAs are not automatically deployed to ESXi servers in the secondary clusters of your instance, but you can deploy them yourself from the Zerto Virtual Replication console.
 
-## Related links
+### Related links
 
-* [Zerto on IBM Cloud overview](addingzertodr.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} overview](addingzertodr.html)
 * [Requesting managed services for Zerto on {{site.data.keyword.cloud_notm}}](managing_zerto_services.html)
 * [zerto.com website](https://www.zerto.com){:new_window}
 * [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Zerto disaster recovery](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/zerto){:new_window}
+* [Zerto disaster recovery](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
 * [Explanation of Zerto Virtual Replication Alerts](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)

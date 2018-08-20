@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -14,17 +14,28 @@ The HyTrust DataControl on {{site.data.keyword.cloud}} service offers strong enc
 
 **Availability:** This service is available only to instances that are running vSphere 6.5 and that are deployed in (or upgraded to) V2.3 or later releases.
 
-## Components of HyTrust DataControl on IBM Cloud
+## Technical specifications for HyTrust DataControl on IBM Cloud
 
-A highly available (HA) pair of HyTrust DataControl (HTDC) appliances is deployed on the default cluster in active-active mode. The HTDC appliances are licensed to provide HyTrust KeyControl functionality to your workloads.
+The following components are ordered and included in the HyTrust DataControl on {{site.data.keyword.cloud_notm}} service:
 
-Each pair of HTDC appliances is deployed on the same portable subnet that is specified for the management virtual machines (VMs), such as NSX Manager, vCenter Server Appliances, and Platform Services Controller. The appliances route via the {{site.data.keyword.cloud_notm}} backend customer routers (BCRs) and are assigned the gateway that is associated with the management VMs subnet. Additionally, the appliances are placed on the default storage of the default cluster.
+### HyTrust DataControl appliance
+* CPU: 2 vCPU
+* RAM: 8 GB
+* Disk: 20 GB VMDK resident on vSAN in converged cluster
+* Network: Placed on VLAN-backed private portable network specified for management
+
+### High availability
+Two DataControl appliances are deployed in an active-active configuration.
+
+### Licenses and fees
+
+Per-host license: A HyTrust DataControl license is ordered for each host in the environment.
 
 ## Considerations when removing HyTrust DataControl on IBM Cloud
 
 Before you remove the HyTrust DataControl on {{site.data.keyword.cloud_notm}} service, ensure that you encrypted or backed up all disks from DataControl. After you remove the service, the keys might be deleted and you could be locked out of your VMs.
 
-## Related links
+### Related links
 
 * [Ordering HyTrust DataControl on {{site.data.keyword.cloud_notm}}](htdc_ordering.html)
 * [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtcc.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -22,13 +22,13 @@ When you request managed services for Veeam on {{site.data.keyword.cloud_notm}},
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Getting Started** from the left navigation pane.
 2. Scroll down the page and, under **Order additional managed services**, click the **Managed Services for Veeam on IBM Cloud** card.
-3. On the **Order Managed Services for Veeam on IBM Cloud** page, review the description and technical specifications for Veeam on {{site.data.keyword.cloud_notm}} as a managed service and click **Create**.
+3. On the **Veeam on IBM Cloud** page, review the description and technical specifications for Veeam on {{site.data.keyword.cloud_notm}} as a managed service, and then click **Create**.
 4. Specify the configuration settings according to your requirements or accept the default values.
 5. Click either **vCenter Server** or **Cloud Foundation** to add the service to one of your instances.
-6. To add the service while you order a new instance, click **Add to New Instance** and continue with ordering a new [vCenter Server](../vcenter/vc_orderinginstance.html), [vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html), or [Cloud Foundation](../sddc/sd_orderinginstance.html) instance.
-7. To add the service to an existing instance, click **Add to Deployed Instance** and select the instance that you want from the list, then confirm that you want to proceed with the order by clicking **Provision**.
+6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](../vcenter/vc_orderinginstance.html), [vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html), or [Cloud Foundation](../sddc/sd_orderinginstance.html) instance.
+7. To add the service to an existing instance, click **Add to Existing Instance**, select the instance that you want from the list, and then confirm that you want to proceed with the order by clicking **Provision**.
 
-## Related links
+### Related links
 
 * [Ordering, viewing, and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
 * [Ordering, viewing, and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)

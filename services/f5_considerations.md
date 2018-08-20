@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -15,6 +15,24 @@ The F5 on {{site.data.keyword.cloud}} service (F5 BIG-IP® Virtual Edition) prov
 You can install multiple instances of this service as needed.
 
 **Availability**: This service is available only to instances that are deployed in V1.9 or later releases.
+
+## Technical specifications for F5 on IBM Cloud
+
+The following components are included with the F5 on {{site.data.keyword.cloud_notm}} service:
+
+### Virtual machines
+* Two virtual machines (VMs) with all options available.
+* 2, 4, or 8 vCPUs per virtual machine depending on the licensing option.
+* 4, 8, or 16 GB RAM per virtual machine depending on the licensing option.
+
+### Networking
+* Private Virtual Extensible LAN (VXLAN) for HA synchronization.
+* Access to Traffic Management Shell (TMSH) and Management Console via private management network.
+
+### Licenses and fees
+License fees for each VM are applied to each billing cycle depending on the licensing option (Good, Better, or Best) and the selected bandwidth.
+
+**Important:** You cannot change the licensing level after service installation. To change the licensing level, you must remove the existing service and reinstall the service using a different licensing option.
 
 ## Considerations when installing F5 on IBM Cloud
 
@@ -70,7 +88,7 @@ By default however, vSphere HA reserves 50% of CPU and RAM for failover on vCent
 
 `50% of 2 * 16 cores * 2.1 GHz = 33.6 GHz available`
 
-Since there will be other workloads present on the ESXi servers, for example, IBM CloudDriver, VMware NSX Controller, VMware NSX Edge, using these resources we cannot satisfy the third requirement, because we need 33.6 GHz of CPU and 32 GB RAM for the two BIG-IP VMs.
+Since there will be other workloads present on the ESXi servers, for example, VMware vCenter Server, VMware NSX Controller, VMware NSX Edge, using these resources we cannot satisfy the third requirement, because we need 33.6 GHz of CPU and 32 GB RAM for the two BIG-IP VMs.
 
 In this case, the F5 on {{site.data.keyword.cloud_notm}} installation might fail, unless at least one ESXi server is added to the environment and vShpere HA failover reservations are updated appropriately to ensure that there are enough resources for two BIG-IP VE VMs. If additional resources are needed to run the F5 on {{site.data.keyword.cloud_notm}} service, you can add more ESXi servers before installing F5 on {{site.data.keyword.cloud_notm}}.
 
@@ -78,7 +96,7 @@ In this case, the F5 on {{site.data.keyword.cloud_notm}} installation might fail
 
 Before you remove the F5 on {{site.data.keyword.cloud_notm}} service, ensure that the existing BIG-IP VE configuration is removed correctly. Specifically, network traffic must be routed around BIG-IP VE instead of through BIG-IP VE. Otherwise, the existing data traffic from your environment might be impacted.
 
-## Related links
+### Related links
 
 * [Ordering F5 on {{site.data.keyword.cloud_notm}}](f5_ordering.html)
 * [Managing F5 on {{site.data.keyword.cloud_notm}}](managing_f5.html)

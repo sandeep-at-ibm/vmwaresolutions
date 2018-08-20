@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ To apply any maintenance fixes pushed to your environment, you must use the HCX 
 
 If you do not see a build update that you are expecting, if you have problems with HCX, or if want to have the latest HCX build pushed to your system immediately, open a support ticket by following the steps in [Contacting IBM Support](../vmonic/trbl_support.html).
 
-## Related links
+### Related links
 
 * [HCX on {{site.data.keyword.cloud_notm}} overview](hcx_considerations.html)
 * [Glossary of HCX terms](hcx_glossary.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -36,10 +36,9 @@ Table 2. On-premises HCX on {{site.data.keyword.cloud_notm}} instances status de
 | Installed | The instance is ready to use. |
 | Removing | The instance is being deleted. |
 
-## Related links
+### Related links
 
 * [Ordering on-premises HCX on {{site.data.keyword.cloud_notm}} instances](standalone_orderingserviceinstances.html)
 * [Deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](standalone_deletingserviceinstances.html)
 * [Glossary of HCX terms](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

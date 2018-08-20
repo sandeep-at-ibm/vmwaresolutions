@@ -4,25 +4,25 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-20"
 
 ---
 
 # Ordering F5 on IBM Cloud
 
-You can order the F5 on {{site.data.keyword.cloud_notm}} service while ordering a new instance with BIG-IP Virtual Edition (VE) included or by adding the BIG-IP VE to your existing instance.
+You can order the F5 on {{site.data.keyword.cloud}} service while ordering a new instance with BIG-IP Virtual Edition (VE) included or by adding the BIG-IP VE to your existing instance.
 
 ## Ordering F5 on IBM Cloud for a new instance
 
 You can order a new instance with F5 on {{site.data.keyword.cloud_notm}} by using one of the following methods:
-* From the {{site.data.keyword.vmwaresolutions_full}} console, when you order a new instance, select **F5 on IBM Cloud** in the **Services** section.
-* From the {{site.data.keyword.cloud_notm}} catalog, select **F5 on {{site.data.keyword.cloud_notm}} service**, specify the service settings, and select **Add to New Instance**.
+* From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, select **F5 on IBM Cloud** in the **Services** section.
+* From the {{site.data.keyword.cloud_notm}} catalog, select **F5 on IBM Cloud**, specify the service settings, and select **Add to New Instance**.
 
 ## Ordering F5 on IBM Cloud for an existing instance
 
 You can add the F5 on {{site.data.keyword.cloud_notm}} service into an existing instance by using one the following methods:
-* From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add Service**.
-* From the {{site.data.keyword.cloud_notm}} catalog, select **F5 on IBM Cloud service**, specify the service settings and select **Add to Existing Instance**.
+* From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
+* From the {{site.data.keyword.cloud_notm}} catalog, select **F5 on IBM Cloud**, specify the service settings and select **Add to Existing Instance**.
 
 ## F5 on IBM Cloud service configuration
 
@@ -50,7 +50,7 @@ The license model for F5 on {{site.data.keyword.cloud_notm}} service offers the 
 
 Specify the maximum throughput of the F5 BIG–IP appliance.
 
-## Related links
+### Related links
 
 * [F5 on {{site.data.keyword.cloud_notm}} overview](f5_considerations.html)
 * [Managing F5 on {{site.data.keyword.cloud_notm}}](managing_f5.html)
