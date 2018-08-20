@@ -4,20 +4,24 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-03"
+lastupdated: "2018-08-14"
 
 ---
 
-# Signing up for an IBM Cloud account
+# Signing up for required accounts
 
-To sign up for an {{site.data.keyword.cloud}} account, upgrade your {{site.data.keyword.cloud_notm}} account to a Pay-As-You-Go account.
+## Signing up for an IBM Cloud account
 
-**Note**: The {{site.data.keyword.cloud_notm}} account was previously known as the IBM SoftLayer account.
+You can sign up for an {{site.data.keyword.cloud}} account by using an existing **IBMid** or by creating a new **IBMid**. For more information about how to sign up for an {{site.data.keyword.cloud_notm}} account, see [Signing up for {{site.data.keyword.cloud_notm}} account](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
 
-## Procedure
+## Signing up for an IBM Cloud infrastructure (SoftLayer) account
 
-1. Log in to the {{site.data.keyword.vmwaresolutions_full}} console with your **IBMid**.
-2. At the right side of the banner, click **Manage > Billing and Usage > Billing**.
+The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, which was previously known as the IBM SoftLayer account, is used to log in to the {{site.data.keyword.cloud_notm}} infrastructure customer portal that provides some additional function to manage infrastructure products and services. To sign up for an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, upgrade your {{site.data.keyword.cloud_notm}} account to the Pay-As-You-Go type of account.
+
+### Procedure
+
+1. Log in to the {{site.data.keyword.vmwaresolutions_short}} console with your **IBMid**.
+2. At the left side of the banner, click **Manage > Billing and Usage > Billing**.
 3. Click **Add Credit Card**.
 4. Enter the billing information and credit card information.
 5. Read the cloud services terms. Ensure that you agree with them before the upgrade.
@@ -28,10 +32,10 @@ To sign up for an {{site.data.keyword.cloud}} account, upgrade your {{site.data.
 10. When you are notified by email that your account is ready, go to the {{site.data.keyword.slportal}} and click **Log in with IBMid**.
     You are then automatically logged in.
 
-## Related links
+### Related links
 
 * [FAQ](faq.html)
-* [{{site.data.keyword.cloud_notm}} account requirements](slaccountrequirement.html)
-* [Video: How to create an IBM Cloud account](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](slaccountrequirement.html)
+* [Video - How to create an {{site.data.keyword.cloud_notm}} account](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
 * [Switching to IBMid](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}
