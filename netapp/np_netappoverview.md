@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-15"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -28,10 +28,10 @@ This layer provides the physical infrastructure (compute, network, and storage r
 
 ### Virtualization infrastructure (Compute, Network, and NetApp ONTAP Select)
 
-This layer virtualizes the physical infrastructure through different VMware products and the NetApp ONTAP Select product:
-* VMware vSphere virtualizes the physical compute resources.
+This layer virtualizes the physical infrastructure through the following VMware products and the NetApp ONTAP Select product:
+* VMware vSphere virtualizes the physical compute resources
 * VMware NSX is the network virtualization platform that provides logical networking components and virtual networks.
-* NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} deploys an ONTAP Select cluster which consists of four VMs for the four hosts.
+* NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} deploys an ONTAP Select cluster, which consists of four VMs for the four hosts.
 
 The following graphic depicts the components of the NetApp ONTAP Select deployment.
 
@@ -41,13 +41,11 @@ Figure 2. NetApp ONTAP Select components
 
 ### Virtualization management
 
-This layer consists of vCenter Server virtual appliance, NSX Manager, two NSX ESGs, 3 NSX Controllers, Platform Services Controller (PSC) virtual appliance, vCenter Server Appliance (vCSA), and the IBM CloudDriver virtual machine.
+This layer consists of vCenter Server virtual appliance, NSX Manager, two NSX ESGs, 3 NSX Controllers, Platform Services Controller (PSC) virtual appliance, vCenter Server Appliance (vCSA), and the IBM CloudDriver virtual server instance (VSI).
 
-NetApp ONTAP Select runs in a VMware cluster and virtualizes the local storage on the hosts. NetApp ONTAP Select is deployed in the dedicated model, where other workloads are not expected to share the same cluster with it. As a result, the hardware configuration of the NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} offering is sized only based on the requirements of NetApp ONTAP Select.
+NetApp ONTAP Select runs in a VMware cluster and virtualizes the local storage on the hosts. NetApp ONTAP Select is deployed in the dedicated model, where other workloads are not expected to share the cluster with it. As a result, the hardware configuration of the NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} offering is sized only based on the requirements of NetApp ONTAP Select.
 
-<!--For details about the architecture, see the _Reference architecture_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform){:new_window}.-->
-
-## NetApp ONTAP Select instance components
+## Technical specifications for NetApp ONTAP Select instances
 
 The following components are included in your NetApp ONTAP Select instance.
 
@@ -62,12 +60,12 @@ The following components are included in your NetApp ONTAP Select instance.
 
 ### Preset configurations
 
-Four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with the following configuration options:
+Four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with the following configuration options are provided:
 * **High Performance (Medium)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 1.9 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 59 TB
 * **High Performance (Large)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 3.8 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 118 TB
 * **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 64 GB RAM / Thirty Four 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 190 TB
 
-**Note:** 3.8 TB SSD (Solid State Disk) drives will be supported when they are made generally available in a data center.
+**Note:** 3.8 TB SSD (Solid-State Disk) drives will be supported when they are made generally available in a data center.
 
 ### Hardware
 
@@ -93,12 +91,10 @@ Two VSIs (Virtual Server Instances):
 *  Four Premium/Standard Edition NetApp ONTAP Select licenses (user-provided)
 *  VMware vSphere 6.5 Enterprise Plus edition
 *  VMware vCenter Server 6.5
-*  VMware NSX Base for Service Providers edition
+*  VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 *  Support and Services fee (one license per node)
 
-<!--For details about the components, see the _Bill of Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
-
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
 **CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, removing, or powering off components
@@ -107,7 +103,7 @@ Two VSIs (Virtual Server Instances):
 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-## Related links
+### Related links
 
 * [Planning NetApp ONTAP Select instances](np_planning.html)
 * [Ordering NetApp ONTAP Select instances](np_orderinginstances.html)

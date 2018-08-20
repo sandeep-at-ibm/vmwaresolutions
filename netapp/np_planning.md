@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -55,12 +55,7 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for NetApp ONTAP Se
 | WDC06 | Washington, DC | NA East | High Performance (Medium), High Performance (Large), High Capacity
 | WDC07 | Washington, DC | NA East | High Performance (Medium), High Performance (Large), High Capacity
 
-<!--## Capacity considerations-->
-
-<!--For capacity information and considerations, see the _Bill of
-Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
-
-## Related links
+### Related links
 
 * [NetApp ONTAP Select overview](np_netappoverview.html)
 * [Ordering NetApp ONTAP Select instances](np_orderinginstances.html)
