@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Viewing Cloud Foundation instances
 
-View the VMware Cloud Foundation instances that you ordered and detailed information about them.
+View the summary and detailed information of the VMware Cloud Foundation instances that are provisioned for different user accounts.
 
 ## Viewing Cloud Foundation instances summary
 
-To view a summary of all the Cloud Foundation instances in your environment, complete the following steps:
+To view a summary of all the Cloud Foundation instances that are provisioned for a user account, complete the following steps:
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
-2. In the **Cloud Foundation Instances** table, view the list of your instances:
+1. In the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane.
+2. At the upper-right corner of the console, click your avatar, and then click the **Account** field to select the user account that you want to check instances for. 
+3. In the **Cloud Foundation Instances** table, view the list of your instances:
 
 Table 1. Cloud Foundation instance items
 
@@ -25,7 +26,7 @@ Table 1. Cloud Foundation instance items
 |:------------- |:------------- |
 | Name | The name of the instance |
 | Version | The release version that the instance was deployed in, or upgraded to |
-| Location | The {{site.data.keyword.CloudDataCent}} where the instance is hosted |
+| Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted |
 | Creation time | The date and time when the instance was created |
 | Status | The status of the instance |
 
@@ -95,7 +96,7 @@ Table 4. Cloud Foundation access information for instance-related components
 
 ## Viewing the deployment history for Cloud Foundation instances
 
-Under **Deployment History**, view the deployment history for the instance.
+Click **Deployment History** from the left navigation pane to view the deployment history for the instance.
 
 Table 5. Cloud Foundation instance deployment history
 
@@ -120,7 +121,7 @@ Review the following topics for information to help you complete the login instr
 * For a list of access points to log in to the {{site.data.keyword.cloud_notm}} Private Network using VPN, see [VPN Access](http://www.softlayer.com/vpn-access){:new_window}.
 * If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
 
-## Related links
+### Related links
 
 * [Ordering Cloud Foundation instances](sd_orderinginstance.html)
 * [Expanding and contracting capacity for Cloud Foundation instances](sd_addingremovingservers.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -21,7 +21,7 @@ Table 1. BOM for the VLANs in Cloud Foundation instances
 | VLAN      | Type      | Details      |
 |:----------|:----------|:-------------|
 | VLAN1     | Public, Primary | Assigned to physical ESXi servers for public network access. Not used after initial deployment. Available for internet access. |
-| VLAN2     | Private A, Primary | Assigned by IBM Cloud to physical ESXi servers. Used by the management interface for VMware vSphere management traffic.<br><br>Assigned to VMs (virtual machines) that function as management components.<br><br>Assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint) |
+| VLAN2     | Private A, Primary | Assigned by {{site.data.keyword.cloud}} to physical ESXi servers. Used by the management interface for VMware vSphere management traffic.<br><br>Assigned to VMs (virtual machines) that function as management components.<br><br>Assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint) |
 | VLAN3     | Private B, Portable | Assigned to VMware vSAN, if used.<br><br>Assigned to VMware NFS, if used.<br><br>Assigned to VMware vSphere vMotion. |
 
 ## Software BOM for Cloud Foundation instances
@@ -38,7 +38,7 @@ Table 2. BOM for the software components in Cloud Foundation instances
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX for vSphere                          | 6.3.5        |
 | VMware       | SDDC Manager                             | 2.4          |
-| {{site.data.keyword.IBM}} | CloudDriver                 | 2.4          |
+| IBM          | CloudDriver                              | 2.5          |
 | Microsoft    | Windows Server Standard edition (64-bit) | 2012R2       |
 
 ## Advanced configuration settings for ESXi servers
@@ -67,10 +67,10 @@ Table 3. ESXi servers advanced configuration settings for Cloud Foundation insta
 
   For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
 
-## Related links
+### Related links
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
-* [VMware Cloud Foundation on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
+* [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
 * [Cloud Foundation overview](sd_cloudfoundationoverview.html)
 * [Planning Cloud Foundation instances](sd_planning.html)

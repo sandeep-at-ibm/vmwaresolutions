@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -51,7 +51,7 @@ Table 1. Update levels and impact
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
 2. In the **Cloud Foundation Instances** table, click the instance to update.
 3. On the **Summary** page, verify that all instance details are displayed correctly. Then click **Infrastructure** on the left navigation pane to verify the details on the **Infrastructure** page.
-   If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver virtual machine, as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
+   If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver Virtual Server Instance (VSI), as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
 4. Click **Update and Patch** on the left navigation pane.
 5. Click the down arrow to expand the update that you want to apply and then complete one of the following steps:
    *  To start the update immediately, click the overflow menu icon in the **Actions** column of the update entry, and then click **Update Now**.
@@ -61,16 +61,15 @@ Table 1. Update levels and impact
 ## Results
 
 1. Before an update operation is started, a health check for the instance is completed. If the health check fails, you are notified so you can fix the problem before applying the update.
-2. Before an update operation is started, a backup of the management virtual machines (VMs) is done automatically, if your instance has a backup service installed. After the backup is completed, the update is applied. During the update operation, do not attempt any provisioning or add ESXi server operations.
-3. During updates that include VMware components updates, VMs may need to be migrated from ESXi servers to go into maintenance mode. If a VM has a local datastore, or CD-ROM mounted, this might prevent the VM migration.
-4. During the provisioning of a new environment, {{site.data.keyword.vmwaresolutions_short}} creates the **automationuser** ID that is used for instance management, including for applying updates. Do not change the password for this user ID. Changing the password might cause the update to fail.
+2. During updates that include VMware components updates, VMs may need to be migrated from ESXi servers to go into maintenance mode. If a VM has a local datastore, or CD-ROM mounted, this might prevent the VM migration.
+3. During the provisioning of a new environment, {{site.data.keyword.vmwaresolutions_short}} creates the **automationuser** ID that is used for instance management, including for applying updates. Do not change the password for this user ID. Changing the password might cause the update to fail.
 
-5. After you apply an update, a record appears in the software update status list, where you can view the detailed progress and status of the update. When the update is completed successfully, a record appears in the installed software updates list.
+4. After you apply an update, a record appears in the software update status list, where you can view the detailed progress and status of the update. When the update is completed successfully, a record appears in the installed software updates list.
 
   To retrieve the most recent status for an update job, click the refresh icon in the upper right of the page.
   {:tip}
 
-6. For details about the update statuses, see the following table.
+5. For details about the update statuses, see the following table.
 
    Table 2: Details of update statuses
 
@@ -105,11 +104,11 @@ Table 1. Update levels and impact
       </tr>
     </table>
 
-7. If the update process fails at a specific step, [contact IBM Support](../vmonic/trbl_support.html) for assistance. You will be advised how to resolve the problem and guided to restart the upgrade from the step that failed.
+6. If the update process fails at a specific step, [contact IBM Support](../vmonic/trbl_support.html) for assistance. You will be advised how to resolve the problem and guided to restart the upgrade from the step that failed.
 
-## Related links
+### Related links
 
 * [Cloud Foundation overview](../sddc/sd_cloudfoundationoverview.html)
-* [Veeam on IBM Cloud overview](../services/veeam_considerations.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} overview](../services/veeam_considerations.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)
 * [FAQs](../vmonic/faq.html)

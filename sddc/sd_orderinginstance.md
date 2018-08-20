@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -52,7 +52,7 @@ For non-Business Partner users, you can use the IBM-provided VMware licenses for
 
 ### Data center location
 
-Select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the {{site.data.keyword.baremetal_long}} specification you selected previously are displayed.-->
+Select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.
 
 ### Preconfigured
 
@@ -70,7 +70,7 @@ Select the CPU model and RAM for the Bare Metal Server.
 
 Table 1. Options for customized {{site.data.keyword.baremetal_short}}
 
-| CPU options        | RAM options       |
+| CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
@@ -78,8 +78,6 @@ Table 1. Options for customized {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-
-<!-- For guidance on what Bare Metal Server configuration to choose, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
 
 ### Number of Bare Metal Servers
 
@@ -183,7 +181,10 @@ Based on your selected configuration for the instance and add-on services, the e
    * Click **Primary Instance** to deploy a single instance in the environment or to deploy the first instance in a multi-site topology.
    * Click **Secondary Instance** to connect the instance with an existing (primary) instance in the environment for high availability and complete the following steps:
      1. Select the primary instance that you want the secondary instance to be connected with.
-     2. Enter the PSC administrator password for the primary instance.
+     2. If the primary instance that you selected is upgraded to the V2.5 release, or the primary instance is deployed in or upgraded to V2.4 and previous releases, check the prefilled **Administrator Password for the Primary Instance PSC** to ensure that it is correct.
+     
+         **Note:** The **Administrator Password for the Primary Instance PSC** field is not available to primary instances that are 
+       deployed in V2.5 and later releases.     
 5. Complete the license settings for the instance components:
    *  To use IBM-provided licenses, select **Include with purchase**.
    *  To use your own license, select **I will provide** and enter the license key.  
@@ -214,7 +215,7 @@ Based on your selected configuration for the instance and add-on services, the e
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [Cloud Foundation instance  components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **SDDC-Cluster** by default. If you ordered additional services, the deployment of the services starts after your order is completed.
+When the instance is successfully deployed, the components that are described in [Technical specifications for Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **SDDC-Cluster** by default. If you ordered additional services, the deployment of the services starts after your order is completed.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
@@ -235,7 +236,7 @@ View and manage the Cloud Foundation instance that you ordered.
 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-## Related links
+### Related links
 
 * [Signing up for an {{site.data.keyword.cloud_notm}} account](../vmonic/signing_softlayer_account.html)
 * [Viewing Cloud Foundation instances](sd_viewinginstances.html)
