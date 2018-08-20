@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -16,13 +16,11 @@ The VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle i
 
 In many cases, the entire environment can be provisioned in less than a day and the bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed.
 
-<!--Post-deployment, you can increase shared storage by ordering additional NFS (Network File System) file shares from the  {{site.data.keyword.slportal}} and manually attach them across all ESXi servers in a cluster. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.-->
-
 To increase the vSAN-based storage capacity of a vSAN cluster, you can add more ESXi servers post-deployment.
 
 You can upgrade the VMware NSX Advanced edition to the Enterprise edition, and you can purchase additional VMware components, such as VMware vRealize Operations.
 
-You can add IBM Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The IBM Cloud Professional Services team is also available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
+You can add IBM Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is also available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
 
 ## vCenter Server with Hybridity Bundle architecture
 
@@ -45,7 +43,7 @@ This layer virtualizes the physical infrastructure through different VMware prod
 
 ### Virtualization management
 
-This layer consists of vCenter Server Appliance (vCSA), NSX Manager, two NSX ESGs, three NSX Controllers, Platform Services Controller (PSC) virtual appliance, and the IBM CloudDriver virtual machine (VM).
+This layer consists of vCenter Server Appliance (vCSA), NSX Manager, two NSX ESGs, three NSX Controllers, Platform Services Controller (PSC) virtual appliance, and the IBM CloudDriver virtual server instance (VSI). The CloudDriver VSI is deployed on demand as needed for certain operations such as adding hosts to the environment.
 
 The base offering is deployed with a vCenter Server appliance that is sized to support an environment with up to 400 hosts and up to 4000 VMs. The same vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
 
@@ -57,23 +55,19 @@ For additional management resource requirements when deploying the HCX on {{site
 
 This layer provides an abstraction of resources between the on-premises sites and {{site.data.keyword.cloud_notm}} sites so that you can move workloads back and forth securely and easily without the need to change VMs characteristics such as their IP addresses.
 
-Based on VMware Hybrid Cloud Extension (HCX), you can create loosely coupled interconnects among on-premises and IBM Cloud sites to enable bulk migration of VMs or live vMotion of VMs without downtime.
+Based on VMware Hybrid Cloud Extension (HCX), you can create loosely coupled interconnects among on-premises and {{site.data.keyword.cloud_notm}} sites to enable bulk migration of VMs or live vMotion of VMs without downtime.
 
-## vCenter Server with Hybridity Bundle technical specifications
+## Technical specifications for vCenter Server with Hybridity Bundle instances
 
 The following components are included in your vCenter Server with Hybridity Bundle instance:
 
-**Note:** The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.CloudDataCent}} that is selected for deployment.
+**Note:** The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
 
 ### Bare Metal Server
 
 Four customized {{site.data.keyword.baremetal_short}} come with your vCenter Server with Hybridity Bundle instance order. The following CPU models are available:
   * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
   * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
-
-<!--For NFS storage configuration, the recommended number of {{site.data.keyword.baremetal_short}} is set to the default of three.
-
-**Note:** If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.-->
 
 ### Networking
 
@@ -93,7 +87,7 @@ For additional information on networking components ordered when deploying the H
 
 The following virtual server instances (VSIs) are ordered:
 * A VSI for IBM CloudBuilder, which is shut down after the instance deployment is completed.
-* You can choose to deploy a single Microsoft Windows Server VSI for Microsoft Active Directory (AD) or two high availability Microsoft Windows VMs in the management cluster to help enhance security and robustness. You also have the option to back up and restore the VMs using the Veeam service.
+* You can choose to deploy a single Microsoft Windows Server VSI for Microsoft Active Directory (AD) or two high availability Microsoft Windows VMs in the management cluster to help enhance security and robustness.
 
 ### Storage
 
@@ -109,12 +103,12 @@ The following licenses are included with your vCenter Server with Hybridity Bund
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Advanced or Enterprise) 6.3
+* VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 * VMware vSAN (Advanced or Enterprise) 6.6
 
 Additional support and services fees can apply.
 
-## vCenter Server with Hybridity Bundle expansion node components
+## Technical specifications for vCenter Server with Hybridity Bundle expansion nodes
 
 Each vCenter Server with Hybridity Bundle expansion node will deploy and incur charges for the following components in your {{site.data.keyword.cloud_notm}} account.
 
@@ -125,11 +119,11 @@ One Bare Metal Server with the customized configuration.
 ### Licenses and fees for expansion nodes
 
 * One VMware vSphere Enterprise Plus 6.5u1
-* One VMware NSX Service Providers Edition (Advanced or Enterprise) 6.3
+* One VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 * One Support and Services fee
 * VMware vSAN (Advanced or Enterprise) 6.6
 
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal_full}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
 **CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance, from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components
@@ -139,7 +133,7 @@ One Bare Metal Server with the customized configuration.
 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-## Related links
+### Related links
 
 * [vCenter Server Software Bill of Materials](vc_bom.html)
 * [Requirements and planning for vCenter Server with Hybridity Bundle instances](vc_hybrid_planning.html)

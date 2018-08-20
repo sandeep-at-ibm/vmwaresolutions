@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-08-08"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-06-08"
 
 Changing users, resources, or subnets that are reserved for {{site.data.keyword.vmwaresolutions_full}} can impact management operations.
 
-## automationuser ID
+**Important:** Do not edit the global permissions of the **ic4v-vCenter** group in the **Users and Groups** page on the VMware vSphere Web Client. Such changes include: changing the user name, deleting the user, or changing its password.
 
-The **automationuser** ID is a user account that is used by the automated operations provided in the {{site.data.keyword.vmwaresolutions_short}} console.
+## automation ID
+
+The **automation** ID is a user account that is used by the automated operations provided in the {{site.data.keyword.vmwaresolutions_short}} console.
 
 Users and passwords for the automated operations in the console must not be changed because the console operations that depends on those credentials might fail.
-
-Do not update the properties of the **automationuser** ID in the **Users and Groups** page on the VMware vSphere Web Client. Such changes include: changing the user name, deleting the user, or changing its password.
 
 ## Service-specific user accounts
 
@@ -26,7 +26,9 @@ Each service creates an internal user account in vCenter Server. This account is
 
 **Important**: To prevent outages and connection problems, if you change the user ID, password, or password expiration settings for this user account, ensure that you also update the information in the associated service.
 
-The user ID for this account is in the format `<service_name>-<service_uuid>@VSPHERE.LOCAL`. For example, the user ID that the Veeam on {{site.data.keyword.cloud_notm}} service uses to connect to vCenter Server to perform scheduled backups is `Veeam-<Veeam_uuid>@VSPHERE.LOCAL`.
+The user ID for this account is in the format `<service_name>-<truncated service_uuid>@test.local` or `<service_name>-<truncated service_uuid>@example-domain.local`. For example, the user ID that the Veeam on {{site.data.keyword.cloud_notm}} service uses to connect to vCenter Server to perform scheduled backups is `Veeam-<Veeam_uuid>@test.local`.
+
+**Note**: The `<service_name>` together with the `<service_uuid>` truncates to 20 characters.
 
 ## VMware resources for vCenter Server instances (V1.9 and later)
 

@@ -4,18 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Viewing VMware Federal instances
 
-Use this procedure to view the VMware Federal instances that you ordered and detailed information about them.
+View the summary and detailed information of the VMware Federal instances that are provisioned for different user accounts.
 
 ## Viewing VMware Federal instances summary
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
-2. In the **vCenter Server** table, view the list of your instances.
+To view a summary of all the VMware Federal instances instances that are provisioned for a user account, complete the following steps:
+1. In the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane.
+2. At the upper-right corner of the console, click your avatar, and then click the **Account** field to select the user account that you want to check instances for. 
+3. In the **vCenter Server** table, view the list of instances that are provisioned in the selected user account.
 
 Table 1. VMware Federal instance items
 
@@ -23,8 +25,9 @@ Table 1. VMware Federal instance items
 |:------------- |:------------- |
 | Name | The name of the instance. |
 | Version | The release version the instance was deployed in, or upgraded to. |  
-| Location | The {{site.data.keyword.CloudDataCent}} where the instance is hosted. |  
-| Creation Time | The date and time that the instance was created. |  
+| Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted. |  
+| Creation time | The date and time that the instance was created. | 
+| Status | The status of the instance. |
 
 The instance can have a range of statuses.
 
@@ -46,7 +49,7 @@ Table 2. VMware Federal data center instance status descriptions
 
 To view the property details of an instance:
 
-1. On the **vCenter Server Instances** table, click an instance name.
+1. In the **vCenter Server Instances** table, click an instance name.
 2. Under **Properties**, view the details for the instance.
 
 Table 3. VMware Federal instance properties
@@ -90,7 +93,7 @@ Table 4. Access information for instance-related components
 
 ## Viewing the deployment history for VMware Federal instances
 
-Under **Deployment History**, view the deployment history for the instance.
+Click **Deployment History** from the left navigation pane to view the deployment history for the instance.
 
 Table 5. VMware Federal instance deployment history
 
@@ -114,9 +117,9 @@ Review the following topics for information to help you complete the login instr
 *  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network using VPN, see [VPN Access](http://www.softlayer.com/vpn-access){:new_window}.
 *  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
 
-## Related links
+### Related links
 
-* [VMware Federal on IBM Cloud overview](vc_fed_overview.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} overview](vc_fed_overview.html)
 * [Ordering VMware Federal instances](vc_fed_orderinginstance.html)
 * [Deleting VMware Federal instances](vc_fed_deletinginstance.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)

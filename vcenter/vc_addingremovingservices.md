@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -20,16 +20,15 @@ Table 1. Available services for vCenter Server instances
 
 | Service name | Availability | Instance support |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on IBM Cloud](../services/f5_considerations.html)                                 | Yes | V1.9 and later |
-| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       | Yes | V1.8 and later |
-| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) | Yes | V2.0 and later |
-| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              | Yes | V2.3 and later |
-| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              | Yes | V2.3 and later |
-| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         | Yes | V2.2 and later |
-| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  | Yes | V2.2 and later |
-| [Veeam on IBM Cloud](../services/veeam_considerations.html)                          | Yes | V1.8 and later |
-| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                         | No | Not applicable |
-| [Zerto on IBM Cloud](../services/addingzertodr.html)                                 | Yes | V1.2 and later |
+| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | Yes | V1.9 and later |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | Yes | V2.0 and later |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | Yes | V2.3 and later |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | Yes | V2.3 and later |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | Yes | V2.2 and later |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  | Yes | V2.2 and later |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | Yes | V1.8 and later |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                         | No | Not applicable |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | Yes | V1.2 and later |
 
 
 ## Adding services to vCenter Server instances
@@ -64,6 +63,6 @@ When the removal of the service is completed successfully, you are notified by e
 
 **Attention**: You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the removed services.
 
-## Related links
+### Related links
 
 * [FAQ](../vmonic/faq.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -22,7 +22,7 @@ The vCenter Server with Hybridity Bundle deployment has strict requirements on t
 
 Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server with Hybridity Bundle instances
 
-| IBM Cloud Data Center | Location | Region |
+| {{site.data.keyword.CloudDataCent_notm}} | Location | Region |
 |:-----|:----------------|
 | AMS03 | Amsterdam | Europe |
 | CHE01 | Chennai | Asia Pacific |
@@ -55,7 +55,7 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server 
 | WDC06 | Washington, DC | NA East |
 | WDC07 | Washington, DC | NA East |
 
-Depending on availability and inventory supply, {{site.data.keyword.CloudDataCents_notm}} might display a status indicator in the {{site.data.keyword.vmwaresolutions_full}} console to help you plan your deployments.
+Depending on availability and inventory supply, {{site.data.keyword.CloudDataCents_notm}} might display a status indicator in the {{site.data.keyword.vmwaresolutions_short}} console to help you plan your deployments.
 
 Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when ordering vCenter Server with Hybridity Bundle instances
 
@@ -65,9 +65,13 @@ Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when or
 | Temporarily Out of Inventory  | The {{site.data.keyword.CloudDataCent_notm}} has no availability at this time. |
 | Limited Inventory             | The {{site.data.keyword.CloudDataCent_notm}} has limited availability and the order might not be completed. |
 
+## Backup of management components
+
+You are responsible for maintaining and ensuring the availability of all instance components. It is strongly recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](../archiref/solution/solution_backingup.html).
+
 ## Services for vCenter Server with Hybridity Bundle instances
 
-The vCenter Server with Hybridity Bundle instance includes the VMware Hybrid Cloud Extension (HCX) licensing that entitles you to the VMware HCX on IBM Cloud service. This service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
+The vCenter Server with Hybridity Bundle instance includes the VMware Hybrid Cloud Extension (HCX) licensing that entitles you to the VMware HCX on {{site.data.keyword.cloud_notm}} service. This service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
 
 When you deploy this service, complete the following settings:
 * Specify the **HCX interconnect type** by selecting one of the following options:
@@ -82,7 +86,11 @@ When you deploy this service, complete the following settings:
 
 You can order other add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservices.html).
 
-## Related links
+## Capacity considerations
+
+For capacity information and considerations, see [Scaling capacity](../archiref/solution/solution_scaling.html).
+
+### Related links
 
 * [vCenter Server with Hybridity Bundle overview](vc_hybrid_overview.html)
 * [Ordering vCenter Server with Hybridity Bundle instances](vc_hybrid_orderinginstance.html)

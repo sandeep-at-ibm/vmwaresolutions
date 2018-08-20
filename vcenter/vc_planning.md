@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -55,7 +55,7 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server 
 | WDC06 | Washington, DC | NA East | Customized |
 | WDC07 | Washington, DC | NA East | Customized |
 
-A small subset of IBM Cloud {{site.data.keyword.CloudDataCents_notm}} offer preconfigured **Small**, **Medium**, and **Large** Bare Metal Server options. Depending on availability and inventory supply, {{site.data.keyword.CloudDataCents_notm}} might display a status indicator in the {{site.data.keyword.vmwaresolutions_full}} console to help you plan your deployments.
+A small subset of {{site.data.keyword.CloudDataCents_notm}} offer preconfigured **Small**, **Medium**, and **Large** Bare Metal Server options. Depending on availability and inventory supply, {{site.data.keyword.CloudDataCents_notm}} might display a status indicator in the {{site.data.keyword.vmwaresolutions_short}} console to help you plan your deployments.
 
 Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when ordering vCenter Server instances
 
@@ -65,16 +65,19 @@ Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when or
 | Temporarily Out of Inventory  | The {{site.data.keyword.CloudDataCent_notm}} has no availability at this time. |
 | Limited Inventory             | The {{site.data.keyword.CloudDataCent_notm}} has limited availability and the order might not be completed. |
 
+## Backup of management components
+
+You are responsible for maintaining and ensuring the availability of all instance components. It is strongly recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](../archiref/solution/solution_backingup.html).
+
 ## Services for vCenter Server instances
 
 You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for vCenter Server instances](vc_addingremovingservices.html).
 
-<!-- ## Capacity considerations
+## Capacity considerations
 
-For capacity information and considerations, see the _Bill of
-Materials_ document on the [Virtual reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+For capacity information and considerations, see [Scaling capacity](../archiref/solution/solution_scaling.html).
 
-## Related links
+### Related links
 
 * [vCenter Server overview](vc_vcenterserveroverview.html)
 * [Ordering vCenter Server instances](vc_orderinginstance.html)

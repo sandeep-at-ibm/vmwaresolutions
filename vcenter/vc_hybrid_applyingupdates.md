@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-05"
+lastupdated: "2018-08-07"
 
 ---
 
@@ -35,10 +35,10 @@ Table 1. Update levels and impact
 
 ## Procedure
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to update.
 3. On the **Summary** page, verify that all instance details are displayed correctly. Then click **Infrastructure** on the left navigation pane to verify the details on the **Infrastructure** page.
-   If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver virtual machine, as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
+   If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver Virtual Server Instance (VSI), as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
 4. Click **Update and Patch** on the left navigation pane.
 
    **Note**: The **Update and Patch** page contains only the packages for updating the IBM management components, not the VMware updates. {{site.data.keyword.vmwaresolutions_short}} applies VMware updates for the following operations:
@@ -46,7 +46,7 @@ Table 1. Update levels and impact
    * When new ESXi servers are added.
    * When new clusters are added.
 
-5. For license upgrades, click **Upgrade License**. Select the edition you want to upgrade to from the list and click **Upgrade**. License edition downgrades are not available.
+5. For license upgrades, click **Upgrade**. Select the edition you want to upgrade to from the list and click **Upgrade**. License edition downgrades are not available.
 
    **Note:** The license upgrade replaces all existing NSX licenses on the instance. Additional charges may be incurred from an overlap of old and new licenses if you upgrade in the middle of a billing cycle. To avoid additional charges, it is recommended to upgrade the license at the end of the billing cycle.
 
@@ -56,8 +56,6 @@ Table 1. Update levels and impact
 7. If you are applying updates to vCenter Server instances in multi-site deployment configuration, a section titled **Steps Required to Update** is displayed. This section lists the update operations required for all instances in the multi-site deployment. You must complete the steps in sequence by clicking **Apply Update** for each step. You must wait for the previous step to complete before you start the next step.   
 
 ## Results
-
-1. Before an update operation is started, a backup of the management virtual machines is done automatically, if your instance has a backup service installed. After the backup is completed, the update is applied.
 
 2. After you apply an update, a record appears in the software update status list, where you can view the detailed progress and status of the update. When the update is completed successfully, a record appears in the installed software updates list.
 
@@ -85,7 +83,7 @@ before you reapply the update.</dd>
 
 4. If the update process fails at a specific step, [contact IBM Support](../vmonic/trbl_support.html) for assistance. You will be advised how to resolve the problem and guided to attempt the upgrade again from the step that failed.
 
-## Related links
+### Related links
 
 * [vCenter Server with Hybridity Bundle overview](../vcenter/vc_hybrid_overview.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)

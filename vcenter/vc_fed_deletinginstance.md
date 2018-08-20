@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -43,9 +43,9 @@ Because of resource dependencies, the components in your instance are not releas
    1. Click the overflow menu icon to the right of **vCenter console** again and click **Delete Instance**.
    2. In the **Delete Instance** window, click **OK**.
 
-## Related links
+### Related links
 
-* [VMware Federal on IBM Cloud overview](vc_fed_overview.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} overview](vc_fed_overview.html)
 * [Ordering VMware Federal instances](vc_fed_orderinginstance.html)
 * [Securing VMware Federal instances](vc_fed_securinginstance.html)
 * [Viewing VMware Federal instances](vc_fed_viewinginstance.html)

@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Viewing vCenter Server instances
 
-View the VMware vCenter Server instances that you ordered and detailed information about them.
+View the summary and detailed information of the VMware vCenter Server instances that are provisioned for different user accounts.
 
 ## Viewing vCenter Server instances summary
 
-To view a summary of all the vCenter Server instances in your environment, complete the following steps:
+To view a summary of all the vCenter Server instances that are provisioned for a user account, complete the following steps:
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
-2. In the **vCenter Server** table, view the list of your instances.
+1. In the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane.
+2. At the upper-right corner of the console, click your avatar, and then click the **Account** field to select the user account that you want to check instances for.  
+3. In the **vCenter Server** table, view the list of instances that are provisioned in the selected user account.
 
 Table 1. vCenter Server instance items
 
@@ -25,7 +26,7 @@ Table 1. vCenter Server instance items
 |:------------- |:------------- |
 | Name | The name of the instance |
 | Version | The release version that the instance was deployed in, or upgraded to |  
-| Location | The {{site.data.keyword.CloudDataCent}} where the instance is hosted |  
+| Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted |  
 | Creation time | The date and time when the instance was created |
 | Status | The status of the instance |   
 
@@ -48,7 +49,7 @@ Table 2. vCenter Server instances status descriptions
 
 To view the property details of an instance:
 
-1. On the **vCenter Server Instances** table, click an instance name.
+1. In the **vCenter Server Instances** table, click an instance name.
 2. Under **Properties**, view the details for the instance.
 
 Table 3. vCenter Server instance properties
@@ -94,7 +95,7 @@ Table 4. vCenter Server access information for instance-related components
 
 ## Viewing the deployment history for vCenter Server instances
 
-Under **Deployment History**, view the deployment history for the instance.
+Click **Deployment History** from the left navigation pane to view the deployment history for the instance.
 
 Table 5. vCenter Server instance deployment history
 
@@ -118,7 +119,7 @@ Review the following topics for information to help you complete the login instr
 *  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network using VPN, see [VPN Access](http://www.softlayer.com/vpn-access){:new_window}.
 *  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
 
-## Related links
+### Related links
 
 * [Ordering vCenter Server instances](vc_orderinginstance.html)
 * [Adding, viewing, and deleting clusters for vCenter Server instances](vc_addingviewingclusters.html)

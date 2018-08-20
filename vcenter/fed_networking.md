@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -14,20 +14,17 @@ Review the following information for details about networking considerations and
 
 ## Networking components for VMware Federal instances
 
-To review the networking components that are included in your VMware Federal instance, see [vCenter Server instance components for VMware Federal on IBM Cloud](vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud).
+To review the networking components that are included in your VMware Federal instance, see [Technical specifications for VMware Federal on {{site.data.keyword.cloud}} instances](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ## NSX Firewall considerations
 
-If you are using NSX Distributed Firewalls (DFW), review the following requirements:
-* You must configure rules for all communications from the {{site.data.keyword.IBM}} CloudDriver virtual machine (VM) to allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`.
-* You must create a DFW rule that allows for HTTPS traffic from the IBM CloudDriver VM to any destination.
-* The DFW rule must come before any other rules that would block traffic to or from these VMs.
+If you are using NSX Distributed Firewalls (DFW), you must configure rules for all communications from the IBM CloudDriver virtual server instance (VSI) to allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`.
 
 ## Using NSX with your virtual machines
 
 During VMware Federal instance deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
 
-An NSX Edge Services Gateway is also deployed to be used by your workload VMs. For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+An NSX Edge Services Gateway is also deployed to be used by your workload virtual machines (VMs). For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
 ## Considerations when changing passwords for NSX components
 
@@ -36,8 +33,8 @@ Review the following considerations before you change the passwords for the NSX 
 * You can change passwords for NSX Controllers. For instructions on how to change passwords for NSX Controllers, see [Change Controller Password](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html).
 * You can change the password and SSH settings for the customer-managed VMware NSX Edge Services Gateway (ESG). Do not change the password for the Management VMware NSX Edge Services Gateway (ESG) and related Distributed Logical Router.
 
-## Related links
+### Related links
 
 * [Overview of NSX](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}
-* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/nsx-esg){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
 * [Managing NAT Rules](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}

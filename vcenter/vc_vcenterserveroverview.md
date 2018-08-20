@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -14,13 +14,13 @@ VMware vCenter Server on {{site.data.keyword.cloud}} is a hosted private cloud t
 
 In many cases, the entire environment can be provisioned in less than a day and the bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed.
 
-Post-deployment, you can increase shared storage by ordering additional NFS (Network File System) file shares from the  {{site.data.keyword.slportal}} and manually attach them across all ESXi servers in a cluster. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.
+Post-deployment, you can increase shared storage by ordering additional NFS (Network File System) file shares from the  {{site.data.keyword.slportal}} and manually attach them across all ESXi servers in a cluster. If you require dedicated storage, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.
 
 VMware vSAN is also available as a dedicated storage option. To increase the vSAN-based storage capacity of a vSAN cluster, you can add more ESXi servers post-deployment.
 
 If you purchased IBM-provided VMware licensing, you can upgrade the VMware NSX Base edition to Advanced or to Enterprise edition, and you can purchase additional VMware components, such as VMware vRealize Operations.
 
-You can add IBM Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS or application layers. The IBM Cloud Professional Services team is also available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
+You can add IBM Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is also available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
 
 ## vCenter Server architecture
 
@@ -42,15 +42,15 @@ This layer virtualizes the physical infrastructure through different VMware prod
 
 ### Virtualization management
 
-This layer consists of vCenter Server Appliance (vCSA), NSX Manager, two NSX ESGs, three NSX Controllers, Platform Services Controller (PSC) virtual appliance, and the IBM CloudDriver virtual machine.
+This layer consists of vCenter Server Appliance (vCSA), NSX Manager, two NSX ESGs, three NSX Controllers, Platform Services Controller (PSC) virtual appliance, and the IBM CloudDriver virtual server instance (VSI). The CloudDriver VSI is deployed on demand as needed for certain operations such as adding hosts to the environment.
 
 The base offering is deployed with a vCenter Server appliance that is sized to support an environment with up to 400 hosts and up to 4000 VMs. The same vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
 
 In total, the base offering requires 38 vCPU and 67 GB vRAM that are reserved for the virtualization management layer. The remaining host capacity for your VMs depends on several factors, such as oversubscription rate, VM sizing, and workload performance requirements.
 
-For details about the architecture, see [{{site.data.keyword.vmwaresolutions_full}} architecture reference](../archiref/solution/solution_overview.html).
+For details about the architecture, see [{{site.data.keyword.vmwaresolutions_short}} architecture reference](../archiref/solution/solution_overview.html).
 
-## vCenter Server technical specifications
+## Technical specifications for vCenter Server instances
 
 The following components are included in your vCenter Server instance.
 
@@ -106,34 +106,32 @@ The NFS option offers customized shared file-level storage for workloads with va
 * Performance: 2, 4, or 10 IOPS/GB.
 * Individual configuration of file shares.
 
-If you choose the NFS option, the following file shares are ordered:
-* One 2 TB, 4 IOPS/GB file share for management components.
-* One 2 TB shared block-level storage for backups, which can be scaled up to 12 TB. You can choose whether you want storage for backups by selecting a backup service.
+If you choose the NFS option, one 2 TB and 4 IOPS/GB file share for management components are ordered.
 
 ### Licenses (IBM-provided or BYOL) and fees
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 * Support and Services fee (one license per node)
 
-## vCenter Server expansion node components
+## Technical specifications for vCenter Server expansion nodes
 
 Each vCenter Server expansion node will deploy and incur charges for the following components in your {{site.data.keyword.cloud_notm}} account.
 
 ### Hardware for expansion nodes
 
-One Bare Metal Server with the configuration presented in the _vCenter Server technical specifications_ section in the [vCenter Server overview](vc_vcenterserveroverview.html).
+One Bare Metal Server with the configuration presented in [Technical specifications for vCenter Server instances](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ### Licenses and fees for expansion nodes
 
 * One VMware vSphere Enterprise Plus 6.5u1
-* One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
+* One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 * One Support and Services fee
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal_full}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
 **CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance, from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components
@@ -143,7 +141,7 @@ One Bare Metal Server with the configuration presented in the _vCenter Server te
 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-## Related links
+### Related links
 
 * [vCenter Server Software Bill of Materials](vc_bom.html)
 * [Planning vCenter Server instances](vc_planning.html)
