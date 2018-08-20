@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -14,7 +14,7 @@ Common services provide the services that are used by other services in the clou
 
 ## Identity and access services
 
-In this design, Microsoft Active Directory (AD) is used for identity management. The design deploys a single Windows Active Directory virtual server instance (VSI) as part of the Cloud Foundation and vCenter Server deployment automation. vCenter will be configured to utilize the AD authentication.
+In this design, Microsoft Active Directory (AD) is used for identity management. The design deploys one or two Windows Active Directory virtual machines as part of the Cloud Foundation and vCenter Server deployment automation. vCenter will be configured to utilize the AD authentication.
 
 ### Microsoft Active Directory
 
@@ -28,7 +28,7 @@ Active Directory serves to authenticate accesses to manage the VMware instance o
 
 The vSphere Single Sign On (SSO) domain is used as the initial authentication mechanism for a single instance or multiple linked instances. The SSO domain also serves to connect a VMware instance or multiple linked instances to the Microsoft Active Directory server. The following SSO configuration is applied:  
 * The SSO domain of `vsphere.local` is always used
-* For VMware instances that are tied to an existing instance, the PSC are joined to the existing instance’s SSO domain
+* For VMware instances that are tied to an existing instance, the PSC is joined to the existing instance’s SSO domain
 * The SSO site name equals to the instance name
 
 ## Domain name services (DNS)
@@ -37,9 +37,9 @@ DNS in this design is for the cloud management and infrastructure components onl
 
 ### VMware vCenter Server
 
-The vCenter Server deployment uses the deployed Active Directory VSIs as the DNS servers for the instance. All deployed components (vCenter, PSC, NSX, ESXi hosts) are configured to point to the Active Directory server as their default DNS server. You can customize the DNS zone configuration if your configuration does not interfere with the configuration of the deployed components.
+The vCenter Server deployment uses the deployed Active Directory servers as the DNS servers for the instance. All deployed components (vCenter, PSC, NSX, and ESXi hosts) are configured to point to the Active Directory server as their default DNS server. You can customize the DNS zone configuration if your configuration does not interfere with the configuration of the deployed components.
 
-This design integrates DNS services on the Active Directory VSIs through the following configuration:
+This design integrates DNS services on the Active Directory servers through the following configuration:
 * You can specify the domain structure. The domain name can be any number of levels (up to the maximum that the vCenter Server components will handle). The lowest level is the subdomain for the instance.
    * The DNS domain name you specify will be used as the Active Directory root forest domain name. For example, if the DNS domain name is `cloud.ibm.com` then the Active Directory forest root domain name is `cloud.ibm.com`. This DNS and Active Directory domain name is the same across all linked vCenter Server instances.
    * You can additionally specify a subdomain name for the instance. The subdomain name must be unique across all linked vCenter Server instances.
@@ -53,7 +53,7 @@ The Cloud Foundation deployment uses VMware Cloud Foundation automation, which u
 
 Because the SDDC Manager generates and maintains the host names for the components it manages, it is not recommended to tamper with its DNS zone file directly for adding and removing hosts.
 
-This design integrates DNS services on the Active Directory VSIs with the SDDC Manager VM in the following configuration:
+This design integrates DNS services on the Active Directory servers with the SDDC Manager VM in the following configuration:
 * You can specify the domain structure. The domain name can be any number of levels (up to the maximum that the Cloud Foundation components will handle).
 * The lowest level is the subdomain that the SDDC Manager is authoritative for.
 * The DNS domain name you specify will be used as the Active Directory root forest domain name. For example, if the DNS domain name is `cloud.ibm.com`, then the Active Directory domain forest root is `cloud.ibm.com`. This DNS domain and Active Directory domain is the same across all linked Cloud Foundation instances.
@@ -61,8 +61,8 @@ This design integrates DNS services on the Active Directory VSIs with the SDDC M
 * The SDDC Manager DNS configuration is altered to point to the Active Directory servers for all zones except for the zone that it is responsible for.
 * The Active Directory DNS servers are configured to be authoritative for the DNS domain space above the SDDC Manager and Cloud Foundation instance subdomain.
 * The Active Directory DNS servers are configured to point to the SDDC Manager IP address for the subdomain delegation of the zone the SDDC Manager is authoritative for.
-* The Active Directory DNS servers are configured to point to the IBM Cloud DNS servers for all other zones.
-* Any secondary instance that are to be integrated to the first or target instance must utilize the same DNS name structure above the SDDC Manager subdomain.
+* The Active Directory DNS servers are configured to point to the 	{{site.data.keyword.cloud_notm}} DNS servers for all other zones.
+* Any secondary instance that is to be integrated to the first or target instance must utilize the same DNS name structure above the SDDC Manager subdomain.
 
 ## NTP services
 
@@ -70,10 +70,16 @@ This design utilizes the {{site.data.keyword.cloud_notm}} infrastructure NTP ser
 
 Figure 1. NTP services
 
-![NTP services](commonservice_ntp.svg "In this design, All components of an instance use the same {{site.data.keyword.cloud_notm}} infrastructure NTP server through the NTP service.")
+![NTP services](commonservice_ntp.svg "In this design, all components of an instance use the same {{site.data.keyword.cloud_notm}} infrastructure NTP server through the NTP service.")
 
 ## Certificate authority services
 
 By default, VMware vSphere uses TLS certificates that are signed by the VMware Certificate Authority (VMCA), which resides on the VMware Platform Services Controller appliance. These certificates are not trusted by the end­ user devices or browsers. It is a security best practice to replace user-facing certificates with certificates that are signed by a third-party or enterprise certificate authority (CA). Certificates for machine-to-machine communication can remain as VMCA–signed certificates, however, you are recommended to follow best practices for your organization, which typically involve using an identified enterprise CA.
 
 You can use the Windows AD servers within this design to create certificates that are signed by the local instance. However, you can also choose to configure CA services if needed.
+
+### Related links
+
+* [Physical infrastructure design](design_physicalinfrastructure.html)
+* [Virtual infrastructure design](design_virtualinfrastructure.html)
+* [Infrastructure management design](design_infrastructuremgmt.html)

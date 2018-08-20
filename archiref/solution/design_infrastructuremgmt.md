@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-19"
+lastupdated: "2018-07-13"
 
 ---
 
@@ -70,7 +70,7 @@ This design uses vSphere High Availability (HA) in the initial cluster and addit
 
 **Note**: You are responsible to adjust the admission control policy when the cluster is later expanded or contracted.
 
-By default, the **VM restart priority** option is set to medium and the **Host isolation response** option is set to leave powered on. Additionally, **VM monitoring** is disabled and the **Datastore Heartbeating** feature is configured to include any of the cluster data stores. This approach uses the NAS data stores if they are present.
+By default, the **VM restart priority** option is set to medium and the **Host isolation response** option is disabled. Additionally, **VM monitoring** is disabled and the **Datastore Heartbeating** feature is configured to include any of the cluster data stores. This approach uses the NAS data stores if they are present.
 
 ## Automation
 
@@ -79,13 +79,13 @@ The cornerstone to these solutions is automation. Automation brings the followin
 * Drastically reduces the deployment time.
 * Ensures that the VMware instance is deployed in a consistent manner.
 
-IBM CloudBuilder, IBM CloudDriver, and SDDC Manager VMs work together to bring up a new VMware instance and perform lifecycle management functions.
+{{site.data.keyword.IBM}} CloudBuilder, IBM CloudDriver, and SDDC Manager VMs work together to bring up a new VMware instance and perform lifecycle management functions.
 
 ### IBM CloudBuilder and IBM CloudDriver
 
-CloudBuilder and CloudDriver VMs are IBM-developed components that you cannot access.
-* CloudBuilder is a temporary {{site.data.keyword.cloud}} virtual server instance (VSI) that bootstraps the deployment, configuration, and validation of the solution components within the provisioned bare metal ESXi hosts.
-* CloudDriver is a VM deployed within the VMware instance that remains as part of the instance during its entire lifecycle. CloudDriver communicates with the {{site.data.keyword.vmwaresolutions_short}} console through a VMware NSX Edge Services Gateway deployed exclusively for instance management purpose, and acts as an agent to maintain the instance. CloudDriver is responsible for ongoing actions such as the addition of new bare metal hosts to the cluster and the deployment of add-on services into the instance. For Cloud Foundation instances, CloudDriver communicates with the VMware SDDC Manager VM to perform functions such as host addition and patching.
+The IBM CloudBuilder and IBM CloudDriver virtual server instance (VSI) are IBM-developed components that you cannot access.
+* The IBM CloudBuilder is a temporary {{site.data.keyword.cloud_notm}} virtual server instance (VSI) that bootstraps the deployment, configuration, and validation of the solution components within the provisioned bare metal ESXi hosts.
+* The IBM CloudDriver VSI is deployed for instance creation and then periodically, as needed, with the latest {{site.data.keyword.cloud_notm}} for VMware code for operations such as deploying additional nodes, clusters, or services. The IBM CloudDriver communicates with the {{site.data.keyword.vmwaresolutions_short}} console through a VMware NSX Edge Services Gateway deployed exclusively for instance management purpose, and acts as an agent to maintain the instance. The IBM CloudDriver is responsible for ongoing actions such as the addition of new bare metal hosts to the cluster and the deployment of add-on services into the instance. For Cloud Foundation instances, the IBM CloudDriver communicates with the VMware SDDC Manager VM to perform functions such as host addition and patching.
 
 It is possible for the user to delete or damage the VMs described in the following sections. When a VM is removed, shut down, or it becomes inoperable, the following Cloud Foundation or vCenter Server operations on the {{site.data.keyword.vmwaresolutions_short}} console are interrupted:
 * Viewing the instance or host status
@@ -100,19 +100,26 @@ For Cloud Foundation instances, the SDDC Manager VM is a component that is devel
 * Management of VMware components: vCenter Server, Platform Services Controller (PSC), vSAN, and NSX, including IP address allocation and hostname resolution.
 * Expansion and retraction of ESXi hosts within the cluster including any affected services, such as NSX VTEP, vSAN, resource pools.
 
-For vCenter Server instances, these activities are performed by the CloudDriver as there is no SDDC Manager.
+For vCenter Server instances, these activities are performed by the IBM CloudDriver as there is no SDDC Manager.
 
 ### Automation flow
 
 The following procedure describes the order of events when a VMware instance is ordered via the {{site.data.keyword.vmwaresolutions_short}} console:
 1.  Ordering VLANs and subnets for networking from {{site.data.keyword.cloud_notm}}.
-2.  Ordering {{site.data.keyword.baremetal_long}} with vSphere Hypervisor installed.
-3.  Ordering Microsoft Windows Virtual Server Instance (VSI) to serve as Active Directory domain controller.
+2.  Ordering {{site.data.keyword.baremetal_short}} with vSphere Hypervisor installed.
+3.  If applicable, ordering Microsoft Windows Virtual Server Instance (VSI) to serve as Active Directory domain controller.
 4.  Validation of the networking and deployed hardware.
 5.  If applicable, initial configuration of single node vSAN.
-6.  Deployment and configuration of vCenter, PSC, and NSX.
-7.  Clustering of remaining ESXi nodes, expansion of vSAN if applicable, and configuration of NSX components (VTEP).
-8.  Deploying VMware Cloud Foundation SDDC Manager VM, if applicable, and CloudDriver VM.
-9.  Validating the installation and configuration of the environment.
-10. Removal of the CloudBuilder VSI.
-11. Deployment of optional services, such as backup server and storage.
+6.  If applicable, deployment and configuration of two Microsoft Windows virtual machines to serve as Active Directory domain controllers.
+7.  Deployment and configuration of vCenter, PSC, and NSX.
+8.  Clustering of remaining ESXi nodes, expansion of vSAN if applicable, and configuration of NSX components (VTEP).
+9.  Deploying VMware Cloud Foundation SDDC Manager VM, if applicable, and the IBM CloudDriver VSI.
+10.  Validating the installation and configuration of the environment.
+11. Removal of the CloudBuilder VSI.
+12. Deployment of optional services, such as backup server and storage.
+
+### Related links
+
+* [Physical infrastructure design](design_physicalinfrastructure.html)
+* [Virtual infrastructure design](design_virtualinfrastructure.html)
+* [Common services design](design_commonservice.html)
