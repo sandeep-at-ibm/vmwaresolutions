@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -44,7 +44,7 @@ Because of resource dependencies, the components in your instance are not releas
    1. Click the overflow menu icon to the right of **vCenter console** again and click **Delete Instance**.
    2. In the **Delete Instance** window, click **OK**.
 
-## Related links
+### Related links
 
 * [Deleting vCenter Server with Hybridity Bundle instances in a multi-site configuration](vc_hybrid_deletinginstance_multi.html)
 * [Ordering vCenter Server with Hybridity Bundle instances](vc_hybrid_orderinginstance.html)

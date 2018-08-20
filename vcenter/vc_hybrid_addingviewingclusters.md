@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -32,7 +32,7 @@ The cluster name must meet the following requirements:
 
 #### Data center location
 
-The {{site.data.keyword.CloudDataCent}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
+The {{site.data.keyword.CloudDataCent_notm}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
 If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} or {{site.data.keyword.cloud_notm}} infrastructure pod, three additional VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
@@ -44,7 +44,7 @@ Specify the CPU model and RAM for the Bare Metal Server. Available options might
 
 Table 2. Options for customized Bare Metal Servers
 
-| CPU options        | RAM options       |
+| CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
@@ -75,7 +75,7 @@ VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle insta
 IBM-provided VMware licenses for the following:
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Advanced or Enterprise) 6.3
+  * VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 
 ### Order summary
 
@@ -183,7 +183,7 @@ You might want to delete a cluster from an instance when it is no longer needed.
 
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.
 
-## Related links
+### Related links
 
 * [Viewing vCenter Server with Hybridity Bundle instances](vc_hybrid_viewinginstances.html)
 * [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservers.html)

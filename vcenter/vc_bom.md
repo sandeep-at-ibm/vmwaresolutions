@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,10 +18,10 @@ The following table details the BOM information for the vCenter Server VLANs.
 
 Table 1. BOM for the VLANs in vCenter Server instances
 
-| VLAN      | Type      | Details      |
-|:----------|:----------|:-------------|
+| VLAN       | Type       | Details       |
+|:---------- |:---------- |:------------- |
 | VLAN1     | Public, Primary | Assigned to physical ESXi servers for public network access. Not used after initial deployment. Available for internet access. |
-| VLAN2     | Private A, Primary | Assigned by IBM Cloud to physical ESXi servers. Used by the management interface for VMware vSphere management traffic.<br><br>Assigned to VMs (virtual machines) that function as management components.<br><br>Assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint) |
+| VLAN2     | Private A, Primary | Assigned by {{site.data.keyword.cloud}} to physical ESXi servers. Used by the management interface for VMware vSphere management traffic.<br><br>Assigned to VMs (virtual machines) that function as management components.<br><br>Assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint) |
 | VLAN3     | Private B, Portable | Assigned to VMware vSAN, if used.<br><br>Assigned to VMware NFS, if used.<br><br>Assigned to VMware vSphere vMotion. |
 
 ## Software BOM for vCenter Server instances
@@ -30,14 +30,14 @@ The following table details the BOM information for vCenter Server software comp
 
 Table 2. BOM for the software components in vCenter Server instances
 
-| Manufacturer | Component                       | Version      |
-|:-------------|:--------------------------------|:-------------|
+| Manufacturer  | Component                      | Version       |
+|:------------- |:------------------------------ |:------------- |
 | VMware       | vSphere ESXi                    | 6.5 U1g (ESXi 6.5u1 with patch level ESXi650-201803001 applied) |
 | VMware       | vCenter Server Appliance        | 6.5 Update 1g |
 | VMware       | Platform Services Controller    | 6.5 Update 1g |
 | VMware       | vSAN                            | 6.6.1        |
-| VMware       | NSX for vSphere                 | 6.3.5       |
-| {{site.data.keyword.IBM}} | CloudDriver        | 2.4          |
+| VMware       | NSX for vSphere                 | 6.4.1        |
+| IBM          | CloudDriver                     | 2.5          |
 | Microsoft    | Windows Server Standard edition | 2012R2       |
 
 **Note**: VMware vSAN is an optional component.
@@ -50,17 +50,17 @@ The settings apply to new instances and new clusters in new instances V2.2 or la
 
 Table 3. ESXi servers advanced configuration settings for vCenter Server instances and clusters
 
-| Configuration setting | If newly deployed in V2.2 or later  | If upgraded from V2.1 or earlier |   
+| Configuration setting | If newly deployed in V2.2 or later  | If upgraded from V2.1 or earlier |
 |:------------- |:------------- |:------------- |
-| TCP/IP Heap Size | **TcpipHeapSize** = 32 | Not set |
-| TCP/IP Heap Maximum | **TcpipHeapMax** = 1536 | Not set |  
-| Maximum of Volumes | **MaxVolumes** = 256 | Both **/NFS/MaxVolumes** and **/NFS41/MaxVolumes** = 256 |  
-| Heartbeat Maximum Failures | **HeartbeatMaxFailures** = 10 | Not set |  
-| Heartbeat Frequency | **HeartbeatFrequency** = 12 | Not set |  
+| Maximum of Volumes | **MaxVolumes** = 256 | Both **/NFS/MaxVolumes** and **/NFS41/MaxVolumes** = 256 |
+| Heartbeat Maximum Failures | **HeartbeatMaxFailures** = 10 | Not set |
+| Heartbeat Frequency | **HeartbeatFrequency** = 12 | Not set |
 | Heartbeat Timeout | **HeartbeatTimeout** = 5 | Not set |
 | Maximum Queue Depth | **MaxQueueDepth** = 64 | Not set |
 | Queue Full Sample Size | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | Queue Full Threshold | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
+| TCP/IP Heap Size | **TcpipHeapSize** = 32 | Not set |
+| TCP/IP Heap Maximum | **TcpipHeapMax** = 1536 | Not set |
 
 **Notes**:
 * The **MaxVolumes** setting is required for the IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service because the service might use more than the default number of NFS mounts on the ESXi server.
@@ -92,7 +92,7 @@ Table 4. NSX and port group configuration settings for vCenter Server instances
 
 The vSphere cluster uses two vSphere Virtual Distributed Switches (VDS), one for public network connectivity and the other one for private network connectivity.
 
-The private network connections are configured to use Jumbo Frames MTU (Maximum Transmission Unit) with the size of 9000, which improves performance for large data transfers such as storage and VMware vMotion. This is the maximum MTU allowed within VMware and by IBM Cloud.
+The private network connections are configured to use Jumbo Frames MTU (Maximum Transmission Unit) with the size of 9000, which improves performance for large data transfers such as storage and VMware vMotion. This is the maximum MTU allowed within VMware and by {{site.data.keyword.cloud_notm}}.
 
 In V2.1 or later, the public network connections use a standard Ethernet MTU of 1500. This setting of 1500 must be maintained; any changes might cause packet fragmentation over the internet.
 
@@ -105,9 +105,9 @@ Table 5. MTU configuration settings for vCenter Server instances and clusters de
 | Public Switch  | 1500 (default) | 9000 (Jumbo Frames) |
 | Private Switch | 9000 (Jumbo Frames) | 9000 (Jumbo Frames) |
 
-The settings apply to new instances and new clusters from instances deployed in V2.1 or later. The settings also apply to new clusters in cross IBM Cloud Data Centers from instances that were upgraded to V2.1 or later.
+The settings apply to new instances and new clusters from instances deployed in V2.1 or later. The settings also apply to new clusters in cross {{site.data.keyword.CloudDataCents_notm}} from instances that were upgraded to V2.1 or later.
 
-The settings do not apply to new clusters in the same IBM Cloud Data Center, for existing instances from V2.0 or earlier or existing instances upgraded to V2.1 or later.
+The settings do not apply to new clusters in the same {{site.data.keyword.CloudDataCent_notm}}, for existing instances from V2.0 or earlier or existing instances upgraded to V2.1 or later.
 
 For instances that were deployed in V2.0 or earlier, it is recommended that you update the Public Switch MTU setting to 1500.
 
@@ -120,11 +120,11 @@ To update the MTU setting for the Public Switch, complete the following steps in
 
    **Note**: When changing the MTU size in a vDS, the attached uplinks (physical NICs) are brought down and up again. As a result, a brief outage occurs for the VMs that are using the uplink. Therefore, it is recommended to plan the MTU setting update during scheduled downtime.
 
-## Related links
+### Related links
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
-* [VMware vCenter Server on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 * [vCenter Server overview](vc_vcenterserveroverview.html)
 * [Planning vCenter Server instances](vc_planning.html)

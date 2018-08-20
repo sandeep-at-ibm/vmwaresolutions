@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -16,7 +16,7 @@ For more information about vCenter Server on {{site.data.keyword.cloud_notm}} an
 
 **Attention:** VMware Federal on {{site.data.keyword.cloud_notm}} offers only a subset of the vCenter Server offerings. Multi-site configuration, preconfigured {{site.data.keyword.cloud_notm}} Bare Metal Servers, Bring Your Own License, and the option to order additional services are not supported.
 
-## vCenter Server instance components for VMware Federal on IBM Cloud
+## Technical specifications for VMware Federal on IBM Cloud instances
 
 The following components are included:
 
@@ -72,34 +72,33 @@ If you choose the NFS option, one 2 TB, 4 IOPS/GB file share for management comp
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
-## vCenter Server expansion node components
+## Technical specifications for VMware Federal on IBM Cloud expansion nodes
 
 Each vCenter Server expansion node will deploy and incur charges for the following components in your {{site.data.keyword.cloud_notm}} account.
 
 ### Hardware for expansion nodes
 
-One Bare Metal Server with the configuration presented in [vCenter Server instance components for VMware Federal on IBM Cloud](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud).
+One Bare Metal Server with the configuration presented in [Technical specifications for VMware Federal on {{site.data.keyword.cloud_notm}} instances](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ### Licenses and fees for expansion nodes
 
 * One VMware vSphere Enterprise Plus 6.5u1
-* One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
+* One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal_full}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
 **CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance, from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components
 *  Expanding or contracting instance capacity through adding or removing ESXi servers
 *  Powering off components
-<!--*  Restarting services-->
 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-## Related links
+### Related links
 
 * [vCenter Server Software Bill of Materials](vc_bom.html)
 * [Requirements and planning for VMware Federal instances](vc_fed_planning.html)

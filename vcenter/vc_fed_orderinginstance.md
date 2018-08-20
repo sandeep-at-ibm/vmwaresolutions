@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -56,7 +56,7 @@ IBM-provided VMware licenses for the following:
 
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
 **Attention:**
@@ -70,7 +70,7 @@ Bare Metal settings are based on your customized configuration. The option to se
 
 ### Data center location
 
-Select the IBM Cloud Data Center where the instance is to be hosted.
+Select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.
 
 ### Customized
 
@@ -78,11 +78,11 @@ Specify the CPU model and RAM for the Bare Metal Server.
 
 Table 2. Options for customized {{site.data.keyword.baremetal_short}}
 
-| CPU options        | RAM options       |
+| CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
+| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
+| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
 | Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
@@ -174,7 +174,7 @@ Based on your selected configuration for the instance, the estimated cost is ins
 
 ## Procedure
 
-1. From the IBM Cloud Catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
+1. From the {{site.data.keyword.cloud_notm}} Catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
 2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server** card and click **Create**.
 3. On the **vCenter Server** page, enter the instance name.
 4. Click **Primary Instance** to deploy a single instance in the environment.
@@ -199,17 +199,15 @@ Based on your selected configuration for the instance, the estimated cost is ins
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [vCenter Server instance components for VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default.
+When the instance is successfully deployed, the components that are described in [Technical specifications for VMware Federal on {{site.data.keyword.cloud_notm}} instances](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
-
-<!--When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.-->
 
 ## What to do next
 
 View, manage, or secure the VMware Federal instance that you ordered.
 
-**Important:** You must manage the {{site.data.keyword.vmwaresolutions_full}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}} or any other means outside of the console.
+**Important:** You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}} or any other means outside of the console.
 If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
 **CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
@@ -219,7 +217,7 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 
    Exceptions to these activities include managing the shared storage file shares from the 	{{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-## Related links
+### Related links
 
 * [Signing up for an {{site.data.keyword.cloud_notm}} account](../vmonic/signing_softlayer_account.html)
 * [Viewing VMware Federal instances](vc_fed_viewinginstance.html)

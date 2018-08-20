@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -23,7 +23,7 @@ As part of the ordering process for your vCenter Server instance, the following 
 * A sample NSX Distributed Logical Router (DLR) is deployed for potential east-west communication between local workloads that are connected to layer 2 (L2) networks.
 * An NSX Edge appliance is deployed and configured to perform network address translation (NAT) from the range of IP addresses of the
 workload logical switch to a public IP address on the NAT rules.
-* If you installed the Veeam on IBM Cloud service, the NSX Manager is configured to do a daily backup of the NSX configurations. For more information, see [Considerations when installing Veeam on IBM Cloud](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
+* If you installed the Veeam on {{site.data.keyword.cloud_notm}} service, the NSX Manager is configured to do a daily backup of the NSX configurations. For more information, see [Considerations when installing Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
 
 
 ## Configuring the networking settings for your VMs
@@ -77,8 +77,8 @@ Additionally, you can find more details about the customer subnets by completing
    **Warning:** Do not use the IP addresses that are ordered and used during the initial setup. However, you can use other IP addresses on
    these subnets according to your requirements. To set up additional network address translation rules, see [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 
-## Related links
+### Related links
 
 * [Troubleshooting](../vcenter/vcenter_chg_impact.html)
 * [FAQs](../vmonic/faq.html)
-* [NSX Edge Services Gateway](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/nsx-esg){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

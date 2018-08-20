@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -44,7 +44,7 @@ Specify the CPU model and RAM for the Bare Metal Server. Available options might
 
 Table 1. Options for customized {{site.data.keyword.baremetal_short}}
 
-| CPU options        | RAM options       |
+| CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
@@ -60,8 +60,6 @@ A minimum of 2 {{site.data.keyword.baremetal_short}} is required for a cluster.
 For VMware Federal instances that are deployed in V2.3 or later, you can add up to 59 {{site.data.keyword.baremetal_short}} for a cluster, and you can add 1 - 59 ESXi servers at a time.
 
 After deployment, you can create up to four more clusters. For vSAN storage settings, 4 servers are required for both the initial cluster and post-deployment clusters.
-
-<!--When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.-->
 
 ### Storage settings
 
@@ -99,10 +97,10 @@ Table 2. NFS performance level options
 
 ### Licensing settings
 
-IBM-provided VMware licenses for the following:
+	{{site.data.keyword.IBM}}-provided VMware licenses for the following:
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.3
+  * VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
   * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
 ### Order summary
@@ -111,7 +109,7 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 
 ## Procedure to add clusters to VMware Federal instances
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instance** table, click the instance that you want to add clusters to.
 
    **Note**: Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
@@ -236,7 +234,7 @@ You might want to delete a cluster from an instance when it is no longer needed.
 
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.
 
-## Related links
+### Related links
 
 * [Viewing VMware Federal instances](vc_fed_viewinginstance.html)
 * [Expanding and contracting capacity for VMware Federal instances](vc_fed_addingremovingservers.html)
