@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -61,8 +61,6 @@ lastupdated: "2018-06-13"
 
 部署后，最多可以再创建四个集群。对于 vSAN 存储设置，初始集群和部署后集群都需要 4 个服务器。
 
-<!--When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.-->
-
 ### 存储设置
 
 存储设置基于您选择的裸机服务器配置和存储类型。
@@ -99,10 +97,10 @@ lastupdated: "2018-06-13"
 
 ### 许可证设置
 
-用于以下各项的 IBM 提供的 VMware 许可证：
+	用于以下各项的 {{site.data.keyword.IBM}} 提供的 VMware 许可证：
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.3
+  * VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
   * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
 
 ### 订单摘要
@@ -236,7 +234,7 @@ lastupdated: "2018-06-13"
 
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，找到要删除的集群，然后单击**操作**列中的**删除**图标。
 
-## 相关链接
+### 相关链接
 
 * [查看 VMware Federal 实例](vc_fed_viewinginstance.html)
 * [扩展和收缩 VMware Federal 实例的容量](vc_fed_addingremovingservers.html)

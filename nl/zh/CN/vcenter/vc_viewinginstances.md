@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # 查看 vCenter Server 实例
 
-查看订购的 VMware vCenter Server 实例以及有关这些实例的详细信息。
+查看针对不同用户帐户供应的 VMware vCenter Server 实例的摘要和详细信息。
 
 ## 查看 vCenter Server 实例摘要
 
-要查看环境中所有 vCenter Server 实例的摘要，请完成以下步骤：
+要查看针对用户帐户供应的所有 vCenter Server 实例的摘要，请完成以下步骤：
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
-2. 在 **vCenter Server** 表中，查看实例的列表。
+1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+2. 在控制台的右上角，单击您的头像，然后单击**帐户**字段以选择要检查其实例的用户帐户。  
+3. 在 **vCenter Server** 表中，查看所选用户帐户中供应的实例的列表。
 
 表 1. vCenter Server 实例项
 
@@ -25,7 +26,7 @@ lastupdated: "2018-06-04"
 |:------------- |:------------- |
 |名称|实例的名称|
 |版本|实例部署或升级到的发行版版本|  
-|位置|托管实例的 {{site.data.keyword.CloudDataCent}}|  
+|位置|托管实例的 {{site.data.keyword.CloudDataCent_notm}}|  
 |创建时间|创建实例的日期和时间|
 |状态|实例的状态|   
 
@@ -48,7 +49,7 @@ lastupdated: "2018-06-04"
 
 要查看实例的属性详细信息，请执行以下操作：
 
-1. 在 **vCenter Server 实例**表上，单击实例名称。
+1. 在 **vCenter Server 实例**表中，单击实例名称。
 2. 在**属性**下，查看实例的详细信息。
 
 表 3. vCenter Server 实例属性
@@ -94,7 +95,7 @@ lastupdated: "2018-06-04"
 
 ## 查看 vCenter Server 实例的部署历史记录
 
-在**部署历史记录**下，查看实例的部署历史记录。
+单击左侧导航窗格中的**部署历史记录**，以查看实例的部署历史记录。
 
 表 5. vCenter Server 实例部署历史记录
 
@@ -118,7 +119,7 @@ lastupdated: "2018-06-04"
 *  有关使用 VPN 登录到 {{site.data.keyword.cloud_notm}} 基础架构专用网络的访问点的列表，请参阅 [VPN 访问](http://www.softlayer.com/vpn-access){:new_window}。
 *  如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](../vmonic/trbl_deploy_ovf.html)。
 
-## 相关链接
+### 相关链接
 
 * [订购 vCenter Server 实例](vc_orderinginstance.html)
 * [添加、查看和删除 vCenter Server 实例的集群](vc_addingviewingclusters.html)

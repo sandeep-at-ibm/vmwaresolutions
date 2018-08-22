@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -28,7 +28,7 @@ lastupdated: "2018-05-24"
 4. 单击**确保实例安全**。
 5. 单击**确定**以确认要将实例与自动化断开连接。
    
-   
+
    **注**：在完成此步骤之前，请确保已查看**开始之前**部分中的信息。
 
 ## 结果
@@ -37,9 +37,9 @@ lastupdated: "2018-05-24"
 
 成功确保实例安全后，该实例的状态会更改为**已保护**，并且只有实例属性和部署历史记录可用。
 
-## 相关链接
+### 相关链接
 
-* [VMware Federal on IBM Cloud 概述](vc_fed_overview.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} 概述](vc_fed_overview.html)
 * [订购 VMware Federal 实例](vc_fed_orderinginstance.html)
 * [查看 VMware Federal 实例](vc_fed_viewinginstance.html)
 * [删除 VMware Federal 实例](vc_fed_deletinginstance.html)

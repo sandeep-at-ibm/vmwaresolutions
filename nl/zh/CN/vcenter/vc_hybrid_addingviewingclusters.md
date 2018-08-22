@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2018-06-14"
 
 #### 数据中心位置
 
-缺省情况下，集群的 {{site.data.keyword.CloudDataCent}} 位置设置为 vCenter Server 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 等工具。
+缺省情况下，集群的 {{site.data.keyword.CloudDataCent_notm}} 位置设置为 vCenter Server 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 等工具。
 
 如果将集群部署到其他 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基础架构 pod，那么可订购三个额外的 VLAN 以用于订购的 {{site.data.keyword.baremetal_short}}。
 
@@ -75,7 +75,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。您
 用于以下各项的 IBM 提供的 VMware 许可证：
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.3
+  * VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.4
 
 ### 订单摘要
 
@@ -183,7 +183,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。您
 
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，找到要删除的集群，然后单击**操作**列中的**删除**图标。
 
-## 相关链接
+### 相关链接
 
 * [查看 vCenter Server with Hybridity Bundle 实例](vc_hybrid_viewinginstances.html)
 * [扩展和收缩 vCenter Server with Hybridity Bundle 实例的容量](vc_hybrid_addingremovingservers.html)

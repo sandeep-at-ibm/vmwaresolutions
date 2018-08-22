@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -16,7 +16,7 @@ VMware Federal on {{site.data.keyword.cloud}} 除了向美国联邦政府机构�
 
 **注意**：VMware Federal on {{site.data.keyword.cloud_notm}} 只是 vCenter Server 产品的一部分。不支持多站点配置、预配置的 {{site.data.keyword.cloud_notm}} 裸机服务器、自带许可证以及用于订购更多服务的选项。
 
-## VMware Federal on IBM Cloud 的 vCenter Server 实例组件
+## VMware Federal on IBM Cloud 实例的技术规范
 
 包括以下组件：
 
@@ -72,34 +72,33 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.3
+* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
 
-## vCenter Server 扩展节点组件
+## VMware Federal on IBM Cloud 扩展节点的技术规范
 
 每个 vCenter Server 扩展节点将在您的 {{site.data.keyword.cloud_notm}} 帐户中部署以下组件并收取相应费用。
 
 ### 扩展节点的硬件
 
-一个裸机服务器，其配置在 [VMware Federal on IBM Cloud 的 vCenter Server 实例组件](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud)中提供。
+一个裸机服务器，其配置在 [VMware Federal on {{site.data.keyword.cloud_notm}} 实例的技术规范](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中提供。
 
 ### 扩展节点的许可证和费用
 
 * 一个 VMware vSphere Enterprise Plus 6.5u1
-* 一个 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.3
+* 一个 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal_full}} 中或在控制台外部通过其他任何方法来进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在控制台外部通过其他任何方法来进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时已安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件
 *  通过添加或除去 ESXi 服务器来扩展或收缩实例容量
 *  关闭组件电源
-<!--*  Restarting services-->
 
    这些活动的例外情况包括在 {{site.data.keyword.slportal}} 中管理共享存储器文件共享。此类活动包括：订购、删除（如果已安装，可能会影响数据存储）、授权和安装共享存储器文件共享。
 
-## 相关链接
+### 相关链接
 
 * [vCenter Server 软件材料清单](vc_bom.html)
 * [针对 VMware Federal 实例的需求和规划](vc_fed_planning.html)

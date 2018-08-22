@@ -34,7 +34,7 @@ lastupdated: "2017-03-19"
 6. 对于多站点配置中的所有辅助 vCenter Server 实例，重复步骤 1 到 5。
 7. 删除所有辅助实例后，还可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台中删除主实例。
 
-## 相关链接
+### 相关链接
 
 * [删除 vCenter Server 实例](vc_deletinginstance.html)
 * [订购、查看和除去 vCenter Server 实例中的服务](vc_addingremovingservices.html)

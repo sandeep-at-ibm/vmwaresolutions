@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-05-23"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-05-23"
 5. 子网
 6. VLAN
 
-由于资源依赖关系，删除实例后，不会立即释放该实例中的组件。例如，在 {{site.data.keyword.cloud}} 基础架构完全回收 ESXi 服务器（在 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束时发生）后，才能删除子网和 VLAN。在 {{site.data.keyword.cloud_notm}} 基础架构计费周期（通常为 30 天）结束时，将删除子网和 VLAN，此时实例删除操作完成。
+由于资源依赖关系，删除实例后，不会立即释放该实例中的组件。例如，在 {{site.data.keyword.cloud_notm}} 基础架构完全回收 ESXi 服务器（在 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束时发生）后，才能删除子网和 VLAN。在 {{site.data.keyword.cloud_notm}} 基础架构计费周期（通常为 30 天）结束时，将删除子网和 VLAN，此时实例删除操作完成。
 
 **注意**：在所删除实例的 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束之前，仍然会对您计费。
 
@@ -34,7 +34,7 @@ lastupdated: "2017-05-23"
 6. 对于多站点配置中的所有辅助 vCenter Server with Hybridity Bundle 实例，重复步骤 1 到 5。
 7. 删除所有辅助实例后，还可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台中删除主实例。
 
-## 相关链接
+### 相关链接
 
 * [删除 vCenter Server with Hybridity Bundle 实例](vc_hybrid_deletinginstance.html)
 * [订购、查看和除去 vCenter Server with Hybridity Bundle 实例中的服务](vc_hybrid_addingremovingservices.html)
