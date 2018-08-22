@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -56,7 +56,7 @@ Vous pouvez avoir jusqu'à 8 instances (1 principale et 7 secondaires) au maximu
 
 **Remarque** : la suppression d'instances Cloud Foundation qui font partie d'une configuration multisite requiert une planification spéciale. Pour plus d'informations, voir [Suppression d'instances Cloud Foundation dans une configuration multisite](sd_deletinginstance_multi.html).
 
-## Liens connexes
+### Liens connexes
 
 * [Attribuer un rôle principal à NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configurer les NSX Manager secondaires](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}

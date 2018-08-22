@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -34,7 +34,7 @@ En raison des dépendances de ressource, les composants de votre instance ne son
 6. Répétez les étapes 1 à 5 pour toutes les instances Cloud Foundation secondaires de votre configuration multisite.
 7. Une fois toutes les instances secondaires supprimées, vous pouvez également supprimer l'instance principale de la console {{site.data.keyword.vmwaresolutions_short}}.
 
-## Liens connexes
+### Liens connexes
 
 * [Suppression d'instances Cloud Foundation](sd_deletinginstance.html)
 * [Commande, affichage et retrait de services pour des instances Cloud Foundation](sd_addingremovingservices.html)

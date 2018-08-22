@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -45,7 +45,7 @@ Une notification par courrier électronique vous avertit une fois vos serveurs E
 
 Si vous ne voyez pas les serveurs ESXi ajoutés dans la liste du cluster, consultez vos courriers électroniques ou les notifications de la console pour obtenir plus de détails sur la cause de l'échec.
 
-## Liens connexes
+### Liens connexes
 
 * [Nomenclature de Cloud Foundation](sd_bom.html)
 * [Exigences et planification pour les instances Cloud Foundation](sd_planning.html)
