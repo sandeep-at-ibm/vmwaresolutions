@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-15"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -28,10 +28,10 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링은 스토리�
 
 ### 가상화 인프라(컴퓨팅, 네트워크 및 NetApp ONTAP Select)
 
-이 계층은 다른 VMware 제품 및 NetApp ONTAP Select 제품을 통해 실제 인프라를 가상화합니다.
+이 계층은 다음의 VMware 제품 및 NetApp ONTAP Select 제품을 통해 실제 인프라를 가상화합니다. 
 * VMware vSphere는 실제 컴퓨팅 리소스를 가상화합니다.
 * VMware NSX는 논리 네트워킹 컴포넌트 및 가상 네트워크를 제공하는 네트워크 가상화 플랫폼입니다.
-* NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}는 네 개의 VM(네 개의 호스트용)으로 구성되는 ONTAP Select 클러스터를 배치합니다.
+* NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}는 4개의 호스트에 대해 4개의 VM으로 구성된 ONTAP Select 클러스터를 배치합니다.
 
 다음 그림은 NetApp ONTAP Select 배치의 컴포넌트에 대해 설명합니다.
 
@@ -43,11 +43,9 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링은 스토리�
 
 이 계층은 vCenter Server 가상 어플라이언스, NSX Manager, 두 개의 NSX ESG, 세 개의 NSX Controller, PSC(Platform Services Controller) 가상 어플라이언스, vCSA(vCenter Server Appliance) 및 IBM CloudDriver 가상 머신으로 구성됩니다.
 
-NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로컬 스토리지를 가상화합니다. NetApp ONTAP Select는 전용 모델에 배치되고, 여기서 기타 워크로드는 전용 모델과 함께 동일한 클러스터를 공유할 것으로 예상되지 않습니다. 결과적으로 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링의 하드웨어 구성은 NetApp ONTAP Select의 요구사항에 따라서만 크기가 조정됩니다.
+NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로컬 스토리지를 가상화합니다. NetApp ONTAP Select는 전용 모델에 배치되며, 여기서 기타 워크로드는 이와의 클러스터 공유가 예상되지 않습니다. 결과적으로 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링의 하드웨어 구성은 NetApp ONTAP Select의 요구사항에 따라서만 크기가 조정됩니다.
 
-<!--For details about the architecture, see the _Reference architecture_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform){:new_window}.-->
-
-## NetApp ONTAP Select 인스턴스 컴포넌트
+## NetApp ONTAP Select 인스턴스의 기술 스펙
 
 다음 컴포넌트는 NetApp ONTAP Select 인스턴스에 포함됩니다.
 
@@ -62,7 +60,7 @@ NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로�
 
 ### 사전 설정 구성
 
-다음 구성 옵션이 포함된 네 개의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}:
+다음의 구성 옵션이 포함된 4개의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}가 제공됩니다. 
 * **고성능(중형)** – 프리미엄 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 128GB RAM / 노드당 22개의 1.9TB SSD 드라이브 용량 / 네 개의 노드 클러스터의 유효한 용량 – 59TB
 * **고성능(대형)** – 프리미엄 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 128GB RAM / 노드당 22개의 3.8TB SSD 드라이브 용량 / 네 개의 노드 클러스터의 유효한 용량 – 118TB
 * **고용량** – 표준 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 64GB RAM / 노드당 34개의 4TB SATA 드라이브 용량 / 네 개의 노드 클러스터의 유효한 용량 – 190TB
@@ -85,7 +83,7 @@ NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로�
 ### Virtual Server 인스턴스
 
 두 개의 VSI(Virtual Server Instances):
-* Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스용 VSI입니다.
+* Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스용 VSI
 * 인스턴스 배치가 완료된 후 시스템이 종료되는 IBM CloudBuilder용 VSI
 
 ### 라이센스 및 요금
@@ -93,12 +91,10 @@ NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로�
 *  네 개의 Premium/Standard Edition NetApp ONTAP Select 라이센스(사용자가 제공함)
 *  VMware vSphere 6.5 Enterprise Plus 에디션
 *  VMware vCenter Server 6.5
-*  VMware NSX Base for Service Providers 에디션
+*  VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4
 *  지원 및 서비스 요금(노드당 한 개의 라이센스)
 
-<!--For details about the components, see the _Bill of Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
-
-**중요**: {{site.data.keyword.slportal}} 또는 콘솔 외부의 다른 방법이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔의 {{site.data.keyword.cloud_notm}} 계정에서만 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+**중요**: {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
 
 **주의**: {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트(인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치됨)를 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴, 제거 또는 전원 끄기
@@ -107,7 +103,7 @@ NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로�
 
    이 활동에 대한 예외에는 {{site.data.keyword.slportal}}의 공유 스토리지 파일 공유 관리가 포함됩니다. 이러한 활동에는 공유 스토리지 파일 공유 주문, 삭제(마운트된 경우 데이터 저장소에 영향을 줄 수 있음), 권한 부여 및 마운트가 포함됩니다.
 
-## 관련 링크
+### 관련 링크
 
 * [NetApp ONTAP Select 인스턴스 계획](np_planning.html)
 * [NetApp ONTAP Select 인스턴스 주문](np_orderinginstances.html)
