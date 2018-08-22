@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-06-08"
 
 更改保留用于 {{site.data.keyword.vmwaresolutions_full}} 的用户、资源或子网可能会影响管理操作。
 
-## automationuser 标识
+**重要信息：**不要在 VMware vSphere Web Client 上的**用户和组**页面中编辑 **ic4v-vCenter** 组的全局许可权。此类更改包括：更改用户名、删除用户或更改其密码。
 
-**automationuser** 标识是由 {{site.data.keyword.vmwaresolutions_short}} 控制台中提供的自动化操作使用的用户帐户。
+## automation 标识
+
+**automation** 标识是由 {{site.data.keyword.vmwaresolutions_short}} 控制台中提供的自动化操作使用的用户帐户。
 
 不能更改用于控制台中自动化操作的用户和密码，否则依赖于这些凭证的控制台操作可能会失败。
-
-不要在 VMware vSphere Web Client 上的**用户和组**页面中更新 **automationuser** 标识的属性。此类更改包括：更改用户名、删除用户或更改其密码。
 
 ## 特定于服务的用户帐户
 

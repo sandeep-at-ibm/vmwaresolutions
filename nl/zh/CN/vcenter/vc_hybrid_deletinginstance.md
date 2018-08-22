@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -44,7 +44,7 @@ lastupdated: "2018-05-23"
    1. 再次单击 **vCenter 控制台**右侧的溢出菜单图标，然后单击**删除实例**。
    2. 在**删除实例**窗口中，单击**确定**。
 
-## 相关链接
+### 相关链接
 
 * [删除多站点配置中的 vCenter Server with Hybridity Bundle 实例](vc_hybrid_deletinginstance_multi.html)
 * [订购 vCenter Server with Hybridity Bundle 实例](vc_hybrid_orderinginstance.html)

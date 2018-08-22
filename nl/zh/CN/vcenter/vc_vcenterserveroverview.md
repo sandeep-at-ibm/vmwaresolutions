@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -14,13 +14,13 @@ VMware vCenter Server on {{site.data.keyword.cloud}} 是一种托管的专用云
 
 在许多情况下，整个环境可以在一天内供应完，而裸机基础架构可根据需要，快速、弹性地向上和向下扩展计算容量。
 
-部署后，可以通过在 {{site.data.keyword.slportal}} 中订购更多 NFS（网络文件系统）文件共享来增加共享存储器，并可以手动连接集群中所有 ESXi 服务器上的共享存储器。如果需要专用存储器，可使用同时在高性能（所有 SSD）和高容量（所有 SATA）配置中提供的 [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html)。
+部署后，可以通过在 {{site.data.keyword.slportal}} 中订购更多 NFS（网络文件系统）文件共享来增加共享存储器，并可以手动连接集群中所有 ESXi 服务器上的共享存储器。如果需要专用存储器，可使用同时在高性能（所有 SSD）和高容量（所有 SATA）配置中提供的 [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html)。
 
 VMware vSAN 还可作为专用存储器选项提供。要增大 vSAN 集群的基于 vSAN 的存储容量，可以在部署后添加更多 ESXi 服务器。
 
 如果购买了 IBM 提供的 VMware 许可，那么可以将 VMware NSX Base Edition 升级到 Advanced 或 Enterprise Edition，并且可以购买更多 VMware 组件，例如 VMware vRealize Operations。
 
-如果要卸载虚拟化、访客操作系统或应用程序层的日常操作和维护，可以添加 IBM 受管服务。另外还有 IBM Cloud 专业服务团队可通过迁移、实施、规划和上线服务，帮助您加速迁移到云。
+如果要卸载虚拟化、访客操作系统或应用程序层的日常操作和维护，可以添加 IBM 受管服务。另外还有 {{site.data.keyword.cloud_notm}} 专业服务团队可通过迁移、实施、规划和上线服务，帮助您加速迁移到云。
 
 ## vCenter Server 体系结构
 
@@ -42,15 +42,15 @@ VMware vSAN 还可作为专用存储器选项提供。要增大 vSAN 集群的�
 
 ### 虚拟化管理
 
-此层由 vCenter Server Appliance (vCSA)、NSX Manager、2 个 NSX ESG、3 个 NSX Controller、Platform Services Controller (PSC) 虚拟设备和 IBM CloudDriver 虚拟机组成。
+此层由 vCenter Server Appliance (vCSA)、NSX Manager、两个 NSX ESG、三个 NSX Controller、Platform Services Controller (PSC) 虚拟设备和 IBM CloudDriver 虚拟服务器实例 (VSI) 组成。对于某些操作（例如，向环境添加主机），将根据需要部署 CloudDriver VSI。
 
 基本产品随 vCenter Server Appliance 一起部署，后者的大小设置为支持具有最多 400 个主机和最多 4000 个 VM 的环境。可以使用与 vSphere API 兼容的相同工具和脚本来管理 IBM 托管的 VMware 环境。
 
 基本产品总计需要 38 个 vCPU 和 67 GB vRAM，这些均保留用于虚拟化管理层。VM 的其余主机容量取决于若干因素，例如超额预订比率、VM 大小设置和工作负载性能需求。
 
-有关体系结构的详细信息，请参阅 [{{site.data.keyword.vmwaresolutions_full}} 体系结构参考](../archiref/solution/solution_overview.html)。
+有关体系结构的详细信息，请参阅 [{{site.data.keyword.vmwaresolutions_short}} 体系结构参考](../archiref/solution/solution_overview.html)。
 
-## vCenter Server 技术规范
+## vCenter Server 实例的技术规范
 
 vCenter Server 实例中包含以下组件。
 
@@ -106,34 +106,32 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 * 性能：2、4 或 10 IOPS/GB。
 * 单独配置文件共享。
 
-如果选择 NFS 选项，那么会订购以下文件共享：
-* 一个 2 TB、4 IOPS/GB 文件共享，用于管理组件。
-* 一个 2 TB 共享块级别存储器，用于备份，最高可扩展至 12 TB。可以通过选择备份服务来选择是否需要用于备份的存储器。
+如果选择 NFS 选项，那么会为管理组件订购一个 2 TB、4 IOPS/GB 文件共享。
 
 ### 许可证（IBM 提供或 BYOL）和费用
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.3
+* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
 * 支持和服务费用（每个节点一个许可证）
 
-## vCenter Server 扩展节点组件
+## vCenter Server 扩展节点的技术规范
 
 每个 vCenter Server 扩展节点将在您的 {{site.data.keyword.cloud_notm}} 帐户中部署以下组件并收取相应费用。
 
 ### 扩展节点的硬件
 
-一个裸机服务器，其配置如 [vCenter Server 概述](vc_vcenterserveroverview.html)的 _vCenter Server 技术规范_部分中所示。
+一个裸机服务器，其配置在 [vCenter Server 实例的技术规范](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)中提供。
 
 ### 扩展节点的许可证和费用
 
 * 一个 VMware vSphere Enterprise Plus 6.5u1
-* 一个 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.3
+* 一个 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * 一个支持和服务费用
 * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal_full}} 中或在控制台外部通过其他任何方法来进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在控制台外部通过其他任何方法来进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时已安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件
@@ -143,7 +141,7 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 
    这些活动的例外情况包括在 {{site.data.keyword.slportal}} 中管理共享存储器文件共享。此类活动包括：订购、删除（如果已安装，可能会影响数据存储）、授权和安装共享存储器文件共享。
 
-## 相关链接
+### 相关链接
 
 * [vCenter Server 软件材料清单](vc_bom.html)
 * [规划 vCenter Server 实例](vc_planning.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -55,7 +55,7 @@ vCenter Server 部署对物理基础架构有严格要求。因此，只能将�
 |WDC06|华盛顿|北美东部|定制|
 |WDC07|华盛顿|北美东部|定制|
 
-一小部分 IBM Cloud {{site.data.keyword.CloudDataCents_notm}} 提供预配置的**小型**、**中型**和**大型**裸机服务器选项。根据可用性和库存供应，{{site.data.keyword.CloudDataCents_notm}} 可能会在 {{site.data.keyword.vmwaresolutions_full}} 控制台中显示状态指示符，以帮助您规划部署。
+一小部分 {{site.data.keyword.CloudDataCents_notm}} 提供预配置的**小型**、**中型**和**大型**裸机服务器选项。根据可用性和库存供应，{{site.data.keyword.CloudDataCents_notm}} 可能会在 {{site.data.keyword.vmwaresolutions_short}} 控制台中显示状态指示符，以帮助您规划部署。
 
 表 2. 订购 vCenter Server 实例时 {{site.data.keyword.CloudDataCents_notm}} 的状态指示符
 
@@ -65,16 +65,19 @@ vCenter Server 部署对物理基础架构有严格要求。因此，只能将�
 |暂时库存不足|此时 {{site.data.keyword.CloudDataCent_notm}} 不具有可用性。|
 |有限库存|{{site.data.keyword.CloudDataCent_notm}} 具有有限可用性，并且订单可能未完成。|
 
+## 备份管理组件
+
+您负责维护和确保所有实例组件的可用性。强烈建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](../archiref/solution/solution_backingup.html)。
+
 ## vCenter Server 实例的服务
 
 您可以根据需要订购适用于实例的附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 vCenter Server 实例的服务](vc_addingremovingservices.html)。
 
-<!-- ## Capacity considerations
+## 容量注意事项
 
-For capacity information and considerations, see the _Bill of
-Materials_ document on the [Virtual reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+有关容量信息和注意事项，请参阅[扩展容量](../archiref/solution/solution_scaling.html)。
 
-## 相关链接
+### 相关链接
 
 * [vCenter Server 概述](vc_vcenterserveroverview.html)
 * [订购 vCenter Server 实例](vc_orderinginstance.html)

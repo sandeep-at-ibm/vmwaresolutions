@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -21,7 +21,7 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
 * 部署样本 NSX 逻辑交换机，以供客户工作负载 VM 使用。
 * 部署样本 NSX 分布式逻辑路由器 (DLR)，以用于处理连接到第 2 层 (L2) 网络的本地工作负载之间的潜在东-西通信。
 * 部署 NSX Edge 设备并将其配置为执行从工作负载逻辑交换机的 IP 地址范围到 NAT 规则上公共 IP 地址的网络地址转换 (NAT)。
-* 如果已安装 Veeam on IBM Cloud 服务，那么会将 NSX Manager 配置为每天备份 NSX 配置。有关更多信息，请参阅[安装 Veeam on IBM Cloud 时的注意事项](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud)。
+* 如果已安装 Veeam on {{site.data.keyword.cloud_notm}} 服务，那么会将 NSX Manager 配置为每天备份 NSX 配置。有关更多信息，请参阅[安装 Veeam on {{site.data.keyword.cloud_notm}} 时的注意事项](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud)。
 
 
 ## 配置 VM 的联网设置
@@ -72,8 +72,8 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
 
    **警告**：不要使用初始设置期间订购和使用的 IP 地址。但是，可以根据需求使用这些子网上的其他 IP 地址。要设置其他网络地址转换规则，请参阅[管理 NAT 规则](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}。
 
-## 相关链接
+### 相关链接
 
 * [故障诊断](../vcenter/vcenter_chg_impact.html)
 * [常见问题](../vmonic/faq.html)
-* [NSX Edge 服务网关](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/nsx-esg){:new_window}
+* [NSX Edge 服务网关](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

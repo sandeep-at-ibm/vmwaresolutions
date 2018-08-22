@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -53,7 +53,7 @@ lastupdated: "2018-06-22"
 为实例中的以下 VMware 组件指定许可选项：
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.3
+* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 
 对于业务合作伙伴用户，会包含 vCenter Server 许可证 (Standard Edition)、vSphere 许可证 (Enterprise Plus Edition) 和 NSX 许可证，这些许可证以您的名义购买。但是，您必须指定 NSX 许可证的版本。
 
@@ -72,7 +72,7 @@ lastupdated: "2018-06-22"
 
 ### 数据中心位置
 
-选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the {{site.data.keyword.baremetal_long}} specification you selected previously are displayed.-->
+选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
 
 ### 预配置
 
@@ -260,7 +260,7 @@ lastupdated: "2018-06-22"
 
 实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
 
-成功部署实例后，[vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)的 _vCenter Server 技术规范_部分中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。如果订购了更多服务，那么这些服务的部署将在订单完成后启动。
+成功部署实例后，[vCenter Server 实例的技术规范](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。如果订购了更多服务，那么这些服务的部署将在订单完成后启动。
 
 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
@@ -280,7 +280,7 @@ lastupdated: "2018-06-22"
 
    这些活动的例外情况包括在 {{site.data.keyword.slportal}} 中管理共享存储器文件共享。此类活动包括：订购、删除（如果已安装，可能会影响数据存储）、授权和安装共享存储器文件共享。
 
-## 相关链接
+### 相关链接
 
 * [注册 {{site.data.keyword.cloud_notm}} 帐户](../vmonic/signing_softlayer_account.html)
 * [查看 vCenter Server 实例](vc_viewinginstances.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -22,7 +22,7 @@ vCenter Server with Hybridity Bundle 部署对物理基础架构有严格要求�
 
 表 1. 可用于 vCenter Server with Hybridity Bundle 实例的 {{site.data.keyword.CloudDataCents_notm}}
 
-|IBM Cloud Data Center|位置|区域|
+| {{site.data.keyword.CloudDataCent_notm}} |位置|区域|
 |:-----|:----------------|
 |AMS03|阿姆斯特丹|欧洲|
 |CHE01|金奈|亚太地区|
@@ -55,7 +55,7 @@ vCenter Server with Hybridity Bundle 部署对物理基础架构有严格要求�
 |WDC06|华盛顿|北美东部|
 |WDC07|华盛顿|北美东部|
 
-根据可用性和库存供应，{{site.data.keyword.CloudDataCents_notm}} 可能会在 {{site.data.keyword.vmwaresolutions_full}} 控制台中显示状态指示符，以帮助您规划部署。
+根据可用性和库存供应，{{site.data.keyword.CloudDataCents_notm}} 可能会在 {{site.data.keyword.vmwaresolutions_short}} 控制台中显示状态指示符，以帮助您规划部署。
 
 表 2. 订购 vCenter Server with Hybridity Bundle 实例时 {{site.data.keyword.CloudDataCents_notm}} 的状态指示符
 
@@ -65,9 +65,13 @@ vCenter Server with Hybridity Bundle 部署对物理基础架构有严格要求�
 |暂时库存不足|此时 {{site.data.keyword.CloudDataCent_notm}} 不具有可用性。|
 |有限库存|{{site.data.keyword.CloudDataCent_notm}} 具有有限可用性，并且订单可能未完成。|
 
+## 备份管理组件
+
+您负责维护和确保所有实例组件的可用性。强烈建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](../archiref/solution/solution_backingup.html)。
+
 ## vCenter Server with Hybridity Bundle 实例的服务
 
-vCenter Server with Hybridity Bundle 实例包含授权您使用 VMware HCX on IBM Cloud 服务的 VMware Hybrid Cloud Extension (HCX) 许可。此服务可以将内部部署数据中心的网络无缝扩展到 {{site.data.keyword.cloud_notm}}，这允许虚拟机 (VM) 在不进行任何转换或更改的情况下，迁移到 {{site.data.keyword.cloud_notm}} 或从中迁移出来。
+vCenter Server with Hybridity Bundle 实例包含授权您使用 VMware HCX on {{site.data.keyword.cloud_notm}} 服务的 VMware Hybrid Cloud Extension (HCX) 许可。此服务可以将内部部署数据中心的网络无缝扩展到 {{site.data.keyword.cloud_notm}}，这允许虚拟机 (VM) 在不进行任何转换或更改的情况下，迁移到 {{site.data.keyword.cloud_notm}} 或从中迁移出来。
 
 部署此服务时，请完成以下设置：
 * 通过选择下列其中一个选项来指定 **HCX 互连类型**：
@@ -82,7 +86,11 @@ vCenter Server with Hybridity Bundle 实例包含授权您使用 VMware HCX on I
 
 您可以根据需要订购适用于实例的其他附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](vc_hybrid_addingremovingservices.html)。
 
-## 相关链接
+## 容量注意事项
+
+有关容量信息和注意事项，请参阅[扩展容量](../archiref/solution/solution_scaling.html)。
+
+### 相关链接
 
 * [vCenter Server with Hybridity Bundle 概述](vc_hybrid_overview.html)
 * [订购 vCenter Server with Hybridity Bundle 实例](vc_hybrid_orderinginstance.html)

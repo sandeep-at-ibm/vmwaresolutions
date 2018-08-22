@@ -4,15 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-20"
 
 ---
 
 # vCenter Server with Hybridity Bundle 实例的多站点配置
 
 {{site.data.keyword.vmwaresolutions_full}} 支持将实例部署在不同位置，在短时间内让这些实例启动并开始运行。
-
-<!--* You cannot link between VMware Cloud Foundation and VMware vCenter Server instances in a multi-site configuration.-->
 
 ## 多站点部署组件
 
@@ -53,9 +51,9 @@ lastupdated: "2018-05-23"
 
 **注**：删除属于多站点配置的 vCenter Server with Hybridity Bundle 实例需要特殊规划。有关更多信息，请参阅[删除多站点配置中的 vCenter Server with Hybridity Bundle 实例](vc_hybrid_deletinginstance_multi.html)。
 
-## 相关链接
+### 相关链接
 
 * [将主要角色分配给 NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [配置辅助 NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
 * [vCenter Single Sign-On 支持的 AD 信任](https://kb.vmware.com/kb/2064250){:new_window}
-* [安全连接 IBM Cloud 中的专用 VMware 工作负载](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}
+* [在 {{site.data.keyword.cloud_notm}} 中安全连接专用 VMware 工作负载](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}

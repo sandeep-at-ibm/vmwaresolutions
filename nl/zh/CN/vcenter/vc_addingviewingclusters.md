@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -233,7 +233,7 @@ vSAN 仅可用于定制裸机配置。可以通过指定 vSAN 容量磁盘数（
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，找到要删除的集群，然后单击**操作**列中的**删除**图标。
 4. 确认已完成将虚拟机迁移到其他集群（如果需要），并确认要删除该集群。
 
-## 相关链接
+### 相关链接
 
 * [查看 vCenter Server 实例](vc_viewinginstances.html)
 * [扩展和收缩 vCenter Server 实例的容量](vc_addingremovingservers.html)

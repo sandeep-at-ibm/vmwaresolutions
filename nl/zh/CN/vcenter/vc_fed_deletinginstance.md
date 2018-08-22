@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -43,9 +43,9 @@ lastupdated: "2018-05-17"
    1. 再次单击 **vCenter 控制台**右侧的溢出菜单图标，然后单击**删除实例**。
    2. 在**删除实例**窗口中，单击**确定**。
 
-## 相关链接
+### 相关链接
 
-* [VMware Federal on IBM Cloud 概述](vc_fed_overview.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} 概述](vc_fed_overview.html)
 * [订购 VMware Federal 实例](vc_fed_orderinginstance.html)
 * [确保 VMware Federal 实例安全](vc_fed_securinginstance.html)
 * [查看 VMware Federal 实例](vc_fed_viewinginstance.html)
