@@ -4,22 +4,22 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-20"
 
 ---
 
 # Solicitando VMware HCX on IBM Cloud
 
-É possível pedir o serviço VMware HCX on {{site.data.keyword.cloud_notm}} ao pedir uma nova instância do VMware vCenter Server with Hybridity Bundle com o serviço incluído ou incluindo o serviço em sua instância existente.
+É possível pedir o serviço VMware HCX on {{site.data.keyword.cloud}} ao pedir uma nova instância do VMware vCenter Server with Hybridity Bundle com o serviço incluído ou incluindo o serviço em sua instância existente.
 
 ## Pedindo o VMware HCX on IBM Cloud para uma nova instância
 
-Para pedir uma nova instância do VMware vCenter Server on IBM Cloud with Hybridity Bundle com o VMware HCX on {{site.data.keyword.cloud_notm}}, selecione **VMware HCX on IBM Cloud** na seção **Serviços** ao pedir a instância por meio do console do {{site.data.keyword.vmwaresolutions_full}}.
+Para pedir uma nova instância do VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle com o VMware HCX on {{site.data.keyword.cloud_notm}}, selecione **VMware HCX on IBM Cloud** na seção **Serviços** ao pedir a instância por meio do console do {{site.data.keyword.vmwaresolutions_short}}.
 
 
 ## Pedindo o VMware HCX on IBM Cloud para uma instância existente
 
-Para incluir o serviço VMware HCX on {{site.data.keyword.cloud_notm}} em uma instância existente do VMware vCenter Server on IBM Cloud with Hybridity Bundle, visualize a instância na qual deseja incluir o serviço, clique em **Serviços** na área de janela de navegação esquerda e clique em **Incluir serviço**.
+Para incluir o serviço VMware HCX on {{site.data.keyword.cloud_notm}} em uma instância existente do VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle, visualize a instância para a qual você deseja incluir o serviço, clique em **Serviços** na área de janela de navegação esquerda e clique em **Incluir**.
 
 ## VMware HCX na configuração do IBM Cloud
 
@@ -65,7 +65,7 @@ HCX, os componentes do HCX local e os componentes do HCX remoto.
    * Os contêineres de implementação do HCX locais e remotos são configurados.
 7. O nome do host e o endereço IP do HCX Manager está registrado com o servidor DNS do VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
-## Links relacionados
+### Links relacionados
 
 * [HCX no {{site.data.keyword.cloud_notm}} visão geral](hcx_considerations.html)
 * [Gerenciando o HCX no {{site.data.keyword.cloud_notm}}](managinghcx.html)

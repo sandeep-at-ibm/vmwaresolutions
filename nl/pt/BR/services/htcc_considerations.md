@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -15,17 +15,24 @@ O serviço HyTrust CloudControl on {{site.data.keyword.cloud}} cumpre e controla
 **Disponibilidade:** esse serviço está disponível somente para instâncias
 que estão executando o vSphere 6.5 e que são implementadas na (ou atualizadas para) a V2.3 ou liberações mais recentes.
 
-## Componentes do HyTrust CloudControl on IBM Cloud
+## Especificações técnicas para o HyTrust CloudControl on IBM Cloud
 
-Um par altamente disponível (HA) de dispositivos HyTrust CloudControl (HTCC) é implementado no cluster padrão no modo ativo-passivo.
+Os componentes a seguir são pedidos e incluídos no serviço HyTrust CloudControl on {{site.data.keyword.cloud_notm}}:
 
-Cada par de dispositivos HTCC é implementado na mesma sub-rede móvel privada que é especificada para as máquinas virtuais (VMs) de gerenciamento, como NSX Manager, vCenter Server Appliances e Platform Services Controller.
+### Dispositivo HyTrust CloudControl
 
-O par de dispositivos age como um proxy para os hosts vSphere, dispositivo vCenter Server e NSX Manager de uma instância. 
-Portanto, os usuários acessam o hosts vSphere, o vCenter Server Appliance e o NSX Manager por meio de um endereço IP publicado (PIP)
-que é designado pelo administrador em vez de o endereço IP real (RIP) que é designado pelo {{site.data.keyword.cloud}}.
+* CPU: 4 vCPU
+* RAM: 16 GB
+* Disco: VMDK de 70 GB residente no vSAN em cluster convergido
+* Rede: colocada na rede móvel privada suportada por VLAN especificada para gerenciamento
 
-Os dispositivos HTCC se integram ao Microsoft Active Directory para cumprir o controle de acesso baseado em função.
+### Alta disponibilidade
+
+Dois dispositivos CloudControl são implementados em uma configuração ativa/passiva.
+
+### Licenças e taxas
+
+Licença por host: uma licença do HyTrust CloudControl é pedida para cada host no ambiente.
 
 ## Considerações ao remover o HyTrust CloudControl on IBM Cloud
 
@@ -33,7 +40,7 @@ Antes de remover o serviço HyTrust CloudControl on {{site.data.keyword.cloud_no
 desativar a **Transferência de senha raiz**, se configurada, e de excluir todos os hosts protegidos do
 HyTrust CloudControl.
 
-## Links relacionados
+### Links relacionados
 
 * [Solicitando HyTrust CloudControl no {{site.data.keyword.cloud_notm}}](htcc_ordering.html)
 * [Gerenciando o HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](managinghtcc.html)

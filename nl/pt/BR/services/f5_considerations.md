@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -15,6 +15,24 @@ O F5 no serviço {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) forne
 É possível instalar múltiplas instâncias desse serviço, conforme necessário.
 
 **Disponibilidade**: esse serviço está disponível somente para instâncias que são implementadas na V1.9 ou liberações mais recentes.
+
+## Especificações técnicas para o F5 on IBM Cloud
+
+Os componentes a seguir estão incluídos com o serviço F5 on {{site.data.keyword.cloud_notm}}:
+
+### Máquinas virtuais
+* Duas máquinas virtuais (VMs) com todas as opções disponíveis.
+* 2, 4 ou 8 vCPUs por máquina virtual, dependendo da opção de licenciamento.
+* 4, 8 ou 16 GB de RAM por máquina virtual, dependendo da opção de licenciamento.
+
+### Rede
+* Virtual Extensible LAN (VXLAN) privada para sincronização de HA.
+* Acesso ao Traffic Management Shell (TMSH) e ao Console de Gerenciamento por meio de rede de gerenciamento privado.
+
+### Licenças e taxas
+As taxas de licença para cada VM são aplicadas a cada ciclo de faturamento, dependendo da opção de licenciamento (Bom, Melhor ou Excelente) e da largura da banda selecionada.
+
+**Importante:** não é possível mudar o nível de licenciamento após a instalação do serviço. Para mudar o nível de licenciamento, deve-se remover o serviço existente e reinstalá-lo usando uma opção de licenciamento diferente.
 
 ## Considerações ao instalar o F5 no IBM Cloud
 
@@ -78,7 +96,7 @@ Nesse caso, o F5 na instalação do {{site.data.keyword.cloud_notm}} pode falhar
 
 Antes de remover o F5 no serviço {{site.data.keyword.cloud_notm}}, assegure-se de que a configuração existente do BIG-IP VE seja removida corretamente. Especificamente, o tráfego de rede deve ser roteado ao redor do BIG-IP VE em vez de através do BIG-IP VE. Caso contrário, o tráfego de dados existente do seu ambiente pode ser afetado.
 
-## Links relacionados
+### Links relacionados
 
 * [Solicitando F5 no {{site.data.keyword.cloud_notm}}](f5_ordering.html)
 * [Gerenciando o F5 no {{site.data.keyword.cloud_notm}}](managing_f5.html)

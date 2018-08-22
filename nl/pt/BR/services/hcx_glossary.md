@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -20,6 +20,6 @@ Este glossário fornece definições para os termos associados ao serviço VMwar
 * **Console do administrador do HCX Manager**: esta é a interface com o usuário para gerenciar os dispositivos HCX para fins administrativos, como iniciar e parar serviços e coletar logs de suporte.
 * **Console em nuvem do HCX**: esta é a interface com o usuário para configurar os recursos em nuvem do HCX, como data centers virtuais e recuperação de desastre.
 
-## Links relacionados
+### Links relacionados
 
 * [Documentação do VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)

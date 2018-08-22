@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -12,11 +12,42 @@ lastupdated: "2018-06-14"
 
 O serviço HCX no {{site.data.keyword.cloud}} pode ampliar continuamente as redes de data centers no local para o {{site.data.keyword.cloud_notm}}, que permite que máquinas virtuais (VMs) sejam migradas para e do {{site.data.keyword.cloud_notm}} sem nenhuma conversão ou mudança.
 
-**Disponibilidade**: esse serviço está disponível somente para instâncias do VMware vCenter Server on IBM Cloud with Hybridity Bundle que são implementadas na V2.3 e liberações mais recentes.
+**Disponibilidade**: esse serviço está disponível somente para instâncias do VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle que são implementadas na V2.3 e em liberações mais recentes.
 
 É possível fazer upgrade de sua instância do vCenter Server existente para uma instância do vCenter Server with Hybridity Bundle. Para obter mais informações sobre o upgrade de sua instância e a implementação do serviço HCX on {{site.data.keyword.cloud_notm}}, veja [Fazendo upgrade para a instância do vCenter Server with Hybridity Bundle](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance).
 
 **Nota:** uma instância do vCenter Server com o HCX no {{site.data.keyword.cloud_notm}} é limitada a três conexões simultâneas por meio de sites no local.
+
+## Especificações técnicas para HCX on IBM Cloud
+
+Os componentes a seguir são ordenados e incluídos no serviço HCX on {{site.data.keyword.cloud_notm}}.
+
+**Nota:** as instâncias do HCX no local incluem somente o licenciamento e a ativação.
+
+### Um par ativo/passivo de VMware NSX Edge Services Gateways para gerenciamento do HCX
+
+* CPU: 6 vCPU
+* RAM: 8 GB
+* Disco: 3 GB VMDK
+
+### HCX Management Appliance-máquina virtual
+
+* CPU: 4 vCPU
+* RAM: 12 GB
+* Disco: VMDK de 60 GB
+
+Os dispositivos HCX adicionais são implementados durante a configuração, conforme necessário, para conectividade L2, otimização de WAN e conexões de gateway.
+
+### Rede
+
+* Uma sub-rede móvel pública com 16 endereços IP
+* Uma sub-rede móvel privada com 64 endereços IP
+* Oito endereços IP da sub-rede vMotion móvel privada
+
+### Licenças e taxas
+
+* Taxa de licença base: encargo obrigatório para serviço
+* Taxa de VM gerenciada: cobrada por VM que é migrada mensalmente
 
 ## Considerações ao instalar o HCX no IBM Cloud
 
@@ -43,7 +74,7 @@ Revise as considerações a seguir antes de remover o serviço HCX no {{site.dat
    * Se vazias, as pastas relacionadas ao HCX são removidas.
    * Os dispositivos de borda de gerenciamento do HCX são excluídos.
 
-## Links relacionados
+### Links relacionados
 
 * [Solicitando HCX no {{site.data.keyword.cloud_notm}}](hcx_ordering.html)
 * [Gerenciando o HCX no {{site.data.keyword.cloud_notm}}](managinghcx.html)

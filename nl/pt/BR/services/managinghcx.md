@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ Para aplicar quaisquer correções de manutenção enviadas por push para seu am
 
 Se você não vir uma atualização de construção que está esperando, se tiver problemas com o HCX ou se desejar ter a construção mais recente do HCX enviada por push para seu sistema imediatamente, abra um chamado de suporte seguindo as etapas em [Contatando o suporte IBM](../vmonic/trbl_support.html).
 
-## Links relacionados
+### Links relacionados
 
 * [HCX no {{site.data.keyword.cloud_notm}} visão geral](hcx_considerations.html)
 * [Glossário de termos do HCX](hcx_glossary.html)

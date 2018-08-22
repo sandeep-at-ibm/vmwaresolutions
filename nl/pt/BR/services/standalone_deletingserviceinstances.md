@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -24,7 +24,7 @@ Assegure-se de ter revisado todas as considerações em [Considerações ao excl
 4. Na janela **Excluir instância**, clique em **OK**.
    O status da instância é mudado para **Removendo**. Quando a exclusão da instância é concluída, a instância não está mais disponível na tabela **Instâncias do HCX locais**.
 
-## Links relacionados
+### Links relacionados
 
 * [Solicitando HCX no {{site.data.keyword.cloud_notm}} instâncias](standalone_orderingserviceinstances.html)
 * [Visualizando HCX no {{site.data.keyword.cloud_notm}} instâncias](standalone_viewingserviceinstances.html)

@@ -4,18 +4,26 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-24"
 
 ---
 
 # Visão geral do KMIP for VMware on IBM Cloud
 
-O serviço KMIP para VMware no {{site.data.keyword.cloud}} fornece um serviço altamente disponível 24 horas por dia, 7 dias por semana para gerenciar chaves de criptografia que são usadas pelo VMware no {{site.data.keyword.cloud_notm}}. 
-Esse serviço oferece a capacidade de tempo de execução para permitir que os clientes criem, recuperem, ativem, revoguem e
+O serviço KMIP para VMware no {{site.data.keyword.cloud}} fornece um serviço altamente disponível 24 horas por dia, 7 dias por semana para gerenciar chaves de criptografia que são usadas pelo VMware no {{site.data.keyword.cloud_notm}}. Esse serviço oferece a capacidade de tempo de execução para permitir que os clientes criem, recuperem, ativem, revoguem e
 destruam as chaves de criptografia. Ele também fornece a capacidade de gerenciamento para manter as
 associações entre as credenciais do cliente e as chaves de criptografia.
 
 **Disponibilidade**: esse serviço está disponível somente para instâncias implementadas na V2.2 ou liberações mais recentes.
+
+## Especificações técnicas para o KMIP for VMware on IBM Cloud
+
+As especificações a seguir são incluídas com o serviço KMIP for VMware on {{site.data.keyword.cloud_notm}}:
+
+* Um Key Management Interoperability Protocol (KMIP) compatível com VMware
+* Um serviço gerenciado
+* Disponível em múltiplas regiões geográficas em todo o mundo
+* Um terminal de serviço KMIP altamente disponível em cada região
 
 ## Considerações ao instalar o KMIP para VMware no IBM Cloud
 
@@ -49,16 +57,15 @@ destino e o terminal do serviço KMIP for VMware on {{site.data.keyword.cloud_no
 
 ## Considerações ao remover o KMIP para VMware no IBM Cloud
 
-O certificado público do VMware fornecido durante o pedido ou uso do serviço é usado como o certificado de cliente para se comunicar com a instância de serviço. 
-Quando o serviço é removido, todas as chaves de criptografia criadas por essa instância de serviço para o certificado público do
+O certificado público do VMware fornecido durante o pedido ou uso do serviço é usado como o certificado de cliente para se comunicar com a instância de serviço. Quando o serviço é removido, todas as chaves de criptografia criadas por essa instância de serviço para o certificado público do
 VMware associado também são removidas.
 
 Portanto, antes de remover o serviço, certifique-se de que nenhuma das máquinas virtuais ou vSANs estejam sendo
 criptografadas usando as chaves criadas pelo serviço KMIP.
 
-## Links relacionados
+### Links relacionados
 
-* [Pedindo o KMIP for VMware on IBM Cloud](kmip_ordering.html)
+* [ Solicitando KMIP para VMware no  {{site.data.keyword.cloud_notm}} ](kmip_ordering.html)
 * [IBM Key Protect para {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/services/keymgmt/index.html#getting-started-with-key-protect)
 * [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect?&language=javascript_jquery#introduction)
 * [vSphere Security](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)

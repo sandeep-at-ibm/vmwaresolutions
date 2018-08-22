@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -34,11 +34,11 @@ Para atualizar o Zerto Virtual Replication, efetue login no console do Zerto Vir
 
 Quando você inclui ou remove servidores ESXi para o cluster primário de sua instância, os VRAs são automaticamente implementados ou removidos. Os VRAs não são implementados automaticamente nos servidores ESXi nos clusters secundários de sua instância, mas você mesmo pode implementá-los no console do Zerto Virtual Replication.
 
-## Links relacionados
+### Links relacionados
 
-* [Visão geral do Zerto on IBM Cloud](addingzertodr.html)
+* [Visão geral do Zerto on {{site.data.keyword.cloud_notm}}](addingzertodr.html)
 * [Solicitando serviços gerenciados para o Zerto on {{site.data.keyword.cloud_notm}}](managing_zerto_services.html)
 * [Website zerto.com](https://www.zerto.com){:new_window}
 * [Documentação técnica do Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Recuperação de desastre do Zerto](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/zerto){:new_window}
+* [Recuperação de desastre Zerto](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
 * [Explicação de alertas do Zerto Virtual Replication](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)

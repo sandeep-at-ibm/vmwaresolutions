@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -15,16 +15,16 @@ lastupdated: "2018-06-08"
 ## Pedindo o FortiGate Security Appliance on IBM Cloud para uma nova instância
 
 É possível pedir uma nova instância com o FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} usando um dos métodos a seguir:
-* No console do {{site.data.keyword.vmwaresolutions_full}}, quando você pedir uma nova instância, selecione **FortiGate Security Appliance on IBM Cloud** na seção **Serviços**.
-* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **Serviço FortiGate Security Appliance on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir em nova instância**.
+* No console do {{site.data.keyword.vmwaresolutions_short}}, quando você pedir uma nova instância, selecione **FortiGate Security Appliance on IBM Cloud** na seção **Serviços**.
+* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **FortiGate Security Appliance on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir em nova instância**.
 
 ## Pedindo o FortiGate Security Appliance on IBM Cloud para uma instância existente
 
 É possível incluir o serviço FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} em uma instância existente usando um dos métodos a seguir:
-* No console do {{site.data.keyword.vmwaresolutions_short}}, visualize a instância para a qual você deseja incluir o serviço, clique em **Serviços** na área de janela de navegação esquerda e clique em **Incluir serviço**.
-* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **Serviço FortiGate Security Appliance on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir em instância existente**.
+* No console do {{site.data.keyword.vmwaresolutions_short}}, visualize a instância para a qual você deseja incluir o serviço, clique em **Serviços** na área de janela de navegação esquerda e clique em **Incluir**.
+* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **FortiGate Security Appliance on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir na instância existente**.
 
-## Links relacionados
+### Links relacionados
 
 * [FortiGate Security Appliance no {{site.data.keyword.cloud_notm}} visão geral](fsa_considerations.html)
 * [Gerenciando o FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}](managingfsa.html)
