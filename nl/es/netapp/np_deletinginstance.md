@@ -4,15 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-19"
 
 ---
 
 # Supresión de instancias de NetApp ONTAP Select
 
-Para liberar componentes que ha solicitado en una instancia de NetApp ONTAP Select, suprima la instancia.
-
-Cuando suprima una instancia de NetApp ONTAP Select, los siguientes componentes se liberarán en esta secuencia:
+Si suprime una instancia de NetApp ONTAP Select, los componentes siguientes se publican secuencialmente:
 1. Las máquinas virtuales (VM) en clúster desplegadas de NetApp ONTAP Select y la máquina virtual de NetApp ONTAP Select Deploy
 2. Cuota de soporte y servicios
 3. Licencias del producto VMware
@@ -44,7 +42,7 @@ Debido a las dependencias entre recursos, los componentes de la instancia no se 
    1. Pulse el icono de menú de desbordamiento a la derecha de **Consola de vCenter** de nuevo y pulse **Suprimir instancia**.
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Solicitud de instancias de NetApp ONTAP Select](np_orderinginstances.html)
 * [Visualización de instancias de NetApp ONTAP Select](np_viewinginstances.html)
