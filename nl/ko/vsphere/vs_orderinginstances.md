@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -24,7 +24,6 @@ lastupdated: "2018-06-22"
 
 ## 시스템 설정
 
-<!--**Important: Do not modify any values that are set during ordering and cluster deployment. Doing so can result in your cluster becoming unusable.**-->
 새 vSphere 클러스터를 주문할 때는 다음 시스템 설정을 지정해야 합니다.
 
 ### 클러스터 이름
@@ -187,7 +186,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 
 #### FortiGate Physical Appliance 300 시리즈 HA 쌍
 
-클라우드 환경을 보호하기 위해 FortiGate Physical Appliance 300 Series HA 쌍을 포함시킬지 선택할 수도 있습니다. 자세한 정보는 [FortiGate Security Appliance on IBM Cloud 개요](../services/fsa_considerations.html)를 참조하십시오.
+클라우드 환경을 보호하기 위해 FortiGate Physical Appliance 300 Series HA 쌍을 포함시킬지 선택할 수도 있습니다. 자세한 정보는 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 개요](../services/fsa_considerations.html)를 참조하십시오. 
 
 ## 주문 요약
 
@@ -223,7 +222,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 
    **참고**: {{site.data.keyword.baremetal_short}}만 설치됩니다. 클러스터 배치 후 VMware vCenter, VMware NSX, VMware vSAN과 같이 다양한 컴포넌트를 설치하고 구성해야 합니다.
 
-## 결과
+### 결과
 
 클러스터 구성을 템플리트로 저장한 경우에는 구성이 저장되었다는 콘솔 알림을 받은 후 **클러스터 구성** 목록에서 해당 템플리트를 찾을 수 있습니다.
 
@@ -231,7 +230,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 
 **참고:** vSphere 클러스터는 vCenter Server 및 Cloud Foundation 인스턴스와 달리 **배치된 인스턴스** 페이지에 표시되지 않습니다.
 
-## 관련 링크
+### 관련 링크
 
 * [기존 구성에 따라 vSphere 클러스터 주문](vs_orderingbasedonexistingconfig.html)
 * [기존 클러스터 스케일링](vs_scalingexistingclusters.html)

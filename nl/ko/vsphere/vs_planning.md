@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -16,7 +16,7 @@ VMware vSphere on {{site.data.keyword.cloud}}를 주문하기 전에 다음 요�
 
 ## IBM Cloud 계정 요구사항
 
-사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](../vmonic/slaccountrequirement.html)을 참조하십시오. 
+사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](../vmonic/slaccountrequirement.html)을 참조하십시오.
 
 ## IBM Cloud Data Center 가용성
 
@@ -59,7 +59,7 @@ vSphere 배치에는 실제 인프라에 대한 엄격한 요구사항이 있습
 |WDC06 |워싱턴, DC |북미 동부 |
 |WDC07 |워싱턴, DC |북미 동부 |
 
-## 관련 링크
+### 관련 링크
 
 * [새 vSphere 클러스터 주문](vs_orderinginstances.html)
 * [기존 클러스터 스케일링](vs_scalingexistingclusters.html)

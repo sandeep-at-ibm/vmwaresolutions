@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-29"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-03-29"
 |:-------------|:--------------------------------|:--------|
 |VMware       |vSphere ESXi                    |6.5 Update 1 또는 6.0 Update 2 |
 
-## 관련 링크
+### 관련 링크
 
 * [빌드 번호 및 VMware ESXi/ESX(2143832)의 버전](https://kb.vmware.com/s/article/2143832)
 * [VMware ESXi 6.0 Update 2 릴리스 정보](https://docs.vmware.com/en/VMware-vSphere/6.0/rn/vsphere-esxi-60u2-release-notes.html)
