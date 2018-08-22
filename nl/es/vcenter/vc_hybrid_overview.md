@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -16,13 +16,11 @@ VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hy
 
 En muchos casos, todo el entorno se puede suministrar en menos de un día, y la capacidad de cálculo de la infraestructura de servidores nativos se puede aumentar y reducir de forma rápida y elástica según las necesidades.
 
-<!--Post-deployment, you can increase shared storage by ordering additional NFS (Network File System) file shares from the  {{site.data.keyword.slportal}} and manually attach them across all ESXi servers in a cluster. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.-->
-
 Para aumentar la capacidad de almacenamiento basado en vSAN de un clúster vSAN, puede añadir más servidores ESXi después del despliegue.
 
 Puede actualizar la edición VMware NSX Advanced a la edición Enterprise y puede adquirir componentes adicionales de VMware, como por ejemplo VMware vRealize Operations.
 
-Puede añadir servicios gestionados por IBM si desea descargar las operaciones cotidianas y el mantenimiento de la virtualización, el sistema operativo invitado o las capas de aplicaciones. También puede acudir al equipo de IBM Cloud Professional Services para ayudarle a acelerar la implantación en la nube con servicios de migración, implementación, planificación e incorporación.
+Puede añadir servicios gestionados por IBM si desea descargar las operaciones cotidianas y el mantenimiento de la virtualización, el sistema operativo invitado o las capas de aplicaciones. El equipo de {{site.data.keyword.cloud_notm}} Professional Services también está disponible para ayudarle a acelerar la implantación en la nube con servicios de migración, implementación, planificación e incorporación.
 
 ## Arquitectura de vCenter Server con el paquete híbrido (Hybridity)
 
@@ -45,7 +43,7 @@ Esta capa virtualiza la infraestructura física mediante diversos productos de V
 
 ### Gestión de la virtualización
 
-Esta capa consta de vCenter Server Appliance (vCSA), NSX Manager, dos NSX ESG, tres controladores NSX, el dispositivo virtual Platform Services Controller (PSC) y la máquina virtual (VM) IBM CloudDriver.
+Esta capa consta de vCenter Server Appliance (vCSA), NSX Manager, dos NSX ESG, tres controladores NSX, el dispositivo virtual Platform Services Controller (PSC) y la Instancia de servidor virtual (VSI) de IBM CloudDriver. La VSI de CloudDriver se despliega a petición según sea necesario para determinadas operaciones, como por ejemplo, añadir hosts al entorno.
 
 La oferta básica se despliega con un dispositivo vCenter Server cuyo tamaño se ajusta para dar soporte a un entorno con un máximo de 400 hosts y hasta 4000 máquinas virtuales. Se pueden utilizar las mismas herramientas y scripts compatibles con la API de vSphere para gestionar el entorno VMware alojado por IBM.
 
@@ -57,23 +55,19 @@ Para ver los requisitos de recurso de gestión adicionales al desplegar el servi
 
 Esta capa proporciona una abstracción de recursos entre los sitios locales y los sitios de {{site.data.keyword.cloud_notm}} para que pueda mover hacia atrás y hacia adelante cargas de trabajo de forma segura y sencilla sin necesidad de cambiar características de las VM como por ejemplo sus direcciones IP.
 
-En función de la VMware Hybrid Cloud Extension (HCX), puede crear interconexiones débilmente acopladas entre los sitios locales y de IBM Cloud para habilitar la migración masiva de VM o vMotion activos de VM sin tiempo de inactividad.
+En función de la VMware Hybrid Cloud Extension (HCX), puede crear interconexiones débilmente acopladas entre los sitios locales y de {{site.data.keyword.cloud_notm}} para habilitar la migración masiva de VM o de vMotion activos de VM sin tiempo de inactividad.
 
-## Especificaciones técnicas de vCenter Server con el paquete híbrido (Hybridity)
+## Especificaciones técnicas para las instancias de vCenter Server con el paquete híbrido (Hybridity)
 
 Se incluyen los siguientes componentes en la instancia de vCenter Server con el paquete híbrido (Hybridity):
 
-**Nota:** La disponibilidad y los precios de las configuraciones estandarizadas de hardware pueden variar en función del {{site.data.keyword.CloudDataCent}} seleccionado para el despliegue.
+**Nota:** La disponibilidad y los precios de las configuraciones estandarizadas de hardware pueden variar en función del {{site.data.keyword.CloudDataCent_notm}} seleccionado para el despliegue.
 
 ### Servidor nativo
 
 El pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity) incluye cuatro {{site.data.keyword.baremetal_short}} personalizados. Están disponibles los siguientes modelos de CPU:
   * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
   * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
-
-<!--For NFS storage configuration, the recommended number of {{site.data.keyword.baremetal_short}} is set to the default of three.
-
-**Note:** If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.-->
 
 ### Redes
 
@@ -93,7 +87,7 @@ Para obtener información adicional sobre los componentes de red solicitados al 
 
 Se solicitan las siguientes instancias de servidor virtual (VSI):
 * Una VSI para IBM CloudBuilder, que se cierra una vez completado el despliegue de la instancia.
-* Puede elegir desplegar un único Microsoft Windows Server VSI for Microsoft Active Directory (AD) o dos VM Microsoft Windows de alta disponibilidad en el clúster de gestión para ayudar a mejorar la seguridad y la solidez. También tiene la opción de realizar una copia de seguridad y restaurar las VM utilizando el servicio de Veeam.
+* Puede elegir desplegar un único Microsoft Windows Server VSI for Microsoft Active Directory (AD) o dos VM Microsoft Windows de alta disponibilidad en el clúster de gestión para ayudar a mejorar la seguridad y la solidez.
 
 ### Almacenamiento
 
@@ -109,12 +103,12 @@ Las licencias siguientes se incluyen con el pedido de instancia de vCenter Serve
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Advanced o Enterprise) 6.3
+* VMware NSX Service Providers Edition (Advanced o Enterprise) 6.4
 * VMware vSAN (Advanced o Enterprise) 6.6
 
 Puede que se apliquen tarifas de servicio y soporte adicionales.
 
-## Componentes de nodo de expansión de vCenter Server con el paquete híbrido (Hybridity)
+## Especificaciones técnicas para los nodos de expansión de vCenter Server con el paquete híbrido (Hybridity)
 
 Cada nodo de expansión de vCenter Server con el paquete híbrido (Hybridity) desplegará e incurrirá en cargos para los siguientes componentes de la cuenta de {{site.data.keyword.cloud_notm}}.
 
@@ -125,11 +119,11 @@ Un servidor nativo con la configuración personalizada.
 ### Licencias y tarifas correspondientes a nodos de expansión
 
 * Un VMware vSphere Enterprise Plus 6.5u1
-* Un VMware NSX Service Providers Edition (Advanced o Enterprise) 6.3
+* Un VMware NSX Service Providers Edition (Advanced o Enterprise) 6.4
 * Una cuota de soporte y servicios
 * VMware vSAN (Advanced o Enterprise) 6.6
 
-**Importante**: solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal_full}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+**Importante**: solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
 
 **ATENCIÓN:**: el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}}, que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia, desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 *  Añadir, modificar, devolver o eliminar componentes
@@ -139,7 +133,7 @@ Un servidor nativo con la configuración personalizada.
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Lista de materiales de software de vCenter Server](vc_bom.html)
 * [Requisitos y planificación de instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_planning.html)

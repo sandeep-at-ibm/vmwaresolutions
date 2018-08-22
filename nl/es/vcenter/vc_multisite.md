@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -55,9 +55,9 @@ Puede tener un máximo de 8 (1 primaria y 7 secundarias) instancias desplegadas 
 
 **Nota**: la supresión de instancias de vCenter Server que formen parte de una configuración de varios sitios requiere una planificación especial. Para obtener más información, consulte [Supresión de instancias de vCenter Server en una configuración de varios sitios](vc_deletinginstance_multi.html).
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Asignación del rol primario a NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configuración de NSX Managers secundarios](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
 * [AD Trusts reciben soporte con SSO (inicio de sesión único) de vCenter](https://kb.vmware.com/kb/2064250){:new_window}
-* [Conexión segura de sus cargas de trabajo privadas de VMware en IBM Cloud](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}
+* [Conexión segura de cargas de trabajo privadas de VMware en {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}

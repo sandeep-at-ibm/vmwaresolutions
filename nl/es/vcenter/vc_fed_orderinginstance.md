@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -56,7 +56,7 @@ Licencias de VMware proporcionadas por IBM para:
 
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * (Para clústeres vSAN) VMware vSAN Advanced o Enterprise 6.6
 
 **Atención:**
@@ -70,7 +70,7 @@ Los valores de Bare Metal dependen de su configuración personalizada. La opció
 
 ### Ubicación del centro de datos
 
-Seleccione el IBM Cloud Data Center en el que se alojará la instancia.
+Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se alojará la instancia.
 
 ### Personalizado
 
@@ -174,7 +174,7 @@ En función de la configuración seleccionada para la instancia, el coste estima
 
 ## Procedimiento
 
-1. Desde el catálogo de IBM Cloud, pulse **VMware** en el panel de navegación izquierdo y pulse **vCenter Server** en la sección **Centros de datos virtuales**.
+1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** en el panel de navegación izquierdo y pulse **vCenter Server** en la sección **Centros de datos virtuales**.
 2. En la página **VMware vCenter Server on IBM Cloud**, pulse la tarjeta **vCenter Server** y pulse **Crear**.
 3. En la página **vCenter Server**, escriba el nombre de la instancia.
 4. Pulse **Instancia primaria** para desplegar una sola instancia en el entorno.
@@ -199,17 +199,15 @@ En función de la configuración seleccionada para la instancia, el coste estima
 
 El despliegue de la instancia comienza automáticamente. Recibirá una confirmación de que el pedido se está procesando y puede comprobar el estado del despliegue consultando los detalles de la instancia.
 
-Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Componentes de la instancia de vCenter Server para VMware Federal en {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) se han instalado en la plataforma virtual VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**.
+Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de VMware Federal en {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**.
 
 Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
-
-<!--When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.-->
 
 ## Qué hacer a continuación
 
 Vea, gestione o proteja la instancia de VMware Federal que ha solicitado.
 
-**Importante:** Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_full}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el 	{{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola.
+**Importante:** Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el 	{{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola.
 Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
 
 **ATENCIÓN:** el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
@@ -219,7 +217,7 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
 * [Visualización de instancias de VMware Federal](vc_fed_viewinginstance.html)

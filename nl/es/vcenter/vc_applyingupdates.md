@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-06"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -50,10 +50,10 @@ Tabla 1. Niveles de actualización e impacto
 
 Este procedimiento se aplica a las instancias desplegadas en V2.1 o posterior. Para instancias desplegadas en V2.0 y anteriores, debe aplicar las actualizaciones de VMware manualmente.
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia que desea actualizar.
 3. En la página **Resumen**, verifique que todos los detalles de la instancia se muestren correctamente. A continuación, pulse **Infraestructura** en el panel de navegación izquierdo para verificar los detalles en la página **Infraestructura**.
-   Si no se muestran los detalles, podría significar que existe un problema de conectividad con la máquina virtual IBM CloudDriver, como resultado de una regla del cortafuegos o de otro problema de la red. Resuelva el problema antes de continuar con el siguiente paso; de lo contrario, la actualización puede fallar.
+   Si no se visualizan los detalles, esto podría indicar un problema de conectividad con la Instancia de servidor virtual (VSI) de IBM CloudDriver, como resultado de una regla de cortafuegos u otro problema de la red. Resuelva el problema antes de continuar con el siguiente paso; de lo contrario, la actualización puede fallar.
 4. Pulse **Actualización y parche** en el panel de navegación izquierdo.
 
    **Nota**: la página **Actualización y parche** de una instancia solo contiene los paquetes para actualizar los componentes de gestión de IBM y no las actualizaciones de VMware. Las actualizaciones de VMware deben aplicarse manualmente.
@@ -81,7 +81,7 @@ Siga estos pasos para actualizar una instancia de vCenter Server a vCenter Serve
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia que desea actualizar.
 3. En la página **Resumen**, verifique que todos los detalles de la instancia se muestren correctamente. A continuación, pulse **Infraestructura** en el panel de navegación izquierdo para verificar los detalles en la página **Infraestructura**.
-   Si no se muestran los detalles, podría significar que existe un problema de conectividad con la máquina virtual IBM CloudDriver, como resultado de una regla del cortafuegos o de otro problema de la red. Resuelva el problema antes de continuar con el siguiente paso; de lo contrario, la actualización puede fallar.
+   Si los detalles no se visualizan, esto podría indicar un problema de conectividad con la VSI de IBM CloudDriver, como resultado de una regla del cortafuegos o de otro problema de red. Resuelva el problema antes de continuar con el siguiente paso; de lo contrario, la actualización puede fallar.
 4. Pulse **Actualización y parche** en el panel de navegación izquierdo.
 5. Aplique la actualización de licencia del paquete híbrido (Hybridity). En la tabla **Actualizaciones de licencia**, pulse **Actualizar** en la columna **Acción**, revise el coste estimado y pulse **Actualizar**.
 6. De forma opcional, despliegue el servicio de VMware HCX on {{site.data.keyword.cloud_notm}}. Cuando el paquete híbrido (Hybridity) esté habilitado en la tabla **Actualizaciones de licencia**, siga estos pasos:
@@ -91,8 +91,6 @@ Siga estos pasos para actualizar una instancia de vCenter Server a vCenter Serve
   4. Revise los términos que se aplican al servicio, revise el coste estimado y pulse **Realizar el pedido**.
 
 ## Resultados
-
-1. Antes de que se inicie una operación de actualización, se realiza automáticamente una copia de seguridad de las máquinas virtuales de gestión, en el caso de que el servicio de copia de seguridad esté instalado. Una vez finalizada la copia de seguridad, se aplica la actualización.
 
 2. Después de aplicar una actualización, aparece un registro en la lista de estado de actualización de software, donde puede ver el progreso detallado y el estado de la actualización. Cuando la actualización finaliza correctamente, aparece un registro en la lista de actualizaciones de software instaladas.
 
@@ -136,7 +134,7 @@ Siga estos pasos para actualizar una instancia de vCenter Server a vCenter Serve
 
 4. Si el proceso de actualización falla en un paso específico, [póngase en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html) para obtener ayuda. Se le informará sobre cómo resolver el problema y se le guiará para que vuelva a intentar la actualización desde el paso que ha dado el error.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Visión general de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Cómo ponerse en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html)

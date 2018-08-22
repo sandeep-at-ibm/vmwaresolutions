@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -61,8 +61,6 @@ Para instancias de VMware Federal desplegadas en V2.3 o posterior, puede añadir
 
 Después del despliegue, puede crear un máximo de cuatro clústeres más. Para los valores de almacenamiento vSAN, se necesitan 4 servidores para el clúster inicial y para los clústeres posteriores al despliegue.
 
-<!--When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.-->
-
 ### Valores de almacenamiento
 
 Los valores de almacenamiento dependen de la opción que seleccione de configuración de Servidor nativo y de tipo de almacenamiento.
@@ -99,10 +97,10 @@ Tabla 2. Opciones de nivel de rendimiento de NFS
 
 ### Valores de licencia
 
-Licencias de VMware proporcionadas por IBM para:
+	Licencias de VMware proporcionadas por {{site.data.keyword.IBM}} para:
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.3
+  * VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
   * (Para clústeres vSAN) VMware vSAN Advanced o Enterprise 6.6
 
 ### Resumen del pedido
@@ -236,7 +234,7 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 
 3. Pulse **Infraestructura** en el panel de navegación izquierdo. En la tabla **CLÚSTERES**, localice el clúster que desea suprimir y pulse el icono **Suprimir** en la columna **Acciones**.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Visualización de instancias de VMware Federal](vc_fed_viewinginstance.html)
 * [Ampliación y reducción de la capacidad para instancias de VMware Federal](vc_fed_addingremovingservers.html)

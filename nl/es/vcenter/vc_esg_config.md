@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -21,7 +21,7 @@ Como parte del proceso de pedido de la instancia de vCenter Server, se llevan a 
 * Se despliega un conmutador lógico NSX de ejemplo que utilizarán las VM de carga de trabajo del cliente.
 * Se despliega un direccionador lógico distribuido (DLR) NSX para una potencial comunicación este-oeste entre cargas de trabajo locales conectadas a redes de la capa 2 (L2).
 * Se despliega y se configura un dispositivo NSX Edge para que realiza la conversión de direcciones de red (NAT) entre el rango de direcciones IP del conmutador lógico de carga de trabajo y una dirección IP pública en las reglas NAT.
-* Si ha instalado el servicio Veeam on IBM Cloud, se configura NSX Manager para que realice una copia de seguridad diaria de las configuraciones NSX. Para obtener más información, consulte [Consideraciones al instalar Veeam on IBM Cloud](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
+* Si ha instalado el servicio Veeam on {{site.data.keyword.cloud_notm}}, se configura NSX Manager para que realice una copia de seguridad diaria de las configuraciones NSX. Para obtener más información, consulte [Consideraciones al instalar Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
 
 
 ## Configuración de valores de red para sus VM
@@ -72,8 +72,8 @@ Encontrará más detalles sobre las subredes del cliente siguiendo estos pasos e
 
    **Aviso:** no utilice las direcciones IP que se ha solicitado y utilizado durante la configuración inicial. Sin embargo, puede utilizar otras direcciones IP en estas subredes según sus requisitos. Para configurar reglas adicionales de conversión de direcciones de red, consulte [Gestión de reglas NAT](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Resolución de problemas](../vcenter/vcenter_chg_impact.html)
 * [Preguntas frecuentes](../vmonic/faq.html)
-* [NSX Edge Services Gateway](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/nsx-esg){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

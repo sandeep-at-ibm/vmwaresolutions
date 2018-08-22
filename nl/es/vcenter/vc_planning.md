@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -55,7 +55,7 @@ Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para instancias d
 | WDC06 | Washington, DC | América del Norte este | Personalizado |
 | WDC07 | Washington, DC | América del Norte este | Personalizado |
 
-Un pequeño subconjunto de {{site.data.keyword.CloudDataCents_notm}} de IBM Cloud ofrecen las opciones preconfiguradas de servidor nativo **Pequeño**, **Medio** y **Grande**. En función de la disponibilidad y del suministro de inventario, {{site.data.keyword.CloudDataCents_notm}} puede mostrar un indicador de estado en la consola de {{site.data.keyword.vmwaresolutions_full}} que le ayudará a planificar sus despliegues.
+Un pequeño subconjunto de {{site.data.keyword.CloudDataCents_notm}} ofrecen las opciones preconfiguradas de servidor nativo **Pequeño**, **Medio** y **Grande**. En función de la disponibilidad y del suministro de inventario, {{site.data.keyword.CloudDataCents_notm}} puede mostrar un indicador de estado en la consola de {{site.data.keyword.vmwaresolutions_short}} que le ayudará a planificar sus despliegues.
 
 Tabla 2. Indicadores de estado para {{site.data.keyword.CloudDataCents_notm}} cuando se solicitan instancias de vCenter Server
 
@@ -65,16 +65,19 @@ Tabla 2. Indicadores de estado para {{site.data.keyword.CloudDataCents_notm}} cu
 | Temporarily Out of Inventory  | El {{site.data.keyword.CloudDataCent_notm}} no ofrece disponibilidad en este momento. |
 | Limited Inventory             | El {{site.data.keyword.CloudDataCent_notm}} ofrece disponibilidad limitada y es posible que el pedido no se complete. |
 
+## Copia de seguridad de los componentes de gestión
+
+El usuario es responsable de mantener y garantizar la disponibilidad de todos los componentes de instancia. Se recomienda encarecidamente que planee la copia de seguridad o la alta disponibilidad de todos los componentes de gestión. Para obtener más información, consulte [Copia de seguridad de componentes](../archiref/solution/solution_backingup.html).
+
 ## Servicios para instancias de vCenter Server
 
 Puede solicitar servicios complementarios para su instancia en función de sus necesidades, por ejemplo, la recuperación tras desastre. Para obtener más información, consulte [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](vc_addingremovingservices.html).
 
-<!-- ## Capacity considerations
+## Consideraciones de capacidad
 
-For capacity information and considerations, see the _Bill of
-Materials_ document on the [Virtual reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+Para obtener información sobre la capacidad y las consideraciones, consulte [Capacidad de escalado](../archiref/solution/solution_scaling.html).
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Visión general de vCenter Server](vc_vcenterserveroverview.html)
 * [Pedido de instancias de vCenter Server](vc_orderinginstance.html)

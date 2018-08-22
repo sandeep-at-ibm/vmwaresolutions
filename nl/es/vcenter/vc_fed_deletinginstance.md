@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -43,9 +43,9 @@ Debido a las dependencias entre recursos, los componentes de la instancia no se 
    1. Pulse el icono de menú de desbordamiento a la derecha de **Consola de vCenter** de nuevo y pulse **Suprimir instancia**.
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
-* [Visión general de VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [Visión general de VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [Solicitud de instancias de VMware Federal](vc_fed_orderinginstance.html)
 * [Protección de instancias de VMware Federal](vc_fed_securinginstance.html)
 * [Visualización de instancias de VMware Federal](vc_fed_viewinginstance.html)
