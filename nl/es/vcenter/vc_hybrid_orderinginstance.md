@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
 # Solicitud de instancias de vCenter Server con el paquete híbrido (Hybridity)
 
-Para desplegar una plataforma virtualizada VMware flexible y personalizable que se adapte perfectamente a sus necesidades de carga de trabajo, solicite una instancia de VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity). El pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity) incluye la licencia de VMware Hybrid Cloud Extension (HCX) y le autoriza al servicio de VMware HCX on IBM Cloud. También puede añadir servicios, como [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html), para la recuperación tras desastre.
+Para desplegar una plataforma virtualizada VMware flexible y personalizable que se adapte perfectamente a sus necesidades de carga de trabajo, solicite una instancia de VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity). El pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity) incluye la licencia de VMware Hybrid Cloud Extension (HCX) y le autoriza al servicio de VMware HCX on {{site.data.keyword.cloud_notm}}. También puede añadir servicios, como [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html), para la recuperación tras desastre.
 
 ## Requisitos
 
@@ -54,7 +54,7 @@ Las licencias siguientes se incluyen con el pedido de instancia de vCenter Serve
 
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Advanced o Enterprise) 6.3
+* VMware NSX Service Providers Edition (Advanced o Enterprise) 6.4
 * Edición de licencia de VMware vSAN 6.6 (Advanced o Enterprise).
 
 **Atención:**
@@ -169,7 +169,7 @@ En función de la configuración seleccionada para la instancia y los servicios 
 
 ## Procedimiento
 
-1. Desde el catálogo de IBM Cloud, pulse **VMware** en el panel de navegación izquierdo y pulse **vCenter Server** en la sección **Centros de datos virtuales**.
+1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** en el panel de navegación izquierdo y pulse **vCenter Server** en la sección **Centros de datos virtuales**.
 2. En la página **VMware vCenter Server on IBM Cloud**, pulse la tarjeta **vCenter Server con el paquete híbrido (Hybridity)** y pulse **Crear**.
 3. En la página **vCenter Server**, escriba el nombre de la instancia.
 4. Seleccione el tipo de instancia:
@@ -206,7 +206,7 @@ Para obtener información sobre cómo proporcionar valores para un servicio, con
 
 El despliegue de la instancia comienza automáticamente. Recibirá una confirmación de que el pedido se está procesando y puede comprobar el estado del despliegue consultando los detalles de la instancia.
 
-Cuando la instancia se haya desplegado correctamente, los componentes que se describen en la sección _Especificaciones técnicas de vCenter Server con el paquete híbrido (Hybridity)_ de [Visión general de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_overview.html) se instalarán en la plataforma virtual VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
+Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
 
 Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 
@@ -227,7 +227,7 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
 * [Visualización de instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_viewinginstances.html)

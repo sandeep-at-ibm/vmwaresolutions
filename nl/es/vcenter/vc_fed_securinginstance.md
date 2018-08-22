@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ Revise la siguiente información para comprender los resultados de proteger la i
 3. Pulse el icono de menú de desbordamiento de la derecha de la **consola de vCenter**.
 4. Pulse **Proteger instancia**.
 5. Pulse **Aceptar** para confirmar que desea desconectar la instancia de la automatización.
-   
+
    **Nota**: Antes de completar este paso, asegúrese de que ha revisado la información de la sección **Antes de empezar**.
 
 ## Resultados
@@ -36,9 +36,9 @@ El estado de la instancia pasa a ser **Modificando**.
 
 Cuando la instancia se haya protegido correctamente, el estado de la instancia pasará a ser **Protegido** y solo estarán disponibles las propiedades de la instancia y el historial de despliegues.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
-* [Visión general de VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [Visión general de VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [Solicitud de instancias de VMware Federal](vc_fed_orderinginstance.html)
 * [Visualización de instancias de VMware Federal](vc_fed_viewinginstance.html)
 * [Supresión de instancias de VMware Federal](vc_fed_deletinginstance.html)

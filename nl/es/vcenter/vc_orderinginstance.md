@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -53,7 +53,7 @@ Seleccione si desea solicitar una nueva instancia primaria o una instancia secun
 Especifique las opciones de licencia para los siguientes componentes de VMware de la instancia:
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 
 Para los usuarios de Business Partners, se incluyen y se adquieren en su nombre la licencia de vCenter Server (edición Standard), la licencia de vSphere (edición Enterprise Plus) y la licencia de NSX. Sin embargo, debe especificar la edición para la licencia de NSX.
 
@@ -72,7 +72,7 @@ Los valores de Nativo dependen del centro de datos seleccionado y de si ha selec
 
 ### Ubicación del centro de datos
 
-Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se alojará la instancia.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the {{site.data.keyword.baremetal_long}} specification you selected previously are displayed.-->
+Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se alojará la instancia.
 
 ### Preconfigurado
 
@@ -261,7 +261,7 @@ Para obtener información sobre cómo proporcionar valores para un servicio, con
 
 El despliegue de la instancia comienza automáticamente. Recibirá una confirmación de que el pedido se está procesando y puede comprobar el estado del despliegue consultando los detalles de la instancia.
 
-Cuando la instancia se haya desplegado correctamente, los componentes que se describen en la sección _Especificaciones técnicas de vCenter Server_ de [Visión general de vCenter Server](../vcenter/vc_vcenterserveroverview.html) se instalarán en la plataforma virtual VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
+Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
 
 Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 
@@ -282,7 +282,7 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
 * [Visualización de instancias de vCenter Server](vc_viewinginstances.html)

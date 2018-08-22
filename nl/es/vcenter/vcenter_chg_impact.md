@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-06-08"
 
 El cambio de usuarios, recursos o subredes reservados para {{site.data.keyword.vmwaresolutions_full}} puede afectar a las operaciones de gestión.
 
-## ID automationuser
+**Importante:** No edite los permisos globales del grupo **ic4v-vCenter** en la página **Usuarios y grupos** del cliente web de VMware vSphere. Estos cambios incluyen: cambiar el nombre de usuario, suprimir el usuario o cambiar su contraseña.
 
-El ID **automationuser** es una cuenta de usuario que utilizan las operaciones automáticas que se proporcionan en la consola de {{site.data.keyword.vmwaresolutions_short}}.
+## ID de automatización
+
+El ID de **automatización** es una cuenta de usuario que utilizan las operaciones automáticas que se proporcionan en la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
 Los usuarios y las contraseñas correspondientes a las operaciones automáticas de la consola no se deben modificar porque las operaciones de la consola que dependen de estas credenciales podrían fallar.
-
-No actualice las propiedades del ID **automationuser** en la página **Usuarios y grupos** del cliente web de VMware vSphere. Estos cambios incluyen: cambiar el nombre de usuario, suprimir el usuario o cambiar su contraseña.
 
 ## Cuentas de usuario específicas de servicio
 

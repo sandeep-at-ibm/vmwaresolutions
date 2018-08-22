@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -44,7 +44,7 @@ Debido a las dependencias entre recursos, los componentes de la instancia no se 
    1. Pulse el icono de menú de desbordamiento a la derecha de **Consola de vCenter** de nuevo y pulse **Suprimir instancia**.
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Supresión de las instancias de vCenter Server con el paquete híbrido (Hybridity) en una configuración de varios sitios](vc_hybrid_deletinginstance_multi.html)
 * [Solicitud de instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_orderinginstance.html)

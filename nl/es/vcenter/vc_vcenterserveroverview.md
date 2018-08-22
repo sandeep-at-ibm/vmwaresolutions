@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -14,13 +14,13 @@ VMware vCenter Server on {{site.data.keyword.cloud}} es una nube privada alojada
 
 En muchos casos, todo el entorno se puede suministrar en menos de un día, y la capacidad de cálculo de la infraestructura de servidores nativos se puede aumentar y reducir de forma rápida y elástica según las necesidades.
 
-Después del despliegue, puede aumentar el almacenamiento compartido solicitando comparticiones de archivos NFS (sistema de archivos de red) adicionales desde {{site.data.keyword.slportal}} y conectándolas manualmente a todos los servidores ESXi de un clúster. Si necesita almacenamiento dedicado, se ofrece [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) tanto en las configuraciones de alto rendimiento (todo SSD) como en las de alta capacidad (todo SATA).
+Después del despliegue, puede aumentar el almacenamiento compartido solicitando comparticiones de archivos NFS (sistema de archivos de red) adicionales desde {{site.data.keyword.slportal}} y conectándolas manualmente a todos los servidores ESXi de un clúster. Si necesita almacenamiento dedicado, se ofrece [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html) tanto en las configuraciones de alto rendimiento (todo SSD) como en las de alta capacidad (todo SATA).
 
 VMware vSAN también está disponible como opción de almacenamiento dedicado. Para aumentar la capacidad de almacenamiento basado en vSAN de un clúster vSAN, puede añadir más servidores ESXi después del despliegue.
 
 Si ha adquirido licencias de VMware proporcionadas por IBM, puede actualizar la edición VMware NSX Base a la edición Advanced o Enterprise y puede adquirir componentes adicionales de VMware, como por ejemplo VMware vRealize Operations.
 
-Puede añadir servicios gestionados por IBM si desea descargar las operaciones cotidianas y el mantenimiento de la virtualización, el sistema operativo invitado o las capas de aplicaciones. También puede acudir al equipo de IBM Cloud Professional Services para ayudarle a acelerar la implantación en la nube con servicios de migración, implementación, planificación e incorporación.
+Puede añadir servicios gestionados por IBM si desea descargar las operaciones cotidianas y el mantenimiento de la virtualización, el sistema operativo invitado o las capas de aplicaciones. El equipo de {{site.data.keyword.cloud_notm}} Professional Services también está disponible para ayudarle a acelerar la implantación en la nube con servicios de migración, implementación, planificación e incorporación.
 
 ## Arquitectura de vCenter Server
 
@@ -42,15 +42,15 @@ Esta capa virtualiza la infraestructura física mediante diversos productos de V
 
 ### Gestión de la virtualización
 
-Esta capa consta de vCenter Server Appliance (vCSA), NSX Manager, dos NSX ESG, tres controladores NSX, el dispositivo virtual Platform Services Controller (PSC) y la máquina virtual IBM CloudDriver.
+Esta capa consta de vCenter Server Appliance (vCSA), NSX Manager, dos NSX ESG, tres controladores NSX, el dispositivo virtual Platform Services Controller (PSC) y la Instancia de servidor virtual (VSI) de IBM CloudDriver. La VSI de CloudDriver se despliega a petición según sea necesario para determinadas operaciones, como por ejemplo, añadir hosts al entorno.
 
 La oferta básica se despliega con un dispositivo vCenter Server cuyo tamaño se ajusta para dar soporte a un entorno con un máximo de 400 hosts y hasta 4000 máquinas virtuales. Se pueden utilizar las mismas herramientas y scripts compatibles con la API de vSphere para gestionar el entorno VMware alojado por IBM.
 
 En total, la oferta básica necesita 38 vCPU y 67 GB de vRAM que se reservan para la capa de gestión de virtualización. El resto de la capacidad de host para sus VM depende de varios factores, como la tasa de sobresuscripción, el dimensionamiento de VM y los requisitos de rendimiento de la carga de trabajo.
 
-Para conocer detalles sobre la arquitectura, consulte [Referencia de la arquitectura de {{site.data.keyword.vmwaresolutions_full}}](../archiref/solution/solution_overview.html).
+Para obtener detalles sobre la arquitectura, consulte [Referencia de arquitectura de {{site.data.keyword.vmwaresolutions_short}}](../archiref/solution/solution_overview.html).
 
-## Especificaciones técnicas de vCenter Server
+## Especificaciones técnicas para instancias de vCenter Server
 
 Se incluyen los siguientes componentes en la instancia de vCenter Server.
 
@@ -106,34 +106,32 @@ La opción NFS ofrece almacenamiento a nivel de archivo compartido personalizado
 * Rendimiento: 2, 4 o 10 IOPS/GB.
 * Configuración individual de comparticiones de archivos.
 
-Si elige la opción NFS, se solicitan las siguientes comparticiones de archivos:
-* Un recurso compartido de archivo de 2 TB, 4 IOPS/GB para componentes de gestión.
-* Un almacenamiento de nivel de bloque compartido de 2 TB, que se puede ampliar hasta 12 TB. Puede elegir si desea almacenamiento para copias de seguridad seleccionando un servicio de copia de seguridad.
+Si selecciona la opción NFS, se solicita una compartición de archivos de 2 TB y de 4 IOPS/GB para los componentes de gestión.
 
 ### Licencias (proporcionadas por IBM o BYOL) y cuotas
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * (Para clústeres vSAN) VMware vSAN Advanced o Enterprise 6.6
 * Cuota de soporte y servicios (una licencia por nodo)
 
-## Componentes de nodo de expansión de vCenter Server
+## Especificaciones técnicas para nodos de expansión de vCenter Server
 
 Cada nodo de expansión de vCenter Server desplegará e incurrirá en cargos por los siguientes componentes en su cuenta de {{site.data.keyword.cloud_notm}}.
 
 ### Hardware para nodos de expansión
 
-Un servidor nativo con la configuración que se muestra en la sección _Especificaciones técnicas de vCenter Server_ en la [Visión general de vCenter Server](vc_vcenterserveroverview.html).
+Un servidor nativo con la configuración presentada en [Especificaciones técnicas para instancias de vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ### Licencias y tarifas correspondientes a nodos de expansión
 
 * Un VMware vSphere Enterprise Plus 6.5u1
-* Un VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.3
+* Un VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * Una cuota de soporte y servicios
 * (Para clústeres vSAN) VMware vSAN Advanced o Enterprise 6.6
 
-**Importante**: solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal_full}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+**Importante**: solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
 
 **ATENCIÓN:**: el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}}, que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia, desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 *  Añadir, modificar, devolver o eliminar componentes
@@ -143,7 +141,7 @@ Un servidor nativo con la configuración que se muestra en la sección _Especifi
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Lista de materiales de software de vCenter Server](vc_bom.html)
 * [Planificación de instancias de vCenter Server](vc_planning.html)

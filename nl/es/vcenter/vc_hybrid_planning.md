@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -22,7 +22,7 @@ El despliegue de vCenter Server con el paquete híbrido (Hybridity) impone requi
 
 Tabla 1. Disponible {{site.data.keyword.CloudDataCents_notm}} para instancias de vCenter Server con el paquete híbrido (Hybridity)
 
-| Centro de datos de IBM Cloud | Ubicación | Región |
+| {{site.data.keyword.CloudDataCent_notm}} | Ubicación | Región |
 |:-----|:----------------|
 | AMS03 | Amsterdam | Europa |
 | CHE01 | Chennai | Asia-Pacífico |
@@ -55,7 +55,7 @@ Tabla 1. Disponible {{site.data.keyword.CloudDataCents_notm}} para instancias de
 | WDC06 | Washington, DC | América del Norte este |
 | WDC07 | Washington, DC | América del Norte este |
 
-En función de la disponibilidad y del suministro de inventario, {{site.data.keyword.CloudDataCents_notm}} puede mostrar un indicador de estado en la consola de {{site.data.keyword.vmwaresolutions_full}} que le ayudará a planificar sus despliegues.
+En función de la disponibilidad y del suministro de inventario, {{site.data.keyword.CloudDataCents_notm}} puede mostrar un indicador de estado en la consola de {{site.data.keyword.vmwaresolutions_short}} que le ayudará a planificar sus despliegues.
 
 Tabla 2. Indicadores de estado para {{site.data.keyword.CloudDataCents_notm}} cuando se solicitan instancias de vCenter Server con el paquete híbrido (Hybridity)
 
@@ -65,9 +65,13 @@ Tabla 2. Indicadores de estado para {{site.data.keyword.CloudDataCents_notm}} cu
 | Temporarily Out of Inventory  | El {{site.data.keyword.CloudDataCent_notm}} no ofrece disponibilidad en este momento. |
 | Limited Inventory             | El {{site.data.keyword.CloudDataCent_notm}} ofrece disponibilidad limitada y es posible que el pedido no se complete. |
 
+## Copia de seguridad de los componentes de gestión
+
+El usuario es responsable de mantener y garantizar la disponibilidad de todos los componentes de instancia. Se recomienda encarecidamente que planee la copia de seguridad o la alta disponibilidad de todos los componentes de gestión. Para obtener más información, consulte [Copia de seguridad de componentes](../archiref/solution/solution_backingup.html).
+
 ## Servicios para instancias de vCenter Server con el paquete híbrido (Hybridity)
 
-La instancia de vCenter Server con el paquete híbrido (Hybridity) incluye la licencia de VMware Hybrid Cloud Extension (HCX) que le autoriza al servicio de VMware HCX on IBM Cloud. Este servicio permite ampliar fácilmente las redes de centros de datos locales en {{site.data.keyword.cloud_notm}}, lo que permite migrar las máquinas virtuales (VM) de {{site.data.keyword.cloud_notm}} y al mismo sin realizar ninguna conversión ni cambio.
+La instancia de vCenter Server con el paquete híbrido (Hybridity) incluye la licencia de VMware Hybrid Cloud Extension (HCX) que le autoriza al servicio de VMware HCX on {{site.data.keyword.cloud_notm}}. Este servicio permite ampliar fácilmente las redes de centros de datos locales en {{site.data.keyword.cloud_notm}}, lo que permite migrar las máquinas virtuales (VM) de {{site.data.keyword.cloud_notm}} y al mismo sin realizar ninguna conversión ni cambio.
 
 Al desplegar este servicio, siga los valores siguientes:
 * Especifique el **Tipo de interconexión de HCX** seleccionando una de las opciones siguientes:
@@ -82,7 +86,11 @@ Al desplegar este servicio, siga los valores siguientes:
 
 Puede solicitar otros servicios complementarios para su instancia en función de sus necesidades, por ejemplo, la recuperación tras desastre. Para obtener más información, consulte [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_addingremovingservices.html).
 
-## Enlaces relacionados
+## Consideraciones de capacidad
+
+Para obtener información sobre la capacidad y las consideraciones, consulte [Capacidad de escalado](../archiref/solution/solution_scaling.html).
+
+### Enlaces relacionados
 
 * [Visión general de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_overview.html)
 * [Solicitud de instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_orderinginstance.html)

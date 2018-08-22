@@ -34,7 +34,7 @@ Debido a las dependencias entre recursos, los componentes de la instancia no se 
 6. Repita los pasos 1 a 5 para todas las instancias secundarias de vCenter Server de la configuración de varios sitios.
 7. Después de suprimir todas las instancias secundarias, también puede suprimir la instancia primaria desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Supresión de instancias de vCenter Server](vc_deletinginstance.html)
 * [Solicitud, visualización y eliminación de servicios de instancias de vCenter Server](vc_addingremovingservices.html)
