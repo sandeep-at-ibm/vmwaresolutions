@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-15"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -15,14 +15,14 @@ lastupdated: "2018-06-15"
 ## 為新實例訂購 FortiGate Virtual Appliance on IBM Cloud
 
 您可以使用下列其中一種方法，訂購包含 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的新實例：
-* 當您從 {{site.data.keyword.vmwaresolutions_full}} 主控台訂購新實例時，請選取**服務**區段中的 **FortiGate Virtual Appliance on IBM Cloud**。
-* 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **FortiGate Virtual Appliance on IBM Cloud 服務**，指定服務設定，然後選取**新增至新實例**。
+* 當您從 {{site.data.keyword.vmwaresolutions_short}} 主控台訂購新實例時，請選取**服務**區段中的 **FortiGate Virtual Appliance on IBM Cloud**。
+* 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **FortiGate Virtual Appliance on IBM Cloud**，指定服務設定，然後選取**新增至新實例**。
 
 ## 為現有實例訂購 FortiGate Virtual Appliance on IBM Cloud
 
 您可以使用下列其中一種方法，將 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務新增至現有實例：
-* 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增服務**。
-* 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **FortiGate Virtual Appliance on IBM Cloud 服務**，指定服務設定，然後選取**新增至現有實例**。
+* 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增**。
+* 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **FortiGate Virtual Appliance on IBM Cloud**，指定服務設定，然後選取**新增至現有實例**。
 
 ## FortiGate Virtual Appliance on IBM Cloud 服務配置
 
@@ -34,7 +34,7 @@ lastupdated: "2018-06-15"
 
 ### 部署大小
 
-IBM Cloud 提供下列部署大小選項：
+{{site.data.keyword.cloud_notm}} 提供下列部署大小選項：
 * 小型（2 個 vCPU/4 GB RAM）
 * 中型（4 個 vCPU/6 GB RAM）
 * 大型（8 個 vCPU/12 GB RAM）
@@ -53,7 +53,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的授權模型�
 
 **重要事項**：您無法在安裝服務之後變更授權模型。若要變更授權模型，您必須移除現有服務，然後選取不同的授權選項來重新安裝服務。
 
-## 相關鏈結
+### 相關鏈結
 
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 概觀](fortinetvm_considerations.html)
 * [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](managingfortinetvm.html)

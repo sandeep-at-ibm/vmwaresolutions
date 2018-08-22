@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -20,6 +20,6 @@ lastupdated: "2018-05-23"
 * **HCX Manager 管理主控台**：這是管理 HCX 應用裝置以進行管理的使用者介面（例如，啟動及停止服務，以及收集支援日誌）。
 * **HCX Cloud 主控台**：這是配置 HCX Cloud 特性（例如，虛擬資料中心及災難回復）的使用者介面。
 
-## 相關鏈結
+### 相關鏈結
 
 * [VMware Hybrid Cloud Extension 文件](https://hcx.vmware.com/#vm-documentation)

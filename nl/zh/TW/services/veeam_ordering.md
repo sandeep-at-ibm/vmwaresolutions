@@ -4,25 +4,25 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-20"
 
 ---
 
 # 訂購 Veeam on IBM Cloud
 
-您可以在訂購包含服務的新實例時，同時訂購 Veeam on {{site.data.keyword.cloud_notm}} 服務，或將服務新增至現有實例。
+您可以在訂購包含服務的新實例時，同時訂購 Veeam on {{site.data.keyword.cloud}} 服務，或將服務新增至現有實例。
 
 ## 為新實例訂購 Veeam on IBM Cloud
 
 您可以使用下列其中一種方法，訂購含 Veeam on {{site.data.keyword.cloud_notm}} 的新實例：
-* 當您從 {{site.data.keyword.vmwaresolutions_full}} 主控台訂購新實例時，請選取**服務**區段中的 **Veeam on IBM Cloud**。
-* 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **Veeam on {{site.data.keyword.cloud_notm}} 服務**，指定服務設定，然後選取**新增至新實例**。
+* 當您從 {{site.data.keyword.vmwaresolutions_short}} 主控台訂購新實例時，請選取**服務**區段中的 **Veeam on IBM Cloud**。
+* 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **Veeam on IBM Cloud**，指定服務設定，然後選取**新增至新實例**。
 
 ## 為現有實例訂購 Veeam on IBM Cloud
 
 您可以使用下列其中一種方法，將 Veeam on {{site.data.keyword.cloud_notm}} 服務新增至現有實例：
-* 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增服務**。
-* 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **Veeam on IBM Cloud 服務**，指定服務設定，然後選取**新增至現有實例**。
+* 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增**。
+* 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **Veeam on IBM Cloud**，指定服務設定，然後選取**新增至現有實例**。
 
 ## Veeam on IBM Cloud 服務配置
 
@@ -30,18 +30,17 @@ lastupdated: "2018-06-08"
 
 ### 要授權的 VM 數目
 
-至少需要 4 部 VM 以用於授權管理。
+至少需要 10 部 VM 以用於授權管理。
 
 ### 儲存空間大小
 
-符合您儲存空間需求的容量。至少需要 2,000 GB 的儲存空間以用於管理。如需預估儲存空間大小時的考量，請參閱 [Estimating Repository Capacity](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html)。
+符合您儲存空間需求的容量。如需預估儲存空間大小時的考量，請參閱 [Estimating Repository Capacity](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html)。
 
 ### 儲存空間效能
 
 根據工作負載需求的每 GB IOPS（每秒輸入/輸出作業數）。
 
-
-## 相關鏈結
+### 相關鏈結
 
 * [Veeam on {{site.data.keyword.cloud_notm}} 概觀](veeam_considerations.html)
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](managingveeam.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -34,11 +34,11 @@ lastupdated: "2018-06-07"
 
 當您新增或移除實例主要叢集的 ESXi 伺服器時，會自動部署或移除 VRA。VRA 不會自動部署至實例次要叢集中的 ESXi 伺服器，但您可以從 Zerto Virtual Replication 主控台自行部署它們。
 
-## 相關鏈結
+### 相關鏈結
 
-* [Zerto on IBM Cloud 概觀](addingzertodr.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 概觀](addingzertodr.html)
 * [要求 Zerto on {{site.data.keyword.cloud_notm}} 的受管理服務](managing_zerto_services.html)
 * [zerto.com 網站](https://www.zerto.com){:new_window}
 * [Zerto 技術文件](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Zerto 災難回復](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/zerto){:new_window}
+* [Zerto 災難回復](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
 * [Zerto Virtual Replication 警示說明](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -15,6 +15,24 @@ F5 on {{site.data.keyword.cloud}} 服務 (F5 BIG-IP® Virtual Edition) 提供區
 您可以視需要安裝此服務的多個實例。
 
 **可用性**：只有部署在 1.9 版或更新版本中的實例，才能使用此服務。
+
+## F5 on IBM Cloud 的技術規格
+
+F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
+
+### 虛擬機器
+* 兩部具有所有可用選項的虛擬機器 (VM)。
+* 每部虛擬機器有 2、4 或 8 個 vCPU（視授權選項而定）。
+* 每部虛擬機器有 4、8 或 16 GB RAM（視授權選項而定）。
+
+### 網路
+* 進行 HA 同步化的專用虛擬可延伸 LAN (VXLAN)。
+* 透過專用管理網路存取「資料流量管理 Shell (TMSH)」及「管理主控台」。
+
+### 授權及費用
+每部 VM 的授權費用都會套用至每個計費週期，取決於授權選項（「良好」、「更佳」或「最佳」）及選取的頻寬。
+
+**重要事項：**您無法在安裝服務之後變更授權層次。若要變更授權層次，您必須移除現有服務，然後使用不同的授權選項來重新安裝服務。
 
 ## 安裝 F5 on IBM Cloud 時的考量
 
@@ -28,9 +46,9 @@ F5 on {{site.data.keyword.cloud}} 服務 (F5 BIG-IP® Virtual Edition) 提供區
 |:------------------|:--------------------|:----------------------|:--------------------|
 |25 Mbps           |2 個 vCPU、4 GB RAM |4 個 vCPU、8 GB RAM   |8 個 vCPU、16 GB RAM  |
 |200 Mbps          |2 個 vCPU、4 GB RAM |4 個 vCPU、8 GB RAM   |8 個 vCPU、16 GB RAM  |
-|1 Gbps            |2 個 vCPU、4 GB RAM |4 個 vCPU、8 GB RAM   |8 個 vCPU、16 GB RAM  |
-|3 Gbps            |8 個 vCPU、16 GB RAM  |8 個 vCPU、16 GB RAM  |8 個 vCPU、16 GB RAM  |
-|5 Gbps            |8 個 vCPU、16 GB RAM  |8 個 vCPU、16 GB RAM  |8 個 vCPU、16 GB RAM  |
+|1 Gbps            |2 個 vCPU、4 GB RAM |4 個 vCPU、8 GB RAM   |8 個 vCPU、16 GB RAM|
+|3 Gbps            |8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM  |8 個 vCPU、16 GB RAM|
+|5 Gbps            |8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM  |8 個 vCPU、16 GB RAM|
 |10 Gbps           |8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM  |8 個 vCPU、16 GB RAM  |
 
 **附註：**
@@ -78,7 +96,7 @@ F5 on {{site.data.keyword.cloud}} 服務 (F5 BIG-IP® Virtual Edition) 提供區
 
 在您移除 F5 on {{site.data.keyword.cloud_notm}} 服務之前，請確定已正確地移除現有 BIG-IP VE 配置。具體而言，網路資料流量必須遞送至 BIG-IP VE，而不是透過 BIG-IP VE 遞送。否則，您環境中的現有資料流量可能會受到影響。
 
-## 相關鏈結
+### 相關鏈結
 
 * [訂購 F5 on {{site.data.keyword.cloud_notm}}](f5_ordering.html)
 * [管理 F5 on {{site.data.keyword.cloud_notm}}](managing_f5.html)
