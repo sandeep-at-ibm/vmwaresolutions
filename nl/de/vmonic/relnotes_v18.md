@@ -14,25 +14,25 @@ Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserung
 
 ## Service "Fortinet on IBM Cloud"
 
-Der Service "Fortinet on IBM Cloud" ist jetzt für Cloud Foundation- und für vCenter Server-Instanzen verfügbar. Dieser Service stellt ein Paar von Einheiten der FortiGate Security Appliance (FSA) 300-Serie in einem Hochverfügbarkeitsmodus bereit, um Firewall-, Routing-, NAT- und VPN-Services für den Schutz aller Server und virtuellen Maschinen im öffentlichen VLAN Ihrer Instanzen zur Verfügung zu stellen. Sie können Instanzen bestellen, die den Service "Fortinet" enthalten, oder diesen Service zu einem späteren Zeitpunkt über die Seite mit den Instanzdetails zu Ihren vorhandenen Instanzen hinzufügen.
+Der Service "Fortinet on {{site.data.keyword.cloud_notm}}" ist jetzt für Cloud Foundation- und für vCenter Server-Instanzen verfügbar. Dieser Service stellt ein Paar von Einheiten der FortiGate Security Appliance (FSA) 300-Serie in einem Hochverfügbarkeitsmodus bereit, um Firewall-, Routing-, NAT- und VPN-Services für den Schutz aller Server und virtuellen Maschinen im öffentlichen VLAN Ihrer Instanzen zur Verfügung zu stellen. Sie können Instanzen bestellen, die den Service "Fortinet" enthalten, oder diesen Service zu einem späteren Zeitpunkt über die Seite mit den Instanzdetails zu Ihren vorhandenen Instanzen hinzufügen.
 
 Nachdem der Fortinet-Service erfolgreich installiert wurde, können Sie Firewallregeln für FSA über die FortiGate-Konsole verwalten und konfigurieren. Sie müssen sicherstellen, dass die FSA-Firewallregeln definiert sind, um abgehende HTTPS-Übertragungen zu ermöglichen, die von Managementkomponenten wie der virtuellen Maschine von IBM CloudDriver oder von Zerto Virtual Manager eingeleitet werden, um mit der externen Managementdatenbank in IBM Bluemix® über das Internet zu kommunizieren. Die abgehende HTTPS-Kommunikation stammt aus der öffentlichen IP-Adresse der Management-Services für VMware NSX Edge Services Gateway (ESG) in Ihrer Instanz.
 
 Weitere Informationen enthalten die folgenden Abschnitte:
-* [Überblick zu Fortinet on IBM Cloud](../services/fsa_considerations.html)
-* [Fortinet on IBM Cloud verwalten](../services/managingfsa.html)
+* [Übersicht über Fortinet on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)
+* [Fortinet on {{site.data.keyword.cloud_notm}} verwalten](../services/managingfsa.html)
 
 ## Service "Veeam on IBM Cloud"
 
-Mit diesem Release wird der Service "Veeam on IBM Cloud" eingeführt, der sowohl Managementkomponenten als auch Workloads sichern kann. Der neue Service ersetzt die vorherige virtuelle Serverinstanz von Veeam, die in Releases vor V1.8 zur ausschließlichen Sicherung von Managementkomponenten integriert war.
+Mit diesem Release wird der Service "Veeam on {{site.data.keyword.cloud_notm}}" eingeführt, der sowohl Managementkomponenten als auch Workloads sichern kann. Der neue Service ersetzt die vorherige virtuelle Serverinstanz von Veeam, die in Releases vor V1.8 zur ausschließlichen Sicherung von Managementkomponenten integriert war.
 
 Aufgrund dieser Änderung sind die Sicherungspunkte für die Instanzen nicht mehr in der {{site.data.keyword.vmwaresolutions_short}}-Konsole verfügbar und Sie müssen ein Support-Ticket erstellen, um bei einer Wiederherstellung Unterstützung zu erhalten, obwohl die virtuelle Serverinstanz für Veeam in den Instanzen aus Releases vor V1.8 weiterhin funktioniert.
 
 Darüber hinaus läuft die Lizenz der virtuellen Serverinstanz für Veeam in Instanzen aus Releases vor V1.8 am 14. Oktober 2017 ab. Daher müssen Sie die vorherige virtuelle Serverinstanz für Veeam so bald wie möglich durch den neuen Veeam-Service ersetzen.
 
 Weitere Informationen enthalten die folgenden Abschnitte:
-* [Überblick zu Veeam on IBM Cloud](../services/veeam_considerations.html)
-* [Veeam on IBM Cloud verwalten](../services/managingveeam.html)
+* [Übersicht über Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} verwalten](../services/managingveeam.html)
 
 ## Updates für VMware Cloud Foundation-Instanzen
 
@@ -73,9 +73,9 @@ Weitere Informationen finden Sie unter [Voraussetzungen und Planung für vCenter
 ## Erweiterungen beim Bedienungskomfort
 
 In der gesamten Benutzerschnittstelle wurden Verbesserungen vorgenommen:
-* Auf der Seite **Einführung** im linken Navigationsfenster können Sie sich über Services informieren und eine Instanz bestellen. Informationen zur Servicearchitektur von IBM Cloud Secure Virtualization finden Sie unter [Security and compliance - HyTrust ](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust).
+* Auf der Seite **Einführung** im linken Navigationsfenster können Sie sich über Services informieren und eine Instanz bestellen. Informationen zur Servicearchitektur von {{site.data.keyword.cloud_notm}} Secure Virtualization finden Sie unter [Security and compliance - HyTrust](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust).
 * Mit dem Überlaufmenü auf der Seite mit den Instanzdetails können Sie eine Instanz löschen, die den Status **Bereit** aufweist.
 * Die Option zum Durchführen eines Upgrades für Ihre NSX-Lizenzedition befindet sich jetzt auf der Registerkarte **Update und Patch**. Bei der Aktualisierung der Lizenz werden alle vorhandenen NSX-Lizenzen in Ihrem IBM SoftLayer-Konto durch die neue Lizenz ersetzt.
 * Die Registerkarte **Sicherung und Wiederherstellung** auf der Seite mit den Instanzdetails ist nicht mehr verfügbar.
-* Am Beginn einer Bestellung können Sie mehrere Services für die Bereitstellung auswählen. Neben dem Service "Zerto on IBM Cloud" sind Optionen für die Auswahl der Services "Veeam on IBM Cloud" und "Fortinet on IBM Cloud" verfügbar.
+* Am Beginn einer Bestellung können Sie mehrere Services für die Bereitstellung auswählen. Neben dem Service "Zerto on {{site.data.keyword.cloud_notm}}" sind Optionen für die Auswahl der Services "Veeam on {{site.data.keyword.cloud_notm}}" und "Fortinet on {{site.data.keyword.cloud_notm}}" verfügbar.
 * Die Registerkarte **Verfügbare Services** auf der Registerkarte **Services** der Seite mit den Instanzdetails heißt jetzt **Services hinzufügen**.

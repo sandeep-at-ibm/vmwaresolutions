@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-10-05"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -17,7 +17,7 @@ In einer Cloud Foundation-Konfiguration mit mehreren Standorten können Sie eine
 Führen Sie die folgenden Schritte für die primäre Instanz aus V1.5 aus, um für den primären Automatisierungsbenutzer die Berechtigungen hinzuzufügen, die ihn zum Mitglied der Gruppen **Organisations-Admins** und **Schema-Admins** machen.
 
 1. Melden Sie sich beim Windows AD-Server mit dem Kennwort des **Administrators** an.
-2. Öffnen Sie den **Server-Manager** und klicken Sie auf **Extras -> Active Directory-Benutzer und -Computer**.
+2. Öffnen Sie den **Server-Manager** und klicken Sie auf **Extras > Active Directory-Benutzer und -Computer**.
 4. Klicken Sie im Fenster **Active Directory-Benutzer und -Computer** auf den Abschnitt **Benutzer** unter Ihrer Rootdomäne.
 5. Klicken Sie mit der rechten Maustaste auf den Automatisierungsbenutzer, um das Fenster **Eigenschaften** zu öffnen.
 6. Klicken Sie auf die Registerkarte **Mitglied von**.

@@ -24,13 +24,13 @@ Weitere Informationen enthält der Abschnitt [Gegenmaßnahmen für Sicherheitsl�
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
-In diesem Release wird das VMware vCenter Server on IBM Cloud with Hybridity Bundle-Angebot eingeführt. Das vCenter Server with Hybridity Bundle ist eine gehostete private Cloud und unterstützt Sie bei der schnellen und einfachen Erweiterung Ihrer lokalen Infrastruktur in die Cloud. Die VMware-Umgebung basiert auf von IBM bereitgestellten VMware Software Defined Data Center-Lizenzen und umfasst den Service "VMware HCX on {{site.data.keyword.cloud_notm}}" zur einfachen und sicheren Verbindung einer lokalen vSphere 5.0+-Umgebung mit IBM Cloud-Standorten zur Erreichung einer reibungslosen Hybridität der Infrastruktur und einer realen Anwendungsmobilität.
+In diesem Release wird das VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle-Angebot eingeführt. Das vCenter Server with Hybridity Bundle ist eine gehostete private Cloud und unterstützt Sie bei der schnellen und einfachen Erweiterung Ihrer lokalen Infrastruktur in die Cloud. Die VMware-Umgebung basiert auf von IBM bereitgestellten VMware Software Defined Data Center-Lizenzen und umfasst den Service "VMware HCX on {{site.data.keyword.cloud_notm}}" zur einfachen und sicheren Verbindung einer lokalen vSphere 5.0+-Umgebung mit {{site.data.keyword.cloud_notm}}-Standorten zur Erreichung einer reibungslosen Hybridität der Infrastruktur und einer realen Anwendungsmobilität.
 
 Der Service "HCX on {{site.data.keyword.cloud_notm}}" steht nur über die vCenter Server with Hybridity Bundle-Instanz zur Verfügung. Sie können für Ihre vorhandene vCenter Server-Instanz ein Upgrade auf eine vCenter Server with Hybridity Bundle-Instanz durchführen, nachdem Sie das Basis-Software-Update für vCenter Server V2.3 angewendet haben. Weitere Informationen enthält der Abschnitt [Updates auf vCenter Server-Instanzen anwenden](../vcenter/vc_applyingupdates.html).
 
 Weitere Informationen zu vCenter Server with Hybridity Bundle finden Sie in:
 
-* [Überblick zu vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
+* [Übersicht über vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
 * [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle-Instanzen](../vcenter/vc_hybrid_planning.html)
 * [vCenter Server with Hybridity Bundle-Instanzen bestellen](../vcenter/vc_hybrid_orderinginstance.html)
 
@@ -94,8 +94,8 @@ Der Service "HyTrust CloudControl on {{site.data.keyword.cloud_notm}}" ist nun f
 Sie können Instanzen bestellen, die den Service enthalten, oder diesen Service später zu Ihren vorhandenen Instanzen hinzufügen.
 
 Weitere Informationen enthalten die folgenden Abschnitte:
-* [Komponenten und Hinweise für HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)
-* [HyTrust CloudControl on IBM Cloud verwalten](../services/managinghtcc.html)
+* [Komponenten und Hinweise für HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} verwalten](../services/managinghtcc.html)
 
 ### HyTrust DataControl on IBM Cloud
 
@@ -104,8 +104,8 @@ Der Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" ist nun f�
 Sie können Instanzen bestellen, die den Service enthalten, oder diesen Service später zu Ihren vorhandenen Instanzen hinzufügen.
 
 Weitere Informationen enthalten die folgenden Abschnitte:
-* [Komponenten und Hinweise für HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)
-* [HyTrust DataControl on IBM Cloud verwalten](../services/managinghtdc.html)
+* [Komponenten und Hinweise für HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} verwalten](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -118,8 +118,8 @@ Eine neue developerWorks-Anleitung ist verfügbar, die Schritt für Schritt erl�
 ## Updates und Erweiterungen der Benutzerschnittstelle
 
 Die Benutzerschnittstelle wurde aktualisiert und bietet die folgenden Erweiterungen:
-* **Konsistenz**: Die Benutzerschnittstelle bietet nun eine konsistente Darstellung und Funktionsweise in Bezug auf andere Services in IBM Cloud.
-* **Einfacher Zugriff**: Sie können nun auf die VMware-Angebote direkt über den **Katalog** von IBM Cloud zugreifen.
+* **Konsistenz**: Die Benutzerschnittstelle bietet nun eine konsistente Darstellung und Funktionsweise in Bezug auf andere Services in {{site.data.keyword.cloud_notm}}.
+* **Einfacher Zugriff**: Sie können nun auf die VMware-Angebote direkt über den **Katalog** von {{site.data.keyword.cloud_notm}} zugreifen.
 * **Optimiertes und vereinfachtes Bestellverfahren**: Sie können die Bestellung einer VMware-Instanz und die Bereitstellung der entsprechenden Add-on-Services nun über eine einzige Schnittstelle durchführen. Darüber hinaus werden die geschätzten Kosten berechnet und sofort in derselben Schnittstelle angezeigt, sodass Sie Ihre Konfiguration auf Basis Ihres Kostenplans anpassen können.
 * Die BYOL-Option (BYOL = Bring Your Own License) beim Bestellen von Instanzen oder Hinzufügen von Clustern steht für Benutzer der Kategorie "Business Partner" nicht zur Verfügung.
 * Verschiedene Fehlernachrichten und QuickInfos wurden erweitert, um Ihnen bei der Auswahl der geeigneten Einstellung in der Benutzerschnittstelle zu helfen.

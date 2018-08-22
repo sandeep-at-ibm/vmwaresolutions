@@ -30,14 +30,14 @@ Weitere Informationen enthalten die folgenden Abschnitte:
 
 NSX Edge ist jetzt im Lieferumfang der neuen Cloud Foundation-Instanzen enthalten, die Sie bestellen. NSX Edge stellt zur Isolierung eines virtualisierten Netzes Netzperipherieschutz und Gateway-Services bereit.
 
-Während der Instanzbereitstellung wird durch IBM ein NSX Edge Services Gateway (ESG) für das Management bereitgestellt. Dieses ESG wird von den IBM Management-VMs für die Kommunikation mit bestimmten externen IBM Managementkomponenten verwendet, die mit der Automatisierung zusammenhängen. Dieses ESG wird mit zwei Schnittstellen bereitgestellt. Eine Schnittstelle ist mit dem privaten LAN der IBM Cloud verbunden und die andere Schnittstelle ist mit dem öffentlichen VLAN der IBM Cloud verbunden.
+Während der Instanzbereitstellung wird durch IBM ein NSX Edge Services Gateway (ESG) für das Management bereitgestellt. Dieses ESG wird von den IBM Management-VMs für die Kommunikation mit bestimmten externen IBM Managementkomponenten verwendet, die mit der Automatisierung zusammenhängen. Dieses ESG wird mit zwei Schnittstellen bereitgestellt. Eine Schnittstelle ist mit dem privaten VLAN der {{site.data.keyword.cloud_notm}} verbunden und die andere Schnittstelle ist mit dem öffentlichen VLAN der {{site.data.keyword.cloud_notm}} verbunden.
 
 Zur Gewährleistung der Sicherheit gelten Firewallregeln, die nur abgehenden HTTPS-Datenverkehr zulassen, der durch die Management-VMs eingeleitet
 wird. Dieses ESG wird in einer Konfiguration des Typs "L (Groß)" bereitgestellt; die Konfiguration kann nur durch den IBM Support geändert werden.
 
 Weitere Informationen enthalten die folgenden Abschnitte:
 
-* [Komponenten der Cloud Foundation-Instanz](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)
+* [Technische Spezifikationen für Cloud Foundation-Instanzen](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 

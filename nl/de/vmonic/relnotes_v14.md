@@ -22,7 +22,7 @@ Die folgenden Komponenten sind neu verfügbar oder wurden aktualisiert:
 * VMware ESXi 6.0 u2 p04
 * Für den Service von Microsoft Active Directory (AD) und den DNS-Service, die in diesem Release zur Unterstützung von Konfigurationen mit mehreren Standorten erforderlich sind, wird eine neue Virtual Server-Instanz (VSI) von Windows bestellt. Diese VSI hat die folgenden Spezifikationen: Windows 2012 R2 (8 GB RAM / 2 CPU-Kerne / 100 GB Plattenspeicher / Duale 1-Gbps-Uplinks für private Netze).
 
-Weitere Informationen enthält der Abschnitt [Überblick zu Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
+Weitere Informationen enthält der Abschnitt [Übersicht über Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
 
 ## Komponentenaktualisierungen für vCenter Server-Instanzen
 
@@ -42,7 +42,7 @@ Informationen zu den in VMware NSX for vSphere 6.2.4 eingeführten Erweiterungen
 
 NSX Edge ist jetzt im Lieferumfang der neuen vCenter Server-Instanzen enthalten, die Sie bestellen. NSX Edge stellt zur Isolierung eines virtualisierten Netzes Netzperipherieschutz und Gateway-Services bereit.
 
-Während der Instanzbereitstellung wird durch IBM ein VMware NSX Edge Services Gateway (ESG) für das Management bereitgestellt. Dieses ESG wird von den IBM Management-VMs für die Kommunikation mit bestimmten externen IBM Managementkomponenten verwendet, die mit der Automatisierung zusammenhängen. Dieses ESG wird mit zwei Schnittstellen bereitgestellt. Eine Schnittstelle ist mit dem privaten LAN der IBM Cloud verbunden und die andere Schnittstelle ist mit dem öffentlichen VLAN der IBM Cloud verbunden.
+Während der Instanzbereitstellung wird durch IBM ein VMware NSX Edge Services Gateway (ESG) für das Management bereitgestellt. Dieses ESG wird von den IBM Management-VMs für die Kommunikation mit bestimmten externen IBM Managementkomponenten verwendet, die mit der Automatisierung zusammenhängen. Dieses ESG wird mit zwei Schnittstellen bereitgestellt. Eine Schnittstelle ist mit dem privaten VLAN der {{site.data.keyword.cloud_notm}} verbunden und die andere Schnittstelle ist mit dem öffentlichen VLAN der {{site.data.keyword.cloud_notm}} verbunden.
 
 Zur Gewährleistung der Sicherheit gelten Firewallregeln, die nur abgehenden HTTPS-Datenverkehr zulassen, der durch die Management-VMs eingeleitet
 wird. Dieses ESG wird in einer Konfiguration des Typs "L (Groß)" bereitgestellt; die Konfiguration kann nur durch den IBM Support geändert werden. Weitere Informationen enthalten die folgenden Abschnitte:

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -31,7 +31,7 @@ Sie können Benachrichtigungen über den Status von System- oder Benutzeroperati
           <dt class="dt dlterm">Kritisch</dt>
           <dd class="dd">Ein kritisches Ereignis hat möglicherweise Auswirkungen auf das gesamte System oder den gesamten Service.</dd>
           <dt class="dt dlterm">Fehler</dt>
-          <dd class="dd">Während einer Operation ist ein Fehlerereignis aufgetreten, dass möglicherweise das Eingreifen des Administrators oder Endbenutzers erfordert.</dd>
+          <dd class="dd">Während einer Operation ist ein Fehlerereignis aufgetreten, dass möglicherweise das Eingreifen des Administrators oder Benutzers erfordert.</dd>
           <dt class="dt dlterm">Warnung</dt>
           <dd class="dd">Eine Komponente ist fehlgeschlagen oder funktioniert nicht ordnungsgemäß. Der Fehler führt jedoch nicht zu einer Unterbrechung des laufenden Komponentenprozesses.</dd>
             <dt class="dt dlterm">Information</dt>
@@ -71,7 +71,7 @@ Sie können Benachrichtigungen über den Status von System- oder Benutzeroperati
 
 Standardmäßig werden alle nicht gelesenen Benachrichtigungen angezeigt. Sie können die Benachrichtigungen nach Status, Prioritätsstufe und Typ filtern. Wählen Sie zum Filtern der Benachrichtigungen in den Dropdown-Listen **Status**, **Prioritätsstufe** oder **Typ** nur die Kontrollkästchen für die Elemente aus, die angezeigt werden sollen.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Häufig gestellte Fragen](faq.html)
 * [Benutzerkonten und -einstellungen](useraccount.html)

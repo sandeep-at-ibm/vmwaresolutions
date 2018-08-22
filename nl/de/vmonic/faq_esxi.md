@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -39,7 +39,7 @@ Bei Instanzen, die in V2.1 oder früheren Releases bereitgestellt wurden, müsse
 
 Die Namen und IP-Adressen von ESXi-Servern können nicht geändert werden, weil sie für die Windows-DNS-Auflösung registriert werden. Änderungen könnten dazu führen, dass während der Bereitstellung oder bei vCenter Server-Funktionen Fehler auftreten.
 
-**Hinweis**: Versuchen Sie nicht, die Namen von ESXi-Servern mithilfe der Funktion **Einheit umbenennen** in der IBM Cloud-Benutzerschnittstelle zu ändern. Diese Funktion ändert zwar tatsächlich den vollständig qualifizierten Domänennamen des ESXi-Servers, aber die konfigurierten vCenter- und Windows-VSI-Hostregistrierungen werden hierdurch falsch und können Fehler verursachen.
+**Hinweis:** Versuchen Sie nicht, die Namen von ESXi-Servern mithilfe der Funktion **Einheit umbenennen** in der {{site.data.keyword.cloud_notm}}-Benutzerschnittstelle zu ändern. Diese Funktion ändert zwar tatsächlich den vollständig qualifizierten Domänennamen des ESXi-Servers, aber die konfigurierten vCenter- und Windows-VSI-Hostregistrierungen werden hierdurch falsch und können Fehler verursachen.
 
 ## Kann ich den Rootzugriff auf meinen ESXi-Servern inaktivieren?
 

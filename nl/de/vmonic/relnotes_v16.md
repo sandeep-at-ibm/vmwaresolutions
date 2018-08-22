@@ -21,7 +21,7 @@ Die folgenden Komponenten sind neu verfügbar oder wurden aktualisiert:
 *  Neue Hardwarespezifikationen: **S (Klein)** oder **Standard**, abhängig von Ihren Anforderungen.
 *  Neue verfügbare Rechenzentren für die Bereitstellung: **HKG02 - Hongkong**, **OSL01 - Oslo**, **SEO01 - Seoul**, **SNG01 - Singapur** und **SYD04 - Sydney**.
 
-Die vollständige Liste der Komponenten enthält der Abschnitt [Überblick zu VMware Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
+Die vollständige Liste der Komponenten enthält der Abschnitt [Übersicht über VMware Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
 
 ## Updates für VMware vCenter Server-Instanzen
 
@@ -29,7 +29,7 @@ Die vollständige Liste der Komponenten enthält der Abschnitt [Überblick zu VM
 
 Ab dem Release V1.6 sind mehrere Erweiterungen für Ihre vCenter Server-Instanzen verfügbar.
 
-*  Vollständige Implementierung der Spezifikation von V2.0 für das vCenter Server-Angebot. Weitere Informationen finden Sie auf der Seite [VMware vCenter Server on IBM Cloud solution architecture](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0).
+*  Vollständige Implementierung der Spezifikation von V2.0 für das vCenter Server-Angebot. Weitere Informationen finden Sie auf der Seite zur [Architektur der VMware vCenter Server on {{site.data.keyword.cloud_notm}}-Lösung](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0).
 *  Neue Hardwarespezifikationen: **S (Klein)**, **M (Mittel)** oder **L (Groß)**, abhängig von Ihren Anforderungen.
 *  Neue verfügbare Rechenzentren für die Bereitstellung: **HKG02 - Hongkong**, **OSL01 - Oslo**, **SEO01 - Seoul**, **SNG01 - Singapur** und **SYD04 - Sydney**.
 *  In Ihrer Instanzbestellung sind mindestens zwei ESXi-Server mit VMware vSphere DRS (Distributed Resource Scheduler) und VMware HA (High Availability) standardmäßig aktiviert.
