@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -24,7 +24,6 @@ lastupdated: "2018-06-22"
 
 ## 系统设置
 
-<!--**Important: Do not modify any values that are set during ordering and cluster deployment. Doing so can result in your cluster becoming unusable.**-->
 订购新的 vSphere 集群时，必须指定以下系统设置。
 
 ### 集群名称
@@ -187,7 +186,7 @@ lastupdated: "2018-06-22"
 
 #### FortiGate Physical Appliance 300 序列 HA 对
 
-您还可以选择是否包含 FortiGate Physical Appliance 300 系列 HA 对以确保云环境安全。有关更多信息，请参阅 [FortiGate Security Appliance on IBM Cloud 概述](../services/fsa_considerations.html)。
+您还可以选择是否包含 FortiGate Physical Appliance 300 系列 HA 对以确保云环境安全。有关更多信息，请参阅 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概述](../services/fsa_considerations.html)。
 
 ## 订单摘要
 
@@ -223,7 +222,7 @@ lastupdated: "2018-06-22"
 
    **注**：这将仅安装 {{site.data.keyword.baremetal_short}}。您负责在集群部署后安装和配置各种组件（例如，VMware vCenter、VMware NSX 和 VMware vSAN）。
 
-## 结果
+### 结果
 
 如果已将集群配置另存为模板，那么会收到控制台通知，指示配置已成功保存，然后您可以在**集群配置**列表中找到该模板。
 
@@ -231,7 +230,7 @@ lastupdated: "2018-06-22"
 
 **注**：与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**部署的实例**页面。
 
-## 相关链接
+### 相关链接
 
 * [基于现有配置订购 vSphere 集群](vs_orderingbasedonexistingconfig.html)
 * [扩展现有集群](vs_scalingexistingclusters.html)

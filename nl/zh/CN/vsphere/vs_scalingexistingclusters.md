@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -30,13 +30,13 @@ lastupdated: "2018-05-08"
    * 要将配置另存为模板而不下订单，请单击**保存配置**。
    * 要下订单，请确保要向其收费的帐户正确，复查并接受条款，然后单击**供应**。
 
-## 结果
+### 结果
 
 集群扩展部署会自动启动，并且您将收到电子邮件确认，指示正在处理订单。集群准备就绪可供使用时，将通过电子邮件通知您。
 
 **注**：与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**部署的实例**页面。
 
-## 相关链接
+### 相关链接
 
 * [订购新的 vSphere 集群](vs_orderinginstances.html)
 * [基于现有配置订购 vSphere 集群](vs_orderingbasedonexistingconfig.html)
