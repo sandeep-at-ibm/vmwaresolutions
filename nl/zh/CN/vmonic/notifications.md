@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-05-30"
           <dt class="dt dlterm">严重</dt>
           <dd class="dd">严重事件可能会影响整个系统或服务。</dd>
           <dt class="dt dlterm">错误</dt>
-          <dd class="dd">在操作期间发生错误事件，可能需要管理员或最终用户的干预。</dd>
+          <dd class="dd">在操作期间发生错误事件，可能需要管理员或用户的干预。</dd>
           <dt class="dt dlterm">警告</dt>
           <dd class="dd">组件发生故障或未正常工作。但是，故障并未中断组件的持续处理。</dd>
             <dt class="dt dlterm">参考</dt>
@@ -70,7 +70,7 @@ lastupdated: "2018-05-30"
 
 缺省情况下，将显示所有未读通知。可以按状态、严重性和类型来过滤通知。要过滤通知，请在**状态**、**严重性**或**类型**下拉列表中仅选中要显示的项所对应的复选框。
 
-## 相关链接
+### 相关链接
 
 * [常见问题](faq.html)
 * [用户帐户和设置](useraccount.html)

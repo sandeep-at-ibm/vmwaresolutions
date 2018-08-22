@@ -24,7 +24,7 @@ lastupdated: "2017-03-30"
 
 ## 服务收费模型更新
 
-对于 Cloud Foundation 实例，引入了新的 _SDDC Manager_ 许可证，将按每个节点每月收取费用。有关更多信息，请参阅 [Cloud Foundation 实例组件](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)。
+对于 Cloud Foundation 实例，引入了新的 _SDDC Manager_ 许可证，将按每个节点每月收取费用。有关更多信息，请参阅 [Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 
 ## 易用性增强功能
 

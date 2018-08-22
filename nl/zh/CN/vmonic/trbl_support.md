@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-22"
 1. 转至
    https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
 2. 使用 **IBM 标识**帐户登录到控制台。
-3. 单击控制台右上角的**支持 > 添加凭单**。
+3. 单击条幅左侧的**支持 > 添加凭单**。
 4. 在 {{site.data.keyword.slportal_short}} 页面上，单击**使用 IBM 标识登录**，然后您将自动登录到该门户网站。
 5. 查看 _{{site.data.keyword.cloud_notm}} 基础架构和平台服务支持策略_，然后单击**确认**。
 

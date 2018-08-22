@@ -4,27 +4,27 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-09"
+lastupdated: "2018-07-23"
 
 ---
 
-# IBM Cloud 帐户的需求
+# IBM Cloud 基础架构帐户的需求
 
-要使用 {{site.data.keyword.vmwaresolutions_full}} 订购实例，您必须具有 {{site.data.keyword.cloud_notm}} 帐户。在实例中订购的组件的成本将计入到该 {{site.data.keyword.cloud_notm}} 帐户。
+要使用 {{site.data.keyword.vmwaresolutions_full}} 订购实例，您必须具有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户。在实例中订购的组件的成本将计入到该 {{site.data.keyword.cloud_notm}} 帐户。
 
-**注**：{{site.data.keyword.cloud_notm}} 帐户先前称为 IBM SoftLayer 帐户。
+**注**：{{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户先前称为 IBM SoftLayer 帐户。
 
-## IBM Cloud 帐户的许可权
+## IBM Cloud 基础架构帐户的许可权
 
-使用的 {{site.data.keyword.cloud_notm}} 帐户必须具有特定许可权，才能订购实例中的组件并代表您执行操作。许可权需求适用于要在 {{site.data.keyword.vmwaresolutions_short}} 控制台中订购的所有类型的实例和服务。
+使用的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须具有特定许可权，才能订购实例中的组件并代表您执行操作。许可权需求适用于要在 {{site.data.keyword.vmwaresolutions_short}} 控制台中订购的所有类型的实例和服务。
 
-授权用户可以在 {{site.data.keyword.slportal_full}} 上验证和更新 {{site.data.keyword.cloud_notm}} 帐户的许可权。有关更多信息，请参阅[管理用户概要文件](../../../customer-portal/cpmanuserprof.html){:new_window}中的_编辑用户的客户门户网站许可权_。
+授权用户可以在 {{site.data.keyword.slportal}} 中验证和更新 {{site.data.keyword.cloud_notm}} 基础架构帐户的许可权。有关更多信息，请参阅[管理用户概要文件](../../../customer-portal/cpmanuserprof.html){:new_window}中的_编辑用户的客户门户网站许可权_。
 
-表 1. {{site.data.keyword.cloud_notm}} 帐户的必需许可权
+表 1. {{site.data.keyword.cloud_notm}} 基础架构帐户的必需许可权
 
 |许可权|详细信息|
 |:-------------------|:----------------------------------------|
-|添加服务器|以下操作需要此许可权：订购运行 VMware ESXi 的 {{site.data.keyword.baremetal_long}}，以及供应要用于实例配置、维护和支持操作的每小时虚拟服务器。|
+|添加服务器|以下操作需要此许可权：订购运行 VMware ESXi 的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}，以及供应要用于实例配置、维护和支持操作的每小时虚拟服务器。|
 |取消服务器|需要此许可权来释放并回收运行 VMware ESXi 的 {{site.data.keyword.baremetal_short}}。如果删除实例，那么订购的组件会自动按正确的依赖关系顺序释放。|
 |查看虚拟服务器详细信息|需要此许可权来检索服务器供应详细信息，订单验证和自动化配置需要这些详细信息。|
 |添加存储器|需要此许可权来为实例订购备份存储器和共享存储器。|
@@ -38,13 +38,13 @@ lastupdated: "2018-05-09"
 |查看硬件详细信息|需要此许可权来检索硬件详细信息，订单验证和自动化配置需要这些详细信息。|
 |查看许可证|需要此许可权来检索和验证实例使用的许可证。|
 |查看密码|需要此许可权才能管理订购的 VSI。|
-|管理设备监视|下订单时不需要此许可权，但需要此许可权来检索和验证实例中运行 VMware ESXi 服务器的 {{site.data.keyword.baremetal_long}} 的监视状态。|
+|管理设备监视|下订单时不需要此许可权，但需要此许可权来检索和验证实例中运行 VMware ESXi 服务器的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 的监视状态。|
 
 ## 经典（非 VRF）帐户的 VLAN 生成
 
-如果使用的是经典（非 VRF）{{site.data.keyword.cloud_notm}} 帐户，那么必须启用 VLAN 生成。如果经典帐户未启用 VLAN 生成，那么 VMware 虚拟化环境的各种组件可能无法相互通信。要启用 {{site.data.keyword.cloud_notm}} 帐户中的 VLAN 生成，请参阅[启用或禁用 VLAN 生成](../../../infrastructure/vlans/vlan-spanning.html){:new_window}。
+如果使用的是经典（非 VRF）{{site.data.keyword.cloud_notm}} 基础架构帐户，那么必须启用 VLAN 生成。如果经典帐户未启用 VLAN 生成，那么 VMware 虚拟化环境的各种组件可能无法相互通信。要启用 {{site.data.keyword.cloud_notm}} 基础架构帐户中的 VLAN 生成，请参阅[启用或禁用 VLAN 生成](../../../infrastructure/vlans/vlan-spanning.html){:new_window}。
 
-## 相关链接
+### 相关链接
 
 * [Cloud Foundation 实例的需求](../sddc/sd_planning.html)
 * [vCenter Server 实例的需求](../vcenter/vc_planning.html)

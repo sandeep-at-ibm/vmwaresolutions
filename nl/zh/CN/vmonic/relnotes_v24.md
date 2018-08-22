@@ -24,7 +24,7 @@ lastupdated: "2018-06-22"
 
 ## 本地语言支持
 
-从 V2.4 发行版开始，本地语言支持 (NLS) 可用于 IBM Cloud for VMware Solutions。控制台上的所有功能（包括用户文档）都提供多语言版本。
+从 V2.4 发行版开始，本地语言支持 (NLS) 可用于 {{site.data.keyword.vmwaresolutions_short}}。控制台上的所有功能（包括用户文档）都提供多语言版本。
 
 除了英语之外，还支持以下语言：
 * 德语
@@ -73,7 +73,7 @@ lastupdated: "2018-06-22"
 
 ### VMware HCX on IBM Cloud
 
-现在，订购此服务时，有一个新选项可供您为 HCX 互连选择公用网络或专用网络。有关更多信息，请参阅[订购 VMware HCX on IBM Cloud](../services/hcx_ordering.html)。
+现在，订购此服务时，有一个新选项可供您为 HCX 互连选择公用网络或专用网络。有关更多信息，请参阅[订购 VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_ordering.html)。
 
 ## 新增和更新的文档
 
@@ -87,15 +87,15 @@ lastupdated: "2018-06-22"
 
 有关更多信息，请参阅：
 
-* [订购 F5 on IBM Cloud](../services/f5_ordering.html)
-* [订购 FortiGate Security Appliance on IBM Cloud](../services/fsa_ordering.html)
-* [订购 FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_ordering.html)
-* [订购 Hytrust CloudControl on IBM Cloud](../services/htcc_ordering.html)
-* [订购 Hytrust DataControl on IBM Cloud](../services/htdc_ordering.html)
-* [订购 IBM Spectrum Protect Plus on IBM Cloud](../services/spp_ordering.html)
-* [订购 KMIP for VMware on IBM Cloud](../services/kmip_ordering.html)
-* [订购 Veeam on IBM Cloud](../services/veeam_ordering.html)
-* [订购 Zerto on IBM Cloud](../services/zerto_ordering.html)
+* [订购 F5 on {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
+* [订购 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)
+* [订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)
+* [订购 Hytrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_ordering.html)
+* [订购 Hytrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_ordering.html)
+* [订购 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/spp_ordering.html)
+* [订购 KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_ordering.html)
+* [订购 Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_ordering.html)
+* [订购 Zerto on {{site.data.keyword.cloud_notm}}](../services/zerto_ordering.html)
 
 ## 用户界面更新和增强功能
 

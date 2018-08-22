@@ -26,7 +26,7 @@ lastupdated: "2017-07-05"
 
 * 现在，向实例添加新节点时，在 5 月 22 日前部署并因此使用 V3 服务器的 VMware Cloud Foundation 部署将订购 V4 服务器。这些服务器的内存为 256 GB；如果需要 512 GB 内存，请在添加服务器后，开具支持凭单以请求将服务器升级到 512 GB 内存。有关联系 IBM 支持的更多信息，请参阅[联系 IBM 支持](trbl_support.html)。
 
-有关组件的更多信息，请参阅 [Cloud Foundation 实例组件](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)。
+有关组件的更多信息，请参阅 [Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 
 ### 更新过程需求
 

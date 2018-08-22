@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -24,14 +24,14 @@ lastupdated: "2018-05-25"
 |添加 ESXi 服务器|支持|支持|支持|支持。不包含自动化配置|
 |除去 ESXi 服务器|支持|支持|支持|支持。不包含自动化配置|
 |多集群支持|5 个集群|10 个集群|10 个集群|支持。不包含自动化配置|
-|客户机管理的 VMware 堆栈更新和修补|IBM CloudDriver 和 VMware 更新|IBM CloudDriver|IBM CloudDriver|不包含自动化修补|
-|备份与复原|支持|支持|支持|不包含自动化备份解决方案配置|
+|客户机管理的 VMware 堆栈更新和修补|VMware 更新|不包含|不包含|不包含|
+|备份与复原|手动使用 IBM Spectrum Protect Plus 或 Veeam|手动使用 IBM Spectrum Protect Plus 或 Veeam|手动使用 IBM Spectrum Protect Plus 或 Veeam|不包含备份和复原解决方案|
 |软件定义的联网|NSX Enterprise|NSX Base、Advanced 或 Enterprise|NSX Advanced 或 Enterprise|NSX Standard、Base 或 Enterprise。不包含自动化配置|
 |vSphere 和 vSAN 的 BYOL|每个集群完全支持|每个集群完全支持|不支持|支持|
 |vCenter 和 NSX 的 BYOL|每个实例完全支持|每个实例完全支持|不支持|支持|
 |NSX 许可证升级选项|无|可从 NSX Base 升级到 Advanced 或 Enterprise，也可从 NSX Advanced 升级到 Enterprise。可升级到 vCenter Server with Hybridity Bundle。|可从 NSX Advanced 升级到 Enterprise|无|
 |vSAN 许可证版本|vSAN Advanced 或 Enterprise|vSAN Advanced 或 Enterprise|vSAN Advanced 或 Enterprise|vSAN Advanced 或 Enterprise|
-|附加组件服务|支持，不包括 HCX on {{site.data.keyword.cloud_notm}}。|支持，不包括 HCX on {{site.data.keyword.cloud_notm}}。可升级到 vCenter Server with Hybridity Bundle。|支持，包括 HCX on {{site.data.keyword.cloud_notm}}。|支持。不包含自动化配置|
+|附加组件服务|支持，不包括 HCX on {{site.data.keyword.cloud_notm}}。|支持，不包括 HCX on {{site.data.keyword.cloud_notm}}。可升级到 vCenter Server with Hybridity Bundle。|支持，包括 HCX on {{site.data.keyword.cloud_notm}}。|此解决方案的自动化不支持，但您可以使用并安装自己的软件。|
 
 **注**：
 

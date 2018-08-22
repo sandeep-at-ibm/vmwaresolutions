@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-07"
 
 ## IBM Cloud for VMware Solutions 控制台
 
-{{site.data.keyword.vmwaresolutions_short}} 控制台是用于订购和管理部署的界面。每个部署在控制台中作为一个实例进行管理。控制台是与 {{site.data.keyword.slportal_full}} 分开的独立用户界面。
+{{site.data.keyword.vmwaresolutions_short}} 控制台是用于订购和管理部署的界面。每个部署在控制台中作为一个实例进行管理。控制台是与 {{site.data.keyword.slportal}} 分开的独立用户界面。
 
 ## IBM 标识帐户
 
@@ -43,10 +43,10 @@ lastupdated: "2018-06-07"
 
 为了使 {{site.data.keyword.vmwaresolutions_short}} 控制台上的查看和工作达到最佳效果，请将屏幕分辨率设置为至少 1024 x 500 像素（宽 x 高）。
 
-## 相关链接
+### 相关链接
 
 * [关于 {{site.data.keyword.vmwaresolutions_short}}](vmonic/prod_overview.html)
 * [Cloud Foundation 概述](../sddc/sd_cloudfoundationoverview.html)
 * [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)
-* [Zerto on IBM Cloud 概述](../services/addingzertodr.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 概述](../services/addingzertodr.html)
 * [故障诊断](troubleshooting.html)
