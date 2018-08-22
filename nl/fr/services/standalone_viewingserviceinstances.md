@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -36,10 +36,9 @@ Tableau 2. Description des statuts des instances HCX on {{site.data.keyword.clou
 | Installé | L'instance est prête pour utilisation. |
 | Retrait en cours | L'instance est en cours de suppression. |
 
-## Liens connexes
+### Liens connexes
 
 * [Commande d'instances HCX on {{site.data.keyword.cloud_notm}} locales](standalone_orderingserviceinstances.html)
 * [Suppression d'instances HCX on {{site.data.keyword.cloud_notm}} locales](standalone_deletingserviceinstances.html)
 * [Glossaire des termes HCX](hcx_glossary.html)
 * [Documentation VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

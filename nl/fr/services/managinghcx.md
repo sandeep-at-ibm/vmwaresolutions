@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ Pour appliquer des correctifs de maintenance envoyés par commande push vers vot
 
 Si vous ne voyez pas une mise à jour de génération que vous avez attendez, si vous rencontrez des difficultés avec HCX ou si vous souhaitez que la dernière génération de HCX soit immédiatement envoyée par commande push vers votre système, ouvrez un ticket de demande de service en suivant les étapes décrites dans [Contacter le support IBM](../vmonic/trbl_support.html).
 
-## Liens connexes
+### Liens connexes
 
 * [Présentation de HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
 * [Glossaire des termes HCX](hcx_glossary.html)

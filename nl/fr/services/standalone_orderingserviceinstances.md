@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,8 +20,8 @@ Assurez-vous que :
 
 ## Procédure
 
-1. Cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. Faites défiler l'écran vers le tableau **Instances HCX locales** et cliquez sur **Commander une instance**.
+1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche. 
+2. Faites défiler l'écran vers le tableau **Instances HCX locales** et cliquez sur **Mettre à disposition un nouvel élément**.
 3. Renseignez la zone **Nom de l'instance locale**, puis cliquez sur **Suivant**.
 4. Vérifiez la configuration de l'instance avant de passer la commande.
    1. Passez en revue les paramètres de l'instance.
@@ -39,10 +39,9 @@ Lorsque la clé d'activation est prête pour utilisation, l'instance prend le st
 
 Affichez et gérez l'instance HCX on {{site.data.keyword.cloud_notm}} locale que vous avez commandée.
 
-## Liens connexes
+### Liens connexes
 
 * [Affichage d'instances HCX on {{site.data.keyword.cloud_notm}} locales](standalone_viewingserviceinstances.html)
 * [Suppression d'instances HCX on {{site.data.keyword.cloud_notm}} locales](standalone_deletingserviceinstances.html)
 * [Glossaire des termes HCX](hcx_glossary.html)
 * [Documentation VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

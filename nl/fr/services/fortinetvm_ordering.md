@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-15"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -15,13 +15,13 @@ Vous pouvez commander le service FortiGate Virtual Appliance on {{site.data.keyw
 ## Commande de FortiGate Virtual Appliance on IBM Cloud pour une nouvelle instance
 
 Vous pouvez commander une nouvelle instance avec FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} à l'aide de l'une des méthodes suivantes :
-* Depuis la console {{site.data.keyword.vmwaresolutions_full}}, lorsque vous commandez une nouvelle instance, sélectionnez **FortiGate Virtual Appliance on IBM Cloud** dans la section **Services**.
+* Depuis la console {{site.data.keyword.vmwaresolutions_short}}, lorsque vous commandez une nouvelle instance, sélectionnez **FortiGate Virtual Appliance on IBM Cloud** dans la section **Services**.
 * Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **FortiGate Virtual Appliance on IBM Cloud**, spécifiez les paramètres de service et sélectionnez **Ajouter à une nouvelle instance**.
 
 ## Commande de FortiGate Virtual Appliance on IBM Cloud pour une instance existante
 
 Vous pouvez ajouter le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} dans une instance existante à l'aide de l'une des méthodes suivantes :
-* Depuis la console {{site.data.keyword.vmwaresolutions_short}}, affichez l'instance pour laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter un service**.
+* Depuis la console {{site.data.keyword.vmwaresolutions_short}}, affichez l'instance pour laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter**.
 * Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **FortiGate Virtual Appliance on IBM Cloud**, spécifiez les paramètres de service et sélectionnez **Ajouter à une instance existante**.
 
 ## Configuration du service FortiGate Virtual Appliance on IBM Cloud
@@ -34,7 +34,7 @@ Entrez le nom du service.
 
 ### Taille de déploiement
 
-IBM Cloud fournit les options de taille de déploiement suivantes :
+{{site.data.keyword.cloud_notm}} fournit les options de taille de déploiement suivantes : 
 * Petite (2 UC virtuelles/4 Go de RAM)
 * Moyenne (4 UC virtuelles/6 Go de RAM)
 * Grande (8 UC virtuelles/12 Go de RAM)
@@ -53,7 +53,7 @@ Le modèle de licence pour le service FortiGate Virtual Appliance on {{site.data
 
 **Important** : vous ne pouvez pas modifier le modèle de licence après l'installation du service. Pour modifier le modèle de licence, vous devez retirer le service existant, puis le réinstaller en sélectionnant une autre option de licence.
 
-## Liens connexes
+### Liens connexes
 
 * [Présentation de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_considerations.html)
 * [Gestion de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](managingfortinetvm.html)

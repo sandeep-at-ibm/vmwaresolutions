@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -15,6 +15,24 @@ Le service F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) fourn
 Vous pouvez installer plusieurs instances de ce service si besoin.
 
 **Disponibilité** : ce service est disponible uniquement pour les instances qui sont déployées en version 1.9 ou dans des éditions ultérieures.
+
+## Spécifications techniques relatives à F5 on IBM Cloud
+
+Les composants suivants sont inclus avec le service F5 on {{site.data.keyword.cloud_notm}} :
+
+### Machines virtuelles
+* Deux machines virtuelles avec toutes les options disponibles.
+* 2, 4 ou 8 UC virtuelles par machine virtuelle en fonction de l'option de l'octroi de licence
+* 4, 8 ou 16 Go de mémoire RAM par machine virtuelle en fonction de l'option de l'octroi de licence
+
+### Utilisation en réseau
+* VXLAN (Private Virtual Extensible LAN) pour la synchronisation haute disponibilité
+* Accès à TMSH (Traffic Management Shell) et à la console de gestion via un réseau de gestion privé
+
+### Licences et frais
+Des frais de licence sont appliqués pour chaque machine virtuelle à chaque cycle de facturation en fonction de l'option d'octroi de licence (Bien, Mieux ou Meilleur) et de la bande passante choisie. 
+
+**Important: ** vous ne pouvez pas modifier le niveau d'octroi de licence près installation du service. Pour modifier le niveau d'octroi de licence, vous devez supprimer le service existant, puis le réinstaller en sélectionnant une autre option d'octroi de licence.
 
 ## Remarques relatives à l'installation de F5 on IBM Cloud
 
@@ -52,7 +70,7 @@ Vous devez respecter les exigences suivantes afin d'éviter les incidents avec l
 * Les deux serveurs ESXi actifs disposent de suffisamment de ressources pour héberger une machine virtuelle BIG-IP VE sur chaque serveur ESXi avec une réservation de 100 % d'UC et de RAM.
 * VMware vSphere HA dispose de suffisamment de ressources pour héberger les deux machines virtuelles BIG-IP avec 100 % d'UC et de RAM.
 
-Compte tenu de ces exigences, vous devez prévoir l'espace requis pour F5 on {{site.data.keyword.cloud_notm}}. Au besoin, avant de commander F5 on {{site.data.keyword.cloud_notm}}, ajoutez 1 à 2 serveurs ESXi à votre instance et/ou réduisez la réservation d'UC de vSphere HA pour basculement. 
+Compte tenu de ces exigences, vous devez prévoir l'espace requis pour F5 on {{site.data.keyword.cloud_notm}}. Au besoin, avant de commander F5 on {{site.data.keyword.cloud_notm}}, ajoutez 1 à 2 serveurs ESXi à votre instance et/ou réduisez la réservation d'UC de vSphere HA pour basculement.
 
 ## Exemple de commande de F5 on IBM Cloud
 
@@ -78,7 +96,7 @@ Dans ce cas, l'installation de F5 on {{site.data.keyword.cloud_notm}} risque d'�
 
 Avant de supprimer le service F5 on {{site.data.keyword.cloud_notm}}, vérifiez que la configuration BIG-IP VE existante a été correctement supprimée. Plus précisément, que le trafic réseau a été routé de manière à contourner BIG-IP VE au lieu de traverser BIG-IP VE. Sinon, le trafic de données existant à partir de votre environnement risque d'être impacté.
 
-## Liens connexes
+### Liens connexes
 
 * [Commande de F5 on {{site.data.keyword.cloud_notm}}](f5_ordering.html)
 * [Gestion de F5 on {{site.data.keyword.cloud_notm}}](managing_f5.html)
