@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,7 +20,7 @@ BYOL (Bring Your Own License) は、V1.8 以降のリリースの VMware Cloud F
 * VMware NSX
 * VMware vSAN
 
-自分で所有しているライセンスを VMware コンポーネントで使用することを選択し、有効なライセンス・キーを提供する場合、そのコンポーネントのライセンスは IBM から注文されません。そのコンポーネントの月単位のライセンス料金は、{{site.data.keyword.cloud}} インフラストラクチャー・アカウントに請求されません。
+自分で所有しているライセンスを VMware コンポーネントで使用することを選択し、有効なライセンス・キーを提供する場合、そのコンポーネントのライセンスは IBM から注文されません。そのコンポーネントの月単位のライセンス料金は、{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントに請求されません。
 
 **注:** ビジネス・パートナーであるユーザーは、BYOL 機能を使用できません。
 
@@ -120,9 +120,9 @@ vCenter Server インスタンスで NFS ストレージを使用している場
 
 ## vCenter Server with Hybridity Bundle のライセンスと vCenter Server のライセンスの違いはどこにありますか?
 
-vCenter Server で利用できる個々の VMware ライセンスは、CPU 単位の価格設定になっています。 IBM が提供する CPU 単位のどの VMware ライセンスでも、CPU 1 個あたりのコア数が 16 を超えるサーバー (Dual Intel Xeon Gold 6140 など) では、価格が 1.3x にアップされます。
+vCenter Server で利用できる個々の VMware ライセンスは、CPU 単位の価格設定になっています。 IBM が提供するすべての CPU 単位の VMware ライセンスと同様に、CPU 1 個あたりのコア数が 16 を超えるすべてのサーバー (Dual Intel Xeon Gold 6140 など) で、価格が 1.3x にアップされます。
 
-vCenter Server with Hybridity Bundle は、VMware のライセンスやエディションをあらかじめ組み合わせたセットであり、CPU 単位ではなくコア単位でライセンスが交付されます。 したがって、これらのインスタンスのライセンス価格は変わりません。
+vCenter Server with Hybridity Bundle は、VMware のライセンスやエディションが規定されたセットであり、CPU 単位ではなくコア単位でライセンスが交付されます。 したがって、これらのインスタンスのライセンス価格は変わりません。
 
 ## vCenter Server with Hybridity Bundle では、IBM 提供 VMware ライセンスのどんなコンポーネントやエディションを利用できますか?
 

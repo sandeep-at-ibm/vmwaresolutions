@@ -24,7 +24,7 @@ VRF (Virtual Routing and Forwarding) SoftLayer アカウントの場合、変更
 
 ## サービス料金モデルの更新
 
-Cloud Foundation インスタンスには、新しい _SDDC Manager_ ライセンスが導入されています。これは、各ノードに適用される月額料金です。 詳しくは、[Cloud Foundation インスタンスのコンポーネント](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)を参照してください。
+Cloud Foundation インスタンスには、新しい _SDDC Manager_ ライセンスが導入されています。これは、各ノードに適用される月額料金です。 詳しくは、[Cloud Foundation インスタンスの技術仕様](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)を参照してください。
 
 ## 使いやすさの向上
 

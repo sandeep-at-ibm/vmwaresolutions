@@ -24,7 +24,7 @@ lastupdated: "2018-06-22"
 
 ## 各国語サポート
 
-V2.4 リリースから、IBM Cloud for VMware Solutions に各国語サポート (NLS) が組み込まれました。
+V2.4 リリースから、{{site.data.keyword.vmwaresolutions_short}} に各国語サポート (NLS) が組み込まれました。
 コンソールのすべての機能やユーザー資料を複数の言語で利用できるようになっています。
 
 英語のほかに以下の言語がサポートされています。
@@ -70,11 +70,11 @@ VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.Clou
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-現行リリースでは、新しくデプロイするすべてのインスタンスで、IBM Spectrum Protect&trade; Plus V10.1.1 パッチ 1 がインストールされます。IBM Spectrum Protect Plus V10.1.1 パッチ 1 の新機能については、[IBM Spectrum Protect Plus の更新](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}を参照してください。
+現行リリースでは、新しくデプロイするすべてのインスタンスで、IBM Spectrum Protect&trade; Plus V10.1.1 パッチ 1 がインストールされます。 IBM Spectrum Protect Plus V10.1.1 パッチ 1 の新機能については、[IBM Spectrum Protect Plus の更新](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}を参照してください。
 
 ### VMware HCX on IBM Cloud
 
-新しいオプションが用意され、このサービスの注文時に、HCX 相互接続のためにパブリック・ネットワークとプライベート・ネットワークのいずれかを選択できるようになりました。 詳しくは、[VMware HCX on IBM Cloud の注文](../services/hcx_ordering.html)を参照してください。
+新しいオプションが用意され、このサービスの注文時に、HCX 相互接続のためにパブリック・ネットワークとプライベート・ネットワークのいずれかを選択できるようになりました。 詳しくは、[VMware HCX on {{site.data.keyword.cloud_notm}} の注文](../services/hcx_ordering.html)を参照してください。
 
 ## 新規資料および更新された資料
 
@@ -88,15 +88,15 @@ VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.Clou
 
 詳しくは、以下を参照してください。
 
-* [F5 on IBM Cloud の注文](../services/f5_ordering.html)
-* [FortiGate Security Appliance on IBM Cloud の注文](../services/fsa_ordering.html)
-* [FortiGate Virtual Appliance on IBM Cloud の注文](../services/fortinetvm_ordering.html)
-* [Hytrust CloudControl on IBM Cloud の注文](../services/htcc_ordering.html)
-* [Hytrust DataControl on IBM Cloud の注文](../services/htdc_ordering.html)
-* [IBM Spectrum Protect Plus on IBM Cloud の注文](../services/spp_ordering.html)
-* [KMIP for VMware on IBM Cloud の注文](../services/kmip_ordering.html)
-* [Veeam on IBM Cloud の注文](../services/veeam_ordering.html)
-* [Zerto on IBM Cloud の注文](../services/zerto_ordering.html)
+* [F5 on {{site.data.keyword.cloud_notm}} の注文](../services/f5_ordering.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の注文](../services/fsa_ordering.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の注文](../services/fortinetvm_ordering.html)
+* [Hytrust CloudControl on {{site.data.keyword.cloud_notm}} の注文](../services/htcc_ordering.html)
+* [Hytrust DataControl on {{site.data.keyword.cloud_notm}} の注文](../services/htdc_ordering.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} の注文](../services/spp_ordering.html)
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} の注文](../services/kmip_ordering.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} の注文](../services/veeam_ordering.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} の注文](../services/zerto_ordering.html)
 
 ## ユーザー・インターフェースの更新と向上
 

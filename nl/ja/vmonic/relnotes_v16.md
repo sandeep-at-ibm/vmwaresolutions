@@ -29,7 +29,7 @@ lastupdated: "2017-05-22"
 
 V1.6 リリース以降、vCenter Server インスタンスでは以下の複数の機能拡張を利用できます。
 
-*  vCenter Server オファリングの V2.0 仕様の完全実装。 詳しくは、[VMware vCenter Server on IBM Cloud ソリューションのアーキテクチャー](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0)を参照してください。
+*  vCenter Server オファリングの V2.0 仕様の完全実装。 詳しくは、[VMware vCenter Server on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0)を参照してください。
 *  新しいハードウェア仕様: **スモール**、**ミディアム**、**ラージ** (要件に従う)。
 *  デプロイメントに使用できる新しいデータ・センター: **HKG02 - 香港**、**OSL01 - オスロ**、**SEO01 - ソウル**、**SNG01 - シンガポール**、**SYD04 - シドニー**。
 *  インスタンスの注文時に 2 つ以上の ESXi サーバーで VMware vSphere DRS (Distributed Resource Scheduler) と VMware HA (High Availability) がデフォルトで有効になります。

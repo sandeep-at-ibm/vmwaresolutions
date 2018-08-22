@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -59,7 +59,7 @@ VMware vSphere 6.0 と VMware vCenter Server 6.0 では、新しくデプロイ�
 
 VMware vSphere 6.0 と VMware vCenter Server 6.0 では、新しくデプロイするものも既存のものも含め、すべての vSphere クラスターと ESXi サーバーに、[VMware 製品パッチ・サイト](https://my.vmware.com/group/vmware/patch)から入手したパッチ (vSphere 用の ESXi600-201711101-SG、ESXi600-201803401-BG、および ESXi600-201803402-BG と vCenter Server 用の vCenter 6.0 U3e) を適用する必要があります。
 
-## 関連リンク
+### 関連リンク
 
 * [Cloud Foundation インスタンスへの更新の適用](../sddc/sd_applyingupdates.html)
 * [最近のセキュリティー脆弱性に対する保護](https://www.ibm.com/blogs/bluemix/2018/01/ibm-cloud-spectre-meltdown-vulnerabilities/)

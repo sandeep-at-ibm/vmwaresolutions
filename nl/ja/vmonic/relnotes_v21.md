@@ -24,15 +24,15 @@ lastupdated: "2018-04-16"
 
 ## VMware HCX on IBM Cloud
 
-V2.1 以降のリリースでデプロイまたは V2.1 以降のリリースにアップグレードされた VMware Cloud Foundation インスタンスと VMware vCenter Server インスタンスで vSphere 6.5 を実行する場合、HCX on {{site.data.keyword.cloud_notm}} サービスを使用できるようになりました。 このサービスは、オンプレミスのデータ・センター・ネットワークをシームレスに {{site.data.keyword.cloud_notm}} に拡張するサービスです。これにより、オンプレミスのデータ・センターと {{site.data.keyword.cloud_notm}} の間で仮想マシン (VM) の双方向マイグレーションを変更なしで行えます。 レイヤー 2 のブリッジを構築することで、HCX は WAN 最適化、重複排除、圧縮、暗号化を活用して、より速く、より安全に、Direct Link または VPN トンネルを介してデータを移行します。 VM の一括マイグレーションは、VMware vSphere 5.1 以上の下位製品に対応しています。 vSphere 6.0 以上をオンプレミスで使用している場合は、オンプレミスから IBM Cloud データ・センターに VM をライブで (電源をオンにしたまま) vMotion できます。 HCX 使用時に VMware NSX がデータ・センターにインストールされている必要はありません。
+V2.1 以降のリリースでデプロイまたは V2.1 以降のリリースにアップグレードされた VMware Cloud Foundation インスタンスと VMware vCenter Server インスタンスで vSphere 6.5 を実行する場合、HCX on {{site.data.keyword.cloud_notm}} サービスを使用できるようになりました。 このサービスは、オンプレミスのデータ・センター・ネットワークをシームレスに {{site.data.keyword.cloud_notm}} に拡張するサービスです。これにより、オンプレミスのデータ・センターと {{site.data.keyword.cloud_notm}} の間で仮想マシン (VM) の双方向マイグレーションを変更なしで行えます。 レイヤー 2 のブリッジを構築することで、HCX は WAN 最適化、重複排除、圧縮、暗号化を活用して、より速く、より安全に、Direct Link または VPN トンネルを介してデータを移行します。 VM の一括マイグレーションは、VMware vSphere 5.1 以上の下位製品に対応しています。 vSphere 6.0 以上をオンプレミスで使用している場合は、オンプレミスから {{site.data.keyword.CloudDataCent_notm}}に VM をライブで (電源をオンにしたまま) vMotion できます。 HCX 使用時に VMware NSX がデータ・センターにインストールされている必要はありません。
 
 HCX on {{site.data.keyword.cloud_notm}} サービスを組み込んだ形で Cloud Foundation や vCenter Server のインスタンスを注文することも、後からインスタンスの詳細ページの**「サービス」**タブで既存のインスタンスにこのサービスを追加することもできます。
 
 オンプレミスの HCX インスタンスを注文し、オンプレミス HCX インストールのライセンスを適用してアクティベーションすることもできます。
 
 詳しくは、以下を参照してください。
-* [HCX on IBM Cloud に関する考慮事項](../services/hcx_considerations.html)
-* [HCX on IBM Cloud の管理](../services/managinghcx.html)
+* [HCX on {{site.data.keyword.cloud_notm}} に関する考慮事項](../services/hcx_considerations.html)
+* [HCX on {{site.data.keyword.cloud_notm}} の管理](../services/managinghcx.html)
 * [オンプレミス HCX インスタンスに関する考慮事項](../services/standalone_considerations.html)
 * [オンプレミス HCX インスタンスの注文](../services/standalone_orderingserviceinstances.html)
 
@@ -52,7 +52,7 @@ V2.1 以降の VMware Cloud Foundation インスタンスと VMware vCenter Serv
 
 V2.1 以降の Cloud Foundation インスタンスと vCenter Server インスタンスに Zerto on {{site.data.keyword.cloud_notm}} サービスをデプロイすると、Zerto Virtual Replication 5.5u2 がプロビジョンされます。 Zerto 仮想レプリケーション・アプライアンス (VRA) は、パフォーマンス上の理由により、ローカル・データ・ストアではなく、管理データ・ストア (vSAN またはエンデュランスのどちらか) にデプロイされるようになりました。 既存の VRA がある場合は、パフォーマンス向上のために、そのストレージを管理データ・ストアに移行することを検討する必要があります。
 
-詳しくは、[Zerto on IBM Cloud の概要](../services/addingzertodr.html)を参照してください。
+詳しくは、[Zerto on {{site.data.keyword.cloud_notm}} の概要](../services/addingzertodr.html)を参照してください。
 
 ## VMware vCenter Server インスタンスの更新
 
@@ -110,4 +110,4 @@ NFS ファイル共有を個々に構成できるようになりました。 フ
 
 ## 新規資料および更新された資料
 
-NetApp ONTAP Select on IBM Cloud を使用して既存の {{site.data.keyword.vmwaresolutions_full}} デプロイメントに専用ストレージを接続する方法を段階的に説明した新しい developerWorks レシピが用意されています。 詳しくは、[Steps to attach dedicated storage to VMware Solutions on IBM Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/) を参照してください。
+NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} を使用して既存の {{site.data.keyword.vmwaresolutions_full}} デプロイメントに専用ストレージを接続する方法を段階的に説明した新しい developerWorks レシピが用意されています。 詳しくは、[Steps to attach dedicated storage to VMware Solutions on IBM Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/) を参照してください。
