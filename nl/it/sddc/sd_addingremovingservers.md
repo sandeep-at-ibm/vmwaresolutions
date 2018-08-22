@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -45,7 +45,7 @@ All'aggiunta o rimozione dei tuoi server ESXi, riceverai una notifica tramite e-
 
 Se non vedi i nuovi server ESXi aggiunti all'elenco nel cluster, controlla le notifiche e-mail o della console per trovare ulteriori dettagli sull'errore.
 
-## Link correlati
+### Link correlati
 
 * [Distinta base di Cloud Foundation](sd_bom.html)
 * [Requisiti e pianificazione per le istanze Cloud Foundation](sd_planning.html)

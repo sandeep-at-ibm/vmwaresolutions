@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -21,7 +21,7 @@ Tabella 1. Diba per le VLAN nelle istanze Cloud Foundation
 | VLAN      | Tipo      | Dettagli      |
 |:----------|:----------|:-------------|
 | VLAN1     | Pubblica, Primaria | Assegnata ai server ESXi fisici per l'accesso alla rete pubblica. Non utilizzata dopo la distribuzione iniziale. Disponibile per l'accesso a Internet. |
-| VLAN2     | Privata A, Primaria | Assegnata da IBM Cloud ai server ESXi fisici. Utilizzata dall'interfaccia di gestione per il traffico di gestione VMware vSphere.<br><br>Assegnata alle VM (macchine virtuali) che funzionano come componenti di gestione.<br><br>Assegnata al VTEP (VXLAN Tunnel Endpoint) VMware NSX |
+| VLAN2     | Privata A, Primaria | Assegnata da {{site.data.keyword.cloud}} ai server ESXi fisici. Utilizzata dall'interfaccia di gestione per il traffico di gestione VMware vSphere.<br><br>Assegnata alle VM (macchine virtuali) che funzionano come componenti di gestione.<br><br>Assegnata al VTEP (VXLAN Tunnel Endpoint) VMware NSX |
 | VLAN3     | Privata B, Portatile | Assegnata a VMware vSAN, se utilizzato.<br><br>Assegnata a VMware NFS, se utilizzato.<br><br>Assegnata a VMware vSphere vMotion. |
 
 ## Diba di software per le istanze Cloud Foundation
@@ -38,7 +38,7 @@ Tabella 2. Diba per i componenti software nelle istanze Cloud Foundation
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX per vSphere                          | 6.3.5        |
 | VMware       | SDDC Manager                             | 2.4          |
-| {{site.data.keyword.IBM}} | CloudDriver                 | 2.4          |
+| IBM          | CloudDriver                              | 2.4          |
 | Microsoft    | Windows Server Standard edition (64-bit) | 2012R2       |
 
 ## Impostazioni di configurazione avanzate per i server ESXi
@@ -67,10 +67,10 @@ Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanz
 
   Per ulteriori informazioni, vedi [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
 
-## Link correlati
+### Link correlati
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
-* [VMware Cloud Foundation on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
+* [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
 * [Panoramica di Cloud Foundation](sd_cloudfoundationoverview.html)
 * [Pianificazione per le istanze Cloud Foundation](sd_planning.html)
