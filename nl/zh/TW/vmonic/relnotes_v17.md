@@ -26,7 +26,7 @@ lastupdated: "2017-07-05"
 
 * 在實例中新增節點時，在 5 月 22 日之前部署因而使用 V3 伺服器的 VMware Cloud Foundation 部署，現在將訂購 V4 伺服器。這些伺服器有 256 GB 記憶體；如果需要 512 GB 記憶體，在新增伺服器之後，請開立支援問題單來要求伺服器升級至 512 GB 記憶體。如需與 IBM 支援中心聯絡的相關資訊，請參閱[與 IBM 支援中心聯絡](trbl_support.html)。
 
-如需元件的相關資訊，請參閱 [Cloud Foundation 實例元件](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)。
+如需元件的相關資訊，請參閱 [Cloud Foundation 實例的技術規格](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 
 ### 更新程序需求
 

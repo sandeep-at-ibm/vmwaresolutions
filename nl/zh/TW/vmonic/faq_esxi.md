@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -39,7 +39,7 @@ lastupdated: "2018-05-29"
 
 ESXi 伺服器名稱及 IP 位址無法變更，因為已登錄它們以進行 Windows DNS 解析。變更可能會導致部署期間失敗或 vCenter Server 功能失敗。
 
-**附註**：請勿在 IBM Cloud 使用者介面上使用**重新命名裝置**特性來變更 ESXi 伺服器名稱。此功能的確會變更 ESXi 伺服器的 FQDN，但所配置的 vCenter Center 及 Windows VSI 主機登錄將不正確，而可能導致失敗。
+**附註**：請勿在 {{site.data.keyword.cloud_notm}} 使用者介面上使用**重新命名裝置**特性來變更 ESXi 伺服器名稱。此功能的確會變更 ESXi 伺服器的 FQDN，但所配置的 vCenter Center 及 Windows VSI 主機登錄將不正確，而可能導致失敗。
 
 ## 我可以在 ESXi 伺服器上停用 root 存取權嗎？
 

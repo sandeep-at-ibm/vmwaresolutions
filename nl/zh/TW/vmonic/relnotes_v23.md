@@ -24,7 +24,7 @@ lastupdated: "2018-05-28"
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
-此版本引進 VMware vCenter Server on IBM Cloud with Hybridity Bundle 供應項目。vCenter Server with Hybridity Bundle 是一種受管理的專用雲端，有助於快速且輕鬆地將內部部署基礎架構擴充到雲端。VMware 環境根據 IBM 提供的「VMware 軟體定義資料中心」授權，並包括 VMware HCX on {{site.data.keyword.cloud_notm}} 服務，以透過內部部署方式輕鬆且安全地連接 vSphere 5.0+ 環境與 IBM Cloud 站台，來獲得無縫的基礎架構混合及實際應用程式行動性。
+此版本引進 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 供應項目。vCenter Server with Hybridity Bundle 是一種受管理的專用雲端，有助於快速且輕鬆地將內部部署基礎架構擴充到雲端。VMware 環境根據 IBM 提供的「VMware 軟體定義資料中心」授權，並包括 VMware HCX on {{site.data.keyword.cloud_notm}} 服務，以透過內部部署方式輕鬆且安全地連接 vSphere 5.0+ 環境與 {{site.data.keyword.cloud_notm}} 站台，來獲得無縫的基礎架構混合及實際應用程式行動性。
 
 只有透過 vCenter Server with Hybridity Bundle 實例才能取得 HCX on {{site.data.keyword.cloud_notm}} 服務。在第一次套用基本 vCenter Server 2.3 版軟體更新之後，您可以將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。如需相關資訊，請參閱[將更新套用至 vCenter Server 實例](../vcenter/vc_applyingupdates.html)。
 
@@ -94,8 +94,8 @@ lastupdated: "2018-05-28"
 您可以在訂購實例時訂購包含此服務的實例，或稍後將此服務新增至現有實例。
 
 如需相關資訊，請參閱：
-* [HyTrust CloudControl on IBM Cloud 的元件及考量](../services/htcc_considerations.html)
-* [管理 HyTrust CloudControl on IBM Cloud](../services/managinghtcc.html)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 的元件及考量](../services/htcc_considerations.html)
+* [管理 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/managinghtcc.html)
 
 ### HyTrust DataControl on IBM Cloud
 
@@ -104,8 +104,8 @@ lastupdated: "2018-05-28"
 您可以在訂購實例時訂購包含此服務的實例，或稍後將此服務新增至現有實例。
 
 如需相關資訊，請參閱：
-* [HyTrust DataControl on IBM Cloud 的元件及考量](../services/htdc_considerations.html)
-* [管理 HyTrust DataControl on IBM Cloud](../services/managinghtdc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 的元件及考量](../services/htdc_considerations.html)
+* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -118,8 +118,8 @@ lastupdated: "2018-05-28"
 ## 使用者介面更新和加強功能
 
 會更新使用者介面，並提供下列加強功能：
-* **一致性**：使用者介面現在提供與 IBM Cloud 上其他服務一致的外觀與操作方式。
-* **容易存取**：您現在可以直接從 IBM Cloud **型錄**存取 VMware 供應項目。
+* **一致性**：使用者介面現在提供與 {{site.data.keyword.cloud_notm}} 上其他服務一致的外觀與操作方式。
+* **容易存取**：您現在可以直接從 {{site.data.keyword.cloud_notm}} **型錄**存取 VMware 供應項目。
 * **流暢且及簡化的訂購體驗**：您現在可以在單一介面中完成訂購 VMware 實例並部署其附加程式服務。此外，還會計算預估成本，並將其立即顯示在相同的介面中，讓您可以根據成本方案來調整配置。
 * 「事業夥伴」使用者無法使用訂購實例或新增叢集時的「自帶授權 (BYOL)」選項。
 * 已提供各種錯誤訊息及工具提示加強功能，以協助您在使用者介面上選取適當的設定。

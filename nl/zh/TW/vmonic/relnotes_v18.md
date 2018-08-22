@@ -14,25 +14,25 @@ lastupdated: "2017-08-28"
 
 ## Fortinet on IBM Cloud 服務
 
-現在，Fortinet on IBM Cloud 服務可用於 Cloud Foundation 實例及 vCenter Server 實例。此服務會以高可用性模式部署一組 FortiGate Security Appliance (FSA) 300 系列裝置，能提供防火牆、遞送、NAT及 VPN 服務，以維護您實例的公用 VLAN 上的所有伺服器及虛擬機器。您可以在訂購實例時訂購包含 Fortinet 服務的實例，或稍後透過實例詳細資料頁面將此服務新增至現有實例。
+現在，Fortinet on {{site.data.keyword.cloud_notm}} 服務可用於 Cloud Foundation 實例及 vCenter Server 實例。此服務會以高可用性模式部署一組 FortiGate Security Appliance (FSA) 300 系列裝置，能提供防火牆、遞送、NAT及 VPN 服務，以維護您實例的公用 VLAN 上的所有伺服器及虛擬機器。您可以在訂購實例時訂購包含 Fortinet 服務的實例，或稍後透過實例詳細資料頁面將此服務新增至現有實例。
 
 在順利安裝 Fortinet 服務之後，您可以從 FortiGate 主控台管理及配置 FSA 的防火牆規則。您必須確定已定義 FSA 防火牆規則為容許由管理元件（例如 IBM CloudDriver 虛擬機器或 Zerto Virtual Manager）起始的出埠 HTTPS 通訊，透過網際網路與 IBM Bluemix® 上的外部管理資料庫通訊。出埠 HTTPS 通訊來自實例中管理服務 VMware NSX Edge Services Gateway (ESG) 的公用 IP 位址。
 
 如需相關資訊，請參閱：
-* [Fortinet on IBM Cloud 概觀](../services/fsa_considerations.html)
-* [管理 Fortinet on IBM Cloud](../services/managingfsa.html)
+* [Fortinet on {{site.data.keyword.cloud_notm}} 概觀](../services/fsa_considerations.html)
+* [管理 Fortinet on {{site.data.keyword.cloud_notm}}](../services/managingfsa.html)
 
 ## Veeam on IBM Cloud 服務
 
-此版本引進 Veeam on IBM Cloud 服務，它可同時備份管理元件及工作負載。這項新服務取代先前的 Veeam VSI（其已整合至 1.8 版之前的版本），並僅適用於管理元件的備份。
+此版本引進 Veeam on {{site.data.keyword.cloud_notm}} 服務，它可同時備份管理元件及工作負載。這項新服務取代先前的 Veeam VSI（其已整合至 1.8 版之前的版本），並僅適用於管理元件的備份。
 
 雖然 1.8 版之前的實例中的 Veeam VSI 會繼續運作，但因為這項變更，{{site.data.keyword.vmwaresolutions_short}} 主控台中不再提供實例的備份點，您必須建立支援問題單，才能獲得還原的協助。
 
 此外，1.8 版之前的實例中的 Veeam VSI 的授權會在 2017 年 10 月 14 日到期。因此，您必須儘早將先前的 Veeam VSI 取代為新的 Veeam 服務。
 
 如需相關資訊，請參閱：
-* [Veeam on IBM Cloud 概觀](../services/veeam_considerations.html)
-* [管理 Veeam on IBM Cloud](../services/managingveeam.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 概觀](../services/veeam_considerations.html)
+* [管理 Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)
 
 ## VMware Cloud Foundation 實例的更新項目
 
@@ -73,9 +73,9 @@ lastupdated: "2017-08-28"
 ## 可用性加強功能
 
 在整個使用者介面中進行了改善：
-* 您可以從左導覽窗格的**開始使用**頁面瞭解服務及訂購實例。如需 IBM Cloud Secure Virtualization 服務架構的相關資訊，請參閱[安全及法規遵循 - HyTrust ](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust)。
+* 您可以從左導覽窗格的**開始使用**頁面瞭解服務及訂購實例。如需 {{site.data.keyword.cloud_notm}} Secure Virtualization 服務架構的相關資訊，請參閱[安全及法規遵循 - HyTrust ](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust)。
 * 使用實例詳細資料頁面上的溢位功能表來刪除**備妥使用**狀態的實例。
 * 現在，**更新及修補程式**標籤提供了升級 NSX 授權版本的選項。授權升級會將您的 IBM SoftLayer 帳戶中所有現有的 NSX 授權取代為新的授權。
 * 實例詳細資料頁面上的**備份及還原**標籤不再可用。
-* 您可以在訂單開頭選取多個要部署的服務。除了 Zerto on IBM Cloud 服務之外，還提供了選取 Veeam on IBM Cloud 服務及 Fortinet on IBM Cloud 服務的選項。
+* 您可以在訂單開頭選取多個要部署的服務。除了 Zerto on {{site.data.keyword.cloud_notm}} 服務之外，還提供可選取 Veeam on {{site.data.keyword.cloud_notm}} 服務及 Fortinet on {{site.data.keyword.cloud_notm}} 服務的選項。
 * 實例詳細資料頁面中**服務**標籤上的**可用的服務**標籤會重新命名為**新增服務**。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -24,14 +24,14 @@ lastupdated: "2018-05-25"
 |新增 ESXi 伺服器              |支援           |支援           |支援           |支援。未包括自動化配置|
 |移除 ESXi 伺服器           |支援           |支援           |支援           |支援。未包括自動化配置|
 |多叢集支援         |5 個叢集|10 個叢集|10 個叢集|支援。未包括自動化配置|
-|用戶端管理 VMware 堆疊的更新及修補 |IBM CloudDriver 及 VMware 更新|IBM CloudDriver |IBM CloudDriver |未包括自動化修補|
-|備份及還原            |支援           |支援           |支援           |未包括自動化備份解決方案配置|
+|用戶端管理 VMware 堆疊的更新及修補 | VMware 更新項目 | 不包括 | 不包括 | 不包括 |
+|備份及還原            | 手動使用 IBM Spectrum Protect Plus 或 Veeam | 手動使用 IBM Spectrum Protect Plus 或 Veeam | 手動使用 IBM Spectrum Protect Plus 或 Veeam | 未包括備份及還原解決方案 |
 |軟體定義網路   |NSX Enterprise   |NSX Base、Advanced 或 Enterprise |NSX Advanced 或 Enterprise |NSX Standard、Base 或 Enterprise。未包括自動化配置|
 |對於 vSphere 及 vSAN 的 BYOL |對每個叢集充分支援   |對每個叢集充分支援   |不支援|支援           |
 |對於 vCenter 及 NSX 的 BYOL |對每個實例充分支援|對每個實例充分支援|不支援|支援           |
 |NSX 授權升級選項           |無   |可從 NSX Base 升級至 Advanced 或 Enterprise，以及從 NSX Advanced 升級至 Enterprise。可以升級至 vCenter Server with Hybridity Bundle。|可從 NSX Advanced 升級至 Enterprise  |無   |
 |vSAN 授權版本         |vSAN Advanced 或 Enterprise  |vSAN Advanced 或 Enterprise  |vSAN Advanced 或 Enterprise  |vSAN Advanced 或 Enterprise  |
-|附加服務               |支援，不包括 HCX on {{site.data.keyword.cloud_notm}}。|支援，不包括 HCX on {{site.data.keyword.cloud_notm}}。可以升級至 vCenter Server with Hybridity Bundle。|支援，包括 HCX on {{site.data.keyword.cloud_notm}}。|支援。未包括自動化配置|
+|附加服務               |支援，不包括 HCX on {{site.data.keyword.cloud_notm}}。|支援，不包括 HCX on {{site.data.keyword.cloud_notm}}。可以升級至 vCenter Server with Hybridity Bundle。|支援，包括 HCX on {{site.data.keyword.cloud_notm}}。| 此解決方案的自動化不支援，但您可以啟動及安裝自己的軟體。|
 
 **附註**：
 

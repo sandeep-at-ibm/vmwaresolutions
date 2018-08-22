@@ -14,7 +14,7 @@ lastupdated: "2017-10-13"
 
 ## VMware vSphere on IBM Cloud
 
-此版本引進 VMware vSphere on IBM Cloud 供應項目，可讓您透過基於選定的 VMware 元件自訂及訂購 VMware 相容運算、儲存空間及網路資源，來建置您自己的 IBM 代管 VMware 虛擬環境。vSphere on IBM Cloud 不會使選用的 VMware 元件的安裝、配置及啟動自動化，但您具有最大的彈性來設計及建構最符合您商業需要的環境。一開始，您可以建立 ESXi 伺服器的新 vSphere 叢集，或在 IBM Cloud 資料中心擴充現有的 vSphere 叢集。
+此版本引進 VMware vSphere on {{site.data.keyword.cloud_notm}} 供應項目，容許您透過基於選定的 VMware 元件自訂及訂購 VMware 相容運算、儲存空間及網路資源，來建置您自己的 IBM 代管 VMware 虛擬環境。vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元件的安裝、配置及啟動自動化，但您具有最大的彈性來設計及建構最符合您商業需要的環境。一開始，您可以建立 ESXi 伺服器的新 vSphere 叢集，或在 {{site.data.keyword.CloudDataCent_notm}} 擴充現有的 vSphere 叢集。
 
 如需相關資訊，請參閱：
 * [訂購新的 vSphere 叢集](../vsphere/vs_orderinginstances.html)
@@ -22,7 +22,7 @@ lastupdated: "2017-10-13"
 
 ## NetApp ONTAP Select on IBM Cloud
 
-此版本引進 NetApp ONTAP Select on IBM Cloud 供應項目，這是用於軟體定義儲存空間的虛擬應用裝置，它在 IBM Cloud 的專用 {{site.data.keyword.baremetal_short}} 上以服務實作 NetApp ONTAP Select。NetApp ONTAP Select on IBM Cloud 是於高效能（所有 SSD）及高容量（所有 SATA）配置中提供。
+此版本引進 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目，這是用於軟體定義儲存空間的虛擬應用裝置，它在 IBM Cloud 的專用 {{site.data.keyword.baremetal_short}} 上以服務實作 NetApp ONTAP Select。我們以高效能（所有 SSD）及高容量（所有 SATA）兩種配置提供 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}。
 它在專用的基礎架構上管理您的儲存空間，並提供 NetApp 功能，例如刪除重複、壓縮及加密靜止中資料。使用此供應項目，您可以在佈建儲存空間資源時具備敏捷性和彈性，同時利用進階資料管理功能（例如，快速及有效的 NetApp Snapshot® 複製、FlexClone® 複製及 SnapMirror® 抄寫）來保護資料。
 
 如需相關資訊，請參閱：
@@ -31,12 +31,12 @@ lastupdated: "2017-10-13"
 
 ## F5 on IBM Cloud 服務
 
-現在，F5 BIG-IP Virtual Edition (VE) on IBM Cloud 服務可用於 VMware Cloud Foundation 實例及 VMware vCenter Server 實例。本服務以區域和全球規模、健全網路及 Web 應用程式防火牆保護、安全及聯合應用程式存取，來提供智慧型 L4-L7 負載平衡與資料流量管理服務。
-您可以在訂購實例時訂購包含 F5 BIG-IP Virtual Edition (VE) on IBM Cloud 服務的實例，或稍後透過 {{site.data.keyword.vmwaresolutions_short}} 主控台的實例內容詳細資料頁面的**服務**標籤，將此服務新增至現有的實例。視您的需求而定，您可以為 BIG-IP VE 選取三個授權選項之一。
+現在，F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} 服務可用於 VMware Cloud Foundation 實例及 VMware vCenter Server 實例。本服務以區域和全球規模、健全網路及 Web 應用程式防火牆保護、安全及聯合應用程式存取，來提供智慧型 L4-L7 負載平衡與資料流量管理服務。
+您可以在訂購實例時訂購內含 F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} 服務的實例，或稍後透過 {{site.data.keyword.vmwaresolutions_short}} 主控台的實例內容詳細資料頁面的**服務**標籤，將此服務新增至現有的實例。視您的需求而定，您可以為 BIG-IP VE 選取三個授權選項之一。
 
 如需相關資訊，請參閱：
-* [F5 on IBM Cloud 的考量](../services/f5_considerations.html)
-* [管理 F5 on IBM Cloud](../services/managing_f5.html)
+* [F5 on {{site.data.keyword.cloud_notm}} 的考量](../services/f5_considerations.html)
+* [管理 F5 on {{site.data.keyword.cloud_notm}}](../services/managing_f5.html)
 
 ## 來自 IBM Integrated Managed Infrastructure 的受管理服務
 
@@ -65,7 +65,7 @@ lastupdated: "2017-10-13"
 
 ### 跨資料中心叢集支援
 
-為了加強擴充受管理的 VMware 環境，您現在可以在不同的 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) pod 中，或在與實例中已部署的起始叢集不同的 IBM Cloud 資料中心內建立新叢集。
+為了加強擴充受管理的 VMware 環境，您現在可以在不同的 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) Pod 中，或在與實例中已部署的起始叢集不同的 {{site.data.keyword.CloudDataCent_notm}} 內建立新叢集。
 
 如需相關資訊，請參閱[新增及檢視 vCenter Server 實例的叢集](../vcenter/vc_addingviewingclusters.html)。
 
@@ -101,5 +101,5 @@ Microsoft Active Directory (AD) / 網域名稱伺服器 (DNS) 自動設定為只
 
 ## 新的及更新的文件
 
-* 瞭解如何保護專用多站台 VCF 實例的安全，同時延伸 VMware 應用程式來使用公有 IBM Cloud 服務。如需相關資訊，請參閱[在 IBM Cloud 中安全地連接專用 VMware 工作負載](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}。
-* 提供了其他文件來配置防火牆，以允許來自 IBM CloudDriver 和 SDDC Manager 虛擬機器的所有通訊協定通訊。如需相關資訊，請參閱 [Fortinet on IBM Cloud 的元件及考量](../services/fsa_considerations.html)。
+* 瞭解如何保護專用多站台 VCF 實例的安全，同時延伸 VMware 應用程式來使用公用 {{site.data.keyword.cloud_notm}} 服務。如需相關資訊，請參閱[在 {{site.data.keyword.cloud_notm}} 中安全地連接專用 VMware 工作負載](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}。
+* 提供了其他文件來配置防火牆，以允許來自 IBM CloudDriver 和 SDDC Manager 虛擬機器的所有通訊協定通訊。如需相關資訊，請參閱 [Fortinet on {{site.data.keyword.cloud_notm}} 的元件及考量](../services/fsa_considerations.html)。

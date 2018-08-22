@@ -14,17 +14,17 @@ lastupdated: "2017-11-20"
 
 ## FortiGate Virtual Appliance on IBM Cloud
 
-現在，FortiGate Virtual Appliance on IBM Cloud 服務可用於 2.0 版以及更新版本的 VMware Cloud Foundation 實例及 VMware vCenter Server 實例。此服務會將一組高可用性 (HA) 的 FortiGate Virtual Appliance 部署到您的環境中，讓您可以在虛擬基礎架構內實作重要安全控制來降低風險。
+現在，FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務可用於 2.0 版以及更新版本的 VMware Cloud Foundation 實例及 VMware vCenter Server 實例。此服務會將一組高可用性 (HA) 的 FortiGate Virtual Appliance 部署到您的環境中，讓您可以在虛擬基礎架構內實作重要安全控制來降低風險。
 
-您可以在訂購實例時訂購包含 FortiGate Virtual Appliance on IBM Cloud 服務的實例，或稍後透過實例內容詳細資料頁面的**服務**標籤，將此服務新增至現有的實例。視您的需求而定，您可以為此服務選取三種部署大小和授權選項的其中之一。在順利安裝此服務之後，您可以從 FortiGate 主控台管理及配置 FortiGate Virtual Appliance 的防火牆規則。
+您可以在訂購實例時訂購內含 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務的實例，或稍後透過實例詳細資料頁面的**服務**標籤，將此服務新增至現有的實例。視您的需求而定，您可以為此服務選取三種部署大小和授權選項的其中之一。在順利安裝此服務之後，您可以從 FortiGate 主控台管理及配置 FortiGate Virtual Appliance 的防火牆規則。
 
 如需相關資訊，請參閱：
-* [FortiGate Virtual Appliance on IBM Cloud 的元件及考量](../services/fortinetvm_considerations.html)
-* [管理 FortiGate Virtual Appliance on IBM Cloud](../services/managingfortinetvm.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的元件及考量](../services/fortinetvm_considerations.html)
+* [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html)
 
 ## F5 on IBM Cloud 及 FortiGate Virtual Appliance on IBM Cloud 的多重服務安裝
 
-您現在可以針對 Cloud Foundation 實例或 vCenter Server 實例，安裝 F5 on IBM Cloud 服務及 FortiGate Virtual Appliance on IBM Cloud 服務的多個實例。當您在實例訂購期間選取 F5 服務或 FortiGate 服務時，您必須指定服務實例的名稱，以區別它與您後來安裝的其他服務實例。
+您現在可以針對 Cloud Foundation 實例或 vCenter Server 實例，安裝 F5 on {{site.data.keyword.cloud_notm}} 服務及 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務的多個實例。當您在實例訂購期間選取 F5 服務或 FortiGate 服務時，您必須指定服務實例的名稱，以區別它與您後來安裝的其他服務實例。
 
 完成實例部署之後，您可以在實例詳細資料頁面的**新增服務**標籤上安裝服務，以新增 F5 或 FortiGate 服務的更多實例。您一次只能新增一個服務實例，而且您必須針對您要為服務新增的所有實例重複該程序。
 
@@ -34,7 +34,7 @@ lastupdated: "2017-11-20"
 
 ## FortiGate Security Appliance on IBM Cloud 的更新項目
 
-在此版本中，Fortinet on IBM Cloud 服務重新命名為 FortiGate Security Appliance on IBM Cloud，而且，依預設，該服務的一組 FortiGate Security Appliance (FSA) 在部署至實例時是安全的。
+在此版本中，Fortinet on {{site.data.keyword.cloud_notm}} 服務已重新命名為 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}，而且，依預設，該服務的一組 FortiGate Security Appliance (FSA) 在部署至實例時已安全配置。
 * 如果您將一組 FSA 部署為新的 Cloud Foundation 實例或 vCenter Server 實例的一部分，則 FSA 是配置為僅容許從實例到公用網路的必要出埠通訊，並拒絕所有其他通訊。
 * 如果您將一組 FSA 部署為現有 Cloud Foundation 實例或 vCenter Server 實例的一部分，則會使用明確規則來配置 FSA，以容許從實例到公用網路的所有必要出埠管理通訊，同時也會以其他規則配置 FSA 容許所有其他通訊，以確保您現有的應用程式資料流量不會中斷。
 
@@ -51,7 +51,7 @@ lastupdated: "2017-11-20"
 
 ## 在實例訂購期間的工作負載及儲存空間預估
 
-* 在 VMware vSphere on IBM Cloud 訂單期間，會提供您可以在所訂購的實例上執行的虛擬機器數目的預估。
+* 在 VMware vSphere on {{site.data.keyword.cloud_notm}} 訂單期間，會提供您可以在所訂購的實例上執行的虛擬機器數目的預估。
 * 在 Cloud Foundation 和 vCenter Server 訂單期間，會提供您所訂購的實例的可用儲存空間容量的預估。
 
 如需相關資訊，請參閱：
@@ -148,7 +148,7 @@ lastupdated: "2017-11-20"
 * 3.8 TB SSD SED
 
 **附註：**
-* 當 3.8 TB SSD SED 磁碟機在正式發行至資料中心時就會予以支援。
+* 當 3.8 TB SSD SED 磁碟機在正式發行至 {{site.data.keyword.CloudDataCent_notm}} 時將會予以支援。
 * 訂單不管有沒有 VMware vSAN 元件，一律會包括 12 磁碟機箱伺服器，這在價格預估 PDF 中反映了 {{site.data.keyword.baremetal_short}} 對於非 vSAN 訂單案例的成本略高。
 
 如需相關資訊，請參閱[訂購新的 vSphere 叢集](../vsphere/vs_orderinginstances.html)。
@@ -162,7 +162,7 @@ lastupdated: "2017-11-20"
 * **高效能（大型）**- 超值授權/雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/128 GB RAM/每個節點有 22 個 3.8 TB SSD 磁碟機容量/4 節點叢集的有效容量 - 118 TB
 * **高容量** - 標準授權/雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/64 GB RAM/每個節點 10 個 4 TB SATA 磁碟機容量/4 節點叢集的有效容量 - 60 TB
 
-**附註：**當 3.8 TB SSD 磁碟機在正式發行至資料中心時就會予以支援。
+**附註：**當 3.8 TB SSD 磁碟機在正式發行至 {{site.data.keyword.CloudDataCent_notm}} 時將會予以支援。
 
 如需相關資訊，請參閱：
 * [NetApp ONTAP Select 概觀](../netapp/np_netappoverview.html)
@@ -170,7 +170,7 @@ lastupdated: "2017-11-20"
 
 ## 新的及更新的文件
 
-VMware Cloud Foundation 使用者可搭配 IBM Cloud 上的 VMware NSX 平台使用逐步指示，讓虛擬機器能夠彼此通訊以及與網際網路通訊。如需相關資訊，請參閱[在 VMware Cloud Foundation on IBM Cloud (VCF) 上設定工作負載 VM 的 NSX](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}。
+VMware Cloud Foundation 使用者可搭配 {{site.data.keyword.cloud_notm}} 上的 VMware NSX 平台使用逐步指示，讓虛擬機器能夠彼此通訊以及與網際網路通訊。如需相關資訊，請參閱[在 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} (VCF) 上設定工作負載 VM 的 NSX](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}。
 
 ## 使用者介面更新和加強功能
 

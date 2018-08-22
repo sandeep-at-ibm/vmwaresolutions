@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-28"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -14,12 +14,13 @@ lastupdated: "2018-05-28"
 
 ## IBM Cloud for VMware Solutions 需要何種使用者帳戶？
 
-* **IBM ID 帳戶**。需要此帳戶才能存取 {{site.data.keyword.vmwaresolutions_short}} 主控台。主控台是與 {{site.data.keyword.slportal_full}} 分開的獨立式使用者介面。如需相關資訊，請參閱[開始使用](../index.html)。
-* **{{site.data.keyword.cloud_notm}} 帳戶**。需要此帳戶才能進行佈建。您可以將 **IBM ID 帳戶**升級至「隨收隨付制」帳戶，來註冊 {{site.data.keyword.cloud_notm}} 帳戶。您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須符合特定需求。如需相關資訊，請參閱[註冊 {{site.data.keyword.cloud_notm}} 帳戶](signing_softlayer_account.html)和 [{{site.data.keyword.cloud_notm}} 帳戶需求](slaccountrequirement.html)。
+* **IBM ID 帳戶**。需要此帳戶才能存取 {{site.data.keyword.vmwaresolutions_short}} 主控台。主控台是與 {{site.data.keyword.slportal}} 分開的獨立式使用者介面。如需相關資訊，請參閱[開始使用](../index.html)。
+* **{{site.data.keyword.cloud_notm}} 帳戶**。需要此帳戶才能進行佈建。您可以使用現有 **IBM ID** 或建立新的 **IBM ID**，來註冊 {{site.data.keyword.cloud_notm}} 帳戶。 
+* **{{site.data.keyword.cloud_notm}} 基礎架構帳戶**。此帳戶（先前稱為 **IBM SoftLayer** 帳戶）用來登入 {{site.data.keyword.cloud_notm}} 基礎架構客戶入口網站，以提供一些額外功能來管理基礎架構產品及服務。您可以取得 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，方法是將 **{{site.data.keyword.cloud_notm}} 帳戶**升級至「隨收隨付制」類型的帳戶，或將現有 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。您使用的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須符合特定需求。如需相關資訊，請參閱[註冊必要帳戶](signing_softlayer_account.html)及 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶需求](slaccountrequirement.html)。
 
 ## 如何使 IBM Cloud 基礎架構認證與 IBM Cloud for VMware Solutions 主控台產生關聯？
 
-第一次訂購實例時，請遵循 {{site.data.keyword.cloud_notm}} 基礎架構認證頁面上的指示，從 {{site.data.keyword.slportal}} 中尋找並複製 {{site.data.keyword.cloud_notm}} 使用者名稱和 API 金鑰。第一次訂購之後，{{site.data.keyword.cloud_notm}} 基礎架構認證會儲存在 {{site.data.keyword.vmwaresolutions_short}} 主控台中。未來訂單會自動使用已儲存的認證。
+第一次訂購實例時，請遵循主控台之**設定**頁面上的指示，從 {{site.data.keyword.slportal}} 中尋找並複製 {{site.data.keyword.cloud_notm}} 基礎架構使用者名稱及 API 金鑰。第一次訂購之後，{{site.data.keyword.cloud_notm}} 基礎架構認證會儲存在 {{site.data.keyword.vmwaresolutions_short}} 主控台中。未來訂單會自動使用已儲存的認證。
 
 ## 我的 VMware 虛擬平台耗用如何計費？
 
@@ -29,21 +30,21 @@ lastupdated: "2018-05-28"
 
 所有實例類型都提供 VMware 虛擬環境的部署選項。不過，差異在於自訂功能及自動化的範圍。
 
-* 當您訂購 VMware vCenter Server 實例時，您會部署具有自訂運算、儲存空間及網路資源的 VMware 虛擬環境。如需已部署元件的相關資訊，請參閱 [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html)中的 _vCenter Server 技術規格_ 小節。
-* 當您訂購 VMware Cloud Foundation 實例時，您將部署統一的軟體定義資料中心 (SDDC) 平台。如需已部署元件的相關資訊，請參閱 [Cloud Foundation 實例元件](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)。
+* 當您訂購 VMware vCenter Server 實例時，您會部署具有自訂運算、儲存空間及網路資源的 VMware 虛擬環境。如需已部署元件的相關資訊，請參閱 [vCenter Server 實例的技術規格](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
+* 當您訂購 VMware Cloud Foundation 實例時，您將部署統一的軟體定義資料中心 (SDDC) 平台。如需已部署元件的相關資訊，請參閱 [Cloud Foundation 實例的技術規格](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 * 當您訂購 VMware vSphere 叢集時，您會有最大的彈性來設計及建置受管理的 VMware 環境，同時納入 VMware 相容的硬體。不過，{{site.data.keyword.cloud_notm}} 不會使 VMware vSphere 叢集之選用 VMware 元件的安裝、配置及啟動自動化。
 * 對 vCenter Server 實例、Cloud Foundation 實例及 vSphere 叢集所支援的功能不同。如需相關資訊，請參閱[提供比較圖表](inst_comp_chart.html)。
 
 ## vCenter Server 實例包含了什麼？
 
-如需相關資訊，請參閱 [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html)中的 _vCenter Server 技術規格_ 小節。
+如需相關資訊，請參閱 [vCenter Server 實例的技術規格](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
 
 ## Cloud Foundation 實例包含了什麼？
 
-如需相關資訊，請參閱 [Cloud Foundation 實例元件](../sddc/sd_cloudfoundationoverview.html)。
+如需相關資訊，請參閱 [Cloud Foundation 實例的技術規格](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 
 ## vSphere 叢集包括哪些內容？
-如需相關資訊，請參閱 [VMware vSphere on IBM Cloud 的元件](../vsphere/vs_vsphereclusteroverview.html)。
+如需相關資訊，請參閱 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的元件](../vsphere/vs_vsphereclusteroverview.html)。
 
 ## 雙節點 vCenter Server 實例是否為高可用性？
 
@@ -106,7 +107,7 @@ IBM 提供 IBM CloudDriver 元件的持續更新，可透過 {{site.data.keyword
 * [vCenter Server 實例的需求及規劃](../vcenter/vc_planning.html)
 * [vCenter Server with Hybridity Bundle 實例的需求及規劃](../vcenter/vc_hybrid_planning.html)
 * [Cloud Foundation 實例的需求及規劃](../sddc/sd_planning.html)
-* [VMware vSphere on IBM Cloud 的需求及規劃](../vsphere/vs_planning.html)
+* [VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求及規劃](../vsphere/vs_planning.html)
 * [NetApp ONTAP Select 實例的需求及規劃](../netapp/np_planning.html)
 * [VMware Federal 實例的需求與規劃](../vcenter/vc_fed_planning.html)
 

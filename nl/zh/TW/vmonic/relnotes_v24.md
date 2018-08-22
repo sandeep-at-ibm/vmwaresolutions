@@ -24,7 +24,7 @@ lastupdated: "2018-06-22"
 
 ## 國家語言支援
 
-從 2.4 版開始，「國家語言支援 (NLS)」適用於 IBM Cloud for VMware Solutions。
+從 2.4 版開始，「國家語言支援 (NLS)」適用於 {{site.data.keyword.vmwaresolutions_short}}。
 主控台上的所有特性（包括使用者文件）都提供數種語言版本。
 
 除了英文之外，還支援下列語言：
@@ -74,7 +74,7 @@ lastupdated: "2018-06-22"
 
 ### VMware HCX on IBM Cloud
 
-在您訂購此服務時，現在可以使用新的選項來選擇公用網路與專用網路以進行 HCX 交互連接。如需相關資訊，請參閱[訂購 VMware HCX on IBM Cloud](../services/hcx_ordering.html)。
+在您訂購此服務時，現在可以使用新的選項來選擇公用網路與專用網路以進行 HCX 交互連接。如需相關資訊，請參閱[訂購 VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_ordering.html)。
 
 ## 新的及更新的文件
 
@@ -88,15 +88,15 @@ lastupdated: "2018-06-22"
 
 如需相關資訊，請參閱：
 
-* [訂購 F5 on IBM Cloud](../services/f5_ordering.html)
-* [訂購 FortiGate Security Appliance on IBM Cloud](../services/fsa_ordering.html)
-* [訂購 FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_ordering.html)
-* [訂購 Hytrust CloudControl on IBM Cloud](../services/htcc_ordering.html)
-* [訂購 Hytrust DataControl on IBM Cloud](../services/htdc_ordering.html)
-* [訂購 IBM Spectrum Protect Plus on IBM Cloud](../services/spp_ordering.html)
-* [訂購 KMIP for VMware on IBM Cloud](../services/kmip_ordering.html)
-* [訂購 Veeam on IBM Cloud](../services/veeam_ordering.html)
-* [訂購 Zerto on IBM Cloud](../services/zerto_ordering.html)
+* [訂購 F5 on {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
+* [訂購 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)
+* [訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)
+* [訂購 Hytrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_ordering.html)
+* [訂購 Hytrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_ordering.html)
+* [訂購 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/spp_ordering.html)
+* [訂購 KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_ordering.html)
+* [訂購 Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_ordering.html)
+* [訂購 Zerto on {{site.data.keyword.cloud_notm}}](../services/zerto_ordering.html)
 
 ## 使用者介面更新和加強功能
 
