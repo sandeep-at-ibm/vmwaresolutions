@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-06-14"
 4. **인스턴스 삭제** 창에서 **확인**을 클릭하십시오.
    인스턴스의 상태가 **제거 중**으로 변경됩니다. 인스턴스 삭제가 완료되면 **온프레미스 HCX 인스턴스** 테이블에서 인스턴스를 더 이상 사용할 수 없습니다.
 
-## 관련 링크
+### 관련 링크
 
 * [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 주문](standalone_orderingserviceinstances.html)
 * [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 보기](standalone_viewingserviceinstances.html)

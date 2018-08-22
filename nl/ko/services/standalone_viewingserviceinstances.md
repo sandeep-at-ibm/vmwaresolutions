@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -36,10 +36,9 @@ lastupdated: "2018-05-30"
 |설치됨 |인스턴스를 사용할 준비가 되었습니다. |
 |제거 중 |인스턴스가 삭제 중입니다. |
 
-## 관련 링크
+### 관련 링크
 
 * [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 주문](standalone_orderingserviceinstances.html)
 * [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 삭제](standalone_deletingserviceinstances.html)
 * [HCX 용어집](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 문서](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

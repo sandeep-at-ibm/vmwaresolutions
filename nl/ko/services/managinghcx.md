@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ HCX on {{site.data.keyword.cloud_notm}}는 VMware Hybrid Cloud Extension 기술�
 
 예상하는 빌드 업데이트가 표시되지 않거나 HCX에 문제점이 있거나 최신 HCX 빌드를 시스템으로 즉시 푸시하려는 경우 [IBM 지원 센터에 문의](../vmonic/trbl_support.html)의 단계를 수행하여 지원 티켓을 여십시오.
 
-## 관련 링크
+### 관련 링크
 
 * [HCX on {{site.data.keyword.cloud_notm}} 개요](hcx_considerations.html)
 * [HCX 용어집](hcx_glossary.html)

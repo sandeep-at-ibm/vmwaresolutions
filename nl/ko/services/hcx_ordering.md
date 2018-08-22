@@ -4,22 +4,22 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-20"
 
 ---
 
 # VMware HCX on IBM Cloud 주문
 
-서비스가 포함된 새 VMware vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 또는 기존 인스턴스에 서비스를 추가하여 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 주문할 수 있습니다.
+서비스가 포함된 새 VMware vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 또는 기존 인스턴스에 서비스를 추가하여 VMware HCX on {{site.data.keyword.cloud}} 서비스를 주문할 수 있습니다.
 
 ## 새 인스턴스에 대한 VMware HCX on IBM Cloud 주문
 
-새 VMware vCenter Server on IBM Cloud with Hybridity Bundle 인스턴스를 VMware HCX on {{site.data.keyword.cloud_notm}}와 함께 주문하려면 {{site.data.keyword.vmwaresolutions_full}} 콘솔에서 인스턴스를 주문할 때 **서비스** 섹션에서 **VMware HCX on IBM Cloud**를 선택하십시오.
+새 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스를 VMware HCX on {{site.data.keyword.cloud_notm}}와 함께 주문하려면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 인스턴스를 주문할 때 **서비스** 섹션에서 **VMware HCX on IBM Cloud**를 선택하십시오. 
 
 
 ## 기존 인스턴스에 대한 VMware HCX on IBM Cloud 주문
 
-기존 VMware vCenter Server on IBM Cloud with Hybridity Bundle 인스턴스에 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 추가하려면 서비스를 추가할 인스턴스를 보고 왼쪽 탐색 분할창에서 **서비스**를 클릭하고 **서비스 추가**를 클릭하십시오.
+기존 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스에 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 추가하려면 해당 서비스가 추가될 인스턴스를 보고 왼쪽 탐색 분할창에서 **서비스**를 클릭한 후에 **추가**를 클릭하십시오. 
 
 ## VMware HCX on IBM Cloud 구성
 
@@ -38,15 +38,15 @@ HCX on {{site.data.keyword.cloud_notm}}를 설치하려면 다음 설정을 완�
 ## HCX on IBM Cloud에 대한 배치 프로세스
 
 HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 서비스가 포함된 vCenter Server with Hybridity Bundle 인스턴스를 주문하거나 나중에 인스턴스에 서비스를 배치할 때 {{site.data.keyword.vmwaresolutions_short}} 자동화 프로세스를 통해 다음 단계가 완료됩니다.
-1. {{site.data.keyword.cloud_notm}} 인프라에서 HCX에 대해 3개의 서브넷이 주문됩니다. 
+1. {{site.data.keyword.cloud_notm}} 인프라에서 HCX에 대해 3개의 서브넷이 주문됩니다.
    * HCX 관리를 위한 하나의 사설 포터블 서브넷.
    * **사설 네트워크**가 **HCX 상호연결 유형**에 대해 선택된 경우 HCX 상호연결을 위한 하나의 사설 포터블 서브넷.
    * **공용 네트워크**가 **HCX 상호연결 유형**에 대해 선택된 경우 HCX 상호연결을 위한 하나의 공인 포터블 서브넷. 이 서브넷은 VMware의 활성화와 유지보수에도 사용됩니다.
 
    **중요:** HCX에 대해 주문된 서브넷의 IP 주소는 VMware on {{site.data.keyword.cloud_notm}} 자동화로 관리되어야 합니다. 사용자가 작성한 VMware 리소스(예: VM 및 NSX Edge)에 이 IP 주소를 지정할 수 없습니다. VMware 아티팩트에 대한 추가 IP 주소가 필요한 경우 {{site.data.keyword.cloud_notm}}에서 고유한 서브넷을 주문해야 합니다.
-2. **HCX 상호연결 유형**에 대해 **사설 네트워크**가 선택된 경우에는 사설 DVS(Distributed Virtual Switch)에 **SDDC-DPortGroup-HCX-Private**이 작성됩니다. 
-3. VMware에서 HCX 정품 인증 키가 주문됩니다. 
-4. HCX 상호연결, 로컬 HCX 컴포넌트 및 원격 HCX 컴포넌트에서 필요로 하는 3개의 HCX용 리소스 풀 및 VM 폴더가 작성됩니다. 
+2. **HCX 상호연결 유형**에 대해 **사설 네트워크**가 선택된 경우에는 사설 DVS(Distributed Virtual Switch)에 **SDDC-DPortGroup-HCX-Private**이 작성됩니다.
+3. VMware에서 HCX 정품 인증 키가 주문됩니다.
+4. HCX 상호연결, 로컬 HCX 컴포넌트 및 원격 HCX 컴포넌트에서 필요로 하는 3개의 HCX용 리소스 풀 및 VM 폴더가 작성됩니다.
 5. HCX 관리 트래픽을 위한 VMware NSX ESG(Edge Services Gateway)의 쌍이 배치되고 구성됩니다.
    * 주문된 서브넷을 사용하여 공용 및 사설 업링크 인터페이스가 구성됩니다.
    * ESG가 고가용성(HA)을 사용하는 추가 대형 에지 어플라이언스의 쌍으로 구성됩니다.
@@ -63,7 +63,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 서비�
    * 로컬 및 원격 HCX 배치 컨테이너가 구성됩니다.
 7. HCX Manager의 호스트 이름 및 IP 주소가 VMware vCenter Server on {{site.data.keyword.cloud_notm}}의 DNS 서버에 등록됩니다.
 
-## 관련 링크
+### 관련 링크
 
 * [HCX on {{site.data.keyword.cloud_notm}} 개요](hcx_considerations.html)
 * [HCX on {{site.data.keyword.cloud_notm}} 관리](managinghcx.html)

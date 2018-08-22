@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -15,6 +15,24 @@ F5 on {{site.data.keyword.cloud}} 서비스(F5 BIG-IP® Virtual Edition)는 로�
 필요에 따라 이 서비스의 다중 인스턴스를 설치할 수 있습니다.
 
 **가용성**: 이 서비스는 V1.9 이상 릴리스에 배치된 인스턴스에서만 사용 가능합니다.
+
+## F5 on IBM Cloud의 기술 스펙
+
+다음 컴포넌트가 F5 on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다. 
+
+### 가상 머신
+* 모든 옵션이 사용 가능한 2개의 가상 머신 (VM).
+* 라이센싱 옵션에 따라 가상 머신당 2, 4 또는 8 vCPU
+* 라이센싱 옵션에 따라 가상 머신당 4, 8 또는 16GB RAM 
+
+### 네트워킹
+* HA 동기화를 위한 사설 VXLAN(Private Virtual Extensible LAN)
+* 사설 관리 네트워크를 통한 TMSH(Traffic Management Shell) 및 관리 콘솔에 대한 액세스. 
+
+### 라이센스 및 요금
+각 VM에 대한 라이센스 요금은 라이센싱 옵션(양호, 우수 또는 최상) 및 선택된 대역폭에 따라 각 청구 주기에 적용됩니다. 
+
+**중요:** 서비스 설치 이후에는 라이센싱 레벨을 변경할 수 없습니다. 라이센싱 레벨을 변경하려면 기존 서비스를 제거하고 다른 라이센싱 옵션을 사용하여 서비스를 다시 설치해야 합니다. 
 
 ## F5 on IBM Cloud 설치 시 고려사항
 
@@ -76,9 +94,9 @@ ESXi 서버에 IBM CloudDriver, VMware NSX Controller, VMware NSX Edge와 같은
 
 ## F5 on IBM Cloud 제거 시 고려사항
 
-F5 on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 기존 BIG-IP VE 구성이 올바르게 제거되었는지 확인하십시오. 특히, BIG-IP VE를 통하는 대신 BIG-IP VE 주변에서 네트워크 트래픽을 라우트해야 합니다. 그렇지 않으면, 기존 데이터 그래픽은 환경에서 영향을 받을 수 있습니다.
+F5 on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 기존 BIG-IP VE 구성이 올바르게 제거되었는지 확인하십시오. 특히, BIG-IP VE를 통하는 대신 BIG-IP VE 주변에서 네트워크 트래픽을 라우트해야 합니다. 그렇지 않으면 사용자 환경의 기존 데이터 트래픽이 영향을 받을 수 있습니다.
 
-## 관련 링크
+### 관련 링크
 
 * [F5 on {{site.data.keyword.cloud_notm}} 주문](f5_ordering.html)
 * [F5 on {{site.data.keyword.cloud_notm}} 관리](managing_f5.html)

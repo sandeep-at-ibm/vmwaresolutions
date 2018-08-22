@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,8 +20,8 @@ lastupdated: "2018-05-30"
 
 ## 프로시저
 
-1. 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
-2. **온프레미스 HCX 인스턴스** 테이블로 스크롤하여 **인스턴스 주문**을 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오. 
+2. **온프레미스 HCX 인스턴스** 테이블로 스크롤하여 **새로 프로비저닝**을 클릭하십시오.
 3. **온프레미스 인스턴스 이름**을 지정하고 **다음**을 클릭하십시오.
 4. 주문하기 전에 인스턴스 구성을 확인하십시오.
    1. 인스턴스의 설정을 검토하십시오.
@@ -39,10 +39,9 @@ lastupdated: "2018-05-30"
 
 주문한 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스를 보고 관리하십시오.
 
-## 관련 링크
+### 관련 링크
 
 * [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 보기](standalone_viewingserviceinstances.html)
 * [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 삭제](standalone_deletingserviceinstances.html)
 * [HCX 용어집](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 문서](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

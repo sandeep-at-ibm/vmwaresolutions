@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-15"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -15,14 +15,14 @@ lastupdated: "2018-06-15"
 ## 새 인스턴스에 대한 FortiGate Virtual Appliance on IBM Cloud 주문
 
 다음 방법 중 하나를 사용하여 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}와 함께 새 인스턴스를 주문할 수 있습니다.
-* {{site.data.keyword.vmwaresolutions_full}} 콘솔에서 새 인스턴스를 주문할 때 **서비스** 섹션에서 **FortiGate Virtual Appliance on IBM Cloud**를 선택하십시오.
-* {{site.data.keyword.cloud_notm}} 카탈로그에서 **FortiGate Virtual Appliance on IBM Cloud 서비스**를 선택하고 서비스 설정을 지정하고 **새 인스턴스에 추가**를 선택하십시오.
+* {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 새 인스턴스를 주문할 때 **서비스** 섹션에서 **FortiGate Virtual Appliance on IBM Cloud**를 선택하십시오.
+* {{site.data.keyword.cloud_notm}} 카탈로그에서 **FortiGate Virtual Appliance on IBM Cloud**를 선택하고 서비스 설정을 지정한 후에 **새 인스턴스에 추가**를 선택하십시오. 
 
 ## 기존 인스턴스에 대한 FortiGate Virtual Appliance on IBM Cloud 주문
 
 다음 방법 중 하나를 사용하여 기존 인스턴스에 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 추가할 수 있습니다.
-* {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 서비스를 추가할 인스턴스를 보고 왼쪽 탐색 분할창에서 **서비스**를 클릭하고 **서비스 추가**를 클릭하십시오.
-* {{site.data.keyword.cloud_notm}} 카탈로그에서 **FortiGate Virtual Appliance on IBM Cloud 서비스**를 선택하고 서비스 설정을 지정하고 **기존 인스턴스에 추가**를 선택하십시오.
+* {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 해당 서비스를 추가할 인스턴스를 보고 왼쪽 탐색 분할창에서 **서비스**를 클릭한 후에 **추가**를 클릭하십시오. 
+* {{site.data.keyword.cloud_notm}} 카탈로그에서 **FortiGate Virtual Appliance on IBM Cloud**를 선택하고 서비스 설정을 지정한 후에 **기존 인스턴스에 추가**를 선택하십시오. 
 
 ## FortiGate Virtual Appliance on IBM Cloud 서비스 구성
 
@@ -34,7 +34,7 @@ lastupdated: "2018-06-15"
 
 ### 배치 크기
 
-IBM Cloud는 다음 배치 크기 옵션을 제공합니다.
+{{site.data.keyword.cloud_notm}}에서는 다음의 배치 크기 옵션을 제공합니다. 
 * 소형(2개의 vCPU / 4GB RAM)
 * 중형(4개의 vCPU / 6GB RAM)
 * 대형(8개의 vCPU / 12GB RAM)
@@ -53,7 +53,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}에 대한 라이
 
 **중요**: 서비스 설치 후 라이센스 모델을 변경할 수 없습니다. 라이센스 모델을 변경하려면 기존 서비스를 제거하고 다른 라이센스 옵션을 선택하여 서비스를 다시 설치해야 합니다.
 
-## 관련 링크
+### 관련 링크
 
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 개요](fortinetvm_considerations.html)
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 관리](managingfortinetvm.html)
