@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -37,9 +37,9 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 ESXi 서버 기능의 추가 및 제거를 사용하여 인스턴스의 기능을 확장하고 축소할 수 있습니다. 또한 호스팅된 환경에서 VMware 컴포넌트의 업데이트 및 업그레이드 적용과 같이 라이프사이클 관리 기능도 사용할 수 있습니다.
 
-아키텍처에 대한 세부사항은 [솔루션 개요](../archiref/solution/solution_overview.html)를 참조하십시오. 
+아키텍처에 대한 세부사항은 [솔루션 개요](../archiref/solution/solution_overview.html)를 참조하십시오.
 
-## Cloud Foundation 인스턴스 컴포넌트
+## Cloud Foundation 인스턴스의 기술 스펙
 
 다음 컴포넌트는 Cloud Foundation 인스턴스에 포함됩니다.
 
@@ -84,13 +84,6 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 * **사전 구성됨**, **소형** 구성의 경우에만: 두 개의 1.9TB SSD 용량 디스크
 * **사전 구성됨**, **대형** 구성의 경우에만: 네 개의 3.8TB SSD 용량 디스크
 
-
-### 백업용 스토리지
-
-최대 12TB까지 스케일링할 수 있는 하나의 2TB 공유 파일 레벨 스토리지가 주문됩니다.
-
-**참고**: 백업용 스토리지는 Cloud Foundation 인스턴스의 표준 컴포넌트가 아닙니다. 인스턴스를 주문할 때 백업 서비스를 선택하거나 선택 해제하여 원하는 백업용 스토리지를 선택할 수 있습니다.
-
 ### 라이센스(IBM 제공 또는 BYOL) 및 요금
 
 * 네 개의 VMware vSphere Enterprise Plus 6.5u1
@@ -100,13 +93,13 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 * 네 개의 SDDC Manager 라이센스(IBM 제공만 해당)
 * 네 개의 지원 및 서비스 비용
 
-## Cloud Foundation 확장 노드 컴포넌트
+## Cloud Foundation 확장 노드의 기술 스펙
 
 각 Cloud Foundation 확장 노드가 {{site.data.keyword.cloud_notm}} 계정에서 다음 컴포넌트를 배치하고 이에 대한 비용을 부과합니다.
 
 ### 확장 노드를 위한 하드웨어
 
-[Cloud Foundation 인스턴스 컴포넌트](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)에 있는 구성이 포함된 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server입니다.
+[Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)에 제시된 구성을 지닌 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server. 
 
 ### 확장 노드의 라이센스 및 요금
 
@@ -117,7 +110,7 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 * 하나의 SDDC Manager 라이센스
 * 하나의 지원 및 서비스 요금
 
-**중요**: {{site.data.keyword.slportal}} 또는 콘솔 외부의 다른 방법이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔의 {{site.data.keyword.cloud_notm}} 계정에서만 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+**중요**: {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
 
 **주의**: 인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거
@@ -127,7 +120,7 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 
    이 활동에 대한 예외에는 {{site.data.keyword.slportal}}의 공유 스토리지 파일 공유 관리가 포함됩니다. 이러한 활동에는 공유 스토리지 파일 공유 주문, 삭제(마운트된 경우 데이터 저장소에 영향을 줄 수 있음), 권한 부여 및 마운트가 포함됩니다.
 
-## 관련 링크
+### 관련 링크
 
 * [Cloud Foundation 소프트웨어 명세서](sd_bom.html)
 * [Cloud Foundation 인스턴스 계획](sd_planning.html)

@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-31"
 
 ---
 
 # Cloud Foundation 아티팩트 변경에 대한 고려사항
 
 {{site.data.keyword.vmwaresolutions_full}}에 대해 예약된 사용자, 리소스 또는 서브넷을 변경하면 VMware Cloud Foundation 인스턴스의 관리 오퍼레이션에 영향을 줄 수 있습니다.
+
+**중요:** VMware vSphere Web Client의 **사용자 및 그룹** 페이지에서 **ic4v-vCenter** 그룹의 글로벌 권한을 편집하지 마십시오. 이러한 변경에는 사용자 이름 변경, 사용자 삭제 또는 해당 비밀번호 변경이 포함됩니다.
 
 ## 서비스 고유 사용자 계정
 

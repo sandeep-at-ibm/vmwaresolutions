@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,16 +20,16 @@ lastupdated: "2018-06-21"
 
 | 서비스 이름 |      가용성 | 인스턴스 지원 |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on IBM Cloud](../services/f5_considerations.html)                                 |예 | V1.9 이상 |
-| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       |예 | V1.8 이상 |
-| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) |예 | V2.0 이상 |
-| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              |예 | V2.3 이상 |
-| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              |예 | V2.3 이상 |
-| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         |예 | V2.2 이상 |
-| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  |예 | V2.2 이상 |
-| [Veeam on IBM Cloud](../services/veeam_considerations.html)                          |예 | V1.8 이상 |
-| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                         |아니오 | 해당사항 없음 |
-| [Zerto on IBM Cloud](../services/addingzertodr.html)                                 |예 | V1.2 이상 |
+| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 |예 | V1.9 이상 |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       |예 | V1.8 이상 |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) |예 | V2.0 이상 |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              |예 | V2.3 이상 |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              |예 | V2.3 이상 |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         |예 | V2.2 이상 |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |예 | V2.2 이상 |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          |예 | V1.8 이상 |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                         |아니오 | 해당사항 없음 |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 |예 | V1.2 이상 |
 
 ## Cloud Foundation 인스턴스에 서비스 추가
 
@@ -63,6 +63,6 @@ Cloud Foundation 인스턴스에 서비스를 추가하려면 이전 테이블�
 
 **주의**: 제거된 서비스에 대한 {{site.data.keyword.cloud_notm}} 비용 청구 주기 종료 시 비용이 청구됩니다.
 
-## 관련 링크
+### 관련 링크
 
 * [FAQ](../vmonic/faq.html)
