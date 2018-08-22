@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -16,7 +16,7 @@ vCenter Server on {{site.data.keyword.cloud_notm}} 및 vCenter Server 아키텍�
 
 **주의:** VMware Federal on {{site.data.keyword.cloud_notm}}는 vCenter Server 오퍼링의 서브세트만 제공합니다. 다중 사이트 구성, 사전 구성된 {{site.data.keyword.cloud_notm}} Bare Metal Server, BYOL(Bring Your Own License) 및 추가 서비스 주문 옵션은 지원되지 않습니다.
 
-## VMware Federal on IBM Cloud의 vCenter Server 인스턴스 컴포넌트
+## VMware Federal on IBM Cloud 인스턴스의 기술 스펙
 
 다음 컴포넌트가 포함됩니다.
 
@@ -49,7 +49,7 @@ NFS 스토리지 구성의 경우 {{site.data.keyword.baremetal_short}}의 권�
 다음 VSI(Virtual Server Instances)가 주문됩니다.
 * 인스턴스 배치가 완료된 후 시스템이 종료되는 IBM CloudBuilder용 VSI
 * (인스턴스 V2.3 이상의 경우) 보안 및 강력한 추진력 향상을 위해 하나의 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI 또는 관리 클러스터에 있는 두 개의 고가용성 Microsoft Windows VM을 배치하도록 선택할 수 있습니다.
-* (인스턴스 V2.2의 경우) 호스트 및 가상 머신이 등록된 인스턴스를 위한 DNS로 작동하는 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI가 배치되고 검색될 수 있습니다.
+* (V2.2 인스턴스의 경우) 호스트 및 가상 머신이 등록된 인스턴스를 위한 DNS로 작동하는 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI가 배치되고 검색될 수 있습니다.
 
 ### 스토리지
 
@@ -72,34 +72,33 @@ NFS 옵션을 선택한 경우 관리 컴포넌트용 하나의 2TB, 4IOPS/GB �
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.3
+* VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4
 * (vSAN 클러스터의 경우) VMware vSAN Advanced 또는 Enterprise 6.6
 
-## vCenter Server 확장 노드 컴포넌트
+## VMware Federal on IBM Cloud 확장 노드의 기술 스펙
 
 각 vCenter Server 확장 노드가 배치되고 {{site.data.keyword.cloud_notm}} 계정에서 다음 컴포넌트에 대한 비용이 발생합니다.
 
 ### 확장 노드를 위한 하드웨어
 
-[VMware Federal on IBM Cloud의 vCenter Server 인스턴스 컴포넌트](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud)에 제시된 구성을 포함하는 하나의 Bare Metal Server.
+[VMware Federal on {{site.data.keyword.cloud_notm}} 인스턴스의 기술 스펙](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)에 제시된 구성을 지닌 하나의 Bare Metal Server. 
 
 ### 확장 노드의 라이센스 및 요금
 
 * 하나의 VMware vSphere Enterprise Plus 6.5u1
-* 하나의 VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.3
+* 하나의 VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4
 * (vSAN 클러스터의 경우) VMware vSAN Advanced 또는 Enterprise 6.6
 
-**중요**: {{site.data.keyword.slportal_full}} 또는 콘솔 외부의 다른 방법이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔의 {{site.data.keyword.cloud_notm}} 계정에서만 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+**중요**: {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
 
 **주의**: 인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거
 *  ESXi 서버 추가 또는 제거를 통한 인스턴스 용량의 확장 또는 축소
 *  컴포넌트 전원 끄기
-<!--*  Restarting services-->
 
    이 활동에 대한 예외에는 {{site.data.keyword.slportal}}의 공유 스토리지 파일 공유 관리가 포함됩니다. 이러한 활동에는 공유 스토리지 파일 공유 주문, 삭제(마운트된 경우 데이터 저장소에 영향을 줄 수 있음), 권한 부여 및 마운트가 포함됩니다.
 
-## 관련 링크
+### 관련 링크
 
 * [vCenter Server 소프트웨어 명세서](vc_bom.html)
 * [VMware Federal 인스턴스에 대한 요구사항 및 계획](vc_fed_planning.html)

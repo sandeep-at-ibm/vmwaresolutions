@@ -4,18 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # VMware Federal 인스턴스 보기
 
-주문한 VMware Federal 인스턴스와 이에 대한 자세한 정보를 보려면 이 프로시저를 수행하십시오.
+서로 다른 사용자 계정에 대해 프로비저닝된 VMware Federal 인스턴스의 요약과 자세한 정보를 봅니다. 
 
 ## VMware Federal 인스턴스 요약 보기
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
-2. **vCenter Server** 테이블에서 인스턴스의 목록을 보십시오.
+사용자 계정에 대해 프로브저닝된 모든 VMware Federal 인스턴스의 요약을 보려면 다음 단계를 완료하십시오. 
+1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오. 
+2. 콘솔의 오른쪽 상단 모서리에서 사용자의 아바타를 클릭한 후에 **계정** 필드를 클릭하여 해당 인스턴스를 확인할 사용자 계정을 선택하십시오.  
+3. **vCenter Server** 테이블에서, 선택된 사용자 계정에서 프로비저닝된 인스턴스의 목록을 보십시오. 
 
 표 1. VMware Federal 인스턴스 항목
 
@@ -23,8 +25,9 @@ lastupdated: "2018-06-04"
 |:------------- |:------------- |
 |이름 |인스턴스의 이름입니다. |
 |버전 |인스턴스가 배치되거나 업그레이드된 릴리스 버전입니다. |  
-|위치 |인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent}}입니다. |  
-|작성 시간 |인스턴스가 작성된 날짜 및 시간입니다. |  
+|위치 |인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}입니다. |  
+|작성 시간 |인스턴스가 작성된 날짜 및 시간입니다. | 
+|상태 |인스턴스의 상태입니다. |
 
 인스턴스에는 다양한 상태가 있습니다.
 
@@ -46,7 +49,7 @@ lastupdated: "2018-06-04"
 
 인스턴스의 특성 세부사항을 보려면 다음 작업을 수행하십시오.
 
-1. **vCenter Server 인스턴스** 테이블에서 인스턴스 이름을 클릭하십시오.
+1. **vCenter Server 인스턴스** 테이블에서 인스턴스 이름을 클릭하십시오. 
 2. **특성**에서 인스턴스의 세부사항을 보십시오.
 
 표 3. VMware Federal 인스턴스 특성
@@ -90,7 +93,7 @@ lastupdated: "2018-06-04"
 
 ## VMware Federal 인스턴스의 배치 히스토리 보기
 
-**배치 히스토리**에서 인스턴스의 배치 히스토리를 보십시오.
+왼쪽 탐색 분할창에서 **배치 히스토리**를 클릭하여 인스턴스에 대한 배치 히스토리를 보십시오. 
 
 표 5. VMware Federal 인스턴스 배치 히스토리
 
@@ -114,9 +117,9 @@ lastupdated: "2018-06-04"
 *  VPN을 사용하여 {{site.data.keyword.cloud_notm}} 인프라 사설 네트워크에 로그인하기 위한 액세스 지점의 목록은 [VPN 액세스](http://www.softlayer.com/vpn-access){:new_window}를 참조하십시오.
 *  vSphere Web Client를 사용하여 OVF(Open Virtualization Format) 파일을 배치할 때 문제점이 발생하면 [vSphere Web Client를 사용하여 OVF 파일 배치](../vmonic/trbl_deploy_ovf.html)를 참조하십시오.
 
-## 관련 링크
+### 관련 링크
 
-* [VMware Federal on IBM Cloud 개요](vc_fed_overview.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} 개요](vc_fed_overview.html)
 * [VMware Federal 인스턴스 주문](vc_fed_orderinginstance.html)
 * [VMware Federal 인스턴스 삭제](vc_fed_deletinginstance.html)
 * [IBM 지원 센터에 문의](../vmonic/trbl_support.html)

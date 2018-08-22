@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -23,7 +23,7 @@ vCenter Server 인스턴스에 대한 주문 프로세스의 일부로 다음 �
 * 샘플 NSX DLR(Distributed Logical Router)은 계층 2(L2) 네트워크에 연결된 로컬 워크로드 간의 잠재적인 동쪽-서쪽 통신을 위해 배치됩니다.
 * NSX Edge 어플라이언스는 워크로드 논리 스위치의 IP 주소 범위와 네트워크 주소 변환(NAT) 규칙의 공인 IP 주소 간의 NAT를
 수행하도록 배치되고 구성됩니다.
-* Veeam on IBM Cloud 서비스를 설치한 경우 NSX Manager는 NSX 구성의 매일 백업을 수행하도록 구성됩니다. 자세한 정보는 [Veeam on IBM Cloud 설치 시 고려사항](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud)을 참조하십시오.
+* Veeam on {{site.data.keyword.cloud_notm}} 서비스를 설치한 경우에는 NSX Manager가 NSX 구성의 일별 백업을 수행하도록 구성됩니다. 자세한 정보는 [Veeam on {{site.data.keyword.cloud_notm}} 설치 시 고려사항](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud)을 참조하십시오. 
 
 
 ## VM에 대한 네트워킹 설정 구성
@@ -76,8 +76,8 @@ NSX Edge NAT 규칙에 대한 자세한 정보는 [Managing NAT rules](https://p
    **경고:** 초기 설정 중에 주문되고 사용된 IP 주소를 사용하지 마십시오. 그러나 사용자의 요구사항에 따라 이 서브넷에
    다른 IP 주소를 사용할 수 있습니다. 추가 네트워크 주소 변환을 설정하려면 [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}를 참조하십시오.
 
-## 관련 링크
+### 관련 링크
 
 * [문제점 해결](../vcenter/vcenter_chg_impact.html)
 * [FAQ](../vmonic/faq.html)
-* [NSX Edge Services Gateway](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/nsx-esg){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

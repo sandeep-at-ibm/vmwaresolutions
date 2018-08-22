@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -44,7 +44,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 삭제하면 다음 컴포�
    1. **vCenter 콘솔**의 오른쪽에 있는 오버플로우 메뉴 아이콘을 다시 클릭한 후 **인스턴스 삭제**를 클릭하십시오.
    2. **인스턴스 삭제** 창에서 **확인**을 클릭하십시오.
 
-## 관련 링크
+### 관련 링크
 
 * [다중 사이트 구성에서 vCenter Server with Hybridity Bundle 인스턴스 삭제](vc_hybrid_deletinginstance_multi.html)
 * [vCenter Server with Hybridity Bundle 인스턴스 주문](vc_hybrid_orderinginstance.html)
