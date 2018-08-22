@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -40,7 +40,7 @@ No console do {{site.data.keyword.vmwaresolutions_short}}, é possível expandir
 Para obter detalhes sobre a arquitetura, consulte [Visão geral da
 solução](../archiref/solution/solution_overview.html).
 
-## Componentes da instância do Cloud Foundation
+## Especificações técnicas para instâncias do Cloud Foundation
 
 Os componentes a seguir estão incluídos em sua instância do Cloud Foundation.
 
@@ -85,13 +85,6 @@ O armazenamento a seguir é pedido, dependendo da configuração do {{site.data.
 * Apenas para a configuração **Pré-configurado**, **Pequeno**: dois discos de capacidade SSD de 1,9 TB
 * Apenas para a configuração **Pré-configurado**, **Grande**: quatro discos de capacidade SSD de 3,8 TB
 
-
-### Armazenamento para backups
-
-Um armazenamento de nível de arquivo compartilhado de 2 TB, que pode ter a capacidade aumentada para 12 TB, é pedido.
-
-**Nota**: o armazenamento para backups não é um componente padrão para instâncias do Cloud Foundation. Ao pedir uma instância, você pode escolher se deseja armazenamento para backups selecionando ou desmarcando um serviço de backup.
-
 ### Licenças (fornecidas pela IBM ou BYOL) e taxas
 
 * Quatro VMware vSphere Enterprise Plus 6.5u1
@@ -101,13 +94,13 @@ Um armazenamento de nível de arquivo compartilhado de 2 TB, que pode ter a capa
 * Quatro licenças do SDDC Manager (apenas fornecidas pela IBM)
 * Quatro taxas de Suporte e Serviços
 
-## Componentes do nó de expansão do Cloud Foundation
+## Especificações técnicas para nós de expansão do Cloud Foundation
 
 Cada nó de expansão do Cloud Foundation implementará e incorrerá em encargos para os seguintes componentes em sua conta do {{site.data.keyword.cloud_notm}}.
 
 ### Hardware para nós de expansão
 
-Um Bare Metal Server do {{site.data.keyword.cloud_notm}} com a configuração apresentada em [Componentes de instâncias do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração apresentada em [Especificações técnicas para instâncias do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Licenças e taxas para os nós de expansão
 
@@ -128,7 +121,7 @@ Um Bare Metal Server do {{site.data.keyword.cloud_notm}} com a configuração ap
 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhados.
 
-## Links relacionados
+### Links relacionados
 
 * [Lista de materiais de software do Cloud Foundation](sd_bom.html)
 * [Planejando instâncias do Cloud Foundation](sd_planning.html)

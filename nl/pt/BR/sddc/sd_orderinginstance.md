@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -52,7 +52,7 @@ Para usuários que não são do Parceiros de negócios, é possível usar as lic
 
 ### Local do datacenter
 
-Selecione o {{site.data.keyword.CloudDataCent_notm}} em que a instância deve ser hospedada.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the {{site.data.keyword.baremetal_long}} specification you selected previously are displayed.-->
+Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
 
 ### Pré-configurado
 
@@ -78,8 +78,6 @@ Tabela 1. Opções para {{site.data.keyword.baremetal_short}}customizado
 | Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-
-<!-- For guidance on what Bare Metal Server configuration to choose, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
 
 ### Número de Bare Metal Servers
 
@@ -214,7 +212,7 @@ Com base em sua configuração selecionada para a instância e os serviços de c
 
 A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
 
-Quando a instância é implementada com êxito, os componentes que são descritos em [Componentes de instâncias do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components) são instalados em sua plataforma virtual do VMware. Os servidores ESXi que você pediu são agrupados como **SDDC-Cluster** por padrão. Se tiver pedido serviços adicionais, a implementação dos serviços iniciará após a conclusão do pedido.
+Quando a instância for implementada com êxito, os componentes descritos em [Especificações técnicas para instâncias do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) serão instalados em sua plataforma virtual do VMware. Os servidores ESXi que você pediu são agrupados como **SDDC-Cluster** por padrão. Se tiver pedido serviços adicionais, a implementação dos serviços iniciará após a conclusão do pedido.
 
 Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 
@@ -235,7 +233,7 @@ Visualizar e gerenciar a instância do Cloud Foundation que você pediu.
 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhados.
 
-## Links relacionados
+### Links relacionados
 
 * [Inscrevendo-se para uma conta do {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
 * [Visualizando instâncias do Cloud Foundation](sd_viewinginstances.html)

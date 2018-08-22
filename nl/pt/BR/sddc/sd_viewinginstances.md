@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Visualizando instâncias do Cloud Foundation
 
-Visualize as instâncias do VMware Cloud Foundation que você pediu e as informações detalhadas sobre elas.
+Visualize o resumo e as informações detalhadas das instâncias do VMware Cloud Foundation que são provisionadas para diferentes contas do usuário.
 
 ## Visualizando o resumo de instâncias do Cloud Foundation
 
-Para visualizar um resumo de todas as instâncias do Cloud Foundation em seu ambiente, conclua as etapas a seguir:
+Para visualizar um resumo de todas as instâncias do Cloud Foundation que são provisionadas para uma conta do usuário, conclua as etapas a seguir:
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
-2. Na tabela **Instâncias do Cloud Foundation**, visualize a lista de suas instâncias:
+1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+2. No canto superior direito do console, clique em seu avatar e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar instâncias. 
+3. Na tabela **Instâncias do Cloud Foundation**, visualize a lista de suas instâncias:
 
 Tabela 1. Cloud Foundation instância itens
 
@@ -25,7 +26,7 @@ Tabela 1. Cloud Foundation instância itens
 |:------------- |:------------- |
 | Nome | O nome da instância |
 | Versão | A versão de liberação na qual a instância foi implementada ou submetida a upgrade |
-| Localização | O {{site.data.keyword.CloudDataCent}} no qual a instância é hospedada |
+| Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada |
 | Horário de criação | A data e hora em que a instância foi criada |
 | Barra de Status | O status da instância |
 
@@ -33,7 +34,7 @@ A instância pode ter um intervalo de status.
 
 Tabela 2. Descrições do status de instâncias do Cloud Foundation
 
-| Status        | Descrição       |
+| Barra de Status        | Descrição       |
 |:------------- |:------------- |
 | Criando | A instância está sendo criada. |
 | Construindo | A instância está sendo configurada. |
@@ -95,7 +96,7 @@ Tabela 4. Informações de acesso do Cloud Foundation para componentes relaciona
 
 ## Visualizando o histórico de implementação para instâncias do Cloud Foundation
 
-Em **Histórico de implementação**, visualize o histórico de implementação da instância.
+Clique em **Histórico de implementação** na área de janela de navegação esquerda para visualizar o histórico de implementação da instância.
 
 Tabela 5. Histórico de implementação da instância do Cloud Foundation
 
@@ -120,7 +121,7 @@ Revise os tópicos a seguir para obter informações que ajudarão a concluir as
 * Para obter uma lista de pontos de acesso para efetuar login no {{site.data.keyword.cloud_notm}} Private Network usando a VPN, veja [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
 * Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, veja [Implementando um arquivo OVF usando o vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
 
-## Links relacionados
+### Links relacionados
 
 * [Pedindo instâncias do Cloud Foundation](sd_orderinginstance.html)
 * [Expandindo e contraindo capacidade para instâncias do Cloud Foundation](sd_addingremovingservers.html)

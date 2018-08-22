@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -65,15 +65,19 @@ Tabela 2. Indicadores de status para o {{site.data.keyword.CloudDataCents_notm}}
 | Provisoriamente fora do inventário  | O {{site.data.keyword.CloudDataCent_notm}} não possui disponibilidade neste momento. |
 | Inventário limitado             | O {{site.data.keyword.CloudDataCent_notm}} limitou a disponibilidade e o pedido pode não estar concluído. |
 
+## Backup de componentes de gerenciamento
+
+Você é responsável por manter e assegurar a disponibilidade de todos os componentes da instância. É altamente recomendável planejar o backup ou a alta disponibilidade de todos os componentes de gerenciamento. Para obter mais informações, consulte [Fazendo backup de componentes](../archiref/solution/solution_backingup.html).
+
 ## Serviços para instâncias do Cloud Foundation
 
 É possível pedir serviços complementares para a sua instância com base em suas necessidades, por exemplo, recuperação de desastre. Para obter mais informações, veja [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](sd_addingremovingservices.html).
 
-<!-- ## Capacity considerations
+## Considerações sobre capacidade
 
-For capacity information and considerations, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+Para obter informações e considerações de capacidade, consulte [Capacidade de ajuste de escala](../archiref/solution/solution_scaling.html).
 
-## Links relacionados
+### Links relacionados
 
 * [Visão geral do Cloud Foundation](sd_cloudfoundationoverview.html)
 * [Pedindo instâncias do Cloud Foundation](sd_orderinginstance.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -43,7 +43,7 @@ O gráfico a seguir descreve a visão geral da implementação de vários sites 
 
 Figura 1. Implementação de vários sites do Cloud Foundation
 
-![Implementação multisite do Cloud Foundation](multisite-hub-spoke.svg "Implementação multisite do Cloud Foundation")
+![Implementação multissite do Cloud Foundation](multisite-hub-spoke.svg "Implementação multissite do Cloud Foundation")
 
 O modelo contém as camadas a seguir:
 
@@ -56,7 +56,7 @@ O modelo contém as camadas a seguir:
 
 **Nota**: excluir instâncias do Cloud Foundation que fazem parte de uma configuração de vários sites requer planejamento especial. Para obter mais informações, veja [Excluindo instâncias do Cloud Foundation em uma configuração de vários sites](sd_deletinginstance_multi.html).
 
-## Links relacionados
+### Links relacionados
 
 * [Designar função principal ao NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configurando NSX Managers secundários](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
