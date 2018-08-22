@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -24,7 +24,6 @@ Assurez-vous que :
 
 ## Paramètres système
 
-<!--**Important: Do not modify any values that are set during ordering and cluster deployment. Doing so can result in your cluster becoming unusable.**-->
 Vous devez spécifier les paramètres système suivants lorsque vous commandez un nouveau cluster vSphere :
 
 ### Nom de cluster
@@ -187,7 +186,7 @@ En fonction de l'{{site.data.keyword.CloudDataCent_notm}} que vous avez sélecti
 
 #### Paire à haute disponibilité de dispositifs FortiGate Physical Appliance série 300
 
-Vous pouvez également choisir d'inclure la paire à haute disponibilité de dispositifs FortiGate Physical Appliance série 300 pour sécuriser votre environnement de cloud. Pour plus d'informations, voir [Présentation de FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html).
+Vous pouvez également choisir d'inclure la paire à haute disponibilité de dispositifs FortiGate Physical Appliance série 300 pour sécuriser votre environnement de cloud. Pour plus d'informations, voir [Présentation de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html).
 
 ## Récapitulatif de la commande
 
@@ -223,7 +222,7 @@ Selon vos configurations, le coût estimé est généré et affiché instantané
 
    **Remarque** : seuls les serveurs {{site.data.keyword.baremetal_short}} sont installés. Vous êtes responsable de l'installation et de la configuration des divers composants après déploiement du cluster, tels que VMware vCenter, VMware NSX, VMware vSAN.
 
-## Résultats
+### Résultats
 
 Si vous avez sauvegardé la configuration en tant que modèle, vous obtenez une notification sur la console qui confirme la réussite de la sauvegarde de la configuration et le modèle figure dans la liste **Configurations de cluster**.
 
@@ -231,7 +230,7 @@ Si vous avez passé la commande, le déploiement du cluster démarre automatique
 
 **Remarque :** contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.
 
-## Liens connexes
+### Liens connexes
 
 * [Commande de clusters vSphere sur la base de configurations existantes](vs_orderingbasedonexistingconfig.html)
 * [Mise à l'échelle de clusters existants](vs_scalingexistingclusters.html)

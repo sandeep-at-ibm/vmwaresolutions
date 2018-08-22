@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -30,13 +30,13 @@ Assurez-vous que :
    * Pour sauvegarder la configuration en tant que modèle sans passer de commande, cliquez sur **Sauvegarde de la configuration**.
    * Pour passer la commande, assurez-vous que le compte qui devra être facturé est correct, passez en revue et acceptez les conditions, puis cliquez sur **Mettre à disposition**.
 
-## Résultats
+### Résultats
 
 Le déploiement de la mise à l'échelle du cluster démarre automatiquement et vous recevez par courrier électronique la confirmation que la commande est en cours de traitement. Lorsque le cluster est prêt pour utilisation, un courrier électronique vous en avertit.
 
 **Remarque :** contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.
 
-## Liens connexes
+### Liens connexes
 
 * [Commande de nouveaux clusters vSphere](vs_orderinginstances.html)
 * [Commande de clusters vSphere sur la base de configurations existantes](vs_orderingbasedonexistingconfig.html)

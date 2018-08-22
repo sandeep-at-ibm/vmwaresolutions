@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -18,7 +18,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} n'automatise pas l'installati
 
 Utilisez cette offre pour créer un cluster de serveurs ESXi ou en augmenter un existant dans un {{site.data.keyword.CloudDataCent_notm}}. Selon les composants VMware que vous sélectionnez, vous pouvez démarrer avec un seul serveur ESXi dans le cluster puis en ajouter en fonction de vos besoins.
 
-## Composants VMware vSphere on IBM Cloud
+## Spécifications techniques relatives aux clusters VMware vSphere on IBM Cloud
 
 Passez en revue les composants VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
@@ -62,26 +62,26 @@ Stockage personnalisé par l'utilisateur pour la configuration vSAN lorsque le c
 
 **Remarque :** les unités SSD (Solid State Disk) de 3,8 To seront prises en charge une fois officiellement disponibles dans un centre de données.
 
-## Composants des noeuds d'extension de cluster vSphere
+## Spécifications techniques relatives aux noeuds d'extension de cluster vSphere
 
 Chaque noeud d'extension de cluster vSphere déployé génère des frais, imputés à votre compte de portail {{site.data.keyword.slportal}}, pour les composants suivants.
 
 ### Matériel pour les noeuds d'extension
 
-Un serveur bare metal IBM Cloud avec la configuration matérielle présentée dans [Composants VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+Un serveur bare metal {{site.data.keyword.cloud_notm}} doté de la configuration matérielle présentée dans [Composants de VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
 ### Mise en réseau des noeuds d'extension
 
-Un serveur bare metal IBM Cloud avec la configuration réseau présentée dans [Composants VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+Un serveur bare metal {{site.data.keyword.cloud_notm}} doté de la configuration réseau présentée dans [Composants de VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
 ### Composants VMware pour les noeuds d'extension
 
-* Un serveur bare metal IBM Cloud avec VMware vSphere Enterprise Plus 6.0u2 ou 6.5u1  
-* Composants VMware facultatifs présentés dans [Composants VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+* Un serveur bare metal {{site.data.keyword.cloud_notm}} avec VMware vSphere Enterprise Plus 6.0u2 ou 6.5u1  
+* Composants VMware facultatifs présentés dans [Composants de VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
 **Important** : vous devez gérer les serveurs ESXi, les composants VMware facultatifs et le matériel supplémentaire commandés et livrés sur votre compte {{site.data.keyword.cloud_notm}} uniquement à partir du portail {{site.data.keyword.slportal}}. Après la création d'un nouveau cluster sur la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez revenir sur la console pour mettre à l'échelle le nouveau cluster à l'aide de la configuration enregistrée. Pour plus d'informations, voir [Mise à l'échelle de clusters existants](vs_scalingexistingclusters.html).
 
-## Liens connexes
+### Liens connexes
 
 * [Nomenclature du logiciel VMware vSphere](vs_bom.html)
 * [Planification des clusters vSphere](vs_planning.html)

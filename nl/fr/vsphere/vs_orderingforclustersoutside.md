@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -39,7 +39,7 @@ Le déploiement du cluster démarre automatiquement et vous recevez par courrier
 
 **Remarque :** les clusters vSphere ne s'affichent pas sur la page **Instances déployées**, avec les instances vCenter Server et Cloud Foundation.
 
-## Liens connexes
+### Liens connexes
 
 * [Commande de nouveaux clusters vSphere](vs_orderinginstances.html)
 * [Commande de clusters vSphere sur la base de configurations existantes](vs_orderingbasedonexistingconfig.html)
