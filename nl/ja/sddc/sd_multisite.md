@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -56,7 +56,7 @@ lastupdated: "2018-05-18"
 
 **注**: マルチサイト構成の一部になっている Cloud Foundation インスタンスを削除するには、特別な計画が必要です。 詳しくは、[ マルチサイト構成での Cloud Foundation インスタンスの削除](sd_deletinginstance_multi.html)を参照してください。
 
-## 関連リンク
+### 関連リンク
 
 * [NSX Manager へのプライマリ ロールの割り当て](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [セカンダリ NSX Manager の設定](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}

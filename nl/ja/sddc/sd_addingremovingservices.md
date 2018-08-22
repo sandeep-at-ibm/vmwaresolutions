@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,16 +20,16 @@ Cloud Foundation インスタンスで使用できるサービスを以下の表
 
 | サービス名 | 可用性 | インスタンス・サポート |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on IBM Cloud](../services/f5_considerations.html)                                 | はい | V1.9 以降 |
-| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       | はい | V1.8 以降 |
-| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) | はい | V2.0 以降 |
-| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              | はい | V2.3 以降 |
-| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              | はい | V2.3 以降 |
-| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         | はい | V2.2 以降 |
-| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  | はい | V2.2 以降 |
-| [Veeam on IBM Cloud](../services/veeam_considerations.html)                          | はい | V1.8 以降 |
-| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                         | いいえ | 適用外 |
-| [Zerto on IBM Cloud](../services/addingzertodr.html)                                 | はい | V1.2 以降 |
+| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | はい | V1.9 以降 |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | はい | V1.8 以降 |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | はい | V2.0 以降 |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | はい | V2.3 以降 |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | はい | V2.3 以降 |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | はい | V2.2 以降 |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  | はい | V2.2 以降 |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | はい | V1.8 以降 |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                         | いいえ | 適用外 |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | はい | V1.2 以降 |
 
 ## Cloud Foundation インスタンスへのサービスの追加
 
@@ -37,7 +37,7 @@ Cloud Foundation インスタンスにサービスを追加するには、前の
 
 ### サービスのインストールの結果
 
-サービスのインストールが正常に完了すると、お客様に E メールで通知され、そのサービスがインスタンスの**「サービス」**ページに表示され、サービスの状況が**「インストール済み」**になります。
+サービスのインストールが正常に完了すると、E メールで通知が届きます。また、そのサービスがインスタンスの**「サービス」**ページに表示され、サービスの状況が**「インストール済み」**になります。
 
 ## Cloud Foundation インスタンス用サービスの表示
 
@@ -63,6 +63,6 @@ Cloud Foundation インスタンスにサービスを追加するには、前の
 
 **注意**: 削除対象のサービスに関する請求は、{{site.data.keyword.cloud_notm}} 請求処理サイクルの終わりまで行われます。
 
-## 関連リンク
+### 関連リンク
 
 * [FAQ](../vmonic/faq.html)

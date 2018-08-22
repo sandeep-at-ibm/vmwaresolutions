@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -21,7 +21,7 @@ VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情�
 | VLAN      | タイプ      | 詳細      |
 |:----------|:----------|:-------------|
 | VLAN1     | パブリック、プライマリー | パブリック・ネットワーク・アクセス用に物理 ESXi サーバーに割り当てられます。 初期デプロイメントの後は使用されません。 インターネット・アクセスに使用できます。 |
-| VLAN2     | プライベート A、プライマリー | IBM Cloud により、物理 ESXi サーバーに割り当てられます。 管理インターフェースで VMware vSphere 管理トラフィック用に使用されます。<br><br>管理コンポーネントとして機能する VM (仮想マシン) に割り当てられます。<br><br>VMware NSX VTEP (VXLAN トンネル・エンドポイント) に割り当てられます |
+| VLAN2     | プライベート A、プライマリー | {{site.data.keyword.cloud}} によって物理 ESXi サーバーに割り当てられます。 管理インターフェースで VMware vSphere 管理トラフィック用に使用されます。<br><br>管理コンポーネントとして機能する VM (仮想マシン) に割り当てられます。<br><br>VMware NSX VTEP (VXLAN トンネル・エンドポイント) に割り当てられます |
 | VLAN3     | プライベート B、ポータブル | 使用される場合、VMware vSAN に割り当てられます。<br><br>使用される場合、VMware NFS に割り当てられます。<br><br>VMware vSphere vMotion に割り当てられます。 |
 
 ## Cloud Foundation インスタンスのソフトウェアの BOM
@@ -38,7 +38,7 @@ VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情�
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX for vSphere                          | 6.3.5        |
 | VMware       | SDDC Manager                             | 2.4          |
-| {{site.data.keyword.IBM}} | CloudDriver                 | 2.4          |
+| IBM          | CloudDriver                              | 2.4          |
 | Microsoft    | Windows Server Standard Edition (64 ビット) | 2012R2       |
 
 ## ESXi サーバーの拡張構成の設定
@@ -67,10 +67,10 @@ ESXi サーバーに対して適用される拡張構成設定は、Cloud Founda
 
   詳しくは、[Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239) を参照してください。
 
-## 関連リンク
+### 関連リンク
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
-* [VMware Cloud Foundation on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
+* [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
 * [Cloud Foundation の概要](sd_cloudfoundationoverview.html)
 * [Cloud Foundation インスタンスの計画](sd_planning.html)

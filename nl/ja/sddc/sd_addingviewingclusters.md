@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -197,7 +197,7 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。 **「クラスター」**テーブルで、削除するクラスターを見つけて**「削除」**アイコンをクリックします。
 4. 他のクラスターに VM を移行する場合は、その移行が完了したことを確認し、クラスターを削除することを確認します。
 
-## 関連リンク
+### 関連リンク
 
 * [Cloud Foundation インスタンスの表示](sd_viewinginstances.html)
 * [Cloud Foundation インスタンスの容量の拡張と縮小](sd_addingremovingservers.html)
