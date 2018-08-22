@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-06-08"
 |VLAN|类型|详细信息|
 |:----------|:----------|:-------------|
 |VLAN1|公用，主|分配给物理 ESXi 服务器以用于公用网络访问。在初始部署后未使用。可用于因特网访问。|
-|VLAN2|专用 A，主|由 IBM Cloud 分配给物理 ESXi 服务器。通过管理界面用于 VMware vSphere 管理流量。<br><br>分配给充当管理组件的 VM（虚拟机）。<br><br>分配给 VMware NSX VTEP（VXLAN 隧道端点）|
+|VLAN2|专用 A，主|由 {{site.data.keyword.cloud}} 分配给物理 ESXi 服务器。通过管理界面用于 VMware vSphere 管理流量。<br><br>分配给充当管理组件的 VM（虚拟机）。<br><br>分配给 VMware NSX VTEP（VXLAN 隧道端点）|
 |VLAN3|专用 B，可移植|分配给 VMware vSAN（如果使用）。<br><br>分配给 VMware NFS（如果使用）。<br><br>分配给 VMware vSphere vMotion。|
 
 ## Cloud Foundation 实例的软件 BOM
@@ -38,7 +38,7 @@ lastupdated: "2018-06-08"
 |VMware|vSAN|6.6.1|
 |VMware|NSX for vSphere|6.3.5|
 |VMware|SDDC Manager|2.4|
-| {{site.data.keyword.IBM}} |CloudDriver|2.4|
+|IBM|CloudDriver|2.4|
 |Microsoft|Windows Server Standard Edition（64 位）|2012R2|
 
 ## ESXi 服务器的高级配置设置
@@ -67,10 +67,10 @@ lastupdated: "2018-06-08"
 
   有关更多信息，请参阅[增大定义 ESXi/ESX 主机上 NFS 最大挂载量的默认值](https://kb.vmware.com/s/article/2239)。
 
-## 相关链接
+### 相关链接
 
 * [VMware ESXi/ESX 的构建号和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware vCenter Server 的构建号和版本 (2143838)](https://kb.vmware.com/s/article/2143838)
-* [VMware Cloud Foundation on IBM Cloud 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
+* [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
 * [Cloud Foundation 概述](sd_cloudfoundationoverview.html)
 * [规划 Cloud Foundation 实例](sd_planning.html)

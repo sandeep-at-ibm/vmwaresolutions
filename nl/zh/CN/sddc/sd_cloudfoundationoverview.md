@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -39,7 +39,7 @@ lastupdated: "2018-06-22"
 
 有关体系结构的详细信息，请参阅[解决方案概述](../archiref/solution/solution_overview.html)。
 
-## Cloud Foundation 实例组件
+## Cloud Foundation 实例的技术规范
 
 Cloud Foundation 实例中包含以下组件。
 
@@ -85,13 +85,6 @@ Cloud Foundation 实例中包含以下组件。
 * 仅对于**预配置**的**小型**配置：两个 1.9 TB SSD 容量磁盘
 * 仅对于**预配置**的**大型**配置：四个 3.8 TB SSD 容量磁盘
 
-
-### 用于备份的存储器
-
-订购了一个 2 TB 共享文件级别存储器，最高可扩展到 12 TB。
-
-**注**：用于备份的存储器不是 Cloud Foundation 实例的标准组件。订购实例时，可以通过选择或取消选择备份服务来选择是否需要用于备份的存储器。
-
 ### 许可证（IBM 提供或 BYOL）和费用
 
 * 四个 VMware vSphere Enterprise Plus 6.5u1
@@ -101,13 +94,13 @@ Cloud Foundation 实例中包含以下组件。
 * 四个 SDDC Manager 许可证（仅限 IBM 提供的许可证）
 * 四个支持和服务费用
 
-## Cloud Foundation 扩展节点组件
+## Cloud Foundation 扩展节点的技术规范
 
 每个 Cloud Foundation 扩展节点将在您的 {{site.data.keyword.cloud_notm}} 帐户中部署以下组件并收取相应费用。
 
 ### 扩展节点的硬件
 
-一个 {{site.data.keyword.cloud_notm}} 裸机服务器，其配置在 [Cloud Foundation 实例组件](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)中提供。
+一个 {{site.data.keyword.cloud_notm}} 裸机服务器，其配置在 [Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中提供。
 
 ### 扩展节点的许可证和费用
 
@@ -128,7 +121,7 @@ Cloud Foundation 实例中包含以下组件。
 
    这些活动的例外情况包括在 {{site.data.keyword.slportal}} 中管理共享存储器文件共享。此类活动包括：订购、删除（如果已安装，可能会影响数据存储）、授权和安装共享存储器文件共享。
 
-## 相关链接
+### 相关链接
 
 * [Cloud Foundation 软件材料清单](sd_bom.html)
 * [规划 Cloud Foundation 实例](sd_planning.html)

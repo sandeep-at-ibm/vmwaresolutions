@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -198,7 +198,7 @@ lastupdated: "2018-06-08"
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，找到要删除的集群，然后单击**删除**图标。
 4. 确认已完成将 VM 迁移到其他集群（如果适用），并确认要删除该集群。
 
-## 相关链接
+### 相关链接
 
 * [查看 Cloud Foundation 实例](sd_viewinginstances.html)
 * [扩展和收缩 Cloud Foundation 实例的容量](sd_addingremovingservers.html)

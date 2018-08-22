@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -34,7 +34,7 @@ lastupdated: "2018-03-16"
 6. 对于多站点配置中的所有辅助 Cloud Foundation 实例，重复步骤 1 到 5。
 7. 删除所有辅助实例后，还可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台中删除主实例。
 
-## 相关链接
+### 相关链接
 
 * [删除 Cloud Foundation 实例](sd_deletinginstance.html)
 * [订购、查看和除去 Cloud Foundation 实例中的服务](sd_addingremovingservices.html)

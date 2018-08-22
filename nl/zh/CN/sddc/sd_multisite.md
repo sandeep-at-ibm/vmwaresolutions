@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -56,7 +56,7 @@ lastupdated: "2018-05-18"
 
 **注**：删除属于多站点配置中的 Cloud Foundation 实例需要特殊规划。有关更多信息，请参阅[删除多站点配置中的 Cloud Foundation 实例](sd_deletinginstance_multi.html)。
 
-## 相关链接
+### 相关链接
 
 * [将主要角色分配给 NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [配置辅助 NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}

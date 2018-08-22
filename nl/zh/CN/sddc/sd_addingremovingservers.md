@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -45,7 +45,7 @@ lastupdated: "2018-06-08"
 
 如果在集群中看不到添加到列表中的新 ESXi 服务器，请检查电子邮件或控制台通知以查找有关该故障的更多详细信息。
 
-## 相关链接
+### 相关链接
 
 * [Cloud Foundation 材料清单](sd_bom.html)
 * [针对 Cloud Foundation 实例的需求和规划](sd_planning.html)

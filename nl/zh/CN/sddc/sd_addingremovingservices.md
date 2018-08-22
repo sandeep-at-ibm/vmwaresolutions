@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,16 +20,16 @@ lastupdated: "2018-06-21"
 
 |服务名称|可用性| 实例支持 |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on IBM Cloud](../services/f5_considerations.html)|是| V1.9 和更高版本 |
-| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)|是| V1.8 和更高版本 |
-| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html)|是| V2.0 和更高版本 |
-| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)|是| V2.3 和更高版本 |
-| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)|是| V2.3 和更高版本 |
-| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)|是| V2.2 和更高版本 |
-| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)|是| V2.2 和更高版本 |
-| [Veeam on IBM Cloud](../services/veeam_considerations.html)|是| V1.8 和更高版本 |
-| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)|否| 不适用 |
-| [Zerto on IBM Cloud](../services/addingzertodr.html)|是| V1.2 和更高版本 |
+|[F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)|是| V1.9 和更高版本 |
+|[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)|是| V1.8 和更高版本 |
+|[FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)|是| V2.0 和更高版本 |
+|[HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)|是| V2.3 和更高版本 |
+|[HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)|是| V2.3 和更高版本 |
+|[IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)|是| V2.2 和更高版本 |
+|[KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)|是| V2.2 和更高版本 |
+|[Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)|是| V1.8 和更高版本 |
+|[VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)|否| 不适用 |
+|[Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)|是| V1.2 和更高版本 |
 
 ## 向 Cloud Foundation 实例添加服务
 
@@ -63,6 +63,6 @@ lastupdated: "2018-06-21"
 
 **注意**：在所除去服务的 {{site.data.keyword.cloud_notm}} 计费周期结束之前，仍然会对您计费。
 
-## 相关链接
+### 相关链接
 
 * [常见问题](../vmonic/faq.html)
