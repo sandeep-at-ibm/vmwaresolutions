@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-28"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -14,12 +14,14 @@ lastupdated: "2018-05-28"
 
 ## IBM Cloud for VMware Solutions にはどのようなユーザー・アカウントが必要ですか?
 
-* **IBMid アカウント**。 {{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスするためには、このアカウントが必要です。 このコンソールは、{{site.data.keyword.slportal_full}}とは別のスタンドアロンのユーザー・インターフェースです。 詳しくは、[概説](../index.html)を参照してください。
-* **{{site.data.keyword.cloud_notm}} アカウント**。 プロビジョニングにはこのアカウントが必要です。 {{site.data.keyword.cloud_notm}} アカウントを登録するには、**IBMid アカウント**を従量課金 (PAYG) アカウントにアップグレードします。 使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの登録](signing_softlayer_account.html)および [{{site.data.keyword.cloud_notm}} アカウントの要件](slaccountrequirement.html)を参照してください。
+* **IBMid アカウント**。 {{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスするためには、このアカウントが必要です。 このコンソールは、{{site.data.keyword.slportal}}とは別のスタンドアロンのユーザー・インターフェースです。 詳しくは、[概説](../index.html)を参照してください。
+* **{{site.data.keyword.cloud_notm}} アカウント**。 プロビジョニングにはこのアカウントが必要です。 {{site.data.keyword.cloud_notm}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。 
+* **{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウント**。 このアカウントは以前は **IBM SoftLayer** アカウントと呼ばれていたもので、インフラストラクチャー製品とサービスを管理するための複数の追加機能を提供する {{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルへのログインにはこのアカウントを使用します。
+{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、**{{site.data.keyword.cloud_notm}} アカウント**を従量課金 (PAYG) タイプのアカウントにアップグレードすることにより、または既存の {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを {{site.data.keyword.cloud_notm}} アカウントにリンクすることにより取得できます。使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは特定の要件を満たしている必要があります。 詳しくは、[必要なアカウントの登録](signing_softlayer_account.html)および [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](slaccountrequirement.html)を参照してください。
 
 ## IBM Cloud インフラストラクチャーの資格情報を IBM Cloud for VMware Solutions コンソールに関連付けるにはどうすればよいですか?
 
-初めてインスタンスを注文するときに、{{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報ページの指示に従い、{{site.data.keyword.slportal}}で {{site.data.keyword.cloud_notm}} のユーザー名と API キーを見つけてコピーしてください。 {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報は、最初の注文の後に {{site.data.keyword.vmwaresolutions_short}} コンソールに保管されます。 それ以降の注文では、保管された資格情報が自動的に使用されます。
+初めてインスタンスを注文するときに、コンソールの**「設定」**ページの指示に従い、{{site.data.keyword.slportal}}で {{site.data.keyword.cloud_notm}} インフラストラクチャーのユーザー名と API キーを見つけてコピーしてください。 {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報は、最初の注文の後に {{site.data.keyword.vmwaresolutions_short}} コンソールに保管されます。 それ以降の注文では、保管された資格情報が自動的に使用されます。
 
 ## VMware 仮想プラットフォームの使用料はどのように請求されますか?
 
@@ -29,21 +31,21 @@ lastupdated: "2018-05-28"
 
 どのインスタンス・タイプでも、VMware 仮想環境のデプロイメント方法を選択できます。 違いは、カスタマイズと自動化の程度にあります。
 
-* VMware vCenter Server インスタンスを注文した場合は、カスタマイズしたコンピュート、ストレージ、ネットワークのリソースを備えた VMware 仮想環境がデプロイされます。 デプロイされるコンポーネントについて詳しくは、[vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html)の『_vCenter Server の技術仕様_』セクションを参照してください。
-* VMware Cloud Foundation インスタンスを注文した場合は、統一されたソフトウェア定義データ・センター (SDDC) プラットフォームがデプロイされます。 デプロイされるコンポーネントについて詳しくは、[Cloud Foundation インスタンスのコンポーネント](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)を参照してください。
+* VMware vCenter Server インスタンスを注文した場合は、カスタマイズしたコンピュート、ストレージ、ネットワークのリソースを備えた VMware 仮想環境がデプロイされます。 デプロイされるコンポーネントについて詳しくは、[vCenter Server インスタンスの技術仕様](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)を参照してください。
+* VMware Cloud Foundation インスタンスを注文した場合は、統一されたソフトウェア定義データ・センター (SDDC) プラットフォームがデプロイされます。 デプロイされるコンポーネントについて詳しくは、[Cloud Foundation インスタンスの技術仕様](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)を参照してください。
 * VMware vSphere クラスターを注文すると、ホスト対象の VMware 環境を、VMware 互換ハードウェアを組み込みながら設計して構築するための柔軟性が最大化されます。 ただし、{{site.data.keyword.cloud_notm}} では、VMware vSphere クラスターのオプションの VMware コンポーネントのインストールや構成や起動が自動化されません。
 * vCenter Server インスタンスと Cloud Foundation インスタンスと vSphere クラスターでは、サポートされている機能がそれぞれ違います。 詳しくは、[オファリングの比較表](inst_comp_chart.html)を参照してください。
 
 ## vCenter Server インスタンスには何が含まれていますか?
 
-詳しくは、[vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html)の『_vCenter Server の技術仕様_』セクションを参照してください。
+詳しくは、[vCenter Server インスタンスの技術仕様](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)を参照してください。
 
 ## Cloud Foundation インスタンスには何が含まれていますか?
 
-詳しくは、[Cloud Foundation インスタンスのコンポーネント](../sddc/sd_cloudfoundationoverview.html)を参照してください。
+詳しくは、[Cloud Foundation インスタンスの技術仕様](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)を参照してください。
 
 ## vSphere クラスターには何が含まれていますか?
-詳しくは、[VMware vSphere on IBM Cloud のコンポーネント](../vsphere/vs_vsphereclusteroverview.html)を参照してください。
+詳しくは、[VMware vSphere on {{site.data.keyword.cloud_notm}} のコンポーネント](../vsphere/vs_vsphereclusteroverview.html)を参照してください。
 
 ## 2 ノードの vCenter Server インスタンスの可用性は高いですか?
 
@@ -106,7 +108,7 @@ VMware の更新は、デプロイした VMware インスタンスのタイプ�
 * [vCenter Server インスタンスの要件と計画](../vcenter/vc_planning.html)
 * [vCenter Server with Hybridity Bundle インスタンスの要件と計画](../vcenter/vc_hybrid_planning.html)
 * [Cloud Foundation インスタンスの要件と計画](../sddc/sd_planning.html)
-* [VMware vSphere on IBM Cloud の要件と計画](../vsphere/vs_planning.html)
+* [VMware vSphere on {{site.data.keyword.cloud_notm}} の要件と計画](../vsphere/vs_planning.html)
 * [NetApp ONTAP Select インスタンスの要件と計画](../netapp/np_planning.html)
 * [VMware Federal インスタンスの要件と計画](../vcenter/vc_fed_planning.html)
 

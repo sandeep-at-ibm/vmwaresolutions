@@ -14,7 +14,7 @@ lastupdated: "2017-10-13"
 
 ## VMware vSphere on IBM Cloud
 
-このリリースでは、VMware vSphere on IBM Cloud オファリングが導入されました。このオファリングでは、選択した VMware コンポーネントに基づいて、VMware 互換のコンピュート、ストレージ、ネットワークのリソースをカスタマイズして注文することで、IBM によってホストされる独自の VMware 仮想環境を構築できます。 vSphere on IBM Cloud は、オプションの VMware コンポーネントのインストール、構成、起動を自動実行しませんが、ビジネス・ニーズに最適な環境を設計して構築できるように柔軟性が最大化されています。 IBM Cloud データ・センターで ESXi サーバーの vSphere クラスターを新規作成するか、既存の vSphere クラスターを拡張することから始めることができます。
+このリリースでは、VMware vSphere on {{site.data.keyword.cloud_notm}} オファリングが導入されました。このオファリングでは、選択した VMware コンポーネントに基づいて、VMware 互換のコンピュート、ストレージ、ネットワークのリソースをカスタマイズして注文することで、IBM によってホストされる独自の VMware 仮想環境を構築できます。 vSphere on {{site.data.keyword.cloud_notm}} は、オプションの VMware コンポーネントのインストール、構成、起動を自動実行しませんが、ビジネス・ニーズに最適な環境を設計して構築できるように柔軟性が最大化されています。 {{site.data.keyword.CloudDataCent_notm}}で ESXi サーバーの vSphere クラスターを新規作成するか、既存の vSphere クラスターを拡張することから始めることができます。
 
 詳しくは、以下を参照してください。
 * [新規 vSphere クラスターの注文](../vsphere/vs_orderinginstances.html)
@@ -22,7 +22,7 @@ lastupdated: "2017-10-13"
 
 ## NetApp ONTAP Select on IBM Cloud
 
-このリリースでは、ソフトウェア定義ストレージ用の仮想アプライアンスである NetApp ONTAP Select on IBM Cloud オファリングが導入されました。これにより、IBM Cloud の専用{{site.data.keyword.baremetal_short}}上に NetApp ONTAP Select をサービスとして実装できます。 NetApp ONTAP Select on IBM Cloud は、高性能 (オール SSD) 構成と大容量 (オール SATA) 構成の両方で提供されます。
+このリリースでは、ソフトウェア定義ストレージ用の仮想アプライアンスである NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} オファリングが導入されました。これにより、IBM Cloud の専用{{site.data.keyword.baremetal_short}}上に NetApp ONTAP Select をサービスとして実装できます。 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} は、高性能 (オール SSD) 構成と大容量 (オール SATA) 構成の両方で提供されます。
 専用のインフラストラクチャーでストレージをホストし、重複排除や保存データの圧縮と暗号化などの NetApp 機能を提供します。 このオファリングを使用すると、高速で効率的な NetApp Snapshot® コピー、FlexClone® コピー、SnapMirror® レプリケーションなどの高度なデータ管理機能を使用してデータを保護しながら、俊敏性と柔軟性を備えたストレージ・リソースをプロビジョンできます。
 
 詳しくは、以下を参照してください。
@@ -31,12 +31,12 @@ lastupdated: "2017-10-13"
 
 ## F5 on IBM Cloud サービス
 
-F5 BIG-IP Virtual Edition (VE) on IBM Cloud サービスを、VMware Cloud Foundation と VMware vCenter Server の両方のインスタンスで使用できるようになりました。 このサービスは、ローカルおよびグローバル規模のインテリジェントな L4-L7 ロード・バランシングとトラフィック管理サービス、堅牢なネットワークと Web アプリケーション・ファイアウォール保護、セキュアなフェデレーテッド・アプリケーション・アクセスを提供します。
-F5 BIG-IP Virtual Edition (VE) on IBM Cloud サービスを組み込んだ形でインスタンスを注文することも、後から {{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンス・プロパティーの詳細ページにある**「サービス」**タブで既存のインスタンスにこのサービスを追加することもできます。 要件に応じて、BIG-IP VE の 3 つのライセンス・オプションの中から 1 つを選択できます。
+F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} サービスを、VMware Cloud Foundation と VMware vCenter Server の両方のインスタンスで使用できるようになりました。 このサービスは、ローカルおよびグローバル規模のインテリジェントな L4-L7 ロード・バランシングとトラフィック管理サービス、堅牢なネットワークと Web アプリケーション・ファイアウォール保護、セキュアなフェデレーテッド・アプリケーション・アクセスを提供します。
+F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} サービスを組み込んだ形でインスタンスを注文することも、後から {{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンス・プロパティーの詳細ページにある**「サービス」**タブで既存のインスタンスにこのサービスを追加することもできます。 要件に応じて、BIG-IP VE の 3 つのライセンス・オプションの中から 1 つを選択できます。
 
 詳しくは、以下を参照してください。
-* [F5 on IBM Cloud の考慮事項](../services/f5_considerations.html)
-* [F5 on IBM Cloud の管理](../services/managing_f5.html)
+* [F5 on {{site.data.keyword.cloud_notm}} の考慮事項](../services/f5_considerations.html)
+* [F5 on {{site.data.keyword.cloud_notm}} の管理](../services/managing_f5.html)
 
 ## IBM Integrated Managed Infrastructure のマネージド・サービス
 
@@ -65,7 +65,7 @@ VMware Cloud Foundation インスタンスで IBM Integrated Managed Infrastruct
 
 ### データ・センターをまたぐクラスターのサポート
 
-ホストされる VMware 環境の拡張を強化するために、インスタンスで最初のクラスターをデプロイしたものとは別の {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) ポッドまたは IBM Cloud データ・センターに新規クラスターを作成できるようになりました。
+ホストされる VMware 環境の拡張を強化するために、インスタンスで最初のクラスターをデプロイしたものとは別の {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) ポッドまたは {{site.data.keyword.CloudDataCent_notm}}に新規クラスターを作成できるようになりました。
 
 詳しくは、[vCenter Server インスタンスのクラスターの追加と表示](../vcenter/vc_addingviewingclusters.html)を参照してください。
 
@@ -101,5 +101,5 @@ Microsoft Active Directory (AD) / ドメイン・ネーム・サーバー (DNS) 
 
 ## 新規資料および更新された資料
 
-* プライベートなマルチサイト VCF インスタンスを保護し、パブリックな IBM Cloud サービスを使用するように VMware アプリケーションを拡張する方法を説明します。 詳しくは、[Securely connect your private VMware workloads in the IBM Cloud](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window} を参照してください。
-* IBM CloudDriver 仮想マシンと SDDC Manager 仮想マシンからのすべてのプロトコル通信を許可するファイアウォールを構成するために追加資料が提供されました。 詳しくは、[Fortinet on IBM Cloud のコンポーネントと考慮事項](../services/fsa_considerations.html)を参照してください。
+* プライベートなマルチサイト VCF インスタンスを保護し、パブリックな {{site.data.keyword.cloud_notm}} サービスを使用するように VMware アプリケーションを拡張する方法を説明します。 詳しくは、[Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window} を参照してください。
+* IBM CloudDriver 仮想マシンと SDDC Manager 仮想マシンからのすべてのプロトコル通信を許可するファイアウォールを構成するために追加資料が提供されました。 詳しくは、[Fortinet on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](../services/fsa_considerations.html)を参照してください。

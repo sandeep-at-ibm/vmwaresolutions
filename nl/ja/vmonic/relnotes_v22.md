@@ -108,7 +108,7 @@ V2.2 以降のリリースでデプロイまたは V2.2 以降のリリースに
 
 ### 大容量の IBM Cloud ベア・メタル・サーバーのための SATA ドライブ数の増加
 
-NetApp ONTAP Select の大容量の{{site.data.keyword.baremetal_short}}では、34 個の SATA ドライブを使用できるようになりました。 詳しくは、[NetApp ONTAP Select の概要](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components)の『*NetApp ONTAP Select インスタンスのコンポーネント*』セクションを参照してください。
+NetApp ONTAP Select の大容量の{{site.data.keyword.baremetal_short}}では、34 個の SATA ドライブを使用できるようになりました。 詳しくは、[NetApp ONTAP Select インスタンスの技術仕様](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)を参照してください。
 
 ## アドオン・サービスの更新
 
@@ -140,7 +140,7 @@ Veeam on {{site.data.keyword.cloud_notm}} および Zerto on {{site.data.keyword
 
 Veeam on {{site.data.keyword.cloud_notm}} サービスは、VMware ハイパーバイザーとシームレスに統合され、企業が高可用性 (HA) を実現するのを支援します。 Veeam バックアップ・ソフトウェアと IBM Resiliency Backup as a Service の両方を使用して、完全に管理されたバックアップ環境をデプロイできます。
 
-Zerto on {{site.data.keyword.cloud_notm}} サービスは、レプリケーション機能と災害復旧機能を提供します。これをデプロイメント・オファリングに統合すると、{{site.data.keyword.cloud_notm}} 上の VMware 仮想環境内のデータを保護および復旧できるようになります。 Zerto DR ソフトウェアと IBM レジリエンシー・サービスの両方を使用して、完全に管理される災害復旧 (DR) 環境をデプロイできます。
+Zerto on {{site.data.keyword.cloud_notm}} サービスは、複製と災害復旧の機能を提供します。これらの機能をデプロイメント・オファリングに組み込むことで、{{site.data.keyword.cloud_notm}} 上の VMware 仮想環境内のデータの保護と復旧を行えます。 Zerto DR ソフトウェアと IBM レジリエンシー・サービスの両方を使用して、完全に管理される災害復旧 (DR) 環境をデプロイできます。
 
 インスタンスのマネージド・サービスは、**「開始」**ページから要求できます。新規インスタンスを注文することも、既存のインスタンスにこのサービスを追加することもできます。
 

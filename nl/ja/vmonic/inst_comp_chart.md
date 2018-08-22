@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -24,14 +24,14 @@ lastupdated: "2018-05-25"
 | ESXi サーバーの追加              | サポートあり           | サポートあり | サポートあり | サポートあり。 自動構成は含まない |
 | ESXi サーバーの削除           | サポートあり           | サポートあり | サポートあり | サポートあり。 自動構成は含まない |
 | マルチクラスター・サポート         | 5 個のクラスター | 10 個のクラスター | 10 個のクラスター | サポートあり。 自動構成は含まない |
-| クライアント管理による VMware スタックの更新とパッチ適用 | IBM CloudDriver と VMware の更新 | IBM CloudDriver | IBM CloudDriver |パッチ自動適用は含まない |
-| バックアップとリストア            | サポートあり | サポートあり | サポートあり | 自動バックアップ・ソリューションの構成は含まない |
+| クライアント管理による VMware スタックの更新とパッチ適用 | VMware 更新 | 含まれない | 含まれない | 含まれない |
+| バックアップとリストア            | IBM Spectrum Protect Plus または Veeam の手動使用 | IBM Spectrum Protect Plus または Veeam の手動使用 | IBM Spectrum Protect Plus または Veeam の手動使用 | バックアップとリストアのソリューションは含まれない |
 | ソフトウェア定義ネットワーキング   | NSX Enterprise   | NSX Base、Advanced、Enterprise | NSX Advanced または Enterprise | NSX Standard、Base、Enterprise。 自動構成は含まない |
 | vSphere と vSAN の BYOL | クラスター単位で完全にサポート   | クラスター単位で完全にサポート     | サポートなし | サポートあり |
 | vCenter と NSX の BYOL | インスタンス単位で完全にサポート   | インスタンス単位で完全にサポート     | サポートなし | サポートあり |
 | NSX ライセンス・アップグレード・オプション           | なし   | NSX Base から Advanced または Enterprise へのアップグレード、NSX Advanced から Enterprise へのアップグレードが可能。 vCenter Server with Hybridity Bundle へのアップグレードが可能。 | NSX Advanced から Enterprise へのアップグレードが可能  | なし |
 | vSAN ライセンス・エディション         | vSAN Advanced または Enterprise  | vSAN Advanced または Enterprise  | vSAN Advanced または Enterprise | vSAN Advanced または Enterprise  |
-| アドオン・サービス               | HCX on {{site.data.keyword.cloud_notm}} 以外サポートあり。  | HCX on {{site.data.keyword.cloud_notm}} 以外サポートあり。 vCenter Server with Hybridity Bundle へのアップグレードが可能。 | HCX on {{site.data.keyword.cloud_notm}} を含めてサポートあり。 | サポートあり。 自動構成は含まない |
+| アドオン・サービス               | HCX on {{site.data.keyword.cloud_notm}} 以外サポートあり。  | HCX on {{site.data.keyword.cloud_notm}} 以外サポートあり。 vCenter Server with Hybridity Bundle へのアップグレードが可能。 | HCX on {{site.data.keyword.cloud_notm}} を含めてサポートあり。 | このソリューションの自動化によってはサポートされませんが、独自のソフトウェアを持ち込んでインストールできます。 |
 
 **注**:
 

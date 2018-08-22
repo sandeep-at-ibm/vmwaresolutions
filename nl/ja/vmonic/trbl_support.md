@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-22"
 1. 次の URL にアクセスします。
    https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
 2. **IBM ID** アカウントでコンソールにログインします。
-3. コンソールの右上隅の**「サポート」>「チケットの追加」**をクリックします。
+3. バナーの左側で、**「サポート」>「チケットの追加」**をクリックします。
 4. {{site.data.keyword.slportal_short}}・ページで**「IBM ID でログイン」**をクリックすると、自動的にポータルにログインします。
 5. _「{{site.data.keyword.cloud_notm}} インフラストラクチャーおよびプラットフォーム・サービスのサポート・ポリシー」_を読み、**「確認」**をクリックします。
 

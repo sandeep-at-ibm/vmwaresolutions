@@ -4,27 +4,27 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-09"
+lastupdated: "2018-07-23"
 
 ---
 
-# IBM Cloud アカウントの要件
+# IBM Cloud インフラストラクチャー・アカウントの要件
 
-{{site.data.keyword.vmwaresolutions_full}} を使用してインスタンスを注文するには、{{site.data.keyword.cloud_notm}} アカウントが必要です。 インスタンス内で注文したコンポーネントの費用は、その {{site.data.keyword.cloud_notm}} アカウントに請求されます。
+{{site.data.keyword.vmwaresolutions_full}} を使用してインスタンスを注文するには、{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントが必要です。 インスタンス内で注文したコンポーネントの費用は、その {{site.data.keyword.cloud_notm}} アカウントに請求されます。
 
-**注**: {{site.data.keyword.cloud_notm}} アカウントは、以前は IBM SoftLayer アカウントと呼ばれていました。
+**注**: {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントは、以前は IBM SoftLayer アカウントと呼ばれていました。
 
-## IBM Cloud アカウントの権限
+## IBM Cloud インフラストラクチャー・アカウントの権限
 
-使用する {{site.data.keyword.cloud_notm}} アカウントには、お客様に代わってインスタンス内でコンポーネントを注文して操作を実行できるだけの権限がなければなりません。 この権限の要件は、{{site.data.keyword.vmwaresolutions_short}} コンソールから注文するすべてのタイプのインスタンスとサービスに適用されます。
+使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントには、お客様に代わってインスタンス内でコンポーネントを注文して操作を実行できるだけの権限がなければなりません。 この権限の要件は、{{site.data.keyword.vmwaresolutions_short}} コンソールから注文するすべてのタイプのインスタンスとサービスに適用されます。
 
-許可ユーザーは、{{site.data.keyword.slportal_full}}で {{site.data.keyword.cloud_notm}} アカウントの権限を確認したり更新したりできます。 詳しくは、[ユーザー・プロファイルの管理](../../../customer-portal/cpmanuserprof.html){:new_window}の『_ユーザーのカスタマー・ポータル許可の編集_』を参照してください。
+許可ユーザーは、{{site.data.keyword.slportal}}で {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの権限を確認したり更新したりできます。 詳しくは、[ユーザー・プロファイルの管理](../../../customer-portal/cpmanuserprof.html){:new_window}の『_ユーザーのカスタマー・ポータル許可の編集_』を参照してください。
 
-表 1. {{site.data.keyword.cloud_notm}} アカウントに必要な権限
+表 1. {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントに必要な権限
 
 | 権限         | 詳細                                 |
 |:-------------------|:----------------------------------------|
-| サーバーの追加 | この権限は、VMware ESXi を実行する {{site.data.keyword.baremetal_long}}を注文するときと、インスタンスの構成、保守、サポートの操作に使用する仮想サーバーを時間単位でプロビジョンするときに必要です。 |
+| サーバーの追加 | この権限は、VMware ESXi を実行する {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}を注文するときと、インスタンスの構成、保守、サポートの操作に使用する仮想サーバーを時間単位でプロビジョンするときに必要です。 |
 | サーバーのキャンセル | この権限は、VMware ESXi を実行する{{site.data.keyword.baremetal_short}}を解放/再利用するときに必要です。 インスタンスを削除すると、注文したコンポーネントは、適切な従属関係シーケンスで自動的に解放されます。 |
 | 仮想サーバーの詳細の表示 | この権限は、注文の確認や自動化構成に必要なサーバー・プロビジョニングの詳細を取得するときに必要です。 |
 | ストレージの追加 | この権限は、インスタンスのバックアップ・ストレージと共有ストレージを注文するときに必要です。 |
@@ -38,13 +38,13 @@ lastupdated: "2018-05-09"
 | ハードウェアの詳細の表示 | この権限は、注文の確認や自動化構成に必要なハードウェアの詳細を取得するときに必要です。 |
 | ライセンスの表示 | この権限は、インスタンスで使用しているライセンスを取得して確認するときに必要です。 |
 | パスワードの表示 | この許可は注文した VSI を管理するために必要です。 |
-| デバイス・モニタリングの管理 | この権限は、注文を実行するときには不要ですが、インスタンス内で VMware ESXi サーバーを実行している {{site.data.keyword.baremetal_long}}のモニタリング状況を取得して確認するときに必要です。 |
+| デバイス・モニタリングの管理 | この権限は、注文を実行するときには不要ですが、インスタンス内で VMware ESXi サーバーを実行している {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}のモニタリング状況を取得して確認するときに必要です。 |
 
 ## クラシック (非 VRF) アカウントの VLAN スパンニング
 
-クラシック (非 VRF) {{site.data.keyword.cloud_notm}} アカウントを使用する場合は、VLAN スパンニングを有効にする必要があります。 クラシック・アカウントの VLAN スパンニングを有効にしないと、VMware 仮想化環境のさまざまなコンポーネントが相互通信できない可能性があります。 {{site.data.keyword.cloud_notm}} アカウントの VLAN スパンニングを有効にするには、[VLAN スパンニングの有効化または無効化](../../../infrastructure/vlans/vlan-spanning.html){:new_window}を参照してください。
+クラシック (非 VRF) {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを使用する場合は、VLAN スパンニングを有効にする必要があります。 クラシック・アカウントの VLAN スパンニングを有効にしないと、VMware 仮想化環境のさまざまなコンポーネントが相互通信できない可能性があります。 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの VLAN スパンニングを有効にするには、[VLAN スパンニングの有効化または無効化](../../../infrastructure/vlans/vlan-spanning.html){:new_window}を参照してください。
 
-## 関連リンク
+### 関連リンク
 
 * [Cloud Foundation インスタンスの要件](../sddc/sd_planning.html)
 * [vCenter Server インスタンスの要件](../vcenter/vc_planning.html)

@@ -30,13 +30,13 @@ Zerto 災害復旧をインスタンスの一部として注文した場合で�
 
 新たに注文する Cloud Foundation インスタンスには、NSX Edge が一部として組み込まれるようになりました。 NSX Edge は、ネットワーク・エッジ・セキュリティーとゲートウェイ・サービスを提供して、仮想化ネットワークを分離します。
 
-インスタンスのデプロイメント中に、管理 NSX Edge Services Gateway (ESG) が IBM によってデプロイされます。 この ESG は、IBM 管理仮想マシンが、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 この ESG は、2 つのインターフェースを含むようにデプロイされます。一方のインターフェースは IBM Cloud のプライベート VLAN に接続され、もう一方のインターフェースは IBM Cloud のパブリック VLAN に接続されます。
+インスタンスのデプロイメント中に、管理 NSX Edge Services Gateway (ESG) が IBM によってデプロイされます。 この ESG は、IBM 管理仮想マシンが、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 この ESG は、2 つのインターフェースを含むようにデプロイされます。一方のインターフェースは {{site.data.keyword.cloud_notm}} のプライベート VLAN に接続され、もう一方のインターフェースは {{site.data.keyword.cloud_notm}} のパブリック VLAN に接続されます。
 
 セキュリティーを確保するため、管理仮想マシンから開始されたアウトバウンド HTTPS 通信のみを許可するようにファイアウォール・ルールが適用されます。 この ESG は「ラージ」構成でデプロイされ、IBM サポートのみが構成を変更できます。
 
 詳しくは、以下を参照してください。
 
-* [Cloud Foundation インスタンスのコンポーネント](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)
+* [Cloud Foundation インスタンスの技術仕様](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [VMware NSX 資料](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 

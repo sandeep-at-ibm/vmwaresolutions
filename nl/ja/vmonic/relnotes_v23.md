@@ -24,7 +24,7 @@ lastupdated: "2018-05-28"
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
-このリリースでは、VMware vCenter Server on IBM Cloud with Hybridity Bundle オファリングが導入されました。 vCenter Server with Hybridity Bundle は、オンプレミスのインフラストラクチャーを素早く簡単にクラウドに拡張できるホステッド・プライベート・クラウドです。 この VMware 環境は、IBM 提供の VMware Software Defined Data Center ライセンスに基づくものであり、VMware HCX on {{site.data.keyword.cloud_notm}} サービスが含まれています。このサービスを使用すると、オンプレミスの vSphere 5.0+ 環境を IBM Cloud サイトに簡単かつ安全に接続して、シームレスなインフラストラクチャーのハイブリッド化と真のアプリケーション・モビリティーを実現できます。
+このリリースでは、VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle オファリングが導入されました。 vCenter Server with Hybridity Bundle は、オンプレミスのインフラストラクチャーを素早く簡単にクラウドに拡張できるホステッド・プライベート・クラウドです。 この VMware 環境は、IBM 提供の VMware Software Defined Data Center ライセンスに基づくものであり、VMware HCX on {{site.data.keyword.cloud_notm}} サービスが含まれています。このサービスを使用すると、オンプレミスの vSphere 5.0+ 環境を {{site.data.keyword.cloud_notm}} サイトに簡単かつ安全に接続して、シームレスなインフラストラクチャーのハイブリッド化と真のアプリケーション・モビリティーを実現できます。
 
 HCX on {{site.data.keyword.cloud_notm}} サービスは、vCenter Server with Hybridity Bundle インスタンスでのみ利用可能です。 既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードするには、まず基本 vCenter Server V2.3 のソフトウェア更新を適用しなければなりません。 詳しくは、[vCenter Server インスタンスへの更新の適用](../vcenter/vc_applyingupdates.html)を参照してください。
 
@@ -94,8 +94,8 @@ V2.3 以降のリリースでデプロイまたは V2.3 以降のリリースに
 このサービスを組み込んだ形でインスタンスを注文することも、後から既存のインスタンスにこのサービスを追加することもできます。
 
 詳しくは、以下を参照してください。
-* [HyTrust CloudControl on IBM Cloud のコンポーネントと考慮事項](../services/htcc_considerations.html)
-* [HyTrust CloudControl on IBM Cloud の管理](../services/managinghtcc.html)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](../services/htcc_considerations.html)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} の管理](../services/managinghtcc.html)
 
 ### HyTrust DataControl on IBM Cloud
 
@@ -104,8 +104,8 @@ V2.3 以降のリリースでデプロイまたは V2.3 以降のリリースに
 このサービスを組み込んだ形でインスタンスを注文することも、後から既存のインスタンスにこのサービスを追加することもできます。
 
 詳しくは、以下を参照してください。
-* [HyTrust DataControl on IBM Cloud のコンポーネントと考慮事項](../services/htdc_considerations.html)
-* [HyTrust DataControl on IBM Cloud の管理](../services/managinghtdc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](../services/htdc_considerations.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の管理](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -118,8 +118,8 @@ V2.3 以降のリリースでデプロイまたは V2.3 以降のリリースに
 ## ユーザー・インターフェースの更新と向上
 
 ユーザー・インターフェースが更新され、以下の拡張機能が備えられました。
-* **一貫性**: ユーザー・インターフェースは IBM Cloud 上の他のサービスと一貫性のある外観を提供するようになりました。
-* **アクセスの容易さ**: VMware オファリングに IBM Cloud **Catalog** から直接アクセスできるようになりました。
+* **一貫性**: ユーザー・インターフェースは {{site.data.keyword.cloud_notm}} 上の他のサービスと一貫性のある外観を提供するようになりました。
+* **アクセスの容易さ**: VMware オファリングに {{site.data.keyword.cloud_notm}} **Catalog** から直接アクセスできるようになりました。
 * **合理化されて簡単になった注文の操作環境**: VMware インスタンスの注文とアドオン・サービスのデプロイを単一のインターフェースで行えるようになりました。 また、同じインターフェース上で見積もりコストがすぐに計算されて表示されるので、予算に基づいて構成を調整できます。
 * ビジネス・パートナーであるユーザーは、インスタンスの注文時やクラスターの追加時にライセンス持ち込み (BYOL) オプションを使用できません。
 * ユーザー・インターフェースで適切な設定を選択できるように、エラー・メッセージとツールチップにさまざまな改善が行われました。

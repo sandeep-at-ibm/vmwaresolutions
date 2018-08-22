@@ -14,17 +14,17 @@ lastupdated: "2017-11-20"
 
 ## IBM Cloud での FortiGate Virtual Appliance
 
-FortiGate Virtual Appliance on IBM Cloud サービスが、V2.0 以降の VMware Cloud Foundation インスタンスと VMware vCenter Server インスタンスで使用できるようになりました。 このサービスは、お客様の環境に FortiGate Virtual Appliance の高可用性 (HA) ペアをデプロイします。これにより、仮想インフラストラクチャー内にクリティカルなセキュリティー制御を実装してリスクを軽減できます。
+FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスが、V2.0 以降の VMware Cloud Foundation インスタンスと VMware vCenter Server インスタンスで使用できるようになりました。 このサービスは、お客様の環境に FortiGate Virtual Appliance の高可用性 (HA) ペアをデプロイします。これにより、仮想インフラストラクチャー内にクリティカルなセキュリティー制御を実装してリスクを軽減できます。
 
-FortiGate Virtual Appliance on IBM Cloud サービスを組み込んだ形でインスタンスを注文することも、後からインスタンスの詳細ページの**「サービス」**タブで既存のインスタンスにこのサービスを追加することもできます。 このサービスでは、デプロイメント・サイズとライセンスについての 3 つのオプションの中から 1 つを要件に応じて選択できます。 サービスが正常にインストールされたら、FortiGate コンソールから FortiGate Virtual Appliance のファイアウォール・ルールを管理および構成できます。
+FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを組み込んだ形でインスタンスを注文することも、後からインスタンスの詳細ページの**「サービス」**タブで既存のインスタンスにこのサービスを追加することもできます。 このサービスでは、デプロイメント・サイズとライセンスについての 3 つのオプションの中から 1 つを要件に応じて選択できます。 サービスが正常にインストールされたら、FortiGate コンソールから FortiGate Virtual Appliance のファイアウォール・ルールを管理および構成できます。
 
 詳しくは、以下を参照してください。
-* [FortiGate Virtual Appliance on IBM Cloud のコンポーネントと考慮事項](../services/fortinetvm_considerations.html)
-* [FortiGate Virtual Appliance on IBM Cloud の管理](../services/managingfortinetvm.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](../services/fortinetvm_considerations.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の管理](../services/managingfortinetvm.html)
 
 ## F5 on IBM Cloud および FortiGate Virtual Appliance on IBM Cloud の複数サービス・インストール
 
-Cloud Foundation インスタンスでも vCenter Server インスタンスでも、F5 on IBM Cloud サービスおよび FortiGate Virtual Appliance on IBM Cloud サービスの複数のインスタンスをインストールできるようになりました。 インスタンスの注文中に F5 サービスまたは FortiGate サービスを選択するときに、後でインストールする追加のサービス・インスタンスと区別するために、サービス・インスタンスの名前を指定する必要があります。
+Cloud Foundation インスタンスでも vCenter Server インスタンスでも、F5 on {{site.data.keyword.cloud_notm}} サービスおよび FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスの複数のインスタンスをインストールできるようになりました。 インスタンスの注文中に F5 サービスまたは FortiGate サービスを選択するときに、後でインストールする追加のサービス・インスタンスと区別するために、サービス・インスタンスの名前を指定する必要があります。
 
 インスタンスのデプロイメントが完了したら、インスタンスの詳細ページの**「サービスの追加」**タブで F5 または FortiGate サービスをインストールして、サービスのインスタンスを追加できます。 サービス・インスタンスは一度に 1 つしか追加できないので、サービスに追加するすべてのインスタンスについてこの処理を繰り返す必要があります。
 
@@ -34,7 +34,7 @@ Cloud Foundation インスタンスでも vCenter Server インスタンスで�
 
 ## FortiGate Security Appliance on IBM Cloud の更新
 
-このリリースでは、Fortinet on IBM Cloud サービスの名前が FortiGate Security Appliance on IBM Cloud に変更されました。また、このサービスの FortiGate Security Appliance (FSA) のペアには、インスタンスへのデプロイ時にデフォルトで保護が構成されます。
+このリリースでは、Fortinet on {{site.data.keyword.cloud_notm}} サービスの名前が FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} に変更されました。また、このサービスの FortiGate Security Appliance (FSA) のペアには、インスタンスへのデプロイ時にデフォルトで保護が構成されます。
 * 新規の Cloud Foundation インスタンスまたは vCenter Server インスタンスの一部として FSA のペアをデプロイすると、FSA は、インスタンスからパブリック・ネットワークへの必要なアウトバウンド通信のみを許可し、他のすべての通信を拒否するように構成されます。
 * 既存の Cloud Foundation インスタンスまたは vCenter Server インスタンスの一部として FSA のペアをデプロイすると、FSA には、インスタンスからパブリック・ネットワークへの必要な管理用アウトバウンド通信をすべて許可する明示的なルールが構成されます。また、既存のアプリケーション・トラフィックが中断されないように、他のすべての通信を許可する追加のルールも構成されます。
 
@@ -51,7 +51,7 @@ Cloud Foundation インスタンスでも vCenter Server インスタンスで�
 
 ## インスタンス注文中のワークロードとストレージの見積もり
 
-* VMware vSphere on IBM Cloud の注文中に、注文するインスタンスで実行できる仮想マシン数の見積もりが表示されます。
+* VMware vSphere on {{site.data.keyword.cloud_notm}} の注文中に、注文するインスタンスで実行できる仮想マシン数の見積もりが表示されます。
 * Cloud Foundation および vCenter Server の注文中に、注文するインスタンスで使用できるストレージ容量の見積もりが表示されます。
 
 詳しくは、以下を参照してください。
@@ -148,7 +148,7 @@ VMware vSAN コンポーネントの場合、{{site.data.keyword.baremetal_short
 * 3.8 TB SSD SED
 
 **注:**
-* 3.8 TB SSD SED ドライブは、データ・センターで一般提供が開始されたらサポートされる予定です。
+* 3.8 TB SSD SED ドライブは、{{site.data.keyword.CloudDataCent_notm}}で一般提供が開始されたらサポートされる予定です。
 * VMware vSAN コンポーネントの有無に関わらず、注文には必ず 12 ディスク・シャーシのサーバーが含められます。見積もり価格の PDF で vSAN なしの注文の{{site.data.keyword.baremetal_short}}のコストが若干高いのはこのためです。
 
 詳しくは、[新規 vSphere クラスターの注文](../vsphere/vs_orderinginstances.html)を参照してください。
@@ -162,7 +162,7 @@ VMware vSAN コンポーネントの場合、{{site.data.keyword.baremetal_short
 * **ハイパフォーマンス (ラージ)** –プレミアム・ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 128 GB RAM / ノードあたり 22 個の 3.8 TB SSD ドライブ容量 / 4 ノード・クラスターの実効容量– 118 TB
 * **大容量** – 標準ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 64 GB RAM / ノードあたり 10 個の 4 TB SATA ドライブ容量 / 4 ノード・クラスターの実効容量 – 60 TB
 
-**注:** 3.8 TB SSD ドライブは、データ・センターで一般提供が開始されたらサポートされる予定です。
+**注:** 3.8 TB SSD ドライブは、{{site.data.keyword.CloudDataCent_notm}}で一般提供が開始されたらサポートされる予定です。
 
 詳しくは、以下を参照してください。
 * [NetApp ONTAP Select の概要](../netapp/np_netappoverview.html)
@@ -170,7 +170,7 @@ VMware vSAN コンポーネントの場合、{{site.data.keyword.baremetal_short
 
 ## 新規資料および更新された資料
 
-VMware Cloud Foundation ユーザーは、IBM Cloud の VMware NSX プラットフォームについての順を追った説明を使用して、仮想マシンの相互通信とインターネット通信を可能にすることができます。 詳しくは、[VMware Cloud Foundation on IBM Cloud (VCF) でのワークロード VM のための NSX のセットアップ](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}を参照してください。
+VMware Cloud Foundation ユーザーは、{{site.data.keyword.cloud_notm}} の VMware NSX プラットフォームについての順を追った説明を使用して、仮想マシンの相互通信とインターネット通信を可能にすることができます。 詳しくは、[VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} (VCF) でのワークロード VM のための NSX のセットアップ](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}を参照してください。
 
 ## ユーザー・インターフェースの更新と向上
 
