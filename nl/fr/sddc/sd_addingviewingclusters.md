@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -197,7 +197,7 @@ Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous 
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, localisez le cluster que vous souhaitez supprimer et cliquez sur l'icône **Supprimer**.
 4. Confirmez que vous avez terminé la migration de machines virtuelles vers d'autres clusters, le cas échéant, et que vous souhaitez supprimer le cluster.
 
-## Liens connexes
+### Liens connexes
 
 * [Affichage d'instances Cloud Foundation](sd_viewinginstances.html)
 * [Extension et réduction de capacité pour des instances Cloud Foundation](sd_addingremovingservers.html)

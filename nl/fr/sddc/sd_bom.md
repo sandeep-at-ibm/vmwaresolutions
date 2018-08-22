@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -21,7 +21,7 @@ Tableau 1. Nomenclature des réseaux locaux virtuels des instances Cloud Foundat
 | VLAN      | Type      | Détails      |
 |:----------|:----------|:-------------|
 | VLAN1     | Public, Principal | Affectés à des serveurs ESXi physiques pour accès au réseau public. Inutilisés après le déploiement initial. Disponibles pour l'accès Internet. |
-| VLAN2     | Privé A, Principal | Affectés par IBM Cloud à des serveurs ESXi physiques. Utilisés par l'interface de gestion pour le trafic de gestion VMware vSphere.<br><br>Affectés à des machines virtuelles qui fonctionnent en tant que composants de gestion.<br><br>Affectés à VMware NSX VTEP (point d'extrémité du tunnel VXLAN) |
+| VLAN2     | Privé A, Principal | Affectés par {{site.data.keyword.cloud}} à des serveurs ESXi physiques. Utilisés par l'interface de gestion pour le trafic de gestion VMware vSphere.<br><br>Affectés à des machines virtuelles qui fonctionnent en tant que composants de gestion.<br><br>Affectés à VMware NSX VTEP (point d'extrémité du tunnel VXLAN) |
 | VLAN3     | Privé B, Portable | Affectés à VMware vSAN, si utilisés.<br><br>Affectés à VMware NFS, si utilisés.<br><br>Affectés à VMware vSphere vMotion. |
 
 ## Nomenclature logicielle des instances Cloud Foundation
@@ -38,7 +38,7 @@ Tableau 2. Nomenclature des composants logiciels des instances Cloud Foundation
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX for vSphere                          | 6.3.5        |
 | VMware       | Gestionnaire SDDC                             | 2.4          |
-| {{site.data.keyword.IBM}} | CloudDriver                 | 2.4          |
+| IBM          | CloudDriver                              | 2.4          |
 | Microsoft    | Windows Server édition Standard (64 bits) | 2012R2       |
 
 ## Paramètres de configuration avancée pour les serveurs ESXi
@@ -67,10 +67,10 @@ Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les inst
 
   Pour plus d'informations, voir [Augmentation de la valeur par défaut qui définit le nombre maximum de montages NFS sur un hôte ESXi/ESX](https://kb.vmware.com/s/article/2239).
 
-## Liens connexes
+### Liens connexes
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
-* [VMware Cloud Foundation on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
+* [Feuille de données de protection de VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
 * [Présentation de Cloud Foundation](sd_cloudfoundationoverview.html)
 * [Planification des instances Cloud Foundation](sd_planning.html)

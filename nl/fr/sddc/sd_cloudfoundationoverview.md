@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -39,7 +39,7 @@ Sur la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez augmente
 
 Pour plus d'informations sur l'architecture, voir [Présentation de Solution](../archiref/solution/solution_overview.html).
 
-## Composants de l'instance Cloud Foundation
+## Spécifications techniques relatives aux instances Cloud Foundation
 
 Les composants suivants sont inclus dans votre instance Cloud Foundation.
 
@@ -84,13 +84,6 @@ Le stockage suivant est commandé selon la configuration des serveurs {{site.dat
 * Pour la configuration **Préconfigurée**, **Petite** uniquement : deux disques SSD haute capacité de 1,9 To
 * Pour la configuration **Preconfigurée**, **Grande** uniquement : quatre disques SSD haute capacité de 3,8 To
 
-
-### Stockage pour les sauvegardes
-
-Un stockage partagé de niveau fichier de 2 To, qui peut être étendu jusqu'à 12 To, est commandé.
-
-**Remarque** : le stockage pour les sauvegardes n'est pas un composant standard des instances Cloud Foundation. Lorsque vous commandez une instance, vous pouvez indiquer si vous voulez un stockage pour les sauvegardes en sélectionnant ou désélectionnant un service de sauvegarde.
-
 ### Licences (fournies par IBM ou BYOL) et frais
 
 * Quatre pour VMware vSphere Enterprise Plus 6.5u1
@@ -100,13 +93,13 @@ Un stockage partagé de niveau fichier de 2 To, qui peut être étendu jusqu'à 
 * Quatre licences de gestionnaire SDDC (fournies par IBM uniquement)
 * Frais de quatre licences de support et services
 
-## Composants de noeud d'extension Cloud Foundation
+## Spécifications techniques relatives aux noeuds d'extension Cloud Foundation
 
 Chaque noeud d'extension Cloud Foundation déployé génère des frais, imputés à votre compte {{site.data.keyword.cloud_notm}}, pour les composants suivants.
 
 ### Matériel pour les noeuds d'extension
 
-Un serveur bare metal {{site.data.keyword.cloud_notm}} avec la configuration présentée dans [Composants d'instance Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+Un serveur bare metal {{site.data.keyword.cloud_notm}} doté de la configuration présentée dans [Spécifications techniques relatives aux instances Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Licences et frais pour les noeuds d'extension
 
@@ -127,7 +120,7 @@ Un serveur bare metal {{site.data.keyword.cloud_notm}} avec la configuration pr�
 
    Seules les activités de gestion des partages de fichiers du stockage partagé depuis le portail {{site.data.keyword.slportal}} font exception. Il s'agit des activités suivantes : commande, suppression (pouvant avoir un impact sur des magasins de données éventuellement montés), accord d'autorisation et montage de partages de fichiers de stockage partagé.
 
-## Liens connexes
+### Liens connexes
 
 * [Nomenclature du logiciel Cloud Foundation](sd_bom.html)
 * [Planification des instances Cloud Foundation](sd_planning.html)

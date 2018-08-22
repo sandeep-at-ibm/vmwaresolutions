@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Affichage d'instances Cloud Foundation
 
-Affichez les instances VMware Cloud Foundation que vous avez commandées ainsi que des informations détaillées les concernant.
+Affichez les informations récapitulatives et détaillées des instances VMware Cloud Foundation qui sont mises à disposition pour différents comptes utilisateur. 
 
 ## Affichage du récapitulatif des instances Cloud Foundation
 
-Pour afficher un récapitulatif de toutes les instances Cloud Foundation de votre environnement, procédez comme suit :
+Pour afficher un récapitulatif de toutes les instances Cloud Foundation qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. Dans le tableau **Instances Cloud Foundation Select**, affichez la liste de vos instances :
+1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche. 
+2. Dans l'angle supérieur droit de la console, cliquez sur votre avatar, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances.  
+3. Dans le tableau **Instances Cloud Foundation Select**, affichez la liste de vos instances :
 
 Tableau 1. Eléments d'une instance Cloud Foundation
 
@@ -25,7 +26,7 @@ Tableau 1. Eléments d'une instance Cloud Foundation
 |:------------- |:------------- |
 | Nom | Nom de l'instance |
 | Version | Version d'édition dans laquelle l'instance a été déployée ou vers laquelle elle a été mise à niveau |
-| Emplacement | {{site.data.keyword.CloudDataCent}} où l'instance est hébergée |
+| Emplacement | {{site.data.keyword.CloudDataCent_notm}} où l'instance est hébergée |
 | Heure de création | Date et heure de création de l'instance |
 | Statut | Statut de l'instance |
 
@@ -80,10 +81,10 @@ Tableau 4. Informations d'accès Cloud Foundation pour les composants liés à l
 | AD/DNS IP | Les adresses IP des deux serveurs AD |
 | AD/DNS FQDN | Les noms de domaine complets des serveurs AD/DNS<br><br>**Remarque :** le même mot de passe administrateur peut être utilisé pour établir une connexion à tous les serveurs AD/DNS via une connexion bureau à distance. |
 | AD/DNS ADMIN (Remote Desktop)  | Pour les instances principales, affiche le nom d'utilisateur et le mot de passe d'accès au serveur AD avec une connexion bureau à distance.<br><br>Pour les instances secondaires, cliquez sur le lien **Afficher sur l'instance principale** afin d'être dirigé vers les informations de nom d'utilisateur et de mot de passe sur l'instance principale.<br><br>**Remarque** : une fois l'instance secondaire ajoutée au domaine DNS principal et la réplication lancée, le mot de passe administrateur local sur l'instance principale est susceptible de remplacer le mot de passe administrateur local sur l'instance secondaire. En cliquant sur le lien **Afficher sur l'instance principale**, vous obtiendrez le mot de passe administrateur correct.  |
-| NSX Manager IP  | L'adresse IP du gestionnaire NSX  |
-| NSX Manager FQDN  | Le nom de domaine complet du gestionnaire NSX  |
-| NSX Manager HTTP  | Le nom d'utilisateur et mot de passe utilisés pour accéder à la console Web du gestionnaire NSX |
-| NSX Manager SSH | Le nom d'utilisateur et le mot de passe que vous pouvez utiliser pour accéder au gestionnaire NSX via une connexion SSH |
+| NSX Manager IP  | L'adresse IP de NSX Manager  |
+| NSX Manager FQDN  | Le nom de domaine complet de NSX Manager  |
+| NSX Manager HTTP  | Le nom d'utilisateur et mot de passe utilisés pour accéder à la console Web de NSX Manager |
+| NSX Manager SSH | Le nom d'utilisateur et le mot de passe que vous pouvez utiliser pour accéder à NSX Manager via une connexion SSH |
 | PSC IP  | L'adresse IP du contrôleur PSC ( Platform Services Controller)  |
 | PSC FQDN  | Le nom de domaine complet du contrôleur PSC  |    
 | PSC SSH  | Le nom d'utilisateur et le mot de passe que vous pouvez utiliser pour accéder à la machine virtuelle PSC via une connexion SSH  |
@@ -95,7 +96,7 @@ Tableau 4. Informations d'accès Cloud Foundation pour les composants liés à l
 
 ## Affichage de l'historique de déploiement des instances Cloud Foundation
 
-Sous **Historique de déploiement**, affichez l'historique de déploiement de l'instance.
+Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance. 
 
 Tableau 5. Historique de déploiement d'une instance Cloud Foundation
 
@@ -120,7 +121,7 @@ Passez en revue les rubriques suivantes pour obtenir des informations qui vous a
 * Pour la liste des points d'accès de connexion au réseau privé {{site.data.keyword.cloud_notm}} à l'aide du réseau privé virtuel (VPN), voir [Accès VPN](http://www.softlayer.com/vpn-access){:new_window}.
 * Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client Web vSphere, voir [Déploiement d'un fichier OVF à l'aide du client Web vSphere](../vmonic/trbl_deploy_ovf.html).
 
-## Liens connexes
+### Liens connexes
 
 * [Commande d'instances Cloud Foundation](sd_orderinginstance.html)
 * [Extension et réduction de capacité pour des instances Cloud Foundation](sd_addingremovingservers.html)

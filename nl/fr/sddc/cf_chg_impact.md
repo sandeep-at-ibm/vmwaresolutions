@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-31"
 
 ---
 
 # Remarques relatives à la modification des artefacts Cloud Foundation
 
 Modifier des utilisateurs, des ressources ou des sous-réseaux réservés à {{site.data.keyword.vmwaresolutions_full}} peut avoir une incidence sur des opérations de gestion des instances VMware Cloud Foundation.
+
+**Important :** n'éditez pas les droits globaux du groupe **ic4v-vCenter** sur la page **Utilisateurs et groupes** du client Web VMware vSphere. Ces modifications incluent : la modification du nom d'utilisateur, la suppression de l'utilisateur ou la modification de son mot de passe.
 
 ## Comptes utilisateur de service
 

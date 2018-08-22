@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -51,7 +51,7 @@ Tableau 1. Niveaux de mise à jour et impact
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance à supprimer.
 3. Sur la page **Récapitulatif**, vérifiez que tous les détails d'instance sont correctement affichés. Cliquez ensuite sur **Infrastructure** dans le panneau de navigation de gauche pour vérifier les détails sur la page **Infrastructure**.
-   S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec la machine virtuelle IBM CloudDriver, lié à une règle de pare-feu ou autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
+   S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec l'instance de serveur virtuel IBM CloudDriver, lié à une règle de pare-feu ou à un autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
 4. Cliquez sur **Mise à jour et module de correction** dans le panneau de navigation de gauche.
 5. Cliquez sur la flèche vers le bas pour développer la mise à jour à appliquer, puis effectuez l'une des opérations suivantes :
    *  Pour lancer immédiatement la mise à jour, cliquez sur l'icône de menu déroulant dynamique dans la colonne **Actions** de l'entrée de mise à jour, puis cliquez sur **Mettre à jour maintenant**.
@@ -61,16 +61,15 @@ Tableau 1. Niveaux de mise à jour et impact
 ## Résultats
 
 1. Avant le démarrage d'une opération de mise à jour, un diagnostic d'intégrité de l'instance est effectué. Si le diagnostic d'intégrité échoue, vous recevez une notification et vous pouvez corriger le problème avant d'appliquer la mise à jour.
-2. Avant le démarrage d'une opération de mise à jour, une sauvegarde des machines virtuelles de gestion est automatiquement effectuée, si un service de sauvegarde est installé sur votre instance. Une fois la sauvegarde terminée, la mise à jour est appliquée. Pendant l'opération de mise à jour, ne tentez pas d'effectuer des opérations de mise à disposition ou d'ajout de serveur SXi.
-3. Au cours des mises à jour qui incluent des mises à jour de composants VMware, il peut s'avérer nécessaire de migrer les machines virtuelles depuis les serveurs ESXi pour passer en mode maintenance. Si une machine virtuelle dispose d'un magasin de données local ou si un CD-ROM est monté, la migration de la machine virtuelle peut se révéler impossible.
-4. Lors de la mise à disposition d'un nouvel environnement, {{site.data.keyword.vmwaresolutions_short}} crée l'ID **automationuser** qui est utilisé pour la gestion de l'instance, y compris l'application des mises à jour. Ne modifiez pas le mot de passe de cet ID utilisateur. La modification de ce mot de passe pourrait entraîner l'échec de la mise à jour.
+2. Au cours des mises à jour qui incluent des mises à jour de composants VMware, il peut s'avérer nécessaire de migrer les machines virtuelles depuis les serveurs ESXi pour passer en mode maintenance. Si une machine virtuelle dispose d'un magasin de données local ou si un CD-ROM est monté, la migration de la machine virtuelle peut se révéler impossible.
+3. Lors de la mise à disposition d'un nouvel environnement, {{site.data.keyword.vmwaresolutions_short}} crée l'ID **automationuser** qui est utilisé pour la gestion de l'instance, y compris l'application des mises à jour. Ne modifiez pas le mot de passe de cet ID utilisateur. La modification de ce mot de passe pourrait entraîner l'échec de la mise à jour.
 
-5. Lorsque vous appliquez une mise à jour, un enregistrement s'affiche dans la liste des statuts de mise à jour logicielle, où vous pouvez visualiser la progression et le statut détaillés de la mise à jour. Lorsque la mise à jour a réussi, un enregistrement s'affiche dans la liste des mises à jour logicielles installées.
+4. Lorsque vous appliquez une mise à jour, un enregistrement s'affiche dans la liste des statuts de mise à jour logicielle, où vous pouvez visualiser la progression et le statut détaillés de la mise à jour. Lorsque la mise à jour a réussi, un enregistrement s'affiche dans la liste des mises à jour logicielles installées.
 
   Pour extraire le statut le plus récent d'un travail de mise à jour, cliquez sur l'icône d'actualisation dans l'angle supérieur droit de la page.
   {:tip}
 
-6. Pour plus d'informations sur les statuts de mise à jour, voir le tableau suivant.
+5. Pour plus d'informations sur les statuts de mise à jour, voir le tableau suivant.
 
    Tableau 2 : Détails relatifs aux statuts de mise à jour
 
@@ -105,11 +104,11 @@ Tableau 1. Niveaux de mise à jour et impact
       </tr>
     </table>
 
-7. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](../vmonic/trbl_support.html) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à reprendre la mise à niveau à partir de l'étape où elle a échoué.
+6. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](../vmonic/trbl_support.html) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à reprendre la mise à niveau à partir de l'étape où elle a échoué.
 
-## Liens connexes
+### Liens connexes
 
 * [Présentation de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
-* [Présentation de Veeam on IBM Cloud](../services/veeam_considerations.html)
+* [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
 * [Contacter le support IBM](../vmonic/trbl_support.html)
 * [Foire aux questions](../vmonic/faq.html)
