@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -44,7 +44,7 @@ Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz n
    1. Klicken Sie erneut auf das Überlaufmenüsymbol rechts neben der **vCenter-Konsole** und anschließend auf **Instanz löschen**.
    2. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Cloud Foundation-Instanzen in Konfiguration mit mehreren Standorten löschen](sd_deletinginstance_multi.html)
 * [Cloud Foundation-Instanzen bestellen](sd_orderinginstance.html)

@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
-# Überblick zu Cloud Foundation
+# Übersicht über Cloud Foundation
 
 Wenn Sie VMware Cloud Foundation on {{site.data.keyword.cloud}} bestellen, wird automatisch eine vollständige VMware-Umgebung bereitgestellt. Die Basisbereitstellung besteht aus vier {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen mit vorinstalliertem VMware Cloud Foundation-Stack, deren Konfiguration eine einheitliche Plattform für SDDC (Software-Defined Data Center, softwaredefiniertes Rechenzentrum) bereitstellt. Cloud Foundation integriert nativ VMware vSphere, VMware NSX sowie VMware Virtual SAN und seine Architektur basiert auf VMware-geprüften Designs.
 
@@ -22,12 +22,12 @@ Abbildung 1. Cloud Foundation-Architektur
 
 ### Physische Infrastruktur
 
-Auf dieser Schicht wird die physische Infrastruktur (Berechnungs-, Speicher- und Netzressourcen) bereitgestellt, die von der virtuellen Infrastruktur genutzt wird.
+Auf dieser Schicht wird die physische Infrastruktur (Rechen-, Speicher- und Netzressourcen) bereitgestellt, die von der virtuellen Infrastruktur genutzt wird.
 
-### Virtualisierungsinfrastruktur (Berechnung, Speicher und Netz)
+### Virtualisierungsinfrastruktur (Rechenressourcen, Speicher und Netz)
 
 Diese Schicht virtualisiert die physische Infrastruktur durch verschiedene VMware-Produkte:
-* VMware vSphere virtualisiert die physischen Berechnungsressourcen.
+* VMware vSphere virtualisiert die physischen Rechenressourcen.
 * VMware Virtual SAN (vSAN) stellt auf der Basis des Speichers in den physischen Servern einen softwaredefinierten gemeinsam genutzten Speicher zur Verfügung.
 * VMware NSX ist die Netzvirtualisierungsplattform, die logische Netzkomponenten und virtuelle Netze bereitstellt.
 
@@ -39,7 +39,7 @@ In der {{site.data.keyword.vmwaresolutions_short}}-Konsole können Sie die Kapaz
 
 Ausführliche Informationen zur Architektur enthält der Abschnitt [Lösungsübersicht](../archiref/solution/solution_overview.html).
 
-## Komponenten der Cloud Foundation-Instanz
+## Technische Spezifikationen für Cloud Foundation-Instanzen
 
 Ihre Cloud Foundation-Instanz enthält die folgenden Komponenten.
 
@@ -56,7 +56,7 @@ Sie können {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short
   * **S (Klein)**: Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz / 128 GB RAM / 12 Platten
   * **L (Groß)**: Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM / 12 Platten
 
-### Netzbetrieb
+### Vernetzung
 
 Die folgenden Netzkomponenten werden bestellt:
 * 10-Gbps-Uplinks für öffentliche und private Netze
@@ -84,13 +84,6 @@ Abhängig von der von Ihnen ausgewählten {{site.data.keyword.baremetal_short}}-
 * Nur bei Konfiguration des Typs **Vorkonfiguriert** - **S (Klein)**: 2 SSD-Kapazitätsplatten mit 1,9 TB.
 * Nur bei Konfiguration des Typs **Vorkonfiguriert** - **L (Groß)**: 4 SSD-Kapazitätsplatten mit 3,8 TB.
 
-
-### Speicher für Sicherungen
-
-Es wird 1 Speicher für gemeinsam genutzte Dateien mit 2 TB bestellt, der auf bis zu 12 TB skaliert werden kann.
-
-**Hinweis**: Der Speicher für Sicherungen ist keine Standardkomponente für Cloud Foundation-Instanzen. Wenn Sie eine Instanz bestellen, können Sie auswählen, ob Sie Speicher für Sicherungen wünschen, indem Sie einen Sicherungsservice auswählen oder abwählen.
-
 ### Lizenzen (von IBM bereitgestellt oder eigene) und Gebühren
 
 * 4 Lizenzen für VMware vSphere Enterprise Plus 6.5u1
@@ -100,13 +93,13 @@ Es wird 1 Speicher für gemeinsam genutzte Dateien mit 2 TB bestellt, der auf bi
 * 4 Lizenzen für SDDC Manager (nur von IBM bereitgestellt)
 * 4 Support- und Servicegebühren
 
-## Komponenten von Cloud Foundation-Erweiterungsknoten
+## Technische Spezifikationen für Cloud Foundation-Erweiterungsknoten
 
 Jeder Cloud Foundation-Erweiterungsknoten stellt die folgenden Komponenten in Ihrem {{site.data.keyword.cloud_notm}}-Konto mit den entsprechenden anfallenden Gebühren bereit.
 
 ### Hardware für Erweiterungsknoten
 
-1 {{site.data.keyword.cloud_notm}} Bare Metal Server mit der in [Komponenten der Cloud Foundation-Instanz](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components) aufgeführten Konfiguration.
+1 {{site.data.keyword.cloud_notm}} Bare Metal Server mit der unter [Technische Spezifikationen für Cloud Foundation-Instanzen](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) aufgeführten Konfiguration.
 
 ### Lizenzen und Gebühren für Erweiterungsknoten
 
@@ -115,7 +108,7 @@ Jeder Cloud Foundation-Erweiterungsknoten stellt die folgenden Komponenten in Ih
 * 1 Lizenz für VMware NSX Enterprise 6.3
 * 1 Lizenz für VMware vSAN Advanced oder Enterprise 6.6
 * 1 Lizenz für SDDC Manager
-* 1 Support- und Servicegebühren
+* 1 Support- und Servicegebühr
 
 **Wichtig**: Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal}} oder über ein anderes Verfahren außerhalb der Konsole verwalten. Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert.
 
@@ -127,7 +120,7 @@ Jeder Cloud Foundation-Erweiterungsknoten stellt die folgenden Komponenten in Ih
 
    Ausgenommen von diesen Aktivitäten ist unter anderem das Management der Dateifreigaben für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von Dateifreigaben für gemeinsam genutzten Speicher.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Softwareteileliste für Cloud Foundation](sd_bom.html)
 * [Cloud Foundation-Instanzen planen](sd_planning.html)

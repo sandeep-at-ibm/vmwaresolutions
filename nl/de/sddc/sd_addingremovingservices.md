@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,16 +20,16 @@ Tabelle 1. Verfügbare Services für Cloud Foundation-Instanzen
 
 | Servicename | Verfügbarkeit | Unterstützte Instanzen |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on IBM Cloud](../services/f5_considerations.html)                                 | Ja | V1.9 und höher |
-| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       | Ja | V1.8 und höher |
-| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) | Ja | V2.0 und höher |
-| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              | Ja | V2.3 und höher |
-| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              | Ja | V2.3 und höher |
-| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         | Ja | V2.2 und höher |
-| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  | Ja | V2.2 und höher |
-| [Veeam on IBM Cloud](../services/veeam_considerations.html)                          | Ja | V1.8 und höher |
-| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                         | Nein | Nicht zutreffend |
-| [Zerto on IBM Cloud](../services/addingzertodr.html)                                 | Ja | V1.2 und höher |
+| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | Ja | V1.9 und höher |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | Ja | V1.8 und höher |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | Ja | V2.0 und höher |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | Ja | V2.3 und höher |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | Ja | V2.3 und höher |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | Ja | V2.2 und höher |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  | Ja | V2.2 und höher |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | Ja | V1.8 und höher |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                         | Nein | Nicht zutreffend |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | Ja | V1.2 und höher |
 
 ## Services zu Cloud Foundation-Instanzen hinzufügen
 
@@ -63,6 +63,6 @@ Nachdem die Entfernung des Service erfolgreich abgeschlossen wurde, werden Sie p
 
 **Achtung** Die entfernten Services werden Ihnen bis zum Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus berechnet.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Häufig gestellte Fragen](../vmonic/faq.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -65,17 +65,21 @@ Tabelle 2. Statusanzeiger für {{site.data.keyword.CloudDataCents_notm}} bei der
 | Vorübergehend ohne Bestand  | Das {{site.data.keyword.CloudDataCent_notm}} bietet gegenwärtig keine Verfügbarkeit. |
 | Eingeschränkter Bestand             | Das {{site.data.keyword.CloudDataCent_notm}} bietet eine begrenzte Verfügbarkeit und die Bestellung kann möglicherweise nicht ausgeführt werden. |
 
+## Sicherung von Managementkomponenten
+
+Sie sind für die Erhaltung und Sicherstellung der Verfügbarkeit aller Instanzkomponenten verantwortlich. Es wird dringend empfohlen, die Sicherung oder Hochverfügbarkeit aller Managementkomponenten zu planen. Weitere Informationen finden Sie unter [Komponenten sichern](../archiref/solution/solution_backingup.html).
+
 ## Services für Cloud Foundation-Instanzen
 
 Sie können für Ihre Instanz auf der Basis Ihrer Anforderungen Add-on-Services bestellen, zum Beispiel für die Disaster-Recovery. Weitere Informationen finden Sie unter [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](sd_addingremovingservices.html).
 
-<!-- ## Capacity considerations
+## Kapazitätsaspekte
 
-For capacity information and considerations, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+Informationen und Hinweise zur Kapazität finden Sie unter [Skalierungskapazität](../archiref/solution/solution_scaling.html).
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [Überblick zu Cloud Foundation](sd_cloudfoundationoverview.html)
+* [Übersicht über Cloud Foundation](sd_cloudfoundationoverview.html)
 * [Cloud Foundation-Instanzen bestellen](sd_orderinginstance.html)
 * [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](sd_addingremovingservers.html)
 * [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](sd_addingremovingservices.html)

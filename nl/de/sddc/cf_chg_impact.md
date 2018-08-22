@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-31"
 
 ---
 
 # Hinweise zum Ändern von Cloud Foundation-Artefakten
 
 Das Ändern von Benutzern, Ressourcen oder Teilnetzen, die für {{site.data.keyword.vmwaresolutions_full}} reserviert sind, kann sich auf Managementoperationen für Instanzen von VMware Cloud Foundation auswirken.
+
+**Wichtig:** Bearbeiten Sie keine globalen Berechtigungen der Gruppe **ic4v-vCenter** auf der Seite **Benutzer und Gruppen** auf dem VMware vSphere-Web-Client. Zu solchen Änderungen gehören das Ändern des Benutzernamens, das Löschen des Benutzers oder das Ändern seines Kennworts.
 
 ## Servicespezifische Benutzerkonten
 

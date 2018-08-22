@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -45,7 +45,7 @@ Sie werden per E-Mail benachrichtigt, wenn ESXi-Server hinzugefügt oder entfern
 
 Wenn die neuen ESXi-Server nicht zur Liste im Cluster hinzugefügt werden, überprüfen Sie die E-Mail- oder Konsolenbenachrichtigungen, um weitere Details über den Fehler zu ermitteln.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Cloud Foundation-Teileliste](sd_bom.html)
 * [Voraussetzungen und Planung für Cloud Foundation-Instanzen](sd_planning.html)

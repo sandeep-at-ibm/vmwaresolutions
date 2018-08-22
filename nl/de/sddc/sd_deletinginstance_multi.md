@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -34,7 +34,7 @@ Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz n
 6. Wiederholen Sie die Schritte 1 bis 5 für alle sekundären Cloud Foundation-Instanzen in Ihrer Konfiguration mit mehreren Standorten.
 7. Nachdem Sie alle sekundären Instanzen gelöscht haben, können Sie auch die primäre Instanz in der {{site.data.keyword.vmwaresolutions_short}}-Konsole löschen.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Cloud Foundation-Instanzen löschen](sd_deletinginstance.html)
 * [Services von Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](sd_addingremovingservices.html)

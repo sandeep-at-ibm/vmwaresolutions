@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -51,7 +51,7 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf die Instanz, die Sie aktualisieren wollen.
 3. Überprüfen Sie auf der Seite **Zusammenfassung**, ob alle Instanzdetails korrekt angezeigt werden. Klicken Sie dann im linken Navigationsfenster auf **Infrastruktur**, um die Details auf der Seite **Infrastruktur** zu prüfen.
-   Wenn die Details nicht angezeigt werden, kann dies auf ein Konnektivitätsproblem mit der virtuellen Maschine von IBM CloudDriver hinweisen, das aufgrund eines Problems mit einer Firewallregel oder aufgrund eines anderen Netzproblems aufgetreten ist. Lösen Sie das Problem, bevor Sie mit dem nächsten Schritt fortfahren, da das Update andernfalls fehlschlagen könnte.
+   Wenn die Details nicht angezeigt werden, kann dies auf ein Konnektivitätsproblem mit der virtuellen Serverinstanz (VSI) von IBM CloudDriver hinweisen, das aufgrund eines Problems mit einer Firewallregel oder aufgrund eines anderen Netzproblems aufgetreten ist. Lösen Sie das Problem, bevor Sie mit dem nächsten Schritt fortfahren, da das Update andernfalls fehlschlagen könnte.
 4. Klicken Sie im linken Navigationsfenster auf **Update und Patch**.
 5. Klicken Sie auf den Abwärtspfeil, um das Update zu erweitern, das Sie anwenden möchten, und führen Sie dann einen der folgenden Schritte aus:
    *  Um das Update sofort zu starten, klicken Sie auf das Überlaufmenüsymbol in der Spalte **Aktionen** des Update-Eintrags und anschließend auf **Update jetzt ausführen**.
@@ -61,16 +61,15 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
 ## Ergebnisse
 
 1. Vor dem Start einer Updateoperation wird eine Zustandsprüfung für die Instanz ausgeführt. Wenn die Zustandsprüfung fehlschlägt, werden Sie benachrichtigt, damit Sie das Problem lösen können, bevor Sie das Update anwenden.
-2. Vor dem Start einer Updateoperation wird automatisch eine Sicherung der Management-VMs ausgeführt, falls für Ihre Instanz ein Sicherungsservice installiert ist. Nach Abschluss der Sicherung wird das Update angewendet. Versuchen Sie nicht, während der Updateoperation Bereitstellungen vorzunehmen oder ESXi-Server hinzuzufügen.
-3. Während Updates, die auch VMware-Komponenten aktualisieren, müssen VMs möglicherweise aus ESXi-Servern migriert werden, damit sie in den Wartungsmodus versetzt werden. Falls eine VM einen lokalen Datenspeicher enthält oder eine CD-ROM angehängt ist, kann dies die Migration der VM verhindern.
-4. Bei der Bereitstellung einer neuen Umgebung erstellt {{site.data.keyword.vmwaresolutions_short}} die ID **automationuser**, die für das Instanzmanagement verwendet wird, zu dem auch das Anwenden von Updates gehört. Ändern Sie das Kennwort für diese Benutzer-ID nicht. Das Ändern des Kennworts kann dazu führen, dass das Update fehlschlägt.
+2. Während Updates, die auch VMware-Komponenten aktualisieren, müssen VMs möglicherweise aus ESXi-Servern migriert werden, damit sie in den Wartungsmodus versetzt werden. Falls eine VM einen lokalen Datenspeicher enthält oder eine CD-ROM angehängt ist, kann dies die Migration der VM verhindern.
+3. Bei der Bereitstellung einer neuen Umgebung erstellt {{site.data.keyword.vmwaresolutions_short}} die ID **automationuser**, die für das Instanzmanagement verwendet wird, zu dem auch das Anwenden von Updates gehört. Ändern Sie das Kennwort für diese Benutzer-ID nicht. Das Ändern des Kennworts kann dazu führen, dass das Update fehlschlägt.
 
-5. Nachdem Sie ein Update angewendet haben, wird in der Statusliste der Software-Updates ein Eintrag angezeigt, der Aufschluss über den detaillierten Verarbeitungsfortschritt und den Status des Updates gibt. Sobald das Update erfolgreich abgeschlossen wurde, wird in der Liste der installierten Software-Updates ein Eintrag angezeigt.
+4. Nachdem Sie ein Update angewendet haben, wird in der Statusliste der Software-Updates ein Eintrag angezeigt, der Aufschluss über den detaillierten Verarbeitungsfortschritt und den Status des Updates gibt. Sobald das Update erfolgreich abgeschlossen wurde, wird in der Liste der installierten Software-Updates ein Eintrag angezeigt.
 
   Um den aktuellen Status für einen Update-Job abzufragen, klicken Sie in der rechten oberen Ecke der Seite auf das Aktualisierungssymbol.
   {:tip}
 
-6. Details zu den Statuswerten für Updates finden Sie in der folgenden Tabelle.
+5. Details zu den Statuswerten für Updates finden Sie in der folgenden Tabelle.
 
    Tabelle 2: Details zu den Statuswerten für Updates
 
@@ -105,11 +104,11 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
       </tr>
     </table>
 
-7. Falls der Updateprozess bei einem bestimmten Schritt fehlschlägt, [wenden Sie sich an den IBM Support](../vmonic/trbl_support.html), um Unterstützung zu erhalten. Sie erhalten Hilfe bei der Lösung des Problems und Anweisungen, wie Sie das Upgrade beim fehlgeschlagenen Schritt erneut starten.
+6. Falls der Updateprozess bei einem bestimmten Schritt fehlschlägt, [wenden Sie sich an den IBM Support](../vmonic/trbl_support.html), um Unterstützung zu erhalten. Sie erhalten Hilfe bei der Lösung des Problems und Anweisungen, wie Sie das Upgrade beim fehlgeschlagenen Schritt erneut starten.
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [Überblick zu Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
-* [Überblick zu Veeam on IBM Cloud](../services/veeam_considerations.html)
+* [Übersicht über Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
+* [Übersicht über Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
 * [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
 * [Häufig gestellte Fragen](../vmonic/faq.html)
