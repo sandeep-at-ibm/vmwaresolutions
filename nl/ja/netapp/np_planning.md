@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -55,12 +55,7 @@ NetApp ONTAP Select のデプロイメントには、物理インフラストラ
 | WDC06 | ワシントン、DC | 北米東部 | ハイパフォーマンス (ミディアム)、ハイパフォーマンス (ラージ)、大容量
 | WDC07 | ワシントン、DC | 北米東部 | ハイパフォーマンス (ミディアム)、ハイパフォーマンス (ラージ)、大容量
 
-<!--## Capacity considerations-->
-
-<!--For capacity information and considerations, see the _Bill of
-Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
-
-## 関連リンク
+### 関連リンク
 
 * [NetApp ONTAP Select の概要](np_netappoverview.html)
 * [NetApp ONTAP Select インスタンスの注文](np_orderinginstances.html)

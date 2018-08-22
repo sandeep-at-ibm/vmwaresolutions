@@ -4,13 +4,11 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-19"
 
 ---
 
 # NetApp ONTAP Select インスタンスの削除
-
-NetApp ONTAP Select インスタンス内で注文したコンポーネントを解放するには、このインスタンスを削除します。
 
 NetApp ONTAP Select インスタンスを削除すると、以下のコンポーネントが順次解放されます。
 1. デプロイ済みの NetApp ONTAP Select クラスター化 VM (仮想マシン) と NetApp ONTAP Select Deploy VM
@@ -44,7 +42,7 @@ NetApp ONTAP Select インスタンスを削除すると、以下のコンポー
    1. **vCenter コンソール**の右側のオーバーフロー・メニュー・アイコンをもう一度クリックしてから、**「インスタンスの削除」**をクリックします。
    2. **「インスタンスの削除」**ウィンドウで**「OK」**をクリックします。
 
-## 関連リンク
+### 関連リンク
 
 * [NetApp ONTAP Select インスタンスの注文](np_orderinginstances.html)
 * [NetApp ONTAP Select インスタンスの表示](np_viewinginstances.html)
