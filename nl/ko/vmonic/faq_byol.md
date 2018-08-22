@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-05-25"
 * VMware NSX
 * VMware vSAN
 
-VMware 컴포넌트에 고유한 라이센스를 사용하도록 선택하고 이에 대해 유효한 라이센스 키를 제공한 경우, 이 컴포넌트에 대해 IBM에서 주문된 라이센스가 없고 월별 라이센스 비용이 이 컴포넌트의 {{site.data.keyword.cloud}} 인프라 계정으로 청구되지 않습니다.
+VMware 컴포넌트에 대해 자체 라이센스 사용을 선택하고 이에 대한 유효한 라이센스 키를 제공한 경우에는 이 컴포넌트에 대해 IBM에서 라이센스가 주문되지 않으며 월별 라이센스 비용이 이 컴포넌트의 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정으로 부과되지 않습니다. 
 
 **참고:** 비즈니스 파트너 사용자는 BYOL 기능을 사용할 수 없습니다.
 

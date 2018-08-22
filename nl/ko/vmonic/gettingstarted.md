@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-07"
 
 ## IBM Cloud for VMware Solutions 콘솔
 
-{{site.data.keyword.vmwaresolutions_short}} 콘솔은 배치를 주문하고 관리하는 인터페이스입니다. 각 배치는 콘솔의 인스턴스로 관리됩니다. 콘솔은 {{site.data.keyword.slportal_full}}에서 분리된 독립형 사용자 인터페이스입니다.
+{{site.data.keyword.vmwaresolutions_short}} 콘솔은 배치를 주문하고 관리하는 인터페이스입니다. 각 배치는 콘솔의 인스턴스로 관리됩니다. 콘솔은 {{site.data.keyword.slportal}}에서 분리된 독립형 사용자 인터페이스입니다.
 
 ## IBM ID 계정
 
@@ -44,10 +44,10 @@ lastupdated: "2018-06-07"
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 보기 및 작업을 최적화하려면 최소 1024 픽셀 너비 x 500 픽셀 높이로 화면 해상도를 설정하십시오.
 
-## 관련 링크
+### 관련 링크
 
 * [{{site.data.keyword.vmwaresolutions_short}} 정보](vmonic/prod_overview.html)
 * [Cloud Foundation 개요](../sddc/sd_cloudfoundationoverview.html)
 * [vCenter Server 개요](../vcenter/vc_vcenterserveroverview.html)
-* [Zerto on IBM Cloud 개요](../services/addingzertodr.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 개요](../services/addingzertodr.html)
 * [문제점 해결](troubleshooting.html)

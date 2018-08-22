@@ -14,17 +14,17 @@ lastupdated: "2017-11-20"
 
 ## FortiGate Virtual Appliance on IBM Cloud
 
-FortiGate Virtual Appliance on IBM Cloud 서비스는 이제 V2.0 이상 VMware Cloud Foundation 인스턴스 및 VMware vCenter Server 인스턴스에 사용할 수 있습니다. 이 서비스는 가상 인프라 내에 중요 보안 제어를 구현하여 위험을 줄일 수 있는 FortiGate Virtual Appliances의 고가용성(HA) 쌍을 환경에 배치합니다.
+FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이제 V2.0 이상 VMware Cloud Foundation 인스턴스 및 VMware vCenter Server 인스턴스에 사용 가능합니다. 이 서비스는 가상 인프라 내에 중요 보안 제어를 구현하여 위험을 줄일 수 있는 FortiGate Virtual Appliances의 고가용성(HA) 쌍을 환경에 배치합니다.
 
-인스턴스를 주문할 때 포함된 FortiGate Virtual Appliance on IBM Cloud 서비스와 함께 인스턴스를 주문하거나 인스턴스 세부사항 페이지에 있는 **서비스** 탭에서 나중에 이 서비스를 기존 인스턴스에 추가할 수 있습니다. 사용자의 요구사항에 따라 이 서비스에 대한 세 개의 배치 크기 및 라이센스 부여 옵션 중 하나를 선택할 수 있습니다. 서비스가 설치된 후 FortiGate 콘솔에서 FortiGate Virtual Appliances의 방화벽 규칙을 관리하고 구성할 수 있습니다.
+인스턴스를 주문할 때 포함된 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스와 함께 인스턴스를 주문하거나 인스턴스 세부사항 페이지에 있는 **서비스** 탭에서 나중에 이 서비스를 기존 인스턴스에 추가할 수 있습니다. 사용자의 요구사항에 따라 이 서비스에 대한 세 개의 배치 크기 및 라이센스 부여 옵션 중 하나를 선택할 수 있습니다. 서비스가 설치된 후 FortiGate 콘솔에서 FortiGate Virtual Appliances의 방화벽 규칙을 관리하고 구성할 수 있습니다.
 
 자세한 정보는 다음을 참조하십시오.
-* [FortiGate Virtual Appliance on IBM Cloud에 대한 컴포넌트 및 고려사항](../services/fortinetvm_considerations.html)
-* [FortiGate Virtual Appliance on IBM Cloud 관리](../services/managingfortinetvm.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}에 대한 컴포넌트 및 고려사항](../services/fortinetvm_considerations.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 관리](../services/managingfortinetvm.html)
 
 ## F5 on IBM Cloud and FortiGate Virtual Appliance on IBM Cloud에 대한 다중 서비스 설치
 
-이제 Cloud Foundation 인스턴스 또는 vCenter Server 인스턴스에 대한 F5 on IBM Cloud 서비스 및 FortiGate Virtual Appliance on IBM Cloud 서비스의 다중 인스턴스를 설치할 수 있습니다. 인스턴스 주문 중에 F5 서비스 또는 FortiGate 서비스를 선택하는 경우 서비스 인스턴스에 이름을 지정하여 나중에 설치하는 추가 서비스 인스턴스와 구별하십시오.
+이제 Cloud Foundation 인스턴스 또는 vCenter Server 인스턴스에 대한 F5 on {{site.data.keyword.cloud_notm}} 서비스 및 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스의 다중 인스턴스를 설치할 수 있습니다. 인스턴스 주문 중에 F5 서비스 또는 FortiGate 서비스를 선택하는 경우 서비스 인스턴스에 이름을 지정하여 나중에 설치하는 추가 서비스 인스턴스와 구별하십시오.
 
 인스턴스 배치가 완료된 후 인스턴스 세부사항 페이지의 **서비스 추가** 탭에 서비스를 설치하여 F5 또는 FortiGate 서비스의 더 많은 인스턴스를 추가할 수 있습니다. 동시에 하나의 서비스만 추가할 수 있고, 서비스에 대해 추가할 모든 인스턴스에 대한 프로세스를 반복해야 합니다.
 
@@ -34,9 +34,9 @@ FortiGate Virtual Appliance on IBM Cloud 서비스는 이제 V2.0 이상 VMware 
 
 ## FortiGate Security Appliance on IBM Cloud에 대한 업데이트
 
-이 릴리스에서 Fortinet on IBM Cloud 서비스는 FortiGate Security Appliance on IBM Cloud로 이름이 변경되고 서비스의 FSA(FortiGate Security Appliances)가 인스턴스에 배치될 때 기본적으로 서비스의 FSA 쌍이 보호되도록 구성됩니다.
+이 릴리스에서 Fortinet on {{site.data.keyword.cloud_notm}} 서비스는 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}로 이름이 변경되었으며, 인스턴스에 배치될 때 서비스의 FSA(FortiGate Security Appliance) 쌍은 기본적으로 보호되도록 구성됩니다. 
 * 새 Cloud Foundation 인스턴스 또는 vCenter Server 인스턴스의 일부로 FSA 쌍을 배치하는 경우 FSA는 인스턴스와 공용 네트워크 간의 필수 아웃바운드 통신만 허용하고 기타 모든 통신을 거부하도록 구성됩니다.
-* 기존 Cloud Foundation 인스턴스 또는 vCenter Server 인스턴스의 일부로 FSA 쌍을 배치하는 경우 FSA는 인스턴스와 공용 네트워크 간의 모든 필수 아웃바운드 관리 통신을 허용하도록 명시 규칙으로 구성되고, 또한 FSA는 기존 애플리케이션 트래픽이 인터럽트되지 않는지 확인하기 위해 기타 모든 통신을 허용하는 추가 규칙으로 구성됩니다.
+* 기존 Cloud Foundation 인스턴스 또는 vCenter Server 인스턴스의 일부로 FSA 쌍을 배치하는 경우 FSA는 인스턴스와 공용 네트워크 간의 모든 필수 아웃바운드 관리 통신을 허용하도록 명시적인 규칙으로 구성되고, 또한 FSA는 기존 애플리케이션 트래픽이 인터럽트되지 않는지 확인하기 위해 기타 모든 통신을 허용하는 추가 규칙으로 구성됩니다.
 
 모든 경우, 필요한 통신만 허용하고 기타 모든 통신은 거부하도록 FSA 구성을 주의하여 관리해야 합니다.
 
@@ -51,7 +51,7 @@ FortiGate Virtual Appliance on IBM Cloud 서비스는 이제 V2.0 이상 VMware 
 
 ## 인스턴스 주문 중에 워크로드 및 스토리지 예상
 
-* VMware vSphere on IBM Cloud 주문 중에 주문된 인스턴스에 실행될 수 있는 가상 머신 수의 예상 값이 제공됩니다.
+* VMware vSphere on {{site.data.keyword.cloud_notm}} 주문 중에 사용자에게는 주문된 인스턴스에서 실행될 수 있는 가상 머신의 수에 대한 예상 값이 제공됩니다. 
 * Cloud Foundation 및 vCenter Server 주문 중에 주문된 인스턴스에 사용 가능한 스토리지 용량의 예상 값이 제공됩니다.
 
 자세한 정보는 다음을 참조하십시오.
@@ -148,7 +148,7 @@ VMware vSAN 컴포넌트의 경우 이제 {{site.data.keyword.baremetal_short}}�
 * 3.8TB SSD SED
 
 **참고:**
-* 3.8TB SSD SED 드라이브는 일반적으로 데이터 센터에서 사용 가능할 때 지원됩니다.
+* 3.8 TB SSD SED 드라이브는 일반적으로 {{site.data.keyword.CloudDataCent_notm}}에서 사용 가능할 때 지원됩니다. 
 * vSAN 컴포넌트가 포함되거나 포함되지 않은 주문은 항상 가격 예상 PDF에서 비vSA 주문 케이스용 {{site.data.keyword.baremetal_short}}에 대해 약간 더 높은 비용을 반영하는 12개의 디스크 섀시 서버를 포함합니다.
 
 자세한 정보는 [새 vSphere 클러스터 주문](../vsphere/vs_orderinginstances.html)을 참조하십시오.
@@ -162,7 +162,7 @@ VMware vSAN 컴포넌트의 경우 이제 {{site.data.keyword.baremetal_short}}�
 * **고성능(대형)** – 프리미엄 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 128GB RAM / 노드당 22개의 3.8TB SSD 드라이브 용량 / 네 개의 노드 클러스터의 유효한 용량 – 118TB
 * **고용량** – 표준 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 64GB RAM / 노드당 10개의 4TB SATA 드라이브 용량 / 네 개의 노드 클러스터의 유효한 용량 – 60TB
 
-**참고:** 3.8TB SSD 드라이브는 일반적으로 데이터 센터에서 사용 가능할 때 지원됩니다.
+**참고:** 3.8 TB SSD 드라이브는 일반적으로 {{site.data.keyword.CloudDataCent_notm}}에서 사용 가능할 때 지원됩니다. 
 
 자세한 정보는 다음을 참조하십시오.
 * [NetApp ONTAP Select 개요](../netapp/np_netappoverview.html)
@@ -170,7 +170,7 @@ VMware vSAN 컴포넌트의 경우 이제 {{site.data.keyword.baremetal_short}}�
 
 ## 새로 작성되고 업데이트된 문서
 
-VMware Cloud Foundation 사용자는 가상 머신이 서로 통신하고 인터넷과 통신할 수 있도록 IBM Cloud에 있는 VMware의 NSX 플랫폼과 함께 단계별 지시사항을 사용할 수 있습니다. 자세한 정보는 [Setting up NSX for workload VMs on VMware Cloud Foundation on IBM Cloud (VCF)](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}를 참조하십시오.
+VMware Cloud Foundation 사용자는 가상 머신이 서로 간에 및 인터넷과 통신할 수 있도록 {{site.data.keyword.cloud_notm}}에 있는 VMware의 NSX 플랫폼과 함께 단계별 지시사항을 사용할 수 있습니다. 자세한 정보는 [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}(VCF)에서 워크로드 VM에 대한 NSX 설정](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}을 참조하십시오. 
 
 ## 사용자 인터페이스 업데이트 및 개선사항
 

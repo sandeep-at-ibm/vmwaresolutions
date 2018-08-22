@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -59,7 +59,7 @@ VMware vSphere 6.0 및 VMware vCenter Server 6.0의 경우 모두, [VMware 제�
 
 VMware vSphere 6.0 및 VMware vCenter Server 6.0의 경우 모두, [VMware 제품 패치 사이트](https://my.vmware.com/group/vmware/patch)에 있는 패치(vSphere용 ESXi600-201711101-SG, ESXi600-201803401-BG, ESXi600-201803402-BG 및 vCenter Server용 vCenter 6.0 U3e)를 새로 배치되거나 기존에 있던 모든 클러스터 및 ESXi 서버에 적용해야 합니다.
 
-## 관련 링크
+### 관련 링크
 
 * [업데이트를 Cloud Foundation 인스턴스에 적용](../sddc/sd_applyingupdates.html)
 * [Secure against recent security vulnerabilities](https://www.ibm.com/blogs/bluemix/2018/01/ibm-cloud-spectre-meltdown-vulnerabilities/)

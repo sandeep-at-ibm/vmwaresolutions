@@ -24,15 +24,15 @@ lastupdated: "2018-04-16"
 
 ## VMware HCX on IBM Cloud
 
-HCX on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSphere 6.5에서 실행되고 V2.1 이상 릴리스에 배치되거나 V2.1 이상 릴리스로 업그레이드되는 VMware Cloud Foundation 인스턴스 및 VMware vCenter Server 인스턴스에 사용할 수 있습니다. 이 서비스는 {{site.data.keyword.cloud_notm}}로 온프레미스 데이터 센터의 네트워크를 원활하게 확장할 수 있으며, 이를 통해 변경 없이 온프레미스 데이터 센터와 {{site.data.keyword.cloud_notm}} 간에 가상 머신(VM)의 양방향 마이그레이션이 가능합니다. 계층 2 브릿지 구축함으로써 HCX는 WAN 최적화, 중복 제거, 압축 및 암호화를 활용하여 직접적인 링크 또는 VPN 터널을 통해 좀 더 빠르고 안전하게 데이터를 마이그레이션합니다. VM의 대량 마이그레이션이 VMware vSphere 5.1 이상과 역호환됩니다. vSphere 6.0 이상 온프레미스를 사용하는 경우 온프레미스와 IBM Cloud 데이터 센터 간의 vMotion 활성(전원 켜짐) VM을 수행할 수 있습니다. HCX 사용 시 데이터 센터에 VMware NSX를 설치할 필요는 없습니다.
+HCX on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSphere 6.5에서 실행되고 V2.1 이상 릴리스에 배치되거나 V2.1 이상 릴리스로 업그레이드되는 VMware Cloud Foundation 인스턴스 및 VMware vCenter Server 인스턴스에 사용할 수 있습니다. 이 서비스는 {{site.data.keyword.cloud_notm}}로 온프레미스 데이터 센터의 네트워크를 원활하게 확장할 수 있으며, 이를 통해 변경 없이 온프레미스 데이터 센터와 {{site.data.keyword.cloud_notm}} 간에 가상 머신(VM)의 양방향 마이그레이션이 가능합니다. 계층 2 브릿지 구축함으로써 HCX는 WAN 최적화, 중복 제거, 압축 및 암호화를 활용하여 직접적인 링크 또는 VPN 터널을 통해 좀 더 빠르고 안전하게 데이터를 마이그레이션합니다. VM의 대량 마이그레이션이 VMware vSphere 5.1 이상과 역호환됩니다. vSphere 6.0 이상 온프레미스를 사용하는 경우에는 온프레미스와 {{site.data.keyword.CloudDataCent_notm}} 간의 vMotion 라이브(전원 켜기) VM을 수행할 수 있습니다. HCX 사용 시 데이터 센터에 VMware NSX를 설치할 필요는 없습니다.
 
 인스턴스를 주문할 때 포함된 HCX on {{site.data.keyword.cloud_notm}} 서비스와 함께 Cloud Foundation 또는 vCenter Server 인스턴스를 주문하거나 인스턴스 세부사항 페이지에 있는 **서비스** 탭에서 나중에 이 서비스를 기존 인스턴스에 추가할 수 있습니다.
 
 온프레미스 HCX 설치의 라이센스 부여 및 활성화를 위해 온프레미스 HCX 인스턴스도 주문할 수 있습니다.
 
 자세한 정보는 다음을 참조하십시오.
-* [HCX on IBM Cloud 고려사항](../services/hcx_considerations.html)
-* [HCX on IBM Cloud 관리](../services/managinghcx.html)
+* [HCX on {{site.data.keyword.cloud_notm}}에 대한 고려사항](../services/hcx_considerations.html)
+* [HCX on {{site.data.keyword.cloud_notm}} 관리](../services/managinghcx.html)
 * [온프레미스 HCX 인스턴스에 대한 고려사항](../services/standalone_considerations.html)
 * [온프레미스 HCX 인스턴스 주문](../services/standalone_orderingserviceinstances.html)
 
@@ -52,7 +52,7 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSphere 6.5에서 �
 
 V2.1 이상 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스에 배치된 Zerto on {{site.data.keyword.cloud_notm}} 서비스의 경우, Zerto Virtual Replication 5.5u2가 프로비저닝됩니다. Zerto Virtual Replication Appliances(VRA)는 이제 성능상의 이유로 로컬 데이터 저장소가 아닌 관리 데이터 저장소(vSAN 또는 Endurance)에 배치됩니다. 기존 VRA가 있는 경우 더 나은 성능을 위해 스토리지를 관리 데이터 저장소로 마이그레이션하는 것을 고려해야 합니다.
 
-자세한 정보는 [Zerto on IBM Cloud 개요](../services/addingzertodr.html)를 참조하십시오.
+자세한 정보는 [Zerto on {{site.data.keyword.cloud_notm}} 개요](../services/addingzertodr.html)를 참조하십시오. 
 
 ## VMware vCenter Server 인스턴스에 대한 업데이트
 
@@ -110,4 +110,4 @@ Bare Metal Server 구성을 사용자 정의한 사용자는 이제 듀얼 Intel
 
 ## 새로 작성되고 업데이트된 문서
 
-새 developerWorks 처리 방법은 NetApp ONTAP Select on IBM Cloud를 사용하여 전용 스토리지를 기존 {{site.data.keyword.vmwaresolutions_full}} 배치에 연결하는 방법에 대한 단계별 지시사항으로 제공됩니다. 자세한 정보는 [Steps to attach dedicated storage to VMware Solutions on IBM Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)를 참조하십시오.
+새 developerWorks 방안은 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}를 사용하여 전용 스토리지를 기존 {{site.data.keyword.vmwaresolutions_full}} 배치에 연결하는 방법에 대한 단계별 지시사항에서 찾을 수 있습니다. 자세한 정보는 [Steps to attach dedicated storage to VMware Solutions on IBM Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)를 참조하십시오.
