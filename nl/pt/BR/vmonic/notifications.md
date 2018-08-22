@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -31,7 +31,7 @@ lastupdated: "2018-05-30"
           <dt class="dt dlterm">Crítico</dt>
           <dd class="dd">Um evento crítico pode afetar o sistema inteiro ou serviço.</dd>
           <dt class="dt dlterm">Erro</dt>
-          <dd class="dd">Um evento de erro ocorre durante uma operação que pode precisar de intervenção do administrador ou do usuário final.</dd>
+          <dd class="dd">Ocorre um evento de erro durante uma operação que pode precisar de intervenção do administrador ou do usuário.</dd>
           <dt class="dt dlterm">Aviso</dt>
           <dd class="dd">Um componente falha ou não está funcionando corretamente. No entanto, a falha não interrompe o processo contínuo do
        componente.</dd>
@@ -72,7 +72,7 @@ lastupdated: "2018-05-30"
 
 Por padrão, todas as notificações não lidas são exibidas. É possível filtrar as notificações por status, severidade e tipo. Para filtrar as notificações, marque as caixas de seleção somente para os itens que você deseja exibir nas listas suspensas **Status**, **Gravidade** ou **Tipo**.
 
-## Links relacionados
+### Links relacionados
 
 * [Perguntas mais frequentes](faq.html)
 * [Conta do usuário e configurações](useraccount.html)

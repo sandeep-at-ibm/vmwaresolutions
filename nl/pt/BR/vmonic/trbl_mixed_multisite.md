@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-10-05"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -17,7 +17,7 @@ Em uma configuração do Cloud Foundation de vários sites, não é possível in
 Conclua as etapas a seguir na instância primária V1.5 para incluir as permissões para o usuário de automação principal fazer parte dos grupos **Administradores Corporativos** e **Administradores do Esquema**.
 
 1. Efetue login no servidor Windows AD com a senha **Administrator**.
-2. Abra **Server Manager** e clique em **Ferramentas -> Usuários e Computadores do Active Directory**.
+2. Abra o **Server Manager** e clique em **Ferramentas > Usuários e computadores do Active Directory**.
 4. Na janela **Usuários e Computadores do Active Directory**, clique na seção **Usuários** no seu domínio-raiz.
 5. Clique com o botão direito no usuário da automação para abrir a janela **Propriedades**.
 6. Clique na guia **Membro de**.

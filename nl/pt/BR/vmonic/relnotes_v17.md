@@ -26,7 +26,7 @@ Essa atualização se aplica aos seguintes upgrades e melhorias:
 
 * As implementações do VMware Cloud Foundation que foram feitas antes de 22 de maio e estão, portanto, usando servidores V3 pedirão agora servidores V4 ao incluir um novo nó na instância. Esses servidores têm 256 GB de memória; se você precisar de 512 GB de memória, depois de incluir os servidores, abra um chamado de suporte para solicitar um upgrade do servidor para 512 GB de memória. Para obter informações sobre como entrar em contato com o Suporte IBM, veja [Entrando em contato com o Suporte IBM](trbl_support.html).
 
-Para obter mais informações sobre componentes, veja [Componentes da instância do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+Para obter mais informações sobre componentes, veja [Especificações técnicas para instâncias do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Requisitos do processo de atualização
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -59,7 +59,7 @@ Atualizações para essas instâncias estarão disponíveis quando as atualizaç
 
 Para o VMware vSphere 6.0 e o VMware vCenter Server 6.0, deve-se aplicar as correções (ESXi600-201711101-SG, ESXi600-201803401-BG e ESXi600-201803402-BG para vSphere e vCenter 6.0 U3e para vCenter Server) por meio do [Site de Correções de produtos VMware](https://my.vmware.com/group/vmware/patch) para todos os seus clusters vSphere e servidores ESXi, recém-implementados ou existentes.
 
-## Links relacionados
+### Links relacionados
 
 * [Aplicando atualizações a instâncias do Cloud Foundation](../sddc/sd_applyingupdates.html)
 * [Proteger contra vulnerabilidades de segurança recentes](https://www.ibm.com/blogs/bluemix/2018/01/ibm-cloud-spectre-meltdown-vulnerabilities/)

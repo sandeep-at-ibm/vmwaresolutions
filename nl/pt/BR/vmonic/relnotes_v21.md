@@ -24,15 +24,15 @@ Para obter mais informações, veja [Tratando as vulnerabilidades Spectre e Melt
 
 ## VMware HCX on IBM Cloud
 
-O serviço HCX on {{site.data.keyword.cloud_notm}} está disponível para instâncias do VMware Cloud Foundation e do VMware vCenter Server que estão executando o vSphere 6.5 e que são implementadas em ou têm upgrade feito para a V2.1 ou liberações mais recentes. Esse serviço pode ampliar continuamente as redes de seus data centers locais no {{site.data.keyword.cloud_notm}}, que permite a migração bidirecional de máquinas virtuais (VMs) entre os data centers locais e o {{site.data.keyword.cloud_notm}} sem nenhuma mudança. Ao estabelecer uma ponte de camada 2, o HCX alavanca a otimização, deduplicação, compactação e criptografia WAN para migrar com mais rapidez e segurança os dados em um túnel do Direct Link ou VPN. A migração em massa de VMs é compatível com versões anteriores com o VMware vSphere 5.1 ou superior. Se você usar o vSphere 6.0 ou superior no local, será possível efetuar vMotion em tempo real (ligado) em VMs do local para um data center do IBM Cloud. Não é necessário ter o VMware NSX instalado em seu data center ao usar o HCX.
+O serviço HCX on {{site.data.keyword.cloud_notm}} está disponível para instâncias do VMware Cloud Foundation e do VMware vCenter Server que estão executando o vSphere 6.5 e que são implementadas em ou têm upgrade feito para a V2.1 ou liberações mais recentes. Esse serviço pode ampliar continuamente as redes de seus data centers locais no {{site.data.keyword.cloud_notm}}, que permite a migração bidirecional de máquinas virtuais (VMs) entre os data centers locais e o {{site.data.keyword.cloud_notm}} sem nenhuma mudança. Ao estabelecer uma ponte de camada 2, o HCX alavanca a otimização, deduplicação, compactação e criptografia WAN para migrar com mais rapidez e segurança os dados em um túnel do Direct Link ou VPN. A migração em massa de VMs é compatível com versões anteriores com o VMware vSphere 5.1 ou superior. Se você usar o vSphere 6.0 ou superior no local, será possível efetuar vMotion em tempo real (ligado) em VMs do local para um {{site.data.keyword.CloudDataCent_notm}}. Não é necessário ter o VMware NSX instalado em seu data center ao usar o HCX.
 
 É possível pedir instâncias do Cloud Foundation ou do vCenter Server com o serviço HCX on {{site.data.keyword.cloud_notm}} incluído quando você pede a sua instância ou incluir esse serviço em suas instâncias existentes posteriormente na guia **Serviços** na página de detalhes da instância.
 
 É possível também pedir uma instância do HCX local para licenciamento e ativação da instalação do HCX local.
 
 Para obter mais informações, veja:
-* [Considerações para o HCX on IBM Cloud](../services/hcx_considerations.html)
-* [Gerenciando o HCX on IBM Cloud](../services/managinghcx.html)
+* [Considerações para o HCX no {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)
+* [Gerenciando o HCX no {{site.data.keyword.cloud_notm}}](../services/managinghcx.html)
 * [Considerações para instâncias do HCX locais](../services/standalone_considerations.html)
 * [Pedindo instâncias do HCX locais](../services/standalone_orderingserviceinstances.html)
 
@@ -52,7 +52,7 @@ Para obter mais informações, veja:
 
 Para o serviço Zerto on {{site.data.keyword.cloud_notm}} implementado em instâncias do Cloud Foundation V2.1 e mais recente e em instâncias do vCenter Server, o Zerto Virtual Replication 5.5u2 será fornecido. Agora, os dispositivos de replicação virtual (VRAs) Zerto são implementados no armazenamento de dados de gerenciamento (vSAN ou Endurance) em vez de no armazenamento de dados local por motivos de desempenho. Se você tiver VRAs existentes, deverá considerar migrar seu armazenamento para o armazenamento de dados de gerenciamento para melhor desempenho.
 
-Para obter mais informações, veja [Visão geral do Zerto on IBM Cloud](../services/addingzertodr.html).
+Para obter mais informações, consulte [Visão geral do Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html).
 
 ## Atualizações para instâncias do VMware vCenter Server
 
@@ -110,4 +110,4 @@ São feitas melhorias em toda a interface com o usuário:
 
 ## Documentação nova e atualizada
 
-Uma nova orientação do developerWorks está disponível com instruções passo a passo sobre como anexar o armazenamento dedicado a implementações existentes do {{site.data.keyword.vmwaresolutions_full}} usando o NetApp ONTAP Select on IBM Cloud. Para obter mais informações, veja [Etapas para anexar o armazenamento dedicado ao VMware Solutions on IBM Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).
+Uma nova orientação do developerWorks está disponível com instruções passo a passo sobre como anexar armazenamento dedicado às implementações existentes do {{site.data.keyword.vmwaresolutions_full}} usando o NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}. Para obter mais informações, veja [Etapas para anexar o armazenamento dedicado ao VMware Solutions on IBM Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).

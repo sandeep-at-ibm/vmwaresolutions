@@ -4,44 +4,48 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-03"
+lastupdated: "2018-07-27"
 
 ---
 
 # Gerenciando contas de usuário e configurações
 
-O {{site.data.keyword.vmwaresolutions_full}} se comunica com a infraestrutura do {{site.data.keyword.cloud_notm}} por meio de chamadas do {{site.data.keyword.slapi_short}}. Para acessar o {{site.data.keyword.slapi_short}} com segurança, deve-se associar as credenciais de sua conta {{site.data.keyword.cloud_notm}} à sua conta de usuário {{site.data.keyword.vmwaresolutions_short}}.
+O {{site.data.keyword.vmwaresolutions_full}} se comunica com a infraestrutura do {{site.data.keyword.cloud_notm}} por meio de chamadas do {{site.data.keyword.slapi_short}}. Para acessar o {{site.data.keyword.slapi_short}} com segurança, deve-se vincular as credenciais de sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) à sua conta do {{site.data.keyword.cloud_notm}}.
 
-**Nota**: a conta {{site.data.keyword.cloud_notm}} era conhecida anteriormente como a conta IBM SoftLayer.
+**Nota**: a conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) era conhecida anteriormente como a conta do IBM SoftLayer.
 
-No console do {{site.data.keyword.vmwaresolutions_short}}, é possível também especificar se você deseja receber notificações por e-mail para vários eventos.
+Também é possível especificar se você deseja receber notificações por e-mail e do console para vários eventos.
 
 ## Antes de iniciar
 
-* É possível associar apenas uma conta {{site.data.keyword.cloud_notm}} à sua conta de usuário {{site.data.keyword.vmwaresolutions_short}}.
-* A conta do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, veja [Requisitos da conta {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
-* Se a chave API de sua conta {{site.data.keyword.cloud_notm}} mudar, deve-se atualizar a chave em sua conta de usuário {{site.data.keyword.vmwaresolutions_short}}.
+* É possível vincular somente uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) a uma conta do usuário do {{site.data.keyword.cloud_notm}}.
+* A conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) que você está usando deve atender a determinados requisitos. Para obter mais informações, veja [Requisitos de conta de infraestrutura do {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
+* Caso a chave API para sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) mude, deve-se atualizar a chave na página **Configurações** no console do {{site.data.keyword.vmwaresolutions_short}}.
 
    **Importante**: é sua responsabilidade assegurar que a chave API que é salva na página **Configurações** esteja correta e atualizada.
    Caso contrário, as operações que requerem validação da chave API podem falhar.
 
-Para associar a conta {{site.data.keyword.vmwaresolutions_short}} à conta {{site.data.keyword.cloud_notm}}, insira as credenciais de conta {{site.data.keyword.cloud_notm}} na página **Configurações** no console do {{site.data.keyword.vmwaresolutions_short}}.
-
-Depois de associar a conta {{site.data.keyword.cloud_notm}}, o console recupera automaticamente as credenciais de conta {{site.data.keyword.cloud_notm}} para se comunicar com seu ambiente VMware no {{site.data.keyword.cloud_notm}}.
-
 ## Procedimento
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Configurações** na área de janela de navegação esquerda.
-2. Se desejar ser notificado por e-mail quando novos eventos ocorrem, marque a caixa de seleção **Ativar notificações por e-mail**.
-3. Se desejar ser notificado no console quando novos eventos ocorrem, marque a caixa de seleção **Ativar notificações do console**.
-4. Na área **Credenciais de infraestrutura do IBM Cloud**, insira o nome de usuário de sua conta {{site.data.keyword.cloud_notm}} e, em seguida, siga as instruções no console para inserir a chave de {{site.data.keyword.slapi_short}}.
-5. Clique em **Salvar Credenciais**.
+2. Na área **Notificações**, especifique suas configurações de notificação:
+   * Se você desejar ser notificado por e-mail quando eventos ocorrerem, clique em **Ativar notificações por e-mail**.
+   * Se você desejar ser notificado no console quando eventos ocorrerem, clique em **Ativar notificações do console**.
+3. Na área **Credenciais de infraestrutura do IBM Cloud**, insira o nome do usuário e a chave API de sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) usando um dos métodos a seguir:
+   * Se sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) e sua conta do {{site.data.keyword.cloud_notm}} estiverem vinculadas, clique em **Recuperar** para inserir as credenciais automaticamente.
+   * Se sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) e sua conta do {{site.data.keyword.cloud_notm}} não estiverem vinculadas, efetue login no [portal do cliente de infraestrutura do {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/) e, então, siga as instruções no console para obter e inserir as credenciais.
+   * Se você não tiver uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer), [ inscreva-se para uma](../vmonic/signing_softlayer_account.html) e, então, siga as instruções no console para obter e inserir as credenciais.
+4. Clique em **Salvar Credenciais**.
 
 ## Resultados
 
-As credenciais de conta {{site.data.keyword.cloud_notm}} armazenadas são usadas em operações futuras que requerem interação com a infraestrutura do {{site.data.keyword.cloud_notm}}. Se as notificações por e-mail ou por console forem ativadas para certos eventos de instância, você será notificado por mensagens de e-mail ou mensagens de console quando ocorrerem esses eventos.
+Depois que a conta do {{site.data.keyword.cloud_notm}} e a conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) estiverem vinculadas, o console recuperará automaticamente as credenciais de conta da infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) para se comunicar com seu ambiente do VMware no {{site.data.keyword.cloud_notm}}.
 
-## Links relacionados
+As credenciais de conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) armazenadas são usadas em operações futuras que requerem interação com a infraestrutura do {{site.data.keyword.cloud_notm}}.
+
+Se as notificações por e-mail ou por console forem ativadas para certos eventos de instância, você será notificado por mensagens de e-mail ou mensagens de console quando ocorrerem esses eventos.
+
+### Links relacionados
 
 * [Perguntas mais frequentes](faq.html)
 * [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html)
