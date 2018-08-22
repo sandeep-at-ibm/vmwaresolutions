@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2018-06-14"
 
 #### 資料中心位置
 
-依預設，叢集的 {{site.data.keyword.CloudDataCent}} 位置是設為 vCenter Server 實例的 {{site.data.keyword.CloudDataCent_notm}}。您可以將叢集部署至不同於已部署實例的 {{site.data.keyword.CloudDataCent_notm}}，但您必須確定兩個 {{site.data.keyword.CloudDataCents_notm}} 之間的網路延遲少於 150 毫秒。若要檢查網路延遲，您可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 之類的工具。
+依預設，叢集的 {{site.data.keyword.CloudDataCent_notm}} 位置是設為 vCenter Server 實例的 {{site.data.keyword.CloudDataCent_notm}}。您可以將叢集部署至不同於已部署實例的 {{site.data.keyword.CloudDataCent_notm}}，但您必須確定兩個 {{site.data.keyword.CloudDataCents_notm}} 之間的網路延遲少於 150 毫秒。若要檢查網路延遲，您可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 之類的工具。
 
 如果您將叢集部署至不同的 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基礎架構 pod，則會訂購另外三個 VLAN，以便與已訂購的 {{site.data.keyword.baremetal_short}} 搭配使用。
 
@@ -75,7 +75,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。您必
 下列項目的 IBM 提供的 VMware 授權：
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.3
+  * VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.4
 
 ### 訂單摘要
 
@@ -183,7 +183,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。您必
 
 3. 在左導覽窗格上，按一下**基礎架構**。在 **CLUSTERS** 表格中，找出您要刪除的叢集，然後按一下**動作**直欄中的**刪除**圖示。
 
-## 相關鏈結
+### 相關鏈結
 
 * [檢視 vCenter Server with Hybridity Bundle 實例](vc_hybrid_viewinginstances.html)
 * [擴充及縮減 vCenter Server with Hybridity Bundle 實例的容量](vc_hybrid_addingremovingservers.html)

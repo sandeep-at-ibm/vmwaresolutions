@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-05-23"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-05-23"
 5. 子網路
 6. VLAN
 
-由於資源相依關係，當您刪除實例時，不會立即釋放實例中的元件。例如，在 {{site.data.keyword.cloud}} 基礎架構完全收回 ESXi 伺服器（這發生在 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束時）之前，無法刪除子網路及 VLAN。當 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束（通常是 30 天），就會刪除子網路和 VLAN，並且完成實例刪除。
+由於資源相依關係，當您刪除實例時，不會立即釋放實例中的元件。例如，在 {{site.data.keyword.cloud_notm}} 基礎架構完全收回 ESXi 伺服器（這發生在 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束時）之前，無法刪除子網路及 VLAN。當 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束（通常是 30 天），就會刪除子網路和 VLAN，並且完成實例刪除。
 
 **注意**：將向您收取已刪除的實例到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。
 
@@ -34,7 +34,7 @@ lastupdated: "2017-05-23"
 6. 針對多站台配置中的所有次要 vCenter Server with Hybridity Bundle 實例，重複步驟 1 到 5。
 7. 刪除所有次要實例之後，您也可以從 {{site.data.keyword.vmwaresolutions_short}} 主控台刪除主要實例。
 
-## 相關鏈結
+### 相關鏈結
 
 * [刪除 vCenter Server with Hybridity Bundle 實例](vc_hybrid_deletinginstance.html)
 * [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](vc_hybrid_addingremovingservices.html)

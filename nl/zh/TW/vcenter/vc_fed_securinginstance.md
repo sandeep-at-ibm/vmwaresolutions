@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ lastupdated: "2018-05-24"
 3. 按一下 **vCenter 主控台**右側的溢位功能表圖示。
 4. 按一下**維護實例安全**。
 5. 按一下**確定**以確認您要中斷實例自動化。
-   
+
    **附註**：完成此步驟之前，請確定您已檢閱**開始之前**小節中的資訊。
 
 ## 結果
@@ -36,9 +36,9 @@ lastupdated: "2018-05-24"
 
 當順利維護實例的安全時，實例的狀態會變更為**安全**，且只會提供實例內容和部署歷程。
 
-## 相關鏈結
+### 相關鏈結
 
-* [VMware Federal on IBM Cloud 概觀](vc_fed_overview.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} 概觀](vc_fed_overview.html)
 * [訂購 VMware Federal 實例](vc_fed_orderinginstance.html)
 * [檢視 VMware Federal 實例](vc_fed_viewinginstance.html)
 * [刪除 VMware Federal 實例](vc_fed_deletinginstance.html)

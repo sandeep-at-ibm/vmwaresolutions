@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
 # 訂購 vCenter Server with Hybridity Bundle 實例
 
-若要部署彈性且可自訂的 VMware 虛擬化平台，以符合您的工作負載需求，請訂購 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 實例。您的 vCenter Server with Hybridity Bundle 實例訂單包括 VMware Hybrid Cloud Extension (HCX) 授權，並授權您使用 VMware HCX on IBM Cloud 服務。您也可以新增服務（例如 [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html)）來進行災難回復。
+若要部署彈性且可自訂的 VMware 虛擬化平台，以符合您的工作負載需求，請訂購 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 實例。您的 vCenter Server with Hybridity Bundle 實例訂單包括 VMware Hybrid Cloud Extension (HCX) 授權，並授權您使用 VMware HCX on {{site.data.keyword.cloud_notm}} 服務。您也可以新增服務（例如 [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)）來進行災難回復。
 
 ## 需求
 
@@ -54,7 +54,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附下列授權。您必須�
 
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.3
+* VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.4
 * VMware vSAN 6.6 授權版本（Advanced 或 Enterprise）。
 
 **注意：**
@@ -169,7 +169,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。訂購
 
 ## 程序
 
-1. 在「IBM Cloud 型錄」中，從左導覽窗格中按一下 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
+1. 在「{{site.data.keyword.cloud_notm}} 型錄」中，從左導覽窗格中按一下 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 頁面上，按一下 **vCenter Server with Hybridity Bundle** 卡片，然後按一下**建立**。
 3. 在 **vCenter Server** 頁面上，輸入實例名稱。
 4. 選取實例類型：
@@ -206,7 +206,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。訂購
 
 實例的部署會自動啟動。您會收到正在處理訂單的確認，您可以檢視實例詳細資料來檢查部署的狀態。
 
-順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server with Hybridity Bundle 概觀](vc_hybrid_overview.html)的 _vCenter Server with Hybridity Bundle 技術規格_ 小節中所述的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購其他服務，則會在完成訂單之後開始部署服務。
+順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server with Hybridity Bundle 實例的技術規格](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購其他服務，則會在完成訂單之後開始部署服務。
 
 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 
@@ -226,7 +226,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。訂購
 
    這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
 
-## 相關鏈結
+### 相關鏈結
 
 * [註冊 {{site.data.keyword.cloud_notm}} 帳戶](../vmonic/signing_softlayer_account.html)
 * [檢視 vCenter Server with Hybridity Bundle 實例](vc_hybrid_viewinginstances.html)

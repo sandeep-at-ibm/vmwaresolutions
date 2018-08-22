@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -21,7 +21,7 @@ VMware NSX 是一種網路虛擬化平台，可將隔離的網路虛擬化，並
 * 將部署一個 NSX 邏輯交換器樣本，供客戶工作負載 VM 使用。
 * 在連接至第 2 層 (L2) 網路的本端工作負載之間，會針對潛在的東西向通訊（水平通訊）而部署「NSX 分散式邏輯路由器 (DLR)」。
 * 將部署及配置 NSX Edge 應用裝置，以執行從工作負載邏輯交換器的 IP 位址範圍到 NAT 規則上的公用 IP 位址的網址轉換 (NAT)。
-* 如果您已在 IBM Cloud 服務上安裝 Veeam，則會配置 NSX Manager 執行 NSX 配置的每日備份。如需相關資訊，請參閱[在 IBM Cloud 上安裝 Veeam 時的考量](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud)。
+* 如果您已安裝 Veeam on {{site.data.keyword.cloud_notm}} 服務，則會配置 NSX Manager 執行 NSX 配置的每日備份。如需相關資訊，請參閱[安裝 Veeam on {{site.data.keyword.cloud_notm}} 時的考量](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud)。
 
 
 ## 為 VM 配置網路設定
@@ -72,8 +72,8 @@ Edge **customer-nsx-edge** 是要給您自己使用的，因此您可以修改�
 
    **警告：**請勿使用在起始設定期間所訂購及使用的 IP 位址。不過，您可以根據自己的需求使用這些子網路上的其他 IP 位址。若要設定其他網址轉換規則，請參閱[管理 NAT 規則](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}。
 
-## 相關鏈結
+### 相關鏈結
 
 * [疑難排解](../vcenter/vcenter_chg_impact.html)
 * [常見問題](../vmonic/faq.html)
-* [NSX Edge Services Gateway](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/nsx-esg){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

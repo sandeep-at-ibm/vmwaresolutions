@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -16,13 +16,11 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是�
 
 在許多情況下，整個環境可以在一天內佈建完成，且裸機基礎架構可以快速而彈性地擴充運算容量，並依需要擴增及縮減。
 
-<!--Post-deployment, you can increase shared storage by ordering additional NFS (Network File System) file shares from the  {{site.data.keyword.slportal}} and manually attach them across all ESXi servers in a cluster. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.-->
-
 若要增加 vSAN 叢集的 vSAN 型儲存空間容量，您可以在部署後新增更多 ESXi 伺服器。
 
 您可以將 VMware NSX Advanced 版本升級至 Enterprise 版本，並可購買其他 VMware 元件（例如 VMware vRealize Operations）。
 
-如果您要卸載虛擬化、來賓作業系統或應用程式層的日常作業及維護，則可以新增 IBM Managed Services。IBM Cloud Professional Services 團隊也可藉由移轉、實作、規劃及上線服務協助您加速移到雲端。
+如果您要卸載虛擬化、來賓作業系統或應用程式層的日常作業及維護，則可以新增 IBM Managed Services。{{site.data.keyword.cloud_notm}} Professional Services 團隊也可協助您透過移轉、實作、規劃及上線服務來加速移到雲端。
 
 ## vCenter Server with Hybridity Bundle 架構
 
@@ -45,7 +43,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是�
 
 ### 虛擬化管理
 
-此層由 vCenter Server Appliance (vCSA)、NSX Manager、兩個 NSX ESG、三個 NSX Controller、Platform Services Controller (PSC) 虛擬應用裝置及 IBM CloudDriver 虛擬機器 (VM) 所組成。
+此層由 vCenter Server Appliance (vCSA)、NSX Manager、兩個 NSX ESG、三個 NSX Controller、Platform Services Controller (PSC) 虛擬應用裝置及 IBM CloudDriver 虛擬伺服器實例 (VSI) 所組成。針對將主機新增至環境這類特定作業，視需要依需求部署 CloudDriver VSI。
 
 基本供應項目與 vCenter Server Appliance 一起部署，其大小調整後可支援最多 400 部主機及最多 4000 部 VM 的環境。相同的 vSphere API 相容工具及 Script 可用來管理 IBM 管理的 VMware 環境。
 
@@ -57,23 +55,19 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是�
 
 本層會抽象化內部部署站台與 {{site.data.keyword.cloud_notm}} 站台之間的資源，讓您可以安全並輕鬆地來回移動工作量，而不需要變更 VM 特徵（例如其 IP 位址）。
 
-根據 VMware Hybrid Cloud Extension (HCX)，您可以在內部部署與 IBM Cloud 站台之間建立鬆散耦合交互連接，以在不需要關閉的情況下啟用 VM 的大量移轉或 VM 的即時 vMotion。
+根據 VMware Hybrid Cloud Extension (HCX)，您可以在內部部署與 {{site.data.keyword.cloud_notm}} 站台之間建立鬆散耦合交互連接，以在不需要關閉的情況下啟用 VM 的大量移轉或 VM 的即時 vMotion。
 
-## vCenter Server with Hybridity Bundle 技術規格
+## vCenter Server with Hybridity Bundle 實例的技術規格
 
 下列元件已包含在 vCenter Server with Hybridity Bundle 實例中：
 
-**附註：**標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent}} 而有所不同。
+**附註：**標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
 
 ### Bare Metal Server
 
 您的 vCenter Server with Hybridity Bundle 實例訂單隨附四個自訂 {{site.data.keyword.baremetal_short}}。下列是可用的 CPU 型號：
   * 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
   * 2-CPU Intel Skylake Generation（Intel Xeon 4100/5100/6100 系列）
-
-<!--For NFS storage configuration, the recommended number of {{site.data.keyword.baremetal_short}} is set to the default of three.
-
-**Note:** If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.-->
 
 ### 網路
 
@@ -93,7 +87,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是�
 
 已訂購下列虛擬伺服器實例 (VSI)：
 * IBM CloudBuilder 的 VSI，在完成實例部署之後會關閉它。
-* 您可以選擇在管理叢集中部署單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或兩個高可用性 Microsoft Windows VM，以協助加強安全及穩健性。您也可以選擇使用 Veeam 服務來備份及還原 VM。
+* 您可以選擇在管理叢集中部署單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或兩個高可用性 Microsoft Windows VM，以協助加強安全及穩健性。
 
 ### 儲存空間
 
@@ -109,12 +103,12 @@ vCenter Server with Hybridity Bundle 實例訂單隨附下列授權。
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.3
+* VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.4
 * VMware vSAN（Advanced 或 Enterprise）6.6
 
 可以提供其他支援及服務費用。
 
-## vCenter Server with Hybridity Bundle 擴充節點元件
+## vCenter Server with Hybridity Bundle 擴充節點的技術規格
 
 每一個 vCenter Server with Hybridity Bundle 擴充節點都會部署下列元件，並在您的 {{site.data.keyword.cloud_notm}} 帳戶中收取其費用。
 
@@ -125,11 +119,11 @@ vCenter Server with Hybridity Bundle 實例訂單隨附下列授權。
 ### 擴充節點的授權與費用
 
 * 一個 VMware vSphere Enterprise Plus 6.5u1
-* 一個 VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.3
+* 一個 VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.4
 * 一筆支援與服務費用
 * VMware vSAN（Advanced 或 Enterprise）6.6
 
-**重要事項**：您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台而不是 {{site.data.keyword.slportal_full}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項**：您必須從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 {{site.data.keyword.cloud_notm}} 帳戶中所建立的 {{site.data.keyword.vmwaresolutions_short}} 元件，而不是在主控台以外的 {{site.data.keyword.slportal}} 或透過任何其他方法進行管理。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
 **警告**：從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，可能會讓您的環境不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件
@@ -139,7 +133,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附下列授權。
 
    這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
 
-## 相關鏈結
+### 相關鏈結
 
 * [vCenter Server 軟體資料清單](vc_bom.html)
 * [vCenter Server with Hybridity Bundle 實例的需求及規劃](vc_hybrid_planning.html)

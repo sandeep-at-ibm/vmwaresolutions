@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -55,7 +55,7 @@ vCenter Server 部署具有嚴格的實體基礎架構需求。因此，您只�
 |WDC06 |華盛頓特區|NA 東部|自訂|
 |WDC07 |華盛頓特區|NA 東部|自訂|
 
-部分 IBM Cloud {{site.data.keyword.CloudDataCents_notm}} 提供預先配置的**小型**、**中型**及**大型** Bare Metal Server 選項。視可用性和庫存供應而定，{{site.data.keyword.CloudDataCents_notm}} 可能會在 {{site.data.keyword.vmwaresolutions_full}} 主控台中顯示狀態指示器，以協助您規劃部署。
+部分 {{site.data.keyword.CloudDataCents_notm}} 提供預先配置的**小型**、**中型**及**大型** Bare Metal Server 選項。根據可用性及庫存供應，{{site.data.keyword.CloudDataCents_notm}} 可能會在 {{site.data.keyword.vmwaresolutions_short}} 主控台中顯示狀態指示器，以協助您規劃部署。
 
 表 2. 訂購 vCenter Server 實例時 {{site.data.keyword.CloudDataCents_notm}} 的狀態指示器
 
@@ -65,16 +65,19 @@ vCenter Server 部署具有嚴格的實體基礎架構需求。因此，您只�
 |暫時沒有庫存                  |目前並未提供 {{site.data.keyword.CloudDataCent_notm}}。|
 |庫存受限             |{{site.data.keyword.CloudDataCent_notm}} 的可用性受限，可能無法完成訂單。|
 
+## 管理元件的備份
+
+您負責維護及確保所有實例元件的可用性。強烈建議您規劃所有管理元件的備份或高可用性。如需相關資訊，請參閱[備份元件](../archiref/solution/solution_backingup.html)。
+
 ## 適用於 vCenter Server 實例的服務
 
 您可以根據需要來訂購實例基礎的附加程式服務（例如災難回復）。如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server 實例的服務](vc_addingremovingservices.html)。
 
-<!-- ## Capacity considerations
+## 容量考量
 
-For capacity information and considerations, see the _Bill of
-Materials_ document on the [Virtual reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+如需容量資訊及考量，請參閱[調整容量](../archiref/solution/solution_scaling.html)。
 
-## 相關鏈結
+### 相關鏈結
 
 * [vCenter Server 概觀](vc_vcenterserveroverview.html)
 * [訂購 vCenter Server 實例](vc_orderinginstance.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-06-11"
 
 **注意：**VMware Federal on {{site.data.keyword.cloud_notm}} 僅提供 vCenter Server 供應項目的子集。多站台配置、預先配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server、自帶授權 (BYOL)，以及訂購其他服務的選項不受支援。
 
-## VMware Federal on IBM Cloud 的 vCenter Server 實例元件
+## VMware Federal on IBM Cloud 實例的技術規格
 
 包括下列元件：
 
@@ -72,34 +72,33 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.3
+* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6
 
-## vCenter Server 擴充節點元件
+## VMware Federal on IBM Cloud 擴充節點的技術規格
 
 每一個 vCenter Server 擴充節點將部署下列元件，並在您的 {{site.data.keyword.cloud_notm}} 帳戶中收取其費用。
 
 ### 擴充節點的硬體
 
-一部具有 [VMware Federal on IBM Cloud 的 vCenter Server 實例元件](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud)中所呈現之配置的 Bare Metal Server。
+一部具有 [VMware Federal on {{site.data.keyword.cloud_notm}} 實例的技術規格](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中所呈現之配置的 Bare Metal Server。
 
 ### 擴充節點的授權與費用
 
 * 一個 VMware vSphere Enterprise Plus 6.5u1
-* 一個 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.3
+* 一個 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6
 
-**重要事項**：您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台而不是 {{site.data.keyword.slportal_full}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項**：您必須從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 {{site.data.keyword.cloud_notm}} 帳戶中所建立的 {{site.data.keyword.vmwaresolutions_short}} 元件，而不是在主控台以外的 {{site.data.keyword.slportal}} 或透過任何其他方法進行管理。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
 **警告**：從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，可能會讓您的環境不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件
 *  透過新增或移除 ESXi 伺服器來擴充或縮減實例容量
 *  關閉元件電源
-<!--*  Restarting services-->
 
    這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
 
-## 相關鏈結
+### 相關鏈結
 
 * [vCenter Server 軟體資料清單](vc_bom.html)
 * [VMware Federal 實例的需求與規劃](vc_fed_planning.html)
