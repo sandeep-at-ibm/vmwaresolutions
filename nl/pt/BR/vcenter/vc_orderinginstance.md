@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -53,7 +53,7 @@ Selecione se pedirá uma nova instância primária ou uma instância secundária
 Especifique as opções de licenciamento para os seguintes componentes do VMware na instância:
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 
 Para usuários do Parceiro de Negócios, a licença do vCenter Server (Standard Edition), a licença do vSphere (Enterprise Plus Edition) e a licença do NSX são incluídas e compradas em seu nome. No entanto, deve-se especificar a edição para a licença do NSX.
 
@@ -72,7 +72,7 @@ As configurações do Bare Metal baseiam-se em sua seleção de data center e se
 
 ### Local do datacenter
 
-Selecione o {{site.data.keyword.CloudDataCent_notm}} em que a instância deve ser hospedada.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the {{site.data.keyword.baremetal_long}} specification you selected previously are displayed.-->
+Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
 
 ### Pré-configurado
 
@@ -266,7 +266,7 @@ Para obter informações sobre como fornecer configurações para um serviço, v
 
 A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
 
-Quando a instância é implementada com êxito, os componentes que são descritos na seção _Especificações técnicas do vCenter Server_ na [Visão geral do vCenter Server](../vcenter/vc_vcenterserveroverview.html) são instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se tiver pedido serviços adicionais, a implementação dos serviços iniciará após a conclusão do pedido.
+Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se tiver pedido serviços adicionais, a implementação dos serviços iniciará após a conclusão do pedido.
 
 Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 
@@ -287,7 +287,7 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhados.
 
-## Links relacionados
+### Links relacionados
 
 * [Inscrevendo-se para uma conta do {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
 * [Visualizando instâncias do vCenter Server](vc_viewinginstances.html)

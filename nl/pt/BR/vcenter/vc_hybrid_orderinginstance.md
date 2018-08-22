@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
 # Pedindo instâncias do vCenter Server with Hybridity Bundle
 
-Para implementar uma plataforma virtualizada VMware flexível e customizável que melhor se ajuste às suas necessidades de carga de trabalho, peça uma instância do VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle. Sua ordem da instância do vCenter Server with Hybridity Bundle inclui o licenciamento do VMware Hybrid Cloud Extension (HCX) e autoriza você para o serviço VMware HCX on IBM Cloud. Também é possível incluir serviços, como [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html), para recuperação de desastre.
+Para implementar uma plataforma virtualizada VMware flexível e customizável que melhor se ajuste às suas necessidades de carga de trabalho, peça uma instância do VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle. O pedido da instância do vCenter Server with Hybridity Bundle inclui o licenciamento do VMware Hybrid Cloud Extension (HCX) e o autoriza para o serviço VMware HCX on {{site.data.keyword.cloud_notm}}. Também é possível incluir serviços, como o [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) para recuperação de desastre.
 
 ## Requisitos
 
@@ -54,7 +54,7 @@ As licenças a seguir são incluídas no seu pedido de instância do vCenter Ser
 
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Advanced or Enterprise) 6.3
+* VMware NSX Service Providers Edition (Advanced ou Enterprise) 6.4
 * Edição de licença do VMware vSAN 6.6 (Advanced ou Enterprise).
 
 **Atenção:**
@@ -169,7 +169,7 @@ Com base em sua configuração selecionada para os serviços de instância e com
 
 ## Procedimento
 
-1. No catálogo do IBM Cloud, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **vCenter Server** na seção **Data centers virtuais**.
+1. No Catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **vCenter Server** na seção **Datacenters virtuais **.
 2. Na página **VMware vCenter Server on IBM Cloud**, clique no cartão **vCenter Server with Hybridity Bundle** e clique em **Criar**.
 3. Na página **vCenter Server**, insira o nome da instância.
 4. Selecione o tipo de instância:
@@ -206,7 +206,7 @@ Para obter informações sobre como fornecer configurações para um serviço, v
 
 A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
 
-Quando a instância é implementada com êxito, os componentes que são descritos na seção _Especificações técnicas do vCenter Server with Hybridity Bundle_ na [Visão geral do vCenter Server with Hybridity Bundle](vc_hybrid_overview.html) são instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se tiver pedido serviços adicionais, a implementação dos serviços iniciará após a conclusão do pedido.
+Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se tiver pedido serviços adicionais, a implementação dos serviços iniciará após a conclusão do pedido.
 
 Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 
@@ -227,11 +227,11 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhados.
 
-## Links relacionados
+### Links relacionados
 
 * [Inscrevendo-se para uma conta do {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
 * [Visualizando instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_viewinginstances.html)
-* [Configuração multisite para instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_multisite.html)
+* [Configuração multissite para instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_multisite.html)
 * [Incluindo e visualizando clusters para instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_addingviewingclusters.html)
 * [Expandindo e contraindo a capacidade para instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservers.html)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservices.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,10 +18,10 @@ A tabela a seguir detalha as informações da BOM para as VLANs do vCenter Serve
 
 Tabela 1. BOM para as VLANs em instâncias do vCenter Server
 
-| VLAN      | Tipo      | Detalhes      |
-|:----------|:----------|:-------------|
+| VLAN       | Tipo       | Detalhes       |
+|:---------- |:---------- |:------------- |
 | VLAN1     | Público, primário | Designado aos servidores ESXi físicos para acesso à rede pública. Não usado após a implementação inicial. Disponível para acesso à Internet. |
-| VLAN2     | A privado, primário | Designado pelo IBM Cloud aos servidores ESXi físicos. Usado pela interface de gerenciamento para o tráfego de gerenciamento do VMware vSphere.<br><br>Designado às VMs (máquinas virtuais) que funcionam como componentes de gerenciamento.<br><br>Designado ao VMware NSX VTEP (VXLAN Tunnel Endpoint) |
+| VLAN2     | A privado, primário | Designado pelos servidores  {{site.data.keyword.cloud}}  aos servidores ESXi físicos. Usado pela interface de gerenciamento para o tráfego de gerenciamento do VMware vSphere.<br><br>Designado às VMs (máquinas virtuais) que funcionam como componentes de gerenciamento.<br><br>Designado ao VMware NSX VTEP (VXLAN Tunnel Endpoint) |
 | VLAN3     | B privado, móvel | Designado ao VMware vSAN, se usado.<br><br>Designado ao VMware NFS, se usado.<br><br>Designado ao VMware vSphere vMotion. |
 
 ## BOM do software para instâncias do vCenter Server
@@ -30,14 +30,14 @@ A tabela a seguir detalha as informações da BOM para componentes de software d
 
 Tabela 2. BOM para os componentes de software em instâncias do vCenter Server
 
-| Fabricante | Componente                       | Versão      |
-|:-------------|:--------------------------------|:-------------|
+| Fabricante  | Componente                      | Versão       |
+|:------------- |:------------------------------ |:------------- |
 | VMware       | vSphere ESXi                    | 6.5 U1g (ESXi 6.5u1 com o nível da correção ESXi650-201803001 aplicado) |
 | VMware       | vCenter Server Appliance        | 6,5 Atualização 1g |
 | VMware       | Platform Services Controller    | 6,5 Atualização 1g |
 | VMware       | vSAN                            | 6.6.1        |
-| VMware       | NSX for vSphere                 | 6.3.5       |
-| {{site.data.keyword.IBM}} | CloudDriver        | 2.4          |
+| VMware       | NSX for vSphere                 | 6.4.1        |
+| IBM          | CloudDriver                     | 2.4          |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
 **Nota**: VMware vSAN é um componente opcional.
@@ -50,17 +50,17 @@ As configurações aplicam-se a novas instâncias e novos clusters em novas inst
 
 Tabela 3. Definições de configuração avançadas de servidores ESXi para instâncias e clusters do vCenter Server
 
-| Definição de configuração | Se recém-implementado na V2.2 ou mais recente  | Se submetido a upgrade da V2.1 ou anterior |   
+| Definição de configuração | Se recém-implementado na V2.2 ou mais recente  | Se submetido a upgrade da V2.1 ou anterior |
 |:------------- |:------------- |:------------- |
-| Tamanho do heap TCP/IP | **TcpipHeapSize** = 32 | Não configurado |
-| Heap máximo de TCP/IP | **TcpipHeapMax** = 1536 | Não configurado |  
-| Máximo de volumes | **MaxVolumes** = 256 | Ambos **/NFS/MaxVolumes** e **/NFS41/MaxVolumes** = 256 |  
-| Falhas máximas de pulsação | **HeartbeatMaxFailures** = 10 | Não configurado |  
-| Frequência de pulsação | **HeartbeatFrequency** = 12 | Não configurado |  
+| Máximo de volumes | **MaxVolumes** = 256 | Ambos **/NFS/MaxVolumes** e **/NFS41/MaxVolumes** = 256 |
+| Falhas máximas de pulsação | **HeartbeatMaxFailures** = 10 | Não configurado |
+| Frequência de pulsação | **HeartbeatFrequency** = 12 | Não configurado |
 | Tempo limite de pulsação | **HeartbeatTimeout** = 5 | Não configurado |
 | Profundidade máxima da fila | **MaxQueueDepth** = 64 | Não configurado |
 | Tamanho da amostra completa da fila | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | Limite completo da fila | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
+| Tamanho do heap TCP/IP | **TcpipHeapSize** = 32 | Não configurado |
+| Heap máximo de TCP/IP | **TcpipHeapMax** = 1536 | Não configurado |
 
 **Notas**:
 * A configuração **MaxVolumes** é necessária para o serviço IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} porque o serviço pode usar mais que o número padrão de montagens NFS no servidor ESXi.
@@ -93,7 +93,7 @@ Tabela 4. Definições de configuração do grupo da porta e NSX para instância
 O cluster do vSphere usa dois vSphere Virtual Distributed Switches (VDS), um para conectividade de rede pública e outro para
 conectividade de rede privada.
 
-As conexões de rede privada são configuradas para usar a MTU (Unidade Máxima de Transmissão) de Quadros gigantes com o tamanho de 9000, que melhora o desempenho de grandes transferências de dados, como armazenamento e VMware vMotion. Esta é a MTU máxima permitida dentro do VMware e por IBM Cloud.
+As conexões de rede privada são configuradas para usar a MTU (Unidade Máxima de Transmissão) de Quadros gigantes com o tamanho de 9000, que melhora o desempenho de grandes transferências de dados, como armazenamento e VMware vMotion. Esta é a MTU máxima permitida dentro do VMware e por {{site.data.keyword.cloud_notm}}.
 
 Na V2.1 ou mais recente, as conexões de rede pública usam uma MTU de Ethernet padrão de 1500. Essa configuração de 1500 deve ser mantida; quaisquer mudanças podem causar a fragmentação do pacote pela Internet.
 
@@ -106,9 +106,9 @@ Tabela 5. Definições de configuração de MTU para instâncias e clusters do v
 | Comutador público  | 1500 (padrão) | 9000 (Quadros Jumbo) |
 | Comutador privado | 9000 (Quadros Jumbo) | 9000 (Quadros Jumbo) |
 
-As configurações aplicam-se a novas instâncias e novos clusters de instâncias implementadas na V2.1 ou mais recente. As configurações também se aplicam a novos clusters em IBM Cloud Data Centers de instâncias que foram submetidas a upgrade para a V2.1 ou mais recente.
+As configurações aplicam-se a novas instâncias e novos clusters de instâncias implementadas na V2.1 ou mais recente. As configurações também se aplicam a novos clusters em {{site.data.keyword.CloudDataCents_notm}} cruzados de instâncias que foram submetidas a upgrade para a V2.1 ou mais recente.
 
-As configurações não se aplicam a novos clusters no mesmo IBM Cloud Data Center, para instâncias existentes da V2.0 ou anterior ou instâncias existentes submetidas a upgrade para a V2.1 ou mais recente.
+As configurações não se aplicam a novos clusters no mesmo {{site.data.keyword.CloudDataCent_notm}}, para instâncias existentes da V2.0 ou de instâncias anteriores ou existentes submetidas upgrade para a V2.1 ou mais recente.
 
 Para instâncias que foram implementadas na versão V2.0 ou anterior, é recomendado que você atualize o configuração de MTU do
 comutador público para 1500.
@@ -123,11 +123,11 @@ Para atualizar a configuração de MTU para o comutador público, conclua as seg
    **Nota**: ao mudar o tamanho do MTU em um vDS, os uplinks conectados (NICs físicos) diminuem e depois aumentam novamente. Como resultado, uma breve interrupção ocorre para as VMs que estão usando o uplink. Portanto, é
 recomendável planejar a atualização de configuração do MTU durante o tempo de inatividade planejado.
 
-## Links relacionados
+### Links relacionados
 
 * [Números de compilação e versões do VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Números de compilação e versões do VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Ativando quadros gigantes em comutadores virtuais distribuídos](https://kb.vmware.com/s/article/1038827)
-* [VMware vCenter Server on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+* [Planilha de dados de proteção do VMware vCenter Server on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 * [Visão geral do vCenter Server](vc_vcenterserveroverview.html)
 * [Planejando instâncias do vCenter Server](vc_planning.html)

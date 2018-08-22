@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -43,9 +43,9 @@ Devido a dependências de recursos, os componentes em sua instância não são l
    1. Clique no ícone de menu overflow à direita do **Console do vCenter** novamente e clique em **Excluir instância**.
    2. Na janela **Excluir instância**, clique em **OK**.
 
-## Links relacionados
+### Links relacionados
 
-* [Visão geral do VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [Visão geral do VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [Pedindo instâncias do VMware Federal](vc_fed_orderinginstance.html)
 * [Protegendo instâncias do VMware Federal](vc_fed_securinginstance.html)
 * [Visualizando instâncias do VMware Federal](vc_fed_viewinginstance.html)

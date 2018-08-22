@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,10 +18,10 @@ Se o seu cluster primário tiver vSAN como seu armazenamento, incluir um ou mais
 
 ## Antes de iniciar
 
-* Não inclua nem remova servidores do ESXi do VMware vSphere Web Client. As mudanças feitas no vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}.
+* Não inclua nem remova servidores do ESXi do VMware vSphere Web Client. As mudanças feitas no vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_full}}.
 * Uma instância do VMware Federal com armazenamento NFS deve ter pelo menos 2 servidores ESXi. É possível expandir o cluster padrão para ter até 51 servidores ESXi. Cada um dos clusters não padrão pode ser expandido para ter até 59 servidores ESXi.
 * Uma instância do VMware Federal com armazenamento vSAN deve ter pelo menos 4 servidores ESXi.
-*  Quando você remover servidores ESXi, os servidores serão colocados no modo de manutenção e depois disso, todas as máquinas virtuais (VMs) em execução nos servidores serão migradas antes de serem removidas do vCenter Server. Para obter o máximo de controle sobre a realocação de VMs, é recomendável colocar os servidores ESXi a serem removidos no modo de manutenção e migrar as VMs em execução neles manualmente usando o VMware vSphere Web Client. Depois disso, remova os servidores ESXi usando o console do {{site.data.keyword.vmwaresolutions_full}}.
+*  Quando você remover servidores ESXi, os servidores serão colocados no modo de manutenção e depois disso, todas as máquinas virtuais (VMs) em execução nos servidores serão migradas antes de serem removidas do vCenter Server. Para obter o máximo de controle sobre a realocação de VMs, é recomendável colocar os servidores ESXi a serem removidos no modo de manutenção e migrar as VMs em execução neles manualmente usando o VMware vSphere Web Client. Depois disso, remova os servidores ESXi usando o console do {{site.data.keyword.vmwaresolutions_short}}.
 
 ## Procedimento
 
@@ -44,7 +44,7 @@ Você será notificado por e-mail que sua solicitação para incluir ou remover 
 
 Se não vir os novos servidores ESXi incluídos na lista no cluster, verifique as notificações por e-mail ou do console para localizar mais detalhes sobre a falha.
 
-## Links relacionados
+### Links relacionados
 
 * [Requisitos e planejamento para as instâncias do VMware Federal](vc_fed_planning.html)
 * [Incluindo, visualizando e excluindo clusters para instâncias do VMware Federal](fed_addviewdeleteclusters.html)

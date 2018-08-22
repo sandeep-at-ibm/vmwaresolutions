@@ -4,18 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Visualizando instâncias do VMware Federal
 
-Use este procedimento para visualizar as instâncias do VMware Federal que você pediu e informações detalhadas sobre elas.
+Visualize o resumo e as informações detalhadas das instâncias do VMware Federal que são provisionadas para diferentes contas do usuário.
 
 ## Visualizando o resumo de instâncias do VMware Federal
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
-2. Na tabela **vCenter Server**, visualize a lista de suas instâncias.
+Para visualizar um resumo de todas as instâncias do VMware Federal que são provisionadas para uma conta do usuário, conclua as etapas a seguir:
+1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+2. No canto superior direito do console, clique em seu avatar e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar instâncias. 
+3. Na tabela **vCenter Server**, visualize a lista de instâncias que são provisionadas na conta de usuário selecionada.
 
 Tabela 1. Itens de instâncias do VMware Federal
 
@@ -23,14 +25,15 @@ Tabela 1. Itens de instâncias do VMware Federal
 |:------------- |:------------- |
 | Nome | O nome da instância. |
 | Versão | A versão de liberação na qual a instância foi implementada ou para a qual teve upgrade feito. |  
-| Localização | O {{site.data.keyword.CloudDataCent}} no qual a instância é hospedada. |  
-| Horário de criação | A data e hora em que a instância foi criada. |  
+| Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada. |  
+| Horário de criação | A data e hora em que a instância foi criada. | 
+| Barra de Status | O status da instância. |
 
 A instância pode ter um intervalo de status.
 
 Tabela 2. Descrições de status de instâncias do data center do VMware Federal
 
-| Status        | Descrição       |
+| Barra de Status        | Descrição       |
 |:------------- |:------------- |
 | Criando | A instância está sendo criada. |
 | Construindo | A instância está sendo configurada. |
@@ -46,7 +49,7 @@ Tabela 2. Descrições de status de instâncias do data center do VMware Federal
 
 Para visualizar os detalhes da propriedade de uma instância:
 
-1. Na tabela **Instâncias do vCenter Server**, clique em um nome da instância.
+1. Na tabela **Instâncias do vCenter Server**, clique em um nome de instância.
 2. Em **Propriedades**, visualize os detalhes da instância.
 
 Tabela 3. Propriedades de instância do VMware Federal
@@ -59,11 +62,11 @@ Tabela 3. Propriedades de instância do VMware Federal
 | Versão atual |  A versão atual do {{site.data.keyword.vmwaresolutions_short}}. |
 | Versão do vCenter | A versão do VMware vCenter Server.<br><br>**Nota:** há uma ligeira variação entre a versão do vCenter Server exibida no console do {{site.data.keyword.vmwaresolutions_short}} e o VMware vSphere Web Client. Ambos estão corretos. |
 | NSX for vSphere | A versão do produto VMware NSX for vSphere. |
-| Edição de licença NSX | A versão e a edição da licença do VMware NSX. |
+| Edição de licença do NSX | A versão e a edição da licença do VMware NSX. |
 | Domínio-raiz DNS | O nome do domínio-raiz é o nome de domínio do DNS (Sistema de Nomes de Domínio) e o nome raiz da floresta do Microsoft Active Directory (AD). |
 | Domínio SSO DNC | O domínio SSO é o domínio de Conexão única do vSphere. O nome de domínio SSO é corrigido para todas as instâncias implementadas do vCenter Server com um valor de <samp class="ph codeph">vsphere.local</samp>. |
 | Subdomínio DNS | O subdomínio é o nome do subdomínio do DNS no nome de domínio-raiz no qual os nomes de host da instância local do vCenter Server residem. O nome do subdomínio está no formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
-| Status | O status da instância. |
+| Barra de Status | O status da instância. |
 
 ## Visualizando informações de acesso para instâncias do VMware Federal
 
@@ -90,7 +93,7 @@ Tabela 4. Informações de acesso para componentes relacionados à instância
 
 ## Visualizando o histórico de implementação para instâncias do VMware Federal
 
-Em **Histórico de implementação**, visualize o histórico de implementação da instância.
+Clique em **Histórico de implementação** na área de janela de navegação esquerda para visualizar o histórico de implementação da instância.
 
 Tabela 5. Histórico de implementação da instância do VMware Federal
 
@@ -114,9 +117,9 @@ Revise os tópicos a seguir para obter informações que ajudarão a concluir as
 *  Para obter uma lista de pontos de acesso para efetuar login na Rede Privada da infraestrutura do {{site.data.keyword.cloud_notm}} usando a VPN, veja [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
 *  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, veja [Implementando um arquivo OVF usando o vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
 
-## Links relacionados
+### Links relacionados
 
-* [Visão geral do VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [ Federal do VMware em  {{site.data.keyword.cloud_notm}}  visão geral ](vc_fed_overview.html)
 * [Pedindo instâncias do VMware Federal](vc_fed_orderinginstance.html)
 * [Excluindo instâncias do VMware Federal](vc_fed_deletinginstance.html)
 * [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)

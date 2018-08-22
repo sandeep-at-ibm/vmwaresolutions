@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -16,7 +16,7 @@ Para obter mais informações sobre o vCenter Server on {{site.data.keyword.clou
 
 **Atenção:** o VMware Federal on {{site.data.keyword.cloud_notm}} oferece somente um subconjunto das ofertas do vCenter Server. A configuração de vários sites, {{site.data.keyword.cloud_notm}} Bare Metal Servers pré-configurados, Bring Your Own License e a opção para pedir serviços adicionais não são suportados.
 
-## Componentes da instância do vCenter Server para o VMware Federal on IBM Cloud
+## Especificações técnicas para instâncias do VMware Federal on IBM Cloud
 
 Os componentes a seguir estão incluídos:
 
@@ -72,34 +72,33 @@ Se você escolher a opção NFS, um compartilhamento de arquivo de 2 TB, 4 IOPS/
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * (Para clusters do vSAN) VMware vSAN Advanced ou Enterprise 6.6
 
-## Componentes do nó de expansão do vCenter Server
+## Especificações técnicas para nós de expansão do VMware Federal on IBM Cloud
 
 Cada nó de expansão do vCenter Server implementará e incorrerá em encargos para os componentes a seguir em sua conta do {{site.data.keyword.cloud_notm}}.
 
 ### Hardware para nós de expansão
 
-Um Bare Metal Server com a configuração apresentada em [Componentes da instância do vCenter Server para o VMware Federal on IBM Cloud](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud).
+Um Bare Metal Server com a configuração apresentada em [Especificações técnicas para instâncias do VMware Federal on {{site.data.keyword.cloud_notm}}](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ### Licenças e taxas para os nós de expansão
 
 * Um VMware vSphere Enterprise Plus 6.5u1
-* Um VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.3
+* Um VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * (Para clusters do vSAN) VMware vSAN Advanced ou Enterprise 6.6
 
-**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados em sua conta do {{site.data.keyword.cloud_notm}} apenas por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal_full}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados em sua conta do {{site.data.keyword.cloud_notm}} apenas por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
 **CUIDADO**: gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância, fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes
 *  Expandindo ou contraindo a capacidade da instância por meio da inclusão ou remoção de servidores ESXi
 *  Desativando componentes
-<!--*  Restarting services-->
 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhados.
 
-## Links relacionados
+### Links relacionados
 
 * [Lista de materiais do software vCenter Server](vc_bom.html)
 * [Requisitos e planejamento para as instâncias do VMware Federal](vc_fed_planning.html)

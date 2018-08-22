@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-05-23"
+lastupdated: "2017-07-19"
 
 ---
 
-# Excluindo instâncias do vCenter Server with Hybridity Bundle em uma configuração multisite
+# Excluindo instâncias do vCenter Server with Hybridity Bundle em uma configuração multissite
 
 Há considerações especiais a serem conhecidas antes de você planejar excluir instâncias do VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle que fazem parte de uma configuração de vários sites.
 
@@ -20,7 +20,7 @@ Quando você excluir uma instância do vCenter Server with Hybridity Bundle, os 
 5. Subnets
 6. VLANs
 
-Devido a dependências de recursos, os componentes em sua instância não são liberados imediatamente quando você exclui a instância. Por exemplo, as sub-redes e VLANs não podem ser excluídas até que os servidores ESXi sejam totalmente recuperados pela infraestrutura do {{site.data.keyword.cloud}}, o que acontece no final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}}. No final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}}, que geralmente é de 30 dias, as sub-redes e VLANs são excluídas e a exclusão da instância é concluída.
+Devido a dependências de recursos, os componentes em sua instância não são liberados imediatamente quando você exclui a instância. Por exemplo, as sub-redes e VLANs não podem ser excluídas até que os servidores ESXi sejam totalmente recuperados pela infraestrutura do {{site.data.keyword.cloud_notm}}, o que acontece no final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}}. No final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}}, que geralmente é de 30 dias, as sub-redes e VLANs são excluídas e a exclusão da instância é concluída.
 
 **Atenção**: você será cobrado até o final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}} pela instância excluída.
 
@@ -31,10 +31,10 @@ Devido a dependências de recursos, os componentes em sua instância não são l
 3. Exclua o vCenter e o PSC (Platform Services Controller) secundário do domínio SSO (Conexão única) primário. Para obter mais informações, veja [Cancelar o registro do vCenter Server da conexão única](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2106736){:new_window}.
 4. Rebaixar a VSI (Virtual Service Instance) do controlador de domínio local. Para obter mais informações, veja [Rebaixando os controladores de domínio e os domínios](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
 5. Exclua a instância secundária do vCenter Server with Hybridity Bundle do console do {{site.data.keyword.vmwaresolutions_short}}.
-6. Repita as etapas 1 a 5 para todas as instâncias secundárias do vCenter Server with Hybridity Bundle em sua configuração multisite.
+6. Repita as etapas 1 a 5 para todas as instâncias secundárias do vCenter Server with Hybridity Bundle em sua configuração multissite.
 7. Depois de excluir todas as instâncias secundárias, também será possível excluir a instância primária do console do {{site.data.keyword.vmwaresolutions_short}}.
 
-## Links relacionados
+### Links relacionados
 
 * [Excluindo instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_deletinginstance.html)
 * [Pedindo, visualizando e removendo serviços de instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservices.html)

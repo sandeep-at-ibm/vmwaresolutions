@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -61,8 +61,6 @@ Para instâncias do VMware Federal que são implementadas na V2.3 ou mais recent
 
 Após a implementação, é possível criar até mais quatro clusters. Para configurações de armazenamento vSAN, 4 servidores são necessários para o cluster inicial e os clusters de pós-implementação.
 
-<!--When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.-->
-
 ### Configurações de armazenamento
 
 As configurações de armazenamento são baseadas em sua seleção de configuração do Bare Metal Server e o tipo de armazenamento.
@@ -100,10 +98,10 @@ Tabela 2. Opções de nível de desempenho do NFS
 
 ### Configurações de licenciamento
 
-Licenças do VMware fornecidas pela IBM para o seguinte:
+	Licenças do VMware fornecidas pelo {{site.data.keyword.IBM}} para o seguinte:
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.3
+  * VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
   * (Para clusters do vSAN) VMware vSAN Advanced ou Enterprise 6.6
 
 ### Resumo do Pedido
@@ -241,7 +239,7 @@ Talvez você queira excluir um cluster de uma instância quando ela não for mai
 
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda. Na tabela **CLUSTERS**, localize o cluster que você deseja excluir e clique no ícone **Excluir** na coluna **Ações**.
 
-## Links relacionados
+### Links relacionados
 
 * [Visualizando instâncias do VMware Federal](vc_fed_viewinginstance.html)
 * [Expandindo e contraindo a capacidade para instâncias do VMware Federal](vc_fed_addingremovingservers.html)

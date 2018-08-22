@@ -34,7 +34,7 @@ Devido a dependências de recursos, os componentes em sua instância não são l
 6. Repita as etapas 1 a 5 para todas as instâncias secundárias do vCenter Server em sua configuração de vários sites.
 7. Depois de excluir todas as instâncias secundárias, também será possível excluir a instância primária do console do {{site.data.keyword.vmwaresolutions_short}}.
 
-## Links relacionados
+### Links relacionados
 
 * [Excluindo instâncias do vCenter Server](vc_deletinginstance.html)
 * [Pedindo, visualizando e removendo serviços de instâncias do vCenter Server](vc_addingremovingservices.html)
