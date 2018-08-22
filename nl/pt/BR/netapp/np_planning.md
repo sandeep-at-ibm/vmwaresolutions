@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -55,12 +55,7 @@ Tabela 1. {{site.data.keyword.CloudDataCents_notm}} disponíveis para instância
 | WDC06 | Washington, DC | NA Leste | Alto desempenho (Médio), alto desempenho (Grande), alta capacidade
 | WDC07 | Washington, DC | NA Leste | Alto desempenho (Médio), alto desempenho (Grande), alta capacidade
 
-<!--## Capacity considerations-->
-
-<!--For capacity information and considerations, see the _Bill of
-Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
-
-## Links relacionados
+### Links relacionados
 
 * [Visão geral do NetApp ONTAP Select](np_netappoverview.html)
 * [Pedindo instâncias do NetApp ONTAP Select](np_orderinginstances.html)

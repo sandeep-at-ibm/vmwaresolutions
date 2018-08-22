@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-07"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -70,7 +70,7 @@ Deve-se fazer upload de quatro arquivos de licenciamento do NetApp, pois cada um
 
 ### Local do datacenter
 
-Deve-se selecionar o {{site.data.keyword.CloudDataCent_notm}} em que a instância deve ser hospedada.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the Bare Metal Server specification you selected previously are displayed.-->
+Deve-se selecionar o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
 
 ### Configuração do Bare Metal Server
 
@@ -80,8 +80,6 @@ Deve-se selecionar o {{site.data.keyword.CloudDataCent_notm}} em que a instânci
 * **Alta capacidade** - Licença padrão/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2,2 GHz)/64 GB de RAM/Capacidade de trinta e quatro unidades SATA de 4 TB por nó/Capacidade efetiva de um cluster de 4 nós – 190 TB
 
 **Nota:** Unidades SSD (Disco de Estado Sólido) de 3,8 TB serão suportadas quando foram geralmente disponibilizadas em um {{site.data.keyword.CloudDataCent_notm}}.
-
-<!--For guidance on what bare metal server configuration to choose, see the _Bill of Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
 
 ### Número de Bare Metal Servers
 
@@ -108,7 +106,7 @@ O número de servidores ESXi de uma instância do NetApp ONTAP Select é 4 por p
 
 A implementação da instância é iniciada automaticamente. Você receberá confirmação de que o pedido está sendo processado e será possível verificar o status da implementação visualizando os detalhes da instância.
 
-Quando a instância é implementada com êxito, os componentes que estão descritos em [Componentes da instância do NetApp ONTAP Select](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components) são instalados em sua plataforma virtual VMware.
+Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do NetApp ONTAP Select](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) serão instalados em sua plataforma virtual do VMware.
 
 Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 
@@ -124,7 +122,7 @@ Visualizar e gerenciar a instância do NetApp ONTAP Select que você pediu.
 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhados.
 
-## Links relacionados
+### Links relacionados
 
 * [Visualizando instâncias do NetApp ONTAP Select](np_viewinginstances.html)
 * [Excluindo instâncias do NetApp ONTAP Select](np_deletinginstance.html)
