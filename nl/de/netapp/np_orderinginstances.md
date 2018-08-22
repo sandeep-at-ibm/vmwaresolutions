@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-07"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -70,7 +70,7 @@ Sie müssen vier NetApp-Lizenzdateien hochladen, da jede der vier {{site.data.ke
 
 ### Standort des Rechenzentrums
 
-Sie müssen das {{site.data.keyword.CloudDataCent_notm}} auswählen, das als Host für die Instanz verwendet werden soll.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the Bare Metal Server specification you selected previously are displayed.-->
+Sie müssen das {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) auswählen, das als Host für die Instanz verwendet werden soll.
 
 ### Bare Metal Server-Konfiguration
 
@@ -80,8 +80,6 @@ Sie können die Auswahl der Bare Metal Server-Konfiguration an Ihren Anforderung
 * **Hohe Kapazität** – Standard-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 64 GB RAM / Kapazität von 34 4-TB-SATA-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 190 TB
 
 **Hinweis:** 3,8-TB-Solid-State-Platten (SSD) werden unterstützt, wenn sie allgemein in einem {{site.data.keyword.CloudDataCent_notm}} verfügbar gemacht werden.
-
-<!--For guidance on what bare metal server configuration to choose, see the _Bill of Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
 
 ### Bare Metal Server-Anzahl
 
@@ -108,7 +106,7 @@ Die Anzahl der ESXi-Server einer NetApp ONTAP Select-Instanz ist standardmäßig
 
 Die Bereitstellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen.
 
-Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Komponenten der NetApp ONTAP Select-Instanz](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert.
+Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für NetApp ONTAP Select-Instanzen](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 
@@ -124,7 +122,7 @@ Sie können Ihre bestellte NetApp ONTAP Select-Instanz jetzt anzeigen und verwal
 
    Ausgenommen von diesen Aktivitäten ist unter anderem das Management der Dateifreigaben für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von Dateifreigaben für gemeinsam genutzten Speicher.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [NetApp ONTAP Select-Instanzen anzeigen](np_viewinginstances.html)
 * [NetApp ONTAP Select-Instanzen löschen](np_deletinginstance.html)
