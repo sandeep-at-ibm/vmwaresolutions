@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -16,13 +16,11 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle は�
 
 多くの場合、環境全体を 1 日以内でプロビジョンできます。また、このベア・メタル・インフラストラクチャーのコンピュート能力は、必要に応じて迅速かつ伸縮自在に拡張や縮小ができます。
 
-<!--Post-deployment, you can increase shared storage by ordering additional NFS (Network File System) file shares from the  {{site.data.keyword.slportal}} and manually attach them across all ESXi servers in a cluster. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.-->
-
 vSAN クラスターの vSAN ベース・ストレージの容量を増やすには、デプロイメント後に ESXi サーバーをさらに追加します。
 
 VMware NSX Advanced エディションを Enterprise エディションにアップグレードできます。VMware vRealize Operations などの追加の VMware コンポーネントも購入できます。
 
-仮想化、ゲスト OS、アプリケーション層の日常業務と保守業務から解放されたい場合は、IBM Managed Services を追加できます。 クラウドの利用をすぐに開始できるように移行、実装、計画、オンボーディングのサービスを提供してお客様を支援する、IBM クラウド・プロフェッショナル・サービス・チームも用意されています。
+仮想化、ゲスト OS、アプリケーション層の日常業務と保守業務から解放されたい場合は、IBM Managed Services を追加できます。 クラウドの利用をすぐに開始できるように移行、実装、計画、オンボーディングのサービスを提供してお客様を支援する、{{site.data.keyword.cloud_notm}} プロフェッショナル・サービス・チームも用意されています。
 
 ## vCenter Server with Hybridity Bundle アーキテクチャー
 
@@ -45,7 +43,7 @@ VMware NSX Advanced エディションを Enterprise エディションにアッ
 
 ### 仮想化管理
 
-この層は、vCenter Server Appliance (vCSA)、NSX Manager、2 つの NSX ESG、3 つの NSX Controller、Platform Services Controller (PSC) 仮想アプライアンス、および IBM CloudDriver 仮想マシン(VM) で構成されます。
+この層は、vCenter Server Appliance (vCSA)、NSX Manager、2 つの NSX ESG、3 つの NSX Controller、Platform Services Controller (PSC) 仮想アプライアンス、および IBM CloudDriver 仮想サーバー・インスタンス (VSI) で構成されます。 CloudDriver VSI は、環境へのホストの追加などの特定の操作のために必要に応じてオンデマンドでデプロイします。
 
 基本オファリングでは、最大 400 台のホストと最大 4000 個の VM が存在する環境をサポートできる規模の vCenter Server アプライアンスがデプロイされます。 vSphere API と互換性のある同じツールとスクリプトを使用して、IBM がホストする VMware 環境を管理できます。
 
@@ -57,23 +55,19 @@ HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時の追加�
 
 この層は、オンプレミス・サイトと {{site.data.keyword.cloud_notm}} サイトの間でリソースを抽象化する役割を果たします。その結果、VM の特性 (IP アドレスなど) を変更しなくても両サイト間でワークロードを安全かつ簡単に移動できるようになります。
 
-VMware Hybrid Cloud Extension (HCX) に基づいてオンプレミス・サイトと IBM Cloud サイトの間に疎結合の相互接続を作成すれば、ダウン時間なしでの VM の一括マイグレーションや VM のライブ vMotion が可能になります。
+VMware Hybrid Cloud Extension (HCX) に基づいてオンプレミス・サイトと {{site.data.keyword.cloud_notm}} サイトの間に疎結合の相互接続を作成すれば、ダウン時間なしでの VM の一括マイグレーションや VM のライブ vMotion が可能になります。
 
-## vCenter Server with Hybridity Bundle の技術仕様
+## vCenter Server with Hybridity Bundle インスタンスの技術仕様
 
 vCenter Server with Hybridity Bundle インスタンスには、以下のコンポーネントが含まれています。
 
-**注:** 標準化されたハードウェア構成の使用可否と価格は、デプロイメントに選択した {{site.data.keyword.CloudDataCent}}によって異なる場合があります。
+**注:** 標準化されたハードウェア構成の使用可否と価格は、デプロイメントに選択した {{site.data.keyword.CloudDataCent_notm}}によって異なる場合があります。
 
 ### ベア・メタル・サーバー
 
 vCenter Server with Hybridity Bundle インスタンスの注文では、カスタマイズ型の{{site.data.keyword.baremetal_short}}を 4 台注文します。 次の CPU モデルが用意されています。
   * 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600 v4 シリーズ)
   * 2-CPU Intel Skylake 世代 (Intel Xeon 4100/5100/6100 シリーズ)
-
-<!--For NFS storage configuration, the recommended number of {{site.data.keyword.baremetal_short}} is set to the default of three.
-
-**Note:** If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.-->
 
 ### ネットワーキング
 
@@ -93,7 +87,7 @@ HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時に注文�
 
 以下の仮想サーバー・インスタンス (VSI) が注文されます。
 * IBM CloudBuilder の VSI。これは、インスタンスのデプロイメントが完了した後にシャットダウンされます。
-* Microsoft Active Directory (AD) 用に 1 つの Microsoft Windows Server VSI をデプロイするか、管理クラスターに 2 つの高可用性 Microsoft Windows VM をデプロイしてセキュリティーと堅牢性を強化するかを選択できます。 Veeam サービスを使用して VM のバックアップとリストアを実行するオプションもあります。
+* Microsoft Active Directory (AD) 用に 1 つの Microsoft Windows Server VSI をデプロイするか、管理クラスターに 2 つの高可用性 Microsoft Windows VM をデプロイしてセキュリティーと堅牢性を強化するかを選択できます。
 
 ### ストレージ
 
@@ -109,12 +103,12 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、以下�
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Advanced または Enterprise) 6.3
+* VMware NSX Service Providers Edition (Advanced または Enterprise) 6.4
 * VMware vSAN (Advanced または Enterprise) 6.6
 
 追加のサポートとサービスの料金が適用される可能性があります。
 
-## vCenter Server with Hybridity Bundle 拡張ノードのコンポーネント
+## vCenter Server with Hybridity Bundle 拡張ノードの技術仕様
 
 vCenter Server with Hybridity Bundle 拡張ノードごとに、{{site.data.keyword.cloud_notm}} アカウントに以下のコンポーネントがデプロイされ、料金が発生します。
 
@@ -125,11 +119,11 @@ vCenter Server with Hybridity Bundle 拡張ノードごとに、{{site.data.keyw
 ### 拡張ノード用のライセンスと料金
 
 * VMware vSphere Enterprise Plus 6.5u1 1 つ
-* VMware NSX Service Providers Edition (Advanced または Enterprise) 6.3 1 つ
+* VMware NSX Service Providers Edition (Advanced または Enterprise) 6.4 1 つ
 * 1 つのサポートとサービスの料金
 * VMware vSAN (Advanced または Enterprise) 6.6
 
-**重要**: {{site.data.keyword.cloud_notm}} アカウントに作成された {{site.data.keyword.vmwaresolutions_short}} コンポーネントの管理は、{{site.data.keyword.vmwaresolutions_short}} コンソールでのみ行ってください。{{site.data.keyword.slportal_full}}などのコンソール以外の手段は使用しないでください。 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
+**重要**: {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
 
 **注意**: インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
 *  コンポーネントの追加、変更、返却、または削除
@@ -139,7 +133,7 @@ vCenter Server with Hybridity Bundle 拡張ノードごとに、{{site.data.keyw
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
 
-## 関連リンク
+### 関連リンク
 
 * [vCenter Server ソフトウェアの部品構成表](vc_bom.html)
 * [vCenter Server with Hybridity Bundle インスタンスの要件と計画](vc_hybrid_planning.html)

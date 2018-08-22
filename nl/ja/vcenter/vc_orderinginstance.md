@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -53,7 +53,7 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 インスタンス内の次の VMware コンポーネントのライセンス・オプションを指定します。
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.4
 
 ビジネス・パートナーであるユーザーの場合、vCenter Server ライセンス (Standard エディション)、vSphere ライセンス (Enterprise Plus エディション)、NSX ライセンスが自動的に含められて購入されます。 しかし、NSX ライセンスのエディションは指定する必要があります。
 
@@ -72,7 +72,7 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 
 ### データ・センターの場所
 
-インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the {{site.data.keyword.baremetal_long}} specification you selected previously are displayed.-->
+インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
 
 ### 事前構成型
 
@@ -229,7 +229,7 @@ vCenter Server インスタンスを注文するときには、追加のサー�
 5. インスタンスのコンポーネントのライセンス設定を行います。  
    *  IBM 提供のライセンスを使用するには、**「購入に含める」**を選択し、必要に応じてライセンス・エディションを選択します。
    *  所有しているライセンスを使用するには、**「自分で提供する」**を選択し、ライセンス・キーを入力します。
-6. ベア・メタル・サーバーの設定を行います。
+6. ベア・メタル・サーバーの設定を次の手順で実行します。
     1. インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
     2. ベア・メタル・サーバー構成を選択します。
        * **「事前構成型」**を選択した場合は、**「スモール」**、**「ミディアム」**、または**「ラージ」**の構成を選択します。
@@ -239,7 +239,7 @@ vCenter Server インスタンスを注文するときには、追加のサー�
 7. ストレージ設定を行います。
   * **「vSAN Storage」**を選択した場合は、**「Disk Type and Size for vSAN Capacity Disks」**、**「Number of vSAN Capacity Disks」**、**vSAN ライセンス**の提供方法を指定します。
   * **「NFS Storage」**を選択し、すべてのファイル共有に同じ設定を追加して構成する場合は、**「Number of Shares」**、**「Size」**、**「Performance」**を指定します。
-  * **「NFS Storage」**を選択し、ファイル共有を個別に追加して構成する場合は、**「Configure shares individually」**を選択し、ファイル共有ごとに、**「Add NFS」**ラベルの横にある**「+」**アイコンをクリックして、**「Size」**と**「Performance」**を選択します。少なくとも 1 つのファイル共有を選択する必要があります。
+  * **「NFS Storage」**を選択し、ファイル共有を個別に追加して構成する場合は、**「Configure shares individually」**を選択し、ファイル共有ごとに、**「Add NFS」**ラベルの横にある**「+」**アイコンをクリックして、**「Size」**と**「Performance」**を選択します。 少なくとも 1 つのファイル共有を選択する必要があります。
 
 8. ネットワーク・インターフェースの設定を行います。
    1. ホスト名接頭部、サブドメイン・ラベル、ルート・ドメイン・ネームを入力します。 セカンダリー・インスタンスの場合、ドメイン・ネームは自動的に入力されます。
@@ -261,7 +261,7 @@ vCenter Server インスタンスを注文するときには、追加のサー�
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
 
-インスタンスが正常にデプロイされると、[vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html)の『_vCenter Server の技術仕様_』セクションに記載しているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 追加のサービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
+インスタンスが正常にデプロイされると、[vCenter Server インスタンスの技術仕様](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 追加のサービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
@@ -282,7 +282,7 @@ vCenter Server インスタンスを注文するときには、追加のサー�
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
 
-## 関連リンク
+### 関連リンク
 
 * [{{site.data.keyword.cloud_notm}} アカウントへの登録](../vmonic/signing_softlayer_account.html)
 * [vCenter Server インスタンスの表示](vc_viewinginstances.html)

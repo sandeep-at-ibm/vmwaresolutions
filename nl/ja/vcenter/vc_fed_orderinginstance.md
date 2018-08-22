@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -56,7 +56,7 @@ VMware Federal インスタンスを注文する際には、以下のシステ�
 
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.4
 * (vSAN クラスターの場合) VMware vSAN Advanced または Enterprise 6.6
 
 **注意:**
@@ -70,7 +70,7 @@ VMware Federal インスタンスを注文する際には、以下のシステ�
 
 ### データ・センターの場所
 
-インスタンスをホストする IBM Cloud データ・センターを選択します。
+インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
 
 ### カスタマイズ型
 
@@ -174,7 +174,7 @@ Windows ライセンスの注文方法について詳しくは、[Windows Server
 
 ## 手順
 
-1. IBM Cloud カタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクション内の**「vCenter サーバー」**をクリックします。
+1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクションの**「vCenter サーバー」**をクリックします。
 2. **「VMware vCenter Server on IBM Cloud」**ページで、**「vCenter サーバー」**カードをクリックし、**「作成」**をクリックします。
 3. **「vCenter サーバー」**ページで、インスタンス名を入力します。
 4. **「プライマリー・インスタンス」**をクリックして、環境内に単一インスタンスをデプロイします。
@@ -182,10 +182,10 @@ Windows ライセンスの注文方法について詳しくは、[Windows Server
 6. ベア・メタル・サーバーの構成を次の手順で実行します。
   1. インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
   2. **「カスタマイズ型」**の CPU モデルと **RAM** の容量を選択します。
-7. ストレージ構成を行います。
+7. ストレージ構成を次の手順で実行します。
   * **「vSAN Storage」**を選択した場合は、**「Disk Type and Size for vSAN Capacity Disks」**、**「Number of vSAN Capacity Disks」**、**vSAN ライセンス**の提供方法を指定します。
   * **「NFS Storage」**を選択し、すべてのファイル共有に同じ設定を追加して構成する場合は、**「Number of Shares」**、**「Size」**、**「Performance」**を指定します。
-  * **「NFS Storage」**を選択し、ファイル共有を個別に追加して構成する場合は、**「Configure shares individually」**を選択し、ファイル共有ごとに、**「Add NFS」**ラベルの横にある**「+」**アイコンをクリックして、**「Size」**と**「Performance」**を選択します。少なくとも 1 つのファイル共有を選択する必要があります。
+  * **「NFS Storage」**を選択し、ファイル共有を個別に追加して構成する場合は、**「Configure shares individually」**を選択し、ファイル共有ごとに、**「Add NFS」**ラベルの横にある**「+」**アイコンをクリックして、**「Size」**と**「Performance」**を選択します。 少なくとも 1 つのファイル共有を選択する必要があります。
 8. ネットワーク・インターフェース構成を行います。
    1. ホスト名接頭部、サブドメイン・ラベル、ルート・ドメイン・ネームを入力します。
    2. DNS 構成を選択します。
@@ -199,17 +199,15 @@ Windows ライセンスの注文方法について詳しくは、[Windows Server
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
 
-インスタンスが正常にデプロイされると、[VMware Federal on {{site.data.keyword.cloud_notm}} の vCenter Server インスタンスのコンポーネント](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。
+インスタンスが正常にデプロイされると、[{{site.data.keyword.cloud_notm}} インスタンスの技術仕様](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
-
-<!--When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.-->
 
 ## 次に行うこと
 
 注文した VMware Federal インスタンスを表示し、管理して、保護します。
 
-**重要:** {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_full}} コンポーネントの管理には、{{site.data.keyword.vmwaresolutions_short}} コンソールだけを使用する必要があります。{{site.data.keyword.slportal}}などのコンソール以外の手段は使用しないでください。
+**重要:** {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントの管理には、{{site.data.keyword.vmwaresolutions_short}} コンソールだけを使用する必要があります。{{site.data.keyword.slportal}}などのコンソール以外の手段は使用しないでください。
 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
 
 **注意:** インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
@@ -219,7 +217,7 @@ Windows ライセンスの注文方法について詳しくは、[Windows Server
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
 
-## 関連リンク
+### 関連リンク
 
 * [{{site.data.keyword.cloud_notm}} アカウントへの登録](../vmonic/signing_softlayer_account.html)
 * [VMware Federal インスタンスの表示](vc_fed_viewinginstance.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-05-23"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -20,7 +20,7 @@ vCenter Server with Hybridity Bundle インスタンスを削除すると、以�
 5. サブネット
 6. VLAN
 
-リソースに依存関係があるため、インスタンスのコンポーネントは、インスタンスを削除してもすぐには解放されません。 例えば、{{site.data.keyword.cloud}} インフラストラクチャーの請求サイクルの終わりに、ESXi サーバーが {{site.data.keyword.cloud_notm}} によって完全に回収されるまで、サブネットと VLAN は削除できません。 {{site.data.keyword.cloud_notm}} インフラストラクチャーの請求サイクル (通常は 30 日) の最後に、サブネットと VLAN が削除され、インスタンスの削除が完了します。
+リソースに依存関係があるため、インスタンスのコンポーネントは、インスタンスを削除してもすぐには解放されません。 例えば、{{site.data.keyword.cloud_notm}} インフラストラクチャーの請求サイクルの終わりに、ESXi サーバーが {{site.data.keyword.cloud_notm}} によって完全に回収されるまで、サブネットと VLAN は削除できません。 {{site.data.keyword.cloud_notm}} インフラストラクチャーの請求サイクル (通常は 30 日) の最後に、サブネットと VLAN が削除され、インスタンスの削除が完了します。
 
 **注意**: 削除したインスタンスについての {{site.data.keyword.cloud_notm}} インフラストラクチャーの請求サイクルが終了するまで課金されます。
 
@@ -34,7 +34,7 @@ vCenter Server with Hybridity Bundle インスタンスを削除すると、以�
 6. マルチサイト構成に含まれているすべてのセカンダリー vCenter Server with Hybridity Bundle インスタンスについて手順 1 から 5 までを繰り返します。
 7. すべてのセカンダリー・インスタンスを削除したら、{{site.data.keyword.vmwaresolutions_short}} コンソールからプライマリー・インスタンスも削除できます。
 
-## 関連リンク
+### 関連リンク
 
 * [vCenter Server with Hybridity Bundle インスタンスの削除](vc_hybrid_deletinginstance.html)
 * [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](vc_hybrid_addingremovingservices.html)

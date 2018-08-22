@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -44,7 +44,7 @@ vCenter Server with Hybridity Bundle インスタンスを削除すると、以�
    1. **vCenter コンソール**の右側のオーバーフロー・メニュー・アイコンをもう一度クリックしてから、**「インスタンスの削除」**をクリックします。
    2. **「インスタンスの削除」**ウィンドウで**「OK」**をクリックします。
 
-## 関連リンク
+### 関連リンク
 
 * [マルチサイト構成での Hybridity Bundle インスタンスを使用した vCenter Server の削除](vc_hybrid_deletinginstance_multi.html)
 * [vCenter Server with Hybridity Bundle インスタンスの注文](vc_hybrid_orderinginstance.html)

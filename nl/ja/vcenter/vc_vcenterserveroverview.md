@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -14,13 +14,13 @@ VMware vCenter Server on {{site.data.keyword.cloud}} は、VMware vSphere スタ
 
 多くの場合、環境全体を 1 日以内でプロビジョンできます。また、このベア・メタル・インフラストラクチャーのコンピュート能力は、必要に応じて迅速かつ伸縮自在に拡張や縮小ができます。
 
-デプロイメント後に、{{site.data.keyword.slportal}}から追加の NFS (ネットワーク・ファイル・システム) ファイル共有を注文して共有ストレージを増やし、クラスター内のすべての ESXi サーバーにそれらを手動で接続できます。 専用ストレージが必要な場合は、[NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) を、高性能 (オール SSD) 構成と大容量 (オール SATA) 構成の両方で利用できます。
+デプロイメント後に、{{site.data.keyword.slportal}}から追加の NFS (ネットワーク・ファイル・システム) ファイル共有を注文して共有ストレージを増やし、クラスター内のすべての ESXi サーバーにそれらを手動で接続できます。 専用ストレージが必要な場合は、[NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html) を、高性能 (オール SSD) 構成と大容量 (オール SATA) 構成の両方で利用できます。
 
 VMware vSAN は専用ストレージのオプションとしても利用できます。 vSAN クラスターの vSAN ベース・ストレージの容量を増やすには、デプロイメント後に ESXi サーバーをさらに追加します。
 
 IBM 提供の VMware ライセンスを購入した場合は、VMware NSX Base Edition を Advanced Edition または Enterprise Edition にアップグレードできます。VMware vRealize Operations などの追加の VMware コンポーネントも購入できます。
 
-仮想化、ゲスト OS、アプリケーション層の日常業務と保守業務から解放されたい場合は、IBM Managed Services を追加できます。 クラウドの利用をすぐに開始できるように移行、実装、計画、オンボーディングのサービスを提供してお客様を支援する、IBM クラウド・プロフェッショナル・サービス・チームも用意されています。
+仮想化、ゲスト OS、アプリケーション層の日常業務と保守業務から解放されたい場合は、IBM Managed Services を追加できます。 クラウドの利用をすぐに開始できるように移行、実装、計画、オンボーディングのサービスを提供してお客様を支援する、{{site.data.keyword.cloud_notm}} プロフェッショナル・サービス・チームも用意されています。
 
 ## vCenter Server アーキテクチャー
 
@@ -42,15 +42,15 @@ IBM 提供の VMware ライセンスを購入した場合は、VMware NSX Base E
 
 ### 仮想化管理
 
-この層は、vCenter Server Appliance (vCSA)、NSX Manager、2 つの NSX ESG、3 つの NSX Controller、Platform Services Controller (PSC) 仮想アプライアンス、および IBM CloudDriver 仮想マシンで構成されます。
+この層は、vCenter Server Appliance (vCSA)、NSX Manager、2 つの NSX ESG、3 つの NSX Controller、Platform Services Controller (PSC) 仮想アプライアンス、および IBM CloudDriver 仮想サーバー・インスタンス (VSI) で構成されます。 CloudDriver VSI は、環境へのホストの追加などの特定の操作のために必要に応じてオンデマンドでデプロイします。
 
 基本オファリングでは、最大 400 台のホストと最大 4000 個の VM が存在する環境をサポートできる規模の vCenter Server アプライアンスがデプロイされます。 vSphere API と互換性のある同じツールとスクリプトを使用して、IBM がホストする VMware 環境を管理できます。
 
 合計で、基本オファリングには、仮想化管理層用に予約される 38 個の vCPU と 67 GB の vRAM が必要です。 VM 用の残りのホスト容量は、オーバーサブスクリプション率、VM サイジング、ワークロードのパフォーマンス要件などのいくつかの要因によって決まります。
 
-アーキテクチャーについて詳しくは、[{{site.data.keyword.vmwaresolutions_full}} architecture reference](../archiref/solution/solution_overview.html) を参照してください。
+アーキテクチャーについて詳しくは、[{{site.data.keyword.vmwaresolutions_short}} architecture reference](../archiref/solution/solution_overview.html) を参照してください。
 
-## vCenter Server の技術仕様
+## vCenter Server インスタンスの技術仕様
 
 vCenter Server インスタンスには、以下のコンポーネントが含まれています。
 
@@ -106,34 +106,32 @@ NFS オプションでは、ワークロード用のファイル・レベルの�
 * パフォーマンス: 2、4、10 IOPS/GB。
 * ファイル共有の個々の構成。
 
-NFS オプションを選択すると、以下のファイル共有が注文されます。
-* 管理コンポーネント用の 2 TB の 4 IOPS/GB ファイル共有 1 つ。
-* バックアップ用の 2 TB (最大 12 TB まで拡張可能) のブロック・レベルの共有ストレージ 1 つ。 バックアップ・サービスを選択することで、バックアップ用ストレージが要るかどうかを選択できます。
+NFS オプションを選択すると、管理コンポーネント用の 2 TB および 4 IOPS/GB ファイル共有が 1 つ注文されます。
 
 ### ライセンス (IBM 提供または BYOL) および料金
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.4
 * (vSAN クラスターの場合) VMware vSAN Advanced または Enterprise 6.6
 * サポートとサービスの料金 (ノード当たり 1 つのライセンス)
 
-## vCenter Server 拡張ノードのコンポーネント
+## vCenter Server 拡張ノードの技術仕様
 
 vCenter Server 拡張ノードごとに、{{site.data.keyword.cloud_notm}} アカウントに以下のコンポーネントがデプロイされ、料金が発生します。
 
 ### 拡張ノード用のハードウェア
 
-[vCenter Server の概要](vc_vcenterserveroverview.html)の『_vCenter Server の技術仕様_』セクションに記載している構成のベア・メタル・サーバー 1 つ。
+[vCenter Server インスタンスの技術仕様](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)に示されている構成になっている、1 台のベア・メタル・サーバー。
 
 ### 拡張ノード用のライセンスと料金
 
 * VMware vSphere Enterprise Plus 6.5u1 1 つ
-* VMware NSX Service Providers Edition (Base、Advanced、Enterprise) 6.3 1 つ
+* VMware NSX Service Providers Edition (Base、Advanced、Enterprise) 6.4 1 つ
 * 1 つのサポートとサービスの料金
 * (vSAN クラスターの場合) VMware vSAN Advanced または Enterprise 6.6
 
-**重要**: {{site.data.keyword.cloud_notm}} アカウントに作成された {{site.data.keyword.vmwaresolutions_short}} コンポーネントの管理は、{{site.data.keyword.vmwaresolutions_short}} コンソールでのみ行ってください。{{site.data.keyword.slportal_full}}などのコンソール以外の手段は使用しないでください。 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
+**重要**: {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
 
 **注意**: インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
 *  コンポーネントの追加、変更、返却、または削除
@@ -143,7 +141,7 @@ vCenter Server 拡張ノードごとに、{{site.data.keyword.cloud_notm}} ア�
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
 
-## 関連リンク
+### 関連リンク
 
 * [vCenter Server ソフトウェアの部品構成表](vc_bom.html)
 * [vCenter Server インスタンスの計画](vc_planning.html)

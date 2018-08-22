@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -22,14 +22,22 @@ VMware Federal on {{site.data.keyword.cloud_notm}} のデプロイメントに�
 - WDC03 - Washington, DC, POD2
 - DAL08 - Dallas, TX, POD2
 
+## 管理コンポーネントのバックアップ
+
+ユーザーには、任意のバックアップ・ソリューションを使用して、すべてのインスタンス・コンポーネントの可用性を維持および確保する責務があります。すべての管理コンポーネントのバックアップと高可用性について計画を立てることを強くお勧めします。詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html)を参照してください。
+
 ## VMware Federal インスタンスのサービス
 
 VMware Federal on {{site.data.keyword.cloud_notm}} には、追加のサービスを注文できるオプションがありません。
 
-## 関連リンク
+## キャパシティーに関する考慮事項
+
+キャパシティーに関する情報と考慮事項については、[キャパシティーの拡張](../archiref/solution/solution_scaling.html)を参照してください。
+
+### 関連リンク
 
 * [vCenter Server ソフトウェアの部品構成表](vc_bom.html)
-* [VMware Federal on IBM Cloud の概要](vc_fed_overview.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} の概要](vc_fed_overview.html)
 * [VMware Federal インスタンスの注文](vc_fed_orderinginstance.html)
 * [VMware Federal インスタンスの保護](vc_fed_securinginstance.html)
 * [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)

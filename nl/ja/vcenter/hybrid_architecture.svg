@@ -1,48 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   id="Layer_1"
-   x="0px"
-   y="0px"
-   viewBox="0 0 600 320"
-   style="enable-background:new 0 0 600 320;"
-   xml:space="preserve"
-   sodipodi:docname="hybrid_architecture.svg"
-   inkscape:version="0.92.1 r15371"><metadata
-     id="metadata59"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
-     id="defs57" /><sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     id="namedview55"
-     showgrid="false"
-     inkscape:zoom="2.085965"
-     inkscape:cx="211.15152"
-     inkscape:cy="150.82957"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="Layer_1" /><style
-     type="text/css"
-     id="style2">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 320" style="enable-background:new 0 0 600 320;" xml:space="preserve">
+<style type="text/css">
 	.st0{fill:#4C84C5;}
 	.st1{fill:#F49C58;}
 	.st2{fill:#959595;}
@@ -52,150 +12,20 @@
 	.st6{font-size:21px;}
 	.st7{font-size:18px;}
 	.st8{font-size:14px;}
-</style><rect
-     y="81.7"
-     class="st0"
-     width="600"
-     height="75.3"
-     id="rect4" /><rect
-     x="0.6"
-     y="0.6"
-     class="st1"
-     width="600"
-     height="74.3"
-     id="rect6" /><rect
-     y="239.7"
-     class="st2"
-     width="600"
-     height="80.3"
-     id="rect8" /><rect
-     y="164"
-     class="st3"
-     width="190"
-     height="68"
-     id="rect10" /><rect
-     x="205"
-     y="163.4"
-     class="st3"
-     width="190"
-     height="68.6"
-     id="rect12" /><rect
-     x="410"
-     y="164"
-     class="st3"
-     width="190"
-     height="68"
-     id="rect14" /><text
-     id="text20"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="172.7242"
-     y="108.3711"><tspan
-       x="172.7242"
-       y="108.3711"
-       class="st4 st5 st6"
-       id="tspan16"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">　　　　　　仮想化の管理</tspan><tspan
-       x="204.2242"
-       y="142.37109"
-       class="st4 st5 st7"
-       id="tspan18"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">VMware vCenter Server       </tspan><tspan
-       x="204.2242"
-       y="142.37109"
-       class="st4 st5 st7"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-       id="tspan4536" /></text>
-<text
-     id="text26"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="-9.4253006"
-     y="191.8755"><tspan
-       x="-9.4253006"
-       y="191.8755"
-       class="st4 st5 st7"
-       id="tspan22"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">　　コンピュートの仮想化</tspan><tspan
-       x="28.174698"
-       y="215.7755"
-       class="st4 st5 st8"
-       id="tspan24"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">VMware vSphere</tspan></text>
-<text
-     id="text32"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="207.00369"
-     y="192.8755"><tspan
-       x="207.00369"
-       y="192.8755"
-       class="st4 st5 st7"
-       id="tspan28"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">　　ストレージの仮想化</tspan><tspan
-       x="246.80371"
-       y="216.7755"
-       class="st4 st5 st8"
-       id="tspan30"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">VMware vSAN</tspan></text>
-<text
-     id="text38"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="402.66599"
-     y="193.8755"><tspan
-       x="402.66599"
-       y="193.8755"
-       class="st4 st5 st7"
-       id="tspan34"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">　　ネットワークの仮想化</tspan><tspan
-       x="447.66599"
-       y="217.7755"
-       class="st4 st5 st8"
-       id="tspan36"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">VMware NSX</tspan></text>
-<text
-     transform="matrix(1 0 0 1 146.074 272.5371)"
-     class="st4 st5 st6"
-     id="text40"
-     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:18.66666667px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">IBM Cloud 上の物理インフラストラクチャー</text>
-<text
-     id="text46"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
-     x="294.27365"
-     y="29.012833"><tspan
-       x="294.27365"
-       y="29.012833"
-       class="st4 st5 st6"
-       id="tspan42"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff">インフラストラクチャーのハイブリッド化</tspan></text>
-<text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
-     x="336.27365"
-     y="29.012833"
-     id="text4508"><tspan
-       x="336.27365"
-       y="29.012833"
-       class="st4 st5 st6"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
-       id="tspan4510"> </tspan><tspan
-       x="294.37366"
-       y="63.012833"
-       class="st4 st5 st7"
-       id="tspan44"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff">VMware Hybrid Cloud Extension (HCX)</tspan></text>
-<text
-     class="st4 st5 st7"
-     id="text48"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-     x="261.32471"
-     y="303.3732">ストレージ</text>
-<text
-     class="st4 st5 st7"
-     id="text50"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-     x="394.9552"
-     y="303.3732">ネットワーク</text>
-<text
-     class="st4 st5 st7"
-     id="text52"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-     x="122.5858"
-     y="303.37299">コンピュート</text>
+</style>
+<rect y="81.7" class="st0" width="600" height="75.3"/>
+<rect x="0.6" y="0.6" class="st1" width="600" height="74.3"/>
+<rect y="239.7" class="st2" width="600" height="80.3"/>
+<rect y="164" class="st3" width="190" height="68"/>
+<rect x="205" y="163.4" class="st3" width="190" height="68.6"/>
+<rect x="410" y="164" class="st3" width="190" height="68"/>
+<text transform="matrix(1 0 0 1 184.7242 108.3711)"><tspan x="0" y="0" class="st4 st5 st6">仮想化の管理</tspan><tspan x="31.5" y="34" class="st4 st5 st7">VMware vCenter Server</tspan></text>
+<text transform="matrix(1 0 0 1 8.5747 191.8755)"><tspan x="0" y="0" class="st4 st5 st7">コンピュートの仮想化</tspan><tspan x="37.6" y="23.9" class="st4 st5 st8">VMware vSphere</tspan></text>
+<text transform="matrix(1 0 0 1 223.0037 192.8755)"><tspan x="0" y="0" class="st4 st5 st7">ストレージの仮想化</tspan><tspan x="39.8" y="23.9" class="st4 st5 st8">VMware vSAN</tspan></text>
+<text transform="matrix(1 0 0 1 420.666 193.8755)"><tspan x="0" y="0" class="st4 st5 st7">ネットワークの仮想化</tspan><tspan x="45" y="23.9" class="st4 st5 st8">VMware NSX</tspan></text>
+<text transform="matrix(1 0 0 1 146.074 272.5371)" class="st4 st5 st6">IBM Cloud 上の物理インフラストラクチャー</text>
+<text transform="matrix(1 0 0 1 201.7869 27.4924)"><tspan x="0" y="0" class="st4 st5 st6">インフラストラクチャーのハイブリッド化</tspan><tspan x="-41.9" y="34" class="st4 st5 st7">VMware Hybrid Cloud Extension (HCX)</tspan></text>
+<text transform="matrix(1 0 0 1 273.3247 303.3732)" class="st4 st5 st7">ストレージ</text>
+<text transform="matrix(1 0 0 1 406.9552 303.3732)" class="st4 st5 st7">ネットワーク</text>
+<text transform="matrix(1 0 0 1 134.5858 303.373)" class="st4 st5 st7">コンピュート</text>
 </svg>

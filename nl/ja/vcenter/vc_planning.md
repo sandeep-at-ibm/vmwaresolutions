@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -55,7 +55,7 @@ vCenter Server のデプロイメントには、物理インフラストラク�
 | WDC06 | ワシントン、DC | 北米東部 | カスタマイズ型 |
 | WDC07 | ワシントン、DC | 北米東部 | カスタマイズ型 |
 
-ベア・メタル・サーバーのオプションとして事前構成型の**「スモール」**、**「ミディアム」**、および**「ラージ」**が提供されているのは、ごく一部の {{site.data.keyword.CloudDataCents_notm}}です。 デプロイメントを計画に役立つように、使用可否と在庫状況に応じて、{{site.data.keyword.CloudDataCents_notm}}の状況標識が {{site.data.keyword.vmwaresolutions_full}} コンソールに表示されることがあります。
+ベア・メタル・サーバーのオプションとして事前構成型の**「スモール」**、**「ミディアム」**、および**「ラージ」**が提供されているのは、ごく一部の {{site.data.keyword.CloudDataCents_notm}} です。入手可能状況と在庫状況によっては、デプロイメントの計画に役立つように、{{site.data.keyword.CloudDataCents_notm}}の {{site.data.keyword.vmwaresolutions_short}} コンソールに状況標識が表示される場合があります。
 
 表 2. vCenter Server インスタンスの注文時の {{site.data.keyword.CloudDataCents_notm}}の状況標識
 
@@ -65,16 +65,19 @@ vCenter Server のデプロイメントには、物理インフラストラク�
 | 一時的な在庫切れ  | 現時点では、{{site.data.keyword.CloudDataCent_notm}}には在庫がありません。 |
 | 限定在庫             | {{site.data.keyword.CloudDataCent_notm}}の在庫は限られているため、注文が満たされない可能性があります。 |
 
+## 管理コンポーネントのバックアップ
+
+すべてのインスタンス・コンポーネントの可用性を維持し、確保する作業は、お客様が行う必要があります。すべての管理コンポーネントのバックアップと高可用性について計画を立てることを強くお勧めします。詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html)を参照してください。
+
 ## vCenter Server インスタンスのサービス
 
 それぞれのニーズに基づいて、インスタンスのアドオン・サービスを注文できます。例えば、災害復旧などがあります。 詳しくは、[vCenter Server インスタンスのサービスの注文、表示、削除](vc_addingremovingservices.html)を参照してください。
 
-<!-- ## Capacity considerations
+## キャパシティーに関する考慮事項
 
-For capacity information and considerations, see the _Bill of
-Materials_ document on the [Virtual reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+キャパシティーに関する情報と考慮事項については、[キャパシティーの拡張](../archiref/solution/solution_scaling.html)を参照してください。
 
-## 関連リンク
+### 関連リンク
 
 * [vCenter Server の概要](vc_vcenterserveroverview.html)
 * [vCenter Server インスタンスの注文](vc_orderinginstance.html)
