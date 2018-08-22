@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -59,7 +59,7 @@ vSphere 部署对物理基础架构有严格要求。因此，只能将集群部
 |WDC06|华盛顿|北美东部|
 |WDC07|华盛顿|北美东部|
 
-## 相关链接
+### 相关链接
 
 * [订购新的 vSphere 集群](vs_orderinginstances.html)
 * [扩展现有集群](vs_scalingexistingclusters.html)

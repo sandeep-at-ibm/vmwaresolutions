@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -40,7 +40,7 @@ lastupdated: "2018-05-08"
 
 **注**：与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**部署的实例**页面。
 
-## 相关链接
+### 相关链接
 
 * [订购新的 vSphere 集群](vs_orderinginstances.html)
 * [扩展现有 vSphere 集群](vs_scalingexistingclusters.html)

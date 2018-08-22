@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-29"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-03-29"
 |:-------------|:--------------------------------|:--------|
 |VMware|vSphere ESXi|Either 6.5 Update 1 或 6.0 Update 2 |
 
-## 相关链接
+### 相关链接
 
 * [VMware ESXi/ESX 的构建号和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware ESXi 6.0 Update 2 发行说明](https://docs.vmware.com/en/VMware-vSphere/6.0/rn/vsphere-esxi-60u2-release-notes.html)
