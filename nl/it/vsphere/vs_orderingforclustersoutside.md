@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -39,7 +39,7 @@ La distribuzione del cluster inizia automaticamente e ricevi un'e-mail di confer
 
 **Nota:** i cluster vSphere non vengono visualizzati nella pagina **Istanze distribuite** insieme alle istanze vCenter Server e Cloud Foundation.
 
-## Link correlati
+### Link correlati
 
 * [Ordine di nuovi cluster vSphere](vs_orderinginstances.html)
 * [Ordine di cluster vSphere in base alle configurazioni esistenti](vs_orderingbasedonexistingconfig.html)

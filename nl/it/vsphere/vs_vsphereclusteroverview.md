@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -18,7 +18,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} non automatizza l'istallazion
 
 Utilizza questa offerta per creare un nuovo cluster di server ESXi o ridimensionare un cluster esistente di server ESXi in un {{site.data.keyword.CloudDataCent_notm}}. A seconda dei componenti VMware che selezioni, puoi iniziare con un solo server ESXi e ridimensionare successivamente il cluster in base alle esigenze.
 
-## Componenti di VMware vSphere on IBM Cloud
+## Specifiche tecniche per i cluster VMware vSphere on IBM Cloud
 
 Esamina i componenti di VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
@@ -62,26 +62,26 @@ Archiviazione personalizzata dall'utente per la configurazione vSAN quando è se
 
 **Nota:** le unità SSD (Solid State Disk) da 3,8 TB saranno supportate una volta rese generalmente disponibili in un data center.
 
-## Componenti dei nodi di espansione del cluster vSphere
+## Specifiche tecniche per i nodi di espansione del cluster vSphere
 
 Ogni nodo di espansione del cluster vSphere verrà distribuito e addebitato per i seguenti componenti nel tuo account {{site.data.keyword.slportal}}.
 
 ### Hardware per i nodi di espansione
 
-Un Bare Metal Server IBM Cloud con la configurazione hardware presentata in [Componenti di VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+Un Bare Metal Server {{site.data.keyword.cloud_notm}} con la configurazione hardware presentata in [Componenti di VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
 ### Rete per i nodi di espansione
 
-Un Bare Metal Server IBM Cloud con la configurazione di rete presentata in [Componenti di VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+Un Bare Metal Server {{site.data.keyword.cloud_notm}} con la configurazione di rete presentata in [Componenti di VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
 ### Componenti VMware per i nodi di espansione
 
-* Un Bare Metal Server IBM Cloud con VMware vSphere Enterprise Plus 6.0u2 o 6.5u1  
-* Componenti VMware facoltativi presentati in [Componenti di VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+* Un Bare Metal Server {{site.data.keyword.cloud_notm}} con VMware vSphere Enterprise Plus 6.0u2 o 6.5u1  
+* Componenti VMware facoltativi presentati in [Componenti di VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
 **Importante**: devi gestire i server ESXi, i componenti VMware facoltativi e ulteriore hardware ordinato e consegnato al tuo account {{site.data.keyword.cloud_notm}} solo dal {{site.data.keyword.slportal}}. Dopo aver creato un nuovo cluster nella console {{site.data.keyword.vmwaresolutions_short}}, puoi tornare alla console per ridimensionare il nuovo cluster utilizzando la configurazione salvata. Per ulteriori informazioni, vedi [Ridimensionamento di cluster vSphere esistenti](vs_scalingexistingclusters.html).
 
-## Link correlati
+### Link correlati
 
 * [Distinta base del software VMware vSphere](vs_bom.html)
 * [Pianificazione per i cluster vSphere](vs_planning.html)
