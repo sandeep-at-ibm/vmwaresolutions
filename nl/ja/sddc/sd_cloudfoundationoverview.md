@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -39,7 +39,7 @@ lastupdated: "2018-06-22"
 
 アーキテクチャーについて詳しくは、[ソリューションの概要](../archiref/solution/solution_overview.html)を参照してください。
 
-## Cloud Foundation インスタンスのコンポーネント
+## Cloud Foundation インスタンスの技術仕様
 
 Cloud Foundation インスタンスには以下のコンポーネントが含まれます。
 
@@ -84,13 +84,6 @@ Cloud Foundation インスタンスには以下のコンポーネントが含ま
 * **事前構成型**、**スモール** 構成の場合のみ: 2 台の 1.9 TB SSD キャパシティー・ディスク
 * **事前構成型**、**ラージ** 構成の場合のみ: 4 台の 3.8 TB SSD キャパシティー・ディスク
 
-
-### バックアップ用ストレージ
-
-1 台の 2 TB 共有ファイル・レベル・ストレージを注文します。最大 12 TB まで拡大できます。
-
-**注**: バックアップ用ストレージは、Cloud Foundation インスタンスの標準コンポーネントではありません。 インスタンスを注文する際に、バックアップ・サービスを選択するか選択解除して、バックアップ用ストレージを希望するかどうかを選択できます。
-
 ### ライセンス (IBM 提供または BYOL) と料金
 
 * 4 つの VMware vSphere Enterprise Plus 6.5u1
@@ -100,13 +93,13 @@ Cloud Foundation インスタンスには以下のコンポーネントが含ま
 * 4 つの SDDC Manager ライセンス (IBM 提供のみ)
 * 4 つのサポートとサービスの料金
 
-## Cloud Foundation 拡張ノードのコンポーネント
+## Cloud Foundation 拡張ノードの技術仕様
 
 それぞれの Cloud Foundation 拡張ノードは、以下のコンポーネントをデプロイし、{{site.data.keyword.cloud_notm}} アカウントに課金します。
 
 ### 拡張ノード用のハードウェア
 
-[Cloud Foundation インスタンスのコンポーネント](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)に示されている構成になっている、1 台の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー。
+[Cloud Foundation インスタンスの技術仕様](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)に示されている構成になっている、1 台の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー。
 
 ### 拡張ノード用のライセンスと料金
 
@@ -127,7 +120,7 @@ Cloud Foundation インスタンスには以下のコンポーネントが含ま
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
 
-## 関連リンク
+### 関連リンク
 
 * [Cloud Foundation ソフトウェアの部品構成表](sd_bom.html)
 * [Cloud Foundation インスタンスの計画](sd_planning.html)

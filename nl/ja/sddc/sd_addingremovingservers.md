@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -45,7 +45,7 @@ ESXi サーバーが追加または削除されるときには、E メールで�
 
 リストに新しく追加した ESXi サーバーがクラスター内にない場合は、E メールかコンソールの通知を確認して、失敗に関する詳細を調べてください。
 
-## 関連リンク
+### 関連リンク
 
 * [Cloud Foundation の部品構成表](sd_bom.html)
 * [Cloud Foundation インスタンスの要件と計画](sd_planning.html)

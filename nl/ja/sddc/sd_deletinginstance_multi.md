@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -34,7 +34,7 @@ Cloud Foundation インスタンスを削除すると、以下のコンポーネ
 6. マルチサイト構成内のすべての 2 次 Cloud Foundation インスタンスについて、ステップ 1 から 5 を繰り返します。
 7. すべてのセカンダリー・インスタンスを削除したら、{{site.data.keyword.vmwaresolutions_short}} コンソールからプライマリー・インスタンスも削除できます。
 
-## 関連リンク
+### 関連リンク
 
 * [Cloud Foundation インスタンスの削除](sd_deletinginstance.html)
 * [Cloud Foundation インスタンス用サービスの注文、表示、削除](sd_addingremovingservices.html)

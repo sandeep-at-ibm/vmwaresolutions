@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Cloud Foundation インスタンスの表示
 
-注文した VMware Cloud Foundation インスタンスとその詳細情報を表示します。
+異なるユーザー・アカウントについてプロビジョンされた VMware Cloud Foundation インスタンスのサマリーと詳細情報を表示します。
 
 ## Cloud Foundation インスタンスの要約の表示
 
-環境内のすべての Cloud Foundation インスタンスのサマリーを表示するには、次の手順を実行します。
+1 つのユーザー・アカウントについてプロビジョンされたすべての Cloud Foundation Select インスタンスのサマリーを表示するには、以下の手順を実行します。
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
-2. **「Cloud Foundation インスタンス」**の表で、インスタンスのリストを表示します。
+1. {{site.data.keyword.vmwaresolutions_full}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+2. コンソールの右上隅でアバターをクリックし、**「アカウント」**フィールドをクリックして、インスタンスを確認するユーザー・アカウントを選択します。 
+3. **「Cloud Foundation インスタンス」**の表で、インスタンスのリストを表示します。
 
 表 1. Cloud Foundation インスタンスの項目
 
@@ -25,7 +26,7 @@ lastupdated: "2018-06-04"
 |:------------- |:------------- |
 | 名前 | インスタンスの名前 |
 | バージョン | インスタンスがデプロイまたはアップグレードされたリリース・バージョン。 |
-| ロケーション | インスタンスがホストされている {{site.data.keyword.CloudDataCent}}。 |
+| ロケーション | インスタンスがホストされている {{site.data.keyword.CloudDataCent_notm}}。 |
 | 作成時間 | インスタンスが作成された日時 |
 | 状況 | インスタンスの状況 |
 
@@ -95,7 +96,7 @@ lastupdated: "2018-06-04"
 
 ## Cloud Foundation インスタンスのデプロイメント履歴の表示
 
-**「デプロイメント履歴」**の下に、インスタンスのデプロイメント履歴が表示されます。
+左側のナビゲーション・ペインで**「デプロイメント履歴」**をクリックすると、インスタンスのデプロイメント履歴が表示されます。
 
 表 5. Cloud Foundation インスタンスのデプロイメント履歴
 
@@ -120,7 +121,7 @@ lastupdated: "2018-06-04"
 * VPN を使用して {{site.data.keyword.cloud_notm}} のプライベート・ネットワークにログインするためのアクセス・ポイントのリストについては、[VPN アクセス](http://www.softlayer.com/vpn-access){:new_window}を参照してください。
 * vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイする際に問題が発生した場合は、[vSphere Web Client を使用して OVF ファイルをデプロイする方法](../vmonic/trbl_deploy_ovf.html)を参照してください。
 
-## 関連リンク
+### 関連リンク
 
 * [Cloud Foundation インスタンスの注文](sd_orderinginstance.html)
 * [Cloud Foundation インスタンスの容量の拡張と縮小](sd_addingremovingservers.html)

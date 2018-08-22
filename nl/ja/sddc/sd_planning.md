@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -65,15 +65,19 @@ Cloud Foundation のデプロイメントには、物理インフラストラク
 | 一時的な在庫切れ  | 現時点では、{{site.data.keyword.CloudDataCent_notm}}には在庫がありません。 |
 | 限定在庫             | {{site.data.keyword.CloudDataCent_notm}}の在庫は限られているため、注文が満たされない可能性があります。 |
 
+## 管理コンポーネントのバックアップ
+
+すべてのインスタンス・コンポーネントの可用性を維持し、確保する作業は、お客様が行う必要があります。すべての管理コンポーネントのバックアップと高可用性について計画を立てることを強くお勧めします。詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html)を参照してください。
+
 ## Cloud Foundation インスタンス用サービス
 
 それぞれのニーズに基づいて、インスタンスのアドオン・サービスを注文できます。例えば、災害復旧などがあります。 詳しくは、[Cloud Foundation インスタンスのサービスの注文、表示、削除](sd_addingremovingservices.html)を参照してください。
 
-<!-- ## Capacity considerations
+## キャパシティーに関する考慮事項
 
-For capacity information and considerations, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+キャパシティーに関する情報と考慮事項については、[キャパシティーの拡張](../archiref/solution/solution_scaling.html)を参照してください。
 
-## 関連リンク
+### 関連リンク
 
 * [Cloud Foundation の概要](sd_cloudfoundationoverview.html)
 * [Cloud Foundation インスタンスの注文](sd_orderinginstance.html)

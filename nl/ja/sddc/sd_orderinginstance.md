@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -52,7 +52,7 @@ Cloud Foundation インスタンスを注文する際は、次のシステム設
 
 ### データ・センターの場所
 
-インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the {{site.data.keyword.baremetal_long}} specification you selected previously are displayed.-->
+インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
 
 ### 事前構成型
 
@@ -78,8 +78,6 @@ Cloud Foundation インスタンスを注文する際は、次のシステム設
 | Dual Intel Xeon Silver 4110 Processor / 合計 16 コア、2.1 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
-
-<!-- For guidance on what Bare Metal Server configuration to choose, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
 
 ### ベア・メタル・サーバーの数
 
@@ -214,7 +212,7 @@ Cloud Foundation インスタンスを注文するときに、追加のサービ
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
 
-インスタンスが正常にデプロイされると、[Cloud Foundation インスタンスのコンポーネント](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **SDDC-Cluster** としてグループ化されます。 追加のサービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
+インスタンスが正常にデプロイされると、[Cloud Foundation インスタンスの技術仕様](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **SDDC-Cluster** としてグループ化されます。 追加のサービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
@@ -235,7 +233,7 @@ Cloud Foundation インスタンスを注文するときに、追加のサービ
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
 
-## 関連リンク
+### 関連リンク
 
 * [{{site.data.keyword.cloud_notm}} アカウントへの登録](../vmonic/signing_softlayer_account.html)
 * [Cloud Foundation インスタンスの表示](sd_viewinginstances.html)
