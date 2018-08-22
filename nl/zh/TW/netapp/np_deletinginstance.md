@@ -4,15 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-19"
 
 ---
 
 # 刪除 NetApp ONTAP Select 實例
 
-若要釋放您在 NetApp ONTAP Select 實例中訂購的元件，請刪除該實例。
-
-刪除 NetApp ONTAP Select 實例時，會循序釋放下列元件：
+如果您刪除 NetApp ONTAP Select 實例，則會循序釋放下列元件：
 1. 已部署的 NetApp ONTAP Select 叢集 VM（虛擬機器）及「NetApp ONTAP Select 部署 VM」
 2. 支援與服務費用
 3. VMware 產品授權
@@ -44,7 +42,7 @@ lastupdated: "2018-05-16"
    1. 再按一次 **vCenter 主控台**右側的溢位功能表圖示，然後按一下**刪除實例**。
    2. 在**刪除實例**視窗中，按一下**確定**。
 
-## 相關鏈結
+### 相關鏈結
 
 * [訂購 NetApp ONTAP Select 實例](np_orderinginstances.html)
 * [檢視 NetApp ONTAP Select 實例](np_viewinginstances.html)

@@ -4,27 +4,28 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # 檢視 NetApp ONTAP Select 實例
 
-檢視您已訂購的 NetApp ONTAP Select 實例及其詳細資訊。
+檢視針對不同使用者帳戶佈建之 NetApp ONTAP Select 實例的摘要及詳細資訊。
 
 ## 檢視 NetApp ONTAP Select 實例摘要
 
-若要檢視您環境中所有 NetApp ONTAP Select 實例的摘要，請完成下列步驟：
+若要檢視針對使用者帳戶佈建之所有 NetApp ONTAP Select 實例的摘要，請完成下列步驟：
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格上的**已部署的實例**。
-2. 在 **NetApp ONTAP Select 實例**表格中，檢視您的實例清單。
+1. 在 {{site.data.keyword.vmwaresolutions_full}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
+2. 在主控台的右上角，按一下您的虛擬人像，然後按一下**帳戶**欄位，選取您要檢查其實例的使用者帳戶。
+3. 在 **NetApp ONTAP Select 實例**表格中，檢視所選取使用者帳戶中佈建的實例清單。
 
 表 1. NetApp ONTAP Select 實例項目
 
 |項目        |說明       |  
 |:------------- |:--------------- |
 |名稱 |實例的名稱。|
-|版本|實例的版本。|  
+|版本         |實例的版本。|  
 |位置|管理實例的資料中心。|
 |建立時間|建立實例的日期和時間。|   
 |狀態|實例的狀態。狀態可以具有下列其中一個值：
@@ -44,7 +45,7 @@ lastupdated: "2018-06-04"
 |名稱 |實例的名稱。|
 |ID |實例的 ID。|
 |位置|管理實例的資料中心。|
-|已部署的版本|已部署的 {{site.data.keyword.vmwaresolutions_full}} 版本。|
+|已部署的版本|已部署的 {{site.data.keyword.vmwaresolutions_short}} 版本。|
 |vCenter 版本|VMware vCenter Server 的版本。<br><br>**附註**：{{site.data.keyword.vmwaresolutions_short}} 主控台及 VMware vSphere Web Client 上所顯示的 vCenter Server 版本之間有輕微變化。兩者皆正確。|
 |NSX for vSphere |VMware NSX for vSphere 產品版本。|
 |NSX 授權版本|VMware NSX 授權的版本。|
@@ -86,7 +87,7 @@ lastupdated: "2018-06-04"
 
 ## 檢視 NetApp ONTAP Select 實例的部署歷程
 
-在**部署歷程**下，檢視實例的部署歷程。
+按一下左導覽窗格中的**部署歷程**，以檢視該實例的部署歷程。
 
 表 4. NetApp ONTAP Select 實例部署歷程
 
@@ -99,7 +100,7 @@ lastupdated: "2018-06-04"
 
 ## 檢視 NetApp ONTAP Select 叢集
 
-1. 在左導覽窗格上，按一下**基礎架構**。
+1. 從左導覽窗格中，按一下**基礎架構**。
 2. 在 **CLUSTERS** 下，檢視 NetApp ONTAP Select 叢集的摘要。
 
 	表 5：NetApp ONTAP Select 叢集項目
@@ -172,7 +173,7 @@ lastupdated: "2018-06-04"
 *  如需使用 VPN 登入 {{site.data.keyword.cloud_notm}} 基礎架構「專用網路」的存取點清單，請參閱 [VPN 存取](http://www.softlayer.com/vpn-access){:new_window}。
 *  如果您在使用 vSphere Web Client 部署 OVF（開放式虛擬化格式）檔案時發生問題，請參閱[使用 vSphere Web Client 部署 OVF 檔案](../vmonic/trbl_deploy_ovf.html)。
 
-## 相關鏈結
+### 相關鏈結
 
 * [訂購 NetApp ONTAP Select 實例](np_orderinginstances.html)
 * [刪除 NetApp ONTAP Select 實例](np_deletinginstance.html)
