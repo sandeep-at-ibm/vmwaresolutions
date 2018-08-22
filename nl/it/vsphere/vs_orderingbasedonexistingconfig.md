@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -40,7 +40,7 @@ Se hai effettuato un ordine, la distribuzione del cluster inizia automaticamente
 
 **Nota:** i cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Istanze distribuite**.
 
-## Link correlati
+### Link correlati
 
 * [Ordine di nuovi cluster vSphere](vs_orderinginstances.html)
 * [Ridimensionamento di cluster vSphere esistenti](vs_scalingexistingclusters.html)

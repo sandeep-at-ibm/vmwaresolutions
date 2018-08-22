@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -24,7 +24,6 @@ Assicurati di aver completato le seguenti attività:
 
 ## Impostazioni di sistema
 
-<!--**Important: Do not modify any values that are set during ordering and cluster deployment. Doing so can result in your cluster becoming unusable.**-->
 Quando ordini un nuovo cluster vSphere, devi specificare le seguenti impostazioni di sistema.
 
 ### Nome cluster
@@ -187,7 +186,7 @@ A seconda del {{site.data.keyword.CloudDataCent_notm}} che hai selezionato, potr
 
 #### Coppia FortiGate Physical Appliance 300 Series HA
 
-Puoi anche scegliere se includere la coppia FortiGate Physical Appliance 300 Series HA per proteggere il tuo ambiente cloud. Per ulteriori informazioni, vedi [Panoramica di FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html).
+Puoi anche scegliere se includere la coppia FortiGate Physical Appliance 300 Series HA per proteggere il tuo ambiente cloud. Per ulteriori informazioni, vedi [Panoramica di FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html).
 
 ## Riepilogo ordine
 
@@ -223,7 +222,7 @@ In base alle tue configurazioni, il costo stimato viene generato e visualizzato 
 
    **Nota**: vengono installati solo i {{site.data.keyword.baremetal_short}}. Sei responsabile dell'installazione e della configurazione dei vari componenti dopo la distribuzione del cluster, come VMware vCenter, VMware NSX, VMware vSAN.
 
-## Risultati
+### Risultati
 
 Se hai salvato la configurazione del cluster come template, ricevi una notifica dalla console che indica che la configurazione è stata salvata correttamente e puoi quindi trovare il template nell'elenco **Configurazioni cluster**.
 
@@ -231,7 +230,7 @@ Se hai effettuato un ordine, la distribuzione del cluster inizia automaticamente
 
 **Nota:** i cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Istanze distribuite**.
 
-## Link correlati
+### Link correlati
 
 * [Ordine di cluster vSphere in base alle configurazioni esistenti](vs_orderingbasedonexistingconfig.html)
 * [Ridimensionamento di cluster esistenti](vs_scalingexistingclusters.html)
