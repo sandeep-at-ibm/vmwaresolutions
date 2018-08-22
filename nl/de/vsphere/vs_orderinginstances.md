@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -24,7 +24,6 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 
 ## Systemeinstellungen
 
-<!--**Important: Do not modify any values that are set during ordering and cluster deployment. Doing so can result in your cluster becoming unusable.**-->
 Sie müssen die folgenden Systemeinstellungen angeben, wenn Sie einen neuen vSphere-Cluster bestellen.
 
 ### Clustername
@@ -187,7 +186,7 @@ Abhängig vom ausgewählten {{site.data.keyword.CloudDataCent_notm}} sind mögli
 
 #### HA-Paar von FortiGate Physical Appliance 300 Series
 
-Sie können außerdem auswählen, ob das HA-Paar von FortiGate Physical Appliance 300 Series zum Sichern der Cloudumgebung enthalten sein soll. Weitere Informationen finden Sie unter [Überblick zu FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html).
+Sie können außerdem auswählen, ob das HA-Paar von FortiGate Physical Appliance 300 Series zum Sichern der Cloudumgebung enthalten sein soll. Weitere Informationen enthält der Abschnitt [Übersicht über FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html).
 
 ## Bestellübersicht
 
@@ -223,7 +222,7 @@ Auf Basis Ihrer Konfigurationen werden die geschätzten Kosten sofort generiert 
 
    **Hinweis**: Nur die {{site.data.keyword.baremetal_short}}-Instanzen werden installiert. Für die Installation und Konfiguration verschiedener Komponenten nach der Clusterbereitstellung (z. B. VMware vCenter, VMware NSX, VMware vSAN) sind Sie selbst zuständig.
 
-## Ergebnisse
+### Ergebnisse
 
 Wenn Sie die Clusterkonfiguration als Vorlage gespeichert haben, erhalten Sie in der Konsole eine Benachrichtigung, dass die Konfiguration erfolgreich gespeichert wurde. Die Vorlage ist danach in der Liste **Clusterkonfigurationen** enthalten.
 
@@ -231,7 +230,7 @@ Falls Sie eine Bestellung aufgegeben haben, beginnt die Bereitstellung des Clust
 
 **Hinweis:** Die vSphere-Cluster werden (anders als die vCenter Server- und Cloud Foundation-Instanzen) auf der Seite **Bereitgestellte Instanzen** nicht angezeigt.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Auf vorhandenen Konfigurationen basierenden vSphere-Cluster bestellen](vs_orderingbasedonexistingconfig.html)
 * [Vorhandene Cluster skalieren](vs_scalingexistingclusters.html)
