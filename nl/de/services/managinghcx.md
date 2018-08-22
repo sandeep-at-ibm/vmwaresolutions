@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,9 +27,9 @@ Zum Anwenden von Wartungsfixes, die mit Push-Operation an Ihre Umgebung übertra
 
 Wenn ein erwartetes Build-Update nicht angezeigt wird, wenn Probleme mit HCX auftreten oder wenn Sie möchten, dass der neueste HCX-Build sofort mit Push-Operation an Ihr System übertragen wird, öffnen Sie ein Support-Ticket. Befolgen Sie dazu die im Abschnitt [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html) beschriebenen Schritte.
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [Überblick zu HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
+* [Übersicht über HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
 * [Glossar der HCX-Begriffe](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)

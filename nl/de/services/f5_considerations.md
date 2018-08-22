@@ -4,17 +4,35 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
-# Überblick zu F5 on IBM Cloud
+# Übersicht über F5 on IBM Cloud
 
 Der Service "F5 on {{site.data.keyword.cloud}}" (F5 BIG-IP® Virtual Edition) stellt lokal und global einsetzbare intelligente Services für den L4-L7-Lastausgleich, einen stabilen Firewallschutz für Netze und Webanwendungen sowie einen sicheren und eingebundenen Anwendungszugriff zur Verfügung.
 
 Sie können je nach Bedarf mehrere Instanzen dieses Service installieren.
 
 **Verfügbarkeit**: Dieser Service ist nur für Instanzen verfügbar, die in V1.9 oder höheren Releases bereitgestellt werden.
+
+## Technische Spezifikationen für F5 on IBM Cloud
+
+Die folgenden Komponenten werden mit dem Service "F5 on {{site.data.keyword.cloud_notm}}" einbezogen:
+
+### Virtuelle Maschinen
+* 2 virtuelle Maschinen (VMs) mit allen verfügbaren Optionen.
+* 2, 4 oder 8 vCPUs pro virtuelle Maschine, abhängig von der Lizenzierungsoption.
+* 4, 8 oder 16 GB RAM pro virtuelle Maschine, abhängig von der Lizenzierungsoption.
+
+### Vernetzung
+* Private Virtual Extensible LAN (VXLAN) für HA-Synchronisation.
+* Zugriff auf Konsole für Traffic Management Shell (TMSH) und Management über privates Managementnetz.
+
+### Lizenzen und Gebühren
+Lizenzgebühren für jede VM werden in jedem Abrechnungszyklus abhängig von der Lizenzierungsoption (Gut, Besser oder Optimal) und der ausgewählten Bandbreite berechnet.
+
+**Wichtig:** Sie können die Lizenzierungsstufe nach der Serviceinstallation nicht ändern. Wenn Sie die Lizenzstufe ändern möchten, müssen Sie den vorhandenen Service entfernen und den Service anschließend mit einer anderen Lizenzoption erneut installieren.
 
 ## Hinweise zur Installation von F5 on IBM Cloud
 
@@ -78,7 +96,7 @@ In diesem Fall schlägt die Installation von F5 on {{site.data.keyword.cloud_not
 
 Bevor Sie den Service "F5 on {{site.data.keyword.cloud_notm}}" entfernen, müssen Sie sicherstellen, dass die bestehende Konfiguration für BIG-IP VE ordnungsgemäß entfernt wurde. Insbesondere muss der Netzverkehr an BIG-IP VE vorbei und nicht durch BIG-IP VE geleitet werden. Andernfalls kann der vorhandene Datenverkehr von Ihrer Umgebung beeinträchtigt werden.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [F5 on {{site.data.keyword.cloud_notm}} bestellen](f5_ordering.html)
 * [F5 on {{site.data.keyword.cloud_notm}} verwalten](managing_f5.html)

@@ -4,22 +4,22 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-20"
 
 ---
 
 # VMware HCX on IBM Cloud bestellen
 
-Sie können den Service "VMware HCX on {{site.data.keyword.cloud_notm}}" durch Bestellen einer neuen Instanz von VMware vCenter Server with Hybridity Bundle, die den Service beinhaltet, oder durch Hinzufügen des Service zu Ihrer vorhandenen Instanz bestellen.
+Sie können den Service "VMware HCX on {{site.data.keyword.cloud}}" durch Bestellen einer neuen Instanz von VMware vCenter Server with Hybridity Bundle, die den Service beinhaltet, oder durch Hinzufügen des Service zu Ihrer vorhandenen Instanz bestellen.
 
 ## VMware HCX on IBM Cloud für eine neue Instanz bestellen
 
-Wählen Sie zum Bestellen einer neuen Instanz von VMware vCenter Server on IBM Cloud with Hybridity Bundle mit VMware HCX on {{site.data.keyword.cloud_notm}} den Service **VMware HCX on IBM Cloud** im Abschnitt **Services** aus, wenn Sie die Instanz über die {{site.data.keyword.vmwaresolutions_full}}-Konsole bestellen.
+Wählen Sie zum Bestellen einer neuen Instanz von VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle mit VMware HCX on {{site.data.keyword.cloud_notm}} den Service **VMware HCX on IBM Cloud** im Abschnitt **Services** aus, wenn Sie die Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole bestellen.
 
 
 ## VMware HCX on IBM Cloud für eine vorhandene Instanz bestellen
 
-Wenn Sie den Service "VMware HCX on {{site.data.keyword.cloud_notm}}" zu einer vorhandenen Instanz von VMware vCenter Server on IBM Cloud with Hybridity Bundle hinzufügen möchten, zeigen Sie die Instanz an, für die der Service hinzugefügt werden soll, klicken Sie im linken Navigationsfenster auf **Services** und anschließend auf **Service hinzufügen**.
+Wenn Sie den Service "VMware HCX on {{site.data.keyword.cloud_notm}}" einer vorhandenen Instanz von VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle hinzufügen möchten, zeigen Sie die Instanz an, für die der Service hinzugefügt werden soll, klicken Sie im linken Navigationsfenster auf **Services** und anschließend auf **Hinzufügen**.
 
 ## VMware HCX on IBM Cloud - Konfiguration
 
@@ -63,9 +63,9 @@ Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert
    * Lokale und ferne HCX-Bereitstellungscontainer werden konfiguriert.
 7. Der Hostname und die IP-Adresse des HCX-Managers werden beim DNS-Server von VMware vCenter Server on {{site.data.keyword.cloud_notm}} registriert.
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [Überblick zu HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
+* [Übersicht über HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
 * [HCX on {{site.data.keyword.cloud_notm}} verwalten](managinghcx.html)
 * [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_hybrid_addingremovingservices.html)
 * [Glossar der HCX-Begriffe](hcx_glossary.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -29,11 +29,9 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 ## Managementkomponenten für Instanzen mit installiertem Service "Veeam on IBM Cloud" sichern und wiederherstellen
 
-Der Service "Veeam on {{site.data.keyword.cloud_notm}}" ist mit einem Managementsicherungsjob vorkonfiguriert, der automatisch ausgeführt wird. Dieser Job sichert die Managementkomponenten täglich mit bis zu 14 Wiederherstellungspunkten.
+Der Service "Veeam on {{site.data.keyword.cloud_notm}}" kann über die Veeam-Konsole zur Sicherung der Managementkomponenten konfiguriert werden. Weitere Informationen finden Sie unter [Komponenten sichern](../archiref/solution/solution_backingup.html).
 
-Mithilfe der Veeam-Konsole können Sie die Managementkomponenten auch manuell sichern.
-
-Instanzen, die in V1.8 oder höheren Releases bereitgestellt wurden (oder für die Upgrades auf diese Releases durchgeführt wurden), werden die Konfigurationsänderungen in Ihrer Umgebung nicht automatisch gesichert. Es wird daher empfohlen, vor jeglichen Änderungen an der Konfiguration Ihrer Umgebung eine manuelle Sicherung der Managementkomponenten auszuführen, indem Sie den vorkonfigurierten Managementsicherungsjob in der Veeam-Konsole ausführen. Weitere Informationen zur manuellen Sicherung finden Sie auf der Seite [Veeam technical instructions](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}.
+Instanzen, die in V1.8 oder höheren Releases bereitgestellt wurden (oder für die Upgrades auf diese Releases durchgeführt wurden), werden die Konfigurationsänderungen in Ihrer Umgebung nicht automatisch gesichert. Es wird daher empfohlen, vor jeglichen Änderungen an der Konfiguration Ihrer Umgebung eine manuelle Sicherung der Managementkomponenten auszuführen, indem Sie den Managementsicherungsjob in der Veeam-Konsole ausführen. Weitere Informationen zur manuellen Sicherung finden Sie auf der Seite [Veeam technical instructions](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}.
 
 Wenn Fehler in den Managementkomponenten auftreten, können Sie die Managementkomponenten mithilfe der Veeam-Konsole im Zustand einer früheren Sicherung wiederherstellen. Weitere Informationen zur manuellen Wiederherstellung finden Sie auf der Seite [Veeam technical instructions]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:new_window}.
 
@@ -57,9 +55,9 @@ Führen Sie die folgenden Schritte aus:
 
 Nachdem der neue Service "Veeam on {{site.data.keyword.cloud_notm}}" bereitgestellt worden ist und eine erfolgreiche Sicherung Ihrer Managementkomponenten ausgeführt wurde, können Sie die vorhandene virtuelle Serverinstanz für Veeam aus Ihrem Konto entfernen, indem Sie ein {{site.data.keyword.cloud_notm}}-Support-Ticket erstellen. Vom IBM Support werden dann die vorhandene virtuelle Serverinstanz für Veeam sowie der Speicher ermittelt und gelöscht.
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [Überblick zu Veeam on {{site.data.keyword.cloud_notm}}](veeam_considerations.html)
+* [Übersicht über Veeam on {{site.data.keyword.cloud_notm}}](veeam_considerations.html)
 * [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
 * [Häufig gestellte Fragen](../vmonic/faq.html)
 * [Website "Veeam.com"](https://www.veeam.com/)

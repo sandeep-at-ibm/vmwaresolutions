@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -36,10 +36,9 @@ Tabelle 2. Statusbeschreibungen der lokalen HCX on {{site.data.keyword.cloud_not
 | Installiert | Die Instanz ist zur Verwendung bereit. |
 | Wird entfernt | Die Instanz wird gerade gelöscht. |
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen bestellen](standalone_orderingserviceinstances.html)
 * [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen löschen](standalone_deletingserviceinstances.html)
 * [Glossar der HCX-Begriffe](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

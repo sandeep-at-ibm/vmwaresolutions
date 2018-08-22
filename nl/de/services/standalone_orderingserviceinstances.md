@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,8 +20,8 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 
 ## Vorgehensweise
 
-1. Klicken Sie im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
-2. Blättern Sie abwärts zur Tabelle **Lokale HCX-Instanzen** und klicken Sie dann auf **Instanz bestellen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+2. Blättern Sie abwärts zur Tabelle **Lokale HCX-Instanzen** und klicken Sie dann auf **Neu bereitstellen**.
 3. Geben Sie einen Wert für **Name der lokalen Instanz** an und klicken Sie dann auf **Weiter**.
 4. Überprüfen Sie die Instanzkonfiguration, bevor Sie die Bestellung aufgeben.
    1. Überprüfen Sie die Einstellungen für die Instanz.
@@ -39,10 +39,9 @@ Sobald der Aktivierungsschlüssel einsatzbereit ist, ändert sich der Status der
 
 Sie können nun die bestellte lokale HCX on {{site.data.keyword.cloud_notm}}-Instanz anzeigen und verwalten.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen anzeigen](standalone_viewingserviceinstances.html)
 * [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen löschen](standalone_deletingserviceinstances.html)
 * [Glossar der HCX-Begriffe](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

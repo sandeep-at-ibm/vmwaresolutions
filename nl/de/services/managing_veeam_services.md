@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -22,13 +22,13 @@ Wenn Sie verwaltete Services für Veeam on {{site.data.keyword.cloud_notm}} anfo
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Einführung**.
 2. Blättern Sie auf der Seite abwärts und klicken Sie unter **Zusätzliche verwaltete Services bestellen** auf die Karte **Verwaltete Services für Veeam on IBM Cloud**.
-3. Prüfen Sie auf der Seite **Verwaltete Services für Veeam on IBM Cloud bestellen** die Beschreibung und die technischen Spezifikationen für Veeam on {{site.data.keyword.cloud_notm}} als verwalteter Service und klicken Sie auf **Erstellen**.
+3. Prüfen Sie auf der Seite **Veeam on IBM Cloud** die Beschreibung und die technischen Spezifikationen für Veeam on {{site.data.keyword.cloud_notm}} als verwalteten Service und klicken Sie anschließend auf **Erstellen**.
 4. Geben Sie die Konfigurationseinstellungen entsprechend Ihren Anforderungen an oder übernehmen Sie die Standardwerte.
 5. Klicken Sie entweder auf **vCenter Server** oder **Cloud Foundation**, um den Service zu einer Ihrer Instanzen hinzuzufügen.
 6. Um den Service während der Bestellung einer neuen Instanz hinzuzufügen, klicken Sie auf **Zu neuer Instanz hinzufügen** und fahren Sie dann mit der Bestellung einer neuen [vCenter Server](../vcenter/vc_orderinginstance.html)-, [vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html)- oder [Cloud Foundation](../sddc/sd_orderinginstance.html)-Instanz fort.
 7. Um den Service zu einer bereits vorhandenen Instanz hinzuzufügen, müssen Sie auf **Zu bereitgestellter Instanz hinzufügen** klicken und dann die gewünschte Instanz in der Liste auswählen. Anschließend müssen Sie bestätigen, dass Sie mit der Bestellung fortfahren möchten, indem Sie auf **Bereitstellung** klicken.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
 * [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
