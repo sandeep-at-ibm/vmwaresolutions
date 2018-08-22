@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-07"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -64,13 +64,13 @@ Le nom du domaine racine qui doit respecter les règles suivantes :
 
 ## Paramètres d'octroi de licence
 
-Vous devez télécharger quatre fichiers de licence NetApp car chacun des quatre serveurs {{site.data.keyword.baremetal_short}} nécessite une licence. Contactez l'équipe commerciale NetApp pour vous procurer la licence appropriée pour votre déploiement haute performance ou haute capacité.
+Vous devez télécharger quatre fichiers de licence NetApp car chacun des quatre serveurs {{site.data.keyword.baremetal_short}} nécessite une licence. Contactez l'équipe commerciale NetApp pour vous procurer la licence appropriée pour votre déploiement hautes performances ou haute capacité.
 
 ## Paramètres de serveur bare metal
 
 ### Emplacement de centre de données
 
-Vous devez sélectionner l'{{site.data.keyword.CloudDataCent_notm}} où l'instance doit être hébergée.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the Bare Metal Server specification you selected previously are displayed.-->
+Vous devez sélectionner l'{{site.data.keyword.CloudDataCent_notm}} où l'instance doit être hébergée.
 
 ### Configuration de serveur bare metal
 
@@ -80,8 +80,6 @@ Vous pouvez sélectionner une configuration de serveur bare metal adaptée à vo
 * **Haute capacité** – Licence Standard/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/64 Go de RAM/capacité de trente-quatre unités SATA de 4 To par noeud/capacité effective d'un cluster de 4 noeuds – 190 To
 
 **Remarque :** les unités SSD de 3,8 To seront prises en charge une fois officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
-
-<!--For guidance on what bare metal server configuration to choose, see the _Bill of Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
 
 ### Nombre de serveurs bare metal
 
@@ -108,7 +106,7 @@ Le nombre de serveurs ESXi d'une instance NetApp ONTAP Select est de 4 par défa
 
 Le déploiement de l'instance commence automatiquement. Vous recevez une confirmation vous informant que la commande est en cours de traitement et vous pouvez vérifier le statut du déploiement en affichant les détails de l'instance.
 
-Une fois l'instance correctement déployée, les composants décrits dans [Composants de l'instance NetApp ONTAP Select](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components) sont installés sur votre plateforme virtuelle VMware.
+Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances NetApp ONTAP Select](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) sont installés sur votre plateforme virtuelle VMware. 
 
 Lorsque l'instance est prête pour utilisation, l'instance prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 
@@ -124,7 +122,7 @@ Affichez et gérez l'instance NetApp ONTAP Select que vous avez commandée.
 
    Seules les activités de gestion des partages de fichiers du stockage partagé depuis le portail {{site.data.keyword.slportal}} font exception. Il s'agit des activités suivantes : commande, suppression (pouvant avoir un impact sur des magasins de données éventuellement montés), accord d'autorisation et montage de partages de fichiers de stockage partagé.
 
-## Liens connexes
+### Liens connexes
 
 * [Affichage des instances NetApp ONTAP Select](np_viewinginstances.html)
 * [Suppression d'instances NetApp ONTAP Select](np_deletinginstance.html)
