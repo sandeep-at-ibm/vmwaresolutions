@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,7 +20,7 @@ BYOL steht für "Bring Your Own License", also die mögliche Verwendung Ihrer ei
 * VMware NSX
 * VMware vSAN
 
-Falls Sie die Verwendung Ihrer eigenen Lizenz für eine VMware-Komponente auswählen und einen gültigen Lizenzschlüssel dafür angeben, wird für diese Komponente keine Lizenz von IBM bestellt und es fallen keine monatlichen Lizenzgebühren im Konto Ihrer {{site.data.keyword.cloud}}-Infrastruktur für diese Komponente an.
+Wenn Sie die Verwendung Ihrer eigenen Lizenz für eine VMware-Komponente auswählen und einen gültigen Lizenzschlüssel dafür angeben, wird für diese Komponente keine Lizenz von IBM bestellt und es fallen keine monatlichen Lizenzgebühren im Konto Ihrer {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) für diese Komponente an.
 
 **Hinweis:** Die BYOL-Funktion (BYOL = Bring Your Own License) ist für Benutzer der Kategorie "Business Partner" nicht verfügbar.
 
@@ -110,9 +110,9 @@ Nein. Dies liegt daran, dass diese VMware-Produkte nicht Bestandteil der Instanz
 
 ## Kann ich NFS-Speicher mit vCenter Server with Hybridity Bundle bestellen?
 
-Für neu bereitgestellte Instanzen wird nur vSAN-Speicher mit All-Flash-Funktionalität unterstützt. Das vCenter Server with Hybridity Bundle-Produktangebot beinhaltet die Lizenzierung für vSAN Advanced oder Enterprise.
+Für neu bereitgestellte Instanzen wird ausschließlich vSAN-Flashspeicher unterstützt. Das vCenter Server with Hybridity Bundle-Produktangebot beinhaltet die Lizenzierung für vSAN Advanced oder Enterprise.
 
-Wenn Sie eine vCenter Server-Instanz mit NFS-Speicher besitzen, können Sie für die vorhandene Instanz ein Upgrade auf vCenter Server with Hybridity Bundle durchführen. Während des Upgrades wird die Lizenzierung für vSAN Advanced bestellt, Sie müssen jedoch keinen vSAN-Cluster mit All-Flash-Funktionalität bereitstellen.
+Wenn Sie eine vCenter Server-Instanz mit NFS-Speicher besitzen, können Sie für die vorhandene Instanz ein Upgrade auf vCenter Server with Hybridity Bundle durchführen. Während des Upgrades wird die Lizenzierung für vSAN Advanced bestellt, Sie müssen jedoch keinen reinen vSAN-Flash-Cluster bereitstellen.
 
 ## Kann ich BYOL mit vCenter Server with Hybridity Bundle verwenden?
 

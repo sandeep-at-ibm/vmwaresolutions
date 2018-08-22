@@ -45,7 +45,7 @@ Wichtige Hinweise, die Sie vor dem Schützen einer VMware Federal-Instanz berüc
 
 Weitere Informationen enthalten die folgenden Abschnitte:
 
-* [Überblick zu VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html)
+* [Übersicht über VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html)
 * [Cluster für VMware Federal-Instanzen hinzufügen, anzeigen und löschen](../vcenter/fed_addviewdeleteclusters.html)
 * [Kapazität für VMware Federal-Instanzen erweitern und verringern](../vcenter/vc_fed_addingremovingservers.html)
 
@@ -108,7 +108,7 @@ Im aktuellen Release wird das Update von NetApp ONTAP Select 9.3 angewendet.
 
 ### Höhere Anzahl von SATA-Laufwerken für IBM Cloud Bare Metal Server-Systeme mit hoher Kapazität
 
-Für {{site.data.keyword.baremetal_short}}-Systeme mit hoher Kapazität und NetApp ONTAP Select sind jetzt 34 SATA-Laufwerke verfügbar. Weitere Informationen finden Sie unter *Komponenten der NetApp ONTAP Select-Instanz* im Abschnitt [Überblick zu NetApp ONTAP Select](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components).
+Für {{site.data.keyword.baremetal_short}}-Systeme mit hoher Kapazität und NetApp ONTAP Select sind jetzt 34 SATA-Laufwerke verfügbar. Weitere Informationen enthält der Abschnitt [Technische Spezifikationen für NetApp ONTAP Select-Instanzen](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances).
 
 ## Updates für Add-on-Services
 

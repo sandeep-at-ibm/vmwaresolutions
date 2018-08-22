@@ -24,15 +24,15 @@ Weitere Informationen enthält der Abschnitt [Gegenmaßnahmen für Sicherheitsl�
 
 ## VMware HCX on IBM Cloud
 
-Der Service "HCX on {{site.data.keyword.cloud_notm}}" ist nun für VMware Cloud Foundation-Instanzen und VMware vCenter Server-Instanzen verfügbar, auf denen vSphere 6.5 ausgeführt wird und die in V2.1 oder höher bereitgestellt sind oder für die ein Upgrade auf eine entsprechende Version durchgeführt wurde. Dieser Service kann die Netze Ihrer lokalen Rechenzentren nahtlos in die {{site.data.keyword.cloud_notm}} erweitern. Dies ermöglicht die bidirektionale Migration von virtuellen Maschinen (VMs) zwischen Ihren lokalen Rechenzentren und {{site.data.keyword.cloud_notm}}, ohne dass hierzu eine Änderung erforderlich ist. Durch die Einrichtung einer Layer-2-Brücke nutzt HCX die WAN-Optimierung, -Deduplizierung, -Komprimierung und -Verschlüsselung, um Daten schneller und sicherer über eine direkte Verbindung oder einen VPN-Tunnel zu migrieren. Die Massenmigration von VMs ist mit VMware vSphere ab Version 5.1 abwärtskompatibel. Falls Sie vor Ort vSphere 6.0 oder höher verwenden, können Sie aktive (eingeschaltete) VMs von einem lokalen Standort mit vMotion in ein IBM Cloud-Rechenzentrum versetzen. Bei Verwendung von HCX ist es nicht erforderlich, dass VMware NSX in Ihrem Rechenzentrum installiert ist.
+Der Service "HCX on {{site.data.keyword.cloud_notm}}" ist nun für VMware Cloud Foundation-Instanzen und VMware vCenter Server-Instanzen verfügbar, auf denen vSphere 6.5 ausgeführt wird und die in V2.1 oder höher bereitgestellt sind oder für die ein Upgrade auf eine entsprechende Version durchgeführt wurde. Dieser Service kann die Netze Ihrer lokalen Rechenzentren nahtlos in die {{site.data.keyword.cloud_notm}} erweitern. Dies ermöglicht die bidirektionale Migration von virtuellen Maschinen (VMs) zwischen Ihren lokalen Rechenzentren und {{site.data.keyword.cloud_notm}}, ohne dass hierzu eine Änderung erforderlich ist. Durch die Einrichtung einer Layer-2-Brücke nutzt HCX die WAN-Optimierung, -Deduplizierung, -Komprimierung und -Verschlüsselung, um Daten schneller und sicherer über eine direkte Verbindung oder einen VPN-Tunnel zu migrieren. Die Massenmigration von VMs ist mit VMware vSphere ab Version 5.1 abwärtskompatibel. Wenn Sie vSphere 6.0 oder höher lokal verwenden, können Sie aktive (eingeschaltete) VMs von einem lokalen Standort mit vMotion in ein {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) versetzen. Bei Verwendung von HCX ist es nicht erforderlich, dass VMware NSX in Ihrem Rechenzentrum installiert ist.
 
 Sie können Cloud Foundation- oder vCenter Server-Instanzen bestellen, die den Service "HCX on {{site.data.keyword.cloud_notm}}" enthalten, oder diesen Service später über die Registerkarte **Services** auf der Seite mit den Instanzdetails zu Ihren vorhandenen Instanzen hinzufügen.
 
 Sie können auch eine lokale HCX-Instanz für die Lizenzierung und Aktivierung Ihrer lokalen HCX-Installation bestellen.
 
 Weitere Informationen enthalten die folgenden Abschnitte:
-* [Hinweise zu HCX on IBM Cloud](../services/hcx_considerations.html)
-* [HCX on IBM Cloud verwalten](../services/managinghcx.html)
+* [Hinweise zu HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)
+* [HCX on {{site.data.keyword.cloud_notm}} verwalten](../services/managinghcx.html)
 * [Hinweise zu lokalen HCX-Instanzen](../services/standalone_considerations.html)
 * [Lokale HCX-Instanzen bestellen](../services/standalone_orderingserviceinstances.html)
 
@@ -52,7 +52,7 @@ Weitere Informationen enthalten die folgenden Abschnitte:
 
 Für den Service "Zerto on {{site.data.keyword.cloud_notm}}", der in Cloud Foundation-Instanzen und vCenter Server-Instanzen mit V2.1 und höher bereitgestellt wird, wird nun Zerto Virtual Replication 5.5u2 zur Verfügung gestellt. Zerto Virtual Replication Appliances (VRAs; dies sind Appliances für die virtuelle Replikation) werden jetzt aus Leistungsgründen im Managementdatenspeicher (entweder vSAN oder Endurance) und nicht im lokalen Datenspeicher bereitgestellt. Falls Sie vorhandene VRAs verwenden, sollten Sie zur Erzielung einer besseren Leistung eine Migration des zugehörigen Speichers auf den Managementdatenspeicher erwägen.
 
-Weitere Informationen finden Sie im Abschnitt [Überblick zu Zerto on IBM Cloud](../services/addingzertodr.html).
+Weitere Informationen enthält der Abschnitt [Übersicht über Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html).
 
 ## Updates für VMware vCenter Server-Instanzen
 
@@ -73,7 +73,7 @@ Weitere Informationen enthält der Abschnitt [Updates auf vCenter Server-Instanz
 
 Bevor Sie eine Bestellung für ein Upgrade auf VMware NSX Advanced oder Enterprise Edition aufgeben, können Sie nun einen Schätzpreis einsehen. Die Preisbestimmung basiert auf der Anzahl der ESXi-Hosts in der vCenter Server-Instanz. Bei diesem Kauf wird lediglich der NSX-Lizenzschlüssel geändert und für VMware NSX Base Edition ein Upgrade auf Advanced oder Enterprise Edition durchgeführt. Ein Upgrade der NSX-Softwareversion findet durch den Kauf nicht statt.
 
-Weitere Informationen enthält der Abschnitt [Überblick zu vCenter Server](../vcenter/vc_vcenterserveroverview.html).
+Weitere Informationen enthält der Abschnitt [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html).
 
 ### Maximale Anzahl Server pro Cluster erhöht sich auf mehr als 32
 
@@ -86,7 +86,7 @@ Für den Standardcluster in einer Instanz können Sie bis zu 51 Server bereitste
 Die angepasste Bare Metal Server-Konfiguration bietet nun den Dual Intel Xeon Gold 6140-Prozessor mit 36 Kernen insgesamt und 2,3 GHz.
 
 Weitere Informationen enthalten die folgenden Abschnitte:
-* [Überblick zu vCenter Server](../vcenter/vc_vcenterserveroverview.html)
+* [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 
 ### Konfigurationen für einzelne NFS-Dateifreigaben
@@ -94,7 +94,7 @@ Weitere Informationen enthalten die folgenden Abschnitte:
 Sie haben jetzt die Möglichkeit, die NFS-Dateifreigaben einzeln konfigurieren. Sie können die Dateigröße und die Leistungsstufe für jede Dateifreigabe individuell auswählen oder für alle bestellten Dateifreigaben dieselbe Dateigröße und Leistungsstufe verwenden.
 
 Weitere Informationen enthalten die folgenden Abschnitte:
-* [Überblick zu vCenter Server](../vcenter/vc_vcenterserveroverview.html)
+* [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 * [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](../vcenter/vc_addingviewingclusters.html)
 
@@ -110,4 +110,4 @@ In der gesamten Benutzerschnittstelle wurden Verbesserungen vorgenommen:
 
 ## Neue und aktualisierte Dokumentation
 
-Eine neue developerWorks-Anleitung ist verfügbar, die Schritt für Schritt erläutert, wie dedizierter Speicher zu vorhandenen {{site.data.keyword.vmwaresolutions_full}}-Bereitstellungen mit NetApp ONTAP Select on IBM Cloud hinzugefügt wird. Weitere Informationen finden Sie auf der Seite [Steps to attach dedicated storage to VMware Solutions on IBM  Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).
+Eine neue developerWorks-Anleitung ist verfügbar, die Schritt für Schritt erläutert, wie dedizierter Speicher zu vorhandenen {{site.data.keyword.vmwaresolutions_full}}-Bereitstellungen mit NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} hinzugefügt wird. Weitere Informationen finden Sie auf der Seite [Steps to attach dedicated storage to VMware Solutions on IBM  Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).

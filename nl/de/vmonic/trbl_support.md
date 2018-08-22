@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -19,7 +19,7 @@ Führen Sie die folgenden Schritte aus, um über die {{site.data.keyword.vmwares
 1. Rufen Sie die folgende Adresse auf:
    https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
 2. Melden Sie sich mit Ihrem **IBMid**-Konto bei der Konsole an.
-3. Klicken Sie in der rechten oberen Ecke der Konsole auf **Support > Ticket hinzufügen**.
+3. Klicken Sie auf der linken Seite des Banners auf **Support > Ticket hinzufügen**.
 4. Klicken Sie auf der Seite für das {{site.data.keyword.slportal_short}} auf **Mit IBMid anmelden**. Anschließend werden Sie automatisch beim Portal angemeldet.
 5. Prüfen Sie die _Supportrichtlinie für die {{site.data.keyword.cloud_notm}}-Infrastruktur und -Plattformservices_ und klicken Sie anschließend auf **Bestätigen**.
 

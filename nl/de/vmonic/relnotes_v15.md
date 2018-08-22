@@ -24,7 +24,7 @@ Um festzustellen, ob Ihr SoftLayer-Konto ein VRF-Konto ist, prüfen Sie dies zus
 
 ## Updates des Servicegebührenmodells
 
-Für Cloud Foundation-Instanztypen wird eine neue Lizenz des Typs _SDDC Manager_ eingeführt. Hierbei handelt es sich um eine für jeden Knoten anfallende monatliche Gebühr. Entsprechende Informationen finden Sie im Abschnitt [Komponenten der Cloud Foundation-Instanz](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+Für Cloud Foundation-Instanztypen wird eine neue Lizenz des Typs _SDDC Manager_ eingeführt. Hierbei handelt es sich um eine für jeden Knoten anfallende monatliche Gebühr. Weitere Informationen enthält der Abschnitt [Technische Spezifikationen für Cloud Foundation-Instanzen](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## Erweiterungen beim Bedienungskomfort
 

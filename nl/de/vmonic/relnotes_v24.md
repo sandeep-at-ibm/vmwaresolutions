@@ -24,7 +24,7 @@ Weitere Informationen enthält der Abschnitt [Gegenmaßnahmen für Sicherheitsl�
 
 ## Unterstützung in der Landessprache
 
-Ab dem Release von V2.4 ist die Unterstützung in der Landessprache (National Language Support, NLS) für IBM Cloud for VMware-Lösungen verfügbar.
+Ab dem Release von V2.4 ist die Unterstützung in der Landessprache (National Language Support, NLS) für {{site.data.keyword.vmwaresolutions_short}} verfügbar.
 Daher sind alle Funktionen in der Konsole, einschließlich der Benutzerdokumentation, in mehreren Sprachen verfügbar.
 
 Die folgenden Sprachen werden neben Englisch unterstützt:
@@ -58,7 +58,7 @@ Weitere Informationen enthält der Abschnitt *Einstellungen für Bare Metal Serv
 
 ### Leistungsverbesserung für Network File System
 
-Die Leistungsstufe von 10 E/A-Operationen pro Sekunde und GB, die für die anspruchsvollsten Workloadtypen konzipiert ist, ist nicht mehr auf bestimmte {{site.data.keyword.CloudDataCent_notm}} begrenzt, sondern ist nun für alle Rechenzentren verfügbar. Weitere Informationen finden Sie im Abschnitt *Speicher* unter [Überblick zu vCenter Server](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications).
+Die Leistungsstufe von 10 E/A-Operationen pro Sekunde und GB, die für die anspruchsvollsten Workloadtypen konzipiert ist, ist nicht mehr auf bestimmte {{site.data.keyword.CloudDataCent_notm}} begrenzt, sondern ist nun für alle Rechenzentren verfügbar. Weitere Informationen finden Sie im Abschnitt *Speicher* unter [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications).
 
 ## Updates für VMware Federal-Instanzen
 
@@ -74,7 +74,7 @@ Das aktuelle Release installiert IBM Spectrum Protect&trade; Plus V10.1.1 Patch 
 
 ### VMware HCX on IBM Cloud
 
-Bei der Bestellung dieses Service steht Ihnen nun eine neue Option für die Auswahl zwischen öffentlichem Netz und privatem Netz für HCX-Verbindungen zur Verfügung. Weitere Informationen enthält der Abschnitt [VMware HCX on IBM Cloud bestellen](../services/hcx_ordering.html).
+Bei der Bestellung dieses Service steht Ihnen nun eine neue Option für die Auswahl zwischen öffentlichem Netz und privatem Netz für HCX-Verbindungen zur Verfügung. Weitere Informationen enthält der Abschnitt [VMware HCX on {{site.data.keyword.cloud_notm}} bestellen](../services/hcx_ordering.html).
 
 ## Neue und aktualisierte Dokumentation
 
@@ -88,15 +88,15 @@ Die Serviceinformationen wurden neu strukturiert und die Navigation wurde verbes
 
 Weitere Informationen enthalten die folgenden Abschnitte:
 
-* [F5 on IBM Cloud bestellen](../services/f5_ordering.html)
-* [FortiGate Security Appliance on IBM Cloud bestellen](../services/fsa_ordering.html)
-* [FortiGate Virtual Appliance on IBM Cloud bestellen](../services/fortinetvm_ordering.html)
-* [Hytrust CloudControl on IBM Cloud bestellen](../services/htcc_ordering.html)
-* [Hytrust DataControl on IBM Cloud bestellen](../services/htdc_ordering.html)
-* [IBM Spectrum Protect Plus on IBM Cloud bestellen](../services/spp_ordering.html)
-* [KMIP for VMware on IBM Cloud bestellen](../services/kmip_ordering.html)
-* [Veeam on IBM Cloud bestellen](../services/veeam_ordering.html)
-* [Zerto on IBM Cloud bestellen](../services/zerto_ordering.html)
+* [F5 on {{site.data.keyword.cloud_notm}} bestellen](../services/f5_ordering.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} bestellen](../services/fsa_ordering.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} bestellen](../services/fortinetvm_ordering.html)
+* [Hytrust CloudControl on {{site.data.keyword.cloud_notm}} bestellen](../services/htcc_ordering.html)
+* [Hytrust DataControl on {{site.data.keyword.cloud_notm}} bestellen](../services/htdc_ordering.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} bestellen](../services/spp_ordering.html)
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} bestellen](../services/kmip_ordering.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} bestellen](../services/veeam_ordering.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} bestellen](../services/zerto_ordering.html)
 
 ## Updates und Erweiterungen der Benutzerschnittstelle
 

@@ -26,7 +26,7 @@ Mit diesem Update werden die folgenden Upgrades und Verbesserungen angewendet:
 
 * VMware Cloud Foundation-Bereitstellungen, die vor dem 22. Mai bereitgestellt wurden und daher V3-Server verwenden, bestellen jetzt V4-Server, sobald ein neuer Knoten zur Instanz hinzugefügt wird. Diese Server verfügen über 256 GB Speicher. Wenn Sie nach dem Hinzufügen der Server 512 GB Speicher benötigen, öffnen Sie ein Support-Ticket, um einen Server-Upgrade auf 512 GB Speicher anzufordern. Unter [Kontaktaufnahme mit dem IBM Support](trbl_support.html) finden Sie weitere Angaben darüber, wie Sie sich mit dem IBM Support in Verbindung setzen.
 
-Zusätzliche Informationen zu Komponenten finden Sie im Abschnitt [Komponenten der Cloud Foundation-Instanz](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+Weitere Informationen zu Komponenten finden Sie unter [Technische Spezifikationen für Cloud Foundation-Instanzen](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Voraussetzungen für Updateprozess
 

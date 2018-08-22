@@ -4,20 +4,24 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-03"
+lastupdated: "2018-07-23"
 
 ---
 
-# Für ein IBM Cloud-Konto registrieren
+# Für erforderliche Konten registrieren
 
-Sie können sich für ein {{site.data.keyword.cloud}}-Konto registrieren, indem Sie ein Upgrade Ihres {{site.data.keyword.cloud_notm}}-Kontos auf ein nutzungsabhängiges Konto durchführen.
+## Für ein IBM Cloud-Konto registrieren
 
-**Hinweis**: Das {{site.data.keyword.cloud_notm}}-Konto hieß früher "IBM SoftLayer-Konto".
+Sie können sich für ein {{site.data.keyword.cloud}}-Konto registrieren, indem Sie eine vorhandene **IBMid** verwenden oder eine neue **IBMid** erstellen. Weitere Informationen zur Registrierung für ein {{site.data.keyword.cloud_notm}}-Konto finden Sie unter [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
 
-## Vorgehensweise
+## Für ein IBM Cloud-Infrastrukturkonto (SoftLayer-Konto) registrieren
 
-1. Melden Sie sich bei der {{site.data.keyword.vmwaresolutions_full}}-Konsole mit Ihrer **IBMid** an.
-2. Klicken Sie rechts im Banner auf **Verwalten > Abrechnung und Nutzung > Abrechnung**.
+Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer), das früher als IBM SoftLayer-Konto bezeichnet wurde, wird zur Anmeldung am Kundenportal für die {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet, das weitere Funktionen zur Verwaltung von Infrastrukturprodukten und -services zur Verfügung stellt. Sie können sich für ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) registrieren, indem Sie Ihr {{site.data.keyword.cloud_notm}}-Konto in ein nutzungsabhängiges Konto aktualisieren.
+
+### Vorgehensweise
+
+1. Melden Sie sich bei der {{site.data.keyword.vmwaresolutions_short}}-Konsole mit Ihrer **IBMid** an.
+2. Klicken Sie auf der rechten Seite des Banners auf **Verwalten > Abrechnung und Nutzung > Abrechnung**.
 3. Klicken Sie auf **Kreditkarte hinzufügen**.
 4. Geben Sie die Abrechnungs- und Kreditkarteninformationen ein.
 5. Lesen Sie die Bedingungen für die Cloud-Services. Vergewissern Sie sich, dass Sie mit den Bedingungen einverstanden sind, bevor Sie das Upgrade durchführen.
@@ -28,10 +32,10 @@ Sie können sich für ein {{site.data.keyword.cloud}}-Konto registrieren, indem 
 10. Sobald Sie per E-Mail benachrichtigt werden, dass Ihr Konto bereit ist, rufen Sie das {{site.data.keyword.slportal}} auf und klicken Sie auf **Mit IBMid anmelden**.
     Sie werden dann automatisch angemeldet.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Häufig gestellte Fragen](faq.html)
-* [Voraussetzungen für {{site.data.keyword.cloud_notm}}-Konto](slaccountrequirement.html)
-* [Video: How to create an IBM Cloud account](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](slaccountrequirement.html)
+* [Video: Erstellung eines {{site.data.keyword.cloud_notm}}-Kontos](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 * [Zur IBMid wechseln](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}
