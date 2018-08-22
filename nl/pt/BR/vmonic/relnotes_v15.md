@@ -24,7 +24,7 @@ Para confirmar se sua conta SoftLayer é uma conta VRF, verifique com o Suporte 
 
 ## Atualizações do modelo de cobrança de serviço
 
-Para instâncias do Cloud Foundation, uma nova licença _SDDC Manager_ é introduzida, que é uma taxa mensal aplicada a cada nó. Para obter mais informações, veja [Componentes da instância do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+Para instâncias do Cloud Foundation, uma nova licença _SDDC Manager_ é introduzida, que é uma taxa mensal aplicada a cada nó. Para obter mais informações, consulte [Especificações técnicas para instâncias do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## Aprimoramentos de usabilidade
 

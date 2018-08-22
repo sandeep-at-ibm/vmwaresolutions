@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -19,7 +19,7 @@ Para entrar em contato com o Suporte IBM do console do {{site.data.keyword.vmwar
 1. Acesse
    https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
 2. Efetue login no console com sua conta **IBMid**.
-3. No canto superior direito do console, clique em **Suporte > Incluir Chamado**.
+3. No lado esquerdo do banner, clique em **Suporte > Incluir chamado**.
 4. Na página {{site.data.keyword.slportal_short}}, clique em **Efetuar login com o IBMid** e, em seguida, você é automaticamente conectado ao portal.
 5. Revise a _Política de Suporte de Serviços de Plataforma e Infraestrutura do {{site.data.keyword.cloud_notm}}_ e clique em **Reconhecer**.
 

@@ -42,7 +42,7 @@ Para obter informações sobre os aprimoramentos que são introduzidos no VMware
 
 Agora, o NSX Edge é incluído como parte das novas instâncias do vCenter Server que você está pedindo. O NSX Edge fornece serviços de segurança e de gateway de rede de ponta para isolar uma rede virtualizada.
 
-Durante a implementação da instância, um Management VMware NSX Edge Services Gateway (ESG) é implementado pela IBM. Este ESG é usado pelas máquinas virtuais de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Este ESG é implementado para incluir duas interfaces: uma interface é conectada à VLAN privada do IBM Cloud e a outra é conectada à VLAN pública do IBM Cloud.
+Durante a implementação da instância, um Management VMware NSX Edge Services Gateway (ESG) é implementado pela IBM. Este ESG é usado pelas máquinas virtuais de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Esse ESG é implementado para incluir duas interfaces: uma interface é conectada à VLAN privada do {{site.data.keyword.cloud_notm}} e a outra é conectada à VLAN pública do {{site.data.keyword.cloud_notm}}.
 
 Para garantir a segurança, as regras de firewall estão em vigor para permitir apenas comunicações HTTPS de saída iniciadas pelas máquinas virtuais de gerenciamento. Este ESG é implementado em uma configuração Grande e somente o Suporte IBM pode modificar a configuração. Para obter mais informações, veja:
 

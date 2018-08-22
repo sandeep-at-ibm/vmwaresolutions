@@ -4,20 +4,24 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-03"
+lastupdated: "2018-07-23"
 
 ---
 
-# Inscrevendo-se para uma conta do IBM Cloud
+# Inscrevendo-se para contas necessárias
 
-Para se inscrever para uma conta {{site.data.keyword.cloud}}, faça upgrade da sua conta {{site.data.keyword.cloud_notm}} para uma conta Pay-As-You-Go.
+## Inscrevendo-se para uma conta do IBM Cloud
 
-**Nota**: a conta do {{site.data.keyword.cloud_notm}} era conhecida anteriormente como a conta do IBM SoftLayer.
+É possível inscrever-se para uma conta do {{site.data.keyword.cloud}} usando um **IBMid** existente ou criando um novo **IBMid**. Para obter mais informações sobre como inscrever-se para uma conta do {{site.data.keyword.cloud_notm}}, veja [Inscrevendo-se para uma conta do {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
 
-## Procedimento
+## Inscrevendo-se para uma conta de infraestrutura do IBM Cloud (SoftLayer)
 
-1. Efetue login no console do {{site.data.keyword.vmwaresolutions_full}} com seu **IBMid**.
-2. No lado direito do banner, clique em **Gerenciar > Faturamento e Uso > Faturamento**.
+A conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer), que era conhecida anteriormente como a conta do IBM SoftLayer, é usada para efetuar login no portal do cliente de infraestrutura do {{site.data.keyword.cloud_notm}} que fornece alguma função adicional para gerenciar produtos e serviços de infraestrutura. Para inscrever-se para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer), faça upgrade de sua conta do {{site.data.keyword.cloud_notm}} para o tipo de conta Pagamento conforme uso.
+
+### Procedimento
+
+1. Efetue login no console do {{site.data.keyword.vmwaresolutions_short}} com seu **IBMid**.
+2. No lado esquerdo do banner, clique em **Gerenciar > Faturamento e uso > Faturamento**.
 3. Clique em **Incluir Cartão de Crédito**.
 4. Insira as informações de faturamento e as informações do cartão de crédito.
 5. Leia os termos dos serviços de nuvem. Assegure-se de que você concorda com eles antes do upgrade.
@@ -28,10 +32,10 @@ Para se inscrever para uma conta {{site.data.keyword.cloud}}, faça upgrade da s
 10. Quando for notificado por e-mail de que sua conta está pronta, acesse o {{site.data.keyword.slportal}} e clique em **Efetuar login com o IBMid**.
     Você será, então, automaticamente conectado.
 
-## Links relacionados
+### Links relacionados
 
 * [Perguntas mais frequentes](faq.html)
-* [Requisitos da conta {{site.data.keyword.cloud_notm}}](slaccountrequirement.html)
-* [Vídeo: como criar uma conta do IBM Cloud](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [ Requisitos para a conta de infraestrutura do  {{site.data.keyword.cloud_notm}}  ](slaccountrequirement.html)
+* [ Vídeo: Como criar uma conta do  {{site.data.keyword.cloud_notm}}  ](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Alternando para IBMid](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}

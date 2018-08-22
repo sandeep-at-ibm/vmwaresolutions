@@ -4,27 +4,27 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-09"
+lastupdated: "2018-07-23"
 
 ---
 
-# Requisitos para a conta IBM Cloud
+# Requisitos para a conta de infraestrutura do IBM Cloud
 
-Para usar o {{site.data.keyword.vmwaresolutions_full}} para pedir instâncias, deve-se ter uma conta {{site.data.keyword.cloud_notm}}. O custo dos componentes que são pedidos em suas instâncias é faturado para aquela conta {{site.data.keyword.cloud_notm}}.
+Para usar {{site.data.keyword.vmwaresolutions_full}} para pedir instâncias, deve-se ter uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer). O custo dos componentes que são pedidos em suas instâncias é faturado para aquela conta {{site.data.keyword.cloud_notm}}.
 
-**Nota**: a conta do {{site.data.keyword.cloud_notm}} era conhecida anteriormente como a conta do IBM SoftLayer.
+**Nota**: a conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) era conhecida anteriormente como a conta do IBM SoftLayer.
 
-## Permissões para a conta IBM Cloud
+## Permissões para a conta de infraestrutura do IBM Cloud
 
-A conta {{site.data.keyword.cloud_notm}} que você está usando deve ter algumas permissões para poder pedir os componentes em suas instâncias e executar operações em seu nome. Os requisitos de permissão são aplicáveis a todos os tipos de instâncias e serviços que você está pedindo do console do {{site.data.keyword.vmwaresolutions_short}}.
+A conta de infraestrutura do {{site.data.keyword.cloud_notm}} que você está usando deve ter determinadas permissões para poder pedir os componentes em suas instâncias e executar operações em seu nome. Os requisitos de permissão são aplicáveis a todos os tipos de instâncias e serviços que você está pedindo do console do {{site.data.keyword.vmwaresolutions_short}}.
 
-Os usuários autorizados podem verificar e atualizar as permissões para uma conta {{site.data.keyword.cloud_notm}} no {{site.data.keyword.slportal_full}}. Para obter mais informações, veja _Editando as permissões do portal do cliente de um usuário_ em [Gerenciando um perfil do usuário](../../../customer-portal/cpmanuserprof.html){:new_window}.
+Os usuários autorizados podem verificar e atualizar as permissões para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} no {{site.data.keyword.slportal}}. Para obter mais informações, veja _Editando as permissões do portal do cliente de um usuário_ em [Gerenciando um perfil do usuário](../../../customer-portal/cpmanuserprof.html){:new_window}.
 
-Tabela 1. Permissões necessárias para a conta {{site.data.keyword.cloud_notm}}
+Tabela 1. Permissões necessárias para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}
 
 | Permissão         | Detalhes                                 |
 |:-------------------|:----------------------------------------|
-| Incluir servidor | Essa permissão é necessária para as seguintes operações: para pedir o {{site.data.keyword.baremetal_long}} no qual o VMware ESXi é executado e para fornecer, a cada hora, servidores virtuais que são usados para operações de configuração, manutenção e suporte de instâncias. |
+| Incluir servidor | Essa permissão é necessária para as seguintes operações: para pedir o {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} no qual o VMware ESXi é executado e para fornecer, a cada hora, servidores virtuais que são usados para operações de configuração, manutenção e suporte de instâncias. |
 | Cancelar servidor | Essa permissão é necessária para liberar e recuperar o {{site.data.keyword.baremetal_short}} no qual o VMware ESXi é executado. Se você excluir sua instância, os componentes pedidos serão automaticamente liberados na sequência de dependência correta. |
 | Visualizar detalhes do Virtual Server | Essa permissão é necessária para recuperar os detalhes de fornecimento do servidor, que são necessários para a validação do pedido e a configuração automatizada. |
 | Incluir armazenamento | Essa permissão é necessária para pedir armazenamento de backup e armazenamento compartilhado para a instância. |
@@ -38,13 +38,13 @@ Tabela 1. Permissões necessárias para a conta {{site.data.keyword.cloud_notm}}
 | Visualizar detalhes do hardware | Essa permissão é necessária para recuperar os detalhes do hardware, que são necessários para a validação do pedido e a configuração automatizada. |
 | Visualizar licenças | Essa permissão é necessária para recuperar e validar as licenças que são usadas pela sua instância. |
 | Visualizar senhas | Essa permissão é necessária para poder administrar os VSIs pedidos. |
-| Gerenciar o monitoramento do dispositivo | Essa permissão não é necessária para fazer um pedido, mas é necessária para recuperar e validar o status de monitoramento do {{site.data.keyword.baremetal_long}} no qual os servidores VMware ESXi estão em execução em sua instância. |
+| Gerenciar o monitoramento do dispositivo | Essa permissão não é necessária para fazer um pedido, mas é necessária para recuperar e validar o status de monitoramento do {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} no qual os servidores VMware ESXi estão em execução em sua instância. |
 
 ## Ampliação da VLAN para contas clássicas (não VRF)
 
-Se você estiver usando uma conta {{site.data.keyword.cloud_notm}} clássica (não VRF), a ampliação da VLAN deverá ser ativada. Se a ampliação da VLAN não estiver ativada para contas clássicas, os vários componentes do ambiente de virtualização do VMware poderão não ser capazes de se comunicar entre si. Para ativar a ampliação da VLAN em sua conta {{site.data.keyword.cloud_notm}}, veja [Ativar ou Desativar a VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+Se você está usando uma conta de infraestrutura clássica (não VRF) do {{site.data.keyword.cloud_notm}}, o VLAN Spanning deve ser ativado. Se a ampliação da VLAN não estiver ativada para contas clássicas, os vários componentes do ambiente de virtualização do VMware poderão não ser capazes de se comunicar entre si. Para ativar o VLAN Spanning em sua conta de infraestrutura do {{site.data.keyword.cloud_notm}}, veja [Ativar ou desativar o VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
 
-## Links relacionados
+### Links relacionados
 
 * [Requisitos para instâncias do Cloud Foundation](../sddc/sd_planning.html)
 * [Requisitos para instâncias do vCenter Server](../vcenter/vc_planning.html)

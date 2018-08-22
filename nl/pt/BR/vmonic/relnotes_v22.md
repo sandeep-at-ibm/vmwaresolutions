@@ -108,7 +108,7 @@ A liberação atual se aplica à atualização do NetApp ONTAP Select 9.3.
 
 ### Maior número de unidades SATA para Bare Metal Servers do IBM Cloud de alta capacidade
 
-Trinta e quatro unidades SATA estão, agora, disponíveis para o {{site.data.keyword.baremetal_short}} de alta capacidade do NetApp ONTAP Select. Para obter mais informações, veja a seção *Componentes da instância do NetApp ONTAP Select* em [Visão geral do NetApp ONTAP Select](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components).
+Trinta e quatro unidades SATA estão, agora, disponíveis para o {{site.data.keyword.baremetal_short}} de alta capacidade do NetApp ONTAP Select. Para obter mais informações, veja [Especificações técnicas para instâncias do NetApp ONTAP Select](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances).
 
 ## Atualizações para serviços complementares
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,7 +20,7 @@ Bring Your Own License, ou BYOL, é um recurso disponível para instâncias do V
 * VMware NSX
 * VMware vSAN
 
-Se você selecionar para usar sua própria licença para um componente do VMware e fornecer uma chave de licença válida para ele, nenhuma licença será pedida da IBM para esse componente e nenhum encargo mensal de licença será incorrido para sua conta de infraestrutura do {{site.data.keyword.cloud}} para esse componente.
+Se você selecionar para usar sua própria licença para um componente do VMware e fornecer uma chave de licença válida para ele, nenhuma licença será pedida da IBM para esse componente e nenhum encargo mensal de licença será incorrido para sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) para esse componente.
 
 **Nota:** o recurso BYOL não está disponível para usuários de Parceiro de Negócios.
 
