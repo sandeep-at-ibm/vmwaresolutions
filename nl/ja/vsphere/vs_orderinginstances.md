@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -24,7 +24,6 @@ lastupdated: "2018-06-22"
 
 ## システム設定
 
-<!--**Important: Do not modify any values that are set during ordering and cluster deployment. Doing so can result in your cluster becoming unusable.**-->
 新しい vSphere クラスターを注文する際には、以下のシステム設定を指定する必要があります。
 
 ### クラスター名
@@ -187,7 +186,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 
 #### FortiGate 物理アプライアンス 300 シリーズ HA ペア
 
-また、クラウド環境を保護するために FortiGate 物理アプライアンス 300 シリーズ HA ペアを含めるかどうかも選択できます。 詳しくは、[FortiGate Security Appliance on IBM Cloud の概要](../services/fsa_considerations.html)を参照してください。
+また、クラウド環境を保護するために FortiGate 物理アプライアンス 300 シリーズ HA ペアを含めるかどうかも選択できます。 詳しくは、[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の概要](../services/fsa_considerations.html)を参照してください。
 
 ## 注文のサマリー
 
@@ -223,7 +222,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 
    **注**: {{site.data.keyword.baremetal_short}}だけがインストールされます。 クラスターのデプロイメントの後に、VMware vCenter、VMware NSX、VMware vSAN などの各種コンポーネントをインストールして構成する作業は、お客様が行う必要があります。
 
-## 結果
+### 結果
 
 クラスター構成をテンプレートとして保存した場合は、その構成が正常に保存されたことを示すコンソール通知を受け取ります。そして、**「クラスター構成」**リストにそのテンプレートが表示されます。
 
@@ -231,7 +230,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 
 **注:** vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスとは異なり、**「デプロイ済みインスタンス」**ページに表示されません。
 
-## 関連リンク
+### 関連リンク
 
 * [既存の構成を基にした vSphere クラスターの注文](vs_orderingbasedonexistingconfig.html)
 * [既存クラスターの拡張](vs_scalingexistingclusters.html)

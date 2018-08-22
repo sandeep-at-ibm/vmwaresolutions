@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -59,7 +59,7 @@ vSphere のデプロイメントには、物理インフラストラクチャー
 | WDC06 | ワシントン、DC | 北米東部 |
 | WDC07 | ワシントン、DC | 北米東部 |
 
-## 関連リンク
+### 関連リンク
 
 * [新規 vSphere クラスターの注文](vs_orderinginstances.html)
 * [既存クラスターの拡張](vs_scalingexistingclusters.html)

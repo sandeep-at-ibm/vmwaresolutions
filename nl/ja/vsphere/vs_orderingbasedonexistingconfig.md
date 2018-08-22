@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -40,7 +40,7 @@ lastupdated: "2018-05-08"
 
 **注:** vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスとは異なり、**「デプロイ済みインスタンス」**ページに表示されません。
 
-## 関連リンク
+### 関連リンク
 
 * [新規 vSphere クラスターの注文](vs_orderinginstances.html)
 * [既存の vSphere クラスターの拡張](vs_scalingexistingclusters.html)
