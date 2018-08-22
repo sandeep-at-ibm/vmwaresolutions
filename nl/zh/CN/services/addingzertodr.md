@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -12,18 +12,33 @@ lastupdated: "2018-06-07"
 
 Zerto on {{site.data.keyword.cloud}} 服务用于提供复制和灾难恢复功能，这些功能可以集成到部署产品中，以保护和恢复 {{site.data.keyword.cloud_notm}} 上 VMware 虚拟环境中的数据。
 
-## Zerto on IBM Cloud 服务的组件
+## Zerto on IBM Cloud 的技术注意事项
 
 Zerto on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
 
-* {{site.data.keyword.cloud_notm}} 基础架构中的专用可移植子网，供 Zerto Virtual Replication 设备使用
-* 安装了 Zerto Virtual Replication 的 Microsoft Windows VSI（虚拟服务实例）
-* 要部署并配置到所有 ESXi 服务器中的 Zerto Virtual Replication 设备
+**注**：Zerto Virtual Manager (ZVM) 组件仅部署到缺省集群中。
 
-**注**：Zerto Virtual Manager (ZVM) 组件将仅部署到缺省集群中。
+### VSI
 
+* 一个虚拟服务实例 (VSI) - Zerto Virtual Manager
+* 2 个 2.0 GHz 核心
+* 4 GB RAM
+* Windows Server 2012 R2 Standard Edition（64 位）
 
-## 相关链接
+### 存储
+
+磁盘：100 GB (SAN)
+
+### 联网
+
+* 一个主专用 IP 地址
+* 1 Gbps 专用网络上行链路
+
+### 许可证和费用
+
+Zerto Replication V5.5 许可证
+
+### 相关链接
 
 * [关于 {{site.data.keyword.vmwaresolutions_short}}](../vmonic/prod_overview.html)
 * [订购 Zerto on {{site.data.keyword.cloud_notm}}](zerto_ordering.html)

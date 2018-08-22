@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-06-07"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-06-07"
 * [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
 * [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
 
-## 相关链接
+### 相关链接
 
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 概述](fortinetvm_considerations.html)
 * [联系 IBM 支持](../vmonic/trbl_support.html)

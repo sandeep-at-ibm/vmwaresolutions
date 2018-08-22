@@ -4,22 +4,22 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-20"
 
 ---
 
 # 订购 VMware HCX on IBM Cloud
 
-订购 VMware HCX on {{site.data.keyword.cloud_notm}} 服务时，可订购包含此服务的新 VMware vCenter Server with Hybridity Bundle 实例，也可通过向现有实例添加此服务来进行订购。
+订购 VMware HCX on {{site.data.keyword.cloud}} 服务时，可订购包含此服务的新 VMware vCenter Server with Hybridity Bundle 实例，也可通过向现有实例添加此服务来进行订购。
 
 ## 为新实例订购 VMware HCX on IBM Cloud
 
-要订购包含 VMware HCX on {{site.data.keyword.cloud_notm}} 的新 VMware vCenter Server on IBM Cloud with Hybridity Bundle 实例，请在 {{site.data.keyword.vmwaresolutions_full}} 控制台订购该实例时在**服务**部分中选择 **VMware HCX on IBM Cloud**。
+要订购包含 VMware HCX on {{site.data.keyword.cloud_notm}} 的新 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 实例，请在从 {{site.data.keyword.vmwaresolutions_short}} 控制台订购该实例时在**服务**部分中选择 **VMware HCX on IBM Cloud**。
 
 
 ## 为现有实例订购 VMware HCX on IBM Cloud
 
-要将 VMware HCX on {{site.data.keyword.cloud_notm}} 服务添加到现有 VMware vCenter Server on IBM Cloud with Hybridity Bundle 实例，请查看要为其添加服务的实例，单击左侧导航窗格上的**服务**，然后单击**添加服务**。
+要将 VMware HCX on {{site.data.keyword.cloud_notm}} 服务添加到现有 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 实例，请查看要为其添加服务的实例，单击左侧导航窗格上的**服务**，然后单击**添加**。
 
 ## VMware HCX on IBM Cloud 配置
 
@@ -63,7 +63,7 @@ lastupdated: "2018-06-20"
    * 配置本地和远程 HCX 部署容器。
 7. 向 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的 DNS 服务器注册 HCX Manager 的主机名和 IP 地址。
 
-## 相关链接
+### 相关链接
 
 * [HCX on {{site.data.keyword.cloud_notm}} 概述](hcx_considerations.html)
 * [管理 HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)

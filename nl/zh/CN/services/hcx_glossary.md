@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -20,6 +20,6 @@ lastupdated: "2018-05-23"
 * **HCX Manager 管理控制台 (HCX Manager Admin Console)**：这是用于管理 HCX 设备以实现管理用途（例如启动和停止服务，以及收集支持日志）的用户界面。
 * **HCX 云控制台 (HCX Cloud Console)**：这是用于配置 HCX 云端功能（例如虚拟数据中心和灾难恢复）的用户界面。
 
-## 相关链接
+### 相关链接
 
 * [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#vm-documentation)

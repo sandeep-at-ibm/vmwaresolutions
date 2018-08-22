@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
 # 管理 HyTrust CloudControl on IBM Cloud
 
-要管理 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务 (HTCC)，请通过 {{site.data.keyword.vmwaresolutions_full}} 控制台访问 HTCC WebGUI，或通过 vSphere Web Client 访问 HTCC 控制台。
+要管理 HyTrust CloudControl on {{site.data.keyword.cloud}} 服务 (HTCC)，请通过 {{site.data.keyword.vmwaresolutions_short}} 控制台访问 HTCC WebGUI，或通过 vSphere Web Client 访问 HTCC 控制台。
 
 ## 通过 IBM Cloud for VMware Solutions 控制台访问 HyTrust CloudControl WebGUI
 
@@ -27,7 +27,7 @@ lastupdated: "2018-06-14"
 * [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
 * [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
 
-## 相关链接
+### 相关链接
 
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 概述](htcc_considerations.html)
 * [联系 IBM 支持](../vmonic/trbl_support.html)

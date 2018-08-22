@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -34,11 +34,11 @@ Zerto on {{site.data.keyword.cloud}} 服务部署到实例后，可以配置或�
 
 为实例的主集群添加或除去 ESXi 服务器时，将自动部署或除去 VRA。VRA 不会自动部署到实例的辅助集群中的 ESXi 服务器，但您可以自行在 Zerto Virtual Replication 控制台中部署这些 VRA。
 
-## 相关链接
+### 相关链接
 
-* [Zerto on IBM Cloud 概述](addingzertodr.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 概述](addingzertodr.html)
 * [请求 Zerto on {{site.data.keyword.cloud_notm}} 的受管服务](managing_zerto_services.html)
 * [zerto.com Web 站点](https://www.zerto.com){:new_window}
 * [Zerto 技术文档](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Zerto 灾难恢复](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/zerto){:new_window}
+* [Zerto 灾难恢复](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
 * [Zerto Virtual Replication 警报的说明](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)

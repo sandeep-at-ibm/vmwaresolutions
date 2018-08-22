@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -15,6 +15,24 @@ F5 on {{site.data.keyword.cloud}} 服务 (F5 BIG-IP® Virtual Edition) 用于提
 可以根据需要安装此服务的多个实例。
 
 **可用性**：此服务仅可用于在 V1.9 或更高发行版中部署的实例。
+
+## F5 on IBM Cloud 的技术规范
+
+F5 on {{site.data.keyword.cloud_notm}} 服务随附以下组件：
+
+### 虚拟机
+* 提供了所有选项的两个虚拟机 (VM)。
+* 每个虚拟机 2、4 或 8 个 vCPU，具体取决于许可选项。
+* 每个虚拟机 4、8 或 16 GB RAM，具体取决于许可选项。
+
+### 联网
+* 用于 HA 同步的专用虚拟可扩展 LAN (VXLAN)。
+* 通过专用管理网络访问流量管理 Shell (TMSH) 和管理控制台。
+
+### 许可证和费用
+每个 VM 的许可费用将应用于每个计费周期，具体取决于许可选项（“良好”、“更佳”或“最佳”）和所选带宽。
+
+**重要信息**：无法在安装服务后更改许可级别。要更改许可级别，必须除去现有服务，然后使用其他许可选项来重新安装该服务。
 
 ## 安装 F5 on IBM Cloud 时的注意事项
 
@@ -78,7 +96,7 @@ F5 on {{site.data.keyword.cloud}} 服务 (F5 BIG-IP® Virtual Edition) 用于提
 
 除去 F5 on {{site.data.keyword.cloud_notm}} 服务之前，请确保正确除去了现有 BIG-IP VE 配置。具体来说，网络流量必须围绕 BIG-IP VE 而不是通过 BIG-IP VE 来路由。否则，可能会影响环境中的现有数据流量。
 
-## 相关链接
+### 相关链接
 
 * [订购 F5 on {{site.data.keyword.cloud_notm}}](f5_ordering.html)
 * [管理 F5 on {{site.data.keyword.cloud_notm}}](managing_f5.html)

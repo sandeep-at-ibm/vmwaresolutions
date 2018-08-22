@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-06-14"
 3. 在**操作**列中，单击“删除”图标。
 4. 在**删除实例**窗口中，单击**确定**。实例的状态会更改为**正在除去**。完成实例删除后，该实例在**内部部署 HCX 实例**表中不再可用。
 
-## 相关链接
+### 相关链接
 
 * [订购内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例](standalone_orderingserviceinstances.html)
 * [查看内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例](standalone_viewingserviceinstances.html)
