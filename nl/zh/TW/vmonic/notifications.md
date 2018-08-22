@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-05-30"
           <dt class="dt dlterm">嚴重 </dt>
           <dd class="dd">嚴重事件可能會影響整個系統或服務。</dd>
           <dt class="dt dlterm">錯誤</dt>
-          <dd class="dd">在可能需要管理者或一般使用者人為介入的作業期間，發生錯誤事件。</dd>
+          <dd class="dd">在可能需要管理者或使用者人為介入的作業期間，發生錯誤事件。</dd>
           <dt class="dt dlterm">警告</dt>
           <dd class="dd">元件失敗或未正常運作。不過，失敗不會干擾元件的進行中程序。</dd>
             <dt class="dt dlterm">參考資訊</dt>
@@ -69,7 +69,7 @@ lastupdated: "2018-05-30"
 
 依預設，會顯示所有未讀取通知。您可以依狀態、嚴重性和類型來過濾通知。若要過濾通知，請僅針對要在**狀態**、**嚴重性**或**類型**下拉清單中顯示的項目來選取勾選框。
 
-## 相關鏈結
+### 相關鏈結
 
 * [常見問題](faq.html)
 * [使用者帳戶及設定](useraccount.html)

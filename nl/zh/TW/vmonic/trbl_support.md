@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-22"
 1. 移至
    https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
 2. 使用您的 **IBM ID** 帳戶登入主控台。
-3. 在主控台的右上角，按一下**支援 > 新增問題單**。
+3. 在橫幅左側，按一下**支援 > 新增問題單**。
 4. 在 {{site.data.keyword.slportal_short}} 頁面上，按一下**以 IBM ID 登入**，然後您就會自動登入到入口網站。
 5. 檢閱 _{{site.data.keyword.cloud_notm}} 基礎架構和平台服務支援原則_，然後按一下**確認**。
 

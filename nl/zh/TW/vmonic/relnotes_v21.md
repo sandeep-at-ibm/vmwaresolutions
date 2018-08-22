@@ -24,15 +24,15 @@ lastupdated: "2018-04-16"
 
 ## VMware HCX on IBM Cloud
 
-現在，HCX on {{site.data.keyword.cloud_notm}} 服務可用於執行 vSphere 6.5 以及部署於或升級至 2.1 版或更新版本的 VMware Cloud Foundation 實例及 VMware vCenter Server 實例。此服務可將內部部署資料中心的網路無縫延伸至 {{site.data.keyword.cloud_notm}}，這容許在內部部署資料中心與 {{site.data.keyword.cloud_notm}} 之間雙向移轉虛擬機器 (VM)，而不需要任何變更。透過建立第 2 層橋接器，HCX 運用 WAN 最佳化、刪除重複、壓縮及加密，能更快速而安全地透過 Direct Link 或 VPN 通道來移轉資料。VM 的大量移轉與 VMware vSphere 5.1 以上的舊版相容。如果您在內部部署中使用 vSphere 6.0 以上的版本，則可以將 vMotion 即時（已開啟電源）VM 從內部部署移轉至 IBM Cloud 資料中心。使用 HCX 時，您不需要在資料中心安裝 VMware NSX。
+現在，HCX on {{site.data.keyword.cloud_notm}} 服務可用於執行 vSphere 6.5 以及部署於或升級至 2.1 版或更新版本的 VMware Cloud Foundation 實例及 VMware vCenter Server 實例。此服務可將內部部署資料中心的網路無縫延伸至 {{site.data.keyword.cloud_notm}}，這容許在內部部署資料中心與 {{site.data.keyword.cloud_notm}} 之間雙向移轉虛擬機器 (VM)，而不需要任何變更。透過建立第 2 層橋接器，HCX 運用 WAN 最佳化、刪除重複、壓縮及加密，能更快速而安全地透過 Direct Link 或 VPN 通道來移轉資料。VM 的大量移轉與 VMware vSphere 5.1 以上的舊版相容。如果您在內部部署中使用 vSphere 6.0 以上的版本，則可以將 vMotion 即時（已開啟電源）VM 從內部部署移轉至 {{site.data.keyword.CloudDataCent_notm}}。使用 HCX 時，您不需要在資料中心安裝 VMware NSX。
 
 您可以在訂購實例時訂購包含 HCX on {{site.data.keyword.cloud_notm}} 服務的 Cloud Foundation 或 vCenter Server 實例，或稍後透過實例詳細資料頁面的**服務**標籤，將此服務新增至現有的實例。
 
 您也可以訂購內部部署 HCX 實例，以進行內部部署 HCX 安裝的授權和啟動。
 
 如需相關資訊，請參閱：
-* [HCX on IBM Cloud 的考量](../services/hcx_considerations.html)
-* [管理 HCX on IBM Cloud](../services/managinghcx.html)
+* [HCX on {{site.data.keyword.cloud_notm}} 的考量](../services/hcx_considerations.html)
+* [管理 HCX on {{site.data.keyword.cloud_notm}}](../services/managinghcx.html)
 * [內部部署的 HCX 實例的考量](../services/standalone_considerations.html)
 * [訂購內部部署的 HCX 實例](../services/standalone_orderingserviceinstances.html)
 
@@ -52,7 +52,7 @@ lastupdated: "2018-04-16"
 
 對於部署在 2.1 版以及更新版本 Cloud Foundation 實例及 vCenter Server 實例中的 Zerto on {{site.data.keyword.cloud_notm}} 服務，會佈建 Zerto Virtual Replication 5.5u2。基於效能理由，Zerto 虛擬抄寫應用裝置 (VRA) 現在是部署到管理資料儲存庫（vSAN 或 Endurance）而不是本端資料儲存庫。如果您有現有的 VRA，則應該考慮將其儲存空間移轉至管理資料儲存庫，以獲得更好的效能。
 
-如需相關資訊，請參閱 [Zerto on IBM Cloud 概觀](../services/addingzertodr.html)。
+如需相關資訊，請參閱 [Zerto on {{site.data.keyword.cloud_notm}} 概觀](../services/addingzertodr.html)。
 
 ## VMware vCenter Server 實例的更新
 
@@ -110,4 +110,4 @@ lastupdated: "2018-04-16"
 
 ## 新的及更新的文件
 
-有新的 developerWorks 秘訣可供使用，其包含的逐步指示是關於如何使用 NetApp ONTAP Select on IBM Cloud，將專用的儲存空間連接至現有的 {{site.data.keyword.vmwaresolutions_full}} 部署。如需相關資訊，請參閱[將專用的儲存空間連接至 VMware Solutions on IBM  Cloud 的步驟](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)。
+有新的 developerWorks 秘訣可供使用，其包含的逐步指示是關於如何使用 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}，將專用的儲存空間連接至現有的 {{site.data.keyword.vmwaresolutions_full}} 部署。如需相關資訊，請參閱[將專用的儲存空間連接至 VMware Solutions on IBM  Cloud 的步驟](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)。

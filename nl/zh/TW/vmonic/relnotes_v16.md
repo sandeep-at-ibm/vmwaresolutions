@@ -29,7 +29,7 @@ lastupdated: "2017-05-22"
 
 從 1.6 版開始，vCenter Server 實例有多項可用的加強功能。
 
-*  vCenter Server 供應項目 2.0 版規格的完整實作。如需相關資訊，請參閱 [VMware vCenter Server on IBM Cloud 解決方案架構](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0)。
+*  vCenter Server 供應項目 2.0 版規格的完整實作。如需相關資訊，請參閱 [VMware vCenter Server on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0)。
 *  視您的需求而定，新的硬體規格為：**小型**、**中型**或**大型**。
 *  可用於部署的新資料中心：**HKG02 - 香港**、**OSL01 - 奧斯陸**、**SEO01 - 首爾**、**SNG01 - 新加坡**及 **SYD04 - 雪梨**。
 *  您的實例訂單中至少有兩部 ESXi 伺服器，依預設，會啟用 VMware vSphere DRS（分散式資源排程器）和 VMware HA（高可用性）。

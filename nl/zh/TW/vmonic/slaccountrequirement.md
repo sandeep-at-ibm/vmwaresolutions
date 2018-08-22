@@ -4,27 +4,27 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-09"
+lastupdated: "2018-07-23"
 
 ---
 
-# IBM Cloud 帳戶的需求
+# IBM Cloud 基礎架構帳戶的需求
 
-若要使用 {{site.data.keyword.vmwaresolutions_full}} 來訂購實例，您必須具有 {{site.data.keyword.cloud_notm}} 帳戶。實例中訂購的元件費用會向該 {{site.data.keyword.cloud_notm}}帳戶收費。
+若要使用 {{site.data.keyword.vmwaresolutions_full}} 來訂購實例，您必須具有 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶。實例中訂購的元件費用會向該 {{site.data.keyword.cloud_notm}}帳戶收費。
 
-**附註**：{{site.data.keyword.cloud_notm}} 帳戶先前稱為 IBM SoftLayer 帳戶。
+**附註**：{{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶先前稱為 IBM SoftLayer 帳戶。
 
-## IBM Cloud 帳戶的許可權
+## IBM Cloud 基礎架構帳戶的許可權
 
-您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須具有特定許可權，才能訂購實例中的元件，並代表您執行作業。許可權需求適用於您從 {{site.data.keyword.vmwaresolutions_short}} 主控台訂購的所有類型之實例和服務。
+您使用的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須具有特定許可權，才能訂購實例中的元件，並代表您執行作業。許可權需求適用於您從 {{site.data.keyword.vmwaresolutions_short}} 主控台訂購的所有類型之實例和服務。
 
-獲授權的使用者可以在 {{site.data.keyword.slportal_full}} 上驗證及更新 {{site.data.keyword.cloud_notm}} 帳戶的許可權。如需相關資訊，請參閱[管理使用者設定檔](../../../customer-portal/cpmanuserprof.html){:new_window}中的_編輯使用者的客戶入口網站許可權_。
+獲授權的使用者可以在 {{site.data.keyword.slportal}} 中驗證及更新 {{site.data.keyword.cloud_notm}} 基礎架構帳戶的許可權。如需相關資訊，請參閱[管理使用者設定檔](../../../customer-portal/cpmanuserprof.html){:new_window}中的_編輯使用者的客戶入口網站許可權_。
 
-表 1. {{site.data.keyword.cloud_notm}} 帳戶的必要許可權
+表 1. {{site.data.keyword.cloud_notm}} 基礎架構帳戶的必要許可權
 
 |許可權|詳細資料     |
 |:-------------------|:----------------------------------------|
-|新增伺服器|下列作業需要此許可權：要訂購執行 VMware ESXi 的 {{site.data.keyword.baremetal_long}}，以及佈建用於實例配置、維護及支援作業的每小時虛擬伺服器。|
+|新增伺服器|下列作業需要此許可權：要訂購執行 VMware ESXi 的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}，以及佈建用於實例配置、維護及支援作業的每小時虛擬伺服器。|
 |取消伺服器|需要此許可權，才能釋放及收回執行 VMware ESXi 的 {{site.data.keyword.baremetal_short}}。如果您刪除實例，則會依正確的相依關係順序自動釋放所訂購的元件。|
 |檢視虛擬伺服器詳細資料|需要此許可權才能擷取伺服器佈建詳細資料，這些是訂單驗證和自動化配置所需要的。|
 |新增儲存空間|需要此許可權才能訂購實例的備份儲存空間及共用儲存空間。|
@@ -38,13 +38,13 @@ lastupdated: "2018-05-09"
 |檢視硬體詳細資料|需要此許可權才能擷取硬體詳細資料，這些是訂單驗證和自動化配置所需要的。|
 |檢視授權|需要此許可權，才能擷取及驗證實例所使用的授權。|
 |檢視密碼|需要此許可權，才能管理已訂購的 VSI。|
-|管理裝置監視|下訂單不需要此許可權，但需要它才能擷取及驗證在實例中執行 VMware ESXi 伺服器的 {{site.data.keyword.baremetal_long}} 的監視狀態。|
+|管理裝置監視|下訂單不需要此許可權，但需要它才能擷取及驗證在實例中執行 VMware ESXi 伺服器的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 的監視狀態。|
 
 ## 典型（非 VRF）帳戶的 VLAN 跨越
 
-如果您使用典型（非 VRF）{{site.data.keyword.cloud_notm}} 帳戶，則必須啟用 VLAN 跨越。如果未對典型帳戶啟用 VLAN 跨越，則 VMware 虛擬化環境的各種元件可能無法彼此通訊。如果要在 {{site.data.keyword.cloud_notm}} 帳戶中啟用 VLAN 跨越，請參閱[啟用或停用 VLAN 跨越](../../../infrastructure/vlans/vlan-spanning.html){:new_window}。
+如果您使用典型（非 VRF）{{site.data.keyword.cloud_notm}} 基礎架構帳戶，則必須啟用 VLAN Spanning。如果未對典型帳戶啟用 VLAN 跨越，則 VMware 虛擬化環境的各種元件可能無法彼此通訊。若要在 {{site.data.keyword.cloud_notm}} 基礎架構帳戶中啟用 VLAN Spanning，請參閱[啟用或停用 VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}。
 
-## 相關鏈結
+### 相關鏈結
 
 * [Cloud Foundation 實例的需求](../sddc/sd_planning.html)
 * [vCenter Server 實例的需求](../vcenter/vc_planning.html)

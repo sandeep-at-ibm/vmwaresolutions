@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-07"
 
 ## IBM Cloud for VMware Solutions 主控台
 
-{{site.data.keyword.vmwaresolutions_short}} 主控台是您訂購及管理部署的介面。在主控台中，每一個部署都會當成實例進行管理。主控台是與 {{site.data.keyword.slportal_full}} 分開的獨立式使用者介面。
+{{site.data.keyword.vmwaresolutions_short}} 主控台是您訂購及管理部署的介面。在主控台中，每一個部署都會當成實例進行管理。主控台是與 {{site.data.keyword.slportal}} 分開的獨立式使用者介面。
 
 ## IBM ID 帳戶
 
@@ -43,10 +43,10 @@ lastupdated: "2018-06-07"
 
 為了在 {{site.data.keyword.vmwaresolutions_short}} 主控台上獲得最佳檢視及運作，請將螢幕解析度設為至少 1024 px（寬）x 500 px（高）。
 
-## 相關鏈結
+### 相關鏈結
 
 * [關於 {{site.data.keyword.vmwaresolutions_short}}](vmonic/prod_overview.html)
 * [Cloud Foundation 概觀](../sddc/sd_cloudfoundationoverview.html)
 * [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html)
-* [Zerto on IBM Cloud 概觀](../services/addingzertodr.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 概觀](../services/addingzertodr.html)
 * [疑難排解](troubleshooting.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -59,7 +59,7 @@ Cloud Foundation 實例及 vCenter Server 實例，以及 1.9 版或更舊版本
 
 對於 VMware vSphere 6.0 和 VMware vCenter Server 6.0，您必須將 [VMware 產品修補程式站台](https://my.vmware.com/group/vmware/patch)中的修補程式（適用於 vSphere 的 ESXi600-201711101-SG、ESXi600-201803401-BG 及 ESXi600-201803402-BG，以及適用於 vCenter Server 的 vCenter 6.0 U3e）套用至您所有的 vSphere 叢集和 ESXi 伺服器，不論是新部署或現有的。
 
-## 相關鏈結
+### 相關鏈結
 
 * [將更新套用至 Cloud Foundation 實例](../sddc/sd_applyingupdates.html)
 * [針對最新安全漏洞的安全防範](https://www.ibm.com/blogs/bluemix/2018/01/ibm-cloud-spectre-meltdown-vulnerabilities/)

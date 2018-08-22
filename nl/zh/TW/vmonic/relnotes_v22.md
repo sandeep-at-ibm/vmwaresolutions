@@ -108,7 +108,7 @@ VMware Federal on {{site.data.keyword.cloud_notm}} 支援在 WDC03 Federal on {{
 
 ### 已增加高容量 IBM Cloud Bare Metal Servers 的 SATA 磁碟機數目
 
-現在 NetApp ONTAP Select 高容量 {{site.data.keyword.baremetal_short}} 有 34 個 SATA 磁碟機可供使用。如需相關資訊，請參閱 [NetApp ONTAP Select 概觀](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components)中的 *NetApp ONTAP Select 實例元件*小節。
+現在 NetApp ONTAP Select 高容量 {{site.data.keyword.baremetal_short}} 有 34 個 SATA 磁碟機可供使用。如需相關資訊，請參閱 [NetApp ONTAP Select 實例的技術規格](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)。
 
 ## 附加服務的更新項目
 

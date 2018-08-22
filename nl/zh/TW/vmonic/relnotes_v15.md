@@ -24,7 +24,7 @@ lastupdated: "2017-03-30"
 
 ## 服務計費模型更新
 
-若為 Cloud Foundation 實例，則引進了新的 _SDDC Manager_ 授權，這是每一個節點的月費。如需相關資訊，請參閱 [Cloud Foundation 實例元件](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)。
+若為 Cloud Foundation 實例，則引進了新的 _SDDC Manager_ 授權，這是每一個節點的月費。如需相關資訊，請參閱 [Cloud Foundation 實例的技術規格](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 
 ## 可用性加強功能
 

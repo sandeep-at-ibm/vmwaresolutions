@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-05-25"
 * VMware NSX
 * VMware vSAN
 
-如果您選擇要對 VMware 元件使用您自己的授權，並為它提供有效的授權碼，則不會向 IBM 訂購此元件的授權，且不會在您的 {{site.data.keyword.cloud}} 基礎架構帳戶中收取此元件的每月授權費用。
+如果您選擇要對 VMware 元件使用您自己的授權，並為它提供有效的授權碼，則不會向 IBM 訂購此元件的授權，且不會在您的 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶中收取此元件的每月授權費用。
 
 **附註：**BYOL 特性不適用於「事業夥伴」使用者。
 
