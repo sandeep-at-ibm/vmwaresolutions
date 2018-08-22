@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -22,13 +22,13 @@ Quando richiedi i servizi gestiti per Veeam on {{site.data.keyword.cloud_notm}},
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Introduzione** nel riquadro di navigazione a sinistra.
 2. Scorri la pagina verso il basso e, sotto **Ordina servizi gestiti aggiuntivi**, fai clic sulla scheda **Servizi gestiti per Veeam on IBM Cloud**.
-3. Nella pagina **Ordina servizi gestiti per Veeam on IBM Cloud**, controlla la descrizione e le specifiche tecniche per Veeam on {{site.data.keyword.cloud_notm}} come servizio gestito e fai clic su **Crea**.
+3. Apri la pagina **Veeam on IBM Cloud**, controlla la descrizione e le specifiche tecniche per Veeam on {{site.data.keyword.cloud_notm}} come servizio gestito e fai clic su **Crea**.
 4. Specifica le impostazioni di configurazione in base ai tuoi requisiti o accetta i valori predefiniti.
 5. Fai clic su **vCenter Server** o **Cloud Foundation** per aggiungere il servizio a una delle tue istanze.
-6. Per aggiungere il servizio mentre ordini una nuova istanza, fai clic su **Aggiungi alla nuova istanza** e continua con l'ordine di una nuova istanza [vCenter Server](../vcenter/vc_orderinginstance.html), [vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html) o [Cloud Foundation](../sddc/sd_orderinginstance.html).
-7. Per aggiungere il servizio a un'istanza esistente, fai clic su **Aggiungi all'istanza distribuita** e seleziona l'istanza desiderata dall'elenco, quindi conferma di voler procedere con l'ordine facendo clic su **Fornitura**.
+6. Per aggiungere il servizio mentre ordini una nuova istanza, fai clic su **Aggiungi alla nuova istanza** e procedi quindi con l'ordine di una nuova istanza [vCenter Server](../vcenter/vc_orderinginstance.html), [vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html) o [Cloud Foundation](../sddc/sd_orderinginstance.html).
+7. Per aggiungere il servizio a un'istanza esistente, fai clic su **Aggiungi all'istanza esistente**, seleziona l'istanza desiderata dall'elenco, quindi conferma di voler procedere con l'ordine facendo clic su **Fornitura**.
 
-## Link correlati
+### Link correlati
 
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](../vcenter/vc_addingremovingservices.html)
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](../sddc/sd_addingremovingservices.html)

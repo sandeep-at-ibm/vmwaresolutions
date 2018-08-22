@@ -4,25 +4,25 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-20"
 
 ---
 
 # Ordine di Veeam on IBM Cloud
 
-Puoi ordinare il servizio Veeam on {{site.data.keyword.cloud_notm}} mentre ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
+Puoi ordinare il servizio Veeam on {{site.data.keyword.cloud}} mentre ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
 
 ## Ordine di Veeam on IBM Cloud per una nuova istanza
 
 Puoi ordinare una nuova istanza con Veeam on {{site.data.keyword.cloud_notm}} utilizzando uno dei seguenti metodi:
-* Dalla console {{site.data.keyword.vmwaresolutions_full}}, quando ordini una nuova istanza, seleziona **Veeam on IBM Cloud** nella sezione **Servizi**.
-* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **Servizio Veeam on {{site.data.keyword.cloud_notm}}**, specifica le impostazioni del servizio e seleziona **Aggiungi alla nuova istanza**.
+* Dalla console {{site.data.keyword.vmwaresolutions_short}}, quando ordini una nuova istanza, seleziona **Veeam on IBM Cloud** nella sezione **Servizi**.
+* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **Veeam on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi alla nuova istanza**.
 
 ## Ordine di Veeam on IBM Cloud per un'istanza esistente
 
 Puoi aggiungere il servizio Veeam on {{site.data.keyword.cloud_notm}} in un'istanza esistente utilizzando uno dei seguenti metodi:
-* Dalla console {{site.data.keyword.vmwaresolutions_short}}, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi servizio**.
-* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **Servizio Veeam on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi all'istanza esistente**.
+* Dalla console {{site.data.keyword.vmwaresolutions_short}}, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi**.
+* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **Veeam on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi all'istanza esistente**.
 
 ## Configurazione del servizio Veeam on IBM Cloud
 
@@ -30,18 +30,17 @@ Quando ordini il servizio, fornisci le seguenti impostazioni.
 
 ### Numero di VM per cui acquisire una Licenza
 
-È richiesto un minimo di 4 VM per la gestione delle licenze.
+È richiesto un minimo di 10 VM per la gestione delle licenze.
 
 ### Dimensione storage
 
-La capacità che soddisfa le tue esigenze di archiviazione. Per la gestione, è richiesto un minimo di 2.000 GB di archiviazione. Per considerazioni sulla stima della dimensione di archiviazione, vedi [Stima della capacità del repository](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
+La capacità che soddisfa le tue esigenze di archiviazione. Per considerazioni sulla stima della dimensione di archiviazione, vedi [Stima della capacità del repository](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
 
 ### Prestazioni Storage
 
 L'IOPS (Input/output Operations Per Second) per GB in base ai tuoi requisiti del carico di lavoro.
 
-
-## Link correlati
+### Link correlati
 
 * [Panoramica di Veeam on {{site.data.keyword.cloud_notm}}](veeam_considerations.html)
 * [Gestione di Veeam on {{site.data.keyword.cloud_notm}}](managingveeam.html)

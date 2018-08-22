@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -63,7 +63,7 @@ Esamina le seguenti considerazioni prima di eliminare un'istanza HCX on {{site.d
    Per ulteriori informazioni, vedi [Eliminazione di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](../services/standalone_deletingserviceinstances.html).
 3. Nel client web VMware vSphere, elimina l'HCX Manager in loco.
 
-## Link correlati
+### Link correlati
 
 * [Visualizzazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](../services/standalone_viewingserviceinstances.html)
 * [Glossario dei termini HCX](hcx_glossary.html)

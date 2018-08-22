@@ -4,25 +4,25 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-20"
 
 ---
 
 # Ordine di KMIP for VMware on IBM Cloud
 
-Puoi ordinare il servizio KMIP for VMware on {{site.data.keyword.cloud_notm}} mentre ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
+Puoi ordinare il servizio KMIP for VMware on {{site.data.keyword.cloud}} mentre ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
 
 ## Ordine di KMIP for VMware on IBM Cloud per una nuova istanza
 
 Puoi ordinare una nuova istanza con KMIP for VMware on {{site.data.keyword.cloud_notm}} utilizzando uno dei seguenti metodi:
-* Dalla console {{site.data.keyword.vmwaresolutions_full}}, quando ordini una nuova istanza, seleziona **KMIP for VMware on IBM Cloud** nella sezione **Servizi**.
-* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **Servizio KMIP for VMware on {{site.data.keyword.cloud_notm}}**, specifica le impostazioni del servizio e seleziona **Aggiungi alla nuova istanza**.
+* Dalla console {{site.data.keyword.vmwaresolutions_short}}, quando ordini una nuova istanza, seleziona **KMIP for VMware on IBM Cloud** nella sezione **Servizi**.
+* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **KMIP for VMware on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi alla nuova istanza**.
 
 ## Ordine di KMIP for VMware on IBM Cloud per un'istanza esistente
 
 Puoi aggiungere il servizio KMIP for VMware on {{site.data.keyword.cloud_notm}} in un'istanza esistente utilizzando uno dei seguenti metodi:
-* Dalla console {{site.data.keyword.vmwaresolutions_short}}, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi servizio**.
-* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **Servizio KMIP for VMware on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi all'istanza esistente**.
+* Dalla console {{site.data.keyword.vmwaresolutions_short}}, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi**.
+* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **KMIP for VMware on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi all'istanza esistente**.
 
 ## Configurazione del servizio KMIP for VMware on IBM Cloud
 
@@ -38,10 +38,11 @@ Seleziona la regione {{site.data.keyword.cloud_notm}} in cui dovrà essere ospit
 
 Per vCenter Server, devi configurare un cluster KMS (Key Management Server). L'endpoint nella tua regione selezionata si collega in modo sicuro al KMS tramite il certificato SSL del client. Vedi la seguente tabella per l'endpoint in ciascuna regione. Questi endpoint utilizzano certificati autofirmati che vengono gestiti dal team {{site.data.keyword.vmwaresolutions_short}}. L'impronta digitale per i certificati è `a9 d0 ff 15 df 85 10 6b 61 88 fe 2e 8b d3 1a af 48 c8 a0 7a`.
 
-Tabella 1: regioni degli endpoint del servizio KMIP for VMware on IBM Cloud
+Tabella 1: regioni degli endpoint del servizio KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
 | Regione         | Endpoint               |
 |:---------------|:-----------------------|
+| Germania        |  `161.156.68.107:5696` |
 | Sydney         |  `130.198.73.134:5696` |
 | Regno Unito |  `158.175.93.122:5696` |
 | Stati Uniti Sud       |  `169.60.185.42:5696`  |
@@ -54,17 +55,17 @@ Immetti la chiave API per l'ID del servizio {{site.data.keyword.cloud_notm}} uti
 
 ### Istanza Key Protect
 
-Fai clic su **Richiama** per ottenere l'elenco delle istanze del servizio IBM Key Protect disponibili e seleziona quella da utilizzare per la gestione delle chiavi.
+Fai clic su **Recupera** per ottenere l'elenco delle istanze del servizio IBM Key Protect disponibili e seleziona quella da utilizzare per la gestione delle chiavi.
 
 ### Chiave root del cliente
 
-Fai clic su **Richiama** per ottenere la chiave root del cliente memorizzata nella tua istanza IBM Key Protect selezionata.
+Fai clic su **Recupera** per ottenere la chiave root del cliente memorizzata nella tua istanza IBM Key Protect selezionata.
 
 
 
-## Link correlati
+### Link correlati
 
-* [Panoramica di KMIP for VMware on IBM Cloud](kmip_considerations.html)
+* [Panoramica di KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip_considerations.html)
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](../vcenter/vc_addingremovingservices.html)
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)

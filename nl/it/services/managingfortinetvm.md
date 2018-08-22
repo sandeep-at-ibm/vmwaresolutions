@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-06-07"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -20,7 +20,7 @@ Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](../vcenter/vc_addingremovingservices.html)
 
-## Link correlati
+### Link correlati
 
 * [Panoramica di FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_considerations.html)
 * [Come contattare il supporto IBM](../vmonic/trbl_support.html)

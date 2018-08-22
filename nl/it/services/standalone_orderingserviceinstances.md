@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,8 +20,8 @@ Assicurati di aver completato le seguenti attività:
 
 ## Procedura
 
-1. Fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
-2. Scorri fino alla tabella **Istanze HCX on-premise** e fai clic su **Ordina istanza**.
+1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra. 
+2. Scorri fino alla tabella **Istanze HCX on-premise** e fai clic su **Esegui provisioning del nuovo**.
 3. Specifica il **Nome istanza on-premises** e fai clic su **Avanti**.
 4. Verifica la configurazione dell'istanza prima di effettuare l'ordine.
    1. Esamina le impostazioni per l'istanza.
@@ -39,10 +39,9 @@ Quando la chiave di attivazione è pronta per l'uso, lo stato dell'istanza viene
 
 Visualizza e gestisci l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco che hai ordinato.
 
-## Link correlati
+### Link correlati
 
 * [Visualizzazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](standalone_viewingserviceinstances.html)
 * [Eliminazione di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](standalone_deletingserviceinstances.html)
 * [Glossario dei termini HCX](hcx_glossary.html)
 * [Documentazione di VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

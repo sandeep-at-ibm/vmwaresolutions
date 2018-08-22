@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -14,17 +14,28 @@ Il servizio HyTrust DataControl on {{site.data.keyword.cloud}} offre una potente
 
 **Disponibilità:** questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o aggiornate alle release della V2.3 o successive.
 
-## Componenti di HyTrust DataControl on IBM Cloud
+## Specifiche tecniche per HyTrust DataControl on IBM Cloud
 
-Una coppia di dispositivi HyTrust DataControl (HTDC) ad alta disponibilità (HA) viene distribuita sul cluster predefinito in modalità attiva-attiva. I dispositivi HTDC sono concessi in licenza per fornire la funzionalità HyTrust KeyControl ai tuoi carichi di lavoro.
+Nel servizio HyTrust DataControl on {{site.data.keyword.cloud_notm}} vengono ordinati e inclusi i seguenti componenti:
 
-Ogni coppia di dispositivi HTDC viene distribuita sulla stessa sottorete portatile specificata per le macchine virtuali (VM) di gestione, come il gestore NSX, i dispositivi vCenter Server Appliance e Platform Services Controller. I dispositivi vengono instradati tramite i BCR (backend customer router) {{site.data.keyword.cloud_notm}} e vengono assegnati al gateway associato alla sottorete delle VM di gestione. Inoltre, i dispositivi vengono posizionati nell'archiviazione predefinita del cluster predefinito.
+### Dispositivo HyTrust DataControl
+* CPU: 2 vCPU
+* RAM: 8 GB
+* Disco: 20 GB VMDK residente su vSAN in cluster convergente
+* Rete: posizionata su rete trasferibile privata supportata dalla VLAN specificata per la gestione
+
+### Alta disponibilità (HA)
+Vengono distribuiti due dispositivi DataControl in una configurazione attiva-attiva.
+
+### Licenze e tariffe
+
+Licenza per host: viene ordinata una licenza HyTrust DataControl per ciascun host nell'ambiente.
 
 ## Considerazioni sulla rimozione di HyTrust DataControl on IBM Cloud
 
 Prima di rimuovere il servizio HyTrust DataControl on {{site.data.keyword.cloud_notm}}, assicurati di aver crittografato o eseguito il backup di tutti i dischi da DataControl. Dopo aver rimosso il servizio, le chiavi potrebbero essere eliminate e potresti essere bloccato dalle tue VM.
 
-## Link correlati
+### Link correlati
 
 * [Ordine di HyTrust DataControl on {{site.data.keyword.cloud_notm}}](htdc_ordering.html)
 * [Gestione di HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtcc.html)

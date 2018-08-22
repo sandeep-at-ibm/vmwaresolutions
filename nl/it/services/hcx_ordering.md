@@ -4,22 +4,22 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-20"
 
 ---
 
 # Ordine di VMware HCX on IBM Cloud
 
-Puoi ordinare il servizio VMware HCX on {{site.data.keyword.cloud_notm}} mentre ordini una nuova istanza VMware vCenter Server with Hybridity Bundle con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
+Puoi ordinare il servizio VMware HCX on {{site.data.keyword.cloud}} mentre ordini una nuova istanza VMware vCenter Server with Hybridity Bundle con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
 
 ## Ordine di VMware HCX on IBM Cloud per una nuova istanza
 
-Per ordinare una nuova istanza VMware vCenter Server on IBM Cloud with Hybridity Bundle con VMware HCX on {{site.data.keyword.cloud_notm}}, seleziona **VMware HCX on IBM Cloud** nella sezione **Servizi** quando ordini l'istanza dalla console {{site.data.keyword.vmwaresolutions_full}}.
+Per ordinare una nuova istanza VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle con VMware HCX on {{site.data.keyword.cloud_notm}}, seleziona **VMware HCX on IBM Cloud** nella sezione **Servizi** quando ordini l'istanza dalla console {{site.data.keyword.vmwaresolutions_short}}.
 
 
 ## Ordine di VMware HCX on IBM Cloud per un'istanza esistente
 
-Per aggiungere il servizio VMware HCX on {{site.data.keyword.cloud_notm}} in un'istanza esistente di VMware vCenter Server on IBM Cloud with Hybridity Bundle, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi servizio**.
+Per aggiungere il servizio VMware HCX on {{site.data.keyword.cloud_notm}} in un'istanza esistente di VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi**.
 
 ## Configurazione di VMware HCX on IBM Cloud
 
@@ -38,15 +38,15 @@ Per installare HCX on {{site.data.keyword.cloud_notm}}, completa le seguenti imp
 ## Processo di distribuzione per HCX on IBM Cloud
 
 La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Sia che tu scelga di ordinare un'istanza vCenter Server with Hybridity Bundle con il servizio incluso o di distribuire il servizio nella tua istanza in un secondo momento, i seguenti passi sono completati dal processo di automazione {{site.data.keyword.vmwaresolutions_short}}:
-1. Dall'infrastruttura {{site.data.keyword.cloud_notm}}, vengono ordinate tre sottoreti per HCX: 
+1. Dall'infrastruttura {{site.data.keyword.cloud_notm}}, vengono ordinate tre sottoreti per HCX:
    * Una sottorete portatile privata per la gestione HCX.
    * Una sottorete portatile privata per le interconnessioni HCX, se per **Tipo di interconnessione HCX** viene selezionato **Rete privata**.
    * Una sottorete portatile pubblica per le interconnessioni HCX, se per **Tipo di interconnessione HCX** viene selezionato **Rete pubblica**. Questa sottorete viene anche utilizzata per l'attivazione e la manutenzione con VMware.
 
    **Importante:** gli indirizzi IP nelle sottoreti ordinate per HCX sono destinati a essere gestiti dall'automazione di VMware on {{site.data.keyword.cloud_notm}}. Questi indirizzi IP non possono essere assegnati alle risorse VMware, come VM ed Edge NSX, create da te. Se hai bisogno di ulteriori indirizzi IP per le tue risorse VMware, devi ordinare le tue proprie sottoreti da {{site.data.keyword.cloud_notm}}.
 2. Se è stata seleziona la **Rete privata** per il **Tipo di interconnessione HCX**, viene creato un gruppo di porte denominato **SDDC-DPortGroup-HCX-Private** nel DVS (Distributed Virtual Switch) privato.
-3. Viene ordinata una chiave di attivazione HCX da VMware. 
-4. Vengono creati tre pool di risorse e cartelle VM per HCX, necessari per interconnessioni HCX, componenti HCX locali e componenti HCX remoti. 
+3. Viene ordinata una chiave di attivazione HCX da VMware.
+4. Vengono creati tre pool di risorse e cartelle VM per HCX, necessari per interconnessioni HCX, componenti HCX locali e componenti HCX remoti.
 5. Viene distribuita e configurata una coppia di gateway dei servizi edge (ESG) VMware NSX per il traffico di gestione HCX:
    * Le interfacce di uplink pubblico e privato vengono configurate utilizzando le sottoreti ordinate.
    * Gli ESG vengono configurati come una coppia di dispositivi edge di grandi dimensioni con l'alta disponibilità (HA) abilitata.
@@ -63,7 +63,7 @@ La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Si
    * Vengono configurati i contenitori di distribuzione HCX locali e remoti.
 7. Il nome host e l'indirizzo IP di HCX Manager vengono registrati con il server DNS di VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
-## Link correlati
+### Link correlati
 
 * [Panoramica di HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
 * [Gestione di HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)
