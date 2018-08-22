@@ -4,25 +4,25 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-20"
 
 ---
 
 # Ordine di F5 on IBM Cloud
 
-Puoi ordinare il servizio F5 on {{site.data.keyword.cloud_notm}} mentre ordini una nuova istanza con BIG-IP Virtual Edition (VE) incluso o aggiungendo BIG-IP VE alla tua istanza esistente.
+Puoi ordinare il servizio F5 on {{site.data.keyword.cloud}} mentre ordini una nuova istanza con BIG-IP Virtual Edition (VE) incluso o aggiungendo BIG-IP VE alla tua istanza esistente.
 
 ## Ordine di F5 on IBM Cloud per una nuova istanza
 
 Puoi ordinare una nuova istanza con F5 on {{site.data.keyword.cloud_notm}} utilizzando uno dei seguenti metodi:
-* Dalla console {{site.data.keyword.vmwaresolutions_full}}, quando ordini una nuova istanza, seleziona **F5 on IBM Cloud** nella sezione **Servizi**.
-* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **Servizio F5 on {{site.data.keyword.cloud_notm}}**, specifica le impostazioni del servizio e seleziona **Aggiungi alla nuova istanza**.
+* Dalla console {{site.data.keyword.vmwaresolutions_short}}, quando ordini una nuova istanza, seleziona **F5 on IBM Cloud** nella sezione **Servizi**.
+* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **F5 on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi alla nuova istanza**.
 
 ## Ordine di F5 on IBM Cloud per un'istanza esistente
 
 Puoi aggiungere il servizio F5 on {{site.data.keyword.cloud_notm}} in un'istanza esistente utilizzando uno dei seguenti metodi:
-* Dalla console {{site.data.keyword.vmwaresolutions_short}}, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi servizio**.
-* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **Servizio F5 on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi all'istanza esistente**.
+* Dalla console {{site.data.keyword.vmwaresolutions_short}}, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi**.
+* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **F5 on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi all'istanza esistente**.
 
 ## Configurazione del servizio F5 on IBM Cloud
 
@@ -50,7 +50,7 @@ Il modello di licenza per il servizio F5 on {{site.data.keyword.cloud_notm}} off
 
 Specifica la velocità effettiva massima del dispositivo F5 BIG–IP.
 
-## Link correlati
+### Link correlati
 
 * [Panoramica di F5 on {{site.data.keyword.cloud_notm}}](f5_considerations.html)
 * [Gestione di F5 on {{site.data.keyword.cloud_notm}}](managing_f5.html)

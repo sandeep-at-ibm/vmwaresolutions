@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-04"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -16,6 +16,16 @@ IMI può fungere da unico provider attendibile per ridurre la complessità del m
 
 IMI fornisce servizi gestiti per le tue istanze Cloud Foundation e vCenter Server, che comprendono la gestione avanzata di VMware vSphere, la completa copertura di VMware NSX per garantire un'infrastruttura di rete virtuale altamente disponibile e sicura e il monitoraggio di VMware vSAN per garantire la disponibilità dei dati.
 
+## Specifiche tecniche
+
+Nel servizio gestito IMI sono incluse le seguenti specifiche:
+
+* Opzioni di copertura: 8X5, 16X5 o 24X7
+* Strumenti di gestione dei servizi IT e processo di gestione con responsabilità per la distribuzione generale
+* Gestione della conformità
+* Gestione del servizio e creazione di report su base giornaliera e settimanale
+* Servizi a valore aggiunto senza aumento dei costi per un miglioramento continuo
+
 ## Procedura
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Introduzione** nel riquadro di navigazione a sinistra.
@@ -24,7 +34,7 @@ IMI fornisce servizi gestiti per le tue istanze Cloud Foundation e vCenter Serve
 
 Un rappresentante di prevendita IMI ti contatterà tramite le tue informazioni di contatto {{site.data.keyword.cloud_notm}} e ti aiuterà con i servizi di cui hai bisogno.
 
-## Link correlati
+### Link correlati
 
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Come contattare il supporto IBM](../vmonic/trbl_support.html)

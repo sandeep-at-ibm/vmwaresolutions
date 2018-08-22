@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -12,18 +12,33 @@ lastupdated: "2018-06-07"
 
 Il servizio Zerto on {{site.data.keyword.cloud}} fornisce funzionalità di replica e ripristino di emergenza, che è possibile integrare nelle offerte di distribuzione per proteggere e recuperare i dati nel tuo ambiente virtuale VMware su {{site.data.keyword.cloud_notm}}.
 
-## Componenti del servizio Zerto on IBM Cloud
+## Considerazioni tecniche per Zerto on IBM Cloud
 
-Nel servizio Zerto on {{site.data.keyword.cloud_notm}} vengono ordinati e inclusi i seguenti componenti:
+Nel servizio Zerto on {{site.data.keyword.cloud_notm}} vengono ordinati e inclusi i seguenti componenti.
 
-* Una sottorete portatile privata dall'infrastruttura {{site.data.keyword.cloud_notm}} che verrà utilizzata dai dispositivi Zerto Virtual Replication Appliance
-* Un'istanza di servizio virtuale (o VSI, Virtual Service Instance) di Microsoft Windows su cui è installato Zerto Virtual Replication
-* Dispositivi Zerto Virtual Replication Appliance da distribuire e configurare in tutti i server ESXi
+**Nota**: i componenti Zerto Virtual Manager (ZVM) vengono distribuiti solo nel cluster predefinito.
 
-**Nota**: i componenti Zerto Virtual Manager (ZVM) saranno distribuiti solo nel cluster predefinito.
+### VSI
 
+* Una VSI (Virtual Service Instance) - Zerto Virtual Manager
+* Core 2 x 2,0 GHz
+* 4 GB di RAM
+* Windows Server 2012 R2 Standard Edition (64 bit)
 
-## Link correlati
+### Archiviazione
+
+Disco: 100 GB (SAN)
+
+### Rete
+
+* Un indirizzo IP primario privato
+* Uplink di rete privata da 1 Gbps
+
+### Licenze e tariffe
+
+Licenza di Zerto Replication V5.5
+
+### Link correlati
 
 * [Informazioni su {{site.data.keyword.vmwaresolutions_short}}](../vmonic/prod_overview.html)
 * [Ordine di Zerto on {{site.data.keyword.cloud_notm}}](zerto_ordering.html)

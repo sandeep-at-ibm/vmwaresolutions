@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -19,7 +19,7 @@ Per gestire il servizio HCX on {{site.data.keyword.cloud}}, devi accedere alla c
 
 Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html).
 
-## Applicazione degli aggiornamenti a HCX on IBM Cloud 
+## Applicazione degli aggiornamenti a HCX on IBM Cloud
 
 HCX on {{site.data.keyword.cloud_notm}} viene distribuito con l'ultima build testata della tecnologia VMware Hybrid Cloud Extension. VMware invia regolarmente aggiornamenti a queste build, che includono correzioni importanti e nuove funzioni. Queste build vengono trasmesse automaticamente alle installazioni di HCX on {{site.data.keyword.cloud}}, incluse le istallazioni di HCX in loco.
 
@@ -27,7 +27,7 @@ Per applicare eventuali correzioni di manutenzione trasmesse al tuo ambiente, de
 
 Se non vedi un aggiornamento di build previsto, hai problemi con HCX o vuoi che l'ultima build di HCX venga trasmessa immediatamente al tuo sistema, apri un ticket di supporto seguendo la procedura in [Come contattare il supporto IBM](../vmonic/trbl_support.html).
 
-## Link correlati
+### Link correlati
 
 * [Panoramica di HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
 * [Glossario dei termini HCX](hcx_glossary.html)

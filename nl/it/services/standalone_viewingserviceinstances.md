@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -36,10 +36,9 @@ Tabella 2. Descrizioni dello stato delle istanze HCX on {{site.data.keyword.clou
 | Installato | L'istanza è pronta per l'uso. |
 | In fase di rimozione | L'istanza è in fase di eliminazione. |
 
-## Link correlati
+### Link correlati
 
 * [Ordine di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](standalone_orderingserviceinstances.html)
 * [Eliminazione di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](standalone_deletingserviceinstances.html)
 * [Glossario dei termini HCX](hcx_glossary.html)
 * [Documentazione di VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

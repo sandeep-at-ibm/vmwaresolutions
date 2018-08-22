@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -34,11 +34,11 @@ Per aggiornare Zerto Virtual Replication, accedi alla console di Zerto Virtual R
 
 Quando aggiungi o rimuovi i server ESXi per il cluster primario della tua istanza, i VRA vengono distribuiti o rimossi automaticamente. I VRA non vengono distribuiti automaticamente ai server ESXi nei cluster secondari della tua istanza, ma puoi distribuirli autonomamente dalla console di Zerto Virtual Replication.
 
-## Link correlati
+### Link correlati
 
-* [Panoramica di Zerto on IBM Cloud](addingzertodr.html)
+* [Panoramica di Zerto on {{site.data.keyword.cloud_notm}}](addingzertodr.html)
 * [Richiesta di servizi gestiti per Zerto on {{site.data.keyword.cloud_notm}}](managing_zerto_services.html)
 * [Sito web zerto.com](https://www.zerto.com){:new_window}
 * [Documentazione tecnica di Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Ripristino di emergenza Zerto](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/zerto){:new_window}
+* [Ripristino di emergenza Zerto](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
 * [Spiegazione degli avvisi di Zerto Virtual Replication](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)
