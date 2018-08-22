@@ -4,13 +4,11 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-19"
 
 ---
 
 # NetApp ONTAP Select-Instanzen löschen
-
-Zum Freigeben der Komponenten, die Sie in einer NetApp ONTAP Select-Instanz bestellt haben, löschen Sie die Instanz.
 
 Wenn Sie eine NetApp ONTAP Select-Instanz löschen, werden die folgenden Komponenten nacheinander freigegeben:
 1. Bereitgestellte Cluster-VMs (virtuelle Maschinen) für NetApp ONTAP Select und virtuelle Maschine für NetApp ONTAP Select Deploy
@@ -44,7 +42,7 @@ Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz n
    1. Klicken Sie erneut auf das Überlaufmenüsymbol rechts neben der **vCenter-Konsole** und anschließend auf **Instanz löschen**.
    2. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [NetApp ONTAP Select-Instanzen bestellen](np_orderinginstances.html)
 * [NetApp ONTAP Select-Instanzen anzeigen](np_viewinginstances.html)

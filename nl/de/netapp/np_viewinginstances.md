@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # NetApp ONTAP Select-Instanzen anzeigen
 
-Zeigen Sie die NetApp ONTAP Select-Instanzen, die Sie bestellt haben, und detaillierte Informationen zu diesen Instanzen an.
+Sie können die Zusammenfassung und die detaillierten Informationen der NetApp ONTAP Select-Instanzen anzeigen, die für verschiedene Benutzerkonten bereitgestellt wurden.
 
 ## Zusammenfassung der NetApp ONTAP Select-Instanzen anzeigen
 
-Wenn Sie eine Zusammenfassung aller NetApp ONTAP Select-Instanzen in Ihrer Umgebung anzeigen möchten, führen Sie die folgenden Schritte aus:
+Wenn Sie eine Zusammenfassung aller NetApp ONTAP Select-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
-2. Zeigen Sie in der Tabelle **NetApp ONTAP Select-Instanzen** die Liste Ihrer Instanzen an.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+2. Klicken Sie in der rechten oberen Ecke der Konsole auf Ihren Avatar und klicken Sie auf das Feld **Konto**, um das Benutzerkonto auszuwählen, für das Sie Instanzen prüfen wollen.
+3. Prüfen Sie in der Tabelle **NetApp ONTAP Select-Instanzen** die Liste der Instanzen, die in dem ausgewählten Benutzerkonto bereitgestellt sind.
 
 Tabelle 1. Elemente von NetApp ONTAP Select-Instanzen
 
@@ -43,7 +44,7 @@ Tabelle 2. Eigenschaften von NetApp ONTAP Select-Instanzen
 | Name | Der Name der Instanz. |
 | ID | Die ID der Instanz. |
 | Standort | Das Rechenzentrum, in dem die Instanz gehostet wird. |
-| Bereitgestellte Version | Die bereitgestellte Version von {{site.data.keyword.vmwaresolutions_full}}. |
+| Bereitgestellte Version | Die bereitgestellte Version von {{site.data.keyword.vmwaresolutions_short}}. |
 | vCenter-Version | Die Version von VMware vCenter Server.<br><br>**Hinweis:** Die Versionen von vCenter Server, die in der {{site.data.keyword.vmwaresolutions_short}}-Konsole und in VMware vSphere Web Client angezeigt werden, weichen etwas voneinander ab. Beide Angaben sind richtig. |
 | NSX for vSphere | Die Produktversion von VMware NSX for vSphere. |
 | NSX-Lizenzedition | Die Version und Edition der VMware NSX-Lizenz. |
@@ -85,7 +86,7 @@ Tabelle 3. Zugriffsinformationen für instanzbezogene NetApp ONTAP Select-Kompon
 
 ## Bereitstellungsverlauf für NetApp ONTAP Select-Instanzen anzeigen
 
-Zeigen Sie den Bereitstellungsverlauf der Instanz unter **Bereitstellungsverlauf** an.
+Klicken Sie im linken Navigationsfenster auf **Bereitstellungsverlauf**, um den Bereitstellungsverlauf für die Instanz anzuzeigen.
 
 Tabelle 4. Bereitstellungsverlauf der NetApp ONTAP Select-Instanz
 
@@ -152,7 +153,7 @@ Tabelle 6. ESXi-Serverdetails eines NetApp ONTAP Select-Clusters
 
 | Element        | Beschreibung       |  
 |:------------|:----------------- |
-| Name | Der Name des ESXi-Servers im Format `<host_prefix><n>.<subdomain_label>.<root_domain>`, wobei Folgendes gilt:<br><br>`host_prefix` ist das Hostnamenspräfix, `n` ist die Folgenummer des Servers, `subdomain_label` ist die Unterdomänenbezeichnung und `root_domain` ist der Rootdomänenname.|
+| Name | Der Name des ESXi-Servers im Format `<host_prefix><n>.<subdomain_label>.<root_domain>`, wobei Folgendes gilt:<br><br>`host_prefix` ist das Hostnamenspräfix, `n` ist die Folgenummer des Servers, `subdomain_label` ist die Unterdomänenbezeichnung und `root_domain` ist der Rootdomänenname. |
 | Version | Die Version des ESXi-Servers. |
 | Berechtigungsnachweise | Der Benutzername und das Kennwort für den Zugriff auf den ESXi-Server. |
 | Private IP | Die private IP-Adresse des ESXi-Servers. |
@@ -170,7 +171,7 @@ In den folgenden Abschnitten finden Sie Informationen, die Sie bei der Ausführu
 *  Eine Liste der Zugriffspunkte für die Anmeldung beim privaten Netz der {{site.data.keyword.cloud_notm}}-Infrastruktur mittels VPN finden Sie unter [VPN-Zugriff](http://www.softlayer.com/vpn-access){:new_window}.
 *  Falls Sie beim Bereitstellen einer Datei im Format "OVF" (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](../vmonic/trbl_deploy_ovf.html) weitere Informationen.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [NetApp ONTAP Select-Instanzen bestellen](np_orderinginstances.html)
 * [NetApp ONTAP Select-Instanzen löschen](np_deletinginstance.html)
