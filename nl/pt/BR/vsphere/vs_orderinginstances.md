@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -24,7 +24,6 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 
 ## Configurações do sistema
 
-<!--**Important: Do not modify any values that are set during ordering and cluster deployment. Doing so can result in your cluster becoming unusable.**-->
 Deve-se especificar as configurações do sistema a seguir ao pedir um novo cluster do vSphere.
 
 ### Nome do cluster
@@ -187,7 +186,7 @@ Dependendo do {{site.data.keyword.CloudDataCent_notm}} selecionado, VLANs públi
 
 #### Par de HA do FortiGate Physical Appliance série 300
 
-É possível também selecionar se deseja incluir o Par de HA do FortiGate Physical Appliance série 300 para assegurar seu ambiente de nuvem. Para obter mais informações, veja [Visão geral do FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html).
+É possível também selecionar se deseja incluir o Par de HA do FortiGate Physical Appliance série 300 para assegurar seu ambiente de nuvem. Para obter mais informações, consulte [Visão geral do FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html).
 
 ## Resumo do Pedido
 
@@ -223,7 +222,7 @@ Com base em suas configurações, o custo estimado é gerado instantaneamente e 
 
    **Nota**: Apenas o {{site.data.keyword.baremetal_short}} são instalados. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como VMware vCenter, VMware NSX, VMware vSAN.
 
-## Resultados
+### Resultados
 
 Se você salvou a configuração de cluster como um modelo, obterá uma notificação do console de que a configuração foi salva com êxito e então será possível localizar o modelo na lista **Configurações de cluster**.
 
@@ -231,7 +230,7 @@ Se tiver feito um pedido, a implementação do cluster será iniciada automatica
 
 **Nota:** os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Cloud Foundation, não são exibidos na página **Instâncias implementadas**.
 
-## Links relacionados
+### Links relacionados
 
 * [Pedindo clusters do vSphere com base em configurações existentes](vs_orderingbasedonexistingconfig.html)
 * [Ajustando a escala de clusters existentes](vs_scalingexistingclusters.html)

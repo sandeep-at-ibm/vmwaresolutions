@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-29"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,7 +18,7 @@ Tabela 1. BOM para clusters do VMware vSphere
 |:-------------|:--------------------------------|:--------|
 | VMware       | vSphere ESXi                    | 6.5 Atualização 1 ou 6.0 Atualização 2 |
 
-## Links relacionados
+### Links relacionados
 
 * [Números de compilação e versões do VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Notas sobre a liberação do VMware ESXi 6.0 Atualização 2](https://docs.vmware.com/en/VMware-vSphere/6.0/rn/vsphere-esxi-60u2-release-notes.html)

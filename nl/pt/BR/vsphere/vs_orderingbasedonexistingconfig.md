@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -40,7 +40,7 @@ Se tiver feito um pedido, a implementação do cluster será iniciada automatica
 
 **Nota:** os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Cloud Foundation, não são exibidos na página **Instâncias implementadas**.
 
-## Links relacionados
+### Links relacionados
 
 * [Pedindo novos clusters do vSphere](vs_orderinginstances.html)
 * [Ajustando a escala de clusters existentes do vSphere](vs_scalingexistingclusters.html)

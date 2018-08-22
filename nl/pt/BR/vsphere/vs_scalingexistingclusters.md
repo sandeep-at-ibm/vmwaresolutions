@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -30,13 +30,13 @@ Assegure-se de que tenha concluído as tarefas a seguir:
    * Para salvar a configuração como um modelo sem fazer um pedido, clique em **Salvar configuração**.
    * Para fazer o pedido, assegure-se de que a conta a ser cobrada está correta, revise e aceite os termos e, em seguida, clique em **Provisão**.
 
-## Resultados
+### Resultados
 
 A implementação de ajuste de escala do cluster é iniciada automaticamente e você receberá uma confirmação por e-mail de que a ordem está sendo processada. Quando o cluster estiver pronto para usar, você será notificado por e-mail.
 
 **Nota:** os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Cloud Foundation, não são exibidos na página **Instâncias implementadas**.
 
-## Links relacionados
+### Links relacionados
 
 * [Pedindo novos clusters do vSphere](vs_orderinginstances.html)
 * [Pedindo clusters do vSphere com base em configurações existentes](vs_orderingbasedonexistingconfig.html)
