@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -39,7 +39,7 @@ Pour les instances déployées dans la version 2.1 ou des éditions antérieures
 
 Vous ne pouvez pas modifier les noms et les adresses IP des serveurs ESXi car ils sont enregistrés pour la résolution DNS Windows. Toute modification entraînerait des échecs durant le déploiement ou les fonctions vCenter Server.
 
-**Remarque** : n'utilisez pas la fonction **Renommer unité** de l'interface utilisateur IBM Cloud pour modifier des noms de serveur ESXi. Cette fonction modifie en fait le nom de domaine complet du serveur ESXi, mais le centre vCenter configuré et les enregistrements d'hôte d'instance de serveur virtuel Windows VSI seront incorrects et risquent de provoquer des incidents.
+**Remarque** : n'utilisez pas la fonction **Renommer unité** de l'interface utilisateur {{site.data.keyword.cloud_notm}} pour modifier des noms de serveur ESXi. Cette fonction modifie en fait le nom de domaine complet du serveur ESXi, mais le centre vCenter configuré et les enregistrements d'hôte d'instance de serveur virtuel Windows VSI seront incorrects et risquent de provoquer des incidents.
 
 ## Puis-je désactiver l'accès racine sur mes serveurs ESXi ?
 

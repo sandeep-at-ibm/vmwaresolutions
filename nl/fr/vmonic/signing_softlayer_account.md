@@ -4,20 +4,24 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-03"
+lastupdated: "2018-07-23"
 
 ---
 
-# Inscription pour un compte IBM Cloud
+# Inscription à des comptes requis
 
-Pour obtenir un compte {{site.data.keyword.cloud}}, effectuez une mise à niveau de votre compte {{site.data.keyword.cloud_notm}} vers un compte de paiement à la carte.
+## Inscription à un compte IBM Cloud
 
-**Remarque** : le compte {{site.data.keyword.cloud_notm}} était précédemment nommé compte IBM SoftLayer.
+Vous pouvez vous inscrire pour obtenir un compte {{site.data.keyword.cloud}} en effectuant une utilisant un **IBMid** existant ou en créant un nouvel **IBMid**. Pour en savoir plus sur la procédure d'inscription à un compte {{site.data.keyword.cloud_notm}}, voir[Inscription à un compte {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
 
-## Procédure
+## Inscription à un compte d'infrastructure IBM Cloud (SoftLayer)
 
-1. Connectez-vous à la console {{site.data.keyword.vmwaresolutions_full}} avec votre **IBMid**.
-2. Sur le côté droit de la bannière, cliquez sur **Gestion > Facturation et utilisation > Facturation**.
+Le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), auparavant appelé compte IBM SoftLayer, permet de se connecter au portail client d'infrastructure {{site.data.keyword.cloud_notm}} qui fournit certaines fonctions supplémentaires pour gérer des produits et des services d'infrastructure. Pour vous inscrire à un compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), effectuez une mise à niveau de votre compte {{site.data.keyword.cloud_notm}} vers un compte de paiement à la carte.
+
+### Procédure
+
+1. Connectez-vous à la console {{site.data.keyword.vmwaresolutions_short}} avec votre **IBMid**.
+2. Sur le côté gauche de la bannière, cliquez sur **Gestion > Facturation et utilisation > Facturation**.
 3. Cliquez sur **Ajouter une carte de crédit**.
 4. Entrez les informations sur la facturation et la carte de crédit.
 5. Lisez les conditions des services Cloud. Veillez à les accepter avant de procéder à la mise à niveau.
@@ -28,10 +32,10 @@ Pour obtenir un compte {{site.data.keyword.cloud}}, effectuez une mise à niveau
 10. Lorsque vous êtes notifié par courrier électronique que votre compte est prêt, accédez au portail {{site.data.keyword.slportal}}, puis cliquez sur **Connexion par ID IBM**.
     Vous êtes alors automatiquement connecté.
 
-## Liens connexes
+### Liens connexes
 
 * [Foire aux questions](faq.html)
-* [Exigences liées à un compte {{site.data.keyword.cloud_notm}}](slaccountrequirement.html)
-* [Vidéo : Comment créer un compte IBM Cloud](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [Exigences relatives au compte d'infrastructure {{site.data.keyword.cloud_notm}}](slaccountrequirement.html)
+* [Vidéo : Comment créer un compte {{site.data.keyword.cloud_notm}}](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Passage à IBMid](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}

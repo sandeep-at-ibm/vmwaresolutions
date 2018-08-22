@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
 # A propos d'IBM Cloud for VMware Solutions
 
-{{site.data.keyword.vmwaresolutions_full}} permet d'intégrer ou de faire migrer rapidement et en toute transparence vos charges de travail VMware locales dans {{site.data.keyword.cloud_notm}} à l'aide de l'infrastructure {{site.data.keyword.cloud_notm}} haute performance sécurisée et de la technologie de virtualisation hybride VMware, leader de l'industrie.
+{{site.data.keyword.vmwaresolutions_full}} permet d'intégrer ou de faire migrer rapidement et en toute transparence vos charges de travail VMware locales dans {{site.data.keyword.cloud_notm}} à l'aide de l'infrastructure {{site.data.keyword.cloud_notm}} hautes performances sécurisée et de la technologie de virtualisation hybride VMware, leader de l'industrie.
 
 Avec {{site.data.keyword.vmwaresolutions_short}} vous pouvez déployer facilement vos environnements virtuels VMware et gérer les ressources de l'infrastructure sur {{site.data.keyword.cloud_notm}}. Dans le même temps, vous pouvez toujours utiliser votre console habituelle du produit VMware pour gérer les charges de travail VMware.
 
@@ -27,78 +27,107 @@ Avec {{site.data.keyword.vmwaresolutions_short}} vous pouvez déployer facilemen
 ## Offres de déploiement
 
 {{site.data.keyword.vmwaresolutions_short}} offrent des choix de déploiements normalisés et personnalisables des environnements virtuels VMware. Les types de déploiement suivants sont proposés :
-* **VMware vCenter Server on {{site.data.keyword.cloud_notm}}** : l'offre vCenter Server vous permet de déployer un environnement virtuel VMware avec les ressources de calcul, de stockage et de réseau les mieux adaptées à vos besoins métier.
-* **VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle** : l'offre vCenter Server with Hybridity est un cloud privé hébergé qui vous permet de déployer rapidement et facilement votre infrastructure locale dans le cloud. L'environnement VMware est basé sur des licences SDDC (Software Defined Data Center) VMware fournies par IBM et inclut VMware Hybrid Cloud Extension (HCX). HCX vous permet de connecter un environnement vSphere 5.0+ local à des sites IBM Cloud de manière sécurisée pour obtenir une hybridité d'infrastructure transparente et une véritable mobilité d'application.
-* **VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}** : l'offre Cloud Foundation fournit un environnement virtuel VMware unifié avec les ressources de calcul, de stockage et de réseau {{site.data.keyword.cloud_notm}} standard dédiées à chaque déploiement utilisateur.
-* **VMware vSphere on {{site.data.keyword.cloud_notm}}** : l'offre vSphere on {{site.data.keyword.cloud_notm}} fournit un service de virtualisation personnalisable qui combine des serveurs {{site.data.keyword.baremetal_short}} compatibles VMware, des composants matériels et des licences afin de générer votre propre environnement VMware hébergé sur IBM.
-* **NetApp ONTAP Select** : l'offre NetApp ONTAP Select vous permet de déployer un cluster de stockage défini par les logiciels qui répond à vos besoins en matière de dispositif de stockage dédié à haute disponibilité basé sur NetApp ONTAP Select.
-* **VMware Federal on {{site.data.keyword.cloud_notm}}** : l'offre VMware Federal on {{site.data.keyword.cloud_notm}} fournit la prise en charge permettant de commander une instance vCenter Server de base, fournit l'option de sécurisation des instances déployées et retire les informations sensibles et la connexion de gestion ouverte pour l'accès entrant à l'instance des fonctions de gestion.
 
-## Services supplémentaires
+### VMware vCenter Server on IBM Cloud
+
+L'offre vCenter Server vous permet de déployer un environnement virtuel VMware avec les ressources de calcul, de stockage et de réseau les mieux adaptées à vos besoins métier.
+
+Pour plus d'informations, voir [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html).
+
+### VMware vCenter Server on IBM Cloud with Hybridity Bundle
+
+L'offre vCenter Server with Hybridity est un cloud privé hébergé qui vous permet de déployer rapidement et facilement votre infrastructure locale dans le cloud. L'environnement VMware est basé sur des licences SDDC (Software Defined Data Center) VMware fournies par IBM et inclut VMware Hybrid Cloud Extension (HCX). HCX vous permet de connecter un environnement vSphere 5.0+ local à des sites {{site.data.keyword.cloud_notm}} de manière sécurisée pour obtenir une hybridité d'infrastructure transparente et une véritable mobilité d'application.
+
+Pour plus d'informations, voir [Présentation de vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html).
+
+### VMware Cloud Foundation on IBM Cloud
+
+L'offre Cloud Foundation fournit un environnement virtuel VMware unifié avec les ressources de calcul, de stockage et de réseau {{site.data.keyword.cloud_notm}} standard dédiées à chaque déploiement utilisateur.
+
+Pour plus d'informations, voir [Présentation de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
+
+### VMware vSphere on IBM Cloud
+
+L'offre vSphere on {{site.data.keyword.cloud_notm}} fournit un service de virtualisation personnalisable qui combine des serveurs {{site.data.keyword.baremetal_short}} compatibles VMware, des composants matériels et des licences afin de générer votre propre environnement VMware hébergé sur IBM.
+
+Pour plus d'informations, voir [Présentation de VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html).
+
+### NetApp ONTAP Select
+
+L'offre NetApp ONTAP Select vous permet de déployer un cluster de stockage défini par les logiciels qui répond à vos besoins en matière de dispositif de stockage dédié à haute disponibilité basé sur NetApp ONTAP Select.
+
+Pour plus d'informations, voir [Présentation de NetApp ONTAP Select](../netapp/np_netappoverview.html).
+
+### VMware Federal on IBM Cloud
+
+L'offre VMware Federal on {{site.data.keyword.cloud_notm}} fournit la prise en charge permettant de commander une instance vCenter Server de base, fournit l'option de sécurisation des instances déployées et retire les informations sensibles et la connexion de gestion ouverte pour l'accès entrant à l'instance des fonctions de gestion.
+
+Pour plus d'informations, voir [Présentation de VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html).
+
+## Services complémentaires
 
 {{site.data.keyword.vmwaresolutions_short}} vous permet d'ajouter divers services au moment où vous commandez une instance ou après le déploiement de l'instance. Les services suivants sont proposés :
 
+### F5 on IBM Cloud
+
+Le service F5 on {{site.data.keyword.cloud_notm}} (F5 BIG-IP® Virtual Edition) fournit des services intelligents d'équilibrage de charge L4-L7 et de gestion du trafic à l'échelle locale et globale, une protection maximale via pare-feu des applications Web et réseau et un accès sécurisé aux applications fédérées.
+
+Pour plus d'informations, voir [Présentation de F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html).
+
 ### FortiGate Security Appliance on IBM Cloud
 
-Ce service déploie une paire à haute disponibilité de dispositifs FortiGate Security Appliance (FSA) série 300 qui fournissent des services de pare-feu, de routage, de conversion d'adresses réseau (NAT) et de réseau privé virtuel (VPN) afin de protéger la connexion du réseau public à votre environnement.
+Le service FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} déploie une paire de dispositifs FortiGate Security Appliance (FSA) série 300 en mode haute disponibilité, qui fournissent des services de pare-feu, de routage, de conversion d'adresses réseau (NAT) et de réseau privé virtuel (VPN) afin de protéger tous les serveurs et machines virtuelles sur le réseau privé virtuel (VLAN) de vos instances.
 
-Ce service est disponible uniquement pour les instances déployées en version 1.8 et éditions ultérieures.
-
-Pour plus d'informations, voir [Gestion de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfsa.html).
+Pour plus d'informations, voir [Présentation de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html).
 
 ### FortiGate Virtual Appliance on IBM Cloud
 
-Ce service déploie une paire à haute disponibilité de dispositifs FortiGate Virtual Appliance qui vous permettent de réduire les risques en implémentant des contrôles de sécurité critiques au sein de votre infrastructure virtuelle.
+Le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} déploie dans votre environnement une paire de dispositifs FortiGate Virtual Appliance qui vous permettent de réduire les risques en implémentant des contrôles de sécurité critiques au sein de votre infrastructure virtuelle.
 
-Ce service est disponible uniquement pour les instances déployées en version 2.0 et éditions ultérieures.
+Pour plus d'informations, voir [Présentation de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html).
 
-Pour plus d'informations, voir [Gestion de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html).
+### HyTrust CloudControl on IBM Cloud
 
-### F5 on IBM Cloud
+Le service HyTrust CloudControl on {{site.data.keyword.cloud_notm}} applique et contrôle la conformité par rapport aux normes de sécurité standard et fournit un contrôle d'accès à base de rôles et des fonctions d'approbation et d'audit. Combiné à HyTrust DataControl, le service garantit que les machines virtuelles et les données de charge de travail ne quittent pas une région, un cluster ou un serveur ESXi donnés au sein de l'{{site.data.keyword.CloudDataCent_notm}}.
 
-Ce service optimise les performances et garantit la disponibilité et la sécurité des applications via F5 BIG-IP Virtual Edition (VE).
+Pour plus d'informations, voir [Présentation de HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html).
 
-Ce service est disponible uniquement pour les instances déployées en version 1.9 et éditions ultérieures.
+### HyTrust DataControl on IBM Cloud
 
-Pour plus d'informations, voir [Gestion de F5 on {{site.data.keyword.cloud_notm}}](../services/managing_f5.html).
+Le service HyTrust DataControl on {{site.data.keyword.cloud_notm}} offre un chiffrement renforcé avec une gestion de clés intégrée permettant de sécuriser les charges de travail tout au long de leur cycle de vie. Le service peut fournir un chiffrement au niveau du système d'exploitation et au niveau des données, ce qui signifie que n'importe quel répertoire, dossier ou fichier d'une charge de travail peut être chiffré et déchiffré.
+
+Pour plus d'informations, voir [Présentation de Trust DataControl on {{site.data.keyword.cloud_notm}}](../services/hdcc_considerations.html).
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-Ce service fournit une solution évolutive et efficace de protection, de réutilisation et de reprise des données pour les environnements virtuels. Vous pouvez l'implémenter en tant que solution autonome ou vous pouvez l'intégrer à votre environnement IBM Spectrum Protect&trade; Plus pour décharger des copies de stockage à long terme et pour la gouvernance des données.
+Le service IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} fournit une solution évolutive et efficace de protection, de réutilisation et de reprise des données pour les environnements virtuels. Vous pouvez implémenter le service en tant que solution autonome ou vous pouvez l'intégrer à votre environnement IBM Spectrum Protect Plus pour décharger des copies de stockage à long terme et pour la gouvernance des données.
 
-**Remarques** :
-* Ce service est disponible uniquement pour les instances déployées dans (ou mises à niveau vers) la version 2.2 ou des éditions ultérieures.
-* Pour les instances déployées en version 2.3 ou dans des éditions ultérieures, IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} fournit automatiquement un service de sauvegarde pour les machines virtuelles de gestion. 
-* Pour les instances déployées en version 2.2, ce service assure la protection des données uniquement pour les machines virtuelles de charge de travail.
+Pour plus d'informations, voir [Présentation d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html).
 
-Pour plus d'informations, voir [Gestion d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/managingspp.html).
+### KMIP for VMware on IBM Cloud
+
+Le service KMIP for VMware on {{site.data.keyword.cloud_notm}} offre une haute disponibilité 24 heures sur 24 et 7 jours sur 7 permettant de gérer les clés de chiffrement qu'utilise VMware dans {{site.data.keyword.cloud_notm}}. Il propose une fonction d'exécution qui permet aux clients de créer, extraire, activer, révoquer et détruire des clés de chiffrement. Il offre également une fonction de gestion des associations entre les données d'identification du client et les clés de chiffrement.
+
+Pour plus d'informations, voir [Présentation de KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html).
 
 ### Veeam on IBM Cloud
 
-Ce service s'intègre en toute transparence à votre environnement VMware pour vous aider à gérer la sauvegarde et la restauration de toutes les machines virtuelles de votre environnement, y compris la sauvegarde et la restauration des composants de gestion. Il peut fournir un objectif de point de reprise de moins de 15 minutes à partir de la configuration de vos données.
+Le service Veeam on {{site.data.keyword.cloud_notm}} s'intègre directement et en toute transparence à vos hyperviseurs VMware afin d'aider votre entreprise à obtenir la haute disponibilité requise. Il peut fournir des objectifs de point et de temps de reprise pour vos applications et vos données. Les objectifs de point et de temps de reprise peuvent être fournis moins de 15 minutes après la fin de la configuration. Ce service vous permet de contrôler directement à la fois la sauvegarde et la restauration de toutes les machines virtuelles de votre infrastructure depuis la console Veeam.
 
-Ce service est configuré pour effectuer une sauvegarde des machines virtuelles de gestion immédiatement après le déploiement de votre instance.
+Pour plus d'informations, voir [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html).
 
-Ce service est disponible uniquement pour les instances déployées en version 1.8 ou dans les éditions ultérieures.
+### VMware HCX on IBM Cloud
 
-Pour plus d'informations, voir [Gestion de Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html).
+Le service HCX on {{site.data.keyword.cloud_notm}} peut en toute transparence étendre les réseaux des centres de données local dans {{site.data.keyword.cloud_notm}}, ce qui permet de migrer les machines virtuelles vers et depuis {{site.data.keyword.cloud_notm}} sans aucune conversion ni modification.
+
+Pour plus d'informations, voir [Présentation de VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
 
 ### Zerto on IBM Cloud
 
-Ce service fournit des fonctions de réplication et de reprise après incident qui vous aident à protéger vos charges de travail. Pour plus d'informations, voir [Gestion de Zerto on {{site.data.keyword.cloud_notm}}](../services/managingzertodr.html).
+Le service Zerto on {{site.data.keyword.cloud_notm}} fournit des fonctions de réplication et de reprise après incident, qui peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.
 
-### Services gérés issus d'IMI
+Pour plus d'informations, voir [Présentation de Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html).
 
-Ces services activent IBM Integrated Managed Infrastructure (IMI) afin de distribuer des services de gestion à distance dynamique pour un large éventail d'infrastructures de cloud.
-
-Ces services sont disponibles uniquement pour des instances Cloud Foundation.
-
-Pour plus d'informations, voir [Demande de services gérés issus d'IMI](../services/managing_imi.html).
-
-## Liens connexes
+### Liens connexes
 
 * [Initiation](../index.html)
-* [Présentation de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
-* [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
-* [vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_planning.html)
-* [NetApp ONTAP Select](../netapp/np_netappoverview.html)

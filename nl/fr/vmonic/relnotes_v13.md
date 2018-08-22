@@ -30,13 +30,13 @@ Pour plus d'informations, voir :
 
 NSX Edge est désormais inclus en tant qu'élément des nouvelles instances Cloud Foundation que vous commandez. NSX Edge offre des services de passerelle et de sécurité périphériques permettant d'isoler un réseau virtuel.
 
-Lors du déploiement d'une instance, IBM déploie une passerelle NSX ESG (Edge Services Gateway) de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. La passerelle ESG est déployée de manière à inclure deux interfaces : une pour la connexion au réseau local virtuel IBM Cloud privé et l'autre pour la connexion au réseau local virtuel IBM Cloud public.
+Lors du déploiement d'une instance, IBM déploie une passerelle NSX ESG (Edge Services Gateway) de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. La passerelle ESG est déployée de manière à inclure deux interfaces : une pour la connexion au réseau local virtuel {{site.data.keyword.cloud_notm}} privé et l'autre pour la connexion au réseau local virtuel {{site.data.keyword.cloud_notm}} public.
 
 Pour garantir la sécurité, des règles de pare-feu sont instaurées afin d'autoriser uniquement les communications HTTPS sortantes initiées par les machines virtuelles de gestion. Cette passerelle ESG est déployée dans une Grande configuration et seul le support IBM est habilité à modifier la configuration.
 
 Pour plus d'informations, voir :
 
-* [Composants de l'instance Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)
+* [Spécifications techniques relatives aux instances Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [Documentation VMware NSX](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 

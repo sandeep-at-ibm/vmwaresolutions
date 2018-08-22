@@ -29,11 +29,11 @@ Pour la liste complète des composants, voir [Présentation de VMware Cloud Foun
 
 A compter de la version 1.6, plusieurs améliorations sont disponibles pour vos instances vCenter Server.
 
-*  Implémentation totale de la spécification de la version 2.0 pour l'offre vCenter Server. Pour plus d'informations, voir l'[architecture de la solution VMware vCenter Server on IBM Cloud](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0).
+*  Implémentation totale de la spécification de la version 2.0 pour l'offre vCenter Server. Pour plus d'informations, voir l'[architecture de la solution VMware vCenter Server on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0).
 *  Nouvelles spécifications matérielles : **Petite**, **Moyenne** ou **Grande**, en fonction de vos besoins.
 *  Nouveaux centres de données disponibles pour déploiement : **HKG02 - Hong Kong**, **OSL01 - Oslo**, **SEO01 - Séoul**, **SNG01 - Singapour** et **SYD04 - Sydney**.
 *  Au moins deux serveurs ESXi dans votre commande d'instance, avec VMware vSphere DRS (Distributed Resource Scheduler, planificateur de ressources distribuées) et VMware HA (High Availability, haute disponibilité) activés par défaut.
-*  Jusqu'à sept partages de fichiers NFS peuvent être ajoutés lorsque vous commandez des instances. Les composants de gestion (vCenter, PSC, gestionnaire NSX et contrôleurs, CloudDriver) s'exécutent désormais sur un partage de fichiers NFS pour une haute disponibilité.
+*  Jusqu'à sept partages de fichiers NFS peuvent être ajoutés lorsque vous commandez des instances. Les composants de gestion (vCenter, PSC, NSX Manager, NSX Controller, CloudDriver) s'exécutent désormais sur un partage de fichiers NFS pour une haute disponibilité.
 *  Déploiement et configuration automatiques de la passerelle de services VMware NSX Edge gérée par le client.
 
 En raison de ces modifications, vous ne pouvez pas utiliser en l'état (ou mettre à niveau) vos instances vCenter Server existantes de la version actuelle. Les instances vCenter Server antérieures à l'édition V1.6 sont toujours visibles sur la console {{site.data.keyword.vmwaresolutions_short}} en mode d'affichage uniquement. Dans l'interface utilisateur, la mention **Obsolète** apparaît pour ces instances avec une icône de symbole d'avertissement.

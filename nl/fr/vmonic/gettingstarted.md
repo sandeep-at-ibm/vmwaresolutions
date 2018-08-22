@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -14,7 +14,7 @@ Passez en revue les informations importantes relatives aux exigences liées aux 
 
 ## Console IBM Cloud for VMware Solutions
 
-La console {{site.data.keyword.vmwaresolutions_short}} est l'interface via laquelle vous commandez et gérez vos déploiements. Chaque déploiement est géré en tant qu'instance dans la console. La console est une interface utilisateur autonome distincte du portail {{site.data.keyword.slportal_full}}.
+La console {{site.data.keyword.vmwaresolutions_short}} est l'interface via laquelle vous commandez et gérez vos déploiements. Chaque déploiement est géré en tant qu'instance dans la console. La console est une interface utilisateur autonome distincte du portail {{site.data.keyword.slportal}}.
 
 ## Compte IBMid
 
@@ -44,10 +44,10 @@ Avant de commencer à utiliser la console {{site.data.keyword.vmwaresolutions_sh
 
 Pour des conditions optimales de travail et d'affichage sur la console {{site.data.keyword.vmwaresolutions_short}}, définissez la résolution d'écran au minimum sur 1024 pixels de largeur et 500 pixels de hauteur.
 
-## Liens connexes
+### Liens connexes
 
 * [A propose de {{site.data.keyword.vmwaresolutions_short}}](vmonic/prod_overview.html)
 * [Présentation de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
-* [Présentation de Zerto on IBM Cloud](../services/addingzertodr.html)
+* [Présentation de Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)
 * [Traitement des incidents](troubleshooting.html)

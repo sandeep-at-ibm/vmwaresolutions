@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -24,14 +24,14 @@ Tableau 1. Fonctions prises en charge pour les instances Cloud Foundation, vCent
 | Ajout de serveurs ESXi              | Pris en charge           | Pris en charge | Pris en charge | Pris en charge. Configuration automatisée non incluse |
 | Suppression de serveurs ESXi           | Pris en charge           | Pris en charge | Pris en charge | Pris en charge. Configuration automatisée non incluse |
 | Prise en charge de multiples clusters         | 5 clusters | 10 clusters | 10 clusters | Pris en charge. Configuration automatisée non incluse |
-| Mise à jour et application de correctif de la pile VMware gérées par le client | Mises à jour d'IBM CloudDriver et VMware | IBM CloudDriver | IBM CloudDriver |Application de correctif automatisée non incluse |
-| Sauvegarde et restauration            | Pris en charge | Pris en charge | Pris en charge | Configuration de solution de sauvegarde automatisée non incluse |
+| Mise à jour et application de correctif de la pile VMware gérées par le client | Mises à jour VMware | Non inclus | Non inclus | Non inclus |
+| Sauvegarde et restauration            | Utilisation manuelle d'IBM Spectrum Protect Plus ou de Veeam | Utilisation manuelle d'IBM Spectrum Protect Plus ou de Veeam | Utilisation manuelle d'IBM Spectrum Protect Plus ou de Veeam | Solution de sauvegarde et de restauration non incluse |
 | Mise en réseau définie par logiciel (SDN)   | NSX Enterprise   | NSX Base, Advanced ou Enterprise | NSX Advanced ou Enterprise | NSX Standard, Base ou Enterprise. Configuration automatisée non incluse |
 | BYOL pour vSphere et vSAN | Intégralement pris en charge par cluster   | Intégralement pris en charge par cluster     | Non pris en charge | Pris en charge |
 | BYOL pour vCenter et NSX | Intégralement pris en charge par instance   | Intégralement pris en charge par instance     | Non pris en charge | Pris en charge |
 | Options de mise à niveau de licence NSX           | Aucun   | Mise à niveau disponible depuis NSX Base vers Advanced ou Enterprise et depuis NSX Advanced vers Enterprise La mise à niveau vers l'instance vCenter Server with Hybridity Bundle est disponible. | Mise à niveau disponible depuis NSX Advanced vers Enterprise  | Aucun |
 | Editions de licence vSAN         | vSAN Advanced ou Enterprise  | vSAN Advanced ou Enterprise  | vSAN Advanced ou Enterprise | vSAN Advanced ou Enterprise  |
-| Services complémentaires               | Pris en charge, sans inclure le service HCX on {{site.data.keyword.cloud_notm}}.  | Pris en charge, sans inclure le service HCX on {{site.data.keyword.cloud_notm}}. La mise à niveau vers l'instance vCenter Server with Hybridity Bundle est disponible. | Pris en charge, avec le service HCX on {{site.data.keyword.cloud_notm}} inclus. | Pris en charge. Configuration automatisée non incluse |
+| Services complémentaires               | Pris en charge, sans inclure le service HCX on {{site.data.keyword.cloud_notm}}.  | Pris en charge, sans inclure le service HCX on {{site.data.keyword.cloud_notm}}. La mise à niveau vers l'instance vCenter Server with Hybridity Bundle est disponible. | Pris en charge, avec le service HCX on {{site.data.keyword.cloud_notm}} inclus. | Non pris en charge par l'automatisation de cette solution, mais vous pouvez fournir et installer vos propres logiciels. |
 
 **Remarques** :
 
