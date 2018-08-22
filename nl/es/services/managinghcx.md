@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ Para aplicar los arreglos de mantenimiento enviados a su entorno, debe utilizar 
 
 Si no ve una actualización de compilación que está esperando, si tiene problemas con HCX, o si desea que se envíe al sistema la última compilación de HCX enviada inmediatamente, abra una incidencia de soporte siguiendo los pasos de [Cómo ponerse en contacto con el soporte de IBM](../vmonic/trbl_support.html).
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Visión general de HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
 * [Glosario de términos de HCX](hcx_glossary.html)

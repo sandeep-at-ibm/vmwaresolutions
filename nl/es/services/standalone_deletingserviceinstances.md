@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -24,7 +24,7 @@ Asegúrese de haber revisado las consideraciones del apartado [Consideraciones a
 4. En la ventana **Suprimir instancia**, pulse **Aceptar**.
    El estado de la instancia pasa a ser **Eliminando**. Cuando finaliza la supresión de la instancia, esta deja de estar disponible en la tabla **Instancias locales de HCX**.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Solicitud de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](standalone_orderingserviceinstances.html)
 * [Visualización de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](standalone_viewingserviceinstances.html)

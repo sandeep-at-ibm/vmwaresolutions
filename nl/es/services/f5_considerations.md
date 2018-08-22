@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -15,6 +15,24 @@ El servicio F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) prop
 Puede instalar varias instancias de este servicio si las necesita.
 
 **Disponibilidad**: Este servicio solo está disponible para instancias desplegadas en V1.9 o releases posteriores.
+
+## Especificaciones técnicas para F5 on IBM Cloud
+
+Los componentes siguientes se incluyen con el servicio de F5 on {{site.data.keyword.cloud_notm}}:
+
+### Máquinas virtuales
+* Dos máquinas virtuales (VM) con todas las opciones disponibles.
+* 2, 4 u 8 vCPU por máquina virtual en función de la opción de licencia.
+* 4, 8 o 16 GB de RAM por máquina virtual en función de la opción de licencia.
+
+### Redes
+* Red de área local extensible virtual privada (VXLAN) para la sincronización de alta disponibilidad.
+* Acceso a Traffic Management Shell (TMSH) y la consola de gestión a través de una red de gestión privada.
+
+### Licencias y tarifas
+Las tarifas de licencia para cada máquina virtual se aplican a cada ciclo de facturación en función de la opción de licencia (Good, Better o Best) y el ancho de banda seleccionado.
+
+**Importante:** No podrá cambiar el nivel de licencia después de la instalación del servicio. Para cambiar el nivel de licencia, debe eliminar el servicio existente y reinstalarlo utilizando otra opción de licencia.
 
 ## Consideraciones al instalar F5 on IBM Cloud
 
@@ -78,7 +96,7 @@ En este caso, la instalación de F5 on {{site.data.keyword.cloud_notm}} puede fa
 
 Antes de eliminar el servicio F5 on {{site.data.keyword.cloud_notm}}, asegúrese de que la configuración existente de BIG-IP VE se elimine correctamente. Concretamente, el tráfico de red se debe direccionar alrededor de BIG-IP VE en lugar de a través de BIG-IP VE. De lo contrario, el tráfico de datos existentes de su entorno puede verse afectado.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Solicitud de F5 on {{site.data.keyword.cloud_notm}}](f5_ordering.html)
 * [Gestión de F5 on {{site.data.keyword.cloud_notm}}](managing_f5.html)

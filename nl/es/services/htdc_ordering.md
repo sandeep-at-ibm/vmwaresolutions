@@ -4,27 +4,27 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-20"
 
 ---
 
 # Solicitud de HyTrust DataControl on IBM Cloud
 
-Puede solicitar el servicio de HyTrust DataControl on {{site.data.keyword.cloud_notm}} al pedir una instancia nueva con un par de HA de dispositivos de HyTrust DataControl incluidos o añadiendo los dispositivos de HyTrust DataControl a la instancia existente.
+Puede solicitar el servicio de HyTrust DataControl on {{site.data.keyword.cloud}} al pedir una instancia nueva con un par de HA de dispositivos de HyTrust DataControl incluidos o añadiendo los dispositivos de HyTrust DataControl a la instancia existente.
 
 ## Solicitud de HyTrust DataControl on IBM Cloud para una instancia nueva
 
 Puede solicitar una instancia nueva con HyTrust DataControl on {{site.data.keyword.cloud_notm}} utilizando uno de los métodos siguientes:
-* Desde la consola de {{site.data.keyword.vmwaresolutions_full}}, al solicitar una instancia nueva, seleccione **HyTrust DataControl on IBM Cloud** en la sección **Servicios**.
-* Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **Servicio de HyTrust DataControl on {{site.data.keyword.cloud_notm}}**, especifique los valores de servicio y seleccione **Añadir a instancia nueva**.
+* Desde la consola de {{site.data.keyword.vmwaresolutions_short}}, al solicitar una instancia nueva, seleccione **HyTrust DataControl on IBM Cloud** en la sección **Servicios**.
+* Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **HyTrust DataControl on IBM Cloud**, especifique los valores de servicio y seleccione **Añadir a instancia nueva**.
 
 ## Solicitud de HyTrust DataControl on IBM Cloud para una instancia existente
 
 Puede añadir el servicio de HyTrust DataControl on {{site.data.keyword.cloud_notm}} en una instancia existente utilizando uno de los métodos siguientes:
-* Desde la consola de {{site.data.keyword.vmwaresolutions_short}}, visualice la instancia para la que desea añadir el servicio, pulse **Servicios** en el panel de navegación izquierdo y pulse **Añadir servicio**.
-* Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **Servicio de HyTrust DataControl on IBM Cloud**, especifique los valores de servicio y seleccione **Añadir a instancia existente**.
+* Desde la consola de {{site.data.keyword.vmwaresolutions_short}}, visualice la instancia para la que desea añadir el servicio, pulse **Servicios** en el panel de navegación izquierdo y pulse **Añadir**.
+* Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **HyTrust DataControl on IBM Cloud**, especifique los valores de servicio y seleccione **Añadir a instancia existente**.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Visión general de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](htcc_considerations.html)
 * [Gestión de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtcc.html)

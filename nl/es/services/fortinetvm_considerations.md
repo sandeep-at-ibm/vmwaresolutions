@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -16,24 +16,35 @@ Puede instalar varias instancias de este servicio si las necesita. Puede gestion
 
 **Disponibilidad**: Este servicio solo está disponible para las instancias que se han desplegado en la V2.0 y posteriores releases.
 
-## Componentes de FortiGate Virtual Appliance on IBM Cloud
+## Especificaciones técnicas para FortiGate Virtual Appliance on IBM Cloud
 
-Cuando solicita el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, se despliega un par de dispositivos virtuales FortiGate con:
-* Una interfaz de red configurada para la red de gestión.
-* Nueve interfaces de red adicionales que puede configurar para proteger el tráfico de datos según necesite.
+Los siguientes componentes se solicitan y se incluyen en el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}:
 
-Los FortiGate Virtual Appliances no están preconfigurados como par de alta disponibilidad (HA). Después del despliegue, puede configurar los valores de alta disponibilidad, que incluyen Virtual Router Redundancy Protocol (VRRP) y FortiGate Cluster Protocol (FGCP), según sus necesidades.
+### Máquinas virtuales
+
+* Todas las opciones incluyen un par de alta disponibilidad (HA) de máquinas virtuales
+* 2, 4 u 8 vCPU por máquina virtual en función del tamaño del despliegue y el tipo de suscripción
+* 4, 6 o 12 GB de RAM por máquina virtual en función del tamaño del despliegue y el tipo de suscripción
+
+### Alta disponibilidad
+
+Dos máquinas virtuales están desplegadas y listas para la configuración HA o Virtual Router Redundancy Protocol (VRRP).
+
+### Redes
+
+El acceso a la consola de FortiGate® se proporciona a través de una red de gestión privada.
+
+### Licencias y tarifas
+
+Las tarifas de licencia para cada máquina virtual se aplican a cada ciclo de facturación en función del tamaño del despliegue seleccionado y el modelo de licencia de suscripción mensual.
+
+**Importante:** No podrá cambiar el nivel de licencia después de la instalación del servicio. Para cambiar el nivel de licencia, debe eliminar el servicio existente y reinstalarlo utilizando otra opción de licencia.
 
 ## Consideraciones al instalar FortiGate Virtual Appliance on IBM Cloud
 
 Revise las siguientes consideraciones antes de instalar el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}:
-* Las máquinas virtuales (VM) de FortiGate se desplegarán solo en el clúster predeterminado.
-* En función del tamaño de despliegue y del modelo de licencia que seleccione, las dos VM FortiGate se despliegan con una de las siguientes configuraciones:
-    * Pequeño (2 vCPU / 4 GB de RAM)
-    * Medio (4 vCPU / 6 GB de RAM)
-    * Grande (8 vCPU / 12 GB de RAM)
-
-  Además, el 100% de la CPU y de la RAM para las dos VM FortiGate también está reservado porque estas VM están en el plano de datos de las comunicaciones de red y es fundamental que tengan recursos disponibles.
+* Las máquinas virtuales (VM) de FortiGate se despliegan solo en el clúster predeterminado.
+* El 100% de la CPU y de la RAM para las dos VM FortiGate también está reservado porque estas VM están en el plano de datos de las comunicaciones de red y es fundamental que tengan recursos disponibles.
 
   Para calcular la reserva de CPU y de RAM para una sola VM FortiGate, utilice la fórmula siguiente:
    * `Reserva de CPU = Velocidad de CPU del servidor ESXi * número de vCPU`
@@ -63,7 +74,7 @@ Sin embargo, de forma predeterminada vSphere HA reserva el 50% de CPU y RAM para
 
 `50% de 2 * 16 núcleos * 2,1 GHz = 33,6 GHz disponibles`
 
-Puesto que existirán otras cargas de trabajo en los servidores ESXi, como por ejemplo IBM CloudDriver, VMware NSX Controller o VMware NSX Edge, utilizando estos recursos no queda satisfecho el tercer requisito. Esto se debe a que se necesitan 33,6 GHz de CPU y 24 GB de RAM para las dos VM de FortiGate.
+Puesto que existen otras cargas de trabajo en los servidores ESXi, como por ejemplo IBM CloudDriver, VMware NSX Controller o VMware NSX Edge, utilizando estos recursos no queda satisfecho el tercer requisito. Esto se debe a que se necesitan 33,6 GHz de CPU y 24 GB de RAM para las dos VM de FortiGate.
 
 En este caso, la instalación de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} puede fallar, a menos que se añada al menos un servidor ESXi al entorno y las reservas para migración tras error de vShpere HA se actualicen adecuadamente para garantizar que haya suficientes recursos para las dos VM FortiGate.
 
@@ -73,7 +84,7 @@ Si se necesitan recursos adicionales para ejecutar el servicio FortiGate Virtual
 
 Antes de eliminar el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, asegúrese de que la configuración de los dispositivos virtuales FortiGate existentes se elimine correctamente. Concretamente, el tráfico de red se debe direccionar alrededor de los dispositivos virtuales FortiGate en lugar de a través de los dispositivos virtuales FortiGate. De lo contrario, el tráfico de datos del entorno podría verse afectado.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Solicitud de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_ordering.html)
 * [Gestión de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](managingfortinetvm.html)

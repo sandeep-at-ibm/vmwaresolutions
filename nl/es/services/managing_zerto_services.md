@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -36,13 +36,13 @@ Para obtener más información, consulte [IBM Resiliency Disaster Recovery as a 
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Cómo comenzar** en el panel de navegación izquierdo.
 2. Desplácese hacia abajo por la página y, bajo **Pedido de servicios gestionados adicionales**, pulse la tarjeta **Servicios gestionados para Zerto on IBM Cloud**.
-3. En la página **Solicitar servicios gestionados para Zerto on IBM Cloud**, revise la descripción y las especificaciones técnicas de Zerto on {{site.data.keyword.cloud_notm}} como servicio gestionado y pulse **Crear**.
+3. En la página **Zerto on IBM Cloud**, revise la descripción y las especificaciones técnicas para Zerto on {{site.data.keyword.cloud_notm}} como un servicio gestionado y, a continuación, pulse **Crear**.
 4. Especifique los valores de configuración que se ajusten a sus necesidades o acepte los valores predeterminados.
 5. Pulse **vCenter Server** o **Cloud Foundation** para añadir el servicio a una de sus instancias.
-6. Para añadir el servicio mientras solicita una nueva instancia, pulse **Añadir a nueva instancia** y continúe con el pedido de una nueva instancia de [vCenter Server](../vcenter/vc_orderinginstance.html), [vCenter Server con Hybridity](../vcenter/vc_hybrid_orderinginstance.html) o [Cloud Foundation](../sddc/sd_orderinginstance.html).
-7. Para añadir el servicio a una instancia existente, pulse **Añadir a instancia desplegada** y seleccione la instancia que desee en la lista; a continuación, confirme que desea continuar con el pedido pulsando **Suministro**.
+6. Para añadir el servicio mientras solicita una nueva instancia, pulse **Añadir a nueva instancia** y, a continuación, continúe con el pedido de una nueva instancia de [vCenter Server](../vcenter/vc_orderinginstance.html), [vCenter Server con Hybridity](../vcenter/vc_hybrid_orderinginstance.html) o [Cloud Foundation](../sddc/sd_orderinginstance.html).
+7. Para añadir el servicio a una instancia existente, pulse **Añadir a instancia existente**, seleccione la instancia que desee en la lista y, a continuación, confirme que desea continuar con el pedido pulsando **Suministro**.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](../vcenter/vc_addingremovingservices.html)
 * [Solicitud, visualización y eliminación de servicios para instancias de Cloud Foundation](../sddc/sd_addingremovingservices.html)
