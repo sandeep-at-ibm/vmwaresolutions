@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-15"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -28,7 +28,7 @@ lastupdated: "2018-06-15"
 
 ### 仮想化インフラストラクチャー (コンピュート、ネットワーク、NetApp ONTAP Select)
 
-この層は、複数の異なる VMware 製品と NetApp ONTAP Select 製品により、物理インフラストラクチャーを仮想化します。
+この層は、以下の VMware 製品と NetApp ONTAP Select 製品により、物理インフラストラクチャーを仮想化します。
 * VMware vSphere は、物理コンピュート・リソースを仮想化します。
 * VMware NSX は、論理ネットワーキング・コンポーネントと仮想ネットワークを提供するネットワーク仮想化プラットフォームです。
 * {{site.data.keyword.cloud_notm}} 上の NetApp ONTAP Select は、4 つのホスト用の 4 つの VM からなる ONTAP Select クラスターをデプロイします。
@@ -43,11 +43,9 @@ lastupdated: "2018-06-15"
 
 この層は、vCenter Server 仮想アプライアンス、NSX Manager、2 つの NSX ESG、3 つの NSX Controller、Platform Services Controller (PSC) 仮想アプライアンス、vCenter Server Appliance (vCSA)、IBM CloudDriver 仮想マシンからなります。
 
-NetApp ONTAP Select は、VMware クラスター内で実行され、ホスト上のローカル・ストレージを仮想化します。 NetApp ONTAP Select は専用モデルでデプロイされます。つまり、他のワークロードと同じクラスターを共有するという想定にはなっていません。 そのため、{{site.data.keyword.cloud_notm}} オファリング上の NetApp ONTAP Select のハードウェア構成のサイズは、NetApp ONTAP Select の要件のみに基づいて決まります。
+NetApp ONTAP Select は、VMware クラスター内で実行され、ホスト上のローカル・ストレージを仮想化します。 NetApp ONTAP Select は専用モデルでデプロイされます。つまり、他のワークロードとクラスターを共有するという想定にはなっていません。 そのため、{{site.data.keyword.cloud_notm}} オファリング上の NetApp ONTAP Select のハードウェア構成のサイズは、NetApp ONTAP Select の要件のみに基づいて決まります。
 
-<!--For details about the architecture, see the _Reference architecture_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform){:new_window}.-->
-
-## NetApp ONTAP Select インスタンスのコンポーネント
+## NetApp ONTAP Select インスタンスの技術仕様
 
 NetApp ONTAP Select インスタンスには以下のコンポーネントが含まれます。
 
@@ -62,7 +60,7 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
 
 ### 事前設定構成
 
-以下の構成オプションがある 4 つの {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}
+以下の構成オプションがある 4 つの {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}が提供されています。
 * **ハイパフォーマンス (ミディアム)** –プレミアム・ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 128 GB RAM / ノードあたり 22 個の 1.9 TB SSD ドライブ容量 / 4 ノード・クラスターの実効容量– 59 TB
 * **ハイパフォーマンス (ラージ)** –プレミアム・ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 128 GB RAM / ノードあたり 22 個の 3.8 TB SSD ドライブ容量 / 4 ノード・クラスターの実効容量– 118 TB
 * **大容量** – 標準ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 64 GB RAM / ノード当たり 34 個の 4 TB SATA ドライブ容量 / 4 ノード・クラスターの有効容量 – 190 TB
@@ -93,10 +91,8 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
 *  NetApp ONTAP Select の 4 つの Premium/Standard エディションのライセンス (ユーザー提供)
 *  VMware vSphere 6.5 Enterprise Plus エディション
 *  VMware vCenter Server 6.5
-*  VMware NSX Base for Service Providers エディション
+*  VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.4
 *  サポートとサービスの料金 (ノード当たり 1 つのライセンス)
-
-<!--For details about the components, see the _Bill of Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
 
 **重要**: {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
 
@@ -107,7 +103,7 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
 
-## 関連リンク
+### 関連リンク
 
 * [NetApp ONTAP Select インスタンスの計画](np_planning.html)
 * [NetApp ONTAP Select インスタンスの注文](np_orderinginstances.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-07"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -70,7 +70,7 @@ NetApp ONTAP Select インスタンスを注文する際には、以下のネッ
 
 ### データ・センターの場所
 
-インスタンスがホストされる {{site.data.keyword.CloudDataCent_notm}}を選択する必要があります。<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the Bare Metal Server specification you selected previously are displayed.-->
+インスタンスがホストされる {{site.data.keyword.CloudDataCent_notm}}を選択する必要があります。
 
 ### Bare Metal Server configuration
 
@@ -80,8 +80,6 @@ NetApp ONTAP Select インスタンスを注文する際には、以下のネッ
 * **大容量** – 標準ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 64 GB RAM / ノード当たり 34 個の 4 TB SATA ドライブ容量 / 4 ノード・クラスターの有効容量 – 190 TB
 
 **注:** 3.8 TB SSD (ソリッド・ステート・ディスク) ドライブは、{{site.data.keyword.CloudDataCent_notm}}内で一般出荷可能になったときにサポートされます。
-
-<!--For guidance on what bare metal server configuration to choose, see the _Bill of Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
 
 ### ベア・メタル・サーバーの数
 
@@ -108,7 +106,7 @@ NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォ
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。インスタンスの詳細を表示してデプロイメントの状況を確認できます。
 
-インスタンスが正常にデプロイされると、[NetApp ONTAP Select インスタンスのコンポーネント](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。
+インスタンスが正常にデプロイされると、[NetApp ONTAP Select インスタンスの技術仕様](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
@@ -124,7 +122,7 @@ NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォ
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
 
-## 関連リンク
+### 関連リンク
 
 * [NetApp ONTAP Select インスタンスの表示](np_viewinginstances.html)
 * [NetApp ONTAP Select インスタンスの削除](np_deletinginstance.html)

@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # NetApp ONTAP Select インスタンスの表示
 
-注文した NetApp ONTAP Select インスタンスとその詳細情報を表示します。
+異なるユーザー・アカウントについてプロビジョンされた NetApp ONTAP Select インスタンスのサマリーと詳細情報を表示します。
 
 ## NetApp ONTAP Select インスタンスのサマリーの表示
 
-環境内のすべての NetApp ONTAP Select インスタンスのサマリーを表示するには、次の手順を実行します。
+1 つのユーザー・アカウントについてプロビジョンされたすべての NetApp ONTAP Select インスタンスのサマリーを表示するには、以下の手順を実行します。
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
-2. **「NetApp ONTAP Select インスタンス」**の表で、インスタンスのリストを表示します。
+1. {{site.data.keyword.vmwaresolutions_full}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+2. コンソールの右上隅でアバターをクリックし、**「アカウント」**フィールドをクリックして、インスタンスを確認するユーザー・アカウントを選択します。
+3. **「NetApp ONTAP Select インスタンス」**の表で、選択されたユーザー・アカウントでプロビジョンされたインスタンスのリストを表示します。
 
 表 1. NetApp ONTAP Select インスタンスの項目
 
@@ -43,7 +44,7 @@ lastupdated: "2018-06-04"
 | 名前 | インスタンスの名前。 |
 | ID | インスタンスの ID。 |
 | ロケーション | インスタンスがホストされるデータ・センター。 |
-| デプロイ済みのバージョン | デプロイ済みバージョンの {{site.data.keyword.vmwaresolutions_full}}。 |
+| デプロイ済みのバージョン | デプロイ済みバージョンの {{site.data.keyword.vmwaresolutions_short}}。 |
 | vCenter バージョン | VMware vCenter Server のバージョン。<br><br>**注**: {{site.data.keyword.vmwaresolutions_short}} コンソールと VMware vSphere Web Client では、vCenter Server バージョンの表示が若干異なります。 どちらも正しい表示です。 |
 | NSX for vSphere | VMware NSX for vSphere 製品のバージョン。 |
 | NSX ライセンス・エディション | VMware NSX ライセンスのバージョンとエディション。 |
@@ -85,7 +86,7 @@ lastupdated: "2018-06-04"
 
 ## NetApp ONTAP Select インスタンスのデプロイメント履歴の表示
 
-**「デプロイメント履歴」**の下に、インスタンスのデプロイメント履歴が表示されます。
+左側のナビゲーション・ペインで**「デプロイメント履歴」**をクリックすると、インスタンスのデプロイメント履歴が表示されます。
 
 表 4. NetApp ONTAP Select インスタンスのデプロイメント履歴
 
@@ -170,7 +171,7 @@ lastupdated: "2018-06-04"
 *  VPN を使用して {{site.data.keyword.cloud_notm}} インフラストラクチャーのプライベート・ネットワークにログインするためのアクセス・ポイントのリストについては、[VPN アクセス](http://www.softlayer.com/vpn-access){:new_window}を参照してください。
 *  vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイする際に問題が発生した場合は、[vSphere Web Client を使用して OVF ファイルをデプロイする方法](../vmonic/trbl_deploy_ovf.html)を参照してください。
 
-## 関連リンク
+### 関連リンク
 
 * [NetApp ONTAP Select インスタンスの注文](np_orderinginstances.html)
 * [NetApp ONTAP Select インスタンスの削除](np_deletinginstance.html)
