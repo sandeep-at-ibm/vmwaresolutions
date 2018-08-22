@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -39,7 +39,7 @@ En la consola de {{site.data.keyword.vmwaresolutions_short}}, puede ampliar y re
 
 Para conocer detalles sobre la arquitectura, consulte [Visión general de la solución](../archiref/solution/solution_overview.html).
 
-## Componentes de una instancia de Cloud Foundation
+## Especificaciones técnicas para instancias de Cloud Foundation
 
 Se incluyen los siguientes componentes en la instancia de Cloud Foundation.
 
@@ -84,13 +84,6 @@ Se solicita el siguiente almacenamiento, en función de la configuración de {{s
 * Solo para la configuración **Preconfigurado**, **Pequeño**: dos discos SSD de 1,9 TB de capacidad
 * Solo para la configuración **Preconfigurado**, **Grande**: cuatro discos SSD de 3,8 TB de capacidad
 
-
-### Almacenamiento para copias de seguridad
-
-Se solicita un almacenamiento de nivel de archivo compartido de 2-TB, que se puede ampliar hasta 12 TB.
-
-**Nota**: el almacenamiento para copias de seguridad no es un componente estándar de las instancias de Cloud Foundation. Cuando solicita una instancia, puede elegir si desea almacenamiento para copias de seguridad seleccionando o deseleccionando un servicio de copia de seguridad.
-
 ### Licencias (proporcionadas por IBM o BYOL) y cuotas
 
 * Cuatro VMware vSphere Enterprise Plus 6.5u1
@@ -100,13 +93,13 @@ Se solicita un almacenamiento de nivel de archivo compartido de 2-TB, que se pue
 * Cuatro licencias de SDDC Manager (solo proporcionado por IBM)
 * Cuatro cuotas de soporte y servicios
 
-## Componentes de los nodos de expansión de Cloud Foundation
+## Especificaciones técnicas para nodos de expansión de Cloud Foundation
 
 Cada nodo de expansión de Cloud Foundation desplegará e incurrirá en cargos por los siguientes componentes en su cuenta de {{site.data.keyword.cloud_notm}}.
 
 ### Hardware para nodos de expansión
 
-Un servidor nativo {{site.data.keyword.cloud_notm}} con la configuración que se presenta en [Componentes de una instancia de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+Un servidor nativo {{site.data.keyword.cloud_notm}} con la configuración que se presenta en [Especificaciones técnicas para instancias de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Licencias y tarifas correspondientes a nodos de expansión
 
@@ -127,7 +120,7 @@ Un servidor nativo {{site.data.keyword.cloud_notm}} con la configuración que se
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Lista de materiales de software de Cloud Foundation](sd_bom.html)
 * [Planificación de instancias de Cloud Foundation](sd_planning.html)

@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-31"
 
 ---
 
 # Consideraciones sobre el cambio de artefactos de Cloud Foundation
 
 El cambio de usuarios, recursos o subredes reservados para {{site.data.keyword.vmwaresolutions_full}} puede afectar a las operaciones de gestión de las instancias de VMware Cloud Foundation.
+
+**Importante:** No edite los permisos globales del grupo **ic4v-vCenter** en la página **Usuarios y grupos** del cliente web de VMware vSphere. Estos cambios incluyen: cambiar el nombre de usuario, suprimir el usuario o cambiar su contraseña.
 
 ## Cuentas de usuario específicas de servicio
 
