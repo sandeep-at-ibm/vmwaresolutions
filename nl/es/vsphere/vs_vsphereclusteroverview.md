@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -18,7 +18,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} no automatiza la instalación
 
 Utilice esta oferta para crear un nuevo clúster de servidores ESXi o para escalar un clúster existente de servidores ESXi en un {{site.data.keyword.CloudDataCent_notm}}. Dependiendo de los componentes de VMware que seleccione, puede empezar con un solo servidor ESXi y luego escalar el clúster más adelante cuando sea necesario.
 
-## Componentes de VMware vSphere on IBM Cloud
+## Especificaciones técnicas para clústeres de VMware vSphere on IBM Cloud
 
 Revise los componentes de VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
@@ -62,26 +62,26 @@ Almacenamiento personalizado por el usuario para la configuración de vSAN cuand
 
 **Nota:** las unidades SSD (disco de estado sólido) de 3,8 TB recibirán soporte cuando estén disponibles a nivel general en un centro de datos.
 
-## Componentes de nodos de expansión de clúster de vSphere
+## Especificaciones técnicas para nodos de expansión de clúster de vSphere
 
 Cada nodo de expansión de clúster de vSphere desplegará e incurrirá en cargos por los siguientes componentes en su cuenta de {{site.data.keyword.slportal}}.
 
 ### Hardware para nodos de expansión
 
-Un servidor nativo IBM Cloud con la configuración de hardware que se presenta en [Componentes de VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+Un servidor nativo {{site.data.keyword.cloud_notm}} con la configuración de hardware que se presenta en [Componentes de VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
 ### Sistema de redes para nodos de expansión
 
-Un servidor nativo IBM Cloud con la configuración de red que se presenta en [Componentes de VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+Un servidor nativo {{site.data.keyword.cloud_notm}} con la configuración de red presentada en [Componentes de VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
 ### Componentes de VMware para nodos de expansión
 
-* Un servidor nativo IBM Cloud con VMware vSphere Enterprise Plus 6.0u2 o 6.5u1  
-* Componentes opcionales de VMware que se presentan en [Componentes de VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+* Un servidor nativo {{site.data.keyword.cloud_notm}} con VMware vSphere Enterprise Plus 6.0u2 o 6.5u1  
+* Componentes opcionales de VMware que se presentan en [Componentes de VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
 **Importante**: debe gestionar los servidores ESXi, los componentes opcionales de VMware y el hardware adicional solicitados y distribuidos a su cuenta de {{site.data.keyword.cloud_notm}} solo desde el {{site.data.keyword.slportal}}. Después de crear un nuevo clúster en la consola de {{site.data.keyword.vmwaresolutions_short}}, puede volver a la consola para escalar el nuevo clúster utilizando la configuración guardada. Para obtener más información, consulte [Escalado de clústeres existentes de vSphere](vs_scalingexistingclusters.html).
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Lista de materiales de software de VMware vSphere](vs_bom.html)
 * [Planificación de clústeres de vSphere](vs_planning.html)
