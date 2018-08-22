@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -63,7 +63,7 @@ Revise as considerações a seguir antes de excluir uma instância do HCX on {{s
    Para obter mais informações, veja [Excluindo instâncias do HCX on {{site.data.keyword.cloud_notm}} no local](../services/standalone_deletingserviceinstances.html).
 3. No VMware vSphere Web Client, exclua o HCX Manager local.
 
-## Links relacionados
+### Links relacionados
 
 * [Visualizando HCX no {{site.data.keyword.cloud_notm}} instâncias](../services/standalone_viewingserviceinstances.html)
 * [Glossário de termos do HCX](hcx_glossary.html)

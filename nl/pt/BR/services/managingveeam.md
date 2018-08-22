@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -12,8 +12,7 @@ lastupdated: "2018-06-14"
 
 Depois que o serviço for implementado em sua instância, será possível acessar o console do Veeam usando RDP para gerenciar o backup e a restauração de todas as máquinas virtuais em seu ambiente, incluindo o backup e a restauração dos componentes de gerenciamento. É possível também fazer upgrade do serviço fazendo download e instalando as atualizações do Veeam do website do Veeam.
 
-Para instâncias que foram implementadas em liberações anteriores à V1.8, se você quiser usar o serviço Veeam no {{site.data.keyword.cloud}}, deve-se substituir a VSI do Veeam existente nas instâncias. 
-Para obter mais informações, consulte a seção _Substituindo a VSI do Veeam de instâncias pré-V1.8 pelo Veeam on IBM
+Para instâncias que foram implementadas em liberações anteriores à V1.8, se você quiser usar o serviço Veeam no {{site.data.keyword.cloud}}, deve-se substituir a VSI do Veeam existente nas instâncias. Para obter mais informações, consulte a seção _Substituindo a VSI do Veeam de instâncias pré-V1.8 pelo Veeam on IBM
 Cloud_ neste tópico.
 
 ## Acessando o console do Veeam usando RDP
@@ -32,19 +31,13 @@ Para obter mais informações, veja os tópicos a seguir:
 
 ## Fazendo backup e restaurando componentes de gerenciamento para instâncias que possuem o Veeam no IBM Cloud instalado
 
-O serviço Veeam on {{site.data.keyword.cloud_notm}} é pré-configurado com uma tarefa de backup que é executada
-automaticamente. Essa tarefa faz backup dos componentes de gerenciamento diariamente com até 14 pontos de restauração.
-
-É possível também fazer backup dos componentes de gerenciamento manualmente usando o console do Veeam.
+O serviço Veeam on {{site.data.keyword.cloud_notm}} pode ser configurado para fazer backup dos componentes de gerenciamento usando o console do Veeam. Para obter mais informações, consulte [Fazendo backup de componentes](../archiref/solution/solution_backingup.html).
 
 Para instâncias implementadas na V1.8 ou em liberações mais recentes (ou que passaram por upgrade para elas), as mudanças de configuração
-para o seu ambiente não são automaticamente submetidas a backup. Portanto, antes de mudar a configuração do seu ambiente, é
-recomendado que você faça backup dos componentes de gerenciamento manualmente executando a tarefa de backup de
-gerenciamento pré-configurada no console do Veeam. Para obter mais informações sobre como fazer backup manualmente, consulte
+para o seu ambiente não são automaticamente submetidas a backup. Portanto, antes de mudar a configuração de seu ambiente, é recomendado fazer backup dos componentes de gerenciamento manualmente executando a tarefa de backup de gerenciamento no console do Veeam. Para obter mais informações sobre como fazer backup manualmente, consulte
 as [Instruções técnicas do Veeam](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}.
 
-Quando ocorrem falhas nos componentes de gerenciamento, é possível restaurar os componentes de gerenciamento para um backup anterior usando o console do Veeam. 
-Para obter mais informações sobre como restaurar manualmente, consulte as
+Quando ocorrem falhas nos componentes de gerenciamento, é possível restaurar os componentes de gerenciamento para um backup anterior usando o console do Veeam. Para obter mais informações sobre como restaurar manualmente, consulte as
 [Instruções
 técnicas do Veeam]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:new_window}.
 
@@ -73,7 +66,7 @@ Conclua as etapas a seguir:
 
 Depois que o novo serviço Veeam no {{site.data.keyword.cloud_notm}} é implementado e um backup bem-sucedido dos componentes de gerenciamento é concluído, é possível remover a VSI do Veeam existente de sua conta criando um chamado de suporte do {{site.data.keyword.cloud_notm}}. O Suporte IBM identificará e excluirá a VSI do Veeam existente e o armazenamento.
 
-## Links relacionados
+### Links relacionados
 
 * [Veeam no {{site.data.keyword.cloud_notm}} visão geral](veeam_considerations.html)
 * [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)

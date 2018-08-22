@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-06-07"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -20,7 +20,7 @@ Para obter mais informações, veja os tópicos a seguir:
 * [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](../vcenter/vc_addingremovingservices.html)
 
-## Links relacionados
+### Links relacionados
 
 * [FortiGate Virtual Appliance no {{site.data.keyword.cloud_notm}} visão geral](fortinetvm_considerations.html)
 * [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)

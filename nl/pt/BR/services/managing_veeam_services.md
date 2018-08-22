@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -22,13 +22,13 @@ Quando você solicita serviços gerenciados para Veeam no {{site.data.keyword.cl
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Introdução** na área de janela de navegação esquerda.
 2. Role para baixo na página e, em **Pedir serviços gerenciados adicionais**, clique no cartão **Serviços gerenciados para o Veeam on IBM Cloud**.
-3. Na página **Pedir serviços gerenciados para o Veeam on IBM Cloud**, revise a descrição e as especificações técnicas para o Veeam on {{site.data.keyword.cloud_notm}} como um serviço gerenciado e clique em **Criar**.
+3. Na página **Veeam on IBM Cloud**, revise a descrição e as especificações técnicas para o Veeam on {{site.data.keyword.cloud_notm}} como um serviço gerenciado e, em seguida, clique em **Criar**.
 4. Especifique as definições de configuração de acordo com seus requisitos ou aceite os valores padrão.
 5. Clique em **vCenter Server** ou **Cloud Foundation** para incluir o serviço em uma de suas instâncias.
-6. Para incluir o serviço enquanto uma nova instância é pedida, clique em **Incluir na nova instância** e continue pedindo uma nova instância do [vCenter Server](../vcenter/vc_orderinginstance.html), [vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html) ou [Cloud Foundation](../sddc/sd_orderinginstance.html).
-7. Para incluir o serviço em uma instância existente, clique em **Incluir na instância implementada** e selecione a instância desejada na lista e, em seguida, confirme que deseja continuar com o pedido clicando em **Provisão**.
+6. Para incluir o serviço enquanto você pede uma nova instância, clique em **Incluir na nova instância** e, em seguida, continue pedindo uma nova instância do [vCenter Server](../vcenter/vc_orderinginstance.html), [vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html) ou [Cloud Foundation](../sddc/sd_orderinginstance.html).
+7. Para incluir o serviço em uma instância existente, clique em **Incluir na instância existente**, selecione a instância desejada na lista e, em seguida, confirme se deseja continuar com o pedido clicando em **Provisão**.
 
-## Links relacionados
+### Links relacionados
 
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](../vcenter/vc_addingremovingservices.html)
 * [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](../sddc/sd_addingremovingservices.html)
