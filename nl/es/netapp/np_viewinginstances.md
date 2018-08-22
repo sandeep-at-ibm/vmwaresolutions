@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Visualización de instancias de NetApp ONTAP Select
 
-Consulte las instancias de NetApp ONTAP Select que ha solicitado e información detallada sobre las mismas.
+Ver el resumen y la información detallada de las instancias de NetApp ONTAP Select que se suministran para cuentas de usuario diferentes.
 
 ## Visualización del resumen de instancias de NetApp ONTAP Select
 
-Para ver un resumen de todas las instancias de NetApp ONTAP Select de su entorno, realice los pasos siguientes:
+Para ver un resumen de todas las instancias de NetApp ONTAP Select que se han suministrado para una cuenta de usuario, complete los pasos siguientes:
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
-2. En la tabla **Instancias de NetApp ONTAP Select**, vea la lista de las instancias.
+1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+2. En la esquina superior derecha de la consola, pulse el avatar y, a continuación, pulse el campo **Cuenta** para seleccionar la cuenta de usuario para la que desea comprobar las instancias.
+3. En la tabla **Instancias de NetApp ONTAP Select**, visualice la lista de instancias que se han suministrado en la cuenta de usuario seleccionada.
 
 Tabla 1. Elementos de la instancia de NetApp ONTAP Select
 
@@ -43,7 +44,7 @@ Tabla 2. Propiedades de la instancia de NetApp ONTAP Select
 | Nombre | Nombre de la instancia. |
 | ID | El ID de la instancia. |
 | Ubicación | El centro de datos en el que se aloja la instancia. |
-| Versión desplegada | La versión desplegada de {{site.data.keyword.vmwaresolutions_full}}. |
+| Versión desplegada | La versión desplegada de {{site.data.keyword.vmwaresolutions_short}}. |
 | Versión de vCenter | La versión de VMware vCenter Server.<br><br>**Nota**: hay una ligera variación entre la versión de vCenter Server que se muestra en la consola de {{site.data.keyword.vmwaresolutions_short}} y en el cliente web de VMware vSphere. Ambas son correctas. |
 | NSX for vSphere | La versión del producto VMware NSX for vSphere. |
 | Edición de licencia de NSX | La versión y la edición de la licencia de VMware NSX. |
@@ -85,7 +86,7 @@ Tabla 3. Información de acceso correspondiente a los componentes relacionados c
 
 ## Visualización del historial de despliegues de instancias de NetApp ONTAP Select
 
-En **Historial de despliegue**, consulte el historial de despliegue de la instancia.
+Pulse **Historial de despliegue** en el panel de navegación izquierdo para ver el historial de despliegue de la instancia.
 
 Tabla 4. Historial de despliegues de la instancia de NetApp ONTAP Select
 
@@ -170,7 +171,7 @@ Revise los temas siguientes para obtener información que le ayudará a seguir l
 *  Para ver una lista de puntos de acceso para iniciar una sesión en la red privada de la infraestructura de {{site.data.keyword.cloud_notm}} utilizando VPN, consulte [Acceso VPN](http://www.softlayer.com/vpn-access){:new_window}.
 *  Si tiene problemas al desplegar un archivo OVF (Open Virtualization Format) mediante el cliente web de vSphere, consulte [Despliegue de un archivo OVF mediante el cliente web de vSphere](../vmonic/trbl_deploy_ovf.html).
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Solicitud de instancias de NetApp ONTAP Select](np_orderinginstances.html)
 * [Supresión de instancias de NetApp ONTAP Select](np_deletinginstance.html)

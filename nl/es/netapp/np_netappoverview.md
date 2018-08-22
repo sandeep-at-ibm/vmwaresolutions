@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-15"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -28,8 +28,8 @@ Esta capa proporciona la infraestructura física (recursos de cálculo, de red y
 
 ### Infraestructura de virtualización (cálculo, red y NetApp ONTAP Select)
 
-Esta capa virtualiza la infraestructura física mediante diversos productos de VMware y el producto NetApp ONTAP Select:
-* VMware vSphere virtualiza los recursos físicos de cálculo.
+Esta capa virtualiza la infraestructura física mediante los siguientes productos de VMware y el producto NetApp ONTAP Select:
+* VMware vSphere virtualiza los recursos de cálculo físicos
 * VMware NSX es la plataforma de virtualización de red que proporciona los componentes lógicos de red y las redes virtuales.
 * NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} despliega un clúster de ONTAP Select, que consta de cuatro VM para los cuatro hosts.
 
@@ -43,11 +43,9 @@ Figura 2. Componentes de NetApp ONTAP Select
 
 Esta capa consta del dispositivo virtual vCenter Server, NSX Manager, dos NSX ESG, 3 controladores NSX, el dispositivo virtual Platform Services Controller (PSC), vCenter Server Appliance (vCSA) y la máquina virtual IBM CloudDriver.
 
-NetApp ONTAP Select se ejecuta en un clúster de VMware y virtualiza el almacenamiento local en los hosts. NetApp ONTAP Select se despliega en el modelo dedicado, donde no se espera que otras cargas de trabajo compartan con él el mismo clúster. Como resultado, la configuración de hardware de la oferta NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} se dimensiona teniendo en cuenta únicamente los requisitos de NetApp ONTAP Select.
+NetApp ONTAP Select se ejecuta en un clúster de VMware y virtualiza el almacenamiento local en los hosts. NetApp ONTAP Select se despliega en el modelo dedicado, donde no se espera que otras cargas de trabajo compartan el clúster con el mismo. Como resultado, la configuración de hardware de la oferta NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} se dimensiona teniendo en cuenta únicamente los requisitos de NetApp ONTAP Select.
 
-<!--For details about the architecture, see the _Reference architecture_ document in the [Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform){:new_window}.-->
-
-## Componentes de la instancia de NetApp ONTAP Select
+## Especificaciones técnicas para instancias de NetApp ONTAP Select
 
 En la instancia de NetApp ONTAP Select se incluyen los siguientes componentes.
 
@@ -62,7 +60,7 @@ En la instancia de NetApp ONTAP Select se incluyen los siguientes componentes.
 
 ### Configuraciones preestablecidas
 
-Cuatro {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} con las siguientes opciones de configuración:
+Se proporcionan cuatro {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} con las siguientes opciones de configuración:
 * **Alto rendimiento (Medio)** – Licencia Premium / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 128 GB de RAM / Capacidad por nodo de veintidós unidades SSD de 1,9 TB / Capacidad efectiva de un clúster de 4 nodos – 59 TB
 * **Alto rendimiento (Medio)** – Licencia Premium / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 128 GB de RAM / Capacidad por nodo de veintidós unidades SSD de 3,8 TB / Capacidad efectiva de un clúster de 4 nodos – 118 TB
 * **Alta capacidad** – Licencia Estándar / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 64 GB de RAM / Capacidad por nodo de treinta y cuatro unidades SATA de 4 TB / Capacidad efectiva de un clúster de 4 nodos – 190 TB
@@ -93,10 +91,8 @@ Dos VSI (instancias de servidor virtual):
 *  Cuatro licencias de Premium/Standard Edition NetApp ONTAP Select (suministradas por el usuario)
 *  VMware vSphere 6.5 Enterprise Plus Edition
 *  VMware vCenter Server 6.5
-*  VMware NSX Base for Service Providers Edition
+*  VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 *  Cuota de soporte y servicios (una licencia por nodo)
-
-<!--For details about the components, see the _Bill of Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
 
 **Importante**: solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
 
@@ -107,7 +103,7 @@ Dos VSI (instancias de servidor virtual):
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Planificación de instancias de NetApp ONTAP Select](np_planning.html)
 * [Solicitud de instancias de NetApp ONTAP Select](np_orderinginstances.html)
