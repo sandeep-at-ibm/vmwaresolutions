@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -14,7 +14,7 @@ NetApp ONTAP Select 인스턴스를 주문하기 전에 다음 요구사항을 �
 
 ## IBM Cloud 계정 요구사항
 
-사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](../vmonic/slaccountrequirement.html)을 참조하십시오. 
+사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](../vmonic/slaccountrequirement.html)을 참조하십시오.
 
 ## IBM Cloud Data Center 가용성
 
@@ -55,12 +55,7 @@ NetApp ONTAP Select 배치에는 실제 인프라에 대한 엄격한 요구사�
 |WDC06 |워싱턴, DC |북미 동부 |고성능(중형), 고성능(대형), 고용량
 |WDC07 |워싱턴, DC |북미 동부 |고성능(중형), 고성능(대형), 고용량
 
-<!--## Capacity considerations-->
-
-<!--For capacity information and considerations, see the _Bill of
-Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
-
-## 관련 링크
+### 관련 링크
 
 * [NetApp ONTAP Select 개요](np_netappoverview.html)
 * [NetApp ONTAP Select 인스턴스 주문](np_orderinginstances.html)

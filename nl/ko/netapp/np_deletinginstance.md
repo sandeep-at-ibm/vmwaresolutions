@@ -4,15 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-19"
 
 ---
 
 # NetApp ONTAP Select 인스턴스 삭제
 
-NetApp ONTAP Select 인스턴스에서 주문한 컴포넌트를 릴리스하려면 인스턴스를 삭제하십시오.
-
-NetApp ONTAP Select 인스턴스를 삭제하는 경우 다음 컴포넌트가 순차적으로 릴리스됩니다.
+NetApp ONTAP Select 인스턴스를 삭제하면 다음 컴포넌트가 순차적으로 릴리스됩니다. 
 1. 가상 머신(VM) 및 NetApp ONTAP Select Deploy VM을 클러스터링한 배치된 NetApp ONTAP Select
 2. 지원 및 서비스 요금
 3. VMware 제품 라이센스
@@ -44,7 +42,7 @@ NetApp ONTAP Select 인스턴스를 삭제하는 경우 다음 컴포넌트가 �
    1. **vCenter 콘솔**의 오른쪽에 있는 오버플로우 메뉴 아이콘을 다시 클릭한 후 **인스턴스 삭제**를 클릭하십시오.
    2. **인스턴스 삭제** 창에서 **확인**을 클릭하십시오.
 
-## 관련 링크
+### 관련 링크
 
 * [NetApp ONTAP Select 인스턴스 주문](np_orderinginstances.html)
 * [NetApp ONTAP Select 인스턴스 보기](np_viewinginstances.html)

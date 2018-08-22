@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # NetApp ONTAP Select 인스턴스 보기
 
-주문한 NetApp ONTAP Select 인스턴스와 이에 대한 자세한 정보를 보십시오.
+서로 다른 사용자 계정에 대해 프로비저닝된 NetApp ONTAP Select 인스턴스의 요약과 자세한 정보를 봅니다. 
 
 ## NetApp ONTAP Select 인스턴스 요약 보기
 
-환경에 있는 모든 NetApp ONTAP Select 인스턴스의 요약을 보려면 다음 단계를 완료하십시오.
+사용자 계정에 대해 프로브저닝된 모든 NetApp ONTAP Select 인스턴스의 요약을 보려면 다음 단계를 완료하십시오. 
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
-2. **NetApp ONTAP Select 인스턴스** 테이블에서 인스턴스 목록을 보십시오.
+1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오. 
+2. 콘솔의 오른쪽 상단 모서리에서 사용자의 아바타를 클릭한 후에 **계정** 필드를 클릭하여 해당 인스턴스를 확인할 사용자 계정을 선택하십시오. 
+3. **NetApp ONTAP Select 인스턴스** 테이블에서, 선택된 사용자 계정에서 프로비저닝된 인스턴스의 목록을 보십시오. 
 
 표 1. NetApp ONTAP Select 인스턴스 항목
 
@@ -43,7 +44,7 @@ lastupdated: "2018-06-04"
 |이름 |인스턴스의 이름입니다. |
 |ID |인스턴스의 ID입니다. |
 |위치 |인스턴스가 호스팅되는 데이터 센터입니다. |
-|배치된 버전 |{{site.data.keyword.vmwaresolutions_full}}의 배치된 버전입니다. |
+|배치된 버전 |{{site.data.keyword.vmwaresolutions_short}}의 배치된 버전입니다. |
 |vCenter 버전 |VMware vCenter Server의 버전입니다.<br><br>**참고**: {{site.data.keyword.vmwaresolutions_short}} 콘솔에 표시된 vCenter Server 버전과 VMware vSphere Web Client 사이에 약간의 차이점이 있습니다. 그러나 모두 올바릅니다. |
 |NSX for vSphere |VMware NSX for vSphere 제품 버전입니다. |
 |NSX 라이센스 에디션 |VMware NSX 라이센스의 버전 및 에디션입니다. |
@@ -85,7 +86,7 @@ lastupdated: "2018-06-04"
 
 ## NetApp ONTAP Select 인스턴스의 배치 히스토리 보기
 
-**배치 히스토리**에서 인스턴스의 배치 히스토리를 보십시오.
+왼쪽 탐색 분할창에서 **배치 히스토리**를 클릭하여 인스턴스에 대한 배치 히스토리를 보십시오. 
 
 표 4. NetApp ONTAP Select 인스턴스 배치 히스토리
 
@@ -98,7 +99,7 @@ lastupdated: "2018-06-04"
 
 ## NetApp ONTAP Select 클러스터 보기
 
-1. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오.
+1. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오. 
 2. **클러스터**에서 NetApp ONTAP Select 클러스터에 대한 요약을 보십시오.
 
 	표 5: NetApp ONTAP Select 클러스터 항목
@@ -170,7 +171,7 @@ lastupdated: "2018-06-04"
 *  VPN을 사용하여 {{site.data.keyword.cloud_notm}} 인프라 사설 네트워크에 로그인하기 위한 액세스 지점의 목록은 [VPN 액세스](http://www.softlayer.com/vpn-access){:new_window}를 참조하십시오.
 *  vSphere Web Client를 사용하여 OVF(Open Virtualization Format) 파일을 배치할 때 문제점이 발생하면 [vSphere Web Client를 사용하여 OVF 파일 배치](../vmonic/trbl_deploy_ovf.html)를 참조하십시오.
 
-## 관련 링크
+### 관련 링크
 
 * [NetApp ONTAP Select 인스턴스 주문](np_orderinginstances.html)
 * [NetApp ONTAP Select 인스턴스 삭제](np_deletinginstance.html)

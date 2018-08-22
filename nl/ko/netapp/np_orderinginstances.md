@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-07"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -70,7 +70,7 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 
 ### 데이터 센터 위치
 
-인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}를 선택해야 합니다.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the Bare Metal Server specification you selected previously are displayed.-->
+인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}를 선택해야 합니다. 
 
 ### Bare Metal Server 구성
 
@@ -80,8 +80,6 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 * **고용량** – 표준 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 64GB RAM / 노드당 34개의 4TB SATA 드라이브 용량 / 네 개의 노드 클러스터의 유효한 용량 – 190TB
 
 **참고:** 3.8TB SSD(Solid State Disk) 드라이브는 일반적으로 {{site.data.keyword.CloudDataCent_notm}}에서 사용 가능합니다.
-
-<!--For guidance on what bare metal server configuration to choose, see the _Bill of Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
 
 ### Bare Metal Server 수
 
@@ -108,7 +106,7 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 
 인스턴스의 배치가 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 배치의 상태를 확인할 수 있습니다.
 
-인스턴스가 배치될 때 [NetApp ONTAP Select 인스턴스 컴포넌트](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components)에 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다.
+인스턴스가 성공적으로 배치된 경우에는 [NetApp ONTAP Select 인스턴스의 기술 스펙](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 
 
 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비**로 변경되고 이메일로 알림을 받습니다.
 
@@ -116,7 +114,7 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 
 주문한 NetApp ONTAP Select 인스턴스를 보고 관리하십시오.
 
-**중요**: {{site.data.keyword.slportal}} 또는 콘솔 외부의 다른 방법이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔의 {{site.data.keyword.cloud_notm}} 계정에서만 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+**중요**: {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
 
 **주의**: {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트(인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치됨)를 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거
@@ -124,7 +122,7 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 
    이 활동에 대한 예외에는 {{site.data.keyword.slportal}}의 공유 스토리지 파일 공유 관리가 포함됩니다. 이러한 활동에는 공유 스토리지 파일 공유 주문, 삭제(마운트된 경우 데이터 저장소에 영향을 줄 수 있음), 권한 부여 및 마운트가 포함됩니다.
 
-## 관련 링크
+### 관련 링크
 
 * [NetApp ONTAP Select 인스턴스 보기](np_viewinginstances.html)
 * [NetApp ONTAP Select 인스턴스 삭제](np_deletinginstance.html)
