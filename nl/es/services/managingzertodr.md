@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -34,11 +34,11 @@ Para actualizar la réplica virtual de Zerto, inicie una sesión en la consola d
 
 Cuando añade o elimina servidores ESXi para el clúster primario de la instancia, los VRA se despliegan o se eliminan automáticamente. Los VRA no se despliegan automáticamente en los servidores ESXi de los clústeres secundarios de la instancia, pero los puede desplegar desde la consola del servicio de réplica virtual de Zerto.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
-* [Visión general de Zerto on IBM Cloud](addingzertodr.html)
+* [Visión general de Zerto on {{site.data.keyword.cloud_notm}}](addingzertodr.html)
 * [Solicitud de servicios gestionados para Zerto on {{site.data.keyword.cloud_notm}}](managing_zerto_services.html)
 * [Sitio web zerto.com](https://www.zerto.com){:new_window}
 * [Documentación técnica de Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Recuperación tras desastre de Zerto](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/zerto){:new_window}
+* [Recuperación tras desastre de Zerto](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
 * [Explicación de las alertas del servicio de réplica virtual de Zerto](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)

@@ -4,25 +4,25 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-20"
 
 ---
 
 # Solicitud de KMIP for VMware on IBM Cloud
 
-Puede solicitar el servicio de KMIP for VMware on {{site.data.keyword.cloud_notm}} al pedir una instancia nueva incluida con el servicio o añadiendo el servicio a la instancia existente.
+Puede solicitar el servicio de KMIP for VMware on {{site.data.keyword.cloud}} al pedir una instancia nueva incluida con el servicio o añadiendo el servicio a la instancia existente.
 
 ## Solicitud de KMIP for VMware on IBM Cloud para una instancia nueva
 
 Puede solicitar una instancia nueva con KMIP for VMware on {{site.data.keyword.cloud_notm}} utilizando uno de los métodos siguientes:
-* Desde la consola de {{site.data.keyword.vmwaresolutions_full}}, al solicitar una instancia nueva, seleccione **KMIP for VMware on IBM Cloud** en la sección **Servicios**.
-* Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **Servicio de KMIP for VMware on {{site.data.keyword.cloud_notm}}**, especifique los valores de servicio y seleccione **Añadir a instancia nueva**.
+* Desde la consola de {{site.data.keyword.vmwaresolutions_short}}, al solicitar una instancia nueva, seleccione **KMIP for VMware on IBM Cloud** en la sección **Servicios**.
+* Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **KMIP for VMware on IBM Cloud**, especifique los valores de servicio y seleccione **Añadir a instancia nueva**.
 
 ## Solicitud de KMIP for VMware on IBM Cloud para una instancia existente
 
 Puede añadir el servicio de KMIP for VMware on {{site.data.keyword.cloud_notm}} en una instancia existente utilizando uno de los métodos siguientes:
-* Desde la consola de {{site.data.keyword.vmwaresolutions_short}}, visualice la instancia para la que desea añadir el servicio, pulse **Servicios** en el panel de navegación izquierdo y pulse **Añadir servicio**.
-* Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **Servicio de KMIP for VMware on IBM Cloud**, especifique los valores de servicio y seleccione **Añadir a instancia existente**.
+* Desde la consola de {{site.data.keyword.vmwaresolutions_short}}, visualice la instancia para la que desea añadir el servicio, pulse **Servicios** en el panel de navegación izquierdo y pulse **Añadir**.
+* Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **KMIP for VMware on IBM Cloud**, especifique los valores de servicio y seleccione **Añadir a instancia existente**.
 
 ## Configuración de servicio de KMIP for VMware on IBM Cloud
 
@@ -38,10 +38,11 @@ Seleccione la región de {{site.data.keyword.cloud_notm}} en la que se va a aloj
 
 Para vCenter Server, debe configurar un clúster de Key Management Server (KMS). El punto final en su región seleccionada se conecta de forma segura al KMS mediante el certificado SSL cliente. Consulte la tabla siguiente para el punto final de cada región. Estos puntos finales utilizan certificados autofirmados que mantiene el equipo de {{site.data.keyword.vmwaresolutions_short}}. El certificado de huella de los certificados es `a9 d0 ff 15 df 85 10 6b 61 88 fe 2e 8b d3 1a af 48 c8 a0 7a`.
 
-Tabla 1: Regiones de puntos finales del servicio KMIP for VMware on IBM Cloud
+Tabla 1: Regiones de puntos finales del servicio KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
 | Región         | Punto final               |
 |:---------------|:-----------------------|
+| Alemania        |  `161.156.68.107:5696` |
 | Sídney         |  `130.198.73.134:5696` |
 | Reino Unido |  `158.175.93.122:5696` |
 | EE.UU. Sur       |  `169.60.185.42:5696`  |
@@ -62,9 +63,9 @@ Pulse **Recuperar** para obtener la clave raíz del cliente que se almacena en l
 
 
 
-## Enlaces relacionados
+### Enlaces relacionados
 
-* [Visión general de KMIP for VMware on IBM Cloud](kmip_considerations.html)
+* [Visión general de KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip_considerations.html)
 * [Solicitud, visualización y eliminación de servicios para instancias de Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](../vcenter/vc_addingremovingservices.html)
 * [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server con el paquete híbrido (Hybridity)](../vcenter/vc_hybrid_addingremovingservices.html)

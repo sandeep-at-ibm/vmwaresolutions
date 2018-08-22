@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,8 +20,8 @@ Asegúrese de haber realizado las tareas siguientes:
 
 ## Procedimiento
 
-1. Pulse **Instancias desplegadas** en el panel de navegación izquierdo.
-2. Desplácese a la tabla **Instancias locales de HCX** y pulse **Solicitar instancia**.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+2. Desplácese a la tabla **Instancias locales de HCX** y pulse **Suministrar nuevo**.
 3. Especifique el **Nombre de instancia en local** y pulse **Siguiente**.
 4. Verifique la configuración de la instancia antes de realizar el pedido.
    1. Revise los valores de la instancia.
@@ -39,10 +39,9 @@ Cuando la clave de activación esté lista para ser utilizada, el estado de la i
 
 Puede ver y gestionar la instancia local de HCX on {{site.data.keyword.cloud_notm}} que ha solicitado.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Visualización de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](standalone_viewingserviceinstances.html)
 * [Supresión de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](standalone_deletingserviceinstances.html)
 * [Glosario de términos de HCX](hcx_glossary.html)
 * [Documentación de VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

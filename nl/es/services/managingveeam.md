@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -29,11 +29,9 @@ Para obtener más información, consulte los temas siguientes:
 
 ## Copia de seguridad y restauración de componentes de gestión para instancias que tienen instalado Veeam on IBM Cloud
 
-El servicio de Veeam en {{site.data.keyword.cloud_notm}} está preconfigurado con un trabajo de copia de seguridad de gestión que se ejecuta automáticamente. Este trabajo hace una copia de seguridad diaria de los componentes de gestión con un máximo de 14 puntos de restauración.
+El servicio de Veeam on {{site.data.keyword.cloud_notm}} se puede configurar para hacer copia de seguridad de los componentes de gestión mediante la consola de Veeam. Para obtener más información, consulte [Copia de seguridad de componentes](../archiref/solution/solution_backingup.html).
 
-También puede hacer copia de seguridad de los componentes de gestión manualmente mediante la consola de Veeam.
-
-Para instancias que se han desplegado en (o se han actualizado a) V1.8 y releases posteriores, no se hará copia de seguridad automática de los cambios de configuración a su entorno. Por lo tanto, antes de modificar la configuración de su entorno, se recomienda que realice una copia de seguridad manual de los componentes de gestión ejecutando el trabajo preconfigurado de copia de seguridad de gestión en la consola de Veeam. Para obtener más información sobre cómo realizar copias de seguridad manualmente, consulte las [Instrucciones técnicas de Veeam](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}.
+Para instancias que se han desplegado en (o se han actualizado a) V1.8 y releases posteriores, no se hará copia de seguridad automática de los cambios de configuración a su entorno. Por lo tanto, antes de modificar la configuración de su entorno, se recomienda que realice una copia de seguridad manual de los componentes de gestión ejecutando el trabajo de copia de seguridad de gestión en la consola de Veeam. Para obtener más información sobre cómo realizar copias de seguridad manualmente, consulte las [Instrucciones técnicas de Veeam](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}.
 
 Si se producen errores en los componentes de gestión, puede restaurar dichos componentes a una copia de seguridad anterior mediante la consola de Veeam. Para obtener más información sobre cómo restaurar copias de seguridad manualmente, consulte las [Instrucciones técnicas de Veeam]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:new_window}.
 
@@ -57,7 +55,7 @@ Siga estos pasos:
 
 Después de que se haya desplegado el nuevo servicio Veeam on {{site.data.keyword.cloud_notm}} y se haya realizado correctamente una copia de seguridad de los componentes de gestión, puede eliminar la VSI de Veeam existente de la cuenta mediante la creación de una incidencia de soporte de {{site.data.keyword.cloud_notm}}. El equipo de soporte de IBM identificará y suprimirá la VSI de Veeam existente y el almacenamiento.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Visión general de Veeam on {{site.data.keyword.cloud_notm}}](veeam_considerations.html)
 * [Cómo ponerse en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html)

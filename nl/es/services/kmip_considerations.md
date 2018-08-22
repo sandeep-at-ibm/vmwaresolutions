@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,6 +13,15 @@ lastupdated: "2018-06-14"
 El servicio KMIP for VMware on {{site.data.keyword.cloud}} ofrece un servicio altamente disponible de tipo 24x7 para gestionar las claves de cifrado que utiliza VMware en {{site.data.keyword.cloud_notm}}. Este servicio ofrece capacidad de tiempo de ejecución que permite a los clientes crear, recuperar, activar, revocar y destruir las claves de cifrado. También proporciona capacidad de gestión para mantener las asociaciones entre las credenciales del cliente y las claves de cifrado.
 
 **Disponibilidad**: Este servicio solo está disponible para instancias desplegadas en V2.2 o releases posteriores.
+
+## Especificaciones técnicas para KMIP for VMware on IBM Cloud
+
+Las siguientes especificaciones se incluyen con el servicio KMIP for VMware on {{site.data.keyword.cloud_notm}}:
+
+* Un protocolo Key Management Interoperability (KMIP) compatible con VMware
+* Un servicio gestionado
+* Disponible en múltiples regiones geográficas de todo el mundo
+* Un punto final de servicio KMIP altamente disponible en cada región
 
 ## Consideraciones al instalar KMIP for VMware on IBM Cloud
 
@@ -38,9 +47,9 @@ El certificado público de VMware que proporcione durante la solicitud o la util
 
 Por lo tanto, antes de eliminar el servicio, asegúrese de que no se cifre ninguna máquina virtual ni vSAN mediante las claves creadas por el servicio KMIP.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
-* [Solicitud de KMIP for VMware on IBM Cloud](kmip_ordering.html)
+* [Solicitud de KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip_ordering.html)
 * [IBM Key Protect para {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/services/keymgmt/index.html#getting-started-with-key-protect)
 * [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect?&language=javascript_jquery#introduction)
 * [Seguridad de vSphere](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)
