@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -56,12 +56,7 @@ NetApp ONTAP Select 部署对物理基础架构有严格要求。因此，只能
 |WDC07|华盛顿|北美东部|高性能（中型）、高性能（大型）、高容量
 
 
-<!--## Capacity considerations-->
-
-<!--For capacity information and considerations, see the _Bill of
-Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
-
-## 相关链接
+### 相关链接
 
 * [NetApp ONTAP Select 概述](np_netappoverview.html)
 * [订购 NetApp ONTAP Select 实例](np_orderinginstances.html)
