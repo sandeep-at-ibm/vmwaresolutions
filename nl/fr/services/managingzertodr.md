@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -34,11 +34,11 @@ Pour mettre à jour la réplication virtuelle Zerto, connectez-vous à la consol
 
 Lorsque vous ajoutez ou supprimez des serveurs ESXi pour le cluster principal de votre instance, des dispositifs VRA sont are automatiquement déployés ou supprimés. Les dispositifs VRA ne sont pas automatiquement déployés sur les serveurs ESXi des clusters secondaires de votre instance, mais vous pouvez les déployer manuellement depuis la console de réplication Zerto.
 
-## Liens connexes
+### Liens connexes
 
-* [Présentation de Zerto on IBM Cloud](addingzertodr.html)
+* [Présentation de Zerto on {{site.data.keyword.cloud_notm}}](addingzertodr.html)
 * [Demande de services gérés pour Zerto on {{site.data.keyword.cloud_notm}}](managing_zerto_services.html)
 * [Site Web zerto.com](https://www.zerto.com){:new_window}
 * [Documentation technique Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Reprise après incident Zerto](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/zerto){:new_window}
+* [Reprise après incident Zerto](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
 * [Explication des alertes de réplication virtuelle Zerto](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -36,13 +36,13 @@ Pour plus d'informations, voir [IBM Resiliency Disaster Recovery as a Service](h
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Initiation** dans le panneau de navigation de gauche.
 2. Faites défiler la page vers le bas et, sous **Commander des services gérés supplémentaires**, cliquez sur la carte **Services gérés pour Zerto on IBM Cloud**.
-3. Sur la page **Services gérés pour Zerto on IBM Cloud**, passez en revue la description et les spécifications techniques concernant Zerto on {{site.data.keyword.cloud_notm}} en tant que service géré, puis cliquez sur **Créer**.
+3. Sur la page **Zerto on IBM Cloud**, passez en revue la description et les spécifications techniques concernant Zerto on {{site.data.keyword.cloud_notm}} en tant que service géré, puis cliquez sur **Créer**.
 4. Spécifiez les paramètres de configuration en fonction de vos exigences ou acceptez les valeurs par défaut.
 5. Cliquez sur **vCenter Server** ou **Cloud Foundation** pour ajouter le service à l'une de vos instances.
 6. Pour ajouter le service pendant que vous commandez une nouvelle instance, cliquez sur **Ajouter à une nouvelle instance** et poursuivez votre commande d'instance [vCenter Server](../vcenter/vc_orderinginstance.html), [vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html) ou [Cloud Foundation](../sddc/sd_orderinginstance.html).
-7. Pour ajouter le service à une instance existante, cliquez sur l'option **Ajouter à une instance déployée**, sélectionnez dans la liste l'instance à laquelle vous voulez ajouter le service, puis confirmez que vous souhaitez poursuivre la commande en cliquant sur **Mettre à disposition**.
+7. Pour ajouter le service à une instance existante, cliquez sur l'option **Ajouter à une instance existante**, sélectionnez dans la liste l'instance à laquelle vous voulez ajouter le service, puis confirmez que vous souhaitez poursuivre la commande en cliquant sur **Mettre à disposition**.
 
-## Liens connexes
+### Liens connexes
 
 * [Commande, affichage et retrait de services pour des instances vCenter Server](../vcenter/vc_addingremovingservices.html)
 * [Commande, affichage et retrait de services pour des instances Cloud Foundation](../sddc/sd_addingremovingservices.html)

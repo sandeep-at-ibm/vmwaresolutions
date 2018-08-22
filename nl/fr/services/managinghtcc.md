@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
 # Gestion de HyTrust CloudControl on IBM Cloud
 
-Pour gérer le service HyTrust CloudControl on {{site.data.keyword.cloud_notm}} (HTCC), accédez à l'interface graphique Web HTCC à partir de la console {{site.data.keyword.vmwaresolutions_full}} ou accédez à la console HTCC à partir du client Web vSphere.
+Pour gérer le service HyTrust CloudControl on {{site.data.keyword.cloud}} (HTCC), accédez à l'interface graphique Web HTCC à partir de la console {{site.data.keyword.vmwaresolutions_short}} ou accédez à la console HTCC à partir du client Web vSphere.
 
 ## Accès à l'interface graphique Web HyTrust CloudControl à partir de la console IBM Cloud for VMware Solutions
 
@@ -27,7 +27,7 @@ Pour plus d'informations, voir les rubriques suivantes :
 * [Commande, affichage et retrait de services pour des instances Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Commande, affichage et retrait de services pour des instances vCenter Server](../vcenter/vc_addingremovingservices.html)
 
-## Liens connexes
+### Liens connexes
 
 * [Présentation de HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](htcc_considerations.html)
 * [Contacter le support IBM](../vmonic/trbl_support.html)

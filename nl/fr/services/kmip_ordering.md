@@ -4,25 +4,25 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-20"
 
 ---
 
 # Commande de KMIP for VMware on IBM Cloud
 
-Vous pouvez commander le service KMIP for VMware on {{site.data.keyword.cloud_notm}} lors de la commande d'une nouvelle instance avec le service inclus ou vous pouvez ajouter le service à votre instance existante.
+Vous pouvez commander le service KMIP for VMware on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance avec le service inclus ou vous pouvez ajouter le service à votre instance existante.
 
 ## Commande de KMIP for VMware on IBM Cloud pour une nouvelle instance
 
 Vous pouvez commander une nouvelle instance avec KMIP for VMware on {{site.data.keyword.cloud_notm}} à l'aide de l'une des méthodes suivantes :
-* Depuis la console {{site.data.keyword.vmwaresolutions_full}}, lorsque vous commandez une nouvelle instance, sélectionnez **KMIP for VMware on IBM Cloud** dans la section **Services**.
-* Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **KMIP for VMware on {{site.data.keyword.cloud_notm}}**, spécifiez les paramètres de service et sélectionnez **Ajouter à une nouvelle instance**.
+* Depuis la console {{site.data.keyword.vmwaresolutions_short}}, lorsque vous commandez une nouvelle instance, sélectionnez **KMIP for VMware on IBM Cloud** dans la section **Services**.
+* Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **KMIP for VMware on IBM Cloud**, spécifiez les paramètres de service et sélectionnez **Ajouter à une nouvelle instance**.
 
 ## Commande de KMIP for VMware on IBM Cloud pour une instance existante
 
 Vous pouvez ajouter le service KMIP for VMware Plus on {{site.data.keyword.cloud_notm}} dans une instance existante à l'aide de l'une des méthodes suivantes :
-* Depuis la console {{site.data.keyword.vmwaresolutions_short}}, affichez l'instance pour laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter un service**.
-* Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **KMIP for VMware on IBM Cloud**, spécifiez les paramètres de service et sélectionnez **Ajouter à une instance existante**.
+* Depuis la console {{site.data.keyword.vmwaresolutions_short}}, affichez l'instance pour laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter**.
+* Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **KMIP for VMware on IBM Cloud**, spécifiez les paramètres de service et sélectionnez **Ajouter à une instance existnte**.
 
 ## Configuration du service KMIP for VMware on IBM Cloud
 
@@ -38,10 +38,11 @@ Sélectionnez la région {{site.data.keyword.cloud_notm}} dans laquelle votre in
 
 Pour vCenter Server, vous devez configurer un cluster KMS (Key Management Server). Le noeud final situé dans la région que vous avez sélectionnée se connecte de manière sécurisée à KMS via le certificat SSL client. Pour le noeud final dans chaque région, voir le tableau suivant. Ces noeuds finaux utilisent des certificats autosignés gérés par l'équipe {{site.data.keyword.vmwaresolutions_short}}. L'empreinte des certificats est `a9 d0 ff 15 df 85 10 6b 61 88 fe 2e 8b d3 1a af 48 c8 a0 7a`.
 
-Tableau 1: Régions de noeud final de service KMIP for VMware on IBM Cloud
+Tableau 1 : Régions de noeud final de service KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
 | Région         | Noeud final               |
 |:---------------|:-----------------------|
+| Allemagne        |  `161.156.68.107:5696` |
 | Sydney         |  `130.198.73.134:5696` |
 | Royaume-Uni |  `158.175.93.122:5696` |
 | Sud des Etats-Unis       |  `169.60.185.42:5696`  |
@@ -62,9 +63,9 @@ Cliquez sur **Extraire** pour obtenir la clé racine de client qui est stockée 
 
 
 
-## Liens connexes
+### Liens connexes
 
-* [Présentation de KMIP for VMware on IBM Cloud](kmip_considerations.html)
+* [Présentation de KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip_considerations.html)
 * [Commande, affichage et retrait de services pour des instances Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Commande, affichage et retrait de services pour des instances vCenter Server](../vcenter/vc_addingremovingservices.html)
 * [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)

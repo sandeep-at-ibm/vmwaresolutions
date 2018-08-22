@@ -4,22 +4,22 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-20"
 
 ---
 
 # Commande de VMware HCX on IBM Cloud
 
-Vous pouvez commander le service VMware HCX on {{site.data.keyword.cloud_notm}} lors de la commande d'une nouvelle instance VMware vCenter Server with Hybridity Bundle avec le service inclus ou vous pouvez ajouter le service à votre instance existante.
+Vous pouvez commander le service VMware HCX on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance VMware vCenter Server with Hybridity Bundle avec le service inclus ou vous pouvez ajouter le service à votre instance existante.
 
 ## Commande de VMware HCX on IBM Cloud pour une nouvelle instance
 
-Pour commander une nouvelle instance VMware vCenter Server on IBM Cloud with Hybridity Bundle avec VMware HCX on {{site.data.keyword.cloud_notm}}, sélectionnez **VMware HCX on IBM Cloud** dans la section **Services** lorsque vous passez votre commande depuis la console {{site.data.keyword.vmwaresolutions_full}}.
+Pour commander une nouvelle instance VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle avec VMware HCX on {{site.data.keyword.cloud_notm}}, sélectionnez **VMware HCX on IBM Cloud** dans la section **Services** lorsque vous passez votre commande depuis la console {{site.data.keyword.vmwaresolutions_short}}.
 
 
 ## Commande de VMware HCX on IBM Cloud pour une instance existante
 
-Pour ajouter le service VMware HCX on {{site.data.keyword.cloud_notm}} dans une instance VMware vCenter Server on IBM Cloud with Hybridity Bundle existante, affichez l'instance pour laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter un service**.
+Pour ajouter le service VMware HCX on {{site.data.keyword.cloud_notm}} dans une instance VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle existante, affichez l'instance pour laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter**.
 
 ## Configuration de VMware HCX on IBM Cloud
 
@@ -44,9 +44,9 @@ Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatis
    * Un sous-réseau portable public pour les interconnexions HCX si **Réseau public** est sélectionné pour **Type d'interconnexion HCX**. Ce sous-réseau est également utilisé pour l'activation et la maintenance avec VMware.
 
    **Important :** les adresses IP des sous-réseaux commandés pour HCX sont gérées par l'automatisation VMware sur {{site.data.keyword.cloud_notm}}. Ces adresses IP ne peuvent pas être affectées à des ressources VMware, telles que des machines virtuelles et des serveurs de périphérie NSX Edge, que vous créez. Si vous avez besoin d'adresses IP supplémentaires pour vos artefacts VMware, vous devez commander vos propres sous-réseaux depuis {{site.data.keyword.cloud_notm}}.
-2. Si **Réseau privé** a été sélectionné comme **Type d'interconnexion HCX**, un groupe de ports nommé **SDDC-DPortGroup-HCX-Private** est créé sur le commutateur virtuel distribué privé. 
-3. Une clé d'activation HCX est commandée à partir de VMware. 
-4. Trois pools de ressources et dossiers de machines virtuelles pour HCX, nécessaires pour les interconnexions HCX, les composants HCX locaux et les composants HCX distants, sont créés. 
+2. Si **Réseau privé** a été sélectionné comme **Type d'interconnexion HCX**, un groupe de ports nommé **SDDC-DPortGroup-HCX-Private** est créé sur le commutateur virtuel distribué privé.
+3. Une clé d'activation HCX est commandée à partir de VMware.
+4. Trois pools de ressources et dossiers de machines virtuelles pour HCX, nécessaires pour les interconnexions HCX, les composants HCX locaux et les composants HCX distants, sont créés.
 5. Une paire de passerelles VMware NSX ESG (Edge Services Gateway) pour le trafic de gestion HCX est déployée et configurée :
    * Des interfaces de liaison montante publique et privée sont configurées à l'aide des sous-réseaux commandés.
    * Les passerelles ESG sont configurées sous forme de paire de dispositifs Edge très volumineux à haute disponibilité.
@@ -63,7 +63,7 @@ Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatis
    * Les conteneurs de déploiement HCX locaux et distants sont configurés.
 7. Le nom d'hôte et l'adresse IP de HCX Manager sont enregistrés auprès du serveur DNS de VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
-## Liens connexes
+### Liens connexes
 
 * [Présentation de HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
 * [Gestion de HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)
