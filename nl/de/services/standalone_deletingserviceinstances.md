@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -24,7 +24,7 @@ Lesen Sie unbedingt alle Hinweise im Abschnitt [Hinweise zum Löschen von lokale
 4. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
    Der Status der Instanz ändert sich in **Wird entfernt**. Nach Abschluss der Instanzlöschung ist die Instanz nicht mehr in der Tabelle **Lokale HCX-Instanzen** verfügbar.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen bestellen](standalone_orderingserviceinstances.html)
 * [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen anzeigen](standalone_viewingserviceinstances.html)

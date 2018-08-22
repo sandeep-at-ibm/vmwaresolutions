@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -34,11 +34,11 @@ Zur Aktualisierung von Zerto Virtual Replication melden Sie sich bei der Konsole
 
 Wenn Sie ESXi-Server für den primären Cluster Ihrer Instanz hinzufügen oder entfernen, werden VRAs automatisch bereitgestellt oder entfernt. Auf den ESXi-Servern in den sekundären Clustern Ihrer Instanz werden VRAs nicht automatisch bereitgestellt. Sie können sie jedoch selbst über die Konsole von Zerto Virtual Replication bereitstellen.
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [Überblick zu Zerto on IBM Cloud](addingzertodr.html)
+* [Übersicht über Zerto on {{site.data.keyword.cloud_notm}}](addingzertodr.html)
 * [Verwaltete Services für Zerto on {{site.data.keyword.cloud_notm}} anfordern](managing_zerto_services.html)
 * [Website "zerto.com"](https://www.zerto.com){:new_window}
-* [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Zerto disaster recovery](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/zerto){:new_window}
-* [Explanation of Zerto Virtual Replication Alerts](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)
+* [Technische Dokumentation zu Zerto (englisch)](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
+* [Disaster-Recovery mit Zerto](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
+* [Erläuterung von Zerto Virtual Replication-Alerts (englisch)](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,9 +18,9 @@ Weitere Informationen zum Anzeigen der Servicedetails finden Sie in den folgende
 * [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
 * [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [Überblick zu F5 on {{site.data.keyword.cloud_notm}}](f5_considerations.html)
+* [Übersicht über F5 on {{site.data.keyword.cloud_notm}}](f5_considerations.html)
 * [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
 * [Häufig gestellte Fragen](../vmonic/faq.html)
 * [F5-Website](https://f5.com/){:new_window}

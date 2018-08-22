@@ -4,15 +4,24 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-24"
 
 ---
 
-# Überblick zu KMIP for VMware on IBM Cloud
+# Übersicht über KMIP for VMware on IBM Cloud
 
 Der Service "KMIP for VMware on {{site.data.keyword.cloud}}" stellt täglich rund um die Uhr einen hoch verfügbaren Service für das Management von Verschlüsselungsschlüsseln bereit, die von VMware in der {{site.data.keyword.cloud_notm}} verwendet werden. Dieser Service bietet Laufzeitfunktionalität, mit der Kunden die Verschlüsselungsschlüssel erstellen, abrufen, aktivieren, widerrufen und zerstören können. Außerdem stellt er Managementfunktionen zum Verwalten der Zuordnungen zwischen den Clientberechtigungsnachweisen und den Verschlüsselungsschlüsseln bereit.
 
 **Verfügbarkeit**: Dieser Service ist nur für Instanzen verfügbar, die in V2.2 oder höheren Releases bereitgestellt werden.
+
+## Technische Spezifikationen für KMIP for VMware on IBM Cloud
+
+Die folgenden Spezifikationen werden mit dem Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}" einbezogen:
+
+* Ein VMware-kompatibles Key Management Interoperability Protocol (KMIP)
+* Ein verwalteter Service
+* Verfügbar in mehreren geografischen Regionen weltweit
+* Hochverfügbarer KMIP-Serviceendpunkt in jeder Region
 
 ## Hinweise zur Installation von KMIP on IBM Cloud
 
@@ -38,9 +47,9 @@ Das öffentliche VMware-Zertifikat, das Sie beim Bestellen oder Verwenden des Se
 
 Bevor Sie den Service entfernen, müssen Sie sicherstellen, dass keine virtuellen Maschinen oder vSANs mit den vom KMIP-Service erstellten Schlüsseln verschlüsselt werden.
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [KMIP for VMware on IBM Cloud bestellen](kmip_ordering.html)
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} bestellen](kmip_ordering.html)
 * [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/services/keymgmt/index.html#getting-started-with-key-protect)
 * [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect?&language=javascript_jquery#introduction)
 * [vSphere Security](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)

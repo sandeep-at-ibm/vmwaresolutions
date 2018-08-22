@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-15"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -15,14 +15,14 @@ Sie können den Service "FortiGate Virtual Appliance on {{site.data.keyword.clou
 ## FortiGate Virtual Appliance on IBM Cloud für eine neue Instanz bestellen
 
 Sie können mithilfe einer der folgenden Methoden eine neue Instanz mit FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} bestellen:
-* Wählen Sie beim Bestellen einer neuen Instanz über die {{site.data.keyword.vmwaresolutions_full}}-Konsole **FortiGate Virtual Appliance on IBM Cloud** im Abschnitt **Services** aus.
-* Wählen Sie im {{site.data.keyword.cloud_notm}}-Katalog **FortiGate Virtual Appliance on IBM Cloud-Service** aus, geben Sie die Serviceeinstellungen an und wählen Sie **Zu neuer Instanz hinzufügen** aus.
+* Wählen Sie beim Bestellen einer neuen Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole **FortiGate Virtual Appliance on IBM Cloud** im Abschnitt **Services** aus.
+* Wählen Sie im {{site.data.keyword.cloud_notm}}-Katalog **FortiGate Virtual Appliance on IBM Cloud** aus, geben Sie die Serviceeinstellungen an und wählen Sie **Zu neuer Instanz hinzufügen** aus.
 
 ## FortiGate Virtual Appliance on IBM Cloud für eine vorhandene Instanz bestellen
 
 Sie können den Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" mit einer der folgenden Methoden zu einer vorhandenen Instanz hinzufügen:
-* Zeigen Sie über die {{site.data.keyword.vmwaresolutions_short}}-Konsole die Instanz an, für die der Service hinzufügt werden soll, klicken Sie im linken Navigationsfenster auf **Services** und anschließend auf **Service hinzufügen**.
-* Wählen Sie im {{site.data.keyword.cloud_notm}}-Katalog **FortiGate Virtual Appliance on IBM Cloud-Service** aus, geben Sie die Serviceeinstellungen an und wählen Sie **Zu vorhandener Instanz hinzufügen** aus.
+* Zeigen Sie über die {{site.data.keyword.vmwaresolutions_short}}-Konsole die Instanz an, für die der Service hinzugefügt werden soll, klicken Sie im linken Navigationsfenster auf **Services** und anschließend auf **Hinzufügen**.
+* Wählen Sie im {{site.data.keyword.cloud_notm}}-Katalog **FortiGate Virtual Appliance on IBM Cloud** aus, geben Sie die Serviceeinstellungen an und wählen Sie **Zu vorhandener Instanz hinzufügen** aus.
 
 ## FortiGate Virtual Appliance on IBM Cloud - Servicekonfiguration
 
@@ -34,7 +34,7 @@ Geben Sie den Servicenamen ein.
 
 ### Bereitstellungsgröße
 
-IBM Cloud stellt die folgenden Optionen für die Bereitstellungsgröße zur Verfügung:
+{{site.data.keyword.cloud_notm}} stellt die folgenden Optionen für die Bereitstellungsgröße zur Verfügung:
 * S (Klein): 2 vCPUs / 4 GB RAM
 * M (Mittel): 4 vCPUs / 6 GB RAM
 * L (Groß): 8 vCPUs / 12 GB RAM
@@ -53,9 +53,9 @@ Das Lizenzmodell für FortiGate Virtual Appliance on {{site.data.keyword.cloud_n
 
 **Wichtig**: Nach der Installation des Service kann das Lizenzmodell nicht mehr geändert werden. Wenn Sie das Lizenzmodell ändern möchten, müssen Sie den vorhandenen Service entfernen und ihn mit einer anderen Lizenzoption erneut installieren.
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [Überblick zu FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_considerations.html)
+* [Übersicht über FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_considerations.html)
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} verwalten](managingfortinetvm.html)
 * [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
 * [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)

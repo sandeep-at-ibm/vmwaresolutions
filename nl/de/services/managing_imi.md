@@ -4,17 +4,27 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-04"
+lastupdated: "2018-07-27"
 
 ---
 
 # Verwaltete Services von IMI anfordern
 
-{{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) kann das Management der virtuellen VMware-Infrastruktur mithilfe von modularen Services vereinfachen. IMI nutzt die erweiterte Automatisierung und Analyse, um kritische Infrastrukturkomponenten weltweit zu verwalten und dynamische Remote-Management-Services für eine breite Palette von konventionellen und virtuellen Cloud-Infrastrukturen bereitzustellen.
+{{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) kann das Management der virtuellen VMware-Infrastruktur mithilfe modularer Services vereinfachen. IMI nutzt die erweiterte Automatisierung und Analyse, um kritische Infrastrukturkomponenten weltweit zu verwalten und dynamische Remote-Management-Services für eine breite Palette konventioneller und virtueller Cloud-Infrastrukturen bereitzustellen.
 
-IMI kann als einziger anerkannter Provider eingesetzt werden, um die Überwachung und Verwaltung der virtuellen IT-Infrastruktur zu vereinfachen, denn es bietet eine ganzheitliche Sicht der verwalteten Services für VMware Cloud Foundation- und VMware vCenter Server-Umgebungen.
+IMI kann als einzelner vertrauenswürdiger Provider genutzt werden, um die Überwachung und Verwaltung der virtuellen IT-Infrastruktur zu vereinfachen, da IMI einheitliche verwaltete Services für VMware Cloud Foundation- und VMware vCenter Server-Umgebungen anbietet.
 
 IMI stellt verwaltete Services für Ihre Cloud Foundation-Instanzen und vCenter Server-Instanzen bereit, unter anderem ein erweitertes VMware vSphere-Management, eine vollständige VMware NSX-Abdeckung zur Gewährleistung einer hoch verfügbaren und sicheren Infrastruktur für virtuelle Netze sowie eine VMware vSAN-Überwachung zur Sicherstellung der Datenverfügbarkeit.
+
+## Technische Spezifikationen
+
+Die folgenden Spezifikationen sind im verwalteten Service von IMI enthalten:
+
+* Abdeckungsoptionen: 8X5, 16X5 oder 24X7
+* IT-Service-Management-Tools und Managementprozess mit Abrechenbarkeit für die Gesamtbereitstellung
+* Konformitätsmanagement
+* Tägliches und wöchentliches Service-Management und Berichterstellung
+* Wertsteigernde Services ohne Kostenerhöhung für kontinuierliche Verbesserung
 
 ## Vorgehensweise
 
@@ -24,7 +34,7 @@ IMI stellt verwaltete Services für Ihre Cloud Foundation-Instanzen und vCenter 
 
 Ein IMI-Pre-Sales-Ansprechpartner wird sich dann mit Ihnen über Ihre {{site.data.keyword.cloud_notm}}-Kontaktinformationen in Verbindung setzen und Sie hinsichtlich der benötigten Services unterstützen.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
 * [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -63,7 +63,7 @@ Lesen Sie die folgenden Hinweise, bevor Sie eine HCX on {{site.data.keyword.clou
    Weitere Informationen finden Sie unter [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen löschen](../services/standalone_deletingserviceinstances.html).
 3. Löschen Sie den lokalen HCX-Manager in VMware vSphere Web Client.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen anzeigen](../services/standalone_viewingserviceinstances.html)
 * [Glossar der HCX-Begriffe](hcx_glossary.html)
