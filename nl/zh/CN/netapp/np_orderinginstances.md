@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-07"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -70,7 +70,7 @@ lastupdated: "2018-05-07"
 
 ### 数据中心位置
 
-必须选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the Bare Metal Server specification you selected previously are displayed.-->
+必须选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
 
 ### 裸机服务器配置
 
@@ -80,8 +80,6 @@ lastupdated: "2018-05-07"
 * **高容量** - 标准许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 64 GB RAM / 每节点 34 个 4 TB SATA 驱动器容量 / 4 节点集群的有效容量 - 190 TB
 
 **注**：3.8 TB SSD（固态磁盘）驱动器在 {{site.data.keyword.CloudDataCent_notm}} 内基本可用后就会受到支持。
-
-<!--For guidance on what bare metal server configuration to choose, see the _Bill of Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
 
 ### 裸机服务器的数量
 
@@ -108,7 +106,7 @@ lastupdated: "2018-05-07"
 
 实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
 
-成功部署实例后，[NetApp ONTAP Select 实例组件](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components)中描述的组件已安装在 VMware 虚拟平台上。
+成功部署实例后，[NetApp ONTAP Select 实例的技术规范](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)中描述的组件已安装在 VMware 虚拟平台上。
 
 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
@@ -124,7 +122,7 @@ lastupdated: "2018-05-07"
 
    这些活动的例外情况包括在 {{site.data.keyword.slportal}} 中管理共享存储器文件共享。此类活动包括：订购、删除（如果已安装，可能会影响数据存储）、授权和安装共享存储器文件共享。
 
-## 相关链接
+### 相关链接
 
 * [查看 NetApp ONTAP Select 实例](np_viewinginstances.html)
 * [删除 NetApp ONTAP Select 实例](np_deletinginstance.html)

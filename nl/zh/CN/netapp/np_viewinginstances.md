@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # 查看 NetApp ONTAP Select 实例
 
-查看订购的 NetApp ONTAP Select 实例以及有关这些实例的详细信息。
+查看针对不同用户帐户供应的 NetApp ONTAP Select 实例的摘要和详细信息。
 
 ## 查看 NetApp ONTAP Select 实例摘要
 
-要查看环境中所有 NetApp ONTAP Select 实例的摘要，请完成以下步骤：
+要查看针对用户帐户供应的所有 NetApp ONTAP Select 实例的摘要，请完成以下步骤：
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**部署的实例**。
-2. 在 **NetApp ONTAP Select 实例**表中，查看实例的列表。
+1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+2. 在控制台的右上角，单击您的头像，然后单击**帐户**字段以选择要检查其实例的用户帐户。
+3. 在 **NetApp ONTAP Select 实例**表中，查看所选用户帐户中供应的实例的列表。
 
 表 1. NetApp ONTAP Select 实例项
 
@@ -44,7 +45,7 @@ lastupdated: "2018-06-04"
 |名称|实例的名称。|
 |标识|实例的标识。|
 |位置|托管实例的数据中心。|
-|部署的版本|部署的 {{site.data.keyword.vmwaresolutions_full}} 版本。|
+|部署的版本|部署的 {{site.data.keyword.vmwaresolutions_short}} 版本。|
 |vCenter 版本|VMware vCenter Server 的版本。<br><br>**注**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台与 VMware vSphere Web Client 上显示的 vCenter Server 版本之间略有差异。但这两个版本都是正确的。|
 |NSX for vSphere|VMware NSX for vSphere 产品版本。|
 |NSX 许可证版本|VMware NSX 许可证的版本和修订版。|
@@ -86,7 +87,7 @@ lastupdated: "2018-06-04"
 
 ## 查看 NetApp ONTAP Select 实例的部署历史记录
 
-在**部署历史记录**下，查看实例的部署历史记录。
+单击左侧导航窗格中的**部署历史记录**，以查看实例的部署历史记录。
 
 表 4. NetApp ONTAP Select 实例部署历史记录
 
@@ -99,7 +100,7 @@ lastupdated: "2018-06-04"
 
 ## 查看 NetApp ONTAP Select 集群
 
-1. 在左侧导航窗格上，单击**基础架构**。
+1. 单击左侧导航窗格中的**基础架构**。
 2. 在**集群**下，查看有关 NetApp ONTAP Select 集群的摘要。
 
 	表 5. NetApp ONTAP Select 集群项
@@ -172,7 +173,7 @@ lastupdated: "2018-06-04"
 *  有关使用 VPN 登录到 {{site.data.keyword.cloud_notm}} 基础架构专用网络的访问点的列表，请参阅 [VPN 访问](http://www.softlayer.com/vpn-access){:new_window}。
 *  如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](../vmonic/trbl_deploy_ovf.html)。
 
-## 相关链接
+### 相关链接
 
 * [订购 NetApp ONTAP Select 实例](np_orderinginstances.html)
 * [删除 NetApp ONTAP Select 实例](np_deletinginstance.html)
