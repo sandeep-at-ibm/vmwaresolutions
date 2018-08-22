@@ -4,27 +4,27 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-09"
+lastupdated: "2018-07-23"
 
 ---
 
-# Requisiti dell'account IBM Cloud
+# Requisiti per l'account dell'infrastruttura IBM Cloud
 
-Per utilizzare {{site.data.keyword.vmwaresolutions_full}} per effettuare l'ordine di istanze, devi disporre di un account {{site.data.keyword.cloud_notm}}. Il costo dei componenti ordinati nelle tue istanze viene addebitato su tale account {{site.data.keyword.cloud_notm}}.
+Per utilizzare {{site.data.keyword.vmwaresolutions_full}} per effettuare l'ordine di istanze, devi disporre di un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer). Il costo dei componenti ordinati nelle tue istanze viene addebitato su tale account {{site.data.keyword.cloud_notm}}.
 
-**Nota**: l'account {{site.data.keyword.cloud_notm}} era precedentemente noto come account IBM SoftLayer.
+**Nota**: l'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) era precedentemente noto come account IBM SoftLayer.
 
-## Autorizzazioni per l'account IBM Cloud
+## Autorizzazioni per l'account dell'infrastruttura IBM Cloud
 
-L'account {{site.data.keyword.cloud_notm}} deve disporre di determinate autorizzazioni per poter ordinare i componenti nelle tue istanze ed eseguire operazioni per tuo conto. I requisiti di autorizzazione sono applicabili a tutti i tipi di istanze e servizi che ordini dalla console {{site.data.keyword.vmwaresolutions_short}}.
+L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} che utilizzi deve disporre di determinate autorizzazioni per poter ordinare i componenti nelle tue istanze ed eseguire operazioni per tuo conto. I requisiti di autorizzazione sono applicabili a tutti i tipi di istanze e servizi che ordini dalla console {{site.data.keyword.vmwaresolutions_short}}.
 
-Gli utenti autorizzati possono verificare e aggiornare le autorizzazioni per un account {{site.data.keyword.cloud_notm}} sul {{site.data.keyword.slportal_full}}. Per ulteriori informazioni, vedi _Modifica delle autorizzazioni del portale del cliente di un utente_ in [Gestione di un profilo utente](../../../customer-portal/cpmanuserprof.html){:new_window}.
+Gli utenti autorizzati possono verificare e aggiornare le autorizzazioni per un account dell'infrastruttura {{site.data.keyword.cloud_notm}} nel {{site.data.keyword.slportal}}. Per ulteriori informazioni, vedi _Modifica delle autorizzazioni del portale del cliente di un utente_ in [Gestione di un profilo utente](../../../customer-portal/cpmanuserprof.html){:new_window}.
 
-Tabella 1. Autorizzazioni richieste per l'account {{site.data.keyword.cloud_notm}}
+Tabella 1. Autorizzazioni richieste per l'account dell'infrastruttura {{site.data.keyword.cloud_notm}}
 
 | Autorizzazione         | Dettagli                                 |
 |:-------------------|:----------------------------------------|
-| Aggiungi server | Questa autorizzazione è necessaria per le seguenti operazioni: per ordinare {{site.data.keyword.baremetal_long}} su cui viene eseguito VMware ESXi e per il provisioning di server virtuali orari che vengono utilizzati per operazioni di configurazione, manutenzione e supporto delle istanze. |
+| Aggiungi server | Questa autorizzazione è necessaria per le seguenti operazioni: per ordinare {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} su cui viene eseguito VMware ESXi e per il provisioning di server virtuali orari che vengono utilizzati per operazioni di configurazione, manutenzione e supporto delle istanze. |
 | Annulla server | Questa autorizzazione è necessaria per rilasciare e recuperare i {{site.data.keyword.baremetal_short}} su cui viene eseguito VMware ESXi. Se elimini la tua istanza, i componenti ordinati vengono automaticamente rilasciati nella sequenza di dipendenze corretta. |
 | Visualizza i dettagli di Virtual Server | Questa autorizzazione è necessaria per recuperare i dettagli di provisioning del server, che sono richiesti per la convalida degli ordini e la configurazione automatizzata. |
 | Aggiungi archiviazione | Questa autorizzazione è necessaria per ordinare l'archiviazione di backup e l'archiviazione condivisa per l'istanza. |
@@ -38,13 +38,13 @@ Tabella 1. Autorizzazioni richieste per l'account {{site.data.keyword.cloud_notm
 | Visualizza dettagli hardware | Questa autorizzazione è necessaria per recuperare i dettagli hardware, che sono richiesti per la convalida degli ordini e la configurazione automatizzata. |
 | Visualizza licenze | Questa autorizzazione è necessaria per recuperare e convalidare le licenze utilizzate dalla tua istanza. |
 | Visualizza password | Questa autorizzazione è necessaria per poter amministrare le VSI ordinate. |
-| Gestisci monitoraggio del dispositivo | Questa autorizzazione non è necessaria per effettuare un ordine ma è richiesta per recuperare e convalidare lo stato di monitoraggio dei {{site.data.keyword.baremetal_long}} su cui sono in esecuzione i server VMware ESXi nella tua istanza. |
+| Gestisci monitoraggio del dispositivo | Questa autorizzazione non è necessaria per effettuare un ordine ma è richiesta per recuperare e convalidare lo stato di monitoraggio dei {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} su cui sono in esecuzione i server VMware ESXi nella tua istanza. |
 
 ## Spanning della VLAN per account classici (non VRF)
 
-Se utilizzi un account {{site.data.keyword.cloud_notm}} classico (non VRF), è necessario abilitare lo spanning della VLAN. Se lo spanning della VLAN non è abilitato per gli account classici, i vari componenti dell'ambiente di virtualizzazione VMware potrebbero non essere in grado di comunicare tra loro. Per abilitare lo spanning della VLAN nel tuo account {{site.data.keyword.cloud_notm}}, vedi [Abilita o disabilita lo spanning della VLAN](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+Se utilizzi un account dell'infrastruttura {{site.data.keyword.cloud_notm}} classico (non VRF), è necessario abilitare lo spanning della VLAN. Se lo spanning della VLAN non è abilitato per gli account classici, i vari componenti dell'ambiente di virtualizzazione VMware potrebbero non essere in grado di comunicare tra loro. Per abilitare lo spanning della VLAN nel tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}}, vedi [Abilita o disabilita lo spanning della VLAN](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
 
-## Link correlati
+### Link correlati
 
 * [Requisiti per le istanze Cloud Foundation](../sddc/sd_planning.html)
 * [Requisiti per le istanze vCenter Server](../vcenter/vc_planning.html)

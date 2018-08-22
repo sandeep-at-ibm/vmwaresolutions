@@ -24,7 +24,7 @@ Per ulteriori informazioni, vedi [Risoluzione delle vulnerabilità Spectre e Mel
 
 ## NLS (National Language Support)
 
-A partire dalla release V2.4, il supporto della lingua nazionale (o NLS, National Language Support) è disponibile per IBM Cloud for VMware Solutions.
+A partire dalla release della V2.4, è disponibile il supporto della lingua nazionale (o NLS, National Language Support) per {{site.data.keyword.vmwaresolutions_short}}.
 Tutte le funzioni della console, inclusa la documentazione per l'utente, sono disponibili in più lingue.
 
 Oltre all'inglese, sono supportate le seguenti lingue:
@@ -74,7 +74,7 @@ La release corrente installa IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1, s
 
 ### VMware HCX on IBM Cloud
 
-È ora disponibile una nuova opzione che ti consente di scegliere tra la rete pubblica e la rete privata per le interconnessioni HCX quando ordini questo servizio. Per ulteriori informazioni, vedi [Ordine di VMware HCX on IBM Cloud](../services/hcx_ordering.html).
+È ora disponibile una nuova opzione che ti consente di scegliere tra la rete pubblica e la rete privata per le interconnessioni HCX quando ordini questo servizio. Per ulteriori informazioni, vedi [Ordine di VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_ordering.html).
 
 ## Documentazione nuova e aggiornata
 
@@ -88,15 +88,15 @@ Le informazioni sui servizi sono state ristrutturate e la navigazione è stata m
 
 Per ulteriori informazioni, vedi:
 
-* [Ordine di F5 on IBM Cloud](../services/f5_ordering.html)
-* [Ordine di FortiGate Security Appliance on IBM Cloud](../services/fsa_ordering.html)
-* [Ordine di FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_ordering.html)
-* [Ordine di Hytrust CloudControl on IBM Cloud](../services/htcc_ordering.html)
-* [Ordine di Hytrust DataControl on IBM Cloud](../services/htdc_ordering.html)
-* [Ordine di IBM Spectrum Protect Plus on IBM Cloud](../services/spp_ordering.html)
-* [Ordine di KMIP for VMware on IBM Cloud](../services/kmip_ordering.html)
-* [Ordine di Veeam on IBM Cloud](../services/veeam_ordering.html)
-* [Ordine di Zerto on IBM Cloud](../services/zerto_ordering.html)
+* [Ordine di F5 on {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
+* [Ordine di FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)
+* [Ordine di FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)
+* [Ordine di Hytrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_ordering.html)
+* [Ordine di Hytrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_ordering.html)
+* [Ordine di IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/spp_ordering.html)
+* [Ordine di KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_ordering.html)
+* [Ordine di Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_ordering.html)
+* [Ordine di Zerto on {{site.data.keyword.cloud_notm}}](../services/zerto_ordering.html)
 
 ## Aggiornamenti e miglioramenti dell'interfaccia utente
 

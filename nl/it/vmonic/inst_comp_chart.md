@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -24,14 +24,14 @@ Tabella 1. Funzioni supportate per le istanze Cloud Foundation, vCenter Server, 
 | Aggiunta di server ESXi              | Supportato           | Supportato | Supportato | Supportato. Configurazione automatizzata non inclusa |
 | Rimozione di server ESXi           | Supportato           | Supportato | Supportato | Supportato. Configurazione automatizzata non inclusa |
 | Supporto multicluster         | 5 cluster | 10 cluster | 10 cluster | Supportato. Configurazione automatizzata non inclusa |
-| Aggiornamento e correzione gestiti dal client dello stack VMware | Aggiornamenti di IBM CloudDriver e VMware | IBM CloudDriver | IBM CloudDriver |Correzione automatizzata non inclusa |
-| Backup e ripristino            | Supportato | Supportato | Supportato | Configurazione della soluzione di backup automatizzata non inclusa |
+| Aggiornamento e correzione gestiti dal client dello stack VMware | Aggiornamenti VMware | Non incluso | Non incluso | Non incluso |
+| Backup e ripristino            | Manualmente utilizzando IBM Spectrum Protect Plus o Veeam | Manualmente utilizzando IBM Spectrum Protect Plus o Veeam | Manualmente utilizzando IBM Spectrum Protect Plus o Veeam | Soluzione di backup e ripristino non inclusa |
 | SDN (software-defined networking)   | NSX Enterprise   | NSX Base, Advanced o Enterprise | NSX Advanced o Enterprise | NSX Standard, Base o Enterprise. Configurazione automatizzata non inclusa |
 | BYOL per vSphere e vSAN | Completamente supportato per cluster   | Completamente supportato per cluster     | Non supportato | Supportato |
 | BYOL per vCenter e NSX | Completamente supportato per istanza   | Completamente supportato per istanza     | Non supportato | Supportato |
 | Opzioni di aggiornamento licenze NSX           | Nessuna   | Aggiornamento disponibile da NSX Base ad Advanced o Enterprise e da NSX Advanced a Enterprise. Aggiornamento disponibile a vCenter Server with Hybridity Bundle. | Aggiornamento disponibile da NSX Advanced a Enterprise  | Nessuna |
 | Edizioni della licenza vSAN         | vSAN Advanced o Enterprise  | vSAN Advanced o Enterprise  | vSAN Advanced o Enterprise | vSAN Advanced o Enterprise  |
-| Servizi aggiuntivi               | Supportato, HCX on {{site.data.keyword.cloud_notm}} escluso.  | Supportato, HCX on {{site.data.keyword.cloud_notm}} escluso. Aggiornamento disponibile a vCenter Server with Hybridity Bundle. | Supportato, HCX on {{site.data.keyword.cloud_notm}} incluso. | Supportato. Configurazione automatizzata non inclusa |
+| Servizi aggiuntivi               | Supportato, HCX on {{site.data.keyword.cloud_notm}} escluso.  | Supportato, HCX on {{site.data.keyword.cloud_notm}} escluso. Aggiornamento disponibile a vCenter Server with Hybridity Bundle. | Supportato, HCX on {{site.data.keyword.cloud_notm}} incluso. | Non supportato dall'automazione di questa soluzione, ma puoi portare e installare il tuo proprio software. |
 
 **Note**:
 

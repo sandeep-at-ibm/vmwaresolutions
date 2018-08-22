@@ -24,7 +24,7 @@ Per confermare che il tuo account SoftLayer sia un account VRF, consulta il supp
 
 ## Aggiornamenti del modello di addebito del servizio
 
-Per le istanze Cloud Foundation, viene introdotta una nuova licenza _SDDC Manager_, che è una tariffa mensile applicata a ciascun nodo. Per ulteriori informazioni, vedi [Componenti dell'istanza Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+Per le istanze Cloud Foundation, viene introdotta una nuova licenza _SDDC Manager_, che è una tariffa mensile applicata a ciascun nodo. Per ulteriori informazioni, vedi [Specifiche tecniche per le istanze Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## Miglioramenti dell'usabilità
 

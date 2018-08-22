@@ -14,7 +14,7 @@ Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramen
 
 ## VMware vSphere on IBM Cloud
 
-Questa release introduce l'offerta VMware vSphere on IBM Cloud, che ti consente di creare il tuo proprio ambiente virtuale VMware ospitato su IBM personalizzando e ordinando risorse di calcolo, archiviazione e rete compatibili con VMware in base ai componenti VMware selezionati. Anche se vSphere on IBM Cloud non automatizza l'istallazione, la configurazione e il richiamo dei componenti VMware facoltativi, hai la massima flessibilità per progettare e architettare un ambiente che risponda al meglio alle tue esigenze aziendali. Puoi iniziare creando un nuovo cluster vSphere di server ESXi o ridimensionando un cluster vSphere esistente in un data center IBM Cloud.
+Questa release introduce l'offerta VMware vSphere on {{site.data.keyword.cloud_notm}}, che ti consente di creare il tuo proprio ambiente virtuale VMware ospitato su IBM personalizzando e ordinando risorse di calcolo, archiviazione e rete compatibili con VMware in base ai componenti VMware selezionati. Anche se vSphere on {{site.data.keyword.cloud_notm}} non automatizza l'istallazione, la configurazione e il richiamo dei componenti VMware facoltativi, hai la massima flessibilità per progettare e architettare un ambiente che risponda al meglio alle tue esigenze aziendali. Puoi iniziare creando un nuovo cluster vSphere di server ESXi o ridimensionando un cluster vSphere esistente in un {{site.data.keyword.CloudDataCent_notm}}.
 
 Per ulteriori informazioni, vedi:
 * [Ordine di nuovi cluster vSphere](../vsphere/vs_orderinginstances.html)
@@ -22,7 +22,7 @@ Per ulteriori informazioni, vedi:
 
 ## NetApp ONTAP Select on IBM Cloud
 
-Questa release introduce l'offerta NetApp ONTAP Select on IBM Cloud, un dispositivo virtuale per l'archiviazione definita dal software, che implementa NetApp ONTAP Select come servizio sui {{site.data.keyword.baremetal_short}} dedicati di IBM Cloud. NetApp ONTAP Select on IBM Cloud è offerto sia in configurazioni ad alte prestazioni (tutti gli SSD) che ad alta capacità (tutti i SATA).
+Questa release introduce l'offerta NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}, un dispositivo virtuale per l'archiviazione definita dal software, che implementa NetApp ONTAP Select come servizio sui {{site.data.keyword.baremetal_short}} dedicati di IBM Cloud. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} è offerto sia in configurazioni ad alte prestazioni (tutti gli SSD) che ad alta capacità (tutti i SATA).
 Ospita l'archiviazione su un'infrastruttura dedicata e fornisce funzionalità NetApp, come la deduplicazione, la compressione e la crittografia dei dati inattivi. Con questa offerta, puoi fornire risorse di archiviazione con agilità e flessibilità e proteggere i dati utilizzando funzioni avanzate di gestione dei dati, come le copie NetApp Snapshot®, le copie FlexClone® e le repliche SnapMirror® veloci ed efficienti.
 
 Per ulteriori informazioni, vedi:
@@ -31,12 +31,12 @@ Per ulteriori informazioni, vedi:
 
 ## Servizio F5 on IBM Cloud
 
-Il servizio F5 BIG-IP Virtual Edition (VE) on IBM Cloud è ora disponibile sia per le istanze VMware Cloud Foundation che per le istanze VMware vCenter Server. Questo servizio fornisce servizi intelligenti di bilanciamento del carico L4-L7 e di gestione del traffico su scala locale e globale, una solida protezione firewall per reti e applicazioni web e accesso sicuro e federato alle applicazioni.
-Puoi ordinare le istanze con il servizio F5 BIG-IP Virtual Edition (VE) on IBM Cloud incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento utilizzando la scheda **Servizi** nella pagina dei dettagli delle proprietà dell'istanza della console {{site.data.keyword.vmwaresolutions_short}}. A seconda dei tuoi requisiti, puoi selezionare una delle tre opzioni di licenza per BIG-IP VE.
+Il servizio F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} è ora disponibile sia per le istanze VMware Cloud Foundation che per le istanze VMware vCenter Server. Questo servizio fornisce servizi intelligenti di bilanciamento del carico L4-L7 e di gestione del traffico su scala locale e globale, una solida protezione firewall per reti e applicazioni web e accesso sicuro e federato alle applicazioni.
+Puoi ordinare le istanze con il servizio F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento utilizzando la scheda **Servizi** nella pagina dei dettagli delle proprietà dell'istanza della console {{site.data.keyword.vmwaresolutions_short}}. A seconda dei tuoi requisiti, puoi selezionare una delle tre opzioni di licenza per BIG-IP VE.
 
 Per ulteriori informazioni, vedi:
-* [Considerazioni su F5 on IBM Cloud](../services/f5_considerations.html)
-* [Gestione di F5 on IBM Cloud](../services/managing_f5.html)
+* [Considerazioni su F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)
+* [Gestione di F5 on {{site.data.keyword.cloud_notm}}](../services/managing_f5.html)
 
 ## Servizi gestiti da IBM Integrated Managed Infrastructure
 
@@ -65,7 +65,7 @@ Per ulteriori informazioni, vedi [Ordine di istanze Cloud Foundation](../sddc/sd
 
 ### Supporto cluster in più data center
 
-Per migliorare il ridimensionamento del tuo ambiente VMware ospitato, puoi ora creare un nuovo cluster in un pod dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) o in un data center IBM Cloud diverso rispetto al cluster iniziale distribuito nell'istanza.
+Per migliorare il ridimensionamento del tuo ambiente VMware ospitato, puoi ora creare un nuovo cluster in un altro pod dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) o in un {{site.data.keyword.CloudDataCent_notm}} diverso rispetto al cluster iniziale distribuito nell'istanza.
 
 Per ulteriori informazioni, vedi [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](../vcenter/vc_addingviewingclusters.html).
 
@@ -101,5 +101,5 @@ Microsoft Active Directory (AD) / Domain Name Server (DNS) è configurato automa
 
 ## Documentazione nuova e aggiornata
 
-* Impara a salvaguardare le tue istanze VCF multisito private mentre estendi le tue applicazioni VMware per utilizzare i servizi IBM Cloud pubblici. Per ulteriori informazioni, vedi [Securely connect your private VMware workloads in the IBM Cloud](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}.
-* Viene fornita ulteriore documentazione per la configurazione di firewall che consentono tutte le comunicazioni del protocollo dalle macchine virtuali IBM CloudDriver e SDDC Manager. Per ulteriori informazioni, vedi [Componenti e considerazioni per Fortinet on IBM Cloud](../services/fsa_considerations.html).
+* Impara a salvaguardare le tue istanze VCF multisito private mentre estendi le tue applicazioni VMware per utilizzare i servizi {{site.data.keyword.cloud_notm}} pubblici. Per ulteriori informazioni, vedi [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}.
+* Viene fornita ulteriore documentazione per la configurazione di firewall che consentono tutte le comunicazioni del protocollo dalle macchine virtuali IBM CloudDriver e SDDC Manager. Per ulteriori informazioni, vedi [Componenti e considerazioni per Fortinet on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html).

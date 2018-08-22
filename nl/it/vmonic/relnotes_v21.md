@@ -24,15 +24,15 @@ Per ulteriori informazioni, vedi [Risoluzione delle vulnerabilità Spectre e Mel
 
 ## VMware HCX on IBM Cloud
 
-Il servizio HCX on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze VMware Cloud Foundation e VMware vCenter Server che eseguono vSphere 6.5 e che sono distribuite o aggiornate alle release della V2.1 o successive. Questo servizio può estendere senza problemi le reti dei tuoi data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione bidirezionale delle macchine virtuali (VM) tra i data center in loco e {{site.data.keyword.cloud_notm}} senza alcuna modifica. Stabilendo un bridge di livello 2, HCX sfrutta l'ottimizzazione WAN, la deduplicazione, la compressione e la crittografia per migrare più rapidamente e in sicurezza i dati su un tunnel VPN o Direct Link. La migrazione in blocco delle VM è retrocompatibile con VMware vSphere 5.1 o superiore. Se utilizzi vSphere 6.0 o superiore in loco, puoi eseguire la migrazione live (alimentata) vMotion delle VM dalla posizione in loco a un data center IBM Cloud. Non è necessario che VMware NSX sia installato nel tuo data center quando utilizzi HCX.
+Il servizio HCX on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze VMware Cloud Foundation e VMware vCenter Server che eseguono vSphere 6.5 e che sono distribuite o aggiornate alle release della V2.1 o successive. Questo servizio può estendere senza problemi le reti dei tuoi data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione bidirezionale delle macchine virtuali (VM) tra i data center in loco e {{site.data.keyword.cloud_notm}} senza alcuna modifica. Stabilendo un bridge di livello 2, HCX sfrutta l'ottimizzazione WAN, la deduplicazione, la compressione e la crittografia per migrare più rapidamente e in sicurezza i dati su un tunnel VPN o Direct Link. La migrazione in blocco delle VM è retrocompatibile con VMware vSphere 5.1 o superiore. Se utilizzi vSphere 6.0 o superiore in loco, puoi eseguire la migrazione live (alimentata) vMotion delle VM dalla posizione in loco a un {{site.data.keyword.CloudDataCent_notm}}. Non è necessario che VMware NSX sia installato nel tuo data center quando utilizzi HCX.
 
 Puoi ordinare le istanze Cloud Foundation o vCenter Server con il servizio HCX on {{site.data.keyword.cloud_notm}} incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento utilizzando la scheda **Servizi** nella pagina dei dettagli dell'istanza.
 
 Puoi anche ordinare un'istanza HCX in loco per la licenza e l'attivazione dell'installazione di HCX in loco.
 
 Per ulteriori informazioni, vedi:
-* [Considerazioni su HCX on IBM Cloud](../services/hcx_considerations.html)
-* [Gestione di HCX on IBM Cloud](../services/managinghcx.html)
+* [Considerazioni su HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)
+* [Gestione di HCX on {{site.data.keyword.cloud_notm}}](../services/managinghcx.html)
 * [Considerazioni sulle istanze HCX in loco](../services/standalone_considerations.html)
 * [Ordine di istanze HCX in loco](../services/standalone_orderingserviceinstances.html)
 
@@ -52,7 +52,7 @@ Per ulteriori informazioni, vedi:
 
 Per il servizio Zerto on {{site.data.keyword.cloud_notm}} distribuito nelle istanze Cloud Foundation e vCenter Server della V2.1 e successive, viene fornito Zerto Virtual Replication 5.5u2. I dispositivi Zerto Virtual Replication Appliance (VRA) vengono ora distribuiti nell'archivio dati di gestione (vSAN o Endurance) piuttosto che nell'archivio dati locale per motivi di prestazioni. Se disponi di VRA esistenti, dovresti prendere in considerazione la possibilità di migrare la loro archiviazione nell'archivio dati di gestione per ottenere prestazioni migliori.
 
-Per ulteriori informazioni, vedi [Panoramica di Zerto on IBM Cloud](../services/addingzertodr.html).
+Per ulteriori informazioni, vedi [Panoramica di Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html).
 
 ## Aggiornamenti per le istanze VMware vCenter Server
 
@@ -110,4 +110,4 @@ Sono stati apportati miglioramenti in tutta l'interfaccia utente:
 
 ## Documentazione nuova e aggiornata
 
-È disponibile una nuova indicazione di developerWorks con istruzioni dettagliate su come collegare l'archiviazione dedicata alle distribuzioni esistenti di {{site.data.keyword.vmwaresolutions_full}} utilizzando NetApp ONTAP Select on IBM Cloud. Per ulteriori informazioni, vedi la [procedura per collegare l'archiviazione dedicata a VMware Solutions on IBM  Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).
+È disponibile una nuova indicazione di developerWorks con istruzioni dettagliate su come collegare l'archiviazione dedicata alle distribuzioni esistenti di {{site.data.keyword.vmwaresolutions_full}} utilizzando NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi la [procedura per collegare l'archiviazione dedicata a VMware Solutions on IBM  Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).
