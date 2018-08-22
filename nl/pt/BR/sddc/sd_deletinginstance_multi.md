@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -34,7 +34,7 @@ Devido a dependências de recursos, os componentes em sua instância não são l
 6. Repita as etapas de 1 a 5 para todas as instâncias secundárias do Cloud Foundation em sua configuração de vários sites.
 7. Depois de excluir todas as instâncias secundárias, também será possível excluir a instância primária do console do {{site.data.keyword.vmwaresolutions_short}}.
 
-## Links relacionados
+### Links relacionados
 
 * [Excluindo instâncias do Cloud Foundation](sd_deletinginstance.html)
 * [Pedindo, visualizando e removendo serviços de instâncias do Cloud Foundation](sd_addingremovingservices.html)

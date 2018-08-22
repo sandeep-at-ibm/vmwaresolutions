@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -44,7 +44,7 @@ Devido a dependências de recursos, os componentes em sua instância não são l
    1. Clique no ícone de menu overflow à direita do **Console do vCenter** novamente e clique em **Excluir instância**.
    2. Na janela **Excluir instância**, clique em **OK**.
 
-## Links relacionados
+### Links relacionados
 
 * [Excluindo instâncias do Cloud Foundation em uma configuração de vários sites](sd_deletinginstance_multi.html)
 * [Pedindo instâncias do Cloud Foundation](sd_orderinginstance.html)

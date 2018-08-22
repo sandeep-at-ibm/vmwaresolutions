@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -45,7 +45,7 @@ Você será notificado por e-mail quando os seus servidores ESXi forem incluído
 
 Se não vir os novos servidores ESXi incluídos na lista no cluster, verifique as notificações por e-mail ou do console para localizar mais detalhes sobre a falha.
 
-## Links relacionados
+### Links relacionados
 
 * [Lista de materiais do Cloud Foundation](sd_bom.html)
 * [Requisitos e planejamento para instâncias do Cloud Foundation](sd_planning.html)

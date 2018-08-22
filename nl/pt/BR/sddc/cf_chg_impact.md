@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-31"
 
 ---
 
 # Considerações sobre como alterar os artefatos do Cloud Foundation
 
 Mudar usuários, recursos ou sub-redes que são reservados para o {{site.data.keyword.vmwaresolutions_full}} pode afetar as operações de gerenciamento para instâncias do VMware Cloud Foundation.
+
+**Importante:** não edite as permissões globais do grupo **ic4v-vCenter** na página **Usuários e grupos** no VMware vSphere Web Client. Essas mudanças incluem: mudar o nome do usuário, excluir o usuário ou mudar sua senha.
 
 ## As contas do usuário de serviço específico
 

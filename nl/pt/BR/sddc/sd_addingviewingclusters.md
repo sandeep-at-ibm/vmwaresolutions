@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -197,7 +197,7 @@ Talvez você queira excluir um cluster de uma instância quando ela não for mai
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda. Na tabela **CLUSTERS**, localize o cluster que você deseja excluir e clique no ícone **Excluir**.
 4. Confirme que você concluiu a migração de VMs para outros clusters, se apropriado, e que deseja excluir o cluster.
 
-## Links relacionados
+### Links relacionados
 
 * [Visualizando instâncias do Cloud Foundation](sd_viewinginstances.html)
 * [Expandindo e contraindo capacidade para instâncias do Cloud Foundation](sd_addingremovingservers.html)
