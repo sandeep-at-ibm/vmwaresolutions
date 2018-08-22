@@ -4,15 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-20"
 
 ---
 
 # Konfiguration mit mehreren Standorten für vCenter Server with Hybridity Bundle-Instanzen
 
 Mit {{site.data.keyword.vmwaresolutions_full}} können Sie Instanzen an unterschiedlichen Standorten bereitstellen und zügig betriebsbereit machen.
-
-<!--* You cannot link between VMware Cloud Foundation and VMware vCenter Server instances in a multi-site configuration.-->
 
 ## Komponenten von Bereitstellungen mit mehreren Standorten
 
@@ -53,9 +51,9 @@ Sie können maximal 8 Instanzen (1 primäre und 7 sekundäre) in einer Konfigura
 
 **Hinweis**: Das Löschen von vCenter Server with Hybridity Bundle-Instanzen, die Teil einer Konfiguration mit mehreren Standorten sind, erfordert eine besondere Planung. Weitere Informationen hierzu finden Sie im Abschnitt [vCenter Server with Hybridity Bundle-Instanzen in einer Konfiguration mit mehreren Standorten löschen](vc_hybrid_deletinginstance_multi.html).
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Assign Primary Role to NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configuring Secondary NSX Managers](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
 * [AD trusts supported with vCenter Single Sign-On](https://kb.vmware.com/kb/2064250){:new_window}
-* [Securely connect your private VMware workloads in the IBM Cloud](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}
+* [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}

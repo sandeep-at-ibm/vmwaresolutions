@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-06-08"
 
 Das Ändern von Benutzern, Ressourcen oder Teilnetzen, die für {{site.data.keyword.vmwaresolutions_full}} reserviert sind, kann sich auf Managementoperationen auswirken.
 
-## ID "automationuser"
+**Wichtig:** Bearbeiten Sie keine globalen Berechtigungen der Gruppe **ic4v-vCenter** auf der Seite **Benutzer und Gruppen** auf dem VMware vSphere-Web-Client. Zu solchen Änderungen gehören das Ändern des Benutzernamens, das Löschen des Benutzers oder das Ändern seines Kennworts.
 
-Die ID **automationuser** ist ein Benutzerkonto, das von den automatisierten Operationen verwendet wird, die in der {{site.data.keyword.vmwaresolutions_short}}-Konsole bereitgestellt werden.
+## ID 'automation'
+
+Die ID **automation** ist ein Benutzerkonto, das von den automatisierten Operationen verwendet wird, die in der {{site.data.keyword.vmwaresolutions_short}}-Konsole bereitgestellt werden.
 
 Benutzer und Kennwörter für die automatisierten Operationen in der Konsole dürfen nicht geändert werden, da die Konsolenoperationen, die von diesen Berechtigungsnachweisen abhängig sind, fehlschlagen könnten.
-
-Aktualisieren Sie nicht die Eigenschaften der ID **automationuser** auf der Seite **Benutzer und Gruppen** von VMware vSphere Web Client. Zu solchen Änderungen gehören das Ändern des Benutzernamens, das Löschen des Benutzers oder das Ändern seines Kennworts.
 
 ## Servicespezifische Benutzerkonten
 

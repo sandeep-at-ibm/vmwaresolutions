@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -21,7 +21,7 @@ Im Rahmen des Bestellablaufs für Ihre vCenter Server-Instanz werden die folgend
 * Ein Beispiel für einen logischen NSX-Switch wird zur Verwendung durch die VMs für die Kundenworkload bereitgestellt.
 * Ein Beispiel für einen verteilten logischen NSX-Router (Distributed Logical Router, DLR) wird für die potenzielle Ost-West-Kommunikation zwischen lokalen Workloads bereitgestellt, die mit Netzen der Schicht 2 (L2) verbunden sind.
 * Eine NSX Edge-Appliance wird zur Ausführung der Netzadressumsetzung (Network Address Translation, NAT) aus dem Bereich der IP-Adressen eines logischen Workload-Switch in eine öffentliche IP-Adresse nach den NAT-Regeln bereitgestellt und konfiguriert.
-* Falls Sie den Service "Veeam on IBM Cloud" installiert haben, wird der NSX-Manager für eine tägliche Sicherung der NSX-Konfigurationen konfiguriert. Weitere Informationen finden Sie unter [Hinweise zur Installation von Veeam on IBM Cloud](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
+* Wenn Sie den Service "Veeam on {{site.data.keyword.cloud_notm}}" installiert haben, wird der NSX-Manager für eine tägliche Sicherung der NSX-Konfigurationen konfiguriert. Weitere Informationen finden Sie unter [Hinweise zur Installation von Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
 
 
 ## Netzeinstellungen für Ihre VMs konfigurieren
@@ -72,8 +72,8 @@ Weitere Details über die Kundenteilnetze können Sie außerdem mit den folgende
 
    **Warnung:** Verwenden Sie nicht die IP-Adressen, die bestellt und während der Erstkonfiguration verwendet werden. Sie können jedoch nach Bedarf andere IP-Adressen in diesen Teilnetzen verwenden. Informationen zum Konfigurieren zusätzlicher Regeln für die Netzadressumsetzung finden Sie auf der Seite [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Fehlerbehebung](../vcenter/vcenter_chg_impact.html)
 * [Häufig gestellte Fragen](../vmonic/faq.html)
-* [NSX Edge Services Gateway](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/nsx-esg){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

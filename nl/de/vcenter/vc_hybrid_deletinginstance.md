@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -44,7 +44,7 @@ Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz n
    1. Klicken Sie erneut auf das Überlaufmenüsymbol rechts neben der **vCenter-Konsole** und anschließend auf **Instanz löschen**.
    2. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [vCenter Server with Hybridity Bundle-Instanzen in einer Konfiguration mit mehreren Standorten löschen](vc_hybrid_deletinginstance_multi.html)
 * [vCenter Server with Hybridity Bundle-Instanzen bestellen](vc_hybrid_orderinginstance.html)

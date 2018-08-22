@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-06-14"
 
 Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, werden standardmäßig unter **cluster1** gruppiert.
 
-Sie können Cluster zu Ihrer VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle-Instanz hinzufügen, um die Berechnungs- und Speicherkapazität zu erweitern. In einem Cluster können Sie ESXi-Server verwalten, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Die hinzugefügten Cluster können aus Ihrer Instanz gelöscht werden, wenn sie nicht mehr benötigt werden.
+Sie können Cluster zu Ihrer VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle-Instanz hinzufügen, um die Rechen- und Speicherkapazität zu erweitern. In einem Cluster können Sie ESXi-Server verwalten, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Die hinzugefügten Cluster können aus Ihrer Instanz gelöscht werden, wenn sie nicht mehr benötigt werden.
 
 ## Cluster zu vCenter Server with Hybridity Bundle-Instanzen hinzufügen
 
@@ -32,7 +32,7 @@ Der Clustername muss die folgenden Anforderungen erfüllen:
 
 #### Standort des Rechenzentrums
 
-Der Standort des {{site.data.keyword.CloudDataCent}}für den Cluster wird standardmäßig auf das {{site.data.keyword.CloudDataCent_notm}} der vCenter Server-Instanz gesetzt. Sie können den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}} als die bereitgestellte Instanz bereitstellen, müssen aber sicherstellen, dass die Netzlatenz zwischen den beiden {{site.data.keyword.CloudDataCents_notm}} weniger als 150 Millisekunden beträgt. Zur Überprüfung der Netzlatenz können Sie ein Tool wie [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} verwenden.
+Der Standort des {{site.data.keyword.CloudDataCent_notm}}s für den Cluster wird standardmäßig auf das {{site.data.keyword.CloudDataCent_notm}} der vCenter Server-Instanz gesetzt. Sie können den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}} als die bereitgestellte Instanz bereitstellen, müssen aber sicherstellen, dass die Netzlatenz zwischen den beiden {{site.data.keyword.CloudDataCents_notm}} weniger als 150 Millisekunden beträgt. Zur Überprüfung der Netzlatenz können Sie ein Tool wie [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} verwenden.
 
 Wenn Sie den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}}- oder {{site.data.keyword.cloud_notm}}-Infrastrukturpod bereitstellen, werden drei zusätzliche VLANs zur Verwendung mit den bestellten {{site.data.keyword.baremetal_short}}-Instanzen bestellt.
 
@@ -75,7 +75,7 @@ VMware vSAN 6.6 ist Bestandteil der Bestellung Ihrer vCenter Server with Hybridi
 Von IBM bereitgestellte VMware-Lizenzen für folgende Ressourcen:
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Advanced oder Enterprise) 6.3
+  * VMware NSX Service Providers Edition (Advanced oder Enterprise) 6.4
 
 ### Bestellübersicht
 
@@ -183,7 +183,7 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Suchen Sie in der Tabelle **CLUSTER** den Cluster, der gelöscht werden soll, und klicken Sie dann auf das Symbol **Löschen** in der Spalte **Aktionen**.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [vCenter Server with Hybridity Bundle-Instanzen anzeigen](vc_hybrid_viewinginstances.html)
 * [Kapazität für vCenter Server with Hybridity Bundle-Instanzen erweitern und verringern](vc_hybrid_addingremovingservers.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-06"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -50,10 +50,10 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
 
 Dieses Verfahren gilt für Instanzen, die in V2.1 oder höher bereitgestellt werden. Bei Instanzen, die in V2.0 und früheren Versionen bereitgestellt wurden, müssen Sie die VMware-Updates manuell anwenden.
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, die Sie aktualisieren wollen.
 3. Überprüfen Sie auf der Seite **Zusammenfassung**, ob alle Instanzdetails korrekt angezeigt werden. Klicken Sie dann im linken Navigationsfenster auf **Infrastruktur**, um die Details auf der Seite **Infrastruktur** zu prüfen.
-   Wenn die Details nicht angezeigt werden, kann dies auf ein Konnektivitätsproblem mit der virtuellen Maschine von IBM CloudDriver hinweisen, das aufgrund eines Problems mit einer Firewallregel oder aufgrund eines anderen Netzproblems aufgetreten ist. Lösen Sie das Problem, bevor Sie mit dem nächsten Schritt fortfahren, da das Update andernfalls fehlschlagen könnte.
+   Wenn die Details nicht angezeigt werden, kann dies auf ein Konnektivitätsproblem mit der virtuellen Serverinstanz (VSI) von IBM CloudDriver hinweisen, das aufgrund eines Problems mit einer Firewallregel oder aufgrund eines anderen Netzproblems aufgetreten ist. Lösen Sie das Problem, bevor Sie mit dem nächsten Schritt fortfahren, da das Update andernfalls fehlschlagen könnte.
 4. Klicken Sie im linken Navigationsfenster auf **Update und Patch**.
 
    **Hinweis**: Die Seite **Update und Patch** für eine Instanz enthält nur die Pakete für die Aktualisierung der IBM Managementkomponenten, nicht jedoch die VMware-Updates. VMware-Updates müssen manuell angewendet werden.
@@ -81,7 +81,7 @@ Führen Sie die folgenden Schritte aus, um für eine vCenter Server-Instanz ein 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die Sie ein Upgrade durchführen wollen.
 3. Überprüfen Sie auf der Seite **Zusammenfassung**, ob alle Instanzdetails korrekt angezeigt werden. Klicken Sie dann im linken Navigationsfenster auf **Infrastruktur**, um die Details auf der Seite **Infrastruktur** zu prüfen.
-   Wenn die Details nicht angezeigt werden, kann dies auf ein Konnektivitätsproblem mit der virtuellen Maschine von IBM CloudDriver hinweisen, das aufgrund eines Problems mit einer Firewallregel oder aufgrund eines anderen Netzproblems aufgetreten ist. Lösen Sie das Problem, bevor Sie mit dem nächsten Schritt fortfahren, da das Update andernfalls fehlschlagen könnte.
+   Wenn die Details nicht angezeigt werden, kann dies auf ein Konnektivitätsproblem mit der IBM CloudDriver-VSI hinweisen, das aufgrund eines Problems mit einer Firewallregel oder aufgrund eines anderen Netzproblems aufgetreten ist. Lösen Sie das Problem, bevor Sie mit dem nächsten Schritt fortfahren, da das Update andernfalls fehlschlagen könnte.
 4. Klicken Sie im linken Navigationsfenster auf **Update und Patch**.
 5. Wenn Sie die Aktualisierung der Lizenz für Hybridity Bundle an. Klicken Sie in der Tabelle **Aktualisierungen der Lizenz** in der Spalte **Aktion** auf **Upgrade**, überprüfen Sie die geschätzten Kosten und klicken Sie dann auf **Upgrade**.
 6. Stellen Sie optional den Service "VMware HCX on {{site.data.keyword.cloud_notm}}" bereit. Wenn Hybridity Bundle in der Tabelle **Aktualisierungen der Lizenz** aktiviert ist, führen Sie die folgenden Schritte aus:
@@ -91,8 +91,6 @@ Führen Sie die folgenden Schritte aus, um für eine vCenter Server-Instanz ein 
   4. Überprüfen Sie die Bedingungen, die für den Service gelten, überprüfen Sie die geschätzten Kosten und klicken Sie dann auf **Bestellung aufgeben**.
 
 ## Ergebnisse
-
-1. Vor dem Start einer Updateoperation wird automatisch eine Sicherung der virtuellen Maschinen für das Management ausgeführt, falls für Ihre Instanz ein Sicherungsservice installiert ist. Nach Abschluss der Sicherung wird das Update angewendet.
 
 2. Nachdem Sie ein Update angewendet haben, wird in der Statusliste der Software-Updates ein Eintrag angezeigt, der Aufschluss über den detaillierten Verarbeitungsfortschritt und den Status des Updates gibt. Sobald das Update erfolgreich abgeschlossen wurde, wird in der Liste der installierten Software-Updates ein Eintrag angezeigt.
 
@@ -136,8 +134,8 @@ Führen Sie die folgenden Schritte aus, um für eine vCenter Server-Instanz ein 
 
 4. Falls der Updateprozess bei einem bestimmten Schritt fehlschlägt, [wenden Sie sich an den IBM Support](../vmonic/trbl_support.html), um Unterstützung zu erhalten. Sie erhalten Hilfe bei der Lösung des Problems und Anweisungen, wie Sie das Upgrade ab dem fehlgeschlagenen Schritt erneut versuchen.
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [Überblick zu vCenter Server](../vcenter/vc_vcenterserveroverview.html)
+* [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
 * [Häufig gestellte Fragen](../vmonic/faq.html)

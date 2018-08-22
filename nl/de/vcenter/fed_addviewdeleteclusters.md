@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-06-13"
 
 Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, werden standardmäßig unter **cluster1** gruppiert.
 
-Sie können Cluster zu Ihren VMware Federal-Instanzen hinzufügen, um die Berechnungs- und Speicherkapazität zu erweitern. In einem Cluster können Sie ESXi-Server verwalten, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Die hinzugefügten Cluster können aus Ihren Instanzen gelöscht werden, wenn sie nicht mehr benötigt werden.
+Sie können Cluster zu Ihren VMware Federal-Instanzen hinzufügen, um die Rechen- und Speicherkapazität zu erweitern. In einem Cluster können Sie ESXi-Server verwalten, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Die hinzugefügten Cluster können aus Ihren Instanzen gelöscht werden, wenn sie nicht mehr benötigt werden.
 
 **Verfügbarkeit**: Die Funktion zum Hinzufügen und Löschen von Clustern steht nur für Instanzen zur Verfügung, die in V2.3 oder höheren Releases bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden.
 
@@ -61,8 +61,6 @@ Für VMware Federal-Instanzen, die in V2.3 oder höher bereitgestellt werden, k�
 
 Nach der Implementierung können Sie bis zu vier weitere Cluster erstellen. Für die vSAN-Speichereinstellungen werden für den ersten Cluster und die Cluster nach der Bereitstellung 4 Server benötigt.
 
-<!--When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.-->
-
 ### Speichereinstellungen
 
 Die Speichereinstellungen sind von der Auswahl der Bare Metal Server-Konfiguration und des Speichertyps abhängig.
@@ -99,10 +97,10 @@ Tabelle 2. Optionen für die NFS-Leistungsstufe
 
 ### Lizenzierungseinstellungen
 
-Von IBM bereitgestellte VMware-Lizenzen für folgende Ressourcen:
+	Von {{site.data.keyword.IBM}} bereitgestellte VMware-Lizenzen für folgende Ressourcen:
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.3
+  * VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.4
   * (Für vSAN-Cluster) VMware vSAN Advanced oder Enterprise 6.6
 
 ### Bestellübersicht
@@ -236,7 +234,7 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Suchen Sie in der Tabelle **CLUSTER** den Cluster, der gelöscht werden soll, und klicken Sie dann auf das Symbol **Löschen** in der Spalte **Aktionen**.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [VMware Federal-Instanzen anzeigen](vc_fed_viewinginstance.html)
 * [Kapazität für VMware Federal-Instanzen erweitern und verringern](vc_fed_addingremovingservers.html)

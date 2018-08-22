@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -55,7 +55,7 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vCenter Se
 | WDC06 | Washington, DC | NA Ost | Angepasst |
 | WDC07 | Washington, DC | NA Ost | Angepasst |
 
-Eine kleine Untergruppe der {{site.data.keyword.CloudDataCents_notm}} bietet für Bare Metal Server die vorkonfigurierten Optionen **S (Klein)**, **M (Mittel)** und **L (Groß)**. Je nach Verfügbarkeit und Bestandsangebot ist für {{site.data.keyword.CloudDataCents_notm}} möglicherweise ein Statusanzeiger in der {{site.data.keyword.vmwaresolutions_full}}-Konsole dargestellt, der Ihnen bei der Planung Ihrer Bereitstellungen hilft.
+Eine kleine Untergruppe der {{site.data.keyword.CloudDataCents_notm}} bietet für Bare Metal Server die vorkonfigurierten Optionen **S (Klein)**, **M (Mittel)** und **L (Groß)**. Je nach Verfügbarkeit und Bestandsangebot ist für {{site.data.keyword.CloudDataCents_notm}} möglicherweise ein Statusanzeiger in der {{site.data.keyword.vmwaresolutions_short}}-Konsole dargestellt, der Ihnen bei der Planung Ihrer Bereitstellungen hilft.
 
 Tabelle 2. Statusanzeiger für {{site.data.keyword.CloudDataCents_notm}} bei der Bestellung von vCenter Server-Instanzen
 
@@ -65,18 +65,21 @@ Tabelle 2. Statusanzeiger für {{site.data.keyword.CloudDataCents_notm}} bei der
 | Vorübergehend ohne Bestand  | Das {{site.data.keyword.CloudDataCent_notm}} bietet gegenwärtig keine Verfügbarkeit. |
 | Eingeschränkter Bestand             | Das {{site.data.keyword.CloudDataCent_notm}} bietet eine begrenzte Verfügbarkeit und die Bestellung kann möglicherweise nicht ausgeführt werden. |
 
+## Sicherung von Managementkomponenten
+
+Sie sind für die Erhaltung und Sicherstellung der Verfügbarkeit aller Instanzkomponenten verantwortlich. Es wird dringend empfohlen, die Sicherung oder Hochverfügbarkeit aller Managementkomponenten zu planen. Weitere Informationen finden Sie unter [Komponenten sichern](../archiref/solution/solution_backingup.html).
+
 ## Services für vCenter Server-Instanzen
 
 Sie können für Ihre Instanz auf der Basis Ihrer Anforderungen Add-on-Services bestellen, zum Beispiel für die Disaster-Recovery. Weitere Informationen finden Sie unter [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](vc_addingremovingservices.html).
 
-<!-- ## Capacity considerations
+## Kapazitätsaspekte
 
-For capacity information and considerations, see the _Bill of
-Materials_ document on the [Virtual reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+Informationen und Hinweise zur Kapazität finden Sie unter [Skalierungskapazität](../archiref/solution/solution_scaling.html).
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [Überblick zu vCenter Server](vc_vcenterserveroverview.html)
+* [Übersicht über vCenter Server](vc_vcenterserveroverview.html)
 * [vCenter Server-Instanzen bestellen](vc_orderinginstance.html)
 * [Kapazität für vCenter Server-Instanzen erweitern und verringern](vc_addingremovingservers.html)
 * [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](vc_addingremovingservices.html)

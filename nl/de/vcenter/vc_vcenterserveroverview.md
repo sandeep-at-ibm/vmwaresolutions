@@ -4,23 +4,23 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
-# Überblick zu vCenter Server
+# Übersicht über vCenter Server
 
 VMware vCenter Server on {{site.data.keyword.cloud}} ist eine gehostete private Cloud, die den VMware vSphere-Stack als Service bereitstellt. Die VMware-Umgebung basiert auf mindestens zwei (empfohlen drei) {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen, bietet einen gemeinsam genutzten NAS-Speicher sowie Optionen für dedizierten softwaredefinierten Speicher und beinhaltet die automatische Bereitstellung und Konfiguration einer auf VMware NSX basierenden, leicht zu verwaltenden logischen Edge-Firewall.
 
 In zahlreichen Fällen kann die gesamte Umgebung in weniger als einem Tag bereitgestellt werden und die Bare-Metal-Infrastruktur kann die Rechenkapazität nach Bedarf schnell und flexibel skalieren.
 
-Nach der Bereitstellung können Sie den gemeinsam genutzten Speicher vergrößern, indem Sie zusätzliche Dateifreigaben für NFS (Network File System) im {{site.data.keyword.slportal}} bestellen und die Freigaben manuell an alle ESXi-Server in einem Cluster anhängen. Wenn Sie dedizierten Speicher benötigen, können Sie [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) nutzen, das sowohl in Konfigurationen mit hoher Leistung (alle mit SSD) als auch mit hoher Speicherkapazität (alle mit SATA) angeboten wird.
+Nach der Bereitstellung können Sie den gemeinsam genutzten Speicher vergrößern, indem Sie zusätzliche Dateifreigaben für NFS (Network File System) im {{site.data.keyword.slportal}} bestellen und die Freigaben manuell an alle ESXi-Server in einem Cluster anhängen. Wenn Sie dedizierten Speicher benötigen, können Sie [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html) nutzen, das sowohl in Konfigurationen mit hoher Leistung (alle mit SSD) als auch mit hoher Speicherkapazität (alle mit SATA) angeboten wird.
 
 VMware vSAN steht ebenfalls als Option für dedizierten Speicher zur Verfügung. Wenn Sie die vSAN-basierte Speicherkapazität eines vSAN-Clusters erhöhen möchten, können Sie nach der Bereitstellung weitere ESXi-Server hinzufügen.
 
 Falls Sie eine von IBM bereitgestellte VMware-Lizenzierung erworben haben, können Sie für VMware NSX Base Edition ein Upgrade auf Advanced oder Enterprise Edition durchführen und zusätzliche VMware-Komponenten wie VMware vRealize Operations erwerben.
 
-Sie können IBM Managed Services hinzufügen, wenn Sie die Routineabläufe und die Wartung der Virtualisierung, des Gastbetriebssystems oder der Anwendungsschichten auslagern möchten. Das Team von IBM Cloud Professional Services kann Ihnen durch Migrations-, Implementierungs-, Planungs- und Onboarding-Services ebenfalls dabei helfen, Ihren Einstieg in die Cloud zu beschleunigen.
+Sie können IBM Managed Services hinzufügen, wenn Sie die Routineabläufe und die Wartung der Virtualisierung, des Gastbetriebssystems oder der Anwendungsschichten auslagern möchten. Das Team von {{site.data.keyword.cloud_notm}} Professional Services kann Ihnen durch Migrations-, Implementierungs-, Planungs- und Onboarding-Services ebenfalls dabei helfen, Ihren Einstieg in die Cloud zu beschleunigen.
 
 ## vCenter Server-Architektur
 
@@ -32,25 +32,25 @@ Abbildung 1. Allgemeine vCenter Server-Architektur für einen Cluster mit drei K
 
 ### Physische Infrastruktur
 
-Auf dieser Schicht wird die physische Infrastruktur (Berechnungs-, Speicher- und Netzressourcen) bereitgestellt, die von der virtuellen Infrastruktur genutzt wird.
+Auf dieser Schicht wird die physische Infrastruktur (Rechen-, Speicher- und Netzressourcen) bereitgestellt, die von der virtuellen Infrastruktur genutzt wird.
 
-### Virtualisierungsinfrastruktur (Berechnung und Netz)
+### Virtualisierungsinfrastruktur (Rechenressourcen und Netz)
 
 Diese Schicht virtualisiert die physische Infrastruktur durch verschiedene VMware-Produkte:
-* VMware vSphere virtualisiert die physischen Berechnungsressourcen.
+* VMware vSphere virtualisiert die physischen Rechenressourcen.
 * VMware NSX ist die Netzvirtualisierungsplattform, die logische Netzkomponenten und virtuelle Netze bereitstellt.
 
 ### Virtualisierungsmanagement
 
-Diese Schicht besteht aus vCenter Server Appliance (vCSA), dem NSX-Manager, zwei NSX Edge Services Gateways (ESGs), drei NSX-Controllern, der virtuellen Appliance für Platform Services Controller (PSC) und der virtuellen Maschine für IBM CloudDriver.
+Diese Schicht besteht aus vCenter Server Appliance (vCSA), dem NSX-Manager, zwei NSX Edge Services Gateways (ESGs), drei NSX-Controllern, der virtuellen Appliance für Platform Services Controller (PSC) und der virtuellen Serverinstanz (VSI) für IBM CloudDriver. Die CloudDriver-VSI wird bei Bedarf auf Anforderung für bestimmte Operationen, wie zum Beispiel für das Hinzufügen von Hosts zur Umgebung, bereitgestellt.
 
 Das Basisangebot wird mit einer vCenter Server-Appliance bereitgestellt, deren Größe für die Unterstützung einer Umgebung mit bis zu 400 Hosts und bis zu 4000 VMs ausgelegt ist. Zum Verwalten der von IBM gehosteten VMware-Umgebung können Sie dieselben mit der vSphere-API kompatiblen Tools und Scripts verwenden.
 
 Insgesamt benötigt das Basisangebot 38 virtuelle CPUs und 67 GB virtuellen RAM, die für die Virtualisierungsmanagementschicht reserviert sind. Die verbleibende Hostkapazität für Ihre VMs hängt von mehreren Faktoren ab, beispielsweise der Übersubskriptionsrate, der VM-Dimensionierung und den Anforderungen an die Workloadleistung.
 
-Ausführliche Informationen zur Architektur enthält die [Referenzdokumentation zur Architektur von {{site.data.keyword.vmwaresolutions_full}}](../archiref/solution/solution_overview.html).
+Ausführliche Informationen zur Architektur enthält die [Referenzdokumentation zur Architektur von {{site.data.keyword.vmwaresolutions_short}}](../archiref/solution/solution_overview.html).
 
-## Technische Spezifikationen für vCenter Server
+## Technische Spezifikationen für vCenter Server-Instanzen
 
 Ihre vCenter Server-Instanz enthält die folgenden Komponenten.
 
@@ -69,7 +69,7 @@ Sie können drei oder mehr {{site.data.keyword.baremetal_short}}-Instanzen mit e
    * **M (Mittel)** Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz / 256 GB RAM / 2 Platten
    * **L (Groß)** Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM / 2 Platten
 
-### Netzbetrieb
+### Vernetzung
 
 Die folgenden Netzkomponenten werden bestellt:
 *  10-Gbps-Uplinks für öffentliche und private Netze
@@ -106,34 +106,32 @@ Die Option "NFS" bietet angepassten gemeinsam genutzten Speicher auf Dateiebene 
 * Leistung: 2, 4 oder 10 IOPS/GB (E/A-Operationen pro Sekunde und GB).
 * Die Dateifreigaben werden einzeln konfiguriert.
 
-Wenn Sie die Option "NFS" auswählen, werden die folgenden Dateifreigaben bestellt:
-* 1 Dateifreigabe mit 2 TB und 4 IOPS/GB für Managementkomponenten.
-* 1 gemeinsam genutzter Speicher auf Blockebene mit 2 TB, der auf bis zu 12 TB skaliert werden kann. Sie können auswählen, ob Sie Speicher für Sicherungen wünschen, indem Sie einen Sicherungsservice auswählen.
+Wenn Sie die Option "NFS" auswählen, wird 1 Dateifreigabe mit 2 TB und 4 IOPS/GB für Managementkomponenten bestellt.
 
 ### Lizenzen (von IBM bereitgestellt oder eigene) und Gebühren
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.4
 * (Für vSAN-Cluster) VMware vSAN Advanced oder Enterprise 6.6
 * Support- und Servicegebühren (1 Lizenz pro Knoten)
 
-## Komponenten von vCenter Server-Erweiterungsknoten
+## Technische Spezifikationen für vCenter Server-Erweiterungsknoten
 
 Jeder vCenter Server-Erweiterungsknoten stellt die folgenden Komponenten in Ihrem {{site.data.keyword.cloud_notm}}-Konto mit den entsprechenden anfallenden Gebühren bereit.
 
 ### Hardware für Erweiterungsknoten
 
-Ein Bare Metal Server mit der Konfiguration (siehe hierzu den Abschnitt _Technische Spezifikationen für vCenter Server_ im [Überblick zu vCenter Server](vc_vcenterserveroverview.html)).
+1 Bare Metal Server mit der unter [Technische Spezifikationen für vCenter Server-Instanzen](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) aufgeführten Konfiguration.
 
 ### Lizenzen und Gebühren für Erweiterungsknoten
 
 * 1 Lizenz für VMware vSphere Enterprise Plus 6.5u1
-* 1 Lizenz für VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.3
-* 1 Support- und Servicegebühren
+* 1 Lizenz für VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.4
+* 1 Support- und Servicegebühr
 * (Für vSAN-Cluster) VMware vSAN Advanced oder Enterprise 6.6
 
-**Wichtig**: Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal_full}} oder über ein anderes Verfahren außerhalb der Konsole verwalten. Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert.
+**Wichtig**: Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal}} oder über ein anderes Verfahren außerhalb der Konsole verwalten. Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert.
 
 **VORSICHT**: Wenn Sie {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto installiert wurden, als Sie die Instanz bestellt haben, außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwalten, kann dies zur Instabilität Ihrer Umgebung führen. Zu diesen Managementaktivitäten gehören:
 *  Komponenten hinzufügen, ändern, zurückgeben oder entfernen
@@ -143,7 +141,7 @@ Ein Bare Metal Server mit der Konfiguration (siehe hierzu den Abschnitt _Technis
 
    Ausgenommen von diesen Aktivitäten ist unter anderem das Management der Dateifreigaben für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von Dateifreigaben für gemeinsam genutzten Speicher.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [vCenter Server-Softwareteileliste](vc_bom.html)
 * [vCenter Server-Instanzen planen](vc_planning.html)
