@@ -34,7 +34,7 @@ vCenter Server インスタンスを削除すると、以下のコンポーネ�
 6. マルチサイト構成のすべてのセカンダリー vCenter Server インスタンスについて手順 1 から 5 までを繰り返します。
 7. すべてのセカンダリー・インスタンスを削除したら、{{site.data.keyword.vmwaresolutions_short}} コンソールからプライマリー・インスタンスも削除できます。
 
-## 関連リンク
+### 関連リンク
 
 * [vCenter Server インスタンスの削除](vc_deletinginstance.html)
 * [vCenter Server インスタンスのサービスの注文、表示、削除](vc_addingremovingservices.html)

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
 # vCenter Server with Hybridity Bundle インスタンスの注文
 
-ワークロードのニーズに合わせて最適化できる、柔軟でカスタマイズ可能な VMware 仮想化プラットフォームをデプロイするには、VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle インスタンスを注文します。 vCenter Server with Hybridity Bundle インスタンスの注文には VMware Hybrid Cloud Extension (HCX) のライセンスが含まれているので、VMware HCX on IBM Cloud サービスを利用することができます。 災害復旧のための [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html) などのサービスも追加できます。
+ワークロードのニーズに合わせて最適化できる、柔軟でカスタマイズ可能な VMware 仮想化プラットフォームをデプロイするには、VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle インスタンスを注文します。 vCenter Server with Hybridity Bundle インスタンスの注文には VMware Hybrid Cloud Extension (HCX) のライセンスが含まれているので、VMware HCX on {{site.data.keyword.cloud_notm}} サービスを利用することができます。 災害復旧のための [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) などのサービスも追加できます。
 
 ## 要件
 
@@ -54,7 +54,7 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、以下�
 
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Advanced または Enterprise) 6.3
+* VMware NSX Service Providers Edition (Advanced または Enterprise) 6.4
 * VMware vSAN 6.6 ライセンス・エディション (Advanced または Enterprise)
 
 **注意:**
@@ -169,7 +169,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
 
 ## 手順
 
-1. IBM Cloud カタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクション内の**「vCenter サーバー」**をクリックします。
+1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクションの**「vCenter サーバー」**をクリックします。
 2. **「VMware vCenter Server on IBM Cloud」**ページで、**「vCenter Server with Hybridity Bundle」**カードをクリックし、**「作成」**をクリックします。
 3. **「vCenter サーバー」**ページで、インスタンス名を入力します。
 4. インスタンス・タイプを選択します。
@@ -178,13 +178,13 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
      1. セカンダリー・インスタンスを接続するプライマリー・インスタンスを選択します。
      2. プライマリー・インスタンスの PSC 管理者パスワードを入力します。
 5. NSX ライセンス・エディションと vSAN ライセンス・エディションを選択します。
-6. ベア・メタル・サーバーの設定を行います。
+6. ベア・メタル・サーバーの設定を次の手順で実行します。
   1. インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
   2. **「カスタマイズ型」**の CPU モデルと **RAM** の容量を選択します。
 
   **注:** **「ベア・メタル・サーバーの数」**はデフォルトで 4 に設定されます。変更はできません。
 
-7. ストレージ構成を行います。
+7. ストレージ構成を次の手順で実行します。
   1. **「vSAN 容量ディスクのディスク・タイプとサイズ」**を選択します。
   2. **「vSAN 容量ディスクの数」**を選択します。
 8. ネットワーク・インターフェース構成を行います。
@@ -206,7 +206,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
 
-インスタンスが正常にデプロイされると、[vCenter Server with Hybridity Bundle の概要](vc_hybrid_overview.html)の『_vCenter Server with Hybridity Bundle の技術仕様_』セクションに記載しているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 追加のサービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
+インスタンスが正常にデプロイされると、[vCenter Server with Hybridity Bundle インスタンスの技術仕様](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 追加のサービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
@@ -227,7 +227,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
 
-## 関連リンク
+### 関連リンク
 
 * [{{site.data.keyword.cloud_notm}} アカウントへの登録](../vmonic/signing_softlayer_account.html)
 * [vCenter Server with Hybridity Bundle インスタンスの表示](vc_hybrid_viewinginstances.html)

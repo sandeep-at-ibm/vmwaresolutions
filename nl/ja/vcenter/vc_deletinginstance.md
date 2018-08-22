@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -44,7 +44,7 @@ vCenter Server インスタンスを削除すると、以下のコンポーネ�
    1. **vCenter コンソール**の右側のオーバーフロー・メニュー・アイコンをもう一度クリックしてから、**「インスタンスの削除」**をクリックします。
    2. **「インスタンスの削除」**ウィンドウで**「OK」**をクリックします。
 
-## 関連リンク
+### 関連リンク
 
 * [マルチサイト構成での vCenter Server インスタンスの削除](vc_deletinginstance_multi.html)
 * [vCenter Server インスタンスの注文](vc_orderinginstance.html)

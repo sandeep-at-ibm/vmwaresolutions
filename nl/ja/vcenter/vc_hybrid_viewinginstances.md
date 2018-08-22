@@ -4,19 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # vCenter Server with Hybridity Bundle インスタンスの表示
 
-注文した VMware vCenter Server with Hybridity Bundle インスタンスとその詳細情報を表示します。
+さまざまなユーザー・アカウントに対してプロビジョンされる vCenter Server with Hybridity Bundle インスタンスのサマリーおよび詳細情報を表示します。
 
 ## vCenter Server with Hybridity Bundle インスタンス・サマリーの表示
 
-環境内のすべての vCenter Server with Hybridity Bundle インスタンスのサマリーを表示するには、以下の手順を実行します。
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
-2. **「vCenter Server」**の表で、インスタンスのリストを表示します。
+ユーザー・アカウントに対してプロビジョンされるすべての vCenter Server with Hybridity Bundle インスタンスのサマリーを表示するには、以下の手順を実行します。
+1. {{site.data.keyword.vmwaresolutions_full}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+2. コンソールの右上隅でアバターをクリックし、**「アカウント」**フィールドをクリックして、インスタンスを確認するユーザー・アカウントを選択します。
+3. **「vCenter Server」**の表で、選択したユーザー・アカウントでプロビジョンされるインスタンスのリストを表示します。
 
 表 1. vCenter Server with Hybridity Bundle インスタンスの項目
 
@@ -24,7 +25,7 @@ lastupdated: "2018-06-04"
 |:------------- |:------------- |
 | 名前 | インスタンスの名前 |
 | バージョン | インスタンスがデプロイまたはアップグレードされたリリース・バージョン。 |  
-| ロケーション | インスタンスがホストされている {{site.data.keyword.CloudDataCent}}。 |  
+| ロケーション | インスタンスがホストされている {{site.data.keyword.CloudDataCent_notm}}。 |  
 | 作成時間 | インスタンスが作成された日時 |  
 | 状況 | インスタンスの状況 |  
 
@@ -91,7 +92,7 @@ vCenter Server with Hybridity Bundle インスタンスのプロパティーの�
 
 ## vCenter Server with Hybridity Bundle インスタンスのデプロイメント履歴の表示
 
-**「デプロイメント履歴」**の下に、インスタンスのデプロイメント履歴が表示されます。
+左側のナビゲーション・ペインで**「デプロイメント履歴」**をクリックすると、インスタンスのデプロイメント履歴が表示されます。
 
 表 5. vCenter Server with Hybridity Bundle インスタンスのデプロイメント履歴
 
@@ -115,7 +116,7 @@ vCenter Server with Hybridity Bundle インスタンスのプロパティーの�
 *  VPN を使用して {{site.data.keyword.cloud_notm}} インフラストラクチャーのプライベート・ネットワークにログインするためのアクセス・ポイントのリストについては、[VPN アクセス](http://www.softlayer.com/vpn-access){:new_window}を参照してください。
 *  vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイする際に問題が発生した場合は、[vSphere Web Client を使用して OVF ファイルをデプロイする方法](../vmonic/trbl_deploy_ovf.html)を参照してください。
 
-## 関連リンク
+### 関連リンク
 
 * [vCenter Server with Hybridity Bundle インスタンスの注文](vc_hybrid_orderinginstance.html)
 * [vCenter Server with Hybridity Bundle インスタンスのクラスターの追加、表示、削除](vc_hybrid_addingviewingclusters.html)

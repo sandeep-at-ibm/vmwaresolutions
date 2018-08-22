@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -43,9 +43,9 @@ VMware Federal インスタンスを削除すると、以下のコンポーネ�
    1. **vCenter コンソール**の右側のオーバーフロー・メニュー・アイコンをもう一度クリックしてから、**「インスタンスの削除」**をクリックします。
    2. **「インスタンスの削除」**ウィンドウで**「OK」**をクリックします。
 
-## 関連リンク
+### 関連リンク
 
-* [VMware Federal on IBM Cloud の概要](vc_fed_overview.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} の概要](vc_fed_overview.html)
 * [VMware Federal インスタンスの注文](vc_fed_orderinginstance.html)
 * [VMware Federal インスタンスの保護](vc_fed_securinginstance.html)
 * [VMware Federal インスタンスの表示](vc_fed_viewinginstance.html)

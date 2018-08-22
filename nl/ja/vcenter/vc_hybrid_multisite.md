@@ -4,15 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-20"
 
 ---
 
 # vCenter Server with Hybridity Bundle インスタンスのマルチサイト構成
 
 {{site.data.keyword.vmwaresolutions_full}} を使用すると、短時間でインスタンスをさまざまな場所にデプロイして稼働させることができます。
-
-<!--* You cannot link between VMware Cloud Foundation and VMware vCenter Server instances in a multi-site configuration.-->
 
 ## マルチサイト・デプロイメントのコンポーネント
 
@@ -53,9 +51,9 @@ lastupdated: "2018-05-23"
 
 **注**: マルチサイト構成に含まれている vCenter Server with Hybridity Bundle インスタンスを削除するには、特別な計画が必要です。 詳しくは、[マルチサイト構成の vCenter Server with Hybridity Bundle インスタンスの削除](vc_hybrid_deletinginstance_multi.html)を参照してください。
 
-## 関連リンク
+### 関連リンク
 
 * [NSX Manager へのプライマリ ロールの割り当て](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [セカンダリ NSX Manager の設定](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
 * [AD trusts supported with vCenter Single Sign-On](https://kb.vmware.com/kb/2064250){:new_window}
-* [Securely connect your private VMware workloads in the IBM Cloud](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}
+* [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}

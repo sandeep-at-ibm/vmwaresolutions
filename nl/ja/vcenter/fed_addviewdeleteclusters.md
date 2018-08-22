@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -61,8 +61,6 @@ V2.3 以降でデプロイされた VMware Federal インスタンスの場合�
 
 デプロイメント後に、最大 4 つのクラスターを追加で作成できます。 vSAN ストレージ設定の場合、初期クラスターとデプロイメント後のクラスターの両方に 4 つのサーバーが必要です。
 
-<!--When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.-->
-
 ### ストレージ設定
 
 ストレージ設定は、選択したベア・メタル・サーバー構成とストレージ・タイプによって異なります。
@@ -99,10 +97,10 @@ vSAN の場合、以下のストレージ・オプションを指定します。
 
 ### ライセンス交付の設定
 
-以下のための IBM 提供の VMware ライセンス:
+	以下のための {{site.data.keyword.IBM}} 提供の VMware ライセンス:
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.3
+  * VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.4
   * (vSAN クラスターの場合) VMware vSAN Advanced または Enterprise 6.6
 
 ### 注文のサマリー
@@ -119,10 +117,10 @@ vSAN の場合、以下のストレージ・オプションを指定します。
 3. 左側のナビゲーション・ペインにある**「インフラストラクチャー」**をクリックし、**「クラスター」**テーブルの右上隅にある**「追加」**をクリックします。
 4. **「Add Cluster」**ページで、クラスター名を入力します。
 5. ベアメタル構成として、**CPU モデル**、**RAM** の量、**ベア・メタル・サーバーの数**を選択します。
-6. ストレージ構成を行います。
+6. ストレージ構成を次の手順で実行します。
   * **「vSAN Storage」**を選択した場合は、**「Disk Type and Size for vSAN Capacity Disks」**、**「Number of vSAN Capacity Disks」**、**vSAN ライセンス**の提供方法を指定します。
   * **「NFS Storage」**を選択し、すべてのファイル共有に同じ設定を追加して構成する場合は、**「Number of Shares」**、**「Size」**、**「Performance」**を指定します。
-  * **「NFS Storage」**を選択し、ファイル共有を個別に追加して構成する場合は、**「Configure shares individually」**を選択し、ファイル共有ごとに、**「Add NFS」**ラベルの横にある**「+」**アイコンをクリックして、**「Size」**と**「Performance」**を選択します。少なくとも 1 つのファイル共有を選択する必要があります。
+  * **「NFS Storage」**を選択し、ファイル共有を個別に追加して構成する場合は、**「Configure shares individually」**を選択し、ファイル共有ごとに、**「Add NFS」**ラベルの横にある**「+」**アイコンをクリックして、**「Size」**と**「Performance」**を選択します。 少なくとも 1 つのファイル共有を選択する必要があります。
 7. ライセンス構成として、VMware vSAN のライセンス・エディションを選択します。
 8. **「発注要約」**ペインで、クラスター構成を確認してからクラスターを追加します。
    1. クラスターの設定を確認します。
@@ -236,7 +234,7 @@ vSAN の場合、以下のストレージ・オプションを指定します。
 
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。 **「クラスター」**テーブルで、削除するクラスターを見つけて、**「アクション」**列にある**「削除」**アイコンをクリックします。
 
-## 関連リンク
+### 関連リンク
 
 * [VMware Federal インスタンスの表示](vc_fed_viewinginstance.html)
 * [VMware Federal インスタンスの容量の拡張と縮小](vc_fed_addingremovingservers.html)

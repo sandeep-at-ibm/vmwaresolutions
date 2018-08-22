@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-06-08"
 
 {{site.data.keyword.vmwaresolutions_full}} 用に予約されたユーザー、リソース、またはサブネットを変更すると、管理操作に影響を与える可能性があります。
 
-## automationuser ID
+**重要:** VMware vSphere Web Client の**「ユーザーおよびグループ」**ページで **ic4v-vCenter** グループのグローバル許可を編集しないでください。例えば、ユーザー名を変更する、ユーザーを削除する、パスワードを変更するなどです。
 
-**automationuser** ID は、{{site.data.keyword.vmwaresolutions_short}} コンソールで利用できる自動操作に使用されるユーザー・アカウントです。
+## 自動化 ID
+
+**自動化** ID は、{{site.data.keyword.vmwaresolutions_short}} コンソールで利用できる自動操作に使用されるユーザー・アカウントです。
 
 コンソールの自動操作用のユーザーおよびパスワードは、これらの資格情報に依存するコンソール操作が失敗する可能性があるため、変更しないでください。
-
-VMware vSphere Web Client の**「ユーザーおよびグループ」**ページで **automationuser** ID のプロパティーを更新しないでください。 例えば、ユーザー名を変更する、ユーザーを削除する、パスワードを変更するなどです。
 
 ## サービス固有のユーザー・アカウント
 

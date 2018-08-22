@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,10 +18,10 @@ lastupdated: "2018-06-20"
 
 表 1. vCenter Server インスタンス内の VLAN の BOM
 
-| VLAN      | タイプ      | 詳細      |
-|:----------|:----------|:-------------|
+| VLAN       | タイプ       | 詳細       |
+|:---------- |:---------- |:------------- |
 | VLAN1     | パブリック、プライマリー | パブリック・ネットワーク・アクセス用に物理 ESXi サーバーに割り当てられます。 初期デプロイメントの後は使用されません。 インターネット・アクセスに使用できます。 |
-| VLAN2     | プライベート A、プライマリー | IBM Cloud によって物理 ESXi サーバーに割り当てられます。 管理インターフェースで VMware vSphere 管理トラフィック用に使用されます。<br><br>管理コンポーネントとして機能する VM (仮想マシン) に割り当てられます。<br><br>VMware NSX VTEP (VXLAN トンネル・エンドポイント) に割り当てられます。 |
+| VLAN2     | プライベート A、プライマリー | {{site.data.keyword.cloud}} によって物理 ESXi サーバーに割り当てられます。 管理インターフェースで VMware vSphere 管理トラフィック用に使用されます。<br><br>管理コンポーネントとして機能する VM (仮想マシン) に割り当てられます。<br><br>VMware NSX VTEP (VXLAN トンネル・エンドポイント) に割り当てられます。 |
 | VLAN3     | プライベート B、ポータブル | 使用する場合は、VMware vSAN に割り当てられます。<br><br>使用する場合は、VMware NFS に割り当てられます。<br><br>VMware vSphere vMotion に割り当てられます。 |
 
 ## vCenter Server インスタンスのソフトウェアの BOM
@@ -30,14 +30,14 @@ lastupdated: "2018-06-20"
 
 表 2. vCenter Server インスタンス内のソフトウェア・コンポーネントの BOM
 
-| 製造元 | コンポーネント                       | バージョン      |
-|:-------------|:--------------------------------|:-------------|
+| 製造元  | コンポーネント                      | バージョン       |
+|:------------- |:------------------------------ |:------------- |
 | VMware       | vSphere ESXi                    | 6.5 U1g (パッチ・レベル ESXi650-201803001 を適用済みの ESXi 6.5u1) |
 | VMware       | vCenter Server Appliance        | 6.5 Update 1g |
 | VMware       | Platform Services Controller    | 6.5 Update 1g |
 | VMware       | vSAN                            | 6.6.1        |
-| VMware       | NSX for vSphere                 | 6.3.5       |
-| {{site.data.keyword.IBM}} | CloudDriver        | 2.4          |
+| VMware       | NSX for vSphere                 | 6.4.1        |
+| IBM          | CloudDriver                     | 2.4          |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
 **注**: VMware vSAN はオプションのコンポーネントです。
@@ -50,17 +50,17 @@ lastupdated: "2018-06-20"
 
 表 3. vCenter Server インスタンスおよびクラスター用の ESXi サーバー拡張構成設定
 
-| 構成設定 | V2.2 以降に新しくデプロイする場合  | V2.1 以前からアップグレードする場合 |   
+| 構成設定 | V2.2 以降に新しくデプロイする場合  | V2.1 以前からアップグレードする場合 |
 |:------------- |:------------- |:------------- |
-| TCP/IP ヒープ・サイズ | **TcpipHeapSize** = 32 | 未設定 |
-| TCP/IP ヒープの最大値 | **TcpipHeapMax** = 1536 | 未設定 |  
-| ボリュームの最大値 | **MaxVolumes** = 256 | **/NFS/MaxVolumes** = 256、**/NFS41/MaxVolumes** = 256 |  
-| ハートビートの最大失敗回数 | **HeartbeatMaxFailures** = 10 | 未設定 |  
-| ハートビートの頻度 | **HeartbeatFrequency** = 12 | 未設定 |  
+| ボリュームの最大値 | **MaxVolumes** = 256 | **/NFS/MaxVolumes** = 256、**/NFS41/MaxVolumes** = 256 |
+| ハートビートの最大失敗回数 | **HeartbeatMaxFailures** = 10 | 未設定 |
+| ハートビートの頻度 | **HeartbeatFrequency** = 12 | 未設定 |
 | ハートビートのタイムアウト | **HeartbeatTimeout** = 5 | 未設定 |
 | キューの最大長 | **MaxQueueDepth** = 64 | 未設定 |
 | キュー・フルのサンプル・サイズ | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | キュー・フルのしきい値 | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
+| TCP/IP ヒープ・サイズ | **TcpipHeapSize** = 32 | 未設定 |
+| TCP/IP ヒープの最大値 | **TcpipHeapMax** = 1536 | 未設定 |
 
 **注**:
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} サービスには **MaxVolumes** 設定が必要です。このサービスは、ESXi サーバーのデフォルトの NFS マウント数を超える NFS マウントを使用する可能性があるからです。
@@ -92,7 +92,7 @@ lastupdated: "2018-06-20"
 
 vSphere クラスターは 2 つの vSphere 仮想分散スイッチ (VDS) を使用します。1 つはパブリック・ネットワーク接続用で、もう 1 つはプライベート・ネットワーク接続用です。
 
-プライベート・ネットワーク接続は、サイズが 9000 のジャンボ・フレーム MTU (最大伝送単位) を使用するように構成されるので、ストレージや VMware vMotion などの大量のデータ転送のパフォーマンスが向上します。 この値は、VMware 内で、および IBM Cloud によって許可される最大の MTU です。
+プライベート・ネットワーク接続は、サイズが 9000 のジャンボ・フレーム MTU (最大伝送単位) を使用するように構成されるので、ストレージや VMware vMotion などの大量のデータ転送のパフォーマンスが向上します。 この値は、VMware 内で、および {{site.data.keyword.cloud_notm}} によって許可される最大の MTU です。
 
 V2.1 以降では、パブリック・ネットワーク接続には標準的なイーサネット MTU の 1500 が使用されます。 この 1500 の設定は維持する必要があります。変更すると、インターネット上でパケットのフラグメント化が発生する可能性があります。
 
@@ -105,9 +105,9 @@ V2.1 以降では、パブリック・ネットワーク接続には標準的な
 | パブリック・スイッチ  | 1500 (デフォルト) | 9000 (ジャンボ・フレーム) |
 | プライベート・スイッチ | 9000 (ジャンボ・フレーム) | 9000 (ジャンボ・フレーム) |
 
-これらの設定は、V2.1 以降でデプロイされた新しいインスタンスおよびインスタンスの新しいクラスターに適用されます。 これらの設定は、V2.1 以降にアップグレードされたインスタンスの IBM Cloud データ・センターをまたぐ新しいクラスターにも適用されます。
+これらの設定は、V2.1 以降でデプロイされた新しいインスタンスおよびインスタンスの新しいクラスターに適用されます。 これらの設定は、V2.1 以降にアップグレードされたインスタンスの {{site.data.keyword.CloudDataCents_notm}}をまたぐ新しいクラスターにも適用されます。
 
-V2.0 以前の既存インスタンスまたは V2.1 以降にアップグレードされた既存インスタンスの場合、同じ IBM Cloud データ・センター内の新しいクラスターにはこれらの設定は適用されません。
+V2.0 以前の既存インスタンスまたは V2.1 以降にアップグレードされた既存インスタンスの場合、同じ {{site.data.keyword.CloudDataCent_notm}}内の新しいクラスターにはこれらの設定は適用されません。
 
 V2.0 以前でデプロイされたインスタンスの場合は、パブリック・スイッチ MTU 設定を 1500 に更新することをお勧めします。
 
@@ -118,13 +118,13 @@ V2.0 以前でデプロイされたインスタンスの場合は、パブリッ
 2. **「プロパティ」**タブで、**「詳細」**オプションを選択します。
 3. **「最大 MTU」**値を 1500 に設定します。
 
-   **注**: vDS の MTU サイズを変更すると、接続アップリンク (物理 NIC) が停止した後再開されます。結果として、アップリンクを使用している VM に短時間の停止が発生します。そのため、スケジュールされたダウン時間中に MTU 設定更新を計画することをお勧めします。
+   **注**: vDS の MTU サイズを変更すると、接続アップリンク (物理 NIC) が停止した後再開されます。 結果として、アップリンクを使用している VM に短時間の停止が発生します。 そのため、スケジュールされたダウン時間中に MTU 設定更新を計画することをお勧めします。
 
-## 関連リンク
+### 関連リンク
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
-* [VMware vCenter Server on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 * [vCenter Server の概要](vc_vcenterserveroverview.html)
 * [vCenter Server インスタンスの計画](vc_planning.html)

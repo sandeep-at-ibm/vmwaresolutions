@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -21,7 +21,7 @@ vCenter Server インスタンスの注文プロセスの中で、以下のア�
 * サンプルの NSX 論理スイッチが、お客様のワークロード VM で使用するためにデプロイされます。
 * レイヤー 2 (L2) ネットワークに接続されているローカル・ワークロード間で実行される可能性のある東西通信用のサンプル NSX 分散論理ルーター (DLR) がデプロイされます。
 * NSX Edge アプライアンスがデプロイされ、NAT ルールでワークロード論理スイッチの IP アドレスの範囲をパブリック IP アドレスに変換するネットワーク・アドレス変換 (NAT) を実行するように構成されます。
-* IBM Cloud サービスに Veeam をインストールした場合は、NSX Manager が NSX 構成の日次バックアップを実行するように構成されます。 詳しくは、[IBM Cloud に Veeam をインストールする際の考慮事項](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud)を参照してください。
+* {{site.data.keyword.cloud_notm}} サービスに Veeam をインストールした場合は、NSX Manager が NSX 構成の日次バックアップを実行するように構成されます。 詳しくは、[{{site.data.keyword.cloud_notm}} に Veeam をインストールする際の考慮事項](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud)を参照してください。
 
 
 ## VM のネットワーク設定の構成
@@ -72,8 +72,8 @@ NSX Edge NAT ルールについて詳しくは、[NAT ルールの管理](https:
 
    **警告:** 初期セットアップ時に注文され、使用された IP アドレスは使用しないでください。 ただし、必要に応じてこれらのサブネット上の他の IP アドレスを使用できます。 追加のネットワーク・アドレス変換ルールをセットアップするには、[NAT ルールの管理](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}を参照してください。
 
-## 関連リンク
+### 関連リンク
 
 * [トラブルシューティング](../vcenter/vcenter_chg_impact.html)
 * [FAQ](../vmonic/faq.html)
-* [NSX Edge Services Gateway](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/nsx-esg){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

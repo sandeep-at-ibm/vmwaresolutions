@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ lastupdated: "2018-05-24"
 3. **vCenter コンソール**の右側にあるオーバーフロー・メニュー・アイコンをクリックします。
 4. **「インスタンスを保護」**をクリックします。
 5. **「OK」**をクリックして、インスタンスを自動化から切り離すことを確認します。
-   
+
    **注**: この手順を実行する前に、『**始める前に**』セクションにある重要な情報を確認してください。
 
 ## 結果
@@ -36,9 +36,9 @@ lastupdated: "2018-05-24"
 
 インスタンスが正常に保護されると、インスタンスの状況が**「保護済み」**に変更され、インスタンスのプロパティーとデプロイメント履歴のみが使用可能になります。
 
-## 関連リンク
+### 関連リンク
 
-* [VMware Federal on IBM Cloud の概要](vc_fed_overview.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} の概要](vc_fed_overview.html)
 * [VMware Federal インスタンスの注文](vc_fed_orderinginstance.html)
 * [VMware Federal インスタンスの表示](vc_fed_viewinginstance.html)
 * [VMware Federal インスタンスの削除](vc_fed_deletinginstance.html)

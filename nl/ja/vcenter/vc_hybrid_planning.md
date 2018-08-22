@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -22,7 +22,7 @@ vCenter Server with Hybridity Bundle のデプロイメントには、物理イ�
 
 表 1. vCenter Server with Hybridity Bundle インスタンスに使用可能な {{site.data.keyword.CloudDataCents_notm}}
 
-| IBM Cloud データ・センター | ロケーション | 地域 |
+| {{site.data.keyword.CloudDataCent_notm}} | ロケーション | 地域 |
 |:-----|:----------------|
 | AMS03 | アムステルダム | ヨーロッパ |
 | CHE01 | チェンナイ | アジア太平洋 |
@@ -55,7 +55,7 @@ vCenter Server with Hybridity Bundle のデプロイメントには、物理イ�
 | WDC06 | ワシントン、DC | 北米東部 |
 | WDC07 | ワシントン、DC | 北米東部 |
 
-デプロイメントを計画に役立つように、使用可否と在庫状況に応じて、{{site.data.keyword.CloudDataCents_notm}}の状況標識が {{site.data.keyword.vmwaresolutions_full}} コンソールに表示されることがあります。
+入手可能状況と在庫状況によっては、デプロイメントの計画に役立つように、{{site.data.keyword.CloudDataCents_notm}}の {{site.data.keyword.vmwaresolutions_short}} コンソールに状況標識が表示される場合があります。
 
 表 2. vCenter Server with Hybridity Bundle インスタンスの注文時の {{site.data.keyword.CloudDataCents_notm}}の状況標識
 
@@ -65,9 +65,13 @@ vCenter Server with Hybridity Bundle のデプロイメントには、物理イ�
 | 一時的な在庫切れ  | 現時点では、{{site.data.keyword.CloudDataCent_notm}}には在庫がありません。 |
 | 限定在庫             | {{site.data.keyword.CloudDataCent_notm}}の在庫は限られているため、注文が満たされない可能性があります。 |
 
+## 管理コンポーネントのバックアップ
+
+すべてのインスタンス・コンポーネントの可用性を維持し、確保する作業は、お客様が行う必要があります。すべての管理コンポーネントのバックアップと高可用性について計画を立てることを強くお勧めします。詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html)を参照してください。
+
 ## vCenter Server with Hybridity Bundle インスタンス用のサービス
 
-vCenter Server with Hybridity Bundle インスタンスには VMware Hybrid Cloud Extension (HCX) のライセンスが含まれているので、VMware HCX on IBM Cloud サービスを利用できます。 このサービスは、オンプレミス・データ・センターのネットワークを {{site.data.keyword.cloud_notm}} にシームレスに拡張します。これにより、変換や変更を行わずに仮想マシン (VM) を {{site.data.keyword.cloud_notm}} との間で移行できるようになります。
+vCenter Server with Hybridity Bundle インスタンスには VMware Hybrid Cloud Extension (HCX) のライセンスが含まれているので、VMware HCX on {{site.data.keyword.cloud_notm}} サービスを利用できます。 このサービスは、オンプレミス・データ・センターのネットワークを {{site.data.keyword.cloud_notm}} にシームレスに拡張します。これにより、変換や変更を行わずに仮想マシン (VM) を {{site.data.keyword.cloud_notm}} との間で移行できるようになります。
 
 このサービスをデプロイする際には、以下の設定を行います。
 * **「HCX interconnect type」**を指定します。以下のいずれかのオプションを選択します。
@@ -82,7 +86,11 @@ vCenter Server with Hybridity Bundle インスタンスには VMware Hybrid Clou
 
 それぞれのニーズに基づいて、インスタンスの他のアドオン・サービスを注文できます。例えば、災害復旧などがあります。 詳しくは、[vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](vc_hybrid_addingremovingservices.html)を参照してください。
 
-## 関連リンク
+## キャパシティーに関する考慮事項
+
+キャパシティーに関する情報と考慮事項については、[キャパシティーの拡張](../archiref/solution/solution_scaling.html)を参照してください。
+
+### 関連リンク
 
 * [vCenter Server with Hybridity Bundle の概要](vc_hybrid_overview.html)
 * [vCenter Server with Hybridity Bundle インスタンスの注文](vc_hybrid_orderinginstance.html)

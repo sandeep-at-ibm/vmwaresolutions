@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,10 +18,10 @@ ESXi サーバーを追加または削除して、VMware Federal インスタン
 
 ## 始める前に
 
-* VMware vSphere Web クライアントから ESXi サーバーの追加や削除を行わないでください。 vSphere Web Client で行った変更は、{{site.data.keyword.vmwaresolutions_short}} コンソールと同期されません。
+* VMware vSphere Web クライアントから ESXi サーバーの追加や削除を行わないでください。 vSphere Web Client で行った変更は、{{site.data.keyword.vmwaresolutions_full}} コンソールと同期されません。
 * NFS ストレージを使用する VMware Federal インスタンスには、2 つ以上の ESXi サーバーが必要です。 デフォルトのクラスターを拡張して、最大 51 台の ESXi サーバーを含められます。 デフォルト以外の各クラスターは、最大 59 台の ESXi サーバーを含むように拡張できます。
 * vSAN ストレージを使用する VMware Federal インスタンスには、4 つ以上の ESXi サーバーが必要です。
-*  ESXi サーバーを削除する際には、そのサーバーは保守モードになります。その後、そこで実行されているすべての仮想マシン (VM) は、vCenter Server からそのサーバーが削除される前にマイグレーションされます。 VM の再配置を最大限に制御するために、VMware vSphere Web Client を使用して、手動により、削除する ESXi サーバーを保守モードにし、サーバーで実行されている VM を移行することをお勧めします。 その後、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用して ESXi サーバーを削除します。
+*  ESXi サーバーを削除する際には、そのサーバーは保守モードになります。その後、そこで実行されているすべての仮想マシン (VM) は、vCenter Server からそのサーバーが削除される前にマイグレーションされます。 VM の再配置を最大限に制御するために、VMware vSphere Web Client を使用して、手動により、削除する ESXi サーバーを保守モードにし、サーバーで実行されている VM を移行することをお勧めします。 その後、{{site.data.keyword.vmwaresolutions_short}} コンソールを使用して ESXi サーバーを削除します。
 
 ## 手順
 
@@ -44,7 +44,7 @@ ESXi サーバーを追加または削除する要求の処理中であること
 
 リストに新しく追加した ESXi サーバーがクラスター内にない場合は、E メールかコンソールの通知を確認して、失敗に関する詳細を調べてください。
 
-## 関連リンク
+### 関連リンク
 
 * [VMware Federal インスタンスの要件と計画](vc_fed_planning.html)
 * [VMware Federal インスタンスのクラスターの追加、表示、削除](fed_addviewdeleteclusters.html)

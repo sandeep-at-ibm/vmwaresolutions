@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -16,7 +16,7 @@ vCenter Server on {{site.data.keyword.cloud_notm}} および vCenter Server ア�
 
 **注意:** VMware Federal on {{site.data.keyword.cloud_notm}} は、vCenter Server オファリングの一部のみを提供しています。 マルチサイト構成、事前構成型の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー、ライセンス持ち込み (BYOL)、追加サービスの注文のオプションはサポートされません。
 
-## VMware Federal on IBM Cloud の vCenter Server インスタンスのコンポーネント
+## VMware Federal on IBM Cloud インスタンスの技術仕様
 
 以下のコンポーネントが含まれています。
 
@@ -72,34 +72,33 @@ NFS オプションを選択すると、管理コンポーネント用の 2 TB �
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.4
 * (vSAN クラスターの場合) VMware vSAN Advanced または Enterprise 6.6
 
-## vCenter Server 拡張ノードのコンポーネント
+## VMware Federal on IBM Cloud 拡張ノードの技術仕様
 
 vCenter Server 拡張ノードごとに、{{site.data.keyword.cloud_notm}} アカウントに以下のコンポーネントがデプロイされ、料金が発生します。
 
 ### 拡張ノード用のハードウェア
 
-[VMware Federal on IBM Cloud の vCenter Server インスタンスのコンポーネント](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud)に記載している構成のベア・メタル・サーバー 1 つ。
+[VMware Federal on {{site.data.keyword.cloud_notm}} インスタンスの技術仕様](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)に示されている構成になっている、1 台のベア・メタル・サーバー。
 
 ### 拡張ノード用のライセンスと料金
 
 * VMware vSphere Enterprise Plus 6.5u1 1 つ
-* VMware NSX Service Providers Edition (Base、Advanced、Enterprise) 6.3 1 つ
+* VMware NSX Service Providers Edition (Base、Advanced、Enterprise) 6.4 1 つ
 * (vSAN クラスターの場合) VMware vSAN Advanced または Enterprise 6.6
 
-**重要**: {{site.data.keyword.cloud_notm}} アカウントに作成された {{site.data.keyword.vmwaresolutions_short}} コンポーネントの管理は、{{site.data.keyword.vmwaresolutions_short}} コンソールでのみ行ってください。{{site.data.keyword.slportal_full}}などのコンソール以外の手段は使用しないでください。 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
+**重要**: {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
 
 **注意**: インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
 *  コンポーネントの追加、変更、返却、または削除
 *  ESXi サーバーの追加または削除によるインスタンス容量の拡張または縮小
 *  コンポーネントのパワーオフ
-<!--*  Restarting services-->
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
 
-## 関連リンク
+### 関連リンク
 
 * [vCenter Server ソフトウェアの部品構成表](vc_bom.html)
 * [VMware Federal インスタンスの要件と計画](vc_fed_planning.html)
