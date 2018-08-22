@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,8 +20,8 @@ lastupdated: "2018-05-30"
 
 ## 过程
 
-1. 在左侧导航窗格中，单击**部署的实例**。
-2. 滚动到**内部部署 HCX 实例**表，然后单击**订购实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+2. 滚动到**内部部署 HCX 实例**表，然后单击**供应新项**。
 3. 指定**内部部署实例名称**，然后单击**下一步**。
 4. 验证实例配置，然后再下订单。
    1. 复查实例的设置。
@@ -39,10 +39,9 @@ lastupdated: "2018-05-30"
 
 查看和管理订购的内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例。
 
-## 相关链接
+### 相关链接
 
 * [查看内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例](standalone_viewingserviceinstances.html)
 * [删除内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例](standalone_deletingserviceinstances.html)
 * [HCX 术语的词汇表](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

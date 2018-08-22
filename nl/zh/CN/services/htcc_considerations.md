@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -14,21 +14,30 @@ HyTrust CloudControl on {{site.data.keyword.cloud}} 服务根据安全标准强�
 
 **可用性**：此服务仅可用于运行 vSphere 6.5 以及部署在（或升级到）V2.3 或更高发行版的实例。
 
-## HyTrust CloudControl on IBM Cloud 的组件
+## HyTrust CloudControl on IBM Cloud 的技术规范
 
-HyTrust CloudControl (HTCC) 设备的高可用性 (HA) 对会以主动/被动方式部署在缺省集群上。
+HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
 
-每对 HTCC 设备都会部署在为管理虚拟机 (VM) 指定的相同的专用可移植子网上，例如 NSX Manager、vCenter Server Appliance 和 Platform Services Controller。
+### HyTrust CloudControl 设备
 
-该对设备充当 vSphere 主机、vCenter Server Appliance 和实例的 NSX Manager 的代理。因此，用户将通过由管理员分配的已发布 IP (PIP) 地址（而不是由 {{site.data.keyword.cloud}} 分配的实际 IP 地址 (RIP)）来访问 vSphere 主机、vCenter Server Appliance 和 NSX Manager。
+* CPU：4 个 vCPU
+* RAM：16 GB
+* 磁盘：在融合集群中的 vSAN 上常驻 70 GB VMDK
+* 网络：位于为管理指定的支持 VLAN 的专用可移植网络上
 
-HTCC 设备与 Microsoft Active Directory 集成，以强制实施基于角色的访问控制。
+### 高可用性
+
+两个 CloudControl 设备以主动/被动配置方式进行部署。
+
+### 许可证和费用
+
+按主机订购许可证：为环境中的每个主机订购了一个 HyTrust CloudControl 许可证。
 
 ## 除去 HHyTrust CloudControl on IBM Cloud 时的注意事项
 
 除去 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务之前，请确保禁用 **root 用户密码保险库**（如果已配置），并且从 HyTrust CloudControl 中删除所有受保护的主机。
 
-## 相关链接
+### 相关链接
 
 * [订购 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](htcc_ordering.html)
 * [管理 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](managinghtcc.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -12,11 +12,42 @@ lastupdated: "2018-06-14"
 
 HCX on {{site.data.keyword.cloud}} 服务可以将内部部署数据中心的网络无缝扩展到 {{site.data.keyword.cloud_notm}}，这允许虚拟机 (VM) 在不进行任何转换或更改的情况下，迁移到 {{site.data.keyword.cloud_notm}} 或从中迁移出来。
 
-**可用性**：此服务仅可用于在 V2.3 和更高发行版中部署的 VMware vCenter Server on IBM Cloud with Hybridity Bundle 实例。
+**可用性**：此服务仅可用于在 V2.3 和更高发行版中部署的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 实例。
 
 可以将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例。有关升级实例和部署 HCX on {{site.data.keyword.cloud_notm}} 服务的更多信息，请参阅[升级到 vCenter Server with Hybridity Bundle 实例](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance)。
 
 **注**：具有 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 实例限制为可同时从内部部署站点建立三个连接。
+
+## HCX on IBM Cloud 的技术规范
+
+HCX on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
+
+**注：**内部部署 HCX 实例仅包括许可和激活。
+
+### VMware NSX Edge 服务网关 (ESG) 的主动/被动对，以用于 HCX 管理
+
+* CPU：6 个 vCPU
+* RAM：8 GB
+* 磁盘：3 GB VMDK
+
+### HCX Management Appliance - 虚拟机
+
+* CPU：4 个 vCPU
+* RAM：12 GB
+* 磁盘：60 GB VMDK
+
+配置期间根据需要部署了更多 HCX 设备，以用于 L2 连接、WAN 优化和网关连接。
+
+### 联网
+
+* 一个具有 16 个 IP 地址的公用可移植子网
+* 一个具有 64 个 IP 地址的专用可移植子网
+* 专用可移植 vMotion 子网中的 8 个 IP 地址
+
+### 许可证和费用
+
+* 基本许可费用：服务的必需费用
+* 受管 VM 费用：按每月迁移的 VM 收费
 
 ## 安装 HCX on IBM Cloud 时的注意事项
 
@@ -24,7 +55,7 @@ HCX on {{site.data.keyword.cloud}} 服务可以将内部部署数据中心的网
 
 ### 对 ESXi 服务器数的需求
 
-无法将 HCX on {{site.data.keyword.cloud_notm}} 服务安装到其缺省集群的 ESXi 服务器数超过 51 个的实例中。因为 HCX on {{site.data.keyword.cloud_notm}} 需要缺省集群中 vMotion 子网中的 8 个 IP 地址，所以如果 ESXi 服务器数超过 51 个，那么 vMotion 子网中没有 IP 地址可用于 HCX on {{site.data.keyword.cloud_notm}}。
+无法将 HCX on {{site.data.keyword.cloud_notm}} 服务安装到其缺省集群的 ESXi 服务器数超过 51 个的实例中。因为 HCX on {{site.data.keyword.cloud_notm}} 需要缺省集群中 vMotion 子网中的 8 个 IP 地址，如果 ESXi 服务器数超过 51 个，那么 vMotion 子网中没有 IP 地址可用于 HCX on {{site.data.keyword.cloud_notm}}。
 
 ### 有关防火墙规则的需求
 
@@ -43,7 +74,7 @@ HCX on {{site.data.keyword.cloud}} 服务可以将内部部署数据中心的网
    * 如果为空，那么除去与 HCX 相关的文件夹。
    * 删除 HCX 管理 Edge 设备。
 
-## 相关链接
+### 相关链接
 
 * [订购 HCX on {{site.data.keyword.cloud_notm}}](hcx_ordering.html)
 * [管理 HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)

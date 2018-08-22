@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -63,7 +63,7 @@ HCX on {{site.data.keyword.cloud_notm}} 组件必须同时安装在 {{site.data.
    有关更多信息，请参阅[删除内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例](../services/standalone_deletingserviceinstances.html)。
 3. 在 VMware vSphere Web Client 中，删除内部部署 HCX Manager。
 
-## 相关链接
+### 相关链接
 
 * [查看内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例](../services/standalone_viewingserviceinstances.html)
 * [HCX 术语的词汇表](hcx_glossary.html)

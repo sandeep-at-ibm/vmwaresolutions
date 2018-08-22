@@ -4,25 +4,25 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-20"
 
 ---
 
 # 订购 KMIP for VMware on IBM Cloud
 
-订购 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务时，可订购包含此服务的新实例，也可通过向现有实例添加此服务来进行订购。
+订购 KMIP for VMware on {{site.data.keyword.cloud}} 服务时，可订购包含此服务的新实例，也可通过向现有实例添加此服务来进行订购。
 
 ## 为新实例订购 KMIP for VMware on IBM Cloud
 
 可以使用下列其中一种方法订购包含 KMIP for VMware on {{site.data.keyword.cloud_notm}} 的新实例：
-* 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，订购新实例时，请在**服务**部分中选择 **KMIP for VMware on IBM Cloud**。
-* 在 {{site.data.keyword.cloud_notm}}“目录”中，选择 **KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务**，指定服务设置，然后选择**添加到新实例**。
+* 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，订购新实例时，请在**服务**部分中选择 **KMIP for VMware on IBM Cloud**。
+* 在 {{site.data.keyword.cloud_notm}}“目录”中，选择 **KMIP for VMware on IBM Cloud**，指定服务设置，然后选择**添加到新实例**。
 
 ## 为现有实例订购 KMIP for VMware on IBM Cloud
 
 可以使用下列其中一种方法将 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务添加到现有实例中：
-* 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，查看要为其添加服务的实例，单击左侧导航窗格上的**服务**，然后单击**添加服务**。
-* 在 {{site.data.keyword.cloud_notm}}“目录”中，选择 **KMIP for VMware on IBM Cloud 服务**，指定服务设置，然后选择**添加到现有实例**。
+* 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，查看要为其添加服务的实例，单击左侧导航窗格上的**服务**，然后单击**添加**。
+* 在 {{site.data.keyword.cloud_notm}}“目录”中，选择 **KMIP for VMware on IBM Cloud**，指定服务设置，然后选择**添加到现有实例**。
 
 ## KMIP for VMware on IBM Cloud 服务配置
 
@@ -38,10 +38,11 @@ lastupdated: "2018-06-08"
 
 对于 vCenter Server，必须配置密钥管理服务器 (KMS) 集群。所选区域中的端点通过客户机 SSL 证书安全地连接到 KMS。有关每个区域中的端点，请参阅下表。这些端点使用由 {{site.data.keyword.vmwaresolutions_short}} 团队维护的自签名证书。证书的指纹为 `a9 d0 ff 15 df 85 10 6b 61 88 fe 2e 8b d3 1a af 48 c8 a0 7a`。
 
-表 1：KMIP for VMware on IBM Cloud 服务端点区域
+表 1：KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务端点区域
 
 |区域|端点|
 |:---------------|:-----------------------|
+|德国|`161.156.68.107:5696`|
 |悉尼|`130.198.73.134:5696`|
 |英国|`158.175.93.122:5696`|
 |美国南部|`169.60.185.42:5696`|
@@ -62,9 +63,9 @@ lastupdated: "2018-06-08"
 
 
 
-## 相关链接
+### 相关链接
 
-* [KMIP for VMware on IBM Cloud 概述](kmip_considerations.html)
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 概述](kmip_considerations.html)
 * [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
 * [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
 * [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](../vcenter/vc_hybrid_addingremovingservices.html)

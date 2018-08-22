@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ HCX on {{site.data.keyword.cloud_notm}} 通过 VMware Hybrid Cloud Extension 技
 
 如果看不到所需的构建更新、使用 HCX 时遇到问题，或者希望立即将最新的 HCX 构建推送到系统，请通过遵循[联系 IBM 支持](../vmonic/trbl_support.html)中的步骤来开具支持凭单。
 
-## 相关链接
+### 相关链接
 
 * [HCX on {{site.data.keyword.cloud_notm}} 概述](hcx_considerations.html)
 * [HCX 术语的词汇表](hcx_glossary.html)

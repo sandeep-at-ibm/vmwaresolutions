@@ -4,14 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-04-05"
+lastupdated: "2018-07-19"
 
 ---
 
 # Zerto on IBM Cloud 的除去过程
-<!-- Do not remove this topic. Though it's no longer in the TOC, it's referenced from the V1.3 release notes -->
 
-Zerto on IBM® Cloud 服务的除去过程会自动执行。将完成以下步骤，以成功除去 Zerto on IBM Cloud 服务。
+Zerto on {{site.data.keyword.cloud}} 服务的除去过程会自动执行。将完成以下步骤，以成功除去 Zerto on {{site.data.keyword.cloud_notm}} 服务。
 
 ## 如何除去 Zerto on IBM Cloud
 
@@ -23,8 +22,8 @@ Zerto on IBM® Cloud 服务的除去过程会自动执行。将完成以下步�
    1. 除去部署到所有 ESXi 服务器的 Zerto Virtual Replication 设备。
    2. 卸载 Zerto Virtual Replication。
    3. 删除安装了 Zerto Virtual Replication 的 Windows VSI（虚拟服务实例）。
-   4. 退回为 Zerto Virtual Replication 与 IBM Cloud 基础架构之间的通信订购的专用可移植子网。   
-   5. 从 IBM Cloud 计费结算表中除去 Zerto 灾难恢复服务的费用。
+   4. 退回为 Zerto Virtual Replication 与 {{site.data.keyword.cloud_notm}} 基础架构之间的通信订购的专用可移植子网。   
+   5. 从 {{site.data.keyword.cloud_notm}} 计费结算表中除去 Zerto 灾难恢复服务的费用。
 
       **注**：在所除去的 Zerto 灾难恢复服务的计费周期结束之前，仍然会对您计费。
 
@@ -32,10 +31,10 @@ Zerto on IBM® Cloud 服务的除去过程会自动执行。将完成以下步�
 
 服务除去成功完成后，系统将通过电子邮件通知您，并且该服务条目会从**安装的服务**选项卡中删除。
 
-## 相关链接
+### 相关链接
 
-* [订购 Zerto on IBM Cloud](zerto_ordering.html)
-* [管理 Zerto on IBM Cloud](managingzertodr.html)
+* [订购 Zerto on {{site.data.keyword.cloud_notm}}](zerto_ordering.html)
+* [管理 Zerto on {{site.data.keyword.cloud_notm}}](managingzertodr.html)
 * [Cloud Foundation 实例](../sddc/sd_cloudfoundationoverview.html)
 * [vCenter Server 实例](../vcenter/vc_vcenterserveroverview.html)
 * [zerto.com Web 站点](https://www.zerto.com){:new_window}
