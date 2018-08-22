@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -21,7 +21,7 @@ VMware Cloud Foundation 인스턴스에 대한 BOM(Bill of Materials) 정보를 
 |VLAN      |유형      |세부사항      |
 |:----------|:----------|:-------------|
 |VLAN1     |공인, 기본 |공용 네트워크 액세스를 위한 실제 ESXi 서버에 지정됩니다. 초기 배치 후에 사용되지 않습니다. 인터넷 액세스에 사용 가능합니다. |
-|VLAN2     |사설 A, 기본 |IBM Cloud로 실제 ESXi 서버에 지정됩니다. VMware vSphere 관리 트래픽에 대한 관리 인터페이스에서 사용됩니다.<br><br>관리 컴포넌트로 작동하는 가상 머신(VM)에 지정됩니다.<br><br>VMware NSX VTEP(VXLAN Tunnel Endpoint)에 지정됩니다. |
+|VLAN2     |사설 A, 기본 |{{site.data.keyword.cloud}}에 의해 실제 ESXi 서버에 지정됩니다. VMware vSphere 관리 트래픽에 대한 관리 인터페이스에서 사용됩니다.<br><br>관리 컴포넌트로 작동하는 가상 머신(VM)에 지정됩니다.<br><br>VMware NSX VTEP(VXLAN Tunnel Endpoint)에 지정됩니다. |
 |VLAN3     |사설 B, 포터블 |VMware vSAN에 지정됩니다(사용된 경우).<br><br>VMware NFS에 지정됩니다(사용된 경우).<br><br>VMware vSphere vMotion에 지정됩니다. |
 
 ## Cloud Foundation 인스턴스에 대한 소프트웨어 BOM
@@ -38,7 +38,7 @@ VMware Cloud Foundation 인스턴스에 대한 BOM(Bill of Materials) 정보를 
 |VMware       |vSAN                                     |6.6.1        |
 |VMware       |NSX for vSphere                          |6.3.5        |
 |VMware       |SDDC Manager                             |2.4          |
-| {{site.data.keyword.IBM}} |CloudDriver                 |2.4          |
+|IBM          |CloudDriver                              |2.4          |
 |Microsoft    |Windows Server Standard 에디션(64비트) |2012R2       |
 
 ## ESXi 서버의 고급 구성 설정
@@ -67,10 +67,10 @@ VMware Cloud Foundation 인스턴스에 대한 BOM(Bill of Materials) 정보를 
 
   자세한 정보는 [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239)를 참조하십시오.
 
-## 관련 링크
+### 관련 링크
 
 * [빌드 번호 및 VMware ESXi/ESX(2143832)의 버전](https://kb.vmware.com/s/article/2143832)
 * [빌드 번호 및 VMware vCenter Server(2143838)의 버전](https://kb.vmware.com/s/article/2143838)
-* [VMware Cloud Foundation on IBM Cloud Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
+* [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
 * [Cloud Foundation 개요](sd_cloudfoundationoverview.html)
 * [Cloud Foundation 인스턴스 계획](sd_planning.html)

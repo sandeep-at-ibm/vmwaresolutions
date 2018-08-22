@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -45,7 +45,7 @@ ESXi 서버가 추가되거나 제거될 때 이메일로 알림을 받습니다
 
 클러스터의 목록에 추가된 새 ESXi 서버가 표시되지 않으면 이메일 또는 콘솔 알림을 확인하여 실패에 대한 추가 세부사항을 찾을 수 있습니다.
 
-## 관련 링크
+### 관련 링크
 
 * [Cloud Foundation 명세서](sd_bom.html)
 * [Cloud Foundation 인스턴스에 대한 요구사항 및 계획](sd_planning.html)
