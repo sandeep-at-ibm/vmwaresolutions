@@ -4,20 +4,24 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-03"
+lastupdated: "2018-07-23"
 
 ---
 
-# Registro de una cuenta de IBM Cloud
+# Registro de cuentas necesarias
 
-Para registrar una cuenta de {{site.data.keyword.cloud}}, actualice su cuenta de {{site.data.keyword.cloud_notm}} a una cuenta de tipo Pago según uso.
+## Registro de una cuenta de IBM Cloud
 
-**Nota**: la cuenta de {{site.data.keyword.cloud_notm}} se conocía anteriormente como cuenta de IBM SoftLayer.
+Puede registrarse para una cuenta de {{site.data.keyword.cloud}} utilizando un **IBMid** existente o creando un nuevo **IBMid**. Para obtener más información sobre cómo registrarse para una cuenta de {{site.data.keyword.cloud_notm}}, consulte [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
 
-## Procedimiento
+## Registro de una cuenta de infraestructura de IBM Cloud (SoftLayer)
 
-1. Inicie sesión en la consola de {{site.data.keyword.vmwaresolutions_full}} con su **IBMid**.
-2. En la parte derecha de la cabecera, pulse **Gestionar > Facturación y uso > Facturación**.
+La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer), conocida anteriormente como la cuenta de IBM SoftLayer, se utiliza para iniciar la sesión en el portal de clientes de infraestructura de {{site.data.keyword.cloud_notm}} que proporciona alguna función adicional para gestionar los productos y servicios de la infraestructura. Para registrar una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer), actualice su cuenta de {{site.data.keyword.cloud_notm}} al tipo de cuenta Pago según uso.
+
+### Procedimiento
+
+1. Inicie sesión en la consola de {{site.data.keyword.vmwaresolutions_short}} con su **IBMid**.
+2. En la parte izquierda de la cabecera, pulse **Gestionar > Facturación y uso > Facturación**.
 3. Pulse **Añadir tarjeta de crédito**.
 4. Especifique la información de facturación y la información de la tarjeta de crédito.
 5. Lea los términos de los servicios en la nube. Asegúrese de que está de acuerdo con los mismos antes de la actualización.
@@ -28,10 +32,10 @@ Para registrar una cuenta de {{site.data.keyword.cloud}}, actualice su cuenta de
 10. Cuando se le notificará por correo electrónico que su cuenta está lista, vaya al {{site.data.keyword.slportal}} y pulse **Iniciar sesión con IBMid**.
     Se iniciará la sesión automáticamente.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Preguntas frecuentes](faq.html)
-* [Requisitos de una cuenta de {{site.data.keyword.cloud_notm}}](slaccountrequirement.html)
-* [Vídeo: Cómo crear una cuenta de IBM Cloud](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [Requisitos para la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](slaccountrequirement.html)
+* [Vídeo: Cómo crear una cuenta de {{site.data.keyword.cloud_notm}}](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Pedido de instancias de vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Cambio a IBMid](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}

@@ -14,25 +14,25 @@ Este release incluye nuevas características, actualizaciones de componentes, me
 
 ## Servicio Fortinet on IBM Cloud
 
-El servicio Fortinet on IBM Cloud ya está disponible tanto para instancias de Cloud Foundation como para instancias de vCenter Server. Este servicio despliega un par de dispositivos de seguridad FortiGate (FSA) serie 300 en modalidad altamente disponible para ofrecer servicios de cortafuegos, direccionamiento, NAT y VPN para proteger todos los servidores y máquinas virtuales de la VLAN pública de sus instancias. Puede solicitar instancias con el servicio Fortinet incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante desde la página de detalles de la instancia.
+El servicio Fortinet on {{site.data.keyword.cloud_notm}} ya está disponible tanto para instancias de Cloud Foundation como para instancias de vCenter Server. Este servicio despliega un par de dispositivos de seguridad FortiGate (FSA) serie 300 en modalidad altamente disponible para ofrecer servicios de cortafuegos, direccionamiento, NAT y VPN para proteger todos los servidores y máquinas virtuales de la VLAN pública de sus instancias. Puede solicitar instancias con el servicio Fortinet incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante desde la página de detalles de la instancia.
 
 Después de que se instale correctamente el servicio Fortinet, podrá gestionar y configurar reglas de cortafuegos para FSA desde la consola de FortiGate. Debe asegurarse de que las reglas de cortafuegos de FSA estén definidas de modo que permitan comunicaciones HTTPS salientes iniciadas por componentes de gestión, como la máquina virtual IBM CloudDriver o la máquina virtual Zerto, para establecer comunicación con la base de datos de gestión externa de IBM Bluemix® a través de Internet. Las comunicaciones HTTPS salientes se originan en la dirección IP pública de los servicios de gestión de VMware NSX Edge Services Gateway (ESG) de su instancia.
 
 Para obtener más información, consulte:
-* [Visión general de Fortinet on IBM Cloud](../services/fsa_considerations.html)
-* [Gestión de Fortinet on IBM Cloud](../services/managingfsa.html)
+* [Visión general de Fortinet on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)
+* [Gestión de Fortinet on {{site.data.keyword.cloud_notm}}](../services/managingfsa.html)
 
 ## Servicio Veeam on IBM Cloud
 
-Este release incorpora el servicio Veeam on IBM Cloud, que puede hacer copia de seguridad de las cargas de trabajo y de los componentes de gestión. El nuevo servicio sustituye la VSI de Veeam anterior que venía integrada en los releases anteriores a V1.8 solo para los componentes de copia de seguridad y de gestión.
+Este release incorpora el servicio Veeam on {{site.data.keyword.cloud_notm}}, que puede hacer copia de seguridad de las cargas de trabajo y de los componentes de gestión. El nuevo servicio sustituye la VSI de Veeam anterior que venía integrada en los releases anteriores a V1.8 solo para los componentes de copia de seguridad y de gestión.
 
 Debido a este cambio, aunque la VSI Veeam de las instancias anteriores a V1.8 sigue funcionando, los puntos de copia seguridad para las instancias ya no están disponibles en la consola de {{site.data.keyword.vmwaresolutions_short}} y debe crear una incidencia de soporte para obtener ayuda con una restauración.
 
 Además, la licencia de la VSI de Veeam en instancias anteriores a V1.8 caducó el 14 de octubre de 2017. Por lo tanto, debe sustituir la VSI de Veeam anterior por el nuevo servicio Veeam en cuando pueda.
 
 Para obtener más información, consulte:
-* [Visión general de Veeam on IBM Cloud](../services/veeam_considerations.html)
-* [Gestión de Veeam on IBM Cloud](../services/managingveeam.html)
+* [Visión general de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
+* [Gestión de Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)
 
 ## Actualizaciones de instancias de VMware Cloud Foundation
 
@@ -73,9 +73,9 @@ Para obtener más información, consulte [Requisitos y planificación de instanc
 ## Mejoras en la usabilidad
 
 Se han realizado mejoras en la interfaz de usuario:
-* Puede obtener información sobre los servicios y solicitar una instancia en la página **Cómo comenzar** del panel de navegación izquierdo. Para obtener información sobre la arquitectura del servicio IBM Cloud Secure Virtualization, consulte [Seguridad y conformidad - HyTrust ](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust).
+* Puede obtener información sobre los servicios y solicitar una instancia en la página **Cómo comenzar** del panel de navegación izquierdo. Para obtener información sobre la arquitectura de servicio de {{site.data.keyword.cloud_notm}} Secure Virtualization, consulte [Seguridad y conformidad - HyTrust](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust).
 * Utilice el menú de desbordamiento de la página de detalles de la instancia para suprimir una instancia en estado **Listo para su uso**.
 * La opción para actualizar la edición de la licencia de NSX ahora está disponible en el separador **Actualización y parche**. La actualización de licencia sustituye todas las licencias existentes de NSX en la cuenta de IBM SoftLayer por la nueva instancia.
 * El separador **Copia de seguridad y restauración** de la página de detalles de la instancia ya no está disponible.
-* Puede seleccionar varios servicios para desplegarlos al principio de un pedido. Además del servicio Zerto on IBM Cloud, también dispone de opciones para seleccionar el servicio Veeam on IBM Cloud y el servicio Fortinet on IBM Cloud.
+* Puede seleccionar varios servicios para desplegarlos al principio de un pedido. Además del servicio Zerto on {{site.data.keyword.cloud_notm}}, también dispone de opciones para seleccionar el servicio Veeam on {{site.data.keyword.cloud_notm}} y el servicio Fortinet on {{site.data.keyword.cloud_notm}}.
 * Se ha cambiado el nombre del separador **Servicios disponibles** del separador **Servicios** de la página de detalles de la instancia por **Añadir servicios**.

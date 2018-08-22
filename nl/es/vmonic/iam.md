@@ -1,0 +1,76 @@
+---
+
+copyright:
+
+  years:  2016, 2018
+
+lastupdated: "2018-07-27"
+
+---
+
+# Gestión de acceso de usuario con IAM
+
+El acceso a las instancias de servicio de {{site.data.keyword.vmwaresolutions_full}} para los usuarios de la cuenta está controlado por {{site.data.keyword.cloud}} Identity and Access Management (IAM). Cada usuario que accede a los servicios de {{site.data.keyword.vmwaresolutions_short}} en su cuenta debe tener asignada una política de acceso con un rol de usuario IAM definido.
+
+La política de acceso determina las acciones que el usuario puede realizar dentro del contexto del servicio o la instancia que seleccione. Las acciones permitidas se personalizan y se definen mediante el servicio de {{site.data.keyword.cloud_notm}} como operaciones que se permiten para que se realicen en el servicio. Las acciones se correlacionarán entonces a los roles de usuario de IAM.
+
+Las políticas permiten otorgar el acceso en distintos niveles. Algunas de las opciones incluyen los siguientes accesos:
+
+* Acceso a todas las instancias de servicio en su cuenta
+* Acceso a una instancia de servicio individual en su cuenta
+* Acceso a un recurso específico dentro de una instancia
+* Acceso a todos los servicios habilitados para IAM en su cuenta
+
+Después de definir el ámbito de la política de acceso, debe asignar un rol.
+
+Revise la información siguiente, en la que se describen las acciones que permite cada rol en el servicio de {{site.data.keyword.vmwaresolutions_short}}.
+
+## Roles y permisos de gestión de plataformas
+
+Los roles de gestión de plataformas permiten a los usuarios realizar tareas en los recursos de servicio a nivel de plataforma. Por ejemplo, asigne acceso de usuario al servicio, cree o suprima los ID de servicio, cree instancias y vincule instancias a las aplicaciones.
+
+La tabla siguiente proporciona información sobre las acciones que se correlacionan en los roles de gestión de plataforma.
+
+Tabla 1. Roles de gestión de plataforma y acciones permitidas
+
+| Rol de gestión de plataforma | Acciones | Accione de ejemplo |
+|:----------------- |:----------------- |:----------------- |
+| Visor | Acciones de solo lectura | <ul><li>Ver el resumen de instancias</li><li>Ver los detalles de una instancia</li></ul>|
+| Editor | Actualizar una instancia específica |<ul><li>Añadir o eliminar servidores ESXi</li><li>Añadir o eliminar clústeres</li><li>Añadir o eliminar servicios</li><li>Actualizar una instancia a una versión superior</li></ul> |
+| Operador | Acciones de solo lectura | <ul><li>Listar instancias</li><li>Ver los detalles de una instancia</li></ul> |
+| Administrador | Acceso de gestión completa |<ul><li>Crear nuevas instancias</li><li>Suprimir instancias</li><li>Otorgar acceso de plataforma a otros usuarios</li></ul>|
+
+Para {{site.data.keyword.vmwaresolutions_short}}, existen las acciones siguientes:
+
+Tabla 2. Descripciones y roles de acciones necesarios
+
+| Acción | Operación en servicio | Rol |
+|:------ |:-------------------- |:---- |
+| vmware-solutions.instances.create | Crear nuevas instancias | Administrador |
+| vmware-solutions.instances.delete | Suprimir instancias | Administrador |
+| vmware-solutions.instances.view | <ul><li>Listar instancias</li><li>Ver el detalle de una instancia</li></ul> | Visor, Operador, Editor y Administrador |
+| vmware-solutions.instances.update | <ul><li>Añadir o eliminar servidores ESXi</li><li>Añadir o eliminar clústeres</li><li>Añadir o eliminar servicios</li><li>Actualizar una instancia a una versión superior</li></ul> | Editor y Administrador |
+| vmware-solutions.account.update | Actualizar valores de cuenta | Administrador |
+
+## Gestión del acceso para usuarios
+
+Puede añadir nuevos usuarios a la cuenta {{site.data.keyword.cloud_notm}} para que estos usuarios puedan compartir los servicios y los recursos que se han suministrado para la cuenta. Para obtener más información, consulte [Invitar a los usuarios a acceder a servicios y recursos](../vmonic/iamuserinvite.html).
+
+También puede gestionar el acceso de los usuarios existentes, incluida la modificación del acceso existente, la asignación de acceso nuevo y la revisión del acceso asignado. Para gestionar el acceso de los usuarios, debe ser el propietario de la cuenta o debe tener el rol de gestión de la plataforma **Administrador**. Para obtener más información, consulte [Gestión del acceso IAM](../../../iam/mngiam.html).
+
+### Migración de instancias existentes a cuentas de IBM Cloud
+
+Debido a la integración de {{site.data.keyword.vmwaresolutions_short}} con IAM, las instancias que se despliegan en V2.5 y releases posteriores en la cuenta de {{site.data.keyword.cloud}} se añaden automáticamente a la cuenta y se gestionan mediante IAM. Para las instancias existentes que se han desplegado en V2.4 y releases anteriores, puede migrarlas a cuentas de {{site.data.keyword.cloud_notm}} especificadas para la gestión habilitada para IAM.
+
+Para obtener más información, consulte:
+* [Migración de instancias anteriores a V2.5 vCenter Server a cuentas de IBM Cloud](../vcenter/vc_addinstancetousraccount.html)
+* [Migración de vCenter Server anterior a V2.5 con las instancias del paquete híbrido (Hybridity) en cuentas de IBM Cloud](../vcenter/vc_hybrid_addinstancetousraccount.html)
+* [Migración de instancias anteriores a V2.5 Cloud Foundation a cuentas de IBM Cloud](../sddc/sd_addinstancetousraccount.html)
+* [Migración de instancias anteriores a V2.5 NetApp ONTAP Select a cuentas de IBM Cloud](../netapp/np_addinstancetousraccount.html)
+* [Migración de instancias anteriores a V2.5 VMware Federal a cuentas de IBM Cloud](../vcenter/vc_fed_addinstancetousraccount.html)
+
+### Enlaces relacionados
+
+* [Gestión de identidad y acceso](../../../iam/quickstart.html)
+* [Gestión de usuarios y acceso](../../../iam/iamusermanage.html)
+* [¿Qué es IAM?](../../../iam/index.html)

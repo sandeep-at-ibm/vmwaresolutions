@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-28"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -14,13 +14,14 @@ Encuentre las respuestas a las preguntas más frecuentes sobre {{site.data.keywo
 
 ## ¿Qué cuentas de usuario necesito para IBM Cloud for VMware Solutions?
 
-* **Cuenta de IBMid**. Se necesita esta cuenta para acceder a la consola de {{site.data.keyword.vmwaresolutions_short}}. La consola es una interfaz de usuario autónoma, independiente del {{site.data.keyword.slportal_full}}. Para obtener más información, consulte
+* **Cuenta de IBMid**. Se necesita esta cuenta para acceder a la consola de {{site.data.keyword.vmwaresolutions_short}}. La consola es una interfaz de usuario autónoma, independiente del {{site.data.keyword.slportal}}. Para obtener más información, consulte
 [Iniciación](../index.html).
-* **Cuenta de {{site.data.keyword.cloud_notm}}**. Se necesita esta cuenta para el suministro. Puede registrarse para una cuenta de {{site.data.keyword.cloud_notm}} actualizando su **cuenta de IBMid** a una cuenta de tipo Pago según uso. La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Registro de una cuenta de {{site.data.keyword.cloud_notm}} ](signing_softlayer_account.html) y [Requisitos de una cuenta de {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
+* **Cuenta de {{site.data.keyword.cloud_notm}}**. Se necesita esta cuenta para el suministro. Puede registrarse para una cuenta de {{site.data.keyword.cloud_notm}} utilizando un **IBMid** existente o creando un nuevo **IBMid**. 
+* **Cuenta de infraestructura de {{site.data.keyword.cloud_notm}}**. Esta cuenta, conocida anteriormente como la cuenta de **IBM SoftLayer**, se utiliza para iniciar la sesión en el portal de clientes de infraestructura de {{site.data.keyword.cloud_notm}} que proporciona alguna función adicional para gestionar los productos y servicios de la infraestructura. Puede obtener una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} actualizando su **cuenta de {{site.data.keyword.cloud_notm}}** a un tipo de cuenta de Pago según uso, o enlazando su cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) existente con su cuenta de {{site.data.keyword.cloud_notm}}. La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} que está utilizando debe cumplir determinados requisitos. Para obtener más información, consulte [Registro para las cuentas necesarias](signing_softlayer_account.html) y [requisitos de cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
 
 ## ¿Cómo puedo asociar mis credenciales de la infraestructura IBM Cloud a la consola de IBM Cloud for VMware Solutions?
 
-La primera ver que solicite su instancia, siga las instrucciones de la página de credenciales de la infraestructura {{site.data.keyword.cloud_notm}} para localizar y copiar el nombre de usuario de {{site.data.keyword.cloud_notm}} y la clave de API del {{site.data.keyword.slportal}}. Las credenciales de la infraestructura {{site.data.keyword.cloud_notm}} se almacenan en la consola de {{site.data.keyword.vmwaresolutions_short}} tras el primer pedido. Los siguientes pedidos utilizan automáticamente las credenciales almacenadas.
+La primera vez que solicite su instancia, siga las instrucciones de la página **Valores** de la consola para localizar y copiar el nombre de usuario de la infraestructura de {{site.data.keyword.cloud_notm}} y la clave de API del {{site.data.keyword.slportal}}. Las credenciales de la infraestructura {{site.data.keyword.cloud_notm}} se almacenan en la consola de {{site.data.keyword.vmwaresolutions_short}} tras el primer pedido. Los siguientes pedidos utilizan automáticamente las credenciales almacenadas.
 
 ## ¿Cómo se facturan mis consumos de la plataforma virtual VMware?
 
@@ -30,21 +31,21 @@ Todos los costes correspondientes a la infraestructura física y virtual y a las
 
 Todos los tipos de instancias proporcionan opciones de despliegue para entornos virtuales VMware. Sin embargo, la diferencia es el grado de personalización y de automatización.
 
-* Cuando solicita una instancia de VMware vCenter Server, despliega un entorno virtual VMware con recursos personalizados de cálculo, de almacenamiento y de red. Para obtener más información sobre los componentes desplegados, consulte la sección _Especificaciones técnicas de vCenter Server_ en [Visión general de vCenter Server](../vcenter/vc_vcenterserveroverview.html).
-* Cuando solicita una instancia de VMware Cloud Foundation, despliega una plataforma unificada de centro de datos definido por software (SDDC). Para obtener más información sobre los componentes desplegados, consulte [Componentes de una instancia de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+* Cuando solicita una instancia de VMware vCenter Server, despliega un entorno virtual VMware con recursos personalizados de cálculo, de almacenamiento y de red. Para obtener más información sobre los componentes desplegados, consulte [Especificaciones técnicas para instancias de vCenter Server](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
+* Cuando solicita una instancia de VMware Cloud Foundation, despliega una plataforma unificada de centro de datos definido por software (SDDC). Para obtener más información sobre los componentes desplegados, consulte [Especificaciones técnicas para instancias de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 * Al solicitar un clúster de VMware vSphere, obtendrá el máximo de flexibilidad para diseñar y crear su entorno VMware alojado mientras incorpora hardware compatible con VMware. Sin embargo, {{site.data.keyword.cloud_notm}} no automatiza la instalación, la configuración ni la activación de los componentes opcionales de VMware para el clúster de VMware vSphere.
 * Las funciones que reciben soporte para las instancias de vCenter Server, las instancias de Cloud Foundation y los clústeres de vSphere son diferentes. Para obtener más información, consulte [Gráfico de comparación de ofertas](inst_comp_chart.html).
 
 ## ¿Qué se incluye en una instancia de vCenter Server?
 
-Para obtener más información, consulte la sección _Especificaciones técnicas de vCenter Server_ en [Visión general de vCenter Server](../vcenter/vc_vcenterserveroverview.html).
+Para obtener más información, consulte [Especificaciones técnicas para instancias de vCenter Server](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## ¿Qué se incluye en una instancia de Cloud Foundation?
 
-Para obtener más información, consulte [Componentes de una instancia de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
+Para obtener más información, consulte [Especificaciones técnicas para instancias de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## ¿Qué se incluye en un clúster de vSphere?
-Para obtener más información, consulte [Componentes de VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html).
+Para obtener más información, consulte [Componentes de VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html).
 
 ## ¿Está altamente disponible una instancia de vCenter Server de dos nodos?
 
@@ -108,7 +109,7 @@ Para obtener más información, consulte las secciones _Disponibilidad de IBM Cl
 * [Requisitos y planificación de instancias de vCenter Server](../vcenter/vc_planning.html)
 * [Requisitos y planificación de instancias de vCenter Server con el paquete híbrido (Hybridity)](../vcenter/vc_hybrid_planning.html)
 * [Requisitos y planificación de instancias de Cloud Foundation](../sddc/sd_planning.html)
-* [Requisitos y planificación de VMware vSphere on IBM Cloud](../vsphere/vs_planning.html)
+* [Requisitos y planificación de VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_planning.html)
 * [Requisitos y planificación de las instancias de NetApp ONTAP Select](../netapp/np_planning.html)
 * [Requisitos y planificación de instancias de VMware Federal](../vcenter/vc_fed_planning.html)
 

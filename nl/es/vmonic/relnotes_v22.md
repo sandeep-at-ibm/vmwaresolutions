@@ -108,7 +108,7 @@ El release actual aplica la actualización de NetApp ONTAP Select 9.3.
 
 ### Aumento en el número de unidades SATA para servidores nativos IBM Cloud de alta capacidad
 
-Ahora dispone de treinta y cuatro unidades SATA para {{site.data.keyword.baremetal_short}} NetApp ONTAP Select de alta capacidad. Para obtener más información, consulte la sección *Componentes de una instancia de NetApp ONTAP Select* en la [Visión general de NetApp ONTAP Select](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components).
+Ahora dispone de treinta y cuatro unidades SATA para {{site.data.keyword.baremetal_short}} NetApp ONTAP Select de alta capacidad. Para obtener más información, consulte [Especificaciones técnicas para instancias de NetApp ONTAP Select](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances).
 
 ## Actualizaciones de servicios complementarios
 

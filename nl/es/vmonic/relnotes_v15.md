@@ -24,7 +24,7 @@ Para confirmar si su cuenta de SoftLayer es una cuenta VRF, verifíquelo con el 
 
 ## Actualizaciones del modelo de cargo por servicio
 
-Para las instancias de Cloud Foundation, se ha incorporado una nueva licencia _SDDC Manager_, que supone una cuota mensual que se aplica a cada nodo. Para obtener más información, consulte [Componentes de una instancia de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+Para las instancias de Cloud Foundation, se ha incorporado una nueva licencia _SDDC Manager_, que supone una cuota mensual que se aplica a cada nodo. Para obtener más información, consulte [Especificaciones técnicas para instancias de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## Mejoras en la usabilidad
 

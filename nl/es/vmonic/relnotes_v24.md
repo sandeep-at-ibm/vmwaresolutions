@@ -24,7 +24,7 @@ Para obtener más información, consulte [Soluciones para las vulnerabilidades S
 
 ## Soporte multilingüístico
 
-Desde el release V2.4, Soporte multilingüístico (National Language Support, NLS) está disponible para IBM Cloud for VMware Solutions.
+Desde el release V2.4, Soporte multilingüístico (National Language Support, NLS) está disponible para {{site.data.keyword.vmwaresolutions_short}}.
 Todas las características de la consola, incluida la documentación de usuario, están disponibles en varios idiomas.
 
 Están soportados los siguientes idiomas, además del inglés:
@@ -74,7 +74,7 @@ El release actual instala IBM Spectrum Protect&trade; Plus V10.1.1 Parche 1 en t
 
 ### VMware HCX on IBM Cloud
 
-Ahora hay disponible una opción nueva para que elija entre la red pública y la red privada para interconexiones de HCX cuando solicite este servicio. Para obtener más información, consulte [Solicitud de VMware HCX on IBM Cloud](../services/hcx_ordering.html).
+Ahora hay disponible una opción nueva para que elija entre la red pública y la red privada para interconexiones de HCX cuando solicite este servicio. Para obtener más información, consulte [Solicitud de VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_ordering.html).
 
 ## Documentación nueva y actualizada
 
@@ -88,15 +88,15 @@ La información de servicios se ha reestructurado y la navegación se ha mejorad
 
 Para obtener más información, consulte:
 
-* [Solicitud de F5 on IBM Cloud](../services/f5_ordering.html)
-* [Solicitud de FortiGate Security Appliance on IBM Cloud](../services/fsa_ordering.html)
-* [Solicitud de FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_ordering.html)
-* [Solicitud de Hytrust CloudControl on IBM Cloud](../services/htcc_ordering.html)
-* [Solicitud de Hytrust DataControl on IBM Cloud](../services/htdc_ordering.html)
-* [Solicitud de IBM Spectrum Protect Plus on IBM Cloud](../services/spp_ordering.html)
-* [Solicitud de KMIP for VMware on IBM Cloud](../services/kmip_ordering.html)
-* [Solicitud de Veeam on IBM Cloud](../services/veeam_ordering.html)
-* [Solicitud de Zerto on IBM Cloud](../services/zerto_ordering.html)
+* [Solicitud de F5 on {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
+* [Solicitud de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)
+* [Solicitud de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)
+* [Solicitud de Hytrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_ordering.html)
+* [Solicitud de Hytrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_ordering.html)
+* [Solicitud de IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/spp_ordering.html)
+* [Solicitud de KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_ordering.html)
+* [Solicitud de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_ordering.html)
+* [Solicitud de Zerto on {{site.data.keyword.cloud_notm}}](../services/zerto_ordering.html)
 
 ## Actualizaciones y mejoras de la interfaz de usuario
 

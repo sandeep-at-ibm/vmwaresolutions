@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -31,7 +31,7 @@ Puede comprobar las notificaciones sobre el estado del sistema o sobre las opera
           <dt class="dt dlterm">Crítico</dt>
           <dd class="dd">Un suceso crítico puede afectar a todo el sistema o servicio.</dd>
           <dt class="dt dlterm">Error</dt>
-          <dd class="dd">Un suceso de error se produce durante una operación que necesite la intervención del administrador o del usuario final.</dd>
+          <dd class="dd">Se produce un suceso de error durante una operación que puede necesitar la intervención del administrador o del usuario.</dd>
           <dt class="dt dlterm">Aviso</dt>
           <dd class="dd">Un componente falla o no funciona correctamente. Sin embargo, la anomalía no interrumpe el proceso en curso del componente.</dd>
             <dt class="dt dlterm">Informativo</dt>
@@ -71,7 +71,7 @@ Puede comprobar las notificaciones sobre el estado del sistema o sobre las opera
 
 De forma predeterminada, se muestran todas las notificaciones no leídas. Puede filtrar las notificaciones por estado, gravedad y tipo. Para filtrar las notificaciones, marque solo los recuadros de selección de los elementos que desea visualizar en las listas desplegables **Estado**, **Gravedad** o **Tipo**.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Preguntas frecuentes](faq.html)
 * [Cuenta de usuario y valores](useraccount.html)
