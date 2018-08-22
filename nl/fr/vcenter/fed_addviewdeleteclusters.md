@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -61,8 +61,6 @@ Pour les instances VMware Federal déployées dans la version 2.1 ou des éditio
 
 Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Pour les paramètres de stockage vSAN, 4 serveurs sont nécessaires pour le cluster initial et pour les clusters d'après déploiement.
 
-<!--When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.-->
-
 ### Paramètres de stockage
 
 Les paramètres de stockage varient en fonction de la configuration de serveur bare metal et du type de stockage que vous sélectionnez.
@@ -83,7 +81,7 @@ Lorsque vous sélectionnez **Stockage NFS**, vous pouvez ajouter un stockage par
 
 **Remarque :** le nombre de partages de fichiers doit être compris entre 1 et 32.
 
-* **Configurer les partages individuellement** : permet de spécifier des paramètres de configuration différents pour chaque partage de fichiers. 
+* **Configurer les partages individuellement** : permet de spécifier des paramètres de configuration différents pour chaque partage de fichiers.
 * **Nombre de partages** : lorsque vous utilisez le même paramètre de configuration pour chaque partage de fichiers, spécifiez le nombre de partages de fichiers pour le stockage partagé NFS que vous souhaitez ajouter.
 * **Taille** : sélectionnez la capacité qui répond à vos besoins de stockage partagé.
 * **Performances** : permet de sélectionner la valeur IOPS (Input/output Operations Per Second) par Go adaptée à vos besoins en matière de charge de travail.
@@ -99,10 +97,10 @@ Tableau 2. Options de niveau de performance NFS
 
 ### Paramètres d'octroi de licence
 
-Licences VMware fournies par IBM pour les produits suivants :
+	Licences VMware fournies par {{site.data.keyword.IBM}} pour les produits suivants :
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.3
+  * VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
   * (Pour les clusters vSAN) VMware vSAN Advanced ou Enterprise 6.6
 
 ### Récapitulatif de la commande
@@ -120,8 +118,8 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
 5. Renseignez les zones **Modèle UC**, **Mémoire RAM** et **Nombre de serveurs bare metal** pour la configuration de serveur bare metal.
 6. Procédez à la configuration du stockage.
-  * Lorsque vous sélectionnez **Stockage vSAN**, renseignez les zones **Type et taille de disque pour disques de capacité vSAN**, **Nombre de disques de capacité vSAN** et **Licence vSAN**. 
-  * Lorsque vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**. 
+  * Lorsque vous sélectionnez **Stockage vSAN**, renseignez les zones **Type et taille de disque pour disques de capacité vSAN**, **Nombre de disques de capacité vSAN** et **Licence vSAN**.
+  * Lorsque vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**.
   * Lorsque vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer des partages de fichiers individuellement, renseignez les zones **Configurer les partages individuellement**, puis cliquez sur l'icône **+** en regard de **Ajouter NFS**. Renseignez ensuite les zones **Taille** et **Performances** pour chaque partage de fichiers individuel. Vous devez sélectionner au moins un partage de fichiers.
 7. Sélectionnez l'édition de licence pour VMware vSAN pour la configuration de licence.
 8. Sur la page **Récapitulatif de la commande**, vérifiez la configuration du cluster avant d'ajouter celui-ci.
@@ -236,7 +234,7 @@ Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous 
 
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, localisez le cluster que vous souhaitez supprimer et cliquez sur l'icône **Supprimer** dans la colonne **Actions**.
 
-## Liens connexes
+### Liens connexes
 
 * [Affichage des instances VMware Federal](vc_fed_viewinginstance.html)
 * [Extension et réduction de capacité pour des instances VMware Federal](vc_fed_addingremovingservers.html)

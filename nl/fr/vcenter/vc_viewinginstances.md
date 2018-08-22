@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Affichage des instances vCenter Server
 
-Affichez les instances VMware vCenter Server que vous avez commandées ainsi que des informations détaillées les concernant.
+Affichez les informations récapitulatives et détaillées des instances VMware vCenter Server qui sont mises à disposition pour différents comptes utilisateur. 
 
 ## Affichage du récapitulatif des instances vCenter Server
 
-Pour afficher un récapitulatif de toutes les instances vCenter Server de votre environnement, procédez comme suit :
+Pour afficher un récapitulatif de toutes les instances vCenter Server qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. Dans le tableau **Instances vCenter Server**, affichez la liste de vos instances.
+1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche. 
+2. Dans l'angle supérieur droit de la console, cliquez sur votre avatar, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances.   
+3. Dans le tableau **vCenter Server**, affichez la liste des instances qui sont mises à disposition dans le compte utilisateur sélectionné.
 
 Tableau 1. Eléments d'une instance vCenter Server
 
@@ -25,7 +26,7 @@ Tableau 1. Eléments d'une instance vCenter Server
 |:------------- |:------------- |
 | Nom | Nom de l'instance |
 | Version | Version d'édition dans laquelle l'instance a été déployée ou vers laquelle elle a été mise à niveau |  
-| Emplacement | {{site.data.keyword.CloudDataCent}} où l'instance est hébergée |  
+| Emplacement | {{site.data.keyword.CloudDataCent_notm}} où l'instance est hébergée |  
 | Heure de création | Date et heure de création de l'instance |
 | Statut | Statut de l'instance |   
 
@@ -48,7 +49,7 @@ Tableau 2. Description des statuts des instances vCenter Server
 
 Pour afficher les détails des propriétés d'une instance :
 
-1. Dans le tableau **Instances vCenter Server**, cliquez sur le nom de l'instance.
+1. Dans le tableau **Instances vCenter Server**, cliquez sur un nom d'instance.
 2. Sous **Propriétés**, affichez les détails de l'instance.
 
 Tableau 3. Propriétés d'instance vCenter Server
@@ -80,9 +81,9 @@ Tableau 4. Informations d'accès relatives à vCenter Server pour les composants
 | AD/DNS IPs | Adresses IP des deux serveurs AD. |
 | AD/DNS FQDNs | Les noms de domaine complets des serveurs AD/DNS.<br><br>**Remarque :** le même mot de passe administrateur peut être utilisé pour établir une connexion à tous les serveurs AD/DNS via une connexion bureau à distance. |
 | AD/DNS ADMIN (Remote Desktop)  | Pour les instances principales, affiche le nom d'utilisateur et le mot de passe d'accès au serveur AD avec une connexion bureau à distance.<br><br>Pour les instances secondaires, cliquez sur le lien **Afficher sur l'instance principale** afin d'être dirigé vers les informations de nom d'utilisateur et de mot de passe sur l'instance principale.<br><br>**Remarque** : une fois l'instance secondaire ajoutée au domaine DNS principal et la réplication lancée, le mot de passe administrateur local sur l'instance principale est susceptible de remplacer le mot de passe administrateur local sur l'instance secondaire. En cliquant sur le lien **Afficher sur l'instance principale**, vous obtiendrez le mot de passe administrateur correct.  
-| NSX Manager IP  | L'adresse IP du gestionnaire NSX.  |
-| NSX Manager FQDN  | Le nom de domaine complet du gestionnaire NSX.  |
-| NSX Manager HTTP  | Le nom d'utilisateur et mot de passe utilisés pour accéder à la console Web du gestionnaire NSX. |
+| NSX Manager IP  | L'adresse IP de NSX Manager.  |
+| NSX Manager FQDN  | Le nom de domaine complet de NSX Manager.  |
+| NSX Manager HTTP  | Le nom d'utilisateur et mot de passe utilisés pour accéder à la console Web de NSX Manager. |
 | PSC IP  | L'adresse IP du contrôleur PSC ( Platform Services Controller).  |
 | PSC FQDN  | Le nom de domaine complet du PSC.  |    
 | PSC ADMIN  | Le nom d'utilisateur et le mot de passe de connexion unique VMware vCenter que vous pouvez utiliser pour accéder à la console Web du PSC.  |
@@ -94,7 +95,7 @@ Tableau 4. Informations d'accès relatives à vCenter Server pour les composants
 
 ## Affichage de l'historique de déploiement des instances vCenter Server
 
-Sous **Historique de déploiement**, affichez l'historique de déploiement de l'instance.
+Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance. 
 
 Tableau 5. Historique de déploiement d'une instance vCenter Server
 
@@ -118,7 +119,7 @@ Passez en revue les rubriques suivantes pour obtenir des informations qui vous a
 *  Pour la liste des points d'accès de connexion au réseau privé de l'infrastructure {{site.data.keyword.cloud_notm}} à l'aide du réseau privé virtuel (VPN), voir [Accès VPN](http://www.softlayer.com/vpn-access){:new_window}.
 *  Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client Web vSphere, voir [Déploiement d'un fichier OVF à l'aide du client Web vSphere](../vmonic/trbl_deploy_ovf.html).
 
-## Liens connexes
+### Liens connexes
 
 * [Commande d'instances vCenter Server](vc_orderinginstance.html)
 * [Ajout, affichage et suppression de clusters pour des instances vCenter Server](vc_addingviewingclusters.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-05-23"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -20,7 +20,7 @@ Lorsque vous supprimez une instance vCenter Server with Hybridity Bundle, les co
 5. Sous-réseaux
 6. Réseaux locaux virtuels
 
-En raison des dépendances de ressource, les composants de votre instance ne sont pas libérés immédiatement lorsque vous supprimez cette dernière. Par exemple, les sous-réseaux et les réseaux locaux virtuels ne peuvent pas être supprimés tant que l'infrastructure {{site.data.keyword.cloud}} n'a pas récupéré tous les serveurs ESXi, opération qui s'effectue en fin de cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}. A la fin du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}, qui est généralement de 30 jours, les sous-réseaux et les réseaux locaux virtuels sont supprimés et la suppression de l'instance est effective.
+En raison des dépendances de ressource, les composants de votre instance ne sont pas libérés immédiatement lorsque vous supprimez cette dernière. Par exemple, les sous-réseaux et les réseaux locaux virtuels ne peuvent pas être supprimés tant que l'infrastructure {{site.data.keyword.cloud_notm}} n'a pas récupéré tous les serveurs ESXi, opération qui s'effectue en fin de cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}. A la fin du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}, qui est généralement de 30 jours, les sous-réseaux et les réseaux locaux virtuels sont supprimés et la suppression de l'instance est effective.
 
 **Attention** : l'instance supprimée vous est facturée jusqu'à échéance du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}.
 
@@ -34,7 +34,7 @@ En raison des dépendances de ressource, les composants de votre instance ne son
 6. Répétez les étapes 1 à 5 pour toutes les instances vCenter Server with Hybridity Bundle secondaires de votre configuration multisite.
 7. Une fois toutes les instances secondaires supprimées, vous pouvez également supprimer l'instance principale depuis la console {{site.data.keyword.vmwaresolutions_short}}.
 
-## Liens connexes
+### Liens connexes
 
 * [Suppression d'instances vCenter Server with Hybridity Bundle](vc_hybrid_deletinginstance.html)
 * [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservices.html)

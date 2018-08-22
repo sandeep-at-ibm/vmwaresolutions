@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -44,7 +44,7 @@ En raison des dépendances de ressource, les composants de votre instance ne son
    1. Cliquez sur l'icône de menu déroulant dynamique à droite de **Console vCenter**, puis cliquez sur **Supprimer une instance**.
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
-## Liens connexes
+### Liens connexes
 
 * [Suppression d'instances vCenter Server dans une configuration multisite](vc_deletinginstance_multi.html)
 * [Commande d'instances vCenter Server](vc_orderinginstance.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-06-08"
 
 Modifier des utilisateurs, des ressources ou des sous-réseaux réservés à {{site.data.keyword.vmwaresolutions_full}} peut avoir une incidence sur des opérations de gestion.
 
-## ID automationuser
+**Important :** n'éditez pas les droits globaux du groupe **ic4v-vCenter** sur la page **Utilisateurs et groupes** du client Web VMware vSphere. Ces modifications incluent : la modification du nom d'utilisateur, la suppression de l'utilisateur ou la modification de son mot de passe.
 
-L'ID **automationuser** est un compte utilisateur qu'utilisent les opérations automatisées fournies par la console {{site.data.keyword.vmwaresolutions_short}}.
+## ID d'automatisation
+
+L'ID d'**automatisation** est un compte utilisateur qu'utilisent les opérations automatisées fournies par la console {{site.data.keyword.vmwaresolutions_short}}.
 
 Les noms utilisateur et mots de passe des opérations automatisées dans la console ne doivent pas être modifiés, sinon les opérations effectuées à l'aide de la console qui dépendent de ces données d'identification risquent d'échouer.
-
-Ne mettez pas à jour les propriétés de l'ID **automationuser** sur la page **Utilisateurs et groupes** du client Web VMware vSphere. Ces modifications incluent : la modification du nom d'utilisateur, la suppression de l'utilisateur ou la modification de son mot de passe.
 
 ## Comptes utilisateur de service
 

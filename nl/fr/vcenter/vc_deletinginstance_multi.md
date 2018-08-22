@@ -34,7 +34,7 @@ En raison des dépendances de ressource, les composants de votre instance ne son
 6. Répétez les étapes 1 à 5 pour toutes les instances vCenter Server secondaires de votre configuration multisite.
 7. Une fois toutes les instances secondaires supprimées, vous pouvez également supprimer l'instance principale depuis la console {{site.data.keyword.vmwaresolutions_short}}.
 
-## Liens connexes
+### Liens connexes
 
 * [Suppression d'instances vCenter Server](vc_deletinginstance.html)
 * [Commande, affichage et retrait de services pour des instances vCenter Server](vc_addingremovingservices.html)

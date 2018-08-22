@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -32,7 +32,7 @@ Le nom du cluster qui doit respecter les règles suivantes :
 
 #### Emplacement de centre de données
 
-L'emplacement de l'{{site.data.keyword.CloudDataCent}} du cluster est, par défaut, l'{{site.data.keyword.CloudDataCent_notm}} de l'instance vCenter Server. Vous pouvez déployer le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui de l'instance déployée, sous réserve que la latence du réseau entre les deux {{site.data.keyword.CloudDataCents_notm}} soit inférieure à 150 ms. Pour vérifier la latence du réseau, utilisez un outil tel que [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
+L'emplacement de l'{{site.data.keyword.CloudDataCent_notm}} du cluster est, par défaut, l'{{site.data.keyword.CloudDataCent_notm}} de l'instance vCenter Server. Vous pouvez déployer le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui de l'instance déployée, sous réserve que la latence du réseau entre les deux {{site.data.keyword.CloudDataCents_notm}} soit inférieure à 150 ms. Pour vérifier la latence du réseau, utilisez un outil tel que [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
 Si vous déployez le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} ou un pod d'infrastructure {{site.data.keyword.cloud_notm}}, trois VLAN supplémentaires sont commandés pour être utilisés avec les serveurs {{site.data.keyword.baremetal_short}} commandés.
 
@@ -75,7 +75,7 @@ VMware vSAN 6.6 est inclus avec votre commande d'instance vCenter Server with Hy
 Licences VMware fournies par IBM pour les produits suivants :
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Advanced ou Enterprise) 6.3
+  * VMware NSX Service Providers Edition (Advanced ou Enterprise) 6.4
 
 ### Récapitulatif de la commande
 
@@ -183,7 +183,7 @@ Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous 
 
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, localisez le cluster que vous souhaitez supprimer et cliquez sur l'icône **Supprimer** dans la colonne **Actions**.
 
-## Liens connexes
+### Liens connexes
 
 * [Affichage des instances vCenter Server with Hybridity Bundle](vc_hybrid_viewinginstances.html)
 * [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservers.html)

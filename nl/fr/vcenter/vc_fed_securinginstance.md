@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ Passez en revue les informations suivantes afin de comprendre les résultats de 
 3. Cliquez sur l'icône de menu déroulant dynamique à droite de **Console vCenter**.
 4. Cliquez sur **Sécuriser une instance**.
 5. Cliquez sur **OK** pour confirmer que vous voulez déconnecter l'instance de l'automatisation.
-   
+
    **Remarque** : avant d'exécuter cette étape, prenez soin de passer en revue les informations contenues dans la section **Avant de commencer**.
 
 ## Résultats
@@ -36,9 +36,9 @@ L'instance prend le statut **Modification en cours**.
 
 Une fois l'instance correctement sécurisée, elle prend le statut **Sécurisé** et seuls les propriétés de l'instance et l'historique de déploiement sont disponibles.
 
-## Liens connexes
+### Liens connexes
 
-* [Présentation de VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [Présentation de VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [Commande d'instances VMware Federal](vc_fed_orderinginstance.html)
 * [Affichage des instances VMware Federal](vc_fed_viewinginstance.html)
 * [Suppression d'instances VMware Federal](vc_fed_deletinginstance.html)
