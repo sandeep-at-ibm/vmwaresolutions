@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -55,12 +55,7 @@ NetApp ONTAP Select 部署具有嚴格的實體基礎架構需求。因此，您
 |WDC06 |華盛頓特區|NA 東部|高效能（中型）、高效能（大型）、高容量
 |WDC07 |華盛頓特區|NA 東部|高效能（中型）、高效能（大型）、高容量
 
-<!--## Capacity considerations-->
-
-<!--For capacity information and considerations, see the _Bill of
-Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
-
-## 相關鏈結
+### 相關鏈結
 
 * [NetApp ONTAP Select 概觀](np_netappoverview.html)
 * [訂購 NetApp ONTAP Select 實例](np_orderinginstances.html)

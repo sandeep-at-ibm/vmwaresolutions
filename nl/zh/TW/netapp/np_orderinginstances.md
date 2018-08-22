@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-07"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -70,7 +70,7 @@ lastupdated: "2018-05-07"
 
 ### 資料中心位置
 
-您必須選取要管理實例的 {{site.data.keyword.CloudDataCent_notm}}。<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the Bare Metal Server specification you selected previously are displayed.-->
+您必須選取要管理實例的 {{site.data.keyword.CloudDataCent_notm}}。
 
 ### Bare Metal Server 配置
 
@@ -80,8 +80,6 @@ lastupdated: "2018-05-07"
 * **高容量** - 標準授權/雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/64 GB RAM/每個節點有 34 個 4 TB SATA 磁碟機容量/4 節點叢集的有效容量 - 190 TB
 
 **附註：**3.8 TB SSD（固態磁碟）磁碟機在正式發行至 {{site.data.keyword.CloudDataCent_notm}} 時就會予以支援。
-
-<!--For guidance on what bare metal server configuration to choose, see the _Bill of Materials_ document on the [Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page.-->
 
 ### Bare Metal Server 數目
 
@@ -96,7 +94,7 @@ lastupdated: "2018-05-07"
 5. 按一下**新增授權檔**以上傳四部 {{site.data.keyword.baremetal_short}} 所需的四個 NetApp 授權檔，來完成授權設定。
 6. 完成 Bare Metal Server 設定：
    1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
-   2. 選取 Bare Metal Server 配置。
+   2. 選取「裸機伺服器」配置。
 7. 在**訂單摘要**窗格上，先驗證實例配置，再下訂單。
     1. 檢閱實例的設定。
     2. 檢閱預估實例成本。按一下**定價詳細資料**以產生 PDF 摘要。若要儲存或列印訂單摘要，請按一下 PDF 視窗右上方的**列印**或**下載**圖示。
@@ -108,7 +106,7 @@ lastupdated: "2018-05-07"
 
 實例的部署會自動啟動。您將會收到正在處理訂單的確認，您可以檢視實例詳細資料來檢查部署的狀態。
 
-順利部署實例時，會在 VMware 虛擬平台上安裝 [NetApp ONTAP Select 實例元件](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components)中所述的元件。
+順利部署實例之後，會在 VMware 虛擬平台上安裝 [NetApp ONTAP Select 實例的技術規格](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)中所說明的元件。
 
 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 
@@ -124,7 +122,7 @@ lastupdated: "2018-05-07"
 
    這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
 
-## 相關鏈結
+### 相關鏈結
 
 * [檢視 NetApp ONTAP Select 實例](np_viewinginstances.html)
 * [刪除 NetApp ONTAP Select 實例](np_deletinginstance.html)
