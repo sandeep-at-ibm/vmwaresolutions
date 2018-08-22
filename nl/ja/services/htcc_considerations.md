@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -14,21 +14,30 @@ HyTrust CloudControl on {{site.data.keyword.cloud}} サービスは、セキュ�
 
 **利用可否:** このサービスは、vSphere 6.5 を実行する、V2.3 以降のリリースでデプロイ (または V2.3 以降のリリースにアップグレード) されたインスタンスでのみ利用できます。
 
-## HyTrust CloudControl on IBM Cloud のコンポーネント
+## HyTrust CloudControl on IBM Cloud の技術仕様
 
-アクティブ-パッシブ・モードでは、デフォルトのクラスターに HyTrust CloudControl (HTCC) アプライアンスの高可用性 (HA) ペアがデプロイされます。
+以下のコンポーネントが注文され、HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
-HTCC アプライアンスの各ペアは、NSX Manager、vCenter Server Appliance、Platform Services Controller などの管理仮想マシン (VM) に指定したプライベート・ポータブル・サブネットと同じサブネットにデプロイされます。
+### HyTrust CloudControl アプライアンス
 
-このアプライアンスのペアは、インスタンスの vSphere ホスト、vCenter Server Appliance、NSX Manager のプロキシーの役割を果たします。 したがってユーザーは、vSphere ホスト、vCenter Server Appliance、NSX Manager にアクセスする時に、{{site.data.keyword.cloud}} によって割り当てられる実際の IP アドレス (RIP) ではなく、管理者によって割り当てられる公開 IP アドレス (PIP) を使用します。
+* CPU: 4 vCPU
+* RAM: 16 GB
+* ディスク: コンバージド・クラスター内の vSAN に常駐する 70 GB VMDK
+* ネットワーク: 管理用に指定された VLAN-backed プライベート・ポータブル・ネットワーク上に配置されます
 
-HTCC アプライアンスと Microsoft Active Directory を統合すれば、役割ベースのアクセス制御が可能になります。
+### 高可用性
+
+アクティブ-パッシブ構成で、2 つの CloudControl アプライアンスがデプロイされます。
+
+### ライセンスと料金
+
+ホストごとのライセンス: HyTrust CloudControl ライセンスは、環境内のホストごとに注文されます。
 
 ## HyTrust CloudControl on IBM Cloud を削除する際の考慮事項
 
 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービスを削除する前に、**Root Password Vaulting** を構成していた場合は無効にし、すべての保護ホストを HyTrust CloudControl から削除してください。
 
-## 関連リンク
+### 関連リンク
 
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} の注文](htcc_ordering.html)
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} の管理](managinghtcc.html)

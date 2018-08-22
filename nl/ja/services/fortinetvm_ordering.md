@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-15"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -15,14 +15,14 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} サービスを注文
 ## 新しいインスタンスでの FortiGate Virtual Appliance on IBM Cloud の注文
 
 以下のいずれかの方法を使用して、新しいインスタンスで FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} を注文できます。
-* {{site.data.keyword.vmwaresolutions_full}} コンソールから新しいインスタンスを注文する時に、**「サービス」**セクションで**「FortiGate Virtual Appliance on IBM Cloud」**を選択します。
-* {{site.data.keyword.cloud_notm}} カタログから**「FortiGate Virtual Appliance on IBM Cloud service」**を選択し、サービス設定を指定し、**「Add to New Instance」**を選択します。
+* {{site.data.keyword.vmwaresolutions_short}} コンソールから新しいインスタンスを注文する時に、**「サービス」**セクションで**「FortiGate Virtual Appliance on IBM Cloud」**を選択します。
+* {{site.data.keyword.cloud_notm}} カタログから**「FortiGate Virtual Appliance on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to New Instance」**を選択します。
 
 ## 既存のインスタンスでの FortiGate Virtual Appliance on IBM Cloud の注文
 
 以下のいずれかの方法を使用して、既存のインスタンスに FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを追加できます。
-* {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「サービスの追加」**をクリックします。
-* {{site.data.keyword.cloud_notm}} カタログから**「FortiGate Virtual Appliance on IBM Cloud service」**を選択し、サービス設定を指定し、**「Add to Existing Instance」**を選択します。
+* {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
+* {{site.data.keyword.cloud_notm}} カタログから**「FortiGate Virtual Appliance on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to Existing Instance」**を選択します。
 
 ## FortiGate Virtual Appliance on IBM Cloud サービスの構成
 
@@ -34,7 +34,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} サービスを注文
 
 ### デプロイメント・サイズ
 
-IBM Cloud では、デプロイメント・サイズに関して以下のオプションがあります。
+{{site.data.keyword.cloud_notm}} では、デプロイメント・サイズに関して以下のオプションがあります。
 * スモール (2 vCPU / 4 GB RAM)
 * ミディアム (4 vCPU / 6 GB RAM)
 * ラージ (8 vCPU / 12 GB RAM)
@@ -54,7 +54,7 @@ SSL/IPSec VPN 終端、24 時間 365 日サポートが含まれています。<
 
 **重要**: サービスのインストール後にライセンス・モデルを変更することはできません。 ライセンス・モデルを変更するには、既存のサービスを削除し、別のライセンス・オプションを選択してサービスを再インストールする必要があります。
 
-## 関連リンク
+### 関連リンク
 
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の概要](fortinetvm_considerations.html)
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の管理](managingfortinetvm.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -36,10 +36,9 @@ lastupdated: "2018-05-30"
 | インストール済み | インスタンスは使用可能です。 |
 | 削除中 | インスタンスは削除中です。 |
 
-## 関連リンク
+### 関連リンク
 
 * [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの注文](standalone_orderingserviceinstances.html)
 * [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの削除](standalone_deletingserviceinstances.html)
 * [HCX の用語集](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension の資料](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

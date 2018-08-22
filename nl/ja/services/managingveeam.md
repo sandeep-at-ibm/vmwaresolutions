@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -29,21 +29,19 @@ Windows IP アドレスと Administrator 資格情報は、Veeam on {{site.data.
 
 ## Veeam on IBM Cloud がインストールされているインスタンスの管理コンポーネントのバックアップとリストア
 
-Veeam on {{site.data.keyword.cloud_notm}} サービスには、自動的に実行される管理バックアップ・ジョブが事前構成されています。このジョブによって管理コンポーネントが毎日バックアップされ、最大 14 個の回復ポイントが設定されます。
+Veeam コンソールを使用して管理コンポーネントをバックアップするように、Veeam on {{site.data.keyword.cloud_notm}} サービスを構成できます。詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html)を参照してください。
 
-Veeam コンソールを使用して管理コンポーネントを手動でバックアップすることもできます。 
-
-V1.8 以降のリリースでデプロイ (または V1.8 以降のリリースにアップグレード) されたインスタンスの場合、環境の構成変更の自動バックアップは行われません。そのため、環境の構成を変更する前に、事前構成された管理バックアップ・ジョブを Veeam コンソールで実行して、管理コンポーネントを手動でバックアップすることをお勧めします。手動バックアップについて詳しくは、[Veeam 技術説明](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}を参照してください。
+V1.8 以降のリリースでデプロイ (または V1.8 以降のリリースにアップグレード) されたインスタンスの場合、環境の構成変更の自動バックアップは行われません。 そのため、環境の構成を変更する前に、管理バックアップ・ジョブを Veeam コンソールで実行して、管理コンポーネントを手動でバックアップすることをお勧めします。 手動バックアップについて詳しくは、[Veeam 技術説明](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}を参照してください。
 
 管理コンポーネント上で障害が発生した場合は、Veeam コンソールを使用して、管理コンポーネントを以前のバックアップにリストアできます。 手動リストアについて詳しくは、[Veeam 技術説明]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:new_window}を参照してください。
 
 ## Veeam on IBM Cloud への更新の適用
 
-Veem を最新バージョンに更新する責任は、ユーザー側にあります。Veeam を最新バージョンにアップグレードするには、Veeam Web サイトから Veeam 更新プログラムをダウンロードし、Veeam VSI にコピーした後、インストールします。
+Veem を最新バージョンに更新する責任は、ユーザー側にあります。 Veeam を最新バージョンにアップグレードするには、Veeam Web サイトから Veeam 更新プログラムをダウンロードし、Veeam VSI にコピーした後、インストールします。
 
 ## V1.8 より前のインスタンスの Veeam VSI を Veeam on IBM Cloud に置き換える
 
-管理コンポーネントとワークロードの両方をバックアップできる Veeam on {{site.data.keyword.cloud_notm}} サービスは、管理コンポーネントのバックアップのみに対応していた以前の Veeam VSI を置き換えるものとして用意されました。Veeam VSI は、V1.8 より前のリリースで VMware Cloud Foundation と VMware vCenter Server に統合されていました。 
+管理コンポーネントとワークロードの両方をバックアップできる Veeam on {{site.data.keyword.cloud_notm}} サービスは、管理コンポーネントのバックアップのみに対応していた以前の Veeam VSI を置き換えるものとして用意されました。Veeam VSI は、V1.8 より前のリリースで VMware Cloud Foundation と VMware vCenter Server に統合されていました。
 
 この変更により、インスタンスの詳細ページにあった以前の**「バックアップとリストア」**タブが除去されました。V1.8 より前のインスタンス内の Veeam VSI は引き続き動作しますが、{{site.data.keyword.vmwaresolutions_short}} コンソールでインスタンスのバックアップ・ポイントを使用することはできなくなりました。
 
@@ -57,7 +55,7 @@ Veem を最新バージョンに更新する責任は、ユーザー側にあり
 
 新しい Veeam on {{site.data.keyword.cloud_notm}} サービスがデプロイされ、管理コンポーネントのバックアップが正常に完了したら、{{site.data.keyword.cloud_notm}} サポート・チケットを作成することにより、アカウントから既存の Veeam VSI を削除できます。 IBM サポートは既存の Veeam VSI とストレージを識別して削除します。
 
-## 関連リンク
+### 関連リンク
 
 * [Veeam on {{site.data.keyword.cloud_notm}} の概要](veeam_considerations.html)
 * [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)

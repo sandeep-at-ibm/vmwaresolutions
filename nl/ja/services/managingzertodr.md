@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -34,11 +34,11 @@ Zerto Virtual Replication を更新するには、Zerto Virtual Replication コ�
 
 インスタンスの 1 次クラスター用の ESXi サーバーを追加または削除すると、VRA は自動的にデプロイまたは削除されます。 インスタンスの 2 次クラスター内の ESXi サーバーには VRA が自動デプロイされませんが、Zerto Virtual Replication コンソールから自分でデプロイできます。
 
-## 関連リンク
+### 関連リンク
 
-* [Zerto on IBM Cloud の概要](addingzertodr.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} の概要](addingzertodr.html)
 * [Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](managing_zerto_services.html)
 * [zerto.com Web サイト](https://www.zerto.com){:new_window}
 * [Zerto 技術資料](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Zerto 災害復旧](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/zerto){:new_window}
+* [Zerto 災害復旧](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
 * [Explanation of Zerto Virtual Replication Alerts](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-04"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -16,6 +16,16 @@ IMI は、VMware Cloud Foundation 環境と VMware vCenter Server 環境を単�
 
 IMI は、Cloud Foundation インスタンスと vCenter Server インスタンス用のマネージド・サービスを提供します。このサービスには、高度な VMware vSphere 管理、可用性が高くセキュアな仮想ネットワーク・インフラストラクチャーを維持するための VMware NSX による包括的なサポート、データの可用性を確保するための VMware vSAN モニターが含まれます。
 
+## 技術仕様
+
+IMI マネージド・サービスには以下の仕様が含まれています。
+
+* 適応範囲オプション: 8X5、16X5、または 24X7
+* 全体的な送達に対して責任を持つ IT サービス管理ツールと管理プロセス
+* コンプライアンス管理
+* 日次と週次のサービス管理およびレポート作成
+* 継続的な改良のためのコスト増加を伴わない付加価値サービス
+
 ## 手順
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「開始」**をクリックします。
@@ -24,7 +34,7 @@ IMI は、Cloud Foundation インスタンスと vCenter Server インスタン�
 
 {{site.data.keyword.cloud_notm}} 連絡先情報を使用して IMI プリセールス担当員がお客様に連絡を取り、必要なサービスについてお手伝いします。
 
-## 関連リンク
+### 関連リンク
 
 * [Cloud Foundation インスタンス用サービスの注文、表示、削除](../sddc/sd_addingremovingservices.html)
 * [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)

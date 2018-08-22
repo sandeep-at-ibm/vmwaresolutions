@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -16,11 +16,23 @@ FortiGate Security Appliance on {{site.data.keyword.cloud}} サービスでは�
 
 **利用可否**: このサービスは、V1.8 以降のリリースでデプロイされたインスタンスでのみ利用可能です。
 
-## FortiGate Security Appliance on IBM Cloud のコンポーネント
+## FortiGate Security Appliance on IBM Cloud の技術仕様
 
-ご使用のインスタンス用に FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスを注文すると、FortiGate 300 シリーズの Security Appliance の HA ペアが元のインスタンスまたはクラスターのデフォルトのパブリック VLAN にデプロイされます。インスタンスのパブリック VLAN へのすべてのトラフィックが FortiGate Security Appliance 経由でルーティングされます。
+以下のコンポーネントが注文され、FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
-**注:** 追加のクラスターを注文した場合、その新たに追加されたクラスターのためのパブリック VLAN には、Security Appliance の HA ペアが配置されません。
+### ハードウェア
+
+FortiGate 300 シリーズの Security Appliance。
+
+### 高可用性
+
+アクティブ-パッシブ構成で、2 つのアプライアンスがデプロイされます。
+
+### ネットワーキング
+
+* アップストリームとダウンストリームの両方のネットワークに結合された Dual 1 GbE
+* 1 つの新しいアップストリーム {{site.data.keyword.cloud_notm}} パブリック VLAN
+* 1 つの既存のダウンストリーム {{site.data.keyword.cloud_notm}} パブリック VLAN
 
 ## FortiGate Security Appliance on IBM Cloud をインストールする際の考慮事項
 
@@ -32,6 +44,7 @@ FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスを
 * FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスが正常にインストールされると、FortiGate コンソールから FSA のファイアウォール・ルールの管理と構成を行えるようになります。 IBM CloudDriver 仮想マシンや Zerto Virtual Manager などの管理コンポーネントによって開始されるアウトバウンド HTTPS (TCP ポート 443) 通信がインターネットを介して {{site.data.keyword.cloud_notm}} 上の外部管理データベースと通信できるように、FSA ファイアウォール・ルールを定義しておく必要があります。 アウトバウンド HTTPS (TCP ポート 443) 通信は、インスタンス内の管理サービス VMware NSX Edge Services Gateway (ESG) のパブリック IP アドレスから発信されます。
 * 新規インスタンスの一部として FortiGate Security Appliance デバイスのペアをデプロイした場合は、インスタンスからパブリック・ネットワークへの必要なアウトバウンド通信のみを許可し、他の通信はすべて拒否するように FortiGate Security Appliance デバイスが構成されます。
 * 既存のインスタンスの一部として FortiGate Security Appliance デバイスのペアをデプロイした場合は、インスタンスからパブリック・ネットワークへの必要なアウトバウンド管理通信をすべて許可する明示的ルールが FortiGate Security Appliance デバイスで構成されます。 また、既存のアプリケーション・トラフィックの妨げにならないように、他の通信をすべて許可する追加のルールが FortiGate Security Appliance デバイスで構成されます。 必要な通信のみを許可し、他の通信はすべて拒否するよう、注意して FortiGate Security Appliance 構成を管理する必要があります。
+* 追加のクラスターを注文した場合、その新たに追加されたクラスターのためのパブリック VLAN には、Security Appliance の HA ペアが配置されません。
 
 ## FortiGate Security Appliance on IBM Cloud を削除する際の考慮事項
 
@@ -40,7 +53,7 @@ FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスを
 * サービスの削除中、インスタンスは一時的にインターネットにアクセスできないことがあります。
 * NAT トラフィックの許可、インスペクション、ブロック、ルーティングに関するすべての FortiGate ルールが、Fortinet サービスと一緒に削除されます。 何らかの NAT ルールが構成されている場合は、再構成する必要があります。
 
-## 関連リンク
+### 関連リンク
 
 * [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の注文](fsa_ordering.html)
 * [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の管理](managingfsa.html)

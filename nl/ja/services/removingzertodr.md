@@ -4,14 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-04-05"
+lastupdated: "2018-07-19"
 
 ---
 
 # Zerto on IBM Cloud の削除プロセス
-<!-- Do not remove this topic. Though it's no longer in the TOC, it's referenced from the V1.3 release notes -->
 
-Zerto on IBM® Cloud サービスの削除プロセスは自動的に行われます。 Zerto on IBM Cloud サービスを正しく削除するためには、以下の手順を実行します。
+Zerto on {{site.data.keyword.cloud}} サービスの削除プロセスは自動的に行われます。 Zerto on {{site.data.keyword.cloud_notm}} サービスを正しく削除するためには、以下の手順を実行します。
 
 ## Zerto on IBM Cloud を削除する方法
 
@@ -23,8 +22,8 @@ Zerto on IBM® Cloud サービスの削除プロセスは自動的に行われ�
    1. すべての ESXi サーバーにデプロイされていた Zerto Virtual Replication Appliance を削除します。
    2. Zerto Virtual Replication をアンインストールします。
    3. Zerto Virtual Replication がインストールされていた Windows VSI (Virtual Service Instance) を削除します。
-   4. IBM Cloud インフラストラクチャーへの Zerto Virtual Replication 通信のために注文したプライベート・ポータブル・サブネットを返却します。   
-   5. お客様の IBM Cloud 請求書から Zerto 災害復旧サービスの料金を削除します。
+   4. {{site.data.keyword.cloud_notm}} インフラストラクチャーへの Zerto Virtual Replication 通信のために注文したプライベート・ポータブル・サブネットを返却します。   
+   5. お客様の {{site.data.keyword.cloud_notm}} 請求書から Zerto 災害復旧サービスの料金を削除します。
 
       **注**: 削除対象の Zerto 災害復旧サービスに関する請求は、請求処理サイクルの終わりまで行われます。
 
@@ -32,10 +31,10 @@ Zerto on IBM® Cloud サービスの削除プロセスは自動的に行われ�
 
 サービスの削除が正常に完了すると、E メールで通知され、**「インストール済みサービス」**タブからそのサービス項目が削除されます。
 
-## 関連リンク
+### 関連リンク
 
-* [Zerto on IBM Cloud の注文](zerto_ordering.html)
-* [Zerto on IBM Cloud の管理](managingzertodr.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} の注文](zerto_ordering.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} の管理](managingzertodr.html)
 * [Cloud Foundation インスタンス](../sddc/sd_cloudfoundationoverview.html)
 * [vCenter Server インスタンス](../vcenter/vc_vcenterserveroverview.html)
 * [zerto.com Web サイト](https://www.zerto.com){:new_window}

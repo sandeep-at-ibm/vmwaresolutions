@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -15,16 +15,16 @@ FortiGate Security Appliance on {{site.data.keyword.cloud}} サービスを注�
 ## 新しいインスタンスでの FortiGate Security Appliance on IBM Cloud の注文
 
 以下のいずれかの方法を使用して、新しいインスタンスで FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} を注文できます。
-* {{site.data.keyword.vmwaresolutions_full}} コンソールから新しいインスタンスを注文する時に、**「サービス」**セクションで**「FortiGate Security Appliance on IBM Cloud」**を選択します。
-* {{site.data.keyword.cloud_notm}} カタログから**「FortiGate Security Appliance on IBM Cloud service」**を選択し、サービス設定を指定し、**「Add to New Instance」**を選択します。
+* {{site.data.keyword.vmwaresolutions_short}} コンソールから新しいインスタンスを注文する時に、**「サービス」**セクションで**「FortiGate Security Appliance on IBM Cloud」**を選択します。
+* {{site.data.keyword.cloud_notm}} カタログから**「FortiGate Security Appliance on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to New Instance」**を選択します。
 
 ## 既存のインスタンスでの FortiGate Security Appliance on IBM Cloud の注文
 
 以下のいずれかの方法を使用して、既存のインスタンスに FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスを追加できます。
-* {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「サービスの追加」**をクリックします。
-* {{site.data.keyword.cloud_notm}} カタログから**「FortiGate Security Appliance on IBM Cloud service」**を選択し、サービス設定を指定し、**「Add to Existing Instance」**を選択します。
+* {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
+* {{site.data.keyword.cloud_notm}} カタログから**「FortiGate Security Appliance on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to Existing Instance」**を選択します。
 
-## 関連リンク
+### 関連リンク
 
 * [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の概要](fsa_considerations.html)
 * [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の管理](managingfsa.html)
