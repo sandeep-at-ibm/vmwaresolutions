@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -40,7 +40,7 @@ Falls Sie eine Bestellung aufgegeben haben, beginnt die Bereitstellung des Clust
 
 **Hinweis:** Die vSphere-Cluster werden (anders als die vCenter Server- und Cloud Foundation-Instanzen) auf der Seite **Bereitgestellte Instanzen** nicht angezeigt.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Neue vSphere-Cluster bestellen](vs_orderinginstances.html)
 * [Vorhandene vSphere-Cluster skalieren](vs_scalingexistingclusters.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -59,7 +59,7 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vSphere-Cl
 | WDC06 | Washington, DC | NA Ost |
 | WDC07 | Washington, DC | NA Ost |
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Neue vSphere-Cluster bestellen](vs_orderinginstances.html)
 * [Vorhandene Cluster skalieren](vs_scalingexistingclusters.html)

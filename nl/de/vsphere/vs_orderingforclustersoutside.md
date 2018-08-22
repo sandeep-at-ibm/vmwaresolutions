@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -39,7 +39,7 @@ Die Bereitstellung des Clusters beginnt automatisch und Sie empfangen eine E-Mai
 
 **Hinweis:** Die vSphere-Cluster werden auf der Seite **Bereitgestellte Instanzen** nicht zusammen mit den vCenter Server- und Cloud Foundation-Instanzen angezeigt.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Neue vSphere-Cluster bestellen](vs_orderinginstances.html)
 * [Auf vorhandenen Konfigurationen basierenden vSphere-Cluster bestellen](vs_orderingbasedonexistingconfig.html)
