@@ -4,30 +4,27 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-24"
 
 ---
 
 # Considerações de rede para instâncias do vCenter Server
 
-Revise as informações a seguir para obter detalhes sobre as considerações de rede e os requisitos para suas instâncias do vCenter Server. Assegure-se de que atenda aos requisitos para que sua instância funcione corretamente.
+Revise as informações a seguir para obter detalhes sobre as considerações de rede e os requisitos para suas instâncias do vCenter Server on {{site.data.keyword.cloud}}. Assegure-se de que atenda aos requisitos para que sua instância funcione corretamente.
 
 ## Componentes de rede para instâncias do vCenter Server
 
-Para revisar os componentes de rede que estão incluídos em sua instância do vCenter Server, veja a seção _Especificações técnicas do vCenter Server_ na [Visão geral do vCenter Server](vc_vcenterserveroverview.html).
+Para revisar os componentes de rede que estão incluídos em sua instância do vCenter Server, veja [Especificações técnicas para instâncias do vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## Considerações do NSX Firewall
 
-Se estiver usando NSX Distributed Firewalls (DFW), revise os requisitos a seguir:
-* Deve-se configurar regras para todas as comunicações da máquina virtual (VM) do {{site.data.keyword.IBM}} CloudDriver para permitir que todos os protocolos se comuniquem nos endereços IP `10.0.0.0/8` e `161.26.0.0/16`.
-* Deve-se criar uma regra de DFW que permita tráfego HTTPS da VM do IBM CloudDriver para qualquer destino.
-* A regra de DFW deve vir antes de quaisquer outras regras que bloqueariam o tráfego de ou para essas VMs.
+Quando se está usando o NSX Distributed Firewalls (DFW), deve-se configurar regras para todas as comunicações da instância de servidor virtual (VSI) do IBM CloudDriver para permitir que todos os protocolos se comuniquem nos endereços IP `10.0.0.0/8` e `161.26.0.0/16`.
 
 ## Usando NSX com suas máquinas virtuais
 
 Durante a implementação da instância do vCenter Server, o VMware NSX é pedido, instalado, licenciado e configurado em sua instância. Além disso, o NSX Manager, os NSX Controllers e o NSX Transport Zone são configurados e cada servidor ESXi é configurado com os componentes do NSX.
 
-Um NSX Edge Services Gateway também é implementado para ser usado por suas VMs de carga de trabalho. Para obter mais informações, veja [Configurando sua rede para usar o NSX ESG gerenciado pelo cliente com suas VMs](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+Um NSX Edge Services Gateway também é implementado para ser usado por suas máquinas virtuais de carga de trabalho (VMs). Para obter mais informações, veja [Configurando sua rede para usar o NSX ESG gerenciado pelo cliente com suas VMs](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
 ## Considerações ao mudar senhas de componentes NSX
 
@@ -36,8 +33,8 @@ Revise as considerações a seguir antes de mudar as senhas para o NSX Manager, 
 * É possível mudar senhas dos NSX Controllers. Para obter instruções sobre como mudar senhas dos NSX Controllers, veja [Mudar a senha do controlador](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html).
 * É possível mudar a senha e as configurações do SSH para o VMware NSX Edge Services Gateway (ESG) gerenciado pelo cliente. Não mude a senha para o Management VMware NSX Edge Services Gateway (ESG) e o Roteador Lógico Distribuído relacionado.
 
-## Links relacionados
+### Links relacionados
 
 * [Visão geral do NSX](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}
-* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/nsx-esg){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
 * [Gerenciando regras NAT](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}

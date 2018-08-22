@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Visualizando instâncias do vCenter Server
 
-Visualize as instâncias VMware vCenter Server que você pediu e informações detalhadas sobre elas.
+Visualize o resumo e as informações detalhadas das instâncias do VMware vCenter Server que são provisionadas para diferentes contas do usuário.
 
 ## Visualizando o resumo de instâncias do vCenter Server
 
-Para visualizar um resumo de todas as instâncias do vCenter Server em seu ambiente, conclua as etapas a seguir:
+Para visualizar um resumo de todas as instâncias do vCenter Server que são provisionadas para uma conta do usuário, conclua as etapas a seguir:
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
-2. Na tabela **vCenter Server**, visualize a lista de suas instâncias.
+1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+2. No canto superior direito do console, clique em seu avatar e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar instâncias.  
+3. Na tabela **vCenter Server**, visualize a lista de instâncias que são provisionadas na conta de usuário selecionada.
 
 Tabela 1. Itens de instância do vCenter Server
 
@@ -25,7 +26,7 @@ Tabela 1. Itens de instância do vCenter Server
 |:------------- |:------------- |
 | Nome | O nome da instância |
 | Versão | A versão de liberação na qual a instância foi implementada ou submetida a upgrade |  
-| Localização | O {{site.data.keyword.CloudDataCent}} no qual a instância é hospedada |  
+| Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada |  
 | Horário de criação | A data e hora em que a instância foi criada |
 | Barra de Status | O status da instância |   
 
@@ -48,7 +49,7 @@ Tabela 2. Descrições do status de instâncias do vCenter Server
 
 Para visualizar os detalhes da propriedade de uma instância:
 
-1. Na tabela **Instâncias do vCenter Server**, clique em um nome da instância.
+1. Na tabela **Instâncias do vCenter Server**, clique em um nome de instância.
 2. Em **Propriedades**, visualize os detalhes da instância.
 
 Tabela 3. Propriedades da instância do vCenter Server
@@ -94,7 +95,7 @@ Tabela 4. Informações de acesso do vCenter Server para componentes relacionado
 
 ## Visualizando o histórico de implementação para instâncias do vCenter Server
 
-Em **Histórico de implementação**, visualize o histórico de implementação da instância.
+Clique em **Histórico de implementação** na área de janela de navegação esquerda para visualizar o histórico de implementação da instância.
 
 Tabela 5. Histórico de implementação da instância do vCenter Server
 
@@ -118,7 +119,7 @@ Revise os tópicos a seguir para obter informações que ajudarão a concluir as
 *  Para obter uma lista de pontos de acesso para efetuar login na Rede Privada da infraestrutura do {{site.data.keyword.cloud_notm}} usando a VPN, veja [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
 *  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, veja [Implementando um arquivo OVF usando o vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
 
-## Links relacionados
+### Links relacionados
 
 * [Pedindo instâncias do vCenter Server](vc_orderinginstance.html)
 * [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server](vc_addingviewingclusters.html)

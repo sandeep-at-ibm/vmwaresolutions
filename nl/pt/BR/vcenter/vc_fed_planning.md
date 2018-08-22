@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -22,14 +22,22 @@ A implementação do VMware Federal on {{site.data.keyword.cloud_notm}} tem requ
 - WDC03-Washington, DC, POD2
 - DAL08-Dallas, TX, POD2
 
+## Backup de componentes de gerenciamento
+
+Você é responsável por manter e assegurar a disponibilidade de todos os componentes da instância usando sua solução de backup preferencial. É altamente recomendável planejar o backup ou a alta disponibilidade de todos os componentes de gerenciamento. Para obter mais informações, consulte [Fazendo backup de componentes](../archiref/solution/solution_backingup.html).
+
 ## Serviços para instâncias do VMware Federal
 
 O VMware Federal on {{site.data.keyword.cloud_notm}} não oferece a opção para pedir serviços adicionais.
 
-## Links relacionados
+## Considerações de capacidade
+
+Para obter informações e considerações de capacidade, consulte [Capacidade de ajuste de escala](../archiref/solution/solution_scaling.html).
+
+### Links relacionados
 
 * [Lista de materiais do software vCenter Server](vc_bom.html)
-* [Visão geral do VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [ Federal do VMware em  {{site.data.keyword.cloud_notm}}  visão geral ](vc_fed_overview.html)
 * [Pedindo instâncias do VMware Federal](vc_fed_orderinginstance.html)
 * [Protegendo instâncias do VMware Federal](vc_fed_securinginstance.html)
 * [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)

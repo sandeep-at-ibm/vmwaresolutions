@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -238,7 +238,7 @@ Talvez você queira excluir um cluster de uma instância quando ela não for mai
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda. Na tabela **CLUSTERS**, localize o cluster que você deseja excluir e clique no ícone **Excluir** na coluna **Ações**.
 4. Confirme que você concluiu a migração de máquinas virtuais para outros clusters, se necessário, e que deseja excluir o cluster.
 
-## Links relacionados
+### Links relacionados
 
 * [Visualizando instâncias do vCenter Server](vc_viewinginstances.html)
 * [Expandindo e contraindo capacidade para instâncias do vCenter Server](vc_addingremovingservers.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ Revise as informações a seguir para entender os resultados de proteger sua ins
 3. Clique no ícone de menu overflow à direita do **console do vCenter**.
 4. Clique em **Proteger instância**.
 5. Clique em **OK** para confirmar que você deseja desconectar a instância da automação.
-   
+
    **Nota**: antes de concluir esta etapa, assegure-se de que você tenha revisado as informações na seção **Antes de iniciar**.
 
 ## Resultados
@@ -36,9 +36,9 @@ O status da instância é mudado para **Modificando**.
 
 Quando a instância é protegida com êxito, o status da instância é mudado para **Protegido** e apenas as propriedades da instância e o histórico de implementação estão disponíveis.
 
-## Links relacionados
+### Links relacionados
 
-* [Visão geral do VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [Visão geral do VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [Pedindo instâncias do VMware Federal](vc_fed_orderinginstance.html)
 * [Visualizando instâncias do VMware Federal](vc_fed_viewinginstance.html)
 * [Excluindo instâncias do VMware Federal](vc_fed_deletinginstance.html)

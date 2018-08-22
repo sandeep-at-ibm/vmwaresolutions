@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-05"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -35,10 +35,10 @@ Tabela 1. Atualize os níveis e o impacto
 
 ## Procedimento
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância a ser atualizada.
 3. Na página **Resumo**, verifique se todos os detalhes da instância são exibidos corretamente. Em seguida, clique em **Infraestrutura** na área de janela de navegação esquerda para verificar os detalhes na página **Infraestrutura**.
-   Se os detalhes não forem exibidos, isso poderá indicar um problema de conectividade com a máquina virtual IBM CloudDriver, como resultado de uma regra de firewall ou de outro problema de rede. Resolva o problema antes de continuar com a próxima etapa, caso contrário, a atualização poderá falhar.
+   Se os detalhes não forem exibidos, isso poderá indicar um problema de conectividade com a Virtual Server Instance (VSI) do IBM CloudDriver, como resultado de uma regra de firewall ou outro problema de rede. Resolva o problema antes de continuar com a próxima etapa, caso contrário, a atualização poderá falhar.
 4. Clique em **Atualização e correção** na área de janela de navegação esquerda.
 
    **Nota**: a página **Atualização e correção** contém apenas os pacotes para atualizar os componentes de gerenciamento da IBM, não as atualizações do VMware. O {{site.data.keyword.vmwaresolutions_short}} aplica atualizações do VMware às operações a seguir:
@@ -56,8 +56,6 @@ Tabela 1. Atualize os níveis e o impacto
 7. Se você estiver aplicando atualizações a instâncias do vCenter Server na configuração de implementação multissite, uma seção intitulada **Etapas necessárias para atualização** será exibida. Esta seção lista as operações de atualização necessárias para todas as instâncias na implementação de vários sites. Deve-se concluir as etapas em sequência clicando em **Aplicar atualização** para cada etapa. Deve-se aguardar a conclusão da etapa anterior antes de iniciar a próxima etapa.   
 
 ## Resultados
-
-1. Antes de uma operação de atualização ser iniciada, um backup das máquinas virtuais de gerenciamento será feito automaticamente, se sua instância tiver um serviço de backup instalado. Depois que o backup for concluído, a atualização será aplicada.
 
 2. Depois que uma atualização for aplicada, aparecerá um registro na lista de status de atualização de software, no qual é possível visualizar o progresso detalhado e o status da atualização. Quando a atualização for concluída com êxito, um registro aparecerá na lista de atualizações de softwares instalados.
 
@@ -83,7 +81,7 @@ Tabela 1. Atualize os níveis e o impacto
 
 4. Se o processo de atualização falhar em uma etapa específica, [entre em contato com o Suporte IBM](../vmonic/trbl_support.html) para obter assistência. Você será avisado sobre como resolver o problema e orientado a tentar o upgrade novamente a partir da etapa que falhou.
 
-## Links relacionados
+### Links relacionados
 
 * [vCenter Server com visão Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
 * [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -23,7 +23,7 @@ Como parte do processo de pedido para sua instância do vCenter Server, as açõ
 * Um Roteador Lógico Distribuído (DLR) NSX de amostra é implementado para possível comunicação leste-oeste entre as cargas de trabalho locais que estão conectadas a redes de camada 2 (L2).
 * Um dispositivo NSX Edge é implementado e configurado para executar a conversão de endereço de rede (NAT) do intervalo de endereços IP do
 comutador lógico de carga de trabalho até um endereço IP público nas regras NAT.
-* Se você instalou o serviço Veeam on IBM Cloud, o NSX Manager será configurado para fazer um backup diário das configurações NSX. Para obter mais informações, veja [Considerações ao instalar o Veeam on IBM Cloud](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
+* Se você instalou o serviço Veeam on {{site.data.keyword.cloud_notm}}, o NSX Manager será configurado para fazer um backup diário das configurações do NSX. Para obter mais informações, veja [Considerações ao instalar o Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
 
 
 ## Definindo as configurações de rede para suas VMs
@@ -77,8 +77,8 @@ Além disso, é possível localizar mais detalhes sobre as sub-redes do cliente 
    **Aviso:** não use os endereços IP que são ordenados e usados durante a configuração inicial. No entanto, é possível usar outros endereços IP nessas
    sub-redes de acordo com os seus requisitos. Para configurar regras adicionais de conversão de endereço de rede, veja [Gerenciando regras NAT](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 
-## Links relacionados
+### Links relacionados
 
 * [Resolução de problemas](../vcenter/vcenter_chg_impact.html)
 * [Perguntas Mais Frequentes](../vmonic/faq.html)
-* [NSX Edge Services Gateway](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/nsx-esg){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
