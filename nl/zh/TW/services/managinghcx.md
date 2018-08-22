@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ HCX on {{site.data.keyword.cloud_notm}} 已部署最新已測試建置的 VMware
 
 如果您看不到預期的建置更新、HCX 發生問題，或要立即將最新的 HCX 建置推送至系統，請遵循[與 IBM 支援中心聯絡](../vmonic/trbl_support.html)中的步驟來開立支援問題單。
 
-## 相關鏈結
+### 相關鏈結
 
 * [HCX on {{site.data.keyword.cloud_notm}} 概觀](hcx_considerations.html)
 * [HCX 術語名詞解釋](hcx_glossary.html)

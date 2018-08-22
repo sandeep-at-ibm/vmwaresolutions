@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-06-07"
 * [訂購、檢視及移除 Cloud Foundation 實例的服務](../sddc/sd_addingremovingservices.html)
 * [訂購、檢視及移除 vCenter Server 實例的服務](../vcenter/vc_addingremovingservices.html)
 
-## 相關鏈結
+### 相關鏈結
 
 * [F5 on {{site.data.keyword.cloud_notm}} 概觀](f5_considerations.html)
 * [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)

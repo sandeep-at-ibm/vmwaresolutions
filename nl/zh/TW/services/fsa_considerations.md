@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -16,31 +16,44 @@ FortiGate Security Appliance on {{site.data.keyword.cloud}} 服務會以高可�
 
 **可用性**：只有部署在 1.8 版或更新版本中的實例，才能使用此服務。
 
-## FortiGate Security Appliance on IBM Cloud 的元件
+## FortiGate Security Appliance on IBM Cloud 的技術規格
 
-當您為實例訂購 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務時，會在原始實例或叢集的預設公用 VLAN 上部署 FortiGate 300 系列 Security Appliance 的 HA 配對。會透過 FortiGate Security Appliance 遞送所有進入您實例之公用 VLAN 的資料流量。
+下列元件已訂購並包括在 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務中：
 
-**附註：**如果您訂購其他叢集，則這些新增叢集的公用 VLAN 不會有 Security Appliance 的 HA 配對。
+### 硬體
+
+FortiGate Security Appliance 300 系列。
+
+### 高可用性
+
+在主動-被動配置中部署兩個應用裝置。
+
+### 網路
+
+* 上游及下游網路上結合的雙重 1 GbE
+* 一個新的上游 {{site.data.keyword.cloud_notm}} 公用 VLAN
+* 一個現有的下游 {{site.data.keyword.cloud_notm}} 公用 VLAN
 
 ## 安裝 FortiGate Security Appliance on IBM Cloud 時的考量
 
 請先檢閱下列考量，再安裝 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務：
 * 確定您要使用的 {{site.data.keyword.cloud_notm}} 帳戶具有**硬體防火牆**許可權。需要此許可權，才能編輯或檢視您實例之 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務的防火牆日誌及設定。
 * 如果您要將 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務新增至已部署的實例，則請確定實例的公用 VLAN 上沒有來自 {{site.data.keyword.cloud_notm}} 基礎架構的其他防火牆。
-* 安裝 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務將會新增公用 VLAN。
+* 安裝 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務時會新增公用 VLAN。
 * 在服務部署期間，您的實例可能無法暫時存取網際網路。
 * 順利安裝 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務之後，即可從 FortiGate 主控台管理及配置 FSA 的防火牆規則。您必須確定已定義 FSA 防火牆規則，以容許管理元件（例如 IBM CloudDriver 虛擬機器或 Zerto Virtual Manager）所啟動的出埠 HTTPS（TCP 埠 443）通訊，透過網際網路與 {{site.data.keyword.cloud_notm}} 上的外部管理資料庫通訊。出埠 HTTPS（TCP 埠 443）通訊源自實例中管理服務「VMware NSX Edge Services 閘道 (ESG)」的公用 IP 位址。
 * 如果您部署一對 FortiGate Security Appliance 裝置作為新實例的一部分，則會配置 FortiGate Security Appliance 裝置，僅容許從實例到公用網路的必要出埠通訊，並拒絕所有其他通訊。
 * 如果您部署一對 FortiGate Security Appliance 裝置作為現有實例的一部分，則 FortiGate Security Appliance 裝置已配置明確規則，可容許從實例到公用網路的所有必要出埠管理通訊。此外，FortiGate Security Appliance 裝置也已配置其他規則可容許現有其他通訊，而不岔斷現有應用程式資料流量。您必須謹慎地管理 FortiGate Security Appliance 配置，僅容許必要通訊以及拒絕所有其他通訊。
+* 如果您訂購其他叢集，則這些新增叢集的公用 VLAN 不會有 Security Appliance 的 HA 配對。
 
 ## 移除 FortiGate Security Appliance on IBM Cloud 時的考量
 
 請先檢閱下列考量，再移除 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務：
-* 移除 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務將會移除已新增的公用 VLAN。
+* 移除 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務時會移除已新增的公用 VLAN。
 * 在服務移除期間，您的實例可能無法暫時存取網際網路。
 * 一併移除所有允許、檢查、封鎖及遞送 NAT 資料流量的 FortiGate 規則以及 Fortinet 服務。如果您有任何 NAT 規則，則必須重新配置它們。
 
-## 相關鏈結
+### 相關鏈結
 
 * [訂購 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](fsa_ordering.html)
 * [管理 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](managingfsa.html)

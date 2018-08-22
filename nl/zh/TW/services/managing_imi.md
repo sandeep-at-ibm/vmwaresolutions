@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-04"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -16,6 +16,16 @@ IMI 可以作為單一信任的提供者，以減少監視及管理虛擬 IT 基
 
 IMI 提供 Cloud Foundation 實例及 vCenter Server 實例的受管理服務，其中包括進階 VMware vSphere 管理、完整 VMware NSX 涵蓋範圍以確保高可用性及安全虛擬網路基礎架構，以及 VMware vSAN 監視以確保資料可用性。
 
+## 技術規格
+
+IMI 受管理服務隨附下列規格：
+
+* 涵蓋面選項：8X5、16X5 或 24X7
+* 負責整體交付的 IT 服務管理工具及管理處理程序
+* 法規遵循管理
+* 每日及每週服務管理和報告
+* 不增加持續改善成本的加值型服務
+
 ## 程序
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**開始使用**。
@@ -24,7 +34,7 @@ IMI 提供 Cloud Foundation 實例及 vCenter Server 實例的受管理服務，
 
 「IMI 售前業務代表」將透過 {{site.data.keyword.cloud_notm}} 聯絡資訊聯絡您，並協助您提供所需的服務。
 
-## 相關鏈結
+### 相關鏈結
 
 * [訂購、檢視及移除 Cloud Foundation 實例的服務](../sddc/sd_addingremovingservices.html)
 * [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)

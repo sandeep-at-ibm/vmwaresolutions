@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-06-14"
 3. 在**動作**直欄中，按一下刪除圖示。
 4. 在**刪除實例**視窗中，按一下**確定**。實例的狀態會變更為**正在移除**。完成實例刪除時，**內部部署 HCX 實例**表格中就不會再有實例。
 
-## 相關鏈結
+### 相關鏈結
 
 * [訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](standalone_orderingserviceinstances.html)
 * [檢視內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](standalone_viewingserviceinstances.html)

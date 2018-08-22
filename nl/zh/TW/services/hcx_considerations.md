@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -12,11 +12,42 @@ lastupdated: "2018-06-14"
 
 HCX on {{site.data.keyword.cloud}} 服務可以將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}，這容許將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從其移轉，而不需要進行任何轉換或變更。
 
-**可用性**：只有部署在 2.3 版及更新版本中的 VMware vCenter Server on IBM Cloud with Hybridity Bundle 實例，才能使用此服務。
+**可用性**：只有部署在 2.3 版及更新版本中的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 實例，才能使用此服務。
 
 您可以將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。如需升級實例以及部署 HCX on {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱[升級至 vCenter Server with Hybridity Bundle 實例](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance)。
 
 **附註：**包含 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 實例限制為來自內部部署站台的三個同時連線。
+
+## HCX on IBM Cloud 的技術規格
+
+下列元件已訂購並包括在 HCX on {{site.data.keyword.cloud_notm}} 服務中。
+
+**附註：**內部部署 HCX 實例僅包括授權及啟動。
+
+### 用於 HCX 管理的 VMware NSX Edge Services Gateway 主動/被動配對
+
+* CPU：6 個 vCPU
+* RAM：8 GB
+* 磁碟：3 GB VMDK
+
+### HCX 管理應用裝置 - 虛擬機器
+
+* CPU：4 個 vCPU
+* RAM：12 GB
+* 磁碟：60 GB VMDK
+
+視需要，在配置進行 L2 連線功能、WAN 最佳化及閘道連線期間，會部署其他的 HCX 應用裝置。
+
+### 網路
+
+* 一個具有 16 個 IP 位址的公用可攜式子網路
+* 一個具有 64 個 IP 位址的專用可攜式子網路
+* 來自專用可攜式 vMotion 子網路的八個 IP 位址
+
+### 授權及費用
+
+* 基本授權費用：需要的服務費用
+* 受管理 VM 費用：根據每月移轉的 VM 收費
 
 ## 安裝 HCX on IBM Cloud 時的考量
 
@@ -43,7 +74,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服務無法安裝至預設叢集具有�
    * 移除空的 HCX 相關資料夾。
    * 刪除 HCX 管理邊緣應用裝置。
 
-## 相關鏈結
+### 相關鏈結
 
 * [訂購 HCX on {{site.data.keyword.cloud_notm}}](hcx_ordering.html)
 * [管理 HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)

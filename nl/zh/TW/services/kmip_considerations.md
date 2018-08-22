@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,6 +13,15 @@ lastupdated: "2018-06-14"
 KMIP for VMware on {{site.data.keyword.cloud}} 服務提供全年無休高可性服務，以管理 {{site.data.keyword.cloud_notm}} 中 VMware 所使用的加密金鑰。此服務提供運行環境功能，以容許客戶建立、擷取、啟動、撤銷及毀損加密金鑰。同時提供管理功能來維護用戶端認證與加密金鑰之間的關聯。
 
 **可用性**：只有部署在 2.2 版或更新版本中的實例，才能使用此服務。
+
+## KMIP for VMware on IBM Cloud 的技術規格
+
+KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務隨附下列規格：
+
+* VMware 相容的「金鑰管理交互作業通訊協定 (KMIP)」
+* 受管理服務
+* 可在全球多個地理區域使用
+* 每個地區中的高可用性 KMIP 服務端點
 
 ## 安裝 KMIP for VMware on IBM Cloud 時的考量
 
@@ -38,9 +47,9 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 使用 IBM Key Protect for {
 
 因此，移除此服務之前，請確定未使用 KMIP 服務所建立的金鑰來加密虛擬機器或 vSAN。
 
-## 相關鏈結
+### 相關鏈結
 
-* [訂購 KMIP for VMware on IBM Cloud](kmip_ordering.html)
+* [訂購 KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip_ordering.html)
 * [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/services/keymgmt/index.html#getting-started-with-key-protect)
 * [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect?&language=javascript_jquery#introduction)
 * [vSphere Security](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)

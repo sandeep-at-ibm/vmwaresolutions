@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -36,13 +36,13 @@ Zerto on {{site.data.keyword.cloud_notm}} 之受管理服務的下列模型可�
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**開始使用**。
 2. 向下捲動頁面，然後按一下**訂購其他受管理服務**下的 **Zerto on IBM Cloud 的受管理服務**卡片。
-3. 在**訂購 Zerto on IBM Cloud 的受管理服務**頁面上，檢閱 Zerto on {{site.data.keyword.cloud_notm}} 即受管理服務的說明及技術規格，然後按一下**建立**。
+3. 在 **Zerto on IBM Cloud** 頁面上，檢閱 Zerto on {{site.data.keyword.cloud_notm}} 即受管理服務的說明及技術規格，然後按一下**建立**。
 4. 根據您的需求指定配置設定，或接受預設值。
 5. 按一下 **vCenter Server** 或 **Cloud Foundation**，將服務新增至其中一個實例。
-6. 若要在訂購新實例時新增服務，請按一下**新增至新實例**，並繼續訂購新的 [vCenter Server](../vcenter/vc_orderinginstance.html)、[vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html) 或 [Cloud Foundation](../sddc/sd_orderinginstance.html) 實例。
-7. 若要將服務新增至現有實例，請按一下**新增至已部署的實例**，並從清單中選取您要的實例，然後按一下**佈建**確認您要繼續訂購。
+6. 若要在訂購新實例時新增服務，請按一下**新增至新實例**，然後繼續訂購新的 [vCenter Server](../vcenter/vc_orderinginstance.html)、[vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html) 或 [Cloud Foundation](../sddc/sd_orderinginstance.html) 實例。
+7. 若要將服務新增至現有實例，請按一下**新增至現有實例**，從清單中選取您要的實例，然後按一下**佈建**確認您要繼續訂購。
 
-## 相關鏈結
+### 相關鏈結
 
 * [訂購、檢視及移除 vCenter Server 實例的服務](../vcenter/vc_addingremovingservices.html)
 * [訂購、檢視及移除 Cloud Foundation 實例的服務](../sddc/sd_addingremovingservices.html)
