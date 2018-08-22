@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -40,7 +40,7 @@ Si vous avez passé la commande, le déploiement du cluster démarre automatique
 
 **Remarque :** contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.
 
-## Liens connexes
+### Liens connexes
 
 * [Commande de nouveaux clusters vSphere](vs_orderinginstances.html)
 * [Mise à l'échelle de clusters vSphere existants](vs_scalingexistingclusters.html)

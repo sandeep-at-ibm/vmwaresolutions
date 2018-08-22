@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -59,7 +59,7 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les cluste
 | WDC06 | Washington, DC | Est des Etats-Unis |
 | WDC07 | Washington, DC | Est des Etats-Unis |
 
-## Liens connexes
+### Liens connexes
 
 * [Commande de nouveaux clusters vSphere](vs_orderinginstances.html)
 * [Mise à l'échelle de clusters existants](vs_scalingexistingclusters.html)
