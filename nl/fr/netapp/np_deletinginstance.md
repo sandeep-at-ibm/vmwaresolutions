@@ -4,15 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-19"
 
 ---
 
 # Suppression d'instances NetApp ONTAP Select
 
-Pour libérer les composants commandés dans le cadre d'une instance NetApp ONTAP Select, supprimez celle-ci.
-
-Lorsque vous supprimez une instance NetApp ONTAP Select, les composants suivants sont libérés, dans cet ordre :
+Si vous supprimez une instance NetApp ONTAP Select, les composants suivants sont libérés, dans cet ordre :
 1. Machines virtuelles en cluster NetApp ONTAP Select déployées et machine virtuelle NetApp ONTAP Select Deploy
 2. Frais de support et de services
 3. Licences de produit VMware
@@ -45,7 +43,7 @@ En raison des dépendances de ressource, les composants de votre instance ne son
    1. Cliquez sur l'icône de menu déroulant dynamique à droite de **Console vCenter**, puis cliquez sur **Supprimer une instance**.
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
-## Liens connexes
+### Liens connexes
 
 * [Commande d'instances NetApp ONTAP Select](np_orderinginstances.html)
 * [Affichage des instances NetApp ONTAP Select](np_viewinginstances.html)

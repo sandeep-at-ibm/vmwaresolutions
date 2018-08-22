@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Affichage des instances NetApp ONTAP Select
 
-Affichez les instances NetApp ONTAP Select que vous avez commandées, ainsi que des informations détaillées les concernant.
+Affichez les informations récapitulatives et détaillées des instances NetApp ONTAP Select qui sont mises à disposition pour différents comptes utilisateur. 
 
 ## Affichage du récapitulatif des instances NetApp ONTAP Select
 
-Pour afficher un récapitulatif de toutes les instances NetApp ONTAP Select de votre environnement, procédez comme suit :
+Pour afficher un récapitulatif de toutes les instances NetApp ONTAP Select qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. Dans le tableau **Instances NetApp ONTAP Select**, affichez la liste de vos instances.
+1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche. 
+2. Dans l'angle supérieur droit de la console, cliquez sur votre avatar, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances. 
+3. Dans le tableau **Instances NetApp ONTAP Select**, affichez la liste des instances qui sont mises à disposition dans le compte utilisateur sélectionné.
 
 Tableau 1. Eléments d'une instance NetApp ONTAP Select
 
@@ -43,7 +44,7 @@ Tableau 2. Propriétés d'instance NetApp ONTAP Select
 | Nom | Nom de l'instance. |
 | ID | ID de l'instance. |
 | Emplacement | Centre de données dans lequel l'instance est hébergée. |
-| Version déployée | Version déployée d'{{site.data.keyword.vmwaresolutions_full}}. |
+| Version déployée | Version déployée d'{{site.data.keyword.vmwaresolutions_short}}. |
 | Version de vCenter | Version de VMware vCenter Server.<br><br>**Remarque** : la version vCenter Server affichée sur la console {{site.data.keyword.vmwaresolutions_short}} et celle sur le client Web VMware vSphere sont légèrement différentes. Les deux sont correctes. |
 | NSX for vSphere | Version du produit VMware NSX for vSphere. |
 | Edition de licence NSX | Version et édition de la licence VMware NSX. |
@@ -65,9 +66,9 @@ Tableau 3. Informations d'accès relatives aux composants des instances NetApp O
 | AD/DNS IPs | Adresses IP des deux serveurs AD. |
 | AD/DNS FQDN | Nom de domaine complet du serveur AD/DNS. |
 | AD/DNS ADMIN (Remote Desktop) | Nom d'utilisateur et mot de passe que vous pouvez utiliser pour accéder au serveur AD via une connexion bureau à distance. |
-| NSX Manager IP | Adresse IP du gestionnaire NSX. |
-| NSX Manager FQDN | Nom de domaine complet du gestionnaire NSX Manager. |
-| NSX Manager HTTP | Nom d'utilisateur et mot de passe que vous pouvez utiliser pour accéder à la console Web du gestionnaire NSX Manager. |
+| NSX Manager IP | Adresse IP de NSX Manager. |
+| NSX Manager FQDN | Nom de domaine complet de NSX Manager. |
+| NSX Manager HTTP | Nom d'utilisateur et mot de passe que vous pouvez utiliser pour accéder à la console Web de NSX Manager. |
 | NetApp Cluster IP | Adresse IP du cluster NetApp ONTAP Select. |
 | NetApp Cluster FQDN | Nom de domaine complet du cluster NetApp ONTAP. |
 | NetApp Cluster HTTPS | Nom d'utilisateur et mot de passe que vous pouvez utiliser pour accéder au cluster NetApp ONTAP Select. |
@@ -85,7 +86,7 @@ Tableau 3. Informations d'accès relatives aux composants des instances NetApp O
 
 ## Affichage de l'historique de déploiement des instances NetApp ONTAP Select
 
-Sous **Historique de déploiement**, affichez l'historique de déploiement de l'instance.
+Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance. 
 
 Tableau 4. Historique de déploiement d'une instance NetApp ONTAP Select
 
@@ -98,7 +99,7 @@ Si des erreurs se produisent lors du déploiement ou de la suppression d'une ins
 
 ## Affichage des clusters NetApp ONTAP Select
 
-1. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche.
+1. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. 
 2. Sous **CLUSTERS**, affichez le récapitulatif concernant les clusters NetApp ONTAP Select.
 
 	Tableau 5: Eléments des clusters NetApp ONTAP Select
@@ -173,7 +174,7 @@ Passez en revue les rubriques suivantes pour obtenir des informations qui vous a
 *  Pour la liste des points d'accès de connexion au réseau privé de l'infrastructure {{site.data.keyword.cloud_notm}} à l'aide du réseau privé virtuel (VPN), voir [Accès VPN](http://www.softlayer.com/vpn-access){:new_window}.
 *  Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client Web vSphere, voir [Déploiement d'un fichier OVF à l'aide du client Web vSphere](../vmonic/trbl_deploy_ovf.html).
 
-## Liens connexes
+### Liens connexes
 
 * [Commande d'instances NetApp ONTAP Select](np_orderinginstances.html)
 * [Suppression d'instances NetApp ONTAP Select](np_deletinginstance.html)
