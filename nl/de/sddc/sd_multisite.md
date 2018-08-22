@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -56,7 +56,7 @@ Sie können maximal 8 Instanzen (1 primäre und 7 sekundäre) in einer Konfigura
 
 **Hinweis**: Das Löschen von Cloud Foundation-Instanzen, die Teil einer Konfiguration mit mehreren Standorten sind, erfordert eine besondere Planung. Weitere Informationen hierzu finden Sie im Abschnitt [Cloud Foundation-Instanzen in Konfiguration mit mehreren Standorten löschen](sd_deletinginstance_multi.html).
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Assign Primary Role to NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configuring Secondary NSX Managers](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}

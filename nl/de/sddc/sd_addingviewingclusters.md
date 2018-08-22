@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -14,7 +14,7 @@ Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, we
 * Bei in V2.1 oder höheren Releases bereitgestellten Instanzen: **MGMT-Cluster-`<subdomain_label>`**
 * Bei in V2.0 oder älteren Releases bereitgestellten Instanzen: **SDDC-Cluster**
 
-Sie können eigene Cluster zu Ihren VMware Cloud Foundation-Instanzen hinzufügen, um die Berechnungs- und Speicherkapazität zu erweitern. In einem Cluster können Sie ESXi-Server verwalten, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Die hinzugefügten Cluster können aus Ihren Instanzen gelöscht werden, wenn sie nicht mehr benötigt werden.
+Sie können eigene Cluster zu Ihren VMware Cloud Foundation-Instanzen hinzufügen, um die Rechen- und Speicherkapazität zu erweitern. In einem Cluster können Sie ESXi-Server verwalten, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Die hinzugefügten Cluster können aus Ihren Instanzen gelöscht werden, wenn sie nicht mehr benötigt werden.
 
 **Verfügbarkeit**:
 * Die Funktion zum Hinzufügen von Clustern steht nur für Instanzen zur Verfügung, die in V2.0 oder höheren Releases bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden.
@@ -197,7 +197,7 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Suchen Sie in der Tabelle **CLUSTER** den Cluster, der gelöscht werden soll, und klicken Sie dann auf das Symbol **Löschen**.
 4. Vergewissern Sie sich, dass die Migration der VMs auf andere Cluster (sofern erforderlich) durchgeführt wurde und dass der Cluster tatsächlich gelöscht werden soll.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Cloud Foundation-Instanzen anzeigen](sd_viewinginstances.html)
 * [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](sd_addingremovingservers.html)

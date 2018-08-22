@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Cloud Foundation-Instanzen anzeigen
 
-Mit dem hier beschriebenen Verfahren können Sie die VMware Cloud Foundation-Instanzen, die Sie bestellt haben, und detaillierte Informationen zu diesen Instanzen anzeigen.
+Sie können die Zusammenfassung und die detaillierten Informationen der VMware Cloud Foundation-Instanzen anzeigen, die für verschiedene Benutzerkonten bereitgestellt wurden.
 
 ## Zusammenfassung der Cloud Foundation-Instanzen anzeigen
 
-Wenn Sie eine Zusammenfassung aller Cloud Foundation-Instanzen in Ihrer Umgebung anzeigen möchten, führen Sie die folgenden Schritte aus:
+Wenn Sie eine Zusammenfassung aller Cloud Foundation-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
-2. Zeigen Sie in der Tabelle **Cloud Foundation-Instanzen** die Liste Ihrer Instanzen an:
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+2. Klicken Sie in der rechten oberen Ecke der Konsole auf Ihren Avatar und klicken Sie auf das Feld **Konto**, um das Benutzerkonto auszuwählen, für das Sie Instanzen prüfen wollen. 
+3. Zeigen Sie in der Tabelle **Cloud Foundation-Instanzen** die Liste Ihrer Instanzen an:
 
 Tabelle 1. Elemente von Cloud Foundation-Instanzen
 
@@ -25,7 +26,7 @@ Tabelle 1. Elemente von Cloud Foundation-Instanzen
 |:------------- |:------------- |
 | Name | Der Name der Instanz. |
 | Version | Die Releaseversion, in der die Instanz bereitgestellt wurde oder auf die ein Upgrade durchgeführt wurde. |
-| Standort | Das {{site.data.keyword.CloudDataCent}}, in dem die Instanz gehostet wird. |
+| Standort | Das {{site.data.keyword.CloudDataCent_notm}}, in dem die Instanz gehostet wird. |
 | Erstellungszeit | Der Zeitpunkt (Datum und Uhrzeit), zu dem die Instanz erstellt wurde. |
 | Status | Der Status der Instanz. |
 
@@ -95,7 +96,7 @@ Tabelle 4. Cloud-Foundation-Zugriffsinformationen für instanzbezogene Komponent
 
 ## Bereitstellungsverlauf für Cloud Foundation-Instanzen anzeigen
 
-Zeigen Sie den Bereitstellungsverlauf der Instanz unter **Bereitstellungsverlauf** an.
+Klicken Sie im linken Navigationsfenster auf **Bereitstellungsverlauf**, um den Bereitstellungsverlauf für die Instanz anzuzeigen.
 
 Tabelle 5. Bereitstellungsverlauf der Cloud Foundation-Instanz
 
@@ -120,7 +121,7 @@ In den folgenden Abschnitten finden Sie Informationen, die Sie bei der Ausführu
 * Eine Liste der Zugriffspunkte für die Anmeldung beim privaten Netz von {{site.data.keyword.cloud_notm}} mittels VPN finden Sie unter [VPN-Zugriff](http://www.softlayer.com/vpn-access){:new_window}.
 * Falls Sie beim Bereitstellen einer Datei im Format "OVF" (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](../vmonic/trbl_deploy_ovf.html) weitere Informationen.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Cloud Foundation-Instanzen bestellen](sd_orderinginstance.html)
 * [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](sd_addingremovingservers.html)
