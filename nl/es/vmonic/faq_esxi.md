@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -39,7 +39,7 @@ Para instancias desplegadas en V2.1 o releases anteriores, debe habilitar el sop
 
 Las direcciones IP y los nombres de los servidores ESXi no se pueden cambiar, porque están registrados para la resolución de DNS de Windows. Los cambios podrían dar lugar a errores durante el despliegue o a errores en funciones de vCenter Server.
 
-**Nota**: no utilice la característica **Rename Device** de la interfaz de usuario de IBM Cloud para cambiar los nombres de los servidores ESXi. Esta función cambiaría el FQDN del servidor ESXi, pero los registros de vCenter Center y del host de la VSI de Windows serían incorrectos y podrían provocar anomalías.
+**Nota**: No utilice la característica **Renombrar dispositivo** en la interfaz de usuario de {{site.data.keyword.cloud_notm}} para cambiar los nombres de servidor de ESXi. Esta función cambiaría el FQDN del servidor ESXi, pero los registros de vCenter Center y del host de la VSI de Windows serían incorrectos y podrían provocar anomalías.
 
 ## ¿Puedo inhabilitar el acceso raíz de mis servidores ESXi?
 

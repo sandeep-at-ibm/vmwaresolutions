@@ -14,17 +14,17 @@ Este release incluye nuevas características, actualizaciones de componentes, me
 
 ## FortiGate Virtual Appliance on IBM Cloud
 
-El servicio FortiGate Virtual Appliance on IBM Cloud ya está disponible para la V2.0 y posteriores de instancias de VMware Cloud Foundation y para instancias de VMware vCenter Server. Este servicio despliega un par de alta disponibilidad (HA) de dispositivos virtuales FortiGate en el entorno, lo que le puede ayudar a reducir el riesgo mediante la implementación de controles de seguridad estrictos en la infraestructura virtual.
+El servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} ya está disponible para la V2.0 y posteriores de instancias de VMware Cloud Foundation y para instancias de VMware vCenter Server. Este servicio despliega un par de alta disponibilidad (HA) de dispositivos virtuales FortiGate en el entorno, lo que le puede ayudar a reducir el riesgo mediante la implementación de controles de seguridad estrictos en la infraestructura virtual.
 
-Puede solicitar instancias con el servicio FortiGate Virtual Appliance on IBM Cloud incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante desde el separador **Servicios** de la página de detalles de la instancia. Dependiendo de sus necesidades, puede seleccionar uno de los tres tamaños de despliegue y opciones de licencia para este servicio. Después de que se instale correctamente el servicio, podrá gestionar y configurar reglas de cortafuegos para los dispositivos virtuales FortiGate desde la consola de FortiGate.
+Puede solicitar instancias con el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante desde el separador **Servicios** de la página de detalles de la instancia. Dependiendo de sus necesidades, puede seleccionar uno de los tres tamaños de despliegue y opciones de licencia para este servicio. Después de que se instale correctamente el servicio, podrá gestionar y configurar reglas de cortafuegos para los dispositivos virtuales FortiGate desde la consola de FortiGate.
 
 Para obtener más información, consulte:
-* [Componentes y consideraciones sobre FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html)
-* [Gestión de FortiGate Virtual Appliance on IBM Cloud](../services/managingfortinetvm.html)
+* [Componentes y consideraciones sobre FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)
+* [Gestión de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html)
 
 ## Instalación de varios servicios para F5 on IBM Cloud y FortiGate Virtual Appliance on IBM Cloud
 
-Ahora puede instalar varias instancias del servicio F5 on IBM Cloud y del servicio FortiGate Virtual Appliance on IBM Cloud para una instancia de Cloud Foundation o una instancia de vCenter Server. Cuando seleccione el servicio F5 o el servicio FortiGate durante la solicitud de una instancia, debe especificar un nombre exclusivo para la instancia de servicio para distinguirla de las instancias de servicio adicionales que pueda instalar posteriormente.
+Ahora puede instalar varias instancias del servicio F5 on {{site.data.keyword.cloud_notm}} y del servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} para una instancia de Cloud Foundation o una instancia de vCenter Server. Cuando seleccione el servicio F5 o el servicio FortiGate durante la solicitud de una instancia, debe especificar un nombre exclusivo para la instancia de servicio para distinguirla de las instancias de servicio adicionales que pueda instalar posteriormente.
 
 Una vez finalizado el despliegue de la instancia, puede añadir más instancias del servicio F5 o del FortiGate instalando el servicio en el separador **Añadir servicios** de la página de detalles de la instancia. Debe añadir las instancias de servicio de una en una y debe repetir el proceso para todas las instancias que desee añadir para un servicio.
 
@@ -34,7 +34,7 @@ Para obtener más información, consulte:
 
 ## Actualizaciones para FortiGate Security Appliance on IBM Cloud
 
-En este release, se ha cambiado el nombre del servicio Fortinet on IBM Cloud por el de FortiGate Security Appliance on IBM Cloud, y el par de dispositivos de seguridad FortiGate (FSA) del servicio se configura de modo que esté protegido de forma predeterminada cuando se despliega en la instancia:
+En este release, se ha cambiado el nombre del servicio Fortinet on {{site.data.keyword.cloud_notm}} por el de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}, y el par de dispositivos de seguridad FortiGate (FSA) del servicio se configura de modo que esté protegido de forma predeterminada cuando se despliega en la instancia:
 * Si despliega un par de FSA como parte de una nueva instancia de Cloud Foundation en vCenter Server, los FSA se configuran de modo que solo permitan las comunicaciones de salida necesarias entre su instancia y la red pública y denieguen todas las demás comunicaciones.
 * Si despliega un par de FSA como parte de una instancia de Cloud Foundation o de una instancia de vCenter Server existente, los FSA se configuran con una regla explícita que permite todas las comunicaciones de gestión de salida entre la instancia y la red pública, y los FSA también se configuran con una regla adicional que permite todas las demás comunicaciones para garantizar que no se interrumpe el tráfico de aplicaciones existente.
 
@@ -51,7 +51,7 @@ Para obtener más información, consulte:
 
 ## Estimaciones de carga de trabajo y de almacenamiento durante la solicitud de la instancia
 
-* Durante una solicitud de VMware vSphere on IBM Cloud, se le proporciona una estimación del número de máquinas virtuales que se pueden ejecutar en la instancia solicitada.
+* Durante una solicitud de VMware vSphere on {{site.data.keyword.cloud_notm}}, se le proporciona una estimación del número de máquinas virtuales que se pueden ejecutar en la instancia solicitada.
 * Durante una solicitud de Cloud Foundation y de vCenter Server, se le proporciona una estimación de la capacidad de almacenamiento utilizable para la instancia solicitada.
 
 Para obtener más información, consulte:
@@ -148,7 +148,7 @@ Para el componente VMware vSAN, ahora dispone de los siguientes tipos de discos 
 * SSD SED de 3,8 TB
 
 **Notas:**
-* Las unidades SSD SED de 3,8 TB recibirán soporte cuando estén disponibles a nivel general en un centro de datos.
+* Las unidades SSD SED de 3,8 TB recibirán soporte cuando estén disponibles a nivel general en un {{site.data.keyword.CloudDataCent_notm}}.
 * Los pedidos con o sin el componente VMware vSAN siempre incluyen un servidor con un chasis para 12 discos que refleja un coste ligeramente superior para el {{site.data.keyword.baremetal_short}} para el pedido no vSAN en el PDF de estimación de precio.
 
 Para obtener más información, consulte [Solicitud de clústeres nuevos de vSphere](../vsphere/vs_orderinginstances.html).
@@ -162,7 +162,7 @@ Ahora dispone de las siguientes opciones de configuración de servidor nativo:
 * **Alto rendimiento (Medio)** – Licencia Premium / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 128 GB de RAM / Capacidad por nodo de veintidós unidades SSD de 3,8 TB / Capacidad efectiva de un clúster de 4 nodos – 118 TB
 * **Alta capacidad** – Licencia Estándar / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 64 GB de RAM / Capacidad por nodo de diez unidades SATA de 4 TB / Capacidad efectiva de un clúster de 4 nodos – 60 TB
 
-**Nota:** las unidades SSD de 3,8 TB recibirán soporte cuando estén disponibles a nivel general en un centro de datos.
+**Nota:** Las unidades SSD de 3,8 TB recibirán soporte cuando estén disponibles a un nivel general en un {{site.data.keyword.CloudDataCent_notm}}.
 
 Para obtener más información, consulte:
 * [Visión general de NetApp ONTAP Select](../netapp/np_netappoverview.html)
@@ -170,7 +170,7 @@ Para obtener más información, consulte:
 
 ## Documentación nueva y actualizada
 
-Los usuarios de VMware Cloud Foundation pueden seguir instrucciones paso a paso junto con la plataforma NSX VMware en IBM Cloud para permitir que las máquinas virtuales se comuniquen entre sí y en Internet. Para obtener más información, consulte [Configuración de NSX para VM de carga de trabajo en VMware Cloud Foundation on IBM Cloud (VCF)](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}.
+Los usuarios de VMware Cloud Foundation pueden seguir instrucciones paso a paso junto con la plataforma NSX VMware en {{site.data.keyword.cloud_notm}} para permitir que las máquinas virtuales se comuniquen entre sí y en Internet. Para obtener más información, consulte [Configuración de NSX para las máquinas virtuales de carga de trabajo en VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} (VCF)](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}.
 
 ## Actualizaciones y mejoras de la interfaz de usuario
 

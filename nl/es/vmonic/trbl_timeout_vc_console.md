@@ -25,7 +25,7 @@ Siga los pasos siguientes para resolver el problema.
    4. Añada la correlación entre dirección IP y nombre de host de PSC (Platform Services Controller) al archivo hosts con el siguiente formato:
 
       ```javascript
-      Dirección IP           NombreHost
+      IPAddress              HostName
       ```
 
 2. Anote la dirección IP que se muestra, ya que la necesitará en uno de los siguientes pasos.

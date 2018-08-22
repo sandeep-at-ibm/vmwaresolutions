@@ -30,13 +30,13 @@ Para obtener más información, consulte:
 
 Ahora NSX Edge se incluye como parte de las nuevas instancias de Cloud Foundation que se solicitan. NSX Edge ofrece seguridad de extremo a extremo de la red y servicios de pasarela para aislar una red virtualizada.
 
-Durante el despliegue de la instancia, IBM® despliega Management NSX Edge Services Gateway (ESG). Las máquinas virtuales de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Esta ESG se despliega de modo que incluya dos interfaces: una interfaz se conecta a la VLAN privada de IBM Cloud y la otra se conecta a la VLAN pública de IBM Cloud.
+Durante el despliegue de la instancia, IBM® despliega Management NSX Edge Services Gateway (ESG). Las máquinas virtuales de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Esta ESG se despliega para incluir dos interfaces: una interfaz está conectada a la VLAN privada de {{site.data.keyword.cloud_notm}}, y la otra está conectada a la VLAN pública de {{site.data.keyword.cloud_notm}}.
 
 Para garantizar la seguridad, se imponen reglas de cortafuegos que solo permiten las comunicaciones HTTPS de salida iniciadas por las máquinas virtuales de gestión. Esta ESG se despliega en una configuración de tipo Grande y solo el equipo de soporte de IBM puede modificar la configuración.
 
 Para obtener más información, consulte:
 
-* [Componentes de una instancia de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)
+* [Especificaciones técnicas para instancias de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [¿Representa NSX Edge de servicios de gestión un riesgo para la seguridad?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [Documentación de VMware NSX](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 

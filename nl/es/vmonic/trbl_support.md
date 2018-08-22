@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -19,7 +19,7 @@ Para ponerse en contacto con el equipo de soporte de IBM desde la consola de {{s
 1. Vaya a
    https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
 2. Inicie una sesión en la consola con su cuenta de **IBMid**.
-3. En la esquina superior derecha de la consola, pulse **Soporte > Añadir incidencia**.
+3. En el lado izquierdo de la cabecera, pulse **Soporte > Añadir incidencia**.
 4. En la página {{site.data.keyword.slportal_short}}, pulse **Iniciar la sesión con IBMid**; se iniciará automáticamente una sesión en el portal.
 5. Revise el campo _{{site.data.keyword.cloud_notm}} Infrastructure and Platform Services Support Policy_ y pulse **Reconocer**.
 

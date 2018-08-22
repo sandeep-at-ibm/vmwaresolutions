@@ -29,7 +29,7 @@ Para la lista completa de componentes, consulte [Visión general de VMware Cloud
 
 A partir del release V1.6, dispone de varias mejoras para sus instancias de vCenter Server.
 
-*  Implementación completa de la especificación V2.0 para la oferta vCenter Server. Para obtener más información, consulte el apartado sobre la [arquitectura de la solución VMware vCenter Server on IBM Cloud](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0).
+*  Implementación completa de la especificación V2.0 para la oferta vCenter Server. Para obtener más información, consulte la [Arquitectura de la solución VMware vCenter Server on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0).
 *  Nuevas especificaciones de hardware: **Pequeño**, **Medio** o **Grande**, dependiendo de sus requisitos.
 *  Nuevos centros de datos disponibles para el despliegue: **HKG02 - Hong Kong**, **OSL01 - Oslo**, **SEO01 - Seúl**, **SNG01 - Singapur** y **SYD04 - Sídney**.
 *  Al menos dos servidores ESXi en el pedido de la instancia, con VMware vSphere DRS (Distributed Resource Scheduler) y VMware HA (alta disponibilidad) habilitados de forma predeterminada.
