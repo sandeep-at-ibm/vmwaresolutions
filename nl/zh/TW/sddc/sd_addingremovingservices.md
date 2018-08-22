@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,16 +20,16 @@ lastupdated: "2018-06-21"
 
 | 服務名稱                                                                               | 可用性       | 實例支援 |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on IBM Cloud](../services/f5_considerations.html)                                 |是| 1.9 版以及更新版本 |
-| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       |是| 1.8 版以及更新版本 |
-| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) |是| 2.0 版以及更新版本 |
-| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              |是| 2.3 版以及更新版本 |
-| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              |是| 2.3 版以及更新版本 |
-| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         |是| 2.2 版以及更新版本 |
-| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  |是| 2.2 版以及更新版本 |
-| [Veeam on IBM Cloud](../services/veeam_considerations.html)                           |是| 1.8 版以及更新版本 |
-| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                         | 否              | 不適用 |
-| [Zerto on IBM Cloud](../services/addingzertodr.html)                                 |是| 1.2 版以及更新版本 |
+| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 |是| 1.9 版以及更新版本 |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       |是| 1.8 版以及更新版本 |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) |是| 2.0 版以及更新版本 |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              |是| 2.3 版以及更新版本 |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              |是| 2.3 版以及更新版本 |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         |是| 2.2 版以及更新版本 |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |是| 2.2 版以及更新版本 |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          |是| 1.8 版以及更新版本 |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                         | 否              | 不適用 |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 |是| 1.2 版以及更新版本 |
 
 ## 將服務新增至 Cloud Foundation 實例
 
@@ -63,6 +63,6 @@ lastupdated: "2018-06-21"
 
 **注意**：將向您收取已移除的服務到 {{site.data.keyword.cloud_notm}} 計費週期結束為止的費用。
 
-## 相關鏈結
+### 相關鏈結
 
 * [常見問題](../vmonic/faq.html)

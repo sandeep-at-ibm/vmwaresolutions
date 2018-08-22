@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -34,7 +34,7 @@ lastupdated: "2018-03-16"
 6. 針對多站台配置中的所有次要 Cloud Foundation 實例，重複步驟 1 到 5。
 7. 刪除所有次要實例之後，您也可以從 {{site.data.keyword.vmwaresolutions_short}} 主控台刪除主要實例。
 
-## 相關鏈結
+### 相關鏈結
 
 * [刪除 Cloud Foundation 實例](sd_deletinginstance.html)
 * [訂購、檢視及移除 Cloud Foundation 實例的服務](sd_addingremovingservices.html)

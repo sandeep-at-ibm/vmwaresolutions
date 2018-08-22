@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-06-08"
 |VLAN      |類型      |詳細資料     |
 |:----------|:----------|:-------------|
 |VLAN1     |公用、主要|指派給實體 ESXi 伺服器，以進行公用網路存取。在起始部署之後不會使用。可用於網際網路存取。|
-|VLAN2     |專用 A、主要|由 IBM Cloud 指派給實體 ESXi 伺服器。由管理介面用於 VMware vSphere 管理資料流量。<br><br>指派給作為管理元件的 VM（虛擬機器）。<br><br>指派給 VMware NSX VTEP（VXLAN 通道端點）|
+|VLAN2     |專用 A、主要|由 {{site.data.keyword.cloud}} 指派給實體 ESXi 伺服器。由管理介面用於 VMware vSphere 管理資料流量。<br><br>指派給作為管理元件的 VM（虛擬機器）。<br><br>指派給 VMware NSX VTEP（VXLAN 通道端點）|
 |VLAN3     |專用 B、可攜式|指派給 VMware vSAN（如果使用的話）。<br><br>指派給 VMware NFS（如果使用的話）。<br><br>指派給 VMware vSphere vMotion。|
 
 ## Cloud Foundation 實例的軟體 BOM
@@ -38,7 +38,7 @@ lastupdated: "2018-06-08"
 |VMware       |vSAN                                     |6.6.1        |
 |VMware       |NSX for vSphere                          |6.3.5        |
 |VMware       |SDDC Manager                             |2.4          |
-| {{site.data.keyword.IBM}} |CloudDriver                              |2.4          |
+|IBM          |CloudDriver                              |2.4          |
 |Microsoft    |Windows Server 標準版（64 位元）         |2012R2       |
 
 ## ESXi 伺服器的進階配置設定
@@ -67,10 +67,10 @@ lastupdated: "2018-06-08"
 
   如需相關資訊，請參閱[增加 ESXi/ESX 主機上定義 NFS 裝載數目上限的預設值](https://kb.vmware.com/s/article/2239)。
 
-## 相關鏈結
+### 相關鏈結
 
 * [VMware ESXi/ESX 的建置號碼和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware vCenter Server 的建置號碼和版本 (2143838)](https://kb.vmware.com/s/article/2143838)
-* [VMware Cloud Foundation on IBM Cloud 保護資料表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
+* [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} 保護資料表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
 * [Cloud Foundation 概觀](sd_cloudfoundationoverview.html)
 * [規劃 Cloud Foundation 實例](sd_planning.html)

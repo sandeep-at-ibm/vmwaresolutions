@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -195,7 +195,7 @@ lastupdated: "2018-06-08"
 3. 在左導覽窗格上，按一下**基礎架構**。在 **CLUSTERS** 表格中，找出您要刪除的叢集，然後按一下**刪除**圖示。
 4. 確認您已完成將 VM 移轉至其他叢集（適當的話），以及您要刪除叢集。
 
-## 相關鏈結
+### 相關鏈結
 
 * [檢視 Cloud Foundation 實例](sd_viewinginstances.html)
 * [擴充及縮減 Cloud Foundation 實例的容量](sd_addingremovingservers.html)
