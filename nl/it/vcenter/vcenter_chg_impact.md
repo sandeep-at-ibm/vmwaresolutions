@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-06-08"
 
 La modifica di utenti, risorse o sottoreti riservati a {{site.data.keyword.vmwaresolutions_full}} può influire sulle operazioni di gestione.
 
-## ID automationuser
+**Importante:** non modificare le autorizzazioni globali del gruppo **ic4v-vCenter** nella pagina **Utenti e gruppi** del client web VMware vSphere. Tali modifiche includono la modifica del nome utente, l'eliminazione dell'utente o la modifica della sua password.
 
-L'ID **automationuser** è un account utente che viene utilizzato dalle operazioni automatizzate fornite nella console {{site.data.keyword.vmwaresolutions_short}}.
+## ID automazione
+
+L'ID **automazione** è un account utente che viene utilizzato dalle operazioni automatizzate fornite nella console {{site.data.keyword.vmwaresolutions_short}}.
 
 Gli utenti e le password per le operazioni automatizzate nella console non devono essere modificati perché le operazioni della console che dipendono da quelle credenziali potrebbero non riuscire.
-
-Non aggiornare le proprietà dell'ID **automationuser** nella pagina **Utenti e gruppi** del client web VMware vSphere. Tali modifiche includono la modifica del nome utente, l'eliminazione dell'utente o la modifica della sua password.
 
 ## Account utente specifici del servizio
 

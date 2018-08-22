@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -16,7 +16,7 @@ Per ulteriori informazioni su vCenter Server on {{site.data.keyword.cloud_notm}}
 
 **Attenzione:** VMware Federal on {{site.data.keyword.cloud_notm}} offre solo un sottoinsieme delle offerte di vCenter Server. La configurazione multisito, i server bare metal {{site.data.keyword.cloud_notm}} preconfigurati, BYOL (Bring Your Own License) e l'opzione per ordinare servizi aggiuntivi non sono supportati.
 
-## Componenti dell'istanza vCenter Server per VMware Federal on IBM Cloud
+## Specifiche tecniche per le istanze VMware Federal on IBM Cloud
 
 Sono inclusi i seguenti componenti:
 
@@ -72,34 +72,33 @@ Se scegli l'opzione NFS, viene ordinata una condivisione file da 2 TB con 4 IOPS
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * (Per i cluster vSAN) VMware vSAN Advanced o Enterprise 6.6
 
-## Componenti del nodo di espansione vCenter Server
+## Specifiche tecniche per i nodi di espansione VMware Federal on IBM Cloud
 
 Ogni nodo di espansione vCenter Server verrà distribuito e addebitato per i seguenti componenti nel tuo account {{site.data.keyword.cloud_notm}}.
 
 ### Hardware per i nodi di espansione
 
-Un Bare Metal Server con la configurazione presentata in [Componenti dell'istanza vCenter Server per VMware Federal on IBM Cloud](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud).
+Un Bare Metal Server con la configurazione presentata in [Specifiche tecniche per le istanze VMware Federal on {{site.data.keyword.cloud_notm}}](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ### Licenze e tariffe per i nodi di espansione
 
 * Un VMware vSphere Enterprise Plus 6.5u1
-* Un VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.3
+* Un VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * (Per i cluster vSAN) VMware vSAN Advanced o Enterprise 6.6
 
-**Importante**: devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal_full}} o qualsiasi altro mezzo all'esterno della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
+**Importante**: devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo all'esterno della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
 
 **ATTENZIONE**: la gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}}, installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza, dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
 *  Aggiunta, modifica, restituzione o rimozione dei componenti
 *  Espansione o contrazione della capacità dell'istanza mediante l'aggiunta o la rimozione di server ESXi
 *  Spegnimento dei componenti
-<!--*  Restarting services-->
 
    Le eccezioni a queste attività includono la gestione delle condivisioni file di archiviazione condivisa dal {{site.data.keyword.slportal}}. Tali attività includono: l'ordine, l'eliminazione (che potrebbe influire sugli archivi di dati, se montati), l'autorizzazione e il montaggio di condivisioni file di archiviazione condivisa.
 
-## Link correlati
+### Link correlati
 
 * [Distinta base del software vCenter Server](vc_bom.html)
 * [Requisiti e pianificazione per le istanze VMware Federal](vc_fed_planning.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -61,8 +61,6 @@ Per le istanze VMware Federal distribuite nella V2.3 o successive, puoi aggiunge
 
 Dopo la distribuzione, puoi creare fino a quattro ulteriori cluster. Per le impostazioni di archiviazione vSAN, sono richiesti 4 server per il cluster iniziale e i cluster di post-distribuzione.
 
-<!--When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.-->
-
 ### Impostazioni di archiviazione
 
 Le impostazioni di archiviazione si basano sulla tua selezione della configurazione Bare Metal Server e sul tipo di archiviazione.
@@ -83,7 +81,7 @@ Se selezioni **Storage NFS**, puoi aggiungere l'archiviazione condivisa a livell
 
 **Nota:** il numero di condivisioni file deve essere compreso tra 1 e 32.
 
-* **Configura le condivisioni singolarmente**: seleziona questa opzione per specificare diverse impostazioni di configurazione per ogni condivisione file. 
+* **Configura le condivisioni singolarmente**: seleziona questa opzione per specificare diverse impostazioni di configurazione per ogni condivisione file.
 * **Numero di condivisioni**: quando utilizzi la stessa impostazione di configurazione per ogni condivisione file, specifica il numero di condivisioni file per l'archiviazione condivisa NFS che vuoi aggiungere.
 * **Dimensione**: seleziona la capacità che soddisfa le tue esigenze di archiviazione condivisa.
 * **Prestazioni**: seleziona l'IOPS (Input/output Operations Per Second) per GB in base ai tuoi requisiti del carico di lavoro.
@@ -99,10 +97,10 @@ Tabella 2. Opzioni del livello di prestazioni NFS
 
 ### Impostazioni di licenza
 
-Licenze VMware fornite da IBM per i seguenti componenti:
+	Licenze VMware fornite da {{site.data.keyword.IBM}} per i seguenti componenti:
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.3
+  * VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
   * (Per i cluster vSAN) VMware vSAN Advanced o Enterprise 6.6
 
 ### Riepilogo ordine
@@ -236,7 +234,7 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, individua il cluster che vuoi eliminare e fai clic sull'icona **Elimina** nella colonna **Azioni**.
 
-## Link correlati
+### Link correlati
 
 * [Visualizzazione delle istanze VMware Federal](vc_fed_viewinginstance.html)
 * [Espansione e contrazione della capacità per le istanze VMware Federal](vc_fed_addingremovingservers.html)

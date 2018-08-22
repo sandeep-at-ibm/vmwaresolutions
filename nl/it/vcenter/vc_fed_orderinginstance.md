@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -56,7 +56,7 @@ Licenze VMware fornite da IBM per i seguenti componenti:
 
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * (Per i cluster vSAN) VMware vSAN Advanced o Enterprise 6.6
 
 **Attenzione:**
@@ -70,7 +70,7 @@ Le impostazioni Bare Metal si basano sulla tua configurazione personalizzata. L'
 
 ### Ubicazione data center
 
-Seleziona il data center IBM Cloud in cui deve essere ospitata l'istanza.
+Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui deve essere ospitata l'istanza.
 
 ### Personalizzato
 
@@ -174,7 +174,7 @@ In base alla configurazione che hai selezionato per l'istanza, il costo stimato 
 
 ## Procedura
 
-1. Dal catalogo IBM Cloud, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **vCenter Server** nella sezione **Data center virtuali**.
+1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **vCenter Server** nella sezione **Data center virtuali**.
 2. Nella pagina **VMware vCenter Server on IBM Cloud**, fai clic sulla scheda **vCenter Server** e quindi su **Crea**.
 3. Nella pagina **vCenter Server**, immetti il nome dell'istanza.
 4. Fai clic su **Istanza primaria** per distribuire una singola istanza nell'ambiente.
@@ -199,17 +199,15 @@ In base alla configurazione che hai selezionato per l'istanza, il costo stimato 
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Componenti dell'istanza vCenter Server per VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
-
-<!--When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.-->
 
 ## Operazioni successive
 
 Visualizza, gestisci o proteggi l'istanza VMware Federal che hai ordinato.
 
-**Importante:** devi gestire i componenti {{site.data.keyword.vmwaresolutions_full}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo all'esterno della console.
+**Importante:** devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo all'esterno della console.
 Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
 
 **ATTENZIONE:** la gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}} (installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza) dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
@@ -219,7 +217,7 @@ Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmw
 
    Le eccezioni a queste attività includono la gestione delle condivisioni file di archiviazione condivisa dal {{site.data.keyword.slportal}}. Tali attività includono: l'ordine, l'eliminazione (che potrebbe influire sugli archivi di dati, se montati), l'autorizzazione e il montaggio di condivisioni file di archiviazione condivisa.
 
-## Link correlati
+### Link correlati
 
 * [Registrazione di un account {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
 * [Visualizzazione delle istanze VMware Federal](vc_fed_viewinginstance.html)

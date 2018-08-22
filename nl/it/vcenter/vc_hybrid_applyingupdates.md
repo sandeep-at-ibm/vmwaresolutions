@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-05"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -37,10 +37,10 @@ Tabella 1. Livelli di aggiornamento e impatto
 
 ## Procedura
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza da aggiornare.
 3. Nella pagina **Riepilogo**, verifica che tutti i dettagli dell'istanza siano visualizzati correttamente. Quindi, fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra per verificare i dettagli nella pagina **Infrastruttura**.
-   Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la macchina virtuale IBM CloudDriver, a seguito di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'aggiornamento potrebbe non riuscire.
+   Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la VSI (Virtual Server Instance) IBM CloudDriver, a causa di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'aggiornamento potrebbe non riuscire.
 4. Fai clic su **Aggiorna e applica patch** nel riquadro di navigazione a sinistra.
 
    **Nota**: la pagina **Aggiorna e applica patch** contiene solo i pacchetti per l'aggiornamento dei componenti di gestione IBM e non gli aggiornamenti di VMware. {{site.data.keyword.vmwaresolutions_short}} applica gli aggiornamenti di VMware per le seguenti operazioni:
@@ -58,8 +58,6 @@ Tabella 1. Livelli di aggiornamento e impatto
 7. Se applichi aggiornamenti alle istanze vCenter Server nella configurazione di distribuzione multisito, viene visualizzata una sezione intitolata **Passi necessari per l'aggiornamento**. Questa sezione elenca le operazioni di aggiornamento richieste per tutte le istanze nella distribuzione multisito. Devi completare i passi in sequenza facendo clic su **Applica aggiornamento** per ciascun passo. Devi attendere il completamento del passo precedente prima di iniziare il passo successivo.   
 
 ## Risultati
-
-1. Prima che venga avviata un'operazione di aggiornamento, un backup delle macchine virtuali di gestione viene eseguito automaticamente, se nella tua istanza è installato un servizio di backup. Al termine del backup, viene applicato l'aggiornamento.
 
 2. Dopo aver applicato un aggiornamento, viene visualizzato un record nell'elenco di stato degli aggiornamenti software, in cui puoi visualizzare l'avanzamento dettagliato e lo stato dell'aggiornamento. Al termine dell'aggiornamento, viene visualizzato un record nell'elenco degli aggiornamenti software installati.
 
@@ -87,7 +85,7 @@ di riapplicare l'aggiornamento.</dd>
 
 4. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](../vmonic/trbl_support.html) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato a tentare nuovamente l'aggiornamento dal passo non riuscito.
 
-## Link correlati
+### Link correlati
 
 * [Panoramica di vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
 * [Come contattare il supporto IBM](../vmonic/trbl_support.html)

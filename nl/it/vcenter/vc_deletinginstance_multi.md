@@ -34,7 +34,7 @@ A causa delle dipendenze delle risorse, i componenti della tua istanza non vengo
 6. Ripeti i passi da 1 a 5 per tutte le istanze secondarie di vCenter Server nella tua configurazione multisito.
 7. Dopo aver eliminato tutte le istanze secondarie, puoi anche eliminare l'istanza primaria dalla console {{site.data.keyword.vmwaresolutions_short}}.
 
-## Link correlati
+### Link correlati
 
 * [Eliminazione di istanze vCenter Server](vc_deletinginstance.html)
 * [Ordine, visualizzazione e rimozione dei servizi dalle istanze vCenter Server](vc_addingremovingservices.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -16,12 +16,12 @@ Se il tuo cluster iniziale ha vSAN come archiviazione, l'aggiunta di uno o più 
 
 ## Prima di iniziare
 
-* Non aggiungere o rimuovere i server ESXi dal client web VMware vSphere. Le modifiche che apporti al client web vSphere non vengono sincronizzate con la console {{site.data.keyword.vmwaresolutions_short}}.
+* Non aggiungere o rimuovere i server ESXi dal client web VMware vSphere. Le modifiche che apporti al client web vSphere non vengono sincronizzate con la console {{site.data.keyword.vmwaresolutions_full}}.
 * Un'istanza vCenter Server con l'archiviazione NFS deve avere almeno 2 server ESXi. Per le istanze distribuite nella V2.1 o successive, puoi espandere il cluster predefinito per avere fino a 51 server ESXi. Ciascuno dei cluster non predefiniti può essere espanso per avere fino a 59 server ESXi.
 * Un'istanza vCenter Server con l'archiviazione vSAN deve avere almeno 4 server ESXi.
 * Prima di rimuovere i server ESXi con il servizio F5 on {{site.data.keyword.cloud_notm}} o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installato, devi migrare le VM di F5 BIG-IP e FortiGate su un server ESXi diverso rispetto a quello che ospita attualmente le VM.
 * Prima di rimuovere i server ESXi con il servizio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} installato, assicurati che non vi siano operazioni di backup o ripristino attive (non riuscite o in corso), poiché queste operazioni attive potrebbero impedire la rimozione dei server ESXi.
-* Quando rimuovi i server ESXi, i server vengono messi in modalità di manutenzione e, successivamente, tutte le macchine virtuali (VM) in esecuzione sui server vengono migrate prima di essere rimosse da vCenter Server. Per il massimo controllo sulla ricollocazione delle VM, si consiglia di mettere in modalità di manutenzione i server ESXi da rimuovere e di migrare manualmente le VM in esecuzione sui server utilizzando il client web VMware vSphere. Dopo di che, rimuovi i server ESXi utilizzando la console {{site.data.keyword.vmwaresolutions_full}}.
+* Quando rimuovi i server ESXi, i server vengono messi in modalità di manutenzione e, successivamente, tutte le macchine virtuali (VM) in esecuzione sui server vengono migrate prima di essere rimosse da vCenter Server. Per il massimo controllo sulla ricollocazione delle VM, si consiglia di mettere in modalità di manutenzione i server ESXi da rimuovere e di migrare manualmente le VM in esecuzione sui server utilizzando il client web VMware vSphere. Dopo di che, rimuovi i server ESXi utilizzando la console {{site.data.keyword.vmwaresolutions_short}}.
 * Per le istanze vCenter Server distribuite nella V2.0 o precedenti, puoi espandere ciascun cluster per avere fino a 32 server ESXi. Il numero di {{site.data.keyword.baremetal_short}} che puoi aggiungere alla volta è il seguente:
    * Per le configurazioni **Small**, **Medium** e **Large**, puoi aggiungere da 1 a 10 server ESXi alla volta.
    * Per la configurazione **Personalizzato**, puoi aggiungere da 1 a 20 server ESXi alla volta. Per ulteriori informazioni sul numero minimo di server ESXi, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
@@ -47,7 +47,7 @@ Ti viene inviata una notifica via e-mail che indica che la richiesta di aggiunge
 
 Se non vedi i nuovi server ESXi aggiunti all'elenco nel cluster, controlla le notifiche e-mail o della console per trovare ulteriori dettagli sull'errore.
 
-## Link correlati
+### Link correlati
 
 * [Distinta base di vCenter Server](vc_bom.html)
 * [Requisiti e pianificazione per le istanze vCenter Server](vc_planning.html)

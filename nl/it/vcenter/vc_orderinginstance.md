@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -53,7 +53,7 @@ Scegli se ordinare un nuova istanza primaria o un'istanza secondaria per un'ista
 Specifica le opzioni di licenza per i seguenti componenti VMware nell'istanza:
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 
 Per gli utenti Business Partner, la licenza vCenter Server (Standard edition), la licenza vSphere (Enterprise Plus edition) e la licenza NSX sono incluse e acquistate per tuo conto. Tuttavia, devi specificare l'edizione per la licenza NSX.
 
@@ -72,7 +72,7 @@ Le impostazioni Bare Metal si basano sulla tua selezione del data center e sulla
 
 ### Ubicazione data center
 
-Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui deve essere ospitata l'istanza.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the {{site.data.keyword.baremetal_long}} specification you selected previously are displayed.-->
+Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui deve essere ospitata l'istanza.
 
 ### Preconfigurato
 
@@ -261,7 +261,7 @@ Per informazioni su come fornire le impostazioni per un servizio, vedi l'argomen
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti nella sezione _Specifiche tecniche per vCenter Server_ in [Panoramica di vCenter Server](../vcenter/vc_vcenterserveroverview.html) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che l'ordine è stato completato.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che l'ordine è stato completato.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 
@@ -282,7 +282,7 @@ Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmw
 
    Le eccezioni a queste attività includono la gestione delle condivisioni file di archiviazione condivisa dal {{site.data.keyword.slportal}}. Tali attività includono: l'ordine, l'eliminazione (che potrebbe influire sugli archivi di dati, se montati), l'autorizzazione e il montaggio di condivisioni file di archiviazione condivisa.
 
-## Link correlati
+### Link correlati
 
 * [Registrazione di un account {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
 * [Visualizzazione delle istanze vCenter Server](vc_viewinginstances.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -43,9 +43,9 @@ A causa delle dipendenze delle risorse, i componenti della tua istanza non vengo
    1. Fai di nuovo clic sull'icona del menu di overflow a destra di **Console vCenter** e quindi su **Elimina istanza**.
    2. Nella finestra **Elimina istanza**, fai clic su **OK**.
 
-## Link correlati
+### Link correlati
 
-* [Panoramica di VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [Panoramica di VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [Ordine di istanze VMware Federal](vc_fed_orderinginstance.html)
 * [Protezione di istanze VMware Federal](vc_fed_securinginstance.html)
 * [Visualizzazione delle istanze VMware Federal](vc_fed_viewinginstance.html)

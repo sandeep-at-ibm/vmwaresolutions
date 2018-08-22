@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-05-23"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -20,7 +20,7 @@ Quando elimini un'istanza vCenter Server with Hybridity Bundle, i seguenti compo
 5. Sottoreti
 6. VLAN
 
-A causa delle dipendenze delle risorse, i componenti della tua istanza non vengono rilasciati immediatamente quando elimini l'istanza. Ad esempio, le sottoreti e le VLAN non possono essere eliminate finché i server ESXi non vengono completamente recuperati dall'infrastruttura {{site.data.keyword.cloud}}, cosa che avviene alla fine del ciclo di fatturazione dell'infrastruttura {{site.data.keyword.cloud_notm}}. Alla fine del ciclo di fatturazione dell'infrastruttura {{site.data.keyword.cloud_notm}}, che in genere è di 30 giorni, le sottoreti e le VLAN vengono eliminate e l'eliminazione dell'istanza viene completata.
+A causa delle dipendenze delle risorse, i componenti della tua istanza non vengono rilasciati immediatamente quando elimini l'istanza. Ad esempio, le sottoreti e le VLAN non possono essere eliminate finché i server ESXi non vengono completamente recuperati dall'infrastruttura {{site.data.keyword.cloud_notm}}, cosa che avviene alla fine del ciclo di fatturazione dell'infrastruttura {{site.data.keyword.cloud_notm}}. Alla fine del ciclo di fatturazione dell'infrastruttura {{site.data.keyword.cloud_notm}}, che in genere è di 30 giorni, le sottoreti e le VLAN vengono eliminate e l'eliminazione dell'istanza viene completata.
 
 **Attenzione**: per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di fatturazione dell'infrastruttura {{site.data.keyword.cloud_notm}}.
 
@@ -34,7 +34,7 @@ A causa delle dipendenze delle risorse, i componenti della tua istanza non vengo
 6. Ripeti i passi da 1 a 5 per tutte le istanze secondarie di vCenter Server with Hybridity Bundle nella tua configurazione multisito.
 7. Dopo aver eliminato tutte le istanze secondarie, puoi anche eliminare l'istanza primaria dalla console {{site.data.keyword.vmwaresolutions_short}}.
 
-## Link correlati
+### Link correlati
 
 * [Eliminazione di istanze vCenter Server with Hybridity Bundle](vc_hybrid_deletinginstance.html)
 * [Ordine, visualizzazione e rimozione dei servizi dalle istanze vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservices.html)

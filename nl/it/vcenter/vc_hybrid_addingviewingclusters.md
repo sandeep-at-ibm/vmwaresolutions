@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -32,7 +32,7 @@ Il nome del cluster deve rispettare i seguenti requisiti:
 
 #### Ubicazione data center
 
-L'ubicazione del {{site.data.keyword.CloudDataCent}} del cluster è impostata sul {{site.data.keyword.CloudDataCent_notm}} dell'istanza vCenter Server per impostazione predefinita. Puoi distribuire il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso rispetto a quello dell'istanza distribuita, ma devi assicurarti che la latenza di rete tra i due {{site.data.keyword.CloudDataCents_notm}} sia inferiore a 150 ms. Per controllare la latenza di rete, puoi utilizzare uno strumento come [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
+L'ubicazione del {{site.data.keyword.CloudDataCent_notm}} del cluster è impostata sul {{site.data.keyword.CloudDataCent_notm}} dell'istanza vCenter Server per impostazione predefinita. Puoi distribuire il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso rispetto a quello dell'istanza distribuita, ma devi assicurarti che la latenza di rete tra i due {{site.data.keyword.CloudDataCents_notm}} sia inferiore a 150 ms. Per controllare la latenza di rete, puoi utilizzare uno strumento come [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
 Se distribuisci il cluster in un diverso {{site.data.keyword.CloudDataCent_notm}} o pod dell'infrastruttura {{site.data.keyword.cloud_notm}}, vengono ordinate tre VLAN aggiuntive da utilizzare con i {{site.data.keyword.baremetal_short}} ordinati.
 
@@ -75,7 +75,7 @@ VMware vSAN 6.6 è incluso con il tuo ordine dell'istanza vCenter Server with Hy
 Licenze VMware fornite da IBM per i seguenti componenti:
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Advanced o Enterprise) 6.3
+  * VMware NSX Service Providers Edition (Advanced o Enterprise) 6.4
 
 ### Riepilogo ordine
 
@@ -183,7 +183,7 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, individua il cluster che vuoi eliminare e fai clic sull'icona **Elimina** nella colonna **Azioni**.
 
-## Link correlati
+### Link correlati
 
 * [Visualizzazione delle istanze vCenter Server with Hybridity Bundle](vc_hybrid_viewinginstances.html)
 * [Espansione e contrazione della capacità per le istanze vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservers.html)

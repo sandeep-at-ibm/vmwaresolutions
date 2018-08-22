@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ Consulta le seguenti informazioni per comprendere i risultati della protezione d
 3. Fai clic sull'icona del menu di overflow a destra di **Console vCenter**.
 4. Fai clic su **Proteggi istanza**.
 5. Fai clic su **OK** per confermare che vuoi disconnettere l'istanza dall'automazione.
-   
+
    **Nota**: prima di completare questo passo, assicurati di aver esaminato le informazioni nella sezione **Prima di iniziare**.
 
 ## Risultati
@@ -36,9 +36,9 @@ Lo stato dell'istanza viene modificato in **In fase di modifica**.
 
 Una volta che l'istanza è protetta, il suo stato viene modificato in **Protetto** e saranno disponibili solo le proprietà e la cronologia di distribuzione dell'istanza.
 
-## Link correlati
+### Link correlati
 
-* [Panoramica di VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [Panoramica di VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [Ordine di istanze VMware Federal](vc_fed_orderinginstance.html)
 * [Visualizzazione delle istanze VMware Federal](vc_fed_viewinginstance.html)
 * [Eliminazione di istanze VMware Federal](vc_fed_deletinginstance.html)

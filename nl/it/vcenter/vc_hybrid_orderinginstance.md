@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
 # Ordine di istanze vCenter Server with Hybridity Bundle
 
-Per distribuire una piattaforma virtualizzata VMware flessibile e personalizzabile che soddisfi al meglio le tue esigenze del carico di lavoro, ordina un'istanza VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle. Il tuo ordine dell'istanza vCenter Server with Hybridity Bundle include la licenza di VMware Hybrid Cloud Extension (HCX) e ti dà diritto al servizio VMware HCX on IBM Cloud. Puoi anche aggiungere dei servizi, come [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html) per il ripristino di emergenza.
+Per distribuire una piattaforma virtualizzata VMware flessibile e personalizzabile che soddisfi al meglio le tue esigenze del carico di lavoro, ordina un'istanza VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle. Il tuo ordine dell'istanza vCenter Server with Hybridity Bundle include la licenza di VMware Hybrid Cloud Extension (HCX) e ti dà diritto al servizio VMware HCX on {{site.data.keyword.cloud_notm}}. Puoi anche aggiungere dei servizi, come [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) per il ripristino di emergenza.
 
 ## Requisiti
 
@@ -54,7 +54,7 @@ Con il tuo ordine dell'istanza vCenter Server with Hybridity Bundle sono incluse
 
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Advanced o Enterprise) 6.3
+* VMware NSX Service Providers Edition (Advanced o Enterprise) 6.4
 * Edizione licenza VMware vSAN 6.6 (Advanced o Enterprise).
 
 **Attenzione:**
@@ -169,7 +169,7 @@ In base alla configurazione che hai selezionato per l'istanza e i servizi aggiun
 
 ## Procedura
 
-1. Dal catalogo IBM Cloud, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **vCenter Server** nella sezione **Data center virtuali**.
+1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **vCenter Server** nella sezione **Data center virtuali**.
 2. Nella pagina **VMware vCenter Server on IBM Cloud**, fai clic sulla scheda **vCenter Server with Hybridity Bundle** e quindi su **Crea**.
 3. Nella pagina **vCenter Server**, immetti il nome dell'istanza.
 4. Seleziona il tipo di istanza:
@@ -206,7 +206,7 @@ Per informazioni su come fornire le impostazioni per un servizio, vedi l'argomen
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti nella sezione _Specifiche tecniche per vCenter Server with Hybridity Bundle_ in [Panoramica di vCenter Server with Hybridity Bundle](vc_hybrid_overview.html) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che l'ordine è stato completato.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server with Hybridity Bundle](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che l'ordine è stato completato.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 
@@ -227,7 +227,7 @@ Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmw
 
    Le eccezioni a queste attività includono la gestione delle condivisioni file di archiviazione condivisa dal {{site.data.keyword.slportal}}. Tali attività includono: l'ordine, l'eliminazione (che potrebbe influire sugli archivi di dati, se montati), l'autorizzazione e il montaggio di condivisioni file di archiviazione condivisa.
 
-## Link correlati
+### Link correlati
 
 * [Registrazione di un account {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
 * [Visualizzazione delle istanze vCenter Server with Hybridity Bundle](vc_hybrid_viewinginstances.html)

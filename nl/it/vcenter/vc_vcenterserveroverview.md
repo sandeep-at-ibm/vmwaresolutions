@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -14,13 +14,13 @@ VMware vCenter Server on {{site.data.keyword.cloud}} è un cloud privato ospitat
 
 In molti casi, l'intero ambiente può essere fornito in meno di un giorno e l'infrastruttura bare metal può ridimensionare rapidamente ed elasticamente la capacità di calcolo a seconda delle necessità.
 
-Dopo la distribuzione, puoi aumentare l'archiviazione condivisa ordinando ulteriori condivisioni file NFS (Network File System) dal {{site.data.keyword.slportal}} e collegandole manualmente tra tutti i server ESXi in un cluster. Se hai bisogno dell'archiviazione dedicata, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) è offerto sia in configurazioni ad alte prestazioni (tutti gli SSD) che ad alta capacità (tutti i SATA).
+Dopo la distribuzione, puoi aumentare l'archiviazione condivisa ordinando ulteriori condivisioni file NFS (Network File System) dal {{site.data.keyword.slportal}} e collegandole manualmente tra tutti i server ESXi in un cluster. Se hai bisogno dell'archiviazione dedicata, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html) è offerto sia in configurazioni ad alte prestazioni (tutti gli SSD) che ad alta capacità (tutti i SATA).
 
 VMware vSAN è anche disponibile come opzione di archiviazione dedicata. Per aumentare la capacità di archiviazione basata su vSAN di un cluster vSAN, puoi aggiungere altri server ESXi dopo la distribuzione.
 
 Se hai acquistato la licenza VMware fornita da IBM, puoi aggiornare l'edizione di base di VMware NSX all'edizione Advanced o Enterprise e puoi acquistare ulteriori componenti VMware, ad esempio VMware vRealize Operations.
 
-Puoi aggiungere i servizi gestiti IBM se vuoi alleggerire le operazioni quotidiane e la manutenzione dei livelli di virtualizzazione, SO guest o applicazioni. Il team IBM Cloud Professional Services è anche disponibile per aiutarti ad accelerare il tuo viaggio verso il cloud con servizi di migrazione, implementazione, pianificazione e incorporazione.
+Puoi aggiungere i servizi gestiti IBM se vuoi alleggerire le operazioni quotidiane e la manutenzione dei livelli di virtualizzazione, SO guest o applicazioni. Il team {{site.data.keyword.cloud_notm}} Professional Services è anche disponibile per aiutarti ad accelerare il tuo viaggio verso il cloud con servizi di migrazione, implementazione, pianificazione e incorporazione.
 
 ## Architettura di vCenter Server
 
@@ -42,15 +42,15 @@ Questo livello virtualizza l'infrastruttura fisica attraverso diversi prodotti V
 
 ### Gestione della virtualizzazione
 
-Questo livello comprende il dispositivo vCenter Server Appliance (vCSA), il gestore NSX, due ESG NSX, tre controller NSX, il dispositivo virtuale PSC (Platform Services Controller) e la macchina virtuale IBM CloudDriver.
+Questo livello comprende il dispositivo vCenter Server Appliance (vCSA), NSX Manager, due ESG NSX, tre controller NSX, il dispositivo virtuale PSC (Platform Services Controller) e la VSI (Virtual Server Instance) IBM CloudDriver. La VSI CloudDriver viene distribuita su richiesta in base alle esigenze per determinate operazioni, ad esempio l'aggiunta di host all'ambiente.
 
 L'offerta di base viene distribuita con un dispositivo vCenter Server dimensionato per supportare un ambiente con un massimo di 400 host e 4000 VM. Gli stessi strumenti e script compatibili con l'API vSphere possono essere utilizzati per gestire l'ambiente VMware ospitato da IBM.
 
 In totale, l'offerta di base richiede 38 vCPU e 67 GB di vRAM che sono riservati per il livello di gestione della virtualizzazione. La capacità host rimanente per le tue macchine virtuali dipende da diversi fattori, come la percentuale di sottoscrizione eccedente, il dimensionamento della VM e i requisiti delle prestazioni del carico di lavoro.
 
-Per i dettagli sull'architettura, consulta [Riferimenti all'architettura {{site.data.keyword.vmwaresolutions_full}}](../archiref/solution/solution_overview.html).
+Per i dettagli sull'architettura, vedi [Riferimento all'architettura di {{site.data.keyword.vmwaresolutions_short}}](../archiref/solution/solution_overview.html).
 
-## Specifiche tecniche per vCenter Server
+## Specifiche tecniche per le istanze vCenter Server
 
 Nella tua istanza vCenter Server sono inclusi i seguenti componenti.
 
@@ -106,34 +106,32 @@ L'opzione NFS offre l'archiviazione a livello di file condivisa personalizzata p
 * Prestazioni: 2, 4 o 10 IOPS/GB.
 * Configurazione individuale delle condivisioni file.
 
-Se scegli l'opzione NFS, vengono ordinate le seguenti condivisioni file:
-* Una condivisione file da 2 TB con 4 IOPS/GB per i componenti di gestione.
-* Un'archiviazione a livello di blocco condivisa da 2 TB per i backup, che può essere ampliata fino a 12 TB. Puoi scegliere se desideri l'archiviazione per i backup selezionando un servizio di backup.
+Se scegli l'opzione NFS, viene ordinata una condivisione file da 2 TB e 4 IOPS/GB per i componenti di gestione.
 
 ### Licenze (fornite da IBM o BYOL) e tariffe
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * (Per i cluster vSAN) VMware vSAN Advanced o Enterprise 6.6
 * Tariffa per supporto e servizi (una licenza per nodo)
 
-## Componenti del nodo di espansione vCenter Server
+## Specifiche tecniche per i nodi di espansione vCenter Server
 
 Ogni nodo di espansione vCenter Server verrà distribuito e addebitato per i seguenti componenti nel tuo account {{site.data.keyword.cloud_notm}}.
 
 ### Hardware per i nodi di espansione
 
-Un Bare Metal Server con la configurazione presentata nella sezione _Specifiche tecniche per vCenter Server_ nella [Panoramica di vCenter Server](vc_vcenterserveroverview.html).
+Un Bare Metal Server con la configurazione presentata in [Specifiche tecniche per le istanze vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ### Licenze e tariffe per i nodi di espansione
 
 * Un VMware vSphere Enterprise Plus 6.5u1
-* Un VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.3
+* Un VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * Una tariffa per supporto e servizi
 * (Per i cluster vSAN) VMware vSAN Advanced o Enterprise 6.6
 
-**Importante**: devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal_full}} o qualsiasi altro mezzo all'esterno della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
+**Importante**: devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo all'esterno della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
 
 **ATTENZIONE**: la gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}}, installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza, dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
 *  Aggiunta, modifica, restituzione o rimozione dei componenti
@@ -143,7 +141,7 @@ Un Bare Metal Server con la configurazione presentata nella sezione _Specifiche 
 
    Le eccezioni a queste attività includono la gestione delle condivisioni file di archiviazione condivisa dal {{site.data.keyword.slportal}}. Tali attività includono: l'ordine, l'eliminazione (che potrebbe influire sugli archivi di dati, se montati), l'autorizzazione e il montaggio di condivisioni file di archiviazione condivisa.
 
-## Link correlati
+### Link correlati
 
 * [Distinta base del software vCenter Server](vc_bom.html)
 * [Pianificazione per le istanze vCenter Server](vc_planning.html)
