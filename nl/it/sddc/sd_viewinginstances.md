@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Visualizzazione delle istanze Cloud Foundation
 
-Visualizza le istanze VMware Cloud Foundation che hai ordinato e informazioni dettagliate su di esse.
+Visualizza il riepilogo e le informazioni dettagliate delle istanze VMware Cloud Foundation fornite per account utente diversi.
 
 ## Visualizzazione del riepilogo delle istanze Cloud Foundation
 
-Per visualizzare un riepilogo di tutte le istanze Cloud Foundation nel tuo ambiente, completa la seguente procedura:
+Per visualizzare un riepilogo di tutte le istanze Cloud Foundation fornite per un account utente, completa la seguente procedura:
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
-2. Nella tabella **Istanze Cloud Foundation**, visualizza l'elenco delle tue istanze:
+1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra. 
+2. Nell'angolo superiore destro della console, fai clic sul tuo avatar e quindi sul campo **Account** per selezionare l'account utente per il quale vuoi controllare le istanze. 
+3. Nella tabella **Istanze Cloud Foundation**, visualizza l'elenco delle tue istanze:
 
 Tabella 1. Elementi dell'istanza Cloud Foundation
 
@@ -25,7 +26,7 @@ Tabella 1. Elementi dell'istanza Cloud Foundation
 |:------------- |:------------- |
 | Nome | Il nome dell'istanza |
 | Versione | La versione di release in cui è stata distribuita o aggiornata l'istanza |
-| Ubicazione | Il {{site.data.keyword.CloudDataCent}} in cui è ospitata l'istanza |
+| Ubicazione | Il {{site.data.keyword.CloudDataCent_notm}} in cui è ospitata l'istanza |
 | Ora di creazione | La data e ora di creazione dell'istanza |
 | Stato | Lo stato dell'istanza |
 
@@ -60,7 +61,7 @@ Tabella 3. Proprietà dell'istanza Cloud Foundation
 | Ubicazione | Il {{site.data.keyword.CloudDataCent_notm}} in cui è ospitata l'istanza |
 | Versione corrente | La versione corrente di {{site.data.keyword.vmwaresolutions_short}} |
 | Versione vCenter | La versione di VMware vCenter Server<br><br>**Nota**: esiste una leggera variazione tra la versione di vCenter Server visualizzata nella console {{site.data.keyword.vmwaresolutions_short}} e nel client web VMware vSphere. Entrambe sono corrette. |
-| NSX per vSphere | La versione del prodotto VMware NSX per vSphere |
+| NSX for vSphere | La versione del prodotto VMware NSX for vSphere |
 | Licenza _componente VMware_ | Se quando hai ordinato l'istanza hai scelto di utilizzare la tua propria licenza VMware per un qualsiasi componente VMware nella pagina **Licenze**, vengono visualizzati il nome del componente VMware e la chiave di licenza che hai immesso per il componente.<br><br>Esempi di licenze per i componenti VMware sono **Licenza vCenter Server** e **Licenza NSX**. |
 | Edizione licenza NSX | La versione e l'edizione della licenza di VMware NSX |
 | DNS, Dominio root | Il nome del dominio root è il nome del dominio DNS (Domain Name System) e il nome root dell'insieme di strutture Microsoft Active Directory (AD). |
@@ -80,10 +81,10 @@ Tabella 4. Informazioni di accesso di Cloud Foundation per i componenti relativi
 | IP AD/DNS | L'indirizzo IP dei due server AD |
 | Nome di dominio completo AD/DNS | Il nome di dominio completo del server AD/DNS<br><br>**Nota**: è possibile utilizzare la stessa password amministratore per connettersi a tutti i server AD/DNS utilizzando una connessione al desktop remoto. |
 | ADMIN AD/DNS (Desktop remoto)  | Per le istanze primarie, visualizza il nome utente e la password per accedere al server AD tramite una connessione al desktop remoto.<br><br>Per le istanze secondarie, fai clic sul link **Visualizza nell'istanza primaria** per essere indirizzato alle informazioni di nome utente e password sull'istanza primaria.<br><br>**Nota**: dopo che l'istanza secondaria viene aggiunta al dominio DNS primario e si verifica la replica, la password dell'amministratore locale nell'istanza primaria potrebbe sovrascrivere la password dell'amministratore locale nell'istanza secondaria. Facendo clic sul link **Visualizza nell'istanza primaria**, avrai accesso alla password di amministratore corretta.  |
-| IP NSX Manager  | L'indirizzo IP del gestore NSX  |
-| Nome di dominio completo NSX Manager  | Il nome di dominio completo del gestore NSX  |
-| HTTP NSX Manager  | Il nome utente e la password utilizzati per accedere alla console web del gestore NSX |
-| SSH NSX Manager | Il nome utente e la password che puoi utilizzare per accedere al gestore NSX tramite una connessione SSH |
+| IP NSX Manager  | L'indirizzo IP di NSX Manager  |
+| Nome di dominio completo NSX Manager  | Il nome di dominio completo di NSX Manager  |
+| HTTP NSX Manager  | Il nome utente e la password utilizzati per accedere alla console web di NSX Manager |
+| SSH NSX Manager | Il nome utente e la password che puoi utilizzare per accedere a NSX Manager tramite una connessione SSH |
 | IP PSC  | L'indirizzo IP del PSC (Platform Services Controller)  |
 | Nome di dominio completo PSC  | Il nome di dominio completo del PSC  |    
 | SSH PSC  | Il nome utente e la password che puoi utilizzare per accedere alla VM PSC tramite una connessione SSH  |
@@ -95,7 +96,7 @@ Tabella 4. Informazioni di accesso di Cloud Foundation per i componenti relativi
 
 ## Visualizzazione della cronologia di distribuzione per le istanze Cloud Foundation
 
-In **Cronologia distribuzione**, visualizza la cronologia di distribuzione per l'istanza.
+Fai clic su **Cronologia distribuzione** dal riquadro di navigazione a sinistra per visualizzare la cronologia di distribuzione per l'istanza.
 
 Tabella 5. Cronologia di distribuzione delle istanze Cloud Foundation
 
@@ -120,7 +121,7 @@ Rivedi i seguenti argomenti per informazioni utili per completare le istruzioni 
 * Per un elenco di punti di accesso per accedere alla rete privata di {{site.data.keyword.cloud_notm}} tramite VPN, vedi [Accesso VPN](http://www.softlayer.com/vpn-access){:new_window}.
 * Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](../vmonic/trbl_deploy_ovf.html).
 
-## Link correlati
+### Link correlati
 
 * [Ordine di istanze Cloud Foundation](sd_orderinginstance.html)
 * [Espansione e contrazione della capacità per le istanze Cloud Foundation](sd_addingremovingservers.html)

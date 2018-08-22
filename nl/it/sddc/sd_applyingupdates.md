@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -53,7 +53,7 @@ Tabella 1. Livelli di aggiornamento e impatto
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza da aggiornare.
 3. Nella pagina **Riepilogo**, verifica che tutti i dettagli dell'istanza siano visualizzati correttamente. Quindi, fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra per verificare i dettagli nella pagina **Infrastruttura**.
-   Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la macchina virtuale IBM CloudDriver, a seguito di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'aggiornamento potrebbe non riuscire.
+   Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la VSI (Virtual Server Instance) IBM CloudDriver, a causa di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'aggiornamento potrebbe non riuscire.
 4. Fai clic su **Aggiorna e applica patch** nel riquadro di navigazione a sinistra.
 5. Fai clic sulla freccia in giù per espandere l'aggiornamento che vuoi applicare e quindi completa uno dei seguenti passi:
    *  Per avviare immediatamente l'aggiornamento, fai clic sull'icona del menu di overflow nella colonna **Azioni** della voce di aggiornamento, quindi fai clic su **Aggiorna ora**.
@@ -63,16 +63,15 @@ Tabella 1. Livelli di aggiornamento e impatto
 ## Risultati
 
 1. Prima che venga avviata un'operazione di aggiornamento, viene completato un controllo di integrità dell'istanza. Se il controllo di integrità non riesce, verrai avvisato in modo da poter risolvere il problema prima di applicare l'aggiornamento.
-2. Prima che venga avviata un'operazione di aggiornamento, un backup delle macchine virtuali (VM) di gestione viene eseguito automaticamente, se nella tua istanza è installato un servizio di backup. Al termine del backup, viene applicato l'aggiornamento. Durante l'operazione di aggiornamento, non tentare alcuna operazione di provisioning o di aggiunta dei server ESXi.
-3. Durante gli aggiornamenti che includono aggiornamenti dei componenti VMware, potrebbe essere necessario eseguire la migrazione delle VM dai server ESXi per passare alla modalità di manutenzione. Se una VM ha un archivio dati locale o un CD-ROM montato, ciò potrebbe impedire la migrazione della VM.
-4. Durante il provisioning di un nuovo ambiente, {{site.data.keyword.vmwaresolutions_short}} crea l'ID **automationuser** che viene utilizzato per la gestione dell'istanza, incluso per l'applicazione degli aggiornamenti. Non modificare la password per questo ID utente. La modifica della password potrebbe causare un errore nell'aggiornamento.
+2. Durante gli aggiornamenti che includono aggiornamenti dei componenti VMware, potrebbe essere necessario eseguire la migrazione delle VM dai server ESXi per passare alla modalità di manutenzione. Se una VM ha un archivio dati locale o un CD-ROM montato, ciò potrebbe impedire la migrazione della VM.
+3. Durante il provisioning di un nuovo ambiente, {{site.data.keyword.vmwaresolutions_short}} crea l'ID **automationuser** che viene utilizzato per la gestione dell'istanza, incluso per l'applicazione degli aggiornamenti. Non modificare la password per questo ID utente. La modifica della password potrebbe causare un errore nell'aggiornamento.
 
-5. Dopo aver applicato un aggiornamento, viene visualizzato un record nell'elenco di stato degli aggiornamenti software, in cui puoi visualizzare l'avanzamento dettagliato e lo stato dell'aggiornamento. Al termine dell'aggiornamento, viene visualizzato un record nell'elenco degli aggiornamenti software installati.
+4. Dopo aver applicato un aggiornamento, viene visualizzato un record nell'elenco di stato degli aggiornamenti software, in cui puoi visualizzare l'avanzamento dettagliato e lo stato dell'aggiornamento. Al termine dell'aggiornamento, viene visualizzato un record nell'elenco degli aggiornamenti software installati.
 
   Per recuperare lo stato più recente per un lavoro di aggiornamento, fai clic sull'icona di aggiornamento nella parte superiore destra della pagina.
   {:tip}
 
-6. Per i dettagli sugli stati di aggiornamento, consulta la seguente tabella.
+5. Per i dettagli sugli stati di aggiornamento, consulta la seguente tabella.
 
    Tabella 2. Dettagli degli stati di aggiornamento
 
@@ -107,11 +106,11 @@ Tabella 1. Livelli di aggiornamento e impatto
       </tr>
     </table>
 
-7. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](../vmonic/trbl_support.html) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato a riavviare l'aggiornamento dal passo non riuscito.
+6. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](../vmonic/trbl_support.html) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato a riavviare l'aggiornamento dal passo non riuscito.
 
-## Link correlati
+### Link correlati
 
 * [Panoramica di Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
-* [Panoramica di Veeam on IBM Cloud](../services/veeam_considerations.html)
+* [Panoramica di Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
 * [Come contattare il supporto IBM](../vmonic/trbl_support.html)
 * [Domande frequenti](../vmonic/faq.html)

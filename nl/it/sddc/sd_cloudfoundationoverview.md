@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -39,7 +39,7 @@ Nella console {{site.data.keyword.vmwaresolutions_short}}, puoi espandere e cont
 
 Per i dettagli sull'architettura, consulta [Panoramica della soluzione](../archiref/solution/solution_overview.html).
 
-## Componenti dell'istanza Cloud Foundation
+## Specifiche tecniche per le istanze Cloud Foundation
 
 Nella tua istanza Cloud Foundation sono inclusi i seguenti componenti.
 
@@ -84,13 +84,6 @@ Viene ordinata la seguente archiviazione, a seconda della configurazione di {{si
 * Solo per la configurazione **Preconfigurato**, **Small**: due dischi con capacità SSD da 1,9 TB
 * Solo per la configurazione **Preconfigurato**, **Large**: quattro dischi con capacità SSD da 3,8 TB
 
-
-### Archiviazione per i backup
-
-Viene ordinata un'archiviazione a livello di file condivisa da 2 TB, che può essere ampliata fino a 12 TB.
-
-**Nota**: l'archiviazione per i backup non è un componente standard per le istanze Cloud Foundation. Quando ordini un'istanza, puoi scegliere se desideri l'archiviazione per i backup selezionando o deselezionando un servizio di backup.
-
 ### Licenze (fornite da IBM o BYOL) e tariffe
 
 * Quattro VMware vSphere Enterprise Plus 6.5u1
@@ -100,13 +93,13 @@ Viene ordinata un'archiviazione a livello di file condivisa da 2 TB, che può es
 * Quattro licenze SDDC Manager (solo fornite da IBM)
 * Quattro tariffe per supporto e servizi
 
-## Componenti del nodo di espansione Cloud Foundation
+## Specifiche tecniche per i nodi di espansione Cloud Foundation
 
 Ogni nodo di espansione Cloud Foundation verrà distribuito e addebitato per i seguenti componenti nel tuo account {{site.data.keyword.cloud_notm}}.
 
 ### Hardware per i nodi di espansione
 
-Un Bare Metal Server {{site.data.keyword.cloud_notm}} con la configurazione presentata in [Componenti dell'istanza Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+Un Bare Metal Server {{site.data.keyword.cloud_notm}} con la configurazione presentata in [Specifiche tecniche per le istanze Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Licenze e tariffe per i nodi di espansione
 
@@ -127,7 +120,7 @@ Un Bare Metal Server {{site.data.keyword.cloud_notm}} con la configurazione pres
 
    Le eccezioni a queste attività includono la gestione delle condivisioni file di archiviazione condivisa dal {{site.data.keyword.slportal}}. Tali attività includono: l'ordine, l'eliminazione (che potrebbe influire sugli archivi di dati, se montati), l'autorizzazione e il montaggio di condivisioni file di archiviazione condivisa.
 
-## Link correlati
+### Link correlati
 
 * [Distinta base del software Cloud Foundation](sd_bom.html)
 * [Pianificazione per le istanze Cloud Foundation](sd_planning.html)

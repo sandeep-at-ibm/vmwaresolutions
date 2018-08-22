@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -34,7 +34,7 @@ A causa delle dipendenze delle risorse, i componenti della tua istanza non vengo
 6. Ripeti i passi da 1 a 5 per tutte le istanze secondarie di Cloud Foundation nella tua configurazione multisito.
 7. Dopo aver eliminato tutte le istanze secondarie, puoi anche eliminare l'istanza primaria dalla console {{site.data.keyword.vmwaresolutions_short}}.
 
-## Link correlati
+### Link correlati
 
 * [Eliminazione di istanze Cloud Foundation](sd_deletinginstance.html)
 * [Ordine, visualizzazione e rimozione dei servizi dalle istanze Cloud Foundation](sd_addingremovingservices.html)
