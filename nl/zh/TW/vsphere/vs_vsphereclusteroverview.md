@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -18,7 +18,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 
 使用此供應項目來建立 ESXi 伺服器的新叢集，或在 {{site.data.keyword.CloudDataCent_notm}} 中擴充 ESXi 伺服器的現有叢集。視您選取的 VMware 元件而定，您可以只從一部 ESXi 伺服器開始，稍後再視需要擴充叢集。
 
-## VMware vSphere on IBM Cloud 的元件
+## VMware vSphere on IBM Cloud 叢集的技術規格
 
 檢閱 VMware vSphere on {{site.data.keyword.cloud_notm}} 的元件。
 
@@ -62,26 +62,26 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 
 **附註：**當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至資料中心時就會予以支援。
 
-## vSphere 叢集擴充節點的元件
+## vSphere 叢集擴充節點的技術規格
 
 每一個 vSphere 叢集擴充節點將部署下列元件，並在您的 {{site.data.keyword.slportal}} 帳戶中收取其費用。
 
 ### 擴充節點的硬體
 
-一部具有 [VMware vSphere on IBM Cloud 的元件](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)中所呈現之硬體配置的 IBM Cloud Bare Metal Server。
+一部具有 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的元件](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)中所呈現之硬體配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server。
 
 ### 擴充節點的網路
 
-一部具有 [VMware vSphere on IBM Cloud 的元件](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)中所呈現之網路配置的 IBM Cloud Bare Metal Server。
+一部具有 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的元件](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)中所呈現之網路配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server。
 
 ### 擴充節點的 VMware 元件
 
-* 一部具有 VMware vSphere Enterprise Plus 6.0u2 或 6.5u1 的 IBM Cloud Bare Metal Server  
-* 在 [VMware vSphere on IBM Cloud 的元件](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)中所呈現的選用 VMWare 元件。
+* 一部具有 VMware vSphere Enterprise Plus 6.0u2 或 6.5u1 的 {{site.data.keyword.cloud_notm}} Bare Metal Server。  
+* 在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的元件](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)中所呈現的選用 VMWare 元件。
 
 **重要事項**：您只能從 {{site.data.keyword.slportal}} 管理 ESXi 伺服器、選用的 VMware 元件和其他已訂購及遞送至您的 {{site.data.keyword.cloud_notm}} 帳戶中的硬體 。在 {{site.data.keyword.vmwaresolutions_short}} 主控台中建立新的叢集之後，您可以回到主控台，利用已儲存的配置來擴充新的叢集。如需相關資訊，請參閱[擴充現有 vSphere 叢集](vs_scalingexistingclusters.html)。
 
-## 相關鏈結
+### 相關鏈結
 
 * [VMware vSphere 軟體資料清單](vs_bom.html)
 * [規劃 vSphere 叢集](vs_planning.html)

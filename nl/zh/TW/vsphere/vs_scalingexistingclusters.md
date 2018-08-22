@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -30,13 +30,13 @@ lastupdated: "2018-05-08"
    * 若要將配置儲存為範本而不下訂單，請按一下**儲存配置**。
    * 若要下訂單，請確定要收費的帳戶正確，請檢閱並接受條款，然後按一下**佈建**。
 
-## 結果
+### 結果
 
 叢集擴充部署會自動啟動，且您將會收到電子郵件確認，指出正在處理該訂單。當叢集已備妥可供使用時，會透過電子郵件通知您。
 
 **附註：**vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。
 
-## 相關鏈結
+### 相關鏈結
 
 * [訂購新的 vSphere 叢集](vs_orderinginstances.html)
 * [根據現有配置來訂購 vSphere 叢集](vs_orderingbasedonexistingconfig.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -24,7 +24,6 @@ lastupdated: "2018-06-22"
 
 ## 系統設定
 
-<!--**Important: Do not modify any values that are set during ordering and cluster deployment. Doing so can result in your cluster becoming unusable.**-->
 訂購新的 vSphere 叢集時，您必須指定下列系統設定。
 
 ### 叢集名稱
@@ -187,7 +186,7 @@ lastupdated: "2018-06-22"
 
 #### FortiGate Physical Appliance 300 系列 HA 配對
 
-您也可以選取是否包括「FortiGate Physical Appliance 300 系列 HA 配對」來保護雲端環境安全。如需相關資訊，請參閱 [FortiGate Security Appliance on IBM Cloud 概觀](../services/fsa_considerations.html)。
+您也可以選取是否包括「FortiGate Physical Appliance 300 系列 HA 配對」來保護雲端環境安全。如需相關資訊，請參閱 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概觀](../services/fsa_considerations.html)。
 
 ## 訂單摘要
 
@@ -223,7 +222,7 @@ lastupdated: "2018-06-22"
 
    **附註**：僅安裝 {{site.data.keyword.baremetal_short}}。您負責在叢集部署之後安裝及配置各種元件，例如 VMware vCenter、VMware NSX、VMware vSAN。
 
-## 結果
+### 結果
 
 如果您將叢集配置儲存為範本，則會收到主控台通知，指出已順利儲存配置，然後您可以在**叢集配置**清單中找到該範本。
 
@@ -231,7 +230,7 @@ lastupdated: "2018-06-22"
 
 **附註：**vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。
 
-## 相關鏈結
+### 相關鏈結
 
 * [根據現有配置來訂購 vSphere 叢集](vs_orderingbasedonexistingconfig.html)
 * [擴充現有的叢集](vs_scalingexistingclusters.html)

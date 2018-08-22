@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -59,7 +59,7 @@ vSphere 部署對實體基礎架構有嚴格的需求。因此，您只能在符
 |WDC06 |華盛頓特區|NA 東部|
 |WDC07 |華盛頓特區|NA 東部|
 
-## 相關鏈結
+### 相關鏈結
 
 * [訂購新的 vSphere 叢集](vs_orderinginstances.html)
 * [擴充現有的叢集](vs_scalingexistingclusters.html)
