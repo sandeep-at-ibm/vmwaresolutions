@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -59,7 +59,7 @@ Cloud Foundation 和 vCenter Server 实例以及 V1.9 或更低版本中的 VMwa
 
 对于 VMware vSphere 6.0 和 VMware vCenter Server 6.0，必须将 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中的补丁（对于 vSphere，应用 ESXi600-201711101-SG、ESXi600-201803401-BG 和 ESXi600-201803402-BG；对于 vCenter Server，应用 vCenter 6.0 U3e）应用于所有 vSphere 集群和 ESXi 服务器（包括新部署的和现有的 vSphere 集群和 ESXi 服务器）。
 
-## 相关链接
+### 相关链接
 
 * [对 Cloud Foundation 实例应用更新](../sddc/sd_applyingupdates.html)
 * [防御最近的安全漏洞](https://www.ibm.com/blogs/bluemix/2018/01/ibm-cloud-spectre-meltdown-vulnerabilities/)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-05-25"
 * VMware NSX
 * VMware vSAN
 
-如果选择将自己的许可证用于 VMware 组件，并且为其提供有效的许可证密钥，那么不会向 IBM 订购此组件的许可证，并且您的 {{site.data.keyword.cloud}} 基础架构帐户每月也不会发生此组件的许可费用。
+如果选择将自己的许可证用于 VMware 组件，并且为其提供有效的许可证密钥，那么不会向 IBM 订购此组件的许可证，并且您的 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户每月也不会发生此组件的许可费用。
 
 **注**：BYOL 功能不可用于业务合作伙伴用户。
 

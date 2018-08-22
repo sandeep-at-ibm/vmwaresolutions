@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -27,78 +27,107 @@ lastupdated: "2018-06-22"
 ## 部署产品
 
 {{site.data.keyword.vmwaresolutions_short}} 提供了 VMware 虚拟环境的标准化和可定制部署选项。提供了以下部署类型：
-* **VMware vCenter Server on {{site.data.keyword.cloud_notm}}**：vCenter Server 产品支持使用定制计算、存储和网络资源来部署 VMware 虚拟环境，从而最好地适应您的业务需求。
-* **VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle**：vCenter Server with Hybridity 产品是一种托管的专用云，可帮助您快速、轻松地将内部部署基础架构扩展到云中。VMware 环境基于 IBM 提供的 VMware 软件定义的数据中心许可证，并包含 VMware Hybrid Cloud Extension (HCX)。通过使用 HCX，可以安全地将内部部署 vSphere 5.0+ 环境与 IBM Cloud 站点相连接，以实现无缝的基础架构混合和真正的应用程序移动性。
-* **VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}**：Cloud Foundation 产品使用专用于每个用户部署的标准 {{site.data.keyword.cloud_notm}} 计算、存储和网络资源，提供统一的 VMware 虚拟环境。
-* **VMware vSphere on {{site.data.keyword.cloud_notm}}**：vSphere on {{site.data.keyword.cloud_notm}} 产品提供可定制的虚拟化服务，用于组合使用与 VMware 兼容的 {{site.data.keyword.baremetal_short}}、硬件组件和许可证，以构建您自己的 IBM 托管的 VMware 环境。
-* **NetApp ONTAP Select**：NetApp ONTAP Select 产品支持部署软件定义的存储器集群，以满足基于 NetApp ONTAP Select 的专用和高可用性存储设备的需求。
-* **VMware Federal on {{site.data.keyword.cloud_notm}}**：VMware Federal on {{site.data.keyword.cloud_notm}} 产品除了提供用于确保已部署实例安全的选项、除去敏感信息以及打开用于持续访问实例以获取管理功能的管理连接外，还支持订购基本 vCenter Server 实例。
 
-## 其他服务
+### VMware vCenter Server on IBM Cloud
+
+vCenter Server 产品支持使用定制计算、存储和网络资源来部署 VMware 虚拟环境，从而最好地适应您的业务需求。
+
+有关更多信息，请参阅 [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)。
+
+### VMware vCenter Server on IBM Cloud with Hybridity Bundle
+
+vCenter Server with Hybridity 产品是一种托管的专用云，可帮助您快速、轻松地将内部部署基础架构扩展到云中。VMware 环境基于 IBM 提供的 VMware 软件定义的数据中心许可证，并包含 VMware Hybrid Cloud Extension (HCX)。通过使用 HCX，可以安全地将内部部署 vSphere 5.0+ 环境与 {{site.data.keyword.cloud_notm}} 站点相连接，以实现无缝的基础架构混合性和真正的应用程序移动性。
+
+有关更多信息，请参阅 [vCenter Server with Hybridity Bundle 概述](../vcenter/vc_hybrid_overview.html)。
+
+### VMware Cloud Foundation on IBM Cloud
+
+Cloud Foundation 产品使用专用于每个用户部署的标准 {{site.data.keyword.cloud_notm}} 计算、存储和网络资源，提供统一的 VMware 虚拟环境。
+
+有关更多信息，请参阅 [Cloud Foundation 概述](../sddc/sd_cloudfoundationoverview.html)。
+
+### VMware vSphere on IBM Cloud
+
+vSphere on {{site.data.keyword.cloud_notm}} 产品提供可定制的虚拟化服务，用于组合使用与 VMware 兼容的 {{site.data.keyword.baremetal_short}}、硬件组件和许可证，以构建您自己的 IBM 托管的 VMware 环境。
+
+有关更多信息，请参阅 [VMware vSphere on {{site.data.keyword.cloud_notm}} 概述](../vsphere/vs_vsphereclusteroverview.html)。
+
+### NetApp ONTAP Select
+
+NetApp ONTAP Select 产品支持部署软件定义的存储器集群，以满足您对基于 NetApp ONTAP Select 的专用和高可用性存储设备的需求。
+
+有关更多信息，请参阅 [NetApp ONTAP Select 概述](../netapp/np_netappoverview.html)。
+
+### VMware Federal on IBM Cloud
+
+VMware Federal on {{site.data.keyword.cloud_notm}} 产品除了提供用于确保已部署实例安全的选项、除去敏感信息以及打开用于持续访问实例以获取管理功能的管理连接外，还支持订购基本 vCenter Server 实例。
+
+有关更多信息，请参阅 [VMware Federal on {{site.data.keyword.cloud_notm}} 概述](../vcenter/vc_fed_overview.html)。
+
+## 附加组件服务
 
 {{site.data.keyword.vmwaresolutions_short}} 支持在订购实例时或在部署实例后添加各种服务。提供了以下服务：
 
+### F5 on IBM Cloud
+
+F5 on {{site.data.keyword.cloud_notm}} 服务 (F5 BIG-IP® Virtual Edition) 用于提供本地和全球规模的智能 L4-L7 负载均衡和流量管理服务、稳健的网络和 Web 应用程序防火墙保护，以及安全和联合的应用程序访问。
+
+有关更多信息，请参阅 [F5 on {{site.data.keyword.cloud_notm}} 概述](../services/f5_considerations.html)。
+
 ### FortiGate Security Appliance on IBM Cloud
 
-此服务用于部署 FortiGate Security Appliance (FSA) 300 系列设备的 HA 对，这些设备可以提供防火墙、路由、NAT 和 VPN 服务来保护环境的公用网络连接。
+FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务用于以高可用性方式部署 FortiGate Security Appliance (FSA) 300 系列设备对，以提供防火墙、路由、NAT 和 VPN 服务来保护实例公用 VLAN 上的所有服务器和虚拟机。
 
-此服务仅可用于在 V1.8 或更高发行版中部署的实例。
-
-有关更多信息，请参阅[管理 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfsa.html)。
+有关更多信息，请参阅 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概述](../services/fsa_considerations.html)。
 
 ### FortiGate Virtual Appliance on IBM Cloud
 
-此服务用于部署 FortiGate Virtual Appliance 的 HA 对，这些设备支持通过在虚拟基础架构中实施关键安全控制来降低风险。
+FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务用于将 FortiGate Virtual Appliance 成对部署到环境中，这可帮助通过在虚拟基础架构中实施关键安全控制来降低风险。
 
-此服务仅可用于在 V2.0 或更高发行版中部署的实例。
+有关更多信息，请参阅 [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 概述](../services/fortinetvm_considerations.html)。
 
-有关更多信息，请参阅[管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html)。
+### HyTrust CloudControl on IBM Cloud
 
-### F5 on IBM Cloud
+HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务根据安全标准强制实施和控制合规性，并提供详细的基于角色的访问控制 (RBAC)、核准和审计功能。与 HyTrust DataControl 组合使用时，该服务可确保虚拟机和工作负载数据不会离开 {{site.data.keyword.CloudDataCent_notm}} 内的特定区域、集群或 ESXi 服务器。
 
-此服务用于优化性能，并通过 F5 BIG-IP Virtual Edition (VE) 确保应用程序的可用性和安全性。
+有关更多信息，请参阅 [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 概述](../services/htcc_considerations.html)。
 
-此服务仅可用于在 V1.9 或更高发行版中部署的实例。
+### HyTrust DataControl on IBM Cloud
 
-有关更多信息，请参阅[管理 F5 on {{site.data.keyword.cloud_notm}}](../services/managing_f5.html)。
+HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服务通过集成密钥管理提供高强度加密功能，以确保工作负载在整个生命周期中的安全。此服务可以提供操作系统级别和数据级别的加密，这意味着可以对工作负载中的任何目录、文件夹或文件进行加密和解密。
+
+有关更多信息，请参阅 [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概述](../services/hdcc_considerations.html)。
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-此服务用于在虚拟环境下为数据保护、数据复用和数据恢复提供高效的可扩展解决方案。可以将此服务作为独立解决方案实施，也可以与 IBM Spectrum Protect&trade; Plus 环境集成，以便卸载用于长期存储和数据监管的副本。
+IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服务为虚拟环境的数据保护、数据复用和数据恢复提供高效、可扩展的解决方案。可以将此服务作为独立解决方案实施，也可以与 IBM Spectrum Protect 环境集成，以便卸载用于长期存储和数据监管的副本。
 
-**注**：
-* 此服务仅可用于部署在（或已升级到）V2.2 或更高发行版中的实例。
-* 对于在 V2.3 或更高发行版中部署的实例，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 自动提供管理 VM 的备份。
-* 对于在 V2.2 中部署的实例，此服务仅为工作负载 VM 提供数据保护。
+有关更多信息，请参阅 [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 概述](../services/spp_considerations.html)。
 
-有关更多信息，请参阅[管理 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/managingspp.html)。
+### KMIP for VMware on IBM Cloud
+
+KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务用于提供全天候高可用性服务，以管理 {{site.data.keyword.cloud_notm}} 中 VMware 使用的加密密钥。此服务提供了运行时功能，以支持客户创建、检索、激活、撤销和销毁加密密钥。还提供了管理功能，以维护客户机凭证与加密密钥之间的关联。
+
+有关更多信息，请参阅 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 概述](../services/kmip_considerations.html)。
 
 ### Veeam on IBM Cloud
 
-此服务与 VMware 环境无缝集成，以帮助管理环境中所有虚拟机 (VM) 的备份和复原，包括备份和复原管理组件。它可以在数据配置完成后的 15 分钟之内提供恢复点目标 (RPO)。
+Veeam on {{site.data.keyword.cloud_notm}} 服务可与 VMware 系统管理程序无缝集成，以帮助企业实现高可用性。此服务可为应用程序和数据提供恢复点和时间目标。在完成配置后的 15 分钟内就会提供恢复点和时间目标。通过使用此服务，您可以在 Veeam 控制台中直接控制基础架构的所有虚拟机的备份和复原。
 
-此服务配置为在部署实例后立即备份管理 VM。
+有关更多信息，请参阅 [Veeam on {{site.data.keyword.cloud_notm}} 概述](../services/veeam_considerations.html)。
 
-此服务仅可用于在 V1.8 或更高发行版中部署的实例。
+### VMware HCX on IBM Cloud
 
-有关更多信息，请参阅[管理 Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)。
+HCX on {{site.data.keyword.cloud_notm}} 服务可以将内部部署数据中心的网络无缝扩展到 {{site.data.keyword.cloud_notm}}，这允许虚拟机 (VM) 在不进行任何转换或更改的情况下，迁移到 {{site.data.keyword.cloud_notm}} 或从中迁移出来。
+
+有关更多信息，请参阅 [VMware HCX on {{site.data.keyword.cloud_notm}} 概述](../services/hcx_considerations.html)。
 
 ### Zerto on IBM Cloud
 
-此服务用于提供复制和灾难恢复功能，以帮助保护工作负载。有关更多信息，请参阅[管理 Zerto on {{site.data.keyword.cloud_notm}}](../services/managingzertodr.html)。
+Zerto on {{site.data.keyword.cloud_notm}} 服务用于提供复制和灾难恢复功能，这些功能可以集成到部署产品中，以保护和恢复 {{site.data.keyword.cloud_notm}} 上 VMware 虚拟环境中的数据。
 
-### IMI 中的受管服务
+有关更多信息，请参阅 [Zerto on {{site.data.keyword.cloud_notm}} 概述](../services/addingzertodr.html)。
 
-通过这些服务，IBM Integrated Managed Infrastructure (IMI) 可以针对广泛的各种云基础架构提供动态远程管理服务。
-
-这些服务仅可用于 Cloud Foundation 实例。
-
-有关更多信息，请参阅[向 IMI 请求受管服务](../services/managing_imi.html)。
-
-## 相关链接
+### 相关链接
 
 * [入门](../index.html)
-* [Cloud Foundation 概述](../sddc/sd_cloudfoundationoverview.html)
-* [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)
-* [vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_planning.html)
-* [NetApp ONTAP Select](../netapp/np_netappoverview.html)

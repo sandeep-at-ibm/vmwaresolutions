@@ -30,13 +30,13 @@ lastupdated: "2017-01-23"
 
 NSX Edge 现在包含在要订购的新 Cloud Foundation 实例中。NSX Edge 提供网络边缘安全性和网关服务，以隔离虚拟化网络。
 
-在实例部署期间，IBM 会部署“管理 NSX Edge 服务网关 (ESG)”。IBM 管理虚拟机使用此 ESG 与自动化相关的特定外部 IBM 管理组件进行通信。此 ESG 部署为包含两个接口：一个接口连接到 IBM Cloud 专用 VLAN，另一个接口连接到 IBM Cloud 公用 VLAN。
+在实例部署期间，IBM 会部署“管理 NSX Edge 服务网关 (ESG)”。IBM 管理虚拟机使用此 ESG 与自动化相关的特定外部 IBM 管理组件进行通信。此 ESG 部署为包含两个接口：一个接口连接到 {{site.data.keyword.cloud_notm}} 专用 VLAN，另一个接口连接到 {{site.data.keyword.cloud_notm}} 公用 VLAN。
 
 为了确保安全性，采用了防火墙规则，以仅允许由管理虚拟机发起的出站 HTTPS 通信。此 ESG 部署在大型配置中，只有 IBM 支持人员才能修改该配置。
 
 有关更多信息，请参阅：
 
-* [Cloud Foundation 实例组件](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)
+* [Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [管理服务 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [VMware NSX 文档](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 

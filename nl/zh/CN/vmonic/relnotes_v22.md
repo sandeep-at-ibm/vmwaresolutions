@@ -108,7 +108,7 @@ VMware Federal on {{site.data.keyword.cloud_notm}} 支持在 {{site.data.keyword
 
 ### 增加了用于高容量 IBM Cloud 裸机服务器的 SATA 驱动器数
 
-现在，有 34 个 SATA 驱动器可用于 NetApp ONTAP Select 高容量 {{site.data.keyword.baremetal_short}}。有关更多信息，请参阅 [NetApp ONTAP Select 概述](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components)中的 *NetApp ONTAP Select 实例组件*部分。
+现在，有 34 个 SATA 驱动器可用于 NetApp ONTAP Select 高容量 {{site.data.keyword.baremetal_short}}。有关更多信息，请参阅 [NetApp ONTAP Select 实例的技术规范](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)。
 
 ## 对附加组件服务的更新
 

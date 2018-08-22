@@ -29,7 +29,7 @@ lastupdated: "2017-05-22"
 
 从 V1.6 发行版开始，有多项增强功能可用于 vCenter Server 实例。
 
-*  完整实现了针对 vCenter Server 产品的 V2.0 规范。有关更多信息，请参阅 [VMware vCenter Server on IBM Cloud 解决方案体系结构](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0)。
+*  完整实现了针对 vCenter Server 产品的 V2.0 规范。有关更多信息，请参阅 [VMware vCenter Server on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0)。
 *  新的硬件规范：**小型**、**中型**或**大型**，具体取决于您的需求。
 *  可用于部署的新数据中心：**HKG02 - 中国香港特别行政区**、**OSL01 - 奥斯陆**、**SEO01 - 首尔**、**SNG01 - 新加坡**和 **SYD04 - 悉尼**。
 *  实例订单中至少两个 ESXi 服务器，并且缺省情况下已启用 VMware vSphere DRS（分布式资源调度程序）和 VMware HA（高可用性）。

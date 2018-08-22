@@ -24,7 +24,7 @@ lastupdated: "2018-05-28"
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
-本发行版引入了 VMware vCenter Server on IBM Cloud with Hybridity Bundle 产品。vCenter Server with Hybridity Bundle 是一种托管的专用云，可帮助您快速、轻松地将内部部署基础架构扩展到云中。VMware 环境基于 IBM 提供的 VMware 软件定义的数据中心许可证，并包含 VMware HCX on {{site.data.keyword.cloud_notm}} 服务，该服务可以轻松、安全地将内部部署 vSphere 5.0+ 环境与 IBM Cloud 站点相连接，以实现无缝的基础架构混合和真正的应用程序移动性。
+本发行版引入了 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 产品。vCenter Server with Hybridity Bundle 是一种托管的专用云，可帮助您快速、轻松地将内部部署基础架构扩展到云中。VMware 环境基于 IBM 提供的 VMware 软件定义的数据中心许可证，并包含 VMware HCX on {{site.data.keyword.cloud_notm}} 服务，该服务可以轻松、安全地将内部部署 vSphere 5.0+ 环境与 {{site.data.keyword.cloud_notm}} 站点相连接，以实现无缝的基础架构混合性和真正的应用程序移动性。
 
 HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybridity Bundle 实例提供。在第一次应用基本 vCenter Server V2.3 软件更新之后，可以将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例。有关更多信息，请参阅[对 vCenter Server 实例应用更新](../vcenter/vc_applyingupdates.html)。
 
@@ -94,8 +94,8 @@ HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybr
 您可以在订购实例时订购包含此服务的实例，也可以日后向现有实例添加此服务。
 
 有关更多信息，请参阅：
-* [HyTrust CloudControl on IBM Cloud 的组件和注意事项](../services/htcc_considerations.html)
-* [管理 HyTrust CloudControl on IBM Cloud](../services/managinghtcc.html)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 的组件和注意事项](../services/htcc_considerations.html)
+* [管理 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/managinghtcc.html)
 
 ### HyTrust DataControl on IBM Cloud
 
@@ -104,8 +104,8 @@ HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybr
 您可以在订购实例时订购包含此服务的实例，也可以日后向现有实例添加此服务。
 
 有关更多信息，请参阅：
-* [HyTrust DataControl on IBM Cloud 的组件和注意事项](../services/htdc_considerations.html)
-* [管理 HyTrust DataControl on IBM Cloud](../services/managinghtdc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 的组件和注意事项](../services/htdc_considerations.html)
+* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -118,8 +118,8 @@ HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybr
 ## 用户界面更新和增强功能
 
 用户界面已更新，并提供了以下增强功能：
-* **一致性**：现在，用户界面的外观与 IBM Cloud 上的其他服务一致。
-* **轻松访问**：现在，可以直接在 IBM Cloud **目录**中访问 VMware 产品。
+* **一致性**：现在，用户界面的外观与 {{site.data.keyword.cloud_notm}} 上的其他服务一致。
+* **轻松访问**：现在，可以直接在 {{site.data.keyword.cloud_notm}} **目录**中访问 VMware 产品。
 * **精简优化的订购体验**：现在，只要在一个界面中就能完成订购 VMware 实例和部署其附加组件服务。此外，计算了估算成本后，该成本会立即在同一界面中显示，以便您可以根据成本计划来调整配置。
 * 订购实例或添加集群时，自带许可证 (BYOL) 选项对于业务合作伙伴用户不可用。
 * 提供了各种错误消息和工具提示增强功能，以帮助您在用户界面上选择适当的设置。

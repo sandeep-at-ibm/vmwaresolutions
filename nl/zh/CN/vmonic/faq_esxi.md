@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -39,7 +39,7 @@ lastupdated: "2018-05-29"
 
 不能更改 ESXi 服务器名称和 IP 地址，因为这些名称和 IP 地址已注册用于 Windows DNS 解析。更改可能会导致部署期间发生故障或 vCenter Server 功能发生故障。
 
-**注**：不要使用 IBM Cloud 用户界面上的**重命名设备**功能来更改 ESXi 服务器名称。此功能确实会更改 ESXi 服务器的 FQDN，但配置的 vCenter Center 和 Windows VSI 主机注册将不正确，并可能导致故障。
+**注**：不要使用 {{site.data.keyword.cloud_notm}} 用户界面上的**重命名设备**功能来更改 ESXi 服务器名称。此功能确实会更改 ESXi 服务器的 FQDN，但配置的 vCenter Center 和 Windows VSI 主机注册将不正确，并可能导致故障。
 
 ## 可以禁用 ESXi 服务器上的 root 用户访问权吗？
 

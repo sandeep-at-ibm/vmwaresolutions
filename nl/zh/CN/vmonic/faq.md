@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-28"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -14,12 +14,13 @@ lastupdated: "2018-05-28"
 
 ## 我需要将哪些用户帐户用于 IBM Cloud for VMware Solutions？
 
-* **IBM 标识帐户**。需要此帐户才能访问 {{site.data.keyword.vmwaresolutions_short}} 控制台。控制台是与 {{site.data.keyword.slportal_full}} 分开的独立用户界面。有关更多信息，请参阅[入门](../index.html)。
-* **{{site.data.keyword.cloud_notm}} 帐户**。需要此帐户才能进行供应。您可以通过将 **IBM 标识帐户**升级到现买现付帐户来注册 {{site.data.keyword.cloud_notm}} 帐户。要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅[注册 {{site.data.keyword.cloud_notm}} 帐户](signing_softlayer_account.html)和 [{{site.data.keyword.cloud_notm}} 帐户需求](slaccountrequirement.html)。
+* **IBM 标识帐户**。需要此帐户才能访问 {{site.data.keyword.vmwaresolutions_short}} 控制台。控制台是与 {{site.data.keyword.slportal}} 分开的独立用户界面。有关更多信息，请参阅[入门](../index.html)。
+* **{{site.data.keyword.cloud_notm}} 帐户**。需要此帐户才能进行供应。您可以使用现有 **IBM 标识**或创建新的 **IBM 标识**来注册 {{site.data.keyword.cloud_notm}} 帐户。 
+* **{{site.data.keyword.cloud_notm}} 基础架构帐户**。此帐户先前称为 **IBM SoftLayer** 帐户，用于登录到 {{site.data.keyword.cloud_notm}} 基础架构客户门户网站，该门户网站提供了某种额外的功能来管理基础架构产品和服务。您可以通过将 **{{site.data.keyword.cloud_notm}} 帐户**升级到现买现付类型的帐户，或通过将现有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户与 {{site.data.keyword.cloud_notm}} 帐户链接，获取 {{site.data.keyword.cloud_notm}} 基础架构帐户。要使用的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须满足特定需求。有关更多信息，请参阅[注册必需的帐户](signing_softlayer_account.html)和 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](slaccountrequirement.html)。
 
 ## 如何将我的 IBM Cloud Infrastructure 凭证与 IBM Cloud for VMware Solutions 控制台相关联？
 
-首次订购实例时，请遵循 {{site.data.keyword.cloud_notm}} 基础架构凭证页面上的指示信息，在 {{site.data.keyword.slportal}} 中查找并复制 {{site.data.keyword.cloud_notm}} 用户名和 API 密钥。首次订购后，{{site.data.keyword.cloud_notm}} 基础架构凭证会存储在 {{site.data.keyword.vmwaresolutions_short}} 控制台中。未来订购时会自动使用存储的凭证。
+首次订购实例时，请遵循控制台中**设置**页面上的指示信息，在 {{site.data.keyword.slportal}} 中查找并复制 {{site.data.keyword.cloud_notm}} 基础架构用户名和 API 密钥。首次订购后，{{site.data.keyword.cloud_notm}} 基础架构凭证会存储在 {{site.data.keyword.vmwaresolutions_short}} 控制台中。未来订购时会自动使用存储的凭证。
 
 ## 如何对我的 VMware 虚拟平台使用量计费？
 
@@ -29,21 +30,21 @@ lastupdated: "2018-05-28"
 
 所有实例类型都会为 VMware 虚拟环境提供部署选项。但是，差别在于可定制和自动化程度。
 
-* 订购 VMware vCenter Server 实例时，部署的是具有定制计算、存储和网络资源的 VMware 虚拟环境。有关所部署组件的更多信息，请参阅 [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)中的 _vCenter Server 技术规范_部分。
-* 订购 VMware Cloud Foundation 实例时，部署的是统一软件定义数据中心 (SDDC) 平台。有关所部署组件的更多信息，请参阅 [Cloud Foundation 实例组件](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)。
+* 订购 VMware vCenter Server 实例时，部署的是具有定制计算、存储和网络资源的 VMware 虚拟环境。有关部署的组件的更多信息，请参阅 [vCenter Server 实例的技术规范](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
+* 订购 VMware Cloud Foundation 实例时，部署的是统一软件定义数据中心 (SDDC) 平台。有关部署的组件的更多信息，请参阅 [Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 * 订购 VMware vSphere 集群时，您在合并与 VMware 兼容的硬件时，将有最大的灵活性来设计和构建托管的 VMware 环境。但是，{{site.data.keyword.cloud_notm}} 不会自动为 VMware vSphere 集群安装、配置和启动可选 VMware 组件。
 * vCenter Server 实例、Cloud Foundation 实例和 vSphere 集群支持的功能不同。有关更多信息，请参阅[产品比较图表](inst_comp_chart.html)。
 
 ## vCenter Server 实例中包含哪些内容？
 
-有关更多信息，请参阅 [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)中的 _vCenter Server 技术规范_部分。
+有关更多信息，请参阅 [vCenter Server 实例的技术规范](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
 
 ## Cloud Foundation 实例中包含哪些内容？
 
-有关更多信息，请参阅 [Cloud Foundation 实例组件](../sddc/sd_cloudfoundationoverview.html)。
+有关更多信息，请参阅 [Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 
 ## vSphere 集群中包含哪些内容？
-有关更多信息，请参阅 [VMware vSphere on IBM Cloud 的组件](../vsphere/vs_vsphereclusteroverview.html)。
+有关更多信息，请参阅 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的组件](../vsphere/vs_vsphereclusteroverview.html)。
 
 ## 双节点 vCenter Server 实例具有高可用性吗？
 
@@ -106,7 +107,7 @@ IBM 提供对 IBM CloudDriver 组件的持续更新，这些更新通过 {{site.
 * [针对 vCenter Server 实例的需求和规划](../vcenter/vc_planning.html)
 * [针对 vCenter Server with Hybridity Bundle 实例的需求和规划](../vcenter/vc_hybrid_planning.html)
 * [针对 Cloud Foundation 实例的需求和规划](../sddc/sd_planning.html)
-* [针对 VMware vSphere on IBM Cloud 的需求和规划](../vsphere/vs_planning.html)
+* [针对 VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求和规划](../vsphere/vs_planning.html)
 * [针对 NetApp ONTAP Select 实例的需求和规划](../netapp/np_planning.html)
 * [针对 VMware Federal 实例的需求和规划](../vcenter/vc_fed_planning.html)
 
