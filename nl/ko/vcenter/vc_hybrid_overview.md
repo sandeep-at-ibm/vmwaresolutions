@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -16,13 +16,11 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle은 VM
 
 대부분의 경우 전체 환경은 하루 내에 프로비저닝할 수 있으며, 베어메탈 인프라는 필요에 따라 신속하고 탄력적으로 컴퓨팅 용량을 늘리거나 줄이도록 스케일링할 수 있습니다.
 
-<!--Post-deployment, you can increase shared storage by ordering additional NFS (Network File System) file shares from the  {{site.data.keyword.slportal}} and manually attach them across all ESXi servers in a cluster. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.-->
-
 vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 후 더 많은 ESXi 서버를 추가할 수 있습니다.
 
 사용자는 VMware NSX Advanced 에디션을 Enterprise 에디션으로 업그레이드할 수 있으며, VMware vRealize Operations와 같은 추가 VMware 컴포넌트를 구매할 수 있습니다.
 
-가상화, 게스트 OS 또는 애플리케이션 계층의 일일 오퍼레이션 및 유지보수를 오프로드하려면 IBM Managed Services를 추가할 수 있습니다. 또한 IBM Cloud Professional Services 팀은 마이그레이션, 구현, 계획 및 온보딩 서비스를 통해 클라우드로 빨리 전환할 수 있도록 지원합니다.
+가상화, 게스트 OS 또는 애플리케이션 계층의 일일 오퍼레이션 및 유지보수를 오프로드하려면 IBM Managed Services를 추가할 수 있습니다. 또한 {{site.data.keyword.cloud_notm}} Professional Services 팀을 활용하면 마이그레이션, 구현, 계획 및 온보딩 서비스를 사용하여 클라우드로의 이동 속도를 높이는 데 도움이 됩니다.
 
 ## vCenter Server with Hybridity Bundle 아키텍처
 
@@ -45,35 +43,31 @@ vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 
 
 ### 가상화 관리
 
-이 계층은 vCSA(vCenter Server Appliance), NSX Manager, 두 개의 NSX ESG, 세 개의 NSX Controller, PSC(Platform Services Controller) 가상 어플라이언스 및 IBM CloudDriver 가상 머신으로 구성됩니다.
+이 계층은 vCenter Server Appliance(vCSA), NSX Manager, 2개의 NSX ESG, 3개의 NSX Controller, PSC(Platform Services Controller) 가상 어플라이언스 및 IBM CloudDriver VSI(Virtual Server Instance)로 구성됩니다. CloudDriver VSI는 환경에 호스트 추가 등과 같은 특정 오퍼레이션에 필요하면 요청 시에 배치됩니다. 
 
 기본 오퍼링은 최대 400개의 호스트와 최대 4000개의 VM이 포함된 환경을 지원하도록 크기가 조정된 vCenter Server 어플라이언스로 배치됩니다. 동일한 vSphere API 호환 도구 및 스크립트는 IBM 호스팅 VMware 환경을 관리하는 데 사용될 수 있습니다.
 
 기본 오퍼링에는 가상화 관리 계층에 대해 예약된 총 38개의 vCPU와 67GB vRAM이 필요합니다. VM에 남아 있는 호스트 용량은 초과 구독 비율, VM 크기 조정 및 워크로드 성능 요구사항과 같은 여러 요인에 따라 달라집니다.
 
-HCX on {{site.data.keyword.cloud_notm}} 서비스 배치 시의 추가 관리 리소스 요구사항은 [VMware HCX on {{site.data.keyword.cloud_notm}} 개요](../services/hcx_considerations.html)를 참조하십시오. 
+HCX on {{site.data.keyword.cloud_notm}} 서비스 배치 시의 추가 관리 리소스 요구사항은 [VMware HCX on {{site.data.keyword.cloud_notm}} 개요](../services/hcx_considerations.html)를 참조하십시오.
 
 ### 인프라 하이브리드
 
 이 계층은 사용자가 해당 IP 주소와 같은 VM 특성을 변경할 필요 없이 안전하고 쉽게 워크로드를 여기저기로 이동할 수 있도록 온프레미스 사이트와 {{site.data.keyword.cloud_notm}} 사이트 간 리소스의 추상화를 제공합니다.
 
-VMware Hybrid Cloud Extension(HCX)에 따라 온프레미스와 IBM Cloud 사이트 간에 느슨하게 결합된 상호연결을 작성하여 작동 중단 없이 VM의 대량 마이그레이션 또는 VM의 실시간 vMotion을 사용할 수 있습니다.
+VMware HCX(Hybrid Cloud Extension)를 기반으로, 온프레미스 및 {{site.data.keyword.cloud_notm}} 사이트 간에 느슨하게 결합된 상호연결을 작성하여 작동 중단 없는 VM의 라이브 vMotion 또는 VM의 대량 마이그레이션을 사용할 수 있습니다. 
 
-## vCenter Server with Hybridity Bundle 기술 스펙
+## vCenter Server with Hybridity Bundle 인스턴스의 기술 스펙
 
 vCenter Server with Hybridity Bundle 인스턴스에는 다음 컴포넌트가 포함됩니다.
 
-**참고:** 표준화된 하드웨어 구성의 가용성 및 가격 책정은 배치에 선택된 {{site.data.keyword.CloudDataCent}}에 따라 달라질 수 있습니다.
+**참고:** 표준화된 하드웨어 구성의 가용성 및 가격 책정은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
 
 ### Bare Metal Server
 
 vCenter Server with Hybridity Bundle 인스턴스 주문에는 4개의 사용자 정의된 {{site.data.keyword.baremetal_short}}가 포함됩니다. 다음 CPU 모델이 사용 가능합니다.
   * 2CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
   * 2CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
-
-<!--For NFS storage configuration, the recommended number of {{site.data.keyword.baremetal_short}} is set to the default of three.
-
-**Note:** If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.-->
 
 ### 네트워킹
 
@@ -93,7 +87,7 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스를 배치할 때 주문된 네
 
 다음 VSI(Virtual Server Instance)가 주문됩니다.
 * 인스턴스 배치가 완료된 후 시스템이 종료되는 IBM CloudBuilder용 VSI
-* 보안 및 강력한 추진력 향상을 위해 하나의 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI 또는 관리 클러스터에 있는 두 개의 고가용성 Microsoft Windows VM을 배치하도록 선택할 수 있습니다. 또한 Veeam 서비스를 사용하여 VM을 백업하고 복원하는 옵션이 있습니다.
+* 보안 및 강력한 추진력 향상을 위해 하나의 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI 또는 관리 클러스터에 있는 두 개의 고가용성 Microsoft Windows VM을 배치하도록 선택할 수 있습니다.
 
 ### 스토리지
 
@@ -109,12 +103,12 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 라이센�
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition(Advanced 또는 Enterprise) 6.3
+* VMware NSX Service Providers Edition(Advanced 또는 Enterprise) 6.4
 * VMware vSAN(Advanced 또는 Enterprise) 6.6
 
 추가 지원 및 서비스 요금이 적용될 수 있습니다.
 
-## vCenter Server with Hybridity Bundle 확장 노드 컴포넌트
+## vCenter Server with Hybridity Bundle 확장 노드의 기술 스펙
 
 각 vCenter Server with Hybridity Bundle 확장 노드는 사용자의 {{site.data.keyword.cloud_notm}} 계정에 배치되며 다음 컴포넌트에 대한 비용을 발생시킵니다.
 
@@ -125,11 +119,12 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 라이센�
 ### 확장 노드의 라이센스 및 요금
 
 * 하나의 VMware vSphere Enterprise Plus 6.5u1
-* 하나의 VMware NSX Service Providers Edition(Advanced 또는 Enterprise) 6.3
+* 하나의 VMware NSX Service Providers Edition(Advanced 또는 Enterprise) 6.4
 * 하나의 지원 및 서비스 요금
 * VMware vSAN(Advanced 또는 Enterprise) 6.6
 
-**중요**: {{site.data.keyword.slportal_full}} 또는 콘솔 외부의 다른 방법이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔의 {{site.data.keyword.cloud_notm}} 계정에서만 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+**중요**: {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
+{{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
 
 **주의**: 인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거
@@ -139,7 +134,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 라이센�
 
    이 활동에 대한 예외에는 {{site.data.keyword.slportal}}의 공유 스토리지 파일 공유 관리가 포함됩니다. 이러한 활동에는 공유 스토리지 파일 공유 주문, 삭제(마운트된 경우 데이터 저장소에 영향을 줄 수 있음), 권한 부여 및 마운트가 포함됩니다.
 
-## 관련 링크
+### 관련 링크
 
 * [vCenter Server 소프트웨어 명세서](vc_bom.html)
 * [vCenter Server with Hybridity Bundle 인스턴스에 대한 요구사항 및 계획](vc_hybrid_planning.html)

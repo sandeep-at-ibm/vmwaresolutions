@@ -34,7 +34,7 @@ vCenter Server 인스턴스를 삭제하는 경우 다음 컴포넌트가 순차
 6. 다중 사이트 구성에서 모든 보조 vCenter Server 인스턴스에 대한 1 - 5단계를 반복하십시오.
 7. 모든 보조 인스턴스를 삭제한 후 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 기본 인스턴스도 삭제할 수 있습니다.
 
-## 관련 링크
+### 관련 링크
 
 * [vCenter Server 인스턴스 삭제](vc_deletinginstance.html)
 * [vCenter Server 인스턴스에서 서비스 주문, 보기 및 제거](vc_addingremovingservices.html)

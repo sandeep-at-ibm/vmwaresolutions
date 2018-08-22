@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -14,13 +14,13 @@ VMware vCenter Server on {{site.data.keyword.cloud}}는 서비스로 VMware vSph
 
 대부분의 경우 전체 환경은 하루 내에 프로비저닝할 수 있으며, 베어메탈 인프라는 필요에 따라 신속하고 탄력적으로 컴퓨팅 용량을 늘리거나 줄이도록 스케일링할 수 있습니다.
 
-배치 후 {{site.data.keyword.slportal}}에서 추가 NFS(Network File System) 파일 공유를 주문하여 공유 스토리지를 늘릴 수 있고 클러스터의 모든 ESXi 서버에서 해당 파일 공유를 수동으로 연결할 수 있습니다. 전용 스토리지가 필요한 경우 [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html)가 고성능(모든 SSD) 및 고용량(모든 SATA) 구성 모두에 제공됩니다.
+배치 후 {{site.data.keyword.slportal}}에서 추가 NFS(Network File System) 파일 공유를 주문하여 공유 스토리지를 늘릴 수 있고 클러스터의 모든 ESXi 서버에서 해당 파일 공유를 수동으로 연결할 수 있습니다. 전용 스토리지가 필요한 경우, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html)가 고성능(모두 SSD) 및 고용량(모두 SATA) 구성 모두에서 제공됩니다. 
 
 또한 VMware vSAN은 전용 스토리지 옵션으로도 사용할 수 있습니다. vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 후 더 많은 ESXi 서버를 추가할 수 있습니다.
 
 IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을 Advanced 또는 Enterprise 에디션으로 업그레이드할 수 있고 VMware vRealize Operations와 같은 추가 VMware 컴포넌트를 구매할 수 있습니다.
 
-가상화, 게스트 OS 또는 애플리케이션 계층의 일일 오퍼레이션 및 유지보수를 오프로드하려면 IBM Managed Services를 추가할 수 있습니다. 또한 IBM Cloud Professional Services 팀은 마이그레이션, 구현, 계획 및 온보딩 서비스를 통해 클라우드로 빨리 전환할 수 있도록 지원합니다.
+가상화, 게스트 OS 또는 애플리케이션 계층의 일일 오퍼레이션 및 유지보수를 오프로드하려면 IBM Managed Services를 추가할 수 있습니다. 또한 {{site.data.keyword.cloud_notm}} Professional Services 팀을 활용하면 마이그레이션, 구현, 계획 및 온보딩 서비스를 사용하여 클라우드로의 이동 속도를 높이는 데 도움이 됩니다. 
 
 ## vCenter Server 아키텍처
 
@@ -42,15 +42,15 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 
 ### 가상화 관리
 
-이 계층은 vCSA(vCenter Server Appliance), NSX Manager, 두 개의 NSX ESG, 세 개의 NSX Controller, PSC(Platform Services Controller) 가상 어플라이언스 및 IBM CloudDriver 가상 머신으로 구성됩니다.
+이 계층은 vCenter Server Appliance(vCSA), NSX Manager, 2개의 NSX ESG, 3개의 NSX Controller, PSC(Platform Services Controller) 가상 어플라이언스 및 IBM CloudDriver VSI(Virtual Server Instance)로 구성됩니다. CloudDriver VSI는 환경에 호스트 추가 등과 같은 특정 오퍼레이션에 필요하면 요청 시에 배치됩니다. 
 
 기본 오퍼링은 최대 400개의 호스트와 최대 4000개의 VM이 포함된 환경을 지원하도록 크기가 조정된 vCenter Server 어플라이언스로 배치됩니다. 동일한 vSphere API 호환 도구 및 스크립트는 IBM 호스팅 VMware 환경을 관리하는 데 사용될 수 있습니다.
 
 기본 오퍼링에는 가상화 관리 계층에 대해 예약된 총 38개의 vCPU와 67GB vRAM이 필요합니다. VM에 남아 있는 호스트 용량은 초과 구독 비율, VM 크기 조정 및 워크로드 성능 요구사항과 같은 여러 요인에 따라 달라집니다.
 
-아키텍처에 대한 세부사항은 [{{site.data.keyword.vmwaresolutions_full}} 아키텍처 참조](../archiref/solution/solution_overview.html)를 참조하십시오. 
+아키텍처에 대한 세부사항은 [{{site.data.keyword.vmwaresolutions_short}} 아키텍처 참조](../archiref/solution/solution_overview.html)를 참조하십시오.
 
-## vCenter Server 기술 스펙
+## vCenter Server 인스턴스의 기술 스펙
 
 다음 컴포넌트는 vCenter Server 인스턴스에 포함됩니다.
 
@@ -106,34 +106,33 @@ NFS 옵션은 크기 및 성능에 대한 다양한 옵션을 포함하여 워�
 * 성능: 2, 4 또는 10IOPS/GB.
 * 파일 공유의 개별 구성
 
-NFS 옵션을 선택한 경우 다음 파일 공유가 주문됩니다.
-* 관리 컴포넌트용 한 개의 2TB, 4IOPS/GB 파일 공유
-* 최대 12TB까지 스케일링할 수 있는 백업용 하나의 2TB 공유 블록 레벨 스토리지. 백업 서비스를 선택하여 백업용 스토리지의 사용 여부를 선택할 수 있습니다.
+NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 및 4 IOPS/GB 파일 공유가 주문됩니다. 
 
 ### 라이센스(IBM 제공 또는 BYOL) 및 요금
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.3
+* VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4
 * (vSAN 클러스터의 경우) VMware vSAN Advanced 또는 Enterprise 6.6
 * 지원 및 서비스 요금(노드당 한 개의 라이센스)
 
-## vCenter Server 확장 노드 컴포넌트
+## vCenter Server 확장 노드의 기술 스펙
 
 각 vCenter Server 확장 노드가 배치되고 {{site.data.keyword.cloud_notm}} 계정에서 다음 컴포넌트에 대한 비용이 발생합니다.
 
 ### 확장 노드를 위한 하드웨어
 
-[vCenter Server 개요](vc_vcenterserveroverview.html)의 _vCenter Server 기술 스펙_ 섹션에 제시된 구성을 포함하는 하나의 Bare Metal Server.
+[vCenter Server 인스턴스의 기술 스펙](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)에 제시된 구성을 지닌 하나의 Bare Metal Server. 
 
 ### 확장 노드의 라이센스 및 요금
 
 * 하나의 VMware vSphere Enterprise Plus 6.5u1
-* 하나의 VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.3
+* 하나의 VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4
 * 하나의 지원 및 서비스 요금
 * (vSAN 클러스터의 경우) VMware vSAN Advanced 또는 Enterprise 6.6
 
-**중요**: {{site.data.keyword.slportal_full}} 또는 콘솔 외부의 다른 방법이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔의 {{site.data.keyword.cloud_notm}} 계정에서만 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+**중요**: {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
+{{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
 
 **주의**: 인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거
@@ -143,7 +142,7 @@ NFS 옵션을 선택한 경우 다음 파일 공유가 주문됩니다.
 
    이 활동에 대한 예외에는 {{site.data.keyword.slportal}}의 공유 스토리지 파일 공유 관리가 포함됩니다. 이러한 활동에는 공유 스토리지 파일 공유 주문, 삭제(마운트된 경우 데이터 저장소에 영향을 줄 수 있음), 권한 부여 및 마운트가 포함됩니다.
 
-## 관련 링크
+### 관련 링크
 
 * [vCenter Server 소프트웨어 명세서](vc_bom.html)
 * [vCenter Server 인스턴스 계획](vc_planning.html)

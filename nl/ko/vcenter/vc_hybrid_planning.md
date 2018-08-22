@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -14,7 +14,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 인�
 
 ## IBM Cloud 계정 요구사항
 
-사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](../vmonic/slaccountrequirement.html)을 참조하십시오. 
+사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](../vmonic/slaccountrequirement.html)을 참조하십시오.
 
 ## IBM Cloud Data Center 가용성
 
@@ -22,7 +22,7 @@ vCenter Server with Hybridity Bundle 배치에는 실제 인프라에 대한 엄
 
 표 1. vCenter Server with Hybridity Bundle 인스턴스에 사용 가능한 {{site.data.keyword.CloudDataCents_notm}}
 
-|IBM Cloud Data Center |위치 |지역 |
+| {{site.data.keyword.CloudDataCent_notm}} |위치 |지역 |
 |:-----|:----------------|
 |AMS03 |암스테르담 |유럽 |
 |CHE01 |첸나이 |아시아 태평양 |
@@ -55,7 +55,7 @@ vCenter Server with Hybridity Bundle 배치에는 실제 인프라에 대한 엄
 |WDC06 |워싱턴, DC |북미 동부 |
 |WDC07 |워싱턴, DC |북미 동부 |
 
-가용성 및 자원 명세 제공에 따라 {{site.data.keyword.CloudDataCents_notm}}는 {{site.data.keyword.vmwaresolutions_full}} 콘솔에 상태 표시기를 표시하여 배치를 계획할 수 있습니다.
+가용성 및 자원 명세 제공에 따라 {{site.data.keyword.CloudDataCents_notm}}는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 상태 표시기를 표시하여 배치를 계획할 수 있습니다.
 
 표 2. vCenter Server with Hybridity Bundle 인스턴스 주문 시 {{site.data.keyword.CloudDataCents_notm}}에 대한 상태 표시기
 
@@ -65,9 +65,13 @@ vCenter Server with Hybridity Bundle 배치에는 실제 인프라에 대한 엄
 |임시적으로 사용 불가능  |{{site.data.keyword.CloudDataCent_notm}}에는 현재 가용성이 없습니다. |
 |제한된 자원 명세             |{{site.data.keyword.CloudDataCent_notm}}에는 제한된 가용성이 있으며 주문이 완료되지 않을 수 있습니다. |
 
+## 관리 컴포넌트의 백업
+
+사용자는 모든 인스턴스 컴포넌트의 가용성을 유지보수하고 보장할 책임이 있습니다. 모든 관리 컴포넌트의 백업 또는 고가용성에 대해 계획하도록 적극 권장합니다. 자세한 정보는 [컴포넌트 백업](../archiref/solution/solution_backingup.html)을 참조하십시오.
+
 ## vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스
 
-vCenter Server with Hybridity Bundle 인스턴스에는 VMware HCX on IBM Cloud 서비스를 이용할 수 있게 하는 VMware Hybrid Cloud Extension(HCX) 라이센싱이 있습니다. 이 서비스는 {{site.data.keyword.cloud_notm}}로 온프레미스 데이터 센터의 네트워크를 원활하게 확장할 수 있으며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}}에서 가상 머신(VM)을 마이그레이션할 수 있습니다.
+vCenter Server with Hybridity Bundle 인스턴스에는 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스의 이용을 허용하는 VMware Hybrid Cloud Extension(HCX) 라이센싱이 포함되어 있습니다. 이 서비스는 {{site.data.keyword.cloud_notm}}로 온프레미스 데이터 센터의 네트워크를 원활하게 확장할 수 있으며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}}에서 가상 머신(VM)을 마이그레이션할 수 있습니다.
 
 이 서비스를 배치할 때 다음 설정을 완료하십시오.
 * 다음 옵션 중 하나를 선택하여 **HCX 상호연결 유형**을 지정하십시오.
@@ -82,7 +86,11 @@ vCenter Server with Hybridity Bundle 인스턴스에는 VMware HCX on IBM Cloud 
 
 사용자의 요구에 따라 인스턴스에 대한 다른 추가 기능 서비스를 주문할 수 있습니다(예: 재해 복구). 자세한 정보는 [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](vc_hybrid_addingremovingservices.html)를 참조하십시오.
 
-## 관련 링크
+## 용량 고려사항
+
+용량 정보 및 고려사항은 [용량 스케일링](../archiref/solution/solution_scaling.html)을 참조하십시오.
+
+### 관련 링크
 
 * [vCenter Server with Hybridity Bundle 개요](vc_hybrid_overview.html)
 * [vCenter Server with Hybridity Bundle 인스턴스 주문](vc_hybrid_orderinginstance.html)

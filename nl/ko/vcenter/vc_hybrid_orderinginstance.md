@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
 # vCenter Server with Hybridity Bundle 인스턴스 주문
 
-워크로드 요구사항에 가장 적합한 유연하고 사용자 정의할 수 있는 VMware 가상화된 플랫폼을 배치하려면 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 인스턴스를 주문하십시오. vCenter Server with Hybridity Bundle 인스턴스 주문은 VMware Hybrid Cloud Extension(HCX) 라이센싱을 포함하여 사용자에게 VMware HCX on IBM Cloud 서비스를 사용할 수 있는 자격을 부여합니다. 재해 복구를 위한 [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html)와 같은 서비스를 추가할 수도 있습니다.
+워크로드 요구사항에 가장 적합한 유연하고 사용자 정의할 수 있는 VMware 가상화된 플랫폼을 배치하려면 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 인스턴스를 주문하십시오. vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware Hybrid Cloud Extension(HCX) 라이센싱이 포함되며, 이는 사용자에게 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 사용할 수 있는 자격을 부여합니다. 재해 복구를 위한 [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)와 같은 서비스를 추가할 수도 있습니다.
 
 ## 요구사항
 
@@ -54,7 +54,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 라이센�
 
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition(Advanced 또는 Enterprise) 6.3
+* VMware NSX Service Providers Edition(Advanced 또는 Enterprise) 6.4
 * VMware vSAN 6.6 라이센스 에디션(Advanced 또는 Enterprise)
 
 **주의:**
@@ -169,7 +169,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 
 ## 프로시저
 
-1. IBM Cloud 카탈로그의 왼쪽 탐색 분할창에 있는 **VMware**를 클릭한 후 **가상 데이터 센터** 섹션에 있는 **vCenter Server**를 클릭하십시오.
+1. {{site.data.keyword.cloud_notm}} 카탈로그의 왼쪽 탐색 분할창에 있는 **VMware**를 클릭한 후 **가상 데이터 센터** 섹션에 있는 **vCenter Server**를 클릭하십시오.
 2. **VMware vCenter Server on IBM Cloud** 페이지에서 **vCenter Server with Hybridity Bundle** 카드를 클릭하고 **작성**을 클릭하십시오.
 3. **vCenter Server** 페이지에서 인스턴스 이름을 입력하십시오.
 4. 인스턴스 유형을 선택하십시오.
@@ -206,7 +206,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 
 인스턴스의 배치가 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 배치의 상태를 확인할 수 있습니다.
 
-인스턴스가 배치되면 [vCenter Server with Hybridity Bundle 개요](vc_hybrid_overview.html)의 _vCenter Server with Hybridity Bundle 기술 스펙_ 섹션에 설명되어 있는 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
+인스턴스가 성공적으로 배치된 경우에는 [Hybridity Bundle 인스턴스의 기술 스펙](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
 
 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비**로 변경되고 이메일로 알림을 받습니다.
 
@@ -216,7 +216,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 
 주문한 vCenter Server with Hybridity Bundle 인스턴스를 보고 관리하십시오.
 
-**중요**: {{site.data.keyword.slportal}} 또는 콘솔 외부의 다른 방법이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔의 {{site.data.keyword.cloud_notm}} 계정에서만 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
+**중요**: {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
 
 **주의**: {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트(인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치됨)를 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
@@ -227,7 +227,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 
    이 활동에 대한 예외에는 {{site.data.keyword.slportal}}의 공유 스토리지 파일 공유 관리가 포함됩니다. 이러한 활동에는 공유 스토리지 파일 공유 주문, 삭제(마운트된 경우 데이터 저장소에 영향을 줄 수 있음), 권한 부여 및 마운트가 포함됩니다.
 
-## 관련 링크
+### 관련 링크
 
 * [{{site.data.keyword.cloud_notm}} 계정 등록](../vmonic/signing_softlayer_account.html)
 * [vCenter Server with Hybridity Bundle 인스턴스 보기](vc_hybrid_viewinginstances.html)

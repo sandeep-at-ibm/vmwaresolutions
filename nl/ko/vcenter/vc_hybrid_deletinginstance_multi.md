@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-05-23"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -20,7 +20,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 삭제하면 다음 컴포�
 5. 서브넷
 6. VLAN
 
-리소스 종속성으로 인해 인스턴스 삭제 시 인스턴스의 컴포넌트가 즉시 릴리스되지 않습니다. 예를 들어, {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시 발생하는 {{site.data.keyword.cloud}} 인프라로 ESXi 서버가 완전히 재확보될 때까지 서브넷 및 VLAN을 삭제할 수 없습니다. {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시 일반적으로 청구 주기는 30일이고 서브넷 및 VLAN이 삭제되며 인스턴스 삭제가 완료됩니다.
+리소스 종속성으로 인해 인스턴스 삭제 시 인스턴스의 컴포넌트가 즉시 릴리스되지 않습니다. 예를 들어, {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기의 종료 시에 발생하는 {{site.data.keyword.cloud_notm}} 인프라에 의한 ESXi 서버의 완전한 재확보 시점까지는 서브넷과 VLAN을 삭제할 수 없습니다. {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시 일반적으로 청구 주기는 30일이고 서브넷 및 VLAN이 삭제되며 인스턴스 삭제가 완료됩니다.
 
 **주의**: 삭제된 인스턴스에 대한 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시 비용이 청구됩니다.
 
@@ -34,7 +34,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 삭제하면 다음 컴포�
 6. 다중 사이트 구성에 속한 모든 보조 vCenter Server with Hybridity Bundle 인스턴스에 대해 1 - 5단계를 반복하십시오.
 7. 모든 보조 인스턴스를 삭제한 후 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 기본 인스턴스도 삭제할 수 있습니다.
 
-## 관련 링크
+### 관련 링크
 
 * [vCenter Server with Hybridity Bundle 인스턴스 삭제](vc_hybrid_deletinginstance.html)
 * [vCenter Server with Hybridity Bundle 인스턴스에서 서비스 주문, 보기 및 제거](vc_hybrid_addingremovingservices.html)

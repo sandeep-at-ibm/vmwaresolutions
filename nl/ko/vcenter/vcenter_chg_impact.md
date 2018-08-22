@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-06-08"
 
 {{site.data.keyword.vmwaresolutions_full}}에 대해 예약된 사용자, 리소스 또는 서브넷을 변경하면 관리 오퍼레이션에 영향을 줄 수 있습니다.
 
-## automationuser ID
+**중요:** VMware vSphere Web Client의 **사용자 및 그룹** 페이지에서 **ic4v-vCenter** 그룹의 글로벌 권한을 편집하지 마십시오. 이러한 변경에는 사용자 이름 변경, 사용자 삭제 또는 해당 비밀번호 변경이 포함됩니다.
 
-**automationuser** ID는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 제공된 자동화된 오퍼레이션에서 사용하는 사용자 계정입니다.
+## 자동화 ID
+
+**자동화** ID는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 제공된 자동화된 오퍼레이션에 의해 사용되는 사용자 계정입니다. 
 
 해당 신임 정보에 기반한 콘솔 오퍼레이션이 실패할 수 있으므로 콘솔에서 자동화된 오퍼레이션의 사용자 및 비밀번호를 변경하면 안 됩니다.
-
-VMware vSphere Web Client의 **사용자 및 그룹** 페이지에 있는 **automationuser** ID의 특성을 업데이트하지 마십시오. 이러한 변경에는 사용자 이름 변경, 사용자 삭제 또는 해당 비밀번호 변경이 포함됩니다.
 
 ## 서비스 고유 사용자 계정
 

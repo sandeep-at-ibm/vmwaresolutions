@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -61,8 +61,6 @@ V2.3 이상으로 배치된 VMware Federal 인스턴스의 경우, 클러스터�
 
 배치 후 최대 네 개의 추가 클러스터를 작성할 수 있습니다. vSAN 스토리지 설정의 경우에는 초기 클러스터 및 사후 배치 클러스터 모두에 네 개의 서버가 필요합니다.
 
-<!--When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.-->
-
 ### 스토리지 설정
 
 스토리지 설정은 Bare Metal Server 구성의 선택 및 스토리지 유형에 따라 달라집니다.
@@ -83,7 +81,7 @@ vSAN의 경우에는 다음 스토리지 옵션을 지정하십시오.
 
 **참고:** 파일 공유의 수는 1 - 32 범위에 있어야 합니다.
 
-* **공유 개별 구성**: 각 파일 공유에 대해 서로 다른 구성 설정을 지정하려면 선택하십시오. 
+* **공유 개별 구성**: 각 파일 공유에 대해 서로 다른 구성 설정을 지정하려면 선택하십시오.
 * **공유 수**: 각 파일 공유에 동일한 구성 설정을 사용하는 경우 추가할 NFS 공유 스토리지에 대한 파일 공유 수를 지정하십시오.
 * **크기**: 공유 스토리지 요구사항을 충족하는 용량을 선택하십시오.
 * **성능**: 워크로드 요구사항에 기반한 GB당 IOPS(Input/output Operations Per Second)를 선택하십시오.
@@ -99,10 +97,10 @@ vSAN의 경우에는 다음 스토리지 옵션을 지정하십시오.
 
 ### 라이센스 부여 설정
 
-다음 항목에 대해 IBM 제공 VMware 라이센스를 선택하십시오.
+	다음에 대한 {{site.data.keyword.IBM}} 제공 VMware 라이센스:
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.3
+  * VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4
   * (vSAN 클러스터의 경우) VMware vSAN Advanced 또는 Enterprise 6.6
 
 ### 주문 요약
@@ -120,8 +118,8 @@ vSAN의 경우에는 다음 스토리지 옵션을 지정하십시오.
 4. **클러스터 추가** 페이지에서 인스턴스 이름을 입력하십시오.
 5. Bare Metal Server 구성의 **CPU 모델**, **RAM**의 양 및 **Bare Metal Server 수**를 선택하십시오.
 6. 스토리지 구성을 완료하십시오.
-  * **vSAN 스토리지**를 선택하는 경우에는 **vSAN 용량 디스크의 디스크 유형 및 크기**, **vSAN 용량 디스크 수** 및 **vSAN 라이센스** 제공 방법을 지정하십시오. 
-  * **NFS 스토리지**를 선택하면서 모든 파일 공유에 동일한 설정을 추가하고 구성하려는 경우에는 **공유 수**, **크기** 및 **성능**을 지정하십시오. 
+  * **vSAN 스토리지**를 선택하는 경우에는 **vSAN 용량 디스크의 디스크 유형 및 크기**, **vSAN 용량 디스크 수** 및 **vSAN 라이센스** 제공 방법을 지정하십시오.
+  * **NFS 스토리지**를 선택하면서 모든 파일 공유에 동일한 설정을 추가하고 구성하려는 경우에는 **공유 수**, **크기** 및 **성능**을 지정하십시오.
   * **NFS 스토리지**를 선택하면서 파일 공유를 개별적으로 추가하고 구성하려는 경우에는 **공유 개별 구성**을 선택한 후 **NFS 추가** 레이블 옆에 있는 **+** 아이콘을 클릭하고 각 파일 공유에 대해 **크기** 및 **성능**을 선택하십시오. 하나 이상의 파일 공유를 선택해야 합니다.
 7. 라이센스 구성을 위해 VMware vSAN의 라이센스 에디션을 선택하십시오.
 8. 클러스터를 추가하기 전에 **주문 요약** 페이지에서 클러스터 구성을 확인하십시오.
@@ -236,7 +234,7 @@ vSAN의 경우에는 다음 스토리지 옵션을 지정하십시오.
 
 3. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오. **클러스터** 테이블에서 삭제할 클러스터를 찾고 **조치** 열에서 **삭제** 아이콘을 클릭하십시오.
 
-## 관련 링크
+### 관련 링크
 
 * [VMware Federal 인스턴스 보기](vc_fed_viewinginstance.html)
 * [VMware Federal 인스턴스에 대한 용량 확장 및 축소](vc_fed_addingremovingservers.html)

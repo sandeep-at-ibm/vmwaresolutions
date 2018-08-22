@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,7 +27,7 @@ lastupdated: "2018-05-24"
 3. **vCenter 콘솔**의 오른쪽에 있는 오버플로우 메뉴 아이콘을 클릭하십시오.
 4. **인스턴스 보호**를 클릭하십시오.
 5. **확인**을 클릭하여 자동화에서 인스턴스의 연결 끊기를 확인하십시오.
-   
+
    **참고**: 이 단계를 완료하기 전에 **시작하기 전에** 섹션에서 정보를 검토했는지 확인하십시오.
 
 ## 결과
@@ -36,9 +36,9 @@ lastupdated: "2018-05-24"
 
 인스턴스가 보호되면 인스턴스의 상태가 **보호됨**으로 변경되고 인스턴스 특성 및 배치 히스토리만 사용할 수 있습니다.
 
-## 관련 링크
+### 관련 링크
 
-* [VMware Federal on IBM Cloud 개요](vc_fed_overview.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} 개요](vc_fed_overview.html)
 * [VMware Federal 인스턴스 주문](vc_fed_orderinginstance.html)
 * [VMware Federal 인스턴스 보기](vc_fed_viewinginstance.html)
 * [VMware Federal 인스턴스 삭제](vc_fed_deletinginstance.html)

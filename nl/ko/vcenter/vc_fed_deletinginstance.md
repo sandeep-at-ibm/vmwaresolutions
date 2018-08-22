@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -43,9 +43,9 @@ VMware Federal 인스턴스를 삭제하는 경우 다음 컴포넌트가 순차
    1. **vCenter 콘솔**의 오른쪽에 있는 오버플로우 메뉴 아이콘을 다시 클릭한 후 **인스턴스 삭제**를 클릭하십시오.
    2. **인스턴스 삭제** 창에서 **확인**을 클릭하십시오.
 
-## 관련 링크
+### 관련 링크
 
-* [VMware Federal on IBM Cloud 개요](vc_fed_overview.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} 개요](vc_fed_overview.html)
 * [VMware Federal 인스턴스 주문](vc_fed_orderinginstance.html)
 * [VMware Federal 인스턴스 보호](vc_fed_securinginstance.html)
 * [VMware Federal 인스턴스 보기](vc_fed_viewinginstance.html)
