@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -40,7 +40,7 @@ lastupdated: "2018-05-08"
 
 **참고:** vSphere 클러스터는 vCenter Server 및 Cloud Foundation 인스턴스와 달리 **배치된 인스턴스** 페이지에 표시되지 않습니다.
 
-## 관련 링크
+### 관련 링크
 
 * [새 vSphere 클러스터 주문](vs_orderinginstances.html)
 * [기존 vSphere 클러스터 스케일링](vs_scalingexistingclusters.html)
