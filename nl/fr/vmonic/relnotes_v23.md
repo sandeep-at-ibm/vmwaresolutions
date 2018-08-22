@@ -24,7 +24,7 @@ Pour plus d'informations, voir [Résolution des vulnérabilités Spectre et Melt
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
-Cette édition introduit l'offre VMware vCenter Server on IBM Cloud with Hybridity Bundle. vCenter Server with Hybridity Bundle est un cloud privé hébergé qui vous permet de déployer rapidement et facilement votre infrastructure locale dans le cloud. L'environnement VMware est basé sur des licences SDDC (Software Defined Data Center) VMware fournies par IBM et inclut le service VMware HCX on {{site.data.keyword.cloud_notm}} qui permet de connecter très facilement et de manière sécurisée un environnement vSphere 5.0+ local à des sites IBM Cloud pour obtenir une hybridité d'infrastructure transparente et une véritable mobilité d'application.
+Cette édition introduit l'offre VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle. vCenter Server with Hybridity Bundle est un cloud privé hébergé qui vous permet de déployer rapidement et facilement votre infrastructure locale dans le cloud. L'environnement VMware est basé sur des licences SDDC (Software Defined Data Center) VMware fournies par IBM et inclut le service VMware HCX on {{site.data.keyword.cloud_notm}} qui permet de connecter très facilement et de manière sécurisée un environnement vSphere 5.0+ local à des sites {{site.data.keyword.cloud_notm}} pour obtenir une hybridité d'infrastructure transparente et une véritable mobilité d'application.
 
 Le service HCX on {{site.data.keyword.cloud_notm}} est disponible uniquement via l'instance vCenter Server with Hybridity Bundle. Vous pouvez mettre à niveau votre instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle après avoir appliqué la mise à jour logicielle vCenter Server V2.3 de base. Pour plus d'informations, voir [Application de mises à jour à des instances vCenter Server](../vcenter/vc_applyingupdates.html).
 
@@ -94,8 +94,8 @@ Le service HyTrust CloudControl on {{site.data.keyword.cloud_notm}} est désorma
 Vous pouvez commander des instances avec le service déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes.
 
 Pour plus d'informations, voir :
-* [Composants et remarques pour HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)
-* [Gestion de HyTrust CloudControl on IBM Cloud](../services/managinghtcc.html)
+* [Composants et remarques pour HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)
+* [Gestion de HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/managinghtcc.html)
 
 ### HyTrust DataControl on IBM Cloud
 
@@ -104,8 +104,8 @@ Le service HyTrust DataControl on {{site.data.keyword.cloud_notm}} est désormai
 Vous pouvez commander des instances avec le service déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes.
 
 Pour plus d'informations, voir :
-* [Composants et remarques pour HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)
-* [Gestion de HyTrust DataControl on IBM Cloud](../services/managinghtdc.html)
+* [Composants et remarques pour HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)
+* [Gestion de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -118,8 +118,8 @@ Une nouvelle fiche de recette developerWorks est disponible avec des instruction
 ## Améliorations et mises à jour apportées à l'interface utilisateur
 
 L'interface utilisateur a été mise à jour et présente les améliorations suivantes :
-* **Cohérence** : l'impression générale de l'interface utilisateur est désormais cohérente avec celle d'autres services sur IBM Cloud.
-* **Facilité d'accès** : vous pouvez désormais accéder aux offres VMware directement à partir du **catalogue** IBM Cloud.
+* **Cohérence** : l'impression générale de l'interface utilisateur est désormais cohérente avec celle d'autres services sur {{site.data.keyword.cloud_notm}}.
+* **Facilité d'accès** : vous pouvez désormais accéder aux offres VMware directement à partir du **catalogue** {{site.data.keyword.cloud_notm}}. 
 * **Processus de commande rationalisé et simplifié** : vous pouvez désormais commander une instance VMware et déployer ses services complémentaires dans une seule et même interface. En outre, le coût estimé est calculé et présenté instantanément dans la même interface de manière à vous permettre d'ajuster votre configuration en fonction de votre plan des coûts.
 * Le mode BYOL n'est pas disponible pour les partenaires commerciaux lors de la commande d'instances ou de l'ajout de clusters.
 * Diverses améliorations ont été apportées au niveau des messages d'erreur et des infobulles pour vous aider à sélectionner le paramétrage approprié sur l'interface utilisateur.

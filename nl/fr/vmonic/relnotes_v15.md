@@ -24,7 +24,7 @@ Pour confirmer que votre compte SoftLayer est un compte VRF, interrogez le suppo
 
 ## Mises à jour du modèle de frais de service
 
-Pour les instances Cloud Foundation, une nouvelle licence de _gestionnaire SDDC_ a été instaurée. Elle est appliquée à chaque noeud et perçue mensuellement. Pour plus d'informations, voir [Composants d'instance Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+Pour les instances Cloud Foundation, une nouvelle licence de _gestionnaire SDDC_ a été instaurée. Elle est appliquée à chaque noeud et perçue mensuellement. Pour plus d'informations, voir [Spécifications techniques relatives aux instances Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## Améliorations de la convivialité
 

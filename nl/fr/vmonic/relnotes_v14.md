@@ -32,7 +32,7 @@ Les composants suivants sont nouveaux ou ont été mis à jour :
 
 VMware NSX for vSphere 6.2.4 est désormais installé par défaut sur toutes les instances vCenter Server (uniquement les instances sur Cloud Foundation précédemment).
 
-Dans le cadre de l'installation de NSX, le gestionnaire NSX est installé et sous licence sur toutes les nouvelles instances déployées. De plus, un composant NSX Edge est créé pour la gestion des instances, mais vous pouvez, au besoin, créer vos propres composants NSX Edge. Pour plus d'informations sur le composant NSX Edge, voir la section _VMware NSX Edge_ sur cette page.
+Dans le cadre de l'installation de NSX, NSX Manager est installé et sous licence sur toutes les nouvelles instances déployées. De plus, un composant NSX Edge est créé pour la gestion des instances, mais vous pouvez, au besoin, créer vos propres composants NSX Edge. Pour plus d'informations sur le composant NSX Edge, voir la section _VMware NSX Edge_ sur cette page.
 
 **Remarque** : le contrôleur NSX n'est pas installé sur les instances vCenter Server (comme il l'est sur les instances Cloud Foundation). Si vous utilisez VXLAN ou des routeurs logiques distribués pour vos instances vCenter Server, alors vous devez installer vous-même le contrôleur NSX.
 
@@ -42,7 +42,7 @@ Pour plus d'informations sur les améliorations apportées à VMware NSX for vSp
 
 NSX Edge est désormais inclus dans les nouvelles commandes d'instance vCenter Server. NSX Edge offre des services de passerelle et de sécurité périphériques permettant d'isoler un réseau virtuel.
 
-Lors du déploiement d'une instance, IBM déploie une passerelle VMware NSX ESG (Edge Services Gateway) de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. La passerelle ESG est déployée de manière à inclure deux interfaces : une pour la connexion au réseau local virtuel IBM Cloud privé et l'autre pour la connexion au réseau local virtuel IBM Cloud public.
+Lors du déploiement d'une instance, IBM déploie une passerelle VMware NSX ESG (Edge Services Gateway) de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. La passerelle ESG est déployée de manière à inclure deux interfaces : une pour la connexion au réseau local virtuel {{site.data.keyword.cloud_notm}} privé et l'autre pour la connexion au réseau local virtuel {{site.data.keyword.cloud_notm}} public.
 
 Pour garantir la sécurité, des règles de pare-feu sont instaurées afin d'autoriser uniquement les communications HTTPS sortantes initiées par les machines virtuelles de gestion. Cette passerelle ESG est déployée dans une Grande configuration et seul le support IBM est habilité à modifier la configuration. Pour plus d'informations, voir :
 

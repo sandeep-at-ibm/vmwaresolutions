@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-10-05"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -17,7 +17,7 @@ Dans une configuration Cloud Foundation multisite, vous ne pouvez pas ajouter un
 Effectuez les opérations suivantes sur l'instance principale en version 1.5 afin d'accorder à l'utilisateur de l'automatisation principale le droit d'intégrer les groupes **Administrateurs de l'entreprise** et **Administrateurs du schéma**.
 
 1. Connectez-vous au serveur Windows AD avec le mot de passe **administrateur**.
-2. Ouvrez **Gestionnaire de serveur**, puis cliquez sur **Outils -> Utilisateurs et ordinateurs Active Directory**.
+2. Ouvrez **Gestionnaire de serveur**, puis cliquez sur **Outils > Utilisateurs et ordinateurs Active Directory**.
 4. Dans la fenêtre **Utilisateurs et ordinateurs Active Directory**, cliquez sur la section **Utilisateurs** sous votre domaine racine.
 5. Cliquez avec le bouton droit de la souris sur l'utilisateur de l'automatisation pour ouvrir la fenêtre **Propriétés**.
 6. Cliquez sur l'onglet **Membre de**.

@@ -24,7 +24,7 @@ Pour plus d'informations, voir [Résolution des vulnérabilités Spectre et Melt
 
 ## Support de langue nationale
 
-A compter de l'édition V2.4, le support de langue nationale est disponible pour IBM Cloud for VMware Solutions.
+A compter de l'édition V2.4, le support de langue nationale est disponible pour {{site.data.keyword.vmwaresolutions_short}}.
 Toutes les fonctions de la console, y compris la documentation utilisateur, sont disponibles dans plusieurs langues.
 
 Les langues suivantes sont prises en charge, en plus de l'anglais :
@@ -74,7 +74,7 @@ L'édition en cours installe IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1 su
 
 ### VMware HCX on IBM Cloud
 
-Une nouvelle option est désormais disponible pour vous permettre de choisir entre un réseau public et un réseau privé pour les interconnexions HCX lorsque vous commandez ce service. Pour plus d'informations, voir [Commande de VMware HCX on IBM Cloud](../services/hcx_ordering.html).
+Une nouvelle option est désormais disponible pour vous permettre de choisir entre un réseau public et un réseau privé pour les interconnexions HCX lorsque vous commandez ce service. Pour plus d'informations, voir [Commande de VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_ordering.html).
 
 ## Documentation nouvelle et mise à jour
 
@@ -88,15 +88,15 @@ Les informations sur les services ont été restructurées et la navigation a é
 
 Pour plus d'informations, voir :
 
-* [Commande de F5 on IBM Cloud](../services/f5_ordering.html)
-* [Commande de FortiGate Security Appliance on IBM Cloud](../services/fsa_ordering.html)
-* [Commande de FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_ordering.html)
-* [Commande de Hytrust CloudControl on IBM Cloud](../services/htcc_ordering.html)
-* [Commande de Hytrust DataControl on IBM Cloud](../services/htdc_ordering.html)
-* [Commande d'IBM Spectrum Protect Plus on IBM Cloud](../services/spp_ordering.html)
-* [Commande de KMIP for VMware on IBM Cloud](../services/kmip_ordering.html)
-* [Commande de Veeam on IBM Cloud](../services/veeam_ordering.html)
-* [Commande de Zerto on IBM Cloud](../services/zerto_ordering.html)
+* [Commande de F5 on {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
+* [Commande de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)
+* [Commande de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)
+* [Commande de Hytrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_ordering.html)
+* [Commande de Hytrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_ordering.html)
+* [Commande d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/spp_ordering.html)
+* [Commande de KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_ordering.html)
+* [Commande de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_ordering.html)
+* [Commande de Zerto on {{site.data.keyword.cloud_notm}}](../services/zerto_ordering.html)
 
 ## Améliorations et mises à jour apportées à l'interface utilisateur
 
