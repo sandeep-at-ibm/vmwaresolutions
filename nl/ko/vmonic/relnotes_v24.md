@@ -24,14 +24,14 @@ lastupdated: "2018-06-22"
 
 ## 자국어 지원
 
-V2.4 릴리스부터는 자국어 지원(NLS)이 IBM Cloud for VMware Solutions에서 사용 가능합니다.
+V2.4 릴리스 이상에서는 자국어 지원(NLS)을 {{site.data.keyword.vmwaresolutions_short}}에 사용할 수 있습니다.
 사용자 문서를 포함한 콘솔의 모든 기능은 여러 언어로 사용할 수 있습니다.
 
 영어 외에 다음 언어가 지원됩니다.
 * 독일어
 * 스페인어
 * 프랑스어
-* 이탈리어어
+* 이탈리아어
 * 일본어
 * 한국어
 * 브라질 포르투갈어
@@ -74,7 +74,7 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 
 ### VMware HCX on IBM Cloud
 
-새 옵션은 이 서비스를 주문할 때 HCX 상호연결을 위해 공용 네트워크와 사설 네트워크 중에서 선택하는 데 사용할 수 있습니다. 자세한 정보는 [VMware HCX on IBM Cloud 주문](../services/hcx_ordering.html)을 참조하십시오.
+새 옵션은 이 서비스를 주문할 때 HCX 상호연결을 위해 공용 네트워크와 사설 네트워크 중에서 선택하는 데 사용할 수 있습니다. 자세한 정보는 [VMware HCX on {{site.data.keyword.cloud_notm}} 주문](../services/hcx_ordering.html)을 참조하십시오. 
 
 ## 새로 작성되고 업데이트된 문서
 
@@ -88,15 +88,15 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 
 자세한 정보는 다음을 참조하십시오.
 
-* [F5 on IBM Cloud 주문](../services/f5_ordering.html)
-* [FortiGate Security Appliance on IBM Cloud 주문](../services/fsa_ordering.html)
-* [FortiGate Virtual Appliance on IBM Cloud 주문](../services/fortinetvm_ordering.html)
-* [Hytrust CloudControl on IBM Cloud 주문](../services/htcc_ordering.html)
-* [Hytrust DataControl on IBM Cloud 주문](../services/htdc_ordering.html)
-* [IBM Spectrum Protect Plus on IBM Cloud 주문](../services/spp_ordering.html)
-* [KMIP for VMware on IBM Cloud 주문](../services/kmip_ordering.html)
-* [Veeam on IBM Cloud 주문](../services/veeam_ordering.html)
-* [Zerto on IBM Cloud 주문](../services/zerto_ordering.html)
+* [F5 on {{site.data.keyword.cloud_notm}} 주문](../services/f5_ordering.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 주문](../services/fsa_ordering.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 주문](../services/fortinetvm_ordering.html)
+* [Hytrust CloudControl on {{site.data.keyword.cloud_notm}} 주문](../services/htcc_ordering.html)
+* [Hytrust DataControl on {{site.data.keyword.cloud_notm}} 주문](../services/htdc_ordering.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 주문](../services/spp_ordering.html)
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 주문](../services/kmip_ordering.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 주문](../services/veeam_ordering.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 주문](../services/zerto_ordering.html)
 
 ## 사용자 인터페이스 업데이트 및 개선사항
 

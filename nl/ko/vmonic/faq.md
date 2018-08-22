@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-28"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -14,12 +14,13 @@ lastupdated: "2018-05-28"
 
 ## IBM Cloud for VMware Solutions에 필요한 사용자 계정은 무엇입니까?
 
-* **IBM ID 계정**. 이 계정은 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 액세스하는 데 필요합니다. 콘솔은 {{site.data.keyword.slportal_full}}에서 분리된 독립형 사용자 인터페이스입니다. 자세한 정보는 [시작하기](../index.html)를 참조하십시오.
-* **{{site.data.keyword.cloud_notm}} 계정**. 이 계정은 프로비저닝에 필요합니다. **IBM ID 계정**을 종량과금제로 업그레이드하여 {{site.data.keyword.cloud_notm}} 계정에 등록할 수 있습니다. 사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정 등록](signing_softlayer_account.html) 및 [{{site.data.keyword.cloud_notm}} 계정 요구사항](slaccountrequirement.html)을 참조하십시오.
+* **IBM ID 계정**. 이 계정은 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 액세스하는 데 필요합니다. 콘솔은 {{site.data.keyword.slportal}}에서 분리된 독립형 사용자 인터페이스입니다. 자세한 정보는 [시작하기](../index.html)를 참조하십시오.
+* **{{site.data.keyword.cloud_notm}} 계정**. 이 계정은 프로비저닝에 필요합니다. 기존 **IBM ID**를 사용하거나 새 **IBM ID**를 작성하여 {{site.data.keyword.cloud_notm}} 계정을 등록할 수 있습니다.  
+* **{{site.data.keyword.cloud_notm}} 인프라 계정**. 이전에는 **IBM SoftLayer** 계정이라고 부르던 이 계정은 인프라 제품 및 서비스를 관리하기 위한 일부 추가 기능을 제공하는 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에 로그인하는 데 사용됩니다. **{{site.data.keyword.cloud_notm}} 계정**을 종량과금제 유형의 계정으로 업그레이드하거나 기존 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하여 {{site.data.keyword.cloud_notm}} 인프라 계정을 가져올 수 있습니다. 사용 중인 {{site.data.keyword.cloud_notm}} 인프라 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [필수 계정 등록](signing_softlayer_account.html) 및 [{{site.data.keyword.cloud_notm}} 인프라 계정 요구사항](slaccountrequirement.html)을 참조하십시오. 
 
 ## 내 IBM Cloud 인프라 신임 정보를 IBM Cloud for VMware Solutions 콘솔과 연관시킬 수 있는 방법은 무엇입니까?
 
-처음 인스턴스를 주문할 때 {{site.data.keyword.cloud_notm}} 인프라 신임 정보 페이지의 지시사항에 따라 {{site.data.keyword.slportal}}에서 {{site.data.keyword.cloud_notm}} 사용자 이름 및 API 키를 찾아 복사하십시오. 첫 번째 주문 후 {{site.data.keyword.cloud_notm}} 인프라 신임 정보가 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 저장됩니다. 이후 주문 시 저장된 신임 정보를 자동으로 사용합니다.
+처음 인스턴스를 주문할 때는 콘솔의 **설정** 페이지의 지시사항에 따라 {{site.data.keyword.slportal}}에서 {{site.data.keyword.cloud_notm}} 인프라 사용자 이름 및 API 키를 찾아서 복사하십시오. 첫 번째 주문 후 {{site.data.keyword.cloud_notm}} 인프라 신임 정보가 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 저장됩니다. 이후 주문 시 저장된 신임 정보를 자동으로 사용합니다.
 
 ## VMware 가상 플랫폼 사용 비용은 어떻게 청구됩니까?
 
@@ -29,21 +30,21 @@ lastupdated: "2018-05-28"
 
 모든 인스턴스 유형은 VMware 가상 환경에 맞는 배치 선택사항을 제공합니다. 하지만 사용자 정의 가능성과 자동화의 범위에 차이가 있습니다.
 
-* VMware vCenter Server 인스턴스를 주문하는 경우 사용자 정의된 컴퓨팅, 스토리지 및 네트워크 리소스와 함께 VMware 가상 환경을 배치하십시오. 배치된 컴포넌트에 대한 자세한 정보는 [vCenter Server 개요](../vcenter/vc_vcenterserveroverview.html)의 _vCenter Server 기술 스펙_ 섹션을 참조하십시오.
-* VMware Cloud Foundation 인스턴스를 주문하는 경우 통합된 소프트웨어 정의 데이터 센터(SDDC) 플랫폼을 배치하십시오. 배치된 컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스 컴포넌트](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)를 참조하십시오.
+* VMware vCenter Server 인스턴스를 주문하는 경우 사용자 정의된 컴퓨팅, 스토리지 및 네트워크 리소스와 함께 VMware 가상 환경을 배치하십시오. 배치된 컴포넌트에 대한 자세한 정보는 [vCenter Server 인스턴스의 기술 스펙](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)을 참조하십시오. 
+* VMware Cloud Foundation 인스턴스를 주문하는 경우 통합된 소프트웨어 정의 데이터 센터(SDDC) 플랫폼을 배치하십시오. 배치된 컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오. 
 * VMware vSphere 클러스터를 주문하는 경우 VMware 호환 하드웨어를 통합하면서 호스팅된 VMware 환경을 디자인하고 빌드할 수 있는 최대한의 유연성을 확보합니다. 하지만 {{site.data.keyword.cloud_notm}}는 VMware vSphere 클러스터에 대한 선택적 VMware 컴포넌트의 설치, 구성 및 가져오기를 자동화하지 않습니다.
 * vCenter Server 인스턴스, Cloud Foundation 인스턴스 및 vSphere 클러스터에 지원되는 기능은 서로 다릅니다. 자세한 정보는 [오퍼링 비교 차트](inst_comp_chart.html)를 참조하십시오.
 
 ## vCenter Server 인스턴스에 포함되는 항목은 무엇입니까?
 
-자세한 정보는 [vCenter Server 개요](../vcenter/vc_vcenterserveroverview.html)의 _vCenter Server 기술 스펙_ 섹션을 참조하십시오.
+자세한 정보는 [vCenter Server 인스턴스의 기술 스펙](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)을 참조하십시오. 
 
 ## Cloud Foundation 인스턴스에 포함되는 항목은 무엇입니까?
 
-자세한 정보는 [Cloud Foundation 인스턴스 컴포넌트](../sddc/sd_cloudfoundationoverview.html)를 참조하십시오.
+자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오. 
 
 ## vSphere 클러스터에 포함된 것은 무엇입니까?
-자세한 정보는 [VMware vSphere on IBM Cloud의 컴포넌트](../vsphere/vs_vsphereclusteroverview.html)를 참조하십시오.
+자세한 정보는 [VMware vSphere on {{site.data.keyword.cloud_notm}}의 컴포넌트](../vsphere/vs_vsphereclusteroverview.html)를 참조하십시오. 
 
 ## 두 개의 노드 vCenter Server 인스턴스는 고가용성입니까?
 
@@ -106,7 +107,7 @@ VMware 업데이트는 배치한 VMware 인스턴스의 유형에 따라 다른 
 * [vCenter Server 인스턴스 요구사항 및 계획](../vcenter/vc_planning.html)
 * [vCenter Server with Hybridity Bundle 인스턴스에 대한 요구사항 및 계획](../vcenter/vc_hybrid_planning.html)
 * [Cloud Foundation 인스턴스에 대한 요구사항 및 계획](../sddc/sd_planning.html)
-* [VMware vSphere on IBM Cloud에 대한 요구사항 및 계획](../vsphere/vs_planning.html)
+* [VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 요구사항 및 계획](../vsphere/vs_planning.html)
 * [NetApp ONTAP Select 인스턴스에 대한 요구사항 및 계획](../netapp/np_planning.html)
 * [VMware Federal 인스턴스에 대한 요구사항 및 계획](../vcenter/vc_fed_planning.html)
 

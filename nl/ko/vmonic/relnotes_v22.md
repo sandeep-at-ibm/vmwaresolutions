@@ -108,7 +108,7 @@ V2.2 이상 릴리스에 배치된 VMware vCenter Server 인스턴스의 경우,
 
 ### 고용량 IBM Cloud Bare Metal Servers에 대해 늘어난 SATA 드라이브 수
 
-이제 34개의 SATA 드라이브는 NetApp ONTAP Select 고용량 {{site.data.keyword.baremetal_short}}에 사용할 수 있습니다. 자세한 정보는 [NetApp ONTAP Select 개요](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components)의 *NetApp ONTAP Select 인스턴트 컴포넌트* 절을 참조하십시오.
+이제 34개의 SATA 드라이브는 NetApp ONTAP Select 고용량 {{site.data.keyword.baremetal_short}}에 사용할 수 있습니다. 자세한 정보는 [NetApp ONTAP Select 인스턴스의 기술 스펙](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)을 참조하십시오. 
 
 ## 추가 서비스에 대한 업데이트
 

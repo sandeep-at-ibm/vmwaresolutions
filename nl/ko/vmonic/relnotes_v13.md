@@ -30,14 +30,14 @@ lastupdated: "2017-01-23"
 
 NSX Edge는 이제 주문 중인 새 Cloud Foundation 인스턴스의 일부로 포함됩니다. NSX Edge는 네트워크 에지 보안 및 게이트웨이 서비스를 제공하여 가상화된 네트워크를 격리합니다.
 
-인스턴스 배치 중에 IBM에서 관리 VMware NSX Edge Services Gateway(ESG)가 배치됩니다. 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 이 ESG는 두 개의 인터페이스를 포함하도록 배치됩니다. 즉, 하나의 인터페이스는 IBM Cloud 사설 VLAN에 연결되고 다른 하나의 인터페이스는 IBM Cloud 공인 VLAN에 연결됩니다.
+인스턴스 배치 중에 IBM에서 관리 VMware NSX Edge Services Gateway(ESG)가 배치됩니다. 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 이 ESG는 2개의 인터페이스를 포함하기 위해 배치됩니다. 하나의 인터페이스는 {{site.data.keyword.cloud_notm}} 사설 VLAN에 연결되고, 다른 하나의 인터페이스는 {{site.data.keyword.cloud_notm}} 공인 VLAN에 연결됩니다. 
 
 보안을 보장하기 위해 관리 가상 머신에서 시작된 아웃바운드 HTTPS 통신만 허용하도록 방화벽 규칙이
 제공됩니다. 이 ESG는 대형 구성에 배치되고 IBM 지원 센터만 구성을 수정할 수 있습니다.
 
 자세한 정보는 다음을 참조하십시오.
 
-* [Cloud Foundation 인스턴스 컴포넌트](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)
+* [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 

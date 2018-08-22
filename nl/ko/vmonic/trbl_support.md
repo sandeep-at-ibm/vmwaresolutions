@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-22"
 1. 다음 사이트로 이동하십시오.
    https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
 2. **IBM ID** 계정으로 콘솔에 로그인하십시오.
-3. 콘솔의 오른쪽 상단 모서리에서 **지원 > 티켓 추가**를 클릭하십시오.
+3. 배너의 왼쪽에서 **지원 > 티켓 추가**를 클릭하십시오. 
 4. {{site.data.keyword.slportal_short}} 페이지에서 **IBM ID로 로그인**을 클릭하면 포털에 자동으로 로그인됩니다.
 5. _{{site.data.keyword.cloud_notm}} 인프라 및 플랫폼 서비스 정책_을 검토한 후 **수신확인**을 클릭하십시오.
 
@@ -47,6 +47,6 @@ lastupdated: "2018-06-22"
 
 1. https://control.softlayer.com 사이트로 이동하십시오.
 2. **IBM ID** 계정으로 포털에 로그인하십시오.
-3. 이 주제의 _IBM Cloud for VMware Solutions 콘솔에서_ 절에 설명되어 있는 6 - 8단계를 완료하여 티켓을 제출하십시오. 
+3. 이 주제의 _IBM Cloud for VMware Solutions 콘솔에서_ 절에 설명되어 있는 6 - 8단계를 완료하여 티켓을 제출하십시오.
 
     **참고**: 지원 티켓을 여는 데 사용하는 채널에 관계없이({{site.data.keyword.vmwaresolutions_short}} 콘솔 또는 {{site.data.keyword.slportal}}) _{{site.data.keyword.cloud_notm}} 인프라 및 플랫폼 서비스 지원 정책_의 이용 약관이 여전히 적용됩니다.

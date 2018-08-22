@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -24,14 +24,14 @@ VMware Cloud Foundation 인스턴스, VMware vCenter Server 인스턴스, VMware
 |ESXi 서버 추가              |지원됨           |지원됨 |지원됨 |지원됨. 자동화된 구성이 포함되지 않음 |
 |ESXi 서버 제거           |지원됨           |지원됨 |지원됨 |지원됨. 자동화된 구성이 포함되지 않음 |
 |다중 클러스터 지원         |5개의 클러스터 |10개의 클러스터 |10개의 클러스터 |지원됨. 자동화된 구성이 포함되지 않음 |
-|VMware 스택의 클라이언트 관리 업데이트 및 패치 |IBM CloudDriver 및 VMware 업데이트 |IBM CloudDriver |IBM CloudDriver |자동화된 패치가 포함되지 않음 |
-|백업 및 복원            |지원됨 |지원됨 |지원됨 |자동화된 백업 솔루션 구성이 포함되지 않음 |
+|VMware 스택의 클라이언트 관리 업데이트 및 패치 | VMware 업데이트 |포함되지 않음|포함되지 않음|포함되지 않음|
+|백업 및 복원            |수동으로 IBM Spectrum Protect Plus 또는 Veeam 사용 |수동으로 IBM Spectrum Protect Plus 또는 Veeam 사용 |수동으로 IBM Spectrum Protect Plus 또는 Veeam 사용 | 백업 및 복원 솔루션이 포함되지 않음 |
 |소프트웨어 정의 네트워킹   |NSX Enterprise   |NSX Base, Advanced 또는 Enterprise |NSX Advanced 또는 Enterprise |NSX Standard, Base 또는 Enterprise. 자동화된 구성이 포함되지 않음 |
 |vSphere 및 vSAN용 BYOL |클러스터당 전체 지원됨   |클러스터당 전체 지원됨     |지원되지 않음 |지원됨 |
 |vCenter 및 NSX용 BYOL |인스턴스당 전체 지원됨   |인스턴스당 전체 지원됨     |지원되지 않음 |지원됨 |
 |NSX 라이센스 업그레이드 옵션           |없음   |NSX Base에서 Advanced 또는 Enterprise로, NSX Advanced에서 Enterprise로 업그레이드할 수 있음. vCenter Server with Hybridity Bundle로 업그레이드할 수 있음. |NSX Advanced에서 Enterprise로 업그레이드할 수 있음  |없음 |
 |vSAN 라이센스 에디션         |vSAN Advanced 또는 Enterprise  |vSAN Advanced 또는 Enterprise  |vSAN Advanced 또는 Enterprise |vSAN Advanced 또는 Enterprise  |
-|추가 기능 서비스               |지원됨(HCX on {{site.data.keyword.cloud_notm}} 미포함).  |지원됨(HCX on {{site.data.keyword.cloud_notm}} 미포함). vCenter Server with Hybridity Bundle로 업그레이드할 수 있음 |지원됨(HCX on {{site.data.keyword.cloud_notm}} 포함). |지원됨. 자동화된 구성이 포함되지 않음 |
+|추가 기능 서비스               |지원됨(HCX on {{site.data.keyword.cloud_notm}} 미포함).  |지원됨(HCX on {{site.data.keyword.cloud_notm}} 미포함). vCenter Server with Hybridity Bundle로 업그레이드할 수 있음 |지원됨(HCX on {{site.data.keyword.cloud_notm}} 포함). |이 솔루션의 자동화로 지원되지는 않지만 자체 소프트웨어를 가져와서 설치할 수 있습니다. |
 
 **참고**:
 

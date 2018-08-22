@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -39,7 +39,7 @@ V2.1 이전 릴리스에 배치된 인스턴스의 경우, 필요한 vSAN 지원
 
 ESXi 서버 이름 및 IP 주소는 Windows DNS 해석을 위해 등록되므로 변경할 수 없습니다. 변경하면 배치 중에 실패가 발생하거나 vCenter Server 기능의 실패가 발생할 수 있습니다.
 
-**참고**: ESXi 서버 이름을 변경하는 데 IBM Cloud 사용자 인터페이스의 **디바이스 이름 바꾸기** 기능을 사용하지 마십시오. 이 기능은 실제로 ESXi 서버의 FQDN을 변경하지만 구성된 vCenter Center 및 Windows VSI 호스트 등록이 올바르지 않고 실패가 발생할 수 있습니다.
+**참고**: {{site.data.keyword.cloud_notm}} 사용자 인터페이스에서 **디바이스 이름 바꾸기** 기능을 사용하여 ESXi 서버 이름을 변경하지 마십시오. 이 기능은 실제로 ESXi 서버의 FQDN을 변경하지만 구성된 vCenter Center 및 Windows VSI 호스트 등록이 올바르지 않고 실패가 발생할 수 있습니다.
 
 ## ESXi 서버에 루트 액세스를 사용 안함으로 설정할 수 있습니까?
 
