@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -18,7 +18,7 @@ O VMware vSphere on {{site.data.keyword.cloud_notm}} não automatiza a instalaç
 
 Use essa oferta para criar um novo cluster de servidores ESXi ou ajuste a escala de um cluster existente de servidores ESXi em um {{site.data.keyword.CloudDataCent_notm}}. Dependendo dos componentes do VMware que você selecionar, será possível começar com apenas um servidor ESXi e, em seguida, escalar o cluster posteriormente conforme necessário.
 
-## Componentes do VMware vSphere on IBM Cloud
+## Especificações técnicas para clusters do VMware vSphere on IBM Cloud
 
 Revise os componentes do VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
@@ -62,28 +62,27 @@ Armazenamento customizado pelo usuário para configuração vSAN quando o compon
 
 **Nota:** as unidades SSD (Solid State Disk) de 3,8 TB serão suportadas quando forem disponibilizadas geralmente em um data center.
 
-## Componentes de nós de expansão do cluster do vSphere
+## Especificações técnicas para nós de expansão de cluster do vSphere
 
 Cada nó de expansão do cluster do vSphere implementará e incorrerá em encargos para os seguintes componentes em sua conta {{site.data.keyword.slportal}}.
 
 ### Hardware para nós de expansão
 
-Um Bare Metal Server do IBM Cloud com a configuração de hardware apresentada em [Componentes do VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração de hardware apresentada em [Componentes do VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
 ### Rede para nós de expansão
 
-Um Bare Metal Server do IBM Cloud com a configuração de rede apresentada em [Componentes do VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração de rede apresentada em [Componentes do VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
 ### Componentes do VMware para nós de expansão
 
-* Um Bare Metal Server do IBM Cloud com o VMware vSphere Enterprise Plus 6.0u2 ou 6.5u1  
-* Componentes opcionais do VMware apresentados em [Componentes do VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+* Um {{site.data.keyword.cloud_notm}} Bare Metal Server com o VMware vSphere Enterprise Plus 6.0u2 ou 6.5u1  
+* Componentes opcionais do VMware apresentados em [Componentes do VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
 
-**Importante**: deve-se gerenciar os servidores ESXi, componentes opcionais do VMware e hardware adicional que são pedidos e entregues à sua conta {{site.data.keyword.cloud_notm}} apenas no {{site.data.keyword.slportal}}. Depois de criar um novo cluster no console do {{site.data.keyword.vmwaresolutions_short}}, é possível retornar ao console para escalar o novo cluster usando a configuração salva. 
-Para obter mais informações, consulte [Ajustando a escala de clusters existentes do
+**Importante**: deve-se gerenciar os servidores ESXi, componentes opcionais do VMware e hardware adicional que são pedidos e entregues à sua conta {{site.data.keyword.cloud_notm}} apenas no {{site.data.keyword.slportal}}. Depois de criar um novo cluster no console do {{site.data.keyword.vmwaresolutions_short}}, é possível retornar ao console para escalar o novo cluster usando a configuração salva. Para obter mais informações, consulte [Ajustando a escala de clusters existentes do
 vSphere](vs_scalingexistingclusters.html).
 
-## Links relacionados
+### Links relacionados
 
 * [Lista de materiais de software do VMware vSphere](vs_bom.html)
 * [Planejando clusters do vSphere](vs_planning.html)
