@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -39,7 +39,7 @@ lastupdated: "2018-06-22"
 
 如需有關架構的詳細資料，請參閱[解決方案概觀](../archiref/solution/solution_overview.html)。
 
-## Cloud Foundation 實例元件
+## Cloud Foundation 實例的技術規格
 
 Cloud Foundation 實例中包括下列元件。
 
@@ -85,13 +85,6 @@ Cloud Foundation 實例中包括下列元件。
 * 僅針對**預先配置**、**小型**配置：兩個 1.9 TB SSD 容量磁碟
 * 僅針對**預先配置**、**大型**配置：四個 3.8 TB SSD 容量磁碟
 
-
-### 用於備份的儲存空間
-
-訂購一個 2-TB 共用檔案層次儲存空間，最多可擴充到 12 TB。
-
-**附註**：用於備份的儲存空間不是 Cloud Foundation 實例的標準元件。當您訂購實例時，可以選取或取消選取備份服務來選擇是否要用於備份的儲存空間。
-
 ### 授權（IBM 提供或 BOYL）與費用
 
 * 四個 VMware vSphere Enterprise Plus 6.5u1
@@ -101,13 +94,13 @@ Cloud Foundation 實例中包括下列元件。
 * 四個 SDDC Manager 授權（僅限 IBM 所提供）
 * 四筆支援與服務費用
 
-## Cloud Foundation 擴充節點元件
+## Cloud Foundation 擴充節點的技術規格
 
 針對 {{site.data.keyword.cloud_notm}} 帳戶中的下列元件，每一個 Cloud Foundation 擴充節點都會部署及產生費用。
 
 ### 擴充節點的硬體
 
-一部 {{site.data.keyword.cloud_notm}} Bare Metal Server，其中具有 [Cloud Foundation 實例元件](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)中所呈現的配置。
+一部具有 [Cloud Foundation 實例的技術規格](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中所呈現之配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server。
 
 ### 擴充節點的授權與費用
 
@@ -128,7 +121,7 @@ Cloud Foundation 實例中包括下列元件。
 
    這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
 
-## 相關鏈結
+### 相關鏈結
 
 * [Cloud Foundation 軟體資料清單](sd_bom.html)
 * [規劃 Cloud Foundation 實例](sd_planning.html)

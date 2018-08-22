@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -44,7 +44,7 @@ lastupdated: "2018-05-17"
    1. 再按一次 **vCenter 主控台**右側的溢位功能表圖示，然後按一下**刪除實例**。
    2. 在**刪除實例**視窗中，按一下**確定**。
 
-## 相關鏈結
+### 相關鏈結
 
 * [刪除多站台配置中的 Cloud Foundation 實例](sd_deletinginstance_multi.html)
 * [訂購 Cloud Foundation 實例](sd_orderinginstance.html)

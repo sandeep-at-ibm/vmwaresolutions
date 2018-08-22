@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -45,7 +45,7 @@ Cloud Foundation 實例最多可以有 5 個叢集，而其中一個是預設值
 
 如果您未看到新 ESXi 伺服器新增至叢集中的清單，請檢查電子郵件或主控台通知，以尋找關於失敗的其他詳細資料。
 
-## 相關鏈結
+### 相關鏈結
 
 * [Cloud Foundation 資料清單](sd_bom.html)
 * [Cloud Foundation 實例的需求及規劃](sd_planning.html)

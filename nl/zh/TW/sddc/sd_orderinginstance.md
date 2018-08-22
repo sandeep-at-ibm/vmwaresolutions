@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -52,7 +52,7 @@ lastupdated: "2018-06-22"
 
 ### 資料中心位置
 
-選取要在其中管理實例的 {{site.data.keyword.CloudDataCent_notm}}。<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the {{site.data.keyword.baremetal_long}} specification you selected previously are displayed.-->
+選取要在其中管理實例的 {{site.data.keyword.CloudDataCent_notm}}。
 
 ### 預先配置
 
@@ -78,8 +78,6 @@ lastupdated: "2018-06-22"
 |雙重 Intel Xeon Silver 4110 處理器/總計 16 核心，2.1 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 5120 處理器/總計 28 核心，2.2 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 6140 Processor / 總計 36 核心，2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
-
-<!-- For guidance on what Bare Metal Server configuration to choose, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
 
 ### Bare Metal Server 數目
 
@@ -214,7 +212,7 @@ Cloud Foundation 實例僅支援 vSAN 儲存空間。
 
 實例的部署會自動啟動。您會收到正在處理訂單的確認，您可以檢視實例詳細資料來檢查部署的狀態。
 
-順利部署實例時，會在 VMware 虛擬平台上安裝 [Cloud Foundation 實例元件](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)中所述的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **SDDC-Cluster**。如果您已訂購其他服務，則會在完成訂單之後開始部署服務。
+順利部署實例之後，會在 VMware 虛擬平台上安裝 [Cloud Foundation 實例的技術規格](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **SDDC-Cluster**。如果您已訂購其他服務，則會在完成訂單之後開始部署服務。
 
 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 
@@ -235,7 +233,7 @@ Cloud Foundation 實例僅支援 vSAN 儲存空間。
 
    這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
 
-## 相關鏈結
+### 相關鏈結
 
 * [註冊 {{site.data.keyword.cloud_notm}} 帳戶](../vmonic/signing_softlayer_account.html)
 * [檢視 Cloud Foundation 實例](sd_viewinginstances.html)

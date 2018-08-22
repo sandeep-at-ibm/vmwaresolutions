@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -65,15 +65,19 @@ Cloud Foundation 部署具有嚴格的實體基礎架構需求。因此，您只
 |暫時沒有庫存                  |目前並未提供 {{site.data.keyword.CloudDataCent_notm}}。|
 |庫存受限                      |{{site.data.keyword.CloudDataCent_notm}} 的可用性受限，可能無法完成訂單。|
 
+## 管理元件的備份
+
+您負責維護及確保所有實例元件的可用性。強烈建議您規劃所有管理元件的備份或高可用性。如需相關資訊，請參閱[備份元件](../archiref/solution/solution_backingup.html)。
+
 ## Cloud Foundation 實例的服務
 
 您可以根據需要來訂購實例基礎的附加程式服務（例如災難回復）。如需相關資訊，請參閱[訂購、檢視及移除 Cloud Foundation 實例的服務](sd_addingremovingservices.html)。
 
-<!-- ## Capacity considerations
+## 容量考量
 
-For capacity information and considerations, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+如需容量資訊及考量，請參閱[調整容量](../archiref/solution/solution_scaling.html)。
 
-## 相關鏈結
+### 相關鏈結
 
 * [Cloud Foundation 概觀](sd_cloudfoundationoverview.html)
 * [訂購 Cloud Foundation 實例](sd_orderinginstance.html)
