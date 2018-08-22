@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-06-07"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -20,7 +20,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 서비스를 관리�
 * [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](../sddc/sd_addingremovingservices.html)
 * [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_addingremovingservices.html)
 
-## 관련 링크
+### 관련 링크
 
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 개요](fortinetvm_considerations.html)
 * [IBM 지원 센터에 문의](../vmonic/trbl_support.html)

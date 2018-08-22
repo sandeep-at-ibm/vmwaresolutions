@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -22,13 +22,13 @@ Veeam on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스를 요청�
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **시작하기**를 클릭하십시오.
 2. 페이지를 아래로 스크롤하여 **추가 관리 서비스 주문**에서 **Veeam on IBM Cloud에 대한 관리 서비스** 카드를 클릭하십시오.
-3. **Veeam on IBM Cloud에 대한 관리 서비스 주문** 페이지에서 Veeam on {{site.data.keyword.cloud_notm}}에 대한 설명 및 기술 스펙을 관리 서비스로서 검토하고 **작성**을 클릭하십시오.
+3. **Veeam on IBM Cloud** 페이지에서 관리 서비스로서 Veeam on {{site.data.keyword.cloud_notm}}에 대한 설명과 기술 스펙을 검토한 후에 **작성**을 클릭하십시오. 
 4. 사용자의 요구사항에 따라 구성 설정을 지정하거나 기본값을 수락하십시오.
 5. **vCenter Server** 또는 **Cloud Foundation**을 클릭하여 서비스를 인스턴스 중 하나에 추가하십시오.
-6. 새 인스턴스를 주문하면서 서비스를 추가하려면 **새 인스턴스에 추가**를 클릭하고 새 [vCenter Server](../vcenter/vc_orderinginstance.html), [vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html) 또는 [Cloud Foundation](../sddc/sd_orderinginstance.html) 인스턴스 주문을 계속 진행하십시오.
-7. 기존 인스턴스에 서비스를 추가하려면 **배치된 인스턴스에 추가**를 클릭하고 목록에서 원하는 인스턴스를 선택한 후 **프로비저닝**을 클릭하여 주문을 진행하십시오.
+6. 새 인스턴스를 주문하면서 서비스를 추가하려면 **새 인스턴스에 추가**를 클릭한 후에 새 [vCenter Server](../vcenter/vc_orderinginstance.html), [vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html) 또는 [Cloud Foundation](../sddc/sd_orderinginstance.html) 인스턴스 주문을 계속 진행하십시오. 
+7. 기존 인스턴스에 서비스를 추가하려면 **기존 인스턴스에 추가**를 클릭하고 목록에서 원하는 인스턴스를 선택한 후에 **프로비저닝**을 클릭하여 주문을 진행하고자 하는지 확인하십시오. 
 
-## 관련 링크
+### 관련 링크
 
 * [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_addingremovingservices.html)
 * [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](../sddc/sd_addingremovingservices.html)

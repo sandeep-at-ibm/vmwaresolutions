@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -63,7 +63,7 @@ HCX on {{site.data.keyword.cloud_notm}} 컴포넌트는 {{site.data.keyword.clou
    자세한 정보는 [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 삭제](../services/standalone_deletingserviceinstances.html)를 참조하십시오.
 3. VMware vSphere Web Client에서 온프레미스 HCX Manager를 삭제하십시오.
 
-## 관련 링크
+### 관련 링크
 
 * [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 보기](../services/standalone_viewingserviceinstances.html)
 * [HCX 용어집](hcx_glossary.html)

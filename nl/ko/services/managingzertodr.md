@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -34,11 +34,11 @@ Zerto Virtual Replication을 업데이트하려면 Zerto Virtual Replication 콘
 
 인스턴스의 기본 클러스터에 대한 ESXi 서버를 추가하거나 제거하는 경우 VRA가 자동으로 배치되거나 제거됩니다. VRA가 인스턴스의 보조 클러스터에 있는 ESXi 서버에 자동으로 배치되지 않지만 Zerto Virtual Replication 콘솔에서 자체적으로 배치할 수 있습니다.
 
-## 관련 링크
+### 관련 링크
 
-* [Zerto on IBM Cloud 개요](addingzertodr.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 개요](addingzertodr.html)
 * [Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스 요청](managing_zerto_services.html)
 * [zerto.com 웹 사이트](https://www.zerto.com){:new_window}
 * [Zerto 기술 문서](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Zerto 재해 복구](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/zerto){:new_window}
+* [Zerto 재해 복구](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
 * [Zerto Virtual Replication Alerts의 설명](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)
