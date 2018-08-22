@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -43,9 +43,9 @@ Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz n
    1. Klicken Sie erneut auf das Überlaufmenüsymbol rechts neben der **vCenter-Konsole** und anschließend auf **Instanz löschen**.
    2. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [Überblick zu VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [Übersicht über VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [VMware Federal-Instanzen bestellen](vc_fed_orderinginstance.html)
 * [VMware Federal-Instanzen schützen](vc_fed_securinginstance.html)
 * [VMware Federal-Instanzen anzeigen](vc_fed_viewinginstance.html)

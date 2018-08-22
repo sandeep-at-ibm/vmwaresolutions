@@ -4,18 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # VMware Federal-Instanzen anzeigen
 
-Mit dem hier beschriebenen Verfahren können Sie die VMware Federal-Instanzen, die Sie bestellt haben, und detaillierte Informationen zu diesen Instanzen anzeigen.
+Sie können die Zusammenfassung und die detaillierten Informationen der VMware Federal-Instanzen anzeigen, die für verschiedene Benutzerkonten bereitgestellt wurden.
 
 ## Zusammenfassung für VMware Federal-Instanzen anzeigen
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
-2. Zeigen Sie in der Tabelle **vCenter Server** die Liste Ihrer Instanzen an.
+Wenn Sie eine Zusammenfassung aller VMware Federal-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+2. Klicken Sie in der rechten oberen Ecke der Konsole auf Ihren Avatar und klicken Sie auf das Feld **Konto**, um das Benutzerkonto auszuwählen, für das Sie Instanzen prüfen wollen. 
+3. Prüfen Sie in der Tabelle **vCenter Server** die Liste der Instanzen, die in dem ausgewählten Benutzerkonto bereitgestellt sind.
 
 Tabelle 1. Elemente von VMware Federal-Instanzen
 
@@ -23,8 +25,9 @@ Tabelle 1. Elemente von VMware Federal-Instanzen
 |:------------- |:------------- |
 | Name | Der Name der Instanz. |
 | Version | Die Releaseversion, in der die Instanz bereitgestellt wurde oder auf die ein Upgrade durchgeführt wurde. |  
-| Standort | Das {{site.data.keyword.CloudDataCent}}, in dem die Instanz gehostet wird. |  
-| Erstellungszeit | Der Zeitpunkt (Datum und Uhrzeit), zu dem die Instanz erstellt wurde. |  
+| Standort | Das {{site.data.keyword.CloudDataCent_notm}}, in dem die Instanz gehostet wird. |  
+| Erstellungszeit | Der Zeitpunkt (Datum und Uhrzeit), zu dem die Instanz erstellt wurde. | 
+| Status | Der Status der Instanz. |
 
 Für die Instanz gibt es eine Reihe von Statuswerten.
 
@@ -90,11 +93,11 @@ Tabelle 4. Zugriffsinformationen für instanzbezogene Komponenten
 
 ## Bereitstellungsverlauf für VMware Federal-Instanzen anzeigen
 
-Zeigen Sie den Bereitstellungsverlauf der Instanz unter **Bereitstellungsverlauf** an.
+Klicken Sie im linken Navigationsfenster auf **Bereitstellungsverlauf**, um den Bereitstellungsverlauf für die Instanz anzuzeigen.
 
 Tabelle 5. Bereitstellungsverlauf der VMware Federal-Instanz
 
-| Element        | Beschreibung       |  
+| Element     | Beschreibung      |  
 |:------------- |:------------- |
 | Datum | Der Zeitpunkt (Datum und Uhrzeit), zu dem sich der Instanzstatus geändert hat. |
 | Zusammenfassung | Die Details der Änderung. |
@@ -114,9 +117,9 @@ In den folgenden Abschnitten finden Sie Informationen, die Sie bei der Ausführu
 *  Eine Liste der Zugriffspunkte für die Anmeldung beim privaten Netz der {{site.data.keyword.cloud_notm}}-Infrastruktur mittels VPN finden Sie unter [VPN-Zugriff](http://www.softlayer.com/vpn-access){:new_window}.
 *  Falls Sie beim Bereitstellen einer Datei im Format "OVF" (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](../vmonic/trbl_deploy_ovf.html) weitere Informationen.
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [Überblick zu VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [Übersicht über VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [VMware Federal-Instanzen bestellen](vc_fed_orderinginstance.html)
 * [VMware Federal-Instanzen löschen](vc_fed_deletinginstance.html)
 * [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)

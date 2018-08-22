@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -22,7 +22,7 @@ Die vCenter Server with Hybridity Bundle-Bereitstellung stellt strenge Anforderu
 
 Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vCenter Server with Hybridity Bundle-Instanzen
 
-| IBM Cloud-Rechenzentrum | Standort | Region |
+| {{site.data.keyword.CloudDataCent_notm}} | Standort | Region |
 |:-----|:----------------|
 | AMS03 | Amsterdam | Europa |
 | CHE01 | Chennai | Asien/Pazifik |
@@ -55,7 +55,7 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vCenter Se
 | WDC06 | Washington, DC | NA Ost |
 | WDC07 | Washington, DC | NA Ost |
 
-Je nach Verfügbarkeit und Bestandsangebot ist für {{site.data.keyword.CloudDataCents_notm}} möglicherweise ein Statusanzeiger in der {{site.data.keyword.vmwaresolutions_full}}-Konsole dargestellt, der Ihnen bei der Planung Ihrer Bereitstellungen hilft.
+Je nach Verfügbarkeit und Bestandsangebot ist für {{site.data.keyword.CloudDataCents_notm}} möglicherweise ein Statusanzeiger in der {{site.data.keyword.vmwaresolutions_short}}-Konsole dargestellt, der Ihnen bei der Planung Ihrer Bereitstellungen hilft.
 
 Tabelle 2. Statusanzeiger für {{site.data.keyword.CloudDataCents_notm}} bei der Bestellung von vCenter Server with Hybridity Bundle-Instanzen
 
@@ -65,9 +65,13 @@ Tabelle 2. Statusanzeiger für {{site.data.keyword.CloudDataCents_notm}} bei der
 | Vorübergehend ohne Bestand  | Das {{site.data.keyword.CloudDataCent_notm}} bietet gegenwärtig keine Verfügbarkeit. |
 | Eingeschränkter Bestand             | Das {{site.data.keyword.CloudDataCent_notm}} bietet eine begrenzte Verfügbarkeit und die Bestellung kann möglicherweise nicht ausgeführt werden. |
 
+## Sicherung von Managementkomponenten
+
+Sie sind für die Erhaltung und Sicherstellung der Verfügbarkeit aller Instanzkomponenten verantwortlich. Es wird dringend empfohlen, die Sicherung oder Hochverfügbarkeit aller Managementkomponenten zu planen. Weitere Informationen finden Sie unter [Komponenten sichern](../archiref/solution/solution_backingup.html).
+
 ## Services für vCenter Server with Hybridity Bundle-Instanzen
 
-Die vCenter Server with Hybridity Bundle-Instanz beinhaltet die Lizenzierung von VMware Hybrid Cloud Extension (HCX) und berechtigt Sie zur Verwendung des Service "VMware HCX on IBM Cloud". Dieser Service kann die Netze von lokalen Rechenzentren nahtlos in die {{site.data.keyword.cloud_notm}} erweitern. Dies ermöglicht die Migration von virtuellen Maschinen in die und aus der {{site.data.keyword.cloud_notm}}, ohne dass hierzu eine Konvertierung oder Änderung erforderlich ist.
+Die vCenter Server with Hybridity Bundle-Instanz beinhaltet die Lizenzierung von VMware Hybrid Cloud Extension (HCX) und berechtigt Sie zur Verwendung des Service "VMware HCX on {{site.data.keyword.cloud_notm}}". Dieser Service kann die Netze von lokalen Rechenzentren nahtlos in die {{site.data.keyword.cloud_notm}} erweitern. Dies ermöglicht die Migration von virtuellen Maschinen in die und aus der {{site.data.keyword.cloud_notm}}, ohne dass hierzu eine Konvertierung oder Änderung erforderlich ist.
 
 Geben Sie beim Bereitstellen dieses Service die folgenden Einstellungen an:
 * Geben Sie den **HCX-Verbindungstyp** durch Auswählen einer der folgenden Optionen an:
@@ -82,9 +86,13 @@ Geben Sie beim Bereitstellen dieses Service die folgenden Einstellungen an:
 
 Sie können für Ihre Instanz auf der Basis Ihrer Anforderungen weitere Add-on-Services bestellen, zum Beispiel für die Disaster-Recovery. Weitere Informationen finden Sie unter [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](vc_hybrid_addingremovingservices.html).
 
-## Zugehörige Links
+## Kapazitätsaspekte
 
-* [Überblick zu vCenter Server with Hybridity Bundle](vc_hybrid_overview.html)
+Informationen und Hinweise zur Kapazität finden Sie unter [Skalierungskapazität](../archiref/solution/solution_scaling.html).
+
+### Zugehörige Links
+
+* [Übersicht über vCenter Server with Hybridity Bundle](vc_hybrid_overview.html)
 * [vCenter Server with Hybridity Bundle-Instanzen bestellen](vc_hybrid_orderinginstance.html)
 * [Kapazität für vCenter Server with Hybridity Bundle-Instanzen erweitern und verringern](vc_hybrid_addingremovingservers.html)
 * [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](vc_hybrid_addingremovingservices.html)

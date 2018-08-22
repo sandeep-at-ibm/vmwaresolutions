@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
 # vCenter Server with Hybridity Bundle-Instanzen bestellen
 
-Um eine flexible und anpassbare virtualisierte VMware-Plattform bereitzustellen, die Ihren Workloadbedarf optimal erfüllt, bestellen Sie eine VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle-Instanz. Ihre Bestellung der vCenter Server with Hybridity Bundle-Instanz beinhaltet die Lizenzierung von VMware Hybrid Cloud Extension (HCX) und berechtigt Sie zur Verwendung des Service "VMware HCX on IBM Cloud". Sie können auch Services hinzufügen, wie zum Beispiel [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html) für die Disaster-Recovery.
+Um eine flexible und anpassbare virtualisierte VMware-Plattform bereitzustellen, die Ihren Workloadbedarf optimal erfüllt, bestellen Sie eine VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle-Instanz. Ihre Bestellung der vCenter Server with Hybridity Bundle-Instanz beinhaltet die Lizenzierung von VMware Hybrid Cloud Extension (HCX) und berechtigt Sie zur Verwendung des Service "VMware HCX on {{site.data.keyword.cloud_notm}}". Sie können auch Services hinzufügen, wie zum Beispiel [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) für die Disaster-Recovery.
 
 ## Voraussetzungen
 
@@ -54,7 +54,7 @@ Die Bestellung der vCenter Server with Hybridity Bundle-Instanz enthält die fol
 
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Advanced oder Enterprise) 6.3
+* VMware NSX Service Providers Edition (Advanced oder Enterprise) 6.4
 * VMware vSAN 6.6-Lizenzedition (Advanced oder Enterprise)
 
 **Achtung:**
@@ -169,7 +169,7 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
 
 ## Vorgehensweise
 
-1. Klicken Sie im IBM Cloud-Katalog im linken Navigationsfenster auf **VMware** und anschließend im Abschnitt **Virtuelle Rechenzentren** auf **vCenter Server**.
+1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und anschließend im Abschnitt **Virtuelle Rechenzentren** auf **vCenter Server**.
 2. Klicken Sie auf der Seite **VMware vCenter Server on IBM Cloud** auf die Karte **vCenter Server with Hybridity Bundle** und dann auf **Erstellen**.
 3. Geben Sie auf der Seite **vCenter Server** den Instanznamen ein.
 4. Wählen Sie den Instanztyp aus:
@@ -206,7 +206,7 @@ Informationen zum Angeben von Einstellungen für einen Service finden Sie im ent
 
 Die Bereitstellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen.
 
-Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die im Abschnitt _Technische Spezifikationen für vCenter Server with Hybridity Bundle_ im [Überblick zu vCenter Server with Hybridity Bundle](vc_hybrid_overview.html) beschrieben werden, auf Ihre virtuelle VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert. Wenn Sie zusätzliche Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
+Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für vCenter Server with Hybridity Bundle-Instanzen](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert. Wenn Sie zusätzliche Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 
@@ -227,7 +227,7 @@ Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_sh
 
    Ausgenommen von diesen Aktivitäten ist unter anderem das Management der Dateifreigaben für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von Dateifreigaben für gemeinsam genutzten Speicher.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](../vmonic/signing_softlayer_account.html)
 * [vCenter Server with Hybridity Bundle-Instanzen anzeigen](vc_hybrid_viewinginstances.html)

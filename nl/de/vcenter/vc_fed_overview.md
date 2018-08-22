@@ -4,19 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-07-19"
 
 ---
 
-# Überblick zu VMware Federal on IBM Cloud
+# Übersicht über VMware Federal on IBM Cloud
 
 VMware Federal on {{site.data.keyword.cloud}} stellt die Unterstützung für die Bestellung einer vCenter Server-Basisinstanz bereit und bietet US-Bundesbehörden die Möglichkeit, bereitgestellte vCenter Server-Instanzen zu schützen. Bei Auswahl der Option zum Schützen der bereitgestellten Instanzen werden sensible Informationen, die über die Instanz gespeichert sind, ebenso wie die offene Managementverbindung zum kontinuierlichen Zugriff auf die Instanz für Managementfunktionen wie das Hinzufügen und Entfernen von Hosts und Clustern entfernt. Nachdem Sie die Option zum Schützen ausgewählt haben, werden mit Ausnahme des vollständigen Löschens der Instanz alle Managementfunktionen inaktiviert.
 
-Weitere Informationen zu vCenter Server on {{site.data.keyword.cloud_notm}} und die vCenter Server-Architektur finden Sie unter [Überblick zu vCenter Server](vc_vcenterserveroverview.html).
+Weitere Informationen zu vCenter Server on {{site.data.keyword.cloud_notm}} und die vCenter Server-Architektur finden Sie unter [Übersicht über vCenter Server](vc_vcenterserveroverview.html).
 
 **Achtung:** VMware Federal on {{site.data.keyword.cloud_notm}} bietet nur eine Untergruppe der vCenter Server-Angebote. Konfigurationen mit mehreren Standorten, vorkonfigurierte Bare Metal Server von {{site.data.keyword.cloud_notm}}, das Verwenden eigener Lizenzen (BYOL) und die Option für die Bestellung zusätzlicher Services werden nicht unterstützt.
 
-## Komponenten der vCenter Server-Instanz für VMware Federal on IBM Cloud
+## Technische Spezifikationen für VMware Federal on IBM Cloud-Instanzen
 
 Die folgenden Komponenten sind enthalten:
 
@@ -31,7 +31,7 @@ Für die NFS-Speicherkonfiguration liegt die empfohlene Anzahl von {{site.data.k
 
 **Hinweis:** Wenn Sie vSAN-Speicher auswählen, erfordert die Konfiguration 4 {{site.data.keyword.baremetal_short}}-Instanzen.
 
-### Netzbetrieb
+### Vernetzung
 
 Die folgenden Netzkomponenten werden bestellt:
 *  3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
@@ -72,34 +72,33 @@ Wenn Sie die Option "NFS" auswählen, wird 1 Dateifreigabe mit 2 TB und 4 IOPS/G
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.4
 * (Für vSAN-Cluster) VMware vSAN Advanced oder Enterprise 6.6
 
-## Komponenten von vCenter Server-Erweiterungsknoten
+## Technische Spezifikationen für VMware Federal on IBM Cloud-Erweiterungsknoten
 
 Jeder vCenter Server-Erweiterungsknoten stellt die folgenden Komponenten in Ihrem {{site.data.keyword.cloud_notm}}-Konto mit den entsprechenden anfallenden Gebühren bereit.
 
 ### Hardware für Erweiterungsknoten
 
-1 Bare Metal Server mit der in [Komponenten der vCenter Server-Instanz für VMware Federal on IBM Cloud](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud) aufgeführten Konfiguration.
+1 Bare Metal Server mit der unter [Technische Spezifikationen für VMware Federal on {{site.data.keyword.cloud_notm}}-Instanzen](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) aufgeführten Konfiguration.
 
 ### Lizenzen und Gebühren für Erweiterungsknoten
 
 * 1 Lizenz für VMware vSphere Enterprise Plus 6.5u1
-* 1 Lizenz für VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.3
+* 1 Lizenz für VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.4
 * (Für vSAN-Cluster) VMware vSAN Advanced oder Enterprise 6.6
 
-**Wichtig**: Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal_full}} oder über ein anderes Verfahren außerhalb der Konsole verwalten. Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert.
+**Wichtig**: Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal}} oder über ein anderes Verfahren außerhalb der Konsole verwalten. Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert.
 
 **VORSICHT**: Wenn Sie {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto installiert wurden, als Sie die Instanz bestellt haben, außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwalten, kann dies zur Instabilität Ihrer Umgebung führen. Zu diesen Managementaktivitäten gehören:
 *  Komponenten hinzufügen, ändern, zurückgeben oder entfernen
 *  Instanzkapazität durch das Hinzufügen oder Entfernen von ESXi-Servern erweitern oder verringern
 *  Komponenten ausschalten
-<!--*  Restarting services-->
 
    Ausgenommen von diesen Aktivitäten ist unter anderem das Management der Dateifreigaben für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von Dateifreigaben für gemeinsam genutzten Speicher.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [vCenter Server-Softwareteileliste](vc_bom.html)
 * [Voraussetzungen und Planung für VMware Federal-Instanzen](vc_fed_planning.html)

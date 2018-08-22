@@ -4,14 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-24"
+lastupdated: "2018-07-19"
 
 ---
 
 # VMware Federal-Instanzen schützen
 
-Führen Sie die nachfolgend beschriebene Prozedur aus, um Ihre bereitgestellte VMware Federal-Instanz zu schützen,
-indem Sie die offene Managementverbindung für den kontinuierlichen Zugriff auf die Instanz entfernen.
+Führen Sie die nachfolgend beschriebene Prozedur aus, um Ihre bereitgestellte VMware Federal-Instanz zu schützen, indem Sie die offene Managementverbindung für den kontinuierlichen Zugriff auf die Instanz entfernen.
 
 ## Vorbereitende Schritte
 
@@ -28,7 +27,7 @@ Lesen Sie die folgenden Informationen aufmerksam durch um die Konsequenzen zu ve
 3. Klicken Sie auf das Überlaufmenüsymbol rechts neben der **vCenter-Konsole**.
 4. Klicken Sie auf **Instanz schützen**.
 5. Klicken Sie auf **OK**, um zu bestätigen, dass Sie die Verbindung zu der Instanz von der Automation trennen möchten.
-   
+
    **Hinweis**: Vergewissern Sie sich, dass Sie die wichtigen Informationen unter **Vorbereitende Schritte** gelesen haben müssen, bevor Sie diesen Schritt ausführen.
 
 ## Ergebnisse
@@ -37,9 +36,9 @@ Der Status der Instanz ändert sich in **Wird geändert**.
 
 Sobald die Instanz erfolgreich geschützt wurde, ändert sich der Status der Instanz in **Geschützt**. Dann sind nur die Instanzeigenschaften und der Bereitstellungsverlauf verfügbar.
 
-## Zugehörige Links
+### Zugehörige Links
 
-* [Überblick zu VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [Übersicht über VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [VMware Federal-Instanzen bestellen](vc_fed_orderinginstance.html)
 * [VMware Federal-Instanzen anzeigen](vc_fed_viewinginstance.html)
 * [VMware Federal-Instanzen löschen](vc_fed_deletinginstance.html)

@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-18"
 
 ---
 
-# Überblick zu vCenter Server with Hybridity Bundle
+# Übersicht über vCenter Server with Hybridity Bundle
 
 vCenter Server with Hybridity Bundle ist eine Instanz, die in V2.3 und höheren Releases verfügbar ist.
 
@@ -16,13 +16,11 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle ist e
 
 In zahlreichen Fällen kann die gesamte Umgebung in weniger als einem Tag bereitgestellt werden und die Bare-Metal-Infrastruktur kann die Rechenkapazität nach Bedarf schnell und flexibel skalieren.
 
-<!--Post-deployment, you can increase shared storage by ordering additional NFS (Network File System) file shares from the  {{site.data.keyword.slportal}} and manually attach them across all ESXi servers in a cluster. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.-->
-
 Wenn Sie die vSAN-basierte Speicherkapazität eines vSAN-Clusters erhöhen möchten, können Sie nach der Bereitstellung weitere ESXi-Server hinzufügen.
 
 Sie können für die VMware NSX Advanced Edition ein Upgrade auf die Enterprise Edition durchführen und zusätzliche VMware-Komponenten wie beispielsweise VMware vRealize Operations erwerben.
 
-Sie können IBM Managed Services hinzufügen, wenn Sie die Routineabläufe und die Wartung der Virtualisierung, des Gastbetriebssystems oder der Anwendungsschichten auslagern möchten. Das Team von IBM Cloud Professional Services kann Ihnen durch Migrations-, Implementierungs-, Planungs- und Onboarding-Services ebenfalls dabei helfen, Ihren Einstieg in die Cloud zu beschleunigen.
+Sie können IBM Managed Services hinzufügen, wenn Sie die Routineabläufe und die Wartung der Virtualisierung, des Gastbetriebssystems oder der Anwendungsschichten auslagern möchten. Das Team von {{site.data.keyword.cloud_notm}} Professional Services kann Ihnen durch Migrations-, Implementierungs-, Planungs- und Onboarding-Services ebenfalls dabei helfen, Ihren Einstieg in die Cloud zu beschleunigen.
 
 ## Architektur von vCenter Server with Hybridity Bundle
 
@@ -34,36 +32,36 @@ Abbildung 1. Allgemeine vCenter Server with Hybridity Bundle-Architektur
 
 ### Physische Infrastruktur
 
-Auf dieser Schicht wird die physische Infrastruktur (Berechnungs-, Speicher- und Netzressourcen) bereitgestellt, die von der virtuellen Infrastruktur genutzt wird.
+Auf dieser Schicht wird die physische Infrastruktur (Rechen-, Speicher- und Netzressourcen) bereitgestellt, die von der virtuellen Infrastruktur genutzt wird.
 
-### Virtualisierungsinfrastruktur (Berechnung, Speicher und Netz)
+### Virtualisierungsinfrastruktur (Rechenressourcen, Speicher und Netz)
 
 Diese Schicht virtualisiert die physische Infrastruktur durch verschiedene VMware-Produkte:
-* VMware vSphere virtualisiert die physischen Berechnungsressourcen.
+* VMware vSphere virtualisiert die physischen Rechenressourcen.
 * VMware Virtual SAN (vSAN) stellt auf der Basis des Speichers in den physischen Servern einen softwaredefinierten gemeinsam genutzten Speicher zur Verfügung.
 * VMware NSX ist die Netzvirtualisierungsplattform, die logische Netzkomponenten und virtuelle Netze bereitstellt.
 
 ### Virtualisierungsmanagement
 
-Diese Schicht besteht aus vCenter Server Appliance (vCSA), dem NSX-Manager, zwei NSX Edge Services Gateways (ESGs), drei NSX-Controllern, der virtuellen Appliance für Platform Services Controller (PSC) und der virtuellen Maschine (VM) für IBM CloudDriver.
+Diese Schicht besteht aus vCenter Server Appliance (vCSA), dem NSX-Manager, zwei NSX Edge Services Gateways (ESGs), drei NSX-Controllern, der virtuellen Appliance für Platform Services Controller (PSC) und der virtuellen Serverinstanz (VSI) für IBM CloudDriver. Die CloudDriver-VSI wird bei Bedarf auf Anforderung für bestimmte Operationen, wie zum Beispiel für das Hinzufügen von Hosts zur Umgebung, bereitgestellt.
 
 Das Basisangebot wird mit einer vCenter Server-Appliance bereitgestellt, deren Größe für die Unterstützung einer Umgebung mit bis zu 400 Hosts und bis zu 4000 VMs ausgelegt ist. Zum Verwalten der von IBM gehosteten VMware-Umgebung können Sie dieselben mit der vSphere-API kompatiblen Tools und Scripts verwenden.
 
 Insgesamt benötigt das Basisangebot 38 virtuelle CPUs und 67 GB virtuellen RAM, die für die Virtualisierungsmanagementschicht reserviert sind. Die verbleibende Hostkapazität für Ihre VMs hängt von mehreren Faktoren ab, beispielsweise der Übersubskriptionsrate, der VM-Dimensionierung und den Anforderungen an die Workloadleistung.
 
-Informationen zu zusätzlichem Ressourcenbedarf für das Management beim Bereitstellen des Service "HCX on {{site.data.keyword.cloud_notm}}" finden Sie im Abschnitt [Überblick zu VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+Informationen zu zusätzlichem Ressourcenbedarf für das Management beim Bereitstellen des Service "HCX on {{site.data.keyword.cloud_notm}}" finden Sie im Abschnitt [Übersicht über VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
 
 ### Infrastruktur Hybridity
 
 Diese Schicht bietet eine Abstraktion von Ressourcen zwischen den lokalen Sites und {{site.data.keyword.cloud_notm}}-Sites, sodass Sie Workloads sicher und einfach hin- und herbewegen können, ohne die Merkmale der VMs, wie beispielsweise ihre IP-Adressen, ändern zu müssen.
 
-Sie können auf der Basis von VMware Hybrid Cloud Extension (HCX) lose gekoppelte Verbindungen zwischen lokalen Sites und IBM Cloud-Sites erstellen, um Massenmigrationen von VMs oder Live-vMotion von VMs ohne Ausfallzeit zu ermöglichen.
+Sie können auf der Basis von VMware Hybrid Cloud Extension (HCX) lose gekoppelte Verbindungen zwischen lokalen Sites und {{site.data.keyword.cloud_notm}}-Sites erstellen, um Massenmigrationen von VMs oder Live-vMotion von VMs ohne Ausfallzeit zu ermöglichen.
 
-## Technische Spezifikationen für vCenter Server with Hybridity Bundle
+## Technische Spezifikationen für vCenter Server with Hybridity Bundle-Instanzen
 
 Ihre vCenter Server with Hybridity Bundle-Instanz enthält die folgenden Komponenten:
 
-**Hinweis:** Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen können abhängig vom {{site.data.keyword.CloudDataCent}}, das für die Bereitstellung ausgewählt wird, variieren.
+**Hinweis:** Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen können abhängig vom {{site.data.keyword.CloudDataCent_notm}}, das für die Bereitstellung ausgewählt wird, variieren.
 
 ### Bare Metal Server
 
@@ -71,11 +69,7 @@ Zum Lieferumfang der Bestellung Ihrer vCenter Server with Hybridity Bundle-Insta
   * 2-CPU Intel Broadwell Generation (Intel Xeon E5-2600 v4 Series)
   * 2-CPU Intel Skylake Generation (Intel Xeon 4100/5100/6100 Series)
 
-<!--For NFS storage configuration, the recommended number of {{site.data.keyword.baremetal_short}} is set to the default of three.
-
-**Note:** If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.-->
-
-### Netzbetrieb
+### Vernetzung
 
 Die folgenden Netzkomponenten werden bestellt:
 *  10-Gbps-Uplinks für öffentliche und private Netze
@@ -87,13 +81,13 @@ Die folgenden Netzkomponenten werden bestellt:
     **Wichtig**: Dieses ESG ist für Sie weder zugänglich, noch können Sie es verwenden. Wenn Sie es ändern, sind Sie möglicherweise nicht mehr in der Lage, die vCenter Server with Hybridity Bundle-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Beachten Sie außerdem, dass die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu führt, dass {{site.data.keyword.vmwaresolutions_short}} unbrauchbar wird.
   * 1 sicheres vom Kunden verwaltetes VMware NSX Edge Services Gateway für eingehenden und abgehenden HTTPS-Workloaddatenverkehr, das von IBM als Vorlage bereitgestellt wird und von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen. Weitere Informationen finden Sie im Abschnitt [Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
-Weitere Informationen zu Netzkomponenten, die bei der Bereitstellung des Service "HCX on {{site.data.keyword.cloud_notm}}" bestellt werden, finden Sie im Abschnitt [Überblick zu HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+Weitere Informationen zu Netzkomponenten, die bei der Bereitstellung des Service "HCX on {{site.data.keyword.cloud_notm}}" bestellt werden, finden Sie im Abschnitt [Übersicht über HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
 
 ### Virtual Server-Instanzen
 
 Die folgenden VSIs (Virtual Server-Instanzen) werden bestellt:
 * 1 VSI für IBM CloudBuilder, der nach vollständiger Bereitstellung der Instanz beendet wird.
-* Sie haben die Möglichkeit, die Bereitstellung einer einzigen Virtual Server-Instanz (VSI) von Microsoft Windows für Microsoft Active Directory (AD) oder aber von zwei virtuellen Microsoft Windows-Maschinen für die Hochverfügbarkeit im Management-Cluster auszuwählen, um die Sicherheit und Leistungsfähigkeit zu erhöhen. Ferner haben Sie die Möglichkeit, die VMs mithilfe des Service "Veeam" zu sichern und wiederherzustellen.
+* Sie haben die Möglichkeit, die Bereitstellung einer einzigen Virtual Server-Instanz (VSI) von Microsoft Windows für Microsoft Active Directory (AD) oder aber von zwei virtuellen Microsoft Windows-Maschinen für die Hochverfügbarkeit im Management-Cluster auszuwählen, um die Sicherheit und Leistungsfähigkeit zu erhöhen.
 
 ### Speicher
 
@@ -109,12 +103,12 @@ Die Bestellung der vCenter Server with Hybridity Bundle-Instanz enthält die fol
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Advanced oder Enterprise) 6.3
+* VMware NSX Service Providers Edition (Advanced oder Enterprise) 6.4
 * VMware vSAN (Advanced oder Enterprise) 6.6
 
 Es können zusätzliche Support- und Servicegebühren anfallen.
 
-## Komponenten von vCenter Server with Hybridity Bundle-Erweiterungsknoten
+## Technische Spezifikationen für vCenter Server with Hybridity Bundle-Erweiterungsknoten
 
 Jeder vCenter Server with Hybridity Bundle-Erweiterungsknoten stellt die folgenden Komponenten in Ihrem {{site.data.keyword.cloud_notm}}-Konto mit den entsprechenden anfallenden Gebühren bereit.
 
@@ -125,11 +119,11 @@ Jeder vCenter Server with Hybridity Bundle-Erweiterungsknoten stellt die folgend
 ### Lizenzen und Gebühren für Erweiterungsknoten
 
 * 1 Lizenz für VMware vSphere Enterprise Plus 6.5u1
-* 1 VMware NSX Service Providers Edition (Advanced oder Enterprise) 6.3
-* 1 Support- und Servicegebühren
+* 1 Lizenz für VMware NSX Service Providers Edition (Advanced oder Enterprise) 6.4
+* 1 Support- und Servicegebühr
 * VMware vSAN (Advanced oder Enterprise) 6.6
 
-**Wichtig**: Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal_full}} oder über ein anderes Verfahren außerhalb der Konsole verwalten. Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert.
+**Wichtig**: Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal}} oder über ein anderes Verfahren außerhalb der Konsole verwalten. Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert.
 
 **VORSICHT**: Wenn Sie {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto installiert wurden, als Sie die Instanz bestellt haben, außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwalten, kann dies zur Instabilität Ihrer Umgebung führen. Zu diesen Managementaktivitäten gehören:
 *  Komponenten hinzufügen, ändern, zurückgeben oder entfernen
@@ -139,10 +133,10 @@ Jeder vCenter Server with Hybridity Bundle-Erweiterungsknoten stellt die folgend
 
    Ausgenommen von diesen Aktivitäten ist unter anderem das Management der Dateifreigaben für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von Dateifreigaben für gemeinsam genutzten Speicher.
 
-## Zugehörige Links
+### Zugehörige Links
 
 * [vCenter Server-Softwareteileliste](vc_bom.html)
 * [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle-Instanzen](vc_hybrid_planning.html)
 * [vCenter Server with Hybridity Bundle-Instanzen bestellen](vc_hybrid_orderinginstance.html)
-* [Überblick zu HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)
+* [Übersicht über HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)
 * [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
