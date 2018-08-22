@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -40,7 +40,7 @@ lastupdated: "2018-05-08"
 
 **附註：**vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。
 
-## 相關鏈結
+### 相關鏈結
 
 * [訂購新的 vSphere 叢集](vs_orderinginstances.html)
 * [擴充現有的 vSphere 叢集](vs_scalingexistingclusters.html)
