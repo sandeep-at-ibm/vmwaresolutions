@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -45,7 +45,7 @@ Se le notificará mediante correo electrónico cuando se hayan añadido o elimin
 
 Si no ve que los nuevos servidores ESXi se han añadido a la lista del clúster, compruebe las notificaciones de correo electrónico o de la consola para ver más detalles sobre la anomalía.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Lista de materiales de Cloud Foundation](sd_bom.html)
 * [Requisitos y planificación de instancias de Cloud Foundation](sd_planning.html)

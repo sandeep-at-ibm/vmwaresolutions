@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -52,7 +52,7 @@ Para usuarios que no son Business Partner, puede utilizar las licencias de VMwar
 
 ### Ubicación del centro de datos
 
-Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se alojará la instancia.<!-- Only the {{site.data.keyword.CloudDataCents_notm}} that meet the {{site.data.keyword.baremetal_long}} specification you selected previously are displayed.-->
+Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se alojará la instancia.
 
 ### Preconfigurado
 
@@ -78,8 +78,6 @@ Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} personalizados
 | Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-
-<!-- For guidance on what Bare Metal Server configuration to choose, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
 
 ### Número de servidores nativos
 
@@ -214,7 +212,7 @@ En función de la configuración seleccionada para la instancia y los servicios 
 
 El despliegue de la instancia comienza automáticamente. Recibirá una confirmación de que el pedido se está procesando y puede comprobar el estado del despliegue consultando los detalles de la instancia.
 
-Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Componentes de la instancia de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components) se instalarán en la plataforma virtual VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **SDDC-Cluster**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
+Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **SDDC-Cluster**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
 
 Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 
@@ -235,7 +233,7 @@ Puede ver y gestionar la instancia de Cloud Foundation que ha solicitado.
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
 * [Visualización de instancias de Cloud Foundation](sd_viewinginstances.html)

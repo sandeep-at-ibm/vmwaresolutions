@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Visualización de instancias de Cloud Foundation
 
-Consulte las instancias de VMware Cloud Seleccione que ha solicitado e información detallada sobre las mismas.
+Visualice el resumen y la información detallada de las instancias de VMware Cloud Foundation que se suministran para cuentas de usuario diferentes.
 
 ## Visualización del resumen de las instancias de Cloud Foundation
 
-Para ver un resumen de todas las instancias de Cloud Foundation de su entorno, realice los pasos siguientes:
+Para ver un resumen de todas las instancias de Cloud Foundation que se han suministrado para una cuenta de usuario, complete los pasos siguientes:
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
-2. En la tabla **Instancias de Cloud Foundation**, vea la lista de las instancias:
+1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+2. En la esquina superior derecha de la consola, pulse el avatar y, a continuación, pulse el campo **Cuenta** para seleccionar la cuenta de usuario para la que desea comprobar las instancias. 
+3. En la tabla **Instancias de Cloud Foundation**, vea la lista de las instancias:
 
 Tabla 1. Elementos de instancias de Cloud Foundation
 
@@ -25,7 +26,7 @@ Tabla 1. Elementos de instancias de Cloud Foundation
 |:------------- |:------------- |
 | Nombre | El nombre de la instancia |
 | Versión | La versión del release en la que se ha desplegado la instancia o a la que se ha actualizado |
-| Ubicación | El {{site.data.keyword.CloudDataCent}} en el que se aloja la instancia |
+| Ubicación | El {{site.data.keyword.CloudDataCent_notm}} en el que se aloja la instancia |
 | Hora de creación | La fecha y hora en que se ha creado la instancia |
 | Estado | El estado de la instancia |
 
@@ -95,7 +96,7 @@ Tabla 4. Información de acceso de Fundación Cloud correspondiente a los compon
 
 ## Visualización del historial de despliegues de instancias de Cloud Foundation
 
-En **Historial de despliegue**, consulte el historial de despliegue de la instancia.
+Pulse **Historial de despliegue** en el panel de navegación izquierdo para ver el historial de despliegue de la instancia.
 
 Tabla 5. Historial de despliegues de la instancia de Cloud Foundation
 
@@ -120,7 +121,7 @@ Revise los temas siguientes para obtener información que le ayudará a seguir l
 * Para ver una lista de puntos de acceso para iniciar una sesión en la red privada de {{site.data.keyword.cloud_notm}} utilizando VPN, consulte [Acceso VPN](http://www.softlayer.com/vpn-access){:new_window}.
 * Si tiene problemas al desplegar un archivo OVF (Open Virtualization Format) mediante el cliente web de vSphere, consulte [Despliegue de un archivo OVF mediante el cliente web de vSphere](../vmonic/trbl_deploy_ovf.html).
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Pedido de instancias de Cloud Foundation](sd_orderinginstance.html)
 * [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](sd_addingremovingservers.html)

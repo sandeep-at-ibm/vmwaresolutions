@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,16 +20,16 @@ Tabla 1. Servicios disponibles para las instancias de Cloud Foundation
 
 | Nombre de servicio | Disponibilidad | Soporte instancia |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on IBM Cloud](../services/f5_considerations.html)                                 | Sí | V1.9 y posterior |
-| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       | Sí | V1.8 y posterior |
-| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) | Sí | V2.0 y posterior |
-| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              | Sí | V2.3 y posterior |
-| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              | Sí | V2.3 y posterior |
-| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         | Sí | V2.2 y posterior |
-| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  | Sí | V2.2 y posterior |
-| [Veeam on IBM Cloud](../services/veeam_considerations.html)                          | Sí | V1.8 y posterior |
-| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                         | No | No es aplicable |
-| [Zerto on IBM Cloud](../services/addingzertodr.html)                                 | Sí | V1.2 y posterior |
+| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | Sí | V1.9 y posterior |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | Sí | V1.8 y posterior |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | Sí | V2.0 y posterior |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | Sí | V2.3 y posterior |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | Sí | V2.3 y posterior |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | Sí | V2.2 y posterior |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  | Sí | V2.2 y posterior |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | Sí | V1.8 y posterior |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                         | No | No es aplicable |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | Sí | V1.2 y posterior |
 
 ## Adición de servicios a instancias de Cloud Foundation
 
@@ -63,6 +63,6 @@ Cuando la eliminación del servicio finalice correctamente, recibirá una notifi
 
 **Atención**: se le facturará por los servicios eliminados hasta el final del ciclo de facturación de {{site.data.keyword.cloud_notm}}.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Preguntas frecuentes](../vmonic/faq.html)

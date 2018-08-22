@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -197,7 +197,7 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 3. Pulse **Infraestructura** en el panel de navegación izquierdo. En la tabla **CLÚSTERES**, localice el clúster que desea suprimir y pulse el icono **Suprimir**.
 4. Confirme que ha completado la migración de las VM a otros clústeres, si corresponde, y que desea suprimir el clúster.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Visualización de instancias de Cloud Foundation](sd_viewinginstances.html)
 * [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](sd_addingremovingservers.html)
