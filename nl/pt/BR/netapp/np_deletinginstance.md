@@ -4,15 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-19"
 
 ---
 
 # Excluindo instâncias do NetApp ONTAP Select
 
-Para liberar os componentes que você pediu em uma instância do NetApp ONTAP Select, exclua a instância.
-
-Quando você exclui uma instância do NetApp ONTAP Select, os seguintes componentes são liberados sequencialmente:
+Se você excluir uma instância do NetApp ONTAP Select, os componentes a seguir serão liberados sequencialmente:
 1. As VMs (máquinas virtuais) implementadas em cluster do NetApp ONTAP Select e a VM de implementação do NetApp ONTAP Select
 2. Taxa de suporte e serviços
 3. Licenças do produto VMware
@@ -45,7 +43,7 @@ Devido a dependências de recursos, os componentes em sua instância não são l
    1. Clique no ícone de menu overflow à direita do **Console do vCenter** novamente e clique em **Excluir instância**.
    2. Na janela **Excluir instância**, clique em **OK**.
 
-## Links relacionados
+### Links relacionados
 
 * [Pedindo instâncias do NetApp ONTAP Select](np_orderinginstances.html)
 * [Visualizando instâncias do NetApp ONTAP Select](np_viewinginstances.html)

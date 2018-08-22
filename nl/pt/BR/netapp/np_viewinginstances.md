@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-04"
+lastupdated: "2018-07-20"
 
 ---
 
 # Visualizando instâncias do NetApp ONTAP Select
 
-Visualize as instâncias do NetApp ONTAP Select pedidas e as informações detalhadas sobre elas.
+Visualize o resumo e as informações detalhadas das instâncias do NetApp ONTAP Select que são provisionadas para diferentes contas do usuário.
 
 ## Visualizando instâncias do NetApp ONTAP Select resumo
 
-Para visualizar um resumo de todas as instâncias do NetApp ONTAP Select em seu ambiente, conclua as etapas a seguir:
+Para visualizar um resumo de todas as instâncias do NetApp ONTAP Select que são provisionadas para uma conta do usuário, conclua as etapas a seguir:
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
-2. Na tabela **Instâncias do NetApp ONTAP Select**, visualize a lista de suas instâncias.
+1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+2. No canto superior direito do console, clique em seu avatar e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar instâncias.
+3. Na tabela **Instâncias do NetApp ONTAP Select**, visualize a lista de instâncias que são provisionadas na conta do usuário selecionada.
 
 Tabela 1. Itens de instâncias do NetApp ONTAP Select
 
@@ -27,7 +28,7 @@ Tabela 1. Itens de instâncias do NetApp ONTAP Select
 | Versão | A versão da instância. |  
 | Localização | O data center no qual a instância está hospedada. |
 | Horário de criação | A data e hora em que a instância foi criada. |   
-| Barra de Status | O status da instância. O status pode ter um dos valores a seguir:<ul><li>Criando: A instância está sendo criada.</li><li>Prédio: A instância está sendo configurada.</li><li>Pronta para uso: A instância está pronta para uso.</li><li>Modificando: A instância está sendo modificada.</li><li>Com falha: o processo de criação, configuração ou modificação falhou.</li><li>Excluindo: A instância está sendo excluída.</li><li>Erro de exclusão: ocorreu um erro quando a instância estava sendo excluída.</li><li>Excluído: A instância foi excluída.</li></ul>|
+| Status | O status da instância. O status pode ter um dos valores a seguir:<ul><li>Criando: A instância está sendo criada.</li><li>Prédio: A instância está sendo configurada.</li><li>Pronta para uso: A instância está pronta para uso.</li><li>Modificando: A instância está sendo modificada.</li><li>Com falha: o processo de criação, configuração ou modificação falhou.</li><li>Excluindo: A instância está sendo excluída.</li><li>Erro de exclusão: ocorreu um erro quando a instância estava sendo excluída.</li><li>Excluído: A instância foi excluída.</li></ul>|
 
 ## Visualizando detalhes da propriedade de instâncias do NetApp ONTAP Select
 
@@ -43,16 +44,16 @@ Tabela 2. Propriedades de instância do NetApp ONTAP Select
 | Nome | O nome da instância. |
 | ID | O ID da instância. |
 | Localização | O data center no qual a instância está hospedada. |
-| Versão implementada | A versão implementada do {{site.data.keyword.vmwaresolutions_full}}. |
+| Versão implementada | A versão implementada do  {{site.data.keyword.vmwaresolutions_short}}. |
 | Versão do vCenter | A versão do VMware vCenter Server.<br><br>**Nota**: há uma pequena variação entre a versão do vCenter Server exibida no console do {{site.data.keyword.vmwaresolutions_short}} e do VMware vSphere Web Client. Ambos estão corretos. |
 | NSX for vSphere | A versão do produto VMware NSX for vSphere. |
-| Edição de licença do NSX | A versão e a edição da licença do VMware NSX. |
+| Edição de licença NSX | A versão e a edição da licença do VMware NSX. |
 | Versão do NetApp | A versão do NetApp ONTAP Select. |
 | Tipo de licença do NetApp | O tipo da licença do NetApp ONTAP Select. |
 | DNS, domínio-raiz | O nome de domínio-raiz é o nome de domínio DNS (Sistema de Nomes de Domínio) e o nome raiz da floresta do Microsoft Active Directory (AD) para a instância. |
 | DNS, domínio SSO | O domínio SSO é o domínio de Conexão única do vSphere. O nome de domínio SSO é configurado para todas as instâncias implementadas do NetApp ONTAP Select com um valor de `vsphere.local`. |
 | DNS, subdomínio | O subdomínio é o nome de subdomínio DNS do nome de domínio-raiz no qual os nomes de host da instância do NetApp ONTAP Select local residem. O nome de subdomínio está no formato `<subdomain_label>.<root_domain>`. |
-| Barra de Status | O status da instância. |
+| Status | O status da instância. |
 
 ## Visualizando informações de acesso para instâncias do NetApp ONTAP Select
 
@@ -85,7 +86,7 @@ Tabela 3. Informações de acesso para componentes relacionados à instância do
 
 ## Visualizando o histórico de implementação para instâncias do NetApp ONTAP Select
 
-Em **Histórico de implementação**, visualize o histórico de implementação da instância.
+Clique em **Histórico de implementação** na área de janela de navegação esquerda para visualizar o histórico de implementação da instância.
 
 Tabela 4. Histórico de implementação de instância do NetApp ONTAP Select
 
@@ -156,7 +157,7 @@ Tabela 6. Detalhes do servidor ESXi de um cluster do NetApp ONTAP Select
 | Versão | A versão do servidor ESXi. |
 | Credenciais | O nome de usuário e a senha para acessar o servidor ESXi. |
 | IP privado | O endereço IP privado do servidor ESXi. |
-| Barra de Status | O status do servidor ESXi, que pode ser um dos valores a seguir:<ul><li>Ativo: o servidor ESXi está pronto para uso.</li><li>Excluindo: o servidor ESXi está sendo excluído.</li></ul> |
+| Status | O status do servidor ESXi, que pode ser um dos valores a seguir:<ul><li>Ativo: o servidor ESXi está pronto para uso.</li><li>Excluindo: o servidor ESXi está sendo excluído.</li></ul> |
 
 ## O que fazer a seguir
 
@@ -170,7 +171,7 @@ Revise os tópicos a seguir para obter informações que ajudarão a concluir as
 *  Para obter uma lista de pontos de acesso para efetuar login na Rede Privada da infraestrutura do {{site.data.keyword.cloud_notm}} usando a VPN, veja [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
 *  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, veja [Implementando um arquivo OVF usando o vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
 
-## Links relacionados
+### Links relacionados
 
 * [Pedindo instâncias do NetApp ONTAP Select](np_orderinginstances.html)
 * [Excluindo instâncias do NetApp ONTAP Select](np_deletinginstance.html)
