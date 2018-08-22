@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -22,7 +22,7 @@ vCenter Server with Hybridity Bundle 部署具有嚴格的實體基礎架構需�
 
 表 1. vCenter Server with Hybridity Bundle 實例的可用 {{site.data.keyword.CloudDataCents_notm}}
 
-|IBM Cloud Data Center |位置|地區           |
+| {{site.data.keyword.CloudDataCent_notm}} |位置|地區           |
 |:-----|:----------------|
 |AMS03 |阿姆斯特丹|歐洲|
 |CHE01 |清奈|亞太地區|
@@ -55,7 +55,7 @@ vCenter Server with Hybridity Bundle 部署具有嚴格的實體基礎架構需�
 |WDC06 |華盛頓特區|NA 東部|
 |WDC07 |華盛頓特區|NA 東部|
 
-視可用性和庫存供應而定，{{site.data.keyword.CloudDataCents_notm}} 可能會在 {{site.data.keyword.vmwaresolutions_full}} 主控台中顯示狀態指示器，以協助您規劃部署。
+根據可用性及庫存供應，{{site.data.keyword.CloudDataCents_notm}} 可能會在 {{site.data.keyword.vmwaresolutions_short}} 主控台中顯示狀態指示器，以協助您規劃部署。
 
 表 2. 訂購 vCenter Server with Hybridity Bundle 實例時 {{site.data.keyword.CloudDataCents_notm}} 的狀態指示器
 
@@ -65,9 +65,13 @@ vCenter Server with Hybridity Bundle 部署具有嚴格的實體基礎架構需�
 |暫時沒有庫存                  |目前並未提供 {{site.data.keyword.CloudDataCent_notm}}。|
 |庫存受限             |{{site.data.keyword.CloudDataCent_notm}} 的可用性受限，可能無法完成訂單。|
 
+## 管理元件的備份
+
+您負責維護及確保所有實例元件的可用性。強烈建議您規劃所有管理元件的備份或高可用性。如需相關資訊，請參閱[備份元件](../archiref/solution/solution_backingup.html)。
+
 ## vCenter Server with Hybridity Bundle 實例的服務
 
-vCenter Server with Hybridity Bundle 實例包括可授權您使用 VMware HCX on IBM Cloud 服務的 VMware Hybrid Cloud Extension (HCX) 授權。此服務可將內部部署資料中心的網路無縫延伸至 {{site.data.keyword.cloud_notm}}，這容許將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從該處移轉 VM，而不需要任何轉換或變更。
+vCenter Server with Hybridity Bundle 實例包括可授權您使用 VMware HCX on {{site.data.keyword.cloud_notm}} 服務的 VMware Hybrid Cloud Extension (HCX) 授權。此服務可將內部部署資料中心的網路無縫延伸至 {{site.data.keyword.cloud_notm}}，這容許將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從該處移轉 VM，而不需要任何轉換或變更。
 
 當您部署此服務時，請完成下列設定：
 * 選取下列其中一個選項，以指定 **HCX 交互連接類型**：
@@ -82,7 +86,11 @@ vCenter Server with Hybridity Bundle 實例包括可授權您使用 VMware HCX o
 
 您可以根據需要來訂購實例基礎的其他附加程式服務（例如災難回復）。如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](vc_hybrid_addingremovingservices.html)。
 
-## 相關鏈結
+## 容量考量
+
+如需容量資訊及考量，請參閱[調整容量](../archiref/solution/solution_scaling.html)。
+
+### 相關鏈結
 
 * [vCenter Server with Hybridity Bundle 概觀](vc_hybrid_overview.html)
 * [訂購 vCenter Server with Hybridity Bundle 實例](vc_hybrid_orderinginstance.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -56,7 +56,7 @@ lastupdated: "2018-06-22"
 
 * VMware vCenter Server 6.5
 * VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.3
+* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6
 
 **注意：**
@@ -70,7 +70,7 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
 ### 資料中心位置
 
-選取要在其中管理實例的 IBM Cloud Data Center。
+選取要在其中管理實例的 {{site.data.keyword.CloudDataCent_notm}}。
 
 ### 自訂
 
@@ -174,7 +174,7 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
 ## 程序
 
-1. 在「IBM Cloud 型錄」中，從左導覽窗格中按一下 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
+1. 在「{{site.data.keyword.cloud_notm}} 型錄」中，從左導覽窗格中按一下 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 頁面上，按一下 **vCenter Server** 卡片，然後按一下**建立**。
 3. 在 **vCenter Server** 頁面上，輸入實例名稱。
 4. 按一下**主要實例**，以在環境中部署單一實例。
@@ -199,18 +199,15 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
 實例的部署會自動啟動。您會收到正在處理訂單的確認，您可以檢視實例詳細資料來檢查部署的狀態。
 
-順利部署實例之後，會在 VMware 虛擬平台上安裝 [VMware Federal on {{site.data.keyword.cloud_notm}} 的 vCenter Server 實例元件](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。
+順利部署實例之後，會在 VMware 虛擬平台上安裝 [VMware Federal on {{site.data.keyword.cloud_notm}} 實例的技術規格](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。
 
 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
-
-<!--When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.-->
 
 ## 下一步
 
 檢視、管理或保護您所訂購的 VMware Federal 實例。
 
-**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 {{site.data.keyword.cloud_notm}} 帳戶中所建立的 {{site.data.keyword.vmwaresolutions_full}} 元件，而不是在主控台以外的	{{site.data.keyword.slportal}} 或透過任何其他方法進行管理。
-如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項：**您必須從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 {{site.data.keyword.cloud_notm}} 帳戶中所建立的 {{site.data.keyword.vmwaresolutions_short}} 元件，而不是在主控台以外的 {{site.data.keyword.slportal}} 或透過任何其他方法進行管理。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
 **警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外來管理您在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，會使您的環境變得不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件
@@ -219,7 +216,7 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
    這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
 
-## 相關鏈結
+### 相關鏈結
 
 * [註冊 {{site.data.keyword.cloud_notm}} 帳戶](../vmonic/signing_softlayer_account.html)
 * [檢視 VMware Federal 實例](vc_fed_viewinginstance.html)

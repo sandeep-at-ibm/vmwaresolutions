@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -61,8 +61,6 @@ lastupdated: "2018-06-13"
 
 部署之後，您最多可以建立另外四個叢集。對於 vSAN 儲存空間設定，起始叢集及後置部署叢集都需要 4 部伺服器。
 
-<!--When there are more than 51 ESXi servers in the initial cluster of an instance, the HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into the instance. Because the HCX service requires 8 IPs in the vMotion subnet from the initial cluster, if the number of ESXi servers exceeds 51, no IPs in the vMotion subnet can be available for HCX service.-->
-
 ### 儲存空間設定
 
 儲存空間設定是根據您選取的 Bare Metal Server 配置及儲存空間類型而定。
@@ -99,10 +97,10 @@ lastupdated: "2018-06-13"
 
 ### 授權設定
 
-下列項目的 IBM 提供的 VMware 授權：
+	用於下列項目之 {{site.data.keyword.IBM}} 提供的 VMware 授權：
   * VMware vSphere Enterprise Plus 6.5u1
   * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.3
+  * VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
   * （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6
 
 ### 訂單摘要
@@ -233,7 +231,7 @@ lastupdated: "2018-06-13"
 
 3. 在左導覽窗格上，按一下**基礎架構**。在 **CLUSTERS** 表格中，找出您要刪除的叢集，然後按一下**動作**直欄中的**刪除**圖示。
 
-## 相關鏈結
+### 相關鏈結
 
 * [檢視 VMware Federal 實例](vc_fed_viewinginstance.html)
 * [擴充及縮減 VMware Federal 實例的容量](vc_fed_addingremovingservers.html)

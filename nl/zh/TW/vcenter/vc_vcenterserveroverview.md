@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -14,13 +14,13 @@ VMware vCenter Server on {{site.data.keyword.cloud}} 是一個提供 VMware vSph
 
 在許多情況下，整個環境可以在一天內佈建完成，且裸機基礎架構可以快速而彈性地擴充運算容量，並依需要擴增及縮減。
 
-部署後，您可以透過從 {{site.data.keyword.slportal}} 訂購其他 NFS（網路檔案系統）檔案共用，來增加共用儲存空間，並在叢集中的所有 ESXi 伺服器之間手動連接它們。如果您需要專用儲存空間，我們以高效能（所有 SSD）及高容量（所有 SATA）兩種配置提供了 [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html)。
+部署後，您可以透過從 {{site.data.keyword.slportal}} 訂購其他 NFS（網路檔案系統）檔案共用，來增加共用儲存空間，並在叢集中的所有 ESXi 伺服器之間手動連接它們。如果您需要專用儲存空間，我們以高效能（所有 SSD）及高容量（所有 SATA）兩種配置提供 [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html)。
 
 VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 vSAN 型儲存空間容量，您可以在部署後新增更多 ESXi 伺服器。
 
 如果您已購買 IBM 提供的 VMware 授權，則可以將 VMware NSX Base 版本升級為 Advanced 或 Enterprise 版本，並可購買其他 VMware 元件，例如 VMware vRealize Operations。
 
-如果要卸載虛擬化、來賓作業系統或應用程式層的日常作業及維護，您可以新增 IBM Managed Services。IBM Cloud Professional Services 團隊也可藉由移轉、實作、規劃及上線服務協助您加速移到雲端。
+如果要卸載虛擬化、來賓作業系統或應用程式層的日常作業及維護，您可以新增 IBM Managed Services。{{site.data.keyword.cloud_notm}} Professional Services 團隊也可協助您透過移轉、實作、規劃及上線服務來加速移到雲端。
 
 ## vCenter Server 架構
 
@@ -42,15 +42,15 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 
 ### 虛擬化管理
 
-此層由 vCenter Server Appliance (vCSA)、NSX Manager、兩個 NSX ESG、三個 NSX Controller、Platform Services Controller (PSC) 虛擬應用裝置及 IBM CloudDriver 虛擬機器所組成。
+此層由 vCenter Server Appliance (vCSA)、NSX Manager、兩個 NSX ESG、三個 NSX Controller、Platform Services Controller (PSC) 虛擬應用裝置及 IBM CloudDriver 虛擬伺服器實例 (VSI) 所組成。針對將主機新增至環境這類特定作業，視需要依需求部署 CloudDriver VSI。
 
 基本供應項目與 vCenter Server Appliance 一起部署，其大小調整後可支援最多 400 部主機及最多 4000 部 VM 的環境。相同的 vSphere API 相容工具及 Script 可用來管理 IBM 管理的 VMware 環境。
 
 總計，基本供應項目需要 38 個 vCPU 及 67 GB vRAM 保留給虛擬化管理層。VM 的其餘主機容量視數個因素而定，例如超訂閱率、VM 大小調整及工作負載效能需求。
 
-如需有關架構的詳細資料，請參閱 [{{site.data.keyword.vmwaresolutions_full}} 架構參考資料](../archiref/solution/solution_overview.html)。
+如需有關架構的詳細資料，請參閱 [{{site.data.keyword.vmwaresolutions_short}} 架構參考資料](../archiref/solution/solution_overview.html)。
 
-## vCenter Server 技術規格
+## vCenter Server 實例的技術規格
 
 下列元件已包含在 vCenter Server 實例中。
 
@@ -106,34 +106,32 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 * 效能：2、4 或 10 IOPS/GB。
 * 檔案共用的個別配置。
 
-如果您選擇 NFS 選項，則會訂購下列檔案共用：
-* 用於管理元件的一個 2 TB 4 IOPS/GB 檔案共用。
-* 用於備份的一個 2 TB 共用區塊層儲存空間，可擴增至最多 12 TB。您可以透過選取備份服務，來選擇是否要用於備份的儲存空間。
+如果您選擇 NFS 選項，則會訂購用於管理元件的一個 2 TB 及 4 IOPS/GB 檔案共用。
 
 ### 授權（IBM 提供或 BOYL）與費用
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.3
+* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6
 * 支援與服務費用（一個節點一個授權）
 
-## vCenter Server 擴充節點元件
+## vCenter Server 擴充節點的技術規格
 
 每一個 vCenter Server 擴充節點將部署下列元件，並在您的 {{site.data.keyword.cloud_notm}} 帳戶中收取其費用。
 
 ### 擴充節點的硬體
 
-一部具有 [vCenter Server 概觀](vc_vcenterserveroverview.html)的 _vCenter Server 技術規格_ 小節中所呈現之配置的 Bare Metal Server。
+一部具有 [vCenter Server 實例的技術規格](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)中所呈現之配置的 Bare Metal Server。
 
 ### 擴充節點的授權與費用
 
 * 一個 VMware vSphere Enterprise Plus 6.5u1
-* 一個 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.3
+* 一個 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * 一筆支援與服務費用
 * （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6
 
-**重要事項**：您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台而不是 {{site.data.keyword.slportal_full}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項**：您必須從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 {{site.data.keyword.cloud_notm}} 帳戶中所建立的 {{site.data.keyword.vmwaresolutions_short}} 元件，而不是在主控台以外的 {{site.data.keyword.slportal}} 或透過任何其他方法進行管理。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
 **警告**：從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，可能會讓您的環境不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件
@@ -143,7 +141,7 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 
    這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
 
-## 相關鏈結
+### 相關鏈結
 
 * [vCenter Server 軟體資料清單](vc_bom.html)
 * [規劃 vCenter Server 實例](vc_planning.html)

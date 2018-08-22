@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-31"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-06-08"
 
 變更已保留給 {{site.data.keyword.vmwaresolutions_full}} 的使用者、資源或子網路，會影響管理作業。
 
-## automationuser ID
+**重要事項：**請不要在 VMware vSphere Web Client 的**使用者和群組**頁面中，編輯 **ic4v-vCenter** 群組的廣域許可權。這類變更包括：變更使用者名稱、刪除使用者或變更其密碼。
 
-**automationuser** ID 是一個使用者帳戶，由 {{site.data.keyword.vmwaresolutions_short}} 主控台中所提供的自動化作業使用。
+## 自動化 ID
+
+**自動化** ID 是一個使用者帳戶，由 {{site.data.keyword.vmwaresolutions_short}} 主控台中所提供的自動化作業使用。
 
 適用於主控台中的自動化作業的使用者和密碼不得變更，因為仰賴那些認證的主控台作業可能會失敗。
-
-請勿更新 VMware vSphere Web Client **使用者和群組**頁面中的 **automationuser** ID 內容。這類變更包括：變更使用者名稱、刪除使用者或變更其密碼。
 
 ## 服務特定使用者帳戶
 
