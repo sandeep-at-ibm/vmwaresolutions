@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -55,7 +55,7 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze 
 | WDC06 | Washington, DC | Nord America orientale | Personalizzato |
 | WDC07 | Washington, DC | Nord America orientale | Personalizzato |
 
-Un piccolo sottoinsieme di {{site.data.keyword.CloudDataCents_notm}} IBM Cloud offre le opzioni **Small**, **Medium** e **Large** preconfigurate per Bare Metal Server. A seconda della disponibilità e della fornitura di inventario, i {{site.data.keyword.CloudDataCents_notm}} potrebbero visualizzare un indicatore di stato nella console {{site.data.keyword.vmwaresolutions_full}} per aiutarti a pianificare le tue distribuzioni.
+Un piccolo sottoinsieme di {{site.data.keyword.CloudDataCents_notm}} offre le opzioni **Small**, **Medium** e **Large** preconfigurate per Bare Metal Server. A seconda della disponibilità e della fornitura di inventario, i {{site.data.keyword.CloudDataCents_notm}} potrebbero visualizzare un indicatore di stato nella console {{site.data.keyword.vmwaresolutions_short}} per aiutarti a pianificare le tue distribuzioni.
 
 Tabella 2. Indicatori di stato per i {{site.data.keyword.CloudDataCents_notm}} quando ordini le istanze vCenter Server
 
@@ -65,16 +65,19 @@ Tabella 2. Indicatori di stato per i {{site.data.keyword.CloudDataCents_notm}} q
 | Temporarily Out of Inventory  | Il {{site.data.keyword.CloudDataCent_notm}} non ha disponibilità in questo momento. |
 | Limited Inventory             | Il {{site.data.keyword.CloudDataCent_notm}} ha una disponibilità limitata e l'ordine potrebbe non essere completato. |
 
+## Backup dei componenti di gestione
+
+Sei responsabile del mantenimento e della verifica della disponibilità di tutti i componenti dell'istanza. Si consiglia vivamente di pianificare il backup o l'alta disponibilità di tutti i componenti di gestione. Per ulteriori informazioni, vedi [Backup dei componenti](../archiref/solution/solution_backingup.html).
+
 ## Servizi per le istanze vCenter Server
 
 Puoi ordinare servizi aggiuntivi per la tua istanza in base alle tue esigenze, ad esempio il ripristino di emergenza. Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](vc_addingremovingservices.html).
 
-<!-- ## Capacity considerations
+## Considerazioni sulla capacità
 
-For capacity information and considerations, see the _Bill of
-Materials_ document on the [Virtual reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+Per informazioni e considerazioni sulla capacità, vedi [Ridimensionamento della capacità](../archiref/solution/solution_scaling.html).
 
-## Link correlati
+### Link correlati
 
 * [Panoramica di vCenter Server](vc_vcenterserveroverview.html)
 * [Ordine di istanze vCenter Server](vc_orderinginstance.html)

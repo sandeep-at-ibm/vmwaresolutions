@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-06"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -52,10 +52,10 @@ Tabella 1. Livelli di aggiornamento e impatto
 
 Questa procedura si applica alle istanze distribuite nella V2.1 o successive. Per le istanze distribuite nella V2.0 e precedenti, devi applicare gli aggiornamenti VMware manualmente.
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza da aggiornare.
 3. Nella pagina **Riepilogo**, verifica che tutti i dettagli dell'istanza siano visualizzati correttamente. Quindi, fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra per verificare i dettagli nella pagina **Infrastruttura**.
-   Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la macchina virtuale IBM CloudDriver, a seguito di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'aggiornamento potrebbe non riuscire.
+   Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la VSI (Virtual Server Instance) IBM CloudDriver, a causa di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'aggiornamento potrebbe non riuscire.
 4. Fai clic su **Aggiorna e applica patch** nel riquadro di navigazione a sinistra.
 
    **Nota**: la pagina **Aggiorna e applica patch** per un'istanza contiene solo i pacchetti per l'aggiornamento dei componenti di gestione IBM e non gli aggiornamenti di VMware. Gli aggiornamenti di VMware devono essere applicati manualmente.
@@ -83,7 +83,7 @@ Completa la seguente procedura per aggiornare un'istanza vCenter Server a vCente
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza da aggiornare.
 3. Nella pagina **Riepilogo**, verifica che tutti i dettagli dell'istanza siano visualizzati correttamente. Quindi, fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra per verificare i dettagli nella pagina **Infrastruttura**.
-   Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la macchina virtuale IBM CloudDriver, a seguito di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'aggiornamento potrebbe non riuscire.
+   Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la VSI IBM CloudDriver, a causa di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'aggiornamento potrebbe non riuscire.
 4. Fai clic su **Aggiorna e applica patch** nel riquadro di navigazione a sinistra.
 5. Applica l'aggiornamento della licenza di Hybridity Bundle. Nella tabella **Aggiornamenti della licenza**, fai clic su **Aggiorna** nella colonna **Azione**, esamina il costo stimato e fai clic su **Aggiorna**.
 6. Facoltativamente, distribuisci il servizio VMware HCX on {{site.data.keyword.cloud_notm}}. Quando Hybridity Bundle viene abilitato nella tabella **Aggiornamenti della licenza**, completa la seguente procedura:
@@ -93,8 +93,6 @@ Completa la seguente procedura per aggiornare un'istanza vCenter Server a vCente
   4. Controlla i termini che si applicano al servizio, esamina il costo stimato e fai clic su **Effettua ordine**.
 
 ## Risultati
-
-1. Prima che venga avviata un'operazione di aggiornamento, un backup delle macchine virtuali di gestione viene eseguito automaticamente, se nella tua istanza è installato un servizio di backup. Al termine del backup, viene applicato l'aggiornamento.
 
 2. Dopo aver applicato un aggiornamento, viene visualizzato un record nell'elenco di stato degli aggiornamenti software, in cui puoi visualizzare l'avanzamento dettagliato e lo stato dell'aggiornamento. Al termine dell'aggiornamento, viene visualizzato un record nell'elenco degli aggiornamenti software installati.
 
@@ -138,7 +136,7 @@ Completa la seguente procedura per aggiornare un'istanza vCenter Server a vCente
 
 4. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](../vmonic/trbl_support.html) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato a tentare nuovamente l'aggiornamento dal passo non riuscito.
 
-## Link correlati
+### Link correlati
 
 * [Panoramica di vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Come contattare il supporto IBM](../vmonic/trbl_support.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -233,7 +233,7 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, individua il cluster che vuoi eliminare e fai clic sull'icona **Elimina** nella colonna **Azioni**.
 4. Conferma di aver completato la migrazione delle macchine virtuali in altri cluster, se necessario, e di voler eliminare il cluster.
 
-## Link correlati
+### Link correlati
 
 * [Visualizzazione delle istanze vCenter Server](vc_viewinginstances.html)
 * [Espansione e contrazione della capacità per le istanze vCenter Server](vc_addingremovingservers.html)

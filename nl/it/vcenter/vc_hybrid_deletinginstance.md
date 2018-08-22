@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -44,7 +44,7 @@ A causa delle dipendenze delle risorse, i componenti della tua istanza non vengo
    1. Fai di nuovo clic sull'icona del menu di overflow a destra di **Console vCenter** e quindi su **Elimina istanza**.
    2. Nella finestra **Elimina istanza**, fai clic su **OK**.
 
-## Link correlati
+### Link correlati
 
 * [Eliminazione di istanze vCenter Server with Hybridity Bundle in una configurazione multisito](vc_hybrid_deletinginstance_multi.html)
 * [Ordine di istanze vCenter Server with Hybridity Bundle](vc_hybrid_orderinginstance.html)
