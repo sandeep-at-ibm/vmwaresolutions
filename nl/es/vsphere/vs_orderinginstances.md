@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -24,7 +24,6 @@ Asegúrese de haber realizado las tareas siguientes:
 
 ## Valores del sistema
 
-<!--**Important: Do not modify any values that are set during ordering and cluster deployment. Doing so can result in your cluster becoming unusable.**-->
 Debe especificar los siguientes valores de sistema cuando solicite un nuevo clúster de vSphere.
 
 ### Nombre de clúster
@@ -187,7 +186,7 @@ En función del {{site.data.keyword.CloudDataCent_notm}} que haya seleccionado, 
 
 #### Par de alta disponibilidad de FortiGate Physical Appliance 300 Series
 
-También puede seleccionar si desea incluir el par de alta disponibilidad de dispositivos físicos FortiGate serie 300 para proteger el entorno de nube. Para obtener más información, consulte [Visión general de FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html).
+También puede seleccionar si desea incluir el par de alta disponibilidad de dispositivos físicos FortiGate serie 300 para proteger el entorno de nube. Para obtener más información, consulte [Visión general de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html).
 
 ## Resumen del pedido
 
@@ -223,7 +222,7 @@ En función de sus configuraciones, el coste estimado se genera y se muestra al 
 
    **Nota**: solo se instalan los {{site.data.keyword.baremetal_short}}. El usuario es el responsable de instalar y configurar los distintos componentes después del despliegue del clúster, como por ejemplo VMware vCenter, VMware NSX, VMware vSAN.
 
-## Resultados
+### Resultados
 
 Si ha guardado la configuración del clúster como una plantilla, recibirá una notificación en la consola que indicará que la configuración se ha guardado correctamente; luego podrá encontrar la plantilla en la lista **Configuraciones de clúster**.
 
@@ -231,7 +230,7 @@ Si ha realizado un pedido, el despliegue del clúster se inicia automáticamente
 
 **Nota:** a diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Instancias desplegadas**.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Solicitud de clústeres de vSphere en función de configuraciones existentes](vs_orderingbasedonexistingconfig.html)
 * [Escalado de clústeres existentes](vs_scalingexistingclusters.html)

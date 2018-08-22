@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -39,7 +39,7 @@ El despliegue del clúster se inicia automáticamente y el usuario recibe una co
 
 **Nota:** los clústeres de vSphere no se muestran en la página **Instancias desplegadas**, junto con las instancias de vCenter Server y de Cloud Foundation.
 
-## Enlaces relacionados
+### Enlaces relacionados
 
 * [Solicitud de clústeres nuevos de vSphere](vs_orderinginstances.html)
 * [Solicitud de clústeres de vSphere en función de configuraciones existentes](vs_orderingbasedonexistingconfig.html)
