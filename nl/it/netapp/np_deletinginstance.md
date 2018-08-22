@@ -4,15 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-19"
 
 ---
 
 # Eliminazione di istanze NetApp ONTAP Select
 
-Per rilasciare i componenti che hai ordinato in un'istanza NetApp ONTAP Select, elimina l'istanza.
-
-Quando elimini un'istanza NetApp ONTAP Select, i seguenti componenti vengono rilasciati in modo sequenziale:
+Se elimini un'istanza NetApp ONTAP Select, i seguenti componenti vengono rilasciati in modo sequenziale:
 1. Le VM (macchine virtuali) organizzate in cluster NetApp ONTAP distribuite e la VM di distribuzione NetApp ONTAP Select
 2. Tariffa per supporto e servizi
 3. Licenze del prodotto VMware
@@ -44,7 +42,7 @@ A causa delle dipendenze delle risorse, i componenti della tua istanza non vengo
    1. Fai di nuovo clic sull'icona del menu di overflow a destra di **Console vCenter** e quindi su **Elimina istanza**.
    2. Nella finestra **Elimina istanza**, fai clic su **OK**.
 
-## Link correlati
+### Link correlati
 
 * [Ordine di istanze NetApp ONTAP Select](np_orderinginstances.html)
 * [Visualizzazione delle istanze NetApp ONTAP Select](np_viewinginstances.html)
