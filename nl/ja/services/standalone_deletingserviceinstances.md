@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-06-14"
 4. **「インスタンスの削除」**ウィンドウで**「OK」**をクリックします。
    インスタンスの状況が**「削除中」**に変更されます。 インスタンスの削除が完了すると、このインスタンスは**「オンプレミス HCX インスタンス」**テーブルで使用不可になります。
 
-## 関連リンク
+### 関連リンク
 
 * [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの注文](standalone_orderingserviceinstances.html)
 * [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの参照](standalone_viewingserviceinstances.html)

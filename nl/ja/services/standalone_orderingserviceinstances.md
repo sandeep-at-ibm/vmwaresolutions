@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,8 +20,8 @@ lastupdated: "2018-05-30"
 
 ## 手順
 
-1. 左側のナビゲーション・ペインから**「デプロイ済みインスタンス」**をクリックします。
-2. **「オンプレミス HCX インスタンス」**テーブルにスクロールして、**「インスタンスの注文」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+2. **「オンプレミス HCX インスタンス」**テーブルにスクロールして、**「新規プロビジョン」**をクリックします。
 3. **「オンプレミス・インスタンス名」**を指定して、**「次へ」**をクリックします。
 4. 注文する前に、インスタンス構成を確認します。
    1. インスタンスの設定を確認します。
@@ -39,10 +39,9 @@ lastupdated: "2018-05-30"
 
 注文したオンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを表示し、管理します。
 
-## 関連リンク
+### 関連リンク
 
 * [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの参照](standalone_viewingserviceinstances.html)
 * [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの削除](standalone_deletingserviceinstances.html)
 * [HCX の用語集](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension の資料](https://hcx.vmware.com/#vm-documentation)
-<!--* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf)-->

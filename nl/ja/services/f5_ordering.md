@@ -4,25 +4,25 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-20"
 
 ---
 
 # F5 on IBM Cloud の注文
 
-F5 on {{site.data.keyword.cloud_notm}} サービスを注文するには、BIG-IP Virtual Edition (VE) を組み込む形で新しいインスタンスを注文するか、BIG-IP VE を既存のインスタンスに追加します。
+F5 on {{site.data.keyword.cloud}} サービスを注文するには、BIG-IP Virtual Edition (VE) を組み込む形で新しいインスタンスを注文するか、BIG-IP VE を既存のインスタンスに追加します。
 
 ## 新しいインスタンスでの F5 on IBM Cloud の注文
 
 以下のいずれかの方法を使用して、新しいインスタンスで F5 on {{site.data.keyword.cloud_notm}} を注文できます。
-* {{site.data.keyword.vmwaresolutions_full}} コンソールから新しいインスタンスを注文する時に、**「サービス」**セクションで**「F5 on IBM Cloud」**を選択します。
-* {{site.data.keyword.cloud_notm}} カタログから**「F5 on {{site.data.keyword.cloud_notm}} service」**を選択し、サービス設定を指定し、**「Add to New Instance」**を選択します。
+* {{site.data.keyword.vmwaresolutions_short}} コンソールから新しいインスタンスを注文する時に、**「サービス」**セクションで**「F5 on IBM Cloud」**を選択します。
+* {{site.data.keyword.cloud_notm}} カタログから**「F5 on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to New Instance」**を選択します。
 
 ## 既存のインスタンスでの F5 on IBM Cloud の注文
 
 以下のいずれかの方法を使用して、既存のインスタンスに F5 on {{site.data.keyword.cloud_notm}} サービスを追加できます。
-* {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「サービスの追加」**をクリックします。
-* {{site.data.keyword.cloud_notm}} カタログから**「F5 on IBM Cloud service」**を選択し、サービス設定を指定し、**「Add to Existing Instance」**を選択します。
+* {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
+* {{site.data.keyword.cloud_notm}} カタログから**「F5 on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to Existing Instance」**を選択します。
 
 ## F5 on IBM Cloud サービスの構成
 
@@ -50,7 +50,7 @@ F5 on {{site.data.keyword.cloud_notm}} サービスのライセンス・モデ�
 
 F5 BIG–IP アプライアンスの最大スループットを指定します。
 
-## 関連リンク
+### 関連リンク
 
 * [F5 on {{site.data.keyword.cloud_notm}} の概要](f5_considerations.html)
 * [F5 on {{site.data.keyword.cloud_notm}} の管理](managing_f5.html)

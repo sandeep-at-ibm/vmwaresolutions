@@ -4,22 +4,22 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-20"
 
 ---
 
 # VMware HCX on IBM Cloud の注文
 
-VMware HCX on {{site.data.keyword.cloud_notm}} サービスを注文するには、そのサービスを組み込む形で新しい VMware vCenter Server with Hybridity Bundle インスタンスを注文するか、そのサービスを既存のインスタンスに追加します。
+VMware HCX on {{site.data.keyword.cloud}} サービスを注文するには、そのサービスを組み込む形で新しい VMware vCenter Server with Hybridity Bundle インスタンスを注文するか、そのサービスを既存のインスタンスに追加します。
 
 ## 新しいインスタンスでの VMware HCX on IBM Cloud の注文
 
-VMware HCX on {{site.data.keyword.cloud_notm}} を組み込む形で新しい VMware vCenter Server on IBM Cloud with Hybridity Bundle インスタンスを注文する場合は、{{site.data.keyword.vmwaresolutions_full}} コンソールからインスタンスを注文する時に、**「サービス」**セクションで**「VMware HCX on IBM Cloud」**を選択します。
+VMware HCX on {{site.data.keyword.cloud_notm}} を組み込む形で新しい VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスを注文する場合は、{{site.data.keyword.vmwaresolutions_short}} コンソールからインスタンスを注文する時に、**「サービス」**セクションで**「VMware HCX on IBM Cloud」**を選択します。
 
 
 ## 既存のインスタンスでの VMware HCX on IBM Cloud の注文
 
-既存の VMware vCenter Server on IBM Cloud with Hybridity Bundle インスタンスに VMware HCX on {{site.data.keyword.cloud_notm}} サービスを追加する場合は、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「サービスの追加」**をクリックします。
+既存の VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスに VMware HCX on {{site.data.keyword.cloud_notm}} サービスを追加する場合は、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
 
 ## VMware HCX on IBM Cloud の構成
 
@@ -63,7 +63,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
    * ローカルとリモートの HCX デプロイメント・コンテナーが構成されます。
 7. HCX Manager のホスト名と IP アドレスが {{site.data.keyword.cloud_notm}} 上の VMware vCenter Server の DNS サーバーに登録されます。
 
-## 関連リンク
+### 関連リンク
 
 * [HCX on {{site.data.keyword.cloud_notm}} の概要](hcx_considerations.html)
 * [HCX on {{site.data.keyword.cloud_notm}} の管理](managinghcx.html)

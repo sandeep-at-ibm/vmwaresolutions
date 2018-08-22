@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -63,7 +63,7 @@ HCX の全機能を利用するには、少なくとも 5 つのプライベー�
    詳しくは、[オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの削除](../services/standalone_deletingserviceinstances.html)を参照してください。
 3. VMware vSphere Web Client で、オンプレミス HCX Manager を削除します。
 
-## 関連リンク
+### 関連リンク
 
 * [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの参照](../services/standalone_viewingserviceinstances.html)
 * [HCX の用語集](hcx_glossary.html)

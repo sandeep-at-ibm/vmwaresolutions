@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -14,17 +14,28 @@ HyTrust DataControl on {{site.data.keyword.cloud}} サービスでは、鍵管�
 
 **利用可否:** このサービスは、vSphere 6.5 を実行する、V2.3 以降のリリースでデプロイ (または V2.3 以降のリリースにアップグレード) されたインスタンスでのみ利用できます。
 
-## HyTrust DataControl on IBM Cloud のコンポーネント
+## HyTrust DataControl on IBM Cloud の技術仕様
 
-アクティブ-アクティブ・モードでは、デフォルトのクラスターに HyTrust DataControl (HTDC) アプライアンスの高可用性 (HA) ペアがデプロイされます。 HyTrust KeyControl 機能をワークロードに提供するために、HTDC アプライアンスのライセンスが付与されています。
+以下のコンポーネントが注文され、HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
-HTDC アプライアンスの各ペアは、NSX Manager、vCenter Server Appliance、Platform Services Controller などの管理仮想マシン (VM) に指定したポータブル・サブネットと同じサブネットにデプロイされます。 このアプライアンスは、{{site.data.keyword.cloud_notm}} バックエンド・カスタマー・ルーター (BCR) 経由でルーティングを行い、管理 VM サブネットに関連付けられているゲートウェイに割り当てられます。 また、このアプライアンスは、デフォルト・クラスターのデフォルト・ストレージに配置されます。
+### HyTrust DataControl アプライアンス
+* CPU: 2 vCPU
+* RAM: 8 GB
+* ディスク: 終息したクラスター内の vSAN に常駐する 20 GB VMDK
+* ネットワーク: 管理用に指定された VLAN-backed プライベート・ポータブル・ネットワーク上に配置されます
+
+### 高可用性
+アクティブ-アクティブ構成で、2 つの DataControl アプライアンスがデプロイされます。
+
+### ライセンスと料金
+
+ホストごとのライセンス: HyTrust DataControl ライセンスは、環境内のホストごとに注文されます。
 
 ## HyTrust DataControl on IBM Cloud を削除する際の考慮事項
 
 HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスを削除する前に、DataControl のすべてのディスクを暗号化またはバックアップしたことを確認してください。 サービスを削除した後に、鍵が削除されて、VM からロックアウトされる可能性があります。
 
-## 関連リンク
+### 関連リンク
 
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の注文](htdc_ordering.html)
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の管理](managinghtcc.html)

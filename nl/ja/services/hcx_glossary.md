@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -20,6 +20,6 @@ lastupdated: "2018-05-23"
 * **HCX Manager Admin Console**: これは、サービスの開始と停止やサポート・ログの収集など、管理の目的で HCX アプライアンスを管理するためのユーザー・インターフェースです。
 * **HCX Cloud Console**: これは、仮想データ・センターや災害復旧など、クラウド・サイドの HCX 機能を構成するためのユーザー・インターフェースです。
 
-## 関連リンク
+### 関連リンク
 
 * [VMware Hybrid Cloud Extension の資料](https://hcx.vmware.com/#vm-documentation)

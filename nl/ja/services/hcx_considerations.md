@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -12,11 +12,42 @@ lastupdated: "2018-06-14"
 
 HCX on {{site.data.keyword.cloud}} サービスでは、オンプレミス・データ・センターのネットワークを {{site.data.keyword.cloud_notm}} にシームレスに拡張できるので、変換も変更も行わずに {{site.data.keyword.cloud_notm}} との間で仮想マシン (VM) をマイグレーションできます。
 
-**利用可否**: このサービスは、V2.3 以降のリリースでデプロイされた VMware vCenter Server on IBM Cloud with Hybridity Bundle インスタンスでのみ利用可能です。
+**利用可否**: このサービスは、V2.3 以降のリリースでデプロイされた VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスでのみ利用可能です。
 
 既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードできます。 インスタンスをアップグレードして HCX on {{site.data.keyword.cloud_notm}} サービスをデプロイする方法について詳しくは、[vCenter Server with Hybridity Bundle インスタンスへのアップグレード](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance)を参照してください。
 
 **注:** vCenter Server with HCX on {{site.data.keyword.cloud_notm}} インスタンスでは、オンプレミス・サイトからの同時接続が 3 つまでに制限されています。
+
+## HCX on IBM Cloud の技術仕様
+
+以下のコンポーネントが注文されて HCX on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
+
+**注:** オンプレミスの HCX インスタンスには、ライセンス交付とアクティベーションのみが含まれます。
+
+### HCX 管理用の VMware NSX Edge Services Gateways のアクティブ/パッシブ・ペア
+
+* CPU: 6 vCPU
+* RAM: 8 GB
+* ディスク: 3 GB VMDK
+
+### HCX 管理アプライアンス - 仮想マシン
+
+* CPU: 4 vCPU
+* RAM: 12 GB
+* ディスク: 60 GB VMDK
+
+構成時には必要に応じて、L2 接続、WAN 最適化、およびゲートウェイ接続のために追加の HCX アプライアンスがデプロイされます。
+
+### ネットワーキング
+
+* 16 個の IP アドレスを持つ 1 つのパブリック・ポータブル・サブネット
+* 64 個の IP アドレスを持つ 1 つのプライベート・ポータブル・サブネット
+* プライベート・ポータブル vMotion サブネットからの 8 個の IP アドレス
+
+### ライセンスと料金
+
+* 基本のライセンス料金: サービスのための必須の課金
+* 管理対象 VM の料金: 月ごとにマイグレーションされる VM ごとの課金
 
 ## HCX on IBM Cloud をインストールする際の考慮事項
 
@@ -43,7 +74,7 @@ HCX on {{site.data.keyword.cloud_notm}} サービスを削除する前に、以�
    * 空の場合、HCX 関連のフォルダーが除去されます。
    * HCX 管理エッジ・アプライアンスが削除されます。
 
-## 関連リンク
+### 関連リンク
 
 * [HCX on {{site.data.keyword.cloud_notm}} の注文](hcx_ordering.html)
 * [HCX on {{site.data.keyword.cloud_notm}} の管理](managinghcx.html)

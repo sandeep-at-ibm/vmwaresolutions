@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -36,13 +36,13 @@ Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスで�
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「開始」**をクリックします。
 2. ページをスクロールダウンし、**「追加マネージド・サービスの注文」**で、**「Zerto on IBM Cloud のマネージド・サービス」**カードをクリックします。
-3. **「Zerto on IBM Cloud のマネージド・サービス」**ページで、マネージド・サービスとしての Zerto on {{site.data.keyword.cloud_notm}} の説明と技術仕様を確認してから、**「作成」**をクリックします。
+3. **「Zerto on IBM Cloud」**ページで、マネージド・サービスとしての Zerto on {{site.data.keyword.cloud_notm}} の説明と技術仕様を確認してから、**「作成」**をクリックします。
 4. 要件に応じて構成設定値を指定するか、またはデフォルト値を受け入れます。
 5. **「vCenter サーバー」**または**「Cloud Foundation」**をクリックして、このサービスをいずれかのインスタンスに追加します。
 6. このサービスを新規インスタンスの注文中に追加するには、**「新規インスタンスに追加」**をクリックしてから、新規 [vCenter Server](../vcenter/vc_orderinginstance.html) インスタンス、[vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html) インスタンス、または [Cloud Foundation](../sddc/sd_orderinginstance.html) インスタンスの注文を続けます。
-7. このサービスを既存のインスタンスに追加するには、**「デプロイ済みインスタンスに追加」**をクリックし、対象インスタンスをリストで選択してから、**「プロビジョン」**をクリックして注文に進むことを確認します。
+7. このサービスを既存のインスタンスに追加するには、**「既存にインスタンスに追加 (Add to Existing Instance)」**をクリックし、リストから対象インスタンスを選択してから、**「プロビジョン」**をクリックして注文に進むことに同意します。
 
-## 関連リンク
+### 関連リンク
 
 * [vCenter Server インスタンスのサービスの注文、表示、削除](../vcenter/vc_addingremovingservices.html)
 * [Cloud Foundation インスタンス用サービスの注文、表示、削除](../sddc/sd_addingremovingservices.html)
