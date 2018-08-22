@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -20,16 +20,16 @@ Tableau 1. Services disponibles pour les instances vCenter Server with Hybridity
 
 | Nom de service | Disponibilité | Support d'instance |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on IBM Cloud](../services/f5_considerations.html)                                 | Oui | A partir de V1.9 |
-| [FortiGate Security Appliance on IBM Cloud](../services/fsa_considerations.html)       | Oui | A partir de V1.8 |
-| [FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html) | Oui | A partir de V2.0 |
-| [HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)              | Oui | A partir de V2.3 |
-| [HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)              | Oui | A partir de V2.3 |
-| [IBM Spectrum Protect Plus on IBM Cloud](../services/spp_considerations.html)         | Oui | A partir de V2.2 |
-| [KMIP for VMware on IBM Cloud](../services/kmip_considerations.html)                  | Oui | A partir de V2.2 |
-| [Veeam on IBM Cloud](../services/veeam_considerations.html)                           | Oui | A partir de V1.8 |
-| [VMware HCX on IBM Cloud](../services/hcx_considerations.html)                        | Oui | A partir de V2.3 |
-| [Zerto on IBM Cloud](../services/addingzertodr.html)                                  | Oui | A partir de V1.2 |
+| [F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)                                 | Oui | A partir de V1.9 |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | Oui | A partir de V1.8 |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | Oui | A partir de V2.0 |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | Oui | A partir de V2.3 |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | Oui | A partir de V2.3 |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | Oui | A partir de V2.2 |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  | Oui | A partir de V2.2 |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | Oui | A partir de V1.8 |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                         | Oui | A partir de V2.3 |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | Oui | A partir de V1.2 |
 
 ## Ajout de services à des instances vCenter Server with Hybridity Bundle
 
@@ -63,6 +63,6 @@ Lorsque le retrait du service est terminé, vous êtes prévenu par un courrier 
 
 **Attention** : les services retirés vous sont facturés jusqu'à échéance du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}.
 
-## Liens connexes
+### Liens connexes
 
 * [Foire aux questions](../vmonic/faq.html)

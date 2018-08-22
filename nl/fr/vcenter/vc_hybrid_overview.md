@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-07"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -16,13 +16,11 @@ The VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle e
 
 Dans de nombreux cas, l'ensemble de l'environnement peut être mis à disposition en moins d'une journée et l'infrastructure bare metal peut rapidement et de manière élastique augmenter ou diminuer en fonction des besoins de la capacité de calcul.
 
-<!--Post-deployment, you can increase shared storage by ordering additional NFS (Network File System) file shares from the  {{site.data.keyword.slportal}} and manually attach them across all ESXi servers in a cluster. If you require dedicated storage, [NetApp ONTAP Select on IBM Cloud](../netapp/np_netappoverview.html) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.-->
-
 Pour augmenter la capacité d'un stockage basé sur vSAN d'un cluster vSAN, vous pouvez ajouter d'autres serveurs ESXi après le déploiement.
 
 Vous pouvez mettre à niveau l'édition Advanced de VMware NSX vers l'édition Enterprise et vous pouvez acheter des composants VMware supplémentaires, tels que VMware vRealize Operations.
 
-Vous pouvez ajouter IBM Managed Services si vous voulez décharger les opérations quotidiennes et la maintenance de la virtualisation, du système d'exploitation invité ou des couches application. L'équipe IBM Cloud Professional Services est également disponible pour vous aider à accélérer votre parcours vers le cloud en vous offrant des services de migration, d'implémentation, de planification et d'intégration.
+Vous pouvez ajouter IBM Managed Services si vous voulez décharger les opérations quotidiennes et la maintenance de la virtualisation, du système d'exploitation invité ou des couches application. L'équipe {{site.data.keyword.cloud_notm}} Professional Services est également disponible pour vous aider à accélérer votre transition vers le cloud en vous offrant des services de migration, d'implémentation, de planification et d'intégration.
 
 ## Architecture vCenter Server with Hybridity Bundle
 
@@ -45,7 +43,7 @@ Cette couche virtualise l'infrastructure physique par le biais de différents pr
 
 ### Gestion de la virtualisation
 
-Cette couche se compose du dispositif vCenter Server Appliance (vCSA), du gestionnaire NSX Manager, de deux passerelles NSX ESG, de trois contrôleurs NSX, du dispositif virtuel PSC (Platform Services Controller) et de la machine virtuelle IBM CloudDriver.
+Cette couche se compose du dispositif vCenter Server Appliance (vCSA), de NSX Manager, de deux passerelles NSX ESG, de trois contrôleurs NSX, du dispositif virtuel PSC (Platform Services Controller) et de l'instance de serveur virtuel IBM CloudDriver. L'instance de serveur virtuel CloudDriver est déployée à la demande en fonction des besoins de certaines opérations, telles que l'ajout d'hôtes à l'environnement. 
 
 L'offre de base est déployée avec un dispositif vCenter Server dimensionné de manière à prendre en charge un environnement comportant jusqu'à 400 hôtes et jusqu'à 4000 machines virtuelles. Les mêmes outils et scripts compatibles API vSphere peuvent être utilisés pour gérer l'environnement VMware hébergé par IBM.
 
@@ -57,23 +55,19 @@ Pour connaître les besoins en ressources de gestion supplémentaires lors du d�
 
 Cette couche fournit une abstraction de ressources entre les sites locaux et les sites {{site.data.keyword.cloud_notm}} de sorte que vous pouvez déplacer les charges de travail vers l'arrière et vers l'avant facilement et en toute sécurité sans avoir à modifier les caractéristiques des machines virtuelles, par exemple, leurs adresses IP.
 
-Sur la base de VMware Hybrid Cloud Extension (HCX), vous pouvez créer des interconnexions à couplage lâche entre les sites locaux et les sites IBM Cloud afin d'activer la migration en bloc de machines virtuelles ou le déplacement opérationnel de machines virtuelles via vMotion, sans temps d'indisponibilité.
+Sur la base de VMware Hybrid Cloud Extension (HCX), vous pouvez créer des interconnexions à couplage lâche entre les sites locaux et les sites {{site.data.keyword.cloud_notm}} afin d'activer la migration en bloc de machines virtuelles ou le déplacement opérationnel de machines virtuelles via vMotion, sans temps d'indisponibilité.
 
-## Spécifications techniques de vCenter Server with Hybridity Bundle
+## Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle
 
 Les composants suivants sont inclus dans votre instance vCenter Server with Hybridity Bundle :
 
-**Remarque :** la disponibilité et la tarification des configurations matérielles normalisées peuvent varient en fonction de l'{{site.data.keyword.CloudDataCent}} sélectionné pour le déploiement.
+**Remarque :** la disponibilité et la tarification des configurations matérielles normalisées peuvent varient en fonction de l'{{site.data.keyword.CloudDataCent_notm}} sélectionné pour le déploiement.
 
 ### Serveur bare metal
 
 Quatre serveurs {{site.data.keyword.baremetal_short}} personnalisés sont inclus avec votre commande vCenter Server with Hybridity Bundle. Les modèles d'UC suivants sont disponibles :
   * Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4)
   * Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100)
-
-<!--For NFS storage configuration, the recommended number of {{site.data.keyword.baremetal_short}} is set to the default of three.
-
-**Note:** If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.-->
 
 ### Utilisation en réseau
 
@@ -93,7 +87,7 @@ Pour plus d'informations sur les composants de mise en réseau commandés lors d
 
 Les instances de serveur virtuel suivantes sont commandées :
 * Une instance de serveur virtuel pour IBM CloudBuilder, fermée une fois le déploiement de l'instance terminé.
-* Vous pouvez choisir de déployer une seule instance de serveur virtuel Microsoft Windows Server pour Microsoft Active Directory (AD) ou deux machines virtuelles à haute disponibilité Microsoft Windows dans le cluster de gestion pour plus de sécurité et de robustesse. Vous avez également la possibilité de sauvegarder et restaurer les machines virtuelles à l'aide du service de Veeam.
+* Vous pouvez choisir de déployer une seule instance de serveur virtuel Microsoft Windows Server pour Microsoft Active Directory (AD) ou deux machines virtuelles à haute disponibilité Microsoft Windows dans le cluster de gestion pour plus de sécurité et de robustesse.
 
 ### Stockage
 
@@ -109,12 +103,12 @@ Les licences suivantes sont incluses avec votre commande d'instance vCenter Serv
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Advanced ou Enterprise) 6.3
+* VMware NSX Service Providers Edition (Advanced ou Enterprise) 6.4
 * VMware vSAN (Advanced ou Enterprise) 6.6
 
 Des frais supplémentaires de support et de services peuvent s'appliquer.
 
-## Composants du noeud d'extension vCenter Server with Hybridity Bundle
+## Spécifications techniques relatives aux noeuds d'extension vCenter Server with Hybridity Bundle
 
 Chaque noeud d'extension vCenter Server with Hybridity Bundle déployé génère des frais, imputés à votre compte {{site.data.keyword.cloud_notm}}, pour les composants suivants.
 
@@ -124,12 +118,12 @@ Un serveur bare metal avec la configuration personnalisée.
 
 ### Licences et frais pour les noeuds d'extension
 
-* Un VMware vSphere Enterprise Plus 6.5u1
-* Un VMware NSX Service Providers Edition (Advanced ou Enterprise) 6.3
+* Une pour VMware vSphere Enterprise Plus 6.5u1
+* Une pour VMware NSX Service Providers Edition (Advanced ou Enterprise) 6.4
 * Frais de support et de services
 * VMware vSAN (Advanced ou Enterprise) 6.6
 
-**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal_full}} ou autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
 
 **ATTENTION** : gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lors de la commande de l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque d'entraîner une instabilité de votre environnement. Ces activités de gestion incluent :
 *  L'ajout, la modification, le retour ou la suppression de composants
@@ -139,7 +133,7 @@ Un serveur bare metal avec la configuration personnalisée.
 
    Seules les activités de gestion des partages de fichiers du stockage partagé depuis le portail {{site.data.keyword.slportal}} font exception. Il s'agit des activités suivantes : commande, suppression (pouvant avoir un impact sur des magasins de données éventuellement montés), accord d'autorisation et montage de partages de fichiers de stockage partagé.
 
-## Liens connexes
+### Liens connexes
 
 * [Nomenclature du logiciel vCenter Server](vc_bom.html)
 * [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](vc_hybrid_planning.html)

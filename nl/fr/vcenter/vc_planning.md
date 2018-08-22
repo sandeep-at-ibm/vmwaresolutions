@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -55,7 +55,7 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instan
 | WDC06 | Washington, DC | Est des Etats-Unis | Personnalisée |
 | WDC07 | Washington, DC | Est des Etats-Unis | Personnalisée |
 
-Un petit sous-ensemble d'{{site.data.keyword.CloudDataCents_notm}} offre des options de serveur bare metal **Petite**, **Moyenne** et **Grande** préconfigurées. Selon la disponibilité et l'approvisionnement du stock, les {{site.data.keyword.CloudDataCents_notm}} peuvent afficher un indicateur de statut sur la console {{site.data.keyword.vmwaresolutions_full}} pour vous aider à planifier vos déploiements.
+Un petit sous-ensemble d'{{site.data.keyword.CloudDataCents_notm}} offre des options de serveur bare metal **Petite**, **Moyenne** et **Grande** préconfigurées. Selon la disponibilité et l'approvisionnement du stock, les {{site.data.keyword.CloudDataCents_notm}} peuvent afficher un indicateur de statut sur la console {{site.data.keyword.vmwaresolutions_short}} pour vous aider à planifier vos déploiements.
 
 Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_notm}} lors de la commande d'instances vCenter Server
 
@@ -65,16 +65,19 @@ Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_not
 | Temporarily Out of Inventory  | L'{{site.data.keyword.CloudDataCent_notm}} est temporairement en rupture de stock. |
 | Limited Inventory             | L'{{site.data.keyword.CloudDataCent_notm}} a une disponibilité limitée et la commande risque de ne pas être honorée. |
 
+## Sauvegarde des composants de gestion
+
+Vous êtes chargé de gérer et d'assurer la disponibilité de tous les composants d'instance. Il est fortement recommandé de planifier la sauvegarde ou la haute disponibilité de tous les composants de gestion. Pour plus d'informations, voir [Sauvegarde des composants](../archiref/solution/solution_backingup.html).
+
 ## Services pour les instances vCenter Server
 
 Vous pouvez commander des services complémentaires pour votre instance en fonction de vos besoins, par exemple, la reprise après incident. Pour plus d'informations, voir[Commande, affichage et retrait de services pour des instances vCenter Server](vc_addingremovingservices.html).
 
-<!-- ## Capacity considerations
+## Remarques sur la capacité
 
-For capacity information and considerations, see the _Bill of
-Materials_ document on the [Virtual reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+Pour toute information sur la capacité, voir [Mise à l'échelle de la capacité](../archiref/solution/solution_scaling.html).
 
-## Liens connexes
+### Liens connexes
 
 * [Présentation de vCenter Server](vc_vcenterserveroverview.html)
 * [Commande d'instances vCenter Server](vc_orderinginstance.html)

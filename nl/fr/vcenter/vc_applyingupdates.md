@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-06"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -50,10 +50,10 @@ Tableau 1. Niveaux de mise à jour et impact
 
 Cette procédure s'applique aux instances déployées en version 2.1 et ultérieures. Pour les instances déployées en version 2.0 et antérieures, vous devez appliquer les mises à jour VMware manuellement.
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. A partir de la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance à mettre à jour.
 3. Sur la page **Récapitulatif**, vérifiez que tous les détails d'instance sont correctement affichés. Cliquez ensuite sur **Infrastructure** dans le panneau de navigation de gauche pour vérifier les détails sur la page **Infrastructure**.
-   S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec la machine virtuelle IBM CloudDriver, lié à une règle de pare-feu ou autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
+   S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec l'instance de serveur virtuel IBM CloudDriver, lié à une règle de pare-feu ou à un autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
 4. Cliquez sur **Mise à jour et module de correction** dans le panneau de navigation de gauche.
 
    **Remarque** : la page **Mise à jour et module de correction** pour une instance ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. Les mises à jour VMware doivent être appliquées manuellement.
@@ -81,7 +81,7 @@ Procédez comme suit pour mettre à niveau d'une instance vCenter Server vers vC
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance à mettre à niveau.
 3. Sur la page **Récapitulatif**, vérifiez que tous les détails d'instance sont correctement affichés. Cliquez ensuite sur **Infrastructure** dans le panneau de navigation de gauche pour vérifier les détails sur la page **Infrastructure**.
-   S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec la machine virtuelle IBM CloudDriver, lié à une règle de pare-feu ou autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
+   S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec l'instance de serveur virtuel IBM CloudDriver, lié à une règle de pare-feu ou à un autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
 4. Cliquez sur **Mise à jour et module de correction** dans le panneau de navigation de gauche.
 5. Appliquez la mise à niveau de licence Hybridity Bundle. Dans le tableau **Mises à niveau de licence**, cliquez sur **Mettre à niveau** dans la colonne **Action**, passez en revue le coût estimé, puis cliquez sur **Mettre à niveau**.
 6. Déployez éventuellement le service VMware HCX on {{site.data.keyword.cloud_notm}}. Lorsque Hybridity Bundle est activé dans le tableau **Mises à niveau de licence**, procédez comme suit :
@@ -91,8 +91,6 @@ Procédez comme suit pour mettre à niveau d'une instance vCenter Server vers vC
   4. Passez en revue les conditions qui s'appliquent au service, ainsi que le coût estimé, puis cliquez sur **Passer une commande**.
 
 ## Résultats
-
-1. Avant le démarrage d'une opération de mise à jour, une sauvegarde des machines virtuelles de gestion est automatiquement effectuée, si un service de sauvegarde est installé sur votre instance. Une fois la sauvegarde terminée, la mise à jour est appliquée.
 
 2. Lorsque vous appliquez une mise à jour, un enregistrement s'affiche dans la liste des statuts de mise à jour logicielle, où vous pouvez visualiser la progression et le statut détaillés de la mise à jour. Lorsque la mise à jour a réussi, un enregistrement s'affiche dans la liste des mises à jour logicielles installées.
 
@@ -136,7 +134,7 @@ Procédez comme suit pour mettre à niveau d'une instance vCenter Server vers vC
 
 4. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](../vmonic/trbl_support.html) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à relancer la mise à niveau à partir de l'étape où elle a échoué.
 
-## Liens connexes
+### Liens connexes
 
 * [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Contacter le support IBM](../vmonic/trbl_support.html)

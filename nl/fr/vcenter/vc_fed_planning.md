@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -22,14 +22,22 @@ Le déploiement VMware Federal on {{site.data.keyword.cloud_notm}} est soumis à
 - WDC03 - Washington, DC, POD2
 - DAL08 - Dallas, TX, POD2
 
+## Sauvegarde des composants de gestion
+
+Vous êtes chargé de gérer et d'assurer la disponibilité de tous les composants d'instance à l'aide de votre solution de sauvegarde préférée. Il est fortement recommandé de planifier la sauvegarde ou la haute disponibilité de tous les composants de gestion. Pour plus d'informations, voir [Sauvegarde des composants](../archiref/solution/solution_backingup.html).
+
 ## Services pour les instances VMware Federal
 
 VMware Federal on {{site.data.keyword.cloud_notm}} n'offre pas l'option permettant de commander d'autres services.
 
-## Liens connexes
+## Remarques sur la capacité
+
+Pour toute information sur la capacité, voir [Mise à l'échelle de la capacité](../archiref/solution/solution_scaling.html).
+
+### Liens connexes
 
 * [Nomenclature du logiciel vCenter Server](vc_bom.html)
-* [Présentation de VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [Présentation de VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [Commande d'instances VMware Federal](vc_fed_orderinginstance.html)
 * [Sécurisation des instances VMware Federal](vc_fed_securinginstance.html)
 * [Contacter le support IBM](../vmonic/trbl_support.html)

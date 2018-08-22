@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-05"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -35,10 +35,10 @@ Tableau 1. Niveaux de mise à jour et impact
 
 ## Procédure
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. A partir de la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance à mettre à jour.
 3. Sur la page **Récapitulatif**, vérifiez que tous les détails d'instance sont correctement affichés. Cliquez ensuite sur **Infrastructure** dans le panneau de navigation de gauche pour vérifier les détails sur la page **Infrastructure**.
-   S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec la machine virtuelle IBM CloudDriver, lié à une règle de pare-feu ou autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
+   S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec l'instance de serveur virtuel IBM CloudDriver, lié à une règle de pare-feu ou à un autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
 4. Cliquez sur **Mise à jour et module de correction** dans le panneau de navigation de gauche.
 
    **Remarque** : la page **Mise à jour et module de correction** ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. {{site.data.keyword.vmwaresolutions_short}} applique les mises à jour VMware dans les circonstances suivantes :
@@ -56,8 +56,6 @@ Tableau 1. Niveaux de mise à jour et impact
 7. Si vous appliquez des mises à jour à des instances vCenter Server dans une configuration de déploiement multisite, une section intitulée **Etapes de mise à jour obligatoires** s'affiche. Cette section répertorie les opérations de mise à jour requises pour toutes les instances du déploiement multisite. Effectuez les étapes dans l'ordre en cliquant sur **Appliquer la mise à jour** pour chaque étape. Vous devez attendre la fin de chaque étape avant de passer à la suivante.   
 
 ## Résultats
-
-1. Avant le démarrage d'une opération de mise à jour, une sauvegarde des machines virtuelles de gestion est automatiquement effectuée, si un service de sauvegarde est installé sur votre instance. Une fois la sauvegarde terminée, la mise à jour est appliquée.
 
 2. Lorsque vous appliquez une mise à jour, un enregistrement s'affiche dans la liste des statuts de mise à jour logicielle, où vous pouvez visualiser la progression et le statut détaillés de la mise à jour. Lorsque la mise à jour a réussi, un enregistrement s'affiche dans la liste des mises à jour logicielles installées.
 
@@ -85,7 +83,7 @@ avant d'appliquer de nouveau la mise à jour.</dd>
 
 4. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](../vmonic/trbl_support.html) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à relancer la mise à niveau à partir de l'étape où elle a échoué.
 
-## Liens connexes
+### Liens connexes
 
 * [Présentation de vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
 * [Contacter le support IBM](../vmonic/trbl_support.html)

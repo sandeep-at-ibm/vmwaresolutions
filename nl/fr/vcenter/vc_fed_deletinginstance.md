@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-17"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -43,9 +43,9 @@ En raison des dépendances de ressource, les composants de votre instance ne son
    1. Cliquez sur l'icône de menu déroulant dynamique à droite de **Console vCenter**, puis cliquez sur **Supprimer une instance**.
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
-## Liens connexes
+### Liens connexes
 
-* [Présentation de VMware Federal on IBM Cloud](vc_fed_overview.html)
+* [Présentation de VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [Commande d'instances VMware Federal](vc_fed_orderinginstance.html)
 * [Sécurisation des instances VMware Federal](vc_fed_securinginstance.html)
 * [Affichage des instances VMware Federal](vc_fed_viewinginstance.html)

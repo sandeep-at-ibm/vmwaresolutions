@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -22,7 +22,7 @@ Le déploiement vCenter Server with Hybridity Bundle a des exigences strictes qu
 
 Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instances vCenter Server with Hybridity Bundle
 
-| Centre de données IBM Cloud | Emplacement | Région |
+| {{site.data.keyword.CloudDataCent_notm}} | Emplacement | Région |
 |:-----|:----------------|
 | AMS03 | Amsterdam | Europe |
 | CHE01 | Chennai | Asie-Pacifique |
@@ -55,7 +55,7 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instan
 | WDC06 | Washington, DC | Est des Etats-Unis |
 | WDC07 | Washington, DC | Est des Etats-Unis |
 
-Selon la disponibilité et l'approvisionnement du stock, les {{site.data.keyword.CloudDataCents_notm}} peuvent afficher un indicateur de statut sur la console {{site.data.keyword.vmwaresolutions_full}} pour vous aider à planifier vos déploiements.
+Selon la disponibilité et l'approvisionnement du stock, les {{site.data.keyword.CloudDataCents_notm}} peuvent afficher un indicateur de statut sur la console {{site.data.keyword.vmwaresolutions_short}} pour vous aider à planifier vos déploiements.
 
 Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_notm}} lors de la commande d'instances Center Server with Hybridity Bundle
 
@@ -65,9 +65,13 @@ Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_not
 | Temporarily Out of Inventory  | L'{{site.data.keyword.CloudDataCent_notm}} est temporairement en rupture de stock. |
 | Limited Inventory             | L'{{site.data.keyword.CloudDataCent_notm}} a une disponibilité limitée et la commande risque de ne pas être honorée. |
 
+## Sauvegarde des composants de gestion
+
+Vous êtes chargé de gérer et d'assurer la disponibilité de tous les composants d'instance. Il est fortement recommandé de planifier la sauvegarde ou la haute disponibilité de tous les composants de gestion. Pour plus d'informations, voir [Sauvegarde des composants](../archiref/solution/solution_backingup.html).
+
 ## Services pour les instances vCenter Server with Hybridity Bundle
 
-L'instance vCenter Server with Hybridity Bundle inclut la licence VMware Hybrid Cloud Extension (HCX) qui vous autorise à utiliser le service VMware HCX on IBM Cloud. Ce service peut en toute transparence étendre les réseaux des centres de données locaux dans {{site.data.keyword.cloud_notm}}, ce qui permet de migrer les machines virtuelles vers et depuis {{site.data.keyword.cloud_notm}} sans aucune conversion ni modification.
+L'instance vCenter Server with Hybridity Bundle inclut la licence VMware Hybrid Cloud Extension (HCX) qui vous autorise à utiliser le service VMware HCX on {{site.data.keyword.cloud_notm}}. Ce service peut en toute transparence étendre les réseaux des centres de données locaux dans {{site.data.keyword.cloud_notm}}, ce qui permet de migrer les machines virtuelles vers et depuis {{site.data.keyword.cloud_notm}} sans aucune conversion ni modification.
 
 Lorsque vous déployez ce service, définissez les paramètres suivants :
 * Renseignez la zone **Type d'interconnexion HCX** en sélectionnant l'une des options suivantes :
@@ -82,7 +86,11 @@ Lorsque vous déployez ce service, définissez les paramètres suivants :
 
 Vous pouvez commander d'autres services complémentaires pour votre instance en fonction de vos besoins, par exemple, la reprise après incident. Pour plus d'informations, voir [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservices.html).
 
-## Liens connexes
+## Remarques sur la capacité
+
+Pour toute information sur la capacité, voir [Mise à l'échelle de la capacité](../archiref/solution/solution_scaling.html).
+
+### Liens connexes
 
 * [Présentation de vCenter Server with Hybridity Bundle](vc_hybrid_overview.html)
 * [Commande d'instances vCenter Server with Hybridity Bundle](vc_hybrid_orderinginstance.html)

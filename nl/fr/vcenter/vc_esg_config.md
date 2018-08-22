@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -23,7 +23,7 @@ Dans le cadre du processus de commande de votre instance vCenter Server, les act
 * Déploiement d'un exemple de routeur logique distribué (DLR) NSX pour éventuelle communication d'est en ouest entre des charges de travail locales connectées à des réseaux de la couche 2 (L2).
 * Déploiement et configuration d'un dispositif NSX Edge pour la conversion des adresses réseau de la plage d'adresses IP du
 commutateur logique de charge de travail en une adresse IP publique sur les règles de conversion d'adresses réseau.
-* Si vous avez installé le service Veeam on IBM Cloud, le gestionnaire NSX est configuré de manière à effectuer une sauvegarde quotidienne des configurations NSX. Pour plus d'informations, voir [Remarques relatives à l'installation de Veeam on IBM Cloud](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
+* Si vous avez installé le service Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager est configuré de manière à effectuer une sauvegarde quotidienne des configurations NSX. Pour plus d'informations, voir [Remarques relatives à l'installation de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
 
 
 ## Configuration des paramètres réseau pour vos machines virtuelles
@@ -77,8 +77,8 @@ Vous trouverez d'autres détails concernant les sous-réseau client en effectuan
    **Avertissement :** n'utilisez pas les adresses IP commandées et utilisées au cours de la configuration initiale. Toutefois, vous pouvez, au besoin, utiliser d'autres
    adresses IP sur ces sous-réseaux. Pour définir des règles de conversion d'adresses réseau supplémentaires, voir [Gestion des règles de conversion d'adresses réseau](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 
-## Liens connexes
+### Liens connexes
 
 * [Traitement des incidents](../vcenter/vcenter_chg_impact.html)
 * [Foire aux questions](../vmonic/faq.html)
-* [Passerelle NSX Edge Services Gateway](https://www.ibm.com/devops/method/content/architecture/virtVCenterServerPlatform/nsx-esg){:new_window}
+* [Passerelle NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

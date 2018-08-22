@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-11"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -16,7 +16,7 @@ Pour plus d'informations sur vCenter Server on {{site.data.keyword.cloud_notm}} 
 
 **Attention :** VMware Federal on {{site.data.keyword.cloud_notm}} ne fournit qu'un sous-ensemble des offres vCenter Server. La configuration multisite, les serveurs bare metal {{site.data.keyword.cloud_notm}} préconfigurés, la fonction BYOL (apport de sa propre licence) et l'option permettant de commander des services supplémentaires ne sont pas pris en charge.
 
-## Composants d'instance vCenter Server pour VMware Federal on IBM Cloud
+## Spécifications techniques relatives aux instances VMware Federal on IBM Cloud
 
 Les composants réseau suivants sont inclus :
 
@@ -72,34 +72,33 @@ Si vous sélectionnez l'option NFS, un partage de fichiers de 2 To, 4 IOPS/Go po
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.3
+* VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * (Pour les clusters vSAN) VMware vSAN Advanced ou Enterprise 6.6
 
-## Composants de noeud d'extension vCenter Server
+## Spécifications techniques relatives aux noeuds d'extension VMware Federal on IBM Cloud
 
 Chaque noeud d'extension vCenter Server déployé génère des frais, imputés à votre compte {{site.data.keyword.cloud_notm}}, pour les composants suivants.
 
 ### Matériel pour les noeuds d'extension
 
-Un serveur bare metal avec la configuration présentée dans [Composants d'instance vCenter Server pour VMware Federal on IBM Cloud](../vcenter/vc_fed_overview.html#vcenter-server-instance-components-for-vmware-federal-on-ibm-cloud).
+Un serveur bare metal doté de la configuration présentée dans [Spécifications techniques relatives aux instances VMware Federal on {{site.data.keyword.cloud_notm}}](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ### Licences et frais pour les noeuds d'extension
 
 * Une pour VMware vSphere Enterprise Plus 6.5u1
-* Une pour VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.3
+* Une pour VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * (Pour les clusters vSAN) VMware vSAN Advanced ou Enterprise 6.6
 
-**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal_full}} ou autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
 
 **ATTENTION** : gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lors de la commande de l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque d'entraîner une instabilité de votre environnement. Ces activités de gestion incluent :
 *  L'ajout, la modification, le retour ou la suppression de composants
 *  L'extension ou la réduction de la capacité de l'instance via l'ajout ou la suppression de serveurs ESXi
 *  La mise hors tension de composants
-<!--*  Restarting services-->
 
    Seules les activités de gestion des partages de fichiers du stockage partagé depuis le portail {{site.data.keyword.slportal}} font exception. Il s'agit des activités suivantes : commande, suppression (pouvant avoir un impact sur des magasins de données éventuellement montés), accord d'autorisation et montage de partages de fichiers de stockage partagé.
 
-## Liens connexes
+### Liens connexes
 
 * [Nomenclature du logiciel vCenter Server](vc_bom.html)
 * [Exigences et planification pour les instances VMware Federal](vc_fed_planning.html)
