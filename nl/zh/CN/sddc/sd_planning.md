@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -65,15 +65,19 @@ Cloud Foundation 部署对物理基础架构有严格要求。因此，只能将
 |暂时库存不足|此时 {{site.data.keyword.CloudDataCent_notm}} 不具有可用性。|
 |有限库存|{{site.data.keyword.CloudDataCent_notm}} 具有有限可用性，并且订单可能未完成。|
 
+## 备份管理组件
+
+您负责维护和确保所有实例组件的可用性。强烈建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](../archiref/solution/solution_backingup.html)。
+
 ## Cloud Foundation 实例的服务
 
 您可以根据需要订购适用于实例的附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 Cloud Foundation 实例的服务](sd_addingremovingservices.html)。
 
-<!-- ## Capacity considerations
+## 容量注意事项
 
-For capacity information and considerations, see the _Bill of Materials_ document on the [Virtualization reference architecture](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/reference-architecture) page. -->
+有关容量信息和注意事项，请参阅[扩展容量](../archiref/solution/solution_scaling.html)。
 
-## 相关链接
+### 相关链接
 
 * [Cloud Foundation 概述](sd_cloudfoundationoverview.html)
 * [订购 Cloud Foundation 实例](sd_orderinginstance.html)
