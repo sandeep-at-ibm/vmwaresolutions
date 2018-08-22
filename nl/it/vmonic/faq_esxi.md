@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -39,7 +39,7 @@ Per le istanze distribuite nelle release della V2.1 o precedenti, devi abilitare
 
 I nomi e gli indirizzi IP dei server ESXi non possono essere modificati perché sono registrati per la risoluzione DNS di Windows. Le modifiche potrebbero causare errori durante la distribuzione o errori nelle funzioni di vCenter Server.
 
-**Nota**: non utilizzare la funzione **Rinomina dispositivo** sull'interfaccia utente di IBM Cloud per modificare i nomi dei server ESXi. Questa funzione modificherà effettivamente il nome di dominio completo del server ESXi, ma le registrazioni degli host della VSI di Windows e vCenter Center configurate non saranno corrette e potrebbero causare errori.
+**Nota**: non utilizzare la funzione **Rinomina dispositivo** sull'interfaccia utente di {{site.data.keyword.cloud_notm}} per modificare i nomi dei server ESXi. Questa funzione modificherà effettivamente il nome di dominio completo del server ESXi, ma le registrazioni degli host della VSI di Windows e vCenter Center configurate non saranno corrette e potrebbero causare errori.
 
 ## Posso disabilitare l'accesso root sui miei server ESXi?
 

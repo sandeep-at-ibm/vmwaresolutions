@@ -32,7 +32,7 @@ I seguenti componenti sono nuovi o aggiornati:
 
 VMware NSX per vSphere 6.2.4 è ora installato per impostazione predefinita su tutte le istanze vCenter Server (in precedenza solo sulle istanze Cloud Foundation).
 
-Come parte dell'installazione di NSX, il gestore NSX viene installato e concesso in licenza su tutte le nuove istanze che vengono distribuite. Inoltre, viene creato un edge NSX per la gestione dell'istanza, ma puoi creare i tuoi propri componenti edge NSX secondo necessità. Per ulteriori informazioni sull'edge NSX, vedi la sezione _Edge NSX VMware_ in questa pagina.
+Come parte dell'installazione di NSX, NSX Manager viene installato e concesso in licenza su tutte le nuove istanze che vengono distribuite. Inoltre, viene creato un edge NSX per la gestione dell'istanza, ma puoi creare i tuoi propri componenti edge NSX secondo necessità. Per ulteriori informazioni sull'edge NSX, vedi la sezione _Edge NSX VMware_ in questa pagina.
 
 **Nota**: il controller NSX non viene installato sulle istanze vCenter Server (così come è installato sulle istanze Cloud Foundation). Se utilizzi VXLAN o DLR (Distributed Logical Router) per le tue istanze vCenter Server, devi installare il controller NSX autonomamente.
 
@@ -42,7 +42,7 @@ Per informazioni sui miglioramenti introdotti in VMware NSX per vSphere 6.2.4, i
 
 Edge NSX è ora incluso come parte delle nuove istanze vCenter Server che stai ordinando. Edge NSX fornisce i servizi gateway e di sicurezza edge della rete per isolare una rete virtualizzata.
 
-Durante la distribuzione dell'istanza, un gateway dei servizi edge (ESG) VMware NSX di gestione viene distribuito da IBM. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. L'ESG è distribuito per includere due interfacce: un'interfaccia è connessa alla VLAN privata di IBM Cloud e l'altra è connessa alla VLAN pubblica di IBM Cloud.
+Durante la distribuzione dell'istanza, un gateway dei servizi edge (ESG) VMware NSX di gestione viene distribuito da IBM. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. L'ESG è distribuito per includere due interfacce: un'interfaccia è connessa alla VLAN privata di {{site.data.keyword.cloud_notm}} e l'altra è connessa alla VLAN pubblica di {{site.data.keyword.cloud_notm}}.
 
 Per garantire la sicurezza, vengono implementate regole del firewall per consentire solo le comunicazioni HTTPS in uscita avviate dalle macchine virtuali di gestione. Questo ESG viene distribuito in una configurazione di tipo Large e solo il supporto IBM può modificare la configurazione. Per ulteriori informazioni, vedi:
 

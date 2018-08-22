@@ -30,14 +30,14 @@ Per ulteriori informazioni, vedi:
 
 Edge NSX è ora incluso come parte delle nuove istanze Cloud Foundation che stai ordinando. Edge NSX fornisce i servizi gateway e di sicurezza edge della rete per isolare una rete virtualizzata.
 
-Durante la distribuzione dell'istanza, un gateway dei servizi edge (ESG) NSX di gestione viene distribuito da IBM. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. L'ESG è distribuito per includere due interfacce: un'interfaccia è connessa alla VLAN privata di IBM Cloud e l'altra è connessa alla VLAN pubblica di IBM Cloud.
+Durante la distribuzione dell'istanza, un gateway dei servizi edge (ESG) NSX di gestione viene distribuito da IBM. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. L'ESG è distribuito per includere due interfacce: un'interfaccia è connessa alla VLAN privata di {{site.data.keyword.cloud_notm}} e l'altra è connessa alla VLAN pubblica di {{site.data.keyword.cloud_notm}}.
 
 Per garantire la sicurezza, vengono implementate regole del firewall per consentire solo le comunicazioni HTTPS in uscita avviate dalle macchine virtuali di
 gestione. Questo ESG viene distribuito in una configurazione di tipo Large e solo il supporto IBM può modificare la configurazione.
 
 Per ulteriori informazioni, vedi:
 
-* [Componenti dell'istanza Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)
+* [Specifiche tecniche per le istanze Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [Documentazione di VMware NSX](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 

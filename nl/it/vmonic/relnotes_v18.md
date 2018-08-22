@@ -14,25 +14,25 @@ Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramen
 
 ## Servizio Fortinet on IBM Cloud
 
-Il servizio Fortinet on IBM Cloud è ora disponibile per le istanze Cloud Foundation e vCenter Server. Questo servizio distribuisce una coppia di dispositivi FortiGate Security Appliance (FSA) della serie 300 in una modalità altamente disponibile per fornire servizi di firewall, instradamento, NAT e VPN per proteggere ogni server e macchina virtuale sulla VLAN pubblica delle tue istanze. Puoi ordinare le istanze con il servizio Fortinet incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento utilizzando la pagina dei dettagli dell'istanza.
+Il servizio Fortinet on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze Cloud Foundation e vCenter Server. Questo servizio distribuisce una coppia di dispositivi FortiGate Security Appliance (FSA) della serie 300 in una modalità altamente disponibile per fornire servizi di firewall, instradamento, NAT e VPN per proteggere ogni server e macchina virtuale sulla VLAN pubblica delle tue istanze. Puoi ordinare le istanze con il servizio Fortinet incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento utilizzando la pagina dei dettagli dell'istanza.
 
 Dopo aver installato correttamente il servizio Fortinet, puoi gestire e configurare le regole del firewall per FSA dalla console FortiGate. Devi assicurarti che le regole del firewall FSA siano definite per consentire le comunicazioni HTTPS in uscita che vengono avviate dai componenti di gestione come la macchina virtuale IBM CloudDriver o Zerto Virtual Manager per comunicare con il database di gestione esterno su IBM Bluemix® tramite Internet. Le comunicazioni HTTPS in uscita hanno origine dall'indirizzo IP pubblico del gateway dei servizi edge (ESG) VMware NSX dei servizi di gestione nella tua istanza.
 
 Per ulteriori informazioni, vedi:
-* [Panoramica di Fortinet on IBM Cloud](../services/fsa_considerations.html)
-* [Gestione di Fortinet on IBM Cloud](../services/managingfsa.html)
+* [Panoramica di Fortinet on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)
+* [Gestione di Fortinet on {{site.data.keyword.cloud_notm}}](../services/managingfsa.html)
 
 ## Servizio Veeam on IBM Cloud
 
-Questa release introduce il servizio Veeam on IBM Cloud, che può eseguire il backup sia dei componenti di gestione che dei carichi di lavoro. Il nuovo servizio sostituisce la precedente VSI Veeam che era stata integrata nelle release precedenti alla V1.8 per il backup dei soli componenti di gestione.
+Questa release introduce il servizio Veeam on {{site.data.keyword.cloud_notm}}, che può eseguire il backup sia dei componenti di gestione che dei carichi di lavoro. Il nuovo servizio sostituisce la precedente VSI Veeam che era stata integrata nelle release precedenti alla V1.8 per il backup dei soli componenti di gestione.
 
 A causa di questa modifica, sebbene la VSI Veeam nelle istanze precedenti alla V1.8 continui a funzionare, i punti di backup per le istanze non sono più disponibili nella console {{site.data.keyword.vmwaresolutions_short}} e devi creare un ticket di supporto per ottenere assistenza con un ripristino.
 
 Inoltre, la licenza della VSI Veeam nelle istanze precedenti alla V1.8 è scaduta il 14 ottobre 2017. Pertanto, devi sostituire la VSI Veeam precedente con il nuovo servizio Veeam al più presto.
 
 Per ulteriori informazioni, vedi:
-* [Panoramica di Veeam on IBM Cloud](../services/veeam_considerations.html)
-* [Gestione di Veeam on IBM Cloud](../services/managingveeam.html)
+* [Panoramica di Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
+* [Gestione di Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)
 
 ## Aggiornamenti per le istanze VMware Cloud Foundation
 
@@ -73,9 +73,9 @@ Per ulteriori informazioni, vedi [Requisiti e pianificazione per le istanze vCen
 ## Miglioramenti dell'usabilità
 
 Sono stati apportati miglioramenti in tutta l'interfaccia utente:
-* Puoi conoscere i servizi e ordinare un'istanza nella pagina **Introduzione** dal riquadro di navigazione a sinistra. Per informazioni sull'architettura del servizio IBM Cloud Secure Virtualization, vedi [Sicurezza e conformità - HyTrust ](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust).
+* Puoi conoscere i servizi e ordinare un'istanza nella pagina **Introduzione** dal riquadro di navigazione a sinistra. Per informazioni sull'architettura del servizio {{site.data.keyword.cloud_notm}} Secure Virtualization, vedi [Sicurezza e conformità - HyTrust ](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust).
 * Utilizza il menu di overflow nella pagina dei dettagli dell'istanza per eliminare un'istanza nello stato **Pronto per l'utilizzo**.
 * L'opzione per aggiornare la tua edizione della licenza NSX è ora disponibile nella scheda **Aggiorna e applica patch**. L'aggiornamento della licenza sostituisce tutte le licenze NSX esistenti nel tuo account IBM SoftLayer con la nuova licenza.
 * La scheda **Backup e ripristino** nella pagina dei dettagli dell'istanza non è più disponibile.
-* Puoi selezionare più servizi da distribuire all'inizio di un ordine. Oltre al servizio Zerto on IBM Cloud, sono disponibili anche le opzioni per selezionare il servizio Veeam on IBM Cloud e il servizio Fortinet on IBM Cloud.
+* Puoi selezionare più servizi da distribuire all'inizio di un ordine. Oltre al servizio Zerto on {{site.data.keyword.cloud_notm}}, sono disponibili anche le opzioni per selezionare il servizio Veeam on {{site.data.keyword.cloud_notm}} e il servizio Fortinet on {{site.data.keyword.cloud_notm}}.
 * La scheda **Servizi disponibili** nella scheda **Servizi** nella pagina dei dettagli dell'istanza è rinominata in **Aggiungi servizi**.

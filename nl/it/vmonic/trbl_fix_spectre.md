@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -59,7 +59,7 @@ Gli aggiornamenti per queste istanze saranno disponibili quando verranno rilasci
 
 Sia per VMware vSphere 6.0 che per VMware vCenter Server 6.0, devi applicare le patch (ESXi600-201711101-SG, ESXi600-201803401-BG e ESXi600-201803402-BG per vSphere e vCenter 6.0 U3e per vCenter Server) dal [sito di patch dei prodotti VMware](https://my.vmware.com/group/vmware/patch) a tutti i tuoi cluster e server ESXi vSphere, appena distribuiti o esistenti.
 
-## Link correlati
+### Link correlati
 
 * [Applicazione di aggiornamenti alle istanze Cloud Foundation](../sddc/sd_applyingupdates.html)
 * [Secure against recent security vulnerabilities](https://www.ibm.com/blogs/bluemix/2018/01/ibm-cloud-spectre-meltdown-vulnerabilities/)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-28"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -14,12 +14,13 @@ Trova le risposte alle domande frequenti su {{site.data.keyword.vmwaresolutions_
 
 ## Di quali account utente ho bisogno per IBM Cloud for VMware Solutions?
 
-* **Account ID IBM**. Questo account è richiesto per accedere alla console {{site.data.keyword.vmwaresolutions_short}}. La console è un'interfaccia utente autonoma separata dal {{site.data.keyword.slportal_full}}. Per ulteriori informazioni, vedi [Introduzione](../index.html).
-* **Account {{site.data.keyword.cloud_notm}}**. Questo account è richiesto per il provisioning. Puoi registrarti per un account {{site.data.keyword.cloud_notm}} aggiornando il tuo **account ID IBM** a un account Pagamento a consumo. L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Registrazione di un account {{site.data.keyword.cloud_notm}}](signing_softlayer_account.html) e [Requisiti dell'account {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
+* **Account ID IBM**. Questo account è richiesto per accedere alla console {{site.data.keyword.vmwaresolutions_short}}. La console è un'interfaccia utente autonoma separata dal {{site.data.keyword.slportal}}. Per ulteriori informazioni, vedi [Introduzione](../index.html).
+* **Account {{site.data.keyword.cloud_notm}}**. Questo account è richiesto per il provisioning. Puoi registrarti per un account {{site.data.keyword.cloud_notm}} utilizzando un **ID IBM** esistente oppure creando un nuovo **ID IBM**. 
+* **Account dell'infrastruttura {{site.data.keyword.cloud_notm}}**. Questo account, precedentemente noto come account **IBM SoftLayer**, è utilizzato per accedere al portale del cliente dell'infrastruttura {{site.data.keyword.cloud_notm}} che fornisce alcune funzioni aggiuntive per la gestione di prodotti e servizi dell'infrastruttura. Puoi ottenere un account dell'infrastruttura {{site.data.keyword.cloud_notm}} aggiornando il tuo **account {{site.data.keyword.cloud_notm}}** a un tipo di account Pagamento a consumo oppure collegando il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) esistente al tuo account {{site.data.keyword.cloud_notm}}. L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Registrazione degli account richiesti](signing_softlayer_account.html) e [Requisiti dell'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
 
 ## Come posso associare le mie credenziali dell'infrastruttura IBM Cloud alla console IBM Cloud for VMware Solutions?
 
-Quando ordini la tua istanza per la prima volta, segui le istruzioni sulla pagina delle credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} per individuare e copiare il nome utente e la chiave API {{site.data.keyword.cloud_notm}} dal {{site.data.keyword.slportal}}. Le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} vengono memorizzate nella console {{site.data.keyword.vmwaresolutions_short}} dopo il primo ordine. Gli ordini futuri utilizzano automaticamente le credenziali memorizzate.
+Quando ordini la tua istanza per la prima volta, segui le istruzioni sulla pagina **Impostazioni** nella console per individuare e copiare il nome utente e la chiave API dell'infrastruttura {{site.data.keyword.cloud_notm}} dal {{site.data.keyword.slportal}}. Le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} vengono memorizzate nella console {{site.data.keyword.vmwaresolutions_short}} dopo il primo ordine. Gli ordini futuri utilizzano automaticamente le credenziali memorizzate.
 
 ## Come vengono fatturati i consumi della piattaforma virtuale VMware?
 
@@ -29,21 +30,21 @@ Tutti i costi per l'infrastruttura fisica e virtuale e le licenze risultanti dal
 
 Tutti i tipi di istanza offrono opzioni di distribuzione per gli ambienti virtuali VMware. Tuttavia, la differenza risiede nel grado di personalizzazione e di automazione.
 
-* Quando ordini un'istanza VMware vCenter Server, distribuisci un ambiente virtuale VMware con risorse di calcolo, archiviazione e rete personalizzate. Per ulteriori informazioni sui componenti distribuiti, vedi la sezione _Specifiche tecniche per vCenter Server_ in [Panoramica di vCenter Server](../vcenter/vc_vcenterserveroverview.html).
-* Quando ordini un'istanza VMware Cloud Foundation, distribuisci una piattaforma SDDC (software-defined data center) unificata. Per ulteriori informazioni sui componenti distribuiti, vedi [Componenti dell'istanza Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+* Quando ordini un'istanza VMware vCenter Server, distribuisci un ambiente virtuale VMware con risorse di calcolo, archiviazione e rete personalizzate. Per ulteriori informazioni sui componenti distribuiti, vedi [Specifiche tecniche per le istanze vCenter Server](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
+* Quando ordini un'istanza VMware Cloud Foundation, distribuisci una piattaforma SDDC (software-defined data center) unificata. Per ulteriori informazioni sui componenti distribuiti, vedi [Specifiche tecniche per le istanze Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 * Quando ordini un cluster VMware vSphere, ottieni il massimo della flessibilità per progettare e costruire il tuo ambiente VMware ospitato incorporando l'hardware compatibile con VMware. Tuttavia, {{site.data.keyword.cloud_notm}} non automatizza l'installazione, la configurazione e il richiamo dei componenti VMware facoltativi per il cluster VMware vSphere.
 * Le funzioni supportate per le istanze vCenter Server, le istanze Cloud Foundation e i cluster vSphere sono diverse. Per ulteriori informazioni, vedi [Tabella di confronto delle offerte](inst_comp_chart.html).
 
 ## Cosa è incluso in un'istanza vCenter Server?
 
-Per ulteriori informazioni, vedi la sezione _Specifiche tecniche per vCenter Server_ in [Panoramica di vCenter Server](../vcenter/vc_vcenterserveroverview.html).
+Per ulteriori informazioni, vedi [Specifiche tecniche per le istanze vCenter Server](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## Cosa è incluso in un'istanza Cloud Foundation?
 
-Per ulteriori informazioni, vedi [Componenti dell'istanza Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
+Per ulteriori informazioni, vedi [Specifiche tecniche per le istanze Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## Cosa è incluso in un cluster vSphere?
-Per ulteriori informazioni, vedi [Componenti di VMware vSphere on IBM Cloud](../vsphere/vs_vsphereclusteroverview.html).
+Per ulteriori informazioni, vedi [Componenti di VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html).
 
 ## Un'istanza vCenter Server a due nodi è altamente disponibile?
 
@@ -106,7 +107,7 @@ Per ulteriori informazioni, vedi le sezioni _Disponibilità dei data center IBM 
 * [Requisiti e pianificazione per le istanze vCenter Server](../vcenter/vc_planning.html)
 * [Requisiti e pianificazione per le istanze vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_planning.html)
 * [Requisiti e pianificazione per le istanze Cloud Foundation](../sddc/sd_planning.html)
-* [Requisiti e pianificazione per VMware vSphere on IBM Cloud](../vsphere/vs_planning.html)
+* [Requisiti e pianificazione per VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_planning.html)
 * [Requisiti e pianificazione per le istanze NetApp ONTAP Select](../netapp/np_planning.html)
 * [Requisiti e pianificazione per le istanze VMware Federal](../vcenter/vc_fed_planning.html)
 

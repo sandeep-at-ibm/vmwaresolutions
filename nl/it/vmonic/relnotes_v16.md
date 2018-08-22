@@ -29,7 +29,7 @@ Per l'elenco completo dei componenti, vedi [Panoramica di VMware Cloud Foundatio
 
 A partire dalla release della V1.6, sono disponibili numerosi miglioramenti per le tue istanze vCenter Server.
 
-*  Implementazione completa della specifica della V2.0 per l'offerta di vCenter Server. Per ulteriori informazioni, vedi [Architettura della soluzione VMware vCenter Server on IBM Cloud](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0).
+*  Implementazione completa della specifica della V2.0 per l'offerta di vCenter Server. Per ulteriori informazioni, vedi [VMware vCenter Server on {{site.data.keyword.cloud_notm}} solution architecture](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0).
 *  Nuove specifiche hardware: **Small**, **Medium** o **Large**, a seconda dei tuoi requisiti.
 *  Nuovi data center disponibili per la distribuzione: **HKG02 - Hong Kong**, **OSL01 - Oslo**, **SEO01 - Seul**, **SNG01 - Singapore** e **SYD04 - Sydney**.
 *  Almeno due server ESXi nel tuo ordine dell'istanza, con VMware vSphere DRS (Distributed Resource Scheduler) e VMware HA (High Availability) abilitati per impostazione predefinita.

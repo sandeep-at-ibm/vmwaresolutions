@@ -24,7 +24,7 @@ Per ulteriori informazioni, vedi [Risoluzione delle vulnerabilità Spectre e Mel
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
-Questa release introduce l'offerta VMware vCenter Server on IBM Cloud with Hybridity Bundle. vCenter Server with Hybridity Bundle è un cloud privato ospitato che consente di estendere in modo semplice e rapido la tua infrastruttura in loco nel cloud. L'ambiente VMware è basato sulle licenze Software Defined Data Center VMware fornite da IBM e comprende il servizio VMware HCX on {{site.data.keyword.cloud_notm}} che connette in modo semplice e sicuro un ambiente vSphere 5.0+ in loco con i siti IBM Cloud per un'ibridità dell'infrastruttura senza interruzioni e una reale mobilità dell'applicazione.
+Questa release introduce l'offerta VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle. vCenter Server with Hybridity Bundle è un cloud privato ospitato che consente di estendere in modo semplice e rapido la tua infrastruttura in loco nel cloud. L'ambiente VMware è basato sulle licenze Software Defined Data Center VMware fornite da IBM e comprende il servizio VMware HCX on {{site.data.keyword.cloud_notm}} che connette in modo semplice e sicuro un ambiente vSphere 5.0+ in loco con i siti {{site.data.keyword.cloud_notm}} per un'ibridità dell'infrastruttura senza interruzioni e una reale mobilità dell'applicazione.
 
 Il servizio HCX on {{site.data.keyword.cloud_notm}} è disponibile solo attraverso l'istanza vCenter Server with Hybridity Bundle. Puoi aggiornare la tua istanza vCenter Server esistente a un'istanza vCenter Server with Hybridity Bundle dopo aver applicato l'aggiornamento del software vCenter Server V2.3 di base. Per ulteriori informazioni, vedi [Applicazione di aggiornamenti alle istanze vCenter Server](../vcenter/vc_applyingupdates.html).
 
@@ -94,8 +94,8 @@ Il servizio HyTrust CloudControl on {{site.data.keyword.cloud_notm}} è ora disp
 Puoi ordinare le istanze con il servizio incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento.
 
 Per ulteriori informazioni, vedi:
-* [Componenti e considerazioni per HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)
-* [Gestione di HyTrust CloudControl on IBM Cloud](../services/managinghtcc.html)
+* [Componenti e considerazioni per HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)
+* [Gestione di HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/managinghtcc.html)
 
 ### HyTrust DataControl on IBM Cloud
 
@@ -104,8 +104,8 @@ Il servizio HyTrust DataControl on {{site.data.keyword.cloud_notm}} è ora dispo
 Puoi ordinare le istanze con il servizio incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento.
 
 Per ulteriori informazioni, vedi:
-* [Componenti e considerazioni per HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)
-* [Gestione di HyTrust DataControl on IBM Cloud](../services/managinghtdc.html)
+* [Componenti e considerazioni per HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)
+* [Gestione di HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -118,8 +118,8 @@ La release corrente installa IBM Spectrum Protect&trade; Plus V10.1.1, come serv
 ## Aggiornamenti e miglioramenti dell'interfaccia utente
 
 L'interfaccia utente è aggiornata e fornisce i seguenti miglioramenti:
-* **Coerenza**: l'interfaccia utente ora fornisce un aspetto coerente con gli altri servizi su IBM Cloud.
-* **Facilità di accesso**: puoi ora accedere alle offerte VMware direttamente dal **Catalogo** di IBM Cloud.
+* **Coerenza**: l'interfaccia utente ora fornisce un aspetto coerente con gli altri servizi su {{site.data.keyword.cloud_notm}}.
+* **Facilità di accesso**: puoi ora accedere alle offerte VMware direttamente dal **Catalogo** di {{site.data.keyword.cloud_notm}}.
 * **Esperienza di ordinazione fluida e semplificata**: puoi ora completare l'ordine di un'istanza VMware e la distribuzione dei suoi servizi aggiuntivi in una singola interfaccia. Inoltre, il costo stimato viene calcolato e visualizzato immediatamente nella stessa interfaccia in modo da poter regolare la tua configurazione in base al tuo piano dei costi.
 * L'opzione BYOL (Bring Your Own License) durante l'ordine di istanze o l'aggiunta di cluster non è disponibile per gli utenti Business Partner.
 * Sono stati apportati vari miglioramenti ai messaggi di errore e alle descrizioni a comparsa per aiutarti a selezionare l'impostazione appropriata nell'interfaccia utente.

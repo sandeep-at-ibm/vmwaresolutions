@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -31,7 +31,7 @@ Puoi controllare le notifiche per verificare lo stato delle operazioni di sistem
           <dt class="dt dlterm">Critico</dt>
           <dd class="dd">Un evento critico potrebbe influire sull'intero sistema o servizio.</dd>
           <dt class="dt dlterm">Errore</dt>
-          <dd class="dd">Un evento di errore si verifica durante un'operazione che potrebbe richiedere un intervento da parte dell'amministratore o dell'utente finale.</dd>
+          <dd class="dd">Si verifica un evento di errore durante un'operazione che potrebbe richiedere l'intervento dell'amministratore o dell'utente.</dd>
           <dt class="dt dlterm">Avvertenza</dt>
           <dd class="dd">Un componente produce errori o non funziona correttamente. Tuttavia, l'errore non interrompere il processo in corso del
        componente.</dd>
@@ -72,7 +72,7 @@ Puoi controllare le notifiche per verificare lo stato delle operazioni di sistem
 
 Per impostazione predefinita, vengono visualizzate tutte le notifiche non lette. Puoi filtrare le notifiche per stato, severità e tipo. Per filtrare le notifiche, seleziona solo le caselle di spunta degli elementi che vuoi visualizzare negli elenchi a discesa **Stato**, **Severità** o **Tipo**.
 
-## Link correlati
+### Link correlati
 
 * [Domande frequenti](faq.html)
 * [Account utente e impostazioni](useraccount.html)
