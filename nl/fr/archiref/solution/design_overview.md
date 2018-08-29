@@ -9,7 +9,7 @@ lastupdated: "2018-07-10"
 ---
 # Présentation de la conception
 
-{{site.data.keyword.vmwaresolutions_full}} fournit l'automatisation du déploiement des composants de technologie VMware dans les {{site.data.keyword.CloudDataCents_notm}} situés dans le monde entier. 
+{{site.data.keyword.vmwaresolutions_full}} fournit l'automatisation du déploiement des composants de technologie VMware dans les {{site.data.keyword.CloudDataCents_notm}} situés dans le monde entier.
 
 ## Offres de la solution
 
@@ -19,7 +19,7 @@ Les offres de la solution incluent les produits VMware vSphere suivants dans un 
 
 Dans cette conception, une instance est déployée dans un pod d'un {{site.data.keyword.CloudDataCent_notm}} lors de la commande initiale. Après le déploiement initial, vous pouvez étendre votre environnement virtuel dans d'autres pods au sein du même centre de données ou dans d'autres centres de données.
 
-La conception permet l'extension et la contraction automatisées de la capacité virtuelle dans une instance Cloud Foundation ou vCenter Server. 
+La conception permet l'extension et la contraction automatisées de la capacité virtuelle dans une instance Cloud Foundation ou vCenter Server.
 
 ## Composants de VMware on IBM Cloud
 
