@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="vmware-solutions" audience="infrastructure" href="/docs/services/vmwaresolutions/index.html"}
+{: .toc subcollection="vmware-solutions" audience="infrastructure" arm="3662801" href="/docs/services/vmwaresolutions/index.html"}
 IBM Cloud for VMware Solutions
 
     {: .navgroup id="learn"}
@@ -27,22 +27,7 @@ IBM Cloud for VMware Solutions
         vmonic/relnotes_v12.md
         vmonic/relnotes_v11.md
 
-    {: .topicgroup}
-    Liens connexes
-        [Feuille de données de protection de VMware vCenter Server on IBM Cloud](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-        [Feuille de données de protection de VMware Cloud Foundation on IBM Cloud](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-        [Liaison d'un stockage dédié à NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
-        [FortiGate Security Appliance](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/fortigate-physical)[NetApp ONTAP Select](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/netapp-ots)
-        [Stockage de fichiers et de blocs d'IBM Cloud](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage)
-        [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/nsx-esg)
-        [Ressources et vidéos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources)
-        [Engagement technique numérique](https://ibm-dte.mybluemix.net/ibm-vmware)
-        [Virtualisation sécurisée](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/secure-virtualization)
-        [Coup d'oeil sous le capot](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
-        [Sauvegarde et réplication Veeam](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/veeam)
-        [Documentation VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
-        [Automatisation vRealize](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/vRealizeAutomation)
-        [Reprise après incident Zerto](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/zerto)
+    vmonic/additional_resources.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -229,19 +214,20 @@ IBM Cloud for VMware Solutions
         vmonic/trbl_limitations.md
 
     {: .topicgroup}
-    Traitement des incidents
+    Identification et résolution des problèmes
+        Identification et résolution des problèmes
         vmonic/trbl_fix_spectre.md
         vmonic/trbl_timeout_vc_console.md
         vmonic/trbl_sec_inst_not_visible.md
-        vmonic/trbl_mixed_multisite.md
         vmonic/trbl_cfupdatesfail.md
         vmonic/trbl_add_ha_cluster_config.md
         vmonic/trbl_no_zerto_vra.md
         vmonic/trbl_host_displays_warning_msg.md
         vmonic/trbl_deploy_ovf.md
         vmonic/trbl_vsan_alerts.md
+        vmonic/trbl_mixed_multisite.md
         vmonic/movinginstances.md
-        vmonic/trbl_advanced.md
+        vmonic/getting-started.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
