@@ -18,21 +18,21 @@ F5 on {{site.data.keyword.cloud}} 서비스(F5 BIG-IP® Virtual Edition)는 로�
 
 ## F5 on IBM Cloud의 기술 스펙
 
-다음 컴포넌트가 F5 on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다. 
+다음 컴포넌트가 F5 on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
 ### 가상 머신
 * 모든 옵션이 사용 가능한 2개의 가상 머신 (VM).
 * 라이센싱 옵션에 따라 가상 머신당 2, 4 또는 8 vCPU
-* 라이센싱 옵션에 따라 가상 머신당 4, 8 또는 16GB RAM 
+* 라이센싱 옵션에 따라 가상 머신당 4, 8 또는 16GB RAM
 
 ### 네트워킹
 * HA 동기화를 위한 사설 VXLAN(Private Virtual Extensible LAN)
-* 사설 관리 네트워크를 통한 TMSH(Traffic Management Shell) 및 관리 콘솔에 대한 액세스. 
+* 사설 관리 네트워크를 통한 TMSH(Traffic Management Shell) 및 관리 콘솔에 대한 액세스.
 
 ### 라이센스 및 요금
-각 VM에 대한 라이센스 요금은 라이센싱 옵션(양호, 우수 또는 최상) 및 선택된 대역폭에 따라 각 청구 주기에 적용됩니다. 
+각 VM에 대한 라이센스 요금은 라이센싱 옵션(양호, 우수 또는 최상) 및 선택된 대역폭에 따라 각 청구 주기에 적용됩니다.
 
-**중요:** 서비스 설치 이후에는 라이센싱 레벨을 변경할 수 없습니다. 라이센싱 레벨을 변경하려면 기존 서비스를 제거하고 다른 라이센싱 옵션을 사용하여 서비스를 다시 설치해야 합니다. 
+**중요:** 서비스 설치 이후에는 라이센싱 레벨을 변경할 수 없습니다. 라이센싱 레벨을 변경하려면 기존 서비스를 제거하고 다른 라이센싱 옵션을 사용하여 서비스를 다시 설치해야 합니다.
 
 ## F5 on IBM Cloud 설치 시 고려사항
 
@@ -88,7 +88,7 @@ F5 on {{site.data.keyword.cloud_notm}}가 실패하지 않으려면 다음 요�
 
 `50% 2개 * 16개의 코어 * 2.1GHz = 33.6GHz 사용 가능`
 
-ESXi 서버에 IBM CloudDriver, VMware NSX Controller, VMware NSX Edge와 같은 다른 워크로드가 있으므로 이 리소스를 사용하여 세 번째 요구사항을 충족시킬 수 없습니다. 두 BIG-IP VM에 33.6GHz CPU 및 32GB RAM이 필요하기 때문입니다.
+ESXi 서버에 VMware vCenter Server, VMware NSX Controller, VMware NSX Edge와 같은 다른 워크로드가 있으므로 이 리소스를 사용하여 세 번째 요구사항을 충족시킬 수 없습니다. 두 BIG-IP VM에 33.6GHz CPU 및 32GB RAM이 필요하기 때문입니다.
 
 이 경우, 최소 하나의 ESXi 서버가 환경에 추가되고 vShpere HA 장애 복구 예약이 두 BIG-IP VE VM에 충분한 리소스가 있도록 적절하게 업데이트되지 않는 한 F5 on {{site.data.keyword.cloud_notm}} 설치에 실패할 수 있습니다. F5 on {{site.data.keyword.cloud_notm}} 서비스를 실행하는 데 추가 리소스가 필요한 경우 F5 on {{site.data.keyword.cloud_notm}}를 설치하기 전에 더 많은 ESXi 서버를 추가할 수 있습니다.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-27"
 
 HCX on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm}}로 온프레미스 데이터 센터의 네트워크를 원활하게 확장할 수 있으며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}}에서 가상 머신(VM)을 마이그레이션할 수 있습니다.
 
-**가용성**: 이 서비스는 V2.3 이상 릴리스에 배치된 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스에만 사용 가능합니다. 
+**가용성:** 이 서비스는 V2.3 이상 릴리스에 배치된 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스에만 사용 가능합니다.
 
 기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 인스턴스 업그레이드 및 HCX on {{site.data.keyword.cloud_notm}} 서비스 배치에 대한 자세한 정보는 [vCenter Server with Hybridity Bundle 인스턴스로 업그레이드](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance)를 참조하십시오.
 
@@ -20,9 +20,9 @@ HCX on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm}}
 
 ## HCX on IBM Cloud의 기술 스펙
 
-다음 컴포넌트가 주문되고 HCX on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다. 
+다음 컴포넌트가 주문되고 HCX on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
-**참고:** 온프레미스 HCX 인스턴스에는 라이센싱 및 활성화만 포함됩니다. 
+**참고:** 온프레미스 HCX 인스턴스에는 라이센싱 및 활성화만 포함됩니다.
 
 ### HCX 관리를 위한 VMware NSX ESG(Edge Services Gateway)의 활성/수동 쌍
 
@@ -36,12 +36,12 @@ HCX on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm}}
 * RAM: 12GB
 * 디스크: 60GB VMDK
 
-L2 연결, WAN 최적화 및 게이트웨이 연결을 위해 필요에 따라 구성 중에 추가로 HCX 어플라이언스가 배치됩니다. 
+L2 연결, WAN 최적화 및 게이트웨이 연결을 위해 필요에 따라 구성 중에 추가로 HCX 어플라이언스가 배치됩니다.
 
 ### 네트워킹
 
 * 16개 IP 주소의 하나의 공인 포터블 서브넷
-* 64개 IP 주소의 하나의 사설 포터블 서브넷
+* 64개 IP 주소의 두 개의 사설 포터블 서브넷
 * 사설 포터블 vMotion 서브넷의 8개 IP 주소
 
 ### 라이센스 및 요금

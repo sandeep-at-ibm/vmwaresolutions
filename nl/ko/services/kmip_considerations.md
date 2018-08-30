@@ -16,7 +16,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.
 
 ## KMIP for VMware on IBM Cloud의 기술 스펙
 
-다음 스펙이 KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스에 포함되어 있습니다. 
+다음 스펙이 KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스에 포함되어 있습니다.
 
 * VMware 호환 가능 KMIP(Key Management Interoperability Protocol)
 * 관리 서비스

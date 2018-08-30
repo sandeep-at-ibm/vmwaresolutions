@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -38,6 +38,16 @@ V1.8 이상 릴리스로 배치된(또는 이러한 릴리스로 업그레이드
 ## Veeam on IBM Cloud에 업데이트 적용
 
 사용자는 Veeam이 항상 최신 버전으로 업데이트되어 있도록 유지보수해야 합니다. Veeam을 최신 버전으로 업그레이드하려면 Veeam 웹 사이트에서 Veeam 업데이트를 다운로드하여 Veeam VSI에 복사한 후 설치하십시오.
+
+## Veeam 라이센스 업데이트
+
+다음 단계를 완료하여 요청 시 Veeam 라이센스를 수동으로 업데이트할 수 있습니다.
+1. [RDP를 사용하여 Veeam 백업 및 복제 콘솔에 액세스](../services/managingveeam.html#accessing-the-veeam-console-by-using-rdp)하십시오.
+2. 기본 메뉴에서 **라이센스**를 클릭하십시오.
+3. **라이센스 정보** 창에서 **지금 업데이트**를 클릭하십시오.
+4. 수동 라이센스 업데이트 프로세스의 통계를 보려면 **히스토리** 보기를 연 다음 **시스템** 노드를 클릭하십시오.
+
+자세한 정보는 [라이센스 수동 업데이트](https://helpcenter.veeam.com/docs/backup/vsphere/license_update_manual.html?ver=95)를 참조하십시오.
 
 ## V1.8 이전 인스턴스의 Veeam VSI를 Veeam on IBM Cloud로 대체
 

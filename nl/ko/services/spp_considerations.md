@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
 # IBM Spectrum Protect Plus on IBM Cloud 개요
 
-{{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 서비스는 가상 환경에 대한 데이터 보호, 데이터 재사용 및 데이터 복구를 위한 효율적이고 확장 가능한 솔루션을 제공합니다. 사용자는 독립형 솔루션으로서 서비스를 구현하거나 장기 저장 및 데이터 통제를 위한 사본을 오프로드하기 위해 이를 IBM Spectrum Protect 환경과 통합할 수 있습니다. 
+{{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 서비스는 가상 환경에 대한 데이터 보호, 데이터 재사용 및 데이터 복구를 위한 효율적이고 확장 가능한 솔루션을 제공합니다. 사용자는 독립형 솔루션으로서 서비스를 구현하거나 장기 저장 및 데이터 통제를 위한 사본을 오프로드하기 위해 이를 IBM Spectrum Protect 환경과 통합할 수 있습니다.
 
 **가용성**: 이 서비스는 vSphere 6.5를 실행하며 V2.2 이상 릴리스로 배치된(또는 이 릴리스로 업그레이드된) 인스턴스에서만 사용할 수 있습니다.
 
@@ -33,7 +33,7 @@ lastupdated: "2018-07-27"
    * 370GB 디스크
 * IBM Spectrum Protect Plus vSnap 서버 및 VADP 프록시를 실행 중인 보조 VM
    * OS: Linux 3.10.0-693.11.1.el7.x86_64
-   * 선택된 스토리지 크기 및 [IBM Spectrum Protect Plus 블루프린트](https://www.ibm.com/developerworks/community/wikis/homelang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) 크기 조정 지침에 따라 구성된 CPU 및 RAM
+   * 선택된 스토리지 크기 및 [IBM Spectrum Protect Plus 블루프린트](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) 크기 조정 지침에 따라 구성된 CPU 및 RAM
    * 150GB 디스크
 
 ### 백업용 스토리지
@@ -43,7 +43,7 @@ lastupdated: "2018-07-27"
 * 각 endurance 파일 스토리지: 500, 1000, 2000, 4000, 8000 또는 12000GB
 * 스토리지 성능: 0.25, 2 또는 4IOPS/GB
 
-계획 및 크기 조정에 대해서는 [IBM Spectrum Protect Plus 블루프린트 및 크기 조정 도구](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)를 참조하십시오. 
+계획 및 크기 조정에 대해서는 [IBM Spectrum Protect Plus 블루프린트 및 크기 조정 도구](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)를 참조하십시오.
 
 ### 관리용 스토리지
 
@@ -51,7 +51,7 @@ IBM Spectrum Protect Plus 가상 머신을 호스팅하며 백업 스토리지�
 
 ### 네트워킹
 
-2개의 포터블 사설 IP 주소. 
+2개의 포터블 사설 IP 주소.
 
 ### 라이센스 및 요금
 

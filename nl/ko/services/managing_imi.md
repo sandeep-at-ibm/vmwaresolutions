@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -16,9 +16,9 @@ IMI는 VMware Cloud Foundation 및 VMware vCenter Server 환경에 대해 하나
 
 IMI는 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스에 대한 관리 서비스를 제공하며, 여기에는 고가용성 및 안전한 가상 네트워크 인프라를 보장하는 고급 VMware vSphere 관리, 전체 VMware NSX 범위와 데이터의 가용성을 보장하는 VMware vSAN 모니터링이 포함됩니다.
 
-## 기술 스펙
+## IMI의 기술 스펙
 
-다음 스펙이 IMI 관리 서비스에 포함되어 있습니다. 
+다음 스펙이 IMI 관리 서비스에 포함되어 있습니다.
 
 * 커버리지 옵션: 8X5, 16X5 또는 24X7
 * 전체 전달을 담당하는 IT 서비스 관리 도구 및 관리 프로세스

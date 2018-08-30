@@ -18,7 +18,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 서비스는 가상 �
 
 ## FortiGate Virtual Appliance on IBM Cloud의 기술 스펙
 
-다음 컴포넌트가 주문되고 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다. 
+다음 컴포넌트가 주문되고 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
 ### 가상 머신
 
@@ -28,23 +28,23 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 서비스는 가상 �
 
 ### 고가용성
 
-2개의 가상 머신이 배치되어 있으며 HA 또는 VRRP(Virtual Router Redundancy Protocol) 구성을 위해 준비되어 있습니다. 
+2개의 가상 머신이 배치되어 있으며 HA 또는 VRRP(Virtual Router Redundancy Protocol) 구성을 위해 준비되어 있습니다.
 
 ### 네트워킹
 
-FortiGate® 콘솔에 대한 액세스는 사설 관리 네트워크를 통해 제공됩니다. 
+FortiGate® 콘솔에 대한 액세스는 사설 관리 네트워크를 통해 제공됩니다.
 
 ### 라이센스 및 요금
 
-각 가상 머신에 대한 라이센스 요금은 선택된 배치 크기와 월별 등록 라이센스 모델에 따라 각 청구 주기에 적용됩니다. 
+각 가상 머신에 대한 라이센스 요금은 선택된 배치 크기와 월별 등록 라이센스 모델에 따라 각 청구 주기에 적용됩니다.
 
-**중요:** 서비스 설치 이후에는 라이센싱 레벨을 변경할 수 없습니다. 라이센싱 레벨을 변경하려면 기존 서비스를 제거하고 다른 라이센싱 옵션을 사용하여 서비스를 다시 설치해야 합니다. 
+**중요:** 서비스 설치 이후에는 라이센싱 레벨을 변경할 수 없습니다. 라이센싱 레벨을 변경하려면 기존 서비스를 제거하고 다른 라이센싱 옵션을 사용하여 서비스를 다시 설치해야 합니다.
 
 ## FortiGate Virtual Appliance on IBM Cloud 설치 시 고려사항
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 설치하기 전에 다음 고려사항을 검토하십시오.
-* FortiGate 가상 머신(VM)은 기본 클러스터에만 배치됩니다. 
-* 2개의 FortiGate VM이 네트워크 통신의 데이터 플레인에 있으며 반드시 이에 대해 여전히 리소스를 사용할 수 있어야 하므로, 이러한 VM에 대한 100% 의 CPU 및 RAM 역시 예약되어 있습니다. 
+* FortiGate 가상 머신(VM)은 기본 클러스터에만 배치됩니다.
+* 2개의 FortiGate VM이 네트워크 통신의 데이터 플레인에 있으며 반드시 이에 대해 여전히 리소스를 사용할 수 있어야 하므로, 이러한 VM에 대한 100% 의 CPU 및 RAM 역시 예약되어 있습니다.
 
   단일 FortiGate VM에 대한 CPU 및 RAM 예약을 계산하려면 다음 공식을 사용하십시오.
    * `CPU 예약 = ESXi 서버의 CPU 속도 * vCPU 수`
@@ -74,7 +74,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 설
 
 `50% 2개 * 16개의 코어 * 2.1GHz = 33.6GHz 사용 가능`
 
-IBM CloudDriver, VMware NSX Controller 또는 VMware NSX Edge 등의 기타 워크로드가 ESXi 서버에 존재하므로, 이러한 리소스를 사용하여 세 번째 요구사항을 충족시킬 수 없습니다. 이는 두 FortiGate VM에 대해 33.6GHz의 CPU와 24GB의 RAM이 필요하기 때문입니다.
+VMware vCenter Server, VMware NSX Controller 또는 VMware NSX Edge 등의 다른 워크로드가 ESXi 서버에 존재하므로, 이러한 리소스를 사용하여 세 번째 요구사항을 충족시킬 수 없습니다. 이는 두 FortiGate VM에 대해 33.6GHz의 CPU와 24GB의 RAM이 필요하기 때문입니다.
 
 이 경우, 두 FortiGate VM에 대해 충분한 리소스를 확보하기 위해 하나 이상의 ESXi 서버를 환경에 추가하고 vShpere HA 장애 복구 예약을 적절히 업데이트하지 않으면 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 설치가 실패할 수 있습니다.
 

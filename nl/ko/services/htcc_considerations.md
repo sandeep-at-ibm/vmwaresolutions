@@ -16,7 +16,7 @@ HyTrust CloudControl on {{site.data.keyword.cloud}} 서비스는 보안 표준�
 
 ## HyTrust CloudControl on IBM Cloud의 기술 스펙
 
-다음 컴포넌트가 주문되고 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다. 
+다음 컴포넌트가 주문되고 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
 ### HyTrust CloudControl 어플라이언스
 
@@ -27,11 +27,11 @@ HyTrust CloudControl on {{site.data.keyword.cloud}} 서비스는 보안 표준�
 
 ### 고가용성
 
-2개의 CloudControl 어플라이언스가 활성-수동 구성에 배치됩니다. 
+2개의 CloudControl 어플라이언스가 활성-수동 구성에 배치됩니다.
 
 ### 라이센스 및 요금
 
-호스트별 라이센스: HyTrust CloudControl 라이센스는 환경의 각 호스트마다 주문됩니다. 
+호스트별 라이센스: HyTrust CloudControl 라이센스는 환경의 각 호스트마다 주문됩니다.
 
 ## HyTrust CloudControl on IBM Cloud 제거 시 고려사항
 

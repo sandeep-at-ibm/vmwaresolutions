@@ -10,19 +10,19 @@ lastupdated: "2018-07-20"
 
 # IBM Spectrum Protect Plus on IBM Cloud 주문
 
-서비스가 포함된 새 인스턴스를 주문할 때 또는 기존 인스턴스에 서비스를 추가하여 {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 서비스를 주문할 수 있습니다. 
+서비스가 포함된 새 인스턴스를 주문할 때 또는 기존 인스턴스에 서비스를 추가하여 {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 서비스를 주문할 수 있습니다.
 
 ## 새 인스턴스에 대한 IBM Spectrum Protect Plus on IBM Cloud 주문
 
 다음 방법 중 하나를 사용하여 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}와 함께 새 인스턴스를 주문할 수 있습니다.
 * {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 새 인스턴스를 주문할 때 **서비스** 섹션에서 **IBM Spectrum Protect Plus on IBM Cloud**를 선택하십시오.
-* {{site.data.keyword.cloud_notm}} 카탈로그에서 **IBM Spectrum Protect Plus on IBM Cloud**를 선택하고 서비스 설정을 지정한 후에 **새 인스턴스에 추가**를 선택하십시오. 
+* {{site.data.keyword.cloud_notm}} 카탈로그에서 **IBM Spectrum Protect Plus on IBM Cloud**를 선택하고 서비스 설정을 지정한 후에 **새 인스턴스에 추가**를 선택하십시오.
 
 ## 기존 인스턴스에 대한 IBM Spectrum Protect Plus on IBM Cloud 주문
 
 다음 방법 중 하나를 사용하여 기존 인스턴스에 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 서비스를 추가할 수 있습니다.
-* {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 해당 서비스를 추가할 인스턴스를 보고 왼쪽 탐색 분할창에서 **서비스**를 클릭한 후에 **추가**를 클릭하십시오. 
-* {{site.data.keyword.cloud_notm}} 카탈로그에서 **IBM Spectrum Protect Plus on IBM Cloud**를 선택하고 서비스 설정을 지정한 후에 **기존 인스턴스에 추가**를 선택하십시오. 
+* {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 해당 서비스를 추가할 인스턴스를 보고 왼쪽 탐색 분할창에서 **서비스**를 클릭한 후에 **추가**를 클릭하십시오.
+* {{site.data.keyword.cloud_notm}} 카탈로그에서 **IBM Spectrum Protect Plus on IBM Cloud**를 선택하고 서비스 설정을 지정한 후에 **기존 인스턴스에 추가**를 선택하십시오.
 
 ## IBM Spectrum Protect Plus on IBM Cloud 서비스 구성
 
@@ -50,7 +50,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}의 배치가 자�
 2. 지정한 설정에 따라, {{site.data.keyword.cloud_notm}} 인프라에서 IBM Spectrum Protect Plus에 대한 여러 라이센스가 주문됩니다. 라이센스는 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 서비스를 주문할 때 라이센싱하도록 지정한 VM의 수에 따라 10개 가상 머신(VM) 라이센스 팩의 증분으로 주문됩니다. 기존 IBM Spectrum Protect Plus 라이센스를 가져오도록 선택한 경우에는 {{site.data.keyword.cloud_notm}} 인프라에서 라이센스가 주문되지 않습니다.
 3. 각 ESXi 서버의 올바른 정적 라우트를 스토리지 사설 서브넷에 추가하는 작업을 포함하여 이 서비스에 대해 주문된 NFS 스토리지가 인스턴스의 기본 클러스터에 있는 모든 ESXi 서버에 마운트됩니다.
 4. ESXi 서버에 마운트된 모든 NFS 스토리지 볼륨에 대해 vCenter Server 서버에 NFS 데이터 저장소가 작성됩니다.
-5. IBM Spectrum Protect Plus VM은 인스턴스의 기본 클러스터에서 배치되고 활성화되며 구성됩니다. 
+5. IBM Spectrum Protect Plus VM은 인스턴스의 기본 클러스터에서 배치되고 활성화되며 구성됩니다.
 6. 이 서비스에 대해 주문된 NFS 스토리지가 IBM Spectrum Protect Plus VM에 연결되며 백업 저장소가 구성됩니다.
 7. IBM Spectrum Protect Plus VM의 호스트 이름 및 IP 주소가 인스턴스의 DNS 서버에 등록됩니다.
 
