@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-30"
 
 ---
 
 # Release notes for V2.5
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and more tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Spectre and Meltdown remediation
 
@@ -28,24 +28,24 @@ This release installs VMware NSX for vSphere 6.4.1 for new deployments of VMware
 
 ## Removal of default backup configuration
 
-{{site.data.keyword.vmwaresolutions_short}} offers two integrated add–on services for backup: IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} and Veeam on {{site.data.keyword.cloud_notm}}. These services allow you to plan and provide for the recovery of both your management infrastructure and your workload. Additionally, IBM Resiliency Services offers managed services for Veeam backups.
+{{site.data.keyword.vmwaresolutions_short}} offers two integrated add–on services for backup: IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} and Veeam on {{site.data.keyword.cloud_notm}}. With these services, you can plan and provide for the recovery of both your management infrastructure and your workload. Additionally, IBM Resiliency Services provide managed services for Veeam backups.
 
-Starting with the V2.5 release, the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} and Veeam on {{site.data.keyword.cloud_notm}} services, when deployed, no longer preconfigure the backup of any VMs. This change allows you to ensure proper configuration of all aspects of your backup jobs, including schedule, retention period, use of deduplication, monitoring and alerts, and management of encryption keys. Additionally, the IBM CloudDriver VM is no longer configured as a persistent file server for NSX backups.
+Starting with the V2.5 release, the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} and Veeam on {{site.data.keyword.cloud_notm}} services, when deployed, no longer preconfigure the backup of any VMs. With this change, you can ensure proper configuration of all aspects of your backup jobs, including schedule, retention period, use of deduplication, monitoring and alerts, and management of encryption keys. Additionally, the IBM CloudDriver VM is no longer configured as a persistent file server for NSX backups.
 
 You are responsible for the configuration, management, and monitoring of all software components, including the backup and availability of the management infrastructure and workloads. For more information, see [Backing up components](../archiref/solution/solution_backingup.html#backing-up-components).
 
-**Note:** This change does not affect instances deployed prior to V2.5 that have already installed the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}} service.
+**Note:** This change does not affect instances that are deployed before V2.5 that have the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}} service installed.
 
 ## IBM CloudDriver resiliency
 
-For instances deployed in or upgraded to V2.5 or later releases, the IBM CloudDriver component is no longer configured as a virtual machine (VM) within the vSphere cluster. Instead, it is deployed as an {{site.data.keyword.cloud_notm}} infrastructure virtual server instance (VSI) as needed with the latest {{site.data.keyword.cloud_notm}} for VMware code for operations such as deploying additional nodes, clusters, or services. Additionally, the IBM CloudDriver is changed to communicate with the {{site.data.keyword.cloud_notm}} management plane using the {{site.data.keyword.cloud_notm}} private network so that the management NSX Edge Services Gateway (ESG) firewall and network address translation (NAT) rules permitting the IBM CloudDriver to communicate outbound to the public network are removed.
+For instances deployed in or upgraded to V2.5 or later releases, the IBM CloudDriver component is no longer configured as a virtual machine (VM) within the vSphere cluster. Instead, it is deployed as an {{site.data.keyword.cloud_notm}} infrastructure virtual server instance (VSI) as needed with the latest {{site.data.keyword.cloud_notm}} for VMware code for operations such as deploying more nodes, clusters, or services. Additionally, the IBM CloudDriver is changed to communicate with the {{site.data.keyword.cloud_notm}} management plane by using the {{site.data.keyword.cloud_notm}} private network. With this change, the management NSX Edge Services Gateway (ESG) firewall and network address translation (NAT) rules that allow the IBM CloudDriver to communicate outbound to the public network are removed.
 
 Some add-on services such as F5 on {{site.data.keyword.cloud_notm}}, FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, and Zerto on {{site.data.keyword.cloud_notm}} still require public network access, so the management NSX ESG remains deployed in all instances.
 
 ## IAM-enabled user and access management
 
 Starting with the V2.5 release, {{site.data.keyword.vmwaresolutions_short}} is integrated with IBM Identity and Access Management (IAM) to provide a unified approach for managing user accounts and user access within your {{site.data.keyword.cloud_notm}} account. Because of which:
-* You can now add multiple users to your {{site.data.keyword.cloud_notm}} account for collaboration, and you can manage their access to the services and resources provisioned in your account by assigning different platform access roles to them.  
+* You can now add multiple users to your {{site.data.keyword.cloud_notm}} account for collaboration, and you can manage their access to the services and resources that are provisioned in your account by assigning different platform access roles to them.  
 * Instances that are deployed in V2.5 and later releases are automatically linked to the user account that is being used when the instance is ordered.
 * For instances that were deployed in V2.4 and previous releases, you can migrate them to a specified {{site.data.keyword.cloud_notm}} account and then manage them by using IAM as well.
 
@@ -68,11 +68,19 @@ For more information about user accounts, see the following topics:
 
 ## Updates for add-on services
 
+### IBM Cloud Private Hosted (Updated on August 30, 2018)
+
+The {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} service is now available to vCenter Server instances that are deployed in (or upgraded to) V2.5 or later releases.
+
+{{site.data.keyword.cloud_notm}} Private Hosted brings the power of microservices and containers to your VMware environment on {{site.data.keyword.cloud_notm}}. With this service, you can extend the same familiar VMware and {{site.data.keyword.cloud_notm}} Private operational model and tools from on-premises into the {{site.data.keyword.cloud_notm}}.
+
+You can request this service after you ordered your vCenter Server instance. For more information, see [Requesting {{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html).
+
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-Starting with the V2.5 release, the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service is deployed as two separate VMs based on best practices, with one VM running the Spectrum Protect Plus server and the other VM running the vSnap server and VADP proxy.
+Starting with the V2.5 release, the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service is deployed as two separate VMs based on best practices, with one VM running the IBM Spectrum Protect Plus server and the other VM running the vSnap server and VADP proxy.
 
-You can now order up to ten backup data stores, allowing up to 120 TB of backup storage. The vSnap and VADP VM are sized depending on your selected backup storage size and according to the information in the [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints).
+You can now order up to 10 backup data stores, allowing up to 120 TB of backup storage. The vSnap and VADP VM are sized depending on your selected backup storage size and according to the information in the [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints).
 
 ### KMIP for VMware on IBM Cloud
 
@@ -104,6 +112,6 @@ For more information, see the following topics:
 
 The user interface is updated and provides the following enhancements:
 
-* If you have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account that is linked to your {{site.data.keyword.cloud_notm}} account, you can now click the newly added **Retrieve** button on the **Settings** page to get the user name and API key for your  {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account automatically.
+* If you have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account that is linked to your {{site.data.keyword.cloud_notm}} account, you can now click the newly added **Retrieve** button on the **Settings** page to get the user name and API key for your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account automatically.
 * A new **Deployment History** tab is added on the left navigation pane of the instance details page for you to check deployment history of an instance.
 * Various error messages and tooltip enhancements have been made to assist you in selecting the appropriate setting on the user interface.

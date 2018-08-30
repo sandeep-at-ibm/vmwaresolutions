@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -130,6 +130,10 @@ Review and choose add-on services for your deployment offering.
     <tr>
        <td>[HyTrust DataControl on IBM Cloud](services/htdc_considerations.html)</td>
        <td>The HyTrust DataControl on {{site.data.keyword.cloud_notm}} service offers strong encryption with integrated key management to secure workloads throughout their lifecycle. The service can provide encryption at both the operating system level and at the data level, which means that any directory, folder, or file within a workload can be encrypted and decrypted.</td>
+    </tr>
+    <tr>
+       <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
+       <td>The {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} service brings the power of microservices and containers to your VMware environment on {{site.data.keyword.cloud_notm}}. With this service, you can extend the same familiar VMware and {{site.data.keyword.cloud_notm}} Private operational model and tools from on-premises into the {{site.data.keyword.cloud_notm}}.</td>
     </tr>
     <tr>
        <td>[IBM Spectrum Protect Plus on IBM Cloud](services/spp_considerations.html)</td>
