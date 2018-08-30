@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -33,7 +33,7 @@ Tableau 1. Services disponibles pour les instances Cloud Foundation
 
 ## Ajout de services à des instances Cloud Foundation
 
-Pour ajouter un service à votre instance Cloud Foundation, cliquez sur le lien de service approprié dans le tableau précédent pour passer en revue les remarques relatives au service et vérifiez les composants qui sont déployés. Suivez ensuite les instructions décrites dans la rubrique sur la commande de service afin d'ajouter le service à votre instance.
+Pour ajouter un service à votre instance Cloud Foundation, cliquez sur le lien de service approprié dans le tableau précédent pour passer en revue les remarques relatives au service et vérifiez les composants qui sont déployés. Suivez ensuite les instructions de la rubrique sur la commande de service afin d'ajouter le service à votre instance.
 
 ### Résultats de l'installation d'un service
 

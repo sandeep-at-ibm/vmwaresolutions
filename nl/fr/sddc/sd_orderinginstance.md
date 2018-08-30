@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -70,7 +70,7 @@ Sélectionnez le modèle d'UC et la mémoire RAM du serveur bare metal.
 
 Tableau 1. Options pour les serveurs {{site.data.keyword.baremetal_short}} personnalisés
 
-| Options d'UC        | Options de RAM       |
+| Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
@@ -181,7 +181,9 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
    * Cliquez sur **Instance principale** pour déployer une seule instance dans l'environnement ou pour déployer la première instance dans une topologie multisite.
    * Cliquez sur **Instance secondaire** pour connecter l'instance à une instance (principale) existante dans l'environnement à des fins de haute disponibilité et procédez comme suit :
      1. Sélectionnez l'instance principale à laquelle vous voulez que l'instance secondaire soit connectée.
-     2. Entrez le mot de passe de l'administrateur PSC pour l'instance principale.
+     2. Si l'instance principale que vous avez sélectionnée est mise à niveau vers la version 2.5, ou qu'elle a été déployée ou mise à niveau vers la version 2.4 et des éditions antérieures, vérifiez que le contenu de la zone **Mot de passe de l'administrateur PSC pour l'instance principale** pré-renseignée est correct.
+     
+         **Remarque :** la zone **Mot de passe de l'administrateur PSC pour l'instance principale** n'est pas disponible pour les instances principales déployées dans la version 2.5 ou ultérieure.     
 5. Spécifiez les paramètres de licence pour les composants d'instance:
    *  Pour utiliser des licences fournies par IBM, sélectionnez **Inclure avec achat**.
    *  Pour utiliser votre propre licence, sélectionnez **Je fournirai** et entrez la clé de licence.  
