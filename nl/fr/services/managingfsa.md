@@ -12,7 +12,7 @@ lastupdated: "2018-07-19"
 
 Une fois le service FortiGate Security Appliance (FSA) on {{site.data.keyword.cloud}} correctement installé, vous pouvez gérer et configurer des règles de pare-feu pour le dispositif FSA à partir de la console FortiGate.
 
-**Important** : vous devez vous assurer que les règles de pare-feu de FortiGate Security Appliance (FSA) sont définies de manière à autoriser les communications HTTPS sortantes (port TCP 443) initiées par des composants de gestion, tels que la machine virtuelle IBM CloudDriver ou le gestionnaire virtuel Zerto, à communiquer avec la base de données de gestion externe sur l'infrastructure {{site.data.keyword.cloud_notm}} via Internet. Les communications HTTPS sortantes (port TCP 443) proviennent de l'adresse IP publique des services de gestion VMware NSX Edge Services Gateway (ESG) de votre instance.
+**Important** : vous devez vous assurer que les règles de pare-feu FSA sont définies de sorte à autoriser les communications HTTPS sortantes (port TCP 443) initiées par des composants de gestion tels le gestionnaire virtuel Zerto pour communiquer avec la base de données de gestion externe sur l'infrastructure {{site.data.keyword.cloud_notm}} via Internet. Les communications HTTPS sortantes (port TCP 443) proviennent de l'adresse IP publique des services de gestion VMware NSX Edge Services Gateway (ESG) de votre instance.
 
 ## Accès à la console FortiGate série 300
 

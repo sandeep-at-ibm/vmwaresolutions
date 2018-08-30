@@ -38,7 +38,7 @@ Tableau 2. Nomenclature des composants logiciels des instances Cloud Foundation
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX for vSphere                          | 6.3.5        |
 | VMware       | Gestionnaire SDDC                             | 2.4          |
-| IBM          | CloudDriver                              | 2.4          |
+| IBM          | CloudDriver                              | 2.5          |
 | Microsoft    | Windows Server édition Standard (64 bits) | 2012R2       |
 
 ## Paramètres de configuration avancée pour les serveurs ESXi

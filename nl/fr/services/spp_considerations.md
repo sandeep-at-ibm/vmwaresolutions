@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,7 +33,7 @@ Les composants suivants sont commandés et inclus dans le service IBM Spectrum P
    * Disque de 370 Go
 * Machine virtuelle secondaire exécutant un serveur IBM Spectrum Protect Plus vSnap et un proxy VADP
    * Système d'exploitation : Linux 3.10.0-693.11.1.el7.x86_64
-   * UC et mémoire RAM configurées en fonction de la taille de stockage sélectionnée et des conseils de dimensionnement fournis dans le wiki[IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/homelang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints). 
+   * UC et mémoire RAM configurées en fonction de la taille de stockage sélectionnée et des conseils de dimensionnement fournis dans le wiki[IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints).
    * Disque de 150 Go
 
 ### Stockage pour les sauvegardes
@@ -43,7 +43,7 @@ Stockage personnalisable pour les sauvegardes avec les options suivantes :
 * Chaque stockage de fichiers de type Endurance : 500, 1000, 2000, 4000, 8000 ou 12000 Go
 * Performance de stockage : 0,25, 2 ou 4 IOPS/Go
 
-Pour la planification et le dimensionnement, voir les wikis [IBM Spectrum Protect Plus Blueprints et IBM Spectrum Protect Plus sizing tools](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints). 
+Pour la planification et le dimensionnement, voir les wikis [IBM Spectrum Protect Plus Blueprints et IBM Spectrum Protect Plus sizing tools](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints).
 
 ### Stockage pour la gestion
 
@@ -73,7 +73,7 @@ Passez en revue les remarques suivantes avant d'installer le service IBM Spectru
 
 Passez en revue les remarques suivantes avant de supprimer le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} :
 * Vérifiez que toutes les configurations de tâche de sauvegarde ont été supprimées et qu'il ne reste aucune opération de sauvegarde ou de restauration active.
-* Lorsque vous supprimez le service, le stockage du référentiel de sauvegarde est supprimé de la machine virtuelle IBM Spectrum Protect Plus et la commande de stockage est annulée, ce qui supprime définitivement les données du référentiel de sauvegarde.
+* Lorsque vous retirez le service, le stockage pour le référentiel des sauvegardes est supprimé de la machine virtuelle IBM Spectrum Protect Plus et la commande de stockage est annulée, ce qui supprime définitivement les données du référentiel des sauvegardes.
 * Lorsque vous supprimez le service, le stockage de sauvegarde commandé pour le service est également supprimé. Par conséquent, toutes les sauvegardes sont inaccessibles pendant la suppression du service.
 
 ### Liens connexes

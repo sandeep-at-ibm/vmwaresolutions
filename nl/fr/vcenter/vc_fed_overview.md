@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -81,7 +81,7 @@ Chaque noeud d'extension vCenter Server déployé génère des frais, imputés �
 
 ### Matériel pour les noeuds d'extension
 
-Un serveur bare metal doté de la configuration présentée dans [Spécifications techniques relatives aux instances VMware Federal on {{site.data.keyword.cloud_notm}}](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
+Un serveur bare metal doté de la configuration présentée dans [Spécifications techniques relatives aux instances VMware Federal sur {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ### Licences et frais pour les noeuds d'extension
 

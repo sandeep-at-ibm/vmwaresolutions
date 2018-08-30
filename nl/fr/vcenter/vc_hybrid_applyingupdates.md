@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-07"
 
 ---
 
@@ -46,7 +46,7 @@ Tableau 1. Niveaux de mise à jour et impact
    * Lorsque de nouveaux serveurs ESXi sont ajoutés
    * Lorsque de nouveaux clusters sont ajoutés
 
-5. Pour des mises à niveau de licence, cliquez sur **Mettre à niveau la licence**. Sélectionnez dans la liste l'édition vers laquelle vous souhaitez effectuer une mise à niveau, puis cliquez sur **Mettre à niveau**. Les rétromigrations d'édition de licence ne sont pas disponibles.
+5. Pour des mises à niveau de licence, cliquez sur **Mettre à niveau**. Sélectionnez dans la liste l'édition vers laquelle vous souhaitez effectuer une mise à niveau, puis cliquez sur **Mettre à niveau**. Les rétromigrations d'édition de licence ne sont pas disponibles.
 
    **Remarque** : la mise à niveau de licence remplace toutes les licences NSX existantes sur l'instance. Des frais supplémentaires peuvent découler d'un chevauchement entre les anciennes et les nouvelles licences si vous effectuez la mise à niveau en cours de cycle de facturation. Pour éviter des frais supplémentaires, il est recommandé d'effectuer la mise à niveau de la licence à la fin du cycle de facturation.
 

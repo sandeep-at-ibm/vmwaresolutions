@@ -14,7 +14,7 @@ Passez en revue les informations suivantes pour obtenir des détails relatifs au
 
 ## Composants de mise en réseau pour les instances vCenter Server
 
-Pour passer en revue les composants de mise en réseau inclus dans votre instance vCenter Server, voir [Spécifications techniques relatives aux instances vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances). 
+Pour passer en revue les composants de mise en réseau inclus dans votre instance vCenter Server, voir [Spécifications techniques relatives aux instances vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## Remarques relatives au pare-feu NSX
 

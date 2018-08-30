@@ -42,7 +42,7 @@ Cette couche virtualise l'infrastructure physique par le biais de différents pr
 
 ### Gestion de la virtualisation
 
-Cette couche se compose du dispositif vCenter Server Appliance (vCSA), de NSX Manager, de deux passerelles NSX ESG, de trois contrôleurs NSX, du dispositif virtuel PSC (Platform Services Controller) et de l'instance de serveur virtuel IBM CloudDriver. L'instance de serveur virtuel CloudDriver est déployée à la demande en fonction des besoins de certaines opérations, telles que l'ajout d'hôtes à l'environnement. 
+Cette couche se compose du dispositif vCenter Server Appliance (vCSA), de NSX Manager, de deux passerelles NSX ESG, de trois contrôleurs NSX, du dispositif virtuel PSC (Platform Services Controller) et de l'instance de serveur virtuel IBM CloudDriver. L'instance de serveur virtuel CloudDriver est déployée à la demande en fonction des besoins de certaines opérations, telles que l'ajout d'hôtes à l'environnement.
 
 L'offre de base est déployée avec un dispositif vCenter Server dimensionné de manière à prendre en charge un environnement comportant jusqu'à 400 hôtes et jusqu'à 4000 machines virtuelles. Les mêmes outils et scripts compatibles API vSphere peuvent être utilisés pour gérer l'environnement VMware hébergé par IBM.
 

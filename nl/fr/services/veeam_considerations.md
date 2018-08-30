@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -46,7 +46,7 @@ Sauvegardes de gestion configurées par défaut avec un maximum de cinq machines
 
 ## Remarques relatives à l'installation de Veeam on IBM Cloud
 
-Le référentiel du stockage et celui du serveur Veeam se trouvent dans le pod d'origine et le centre de données. Par conséquent, les performances des opérations de sauvegarde des clusters distants peuvent se dégrader.
+Le référentiel du stockage et celui du serveur Veeam se trouvent dans le pod et le centre de données d'origine. Par conséquent, les performances des opérations de sauvegarde des clusters distants peuvent se dégrader.
 
 ## Remarques relatives au retrait de Veeam on IBM Cloud
 

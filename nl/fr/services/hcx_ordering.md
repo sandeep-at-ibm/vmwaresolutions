@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -40,8 +40,8 @@ Pour installer HCX on {{site.data.keyword.cloud_notm}}, définissez les paramèt
 Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatisé. Que vous commandiez une instance vCenter Server with Hybridity Bundle avec le service inclus ou que vous déployez le service ultérieurement dans votre instance, les étapes suivantes sont réalisées par le processus d'automatisation de {{site.data.keyword.vmwaresolutions_short}} :
 1. Trois sous-réseaux sont commandés pour le service HCX à partir de l'infrastructure {{site.data.keyword.cloud_notm}} :
    * Un sous-réseau portable privé pour la gestion HCX.
-   * Un sous-réseau portable privé pour les interconnexions HCX si **Réseau privé** est sélectionné pour **Type d'interconnexion HCX**.
-   * Un sous-réseau portable public pour les interconnexions HCX si **Réseau public** est sélectionné pour **Type d'interconnexion HCX**. Ce sous-réseau est également utilisé pour l'activation et la maintenance avec VMware.
+   * Un sous-réseau portable privé pour les interconnexions HCX. Ce sous-réseau est utilisé si **Réseau privé** est sélectionné pour **Type d'interconnexion HCX**.
+   * Un sous-réseau portable public pour l'activation et la maintenance avec VMware. Si l'option **Réseau public** est sélectionnée pour **Type d'interconnexion HCX**, ce sous-réseau est également utilisé pour les interconnexions HCX.
 
    **Important :** les adresses IP des sous-réseaux commandés pour HCX sont gérées par l'automatisation VMware sur {{site.data.keyword.cloud_notm}}. Ces adresses IP ne peuvent pas être affectées à des ressources VMware, telles que des machines virtuelles et des serveurs de périphérie NSX Edge, que vous créez. Si vous avez besoin d'adresses IP supplémentaires pour vos artefacts VMware, vous devez commander vos propres sous-réseaux depuis {{site.data.keyword.cloud_notm}}.
 2. Si **Réseau privé** a été sélectionné comme **Type d'interconnexion HCX**, un groupe de ports nommé **SDDC-DPortGroup-HCX-Private** est créé sur le commutateur virtuel distribué privé.

@@ -10,14 +10,14 @@ lastupdated: "2018-07-20"
 
 # Affichage d'instances Cloud Foundation
 
-Affichez les informations récapitulatives et détaillées des instances VMware Cloud Foundation qui sont mises à disposition pour différents comptes utilisateur. 
+Affichez les informations récapitulatives et détaillées des instances VMware Cloud Foundation qui sont mises à disposition pour différents comptes utilisateur.
 
 ## Affichage du récapitulatif des instances Cloud Foundation
 
 Pour afficher un récapitulatif de toutes les instances Cloud Foundation qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 
-1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche. 
-2. Dans l'angle supérieur droit de la console, cliquez sur votre avatar, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances.  
+1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+2. Dans l'angle supérieur droit de la console, cliquez sur votre avatar, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances. 
 3. Dans le tableau **Instances Cloud Foundation Select**, affichez la liste de vos instances :
 
 Tableau 1. Eléments d'une instance Cloud Foundation
@@ -96,7 +96,7 @@ Tableau 4. Informations d'accès Cloud Foundation pour les composants liés à l
 
 ## Affichage de l'historique de déploiement des instances Cloud Foundation
 
-Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance. 
+Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance.
 
 Tableau 5. Historique de déploiement d'une instance Cloud Foundation
 

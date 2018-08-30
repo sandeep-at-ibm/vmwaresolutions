@@ -82,7 +82,7 @@ Le stockage suivant est commandé selon la configuration des serveurs {{site.dat
 * Un contrôleur de disque RAID
 * Pour la configuration **Personnalisée** uniquement, vous pouvez définir le nombre d'unités de disque ainsi que le type et la capacité des disques en fonction de vos besoins.
 * Pour la configuration **Préconfigurée**, **Petite** uniquement : deux disques SSD haute capacité de 1,9 To
-* Pour la configuration **Preconfigurée**, **Grande** uniquement : quatre disques SSD haute capacité de 3,8 To
+* Pour la configuration **Préconfigurée**, **Grande** uniquement : quatre disques SSD haute capacité de 3,8 To
 
 ### Licences (fournies par IBM ou BYOL) et frais
 

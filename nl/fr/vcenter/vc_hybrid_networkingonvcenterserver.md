@@ -14,7 +14,7 @@ Passez en revue les informations suivantes pour obtenir des détails relatifs au
 
 ## Composants de mise en réseau des instances vCenter Server with Hybridity Bundle
 
-Pour passer en revue les composants de mise en réseau inclus dans votre instance vCenter Server with Hybridity Bundle, voir [Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances). 
+Pour passer en revue les composants de mise en réseau inclus dans votre instance vCenter Server with Hybridity Bundle, voir [Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances).
 
 ## Remarques relatives au pare-feu NSX
 

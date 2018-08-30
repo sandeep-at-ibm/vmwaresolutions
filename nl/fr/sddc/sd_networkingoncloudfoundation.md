@@ -14,7 +14,7 @@ Passez en revue les informations suivantes pour des détails relatifs aux remarq
 
 ## Composants de mise en réseau pour les instances Cloud Foundation
 
-Pour passer en revue les composants de mise en réseau inclus dans votre instance Cloud Foundation, voir [Spécifications techniques relatives aux instances Cloud Foundation](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances). 
+Pour passer en revue les composants de mise en réseau inclus dans votre instance Cloud Foundation, voir [Spécifications techniques relatives aux instances Cloud Foundation](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## Remarques relatives au pare-feu NSX
 

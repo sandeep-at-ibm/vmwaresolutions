@@ -28,11 +28,11 @@ Les composants suivants sont commandés et inclus dans le service FortiGate Virt
 
 ### Haute disponibilité
 
-Deux machines virtuelles sont déployées et prêtes pour la configuration HA (haute disponibilité) ou VRRP (protocole de redondance de routeur virtuel). 
+Deux machines virtuelles sont déployées et prêtes pour la configuration HA (haute disponibilité) ou VRRP (protocole de redondance de routeur virtuel).
 
 ### Utilisation en réseau
 
-L'accès à la console FortiGate est fourni via un réseau de gestion privé. 
+L'accès à la console FortiGate est fourni via un réseau de gestion privé.
 
 ### Licences et frais
 
@@ -75,7 +75,7 @@ vSphere HA réserve toutefois par défaut 50% d'UC et de RAM pour le basculement
 
 `50% de 2 * 16 coeurs * 2,1 GHz = 33,6 GHz disponibles`
 
-Etant donné que d'autres charges de travail se trouvent sur les serveurs ESXi (par exemple, IBM CloudDriver, VMware NSX Controller ou VMware NSX Edge), en utilisant ces ressources, nous ne respectons pas la troisième exigence. En effet, nous avons besoin de 33,6 GHz d'UC et de 24 Go de mémoire RAM pour les deux machines virtuelles FortiGate.
+Etant donné que d'autres charges de travail figureront sur les serveurs ESXi (par exemple, VMware vCenter Server, VMware NSX Controller, or VMware NSX Edge), en utilisant ces ressources, nous ne respectons pas la troisième exigence. En effet, nous avons besoin de 33,6 GHz d'UC et de 24 Go de mémoire RAM pour les deux machines virtuelles FortiGate.
 
 Dans ce cas, l'installation de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} risque d'échouer, sauf si au moins un serveur ESXi est ajouté à l'environnement et que les réservations de vSphere HA pour basculement sont mises à jour de manière à garantir un nombre suffisant de ressources disponibles pour les deux machines virtuelles FortiGate.
 

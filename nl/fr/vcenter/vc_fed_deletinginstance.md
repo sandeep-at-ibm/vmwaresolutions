@@ -33,7 +33,7 @@ En raison des dépendances de ressource, les composants de votre instance ne son
    1. Dans la colonne **Actions**, cliquez à nouveau sur l'icône Supprimer.
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
-## Suppression d'instances depuis la page des details d'instance
+## Suppression d'instances depuis la page des détails d'instance
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance à supprimer.

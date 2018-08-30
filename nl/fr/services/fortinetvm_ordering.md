@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -34,7 +34,7 @@ Entrez le nom du service.
 
 ### Taille de déploiement
 
-{{site.data.keyword.cloud_notm}} fournit les options de taille de déploiement suivantes : 
+{{site.data.keyword.cloud_notm}} fournit les options de taille de déploiement suivantes :
 * Petite (2 UC virtuelles/4 Go de RAM)
 * Moyenne (4 UC virtuelles/6 Go de RAM)
 * Grande (8 UC virtuelles/12 Go de RAM)
@@ -44,7 +44,7 @@ Entrez le nom du service.
 Le modèle de licence pour le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} propose les options suivantes :
 <dl class="dl">
         <dt class="dt dlterm">Pare-feu standard</dt>
-        <dd class="dd">Cette offre groupée inclut Stateful Packet Inspection, VLAN Protection and Advanced Logging, Ingress/Egress Firewall Rules, SSL/IPSec VPN Termination et le support 24 heures sur 24, 7 jours sur 7.</dd>
+        <dd class="dd">Cette offre groupée inclut Stateful Packet Inspection, VLAN Protection and Advanced Logging, Ingress/Egress Firewall Rules, SSL/IPSec VPN Termination, et un support continu.</dd>
         <dt class="dt dlterm">Pare-feu standard + UTM</dt>
         <dd class="dd">Cette offre groupée inclut tous les services de pare-feu standard en plus de IPS NGFW et filtrage Web, Antivirus et antispam, Réputation de l'adresse IP et du domaine et les services de sécurité FortiGate principaux.</dd>
         <dt class="dt dlterm">Pare-feu standard + Enterprise</dt>

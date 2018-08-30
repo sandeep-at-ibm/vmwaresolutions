@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
 # Présentation de Zerto on IBM Cloud
 
-Le service Zerto on {{site.data.keyword.cloud}} fournit des fonctions de réplication et de reprise après incident, qui peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.
+Le service Zerto sur {{site.data.keyword.cloud}} fournit des fonctions de réplication et de reprise après incident. Ces fonctions peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.
 
-## Spécifications techniques relatives à Zerto on IBM Cloud
+## Spécifications techniques relatives à Zerto sur IBM Cloud
 
-Les composants suivants sont commandés et inclus dans le service Zerto on {{site.data.keyword.cloud_notm}} :
+Les composants suivants sont commandés et inclus dans le service Zerto sur {{site.data.keyword.cloud_notm}} :
 
 **Remarque** : les composants de Zerto Virtual Manager (ZVM) ne sont déployés que dans le cluster par défaut.
 
