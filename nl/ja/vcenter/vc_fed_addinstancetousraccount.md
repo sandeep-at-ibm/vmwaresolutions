@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-08"
 
 ---
 
 # IBM Cloud アカウントへの V2.5 より前の VMware Federal インスタンスのマイグレーション
 
-V2.5 以降のリリースで {{site.data.keyword.cloud}} アカウントにデプロイされた VMware Federal インスタンスは、自動的にアカウントに追加されて、{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) によって管理されます。 
+V2.5 以降のリリースで {{site.data.keyword.cloud}} アカウントにデプロイされた VMware Federal インスタンスは、自動的にアカウントに追加されて、{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) によって管理されます。
 
 V2.4 以前のリリースでデプロイされたインスタンスは、IAM 対応のユーザー管理のために指定された {{site.data.keyword.cloud_notm}} アカウントにマイグレーションできます。
 
@@ -24,8 +24,8 @@ V2.4 以前のリリースでデプロイされたインスタンスは、IAM �
 
 ## 結果
 
-1. 指定された {{site.data.keyword.cloud_notm}} アカウントへのインスタンスのマイグレーション要求が受け入れられたことを示すコンソール通知が表示されます。 
-2. インスタンスのマイグレーションが完了すると、マイグレーション先のアカウントの下の**「デプロイされたインスタンス (Deployed Instances)」**ページにインスタンスが表示されます。マイグレーション済みのインスタンスは、マイグレーション元のアカウントには表示されなくなります。
+1. 指定された {{site.data.keyword.cloud_notm}} アカウントへのインスタンスのマイグレーション要求が受け入れられたことを示すコンソール通知が表示されます。
+2. インスタンスのマイグレーションが完了すると、マイグレーション先のアカウントの下の**「デプロイされたインスタンス (Deployed Instances)」**ページにインスタンスが表示されます。 マイグレーション済みのインスタンスは、マイグレーション元のアカウントには表示されなくなります。
 
 ### 関連リンク
 

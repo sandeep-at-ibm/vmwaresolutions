@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -81,7 +81,7 @@ vCenter Server 拡張ノードごとに、{{site.data.keyword.cloud_notm}} ア�
 
 ### 拡張ノード用のハードウェア
 
-[VMware Federal on {{site.data.keyword.cloud_notm}} インスタンスの技術仕様](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)に示されている構成になっている、1 台のベア・メタル・サーバー。
+[VMware Federal on {{site.data.keyword.cloud_notm}} インスタンスの技術仕様](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)に示されている構成になっている、1 台のベア・メタル・サーバー。
 
 ### 拡張ノード用のライセンスと料金
 

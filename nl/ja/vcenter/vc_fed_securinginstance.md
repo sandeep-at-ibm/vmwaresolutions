@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -18,7 +18,6 @@ lastupdated: "2018-07-19"
 
 * この手順を実行する前に、お客様の環境に必要な資格情報を記録して保存してください。 保護アクションを呼び出すと、現在の環境のすべての資格情報が {{site.data.keyword.vmwaresolutions_full}} データベースから消去され、取得できなくなります。
 * 保護アクションを呼び出すと、インスタンスの完全削除を除くすべての管理機能が無効になります。
-* アウトバウンド HTTPS 管理トラフィック用の VMware NSX Edge Services Gateway (ESG) と IBM CloudDriver 仮想マシンが、デプロイされた VMware Federal インスタンスを保護するアクションの一環として削除されます。
 
 ## 手順
 
@@ -28,7 +27,10 @@ lastupdated: "2018-07-19"
 4. **「インスタンスを保護」**をクリックします。
 5. **「OK」**をクリックして、インスタンスを自動化から切り離すことを確認します。
 
-   **注**: この手順を実行する前に、『**始める前に**』セクションにある重要な情報を確認してください。
+  **注**: この手順を実行する前に、『**始める前に**』セクションにある重要な情報を確認してください。
+
+6. 公開される管理サービス VMware NSX Edge Services Gateway (ESG) をご使用の環境から削除します。オプションで、自動化時にデプロイされるクライアント管理の ESG を削除します。
+7. IBM 自動化で使用されるすべてのアカウントのパスワードまたはキーをリセットします。追加情報については、「[How can I secure my environment to remove access by IBM automation and support?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)」を参照してください。
 
 ## 結果
 
