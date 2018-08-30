@@ -30,7 +30,7 @@ Les composants suivants sont inclus avec le service F5 on {{site.data.keyword.cl
 * Accès à TMSH (Traffic Management Shell) et à la console de gestion via un réseau de gestion privé
 
 ### Licences et frais
-Des frais de licence sont appliqués pour chaque machine virtuelle à chaque cycle de facturation en fonction de l'option d'octroi de licence (Bien, Mieux ou Meilleur) et de la bande passante choisie. 
+Des frais de licence sont appliqués pour chaque machine virtuelle à chaque cycle de facturation en fonction de l'option d'octroi de licence (Bien, Mieux ou Meilleur) et de la bande passante choisie.
 
 **Important: ** vous ne pouvez pas modifier le niveau d'octroi de licence près installation du service. Pour modifier le niveau d'octroi de licence, vous devez supprimer le service existant, puis le réinstaller en sélectionnant une autre option d'octroi de licence.
 
@@ -88,7 +88,7 @@ vSphere HA réserve toutefois par défaut 50 % d'UC et de mémoire RAM pour le b
 
 `50 % de 2 * 16 coeurs * 2,1 GHz = 33,6 GHz disponibles`
 
-Etant donné que d'autres charges de travail figureront sur les serveurs ESXi (par exemple, IBM CloudDriver, VMware NSX Controller, VMware NSX Edge), en utilisantces ressources, nous ne respectons pas la troisième exigence puisque nous avons besoin de 33,6 GHz d'UC et de 32 Go de mémoire RAM pour les deux machines virtuelles BIG-IP.
+Etant donné que d'autres charges de travail figureront sur les serveurs ESXi (par exemple, VMware vCenter Server, VMware NSX Controller, VMware NSX Edge), en utilisant ces ressources, nous ne respectons pas la troisième exigence puisque nous avons besoin d'une UC cadencée à 33,6 GHz et de 32 Go de mémoire RAM pour les deux machines virtuelles BIG-IP.
 
 Dans ce cas, l'installation de F5 on {{site.data.keyword.cloud_notm}} risque d'échouer, sauf si au moins un serveur ESXi est ajouté à l'environnement et que les réservations de vSphere HA pour basculement sont mises à jour de manière à garantir un nombre suffisant de ressources disponibles pour les deux machines virtuelles BIG-IP VE. Si des ressources supplémentaires sont nécessaires pour exécuter le service F5 on {{site.data.keyword.cloud_notm}}, vous pouvez ajouter d'autres serveurs ESXi avant d'installer F5 on {{site.data.keyword.cloud_notm}}.
 

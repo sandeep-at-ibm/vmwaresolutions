@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -20,14 +20,11 @@ Assurez-vous que :
 
 ## Procédure
 
-1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche. 
+1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Faites défiler l'écran vers le tableau **Instances HCX locales** et cliquez sur **Mettre à disposition un nouvel élément**.
-3. Renseignez la zone **Nom de l'instance locale**, puis cliquez sur **Suivant**.
-4. Vérifiez la configuration de l'instance avant de passer la commande.
-   1. Passez en revue les paramètres de l'instance.
-   2. Passez en revue la facturation mensuelle de l'instance.
-   3. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant de commander l'instance.
-5. Cliquez sur **Passer une commande**.
+3. Renseignez la zone **Nom de l'instance locale**.
+4. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant de commander l'instance.
+5. Cliquez sur **Mettre à disposition**.
 
 ## Résultats
 

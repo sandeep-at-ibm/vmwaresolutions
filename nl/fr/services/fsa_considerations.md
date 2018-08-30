@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-08"
 
 ---
 
@@ -41,10 +41,9 @@ Passez en revue les remarques suivantes avant d'installer le service FortiGate S
 * Si vous voulez ajouter le service FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} à une instance déployée, vérifiez qu'aucun autre pare-feu de l'infrastructure {{site.data.keyword.cloud_notm}} n'est déjà en place pour le réseau local virtuel (VLAN) de l'instance.
 * L'installation du service FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} ajoute un nouveau réseau local virtuel (VLAN) public.
 * Lors du déploiement du service, il est possible que votre instance ne puisse temporairement pas accéder à Internet.
-* Une fois le service FortiGate Security Appliance (FSA) on {{site.data.keyword.cloud_notm}} correctement installé, vous pouvez gérer et configurer des règles de pare-feu pour le dispositif FSA à partir de la console FortiGate. Vous devez vous assurer que les règles de pare-feu de FortiGate Security Appliance (FSA) sont définies de manière à autoriser les communications HTTPS sortantes (port TCP 443) initiées par des composants de gestion, tels que la machine virtuelle IBM CloudDriver ou le gestionnaire virtuel Zerto, pour communiquer avec la base de données de gestion externe sur {{site.data.keyword.cloud_notm}} sur Internet. Les communications HTTPS sortantes (port TCP 443) proviennent de l'adresse IP publique des services de gestion VMware NSX Edge Services Gateway (ESG) de votre instance.
-* Si vous déployez une paire de dispositifs FortiGate Security Appliance dans le cadre d'une nouvelle instance, ces dispositifs sont configurés de manière à n'autoriser que les communications sortantes requises depuis votre instance vers le réseau public et à refuser toutes les autres communications.
-* Si vous déployez une paire de dispositifs FortiGate Security Appliance dans le cadre d'une instance existante, ces dispositifs sont configurés avec une règle explicite de manière à n'autoriser que les communications de gestion sortantes requises depuis votre instance vers le réseau public. De plus, les dispositifs sont configurés avec une règle supplémentaire pour autoriser toutes les autres communications de sorte que votre trafic d'application existant ne soit pas interrompu. Vous devez gérer la configuration du service FortiGate Security Appliance avec la plus grande attention de manière à n'autoriser que les communications nécessaires et à refuser toutes les autres communications.
-* Si vous commandez d'autres clusters, les VLAN publics pour ces clusters nouvellement ajoutés ne disposeront pas de la paire à haute disponibilité de dispositifs Security Appliance. 
+* Une fois le service FortiGate Security Appliance (FSA) on {{site.data.keyword.cloud_notm}} correctement installé, vous pouvez gérer et configurer des règles de pare-feu pour le dispositif FSA à partir de la console FortiGate. Vous devez vous assurer que les règles de pare-feu FSA sont définies de sorte à autoriser les communications HTTPS sortantes (port TCP 443) initiées par des composants de gestion tels le gestionnaire virtuel Zerto pour communiquer avec la base de données de gestion externe sur {{site.data.keyword.cloud_notm}} via Internet. Les communications HTTPS sortantes (port TCP 443) proviennent de l'adresse IP publique des services de gestion VMware NSX Edge Services Gateway (ESG) de votre instance.
+* Vous devez gérer la configuration du service FortiGate Security Appliance avec la plus grande attention de manière à n'autoriser que les communications nécessaires et à refuser toutes les autres communications.
+* Si vous commandez d'autres clusters, les VLAN publics pour ces clusters nouvellement ajoutés ne disposeront pas de la paire à haute disponibilité de dispositifs Security Appliance.
 
 ## Remarques relatives au retrait du service FortiGate Security Appliance on IBM Cloud
 
