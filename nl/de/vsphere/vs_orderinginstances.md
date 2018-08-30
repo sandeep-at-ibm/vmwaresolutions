@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-11"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-20"
 
 Zur Bereitstellung einer hochanpassungsfähigen virtualisierten VMware-Plattform müssen Sie einen VMware vSphere on {{site.data.keyword.cloud}}-Cluster bestellen. In diesem Abschnitt ist beschrieben, wie Sie einen neuen VMware vSphere-Cluster erstellen.
 
-In dieser Prozedur werden Sie durch die Auswahl von VMware-Komponenten, {{site.data.keyword.cloud_notm}} Bare Metal Server-Einstellungen, Speichereinstellungen und Optionen für den Netzbetrieb geführt, um einen neuen Cluster zu erstellen. Nachdem Sie die Bestellung aufgegeben haben, wird die Clusterkonfiguration gespeichert, damit Sie den Cluster später ausgehend von dieser Konfiguration wie benötigt skalieren können. Sobald die Bestellung ausgeführt wurde, können Sie den VMware-Cluster manuell gemäß Ihren Anforderungen konfigurieren.
+In dieser Prozedur werden Sie durch die Auswahl von VMware-Komponenten, {{site.data.keyword.cloud_notm}} Bare Metal Server-Einstellungen, Speichereinstellungen und Optionen für den Netzbetrieb geführt, um einen neuen Cluster zu erstellen. Nachdem Sie die Bestellung aufgegeben haben, wird die Clusterkonfiguration gespeichert, damit Sie den Cluster später ausgehend von dieser Konfiguration wie benötigt skalieren können. Nach der Bestellung können Sie den VMware-Cluster manuell gemäß Ihren Anforderungen konfigurieren.
 
 ## Voraussetzungen
 
@@ -34,29 +34,29 @@ Der Clustername muss innerhalb Ihres Kontos eindeutig sein.
 
 Wählen Sie die VMware-Komponenten aus, die mit Ihrem Cluster bestellt werden sollen, und geben Sie die Lizenzierungsoption für die Komponenten an.
 
-### (Nur für Benutzer der Kategorie "Business Partner") Komponentenpakete
+### (Nur für IBM Business Partner) Komponentenpakete
 
-Wenn Sie ein Benutzer der Kategorie "Business Partner" sind, dann können Sie bei der Bestellung eines neuen vSphere-Clusters ein Komponentenlizenzpaket auswählen. Folgende Pakete sind verfügbar:
+IBM Business Partner können bei der Bestellung eines neuen vSphere-Clusters ein Komponentenlizenzpaket auswählen. Folgende Pakete sind verfügbar:
 
-Tabelle 1. Komponentenpakete für vSphere-Cluster für Business Partner
+Table 1. VSphere-CLuster-Komponentenpakete für IBM Business Partner
 
 | Paket | Komponenten                   |
-|:-------------------------|:-----------------------|
+|:------------------------- |:----------------------- |
 | Standard with Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise |
 | Advanced                 | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vCloud Director, NSX Base |
 | Advanced with Networking | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
 | Advanced with Networking and Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, vCloud Director, NSX Enterprise |
 
-Die folgenden zusätzlichen VMware-Komponenten können Sie ebenfalls in Ihre Bestellung einbeziehen:
+Die folgenden VMware-Komponenten können Sie ebenfalls in Ihre Bestellung einbeziehen:
 * VMware vSAN
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**Hinweis:** Benutzer der Kategorie "Business Partner" haben nicht die Möglichkeit, eigene Lizenzen zu verwenden (Bring Your Own License, BYOL). Die Option **Lizenz selbst bereitstellen** ist beim Ausfüllen der Bestellung nicht verfügbar.
+**Hinweis:** Die BYOL-Option (Bring Your Own License) steht IBM Business Partnern nicht zur Verfügung.
 
-### (Nur für Nicht-Business-Partner-Benutzer) Individuelle Komponenten
+### (Nur für Benutzer ohne Business Partner-Status) Einzelne Komponenten
 
-Wenn Sie ein Nicht-Business-Partner-Benutzer sind, dann können Sie die folgenden VMware-Komponenten für Ihren vSphere-Cluster flexibel auswählen:
+Wenn Sie kein IBM Business-Partner sind, können Sie die folgenden VMware-Komponenten für Ihren vSphere-Cluster flexibel zusammenstellen:
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
@@ -66,7 +66,7 @@ Wenn Sie ein Nicht-Business-Partner-Benutzer sind, dann können Sie die folgende
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**Hinweis:** Die Komponente "VMware vSAN" ist nicht verfügbar, wenn Sie VMware vSphere Enterprise Plus 6.0 bestellen. Falls Sie Ihre eigene Lizenz für VMware vSphere Enterprise Plus 6.0 verwenden wollen, wird in Ihrem Namen ein Ticket der {{site.data.keyword.cloud_notm}}-Infrastruktur geöffnet, in dem die Ersetzung der vSphere-Lizenzen für die bestellten {{site.data.keyword.baremetal_short}}-Instanzen durch die von Ihnen bereitgestellten Lizenzen angefordert wird.
+**Hinweis:** Die Komponente "VMware vSAN" ist nicht verfügbar, wenn Sie VMware vSphere Enterprise Plus 6.0 bestellen. Falls Sie Ihre eigene Lizenz für VMware vSphere Enterprise Plus 6.0 verwenden wollen, wird in Ihrem Namen ein Ticket der {{site.data.keyword.cloud_notm}}-Infrastruktur geöffnet. Mit dem Ticket wird die Ersetzung der vSphere-Lizenzen für die bestellten {{site.data.keyword.baremetal_short}}-Instanzen durch die von Ihnen bereitgestellten Lizenzen angefordert.
 
 ### Lizenzierungsoptionen
 
@@ -84,7 +84,7 @@ Falls Sie den Kauf einer Lizenz auswählen (vSphere Enterprise Plus und vCenter 
 
 Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} aus, das als Host für den Cluster verwendet werden soll.
 
-**Hinweis:** Falls Sie eine vSAN-Komponente auswählen, wird die Liste der Standorte nach SSD-Verfügbarkeit gefiltert.
+**Hinweis:** Falls Sie eine vSAN-Komponente auswählen, wird die Liste der Standorte nach SSD-Verfügbarkeit gefiltert. 
 
 ### CPU-Modell und RAM
 
@@ -92,7 +92,7 @@ Geben Sie das CPU-Modell und den RAM (Arbeitsspeicher) für den Bare Metal Serve
 
 Tabelle 2. Optionen für angepasste {{site.data.keyword.baremetal_short}}-Instanzen
 
-| CPU-Optionen        | RAM-Optionen       |
+| CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1,5 TB |
@@ -105,9 +105,9 @@ Welche Optionen verfügbar sind, ist davon abhängig, ob Sie die Komponente "VMw
 
 ### Bare Metal Server-Anzahl
 
-Die Anzahl der ESXi-Server, die Sie zum vSphere-Cluster hinzufügen wollen. Alle ESXi-Server nutzen dieselbe Konfiguration.
-* Falls Sie die Komponente "VMware NSX" ausgewählt haben, sind mindestens 3 Server erforderlich.
-* Falls Sie die Komponente "VMware vSAN" ausgewählt haben, sind mindestens 4 Server erforderlich.
+Die Anzahl der ESXi-Server, die Sie zum vSphere-Cluster hinzufügen wollen. Alle ESXi-Server verfügen über dieselbe Konfiguration.
+* Falls Sie die Komponente "VMware NSX" ausgewählt haben, sind mindestens drei Server erforderlich.
+* Falls Sie die Komponente "VMware vSAN" ausgewählt haben, sind mindestens vier Server erforderlich.
 
 ## Speichereinstellungen
 
@@ -136,7 +136,7 @@ Sie müssen die folgenden Netzschnittstelleneinstellungen angeben, wenn Sie eine
 
 ### Hostnamenspräfix
 
-Der Hostname wird für alle Bare Metal Server-Bestellungen verwendet. Es wird empfohlen, den Hostnamen für alle Management-VMs wie vCenter Server, NSX usw. zu verwenden.
+Der Hostname wird für alle Bare Metal Server-Bestellungen verwendet. Es wird empfohlen, den Hostnamen für alle Management-VMs wie vCenter Server oder NSX zu verwenden.
 
 Das Hostnamenspräfix muss die folgenden Anforderungen erfüllen:
 * Der Name muss mit einem alphanumerischen Zeichen beginnen und enden.
@@ -182,7 +182,7 @@ Abhängig vom ausgewählten {{site.data.keyword.CloudDataCent_notm}} sind mögli
 
 **Wichtig:**
 * Stellen Sie sicher, dass die Firewallkonfiguration bei den ausgewählten VLANs den Managementdatenverkehr nicht blockiert.
-* Stellen Sie sicher, dass sich alle von Ihnen ausgewählten VLANs in demselben Pod befinden, da ESXi-Server nicht in VLANs mit heterogenen Pods bereitgestellt werden können.
+* Stellen Sie sicher, dass sich alle von Ihnen ausgewählten VLANs in demselben Pod befinden. ESXi-Server können nicht in VLANs mit unterschiedlichen Pods bereitgestellt werden.
 
 #### HA-Paar von FortiGate Physical Appliance 300 Series
 
@@ -190,7 +190,7 @@ Sie können außerdem auswählen, ob das HA-Paar von FortiGate Physical Applianc
 
 ## Bestellübersicht
 
-Auf Basis Ihrer Konfigurationen werden die geschätzten Kosten sofort generiert und im rechten Fenster **Bestellübersicht** angezeigt. Klicken Sie unten im Fenster auf **Preisdetails**, um ein PDF-Dokument zu generieren, das die Kostenschätzungsdetails enthält.
+Auf Basis Ihrer Konfigurationen werden die geschätzten Kosten sofort generiert und im rechten Fenster **Bestellübersicht** angezeigt. Klicken Sie auf **Preisdetails**, um ein PDF-Dokument zu generieren, das die Kostenschätzungsdetails enthält.
 
 ## Vorgehensweise
 
@@ -199,20 +199,19 @@ Auf Basis Ihrer Konfigurationen werden die geschätzten Kosten sofort generiert 
    Vergewissern Sie sich, dass Sie sich auf der Registerkarte **Neue erstellen** befinden und dass in der Liste **Clusterkonfigurationen** der Eintrag **Neuer Cluster** angezeigt wird.
 3. Geben Sie den Clusternamen ein.
 4. Wählen Sie die VMware-Komponenten aus:
-  * Wenn Sie ein Benutzer der Kategorie "Business Partner" sind, dann wählen Sie ein Lizenzpaket und gegebenenfalls weitere verfügbare VMware-Komponenten aus.
-  * Wenn Sie ein Nicht-Business-Partner-Benutzer sind, dann wählen Sie die Komponente und (sofern vorhanden) die Edition aus und geben Sie die Lizenzierungsoption an.
-  Wenn Sie für VMware vSphere Enterprise Plus eine eigene Lizenz verwenden wollen (BYOL = Bring Your Own License), dann wird automatisch ein {{site.data.keyword.cloud_notm}}-Ticket für Sie geöffnet, um die standardmäßigen vSphere-Lizenzen für die bestellten {{site.data.keyword.baremetal_short}}-Instanzen anzufordern, die durch die von Ihnen bereitgestellten Lizenzen ersetzt werden sollen.   
+  * Wenn Sie ein IBM Business Partner sind, wählen Sie ein Lizenzpaket sowie beliebige zusätzliche VMware-Komponenten aus.
+  * Wenn Sie nicht den Status eines IBM Business Partners haben, wählen Sie die Komponente und Edition (soweit verfügbar) aus und geben Sie die Lizenzoption an. Wenn Sie für VMware vSphere Enterprise Plus eine eigene Lizenz verwenden wollen (BYOL = Bring Your Own License), dann wird automatisch ein {{site.data.keyword.cloud_notm}}-Ticket für Sie geöffnet, um die standardmäßigen vSphere-Lizenzen für die bestellten {{site.data.keyword.baremetal_short}}-Instanzen anzufordern, die durch die von Ihnen bereitgestellten Lizenzen ersetzt werden sollen.   
 
-    **Wichtig:** Sie sind selbst für die weitere Verfolgung des Tickets verantwortlich, um sicherzustellen, dass die vSphere-Lizenz auf den neu bestellten ESXi-Servern ersetzt wird, damit die {{site.data.keyword.cloud_notm}}-Infrastruktur die Stornierung der zunächst angegebenen vSphere-Lizenzgebühr der {{site.data.keyword.cloud_notm}}-Infrastruktur bewilligt. Informationen zum Ersetzen Ihrer ESXi-vSphere-Lizenz finden Sie auf der Seite [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
+    **Wichtig:** Sie sind selbst für die Verfolgung des Tickets verantwortlich und müssen sicherzustellen, dass Sie die vSphere-Lizenz auf den neu bestellten ESXi-Servern ersetzen. Auf diese Weise wird die Stornierung der Gebühr für die zunächst in der {{site.data.keyword.cloud_notm}}-Infrastruktur bereitgestellte vSphere-Lizenz von der {{site.data.keyword.cloud_notm}}-Infrastruktur bewilligt. Informationen zum Ersetzen Ihrer ESXi-vSphere-Lizenz finden Sie auf der Seite [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
 
 5. Geben Sie die Bare Metal Server-Einstellungen an:
    1. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für den Cluster aus.
    2. Wählen Sie das CPU-Modell und die RAM-Größe aus.
-   3. Geben Sie die Anzahl der Bare Metal Server an.
+   3. Geben Sie die Anzahl der Bare Metal Servers an.
 6. Wenn Sie die Komponente **VMware vSAN** ausgewählt haben, dann geben Sie die Einstellungen für den vSAN-Speicher an, indem Sie **Plattentyp und -größe für vSAN-Kapazitätsplatten** und **Anzahl der vSAN-Kapazitätsplatten** auswählen.
 7. Geben Sie die Netzschnittstelleneinstellungen an:
    1. Geben Sie das Hostnamenspräfix, die Unterdomänenbezeichnung und den Domänennamen ein.
-   2. Wählen Sie die zu verwendende Netzschnittstelle aus:
+   2. Wählen Sie die Netzschnittstelle aus, die verwendet werden soll.
     * Falls Sie neue öffentliche und private VLANs bestellen wollen, klicken Sie auf **Neue VLANs bestellen**.
     * Wenn Sie die vorhandenen öffentlichen und privaten VLANs wiederverwenden möchten, sofern diese verfügbar sind, dann klicken Sie auf **Vorhandene VLANs auswählen** und geben Sie die VLANs und optional die Teilnetze an.
     3. Geben Sie an, ob das HA-Paar von FortiGate Physical Appliance 300 Series zum Sichern der Cloudumgebung angewendet werden soll.  
