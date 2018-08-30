@@ -17,7 +17,7 @@ lastupdated: "2018-07-10"
 * VMware Cloud Foundation: vSphere ESXi、Platform Services Controller (PSC)、VMware vCenter Server Appliance、SDDC Manager、VMware NSX、VMware vSAN。
 * VMware vCenter Server: vSphere ESXi、Platform Services Controller (PSC)、vCenter Server Appliance、NSX、vSAN (オプション)。
 
-この設計では、初回注文時に単一ポッドの {{site.data.keyword.CloudDataCent_notm}}にインスタンスがデプロイされます。初期デプロイメント後、同じデータ・センター内の他のポッド、または他のデータ・センターに仮想環境を拡張できます。
+この設計では、初回注文時に単一ポッドの {{site.data.keyword.CloudDataCent_notm}}にインスタンスがデプロイされます。 初期デプロイメント後、同じデータ・センター内の他のポッド、または他のデータ・センターに仮想環境を拡張できます。
 
 またこの設計では、Cloud Foundation または vCenter Server インスタンス内の仮想キャパシティーの自動拡張と自動縮小も可能です。
 
