@@ -37,7 +37,7 @@ Tableau 2. Nomenclature des composants logiciels des instances vCenter Server
 | VMware       | Contrôleur PSC (Platform Services Controller)    | 6.5 Update 1g |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX for vSphere                 | 6.4.1        |
-| IBM          | CloudDriver                     | 2.4          |
+| IBM          | CloudDriver                     | 2.5          |
 | Microsoft    | Windows Server édition Standard | 2012R2       |
 
 **Remarque** : VMware vSAN est un composant optionnel.

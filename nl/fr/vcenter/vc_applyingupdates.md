@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-07"
 
 ---
 
@@ -63,7 +63,7 @@ Cette procédure s'applique aux instances déployées en version 2.1 et ultérie
    * Lorsque de nouveaux serveurs ESXi sont ajoutés
    * Lorsque de nouveaux clusters sont ajoutés
 
-5. Pour des mises à niveau de licence NSX, cliquez sur **Mettre à niveau la licence**. Sélectionnez l'édition vers laquelle vous souhaitez effectuer une mise à niveau, puis cliquez sur **Mettre à niveau**. Les rétromigrations d'édition de licence ne sont pas disponibles.
+5. Pour des mises à niveau de licence NSX, cliquez sur **Mettre à niveau**. Dans la fenêtre **Mettre à niveau l'édition de licence NSX**, sélectionnez celle voulue et cliquez sur **Mettre à niveau**. Les rétromigrations d'édition de licence ne sont pas disponibles.
 
    **Remarque** : la mise à niveau de licence remplace toutes les licences NSX existantes sur l'instance. Des frais supplémentaires peuvent découler d'un chevauchement entre les anciennes et les nouvelles licences si vous effectuez la mise à niveau en cours de cycle de facturation. Pour éviter des frais supplémentaires, il est recommandé d'effectuer la mise à niveau de la licence à la fin du cycle de facturation.
 
@@ -75,6 +75,8 @@ Cette procédure s'applique aux instances déployées en version 2.1 et ultérie
 ## Mise à niveau vers l'instance vCenter Server with Hybridity Bundle
 
 Durant la mise à niveau de licence vers Hybridity Bundle, une mise à niveau vers l'édition VMware NSX Advanced s'effectue immédiatement si votre instance vCenter Server utilise l'édition VMware NSX Base.
+
+**Remarque :** si vous effectuez une mise à niveau vers Hybridity Bundle et que votre instance vCenter Server utilise déjà le stockage NFS, vous n'êtes pas facturé pour le stockage vSan VMware. Vous êtes facturé pour la licence vSAN vu qu'elle est incluse avec Hybridity Bundle.
 
 Procédez comme suit pour mettre à niveau d'une instance vCenter Server vers vCenter Server with Hybridity Bundle :
 

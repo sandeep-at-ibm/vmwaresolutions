@@ -10,14 +10,14 @@ lastupdated: "2018-07-20"
 
 # Affichage des instances vCenter Server
 
-Affichez les informations récapitulatives et détaillées des instances VMware vCenter Server qui sont mises à disposition pour différents comptes utilisateur. 
+Affichez les informations récapitulatives et détaillées des instances VMware vCenter Server qui sont mises à disposition pour différents comptes utilisateur.
 
 ## Affichage du récapitulatif des instances vCenter Server
 
 Pour afficher un récapitulatif de toutes les instances vCenter Server qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 
-1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche. 
-2. Dans l'angle supérieur droit de la console, cliquez sur votre avatar, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances.   
+1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+2. Dans l'angle supérieur droit de la console, cliquez sur votre avatar, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances.  
 3. Dans le tableau **vCenter Server**, affichez la liste des instances qui sont mises à disposition dans le compte utilisateur sélectionné.
 
 Tableau 1. Eléments d'une instance vCenter Server
@@ -95,7 +95,7 @@ Tableau 4. Informations d'accès relatives à vCenter Server pour les composants
 
 ## Affichage de l'historique de déploiement des instances vCenter Server
 
-Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance. 
+Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance.
 
 Tableau 5. Historique de déploiement d'une instance vCenter Server
 

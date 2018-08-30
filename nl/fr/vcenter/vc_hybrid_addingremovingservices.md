@@ -27,9 +27,9 @@ Tableau 1. Services disponibles pour les instances vCenter Server with Hybridity
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | Oui | A partir de V2.3 |
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | Oui | A partir de V2.2 |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  | Oui | A partir de V2.2 |
-| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | Oui | A partir de V1.8 |
-| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                         | Oui | A partir de V2.3 |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | Oui | A partir de V1.2 |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | Oui | A partir de V1.8 |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | Oui | A partir de V2.3 |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | Oui | A partir de V1.2 |
 
 ## Ajout de services à des instances vCenter Server with Hybridity Bundle
 
