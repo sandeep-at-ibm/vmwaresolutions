@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -40,8 +40,8 @@ HCX on {{site.data.keyword.cloud_notm}} をインストールするには、以�
 HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に行われます。 このサービスを組み込む形で vCenter Server with Hybridity Bundle インスタンスを注文する場合でも、このサービスを後でインスタンスにデプロイする場合でも、{{site.data.keyword.vmwaresolutions_short}} の自動化プロセスによって以下の手順が実行されます。
 1. {{site.data.keyword.cloud_notm}} インフラストラクチャー上の HCX 用に、次の 3 つのサブネットが注文されます。
    * HCX 管理用プライベート・ポータブル・サブネットを 1 つ。
-   * HCX 相互接続用プライベート・ポータブル・サブネットを 1 つ (**「HCX interconnect type」**として**「Private network」**を選択した場合)。
-   * HCX 相互接続用パブリック・ポータブル・サブネットを 1 つ (**「HCX interconnect type」**として**「Public network」**を選択した場合)。 このサブネットは、VMware でのアクティベーションやメンテナンスでも使用されます。
+   * HCX 相互接続用プライベート・ポータブル・サブネットを 1 つ。 このサブネットは、**「HCX interconnect type」**として**「Private network」**オプションを選択した場合に使用されます。
+   * VMware でのアクティベーションやメンテナンスで使用されるパブリック・ポータブル・サブネットを 1 つ。**「HCX interconnect type」**として**「Public network」**オプションを選択した場合、このサブネットは HCX 相互接続用としても使用されます。
 
    **重要:** HCX 用に注文されたサブネット内の IP アドレスは、VMware on {{site.data.keyword.cloud_notm}} の自動化機能によって管理されるようになっています。 ユーザーが作成した VMware リソース (VM や NSX Edge など) にこれらの IP アドレスを割り当てることはできません。 VMware 成果物用に追加の IP アドレスが必要な場合は、{{site.data.keyword.cloud_notm}} 上の独自のサブネットを注文する必要があります。
 2. **「HCX interconnect type」**に対して**「Private network」**が選択された場合、**SDDC-DPortGroup-HCX-Private** という名前のポート・グループがプライベート分散仮想スイッチ (DVS) に作成されます。

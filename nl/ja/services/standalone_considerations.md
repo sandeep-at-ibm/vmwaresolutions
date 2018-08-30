@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -25,12 +25,7 @@ HCX の全機能を利用するには、少なくとも 5 つのプライベー�
 ### オンプレミス HCX on IBM Cloud インスタンスのデプロイメント・プロセス
 
 オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを正常にインストールするには、以下のタスクを実行する必要があります。
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、以下のステップを実行します。
-    1. 左側のナビゲーション・ペインから**「デプロイ済みインスタンス」**をクリックします。
-    2. HCX on {{site.data.keyword.cloud_notm}} サービスがインストールされている vCenter Server with Hybridity Bundle インスタンスをクリックします。 これは、オンプレミス vSphere 環境からの接続先となるクラウド側に相当します。
-    3. **「サービス」**タブで、**「インストール済みサービス」**をクリックします。
-    4. **「HCX on {{site.data.keyword.cloud_notm}}」**カードをクリックします。
-    5. **「HCX クラウド・コンソールの表示」**をクリックし、vCenter Server 資格情報を使用してコンソールにログインして、クラウド側の HCX on {{site.data.keyword.cloud_notm}} サービスの詳細を表示します。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを注文します。 詳しくは、 [オンプレミス VMware HCX on IBM Cloud インスタンスの注文](standalone_orderingserviceinstances.html)を参照してください。
 2. **「HCX クラウド・コンソール」**で、以下のステップを実行します。
     1. **「管理」**タブをクリックします。
     2. **「システム更新」**タブで、**「ダウンロード・リンクの要求」**をクリックします。

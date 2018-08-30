@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,7 +33,7 @@ lastupdated: "2018-07-27"
    * 370 GB のディスク
 * IBM Spectrum Protect Plus vSnap サーバーと VADP プロキシーを実行しているセカンダリー VM
    * OS: Linux 3.10.0-693.11.1.el7.x86_64
-   * 選択したストレージ・サイズと [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/homelang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) サイジング・ガイダンスに基づいて構成された CPU および RAM
+   * 選択したストレージ・サイズと [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) サイジング・ガイダンスに基づいて構成された CPU および RAM
    * 150 GB のディスク
 
 ### バックアップ用ストレージ

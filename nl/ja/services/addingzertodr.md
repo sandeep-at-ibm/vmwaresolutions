@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
 # Zerto on IBM Cloud の概要
 
-Zerto on {{site.data.keyword.cloud}} サービスは、複製と災害復旧の機能を提供します。これらの機能をデプロイメント・オファリングに組み込むことで、{{site.data.keyword.cloud_notm}} 上の VMware 仮想環境内のデータの保護と復旧を行えます。
+Zerto on {{site.data.keyword.cloud}} サービスは、複製と災害復旧の機能を提供します。 これらの機能をデプロイメント・オファリングに組み込むことで、{{site.data.keyword.cloud_notm}} 上の VMware 仮想環境内のデータの保護と復旧を行えます。
 
-## Zerto on IBM Cloud の技術的な考慮事項
+## Zerto on IBM Cloud の技術仕様
 
 以下のコンポーネントが注文されて Zerto on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 

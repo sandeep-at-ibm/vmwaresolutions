@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -44,8 +44,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} サービスを注文
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} のライセンス・モデルには、以下のオプションがあります。
 <dl class="dl">
         <dt class="dt dlterm">標準 FW</dt>
-        <dd class="dd">このバンドルには、ステートフル・パケット・インスペクション、VLAN の保護と詳細ロギング、入口/出口ファイアウォール・ルール、
-SSL/IPSec VPN 終端、24 時間 365 日サポートが含まれています。</dd>
+        <dd class="dd">このバンドルには、ステートフル・パケット・インスペクション、VLAN の保護と詳細ロギング、入口/出口ファイアウォール・ルール、SSL/IPSec VPN 終端、継続的なサポートが含まれています。</dd>
         <dt class="dt dlterm">標準 FW + UTM</dt>
         <dd class="dd">このバンドルには、NGFW IPS と Web フィルタリング、アンチウィルスとアンチスパム、IP & ドメイン評価、コア FortiCare セキュリティー・サービスに加えて、標準的なファイアウォール・サービスがすべて含まれています。</dd>
         <dt class="dt dlterm">標準 FW + Enterprise</dt>
