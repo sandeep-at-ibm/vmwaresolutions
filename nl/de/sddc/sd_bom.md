@@ -30,7 +30,7 @@ Die folgende Tabelle enthält detaillierte Informationen zur Teileliste für die
 
 Tabelle 2. Teileliste für Softwarekomponenten in Cloud Foundation-Instanzen
 
-| Hersteller | Komponente                               | Version      |
+| Hersteller | Komponente                                | Version      |
 |:-------------|:-----------------------------------------|:-------------|
 | VMware       | vSphere ESXi                             | 6.5 U1g (ESXi 6.5u1 mit angewendetem Patch-Level ESXi650-201803001) |
 | VMware       | vCenter Server Appliance                 | 6.5 Update 1g |
@@ -38,7 +38,7 @@ Tabelle 2. Teileliste für Softwarekomponenten in Cloud Foundation-Instanzen
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX for vSphere                          | 6.3.5        |
 | VMware       | SDDC Manager                             | 2.4          |
-| IBM          | CloudDriver                              | 2.4          |
+| IBM          | CloudDriver                              | 2.5          |
 | Microsoft    | Windows Server Standard Edition (64-Bit) | 2012R2       |
 
 ## Erweiterte Konfigurationseinstellungen für ESXi-Server
