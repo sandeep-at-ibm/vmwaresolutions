@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -22,12 +22,9 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Blättern Sie abwärts zur Tabelle **Lokale HCX-Instanzen** und klicken Sie dann auf **Neu bereitstellen**.
-3. Geben Sie einen Wert für **Name der lokalen Instanz** an und klicken Sie dann auf **Weiter**.
-4. Überprüfen Sie die Instanzkonfiguration, bevor Sie die Bestellung aufgeben.
-   1. Überprüfen Sie die Einstellungen für die Instanz.
-   2. Überprüfen Sie die monatliche Abrechnung für die Instanz.
-   3. Klicken Sie auf den Link bzw. die Links für die Bedingungen, die für Ihre Bestellung gelten, und vergewissern Sie sich, dass Sie mit diesen Bedingungen einverstanden sind, bevor Sie die Instanz bestellen.
-5. Klicken Sie auf **Bestellung aufgeben**.
+3. Geben Sie einen Wert für **Name der lokalen Instanz** an.
+4. Klicken Sie auf den Link bzw. die Links für die Bedingungen, die für Ihre Bestellung gelten, und vergewissern Sie sich, dass Sie mit diesen Bedingungen einverstanden sind, bevor Sie die Instanz bestellen.
+5. Klicken Sie auf **Bereitstellung**.
 
 ## Ergebnisse
 

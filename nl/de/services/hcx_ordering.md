@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -40,8 +40,8 @@ Geben Sie zum Installieren von HCX on {{site.data.keyword.cloud_notm}} die folge
 Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert. Unabhängig davon, ob Sie die vCenter Server with Hybridity Bundle-Instanz mit enthaltenem Service bestellen oder den Service später in Ihrer Instanz bereitstellen, werden vom {{site.data.keyword.vmwaresolutions_short}}-Automatisierungsprozess die folgenden Schritte ausgeführt:
 1. Über die {{site.data.keyword.cloud_notm}}-Infrastruktur werden drei Teilnetze für HCX bestellt:
    * Ein privates portierbares Teilnetz für das HCX-Management.
-   * Ein privates portierbares Teilnetz für HCX-Verbindungen, wenn **Privates Netz** als **HCX-Verbindungstyp** ausgewählt wurde.
-   * Ein öffentliches portierbares Teilnetz für HCX-Verbindungen, wenn **Öffentliches Netz** als **HCX-Verbindungstyp** ausgewählt wurde. Dieses Teilnetz wird auch für die Aktivierung und Wartung mit VMware verwendet.
+   * Ein privates portierbares Teilnetz für HCX-Verbindungen. Dieses Teilnetz wird bei Auswahl der Option **Privates Netz** für den **HCX-Verbindungstyp** verwendet.
+   * Ein öffentliches portierbares Teilnetz für die Aktivierung und Wartung mit VMware. Bei Auswahl der Option **Öffentliches Netz** für den **HCX-Verbindungstyp** wird dieses Teilnetz auch für HCX-Verbindungen verwendet.
 
    **Wichtig:** Die IP-Adresse in den für HCX bestellten Teilnetzen sollten durch die Automatisierung von VMware on {{site.data.keyword.cloud_notm}} verwaltet werden. Diese IP-Adressen können nicht zu VMware-Ressourcen wie VMs und NSX-Edges zugeordnet werden, die von Ihnen erstellt worden sind. Wenn Sie zusätzliche IP-Adressen für Ihre VMware-Artefakte benötigen, müssen Sie Ihre eigenen Teilnetze aus {{site.data.keyword.cloud_notm}} bestellen.
 2. Wenn für **HCX-Verbindungstyp** die Option **Privates Netz** ausgewählt wurde, wird auf dem privaten verteilten virtuellen Switch (Distributed Virtual Switch, DVS) eine Portgruppe namens **SDDC-DPortGroup-HCX-Private** erstellt.

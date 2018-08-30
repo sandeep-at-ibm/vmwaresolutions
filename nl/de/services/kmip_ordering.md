@@ -42,10 +42,10 @@ Tabelle 1: Regionen mit Serviceendpunkten für KMIP for VMware on {{site.data.ke
 
 | Region         | Endpunkt               |
 |:---------------|:-----------------------|
-| Deutschland    |  `161.156.68.107:5696` |
+| Deutschland        |  `161.156.68.107:5696` |
 | Sydney         |  `130.198.73.134:5696` |
 | Großbritannien |  `158.175.93.122:5696` |
-| USA (Süden)    |  `169.60.185.42:5696`  |
+| USA (Süden)       |  `169.60.185.42:5696`  |
 
 Diese Einstellung ist bei der Erstkonfiguration optional. Sie können dieses Feld zu diesem Zeitpunkt leer lassen, da das Clientzertifikat des KMS in vCenter Server nach der Bereitstellung Ihrer Instanz bekannt ist. Nach der Bereitstellung Ihrer Instanz müssen Sie das Zertifikat allerdings eingeben, damit Ihre vCenter Server-Verbindung zum KMS erfolgreich hergestellt werden kann.
 

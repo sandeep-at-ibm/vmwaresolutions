@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -41,7 +41,7 @@ Weitere HCX-Appliances werden bei der Konfiguration wie für die L2-Konnektivit�
 ### Vernetzung
 
 * 1 öffentliches portierbares Teilnetz mit 16 IP-Adressen
-* 1 privates portierbares Teilnetz mit 64 IP-Adressen
+* 2 private portierbare Teilnetze mit 64 IP-Adressen
 * 8 IP-Adressen aus dem privaten portierbaren vMotion-Teilnetz
 
 ### Lizenzen und Gebühren

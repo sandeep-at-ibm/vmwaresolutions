@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -46,7 +46,7 @@ Managementsicherungen werden standardmäßig mit bis zu fünf VMs und 2000 GB Sp
 
 ## Hinweise zur Installation von Veeam on IBM Cloud
 
-Das Repository für den Speicher und der Veeam-Server befinden sich im ursprünglichen Pod und Rechenzentrum. Aus diesem Grund kann sich die Leistung der Sicherungsoperationen für ferne Cluster verschlechtern.
+Das Speicherrepository und der Veeam-Server befinden sich im ursprünglichen Pod und Rechenzentrum. Aus diesem Grund kann sich die Leistung der Sicherungsoperationen für ferne Cluster verschlechtern.
 
 ## Hinweise zum Entfernen von Veeam on IBM Cloud
 

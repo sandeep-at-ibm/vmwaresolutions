@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -25,12 +25,7 @@ Für die vollständige HCX-Funktionalität benötigen Sie mindestens fünf priva
 ### Bereitstellungsprozess für lokale HCX on IBM Cloud-Instanzen
 
 Zur erfolgreichen Installation auf der lokalen HCX on {{site.data.keyword.cloud_notm}}-Instanz müssen Sie die folgenden Tasks ausführen.
-1. Führen Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole die folgenden Schritte aus:
-    1. Klicken Sie im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
-    2. Klicken Sie auf die vCenter Server with Hybridity Bundle-Instanz, in der der Service "HCX on {{site.data.keyword.cloud_notm}}" installiert ist. Dies ist die Cloudseite, zu der Sie von Ihrer lokalen vSphere-Umgebung aus eine Verbindung herstellen wollen.
-    3. Klicken Sie auf der Registerkarte **Services** auf **Installierte Services**.
-    4. Klicken Sie auf die Karte **HCX on {{site.data.keyword.cloud_notm}}**.
-    5. Klicken Sie auf **HCX-Cloudkonsole anzeigen** und melden Sie sich dann unter Verwendung der vCenter Server-Berechtigungsnachweise bei der Konsole an, um die Details des cloudseitigen HCX on {{site.data.keyword.cloud_notm}}-Service anzuzeigen.
+1. Bestellen Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole die lokale HCX on {{site.data.keyword.cloud_notm}}-Instanz. Weitere Informationen hierzu finden Sie in [Lokale VMware HCX on IBM Cloud-Instanzen bestellen](standalone_orderingserviceinstances.html).
 2. Führen Sie in der **HCX-Cloudkonsole** die folgenden Schritte aus:
     1. Klicken Sie auf die Registerkarte **Verwaltung**.
     2. Klicken Sie auf der Registerkarte **Systemupdates** auf **DOWNLOAD-LINK ANFORDERN**.
