@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -44,7 +44,7 @@ Geben Sie das CPU-Modell und den RAM (Arbeitsspeicher) für den Bare Metal Serve
 
 Tabelle 1. Optionen für angepasste {{site.data.keyword.baremetal_short}}-Instanzen
 
-| CPU-Optionen        | RAM-Optionen       |
+| CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
@@ -109,7 +109,7 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 
 ## Vorgehensweise zum Hinzufügen von Clustern zu VMware Federal-Instanzen
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanz** auf die Instanz, zu der Cluster hinzugefügt werden sollen.
 
    **Hinweis**: Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster zur Instanz hinzufügen.

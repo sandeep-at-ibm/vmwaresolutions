@@ -97,7 +97,7 @@ Klicken Sie im linken Navigationsfenster auf **Bereitstellungsverlauf**, um den 
 
 Tabelle 5. Bereitstellungsverlauf der VMware Federal-Instanz
 
-| Element     | Beschreibung      |  
+| Element        | Beschreibung       |  
 |:------------- |:------------- |
 | Datum | Der Zeitpunkt (Datum und Uhrzeit), zu dem sich der Instanzstatus geändert hat. |
 | Zusammenfassung | Die Details der Änderung. |

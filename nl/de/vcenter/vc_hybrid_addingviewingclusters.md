@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -44,7 +44,7 @@ Geben Sie das CPU-Modell und den RAM (Arbeitsspeicher) für den Bare Metal Serve
 
 Tabelle 2. Optionen für angepasste Bare Metal Server-Instanzen
 
-| CPU-Optionen        | RAM-Optionen       |
+| CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
