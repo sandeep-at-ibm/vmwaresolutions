@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -20,20 +20,19 @@ lastupdated: "2018-07-27"
 
 * 1 つの {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントだけを 1 つの {{site.data.keyword.cloud_notm}} ユーザー・アカウントにリンクできます。
 * 使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントは特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](slaccountrequirement.html)を参照してください。
-* {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントの API キーが変更された場合は、{{site.data.keyword.vmwaresolutions_short}} コンソールの**「設定」**ページでキーを更新する必要があります。
+* {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントの API 鍵が変更された場合は、{{site.data.keyword.vmwaresolutions_short}} コンソールの**「設定」**ページで鍵を更新する必要があります。
 
-   **重要**: **「設定」**ページに保存されている API キーが最新の正確なキーであることを確認してください。
-   そうしないと、API キーの検証を必要とする操作が失敗する可能性があります。
+   **重要**: **「設定」**ページに保存されている API 鍵が最新かつ正確であることを確認してください。正確でない場合、API 鍵の検証を必要とする操作が失敗する可能性があります。
 
 ## 手順
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「設定」**をクリックします。
-2. **「通知」**領域で、以下のように通知の設定を指定します。
+2. **「通知」**領域で、通知の設定を指定します。
    * イベントが発生したときに E メールで通知を受け取るには、**「E メール通知を有効にする」**をクリックします。
    * イベントが発生したときにコンソールで通知を受け取るには、**「コンソール通知を有効にする」**をクリックします。
-3. **「IBM Cloud インフラストラクチャーの資格情報」**領域に、以下のいずれかの方法を使用して {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントのユーザー名と API キーを入力します。
+3. **「IBM Cloud インフラストラクチャーの資格情報」**領域に、{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントのユーザー名と API 鍵を入力します。
    * {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントと {{site.data.keyword.cloud_notm}} アカウントがリンクしている場合、**「取得 (Retrieve)」**をクリックして、資格情報を自動入力します。
-   * {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントと {{site.data.keyword.cloud_notm}} アカウントがリンクしていない場合、[{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータル](https://control.softlayer.com/)にログインしてから、コンソールの指示に従って資格情報を取得して入力します。
+   * {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントと {{site.data.keyword.cloud_notm}} アカウントがリンクしていない場合は、それらをリンクする必要があります。[{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータル](https://control.softlayer.com/)にログインしてから、コンソールの指示に従って資格情報を取得して入力します。
    * {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントがない場合、[アカウントを登録](../vmonic/signing_softlayer_account.html)してから、コンソールの指示に従って資格情報を取得して入力します。
 4. **「資格情報の保存」**をクリックします。
 

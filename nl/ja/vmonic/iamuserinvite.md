@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 
 ---
 
 # サービスとリソースにアクセスするようにユーザーを招待する
 
-{{site.data.keyword.vmwaresolutions_full}} は、複数のユーザー間のコラボレーションのために {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) と統合されています。{{site.data.keyword.cloud_notm}} アカウントを登録して {{site.data.keyword.vmwaresolutions_short}} コンソールにログインした後に、ユーザーを {{site.data.keyword.cloud_notm}} アカウントに追加して、それらのユーザーがアカウントに対してプロビジョンされているサービスやリソースを共有できるようにすることができます。
+{{site.data.keyword.vmwaresolutions_full}} は、複数のユーザー間のコラボレーションのために {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) と統合されています。 {{site.data.keyword.cloud_notm}} アカウントを登録して {{site.data.keyword.vmwaresolutions_short}} コンソールにログインした後に、ユーザーを {{site.data.keyword.cloud_notm}} アカウントに追加することができます。 これらの追加されたユーザーは、アカウントに対してプロビジョンされているサービスやリソースを共有することができます。
 
 ## 始める前に
 
@@ -25,12 +25,12 @@ lastupdated: "2018-07-27"
 4. **「アクセス」**セクションで**「サービス」**を展開してから、以下のタスクを実行します。
    1. **「アクセス権限の割り当て」**リストから**「リソース」**を選択します。
    2. **「VMware ソリューション」**リストから**「サービス」**を選択します。
-   3. ユーザーに割り当てるプラットフォーム・アクセス役割 (**管理者**、**エディター**、**オペレーター**、または**ビューアー**) を選択します。
+   3. ユーザーに割り当てるプラットフォーム・アクセス役割を選択します。 これは、**管理者**、**エディター**、**オペレーター**、または**ビューアー**にすることができます。
 5. **「ユーザーの招待」**をクリックします。
 
 ## 結果
 
-追加されたユーザーは、招待を受け入れた後に {{site.data.keyword.vmwaresolutions_short}} コンソールにログインして、プロファイル設定で {{site.data.keyword.vmwaresolutions_short}} コンソールの右上隅にあるアバターをクリックすることにより、招待者のアカウントに切り替えることができます。これにより、追加されたユーザーは指定のアカウントでコラボレーションを行い、このアカウントで使用可能なサービスとリソースを共有できるようになります。
+追加されたユーザーは、招待を受け入れた後に {{site.data.keyword.vmwaresolutions_short}} コンソールにログインして、招待者のアカウントに切り替えることができます。 これを行うには、ユーザーは、プロファイル設定で {{site.data.keyword.vmwaresolutions_short}} コンソールの右上隅にあるアバターをクリックします。これにより、追加されたユーザーは指定のアカウントでコラボレーションを行い、このアカウントで使用可能なサービスとリソースを共有できるようになります。
 
 ### 関連リンク
 

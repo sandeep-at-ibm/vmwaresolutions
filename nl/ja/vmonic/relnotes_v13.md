@@ -20,7 +20,7 @@ lastupdated: "2017-01-23"
 
 Zerto 災害復旧をインスタンスの一部として注文した場合でも、既存のインスタンスに追加した場合でも、不要になったらこのサービスを削除できるようになりました。 コンソールからサービスの削除を要求すると、削除プロセスの実行方法が IBM サポートから説明されます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 
 * [災害復旧の削除](../services/removingzertodr.html)
 * [Cloud Foundation インスタンスの表示](../sddc/sd_viewinginstances.html)
@@ -34,7 +34,7 @@ Zerto 災害復旧をインスタンスの一部として注文した場合で�
 
 セキュリティーを確保するため、管理仮想マシンから開始されたアウトバウンド HTTPS 通信のみを許可するようにファイアウォール・ルールが適用されます。 この ESG は「ラージ」構成でデプロイされ、IBM サポートのみが構成を変更できます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 
 * [Cloud Foundation インスタンスの技術仕様](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -47,7 +47,7 @@ Cloud Foundation インスタンスと vCenter Server インスタンスの両�
 * サマリー・ページに、注文したすべてのコンポーネントとサービスに適用されるすべての条件が表示されるので、注文前にそれらの条件を簡単に確認して同意することができます。
 * 注文を実行する前に、インスタンスの注文のサマリーを保存および印刷できます。 この新機能により、インスタンスの設定とコストを確認し、必要に応じて注文するコンポーネントを変更し、承認を得てから注文に戻ることができます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 
 * [Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)
 * [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)

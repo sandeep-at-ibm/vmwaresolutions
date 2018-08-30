@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-07-23"
 
 ## IBM Cloud アカウントの登録
 
-{{site.data.keyword.cloud}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。{{site.data.keyword.cloud_notm}} アカウントを登録する方法について詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの登録](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud)を参照してください。
+{{site.data.keyword.cloud}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。 {{site.data.keyword.cloud_notm}} アカウントを登録する方法について詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの登録](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud)を参照してください。
 
 ## IBM Cloud インフラストラクチャー (SoftLayer) アカウントの登録
 
-{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウント (以前は IBM SoftLayer アカウントと呼ばれていた) を使用して、インフラストラクチャー製品とサービスを管理するためのいくつかの追加の機能を提供する、{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルにログインします。{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを登録するには、{{site.data.keyword.cloud_notm}} アカウントを従量課金タイプのアカウントにアップグレードします。
+{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウント (以前は IBM SoftLayer アカウントと呼ばれていた) を使用して、インフラストラクチャー製品とサービスを管理するためのいくつかの追加の機能を提供する、{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルにログインします。 {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを登録するには、{{site.data.keyword.cloud_notm}} アカウントを従量課金タイプのアカウントにアップグレードします。
 
 ### 手順
 
@@ -36,6 +36,6 @@ lastupdated: "2018-07-23"
 
 * [よくある質問](faq.html)
 * [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](slaccountrequirement.html)
-* [ビデオ: {{site.data.keyword.cloud_notm}} アカウントの作成方法](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [ビデオ - {{site.data.keyword.cloud_notm}} アカウントの作成方法](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
 * [IBM ID への切り替え](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}

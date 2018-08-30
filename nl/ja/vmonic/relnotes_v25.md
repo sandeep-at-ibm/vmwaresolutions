@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -28,42 +28,40 @@ lastupdated: "2018-07-31"
 
 ## デフォルト・バックアップ構成の削除
 
-{{site.data.keyword.vmwaresolutions_short}} には、バックアップ用に 2 つのアドオン・サービスが組み込まれています。それらは、IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} および Veeam on {{site.data.keyword.cloud_notm}} です。これらのサービスにより、管理インフラストラクチャーとワークロードの両方のリカバリーを計画し、準備することができます。さらに、IBM Resiliency Services は Veeam バックアップのためのマネージド・サービスを提供します。
+{{site.data.keyword.vmwaresolutions_short}} には、バックアップ用に 2 つのアドオン・サービスが組み込まれています。それらは、IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} および Veeam on {{site.data.keyword.cloud_notm}} です。 これらのサービスにより、管理インフラストラクチャーとワークロードの両方のリカバリーを計画し、準備することができます。 さらに、IBM Resiliency Services は Veeam バックアップのためのマネージド・サービスを提供します。
 
-V2.5 リリース以降、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} および Veeam on {{site.data.keyword.cloud_notm}} サービスは、デプロイ時に VM のバックアップの事前構成を行いません。この変更により、スケジュール作成、保存期間、重複排除の使用、モニタリングとアラート、暗号キーの管理など、バックアップ・ジョブのすべての面を適切に構成できるようになります。さらに、IBM CloudDriver VM は、NSX バックアップ用の永続的なファイル・サーバーとしては構成されなくなります。
+V2.5 リリース以降、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} および Veeam on {{site.data.keyword.cloud_notm}} サービスは、デプロイ時に VM のバックアップの事前構成を行いません。 この変更により、スケジュール作成、保存期間、重複排除の使用、モニタリングとアラート、暗号キーの管理など、バックアップ・ジョブのすべての面を適切に構成できるようになります。 さらに、IBM CloudDriver VM は、NSX バックアップ用の永続的なファイル・サーバーとしては構成されなくなります。
 
-お客様は、管理インフラストラクチャーとワークロードのバックアップと可用性など、すべてのソフトウェア・コンポーネントの構成、管理、およびモニタリングについての責任があります。詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html#backing-up-components)を参照してください。
+お客様は、管理インフラストラクチャーとワークロードのバックアップと可用性など、すべてのソフトウェア・コンポーネントの構成、管理、およびモニタリングについての責任があります。 詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html#backing-up-components)を参照してください。
 
 **注:** この変更は、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} や Veeam on {{site.data.keyword.cloud_notm}} サービスが既にインストールされている、V2.5 より前にデプロイされたインスタンスには影響しません。
 
 ## IBM CloudDriver の回復力
 
-V2.5 以降のリリースにデプロイまたはアップグレードされたインスタンスの場合、IBM CloudDriver コンポーネントは、vSphere クラスター内の仮想マシン (VM) として構成されることがなくなりました。代わりに、それは追加のノード、クラスター、またはサービスのデプロイなどの操作のために、必要に応じて {{site.data.keyword.cloud_notm}} インフラストラクチャーの仮想サーバー・インスタンス (VSI) として最新の {{site.data.keyword.cloud_notm}} for VMware コードと共にデプロイされます。さらに、IBM CloudDriver は、{{site.data.keyword.cloud_notm}} プライベート・ネットワークを使用して {{site.data.keyword.cloud_notm}} 管理プレーンと通信するように変更されました。これにより、IBM CloudDriver からパブリック・ネットワークへのアウトバウンド通信を可能にしていた、管理 NSX Edge Services Gateway (ESG) ファイアウォールおよびネットワーク・アドレス変換 (NAT) の規則が除去されます。
-
+V2.5 以降のリリースにデプロイまたはアップグレードされたインスタンスの場合、IBM CloudDriver コンポーネントは、vSphere クラスター内の仮想マシン (VM) として構成されることがなくなりました。 代わりに、それは追加のノード、クラスター、またはサービスのデプロイなどの操作のために、必要に応じて {{site.data.keyword.cloud_notm}} インフラストラクチャーの仮想サーバー・インスタンス (VSI) として最新の {{site.data.keyword.cloud_notm}} for VMware コードと共にデプロイされます。 さらに、IBM CloudDriver は、{{site.data.keyword.cloud_notm}} プライベート・ネットワークを使用して {{site.data.keyword.cloud_notm}} 管理プレーンと通信するように変更されました。これにより、IBM CloudDriver からパブリック・ネットワークへのアウトバウンド通信を可能にしていた、管理 NSX Edge Services Gateway (ESG) ファイアウォールおよびネットワーク・アドレス変換 (NAT) の規則が除去されます。
 
 F5 on {{site.data.keyword.cloud_notm}}、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}、Zerto on {{site.data.keyword.cloud_notm}} などいくつかのアドオン・サービスでは引き続きパブリック・ネットワーク・アクセスが必要なので、管理 NSX ESG は引き続きすべてのインスタンスにデプロイされます。
 
 ## IAM 対応のユーザーおよびアクセス管理
 
-V2.5 リリースから、{{site.data.keyword.vmwaresolutions_short}} は IBM Identity and Access Management (IAM) と統合され、{{site.data.keyword.cloud_notm}} アカウント内でユーザー・アカウントとユーザー・アクセスを管理するための統一されたアプローチを提供するようになりました。
-これにより、以下のようになりました。
+V2.5 リリースから、{{site.data.keyword.vmwaresolutions_short}} は IBM Identity and Access Management (IAM) と統合され、{{site.data.keyword.cloud_notm}} アカウント内でユーザー・アカウントとユーザー・アクセスを管理するための統一されたアプローチを提供するようになりました。 これにより、以下のようになりました。
 * コラボレーションのために {{site.data.keyword.cloud_notm}} アカウントに複数のユーザーを追加することができます。またそれらのユーザーに異なるプラットフォーム・アクセス役割を割り当てることにより、アカウント内でプロビジョンされるサービスおよびリソースへのユーザーのアクセスを管理することができます。  
 * V2.5 以降のリリースでデプロイされるインスタンスは、インスタンスの注文時に使用されていたユーザー・アカウントに自動的にリンクされます。
 * V2.4 以前のリリースでデプロイされたインスタンスは、指定の {{site.data.keyword.cloud_notm}} アカウントにマイグレーションしてから、IAM を使用して管理できます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [サービスとリソースにアクセスするようにユーザーを招待する](../vmonic/iamuserinvite.html)
 * [IAM でのユーザー・アクセスの管理](../vmonic/iam.html)
 
 ## VMware vCenter Server および VMware Cloud Foundation インスタンスのためのユーザー・アカウントとグループへの変更
 
-**ic4v-vCenter** ユーザー・グループが Microsoft Active Directory サーバーに作成されて、vCenter Server のグローバル許可および NSX Manager のユーザー・グループに追加されました。そのグループには、vCenter Server インスタンス用の **automation** ユーザー・アカウント、および vCenter Server と Cloud Foundation インスタンス用のサービス固有のユーザー・アカウントが含まれます。
+**ic4v-vCenter** ユーザー・グループが Microsoft Active Directory サーバーに作成されて、vCenter Server のグローバル許可および NSX Manager のユーザー・グループに追加されました。 そのグループには、vCenter Server インスタンス用の **automation** ユーザー・アカウント、および vCenter Server と Cloud Foundation インスタンス用のサービス固有のユーザー・アカウントが含まれます。
 
-VMware vSphere Web Client の**「ユーザーおよびグループ」**ページで**「ic4v-vCenter」**グループのグローバル許可を編集しないでください。編集すると、管理操作が影響を受ける可能性があります。
+VMware vSphere Web Client の**「ユーザーおよびグループ」**ページで**「ic4v-vCenter」**グループのグローバル許可を編集しないでください。 編集すると、管理操作が影響を受ける可能性があります。
 
-Cloud Foundation インスタンスの場合、**customerroot** ホスト・ユーザー ID を **root** ホスト・ユーザー ID の代わりに使用します。vCenter Server インスタンスには **root** ホスト・ユーザー ID を引き続き使用します。
+Cloud Foundation インスタンスの場合、**customerroot** ホスト・ユーザー ID を **root** ホスト・ユーザー ID の代わりに使用します。 vCenter Server インスタンスには **root** ホスト・ユーザー ID を引き続き使用します。
 
-ユーザー・アカウントについて詳しくは、以下を参照してください。
+ユーザー・アカウントについて詳しくは、以下のトピックを参照してください。
 
 * [vCenter Server 成果物の変更に関する考慮事項](../vcenter/vcenter_chg_impact.html)
 * [Cloud Foundation 成果物の変更に関する考慮事項](../sddc/cf_chg_impact.html)
@@ -74,7 +72,7 @@ Cloud Foundation インスタンスの場合、**customerroot** ホスト・ユ�
 
 V2.5 リリースから、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスはベスト・プラクティスに基づいて 2 つの別個の VM としてデプロイされます。1 つの VM は Spectrum Protect Plus サーバーを実行し、もう 1 つの VM は vSnap サーバーと VADP プロキシーを実行します。
 
-最大 10 個のバックアップ・データ・ストアを注文できるので、最大 120 TB のバックアップ・ストレージが可能になります。vSnap および VADP VM は、選択したバックアップ・ストレージ・サイズと [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) の情報に基づいてサイズ変更されます。
+最大 10 個のバックアップ・データ・ストアを注文できるので、最大 120 TB のバックアップ・ストレージが可能になります。 vSnap および VADP VM は、選択したバックアップ・ストレージ・サイズと [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) の情報に基づいてサイズ変更されます。
 
 ### KMIP for VMware on IBM Cloud
 
@@ -86,18 +84,17 @@ V2.5 リリースから、IBM Spectrum Protect Plus on {{site.data.keyword.cloud
 
 ### 接続されたストレージの資料
 
-vCenter Server on IBM Cloud の接続されたストレージに関する技術資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。 このリファレンス・アーキテクチャー資料は英語版しかありません。 
-詳しくは、[vCenter Server on IBM Cloud の接続されたストレージ](../archiref/attached-storage/storage-benefits.html)を参照してください。
+vCenter Server on IBM Cloud の接続されたストレージに関する技術資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。 このリファレンス・アーキテクチャー資料は英語版しかありません。 詳しくは、[vCenter Server on IBM Cloud の接続されたストレージ](../archiref/attached-storage/storage-benefits.html)を参照してください。
 
 ### 技術仕様
 
-すべてのインスタンス・タイプとサービス・タイプの技術仕様がユーザー資料で確認できるようになっており、ユーザー・インターフェースからもリンクできるようになっています。詳しくは、使用するインスタンスとサービスに対応した概要トピックを参照してください。
+すべてのインスタンス・タイプとサービス・タイプの技術仕様がユーザー資料で確認できるようになっており、ユーザー・インターフェースからもリンクできるようになっています。 詳しくは、使用するインスタンスとサービスに対応した概要トピックを参照してください。
 
 ### サービスの資料
 
 サービス情報が改善されて、使用可能になったときのリリース番号に基づき、サービス・サポートを簡単に識別できるようになりました。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 
 * [vCenter Server インスタンスで使用可能なサービス](../vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
 * [vCenter Server with Hybridity Bundle インスタンスで使用可能なサービス](../vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
@@ -107,6 +104,6 @@ vCenter Server on IBM Cloud の接続されたストレージに関する技術�
 
 ユーザー・インターフェースが更新され、以下の拡張機能が備えられました。
 
-* {{site.data.keyword.cloud_notm}} アカウントにリンクされた {{site.data.keyword.cloud_notm}}  インフラストラクチャー (SoftLayer) アカウントがある場合、**「設定」**ページで新しく追加された**「取得 (Retrieve)」**ボタンをクリックして、{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントのユーザー名の API キーを自動的に取得できるようになりました。
+* {{site.data.keyword.cloud_notm}} アカウントにリンクされた {{site.data.keyword.cloud_notm}}  インフラストラクチャー (SoftLayer) アカウントがある場合、**「設定」**ページで新しく追加された**「取得 (Retrieve)」**ボタンをクリックして、{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントのユーザー名の API 鍵を自動的に取得できるようになりました。
 * インスタンスのデプロイメント履歴を調べるための新しい**「デプロイメント履歴」**タブが、インスタンス詳細ページの左側ナビゲーション・ペインに追加されました。
 * ユーザー・インターフェースで適切な設定を選択できるように、エラー・メッセージとツールチップにさまざまな改善が行われました。

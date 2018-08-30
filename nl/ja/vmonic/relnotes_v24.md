@@ -58,7 +58,7 @@ V2.4 リリースから、VMware Cloud Foundation on {{site.data.keyword.cloud_n
 
 ### ネットワーク・ファイル・システムのパフォーマンスの強化
 
-ワークロードが非常に大きいタイプの処理に合わせて設計されている 10 IOPS/GB のパフォーマンス・レベルが、特定の {{site.data.keyword.CloudDataCent_notm}}に制限されずに、すべてのデータ・センターで利用できるようになりました。 詳しくは、[vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications)の『*ストレージ*』セクションを参照してください。
+ワークロードが非常に大きいタイプの処理に合わせて設計されている 10 IOPS/GB のパフォーマンス・レベルが、特定の {{site.data.keyword.CloudDataCent_notm}}に制限されずに、すべてのデータ・センターで利用できるようになりました。 詳しくは、[vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)の『*ストレージ*』セクションを参照してください。
 
 ## VMware Federal インスタンスの更新
 
@@ -70,7 +70,7 @@ VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.Clou
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-現行リリースでは、新しくデプロイするすべてのインスタンスで、IBM Spectrum Protect&trade; Plus V10.1.1 パッチ 1 がインストールされます。 IBM Spectrum Protect Plus V10.1.1 パッチ 1 の新機能については、[IBM Spectrum Protect Plus の更新](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}を参照してください。
+現行リリースでは、新しくデプロイするすべてのインスタンスで、IBM Spectrum Protect&trade; Plus V10.1.1 パッチ 1 がインストールされます。 IBM Spectrum Protect Plus V10.1.1 パッチ 1 の新機能について詳しくは、[IBM Spectrum Protect Plus の更新](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}を参照してください。
 
 ### VMware HCX on IBM Cloud
 
@@ -86,7 +86,7 @@ VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.Clou
 
 サービスの資料が再編成され、サービスの注文時に関連情報を簡単に見つけられるようにナビゲーション機能が改善されています。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 
 * [F5 on {{site.data.keyword.cloud_notm}} の注文](../services/f5_ordering.html)
 * [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の注文](../services/fsa_ordering.html)

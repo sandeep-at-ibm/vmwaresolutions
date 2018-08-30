@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -22,12 +22,14 @@ V2.0 以降のインスタンスは、VMware vSphere 6.5 および VMware vCente
 
 ### V2.0 以降でデプロイされた vCenter Server インスタンス
 
-VMware vSphere 6.5 について
+#### VMware vSphere 6.5 について
+
 * すべての新しい V2.3 インスタンスでは、次のパッチが適用された vSphere がデプロイされます: ESXi650-201712101-SG、ESXi650-201803401-BG、および ESXi650-201803402-BG。  
 * V2.3 より前にデプロイしたすべての既存のインスタンスでは、すべての新しいクラスターと ESXi サーバーは、次のパッチで更新されます: ESXi650-201712101-SG、ESXi650-201803401-BG、および ESXi650-201803402-BG。
-* すべての既存の ESXi サーバー、ならびに V2.3 にアップグレードする前にデプロイを続けるすべてのクラスターまたは ESXi サーバーには、[VMware 製品パッチ・サイト](https://my.vmware.com/group/vmware/patch)から入手した次のパッチを適用する必要があります: ESXi650-201712101-SG、ESXi650-201803401-BG、および ESXi650-201803402-BG。
+* すべての既存の ESXi サーバー、および V2.3 にアップグレードする前にデプロイを続けるすべてのクラスターまたは ESXi サーバーには、[VMware 製品パッチ・サイト](https://my.vmware.com/group/vmware/patch)から入手した次のパッチを適用する必要があります: ESXi650-201712101-SG、ESXi650-201803401-BG、および ESXi650-201803402-BG。
 
-VMware vCenter Server 6.5 について
+#### VMware vCenter Server 6.5 について
+
 * すべての新しい V2.3 インスタンスでは、vCenter 6.5 U1g パッチが適用された vCenter Server がデプロイされます。
 * V2.3 より前にデプロイしたすべての既存のインスタンスに、[VMware 製品パッチ・サイト](https://my.vmware.com/group/vmware/patch)から入手した vCenter 6.5 U1g パッチを適用する必要があります。
 
@@ -45,7 +47,7 @@ VMware vCenter Server 6.5 では、新しくデプロイするものも既存の
 
 ## V1.9 以前でデプロイされたインスタンス
 
-V1.9 以前での Cloud Foundation インスタンス、vCenter Server インスタンス、VMware vSphere クラスターは、VMware vSphere 6.0 と VMware vCenter Server 6.0 とともにデプロイされています。
+V1.9 以前での Cloud Foundation インスタンス、vCenter Server インスタンス、および VMware vSphere クラスターは、VMware vSphere 6.0 と VMware vCenter Server 6.0 とともにデプロイされています。
 
 ### V1.9 以前でデプロイされた vCenter Server インスタンス
 

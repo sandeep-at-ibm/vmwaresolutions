@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-18"
 
 {{site.data.keyword.vmwaresolutions_full}} を使用すると、スケーラブルで安全な高性能 {{site.data.keyword.cloud_notm}} インフラストラクチャーと業界をリードする VMware ハイブリッド仮想化テクノロジーを活用して、オンプレミスの VMware ワークロードを {{site.data.keyword.cloud_notm}} に迅速かつシームレスに統合または移行できます。
 
-{{site.data.keyword.vmwaresolutions_short}} では、簡単に VMware 仮想環境を {{site.data.keyword.cloud_notm}} にデプロイしてインフラストラクチャー・リソースを管理することができます。 また同時に、引き続き使い慣れた VMware 製品のネイティブ・コンソールを使用して VMware ワークロードを管理できます。
+{{site.data.keyword.cloud_notm}} では、簡単に VMware 仮想環境をデプロイしてインフラストラクチャー・リソースを管理することができます。また同時に、引き続き使い慣れた VMware 製品のネイティブ・コンソールを使用して VMware ワークロードを管理できます。
 
 ## IBM Cloud for VMware Solutions の利点
 
@@ -96,7 +96,7 @@ HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービスは、セ�
 
 HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスでは、鍵管理機能が組み込まれた強い暗号を使用して、ワークロードをライフサイクルにわたって保護できます。 このサービスは、オペレーティング・システム・レベルとデータ・レベルの両方で暗号化を実行できます。つまり、ワークロード内で任意のディレクトリー、フォルダー、またはファイルを暗号化/復号できます。
 
-詳しくは、[HyTrust DataControl on {{site.data.keyword.cloud_notm}} の概要](../services/hdcc_considerations.html)を参照してください。
+詳しくは、[HyTrust DataControl on {{site.data.keyword.cloud_notm}} の概要](../services/htdc_considerations.html)を参照してください。
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -124,7 +124,7 @@ HCX on {{site.data.keyword.cloud_notm}} サービスでは、オンプレミス�
 
 ### IBM Cloud での Zerto
 
-Zerto on {{site.data.keyword.cloud_notm}} サービスは、複製と災害復旧の機能を提供します。これらの機能をデプロイメント・オファリングに組み込むことで、{{site.data.keyword.cloud_notm}} 上の VMware 仮想環境内のデータの保護と復旧を行えます。
+Zerto on {{site.data.keyword.cloud_notm}} サービスは、複製と災害復旧の機能を提供します。 これらの機能をデプロイメント・オファリングに組み込むことで、{{site.data.keyword.cloud_notm}} 上の VMware 仮想環境内のデータの保護と復旧を行えます。
 
 詳しくは、[Zerto on {{site.data.keyword.cloud_notm}} の概要](../services/addingzertodr.html)を参照してください。
 

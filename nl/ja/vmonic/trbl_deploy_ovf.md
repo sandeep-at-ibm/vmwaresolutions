@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-03-16"
 ## 解決方法
 
 vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイするには、次の手順を使用します。
-1. デプロイメントを行う前に、`/etc/hosts` ファイルに以下のホスト情報を追加する必要があります。
+1. OVF ファイルをデプロイする前に、`/etc/hosts` ファイルに以下のホスト情報を追加します。
 
    * Platform Services Controller (PSC) のホスト情報
    * VMware ESXi サーバーのホスト情報

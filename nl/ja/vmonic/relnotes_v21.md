@@ -30,7 +30,7 @@ HCX on {{site.data.keyword.cloud_notm}} サービスを組み込んだ形で Clo
 
 オンプレミスの HCX インスタンスを注文し、オンプレミス HCX インストールのライセンスを適用してアクティベーションすることもできます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [HCX on {{site.data.keyword.cloud_notm}} に関する考慮事項](../services/hcx_considerations.html)
 * [HCX on {{site.data.keyword.cloud_notm}} の管理](../services/managinghcx.html)
 * [オンプレミス HCX インスタンスに関する考慮事項](../services/standalone_considerations.html)
@@ -42,7 +42,7 @@ V2.1 以降の VMware Cloud Foundation インスタンスと VMware vCenter Serv
 
 また、キーを使用してライセンスを適用したクラスターにノードを追加するときに、ノード数がそのキーの容量を超える場合は、新しいライセンス・キーを指定するように求めるプロンプトがコンソールに表示されます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 
 * [Cloud Foundation インスタンスのクラスターの追加と表示](../sddc/sd_addingviewingclusters.html)
 * [vCenter Server インスタンスのクラスターの追加と表示](../vcenter/vc_addingviewingclusters.html)
@@ -85,7 +85,7 @@ VMware NSX の Advanced または Enterprise エディションにアップグ�
 
 ユーザー・カスタマイズ型のベア・メタル・サーバー構成に、Dual Intel Xeon Gold 6140 (合計 36 コア、2.3 GHz) が追加されました。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html)
 * [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
 
@@ -93,7 +93,7 @@ VMware NSX の Advanced または Enterprise エディションにアップグ�
 
 NFS ファイル共有を個々に構成できるようになりました。 ファイル共有ごとにファイル・サイズとパフォーマンス・レベルを選択するか、注文するすべてのファイル共有に同じファイル・サイズとパフォーマンス・レベルを選択します。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html)
 * [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
 * [vCenter Server インスタンスのクラスターの追加と表示](../vcenter/vc_addingviewingclusters.html)

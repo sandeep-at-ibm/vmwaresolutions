@@ -18,7 +18,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスが�
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを組み込んだ形でインスタンスを注文することも、後からインスタンスの詳細ページの**「サービス」**タブで既存のインスタンスにこのサービスを追加することもできます。 このサービスでは、デプロイメント・サイズとライセンスについての 3 つのオプションの中から 1 つを要件に応じて選択できます。 サービスが正常にインストールされたら、FortiGate コンソールから FortiGate Virtual Appliance のファイアウォール・ルールを管理および構成できます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](../services/fortinetvm_considerations.html)
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の管理](../services/managingfortinetvm.html)
 
@@ -28,7 +28,7 @@ Cloud Foundation インスタンスでも vCenter Server インスタンスで�
 
 インスタンスのデプロイメントが完了したら、インスタンスの詳細ページの**「サービスの追加」**タブで F5 または FortiGate サービスをインストールして、サービスのインスタンスを追加できます。 サービス・インスタンスは一度に 1 つしか追加できないので、サービスに追加するすべてのインスタンスについてこの処理を繰り返す必要があります。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [Cloud Foundation インスタンス用サービスの注文、表示、削除](../sddc/sd_addingremovingservices.html)
 * [vCenter Server インスタンスのサービスの注文、表示、削除](../vcenter/vc_addingremovingservices.html)
 
@@ -44,7 +44,7 @@ Cloud Foundation インスタンスでも vCenter Server インスタンスで�
 
 完全修飾ドメイン・ネーム (FQDN) の表記がすべてのインスタンスで統一されました。 注文時に、独自のサブドメイン接頭部とホスト名接頭部を入力できます。 これにより、`host-name-prefix<n>.subdomain-prefix.domain-name` のような FQDN 形式の業界規則を確実に順守できます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)
 * [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
 * [新規 vSphere クラスターの注文](../vsphere/vs_orderinginstances.html)
@@ -54,7 +54,7 @@ Cloud Foundation インスタンスでも vCenter Server インスタンスで�
 * VMware vSphere on {{site.data.keyword.cloud_notm}} の注文中に、注文するインスタンスで実行できる仮想マシン数の見積もりが表示されます。
 * Cloud Foundation および vCenter Server の注文中に、注文するインスタンスで使用できるストレージ容量の見積もりが表示されます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)
 * [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
 * [新規 vSphere クラスターの注文](../vsphere/vs_orderinginstances.html)
@@ -84,7 +84,7 @@ V2.0 以降のリリースでデプロイされた Cloud Foundation インスタ
 
 インスタンスの注文の中で vSAN ストレージ・ドライブの数とサイズを選択して、vSAN ストレージ構成をカスタマイズできるようになりました。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [Cloud Foundation の概要](../sddc/sd_cloudfoundationoverview.html)
 * [Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)
 
@@ -100,7 +100,7 @@ Cloud Foundation インスタンスの注文の中で、必要な vSAN ライセ
 
 **注**: シャーシには 12 個のディスク用のスペースがありますが、すべてのスロットが使用されるわけではありません。 **「スモール」**構成では 2 つの 1.9 TB Micron 5100 MAX ドライブが提供され、**「ラージ」**構成では 4 つの 3.8 TB Micron 5100 PRO ドライブが提供されます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [Cloud Foundation の概要](../sddc/sd_cloudfoundationoverview.html)
 * [Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)
 
@@ -133,7 +133,7 @@ vSAN ストレージを、vCenter Server インスタンスのプライマリー
 
 vCenter Server インスタンスで BYOL を利用できるようになりました。 BYOL では、vCenter Server インスタンスの注文時に、所有している vCenter Server、vSphere、vSAN、および NSX VMware ライセンスを 1 つ以上使用できます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)
 * [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
 * [新規 vSphere クラスターの注文](../vsphere/vs_orderinginstances.html)
@@ -164,7 +164,7 @@ VMware vSAN コンポーネントの場合、{{site.data.keyword.baremetal_short
 
 **注:** 3.8 TB SSD ドライブは、{{site.data.keyword.CloudDataCent_notm}}で一般提供が開始されたらサポートされる予定です。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [NetApp ONTAP Select の概要](../netapp/np_netappoverview.html)
 * [NetApp ONTAP Select インスタンスの注文](../netapp/np_orderinginstances.html)
 
