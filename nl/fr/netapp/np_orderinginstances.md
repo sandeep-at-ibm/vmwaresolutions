@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -18,11 +18,11 @@ Assurez-vous que :
 *  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
 *  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les instances NetApp ONTAP Select](np_planning.html).
 
-**Important : ne modifiez aucune des valeurs définies lors de la commande et du déploiement de l'instance. Toute modification risquerait de rendre votre instance inutilisable.**
+**Important : ne modifiez aucune des valeurs définies lors de la commande et du déploiement de l'instance. Ceci pourrait rendre inutilisable votre instance.**
 
 ## Paramètres système
 
-Lorsque vous commandez une instance NetApp ONTAP Select, vous devez spécifier les paramètres de base suivants :
+Lorsque vous commandez une instance NetApp ONTAP Select, vous devez spécifier ses paramètres de base. 
 
 ### Nom d'instance
 
@@ -34,7 +34,7 @@ Le nom de l'instance qui doit respecter les règles suivantes :
 
 ## Paramètres d'interface réseau
 
-Vous devez spécifier les paramètres d'interface réseau répertoriés ci-après lorsque vous commandez une instance NetApp ONTAP Select.
+Vous devez spécifier les paramètres d'interface réseau suivants lorsque vous commandez une instance NetApp ONTAP Select.
 
 ### Préfixe de nom d'hôte
 
@@ -64,7 +64,7 @@ Le nom du domaine racine qui doit respecter les règles suivantes :
 
 ## Paramètres d'octroi de licence
 
-Vous devez télécharger quatre fichiers de licence NetApp car chacun des quatre serveurs {{site.data.keyword.baremetal_short}} nécessite une licence. Contactez l'équipe commerciale NetApp pour vous procurer la licence appropriée pour votre déploiement hautes performances ou haute capacité.
+Vous devez télécharger quatre fichiers de licence NetApp car chacun des quatre {{site.data.keyword.baremetal_short}} nécessite une licence. Contactez l'équipe commerciale NetApp pour vous procurer la licence appropriée pour votre déploiement hautes performances ou haute capacité.
 
 ## Paramètres de serveur bare metal
 
@@ -74,16 +74,16 @@ Vous devez sélectionner l'{{site.data.keyword.CloudDataCent_notm}} où l'instan
 
 ### Configuration de serveur bare metal
 
-Vous pouvez sélectionner une configuration de serveur bare metal adaptée à vos besoins :
+Sélectionnez une configuration de serveur bare metal adaptée à vos besoins :
 * **Hautes performances (Moyenne)** – Licence Premium/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/128 Go de RAM/capacité de vingt-deux unités SSD de 1,9 To par noeud/capacité effective d'un cluster de 4 noeuds – 59 To
 * **Hautes performances (Grande)** – Licence Premium/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/128 Go de RAM/capacité de vingt-deux unités SSD de 3,8 To par noeud/capacité effective d'un cluster de 4 noeuds – 118 To
 * **Haute capacité** – Licence Standard/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/64 Go de RAM/capacité de trente-quatre unités SATA de 4 To par noeud/capacité effective d'un cluster de 4 noeuds – 190 To
 
-**Remarque :** les unités SSD de 3,8 To seront prises en charge une fois officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
+**Remarque :** les unités SSD de 3,8 To B SSD (Solid-State Disk) seront prises en charge une fois officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
 
 ### Nombre de serveurs bare metal
 
-Le nombre de serveurs ESXi d'une instance NetApp ONTAP Select est de 4 par défaut. Vous ne pouvez pas modifier cette valeur. Tous les serveurs ESXi se partagent la même configuration.
+Le nombre de serveurs ESXi d'une instance NetApp ONTAP Select est de 4 par défaut. Vous ne pouvez pas modifier cette valeur. Tous les serveurs ESXi partagent la même configuration.
 
 ## Procédure
 
@@ -106,7 +106,7 @@ Le nombre de serveurs ESXi d'une instance NetApp ONTAP Select est de 4 par défa
 
 Le déploiement de l'instance commence automatiquement. Vous recevez une confirmation vous informant que la commande est en cours de traitement et vous pouvez vérifier le statut du déploiement en affichant les détails de l'instance.
 
-Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances NetApp ONTAP Select](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) sont installés sur votre plateforme virtuelle VMware. 
+Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances NetApp ONTAP Select](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) sont installés sur votre plateforme virtuelle VMware.
 
 Lorsque l'instance est prête pour utilisation, l'instance prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 
@@ -114,7 +114,7 @@ Lorsque l'instance est prête pour utilisation, l'instance prend le statut **Pr�
 
 Affichez et gérez l'instance NetApp ONTAP Select que vous avez commandée.
 
-**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non pas le {{site.data.keyword.slportal}} ou tout autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
 
 **ATTENTION** : gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lorsque vous avez commandé l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque de rendre votre environnement instable. Ces activités de gestion incluent :
 *  L'ajout, la modification, le retour ou la suppression de composants

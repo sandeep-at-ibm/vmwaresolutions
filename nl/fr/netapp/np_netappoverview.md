@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -41,7 +41,7 @@ Figure 2. Composants de NetApp ONTAP Select
 
 ### Gestion de la virtualisation
 
-Cette couche se compose du dispositif virtuel vCenter Server, de NSX Manager, de deux passerelles NSX ESG, de 3 contrôleurs NSX, du dispositif virtuel PSC (Platform Services Controller), de vCSA (vCenter Server Appliance) et de la machine virtuelle IBM CloudDriver.
+Cette couche se compose du dispositif virtuel vCenter Server, de NSX Manager, de deux passerelles NSX ESG, de 3 contrôleurs NSX, du dispositif virtuel PSC (Platform Services Controller), de vCSA (vCenter Server Appliance) et de l'instance de serveur virtuel IBM CloudDriver.
 
 NetApp ONTAP Select s'exécute dans un cluster VMware et virtualise le stockage local sur les hôtes. NetApp ONTAP Select est déployé dans le modèle dédié, où ce déploiement n'est pas censé partager le cluster avec d'autres charges de travail. Par conséquent, la configuration matérielle de l'offre NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} n'est dimensionnée qu'en fonction des besoins de NetApp ONTAP Select.
 
@@ -65,7 +65,7 @@ Quatre serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_s
 * **Hautes performances (Grande)** – Licence Premium/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/128 Go de RAM/capacité de vingt-deux unités SSD de 3,8 To par noeud/capacité effective d'un cluster de 4 noeuds – 118 To
 * **Haute capacité** – Licence Standard/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/64 Go de RAM/capacité de trente-quatre unités SATA de 4 To par noeud/capacité effective d'un cluster de 4 noeuds – 190 To
 
-**Remarque :** les unités SSD (Solid State Disk) de 3,8 To seront prises en charge une fois officiellement disponibles dans un centre de données.
+**Remarque :** les unités SSD (Solid-State Disk) de 3,8 To seront prises en charge une fois officiellement disponibles dans un centre de données.
 
 ### Matériel
 
@@ -94,7 +94,7 @@ Deux instances de serveur virtuel :
 *  VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 *  Frais de prise en charge et de services (une licence par noeud)
 
-**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non pas le {{site.data.keyword.slportal}} ou tout autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
 
 **ATTENTION** : gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lorsque vous avez commandé l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque de rendre votre environnement instable. Ces activités de gestion incluent :
 *  L'ajout, la modification, le retour ou la mise hors tension de composants

@@ -4,20 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
 # Affichage des instances NetApp ONTAP Select
 
-Affichez les informations récapitulatives et détaillées des instances NetApp ONTAP Select qui sont mises à disposition pour différents comptes utilisateur. 
+Affichez les informations récapitulatives et détaillées des instances NetApp ONTAP Select qui sont mises à disposition pour différents comptes utilisateur.
 
 ## Affichage du récapitulatif des instances NetApp ONTAP Select
 
 Pour afficher un récapitulatif de toutes les instances NetApp ONTAP Select qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 
-1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche. 
-2. Dans l'angle supérieur droit de la console, cliquez sur votre avatar, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances. 
+1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+2. Dans l'angle supérieur droit de la console, cliquez sur votre avatar, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances.
 3. Dans le tableau **Instances NetApp ONTAP Select**, affichez la liste des instances qui sont mises à disposition dans le compte utilisateur sélectionné.
 
 Tableau 1. Eléments d'une instance NetApp ONTAP Select
@@ -86,7 +86,7 @@ Tableau 3. Informations d'accès relatives aux composants des instances NetApp O
 
 ## Affichage de l'historique de déploiement des instances NetApp ONTAP Select
 
-Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance. 
+Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance.
 
 Tableau 4. Historique de déploiement d'une instance NetApp ONTAP Select
 
@@ -99,7 +99,7 @@ Si des erreurs se produisent lors du déploiement ou de la suppression d'une ins
 
 ## Affichage des clusters NetApp ONTAP Select
 
-1. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. 
+1. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche.
 2. Sous **CLUSTERS**, affichez le récapitulatif concernant les clusters NetApp ONTAP Select.
 
 	Tableau 5: Eléments des clusters NetApp ONTAP Select
@@ -168,7 +168,7 @@ Gérez vos instances depuis la console {{site.data.keyword.vmwaresolutions_short
 
 **Important** : avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client Web vSphere et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton **Console vCenter** et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.
 
-Passez en revue les rubriques suivantes pour obtenir des informations qui vous aideront à exécuter les instructions de connexion :
+Consultez les rubriques suivantes pour plus d'informations sur l'exécution des instructions de connexion :
 
 *  Pour les exigences et procédures à effectuer avant d'accéder au client Web vSphere, voir [Dépassement du délai d'attente lors de la connexion au client Web vSphere](../vmonic/trbl_timeout_vc_console.html).
 *  Pour la liste des points d'accès de connexion au réseau privé de l'infrastructure {{site.data.keyword.cloud_notm}} à l'aide du réseau privé virtuel (VPN), voir [Accès VPN](http://www.softlayer.com/vpn-access){:new_window}.
