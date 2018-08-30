@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-08"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-31"
 
 ## 자동화 ID
 
-**자동화** ID는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 제공된 자동화된 오퍼레이션에 의해 사용되는 사용자 계정입니다. 
+**자동화** ID는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 제공된 자동화된 오퍼레이션에 의해 사용되는 사용자 계정입니다.
 
 해당 신임 정보에 기반한 콘솔 오퍼레이션이 실패할 수 있으므로 콘솔에서 자동화된 오퍼레이션의 사용자 및 비밀번호를 변경하면 안 됩니다.
 
@@ -26,7 +26,9 @@ lastupdated: "2018-07-31"
 
 **중요**: 가동 중단 및 연결 문제점을 방지하기 위해, 이 사용자 계정의 사용자 ID, 비밀번호 또는 비밀번호 만기 설정을 변경하는 경우에는 연관된 서비스에서도 해당 정보를 업데이트해야 합니다.
 
-이 계정의 사용자 ID 형식은 `<service_name>-<service_uuid>@VSPHERE.LOCAL`입니다. 예를 들어, Veeam on {{site.data.keyword.cloud_notm}} 서비스가 스케줄된 백업을 수행하기 위해 vCenter Server에 연결하는 데 사용하는 사용자 ID는 `Veeam-<Veeam_uuid>@VSPHERE.LOCAL`입니다.
+이 계정의 사용자 ID 형식은 `<service_name>-<truncated service_uuid>@test.local` 또는 `<service_name>-<truncated service_uuid>@example-domain.local`입니다. 예를 들어, Veeam on {{site.data.keyword.cloud_notm}} 서비스가 스케줄된 백업을 수행하기 위해 vCenter Server에 연결하는 데 사용하는 사용자 ID는 `Veeam-<Veeam_uuid>@test.local`입니다.
+
+**참고**: `<service_uuid>`가 포함된 `<service_name>`은 20자에서 잘립니다.
 
 ## vCenter Server 인스턴스용 VMware 리소스(V1.9 이상)
 

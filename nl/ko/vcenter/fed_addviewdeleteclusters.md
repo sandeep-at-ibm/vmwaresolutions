@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -44,7 +44,7 @@ Bare Metal Server의 CPU 모델 및 RAM을 지정하십시오. 사용 가능한 
 
 표 1. 사용자 정의된 {{site.data.keyword.baremetal_short}}의 옵션
 
-|CPU 옵션        |RAM 옵션       |
+| CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
 | 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
@@ -109,7 +109,7 @@ vSAN의 경우에는 다음 스토리지 옵션을 지정하십시오.
 
 ## VMware Federal 인스턴스에 클러스터를 추가하는 프로시저
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 클러스터를 추가할 인스턴스를 클릭하십시오.
 
    **참고**: 인스턴스가 **사용할 준비** 상태인지 확인하십시오. 그렇지 않으면, 클러스터를 인스턴스에 추가할 수 없습니다.
