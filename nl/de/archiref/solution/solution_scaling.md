@@ -17,13 +17,13 @@ Nach der Erstimplementierung können Sie die Rechenkapazität über die Konsole 
 
 ## Weitere Standorte (Sites) hinzufügen
 
-{{site.data.keyword.vmwaresolutions_short}} kann dank der weltweiten Verfügbarkeit von {{site.data.keyword.cloud_notm}}-Rechenzentren und des integrierten Netzbackbones die Bereitstellung und Funktion einer ganzen Reihe geografisch übergreifender Anwendungsfälle unterstützen, und dies unter einem Bruchteil des Zeitaufwands, der ansonsten zum Neuaufbau einer solchen Infrastruktur erforderlich wäre.
+{{site.data.keyword.vmwaresolutions_short}} kann dank der weltweiten Verfügbarkeit von {{site.data.keyword.cloud_notm}}-Rechenzentren und des integrierten Netzbackbones die Bereitstellung und Funktion verschiedener Anwendungsfälle in unterschiedlichsten Regionen unterstützen, und dies unter einem Bruchteil des Zeitaufwands, der ansonsten zum Neuaufbau einer solchen Infrastruktur erforderlich wäre.
 
-In diesem Design besteht die Definition einer Bereitstellung mit mehreren Standardorten aus folgenden Komponenten:
+In diesem Design besteht die Definition einer Bereitstellung mit mehreren Standorten aus folgenden Komponenten:
 * Eine erste oder primäre VMware-Bereitstellung, die eine neue DNS/AD-Rootdomäne, eine Unterdomäne, eine SSO-Domäne und einen SSO-Standortnamen enthält, die zur Verfügung gestellt werden sollen.
 * Ein oder mehrere sekundäre Standorte, die in der SSO-Domäne des primären Standorts bereitgestellt werden und die folgende Konfiguration erfordern:
    * Neuer SSO-Standortname
-   * Neuer DNS-Standort / neue DNS-Unterdomäne mit Bindung an das Stammelement (Root) der primären Domäne
+   * Neuer DNS-Standort bzw. neue DNS-Unterdomäne mit Bindung an das Stammelement (Root) der primären Domäne
    * DNS- und AD-Replikationskonfiguration zwischen den AD-VMs der sekundären Standorte und des primären Standorts
    * Bereitgestellter und für die Synchronisation mit dem PSC des primären Standorts konfigurierter PSC
    * vCenter-Konfiguration mit erweitertem Verbindungsmodus zum vCenter des primären Standorts
@@ -44,7 +44,7 @@ Durch diese Methode lassen sich folgende Zwecke realisieren:
 
 ## ESXi-Hosts in vorhandenen Clustern hinzufügen
 
-Sie können einen vorhandenen Cluster skalieren, indem Sie Hosts über die Konsole von {{site.data.keyword.vmwaresolutions_short}} bestellen. Die neuen Hosts werden dem Cluster automatisch hinzugefügt. Beachten Sie, dass Sie die Reservierungsrichtlinie für Hochverfügbarkeit (HA) für den Cluster entsprechend Ihren Reservierungsanforderungen möglicherweise anpassen müssen.
+Sie können einen vorhandenen Cluster skalieren, indem Sie Hosts über die Konsole von {{site.data.keyword.vmwaresolutions_short}} bestellen.  Die neuen Hosts werden dem Cluster automatisch hinzugefügt. Beachten Sie, dass Sie die Reservierungsrichtlinie für Hochverfügbarkeit (HA) für den Cluster entsprechend Ihren Reservierungsanforderungen möglicherweise anpassen müssen.
 
 ### Zugehörige Links
 
