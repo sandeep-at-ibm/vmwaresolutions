@@ -18,7 +18,7 @@ Der Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" is
 
 Sie können Instanzen bestellen, die den Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" enthalten, oder diesen Service später Ihren vorhandenen Instanzen über die Registerkarte **Services** auf der Seite mit den Instanzdetails hinzufügen. Je nach Bedarf stehen Ihnen drei Bereitstellungsgrößen und Lizenzierungsoptionen für diesen Service zur Auswahl. Nachdem der Service erfolgreich installiert wurde, können Sie Firewallregeln für FortiGate Virtual Appliances über die FortiGate-Konsole verwalten und konfigurieren.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Komponenten und Hinweise für FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} verwalten](../services/managingfortinetvm.html)
 
@@ -28,7 +28,7 @@ Sie können jetzt mehrere Instanzen der Services "F5 on {{site.data.keyword.clou
 
 Nachdem die Instanzbereitstellung erfolgt ist, können Sie weitere Instanzen des F5- oder FortiGate-Service hinzufügen, indem Sie den Service auf der Registerkarte **Services hinzufügen** der Seite mit den Instanzdetails installieren. Sie können gleichzeitig jeweils nur eine einzige Serviceinstanz hinzufügen; der Prozess muss für jede Instanz, die Sie für einen Service hinzufügen wollen, wiederholt werden.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
 * [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
 
@@ -44,7 +44,7 @@ Sie müssen die FSA-Konfiguration in jedem Fall sorgfältig verwalten, damit nur
 
 Der vollständig qualifizierte Domänenname (Fully-Qualified Domain Name, FQDN) wird jetzt bei allen Instanzen konsistent dargestellt. Beim Aufgeben einer Bestellung können Sie Ihr eigenes Unterdomänen- und Hostnamenspräfix eingeben. Dies gewährleistet, dass die branchenspezifische Konvention für das Format von vollständig qualifizierten Domänennamen befolgt wird, z. B. `hostnamenspräfix<n>.unterdomänenpräfix.domänenname`.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 * [Neue vSphere-Cluster bestellen](../vsphere/vs_orderinginstances.html)
@@ -54,7 +54,7 @@ Weitere Informationen enthalten die folgenden Abschnitte:
 * Bei einer Bestellung von VMware vSphere on {{site.data.keyword.cloud_notm}} erhalten Sie eine Schätzung darüber, wie viele virtuelle Maschinen auf der bestellten Instanz ausgeführt werden können.
 * Bei einer Bestellung von Cloud Foundation und vCenter Server erhalten Sie eine Schätzung der nutzbaren Speicherkapazität für die bestellte Instanz.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 * [Neue vSphere-Cluster bestellen](../vsphere/vs_orderinginstances.html)
@@ -84,7 +84,7 @@ Auf der Registerkarte **Infrastruktur** der Seite mit den Instanzdetails können
 
 Sie können die vSAN-Speicherkonfiguration jetzt anpassen, indem Sie Anzahl und Größe der vSAN-Speicherlaufwerke bei der Bestellung Ihrer Instanz auswählen.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Übersicht über Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
 
@@ -100,7 +100,7 @@ Die folgenden Einstellungen für Bare Metal Server-Konfigurationen sind jetzt ve
 
 **Hinweis**: Im Chassis ist Platz für 12 Platten, es sind jedoch nicht alle Steckplätze belegt. Die Konfiguration **S (Klein)** stellt zwei Micron 5100 MAX-Laufwerke mit 1,9 TB bereit; die Konfiguration **L (Groß)** bietet vier Micron 5100 PRO-Laufwerke mit 3,8 TB.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Übersicht über Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
 
@@ -133,7 +133,7 @@ Weitere Informationen finden Sie unter [vCenter Server-Instanzen bestellen](../v
 
 BYOL, also die Verwendung eigener Lizenzen, ist jetzt für vCenter Server-Instanzen verfügbar. Hierdurch können Sie eine oder mehrere Ihrer eigenen Lizenzen für vCenter Server, vSphere, vSAN und NSX VMware verwenden, wenn Sie vCenter Server-Instanzen bestellen.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 * [Neue vSphere-Cluster bestellen](../vsphere/vs_orderinginstances.html)
@@ -164,7 +164,7 @@ Die folgenden Bare Metal Server-Konfigurationsoptionen sind jetzt verfügbar:
 
 **Hinweis:** 3,8-TB-SSD-Laufwerke werden unterstützt, wenn sie allgemein in einem {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) verfügbar gemacht werden.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Übersicht über NetApp ONTAP Select](../netapp/np_netappoverview.html)
 * [NetApp ONTAP Select-Instanzen bestellen](../netapp/np_orderinginstances.html)
 

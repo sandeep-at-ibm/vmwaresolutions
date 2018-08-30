@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-07"
 
 ---
 
@@ -63,7 +63,7 @@ Dieses Verfahren gilt für Instanzen, die in V2.1 oder höher bereitgestellt wer
    * Wenn neue ESXi-Server hinzugefügt werden.
    * Wenn neue Cluster hinzugefügt werden.
 
-5. Klicken Sie für NSX-Lizenzaktualisierungen auf **Aktualisierung der Lizenz**. Wählen Sie die Edition aus, auf die das Upgrade durchgeführt werden soll, und klicken Sie dann auf **Upgrade**. Downgrades für Lizenzeditionen sind nicht verfügbar.
+5. Klicken Sie für NSX-Lizenzaktualisierungen auf **Upgrade**. Wählen Sie im Fenster für das Upgrade von NSX-Lizenzeditionen ****die Edition aus, auf die das Upgrade durchgeführt werden soll, und klicken Sie dann auf **Upgrade**. Downgrades für Lizenzeditionen sind nicht verfügbar.
 
    **Hinweis:** Die Aktualisierung der Lizenz ersetzt alle vorhandenen NSX-Lizenzen in der Instanz. Zusätzliche Gebühren können bei einer Überschneidung von alten und neuen Lizenzen entstehen, wenn Sie ein Upgrade in der Mitte eines Abrechnungszyklus durchführen. Um zusätzliche Gebühren zu vermeiden, wird empfohlen, die Lizenz am Ende des Abrechnungszyklus zu aktualisieren.
 
@@ -75,6 +75,8 @@ Dieses Verfahren gilt für Instanzen, die in V2.1 oder höher bereitgestellt wer
 ## Upgrade auf vCenter Server with Hybridity Bundle-Instanz durchführen
 
 Während der Aktualisierung der Lizenz auf Hybridity Bundle wird für Sie automatisch ein Upgrade auf die VMware NSX Advanced Edition durchgeführt, wenn Ihre vCenter Server-Instanz momentan die VMware NSX Base Edition verwendet.
+
+**Hinweis:** Wenn Sie ein Upgrade auf Hybridity Bundle durchführen und Ihre vCenter Server-Instanz bereits über NFS-Dateispeicher verfügt, entstehen keine Gebühren für den VMware vSAN-Speicher. Es entstehen Gebühren für die vSAN-Lizenz, da VMware vSAN in Hybridity Bundle enthalten ist.
 
 Führen Sie die folgenden Schritte aus, um für eine vCenter Server-Instanz ein Upgrade auf vCenter Server with Hybridity Bundle durchzuführen.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -22,19 +22,18 @@ Sie können außerdem angeben, ob Sie E-Mail- und Konsolenbenachrichtigungen fü
 * Das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer), das Sie verwenden, muss bestimmte Anforderungen erfüllen. Weitere Informationen finden Sie unter [Anforderungen an das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur](slaccountrequirement.html).
 * Wenn der API-Schlüssel für Ihr Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) geändert wird, müssen Sie den Schlüssel auf der Seite **Einstellungen** in der Konsole von {{site.data.keyword.vmwaresolutions_short}} aktualisieren.
 
-   **Wichtig:** Sie müssen dafür sorgen, dass der auf der Seite **Einstellungen** gespeicherte API-Schlüssel richtig und aktuell ist.
-   Andernfalls können Operationen fehlschlagen, die eine Validierung des API-Schlüssels erforderlich machen.
+   **Wichtig:** Sie müssen dafür sorgen, dass der auf der Seite **Einstellungen** gespeicherte API-Schlüssel richtig und aktuell ist. Andernfalls können Operationen fehlschlagen, die eine Validierung des API-Schlüssels erforderlich machen.
 
 ## Vorgehensweise
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Einstellungen**.
-2. Geben Sie im Bereich **Benachrichtigungen** Ihre Benachrichtigungseinstellungen an:
+2. Geben Sie im Bereich **Benachrichtigungen** Ihre Benachrichtigungseinstellungen an.
    * Wenn Sie bei Auftreten von Ereignissen per E-Mail benachrichtigt werden wollen, klicken Sie auf **E-Mail-Benachrichtigungen aktivieren**.
    * Wenn Sie in der Konsole bei Auftreten von Ereignissen benachrichtigt werden wollen, klicken Sie auf **Konsolenbenachrichtigungen aktivieren**.
-3. Geben Sie im Bereich **Berechtigungsnachweise für IBM Cloud-Infrastruktur** den Benutzernamen und den API-Schlüssel Ihres Kontos der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit einer der folgenden Methoden ein:
+3. Geben Sie im Bereich **Berechtigungsnachweise für IBM Cloud-Infrastruktur** den Benutzernamen und den API-Schlüssel Ihres Kontos der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) ein:
    * Wenn Ihr Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) und Ihr {{site.data.keyword.cloud_notm}}-Konto verknüpft sind, klicken Sie auf **Abrufen**, um die Berechtigungsnachweise automatisch eintragen zu lassen.
-   * Wenn Ihr Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) und Ihr {{site.data.keyword.cloud_notm}}-Konto nicht verknüpft sind, melden Sie sich im [Kundenportal für die {{site.data.keyword.cloud_notm}}-Infrastruktur](https://control.softlayer.com/) an und führen die Anweisungen in der Konsole aus, um die Berechtigungsnachweise zu erhalten und einzugeben.
-   * Wenn Sie kein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) haben, [registrieren Sie sich für ein Konto](../vmonic/signing_softlayer_account.html). Befolgen Sie anschließend die Anweisungen in der Konsole, um die Berechtigungsnachweise abzurufen und einzugeben.
+   * Wenn Ihr Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) und Ihr {{site.data.keyword.cloud_notm}}-Konto nicht verknüpft sind, stellen Sie die Verknüpfung her. Melden Sie sich im [Kundenportal der {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/) an und rufen Sie die Berechtigungsnachweise wie in der Konsole angegeben ab. Geben Sie die Berechtigungsnachweise anschließend ein.
+   * Wenn Sie kein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) haben, [registrieren Sie sich für ein Konto](../vmonic/signing_softlayer_account.html). Befolgen Sie dann die Anweisungen in der Konsole, um die Berechtigungsnachweise abzurufen, und geben Sie die Berechtigungsnachweise anschließend ein.
 4. Klicken Sie auf **Berechtigungsnachweise speichern**.
 
 ## Ergebnisse
@@ -43,7 +42,7 @@ Wenn das {{site.data.keyword.cloud_notm}}-Konto und das Konto der {{site.data.ke
 
 Die gespeicherten Berechtigungsnachweise für das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) werden bei zukünftigen Operationen verwendet, die eine Interaktion mit der {{site.data.keyword.cloud_notm}}-Infrastruktur erfordern.
 
-Falls für bestimmte Instanzereignisse E-Mail- oder Konsolenbenachrichtigungen aktiviert sind, werden Sie per E-Mail oder in der Konsole benachrichtigt, wenn diese Ereignisse stattfinden.
+Falls für bestimmte Instanzereignisse E-Mail- oder Konsolenbenachrichtigungen aktiviert sind, werden Sie per E-Mail oder über Konsolennachrichten benachrichtigt, wenn diese Ereignisse stattfinden.
 
 ### Zugehörige Links
 

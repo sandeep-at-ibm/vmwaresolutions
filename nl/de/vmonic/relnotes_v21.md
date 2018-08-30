@@ -30,7 +30,7 @@ Sie können Cloud Foundation- oder vCenter Server-Instanzen bestellen, die den S
 
 Sie können auch eine lokale HCX-Instanz für die Lizenzierung und Aktivierung Ihrer lokalen HCX-Installation bestellen.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Hinweise zu HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)
 * [HCX on {{site.data.keyword.cloud_notm}} verwalten](../services/managinghcx.html)
 * [Hinweise zu lokalen HCX-Instanzen](../services/standalone_considerations.html)
@@ -42,7 +42,7 @@ Bei der Erstellung eines neuen Clusters für Cloud Foundation- und vCenter Serve
 
 Wenn Sie Knoten zu einem Cluster hinzufügen, der mit Ihrem Schlüssel lizenziert ist, werden Sie außerdem von der Konsole aufgefordert, einen neuen Lizenzschlüssel anzugeben, falls die Anzahl der Knoten die Schlüsselkapazität überschreitet.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 * [Cluster für Cloud Foundation-Instanzen hinzufügen und anzeigen](../sddc/sd_addingviewingclusters.html)
 * [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](../vcenter/vc_addingviewingclusters.html)
@@ -85,7 +85,7 @@ Für den Standardcluster in einer Instanz können Sie bis zu 51 Server bereitste
 
 Die angepasste Bare Metal Server-Konfiguration bietet nun den Dual Intel Xeon Gold 6140-Prozessor mit 36 Kernen insgesamt und 2,3 GHz.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 
@@ -93,7 +93,7 @@ Weitere Informationen enthalten die folgenden Abschnitte:
 
 Sie haben jetzt die Möglichkeit, die NFS-Dateifreigaben einzeln konfigurieren. Sie können die Dateigröße und die Leistungsstufe für jede Dateifreigabe individuell auswählen oder für alle bestellten Dateifreigaben dieselbe Dateigröße und Leistungsstufe verwenden.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 * [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](../vcenter/vc_addingviewingclusters.html)

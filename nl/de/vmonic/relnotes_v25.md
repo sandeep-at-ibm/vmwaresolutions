@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -49,7 +49,7 @@ Ab dem Release von Version 2.5 ist {{site.data.keyword.vmwaresolutions_short}} i
 * Instanzen, die in Version 2.5 und höheren Releases bereitgestellt werden, werden automatisch mit dem Benutzerkonto verknüpft, das bei der Bestellung der Instanz verwendet wird.
 * Bei Instanzen, die in Version 2.4 und früheren Releases bereitgestellt wurden, können Sie diese auf ein {{site.data.keyword.cloud_notm}}-Konto migrieren und anschließend ebenfalls mithilfe von IAM verwalten.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Benutzer für den Zugriff auf Services und Ressourcen einladen](../vmonic/iamuserinvite.html)
 * [Benutzerzugriff mit IAM verwalten](../vmonic/iam.html)
 
@@ -61,7 +61,7 @@ Bearbeiten Sie keine globalen Berechtigungen der Gruppe **ic4v-vCenter** auf der
 
 Verwenden Sie für Cloud Foundation-Instanzen die Hostbenutzer-ID **customerroot** anstelle der Hostbenutzer-ID **root**. Verwenden Sie die Hostbenutzer-ID **root** weiterhin für vCenter Server-Instanzen.
 
-Weitere Informationen zu Benutzerkonten finden Sie in folgenden Abschnitten:
+Weitere Informationen zu Benutzerkonten finden Sie in den folgenden Abschnitten:
 
 * [Hinweise zum Ändern von vCenter Server-Artefakten](../vcenter/vcenter_chg_impact.html)
 * [Hinweise zum Ändern von Cloud Foundation-Artefakten](../sddc/cf_chg_impact.html)
@@ -94,7 +94,7 @@ Die technischen Spezifikationen für alle Instanztypen und Servicetypen sind jet
 
 Die Informationen zu Services wurden verbessert, sodass sich die Unterstützung eines Service anhand der Releasenummer, unter der er verfügbar gemacht wurde, leicht ermitteln lässt.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 * [Verfügbare Services für vCenter Server-Instanzen](../vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
 * [Verfügbare Services für vCenter Server with Hybridity Bundle-Instanzen](../vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)

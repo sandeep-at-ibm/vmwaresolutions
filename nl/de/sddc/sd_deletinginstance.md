@@ -24,7 +24,7 @@ Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz n
 
 **Achtung** Die gelöschte Instanz wird Ihnen bis zum Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus berechnet.
 
-## Instanzen auf Seite "Bereitgestellte Instanzen" löschen
+## Instanzen auf der Seite "Bereitgestellte Instanzen" löschen
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Suchen Sie in der Tabelle **Cloud Foundation-Instanzen** nach der Instanz, die Sie löschen wollen.
@@ -34,7 +34,7 @@ Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz n
    1. Klicken Sie in der Spalte **Aktionen** erneut auf das Symbol "Löschen".
    2. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
 
-## Instanzen auf Seite mit den Instanzdetails löschen
+## Instanzen auf der Seite mit den Instanzdetails löschen
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf die Instanz, die Sie löschen wollen.

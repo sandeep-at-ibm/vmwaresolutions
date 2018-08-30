@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -16,7 +16,7 @@ IMI kann als einzelner vertrauenswürdiger Provider genutzt werden, um die Über
 
 IMI stellt verwaltete Services für Ihre Cloud Foundation-Instanzen und vCenter Server-Instanzen bereit, unter anderem ein erweitertes VMware vSphere-Management, eine vollständige VMware NSX-Abdeckung zur Gewährleistung einer hoch verfügbaren und sicheren Infrastruktur für virtuelle Netze sowie eine VMware vSAN-Überwachung zur Sicherstellung der Datenverfügbarkeit.
 
-## Technische Spezifikationen
+## Technische Spezifikationen für IMI
 
 Die folgenden Spezifikationen sind im verwalteten Service von IMI enthalten:
 

@@ -28,7 +28,7 @@ In diesem Release wird das VMware vCenter Server on {{site.data.keyword.cloud_no
 
 Der Service "HCX on {{site.data.keyword.cloud_notm}}" steht nur über die vCenter Server with Hybridity Bundle-Instanz zur Verfügung. Sie können für Ihre vorhandene vCenter Server-Instanz ein Upgrade auf eine vCenter Server with Hybridity Bundle-Instanz durchführen, nachdem Sie das Basis-Software-Update für vCenter Server V2.3 angewendet haben. Weitere Informationen enthält der Abschnitt [Updates auf vCenter Server-Instanzen anwenden](../vcenter/vc_applyingupdates.html).
 
-Weitere Informationen zu vCenter Server with Hybridity Bundle finden Sie in:
+Weitere Informationen zu vCenter Server with Hybridity Bundle finden Sie in den folgenden Abschnitten:
 
 * [Übersicht über vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
 * [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle-Instanzen](../vcenter/vc_hybrid_planning.html)
@@ -38,7 +38,7 @@ Weitere Informationen zu vCenter Server with Hybridity Bundle finden Sie in:
 
 Sie können Cluster nun aus einer Instanz löschen, ohne dass hierzu die gesamte Instanz gelöscht werden muss. Für Cluster, die in Instanzen mit V2.2 oder älteren Releases bereitgestellt wurden, müssen Sie ein Upgrade der Instanz auf V2.3 durchführen, um die Cluster löschen zu können, die Sie zu der Instanz hinzugefügt haben.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 * [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](../vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
 * [Cluster für Cloud Foundation-Instanzen hinzufügen, anzeigen und löschen](../sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
@@ -55,7 +55,7 @@ Ab Release V2.3 stehen die folgenden neuen CPU-Modelle für die Bereitstellung z
 * Dual Intel Xeon Silver 4110-Prozessor / 16 Kerne insgesamt, 2,1 GHz
 * Dual Intel Xeon Gold 5120-Prozessor / 28 Kerne insgesamt, 2,2 GHz
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 * [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](../vcenter/vc_addingviewingclusters.html)
@@ -93,7 +93,7 @@ Der Service "HyTrust CloudControl on {{site.data.keyword.cloud_notm}}" ist nun f
 
 Sie können Instanzen bestellen, die den Service enthalten, oder diesen Service später zu Ihren vorhandenen Instanzen hinzufügen.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Komponenten und Hinweise für HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} verwalten](../services/managinghtcc.html)
 
@@ -103,13 +103,13 @@ Der Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" ist nun f�
 
 Sie können Instanzen bestellen, die den Service enthalten, oder diesen Service später zu Ihren vorhandenen Instanzen hinzufügen.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Komponenten und Hinweise für HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} verwalten](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-Das aktuelle Release installiert IBM Spectrum Protect&trade; Plus V10.1.1 als den standardmäßigen Sicherungsservice auf allen neu bereitgestellten Instanzen. Informationen zu den neuen Funktionen in IBM Spectrum Protect Plus V10.1.1 finden Sie unter [Updates für IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+Das aktuelle Release installiert IBM Spectrum Protect&trade; Plus V10.1.1 als den standardmäßigen Sicherungsservice auf allen neu bereitgestellten Instanzen. Weitere Informationen zu den neuen Funktionen in IBM Spectrum Protect Plus V10.1.1 finden Sie unter [Updates für IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ## Neue und aktualisierte Dokumentation
 

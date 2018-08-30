@@ -37,7 +37,7 @@ Tabelle 2. Teileliste für Softwarekomponenten in vCenter Server-Instanzen
 | VMware       | Platform Services Controller    | 6.5 Update 1g |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX for vSphere                 | 6.4.1        |
-| IBM          | CloudDriver                     | 2.4          |
+| IBM          | CloudDriver                     | 2.5          |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
 **Hinweis**: VMware vSAN ist eine optionale Komponente.

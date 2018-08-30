@@ -43,7 +43,7 @@ Wichtige Hinweise, die Sie vor dem Schützen einer VMware Federal-Instanz berüc
 
 (Aktualisiert am 2. April 2018) Sie können jetzt die Kapazität Ihrer VMware Federal-Instanz erweitern oder verringern, indem Sie ESXi-Server hinzufügen oder entfernen. Diese Option ist nur für VMware Federal-Instanzen verfügbar, die nicht geschützt sind.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 * [Übersicht über VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html)
 * [Cluster für VMware Federal-Instanzen hinzufügen, anzeigen und löschen](../vcenter/fed_addviewdeleteclusters.html)
@@ -80,7 +80,7 @@ Wichtige Hinweise, die Sie vor der Auswahl vorhandener VLANs lesen sollten, enth
 
 Mit dem aktuellen Release wird das Update der Komponente "VMware NSX for vSphere 6.3.5" angewendet. Weitere Informationen zu Komponenten finden Sie unter [vCenter Server-Teileliste](../vcenter/vc_bom.html).
 
-Für VMware vCenter Server-Instanzen, die in V2.2 oder höheren Releases bereitgestellt werden, haben sich die Konfigurationseinstellungen für NSX und Portgruppe geändert. Weitere Informationen finden Sie unter *Konfigurationseinstellungenen für NSX und Portgruppe* im Abschnitt [vCenter Server-Softwareteileliste](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
+Für VMware vCenter Server-Instanzen, die in V2.2 oder höheren Releases bereitgestellt werden, haben sich die Konfigurationseinstellungen für NSX und Portgruppe geändert. Weitere Informationen finden Sie unter *Konfigurationseinstellungen für NSX und Portgruppe* im Abschnitt [vCenter Server-Softwareteileliste](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
 
 ### Neue Option für DNS-Konfiguration
 
@@ -140,11 +140,11 @@ Verwaltete Services für Veeam on {{site.data.keyword.cloud_notm}} und für Zert
 
 Der Service "Veeam on {{site.data.keyword.cloud_notm}}" wird nahtlos in Ihre VMware-Hypervisoren integriert und fördert so die Hochverfügbarkeit in Ihrem Unternehmen. Eine vollständig verwaltete Sicherungsumgebung sowohl mit Veeam-Sicherungssoftware als auch IBM Resiliency Backup as a Service kann bereitgestellt werden.
 
-Der Service "Zerto on {{site.data.keyword.cloud_notm}}" stellt Replikations- und Disaster-Recovery-Funktionen bereit, die in die Bereitstellungsangebote integriert werden können, um Daten in Ihrer virtuellen VMware-Umgebung in der {{site.data.keyword.cloud_notm}} zu schützen und wiederherzustellen. Hiermit kann eine vollständig verwaltete Disaster-Recovery-Umgebung sowohl mit Disaster-Recovery-Software von Zerto als auch IBM Resiliency Services bereitgestellt werden.
+Der Service "Zerto on {{site.data.keyword.cloud_notm}}" stellt Replikations- und Disaster-Recovery-Funktionen bereit, die in die Bereitstellungsangebote integriert werden können, um Daten in Ihrer virtuellen VMware-Umgebung in {{site.data.keyword.cloud_notm}} zu schützen und wiederherzustellen. Hiermit kann eine vollständig verwaltete Disaster-Recovery-Umgebung sowohl mit Disaster-Recovery-Software von Zerto als auch IBM Resiliency Services bereitgestellt werden.
 
 Sie können verwaltete Services für Ihre Instanzen auf der Seite **Einführung** anfordern, indem Sie entweder eine neue Instanzbestellung aufgeben oder den Service zu einer vorhandenen Instanz hinzufügen.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Services für Veeam on {{site.data.keyword.cloud_notm}} anfordern](../services/managing_veeam_services.html)
 * [Services für Zerto on {{site.data.keyword.cloud_notm}} anfordern](../services/managing_zerto_services.html)
 
@@ -154,7 +154,7 @@ Weitere Informationen enthalten die folgenden Abschnitte:
 
 * Die Dokumentation für Cloud Foundation- und vCenter Server-Instanzen sowie für VMware vSphere-Cluster umfasst jetzt eine Teileliste für VLANs und Software.
 
-  Weitere Informationen enthalten die folgenden Abschnitte:
+  Weitere Informationen finden Sie in den folgenden Abschnitten:
 
   * [vCenter Server-Teileliste](../vcenter/vc_bom.html)
   * [Cloud Foundation-Teileliste](../sddc/sd_bom.html)

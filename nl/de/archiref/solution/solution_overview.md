@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -25,9 +25,11 @@ Abbildung 1. Übersicht über VMware on {{site.data.keyword.cloud_notm}}
 
 ## Hauptvorteile
 
-VMware Cloud Foundation und vCenter Server on {{site.data.keyword.cloud_notm}} stellen die Grundbausteine bereit, zu denen VMware vSphere, vCenter Server, NSX und Optionen für gemeinsam genutzten Speicher wie vSAN gehören, die erforderlich sind, um eine flexible Architektur für eine durch die VMware-Software definierte Lösung für das Rechenzentrum aufzubauen, die sich am besten für Ihre Workloads eignet. Durch die erweiterte Automatisierung und die Bare-Metal-Infrastruktur für einzelne Tenants können Sie schnell die gesamte VMware-Umgebung in der {{site.data.keyword.cloud_notm}} bereitstellen und innerhalb weniger Stunden auf Ihre virtuelle Umgebung mit Ihren bevorzugten Tools zugreifen. Zu diesem Zeitpunkt können Sie auf die von IBM gehostete Umgebung über native VMware-Clients, Befehlszeilenschnittstellen (Command Line Interface, CLI), vorhandene Scripts oder durch andere vertraute und mit der vSphere-API kompatible Tools zugreifen und Managementoperationen ausführen.
+VMware Cloud Foundation und vCenter Server on {{site.data.keyword.cloud_notm}} stellen die Grundbausteine bereit, zu denen VMware vSphere, vCenter Server, NSX und Optionen für gemeinsam genutzten Speicher wie vSAN gehören. Diese Komponenten sind erforderlich, um eine flexible Architektur für eine durch die VMware-Software definierte Lösung für das Rechenzentrum aufzubauen, die sich am besten für Ihre Workloads eignet. 
 
-Nach der Bereitstellung können Sie ESXi-Hostknoten hinzufügen und die Sicherung und Aktualisierung für einige Managementkomponenten verwalten. {{site.data.keyword.cloud_notm}} Professional Services und Managed Services sind ebenfalls verfügbar, um Ihren Einstieg in die Cloud mit Angeboten wie Migration, Implementierung und Onboarding-Services zu beschleunigen.
+Durch die erweiterte Automatisierung und die Bare-Metal-Infrastruktur für einzelne Tenants können Sie zügig innerhalb weniger Stunden die gesamte VMware-Umgebung in der {{site.data.keyword.cloud_notm}} bereitstellen. Anschließend können Sie auf die von IBM gehostete Umgebung über native VMware-Clients, Befehlszeilenschnittstellen (Command Line Interface, CLI), vorhandene Scripts oder durch andere vertraute und mit der vSphere-API kompatible Tools zugreifen und Managementoperationen ausführen.
+
+Nach der Bereitstellung können Sie ESXi-Hostknoten hinzufügen und die Sicherung und Aktualisierung für einige Managementkomponenten verwalten.{{site.data.keyword.cloud_notm}} Professional Services und Managed Services sind ebenfalls verfügbar, um Ihren Einstieg in die Cloud mit Angeboten wie Migration, Implementierung und Onboarding-Services zu beschleunigen.
 
 Die VMware on {{site.data.keyword.cloud_notm}}-Angebote bieten die folgenden Vorteile:
 

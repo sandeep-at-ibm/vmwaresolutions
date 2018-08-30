@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -37,9 +37,9 @@ Falls Sie Instanzen aus Releases vor V1.4 verwenden und auch weiterhin verwenden
 
 Führen Sie zum Versetzen Ihrer Instanzen aus Releases vor V1.4 auf neue Instanzen die folgenden Schritte in vSphere Web Client aus:
 1. Exportieren Sie alle virtuellen Maschinen (VMs) aus der Instanz aus einem Release vor V1.4.
-2. Erstellen Sie im aktuellen Release eine neue Instanz.
+2. Erstellen Sie im aktuellen Release eine Instanz.
 3. Importieren Sie alle VMs, die Sie in **Schritt 1** exportiert haben.
-4. Verwenden Sie ab sofort Ihre neue Instanz.
+4. Verwenden Sie die neue Instanz.
 
 Weitere Informationen zum Exportieren und Importieren von VMs finden Sie in der VMware vSphere-Dokumentation.
 

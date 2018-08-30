@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-11"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-19"
 
 Überprüfen Sie die nachstehenden Voraussetzungen, bevor Sie VMware vSphere on {{site.data.keyword.cloud}} bestellen. Legen Sie der Planung für Ihre VMware vSphere-Cluster den Standort des {{site.data.keyword.CloudDataCent_notm}} sowie Ihre Anforderungen an Workloadkapazität zugrunde.
 
-**Hinweis**: Für die Einrichtung der Umgebung, die Installation und die Konfiguration der verschiedenen VMware-Komponenten nach der Bereitstellung der ESXi-Server sind Sie selbst zuständig. Zu diesen Komponenten gehören u. a. VMware vCenter Server, VMware NSX und VMware vSAN.
+**Hinweis**: Für die Einrichtung der Umgebung, die Installation und die Konfiguration der verschiedenen VMware-Komponenten nach der Bereitstellung der ESXi-Server sind Sie selbst zuständig. Bei den folgenden Beispielen handelt es sich um VMware-Komponenten: VMware vCenter Server, VMware NSX und VMware vSAN.
 
 ## Voraussetzungen für IBM Cloud-Konto
 

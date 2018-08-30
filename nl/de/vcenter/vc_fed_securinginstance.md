@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -18,7 +18,6 @@ Lesen Sie die folgenden Informationen aufmerksam durch um die Konsequenzen zu ve
 
 * Notieren Sie sich alle Berechtigungsnachweise, die Sie für Ihre Umgebung benötigen könnten, und bewahren Sie sie an einem sicheren Ort auf, bevor Sie diese Prozedur ausführen. Alle Berechtigungsnachweise für Ihre Umgebung werden aus der {{site.data.keyword.vmwaresolutions_full}} Datenbank gelöscht und können nicht mehr abgerufen werden, nachdem die Aktion zum Schützen aufgerufen wurde.
 * Nachdem Sie die Aktion zum Schützen aufgerufen haben, werden mit Ausnahme des vollständigen Löschens der Instanz alle Managementfunktionen inaktiviert.
-* Das VMware NSX Edge Services Gateway (ESG) für abgehenden HTTPS-Managementdatenverkehr und die virtuelle Maschine für IBM CloudDriver werden im Rahmen der Aktion für das Schützen der bereitgestellten VMware Federal-Instanz gelöscht.
 
 ## Vorgehensweise
 
@@ -28,7 +27,10 @@ Lesen Sie die folgenden Informationen aufmerksam durch um die Konsequenzen zu ve
 4. Klicken Sie auf **Instanz schützen**.
 5. Klicken Sie auf **OK**, um zu bestätigen, dass Sie die Verbindung zu der Instanz von der Automation trennen möchten.
 
-   **Hinweis**: Vergewissern Sie sich, dass Sie die wichtigen Informationen unter **Vorbereitende Schritte** gelesen haben müssen, bevor Sie diesen Schritt ausführen.
+  **Hinweis**: Vergewissern Sie sich, dass Sie die wichtigen Informationen unter **Vorbereitende Schritte** gelesen haben müssen, bevor Sie diesen Schritt ausführen.
+
+6. Entfernen Sie die öffentlichen Management-Services für VMware NSX Edge Services Gateway (ESG) in Ihrer Umgebung und bei Bedarf auch das vom Kunden verwaltete VMware NSX Edge Services Gateway (ESG), das bei der Automatisierung bereitgestellt wird.
+7. Setzen Sie Kennwörter und Schlüssel für alle von der IBM Automatisierung verwendeten Konten zurück. Weitere Informationen hierzu finden Sie auf der Seite zum [Schützen der Umgebung durch Entfernen des IBM Automatisierungs- und Supportzugriffs](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/).
 
 ## Ergebnisse
 

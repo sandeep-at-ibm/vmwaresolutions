@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -28,7 +28,7 @@ Active Directory dient nur zur Authentifizierung von Zugriffen für die Verwaltu
 
 Die SSO-Domäne (Single Sign On) für vSphere wird als erster Authentifizierungsmechanismus für eine einzelne Instanz oder mehrere verknüpfte Instanzen verwendet. Die SSO-Domäne dient außerdem dazu, eine VMware-Instanz oder mehrere verknüpfte Instanzen mit dem Microsoft Active Directory-Server zu verbinden. Die folgende SSO-Konfiguration wird angewendet:  
 * Die SSO-Domäne von `vsphere.local` wird immer verwendet.
-* Für VMware-Instanzen, die an eine vorhandene Instanz gebunden sind, werden die Platform Services Controller (PSC) mit der SSO-Domäne der vorhandenen Instanz verknüpft.
+* Für VMware-Instanzen, die an eine vorhandene Instanz gebunden sind, wird Platform Services Controller (PSC) mit der SSO-Domäne der vorhandenen Instanz verknüpft.
 * Der SSO-Standortname stimmt mit dem Instanznamen überein.
 
 ## Domain Name Services (DNS)

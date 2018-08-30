@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -63,7 +63,7 @@ Für Nicht-Business-Partner-Benutzer können die von IBM bereitgestellten VMware
 * Es ist eine Lizenz mit mindestens 8 CPUs erforderlich, die für 4 Server mit 2 CPUs pro Server verwendet wird. Die Lizenzauswahl für jede VMware-Komponente gilt für die Basisinstanz und für alle ESXi-Server, die Sie später zur Instanz hinzufügen. Sie müssen daher sicherstellen, dass Ihre Lizenz eine zukünftige Kapazitätserweiterung in Ihrer Infrastruktur unterstützt.
 * Die mindestens erforderlichen Lizenzeditionen sind in der Benutzerschnittstelle angegeben. Falls unterschiedliche Komponenteneditionen unterstützt werden, können Sie die gewünschte Edition auswählen. Es liegt in Ihrer Verantwortung, zu gewährleisten, dass der bereitgestellte Lizenzschlüssel für jede ausgewählte VMware-Komponente korrekt ist.
 * Für vSphere wird zum Zeitpunkt der Bestellung eine Lizenzgebühr berechnet, anschließend wird die Lizenzgebühr dann aber Ihrem Konto gutgeschrieben.
-* Sie können alle Lizenzen ändern, die Sie mit VMware vSphere Web Client bereitgestellt haben, nachdem die Implementierung der Instanz abgeschlossen ist.
+* Sie können alle Lizenzen ändern, die Sie mit VMware vSphere Web Client bereitgestellt haben, nachdem die Bereitstellung der Instanz abgeschlossen ist.
 * Die Unterstützung für die VMware-Komponenten, für die Sie Lizenzen bereitstellen, wird von VMware und nicht vom IBM Support zur Verfügung gestellt.
 
 ## Einstellungen für Bare Metal Server
@@ -91,7 +91,7 @@ Wählen Sie das CPU-Modell und den RAM (Arbeitsspeicher) für den Bare Metal Ser
 
 Tabelle 2. Optionen für angepasste {{site.data.keyword.baremetal_short}}-Instanzen
 
-| CPU-Optionen        | RAM-Optionen       |
+| CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
@@ -225,7 +225,9 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
    * Klicken Sie auf **Primäre Instanz**, um eine einzelne Instanz in der Umgebung bereitzustellen oder um die erste Instanz in einer Topologie mit mehreren Standorten bereitzustellen.
    * Klicken Sie auf **Sekundäre Instanz**, um die Instanz mit einer vorhandenen (primären) Instanz in der Umgebung zu verbinden, um eine hohe Verfügbarkeit zu erreichen, und führen Sie dann die folgenden Schritte aus:
      1. Wählen Sie die primäre Instanz aus, mit der die sekundäre Instanz verbunden werden soll.
-     2. Geben Sie das PSC-Administratorkennwort für die primäre Instanz ein.
+     2. Wenn für die primäre Instanz, die Sie ausgewählt haben, ein Upgrade auf das Release der Version 2.5 durchgeführt wurde oder die primäre Instanz in Version 2.4 und früheren Releases bereitgestellt oder aktualisiert wurde, überprüfen Sie das voreingetragene **** Administratorkennwort für die PSC in der primären Instanz, um sicherzustellen, dass es korrekt ist.
+     
+        **Hinweis:** Das Feld für **** das Administratorkennwort für PSC in der primären Instanz ist nicht für primäre Instanzen verfügbar, die in Version 2.5 oder höheren Releases bereitgestellt werden.     
 5. Geben Sie die Lizenzeinstellungen für die Instanzkomponenten ein.  
    *  Zur Verwendung der von IBM bereitgestellten Lizenzen müssen Sie **In Kauf einbeziehen** und bei Bedarf die Lizenzedition auswählen.
    *  Zur Verwendung einer eigenen Lizenz müssen Sie **Lizenz selbst bereitstellen** auswählen und den Lizenzschlüssel eingeben.

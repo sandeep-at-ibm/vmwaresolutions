@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-03-16"
 ## Lösung
 
 Gehen Sie zur Bereitstellung einer OVF-Datei (Open Virtualization Format) mittels vSphere Web Client wie folgt vor:
-1. Bevor Sie versuchen, die Bereitstellung auszuführen, müssen Sie die folgenden Hostinformationen zur Datei `/etc/hosts` hinzufügen:
+1. Bevor Sie versuchen, eine OVF-Datei bereitzustellen, fügen Sie die folgenden Hostinformationen zur Datei `/etc/hosts` hinzu:
 
    * Hostinformationen für Platform Services Controller (PSC)
    * Hostinformationen für VMware ESXi-Server

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -22,7 +22,7 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 
 ## Systemeinstellungen
 
-Wenn Sie eine NetApp ONTAP Select-Instanz bestellen, müssen Sie die folgenden Basiseinstellungen angeben.
+Wenn Sie eine NetApp ONTAP Select-Instanz bestellen, müssen Sie die zugehörigen Basiseinstellungen angeben.
 
 ### Instanzname
 
@@ -74,16 +74,16 @@ Sie müssen das {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) auswäh
 
 ### Bare Metal Server-Konfiguration
 
-Sie können die Auswahl der Bare Metal Server-Konfiguration an Ihren Anforderungen ausrichten:
+Wählen Sie eine Ihren Anforderungen entsprechende Bare Metal Server-Konfiguration aus:
 * **Hohe Leistung (mittel)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 59 TB
 * **Hohe Leistung (groß)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 3,8-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 118 TB
 * **Hohe Kapazität** – Standard-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 64 GB RAM / Kapazität von 34 4-TB-SATA-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 190 TB
 
-**Hinweis:** 3,8-TB-Solid-State-Platten (SSD) werden unterstützt, wenn sie allgemein in einem {{site.data.keyword.CloudDataCent_notm}} verfügbar gemacht werden.
+**Hinweis:** 3,8-TB-Solid-State-Platten (SSD) werden unterstützt, wenn sie in einem {{site.data.keyword.CloudDataCent_notm}} allgemein verfügbar gemacht werden.
 
 ### Bare Metal Server-Anzahl
 
-Die Anzahl der ESXi-Server einer NetApp ONTAP Select-Instanz ist standardmäßig 4. Dieser Wert kann nicht geändert werden. Alle ESXi-Server nutzen dieselbe Konfiguration.
+Die Anzahl der ESXi-Server einer NetApp ONTAP Select-Instanz ist standardmäßig 4. Dieser Wert kann nicht geändert werden. Alle ESXi-Server verfügen über dieselbe Konfiguration.
 
 ## Vorgehensweise
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-08"
 
 ---
 
@@ -26,7 +26,9 @@ Jeder Service erstellt ein internes Benutzerkonto in vCenter Server. Dieses Kont
 
 **Wichtig**: Um Ausfälle und Verbindungsprobleme zu vermeiden, sollten Sie beim Ändern der Benutzer-ID, des Kennworts oder der Einstellungen für den Ablauf des Kennworts für dieses Benutzerkonto sicherstellen, dass auch die Informationen im zugeordneten Service geändert werden.
 
-Die Benutzer-ID für dieses Konto ist im Format `<service_name>-<service_uuid>@VSPHERE.LOCAL` angegeben. Die Benutzer-ID, die vom Service "Veeam on {{site.data.keyword.cloud_notm}}" verwendet wird, um eine vCenter Server-Verbindung zur Durchführung geplanter Sicherungen herzustellen, lautet z. B. `Veeam-<Veeam_uuid>@VSPHERE.LOCAL`.
+Die Benutzer-ID für dieses Konto ist im Format `<service_name>-<truncated service_uuid>@test.local` oder `<service_name>-<truncated service_uuid>@example-domain.local` angegeben. Die Benutzer-ID, die vom Service "Veeam on {{site.data.keyword.cloud_notm}}" verwendet wird, um eine vCenter Server-Verbindung zur Durchführung geplanter Sicherungen herzustellen, lautet z. B. `Veeam-<Veeam_uuid>@test.local`.
+
+**Hinweis**: Die aus `<service_name>` und `<service_uuid>` zusammengesetzte Zeichenfolge wird bei einer Länge von 20 Zeichen abgeschnitten.
 
 ## VMware-Ressourcen für vCenter Server-Instanzen (V1.9 und höher)
 

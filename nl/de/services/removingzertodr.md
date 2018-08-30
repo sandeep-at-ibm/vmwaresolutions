@@ -21,7 +21,7 @@ Der Löschprozess für den Service "Zerto on {{site.data.keyword.cloud}}" ist au
 5. Nachdem Ihre Anforderung zum Entfernen des Service akzeptiert wurde, ändert sich der Servicestatus in **Wird entfernt** und die folgenden Schritte zum Entfernen werden ausgeführt:   
    1. Zerto Virtual Replication Appliances, die auf allen ESXi-Servern bereitgestellt wurden, werden entfernt.
    2. Zerto Virtual Replication wird deinstalliert.
-   3. Die virtuelle Serverinstanz (VSI) von Windows, in der Zerto Virtual Replication installiert war, wird gelöscht.
+   3. Die virtuelle Serviceinstanz (VSI) von Windows, in der Zerto Virtual Replication installiert war, wird gelöscht.
    4. Das private portierbare Teilnetz, das für die Kommunikation von Zerto Virtual Replication bestellt wurde, wird an die {{site.data.keyword.cloud_notm}}-Infrastruktur zurückgegeben.   
    5. Die Gebühren für den Disaster-Recovery-Service von Zerto werden aus Ihrer {{site.data.keyword.cloud_notm}}-Abrechnungsanweisung entfernt.
 

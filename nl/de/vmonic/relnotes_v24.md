@@ -58,7 +58,7 @@ Weitere Informationen enthält der Abschnitt *Einstellungen für Bare Metal Serv
 
 ### Leistungsverbesserung für Network File System
 
-Die Leistungsstufe von 10 E/A-Operationen pro Sekunde und GB, die für die anspruchsvollsten Workloadtypen konzipiert ist, ist nicht mehr auf bestimmte {{site.data.keyword.CloudDataCent_notm}} begrenzt, sondern ist nun für alle Rechenzentren verfügbar. Weitere Informationen finden Sie im Abschnitt *Speicher* unter [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications).
+Die Leistungsstufe von 10 E/A-Operationen pro Sekunde und GB, die für die anspruchsvollsten Workloadtypen konzipiert ist, ist nicht mehr auf bestimmte {{site.data.keyword.CloudDataCent_notm}} begrenzt, sondern ist nun für alle Rechenzentren verfügbar. Weitere Informationen finden Sie im Abschnitt *Speicher* unter [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## Updates für VMware Federal-Instanzen
 
@@ -70,7 +70,7 @@ Sie können VMware Federal-Instanzen nun für das {{site.data.keyword.CloudDataC
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-Das aktuelle Release installiert IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1 auf allen neu bereitgestellten Instanzen. Informationen zu den neuen Funktionen in IBM Spectrum Protect Plus V10.1.1 Patch 1 finden Sie unter [Updates für IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+Das aktuelle Release installiert IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1 auf allen neu bereitgestellten Instanzen. Weitere Informationen zu den neuen Funktionen in IBM Spectrum Protect Plus V10.1.1 Patch 1 finden Sie unter [Updates für IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ### VMware HCX on IBM Cloud
 
@@ -86,7 +86,7 @@ Das Dokument zur {{site.data.keyword.vmwaresolutions_short}}-Architektur steht n
 
 Die Serviceinformationen wurden neu strukturiert und die Navigation wurde verbessert, damit relevante Informationen beim Bestellen von Services leicht gefunden werden können.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 * [F5 on {{site.data.keyword.cloud_notm}} bestellen](../services/f5_ordering.html)
 * [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} bestellen](../services/fsa_ordering.html)

@@ -122,7 +122,7 @@ Tabelle 1. VLAN- und Teilnetzzusammenfassung
 
 | VLAN | Typ | Beschreibung |
 |:---- |:---- |:----------- |
-| Öffentlich | Primär  | Physischen Hosts für öffentlichen Netzzugriff zugeordnet. Bei der Erstbereitstellung nicht verwendet. |
+| Öffentlich| Primär  | Physischen Hosts für öffentlichen Netzzugriff zugeordnet. Bei der Erstbereitstellung nicht verwendet. |
 | Privat A | Primär  | Einzelnes Teilnetz, das physischen Hosts zugeordnet ist, die von {{site.data.keyword.cloud_notm}} zugeordnet werden. Von der Managementschnittstelle für vSphere-Managementdatenverkehr verwendet. |
 | Privat A | Portierbar | Einzelnes Teilnetz, das virtuellen Maschinen zugeordnet ist, die als Managementkomponenten fungieren |
 | Privat A | Portierbar | Einzelnes Teilnetz, das NSX-VTEP zugeordnet ist |

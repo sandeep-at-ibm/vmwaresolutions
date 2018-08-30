@@ -24,13 +24,13 @@ In diesem Design wird ein einzelner externer PSC als virtuelle Appliance in eine
 
 Tabelle 1. Spezifikationen für Platform Services Controller
 
-| Attribut                     | Spezifikation                  |
+| Attribut                    | Spezifikation                  |
 |------------------------------|--------------------------------|
 | Platform Services Controller | Virtual Appliance              |
-| Anzahl vCPUs                 | 2                              |
-| Speicher                     | 4 GB                           |
-| Festplattenspeicher          | 114 GB in lokalem VMFS-Datenspeicher |
-| Plattentyp                   | Thin Provisioning-Platte       |
+| Anzahl vCPUs              | 2                              |
+| Speicher                       | 4 GB                           |
+| Festplattenspeicher                         | 114 GB in lokalem VMFS-Datenspeicher |
+| Plattentyp                    | Thin Provisioning-Platte               |
 
 Dem PSC, der sich in der primären Instanz befindet, wird die SSO-Standarddomäne `vsphere.local` zugeordnet.
 
@@ -40,15 +40,15 @@ Der vCenter Server wird ebenfalls als virtuelle Appliance bereitgestellt. Darüb
 
 Tabelle 2. vCenter Server Appliance-Spezifikationen
 
-| Attribut                     | Spezifikation                       |
+| Attribut                    | Spezifikation                       |
 |------------------------------|-------------------------------------|
 | vCenter Server               | Virtual Appliance                   |
-| Appliance-Installationsgröße | Mittel (bis zu 400 Hosts, 4000 VMs) |
-| Platform Services Controller | Extern                              |
-| Anzahl vCPUs                 | 8                                   |
-| Speicher                     | 24 GB                               |
-| Festplattenspeicher          | 400 GB auf lokalem Datenspeicher    |
-| Plattentyp                   | Thin Provisioning-Platte            |
+| Appliance-Installationsgröße  | Mittel (bis zu 400 Hosts, 4000 VMs) |
+| Platform Services Controller | Extern                            |
+| Anzahl vCPUs              | 8                                   |
+| Speicher                       | 24 GB                               |
+| Festplattenspeicher                         | 400 GB auf lokalem Datenspeicher           |
+| Plattentyp                    | Thin Provisioning-Platte                    |
 
 ### vCenter Server-Datenbank
 
@@ -70,7 +70,7 @@ In diesem Design wird vSphere High Availability (HA) im ersten Cluster und in we
 
 **Hinweis:** Sie sind dafür verantwortlich, die Zugangssteuerungsrichtlinie anzupassen, wenn der Cluster später erweitert oder verkleinert wird.
 
-Die Option der VM-Neustartpriorität (**VM restart priority**) wird auf Mittel ("medium") gesetzt und die Option der Antwort für Hostisolation (**Host isolation response**) wird inaktiviert. Darüber hinaus wird die VM-Überwachung (**VM monitoring**) inaktiviert und die Funktion zum Austausch von Datenspeicherüberwachungssignalen (**Datastore Heartbeating**) wird so konfiguriert, dass alle Clusterdatenspeicher einbezogen werden. Dieses Konzept verwendet die NAS-Datenspeicher, wenn sie vorhanden sind.
+Die Option der VM-Neustartpriorität (**VM restart priority**) wird standardmäßig auf Mittel ("medium") gesetzt und die Option der Antwort für Hostisolation (**Host isolation response**) wird inaktiviert. Darüber hinaus wird die VM-Überwachung (**VM monitoring**) inaktiviert und die Funktion zum Austausch von Datenspeicherüberwachungssignalen (**Datastore Heartbeating**) wird so konfiguriert, dass alle Clusterdatenspeicher einbezogen werden. Dieses Konzept verwendet die NAS-Datenspeicher, wenn sie vorhanden sind.
 
 ## Automatisierung
 

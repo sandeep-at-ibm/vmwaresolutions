@@ -74,7 +74,7 @@ Die vSphere-Hochverfügbarkeit reserviert jedoch standardmäßig 50% von CPU und
 
 `50% von 2 * 16 Kernen * 2,1 GHz = 33,6 GHz verfügbar`
 
-Da auf den ESXi-Servern weitere Workloads wie beispielsweise IBM CloudDriver, VMware NSX Controller oder VMware NSX Edge vorhanden sind, wird bei Verwendung dieser Ressourcen die dritte Voraussetzung nicht erfüllt. Der Grund hierfür ist, dass für die beiden FortiGate-VMs 33,6 GHz CPU und 24 GB RAM erforderlich sind.
+Da auf den ESXi-Servern weitere Workloads wie beispielsweise VMware vCenter Server, VMware NSX Controller oder VMware NSX Edge vorhanden sind, wird bei Verwendung dieser Ressourcen die dritte Voraussetzung nicht erfüllt. Der Grund hierfür ist, dass für die beiden FortiGate-VMs 33,6 GHz CPU und 24 GB RAM erforderlich sind.
 
 In diesem Fall schlägt die Installation von FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} fehl, sofern nicht mindestens ein ESXi-Server zur Umgebung hinzugefügt wird und die Failoverreservierungen der vShpere-Hochverfügbarkeit entsprechend aktualisiert werden, damit ausreichend Ressourcen für die beiden FortiGate-VMs gewährleistet sind.
 

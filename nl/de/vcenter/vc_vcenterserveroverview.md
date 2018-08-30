@@ -99,7 +99,7 @@ Die Option "vSAN" bietet angepasste Konfigurationen mit unterschiedlichen Option
 
   Zusätzlich werden 2 Cacheplatten mit 960 GB pro Host bestellt.
 
-  **Hinweis:** 3,8-TB-Solid-State-Platten (SSD) werden unterstützt, wenn sie allgemein in einem Rechenzentrum verfügbar gemacht werden.
+  **Hinweis:** 3,8-TB-Solid-State-Platten (SSD) werden unterstützt, wenn sie in einem Rechenzentrum allgemein verfügbar gemacht werden.
 
 Die Option "NFS" bietet angepassten gemeinsam genutzten Speicher auf Dateiebene für Workloads mit verschiedenen Optionen für Größe und Leistung:
 * Größe: 1, 2, 4, 8 oder 12 TB

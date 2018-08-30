@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 
 ---
 
 # Benutzer für den Zugriff auf Services und Ressourcen einladen
 
-{{site.data.keyword.vmwaresolutions_full}} ist für die Zusammenarbeit unter mehreren Benutzern in {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) integriert. Nach der Registrierung für ein {{site.data.keyword.cloud_notm}}-Konto und der Anmeldung an der {{site.data.keyword.vmwaresolutions_short}}-Konsole können Sie dem {{site.data.keyword.cloud_notm}}-Konto Benutzer hinzufügen, sodass diese Benutzer die Services und Ressourcen, die für das Konto bereitgestellt wurden, gemeinsam nutzen können.
+{{site.data.keyword.vmwaresolutions_full}} ist für die Zusammenarbeit unter mehreren Benutzern in {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) integriert. Nach der Registrierung für ein {{site.data.keyword.cloud_notm}}-Konto und der Anmeldung an der {{site.data.keyword.vmwaresolutions_short}}-Konsole können Sie dem {{site.data.keyword.cloud_notm}}-Konto Benutzer hinzufügen. Diese hinzugefügten Benutzer können die Services und Ressourcen, die für das Konto bereitgestellt werden, gemeinsam nutzen.
 
 ## Vorbereitende Schritte
 
@@ -25,12 +25,12 @@ lastupdated: "2018-07-27"
 4. Erweitern Sie im Abschnitt **Zugriff** die Option **Services** und führen Sie die folgenden Tasks aus:
    1. Wählen Sie **Ressource** in der Liste **Zugriff zuweisen für** aus.
    2. Wählen Sie **VMware-Lösungen** in der Liste **Services** aus.
-   3. Wählen Sie die Plattformzugriffsrolle aus, die Sie den Benutzern zuweisen wollen, das heißt, **Administrator**, **Editor**, **Operator** oder **Anzeigeberechtigter** (Viewer).
+   3. Wählen Sie die Plattformzugriffsrolle aus, die den Benutzern zugewiesen werden soll. Mögliche Rollen sind **Administrator**, **Editor**, **Operator** und **Anzeigeberechtigter**.
 5. Klicken Sie auf **Benutzer einladen**.
 
 ## Ergebnisse
 
-Sobald die hinzugefügten Benutzer Ihre Einladung akzeptiert haben, können sie sich an der {{site.data.keyword.vmwaresolutions_short}}-Konsole anmelden und in ihren Profileinstellungen zu Ihrem Konto wechseln, indem sie auf ihren Avatar in der rechten oberen Ecke der {{site.data.keyword.vmwaresolutions_short}}-Konsole klicken. Anschließend können die hinzugefügten Benutzer zusammenarbeiten und die Services und Ressourcen, die in Ihrem angegebenen Konto verfügbar sind, gemeinsam nutzen.
+Sobald die hinzugefügten Benutzer Ihre Einladung akzeptiert haben, können sie sich an der {{site.data.keyword.vmwaresolutions_short}}-Konsole anmelden und zu Ihrem Konto wechseln. Den Wechsel führen die Benutzer durch, indem sie in ihren Profileinstellungen in der rechten oberen Ecke der {{site.data.keyword.vmwaresolutions_short}}-Konsole auf ihren Avatar klicken. Anschließend können die hinzugefügten Benutzer zusammenarbeiten und die Services und Ressourcen, die in Ihrem angegebenen Konto verfügbar sind, gemeinsam nutzen.
 
 ### Zugehörige Links
 

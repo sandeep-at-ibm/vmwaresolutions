@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -14,7 +14,7 @@ Prüfen Sie die folgenden Hinweise und Einschränkungen, wenn Sie mit {{site.dat
 
 ## Automatische Installation von Windows-Updates
 
-Microsoft Active Directory (AD) bzw. der Domänennamensserver (DNS) wird automatisch für das Herunterladen von Updates konfiguriert. Weder die Installation dieser Updates noch der Warmstart wird automatisch durchgeführt. Sie müssen die Updates manuell installieren und den Warmstart zu einem geplanten Zeitpunkt ausführen, zu dem Unterbrechungen der laufenden AD-Serverkonfiguration und anderen Sicherungsjobs vermieden werden. Um Windows-Updates anzuwenden, installieren Sie die Updates manuell.
+Microsoft Active Directory (AD) bzw. der Domänennamensserver (DNS) wird automatisch ausschließlich für das Herunterladen der Updates konfiguriert. Weder die Installation dieser Updates noch Neustart wird automatisch durchgeführt. Sie müssen die Updates manuell installieren und den Neustart zu einem geplanten Zeitpunkt ausführen, zu dem Unterbrechungen der laufenden AD-Serverkonfiguration und anderen Sicherungsjobs vermieden werden. Um Windows-Updates anzuwenden, installieren Sie die Updates manuell.
 
 ## Hinweise zur Auswahl eines Rootdomänennamens für Cloud Foundation-Instanzen
 

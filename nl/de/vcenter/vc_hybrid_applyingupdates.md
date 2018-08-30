@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-07"
 
 ---
 
@@ -46,7 +46,7 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
    * Wenn neue ESXi-Server hinzugefügt werden.
    * Wenn neue Cluster hinzugefügt werden.
 
-5. Klicken Sie für Lizenzaktualisierungen auf **Aktualisierung der Lizenz**. Wählen Sie in der Liste die Edition aus, auf die das Upgrade durchgeführt werden soll, und klicken Sie dann auf **Upgrade**. Downgrades für Lizenzeditionen sind nicht verfügbar.
+5. Klicken Sie für Lizenzaktualisierungen auf **Upgrade**. Wählen Sie in der Liste die Edition aus, auf die das Upgrade durchgeführt werden soll, und klicken Sie dann auf **Upgrade**. Downgrades für Lizenzeditionen sind nicht verfügbar.
 
    **Hinweis:** Die Aktualisierung der Lizenz ersetzt alle vorhandenen NSX-Lizenzen in der Instanz. Zusätzliche Gebühren können bei einer Überschneidung von alten und neuen Lizenzen entstehen, wenn Sie ein Upgrade in der Mitte eines Abrechnungszyklus durchführen. Um zusätzliche Gebühren zu vermeiden, wird empfohlen, die Lizenz am Ende des Abrechnungszyklus zu aktualisieren.
 

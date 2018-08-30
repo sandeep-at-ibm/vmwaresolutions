@@ -27,7 +27,7 @@ Die folgenden Spezifikationen werden mit dem Service "KMIP for VMware on {{site.
 
 KMIP for VMware on {{site.data.keyword.cloud_notm}} verwendet den Service "IBM Key Protect for {{site.data.keyword.cloud_notm}}", um Verschlüsselungsschlüssel zu erstellen, zu verschlüsseln und zu entschlüsseln. Daher müssen Sie vor dem Installieren von KMIP for VMware on {{site.data.keyword.cloud_notm}} Folgendes sicherstellen:
 * Sie haben einen verwendbaren Key Protect-Service bestellt.
-* Es wurde eine {{site.data.keyword.cloud_notm}}-Service-ID unter Beachtung der Schritte in [Service-ID erstellen](https://console.bluemix.net/docs/iam/serviceid.html#creating-a-service-id) erstellt. Diese Service-ID wird verwendet, um auf die von Ihnen Instanz des Key Protect-Service zuzugreifen.
+* Es wurde eine {{site.data.keyword.cloud_notm}}-Service-ID unter Beachtung der Schritte in [Service-ID erstellen](https://console.bluemix.net/docs/iam/serviceid.html#creating-a-service-id) erstellt. Diese Service-ID wird verwendet, um auf die von Ihnen erstellte Instanz des Key Protect-Service zuzugreifen.
 * Sie haben die folgenden Zugriffsebenen für die Service-ID erteilt:
    * Auf Plattformzugriffsebene: Anzeigeberechtigung für Ihre Instanz von IBM Key Protect.
    * Auf Servicezugriffsebene: Schreibberechtigung für Ihre Instanz von IBM Key Protect

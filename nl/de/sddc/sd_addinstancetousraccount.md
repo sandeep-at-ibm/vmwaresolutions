@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-08"
 
 ---
 
@@ -26,7 +26,7 @@ Bei Instanzen, die in Version 2.4 und älteren Releases bereitgestellt wurden, k
 ## Ergebnisse
 
 1. Sie empfangen eine Konsolbenachrichtigung, dass Ihre Anforderung zum Migrieren der Instanz auf das angegebene {{site.data.keyword.cloud_notm}}-Konto akzeptiert wurde.
-2. Wenn die Migration der Instanz abgeschlossen ist, wird die Instanz auf der Seite **Bereitgestellte Instanzen** unter dem Konto angezeigt, auf das sie migriert wurde. Die migrierte Instanz wird nicht mehr in dem ursprünglichen Konto angezeigt, aus dem sie migriert wurde.
+2. Wenn die Instanzmigration abgeschlossen ist, wird die Instanz auf der Seite **Bereitgestellte Instanzen** unter dem Konto angezeigt, auf das sie migriert wurde. Die migrierte Instanz wird nicht mehr in dem ursprünglichen Konto angezeigt, aus dem sie migriert wurde.
 
 ### Zugehörige Links
 

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
 # Systembenachrichtigungen verwalten
 
-Sie können Benachrichtigungen über den Status von System- oder Benutzeroperationen überprüfen. Mithilfe der Informationen können Sie darüber hinaus aufgetretene Probleme diagnostizieren und lösen.
+Sie können Benachrichtigungen über den Status von System- oder Benutzeroperationen überprüfen. Mithilfe der Informationen können Sie darüber hinaus potenzielle Probleme überprüfen.
 
 ## Benachrichtigungen anzeigen
 
@@ -69,7 +69,7 @@ Sie können Benachrichtigungen über den Status von System- oder Benutzeroperati
 
 ## Benachrichtigungen filtern
 
-Standardmäßig werden alle nicht gelesenen Benachrichtigungen angezeigt. Sie können die Benachrichtigungen nach Status, Prioritätsstufe und Typ filtern. Wählen Sie zum Filtern der Benachrichtigungen in den Dropdown-Listen **Status**, **Prioritätsstufe** oder **Typ** nur die Kontrollkästchen für die Elemente aus, die angezeigt werden sollen.
+Standardmäßig werden alle nicht gelesenen Benachrichtigungen angezeigt. Sie können die Benachrichtigungen nach Status, Prioritätsstufe und Typ filtern. Wählen Sie zum Filtern der Benachrichtigungen in den Listen **Status**, **Prioritätsstufe** oder **Typ** nur die Kontrollkästchen für die Elemente aus, die angezeigt werden sollen.
 
 ### Zugehörige Links
 

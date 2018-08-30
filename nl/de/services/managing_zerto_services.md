@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
 # Verwaltete Services für Zerto on IBM Cloud anfordern
 
-Der Service "Zerto on {{site.data.keyword.cloud}}" stellt Replikations- und Disaster-Recovery-Funktionen bereit, die in die Bereitstellungsangebote integriert werden können, um Daten in Ihrer virtuellen VMware-Umgebung in der {{site.data.keyword.cloud_notm}} zu schützen und wiederherzustellen.
+Der Service "Zerto on {{site.data.keyword.cloud}}" stellt Replikations- und Disaster-Recovery-Funktionalität bereit. Diese Funktionalität kann in die Bereitstellungsangebote integriert werden, um Daten in Ihrer virtuellen VMware-Umgebung in {{site.data.keyword.cloud_notm}} zu schützen und wiederherzustellen.
 
 Wenn Sie verwaltete Services für Zerto on {{site.data.keyword.cloud_notm}} anfordern, kann eine vollständig verwaltete Disaster-Recovery-Umgebung sowohl mit Disaster-Recovery-Software von Zerto als auch IBM Resiliency Services bereitgestellt werden, die Ihnen folgendermaßen von Nutzen sein kann:
 
@@ -20,7 +20,7 @@ Die folgenden Modelle für verwaltete Services für Zerto on {{site.data.keyword
 
 Dieses Modell ist geeignet, wenn Sie das Produktangebot "Zerto on {{site.data.keyword.cloud_notm}}" verwenden.
 
-In diesem Modell wird der Service "{{site.data.keyword.cloud_notm}} Resiliency Orchestration" für Zerto on {{site.data.keyword.cloud_notm}} bereitgestellt. Dieses Modell ermöglicht einen unterbrechungsfreien Schutz von virtuellen Maschinen, Betriebssystemen und Daten in der {{site.data.keyword.cloud_notm}} mit kontinuierlichen Disaster-Recovery-Tests, Sichtbarkeit von RTO (Recovery Time Objective; Zielsetzung für Wiederherstellungszeit) und RPO (Recovery Point Objective; Zielsetzung für Wiederherstellungspunkt) sowie Failover- und Failbackfunktionalität.
+In diesem Modell wird der Service "{{site.data.keyword.cloud_notm}} Resiliency Orchestration" für Zerto on {{site.data.keyword.cloud_notm}} bereitgestellt. Dieses Modell ermöglicht einen unterbrechungsfreien Schutz von virtuellen Maschinen, Betriebssystemen und Daten in {{site.data.keyword.cloud_notm}} mit kontinuierlichen Disaster-Recovery-Tests, Sichtbarkeit von RTO (Recovery Time Objective; Zielsetzung für Wiederherstellungszeit) und RPO (Recovery Point Objective; Zielsetzung für Wiederherstellungspunkt) sowie Failover- und Failbackfunktionalität.
 
 Alle Funktionen werden über das Dashboard von {{site.data.keyword.cloud_notm}} Resiliency Orchestration durch das IBM Resiliency Services Global Command Center verwaltet.
 

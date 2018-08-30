@@ -88,7 +88,7 @@ Die vSphere-Hochverfügbarkeit reserviert jedoch standardmäßig 50% von CPU und
 
 `50% von 2 * 16 Kernen * 2,1 GHz = 33,6 GHz verfügbar`
 
-Da auf den ESXi-Servern weitere Workloads wie beispielsweise IBM CloudDriver, VMware NSX Controller oder VMware NSX Edge verarbeitet werden, kann die dritte Voraussetzung nicht erfüllt werden, weil 33,6 GHz CPU und 32 GB RAM für die beiden virtuellen Maschinen für BIG-IP erforderlich sind.
+Da auf den ESXi-Servern weitere Workloads wie beispielsweise VMware vCenter Server, VMware NSX Controller oder VMware NSX Edge verarbeitet werden, kann die dritte Voraussetzung bei Verwendung dieser Ressourcen nicht erfüllt werden, weil 33,6 GHz CPU und 32 GB RAM für die beiden virtuellen Maschinen für BIG-IP erforderlich sind.
 
 In diesem Fall schlägt die Installation von F5 on {{site.data.keyword.cloud_notm}} fehl, sofern nicht mindestens ein ESXi-Server zur Umgebung hinzugefügt wird und die Failoverreservierungen der vShpere-Hochverfügbarkeit entsprechend aktualisiert werden, damit ausreichend Ressourcen für die beiden virtuellen Maschinen für BIG-IP VE gewährleistet sind. Wenn zur Ausführung des Service "F5 on {{site.data.keyword.cloud_notm}}" zusätzliche Ressourcen benötigt werden, können Sie weitere ESXi-Server hinzufügen, bevor Sie F5 on {{site.data.keyword.cloud_notm}} installieren.
 

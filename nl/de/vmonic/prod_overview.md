@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-18"
 
 Mit {{site.data.keyword.vmwaresolutions_full}} können Sie Ihre lokalen VMware-Workloads unter Verwendung der skalierbaren, sicheren und leistungsfähigen {{site.data.keyword.cloud_notm}}-Infrastruktur und der branchenführenden hybriden VMware-Virtualisierungstechnologie schnell und ohne Reibungsverluste in die {{site.data.keyword.cloud_notm}} integrieren oder migrieren.
 
-{{site.data.keyword.vmwaresolutions_short}} ermöglicht Ihnen die problemlose Bereitstellung Ihrer virtuellen VMware-Umgebungen und das Management der Infrastrukturressourcen in der {{site.data.keyword.cloud_notm}}. Gleichzeitig können Sie weiterhin wie gewohnt die native VMware-Produktkonsole zur Verwaltung der VMware-Workloads verwenden.
+Sie können Ihre virtuellen VMware-Umgebungen ohne großen Aufwand bereitstellen und die Infrastrukturressourcen bequem in der {{site.data.keyword.cloud_notm}} verwalten. Gleichzeitig können Sie weiterhin wie gewohnt die native VMware-Produktkonsole zur Verwaltung der VMware-Workloads verwenden.
 
 ## Vorteile von IBM Cloud for VMware Solutions
 
@@ -96,7 +96,7 @@ Weitere Informationen enthält der Abschnitt [Übersicht über HyTrust CloudCont
 
 Der Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" bietet eine starke Verschlüsselung mit integriertem Schlüsselmanagement, um Workloads über ihren gesamten Lebenszyklus hinweg zu sichern. Der Service kann die Verschlüsselung sowohl auf Betriebssystemebene als auch auf Datenebene bereitstellen. Dies bedeutet, dass alle Verzeichnisse, Ordner oder Dateien innerhalb einer Workload ver- und entschlüsselt werden können.
 
-Weitere Informationen enthält der Abschnitt [Übersicht über HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/hdcc_considerations.html).
+Weitere Informationen enthält der Abschnitt [Übersicht über HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html).
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -118,13 +118,13 @@ Weitere Informationen enthält der Abschnitt [Übersicht über Veeam on {{site.d
 
 ### VMware HCX on IBM Cloud
 
-Der Service "HCX on {{site.data.keyword.cloud_notm}}" kann die Netze von lokalen Rechenzentren nahtlos in die {{site.data.keyword.cloud_notm}} erweitern. Dies ermöglicht die Migration von virtuellen Maschinen (VMs) in die und aus der {{site.data.keyword.cloud_notm}}, ohne dass hierzu eine Konvertierung oder Änderung erforderlich ist.
+Der Service "HCX on {{site.data.keyword.cloud_notm}}" kann die Netze von lokalen Rechenzentren nahtlos in die {{site.data.keyword.cloud_notm}} erweitern. Dies ermöglicht die Migration von virtuellen Maschinen in die und aus der {{site.data.keyword.cloud_notm}}, ohne dass hierzu eine Konvertierung oder Änderung erforderlich ist.
 
 Weitere Informationen enthält der Abschnitt [Übersicht über VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
 
 ### Zerto on IBM Cloud
 
-Der Service "Zerto on {{site.data.keyword.cloud_notm}}" stellt Replikations- und Disaster-Recovery-Funktionen bereit, die in die Bereitstellungsangebote integriert werden können, um Daten in Ihrer virtuellen VMware-Umgebung in der {{site.data.keyword.cloud_notm}} zu schützen und wiederherzustellen.
+Der Service "Zerto on {{site.data.keyword.cloud_notm}}" stellt Replikations- und Disaster-Recovery-Funktionen bereit. Diese Funktionen können in die Bereitstellungsangebote integriert werden, um Daten in Ihrer virtuellen VMware-Umgebung in {{site.data.keyword.cloud_notm}} zu schützen und wiederherzustellen.
 
 Weitere Informationen enthält der Abschnitt [Übersicht über Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html).
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -14,7 +14,7 @@ Hier finden Sie Antworten auf häufig gestellte Fragen zur Lizenzierung, einschl
 
 ## Was bedeutet BYOL?
 
-BYOL steht für "Bring Your Own License", also die mögliche Verwendung Ihrer eigenen Lizenzen, und ist als Funktion für VMware Cloud Foundation-Instanzen in V1.8 und höheren Releases sowie für vCenter Server- und vSphere-Cluster in V2.0 und höheren Releases verfügbar. Mit BYOL können Sie Ihre eigenen VMware-Lizenzen für eine oder mehrere der folgenden VMware-Softwarekomponenten verwenden, wenn Sie Instanzen bestellen:
+BYOL steht für "Bring Your Own License", also die mögliche Verwendung Ihrer eigenen Lizenzen, und ist als Funktion für VMware Cloud Foundation-Instanzen in V1.8 und höheren Releases sowie für vCenter Server- und vSphere-Cluster in V2.0 und höheren Releases verfügbar. Mit BYOL können Sie Ihre eigenen VMware-Lizenzen für folgende VMware-Softwarekomponenten verwenden, wenn Sie Instanzen bestellen:
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
@@ -62,11 +62,11 @@ Alle von Ihnen angegebenen Lizenzschlüssel werden validiert. Hierdurch wird sic
 
 ## Kann ich einen Lizenzschlüssel mit mehr als 8 CPUs bereitstellen?
 
-Ja. Für jede VMware-Komponente ist eine Lizenz pro CPU erforderlich. Gegenwärtig sind alle Server für vCenter Server- und Cloud Foundation mit zwei CPUs ausgestattet; somit sind für jeden Server zwei Lizenzen erforderlich. Es wird empfohlen, einen Lizenzschlüssel bereitzustellen, der die Basisinstanz und alle Erweiterungsknoten unterstützt, die Sie der Instanz später hinzufügen wollen.
+Ja. Für jede VMware-Komponente ist eine Lizenz pro CPU erforderlich. Gegenwärtig sind alle Server für vCenter Server- und Cloud Foundation mit zwei CPUs ausgestattet. Somit sind für jeden Server zwei Lizenzen erforderlich. Es wird empfohlen, einen Lizenzschlüssel bereitzustellen, der die Basisinstanz und alle Erweiterungsknoten unterstützt, die Sie der Instanz später hinzufügen wollen.
 
 ## Kann ich bei Verwendung der BYOL-Funktion die Lizenz für SDDC Manager angeben?
 
-Nein. Unsere Vereinbarung mit VMware erfordert, dass wir den tatsächlichen Lizenzschlüssel eines Kunden akzeptieren müssen. Die Cloud Foundation-Bereitstellung beinhaltet zwar Lizenzen für SDDC Manager, aber es gibt keine Lizenzschlüsseldateien für SDDC Manager, die für BYOL akzeptiert und validiert werden können. Aus diesem Grund werden die Lizenzen für SDDC Manager von IBM für alle Instanzen in Rechnung gestellt. Lizenzen für SDDC Manager tragen einen sehr geringen Anteil zu den Gesamtlizenzgebühren für eine Cloud Foundation-Instanz bei.
+Nein. Unsere Vereinbarung mit VMware erfordert, dass wir den tatsächlichen Lizenzschlüssel eines Kunden akzeptieren müssen. Die Cloud Foundation-Bereitstellung beinhaltet zwar Lizenzen für SDDC Manager, es werden jedoch keine Lizenzschlüsseldateien für SDDC Manager akzeptiert und für BYOL validiert. Aus diesem Grund werden die Lizenzen für SDDC Manager von IBM für alle Instanzen in Rechnung gestellt. Lizenzen für SDDC Manager tragen einen geringen Anteil zu den Gesamtlizenzgebühren für eine Cloud Foundation-Instanz bei.
 
 ## Kann ich die BYOL-Funktion für einige VMware-Komponenten verwenden und für andere Komponenten monatliche Lizenzen erwerben?
 
@@ -74,11 +74,11 @@ Ja. Sie können die BYOL-Funktion oder erworbene Lizenzen in jeder gewünschten 
 
 ## Kann ich bei einer bestimmten VMware-Komponente BYOL für einige Lizenzen verwenden und die übrigen Lizenzen bei IBM erwerben?
 
-Ja. Wenn Sie BYOL für eine bestimmte VMware-Komponente ausgewählt haben, erhalten Sie bei der Erstellung eines neuen Clusters die Möglichkeit, einen neuen BYOL-Schlüssel einzugeben, weiter einen vorhandenen BYOL-Schlüssel zu verwenden oder eine von IBM bereitgestellte Lizenzierung für diesen Cluster zu erwerben.  Die Lizenzierung für einzelne Cluster ist gegenwärtig nur mit VMware vSphere Enterprise und VMware vSAN möglich.
+Ja. Wenn Sie BYOL für eine bestimmte VMware-Komponente ausgewählt haben, erhalten Sie bei der Erstellung eines neuen Clusters die Möglichkeit, einen neuen BYOL-Schlüssel einzugeben, weiter einen vorhandenen BYOL-Schlüssel zu verwenden oder eine von IBM bereitgestellte Lizenzierung für diesen Cluster zu erwerben. Die Lizenzierung für einzelne Cluster ist derzeit nur mit VMware vSphere Enterprise und VMware vSAN möglich.
 
 ## Kann ich BYOL beim Erstellen eines neuen Clusters verwenden?
 
-Ja. Sie können BYOL aus vorhandenen BYOL-Lizenzen verwenden oder beim Erstellen eines neuen Clusters BYOL neu eingeben. Sie erhalten beim Erstellen eines neuen Clusters ebenfalls die Möglichkeit, eine von IBM bereitgestellte Abonnementslizenz zu erwerben. Die Lizenzierung für einzelne Cluster ist gegenwärtig nur mit VMware vSphere Enterprise und VMware vSAN möglich.
+Ja. Sie können BYOL aus vorhandenen BYOL-Lizenzen verwenden oder beim Erstellen eines neuen Clusters BYOL neu eingeben. Beim Erstellen eines neuen Clusters können Sie auch eine von IBM bereitgestellte Abonnementslizenz erwerben. Die Lizenzierung für einzelne Cluster ist derzeit nur mit VMware vSphere Enterprise und VMware vSAN möglich.
 
 ## Wie verwalte ich meine BYOL-Lizenzen?
 
@@ -90,7 +90,10 @@ Ja. Sobald Sie weitere ESXi-Server zu einer bereitgestellten Instanz hinzufügen
 
 ## Wie kann ich die verfügbare Lizenzkapazität für einen Cluster mit BYOL feststellen?
 
-Die Anzahl der in Ihrem Lizenzschlüssel verfügbaren CPUs können Sie ermitteln, indem Sie die Seite **Bereitgestellte Instanzen** aufrufen, die Instanz suchen und auf diese Instanz klicken. Klicken Sie dann auf der Registerkarte **Infrastruktur** auf den Cluster, dessen Lizenzkapazität geprüft werden soll. Die Anzahl der verfügbaren CPUs ist in der Tabelle **Vom Benutzer bereitgestellte Lizenz** angegeben.
+Führen Sie die folgenden Schritte aus, um die über Ihren Lizenzschlüssel verfügbare CPU-Anzahl zu ermitteln:
+1. Rufen Sie die Seite **Bereitgestellte Instanzen** auf.
+2. Suchen Sie die Instanz und klicken Sie auf die Instanz.
+3. Klicken Sie auf der Registerkarte **Infrastruktur** auf den Cluster, für den die Lizenzkapazität geprüft werden soll. Die Anzahl der verfügbaren CPUs ist in der Tabelle **Vom Benutzer bereitgestellte Lizenz** angegeben.
 
 ## Stellt IBM Unterstützung bereit, wenn ich die BYOL-Lizenzierungsoption auswähle?
 

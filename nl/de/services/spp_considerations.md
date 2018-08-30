@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,7 +33,7 @@ Mit dem Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" 
    * 370 GB Plattenspeicher
 * Sekundäre VM mit vSnap-Server und VADP-Proxy für IBM Spectrum Protect Plus
    * Betriebssystem: Linux 3.10.0-693.11.1.el7.x86_64
-   * CPU und RAM in der ausgewählten Speichergröße und entsprechend der Dimensionierungsanleitung in [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/homelang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) konfiguriert
+   * CPU und RAM in der ausgewählten Speichergröße und entsprechend der Dimensionierungsanleitung in [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) konfiguriert
    * 150 GB Plattenspeicher
 
 ### Speicher für Sicherungen
