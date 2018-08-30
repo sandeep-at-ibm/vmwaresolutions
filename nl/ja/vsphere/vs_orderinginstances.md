@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-11"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-20"
 
 高度にカスタマイズ可能な VMware 仮想化プラットフォームをデプロイするには、VMware vSphere cluster on {{site.data.keyword.cloud}} を注文します。 次の手順を使用して、新規の VMware vSphere クラスターを定義してください。
 
-この手順では、新規クラスターを作成するための VMware コンポーネントの選択、{{site.data.keyword.cloud_notm}} ベア・メタル・サーバーの設定、ストレージ設定、およびネットワーキングの選択について説明します。 注文を実行すると、そのクラスター構成が取り込まれるので、必要なときに構成に戻ってクラスターをスケールアウトできます。 注文が完了したら、要件に応じて VMware クラスターを手動で構成できます。
+この手順では、新規クラスターを作成するための VMware コンポーネントの選択、{{site.data.keyword.cloud_notm}} ベア・メタル・サーバーの設定、ストレージ設定、およびネットワーキングの選択について説明します。注文を実行すると、そのクラスター構成が取り込まれるので、必要なときに構成に戻ってクラスターをスケールアウトできます。 注文が完了したら、要件に応じて VMware クラスターを手動で構成できます。
 
 ## 要件
 
@@ -34,29 +34,29 @@ lastupdated: "2018-07-20"
 
 クラスターと一緒に注文する VMware コンポーネントを選択し、それらのコンポーネントのライセンス・オプションを指定します。
 
-### (ビジネス・パートナー・ユーザーのみ) コンポーネント・バンドル
+### (IBM ビジネス・パートナーのみ) コンポーネント・バンドル
 
-ビジネス・パートナー・ユーザーは、新規 vSphere クラスターを注文するときにコンポーネント・ライセンス・バンドルを選択できます。 使用可能なバンドルは以下のとおりです。
+IBM ビジネス・パートナーは、新規 vSphere クラスターを注文するときにコンポーネント・ライセンス・バンドルを選択できます。 使用可能なバンドルは次のとおりです。
 
-表 1. ビジネス・パートナー向けの vSphere クラスター用のコンポーネント・バンドル
+表 1. IBM ビジネス・パートナー向けの vSphere クラスター用のコンポーネント・バンドル
 
 | バンドル | コンポーネント                   |
-|:-------------------------|:-----------------------|
+|:------------------------- |:----------------------- |
 | Standard with Management | vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vRealize Operations Enterprise |
 | Advanced                 | vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vCloud Director、NSX Base |
 | Advanced with Networking | vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、NSX Advanced |
 | Advanced with Networking and Management | vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vRealize Operations Enterprise、vCloud Director、NSX Enterprise |
 
-また、次の追加 VMware コンポーネントを注文に含めることもできます。
+また、次の VMware コンポーネントを注文に含めることもできます。
 * VMware vSAN
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**注:** ビジネス・パートナーであるユーザーは、持ち込みライセンス (BYOL) を利用できません。 注文を入力するときに、**「自分でライセンスを提供する」**オプションは利用できません。
+**注:** IBM ビジネス・パートナーの場合、ライセンス持ち込み (BYOL) オプションは利用できません。
 
-### (非ビジネス・パートナー・ユーザーのみ) 個別のコンポーネント
+### (非ビジネス・パートナーのみ) 個別のコンポーネント
 
-非ビジネス・パートナー・ユーザーは、vSphere クラスターに以下の VMware コンポーネントを柔軟に選択できます。
+非ビジネス・パートナーは、vSphere クラスターに以下の VMware コンポーネントを柔軟に選択できます。
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
@@ -66,7 +66,7 @@ lastupdated: "2018-07-20"
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**注:** VMware vSphere Enterprise Plus 6.0 を注文する場合、VMware vSAN コンポーネントは使用できません。 VMware vSphere Enterprise Plus 6.0 にお客様自身のライセンスを使用する場合は、注文した{{site.data.keyword.baremetal_short}}の vSphere ライセンスを、提供したライセンスに置き換えるように要求する {{site.data.keyword.cloud_notm}} インフラストラクチャー・チケットが自動的にオープンされます。
+**注:** VMware vSphere Enterprise Plus 6.0 を注文する場合、VMware vSAN コンポーネントは使用できません。 VMware vSphere Enterprise Plus 6.0 にお客様自身のライセンスを使用する場合は、{{site.data.keyword.cloud_notm}} インフラストラクチャー・チケットが自動的にオープンされます。このチケットは、注文した{{site.data.keyword.baremetal_short}}の vSphere ライセンスを、提供したライセンスに置き換えるように要求します。
 
 ### ライセンス・オプション
 
@@ -84,7 +84,7 @@ vSphere Enterprise Plus と vCenter Server を除き、ライセンスを購入�
 
 クラスターをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
 
-**注:** vSAN コンポーネントを選択した場合は、SSD に使用可否によってロケーション・リストがフィルタリングされます。
+**注:** vSAN コンポーネントを選択した場合は、SSD の使用可否によってロケーション・リストがフィルタリングされます。
 
 ### CPU モデルと RAM
 
@@ -92,7 +92,7 @@ vSphere Enterprise Plus と vCenter Server を除き、ライセンスを購入�
 
 表 2. カスタマイズ型{{site.data.keyword.baremetal_short}}のオプション
 
-| CPU オプション        | RAM オプション       |
+| CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
 | デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
 | デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
@@ -105,7 +105,7 @@ vSphere Enterprise Plus と vCenter Server を除き、ライセンスを購入�
 
 ### ベア・メタル・サーバーの数
 
-vSphere クラスターに追加する ESXi サーバーの数。 すべての ESXi サーバーが同じ構成を共有します。
+vSphere クラスターに追加する ESXi サーバーの数。 すべての ESXi サーバーが同じ構成です。
 * VMware NSX コンポーネントを選択した場合は、最少 3 台のサーバーが必要です。
 * VMware vSAN コンポーネントを選択した場合は、最少 4 台のサーバーが必要です。
 
@@ -136,7 +136,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 
 ### ホスト名接頭部
 
-ホスト名は、すべてのベア・メタル・サーバーの注文で使用されます。 vCenter Server、NSX などのすべての管理仮想マシンで、このホスト名を使用することをお勧めします。
+ホスト名は、すべてのベア・メタル・サーバーの注文で使用されます。 vCenter Server および NSX などのすべての管理仮想マシンで、このホスト名を使用することをお勧めします。
 
 ホスト名接頭部は、次の要件を満たす必要があります。
 * この名前の先頭と末尾は英数字である必要があります。
@@ -182,7 +182,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 
 **重要:**
 * 選択した VLAN のファイアウォール構成が管理用データ・トラフィックをブロックしていないことを確認してください。
-* 選択したすべての VLAN が同じポッドに含まれていることを確認してください。複数のポッドの VLAN に ESXi サーバーをプロビジョンすることはできません。
+* 選択したすべての VLAN が同じポッドに含まれていることを確認してください。 複数のポッドの VLAN に ESXi サーバーをプロビジョンすることはできません。
 
 #### FortiGate 物理アプライアンス 300 シリーズ HA ペア
 
@@ -190,7 +190,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 
 ## 注文のサマリー
 
-構成に基づいて、見積もりコストがすぐに生成され、右側の**「注文の要約」**ペインに表示されます。 ペインの下部の**「料金詳細」**をクリックすると、見積もりの詳細を示す PDF 文書を生成できます。
+構成に基づいて、見積もりコストがすぐに生成され、右側の**「注文の要約」**ペインに表示されます。 **「料金詳細」**をクリックすると、見積もりの詳細を示す PDF 文書を生成できます。
 
 ## 手順
 
@@ -199,11 +199,11 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
    **「新規作成」**タブが表示され、**「クラスター構成」**リストに**「新規クラスター」**が表示されていることを確認します。
 3. クラスター名を入力します。
 4. VMware コンポーネントを選択します。
-  * ビジネス・パートナーであるユーザーは、ライセンス・バンドルと追加の VMware コンポーネントを選択してください。
-  * ビジネス・パートナーでないユーザーは、コンポーネントとエディション (ある場合) を選択して、ライセンス・オプションを指定してください。
+  * IBM ビジネス・パートナーは、ライセンス・バンドルと追加の VMware コンポーネントを選択してください。
+  * 非ビジネス・パートナーは、コンポーネントとエディション (ある場合) を選択して、ライセンス・オプションを指定してください。
   VMware vSphere Enterprise Plus でライセンス持ち込み (BYOL) を選択すると、注文した{{site.data.keyword.baremetal_short}}のデフォルトの vSphere ライセンスを、自分で提供したライセンスに置き換えるよう要求する {{site.data.keyword.cloud_notm}} チケットが自動的に開きます。   
 
-    **重要:** このチケットに対応し、新しく注文した ESXi サーバーの vSphere ライセンスを置き換え、最初に提供された {{site.data.keyword.cloud_notm}} インフラストラクチャーの vSphere ライセンス料の取り消しを {{site.data.keyword.cloud_notm}} インフラストラクチャーに許可させる作業は、お客様が行う必要があります。 ESXi vSphere ライセンスを置き換えるには、[Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}を参照してください。
+    **重要:** このチケットを追跡し、新しく注文した ESXi サーバー上で vSphere ライセンスを置き換える作業は、お客様が行う必要があります。このようにして、最初に提供された {{site.data.keyword.cloud_notm}} インフラストラクチャーの vSphere ライセンス料の取り消しが {{site.data.keyword.cloud_notm}} インフラストラクチャーによって許可されます。ESXi vSphere ライセンスを置き換えるには、[Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}を参照してください。
 
 5. ベア・メタル・サーバーの設定を次の手順で実行します。
    1. クラスターをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
