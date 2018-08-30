@@ -36,7 +36,7 @@ NSX インストールの一環として、デプロイしたすべての新し�
 
 **注**: NSX Controller は、vCenter Server インスタンスにはインストールされません (Cloud Foundation インスタンスにはインストールされます)。 vCenter Server インスタンスで VXLAN または分散論理ルーターを使用する場合は、NSX Controller をユーザーがインストールする必要があります。
 
-VMware NSX for vSphere 6.2.4 で導入された拡張機能、要件、および既知の問題については、[NSX for vSphere 6.2.4 リリース・ノート](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}を参照してください。
+VMware NSX for vSphere 6.2.4 で導入された拡張機能、要件、および既知の問題について詳しくは、[NSX for vSphere 6.2.4 リリース・ノート](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}を参照してください。
 
 ### VMware NSX Edge
 
@@ -44,7 +44,7 @@ NSX Edge が、注文した新しい vCenter Server インスタンスに含ま�
 
 インスタンスのデプロイメント中に、IBM が Management VMware NSX Edge Services Gateway (ESG) をデプロイします。 この ESG は、IBM 管理仮想マシンが、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 この ESG は、2 つのインターフェースを含むようにデプロイされます。一方のインターフェースは {{site.data.keyword.cloud_notm}} のプライベート VLAN に接続され、もう一方のインターフェースは {{site.data.keyword.cloud_notm}} のパブリック VLAN に接続されます。
 
-セキュリティーを確保するため、管理仮想マシンから開始されたアウトバウンド HTTPS 通信のみを許可するようにファイアウォール・ルールが適用されます。 この ESG は「ラージ」構成でデプロイされ、IBM サポートのみが構成を変更できます。 詳しくは、以下を参照してください。
+セキュリティーを確保するため、管理仮想マシンから開始されたアウトバウンド HTTPS 通信のみを許可するようにファイアウォール・ルールが適用されます。 この ESG は「ラージ」構成でデプロイされ、IBM サポートのみが構成を変更できます。 詳しくは、以下のトピックを参照してください。
 
 * [vCenter Server 技術仕様](../vcenter/vc_vcenterserveroverview.html)
 * [管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -95,7 +95,7 @@ NSX Edge が、注文した新しい vCenter Server インスタンスに含ま�
 * Cloud Foundation インスタンスと vCenter Server インスタンスのどちらも、注文プロセス中に SoftLayer 資格情報ページが表示されなくなりました。 「設定」ページで定義した SoftLayer 資格情報がデフォルトで使用され、要件を満たしていない場合にのみ、資格情報を更新するプロンプトが表示されます。
 * また、vCenter Server インスタンスの場合は、**「ハードウェア」**タイプの**「ラージ」**オプションと**「アップリンク・ポート速度」**の**「10 Gbps デュアル」**設定のみが表示されるようになり、注文時に指定する設定の数が減りました。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 
 * [Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)
 * [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
@@ -111,7 +111,7 @@ NSX Edge が、注文した新しい vCenter Server インスタンスに含ま�
 
 コンソール通知を**「設定」**ページで構成できるようになりました。 デフォルトでは、この設定が有効になっています。つまり、すべてのイベントに関する通知がコンソールに表示されます。 また、**「設定」**ページでコンソールの通知を無効にすることもできます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 
 * [ユーザー・アカウントと設定](useraccount.html)
 * [通知](notifications.html)

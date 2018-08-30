@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
 # Zerto on IBM Cloud 用マネージド・サービスの要求
 
-Zerto on {{site.data.keyword.cloud}} サービスは、複製と災害復旧の機能を提供します。これらの機能をデプロイメント・オファリングに組み込むことで、{{site.data.keyword.cloud_notm}} 上の VMware 仮想環境内のデータの保護と復旧を行えます。
+Zerto on {{site.data.keyword.cloud}} サービスは、複製と災害復旧の機能を提供します。 これらの機能をデプロイメント・オファリングに組み込むことで、{{site.data.keyword.cloud_notm}} 上の VMware 仮想環境内のデータの保護と復旧を行えます。
 
 Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスを要求すると、Zerto DR ソフトウェアと IBM Resiliency Services の両方を使用して、完全に管理された災害復旧 (DR) 環境をデプロイできます。
 
@@ -20,7 +20,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスで�
 
 このモデルは、Zerto on {{site.data.keyword.cloud_notm}} オファリングを使用する場合に適しています。
 
-このモデルでは、{{site.data.keyword.cloud_notm}} Resiliency Orchestration サービスが Zerto on {{site.data.keyword.cloud_notm}} 用にプロビジョンされます。 このモデルでは、{{site.data.keyword.cloud_notm}} 上の仮想マシン、オペレーティング・システム、データの継続的保護が可能です。DR テストが中断なしで行われ、RTO/RPO (目標復旧時間/目標復旧時点) が可視化され、フェイルオーバーとファイルバックの機能を備えています。
+このモデルでは、{{site.data.keyword.cloud_notm}} Resiliency Orchestration サービスが Zerto on {{site.data.keyword.cloud_notm}} 用にプロビジョンされます。 このモデルでは、{{site.data.keyword.cloud_notm}} 上の仮想マシン、オペレーティング・システム、データの継続的保護が可能です。DR テストが中断なしで行われ、RTO/RPO (目標復旧時間/目標復旧時点) が可視化され、フェイルオーバーとフェイルバックの機能を備えています。
 
 すべての機能は、{{site.data.keyword.cloud_notm}} Resiliency Orchestration ダッシュボードを介して IBM Resiliency Services Global Command Center によって管理されます。
 

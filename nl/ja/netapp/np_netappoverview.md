@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -41,7 +41,7 @@ lastupdated: "2018-07-18"
 
 ### 仮想化管理
 
-この層は、vCenter Server 仮想アプライアンス、NSX Manager、2 つの NSX ESG、3 つの NSX Controller、Platform Services Controller (PSC) 仮想アプライアンス、vCenter Server Appliance (vCSA)、IBM CloudDriver 仮想マシンからなります。
+この層は、vCenter Server 仮想アプライアンス、NSX Manager、2 つの NSX ESG、3 つの NSX Controller、Platform Services Controller (PSC) 仮想アプライアンス、vCenter Server Appliance (vCSA)、IBM CloudDriver 仮想サーバー・インスタンス (VSI) からなります。
 
 NetApp ONTAP Select は、VMware クラスター内で実行され、ホスト上のローカル・ストレージを仮想化します。 NetApp ONTAP Select は専用モデルでデプロイされます。つまり、他のワークロードとクラスターを共有するという想定にはなっていません。 そのため、{{site.data.keyword.cloud_notm}} オファリング上の NetApp ONTAP Select のハードウェア構成のサイズは、NetApp ONTAP Select の要件のみに基づいて決まります。
 

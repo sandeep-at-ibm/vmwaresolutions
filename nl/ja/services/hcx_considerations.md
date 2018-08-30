@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-27"
 
 HCX on {{site.data.keyword.cloud}} サービスでは、オンプレミス・データ・センターのネットワークを {{site.data.keyword.cloud_notm}} にシームレスに拡張できるので、変換も変更も行わずに {{site.data.keyword.cloud_notm}} との間で仮想マシン (VM) をマイグレーションできます。
 
-**利用可否**: このサービスは、V2.3 以降のリリースでデプロイされた VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスでのみ利用可能です。
+**利用可否:** このサービスは、V2.3 以降のリリースでデプロイされた VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスでのみ利用可能です。
 
 既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードできます。 インスタンスをアップグレードして HCX on {{site.data.keyword.cloud_notm}} サービスをデプロイする方法について詳しくは、[vCenter Server with Hybridity Bundle インスタンスへのアップグレード](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance)を参照してください。
 
@@ -41,7 +41,7 @@ HCX on {{site.data.keyword.cloud}} サービスでは、オンプレミス・デ
 ### ネットワーキング
 
 * 16 個の IP アドレスを持つ 1 つのパブリック・ポータブル・サブネット
-* 64 個の IP アドレスを持つ 1 つのプライベート・ポータブル・サブネット
+* 64 個の IP アドレスを持つ 2 つのプライベート・ポータブル・サブネット
 * プライベート・ポータブル vMotion サブネットからの 8 個の IP アドレス
 
 ### ライセンスと料金

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -56,7 +56,7 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 
 表 1. カスタマイズ型{{site.data.keyword.baremetal_short}}のオプション
 
-| CPU オプション   | RAM オプション   |
+| CPU モデル・オプション   | RAM オプション   |
 |:------------- |:------------- |
 | デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |

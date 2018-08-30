@@ -28,7 +28,7 @@ lastupdated: "2018-05-28"
 
 HCX on {{site.data.keyword.cloud_notm}} サービスは、vCenter Server with Hybridity Bundle インスタンスでのみ利用可能です。 既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードするには、まず基本 vCenter Server V2.3 のソフトウェア更新を適用しなければなりません。 詳しくは、[vCenter Server インスタンスへの更新の適用](../vcenter/vc_applyingupdates.html)を参照してください。
 
-vCenter Server with Hybridity Bundle について詳しくは、以下を参照してください。
+vCenter Server with Hybridity Bundle について詳しくは、以下のトピックを参照してください。
 
 * [vCenter Server with Hybridity Bundle の概要](../vcenter/vc_hybrid_overview.html)
 * [vCenter Server with Hybridity Bundle インスタンスの要件と計画](../vcenter/vc_hybrid_planning.html)
@@ -38,7 +38,7 @@ vCenter Server with Hybridity Bundle について詳しくは、以下を参照�
 
 インスタンス全体を削除しなくても、インスタンスからクラスターを削除できるようになりました。 V2.2 以前のインスタンスでデプロイしたクラスターの場合に、インスタンスに追加したクラスターを削除するには、インスタンスを V2.3 にアップグレードする必要があります。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 
 * [vCenter Server インスタンスのクラスターの追加、表示、削除](../vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
 * [Cloud Foundation インスタンスのクラスターの追加、表示、削除](../sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
@@ -55,7 +55,7 @@ V2.3 リリース以降、**カスタマイズ型** のベア・メタル設定�
 * Dual Intel Xeon Silver 4110 Processor / 合計 16 コア、2.1 GHz
 * Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 
 * [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
 * [vCenter Server インスタンスのクラスターの追加、表示、削除](../vcenter/vc_addingviewingclusters.html)
@@ -93,7 +93,7 @@ V2.3 以降のリリースでデプロイまたは V2.3 以降のリリースに
 
 このサービスを組み込んだ形でインスタンスを注文することも、後から既存のインスタンスにこのサービスを追加することもできます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](../services/htcc_considerations.html)
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} の管理](../services/managinghtcc.html)
 
@@ -103,7 +103,7 @@ V2.3 以降のリリースでデプロイまたは V2.3 以降のリリースに
 
 このサービスを組み込んだ形でインスタンスを注文することも、後から既存のインスタンスにこのサービスを追加することもできます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](../services/htdc_considerations.html)
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の管理](../services/managinghtdc.html)
 

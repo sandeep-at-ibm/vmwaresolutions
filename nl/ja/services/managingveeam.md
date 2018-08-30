@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -29,7 +29,7 @@ Windows IP アドレスと Administrator 資格情報は、Veeam on {{site.data.
 
 ## Veeam on IBM Cloud がインストールされているインスタンスの管理コンポーネントのバックアップとリストア
 
-Veeam コンソールを使用して管理コンポーネントをバックアップするように、Veeam on {{site.data.keyword.cloud_notm}} サービスを構成できます。詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html)を参照してください。
+Veeam コンソールを使用して管理コンポーネントをバックアップするように、Veeam on {{site.data.keyword.cloud_notm}} サービスを構成できます。 詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html)を参照してください。
 
 V1.8 以降のリリースでデプロイ (または V1.8 以降のリリースにアップグレード) されたインスタンスの場合、環境の構成変更の自動バックアップは行われません。 そのため、環境の構成を変更する前に、管理バックアップ・ジョブを Veeam コンソールで実行して、管理コンポーネントを手動でバックアップすることをお勧めします。 手動バックアップについて詳しくは、[Veeam 技術説明](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}を参照してください。
 
@@ -37,7 +37,18 @@ V1.8 以降のリリースでデプロイ (または V1.8 以降のリリース�
 
 ## Veeam on IBM Cloud への更新の適用
 
-Veem を最新バージョンに更新する責任は、ユーザー側にあります。 Veeam を最新バージョンにアップグレードするには、Veeam Web サイトから Veeam 更新プログラムをダウンロードし、Veeam VSI にコピーした後、インストールします。
+Veeam を最新バージョンに更新する責任は、ユーザー側にあります。 Veeam を最新バージョンにアップグレードするには、Veeam Web サイトから Veeam 更新プログラムをダウンロードし、Veeam VSI にコピーした後、インストールします。
+
+## Veeam ライセンスの更新
+
+オンデマンドで Veeam ライセンスを手動で更新するには、以下のステップを完了します。
+1. [RDP を使用して Veeam Backup および Replication のコンソールにアクセスします](../services/managingveeam.html#accessing-the-veeam-console-by-using-rdp)。
+2. メインメニューから、**「ライセンス」**をクリックします。
+3. **「ライセンス情報」**ウィンドウで**「今すぐ更新」**をクリックします。
+4. 手動ライセンスの更新プロセスの統計情報を表示するには、**「履歴」**ビューを開き、**「システム」**ノードをクリックします。
+
+詳しくは、[手動によるライセンスの更新](https://helpcenter.veeam.com/docs/backup/vsphere/license_update_manual.html?ver=95)を参照してください。
+
 
 ## V1.8 より前のインスタンスの Veeam VSI を Veeam on IBM Cloud に置き換える
 

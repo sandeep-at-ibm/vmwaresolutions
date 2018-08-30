@@ -38,7 +38,7 @@ FortiGate® コンソールへのアクセス権限がプライベート管理�
 
 選択したデプロイメント・サイズと月ごとのサブスクリプション・ライセンス・モデルに応じて、各仮想マシンのライセンス料金が各課金サイクルに適用されます。
 
-**重要:** サービスのインストール後にライセンス交付レベルを変更することはできません。ライセンス交付レベルを変更するには、既存のサービスを削除し、別のライセンス交付オプションを使用してサービスを再インストールする必要があります。
+**重要:** サービスのインストール後にライセンス交付レベルを変更することはできません。 ライセンス交付レベルを変更するには、既存のサービスを削除し、別のライセンス交付オプションを使用してサービスを再インストールする必要があります。
 
 ## FortiGate Virtual Appliance on IBM Cloud をインストールする際の考慮事項
 
@@ -75,7 +75,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを�
 
 `2 * 16 コア * 2.1 GHz の 50% = 33.6 GHz を使用可能`
 
-ESXi サーバー上には、IBM CloudDriver、VMware NSX Controller、VMware NSX Edge などの他のワークロードも存在するようになるため、これらのリソースを使用しても 3 番目の要件を満たすことができません。 なぜなら、2 つの FortiGate VM 用に 33.6 GHz の CPU と 24 GB RAM が必要になるためです。
+ESXi サーバー上には、VMware vCenter Server、VMware NSX Controller、VMware NSX Edge などの他のワークロードも存在するようになるため、これらのリソースを使用しても 3 番目の要件を満たすことができません。 なぜなら、2 つの FortiGate VM 用に 33.6 GHz の CPU と 24 GB RAM が必要になるためです。
 
 このケースでは、環境に ESXi サーバーを少なくとも 1 つ追加し、vShpere HA フェイルオーバー予約を適切に更新して 2 つの FortiGate VM 用の十分なリソースを確保しない限り、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} のインストールは失敗する可能性があります。
 

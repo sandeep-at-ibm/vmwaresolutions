@@ -51,7 +51,7 @@ vCenter Server では、鍵管理サーバー (KMS) クラスターを構成す�
 
 ### サービス ID の API キー
 
-IBM Key Protect Service インスタンスへのアクセスに使用する {{site.data.keyword.cloud_notm}} サービス ID の API キーを入力します。
+IBM Key Protect Service インスタンスへのアクセスに使用する {{site.data.keyword.cloud_notm}} サービス ID の API 鍵を入力します。
 
 ### Key Protect インスタンス
 

@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-16"
 
 ---
 
 # VMware vSphere on IBM Cloud の概要
 
-VMware vSphere on {{site.data.keyword.cloud}} は、合理化、最適化された VMware の注文プラットフォームです。このプラットフォームでは、選択した VMware コンポーネントに基づいて VMware 互換ハードウェアをカスタマイズして注文することで、IBM によってホストされるお客様独自の VMware 環境を構築できます。
+VMware vSphere on {{site.data.keyword.cloud}} は、合理化、最適化された VMware の注文プラットフォームです。 このプラットフォームでは、選択した VMware コンポーネントに基づいて VMware 互換ハードウェアをカスタマイズして注文することで、IBM によってホストされるお客様独自の VMware 環境を構築できます。
 
-{{site.data.keyword.vmwaresolutions_short}} コンソールでは、お客様が選択した VMware コンポーネントに基づいて、ハードウェアが自動的にフィルタリングされます。 例えば、オール・フラッシュの VMware vSAN クラスターを新規作成する場合は、[VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php) に照らして確認されたハードウェアのみが示され、最低限 4 つの ESXi サーバーが必要になります。
+{{site.data.keyword.vmwaresolutions_short}} コンソールでは、お客様が選択した VMware コンポーネントに基づいて、ハードウェアが自動的にフィルタリングされます。 例えば、オール・フラッシュの VMware vSAN クラスターを新規作成する場合は、[VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php) に照らして確認されたハードウェアのみが示されます。 また、最小 4 台の ESXi サーバーが必要です。
 
-VMware vSphere on {{site.data.keyword.cloud_notm}} は、オプションの VMware コンポーネントのインストール、構成、起動を自動実行しませんが、ホストされる VMware 環境を、VMware 互換ハードウェアを組み込みながら設計して構築できるように柔軟性が最大化されています。
+VMware vSphere on {{site.data.keyword.cloud_notm}} では、オプションの VMware コンポーネントのインストールや構成や起動が自動化されません。 このプラットフォームでは、ホスト対象の VMware 環境を、VMware 互換ハードウェアを組み込みながら設計して構築するための柔軟性が最大化されています。
 
 このオファリングを使用して、{{site.data.keyword.CloudDataCent_notm}}内に ESXi サーバーの新規クラスターを作成したり、ESXi サーバーの既存クラスターを拡張したりできます。 選択した VMware コンポーネントによっては、ESXi サーバー 1 つだけで始めて、後で必要に応じてクラスターを拡張することができます。
 
@@ -68,16 +68,16 @@ VMware vSAN コンポーネントを選択した場合は、vSAN 構成用のユ
 
 ### 拡張ノード用のハードウェア
 
-[VMware vSphere on {{site.data.keyword.cloud_notm}} のコンポーネント](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)で示されているハードウェア構成の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。
+[VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているハードウェア構成の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。
 
 ### 拡張ノード用ネットワーキング
 
-[VMware vSphere on {{site.data.keyword.cloud_notm}} のコンポーネント](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)で示されているネットワーキング構成の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。
+[VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているネットワーキング構成の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。
 
 ### 拡張ノード用 VMware コンポーネント
 
 * VMware vSphere Enterprise Plus 6.0u2 または 6.5u1 が適用された {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。  
-* [VMware vSphere on {{site.data.keyword.cloud_notm}} のコンポーネント](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)で示されているオプションの VMware コンポーネント。
+* [VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているオプションの VMware コンポーネント。
 
 **重要**: 注文して {{site.data.keyword.cloud_notm}} アカウントに提供された ESXi サーバー、オプションの VMware コンポーネント、追加のハードウェアの管理は、必ず {{site.data.keyword.slportal}}のみから行う必要があります。 {{site.data.keyword.vmwaresolutions_short}} コンソールで新規クラスターを作成した後、コンソールに戻り、保存されている構成を使用して、その新規クラスターを拡張できます。 詳しくは、[既存の vSphere クラスターの拡張](vs_scalingexistingclusters.html)を参照してください。
 

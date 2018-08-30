@@ -88,7 +88,7 @@ F5 on {{site.data.keyword.cloud_notm}} での失敗を避けるために、以�
 
 `2 * 16 コア * 2.1 GHz の 50% = 33.6 GHz を使用可能`
 
-ESXi サーバー上には、IBM CloudDriver、VMware NSX Controller、VMware NSX Edge など、他のワークロードも存在するようになるため、これらのリソースを使用しても 3 番目の要件を満たすことができません。2 つの BIG-IP VM 用に 33.6 GHz の CPU と 32 GB RAM が必要だからです。
+ESXi サーバー上には、VMware vCenter Server、VMware NSX Controller、VMware NSX Edge など、他のワークロードも存在するようになるため、これらのリソースを使用しても 3 番目の要件を満たすことができません。2 つの BIG-IP VM 用に 33.6 GHz の CPU と 32 GB RAM が必要だからです。
 
 このケースでは、環境に ESXi サーバーを少なくとも 1 つ追加し、vShpere HA フェイルオーバー予約を適切に更新して 2 つの BIG-IP VE VM 用の十分なリソースを確保しない限り、F5 on {{site.data.keyword.cloud_notm}} のインストールは失敗する可能性があります。 F5 on {{site.data.keyword.cloud_notm}} サービスを実行するために追加のリソースが必要な場合は、F5 on {{site.data.keyword.cloud_notm}} をインストールする前に、さらに ESXi サーバーを追加できます。
 

@@ -16,7 +16,7 @@ lastupdated: "2017-10-13"
 
 このリリースでは、VMware vSphere on {{site.data.keyword.cloud_notm}} オファリングが導入されました。このオファリングでは、選択した VMware コンポーネントに基づいて、VMware 互換のコンピュート、ストレージ、ネットワークのリソースをカスタマイズして注文することで、IBM によってホストされる独自の VMware 仮想環境を構築できます。 vSphere on {{site.data.keyword.cloud_notm}} は、オプションの VMware コンポーネントのインストール、構成、起動を自動実行しませんが、ビジネス・ニーズに最適な環境を設計して構築できるように柔軟性が最大化されています。 {{site.data.keyword.CloudDataCent_notm}}で ESXi サーバーの vSphere クラスターを新規作成するか、既存の vSphere クラスターを拡張することから始めることができます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [新規 vSphere クラスターの注文](../vsphere/vs_orderinginstances.html)
 * [既存の vSphere クラスターの拡張](../vsphere/vs_scalingexistingclusters.html)
 
@@ -25,7 +25,7 @@ lastupdated: "2017-10-13"
 このリリースでは、ソフトウェア定義ストレージ用の仮想アプライアンスである NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} オファリングが導入されました。これにより、IBM Cloud の専用{{site.data.keyword.baremetal_short}}上に NetApp ONTAP Select をサービスとして実装できます。 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} は、高性能 (オール SSD) 構成と大容量 (オール SATA) 構成の両方で提供されます。
 専用のインフラストラクチャーでストレージをホストし、重複排除や保存データの圧縮と暗号化などの NetApp 機能を提供します。 このオファリングを使用すると、高速で効率的な NetApp Snapshot® コピー、FlexClone® コピー、SnapMirror® レプリケーションなどの高度なデータ管理機能を使用してデータを保護しながら、俊敏性と柔軟性を備えたストレージ・リソースをプロビジョンできます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [NetApp ONTAP Select の概要](../netapp/np_netappoverview.html)
 * [NetApp ONTAP Select インスタンスの注文](../netapp/np_orderinginstances.html)
 
@@ -34,7 +34,7 @@ lastupdated: "2017-10-13"
 F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} サービスを、VMware Cloud Foundation と VMware vCenter Server の両方のインスタンスで使用できるようになりました。 このサービスは、ローカルおよびグローバル規模のインテリジェントな L4-L7 ロード・バランシングとトラフィック管理サービス、堅牢なネットワークと Web アプリケーション・ファイアウォール保護、セキュアなフェデレーテッド・アプリケーション・アクセスを提供します。
 F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} サービスを組み込んだ形でインスタンスを注文することも、後から {{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンス・プロパティーの詳細ページにある**「サービス」**タブで既存のインスタンスにこのサービスを追加することもできます。 要件に応じて、BIG-IP VE の 3 つのライセンス・オプションの中から 1 つを選択できます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [F5 on {{site.data.keyword.cloud_notm}} の考慮事項](../services/f5_considerations.html)
 * [F5 on {{site.data.keyword.cloud_notm}} の管理](../services/managing_f5.html)
 
@@ -47,9 +47,9 @@ VMware Cloud Foundation インスタンスで IBM Integrated Managed Infrastruct
 
 ## vCenter Server および NetApp ONTAP Select インスタンスの名前に関する制限
 
-インスタンスを注文するときに {{site.data.keyword.vmwaresolutions_short}} に入力するインスタンス名に、特殊文字 (ダッシュ文字など) を使用することはできません。 英数字とダッシュ (-) の文字だけを使用できます。 この制限は、Cloud Foundation インスタンスには適用されません。
+インスタンスを注文するときに {{site.data.keyword.vmwaresolutions_short}} に入力するインスタンス名に、特殊文字 (ダッシュ文字など) を使用することはできません。 英数字のみを使用できます。 この制限は、Cloud Foundation インスタンスには適用されません。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
 * [NetApp ONTAP Select インスタンスの注文](../netapp/np_orderinginstances.html)
 
@@ -91,7 +91,7 @@ VMware Cloud Foundation インスタンスで IBM Integrated Managed Infrastruct
 
 注文中に vCenter Server インスタンスのドメイン・ネーム・サーバー (DNS) のドメイン・ネームを指定できるようになりました。 ホストと仮想マシンが登録されたインスタンスの DNS として機能する Microsoft Windows Server 仮想サーバー・インスタンス (VSI) が、デプロイされて参照可能になります。 この Microsoft Windows VSI には Microsoft Active Directory (AD) もセットアップされていて、DNS ドメイン・ネームは AD ドメインのフォレスト・ルートになります。 この Microsoft Windows VSI は、V1.9 以降でのみ使用できます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html)
 * [vCenter Server インスタンスの表示](../vcenter/vc_viewinginstances.html)
 

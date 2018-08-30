@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-11"
 
 ---
 
 # 既存の vSphere クラスターの拡張
 
-ESXi サーバーを追加したり、FortiGate 300 シリーズの Security Appliance の HA ペアを注文したりして、{{site.data.keyword.vmwaresolutions_full}} コンソールで注文または保存した既存の VMware vSphere クラスターを拡張できます。
+{{site.data.keyword.vmwaresolutions_full}} コンソールで注文または保存した VMware vSphere クラスターを拡張できます。 これを行うには、ESXi サーバーを追加するか、クラスター用の FortiGate 300 シリーズ Security Appliance の HA ペアを注文します。
 
 ## 要件
 
@@ -32,7 +32,7 @@ ESXi サーバーを追加したり、FortiGate 300 シリーズの Security App
 
 ### 結果
 
-クラスター拡張のデプロイメントが自動的に開始され、注文が処理中であることを示す E メール確認を受け取ります。 クラスターが使用可能になると、E メールで通知されます。
+クラスターの拡張が自動的に開始されます。注文が処理中であることを示す E メール確認を受け取ります。 クラスターが使用可能になると、E メールで通知されます。
 
 **注:** vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスとは異なり、**「デプロイ済みインスタンス」**ページに表示されません。
 

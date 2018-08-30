@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-08"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-31"
 
 {{site.data.keyword.vmwaresolutions_full}} 用に予約されているユーザー、リソース、またはサブネットを変更すると、VMware Cloud Foundation インスタンスに対する管理操作に影響する可能性があります。
 
-**重要:** VMware vSphere Web Client の**「ユーザーおよびグループ」**ページで **ic4v-vCenter** グループのグローバル許可を編集しないでください。例えば、ユーザー名を変更する、ユーザーを削除する、パスワードを変更するなどです。
+**重要:** VMware vSphere Web Client の**「ユーザーおよびグループ」**ページで **ic4v-vCenter** グループのグローバル許可を編集しないでください。 例えば、ユーザー名を変更する、ユーザーを削除する、パスワードを変更するなどです。
 
 ## サービス固有のユーザー・アカウント
 
@@ -20,7 +20,9 @@ lastupdated: "2018-07-31"
 
 **重要**: 障害や接続の問題を防止するために、このユーザー・アカウントのユーザー ID、パスワード、またはパスワードの有効期限設定を変更する場合は、必ず、関連付けられたサービスの情報も更新してください。
 
-このアカウントのユーザー ID の形式は、`<service_name>-<service_uuid>@VSPHERE.LOCAL` です。 例えば、vCenter Server に接続して定期バックアップを実行するために Veeam on {{site.data.keyword.cloud_notm}} サービスで使用するユーザー ID は、`Veeam-<Veeam_uuid>@VSPHERE.LOCAL` です。
+このアカウントのユーザー ID の形式は、`<service_name>-<truncated service_uuid>@test.local` または`<service_name>-<truncated service_uuid>@example-domain.local` です。 例えば、vCenter Server に接続して定期バックアップを実行するために Veeam on {{site.data.keyword.cloud_notm}} サービスで使用するユーザー ID は、`Veeam-<Veeam_uuid>@test.local` です。
+
+**注**: `<service_uuid>` を含む `<service_name>` は 20 文字で切り捨てられます。
 
 ## Cloud Foundation インスタンスの VMware リソース
 

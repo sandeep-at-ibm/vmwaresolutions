@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-16"
 
 ---
 
 # IBM サポートへのお問い合わせ
 
-{{site.data.keyword.vmwaresolutions_full}} に関するサポートが必要な場合は、以下のいずれかのチャネルで {{site.data.keyword.cloud_notm}} サポート・チケットを作成して支援を受けてください。
+{{site.data.keyword.vmwaresolutions_full}} に関するサポートが必要な場合は、以下のいずれかのチャネルを使用して {{site.data.keyword.cloud_notm}} サポート・チケットを作成して支援を受けてください。
 
 ## IBM Cloud for VMware Solutions コンソールを使用する
 

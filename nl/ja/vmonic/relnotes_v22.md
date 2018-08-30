@@ -31,7 +31,7 @@ IBM CloudDriver 仮想マシンは、V2.2 へのアップグレード処理中�
 * IBM CloudDriver 仮想マシンを参照するバックアップ・ソリューションを使用している場合は、V2.2 にアップグレードした後、バックアップ・ソリューションが新しい IBM CloudDriver 仮想マシンを参照していることを確認してください。
 * V2.2 にアップグレードする前に、レガシー Veeam VSI を Veeam on {{site.data.keyword.cloud_notm}} サービスに置き換えてください。 レガシー Veeam は V2.2 以降のリリースではサポートされないため、レガシー Veeam に関連付けられた管理コンポーネントのバックアップからリストアすることはできません。
 
-Veeam on {{site.data.keyword.cloud_notm}} サービスを使用する方法について詳しくは、以下を参照してください。
+Veeam on {{site.data.keyword.cloud_notm}} サービスを使用する方法について詳しくは、以下のトピックを参照してください。
 * [Veeam on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](../services/veeam_considerations.html)
 * [Veeam on {{site.data.keyword.cloud_notm}} の管理](../services/managingveeam.html)
 
@@ -43,7 +43,7 @@ VMware Federal インスタンスを保護する前に考慮すべき重要な�
 
 (2018 年 4 月 2 日更新) ESXi サーバーを追加または削除することによって、VMware Federal インスタンスの容量を拡張または縮小できるようになりました。 このオプションは、保護されていない VMware Federal インスタンスでのみ使用できます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 
 * [VMware Federal on {{site.data.keyword.cloud_notm}} の概要](../vcenter/vc_fed_overview.html)
 * [VMware Federal インスタンスのクラスターの追加、表示、削除](../vcenter/fed_addviewdeleteclusters.html)
@@ -144,7 +144,7 @@ Zerto on {{site.data.keyword.cloud_notm}} サービスは、複製と災害復�
 
 インスタンスのマネージド・サービスは、**「開始」**ページから要求できます。新規インスタンスを注文することも、既存のインスタンスにこのサービスを追加することもできます。
 
-詳しくは、以下を参照してください。
+詳しくは、以下のトピックを参照してください。
 * [Veeam on {{site.data.keyword.cloud_notm}} のサービスの要求](../services/managing_veeam_services.html)
 * [Zerto on {{site.data.keyword.cloud_notm}} のサービスの要求](../services/managing_zerto_services.html)
 
@@ -154,7 +154,7 @@ Zerto on {{site.data.keyword.cloud_notm}} サービスは、複製と災害復�
 
 * VMware vSphere クラスターだけでなく、Cloud Foundation インスタンスと vCenter Server インスタンスの資料にも、VLAN とソフトウェアの部品構成表 (BOM) が追加されました。
 
-  詳しくは、以下を参照してください。
+  詳しくは、以下のトピックを参照してください。
 
   * [vCenter Server の部品構成表](../vcenter/vc_bom.html)
   * [Cloud Foundation の部品構成表](../sddc/sd_bom.html)
