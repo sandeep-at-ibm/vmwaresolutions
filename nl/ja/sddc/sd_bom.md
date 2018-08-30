@@ -38,7 +38,7 @@ VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情�
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX for vSphere                          | 6.3.5        |
 | VMware       | SDDC Manager                             | 2.4          |
-| IBM          | CloudDriver                              | 2.4          |
+| IBM          | CloudDriver                              | 2.5          |
 | Microsoft    | Windows Server Standard Edition (64 ビット) | 2012R2       |
 
 ## ESXi サーバーの拡張構成の設定
