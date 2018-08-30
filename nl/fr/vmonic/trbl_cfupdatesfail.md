@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-12-29"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-12-29"
 
 ## Problème
 
-Si vous avez ajouté des serveurs ESXi à une instance VMware Cloud Foundation en version 1.5 ou 1.6 et que l'opération d'ajout a échoué, le bouton de mise à jour est désactivé et vous ne pouvez pas appliquer à l'instance une mise à jour de la version 1.5 vers la version 1.6 ou de 1.6 vers 1.7.
+Si vous avez ajouté des serveurs ESXi à une instance V1.5 ou V1.6 de VMware Cloud Foundation et que l'opération d'ajout a échoué, le bouton de mise à jour est désactivé et vous ne pouvez pas appliquer la mise à jour V1.5 -> V1.6 ou V1.6 -> V1.7 à l'instance.
 
 ## Résolution
 

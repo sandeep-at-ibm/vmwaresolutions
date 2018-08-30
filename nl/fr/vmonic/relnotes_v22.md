@@ -31,7 +31,7 @@ Lors de la procédure de mise à niveau vers la version 2.2, la machine virtuell
 * Si vous utilisez une solution de sauvegarde qui référence la machine virtuelle IBM CloudDriver, après mise à niveau vers la version 2.2, vérifiez que la solution de sauvegarde référence la nouvelle machine virtuelle IBM CloudDriver.
 * Avant d'effectuer une mise à niveau vers la version 2.2, vérifiez que vous avez remplacé l'instance de serveur virtuel Veeam existante par le service Veeam on {{site.data.keyword.cloud_notm}}. L'instance de serveur virtuel Veeam existante n'est plus prise en charge en version 2.2 et dans les versions ultérieures, de sorte que les sauvegardes de composant de gestion associées à l'instance de serveur virtuel Veeam existante ne sont pas disponible pour une restauration.
 
-Pour plus d'informations sur l'utilisation du service Veeam on {{site.data.keyword.cloud_notm}}, voir :
+Pour plus d'informations sur l'utilisation du service Veeam sur {{site.data.keyword.cloud_notm}}, reportez-vous aux rubriques suivantes :
 * [Composants et remarques pour Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
 * [Gestion de Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)
 
@@ -43,7 +43,7 @@ Pour les remarques importantes avant de sécuriser une instance VMware Federal, 
 
 (Mise à jour du 2 avril 2018) Vous pouvez désormais étendre ou réduire la capacité de votre instance VMware Federal en ajoutant ou en supprimant des serveurs ESXi. Cette option n'est disponible que pour les instances VMware Federal qui n'ont pas été sécurisées.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 
 * [Présentation de VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html)
 * [Ajout, affichage et suppression de clusters pour des instances VMware Federal](../vcenter/fed_addviewdeleteclusters.html)
@@ -64,7 +64,7 @@ Pour plus d'informations, voir _Paramètres de configuration avancée pour les s
 
 Pour la version 2.2 et éditions ultérieures, vous pouvez désormais augmenter le nombre de serveurs ESXi jusqu'à un maximum de 51 pour un cluster initial et jusqu'à 59 pour les clusters additionnels.
 
-**Important :** pour les instances déployées dans la version 2.1 ou des éditions antérieures, vous devez activer la prise en charge vSAN nécessaire pour augmenter la taille du cluster au-delà de 32. Pour plus d'informations et la procédure d'augmentation du nombre de serveurs ESXi, voir _Combien de serveurs ESXi puis-je ajouter à un cluster ?_ dans la [Foire aux questions sur les serveurs ESXi](../vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-).
+**Important :** pour les instances déployées dans la version 2.1 ou des éditions antérieures, vous devez activer la prise en charge vSAN nécessaire pour augmenter la taille du cluster au-delà de 32 éléments. Pour plus d'informations et la procédure d'augmentation du nombre de serveurs ESXi, voir _Combien de serveurs ESXi puis-je ajouter à un cluster ?_ dans la [Foire aux questions sur les serveurs ESXi](../vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-).
 
 ## Options de configuration réseau supplémentaires pour les instances vCenter Server et Cloud Foundation
 
@@ -144,7 +144,7 @@ Le service Zerto on {{site.data.keyword.cloud_notm}} fournit des fonctions de r�
 
 Vous pouvez demander des services gérés pour vos instances à partir de la page **Initiation**, soit en passant une nouvelle commande d'instance, soit en ajoutant le service à une instance existante.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Demande de services pour Veeam on {{site.data.keyword.cloud_notm}}](../services/managing_veeam_services.html)
 * [Demande de services pour Zerto on {{site.data.keyword.cloud_notm}}](../services/managing_zerto_services.html)
 
@@ -154,7 +154,7 @@ Pour plus d'informations, voir :
 
 * La documentation contient désormais la nomenclature des VLANs et des logiciels pour les instances Cloud Foundation et vCenter Server ainsi que pour les clusters VMware vSphere.
 
-  Pour plus d'informations, voir :
+  Pour plus d'informations, voir les rubriques suivantes :
 
   * [Nomenclature de vCenter Server](../vcenter/vc_bom.html)
   * [Nomenclature de Cloud Foundation](../sddc/sd_bom.html)

@@ -58,7 +58,7 @@ Pour plus d'informations, voir la section *Paramètres de serveur bare metal* da
 
 ### Amélioration apportées aux performances du système NFS
 
-Le niveau de performance de 10 IOPS/Go, conçu pour les types de charge de travail les plus exigeants, n'est plus limité à un {{site.data.keyword.CloudDataCent_notm}} spécifique; il est désormais disponible pour tous les centres de données. Pour plus d'informations, voir la section *Stockage* dans [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications).
+Le niveau de performance de 10 IOPS/Go, conçu pour les types de charge de travail les plus exigeants, n'est plus limité à un {{site.data.keyword.CloudDataCent_notm}} spécifique; il est désormais disponible pour tous les centres de données. Pour plus d'informations, voir la section *Stockage* dans [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## Mises à jour apportées aux instances VMware Federal
 
@@ -86,7 +86,7 @@ La documentation sur l'architecture {{site.data.keyword.vmwaresolutions_short}} 
 
 Les informations sur les services ont été restructurées et la navigation a été améliorée afin de trouver facilement les informations appropriées lors de la commande de services.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 
 * [Commande de F5 on {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
 * [Commande de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)

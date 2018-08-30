@@ -18,7 +18,7 @@ Le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} est d
 
 Vous pouvez commander des instances avec le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes à partir de l'onglet **Services** de la page des détails d'instance. En fonction de vos besoins, sélectionnez pour ce service l'une des trois tailles de déploiement et les options d'octroi de licence. Une fois le service correctement installé, vous pouvez gérer et configurer des règles de pare-feu pour les dispositifs FortiGate Virtual Appliance depuis la console FortiGate.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Composants et remarques pour FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)
 * [Gestion de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html)
 
@@ -28,7 +28,7 @@ Vous pouvez désormais installer plusieurs instances du service F5 on {{site.dat
 
 Une fois le déploiement de l'instance achevé, vous pouvez ajouter d'autres instances du service F5 ou FortiGate en installant le service à partir de l'onglet **Ajouter des services** de la page des détails de l'instance. Vous ne pouvez ajouter qu'une seule instance de service à la fois et répéter le processus pour toutes les instances que vous voulez ajouter pour un service.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Commande, affichage et retrait de services pour des instances Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Commande, affichage et retrait de services pour des instances vCenter Server](../vcenter/vc_addingremovingservices.html)
 
@@ -44,7 +44,7 @@ Dans tous les cas, vous devez gérer la configuration des dispositifs FSA avec l
 
 Le nom de domaine complet est désormais représenté de manière cohérente pour toutes les instances. Lorsque vous passez une commande, vous pouvez entrer vos propres préfixe de sous-domaine et préfixe de nom d'hôte. Ceci garantit que la convention de l'industrie en matière de format de nom de domaine complet est respectée, soit : `préfixe-nom-hôte<n>.préfixe-sousdomaine.nom-domaine`.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Commande de nouveaux clusters vSphere](../vsphere/vs_orderinginstances.html)
@@ -54,7 +54,7 @@ Pour plus d'informations, voir :
 * Lors d'une commande d'une instance VMware vSphere on {{site.data.keyword.cloud_notm}}, une estimation du nombre de machines virtuelles qui peuvent s'exécuter sur l'instance commandée vous est fournie.
 * Lors d'une commande d'une instance Cloud Foundation et vCenter Server, une estimation de la capacité de stockage utilisable pour l'instance commandée vous est fournie.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Commande de nouveaux clusters vSphere](../vsphere/vs_orderinginstances.html)
@@ -84,7 +84,7 @@ Vous pouvez afficher les détails du cluster et ajouter jusqu'à cinq clusters �
 
 Vous pouvez désormais personnaliser la configuration du stockage vSAN en sélectionnant le nombre d'unités de stockage vSAN et leur taille dans votre commande d'instance.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
 
@@ -100,7 +100,7 @@ Les paramètres de configuration de serveur bare metal suivants sont désormais 
 
 **Remarque** : le châssis dispose d'espace pour 12 disques, mais tous les emplacements ne sont pas remplis. La **Petite** configuration fournit deux unités Micron 5100 MAX de 1,9 To et la **Grande** configuration fournit quatre unités Micron 5100 PRO de 3,8 To.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
 
@@ -133,7 +133,7 @@ Pour plus d'informations, voir [Commande d'instances vCenter Server](../vcenter/
 
 BYOL est désormais disponible pour les instances vCenter Server. BYOL vous permet d'utiliser une ou plusieurs de vos propres licences vCenter Server, vSphere, vSAN et NSX VMware lors de la commande d'instances vCenter Server.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Commande de nouveaux clusters vSphere](../vsphere/vs_orderinginstances.html)
@@ -162,9 +162,9 @@ Les options de configuration de serveur bare metal suivantes sont désormais dis
 * **Hautes performances (Grande)** – Licence Premium/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/128 Go de RAM/capacité de vingt-deux unités SSD de 3,8 To par noeud/capacité effective d'un cluster de 4 noeuds – 118 To
 * **Haute capacité** – Licence Standard/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/64 Go de RAM/capacité de dix unités SATA de 4 To par noeud/capacité effective d'un cluster de 4 noeuds – 60 To
 
-**Remarque :** les unités SSD de 3,8 To seront prises en charge une fois officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}. 
+**Remarque :** les unités SSD de 3,8 To seront prises en charge une fois officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation de NetApp ONTAP Select](../netapp/np_netappoverview.html)
 * [Commande d'instances NetApp ONTAP Select](../netapp/np_orderinginstances.html)
 

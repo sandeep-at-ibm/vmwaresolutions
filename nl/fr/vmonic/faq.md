@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -15,7 +15,7 @@ Trouvez les réponses aux questions fréquemment posées concernant {{site.data.
 ## De quels comptes utilisateur ai-je besoin pour IBM Cloud for VMware Solutions ?
 
 * **Compte IBMid**. Ce compte est nécessaire pour accéder à la console {{site.data.keyword.vmwaresolutions_short}}. La console est une interface utilisateur autonome distincte du portail {{site.data.keyword.slportal}}. Pour plus d'informations, voir [Initiation](../index.html).
-* **Compte {{site.data.keyword.cloud_notm}}**. Ce compte est nécessaire pour la mise à disposition. Vous pouvez vous inscrire pour obtenir un compte {{site.data.keyword.cloud_notm}} en effectuant une utilisant un **IBMid** existant ou en créant un nouvel **IBMid**.  
+* **Compte {{site.data.keyword.cloud_notm}}**. Ce compte est nécessaire pour la mise à disposition. Vous pouvez vous inscrire pour obtenir un compte {{site.data.keyword.cloud_notm}} en effectuant une utilisant un **IBMid** existant ou en créant un nouvel **IBMid**. 
 * **Compte d'infrastructure {{site.data.keyword.cloud_notm}}**. Ce compte, auparavant appelé compte **IBM SoftLayer**, permet de se connecter au portail client d'infrastructure {{site.data.keyword.cloud_notm}} qui fournit certaines fonctions supplémentaires pour gérer des produits et des services d'infrastructure. Vous pouvez obtenir un compte d'infrastructure {{site.data.keyword.cloud_notm}} en effectuant une mise à niveau de votre **compte {{site.data.keyword.cloud_notm}}** vers un compte de paiement à la carte ou en établissant un lien entre votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) et votre compte {{site.data.keyword.cloud_notm}}. Le compte d'infrastructure {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Inscription à des comptes requis](signing_softlayer_account.html) et [Exigences liées au compte d'infrastructure {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
 
 ## Comment associer mes données d'identification d'infrastructure IBM Cloud à la console IBM Cloud for VMware Solutions ?
@@ -24,7 +24,7 @@ A la première commande de votre instance, suivez les instructions de la page **
 
 ## Comment sont facturées mes consommations de plateforme virtuelle VMware ?
 
-Tous les coûts d'infrastructure physique et virtuelle ainsi que des licences issues de l'instance sont facturés sur votre compte {{site.data.keyword.cloud_notm}}. Lorsque vous commandez une instance, vous devez disposer d'un compte {{site.data.keyword.cloud_notm}} et fournir la clé {{site.data.keyword.slapi_short}} associée au compte.
+Tous les coûts d'infrastructure physique et virtuelle, ainsi que des licences associées à l'instance, sont facturés sur votre compte {{site.data.keyword.cloud_notm}}. Lorsque vous commandez une instance, vous devez disposer d'un compte {{site.data.keyword.cloud_notm}} et fournir la clé {{site.data.keyword.slapi_short}} associée au compte.
 
 ## Quelles sont les différences entre une instance vCenter Server, une instance Cloud Foundation et un cluster VMware vSphere ?
 
@@ -48,9 +48,9 @@ Pour plus d'informations, voir [Composants de VMware vSphere on {{site.data.keyw
 
 ## Une instance vCenter Server à deux noeuds est-elle à haute disponibilité ?
 
-Il est vivement recommandé de déployer les charges de travail de production dans des environnements dotés d'au moins trois noeuds.
+Il est recommandé de déployer les charges de travail de production dans des environnements dotés d'au moins trois noeuds.
 
-Bien que le planificateur de ressources distribuées (DRS, Distributed Resource Scheduler) VMware vSphere et la haute disponibilité VMware soient activés par défaut, les meilleures pratiques VMware suggèrent de placer chacun des trois contrôleurs NSX sur un noeud distinct.
+VMware vSphere DRS (Distributed Resource Scheduler, planificateur de ressources distribuées) et VMware HA (High Availability, haute disponibilité) sont activés par défaut. Les pratiques VMware recommandées suggèrent toutefois de placer chacun des trois contrôleurs NSX sur un noeud distinct.
 
 Dans le déploiement minimum à deux noeuds, l'un des noeuds reçoit un contrôleur NSX et le second, deux contrôleurs NSX. Si le noeud où se trouvent les deux contrôleurs NSX vient à s'arrêter, les opérations du contrôleur NSX sont placées dans un noeud en mode lecture seule et les nouvelles machines virtuelles ou machines virtuelles vMotion risquent d'être confrontées à des problèmes de réseau.
 
@@ -62,13 +62,13 @@ Non, ce n'est pas recommandé. Vous risquez des incidents au niveau des fonction
 
 ## Les clusters peuvent-ils être renommés ?
 
-Pour les instances vCenter Server, le premier cluster créé lors du déploiement est, par défaut, nommé **cluster1**. Vous pouvez le renommer dans le client VMware vSphere. Lorsque vous ajoutez un cluster à une instance vCenter Server, vous pouvez indiquer le nom qui vous convient sur la console {{site.data.keyword.vmwaresolutions_short}}.
+Pour les instances vCenter Server, le premier cluster créé lors du déploiement est, par défaut, nommé **cluster1**. Vous pouvez le renommer dans le client VMware vSphere. Lorsque vous ajoutez un cluster à une instance vCenter Server, vous pouvez spécifier le nom de votre choix sur la console {{site.data.keyword.vmwaresolutions_short}}.
 
 **Remarque**:  pour les instances Cloud Foundation, le nom du cluster par défaut n'est pas modifiable.
 
 ##Comment sont gérés les correctifs ?
 
-IBM fournit des mises à jour permanentes du composant IBM CloudDriver, qui sont mises à disposition via {{site.data.keyword.cloud_notm}} pour la console VMware Solutions. IBM ne fournit pas de mises à jour permanentes pour les services complémentaires tels que Zerto on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}}. L'obtention et l'installation de ces mises à jour est de votre responsabilité.
+IBM fournit des mises à jour permanentes du code en déployant l'instance de serveur virtuel (VSI) IBM CloudDriver (VSI) à la demande. IBM ne fournit pas de mises à jour permanentes pour les services complémentaires tels que Zerto on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}}. L'obtention et l'installation de ces mises à jour est de votre responsabilité.
 
 Les mises à jour de VMware sont appliquées différemment selon le type d'instance VMware que vous avez déployée :
 
@@ -76,9 +76,9 @@ Les mises à jour de VMware sont appliquées différemment selon le type d'insta
 * Pour les instances VMware vCenter Server :
   * Pour les instances déployées en ou mise à niveau vers la version 2.1 ou ultérieure, les nouveaux clusters et serveurs ESXi déployés reçoivent de VMware des mises à jour ESXi récentes, mais pas nécessairement les toutes dernières.
   * Vous êtes responsable de toutes les autres mises à jour des composants VMware, y compris de vous assurer que les nouveaux clusters et serveurs ESXi déployés disposent de toutes les mises à jour les plus récentes dont vous avez besoin.
-  * Pour les instances déployées en version 2.0 ou ultérieure, le gestionnaire de mises à jour VMware (VUM, VMware Update Manager) est intégré à votre serveur vCenter Server. Vous pouvez configurer VUM de manière à télécharger les mises à jour ESXi depuis VMware.
+  * Pour les instances déployées en version 2.0 ou ultérieure, le gestionnaire de mises à jour VMware (VUM, VMware Update Manager) est intégré à votre serveur vCenter Server. Vous pouvez configurer VUM afin de télécharger des mises à jour ESXi depuis VMware.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez les ressources suivantes :
 * [Support VMware](https://www.vmware.com/support.html)
 * [Application de mises à jour à des instances vCenter Server](../vcenter/vc_applyingupdates.html)
 * [Application de mises à jour à des instances Cloud Foundation](../sddc/sd_applyingupdates.html)
@@ -93,7 +93,7 @@ Bien que la passerelle VMware NSX Edge des services de gestion se trouve sur un 
 
 ## La passerelle NSX Edge présente-t-elle un risque pour la sécurité ?
 
-Bien que la passerelle NSX Edge gérée par le client soit connectée au VLAN public, des mesures de sécurité ont été prises afin de garantir qu'elle ne présente aucun risque pour la sécurité. Ces mesures sont les suivantes :
+Bien que la passerelle NSX Edge gérée par le client soit connectée au VLAN public, des mesures de sécurité ont été prises afin de garantir qu'elle ne présente aucun risque pour la sécurité. Les mesures de sécurité suivantes sont en place :
 *  Une règle de pare-feu est en vigueur afin de n'autoriser que le trafic sortant issu de la plage d'adresses IP du sous-réseau privé.
 *  Une règle SNAT (désactivée par défaut) est en vigueur afin de convertir toutes les adresses IP issues du sous-réseau privé en une unique adresse IP sur le sous-réseau public.
 *  L'accès distant pour le dispositif NSX Edge géré par le client est désactivé.
@@ -117,9 +117,9 @@ Vous pouvez vérifier le statut du déploiement de l'instance en affichant l'his
 
 ## Est-ce que VMware vSphere on IBM Cloud utilise l'automatisation pour installer, configurer et apporter la pile VMware ?
 
-Non. VMware vSphere on {{site.data.keyword.cloud_notm}} n'utilise pas l'automatisation avancée des plateformes Cloud Foundation et vCenter Server. Selon les éléments commandés, la plateforme distribue des licences VMware facultatives, des serveurs ESXi et, en option, une paire à haute disponibilité de pare-feu physiques FortiGate. Si un nouveau cluster est créé, trois nouveaux VLAN sont également mis à disposition : un public et deux privés.
+Non. VMware vSphere sur {{site.data.keyword.cloud_notm}} n'utilise pas l'automatisation avancée des plateformes Cloud Foundation et vCenter Server. Selon les éléments commandés, la plateforme distribue des licences VMware facultatives, des serveurs ESXi et, en option, une paire à haute disponibilité de pare-feu physiques FortiGate. Si un nouveau cluster est créé, trois nouveaux VLAN sont également mis à disposition : un VLAN public et deux privés.
 
-VMware ESXi est automatiquement installé sur chaque serveur bare metal, mais c'est à vous d'installer les composants VMware supplémentaires, tels que vCenter Server ou NSX. Etant donné que vSphere on {{site.data.keyword.cloud_notm}} garantit que le matériel compatible VMware est commandé sur les composants VMware sélectionnés, aucune automatisation n'est mise en oeuvre pour configurer et installer l'environnement VMware. Vous êtes responsable de la conception et de l'architecture de l'environnement hébergé IBM.
+VMware ESXi est automatiquement installé sur chaque serveur bare metal, mais c'est à vous d'installer les composants VMware supplémentaires, tels que vCenter Server ou NSX. Bien que vSphere sur {{site.data.keyword.cloud_notm}} veille à ce que le matériel commandé soit compatible avec VMware compte tenu des composants VMware sélectionnés, aucune automatisation ne permet de configurer et d'installer l'environnement VMware. Vous êtes responsable de la conception et de l'architecture de l'environnement hébergé IBM.
 
 ## Comment afficher la liste de toutes les notifications ?
 

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-14"
 
 ---
 
 # Gestion des accès utilisateur à l'aide d'IAM
 
-L'accès aux instances de service {{site.data.keyword.vmwaresolutions_full}} pour les utilisateurs de votre compte est contrôlé par {{site.data.keyword.cloud}} Identity and Access Management (IAM). Chaque utilisateur qui accède aux services {{site.data.keyword.vmwaresolutions_short}} de votre compte doit se voir attribuer une règle d'accès pour laquelle un rôle utilisateur IAM est défini. 
+L'accès aux instances de service {{site.data.keyword.vmwaresolutions_full}} pour les utilisateurs de votre compte est contrôlé par {{site.data.keyword.cloud}} Identity and Access Management (IAM). Chaque utilisateur qui accède aux services {{site.data.keyword.vmwaresolutions_short}} de votre compte doit se voir attribuer une règle d'accès pour laquelle un rôle utilisateur IAM est défini.
 
 La règle d'accès détermine les actions que l'utilisateur peut effectuer dans le contexte du service ou de l'instance que vous sélectionnez. Les actions autorisées sont personnalisées et définies par le service {{site.data.keyword.cloud_notm}} en tant qu'opérations pouvant être réalisées sur le service. Les actions sont ensuite mappées à des rôles utilisateur IAM.
 
@@ -23,7 +23,7 @@ Les règles permettent d'activer les accès à différents niveaux. Certaines de
 
 Après avoir défini la portée de la règle d'accès, vous lui affectez un rôle.
 
-Consultez les informations ci-dessous afin de connaître les actions autorisées par chaque rôle au sein du service {{site.data.keyword.vmwaresolutions_short}}. 
+Consultez les informations ci-dessous afin de connaître les actions autorisées par chaque rôle au sein du service {{site.data.keyword.vmwaresolutions_short}}.
 
 ## Rôles et droits de gestion de plateforme
 
@@ -37,20 +37,20 @@ Tableau 1. Rôles de gestion de plateforme et actions autorisées
 |:----------------- |:----------------- |:----------------- |
 | Afficheur | Actions en lecture seule | <ul><li>Afficher le récapitulatif d'instances</li><li>Afficher les détails d'une instance</li></ul>|
 | Editeur | Mettre à jour une instance spécifique |<ul><li>Ajouter ou retirer des serveurs ESXi</li><li>Ajouter ou retirer des clusters</li><li>Ajouter ou retirer des services</li><li>Mettre à niveau une instance vers une version ultérieure</li></ul> |
-|Opérateur | Actions en lecture seule | <ul><li>Répertorier des instances</li><li>Afficher les détails d'une instance</li></ul> |
-|Administrateur | Accès de gestion complet |<ul><li>Créer de nouvelles instances</li><li>Supprimer des instances</li><li>Accorder l'accès à une plateforme à d'autres utilisateurs</li></ul>|
+| Opérateur | Actions en lecture seule | <ul><li>Répertorier des instances</li><li>Afficher les détails d'une instance</li></ul> |
+| Administrateur | Accès de gestion complet |<ul><li>Créer de nouvelles instances</li><li>Supprimer des instances</li><li>Accorder l'accès à une plateforme à d'autres utilisateurs</li></ul>|
 
 Pour {{site.data.keyword.vmwaresolutions_short}}, les actions suivantes existent :
 
-Tableau 2. Descriptions et rôles requis pour les actions
+Tableau 2. Descriptions des actions et des rôles requis
 
-| Action | Operation sur le service |Rôle |
+| Action | Opération sur le service | Rôle |
 |:------ |:-------------------- |:---- |
-| vmware-solutions.instances.create |Créer de nouvelles instances|Administrateur |
-| vmware-solutions.instances.delete |Supprimer des instances|Administrateur |
+| vmware-solutions.instances.create | Créer de nouvelles instances | Administrateur |
+| vmware-solutions.instances.delete | Supprimer des instances | Administrateur |
 | vmware-solutions.instances.view | <ul><li>Répertorier des instances</li><li>Afficher les détails d'une instance</li></ul> | Afficheur, opérateur, éditeur et administrateur |
 | vmware-solutions.instances.update | <ul><li>Ajouter ou retirer des serveurs ESXi</li><li>Ajouter ou retirer des clusters</li><li>Ajouter ou retirer des services</li><li>Mettre à niveau une instance vers une version ultérieure</li></ul> | Editeur et administrateur |
-| vmware-solutions.account.update |Mettre à jour les paramètres de compte |Administrateur |
+| vmware-solutions.account.update | Mettre à jour les paramètres de compte | Administrateur |
 
 ## Gestion de l'accès des utilisateurs
 
@@ -58,11 +58,11 @@ Vous pouvez ajouter de nouveaux utilisateurs au compte {{site.data.keyword.cloud
 
 Vous pouvez également gérer l'accès des utilisateurs existants, et notamment modifier l'accès existant, affecter un nouvel accès et vérifier l'accès affecté. Pour gérer l'accès des utilisateurs, vous devez être le propriétaire du compte ou vous devez disposer du rôle de gestion de plateforme **Administrateur**. Pour plus d'informations, voir [Gestion des accès IAM](../../../iam/mngiam.html).
 
-### Migration d'instances existantes vers des comptes IBM Cloud
+## Migration d'instances existantes vers des comptes IBM Cloud
 
-En raison de l'intégration d'{{site.data.keyword.vmwaresolutions_short}} à IAM, les instances qui sont déployées dans la version 2.5 et dans les éditions ultérieures de votre compte {{site.data.keyword.cloud}} sont ajoutées automatiquement à votre compte et sont gérées par IAM. Quant aux instances existantes qui ont été déployées dans la version 2.4 et dans des éditions antérieures, vous pouvez les faire migrer vers des comptes {{site.data.keyword.cloud_notm}} spécifiés pour la gestion activée pour IAM. 
+En raison de l'intégration d'{{site.data.keyword.vmwaresolutions_short}} à IAM, les instances qui sont déployées dans la version 2.5 et dans les éditions ultérieures de votre compte {{site.data.keyword.cloud}} sont ajoutées automatiquement à votre compte et sont gérées par IAM.
 
-Pour plus d'informations, voir :
+Quant aux instances existantes qui ont été déployées dans la version 2.4 et dans des éditions antérieures, vous pouvez les faire migrer vers des comptes {{site.data.keyword.cloud_notm}} spécifiés pour la gestion activée pour IAM. Pour plus d'informations, voir les rubriques suivantes :
 * [Migration d'instances vCenter Server antérieures à la version 2.5 vers des comptes IBM Cloud](../vcenter/vc_addinstancetousraccount.html)
 * [Migration d'instances vCenter Server with Hybridity Bundle antérieures à la version 2.5 vers des comptes IBM Cloud](../vcenter/vc_hybrid_addinstancetousraccount.html)
 * [Migration d'instances Cloud Foundation Select antérieures à la version 2.5 vers des comptes IBM Cloud](../sddc/sd_addinstancetousraccount.html)

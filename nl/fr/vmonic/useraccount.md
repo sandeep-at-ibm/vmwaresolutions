@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -18,12 +18,11 @@ Vous pouvez également indiquer si vous voulez recevoir des notifications par co
 
 ## Avant de commencer
 
-* Vous ne pouvez lier qu'un seul compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) à un compte utilisateur {{site.data.keyword.cloud_notm}}. 
+* Vous ne pouvez lier qu'un seul compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) à un compte utilisateur {{site.data.keyword.cloud_notm}}.
 * Le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte d'infrastructure {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
 * Si la clé d'API de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) change, vous devez mettre à jour la clé sur la page **Paramètres** de la console {{site.data.keyword.vmwaresolutions_short}}.
 
-   **Important** : il vous incombe de vérifier que la clé d'API enregistrée sur la page **Paramètres** est correcte et à jour.
-   Sinon, les opérations qui nécessitent la clé d'API risquent d'échouer.
+   **Important** : il vous incombe de vérifier que la clé d'API enregistrée sur la page **Paramètres** est correcte et à jour. Sinon, les opérations qui nécessitent la clé d'API risquent d'échouer.
 
 ## Procédure
 
@@ -31,19 +30,19 @@ Vous pouvez également indiquer si vous voulez recevoir des notifications par co
 2. Dans la zone **Notifications**, spécifiez vos paramètres de notification. 
    * Si vous voulez être prévenu par courrier électronique de la survenue d'événements, cliquez sur **Activer les notifications par courrier électronique**.
    * Si vous voulez être prévenu sur la console de la survenue d'événements, cliquez sur **Activer les notifications par console**.
-3. Dans la zone **Données d'identification d'infrastructure IBM Cloud**, entrez le nom d'utilisateur et la clé d'API de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) en utilisant l'une des méthodes décrites ci-dessous : 
-   * Si votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) et votre compte {{site.data.keyword.cloud_notm}} sont liés, cliquez sur **Extraire** pour activer la saisie automatique des données d'identification. 
-   * Si votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) et votre compte {{site.data.keyword.cloud_notm}} ne sont pas liés, connectez-vous au [portail client d'infrastructure {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/) et suivez les instructions de la console pour obtenir et saisir les données d'identification. 
-   * Si vous ne disposez d'aucun compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), [inscrivez-vous pour en recevoir un](../vmonic/signing_softlayer_account.html) et suivez les instructions de la console pour obtenir et saisir les données d'identification. 
+3. Dans la zone **Données d'identification d'infrastructure IBM Cloud**, entrez le nom d'utilisateur et la clé d'API de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) : 
+   * Si votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) et votre compte {{site.data.keyword.cloud_notm}} sont liés, cliquez sur **Extraire** pour activer la saisie automatique des données d'identification.
+   * Si ce n'est déjà fait, vous devez lier votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) et votre compte {{site.data.keyword.cloud_notm}}. Connectez-vous au [portail client de l'infrastructure {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/) et suivez les instructions sur la console pour obtenir les données d'identification, puis entrez ces informations.
+   * Si vous ne disposez pas d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), [souscrivez à un compte](../vmonic/signing_softlayer_account.html) et suivez les instructions sur la console pour obtenir les données d'identification, puis entrez ces informations. 
 4. Cliquez sur **Sauvegarder les données d'identification**.
 
 ## Résultats
 
 Une fois que le compte {{site.data.keyword.cloud_notm}} et le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) sont liés, la console extrait automatiquement les données d'identification du compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) pour communiquer avec votre environnement VMware sur {{site.data.keyword.cloud_notm}}.
 
-Les données d'identification stockées pour le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) sont utilisées dans les opérations ultérieures qui nécessitent une interaction avec l'infrastructure {{site.data.keyword.cloud_notm}}. 
+Les données d'identification stockées pour le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) sont utilisées dans les opérations ultérieures qui nécessitent une interaction avec l'infrastructure {{site.data.keyword.cloud_notm}}.
 
-Si les notifications par courrier électronique ou sur la console pour certains événements d'instance, vous recevez des messages par courrier électronique ou sur la console lorsque ces événements se produisent.
+Si les notifications par courrier électronique ou sur la console sont activées pour certains événements d'instance, des messages par courrier électronique ou sur la console vous aviseront lorsque ces événements se produisent.
 
 ### Liens connexes
 

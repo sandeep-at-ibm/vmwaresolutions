@@ -24,7 +24,7 @@ Cette mise à jour applique les mises à niveau et améliorations suivantes :
 
   **Remarque** : le mode EVC n'est pas activé pour les déploiements nouveaux ou existants sur des serveurs V4.
 
-* Les déploiements VMware Cloud Foundation effectués avant le 22 mai et qui utilisent donc des serveurs V3 commanderont désormais des serveurs V4 lors de l'ajout d'un nouveau noeud à l'instance. Ces serveurs disposent de 256 Go de mémoire. Si vous avez besoin de 512 Go de mémoire, une fois les serveurs ajoutés, ouvrez un ticket de demande de service pour solliciter une mise à niveau à 512 Go de mémoire. Pour plus d'informations voir [Contacter le support IBM](trbl_support.html).
+* Les déploiements VMware Cloud Foundation effectués avant le 22 mai et qui utilisent donc des serveurs V3 commanderont désormais des serveurs V4 lors de l'ajout d'un nouveau noeud à l'instance. Ces serveurs disposent de 256 Go de mémoire. Si vous avez besoin de 512 Go de mémoire, une fois les serveurs ajoutés, ouvrez un ticket de demande de service pour solliciter une mise à niveau à 512 Go de mémoire. Pour savoir comment contacter le support IBM, voir [Contacter le support IBM](trbl_support.html).
 
 Pour plus d'informations sur les composants, voir [Spécifications techniques relatives aux instances Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 

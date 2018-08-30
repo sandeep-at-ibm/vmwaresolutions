@@ -14,7 +14,7 @@ Cette édition inclut de nouvelles fonctionnalités, des améliorations d'utilis
 
 ## Exigences relatives à un compte VRF par rapport à un compte SoftLayer classique
 
-Pour les compmtes SoftLayer® classiques, le spanning VLAN est un paramètre qui peut être activé au niveau du compte. Pour {{site.data.keyword.vmwaresolutions_short}}, le spanning VLAN doit obligatoirement être activé.
+Pour les comptes SoftLayer® classiques, le spanning VLAN est un paramètre qui peut être activé au niveau du compte. Pour {{site.data.keyword.vmwaresolutions_short}}, le spanning VLAN doit obligatoirement être activé.
 
 Pour les comptes SoftLayer de réacheminement et de routage virtuels (VRF, Virtual Routing and Forwarding), l'équivalent du spanning VLAN est un paramètre permanent non modifiable. Aucune configuration utilisateur n'est nécessaire pour les comptes VRF.
 

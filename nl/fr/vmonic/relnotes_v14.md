@@ -44,7 +44,7 @@ NSX Edge est désormais inclus dans les nouvelles commandes d'instance vCenter S
 
 Lors du déploiement d'une instance, IBM déploie une passerelle VMware NSX ESG (Edge Services Gateway) de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. La passerelle ESG est déployée de manière à inclure deux interfaces : une pour la connexion au réseau local virtuel {{site.data.keyword.cloud_notm}} privé et l'autre pour la connexion au réseau local virtuel {{site.data.keyword.cloud_notm}} public.
 
-Pour garantir la sécurité, des règles de pare-feu sont instaurées afin d'autoriser uniquement les communications HTTPS sortantes initiées par les machines virtuelles de gestion. Cette passerelle ESG est déployée dans une Grande configuration et seul le support IBM est habilité à modifier la configuration. Pour plus d'informations, voir :
+Pour garantir la sécurité, des règles de pare-feu sont instaurées afin d'autoriser uniquement les communications HTTPS sortantes initiées par les machines virtuelles de gestion. Cette passerelle ESG est déployée dans une Grande configuration et seul le support IBM est habilité à modifier la configuration. Pour plus d'informations, voir les rubriques suivantes :
 
 * [Spécifications techniques de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -96,7 +96,7 @@ Le processus de commande d'instance a été grandement simplifié :
 * Pour les instances Cloud Foundation et vCenter Server, la page des données d'identification SoftLayer ne s'affiche plus pendant le processus de commande. Les données d'identification SoftLayer définies sur la page Paramètres sont utilisée par défaut et vous n'êtes invité à les mettre à jour que si vous ne répondez pas aux exigences.
 * De plus, pour les instances vCenter Server, seule l'option **Grande** du type **Matériel** et le paramètre **Double 10 Gbps** de **Vitesse de port de liaison montante** sont désormais disponibles, ce qui réduit le nombre de paramètres à renseigner lors de la commande.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 
 * [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
@@ -112,7 +112,7 @@ De nouvelles fonctions et améliorations ont été apportées au processus de ge
 
 Vous pouvez désormais configurer des notifications de console sur la page **Paramètres**. Le paramètre est activé par défaut, ce qui signifie que vous recevez une notification sur la console pour tous les événements. Vous pouvez désactiver les notifications sur la console dans la page **Paramètres**.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 
 * [Paramètres et comptes utilisateur](useraccount.html)
 * [Notifications](notifications.html)

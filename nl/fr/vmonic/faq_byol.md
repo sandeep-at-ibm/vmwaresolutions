@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -62,11 +62,11 @@ Toutes les clés de licence que vous fournissez sont validées afin de garantir 
 
 ## Puis-je fournir une clé de licence avec plus de 8 UC ?
 
-Oui. Pour chaque composant VMware, une licence par UC est requise. Actuellement, tous les serveurs vCenter Server et Cloud Foundation disposent de deux UC et deux licences sont requises pour chaque serveur. Il est recommandé de fournir une clé de licence à même de prendre en charge l'instance de base ainsi que tous les noeuds d'extension que vous pourriez vouloir ajouter ultérieurement à l'instance.
+Oui. Pour chaque composant VMware, une licence par UC est requise. Actuellement, tous les serveurs vCenter Server et Cloud Foundation disposent de deux UC. Par conséquent, deux licences sont requises pour chaque serveur. Il est recommandé de fournir une clé de licence à même de prendre en charge l'instance de base ainsi que tous les noeuds d'extension que vous pourriez vouloir ajouter ultérieurement à l'instance.
 
 ## Puis-je fournir la licence du gestionnaire SDDC lorsque j'utilise la fonction BYOL ?
 
-Non. Notre accord avec VMware implique que vous devez accepter la clé de licence actuelle du client. Même si le déploiement de Cloud Foundation inclut des licences pour le gestionnaire SDDC, nous ne pouvons accepter et valider aucun fichier de clé de licence de gestionnaire SDDC pour BYOL. Par conséquent, les licences du gestionnaire SDDC sont facturées par IBM pour toutes les instances. Les licences du gestionnaire SDDC constituent une toute petite portion de l'ensemble des frais de licence pour une instance Cloud Foundation.
+Non. Notre accord avec VMware implique que vous devez accepter la clé de licence actuelle du client. Même si le déploiement de Cloud Foundation inclut des licences pour le gestionnaire SDDC, nous ne pouvons accepter et valider aucun fichier de clé de licence de gestionnaire SDDC pour BYOL. Par conséquent, les licences du gestionnaire SDDC sont facturées par IBM pour toutes les instances. Les licences du gestionnaire SDDC constituent une faible portion des frais de licence globaux pour une instance Cloud Foundation.
 
 ## Puis-je utiliser la fonction BYOL pour certains composants VMware et acheter des licences mensuelles pour d'autres ?
 
@@ -74,11 +74,11 @@ Oui. Vous pouvez utiliser la fonction BYOL ou acheter des licences pour toute co
 
 ## Pour un composant VMware spécifique, puis-je utiliser BYOL pour certaines licences et acheter les autres licences à IBM ?
 
-Oui. Si vous avez sélectionné BYOL pour un composant VMware spécifique, vous avez la possibilité lors de la création d'un nouveau cluster d'entrer une nouvelle clé BYOL, de continuer à utiliser une clé BYOL existante ou d'acheter une licence fournie par IBM pour ce cluster.  Actuellement, seuls VMware vSphere Enterprise et VMware vSAN sont disponibles pour l'octroi de licence par cluster.
+Oui. Si vous avez sélectionné BYOL pour un composant VMware spécifique, vous avez la possibilité lors de la création d'un nouveau cluster d'entrer une nouvelle clé BYOL, de continuer à utiliser une clé BYOL existante ou d'acheter une licence fournie par IBM pour ce cluster. Actuellement, seuls VMware vSphere Enterprise et VMware vSAN sont disponibles pour un octroi de licence par cluster.
 
 ## Puis-je utiliser BYOL lors de la création d'un nouveau cluster ?
 
-Oui. Vous pouvez utiliser BYOL à partir de licences BYOL existantes ou entrer une nouvelle BYOL lors de la création d'un nouveau cluster. Vous avez également la possibilité d'acheter une licence d'abonnement fournie par IBM lors de la création d'un nouveau cluster. Actuellement, seuls VMware vSphere Enterprise et VMware vSAN sont disponibles pour l'octroi de licence par cluster.
+Oui. Vous pouvez utiliser BYOL à partir de licences BYOL existantes ou entrer une nouvelle BYOL lors de la création d'un nouveau cluster. Vous avez également la possibilité d'acquérir une licence d'abonnement IBM lors de la création d'un nouveau cluster. Actuellement, seuls VMware vSphere Enterprise et VMware vSAN sont disponibles pour un octroi de licence par cluster.
 
 ## Comment puis-je gérer mes licences BYOL ?
 
@@ -90,7 +90,10 @@ Oui. Lorsque vous ajoutez des serveurs ESXi à une instance déployée, la capac
 
 ## Comment savoir de quelle capacité de licence je dispose sur un cluster avec BYOL ?
 
-Pour connaître le nombre d'UC disponibles dans votre clé de licence, accédez à la page **Instances déployées**, localisez l'instance et cliquez dessus, puis sur l'onglet **Infrastructure**, cliquez sur le cluster pour lequel vous voulez vérifier la capacité de licence. Le nombre d'UC disponibles est indiqué dans le tableau **Licence fournie par l'utilisateur**.
+Pour identifier le nombre d'UC utilisables avec votre clé de licence, procédez comme suit :
+1. Accédez à la page **Instances déployées**.
+2. Localisez et cliquez sur l'instance.
+3. Sur l'onglet **Infrastructure**, cliquez sur le cluster pour lequel vous désirez vérifier la capacité de licence. Le nombre d'UC disponibles est indiqué dans le tableau **Licence fournie par l'utilisateur**.
 
 ## Est-ce que je bénéficie du support IBM lorsque je sélectionne l'option de licence BYOL ?
 
@@ -98,7 +101,7 @@ Le support IBM reste votre point de contact pour tout ce qui concerne la configu
 
 ## Pourquoi les frais de licence vSphere apparaissent-ils dans la liste d'estimation du prix lorsque j'utilise BYOL ? Suis-je facturé ?
 
-Les serveurs {{site.data.keyword.baremetal_short}} sont mise à disposition avec VMware vSphere déjà installé et avec des licences vSphere déjà incluses. Si vous avez sélectionné BYOL pour vSphere, un processus est automatiquement initié au moment du déploiement de l'instance afin de supprimer les licences vSphere incluses. Les frais de licences sont ensuite crédités sur votre compte {{site.data.keyword.cloud_notm}}. Vous n'avez rien à faire concernant ce processus.
+Les serveurs {{site.data.keyword.baremetal_short}} sont mise à disposition avec VMware vSphere déjà installé et avec des licences vSphere déjà incluses. Si vous avez sélectionné BYOL pour vSphere, un processus est automatiquement initié au moment du déploiement de l'instance afin de supprimer les licences vSphere incluses. Les frais de licences sont alors crédités sur votre compte {{site.data.keyword.cloud_notm}}. Vous n'avez rien à faire concernant ce processus.
 
 ## Puis-je toujours utiliser le processus manuel existant pour BYOL ?
 
@@ -106,7 +109,7 @@ Avec l'introduction de la fonction BYOL, il n'est pas recommandé de continuer �
 
 ## Est-ce que BYOL est pris en charge pour d'autres produits VMware tels que VMware vRealize Automation, VMware vRealize Operations ou VMware vRealize Log Insight ?
 
-Non, parce que ces produits VMware ne font pas partie du déploiement de l'instance. Ces produits VMware peuvent être installés au-dessus du déploiement initial, ce qui implique que les clients ou leurs agents doivent effectuer l'installation et l'octroi de licence.
+Non, parce que ces produits VMware ne font pas partie du déploiement de l'instance. Ces produits VMware peuvent être installés en sus du déploiement initial, ce qui implique que les clients ou leurs agents procèdent à l'installation et à l'octroi de licence.
 
 ## Puis-je commander un stockage NFS avec vCenter Server with Hybridity Bundle ?
 
@@ -128,7 +131,7 @@ vCenter Server with Hybridity Bundle est un ensemble prescrit de licences et d'�
 
 Les nouvelles instances de vCenter Server with Hybridity Bundle incluent VMware vSphere Enterprise Plus, VMware vCenter Standard, VMware NSX Advanced ou Enterprise, VMware vSAN Advanced ou Enterprise et VMware Hybrid Cloud Extension (HCX).
 
-Si vous possédez une instance vCenter Server dotée d'une édition NSX Base, une mise à niveau vers l'édition NSX Advanced s'effectuera automatiquement lorsque vous commanderez vCenter Server with Hybridity Bundle.
+Si vous disposez d'une instance vCenter Server avec une édition NSX Base, une mise à niveau vers l'édition NSX Advanced est effectuée automatiquement lorsque vous commandez vCenter Server avec Hybridity Bundle. 
 
 ## Puis-je mettre à niveau l'édition NSX Advanced qui est incluse dans vCenter Server with Hybridity Bundle vers l'édition NSX Enterprise ?
 

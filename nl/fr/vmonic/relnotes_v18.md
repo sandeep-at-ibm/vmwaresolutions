@@ -18,7 +18,7 @@ Le service Fortinet on {{site.data.keyword.cloud_notm}} est désormais disponibl
 
 Une fois le service Fortinet correctement installé, vous pouvez gérer et configurer des règles de pare-feu pour FortiGate Security Appliance (FSA) depuis la console FortiGate. Vous devez vous assurer que les règles de pare-feu de FortiGate Security Appliance (FSA) sont définies de manière à autoriser les communications HTTPS sortantes initiées par des composants de gestion, tels que la machine virtuelle IBM CloudDriver ou le gestionnaire virtuel Zerto, pour communiquer avec la base de données de gestion externe sur IBM Bluemix® via Internet. Les communications HTTPS sortantes proviennent de l'adresse IP publique des services de gestion VMware NSX Edge Services Gateway (ESG) de votre instance.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation de Fortinet on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)
 * [Gestion de Fortinet on {{site.data.keyword.cloud_notm}}](../services/managingfsa.html)
 
@@ -30,7 +30,7 @@ En raison de cette modification, et bien que les instances de serveur virtuel Ve
 
 De plus, la licence de l'instance de serveur virtuel Veeam des instances de version antérieure à 1.8 a expiré le 14 octobre 2017. Par conséquent, vous devez remplacer l'ancienne instance de serveur virtuel Veeam par le nouveau service Veeam dès que possible.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
 * [Gestion de Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)
 
@@ -42,7 +42,7 @@ A compter de l'édition de la version 1.8, lorsque vous commandez une instance C
 
 Mais vous pouvez également choisir d'utiliser votre propre licence VMware pour un composant, et vous devez alors fournir la clé de licence. Dans ce cas, la prise en charge des composants VMware pour lesquels vous fournissez des licences sera assurée par VMware et non par le support IBM.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Foire aux questions sur le mode BYOL](faq_byol.html)
 
@@ -52,7 +52,7 @@ Pour plus d'informations, voir :
 
 Une option de serveur personnalisable est disponible avec les options Petite, Moyenne et Grande préconfigurées et testées. Vous pouvez sélectionner dans une liste de serveurs VMware compatibles HCL sur la base des doubles UC et du nombre total de coeurs, en plus de la quantité de RAM. Le stockage local n'est pas personnalisable.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Ajout et affichage des clusters des instances vCenter Server](../vcenter/vc_addingviewingclusters.html)
 
@@ -60,7 +60,7 @@ Pour plus d'informations, voir :
 
  Vous pouvez associer jusqu'à 32 partages de fichiers au maximum entre tous les serveurs ESXi d'un cluster.
 
- Pour plus d'informations, voir :
+ Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Ajout et affichage des clusters des instances vCenter Server](../vcenter/vc_addingviewingclusters.html)
 
@@ -73,7 +73,7 @@ Pour plus d'informations, voir [Exigences et planification pour les instances vC
 ## Améliorations de la convivialité
 
 Des améliorations ont été apportées à l'interface utilisateur, à savoir :
-* Vous pouvez en savoir plus sur les services et commander une instance sur la page **Initiation** du panneau de navigation de gauche. Pour plus d'informations sur l'architecture du service de virtualisation sécurisé d'{{site.data.keyword.cloud_notm}}, voir [Security and compliance - HyTrust](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust).
+* Vous pouvez en savoir plus sur les services et commander une instance sur la page **Initiation** du panneau de navigation de gauche. Pour plus d'informations sur l'architecture du service Secure Virtualization d'{{site.data.keyword.cloud_notm}}, voir [Security and compliance - HyTrust](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust).
 * Utilisez le menu déroulant dynamique de la page des détails de l'instance pour supprimer une instance dont le statut est **Prêt à l'emploi**.
 * L'option de mise à niveau de votre édition de licence NSX est désormais disponible sur l'onglet **Mise à jour et module de correction**. La mise à niveau de la licence remplace toutes les licence NSX existantes de votre compte IBM SoftLayer par la nouvelle licence.
 * L'onglet **Sauvegarde et restauration** de la page des détails de l'instance n'est plus disponible.

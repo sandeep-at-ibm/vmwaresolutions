@@ -30,7 +30,7 @@ Vous pouvez commander des instances Cloud Foundation ou vCenter Server avec le s
 
 Vous pouvez également commander une instance HCX locale pour l'octroi de licence et l'activation de votre installation HCX locale.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Remarques relatives au service HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)
 * [Gestion de HCX on {{site.data.keyword.cloud_notm}}](../services/managinghcx.html)
 * [Remarques relatives aux instances HCX locales](../services/standalone_considerations.html)
@@ -42,7 +42,7 @@ L'utilisation de votre propre licence (BYOL) ou l'achat d'une licence d'abonneme
 
 De plus, lors de l'ajout de noeuds à un cluster sous licence avec votre clé, la console vous invite à fournir une nouvelle clé de licence si le nombre de noeuds dépasse la capacité de la clé.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 
 * [Ajout et affichage des clusters des instances Cloud Foundation](../sddc/sd_addingviewingclusters.html)
 * [Ajout et affichage des clusters des instances vCenter Server](../vcenter/vc_addingviewingclusters.html)
@@ -85,7 +85,7 @@ Vous pouvez déployer ou augmenter le nombre de serveurs du cluster par défaut 
 
 La configuration des serveurs bare metal personnalisée par l'utilisateur offre désormais une configuration Dual Intel Xeon Gold 6140 de 36 coeurs au total, à 2,3 GHz.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
 
@@ -93,7 +93,7 @@ Pour plus d'informations, voir :
 
 Vous avez désormais la possibilité de configurer des partages de fichiers NFS individuellement. Sélectionnez une taille de fichier et un niveau de performance pour chaque partage de fichiers individuel ou sélectionnez les mêmes taille de fichier et niveau de performance pour tous les partages de fichiers que vous commandez.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Ajout et affichage des clusters des instances vCenter Server](../vcenter/vc_addingviewingclusters.html)

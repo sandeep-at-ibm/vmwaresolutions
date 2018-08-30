@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-03-19"
 Les dispositifs Virtual Replication Appliances (VRA) ne s'affichent pas sur la console de réplication virtuelle Zerto après l'ajout de serveurs ESXi à une instance VMware vCenter Server sur laquelle la reprise après incident Zerto est installée.
 
 ## Résolution
-Pour les instances vCenter Server, la reprise après incident Zerto n'est installée que sur le serveur ESXi à partir du cluster par défaut, **cluster1**. Tous les autres clusters du même environnement vCenter Server ne bénéficient pas automatiquement de la reprise après incident Zerto lorsqu'ils sont créés ou lorsque le serveur ESXi est ajouté à ces clusters suppléméntaires.
+Pour les instances vCenter Server, la reprise après incident Zerto n'est installée que sur le serveur ESXi à partir du cluster par défaut, **cluster1**. Tous les autres clusters du même environnement vCenter Server ne bénéficient pas automatiquement de la reprise après incident Zerto lorsqu'ils sont créés ou lorsque le serveur ESXi est ajouté à ces clusters supplémentaires.
 
 Sur les clusters ajoutés, vous devez installer la reprise après incident Zerto séparément.
 

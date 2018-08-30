@@ -28,7 +28,7 @@ Cette édition introduit l'offre VMware vCenter Server on {{site.data.keyword.cl
 
 Le service HCX on {{site.data.keyword.cloud_notm}} est disponible uniquement via l'instance vCenter Server with Hybridity Bundle. Vous pouvez mettre à niveau votre instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle après avoir appliqué la mise à jour logicielle vCenter Server V2.3 de base. Pour plus d'informations, voir [Application de mises à jour à des instances vCenter Server](../vcenter/vc_applyingupdates.html).
 
-Pour plus d'informations sur l'instance vCenter Server with Hybridity Bundle, voir :
+Pour plus d'informations sur vCenter Server avec Hybridity Bundle, reportez-vous aux rubriques suivantes :
 
 * [Présentation de vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
 * [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_planning.html)
@@ -38,7 +38,7 @@ Pour plus d'informations sur l'instance vCenter Server with Hybridity Bundle, vo
 
 Vous pouvez désormais supprimer des clusters sur une instance sans avoir à supprimer celle-ci. Pour les clusters déployés dans des instances V2.2 ou antérieures, vous devez mettre à niveau l'instance vers la version 2.3 pour pouvoir supprimer les clusters que vous lui avez ajoutés.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 
 * [Ajout, affichage et suppression de clusters pour des instances vCenter Server](../vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
 * [Ajout, affichage et suppression de clusters pour des instances Cloud Foundation](../sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
@@ -55,7 +55,7 @@ A compter de l'édition V2.3, les nouveaux modèles d'UC suivants sont disponibl
 * Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz
 * Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Ajout, affichage et suppression de clusters pour des instances vCenter Server](../vcenter/vc_addingviewingclusters.html)
@@ -93,7 +93,7 @@ Le service HyTrust CloudControl on {{site.data.keyword.cloud_notm}} est désorma
 
 Vous pouvez commander des instances avec le service déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Composants et remarques pour HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)
 * [Gestion de HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/managinghtcc.html)
 
@@ -103,9 +103,9 @@ Le service HyTrust DataControl on {{site.data.keyword.cloud_notm}} est désormai
 
 Vous pouvez commander des instances avec le service déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Composants et remarques pour HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)
-* [Gestion de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/managinghtdc.html)
+* [Gestion de HyTrust DataControl sur {{site.data.keyword.cloud_notm}}](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -119,7 +119,7 @@ Une nouvelle fiche de recette developerWorks est disponible avec des instruction
 
 L'interface utilisateur a été mise à jour et présente les améliorations suivantes :
 * **Cohérence** : l'impression générale de l'interface utilisateur est désormais cohérente avec celle d'autres services sur {{site.data.keyword.cloud_notm}}.
-* **Facilité d'accès** : vous pouvez désormais accéder aux offres VMware directement à partir du **catalogue** {{site.data.keyword.cloud_notm}}. 
+* **Facilité d'accès** : vous pouvez désormais accéder aux offres VMware directement à partir du **catalogue** {{site.data.keyword.cloud_notm}}.
 * **Processus de commande rationalisé et simplifié** : vous pouvez désormais commander une instance VMware et déployer ses services complémentaires dans une seule et même interface. En outre, le coût estimé est calculé et présenté instantanément dans la même interface de manière à vous permettre d'ajuster votre configuration en fonction de votre plan des coûts.
 * Le mode BYOL n'est pas disponible pour les partenaires commerciaux lors de la commande d'instances ou de l'ajout de clusters.
 * Diverses améliorations ont été apportées au niveau des messages d'erreur et des infobulles pour vous aider à sélectionner le paramétrage approprié sur l'interface utilisateur.

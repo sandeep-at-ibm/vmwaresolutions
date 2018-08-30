@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 
 ---
 
 # Invitation des utilisateurs à accéder à des services et des ressources
 
-{{site.data.keyword.vmwaresolutions_full}} est intégré à {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) pour permettre à plusieurs utilisateurs de collaborer. Après vous être inscrit à un compte {{site.data.keyword.cloud_notm}} et vous être connecté à la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez ajouter des utilisateurs au compte {{site.data.keyword.cloud_notm}} pour que ces utilisateurs puissent partager les services et les ressources qui sont mises à disposition pour le compte. 
+{{site.data.keyword.vmwaresolutions_full}} est intégré à {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) pour permettre à plusieurs utilisateurs de collaborer. Après vous être inscrit à un compte {{site.data.keyword.cloud_notm}} et vous être connecté à la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez ajouter des utilisateurs au compte {{site.data.keyword.cloud_notm}}. Les utilisateurs que vous ajoutez peuvent partager les services et les ressources qui sont mises à disposition pour le compte. 
 
 ## Avant de commencer
 
@@ -21,16 +21,16 @@ lastupdated: "2018-07-27"
 
 1. Sur le côté gauche de la bannière, cliquez sur **Gestion > Sécurité > Identity and access**.
 2. Sur la page **Utilisateurs**, cliquez sur **Inviter des utilisateurs**.
-3. Sur la page **Inviter des utilisateurs**, dans la section **Utilisateurs**, entrez les adresses électroniques des utilisateurs que vous souhaitez inviter dans la zone **Adresse électronique**. 
+3. Sur la page **Inviter des utilisateurs**, dans la section **Utilisateurs**, entrez les adresses électroniques des utilisateurs que vous souhaitez inviter dans la zone **Adresse électronique**.
 4. Dans la section **Accès**, développez **Services** et exécutez les tâches suivantes :
-   1. Sélectionnez **Ressource** dans la liste **Affecter l'accès à**. 
-   2. Sélectionnez **VMware Solutions** dans la liste **Services**. 
-   3. Sélectionnez le rôle d'accès à une plateforme que vous souhaitez affecter aux utilisateurs, c'est-à-dire **Administrateur**, **Editeur**, **Opérateur** ou **Afficheur**.
+   1. Sélectionnez **Ressource** dans la liste **Affecter l'accès à**.
+   2. Sélectionnez **VMware Solutions** dans la liste **Services**.
+   3. Sélectionnez le rôle d'accès à la plateforme que vous désirez affecter aux utilisateurs. Il peut s'agir du rôle **Administrateur**, **Editeur**, **Opérateur** ou **Afficheur**.
 5. Cliquez sur **Inviter des utilisateurs**.
 
 ## Résultats
 
-Une fois que les utilisateurs ajoutés ont accepté votre invitation, ils peuvent se connecter à la console {{site.data.keyword.vmwaresolutions_short}} et passer à votre compte dans leurs paramètres de profil en cliquant sur leur avatar dans l'angle supérieur droit de la console {{site.data.keyword.vmwaresolutions_short}}. Les utilisateurs ajoutés peuvent alors collaborer et partager les services et les ressources disponibles dans votre compte spécifié.
+Une fois que les utilisateurs ajoutés ont accepté votre invitation, ils peuvent se connecter à la console {{site.data.keyword.vmwaresolutions_short}} et basculer sur votre compte. Pour ce faire, dans leurs paramètres de profil, ils doivent cliquer sur leur avatar à l'angle supérieur droit de la console {{site.data.keyword.vmwaresolutions_short}}. Les utilisateurs ajoutés peuvent alors collaborer et partager les services et les ressources disponibles dans votre compte spécifié.
 
 ### Liens connexes
 

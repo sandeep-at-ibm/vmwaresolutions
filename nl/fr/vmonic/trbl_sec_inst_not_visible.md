@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-03"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-01-03"
 
 ## Problème
 
-Dans une configuration multisite, alors que vous avez ajouté une instance secondaire, son système vCenter Server n'est pas visible lorsque vous vous connectez au client Web VMware vSphere d'une instance précédemment commandée.
+Dans une configuration multisite, après que vous ajoutez une instance secondaire, son système vCenter Server n'est pas visible lorsque vous vous connectez au client Web VMware vSphere d'une instance commandée auparavant.
 
 ## Résolution
 

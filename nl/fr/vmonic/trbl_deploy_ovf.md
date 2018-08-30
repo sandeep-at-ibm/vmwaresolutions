@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-03-16"
 ## Résolution
 
 Pour déployer un fichier OVF (Open Virtualization Format) à l'aide du client Web vSphere, procédez comme suit :
-1. Avant de tenter le déploiement, vous devez ajouter les informations d'hôte suivantes dans le fichier `/etc/hosts` :
+1. Avant de tenter le déploiement d'un fichier OVF, vous devez ajouter les informations d'hôte suivantes dans le fichier `/etc/hosts` :
 
    * Informations d'hôte pour le contrôleur PSC (Platform Services Controller)
    * Informations d'hôte pour le serveur VMware ESXi

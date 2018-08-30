@@ -4,23 +4,23 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-09"
 
 ---
 
 # A propos d'IBM Cloud for VMware Solutions
 
-{{site.data.keyword.vmwaresolutions_full}} permet d'intégrer ou de faire migrer rapidement et en toute transparence vos charges de travail VMware locales dans {{site.data.keyword.cloud_notm}} à l'aide de l'infrastructure {{site.data.keyword.cloud_notm}} hautes performances sécurisée et de la technologie de virtualisation hybride VMware, leader de l'industrie.
+{{site.data.keyword.vmwaresolutions_full}} vous permet d'intégrer ou de faire migrer rapidement et en toute transparence vos charges de travail VMware locales vers {{site.data.keyword.cloud_notm}} à l'aide de l'infrastructure {{site.data.keyword.cloud_notm}} hautes performances évolutive et sécurisée et de la technologie de virtualisation hybride VMware, leader de l'industrie.
 
-Avec {{site.data.keyword.vmwaresolutions_short}} vous pouvez déployer facilement vos environnements virtuels VMware et gérer les ressources de l'infrastructure sur {{site.data.keyword.cloud_notm}}. Dans le même temps, vous pouvez toujours utiliser votre console habituelle du produit VMware pour gérer les charges de travail VMware.
+Vous pouvez déployer facilement vos environnements virtuels VMware et gérer les ressources de l'infrastructure sur {{site.data.keyword.cloud_notm}}. Dans le même temps, vous pouvez toujours utiliser votre console habituelle du produit VMware pour gérer les charges de travail VMware.
 
 ## Avantages d'IBM Cloud for VMware Solutions
 
 {{site.data.keyword.vmwaresolutions_short}} offre les avantages majeurs suivants :
-* **Portée mondiale** : possibilité de développer la présence de votre cloud hybride jusqu'à 30 {{site.data.keyword.CloudDataCents_notm}} d'entreprise dans le monde entier.
+* **Portée mondiale **: vous pouvez développer la présence de votre cloud hybride en exploitant jusqu'à 30 {{site.data.keyword.CloudDataCents_notm}} pour entreprises à travers le monde.
 * **Intégration en toute transparence** : intégration en toute transparence dans le cloud hybride avec l'infrastructure {{site.data.keyword.cloud_notm}}.
 * **Mise à disposition rapide** : automatisation du déploiement et de la configuration de l'environnement VMware, de sorte que vous pouvez déployer rapidement un environnement d'entreprise VMware avec des serveurs {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} à la demande et des serveurs virtuels.
-* **Simplification** : possibilité de consommer une plateforme cloud sans avoir à vous identifier, vous procurer, déployer et gérer l'infrastructure physique sous-jacente (calcul, stockage et réseau) et les licences logicielles.
+* **Simplification** : vous pouvez utiliser une plateforme cloud VMware sans avoir à identifier, acquérir, déployer et gérer l'infrastructure physique sous-jacente (traitement, stockage et réseau), ni les licences logicielles.
 * **Souplesse d'extension et de réduction** : possibilité d'étendre et de réduire facilement vos charges de travail VMware en fonction de vos besoins métier.
 * **Console de gestion unique** : console unique pour déployer, accéder et gérer les environnements VMware sur {{site.data.keyword.cloud_notm}}.
 
@@ -60,7 +60,7 @@ Pour plus d'informations, voir [Présentation de NetApp ONTAP Select](../netapp/
 
 ### VMware Federal on IBM Cloud
 
-L'offre VMware Federal on {{site.data.keyword.cloud_notm}} fournit la prise en charge permettant de commander une instance vCenter Server de base, fournit l'option de sécurisation des instances déployées et retire les informations sensibles et la connexion de gestion ouverte pour l'accès entrant à l'instance des fonctions de gestion.
+L'offre VMware Federal sur {{site.data.keyword.cloud_notm}} permet de commander une instance vCenter Server de base, ainsi que la possibilité de sécuriser les instances déployées, d'effacer les informations sensibles et fournit une connexion ouverte à l'instance pour accès continu aux fonctions de gestion.
 
 Pour plus d'informations, voir [Présentation de VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html).
 
@@ -96,7 +96,7 @@ Pour plus d'informations, voir [Présentation de HyTrust CloudControl on {{site.
 
 Le service HyTrust DataControl on {{site.data.keyword.cloud_notm}} offre un chiffrement renforcé avec une gestion de clés intégrée permettant de sécuriser les charges de travail tout au long de leur cycle de vie. Le service peut fournir un chiffrement au niveau du système d'exploitation et au niveau des données, ce qui signifie que n'importe quel répertoire, dossier ou fichier d'une charge de travail peut être chiffré et déchiffré.
 
-Pour plus d'informations, voir [Présentation de Trust DataControl on {{site.data.keyword.cloud_notm}}](../services/hdcc_considerations.html).
+Pour plus d'informations, voir [Présentation de HyTrust DataControl sur {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html).
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -124,7 +124,7 @@ Pour plus d'informations, voir [Présentation de VMware HCX on {{site.data.keywo
 
 ### Zerto on IBM Cloud
 
-Le service Zerto on {{site.data.keyword.cloud_notm}} fournit des fonctions de réplication et de reprise après incident, qui peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.
+Le service Zerto sur {{site.data.keyword.cloud_notm}} fournit des fonctions de réplication et de reprise après incident. Ces fonctions peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.
 
 Pour plus d'informations, voir [Présentation de Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html).
 

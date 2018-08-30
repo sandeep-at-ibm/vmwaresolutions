@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -18,12 +18,12 @@ Tableau 1. Fonctions prises en charge pour les instances Cloud Foundation, vCent
 |:----------------------------------|:--------------------|:---------------|:-------------------------|:-------------- |
 | Optimisée par l'automatisation avancée {{site.data.keyword.IBM}} <sup>1</sup> | Oui | Oui | Oui | Non. Auto générée et configurée |
 | Options de stockage        | vSAN                | Stockage vSAN ou de niveau fichier partagé (NFS) | vSAN | Stockage vSAN ou de niveau fichier partagé (NFS) |
-| Nombre de serveurs ESXi dans le cluster initial | 4 | 4 pour vSAN et 2 au minimum (3 vivement recommandé) pour NFS | 4 | 1 pour mise à l'échelle d'un cluster existant, 4 pour un nouveau cluster vSAN et 3 au minimum pour un nouveau cluster avec NFS |
+| Nombre de serveurs ESXi dans le cluster initial | 4 | 4 pour vSAN et 2 au minimum (3 recommandé) pour NFS | 4 | 1 pour mise à l'échelle d'un cluster existant, 4 pour un nouveau cluster vSAN et 3 au minimum pour un nouveau cluster avec NFS |
 | Nombre maximal de serveurs ESXi <sup>2</sup> | 32 par cluster      | 59 par cluster     | 59 par cluster | 60 par cluster     |
-| Déploiement multisite automatisé par le cloud | Pris en charge pour les nouvelles instances déployées en version 2.0 ou ultérieure | Pris en charge pour les nouvelles instances déployées en version 2.0 ou ultérieure | Pris en charge | Pris en charge. Configuration automatisée non incluse |
+| Déploiement multisite automatisé par le cloud | Pris en charge pour les nouvelles instances déployées dans la version 2.0 ou ultérieure | Pris en charge pour les nouvelles instances déployées dans la version 2.0 ou ultérieure | Pris en charge | Pris en charge. Configuration automatisée non incluse |
 | Ajout de serveurs ESXi              | Pris en charge           | Pris en charge | Pris en charge | Pris en charge. Configuration automatisée non incluse |
 | Suppression de serveurs ESXi           | Pris en charge           | Pris en charge | Pris en charge | Pris en charge. Configuration automatisée non incluse |
-| Prise en charge de multiples clusters         | 5 clusters | 10 clusters | 10 clusters | Pris en charge. Configuration automatisée non incluse |
+| Prise en charge de multiples clusters         | Cinq clusters | Dix clusters | Dix clusters | Pris en charge. Configuration automatisée non incluse |
 | Mise à jour et application de correctif de la pile VMware gérées par le client | Mises à jour VMware | Non inclus | Non inclus | Non inclus |
 | Sauvegarde et restauration            | Utilisation manuelle d'IBM Spectrum Protect Plus ou de Veeam | Utilisation manuelle d'IBM Spectrum Protect Plus ou de Veeam | Utilisation manuelle d'IBM Spectrum Protect Plus ou de Veeam | Solution de sauvegarde et de restauration non incluse |
 | Mise en réseau définie par logiciel (SDN)   | NSX Enterprise   | NSX Base, Advanced ou Enterprise | NSX Advanced ou Enterprise | NSX Standard, Base ou Enterprise. Configuration automatisée non incluse |
@@ -45,7 +45,7 @@ Tableau 1. Fonctions prises en charge pour les instances Cloud Foundation, vCent
 * [Présentation de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Présentation de vCenter Server Hybridity](../vcenter/vc_hybrid_overview.html)
-* [Présentation de Vmware vSphere](../vsphere/vs_vsphereclusteroverview.html)
+* [Présentation de VMware vSphere](../vsphere/vs_vsphereclusteroverview.html)
 * [Nomenclature de Cloud Foundation](../sddc/sd_bom.html)
 * [Nomenclature de vCenter Server](../vcenter/vc_bom.html)
-* [Nomenclature de Vmware vSphere](../vsphere/vs_bom.html)
+* [Nomenclature de VMware vSphere](../vsphere/vs_bom.html)

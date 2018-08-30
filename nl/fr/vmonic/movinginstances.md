@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -37,10 +37,10 @@ Si vos instances sont en version antérieure à 1.4 et que vous prévoyez de con
 
 Pour déplacer vos instances de version antérieur à 1.4 vers de nouvelles instances, procédez comme suit depuis le client Web vSphere :
 1. Depuis votre instance de version antérieur à 1.4, exportez toutes les machines virtuelles.
-2. Créez une nouvelle instance dans l'édition actuelle.
+2. Créez une instance dans l'édition actuelle.
 3. Importez toutes les machines virtuelles exportées à l'**Etape 1**.
-4. Commencez à utiliser vos nouvelles instance.
+4. Utilisez votre nouvelle instance.
 
-Pour plus d'informations sur l'exportation et l'importation de machines virtuelles, voir votre documentation VMware vSphere.
+Pour plus d'informations sur l'exportation et l'importation de machines virtuelles, reportez-vous à votre documentation VMware vSphere.
 
-Si vous avez besoin d'aide concernant {{site.data.keyword.vmwaresolutions_short}}, [contactez le support IBM](trbl_support.html) via l'un des canaux de suppor.
+Si vous avez besoin d'aide concernant {{site.data.keyword.vmwaresolutions_short}}, [contactez le support IBM](trbl_support.html) via l'un des canaux de support.

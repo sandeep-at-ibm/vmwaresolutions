@@ -14,9 +14,9 @@ Cette édition inclut de nouvelles fonctionnalités, des mises à jour de compos
 
 ## VMware vSphere on IBM Cloud
 
-Cette édition introduit l'offre VMware vSphere on {{site.data.keyword.cloud_notm}}, qui vous permet de construire votre propre environnement virtuel VMware hébergé par IBM en personnalisant et en commandant des ressources de calcul, de stockage et de réseau compatibles VMware sur la base des composants VMware sélectionnés. Etant donné que vSphere on  {{site.data.keyword.cloud_notm}} n'automatise pas l'installation, la configuration et l'apport des composants VMware optionnels, vous disposez d'un maximum de souplesse pour concevoir et élaborer l'architecture d'un environnement totalement adapté à vos besoins métier. Vous pouvez créer un nouveau cluster vSphere de serveurs ESXi ou mettre à l'échelle un cluster vSphere existant dans un {{site.data.keyword.CloudDataCent_notm}}. 
+Cette édition introduit l'offre VMware vSphere on {{site.data.keyword.cloud_notm}}, qui vous permet de construire votre propre environnement virtuel VMware hébergé par IBM en personnalisant et en commandant des ressources de calcul, de stockage et de réseau compatibles VMware sur la base des composants VMware sélectionnés. Etant donné que vSphere on  {{site.data.keyword.cloud_notm}} n'automatise pas l'installation, la configuration et l'apport des composants VMware optionnels, vous disposez d'un maximum de souplesse pour concevoir et élaborer l'architecture d'un environnement totalement adapté à vos besoins métier. Vous pouvez créer un nouveau cluster vSphere de serveurs ESXi ou mettre à l'échelle un cluster vSphere existant dans un {{site.data.keyword.CloudDataCent_notm}}.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Commande de nouveaux clusters vSphere](../vsphere/vs_orderinginstances.html)
 * [Mise à l'échelle de clusters vSphere existants](../vsphere/vs_scalingexistingclusters.html)
 
@@ -25,7 +25,7 @@ Pour plus d'informations, voir :
 Cette édition introduit l'offre NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}, un dispositif virtuel de stockage défini par les logiciels, qui implémente NetApp ONTAP Select en tant que service sur les serveurs {{site.data.keyword.baremetal_short}} dédiés d'IBM Cloud. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} est proposé en configuration hautes performances (entièrement SSD) et en configuration haute capacité (entièrement SATA).
 Ce dispositif héberge votre stockage sur une infrastructure dédiée et fournit des fonctionnalités NetApp, telles que la déduplication, la compression et le chiffrement des données au repos. Avec cette offre, vous pouvez mettre à disposition des ressources de stockage avec souplesse et flexibilité tout en protégeant les données à l'aide de fonctions avancées de gestion des données, telles que les copies NetApp Snapshot® rapides et efficaces, les copies FlexClone® et la réplication SnapMirror®.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation de NetApp ONTAP Select](../netapp/np_netappoverview.html)
 * [Commande d'instances NetApp ONTAP Select](../netapp/np_orderinginstances.html)
 
@@ -34,7 +34,7 @@ Pour plus d'informations, voir :
 Le service F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances VMware Cloud Foundation et VMware vCenter Server. Ce service fournit des services intelligents d'équilibrage de charge L4-L7 et de gestion du trafic à l'échelle locale et globale, une protection maximale via pare-feu des applications Web et réseau et un accès sécurisé aux applications fédérées.
 Vous pouvez commander des instances avec le service F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes à partir de l'onglet **Services** de la page des détails de propriété d'instance sur la console {{site.data.keyword.vmwaresolutions_short}}. En fonction de vos besoins, sélectionnez l'une des trois options de licence pour BIG-IP VE.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Remarques relatives au service F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)
 * [Gestion de F5 on {{site.data.keyword.cloud_notm}}](../services/managing_f5.html)
 
@@ -49,7 +49,7 @@ Pour plus d'informations, voir [Demande de services gérés issus d'IMI](../serv
 
 Les noms d'instance indiqués dans {{site.data.keyword.vmwaresolutions_short}} au moment de la commande de vos instances ne peuvent pas contenir de caractères spéciaux (par exemple, un tiret). Seuls les caractères alphanumériques sont autorisés. Cette restriction ne s'applique pas aux instances Cloud Foundation.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Commande d'instances NetApp ONTAP Select](../netapp/np_orderinginstances.html)
 
@@ -91,7 +91,7 @@ Pour plus d'informations, voir [Commande d'instances vCenter Server](../vcenter/
 
 Vous pouvez désormais fournir le nom de domaine du serveur de noms de domaine (DNS, Domain Name Server) pour une instance vCenter Server lors de la commande. Une instance de serveur virtuel Microsoft Windows Server, qui fonctionne en tant que serveur de noms de domaine pour l'instance où sont enregistrés les hôtes et les machines virtuelles, est déployée et peut être interrogée. Microsoft Active Directory (AD) est également configuré au-dessus de l'instance de serveur virtuel Microsoft Windows et le nom de domaine du serveur de noms de domaine est le nom de l’approbation de la racine AD. Cette instance de serveur virtuel Microsoft Windows n'est disponible qu'en version 1.9 et versions ultérieures.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Affichage des instances vCenter Server](../vcenter/vc_viewinginstances.html)
 

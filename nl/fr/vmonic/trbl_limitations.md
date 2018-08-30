@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -14,7 +14,7 @@ Passez en revue les remarques et limitations suivantes liées à l'utilisation d
 
 ## Installation automatique des mises à jour de Windows
 
-Microsoft Active Directory (AD) / Domain Name Server (DNS) est automatiquement configuré pour ne télécharger que des mises à jour. Ce module n'installe pas ces mises à jour et ne réamorce pas automatiquement. Vous devez installer les mises à jour manuellement et réamorcer à une heure planifiée qui évite toute interruption de la configuration de serveur AD ou autres tâches de sauvegarde. Pour appliquer les mises à jour Windows, installez-les manuellement.
+Microsoft Active Directory (AD) / Domain Name Server (DNS) est automatiquement configuré pour ne télécharger que les mises à jour. Il n'installe pas ces mises à jour et ne redémarre pas automatiquement les éléments concernés. Vous devez installer les mises à jour manuellement et redémarrer à une heure planifiée ne provoquant pas d'interruptions de la configuration du serveur AD ou d'autres travaux de sauvegarde. Pour appliquer les mises à jour Windows, installez-les manuellement.
 
 ## Remarques relatives au choix d'un domaine racine pour des instances Cloud Foundation
 

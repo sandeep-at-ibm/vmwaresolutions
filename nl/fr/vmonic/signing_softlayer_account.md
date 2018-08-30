@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -36,6 +36,6 @@ Le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), auparav
 
 * [Foire aux questions](faq.html)
 * [Exigences relatives au compte d'infrastructure {{site.data.keyword.cloud_notm}}](slaccountrequirement.html)
-* [Vidéo : Comment créer un compte {{site.data.keyword.cloud_notm}}](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [Vidéo - Comment créer un compte {{site.data.keyword.cloud_notm}}](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Passage à IBMid](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}

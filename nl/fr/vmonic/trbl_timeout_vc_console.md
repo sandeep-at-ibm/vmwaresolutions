@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -23,7 +23,7 @@ Procédez comme suit pour identifier et résoudre le problème.
    1. Installez le plug-in Adobe Flash Player pour votre navigateur.   
    2. Créez un mot de passe de réseau privé virtuel à partir du portail {{site.data.keyword.slportal_full}}.    
    3. Connectez-vous au portail du réseau privé virtuel du centre de données à l'aide des données d'identification de réseau privé virtuel de l'infrastructure {{site.data.keyword.cloud_notm}}.    
-   4. Ajoutez le mappage d'adresse IP et de nom d’hôte du contrôleur PSC (Platform Services Controller) dans le fichier des hôtes au format suivant :
+   4. Ajoutez le mappage d'adresse IP et de nom d’hôte du contrôleur PSC (Platform Services Controller) dans le fichier des hôtes en respectant le format suivant :
 
       ```javascript
       IPAddress              HostName
@@ -34,7 +34,7 @@ Procédez comme suit pour identifier et résoudre le problème.
    1. Cliquez sur **Compte > Accès VPN**.
    2. Cliquez sur **Liaison SSL** dans la colonne **Accès VPN**.
    3. Sur la page **Accès VPN pour nom d'utilisateur**, affectez à l'option **Accès de sous-réseau** la valeur **Manuel**.
-   4. Sur la même page, localisez le sous-réseau de la paire adresse IP-nom d'hôte. Pour plus d'informations, voir l'**étape 2**.    
+   4. Sur la même page, localisez le sous-réseau de la paire adresse IP-nom d'hôte. Pour plus d'informations, voir **Etape 2**.    
 
       Par exemple, si l'adresse IP de votre instance est `xx.yyy.zz.15` et que l'adresse IP de vCenter est `xx.yyy.zz.10`, vous devez accorder l'accès au sous-réseau `xx.yyy.zz.0/26`.
 

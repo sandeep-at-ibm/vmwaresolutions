@@ -10,7 +10,7 @@ lastupdated: "2017-01-23"
 
 # Notes sur l'édition pour la version 1.3
 
-Cette édition inclut de nouvelles fonctionnalités, des améliorations d'utilisation et des corrections d'erreur. Pour la liste des erreurs rectifiées dans les différentes éditions, les problèmes connus concernant le produit et des conseils supplémentaires pour l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Cette édition inclut de nouvelles fonctionnalités, des améliorations d'utilisation et des corrections d'erreur. Pour la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des conseils supplémentaires pour l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Stockage de niveau fichier partagé pour les instances vCenter Server
 
@@ -20,7 +20,7 @@ Vous pouvez désormais ajouter un stockage NAS (Network Attached Storage) partag
 
 Que vous ayez commandé la reprise après incident Zerto dans le cadre de votre instance ou l'ayez ajoutée à une instance existante, vous pouvez désormais supprimer ce service lorsque vous n'en avez plus besoin. Après que vous avez demandé le retrait du service à partir de la console, le support IBM vous guide lors de la finalisation du processus de retrait.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 
 * [Suppression de la reprise après incident](../services/removingzertodr.html)
 * [Affichage d'instances Cloud Foundation](../sddc/sd_viewinginstances.html)
@@ -34,7 +34,7 @@ Lors du déploiement d'une instance, IBM déploie une passerelle NSX ESG (Edge S
 
 Pour garantir la sécurité, des règles de pare-feu sont instaurées afin d'autoriser uniquement les communications HTTPS sortantes initiées par les machines virtuelles de gestion. Cette passerelle ESG est déployée dans une Grande configuration et seul le support IBM est habilité à modifier la configuration.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 
 * [Spécifications techniques relatives aux instances Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -47,7 +47,7 @@ Le processus de commande d'instance a été amélioré pour les instances Cloud 
 * La page de récapitulatif affiche toutes les dispositions et termes applicables à tous les composants et services commandés afin de vous faciliter l'accès et la révision de ces dispositions avant de passer la commande.
 * Vous pouvez sauvegarder et imprimer le récapitulatif de commande de votre instance avant de passer la commande. Avec cette nouvelle fonction, vous pouvez passer en revue les paramètres et le coût de l'instance, modifier au besoin les composants commandés, obtenir une approbation, puis revenir à votre commande.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 
 * [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
