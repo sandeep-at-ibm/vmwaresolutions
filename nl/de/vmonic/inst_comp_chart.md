@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -18,14 +18,14 @@ Tabelle 1. Unterstützte Funktionen für Cloud Foundation, vCenter Server, vCent
 |:----------------------------------|:--------------------|:---------------|:-------------------------|:-------------- |
 | Basiert auf erweiterter Automatisierung von {{site.data.keyword.IBM}} <sup>1</sup> | Ja | Ja | Ja | Nein. Muss selbst erstellt und konfiguriert werden. |
 | Speicheroptionen        | vSAN                | vSAN oder gemeinsam genutzter Speicher auf Dateiebene (NFS) | vSAN | vSAN oder gemeinsam genutzter Speicher auf Dateiebene (NFS) |
-| Anzahl der ESXi-Server im ersten Cluster | 4 | 4 bei vSAN und mindestens 2 bei NFS (3 werden dringend empfohlen) | 4 | 1 zur Skalierung eines vorhandenen Clusters, 4 für neue vSAN-Cluster und mindestens 3 für neue Cluster mit NFS |
+| Anzahl der ESXi-Server im ersten Cluster | 4 | 4 bei vSAN und mindestens 2 ( empf. Wert: 3) bei NFS | 4 | 1 zur Skalierung eines vorhandenen Clusters, 4 für neue vSAN-Cluster und mindestens 3 für neue Cluster mit NFS |
 | Maximale Anzahl von ESXi-Servern <sup>2</sup> | 32 pro Cluster      | 59 pro Cluster     | 59 pro Cluster | 60 pro Cluster     |
 | Cloud-automatisierte Bereitstellung mit mehreren Standorten | Unterstützt bei neuen, in V2.0 oder höher bereitgestellten Instanzen | Unterstützt bei neuen, in V2.0 oder höher bereitgestellten Instanzen | Unterstützt | Unterstützt; automatisierte Konfiguration nicht enthalten |
 | ESXi-Server hinzufügen              | Unterstützt           | Unterstützt | Unterstützt | Unterstützt; automatisierte Konfiguration nicht enthalten |
 | ESXi-Server entfernen           | Unterstützt           | Unterstützt | Unterstützt | Unterstützt; automatisierte Konfiguration nicht enthalten |
 | Unterstützung mehrerer Cluster         | 5 Cluster | 10 Cluster | 10 Cluster | Unterstützt; automatisierte Konfiguration nicht enthalten |
 | Vom Kunden verwaltete Updates und Patches für VMware-Stack | VMware-Updates | Nicht enthalten | Nicht enthalten | Nicht enthalten |
-| Sicherung und Wiederherstellung | Manuell mit IBM Spectrum Protect Plus oder Veeam | Manuell mit IBM Spectrum Protect Plus oder Veeam | Manuell mit IBM Spectrum Protect Plus oder Veeam | Sicherungs- und Wiederherstellungslösung nicht enthalten |
+| Sicherung und Wiederherstellung            | Manuell mit IBM Spectrum Protect Plus oder Veeam | Manuell mit IBM Spectrum Protect Plus oder Veeam | Manuell mit IBM Spectrum Protect Plus oder Veeam | Sicherungs- und Wiederherstellungslösung nicht enthalten |
 | Software-Defined Networking   | NSX Enterprise   | NSX Base, Advanced oder Enterprise | NSX Advanced oder Enterprise | NSX Standard, Base oder Enterprise; automatisierte Konfiguration nicht enthalten |
 | BYOL für vSphere und vSAN | Vollständig unterstützt pro Cluster   | Vollständig unterstützt pro Cluster     | Nicht unterstützt | Unterstützt |
 | BYOL für vCenter und NSX | Vollständig unterstützt pro Instanz   | Vollständig unterstützt pro Instanz     | Nicht unterstützt | Unterstützt |

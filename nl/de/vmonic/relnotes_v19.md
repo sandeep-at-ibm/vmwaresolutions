@@ -14,9 +14,9 @@ Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserung
 
 ## VMware vSphere on IBM Cloud
 
-In diesem Release wird das Produktangebot "VMware vSphere on {{site.data.keyword.cloud_notm}}" eingeführt, mit dem Sie Ihre eigene, von IBM gehostete virtuelle VMware-Umgebung erstellen können, indem Sie die VMware-kompatiblen Rechen-, Speicher- und Netzressourcen anpassen und bestellen, die auf ausgewählten VMware-Komponenten basieren. Da vSphere on {{site.data.keyword.cloud_notm}} weder Installation noch Konfiguration oder Inbetriebnahme der optionalen VMware-Komponenten automatisiert, besitzen Sie eine hohe Flexibilität hinsichtlich des Designs und der Architektur einer Umgebung, die optimal für Ihre Geschäftsanforderungen geeignet ist. Sie können am Anfang einen neuen vSphere-Cluster von ESXi-Servern erstellen oder einen vorhandenen vSphere-Cluster in einem {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) skalieren.
+In diesem Release wird das Produktangebot "VMware vSphere on {{site.data.keyword.cloud_notm}}" eingeführt, mit dem Sie Ihre eigene, von IBM gehostete virtuelle VMware-Umgebung erstellen können, indem Sie die VMware-kompatiblen Rechen-, Speicher- und Netzressourcen anpassen und bestellen, die auf ausgewählten VMware-Komponenten basieren. Da vSphere on {{site.data.keyword.cloud_notm}} weder Installation noch Konfiguration oder Inbetriebnahme der optionalen VMware-Komponenten automatisiert, besitzen Sie ein hohes Maß an Flexibilität hinsichtlich des Designs und der Architektur einer Umgebung, die optimal für Ihre Geschäftsanforderungen geeignet ist. Sie können am Anfang einen neuen vSphere-Cluster von ESXi-Servern erstellen oder einen vorhandenen vSphere-Cluster in einem {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) skalieren.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Neue vSphere-Cluster bestellen](../vsphere/vs_orderinginstances.html)
 * [Vorhandene vSphere-Cluster skalieren](../vsphere/vs_scalingexistingclusters.html)
 
@@ -25,7 +25,7 @@ Weitere Informationen enthalten die folgenden Abschnitte:
 In diesem Release wird das Produktangebot "NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}" eingeführt, eine virtuelle Appliance für softwaredefinierten Speicher, die NetApp ONTAP Select als Service in den dedizierten {{site.data.keyword.baremetal_short}}-Instanzen der IBM Cloud implementiert. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} wird in Konfigurationen für hohe Leistung (alle mit SSD) und hohe Kapazität (alle mit SATA) angeboten.
 Es dient als Host für Ihren Speicher in der dedizierten Infrastruktur und stellt NetApp-Funktionalität wie Deduplizierung, Komprimierung und Verschlüsselung für ruhende Daten bereit. Mithilfe dieses Produktangebots können Sie Speicherressourcen dynamisch und flexibel bereitstellen und gleichzeitig Ihre Daten durch die Verwendung von intelligenten Datenmanagementfunktionen wie den schnellen und effizienten NetApp Snapshot®-Kopien, FlexClone®-Kopien und SnapMirror®-Replikation schützen.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Übersicht über NetApp ONTAP Select](../netapp/np_netappoverview.html)
 * [NetApp ONTAP Select-Instanzen bestellen](../netapp/np_orderinginstances.html)
 
@@ -34,7 +34,7 @@ Weitere Informationen enthalten die folgenden Abschnitte:
 Der Service "F5 BI-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}}" ist jetzt für VMware Cloud Foundation- und für VMware vCenter Server-Instanzen verfügbar. Dieser stellt lokal und global einsetzbare intelligente Services für den L4-L7-Lastausgleich, einen stabilen Firewallschutz für Netze und Webanwendungen sowie einen sicheren und eingebundenen Anwendungszugriff zur Verfügung.
 Sie können Instanzen bestellen, die den Service "F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}}" enthalten, oder diesen Service später Ihren vorhandenen Instanzen über die Registerkarte **Services** auf der Detailseite mit den Instanzeigenschaften in der {{site.data.keyword.vmwaresolutions_short}}-Konsole hinzufügen. Je nach Bedarf stehen Ihnen drei Lizenzierungsoptionen für BIG-IP VE zur Auswahl.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Hinweise zu F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)
 * [F5 on {{site.data.keyword.cloud_notm}} verwalten](../services/managing_f5.html)
 
@@ -49,7 +49,7 @@ Weitere Informationen finden Sie unter [Verwaltete Services von IMI anfordern](.
 
 Instanznamen, die bei der Bestellung von Instanzen in {{site.data.keyword.vmwaresolutions_short}} eingegeben werden, dürfen keine Sonderzeichen (z. B. Bindestriche) enthalten. Es sind nur alphanumerische Zeichen zulässig. Diese Einschränkung gilt nicht für Cloud Foundation-Instanzen.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 * [NetApp ONTAP Select-Instanzen bestellen](../netapp/np_orderinginstances.html)
 
@@ -91,7 +91,7 @@ Weitere Informationen finden Sie unter [vCenter Server-Instanzen bestellen](../v
 
 Sie können jetzt den Domänennamen des Domänennamensservers (DNS) für eine vCenter Server-Instanz während einer Bestellung angeben. Eine Virtual Server-Instanz (VSI) von Microsoft Windows Server, die als DNS für die Instanz dient, auf der die Hosts und virtuellen Maschinen registriert sind, wird bereitgestellt und kann zur Suche verwendet werden. Microsoft Active Directory (AD) ist ebenfalls auf der Microsoft Windows-VSI eingerichtet und der DNS-Domänenname ist das Stammelement der AD-Domänengesamtstruktur. Diese Microsoft Windows-VSI ist nur in V1.9 und höher sichtbar.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [vCenter Server-Instanzen anzeigen](../vcenter/vc_viewinginstances.html)
 

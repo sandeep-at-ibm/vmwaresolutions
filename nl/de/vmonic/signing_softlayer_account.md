@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -36,6 +36,6 @@ Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer), d
 
 * [Häufig gestellte Fragen](faq.html)
 * [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](slaccountrequirement.html)
-* [Video: Erstellung eines {{site.data.keyword.cloud_notm}}-Kontos](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [Video - Erstellung eines {{site.data.keyword.cloud_notm}}-Kontos](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 * [Zur IBMid wechseln](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}

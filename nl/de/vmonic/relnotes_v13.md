@@ -10,7 +10,7 @@ lastupdated: "2017-01-23"
 
 # Releaseinformationen für V1.3
 
-Dieses Release stellt neue Funktionen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie zusätzlichen Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Dieses Release stellt neue Funktionen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie weiteren Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Gemeinsam genutzter Speicher auf Dateiebene für vCenter Server-Instanzen
 
@@ -20,7 +20,7 @@ Sie können nun gemeinsam genutzten NAS-Speicher (Network Attached Storage) zu v
 
 Der Service für die Disaster-Recovery mit Zerto kann nun entfernt werden, wenn er nicht mehr benötigt wird. Hierbei ist es ohne Belang, ob Sie diesen Service zusammen mit der Instanz bestellt oder zu einer vorhandenen Instanz hinzugefügt haben. Nachdem Sie das Entfernen des Service über die Konsole angefordert haben, werden Sie vom IBM Support bei der Ausführung des Löschprozesses angeleitet.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 * [Disaster-Recovery mit Zerto entfernen](../services/removingzertodr.html)
 * [Cloud Foundation-Instanzen anzeigen](../sddc/sd_viewinginstances.html)
@@ -35,7 +35,7 @@ Während der Instanzbereitstellung wird durch IBM ein NSX Edge Services Gateway 
 Zur Gewährleistung der Sicherheit gelten Firewallregeln, die nur abgehenden HTTPS-Datenverkehr zulassen, der durch die Management-VMs eingeleitet
 wird. Dieses ESG wird in einer Konfiguration des Typs "L (Groß)" bereitgestellt; die Konfiguration kann nur durch den IBM Support geändert werden.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 * [Technische Spezifikationen für Cloud Foundation-Instanzen](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -48,7 +48,7 @@ Der Bestellprozess für Cloud Foundation-Instanzen und vCenter Server-Instanzen 
 * Auf der Seite "Zusammenfassung" werden alle geltenden Vertragsbedingungen für alle bestellten Komponenten und Services angezeigt, damit Sie diese Bedingungen bequem prüfen und akzeptieren können, bevor Sie die Bestellung aufgeben.
 * Die Zusammenfassung der Bestellung für Ihre Instanz können Sie speichern und drucken, bevor Sie die Bestellung aufgeben. Durch diese neue Funktion können Sie die Einstellungen und Kosten der Instanz prüfen, die bestellten Komponenten bei Bedarf ändern, eine Genehmigung anfordern und anschließend Ihre Bestellung fortsetzen.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 * [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)

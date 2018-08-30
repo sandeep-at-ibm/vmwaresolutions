@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-03"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-01-03"
 
 ## Problem
 
-Nachdem Sie in einer Konfiguration mit mehreren Standorten eine neue sekundäre Instanz hinzugefügt haben, ist deren vCenter Server-System nicht mehr sichtbar, wenn Sie sich bei VMware vSphere Web Client einer zuvor bestellten Instanz anmelden.
+Nachdem Sie in einer Konfiguration mit mehreren Standorten eine neue sekundäre Instanz hinzugefügt haben, ist deren vCenter Server-System nicht mehr sichtbar, wenn Sie bei VMware vSphere Web Client in einer zuvor bestellten Instanz angemeldet sind.
 
 ## Lösung
 

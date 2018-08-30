@@ -10,7 +10,7 @@ lastupdated: "2016-12-12"
 
 # Releaseinformationen für V1.2
 
-Dieses Release stellt neue Funktionen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie zusätzlichen Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Dieses Release stellt neue Funktionen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie weiteren Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Komponentenaktualisierungen
 
@@ -20,7 +20,7 @@ Die neue Version von VMware ESXi ist vSphere 6.0 u2 p03, aktualisiert ausgehend 
 
 {{site.data.keyword.vmwaresolutions_full}} wird als Infrastrukturlösung im IBM Bluemix®-Katalog bereitgestellt. Damit Sie Ihr **IBMid**-Konto zur Anmeldung bei der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwenden können, müssen Sie daher Ihr **IBMid**-Konto einem Bluemix-Konto zuordnen.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Einführung](../index.html)
 * [Fehlerbehebung beim Zugriff auf Bluemix](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html){:new_window}
 
@@ -28,7 +28,7 @@ Weitere Informationen enthalten die folgenden Abschnitte:
 
 Sowohl VMware Cloud Foundation-Instanzen als auch VMware vCenter Server-Instanzen können mit der integrierten Disaster-Recovery mit Zerto bestellt werden. Sie können die Disaster-Recovery mit Zerto auch zu Ihren vorhandenen Cloud Foundation-Instanzen und vCenter Server-Instanzen auf der Seite mit den Instanzdetails hinzufügen.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
 * [Cloud Foundation-Instanzen anzeigen](../sddc/sd_viewinginstances.html)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
@@ -39,7 +39,7 @@ Weitere Informationen enthalten die folgenden Abschnitte:
 
 Sie können die geschätzten Kosten für Ihre bestellte Instanz künftig einsehen und prüfen, bevor Sie die Bestellung aufgeben. Nachdem Sie Ihre Komponenten bei der Bestellung ausgewählt haben, werden die Gesamtkosten und die detaillierte Preisstruktur für alle Komponenten auf der Seite **Zusammenfassung** angezeigt.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 
@@ -49,7 +49,7 @@ Der Instanzbestellablauf wurde durch die folgenden funktionalen Erweiterungen er
 * Für Cloud Foundation-Instanzen und vCenter Server-Instanzen werden neue Validierungsprüfungen durchgeführt, die gewährleisten, dass das von Ihnen verwendete SoftLayer®-Benutzerkonto über die erforderlichen Benutzerberechtigungen verfügt, dass die VLAN Spanning-Funktion aktiviert ist und dass der richtige API-Schlüssel angegeben wurde. Falls eine dieser Voraussetzungen nicht erfüllt ist, erhalten Sie direkt in der Benutzerschnittstelle Anweisungen für die Behebung des Problems.
 *  Für vCenter Server wurde die Reihenfolge optimiert, in der die Instanzkomponenten ausgewählt werden, damit nur diejenigen Rechenzentren angezeigt werden, in denen die von Ihnen benötigten Hardwareeinrichtungen und ESXi-Server verfügbar sind. Diese Änderung verringert die Möglichkeit späterer Fehler.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -48,9 +48,9 @@ Weitere Informationen enthält der Abschnitt [Komponenten von VMware vSphere on 
 
 ## Ist eine vCenter Server-Instanz mit zwei Knoten hoch verfügbar?
 
-Es wird dringend empfohlen, Produktionsworkloads in Umgebungen bereitzustellen, in denen mindestens drei Knoten vorhanden sind.
+Es wird empfohlen, Produktionsworkloads in Umgebungen bereitzustellen, in denen mindestens drei Knoten vorhanden sind.
 
-VMware vSphere DRS (Distributed Resource Scheduler) und VMware HA (High Availability) sind zwar standardmäßig aktiviert, aber die bewährten Verfahren für VMware raten dazu, für jeden der drei NSX-Controller einen separaten Knoten zu verwenden.
+VMware vSphere DRS (Distributed Resource Scheduler) und VMware HA (High Availability) sind standardmäßig aktiviert. In der Praxis hat es sich bei VMware jedoch bewährt, für jeden der drei NSX-Controller einen separaten Knoten zu verwenden.
 
 In der Minimalbereitstellung mit zwei Knoten befindet sich auf einem Knoten einer der NSX-Controller, der andere Knoten enthält zwei NSX-Controller. Falls der Knoten mit den zwei NSX-Controllern ausfällt, werden NSX-Controlleroperationen in den Lesezugriffsmodus versetzt und für neue virtuelle Maschinen (VMs) oder vMotion-VMs könnten Netzprobleme auftreten.
 
@@ -62,13 +62,13 @@ Nein, dies ist nicht zu empfehlen. Es könnte zu Störungen bei den {{site.data.
 
 ## Können Cluster umbenannt werden?
 
-Bei vCenter Server-Instanzen hat der erste Cluster, der während der Bereitstellung erstellt wird, den Standardnamen **cluster1**. Sie können den Standardcluster in VMware vSphere Client umbenennen. Wenn Sie einen neuen Cluster zu einer vCenter Server-Instanz hinzufügen, können Sie den gewünschten Namen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole angeben.
+Bei vCenter Server-Instanzen hat der erste Cluster, der während der Bereitstellung erstellt wird, den Standardnamen **cluster1**. Sie können den Standardcluster in VMware vSphere Client umbenennen. Wenn Sie einen Cluster zu einer vCenter Server-Instanz hinzufügen, können Sie den gewünschten Namen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole angeben.
 
 **Hinweis**: Bei Cloud Foundation-Instanzen kann der Standardclustername nicht geändert werden.
 
 ##Wie werden Patches verwaltet?
 
-IBM stellt kontinuierliche Updates für die IBM CloudDriver-Komponente bereit, die in der {{site.data.keyword.cloud_notm}} for VMware Solutions-Konsole verfügbar gemacht werden. Für Add-on-Services wie Zerto on {{site.data.keyword.cloud_notm}} oder Veeam on {{site.data.keyword.cloud_notm}} werden von IBM keine kontinuierlichen Updates bereitgestellt. Für den Abruf und die Installation solcher Updates müssen Sie selbst sorgen.
+IBM stellt fortlaufend Updates für den IBM Code bereit, indem die virtuellen Serverinstanzen (VSI) für IBM CloudDriver bedarfsgesteuert bereitgestellt werden. Für Add-on-Services wie Zerto on {{site.data.keyword.cloud_notm}} oder Veeam on {{site.data.keyword.cloud_notm}} werden von IBM keine kontinuierlichen Updates bereitgestellt. Für den Abruf und die Installation solcher Updates müssen Sie selbst sorgen.
 
 VMware-Updates werden abhängig vom Typ der bereitgestellten VMware-Instanz unterschiedlich angewendet:
 
@@ -78,7 +78,7 @@ VMware-Updates werden abhängig vom Typ der bereitgestellten VMware-Instanz unte
   * Für alle anderen Updates von VMware-Komponenten sind Sie selbst verantwortlich; in diesem Zusammenhang müssen Sie auch gewährleisten, dass neu bereitgestellte ESXi-Server und Cluster über die notwendigen neuesten Updates verfügen.
   * Bei Instanzen, die in V2.0 oder höher bereitgestellt wurden, ist VMware Update Manager (VUM) in Ihre vCenter Server-Instanz integriert. Sie können VUM auf Wunsch so konfigurieren, dass ESXi-Updates von VMware heruntergeladen werden.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [VMware Support](https://www.vmware.com/support.html)
 * [Updates auf vCenter Server-Instanzen anwenden](../vcenter/vc_applyingupdates.html)
 * [Updates auf Cloud Foundation-Instanzen anwenden](../sddc/sd_applyingupdates.html)
@@ -93,7 +93,7 @@ VMware NSX Edge für Management-Services befindet sich zwar in einem öffentlich
 
 ## Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?
 
-Das vom Kunden verwaltete NSX Edge befindet sich zwar im öffentlichen VLAN, aber die bestehenden Sicherheitsmaßnahmen gewährleisten, dass dies kein Sicherheitsrisiko verursacht. Es handelt sich um folgende Maßnahmen:
+Das vom Kunden verwaltete NSX Edge befindet sich zwar im öffentlichen VLAN, aber durch entsprechende Sicherheitsmaßnahmen wird gewährleistet, dass dies kein Sicherheitsrisiko verursacht. Die folgenden Sicherheitsmaßnahmen werden angewendet:
 *  Es ist eine Firewall-Regel vorhanden, die nur den abgehenden Datenverkehr aus dem privaten Teilnetzbereich von IP-Adressen zulässt.
 *  Durch eine (standardmäßig inaktivierte) SNAT-Regel werden alle IP-Adressen aus dem privaten Teilnetz in eine einzige IP-Adresse für das öffentliche Teilnetz umgesetzt.
 *  Der Fernzugriff der Appliance für das vom Kunden verwaltete NSX Edge ist inaktiviert.
@@ -117,7 +117,7 @@ Sie können den Status der Instanzbereitstellung überprüfen, indem Sie den Ber
 
 ## Verwendet VMware vSphere on IBM Cloud automatisierte Prozeduren, um den VMware-Stack zu installieren, zu konfigurieren und zu aktivieren?
 
-Nein. VMware vSphere on {{site.data.keyword.cloud_notm}} nutzt nicht die bei Cloud Foundation- und vCenter Server-Plattformen verfügbare erweiterte Automatisierung. Basierend auf Ihrer Bestellung stellt die Plattform optionale VMware-Lizenzen, ESXi-Server und optional ein HA-Paar von physischen FortiGate-Firewalls bereit. Wenn ein neuer Cluster erstellt wird, werden auch drei neue VLANs (ein öffentliches und zwei private) bereitgestellt.
+Nein. VMware vSphere on {{site.data.keyword.cloud_notm}} nutzt nicht die bei Cloud Foundation- und vCenter Server-Plattformen verfügbare erweiterte Automatisierung. Basierend auf Ihrer Bestellung stellt die Plattform optionale VMware-Lizenzen, ESXi-Server und optional ein HA-Paar von physischen FortiGate-Firewalls bereit. Wenn ein neuer Cluster erstellt wird, werden auch drei neue VLANs bereitgestellt: ein öffentliches VLAN und zwei private VLANs.
 
 VMware ESXi wird automatisch auf jedem Bare Metal Server installiert. Für die Installation aller weiteren VMware-Komponenten wie vCenter Server oder NSX sind jedoch Sie selbst zuständig. vSphere on {{site.data.keyword.cloud_notm}} stellt zwar sicher, dass basierend auf den ausgewählten VMware-Komponenten auch VMware-kompatible Hardware bestellt wird, aber es gibt keine Automatisierung für die Konfiguration und Inbetriebnahme der VMware-Umgebung. Entwurf und Architekturgestaltung für die von IBM gehostete Umgebung liegen in Ihrer Zuständigkeit.
 

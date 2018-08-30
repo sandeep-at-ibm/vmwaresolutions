@@ -36,7 +36,7 @@ Im Rahmen der NSX-Installation wird der NSX-Manager installiert und für alle ne
 
 **Hinweis**: Der NSX-Controller wird (anders als bei Cloud Foundation-Instanzen) nicht für vCenter Server-Instanzen installiert. Falls Sie für Ihre vCenter Server-Instanzen VXLAN oder verteilte logische Router verwenden, müssen Sie den NSX-Controller selbst installieren.
 
-Informationen zu den in VMware NSX for vSphere 6.2.4 eingeführten Erweiterungen, den Voraussetzungen und den bekannten Problemen finden Sie auf der Seite [NSX for vSphere 6.2.4 release notes](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
+Weitere Informationen zu den in VMware NSX for vSphere 6.2.4 eingeführten Erweiterungen, den Voraussetzungen und den bekannten Problemen finden Sie auf der Seite [NSX for vSphere 6.2.4 release notes](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
 
 ### VMware NSX Edge
 
@@ -45,7 +45,7 @@ NSX Edge ist jetzt im Lieferumfang der neuen vCenter Server-Instanzen enthalten,
 Während der Instanzbereitstellung wird durch IBM ein VMware NSX Edge Services Gateway (ESG) für das Management bereitgestellt. Dieses ESG wird von den IBM Management-VMs für die Kommunikation mit bestimmten externen IBM Managementkomponenten verwendet, die mit der Automatisierung zusammenhängen. Dieses ESG wird mit zwei Schnittstellen bereitgestellt. Eine Schnittstelle ist mit dem privaten VLAN der {{site.data.keyword.cloud_notm}} verbunden und die andere Schnittstelle ist mit dem öffentlichen VLAN der {{site.data.keyword.cloud_notm}} verbunden.
 
 Zur Gewährleistung der Sicherheit gelten Firewallregeln, die nur abgehenden HTTPS-Datenverkehr zulassen, der durch die Management-VMs eingeleitet
-wird. Dieses ESG wird in einer Konfiguration des Typs "L (Groß)" bereitgestellt; die Konfiguration kann nur durch den IBM Support geändert werden. Weitere Informationen enthalten die folgenden Abschnitte:
+wird. Dieses ESG wird in einer Konfiguration des Typs "L (Groß)" bereitgestellt; die Konfiguration kann nur durch den IBM Support geändert werden. Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 * [Technische Spezifikationen für vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -86,7 +86,7 @@ Weitere Informationen finden Sie unter [Konfiguration mit mehreren Standorten f�
 ## Funktionale Erweiterungen bei der Bereitstellung der Disaster-Recovery mit Zerto
 
 * Bei Cloud Foundation-Instanzen erfolgt die Bereitstellung der Disaster-Recovery mit Zerto automatisiert und wird nicht über ein Support-Ticket abgewickelt. Alle Kosten für Zerto-Komponenten (z. B. privates portierbares Teilnetz und Windows-VSI) und die Zerto-Lizenz werden bei den geschätzten Kosten aufgeführt und können von Ihnen überprüft werden, bevor Sie die Bestellung aufgeben.
-* Bei vCenter Server-Instanzen erfolgt die Bereitstellung der Disaster-Recovery mit Zerto wie in den Vorgängerreleases durch ein Support-Ticket. NSX Edge und das öffentliche portierbare Teilnetz werden jedoch nicht mehr benötigt, da diese Komponenten nun Bestandteil der Basisbereitstellung sind. Die Gebühren für ein privates portierbares Teilnetz, eine Windows-VSI (Virtual Server-Instanz) und die Zerto-Lizenz fallen weiterhin an.
+* Bei vCenter Server-Instanzen erfolgt die Bereitstellung der Disaster-Recovery mit Zerto wie in den Vorgängerreleases durch ein Support-Ticket. NSX Edge und das öffentliche portierbare Teilnetz werden jedoch nicht mehr benötigt, da diese Komponenten nun Bestandteil der Basisbereitstellung sind. Die Gebühren für ein privates portierbares Teilnetz, eine Windows-VSI (Virtuelle Service-Instanz) und die Zerto-Lizenz fallen weiterhin an.
 
 Weitere Informationen finden Sie unter [Disaster-Recovery mit Zerto](../services/addingzertodr.html).
 
@@ -97,7 +97,7 @@ Der Instanzbestellprozess wurde erheblich vereinfacht:
 * Bei Cloud Foundation- und vCenter Server-Instanzen wird die Seite mit den SoftLayer-Berechtigungsnachweisen nicht mehr während des Bestellprozesses angezeigt. Die auf der Seite "Einstellungen" definierten SoftLayer-Berechtigungsnachweise werden standardmäßig verwendet. Sie werden nur dann zur Aktualisierung dieser Berechtigungsnachweise aufgefordert, wenn sie die Anforderungen nicht erfüllen.
 * Darüber hinaus ist bei vCenter Server-Instanzen jetzt nur die Option **L (Groß)** für den **Hardwaretyp** und die Einstellung **10 Gb/s Dual** für die **Uplink-Port-Geschwindigkeit** verfügbar, wodurch Sie bei der Bestellung weniger Einstellungen angeben müssen.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 * [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
@@ -113,7 +113,7 @@ Der Instanzmanagementprozess wurde folgendermaßen erweitert und verbessert:
 
 Die Konsolenbenachrichtigungen können jetzt auf der Seite **Einstellungen** von Ihnen konfiguriert werden. Standardmäßig ist die Einstellung aktiviert. Dies bedeutet, dass Sie für alle Ereignisse eine Benachrichtigung in der Konsole empfangen. Auf der Seite **Einstellungen** können Sie Benachrichtigungen für die Konsole auch inaktivieren.
 
-Weitere Informationen enthalten die folgenden Abschnitte:
+Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 * [Benutzerkonten und -einstellungen](useraccount.html)
 * [Benachrichtigungen](notifications.html)
