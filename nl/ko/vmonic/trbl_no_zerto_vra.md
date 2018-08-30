@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-08-16"
 
 ---
 
 # Zerto Virtual Replication Appliances가 새로 작성된 ESXi 서버에 대해 표시되지 않음
 
 ## 문제점
-ESXi 서버를 Zerto 재해 복구가 설치된 VMware vCenter Server 인스턴스에 추가한 후 Virtual Replication Appliances(VRA)가 Zerto Virtual Replication 콘솔에 표시되지 않습니다.
+ESXi 서버를 Zerto 재해 복구가 설치된 VMware vCenter Server 인스턴스에 추가한 후 VRA(Virtual Replication Appliances)가 Zerto Virtual Replication 콘솔에 표시되지 않습니다.
 
 ## 해결
 vCenter Server 인스턴스의 경우, Zerto 재해 복구 서비스가 기본 클러스터인 **cluster1**의 ESXi 서버에만 설치됩니다. 추가 클러스터가 작성되거나 ESXi 서버가 추가 클러스터에 추가되는 경우 동일한 vCenter Server 환경의 모든 추가 클러스터에는 Zerto 재해 복구가 자동으로 설치되어 있지 않습니다.

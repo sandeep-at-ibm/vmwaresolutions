@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -81,7 +81,7 @@ NFS 옵션을 선택한 경우 관리 컴포넌트용 하나의 2TB, 4IOPS/GB �
 
 ### 확장 노드를 위한 하드웨어
 
-[VMware Federal on {{site.data.keyword.cloud_notm}} 인스턴스의 기술 스펙](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)에 제시된 구성을 지닌 하나의 Bare Metal Server. 
+[VMware Federal on {{site.data.keyword.cloud_notm}} 인스턴스의 기술 스펙](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)에 제시된 구성을 지닌 하나의 Bare Metal Server.
 
 ### 확장 노드의 라이센스 및 요금
 

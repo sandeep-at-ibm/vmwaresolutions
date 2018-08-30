@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-07-23"
 
 ## IBM Cloud 계정 등록
 
-기존 **IBM ID**를 사용하거나 새 **IBM ID**를 작성하여 {{site.data.keyword.cloud}} 계정을 등록할 수 있습니다. {{site.data.keyword.cloud_notm}} 계정을 등록하는 방법에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정 등록](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud)을 참조하십시오. 
+기존 **IBM ID**를 사용하거나 새 **IBM ID**를 작성하여 {{site.data.keyword.cloud}} 계정을 등록할 수 있습니다. {{site.data.keyword.cloud_notm}} 계정을 등록하는 방법에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정 등록](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud)을 참조하십시오.
 
 ## IBM Cloud 인프라(SoftLayer) 계정 등록
 
-이전에는 IBM SoftLayer 계정이라고 부르던 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정은 인프라 제품 및 서비스를 관리하기 위한 일부 추가 기능을 제공하는 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에 로그인하는 데 사용됩니다. {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 등록하려면 {{site.data.keyword.cloud_notm}} 계정을 종량과금제 유형의 계정으로 업그레이드하십시오. 
+이전에는 IBM SoftLayer 계정이라고 부르던 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정은 인프라 제품 및 서비스를 관리하기 위한 일부 추가 기능을 제공하는 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에 로그인하는 데 사용됩니다. {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 등록하려면 {{site.data.keyword.cloud_notm}} 계정을 종량과금제 유형의 계정으로 업그레이드하십시오.
 
 ### 프로시저
 
@@ -36,6 +36,6 @@ lastupdated: "2018-07-23"
 
 * [FAQ](faq.html)
 * [{{site.data.keyword.cloud_notm}} 인프라 계정에 대한 요구사항](slaccountrequirement.html)
-* [동영상: {{site.data.keyword.cloud_notm}} 계정을 작성하는 방법](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [동영상 - {{site.data.keyword.cloud_notm}} 계정을 작성하는 방법](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)
 * [IBM ID로 전환](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}

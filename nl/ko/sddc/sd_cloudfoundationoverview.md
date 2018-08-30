@@ -99,7 +99,7 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 
 ### 확장 노드를 위한 하드웨어
 
-[Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)에 제시된 구성을 지닌 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server. 
+[Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)에 제시된 구성을 지닌 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server.
 
 ### 확장 노드의 라이센스 및 요금
 

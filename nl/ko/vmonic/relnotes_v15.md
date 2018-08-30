@@ -24,7 +24,7 @@ SoftLayer 계정이 VRF 계정인지 확인하려면 IBM Bluemix 지원 센터�
 
 ## 서비스 비용 모델 업데이트
 
-Cloud Foundation 인스턴스의 경우, 각 노드에 적용되는 월별 요금인 새 _SDDC Manager_ 라이센스가 도입되었습니다. 자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오. 
+Cloud Foundation 인스턴스의 경우, 각 노드에 적용되는 월별 요금인 새 _SDDC Manager_ 라이센스가 도입되었습니다. 자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오.
 
 ## 사용성 개선사항
 

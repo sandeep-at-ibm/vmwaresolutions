@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -44,7 +44,7 @@ Bare Metal Server의 CPU 모델 및 RAM을 지정하십시오. 사용 가능한 
 
 표 2. 사용자 정의된 Bare Metal Server의 옵션
 
-|CPU 옵션        |RAM 옵션       |
+| CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
 | 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |

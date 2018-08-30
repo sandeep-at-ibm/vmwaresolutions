@@ -16,7 +16,7 @@ HyTrust DataControl on {{site.data.keyword.cloud}}는 워크로드를 해당 라
 
 ## HyTrust DataControl on IBM Cloud의 기술 스펙
 
-다음 컴포넌트가 주문되고 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다. 
+다음 컴포넌트가 주문되고 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
 ### HyTrust DataControl 어플라이언스
 * CPU: 2 vCPU
@@ -25,11 +25,11 @@ HyTrust DataControl on {{site.data.keyword.cloud}}는 워크로드를 해당 라
 * 네트워크: 관리용으로 지정된 VLAN-지원 사설 포터블 네트워크에 배치됨
 
 ### 고가용성
-2개의 DataControl 어플라이언스가 활성-활성 구성에 배치됩니다. 
+2개의 DataControl 어플라이언스가 활성-활성 구성에 배치됩니다.
 
 ### 라이센스 및 요금
 
-호스트별 라이센스: HyTrust DataControl 라이센스는 환경의 각 호스트마다 주문됩니다. 
+호스트별 라이센스: HyTrust DataControl 라이센스는 환경의 각 호스트마다 주문됩니다.
 
 ## HyTrust DataControl on IBM Cloud 제거 시 고려사항
 

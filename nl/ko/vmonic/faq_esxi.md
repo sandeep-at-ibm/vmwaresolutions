@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-07-17"
 
 ## 몇 개의 ESXi 서버를 클러스터에 추가할 수 있습니까?
 
-V2.2 이상 릴리스의 경우, 최대 51개의 ESXi 서버를 초기 클러스터에 추가하고 최대 59개의 ESXi 서버를 추가 클러스터에 추가할 수 있습니다.
+V2.2 이상 릴리스의 경우, 최대 51개의 ESXi 서버를 초기 클러스터에 추가하고 최대 59개의 ESXi 서버를 추가된 클러스터에 추가할 수 있습니다.
 
 V2.1 이전 릴리스에 배치된 인스턴스의 경우, 필요한 vSAN 지원을 사용으로 설정하여 32개가 초과하도록 클러스터 크기를 늘려야 합니다. 필요한 vSAN 지원을 사용으로 설정하려면 다음 단계를 완료하십시오.
 
@@ -32,12 +32,12 @@ V2.1 이전 릴리스에 배치된 인스턴스의 경우, 필요한 vSAN 지원
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
 2. 각 ESXi 서버를 다시 시작하십시오. 자세한 정보는 [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081)를 참조하십시오.
-3. 추가 가상 머신 및 ESXi 서버를 포함하도록 vCenter Server의 크기를 늘려야 할 수 있습니다.
-4. IBM 지원 티켓을 열어 1 - 3단계를 완료하여 수동으로 vSAN 변경사항을 적용했고 업그레이드된 인스턴스가 32개를 초과하는 추가 ESXi 서버에 사용할 수 있음을 표시하십시오.
+3. 추가된 가상 머신 및 ESXi 서버를 포함하도록 vCenter Server의 크기를 늘려야 합니다.
+4. IBM 지원 센터 티켓을 열어 1 - 3단계를 완료하여 vSAN 변경사항을 수동으로 적용했음을 표시하십시오. 티켓에서 업그레이드된 인스턴스가 32개가 넘는 ESXi 서버에 사용되도록 요청하십시오.
 
 ## ESXi 서버 이름 및 IP 주소를 변경할 수 있습니까?
 
-ESXi 서버 이름 및 IP 주소는 Windows DNS 해석을 위해 등록되므로 변경할 수 없습니다. 변경하면 배치 중에 실패가 발생하거나 vCenter Server 기능의 실패가 발생할 수 있습니다.
+ESXi 서버 이름 및 IP 주소는 Windows DNS 해석을 위해 등록되었으므로 변경할 수 없습니다. 변경하면 배치 중에 실패가 발생하거나 vCenter Server 기능의 실패가 발생할 수 있습니다.
 
 **참고**: {{site.data.keyword.cloud_notm}} 사용자 인터페이스에서 **디바이스 이름 바꾸기** 기능을 사용하여 ESXi 서버 이름을 변경하지 마십시오. 이 기능은 실제로 ESXi 서버의 FQDN을 변경하지만 구성된 vCenter Center 및 Windows VSI 호스트 등록이 올바르지 않고 실패가 발생할 수 있습니다.
 
@@ -45,9 +45,9 @@ ESXi 서버 이름 및 IP 주소는 Windows DNS 해석을 위해 등록되므로
 
 ESXi 서버에서 루트 액세스가 계속해서 사용으로 설정되는 것이 좋습니다. 그렇지 않으면 {{site.data.keyword.vmwaresolutions_short}} 기능의 실패가 발생할 수 있습니다.
 
-절대적으로 필요한 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 ESXi 서버의 상태가 **사용할 준비**로 설정된 후 루트 액세스를 사용 안함으로 설정할 수 있습니다.
+필요한 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 ESXi 서버의 상태가 **사용할 준비**로 설정된 후 루트 액세스를 사용 안함으로 설정할 수 있습니다.
 
-후속 자동화 오퍼레이션(예: 파일 공유를 추가하거나 제거하는 경우 또는 Zerto on {{site.data.keyword.cloud_notm}}와 같은 추가 서비스를 설치하는 경우)에 대한 루트 액세스를 다시 사용으로 설정해야 합니다.
+후속 자동화 오퍼레이션(예: 파일 공유를 추가하거나 제거하는 경우 또는 Zerto on {{site.data.keyword.cloud_notm}}와 같은 추가 기능 서비스를 설치하는 경우)에 대한 루트 액세스를 다시 사용으로 설정해야 합니다.
 
 ## 다른 위치에서 스토리지를 마운트하도록 내 ESXi 서버에서 정적 라우트를 추가할 수 있습니까?
 

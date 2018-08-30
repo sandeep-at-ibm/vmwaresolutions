@@ -30,7 +30,7 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSphere 6.5에서 �
 
 온프레미스 HCX 설치의 라이센스 부여 및 활성화를 위해 온프레미스 HCX 인스턴스도 주문할 수 있습니다.
 
-자세한 정보는 다음을 참조하십시오.
+자세한 정보는 다음 주제를 참조하십시오.
 * [HCX on {{site.data.keyword.cloud_notm}}에 대한 고려사항](../services/hcx_considerations.html)
 * [HCX on {{site.data.keyword.cloud_notm}} 관리](../services/managinghcx.html)
 * [온프레미스 HCX 인스턴스에 대한 고려사항](../services/standalone_considerations.html)
@@ -42,7 +42,7 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSphere 6.5에서 �
 
 또한 키에 대한 라이센스가 부여된 클러스터에 노드를 추가하는 경우 콘솔은 노드의 수가 키 용량을 초과하면 새 라이센스 키를 제공하도록 프롬프트합니다.
 
-자세한 정보는 다음을 참조하십시오.
+자세한 정보는 다음 주제를 참조하십시오.
 
 * [Cloud Foundation 인스턴스에 대한 클러스터 추가 및 보기](../sddc/sd_addingviewingclusters.html)
 * [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](../vcenter/vc_addingviewingclusters.html)
@@ -52,7 +52,7 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSphere 6.5에서 �
 
 V2.1 이상 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스에 배치된 Zerto on {{site.data.keyword.cloud_notm}} 서비스의 경우, Zerto Virtual Replication 5.5u2가 프로비저닝됩니다. Zerto Virtual Replication Appliances(VRA)는 이제 성능상의 이유로 로컬 데이터 저장소가 아닌 관리 데이터 저장소(vSAN 또는 Endurance)에 배치됩니다. 기존 VRA가 있는 경우 더 나은 성능을 위해 스토리지를 관리 데이터 저장소로 마이그레이션하는 것을 고려해야 합니다.
 
-자세한 정보는 [Zerto on {{site.data.keyword.cloud_notm}} 개요](../services/addingzertodr.html)를 참조하십시오. 
+자세한 정보는 [Zerto on {{site.data.keyword.cloud_notm}} 개요](../services/addingzertodr.html)를 참조하십시오.
 
 ## VMware vCenter Server 인스턴스에 대한 업데이트
 
@@ -85,7 +85,7 @@ VMware 패치 및 업데이트가 이후 릴리스에서 사용 가능할 때 �
 
 Bare Metal Server 구성을 사용자 정의한 사용자는 이제 듀얼 Intel Xeon Gold 6140(총 36개의 코어, 2.3 GHz 포함)를 제공합니다.
 
-자세한 정보는 다음을 참조하십시오.
+자세한 정보는 다음 주제를 참조하십시오.
 * [vCenter Server 개요](../vcenter/vc_vcenterserveroverview.html)
 * [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)
 
@@ -93,7 +93,7 @@ Bare Metal Server 구성을 사용자 정의한 사용자는 이제 듀얼 Intel
 
 이제 개별적으로 NFS 파일 공유를 구성하는 옵션이 제공됩니다. 각 개별 파일 공유에 대해 파일 크기 및 성능 레벨을 선택하거나 주문하는 모든 파일의 공유에 대해 동일한 파일 크기 및 성능 레벨을 선택하십시오.
 
-자세한 정보는 다음을 참조하십시오.
+자세한 정보는 다음 주제를 참조하십시오.
 * [vCenter Server 개요](../vcenter/vc_vcenterserveroverview.html)
 * [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)
 * [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](../vcenter/vc_addingviewingclusters.html)

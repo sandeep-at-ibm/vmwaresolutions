@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -14,12 +14,12 @@ lastupdated: "2018-07-20"
 
 ## 새 인스턴스에 대한 VMware HCX on IBM Cloud 주문
 
-새 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스를 VMware HCX on {{site.data.keyword.cloud_notm}}와 함께 주문하려면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 인스턴스를 주문할 때 **서비스** 섹션에서 **VMware HCX on IBM Cloud**를 선택하십시오. 
+새 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스를 VMware HCX on {{site.data.keyword.cloud_notm}}와 함께 주문하려면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 인스턴스를 주문할 때 **서비스** 섹션에서 **VMware HCX on IBM Cloud**를 선택하십시오.
 
 
 ## 기존 인스턴스에 대한 VMware HCX on IBM Cloud 주문
 
-기존 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스에 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 추가하려면 해당 서비스가 추가될 인스턴스를 보고 왼쪽 탐색 분할창에서 **서비스**를 클릭한 후에 **추가**를 클릭하십시오. 
+기존 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스에 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 추가하려면 해당 서비스가 추가될 인스턴스를 보고 왼쪽 탐색 분할창에서 **서비스**를 클릭한 후에 **추가**를 클릭하십시오.
 
 ## VMware HCX on IBM Cloud 구성
 
@@ -40,8 +40,8 @@ HCX on {{site.data.keyword.cloud_notm}}를 설치하려면 다음 설정을 완�
 HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 서비스가 포함된 vCenter Server with Hybridity Bundle 인스턴스를 주문하거나 나중에 인스턴스에 서비스를 배치할 때 {{site.data.keyword.vmwaresolutions_short}} 자동화 프로세스를 통해 다음 단계가 완료됩니다.
 1. {{site.data.keyword.cloud_notm}} 인프라에서 HCX에 대해 3개의 서브넷이 주문됩니다.
    * HCX 관리를 위한 하나의 사설 포터블 서브넷.
-   * **사설 네트워크**가 **HCX 상호연결 유형**에 대해 선택된 경우 HCX 상호연결을 위한 하나의 사설 포터블 서브넷.
-   * **공용 네트워크**가 **HCX 상호연결 유형**에 대해 선택된 경우 HCX 상호연결을 위한 하나의 공인 포터블 서브넷. 이 서브넷은 VMware의 활성화와 유지보수에도 사용됩니다.
+   * HCX 상호연결을 위한 하나의 사설 포터블 서브넷. **사설 네트워크** 옵션이 **HCX 상호연결 유형**에 대해 선택된 경우 이 서브넷이 사용됩니다.
+   * VMware의 활성화와 유지보수를 위한 하나의 공인 포터블 서브넷. **공인 네트워크** 옵션이 **HCX 상호연결 유형**에 대해 선택된 경우 이 서브넷도 HCX 상호연결에 사용됩니다.
 
    **중요:** HCX에 대해 주문된 서브넷의 IP 주소는 VMware on {{site.data.keyword.cloud_notm}} 자동화로 관리되어야 합니다. 사용자가 작성한 VMware 리소스(예: VM 및 NSX Edge)에 이 IP 주소를 지정할 수 없습니다. VMware 아티팩트에 대한 추가 IP 주소가 필요한 경우 {{site.data.keyword.cloud_notm}}에서 고유한 서브넷을 주문해야 합니다.
 2. **HCX 상호연결 유형**에 대해 **사설 네트워크**가 선택된 경우에는 사설 DVS(Distributed Virtual Switch)에 **SDDC-DPortGroup-HCX-Private**이 작성됩니다.

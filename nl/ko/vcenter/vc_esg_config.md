@@ -23,7 +23,7 @@ vCenter Server 인스턴스에 대한 주문 프로세스의 일부로 다음 �
 * 샘플 NSX DLR(Distributed Logical Router)은 계층 2(L2) 네트워크에 연결된 로컬 워크로드 간의 잠재적인 동쪽-서쪽 통신을 위해 배치됩니다.
 * NSX Edge 어플라이언스는 워크로드 논리 스위치의 IP 주소 범위와 네트워크 주소 변환(NAT) 규칙의 공인 IP 주소 간의 NAT를
 수행하도록 배치되고 구성됩니다.
-* Veeam on {{site.data.keyword.cloud_notm}} 서비스를 설치한 경우에는 NSX Manager가 NSX 구성의 일별 백업을 수행하도록 구성됩니다. 자세한 정보는 [Veeam on {{site.data.keyword.cloud_notm}} 설치 시 고려사항](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud)을 참조하십시오. 
+* Veeam on {{site.data.keyword.cloud_notm}} 서비스를 설치한 경우에는 NSX Manager가 NSX 구성의 일별 백업을 수행하도록 구성됩니다. 자세한 정보는 [Veeam on {{site.data.keyword.cloud_notm}} 설치 시 고려사항](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud)을 참조하십시오.
 
 
 ## VM에 대한 네트워킹 설정 구성

@@ -37,7 +37,7 @@ VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 �
 |VMware       |Platform Services Controller    |6.5 업데이트 1g |
 |VMware       |vSAN                            |6.6.1        |
 |VMware       |NSX for vSphere                 | 6.4.1        |
-|IBM          |CloudDriver                     |2.4          |
+|IBM          |CloudDriver                     | 2.5          |
 |Microsoft    |Windows Server Standard 에디션 |2012R2       |
 
 **참고**: VMware vSAN은 선택적 컴포넌트입니다.
@@ -92,7 +92,7 @@ VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 �
 
 vSphere 클러스터는 두 개의 VDS(vSphere Distributed Switch)를 사용합니다(공용 네트워크 연결용 및 사설 네트워크 연결용).
 
-사설 네트워크 연결은 크기가 9000인 점보 프레임 최대 전송 단위(MTU)를 사용하도록 구성되며, 이는 저장 작업 및 VMware vMotion 등에서 발생하는 대규모 데이터 전송의 성능을 향상시킵니다. 이는 VMware 내에서 및 {{site.data.keyword.cloud_notm}}에 의해 허용되는 최대 MTU입니다. 
+사설 네트워크 연결은 크기가 9000인 점보 프레임 최대 전송 단위(MTU)를 사용하도록 구성되며, 이는 저장 작업 및 VMware vMotion 등에서 발생하는 대규모 데이터 전송의 성능을 향상시킵니다. 이는 VMware 내에서 및 {{site.data.keyword.cloud_notm}}에 의해 허용되는 최대 MTU입니다.
 
 V2.1 이상에서 공용 네트워크 연결은 크기가 1500인 표준 이더넷 MTU를 사용합니다. 이 1500 설정은 유지해야 하며, 변경되면 인터넷 패킷의 단편화가 발생할 수 있습니다.
 
@@ -105,9 +105,9 @@ V2.1 이상에서 공용 네트워크 연결은 크기가 1500인 표준 이더�
 |공용 스위치  |1500(기본값) |9000(점보 프레임) |
 |사설 스위치 |9000(점보 프레임) |9000(점보 프레임) |
 
-이 설정은 새 인스턴스 및 V2.1 이상으로 배치된 인스턴스의 새 클러스터에 적용됩니다. 또한 이 설정은 V2.1 이상으로 업그레이드된 인스턴스에서 교차 {{site.data.keyword.CloudDataCents_notm}}의 새 클러스터에도 적용됩니다. 
+이 설정은 새 인스턴스 및 V2.1 이상으로 배치된 인스턴스의 새 클러스터에 적용됩니다. 또한 이 설정은 V2.1 이상으로 업그레이드된 인스턴스에서 교차 {{site.data.keyword.CloudDataCents_notm}}의 새 클러스터에도 적용됩니다.
 
-V2.0 이하의 기존 인스턴스 또는 V2.1 이상으로 업그레이드된 기존 인스턴스의 경우, 이 설정은 동일한 {{site.data.keyword.CloudDataCent_notm}}의 새 클러스터에는 적용되지 않습니다. 
+V2.0 이하의 기존 인스턴스 또는 V2.1 이상으로 업그레이드된 기존 인스턴스의 경우, 이 설정은 동일한 {{site.data.keyword.CloudDataCent_notm}}의 새 클러스터에는 적용되지 않습니다.
 
 V2.0 이하로 배치된 인스턴스의 경우에는 공용 스위치 MTU 설정을 1500으로 업데이트하는 것이 좋습니다.
 

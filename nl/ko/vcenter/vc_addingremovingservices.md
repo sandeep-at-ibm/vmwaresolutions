@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-07-20"
 | 서비스 이름 |    가용성 | 인스턴스 지원 |
 |----------------------------------------------------------------------------------------|------------------|
 | [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 |예 | V1.9 이상 |
-| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}(../services/fortinetvm_considerations.html) |예 | V2.0 이상 |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) |예 | V2.0 이상 |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              |예 | V2.3 이상 |
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              |예 | V2.3 이상 |
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         |예 | V2.2 이상 |

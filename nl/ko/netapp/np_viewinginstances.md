@@ -4,21 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
 # NetApp ONTAP Select 인스턴스 보기
 
-서로 다른 사용자 계정에 대해 프로비저닝된 NetApp ONTAP Select 인스턴스의 요약과 자세한 정보를 봅니다. 
+서로 다른 사용자 계정에 대해 프로비저닝된 NetApp ONTAP Select 인스턴스의 요약과 자세한 정보를 봅니다.
 
 ## NetApp ONTAP Select 인스턴스 요약 보기
 
-사용자 계정에 대해 프로브저닝된 모든 NetApp ONTAP Select 인스턴스의 요약을 보려면 다음 단계를 완료하십시오. 
+사용자 계정에 대해 프로브저닝된 모든 NetApp ONTAP Select 인스턴스의 요약을 보려면 다음 단계를 완료하십시오.
 
-1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오. 
-2. 콘솔의 오른쪽 상단 모서리에서 사용자의 아바타를 클릭한 후에 **계정** 필드를 클릭하여 해당 인스턴스를 확인할 사용자 계정을 선택하십시오. 
-3. **NetApp ONTAP Select 인스턴스** 테이블에서, 선택된 사용자 계정에서 프로비저닝된 인스턴스의 목록을 보십시오. 
+1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+2. 콘솔의 오른쪽 상단 모서리에서 사용자의 아바타를 클릭한 후에 **계정** 필드를 클릭하여 해당 인스턴스를 확인할 사용자 계정을 선택하십시오.
+3. **NetApp ONTAP Select 인스턴스** 테이블에서, 선택된 사용자 계정에서 프로비저닝된 인스턴스의 목록을 보십시오.
 
 표 1. NetApp ONTAP Select 인스턴스 항목
 
@@ -86,7 +86,7 @@ lastupdated: "2018-07-20"
 
 ## NetApp ONTAP Select 인스턴스의 배치 히스토리 보기
 
-왼쪽 탐색 분할창에서 **배치 히스토리**를 클릭하여 인스턴스에 대한 배치 히스토리를 보십시오. 
+왼쪽 탐색 분할창에서 **배치 히스토리**를 클릭하여 인스턴스에 대한 배치 히스토리를 보십시오.
 
 표 4. NetApp ONTAP Select 인스턴스 배치 히스토리
 
@@ -99,7 +99,7 @@ lastupdated: "2018-07-20"
 
 ## NetApp ONTAP Select 클러스터 보기
 
-1. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오. 
+1. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오.
 2. **클러스터**에서 NetApp ONTAP Select 클러스터에 대한 요약을 보십시오.
 
 	표 5: NetApp ONTAP Select 클러스터 항목
@@ -165,7 +165,7 @@ lastupdated: "2018-07-20"
 
 **중요**: vSphere Web Client로 이동해 ESXi 서버 관리를 시작하려면 인스턴스 요약 페이지의 **vCenter 콘솔**을 클릭하기 전에 {{site.data.keyword.CloudDataCent_notm}}의 VPN 포털에 로그인해야 합니다. vSphere Web Client에 액세스하기 전에 **vCenter 콘솔** 단추 위에 마우스를 올려 놓고 지시사항에 따라 모든 요구사항을 충족하고 필요한 단계를 완료했는지 확인하십시오.
 
-로그인 지시사항을 완료하는 데 도움이 되는 정보는 다음 주제를 검토하십시오.
+로그인 지시사항을 완료하는 데 도움이 되는 자세한 정보는 다음 주제를 검토하십시오.
 
 *  vSphere Web Client에 액세스하기 전의 요구사항 및 필요한 단계는 [vSphere Web Client에 연결하는 중에 제한시간이 초과함](../vmonic/trbl_timeout_vc_console.html)을 참조하십시오.
 *  VPN을 사용하여 {{site.data.keyword.cloud_notm}} 인프라 사설 네트워크에 로그인하기 위한 액세스 지점의 목록은 [VPN 액세스](http://www.softlayer.com/vpn-access){:new_window}를 참조하십시오.

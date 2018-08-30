@@ -31,7 +31,7 @@ V2.2 업그레이드 프로세스 중에 IBM CloudDriver 가상 머신이 CentOS
 * IBM CloudDriver 가상 머신을 참조하는 백업 솔루션을 사용 중인 경우 V2.2로 업그레이드한 후 백업 솔루션이 새 IBM CloudDriver 가상 머신을 참조하고 있는지 확인하십시오.
 * V2.2로 업그레이드하기 전에 Legacy Veeam VSI를 Veeam on {{site.data.keyword.cloud_notm}} 서비스로 대체하는지 확인하십시오. Legacy Veeam은 더 이상 V2.2 및 이후 릴리스에서 지원되지 않고, 이에 따라 Legacy Veeam과 연관된 관리 컴포넌트 백업을 복원에 사용할 수 없습니다.
 
-Veeam on {{site.data.keyword.cloud_notm}} 서비스 사용에 대한 자세한 정보는 다음을 참조하십시오.
+Veeam on {{site.data.keyword.cloud_notm}} 서비스 사용에 대한 자세한 정보는 다음 주제를 참조하십시오.
 * [Veeam on {{site.data.keyword.cloud_notm}}에 대한 컴포넌트 및 고려사항](../services/veeam_considerations.html)
 * [Veeam on {{site.data.keyword.cloud_notm}} 관리](../services/managingveeam.html)
 
@@ -43,7 +43,7 @@ VMware Federal 인스턴스 보호 전의 중요 고려사항은 [VMware Federal
 
 (2018년 4월 2일에 업데이트됨) 이제 ESXi 서버를 추가하거나 제거하여 VMware Federal 인스턴스의 용량을 확장하거나 축소할 수 있습니다. 이 옵션은 보안 설정이 되지 않은 VMware Federal 인스턴스에서만 사용할 수 있습니다.
 
-자세한 정보는 다음을 참조하십시오.
+자세한 정보는 다음 주제를 참조하십시오.
 
 * [VMware Federal on {{site.data.keyword.cloud_notm}} 개요](../vcenter/vc_fed_overview.html)
 * [VMware Federal 인스턴스의 클러스터 추가, 보기 및 삭제](../vcenter/fed_addviewdeleteclusters.html)
@@ -78,7 +78,7 @@ vCenter Server 및 Cloud Foundation 인스턴스 주문의 경우, 이제 네트
 
 ### NSX 컴포넌트 및 포트 그룹 구성 설정 업데이트
 
-현재 릴리스에서는 VMware NSX for vSphere 6.3.5 컴포넌트 업데이트가 적용되었습니다. 컴포넌트에 대한 자세한 정보는 [vCenter Server 소프트웨어 명세서](../vcenter/vc_bom.html)를 참조하십시오.
+현재 릴리스에서는 VMware NSX for vSphere 6.3.5 컴포넌트 업데이트가 적용되었습니다. 컴포넌트에 대한 자세한 정보는 [vCenter Server 명세서](../vcenter/vc_bom.html)를 참조하십시오.
 
 V2.2 이상 릴리스에 배치된 VMware vCenter Server 인스턴스의 경우, NSX 및 포트 그룹 구성 설정이 변경되었습니다. 자세한 정보는 [vCenter Server 소프트웨어 명세서](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings)의 *NSX 및 포트 그룹 구성 설정* 절을 참조하십시오.
 
@@ -108,7 +108,7 @@ V2.2 이상 릴리스에 배치된 VMware vCenter Server 인스턴스의 경우,
 
 ### 고용량 IBM Cloud Bare Metal Servers에 대해 늘어난 SATA 드라이브 수
 
-이제 34개의 SATA 드라이브는 NetApp ONTAP Select 고용량 {{site.data.keyword.baremetal_short}}에 사용할 수 있습니다. 자세한 정보는 [NetApp ONTAP Select 인스턴스의 기술 스펙](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)을 참조하십시오. 
+이제 34개의 SATA 드라이브는 NetApp ONTAP Select 고용량 {{site.data.keyword.baremetal_short}}에 사용할 수 있습니다. 자세한 정보는 [NetApp ONTAP Select 인스턴스의 기술 스펙](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)을 참조하십시오.
 
 ## 추가 서비스에 대한 업데이트
 
@@ -144,7 +144,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 서비스는 {{site.data.keyword.cloud
 
 새 인스턴스를 주문하거나 서비스를 기존 인스턴스에 추가하여 **시작하기** 페이지에서 인스턴스를 위한 관리 서비스를 요청할 수 있습니다.
 
-자세한 정보는 다음을 참조하십시오.
+자세한 정보는 다음 주제를 참조하십시오.
 * [Veeam on {{site.data.keyword.cloud_notm}}에 대한 서비스 요청](../services/managing_veeam_services.html)
 * [Zerto on {{site.data.keyword.cloud_notm}}에 대한 서비스 요청](../services/managing_zerto_services.html)
 
@@ -154,7 +154,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 서비스는 {{site.data.keyword.cloud
 
 * 이제 VLAN 및 소프트웨어 명세서(BOM)가 VMware vSphere 클러스터를 비롯한 Cloud Foundation 및 vCenter Server 인스턴스에 대한 문서에 제공됩니다.
 
-  자세한 정보는 다음을 참조하십시오.
+  자세한 정보는 다음 주제를 참조하십시오.
 
   * [vCenter Server 소프트웨어 명세서](../vcenter/vc_bom.html)
   * [Cloud Foundation 명세서](../sddc/sd_bom.html)

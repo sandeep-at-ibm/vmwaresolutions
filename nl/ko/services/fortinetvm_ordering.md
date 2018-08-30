@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -16,13 +16,13 @@ lastupdated: "2018-07-19"
 
 다음 방법 중 하나를 사용하여 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}와 함께 새 인스턴스를 주문할 수 있습니다.
 * {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 새 인스턴스를 주문할 때 **서비스** 섹션에서 **FortiGate Virtual Appliance on IBM Cloud**를 선택하십시오.
-* {{site.data.keyword.cloud_notm}} 카탈로그에서 **FortiGate Virtual Appliance on IBM Cloud**를 선택하고 서비스 설정을 지정한 후에 **새 인스턴스에 추가**를 선택하십시오. 
+* {{site.data.keyword.cloud_notm}} 카탈로그에서 **FortiGate Virtual Appliance on IBM Cloud**를 선택하고 서비스 설정을 지정한 후에 **새 인스턴스에 추가**를 선택하십시오.
 
 ## 기존 인스턴스에 대한 FortiGate Virtual Appliance on IBM Cloud 주문
 
 다음 방법 중 하나를 사용하여 기존 인스턴스에 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 추가할 수 있습니다.
-* {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 해당 서비스를 추가할 인스턴스를 보고 왼쪽 탐색 분할창에서 **서비스**를 클릭한 후에 **추가**를 클릭하십시오. 
-* {{site.data.keyword.cloud_notm}} 카탈로그에서 **FortiGate Virtual Appliance on IBM Cloud**를 선택하고 서비스 설정을 지정한 후에 **기존 인스턴스에 추가**를 선택하십시오. 
+* {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 해당 서비스를 추가할 인스턴스를 보고 왼쪽 탐색 분할창에서 **서비스**를 클릭한 후에 **추가**를 클릭하십시오.
+* {{site.data.keyword.cloud_notm}} 카탈로그에서 **FortiGate Virtual Appliance on IBM Cloud**를 선택하고 서비스 설정을 지정한 후에 **기존 인스턴스에 추가**를 선택하십시오.
 
 ## FortiGate Virtual Appliance on IBM Cloud 서비스 구성
 
@@ -34,7 +34,7 @@ lastupdated: "2018-07-19"
 
 ### 배치 크기
 
-{{site.data.keyword.cloud_notm}}에서는 다음의 배치 크기 옵션을 제공합니다. 
+{{site.data.keyword.cloud_notm}}에서는 다음의 배치 크기 옵션을 제공합니다.
 * 소형(2개의 vCPU / 4GB RAM)
 * 중형(4개의 vCPU / 6GB RAM)
 * 대형(8개의 vCPU / 12GB RAM)
@@ -44,7 +44,7 @@ lastupdated: "2018-07-19"
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}에 대한 라이센스 모델은 다음 옵션을 제공합니다.
 <dl class="dl">
         <dt class="dt dlterm">표준 FW</dt>
-        <dd class="dd">이 번들에는 상태 기반 패킷 검사, VLAN 보호 및 고급 로깅, 유입/유출 방화벽 규칙, SSL/IPSec VPN 종료 및 연중무휴 지원이 포함됩니다.</dd>
+        <dd class="dd">이 번들에는 상태 기반 패킷 검사, VLAN 보호 및 고급 로깅, 유입/유출 방화벽 규칙, SSL/IPSec VPN 종료 및 지속적 지원이 포함됩니다.</dd>
         <dt class="dt dlterm">표준 FW + UTM</dt>
         <dd class="dd">이 번들에는 NGFW IPS 및 웹 필터링, 안티바이러스 및 안티스팸, IP 및 도메인 평판, 코어 FortiCare 보안 서비스 외에도 모든 표준 방화벽 서비스가 포함됩니다.</dd>
         <dt class="dt dlterm">표준 FW + 엔터프라이즈</dt>

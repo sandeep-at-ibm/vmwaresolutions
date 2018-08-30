@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -18,7 +18,6 @@ lastupdated: "2018-07-19"
 
 * 이 프로시저를 완료하기 전에 환경에 필요할 수 있는 모든 신임 정보를 레코드하고 저장하십시오. 보안 조치가 호출된 후 환경의 모든 신임 정보가 {{site.data.keyword.vmwaresolutions_full}} 데이터베이스에서 지워지고 검색될 수 없습니다.
 * 보안 조치가 호출된 후 전체 인스턴스 삭제를 제외한 모든 관리 기능이 사용 안함으로 설정됩니다.
-* 아웃바운드 HTTPS 관리 트래픽을 위한 VMware NSX Edge Services Gateway(ESG) 및 IBM CloudDriver 가상 머신이 배치된 VMware 인스턴스를 보호하는 조치의 일부로 삭제됩니다.
 
 ## 프로시저
 
@@ -28,7 +27,10 @@ lastupdated: "2018-07-19"
 4. **인스턴스 보호**를 클릭하십시오.
 5. **확인**을 클릭하여 자동화에서 인스턴스의 연결 끊기를 확인하십시오.
 
-   **참고**: 이 단계를 완료하기 전에 **시작하기 전에** 섹션에서 정보를 검토했는지 확인하십시오.
+  **참고**: 이 단계를 완료하기 전에 **시작하기 전에** 섹션에서 정보를 검토했는지 확인하십시오.
+
+6. 사용자 환경에서 공개용 관리 서비스 VMware NSX ESG(Edge Services Gateway)를 제거하고 선택적으로 자동화 중에 배치된 클라이언트 관리 ESG를 제거하십시오.
+7. IBM 자동화에서 사용된 모든 계정의 비밀번호와 키를 재설정하십시오. 추가 정보는 [IBM 자동화 및 지원을 통해 액세스를 제거할 때 어떻게 내 환경의 보안을 설정할 수 있습니까?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)를 참조하십시오.
 
 ## 결과
 

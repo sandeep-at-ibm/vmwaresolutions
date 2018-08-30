@@ -14,11 +14,11 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 인�
 
 ## vCenter Server with Hybridity Bundle 인스턴스에 대한 네트워킹 컴포넌트
 
-vCenter Server with Hybridity Bundle 인스턴스에 포함된 네트워킹 컴포넌트를 검토하려면 [vCenter Server with Hybridity Bundle 인스턴스의 기술 스펙](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)을 참조하십시오. 
+vCenter Server with Hybridity Bundle 인스턴스에 포함된 네트워킹 컴포넌트를 검토하려면 [vCenter Server with Hybridity Bundle 인스턴스의 기술 스펙](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)을 참조하십시오.
 
 ## NSX 방화벽 고려사항
 
-NSX DFW(Distributed Firewalls)를 사용 중인 경우에는 IP 주소 `10.0.0.0/8` 및 `161.26.0.0/16`에서 모든 프로토콜이 통신할 수 있도록 IBM CloudDriver VSI(Virtual Server Instance)의 모든 모든 통신에 대한 규칙을 구성해야 합니다. 
+NSX DFW(Distributed Firewalls)를 사용 중인 경우에는 IP 주소 `10.0.0.0/8` 및 `161.26.0.0/16`에서 모든 프로토콜이 통신할 수 있도록 IBM CloudDriver VSI(Virtual Server Instance)의 모든 모든 통신에 대한 규칙을 구성해야 합니다.
 
 ## 가상 머신에서 NSX 사용
 

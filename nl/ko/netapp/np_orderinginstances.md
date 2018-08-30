@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-07-18"
 
 ## 시스템 설정
 
-NetApp ONTAP Select 인스턴스를 주문할 때는 다음 기본 설정을 지정해야 합니다.
+NetApp ONTAP Select 인스턴스를 주문할 때는 해당 기본 설정을 지정해야 합니다.
 
 ### 인스턴스 이름
 
@@ -64,26 +64,26 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 
 ## 라이센스 부여 설정
 
-네 개의 {{site.data.keyword.baremetal_short}}에 하나의 라이센스가 필요하므로 네 개의 NetApp 라이센스 부여 파일을 업로드해야 합니다. NetApp 영업 팀에 문의하여 고성능 또는 고용량 배치에 적합한 라이센스를 확보하십시오.
+네 개의 {{site.data.keyword.baremetal_short}}에 하나의 라이센스가 필요하므로 네 개의 NetApp 라이센싱 파일을 업로드해야 합니다. NetApp 영업 팀에 문의하여 고성능 또는 고용량 배치에 적합한 라이센스를 확보하십시오.
 
 ## Bare Metal Server 설정
 
 ### 데이터 센터 위치
 
-인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}를 선택해야 합니다. 
+인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}를 선택해야 합니다.
 
 ### Bare Metal Server 구성
 
-사용자의 요구사항에 따라 Bare Metal Server 구성을 선택할 수 있습니다.
+사용자의 요구사항에 따라 Bare Metal Server 구성을 선택하십시오.
 * **고성능(중형)** – 프리미엄 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 128GB RAM / 노드당 22개의 1.9TB SSD 드라이브 용량 / 네 개의 노드 클러스터의 유효한 용량 – 59TB
 * **고성능(대형)** – 프리미엄 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 128GB RAM / 노드당 22개의 3.8TB SSD 드라이브 용량 / 네 개의 노드 클러스터의 유효한 용량 – 118TB
 * **고용량** – 표준 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 64GB RAM / 노드당 34개의 4TB SATA 드라이브 용량 / 네 개의 노드 클러스터의 유효한 용량 – 190TB
 
-**참고:** 3.8TB SSD(Solid State Disk) 드라이브는 일반적으로 {{site.data.keyword.CloudDataCent_notm}}에서 사용 가능합니다.
+**참고:** 3.8TB SSD(Solid-State Disk) 드라이브는 일반적으로 {{site.data.keyword.CloudDataCent_notm}}에서 사용 가능할 때 지원됩니다.
 
 ### Bare Metal Server 수
 
-기본적으로 NetApp ONTAP Select 인스턴스의 ESXi 서버 수는 4입니다. 이를 변경할 수 없습니다. 모든 ESXi 서버는 동일한 구성을 공유합니다.
+기본적으로 NetApp ONTAP Select 인스턴스의 ESXi 서버 수는 4입니다. 이를 변경할 수 없습니다. 모든 ESXi 서버는 구성을 공유합니다.
 
 ## 프로시저
 
@@ -106,7 +106,7 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 
 인스턴스의 배치가 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 배치의 상태를 확인할 수 있습니다.
 
-인스턴스가 성공적으로 배치된 경우에는 [NetApp ONTAP Select 인스턴스의 기술 스펙](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 
+인스턴스가 성공적으로 배치된 경우에는 [NetApp ONTAP Select 인스턴스의 기술 스펙](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다.
 
 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비**로 변경되고 이메일로 알림을 받습니다.
 

@@ -10,7 +10,7 @@ lastupdated: "2018-07-19"
 
 # NetApp ONTAP Select 인스턴스 삭제
 
-NetApp ONTAP Select 인스턴스를 삭제하면 다음 컴포넌트가 순차적으로 릴리스됩니다. 
+NetApp ONTAP Select 인스턴스를 삭제하면 다음 컴포넌트가 순차적으로 릴리스됩니다.
 1. 가상 머신(VM) 및 NetApp ONTAP Select Deploy VM을 클러스터링한 배치된 NetApp ONTAP Select
 2. 지원 및 서비스 요금
 3. VMware 제품 라이센스

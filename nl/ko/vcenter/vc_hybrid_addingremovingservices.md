@@ -27,9 +27,9 @@ lastupdated: "2018-07-20"
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              |예 | V2.3 이상 |
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         |예 | V2.2 이상 |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |예 | V2.2 이상 |
-| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          |예 | V1.8 이상 |
-| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                         |예 | V2.3 이상 |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 |예 | V1.2 이상 |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           |예 | V1.8 이상 |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        |예 | V2.3 이상 |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  |예 | V1.2 이상 |
 
 ## vCenter Server with Hybridity Bundle 인스턴스에 서비스 추가
 

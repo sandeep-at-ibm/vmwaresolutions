@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -25,12 +25,7 @@ HCX on {{site.data.keyword.cloud_notm}} 컴포넌트는 {{site.data.keyword.clou
 ### 온프레미스 HCX on IBM Cloud 인스턴스의 배치 프로세스
 
 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스를 설치하려면 다음 태스크를 완료해야 합니다.
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 다음 단계를 완료하십시오.
-    1. 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
-    2. HCX on {{site.data.keyword.cloud_notm}} 서비스가 설치된 vCenter Server with Hybridity Bundle 인스턴스를 클릭하십시오. 온프레미스 vSphere 환경에서 연결할 클라우드 측입니다.
-    3. **서비스** 탭에서 **설치된 서비스**를 클릭하십시오.
-    4. **HCX on {{site.data.keyword.cloud_notm}}** 카드를 클릭하십시오.
-    5. **HCX Cloud 콘솔 보기**를 클릭한 후 , vCenter Server 신임 정보를 사용해 콘솔에 로그인하여 클라우드 측 HCX on {{site.data.keyword.cloud_notm}} 서비스의 세부사항을 보십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스를 주문하십시오. 자세한 정보는 [온프레미스 VMware HCX on IBM Cloud 인스턴스 주문](standalone_orderingserviceinstances.html)을 참조하십시오.
 2. **HCX Cloud 콘솔**에서 다음 단계를 완료하십시오.
     1. **관리** 탭을 클릭하십시오.
     2. **시스템 업데이트** 탭에서 **REQUEST DOWNLOAD LINK**를 클릭하십시오.

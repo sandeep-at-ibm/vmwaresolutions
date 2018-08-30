@@ -4,19 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
 # Zerto on IBM Cloud 개요
 
-Zerto on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm}}의 VMware virtual 환경에서 데이터를 보호하고 복구하도록 배치 오퍼링으로 통합될 수 있는 복제 및 재해 복구 기능을 제공합니다.
+Zerto on {{site.data.keyword.cloud}} 서비스는 복제 및 재해 복구 기능을 제공합니다. 이러한 기능은 {{site.data.keyword.cloud_notm}}의 VMware 가상 환경에서 데이터를 보호하고 복구하도록 배치 오퍼링으로 통합될 수 있습니다.
 
-## Zerto on IBM Cloud의 기술적 고려사항
+## Zerto on IBM Cloud의 기술 스펙
 
-다음 컴포넌트가 주문되고 Zerto on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다. 
+다음 컴포넌트가 주문되고 Zerto on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
-**참고**: ZVM(Zerto Virtual Manager) 컴포넌트는 기본 클러스터에만 배치됩니다. 
+**참고**: ZVM(Zerto Virtual Manager) 컴포넌트는 기본 클러스터에만 배치됩니다.
 
 ### VSI
 

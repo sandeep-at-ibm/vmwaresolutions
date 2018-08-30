@@ -43,7 +43,7 @@ vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 
 
 ### 가상화 관리
 
-이 계층은 vCenter Server Appliance(vCSA), NSX Manager, 2개의 NSX ESG, 3개의 NSX Controller, PSC(Platform Services Controller) 가상 어플라이언스 및 IBM CloudDriver VSI(Virtual Server Instance)로 구성됩니다. CloudDriver VSI는 환경에 호스트 추가 등과 같은 특정 오퍼레이션에 필요하면 요청 시에 배치됩니다. 
+이 계층은 vCenter Server Appliance(vCSA), NSX Manager, 2개의 NSX ESG, 3개의 NSX Controller, PSC(Platform Services Controller) 가상 어플라이언스 및 IBM CloudDriver VSI(Virtual Server Instance)로 구성됩니다. CloudDriver VSI는 환경에 호스트 추가 등과 같은 특정 오퍼레이션에 필요하면 요청 시에 배치됩니다.
 
 기본 오퍼링은 최대 400개의 호스트와 최대 4000개의 VM이 포함된 환경을 지원하도록 크기가 조정된 vCenter Server 어플라이언스로 배치됩니다. 동일한 vSphere API 호환 도구 및 스크립트는 IBM 호스팅 VMware 환경을 관리하는 데 사용될 수 있습니다.
 
@@ -51,11 +51,11 @@ vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 
 
 HCX on {{site.data.keyword.cloud_notm}} 서비스 배치 시의 추가 관리 리소스 요구사항은 [VMware HCX on {{site.data.keyword.cloud_notm}} 개요](../services/hcx_considerations.html)를 참조하십시오.
 
-### 인프라 하이브리드
+### 인프라 하이브리디티
 
 이 계층은 사용자가 해당 IP 주소와 같은 VM 특성을 변경할 필요 없이 안전하고 쉽게 워크로드를 여기저기로 이동할 수 있도록 온프레미스 사이트와 {{site.data.keyword.cloud_notm}} 사이트 간 리소스의 추상화를 제공합니다.
 
-VMware HCX(Hybrid Cloud Extension)를 기반으로, 온프레미스 및 {{site.data.keyword.cloud_notm}} 사이트 간에 느슨하게 결합된 상호연결을 작성하여 작동 중단 없는 VM의 라이브 vMotion 또는 VM의 대량 마이그레이션을 사용할 수 있습니다. 
+VMware HCX(Hybrid Cloud Extension)를 기반으로, 온프레미스 및 {{site.data.keyword.cloud_notm}} 사이트 간에 느슨하게 결합된 상호연결을 작성하여 작동 중단 없는 VM의 라이브 vMotion 또는 VM의 대량 마이그레이션을 사용할 수 있습니다.
 
 ## vCenter Server with Hybridity Bundle 인스턴스의 기술 스펙
 
@@ -123,8 +123,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 라이센�
 * 하나의 지원 및 서비스 요금
 * VMware vSAN(Advanced 또는 Enterprise) 6.6
 
-**중요**: {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
-{{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+**중요**: {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
 
 **주의**: 인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -22,12 +22,14 @@ V2.0 이상의 인스턴스가 VMware vSphere 6.5 및 VMware vCenter Server 6.5�
 
 ### V2.0 이상에 배치된 vCenter Server 인스턴스
 
-VMware vSphere 6.5의 경우:
+#### VMware vSphere 6.5의 경우
+
 * 새 V2.3 인스턴스의 경우, ESXi650-201712101-SG, ESXi650-201803401-BG 및 ESXi650-201803402-BG 패치가 적용된 vSphere가 배치됩니다.  
 * V2.3 이전에 배치된 모든 기존 인스턴스의 경우, ESXi650-201712101-SG, ESXi650-201803401-BG 및 ESXi650-201803402-BG 패치로 모든 새 클러스터 및 ESXi 서버가 업데이트됩니다.
 * 모든 기존 ESXi 서버, 그리고 V2.3으로 업그레이드하기 전까지 배치할 클러스터 또는 ESXi 서버의 경우에는 [VMware 제품 패치 사이트](https://my.vmware.com/group/vmware/patch)에 있는 ESXi650-201712101-SG, ESXi650-201803401-BG 및 ESXi650-201803402-BG 패치를 적용해야 합니다.
 
-VMware vCenter Server 6.5의 경우:
+#### VMware vCenter Server 6.5의 경우
+
 * 모든 새 V2.3 인스턴스의 경우, vCenter 6.5 U1g 패치가 적용된 vCenter Server가 배치됩니다.
 * V2.3 이전에 배치된 모든 기존 인스턴스의 경우, [VMware 제품 패치 사이트](https://my.vmware.com/group/vmware/patch)에 있는 vCenter 6.5 U1g 패치를 적용해야 합니다.
 
@@ -45,7 +47,7 @@ VMware vCenter Server 6.5의 경우, [VMware 제품 패치 사이트](https://my
 
 ## V1.9 이전에 배치된 인스턴스
 
-V1.9 이전의 VMware vSphere를 비롯한 Cloud Foundation 및 vCenter Server 인스턴스는 VMware vSphere 6.0 및 VMware vCenter Server 6.0으로 배치되었습니다.
+V1.9 이전의 VMware vSphere 클러스터, Cloud Foundation 인스턴스 및 vCenter Server 인스턴스는 VMware vSphere 6.0 및 VMware vCenter Server 6.0으로 배치되었습니다.
 
 ### V1.9 이전에 배치된 vCenter Server 인스턴스
 

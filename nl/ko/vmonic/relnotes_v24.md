@@ -58,7 +58,7 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 
 ### Network File System 성능 개선
 
-가장 까다로운 워크로드 유형에 맞게 디자인된 10IOPS/GB의 성능 레벨은 더 이상 특정 {{site.data.keyword.CloudDataCent_notm}}로 제한되지 않으며 이제 어디서든 사용 가능합니다. 자세한 정보는 [vCenter Server 개요](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications)에서 *스토리지* 절을 참조하십시오.
+가장 까다로운 워크로드 유형에 맞게 디자인된 10IOPS/GB의 성능 레벨은 더 이상 특정 {{site.data.keyword.CloudDataCent_notm}}로 제한되지 않으며 이제 어디서든 사용 가능합니다. 자세한 정보는 [vCenter Server 개요](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)에서 *스토리지* 절을 참조하십시오.
 
 ## VMware Federal 인스턴스에 대한 업데이트
 
@@ -70,11 +70,11 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-현재 릴리스는 새로 배치된 모든 인스턴스에 IBM Spectrum Protect&trade; Plus V10.1.1 패치 1을 설치합니다. IBM Spectrum Protect Plus V10.1.1 패치 1의 새 기능에 대한 정보는 [IBM Spectrum Protect Plus 업데이트](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}를 참조하십시오.
+현재 릴리스는 새로 배치된 모든 인스턴스에 IBM Spectrum Protect&trade; Plus V10.1.1 패치 1을 설치합니다. IBM Spectrum Protect Plus V10.1.1 패치 1의 새 기능에 대한 자세한 정보는 [IBM Spectrum Protect Plus 업데이트](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}를 참조하십시오.
 
 ### VMware HCX on IBM Cloud
 
-새 옵션은 이 서비스를 주문할 때 HCX 상호연결을 위해 공용 네트워크와 사설 네트워크 중에서 선택하는 데 사용할 수 있습니다. 자세한 정보는 [VMware HCX on {{site.data.keyword.cloud_notm}} 주문](../services/hcx_ordering.html)을 참조하십시오. 
+새 옵션은 이 서비스를 주문할 때 HCX 상호연결을 위해 공용 네트워크와 사설 네트워크 중에서 선택하는 데 사용할 수 있습니다. 자세한 정보는 [VMware HCX on {{site.data.keyword.cloud_notm}} 주문](../services/hcx_ordering.html)을 참조하십시오.
 
 ## 새로 작성되고 업데이트된 문서
 
@@ -86,7 +86,7 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 
 서비스 주문 시 관련 정보를 쉽게 찾을 수 있도록 서비스 정보가 재구조화되고 탐색이 개선되었습니다.
 
-자세한 정보는 다음을 참조하십시오.
+자세한 정보는 다음 주제를 참조하십시오.
 
 * [F5 on {{site.data.keyword.cloud_notm}} 주문](../services/f5_ordering.html)
 * [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 주문](../services/fsa_ordering.html)
