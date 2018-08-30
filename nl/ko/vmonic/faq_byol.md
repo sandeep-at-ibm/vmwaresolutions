@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-07-20"
 
 ## BYOL은 무엇입니까?
 
-고유한 라이센스 가져오기, 즉 BYOL은 V1.8 이상 릴리스의 VMware Cloud Foundation 인스턴스 및 V2.0 이상 릴리스의 vCenter Server와 vSphere 클러스터에 사용 가능한 기능입니다. BYOL을 통해 인스턴스 주문 시 다음 VMware 소프트웨어 컴포넌트 중 하나 이상의 고유한 VMware 라이센스를 사용할 수 있습니다.
+고유한 라이센스 가져오기, 즉 BYOL은 V1.8 이상 릴리스의 VMware Cloud Foundation 인스턴스 및 V2.0 이상 릴리스의 vCenter Server와 vSphere 클러스터에 사용 가능한 기능입니다. BYOL을 통해 인스턴스 주문 시 다음 VMware 소프트웨어 컴포넌트 중 하나 이상에 대한 고유한 VMware 라이센스를 사용할 수 있습니다.
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
 * VMware vSAN
 
-VMware 컴포넌트에 대해 자체 라이센스 사용을 선택하고 이에 대한 유효한 라이센스 키를 제공한 경우에는 이 컴포넌트에 대해 IBM에서 라이센스가 주문되지 않으며 월별 라이센스 비용이 이 컴포넌트의 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정으로 부과되지 않습니다. 
+VMware 컴포넌트에 대해 자체 라이센스 사용을 선택하고 이에 대한 유효한 라이센스 키를 제공한 경우에는 이 컴포넌트에 대해 IBM에서 라이센스가 주문되지 않으며 월별 라이센스 비용이 이 컴포넌트의 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정으로 부과되지 않습니다.
 
 **참고:** 비즈니스 파트너 사용자는 BYOL 기능을 사용할 수 없습니다.
 
@@ -62,11 +62,11 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 새 클러스터를
 
 ## 아홉 개 이상의 CPU에 라이센스 키를 제공할 수 있습니까?
 
-예. 각 VMware 컴포넌트의 경우 CPU당 하나의 라이센스가 필요합니다. 현재 모든 vCenter Server 및 Cloud Foundation 서버에 두 개의 CPU가 있으므로 각 서버에 두 개의 라이센스가 필요합니다. 나중에 인스턴스에 추가할 기본 인스턴스 및 확장 노드를 지원할 수 있는 라이센스 키를 제공하는 것이 좋습니다.
+예. 각 VMware 컴포넌트의 경우 CPU당 하나의 라이센스가 필요합니다. 현재 모든 vCenter Server 및 Cloud Foundation 서버에 두 개의 CPU가 있습니다. 따라서 각 서버에 두 개의 라이센스가 필요합니다. 나중에 인스턴스에 추가할 기본 인스턴스 및 확장 노드를 지원할 수 있는 라이센스 키를 제공하는 것이 좋습니다.
 
 ## BYOL 기능을 사용할 때 SDDC Manager 라이센스를 제공할 수 있습니까?
 
-아니오. VMware과의 계약에는 클라이언트의 실제 라이센스 키를 승인해야 하는 내용이 포함됩니다. Cloud Foundation 배치에 SDDC Manager 라이센스가 포함되어 있지만 BYOL에 대해 승인하고 유효성 검증할 수 있는 SDDC Manager 라이센스 키 파일이 없습니다. 그러므로 IBM에서 모든 인스턴스에 대한 SDDC Manager 라이센스 비용을 청구합니다. SDDC Manager 라이센스는 Cloud Foundation 인스턴스에 대한 전체 라이센스 비용 중 극히 일부만 표시합니다.
+아니오. VMware과의 계약에는 클라이언트의 실제 라이센스 키를 승인해야 하는 내용이 포함됩니다. Cloud Foundation 배치에 SDDC Manager 라이센스가 포함되어 있지만 SDDC Manager 라이센스 키 파일을 승인할 수 없고 BYOL에 대해 이 파일을 유효성 검증할 수 없습니다. 그러므로 IBM에서 모든 인스턴스에 대한 SDDC Manager 라이센스 비용을 청구합니다. SDDC Manager 라이센스는 Cloud Foundation 인스턴스에 대한 전체 라이센스 비용 중 극히 일부만 표시합니다.
 
 ## 일부 VMware 컴포넌트의 경우 BYOL 기능을 사용하고, 다른 컴포넌트의 경우 월별 라이센스를 구매할 수 있습니까?
 
@@ -74,11 +74,11 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 새 클러스터를
 
 ## 특정 VMware 컴포넌트의 경우 일부 라이센스에 BYOL을 사용하고 IBM에서 나머지 라이센스를 구매할 수 있습니까?
 
-예. 특정 VMware 컴포넌트의 경우 BYOL을 선택했으며 새 클러스터를 작성할 때 새 BYOL 키를 입력할 수 있는 옵션이 있는 경우, 기존 BYOL 키 사용을 계속하거나 해당 클러스터에 대한 IBM 제공 라이센스를 구매하십시오.  이 경우, 클러스터당 라이센스 부여에 VMware vSphere Enterprise 및 VMware vSAN만 사용할 수 있습니다.
+예. 특정 VMware 컴포넌트의 경우 BYOL을 선택했으며 새 클러스터를 작성할 때 새 BYOL 키를 입력할 수 있는 옵션이 있는 경우, 기존 BYOL 키 사용을 계속하거나 해당 클러스터에 대한 IBM 제공 라이센스를 구매하십시오. 현재 클러스터당 라이센싱에 VMware vSphere Enterprise 및 VMware vSAN만 사용할 수 있습니다.
 
 ## 새 클러스터 작성 시 BYOL을 사용할 수 있습니까?
 
-예. 새 클러스터 작성 시 기존 BYOL 라이센스에서 BYOL을 수행하거나 새 BYOL을 입력할 수 있습니다. 또한 새 클러스터 작성 시 IBM 제공 구독 라이센스를 구매할 수 있는 옵션도 제공됩니다. 이 경우, 클러스터당 라이센스 부여에 VMware vSphere Enterprise 및 VMware vSAN만 사용할 수 있습니다.
+예. 새 클러스터 작성 시 기존 BYOL 라이센스에서 BYOL을 수행하거나 새 BYOL을 입력할 수 있습니다. 또한 새 클러스터 작성 시 IBM 제공 구독 라이센스를 구매할 수 있습니다. 현재 클러스터당 라이센싱에 VMware vSphere Enterprise 및 VMware vSAN만 사용할 수 있습니다.
 
 ## 내 BYOL 라이센스를 관리할 수 있는 방법은 무엇입니까?
 
@@ -90,7 +90,11 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 새 클러스터를
 
 ## BYOL이 사용된 클러스터에서 사용 가능한 라이센스의 용량을 확인할 수 있는 방법은 무엇입니까?
 
-**배치된 인스턴스**로 이동하여 인스턴스를 찾고 클릭한 후 **인프라** 탭에서 라이센스 용량을 확인할 클러스터를 클릭하여 자신의 라이센스 키에서 사용 가능한 CPU의 수를 찾을 수 있습니다. 사용 가능한 CPU의 수는 **사용자 제공 라이센스** 테이블에 나열됩니다.
+라이센스 키에서 사용 가능한 CPU 수를 찾으려면 다음 단계를 완료하십시오.
+1. **배치된 인스턴스** 페이지로 이동하십시오.
+2. 인스턴스를 찾아 클릭하십시오.
+3. **인프라** 탭에서 라이센스 용량을 확인할 클러스터를 클릭하십시오.
+   사용 가능한 CPU의 수는 **사용자 제공 라이센스** 테이블에 나열됩니다.
 
 ## BYOL 라이센스 부여 옵션을 선택한 경우 IBM에서 지원을 제공합니까?
 
@@ -106,7 +110,7 @@ BYOL 기능의 도입으로 수동 프로세스를 계속 사용하는 것은 �
 
 ## BYOL이 기타 VMware 제품(예: VMware vRealize Automation, VMware vRealize Operations 또는 VMware vRealize Log Insight)에 지원됩니까?
 
-아니오, 이 VMware 제품은 인스턴스 배치의 일부가 아니기 때문입니다. 이 VMware 제품은 초기 배치의 상단에 설치될 수 있으며, 이 경우 설치 및 라이센스 부여를 수행하는 데 클라이언트 또는 해당 에이전트가 필요합니다.
+아니오, 이 VMware 제품은 인스턴스 배치의 일부가 아니기 때문입니다. 초기 배치 외에 이 VMware 제품이 설치될 수 있으며, 이 경우 설치 및 라이센싱을 수행하는 데 클라이언트 또는 해당 에이전트가 필요합니다.
 
 ## vCenter Server with Hybridity Bundle과 함께 NFS 스토리지를 주문할 수 있습니까?
 

@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-08-15"
 
 ---
 
 # HA 클러스터 추가 시 발생하는 vSphere 콘솔 구성 문제
 
 ## 문제점
-하나의 파일 공유를 포함하여 HA(High Availability) 클러스터 구성을 추가하는 경우 ESXi 호스트에서 다음 구성 문제가 발생합니다.
+하나의 파일 공유만 포함하여 HA(High Availability) 클러스터 구성을 추가하는 경우 ESXi 호스트에서 다음 구성 문제가 발생합니다.
 
 `The number of heartbeat datastores for host is 1, which is less than required: 2`
 

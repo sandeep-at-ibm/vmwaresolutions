@@ -24,11 +24,11 @@ lastupdated: "2018-05-28"
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
-이 릴리스에서는 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 오퍼링이 도입되었습니다. vCenter Server with Hybridity Bundle은 온프레미스 인프라를 클라우드로 쉽고 빠르게 확장하는 데 도움을 주는 프라이빗 클라우드에서 호스팅됩니다. VMware 환경은 IBM 제공 VMware 소프트웨어 정의 데이터 센터 라이센스를 기반으로 하며 원활한 인프라 하이브리드 및 진정한 애플리케이션 이동성을 위해 온프레미스 vSphere 5.0+ 환경을 {{site.data.keyword.cloud_notm}} 사이트와 손쉽고 안전하게 연결하는 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 포함합니다. 
+이 릴리스에서는 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 오퍼링이 도입되었습니다. vCenter Server with Hybridity Bundle은 온프레미스 인프라를 클라우드로 쉽고 빠르게 확장하는 데 도움을 주는 프라이빗 클라우드에서 호스팅됩니다. VMware 환경은 IBM 제공 VMware 소프트웨어 정의 데이터 센터 라이센스를 기반으로 하며 원활한 인프라 하이브리디티 및 진정한 애플리케이션 이동성을 위해 온프레미스 vSphere 5.0+ 환경을 {{site.data.keyword.cloud_notm}} 사이트와 손쉽고 안전하게 연결하는 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 포함합니다.
 
 HCX on {{site.data.keyword.cloud_notm}} 서비스는 vCenter Server with Hybridity Bundle 인스턴스를 통해서만 사용 가능합니다. 먼저 기본 vCenter Server V2.3 소프트웨어 업데이트를 적용한 후 기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 업데이트 적용](../vcenter/vc_applyingupdates.html)을 참조하십시오.
 
-vCenter Server with Hybridity Bundle에 대한 자세한 정보는 다음 항목을 참조하십시오.
+vCenter Server with Hybridity Bundle에 대한 자세한 정보는 다음 주제를 참조하십시오.
 
 * [vCenter Server with Hybridity Bundle 개요](../vcenter/vc_hybrid_overview.html)
 * [vCenter Server with Hybridity Bundle 인스턴스에 대한 요구사항 및 계획](../vcenter/vc_hybrid_planning.html)
@@ -38,7 +38,7 @@ vCenter Server with Hybridity Bundle에 대한 자세한 정보는 다음 항목
 
 이제 전체 인스턴스를 삭제할 필요없이 인스턴스에서 클러스터를 삭제할 수 있습니다. V2.2 이하 인스턴스에 배치된 클러스터의 경우에는 인스턴스에 추가한 클러스터를 삭제하려면 인스턴스를 V2.3으로 업그레이드해야 합니다.
 
-자세한 정보는 다음을 참조하십시오.
+자세한 정보는 다음 주제를 참조하십시오.
 
 * [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](../vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
 * [Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제](../sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
@@ -55,7 +55,7 @@ V2.3 릴리스부터, **사용자 정의됨** Bare Metal Server 설정을 선택
 * 듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz
 * 듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz
 
-자세한 정보는 다음을 참조하십시오.
+자세한 정보는 다음 주제를 참조하십시오.
 
 * [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)
 * [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](../vcenter/vc_addingviewingclusters.html)
@@ -93,7 +93,7 @@ HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSp
 
 인스턴스를 주문할 때 포함된 서비스와 함께 인스턴스를 주문하거나 나중에 이 서비스를 기존 인스턴스에 추가할 수 있습니다.
 
-자세한 정보는 다음을 참조하십시오.
+자세한 정보는 다음 주제를 참조하십시오.
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}의 컴포넌트 및 고려사항](../services/htcc_considerations.html)
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 관리](../services/managinghtcc.html)
 
@@ -103,13 +103,13 @@ HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSph
 
 인스턴스를 주문할 때 포함된 서비스와 함께 인스턴스를 주문하거나 나중에 이 서비스를 기존 인스턴스에 추가할 수 있습니다.
 
-자세한 정보는 다음을 참조하십시오.
+자세한 정보는 다음 주제를 참조하십시오.
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}}의 컴포넌트 및 고려사항](../services/htdc_considerations.html)
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 관리](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-현재 릴리스는 기본 백업 서비스로서 새로 배치된 모든 인스턴스에 IBM Spectrum Protect&trade; Plus on V10.1.1을 설치합니다. IBM Spectrum Protect Plus V10.1.1의 새 기능에 대한 정보는 [IBM Spectrum Protect Plus 업데이트](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}를 참조하십시오.
+현재 릴리스는 기본 백업 서비스로서 새로 배치된 모든 인스턴스에 IBM Spectrum Protect&trade; Plus on V10.1.1을 설치합니다. IBM Spectrum Protect Plus V10.1.1의 새 기능에 대한 자세한 정보는 [IBM Spectrum Protect Plus 업데이트](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}를 참조하십시오.
 
 ## 새로 작성되고 업데이트된 문서
 
@@ -118,8 +118,8 @@ HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSph
 ## 사용자 인터페이스 업데이트 및 개선사항
 
 사용자 인터페이스가 업데이트되었으며 다음 개선사항을 제공합니다.
-* **일관성**: 이제 사용자 인터페이스는 {{site.data.keyword.cloud_notm}}에서 기타 서비스와 일관적인 룩앤필을 제공합니다. 
-* **쉬운 액세스**: 이제 {{site.data.keyword.cloud_notm}} **카탈로그**에서 직접 VMware 오퍼링에 액세스할 수 있습니다. 
+* **일관성**: 이제 사용자 인터페이스는 {{site.data.keyword.cloud_notm}}에서 기타 서비스와 일관적인 룩앤필을 제공합니다.
+* **쉬운 액세스**: 이제 {{site.data.keyword.cloud_notm}} **카탈로그**에서 직접 VMware 오퍼링에 액세스할 수 있습니다.
 * **간결하고 단순해진 주문 경험**: 이제 하나의 인터페이스에서 VMware 인스턴스 주문 및 해당 추가 기능 서비스 배치를 완료할 수 있습니다. 또한, 비용 계획에 따라 구성을 조정할 수 있도록 동일한 인터페이스에서 예상 비용이 즉시 계산되어 표시됩니다.
 * 비즈니스 파트너 사용자는 인스턴스 주문 또는 클러스터 추가 시에 BYOL(Bring Your Own License) 옵션을 사용할 수 없습니다.
 * 다양한 오류 메시지 및 도구 팁 개선사항은 사용자 인터페이스의 설정을 적절하게 선택하는 데 도움이 됩니다.

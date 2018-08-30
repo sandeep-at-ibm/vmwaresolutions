@@ -26,7 +26,7 @@ lastupdated: "2017-07-05"
 
 * 5월 22일 이전에 배치되었고 이에 따라 V3 서버를 사용 중인 VMware Cloud Foundation 배치는 이제 새 노드를 인스턴스에 배치할 때 V4 서버를 주문합니다. 이 서버에는 256GB의 메모리가 있습니다. 512GB 메모리가 필요하면 서버를 추가한 후 지원 티켓을 열어 521GB 메모리로 서버 업그레이드를 요청하십시오. IBM 지원 센터 문의에 대한 자세한 정보는 [IBM 지원 센터에 문의](trbl_support.html)를 참조하십시오.
 
-컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오. 
+컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오.
 
 ### 업그레이드 프로세스 요구사항
 

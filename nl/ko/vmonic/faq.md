@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -15,8 +15,8 @@ lastupdated: "2018-07-23"
 ## IBM Cloud for VMware Solutions에 필요한 사용자 계정은 무엇입니까?
 
 * **IBM ID 계정**. 이 계정은 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 액세스하는 데 필요합니다. 콘솔은 {{site.data.keyword.slportal}}에서 분리된 독립형 사용자 인터페이스입니다. 자세한 정보는 [시작하기](../index.html)를 참조하십시오.
-* **{{site.data.keyword.cloud_notm}} 계정**. 이 계정은 프로비저닝에 필요합니다. 기존 **IBM ID**를 사용하거나 새 **IBM ID**를 작성하여 {{site.data.keyword.cloud_notm}} 계정을 등록할 수 있습니다.  
-* **{{site.data.keyword.cloud_notm}} 인프라 계정**. 이전에는 **IBM SoftLayer** 계정이라고 부르던 이 계정은 인프라 제품 및 서비스를 관리하기 위한 일부 추가 기능을 제공하는 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에 로그인하는 데 사용됩니다. **{{site.data.keyword.cloud_notm}} 계정**을 종량과금제 유형의 계정으로 업그레이드하거나 기존 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하여 {{site.data.keyword.cloud_notm}} 인프라 계정을 가져올 수 있습니다. 사용 중인 {{site.data.keyword.cloud_notm}} 인프라 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [필수 계정 등록](signing_softlayer_account.html) 및 [{{site.data.keyword.cloud_notm}} 인프라 계정 요구사항](slaccountrequirement.html)을 참조하십시오. 
+* **{{site.data.keyword.cloud_notm}} 계정**. 이 계정은 프로비저닝에 필요합니다. 기존 **IBM ID**를 사용하거나 새 **IBM ID**를 작성하여 {{site.data.keyword.cloud_notm}} 계정을 등록할 수 있습니다. 
+* **{{site.data.keyword.cloud_notm}} 인프라 계정**. 이전에는 **IBM SoftLayer** 계정이라고 부르던 이 계정은 인프라 제품 및 서비스를 관리하기 위한 일부 추가 기능을 제공하는 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에 로그인하는 데 사용됩니다. **{{site.data.keyword.cloud_notm}} 계정**을 종량과금제 유형의 계정으로 업그레이드하거나 기존 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하여 {{site.data.keyword.cloud_notm}} 인프라 계정을 가져올 수 있습니다. 사용 중인 {{site.data.keyword.cloud_notm}} 인프라 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [필수 계정 등록](signing_softlayer_account.html) 및 [{{site.data.keyword.cloud_notm}} 인프라 계정 요구사항](slaccountrequirement.html)을 참조하십시오.
 
 ## 내 IBM Cloud 인프라 신임 정보를 IBM Cloud for VMware Solutions 콘솔과 연관시킬 수 있는 방법은 무엇입니까?
 
@@ -30,27 +30,27 @@ lastupdated: "2018-07-23"
 
 모든 인스턴스 유형은 VMware 가상 환경에 맞는 배치 선택사항을 제공합니다. 하지만 사용자 정의 가능성과 자동화의 범위에 차이가 있습니다.
 
-* VMware vCenter Server 인스턴스를 주문하는 경우 사용자 정의된 컴퓨팅, 스토리지 및 네트워크 리소스와 함께 VMware 가상 환경을 배치하십시오. 배치된 컴포넌트에 대한 자세한 정보는 [vCenter Server 인스턴스의 기술 스펙](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)을 참조하십시오. 
-* VMware Cloud Foundation 인스턴스를 주문하는 경우 통합된 소프트웨어 정의 데이터 센터(SDDC) 플랫폼을 배치하십시오. 배치된 컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오. 
+* VMware vCenter Server 인스턴스를 주문하는 경우 사용자 정의된 컴퓨팅, 스토리지 및 네트워크 리소스와 함께 VMware 가상 환경을 배치하십시오. 배치된 컴포넌트에 대한 자세한 정보는 [vCenter Server 인스턴스의 기술 스펙](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)을 참조하십시오.
+* VMware Cloud Foundation 인스턴스를 주문하는 경우 통합된 소프트웨어 정의 데이터 센터(SDDC) 플랫폼을 배치하십시오. 배치된 컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오.
 * VMware vSphere 클러스터를 주문하는 경우 VMware 호환 하드웨어를 통합하면서 호스팅된 VMware 환경을 디자인하고 빌드할 수 있는 최대한의 유연성을 확보합니다. 하지만 {{site.data.keyword.cloud_notm}}는 VMware vSphere 클러스터에 대한 선택적 VMware 컴포넌트의 설치, 구성 및 가져오기를 자동화하지 않습니다.
 * vCenter Server 인스턴스, Cloud Foundation 인스턴스 및 vSphere 클러스터에 지원되는 기능은 서로 다릅니다. 자세한 정보는 [오퍼링 비교 차트](inst_comp_chart.html)를 참조하십시오.
 
 ## vCenter Server 인스턴스에 포함되는 항목은 무엇입니까?
 
-자세한 정보는 [vCenter Server 인스턴스의 기술 스펙](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)을 참조하십시오. 
+자세한 정보는 [vCenter Server 인스턴스의 기술 스펙](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)을 참조하십시오.
 
 ## Cloud Foundation 인스턴스에 포함되는 항목은 무엇입니까?
 
-자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오. 
+자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오.
 
 ## vSphere 클러스터에 포함된 것은 무엇입니까?
-자세한 정보는 [VMware vSphere on {{site.data.keyword.cloud_notm}}의 컴포넌트](../vsphere/vs_vsphereclusteroverview.html)를 참조하십시오. 
+자세한 정보는 [VMware vSphere on {{site.data.keyword.cloud_notm}}의 컴포넌트](../vsphere/vs_vsphereclusteroverview.html)를 참조하십시오.
 
 ## 두 개의 노드 vCenter Server 인스턴스는 고가용성입니까?
 
 최소 세 개의 노드가 있는 환경에 프로덕션 워크로드를 배치하는 것이 좋습니다.
 
-기본적으로 VMware vSphere DRS(Distributed Resource Scheduler) 및 VMware HA(High Availability)가 사용으로 설정된 경우 VMware의 우수 사례에서는 개별 노드에 세 개의 NSX Controller를 각각 배치할 것을 제안합니다.
+기본적으로 VMware vSphere DRS(Distributed Resource Scheduler) 및 VMware HA(High Availability)가 사용으로 설정되어 있습니다. 하지만 VMware의 우수 사례에서는 개별 노드에 세 개의 NSX Controller를 각각 배치할 것을 제안합니다.
 
 두 개의 노드 최소 배치에서 하나의 노드에는 하나의 NSX Controller가 있고 다른 노드에는 두 개의 NSX Controller가 있습니다. 두 개의 NSX Controller가 포함된 노드의 작동이 중지되면 NSX Controller 오퍼레이션이 읽기 전용 모드로 배치되고 새 가상 머신(VM) 또는 vMotion VM에서 네트워킹 문제가 발생할 수 있습니다.
 
@@ -62,13 +62,13 @@ lastupdated: "2018-07-23"
 
 ## 클러스터의 이름을 바꿀 수 있습니까?
 
-vCenter Server 인스턴스의 경우, 배치 중에 작성된 첫 번째 클러스터의 이름은 기본 이름인 **cluster1**입니다. VMware vSphere Client에서 기본 클러스터의 이름을 변경할 수 있습니다. 새 클러스터를 vCenter Server 인스턴스에 추가하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 원하는 이름을 지정할 수 있습니다.
+vCenter Server 인스턴스의 경우, 배치 중에 작성된 첫 번째 클러스터의 이름은 기본 이름인 **cluster1**입니다. VMware vSphere Client에서 기본 클러스터의 이름을 변경할 수 있습니다. 클러스터를 vCenter Server 인스턴스에 추가하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 원하는 이름을 지정할 수 있습니다.
 
 **참고**: Cloud Foundation 인스턴스의 경우, 기본 클러스터 이름을 변경할 수 없습니다.
 
 ##패치가 어떻게 관리되고 있습니까?
 
-IBM은 {{site.data.keyword.cloud_notm}}를 통해 VMware Solutions 콘솔에 사용할 수 있는 IBM CloudDriver 컴포넌트에 대한 지속적인 업데이트를 제공합니다. IBM은 Zerto on {{site.data.keyword.cloud_notm}} 또는 Veeam on {{site.data.keyword.cloud_notm}}와 같은 추가 서비스에 대한 지속적인 업데이트를 제공하지 않습니다. 업데이트의 확보 및 설치는 사용자의 책임입니다.
+IBM은 요청 시 IBM CloudDriver VSI(Virtual Server Instance)를 배치하여 IBM 코드에 대한 지속적 업데이트를 제공합니다. IBM은 Zerto on {{site.data.keyword.cloud_notm}} 또는 Veeam on {{site.data.keyword.cloud_notm}}와 같은 추가 서비스에 대한 지속적인 업데이트를 제공하지 않습니다. 업데이트의 확보 및 설치는 사용자의 책임입니다.
 
 VMware 업데이트는 배치한 VMware 인스턴스의 유형에 따라 다른 방식으로 적용됩니다.
 
@@ -78,7 +78,7 @@ VMware 업데이트는 배치한 VMware 인스턴스의 유형에 따라 다른 
   * 사용자는 새로 배치된 ESXi 서버 및 클러스터에 필요한 모든 최신 업데이트가 있는지 확인하는 작업을 포함하여 VMware 컴포넌트에 대한 기타 모든 업데이트를 수행해야 합니다.
   * V2.0 이상에 배치된 인스턴스의 경우, VUM(VMware Update Manager)은 vCenter 서버에 통합됩니다. VUM을 구성하여 VMware에서 ESXi 업데이트를 다운로드할 수 있습니다.
 
-자세한 정보는 다음을 참조하십시오.
+자세한 정보는 다음 리소스를 참조하십시오.
 * [VMware Support](https://www.vmware.com/support.html)
 * [vCenter Server 인스턴스에 업데이트 적용](../vcenter/vc_applyingupdates.html)
 * [업데이트를 Cloud Foundation 인스턴스에 적용](../sddc/sd_applyingupdates.html)
@@ -93,7 +93,7 @@ VMware 업데이트는 배치한 VMware 인스턴스의 유형에 따라 다른 
 
 ## 고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?
 
-고객 관리 NSX Edge가 공인 VLAN에 연결되지만 보안 위험이 발생하지 않도록 보안 조치가 제공됩니다. 해당 조치는 다음과 같습니다.
+고객 관리 NSX Edge가 공인 VLAN에 연결되지만 보안 위험이 발생하지 않도록 보안 조치가 제공됩니다. 다음 보안 수단이 준비되어 있습니다.
 *  IP 주소의 사설 서브넷 범위에서 지속적인 트래픽만 허용하도록 방화벽 규칙이 제공됩니다.
 *  SNAT(Source Network Address Translation) 규칙(기본적으로 사용 안함으로 설정됨)이 사설 서브넷에서 공인 서브넷의 단일 IP 주소로 모든 IP 주소를 변환하도록 제공됩니다.
 *  고객 관리 NSX Edge 어플라이언스에 대한 원격 액세스가 사용 안함으로 설정됩니다.
@@ -117,7 +117,7 @@ VMware 업데이트는 배치한 VMware 인스턴스의 유형에 따라 다른 
 
 ## VMware vSphere on IBM Cloud가 VMware 스택을 설치하고 구성하고 가져오는 데 자동화를 사용합니까?
 
-아니오. Mware vSphere on {{site.data.keyword.cloud_notm}}는 Cloud Foundation 및 vCenter Server 플랫폼에 있는 고급 자동화를 활용하지 않습니다. 사용자의 주문 항목에 따라 플랫폼은 선택적 VMware 라이센스, ESXi 서버를 제공하고, 선택적으로 FortiGate 실제 방화벽의 HA 쌍을 제공합니다. 새 클러스터가 작성되는 경우 세 개의 새 VLAN(하나의 공인 및 두 개의 사설)도 프로비저닝됩니다.
+아니오. VMware vSphere on {{site.data.keyword.cloud_notm}}는 Cloud Foundation 및 vCenter Server 플랫폼에 있는 고급 자동화를 사용하지 않습니다. 사용자의 주문 항목에 따라 플랫폼은 선택적 VMware 라이센스, ESXi 서버를 제공하고, 선택적으로 FortiGate 실제 방화벽의 HA 쌍을 제공합니다. 새 클러스터가 작성되는 경우 세 개의 새 VLAN(하나의 공인 VLAN 및 두 개의 사설 VLAN)도 프로비저닝됩니다.
 
 VMware ESXi는 각 베어메탈 서버에 자동으로 설치되지만 vCenter Server 또는 NSX와 같은 추가 VMware 컴포넌트를 설치해야 합니다. vSphere on {{site.data.keyword.cloud_notm}}는 VMware 호환 하드웨어가 선택된 VMware 컴포넌트에 따라 주문되는지 확인하지만, VMware 환경을 구성하고 가져오기 위해 제공된 자동화가 없습니다. 사용자는 IBM 호스팅 환경을 디자인하고 설계해야 합니다.
 

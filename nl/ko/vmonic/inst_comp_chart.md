@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -18,13 +18,13 @@ VMware Cloud Foundation 인스턴스, VMware vCenter Server 인스턴스, VMware
 |:----------------------------------|:--------------------|:---------------|:-------------------------|:-------------- |
 | {{site.data.keyword.IBM}} 고급 자동화로 작동됨 <sup>1</sup> |예 |예 |예 |아니오. 자체 빌드되고 구성됨 |
 |스토리지 옵션        |vSAN                |vSAN 또는 공유 파일 레벨 스토리지(NFS) |vSAN |vSAN 또는 공유 파일 레벨 스토리지(NFS) |
-|초기 클러스터의 ESXi 서버 수 |4개 |vSAN의 경우 4개, NFS의 경우 최소 2개(3개 권장) |4개 |기존 클러스터를 스케일링는 경우 1개, 새 vSAN 클러스터의 경우 4개, NFS가 사용된 새 클러스터의 경우 최소 3개 |
+|초기 클러스터의 ESXi 서버 수 |4개 | vSAN의 경우 4개, NFS의 경우 최소 2개(3개 권장) |4개 |기존 클러스터를 스케일링는 경우 1개, 새 vSAN 클러스터의 경우 4개, NFS가 사용된 새 클러스터의 경우 최소 3개 |
 | ESXi 서버의 최대 수 <sup>2</sup> |클러스터당 32개      |클러스터당 59개     |클러스터당 59개 |클러스터당 60개     |
-|Cloud 자동화된 다중 사이트 배치 |V2.0 이상에 배치된 새 인스턴스에 지원됨 |V2.0 이상에 배치된 새 인스턴스에 지원됨 |지원됨 |지원됨. 자동화된 구성이 포함되지 않음 |
+|Cloud 자동화된 다중 사이트 배치 | V2.0 이상에 배치된 새 인스턴스에 지원됨 | V2.0 이상에 배치된 새 인스턴스에 지원됨 |지원됨 |지원됨. 자동화된 구성이 포함되지 않음 |
 |ESXi 서버 추가              |지원됨           |지원됨 |지원됨 |지원됨. 자동화된 구성이 포함되지 않음 |
 |ESXi 서버 제거           |지원됨           |지원됨 |지원됨 |지원됨. 자동화된 구성이 포함되지 않음 |
-|다중 클러스터 지원         |5개의 클러스터 |10개의 클러스터 |10개의 클러스터 |지원됨. 자동화된 구성이 포함되지 않음 |
-|VMware 스택의 클라이언트 관리 업데이트 및 패치 | VMware 업데이트 |포함되지 않음|포함되지 않음|포함되지 않음|
+|다중 클러스터 지원         | 5개의 클러스터 | 10개의 클러스터 | 10개의 클러스터 |지원됨. 자동화된 구성이 포함되지 않음 |
+|VMware 스택의 클라이언트 관리 업데이트 및 패치 | VMware 업데이트 |포함되지 않음 |포함되지 않음 |포함되지 않음 |
 |백업 및 복원            |수동으로 IBM Spectrum Protect Plus 또는 Veeam 사용 |수동으로 IBM Spectrum Protect Plus 또는 Veeam 사용 |수동으로 IBM Spectrum Protect Plus 또는 Veeam 사용 | 백업 및 복원 솔루션이 포함되지 않음 |
 |소프트웨어 정의 네트워킹   |NSX Enterprise   |NSX Base, Advanced 또는 Enterprise |NSX Advanced 또는 Enterprise |NSX Standard, Base 또는 Enterprise. 자동화된 구성이 포함되지 않음 |
 |vSphere 및 vSAN용 BYOL |클러스터당 전체 지원됨   |클러스터당 전체 지원됨     |지원되지 않음 |지원됨 |
@@ -45,7 +45,7 @@ VMware Cloud Foundation 인스턴스, VMware vCenter Server 인스턴스, VMware
 * [Cloud Foundation 개요](../sddc/sd_cloudfoundationoverview.html)
 * [vCenter Server 개요](../vcenter/vc_vcenterserveroverview.html)
 * [vCenter Server with Hybridity 개요](../vcenter/vc_hybrid_overview.html)
-* [Vmware vSphere 개요](../vsphere/vs_vsphereclusteroverview.html)
+* [VMware vSphere 개요](../vsphere/vs_vsphereclusteroverview.html)
 * [Cloud Foundation BOM](../sddc/sd_bom.html)
 * [vCenter Server BOM](../vcenter/vc_bom.html)
-* [Vmware vSphere BOM](../vsphere/vs_bom.html)
+* [VMware vSphere BOM](../vsphere/vs_bom.html)

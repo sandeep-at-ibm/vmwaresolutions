@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -16,7 +16,7 @@ vSphere Web Client로 연결을 시도할 때 다음 제한시간 초과 오류�
 `The server at <IP_address> is taking too long to respond.`
 
 ## 해결
-문제점을 해결하고 수정하려면 다음 단계를 따르십시오.
+다음 단계를 사용하여 문제점을 조사하고 수정하십시오.
 
 1. **vCenter 콘솔** 단추 위에 마우스를 올려 놓을 때 표시되는 단계를 완료했는지 확인하십시오. 사용자의 편의를 위해
    단계도 다음과 같이 표시됩니다.   
