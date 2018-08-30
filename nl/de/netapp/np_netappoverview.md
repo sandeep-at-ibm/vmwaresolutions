@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -41,7 +41,7 @@ Abbildung 2. NetApp ONTAP Select-Komponenten
 
 ### Virtualisierungsmanagement
 
-Diese Schicht besteht aus der virtuellen Appliance für vCenter Server, dem NSX-Manager, zwei NSX Edge Services Gateways (ESGs), 3 NSX-Controllern, der virtuellen Appliance für Platform Services Controller (PSC), vCenter Server Appliance (vCSA) und der virtuellen Maschine für IBM CloudDriver.
+Diese Schicht besteht aus der virtuellen Appliance für vCenter Server, dem NSX-Manager, zwei NSX Edge Services Gateways (ESGs), 3 NSX-Controllern, der virtuellen Appliance für Platform Services Controller (PSC), vCenter Server Appliance (vCSA) und der virtuellen Serverinstanz (VSI) für IBM CloudDriver.
 
 NetApp ONTAP Select wird in einem VMware-Cluster ausgeführt und virtualisiert den lokalen Speicher auf den Hosts. NetApp ONTAP Select wird im dedizierten Modell bereitgestellt; hierbei wird davon ausgegangen, dass keine anderen Workloads den Cluster in diesem Modell gemeinsam nutzen. Der Umfang der Hardwarekonfiguration des Produktangebots "NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}" richtet sich daher nur nach den Voraussetzungen für NetApp ONTAP Select.
 
@@ -65,7 +65,7 @@ Vier {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Inst
 * **Hohe Leistung (groß)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 3,8-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 118 TB
 * **Hohe Kapazität** – Standard-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 64 GB RAM / Kapazität von 34 4-TB-SATA-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 190 TB
 
-**Hinweis:** 3,8-TB-Solid-State-Platten (SSD) werden unterstützt, wenn sie allgemein in einem Rechenzentrum verfügbar gemacht werden.
+**Hinweis:** 3,8-TB-Solid-State-Platten (SSD) werden unterstützt, wenn sie in einem Rechenzentrum allgemein verfügbar gemacht werden.
 
 ### Hardware
 
