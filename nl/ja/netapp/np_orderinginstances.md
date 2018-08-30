@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-07-18"
 
 ## システム設定
 
-NetApp ONTAP Select インスタンスを注文する際には、次の基本設定を指定する必要があります。
+NetApp ONTAP Select インスタンスを注文する際には、基本設定を指定する必要があります。
 
 ### Instance name
 
@@ -74,7 +74,7 @@ NetApp ONTAP Select インスタンスを注文する際には、以下のネッ
 
 ### Bare Metal Server configuration
 
-要件に応じてベア・メタル・サーバー構成を選択できます。
+要件に応じてベア・メタル・サーバー構成を選択します。
 * **ハイパフォーマンス (ミディアム)** –プレミアム・ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 128 GB RAM / ノードあたり 22 個の 1.9 TB SSD ドライブ容量 / 4 ノード・クラスターの実効容量– 59 TB
 * **ハイパフォーマンス (ラージ)** –プレミアム・ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 128 GB RAM / ノードあたり 22 個の 3.8 TB SSD ドライブ容量 / 4 ノード・クラスターの実効容量– 118 TB
 * **大容量** – 標準ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 64 GB RAM / ノード当たり 34 個の 4 TB SATA ドライブ容量 / 4 ノード・クラスターの有効容量 – 190 TB
@@ -83,7 +83,7 @@ NetApp ONTAP Select インスタンスを注文する際には、以下のネッ
 
 ### ベア・メタル・サーバーの数
 
-NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォルトで 4 台です。 これは変更できません。 すべての ESXi サーバーが同じ構成を共有します。
+NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォルトで 4 台です。 これは変更できません。 すべての ESXi サーバーが構成を共有します。
 
 ## 手順
 
