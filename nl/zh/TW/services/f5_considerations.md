@@ -82,13 +82,13 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
 
 兩部 BIG-IP VM 總共有 33.6 GHz CPU 及 32 GB RAM。
 
-每一部 ESXi 伺服器都有「16 個核心 * 2.1 GHz = 33.6 GHz」的容量，因此，如果兩部伺服器都作用中，而且每部伺服器上都至少有 16.8 GHz 的 CPU 及 16 GB RAM 可用，則符合前兩個需求。
+每一部 ESXi 伺服器都有「16 個核心 * 2.1 GHz = 33.6 GHz」的容量，因此，如果兩部伺服器都作用中，而且每部伺服器上都至少有 16.8 GHz 的 CPU 及 16 GB RAM 可用，則符合前兩項需求。
 
 不過，依預設，在一開始部署 2 部 ESXi 伺服器的 vCenter Server 實例上，vSphere HA 會保留 50% 的 CPU 及 RAM 以進行失效接手，因此，我們只會有：
 
 `50% 的 2 * 16 個核心 * 2.1 GHz = 33.6 GHz 可用`
 
-由於使用這些資源的 ESXi 伺服器（例如，IBM CloudDriver、VMware NSX Controller、VMware NSX Edge）上有其他工作負載，我們無法滿足第三個需求，因為兩部 BIG-IP VM 需要 33.6 GHz 的 CPU 及 32 GB RAM。
+由於使用這些資源的 ESXi 伺服器（例如，VMware vCenter Server、VMware NSX Controller、VMware NSX Edge）上有其他工作負載，我們無法滿足第三項需求，因為兩部 BIG-IP VM 需要 33.6 GHz 的 CPU 及 32 GB RAM。
 
 在此情況下，F5 on {{site.data.keyword.cloud_notm}} 安裝可能會失敗，除非將至少一部 ESXi 伺服器新增至環境，並且適當地更新 vShpere HA 失效接手保留，確保有足夠的資源可供兩部 BIG-IP VE VM 使用。如果需要額外的資源執行 F5 on {{site.data.keyword.cloud_notm}} 服務，您可以先新增其他 ESXi 伺服器，再安裝 F5 on {{site.data.keyword.cloud_notm}}。
 

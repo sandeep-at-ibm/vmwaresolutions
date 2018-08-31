@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
 # 要求 Zerto on IBM Cloud 的受管理服務
 
-Zerto on {{site.data.keyword.cloud}} 服務提供抄寫及災難回復功能，可整合至部署供應項目以保護及回復 {{site.data.keyword.cloud_notm}} 上 VMware 虛擬環境中的資料。
+Zerto on {{site.data.keyword.cloud}} 服務提供抄寫及災難回復功能。這些功能可以整合到部署供應項目，以保護及回復 {{site.data.keyword.cloud_notm}} 上 VMware 虛擬環境中的資料。
 
 當您要求 Zerto on {{site.data.keyword.cloud_notm}} 的受管理服務時，可以使用 Zerto DR 軟體及 IBM Resiliency Services 部署完整受管理災難回復 (DR) 環境。
 
@@ -20,7 +20,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 之受管理服務的下列模型可�
 
 如果您要使用 Zerto on {{site.data.keyword.cloud_notm}} 供應項目，則適合此模型。
 
-在此模型中，會針對 Zerto on {{site.data.keyword.cloud_notm}} 佈建 {{site.data.keyword.cloud_notm}} Resiliency Orchestration 服務。此模型容許持續保護 {{site.data.keyword.cloud_notm}} 上的虛擬機器、作業系統及資料，且具有不中斷 DR 測試、RTO/RPO（回復時間目標/回復點目標）可見性、失效接手及失效回復功能。
+在此模型中，會針對 Zerto on {{site.data.keyword.cloud_notm}} 佈建 {{site.data.keyword.cloud_notm}} Resiliency Orchestration 服務。此模型可以持續保護 {{site.data.keyword.cloud_notm}} 上的虛擬機器、作業系統及資料，且具有不中斷 DR 測試、RTO/RPO（回復時間目標/回復點目標）可見性、失效接手及失效回復功能。
 
 「IBM Resiliency Services 廣域指令中心」透過 {{site.data.keyword.cloud_notm}} Resiliency Orchestration 儀表板管理所有功能。
 

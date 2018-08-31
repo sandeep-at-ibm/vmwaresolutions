@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-27"
 
 HCX on {{site.data.keyword.cloud}} 服務可以將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}，這容許將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從其移轉，而不需要進行任何轉換或變更。
 
-**可用性**：只有部署在 2.3 版及更新版本中的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 實例，才能使用此服務。
+**可用性：**只有部署在 2.3 版及更新版本中的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 實例，才能使用此服務。
 
 您可以將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。如需升級實例以及部署 HCX on {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱[升級至 vCenter Server with Hybridity Bundle 實例](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance)。
 
@@ -41,7 +41,7 @@ HCX on {{site.data.keyword.cloud}} 服務可以將內部部署資料中心的網
 ### 網路
 
 * 一個具有 16 個 IP 位址的公用可攜式子網路
-* 一個具有 64 個 IP 位址的專用可攜式子網路
+* 兩個具有 64 個 IP 位址的專用可攜式子網路
 * 來自專用可攜式 vMotion 子網路的八個 IP 位址
 
 ### 授權及費用

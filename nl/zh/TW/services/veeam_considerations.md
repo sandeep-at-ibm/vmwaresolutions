@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -38,7 +38,7 @@ Veeam on {{site.data.keyword.cloud}} 服務與 VMware Hypervisor 無縫整合，
 
 ### 授權及費用
 
-Veeam Backup and Replication 9.5 Enterprise Plus（10、25、50、100 或 200 個 VM 授權）。
+Veeam Backup and Replication 9.5 Enterprise Plus（10、25、50、100 或 200 份 VM 授權）。
 
 ### 管理
 
@@ -46,7 +46,7 @@ Veeam Backup and Replication 9.5 Enterprise Plus（10、25、50、100 或 200 �
 
 ## 安裝 Veeam on IBM Cloud 時的考量
 
-儲存空間及 Veeam 伺服器的儲存庫位在原始 Pod 及資料中心內。因此，遠端叢集的備份作業效能可能會降低。
+儲存空間儲存庫及 Veeam 伺服器位在原始 Pod 及資料中心內。因此，遠端叢集的備份作業效能可能會降低。
 
 ## 移除 Veeam on IBM Cloud 時的考量
 
