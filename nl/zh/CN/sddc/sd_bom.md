@@ -38,7 +38,7 @@ lastupdated: "2018-07-19"
 |VMware|vSAN|6.6.1|
 |VMware|NSX for vSphere|6.3.5|
 |VMware|SDDC Manager|2.4|
-|IBM|CloudDriver|2.4|
+|IBM|CloudDriver| 2.5          |
 |Microsoft|Windows Server Standard Edition（64 位）|2012R2|
 
 ## ESXi 服务器的高级配置设置
