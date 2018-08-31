@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -56,7 +56,7 @@ lastupdated: "2018-07-19"
 
 表 1. 自訂 {{site.data.keyword.baremetal_short}} 的選項
 
-|CPU 選項           |RAM 選項          |
+| CPU 型號選項        |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon E5-2620 v4 /總計 16 核心，2.1 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2650 v4 /總計 24 核心，2.2 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
