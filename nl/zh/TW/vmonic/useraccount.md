@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -27,12 +27,12 @@ lastupdated: "2018-07-27"
 ## 程序
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**設定**。
-2. 在**通知**區域中，指定您的通知設定：
+2. 在**通知**區域中，指定您的通知設定。
    * 如果您要在事件發生時透過電子郵件通知您，請按一下**啟用電子郵件通知**。
    * 如果您要在事件發生時透過主控台通知您，請按一下**啟用主控台通知**。
-3. 在 **IBM Cloud 基礎架構認證**區域中，使用下列其中一種方法，輸入您 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶的使用者名稱及 API 金鑰：
+3. 在 **IBM Cloud 基礎架構認證**區域中，輸入您 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶的使用者名稱及 API 金鑰：
    * 如果已鏈結 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶與您的 {{site.data.keyword.cloud_notm}} 帳戶，則請按一下**擷取**以自動輸入認證。
-   * 如果未鏈結 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶與您的 {{site.data.keyword.cloud_notm}} 帳戶，則請登入 [{{site.data.keyword.cloud_notm}} 基礎架構客戶入口網站](https://control.softlayer.com/)，然後遵循主控台上的指示以取得並輸入認證。
+   * 如果未鏈結 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶與您的 {{site.data.keyword.cloud_notm}} 帳戶，則您必須鏈結它們。登入 [{{site.data.keyword.cloud_notm}} 基礎架構客戶入口網站](https://control.softlayer.com/)，然後遵循主控台上的指示以取得並輸入認證。
    * 如果您沒有 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶，則請[註冊帳戶](../vmonic/signing_softlayer_account.html)，然後遵循主控台上的指示以取得並輸入認證。
 4. 按一下**儲存認證**。
 

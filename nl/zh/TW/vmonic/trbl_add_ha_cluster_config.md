@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-08-15"
 
 ---
 
-# 新增 HA 叢集時，發現 vSphere 主控台配置問題
+# 新增 HA 叢集時發現 vSphere 主控台配置問題
 
 ## 問題
-當新增只有一個檔案共用的 HA（高可用性）叢集配置時，在 ESXi 主機上發現下列配置問題：
+當您新增只有一個檔案共用的 HA（高可用性）叢集配置時，在 ESXi 主機上發現下列配置問題：
 
 `The number of heartbeat datastores for host is 1, which is less than required: 2`
 

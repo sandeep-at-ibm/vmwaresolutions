@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-05-29"
 `The server at <IP_address> is taking too long to respond.`
 
 ## 解決方法
-請使用下列步驟來進行疑難排解和解決問題。
+請使用下列步驟來調查及修正問題。
 
 1. 確定您已完成當游標移至 **vCenter 主控台**按鈕時工具提示中所顯示的步驟。為方便起見，這些步驟也如下所示：   
    1. 安裝適用於您瀏覽器的 Adobe Flash Player 外掛程式。   

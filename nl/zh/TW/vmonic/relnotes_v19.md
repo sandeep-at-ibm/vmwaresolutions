@@ -16,7 +16,7 @@ lastupdated: "2017-10-13"
 
 此版本引進 VMware vSphere on {{site.data.keyword.cloud_notm}} 供應項目，容許您透過基於選定的 VMware 元件自訂及訂購 VMware 相容運算、儲存空間及網路資源，來建置您自己的 IBM 代管 VMware 虛擬環境。vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元件的安裝、配置及啟動自動化，但您具有最大的彈性來設計及建構最符合您商業需要的環境。一開始，您可以建立 ESXi 伺服器的新 vSphere 叢集，或在 {{site.data.keyword.CloudDataCent_notm}} 擴充現有的 vSphere 叢集。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [訂購新的 vSphere 叢集](../vsphere/vs_orderinginstances.html)
 * [擴充現有的 vSphere 叢集](../vsphere/vs_scalingexistingclusters.html)
 
@@ -25,7 +25,7 @@ lastupdated: "2017-10-13"
 此版本引進 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目，這是用於軟體定義儲存空間的虛擬應用裝置，它在 IBM Cloud 的專用 {{site.data.keyword.baremetal_short}} 上以服務實作 NetApp ONTAP Select。我們以高效能（所有 SSD）及高容量（所有 SATA）兩種配置提供 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}。
 它在專用的基礎架構上管理您的儲存空間，並提供 NetApp 功能，例如刪除重複、壓縮及加密靜止中資料。使用此供應項目，您可以在佈建儲存空間資源時具備敏捷性和彈性，同時利用進階資料管理功能（例如，快速及有效的 NetApp Snapshot® 複製、FlexClone® 複製及 SnapMirror® 抄寫）來保護資料。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [NetApp ONTAP Select 概觀](../netapp/np_netappoverview.html)
 * [訂購 NetApp ONTAP Select 實例](../netapp/np_orderinginstances.html)
 
@@ -34,7 +34,7 @@ lastupdated: "2017-10-13"
 現在，F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} 服務可用於 VMware Cloud Foundation 實例及 VMware vCenter Server 實例。本服務以區域和全球規模、健全網路及 Web 應用程式防火牆保護、安全及聯合應用程式存取，來提供智慧型 L4-L7 負載平衡與資料流量管理服務。
 您可以在訂購實例時訂購內含 F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} 服務的實例，或稍後透過 {{site.data.keyword.vmwaresolutions_short}} 主控台的實例內容詳細資料頁面的**服務**標籤，將此服務新增至現有的實例。視您的需求而定，您可以為 BIG-IP VE 選取三個授權選項之一。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [F5 on {{site.data.keyword.cloud_notm}} 的考量](../services/f5_considerations.html)
 * [管理 F5 on {{site.data.keyword.cloud_notm}}](../services/managing_f5.html)
 
@@ -49,7 +49,7 @@ lastupdated: "2017-10-13"
 
 當您訂購實例時，在 {{site.data.keyword.vmwaresolutions_short}} 上輸入的實例名稱不能含有特殊字元（例如橫線字元）。僅容許英數字元。此限制不適用於 Cloud Foundation 實例。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)
 * [訂購 NetApp ONTAP Select 實例](../netapp/np_orderinginstances.html)
 
@@ -91,7 +91,7 @@ lastupdated: "2017-10-13"
 
 您現在可以於訂單期間提供 vCenter Server 實例的「網域名稱伺服器 (DNS) 」網域名稱。Microsoft Windows Server 虛擬伺服器實例 (VSI) 已部署並可查閱，此實例充當已登錄主機及虛擬機器之實例的 DNS。Microsoft Active Directory (AD) 也設定在 Microsoft Windows VSI 上，且 DNS 網域名稱是 AD 網域樹系根。此 Microsoft Windows VSI 僅適用於 1.9 版以及更新版本。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html)
 * [檢視 vCenter Server 實例](../vcenter/vc_viewinginstances.html)
 

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 
 ---
 
 # 邀請使用者存取服務及資源
 
-{{site.data.keyword.vmwaresolutions_full}} 已與 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 整合，可在多位使用者之間協同作業。在您註冊 {{site.data.keyword.cloud_notm}} 帳戶並登入 {{site.data.keyword.vmwaresolutions_short}} 主控台之後，即可將使用者新增至 {{site.data.keyword.cloud_notm}} 帳戶，讓這些使用者可以共用針對該帳戶所佈建的服務及資源。
+{{site.data.keyword.vmwaresolutions_full}} 已與 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 整合，可在多位使用者之間協同作業。在您註冊 {{site.data.keyword.cloud_notm}} 帳戶並登入 {{site.data.keyword.vmwaresolutions_short}} 主控台之後，即可將使用者新增至 {{site.data.keyword.cloud_notm}} 帳戶。這些新增的使用者可以共用針對該帳戶所佈建的服務及資源。
 
 ## 開始之前
 
@@ -25,12 +25,12 @@ lastupdated: "2018-07-27"
 4. 在**存取**區段中，展開**服務**，然後完成下列作業：
    1. 從**將存取權指派給**清單中，選取**資源**。
    2. 從**服務**清單中，選取 **VMware 解決方案**。
-   3. 選取您要指派給使用者的平台存取角色，即**管理者**、**編輯者**、**操作員**或**檢視者**。
+   3. 選取您要指派給使用者的平台存取角色。它可以是**管理者**、**編輯者**、**操作員**或**檢視者**。
 5. 按一下**邀請使用者**。
 
 ## 結果
 
-在新增使用者接受您的邀請之後，他們即可登入 {{site.data.keyword.vmwaresolutions_short}} 主控台，並在其設定檔設定中切換至您的帳戶，方法是按一下其在 {{site.data.keyword.vmwaresolutions_short}} 主控台右上角的虛擬人像。然後，新增使用者即可協作與共用您指定帳戶中可用的服務及資源。
+在新增的使用者接受您的邀請之後，他們即可登入 {{site.data.keyword.vmwaresolutions_short}} 主控台，並切換至您的帳戶。若要這樣做，在使用者的設定檔設定中，使用者按一下其在 {{site.data.keyword.vmwaresolutions_short}} 主控台右上角的虛擬人像。然後，新增的使用者即可協作與共用您指定帳戶中可用的服務及資源。
 
 ### 相關鏈結
 

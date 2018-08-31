@@ -18,7 +18,7 @@ lastupdated: "2017-11-20"
 
 您可以在訂購實例時訂購內含 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務的實例，或稍後透過實例詳細資料頁面的**服務**標籤，將此服務新增至現有的實例。視您的需求而定，您可以為此服務選取三種部署大小和授權選項的其中之一。在順利安裝此服務之後，您可以從 FortiGate 主控台管理及配置 FortiGate Virtual Appliance 的防火牆規則。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的元件及考量](../services/fortinetvm_considerations.html)
 * [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html)
 
@@ -28,7 +28,7 @@ lastupdated: "2017-11-20"
 
 完成實例部署之後，您可以在實例詳細資料頁面的**新增服務**標籤上安裝服務，以新增 F5 或 FortiGate 服務的更多實例。您一次只能新增一個服務實例，而且您必須針對您要為服務新增的所有實例重複該程序。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [訂購、檢視及移除 Cloud Foundation 實例的服務](../sddc/sd_addingremovingservices.html)
 * [訂購、檢視及移除 vCenter Server 實例的服務](../vcenter/vc_addingremovingservices.html)
 
@@ -44,7 +44,7 @@ lastupdated: "2017-11-20"
 
 所有實例的完整網域名稱 (FQDN) 現在會以一致的方式來表示。下訂單時，您可以輸入自己的子網域字首和主機名稱字首。這可確保遵循 FQDN 格式的業界慣例，例如：`host-name-prefix<n>.subdomain-prefix.domain-name`。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [訂購 Cloud Foundation 實例](../sddc/sd_orderinginstance.html)
 * [訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)
 * [訂購新的 vSphere 叢集](../vsphere/vs_orderinginstances.html)
@@ -54,7 +54,7 @@ lastupdated: "2017-11-20"
 * 在 VMware vSphere on {{site.data.keyword.cloud_notm}} 訂單期間，會提供您可以在所訂購的實例上執行的虛擬機器數目的預估。
 * 在 Cloud Foundation 和 vCenter Server 訂單期間，會提供您所訂購的實例的可用儲存空間容量的預估。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [訂購 Cloud Foundation 實例](../sddc/sd_orderinginstance.html)
 * [訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)
 * [訂購新的 vSphere 叢集](../vsphere/vs_orderinginstances.html)
@@ -84,7 +84,7 @@ lastupdated: "2017-11-20"
 
 您現在可以在實例訂單中選取 vSAN 儲存空間硬碟的數目和大小，以自訂 vSAN 儲存空間配置。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [Cloud Foundation 概觀](../sddc/sd_cloudfoundationoverview.html)
 * [訂購 Cloud Foundation 實例](../sddc/sd_orderinginstance.html)
 
@@ -100,7 +100,7 @@ lastupdated: "2017-11-20"
 
 **附註**：機箱有 12 個磁碟的空間，但並非所有插槽都已填滿。**小型**配置提供兩個 1.9 TB Micron 5100 MAX 磁碟機，**大型**配置提供四個 3.8 TB Micron 5100 PRO 磁碟機。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [Cloud Foundation 概觀](../sddc/sd_cloudfoundationoverview.html)
 * [訂購 Cloud Foundation 實例](../sddc/sd_orderinginstance.html)
 
@@ -131,9 +131,9 @@ lastupdated: "2017-11-20"
 
 ### VMware vCenter Server 實例的「自帶授權 (BYOL)」
 
-現在 vCenter Server 實例可以使用 BYOL。BYOL 可讓您在訂購 vCenter Server 實例時，使用一個以上您自己的 vCenter Server、vSphere、vSAN 及 NSX VMware 授權。
+現在 vCenter Server 實例可以使用 BYOL。BYOL 可讓您在訂購 vCenter Server 實例時，使用一份以上您自己的 vCenter Server、vSphere、vSAN 及 NSX VMware 授權。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [訂購 Cloud Foundation 實例](../sddc/sd_orderinginstance.html)
 * [訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)
 * [訂購新的 vSphere 叢集](../vsphere/vs_orderinginstances.html)
@@ -164,7 +164,7 @@ lastupdated: "2017-11-20"
 
 **附註：**當 3.8 TB SSD 磁碟機在正式發行至 {{site.data.keyword.CloudDataCent_notm}} 時將會予以支援。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [NetApp ONTAP Select 概觀](../netapp/np_netappoverview.html)
 * [訂購 NetApp ONTAP Select 實例](../netapp/np_orderinginstances.html)
 

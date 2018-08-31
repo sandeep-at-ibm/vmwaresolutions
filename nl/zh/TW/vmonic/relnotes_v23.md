@@ -28,7 +28,7 @@ lastupdated: "2018-05-28"
 
 只有透過 vCenter Server with Hybridity Bundle 實例才能取得 HCX on {{site.data.keyword.cloud_notm}} 服務。在第一次套用基本 vCenter Server 2.3 版軟體更新之後，您可以將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。如需相關資訊，請參閱[將更新套用至 vCenter Server 實例](../vcenter/vc_applyingupdates.html)。
 
-如需 vCenter Server with Hybridity Bundle 的相關資訊，請參閱：
+如需 vCenter Server with Hybridity Bundle 的相關資訊，請參閱下列主題：
 
 * [vCenter Server with Hybridity Bundle 概觀](../vcenter/vc_hybrid_overview.html)
 * [vCenter Server with Hybridity Bundle 實例的需求及規劃](../vcenter/vc_hybrid_planning.html)
@@ -38,7 +38,7 @@ lastupdated: "2018-05-28"
 
 您現在不需要刪除整個實例，就可以從實例中刪除叢集。對於部署在 2.2 版或更早版本實例的叢集，您必須將實例升級至 2.3 版，才能刪除您新增至實例的叢集。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 
 * [新增、檢視及刪除 vCenter Server 實例的叢集](../vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
 * [新增、檢視及刪除 Cloud Foundation 實例的叢集](../sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
@@ -55,7 +55,7 @@ lastupdated: "2018-05-28"
 * 雙重 Intel Xeon Silver 4110 處理器/總計 16 核心，2.1 GHz
 * 雙重 Intel Xeon Gold 5120 處理器/總計 28 核心，2.2 GHz
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 
 * [訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)
 * [新增、檢視及刪除 vCenter Server 實例的叢集](../vcenter/vc_addingviewingclusters.html)
@@ -93,7 +93,7 @@ lastupdated: "2018-05-28"
 
 您可以在訂購實例時訂購包含此服務的實例，或稍後將此服務新增至現有實例。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 的元件及考量](../services/htcc_considerations.html)
 * [管理 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/managinghtcc.html)
 
@@ -103,7 +103,7 @@ lastupdated: "2018-05-28"
 
 您可以在訂購實例時訂購包含此服務的實例，或稍後將此服務新增至現有實例。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 的元件及考量](../services/htdc_considerations.html)
 * [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/managinghtdc.html)
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-03-16"
 ## 解決方法
 
 若要使用 vSphere Web Client 部署 OVF（開放式虛擬化格式）檔案，請使用下列程序：
-1. 在嘗試部署之前，您必須將下列主機資訊新增至 `/etc/hosts` 檔案：
+1. 在您嘗試部署 OVF 檔案之前，請將下列主機資訊新增至 `/etc/hosts` 檔案：
 
    * Platform Services Controller (PSC) 的主機資訊
    * VMware ESXi 伺服器的主機資訊
