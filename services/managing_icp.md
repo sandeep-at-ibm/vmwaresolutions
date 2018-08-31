@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-30"
+lastupdated: "2018-08-31"
 
 ---
 
@@ -43,5 +43,4 @@ An {{site.data.keyword.cloud_notm}} Private Hosted DevOps representative will co
 ### Related links
 
 * [IBM Cloud Private Hosted](https://www.ibm.com/developerworks/community/files/form/anonymous/api/library/eafb752c-55f3-4b07-9b20-b61c8ea980b9/document/af203658-30c0-40ba-81b5-46c393fb723f/media/IBM_Cloud_Private_Hosted-IBM_Cloud.pdf) (PDF download)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
 * [Open a Ticket for IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US)
