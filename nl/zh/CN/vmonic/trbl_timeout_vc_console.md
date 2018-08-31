@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-05-29"
 `位于 <IP_address> 的服务器太长时间没有响应。`
 
 ## 解决方法
-使用以下步骤对问题进行故障诊断并解决该问题。
+使用以下步骤来调查并解决问题。
 
 1. 确保已完成将鼠标悬停在 **vCenter 控制台**按钮上时显示的工具提示中的步骤。为了方便起见，下面也列出了这些步骤：   
    1. 为浏览器安装 Adobe Flash Player 插件。   
@@ -28,7 +28,7 @@ lastupdated: "2018-05-29"
       IPAddress              HostName
       ```
 
-2. 记下显示的 IP 地址，因为您在接下来的其中一个步骤中需要该地址。
+2. 记下显示的 IP 地址，因为在接下来的某个步骤中需要使用该地址。
 3. 确保您有权访问 {{site.data.keyword.cloud_notm}} 基础架构 VPN。在 {{site.data.keyword.slportal}} 上完成以下步骤：
    1. 单击**帐户 > VPN 访问**。
    2. 单击 **VPN 访问**列中的 **SSL 链接**。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -28,13 +28,13 @@ lastupdated: "2018-07-27"
 ## 过程
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**设置**。
-2. 在**通知**区域中，指定通知设置：
+2. 在**通知**区域中，指定通知设置。
    * 如果希望发生事件时获得电子邮件通知，请单击**启用电子邮件通知**。
    * 如果希望发生事件时在控制台中获得通知，请单击**启用控制台通知**。
-3. 在 **IBM Cloud 基础架构凭证**区域中，使用下列其中一种方法输入 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户的用户名和 API 密钥：
+3. 在 **IBM Cloud 基础架构凭证**区域中，输入 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户的用户名和 API 密钥：
    * 如果 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户和 {{site.data.keyword.cloud_notm}} 帐户已链接，请单击**检索**以自动输入凭证。
-   * 如果 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户和 {{site.data.keyword.cloud_notm}} 帐户未链接，请登录到 [{{site.data.keyword.cloud_notm}} 基础架构客户门户网站](https://control.softlayer.com/)，然后遵循控制台上的指示信息来获取并输入凭证。
-   * 如果您没有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户，请[注册帐户](../vmonic/signing_softlayer_account.html)，然后遵循控制台上的指示信息来获取并输入凭证。
+   * 如果 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户和 {{site.data.keyword.cloud_notm}} 帐户未链接，那么必须进行链接。登录 [{{site.data.keyword.cloud_notm}} 基础架构客户门户网站](https://control.softlayer.com/)，按控制台上的指示信息操作以获取并输入凭证。
+   * 如果您没有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户，请[注册帐户](../vmonic/signing_softlayer_account.html)，然后按控制台上的指示信息操作以获取并输入凭证。
 4. 单击**保存凭证**。
 
 ## 结果

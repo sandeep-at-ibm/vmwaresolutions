@@ -20,7 +20,7 @@ lastupdated: "2017-01-23"
 
 无论是将 Zerto 灾难恢复作为实例的一部分来订购，还是将其添加到现有实例，现在如果不再需要此服务，都可将其除去。在控制台中请求除去此服务后，IBM 支持人员会指导您完成除去过程。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 
 * [除去灾难恢复](../services/removingzertodr.html)
 * [查看 Cloud Foundation 实例](../sddc/sd_viewinginstances.html)
@@ -34,7 +34,7 @@ NSX Edge 现在包含在要订购的新 Cloud Foundation 实例中。NSX Edge �
 
 为了确保安全性，采用了防火墙规则，以仅允许由管理虚拟机发起的出站 HTTPS 通信。此 ESG 部署在大型配置中，只有 IBM 支持人员才能修改该配置。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 
 * [Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [管理服务 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -47,7 +47,7 @@ NSX Edge 现在包含在要订购的新 Cloud Foundation 实例中。NSX Edge �
 * 摘要页面会显示所订购的所有组件和服务的全部适用条款和条件，以便在您下订单之前轻松访问以复查并同意这些条款。
 * 可以在下订单之前保存并打印实例的订单摘要。通过此新功能，可以复查实例设置和成本，根据需要修改订购的组件，获取核准，然后返回到订单。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)

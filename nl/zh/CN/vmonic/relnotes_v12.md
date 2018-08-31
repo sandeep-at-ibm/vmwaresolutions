@@ -20,7 +20,7 @@ VMware ESXi 的新版本为 vSphere 6.0 u2 p03，是从前发行版中的 ESXi 6
 
 {{site.data.keyword.vmwaresolutions_full}} 作为基础架构解决方案在 IBM Bluemix®“目录”中提供。因此，要使用 **IBM 标识**帐户登录到 {{site.data.keyword.vmwaresolutions_short}} 控制台，必须将 **IBM 标识**帐户与 Bluemix 帐户相关联。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [入门](../index.html)
 * [Bluemix 访问故障诊断](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html){:new_window}
 
@@ -28,7 +28,7 @@ VMware ESXi 的新版本为 vSphere 6.0 u2 p03，是从前发行版中的 ESXi 6
 
 您可以在订购实例时订购包含 Zerto 灾难恢复的 VMware Cloud Foundation 实例和 VMware vCenter Server 实例。还可以在实例详细信息页面中向现有 Cloud Foundation 实例和 vCenter Server 实例添加 Zerto 灾难恢复。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
 * [查看 Cloud Foundation 实例](../sddc/sd_viewinginstances.html)
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
@@ -39,7 +39,7 @@ VMware ESXi 的新版本为 vSphere 6.0 u2 p03，是从前发行版中的 ESXi 6
 
 现在，在决定下订单之前，可以查看并复查所订购实例的估算成本。订购实例时，在选择组件后，所有组件的总成本和详细定价将显示在**摘要**页面上。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
 
@@ -49,7 +49,7 @@ VMware ESXi 的新版本为 vSphere 6.0 u2 p03，是从前发行版中的 ESXi 6
 * 对于 Cloud Foundation 实例和 vCenter Server 实例，采用了新的验证检查，以确保您使用的 SoftLayer® 用户帐户具有必需的用户许可权，VLAN 生成功能已启用，以及提供了正确的 API 密钥。如果不满足任一需求，您都会直接在用户界面上收到用于解决问题的相关指示信息。
 *  对于 vCenter Server 实例，优化了在其中选择实例组件的订单，以便仅显示具有您需要的可用硬件和 ESXi 服务器的数据中心。此更改可最大限度降低稍后发生错误的可能性。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
 

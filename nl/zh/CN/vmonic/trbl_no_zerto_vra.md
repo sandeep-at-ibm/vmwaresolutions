@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -22,4 +22,4 @@ lastupdated: "2018-03-19"
 
 要访问 Zerto 控制台，请单击实例的**服务**选项卡中的 Zerto 卡，单击**查看详细信息**，然后单击**查看 Zerto 控制台**。
 
-有关联系 IBM 支持的信息，请参阅[联系 IBM 支持](trbl_support.html)。
+有关联系 IBM 支持的更多信息，请参阅[联系 IBM 支持](trbl_support.html)。

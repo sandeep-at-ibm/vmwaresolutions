@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-16"
 
 ---
 
 # 联系 IBM 支持
 
-如果您需要有关 {{site.data.keyword.vmwaresolutions_full}} 的帮助，请创建 {{site.data.keyword.cloud_notm}} 支持凭单以通过下列其中一种渠道获取帮助：
+如果您需要有关 {{site.data.keyword.vmwaresolutions_full}} 的帮助，请创建 {{site.data.keyword.cloud_notm}} 支持凭单以通过下面某种渠道获取帮助：
 
 ## 通过 IBM Cloud for VMware Solutions 控制台
 

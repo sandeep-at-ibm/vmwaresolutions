@@ -36,7 +36,7 @@ lastupdated: "2017-03-08"
 
 **注**：不会在 vCenter Server 实例上安装 NSX Controller（像安装在 Cloud Foundation 实例上那样）。如果要对 vCenter Server 实例使用 VXLAN 或分布式逻辑路由器，那么您必须自行安装 NSX Controller。
 
-有关 VMware NSX for vSphere 6.2.4 中引入的增强功能、其需求和已知问题的信息，请参阅 [NSX for vSphere 6.2.4 发行说明](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}。
+有关 VMware NSX for vSphere 6.2.4 中引入的增强功能、其需求和已知问题的更多信息，请参阅 [NSX for vSphere 6.2.4 发行说明](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}。
 
 ### VMware NSX Edge
 
@@ -44,7 +44,7 @@ NSX Edge 现在包含在要订购的新 vCenter Server 实例中。NSX Edge 提�
 
 在实例部署期间，IBM 会部署“管理 VMware NSX Edge 服务网关 (ESG)”。IBM 管理虚拟机使用此 ESG 与自动化相关的特定外部 IBM 管理组件进行通信。此 ESG 部署为包含两个接口：一个接口连接到 {{site.data.keyword.cloud_notm}} 专用 VLAN，另一个接口连接到 {{site.data.keyword.cloud_notm}} 公用 VLAN。
 
-为了确保安全性，采用了防火墙规则，以仅允许由管理虚拟机发起的出站 HTTPS 通信。此 ESG 部署在大型配置中，只有 IBM 支持人员才能修改该配置。有关更多信息，请参阅：
+为了确保安全性，采用了防火墙规则，以仅允许由管理虚拟机发起的出站 HTTPS 通信。此 ESG 部署在大型配置中，只有 IBM 支持人员才能修改该配置。有关更多信息，请参阅以下主题：
 
 * [vCenter Server 技术规范](../vcenter/vc_vcenterserveroverview.html)
 * [管理服务 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -95,7 +95,7 @@ NSX Edge 现在包含在要订购的新 vCenter Server 实例中。NSX Edge 提�
 * 对于 Cloud Foundation 实例和 vCenter Server 实例，在订购过程中不再显示“SoftLayer 凭证”页面。缺省情况下，将使用在“设置”页面上定义的 SoftLayer 凭证，并且仅当不满足需求时，系统才会提示您更新这些凭证。
 * 此外，对于 vCenter Server 实例，现在对于**硬件**类型仅提供**大型**选项，对于**上行端口速度**仅提供 **10 Gbps 双**设置，这可减少订购时要指定的设置数量。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
@@ -111,7 +111,7 @@ NSX Edge 现在包含在要订购的新 vCenter Server 实例中。NSX Edge 提�
 
 现在，可以在**设置**页面上配置控制台通知。缺省情况下，此设置已启用，这意味着您将在控制台中收到所有事件的通知。还可以在**设置**页面上禁用控制台的通知。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 
 * [用户帐户和设置](useraccount.html)
 * [通知](notifications.html)

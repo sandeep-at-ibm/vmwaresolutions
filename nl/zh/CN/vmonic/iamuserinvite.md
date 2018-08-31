@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 
 ---
 
 # 邀请用户访问服务和资源
 
-{{site.data.keyword.vmwaresolutions_full}} 与 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 集成，用于在多个用户之间进行协作。注册 {{site.data.keyword.cloud_notm}} 帐户并登录到 {{site.data.keyword.vmwaresolutions_short}} 控制台后，可以将用户添加到 {{site.data.keyword.cloud_notm}} 帐户，以便这些用户可以共享为帐户供应的服务和资源。
+{{site.data.keyword.vmwaresolutions_full}} 与 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 集成，用于在多个用户之间进行协作。注册 {{site.data.keyword.cloud_notm}} 帐户并登录到 {{site.data.keyword.vmwaresolutions_short}} 控制台后，可以将用户添加到 {{site.data.keyword.cloud_notm}} 帐户。这些添加的用户可以共享为帐户供应的服务和资源。
 
 ## 开始之前
 
@@ -25,12 +25,12 @@ lastupdated: "2018-07-27"
 4. 在**访问权**部分中，展开**服务**，然后完成以下任务：
    1. 从**将访问权分配给**列表中，选择**资源**。
    2. 从**服务**列表中，选择 **VMware Solutions**。
-   3. 选择要分配给用户的平台访问角色，即**管理员**、**编辑者**、**操作员**或**查看者**。
+   3. 选择要分配给用户的平台访问角色。可以是**管理员**、**编辑者**、**操作员**或**查看者**。
 5. 单击**邀请用户**。
 
 ## 结果
 
-添加的用户在接受邀请后，可以登录到 {{site.data.keyword.vmwaresolutions_short}} 控制台，并通过在 {{site.data.keyword.vmwaresolutions_short}} 控制台右上角单击自己的头像，从而在其概要文件设置中切换到您的帐户。然后，添加的用户可以进行协作，并共享指定帐户中可用的服务和资源。
+添加的用户在接受邀请后，可以登录到 {{site.data.keyword.vmwaresolutions_short}} 控制台并切换到您的帐户。要执行此操作，用户可以在其概要文件设置中单击 {{site.data.keyword.vmwaresolutions_short}} 控制台右上角自己的头像。然后，添加的用户可以进行协作，并共享指定帐户中可用的服务和资源。
 
 ### 相关链接
 

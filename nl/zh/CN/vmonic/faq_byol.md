@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-20"
 
 ## 什么是 BYOL？
 
-自带许可证 (BYOL) 是向 V1.8 和更高发行版中 VMware Cloud Foundation 实例以及 V2.0 和更高发行版中 vCenter Server 和 vSphere 集群提供的一项功能。BYOL 支持您在订购实例时，将自己的 VMware 许可证用于下列其中一个或多个 VMware 软件组件：
+自带许可证 (BYOL) 是向 V1.8 和更高发行版中 VMware Cloud Foundation 实例以及 V2.0 和更高发行版中 vCenter Server 和 vSphere 集群提供的一项功能。利用 BYOL，在订购实例时，您可以将自己的 VMware 许可证用于以下一个或多个 VMware 软件组件：
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
@@ -62,11 +62,11 @@ lastupdated: "2018-07-20"
 
 ## 我能提供超过 8 个 CPU 的许可证密钥吗？
 
-可以。对于每个 VMware 组件，需要每个 CPU 一个许可证。目前，所有 vCenter Server 和 Cloud Foundation 服务器都有两个 CPU，因此，每个服务器需要两个许可证。建议您提供可以支持基本实例以及未来要添加到该实例的任何扩展节点的许可证密钥。
+可以。对于每个 VMware 组件，需要每个 CPU 一个许可证。目前，所有 vCenter Server 和 Cloud Foundation 服务器都有两个 CPU。因此，每个服务器都需要两个许可证。建议您提供可以支持基本实例以及未来要添加到该实例的任何扩展节点的许可证密钥。
 
 ## 使用 BYOL 功能时，可以提供 SDDC Manager 许可证吗？
 
-不行。我们与 VMware 的协议要求我们必须接受客户的实际许可证密钥。虽然 Cloud Foundation 部署包含 SDDC Manager 许可证，但没有可接受并针对 BYOL 验证的 SDDC Manager 许可证密钥文件。因此，IBM 会对所有实例收取 SDDC Manager 许可证费用。SDDC Manager 许可证的费用在 Cloud Foundation 实例的总许可费用中所占比例非常小。
+不行。我们与 VMware 的协议要求我们必须接受客户的实际许可证密钥。虽然 Cloud Foundation 部署包含 SDDC Manager 许可证，但我们不接受 SDDC Manager 许可证密钥文件，也不会针对 BYOL 验证这些文件。因此，IBM 会对所有实例收取 SDDC Manager 许可证费用。SDDC Manager 许可证的费用在 Cloud Foundation 实例的总体许可证费用中所占比例不大。
 
 ## 可以将 BYOL 功能用于某些 VMware 组件，而为其他组件购买每月许可证吗？
 
@@ -78,7 +78,7 @@ lastupdated: "2018-07-20"
 
 ## 可以在创建新集群时使用 BYOL 吗？
 
-可以。创建新集群时，可以通过现有 BYOL 许可证使用 BYOL，也可以输入新的 BYOL。您还可以选择在创建新集群时购买 IBM 提供的预订许可证。目前，仅 VMware vSphere Enterprise 和 VMware vSAN 可用于针对每个集群进行许可。
+可以。创建新集群时，可以通过现有 BYOL 许可证使用 BYOL，也可以输入新的 BYOL。在创建新集群时，您还可以购买 IBM 提供的预订许可证。目前，仅 VMware vSphere Enterprise 和 VMware vSAN 可用于针对每个集群进行许可。
 
 ## 如何管理 BYOL 许可证？
 
@@ -90,7 +90,10 @@ lastupdated: "2018-07-20"
 
 ## 如何确定在使用 BYOL 的集群上有多少许可容量可用？
 
-通过转至**部署的实例**页面，查找并单击实例，然后在**基础架构**选项卡上，单击要检查其许可容量的集群，可以找到许可证密钥中可用的 CPU 数。可用的 CPU 数会列在**用户提供的许可证**表中。
+要查找许可证密钥中可用的 CPU 数，请完成下列步骤：
+1. 转至**部署的实例**页面。
+2. 找到并单击该实例。
+3. 在**基础架构**选项卡中，单击要检查许可容量的集群。可用的 CPU 数会列在**用户提供的许可证**表中。
 
 ## 如果选择 BYOL 许可选项，IBM 会提供支持吗？
 
@@ -106,7 +109,7 @@ lastupdated: "2018-07-20"
 
 ## 其他 VMware 产品（如 VMware vRealize Automation、VMware vRealize Operations 或 VMware vRealize Log Insight）支持 BYOL 吗？
 
-不支持，因为这些 VMware 产品不是实例部署的一部分。这些 VMware 产品可能基于初始部署进行安装，这需要客户机或其代理程序来执行安装和许可。
+不支持，因为这些 VMware 产品不是实例部署的一部分。除了初始部署以外可能还安装了这些 VMware 产品，这就需要客户机或其代理程序来执行安装和许可。
 
 ## 可以通过 vCenter Server with Hybridity Bundle 订购 NFS 存储器吗？
 

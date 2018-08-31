@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-08"
 
 ## Windows 自动安装更新
 
-Microsoft Active Directory (AD) / 域名服务器 (DNS) 自动设置为仅下载更新。不会自动安装这些更新或重新引导。您必须以手动方式安装更新并在安排的时间重新引导，以避免对正在进行的 AD 服务器配置和其他备份作业造成任何中断。要应用 Windows 更新，请手动安装更新。
+Microsoft Active Directory (AD) / 域名服务器 (DNS) 自动设置为仅下载更新。它不会自动安装这些更新或重新启动。您必须在安排的时间手动安装更新并重新启动，以避免对正在进行的 AD 服务器配置和其他备份作业造成任何中断。要应用 Windows 更新，请手动安装更新。
 
 ## 选择 Cloud Foundation 实例的根域名时的注意事项
 

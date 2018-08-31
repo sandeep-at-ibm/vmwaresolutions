@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -35,6 +35,6 @@ lastupdated: "2018-07-23"
 
 * [常见问题](faq.html)
 * [{{site.data.keyword.cloud_notm}} 基础架构帐户的需求](slaccountrequirement.html)
-* [视频：如何创建 {{site.data.keyword.cloud_notm}} 帐户](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [视频 - 如何创建 {{site.data.keyword.cloud_notm}} 帐户](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
 * [切换到 IBM 标识](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}
