@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -42,7 +42,7 @@ lastupdated: "2018-07-27"
 
 对于 {{site.data.keyword.vmwaresolutions_short}}，存在以下操作：
 
-表 2. 操作的描述和必需角色
+表 2. 操作的描述和必需的角色
 
 |操作|服务上的操作|角色|
 |:------ |:-------------------- |:---- |
@@ -58,11 +58,11 @@ lastupdated: "2018-07-27"
 
 您还可以管理现有用户的访问权，包括修改现有访问权、分配新访问权以及复查分配的访问权。要管理用户的访问权，您必须是帐户所有者，或者必须具有**管理员**平台管理角色。有关更多信息，请参阅[管理 IAM 访问权](../../../iam/mngiam.html)。
 
-### 将现有实例迁移到 IBM Cloud 帐户
+## 将现有实例迁移到 IBM Cloud 帐户
 
-由于 {{site.data.keyword.vmwaresolutions_short}} 与 IAM 集成，在 {{site.data.keyword.cloud}} 帐户中 V2.5 和更高发行版中部署的实例会自动添加到帐户，并由 IAM 进行管理。对于部署在 V2.4 和更低发行版中的现有实例，可以将其迁移到指定的 {{site.data.keyword.cloud_notm}} 帐户，以进行支持 IAM 的管理。
+由于 {{site.data.keyword.vmwaresolutions_short}} 与 IAM 集成，在 {{site.data.keyword.cloud}} 帐户中 V2.5 和更高发行版中部署的实例会自动添加到帐户，并由 IAM 进行管理。
 
-有关更多信息，请参阅：
+对于部署在 V2.4 和更低发行版中的现有实例，可以将其迁移到指定的 {{site.data.keyword.cloud_notm}} 帐户，以进行支持 IAM 的管理。有关更多信息，请参阅以下主题：
 * [将 V2.5 之前的 vCenter Server 实例迁移到 IBM Cloud 帐户](../vcenter/vc_addinstancetousraccount.html)
 * [将 V2.5 之前的 vCenter Server with Hybridity Bundle 实例迁移到 IBM Cloud 帐户](../vcenter/vc_hybrid_addinstancetousraccount.html)
 * [将 V2.5 之前的 Cloud Foundation 实例迁移到 IBM Cloud 帐户](../sddc/sd_addinstancetousraccount.html)

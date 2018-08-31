@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-03"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-01-03"
 
 ## 问题
 
-在多站点配置中，添加新的辅助实例后，当登录到先前所订购实例的 VMware vSphere Web Client 时，不显示该实例的 vCenter Server 系统。
+在多站点配置中，添加新的辅助实例后，当登录到先前所订购实例的 VMware vSphere Web Client 时，没有显示新实例的 vCenter Server 系统。
 
 ## 解决方法
 

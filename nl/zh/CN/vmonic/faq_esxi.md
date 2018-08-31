@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-07-17"
 
 ## 可以向集群添加多少个 ESXi 服务器？
 
-对于 V2.2 和更高发行版，最多可以向初始集群添加 51 个 ESXi 服务器，并且最多可以向其他集群添加 59 个 ESXi 服务器。
+对于 V2.2 和更高发行版，最多可以向初始集群添加 51 个 ESXi 服务器，最多可以向添加的集群添加 59 个 ESXi 服务器。
 
 对于 V2.1 或更低发行版中部署的实例，必须启用必要的 vSAN 支持才能将集群大小增加到 32 以上。要启用必要的 vSAN 支持，请完成以下步骤：
 
@@ -32,8 +32,8 @@ lastupdated: "2018-07-17"
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
 2. 重新启动每个 ESXi 服务器。有关更多信息，请参阅[创建具有最多 64 个主机的 vSAN 6.x 集群](https://kb.vmware.com/s/article/2110081)。
-3. 请注意，您可能需要增大 vCenter Server 的大小以容纳更多虚拟机和 ESXi 服务器。
-4. 开具 IBM 支持凭单，指明您已通过完成步骤 1 到 3 来手动应用以上 vSAN 更改，并且您希望升级后的实例支持使用 32 个以上的更多 ESXi 服务器。
+3. 可能需要增大 vCenter Server 的大小以容纳添加的虚拟机和 ESXi 服务器。
+4. 开具 IBM 支持凭单以表明您已通过完成步骤 1 - 3 手动应用了 vSAN 更改。在凭单中，请求为超过 32 个的 ESXi 服务器启用已升级的实例。
 
 ## 可以更改 ESXi 服务器名称和 IP 地址吗？
 
@@ -45,9 +45,9 @@ lastupdated: "2018-07-17"
 
 建议在 ESXi 服务器上保持启用 root 用户访问权，否则 {{site.data.keyword.vmwaresolutions_short}} 功能中可能会发生故障。
 
-如果绝对有必要，您可以在 ESXi 服务器的状态处于**可供使用**后，在 {{site.data.keyword.vmwaresolutions_short}} 控制台上禁用 root 用户访问权。
+如果有必要，您可以在 ESXi 服务器的状态处于**可供使用**后，在 {{site.data.keyword.vmwaresolutions_short}} 控制台上禁用 root 用户访问权。
 
-对于添加或除去文件共享，或者安装其他服务（例如，Zerto on {{site.data.keyword.cloud_notm}}）等后续自动化操作，必须重新启用 root 用户访问权。
+对于添加或除去文件共享，或者安装附加服务（例如，Zerto on {{site.data.keyword.cloud_notm}}）等后续自动化操作，必须重新启用 root 用户访问权。
 
 ## 可以在 ESXi 服务器上添加静态路由以从其他位置安装存储器吗？
 

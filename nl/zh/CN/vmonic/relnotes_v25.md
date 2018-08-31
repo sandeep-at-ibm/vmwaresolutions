@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -49,7 +49,7 @@ lastupdated: "2018-07-31"
 * 部署在 V2.5 和更高发行版中的实例会自动链接到订购实例时使用的用户帐户。
 * 对于部署在 V2.4 和前发行版中的实例，可以将其迁移到指定的 {{site.data.keyword.cloud_notm}} 帐户，然后同样使用 IAM 来管理这些实例。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [邀请用户访问服务和资源](../vmonic/iamuserinvite.html)
 * [使用 IAM 管理用户访问权](../vmonic/iam.html)
 
@@ -61,7 +61,7 @@ lastupdated: "2018-07-31"
 
 对于 Cloud Foundation 实例，请使用 **customerroot** 主机用户标识来代替 **root** 主机用户标识。对于 vCenter Server 实例，请继续使用 **root** 主机用户标识。
 
-有关用户帐户的更多信息，请参阅：
+有关用户帐户的更多信息，请参阅以下主题：
 
 * [关于更改 vCenter Server 工件的注意事项](../vcenter/vcenter_chg_impact.html)
 * [关于更改 Cloud Foundation 工件的注意事项](../sddc/cf_chg_impact.html)
@@ -94,7 +94,7 @@ lastupdated: "2018-07-31"
 
 改进了服务信息，以便根据在其中提供服务支持的发行版号轻松识别服务支持。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 
 * [可用于 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
 * [vCenter Server with Hybridity Bundle 实例的可用服务](../vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)

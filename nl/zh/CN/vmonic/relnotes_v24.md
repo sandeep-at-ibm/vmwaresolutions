@@ -57,7 +57,7 @@ lastupdated: "2018-06-22"
 
 ### 网络文件系统性能增强
 
-设计用于要求最苛刻的工作负载类型的性能级别 10 IOPS/GB 不再仅限于特定 {{site.data.keyword.CloudDataCent_notm}}，现在可用于所有数据中心。有关更多信息，请参阅 [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications)中的*存储*部分。
+设计用于要求最苛刻的工作负载类型的性能级别 10 IOPS/GB 不再仅限于特定 {{site.data.keyword.CloudDataCent_notm}}，现在可用于所有数据中心。有关更多信息，请参阅 [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)中的*存储*部分。
 
 ## 对 VMware Federal 实例的更新
 
@@ -69,7 +69,7 @@ lastupdated: "2018-06-22"
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-当前发行版在所有新部署的实例上安装 IBM Spectrum Protect&trade; Plus V10.1.1 补丁 1。有关 IBM Spectrum Protect Plus IBM Cloud V10.1.1 补丁 1 中新增功能的信息，请参阅 [IBM Spectrum Protect Plus 更新](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}。
+当前发行版在所有新部署的实例上安装 IBM Spectrum Protect&trade; Plus V10.1.1 补丁 1。有关 IBM Spectrum Protect Plus V10.1.1 P1 中新增功能的更多信息，请参阅 [IBM Spectrum Protect Plus 更新](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}。
 
 ### VMware HCX on IBM Cloud
 
@@ -85,7 +85,7 @@ lastupdated: "2018-06-22"
 
 服务信息已重构，并且导航也已改进，以便在订购服务时可轻松找到相关信息。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 
 * [订购 F5 on {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
 * [订购 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)

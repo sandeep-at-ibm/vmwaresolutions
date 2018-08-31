@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-07-23"
 
 ## 如何对我的 VMware 虚拟平台使用量计费？
 
-物理和虚拟基础架构的所有成本以及实例生成的许可证都将向您的 {{site.data.keyword.cloud_notm}} 帐户收费。订购实例时，您必须具有 {{site.data.keyword.cloud_notm}} 帐户，并提供与该帐户关联的 {{site.data.keyword.slapi_short}} 密钥。
+物理和虚拟基础架构以及该实例所导致的许可证的所有成本都将向您的 {{site.data.keyword.cloud_notm}} 帐户收费。订购实例时，您必须具有 {{site.data.keyword.cloud_notm}} 帐户，并提供与该帐户关联的 {{site.data.keyword.slapi_short}} 密钥。
 
 ## vCenter Server 实例、Cloud Foundation 实例和 VMware vSphere 集群有什么区别？
 
@@ -48,9 +48,9 @@ lastupdated: "2018-07-23"
 
 ## 双节点 vCenter Server 实例具有高可用性吗？
 
-强烈建议将生产工作负载部署到至少有三个节点的环境中。
+建议将生产工作负载部署到至少有三个节点的环境中。
 
-虽然缺省情况下 VMware vSphere DRS（分布式资源调度程序）和 VMware HA（高可用性）已启用，但 VMware 的最佳实践建议您将三个 NSX Controller 分别置于单独的节点上。
+缺省情况下，VMware vSphere DRS（分布式资源调度程序）和 VMware HA（高可用性）已启用。但 VMware 的最佳实践建议您将三个 NSX Controller 分别放在单独的节点上。
 
 在双节点最低部署中，一个节点有一个 NSX Controller，另一个节点有两个 NSX Controller。如果带有两个 NSX Controller 的节点关闭，那么 NSX Controller 操作将置于只读方式，并且新的 VM（虚拟机）或 vMotion VM 可能会遇到联网问题。
 
@@ -62,13 +62,13 @@ lastupdated: "2018-07-23"
 
 ## 可以重命名集群吗？
 
-对于 vCenter Server 实例，在部署期间创建的第一个集群具有缺省名称 **cluster1**。可以在 VMware vSphere Client 中重命名缺省集群。将新集群添加到 vCenter Server 实例时，可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台上指定所需的名称。
+对于 vCenter Server 实例，在部署期间创建的第一个集群具有缺省名称 **cluster1**。可以在 VMware vSphere Client 中重命名缺省集群。在您将集群添加到 a vCenter Server 实例时，可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台上指定所需名称。
 
 **注**：对于 Cloud Foundation 实例，无法更改缺省集群名称。
 
 ##如何管理补丁？
 
-IBM 提供对 IBM CloudDriver 组件的持续更新，这些更新通过 {{site.data.keyword.cloud_notm}} for VMware Solutions 控制台提供。IBM 不会提供附加组件服务（例如，Zerto on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}}）的持续更新。获取并安装这些更新是您的责任。
+IBM 通过按需部署 IBM CloudDriver 虚拟服务器实例 (VSI)，提供 IBM 代码的持续更新。IBM 不会提供附加组件服务（例如，Zerto on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}}）的持续更新。获取并安装这些更新是您的责任。
 
 根据已部署的 VMware 实例的类型，VMware 更新会以不同方式应用：
 
@@ -78,7 +78,7 @@ IBM 提供对 IBM CloudDriver 组件的持续更新，这些更新通过 {{site.
   * 您负责对 VMware 组件执行其他所有更新，包括确保新部署的 ESXi 服务器和集群都具有所需的所有最新更新。
   * 对于部署到 V2.0 或更高版本的实例，VMware Update Manager (VUM) 将集成到 vCenter Server 中。可以将 VUM 配置为从 VMware 下载 ESXi 更新。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下资源：
 * [VMware 支持](https://www.vmware.com/support.html)
 * [对 vCenter Server 实例应用更新](../vcenter/vc_applyingupdates.html)
 * [对 Cloud Foundation 实例应用更新](../sddc/sd_applyingupdates.html)
@@ -93,7 +93,7 @@ IBM 提供对 IBM CloudDriver 组件的持续更新，这些更新通过 {{site.
 
 ## 客户管理的 NSX Edge 会构成安全风险吗？
 
-虽然客户管理的 NSX Edge 位于公用 VLAN 上，但已采用安全措施来确保它不会构成安全风险。这些措施包括：
+虽然客户管理的 NSX Edge 位于公用 VLAN 上，但已采用安全措施来确保它不会构成安全风险。现有的安全措施如下：
 *  采用了防火墙规则，仅允许来自 IP 地址的专用子网范围的传出流量。
 *  采用了 SNAT（源网络地址转换）规则（缺省情况下禁用），用于将专用子网中的所有 IP 地址转换为公用子网上的单个 IP 地址。
 *  禁用了客户管理的 NSX Edge 设备的远程访问。
@@ -117,9 +117,9 @@ IBM 提供对 IBM CloudDriver 组件的持续更新，这些更新通过 {{site.
 
 ## VMware vSphere on IBM Cloud 是使用自动化来安装、配置和启动 VMware 堆栈的吗？
 
-不是，VMware vSphere on {{site.data.keyword.cloud_notm}} 未利用 Cloud Foundation 和 vCenter Server 平台中找到的高级自动化。根据您订购的内容，该平台会交付可选的 VMware 许可证以及 ESXi 服务器，还可以选择交付 FortiGate 物理防火墙的 HA 对。如果创建了一个新集群，那么还会供应三个新的 VLAN：一个公用 VLAN，两个专用 VLAN。
+不是，VMware vSphere on {{site.data.keyword.cloud_notm}} 未使用 Cloud Foundation 和 vCenter Server 平台中的高级自动化。根据您订购的内容，该平台会交付可选的 VMware 许可证以及 ESXi 服务器，还可以选择交付 FortiGate 物理防火墙的 HA 对。如果创建了一个新集群，那么还会供应三个新的 VLAN：一个公用 VLAN，两个专用 VLAN。
 
-VMware ESXi 会自动安装在每个裸机服务器上，但您负责安装 vCenter Server 或 NSX 等其他任何 VMware 组件。虽然 vSphere on {{site.data.keyword.cloud_notm}} 会确保根据所选的 VMware 组件订购与 VMware 兼容的硬件，但没有适用的自动化可配置和启动 VMware 环境。您负责设计和构造 IBM 托管的环境。
+VMware ESXi 会自动安装在每个裸机服务器上，但您负责安装 vCenter Server 或 NSX 等其他任何 VMware 组件。虽然 vSphere on {{site.data.keyword.cloud_notm}} 会确保根据所选的 VMware 组件订购与 VMware 兼容的硬件，但不存在任何自动化来配置和启动 VMware 环境。您负责设计和构造 IBM 托管的环境。
 
 ## 如何查看所有通知的列表？
 

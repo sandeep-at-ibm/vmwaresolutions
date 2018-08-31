@@ -18,7 +18,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 
 您可以在订购实例时订购包含 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务的实例，也可以日后在实例详细信息页面上的**服务**选项卡中向现有实例添加此服务。根据您的需求，可为此服务选择三种部署大小和许可选项中的一个选项。成功安装此服务后，可以在 FortiGate 控制台中管理和配置 FortiGate Virtual Appliance 的防火墙规则。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的组件和注意事项](../services/fortinetvm_considerations.html)
 * [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html)
 
@@ -28,7 +28,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 
 完成实例部署后，可以通过在实例详细信息页面的**添加服务**选项卡上安装 F5 或 FortiGate 服务，以添加该服务的更多实例。一次只能添加一个服务实例，并且必须对要为服务添加的所有实例重复此过程。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
 * [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
 
@@ -44,7 +44,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 
 现在，对于所有实例，标准域名 (FQDN) 都以一致的方式表示。下订单时，可以输入您自己的子域前缀和主机名前缀。这将确保遵循 FQDN 格式的业界约定，例如：`host-name-prefix<n>.subdomain-prefix.domain-name`。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
 * [订购新的 vSphere 集群](../vsphere/vs_orderinginstances.html)
@@ -54,7 +54,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 * 在订购 VMware vSphere on {{site.data.keyword.cloud_notm}} 期间，会向您提供可在订购的实例上运行的虚拟机估算数量。
 * 在订购 Cloud Foundation 和 vCenter Server 期间，会向您提供所订购实例的可用存储容量估算值。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
 * [订购新的 vSphere 集群](../vsphere/vs_orderinginstances.html)
@@ -84,7 +84,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 
 现在，在订购实例过程中，可以通过选择 vSAN 存储驱动器的数量和大小来定制 vSAN 存储器配置。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [Cloud Foundation 概述](../sddc/sd_cloudfoundationoverview.html)
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
 
@@ -100,7 +100,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 
 **注**：机箱的空间可容纳 12 个磁盘，但并非所有插槽都已装满。**小型**配置提供两个 1.9 TB Micron 5100 MAX 驱动器，**大型**配置提供四个 3.8 TB Micron 5100 PRO 驱动器。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [Cloud Foundation 概述](../sddc/sd_cloudfoundationoverview.html)
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
 
@@ -133,7 +133,7 @@ vSAN 存储器现在可用于 vCenter Server 实例，包括主实例和辅助�
 
 BYOL 现在可用于 vCenter Server 实例。订购 vCenter Server 实例时，BYOL 支持使用一个或多个您自己的 vCenter Server、vSphere、vSAN 和 NSX VMware 许可证。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
 * [订购新的 vSphere 集群](../vsphere/vs_orderinginstances.html)
@@ -164,7 +164,7 @@ BYOL 现在可用于 vCenter Server 实例。订购 vCenter Server 实例时，B
 
 **注**：3.8 TB SSD 驱动器在 {{site.data.keyword.CloudDataCent_notm}} 中一般可用后就会受到支持。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [NetApp ONTAP Select 概述](../netapp/np_netappoverview.html)
 * [订购 NetApp ONTAP Select 实例](../netapp/np_orderinginstances.html)
 

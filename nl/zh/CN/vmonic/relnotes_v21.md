@@ -30,7 +30,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务现在可用于运行 vSphere 6.5 
 
 还可以订购内部部署 HCX 实例，以对内部部署 HCX 安装进行许可和激活。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [HCX on {{site.data.keyword.cloud_notm}} 的注意事项](../services/hcx_considerations.html)
 * [管理 HCX on {{site.data.keyword.cloud_notm}}](../services/managinghcx.html)
 * [内部部署 HCX 实例的注意事项](../services/standalone_considerations.html)
@@ -42,7 +42,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务现在可用于运行 vSphere 6.5 
 
 此外，将节点添加到使用密钥许可的集群时，如果节点数超过密钥容量，控制台会提示您提供新的许可证密钥。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 
 * [添加和查看 Cloud Foundation 实例的集群](../sddc/sd_addingviewingclusters.html)
 * [添加和查看 vCenter Server 实例的集群](../vcenter/vc_addingviewingclusters.html)
@@ -86,7 +86,7 @@ VMware 补丁和更新在未来发行版中可用时，自动化将扫描现有�
 
 现在，用户定制的裸机服务器配置提供双 Intel Xeon Gold 6140（共 36 个核心，2.3 GHz）。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
 
@@ -94,7 +94,7 @@ VMware 补丁和更新在未来发行版中可用时，自动化将扫描现有�
 
 现在，可以选择逐个配置 NFS 文件共享。为每个文件共享分别选择文件大小和性能级别，或者为订购的所有文件共享选择相同的文件大小和性能级别。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
 * [添加和查看 vCenter Server 实例的集群](../vcenter/vc_addingviewingclusters.html)

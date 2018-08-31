@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -37,10 +37,10 @@ V1.4 和更高发行版中的实例网络拓扑与低于 V1.4 的发行版中的
 
 要将 V1.4 之前的实例移至新实例，请在 VMware vSphere Web Client 中完成以下步骤：
 1. 从 V1.4 之前的实例，导出所有 VM（虚拟机）。
-2. 在当前发行版中创建新实例。
+2. 在当前发行版中创建实例。
 3. 导入从**步骤 1** 中导出的所有 VM。
-4. 开始使用新实例。
+4. 使用新实例。
 
-有关导出和导入 VM 的信息，请参阅 VMware vSphere 文档。
+有关导出和导入 VM 的更多信息，请参阅 VMware vSphere 文档。
 
 如果您需要有关 {{site.data.keyword.vmwaresolutions_short}} 的帮助，请通过下列其中一种支持渠道[联系 IBM 支持](trbl_support.html)。

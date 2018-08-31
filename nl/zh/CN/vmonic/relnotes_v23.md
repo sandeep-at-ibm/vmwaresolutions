@@ -28,7 +28,7 @@ lastupdated: "2018-05-28"
 
 HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybridity Bundle 实例提供。在第一次应用基本 vCenter Server V2.3 软件更新之后，可以将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例。有关更多信息，请参阅[对 vCenter Server 实例应用更新](../vcenter/vc_applyingupdates.html)。
 
-有关 vCenter Server with Hybridity Bundle 的更多信息，请参阅：
+有关 vCenter Server with Hybridity Bundle 的更多信息，请参阅以下主题：
 
 * [vCenter Server with Hybridity Bundle 概述](../vcenter/vc_hybrid_overview.html)
 * [针对 vCenter Server with Hybridity Bundle 实例的需求和规划](../vcenter/vc_hybrid_planning.html)
@@ -38,7 +38,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybr
 
 现在，可以从实例中删除集群，而不必删除整个实例。对于在 V2.2 或更低版本实例中部署的集群，必须将实例升级到 V2.3，才能删除已添加到实例的集群。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 
 * [添加、查看和删除 vCenter Server 实例的集群](../vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
 * [添加、查看和删除 Cloud Foundation 实例的集群](../sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
@@ -55,7 +55,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybr
 * 双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz
 * 双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
 * [添加、查看和删除 vCenter Server 实例的集群](../vcenter/vc_addingviewingclusters.html)
@@ -93,7 +93,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybr
 
 您可以在订购实例时订购包含此服务的实例，也可以日后向现有实例添加此服务。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 的组件和注意事项](../services/htcc_considerations.html)
 * [管理 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/managinghtcc.html)
 
@@ -103,13 +103,13 @@ HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybr
 
 您可以在订购实例时订购包含此服务的实例，也可以日后向现有实例添加此服务。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 的组件和注意事项](../services/htdc_considerations.html)
 * [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-当前发行版在所有新部署的实例上将 IBM Spectrum Protect&trade; Plus V10.1.1 安装为缺省备份服务。有关 IBM Spectrum Protect Plus V10.1.1 中新增功能的信息，请参阅 [IBM Spectrum Protect Plus 更新](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}。
+当前发行版在所有新部署的实例上将 IBM Spectrum Protect&trade; Plus V10.1.1 安装为缺省备份服务。有关 IBM Spectrum Protect Plus V10.1.1 中新增功能的更多信息，请参阅 [IBM Spectrum Protect Plus 更新](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}。
 
 ## 新增和更新的文档
 

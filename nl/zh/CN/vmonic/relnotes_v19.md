@@ -16,7 +16,7 @@ lastupdated: "2017-10-13"
 
 此发行版引入了 VMware vSphere on {{site.data.keyword.cloud_notm}} 产品，支持根据所选 VMware 组件定制和订购与 VMware 兼容的计算、存储和网络资源，以构建自己的 IBM 托管的 VMware 虚拟环境。虽然 vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置和启动可选的 VMware 组件，但您在设计和构造最适合您业务需求的环境方面将拥有最大的灵活性。您可以首先创建 ESXi 服务器的新 vSphere 集群，或者首先对 {{site.data.keyword.CloudDataCent_notm}} 中的现有 vSphere 集群进行向外扩展。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [订购新的 vSphere 集群](../vsphere/vs_orderinginstances.html)
 * [扩展现有 vSphere 集群](../vsphere/vs_scalingexistingclusters.html)
 
@@ -25,7 +25,7 @@ lastupdated: "2017-10-13"
 此发行版引入了 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品，这是一种面向软件定义的存储器的虚拟设备，可将 NetApp ONTAP Select 实现为 IBM Cloud 的专用 {{site.data.keyword.baremetal_short}} 上的服务。NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 同时在高性能（所有 SSD）和高容量（所有 SATA）配置中提供。
 它可托管专用基础架构上的存储器，并提供多种 NetApp 功能，例如静态数据的去重、压缩和加密。通过此产品，使用高级数据管理功能（例如，快速高效的 NetApp Snapshot® 副本、FlexClone® 副本和 SnapMirror® 复制），您可以在保护数据的同时，为存储资源供应敏捷性和灵活性。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [NetApp ONTAP Select 概述](../netapp/np_netappoverview.html)
 * [订购 NetApp ONTAP Select 实例](../netapp/np_orderinginstances.html)
 
@@ -33,7 +33,7 @@ lastupdated: "2017-10-13"
 
 F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} 服务现在可用于 VMware Cloud Foundation 和 VMware vCenter Server 实例。此服务提供本地和全球规模的智能 L4-L7 负载均衡和流量管理服务、稳健的网络和 Web 应用程序防火墙保护，以及安全和联合的应用程序访问。您可以在订购实例时就订购包含 F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} 服务的实例，也可以日后在 {{site.data.keyword.vmwaresolutions_short}} 控制台的实例属性详细信息页面上的**服务**选项卡中向现有实例添加此服务。根据您的需求，可为 BIG-IP VE 选择三个许可选项中的一个选项。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [F5 on {{site.data.keyword.cloud_notm}} 的注意事项](../services/f5_considerations.html)
 * [管理 F5 on {{site.data.keyword.cloud_notm}}](../services/managing_f5.html)
 
@@ -48,7 +48,7 @@ IBM Integrated Managed Infrastructure (IMI) 中的受管服务现在可用于 VM
 
 订购实例时，在 {{site.data.keyword.vmwaresolutions_short}} 上输入的实例名称不能包含特殊字符（例如，短划线字符）。只允许使用字母数字字符。此限制不适用于 Cloud Foundation 实例。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
 * [订购 NetApp ONTAP Select 实例](../netapp/np_orderinginstances.html)
 
@@ -90,7 +90,7 @@ IBM Integrated Managed Infrastructure (IMI) 中的受管服务现在可用于 VM
 
 现在，可以在订购期间为 vCenter Server 实例提供域名服务器 (DNS) 域名。Microsoft Windows Server 虚拟服务器实例 (VSI) 已部署并可进行查找，它充当在其中注册主机和虚拟机的实例的 DNS。此外，还在 Microsoft Windows VSI 上设置了 Microsoft Active Directory (AD)，并且 DNS 域名是 AD 域林根。此 Microsoft Windows VSI 仅在 V1.9 及更高版本中可用。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)
 * [查看 vCenter Server 实例](../vcenter/vc_viewinginstances.html)
 

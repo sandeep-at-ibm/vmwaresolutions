@@ -4,23 +4,23 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-09"
 
 ---
 
 # 关于 IBM Cloud for VMware Solutions
 
-通过 {{site.data.keyword.vmwaresolutions_full}}，可以使用可扩展、安全和高性能的 {{site.data.keyword.cloud_notm}} 基础架构及行业领先的 VMware 混合虚拟化技术，快速、无缝地集成内部部署 VMware 工作负载或将其迁移到 {{site.data.keyword.cloud_notm}}。
+通过 {{site.data.keyword.vmwaresolutions_full}}，可以使用可扩展、安全、高性能的 {{site.data.keyword.cloud_notm}} 基础架构及行业领先的 VMware 混合虚拟化技术，快速、无缝地集成内部部署 VMware 工作负载或将其迁移到 {{site.data.keyword.cloud_notm}}。
 
-{{site.data.keyword.vmwaresolutions_short}} 支持轻松部署 VMware 虚拟环境，并在 {{site.data.keyword.cloud_notm}} 上管理基础架构资源。同时，您仍可以使用熟悉的本机 VMware 产品控制台来管理 VMware 工作负载。
+在 {{site.data.keyword.cloud_notm}} 上可以轻松地部署 VMware 虚拟环境并管理基础架构资源。同时，您仍可以使用熟悉的本机 VMware 产品控制台来管理 VMware 工作负载。
 
 ## IBM Cloud for VMware Solutions 优点
 
 {{site.data.keyword.vmwaresolutions_short}} 提供了以下主要优点：
-* **全球覆盖**：支持将混合云覆盖范围扩展到全球各地多达 30 个企业级 {{site.data.keyword.CloudDataCents_notm}}。
+* **全球覆盖**：您可以将混合云覆盖范围扩展到全球各地多达 30 个企业级 {{site.data.keyword.CloudDataCents_notm}}。
 * **无缝集成**：支持通过 {{site.data.keyword.cloud_notm}} 基础架构实现整个混合云中的无缝集成。
 * **快速供应**：自动执行 VMware 环境的部署和配置，这将支持通过随需应变的 {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} 和虚拟服务器，快速部署企业级 VMware 环境。
-* **简化**：支持您使用 VMware 云平台，而无需确定、购买、部署和管理底层物理基础架构（计算、存储和网络）以及软件许可证。
+* **简化**：您可以您使用 VMware 云平台，无需确定、购买、部署和管理底层物理基础架构（计算、存储和网络）以及软件许可证。
 * **扩展和收缩灵活性**：支持根据业务需求，轻松扩展和收缩 VMware 工作负载。
 * **单个管理控制台**：提供单个控制台，可部署、访问和管理 {{site.data.keyword.cloud_notm}} 上的 VMware 环境。
 
@@ -60,7 +60,7 @@ NetApp ONTAP Select 产品支持部署软件定义的存储器集群，以满足
 
 ### VMware Federal on IBM Cloud
 
-VMware Federal on {{site.data.keyword.cloud_notm}} 产品除了提供用于确保已部署实例安全的选项、除去敏感信息以及打开用于持续访问实例以获取管理功能的管理连接外，还支持订购基本 vCenter Server 实例。
+VMware Federal on {{site.data.keyword.cloud_notm}} 产品除了提供用于确保已部署实例安全的选项、除去敏感信息以及用于持续访问实例以获取管理功能的开放管理连接外，还支持订购基本 vCenter Server 实例。
 
 有关更多信息，请参阅 [VMware Federal on {{site.data.keyword.cloud_notm}} 概述](../vcenter/vc_fed_overview.html)。
 
@@ -96,7 +96,7 @@ HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务根据安全标�
 
 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服务通过集成密钥管理提供高强度加密功能，以确保工作负载在整个生命周期中的安全。此服务可以提供操作系统级别和数据级别的加密，这意味着可以对工作负载中的任何目录、文件夹或文件进行加密和解密。
 
-有关更多信息，请参阅 [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概述](../services/hdcc_considerations.html)。
+有关更多信息，请参阅 [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概述](../services/htdc_considerations.html)。
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -124,7 +124,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务可以将内部部署数据中心�
 
 ### Zerto on IBM Cloud
 
-Zerto on {{site.data.keyword.cloud_notm}} 服务用于提供复制和灾难恢复功能，这些功能可以集成到部署产品中，以保护和恢复 {{site.data.keyword.cloud_notm}} 上 VMware 虚拟环境中的数据。
+Zerto on {{site.data.keyword.cloud_notm}} 服务提供了复制和灾难恢复功能。这些功能可以集成到部署产品中，以在 {{site.data.keyword.cloud_notm}} 上保护和恢复 VMware 虚拟环境中的数据。
 
 有关更多信息，请参阅 [Zerto on {{site.data.keyword.cloud_notm}} 概述](../services/addingzertodr.html)。
 
