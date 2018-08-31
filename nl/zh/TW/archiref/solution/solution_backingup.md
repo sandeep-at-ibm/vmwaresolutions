@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-20"
 
 在解決方案期間，您可以選擇性地部署 {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 附加程式服務。Veeam 及 IBM Spectrum Protect Plus 可協助您滿足備份管理元件的需求。
 
-這些附加程式服務會與「{{site.data.keyword.cloud_notm}} 耐久性」儲存空間一起部署。這些服務可協助您備份工作負載以及管理元件。[Spectrum Protect Plus 架構概觀](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}及 [Veeam 架構概觀](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}提供有關規劃及調整部署大小的有用指引。IBM [受管理服務](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)也適用於 Veeam 部署。
+這些附加程式服務會與「{{site.data.keyword.cloud_notm}} 耐久性」儲存空間一起部署。這些服務可協助您備份工作負載及管理元件。[Spectrum Protect Plus 架構概觀](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}及 [Veeam 架構概觀](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}提供有關規劃及調整部署大小的有用指引。您也可以要求 Veeam 部署的[受管理服務](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)。
 
 不同的解決方案元件需要不同的備份策略。部分元件是使用映像檔層次備份進行保護，其他元件則是使用其配置及資料的檔案型備份進行保護。
 
@@ -24,7 +24,7 @@ lastupdated: "2018-07-20"
 
 若要管理這些備份，請使用下列步驟，將 Linux 檔案伺服器部署至叢集：
 
-1. 從位於與系統元件相同之 VLAN 上的 {{site.data.keyword.cloud_notm}} 基礎架構中，訂購專用可攜式子網路。這是主機之管理 IP 位址所在的專用 VLAN。
+1. 從 {{site.data.keyword.cloud_notm}} 基礎架構訂購專用可攜式子網路，並在與系統元件相同的 VLAN 上找到它。這是主機之管理 IP 位址所在的專用 VLAN。
 2. 將作業系統映像檔從 {{site.data.keyword.cloud_notm}} 專用鏡映上傳至 VMware 管理資料儲存庫（例如 [Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window}）。
 3. 使用先前訂購的專用可攜式 IP 位址，將此虛擬機器 (VM) 部署至管理埠群組上的叢集。請確定 VM 配置成指向 AD/DNS 伺服器，並選擇性地將 VM 新增至子網域的 DNS。
 4. 在此伺服器上建立非根備份使用者 ID，並確定配置及啟動所有必要服務來進行檔案傳送。例如，FTP 或 SSH。
@@ -42,13 +42,13 @@ VMware vCenter Server 及 PSC 提供[應用裝置管理使用者介面及 API �
 
 ## 管理虛擬機器的映像檔型備份
 
-部署實例並部署 IBM Spectrum Protect Plus 或 Veeam 備份服務之後，您應該配置管理虛擬機器的備份工作。請規劃備份下列 VM，至少要有 7 天的每日備份：
+部署實例並部署 IBM Spectrum Protect Plus 服務或 Veeam 備份服務之後，請配置管理虛擬機器的備份工作。請規劃備份下列 VM，至少要有 7 天的每日備份：
 
 * 如果存在，為 VMware SDDC Manager
 * 如果存在，為 Active Directory 伺服器
 * 檔案備份伺服器（請參閱上方內容）
 
-規劃配置足夠的 Veeam 或 IBM Spectrum Protect Plus 授權來備份這些虛擬機器，並為 VM 規劃至少 2TB 的備份儲存空間。
+規劃配置足夠的 Veeam 或 IBM Spectrum Protect Plus 授權來備份這些虛擬機器，並為 VM 規劃至少 2 TB 的備份儲存空間。
 
 ## 附加服務               
 
@@ -62,7 +62,7 @@ VMware vCenter Server 及 PSC 提供[應用裝置管理使用者介面及 API �
 
 ## 其他考量
 
-如果您選擇將 AD/DNS 伺服器部署為 {{site.data.keyword.cloud_notm}} 虛擬伺服器實例 (VSI)，則無法使用 Veeam 或 IBM Spectrum Protect Plus 進行備份。在此情況下，您應該使用偏好的 Windows 備份解決方案來進行備份及還原作業，或者應該規劃使用 VMware 叢集內的 AD/DNS VM 來部署實例，這可藉由 Veeam 或 IBM Spectrum Protect Plus 進行備份。
+如果您選擇將 AD/DNS 伺服器部署為 {{site.data.keyword.cloud_notm}} 虛擬伺服器實例 (VSI)，則無法使用 Veeam 或 IBM Spectrum Protect Plus 進行備份。在此情況下，請使用偏好的 Windows 備份解決方案來進行備份及還原作業，或規劃使用 VMware 叢集內的 AD/DNS VM 來部署實例，這可藉由 Veeam 或 IBM Spectrum Protect Plus 進行備份。
 
 從 VMware vCenter 6.5u2 開始，VMware 支援使用映像檔型備份來備份 vCenter Postgres 資料庫，並在備份時間範圍期間具有資料庫的整合式暫停及繼續 Script，以確保資料庫完整性。如果您將 VMware 實例升級至 vCenter 6.5u2，則可以選擇使用 Veeam 或 IBM Spectrum Protect Plus 來備份 vCenter Server 及 PSC，而非使用檔案型備份。如果您這麼做，則必須使用 Veeam 或 IBM Spectrum Protect Plus 靜止特性，以確保資料庫完整性。
 
@@ -72,9 +72,9 @@ VMware vCenter Server 及 PSC 提供[應用裝置管理使用者介面及 API �
 
 * 對於 vCenter 及 PSC，VMware 提供安裝程式，以部署新的虛擬應用裝置並從備份還原配置。
 * 從備份中還原應用裝置時，安裝程式會根據您提供的備份資訊，來偵測應用裝置的類型（vCenter Server 或 PSC）。
-* 因為您直接部署至其中一個主機，所以可能無法部署至分散式交換器或埠群組。您可能需要建立暫時標準交換器及埠群組來部署已回復的應用裝置，並暫時將其中一個 vmnic 移轉至此交換器，以提供 VM 的網路連線功能。部署之後，您可以將 VM 移轉至分散式埠群組，並將 vmnic 傳回給 dvSwitch。
+* 因為您直接部署至其中一部主機，所以可能無法部署至分散式交換器或埠群組。您可能需要建立暫時標準交換器及埠群組來部署已回復的應用裝置，並暫時將其中一個 vmnic 移轉至此交換器，以提供 VM 的網路連線功能。部署之後，您可以將 VM 移轉至分散式埠群組，並將 vmnic 傳回給 dvSwitch。
 * 對於 NSX，您可能需要先重新部署 NSX Manager 及控制器，再從備份中還原配置。
-* 確定您充分瞭解 vCenter 備份及還原的 VMwares 考量和限制。
+* 確定您充分瞭解 vCenter 備份及還原的 VMware 考量和限制。
 
 ## 摘要 
 
