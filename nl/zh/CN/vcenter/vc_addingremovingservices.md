@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-07-20"
 |服务名称|可用性| 实例支持 |
 |----------------------------------------------------------------------------------------|------------------|
 |[F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)|是| V1.9 和更高版本 |
-|[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}(../services/fortinetvm_considerations.html)|是| V2.0 和更高版本 |
+|[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)|是| V2.0 和更高版本 |
 |[HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)|是| V2.3 和更高版本 |
 |[HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)|是| V2.3 和更高版本 |
 |[IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)|是| V2.2 和更高版本 |
