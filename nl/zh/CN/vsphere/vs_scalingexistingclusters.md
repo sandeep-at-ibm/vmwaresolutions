@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-11"
 
 ---
 
 # 扩展现有 vSphere 集群
 
-您可以通过为在 {{site.data.keyword.vmwaresolutions_full}} 控制台中订购或保存的现有 VMware vSphere 集群添加 ESXi 服务器或订购 FortiGate Security Appliance 300 系列 HA 对，从而向外扩展该集群。
+对于您在 {{site.data.keyword.vmwaresolutions_full}} 控制台中订购或保存的 VMware vSphere 集群，可以进行向外扩展。要执行此操作，请为集群添加 ESXi 服务器或者订购 FortiGate 300 Series Security Appliance HA 对。
 
 ## 需求
 
@@ -32,7 +32,7 @@ lastupdated: "2018-07-19"
 
 ### 结果
 
-集群扩展部署会自动启动，并且您将收到电子邮件确认，指示正在处理订单。集群准备就绪可供使用时，将通过电子邮件通知您。
+自动开始集群扩展。您将收到电子邮件确认，指示正在处理订单。集群准备就绪可供使用时，将通过电子邮件通知您。
 
 **注**：与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**部署的实例**页面。
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-11"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-19"
 
 在订购 VMware vSphere on {{site.data.keyword.cloud}} 之前，请查看以下需求。根据 {{site.data.keyword.CloudDataCent_notm}} 位置以及工作负载容量需求来规划 VMware vSphere 集群。
 
-**注**：部署 ESXi 服务器后，您负责设置环境、安装和配置各种 VMware 组件。此类组件包括：VMware vCenter Server、VMware NSX 和 VMware vSAN。
+**注**：部署 ESXi 服务器后，您负责设置环境、安装和配置各种 VMware 组件。下面是 VMware 组件的示例：VMware vCenter Server、VMware NSX 和 VMware vSAN。
 
 ## IBM Cloud 帐户需求
 
