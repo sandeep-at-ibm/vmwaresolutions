@@ -74,7 +74,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务中订购�
 
 `2 * 16 个核心 * 2.1 GHz * 50% = 33.6 GHz 可用`
 
-由于 ESXi 服务器上存在其他工作负载（例如，IBM CloudDriver、VMware NSX Controller 或 VMware NSX Edge），因此使用这些资源无法满足第三个需求。这是因为对于两个 FortiGate VM，我们需要 33.6 GHz 的 CPU 和 24 GB RAM。
+由于 ESXi 服务器上存在其他工作负载（例如，VMware vCenter Server、VMware NSX Controller 或 VMware NSX Edge），因此使用这些资源无法满足第三个需求。这是因为对于两个 FortiGate VM，我们需要 33.6 GHz 的 CPU 和 24 GB RAM。
 
 在这种情况下，FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 安装可能会失败，除非至少向环境中添加一个 ESXi 服务器，并且相应地更新 vShpere HA 故障转移保留量，以确保有足够资源可用于这两个 FortiGate VM。
 

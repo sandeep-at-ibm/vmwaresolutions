@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,7 +33,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并
    * 370 GB 磁盘
 * 运行 IBM Spectrum Protect Plus vSnap 服务器和 VADP 代理的辅助 VM
    * 操作系统：Linux 3.10.0-693.11.1.el7.x86_64
-   * 根据所选存储器大小和 [IBM Spectrum Protect Plus 蓝图](https://www.ibm.com/developerworks/community/wikis/homelang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)中的大小调整指南而配置的 CPU 和 RAM
+   * 根据所选存储器大小和 [IBM Spectrum Protect Plus 蓝图](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)中的大小调整指南而配置的 CPU 和 RAM
    * 150 GB 磁盘
 
 ### 用于备份的存储器

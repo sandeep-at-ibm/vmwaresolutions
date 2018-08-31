@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -44,7 +44,7 @@ lastupdated: "2018-07-19"
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的许可模型提供了以下选项：
 <dl class="dl">
         <dt class="dt dlterm">标准 FW</dt>
-        <dd class="dd">此捆绑软件包含有状态包检查、VLAN 保护和高级日志记录、流入/流出防火墙规则、SSL/IPSec VPN 终止以及全天候支持。</dd>
+        <dd class="dd">此捆绑软件包含有状态包检查、VLAN 保护和高级日志记录、流入/流出防火墙规则、SSL/IPSec VPN 终止以及连续支持。</dd>
         <dt class="dt dlterm">标准 FW + UTM</dt>
         <dd class="dd">此捆绑软件除了包含 NGFW IPS 和 Web 过滤、AntiVirus 和 AntiSpam、IP & Domain Reputation 和核心 FortiCare 安全服务之外，还包含所有标准防火墙服务。</dd>
         <dt class="dt dlterm">标准 FW + Enterprise</dt>

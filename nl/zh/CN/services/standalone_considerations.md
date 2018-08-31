@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -25,12 +25,7 @@ HCX on {{site.data.keyword.cloud_notm}} 组件必须同时安装在 {{site.data.
 ### 内部部署 HCX on IBM Cloud 实例的部署过程
 
 必须完成以下任务才能成功安装内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例：
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，完成以下步骤：
-    1. 在左侧导航窗格中，单击**部署的实例**。
-    2. 单击安装了 HCX on {{site.data.keyword.cloud_notm}} 服务的 vCenter Server with Hybridity Bundle 实例。这是要从内部部署 vSphere 环境连接到的云端。
-    3. 在**服务**选项卡上，单击**安装的服务**。
-    4. 单击 **HCX on {{site.data.keyword.cloud_notm}}** 卡。
-    5. 单击**查看 HCX 云控制台**，然后使用 vCenter Server 凭证登录到控制台以查看云端 HCX on {{site.data.keyword.cloud_notm}} 服务的详细信息。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，订购内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例。有关更多信息，请参阅[订购内部部署 VMware HCX on IBM Cloud 实例](standalone_orderingserviceinstances.html)。
 2. 在 **HCX 云控制台**中，完成以下步骤：
     1. 单击**管理**选项卡。
     2. 在**系统更新**选项卡上，单击**请求下载链接**。

@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
 # Zerto on IBM Cloud 概述
 
-Zerto on {{site.data.keyword.cloud}} 服务用于提供复制和灾难恢复功能，这些功能可以集成到部署产品中，以保护和恢复 {{site.data.keyword.cloud_notm}} 上 VMware 虚拟环境中的数据。
+Zerto on {{site.data.keyword.cloud}} 服务提供了复制和灾难恢复功能。这些功能可以集成到部署产品中，以在 {{site.data.keyword.cloud_notm}} 上保护和恢复 VMware 虚拟环境中的数据。
 
-## Zerto on IBM Cloud 的技术注意事项
+## Zerto on IBM Cloud 技术规范
 
 Zerto on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -41,7 +41,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件�
 ### 联网
 
 * 一个具有 16 个 IP 地址的公用可移植子网
-* 一个具有 64 个 IP 地址的专用可移植子网
+* 两个具有 64 个 IP 地址的专用可移植子网
 * 专用可移植 vMotion 子网中的 8 个 IP 地址
 
 ### 许可证和费用
