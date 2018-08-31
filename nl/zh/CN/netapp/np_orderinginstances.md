@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -18,11 +18,11 @@ lastupdated: "2018-07-18"
 *  已在**设置**页面上配置 {{site.data.keyword.cloud}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
 *  已查看[针对 NetApp ONTAP Select 实例的需求和规划](np_planning.html)中的需求和注意事项。
 
-**重要信息：不要修改在订购和实例部署期间设置的任何值。这样做可能会导致实例变得不可用。**
+**重要信息：不要修改在订购和实例部署期间设置的任何值。这样做可能会使您的实例不可用。**
 
 ## 系统设置
 
-订购 NetApp ONTAP Select 实例时，必须指定以下基本设置。
+订购 NetApp ONTAP Select 实例时，必须指定其基本设置。
 
 ### 实例名称
 
@@ -64,7 +64,7 @@ lastupdated: "2018-07-18"
 
 ## 许可证设置
 
-必须上传四个 NetApp 许可证文件，因为四个 {{site.data.keyword.baremetal_short}} 各自需要一个许可证。请联系 NetApp 销售团队，以购买针对高性能或高容量部署的相应许可。
+必须上传四个 NetApp 许可文件，因为四个 {{site.data.keyword.baremetal_short}} 各自需要一个许可证。请联系 NetApp 销售团队，以购买针对高性能或高容量部署的相应许可。
 
 ## 裸机服务器设置
 
@@ -79,11 +79,11 @@ lastupdated: "2018-07-18"
 * **高性能（大型）**- 高级许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 128 GB RAM / 每节点 22 个 3.8 TB SSD 驱动器容量 / 4 节点集群的有效容量 - 118 TB
 * **高容量** - 标准许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 64 GB RAM / 每节点 34 个 4 TB SATA 驱动器容量 / 4 节点集群的有效容量 - 190 TB
 
-**注**：3.8 TB SSD（固态磁盘）驱动器在 {{site.data.keyword.CloudDataCent_notm}} 内基本可用后就会受到支持。
+**注**：3.8 TB SSD（固态磁盘）驱动器在 {{site.data.keyword.CloudDataCent_notm}} 内一般可用后就会受到支持。
 
 ### 裸机服务器的数量
 
-缺省情况下，NetApp ONTAP Select 实例的 ESXi 服务器数为 4 个。您不能对其进行更改。所有 ESXi 服务器共享相同的配置。
+缺省情况下，NetApp ONTAP Select 实例的 ESXi 服务器数为 4 个。您不能对其进行更改。所有 ESXi 服务器都共享配置。
 
 ## 过程
 
@@ -114,7 +114,7 @@ lastupdated: "2018-07-18"
 
 查看和管理订购的 NetApp ONTAP Select 实例。
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在控制台外部通过其他任何方法来进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+**重要信息**：您只能通过 {{site.data.keyword.vmwaresolutions_short}} 控制台管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能通过 {{site.data.keyword.slportal}} 或在该控制台外部通过其他任何方法进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件
