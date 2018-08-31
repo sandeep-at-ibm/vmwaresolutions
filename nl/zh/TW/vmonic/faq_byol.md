@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-20"
 
 ## 何謂 BYOL？
 
-「自帶授權」或 BYOL 是 1.8 版及更新版本中的 VMware Cloud Foundation 實例以及 2.0 版及更新版本中的 vCenter Server 及 vSphere 叢集可用的特性。在訂購實例時，BYOL 可讓您對下列一個以上的 VMware 軟體元件使用您自己的 VMware 授權：
+「自帶授權」或 BYOL 是 1.8 版及更新版本中的 VMware Cloud Foundation 實例以及 2.0 版及更新版本中的 vCenter Server 及 vSphere 叢集可用的特性。使用 BYOL，您可以在訂購實例時對下列一個以上的 VMware 軟體元件使用您自己的 VMware 授權：
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
@@ -28,7 +28,7 @@ lastupdated: "2018-07-20"
 
 在送出為 VMware vSphere on {{site.data.keyword.cloud_notm}} 建立新叢集的訂單之後，會遞送 VMware 授權、ESXi 伺服器及其他網路元件，並可從 {{site.data.keyword.slportal}} 進行管理。
 
-部署之後，請移至 {{site.data.keyword.vmwaresolutions_short}} 主控台，利用已儲存的配置來擴充新叢集。如需擴充大小的相關資訊，請參閱[擴充現有的 vSphere 叢集大小](../vsphere/vs_scalingexistingclusters.html)。
+部署之後，請移至 {{site.data.keyword.vmwaresolutions_short}} 主控台，以使用已儲存的配置來擴充新叢集。如需擴充的相關資訊，請參閱[擴充現有 vSphere 叢集](../vsphere/vs_scalingexistingclusters.html)。
 
 ## BYOL 需要哪些授權版本及 CPU 數量？
 
@@ -62,23 +62,23 @@ lastupdated: "2018-07-20"
 
 ## 我可以提供超過 8 個 CPU 的授權碼嗎？
 
-是的。對於每一個 VMware 元件，需要每個 CPU 一個授權。目前，所有 vCenter Server 和 Cloud Foundation 伺服器都有兩個 CPU，因此每部伺服器需要兩個授權。建議您提供的授權碼能支援基本實例，以及您未來要新增至該實例的任何擴充節點。
+是的。對於每一個 VMware 元件，需要每個 CPU 一份授權。目前，所有 vCenter Server 和 Cloud Foundation 伺服器都有兩個 CPU。因此，每部伺服器都需要兩份授權。建議您提供的授權碼能支援基本實例，以及您未來要新增至該實例的任何擴充節點。
 
 ## 使用 BYOL 特性時，是否可以提供 SDDC Manager 授權？
 
-不。我們與 VMware 的合約規定我們必須接受客戶的實際授權碼。雖然 Cloud Foundation 部署包含 SDDC Manager 授權，但我們無法接受任何 SDDC Manager 授權碼檔案並用來驗證 BYOL。因此，IBM 會針對所有實例的 SDDC Manager 授權收費。SDDC Manager 授權代表 Cloud Foundation 實例整體授權費用中很小的一部分。
+不。我們與 VMware 的合約規定我們必須接受客戶的實際授權碼。雖然 Cloud Foundation 部署包括 SDDC Manager 授權，但我們無法接受 SDDC Manager 授權碼檔案並驗證其 BYOL。因此，IBM 會針對所有實例的 SDDC Manager 授權收費。SDDC Manager 授權代表 Cloud Foundation 實例整體授權費用中的一小部分。
 
 ## 我可以對某些 VMware 元件使用 BYOL 特性，並對某些元件購買每月授權嗎？
 
-是的。您可以針對四個 VMware 元件的任何組合使用 BYOL 特性或購買授權。當您訂購 vCenter Server 或 Cloud Foundation 實例時，{{site.data.keyword.vmwaresolutions_short}} 主控台會直接讓您選取授權選項。您在初次訂購實例時的授權選項，在該實例的生命期限內皆適用。
+是的。您可以針對四個 VMware 元件的任何組合使用 BYOL 特性或購買授權。當您訂購 vCenter Server 或 Cloud Foundation 實例時，{{site.data.keyword.vmwaresolutions_short}} 主控台會直接讓您選取授權選項。您在起始實例訂單時的授權選項在該實例的生命期限內皆適用。
 
 ## 針對特定 VMware 元件，我可以對部分授權使用 BYOL，並向 IBM 購買其餘授權嗎？
 
-是的。如果您為特定 VMware 元件選取 BYOL，您可以選擇在建立新叢集時輸入新的 BYOL 金鑰、繼續使用現有的 BYOL 金鑰，或為該叢集購買 IBM 提供的授權。目前，只有 VMware vSphere Enterprise 和 VMware vSAN 可以使用每個叢集的授權。
+是的。如果您為特定 VMware 元件選取 BYOL，您可以選擇在建立新叢集時輸入新的 BYOL 金鑰、繼續使用現有的 BYOL 金鑰，或為該叢集購買 IBM 提供的授權。目前，每個叢集僅 VMware vSphere Enterprise 和 VMware vSAN 可用於授權。
 
 ## 建立新叢集時，我可以使用 BYOL 嗎？
 
-是的。您可以從現有的 BYOL 授權使用 BYOL，或在建立新叢集時輸入新的 BYOL。您還可以在建立新叢集時選擇購買 IBM 提供的訂閱授權。目前，只有 VMware vSphere Enterprise 和 VMware vSAN 可以使用每個叢集的授權。
+是的。您可以從現有的 BYOL 授權使用 BYOL，或在建立新叢集時輸入新的 BYOL。此外，當您建立新的叢集時，可以購買 IBM 提供的訂閱授權。目前，每個叢集僅 VMware vSphere Enterprise 和 VMware vSAN 可用於授權。
 
 ## 如何管理 BYOL 授權？
 
@@ -86,11 +86,14 @@ lastupdated: "2018-07-20"
 
 ## 當我稍後新增其他 ESXi 伺服器到我的實例時，該實例會驗證我的 BYOL 授權容量是否足夠嗎？
 
-是的。當您新增其他 ESXi 伺服器到已部署的實例時，會針對指定的 ESCi 伺服器數量自動檢查您的 BYOL 授權容量。如果容量不足，則不會新增 ESXi 伺服器，且您會收到主控台通知。
+是的。當您將其他 ESXi 伺服器新增至已部署的實例時，會針對指定數目的 ESCi 伺服器自動檢查您的 BYOL 授權容量。如果容量不足，則不會新增 ESXi 伺服器，且您會收到主控台通知。
 
 ## 我如何得知具有 BYOL 的叢集上有多少可用的授權容量？
 
-您可以移至**已部署的實例**頁面、尋找並按一下實例，然後在**基礎架構**標籤上按一下要檢查授權容量的叢集，來尋找授權碼中可用的 CPU 數目。可用的 CPU 數目會列在**使用者提供的授權**表格中。
+若要尋找授權碼中可用的 CPU 數目，請完成下列步驟：
+1. 移至**已部署的實例**頁面。
+2. 找到並按一下實例。
+3. 在**基礎架構**標籤上，按一下您要檢查授權容量的叢集。可用的 CPU 數目會列在**使用者提供的授權**表格中。
 
 ## 如果我選取 BYOL 授權選項，IBM 是否提供支援？
 
@@ -98,7 +101,7 @@ lastupdated: "2018-07-20"
 
 ## 如果我使用 BYOL，為何價格預估清單上會顯示 vSphere 授權費用？有向我收取此費用嗎？
 
-{{site.data.keyword.baremetal_short}} 佈建時已安裝 VMware vSphere，並已包括 vSphere 授權。如果您為 vSphere 選取 BYOL，則在實例部署時會自動起始程序來移除已包括的 vSphere 授權。然後，授權費用將在您的 {{site.data.keyword.cloud_notm}} 帳戶記入貸方。您不需要在此程序中執行任何動作。
+{{site.data.keyword.baremetal_short}} 佈建時已安裝 VMware vSphere，並已包括 vSphere 授權。如果您為 vSphere 選取 BYOL，則在實例部署時會自動起始程序來移除已包括的 vSphere 授權。然後，授權費用將會記入您的 {{site.data.keyword.cloud_notm}} 帳戶。您不需要在此程序中執行任何動作。
 
 ## 我是否仍然可以對 BYOL 使用現有的手動程序？
 
@@ -106,7 +109,7 @@ lastupdated: "2018-07-20"
 
 ## 有針對其他 VMware 產品支援 BYOL 嗎？例如，VMware vRealize Automation、VMware vRealize Operations 或 VMware vRealize Log Insight？
 
-不，因為這些 VMware 產品不是實例部署的一部分。這些 VMware 產品可能安裝在起始部署之上，這需要客戶或其代理人執行安裝和授權。
+不，因為這些 VMware 產品不是實例部署的一部分。除了起始部署之外，可能還會安裝這些 VMware 產品，這需要客戶或其代理人執行安裝和授權。
 
 ## 我可以訂購 vCenter Server with Hybridity Bundle 的 NFS 儲存空間嗎？
 
@@ -140,4 +143,4 @@ vCenter Server with Hybridity Bundle 包括 NSX Advanced 時，您可以在訂�
 * [Cloud Foundation 實例](../sddc/sd_cloudfoundationoverview.html)
 * [存取主控台](loginmethod.html)
 * [與 IBM 支援中心聯絡](trbl_support.html)
-* [vRealize Automation](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/vRealizeAutomation){:new_window}
+* [vRealize 自動化](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/vRealizeAutomation){:new_window}

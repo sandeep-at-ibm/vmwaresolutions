@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -49,7 +49,7 @@ lastupdated: "2018-07-31"
 * 在 2.5 版及更新版本中部署的實例，會自動鏈結至訂購實例時所使用的使用者帳戶。
 * 對於已部署在 2.4 版及舊版中的實例，您可以將它們移轉至指定的 {{site.data.keyword.cloud_notm}} 帳戶，然後使用 IAM 來管理它們。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [邀請使用者存取服務及資源](../vmonic/iamuserinvite.html)
 * [利用 IAM 管理使用者存取](../vmonic/iam.html)
 
@@ -61,7 +61,7 @@ lastupdated: "2018-07-31"
 
 對於 Cloud Foundation 實例，請使用 **customerroot** 主機使用者 ID 來取代 **root** 主機使用者 ID。繼續針對 vCenter Server 實例使用 **root** 主機使用者 ID。
 
-如需使用者帳戶的相關資訊，請參閱：
+如需使用者帳戶的相關資訊，請參閱下列主題：
 
 * [變更 vCenter Server 構件的考量](../vcenter/vcenter_chg_impact.html)
 * [變更 Cloud Foundation 構件的考量](../sddc/cf_chg_impact.html)
@@ -70,7 +70,7 @@ lastupdated: "2018-07-31"
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-從 2.5 版開始，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服務會根據最佳作法部署為兩個不同的 VM，其中一個 VM 執行 Spectrum Protect Plus 伺服器，另一個 VM 執行 vSnap 伺服器及 VADP Proxy。
+從 2.5 版開始，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服務會根據最佳作法部署為兩部不同的 VM，其中一部 VM 執行 Spectrum Protect Plus 伺服器，另一部 VM 執行 vSnap 伺服器及 VADP Proxy。
 
 您現在最多可以訂購十個備份資料儲存庫，而且最多容許 120 TB 的備份儲存空間。根據您選取的備份儲存空間大小以及根據 [IBM Spectrum Protect Plus 藍圖](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)中的資訊，來調整 vSnap 及 VADP VM 的大小。
 
@@ -94,7 +94,7 @@ vCenter Server on IBM Cloud 連接儲存空間技術文件現在位於使用者�
 
 已改良服務資訊，可根據它的版本號碼輕鬆地識別服務支援。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 
 * [vCenter Server 實例可用的服務](../vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
 * [vCenter Server with Hybridity Bundle 實例的可用服務](../vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)

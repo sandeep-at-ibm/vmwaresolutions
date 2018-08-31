@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-16"
 
 ---
 
 # 與 IBM 支援中心聯絡
 
-如果您需要 {{site.data.keyword.vmwaresolutions_full}} 方面的協助，請建立 {{site.data.keyword.cloud_notm}} 支援問題單，以透過下列其中一個通道取得協助：
+如果您需要 {{site.data.keyword.vmwaresolutions_full}} 方面的協助，請建立 {{site.data.keyword.cloud_notm}} 支援問題單，以使用下列其中一個通道取得協助：
 
 ## 從 IBM Cloud for VMware Solutions 主控台
 
@@ -46,6 +46,6 @@ lastupdated: "2018-07-23"
 
 1. 移至 https://control.softlayer.com。
 2. 使用 **IBM ID** 帳戶登入到入口網站。
-3. 完成_從 IBM Cloud for VMware Solutions 主控台_ 小節中所述的步驟 6 到 8，以提交問題單。
+3. 完成_從 IBM Cloud for VMware Solutions 主控台_ 小節中所述的步驟 6 - 8，以提交問題單。
 
     **附註**：不論您使用哪個通道來開立支援問題單（{{site.data.keyword.vmwaresolutions_short}} 主控台或 {{site.data.keyword.slportal}}），仍然適用 _{{site.data.keyword.cloud_notm}} 基礎架構及平台服務支援原則_ 的條款。

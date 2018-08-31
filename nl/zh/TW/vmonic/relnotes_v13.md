@@ -10,7 +10,7 @@ lastupdated: "2017-01-23"
 
 # 1.3 版的版本注意事項
 
-此版本包括新增特性、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之其他要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之更多要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## vCenter Server 實例的共用檔案層次儲存空間
 
@@ -20,7 +20,7 @@ lastupdated: "2017-01-23"
 
 不論您是訂購 Zerto 災難回復作為實例的一部分，或是將它新增至現有的實例中，當您不再需要它時，您現在可以移除此服務。在您要求從主控台移除此服務之後，「IBM 支援中心」會引導您完成移除處理程序。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 
 * [災難回復移除](../services/removingzertodr.html)
 * [檢視 Cloud Foundation 實例](../sddc/sd_viewinginstances.html)
@@ -34,7 +34,7 @@ lastupdated: "2017-01-23"
 
 為了確保安全，已設置防火牆規則，僅容許管理虛擬機器所起始的出埠 HTTPS 通訊。這個 ESG 部署在「大型」配置中，只有「IBM 支援中心」才能修改此配置。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 
 * [Cloud Foundation 實例的技術規格](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [管理服務 NSX Edge 是否造成安全風險？](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -47,7 +47,7 @@ lastupdated: "2017-01-23"
 * 摘要頁面會顯示所有訂購的元件及服務的所有適用條款，讓您在下訂單之前能夠輕易存取來檢閱及同意這些條款。
 * 在下訂單之前，您可以先儲存及列印實例的訂單摘要。利用這個新功能，您可以檢閱實例設定和成本，必要的話可以修改訂購的元件，取得核准，然後回到您的訂單。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 
 * [訂購 Cloud Foundation 實例](../sddc/sd_orderinginstance.html)
 * [訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)

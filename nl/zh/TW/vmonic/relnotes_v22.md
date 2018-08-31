@@ -31,7 +31,7 @@ lastupdated: "2018-05-18"
 * 如果您使用的備份解決方案參照 IBM CloudDriver 虛擬機器，則在升級至 2.2 版之後，請確定備份解決方案參照新的 IBM CloudDriver 虛擬機器。
 * 在升級至 2.2 版之前，請確定您已將 Legacy Veeam VSI 取代為 Veeam on {{site.data.keyword.cloud_notm}} 服務。在 2.2 版和未來的版本中不再支援 Legacy Veeam，因此，與 Legacy Veeam 相關聯的管理元件備份無法進行還原。
 
-如需使用 Veeam on {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱：
+如需使用 Veeam on {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱下列主題：
 * [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html) 的元件及考量
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)
 
@@ -43,7 +43,7 @@ VMware Federal on {{site.data.keyword.cloud_notm}} 支援在 WDC03 Federal on {{
 
 （在 2018 年 4 月 2 日更新）您現在可以透過新增或移除 ESXi 伺服器，來擴充或縮減 VMware Federal 實例的容量。此選項僅適用於未受保護的 VMware Federal 實例。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 
 * [VMware Federal on {{site.data.keyword.cloud_notm}} 概觀](../vcenter/vc_fed_overview.html)
 * [新增、檢視及刪除 VMware Federal 實例的叢集](../vcenter/fed_addviewdeleteclusters.html)
@@ -144,7 +144,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 服務提供抄寫及災難回復功�
 
 您可以從**開始使用**頁面要求實例的受管理服務，作法是建立新的實例訂單，或將該服務新增至現有的實例。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [對於 Veeam on {{site.data.keyword.cloud_notm}}](../services/managing_veeam_services.html) 要求服務
 * [對於 Zerto on {{site.data.keyword.cloud_notm}}](../services/managing_zerto_services.html) 要求服務
 
@@ -154,7 +154,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 服務提供抄寫及災難回復功�
 
 * 現在文件中提供 Cloud Foundation 實例及 vCenter Server 實例與 VMware vSphere 叢集的 VLAN 和軟體資料清單 (BOM)。
 
-  如需相關資訊，請參閱：
+  如需相關資訊，請參閱下列主題：
 
   * [vCenter Server 資料清單](../vcenter/vc_bom.html)
   * [Cloud Foundation 資料清單](../sddc/sd_bom.html)

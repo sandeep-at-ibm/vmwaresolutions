@@ -30,7 +30,7 @@ lastupdated: "2018-04-16"
 
 您也可以訂購內部部署 HCX 實例，以進行內部部署 HCX 安裝的授權和啟動。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [HCX on {{site.data.keyword.cloud_notm}} 的考量](../services/hcx_considerations.html)
 * [管理 HCX on {{site.data.keyword.cloud_notm}}](../services/managinghcx.html)
 * [內部部署的 HCX 實例的考量](../services/standalone_considerations.html)
@@ -42,7 +42,7 @@ lastupdated: "2018-04-16"
 
 此外，將節點新增至使用您的金鑰授權的叢集時，如果節點數目超出金鑰容量，主控台會提示您提供新的授權碼。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 
 * [新增及檢視 Cloud Foundation 實例的叢集](../sddc/sd_addingviewingclusters.html)
 * [新增及檢視 vCenter Server 實例的叢集](../vcenter/vc_addingviewingclusters.html)
@@ -85,7 +85,7 @@ lastupdated: "2018-04-16"
 
 使用者自訂的 Bare Metal Server 配置現在提供「雙重 Intel Xeon Gold 6140，總計 36 核心，2.3 GHz」。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html)
 * [訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)
 
@@ -93,7 +93,7 @@ lastupdated: "2018-04-16"
 
 現在，您有個別配置 NFS 檔案共用的選項。為每一個別檔案共用選取檔案大小及效能層次，或針對您訂購的所有檔案共用，選取相同的檔案大小及效能層次。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html)
 * [訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)
 * [新增及檢視 vCenter Server 實例的叢集](../vcenter/vc_addingviewingclusters.html)

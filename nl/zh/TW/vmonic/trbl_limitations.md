@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-06-08"
 
 ## Windows 自動安裝更新項目
 
-Microsoft Active Directory (AD) / 網域名稱伺服器 (DNS) 自動設定為只下載更新項目。它不會自動安裝這些更新項目或重新開機。您必須在排定的時間手動安裝更新項目並重新開機，以避免中斷進行中的 AD 伺服器配置及其他備份工作。若要套用 Windows 更新項目，請手動安裝更新項目。
+Microsoft Active Directory (AD)/網域名稱伺服器 (DNS) 自動設定為只下載更新項目。它不會自動安裝這些更新項目或重新啟動。您必須在排定的時間手動安裝更新項目並重新啟動，以避免中斷進行中的 AD 伺服器配置及其他備份工作。若要套用 Windows 更新項目，請手動安裝更新項目。
 
 ## 選擇 Cloud Foundation 實例的根網域名稱時的考量
 

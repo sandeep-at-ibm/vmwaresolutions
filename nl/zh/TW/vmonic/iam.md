@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -42,7 +42,7 @@ lastupdated: "2018-07-27"
 
 對於 {{site.data.keyword.vmwaresolutions_short}}，存在下列動作：
 
-表 2. 動作的說明及必要角色
+表 2. 動作說明及必要角色
 
 | 動作 | 服務上的作業 | 角色 |
 |:------ |:-------------------- |:---- |
@@ -58,11 +58,11 @@ lastupdated: "2018-07-27"
 
 您也可以管理現有使用者的存取權，包括修改現有存取權、指派新存取權，以及檢閱指派的存取權。若要管理使用者的存取權，您必須是帳戶擁有者，或者必須具有**管理者**平台管理角色。如需相關資訊，請參閱[管理 IAM 存取](../../../iam/mngiam.html)。
 
-### 將現有實例移轉至 IBM Cloud 帳戶
+## 將現有實例移轉至 IBM Cloud 帳戶
 
-因為 {{site.data.keyword.vmwaresolutions_short}} 與 IAM 整合，所以 {{site.data.keyword.cloud}} 帳戶中部署於 2.5 版及更新版本的實例會自動新增至您的帳戶，並由 IAM 管理。對於已部署在 2.4 版及更早版本中的現有實例，您可以將它們移轉至指定的 {{site.data.keyword.cloud_notm}} 帳戶，以進行啟用 IAM 功能的管理。
+因為 {{site.data.keyword.vmwaresolutions_short}} 與 IAM 整合，所以 {{site.data.keyword.cloud}} 帳戶中部署於 2.5 版及更新版本的實例會自動新增至您的帳戶，並由 IAM 管理。
 
-如需相關資訊，請參閱：
+對於已部署在 2.4 版及更早版本中的現有實例，您可以將它們移轉至指定的 {{site.data.keyword.cloud_notm}} 帳戶，以進行啟用 IAM 功能的管理。如需相關資訊，請參閱下列主題：
 * [將 2.5 版之前的 vCenter Server 實例移轉至 IBM Cloud 帳戶](../vcenter/vc_addinstancetousraccount.html)
 * [將 2.5 版之前的 vCenter Server with Hybridity Bundle 實例移轉至 IBM Cloud 帳戶](../vcenter/vc_hybrid_addinstancetousraccount.html)
 * [將 2.5 版之前的 Cloud Foundation 實例移轉至 IBM Cloud 帳戶](../sddc/sd_addinstancetousraccount.html)

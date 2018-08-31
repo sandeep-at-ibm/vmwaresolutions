@@ -4,23 +4,23 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-09"
 
 ---
 
 # 關於 IBM Cloud for VMware Solutions
 
-{{site.data.keyword.vmwaresolutions_full}} 可讓您使用可擴充、安全且高效能的 {{site.data.keyword.cloud_notm}} 基礎架構及領先業界的 VMware 混合式虛擬化技術，來快速且無縫地將您的內部部署 VMware 工作負載整合或移轉至 {{site.data.keyword.cloud_notm}}。
+使用 {{site.data.keyword.vmwaresolutions_full}}，您可以使用可擴充、安全且高效能的 {{site.data.keyword.cloud_notm}} 基礎架構及領先業界的 VMware 混合式虛擬化技術，來快速且無縫地將您的內部部署 VMware 工作負載整合或移轉至 {{site.data.keyword.cloud_notm}}。
 
-{{site.data.keyword.vmwaresolutions_short}} 可讓您輕鬆部署 VMware 虛擬環境，及管理 {{site.data.keyword.cloud_notm}} 上的基礎架構資源。同時，您仍然可以使用熟悉的原生 VMware 產品主控台來管理 VMware 工作負載。
+您可以輕鬆地部署 VMware 虛擬環境，以及管理 {{site.data.keyword.cloud_notm}} 上的基礎架構資源。同時，您仍然可以使用熟悉的原生 VMware 產品主控台來管理 VMware 工作負載。
 
 ## IBM Cloud for VMware Solutions 的優點
 
 {{site.data.keyword.vmwaresolutions_short}} 提供下列主要優點：
-* **全球觸角**：可讓您擴大混合式雲端覆蓋範圍至全球多達 30 個企業級 {{site.data.keyword.CloudDataCents_notm}}。
+* **全球觸角**：您可以擴大混合式雲端覆蓋範圍至全球多達 30 個企業級 {{site.data.keyword.CloudDataCents_notm}}。
 * **無縫整合**：在混合式雲端上使用 {{site.data.keyword.cloud_notm}} 基礎架構來進行無縫整合。
 * **快速佈建**：將 VMware 環境的部署和配置自動化，可讓您利用隨需應變的 {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} 和虛擬伺服器，快速部署企業級 VMware 環境。
-* **簡化**：可讓您使用 VMware 雲端平台時不需要識別、採購、部署及管理實體基礎架構（運算、儲存空間及網路）和軟體授權。
+* **簡化**：您可以使用 VMware 雲端平台，而不需要識別、採購、部署及管理基礎實體基礎架構（運算、儲存空間及網路）和軟體授權。
 * **擴充及縮減的彈性**：可讓您根據商業需要，輕鬆擴充及縮減 VMware 工作負載。
 * **單一管理主控台**：提供單一主控台，在 {{site.data.keyword.cloud_notm}} 上部署、存取及管理 VMware 環境。
 
@@ -96,7 +96,7 @@ HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服務會施行並控�
 
 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務提供具有整合式金鑰管理的高度加密，來保護其整個生命週期的工作負載安全。此服務可以提供作業系統層次及資料層次的加密，表示可以加密及解密工作負載內的任何目錄、資料夾或檔案。
 
-如需相關資訊，請參閱 [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概觀](../services/hdcc_considerations.html)。
+如需相關資訊，請參閱 [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概觀](../services/htdc_considerations.html)。
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -124,7 +124,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服務可以將內部部署資料中心�
 
 ### Zerto on IBM Cloud
 
-Zerto on {{site.data.keyword.cloud_notm}} 服務提供抄寫及災難回復功能，可整合至部署供應項目以保護及回復 {{site.data.keyword.cloud_notm}} 上 VMware 虛擬環境中的資料。
+Zerto on {{site.data.keyword.cloud_notm}} 服務提供抄寫及災難回復功能。這些功能可以整合到部署供應項目，以保護及回復 {{site.data.keyword.cloud_notm}} 上 VMware 虛擬環境中的資料。
 
 如需相關資訊，請參閱 [Zerto on {{site.data.keyword.cloud_notm}} 概觀](../services/addingzertodr.html)。
 

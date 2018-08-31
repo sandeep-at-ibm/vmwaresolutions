@@ -58,7 +58,7 @@ lastupdated: "2018-06-22"
 
 ### 網路檔案系統效能加強功能
 
-效能層次 10 IOPS/GB 是針對需求最大的工作負載類型所設計，並且不再限制為特定 {{site.data.keyword.CloudDataCent_notm}}，現在可用於所有項目。如需相關資訊，請參閱 [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications)中的*儲存空間* 小節。
+效能層次 10 IOPS/GB 是針對需求最大的工作負載類型所設計，並且不再限制為特定 {{site.data.keyword.CloudDataCent_notm}}，現在可用於所有項目。如需相關資訊，請參閱 [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)中的*儲存空間* 小節。
 
 ## VMware Federal 實例的更新項目
 
@@ -86,7 +86,7 @@ lastupdated: "2018-06-22"
 
 已重組服務資訊，並且已改良導覽，在訂購服務時可輕鬆地找到相關資訊。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 
 * [訂購 F5 on {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
 * [訂購 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)
