@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -44,7 +44,7 @@ lastupdated: "2018-07-20"
 
 表 1. 定制 {{site.data.keyword.baremetal_short}} 的选项
 
-|CPU 选项|RAM 选项|
+| CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
@@ -109,7 +109,7 @@ lastupdated: "2018-07-20"
 
 ## 向 VMware Federal 实例添加集群的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要添加集群的实例。
 
    **注**：确保实例处于**可供使用**状态。否则，无法向实例添加集群。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -81,7 +81,7 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 
 ### 扩展节点的硬件
 
-一个裸机服务器，其配置在 [VMware Federal on {{site.data.keyword.cloud_notm}} 实例的技术规范](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中提供。
+一个裸机服务器，其配置在 [VMware Federal on {{site.data.keyword.cloud_notm}} 实例的技术规范](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中提供。
 
 ### 扩展节点的许可证和费用
 

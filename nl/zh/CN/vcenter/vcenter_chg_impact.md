@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-08"
 
 ---
 
@@ -26,7 +26,9 @@ lastupdated: "2018-07-31"
 
 **重要信息**：为了防止发生中断和连接问题，如果更改此用户帐户的用户标识、密码或密码到期时间设置，请确保同时更新关联服务中的相应信息。
 
-此帐户的用户标识的格式为 `<service_name>-<service_uuid>@VSPHERE.LOCAL`。例如，Veeam on {{site.data.keyword.cloud_notm}} 服务用于连接到 vCenter Server 以执行安排的备份的用户标识为 `Veeam-<Veeam_uuid>@VSPHERE.LOCAL`。
+此帐户的用户标识的格式为 `<service_name>-<truncated service_uuid>@test.local` 或 `<service_name>-<truncated service_uuid>@example-domain.local`。例如，Veeam on {{site.data.keyword.cloud_notm}} 服务用于连接到 vCenter Server 以执行安排的备份的用户标识为 `Veeam-<Veeam_uuid>@test.local`。
+
+**注**：`<service_name>` 和 `<service_uuid>` 一起被截断为 20 个字符。
 
 ## vCenter Server 实例（V1.9 和更高版本）的 VMware 资源
 

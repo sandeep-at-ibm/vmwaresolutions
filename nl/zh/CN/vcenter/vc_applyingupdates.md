@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-07"
 
 ---
 
@@ -63,7 +63,7 @@ lastupdated: "2018-07-19"
    * 添加新的 ESXi 服务器时。
    * 添加新的集群时。
 
-5. 要升级 NSX 许可证，请单击**升级许可证**。选择要升级到的版本，然后单击**升级**。许可证版本降级不可用。
+5. 要升级 NSX 许可证，请单击**升级**。在**升级 NSX 许可证修订版**窗口中，选择要升级到的修订版，然后单击**升级**。许可证版本降级不可用。
 
    **注**：许可证升级将替换实例上的所有现有 NSX 许可证。如果在计费周期内进行升级，那么可能会因旧许可证与新许可证重叠而发生额外费用。为了避免发生额外费用，建议在计费周期结束时升级许可证。
 
@@ -76,12 +76,13 @@ lastupdated: "2018-07-19"
 
 在 Hybridity Bundle 的许可证升级期间，如果 vCenter Server 实例当前使用的是 VMware NSX Base Edition，那么会自动升级到 VMware NSX Advanced Edition。
 
+**注：**如果升级到 Hybridity Bundle，并且 vCenter Server 实例已经有 NFS 文件存储器，那么 VMware vSAN 存储器不收费。vSAN 许可证要收费，因为 Hybridity Bundle 中包含该许可证。
+
 要将 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle，请完成以下步骤。
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要升级的实例。
-3. 在**摘要**页面上，验证是否所有实例详细信息都正确显示。然后在左侧导航窗格上，单击**基础架构**以验证**基础架构**页面上的详细信息。
-   如果未显示详细信息，这可能指示由于防火墙规则或其他网络问题而导致 IBM CloudDriver VSI 发生连接问题。请解决该问题后，再继续下一步，否则更新可能会失败。
+3. 在**摘要**页面上，验证是否所有实例详细信息都正确显示。然后在左侧导航窗格上，单击**基础架构**以验证**基础架构**页面上的详细信息。如果未显示详细信息，这可能指示由于防火墙规则或其他网络问题而导致 IBM CloudDriver VSI 发生连接问题。请解决该问题后，再继续下一步，否则更新可能会失败。
 4. 在左侧导航窗格上，单击**更新和补丁**。
 5. 应用 Hybridity Bundle 许可证升级。在**许可证升级**表中，单击**操作**列中的**升级**，复查估算成本，然后单击**升级**。
 6. （可选）部署 VMware HCX on {{site.data.keyword.cloud_notm}} 服务。在**许可证升级**表上启用了 Hybridity Bundle 时，请完成以下步骤：

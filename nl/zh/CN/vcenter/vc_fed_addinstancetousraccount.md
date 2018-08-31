@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-08"
 
 ---
 
 # 将 V2.5 之前的 VMware Federal 实例迁移到 IBM Cloud 帐户
 
-在 {{site.data.keyword.cloud}} 帐户中 V2.5 和更高发行版中部署的 VMware Federal 实例会自动添加到帐户，并由 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 进行管理。 
+在 {{site.data.keyword.cloud}} 帐户中 V2.5 和更高发行版中部署的 VMware Federal 实例会自动添加到帐户，并由 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 进行管理。
 
 对于部署在 V2.4 和更低发行版中的实例，可以将其迁移到指定的 {{site.data.keyword.cloud_notm}} 帐户，以进行支持 IAM 的用户管理。
 
@@ -24,8 +24,8 @@ lastupdated: "2018-07-27"
 
 ## 结果
 
-1. 您将收到控制台通知，指示已接受您要将实例迁移到指定 {{site.data.keyword.cloud_notm}} 帐户的请求。 
-2. 完成实例的迁移后，该实例将显示在它迁移到的帐户下**部署的实例**页面上。迁移的实例不会再显示在从中迁移该实例的原始帐户中。
+1. 您将收到控制台通知，指示已接受您要将实例迁移到指定 {{site.data.keyword.cloud_notm}} 帐户的请求。
+2. 实例迁移完成后，实例将显示在**部署的实例**页面上它所迁移到的帐户下。迁移的实例不会再显示在从中迁移该实例的原始帐户中。
 
 ### 相关链接
 

@@ -37,7 +37,7 @@ lastupdated: "2018-07-19"
 |VMware|Platform Services Controller|6.5 Update 1g|
 |VMware|vSAN|6.6.1|
 |VMware|NSX for vSphere|6.4.1|
-|IBM|CloudDriver|2.4|
+|IBM|CloudDriver| 2.5          |
 |Microsoft|Windows Server Standard Edition|2012R2|
 
 **注**：VMware vSAN 是可选组件。
