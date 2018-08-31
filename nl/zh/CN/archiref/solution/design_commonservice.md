@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -28,7 +28,7 @@ Active Directory 用于认证的访问权仅要求管理 VMware 实例，而不�
 
 vSphere Single Sign On (SSO) 域用作单个实例或多个链接实例的初始认证机制。SSO 域还用于将 VMware 实例或多个链接的实例连接到 Microsoft Active Directory 服务器。将应用以下 SSO 配置：  
 * 始终使用 SSO 域 `vsphere.local`
-* 对于与现有实例绑定的 VMware 实例，PSC 将连接到现有实例的 SSO 域
+* 对于绑定到现有实例的 VMware 实例，会将 PSC 连接到现有实例的 SSO 域
 * SSO 站点名称与实例名称相同
 
 ## 域名服务 (DNS)
@@ -62,7 +62,7 @@ Cloud Foundation 部署使用 VMware Cloud Foundation 自动化，后者使用�
 * Active Directory DNS 服务器配置为对 SDDC Manager 和 Cloud Foundation 实例子域上级的 DNS 域空间具有权威性。
 * Active Directory DNS 服务器配置为指向 SDDC Manager 对其具有权威性的区域的子域授权的 SDDC Manager IP 地址。
 * Active Directory DNS 服务器配置为指向其他所有区域的 {{site.data.keyword.cloud_notm}} DNS 服务器。
-* 要集成到第一个实例或目标实例的任何辅助实例必须利用 SDDC Manager 子域上级的相同 DNS 名称结构。
+* 要集成到第一个或目标实例的任何辅助实例都必须在 SDDC Manager 子域上方使用相同的 DNS 名称结构。
 
 ## NTP 服务
 
