@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -41,7 +41,7 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品通过提供存储
 
 ### 虚拟化管理
 
-此层由 vCenter Server 虚拟设备、NSX Manager、2 个 NSX ESG、3 个 NSX Controller、Platform Services Controller (PSC) 虚拟设备、vCenter Server Appliance (vCSA) 和 IBM CloudDriver 虚拟机组成。
+此层由 vCenter Server 虚拟设备、NSX Manager、2 个 NSX ESG、3 个 NSX Controller、Platform Services Controller (PSC) 虚拟设备、vCenter Server Appliance (vCSA) 和 IBM CloudDriver 虚拟服务器实例 (VSI) 组成。
 
 NetApp ONTAP Select 在 VMware 集群中运行，并对主机上的本地存储器进行虚拟化。NetApp ONTAP Select 部署在专用模型中，其他工作负载不应与之共享集群。因此，NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品的硬件配置仅基于 NetApp ONTAP Select 的需求来设置大小。
 
@@ -65,7 +65,7 @@ NetApp ONTAP Select 实例中包含以下组件。
 * **高性能（大型）**- 高级许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 128 GB RAM / 每节点 22 个 3.8 TB SSD 驱动器容量 / 4 节点集群的有效容量 - 118 TB
 * **高容量** - 标准许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 64 GB RAM / 每节点 34 个 4 TB SATA 驱动器容量 / 4 节点集群的有效容量 - 190 TB
 
-**注**：3.8 TB SSD（固态磁盘）驱动器在数据中心内基本可用后就会受到支持。
+**注**：3.8 TB SSD（固态磁盘）驱动器在数据中心内一般可用后就会受到支持。
 
 ### 硬件
 
@@ -94,7 +94,7 @@ NetApp ONTAP Select 实例中包含以下组件。
 *  VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 *  支持和服务费用（每个节点一个许可证）
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在控制台外部通过其他任何方法来进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+**重要信息**：您只能通过 {{site.data.keyword.vmwaresolutions_short}} 控制台管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能通过 {{site.data.keyword.slportal}} 或在该控制台外部通过其他任何方法进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回、除去组件或关闭组件电源
