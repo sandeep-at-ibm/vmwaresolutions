@@ -43,7 +43,7 @@ vCenter Server 也會部署為虛擬應用裝置。此外，vCenter Server 會�
 | 屬性                         | 規格                                |
 |------------------------------|-------------------------------------|
 |vCenter Server | 虛擬應用裝置                   |
-| 應用裝置安裝大小             | 中型（最多 400 個主機、4,000 個 VM）|
+| 應用裝置安裝大小             | 中型（最多 400 部主機、4,000 部 VM）|
 |Platform Services Controller    | 外部                                |
 | vCPU 數目                    | 8                                   |
 |記憶體| 24 GB                               |
@@ -110,7 +110,7 @@ IBM CloudBuilder 及 IBM CloudDriver 虛擬伺服器實例 (VSI) 是您無法存
 3.  訂購 Microsoft Windows Virtual Server Instance (VSI) 以作為 Active Directory 網域控制站（適用時）。
 4.  驗證網路及已部署的硬體。
 5.  單一節點 vSAN 的起始配置（適用時）。
-6.  部署及配置兩個 Microsoft Windows 虛擬機器，以作為 Active Directory 網域控制站（適用時）。
+6.  部署及配置兩部 Microsoft Windows 虛擬機器，以作為 Active Directory 網域控制站（適用時）。
 7.  部署及配置 vCenter、PSC 和 NSX。
 8.  叢集處理剩餘的 ESXi 節點、擴充 vSAN（適用時），以及配置 NSX 元件 (VTEP)。
 9.  部署 VMware Cloud Foundation SDDC Manager VM（適用時）及 IBM CloudDriver VSI。

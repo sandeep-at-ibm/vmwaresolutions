@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -25,9 +25,11 @@ lastupdated: "2018-07-10"
 
 ## 主要優點
 
-VMware Cloud Foundation 及 vCenter Server on {{site.data.keyword.cloud_notm}} 提供基本構成要素，包括彈性架構最適合您工作負載之 VMware 軟體定義資料中心解決方案所需的 VMware vSphere、vCenter Server、NSX 及共用儲存空間選項（包括 vSAN)。藉由套用進階自動化及單一承租戶裸機基礎架構，您可以快速將整個 VMware 環境部署至 {{site.data.keyword.cloud_notm}}，並在幾個小時內使用您最愛的工具來存取您的虛擬環境。此時，您可以透過原生 VMware 用戶端、「指令行介面 (CLI)」、現有 Script 或其他熟悉的 vSphere API 相容工具，來存取及管理 IBM 代管環境。
+VMware Cloud Foundation 及 vCenter Server on {{site.data.keyword.cloud_notm}} 提供基本構成要素，包括 VMware vSphere、vCenter Server、NSX 及共用儲存空間選項（包括 vSAN)。需要有這些元件，才能彈性架構最適合您工作負載的 VMware 軟體定義資料中心解決方案。 
 
-部署後，您可以新增 ESXi 主機節點，並管理某些管理元件的備份及修補。同時提供 {{site.data.keyword.cloud_notm}} Professional Services 及 Managed Services，協助您透過移轉、實作及上線服務這類供應項目來加速移到雲端。
+藉由套用進階自動化及單一承租戶裸機基礎架構，您可以在幾個小時內快速將整個 VMware 環境部署至 {{site.data.keyword.cloud_notm}}。然後，您可以透過原生 VMware 用戶端、「指令行介面 (CLI)」、現有 Script 或其他熟悉的 vSphere API 相容工具，來存取及管理 IBM 代管環境。
+
+部署後，您可以新增 ESXi 主機節點，並管理某些管理元件的備份及修補。同時提供 {{site.data.keyword.cloud_notm}} 專業及受管理服務，協助您透過移轉、實作及上線服務這類供應項目來加速移到雲端。
 
 VMware on {{site.data.keyword.cloud_notm}} 供應項目具有下列優點：
 

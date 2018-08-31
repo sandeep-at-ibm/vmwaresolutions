@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -14,11 +14,11 @@ lastupdated: "2018-07-10"
 
 ## 身分及存取服務
 
-在此設計中，Microsoft Active Directory (AD) 用於身分管理。此設計會部署一或兩個 Windows Active Directory 虛擬機器，作為 Cloud Foundation 及 vCenter Server 部署自動化的一部分。vCenter 將配置成使用 AD 鑑別。
+在此設計中，Microsoft Active Directory (AD) 用於身分管理。此設計會部署一或兩部 Windows Active Directory 虛擬機器，作為 Cloud Foundation 及 vCenter Server 部署自動化的一部分。vCenter 將配置成使用 AD 鑑別。
 
 ### Microsoft Active Directory
 
-依預設，單一 Active Directory VSI 會部署至 {{site.data.keyword.cloud}} 基礎架構。此設計還提供選項，可將兩個高可用性 Microsoft Active Directory 伺服器部署為管理叢集中的專用 Windows Server VM。
+依預設，單一 Active Directory VSI 會部署至 {{site.data.keyword.cloud}} 基礎架構。此設計還提供選項，可將兩部高可用性 Microsoft Active Directory 伺服器部署為管理叢集中的專用 Windows Server VM。
 
 **附註**：如果您選擇此選項，則負責提供 Microsoft 授權及啟動。
 
