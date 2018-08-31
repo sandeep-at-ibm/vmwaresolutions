@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -18,11 +18,11 @@ lastupdated: "2018-07-18"
 *  您已在**設定**頁面上配置 {{site.data.keyword.cloud}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](../vmonic/useraccount.html)。
 *  您已檢閱 [NetApp ONTAP Select 實例的需求及規劃](np_planning.html)中的需求及考量。
 
-**重要事項：請不要修改在訂購及實例部署期間設定的任何值。這樣做會導致您的實例變成無法使用。**
+**重要事項：請不要修改在訂購及實例部署期間設定的任何值。這樣做可能會讓您的實例無法使用。**
 
 ## 系統設定
 
-當您訂購 NetApp ONTAP Select 實例時，必須指定下列基本設定。
+當您訂購 NetApp ONTAP Select 實例時，必須指定其基本設定。
 
 ### 實例名稱
 
@@ -34,7 +34,7 @@ lastupdated: "2018-07-18"
 
 ## 網路介面設定
 
-訂購 NetApp ONTAP Select 實例時，您必須指定下列網路介面設定。
+當您訂購 NetApp ONTAP Select 實例時，必須指定下列網路介面設定。
 
 ### 主機名稱字首
 
@@ -64,7 +64,7 @@ lastupdated: "2018-07-18"
 
 ## 授權設定
 
-您必須上傳四個 NetApp 授權檔，因為這四個 {{site.data.keyword.baremetal_short}} 都需要一個授權。請聯絡您的 NetApp 銷售團隊，以針對高效能或高容量部署採購適當的授權。
+您必須上傳四個 NetApp 授權檔，因為這四個 {{site.data.keyword.baremetal_short}} 都需要一份授權。請聯絡您的 NetApp 銷售團隊，以針對高效能或高容量部署採購適當的授權。
 
 ## Bare Metal Server 設定
 
@@ -74,7 +74,7 @@ lastupdated: "2018-07-18"
 
 ### Bare Metal Server 配置
 
-您可以根據需求來選取 Bare Metal Server 配置：
+根據需求來選取 Bare Metal Server 配置：
 * **高效能（中型）**- 超值授權/雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/128 GB RAM/每個節點有 22 個 1.9 TB SSD 磁碟機容量/4 節點叢集的有效容量 - 59 TB
 * **高效能（大型）**- 超值授權/雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/128 GB RAM/每個節點有 22 個 3.8 TB SSD 磁碟機容量/4 節點叢集的有效容量 - 118 TB
 * **高容量** - 標準授權/雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/64 GB RAM/每個節點有 34 個 4 TB SATA 磁碟機容量/4 節點叢集的有效容量 - 190 TB
@@ -83,11 +83,11 @@ lastupdated: "2018-07-18"
 
 ### Bare Metal Server 數目
 
-依預設，NetApp ONTAP Select 實例的 ESXi 伺服器數目為 4。您無法變更它。所有 ESXi 伺服器都會共用相同的配置。
+依預設，NetApp ONTAP Select 實例的 ESXi 伺服器數目為 4。您無法變更它。所有 ESXi 伺服器都會共用配置。
 
 ## 程序
 
-1. 在「{{site.data.keyword.cloud_notm}} 型錄」中，按一下左導覽窗格上的 **VMware**，然後按一下**虛擬資料中心**區段中的 **NetApp ONTAP Select**。
+1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware**，然後按一下**虛擬資料中心**區段中的 **NetApp ONTAP Select**。
 2. 在 **NetApp ONTAP Select** 頁面上，按一下**建立**。
 3. 在 **NetApp ONTAP** 頁面上，輸入實例名稱。
 4. 輸入**主機名稱字首**、**子區域標籤**及**網域名稱**，來完成網路介面設定。
@@ -114,7 +114,7 @@ lastupdated: "2018-07-18"
 
 檢視及管理您訂購的 NetApp ONTAP Select 實例。
 
-**重要事項**：您必須從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 {{site.data.keyword.cloud_notm}} 帳戶中所建立的 {{site.data.keyword.vmwaresolutions_short}} 元件，而不是在主控台以外的 {{site.data.keyword.slportal}} 或透過任何其他方法進行管理。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項**：您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台而不是 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
 **警告**：從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理任何 {{site.data.keyword.vmwaresolutions_short}} 元件（元件已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶）可能會讓您的環境不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件
