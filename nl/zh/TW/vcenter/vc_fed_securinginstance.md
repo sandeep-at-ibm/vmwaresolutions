@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -18,7 +18,6 @@ lastupdated: "2018-07-19"
 
 * 在完成此程序之前，請記錄及儲存您環境可能需要的任何認證。您環境的所有認證會從 {{site.data.keyword.vmwaresolutions_full}} 資料庫中消除，而且在呼叫安全動作之後，無法再擷取它們。
 * 在呼叫安全動作之後，會停用除了完整實例刪除以外的所有管理功能。
-* 用於出埠 HTTPS 管理資料流量及 IBM CloudDriver 虛擬機器的 VMware NSX Edge Services Gateway (ESG) 會被刪除，這屬於維護所部署之 VMware Federal 實例的安全的動作。
 
 ## 程序
 
@@ -28,7 +27,10 @@ lastupdated: "2018-07-19"
 4. 按一下**維護實例安全**。
 5. 按一下**確定**以確認您要中斷實例自動化。
 
-   **附註**：完成此步驟之前，請確定您已檢閱**開始之前**小節中的資訊。
+  **附註**：完成此步驟之前，請確定您已檢閱**開始之前**小節中的資訊。
+
+6. 從環境中移除公用管理服務 VMware NSX Edge Services Gateway (ESG)，以及選擇性地移除在自動化期間部署的用戶端管理 ESG。
+7. 重設 IBM 自動化所使用之所有帳戶的密碼或金鑰。如需相關資訊，請參閱[如何透過 IBM 自動化及支援中心保護環境來移除存取權？](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)。
 
 ## 結果
 

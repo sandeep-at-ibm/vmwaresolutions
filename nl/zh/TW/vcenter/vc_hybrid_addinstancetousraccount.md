@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-08"
 
 ---
 
 # 將 2.5 版之前的 vCenter Server with Hybridity Bundle 實例移轉至 IBM Cloud 帳戶
 
-{{site.data.keyword.cloud}} 帳戶中部署於 2.5 版及更新版本的 VMware vCenter Server with Hybridity Bundle 實例會自動新增至您的帳戶，並由 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 管理。 
+{{site.data.keyword.cloud}} 帳戶中部署於 2.5 版及更新版本的 VMware vCenter Server with Hybridity Bundle 實例會自動新增至您的帳戶，並由 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 管理。
 
 對於已部署在 2.4 版及更早版本中的實例，您可以將它們移轉至指定的 {{site.data.keyword.cloud_notm}} 帳戶，以進行啟用 IAM 功能的使用者管理。
 
@@ -26,7 +26,7 @@ lastupdated: "2018-07-27"
 ## 結果
 
 1. 您會收到主控台通知，指出已接受將實例移轉至指定 {{site.data.keyword.cloud_notm}} 帳戶的要求。
-2. 移轉實例完成後，實例即會顯示在**已部署的實例**頁面的移轉目的地帳戶下方。移轉的實例不再顯示於移轉來源的原始帳戶中。
+2. 完成實例移轉時，實例即會顯示在**已部署的實例**頁面的移轉目的地帳戶下方。移轉的實例不再顯示於移轉來源的原始帳戶中。
 
 ### 相關鏈結
 
