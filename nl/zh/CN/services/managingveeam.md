@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -37,7 +37,17 @@ Veeam on {{site.data.keyword.cloud_notm}} 服务可以配置为使用 Veeam 控�
 
 ## 对 Veeam on IBM Cloud 应用更新
 
-您负责维护 Veem，以使其保持更新为最新版本。要将 Veeam 升级至最新版本，请从 Veeam Web 站点下载 Veeam 更新，将更新复制到 Veeam VSI，然后安装这些更新。
+您负责维护 Veeam，以使其保持更新为最新版本。要将 Veeam 升级至最新版本，请从 Veeam Web 站点下载 Veeam 更新，将更新复制到 Veeam VSI，然后安装这些更新。
+
+## 更新 Veeam 许可证
+
+您可以在需要时通过完成以下步骤来手动更新 Veeam 许可证：
+1. [使用 RDP 访问 Veeam Backup and Replication 控制台](../services/managingveeam.html#accessing-the-veeam-console-by-using-rdp)。
+2. 在主菜单中，单击**许可证**。
+3. 在**许可证信息**窗口中，单击**立即更新**。
+4. 要查看手动许可证更新过程的统计信息，请打开**历史记录**视图，然后单击**系统**节点。
+
+有关更多信息，请参阅[手动更新许可证](https://helpcenter.veeam.com/docs/backup/vsphere/license_update_manual.html?ver=95)。
 
 ## 使用 Veeam on IBM Cloud 替换 V1.8 之前版本的实例的 Veeam VSI
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -40,8 +40,8 @@ lastupdated: "2018-07-20"
 部署 HCX on {{site.data.keyword.cloud_notm}} 会自动执行。无论是订购 vCenter Server with Hybridity Bundle 实例时包含此服务，还是稍后再将此服务部署到实例中，都会通过 {{site.data.keyword.vmwaresolutions_short}} 自动过程来完成以下步骤：
 1. 为 {{site.data.keyword.cloud_notm}} 基础架构中的 HCX 订购三个子网：
    * 一个专有可移植子网，用于 HCX 管理。
-   * 一个专有可移植子网，用于 HCX 互联（如果为 **HCX 互连类型**选择了**专用网络**）。
-   * 一个公有可移植子网，用于 HCX 互联（如果为 **HCX 互连类型**选择了**公用网络**）。此子网还用于激活和维护 VMware。
+   * 一个用于 HCX 互联的专用可移植子网。在为 **HCX 互联类型**选择了**专用网络**选项的情况下，会使用此子网。
+   * 一个用于 VMware 激活和维护的公共可移植子网。如果为 **HCX 互联类型**选择了**公用网络**选项，那么还会将此子网用于 HCX 互联。
 
    **重要信息**：为 HCX 订购的子网中的 IP 地址旨在由 VMware on {{site.data.keyword.cloud_notm}} 自动化进行管理。这些 IP 地址无法分配给您所创建的 VMware 资源，例如 VM 和 NSX Edge。如果需要更多 IP 地址用于 VMware 工件，那么必须向 {{site.data.keyword.cloud_notm}} 订购您自己的子网。
 2. 如果针对 **HCX 互连类型**选择了**专用网络**，那么将在专用分布式虚拟交换机 (DVS) 上创建名为 **SDDC-DPortGroup-HCX-Private** 的端口组。
