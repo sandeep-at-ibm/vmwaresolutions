@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-11"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-20"
 
 要部署高度可定制的 VMware 虚拟化平台，请订购 VMware vSphere on {{site.data.keyword.cloud}} 集群。使用此过程可定义新的 VMware vSphere 集群。
 
-此工作流程将引导您选择 VMware 组件、{{site.data.keyword.cloud_notm}} 裸机服务器设置、存储设置和联网选项，以创建新集群。下订单后，系统将捕获集群配置，以便您可以返回并继续根据需要向外扩展集群。完成订单后，可以根据需求手动配置 VMware 集群。
+此过程将引导您选择 VMware 组件、{{site.data.keyword.cloud_notm}} 裸机服务器设置、存储设置和联网选项，以创建新集群。下订单后，系统将捕获集群配置，以便您可以返回并继续根据需要向外扩展集群。完成订单后，可以根据需求手动配置 VMware 集群。
 
 ## 需求
 
@@ -34,29 +34,29 @@ lastupdated: "2018-07-20"
 
 选择要随集群一起订购的 VMware 组件，并指定组件的许可选项。
 
-### （仅适用于业务合作伙伴用户）组件捆绑软件
+### （仅适用于 IBM 业务合作伙伴）组件捆绑软件
 
-如果您是业务合作伙伴用户，那么可以在订购新的 vSphere 集群时选择组件许可捆绑软件。可用捆绑软件如下：
+如果您是 IBM 业务合作伙伴，那么可以在订购新的 vSphere 集群时选择组件许可证捆绑软件。以下捆绑软件可用：
 
-表 1. 用于 vSphere 集群的业务合作伙伴组件捆绑软件
+表 1. 用于 vSphere 集群的 IBM 业务合作伙伴组件捆绑软件
 
 |捆绑软件|组件|
-|:-------------------------|:-----------------------|
+|:------------------------- |:----------------------- |
 |标准（带管理）|vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight 和 vRealize Operations Enterprise|
 |高级|vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vCloud Director 和 NSX Base|
 |高级（带联网）|vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight 和 NSX Advanced|
 |高级（带联网和管理）|vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vRealize Operations Enterprise、vCloud Director 和 NSX Enterprise|
 
-您还可以在订单中包含以下其他 VMware 组件：
+您还可以在订单中包含以下 VMware 组件：
 * VMware vSAN
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**注**：业务合作伙伴用户无法选择自带许可证 (BYOL)。填写订单时，**我将提供许可证**选项不可用。
+**注：**对于 IBM 业务合作伙伴，自带许可证 (BYOL) 选项不可用。
 
-### （仅适用于非业务合作伙伴用户）个人组件
+### （仅适用于非业务合作伙伴）个人组件
 
-如果您是非业务合作伙伴用户，那么可以为 vSphere 集群灵活选择以下 VMware 组件：
+如果您是非业务合作伙伴，那么可以为 vSphere 集群灵活选择以下 VMware 组件：
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
@@ -66,13 +66,13 @@ lastupdated: "2018-07-20"
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**注**：订购 VMware vSphere Enterprise Plus 6.0 时，VMware vSAN 组件不可用。如果计划使用您自己的 VMware vSphere Enterprise Plus 6.0 许可证，那么系统将代表您开具 {{site.data.keyword.cloud_notm}} 基础架构凭单，以请求将所订购 {{site.data.keyword.baremetal_short}} 的 vSphere 许可证替换为您提供的许可证。
+**注**：订购 VMware vSphere Enterprise Plus 6.0 时，VMware vSAN 组件不可用。如果计划使用您自己的 VMware vSphere Enterprise Plus 6.0 许可证，那么系统将代表您开具 {{site.data.keyword.cloud_notm}} 基础架构凭单。凭单会请求用您提供的许可证替换已订购的 {{site.data.keyword.baremetal_short}} 的 vSphere 许可证。
 
 ### 许可选项
 
 可以选择以下选项来对所选 VMware 组件进行许可：
 * **购买时包含许可证**：选择此项时，系统将代表您为 VMware 组件购买新许可证。将生成组合 VMware 许可证以匹配订单的集群大小。
-* **我将提供许可证**：选择此项时，将对 VMware 组件使用您自己的许可证。
+* **我将提供许可证**：在这种情况下，将对 VMware 组件使用您自己的许可证。
 
 如果选择购买任何许可证（vSphere Enterprise Plus 和 vCenter Server 除外），并且订购了多个 ESXi 服务器，那么系统会自动代表您开具 {{site.data.keyword.cloud_notm}} 凭单以组合许可证密钥。您负责跟踪凭单以确保仅使用 DevOps 团队生成的许可证密钥。
 
@@ -92,7 +92,7 @@ lastupdated: "2018-07-20"
 
 表 2. 定制 {{site.data.keyword.baremetal_short}} 的选项
 
-|CPU 选项|RAM 选项|
+| CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB|
@@ -105,9 +105,9 @@ lastupdated: "2018-07-20"
 
 ### 裸机服务器的数量
 
-要添加到 vSphere 集群的 ESXi 服务器数。所有 ESXi 服务器共享相同的配置。
-* 如果选择了 VMware NSX 组件，那么至少需要 3 个服务器。
-* 如果选择了 VMware vSAN 组件，那么至少需要 4 个服务器。
+要添加到 vSphere 集群的 ESXi 服务器数。所有 ESXi 服务器的配置都相同。
+* 如果选择了 VMware NSX 组件，那么至少需要三个服务器。
+* 如果选择了 VMware vSAN 组件，那么至少需要四个服务器。
 
 ## 存储设置
 
@@ -136,7 +136,7 @@ lastupdated: "2018-07-20"
 
 ### 主机名前缀
 
-主机名用于所有裸机服务器订单。建议将主机名用于所有管理虚拟机，例如 vCenter Server、NSX 等。
+主机名用于所有裸机服务器订单。建议将主机名用于所有管理虚拟机，例如 vCenter Server 和 NSX。
 
 主机名前缀必须满足以下需求：
 * 名称必须以字母数字字符开头和结尾。
@@ -182,7 +182,7 @@ lastupdated: "2018-07-20"
 
 **重要信息：**
 * 确保所选 VLAN 上的防火墙配置不会阻止管理数据流量。
-* 确保选择的所有 VLAN 都在同一 pod 中，因为 ESXi 服务器不能在混合 pod VLAN 上进行供应。
+* 确保您选择的所有 VLAN 都在相同的 pod 上。在混合 pod VLAN 上无法供应 ESXi 服务器。
 
 #### FortiGate Physical Appliance 300 序列 HA 对
 
@@ -190,7 +190,7 @@ lastupdated: "2018-07-20"
 
 ## 订单摘要
 
-根据配置，估算成本会立即生成并显示在右侧的**订单摘要**窗格中。单击窗格底部的**定价详细信息**可生成提供估算详细信息的 PDF 文档。
+根据配置，估算成本会立即生成并显示在右侧的**订单摘要**窗格中。单击**定价详细信息**以生成提供估算详细信息的 PDF 文档。
 
 ## 过程
 
@@ -199,11 +199,10 @@ lastupdated: "2018-07-20"
    确保位于**新建**选项卡上，并且**集群配置**列表中显示了**新集群**。
 3. 输入集群名称。
 4. 选择 VMware 组件：
-  * 如果您是业务合作伙伴用户，请选择许可捆绑软件和其他任何可用的 VMware 组件。
-  * 如果您是非业务合作伙伴用户，请选择组件、版本（如果有）并指定许可选项。
-  选择对 VMware vSphere Enterprise Plus 使用自带许可证 (BYOL) 时，系统将代表您自动开具 {{site.data.keyword.cloud_notm}} 凭单，以请求将所订购 {{site.data.keyword.baremetal_short}} 的缺省 vSphere 许可证替换为您提供的许可证。   
+  * 如果您是 IBM 业务合作伙伴，请选择许可证捆绑软件和其他任何可用的 VMware 组件。
+  * 如果您是非业务合作伙伴，请选择组件、版本（如果有），并指定许可选项。选择对 VMware vSphere Enterprise Plus 使用自带许可证 (BYOL) 时，系统将代表您自动开具 {{site.data.keyword.cloud_notm}} 凭单，以请求将所订购 {{site.data.keyword.baremetal_short}} 的缺省 vSphere 许可证替换为您提供的许可证。   
 
-    **重要信息**：您负责跟踪凭单以确保替换新订购的 ESXi 服务器上的 vSphere 许可证，这样 {{site.data.keyword.cloud_notm}} 基础架构才可授权取消对初始提供的 {{site.data.keyword.cloud_notm}} 基础架构 vSphere 许可证收费。要替换 ESXi vSphere 许可证，请参阅[为 ESXi 主机配置许可证设置](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}。
+    **重要信息**：您负责跟踪凭单以确保替换新订购的 ESXi 服务器上的 vSphere 许可证。这样 {{site.data.keyword.cloud_notm}} 基础架构就会授权取消对初始提供的 {{site.data.keyword.cloud_notm}} 基础架构 vSphere 许可证收费。要替换 ESXi vSphere 许可证，请参阅[为 ESXi 主机配置许可证设置](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}。
 
 5. 完成裸机服务器设置：
    1. 选择要托管集群的 {{site.data.keyword.CloudDataCent_notm}}。
@@ -212,7 +211,7 @@ lastupdated: "2018-07-20"
 6. 如果选择的是 **VMware vSAN** 组件，请通过选择 **vSAN 容量磁盘的磁盘类型和大小**以及 **vSAN 容量磁盘数**，以完成 vSAN 存储设置。
 7. 完成网络接口设置：
    1. 输入主机名前缀、子域标签和域名。
-   2. 选择要使用的网络接口：
+   2. 选择要使用的网络接口。
     * 如果要订购新的公用和专用 VLAN，请单击**订购新的 VLAN**。
     * 如果要复用可用的现有公用和专用 VLAN，请单击**选择现有 VLAN**，然后指定 VLAN 和（可选）子网。
     3. 指定是否应用 FortiGate Physical Appliance 300 系列 HA 对以确保云环境安全。  
