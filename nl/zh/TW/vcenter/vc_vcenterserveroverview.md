@@ -85,7 +85,7 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 
 已訂購下列虛擬伺服器實例 (VSI)：
 * IBM CloudBuilder 的 VSI，在完成實例部署之後會關閉它。
-* （適用於實例 2.2 版及更新版本）您可以選擇在管理叢集中部署單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或兩個高可用性 Microsoft Windows VM，以協助加強安全及穩健性。
+* （適用於實例 2.2 版及更新版本）您可以選擇在管理叢集中部署單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或兩部高可用性 Microsoft Windows VM，以協助加強安全及穩健性。
 * （適用於實例 1.9 版到 2.1 版）已部署並可查閱 Microsoft Windows Server VSI for Microsoft Active Directory (AD)（其充當已登錄主機及虛擬機器之實例的 DNS）。
 * （適用於實例 1.8 版及更舊版本）用於管理元件 Snapshot 型備份的 VSI，其在實例部署完成之後會保持運作。
 
@@ -114,7 +114,7 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6
-* 支援與服務費用（一個節點一個授權）
+* 支援與服務費用（一個節點一份授權）
 
 ## vCenter Server 擴充節點的技術規格
 

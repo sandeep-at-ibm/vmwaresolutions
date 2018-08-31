@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -48,7 +48,7 @@ lastupdated: "2018-07-19"
 
 已訂購下列 VSI（虛擬伺服器實例）：
 * IBM CloudBuilder 的 VSI，在完成實例部署之後會關閉它。
-* （適用於實例 2.3 版及更新版本）您可以選擇在管理叢集中部署單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或兩個高可用性 Microsoft Windows VM，以協助加強安全及穩健性。
+* （適用於實例 2.3 版及更新版本）您可以選擇在管理叢集中部署單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或兩部高可用性 Microsoft Windows VM，以協助加強安全及穩健性。
 * （適用於 2.2 版實例）已部署並可查閱 Microsoft Windows Server VSI for Microsoft Active Directory (AD)（其充當已登錄主機及虛擬機器之實例的 DNS）。
 
 ### 儲存空間
@@ -81,7 +81,7 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 
 ### 擴充節點的硬體
 
-一部具有 [VMware Federal on {{site.data.keyword.cloud_notm}} 實例的技術規格](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中所呈現之配置的 Bare Metal Server。
+一部具有 [VMware Federal on {{site.data.keyword.cloud_notm}} 實例的技術規格](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中所呈現之配置的 Bare Metal Server。
 
 ### 擴充節點的授權與費用
 

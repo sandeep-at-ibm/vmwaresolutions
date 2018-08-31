@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-07"
 
 ---
 
@@ -63,7 +63,7 @@ lastupdated: "2018-07-19"
    * 新增 ESXi 伺服器時。
    * 新增叢集時。
 
-5. 若要升級 NSX 授權，請按一下**升級授權**。選取您要升級至的版本，然後按一下**升級**。授權版本降級不可行。
+5. 若要升級 NSX 授權，請按一下**升級**。在**升級 NSX 授權版本**視窗中，選取您要升級至的版本，然後按一下**升級**。授權版本降級不可行。
 
    **附註：**授權升級會取代實例上的所有現有 NSX 授權。如果您在計費週期中途進行升級，則可能因為新舊授權重疊而產生其他費用。為了避免產生其他費用，建議在計費週期結束時升級授權。
 
@@ -75,6 +75,8 @@ lastupdated: "2018-07-19"
 ## 升級至 vCenter Server with Hybridity Bundle 實例
 
 在授權升級至 Hybridity Bundle 期間，如果您的 vCenter Server 實例目前使用 VMware NSX Base 版本，則會自動升級至 VMware NSX Advanced 版本。
+
+**附註：**如果您升級至 Hybridity Bundle，而且 vCenter Server 實例已有 NFS 檔案儲存空間，則不會向您收取 VMware vSAN 儲存空間的費用。會向您收取 vSAN 授權的費用，因為它包括在 Hybridity Bundle 中。
 
 完成下列步驟，以將 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle。
 

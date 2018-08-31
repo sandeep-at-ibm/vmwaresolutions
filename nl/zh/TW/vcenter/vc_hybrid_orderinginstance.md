@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -77,7 +77,7 @@ vSAN 配置的起始叢集及後置部署叢集需要四部 ESXi 伺服器。所
 
 表 2. 自訂 {{site.data.keyword.baremetal_short}} 的選項
 
-|CPU 選項           |RAM 選項          |
+| CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon E5-2620 v4 /總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2650 v4 /總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
@@ -153,7 +153,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。訂購
 
 **重要事項：**如果您將實例配置為使用兩部 Microsoft Windows VM，則必須提供兩個 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及（或）Microsoft Windows Server 2012 R2 Datacenter 版本授權。
 
-每一個授權都只能指派給一部單一實體伺服器，且最多涵蓋兩個實體處理器。以一個 Standard 版本授權而言，每一部雙處理器伺服器都可以執行兩部虛擬化 Microsoft Windows VM。因此，必須有兩個授權，因為兩部 Microsoft Windows VM 部署在兩部不同的主機中。
+每一份授權都只能指派給一部單一實體伺服器，且最多涵蓋兩個實體處理器。以一份 Standard 版本授權而言，每一部雙處理器伺服器都可以執行兩部虛擬化 Microsoft Windows VM。因此，必須有兩份授權，因為兩部 Microsoft Windows VM 部署在兩部不同的主機中。
 
 您有 30 天的時間可啟動 VM。
 

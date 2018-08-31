@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -44,7 +44,7 @@ lastupdated: "2018-07-20"
 
 表 1. 自訂 {{site.data.keyword.baremetal_short}} 的選項
 
-|CPU 選項           |RAM 選項          |
+| CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon E5-2620 v4 /總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2650 v4 /總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
@@ -109,7 +109,7 @@ lastupdated: "2018-07-20"
 
 ## 將叢集新增至 VMware Federal 實例的程序
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_full}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
 2. 在 **vCenter Server 實例**表格中，按一下您要新增叢集的實例。
 
    **附註**：請確定實例處於**備妥使用**狀態。否則，您無法將叢集新增至實例。

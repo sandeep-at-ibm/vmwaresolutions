@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-08"
 
 ---
 
@@ -26,7 +26,9 @@ lastupdated: "2018-07-31"
 
 **重要事項**：若要防止中斷及連線問題，如果您變更此使用者帳戶的使用者 ID、密碼或密碼有效期限設定，則請確定您也更新相關聯服務中的資訊。
 
-此帳戶的使用者 ID 格式為 `<service_name>-<service_uuid>@VSPHERE.LOCAL`。例如，Veeam on {{site.data.keyword.cloud_notm}} 服務用來連接至 vCenter Server 以執行排定備份的使用者 ID 為 `Veeam-<Veeam_uuid>@VSPHERE.LOCAL`。
+此帳戶的使用者 ID 格式為 `<service_name>-<truncated service_uuid>@test.local` 或 `<service_name>-<truncated service_uuid>@example-domain.local`。例如，Veeam on {{site.data.keyword.cloud_notm}} 服務用來連接至 vCenter Server 以執行排定備份的使用者 ID 為 `Veeam-<Veeam_uuid>@test.local`。
+
+**附註**：`<service_name>` 與 `<service_uuid>` 一起使用會截斷為 20 個字元。
 
 ## vCenter Server 實例的 VMware 資源（第 1.9 版以及更新版本）
 
