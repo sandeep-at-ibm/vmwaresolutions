@@ -52,9 +52,9 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 Fo
 * 當您將 FortiGate Virtual Appliance 的 HA 配對部署至實例時，已在「管理 NSX Edge Services 閘道 (ESG)」上定義 SNAT 及防火牆規則以及 FortiGate Virtual Appliance 上的靜態路徑，以容許從實例到公用網路的出埠 HTTPS 通訊來啟動授權，以及取得最新安全原則及內容。
 * 您無法在安裝服務之後變更授權層次。若要變更授權層次，您必須移除現有服務，然後選取不同的授權選項來重新安裝服務。
 * 您必須符合下列需求，才能避免 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 失敗：
-   * 至少有兩部作用中 ESXi 伺服器，可使用在個別伺服器上保留 VM 的反親緣性規則來部署兩個 FortiGate VM。
-   * 兩部作用中 ESXi 伺服器具有足夠的可用資源，因此，可以在具有 100% CPU 及 RAM 保留的每一部 ESXi 伺服器上管理一個 FortiGate VM。
-   * VMware vSphere HA 具有足夠的資源，可管理兩個具有 100% CPU 及 RAM 的 FortiGate VM。
+   * 至少有兩部作用中 ESXi 伺服器，可使用在個別伺服器上保留 VM 的反親緣性規則來部署兩部 FortiGate VM。
+   * 兩部作用中 ESXi 伺服器具有足夠的可用資源，因此，可以在具有 100% CPU 及 RAM 保留的每一部 ESXi 伺服器上管理一部 FortiGate VM。
+   * VMware vSphere HA 具有足夠的資源，可管理兩部具有 100% CPU 及 RAM 的 FortiGate VM。
 
   基於這些需求，您必須仔細規劃 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 所需的空間。必要的話，在訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 之前，請將 1-2 部 ESXi 伺服器新增至實例，以及（或）減少 vSphere HA CPU 保留以進行失效接手。
 
@@ -68,13 +68,13 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 Fo
 
 兩部 FortiGate VM 總共有 33.6 GHz CPU 及 24 GB RAM。
 
-每一部 ESXi 伺服器都有「16 個核心 * 2.1 GHz = 33.6 GHz」的容量，因此，如果兩部伺服器都作用中，而且每部伺服器上都至少有 16.8 GHz 的 CPU 及 12 GB RAM 可用，則符合前兩個需求。
+每一部 ESXi 伺服器都有「16 個核心 * 2.1 GHz = 33.6 GHz」的容量，因此，如果兩部伺服器都作用中，而且每部伺服器上都至少有 16.8 GHz 的 CPU 及 12 GB RAM 可用，則符合前兩項需求。
 
 不過，依預設，在一開始部署 2 部 ESXi 伺服器的 vCenter Server 實例上，vSphere HA 會保留 50% 的 CPU 及 RAM 以進行失效接手，因此，我們只會有：
 
 `50% 的 2 * 16 個核心 * 2.1 GHz = 33.6 GHz 可用`
 
-因為使用這些資源的 ESXi 伺服器（例如，IBM CloudDriver、VMware NSX Controller 或 VMware NSX Edge）上有其他工作負載，所以我們無法滿足第三個需求。這是因為兩部 FortiGate VM 需要 33.6 GHz 的 CPU 及 24 GB RAM。
+因為使用這些資源的 ESXi 伺服器（例如，VMware vCenter Server、VMware NSX Controller 或 VMware NSX Edge）上有其他工作負載，所以我們無法滿足第三項需求。這是因為兩部 FortiGate VM 需要 33.6 GHz 的 CPU 及 24 GB RAM。
 
 在此情況下，FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 安裝可能會失敗，除非將至少一部 ESXi 伺服器新增至環境，並且適當地更新 vShpere HA 失效接手保留，以確保有足夠的資源可供兩部 FortiGate VM 使用。
 

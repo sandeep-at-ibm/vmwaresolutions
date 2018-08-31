@@ -12,7 +12,7 @@ lastupdated: "2018-07-19"
 
 順利安裝 FortiGate Security Appliance on {{site.data.keyword.cloud}} 服務之後，即可從 FortiGate 主控台管理及配置 FSA 的防火牆規則。
 
-**重要事項**：您必須確定已定義 FSA 防火牆規則為容許由管理元件（例如 IBM CloudDriver 虛擬機器或 Zerto Virtual Manager）起始的出埠 HTTPS（TCP 埠 443）通訊，以透過網際網路與 {{site.data.keyword.cloud_notm}} 基礎架構上的外部管理資料庫通訊。出埠 HTTPS（TCP 埠 443）通訊源自實例中管理服務「VMware NSX Edge Services 閘道 (ESG)」的公用 IP 位址。
+**重要事項**：您必須確定已定義 FSA 防火牆規則為容許由管理元件（例如 Zerto Virtual Manager）起始的出埠 HTTPS（TCP 埠 443）通訊，以透過網際網路與 {{site.data.keyword.cloud_notm}} 基礎架構上的外部管理資料庫通訊。出埠 HTTPS（TCP 埠 443）通訊源自實例中管理服務「VMware NSX Edge Services 閘道 (ESG)」的公用 IP 位址。
 
 ## 存取 FortiGate 300 系列主控台
 

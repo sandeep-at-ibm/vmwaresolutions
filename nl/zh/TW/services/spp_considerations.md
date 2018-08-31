@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,7 +33,7 @@ lastupdated: "2018-07-27"
    * 370 GB 磁碟
 * 執行 IBM Spectrum Protect Plus vSnap 伺服器及 VADP Proxy 的次要 VM
    * OS：Linux 3.10.0-693.11.1.el7.x86_64
-   * 根據選取的儲存空間大小及 [IBM Spectrum Protect Plus 藍圖](https://www.ibm.com/developerworks/community/wikis/homelang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)大小指引所配置的 CPU 及 RAM
+   * 根據選取的儲存空間大小及 [IBM Spectrum Protect Plus 藍圖](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)大小指引所配置的 CPU 及 RAM
    * 150 GB 磁碟
 
 ### 用於備份的儲存空間
@@ -55,7 +55,7 @@ lastupdated: "2018-07-27"
 
 ### 授權及費用
 
-* IBM Spectrum Protect Plus（10 到最多 1000 個 VM 授權，增量為 10）
+* IBM Spectrum Protect Plus（10 到最多 1000 份 VM 授權，增量為 10）
 * 透過 {{site.data.keyword.vmwaresolutions_short}} 主控台或當作 BYOL 所提供的 IBM Spectrum Protect Plus 授權（VM 數目，10 個套件）
 
 ## 安裝 IBM Spectrum Protect Plus on IBM Cloud 時的考量

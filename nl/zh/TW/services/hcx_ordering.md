@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -40,8 +40,8 @@ lastupdated: "2018-07-20"
 自動部署 HCX on {{site.data.keyword.cloud_notm}}。不論您要訂購包含此服務的 vCenter Server with Hybridity Bundle 實例，還是稍後將服務部署至實例，下列步驟都會透過 {{site.data.keyword.vmwaresolutions_short}} 自動化處理程序完成：
 1. 從 {{site.data.keyword.cloud_notm}} 基礎架構訂購三個 HCX 的子網路：
    * 一個專用可攜式子網路，以進行 HCX 管理。
-   * 一個專用可攜式子網路，以進行 HCX 交互連接（如果針對 **HCX 交互連接類型**選取**專用網路**）。
-   * 一個公用可攜式子網路，以進行 HCX 交互連接（如果針對 **HCX 交互連接類型**選取**公用網路**）。這個子網路也用於使用 VMware 啟動及維護。
+   * 一個專用可攜式子網路，以進行 HCX 交互連接。針對 **HCX 交互連接類型**選取**專用網路**選項時，會使用此子網路。
+   * 一個公用可攜式子網路，以使用 VMware 啟動及維護。如果針對 **HCX 交互連接類型**選取**公用網路**選項，則此子網路也用於 HCX 交互連接。
 
    **重要事項：**針對 HCX 訂購之子網路中的 IP 位址，是要供 VMware on {{site.data.keyword.cloud_notm}} 自動化進行管理。這些 IP 位址無法指派給您建立的 VMware 資源（例如 VM 及 NSX Edge）。如果您需要 VMware 構件的其他 IP 位址，則必須從 {{site.data.keyword.cloud_notm}} 訂購自己的子網路。
 2. 如果已針對 **HCX 交互連接類型**選取了**專用網路**，即會在專用「分散式虛擬交換器 (DVS)」上建立一個名為 **SDDC-DPortGroup-HCX-Private** 的埠群組。
