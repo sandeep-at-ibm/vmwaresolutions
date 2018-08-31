@@ -33,7 +33,7 @@ lastupdated: "2018-07-17"
 
 每個 Cloud Foundation 實例都是以 4 主機部署開始，而且根據選擇的儲存空間解決方案，每個 vCenter Server 實例都是以 3 或 4 主機部署開始。
 
-實體主機採用兩個要配置給 vSphere ESXi Hypervisor 的本端連接磁碟。您可以使用 vSAN（如本頁的_實體儲存空間設計_ 小節所述）或使用 NetApp ONTAP（如 [NetApp ONTAP Select 架構](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)所述）來配置額外的磁碟。每個實體主機都具有備用 10 Gbps 網路連線，以進行公用及專用網路存取。
+實體主機採用兩個要配置給 vSphere ESXi Hypervisor 的本端連接磁碟。您可以使用 vSAN（如本頁的_實體儲存空間設計_ 小節所述）或使用 NetApp ONTAP（如 [NetApp ONTAP Select 架構](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)所述）來配置額外的磁碟。每部實體主機都具有備用 10 Gbps 網路連線，以進行公用及專用網路存取。
 
 Bare Metal Server 的技術規格如下：
 * CPU：雙 Intel Xeon，各種核心及速度配置
@@ -89,7 +89,7 @@ Bare Metal Server 的技術規格如下：
 
 ### 實體主機連線
 
-此設計中的每個實體主機都會有兩個備用成對 10Gbps 乙太網路連線，以連接至每個 {{site.data.keyword.cloud_notm}} Top of Rack (ToR) 交換器（公用及專用）。配接卡會設定為共 4 × 10Gbps 連線的個別連線（未結合）。這可讓網路介面卡 (NIC) 連線彼此獨立運作。
+此設計中的每部實體主機都會有兩個備用成對 10Gbps 乙太網路連線，以連接至每台 {{site.data.keyword.cloud_notm}} Top of Rack (ToR) 交換器（公用及專用）。配接卡會設定為共 4 × 10Gbps 連線的個別連線（未結合）。這可讓網路介面卡 (NIC) 連線彼此獨立運作。
 
 圖 1. 實體主機 NIC 連線
 
@@ -104,7 +104,7 @@ Bare Metal Server 的技術規格如下：
 專用網路由此設計內的兩個 VLAN 組成。會將三個子網路配置給這些 VLAN 中的第一個 VLAN（這裡為指定的「專用 VLAN A」）：
 * 第一個子網路是 {{site.data.keyword.cloud_notm}} 指派給實體主機的主要專用 IP 子網路範圍。
 * 第二個子網路用於管理虛擬機器（例如 vCenter Server Appliance 及 Platform Services Controller）
-* 第三個子網路用於透過 VMware NSX Manager 指派給每個主機的「VXLAN 通道端點 (VTEP)」。
+* 第三個子網路用於透過 VMware NSX Manager 指派給每部主機的「VXLAN 通道端點 (VTEP)」。
 
 除了「專用 VLAN A」之外，還有第二個專用 VLAN（這裡為指定的「專用 VLAN B」）可支援 VMware 特性（例如 vSAN 及 vMotion）以及連接至網路連接儲存空間 (NAS)。因此，VLAN 分為兩個或三個可攜式子網路。
 
