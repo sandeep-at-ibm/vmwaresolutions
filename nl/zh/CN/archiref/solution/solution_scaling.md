@@ -17,7 +17,7 @@ lastupdated: "2018-07-10"
 
 ## 添加更多站点
 
-{{site.data.keyword.vmwaresolutions_short}} 可以利用 {{site.data.keyword.cloud_notm}} 全球范围内的数据中心和集成网络主干，支持各种跨地理位置的用例部署并运行，所用时间只是从头开始构建此类基础架构所需时间的零头。
+{{site.data.keyword.vmwaresolutions_short}} 可以利用 {{site.data.keyword.cloud_notm}} 遍布全球的数据中心和集成网络主干，支持部署并运行各种跨地理位置的用例，所用时间只是从头开始构建此类基础架构所需时间的零头。
 
 在此设计中，多站点部署的定义由以下各项组成：
 * 初始或主 VMware 部署，包含要提供的新 DNS/AD 根域、子域、SSO 域和 SSO 站点名称。
