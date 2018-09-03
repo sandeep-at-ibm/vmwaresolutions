@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-08"
 
 ---
 
@@ -41,9 +41,8 @@ Revise as considerações a seguir antes de instalar o serviço FortiGate Securi
 * Se você quiser incluir o serviço FortiGate Security Appliance no {{site.data.keyword.cloud_notm}} em uma instância implementada, assegure-se de que não haja nenhum outro firewall da infraestrutura do {{site.data.keyword.cloud_notm}} já em vigor na VLAN pública da instância.
 * A instalação do serviço FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} inclui uma nova VLAN pública.
 * Durante a implementação do serviço, sua instância pode não ser capaz de acessar a internet temporariamente.
-* Depois que o serviço FortiGate Security Appliance no {{site.data.keyword.cloud_notm}} for instalado com êxito, será possível gerenciar e configurar regras de firewall para o FSA no console do FortiGate. Deve-se assegurar que as regras de firewall do FSA sejam definidas para permitir que as comunicações HTTPS de saída (TCP porta 443) iniciadas por componentes de gerenciamento, como a máquina virtual do IBM CloudDriver ou o Zerto Virtual Manager, comuniquem-se com o banco de dados de gerenciamento externo no {{site.data.keyword.cloud_notm}} pela Internet. As comunicações HTTPS de saída (porta TCP 443) se originam do endereço IP público do VMware NSX Edge Services Gateway (ESG) dos serviços de gerenciamento em sua instância.
-* Se você implementar um par de dispositivos do FortiGate Security Appliance como parte de uma nova instância, os dispositivos do FortiGate Security Appliance serão configurados para permitir apenas as comunicações de saída requeridas de sua instância para a rede pública e negar todas as outras comunicações.
-* Se você implementar um par de dispositivos do FortiGate Security Appliance como parte de uma instância existente, os dispositivos do FortiGate Security Appliance serão configurados com uma regra explícita para permitir todas as comunicações de gerenciamento de saída requeridas de sua instância para a rede pública. Além disso, os dispositivos do FortiGate Security Appliance serão configurados com uma regra adicional para permitir todas as outras comunicações de modo que o tráfego de aplicativo existente não seja interrompido. Deve-se gerenciar a configuração do FortiGate Security Appliance cuidadosamente para permitir apenas as comunicações necessárias e negar todas as outras comunicações.
+* Depois que o serviço FortiGate Security Appliance no {{site.data.keyword.cloud_notm}} for instalado com êxito, será possível gerenciar e configurar regras de firewall para o FSA no console do FortiGate. Deve-se assegurar que as regras de firewall do FSA sejam definidas para permitir que comunicações HTTPS (Porta TCP 443) de saída que são iniciadas pelos componentes de gerenciamento, como o Zerto Virtual Manager, se comuniquem com o banco de dados de gerenciamento externo no {{site.data.keyword.cloud_notm}} pela Internet. As comunicações HTTPS de saída (porta TCP 443) se originam do endereço IP público do VMware NSX Edge Services Gateway (ESG) dos serviços de gerenciamento em sua instância.
+* Deve-se gerenciar a configuração do FortiGate Security Appliance cuidadosamente para permitir apenas as comunicações necessárias e negar todas as outras comunicações.
 * Se você pedir clusters adicionais, as VLANs públicas para esses clusters recém-incluídos não terão o par de HA de dispositivos de segurança.
 
 ## Considerações ao remover o FortiGate Security Appliance no IBM Cloud

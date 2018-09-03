@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -44,7 +44,7 @@ O {{site.data.keyword.cloud_notm}}  fornece as seguintes opções de tamanho de 
 O modelo de licença para o FortiGate Virtual Appliance no {{site.data.keyword.cloud_notm}} oferece as seguintes opções:
 <dl class="dl">
         <dt class="dt dlterm">Standard FW</dt>
-        <dd class="dd">Esse pacote configurável inclui inspeção de pacote stateful, proteção de VLAN e criação de log avançada, regras de firewall de ingresso/egresso, término de VPN SSL/IPSec e suporte 24x7.</dd>
+        <dd class="dd">Este pacote inclui Inspeção de Pacote Stateful, Proteção de VLAN e Criação de Log Avançada, Regras de Firewall de Entrada/Saída, Rescisão de VPN SSL/IPSec e suporte contínuo.</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
         <dd class="dd">Esse pacote configurável inclui todos os serviços de firewall padrão, além de NGFW IPS e filtragem da web, antivírus e antispam, reputação de domínio e de IP e os principais serviços de segurança FortiCare.</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>

@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
 # Zerto on IBM Cloud Visão Geral
 
-O serviço Zerto on {{site.data.keyword.cloud}} fornece recursos de replicação e de recuperação de desastre, que podem ser integrados às ofertas de implementação para proteger e recuperar dados no ambiente virtual do VMware no {{site.data.keyword.cloud_notm}}.
+O serviço Zerto on {{site.data.keyword.cloud}} fornece recursos de replicação e de recuperação de desastre. Esses recursos podem ser integrados às ofertas de implementação para proteger e recuperar dados em seu ambiente virtual VMware no {{site.data.keyword.cloud_notm}}.
 
-## Considerações técnicas para o Zerto on IBM Cloud
+## Especificações técnicas para Zerto on IBM Cloud
 
 Os componentes a seguir são pedidos e incluídos no serviço Zerto on {{site.data.keyword.cloud_notm}}.
 

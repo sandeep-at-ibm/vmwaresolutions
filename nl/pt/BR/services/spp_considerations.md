@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -36,7 +36,7 @@ Os componentes a seguir são pedidos e incluídos no serviço IBM Spectrum Prote
    * 370 GB de disco
 * VM secundária executando o servidor IBM Spectrum Protect Plus vSnap e o proxy VADP
    * OS: Linux 3.10.0-693.11.1.el7.x86_64
-   * CPU e RAM configuradas com base no tamanho do armazenamento selecionado e na orientação de dimensionamento do [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/homelang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)
+   * CPU e RAM configuradas com base no tamanho do armazenamento selecionado e na orientação de dimensionamento do [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)
    * Disco de 150 GB
 
 ### Armazenamento para backups
@@ -78,7 +78,7 @@ VMware. Este parâmetro define o número máximo de montagens NFS em um servidor
 
 Revise as considerações a seguir antes de remover o serviço IBM Spectrum Protect Plus no {{site.data.keyword.cloud_notm}}:
 * Assegure-se de que todas as configurações da tarefa de backup sejam removidas e que não haja nenhuma operação ativa de backup ou restauração.
-* Quando você remove o serviço, o armazenamento para o repositório de backup é removido da VM do IBM Spectrum Protect Plus e a ordem de armazenamento é cancelada, o que exclui permanentemente os dados do repositório de backup.
+* Quando você remove o serviço, o armazenamento para o repositório de backup é removido da VM do IBM Spectrum Protect Plus e o pedido de armazenamento é cancelado, o que exclui os dados do repositório de backup permanentemente.
 * Quando você remove o serviço, o armazenamento de backup pedido para o serviço também é removido. Portanto, todos os backups se tornam inacessíveis durante a remoção do serviço.
 
 ### Links relacionados

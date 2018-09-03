@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -22,12 +22,9 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Role para a tabela **Instâncias do HCX no local** e clique em **Provisionar novo**.
-3. Especifique o **Nome da instância no local** e clique em **Avançar**.
-4. Verifique a configuração da instância antes de fazer o pedido.
-   1. Revise as configurações para a instância.
-   2. Revise o faturamento mensal da instância.
-   3. Clique no link ou nos links dos termos que se aplicam ao seu pedido e assegure-se de concordar com esses termos antes de pedir a instância.
-5. Clique em **Fazer pedido**.
+3. Especifique o  ** Nome da Instância no local **.
+4. Clique no link ou nos links dos termos que se aplicam ao seu pedido e assegure-se de concordar com esses termos antes de pedir a instância.
+5. Clique em **Provisão**.
 
 ## Resultados
 
