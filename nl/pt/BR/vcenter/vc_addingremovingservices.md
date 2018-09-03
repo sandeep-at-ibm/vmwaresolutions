@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -21,7 +21,7 @@ Tabela 1. Serviços disponíveis para instâncias do vCenter Server
 | Nome do Serviço | Disponibilidade | Suporte da instância |
 |----------------------------------------------------------------------------------------|------------------|
 | [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | Sim | V1.9 e mais recentes |
-| [ FortiGate Security Appliance on  {{site.data.keyword.cloud_notm}} (../services/fortinetvm_considerations.html) | Sim | V2.0 e mais recentes |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | Sim | V2.0 e mais recentes |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | Sim | V2.3 e mais recentes |
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | Sim | V2.3 e mais recentes |
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | Sim | V2.2 e mais recentes |

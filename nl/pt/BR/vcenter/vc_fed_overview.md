@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -81,7 +81,9 @@ Cada nó de expansão do vCenter Server implementará e incorrerá em encargos p
 
 ### Hardware para nós de expansão
 
-Um Bare Metal Server com a configuração apresentada em [Especificações técnicas para instâncias do VMware Federal on {{site.data.keyword.cloud_notm}}](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
+Um Bare Metal Server com a configuração apresentada em
+[Especificações técnicas para a instância do
+VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ### Licenças e taxas para os nós de expansão
 

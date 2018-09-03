@@ -86,7 +86,7 @@ Quando você implementar esse serviço, conclua as configurações a seguir:
 
 É possível pedir outros serviços de complemento para sua instância com base em suas necessidades, por exemplo, recuperação de desastre. Para obter mais informações, veja [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservices.html).
 
-## Considerações de capacidade
+## Considerações sobre capacidade
 
 Para obter informações e considerações de capacidade, consulte [Capacidade de ajuste de escala](../archiref/solution/solution_scaling.html).
 

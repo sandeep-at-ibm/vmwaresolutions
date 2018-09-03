@@ -73,7 +73,7 @@ Você é responsável por manter e assegurar a disponibilidade de todos os compo
 
 É possível pedir serviços complementares para a sua instância com base em suas necessidades, por exemplo, recuperação de desastre. Para obter mais informações, veja [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](vc_addingremovingservices.html).
 
-## Considerações de capacidade
+## Considerações sobre capacidade
 
 Para obter informações e considerações de capacidade, consulte [Capacidade de ajuste de escala](../archiref/solution/solution_scaling.html).
 

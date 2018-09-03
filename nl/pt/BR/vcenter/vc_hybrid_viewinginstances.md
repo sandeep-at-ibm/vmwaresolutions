@@ -27,13 +27,13 @@ Tabela 1. Itens de instância do VCenter Server with Hybridity Bundle
 | Versão | A versão de liberação na qual a instância foi implementada ou submetida a upgrade |  
 | Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada |  
 | Horário de criação | A data e hora em que a instância foi criada |  
-| Status | O status da instância |  
+| Barra de Status | O status da instância |  
 
 A instância pode ter um intervalo de status.
 
 Tabela 2. Descrições de status de instâncias do vCenter Server with Hybridity Bundle
 
-| Status        | Descrição       |
+| Barra de Status        | Descrição       |
 |:------------- |:------------- |
 | Criando | A instância está sendo criada. |
 | Construindo | A instância está sendo configurada. |

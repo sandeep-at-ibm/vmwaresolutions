@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-07"
 
 ---
 
@@ -46,7 +46,7 @@ Tabela 1. Atualize os níveis e o impacto
    * Quando novos servidores ESXi são incluídos.
    * Quando novos clusters são incluídos.
 
-5. Para upgrades de licenças, clique em **Fazer Upgrade de Licença**. Selecione a edição para a qual você deseja fazer upgrade na lista e clique em **Fazer upgrade**. Downgrades da edição da licença não estão disponíveis.
+5. Para upgrades de licença, clique em  ** Atualizar **. Selecione a edição para a qual você deseja fazer upgrade na lista e clique em **Fazer upgrade**. Downgrades da edição da licença não estão disponíveis.
 
    **Nota:** o upgrade de licença substitui todas as licenças NSX existentes na instância. Poderão incorrer encargos adicionais de uma sobreposição de licenças antigas e novas se você fizer upgrade no meio de um ciclo de faturamento. Para evitar encargos adicionais, recomenda-se fazer upgrade da licença no final do ciclo de faturamento.
 

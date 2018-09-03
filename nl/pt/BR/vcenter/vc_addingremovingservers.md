@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-07"
 
 ---
 
@@ -14,38 +14,58 @@ lastupdated: "2018-07-19"
 
 Se seu cluster inicial tiver vSAN como seu armazenamento, incluir um ou mais servidores ESXi após a implementação poderá aumentar a capacidade de armazenamento do cluster.
 
-## Antes de iniciar
+## Incluindo servidores ESXi em instâncias do vCenter Server
 
-* Não inclua nem remova servidores do ESXi do VMware vSphere Web Client. As mudanças feitas no vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_full}}.
+### Antes de Incluir Servidores ESXi
+
+* Não inclua servidores ESXi do Web client do VMware vSphere. As mudanças feitas no vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_full}}.
 * Uma instância do vCenter Server com armazenamento NFS deve ter pelo menos 2 servidores ESXi. Para instâncias que são implementadas na V2.1 ou mais recente, é possível expandir o cluster padrão para ter até 51 servidores ESXi. Cada um dos clusters não padrão pode ser expandido para ter até 59 servidores ESXi.
 * Uma instância do vCenter Server com armazenamento vSAN deve ter pelo menos 4 servidores ESXi.
-* Antes de remover servidores do ESXi com o serviço F5 on {{site.data.keyword.cloud_notm}} ou o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalado, deve-se migrar as VMs do F5 BIG-IP e do FortiGate para um servidor do ESXi diferente daquele que está atualmente hospedando as VMs.
-* Antes de remover servidores ESXi com o serviço IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} instalado, assegure-se de que não haja nenhuma operação ativa (com falha ou em andamento) de backup ou restauração, porque essas operações ativas podem impedir que os servidores ESXi sejam removidos.
-* Quando você remover servidores ESXi, os servidores serão colocados no modo de manutenção e depois disso, todas as máquinas virtuais (VMs) em execução nos servidores serão migradas antes de serem removidas do vCenter Server. Para obter o máximo de controle sobre a realocação de VMs, é recomendável colocar os servidores ESXi a serem removidos no modo de manutenção e migrar as VMs em execução neles manualmente usando o VMware vSphere Web Client. Depois disso, remova os servidores ESXi usando o console do {{site.data.keyword.vmwaresolutions_short}}.
 * Para instâncias do vCenter Server que foram implementadas na V2.0 ou anterior, é possível expandir cada cluster para ter até 32 servidores ESXi. O número de {{site.data.keyword.baremetal_short}} que pode ser incluído de cada vez é o seguinte:
    * Para as configurações **Pequeno**, **Médio** e **Grande**, é possível incluir de 1 a 10 servidores ESXi de cada vez.
    * Para a configuração **Customizado**, é possível incluir de 1 a 20 servidores ESXi de cada vez. Para obter mais informações sobre o mínimo de servidores ESXi, veja [Uma instância do vCenter Server com dois nós é altamente disponível?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
-## Procedimento
+## Procedimento para Incluir Servidores ESXi
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
-2. Na tabela **Instâncias do vCenter Server**, clique na instância da qual você deseja expandir ou contrair a capacidade.
+2. Na tabela **Instâncias do vCenter Server**, clique na instância para a qual você deseja expandir a capacidade.
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda.
-4. Na tabela **CLUSTERS**, clique no cluster no qual você deseja incluir servidores do ESXi ou do qual você deseja remover servidores do ESXi.
-5. Para incluir servidores ESXi, conclua as etapas a seguir:
-   1. Na seção **Servidores ESXi**, clique em **Incluir**.
-   2. Na janela **Incluir servidor**, insira o número de servidores que deseja incluir, revise o custo estimado e, em seguida, clique em **Incluir**.
-6. Para remover servidores ESXi, selecione os servidores que deseja remover na seção **Servidores ESXi** e, em seguida, clique em **Remover**.
+4. Na tabela **CLUSTERS**, clique no cluster no qual você deseja incluir servidores ESXi.
+5. Na seção **Servidores ESXi**, clique em **Incluir**.
+6. Na janela **Incluir servidor**, insira o número de servidores que deseja incluir, revise o custo estimado e, em seguida, clique em **Incluir**.
 
-## Resultados
+### Resultados após a inclusão de servidores ESXi
 
-Depois de iniciar a operação de inclusão ou remoção é possível que haja um pequeno atraso no status da instância enquanto ela muda de **Pronta para usar** para **Modificando**. Permita que a operação seja totalmente concluída antes de fazer mudanças adicionais na instância.
+1. Você pode ter um pequeno atraso no console enquanto o status da instância é mudado de **Pronto para o uso** para **Modificando**. Permita que a operação seja totalmente concluída antes de fazer mudanças adicionais na instância.
+2. Você é notificado por e-mail de que sua solicitação para incluir servidores ESXi está sendo processada. No console, o status do cluster associado aos servidores ESXi é mudado para **Modificando**.
+3. Se não vir os novos servidores ESXi incluídos na lista no cluster, verifique as notificações por e-mail ou do console para localizar mais detalhes sobre a falha.
 
-Você será notificado por e-mail que sua solicitação para incluir ou remover servidores ESXi está sendo processada. O status do cluster associado aos servidores ESXi é mudado para **Modificando**. Quando você remover servidores, observe que os servidores ESXi serão totalmente recuperados pela infraestrutura do {{site.data.keyword.cloud_notm}} no término do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}}, que geralmente é de 30 dias.
+## Removendo servidores ESXi de instâncias do vCenter Server
 
-**Atenção:** você será cobrado até o fim do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}} pelos servidores ESXi removidos.
+### Antes de remover servidores ESXi
 
-Se não vir os novos servidores ESXi incluídos na lista no cluster, verifique as notificações por e-mail ou do console para localizar mais detalhes sobre a falha.
+* Não remova servidores ESXi do Web client do VMware vSphere. As mudanças feitas no vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_full}}.
+* Uma instância do vCenter Server com armazenamento NFS deve ter pelo menos 2 servidores ESXi e uma instância do vCenter Server com armazenamento vSAN
+deve ter pelo menos 4 servidores ESXi.
+* Antes de remover servidores do ESXi com o serviço F5 on {{site.data.keyword.cloud_notm}} ou o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalado, deve-se migrar as VMs do F5 BIG-IP e do FortiGate para um servidor do ESXi diferente daquele que está atualmente hospedando as VMs.
+* Antes de remover servidores ESXi com o serviço IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} instalado, assegure-se de que não haja nenhuma operação ativa (com falha ou em andamento) de backup ou restauração, porque essas operações ativas podem impedir que os servidores ESXi sejam removidos.
+* Quando você remover servidores ESXi, os servidores serão colocados no modo de manutenção e depois disso, todas as máquinas virtuais (VMs) em execução nos servidores serão migradas antes de serem removidas do vCenter Server. Para obter o máximo de controle sobre a realocação de VMs, é recomendável colocar os servidores ESXi a serem removidos no modo de manutenção e migrar as VMs em execução neles manualmente usando o VMware vSphere Web Client. Depois disso, remova os servidores ESXi usando o console do {{site.data.keyword.vmwaresolutions_short}}.
+
+## Procedimento para remover servidores ESXi
+
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+2. Na tabela **Instâncias do vCenter Server**, clique na instância para a qual você deseja contratar a capacidade.
+3. Clique em **Infraestrutura** na área de janela de navegação esquerda.
+4. Na tabela **CLUSTERS**, clique no cluster do qual você deseja remover servidores ESXi.
+5. Na seção **Servidores ESXi**, selecione os servidores que você deseja remover e clique em **Remover**.
+
+### Resultados após a remoção de servidores ESXi
+
+1. Você pode ter um pequeno atraso no console quando o status da instância muda de **Pronto para uso** para **Modificando**. Permita que a operação seja totalmente concluída antes de fazer mudanças adicionais na instância.
+2. Você é notificado por e-mail de que sua solicitação para remover servidores ESXi está sendo processada. No console, o status do cluster associado aos servidores ESXi é mudado para **Modificando**.
+3. Os servidores ESXi são totalmente recuperados pela infraestrutura do {{site.data.keyword.cloud_notm}} no final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}}, que é tipicamente de 30 dias.
+
+   **Atenção**: você será cobrado até o final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}} para os servidores ESXi removidos.
 
 ### Links relacionados
 

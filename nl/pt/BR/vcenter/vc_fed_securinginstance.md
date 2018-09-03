@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -18,7 +18,6 @@ Revise as informações a seguir para entender os resultados de proteger sua ins
 
 * Registre e salve as credenciais que você pode precisar para o seu ambiente antes de concluir este procedimento. Todas as credenciais para seu ambiente foram apagadas do banco de dados do {{site.data.keyword.vmwaresolutions_full}} e não podem ser recuperadas após a ação segura ser chamada.
 * Com exceção de uma exclusão completa da instância, todas as funções de gerenciamento são desativadas após a ação segura ser chamada.
-* O VMware NSX Edge Services Gateway (ESG) para o tráfego de gerenciamento HTTPS de saída e a máquina virtual do IBM CloudDriver são excluídos como parte da ação para proteger a instância do VMware Federal implementada.
 
 ## Procedimento
 
@@ -28,7 +27,10 @@ Revise as informações a seguir para entender os resultados de proteger sua ins
 4. Clique em **Proteger instância**.
 5. Clique em **OK** para confirmar que você deseja desconectar a instância da automação.
 
-   **Nota**: antes de concluir esta etapa, assegure-se de que você tenha revisado as informações na seção **Antes de iniciar**.
+  **Nota**: antes de concluir esta etapa, assegure-se de que você tenha revisado as informações na seção **Antes de iniciar**.
+
+6. Remova o serviço de gerenciamento público de serviços de gerenciamento VMware NSX Edge Services Gateway (ESG) de seu ambiente e, opcionalmente, remova o ESG gerenciado pelo cliente que é implementado durante a automação.
+7. Reconfigure senhas ou chaves para todas as contas usadas pela automação IBM. Para obter informações adicionais, consulte [Como posso proteger meu ambiente para remover o acesso pela automação e suporte IBM?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/).
 
 ## Resultados
 
