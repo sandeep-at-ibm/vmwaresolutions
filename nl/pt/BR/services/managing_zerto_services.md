@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
 # Solicitando serviços gerenciados para Zerto on IBM Cloud
 
-O serviço Zerto on {{site.data.keyword.cloud}} fornece recursos de replicação e de recuperação de desastre, que podem ser integrados às ofertas de implementação para proteger e recuperar dados no ambiente virtual do VMware no {{site.data.keyword.cloud_notm}}.
+O serviço Zerto on {{site.data.keyword.cloud}} fornece recursos de replicação e de recuperação de desastre. Esses recursos podem ser integrados às ofertas de implementação para proteger e recuperar dados em seu ambiente virtual VMware no {{site.data.keyword.cloud_notm}}.
 
 Quando você solicita serviços gerenciados para Zerto on {{site.data.keyword.cloud_notm}}, um ambiente de recuperação de desastre (DR) totalmente gerenciado pode ser implementado usando o software Zerto DR e o IBM Resiliency Services.
 
@@ -18,9 +18,9 @@ Os modelos a seguir para serviços gerenciados para Zerto on {{site.data.keyword
 
 ## IBM Orchestrated Managed Services para Zerto
 
-Esse modelo será adequado se você estiver usando a oferta do Zerto on {{site.data.keyword.cloud_notm}}.
+Este modelo é adequado se você estiver usando a oferta Zerto on {{site.data.keyword.cloud_notm}}.
 
-Nesse modelo, o serviço {{site.data.keyword.cloud_notm}} Resiliency Orchestration é fornecido para o Zerto on {{site.data.keyword.cloud_notm}}. Esse modelo permite a proteção contínua de máquinas virtuais, sistemas operacionais e dados no {{site.data.keyword.cloud_notm}}, com teste de DR ininterrupto, visibilidade RTO/RPO (Objetivo do tempo de recuperação/Objetivo do ponto de recuperação), recurso de failover e failback.
+Nesse modelo, o serviço {{site.data.keyword.cloud_notm}} Resiliency Orchestration é fornecido para o Zerto on {{site.data.keyword.cloud_notm}}. Esse modelo pode proteger continuamente as máquinas virtuais, sistemas operacionais e dados no {{site.data.keyword.cloud_notm}}, com teste de DR ininterrupto, visibilidade de RTO/RPO (Objetivo de Tempo de Recuperação/Objetivo do Ponto de Recuperação), capacidade de failover e de failback.
 
 Todas as funções são gerenciadas por meio do painel do {{site.data.keyword.cloud_notm}} Resiliency Orchestration pelo IBM Resiliency Services Global Command Center.
 

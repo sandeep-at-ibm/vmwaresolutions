@@ -36,7 +36,7 @@ Quando você inclui ou remove servidores ESXi para o cluster primário de sua in
 
 ### Links relacionados
 
-* [Visão geral do Zerto on {{site.data.keyword.cloud_notm}}](addingzertodr.html)
+* [ Zerto on  {{site.data.keyword.cloud_notm}}  visão geral ](addingzertodr.html)
 * [Solicitando serviços gerenciados para o Zerto on {{site.data.keyword.cloud_notm}}](managing_zerto_services.html)
 * [Website zerto.com](https://www.zerto.com){:new_window}
 * [Documentação técnica do Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

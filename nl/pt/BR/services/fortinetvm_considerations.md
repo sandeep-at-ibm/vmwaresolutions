@@ -77,7 +77,7 @@ Por padrão, no entanto, o vSphere HA reserva 50% de CPU e de RAM para failover 
 
 `50% de 2 * 16 núcleos * 2,1 GHz = 33,6 GHz disponível`
 
-Como existem outras cargas de trabalho nos servidores ESXi, por exemplo, o IBM CloudDriver, o VMware NSX Controller ou o VMware NSX Edge, usando esses recursos, o terceiro requisito não é atendido. Isso porque precisamos de 33.6 GHz de CPU e 24 GB de RAM
+Como existem outras cargas de trabalho nos servidores ESXi, por exemplo, o VMware vCenter Server, o VMware NSX Controller ou o VMware NSX Edge, usando esses recursos, o terceiro requisito não é atendido. Isso porque precisamos de 33.6 GHz de CPU e 24 GB de RAM
 para as duas VMs FortiGate.
 
 Nesse caso, a instalação do FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} pode falhar, a menos que pelo

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -40,8 +40,8 @@ Para instalar o HCX on {{site.data.keyword.cloud_notm}}, conclua as configuraç�
 A implementação do HCX no {{site.data.keyword.cloud_notm}} é automatizada. Quer você peça uma instância do vCenter Server with Hybridity Bundle com o serviço incluído, quer implemente o serviço posteriormente em sua instância, as etapas a seguir são concluídas pelo processo de automação do {{site.data.keyword.vmwaresolutions_short}}:
 1. Três sub-redes são pedidas para o HCX por meio da infraestrutura do {{site.data.keyword.cloud_notm}}:
    * Uma sub-rede móvel privada para gerenciamento do HCX.
-   * Uma sub-rede móvel privada para interconexões do HCX se **Rede privada** é selecionado para **Tipo de interconexão do HCX**.
-   * Uma sub-rede móvel pública para interconexões do HCX se **Rede pública** é selecionado para **Tipo de interconexão do HCX**. Essa sub-rede também é usada para ativação e manutenção com o VMware.
+   * Uma sub-rede portátil privada para interconexões HCX. Essa sub-rede é usada quando a opção **Rede privada** é selecionada para o **Tipo de interconexão HCX**.
+   * Uma sub-rede portátil pública para ativação e manutenção com o VMware. Se a opção **Rede pública** estiver selecionada para o **Tipo de interconexão HCX**, essa sub-rede também será usada para interconexões HCX.
 
    **Importante:** os endereços IP nas sub-redes ordenados para HCX devem ser gerenciados pelo VMware na automação do {{site.data.keyword.cloud_notm}}. Esses endereços IP não podem ser designados a recursos do VMware, como VMs e NSX Edges, que são criados por você. Se você precisar de endereços IP adicionais para seus artefatos do VMware, deverá pedir suas próprias sub-redes do {{site.data.keyword.cloud_notm}}.
 2. Se a **Rede privada** foi selecionada para o **Tipo de interconexão HCX**, um

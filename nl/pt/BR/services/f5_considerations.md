@@ -88,7 +88,7 @@ Por padrão, no entanto, o vSphere HA reserva 50% de CPU e de RAM para failover 
 
 `50% de 2 * 16 núcleos * 2,1 GHz = 33,6 GHz disponível`
 
-Como haverá outras cargas de trabalho presentes nos servidores ESXi, por exemplo, IBM CloudDriver, VMware NSX Controller, VMware NSX Edge, usando esses recursos, não poderemos atender ao terceiro requisito, pois precisamos de 33,6 GHz de CPU e 32 GB de RAM para as duas VMs do BIG-IP.
+Como haverá outras cargas de trabalho presentes nos servidores ESXi, por exemplo, VMware vCenter Server, VMware NSX Controller, VMware NSX Edge, usando esses recursos, não podemos satisfazer o terceiro requisito, porque precisamos de 33,6 GHz de CPU e 32 GB de RAM para as duas VMs do BIG-IP.
 
 Nesse caso, o F5 na instalação do {{site.data.keyword.cloud_notm}} pode falhar, a menos que pelo menos um servidor ESXi seja incluído no ambiente e que as reservas de failover do vShpere HA sejam corretamente atualizadas para assegurar que haja recursos suficientes para as duas VMs do BIG-IP VE. Se recursos adicionais forem necessários para executar o F5 no serviço {{site.data.keyword.cloud_notm}}, será possível incluir mais servidores ESXi antes de instalar o F5 no {{site.data.keyword.cloud_notm}}.
 
