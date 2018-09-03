@@ -46,7 +46,7 @@ A Tabela 2 lista os recursos disponíveis para as edições **Advanced** e **Ent
 
 Tabela 2. Gráfico de comparação de edição do VMware vSAN
 
-| Recurso do vSAN                                 | Avançado | Corporativo |
+| Recurso do vSAN                                    | Avançado | Corporativo |
 |-------------------------------------------------|----------|------------|
 | Gerenciamento baseado em política de armazenamento                 | •        | •          |
 | Atualização do cache de leitura / gravação                        | •        | •          |
@@ -57,7 +57,7 @@ Tabela 2. Gráfico de comparação de edição do VMware vSAN
 | Soma de verificação de                               | •        | •          |
 | Hardware All-Flash                              | •        | •          |
 | Serviço de Destino iSCSI                            | •        | •          |
-| Limite de IOPS                                  | •        | •          |
+| Limite de IOPS                                      | •        | •          |
 | Desduplicação e compactação                   | •        | •          |
 | RAID-5/6 erasure codificação                         | •        | •          |
 | Criptografia de dados em repouso                         |          | •          |

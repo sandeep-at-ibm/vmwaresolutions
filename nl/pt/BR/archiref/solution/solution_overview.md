@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -25,9 +25,11 @@ Figura 1. Visão geral do VMware on {{site.data.keyword.cloud_notm}}
 
 ## Principais benefícios
 
-O VMware Cloud Foundation e o vCenter Server on {{site.data.keyword.cloud_notm}} fornecem os blocos de construção fundamentais, que incluem o VMware vSphere, vCenter Server, NSX e opções de armazenamento compartilhado incluindo o vSAN, que são necessários para arquitetar flexivelmente uma solução de data center definida pelo software VMware que melhor se ajusta às suas cargas de trabalho. Aplicando a automação avançada e a infraestrutura bare metal de único locatário, é possível implementar rapidamente o ambiente do VMware inteiro no {{site.data.keyword.cloud_notm}} e acessar seu ambiente virtual com suas ferramentas favoritas em uma questão de horas. Neste momento, é possível acessar e gerenciar o ambiente hospedado pela IBM por meio dos clientes nativos do VMware, da Interface da Linha de Comandos (CLI), dos scripts existentes ou de outras ferramentas familiares compatíveis com a API do vSphere.
+O VMware Cloud Foundation e o vCenter Server on {{site.data.keyword.cloud_notm}} fornecem os blocos de construção fundamentais, o que inclui VMware vSphere, vCenter Server, NSX e opções de armazenamento compartilhado, incluindo vSAN. Esses componentes são necessários para arquitetar flexivelmente uma solução de data center definida pelo software VMware que melhor se ajuste às cargas de trabalho. 
 
-Após a implementação, é possível incluir nós do host ESXi e gerenciar o backup e a correção para alguns componentes de gerenciamento. O {{site.data.keyword.cloud_notm}} Professional Services e o Managed Services também estão disponíveis para ajudar a acelerar sua jornada para a nuvem com ofertas, como migração, implementação e serviços de migração.
+Aplicando a automação avançada e a infraestrutura bare metal de único locatário, é possível implementar rapidamente o ambiente do VMware inteiro para o {{site.data.keyword.cloud_notm}} em horas. Em seguida, é possível acessar e gerenciar o ambiente hospedado pela IBM por meio dos clientes nativos do VMware, da Interface da Linha de Comandos (CLI), dos scripts existentes ou de outras ferramentas compatíveis com a API do vSphere familiar.
+
+Após a implementação, é possível incluir nós de host do ESXi e gerenciar o backup e a correção para alguns componentes de gerenciamento. Os serviços profissionais e gerenciados do {{site.data.keyword.cloud_notm}} também estão disponíveis para ajudar a acelerar sua jornada para a nuvem com ofertas como serviços de migração e implementação.
 
 As ofertas do VMware on {{site.data.keyword.cloud_notm}} trazem os benefícios a seguir:
 

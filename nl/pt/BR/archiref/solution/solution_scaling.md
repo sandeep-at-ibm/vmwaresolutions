@@ -17,13 +17,13 @@ Após a implementação inicial, é possível ampliar a capacidade de cálculo p
 
 ## Incluindo mais sites
 
-O {{site.data.keyword.vmwaresolutions_short}} pode alavancar a presença de data centers do {{site.data.keyword.cloud_notm}} no mundo todo e o backbone de rede integrada para permitir que uma variedade de casos de uso de geografia cruzada seja implementada e esteja em funcionamento dentro de uma fração do tempo que levaria para construir tal infraestrutura do zero.
+O {{site.data.keyword.vmwaresolutions_short}} pode alavancar a presença mundial do data center {{site.data.keyword.cloud_notm}} e o backbone de rede integrada para permitir que vários casos de uso de geografia cruzada sejam implementados e funcionem dentro de uma fração do tempo que levaria para construir tal infraestrutura do zero.
 
 Nesse design, a definição de uma implementação multissite é composta do seguinte:
 * Uma implementação inicial ou primária do VMware contendo um novo domínio-raiz do DNS/AD, subdomínio, domínio de SSO e nome do site de SSO a serem fornecidos.
-* Sites secundários únicos ou múltiplos que são provisionados para o domínio de SSO de sites primários que requerem a configuração a seguir:
+* Sites secundários únicos ou múltiplos que são provisionados para o domínio SSO de sites primários que requerem a configuração a seguir:
    * Novo nome do site SSO
-   * Novo site/subdomínio do DNS ligado à raiz do domínio primário
+   * Novo site/subdomínio DNS vinculado à raiz do domínio primário
    * Configuração de replicação do DNS e AD entre as VMs do AD do site secundário e primário
    * PSC implementado e configurado para sincronizar com o PSC do site primário
    * Configuração do vCenter com o Enhanced Linked Mode para o vCenter do site primário
