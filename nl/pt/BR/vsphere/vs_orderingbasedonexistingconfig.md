@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -21,22 +21,22 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 
 ## Procedimento
 
-1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **VMware vSphere** na seção **Data centers virtuais**.
+1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação à esquerda e, em seguida, clique em **VMware vSphere** na seção **Datacenters virtuais**.
 2. Na página **VMware vSphere on IBM Cloud**, clique em **Criar**.  
 3. Clique na guia **Criar novo** e selecione um modelo de configuração na lista **Configurações de cluster**.
 4. Insira um novo nome do cluster.
-5. Revise as configurações de cluster preenchidas automaticamente e atualize-as de acordo com suas necessidades. Para obter mais informações sobre as configurações, veja [Pedindo novos clusters do vSphere](vs_orderinginstances.html).
+5. Revise as configurações do cluster que são concluídas automaticamente e atualize as configurações de acordo com suas necessidades. Para obter mais informações sobre as configurações, veja [Pedindo novos clusters do vSphere](vs_orderinginstances.html).
 6. Na área de janela **Resumo do pedido**, verifique a configuração da instância e o custo estimado.
    * Para salvar a configuração como um modelo sem fazer um pedido, clique em **Salvar configuração**.
-   * Para colocar a ordem, assegure-se de que a conta a ser cobrada esteja correta, revise e aceite os termos e, em seguida, clique em **Provisão**.
+   * Para fazer o pedido, assegure-se de que a conta a ser cobrada está correta, revise e aceite os termos e, em seguida, clique em **Provisão**.
 
-   **Nota**: Apenas o {{site.data.keyword.baremetal_short}} são instalados. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como VMware vCenter, VMware NSX, VMware vSAN.
+   **Nota**: Apenas o {{site.data.keyword.baremetal_short}} são instalados. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como o VMware vCenter, o VMware NSX, o VMware vSAN.
 
 ## Resultados
 
 Se salvou a configuração de cluster como um modelo, você receberá uma notificação do console de que a configuração foi salva. É possível então localizar o modelo na lista **Configurações de cluster**.
 
-Se tiver feito um pedido, a implementação do cluster será iniciada automaticamente e você receberá uma confirmação por e-mail de que o pedido está sendo processado. Quando o cluster estiver pronto para uso, você também será notificado por e-mail.
+Se você fez um pedido, a implementação do cluster será iniciada automaticamente. Você recebe uma confirmação por e-mail de que a ordem está sendo processada. Quando o cluster estiver pronto para ser usado, você também será notificado por e-mail.
 
 **Nota:** os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Cloud Foundation, não são exibidos na página **Instâncias implementadas**.
 
