@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -45,7 +45,7 @@ Tabela 2. Propriedades de instância do NetApp ONTAP Select
 | ID | O ID da instância. |
 | Localização | O data center no qual a instância está hospedada. |
 | Versão implementada | A versão implementada do  {{site.data.keyword.vmwaresolutions_short}}. |
-| Versão do vCenter | A versão do VMware vCenter Server.<br><br>**Nota**: há uma pequena variação entre a versão do vCenter Server exibida no console do {{site.data.keyword.vmwaresolutions_short}} e do VMware vSphere Web Client. Ambos estão corretos. |
+| Versão do vCenter | A versão do VMware vCenter Server.<br><br>**Nota**: há uma pequena variação entre a versão do vCenter Server que é exibida no console do {{site.data.keyword.vmwaresolutions_short}} e no VMware vSphere Web Client. Ambos estão corretos. |
 | NSX for vSphere | A versão do produto VMware NSX for vSphere. |
 | Edição de licença NSX | A versão e a edição da licença do VMware NSX. |
 | Versão do NetApp | A versão do NetApp ONTAP Select. |
@@ -130,7 +130,7 @@ Se ocorrerem erros durante a implementação ou exclusão da instância, a equip
 	      <td>O tamanho da memória total dos servidores ESXi no cluster.</td>
 	   </tr>
 	   <tr>
-	      <td>Local do datacenter</td>
+	      <td>Local do data center</td>
 	      <td>O data center no qual o cluster está hospedado. É o mesmo com o local do data center da instância.</td>
 	   </tr>
 		 <tr>
@@ -165,7 +165,7 @@ Gerencie suas instâncias do console do {{site.data.keyword.vmwaresolutions_shor
 
 **Importante**: antes de clicar em **Console do vCenter** na página de resumo da instância para acessar o vSphere Web Client e começar a gerenciar os seus servidores do ESXi, deve-se efetuar login no portal da VPN do {{site.data.keyword.CloudDataCent_notm}}. Passe o mouse sobre o botão **console do vCenter** e siga as instruções para assegurar-se de que atenda a todos os requisitos e que tenha concluído as etapas necessárias antes de acessar o vSphere Web Client.
 
-Revise os tópicos a seguir para obter informações que ajudarão a concluir as instruções de login:
+Para obter mais informações para ajudar a concluir as instruções de login, revise os tópicos a seguir:
 
 *  Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
 *  Para obter uma lista de pontos de acesso para efetuar login na Rede Privada da infraestrutura do {{site.data.keyword.cloud_notm}} usando a VPN, veja [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.

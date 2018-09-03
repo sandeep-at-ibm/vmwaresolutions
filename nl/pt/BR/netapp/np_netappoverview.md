@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -41,7 +41,7 @@ Figura 2. Componentes do NetApp ONTAP Select
 
 ### Gerenciamento de virtualização
 
-Essa camada consiste no dispositivo virtual vCenter Server, NSX Manager, dois NSX ESGs, 3 NSX Controllers, dispositivo virtual Platform Services Controller (PSC), vCenter Server Appliance (vCSA) e a máquina virtual IBM CloudDriver.
+Essa camada consiste em um dispositivo virtual vCenter Server, NSX Manager, dois NSX ESGs, 3 NSX Controllers, Platform Services Controller (PSC) Virtual Appliance, vCenter Server Appliance (vCSA) e a instância do servidor virtual do IBM CloudDriver (VSI).
 
 O NetApp ONTAP Select é executado em um cluster VMware e virtualiza o armazenamento local nos hosts. O NetApp ONTAP Select é implementado no modelo dedicado, em que outras cargas de trabalho não são esperadas compartilhar o cluster com ele. Como resultado, a configuração de hardware do NetApp ONTAP Select na oferta do {{site.data.keyword.cloud_notm}} é dimensionada apenas com base nos requisitos do NetApp ONTAP Select.
 
@@ -65,7 +65,7 @@ Quatro {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} co
 * **Alto desempenho (Grande)** – Licença completa/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2,2 GHz)/128 GB de RAM/Capacidade de vinte e duas unidades SSD de 3,8 TB por nó/Capacidade efetiva de um cluster de 4 nós – 118 TB
 * **Alta capacidade** - Licença padrão/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2,2 GHz)/64 GB de RAM/Capacidade de trinta e quatro unidades SATA de 4 TB por nó/Capacidade efetiva de um cluster de 4 nós – 190 TB
 
-**Nota:** as unidades SSD (Solid State Disk) de 3,8 TB serão suportadas quando forem disponibilizadas geralmente em um data center.
+**Nota:** as unidades SSD (Solid-State Disk) de 3,8 TB serão suportadas quando forem disponibilizadas de maneira geral em um data center.
 
 ### Hardware
 
@@ -94,7 +94,7 @@ Duas VSIs (Virtual Server Instances):
 *  VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 *  Taxa de suporte e serviços (uma licença por nó)
 
-**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados em sua conta do {{site.data.keyword.cloud_notm}} apenas por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente no console do {{site.data.keyword.vmwaresolutions_short}}, não no {{site.data.keyword.slportal}} nem de qualquer outra maneira fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
 **CUIDADO**: gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Inclusão, modificação, retorno, remoção ou desligamento de componentes
