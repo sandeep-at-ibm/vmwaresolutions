@@ -31,7 +31,7 @@ Durante o processo de upgrade da V2.2, a máquina virtual do IBM CloudDriver é 
 * Se você estiver usando uma solução de backup que faça referência à máquina virtual do IBM CloudDriver, depois de fazer upgrade para a V2.2, assegure-se de que a solução de backup esteja fazendo referência à nova máquina virtual do IBM CloudDriver.
 * Antes de fazer upgrade para a V2.2, assegure-se de substituir o VSI do Legacy Veeam pelo serviço Veeam on {{site.data.keyword.cloud_notm}}. O Legacy Veeam não é mais suportado na V2.2 e liberações futuras, portanto, os backups dos componentes de gerenciamento associados ao Legacy Veeam não estão disponíveis para uma restauração.
 
-Para obter mais informações sobre como usar o serviço Veeam on {{site.data.keyword.cloud_notm}}, veja:
+Para obter mais informações sobre como usar o Veeam no serviço do {{site.data.keyword.cloud_notm}}, consulte os tópicos a seguir:
 * [Componentes e considerações para o Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
 * [Gerenciando o Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)
 
@@ -43,7 +43,7 @@ Para obter considerações importantes antes de proteger uma instância do VMwar
 
 (Atualizado em 2 de abril de 2018) Agora, é possível expandir ou contrair a capacidade de sua instância do VMware Federal incluindo ou removendo servidores ESXi. Essa opção está disponível apenas para instâncias do VMware Federal que não foram protegidas.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 
 * [Visão geral do VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html)
 * [Incluindo, visualizando e excluindo clusters para instâncias do VMware Federal](../vcenter/fed_addviewdeleteclusters.html)
@@ -78,7 +78,7 @@ Para obter considerações importantes antes de selecionar as VLANs existentes, 
 
 ### Atualizações da definição de configuração do componente NSX e do grupo da porta
 
-A liberação atual se aplica à atualização do componente VMware NSX for vSphere 6.3.5. Para obter mais informações sobre componentes, veja [Lista de materiais do vCenter Server](../vcenter/vc_bom.html).
+A liberação atual se aplica à atualização do componente VMware NSX for vSphere 6.3.5. Para obter mais informações sobre componentes, consulte [Lista de materiais do vCenter Server](../vcenter/vc_bom.html).
 
 Para instâncias do VMware vCenter Server que são implementadas na V2.2 ou liberações mais recentes, as definições de configuração do NSX e do grupo da porta mudaram. Para obter mais informações, veja a seção *Definições de configuração do NSX e do grupo da porta* em [Lista de materiais do vCenter Server Software](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
 
@@ -144,7 +144,7 @@ O serviço Zerto on {{site.data.keyword.cloud_notm}} fornece recursos de replica
 
 É possível solicitar serviços gerenciados para suas instâncias da página **Introdução**, seja colocando um novo pedido da instância ou incluindo o serviço em uma instância existente.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Solicitando serviços para o Veeam on {{site.data.keyword.cloud_notm}}](../services/managing_veeam_services.html)
 * [Solicitando serviços para o Zerto on {{site.data.keyword.cloud_notm}}](../services/managing_zerto_services.html)
 
@@ -154,7 +154,7 @@ Para obter mais informações, veja:
 
 * As VLANs e a Lista de Materiais (BOM) de software são fornecidas na documentação para instâncias do Cloud Foundation e do vCenter Server, bem como clusters do VMware vSphere.
 
-  Para obter mais informações, veja:
+  Para obter mais informações, veja os tópicos a seguir:
 
   * [Lista de materiais do vCenter Server](../vcenter/vc_bom.html)
   * [Lista de materiais do Cloud Foundation](../sddc/sd_bom.html)

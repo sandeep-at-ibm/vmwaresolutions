@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -34,7 +34,7 @@ Iniciando com a liberação da V2.5, os serviços IBM Spectrum Protect Plus on {
 
 Você é responsável pela configuração, gerenciamento e monitoramento de todos os componentes de software, incluindo o backup e a disponibilidade da infraestrutura de gerenciamento e das cargas de trabalho. Para obter mais informações, consulte [Fazendo backup de componentes](../archiref/solution/solution_backingup.html#backing-up-components).
 
-**Nota:** essa mudança não afeta as instâncias implementadas antes da V2.5 que já instalaram o serviço IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}}.
+**Nota:** essa mudança não afeta as instâncias implementadas antes da V2.5 que já instalaram o IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} ou o serviço Veeam on {{site.data.keyword.cloud_notm}}.
 
 ## Resiliência do IBM CloudDriver
 
@@ -49,7 +49,7 @@ Iniciando com a liberação V2.5, o {{site.data.keyword.vmwaresolutions_short}} 
 * As instâncias que são implementadas nas liberações V2.5 e mais recentes são vinculadas automaticamente à conta do usuário que está sendo usada quando a instância é pedida.
 * Para instâncias que foram implementadas nas liberações V2.4 e anteriores, é possível migrá-las para uma conta especificada do {{site.data.keyword.cloud_notm}} e, em seguida, gerenciá-las usando o IAM também.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Convidando usuários para acessar serviços e recursos](../vmonic/iamuserinvite.html)
 * [ Gerenciando o acesso de usuário com o IAM ](../vmonic/iam.html)
 
@@ -61,7 +61,7 @@ Não edite as permissões globais do grupo **ic4v-vCenter** na página **Usuári
 
 Para instâncias do Cloud Foundation, use o ID do usuário do host **customerroot** no lugar do ID do usuário do host **raiz**. Continue a usar o ID do usuário do host **raiz** para instâncias do vCenter Server.
 
-Para obter mais informações sobre contas do usuário, veja:
+Para obter mais informações sobre contas do usuário, consulte os tópicos a seguir:
 
 * [Considerações sobre como alterar os artefatos do vCenter Server](../vcenter/vcenter_chg_impact.html)
 * [Considerações sobre como alterar os artefatos do Cloud Foundation](../sddc/cf_chg_impact.html)
@@ -94,7 +94,7 @@ As especificações técnicas para todos os tipos de instância e tipos de servi
 
 As informações de serviços são melhoradas para identificar facilmente o suporte de serviço com base no número da liberação em que ele foi disponibilizado.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 
 * [Serviços disponíveis para instâncias do vCenter Server](../vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
 * [Serviços disponíveis para instâncias do vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)

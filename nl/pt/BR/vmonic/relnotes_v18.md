@@ -18,7 +18,7 @@ O serviço Fortinet on {{site.data.keyword.cloud_notm}} está agora disponível 
 
 Depois que o serviço Fortinet for instalado com êxito, será possível gerenciar e configurar regras de firewall para o FSA do console do FortiGate. Deve-se assegurar que as regras de firewall do FSA sejam definidas para permitir comunicações HTTPS de saída que são iniciadas por componentes de gerenciamento como a máquina virtual do IBM CloudDriver ou o Zerto Virtual Manager para se comunicar com o banco de dados de gerenciamento externo no IBM Bluemix® pela Internet. As comunicações HTTPS de saída se originam do endereço IP público dos serviços de gerenciamento do VMware NSX Edge Services Gateway (ESG) em sua instância.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Visão geral do Fortinet no {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)
 * [ Gerenciando o Fortinet no  {{site.data.keyword.cloud_notm}} ](../services/managingfsa.html)
 
@@ -30,7 +30,7 @@ Por causa dessa mudança, embora o VSI Veeam nas instâncias pré-V1.8 continue 
 
 Além disso, a licença do VSI Veeam em instâncias pré-V1.8 expira em 14 de outubro de 2017. Portanto, deve-se substituir o VSI Veeam anterior pelo novo serviço Veeam em sua primeira conveniência.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Veeam no {{site.data.keyword.cloud_notm}} visão geral](../services/veeam_considerations.html)
 * [Gerenciando o Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)
 
@@ -42,7 +42,7 @@ Começando com a liberação V1.8, quando você está pedindo uma instância do 
 
 É possível também escolher usar sua própria licença do VMware para um componente, neste caso é solicitado que você forneça as chaves de licença. Nesse caso, o suporte para os componentes do VMware para os quais você fornece licenças será fornecido pelo VMware, não pelo Suporte IBM.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Pergunta mais frequente sobre BYOL](faq_byol.html)
 
@@ -52,7 +52,7 @@ Para obter mais informações, veja:
 
 Uma opção do servidor customizável está disponível junto com as opções Pequeno, Médio e Grande pré-construídas e testadas. É possível selecionar em uma lista de servidores do VMware compatíveis com HCL com base em CPUs duais e no número total de núcleos, além da quantidade de RAM. O armazenamento local não é customizável.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Incluindo e visualizando clusters para instâncias do vCenter Server](../vcenter/vc_addingviewingclusters.html)
 
@@ -60,7 +60,7 @@ Para obter mais informações, veja:
 
  É possível anexar até um máximo de 32 compartilhamentos de arquivos em todos os servidores ESXi em um cluster.
 
- Para obter mais informações, veja:
+ Para obter mais informações, veja os tópicos a seguir:
 * [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Incluindo e visualizando clusters para instâncias do vCenter Server](../vcenter/vc_addingviewingclusters.html)
 
@@ -73,7 +73,7 @@ Para obter mais informações, veja [Requisitos e planejamento para instâncias 
 ## Aprimoramentos de usabilidade
 
 São feitas melhorias em toda a interface com o usuário:
-* É possível aprender sobre serviços e pedir uma instância na página **Introdução** na área de janela de navegação esquerda. Para obter informações sobre a arquitetura do serviço {{site.data.keyword.cloud_notm}} Secure Virtualization, veja [Segurança e conformidade - HyTrust](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust).
+* É possível aprender sobre serviços e pedir uma instância na página **Introdução** na área de janela de navegação esquerda. Para obter mais informações sobre a arquitetura de serviço de Virtualização Segura do {{site.data.keyword.cloud_notm}}, consulte [Segurança e conformidade - HyTrust](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust).
 * Use o menu overflow na página de detalhes da instância para excluir uma instância no estado **Pronto para Usar**.
 * A opção para fazer upgrade em sua edição de licença do NSX está disponível na guia **Atualização e Correção**. O upgrade de licença substitui todas as licenças existentes do NSX em sua conta IBM SoftLayer pela nova licença.
 * A guia **Backup e Restauração** na página de detalhes da instância não está mais disponível.

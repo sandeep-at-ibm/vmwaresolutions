@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -21,7 +21,7 @@ Encontre respostas às perguntas mais frequentes sobre os servidores ESXi gerenc
 
 ## Quantos servidores ESXi posso incluir em um cluster?
 
-Para a V2.2 e liberações mais recentes, é possível incluir um máximo de 51 servidores ESXi para um cluster inicial e um máximo de 59 servidores ESXi para clusters adicionais.
+Para V2.2 e liberações mais recentes, é possível incluir um máximo de 51 servidores ESXi em um cluster inicial e um máximo de 59 servidores ESXi nos clusters incluídos.
 
 Para instâncias implementadas na V2.1 ou liberações anteriores, deve-se ativar o suporte vSAN necessário para aumentar o tamanho do cluster além de 32. Conclua as etapas a seguir para ativar o suporte vSAN necessário:
 
@@ -32,28 +32,28 @@ Para instâncias implementadas na V2.1 ou liberações anteriores, deve-se ativa
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
 2. Reinicie cada servidor ESXi. Para obter mais informações, veja [Criando um cluster vSAN 6.x com até 64 hosts](https://kb.vmware.com/s/article/2110081).
-3. Observe que você pode precisar aumentar o tamanho do vCenter Server para acomodar as máquinas virtuais adicionais e servidores ESXi.
-4. Abra um chamado de Suporte IBM indicando que você aplicou manualmente as mudanças de vSAN concluindo as etapas de 1 a 3 e que deseja ter a sua instância submetida a upgrade ativada para servidores ESXi adicionais além de 32.
+3. Talvez seja necessário aumentar o tamanho do vCenter Server para acomodar as máquinas virtuais incluídas e os servidores ESXi.
+4. Abra um chamado de suporte IBM para indicar que você aplicou as mudanças no vSAN manualmente, concluindo as etapas de 1 a 3. No chamado, solicite que sua instância atualizada esteja ativada para servidores ESXi além de 32.
 
 ## Posso mudar os nomes dos servidores ESXi e endereços IP?
 
-Os nomes dos servidores ESXi e endereços IP não podem ser mudados, porque eles são registrados para a resolução de DNS do Windows. As mudanças podem resultar em falhas durante a implementação ou em falhas de funções do vCenter Server.
+Os nomes do servidor ESXi e os endereços IP não podem ser mudados porque estão registrados para a resolução DNS do Windows. As mudanças podem resultar em falhas durante a implementação ou em falhas de funções do vCenter Server.
 
 **Nota**: não use o recurso **Renomear dispositivo** na interface com o usuário do {{site.data.keyword.cloud_notm}} para mudar os nomes do servidor ESXi. Essa função realmente mudará o FQDN do servidor ESXi, mas o vCenter Center configurado e os registros do host do VSI do Windows estarão incorretos e podem causar falhas.
 
 ## Posso desativar o acesso raiz nos meus servidores ESXi?
 
-Recomenda-se manter o acesso raiz ativado em servidores ESXi, caso contrário, podem ocorrer falhas na funcionalidade do {{site.data.keyword.vmwaresolutions_short}}.
+É recomendável manter o acesso raiz ativado nos servidores ESXi, caso contrário, poderão ocorrer falhas nas funções do {{site.data.keyword.vmwaresolutions_short}}.
 
-Se absolutamente necessário, será possível desativar o acesso raiz depois que os servidores ESXi tiverem um status de **Pronto para Uso** no console do {{site.data.keyword.vmwaresolutions_short}}.
+Se necessário, é possível desativar o acesso raiz após os servidores ESXi terem um status **Pronto para uso** no console do {{site.data.keyword.vmwaresolutions_short}}.
 
-Deve-se reativar o acesso raiz para operações de automação subsequentes, por exemplo, ao incluir ou remover compartilhamentos de arquivos ou ao instalar serviços adicionais, como o Zerto on {{site.data.keyword.cloud_notm}}.
+Deve-se reativar o acesso raiz para operações de automação subsequentes, por exemplo, ao incluir ou remover compartilhamentos de arquivo ou ao instalar serviços complementares, como Zerto on {{site.data.keyword.cloud_notm}}.
 
 ## Posso incluir rotas estáticas nos meus servidores ESXi para montar o armazenamento de outros locais?
 
-Rotas estáticas podem ser incluídas para armazenamento, mas as operações devem ser realizadas com extremo cuidado. Caso contrário, os compartilhamentos existentes podem ser desmontados.
+Rotas estáticas podem ser incluídas para armazenamento, mas as operações devem ser realizadas com extremo cuidado. Caso contrário, os compartilhamentos existentes poderão se tornar desmontados.
 
-**Nota**: a inclusão de rotas estáticas para o vMotion não é suportada. Mudanças na configuração de sub-rede do vMotion podem resultar em falhas na funcionalidade do {{site.data.keyword.vmwaresolutions_short}}.
+**Nota**: a inclusão de rotas estáticas para o vMotion não é suportada. Mudanças na configuração de sub-rede do vMotion poderão resultar em falhas nas funções do {{site.data.keyword.vmwaresolutions_short}}.
 
 ### Links relacionados
 

@@ -18,7 +18,7 @@ O serviço FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} está
 
 É possível pedir instâncias com o serviço FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} incluído ao pedir sua instância ou incluir esse serviço em suas instâncias existentes posteriormente na guia **Serviços** na página de detalhes da instância. Dependendo de seus requisitos, é possível selecionar um dos três tamanhos de implementação e opções de licenciamento para este serviço. Depois que o serviço for instalado com êxito, será possível gerenciar e configurar regras de firewall para o FortiGate Virtual Appliances do console do FortiGate.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [ Componentes e considerações para o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)
 * [Gerenciando o FortiGate Virtual Appliance no {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html)
 
@@ -28,7 +28,7 @@ Agora é possível instalar múltiplas instâncias do serviço F5 on {{site.data
 
 Depois que a implementação da instância for concluída, será possível incluir mais instâncias do serviço F5 ou FortiGate instalando o serviço na guia **Incluir Serviços** da página de detalhes da instância. É possível incluir apenas uma instância de serviço de cada vez e deve-se repetir o processo para todas as instâncias que desejar incluir para um serviço.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](../vcenter/vc_addingremovingservices.html)
 
@@ -44,7 +44,7 @@ Em todos os casos, deve-se gerenciar a configuração dos FSAs cuidadosamente pa
 
 Agora, o nome completo do domínio (FQDN) é representado de maneira consistente para todas as instâncias. Ao fazer um pedido, é possível inserir o seu próprio prefixo de subdomínio e o prefixo de nome do host. Isso assegura que a convenção da indústria para o formato FQDN seja seguido, como `host-name-prefix<n>.subdomain-prefix.domain-name`.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Pedindo novos clusters do vSphere](../vsphere/vs_orderinginstances.html)
@@ -54,7 +54,7 @@ Para obter mais informações, veja:
 * Durante uma ordem do VMware vSphere on {{site.data.keyword.cloud_notm}}, é fornecida uma estimativa de quantas máquinas virtuais podem ser executadas na instância pedida.
 * Durante um pedido do Cloud Foundation e do vCenter Server, é fornecida a você uma estimativa da capacidade de armazenamento utilizável para a instância pedida.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Pedindo novos clusters do vSphere](../vsphere/vs_orderinginstances.html)
@@ -72,7 +72,7 @@ A liberação atual se aplica às seguintes atualizações de componentes e melh
 
 **Nota**: as instâncias existentes (das liberações V1.9 e anterior) não podem ser submetidas a upgrade para as versões de componentes nessa lista.
 
-Para obter mais informações sobre componentes, veja [Visão geral do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
+Para obter mais informações sobre os componentes, consulte [Visão geral do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
 
 ### Suporte de cluster para instâncias do Cloud Foundation
 
@@ -84,7 +84,7 @@ Agora, é possível usar clusters para gerenciar servidores ESXi em instâncias 
 
 Agora, é possível customizar a configuração de armazenamento vSAN selecionando o número e o tamanho das unidades de armazenamento vSAN como parte do seu pedido de instância.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Visão geral do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html)
 
@@ -100,7 +100,7 @@ As seguintes definições de configuração do Bare Metal Server estão disponí
 
 **Nota**: o chassi tem espaço para 12 discos, no entanto, nem todos os slots são preenchidos. A configuração **Pequeno** fornece duas unidades 5100 MAX Micron de 1,9 TB e a configuração **Grande** fornece quatro unidades 5100 PRO Micron de 3,8 TB.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Visão geral do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html)
 
@@ -115,7 +115,7 @@ A liberação atual se aplica às seguintes atualizações de componentes para n
 
 **Nota:** pedidos customizados do vCenter Server com ou sem o componente vSAN do VMware sempre incluem um servidor do chassi de 12 discos que reflete um custo um pouco maior para o {{site.data.keyword.baremetal_short}} para o caso de pedido não vSAN no PDF de estimativa de preço.
 
-Para obter mais informações sobre componentes, veja [Visão geral do vCenter Server](../vcenter/vc_vcenterserveroverview.html).
+Para obter mais informações sobre os componentes, consulte [Visão geral do vCenter Server](../vcenter/vc_vcenterserveroverview.html).
 
 ### Suporte de configuração de vários sites para instâncias do vCenter Server
 
@@ -133,7 +133,7 @@ Para obter mais informações, veja [Pedindo instâncias do vCenter Server](../v
 
 O BYOL está disponível para instâncias do vCenter Server. O BYOL permite usar uma ou mais de suas próprias licenças do vCenter Server, vSphere, vSAN e NSX VMware ao pedir instâncias do vCenter Server.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Pedindo novos clusters do vSphere](../vsphere/vs_orderinginstances.html)
@@ -164,7 +164,7 @@ As seguintes opções de configuração do servidor bare metal estão disponíve
 
 **Nota:** as unidades SSD de 3,8 TB serão suportadas quando elas forem disponibilizadas em geral em um {{site.data.keyword.CloudDataCent_notm}}.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Visão geral do NetApp ONTAP Select](../netapp/np_netappoverview.html)
 * [Pedindo instâncias do NetApp ONTAP Select](../netapp/np_orderinginstances.html)
 

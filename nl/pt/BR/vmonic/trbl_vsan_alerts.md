@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-06-29"
+lastupdated: "2017-08-16"
 
 ---
 
@@ -19,7 +19,7 @@ use o seguinte procedimento.
 
 1. Acesse http://partnerweb.vmware.com/service/vsan/all.json e salve o arquivo JSON, com o nome `all.json`, em seu sistema local.
 2. Assegure-se de ter concluído as etapas em [Tempo limite do console do vCenter](trbl_timeout_vc_console.html).
-3. Na página de detalhes da instância do Cloud Foundation, clique no botão **Console do vCenter** e efetue login no vSphere Web Client usando as credenciais exibidas no console do {{site.data.keyword.vmwaresolutions_full}}.
+3. Na página de detalhes da instância do Cloud Foundation, clique em **Console do vCenter** e efetue login no vSphere Web Client usando as credenciais exibidas no console do {{site.data.keyword.vmwaresolutions_full}}.
 4. No vSphere Web Client, acesse **Gerenciar > Configurações** e abra a seção **SAN Virtual > Funcionamento > Banco de Dados HCL**. Clique em **Atualizar do arquivo** e, em seguida, faça upload do arquivo `all.json` que você salvou anteriormente.
 5. Para limpar os avisos, acesse a área de janela **Alarmes** na parte superior direita do vSphere Web Client. Clique com o botão direito em cada um dos alarmes e selecione **Reconfigurar como verde**.
 

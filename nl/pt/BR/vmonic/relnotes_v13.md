@@ -10,7 +10,8 @@ lastupdated: "2017-01-23"
 
 # Notas sobre a liberação para V1.3
 
-Esta liberação inclui novos recursos, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em liberações diferentes, problemas conhecidos com o produto e dicas adicionais para usar o {{site.data.keyword.vmwaresolutions_full}}, veja o [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Esta liberação inclui novos recursos, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e mais dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte
+[{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Armazenamento de nível de arquivo compartilhado para instâncias do vCenter Server
 
@@ -20,7 +21,7 @@ Agora, é possível incluir o NAS (Network Attached Storage) compartilhado para 
 
 Se você pediu a recuperação de desastre Zerto como parte de sua instância ou a incluiu como uma instância existente, agora poderá remover esse serviço quando não precisar mais dele. Depois de solicitar a remoção do serviço do console, você será guiado pelo Suporte IBM para concluir o processo de remoção.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 
 * [Remoção da recuperação de desastre](../services/removingzertodr.html)
 * [Visualizando instâncias do Cloud Foundation](../sddc/sd_viewinginstances.html)
@@ -34,7 +35,7 @@ Durante a implementação da instância, um Management NSX Edge Services Gateway
 
 Para garantir a segurança, as regras de firewall estão em vigor para permitir apenas comunicações HTTPS de saída iniciadas pelas máquinas virtuais de gerenciamento. Este ESG é implementado em uma configuração Grande e somente o Suporte IBM pode modificar a configuração.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 
 * [ Especificações técnicas para instâncias do Cloud Foundation ](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [O NSX Edge de serviços de gerenciamento representa um risco de segurança?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -47,7 +48,7 @@ O processo de pedido da instância é melhorado para as instâncias do Cloud Fou
 * A página de resumo exibe todos os termos e condições aplicáveis para todos os componentes e serviços que são pedidos, para acesso fácil para revisar e concordar com esses termos antes de você fazer o pedido.
 * É possível salvar e imprimir o resumo do pedido para sua instância antes de fazer o pedido. Com essa nova função, é possível revisar as configurações e o custo da instância, modificar os componentes que são pedidos se necessário, obter aprovação, e, em seguida, voltar para o seu pedido.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 
 * [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)

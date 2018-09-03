@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-16"
 
 ---
 
 # Entrando em contato com o Suporte IBM
 
-Se você precisar de ajuda com o {{site.data.keyword.vmwaresolutions_full}}, crie um chamado de Suporte do {{site.data.keyword.cloud_notm}} para obter assistência por meio de um dos canais a seguir:
+Se você precisar de ajuda com o {{site.data.keyword.vmwaresolutions_full}}, crie um chamado de suporte do {{site.data.keyword.cloud_notm}} para obter assistência usando um dos canais a seguir:
 
 ## No console do IBM Cloud for VMware Solutions
 
@@ -23,7 +23,7 @@ Para entrar em contato com o Suporte IBM do console do {{site.data.keyword.vmwar
 4. Na página {{site.data.keyword.slportal_short}}, clique em **Efetuar login com o IBMid** e, em seguida, você é automaticamente conectado ao portal.
 5. Revise a _Política de Suporte de Serviços de Plataforma e Infraestrutura do {{site.data.keyword.cloud_notm}}_ e clique em **Reconhecer**.
 
-   Ao reconhecer a política de suporte de serviços, você concorda que as equipes de Suporte e Operações IBM podem acessar a camada de gerenciamento do vCenter para investigação e resolução de problemas, para fornecer o melhor nível de suporte para os clientes.
+   Ao reconhecer a política de suporte de serviços, você concorda que as equipes de Suporte e Operações da IBM podem acessar a camada de gerenciamento do vCenter para investigação e resolução de problemas de forma a fornecer o melhor nível de suporte para os clientes.
 
 6. Clique em **Suporte > Incluir Chamado** no banner.
 7. Na página **Incluir Chamado**, forneça as seguintes informações:
@@ -47,7 +47,6 @@ Para entrar em contato com o Suporte IBM no {{site.data.keyword.slportal}}, conc
 
 1. Acesse https://control.softlayer.com.
 2. Efetue login no portal com sua conta **IBMid**.
-3. Conclua as etapas de 6 a 8 descritas na seção _Do console das soluções IBM Cloud for VMware_ neste tópico para
-enviar o seu chamado.
+3. Conclua as etapas 6 a 8 descritas na seção _No console do IBM Cloud for VMware Solutions_ neste tópico para enviar seu chamado.
 
     **Nota**: independentemente do canal que você usa para abrir o chamado de suporte (seja o console do {{site.data.keyword.vmwaresolutions_short}} ou o {{site.data.keyword.slportal}}), os termos da _Política de suporte de serviços de infraestrutura e plataforma do {{site.data.keyword.cloud_notm}}_ ainda se aplicam.

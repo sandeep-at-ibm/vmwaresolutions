@@ -58,7 +58,7 @@ Para obter mais informações, veja a seção *Configurações do Bare Metal Ser
 
 ### Network File System aprimoramento de desempenho
 
-O nível de desempenho de 10 IOPS/GB, projetado para os tipos de carga de trabalho mais exigentes, não é mais limitado a um {{site.data.keyword.CloudDataCent_notm}} específico, mas agora está disponível para todos. Para obter mais informações, veja a seção *Armazenamento* em [Visão geral do vCenter Server](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications).
+O nível de desempenho de 10 IOPS/GB, projetado para os tipos de carga de trabalho mais exigentes, não é mais limitado a um {{site.data.keyword.CloudDataCent_notm}} específico, mas agora está disponível para todos. Para obter mais informações, consulte a seção *Armazenamento* na [Visão geral do vCenter Server](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## Atualizações para instâncias do VMware Federal
 
@@ -71,7 +71,7 @@ Agora é possível implementar instâncias do VMware Federal para o {{site.data.
 ### IBM Spectrum Protect Plus on IBM Cloud
 
 A liberação atual instala a correção 1 do IBM Spectrum Protect&trade; Plus V10.1.1 em todas as instâncias
-recém-implementadas. Para obter informações sobre os novos recursos no IBM Spectrum Protect Plus V10.1.1 Correção 1, veja [Atualizações do IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+recém-implementadas. Para obter mais informações sobre os novos recursos no IBM Spectrum Protect Plus V10.1.1 Patch 1, consulte [Atualizações do IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ### VMware HCX on IBM Cloud
 
@@ -87,15 +87,15 @@ O documento de arquitetura do {{site.data.keyword.vmwaresolutions_short}} agora 
 
 As informações de serviços foram reestruturadas e a navegação foi melhorada para localizar facilmente informações relevantes ao pedir serviços.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 
 * [Solicitando F5 no {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
 * [Solicitando FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)
 * [Solicitando FortiGate Virtual Appliance no {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)
-* [ Ordenando Hytrust CloudControl no  {{site.data.keyword.cloud_notm}} ](../services/htcc_ordering.html)
-* [ Ordenando o Hytrust DataControl no  {{site.data.keyword.cloud_notm}} ](../services/htdc_ordering.html)
+* [Solicitando Hytrust CloudControl no {{site.data.keyword.cloud_notm}}](../services/htcc_ordering.html)
+* [Solicitando Hytrust DataControl no {{site.data.keyword.cloud_notm}}](../services/htdc_ordering.html)
 * [Solicitando IBM Spectrum Protect Plus no {{site.data.keyword.cloud_notm}}](../services/spp_ordering.html)
-* [ Solicitando KMIP para VMware no  {{site.data.keyword.cloud_notm}} ](../services/kmip_ordering.html)
+* [Solicitando KMIP para VMware no {{site.data.keyword.cloud_notm}}](../services/kmip_ordering.html)
 * [Pedindo o Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_ordering.html)
 * [Solicitando on {{site.data.keyword.cloud_notm}}](../services/zerto_ordering.html)
 

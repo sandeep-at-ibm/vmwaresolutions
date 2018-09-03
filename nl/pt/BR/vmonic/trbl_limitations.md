@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -14,7 +14,7 @@ Revise as seguintes considerações e limitações ao trabalhar com o {{site.dat
 
 ## Instalação automática de atualizações do Windows
 
-O Microsoft Active Directory (AD)/Servidor de nomes de domínio (DNS) é configurado automaticamente para fazer download apenas de atualizações. Ele não instala essas atualizações ou reinicializa automaticamente. Deve-se instalar as atualizações manualmente e reinicializar em um horário planejado que evite interrupções da configuração do servidor AD em andamento e outras tarefas de backup. Para aplicar atualizações do Windows, instale as atualizações manualmente.
+O Microsoft Active Directory (AD)/Domain Name Server (DNS) é configurado automaticamente para fazer download apenas das atualizações. Ele não instala essas atualizações nem reinicializa automaticamente. Deve-se instalar as atualizações manualmente e reiniciar em um horário planejado que evite quaisquer interrupções da configuração do servidor AD em andamento e de outras tarefas de backup. Para aplicar atualizações do Windows, instale as atualizações manualmente.
 
 ## Considerações ao escolher um nome de domínio raiz para instâncias do Cloud Foundation
 
