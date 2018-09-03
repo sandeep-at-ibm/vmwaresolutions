@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -18,11 +18,11 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 *  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](../vmonic/useraccount.html).
 *  Você revisou os requisitos e considerações em [Requisitos e planejamento para instâncias do NetApp ONTAP Select](np_planning.html).
 
-**Importante: não modifique nenhum valor configurado durante o pedido e a implementação da instância. Fazer isso pode fazer com que sua instância não possa mais ser usada.**
+**Importante: não modifique nenhum valor configurado durante o pedido e a implementação da instância. Fazer isso pode tornar sua instância inutilizável.**
 
 ## Configurações do sistema
 
-Ao pedir uma instância do NetApp ONTAP Select, deve-se especificar as configurações básicas a seguir.
+Ao solicitar uma instância do NetApp ONTAP Select, deve-se especificar suas configurações básicas.
 
 ### Nome da instância
 
@@ -34,7 +34,7 @@ O nome da instância deve atender aos requisitos a seguir:
 
 ## Configurações da interface de rede
 
-Deve-se especificar as configurações da interface de rede a seguir ao pedir uma instância do NetApp ONTAP Select.
+Deve-se especificar as configurações de interface de rede a seguir ao solicitar uma instância do NetApp ONTAP Select.
 
 ### Prefixo de nome do host
 
@@ -64,30 +64,30 @@ O nome do domínio-raiz deve atender aos requisitos a seguir:
 
 ## Configurações de licenciamento
 
-Deve-se fazer upload de quatro arquivos de licenciamento do NetApp, pois cada um dos quatro {{site.data.keyword.baremetal_short}} requer uma licença. Entre em contato com sua equipe de vendas do NetApp para obter o licenciamento adequado para sua implementação de alto desempenho ou de alta capacidade.
+Deve-se fazer upload de quatro arquivos de licenciamento NetApp porque cada um dos quatro {{site.data.keyword.baremetal_short}} requer uma licença. Entre em contato com sua equipe de vendas do NetApp para obter o licenciamento adequado para sua implementação de alto desempenho ou de alta capacidade.
 
 ## Configurações do Bare Metal Server
 
-### Local do datacenter
+### Local do data center
 
 Deve-se selecionar o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
 
 ### Configuração do Bare Metal Server
 
-É possível selecionar uma configuração do Bare Metal Server dependendo de seus requisitos:
+Selecione uma configuração do Bare Metal Server com base em seus requisitos:
 * **Alto desempenho (Médio)** – Licença completa/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2,2 GHz)/128 GB de RAM/Capacidade de vinte e duas unidades SSD de 1,9 TB por nó/Capacidade efetiva de um cluster de 4 nós – 59 TB
 * **Alto desempenho (Grande)** – Licença completa/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2,2 GHz)/128 GB de RAM/Capacidade de vinte e duas unidades SSD de 3,8 TB por nó/Capacidade efetiva de um cluster de 4 nós – 118 TB
 * **Alta capacidade** - Licença padrão/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2,2 GHz)/64 GB de RAM/Capacidade de trinta e quatro unidades SATA de 4 TB por nó/Capacidade efetiva de um cluster de 4 nós – 190 TB
 
-**Nota:** Unidades SSD (Disco de Estado Sólido) de 3,8 TB serão suportadas quando foram geralmente disponibilizadas em um {{site.data.keyword.CloudDataCent_notm}}.
+**Nota:** as unidades SSD (Solid-State Disk) de 3,8 TB serão suportadas quando forem disponibilizadas de maneira geral em um {{site.data.keyword.CloudDataCent_notm}}.
 
 ### Número de Bare Metal Servers
 
-O número de servidores ESXi de uma instância do NetApp ONTAP Select é 4 por padrão. Isso não pode ser mudado. Todos os servidores ESXi compartilham a mesma configuração.
+O número de servidores ESXi de uma instância do NetApp ONTAP Select é 4 por padrão. Isso não pode ser mudado. Todos os servidores ESXi compartilham a configuração.
 
 ## Procedimento
 
-1. No Catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **NetApp ONTAP Select** na seção **Datacenters virtuais**.
+1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação à esquerda e, em seguida, clique em **NetApp ONTAP Select** na seção **Data centers virtuais**.
 2. Na página **NetApp ONTAP Select**, clique em **Criar**.
 3. Na página **NetApp ONTAP**, insira o nome da instância.
 4. Conclua as configurações da interface de rede inserindo o **Prefixo de nome do host**, **Rótulo do subdomínio** e **Nome de domínio**.
@@ -114,7 +114,7 @@ Quando a instância estiver pronta para usar, seu status mudará para **Pronta p
 
 Visualizar e gerenciar a instância do NetApp ONTAP Select que você pediu.
 
-**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados em sua conta do {{site.data.keyword.cloud_notm}} apenas por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente no console do {{site.data.keyword.vmwaresolutions_short}}, não no {{site.data.keyword.slportal}} nem de qualquer outra maneira fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
 **CUIDADO**: gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes
