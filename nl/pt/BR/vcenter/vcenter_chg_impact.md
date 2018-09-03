@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-08"
 
 ---
 
@@ -26,7 +26,9 @@ Cada serviço cria uma conta de usuário interna no vCenter Server. Esta conta �
 
 **Importante**: para evitar indisponibilidades e problemas de conexão, se você mudar as configurações de ID do usuário, senha ou expiração de senha para essa conta do usuário, assegure-se de também atualizar as informações no serviço associado.
 
-O ID do usuário para esta conta está no formato `<service_name>-<service_uuid>@VSPHERE.LOCAL`. Por exemplo, o ID do usuário usado pelo serviço Veeam on {{site.data.keyword.cloud_notm}} para se conectar ao vCenter Server para executar backups planejados é `Veeam-<Veeam_uuid>@VSPHERE.LOCAL`.
+O ID do usuário para esta conta está no formato `<service_name>-<truncated service_uuid>@test.local` ou `<service_name>-<truncated service_uuid>@example-domain.local`. Por exemplo, o ID do usuário usado pelo serviço Veeam on {{site.data.keyword.cloud_notm}} para se conectar ao vCenter Server para executar backups planejados é `Veeam-<Veeam_uuid>@test.local`.
+
+**Nota**: o `<service_name>` junto com o `<service_uuid>` trunca para 20 caracteres.
 
 ## Recursos do VMware para instâncias do vCenter Server (V1.9 e mais recente)
 

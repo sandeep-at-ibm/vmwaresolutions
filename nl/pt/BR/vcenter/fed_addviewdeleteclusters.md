@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -32,7 +32,7 @@ O nome do cluster deve atender aos requisitos a seguir:
 * O comprimento máximo do nome do cluster é de 30 caracteres.
 * O nome do cluster deve ser exclusivo dentro da instância do VMware Federal.
 
-#### Local do datacenter
+#### Local do data center
 
 O data center do cluster é configurado para o data center da instância do VMware Federal por padrão.
 
@@ -44,7 +44,7 @@ Especifique o modelo de CPU e RAM para o Bare Metal Server. As opções disponí
 
 Tabela 1. Opções para {{site.data.keyword.baremetal_short}}customizado
 
-| Opções de CPU        | Opções de RAM       |
+| Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
@@ -110,7 +110,7 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 
 ## Procedimento para incluir clusters em instâncias do VMware Federal
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instância do vCenter Server**, clique na instância na qual você deseja incluir clusters.
 
    **Nota**: assegure-se de que a instância esteja no status **Pronto para usar**. Caso contrário, não será possível incluir clusters na instância.

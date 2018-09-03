@@ -119,7 +119,7 @@ Revise os tópicos a seguir para obter informações que ajudarão a concluir as
 
 ### Links relacionados
 
-* [ Federal do VMware em  {{site.data.keyword.cloud_notm}}  visão geral ](vc_fed_overview.html)
+* [Visão geral do VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [Pedindo instâncias do VMware Federal](vc_fed_orderinginstance.html)
 * [Excluindo instâncias do VMware Federal](vc_fed_deletinginstance.html)
 * [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-08"
 
 ---
 
 # Migrando instâncias do VMware pré-V2.5 para contas do IBM Cloud
 
-As instâncias do VMware Federal que são implementadas na V2.5 e liberações mais recentes em sua conta do {{site.data.keyword.cloud}} são incluídas automaticamente em sua conta e são gerenciadas pelo {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). 
+As instâncias do VMware Federal que são implementadas na V2.5 e liberações mais recentes em sua conta do {{site.data.keyword.cloud}} são incluídas automaticamente em sua conta e são gerenciadas pelo {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM).
 
 Para obter instâncias que foram implementadas na V2.4 e em liberações anteriores, é possível migrá-las para contas especificadas do {{site.data.keyword.cloud_notm}} para gerenciamento de usuário ativado pelo IAM.
 
@@ -24,8 +24,8 @@ Para obter instâncias que foram implementadas na V2.4 e em liberações anterio
 
 ## Resultados
 
-1. Você obtém uma notificação do console de que sua solicitação para migrar a instância para a conta especificada do {{site.data.keyword.cloud_notm}} foi aceita. 
-2. Quando a migração da instância for concluída, ela será exibida na página **Instâncias implementadas** sob a conta para a qual ela foi migrada. A instância migrada não é mais exibida na conta original da qual foi migrada.
+1. Você obtém uma notificação do console de que sua solicitação para migrar a instância para a conta especificada do {{site.data.keyword.cloud_notm}} foi aceita.
+2. Quando a migração da instância for concluída, a instância será exibida na página **Instâncias implementadas** na conta para a qual foi migrada. A instância migrada não é mais exibida na conta original da qual foi migrada.
 
 ### Links relacionados
 

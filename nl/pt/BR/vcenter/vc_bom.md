@@ -37,7 +37,7 @@ Tabela 2. BOM para os componentes de software em instâncias do vCenter Server
 | VMware       | Platform Services Controller    | 6,5 Atualização 1g |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX for vSphere                 | 6.4.1        |
-| IBM          | CloudDriver                     | 2.4          |
+| IBM          | CloudDriver                     | 2.5          |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
 **Nota**: VMware vSAN é um componente opcional.

@@ -30,14 +30,14 @@ Você é responsável por manter e assegurar a disponibilidade de todos os compo
 
 O VMware Federal on {{site.data.keyword.cloud_notm}} não oferece a opção para pedir serviços adicionais.
 
-## Considerações de capacidade
+## Considerações sobre capacidade
 
 Para obter informações e considerações de capacidade, consulte [Capacidade de ajuste de escala](../archiref/solution/solution_scaling.html).
 
 ### Links relacionados
 
 * [Lista de materiais do software vCenter Server](vc_bom.html)
-* [ Federal do VMware em  {{site.data.keyword.cloud_notm}}  visão geral ](vc_fed_overview.html)
+* [Visão geral do VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
 * [Pedindo instâncias do VMware Federal](vc_fed_orderinginstance.html)
 * [Protegendo instâncias do VMware Federal](vc_fed_securinginstance.html)
 * [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)

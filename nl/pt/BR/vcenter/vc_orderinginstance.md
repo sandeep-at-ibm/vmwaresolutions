@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -70,7 +70,7 @@ Para usuários que não são do Parceiros de negócios, é possível usar as lic
 
 As configurações do Bare Metal baseiam-se em sua seleção de data center e se você escolheu uma configuração customizada ou pré-configurada.
 
-### Local do datacenter
+### Local do data center
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
 
@@ -91,7 +91,7 @@ Selecione o modelo de CPU e RAM para o Bare Metal Server.
 
 Tabela 2. Opções para {{site.data.keyword.baremetal_short}} customizados
 
-| Opções de CPU        | Opções de RAM       |
+| Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
@@ -226,7 +226,9 @@ Com base em sua configuração selecionada para os serviços de instância e com
    * Clique em **Instância primária** para implementar uma única instância no ambiente ou para implementar a primeira instância em uma topologia multissite.
    * Clique em **Instância secundária** para conectar a instância a uma instância existente (primária) no ambiente para alta disponibilidade e conclua as etapas a seguir:
      1. Selecione a instância primária à qual deseja que a instância secundária seja conectada.
-     2. Insira a senha do administrador do PSC para a instância primária.
+     2. Se é feito o upgrade da instância primária selecionada a liberação V2.5 ou se é feito o upgrade ou a implementação para as liberações V2.4 e anteriores, verifique a **Senha pré-preenchida do administrador para o PSC da instância primária** para assegurar que ela esteja correta.
+     
+        **Observação:** o campo **Senha do administrador para a instância primária PSC** não está disponível para instâncias primárias que são implementadas nas liberações V2.5 e mais recentes.     
 5. Conclua as configurações de licença para os componentes da instância.  
    *  Para usar licenças fornecidas pela IBM, selecione **Incluir com a compra** e selecione a edição de licença, se necessário.
    *  Para usar sua própria licença, selecione **Eu fornecerei** e insira a chave de licença.
