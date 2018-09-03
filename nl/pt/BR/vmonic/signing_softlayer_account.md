@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -35,7 +35,7 @@ A conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer), que e
 ### Links relacionados
 
 * [Perguntas mais frequentes](faq.html)
-* [ Requisitos para a conta de infraestrutura do  {{site.data.keyword.cloud_notm}}  ](slaccountrequirement.html)
-* [ Vídeo: Como criar uma conta do  {{site.data.keyword.cloud_notm}}  ](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [ Requisitos para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}](slaccountrequirement.html)
+* [Vídeo - Como criar uma conta do {{site.data.keyword.cloud_notm}}](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Alternando para IBMid](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}

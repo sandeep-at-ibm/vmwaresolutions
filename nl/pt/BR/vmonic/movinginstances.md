@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -37,10 +37,10 @@ Se você tiver instâncias pré-V1.4 e planejar continuar a usá-las, será poss
 
 Para mover suas instâncias pré-V1.4 para novas instâncias, conclua as etapas a seguir no vSphere Web Client:
 1. De sua instância pré-V1.4, exporte todas as VMs (máquinas virtuais).
-2. Crie uma nova instância na liberação atual.
+2. Crie uma instância na liberação atual.
 3. Importe todas as VMs exportadas da **Etapa 1**.
-4. Comece usando sua nova instância.
+4. Use sua nova instância.
 
-Para obter informações sobre como exportar e importar VMs, veja a documentação do VMware vSphere.
+Para obter mais informações sobre como exportar e importar VMs, consulte a documentação do VMware vSphere.
 
 Se você precisar de assistência com o {{site.data.keyword.vmwaresolutions_short}}, [entre em contato com o Suporte IBM](trbl_support.html) por meio de um dos canais de suporte.

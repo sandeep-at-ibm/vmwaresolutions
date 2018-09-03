@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -18,12 +18,12 @@ Tabela 1. Funções suportadas para os clusters do Cloud Foundation, vCenter Ser
 |:----------------------------------|:--------------------|:---------------|:-------------------------|:-------------- |
 | Desenvolvido por automação avançada {{site.data.keyword.IBM}} <sup>1</sup> | Sim | Sim | Sim | Não. Autoconstruído e configurado |
 | Opções de armazenamento        | vSAN                | Armazenamento vSAN ou no nível de Arquivo compartilhado (NFS) | vSAN | Armazenamento vSAN ou no nível de Arquivo compartilhado (NFS) |
-| Número de servidores ESXi no cluster inicial | 4 | 4 para vSAN e um mínimo de 2 (com 3 fortemente recomendado) para NFS | 4 | 1 para escalar um cluster existente, 4 para novo cluster vSAN e um mínimo de 3 para o novo cluster com NFS |
+| Número de servidores ESXi no cluster inicial | 4 | 4 para vSAN e um mínimo de 2 (3 recomendados) para NFS | 4 | 1 para escalar um cluster existente, 4 para novo cluster vSAN e um mínimo de 3 para o novo cluster com NFS |
 | Número máximo de servidores ESXi <sup>2</sup> | 32 por cluster      | 59 por cluster     | 59 por cluster | 60 por cluster     |
-| Implementação de vários sites automatizada em nuvem | Suportado para novas instâncias implementadas na V2.0 ou mais recente | Suportado para novas instâncias implementadas na V2.0 ou mais recente | Suportado | Suportado. Configuração automatizada não incluída |
+| Implementação de vários sites automatizada em nuvem | Suportado para novas instâncias que são implementadas na V2.0 ou mais recente | Suportado para novas instâncias que são implementadas na V2.0 ou mais recente | Suportado | Suportado. Configuração automatizada não incluída |
 | Incluir servidores ESXi              | Suportado           | Suportado | Suportado | Suportado. Configuração automatizada não incluída |
 | Remover servidores ESXi           | Suportado           | Suportado | Suportado | Suportado. Configuração automatizada não incluída |
-| Suporte multi-cluster         | 5 clusters | 10 clusters | 10 clusters | Suportado. Configuração automatizada não incluída |
+| Suporte multi-cluster         | Cinco clusters | Dez clusters | Dez clusters | Suportado. Configuração automatizada não incluída |
 | Atualização e correção gerenciadas pelo cliente da pilha do VMware | Atualizações do VMware | Não incluído | Não incluído | Não incluído |
 | Backup e restauração            | Usando manualmente o IBM Spectrum Protect Plus ou o Veeam | Usando manualmente o IBM Spectrum Protect Plus ou o Veeam | Usando manualmente o IBM Spectrum Protect Plus ou o Veeam | Solução de backup e restauração não incluída |
 | Rede definida por software   | NSX Enterprise   | NSX Base, Advanced ou Enterprise | NSX Advanced ou Enterprise | NSX Standard, Base ou Enterprise. Configuração automatizada não incluída |
@@ -45,7 +45,7 @@ Tabela 1. Funções suportadas para os clusters do Cloud Foundation, vCenter Ser
 * [Visão geral do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Visão geral do vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [vCenter Server sua visão geral](../vcenter/vc_hybrid_overview.html)
-* [Visão geral do Vmware vSphere](../vsphere/vs_vsphereclusteroverview.html)
+* [Visão geral do VMware vSphere](../vsphere/vs_vsphereclusteroverview.html)
 * [BOM do Cloud Foundation](../sddc/sd_bom.html)
 * [BOM do vCenter Server](../vcenter/vc_bom.html)
-* [BOM do Vmware vSphere](../vsphere/vs_bom.html)
+* [ BOM do VMware vSphere ](../vsphere/vs_bom.html)

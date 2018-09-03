@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-12"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -23,4 +23,4 @@ Conclua as etapas a seguir na instância primária V1.5 para incluir as permiss�
 6. Clique na guia **Membro de**.
 7. Clique em **Incluir** e insira os grupos **Administradores Corporativos** e **Administradores do Esquema** como nomes de objetos na lista.  
 
-Após concluir essas etapas, é possível incluir uma instância secundária V1.7 em uma instância primária V1.5.
+Depois de concluir essas etapas, é possível incluir uma instância secundária da V1.7 em uma instância primária da V1.5.

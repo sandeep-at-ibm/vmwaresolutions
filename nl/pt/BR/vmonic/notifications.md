@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
 # Gerenciando notificações do sistema
 
-É possível verificar notificações para o status do sistema ou operações do usuário. É possível também usar as informações para diagnosticar e resolver problemas que podem ocorrer.
+É possível verificar notificações para o status do sistema ou operações do usuário. Também é possível usar as informações para investigar problemas que possam ocorrer.
 
 ## Visualizando notificações
 
@@ -70,7 +70,7 @@ lastupdated: "2018-07-19"
 
 ## Filtrando notificações
 
-Por padrão, todas as notificações não lidas são exibidas. É possível filtrar as notificações por status, severidade e tipo. Para filtrar as notificações, marque as caixas de seleção somente para os itens que você deseja exibir nas listas suspensas **Status**, **Gravidade** ou **Tipo**.
+Por padrão, todas as notificações não lidas são exibidas. É possível filtrar as notificações por status, severidade e tipo. Para filtrar as notificações, selecione as caixas de seleção apenas para os itens que você deseja exibir nas listas **Status**, **Gravidade** ou **Tipo**.
 
 ### Links relacionados
 

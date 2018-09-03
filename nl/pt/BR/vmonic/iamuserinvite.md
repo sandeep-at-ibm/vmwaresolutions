@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 
 ---
 
 # Convidando usuários para acessar serviços e recursos
 
-O {{site.data.keyword.vmwaresolutions_full}} é integrado ao {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) para colaboração entre múltiplos usuários. Depois de se inscrever em uma conta do {{site.data.keyword.cloud_notm}} e efetuar login no console do {{site.data.keyword.vmwaresolutions_short}}, é possível incluir usuários na conta do {{site.data.keyword.cloud_notm}} para que esses usuários possam compartilhar os serviços e os recursos que são provisionados para a conta.
+O {{site.data.keyword.vmwaresolutions_full}} é integrado ao {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) para colaboração entre múltiplos usuários. Depois de se inscrever para uma conta do {{site.data.keyword.cloud_notm}} e efetuar login no console do {{site.data.keyword.vmwaresolutions_short}}, é possível incluir usuários na conta do {{site.data.keyword.cloud_notm}}. Esses usuários incluídos podem compartilhar os serviços e os recursos que são provisionados para a conta.
 
 ## Antes de iniciar
 
@@ -25,12 +25,12 @@ O {{site.data.keyword.vmwaresolutions_full}} é integrado ao {{site.data.keyword
 4. Na seção **Acesso**, expanda **Serviços** e, em seguida, conclua as tarefas a seguir:
    1. Selecione **Recurso** na lista **Designar acesso a**.
    2. Selecione **Soluções do VMware** na lista **Serviços**.
-   3. Selecione a função de acesso de plataforma que você deseja designar aos usuários, que é **Administrador**, **Editor**, **Operador** ou **Visualizador**.
-5. Clique em  ** Convidar usuários **.
+   3. Selecione a função de acesso à plataforma que você deseja designar aos usuários. Ela pode ser **Administrador**, **Editor**, **Operador** ou **Visualizador**.
+5. Clique em **Convidar usuários**.
 
 ## Resultados
 
-Após os usuários incluídos aceitarem o seu convite, eles poderão efetuar login no console do {{site.data.keyword.vmwaresolutions_short}} e alternar para a sua conta em suas configurações de perfil clicando em seu avatar no canto superior direito do console do {{site.data.keyword.vmwaresolutions_short}}. Em seguida, os usuários incluídos poderão colaborar e compartilhar os serviços e recursos disponíveis em sua conta especificada.
+Depois que os usuários incluídos aceitarem seu convite, eles poderão efetuar login no console do {{site.data.keyword.vmwaresolutions_short}} e alternar para sua conta. Para fazer isso, em suas configurações de perfil, os usuários clicam em seu avatar no canto superior direito do console do {{site.data.keyword.vmwaresolutions_short}}. Em seguida, os usuários incluídos podem colaborar e compartilhar os serviços e recursos disponíveis em sua conta especificada.
 
 ### Links relacionados
 

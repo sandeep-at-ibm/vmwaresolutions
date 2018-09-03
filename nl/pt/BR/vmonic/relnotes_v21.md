@@ -30,7 +30,7 @@ O serviço HCX on {{site.data.keyword.cloud_notm}} está disponível para instâ
 
 É possível também pedir uma instância do HCX local para licenciamento e ativação da instalação do HCX local.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Considerações para o HCX no {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)
 * [Gerenciando o HCX no {{site.data.keyword.cloud_notm}}](../services/managinghcx.html)
 * [Considerações para instâncias do HCX locais](../services/standalone_considerations.html)
@@ -42,7 +42,7 @@ O Bring Your Own License (BYOL) ou a compra de um licenciamento de assinatura fo
 
 Além disso, ao incluir nós em um cluster licenciado com sua chave, o console solicitará que você forneça uma nova chave de licença se o número de nós exceder a capacidade da chave.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 
 * [Incluindo e visualizando clusters para instâncias do Cloud Foundation](../sddc/sd_addingviewingclusters.html)
 * [Incluindo e visualizando clusters para instâncias do vCenter Server](../vcenter/vc_addingviewingclusters.html)
@@ -85,7 +85,7 @@ Para o cluster padrão em uma instância, é possível implementar ou expandir a
 
 Agora, a configuração de Bare Metal Servers customizada oferece o Dual Intel Xeon Gold 6140 com 36 núcleos no total, 2,3 GHz.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Visão geral do vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)
 
@@ -93,7 +93,7 @@ Para obter mais informações, veja:
 
 Você tem a opção de configurar compartilhamentos de arquivos NFS em uma base individual. Selecione o tamanho do arquivo e o nível de desempenho para cada compartilhamento de arquivo individual ou selecione o mesmo tamanho de arquivo e nível de desempenho para todos os compartilhamentos de arquivos que você pedir.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Visão geral do vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Incluindo e visualizando clusters para instâncias do vCenter Server](../vcenter/vc_addingviewingclusters.html)

@@ -16,7 +16,7 @@ Esta liberação inclui novos recursos, atualizações de componentes, aprimoram
 
 Esta liberação apresenta a oferta VMware vSphere on {{site.data.keyword.cloud_notm}}, que permite construir seu próprio ambiente virtual VMware hospedado pela IBM, customizando e pedindo os recursos de cálculo, armazenamento e rede compatíveis com o VMware com base nos componentes selecionados do VMware. Embora o vSphere on {{site.data.keyword.cloud_notm}} não automatize a instalação, a configuração e a criação dos componentes opcionais do VMware, você tem a máxima flexibilidade para projetar e arquitetar um ambiente que melhor se ajuste às suas necessidades de negócios. É possível iniciar criando um novo cluster do vSphere de servidores ESXi ou ampliando um cluster do vSphere existente em um {{site.data.keyword.CloudDataCent_notm}}.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Pedindo novos clusters do vSphere](../vsphere/vs_orderinginstances.html)
 * [Ajustando a escala de clusters existentes do vSphere](../vsphere/vs_scalingexistingclusters.html)
 
@@ -25,7 +25,7 @@ Para obter mais informações, veja:
 Esta liberação apresenta a oferta NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}, um dispositivo virtual para armazenamento definido por software, que implementa o NetApp ONTAP Select como um serviço no {{site.data.keyword.baremetal_short}} dedicado do IBM Cloud. O NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} é oferecido nas configurações de alto desempenho (todas SSD) e de alta capacidade (todas SATA).
 Ele hospeda seu armazenamento na infraestrutura dedicada e fornece recursos do NetApp, como deduplicação, compactação e criptografia de dados em repouso. Com esta oferta, é possível fornecer recursos de armazenamento com agilidade e flexibilidade enquanto protege os dados usando funções avançadas de gerenciamento de dados, como as cópias rápidas e eficientes do NetApp Snapshot®, cópias do FlexClone® e replicação do SnapMirror®.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Visão geral do NetApp ONTAP Select](../netapp/np_netappoverview.html)
 * [Pedindo instâncias do NetApp ONTAP Select](../netapp/np_orderinginstances.html)
 
@@ -34,7 +34,7 @@ Para obter mais informações, veja:
 O serviço F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} está agora disponível para as instâncias do VMware Cloud Foundation e do VMware vCenter Server. Este serviço fornece serviços inteligentes de balanceamento de carga e gerenciamento de tráfego L4-L7 em escala local e global, rede robusta e proteção de firewall de aplicativo da web, e acesso seguro e federado ao aplicativo.
 É possível pedir instâncias com o serviço F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} incluído ao pedir sua instância ou incluir esse serviço em suas instâncias existentes posteriormente na guia **Serviços** na página de detalhes da propriedade de instância do console do {{site.data.keyword.vmwaresolutions_short}}. Dependendo de seus requisitos, é possível selecionar uma das três opções de licenciamento para BIG-IP VEs.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [ Considerações para F5 no  {{site.data.keyword.cloud_notm}} ](../services/f5_considerations.html)
 * [Gerenciando o F5 no {{site.data.keyword.cloud_notm}}](../services/managing_f5.html)
 
@@ -49,7 +49,7 @@ Para obter mais informações, veja [Solicitando serviços gerenciados do IMI](.
 
 Os nomes de instâncias inseridos no {{site.data.keyword.vmwaresolutions_short}} quando você pede suas instâncias não podem ter caracteres especiais (como o caractere traço) neles. Apenas caracteres alfanuméricos são permitidos. Essa restrição não se aplica a instâncias do Cloud Foundation.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Pedindo instâncias do NetApp ONTAP Select](../netapp/np_orderinginstances.html)
 
@@ -91,7 +91,7 @@ Para obter mais informações, veja [Pedindo instâncias do vCenter Server](../v
 
 Agora, é possível fornecer o nome de domínio do Servidor de Nomes de Domínio (DNS) para uma instância do vCenter Server durante um pedido. Um Microsoft Windows Server Virtual Server Instance (VSI), que funciona como o DNS para a instância em que os hosts e máquinas virtuais são registrados, é implementado e pode ser consultado. O Microsoft Active Directory (AD) também é configurado no VSI do Microsoft Windows e o nome de domínio do DNS é a raiz de floresta do domínio do AD. Esse VSI do Microsoft Windows está disponível apenas na V1.9 e mais recente.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [Visão geral do vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Visualizando instâncias do vCenter Server](../vcenter/vc_viewinginstances.html)
 

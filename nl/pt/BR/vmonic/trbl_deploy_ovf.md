@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-03-16"
 ## Resolução
 
 Para implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, use o seguinte procedimento:
-1. Antes de tentar a implementação, deve-se incluir as seguintes informações do host no arquivo `/etc/hosts`:
+1. Antes de tentar implementar um arquivo OVF, inclua as informações do host a seguir no arquivo `/etc/hosts`:
 
    * Informações do host para o Platform Services Controller (PSC)
    * Informações do host para o servidor VMware ESXi

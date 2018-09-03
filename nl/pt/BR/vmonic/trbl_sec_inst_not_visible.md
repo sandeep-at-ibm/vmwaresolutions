@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-03"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-01-03"
 
 ## Problema
 
-Em uma configuração de vários sites, depois de incluir uma nova instância secundária, seu sistema vCenter Server não está visível quando efetua login no VMware vSphere Web Client de uma instância pedida anteriormente.
+Em uma configuração de vários sites, depois de incluir uma nova instância secundária, seu sistema vCenter Server não fica visível ao efetuar login no VMware vSphere Web Client de uma instância solicitada anteriormente.
 
 ## Resolução
 
