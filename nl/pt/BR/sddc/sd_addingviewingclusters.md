@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -36,7 +36,7 @@ O nome do cluster deve atender aos requisitos a seguir:
 * O comprimento máximo do nome do cluster é de 30 caracteres.
 * O nome do cluster deve ser exclusivo dentro da instância do Cloud Foundation.
 
-#### Local do datacenter
+#### Local do data center
 
 O local do {{site.data.keyword.CloudDataCent}} do cluster é configurado como o {{site.data.keyword.CloudDataCent_notm}} da instância do Cloud Foundation por padrão. É possível implementar o cluster em um {{site.data.keyword.CloudDataCent_notm}} diferente da instância implementada, mas deve-se assegurar que a latência de rede entre os dois {{site.data.keyword.CloudDataCents_notm}} seja menor que 150 ms. Para verificar a latência de rede, é possível usar uma ferramenta, como o [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
@@ -56,7 +56,7 @@ Para a configuração **Customizada**, você tem um número de opção para o **
 
 Tabela 1. Opções para {{site.data.keyword.baremetal_short}}customizado
 
-| Opções de CPU   | Opções de RAM   |
+| Opções de modelo da CPU   | Opções de RAM   |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
