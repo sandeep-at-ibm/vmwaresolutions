@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -12,38 +12,56 @@ lastupdated: "2018-07-19"
 
 É possível expandir ou contrair a capacidade de sua instância do VMware Cloud Foundation de acordo com as necessidades do negócio, incluindo ou removendo servidores ESXi.
 
-Uma instância do Cloud Foundation pode ter até 5 clusters, um dos quais é o padrão. Cada cluster inicial pode ter até 51 servidores ESXi e clusters adicionais podem ter até 59.
+Uma instância do Cloud Foundation pode ter até cinco clusters, um dos quais é o padrão. Cada cluster inicial pode ter até 51 servidores ESXi e clusters adicionais podem ter até 59.
 
-## Antes de iniciar
+## Incluindo servidores ESXi em instâncias do Cloud Foundation
 
-* Não inclua nem remova servidores do ESXi do VMware vSphere Web Client. As mudanças que você faz no VMware vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}.
+### Antes de Incluir Servidores ESXi
+
+* Não inclua servidores ESXi do Web client do VMware vSphere. As mudanças que você faz no VMware vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_full}}.
 * A plataforma base que você pediu tem 4 servidores ESXi por padrão. É possível expandir a plataforma para no máximo 32 servidores ESXi. No entanto, o número de {{site.data.keyword.baremetal_short}} que você pode incluir de cada vez é o seguinte:
    * Para a configuração **Pequena** e **Grande**, é possível incluir de 1 a 10 servidores ESXi de cada vez.
    * Para a configuração **Customizado**, é possível incluir de 1 a 20 servidores ESXi de cada vez.
-* É possível remover os servidores ESXi que você incluiu. Não é possível remover os servidores ESXi padrão.
+
+## Procedimento para Incluir Servidores ESXi
+
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+2. Na tabela **Instâncias do Cloud Foundation**, clique na instância para a qual você deseja expandir a capacidade.
+3. Clique em **Infraestrutura** na área de janela de navegação esquerda.
+4. Na tabela **CLUSTERS**, clique no cluster no qual você deseja incluir servidores ESXi.
+5. Na seção **Servidores ESXi**, clique em **Incluir**.
+6. Na janela **Incluir servidor**, insira o número de servidores que deseja incluir, revise o custo estimado e, em seguida, clique em **Incluir**.
+
+### Resultados após a inclusão de servidores ESXi
+
+1. Você pode ter um pequeno atraso no console enquanto o status da instância é mudado de **Pronto para o uso** para **Modificando**. Permita que a operação seja totalmente concluída antes de fazer mudanças adicionais na instância.
+2. Você é notificado por e-mail quando seus servidores ESXi são incluídos.
+3. Se não vir os novos servidores ESXi incluídos na lista no cluster, verifique as notificações por e-mail ou do console para localizar mais detalhes sobre a falha.
+
+## Removendo servidores ESXi de instâncias do Cloud Foundation
+
+### Antes de remover servidores ESXi
+
+* Não remova servidores ESXi do Web client do VMware vSphere. As mudanças que você faz no VMware vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}.
+* A plataforma base que você pediu tem 4 servidores ESXi por padrão. É possível remover os servidores ESXi que você incluiu. Não é possível remover os servidores ESXi padrão.
 * Antes de remover servidores do ESXi com o serviço F5 on {{site.data.keyword.cloud_notm}} ou o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalado, deve-se migrar as VMs do F5 BIG-IP e do FortiGate para um servidor do ESXi diferente daquele que está atualmente hospedando as VMs.
 * Antes de remover servidores ESXi com o serviço do IBM Spectrum Protect Plus no {{site.data.keyword.cloud_notm}} instalado, certifique-se de que não haja nenhuma operação ativa (com falha ou em andamento) de backup ou restauração, pois essas operações ativas podem impedir que os servidores ESXi sejam removidos.
 
-## Procedimento
+## Procedimento para remover servidores ESXi
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
-2. Na tabela **Instâncias do Cloud Foundation**, clique na instância para a qual você deseja expandir ou contrair a capacidade.
+2. Na tabela **Instâncias do Cloud Foundation**, clique na instância para a qual você deseja contratar capacidade.
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda.
-4. Na tabela **CLUSTERS**, clique no cluster no qual você deseja incluir servidores do ESXi ou do qual você deseja remover servidores do ESXi.
-5. Para incluir servidores ESXi, conclua as etapas a seguir:
-   1. Na seção **Servidores ESXi**, clique em **Incluir**.
-   2. Na janela **Incluir servidor**, insira o número de servidores que deseja incluir, revise o custo estimado e, em seguida, clique em **Incluir**.
-6. Para remover servidores ESXi, selecione os servidores que deseja remover na seção **Servidores ESXi** e, em seguida, clique em **Remover**.
+4. Na tabela **CLUSTERS**, clique no cluster do qual você deseja remover servidores ESXi.
+6. Na seção **Servidores ESXi**, selecione os servidores que você deseja remover e clique em **Remover**.
 
-## Resultados
+### Resultados após a remoção de servidores ESXi
 
-Depois de iniciar a operação de inclusão ou remoção é possível que haja um pequeno atraso no status da instância enquanto ela muda de **Pronta para usar** para **Modificando**. Permita que a operação seja totalmente concluída antes de fazer mudanças adicionais na instância.
+1. Você pode ter um pequeno atraso no console enquanto o status da instância é mudado de **Pronto para o uso** para **Modificando**. Permita que a operação seja totalmente concluída antes de fazer mudanças adicionais na instância.
+2. Você é notificado por e-mail quando seus servidores ESXi são removidos.
+3. Os servidores ESXi são totalmente recuperados pela infraestrutura do {{site.data.keyword.cloud_notm}} no final do ciclo de faturamento do {{site.data.keyword.cloud_notm}}, que geralmente é de 30 dias.
 
-Você será notificado por e-mail quando os seus servidores ESXi forem incluídos ou removidos. Quando você remover os servidores, observe que os servidores ESXi são totalmente recuperados pela infraestrutura do {{site.data.keyword.cloud_notm}} no final do ciclo de faturamento do {{site.data.keyword.cloud_notm}}, que é, geralmente, de 30 dias.
-
-**Atenção**: você será cobrado até o final do ciclo de faturamento do {{site.data.keyword.cloud_notm}} pelos servidores ESXi removidos.
-
-Se não vir os novos servidores ESXi incluídos na lista no cluster, verifique as notificações por e-mail ou do console para localizar mais detalhes sobre a falha.
+   **Atenção**: você será cobrado até o final do ciclo de faturamento do {{site.data.keyword.cloud_notm}} pelos servidores ESXi removidos.
 
 ### Links relacionados
 
