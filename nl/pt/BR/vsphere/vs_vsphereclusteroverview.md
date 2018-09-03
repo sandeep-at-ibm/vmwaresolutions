@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-16"
 
 ---
 
 # Visão geral do VMware vSphere on IBM Cloud
 
-O VMware vSphere on {{site.data.keyword.cloud}} é uma plataforma de pedidos simplificada e otimizada para VMware, que permite construir seu próprio ambiente VMware hospedado pela IBM customizando e ordenando o hardware compatível com VMware com base nos seus componentes VMware selecionados.
+O VMware vSphere on {{site.data.keyword.cloud}} é uma plataforma de ordenação aperfeiçoada e otimizada para VMware. Com essa plataforma, é possível construir seu próprio ambiente VMware hospedado pela IBM customizando e ordenando o hardware compatível com VMware com base em seus componentes selecionados do VMware.
 
-O console do {{site.data.keyword.vmwaresolutions_short}} filtra o hardware automaticamente, com base nos componentes do VMware que você selecionar. Por exemplo, ao criar um novo cluster vSAN do VMware all-flash, apenas o hardware que é validado em relação ao [Guia de Compatibilidade do VMware](https://www.vmware.com/resources/compatibility/search.php) é apresentado e um mínimo de quatro servidores ESXi é necessário.
+O console do {{site.data.keyword.vmwaresolutions_short}} filtra o hardware automaticamente, com base nos componentes do VMware que você selecionar. Por exemplo, ao criar um novo cluster flash do VMware vSAN, apenas o hardware que é validado com relação ao [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php) é apresentado. Além disso, um mínimo de quatro servidores ESXi é necessário.
 
-O VMware vSphere on {{site.data.keyword.cloud_notm}} não automatiza a instalação, configuração e criação dos componentes opcionais do VMware e permite o máximo de flexibilidade para projetar e construir o ambiente do VMware hospedado enquanto incorpora o hardware compatível com VMware.
+O VMware vSphere on {{site.data.keyword.cloud_notm}} não automatiza a instalação, a configuração e a ativação dos componentes opcionais do VMware. A plataforma permite o máximo de flexibilidade para projetar e construir seu ambiente VMware hospedado enquanto incorpora o hardware compatível com VMware.
 
 Use essa oferta para criar um novo cluster de servidores ESXi ou ajuste a escala de um cluster existente de servidores ESXi em um {{site.data.keyword.CloudDataCent_notm}}. Dependendo dos componentes do VMware que você selecionar, será possível começar com apenas um servidor ESXi e, em seguida, escalar o cluster posteriormente conforme necessário.
 
@@ -68,16 +68,16 @@ Cada nó de expansão do cluster do vSphere implementará e incorrerá em encarg
 
 ### Hardware para nós de expansão
 
-Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração de hardware apresentada em [Componentes do VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+Um Bare Metal Server {{site.data.keyword.cloud_notm}} com a configuração de hardware apresentada em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### Rede para nós de expansão
 
-Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração de rede apresentada em [Componentes do VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+Um Bare Metal Server {{site.data.keyword.cloud_notm}} com a configuração de rede apresentada em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### Componentes do VMware para nós de expansão
 
 * Um {{site.data.keyword.cloud_notm}} Bare Metal Server com o VMware vSphere Enterprise Plus 6.0u2 ou 6.5u1  
-* Componentes opcionais do VMware apresentados em [Componentes do VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud).
+* Componentes opcionais do VMware apresentados em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 **Importante**: deve-se gerenciar os servidores ESXi, componentes opcionais do VMware e hardware adicional que são pedidos e entregues à sua conta {{site.data.keyword.cloud_notm}} apenas no {{site.data.keyword.slportal}}. Depois de criar um novo cluster no console do {{site.data.keyword.vmwaresolutions_short}}, é possível retornar ao console para escalar o novo cluster usando a configuração salva. Para obter mais informações, consulte [Ajustando a escala de clusters existentes do
 vSphere](vs_scalingexistingclusters.html).
