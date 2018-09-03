@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -28,7 +28,7 @@ O Active Directory serve somente para autenticar acessos para gerenciar a instâ
 
 O domínio de Conexão Única (SSO) do vSphere é usado como o mecanismo de autenticação inicial para uma única instância ou múltiplas instâncias vinculadas. O domínio de SSO também serve para conectar uma instância do VMware ou múltiplas instâncias vinculadas ao Microsoft Active Directory Server. A configuração de SSO a seguir é aplicada:  
 * O domínio de SSO de `vsphere.local` é sempre usado
-* Para instâncias do VMware que são ligadas a uma instância existente, o PSC é associado ao domínio de SSO da instância existente
+* Para instâncias do VMware que estão vinculadas a uma instância existente, o PSC é unido ao domínio SSO da instância existente
 * O nome do site de SSO é igual ao nome da instância
 
 ## Domain Name Services (DNS)
@@ -62,7 +62,7 @@ Esse design integra serviços do DNS nos Active Directory Servers com a VM do SD
 * Os servidores DNS do Active Directory são configurados para serem autorizados para o espaço de domínio do DNS acima do subdomínio da instância do SDDC Manager e do Cloud Foundation.
 * Os servidores DNS do Active Directory são configurados para apontar para o endereço IP do SDDC Manager para a delegação de subdomínio da zona para a qual o SDDC Manager é autorizado.
 * Os servidores DNS do Active Directory são configurados para apontar para os servidores DNS do {{site.data.keyword.cloud_notm}} para todas as outras zonas.
-* Qualquer instância secundária que deve ser integrada à primeira instância ou de destino deve utilizar a mesma estrutura de nome do DNS acima do subdomínio do SDDC Manager.
+* Qualquer instância secundária que deve ser integrada à primeira instância ou à instância de destino deve utilizar a mesma estrutura de nome DNS acima do subdomínio do SDDC Manager.
 
 ## Serviços NTP
 
