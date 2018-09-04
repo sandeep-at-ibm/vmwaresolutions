@@ -20,7 +20,7 @@ Per gli account SoftLayer VRF (Virtual Routing and Forwarding), l'equivalente di
 
 Prima di effettuare un ordine di istanza, assicurati che il tuo account SoftLayer sia un account VRF o un account classico (non VRF) con spanning della VLAN abilitato. Altrimenti, l'ordine potrebbe non riuscire.
 
-Per confermare che il tuo account SoftLayer sia un account VRF, consulta il supporto IBM Bluemix. Per gli account classici, devi abilitare lo spanning della VLAN seguendo le istruzioni in [Abilita o disabilita lo spanning della VLAN](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+Per confermare che il tuo account SoftLayer sia un account VRF, consulta il supporto IBM Bluemix. Per gli account classici, devi abilitare lo spanning della VLAN seguendo le istruzioni in [Abilita o disabilita il VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ## Aggiornamenti del modello di addebito del servizio
 

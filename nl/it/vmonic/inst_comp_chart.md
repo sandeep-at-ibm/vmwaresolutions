@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -18,12 +18,12 @@ Tabella 1. Funzioni supportate per le istanze Cloud Foundation, vCenter Server, 
 |:----------------------------------|:--------------------|:---------------|:-------------------------|:-------------- |
 | Automazione avanzata con tecnologia {{site.data.keyword.IBM}} <sup>1</sup> | Sì | Sì | Sì | No. Auto-costruito e configurato |
 | Opzioni di archiviazione        | vSAN                | vSAN o archiviazione a livello di file condivisa (NFS) | vSAN | vSAN o archiviazione a livello di file condivisa (NFS) |
-| Numero di server ESXi nel cluster iniziale | 4 | 4 per vSAN e un minimo di 2 (con 3 fortemente consigliato) per NFS | 4 | 1 per ridimensionare un cluster esistente, 4 per il nuovo cluster vSAN e almeno 3 per il nuovo cluster con NFS |
+| Numero di server ESXi nel cluster iniziale | 4 | 4 per vSAN e un minimo di 2 (3 consigliati) per NFS | 4 | 1 per ridimensionare un cluster esistente, 4 per il nuovo cluster vSAN e almeno 3 per il nuovo cluster con NFS |
 | Numero massimo di server ESXi <sup>2</sup> | 32 per cluster      | 59 per cluster     | 59 per cluster | 60 per cluster     |
 | Distribuzione multisito automatizzata Cloud | Supportato per le nuove istanze distribuite nella V2.0 o successive | Supportato per le nuove istanze distribuite nella V2.0 o successive | Supportato | Supportato. Configurazione automatizzata non inclusa |
 | Aggiunta di server ESXi              | Supportato           | Supportato | Supportato | Supportato. Configurazione automatizzata non inclusa |
 | Rimozione di server ESXi           | Supportato           | Supportato | Supportato | Supportato. Configurazione automatizzata non inclusa |
-| Supporto multicluster         | 5 cluster | 10 cluster | 10 cluster | Supportato. Configurazione automatizzata non inclusa |
+| Supporto multicluster         | Cinque cluster | Dieci cluster | Dieci cluster | Supportato. Configurazione automatizzata non inclusa |
 | Aggiornamento e correzione gestiti dal client dello stack VMware | Aggiornamenti VMware | Non incluso | Non incluso | Non incluso |
 | Backup e ripristino            | Manualmente utilizzando IBM Spectrum Protect Plus o Veeam | Manualmente utilizzando IBM Spectrum Protect Plus o Veeam | Manualmente utilizzando IBM Spectrum Protect Plus o Veeam | Soluzione di backup e ripristino non inclusa |
 | SDN (software-defined networking)   | NSX Enterprise   | NSX Base, Advanced o Enterprise | NSX Advanced o Enterprise | NSX Standard, Base o Enterprise. Configurazione automatizzata non inclusa |
@@ -45,7 +45,7 @@ Tabella 1. Funzioni supportate per le istanze Cloud Foundation, vCenter Server, 
 * [Panoramica di Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Panoramica di vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Panoramica di vCenter Server Hybridity](../vcenter/vc_hybrid_overview.html)
-* [Panoramica di Vmware vSphere](../vsphere/vs_vsphereclusteroverview.html)
+* [Panoramica di VMware vSphere](../vsphere/vs_vsphereclusteroverview.html)
 * [Distinta base di Cloud Foundation](../sddc/sd_bom.html)
 * [Distinta base di vCenter Server](../vcenter/vc_bom.html)
-* [Distinta base di Vmware vSphere](../vsphere/vs_bom.html)
+* [Distinta base di VMware vSphere](../vsphere/vs_bom.html)

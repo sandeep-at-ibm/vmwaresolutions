@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-29"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -16,7 +16,7 @@ Quando tenti di connetterti al client web vSphere, potresti visualizzare il segu
 `The server at <IP_address> is taking too long to respond.`
 
 ## Risoluzione
-Utilizza la seguente procedura per risolvere e correggere il problema.
+Utilizza la seguente procedura per analizzare e correggere il problema.
 
 1. Assicurati di aver completato i passi dalla descrizione a comparsa che viene visualizzata quando passi con il mouse sul pulsante **Console vCenter**. Per
    comodità, di seguito vengono elencati questi passi:   
@@ -29,12 +29,12 @@ Utilizza la seguente procedura per risolvere e correggere il problema.
       IPAddress              HostName
       ```
 
-2. Prendi nota dell'indirizzo IP che viene visualizzato, perché ne hai bisogno in uno dei passi successivi.
+2. Prendi nota dell'indirizzo IP che viene visualizzato perché ti servirà in uno dei passi successivi.
 3. Assicurati di avere accesso alla VPN dell'infrastruttura {{site.data.keyword.cloud_notm}}. Completa la seguente procedura nel {{site.data.keyword.slportal}}:
    1. Fai clic su **Account > Accesso VPN**.
    2. Fai clic su **Link SSL** nella colonna **Accesso VPN**.
    3. Nella pagina **Accesso VPN per nome utente**, imposta l'opzione **Accesso alla sottorete** su **Manuale**.
-   4. Nella stessa pagina, individua la sottorete per la coppia indirizzo IP/nome host. Vedi il **Passo 2** per ulteriori informazioni.    
+   4. Nella stessa pagina, individua la sottorete per la coppia indirizzo IP/nome host. Per ulteriori informazioni, vedi il **Passo 2**.    
 
       Ad esempio, se l'indirizzo IP per la tua istanza è `xx.yyy.zz.15` e l'indirizzo IP per vCenter è `xx.yyy.zz.10`, devi concedere l'accesso per la sottorete `xx.yyy.zz.0/26`.
 

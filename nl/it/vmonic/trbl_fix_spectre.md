@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -22,12 +22,14 @@ Le istanze della V2.0 o successive sono state distribuite con VMware vSphere 6.5
 
 ### Istanze vCenter Server distribuite nella V2.0 o successive
 
-Per VMware vSphere 6.5:
+#### Per VMware vSphere 6.5
+
 * Per tutte le tue nuove istanze della V2.3, vSphere verrà distribuito con le seguenti patch applicate: ESXi650-201712101-SG, ESXi650-201803401-BG e ESXi650-201803402-BG.  
 * Per tutte le tue istanze esistenti distribuite prima della V2.3, tutti i nuovi cluster e server ESXi verranno aggiornati con le seguenti patch: ESXi650-201712101-SG, ESXi650-201803401-BG e ESXi650-201803402-BG.
-* Per tutti i tuoi server ESXi esistenti, così come per tutti i cluster o server ESXi che continui a distribuire prima dell'aggiornamento alla V2.3, devi applicare le seguenti patch: ESXi650-201712101-SG, ESXi650-201803401-BG e ESXi650-201803402-BG dal [sito di patch dei prodotti VMware](https://my.vmware.com/group/vmware/patch).
+* Per tutti i tuoi server ESXi e per tutti i cluster o server ESXi che continui a distribuire prima di eseguire l'aggiornamento alla V2.3, devi applicare le seguenti patch: ESXi650-201712101-SG, ESXi650-201803401-BG e ESXi650-201803402-BG dal [sito di patch dei prodotti VMware](https://my.vmware.com/group/vmware/patch).
 
-Per VMware vCenter Server 6.5:
+#### Per VMware vCenter Server 6.5
+
 * Per tutte le tue nuove istanze della V2.3, vCenter Server verrà distribuito con la patch vCenter 6.5 U1g applicata.
 * Per tutte le istanze esistenti distribuite prima della V2.3, devi applicare la patch vCenter 6.5 U1g dal [sito di patch dei prodotti VMware](https://my.vmware.com/group/vmware/patch).
 
@@ -45,7 +47,7 @@ Per VMware vCenter Server 6.5, devi applicare la patch vCenter 6.5 U1g dal [sito
 
 ## Istanze distribuite nella V1.9 o precedenti
 
-Le istanze Cloud Foundation e vCenter Server, così come i cluster VMware vSphere della V1.9 o precedenti, sono state distribuite con VMware vSphere 6.0 e VMware vCenter Server 6.0.
+Le istanze Cloud Foundation, le istanze vCenter Server e i cluster VMware vSphere della V1.9 o precedenti, sono stati distribuiti con VMware vSphere 6.0 e VMware vCenter Server 6.0.
 
 ### Istanze vCenter Server distribuite nella V1.9 o precedenti
 

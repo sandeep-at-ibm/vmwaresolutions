@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-16"
 
 ---
 
 # Come contattare il supporto IBM
 
-Se hai bisogno di aiuto con {{site.data.keyword.vmwaresolutions_full}}, crea un ticket di supporto {{site.data.keyword.cloud_notm}} per ottenere assistenza attraverso uno dei seguenti canali:
+Se ti serve aiuto con {{site.data.keyword.vmwaresolutions_full}}, crea un ticket di supporto {{site.data.keyword.cloud_notm}} per ottenere assistenza utilizzando uno dei seguenti canali:
 
 ## Dalla console IBM Cloud for VMware Solutions
 
@@ -47,6 +47,6 @@ Per contattare il supporto IBM dal {{site.data.keyword.slportal}}, completa la s
 
 1. Vai all'indirizzo https://control.softlayer.com.
 2. Accedi al portale con il tuo account **ID IBM**.
-3. Completa i passi da 6 a 8 descritti nella sezione _Dalla console IBM Cloud for VMware Solutions_ in questo argomento per inviare il tuo ticket.
+3. Completa i passi 6 - 8 descritti nella sezione _Dalla console IBM Cloud for VMware Solutions_ di questo argomento per inviare il tuo ticket.
 
     **Nota**: indipendentemente dal canale che utilizzi per aprire il ticket di supporto (la console {{site.data.keyword.vmwaresolutions_short}} o il {{site.data.keyword.slportal}}), i termini della _Politica di supporto dei servizi di piattaforma e infrastruttura {{site.data.keyword.cloud_notm}}_ sono ancora validi.

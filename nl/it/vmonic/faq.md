@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -48,9 +48,9 @@ Per ulteriori informazioni, vedi [Componenti di VMware vSphere on {{site.data.ke
 
 ## Un'istanza vCenter Server a due nodi è altamente disponibile?
 
-Si consiglia vivamente di distribuire i carichi di lavoro di produzione in ambienti con almeno tre nodi.
+Si consiglia di distribuire i carichi di lavoro di produzione in ambienti con almeno tre nodi.
 
-Sebbene VMware vSphere DRS (Distributed Resource Scheduler) e VMware HA (High Availability) siano abilitati per impostazione predefinita, le procedure consigliate di VMware suggeriscono di posizionare ciascuno dei tre controller NSX su un singolo nodo.
+VMware vSphere DRS (Distributed Resource Scheduler) e VMware HA (High Availability) sono abilitati per impostazione predefinita. Tuttavia, le procedure ottimali di VMware suggeriscono di posizionare ciascuno dei tre controller NSX su un singolo nodo.
 
 Nella distribuzione minima a due nodi, un nodo ha un controller NSX e l'altro nodo ha due controller NSX. Se il nodo con due controller NSX si interrompe, le operazioni del controller NSX vengono messe in modalità di sola lettura e le nuove VM (macchine virtuali) o le VM vMotion potrebbero riscontrare dei problemi di rete.
 
@@ -62,13 +62,13 @@ No, non è consigliato. Potrebbero verificarsi degli errori nelle funzioni di {{
 
 ## È possibile rinominare i cluster?
 
-Per le istanze vCenter Server, il primo cluster creato durante la distribuzione ha il nome predefinito **cluster1**. Puoi rinominare il cluster predefinito nel client VMware vSphere. Quando aggiungi un nuovo cluster a un'istanza vCenter Server, puoi specificare il nome che vuoi nella console {{site.data.keyword.vmwaresolutions_short}}.
+Per le istanze vCenter Server, il primo cluster creato durante la distribuzione ha il nome predefinito **cluster1**. Puoi rinominare il cluster predefinito nel client VMware vSphere. Quando aggiungi un cluster a un'istanza vCenter Server, puoi specificare il nome che vuoi nella console {{site.data.keyword.vmwaresolutions_short}}.
 
 **Nota**: per le istanze Cloud Foundation, il nome cluster predefinito non può essere modificato.
 
 ##Come vengono gestite le patch?
 
-IBM fornisce aggiornamenti in corso al componente IBM CloudDriver che vengono resi disponibili tramite la console {{site.data.keyword.cloud_notm}} for VMware Solutions. IBM non fornisce gli aggiornamenti in corso ai servizi aggiuntivi come Zerto on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. Ottenere e installare questi aggiornamenti è sotto la tua responsabilità.
+IBM fornisce aggiornamenti continui al codice IBM distribuendo la VSI (Virtual Server Instance) IBM CloudDriver su richiesta. IBM non fornisce aggiornamenti continui ai servizi aggiuntivi come Zerto on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. Ottenere e installare questi aggiornamenti è sotto la tua responsabilità.
 
 Gli aggiornamenti di VMware vengono applicati in modo diverso in base al tipo di istanza VMware che hai distribuito:
 
@@ -78,7 +78,7 @@ Gli aggiornamenti di VMware vengono applicati in modo diverso in base al tipo di
   * Sei responsabile di tutti gli altri aggiornamenti ai componenti VMware, inclusa la garanzia che i cluster e i server ESXi appena distribuiti dispongano di tutti gli aggiornamenti più recenti necessari.
   * Per le istanze distribuite nella V2.0 o superiore, VMware Update Manager (VUM) è integrato nel tuo vCenter Server. Puoi configurare VUM per scaricare gli aggiornamenti ESXi da VMware.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta le seguenti risorse:
 * [Supporto VMware](https://www.vmware.com/support.html)
 * [Applicazione di aggiornamenti alle istanze vCenter Server](../vcenter/vc_applyingupdates.html)
 * [Applicazione di aggiornamenti alle istanze Cloud Foundation](../sddc/sd_applyingupdates.html)
@@ -93,7 +93,7 @@ Sebbene l'edge VMware NSX per i servizi di gestione si trovi in una sottorete pu
 
 ## L'edge NSX gestito dal cliente rappresenta un rischio per la sicurezza?
 
-Sebbene l'edge NSX gestito dal cliente sia connesso alla VLAN pubblica, sono state adottate misure di sicurezza per garantire che non costituisca un rischio per la sicurezza. Queste misure sono:
+Sebbene l'edge NSX gestito dal cliente sia connesso alla VLAN pubblica, sono state adottate misure di sicurezza per garantire che non costituisca un rischio per la sicurezza. Sono in vigore le seguenti misure di sicurezza:
 *  È presente una regola del firewall per consentire solo il traffico in uscita dall'intervallo di indirizzi IP della sottorete privata.
 *  È presente una regola SNAT (Source Network Address Translation) (disabilitata per impostazione predefinita) per tradurre tutti gli indirizzi IP dalla sottorete privata in un singolo indirizzo IP sulla sottorete pubblica.
 *  L'accesso remoto per il dispositivo edge NSX gestito dal cliente è disabilitato.
@@ -117,9 +117,9 @@ Puoi controllare lo stato della distribuzione dell'istanza visualizzando la cron
 
 ## VMware vSphere on IBM Cloud utilizza l'automazione per installare, configurare e richiamare lo stack VMware?
 
-No. VMware vSphere on {{site.data.keyword.cloud_notm}} non sfrutta l'automazione avanzata presente nelle piattaforme di Cloud Foundation e vCenter Server. In base a quello che ordini, la piattaforma fornisce licenze VMware opzionali, server ESXi e, facoltativamente, una coppia HA di firewall fisici FortiGate. Se viene creato un nuovo cluster, vengono fornite anche tre nuove VLAN: una pubblica e due private.
+No. VMware vSphere on {{site.data.keyword.cloud_notm}} non utilizza l'automazione avanzata disponibile nelle piattaforme di Cloud Foundation e vCenter Server. In base a quello che ordini, la piattaforma fornisce licenze VMware opzionali, server ESXi e, facoltativamente, una coppia HA di firewall fisici FortiGate. Se viene creato un nuovo cluster, vengono fornite anche tre nuove VLAN: una VLAN pubblica e due VLAN private.
 
-VMware ESXi viene installato automaticamente su ciascun server bare metal, ma sei responsabile dell'installazione di eventuali componenti VMware aggiuntivi come vCenter Server o NSX. Mentre vSphere on {{site.data.keyword.cloud_notm}} garantisce che l'hardware compatibile con VMware sia ordinato in base ai componenti VMware selezionati, non esiste alcuna automazione in atto per configurare e richiamare l'ambiente VMware. Sei responsabile della progettazione e dell'architettura dell'ambiente ospitato da IBM.
+VMware ESXi viene installato automaticamente su ciascun server bare metal, ma sei responsabile dell'installazione di eventuali componenti VMware aggiuntivi come vCenter Server o NSX. Anche se vSphere on {{site.data.keyword.cloud_notm}} garantisce che l'hardware compatibile con VMware sia ordinato in base ai componenti VMware selezionati, non esiste alcuna automazione per configurare e richiamare l'ambiente VMware. Sei responsabile della progettazione e dell'architettura dell'ambiente ospitato da IBM.
 
 ## Come posso visualizzare un elenco di tutte le notifiche?
 

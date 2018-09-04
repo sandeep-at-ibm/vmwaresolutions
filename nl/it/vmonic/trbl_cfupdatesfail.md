@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-12-29"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-12-29"
 
 ## Problema
 
-Se hai aggiunto i server ESXi a un'istanza VMware Cloud Foundation della V1.5 o V1.6 e l'operazione di aggiunta non è riuscita, il pulsante di aggiornamento verrà disabilitato e non potrai applicare l'aggiornamento V1.5 -> V1.6 o V1.6 -> V1.7 all'istanza.
+Se hai aggiunto i server ESXi a un'istanza VMware Cloud Foundation della V1.5 o V1.6 e l'operazione di aggiunta non è riuscita, il pulsante di aggiornamento viene disabilitato e non puoi applicare l'aggiornamento V1.5 -> V1.6 o V1.6 -> V1.7 all'istanza.
 
 ## Risoluzione
 

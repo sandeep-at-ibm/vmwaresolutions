@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -22,19 +22,18 @@ Puoi anche specificare se vuoi ricevere notifiche via e-mail o via console per i
 * L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti dell'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
 * Se la chiave API per il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) cambia, devi aggiornare la chiave nella pagina **Impostazioni** nella console {{site.data.keyword.vmwaresolutions_short}}.
 
-   **Importante**: è tua responsabilità garantire che la chiave API salvata nella pagina **Impostazioni** sia corretta e aggiornata.
-   Altrimenti, le operazioni che richiedono la convalida della chiave API potrebbero non riuscire.
+   **Importante**: è tua responsabilità garantire che la chiave API salvata nella pagina **Impostazioni** sia corretta e aggiornata. Altrimenti, le operazioni che richiedono la convalida della chiave API potrebbero non riuscire.
 
 ## Procedura
 
 1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Impostazioni** dal riquadro di navigazione a sinistra.
-2. Nell'area **Notifiche**, specifica le impostazioni di notifica:
+2. Nell'area **Notifiche**, specifica le impostazioni di notifica.
    * Se vuoi ricevere una notifica via e-mail quando si verificano degli eventi, fai clic su **Abilita notifiche via e-mail**.
    * Se vuoi ricevere una notifica tramite la console quando si verificano degli eventi, fai clic su **Abilita notifiche via console**.
-3. Nell'area **Credenziali infrastruttura IBM Cloud**, immetti il nome utente e la chiave API del tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) utilizzando uno dei seguenti metodi:
+3. Nell'area **Credenziali infrastruttura IBM Cloud**, immetti il nome utente e la chiave API del tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer):
    * Se il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) e il tuo account {{site.data.keyword.cloud_notm}} sono collegati, fai clic su **Recupera** per immettere le credenziali automaticamente.
-   * Se il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) e il tuo account {{site.data.keyword.cloud_notm}} non sono collegati, accedi al [portale del cliente dell'infrastruttura {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/) e segui le istruzioni sulla console per ottenere e immettere le credenziali.
-   * Se non disponi di un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), [registrane uno](../vmonic/signing_softlayer_account.html) e segui le istruzioni sulla console per ottenere e immettere le credenziali.
+   * Se il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) e il tuo account {{site.data.keyword.cloud_notm}} non sono collegati, devi collegarli. Accedi al [portale del cliente dell'infrastruttura {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/) e segui le istruzioni sulla console per ottenere le credenziali, quindi immettile.
+   * Se non disponi di un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), [registrane uno](../vmonic/signing_softlayer_account.html) e segui le istruzioni sulla console per ottenere le credenziali, quindi immettile.
 4. Fai clic su **Salva credenziali**.
 
 ## Risultati
@@ -43,7 +42,7 @@ Dopo aver collegato l'account {{site.data.keyword.cloud_notm}} e l'account dell'
 
 Le credenziali dell'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) memorizzate vengono utilizzata nelle operazioni future che richiedono l'interazione con l'infrastruttura {{site.data.keyword.cloud_notm}}.
 
-Se sono state abilitate le notifiche via e-mail o console per determinati eventi dell'istanza, verrai avvisato tramite messaggi e-mail o di console quando questi eventi si verificano.
+Se sono state abilitate le notifiche via e-mail o console per determinati eventi dell'istanza, verrai avvisato tramite messaggi e-mail o di console quando si verificano questi eventi.
 
 ### Link correlati
 

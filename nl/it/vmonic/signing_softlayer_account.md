@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -36,6 +36,6 @@ L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), prec
 
 * [Domande frequenti](faq.html)
 * [Requisiti per l'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](slaccountrequirement.html)
-* [Video: How to create an {{site.data.keyword.cloud_notm}} account](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [Video - How to create an {{site.data.keyword.cloud_notm}} account](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Passaggio all'ID IBM](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}

@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-08-15"
 
 ---
 
-# Problema di configurazione della console vSphere all'aggiunta del cluster HA
+# Problema di configurazione della console vSphere che si verifica all'aggiunta del cluster HA
 
 ## Problema
-Quando si aggiunge una configurazione cluster HA (alta disponibilità) con una sola condivisione file, viene visualizzato il seguente problema di configurazione sugli host ESXi:
+Quando aggiungi una configurazione cluster HA (alta disponibilità) con una sola condivisione file, viene visualizzato il seguente problema di configurazione sugli host ESXi:
 
 `The number of heartbeat datastores for host is 1, which is less than required: 2`
 

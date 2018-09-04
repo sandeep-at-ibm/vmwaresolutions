@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -14,7 +14,7 @@ Esamina le seguenti considerazioni e limitazioni quando utilizzi {{site.data.key
 
 ## Istallazione automatica degli aggiornamenti di Windows
 
-Microsoft Active Directory (AD) / Domain Name Server (DNS) è configurato automaticamente solo per scaricare gli aggiornamenti. Non esegue automaticamente l'installazione di questi aggiornamenti né il riavvio. Devi installare gli aggiornamenti manualmente ed eseguire il riavvio in un momento pianificato che eviti interruzioni della configurazione del server AD in corso e di altri lavori di backup. Per applicare gli aggiornamenti di Windows, installa gli aggiornamenti manualmente.
+Microsoft Active Directory (AD) / Domain Name Server (DNS) viene configurato automaticamente per scaricare solo gli aggiornamenti. Non esegue automaticamente l'installazione di questi aggiornamenti né il riavvio. Devi installare gli aggiornamenti manualmente ed eseguire il riavvio in un momento pianificato che eviti interruzioni della configurazione del server AD in corso e di altri lavori di backup. Per applicare gli aggiornamenti di Windows, installa gli aggiornamenti manualmente.
 
 ## Considerazioni sulla scelta del nome del dominio root per le istanze Cloud Foundation
 
