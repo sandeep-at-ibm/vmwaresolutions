@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-07"
 
 ---
 
@@ -65,7 +65,7 @@ Questa procedura si applica alle istanze distribuite nella V2.1 o successive. Pe
    * Quando vengono aggiunti nuovi server ESXi.
    * Quando vengono aggiunti nuovi cluster.
 
-5. Per gli aggiornamenti della licenza NSX, fai clic su **Aggiorna licenza**. Seleziona l'edizione a cui vuoi aggiornare e fai clic su **Aggiorna**. I downgrade dell'edizione della licenza non sono disponibili.
+5. Per gli aggiornamenti della licenza NSX, fai clic su **Aggiorna**. Nella finestra **Aggiorna edizione licenza NSX**, seleziona l'edizione a cui vuoi aggiornare e fai clic su **Aggiorna**. I downgrade dell'edizione della licenza non sono disponibili.
 
    **Nota:** l'aggiornamento della licenza sostituisce tutte le licenze NSX esistenti sull'istanza. Se esegui l'aggiornamento nel mezzo di un ciclo di fatturazione, potrebbero essere applicati dei costi aggiuntivi derivanti da una sovrapposizione di vecchie e nuove licenze. Per evitare costi aggiuntivi, si consiglia di aggiornare la licenza alla fine del ciclo di fatturazione.
 
@@ -77,6 +77,8 @@ Questa procedura si applica alle istanze distribuite nella V2.1 o successive. Pe
 ## Aggiornamento all'istanza vCenter Server with Hybridity Bundle
 
 Durante l'aggiornamento della licenza a Hybridity Bundle, viene eseguito automaticamente l'aggiornamento all'edizione VMware NSX Advanced se la tua istanza vCenter Server utilizza attualmente l'edizione VMware NSX Base.
+
+**Nota:** se effettui l'aggiornamento a Hybridity Bundle e la tua istanza vCenter Server ha già l'archiviazione file NFS, l'archiviazione VMware vSAN non ti verrà addebitata. Ti viene addebitata la licenza vSAN perché è inclusa con Hybridity Bundle.
 
 Completa la seguente procedura per aggiornare un'istanza vCenter Server a vCenter Server with Hybridity Bundle.
 

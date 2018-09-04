@@ -37,7 +37,7 @@ Tabella 2. Diba per i componenti software nelle istanze vCenter Server
 | VMware       | Platform Services Controller    | 6.5 Aggiornamento 1g |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX per vSphere                 | 6.4.1        |
-| IBM          | CloudDriver                     | 2.4          |
+| IBM          | CloudDriver                     | 2.5          |
 | Microsoft    | Windows Server Standard edition | 2012R2       |
 
 **Nota**: VMware vSAN è un componente facoltativo.

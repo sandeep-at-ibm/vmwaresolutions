@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -81,7 +81,7 @@ Ogni nodo di espansione vCenter Server verrà distribuito e addebitato per i seg
 
 ### Hardware per i nodi di espansione
 
-Un Bare Metal Server con la configurazione presentata in [Specifiche tecniche per le istanze VMware Federal on {{site.data.keyword.cloud_notm}}](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
+Un Bare Metal Server con la configurazione presentata in [Specifiche tecniche per le istanze VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ### Licenze e tariffe per i nodi di espansione
 
