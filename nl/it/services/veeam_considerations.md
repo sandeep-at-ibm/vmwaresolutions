@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 
 ---
 
 # Panoramica di Veeam on IBM Cloud
 
-Il servizio Veeam on {{site.data.keyword.cloud}} si integra perfettamente con i tuoi hypervisor VMware per aiutare la tua azienda a raggiungere l'alta disponibilità. Questo servizio può fornire obiettivi di tempo e punti di ripristino per le tue applicazioni e i tuoi dati. Gli obiettivi di tempo e punti di ripristino possono essere forniti in meno di 15 minuti dopo il completamento della configurazione. Utilizzando questo servizio, puoi controllare direttamente sia il backup che il ripristino di tutte le macchine virtuali (VM) per la tua infrastruttura dalla console Veeam.
+Il servizio Veeam on {{site.data.keyword.cloud}} si integra perfettamente con i tuoi hypervisor VMware per aiutare la tua azienda a raggiungere l'alta disponibilità. Questo servizio può fornire obiettivi di tempo e punti di ripristino per le tue applicazioni e i tuoi dati. Gli obiettivi di tempo e punti di ripristino possono essere forniti in meno di 15 minuti dopo il completamento della configurazione. Utilizzando questo servizio, puoi controllare il backup e il ripristino di tutte le macchine virtuali (VM) per la tua infrastruttura direttamente dalla console Veeam.
 
 **Disponibilità**: questo servizio è disponibile solo per le istanze distribuite nelle release della V1.8 o successive.
 
@@ -46,7 +46,7 @@ Backup di gestione configurati per impostazione predefinita con un massimo di ci
 
 ## Considerazioni sull'istallazione di Veeam on IBM Cloud
 
-Il repository per l'archiviazione e il server Veeam si trovano nel pod e nel data center originali. Pertanto, le prestazioni delle operazioni di backup per i cluster remoti potrebbero ridursi.
+Il repository di archiviazione e il server Veeam si trovano nel pod e nel data center originali. Pertanto, le prestazioni delle operazioni di backup per i cluster remoti potrebbero ridursi.
 
 ## Considerazioni sulla rimozione di Veeam on IBM Cloud
 

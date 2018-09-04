@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -16,7 +16,7 @@ IMI può fungere da unico provider attendibile per ridurre la complessità del m
 
 IMI fornisce servizi gestiti per le tue istanze Cloud Foundation e vCenter Server, che comprendono la gestione avanzata di VMware vSphere, la completa copertura di VMware NSX per garantire un'infrastruttura di rete virtuale altamente disponibile e sicura e il monitoraggio di VMware vSAN per garantire la disponibilità dei dati.
 
-## Specifiche tecniche
+## Specifiche tecniche per IMI
 
 Nel servizio gestito IMI sono incluse le seguenti specifiche:
 

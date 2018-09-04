@@ -88,7 +88,7 @@ Tuttavia, per impostazione predefinita, vSphere HA riserva il 50% di CPU e RAM p
 
 `50% di 2 * 16 core * 2,1 GHz = 33,6 GHz disponibili`
 
-Poiché ci saranno altri carichi di lavoro presenti sui server ESXi, ad esempio, IBM CloudDriver, Controller NSX VMware, Edge NSX VMware, che utilizzano queste risorse, non possiamo soddisfare il terzo requisito, perché abbiamo bisogno di 33,6 GHz di CPU e 32 GB di RAM per le due VM BIG-IP.
+Poiché ci saranno altri carichi di lavoro presenti sui server ESXi, ad esempio, VMware vCenter Server, Controller VMware NSX, VMware NSX Edge, utilizzando queste risorse non possiamo soddisfare il terzo requisito, perché abbiamo bisogno di 33,6 GHz di CPU e 32 GB di RAM per le due VM BIG-IP.
 
 In questo caso, l'installazione di F5 on {{site.data.keyword.cloud_notm}} potrebbe non riuscire, a meno che almeno un server ESXi venga aggiunto all'ambiente e le prenotazioni di failover di vSphere HA vengano aggiornate in modo appropriato per garantire che ci siano risorse sufficienti per due VM BIG-IP VE. Se sono necessarie risorse aggiuntive per eseguire il servizio F5 on {{site.data.keyword.cloud_notm}}, puoi aggiungere altri server ESXi prima di installare F5 on {{site.data.keyword.cloud_notm}}.
 

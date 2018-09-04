@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -20,14 +20,11 @@ Assicurati di aver completato le seguenti attività:
 
 ## Procedura
 
-1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra. 
+1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
 2. Scorri fino alla tabella **Istanze HCX on-premise** e fai clic su **Esegui provisioning del nuovo**.
-3. Specifica il **Nome istanza on-premises** e fai clic su **Avanti**.
-4. Verifica la configurazione dell'istanza prima di effettuare l'ordine.
-   1. Esamina le impostazioni per l'istanza.
-   2. Controlla la fatturazione mensile dell'istanza.
-   3. Fai clic sul link o sui link dei termini che si applicano al tuo ordine e assicurati di accettare questi termini prima di ordinare l'istanza.
-5. Fai clic su **Effettua ordine**.
+3. Specifica il **Nome istanza on-premises**.
+4. Fai clic sul link o sui link dei termini che si applicano al tuo ordine e assicurati di accettare questi termini prima di ordinare l'istanza.
+5. Fai clic su **Fornitura**.
 
 ## Risultati
 

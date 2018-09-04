@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -25,12 +25,7 @@ Per la piena funzionalità di HCX, hai bisogno di almeno cinque indirizzi IP pri
 ### Processo di distribuzione per le istanze HCX on IBM Cloud in loco
 
 Per una corretta installazione dell'istanza HCX on {{site.data.keyword.cloud_notm}} in loco, devi completare le seguenti attività:
-1. Nella console {{site.data.keyword.vmwaresolutions_short}}, completa la seguente procedura:
-    1. Fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
-    2. Fai clic sull'istanza vCenter Server with Hybridity Bundle in cui è installato il servizio HCX on {{site.data.keyword.cloud_notm}}. Questo è il lato cloud a cui vuoi connetterti dal tuo ambiente vSphere in loco.
-    3. Nella scheda **Servizi**, fai clic su **Servizi installati**.
-    4. Fai clic sulla scheda **HCX on {{site.data.keyword.cloud_notm}}**.
-    5. Fai clic su **Visualizza console cloud HCX** e quindi accedi alla console utilizzando le credenziali di vCenter Server per visualizzare i dettagli del servizio HCX on {{site.data.keyword.cloud_notm}} lato cloud.
+1. Nella console {{site.data.keyword.vmwaresolutions_short}}, ordina l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco. Per ulteriori informazioni, vedi [Ordine di istanze VMware HCX on IBM Cloud in loco](standalone_orderingserviceinstances.html).
 2. Nella **Console cloud HCX**, completa la seguente procedura:
     1. Fai clic sulla scheda **Amministrazione**.
     2. Nella scheda **Aggiornamenti di sistema**, fai clic su **RICHIEDI LINK DI DOWNLOAD**.

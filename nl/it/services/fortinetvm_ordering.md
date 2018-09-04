@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -44,7 +44,7 @@ Immetti il nome del servizio.
 Il modello di licenza per FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} offre le seguenti opzioni:
 <dl class="dl">
         <dt class="dt dlterm">Standard FW</dt>
-        <dd class="dd">Questo bundle include Filtraggio stateful dei pacchetti, Protezione VLAN e registrazione avanzata, Regole firewall Ingress/Egress, Terminazione VPN SSL/IPSec e supporto 24 x 7.</dd>
+        <dd class="dd">Questo bundle include Filtraggio stateful dei pacchetti, Protezione VLAN e registrazione avanzata, Regole firewall Ingress/Egress, Terminazione VPN SSL/IPSec e supporto continuo.</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
         <dd class="dd">Questo bundle include tutti i servizi Standard Firewall in aggiunta a NGFW IPS e filtro Web, AntiVirus e AntiSpam, Reputazione IP & dominio e servizi di sicurezza FortiCare di base.</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>

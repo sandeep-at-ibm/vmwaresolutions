@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-27"
 
 Il servizio HCX on {{site.data.keyword.cloud}} può estendere senza problemi le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione delle macchine virtuali (VM) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
 
-**Disponibilità**: questo servizio è disponibile solo per le istanze VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle distribuite nelle release della V2.3 e successive.
+**Disponibilità:** questo servizio è disponibile solo per le istanze VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle distribuite nelle release della V2.3 e successive.
 
 Puoi aggiornare la tua istanza vCenter Server esistente a un'istanza vCenter Server with Hybridity Bundle. Per ulteriori informazioni sull'aggiornamento della tua istanza e sulla distribuzione del servizio HCX on {{site.data.keyword.cloud_notm}}, vedi [Aggiornamento all'istanza vCenter Server with Hybridity Bundle](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance).
 
@@ -41,7 +41,7 @@ Ulteriori dispositivi HCX vengono distribuiti durante la configurazione in base 
 ### Rete
 
 * Una sottorete portatile pubblica con 16 indirizzi IP
-* Una sottorete portatile privata con 64 indirizzi IP
+* Due sottoreti portatili private con 64 indirizzi IP
 * Otto indirizzi IP dalla sottorete vMotion portatile privata
 
 ### Licenze e tariffe

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -26,14 +26,14 @@ Nel servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} vengo
 
 ### Risorse vCenter
 
-* VM server che esegue il server IBM Spectrum Protect Plus 
+* VM server che esegue il server IBM Spectrum Protect Plus
    * Sistema operativo: Linux 3.10.0-693.11.1.el7.x86_64
    * Core da 4 x 2,0 GHz
    * 32 GB di RAM
    * Disco da 370 GB
 * VM secondaria che esegue il server IBM Spectrum Protect Plus vSnap e il proxy VADP
    * Sistema operativo: Linux 3.10.0-693.11.1.el7.x86_64
-   * CPU e RAM configurate in base alle dimensioni di archiviazione selezionate e alle indicazioni di dimensionamento di [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/homelang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)
+   * CPU e RAM configurate in base alle dimensioni di archiviazione selezionate e alle indicazioni di dimensionamento di [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)
    * Disco da 150 GB
 
 ### Archiviazione per i backup

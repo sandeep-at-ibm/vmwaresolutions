@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
 # Richiesta di servizi gestiti per Zerto on IBM Cloud
 
-Il servizio Zerto on {{site.data.keyword.cloud}} fornisce funzionalità di replica e ripristino di emergenza, che è possibile integrare nelle offerte di distribuzione per proteggere e recuperare i dati nel tuo ambiente virtuale VMware su {{site.data.keyword.cloud_notm}}.
+Il servizio Zerto on {{site.data.keyword.cloud}} fornisce funzionalità di replica e di ripristino di emergenza. Queste funzionalità possono essere integrate nelle offerte di distribuzione per proteggere e recuperare i dati nel tuo ambiente virtuale VMware su {{site.data.keyword.cloud_notm}}.
 
 Quando richiedi i servizi gestiti per Zerto on {{site.data.keyword.cloud_notm}}, può essere distribuito un ambiente di ripristino di emergenza (DR) completamente gestito utilizzando il software DR Zerto e IBM Resiliency Services.
 
@@ -20,7 +20,7 @@ Per Zerto on {{site.data.keyword.cloud_notm}} sono disponibili i seguenti modell
 
 Questo modello è adatto se stai utilizzando l'offerta Zerto on {{site.data.keyword.cloud_notm}}.
 
-In questo modello, viene eseguito il provisioning del servizio {{site.data.keyword.cloud_notm}} Resiliency Orchestration per Zerto on {{site.data.keyword.cloud_notm}}. Questo modello consente la protezione continua di macchine virtuali, sistemi operativi e dati su {{site.data.keyword.cloud_notm}}, con test DR ininterrotto, visibilità RTO/RPO (obiettivo del tempo di ripristino/obiettivo del punto di ripristino) e funzionalità di failover e failback.
+In questo modello, viene eseguito il provisioning del servizio {{site.data.keyword.cloud_notm}} Resiliency Orchestration per Zerto on {{site.data.keyword.cloud_notm}}. Questo modello può proteggere continuamente le macchine virtuali, i sistemi operativi e i dati su {{site.data.keyword.cloud_notm}}, con test DR ininterrotto, visibilità RTO/RPO (obiettivo del tempo di ripristino/obiettivo del punto di ripristino) e funzionalità di failover e failback.
 
 Tutte le funzioni sono gestite tramite il dashboard {{site.data.keyword.cloud_notm}} Resiliency Orchestration dall'IBM Resiliency Services Global Command Center.
 
