@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -17,6 +17,7 @@ You can scale out a VMware vSphere cluster that you ordered or saved in the {{si
 Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
 *  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](vs_planning.html).
+*  You have been notified by email that the cluster you want to scale is ready to use.
 
 ## Procedure
 
@@ -33,6 +34,8 @@ Ensure that you completed the following tasks:
 ### Results
 
 The cluster scaling starts automatically. You receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email.
+
+If the cluster you are scaling is not ready to use, the scaling existing cluster procedure might report an error.
 
 **Note:** The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Deployed Instances** page.
 
