@@ -16,7 +16,7 @@ Visualizza il riepilogo e le informazioni dettagliate delle istanze VMware vCent
 
 Per visualizzare un riepilogo di tutte le istanze vCenter Server fornite per un account utente, completa la seguente procedura:
 
-1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra. 
+1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
 2. Nell'angolo superiore destro della console, fai clic sul tuo avatar e quindi sul campo **Account** per selezionare l'account utente per il quale vuoi controllare le istanze.  
 3. Nella tabella **vCenter Server**, visualizza l'elenco delle istanze fornite nell'account utente selezionato.
 
@@ -81,7 +81,7 @@ Tabella 4. Informazioni di accesso di vCenter Server per i componenti relativi a
 | IP AD/DNS | Gli indirizzi IP dei due server AD. |
 | Nomi di dominio completo AD/DNS | I nomi di dominio completi del server AD/DNS.<br><br>**Nota**: è possibile utilizzare la stessa password amministratore per connettersi a tutti i server AD/DNS utilizzando una connessione al desktop remoto. |
 | ADMIN AD/DNS (Desktop remoto)  | Per le istanze primarie, visualizza il nome utente e la password per accedere al server AD tramite una connessione al desktop remoto.<br><br>Per le istanze secondarie, fai clic sul link **Visualizza nell'istanza primaria** per essere indirizzato alle informazioni di nome utente e password sull'istanza primaria.<br><br>**Nota**: dopo che l'istanza secondaria viene aggiunta al dominio DNS primario e si verifica la replica, la password dell'amministratore locale nell'istanza primaria potrebbe sovrascrivere la password dell'amministratore locale nell'istanza secondaria. Facendo clic sul link **Visualizza nell'istanza primaria**, avrai accesso alla password di amministratore corretta.  
-| IP NSX Manager  | L'indirizzo IP di NSX Manager. |
+| IP NSX Manager  | L'indirizzo IP di NSX Manager.  |
 | Nome di dominio completo NSX Manager  | Il nome di dominio completo di NSX Manager.  |
 | HTTP NSX Manager  | Il nome utente e la password utilizzati per accedere alla console web di NSX Manager. |
 | IP PSC  | L'indirizzo IP del PSC (Platform Services Controller).  |

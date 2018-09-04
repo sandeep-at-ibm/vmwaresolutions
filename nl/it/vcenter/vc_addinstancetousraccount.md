@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-26"
+lastupdated: "2018-08-08"
 
 ---
 
@@ -17,7 +17,7 @@ Le istanze che sono state distribuite nelle release della V2.4 e precedenti, pos
 
 ## Procedura
 
-1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra. 
+1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
 2. Nell'angolo superiore destro della console, fai clic sul tuo avatar e quindi sul campo **Account** per selezionare l'account utente a cui vuoi migrare l'istanza.
 3. Nella tabella **Istanze vCenter Server**, trova l'istanza precedente alla V2.5.
 4. Nella colonna **Azioni**, fai clic sull'icona del menu di overflow e seleziona **Migra istanza all'account**.
@@ -26,7 +26,7 @@ Le istanze che sono state distribuite nelle release della V2.4 e precedenti, pos
 ## Risultati
 
 1. Viene visualizzata una notifica della console che indica che la richiesta di migrazione dell'istanza all'account {{site.data.keyword.cloud_notm}} specificato è stata accettata.
-2. Al termine della migrazione, l'istanza viene visualizzata nella pagina **Istanze distribuite** nell'account a cui è stata migrata. L'istanza migrata non viene più visualizzata nell'account originale dal quale è stata migrata.
+2. Al termine della migrazione dell'istanza, questa viene visualizzata nella pagina **Istanze distribuite** nell'account a cui è stata migrata. L'istanza migrata non viene più visualizzata nell'account originale dal quale è stata migrata.
 
 ### Link correlati
 

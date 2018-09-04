@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -44,7 +44,7 @@ Specifica il modello di CPU e la RAM per il Bare Metal Server. Le opzioni dispon
 
 Tabella 1. Opzioni per i {{site.data.keyword.baremetal_short}} personalizzati
 
-| Opzioni CPU        | Opzioni RAM       |
+| Opzioni del modello CPU        | Opzioni RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
@@ -109,7 +109,7 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 
 ## Procedura per aggiungere i cluster alle istanze VMware Federal
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanza vCenter Server**, fai clic sull'istanza a cui vuoi aggiungere i cluster.
 
    **Nota**: assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
@@ -124,7 +124,7 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 7. Seleziona l'edizione della licenza di VMware vSAN per la configurazione della licenza.
 8. Nel riquadro **Riepilogo ordine**, verifica la configurazione del cluster prima di aggiungerlo.
    1. Esamina le impostazioni per il cluster.
-   2. Esamina il costo stimato del cluster. Fai clic su **Dettagli dei prezzi** per generare un riepilogo in formato PDF. Per salvare o stampare il riepilogo del tuo ordine, fai clic sull'icona **Stampa** o **Download** nell'angolo superiore destro della finestra PDF.
+   2. Esamina il costo stimato del cluster. Fai clic su **Dettagli sui prezzi** per generare un riepilogo in formato PDF. Per salvare o stampare il riepilogo del tuo ordine, fai clic sull'icona **Stampa** o **Download** nell'angolo superiore destro della finestra PDF.
    3. Fai clic sul link o sui link dei termini che si applicano al tuo ordine e conferma di accettare questi termini prima di aggiungere il cluster.
    4. Fai clic su **Fornitura**.
 
