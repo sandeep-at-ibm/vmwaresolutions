@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -16,7 +16,7 @@ Visualizza il riepilogo e le informazioni dettagliate delle istanze NetApp ONTAP
 
 Per visualizzare un riepilogo di tutte le istanze NetApp ONTAP Select fornite per un account utente, completa la seguente procedura:
 
-1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra. 
+1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
 2. Nell'angolo superiore destro della console, fai clic sul tuo avatar e quindi sul campo **Account** per selezionare l'account utente per il quale vuoi controllare le istanze.
 3. Nella tabella **Istanze di NetApp ONTAP Select**, visualizza l'elenco delle istanze fornite nell'account utente selezionato.
 
@@ -168,7 +168,7 @@ Gestisci le tue istanze dalla console {{site.data.keyword.vmwaresolutions_short}
 
 **Importante**: prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza per passare al client web vSphere e iniziare a gestire i tuoi server ESXi, devi accedere al portale VPN del {{site.data.keyword.CloudDataCent_notm}}. Passa con il mouse sul pulsante **Console vCenter** e segui le istruzioni per assicurarti di soddisfare tutti i requisiti e di aver completato i passi necessari prima di accedere al client web vSphere.
 
-Rivedi i seguenti argomenti per informazioni utili per completare le istruzioni di accesso:
+Per ulteriori informazioni che ti consentono di completare le istruzioni di accesso, consulta i seguenti argomenti:
 
 *  Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](../vmonic/trbl_timeout_vc_console.html).
 *  Per un elenco di punti di accesso per accedere alla rete privata dell'infrastruttura {{site.data.keyword.cloud_notm}} tramite VPN, vedi [Accesso VPN](http://www.softlayer.com/vpn-access){:new_window}.
