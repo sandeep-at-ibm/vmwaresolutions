@@ -16,18 +16,18 @@ La Tabella 1 elenca le funzioni disponibili per le edizioni **Base**, **Avanzata
 
 Tabella 1. Tabella di confronto per le edizioni di VMware NSX
 
-| Funzione NSX                                  | Base | Avanzata | Enterprise |
+| Funzione NSX                                   | Base | Avanzata | Enterprise |
 |-----------------------------------------------|------|----------|------------|
-| Commutazione e instradamento distribuiti      | •    | •        | •          |
+| Commutazione e instradamento distribuiti             | •    | •        | •          |
 | Firewall edge NSX                             | •    | •        | •          |
 | NAT                                           | •    | •        | •          |
-| Bilanciamento del carico edge NSX             | •    | •        | •          |
+| Bilanciamento del carico edge NSX                       | •    | •        | •          |
 | VPN (IPsec)                                   | •    | •        | •          |
 | VPN (SSL)                                     | •    | •        | •          |
-| Automazione basata su API                     | •    | •        | •          |
-| Integrazione con vRealize e OpenStack\*       | •    | •        | •          |
+| Automazione basata su API                         | •    | •        | •          |
+| Integrazione con vRealize e OpenStack\*     | •    | •        | •          |
 | Automazione di politiche di sicurezza con vRealize |      | •        | •          |
-| Bridging SW L2 all'ambiente fisico            |      | •        | •          |
+| Bridging SW L2 all'ambiente fisico        |      | •        | •          |
 | Instradamento dinamico con ECMP (attivo-attivo)     |      | •        | •          |
 | Firewall distribuito                       |      | •        | •          |
 | Integrazione con Active Directory             |      | •        | •          |
@@ -36,7 +36,7 @@ Tabella 1. Tabella di confronto per le edizioni di VMware NSX
 | Bilanciamento del carico distribuito                    |      |          | •          |
 | Cross vCenter NSX                             |      |          | •          |
 | Ottimizzazioni di NSX su più siti                  |      |          | •          |
-| Gateway remoto                               |      |          | •          |
+| Gateway remoto                                |      |          | •          |
 | Integrazione con VTEP hardware                     |      |          | •          |
 \*Integrazione solo con L2, L3 ed edge NSX. Nessun consumo di gruppi di sicurezza
 
@@ -46,19 +46,19 @@ La Tabella 2 elenca le funzioni disponibili per le edizioni **Avanzata** ed **En
 
 Tabella 2. Tabella di confronto per le edizioni di VMware vSAN
 
-| Funzione vSAN                                   | Avanzata | Enterprise |
+| Funzione vSAN                                    | Avanzata | Enterprise |
 |-------------------------------------------------|----------|------------|
-| Gestione basata sulla politica di archiviazione               | •        | •          |
+| Gestione basata sulla politica di archiviazione                 | •        | •          |
 | Memorizzazione nella cache di lettura/scrittura Flash                        | •        | •          |
 | RAID distribuito                                | •        | •          |
 | Switch distribuito virtuale                      | •        | •          |
-| Rilevazione rack                                 | •        | •          |
-| Replica vSphere                            | •        | •          |
+| Rilevazione rack                                  | •        | •          |
+| Replica vSphere                             | •        | •          |
 | Checksum software                               | •        | •          |
-| Hardware all-flash                             | •        | •          |
+| Hardware all-flash                              | •        | •          |
 | Servizio di destinazione iSCSI                            | •        | •          |
-| Limite IOPS                                     | •        | •          |
-| Deduplicazione e compressione                    | •        | •          |
+| Limite IOPS                                      | •        | •          |
+| Deduplicazione e compressione                   | •        | •          |
 | Codifica di cancellazione RAID-5/6                         | •        | •          |
 | Crittografia per dati inattivi                         |          | •          |
 | Cluster esteso con protezione dagli errori locali |          | •          |

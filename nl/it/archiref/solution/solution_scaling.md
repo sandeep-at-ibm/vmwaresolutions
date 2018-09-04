@@ -17,11 +17,11 @@ Dopo la distribuzione iniziale, puoi ridimensionare la capacità di calcolo dall
 
 ## Aggiunta di più siti
 
-{{site.data.keyword.vmwaresolutions_short}} può sfruttare la presenza di data center {{site.data.keyword.cloud_notm}} a livello mondiale e il backbone di rete integrato per consentire la distribuzione e il funzionamento di una varietà di casi di utilizzo in più aree geografiche in una frazione del tempo necessario per creare da zero un'infrastruttura di questo tipo.
+{{site.data.keyword.vmwaresolutions_short}} può sfruttare la presenza di data center {{site.data.keyword.cloud_notm}} in tutto il mondo e il backbone di rete integrato per consentire la distribuzione e il funzionamento di vari casi di utilizzo di più aree geografiche in solo una frazione del tempo necessario a costruire da zero un'infrastruttura di questo tipo.
 
 In questa progettazione, la definizione di una distribuzione multisito è composta da quanto segue:
 * Una distribuzione VMware iniziale o primaria contenente un nuovo dominio root DNS/AD, dominio secondario, dominio SSO e nome del sito SSO da fornire.
-* Uno o più siti secondari forniti nel dominio SSO dei siti primari che richiedono la seguente configurazione:
+* Siti secondari singoli o multipli che vengono forniti nel dominio SSO dei siti primari che richiedono la seguente configurazione:
    * Nuovo nome del sito SSO
    * Nuovo sito/dominio secondario DNS collegato alla root del dominio primario
    * Configurazione della replica DNS e AD tra le VM AD del sito primario e secondario

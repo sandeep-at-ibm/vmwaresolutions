@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -20,7 +20,7 @@ In questa progettazione, Microsoft Active Directory (AD) viene utilizzato per la
 
 Per impostazione predefinita, una singola VSI di Active Directory viene distribuita sull'infrastruttura {{site.data.keyword.cloud}}. La progettazione offre inoltre la possibilità di distribuire due server Microsoft Active Directory altamente disponibili come VM di Windows Server dedicate nel cluster di gestione.
 
-**Nota**: se scegli questa opzione, sei responsabile di fornire licenze e attivazione Microsoft. 
+**Nota**: se scegli questa opzione, sei responsabile di fornire licenze e attivazione Microsoft.
 
 Active Directory serve per autenticare gli accessi per gestire solo l'istanza VMware e non per ospitare gli utenti finali dei carichi di lavoro nelle istanze distribuite. Il nome di dominio root dell'insieme di strutture del server Active Directory corrisponde al nome di dominio DNS da te specificato. Questo nome di dominio è specificato solo per l'istanza primaria di Cloud Foundation e vCenter Server se sono collegate più istanze. Nel caso di istanze collegate, ciascuna istanza contiene un server Active Directory che si trova nell'anello di replica root dell'insieme di strutture. Anche i file di zona DNS vengono replicati sui server Active Directory.
 

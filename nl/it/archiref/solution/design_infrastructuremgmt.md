@@ -40,10 +40,10 @@ Anche vCenter Server viene distribuito come dispositivo virtuale. Inoltre, vCent
 
 Tabella 2. Specifiche di vCenter Server Appliance
 
-| Attributo                    | Specifica                  |
+| Attributo                    | Specifica                       |
 |------------------------------|-------------------------------------|
-| vCenter Server               | Dispositivo virtuale              |
-| Dimensione installazione del dispositivo | Media (fino a 400 host, 4.000 VM) |
+| vCenter Server               | Dispositivo virtuale                   |
+| Dimensione installazione del dispositivo  | Media (fino a 400 host, 4.000 VM) |
 | Platform Services Controller | Esterno                            |
 | Numero di vCPU              | 8                                   |
 | Memoria                       | 24 GB                               |
@@ -70,7 +70,7 @@ Questa progettazione utilizza vSphere High Availability (HA) nel cluster inizial
 
 **Nota**: sei responsabile di regolare la politica di controllo di ammissione quando il cluster viene successivamente espanso o contratto.
 
-Per impostazione predefinita, l'opzione **VM restart priority** è impostata su medio e l'opzione **Host isolation response** è disabilitata. Inoltre, **VM monitoring** è disabilitata e la funzione **Datastore Heartbeating** è configurata per includere uno qualsiasi degli archivi dati del cluster. Questo approccio utilizza, se presenti, gli archivi dati NAS. 
+Per impostazione predefinita, l'opzione **VM restart priority** è impostata su medio e l'opzione **Host isolation response** è disabilitata. Inoltre, **VM monitoring** è disabilitata e la funzione **Datastore Heartbeating** è configurata per includere uno qualsiasi degli archivi dati del cluster. Questo approccio utilizza, se presenti, gli archivi dati NAS.
 
 ## Automazione
 
