@@ -16,7 +16,7 @@ Visualizza il riepilogo e le informazioni dettagliate delle istanze VMware Cloud
 
 Per visualizzare un riepilogo di tutte le istanze Cloud Foundation fornite per un account utente, completa la seguente procedura:
 
-1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra. 
+1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
 2. Nell'angolo superiore destro della console, fai clic sul tuo avatar e quindi sul campo **Account** per selezionare l'account utente per il quale vuoi controllare le istanze. 
 3. Nella tabella **Istanze Cloud Foundation**, visualizza l'elenco delle tue istanze:
 
@@ -61,7 +61,7 @@ Tabella 3. Proprietà dell'istanza Cloud Foundation
 | Ubicazione | Il {{site.data.keyword.CloudDataCent_notm}} in cui è ospitata l'istanza |
 | Versione corrente | La versione corrente di {{site.data.keyword.vmwaresolutions_short}} |
 | Versione vCenter | La versione di VMware vCenter Server<br><br>**Nota**: esiste una leggera variazione tra la versione di vCenter Server visualizzata nella console {{site.data.keyword.vmwaresolutions_short}} e nel client web VMware vSphere. Entrambe sono corrette. |
-| NSX for vSphere | La versione del prodotto VMware NSX for vSphere |
+| NSX per vSphere | La versione del prodotto VMware NSX for vSphere |
 | Licenza _componente VMware_ | Se quando hai ordinato l'istanza hai scelto di utilizzare la tua propria licenza VMware per un qualsiasi componente VMware nella pagina **Licenze**, vengono visualizzati il nome del componente VMware e la chiave di licenza che hai immesso per il componente.<br><br>Esempi di licenze per i componenti VMware sono **Licenza vCenter Server** e **Licenza NSX**. |
 | Edizione licenza NSX | La versione e l'edizione della licenza di VMware NSX |
 | DNS, Dominio root | Il nome del dominio root è il nome del dominio DNS (Domain Name System) e il nome root dell'insieme di strutture Microsoft Active Directory (AD). |

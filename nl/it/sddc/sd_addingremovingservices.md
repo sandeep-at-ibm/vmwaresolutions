@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -33,7 +33,7 @@ Tabella 1. Servizi disponibili per le istanze Cloud Foundation
 
 ## Aggiunta di servizi alle istanze Cloud Foundation
 
-Per aggiungere un servizio alla tua istanza Cloud Foundation, fai clic sul link del servizio appropriato nella tabella precedente per esaminare le considerazioni relative al servizio e controllare i componenti distribuiti. Quindi, segui le istruzioni nell'argomento su come ordinare i servizi per aggiungere il servizio alla tua istanza.
+Per aggiungere un servizio alla tua istanza Cloud Foundation, fai clic sul link del servizio appropriato nella tabella precedente per esaminare le considerazioni relative al servizio e controllare i componenti distribuiti. Quindi, segui le istruzioni indicate nell'argomento su come ordinare i servizi per aggiungere il servizio alla tua istanza.
 
 ### Risultati dell'installazione del servizio
 
