@@ -36,7 +36,7 @@ Come parte dell'installazione di NSX, NSX Manager viene installato e concesso in
 
 **Nota**: il controller NSX non viene installato sulle istanze vCenter Server (così come è installato sulle istanze Cloud Foundation). Se utilizzi VXLAN o DLR (Distributed Logical Router) per le tue istanze vCenter Server, devi installare il controller NSX autonomamente.
 
-Per informazioni sui miglioramenti introdotti in VMware NSX per vSphere 6.2.4, i relativi requisiti e i problemi noti, vedi [Note sulla release di NSX per vSphere 6.2.4](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
+Per ulteriori informazioni sui miglioramenti introdotti in VMware NSX for vSphere 6.2.4, i relativi requisiti e i problemi noti, vedi [Note sulla release di NSX per vSphere 6.2.4](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
 
 ### Edge NSX VMware
 
@@ -44,7 +44,7 @@ Edge NSX è ora incluso come parte delle nuove istanze vCenter Server che stai o
 
 Durante la distribuzione dell'istanza, un gateway dei servizi edge (ESG) VMware NSX di gestione viene distribuito da IBM. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. L'ESG è distribuito per includere due interfacce: un'interfaccia è connessa alla VLAN privata di {{site.data.keyword.cloud_notm}} e l'altra è connessa alla VLAN pubblica di {{site.data.keyword.cloud_notm}}.
 
-Per garantire la sicurezza, vengono implementate regole del firewall per consentire solo le comunicazioni HTTPS in uscita avviate dalle macchine virtuali di gestione. Questo ESG viene distribuito in una configurazione di tipo Large e solo il supporto IBM può modificare la configurazione. Per ulteriori informazioni, vedi:
+Per garantire la sicurezza, vengono implementate regole del firewall per consentire solo le comunicazioni HTTPS in uscita avviate dalle macchine virtuali di gestione. Questo ESG viene distribuito in una configurazione di tipo Large e solo il supporto IBM può modificare la configurazione. Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * [Specifiche tecniche per vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -96,7 +96,7 @@ Il processo di ordine dell'istanza è stato notevolmente semplificato:
 * Sia per le istanze Cloud Foundation che per le istanze vCenter Server, la pagina delle credenziali di SoftLayer non viene più visualizzata durante il processo di ordine. Le credenziali SoftLayer definite nella pagina delle impostazioni vengono utilizzate per impostazione predefinita e ti viene richiesto di aggiornarle solo se non soddisfano i requisiti.
 * Inoltre, per le istanze vCenter Server, sono ora disponibili solo l'opzione **Large** per il tipo di **Hardware** e l'impostazione **10 Gbps Dual** per **Velocità porta uplink**, il che riduce il numero di impostazioni da specificare durante l'ordine.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * [Ordine di istanze Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html)
@@ -112,7 +112,7 @@ Il processo di gestione dell'istanza include nuove funzioni e miglioramenti:
 
 Puoi ora configurare le notifiche della console nella pagina **Impostazioni**. Per impostazione predefinita, l'impostazione è abilitata, il che significa che ricevi una notifica nella console per tutti gli eventi. Puoi anche disabilitare le notifiche per la console nella pagina **Impostazioni**.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * [Account utente e impostazioni](useraccount.html)
 * [Notifiche](notifications.html)

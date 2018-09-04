@@ -14,7 +14,7 @@ Questa release include nuove funzioni, miglioramenti dell'usabilità e correzion
 
 ## Requisito di spanning della VLAN
 
-Se utilizzi un account SoftLayer® classico (non VRF), è necessario abilitare lo spanning della VLAN. Se lo spanning della VLAN non è abilitato per gli account classici, i vari componenti dell'ambiente di virtualizzazione VMware potrebbero non essere in grado di comunicare tra loro. Per abilitare lo spanning della VLAN nel tuo account SoftLayer, vedi [Abilita o disabilita lo spanning della VLAN](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+Se utilizzi un account SoftLayer® classico (non VRF), è necessario abilitare lo spanning della VLAN. Se lo spanning della VLAN non è abilitato per gli account classici, i vari componenti dell'ambiente di virtualizzazione VMware potrebbero non essere in grado di comunicare tra loro. Per abilitare lo spanning della VLAN nel tuo account SoftLayer, vedi [Abilita o disabilita il VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ## Impostazioni e notifiche e-mail
 

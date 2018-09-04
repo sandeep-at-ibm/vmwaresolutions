@@ -28,7 +28,7 @@ Questa release introduce l'offerta VMware vCenter Server on {{site.data.keyword.
 
 Il servizio HCX on {{site.data.keyword.cloud_notm}} è disponibile solo attraverso l'istanza vCenter Server with Hybridity Bundle. Puoi aggiornare la tua istanza vCenter Server esistente a un'istanza vCenter Server with Hybridity Bundle dopo aver applicato l'aggiornamento del software vCenter Server V2.3 di base. Per ulteriori informazioni, vedi [Applicazione di aggiornamenti alle istanze vCenter Server](../vcenter/vc_applyingupdates.html).
 
-Per ulteriori informazioni su vCenter Server with Hybridity Bundle, vedi:
+Per ulteriori informazioni su vCenter Server with Hybridity Bundle, vedi i seguenti argomenti:
 
 * [Panoramica di vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
 * [Requisiti e pianificazione per le istanze vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_planning.html)
@@ -38,7 +38,7 @@ Per ulteriori informazioni su vCenter Server with Hybridity Bundle, vedi:
 
 Puoi ora eliminare i cluster da un'istanza senza dover eliminare l'intera istanza. Per i cluster distribuiti nelle istanze della V2.2 o precedenti, devi aggiornare l'istanza alla V2.3 per poter eliminare i cluster che hai aggiunto all'istanza.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](../vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
 * [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze Cloud Foundation](../sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
@@ -55,7 +55,7 @@ A partire dalla release della V2.3, per la distribuzione sono disponibili i segu
 * Processore Dual Intel Xeon Silver 4110 / 16 core totali, 2,1 GHz
 * Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](../vcenter/vc_addingviewingclusters.html)
@@ -93,7 +93,7 @@ Il servizio HyTrust CloudControl on {{site.data.keyword.cloud_notm}} è ora disp
 
 Puoi ordinare le istanze con il servizio incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Componenti e considerazioni per HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)
 * [Gestione di HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/managinghtcc.html)
 
@@ -103,13 +103,13 @@ Il servizio HyTrust DataControl on {{site.data.keyword.cloud_notm}} è ora dispo
 
 Puoi ordinare le istanze con il servizio incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Componenti e considerazioni per HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)
 * [Gestione di HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-La release corrente installa IBM Spectrum Protect&trade; Plus V10.1.1, come servizio di backup predefinito, su tutte le istanze appena distribuite. Per informazioni sulle nuove funzioni di IBM Spectrum Protect Plus V10.1.1, vedi [Aggiornamenti di IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+La release corrente installa IBM Spectrum Protect&trade; Plus V10.1.1, come servizio di backup predefinito, su tutte le istanze appena distribuite. Per ulteriori informazioni sulle nuove funzioni di IBM Spectrum Protect Plus V10.1.1, vedi [Aggiornamenti di IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ## Documentazione nuova e aggiornata
 

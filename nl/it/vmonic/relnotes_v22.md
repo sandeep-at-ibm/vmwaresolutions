@@ -31,7 +31,7 @@ Durante il processo di aggiornamento alla V2.2, la macchina virtuale IBM CloudDr
 * Se utilizzi una soluzione di backup che fa riferimento alla macchina virtuale IBM CloudDriver, dopo l'aggiornamento alla V2.2, assicurati che la soluzione di backup faccia riferimento alla nuova macchina virtuale IBM CloudDriver.
 * Prima di eseguire l'aggiornamento alla V2.2, assicurati di sostituire la VSI Veeam legacy con il servizio Veeam on {{site.data.keyword.cloud_notm}}. Veeam legacy non è più supportato nella V2.2 e release future, pertanto i backup dei componenti di gestione associati a Veeam legacy non sono disponibili per un ripristino.
 
-Per ulteriori informazioni sull'utilizzo del servizio Veeam on {{site.data.keyword.cloud_notm}}, vedi:
+Per ulteriori informazioni sull'utilizzo del servizio Veeam on {{site.data.keyword.cloud_notm}}, vedi i seguenti argomenti:
 * [Componenti e considerazioni per Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
 * [Gestione di Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)
 
@@ -43,7 +43,7 @@ Per importanti considerazioni prima di proteggere un'istanza VMware Federal, ved
 
 (Aggiornato il 2 aprile 2018) Puoi ora espandere o contrarre la capacità della tua istanza VMware Federal aggiungendo o rimuovendo i server ESXi. Questa opzione è disponibile solo per le istanze VMware Federal che non sono state protette.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * [Panoramica di VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html)
 * [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze VMware Federal](../vcenter/fed_addviewdeleteclusters.html)
@@ -144,7 +144,7 @@ Il servizio Zerto on {{site.data.keyword.cloud_notm}} fornisce funzionalità di 
 
 Puoi richiedere i servizi gestiti per le tue istanze attraverso la pagina **Introduzione**, effettuando un nuovo ordine di istanza o aggiungendo il servizio a un'istanza esistente.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Richiesta di servizi per Veeam on {{site.data.keyword.cloud_notm}}](../services/managing_veeam_services.html)
 * [Richiesta di servizi per Zerto on {{site.data.keyword.cloud_notm}}](../services/managing_zerto_services.html)
 
@@ -154,7 +154,7 @@ Per ulteriori informazioni, vedi:
 
 * Nella documentazione viene ora fornita la Distinta base di VLAN e software per le istanze Cloud Foundation e vCenter Server, così come per i cluster VMware vSphere.
 
-  Per ulteriori informazioni, vedi:
+  Per ulteriori informazioni, consulta i seguenti argomenti:
 
   * [Distinta base di vCenter Server](../vcenter/vc_bom.html)
   * [Distinta base di Cloud Foundation](../sddc/sd_bom.html)

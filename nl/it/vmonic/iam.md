@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -42,12 +42,12 @@ Tabella 1. Ruoli di gestione della piattaforma e azioni consentite
 
 Per {{site.data.keyword.vmwaresolutions_short}}, esistono le seguenti azioni:
 
-Tabella 2. Descrizioni e ruoli richiesti delle azioni
+Tabella 2. Descrizione delle azioni e ruoli richiesti
 
 | Azione | Operazione sul servizio | Ruolo |
 |:------ |:-------------------- |:---- |
-| vmware-solutions.instances.create |Creare nuove istanze| Amministratore |
-| vmware-solutions.instances.delete |Eliminare istanze| Amministratore |
+| vmware-solutions.instances.create | Creare nuove istanze | Amministratore |
+| vmware-solutions.instances.delete | Eliminare istanze | Amministratore |
 | vmware-solutions.instances.view | <ul><li>Elencare le istanze</li><li>Visualizzare i dettagli di un'istanza</li></ul> | Visualizzatore, operatore, editor e amministratore |
 | vmware-solutions.instances.update | <ul><li>Aggiungere o rimuovere i server ESXi</li><li>Aggiungere o rimuovere i cluster</li><li>Aggiungere o rimuovere i servizi</li><li>Aggiornare un'istanza a una versione superiore</li></ul> | Editor e amministratore |
 | vmware-solutions.account.update | Aggiornare le impostazioni account | Amministratore |
@@ -58,11 +58,11 @@ Puoi aggiungere nuovi utenti all'account {{site.data.keyword.cloud_notm}} in mod
 
 Puoi anche gestire l'accesso per gli utenti esistenti, inclusa la modifica dell'accesso esistente, l'assegnazione di un nuovo accesso e la revisione dell'accesso assegnato. Per gestire l'accesso per gli utenti, devi essere il proprietario dell'account o avere il ruolo di gestione della piattaforma di **Amministratore**. Per ulteriori informazioni, vedi [Gestione dell'accesso IAM](../../../iam/mngiam.html).
 
-### Migrazione di istanze esistenti agli account IBM Cloud
+## Migrazione di istanze esistenti agli account IBM Cloud
 
-A causa dell'integrazione di {{site.data.keyword.vmwaresolutions_short}} con IAM, le istanze che sono state distribuite nelle release della V2.5 e successive nel tuo account {{site.data.keyword.cloud}} vengono aggiunte automaticamente al tuo account e sono gestite da IAM. Le istanze esistenti distribuite nelle release della V2.4 e precedenti possono essere migrate ad account {{site.data.keyword.cloud_notm}} specificati per la gestione abilitata a IAM.
+A causa dell'integrazione di {{site.data.keyword.vmwaresolutions_short}} con IAM, le istanze che sono state distribuite nelle release della V2.5 e successive nel tuo account {{site.data.keyword.cloud}} vengono aggiunte automaticamente al tuo account e sono gestite da IAM.
 
-Per ulteriori informazioni, vedi:
+Le istanze esistenti distribuite nelle release della V2.4 e precedenti possono essere migrate ad account {{site.data.keyword.cloud_notm}} specificati per la gestione abilitata a IAM. Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Migrazione di istanze vCenter Server precedenti alla V2.5 agli account IBM Cloud](../vcenter/vc_addinstancetousraccount.html)
 * [Migrazione di istanze vCenter Server with Hybridity Bundle precedenti alla V2.5 agli account IBM Cloud](../vcenter/vc_hybrid_addinstancetousraccount.html)
 * [Migrazione di istanze Cloud Foundation precedenti alla V2.5 agli account IBM Cloud](../sddc/sd_addinstancetousraccount.html)

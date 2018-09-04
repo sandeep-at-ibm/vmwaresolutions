@@ -58,7 +58,7 @@ Per ulteriori informazioni, vedi la sezione *Impostazioni di Bare Metal Server* 
 
 ### Miglioramento delle prestazioni di NFS (Network File System)
 
-Il livello di prestazioni di 10 IOPS/GB, progettato per i tipi di carichi di lavoro più impegnativi, non è più limitato a specifici {{site.data.keyword.CloudDataCent_notm}}, ma è ora disponibile per tutti. Per ulteriori informazioni, vedi la sezione *Archiviazione* in [Panoramica di vCenter Server](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications).
+Il livello di prestazioni di 10 IOPS/GB, progettato per i tipi di carichi di lavoro più impegnativi, non è più limitato a specifici {{site.data.keyword.CloudDataCent_notm}}, ma è ora disponibile per tutti. Per ulteriori informazioni, vedi la sezione *Archiviazione* in [Panoramica di vCenter Server](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## Aggiornamenti per le istanze VMware Federal
 
@@ -70,7 +70,7 @@ Puoi ora distribuire le istanze VMware Federal al {{site.data.keyword.CloudDataC
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-La release corrente installa IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1, su tutte le istanze appena distribuite. Per informazioni sulle nuove funzioni di IBM Spectrum Protect Plus V10.1.1 Patch 1, vedi [Aggiornamenti di IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+La release corrente installa IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1, su tutte le istanze appena distribuite. Per ulteriori informazioni sulle nuove funzioni di IBM Spectrum Protect Plus V10.1.1 Patch 1, vedi [Aggiornamenti di IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ### VMware HCX on IBM Cloud
 
@@ -86,7 +86,7 @@ Il documento dell'architettura {{site.data.keyword.vmwaresolutions_short}} è or
 
 Le informazioni sui servizi sono state ristrutturate e la navigazione è stata migliorata per individuare facilmente le informazioni rilevanti al momento dell'ordine dei servizi.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * [Ordine di F5 on {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
 * [Ordine di FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)

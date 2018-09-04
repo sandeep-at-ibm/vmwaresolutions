@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
 # Gestione delle notifiche di sistema
 
-Puoi controllare le notifiche per verificare lo stato delle operazioni di sistema o dell'utente. Puoi anche utilizzare le informazioni per diagnosticare e risolvere i problemi che potrebbero verificarsi.
+Puoi controllare le notifiche per verificare lo stato delle operazioni di sistema o dell'utente. Puoi anche utilizzare le informazioni per analizzare i problemi che potrebbero verificarsi.
 
 ## Visualizzazione delle notifiche
 
@@ -70,7 +70,7 @@ Puoi controllare le notifiche per verificare lo stato delle operazioni di sistem
 
 ## Filtraggio delle notifiche
 
-Per impostazione predefinita, vengono visualizzate tutte le notifiche non lette. Puoi filtrare le notifiche per stato, severità e tipo. Per filtrare le notifiche, seleziona solo le caselle di spunta degli elementi che vuoi visualizzare negli elenchi a discesa **Stato**, **Severità** o **Tipo**.
+Per impostazione predefinita, vengono visualizzate tutte le notifiche non lette. Puoi filtrare le notifiche per stato, severità e tipo. Per filtrare le notifiche, seleziona le caselle di spunta solo per gli elementi che vuoi visualizzare negli elenchi **Stato**, **Severità** o **Tipo**.
 
 ### Link correlati
 

@@ -10,7 +10,7 @@ lastupdated: "2017-01-23"
 
 # Note sulla release per la V1.3
 
-Questa release include nuove funzioni, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e ulteriori suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Questa release include nuove funzioni, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e altri suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Archiviazione a livello di file condivisa per le istanze vCenter Server
 
@@ -20,7 +20,7 @@ Puoi ora aggiungere il NAS (Network Attached Storage) condiviso alle istanze vCe
 
 Sia che tu abbia ordinato il ripristino di emergenza Zerto come parte della tua istanza o l'abbia aggiunto a un'istanza esistente, puoi ora rimuovere questo servizio quando non ne hai più bisogno. Dopo aver richiesto di rimuovere il servizio dalla console, verrai guidato dal supporto IBM per completare il processo di rimozione.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * [Rimozione del ripristino di emergenza](../services/removingzertodr.html)
 * [Visualizzazione delle istanze Cloud Foundation](../sddc/sd_viewinginstances.html)
@@ -35,7 +35,7 @@ Durante la distribuzione dell'istanza, un gateway dei servizi edge (ESG) NSX di 
 Per garantire la sicurezza, vengono implementate regole del firewall per consentire solo le comunicazioni HTTPS in uscita avviate dalle macchine virtuali di
 gestione. Questo ESG viene distribuito in una configurazione di tipo Large e solo il supporto IBM può modificare la configurazione.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * [Specifiche tecniche per le istanze Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -48,7 +48,7 @@ Il processo di ordine è stato migliorato sia per le istanze Cloud Foundation ch
 * Nella pagina di riepilogo vengono visualizzati tutti i termini e le condizioni applicabili per tutti i componenti e i servizi ordinati, per un facile accesso alla revisione e all'accettazione di questi termini prima di effettuare l'ordine.
 * Puoi salvare e stampare il riepilogo dell'ordine per l'istanza prima di effettuare l'ordine. Con questa nuova funzione, puoi rivedere le impostazioni e il costo dell'istanza, modificare i componenti ordinati laddove necessario, ottenere l'approvazione e quindi tornare al tuo ordine.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * [Ordine di istanze Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html)

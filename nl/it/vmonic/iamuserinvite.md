@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 
 ---
 
 # Come invitare gli utenti ad accedere a servizi e risorse
 
-{{site.data.keyword.vmwaresolutions_full}} è integrato con {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) per la collaborazione tra più utenti. Dopo aver registrato un account {{site.data.keyword.cloud_notm}} ed eseguito l'accesso alla console {{site.data.keyword.vmwaresolutions_short}}, puoi aggiungere utenti all'account {{site.data.keyword.cloud_notm}} in modo che questi utenti possano condividere i servizi e le risorse forniti per l'account. 
+{{site.data.keyword.vmwaresolutions_full}} è integrato con {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) per la collaborazione tra più utenti. Dopo aver registrato un account {{site.data.keyword.cloud_notm}} ed eseguito l'accesso alla console {{site.data.keyword.vmwaresolutions_short}}, puoi aggiungere utenti all'account {{site.data.keyword.cloud_notm}}. Questi utenti aggiunti possono condividere i servizi e le risorse forniti per l'account.
 
 ## Prima di iniziare
 
@@ -25,12 +25,12 @@ lastupdated: "2018-07-27"
 4. Nella sezione **Accesso**, espandi **Servizi** e completa quindi le seguenti attività:
    1. Seleziona **Risorsa** dall'elenco **Assegna accesso a**.
    2. Seleziona **VMware Solutions** dall'elenco **Servizi**.
-   3. Seleziona il ruolo di accesso alla piattaforma che vuoi assegnare agli utenti, ossia **Amministratore**, **Editor**, **Operatore** o **Visualizzatore**.
+   3. Seleziona il ruolo di accesso alla piattaforma che vuoi assegnare agli utenti. Può essere **Amministratore**, **Editor**, **Operatore** o **Visualizzatore**.
 5. Fai clic su **Invita utenti**.
 
 ## Risultati
 
-Dopo che gli utenti aggiunti hanno accettato il tuo invito, possono accedere alla console {{site.data.keyword.vmwaresolutions_short}} e passare al tuo account nelle impostazioni del profilo facendo clic sul loro avatar nell'angolo superiore destro della console {{site.data.keyword.vmwaresolutions_short}}. Gli utenti aggiunti possono quindi collaborare e condividere i servizi e le risorse disponibili nel tuo account specificato.
+Dopo che gli utenti aggiunti hanno accettato il tuo invito, possono accedere alla console {{site.data.keyword.vmwaresolutions_short}} e passare al tuo account. Per farlo, nelle impostazioni del loro profilo, gli utenti fanno clic sul proprio avatar nell'angolo superiore destro della console {{site.data.keyword.vmwaresolutions_short}}. Quindi, gli utenti aggiunti possono collaborare e condividere i servizi e le risorse disponibili nel tuo account specificato.
 
 ### Link correlati
 

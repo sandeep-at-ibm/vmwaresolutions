@@ -18,7 +18,7 @@ Il servizio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} è o
 
 Puoi ordinare le istanze con il servizio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento utilizzando la scheda **Servizi** nella pagina dei dettagli dell'istanza. A seconda dei tuoi requisiti, puoi selezionare una delle tre dimensioni di distribuzione e opzioni di licenza per questo servizio. Dopo aver installato correttamente il servizio, puoi gestire e configurare le regole del firewall per i FortiGate Virtual Appliance dalla console FortiGate.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Componenti e considerazioni per FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)
 * [Gestione di FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html)
 
@@ -28,7 +28,7 @@ Puoi ora installare più istanze del servizio F5 on {{site.data.keyword.cloud_no
 
 Una volta completata la distribuzione dell'istanza, puoi aggiungere altre istanze del servizio F5 o FortiGate installando il servizio sulla scheda **Aggiungi servizi** della pagina dei dettagli dell'istanza. Puoi aggiungere solo un'istanza del servizio alla volta e dei ripetere il processo per tutte le istanze che vuoi aggiungere per un servizio.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](../vcenter/vc_addingremovingservices.html)
 
@@ -44,7 +44,7 @@ In tutti i casi, devi gestire attentamente la configurazione dei FSA per consent
 
 Il nome di dominio completo (FQDN) è ora rappresentato in modo coerente per tutte le istanze. Quando effettui un ordine, puoi immettere il tuo proprio prefisso del dominio secondario e prefisso del nome host. Ciò garantisce che venga seguita la convenzione di settore per il formato FQDN, ad esempio: `host-name-prefix<n>.subdomain-prefix.domain-name`.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Ordine di istanze Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Ordine di nuovi cluster vSphere](../vsphere/vs_orderinginstances.html)
@@ -54,7 +54,7 @@ Per ulteriori informazioni, vedi:
 * Durante un ordine di VMware vSphere on {{site.data.keyword.cloud_notm}}, ti viene fornita una stima del numero di macchine virtuali che possono essere eseguite sull'istanza ordinata.
 * Durante un ordine di Cloud Foundation e vCenter Server, ti viene fornita una stima della capacità di archiviazione utilizzabile per l'istanza ordinata.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Ordine di istanze Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Ordine di nuovi cluster vSphere](../vsphere/vs_orderinginstances.html)
@@ -84,7 +84,7 @@ Puoi visualizzare i dettagli del cluster o aggiungere fino a un totale di cinque
 
 Puoi ora personalizzare la configurazione dell'archiviazione vSAN selezionando il numero e la dimensione delle unità di archiviazione vSAN come parte del tuo ordine dell'istanza.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Panoramica di Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Ordine di istanze Cloud Foundation](../sddc/sd_orderinginstance.html)
 
@@ -100,7 +100,7 @@ Per Bare Metal Server sono ora disponibili le seguenti impostazioni di configura
 
 **Nota**: lo chassis ha spazio per 12 dischi, tuttavia non vengono riempiti tutti gli slot. La configurazione **Small** fornisce due unità Micron 5100 MAX da 1,9 TB e la configurazione **Large** fornisce quattro unità Micron 5100 PRO da 3,8 TB.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Panoramica di Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Ordine di istanze Cloud Foundation](../sddc/sd_orderinginstance.html)
 
@@ -133,7 +133,7 @@ Per ulteriori informazioni, vedi [Ordine di istanze vCenter Server](../vcenter/v
 
 BYOL è ora disponibile per le istanze vCenter Server. BYOL ti consente di utilizzare una o più delle tue licenze di vCenter Server, vSphere, vSAN e NSX VMware quando ordini le istanze vCenter Server.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Ordine di istanze Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Ordine di nuovi cluster vSphere](../vsphere/vs_orderinginstances.html)
@@ -164,7 +164,7 @@ Per i server bare metal sono ora disponibili le seguenti opzioni di configurazio
 
 **Nota:** le unità SSD da 3,8 TB saranno supportate una volta rese generalmente disponibili in un {{site.data.keyword.CloudDataCent_notm}}.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Panoramica di NetApp ONTAP Select](../netapp/np_netappoverview.html)
 * [Ordine di istanze NetApp ONTAP Select](../netapp/np_orderinginstances.html)
 

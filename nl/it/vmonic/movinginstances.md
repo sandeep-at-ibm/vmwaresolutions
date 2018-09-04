@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -37,10 +37,10 @@ Se hai istanze precedenti alla V1.4 e intendi continuare a utilizzarle, puoi agg
 
 Per spostare le tue istanze precedenti alla V1.4 in nuove istanze, completa la seguente procedura nel client web vSphere:
 1. Dalla tua istanza precedente alla V1.4, esporta tutte le VM (macchine virtuali).
-2. Crea una nuova istanza nella release corrente.
+2. Crea un'istanza nella release corrente.
 3. Importa tutte le VM esportate dal **Passo 1**.
-4. Inizia a utilizzare la tua nuova istanza.
+4. Utilizza la tua nuova istanza.
 
-Per informazioni sull'esportazione e sull'importazione delle VM, vedi la documentazione di VMware vSphere.
+Per ulteriori informazioni sull'esportazione e importazione delle VM, consulta la tua documentazione di VMware vSphere.
 
 Se hai bisogno di assistenza con {{site.data.keyword.vmwaresolutions_short}}, [contatta il supporto IBM](trbl_support.html) attraverso uno dei canali di supporto.

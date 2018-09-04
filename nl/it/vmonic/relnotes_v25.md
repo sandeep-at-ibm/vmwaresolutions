@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -34,7 +34,7 @@ A partire dalla release della V2.5, i servizi IBM Spectrum Protect Plus on {{sit
 
 Sei responsabile della configurazione, della gestione e del monitoraggio di tutti i componenti software, inclusi il backup e la disponibilità dei carichi di lavoro e dell'infrastruttura di gestione. Per ulteriori informazioni, vedi [Backup dei componenti](../archiref/solution/solution_backingup.html#backing-up-components).
 
-**Nota:** questa modifica non influisce sulle istanze distribuite prima della V2.5 che già hanno installato il servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}.
+**Nota:** questa modifica non influisce sulle istanze distribuite prima della V2.5 che hanno già installato il servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}.
 
 ## Resilienza di IBM CloudDriver
 
@@ -46,10 +46,10 @@ Alcuni servizi aggiuntivi come F5 on {{site.data.keyword.cloud_notm}}, FortiGate
 
 A partire dalla release della V2.5, {{site.data.keyword.vmwaresolutions_short}} è integrato con IBM Identity and Access Management (IAM) per fornire un approccio unificato per la gestione degli account e dell'accesso degli utenti all'interno del tuo account {{site.data.keyword.cloud_notm}}. Per cui:
 * Puoi ora aggiungere più utenti al tuo account {{site.data.keyword.cloud_notm}} per la collaborazione e puoi gestirne l'accesso a servizi e risorse forniti nel tuo account assegnando loro differenti ruoli di accesso alla piattaforma.  
-* Le istanze distribuite nelle release della V2.5 e successive vengono collegate direttamente all'account utente utilizzato durante l'ordine dell'istanza. 
+* Le istanze distribuite nelle release della V2.5 e successive vengono collegate direttamente all'account utente utilizzato durante l'ordine dell'istanza.
 * Le istanze distribuite nelle release della V2.4 e precedenti, possono essere migrate a un account {{site.data.keyword.cloud_notm}} specificato e gestite utilizzando IAM.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Come invitare gli utenti ad accedere a servizi e risorse](../vmonic/iamuserinvite.html)
 * [Gestione dell'accesso utente con IAM](../vmonic/iam.html)
 
@@ -61,7 +61,7 @@ Non modificare le autorizzazioni globali del gruppo **ic4v-vCenter** nella pagin
 
 Per le istanze Cloud Foundation, utilizza l'ID utente host **customerroot** al posto dell'ID utente host **root**. Continua a utilizzare l'ID utente host **root** per le istanze vCenter Server.
 
-Per ulteriori informazioni sugli account utente, vedi:
+Per ulteriori informazioni sugli account utente, vedi i seguenti argomenti:
 
 * [Considerazioni sulla modifica delle risorse vCenter Server](../vcenter/vcenter_chg_impact.html)
 * [Considerazioni sulla modifica delle risorse Cloud Foundation](../sddc/cf_chg_impact.html)
@@ -94,7 +94,7 @@ Le specifiche tecniche per tutti i tipi di istanze e i tipi di servizio sono ora
 
 Le informazioni sui servizi sono state migliorate per identificare facilmente il supporto del servizio in base al numero di release in cui è stato reso disponibile.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * [Servizi disponibili per le istanze vCenter Server](../vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
 * [Servizi disponibili per le istanze vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)

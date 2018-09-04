@@ -30,7 +30,7 @@ Puoi ordinare le istanze Cloud Foundation o vCenter Server con il servizio HCX o
 
 Puoi anche ordinare un'istanza HCX in loco per la licenza e l'attivazione dell'installazione di HCX in loco.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Considerazioni su HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)
 * [Gestione di HCX on {{site.data.keyword.cloud_notm}}](../services/managinghcx.html)
 * [Considerazioni sulle istanze HCX in loco](../services/standalone_considerations.html)
@@ -42,7 +42,7 @@ Per ulteriori informazioni, vedi:
 
 Inoltre, quando aggiungi nodi a un cluster concesso in licenza con la tua chiave, la console ti richiede di fornire una nuova chiave di licenza se il numero di nodi supera la capacità della chiave.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * [Aggiunta e visualizzazione di cluster per le istanze Cloud Foundation](../sddc/sd_addingviewingclusters.html)
 * [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](../vcenter/vc_addingviewingclusters.html)
@@ -85,7 +85,7 @@ Per il cluster predefinito in un'istanza, puoi distribuire o espandere fino a 51
 
 La configurazione dei server bare metal personalizzata dall'utente ora offre il processore Dual Intel Xeon Gold 6140 con 36 core totali, 2,3 GHz.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Panoramica di vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html)
 
@@ -93,7 +93,7 @@ Per ulteriori informazioni, vedi:
 
 Hai ora la possibilità di configurare le condivisioni file NFS su base individuale. Seleziona la dimensione del file e il livello di prestazioni per ogni singola condivisione file o seleziona la stessa dimensione del file e lo stesso livello di prestazioni per tutte le condivisioni file che devi ordinare.
 
-Per ulteriori informazioni, vedi:
+Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Panoramica di vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](../vcenter/vc_addingviewingclusters.html)

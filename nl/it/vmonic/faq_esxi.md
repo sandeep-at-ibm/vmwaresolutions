@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -21,7 +21,7 @@ Trova le risposte alle domande frequenti sui server ESXi gestiti nella console {
 
 ## Quanti server ESXi posso aggiungere a un cluster?
 
-Per le release della V2.2 e successive, puoi aggiungere un massimo di 51 server ESXi a un cluster iniziale e un massimo di 59 server ESXi ai cluster aggiuntivi.
+Per le release della V2.2 e successive, puoi aggiungere un massimo di 51 server ESXi a un cluster iniziale e un massimo di 59 server ESXi ai cluster aggiunti.
 
 Per le istanze distribuite nelle release della V2.1 o precedenti, devi abilitare il supporto vSAN necessario per aumentare la dimensione del cluster a più di 32. Completa la seguente procedura per abilitare il supporto vSAN necessario:
 
@@ -32,28 +32,28 @@ Per le istanze distribuite nelle release della V2.1 o precedenti, devi abilitare
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
 2. Riavvia ogni server ESXi. Per ulteriori informazioni, vedi [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081).
-3. Nota che potresti dover aumentare le dimensioni di vCenter Server per ospitare ulteriori macchine virtuali e server ESXi.
-4. Apri un ticket di supporto IBM indicando che hai applicato manualmente le modifiche vSAN completando i passi da 1 a 3 e che vuoi abilitare la tua istanza aggiornata ad avere più di 32 server ESXi aggiuntivi.
+3. Potresti dover aumentare le dimensioni di vCenter Server per ospitare le macchine virtuali e i server ESXi aggiunti.
+4. Apri un ticket di supporto IBM per indicare che hai applicato manualmente le modifiche vSAN completando i passi da 1 a 3. Nel ticket, richiedi che la tua istanza aggiornata sia abilitata per avere più di 32 server ESXi.
 
 ## Posso modificare i nomi e gli indirizzi IP del server ESXi?
 
-I nomi e gli indirizzi IP dei server ESXi non possono essere modificati perché sono registrati per la risoluzione DNS di Windows. Le modifiche potrebbero causare errori durante la distribuzione o errori nelle funzioni di vCenter Server.
+I nomi e gli indirizzi IP del server ESXi non possono essere modificati perché sono registrati per la risoluzione DNS di Windows. Le modifiche potrebbero causare errori durante la distribuzione o nelle funzioni di vCenter Server.
 
 **Nota**: non utilizzare la funzione **Rinomina dispositivo** sull'interfaccia utente di {{site.data.keyword.cloud_notm}} per modificare i nomi dei server ESXi. Questa funzione modificherà effettivamente il nome di dominio completo del server ESXi, ma le registrazioni degli host della VSI di Windows e vCenter Center configurate non saranno corrette e potrebbero causare errori.
 
 ## Posso disabilitare l'accesso root sui miei server ESXi?
 
-Si consiglia di mantenere l'accesso root abilitato sui server ESXi, altrimenti potrebbero verificarsi errori nelle funzionalità di {{site.data.keyword.vmwaresolutions_short}}.
+Si consiglia di mantenere l'accesso root abilitato sui server ESXi, altrimenti potrebbero verificarsi errori nelle funzioni {{site.data.keyword.vmwaresolutions_short}}.
 
-Se assolutamente necessario, puoi disabilitare l'accesso root dopo che i server ESXi passano allo stato **Pronto per l'utilizzo** sulla console {{site.data.keyword.vmwaresolutions_short}}.
+Se necessario, puoi disabilitare l'accesso root dopo che i server ESXi passano allo stato **Pronto per l'utilizzo** sulla console {{site.data.keyword.vmwaresolutions_short}}.
 
-Devi riabilitare l'accesso root per le successive operazioni di automazione, ad esempio durante l'aggiunta o rimozione di condivisioni file o durante l'installazione di servizi aggiuntivi, come Zerto on {{site.data.keyword.cloud_notm}}.
+Devi riabilitare l'accesso root per le successive operazioni di automazione, ad esempio, quando aggiungi o rimuovi le condivisioni file o durante l'installazione dei servizi aggiuntivi, come Zerto on {{site.data.keyword.cloud_notm}}.
 
 ## Posso aggiungere rotte statiche sui miei server ESXi per montare l'archiviazione da altre ubicazioni?
 
 È possibile aggiungere le rotte statiche per l'archiviazione, ma le operazioni devono essere eseguite con estrema attenzione. Altrimenti, le condivisioni esistenti potrebbero essere smontate.
 
-**Nota**: l'aggiunta di rotte statiche per vMotion non è supportata. Le modifiche alla configurazione della sottorete di vMotion potrebbero causare errori nelle funzionalità di {{site.data.keyword.vmwaresolutions_short}}.
+**Nota**: l'aggiunta di rotte statiche per vMotion non è supportata. Le modifiche alla configurazione della sottorete di vMotion potrebbero causare errori nelle funzioni di {{site.data.keyword.vmwaresolutions_short}}.
 
 ### Link correlati
 

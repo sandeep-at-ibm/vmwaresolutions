@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-03-16"
 ## Risoluzione
 
 Per distribuire un file OVF (Open Virtualization Format) mediante il client web vSphere, utilizza la seguente procedura:
-1. Prima di tentare di distribuzione, devi aggiungere le seguenti informazioni host al file `/etc/hosts`:
+1. Prima di tentare la distribuzione di un file OVF, aggiungi le seguenti informazioni host al file `/etc/hosts`:
 
    * Informazioni host per Platform Services Controller (PSC)
    * Informazioni host per il server VMware ESXi
