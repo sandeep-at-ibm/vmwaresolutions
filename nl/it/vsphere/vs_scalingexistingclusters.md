@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-11"
 
 ---
 
 # Ridimensionamento di cluster vSphere esistenti
 
-Puoi ridimensionare un cluster VMware vSphere esistente che hai ordinato o salvato nella console {{site.data.keyword.vmwaresolutions_full}} aggiungendo i server ESXi oppure ordinando una coppia di FortiGate 300 Series Security Appliance HA per il cluster.
+Puoi ridimensionare un cluster VMware vSphere che hai ordinato o salvato nella console {{site.data.keyword.vmwaresolutions_full}}. Per farlo, aggiungi i server ESXi oppure ordina una coppia HA di dispositivi FortiGate Security Appliance della serie 300 per il cluster.
 
 ## Requisiti
 
@@ -20,10 +20,10 @@ Assicurati di aver completato le seguenti attività:
 
 ## Procedura
 
-1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **VMware vSphere** nella sezione **Data center virtuali**.
+1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e poi su **VMware vSphere** nella sezione **Data center virtuali**.
 2. Nella pagina **VMware vSphere on IBM Cloud**, fai clic su **Crea**.  
-3. Fai clic su **Incrementa esistente** e seleziona il cluster che vuoi ridimensionare dall'elenco **Configurazioni cluster**.
-4. Rivedi le impostazioni del cluster che vengono compilate automaticamente.
+3. Fai clic sulla scheda **Scala esistente** e seleziona il cluster che vuoi ridimensionare dall'elenco **Configurazioni cluster**.
+4. Esamina le impostazioni del cluster che vengono completate automaticamente.
 5. Nella sezione **{{site.data.keyword.baremetal_short}}**, specifica il numero di {{site.data.keyword.baremetal_short}} che vuoi aggiungere al cluster.
 6. Se il cluster non include la coppia HA di dispositivi FortiGate Security Appliance della serie 300 sulla sua VLAN pubblica, ne puoi ordinare una selezionando **Includi con l'acquisto** in **Coppia FortiGate Physical Appliance 300 Series HA**.
 7. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza e il costo stimato.
@@ -32,7 +32,7 @@ Assicurati di aver completato le seguenti attività:
 
 ### Risultati
 
-La distribuzione del ridimensionamento del cluster inizia automaticamente e riceverai un'e-mail di conferma che ti indica che l'ordine è in fase di elaborazione. Quando il cluster è pronto per l'uso, ti viene inviata una notifica via e-mail.
+Il ridimensionamento del cluster inizia automaticamente. Riceverai un'e-mail di conferma che ti indica che l'ordine è in fase di elaborazione. Quando il cluster è pronto per l'uso, ti viene inviata una notifica via e-mail.
 
 **Nota:** i cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Istanze distribuite**.
 
