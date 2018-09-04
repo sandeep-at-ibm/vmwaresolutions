@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -37,7 +37,17 @@ Quando si verificano errori nei componenti di gestione, puoi ripristinare tali c
 
 ## Applicazione degli aggiornamenti a Veeam on IBM Cloud
 
-Sei responsabile di mantenere Veem aggiornato alla versione più recente. Per aggiornare Veeam all'ultima versione, scarica gli aggiornamenti dal sito web di Veeam, copia gli aggiornamenti nella VSI Veeam e quindi installali.
+Sei responsabile di mantenere Veeam aggiornato alla versione più recente. Per aggiornare Veeam all'ultima versione, scarica gli aggiornamenti dal sito web di Veeam, copia gli aggiornamenti nella VSI Veeam e quindi installali.
+
+## Aggiornamento delle licenze Veeam
+
+Puoi aggiornare manualmente la licenza Veeam su richiesta completando la seguente procedura:
+1. [Accedi alla console Veeam Backup and Replication utilizzando RDP](../services/managingveeam.html#accessing-the-veeam-console-by-using-rdp).
+2. Dal menu principale, fai clic su **Licenza**.
+3. Nella finestra **Informazioni sulla licenza**, fai clic su **Aggiorna ora**.
+4. Per visualizzare le statistiche del processo di aggiornamento manuale della licenza, apri la vista **Cronologia** e fai clic sul nodo **Sistema**.
+
+Per ulteriori informazioni, vedi [Updating License Manually](https://helpcenter.veeam.com/docs/backup/vsphere/license_update_manual.html?ver=95).
 
 ## Sostituzione della VSI Veeam delle istanze precedenti alla V1.8 con Veeam on IBM Cloud
 

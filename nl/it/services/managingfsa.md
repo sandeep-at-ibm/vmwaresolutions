@@ -12,7 +12,7 @@ lastupdated: "2018-07-19"
 
 Dopo aver installato correttamente il servizio FortiGate Security Appliance on {{site.data.keyword.cloud}}, puoi gestire e configurare le regole del firewall per FSA dalla console FortiGate.
 
-**Importante**: devi assicurarti che le regole del firewall FSA siano definite per consentire le comunicazioni HTTPS in uscita (porta TCP 443) che vengono avviate dai componenti di gestione come la macchina virtuale IBM CloudDriver o Zerto Virtual Manager per comunicare con il database di gestione esterno nell'infrastruttura {{site.data.keyword.cloud_notm}} tramite Internet. Le comunicazioni HTTPS in uscita (porta TCP 443) hanno origine dall'indirizzo IP pubblico del gateway dei servizi edge (ESG) VMware NSX dei servizi di gestione nella tua istanza.
+**Importante**: devi assicurarti che le regole del firewall FSA siano definite per consentire le comunicazioni HTTPS in uscita (porta TCP 443) che vengono avviate da componenti di gestione come Zerto Virtual Manager per comunicare con il database di gestione esterno nell'infrastruttura {{site.data.keyword.cloud_notm}} tramite Internet. Le comunicazioni HTTPS in uscita (porta TCP 443) hanno origine dall'indirizzo IP pubblico del gateway dei servizi edge (ESG) VMware NSX dei servizi di gestione nella tua istanza.
 
 ## Accesso alla console FortiGate serie 300
 
