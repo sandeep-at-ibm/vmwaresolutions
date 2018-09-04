@@ -38,7 +38,7 @@ Tabella 2. Diba per i componenti software nelle istanze Cloud Foundation
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX per vSphere                          | 6.3.5        |
 | VMware       | SDDC Manager                             | 2.4          |
-| IBM          | CloudDriver                              | 2.4          |
+| IBM          | CloudDriver                              | 2.5          |
 | Microsoft    | Windows Server Standard edition (64-bit) | 2012R2       |
 
 ## Impostazioni di configurazione avanzate per i server ESXi

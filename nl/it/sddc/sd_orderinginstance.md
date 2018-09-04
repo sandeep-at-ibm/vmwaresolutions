@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -70,7 +70,7 @@ Seleziona il modello di CPU e la RAM per il Bare Metal Server.
 
 Tabella 1. Opzioni per i {{site.data.keyword.baremetal_short}} personalizzati
 
-| Opzioni CPU        | Opzioni RAM       |
+| Opzioni del modello CPU        | Opzioni RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
@@ -170,7 +170,7 @@ Quando ordini un'istanza Cloud Foundation, puoi anche ordinare servizi aggiuntiv
 
 ## Riepilogo ordine
 
-In base alla tua configurazione selezionata per l'istanza e i servizi aggiuntivi, il costo stimato viene generato e visualizzato immediatamente nel riquadro di destra. Fai clic su **Dettagli dei prezzi** nella parte inferiore del riquadro di destra per generare un documento PDF che fornisce i dettagli della stima.
+In base alla tua configurazione selezionata per l'istanza e i servizi aggiuntivi, il costo stimato viene generato e visualizzato immediatamente nel riquadro di destra. Fai clic su **Dettagli sui prezzi** nella parte inferiore del riquadro di destra per generare un documento PDF che fornisce i dettagli della stima.
 
 ## Procedura
 
@@ -181,7 +181,10 @@ In base alla tua configurazione selezionata per l'istanza e i servizi aggiuntivi
    * Fai clic su **Istanza primaria** per distribuire una singola istanza nell'ambiente o per distribuire la prima istanza in una topologia multisito.
    * Fai clic su **Istanza secondaria** per connettere l'istanza a un'istanza esistente (primaria) nell'ambiente per l'alta disponibilità e completa quindi la seguente procedura:
      1. Seleziona l'istanza primaria a cui desideri collegare l'istanza secondaria.
-     2. Immetti la password di amministratore PSC per l'istanza primaria.
+     2. Se l'istanza primaria che hai selezionato viene aggiornata alla release della V2.5 o se l'istanza primaria viene distribuita o aggiornata alla release della V2.4 e precedenti, controlla il campo precompilato **Password dell'amministratore PSC per l'istanza primaria** per assicurarti che sia corretto.
+     
+         **Nota:** il campo **Password dell'amministratore PSC per l'istanza primaria** non è disponibile per le istanze primarie
+       distribuite nelle release della V2.5 e successive.     
 5. Completa le impostazioni di licenza per i componenti dell'istanza:
    *  Per utilizzare le licenze fornite da IBM, seleziona **Includi con l'acquisto**.
    *  Per utilizzare la tua propria licenza, seleziona **Fornita dall'utente** e immetti la chiave di licenza.  
@@ -203,7 +206,7 @@ In base alla tua configurazione selezionata per l'istanza e i servizi aggiuntivi
 
 10. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza prima di effettuare l'ordine.
     1. Esamina le impostazioni per l'istanza.
-    2. Esamina il costo stimato dell'istanza. Fai clic su **Dettagli dei prezzi** per generare un riepilogo in formato PDF. Per salvare o stampare il riepilogo
+    2. Esamina il costo stimato dell'istanza. Fai clic su **Dettagli sui prezzi** per generare un riepilogo in formato PDF. Per salvare o stampare il riepilogo
    del tuo ordine, fai clic sull'icona **Stampa** o **Download** nella parte superiore destra della finestra PDF.
     3. Assicurati che l'account da addebitare sia corretto e seleziona quindi la casella di spunta **Accetto che all'account riportato di seguito venga addebitato un corrispettivo**.
     4. Fai clic sul link o sui link dei termini che si applicano al tuo ordine. Assicurati di accettare questi termini e quindi seleziona la casella di spunta **Ho letto e accetto gli accordi di servizio di terze parti elencati di seguito**.
