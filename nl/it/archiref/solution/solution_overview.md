@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -25,9 +25,11 @@ Figura 1. Panoramica di VMware on {{site.data.keyword.cloud_notm}}
 
 ## Vantaggi principali
 
-VMware Cloud Foundation e vCenter Server on {{site.data.keyword.cloud_notm}} forniscono gli elementi costitutivi fondamentali, tra cui VMware vSphere, vCenter Server, NSX e opzioni di archiviazione condivisa, incluso vSAN, necessari per architettare in modo flessibile una soluzione di data center definito dal software VMware che meglio si adatta ai tuoi carichi di lavoro. Applicando l'automazione avanzata e l'infrastruttura bare metal a singolo tenant, puoi distribuire rapidamente l'intero ambiente VMware in {{site.data.keyword.cloud_notm}} e accedere al tuo ambiente virtuale con i tuoi strumenti preferiti in poche ore. A questo punto, puoi accedere e gestire l'ambiente ospitato da IBM tramite client VMware nativi, CLI (Command Line Interface), script esistenti o altri strumenti compatibili con l'API vSphere.
+VMware Cloud Foundation e vCenter Server on {{site.data.keyword.cloud_notm}} forniscono gli elementi costitutivi fondamentali, tra cui VMware vSphere, vCenter Server, NSX e le opzioni di archiviazione condivisa, incluso  vSAN. Questi componenti sono necessari per architettare in modo flessibile una soluzione di data center definito dal software VMware che meglio si adatta ai tuoi carichi di lavoro. 
 
-Dopo la distribuzione, puoi aggiungere i nodi host ESXi e gestire il backup e l'applicazione di patch per alcuni componenti di gestione. I servizi professionali e i servizi distribuiti {{site.data.keyword.cloud_notm}} sono inoltre disponibili per accelerare il tuo viaggio verso il cloud con offerte come i servizi di migrazione, implementazione e incorporazione.
+Applicando l'automazione avanzata e l'infrastruttura bare metal a singolo tenant, puoi distribuire rapidamente l'intero ambiente VMware su {{site.data.keyword.cloud_notm}} in poche ore. Puoi quindi accedere e gestire l'ambiente ospitato da IBM tramite client VMware nativi, CLI (Command Line Interface), script esistenti o altri strumenti compatibili con l'API vSphere.
+
+Dopo la distribuzione, puoi aggiungere i nodi host ESXi e gestire il backup e l'applicazione di patch per alcuni componenti di gestione. I servizi professionali e i servizi gestiti {{site.data.keyword.cloud_notm}} sono inoltre disponibili per accelerare il tuo viaggio verso il cloud con offerte come i servizi di migrazione, implementazione e incorporazione.
 
 Le offerte VMware on {{site.data.keyword.cloud_notm}} forniscono i seguenti vantaggi:
 
