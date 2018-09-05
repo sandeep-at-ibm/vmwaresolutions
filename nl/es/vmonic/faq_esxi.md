@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -21,7 +21,7 @@ Encuentre las respuestas a preguntas frecuentes sobre los servidores ESXi que se
 
 ## ¿Cuántos servidores ESXi puedo añadir a un clúster?
 
-Para V2.2 y releases posteriores, puede añadir un máximo de 51 servidores ESXi a un clúster inicial y un máximo de 59 servidores ESXi a clústeres adicionales.
+Para V2.2 y releases posteriores, puede añadir un máximo de 51 servidores ESXi a un clúster inicial y un máximo de 59 servidores ESXi a clústeres añadidos.
 
 Para instancias desplegadas en V2.1 o releases anteriores, debe habilitar el soporte de vSAN necesario para aumentar el tamaño del clúster por encima de 32. Siga los pasos siguientes para habilitar el soporte de vSAN necesario:
 
@@ -32,20 +32,20 @@ Para instancias desplegadas en V2.1 o releases anteriores, debe habilitar el sop
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
 2. Reinicie cada servidor ESXi. Para obtener más información, consulte [Creación de un clúster vSAN 6.x con un máximo de 64 hosts](https://kb.vmware.com/s/article/2110081).
-3. Tenga en cuenta que es posible que tenga que aumentar el tamaño de vCenter Server para dar cabida a las nuevas máquinas virtuales y servidores ESXi.
-4. Abra una incidencia de soporte de IBM en la que indique que ha aplicado manualmente los cambios de vSAN completando los pasos 1 a 3 y que desea habilitar su instancia actualizada para servidores ESXi adicionales por encima de 32.
+3. Es posible que tenga que aumentar el tamaño de vCenter Server para dar cabida a las máquinas virtuales añadidas y servidores ESXi.
+4. Abra un tíquet de IBM Support para indicar que ha aplicado los cambios de vSAN manualmente completando los pasos 1 al 3. En el tíquet, solicite que la instancia actualizada esté habilitada para servidores ESXi más allá de 32.
 
 ## ¿Puedo cambiar las direcciones IP y los nombres de los servidores ESXi?
 
-Las direcciones IP y los nombres de los servidores ESXi no se pueden cambiar, porque están registrados para la resolución de DNS de Windows. Los cambios podrían dar lugar a errores durante el despliegue o a errores en funciones de vCenter Server.
+Los nombres de servidor de ESXi y las direcciones IP no se pueden cambiar porque están registrados para la resolución de DNS de Windows. Los cambios podrían dar lugar a errores durante el despliegue o a errores en funciones de vCenter Server.
 
 **Nota**: No utilice la característica **Renombrar dispositivo** en la interfaz de usuario de {{site.data.keyword.cloud_notm}} para cambiar los nombres de servidor de ESXi. Esta función cambiaría el FQDN del servidor ESXi, pero los registros de vCenter Center y del host de la VSI de Windows serían incorrectos y podrían provocar anomalías.
 
 ## ¿Puedo inhabilitar el acceso raíz de mis servidores ESXi?
 
-Se recomienda mantener el acceso raíz habilitado en los servidores ESXi; de lo contrario podrían producirse anomalías en la funcionalidad de {{site.data.keyword.vmwaresolutions_short}}.
+Se recomienda mantener el acceso raíz habilitado en los servidores ESXi; de lo contrario podrían producirse anomalías en las funciones de {{site.data.keyword.vmwaresolutions_short}}.
 
-Si es absolutamente necesario, puede inhabilitar el acceso raíz después de que los servidores ESXi alcancen el estado **Listo para su uso** en la consola de {{site.data.keyword.vmwaresolutions_short}}.
+Si es necesario, puede inhabilitar el acceso raíz después de que los servidores ESXi alcancen el estado **Listo para su uso** en la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
 Debe volver a habilitar el acceso raíz para las operaciones de automatización posteriores, por ejemplo al añadir o eliminar comparticiones de archivos o al instalar servicios adicionales, como por ejemplo Zerto on {{site.data.keyword.cloud_notm}}.
 
@@ -53,7 +53,7 @@ Debe volver a habilitar el acceso raíz para las operaciones de automatización 
 
 Se pueden añadir rutas estáticas para almacenamiento, pero las operaciones deben realizarse con sumo cuidado. De lo contrario, se podrían desmontar las comparticiones existentes.
 
-**Nota**: no se da soporte a la adición de rutas estáticas para vMotion. Los cambios en la configuración de subred de vMotion podrían provocar anomalías en la funcionalidad de {{site.data.keyword.vmwaresolutions_short}}.
+**Nota**: no se da soporte a la adición de rutas estáticas para vMotion. Los cambios en la configuración de subred de vMotion podrían provocar anomalías en las funciones de {{site.data.keyword.vmwaresolutions_short}}.
 
 ### Enlaces relacionados
 

@@ -58,7 +58,7 @@ Para obtener más información, consulte la sección *Valores de Servidor nativo
 
 ### Mejora del rendimiento de Network File System
 
-El nivel de rendimiento de 10 IOPS/GB, diseñado para los tipos de cargas de trabajo más exigentes, ya no está limitado a {{site.data.keyword.CloudDataCent_notm}} específicos, pero ahora está disponible para todo el mundo. Para obtener más información, consulte la sección *Almacenamiento* en [Visión general de vCenter Server](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications).
+El nivel de rendimiento de 10 IOPS/GB, diseñado para los tipos de cargas de trabajo más exigentes, ya no está limitado a {{site.data.keyword.CloudDataCent_notm}} específicos, pero ahora está disponible para todo el mundo. Para obtener más información, consulte la sección *Almacenamiento* en [Visión general de vCenter Server](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## Actualizaciones de instancias de VMware Federal
 
@@ -70,7 +70,7 @@ Ahora puede desplegar instancias de VMware Federal en el {{site.data.keyword.Clo
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-El release actual instala IBM Spectrum Protect&trade; Plus V10.1.1 Parche 1 en todas las instancias desplegadas recientemente. Para obtener información sobre las nuevas características de IBM Spectrum Protect Plus V10.1.1 Parche 1, consulte [Actualizaciones de IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+El release actual instala IBM Spectrum Protect&trade; Plus V10.1.1 Parche 1 en todas las instancias desplegadas recientemente. Para obtener más información sobre las nuevas características de IBM Spectrum Protect Plus V10.1.1 Parche 1, consulte [Actualizaciones de IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ### VMware HCX on IBM Cloud
 
@@ -86,7 +86,7 @@ El documento de arquitectura de {{site.data.keyword.vmwaresolutions_short}} ahor
 
 La información de servicios se ha reestructurado y la navegación se ha mejorado para localizar fácilmente información relevante al solicitar servicios.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 
 * [Solicitud de F5 on {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
 * [Solicitud de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)

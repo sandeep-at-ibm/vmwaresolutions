@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -14,7 +14,7 @@ Encuentre las respuestas a las preguntas más frecuentes sobre licencias, inclui
 
 ## ¿Qué es BYOL?
 
-Traer su propia licencia (Bring Your Own License o BYOL) es una característica disponible para las instancias de VMware Cloud Foundation de la V1.8 y releases posteriores y para los clústeres de vCenter Server y vSphere de la V2.0 y releases posteriores. BYOL le permite utilizar sus propias licencias de VMware para uno o varios de los siguientes componentes de software de VMware cuando solicite instancias:
+Traer su propia licencia (Bring Your Own License o BYOL) es una característica disponible para las instancias de VMware Cloud Foundation de la V1.8 y releases posteriores y para los clústeres de vCenter Server y vSphere de la V2.0 y releases posteriores. Con BYOL, puede utilizar sus propias licencias de VMware para uno o varios de los siguientes componentes de software de VMware cuando solicite instancias:
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
@@ -62,11 +62,11 @@ Todas las claves de licencia que proporcione se validan para garantizar de que s
 
 ## ¿Puedo proporcionar una clave de licencia con más de 8 CPU?
 
-Sí. Para cada componente de VMware se necesita una licencia por CPU. Actualmente, todos los servidores de vCenter Server y de Cloud Foundation tienen dos CPU, por lo tanto se necesitan dos licencias por cada servidor. Se recomienda proporcionar una clave de licencia que dé soporte a la instancia básica y a los nodos de expansión que desee añadir a la instancia en el futuro.
+Sí. Para cada componente de VMware se necesita una licencia por CPU. Actualmente, todos los servidores de vCenter Server y de Cloud Foundation tienen dos CPU. Por lo tanto, se necesitan dos licencias por cada servidor. Se recomienda proporcionar una clave de licencia que dé soporte a la instancia básica y a los nodos de expansión que desee añadir a la instancia en el futuro.
 
 ## ¿Puedo proporcionar la licencia de SDDC Manager cuando utilice la característica BYOL?
 
-No. Nuestro acuerdo con VMware implica que debemos aceptar la clave de licencia real de un cliente. Aunque el despliegue de Cloud Foundation incluye licencias de SDDC Manager, no hay archivos de claves de licencia de SDDC Manager que podemos aceptar y validar para BYOL. Por lo tanto, IBM realiza un cargo de licencias de SDDC Manager para todas las instancias. Las licencias de SDDC Manager representan una parte muy pequeña de los cargos totales de licencias correspondientes a una instancia de Cloud Foundation.
+No. Nuestro acuerdo con VMware implica que debemos aceptar la clave de licencia real de un cliente. Aunque el despliegue de Cloud Foundation incluye licencias de SDDC Manager, no podemos aceptar los archivos de claves de licencia de SDDC Manager ni validarlos para BYOL. Por lo tanto, IBM realiza un cargo de licencias de SDDC Manager para todas las instancias. Las licencias de SDDC Manager representan una pequeña parte de los cargos totales de licencias correspondientes a una instancia de Cloud Foundation.
 
 ## ¿Puedo utilizar la característica BYOL para algunos componentes de VMware y adquirir licencias mensuales para otros?
 
@@ -74,11 +74,11 @@ Sí. Puede utilizar la característica BYOL o adquirir licencias para cualquier 
 
 ## Para un componente específico de VMware, ¿puedo utilizar BYOL para algunas licencias y comprar el resto de las licencias de IBM?
 
-Sí. Si ha seleccionado BYOL para un componente VMware específico, cuando cree un nuevo clúster tiene la opción de entrar una nueva clave de BYOL, de seguir utilizando una clave de BYOL existente o de comprar licencias proporcionadas por IBM para dicho clúster.  En este momento, solo VMware vSphere Enterprise y VMware vSAN están disponibles para licencias por clúster.
+Sí. Si ha seleccionado BYOL para un componente VMware específico, cuando cree un nuevo clúster tiene la opción de entrar una nueva clave de BYOL, de seguir utilizando una clave de BYOL existente o de comprar licencias proporcionadas por IBM para dicho clúster. En la actualidad, solo VMware vSphere Enterprise y VMware vSAN están disponibles para licencias por clúster.
 
 ## ¿Puedo utilizar BYOL cuando cree un nuevo clúster?
 
-Sí. Puede utilizar BYOL de licencias BYOL existentes o especificar BYOL cuando cree un nuevo clúster. También tiene la opción de adquirir una licencia de suscripción proporcionado por IBM cuando cree un nuevo clúster. En este momento, solo VMware vSphere Enterprise y VMware vSAN están disponibles para licencias por clúster.
+Sí. Puede utilizar BYOL de licencias BYOL existentes o especificar BYOL cuando cree un nuevo clúster. También puede adquirir una licencia de suscripción proporcionada por IBM al crear un nuevo clúster. En la actualidad, solo VMware vSphere Enterprise y VMware vSAN están disponibles para licencias por clúster.
 
 ## ¿Cómo gestiono mis licencias BYOL?
 
@@ -90,7 +90,11 @@ Sí. Cuando añada más servidores ESXi a una instancia desplegada, se comprueba
 
 ## ¿Cómo puedo saber la capacidad de licencia que tengo disponible en un clúster con BYOL?
 
-Para ver el número de CPU disponibles en su clave de licencia, vaya a la página **Instancias desplegadas**, localice y pulse la instancia y, en el separador **Infraestructura**, pulse el clúster cuya capacidad de licencia desea comprobar. El número de CPU disponibles se muestra en la tabla **Licencia proporcionada por el usuario**.
+Para encontrar el número de CPU disponibles en la clave de licencia, complete los pasos siguientes:
+1. Vaya a la página **Instancias desplegadas**.
+2. Localice y pulse la instancia.
+3. En el separador **Infraestructura**, pulse en el clúster para el que desee comprobar la capacidad de la licencia. 
+   El número de CPU disponibles se muestra en la tabla **Licencia proporcionada por el usuario**.
 
 ## ¿Proporciona IBM soporte si selecciono la opción de licencia BYOL?
 
@@ -98,7 +102,7 @@ El equipo de soporte de IBM sigue siendo su punto de contacto para cualquier dud
 
 ## ¿Por qué aparecen cargos de licencia de vSphere en la lista de estimaciones de precio si utilizo BYOL? ¿Se me va a facturar por ello?
 
-Los {{site.data.keyword.baremetal_short}} se suministran con VMware vSphere ya instalado y con las licencias de vSphere ya incluidas. Si ha seleccionado BYOL para vSphere, se inicia automáticamente un proceso sobre el despliegue de la instancia para eliminar las licencias de vSphere incluidas. Luego los cargos de licencia se abonarán a su cuenta de {{site.data.keyword.cloud_notm}}. En este proceso no tiene que hacer nada.
+Los {{site.data.keyword.baremetal_short}} se suministran con VMware vSphere ya instalado y con las licencias de vSphere ya incluidas. Si ha seleccionado BYOL para vSphere, se inicia automáticamente un proceso sobre el despliegue de la instancia para eliminar las licencias de vSphere incluidas. Luego, los cargos de licencia se abonarán a su cuenta de {{site.data.keyword.cloud_notm}}. En este proceso no tiene que hacer nada.
 
 ## ¿Puedo seguir utilizando el proceso manual existente para BYOL?
 
@@ -106,7 +110,7 @@ Con la introducción de la característica BYOL, no se recomienda seguir utiliza
 
 ## ¿Recibe BYOL soporte para otros productos VMware, como VMware vRealize Automation, VMware vRealize Operations o VMware vRealize Log Insight?
 
-No, porque estos productos VMware no forman parte del despliegue de la instancia. Estos productos VMware se pueden instalar sobre el despliegue inicial, lo que requiere que los clientes o sus agentes realicen la instalación y la obtención de licencias.
+No, porque estos productos VMware no forman parte del despliegue de la instancia. Estos productos VMware se pueden instalar además del despliegue inicial, lo que requiere que los clientes o sus agentes realicen la instalación y la obtención de licencias.
 
 ## ¿Puedo solicitar almacenamiento de NFS con vCenter Server con el paquete híbrido (Hybridity)?
 

@@ -36,7 +36,7 @@ Como parte de la instalación de NSX, NSX Manager se instala y se obtiene una li
 
 **Nota**: el controlador NSX no se instala en las instancias de vCenter Server (del modo en que se instala en las instancias de Cloud Foundation). Si utiliza VXLAN o direccionadores lógicos distribuidos para sus instancias de vCenter Server, debe instalar el controlador NSX usted mismo.
 
-Para obtener información sobre las mejoras incorporadas en VMware NSX para vSphere 6.2.4, sus requisitos y problemas conocidos, consulte las [Notas del release de NSX for vSphere 6.2.4](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
+Para obtener más información sobre las mejoras incorporadas en VMware NSX para vSphere 6.2.4, sus requisitos y problemas conocidos, consulte las [Notas del release de NSX for vSphere 6.2.4](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
 
 ### VMware NSX Edge
 
@@ -44,7 +44,7 @@ Ahora NSX Edge se incluye como parte de las nuevas instancias de vCenter Server 
 
 Durante el despliegue de la instancia, IBM despliega Management VMware NSX Edge Services Gateway (ESG). Las máquinas virtuales de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Esta ESG se despliega para incluir dos interfaces: una interfaz está conectada a la VLAN privada de {{site.data.keyword.cloud_notm}}, y la otra está conectada a la VLAN pública de {{site.data.keyword.cloud_notm}}.
 
-Para garantizar la seguridad, se imponen reglas de cortafuegos que solo permiten las comunicaciones HTTPS de salida iniciadas por las máquinas virtuales de gestión. Esta ESG se despliega en una configuración de tipo Grande y solo el equipo de soporte de IBM puede modificar la configuración. Para obtener más información, consulte:
+Para garantizar la seguridad, se imponen reglas de cortafuegos que solo permiten las comunicaciones HTTPS de salida iniciadas por las máquinas virtuales de gestión. Esta ESG se despliega en una configuración de tipo Grande y solo el equipo de soporte de IBM puede modificar la configuración. Para obtener más información, consulte los temas siguientes:
 
 * [Especificaciones técnicas de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [¿Representa NSX Edge de servicios de gestión un riesgo para la seguridad?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -95,7 +95,7 @@ El proceso de pedido de una instancia se ha simplificado significativamente:
 * Tanto para instancias de Cloud Foundation como para instancias de vCenter Server, ya no se muestra página de credenciales de SoftLayer durante el proceso de pedido. Se utilizan de forma predeterminada las credenciales de SoftLayer definidas en la página de valores y se solicita al usuario que las actualice solo si no cumplen los requisitos.
 * Además, para instancias de vCenter Server, solo está disponible la opción **Grande** para el tipo de **Hardware** y el valor **10 Gbps Dual** para la opción **Velocidad de puerto de enlace ascendente**, lo que reduce el número de valores que se deben especificar cuando se realiza el pedido.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 
 * [Pedido de instancias de Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Pedido de instancias de vCenter Server](../vcenter/vc_orderinginstance.html)
@@ -111,7 +111,7 @@ Se han realizado mejoras y se han incorporado nuevas características al proceso
 
 Puede configurar notificaciones de la consola en la página **Configuración**. De forma predeterminada, el valor está habilitado, lo que significa que recibe una notificación en la consola para todos los sucesos. También puede inhabilitar las notificaciones de la consola en la página **Configuración**.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 
 * [Cuentas de usuario y valores](useraccount.html)
 * [Notificaciones](notifications.html)

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-16"
 
 ---
 
 # Cómo ponerse en contacto con el equipo de soporte de IBM
 
-Si necesita ayuda con {{site.data.keyword.vmwaresolutions_full}}, cree una incidencia de soporte de {{site.data.keyword.cloud_notm}} para obtener ayuda a través de uno de los siguientes canales:
+Si necesita ayuda con {{site.data.keyword.vmwaresolutions_full}}, cree una incidencia de soporte de {{site.data.keyword.cloud_notm}} para obtener ayuda utilizando uno de los siguientes canales:
 
 ## Desde la consola de IBM Cloud for VMware Solutions
 
@@ -45,6 +45,6 @@ Para ponerse en contacto con el equipo de soporte de IBM desde el {{site.data.ke
 
 1. Vaya a https://control.softlayer.com.
 2. Inicie sesión en el portal con su cuenta de **IBMid**.
-3. Complete los pasos 6 a 8 descritos en la sección _Desde la consola de IBM Cloud for VMware Solutions_ de este tema para presentar la incidencia.
+3. Complete los pasos 6 a 8 descritos en la sección _Desde la consola de IBM Cloud for VMware Solutions_ de este tema para presentar el tíquet.
 
     **Nota**: Independientemente del canal que utilice para abrir la incidencia de soporte (ya sea la consola de {{site.data.keyword.vmwaresolutions_short}} o el {{site.data.keyword.slportal}}), los términos de la _{{site.data.keyword.cloud_notm}} Infrastructure and Platform Services Support Policy_ se seguirán aplicando.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -22,12 +22,14 @@ Las instancias de V2.0 o posterior se han desplegado con VMware vSphere 6.5 y VM
 
 ### Instancias de vCenter Server desplegadas en V2.0 o posteriores
 
-Para VMware vSphere 6.5:
+#### Para VMware vSphere 6.5
+
 * Para todas las nuevas instancias de V2.3, vSphere se desplegará con los parches siguientes aplicados: ESXi650-201712101-SG, ESXi650-201803401-BG y ESXi650-201803402-BG.  
 * Para todas las instancias existentes desplegadas antes de V2.3, se actualizarán todos los nuevos clústeres y servidores ESXi con los parches siguientes: ESXi650-201712101-SG, ESXi650-201803401-BG y ESXi650-201803402-BG.
-* Para todos los servidores ESXi existentes, así como para los clústeres o servidores ESXi que siga desplegando antes de actualizar a V2.3, debe aplicar los parches siguientes: ESXi650-201712101-SG, ESXi650-201803401-BG y ESXi650-201803402-BG del [sitio de parches del producto VMware](https://my.vmware.com/group/vmware/patch).
+* Para todos los servidores ESXi existentes, y para los clústeres o servidores ESXi que siga desplegando antes de actualizar a V2.3, debe aplicar los parches siguientes: ESXi650-201712101-SG, ESXi650-201803401-BG y ESXi650-201803402-BG del [sitio de parches del producto VMware](https://my.vmware.com/group/vmware/patch).
 
-Para VMware vCenter Server 6.5:
+#### Para VMware vCenter Server 6.5
+
 * Para todas las nuevas instancias de V2.3, vCenter Server se desplegará con el parche vCenter 6.5 U1g aplicado.
 * Para todas las instancias existentes desplegadas antes de V2.3, debe aplicar el parche vCenter 6.5 U1g del [sitio de parches del producto VMware](https://my.vmware.com/group/vmware/patch).
 
@@ -45,17 +47,17 @@ Para VMware vCenter Server 6.5, debe aplicar el parche vCenter 6.5 U1g del [siti
 
 ## Instancias desplegadas en la V1.9 o anteriores
 
-Las instancias de Cloud Foundation y de vCenter Server, así como los clústeres de VMware vSphere de la V1.9 o anteriores, se han desplegado con VMware vSphere 6.0 y VMware vCenter Server 6.0.
+Las instancias de Cloud Foundation y de vCenter Server, y los clústeres de VMware vSphere de la V1.9 o anteriores, se han desplegado con VMware vSphere 6.0 y VMware vCenter Server 6.0.
 
-### Instancias de vCenter Server desplegadas en la V1.9 o anteriores
+### Instancias de vCenter Server desplegadas en V1.9 o anteriores
 
 Para VMware vSphere 6.0 y para VMware vCenter Server 6.0, debe aplicar los parches (ESXi600-201711101-SG, ESXi600-201803401-BG y ESXi600-201803402-BG para vSphere y vCenter 6.0 U3e para vCenter Server) del [sitio de parches del producto VMware](https://my.vmware.com/group/vmware/patch) a todas las instancias y servidores ESXi, tanto a los recién desplegados como a los existentes.
 
-### Instancias de Cloud Foundation desplegadas en la V1.9 o anteriores
+### Instancias de Cloud Foundation desplegadas en V1.9 o anteriores
 
 Las actualizaciones para estas instancias estarán disponibles cuando salgan al mercado las actualizaciones necesarias de los proveedores de los que dependen estas instancias.
 
-### Clústeres de VMware vSphere desplegados en la V1.9 o anteriores
+### Clústeres de VMware vSphere desplegados en V1.9 o anteriores
 
 Para VMware vSphere 6.0 y para VMware vCenter Server 6.0, debe aplicar los parches (ESXi600-201711101-SG, ESXi600-201803401-BG y ESXi600-201803402-BG para vSphere y vCenter 6.0 U3e para vCenter Server) del [sitio de parches del producto VMware](https://my.vmware.com/group/vmware/patch) a todos los clústeres de vSphere y los servidores ESXi, tanto a los recién desplegados como a los existentes.
 

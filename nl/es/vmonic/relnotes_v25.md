@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-17"
 
 ---
 
@@ -49,7 +49,7 @@ A partir del release V2.5, {{site.data.keyword.vmwaresolutions_short}} está int
 * Las instancias que se despliegan en V2.5 y releases posteriores se enlazan automáticamente a la cuenta de usuario que se está utilizando cuando se solicita la instancia.
 * Para las instancias que se han desplegado en V2.4 y releases anteriores, puede migrarlas a una cuenta de {{site.data.keyword.cloud_notm}} especificada y luego gestionarlas utilizando IAM también.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Invitación de usuarios para acceder a servicios y recursos](../vmonic/iamuserinvite.html)
 * [Gestión de acceso de usuario con IAM](../vmonic/iam.html)
 
@@ -61,7 +61,7 @@ No edite los permisos globales del grupo **ic4v-vCenter** en la página **Usuari
 
 Para las instancias de Cloud Foundation, utilice el ID de usuario de host **customerroot** en lugar del ID de usuario de host **root**. Continúe utilizando el ID de usuario de host **root** para las instancias de vCenter Server.
 
-Para obtener más información sobre las cuentas de usuario, consulte:
+Para obtener más información sobre las cuentas de usuario, consulte los temas siguientes:
 
 * [Consideraciones sobre el cambio de artefactos de vCenter Server](../vcenter/vcenter_chg_impact.html)
 * [Consideraciones sobre el cambio de artefactos de Cloud Foundation](../sddc/cf_chg_impact.html)
@@ -94,7 +94,7 @@ Las especificaciones técnicas para todos los tipos de instancias y tipos de ser
 
 La información de servicios se mejora para identificar fácilmente el soporte de servicio basado en el número de release en el que se ha puesto disponible.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 
 * [Servicios disponibles para instancias de vCenter Server](../vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
 * [Servicios disponibles para instancias de vCenter Server con el paquete híbrido (Hybridity)](../vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)

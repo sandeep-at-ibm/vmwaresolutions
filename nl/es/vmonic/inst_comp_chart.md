@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -18,12 +18,12 @@ Tabla 1. Funciones soportadas para Cloud Foundation, vCenter Server, vCenter Ser
 |:----------------------------------|:--------------------|:---------------|:-------------------------|:-------------- |
 | Basado en automatización avanzada de {{site.data.keyword.IBM}} <sup>1</sup> | Sí | Sí | Sí | No. Compilado y configurado automáticamente |
 | Opciones de almacenamiento        | vSAN                | vSAN o almacenamiento de nivel de archivo compartido (NFS) | vSAN | vSAN o almacenamiento de nivel de archivo compartido (NFS) |
-| Número de servidores ESXi en clúster inicial | 4 | 4 para vSAN y un mínimo de 2 (aunque se recomienda 3) para NFS | 4 | 1 para escalar un clúster existente, 4 para clúster vSAN nuevo y un mínimo de 3 para clúster nuevo con NFS |
+| Número de servidores ESXi en clúster inicial | 4 | 4 para vSAN y un mínimo de 2 (se recomienda 3) para NFS | 4 | 1 para escalar un clúster existente, 4 para clúster vSAN nuevo y un mínimo de 3 para clúster nuevo con NFS |
 | Número máximo de servidores ESXi <sup>2</sup> | 32 por clúster      | 59 por clúster     | 59 por clúster | 60 por clúster     |
 | Despliegue automático de varios sitios en la nube | Soportado para instancias nuevas desplegadas en V2.0 o posterior | Soportado para instancias nuevas desplegadas en V2.0 o posterior | Soportado | Soportado. Configuración automática no incluida. |
 | Añadir servidores ESXi              | Soportado           | Soportado | Soportado | Soportado. Configuración automática no incluida. |
 | Eliminar servidores ESXi           | Soportado           | Soportado | Soportado | Soportado. Configuración automática no incluida. |
-| Soporte de varios clústeres         | 5 clústeres | 10 clústeres | 10 clústeres | Soportado. Configuración automática no incluida. |
+| Soporte de varios clústeres         | Cinco clústeres | Diez clústeres | Diez clústeres | Soportado. Configuración automática no incluida. |
 | Actualización y aplicación parches gestionadas por cliente de pila VMware | Actualizaciones de VMware | No incluido | No incluido | No incluido |
 | Copia de seguridad y restauración            | Manualmente utilizando IBM Spectrum Protect Plus o Veeam | Manualmente utilizando IBM Spectrum Protect Plus o Veeam | Manualmente utilizando IBM Spectrum Protect Plus o Veeam | Solución de copia de seguridad y restauración no incluida |
 | Sistema de redes definida por software   | NSX Enterprise   | NSX Base, Advanced o Enterprise | NSX Advanced o Enterprise | NSX Standard, Base o Enterprise. Configuración automática no incluida. |
@@ -45,7 +45,7 @@ Tabla 1. Funciones soportadas para Cloud Foundation, vCenter Server, vCenter Ser
 * [Visión general de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Visión general de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Visión general de vCenter Server Hybridity](../vcenter/vc_hybrid_overview.html)
-* [Visión general de Vmware vSphere](../vsphere/vs_vsphereclusteroverview.html)
+* [Visión general de VMware vSphere](../vsphere/vs_vsphereclusteroverview.html)
 * [Lista de materiales de Cloud Foundation](../sddc/sd_bom.html)
 * [Lista de materiales de vCenter Server](../vcenter/vc_bom.html)
-* [Lista de materiales de Vmware vSphere](../vsphere/vs_bom.html)
+* [Lista de materiales de VMware vSphere](../vsphere/vs_bom.html)

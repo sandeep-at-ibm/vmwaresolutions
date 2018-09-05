@@ -28,7 +28,7 @@ Este release introduce la oferta VMware vCenter Server on {{site.data.keyword.cl
 
 El servicio HCX on {{site.data.keyword.cloud_notm}} sólo está disponible mediante la instancia de vCenter Server con el paquete híbrido (Hybridity). Puede actualizar la instancia existente de vCenter Server a una instancia de vCenter Server con el paquete híbrido (Hybridity) después de aplicar por primera vez el software base de vCenter Server V2.3. Para obtener más información, consulte [Aplicación de actualizaciones a instancias de vCenter Server](../vcenter/vc_applyingupdates.html).
 
-Para obtener más información sobre vCenter Server con el paquete híbrido (Hybridity), consulte:
+Para obtener más información sobre vCenter Server con el paquete híbrido (Hybridity), consulte los temas siguientes:
 
 * [Visión general de vCenter Server con el paquete híbrido (Hybridity)](../vcenter/vc_hybrid_overview.html)
 * [Requisitos y planificación de instancias de vCenter Server con el paquete híbrido (Hybridity)](../vcenter/vc_hybrid_planning.html)
@@ -38,7 +38,7 @@ Para obtener más información sobre vCenter Server con el paquete híbrido (Hyb
 
 Ahora puede suprimir clústeres de una instancia sin tener que suprimir la instancia completa. Para los clústeres desplegados en V2.2 o instancias anteriores, debe actualizar la instancia a V2.3 para poder suprimir los clústeres que ha añadido a la instancia.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 
 * [Adición, visualización y supresión de clústeres para instancias de vCenter Server](../vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
 * [Adición, visualización y supresión de clústeres para instancias de Cloud Foundation](../sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
@@ -55,7 +55,7 @@ A partir del release V2.3, está disponible el despliegue de estos nuevos modelo
 * Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz
 * Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 
 * [Pedido de instancias de vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Adición, visualización y supresión de clústeres para instancias de vCenter Server](../vcenter/vc_addingviewingclusters.html)
@@ -93,7 +93,7 @@ El servicio HyTrust CloudControl on {{site.data.keyword.cloud_notm}} solo está 
 
 Puede solicitar instancias con el servicio incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Componentes y consideraciones sobre HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)
 * [Gestión de HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/managinghtcc.html)
 
@@ -103,13 +103,13 @@ El servicio HyTrust DataControl on {{site.data.keyword.cloud_notm}} solo está d
 
 Puede solicitar instancias con el servicio incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Componentes y consideraciones sobre HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)
 * [Gestión de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-El release actual instala IBM Spectrum Protect&trade; Plus V10.1.1 como servicio de copia de seguridad predeterminado en todas las instancias desplegadas recientemente. Para obtener información sobre las nuevas características de IBM Spectrum Protect Plus V10.1.1, consulte [Actualizaciones de IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+El release actual instala IBM Spectrum Protect&trade; Plus V10.1.1 como servicio de copia de seguridad predeterminado en todas las instancias desplegadas recientemente. Para obtener más información sobre las nuevas características de IBM Spectrum Protect Plus V10.1.1, consulte [Actualizaciones de IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ## Documentación nueva y actualizada
 

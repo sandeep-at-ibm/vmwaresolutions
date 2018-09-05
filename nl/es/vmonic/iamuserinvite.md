@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 
 ---
 
 # Invitación de usuarios para acceder a servicios y recursos
 
-{{site.data.keyword.vmwaresolutions_full}} se integra con {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) para la colaboración entre varios usuarios. Después de registrarse para una cuenta de {{site.data.keyword.cloud_notm}} e iniciar sesión en la consola de {{site.data.keyword.vmwaresolutions_short}}, puede añadir usuarios a la cuenta de {{site.data.keyword.cloud_notm}} para que estos usuarios puedan compartir los servicios y recursos que se han suministrado para la cuenta.
+{{site.data.keyword.vmwaresolutions_full}} se integra con {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) para la colaboración entre varios usuarios. Después de registrarse para una cuenta de {{site.data.keyword.cloud_notm}} e iniciar sesión en la consola de {{site.data.keyword.vmwaresolutions_short}}, puede añadir usuarios a la cuenta de {{site.data.keyword.cloud_notm}}. Estos usuarios añadidos pueden compartir los servicios y recursos que se han suministrado para la cuenta.
 
 ## Antes de empezar
 
@@ -25,12 +25,12 @@ lastupdated: "2018-07-27"
 4. En la sección **Acceso**, expanda **Servicios** y, a continuación, complete las tareas siguientes:
    1. Seleccione **Recurso** en la lista **Asignar acceso a**.
    2. Seleccione **VMware Solutions** en la lista **Servicios**.
-   3. Seleccione el rol de acceso de la plataforma que desea asignar a los usuarios, que es **Administrador**, **Editor**, **Operador** o **Visor**.
+   3. Seleccione el rol de acceso de la plataforma que desea asignar a los usuarios. Puede ser **Administrador**, **Editor**, **Operador** o **Visor**.
 5. Pulse **Invitar a usuarios**.
 
 ## Resultados
 
-Después de que los usuarios añadidos acepten la invitación, pueden iniciar sesión en la consola {{site.data.keyword.vmwaresolutions_short}} y conmutar a la cuenta en sus valores de perfil pulsando su avatar en la esquina superior derecha de la consola {{site.data.keyword.vmwaresolutions_short}}. A continuación, los usuarios añadidos pueden colaborar y compartir los servicios y los recursos disponibles en la cuenta especificada.
+Después de que los usuarios añadidos acepten la invitación, pueden iniciar sesión en la consola {{site.data.keyword.vmwaresolutions_short}} y conmutar a la cuenta. Para ello, en sus valores de perfil, los usuarios pulsan su avatar en la esquina superior derecha de la consola {{site.data.keyword.vmwaresolutions_short}}. A continuación, los usuarios añadidos pueden colaborar y compartir los servicios y los recursos disponibles en la cuenta especificada.
 
 ### Enlaces relacionados
 

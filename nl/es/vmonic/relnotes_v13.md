@@ -10,7 +10,7 @@ lastupdated: "2017-01-23"
 
 # Notas del release para V1.3
 
-Este release incluye nuevas características, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias adicionales para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Este release incluye nuevas características, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y más sugerencias para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Almacenamiento a nivel de archivos compartidos para instancias de vCenter Server
 
@@ -20,7 +20,7 @@ Ahora puede añadir NAS (almacenamiento conectado a red) compartido a instancias
 
 Tanto si ha solicitado la recuperación tras desastre de Zerto como parte de la instancia como si la ha añadido a una instancia existente, ahora puede eliminar este servicio cuando ya no lo necesite. Después de solicitar la eliminación del servicio desde la consola, el equipo de soporte de IBM le guiará por el proceso de eliminación.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 
 * [Eliminación de la recuperación tras desastre](../services/removingzertodr.html)
 * [Visualización de instancias de Cloud Foundation](../sddc/sd_viewinginstances.html)
@@ -34,7 +34,7 @@ Durante el despliegue de la instancia, IBM® despliega Management NSX Edge Servi
 
 Para garantizar la seguridad, se imponen reglas de cortafuegos que solo permiten las comunicaciones HTTPS de salida iniciadas por las máquinas virtuales de gestión. Esta ESG se despliega en una configuración de tipo Grande y solo el equipo de soporte de IBM puede modificar la configuración.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 
 * [Especificaciones técnicas para instancias de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [¿Representa NSX Edge de servicios de gestión un riesgo para la seguridad?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -47,7 +47,7 @@ El proceso de pedido de instancias se ha mejorado para las instancias de Cloud F
 * La página de resumen muestra todos los términos y condiciones aplicables para todos los componentes y servicios solicitados, para que pueda revisar y aceptar fácilmente estos términos antes de realizar el pedido.
 * Puede guardar e imprimir el resumen del pedido de la instancia antes de realizar el pedido. Con esta nueva función, puede revisar los valores y el coste de la instancia, modificar los componentes solicitados si es necesario, obtener la aprobación y luego volver a su pedido.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 
 * [Pedido de instancias de Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Pedido de instancias de vCenter Server](../vcenter/vc_orderinginstance.html)

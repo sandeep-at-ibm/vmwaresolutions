@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-03-16"
 ## Solución
 
 Para desplegar un archivo OVF (Open Virtualization Format) utilizando el cliente web de vSphere, siga el procedimiento siguiente:
-1. Antes de intentar el despliegue, debe añadir la siguiente información de host al archivo `/etc/hosts`:
+1. Antes de intentar desplegar un archivo OVF, añada la información de host siguiente al archivo `/etc/hosts`:
 
    * Información de host para Platform Services Controller (PSC)
    * Información de host para el servidor VMware ESXi
