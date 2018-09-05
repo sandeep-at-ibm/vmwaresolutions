@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-11"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-20"
 
 Para desplegar una plataforma virtualizada de VMware altamente personalizable, solicite un clúster de VMware vSphere on {{site.data.keyword.cloud}}. Siga este procedimiento para definir un clúster nuevo de VMware vSphere.
 
-Este procedimiento le guía por el componente de VMware para seleccionar los valores de almacenamiento, las opciones de red y los valores de Servidor nativo de {{site.data.keyword.cloud_notm}} para crear un nuevo clúster. Después de realizar el pedido, la configuración del clúster se captura, de modo que puede volver y continuar para escalar el clúster si es necesario. Una vez finalizado el pedido, puede configurar manualmente el clúster de VMware en función de sus requisitos.
+Este procedimiento le guía por la selección de componentes de VMware, los valores de Servidor nativo de {{site.data.keyword.cloud_notm}}, los valores de almacenamiento y las opciones de red para crear un nuevo clúster. Después de realizar el pedido, la configuración del clúster se captura, de modo que puede volver y continuar para escalar el clúster si es necesario. Una vez finalizado el pedido, puede configurar manualmente el clúster de VMware en función de sus requisitos.
 
 ## Requisitos
 
@@ -34,29 +34,29 @@ El nombre del clúster debe ser exclusivo dentro de su cuenta.
 
 Seleccione los componentes de VMware que desea solicitar con el clúster y especifique la opción de licencia de los componentes.
 
-### (Solo para usuarios de Business Partners) Paquetes de componentes
+### (Solo para Business Partners de IBM) Paquetes de componentes
 
-Si es un usuario Business Partner, puede seleccionar un paquete de licencia de componente al solicitar un nuevo clúster de vSphere. Los paquetes disponibles son los siguientes:
+Si es un Business Partner de IBM, puede seleccionar un paquete de licencias de componente al solicitar un nuevo clúster de vSphere. Están disponibles los paquetes siguientes:
 
-Tabla 1. Paquetes de componentes de Business Partners para clústeres de vSphere
+Tabla 1. Paquetes de componentes de Business Partner de IBM para clústeres de vSphere
 
 | Paquete | Componentes                   |
-|:-------------------------|:-----------------------|
+|:------------------------- |:----------------------- |
 | Standard with Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise |
 | Advanced                 | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vCloud Director, NSX Base |
 | Advanced with Networking | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
 | Advanced with Networking and Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, vCloud Director, NSX Enterprise |
 
-También puede incluir los siguientes componentes adicionales de VMware en su pedido:
+También puede incluir los siguientes componentes de VMware en su pedido:
 * VMware vSAN
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**Nota:** los usuarios de Business Partners no tienen la opción de traer su propia licencia (BYOL). La opción **Proporcionaré la licencia** no está disponible cuando se realiza el pedido.
+**Nota:** Para los Business Partners de IBM, la opción de traer su propia licencia (BYOL) no está disponible.
 
-### (Solo para usuarios que no son Business Partners) Componentes individuales
+### (Solo para no Business Partners) Componentes individuales
 
-Si no es un usuario de Business Partner, puede seleccionar los siguientes componentes de VMware de forma flexible con el clúster de vSphere:
+Si no es un Business Partner, puede seleccionar los siguientes componentes de VMware de forma flexible con el clúster de vSphere:
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
@@ -66,13 +66,13 @@ Si no es un usuario de Business Partner, puede seleccionar los siguientes compon
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**Nota:** el componente VMware vSAN no está disponible cuando se solicita VMware vSphere Enterprise Plus 6.0. Si tiene previsto utilizar su propia licencia para VMware vSphere Enterprise Plus 6,0, se abrirá una incidencia de la infraestructura de {{site.data.keyword.cloud_notm}} en su nombre solicitando que las licencias de vSphere de los {{site.data.keyword.baremetal_short}} solicitados se sustituyan por las licencias que proporcione.
+**Nota:** el componente VMware vSAN no está disponible cuando se solicita VMware vSphere Enterprise Plus 6.0. Si tiene previsto utilizar su propia licencia para VMware vSphere Enterprise Plus 6.0, se abrirá un tíquet de la infraestructura de {{site.data.keyword.cloud_notm}} en su nombre. El tíquet solicita que las licencias de vSphere de los {{site.data.keyword.baremetal_short}} solicitados se sustituyan por las licencias que se proporcionen.
 
 ### Opciones de licencia
 
 Tiene las siguientes opciones para las licencias de los componentes seleccionados de VMware:
 * **Incluir licencia con la compra**: en este caso, se adquiere una nueva licencia para el componente VMware en su nombre. Se genera una licencia de VMware combinada que se adapte al tamaño del clúster del pedido.
-* **Proporcionaré la licencia**: en este caso, utilizará su propia licencia para el componente de VMware.
+* **Proporcionaré la licencia**: En este caso, utilizará su propia licencia para el componente de VMware.
 
 Si elige adquirir alguna licencia, excepto para vSphere Enterprise Plus y vCenter Server, y ha solicitado varios servidores ESXi, se abre automáticamente una incidencia de {{site.data.keyword.cloud_notm}} en su nombre para combinar las claves de licencia. El usuario es el responsable de realizar el seguimiento de la incidencia para asegurarse de utilizar las claves de licencia que genera el equipo de DevOps.
 
@@ -84,7 +84,7 @@ Si elige adquirir alguna licencia, excepto para vSphere Enterprise Plus y vCente
 
 Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar el clúster.
 
-**Nota:** si selecciona un componente vSAN, la lista de ubicaciones se filtra por disponibilidad de SSD.
+**Nota:** Si selecciona un componente vSAN, la lista de ubicaciones se filtra por disponibilidad de SSD.
 
 ### Modelo de CPU y RAM
 
@@ -92,7 +92,7 @@ Especifique el modelo de CPU y la RAM del servidor nativo.
 
 Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} personalizado
 
-| Opciones de CPU        | Opciones de RAM       |
+| Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1,5 TB |
@@ -105,9 +105,9 @@ Las opciones disponibles dependen de si ha seleccionado el componente VMware vSA
 
 ### Número de servidores nativos
 
-El número de servidores ESXi que desea añadir al clúster vSphere. Todos los servidores ESXi comparten la misma configuración.
-* Si ha seleccionado el componente VMware NSX, se necesitan un mínimo de 3 servidores.
-* Si ha seleccionado el componente VMware vSAN, se necesitan un mínimo de 4 servidores.
+El número de servidores ESXi que desea añadir al clúster vSphere. Todos los servidores ESXi tienen la misma configuración.
+* Si ha seleccionado el componente VMware NSX, se necesitan un mínimo de tres servidores.
+* Si ha seleccionado el componente VMware vSAN, se necesitan un mínimo de cuatro servidores.
 
 ## Valores de almacenamiento
 
@@ -136,7 +136,7 @@ Debe especificar los siguientes valores de interfaz de red cuando solicite un nu
 
 ### Prefijo de nombre de host
 
-El nombre de host se utiliza para todos los pedidos de servidores nativos. Se recomienda utilizar el nombre de host para todas las máquinas virtuales de gestión, como por ejemplo vCenter Server, NSX, etc.
+El nombre de host se utiliza para todos los pedidos de servidores nativos. Se recomienda utilizar el nombre de host para todas las máquinas virtuales de gestión, como por ejemplo vCenter Server y NSX.
 
 El prefijo del nombre de host debe cumplir los siguientes requisitos:
 * El nombre debe empezar y terminar por un carácter alfanumérico.
@@ -182,7 +182,7 @@ En función del {{site.data.keyword.CloudDataCent_notm}} que haya seleccionado, 
 
 **Importante:**
 * Asegúrese de que la configuración del cortafuegos en las VLAN seleccionadas no bloquee el tráfico de datos de gestión.
-* Asegúrese de que todas las VLAN que seleccione estén en el mismo pod, porque no se pueden suministrar servidores ESXi en VLAN en pods mixtos.
+* Asegúrese de que todas las VLAN que seleccione estén en el mismo pod. Los servidores ESXi no se pueden suministrar en VLAN en pods mixtos.
 
 #### Par de alta disponibilidad de FortiGate Physical Appliance 300 Series
 
@@ -190,7 +190,7 @@ También puede seleccionar si desea incluir el par de alta disponibilidad de dis
 
 ## Resumen del pedido
 
-En función de sus configuraciones, el coste estimado se genera y se muestra al instante en el panel **Resumen de pedido** a la derecha. Pulse **Detalles sobre precios** en la parte inferior del panel para generar un documento PDF que proporcione la información estimada.
+En función de sus configuraciones, el coste estimado se genera y se muestra al instante en el panel **Resumen de pedido** a la derecha. Pulse **Detalles sobre precios** para generar un documento PDF que proporcione los detalles de la estimación.
 
 ## Procedimiento
 
@@ -199,20 +199,20 @@ En función de sus configuraciones, el coste estimado se genera y se muestra al 
    Asegúrese de que está en el separador **Crear nuevo** y de que se muestra **Nuevo clúster** en la lista **Configuraciones de clúster**.
 3. Escriba el nombre del clúster.
 4. Seleccione los componentes de VMware:
-  * Si es un usuario Business Partner, seleccione un paquete de licencia y los componentes adicionales disponibles de VMware.
-  * Si no es un usuario de Business Partner, seleccione el componente y la edición (si la hay) y especifique la opción de licencia.
+  * Si es un Business Partner de IBM, seleccione un paquete de licencias y cualquier otro componente de VMware disponible adicional.
+  * Si no es un Business Partner, seleccione el componente, la edición, si la hay, y especifique la opción de licencia.
   Cuando opta por traer su propia licencia (BYOL) para VMware vSphere Enterprise Plus, se abre automáticamente una incidencia de {{site.data.keyword.cloud_notm}} en su nombre para solicitar que las licencias predeterminadas de vSphere de los {{site.data.keyword.baremetal_short}} solicitados se sustituyan por las licencias que proporcione.   
 
-    **Importante:** el usuario es el responsable de realizar el seguimiento de la incidencia para asegurarse de que se sustituye la licencia de vSphere de los servidores ESXi recién solicitados de modo que la infraestructura de {{site.data.keyword.cloud_notm}} permita la cancelación del cargo inicialmente suministrado por la licencia de vSphere de la infraestructura de {{site.data.keyword.cloud_notm}}. Para sustituir la licencia de ESXi vSphere, consulte [Configuración de valores de licencia para un host ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
+    **Importante:** El usuario es el responsable de realizar el seguimiento del tíquet para que se sustituya la licencia de vSphere de los servidores ESXi recién solicitados. De esta forma, la infraestructura de {{site.data.keyword.cloud_notm}} permite la cancelación del cargo inicialmente suministrado por la licencia de vSphere de la infraestructura de {{site.data.keyword.cloud_notm}}. Para sustituir la licencia de ESXi vSphere, consulte [Configuración de valores de licencia para un host ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
 
 5. Complete los valores del servidor nativo:
    1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar el clúster.
    2. Seleccione el modelo de CPU y el tamaño de RAM.
-   3. Especifique el número de Servidor nativo.
+   3. Especifique el número de Servidores nativos.
 6. Si ha seleccionado el componente **VMware vSAN**, indique los valores de almacenamiento vSAN seleccionando el **Tipo y tamaño de disco para discos de capacidad vSAN** y el **Número de discos de capacidad vSAN**.
 7. Complete los valores de interfaz de red:
    1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio.
-   2. Seleccione la interfaz de red que desee utilizar:
+   2. Seleccione la interfaz de red que desea utilizar.
     * Si desea solicitar nuevas VLAN públicas y privadas, pulse **Realizar pedido de nuevas VLAN**.
     * Si desea reutilizar las VLAN públicas y privadas existentes cuando estén disponibles, pulse **Seleccionar las VLAN existentes** y especifique las VLAN y opcionalmente las subredes.
     3. Especifique si desea aplicar el par de alta disponibilidad de dispositivos físicos FortiGate serie 300 para proteger el entorno de nube.  
