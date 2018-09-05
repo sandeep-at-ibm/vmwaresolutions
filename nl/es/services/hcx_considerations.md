@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-27"
 
 El servicio HCX on {{site.data.keyword.cloud}} permite ampliar fácilmente las redes de centros de datos locales en {{site.data.keyword.cloud_notm}}, lo que permite migrar las máquinas virtuales (VM) de {{site.data.keyword.cloud_notm}} y al mismo sin realizar ninguna conversión ni cambio.
 
-**Disponibilidad**: Este servicio solo está disponible para instancias de VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity) desplegadas en V2.3 y releases posteriores.
+**Disponibilidad:** Este servicio solo está disponible para instancias de VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity) desplegadas en V2.3 y releases posteriores.
 
 Puede actualizar la instancia existente de vCenter Server a una instancia de vCenter Server con el paquete híbrido (Hybridity). Para obtener más información sobre la actualización de la instancia y el despliegue del servicio HCX on {{site.data.keyword.cloud_notm}}, consulte [Actualización a la instancia de vCenter Server con el paquete híbrido (Hybridity)](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance).
 
@@ -41,7 +41,7 @@ Los dispositivos HCX adicionales se despliegan durante la configuración, según
 ### Redes
 
 * Una subred portátil pública con 16 direcciones IP
-* Una subred portátil privada con 64 direcciones IP
+* Dos subredes portátiles privadas con 64 direcciones IP
 * Ocho direcciones IP desde una subred vMotion portátil privada
 
 ### Licencias y tarifas

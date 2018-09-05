@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,7 +33,7 @@ Los siguientes componentes se solicitan y se incluyen en el servicio IBM Spectru
    * Disco de 370 GB
 * VM secundarias que ejecutan el servidor de IBM Spectrum Protect Plus vSnap y el proxy VADP
    * Sistema operativo: Linux 3.10.0-693.11.1.el7.x86_64
-   * CPU y RAM configuradas en función del tamaño de almacenamiento seleccionado y de la guía de dimensionamiento de [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/homelang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)
+   * CPU y RAM configuradas en función del tamaño de almacenamiento seleccionado y de la guía de dimensionamiento de [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)
    * Disco de 150 GB
 
 ### Almacenamiento para copias de seguridad

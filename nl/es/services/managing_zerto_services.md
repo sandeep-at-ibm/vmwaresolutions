@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
 # Solicitud de servicios gestionados para Zerto on IBM Cloud
 
-El servicio Zerto on {{site.data.keyword.cloud}} ofrece funciones de réplica y de recuperación tras desastre, que se pueden integrar en las ofertas de despliegue para proteger y recuperar los datos del entorno virtual VMware en {{site.data.keyword.cloud_notm}}.
+El servicio Zerto on {{site.data.keyword.cloud}} proporciona funciones de réplica y recuperación tras desastre. Estas funciones se pueden integrar en las ofertas de despliegue para proteger y recuperar los datos del entorno virtual VMware en {{site.data.keyword.cloud_notm}}.
 
 Cuando solicita servicios gestionados para Zerto on {{site.data.keyword.cloud_notm}}, se puede desplegar un entorno de recuperación tras desastre (DR) completamente gestionado mediante el software Zerto DR e IBM Resiliency Services.
 
@@ -20,7 +20,7 @@ Dispone de los siguientes modelos de servicios gestionados para Zerto on {{site.
 
 Este modelo resulta adecuado si utiliza la oferta Zerto on {{site.data.keyword.cloud_notm}}.
 
-En este modelo, se suministra el servicio {{site.data.keyword.cloud_notm}} Resiliency Orchestration para Zerto on {{site.data.keyword.cloud_notm}}. Este modelo ofrece una protección continua de máquinas virtuales, sistemas operativos y datos en {{site.data.keyword.cloud_notm}}, con prueba de DR ininterrumpida, visibilidad de RTO/RPO (Recovery Time Objective/Recovery Point Objective) y capacidad de migración tras error y de restablecimiento.
+En este modelo, se suministra el servicio {{site.data.keyword.cloud_notm}} Resiliency Orchestration para Zerto on {{site.data.keyword.cloud_notm}}. Este modelo puede proteger continuamente las máquinas virtuales, sistemas operativos y datos en {{site.data.keyword.cloud_notm}}, con prueba de DR ininterrumpida, visibilidad de RTO/RPO (Recovery Time Objective/Recovery Point Objective) y capacidad de migración tras error y de restablecimiento.
 
 IBM Resiliency Services Global Command Center gestiona todas las funciones mediante el panel de control de {{site.data.keyword.cloud_notm}} Resiliency Orchestration.
 

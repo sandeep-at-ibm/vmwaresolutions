@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -25,12 +25,7 @@ Para obtener todas las funciones de HCX, necesita al menos cinco direcciones IP 
 ### Proceso de despliegue de instancias locales de HCX on IBM Cloud
 
 Debe completar las tareas siguientes para realizar una instalación correcta de la instancia local de HCX on {{site.data.keyword.cloud_notm}}:
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, siga estos pasos:
-    1. Pulse **Instancias desplegadas** en el panel de navegación izquierdo.
-    2. Pulse la instancia de vCenter Server con el paquete híbrido (Hybridity) con el servicio HCX on {{site.data.keyword.cloud_notm}} instalado. Este es el lado de la nube con el que desea conectar desde su entorno local de vSphere.
-    3. En el separador **Servicios**, pulse **Servicios instalados**.
-    4. Pulse la tarjeta **HCX on {{site.data.keyword.cloud_notm}}**.
-    5. Pulse **Ver consola de HCX Cloud** e inicie una sesión en la consola utilizando las credenciales de vCenter Server para ver los detalles del servicio HCX on {{site.data.keyword.cloud_notm}} de la nube.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, solicite la instancia local de HCX on {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Solicitud de instancias locales de VMware HCX on IBM Cloud](standalone_orderingserviceinstances.html).
 2. En la **consola de HCX Cloud**, siga estos pasos:
     1. Pulse el separador **Administración**.
     2. En el separador **Actualizaciones del sistema**, pulse **SOLICITAR ENLACE DE DESCARGA**.
