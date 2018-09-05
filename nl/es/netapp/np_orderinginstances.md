@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -22,7 +22,7 @@ Asegúrese de haber realizado las tareas siguientes:
 
 ## Valores del sistema
 
-Cuando solicite una instancia de NetApp ONTAP Select, debe especificar los siguientes valores básicos.
+Cuando solicite una instancia de NetApp ONTAP Select, debe especificar los valores básicos.
 
 ### Nombre de instancia
 
@@ -64,7 +64,7 @@ El nombre del dominio raíz debe cumplir los siguientes requisitos:
 
 ## Valores de licencia
 
-Debe cargar cuatro archivos de licencia de NetApp, porque cada uno de los cuatro {{site.data.keyword.baremetal_short}} requiere una licencia. Póngase en contacto con el equipo de ventas de NetApp para obtener la licencia apropiada para su despliegue de alto rendimiento o de alta capacidad.
+Debe cargar cuatro archivos de licencia de NetApp porque cada uno de los cuatro {{site.data.keyword.baremetal_short}} requiere una licencia. Póngase en contacto con el equipo de ventas de NetApp para obtener la licencia apropiada para su despliegue de alto rendimiento o de alta capacidad.
 
 ## Valores de Servidor nativo
 
@@ -74,7 +74,7 @@ Debe seleccionar el {{site.data.keyword.CloudDataCent_notm}} en el que se alojar
 
 ### Configuración de servidor nativo
 
-Puede seleccionar una configuración de servidor nativo en función de sus requisitos:
+Seleccione una configuración de servidor nativo en función de sus requisitos:
 * **Alto rendimiento (Medio)** – Licencia Premium / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 128 GB de RAM / Capacidad por nodo de veintidós unidades SSD de 1,9 TB / Capacidad efectiva de un clúster de 4 nodos – 59 TB
 * **Alto rendimiento (Medio)** – Licencia Premium / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 128 GB de RAM / Capacidad por nodo de veintidós unidades SSD de 3,8 TB / Capacidad efectiva de un clúster de 4 nodos – 118 TB
 * **Alta capacidad** – Licencia Estándar / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 64 GB de RAM / Capacidad por nodo de treinta y cuatro unidades SATA de 4 TB / Capacidad efectiva de un clúster de 4 nodos – 190 TB
@@ -83,7 +83,7 @@ Puede seleccionar una configuración de servidor nativo en función de sus requi
 
 ### Número de servidores nativos
 
-El número de servidores ESXi de una instancia de NetApp ONTAP Select es 4 de forma predeterminada. No lo puede modificar. Todos los servidores ESXi comparten la misma configuración.
+El número de servidores ESXi de una instancia de NetApp ONTAP Select es 4 de forma predeterminada. No lo puede modificar. Todos los servidores ESXi comparten la configuración.
 
 ## Procedimiento
 
@@ -114,7 +114,7 @@ Cuando la instancia esté lista para ser utilizada, el estado de la instancia pa
 
 Puede ver y gestionar la instancia de NetApp ONTAP Select que ha solicitado.
 
-**Importante**: solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+**Importante**: Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
 
 **ATENCIÓN**: el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 *  Añadir, modificar, devolver o eliminar componentes
