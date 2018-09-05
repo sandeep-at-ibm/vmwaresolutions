@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-15"
 
 ---
 
@@ -70,7 +70,7 @@ Seleccione el modelo de CPU y la RAM del servidor nativo.
 
 Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} personalizados
 
-| Opciones de CPU        | Opciones de RAM       |
+| Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
@@ -181,7 +181,10 @@ En función de la configuración seleccionada para la instancia y los servicios 
    * Pulse **Instancia primaria** para desplegar una sola instancia en el entorno o para desplegar la primera instancia en una topología de varios sitios.
    * Pulse **Instancia secundaria** para conectar la instancia con una instancia existente (primaria) en el entorno para conseguir alta disponibilidad y siga estos pasos:
      1. Seleccione la instancia primaria a la que desea conectar la instancia secundaria.
-     2. Especifique la contraseña de administrador PSC de la instancia primaria.
+     2. Si la instancia primaria que ha seleccionado se actualiza al release V2.5, o la instancia primaria se despliega en o se actualiza a V2.4 y releases anteriores, compruebe la **Contraseña de administrador del PSC de la instancia primaria** para asegurarse de que sea correcta.
+     
+         **Nota:** El campo **Contraseña de administrador del PSC de la instancia primaria** no está disponible para las instancias primarias que se
+       despliegan en V2.5 y releases posteriores.     
 5. Complete los valores de licencia de los componentes de la instancia:
    *  Para utilizar licencias proporcionadas por IBM, seleccione **Incluir con la compra**.
    *  Para utilizar su propia licencia, seleccione **Proporcionaré** y escriba la clave de la licencia.  
@@ -229,7 +232,7 @@ Puede ver y gestionar la instancia de Cloud Foundation que ha solicitado.
 *  Añadir, modificar, devolver o eliminar componentes
 *  Ampliar o reducir la capacidad de la instancia mediante la adición o eliminación de servidores ESXi
 *  Apagar componentes
-*  rearrancar servicios
+*  Rearrancar servicios
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 
