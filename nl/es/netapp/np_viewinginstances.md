@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -45,7 +45,7 @@ Tabla 2. Propiedades de la instancia de NetApp ONTAP Select
 | ID | El ID de la instancia. |
 | Ubicación | El centro de datos en el que se aloja la instancia. |
 | Versión desplegada | La versión desplegada de {{site.data.keyword.vmwaresolutions_short}}. |
-| Versión de vCenter | La versión de VMware vCenter Server.<br><br>**Nota**: hay una ligera variación entre la versión de vCenter Server que se muestra en la consola de {{site.data.keyword.vmwaresolutions_short}} y en el cliente web de VMware vSphere. Ambas son correctas. |
+| Versión de vCenter | La versión de VMware vCenter Server.<br><br>**Nota**: Hay una ligera variación entre la versión de vCenter Server que se muestra en la consola de {{site.data.keyword.vmwaresolutions_short}} y en el cliente web de VMware vSphere. Ambas son correctas. |
 | NSX for vSphere | La versión del producto VMware NSX for vSphere. |
 | Edición de licencia de NSX | La versión y la edición de la licencia de VMware NSX. |
 | Versión de NetApp | La versión de NetApp ONTAP Select. |
@@ -165,7 +165,7 @@ Gestione sus instancias desde la consola de {{site.data.keyword.vmwaresolutions_
 
 **Importante**: Antes de pulsar la **Consola de vCenter** en la página de resumen de la instancia para ir al cliente web de vSphere y empezar a gestionar sus servidores ESXi, debe iniciar una sesión en el portal VPN del {{site.data.keyword.CloudDataCent_notm}}. Mueva el puntero del ratón sobre el botón de la **consola de vCenter** y siga las instrucciones para asegurarse de que cumple los requisitos y de que ha realizado los pasos necesarios antes de acceder al cliente web de vSphere.
 
-Revise los temas siguientes para obtener información que le ayudará a seguir las instrucciones de inicio de sesión:
+Para obtener más información que le ayudará a seguir las instrucciones de inicio de sesión, revise los temas siguientes:
 
 *  Para ver los requisitos y pasos necesarios antes de acceder al cliente web de vSphere, consulte [Se ha alcanzado el tiempo de espera al conectar con el cliente web de vSphere](../vmonic/trbl_timeout_vc_console.html).
 *  Para ver una lista de puntos de acceso para iniciar una sesión en la red privada de la infraestructura de {{site.data.keyword.cloud_notm}} utilizando VPN, consulte [Acceso VPN](http://www.softlayer.com/vpn-access){:new_window}.
