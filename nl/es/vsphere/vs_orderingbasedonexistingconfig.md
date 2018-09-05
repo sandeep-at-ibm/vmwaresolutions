@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -25,7 +25,7 @@ Asegúrese de haber realizado las tareas siguientes:
 2. En la página **VMware vSphere on IBM Cloud**, pulse **Crear**.  
 3. Pulse el separador **Crear nuevo** y seleccione una plantilla de configuración de la lista **Configuraciones de clúster**.
 4. Escriba un nuevo nombre de clúster.
-5. Revise los valores de clúster que se rellenan automáticamente y actualice los valores según sus necesidades. Para obtener más información sobre los valores, consulte [Solicitud de clústeres nuevos de vSphere](vs_orderinginstances.html).
+5. Revise los valores de clúster que se han completado automáticamente y actualice los valores según sus necesidades. Para obtener más información sobre los valores, consulte [Solicitud de clústeres nuevos de vSphere](vs_orderinginstances.html).
 6. En el panel **Resumen del pedido**, verifique la configuración de la instancia y el coste estimado.
    * Para guardar la configuración como una plantilla sin realizar un pedido, pulse **Guardar configuración**.
    * Para realizar el pedido, asegúrese de que la cuenta a la que se va a realizar el cobro es correcta; revise y acepte los términos y, a continuación, pulse **Suministro**.
@@ -36,7 +36,7 @@ Asegúrese de haber realizado las tareas siguientes:
 
 Si ha guardado la configuración del clúster como una plantilla, recibirá una notificación en la consola que indicará que la configuración se ha guardado. Luego podrá encontrar la plantilla en la lista **Configuraciones de clúster**.
 
-Si ha realizado un pedido, el despliegue del clúster se inicia automáticamente y el usuario recibe una confirmación por correo electrónico de que el pedido se está procesando. Cuando el clúster esté listo para ser utilizado, también se le notificará por correo electrónico.
+Si ha realizado un pedido, el despliegue del clúster se inicia automáticamente. El usuario recibirá una confirmación por correo electrónico de que el pedido se está procesando. Cuando el clúster esté listo para ser utilizado, también se le notificará por correo electrónico.
 
 **Nota:** a diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Instancias desplegadas**.
 
