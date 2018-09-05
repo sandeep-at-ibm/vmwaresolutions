@@ -37,7 +37,7 @@ Tabla 2. Lista de materiales para los componentes de software de instancias de v
 | VMware       | Platform Services Controller    | 6.5 Act. 1g |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX for vSphere                 | 6.4.1        |
-| IBM          | CloudDriver                     | 2.4          |
+| IBM          | CloudDriver                     | 2.5          |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
 **Nota**: VMware vSAN es un componente opcional.
@@ -114,7 +114,7 @@ Para instancias desplegadas en V2.0 o anterior, se recomienda que actualice uste
 ### Actualización del valor de MTU del conmutador público
 
 Para actualizar el valor de MTU del conmutador público, siga estos pasos en el cliente web de VMware vSphere:
-1. Pulse el botón derecho del ratón y luego pulse en **Editar valores**.
+1. Pulse el botón derecho del ratón en el VDS y luego pulse en **Editar valores**.
 2. En el separador **Propiedades**, seleccione la opción **Avanzadas**.
 3. Asegúrese de que el valor de **MTU máxima** está establecido en 1500.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-07"
 
 ---
 
@@ -46,7 +46,7 @@ Tabla 1. Niveles de actualización e impacto
    * Cuando se añaden nuevos servidores ESXi.
    * Cuando se añaden nuevos clústeres.
 
-5. Para las actualizaciones de licencia, pulse **Actualizar licencia**. Seleccione en la lista la edición a la que desea actualizar y pulse **Actualizar**. No se permite reducir la edición de la licencia.
+5. Para las actualizaciones de licencia, pulse **Actualizar**. Seleccione en la lista la edición a la que desea actualizar y pulse **Actualizar**. No se permite reducir la edición de la licencia.
 
    **Nota:** la actualización de licencia sustituye todas las licencias existentes de NSX en la instancia. Es posible que se incurra en cargos adicionales derivados de un solapamiento de licencias antiguas y nuevas si realiza la actualización a mitad del ciclo de facturación. Para evitar estos cargos adicionales, se recomienda actualizar la licencia al final del periodo de facturación.
 

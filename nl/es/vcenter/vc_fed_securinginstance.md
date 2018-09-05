@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -18,7 +18,6 @@ Revise la siguiente información para comprender los resultados de proteger la i
 
 * Registre y guarde las credenciales que pueda necesitar para el entorno antes de completar este procedimiento. Todas las credenciales correspondientes a su entorno se borran de la base de datos de {{site.data.keyword.vmwaresolutions_full}} y no se pueden recuperar después de que se invoque la acción de protección.
 * Con la excepción de una supresión de la instancia completa, todas las funciones de gestión se inhabilitan después de que se invoque la acción de protección.
-* La Edge Services Gateway (ESG) de NSX de Vmware para el tráfico de gestión de HTTPS de salida y la máquina virtual de IBM CloudDriver se suprimen como parte de la acción para proteger la instancia de VMware desplegada.
 
 ## Procedimiento
 
@@ -28,7 +27,10 @@ Revise la siguiente información para comprender los resultados de proteger la i
 4. Pulse **Proteger instancia**.
 5. Pulse **Aceptar** para confirmar que desea desconectar la instancia de la automatización.
 
-   **Nota**: Antes de completar este paso, asegúrese de que ha revisado la información de la sección **Antes de empezar**.
+  **Nota**: Antes de completar este paso, asegúrese de que ha revisado la información de la sección **Antes de empezar**.
+
+6. Elimine los servicios de gestión destinados al público de VMware NSX Edge Services Gateway (ESG) del entorno y, opcionalmente, elimine el ESG gestionado por el cliente que se despliega durante la automatización.
+7. Restablezca las contraseñas o claves para todas las cuentas utilizadas por la automatización de IBM. Para obtener información adicional, consulte [¿Cómo puedo proteger mi entorno para eliminar el acceso de la automatización y el soporte de IBM?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/).
 
 ## Resultados
 
