@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-08"
 
 ---
 
 # Migración de instancias anteriores a V2.5 VMware Federal a cuentas de IBM Cloud
 
-Las instancias de VMware Federal que se despliegan en V2.5 y releases posteriores en la cuenta de {{site.data.keyword.cloud}} se añaden automáticamente a la cuenta y se gestionan mediante {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). 
+Las instancias de VMware Federal que se despliegan en V2.5 y releases posteriores en la cuenta de {{site.data.keyword.cloud}} se añaden automáticamente a la cuenta y se gestionan mediante {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM).
 
 Para las instancias que se han desplegado en V2.4 y releases anteriores, puede migrarlas a cuentas de {{site.data.keyword.cloud_notm}} especificadas para la gestión de usuarios habilitada para IAM.
 
@@ -24,7 +24,7 @@ Para las instancias que se han desplegado en V2.4 y releases anteriores, puede m
 
 ## Resultados
 
-1. Se obtiene una notificación de consola en la que se acepta la solicitud para migrar la instancia a la cuenta {{site.data.keyword.cloud_notm}} especificada. 
+1. Se obtiene una notificación de consola en la que se acepta la solicitud para migrar la instancia a la cuenta {{site.data.keyword.cloud_notm}} especificada.
 2. Cuando se completa la migración de la instancia, la instancia se visualiza en la página **Instancias desplegadas** bajo la cuenta a la que se ha migrado. La instancia migrada ya no se visualiza en la cuenta original desde la que se ha migrado.
 
 ### Enlaces relacionados

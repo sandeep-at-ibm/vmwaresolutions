@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-08"
 
 ---
 
 # Migración de vCenter Server anterior a V2.5 con las instancias del paquete híbrido (Hybridity) en cuentas de IBM Cloud
 
-VMware vCenter Server con las instancias del paquete híbrido (Hybridity) que se despliegan en V2.5 y releases posteriores en la cuenta de {{site.data.keyword.cloud}} se añaden automáticamente a la cuenta y se gestionan mediante {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). 
+VMware vCenter Server con las instancias del paquete híbrido (Hybridity) que se despliegan en V2.5 y releases posteriores en la cuenta de {{site.data.keyword.cloud}} se añaden automáticamente a la cuenta y se gestionan mediante {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM).
 
 Para las instancias que se han desplegado en V2.4 y releases anteriores, puede migrarlas a cuentas de {{site.data.keyword.cloud_notm}} especificadas para la gestión de usuarios habilitada para IAM.
 

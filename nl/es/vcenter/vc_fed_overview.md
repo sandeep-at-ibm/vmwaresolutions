@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -81,7 +81,7 @@ Cada nodo de expansión de vCenter Server desplegará e incurrirá en cargos por
 
 ### Hardware para nodos de expansión
 
-Un servidor nativo con la configuración que se muestra en [Especificaciones técnicas para las instancias de VMware Federal en {{site.data.keyword.cloud_notm}}](vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
+Un servidor nativo con la configuración presentada en [Especificaciones técnicas para instancias de VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ### Licencias y tarifas correspondientes a nodos de expansión
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-07"
 
 ---
 
@@ -63,7 +63,7 @@ Este procedimiento se aplica a las instancias desplegadas en V2.1 o posterior. P
    * Cuando se añaden nuevos servidores ESXi.
    * Cuando se añaden nuevos clústeres.
 
-5. Para las actualizaciones de licencia de NSX, pulse **Actualizar licencia**. Seleccione la edición a la que desea actualizar y pulse **Actualizar**. No se permite reducir la edición de la licencia.
+5. Para las actualizaciones de licencia de NSX, pulse **Actualizar**. En la ventana **Actualizar edición de licencia de NSX**, seleccione la edición a la que desea actualizar y pulse **Actualizar**. No se permite reducir la edición de la licencia.
 
    **Nota:** la actualización de licencia sustituye todas las licencias existentes de NSX en la instancia. Es posible que se incurra en cargos adicionales derivados de un solapamiento de licencias antiguas y nuevas si realiza la actualización a mitad del ciclo de facturación. Para evitar estos cargos adicionales, se recomienda actualizar la licencia al final del periodo de facturación.
 
@@ -75,6 +75,8 @@ Este procedimiento se aplica a las instancias desplegadas en V2.1 o posterior. P
 ## Actualización a vCenter Server con el paquete híbrido (Hybridity)
 
 Durante la actualización de licencia al paquete híbrido (Hybridity), se actualizará automáticamente a la edición VMware NSX Advanced si la instancia de vCenter Server utiliza actualmente la edición Base de VMware NSX.
+
+**Nota:** Si actualiza al paquete híbrido (Hybridity) y la instancia de vCenter Server ya tiene almacenamiento de archivos NFS, no se le cargará el almacenamiento vSAN de VMware. Se le cargará la licencia de vSAN porque se incluye con el paquete híbrido (Hybridity).
 
 Siga estos pasos para actualizar una instancia de vCenter Server a vCenter Server con el paquete híbrido (Hybridity).
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -57,7 +57,7 @@ Para el valor **Personalizado**, dispone de varias opciones para **Modelo de CPU
 
 Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} personalizados
 
-| Opciones de CPU        | Opciones de RAM       |
+| Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
