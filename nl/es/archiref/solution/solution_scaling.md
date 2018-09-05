@@ -17,7 +17,7 @@ Después del despliegue inicial, puede ampliar la capacidad de cálculo de la co
 
 ## Adición de más sitios
 
-{{site.data.keyword.vmwaresolutions_short}} puede aprovechar la presencia del centro de datos a nivel mundial de {{site.data.keyword.cloud_notm}} y la red troncal de red integrada para permitir que una variedad de casos de uso entre geografía se desplieguen y funcionen dentro de una fracción del tiempo que tomaría para crear dicha infraestructura desde cero.
+{{site.data.keyword.vmwaresolutions_short}} puede aprovechar la presencia del centro de datos a nivel mundial de {{site.data.keyword.cloud_notm}} y la red troncal integrada para permitir que varios casos de uso entre geografía se desplieguen y funcionen dentro de una fracción del tiempo que tomaría para crear dicha infraestructura desde cero.
 
 En este diseño, la definición de un despliegue de varios sitios se compone de lo siguiente:
 * Un despliegue de VMware inicial o primario que contiene un nuevo dominio raíz de DNS/AD, un subdominio, un dominio SSO y un nombre de sitio SSO que se va a proporcionar.

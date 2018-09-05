@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -14,7 +14,7 @@ Usted es responsable de la configuración, la gestión y la supervisión de todo
 
 Como parte de la solución, puede desplegar opcionalmente los servicios complementarios {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. Veeam e IBM Spectrum Protect Plus pueden ayudar a satisfacer el requisito de realizar copia de seguridad de los componentes de gestión.
 
-Estos servicios complementarios se despliegan junto con el almacenamiento de Resistencia de {{site.data.keyword.cloud_notm}}. Los servicios le ayudan a realizar copia de seguridad de las cargas de trabajo, así como de los componentes de gestión. La [Visión general de la arquitectura de Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} y la [Visión general de la arquitectura de Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} proporcionan una guía útil sobre la planificación y el dimensionamiento del despliegue. Los [servicios gestionados](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) de IBM también están disponibles para el despliegue de Veeam.
+Estos servicios complementarios se despliegan junto con el almacenamiento de Resistencia de {{site.data.keyword.cloud_notm}}. Los servicios le ayudan a realizar copia de seguridad de las cargas de trabajo y de los componentes de gestión. La [Visión general de la arquitectura de Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} y la [Visión general de la arquitectura de Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} proporcionan una guía útil sobre la planificación y el dimensionamiento del despliegue. También puede solicitar [servicios gestionados](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) para el despliegue de Veeam.
 
 Distintos componentes de solución requieren distintas estrategias para la copia de seguridad. Algunos componentes están protegidos mediante copia de seguridad a nivel de imagen, y otros componentes están protegidos mediante copias de seguridad basadas en archivos para su configuración y datos.
 
@@ -24,7 +24,7 @@ Algunos componentes, como por ejemplo VMware vCenter Server, Platform Services C
 
 Para alojar estas copias de seguridad, despliegue un servidor de archivos de Linux en el clúster utilizando los pasos siguientes:
 
-1. Solicite una subred portátil privada desde la infraestructura de {{site.data.keyword.cloud_notm}} ubicada en la misma VLAN que los componentes de sistema. Se trata de la VLAN privada en la que residen las direcciones IP de gestión para los hosts.
+1. Solicite una subred portátil privada desde la infraestructura de {{site.data.keyword.cloud_notm}} y ubíquela en la misma VLAN que los componentes de sistema. Se trata de la VLAN privada en la que residen las direcciones IP de gestión para los hosts.
 2. Suba una imagen del sistema operativo al almacén de datos de gestión de VMware, como por ejemplo [Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window} desde el duplicado privado de {{site.data.keyword.cloud_notm}}.
 3. Despliegue esta máquina virtual (VM) en el clúster en el grupo de puertos de gestión utilizando una dirección IP portátil privada que se ha solicitado anteriormente. Asegúrese de que la máquina virtual esté configurada para apuntar a los servidores de AD/DNS y, opcionalmente, añadir la máquina virtual al DNS del subdominio.
 4. Cree un ID de usuario de copia de seguridad no root en este servidor y asegúrese de que todos los servicios necesarios estén configurados e iniciados para las transferencias de archivos. Por ejemplo, FTP o SSH.
@@ -38,11 +38,11 @@ Debe realizar una copia de seguridad de vCenter Server Appliance y de PSC por se
 
 ## Copia de seguridad basada en archivos NSX
 
-La copia de seguridad adecuada de todos los componentes de NSX es crucial para restaurar el sistema a su estado de trabajo en el caso de que se produzca una anomalía. El diseño requiere que configure la copia de seguridad de NSX a través de la función de copia de seguridad del gestor de NSX. Con este fin, puede [configurar el gestor de NSX para realizar copias de seguridad de forma regular](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} en el servidor de archivos. Asegúrese de que el servidor de archivos o sus datos están copiados correctamente, y de garantizar la rotación de las copias de seguridad de NSX antiguas.
+La copia de seguridad adecuada de todos los componentes de NSX es crucial para restaurar el sistema a su estado de trabajo si se produce una anomalía. El diseño requiere que configure la copia de seguridad de NSX a través de la función de copia de seguridad del gestor de NSX. Con este fin, puede [configurar el gestor de NSX para realizar copias de seguridad de forma regular](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} en el servidor de archivos. Asegúrese de que el servidor de archivos o sus datos están copiados correctamente, y de garantizar la rotación de las copias de seguridad de NSX antiguas.
 
 ## Copia de seguridad basada en imágenes de máquinas virtuales de gestión
 
-Después de haber desplegado la instancia y de haber desplegado el servicio de IBM Spectrum Protect Plus o de copia de seguridad de Veeam, debe configurar un trabajo de copia de seguridad para las máquinas virtuales de gestión. Planifique la copia de seguridad de las máquinas virtuales siguientes con al menos 7 días de copias de seguridad diarias:
+Después de haber desplegado la instancia y de haber desplegado el servicio de IBM Spectrum Protect Plus o el servicio de copia de seguridad de Veeam, configure un trabajo de copia de seguridad para las máquinas virtuales de gestión. Planifique la copia de seguridad de las máquinas virtuales siguientes con al menos 7 días de copias de seguridad diarias:
 
 * Si está presente, VMware SDDC Manager
 * Si está presente, los servidores de Active Directory
@@ -62,7 +62,7 @@ Si despliega componentes de solución de complemento en la instancia, también d
 
 ## Consideraciones adicionales
 
-Si elige desplegar el servidor de AD/DNS como una instancia de servidor virtual (VSI) de {{site.data.keyword.cloud_notm}}, no puede respaldarlo utilizando Veeam ni IBM Spectrum Protect Plus. En este caso, debe utilizar la solución de copia de seguridad de Windows preferida para las operaciones de copia de seguridad y de restauración o debe planificar el despliegue de la instancia utilizando las VM de AD/DNS dentro del clúster de VMware, que puede realizar una copia de seguridad de Veeam o IBM Spectrum Protect Plus.
+Si elige desplegar el servidor de AD/DNS como una instancia de servidor virtual (VSI) de {{site.data.keyword.cloud_notm}}, no puede respaldarlo utilizando Veeam ni IBM Spectrum Protect Plus. En este caso, utilice la solución de copia de seguridad de Windows preferida para las operaciones de copia de seguridad y de restauración, o planifique el despliegue de la instancia utilizando las VM de AD/DNS dentro del clúster de VMware, que puede realizar una copia de seguridad de Veeam o IBM Spectrum Protect Plus.
 
 A partir de VMware vCenter 6.5u2, VMware da soporte a la copia de seguridad de la base de datos de vCenter Postgres utilizando copias de seguridad basadas en imágenes, con scripts integrados de suspensión y de reanudación para la base de datos durante la ventana de copia de seguridad para asegurar la integridad de la base de datos. Si actualiza la instancia de VMware a vCenter 6.5u2, puede elegir utilizar Veeam o IBM Spectrum Protect Plus para hacer una copia de seguridad de vCenter Server y de PSC en lugar de utilizar copias de seguridad basadas en archivos. Si lo hace, debe utilizar la característica de desactivación de Veeam o IBM Spectrum Protect Plus para garantizar la integridad de la base de datos.
 
@@ -72,13 +72,13 @@ Hay varias consideraciones especiales al restaurar las copias de seguridad de ge
 
 * Para vCenter y PSC, VMware proporciona un instalador que puede desplegar un nuevo dispositivo virtual y restaurar la configuración a partir de la copia de seguridad.
 * Al restaurar un dispositivo a partir de la copia de seguridad, el instalador detecta el tipo de dispositivo (vCenter Server o PSC) en función de la información de copia de seguridad que proporcione.
-* Puesto que se despliega directamente en uno de los hosts, es posible que no pueda desplegar en un conmutador o grupo de puertos distribuidos. Es posible que tenga que crear un conmutador estándar temporal y un grupo de puertos para el propósito de desplegar los dispositivos recuperados y migrar uno de los vmnics temporalmente a este conmutador para proporcionar conectividad de red para las máquinas virtuales. Después del despliegue, puede migrar las máquinas virtuales al grupo de puertos distribuidos y devolver el vmnic a dvSwitch.
+* Puesto que se despliega directamente en uno de los hosts, es posible que no pueda desplegar en un conmutador o grupo de puertos distribuidos. Es posible que tenga que crear un conmutador estándar temporal y un grupo de puertos para desplegar los dispositivos recuperados y migrar uno de los vmnics temporalmente a este conmutador para proporcionar conectividad de red para las máquinas virtuales. Después del despliegue, puede migrar las máquinas virtuales al grupo de puertos distribuidos y devolver el vmnic a dvSwitch.
 * Para NSX, es posible que tenga que volver a desplegar el NSX Manager y los controladores antes de restaurar la configuración a partir de la copia de seguridad.
-* Asegúrese de que se familiarice con las consideraciones y limitaciones de VMwares para la copia de seguridad y la restauración de vCenter.
+* Asegúrese de que se familiarice con las consideraciones y limitaciones de VMware para la copia de seguridad y la restauración de vCenter.
 
 ## Resumen
 
-Con la planificación apropiada puede asegurarse de que la instancia de VMware puede sufrir la pérdida de sus componentes de gestión y recuperarse correctamente. Asegúrese de supervisar regularmente el éxito de los trabajos de copia de seguridad y de la disponibilidad de los datos de copia de seguridad y asegurarse de probar el plan de copia de seguridad y de restauración de forma regular, tanto para la infraestructura de gestión como para las cargas de trabajo.
+Con la planificación apropiada, puede asegurarse de que la instancia de VMware puede sufrir la pérdida de sus componentes de gestión y recuperarse correctamente. Asegúrese de supervisar regularmente el éxito de los trabajos de copia de seguridad y de la disponibilidad de los datos de copia de seguridad y asegurarse de probar el plan de copia de seguridad y de restauración de forma regular, tanto para la infraestructura de gestión como para las cargas de trabajo.
 
 ### Enlaces relacionados
 
