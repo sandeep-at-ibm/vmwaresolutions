@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-15"
 
 ---
 
 # Visión general de Veeam on IBM Cloud
 
-El servicio Veeam on {{site.data.keyword.cloud}} se puede integrar de forma fácil y directa con sus hipervisores VMware para ayudar a la empresa a alcanzar un alto grado de disponibilidad. Este servicio puede proporcionar objetivos de puntos de recuperación y de tiempo para sus datos y aplicaciones. Los objetivos de puntos de recuperación y de tiempo se pueden proporcionar menos de 15 minutos después de finalizar la configuración. Con este servicio, puede controlar directamente las copias de seguridad y las operaciones de restauración de todas las máquinas virtuales (VM) de la infraestructura desde la consola de Veeam.
+El servicio Veeam on {{site.data.keyword.cloud}} se puede integrar de forma fácil y directa con sus hipervisores VMware para ayudar a la empresa a alcanzar un alto grado de disponibilidad. Este servicio puede proporcionar objetivos de puntos de recuperación y de tiempo para sus datos y aplicaciones. Los objetivos de puntos de recuperación y de tiempo se pueden proporcionar menos de 15 minutos después de finalizar la configuración. Con este servicio, puede controlar las copias de seguridad y las operaciones de restauración de todas las máquinas virtuales (VM) de la infraestructura directamente desde la consola de Veeam.
 
 **Disponibilidad**: Este servicio solo está disponible para instancias desplegadas en V1.8 o releases posteriores.
 

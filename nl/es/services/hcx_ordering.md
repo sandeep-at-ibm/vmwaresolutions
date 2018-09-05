@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -40,8 +40,8 @@ Para instalar HCX on {{site.data.keyword.cloud_notm}}, siga los valores siguient
 El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. Tanto si solicita una instancia de vCenter Server con paquete híbrido (Hybridity) con el servicio incluido como si despliega el servicio posteriormente en la instancia, los pasos siguientes se completan mediante el proceso de automatización de {{site.data.keyword.vmwaresolutions_short}}:
 1. Se solicitan tres subredes para HCX desde la infraestructura de {{site.data.keyword.cloud_notm}}:
    * Una subred portátil privada para la gestión de HCX.
-   * Una subred portátil privada para interconexiones de HCX si se selecciona **Red privada** para **Tipo de interconexión de HCX**.
-   * Una subred portátil pública para interconexiones de HCX si se selecciona **Red pública** para **Tipo de interconexión de HCX**. Esta subred también se utiliza para la activación y el mantenimiento con VMware.
+   * Una subred portátil privada para interconexiones HCX. Esta subred se utiliza cuando se selecciona la opción **Red privada** para el **tipo de interconexión HCX**.
+   * Una subred portátil pública para la activación y mantenimiento con VMware. Si se selecciona la opción **Red pública** para el **tipo de interconexión HCX**, esta subred también se utiliza para interconexiones HCX.
 
    **Importante:** las direcciones IP de las subredes solicitadas para HCX están pensadas para que las gestione el proceso automático de VMware en {{site.data.keyword.cloud_notm}}. Estas direcciones IP no se pueden asignar a recursos de VMware, como VM y NSX Edges, creados por el cliente. Si necesita direcciones IP adicionales para los artefactos de VMware, debe solicitar sus propias subredes de {{site.data.keyword.cloud_notm}}.
 2. Si se ha seleccionado **Red privada** como **Tipo de interconexión de HCX**, se crea un grupo de puertos llamado **SDDC-DPortGroup-HCX-Private** en el conmutador virtual distribuido (DVS).

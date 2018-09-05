@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -22,12 +22,9 @@ Asegúrese de haber realizado las tareas siguientes:
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. Desplácese a la tabla **Instancias locales de HCX** y pulse **Suministrar nuevo**.
-3. Especifique el **Nombre de instancia en local** y pulse **Siguiente**.
-4. Verifique la configuración de la instancia antes de realizar el pedido.
-   1. Revise los valores de la instancia.
-   2. Revise la facturación mensual de la instancia.
-   3. Pulse el enlace o enlaces de los términos que se aplican a su pedido y asegúrese de que acepta estos términos antes de solicitar la instancia.
-5. Pulse **Realizar el pedido**.
+3. Especifique el **Nombre de instancia en local**.
+4. Pulse el enlace o enlaces de los términos que se aplican a su pedido y asegúrese de que acepta estos términos antes de solicitar la instancia.
+5. Pulse **Suministro**.
 
 ## Resultados
 

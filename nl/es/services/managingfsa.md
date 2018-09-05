@@ -12,7 +12,7 @@ lastupdated: "2018-07-19"
 
 Después de que se instale correctamente el servicio FortiGate Security Appliance on {{site.data.keyword.cloud}}, podrá gestionar y configurar reglas de cortafuegos para FSA desde la consola de FortiGate.
 
-**Importante**: Debe asegurarse de que las reglas de cortafuegos de FSA estén definidas de modo que permitan comunicaciones HTTPS salientes (puerto TCP 443) iniciadas por componentes de gestión, como la máquina virtual IBM CloudDriver o Zerto Virtual Manager, para establecer comunicación con la base de datos de gestión externa de la infraestructura de {{site.data.keyword.cloud_notm}} a través de Internet. Las comunicaciones HTTPS salientes (puerto TCP 443) se originan en la dirección IP pública de los servicios de gestión de VMware NSX Edge Services Gateway (ESG) de su instancia.
+**Importante**: Debe asegurarse de que las reglas de cortafuegos de FSA estén definidas de modo que permitan comunicaciones HTTPS salientes (puerto TCP 443) iniciadas por componentes de gestión, como Zerto Virtual Manager, para establecer comunicación con la base de datos de gestión externa de la infraestructura de {{site.data.keyword.cloud_notm}} a través de Internet. Las comunicaciones HTTPS salientes (puerto TCP 443) se originan en la dirección IP pública de los servicios de gestión de VMware NSX Edge Services Gateway (ESG) de su instancia.
 
 ## Acceso a la consola de FortiGate serie 300
 
