@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -51,7 +51,7 @@ Para obtener más información, consulte [Componentes de VMware vSphere on {{sit
 
 Se recomienda desplegar las cargas de trabajo de producción en entornos que tengan al menos tres nodos.
 
-Aunque VMware vSphere DRS (Distributed Resource Scheduler) y VMware HA (alta disponibilidad) están habilitados de forma predeterminada, la práctica recomendada de VMware sugiere que coloque cada uno de los tres controladores
+VMware vSphere DRS (Distributed Resource Scheduler) y VMware HA (alta disponibilidad) están habilitados de forma predeterminada. Sin embargo, la práctica recomendada de VMware sugiere que coloque cada uno de los tres controladores
 NSX en un nodo individual.
 
 En el despliegue mínimo de dos nodos, un nodo tiene un controlador NSX y el otro nodo tiene dos controladores NSX. Si se desactiva el nodo con dos controladores NSX, las operaciones de controlador NSX se colocan en modalidad de solo lectura y las máquinas virtuales (VM) nuevas o las VM vMotion pueden experimentar problemas de red.
@@ -64,13 +64,13 @@ No, no se recomienda. Podrían producirse errores en las funciones de {{site.dat
 
 ## ¿Se puede cambiar el nombre de los clústeres?
 
-Para instancias de vCenter Server, el primer clúster que se crea durante el despliegue tiene el nombre predeterminado **cluster1**. Puede cambiar el nombre del clúster predeterminado en el cliente de VMware vSphere. Cuando añada un nuevo clúster a una instancia de vCenter Server, puede especificar el nombre que desee en la consola de {{site.data.keyword.vmwaresolutions_short}}.
+Para instancias de vCenter Server, el primer clúster que se crea durante el despliegue tiene el nombre predeterminado **cluster1**. Puede cambiar el nombre del clúster predeterminado en el cliente de VMware vSphere. Cuando añada un clúster a una instancia de vCenter Server, puede especificar el nombre que desee en la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
 **Nota**: para instancias de Cloud Foundation, el nombre de clúster predeterminado no se puede cambiar.
 
 ##¿Cómo se gestionan los parches?
 
-IBM proporciona actualizaciones continuas del componente IBM CloudDriver que se ponen a disponibilidad de los usuarios a través de la consola de {{site.data.keyword.cloud_notm}} para VMware Solutions. IBM no proporciona actualizaciones continuas de los servicios complementarios, como Zerto on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. La obtención y la instalación de estas actualizaciones es responsabilidad del usuario.
+IBM proporciona actualizaciones continuas del código de IBM desplegando la instancia de servidor virtual (VSI) de IBM CloudDriver a petición. IBM no proporciona actualizaciones continuas de los servicios complementarios, como Zerto on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. La obtención y la instalación de estas actualizaciones es responsabilidad del usuario.
 
 Las actualizaciones de VMware se aplican de distinta forma en función del tipo de instancia de VMware que haya desplegado:
 
@@ -78,9 +78,9 @@ Las actualizaciones de VMware se aplican de distinta forma en función del tipo 
 * Para instancias de VMware vCenter Server:
   * Para instancias desplegadas al nivel de la versión V2.1 o posteriores o actualizadas a las mismas, se aplicarán a los clústeres y servidores ESXi parches con las actualizaciones más recientes, pero no necesariamente las últimas, de ESXi de VMware.
   * El usuario es el responsable de todas las demás actualizaciones de los componentes de VMware, lo que incluye asegurarse de que los clústeres y servidores ESXi recién desplegados tienen las actualizaciones más recientes que necesita.
-  * Para las instancias desplegadas en V2.0 o posteriores, VMware Update Manager (VUM) está integrado en vCenter Server. Puede configurar VUM de modo que descargue las actualizaciones de ESXi de VMware.
+  * Para las instancias desplegadas en V2.0 o posteriores, VMware Update Manager (VUM) está integrado en vCenter Server. Puede configurar VUM para descargar actualizaciones de ESXi desde VMware.
 
-Para obtener más información, consulte:
+Para más información, consulte los siguientes recursos:
 * [Soporte de VMware](https://www.vmware.com/support.html)
 * [Aplicación de actualizaciones a instancias de vCenter Server](../vcenter/vc_applyingupdates.html)
 * [Aplicación de actualizaciones a instancias de Cloud Foundation](../sddc/sd_applyingupdates.html)
@@ -95,7 +95,7 @@ Aunque VMware NSX Edge para servicios de gestión está en una subred pública, 
 
 ## ¿Representan NSX Edge gestionado por el cliente un riesgo para la seguridad?
 
-Aunque el Edge NSX gestionado por cliente está conectado a la VLAN pública, se utilizan medidas de seguridad para garantizar que no representa un riesgo de seguridad. Estas medidas son:
+Aunque el Edge NSX gestionado por cliente está conectado a la VLAN pública, se utilizan medidas de seguridad para garantizar que no representa un riesgo de seguridad. Se han adoptado las medidas de seguridad siguientes:
 *  Se coloca una regla de cortafuegos para permitir solo el tráfico saliente desde el rango de direcciones IP de la subred privada.
 *  Se coloca una regla SNAT (conversión de direcciones de red de origen) (inhabilitada de forma predeterminada) para convertir todas las direcciones IP de la subred privada en una dirección IP única en la subred pública.
 *  Se inhabilita el acceso remoto para el dispositivo NSX Edge gestionado por el cliente.
@@ -119,9 +119,9 @@ Puede comprobar el estado del despliegue de la instancia visualizando el histori
 
 ## ¿Utiliza VMware vSphere on IBM Cloud el sistema de automatización para instalar, configurar y activar la pila de VMware?
 
-No. VMware vSphere on {{site.data.keyword.cloud_notm}} no aprovecha el sistema avanzado de automatización de las plataformas Cloud Foundation y vCenter Server. Según lo que solicite, la plataforma proporciona licencias opcionales de VMware, servidores ESXi y, si lo desea, un par de alta disponibilidad de cortafuegos físicos FortiGate. Si se crea un nuevo clúster, también se suministran tres nuevas VLAN: una pública y dos privadas.
+No. VMware vSphere on {{site.data.keyword.cloud_notm}} no utiliza la automatización avanzada que se encuentra en las plataformas Cloud Foundation ni vCenter Server. Según lo que solicite, la plataforma proporciona licencias opcionales de VMware, servidores ESXi y, si lo desea, un par de alta disponibilidad de cortafuegos físicos FortiGate. Si se crea un nuevo clúster, también se suministran tres nuevas VLAN: una VLAN pública y dos VLAN privadas.
 
-VMware ESXi se instala automáticamente en cada servidor nativo, pero el usuario es el responsable de instalar los componentes adicionales de VMware, como vCenter Server o NSX. Aunque vSphere on {{site.data.keyword.cloud_notm}} garantiza que el hardware compatible con VMware se solicita en función de los componentes de VMware seleccionado, no se utiliza el sistema de automatización para configurar y activar el entorno de VMware. El usuario es el responsable de diseñar y planificar la arquitectura del entorno alojado por IBM.
+VMware ESXi se instala automáticamente en cada servidor nativo, pero el usuario es el responsable de instalar los componentes adicionales de VMware, como vCenter Server o NSX. Aunque vSphere on {{site.data.keyword.cloud_notm}} garantiza que el hardware compatible con VMware se solicita en función de los componentes de VMware seleccionado, no existe ninguna automatización para configurar ni activar el entorno de VMware. El usuario es el responsable de diseñar y planificar la arquitectura del entorno alojado por IBM.
 
 ## ¿Cómo puedo ver una lista de todas las notificaciones?
 

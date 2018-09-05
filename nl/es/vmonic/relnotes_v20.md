@@ -18,7 +18,7 @@ El servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} ya e
 
 Puede solicitar instancias con el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante desde el separador **Servicios** de la página de detalles de la instancia. Dependiendo de sus necesidades, puede seleccionar uno de los tres tamaños de despliegue y opciones de licencia para este servicio. Después de que se instale correctamente el servicio, podrá gestionar y configurar reglas de cortafuegos para los dispositivos virtuales FortiGate desde la consola de FortiGate.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Componentes y consideraciones sobre FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)
 * [Gestión de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html)
 
@@ -28,7 +28,7 @@ Ahora puede instalar varias instancias del servicio F5 on {{site.data.keyword.cl
 
 Una vez finalizado el despliegue de la instancia, puede añadir más instancias del servicio F5 o del FortiGate instalando el servicio en el separador **Añadir servicios** de la página de detalles de la instancia. Debe añadir las instancias de servicio de una en una y debe repetir el proceso para todas las instancias que desee añadir para un servicio.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Solicitud, visualización y eliminación de servicios para instancias de Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](../vcenter/vc_addingremovingservices.html)
 
@@ -44,7 +44,7 @@ En cualquiera de los casos, debe gestionar la configuración de los FSA cuidados
 
 Ahora el nombre de dominio completo (FQDN) se representa de forma coherente para todas las instancias. Cuando realiza un pedido, puede especificar su propio prefijo de subdominio y un prefijo de nombre de host. Esto garantiza que se sigue el convenio del sector para el formato de FQDN, como por ejemplo: `host-name-prefix<n>.subdomain-prefix.domain-name`.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Pedido de instancias de Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Pedido de instancias de vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Solicitud de clústeres nuevos de vSphere](../vsphere/vs_orderinginstances.html)
@@ -54,7 +54,7 @@ Para obtener más información, consulte:
 * Durante una solicitud de VMware vSphere on {{site.data.keyword.cloud_notm}}, se le proporciona una estimación del número de máquinas virtuales que se pueden ejecutar en la instancia solicitada.
 * Durante una solicitud de Cloud Foundation y de vCenter Server, se le proporciona una estimación de la capacidad de almacenamiento utilizable para la instancia solicitada.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Pedido de instancias de Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Pedido de instancias de vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Solicitud de clústeres nuevos de vSphere](../vsphere/vs_orderinginstances.html)
@@ -84,7 +84,7 @@ Puede ver los detalles del clúster o añadir hasta un total de cinco clústeres
 
 Ahora puede personalizar la configuración del almacenamiento vSAN seleccionando el número y el tamaño de las unidades de almacenamiento vSAN como parte del pedido de la instancia.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Visión general de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Pedido de instancias de Cloud Foundation](../sddc/sd_orderinginstance.html)
 
@@ -100,7 +100,7 @@ Dispone de los siguientes valores de configuración de servidor nativo (Bare Met
 
 **Nota**: el chasis tiene espacio para 12 discos, aunque no todas las ranuras están llenas. La configuración **Pequeño** proporciona dos unidades de 1,9 TB Micron 5100 MAX y la configuración **Grande** proporciona cuatro unidades de 3,8 TB Micron 5100 PRO.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Visión general de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Pedido de instancias de Cloud Foundation](../sddc/sd_orderinginstance.html)
 
@@ -133,7 +133,7 @@ Para obtener más información, consulte [Pedido de instancias de vCenter Server
 
 Ahora BYOL está disponible para instancias de vCenter Server. BYOL le permite utilizar una o varias de sus propias licencias de vCenter Server, vSphere, vSAN y NSX VMware cuando solicite instancias de vCenter Server.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Pedido de instancias de Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Pedido de instancias de vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Solicitud de clústeres nuevos de vSphere](../vsphere/vs_orderinginstances.html)
@@ -164,7 +164,7 @@ Ahora dispone de las siguientes opciones de configuración de servidor nativo:
 
 **Nota:** Las unidades SSD de 3,8 TB recibirán soporte cuando estén disponibles a un nivel general en un {{site.data.keyword.CloudDataCent_notm}}.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Visión general de NetApp ONTAP Select](../netapp/np_netappoverview.html)
 * [Solicitud de instancias de NetApp ONTAP Select](../netapp/np_orderinginstances.html)
 

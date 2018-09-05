@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -42,7 +42,7 @@ Tabla 1. Roles de gestión de plataforma y acciones permitidas
 
 Para {{site.data.keyword.vmwaresolutions_short}}, existen las acciones siguientes:
 
-Tabla 2. Descripciones y roles de acciones necesarios
+Tabla 2. Descripciones de acciones y roles necesarios
 
 | Acción | Operación en servicio | Rol |
 |:------ |:-------------------- |:---- |
@@ -58,11 +58,11 @@ Puede añadir nuevos usuarios a la cuenta {{site.data.keyword.cloud_notm}} para 
 
 También puede gestionar el acceso de los usuarios existentes, incluida la modificación del acceso existente, la asignación de acceso nuevo y la revisión del acceso asignado. Para gestionar el acceso de los usuarios, debe ser el propietario de la cuenta o debe tener el rol de gestión de la plataforma **Administrador**. Para obtener más información, consulte [Gestión del acceso IAM](../../../iam/mngiam.html).
 
-### Migración de instancias existentes a cuentas de IBM Cloud
+## Migración de instancias existentes a cuentas de IBM Cloud
 
-Debido a la integración de {{site.data.keyword.vmwaresolutions_short}} con IAM, las instancias que se despliegan en V2.5 y releases posteriores en la cuenta de {{site.data.keyword.cloud}} se añaden automáticamente a la cuenta y se gestionan mediante IAM. Para las instancias existentes que se han desplegado en V2.4 y releases anteriores, puede migrarlas a cuentas de {{site.data.keyword.cloud_notm}} especificadas para la gestión habilitada para IAM.
+Debido a la integración de {{site.data.keyword.vmwaresolutions_short}} con IAM, las instancias que se despliegan en V2.5 y releases posteriores en la cuenta de {{site.data.keyword.cloud}} se añaden automáticamente a la cuenta y se gestionan mediante IAM.
 
-Para obtener más información, consulte:
+Para las instancias existentes que se han desplegado en V2.4 y releases anteriores, puede migrarlas a cuentas de {{site.data.keyword.cloud_notm}} especificadas para la gestión habilitada para IAM. Para obtener más información, consulte los temas siguientes:
 * [Migración de instancias anteriores a V2.5 vCenter Server a cuentas de IBM Cloud](../vcenter/vc_addinstancetousraccount.html)
 * [Migración de vCenter Server anterior a V2.5 con las instancias del paquete híbrido (Hybridity) en cuentas de IBM Cloud](../vcenter/vc_hybrid_addinstancetousraccount.html)
 * [Migración de instancias anteriores a V2.5 Cloud Foundation a cuentas de IBM Cloud](../sddc/sd_addinstancetousraccount.html)

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-16"
 
 ---
 
 # Gestión de notificaciones del sistema
 
-Puede comprobar las notificaciones sobre el estado del sistema o sobre las operaciones de los usuarios. También puede utilizar la información para diagnosticar y resolver los problemas que puedan producirse.
+Puede comprobar las notificaciones sobre el estado del sistema o sobre las operaciones de los usuarios. También puede utilizar la información para investigar problemas que puedan producirse.
 
 ## Visualización de notificaciones
 
@@ -69,7 +69,7 @@ Puede comprobar las notificaciones sobre el estado del sistema o sobre las opera
 
 ## Filtrado de notificaciones
 
-De forma predeterminada, se muestran todas las notificaciones no leídas. Puede filtrar las notificaciones por estado, gravedad y tipo. Para filtrar las notificaciones, marque solo los recuadros de selección de los elementos que desea visualizar en las listas desplegables **Estado**, **Gravedad** o **Tipo**.
+De forma predeterminada, se muestran todas las notificaciones no leídas. Puede filtrar las notificaciones por estado, gravedad y tipo. Para filtrar las notificaciones, marque solo los recuadros de selección de los elementos que desea visualizar en las listas **Estado**, **Gravedad** o **Tipo**.
 
 ### Enlaces relacionados
 

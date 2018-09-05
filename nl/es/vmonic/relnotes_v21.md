@@ -30,7 +30,7 @@ Puede solicitar instancias de Cloud Foundation o de vCenter Server con el servic
 
 Puede solicitar una instancia local de HCX local para la obtención de licencias y la activación de la instalación local de HCX.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Consideraciones sobre HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)
 * [Gestión de HCX on {{site.data.keyword.cloud_notm}}](../services/managinghcx.html)
 * [Consideraciones sobre instancias locales de HCX](../services/standalone_considerations.html)
@@ -42,7 +42,7 @@ Puede traer su propia licencia (BYOL) o adquirir licencias de suscripción propo
 
 Además, cuando añada nodos a un clúster cuya licencia ha conseguido con su clave, la consola le solicita que especifique una nueva clave de licencia si el número de nodos supera la capacidad de la clave.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 
 * [Adición y visualización de clústeres correspondientes a instancias de Cloud Foundation](../sddc/sd_addingviewingclusters.html)
 * [Adición y visualización de clústeres correspondientes a instancias de vCenter Server](../vcenter/vc_addingviewingclusters.html)
@@ -85,7 +85,7 @@ Para el clúster predeterminado de una instancia, puede desplegar o ampliar hast
 
 La configuración de servidores nativos personalizada por el usuario ahora ofrece Dual Intel Xeon Gold 6140 con 36 núcleos en total y 2,3 GHz.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Visión general de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Pedido de instancias de vCenter Server](../vcenter/vc_orderinginstance.html)
 
@@ -93,7 +93,7 @@ Para obtener más información, consulte:
 
 Ahora tiene la opción de configurar comparticiones de archivos NFS de forma individual. Seleccione el tamaño de archivo y el nivel de rendimiento de cada compartición de archivos individual o seleccione el mismo tamaño de archivo y nivel de rendimiento para todas las comparticiones de archivos del pedido.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Visión general de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
 * [Pedido de instancias de vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Adición y visualización de clústeres correspondientes a instancias de vCenter Server](../vcenter/vc_addingviewingclusters.html)

@@ -31,7 +31,7 @@ Durante el proceso de actualización a V2.2, la máquina virtual IBM CloudDriver
 * Si utiliza una solución de copia de seguridad que hace referencia a la máquina virtual IBM CloudDriver, después de actualizar a V2.2, asegúrese de que la solución de copia de seguridad haga referencia a la nueva máquina virtual IBM CloudDriver.
 * Antes de actualizar a V2.2, asegúrese de sustituir la VSI Legacy Veeam por el servicio Veeam on {{site.data.keyword.cloud_notm}}. Legacy Veeam ya no recibe soporte en V2.2 y futuros releases, por lo que las copias de seguridad de componentes de gestión asociadas a Legacy Veeam no se pueden restaurar.
 
-Para obtener más información sobre cómo utilizar el servicio Veeam on {{site.data.keyword.cloud_notm}}, consulte:
+Para obtener más información sobre cómo utilizar el servicio Veeam on {{site.data.keyword.cloud_notm}}, consulte los temas siguientes:
 * [Componentes y consideraciones sobre Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
 * [Gestión de Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)
 
@@ -43,7 +43,7 @@ Por ver consideraciones importantes antes de proteger una instancia de VMware Fe
 
 (Actualizado el 2 de abril de 2018) Ahora puede ampliar o reducir la capacidad de la instancia de VMware Federal añadiendo o eliminando servidores ESXi. Esta opción solo está disponible para las instancias de VMware Federal que no se han protegido.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 
 * [Visión general de VMware Federal on {{site.data.keyword.cloud_notm}}](../vcenter/vc_fed_overview.html)
 * [Adición, visualización y supresión de clústeres para instancias de VMware Federal](../vcenter/fed_addviewdeleteclusters.html)
@@ -144,7 +144,7 @@ El servicio Zerto on {{site.data.keyword.cloud_notm}} ofrece funciones de répli
 
 Puede solicitar servicios gestionados para sus instancias desde la página **Cómo comenzar**, ya sea realizando un pedido de una nueva instancia o añadiendo el servicio a una instancia existente.
 
-Para obtener más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Solicitud de servicios para Veeam on {{site.data.keyword.cloud_notm}}](../services/managing_veeam_services.html)
 * [Solicitud de servicios para Zerto on {{site.data.keyword.cloud_notm}}](../services/managing_zerto_services.html)
 
@@ -154,7 +154,7 @@ Para obtener más información, consulte:
 
 * En la documentación se proporciona la Lista de materiales (BOM) de las VLAN y del software para instancias de Cloud Foundation y de vCenter Server, así como para clústeres de VMware vSphere.
 
-  Para obtener más información, consulte:
+  Para obtener más información, consulte los temas siguientes:
 
   * [Lista de materiales de vCenter Server](../vcenter/vc_bom.html)
   * [Lista de materiales de Cloud Foundation](../sddc/sd_bom.html)

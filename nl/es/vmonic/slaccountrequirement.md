@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -23,14 +23,14 @@ Los usuarios autorizados pueden verificar y actualizar los permisos para una cue
 Tabla 1. Permisos necesarios para la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}
 
 | Permiso         | Detalles                                 |
-|:-------------------|:----------------------------------------|
+|:------------------ |:--------------------------------------- |
 | Añadir servidor | Este permiso es necesario para las siguientes operaciones: para solicitar los {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} en los que se ejecuta VMware ESXi y para suministrar los servidores virtuales por hora que se utilizan para las operaciones de configuración, mantenimiento y soporte de la instancia. |
 | Cancelar servidor | Este permiso es necesario para liberar y reclamar los {{site.data.keyword.baremetal_short}} en los que ejecuta VMware ESXi. Si suprime su instancia, los componentes solicitados se liberan automáticamente en la secuencia correcta de dependencia. |
 | Ver detalles del servidor virtual | Este permiso es necesario para recuperar detalles de suministro del servidor, que se necesitan para la validación de pedidos y para la configuración automática. |
 | Añadir almacenamiento | Este permiso es necesario para solicitar almacenamiento de seguridad y almacenamiento compartido para la instancia. |
 | Gestionar almacenamiento | Este permiso es necesario para gestionar el almacenamiento de seguridad y el almacenamiento compartido para la instancia. |
 | Cortafuegos de hardware | Este permiso es necesario para editar o para ver archivos de registro de cortafuegos para el servicio Fortinet on {{site.data.keyword.cloud_notm}}, si está instalado en su instancia. |
-| Solicitar capacidad de cálculo con puerto de red pública | Este permiso es necesario para solicitar hardware y VSI (instancias de servidor virtual) con puertos de red pública. |
+| Añadir sistema con puerto de red pública | Este permiso es necesario para solicitar hardware y VSI (instancias de servidor virtual) con puertos de red pública. |
 | Añadir direcciones IP | Este permiso es necesario para solicitar rangos de subredes privadas portátiles en su nombre, lo cual es necesario para gestionar las máquinas virtuales que se ejecutan en un clúster de vSphere. Cuando se añaden más servicios a la instancia, las direcciones IP privadas portátiles se están asignados a asignan a los servidores VMware ESXi para aislar y asignar el ancho de banda. |
 | Añadir incidencias | Este permiso es necesario para abrir incidencias de servicio en su nombre. Pueden crearse incidencias para las siguientes operaciones: para iniciar operaciones de restauración y para iniciar procesos de resolución de problemas automáticamente cuando se encuentran problemas. |
 | Editar incidencias | Este permiso es necesario para editar las incidencias de servicio creadas en su nombre. |
@@ -38,7 +38,7 @@ Tabla 1. Permisos necesarios para la cuenta de infraestructura de {{site.data.ke
 | Ver detalles de hardware | Este permiso es necesario para recuperar detalles de hardware, que se necesitan para la validación de pedidos y para la configuración automática. |
 | Ver licencias | Este permiso es necesario para recuperar y validar las licencias que utiliza su instancia. |
 | Ver contraseñas | Este permiso es necesario para poder administrar las VSI solicitadas. |
-| Gestionar supervisión de dispositivos | Este permiso no es necesario realizar un pedido, pero sí que se necesita para recuperar y validar el estado de supervisión de los {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} en los que se ejecutan los servidores VMware ESXi en la instancia. |
+| Gestionar supervisión de servidor | Este permiso no es necesario realizar un pedido, pero sí que se necesita para recuperar y validar el estado de supervisión de los {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} en los que se ejecutan los servidores VMware ESXi en la instancia. |
 
 ## Expansión de VLAN para cuentas clásicas (no VRF)
 

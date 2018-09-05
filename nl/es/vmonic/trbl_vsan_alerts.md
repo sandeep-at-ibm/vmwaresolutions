@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-06-29"
+lastupdated: "2017-08-16"
 
 ---
 
@@ -18,7 +18,7 @@ Estos avisos no son problemáticas y no indican problemas funcionales. Sin embar
 
 1. Vaya a http://partnerweb.vmware.com/service/vsan/all.json y guarde el archivo JSON, denominado `all.json`, en el sistema local.
 2. Asegúrese de haber completado los pasos del apartado [Tiempo de espera excedido de la consola de vCenter](trbl_timeout_vc_console.html).
-3. En la página de detalles de la instancia de Cloud Foundation, pulse el botón de la **consola de vCenter** e inicie una sesión en el cliente web de vSphere utilizando las credenciales que se muestra en la consola de {{site.data.keyword.vmwaresolutions_full}}.
+3. En la página de detalles de la instancia de Cloud Foundation, pulse **consola de vCenter** e inicie una sesión en el cliente web de vSphere utilizando las credenciales que se muestran en la consola de {{site.data.keyword.vmwaresolutions_full}}.
 4. En el cliente web de vSphere, vaya a **Gestionar > Configuración** y abra la sección **SAN virtual > Estado > Base de datos HCL**. Pulse **Actualizar desde archivo** y cargue el archivo `all.json` que ha guardado anteriormente.
 5. Para borrar los avisos, vaya al panel **Alarmas** de la parte superior derecha del cliente web de vSphere. Pulse con el botón derecho en cada una de las alarmas y seleccione **Restablecer a verde**.
 

@@ -4,23 +4,23 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-09"
 
 ---
 
 # Acerca de IBM Cloud for VMware Solutions
 
-{{site.data.keyword.vmwaresolutions_full}} le permite integrar de forma rápida y sencilla o migrar sus cargas de trabajo locales de VMware a {{site.data.keyword.cloud_notm}} mediante la infraestructura escalable, segura y de alto rendimiento {{site.data.keyword.cloud_notm}} y la tecnología de virtualización híbrida VMware líder del sector.
+Con {{site.data.keyword.vmwaresolutions_full}}, puede integrar de forma rápida y sencilla o migrar sus cargas de trabajo locales de VMware a {{site.data.keyword.cloud_notm}} mediante la infraestructura escalable, segura y de alto rendimiento {{site.data.keyword.cloud_notm}} y la tecnología de virtualización híbrida VMware líder del sector.
 
-{{site.data.keyword.vmwaresolutions_short}} le permite desplegar fácilmente sus entornos virtuales de VMware y gestionar los recursos de la infraestructura en {{site.data.keyword.cloud_notm}}. Al mismo tiempo, puede seguir utilizando la consola del producto VMware nativo con la que está familiarizado para gestionar las cargas de trabajo de VMware.
+Puede desplegar fácilmente sus entornos virtuales de VMware y gestionar los recursos de la infraestructura en {{site.data.keyword.cloud_notm}}. Al mismo tiempo, puede seguir utilizando la consola del producto VMware nativo con la que está familiarizado para gestionar las cargas de trabajo de VMware.
 
 ## Ventajas de IBM Cloud for VMware Solutions
 
 {{site.data.keyword.vmwaresolutions_short}} ofrece las siguientes ventajas principales:
-* **Alcance global**: permite expandir el alcance de su nube híbrida hasta un máximo de 30 {{site.data.keyword.CloudDataCents_notm}} de nivel empresarial de todo el mundo.
+* **Alcance global**: Puede expandir el alcance de su nube híbrida hasta un máximo de 30 {{site.data.keyword.CloudDataCents_notm}} de nivel empresarial de todo el mundo.
 * **Integración perfecta**: permite una integración perfecta entre la nube híbrida y la infraestructura de {{site.data.keyword.cloud_notm}}.
 * **Suministro rápido**: automatiza el despliegue y la configuración del entorno VMware, lo que le permite desplegar rápidamente un entorno VMware de nivel de empresa con servidores virtuales y {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} a petición.
-* **Simplificación**: le permite consumir una plataforma de nube VMware sin la necesidad de identificar, adquirir, desplegar y gestionar la infraestructura física subyacente (cálculo, almacenamiento y red) y las licencias de software.
+* **Simplificación**: Puede consumir una plataforma de nube VMware sin la necesidad de identificar, adquirir, desplegar y gestionar la infraestructura física subyacente (cálculo, almacenamiento y red) y las licencias de software.
 * **Flexibilidad en cuanto a ampliación y reducción**: le permite ampliar y reducir fácilmente las cargas de trabajo de VMware según los requisitos de la empresa.
 * **Una sola consola de gestión**: proporciona una sola consola para desplegar, acceder y gestionar los entornos de VMware en {{site.data.keyword.cloud_notm}}.
 
@@ -96,7 +96,7 @@ Para obtener más información, consulte [Visión general de HyTrust CloudContro
 
 El servicio HyTrust DataControl on {{site.data.keyword.cloud_notm}} ofrece un cifrado de alta seguridad con claves de gestión integrada para proteger las cargas de trabajo en todo su ciclo de vida. El servicio puede proporcionar cifrado tanto a nivel de sistema operativo como a nivel de datos, lo que significa que se puede cifrar y descifrar cualquier directorio, carpeta o archivo de una carga de trabajo.
 
-Para obtener más información, consulte [Visión general de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/hdcc_considerations.html).
+Para obtener más información, consulte [Visión general de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html).
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -124,7 +124,7 @@ Para obtener más información, consulte [Visión general de VMware HCX on {{sit
 
 ### Zerto on IBM Cloud
 
-El servicio Zerto on {{site.data.keyword.cloud_notm}} ofrece funciones de réplica y de recuperación tras desastre, que se pueden integrar en las ofertas de despliegue para proteger y recuperar los datos del entorno virtual VMware en {{site.data.keyword.cloud_notm}}.
+El servicio Zerto on {{site.data.keyword.cloud_notm}} proporciona funciones de réplica y recuperación tras desastre. Estas funciones se pueden integrar en las ofertas de despliegue para proteger y recuperar los datos del entorno virtual VMware en {{site.data.keyword.cloud_notm}}.
 
 Para obtener más información, consulte [Visión general de Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html).
 

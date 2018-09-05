@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-19"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -37,10 +37,10 @@ Si tiene instancias anteriores a V1.4 y piensa seguir utilizándolas, puede actu
 
 Para pasar las instancias anteriores a V1.4 a instancias nuevas, siga estos pasos en el cliente web de vSphere:
 1. En la instancia anterior a V1.4, exporte todas las VM (máquinas virtuales).
-2. Cree una nueva instancia en el release actual.
+2. Cree una instancia en el release actual.
 3. Importe todas las VM exportadas en el **Paso 1**.
-4. Empiece a utilizar la nueva instancia.
+4. Utilice la instancia nueva.
 
-Para obtener información sobre cómo exportar e importar máquinas virtuales, consulte la documentación de VMware vSphere.
+Para obtener más información sobre la exportación e importación de máquinas virtuales, consulte la documentación de VMware vSphere.
 
 Si necesita ayuda con {{site.data.keyword.vmwaresolutions_short}}, [póngase en contacto con el equipo de soporte de IBM](trbl_support.html) a través de uno de los canales de soporte.
