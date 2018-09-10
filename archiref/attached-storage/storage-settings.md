@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-10"
 
 ---
 
@@ -45,7 +45,7 @@ The following features are available when storage DRS is turned on:
 * I/O load balancing among datastores within a datastore cluster
 * Initial place for virtual disks based on space and I/O workload.
 
-In this design, Storage DRS is enabled with the automation level set to “Fully Automated”. As a result, files are not migrated automatically to optimize resource usage on the data cluster. Note that all other Storage DRS options are set to “Use cluster settings” since the cluster is fully automated.
+In this design, Storage DRS is enabled with the automation level set to **Fully Automated**. As a result, files are migrated automatically to optimize resource usage on the data cluster. Since the cluster is fully automated, all other Storage DRS options are set to **Use cluster settings**.
 
 ### Storage DRS runtime settings for NFS v3
 
