@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -97,6 +97,12 @@ HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服務會施行並控�
 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務提供具有整合式金鑰管理的高度加密，來保護其整個生命週期的工作負載安全。此服務可以提供作業系統層次及資料層次的加密，表示可以加密及解密工作負載內的任何目錄、資料夾或檔案。
 
 如需相關資訊，請參閱 [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概觀](../services/htdc_considerations.html)。
+
+### IBM Cloud Private Hosted
+
+{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 服務為您在 {{site.data.keyword.cloud_notm}} 上的 VMware 環境帶來微服務及容器的功能。使用此服務，您可以將熟悉的相同 VMware 與 {{site.data.keyword.cloud_notm}} Private 作業模型和工具，從內部部署延伸到 {{site.data.keyword.cloud_notm}}。
+
+如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html)。
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 

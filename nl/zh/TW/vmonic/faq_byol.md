@@ -66,7 +66,7 @@ lastupdated: "2018-08-14"
 
 ## 使用 BYOL 特性時，是否可以提供 SDDC Manager 授權？
 
-不。我們與 VMware 的合約規定我們必須接受客戶的實際授權碼。雖然 Cloud Foundation 部署包括 SDDC Manager 授權，但我們無法接受 SDDC Manager 授權碼檔案並驗證其 BYOL。因此，IBM 會針對所有實例的 SDDC Manager 授權收費。SDDC Manager 授權代表 Cloud Foundation 實例整體授權費用中的一小部分。
+否。我們與 VMware 的合約規定我們必須接受客戶的實際授權碼。雖然 Cloud Foundation 部署包括 SDDC Manager 授權，但我們無法接受 SDDC Manager 授權碼檔案並驗證其 BYOL。因此，IBM 會針對所有實例的 SDDC Manager 授權收費。SDDC Manager 授權代表 Cloud Foundation 實例整體授權費用中的一小部分。
 
 ## 我可以對某些 VMware 元件使用 BYOL 特性，並對某些元件購買每月授權嗎？
 
