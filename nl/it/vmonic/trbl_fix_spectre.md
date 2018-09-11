@@ -43,7 +43,7 @@ Per tutte le tue istanze e i tuoi server ESXi esistenti, ti verrà richiesto di 
 
 Per VMware vSphere 6.5, devi applicare le seguenti patch: ESXi650-201712101-SG, ESXi650-201803401-BG e ESXi650-201803402-BG, dal [sito di patch dei prodotti VMware](https://my.vmware.com/group/vmware/patch) a tutti i tuoi cluster e server ESXi vSphere, appena distribuiti o esistenti.
 
-Per VMware vCenter Server 6.5, devi applicare la patch vCenter 6.5 U1g dal [sito di patch dei prodotti VMware](https://my.vmware.com/group/vmware/patch) a tutti i tuoi server vCenter, appena distribuiti o esistenti.
+Per VMware vCenter Server 6.5, devi applicare la patch vCenter 6.5 U1g dal [sito di patch dei prodotti VMware](https://my.vmware.com/group/vmware/patch) a tutti i tuoi vCenter Server, appena distribuiti o esistenti.
 
 ## Istanze distribuite nella V1.9 o precedenti
 

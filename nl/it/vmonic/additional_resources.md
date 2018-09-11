@@ -10,7 +10,7 @@ lastupdated: "2018-08-17"
 
 # Risorse aggiuntive
 
-Esamina altre risorse che possono aiutarti a iniziare più velocemente. Tali risorse comprendono: 
+Esamina altre risorse che possono aiutarti a iniziare più velocemente. Tali risorse comprendono:
 * Informazioni di riferimento sull'architettura
 * Video
 * Dimostrazioni
