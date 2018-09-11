@@ -30,7 +30,7 @@ lastupdated: "2018-08-13"
   **참고**: 이 단계를 완료하기 전에 **시작하기 전에** 섹션에서 정보를 검토했는지 확인하십시오.
 
 6. 사용자 환경에서 공개용 관리 서비스 VMware NSX ESG(Edge Services Gateway)를 제거하고 선택적으로 자동화 중에 배치된 클라이언트 관리 ESG를 제거하십시오.
-7. IBM 자동화에서 사용된 모든 계정의 비밀번호와 키를 재설정하십시오. 추가 정보는 [IBM 자동화 및 지원을 통해 액세스를 제거할 때 어떻게 내 환경의 보안을 설정할 수 있습니까?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)를 참조하십시오.
+7. IBM 자동화에서 사용된 모든 계정의 비밀번호와 키를 재설정하십시오. 추가 정보는 [How can I secure my environment to remove access by IBM automation and support?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)를 참조하십시오.
 
 ## 결과
 

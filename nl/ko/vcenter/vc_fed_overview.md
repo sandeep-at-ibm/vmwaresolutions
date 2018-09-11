@@ -24,8 +24,8 @@ vCenter Server on {{site.data.keyword.cloud_notm}} 및 vCenter Server 아키텍�
 
 다음 구성 중 하나로 둘 이상의 사용자 정의된 {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
 
-* 2CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
-* 2CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
+* 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
+* 두 개의 CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
 
 NFS 스토리지 구성의 경우 {{site.data.keyword.baremetal_short}}의 권장 수는 기본값인 3으로 설정됩니다.
 

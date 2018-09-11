@@ -8,7 +8,7 @@ lastupdated: "2018-07-19"
 
 ---
 
-# vCenter Server 소프트웨어 명세서
+# vCenter Server 명세서
 
 VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 검토하십시오.
 
