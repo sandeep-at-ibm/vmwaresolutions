@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-11"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-20"
 
 若要部署可高度自訂的 VMware 虛擬化平台，請訂購 {{site.data.keyword.cloud}} 上的 VMware vSphere 叢集。使用此程序來定義新的 VMware vSphere 叢集。
 
-此程序引導您完成 VMware 元件選取、{{site.data.keyword.cloud_notm}} Bare Metal Server 設定、儲存空間設定及網路選項，以建立新叢集。在下單之後，會擷取叢集配置，以便您可以返回並視需要繼續擴充叢集。完成訂單之後，您可以根據需求，手動配置 VMware 叢集。
+此程序引導您完成選取 VMware 元件、{{site.data.keyword.cloud_notm}} Bare Metal Server 設定、儲存空間設定及網路選項，以建立新叢集。在下單之後，會擷取叢集配置，以便您可以返回並視需要繼續擴充叢集。完成訂單之後，您可以根據需求，手動配置 VMware 叢集。
 
 ## 需求
 
@@ -24,7 +24,7 @@ lastupdated: "2018-07-20"
 
 ## 系統設定
 
-訂購新的 vSphere 叢集時，您必須指定下列系統設定。
+當您訂購新的 vSphere 叢集時，必須指定下列系統設定。
 
 ### 叢集名稱
 
@@ -34,29 +34,29 @@ lastupdated: "2018-07-20"
 
 選取要隨叢集訂購的 VMware 元件，並指定元件的授權選項。
 
-### （僅限事業夥伴使用者）元件組合
+### （僅限 IBM 事業夥伴）元件組合
 
-如果您是事業夥伴使用者，則可以在訂購新的 vSphere 叢集時選取元件授權組合。可用的組合如下：
+如果您是「IBM 事業夥伴」，則可以在訂購新的 vSphere 叢集時選取元件授權組合。可用的組合如下：
 
-表 1. vSphere 叢集的事業夥伴元件組合
+表 1. vSphere 叢集的「IBM 事業夥伴」元件組合
 
 |組合|元件|
-|:-------------------------|:-----------------------|
+|:------------------------- |:----------------------- |
 |Standard with Management      |vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vRealize Operations Enterprise                 |
 |Advanced                 |vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vCloud Director、NSX Base |
 |Advanced with Networking      |vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、NSX Advanced |
 |Advanced with Networking and Management |vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vRealize Operations Enterprise、vCloud Director、NSX Enterprise |
 
-您也可以在訂單中包括下列其他 VMware 元件：
+您也可以在訂單中包括下列 VMware 元件：
 * VMware vSAN
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**附註：**事業夥伴使用者沒有「自帶授權 (BYOL)」選項。完成您的訂單時，無法使用**我會提供授權**選項。
+**附註：**對於「IBM 事業夥伴」，無法使用「自帶授權 (BYOL)」選項。
 
-### （僅限非事業夥伴使用者）個別元件
+### （僅限非「事業夥伴」）個別元件
 
-如果您是非事業夥伴使用者，則可以針對 vSphere 叢集彈性地選取下列 VMware 元件：
+如果您是非「事業夥伴」，則可以針對 vSphere 叢集彈性地選取下列 VMware 元件：
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
@@ -66,13 +66,13 @@ lastupdated: "2018-07-20"
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**附註：**當您訂購 VMware vSphere Enterprise Plus 6.0 時，VMware vSAN 元件無法使用。如果您打算使用自己的 VMware vSphere Enterprise Plus 6.0 授權，則會代表您開立 {{site.data.keyword.cloud_notm}} 基礎架構問題單，要求將已訂購的 {{site.data.keyword.baremetal_short}} 的 vSphere 授權取代為您提供的授權。
+**附註：**當您訂購 VMware vSphere Enterprise Plus 6.0 時，VMware vSAN 元件無法使用。如果您打算使用自己的 VMware vSphere Enterprise Plus 6.0 授權，則會代表您開立 {{site.data.keyword.cloud_notm}} 基礎架構問題單。此問題單要求將已訂購的 {{site.data.keyword.baremetal_short}} 的 vSphere 授權取代為您提供的授權。
 
 ### 授權選項
 
 您在授權已選取的 VMWare 元件時有下列選項：
 * **購買隨附授權**：在此情況下，會代表您購買 VMware 元件的新授權。會產生結合的 VMware 授權，以符合訂單的叢集大小。
-* **我將提供授權**：在此情況下，您將使用您自己的 VMware 元件授權。
+* **我將提供授權**：在此情況下，您會使用自己的 VMware 元件授權。
 
 如果您選擇購買任何授權（除了 vSphere Enterprise Plus 及 vCenter Server 以外），且您訂購多部 ESXi 伺服器，則會代表您自動開立 {{site.data.keyword.cloud_notm}} 問題單，以結合授權碼。您負責追蹤問題單，以確保您只使用 DevOps 團隊所產生的授權碼。
 
@@ -84,7 +84,7 @@ lastupdated: "2018-07-20"
 
 選取要在其中管理叢集的 {{site.data.keyword.CloudDataCent_notm}}。
 
-**附註：**如果您選取一個 vSAN 元件，則會依 SSD 可用性來過濾位置清單。
+**附註：**如果您選取 vSAN 元件，則會依 SSD 可用性來過濾位置清單。
 
 ### CPU 型號及 RAM
 
@@ -92,7 +92,7 @@ lastupdated: "2018-07-20"
 
 表 2. 自訂 {{site.data.keyword.baremetal_short}} 的選項
 
-|CPU 選項           |RAM 選項          |
+| CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon E5-2620 v4 /總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2650 v4 /總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
@@ -105,9 +105,9 @@ lastupdated: "2018-07-20"
 
 ### Bare Metal Server 數目
 
-您要新增至 vSphere 叢集的 ESXi 伺服器數目。所有 ESXi 伺服器都會共用相同的配置。
-* 如果您選取 VMware NSX 元件，則至少需要 3 部伺服器。
-* 如果您選取 VMware vSAN 元件，則至少需要 4 部伺服器。
+您要新增至 vSphere 叢集的 ESXi 伺服器數目。所有 ESXi 伺服器都有相同的配置。
+* 如果您選取 VMware NSX 元件，則至少需要三部伺服器。
+* 如果您選取 VMware vSAN 元件，則至少需要四部伺服器。
 
 ## 儲存空間設定
 
@@ -132,11 +132,11 @@ lastupdated: "2018-07-20"
 
 ## 網路介面設定
 
-訂購新的 vSphere 叢集時，您必須指定下列網路介面設定。
+當您訂購新的 vSphere 叢集時，必須指定下列網路介面設定。
 
 ### 主機名稱字首
 
-主機名稱使用於所有 Bare Metal Server 訂單。建議您對所有管理虛擬機器使用主機名稱，例如 vCenter Server、NSX 等等。
+主機名稱使用於所有 Bare Metal Server 訂單。建議您對所有管理虛擬機器使用主機名稱（例如 vCenter Server 及 NSX）。
 
 主機名稱字首必須符合下列需求：
 * 名稱的開頭及結尾必須是英數字元。
@@ -182,7 +182,7 @@ lastupdated: "2018-07-20"
 
 **重要事項：**
 * 確保所選取 VLAN 上的防火牆配置未封鎖管理資料流量。
-* 確保您選取的所有 VLAN 都在相同的 Pod 中，因為無法在混合 Pod VLAN 上佈建 ESXi 伺服器。
+* 確保您選取的所有 VLAN 都在相同的 Pod 中。無法在混合 Pod VLAN 上佈建 ESXi 伺服器。
 
 #### FortiGate Physical Appliance 300 系列 HA 配對
 
@@ -190,20 +190,19 @@ lastupdated: "2018-07-20"
 
 ## 訂單摘要
 
-根據您的配置，預估成本會立即產生並顯示在右側的**訂單摘要**窗格中。按一下窗格底端的**定價詳細資料**，以產生提供預估值詳細資料的 PDF 文件。
+根據您的配置，預估成本會立即產生並顯示在右側的**訂單摘要**窗格中。按一下**定價詳細資料**，以產生提供預估值詳細資料的 PDF 文件。
 
 ## 程序
 
-1. 在「{{site.data.keyword.cloud_notm}} 型錄」中，按一下左導覽窗格上的 **VMware**，然後按一下**虛擬資料中心**區段中的 **VMware vSphere**。
+1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware**，然後按一下**虛擬資料中心**區段中的 **VMware vSphere**。
 2. 在 **VMware vSphere on IBM Cloud** 頁面上，按一下**建立**。  
    請確定您位於**建立新項目**標籤，並在**叢集配置**清單中顯示**新叢集**。
 3. 輸入叢集名稱。
 4. 選取 VMware 元件：
-  * 如果您是事業夥伴使用者，則請選取一個授權組合及任何其他可用的 VMware 元件。
-  * 如果您是非事業夥伴使用者，則請選取元件（如果有的話，則請選取版本），並指定授權選項。
-  當您選擇針對 VMware vSphere Enterprise Plus「自帶授權 (BYOL)」時，會代表您自動開立 {{site.data.keyword.cloud_notm}} 問題單，要求將您訂購的 {{site.data.keyword.baremetal_short}} 上的預設 vSphere 授權取代為您提供的授權。   
+  * 如果您是「IBM 事業夥伴」，則請選取一個授權組合及任何其他可用的 VMware 元件。
+  * 如果您是非「事業夥伴」，則請選取元件（如果有的話，則請選取版本），並指定授權選項。當您選擇針對 VMware vSphere Enterprise Plus「自帶授權 (BYOL)」時，會代表您自動開立 {{site.data.keyword.cloud_notm}} 問題單，要求將您訂購的 {{site.data.keyword.baremetal_short}} 上的預設 vSphere 授權取代為您提供的授權。   
 
-    **重要事項：**您負責追蹤問題單，以確保在新訂購的 ESXi 伺服器上取代 vSphere 授權，以便 {{site.data.keyword.cloud_notm}} 基礎架構授權取消初始提供的 {{site.data.keyword.cloud_notm}} 基礎架構 vSphere 授權費。如果要取代您的 ESXi vSphere 授權，請參閱[配置 ESXi 主機的授權設定](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}。
+    **Important:**您負責追蹤問題單，以在新訂購的 ESXi 伺服器上取代 vSphere 授權。因此 {{site.data.keyword.cloud_notm}} 基礎架構授權取消初始提供的 {{site.data.keyword.cloud_notm}} 基礎架構 vSphere 授權費。如果要取代您的 ESXi vSphere 授權，請參閱[配置 ESXi 主機的授權設定](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}。
 
 5. 完成 Bare Metal Server 設定：
    1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理叢集。
@@ -212,7 +211,7 @@ lastupdated: "2018-07-20"
 6. 如果您已選取 **VMware vSAN** 元件，請選取 **vSAN 容量磁碟的磁碟類型及大小**及 **vSAN 容量磁碟數目**，來完成 vSAN 儲存空間設定。
 7. 完成網路介面設定：
    1. 輸入主機名稱字首、子網域標籤及網域名稱。
-   2. 選取要使用的網路介面：
+   2. 選取要使用的網路介面。
     * 如果您要訂購新的公用及專用 VLAN，則請按一下**訂購新的 VLAN**。
     * 如果您要重複使用可用的現有公用及專用 VLAN，則請按一下**選取現有的 VLAN**，然後指定 VLAN 及選用子網路。
     3. 指定是否套用「FortiGate Physical Appliance 300 系列 HA 配對」來保護雲端環境安全。  
