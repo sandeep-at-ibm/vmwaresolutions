@@ -30,7 +30,7 @@ Veeam on {{site.data.keyword.cloud}} 서비스는 엔터프라이즈가 고가�
 ### 백업용 스토리지
 
 * Endurance iSCSI 스토리지(2000, 4000, 8000 또는 12000GB)
-* 스토리지 성능(0.25, 2 또는 4 IOPS/GB)
+* 스토리지 성능(0.25, 2 또는 4IOPS/GB)
 
 ### 네트워킹
 
@@ -38,7 +38,7 @@ Veeam on {{site.data.keyword.cloud}} 서비스는 엔터프라이즈가 고가�
 
 ### 라이센스 및 요금
 
-Veeam Backup and Replication 9.5 Enterprise Plus(10, 25, 50, 100 또는 200 VM 라이센스).
+Veeam Backup and Replication 9.5 Enterprise Plus(10, 25, 50, 100 또는 200VM 라이센스).
 
 ### 관리
 

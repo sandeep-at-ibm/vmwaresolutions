@@ -24,15 +24,15 @@ HCX on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm}}
 
 **참고:** 온프레미스 HCX 인스턴스에는 라이센싱 및 활성화만 포함됩니다.
 
-### HCX 관리를 위한 VMware NSX ESG(Edge Services Gateway)의 활성/수동 쌍
+### HCX 관리를 위한 VMware NSX Edge Services Gateway의 활성/수동 쌍
 
-* CPU: 6 vCPU
+* CPU: 6개의 vCPU
 * RAM: 8GB
 * 디스크: 3GB VMDK
 
 ### HCX 관리 어플라이언스 - 가상 머신
 
-* CPU: 4 vCPU
+* CPU: 4개의 vCPU
 * RAM: 12GB
 * 디스크: 60GB VMDK
 
@@ -40,8 +40,8 @@ L2 연결, WAN 최적화 및 게이트웨이 연결을 위해 필요에 따라 �
 
 ### 네트워킹
 
-* 16개 IP 주소의 하나의 공인 포터블 서브넷
-* 64개 IP 주소의 두 개의 사설 포터블 서브넷
+* 16개 IP 주소가 포함된 한 개의 공인 포터블 서브넷
+* 64개 IP 주소가 포함된 두 개의 사설 포터블 서브넷
 * 사설 포터블 vMotion 서브넷의 8개 IP 주소
 
 ### 라이센스 및 요금

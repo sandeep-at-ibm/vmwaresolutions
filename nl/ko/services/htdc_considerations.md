@@ -19,10 +19,10 @@ HyTrust DataControl on {{site.data.keyword.cloud}}는 워크로드를 해당 라
 다음 컴포넌트가 주문되고 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
 ### HyTrust DataControl 어플라이언스
-* CPU: 2 vCPU
+* CPU: 2개의 vCPU
 * RAM: 8GB
 * 디스크: 통합 클러스터의 vSAN에 상주하는 20GB VMDK
-* 네트워크: 관리용으로 지정된 VLAN-지원 사설 포터블 네트워크에 배치됨
+* 네트워크: 관리용으로 지정된 VLAN 지원 사설 포터블 네트워크에 배치됨
 
 ### 고가용성
 2개의 DataControl 어플라이언스가 활성-활성 구성에 배치됩니다.

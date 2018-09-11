@@ -30,7 +30,7 @@ FortiGate 300 시리즈 Security Appliance.
 
 ### 네트워킹
 
-* 업스트림 및 다운스트림 모두에서 결합된 듀얼 1GbE
+* 업스트림 및 다운스트림 네트워크 모두에 연결된 듀얼 1GbE
 * 하나의 새 업스트림 {{site.data.keyword.cloud_notm}} 공인 VLAN
 * 하나의 기존 다운스트림 {{site.data.keyword.cloud_notm}} 공인 VLAN
 
