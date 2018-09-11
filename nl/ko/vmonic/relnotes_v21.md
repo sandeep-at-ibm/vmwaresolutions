@@ -58,7 +58,7 @@ V2.1 이상 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스에 배
 
 ### 네트워크 MTU 구성 설정
 
-V2.1 이상 릴리스의 경우 새 vCenter Server 인스턴스는 공용 분산 가상 스위치(DVS)가 MTU 1500(기본값)으로 설정된 상태로 주문됩니다. 자세한 정보는 [vCenter Server 소프트웨어 명세서](../vcenter/vc_bom.html)의 _네트워크 MTU 구성 설정_을 참조하십시오.
+V2.1 이상 릴리스의 경우 새 vCenter Server 인스턴스는 공용 분산 가상 스위치(DVS)가 MTU 1500(기본값)으로 설정된 상태로 주문됩니다. 자세한 정보는 [vCenter Server 명세서](../vcenter/vc_bom.html)의 _네트워크 MTU 구성 설정_을 참조하십시오.
 
 ### VMware ESXi 패치 및 업데이트를 호스트로 자동 적용
 

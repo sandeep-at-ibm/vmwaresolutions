@@ -57,7 +57,7 @@ V2.2 이상 릴리스에서 새 인스턴스는 ESXi 서버에 대한 새 고급
 모든 인스턴스의 일관성과 스토리지 확장에 필요한 충분한 지원을 허용하기 위해 남아 있는 구성 설정을 새 값으로 변경하는 것이 좋습니다. IBM은 모든 {{site.data.keyword.cloud_notm}} for VMware Solutions 이후 릴리스의 새 설정에 대해서만 테스트하도록 계획하고 있습니다.
 
 자세한 정보는 다음 문서에 포함된 _ESXi 서버의 고급 구성 설정_을 참조하십시오.
-* [vCenter Server 소프트웨어 명세서](../vcenter/vc_bom.html#advanced-configuration-settings-for-esxi-servers)
+* [vCenter Server 명세서](../vcenter/vc_bom.html#advanced-configuration-settings-for-esxi-servers)
 * [Cloud Foundation 명세서](../sddc/sd_bom.html#advanced-configuration-settings-for-esxi-servers)
 
 ## 초기 클러스터에 최대 51개의 ESXi 서버를 지원하고 추가 클러스터에 최대 59개의 ESXi 서버를 지원함
@@ -156,7 +156,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 서비스는 {{site.data.keyword.cloud
 
   자세한 정보는 다음 주제를 참조하십시오.
 
-  * [vCenter Server 소프트웨어 명세서](../vcenter/vc_bom.html)
+  * [vCenter Server 명세서](../vcenter/vc_bom.html)
   * [Cloud Foundation 명세서](../sddc/sd_bom.html)
   * [VMware vSphere 명세서](../vsphere/vs_bom.html)
 

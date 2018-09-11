@@ -33,7 +33,7 @@ lastupdated: "2018-08-16"
 3. **IBM Cloud 인프라 신임 정보** 영역에서 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정의 사용자 이름과 API키를 입력하십시오.
    * {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정과 {{site.data.keyword.cloud_notm}} 계정이 연결된 경우 **검색**을 클릭하여 신임 정보를 자동으로 입력하십시오.
    * {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정과 {{site.data.keyword.cloud_notm}} 계정이 연결되지 않은 경우에는 두 계정을 연결해야 합니다. [{{site.data.keyword.cloud_notm}} 인프라 고객 포털](https://control.softlayer.com/)에 로그인하고 콘솔의 지시사항에 따라 신임 정보를 가져온 다음 이를 입력하십시오.
-   * {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 없는 경우에는 [계정을 등록](../vmonic/signing_softlayer_account.html)하고 콘솔의 지시사항에 따라 신임 정보를 가져온 다음 이를 입력하십시오. 
+   * {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 없는 경우에는 [계정을 등록](../vmonic/signing_softlayer_account.html)하고 콘솔의 지시사항에 따라 신임 정보를 가져온 다음 이를 입력하십시오.
 4. **신임 정보 저장**을 클릭하십시오.
 
 ## 결과

@@ -20,7 +20,7 @@ lastupdated: "2017-03-08"
 * VMware Tools 10.1.0
 * SDDC Manager (SP) 2.2
 * VMware ESXi 6.0 u2 p04
-* 새 Windows VSI(Virtual Server Instance)는 이 릴리스의 다중 사이트 구성 지원에 필요한 Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스에 대해 주문됩니다. 이 VSI 스펙은 Windows 2012 R2(8GB RAM / 2개의 CPU 코어 / 100GB 디스크 / 듀얼 1Gbps 사설 업링크)입니다.
+* 새 Windows VSI(Virtual Server Instance)는 이 릴리스의 다중 사이트 구성 지원에 필요한 Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스에 대해 주문됩니다. 이 VSI 스펙은 Windows 2012 R2(8GB RAM / 두 개의 CPU 코어 / 100GB 디스크 / 듀얼 1Gbps 사설 업링크)입니다.
 
 자세한 정보는 [Cloud Foundation 개요](../sddc/sd_cloudfoundationoverview.html)를 참조하십시오.
 

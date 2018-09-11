@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-30"
 
 ---
 
@@ -30,22 +30,22 @@ lastupdated: "2018-08-17"
 
 {{site.data.keyword.vmwaresolutions_short}}에서는 백업을 위한 2개의 통합 추가 기능 서비스(IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 및 Veeam on {{site.data.keyword.cloud_notm}})를 제공합니다. 이러한 서비스를 사용하면 관리 인프라 및 워크로드 모두의 복구를 계획하고 제공할 수 있습니다. 또한 IBM Resiliency Services는 Veeam 백업을 위한 관리 서비스도 제공합니다.
 
-V2.5 릴리스 이상에서 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 및 Veeam on {{site.data.keyword.cloud_notm}} 서비스는 배치 시에 더 이상 VM의 백업을 사전 구성하지 않습니다. 이러한 변경에 따라 사용자는 스케줄, 보존 기간, 중복 제거 사용, 모니터링 및 경보, 그리고 암호화 키 관리를 포함하여 백업 작업의 모든 측면에 대해 일맞은 구성을 보장할 수 있습니다. 또한 IBM CloudDriver VM은 더 이상 NSX 백업을 위한 지속적 파일 서버로서 구성되지 않습니다.
+V2.5 릴리스 이상에서 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 및 Veeam on {{site.data.keyword.cloud_notm}} 서비스는 배치 시에 더 이상 VM의 백업을 사전 구성하지 않습니다. 이러한 변경에 따라 스케줄, 보존 기간, 중복 제거 사용, 모니터링 및 경보, 그리고 암호화 키 관리를 포함하여 백업 작업의 모든 측면에 대해 일맞은 구성을 보장할 수 있습니다. 또한 IBM CloudDriver VM은 더 이상 NSX 백업을 위한 지속적 파일 서버로서 구성되지 않습니다.
 
-사용자는 관리 인프라 및 워크로드의 백업과 가용성을 포함하여 모든 소프트웨어 컴포넌트의 구성, 관리 및 모니터링에 대한 책임이 있습니다. 자세한 정보는 [컴포넌트 백업](../archiref/solution/solution_backingup.html#backing-up-components)을 참조하십시오.
+사용자는 관리 인프라 및 워크로드의 백업과 가용성을 포함하여 모든 소프트웨어 컴포넌트의 구성, 관리 및 모니터링에 책임이 있습니다. 자세한 정보는 [컴포넌트 백업](../archiref/solution/solution_backingup.html#backing-up-components)을 참조하십시오.
 
-**참고:** 이러한 변경사항은 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 또는 Veeam on {{site.data.keyword.cloud_notm}} 서비스를 이미 설치한 V2.5 이전에 배치된 인스턴스에는 영향을 주지 않습니다.
+**참고:** 이 변경사항은 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 또는 Veeam on {{site.data.keyword.cloud_notm}} 서비스가 설치된 V2.5 전에 배치된 인스턴스에는 적용되지 않습니다.
 
 ## IBM CloudDriver 복원성
 
-V2.5 이상 릴리스에 배치되거나 이로 업그레이드된 인스턴스의 경우, IBM CloudDriver 컴포넌트는 더 이상 vSphere 클러스터 내에서 가상 머신(VM)으로서 구성되지 않습니다. 대신 이는 추가 노드, 클러스터 또는 서비스 배치 등의 오퍼레이션을 위한 최신 {{site.data.keyword.cloud_notm}} for VMware 코드로 필요에 따라 {{site.data.keyword.cloud_notm}} 인프라 VSI(Virtual Server Instance)로서 배치됩니다. 또한 IBM CloudDriver의 공용 네트워크에 대한 아웃바운드 통신을 허용하는 관리 NSX Edge Services Gateway(ESG) 방화벽 및 네트워크 주소 변환(NAT) 규칙이 제거될 수 있도록 하기 위해, IBM CloudDriver는 {{site.data.keyword.cloud_notm}} 사설 네트워크를 사용하여 {{site.data.keyword.cloud_notm}} 관리 플레인과 통신하도록 변경되었습니다.
+V2.5 이상 릴리스에 배치되거나 이로 업그레이드된 인스턴스의 경우, IBM CloudDriver 컴포넌트는 더 이상 vSphere 클러스터 내에서 가상 머신(VM)으로서 구성되지 않습니다. 대신 이는 추가 노드, 클러스터 또는 서비스 배치 등의 오퍼레이션을 위한 최신 {{site.data.keyword.cloud_notm}} for VMware 코드로 필요에 따라 {{site.data.keyword.cloud_notm}} 인프라 VSI(Virtual Server Instance)로서 배치됩니다. 또한 IBM CloudDriver는 {{site.data.keyword.cloud_notm}} 사설 네트워크를 사용하여 {{site.data.keyword.cloud_notm}} 관리 플레인과 통신하도록 변경됩니다. 이 변경에 따라 IBM CloudDriver의 공용 네트워크에 대한 아웃바운드 통신을 허용하는 관리 NSX Edge Services Gateway(ESG) 방화벽 및 네트워크 주소 변환(NAT) 규칙이 제거됩니다.
 
 F5 on {{site.data.keyword.cloud_notm}}, FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 및 Zerto on {{site.data.keyword.cloud_notm}} 등의 일부 추가 기능 서비스가 여전히 공용 네트워크 액세스를 필요로 하므로, 관리 NSX ESG는 모든 인스턴스에 계속 배치되어 있습니다.
 
 ## IAM-사용 사용자 및 액세스 관리
 
 V2.5 릴리스 이상에서 {{site.data.keyword.vmwaresolutions_short}}는 {{site.data.keyword.cloud_notm}} 계정 내에서 사용자 계정과 사용자 액세스를 관리하기 위한 통합 접근 방법을 제공하기 위해 IBM IAM(Identity and Access Management)과 통합되어 있습니다. 이로 인해,
-* 이제 협업을 위해 {{site.data.keyword.cloud_notm}} 계정에 복수의 사용자를 추가할 수 있으며, 이에 서로 다른 플랫폼 액세스 역할을 지정하여 계정에서 프로비저닝되는 서비스와 리소스에 대한 해당 액세스를 관리할 수 있습니다.  
+* 이제 협업을 위해 {{site.data.keyword.cloud_notm}} 계정에 복수의 사용자를 추가할 수 있으며, 이러한 사용자에게 서로 다른 플랫폼 액세스 역할을 지정하여 계정에서 프로비저닝되는 서비스와 리소스에 대한 해당 액세스를 관리할 수 있습니다.  
 * V2.5 이상 릴리스에 배치된 인스턴스는 인스턴스 주문 시에 사용 중인 사용자 계정에 자동으로 링크됩니다.
 * V2.4 이하 릴리스에 배치된 인스턴스의 경우, 이를 지정된 {{site.data.keyword.cloud_notm}} 계정으로 마이그레이션한 후에 역시 IAM을 사용하여 이를 관리할 수 있습니다.
 
@@ -68,11 +68,19 @@ Cloud Foundation 인스턴스의 경우에는 **root** 호스트 사용자 ID �
 
 ## 추가 서비스에 대한 업데이트
 
+### IBM Cloud Private Hosted(2018년 8월 30일에 업데이트됨)
+
+이제 {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 서비스는 V2.5 이상 릴리스에 배치된(또는 업그레이드된) vCenter Server 인스턴스에서 사용할 수 있습니다.
+
+{{site.data.keyword.cloud_notm}} Private Hosted는 마이크로서비스 및 컨테이너의 기능을 {{site.data.keyword.cloud_notm}}의 VMware 환경에 제공합니다. 이 서비스를 사용하면 익숙한 동일 VMware 및 {{site.data.keyword.cloud_notm}} Private 운영 모델과 도구를 온프레미스에서 {{site.data.keyword.cloud_notm}}로 확장할 수 있습니다.
+
+vCenter Server 인스턴스를 주문한 후 이 서비스를 요청할 수 있습니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} Private Hosted 요청](../services/managing_icp.html)을 참조하십시오.
+
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-V2.5 릴리스 이상에서 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 서비스는 우수 사례를 기반으로 2개의 개별 VM으로서 배치됩니다. 하나의 VM은 Spectrum Protect Plus 서버를 실행하며 다른 하나의 VM은 vSnap 서버와 VADP 프록시를 실행합니다.
+V2.5 릴리스부터는 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 서비스가 우수 사례를 기반으로 2개의 개별 VM으로서 배치됩니다. 하나의 VM은 IBM Spectrum Protect Plus 서버를 실행하며 다른 하나의 VM은 vSnap 서버와 VADP 프록시를 실행합니다.
 
-이제 최대 10개의 백업 데이터 저장소를 주문할 수 있으며, 120TB의 백업 스토리지를 허용할 수 있습니다. vSnap 및 VADP VM은 [IBM Spectrum Protect Plus 블루프린트](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)의 정보에 따라, 그리고 선택된 백업 스토리지 크기에 의존하여 크기가 지정됩니다.
+이제 최대 10개의 백업 데이터 저장소를 주문할 수 있으며, 최대 120TB의 백업 스토리지를 허용할 수 있습니다. vSnap 및 VADP VM은 [IBM Spectrum Protect Plus 블루프린트](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)의 정보에 따라, 그리고 선택된 백업 스토리지 크기에 의존하여 크기가 지정됩니다.
 
 ### KMIP for VMware on IBM Cloud
 
