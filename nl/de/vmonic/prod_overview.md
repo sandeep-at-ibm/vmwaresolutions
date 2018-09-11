@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -19,7 +19,7 @@ Sie können Ihre virtuellen VMware-Umgebungen ohne großen Aufwand bereitstellen
 {{site.data.keyword.vmwaresolutions_short}} bietet die folgenden Hauptvorteile:
 * **Globale Reichweite**: Sie können Ihren Hybrid-Cloud-Speicherbedarf in bis zu 30 auf Unternehmen abgestimmten {{site.data.keyword.CloudDataCents_notm}} auf der ganzen Welt erweitern.
 * **Nahtlose Integration**: Durch die {{site.data.keyword.cloud_notm}}-Infrastruktur erreichen Sie eine nahtlose Integration in der gesamten Hybrid-Cloud.
-* **Schnelle Bereitstellung**: Die Bereitstellung und Konfiguration der VMware-Umgebung erfolgt automatisiert, wodurch Sie eine auf Unternehmen abgestimmte VMware-Umgebung mit bedarfsgerechten {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}}-Instanzen und virtuellen Servern schnell bereitstellen können.
+* **Schnelle Bereitstellung**: Die Bereitstellung und Konfiguration der VMware-Umgebung erfolgt automatisiert, wodurch Sie eine auf Unternehmen abgestimmte VMware-Umgebung mit bedarfsgerechten {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}}-Instanzen und Virtual Server-Instanzen schnell bereitstellen können.
 * **Vereinfachung**: Sie können eine VMware-Cloudplattform nutzen, ohne die zugrunde liegende Infrastruktur (Rechenressourcen, Speicher und Netzbetrieb) sowie die Softwarelizenzen ermitteln, beschaffen, bereitstellen und verwalten zu müssen.
 * **Flexible Erweiterung und Verringerung**: Sie können Ihre VMware-Workloads auf Ihre Geschäftsanforderungen abgestimmt ohne großen Aufwand erweitern und verringern.
 * **Einheitliche Managementkonsole**: Die Bereitstellung von, der Zugriff auf und das Management der VMware-Umgebungen in der {{site.data.keyword.cloud_notm}} erfolgt über eine einzige Konsole.
@@ -97,6 +97,12 @@ Weitere Informationen enthält der Abschnitt [Übersicht über HyTrust CloudCont
 Der Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" bietet eine starke Verschlüsselung mit integriertem Schlüsselmanagement, um Workloads über ihren gesamten Lebenszyklus hinweg zu sichern. Der Service kann die Verschlüsselung sowohl auf Betriebssystemebene als auch auf Datenebene bereitstellen. Dies bedeutet, dass alle Verzeichnisse, Ordner oder Dateien innerhalb einer Workload ver- und entschlüsselt werden können.
 
 Weitere Informationen enthält der Abschnitt [Übersicht über HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html).
+
+### IBM Cloud Private Hosted
+
+Der Service "{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}}" stellt die Leistungsfähigkeit von Mikroservices und Containern in Ihrer VMware-Umgebung unter {{site.data.keyword.cloud_notm}} zur Verfügung. Mit diesem Service können Sie den Einsatz des bereits vertrauten VMware- und {{site.data.keyword.cloud_notm}} Private-Betriebsmodells und der zugehörigen Tools von Ihrem lokalen Standort (On-Premises) auf {{site.data.keyword.cloud_notm}}-Umgebungen ausdehnen.
+
+Weitere Informationen zu diesem Thema finden Sie in [{{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html).
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 

@@ -93,7 +93,8 @@ Ja. Sobald Sie weitere ESXi-Server zu einer bereitgestellten Instanz hinzufügen
 Führen Sie die folgenden Schritte aus, um die über Ihren Lizenzschlüssel verfügbare CPU-Anzahl zu ermitteln:
 1. Rufen Sie die Seite **Bereitgestellte Instanzen** auf.
 2. Suchen Sie die Instanz und klicken Sie auf die Instanz.
-3. Klicken Sie auf der Registerkarte **Infrastruktur** auf den Cluster, für den die Lizenzkapazität geprüft werden soll. Die Anzahl der verfügbaren CPUs ist in der Tabelle **Vom Benutzer bereitgestellte Lizenz** angegeben.
+3. Klicken Sie auf der Registerkarte **Infrastruktur** auf den Cluster, für den die Lizenzkapazität geprüft werden soll. 
+   Die Anzahl der verfügbaren CPUs ist in der Tabelle **Vom Benutzer bereitgestellte Lizenz** angegeben.
 
 ## Stellt IBM Unterstützung bereit, wenn ich die BYOL-Lizenzierungsoption auswähle?
 
