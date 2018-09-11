@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-30"
 
 ---
 
 # 2.5 版的版本注意事項
 
-此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之其他要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之更多要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Spectre 及 Meltdown 補救
 
@@ -28,17 +28,17 @@ lastupdated: "2018-08-17"
 
 ## 移除預設備份配置
 
-{{site.data.keyword.vmwaresolutions_short}} 提供兩個適用於備份的整合式附加程式服務：IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 及 Veeam on {{site.data.keyword.cloud_notm}}。這些服務可讓您規劃及提供管理基礎架構與工作負載的回復。此外，IBM Resiliency Services 還會提供 Veeam 備份的受管理服務。
+{{site.data.keyword.vmwaresolutions_short}} 提供兩個適用於備份的整合式附加程式服務：IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 及 Veeam on {{site.data.keyword.cloud_notm}}。使用這些服務，您可以規劃及提供管理基礎架構與工作負載的回復。此外，IBM Resiliency Services 還會提供 Veeam 備份的受管理服務。
 
 從 2.5 版開始，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 及 Veeam on {{site.data.keyword.cloud_notm}} 服務，在部署時將不再預先配置任何 VM 的備份。此變更容許您確保適當地配置備份工作的所有層面，包括排程、保留期間、使用刪除重複、監視和警示，以及加密金鑰的管理。此外，IBM CloudDriver VM 不再配置為 NSX 備份的持續性檔案伺服器。
 
 您負責配置、管理及監視所有軟體元件（包括管理基礎架構及工作負載的備份和可用性）。如需相關資訊，請參閱[備份元件](../archiref/solution/solution_backingup.html#backing-up-components)。
 
-**附註：**此變更不會影響 2.5 版之前所部署並已安裝 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 服務的實例。
+**附註：**此變更不會影響 2.5 版之前所部署並且已安裝 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 服務的實例。
 
 ## IBM CloudDriver 備援
 
-對於 2.5 版或更新版本中部署的實例或升級至 2.5 版或更新版本的實例，IBM CloudDriver 元件將不再配置為 vSphere 叢集內的虛擬機器 (VM)。相反地，它會視需要部署為 {{site.data.keyword.cloud_notm}} 基礎架構虛擬伺服器實例 (VSI)，並使用最新的 {{site.data.keyword.cloud_notm}} for VMware 程式碼來進行部署其他節點、叢集或服務這類作業。此外，IBM CloudDriver 已變更為使用 {{site.data.keyword.cloud_notm}} 專用網路與 {{site.data.keyword.cloud_notm}} 管理平面通訊，以移除允許 IBM CloudDriver 往外與公用網路通訊的管理 NSX Edge Services Gateway (ESG) 防火牆及網路位址轉譯 (NAT) 規則。
+對於 2.5 版或更新版本中部署的實例或升級至 2.5 版或更新版本的實例，IBM CloudDriver 元件將不再配置為 vSphere 叢集內的虛擬機器 (VM)。相反地，它會視需要部署為 {{site.data.keyword.cloud_notm}} 基礎架構虛擬伺服器實例 (VSI)，並使用最新的 {{site.data.keyword.cloud_notm}} for VMware 程式碼來進行部署更多節點、叢集或服務這類作業。此外，IBM CloudDriver 已變更為使用 {{site.data.keyword.cloud_notm}} 專用網路與 {{site.data.keyword.cloud_notm}} 管理平面通訊。由於此項變更，已移除允許 IBM CloudDriver 往外與公用網路通訊的管理 NSX Edge Services Gateway (ESG) 防火牆及網路位址轉譯 (NAT) 規則。
 
 部分附加程式服務（例如 F5 on {{site.data.keyword.cloud_notm}}、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 及 Zerto on {{site.data.keyword.cloud_notm}}）仍然需要公用網路存取權，因此管理 NSX ESG 還是會部署在所有實例中。
 
@@ -68,11 +68,19 @@ lastupdated: "2018-08-17"
 
 ## 附加服務的更新項目
 
+### IBM Cloud Private Hosted（2018 年 8 月 30 日更新）
+
+{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 服務現在可用於部署在（或升級至）2.5 版或更新版本的 vCenter Server 實例。
+
+{{site.data.keyword.cloud_notm}} Private Hosted 為您在 {{site.data.keyword.cloud_notm}} 上的 VMware 環境帶來微服務及容器的功能。使用此服務，您可以將熟悉的相同 VMware 與 {{site.data.keyword.cloud_notm}} Private 作業模型和工具，從內部部署延伸到 {{site.data.keyword.cloud_notm}}。
+
+訂購 vCenter Server 實例之後便可以要求此服務。如需相關資訊，請參閱[要求 {{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html)。
+
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-從 2.5 版開始，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服務會根據最佳作法部署為兩部不同的 VM，其中一部 VM 執行 Spectrum Protect Plus 伺服器，另一部 VM 執行 vSnap 伺服器及 VADP Proxy。
+從 2.5 版開始，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服務會根據最佳作法部署為兩部不同的 VM，其中一部 VM 執行 IBM Spectrum Protect Plus 伺服器，另一部 VM 執行 vSnap 伺服器及 VADP Proxy。
 
-您現在最多可以訂購十個備份資料儲存庫，而且最多容許 120 TB 的備份儲存空間。根據您選取的備份儲存空間大小以及根據 [IBM Spectrum Protect Plus 藍圖](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)中的資訊，來調整 vSnap 及 VADP VM 的大小。
+您現在最多可以訂購 10 個備份資料儲存庫，而且最多容許 120 TB 的備份儲存空間。根據您選取的備份儲存空間大小以及根據 [IBM Spectrum Protect Plus 藍圖](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)中的資訊，來調整 vSnap 及 VADP VM 的大小。
 
 ### KMIP for VMware on IBM Cloud
 
