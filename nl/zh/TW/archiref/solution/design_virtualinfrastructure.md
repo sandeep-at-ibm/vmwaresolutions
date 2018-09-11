@@ -108,7 +108,7 @@ vSAN 設定的設定是根據在 {{site.data.keyword.cloud_notm}} 內部署 VMwa
 
 網路虛擬化提供存在於虛擬層內的網路套版。網路虛擬化提供具有快速佈建、部署、重新配置及毀損隨需應變虛擬網路這類特性的架構。此設計使用 vSphere Distributed Switch (VDS) 及 VMware NSX for vSphere 來實作虛擬網路。
 
-在此設計中，NSX Manager 部署於起始叢集中。NSX Manager 會獲指派專用可攜式位址區塊中 VLAN 支援的 IP 位址，這是指定給管理元件並已配置[常見服務設計](design_commonservice.html)中所討論的 DNS 及 NTP 伺服器。NSX Manager 會使用表 2 所列的規格進行安裝。
+在此設計中，NSX Manager 部署於起始叢集裡。NSX Manager 會獲指派專用可攜式位址區塊中 VLAN 支援的 IP 位址，這是指定給管理元件並已配置[常見服務設計](design_commonservice.html)中所討論的 DNS 及 NTP 伺服器。NSX Manager 會使用表 2 所列的規格進行安裝。
 
 表 2. NSX Manager 屬性
 
@@ -131,7 +131,7 @@ vSAN 設定的設定是根據在 {{site.data.keyword.cloud_notm}} 內部署 VMwa
 
 除了控制器之外，{{site.data.keyword.cloud_notm}} 自動化還會準備具有 NSX VIBS 的已部署 vSphere 主機，以透過「VXLAN 通道端點 (VTEP)」來使用虛擬化網路。VTEP 會獲指派「專用 A」可攜式 IP 位址範圍中 VLAN 支援的 IP 位址，這是指定給[實體基礎架構設計](design_physicalinfrastructure.html)之*表 1. VLAN 及子網路摘要* 中所列的 VTEP。VXLAN 資料流量位於未標記的 VLAN 上，並指派給專用 vSphere Distributed Switch (VDS)。
 
-隨後，會指派區段 ID 儲存區，並將叢集中的主機新增至傳輸區域。傳輸區域中只會使用單點播送，因為 {{site.data.keyword.cloud_notm}} 內未配置「網際網路群組管理通訊協定 (IGMP)」探查。
+隨後，會指派區段 ID 儲存區，並將叢集裡的主機新增至傳輸區域。傳輸區域中只會使用單點播送，因為 {{site.data.keyword.cloud_notm}} 內未配置「網際網路群組管理通訊協定 (IGMP)」探查。
 
 之後，即會部署 NSX Edge Services Gateway 配對。無論如何，都會將一個閘道配對用於來自位於專用網路之自動化元件中的出埠資料流量。對於 vCenter Server，稱為客戶管理邊緣的第二個閘道已部署並配置公用網路的上行鏈路以及指派給專用網路的介面。如需已部署為解決方案一部分之 NSX Edge Services Gateway 的相關資訊，請參閱 [NSX Edge on 	{{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)。
 
@@ -139,7 +139,7 @@ vSAN 設定的設定是根據在 {{site.data.keyword.cloud_notm}} 內部署 VMwa
 
 ### 分散式交換器設計
 
-此設計使用最少數目的 vSphere Distributed Switch (VDS)。叢集中的主機已連接至公用及專用網路。主機已配置兩台分散式虛擬交換器。兩台交換器的使用遵循區隔公用與專用網路之 {{site.data.keyword.cloud_notm}} 網路的作法。下圖顯示 VDS 設計。
+此設計使用最少數目的 vSphere Distributed Switch (VDS)。叢集裡的主機已連接至公用及專用網路。主機已配置兩台分散式虛擬交換器。兩台交換器的使用遵循區隔公用與專用網路之 {{site.data.keyword.cloud_notm}} 網路的作法。下圖顯示 VDS 設計。
 
 圖 3. 分散式交換器設計
 

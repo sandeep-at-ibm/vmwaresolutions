@@ -18,7 +18,7 @@ lastupdated: "2018-08-14"
 
 ### Microsoft Active Directory
 
-依預設，單一 Active Directory VSI 會部署至 {{site.data.keyword.cloud}} 基礎架構。此設計還提供選項，可將兩部高可用性 Microsoft Active Directory 伺服器部署為管理叢集中的專用 Windows Server VM。
+依預設，單一 Active Directory VSI 會部署至 {{site.data.keyword.cloud}} 基礎架構。此設計還提供選項，可將兩部高可用性 Microsoft Active Directory 伺服器部署為管理叢集裡的專用 Windows Server VM。
 
 **附註**：如果您選擇此選項，則負責提供 Microsoft 授權及啟動。
 
