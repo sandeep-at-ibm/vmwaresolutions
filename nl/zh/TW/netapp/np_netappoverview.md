@@ -43,7 +43,7 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目能提供儲
 
 這層包含 vCenter Server 虛擬應用裝置、NSX Manager、兩個 NSX ESG、3 個 NSX Controller、Platform Services Controller (PSC) 虛擬應用裝置、vCenter Server Appliance (vCSA) 及 IBM CloudDriver 虛擬伺服器實例 (VSI)。
 
-NetApp ONTAP Select 是在 VMware 叢集中執行，並將主機上的本端儲存空間虛擬化。NetApp ONTAP Select 部署在專用模型中，其中其他工作負載預期不會與其共用叢集。因此，NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目的硬體配置僅根據 NetApp ONTAP Select 的需求調整大小。
+NetApp ONTAP Select 是在 VMware 叢集裡執行，並將主機上的本端儲存空間虛擬化。NetApp ONTAP Select 部署在專用模型中，其中其他工作負載預期不會與其共用叢集。因此，NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目的硬體配置僅根據 NetApp ONTAP Select 的需求調整大小。
 
 ## NetApp ONTAP Select 實例的技術規格
 
