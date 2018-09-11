@@ -24,7 +24,7 @@ Se stai eseguendo la replica tra diverse istanze di {{site.data.keyword.cloud_no
 
 Poiché la replica di Zerto non supporta l'attraversamento NAT (Network Address Translation), stabilire la connettività tra l'istanza di {{site.data.keyword.cloud_notm}} Zerto e il tuo data center potrebbe richiedere la personalizzazione di rotte sui dispositivi Zerto Virtual Manager (ZVM) o Zerto Virtual Replication Appliance (VRA) su entrambi i lati e potrebbe richiedere anche un tunneling sicuro tra i siti. Quando configuri o riconfiguri le rotte sui dispositivi ZVM, devi assicurarti che tutti questi dispositivi possano connettersi correttamente a `zerto.com` per la segnalazione di utilizzo. Puoi verificare questa connessione aprendo una sessione del browser in `https://www.zerto.com` dal dispositivo ZVM.
 
-**Nota**: il gateway dei servizi edge (ESG) VMware NSX di gestione delle istanze Cloud Foundation e vCenter Server su {{site.data.keyword.cloud_notm}} è preconfigurato per consentire le comunicazioni HTTPS in uscita (porta TCP 443) originate da ZVM.
+**Nota**: l'ESG (Edge Services Gateway) VMware NSX di gestione delle istanze Cloud Foundation e vCenter Server on {{site.data.keyword.cloud_notm}} è preconfigurato per consentire le comunicazioni HTTPS in uscita (porta TCP 443) originate da ZVM.
 
 ## Aggiornamento di Zerto Virtual Replication
 

@@ -93,7 +93,7 @@ Sì. Quando aggiungi più server ESXi a un'istanza distribuita, la capacità del
 Per trovare il numero di CPU disponibili nella tua chiave di licenza, completa la seguente procedura:
 1. Vai alla pagina **Istanze distribuite**.
 2. Individua e fai clic sull'istanza.
-3. Nella scheda **Infrastruttura**, fai clic sul cluster per il quale vuoi controllare la capacità della licenza.
+3. Nella scheda **Infrastruttura**, fai clic sul cluster per il quale vuoi controllare la capacità della licenza. 
    Il numero di CPU disponibili è elencato nella tabella **Licenza fornita dall'utente**.
 
 ## IBM fornisce supporto se seleziono l'opzione di licenza BYOL?

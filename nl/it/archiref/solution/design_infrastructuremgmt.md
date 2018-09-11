@@ -10,7 +10,7 @@ lastupdated: "2018-07-13"
 
 # Progettazione della gestione dell'infrastruttura
 
-La gestione dell'infrastruttura si riferisce ai componenti che gestiscono l'infrastruttura VMware. Questa progettazione utilizza una singola istanza PSC (Platform Services Controller) esterna e una singola istanza vCenter Server:
+La gestione dell'infrastruttura si riferisce ai componenti che stanno gestendo l'infrastruttura VMware. Questa progettazione utilizza una singola istanza PSC (Platform Services Controller) esterna e una singola istanza vCenter Server:
 * vCenter Server è la piattaforma centralizzata per la gestione degli ambienti vSphere ed è uno dei componenti fondamentali di questa soluzione.
 * Il PSC viene utilizzato in questa soluzione per fornire una serie di servizi di infrastruttura tra cui VMware vCenter Single Sign On, il servizio di licenza, il servizio di ricerca e VMware Certificate Authority.
 

@@ -14,7 +14,7 @@ Esamina l'architettura e i componenti della distribuzione NetApp ONTAP Select on
 
 ## Architettura di NetApp ONTAP Select
 
-L'offerta NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} complementa la distribuzione di vCenter Server fornendo servizi di virtualizzazione dell'archiviazione.
+L'offerta NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} integra la distribuzione di vCenter Server fornendo servizi di virtualizzazione dell'archiviazione.
 
 Il seguente grafico illustra l'architettura generale della distribuzione NetApp ONTAP Select su vCenter Server.
 

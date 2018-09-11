@@ -80,7 +80,7 @@ Per importanti considerazioni prima di selezionare le VLAN esistenti, vedi le se
 
 La release corrente applica l'aggiornamento del componente VMware NSX per vSphere 6.3.5. Per ulteriori informazioni sui componenti, vedi [Distinta base di vCenter Server](../vcenter/vc_bom.html).
 
-Per le istanze VMware vCenter Server distribuite nelle release della V2.2 o successive, le impostazioni di configurazione di NSX e del gruppo di porte sono state modificate. Per ulteriori informazioni, vedi la sezione *Impostazioni di configurazione di NSX e del gruppo di porte* in  [Distinta base del software vCenter Server](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
+Per le istanze VMware vCenter Server distribuite nelle release della V2.2 o successive, le impostazioni di configurazione di NSX e del gruppo di porte sono state modificate. Per ulteriori informazioni, vedi la sezione *Impostazioni di configurazione di NSX e del gruppo di porte* in [Distinta base del software vCenter Server](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
 
 ### Nuova opzione per la configurazione DNS
 

@@ -90,7 +90,7 @@ Tabella 4. Impostazioni di configurazione di NSX e del gruppo di porte per le is
 
 ## Impostazioni di configurazione MTU della rete
 
-Il cluster vSphere utilizza due VDS (Virtual Distributed Switches) vSphere, uno per la connettività di rete pubblica e l'altro per la connettività di rete privata.
+Il cluster vSphere utilizza due vDS (vSphere Distributed Switch), uno per la connettività di rete pubblica e l'altro per la connettività di rete privata.
 
 Le connessioni alla rete privata sono configurate per utilizzare la MTU (Maximum Transmission Unit) dei frame Jumbo con la dimensione di 9000, che migliora le prestazioni per i trasferimenti di dati di grandi dimensioni come l'archiviazione e VMware vMotion. Questa è la MTU massima consentita in VMware e da {{site.data.keyword.cloud_notm}}.
 
