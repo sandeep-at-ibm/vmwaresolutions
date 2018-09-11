@@ -50,7 +50,7 @@ vCenter Server 인스턴스의 경우:
 추가 사용자 워크로드를 지원하려면 다음으로 환경을 확장할 수 있습니다.  
 * 기존 클러스터의 추가 컴퓨팅 호스트 배치
 * 동일한 vCenter Server Appliance에서 관리하는 추가 클러스터 배치
-* 자체 vCenter Server Appliance를 사용하여 새 vCenter Server 또는 Cloud Foundation 인스턴스 배치
+* 고유의 vCenter Server Appliance를 사용하여 새 vCenter Server 또는 Cloud Foundation 인스턴스 배치
 
 클러스터에 대한 자세한 정보는 [VMware 클러스터 솔루션 아키텍처를 실행하는 {{site.data.keyword.cloud_notm}}
 문서](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf)를 참조하십시오.
@@ -114,14 +114,14 @@ vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware 솔루션 배�
 
 표 2. NSX Manager 속성
 
-| 속성            | 스펙          |
+| 속성       | 스펙 |
 |:--------------- |:------------- |
 | NSX Manager     | 가상 어플라이언스 |
-| vCPU 수         | 4개 |
+| vCPU 수 | 4개 |
 | 메모리          | 16GB |
-| 디스크          | 관리 NFS 공유의 60GB |
-| 디스크 유형     | 씬 프로비저닝됨 |
-| 네트워크        | 관리 컴포넌트용으로 지정된 사설 a 포터블 |
+| 디스크            | 관리 NFS 공유의 60GB |
+| 디스크 유형       | 씬 프로비저닝됨 |
+| 네트워크         | 관리 컴포넌트용으로 지정된 사설 a 포터블 |
 
 다음 그림에서는 아키텍처의 기타 컴포넌트와 연관된 NSX Manager의 배치를 보여줍니다.
 
@@ -158,7 +158,7 @@ vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware 솔루션 배�
 |VLAN  | 대상 | 트래픽 유형 |
 |:----- |:----------- |:------------ |
 |VLAN1 | 공용      |인터넷 액세스를 위해 사용 가능 |
-|VLAN2 | 사설 a | ESXi 관리, 관리, VXLAN(VTEP) |
+|VLAN2 | 사설 a   | ESXi 관리, 관리, VXLAN(VTEP) |
 |VLAN3 | 사설 B   | vSAN, NFS, vMotion |
 
 워크로드의 트래픽이 VXLAN-지원 논리 스위치에서 이동합니다.

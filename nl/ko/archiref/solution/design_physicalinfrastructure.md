@@ -166,6 +166,6 @@ vSphere ESXi 하이퍼바이저는 지속적 위치에 설치되도록 디자인
 ### 관련 링크
 
 * [Cloud Foundation 명세서](../../sddc/sd_bom.html)
-* [vCenter Server 소프트웨어 명세서](../../vcenter/vc_bom.html)
+* [vCenter Server 명세서](../../vcenter/vc_bom.html)
 * [공유 스토리지 아키텍처](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
 * [NetApp ONTAP Select 아키텍처](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)
