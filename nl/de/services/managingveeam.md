@@ -42,7 +42,7 @@ Sie sind dafür verantwortlich, dass sich Veeam jeweils auf dem aktuellsten Vers
 ## Veeam-Lizenzen aktualisieren
 
 Führen Sie zum manuellen Aktualisieren Ihrer Veeam-Lizenz bei Bedarf die folgenden Schritte aus:
-1. [Greifen Sie mit RDP auf die Konsole von Veeam Backup and Replication zu](../services/managingveeam.html#accessing-the-veeam-console-by-using-rdp). 
+1. [Greifen Sie mit RDP auf die Konsole von Veeam Backup and Replication zu](../services/managingveeam.html#accessing-the-veeam-console-by-using-rdp).
 2. Klicken Sie im Hauptmenü auf die Lizenzoption****.
 3. Klicken Sie im Fenster mit den Lizenzinformationen**** auf die Schaltfläche für sofortige Aktualisierung****.
 4. Statistikdaten zum manuellen Prozess für die Lizenzaktualisierung werden angezeigt, werden Sie die Verlaufsansicht**** aufrufen und anschließend auf den Knoten **System** klicken.

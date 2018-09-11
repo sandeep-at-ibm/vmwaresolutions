@@ -10,7 +10,7 @@ lastupdated: "2018-08-16"
 
 # Übersicht über Zerto on IBM Cloud
 
-Der Service "Zerto on {{site.data.keyword.cloud}}" stellt Replikations- und Disaster-Recovery-Funktionalität bereit. Diese Funktionalität kann in die Bereitstellungsangebote integriert werden, um Daten in Ihrer virtuellen VMware-Umgebung in {{site.data.keyword.cloud_notm}} zu schützen und wiederherzustellen. 
+Der Service "Zerto on {{site.data.keyword.cloud}}" stellt Replikations- und Disaster-Recovery-Funktionalität bereit. Diese Funktionalität kann in die Bereitstellungsangebote integriert werden, um Daten in Ihrer virtuellen VMware-Umgebung in {{site.data.keyword.cloud_notm}} zu schützen und wiederherzustellen.
 
 ## Technische Spezifikationen für Zerto on IBM Cloud
 
