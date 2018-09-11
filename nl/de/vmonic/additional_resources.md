@@ -10,7 +10,7 @@ lastupdated: "2018-08-17"
 
 # Zusätzliche Ressourcen
 
-Ziehen Sie weitere Ressourcen zurate, die Ihren Einstieg in das Produkt beschleunigen können. Folgende Ressourcen stehen zur Verfügung: 
+Ziehen Sie weitere Ressourcen zurate, die Ihren Einstieg in das Produkt beschleunigen können. Folgende Ressourcen stehen zur Verfügung:
 * Referenzinformationen zur Architektur
 * Videos
 * Demonstrationen
@@ -24,7 +24,7 @@ Ziehen Sie weitere Ressourcen zurate, die Ihren Einstieg in das Produkt beschleu
 
 ## Plattformerweiterungen
 
-Informieren Sie sich über die Architektur der [Erweiterungen für die Virtualisierungsplattform](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions), z. B.: 
+Informieren Sie sich über die Architektur der [Erweiterungen für die Virtualisierungsplattform](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions), z. B.:
 * FortiGate Security Appliance
 * {{site.data.keyword.cloud_notm}} File Storage und Block Storage
 * NSX Edge Services Gateway

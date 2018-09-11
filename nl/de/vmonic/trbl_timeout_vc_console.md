@@ -23,7 +23,7 @@ Führen Sie die folgenden Schritte aus, um das Problem zu untersuchen und zu lö
    1. Installieren Sie für Ihren Browser das Plug-in für Adobe Flash Player.   
    2. Erstellen Sie im {{site.data.keyword.slportal_full}} ein VPN-Kennwort.    
    3. Melden Sie sich beim VPN-Portal für das Rechenzentrum mit den VPN-Berechtigungsnachweisen der {{site.data.keyword.cloud_notm}}-Infrastruktur an.    
-   4. Fügen Sie die Zuordnung von IP-Adresse und Hostname für PSC (Platform Services Controller) in der Datei "hosts" im folgenden Format hinzu: 
+   4. Fügen Sie die Zuordnung von IP-Adresse und Hostname für PSC (Platform Services Controller) in der Datei "hosts" im folgenden Format hinzu:
 
       ```javascript
       IPAddress              HostName
