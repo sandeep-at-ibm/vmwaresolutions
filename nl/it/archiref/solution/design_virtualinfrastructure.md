@@ -167,7 +167,7 @@ Il cluster vSphere utilizza due VDS (vSphere Distributed Switch) configurati com
 
 Tabella 4. Switch distribuiti del cluster convergente
 
-| Nome VDS (vSphere <br>Distributed Switch | Funzione | Controllo <br>I/O di rete | Modalità di bilanciamento <br>del carico | Porte NIC<br>fisiche | MTU |
+| Nome VDS (vSphere<br>Distributed Switch) | Funzione | Controllo <br>I/O di rete | Modalità di bilanciamento <br>del carico | Porte NIC<br>fisiche | MTU |
 |:------------- |:------------- |:------------- |:------------- |:------------- |:------------- |
 | SDDC-Dswitch-Private | Gestione ESXi, vSAN, vSphere vMotion, VXLAN tunnel endpoint, NFS (VTEP) | Abilitato | Rotta basata sulla porta virtuale di origine con failover esplicito (vSAN, vMotion) (principale) | 2 | 9.000<br>(Frame Jumbo) |
 | SDDC-Dswitch-Public | Traffico di gestione esterno (nord-sud) | Abilitato | Rotta basata sulla porta virtuale di origine | 2 | 1.500<br>(predefinito) |
@@ -201,7 +201,7 @@ Tabella 7. Adattatori del kernel di VM del cluster convergente
 
 | VDS (vSphere Distributed Switch) | Scopo | Gruppo di porte connesse | Servizi abilitati | MTU |
 |:-------------------------- |:------- |:-------------------- |:---------------- |:--- |
-| SDDC-Dswitch-Private | Gestione | SDDC-DPortGroup-Mgmt | Traffico di gestione  | 1.500<br>(predefinito) |
+| SDDC-Dswitch-Private | Gestione | SDDC-DPortGroup-Mgmt | Traffico di gestione | 1.500<br>(predefinito) |
 | SDDC-Dswitch-Private | vMotion | SDDC-DPortGroup-vMotion | Traffico vMotion | 9.000 |
 | SDDC-Dswitch-Private | VTEP | *Generato automaticamente da NSX* | \- | 9.000 |
 | SDDC-Dswitch-Private | VSAN | SDDC-DPortGroup-VSAN | vSAN | 9.000 |
