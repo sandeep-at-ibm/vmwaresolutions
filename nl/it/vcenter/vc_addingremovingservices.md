@@ -57,7 +57,7 @@ Una volta completata correttamente l'installazione del servizio, riceverai una n
 
 ### Risultati della rimozione del servizio
 
-Dopo che la tua richiesta di rimozione del servizio viene accettata, lo stato del servizio viene modificato in  **In fase di rimozione**.
+Dopo che la tua richiesta di rimozione del servizio viene accettata, lo stato del servizio viene modificato in **In fase di rimozione**.
 
 Una volta completata correttamente la rimozione del servizio, riceverai una notifica via e-mail e il servizio verrà rimosso dalla pagina **Servizi** dell'istanza.
 
