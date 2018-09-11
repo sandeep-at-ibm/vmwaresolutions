@@ -54,7 +54,7 @@ IBM 비즈니스 파트너는 새 vSphere 클러스터를 주문할 때 컴포�
 
 **참고:** IBM 비즈니스 파트너의 경우 BYOL(Bring Your Own License) 옵션을 사용할 수 없습니다.
 
-### (비즈니스 파트너가 아닌 사용자만 해당) 개별 번들
+### (비즈니스 파트너가 아닌 사용자만 해당) 개별 컴포넌트
 
 비즈니스 파트너가 아닌 사용자는 자신의 vSphere 클러스터에 대해 다음 VMware 컴포넌트를 유연하게 선택할 수 있습니다.
 * VMware vSphere Enterprise Plus
@@ -66,7 +66,7 @@ IBM 비즈니스 파트너는 새 vSphere 클러스터를 주문할 때 컴포�
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**참고:** VMware vSphere Enterprise Plus 6.0을 주문할 때 VMware vSAN 컴포넌트를 사용할 수 없습니다. VMware vSphere Enterprise Plus 6.0에 고유한 라이센스를 사용할 계획인 경우 {{site.data.keyword.cloud_notm}} 인프라 티켓이 열립니다. 티켓은 주문된 {{site.data.keyword.baremetal_short}}의 vSphere 라이센스를 제공된 라이센스로 대체하도록 요청합니다.
+**참고:** VMware vSphere Enterprise Plus 6.0을 주문할 때 VMware vSAN 컴포넌트를 사용할 수 없습니다. VMware vSphere Enterprise Plus 6.0에 고유한 라이센스를 사용하려는 경우 사용자를 대신해 {{site.data.keyword.cloud_notm}} 인프라 티켓이 열립니다. 티켓은 주문된 {{site.data.keyword.baremetal_short}}의 vSphere 라이센스를 제공된 라이센스로 대체하도록 요청합니다.
 
 ### 라이센싱 옵션
 
@@ -84,7 +84,7 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 
 클러스터가 호스팅될 {{site.data.keyword.CloudDataCent_notm}}를 선택하십시오.
 
-**참고:** vSAN 컴포넌트를 선택하면 위치 목록이 SSL 가용성별로 필터링됩니다.
+**참고:** vSAN 컴포넌트를 선택하면 위치 목록이 SSD 가용성별로 필터링됩니다.
 
 ### CPU 모델 및 RAM
 
