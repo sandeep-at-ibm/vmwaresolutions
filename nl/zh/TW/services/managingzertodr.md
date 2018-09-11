@@ -32,7 +32,7 @@ lastupdated: "2018-07-24"
 
 ## 將 VRA 部署至新增的 ESXi 伺服器
 
-當您新增或移除實例主要叢集的 ESXi 伺服器時，會自動部署或移除 VRA。VRA 不會自動部署至實例次要叢集中的 ESXi 伺服器，但您可以從 Zerto Virtual Replication 主控台自行部署它們。
+當您新增或移除實例主要叢集的 ESXi 伺服器時，會自動部署或移除 VRA。VRA 不會自動部署至實例次要叢集裡的 ESXi 伺服器，但您可以從 Zerto Virtual Replication 主控台自行部署它們。
 
 ### 相關鏈結
 
