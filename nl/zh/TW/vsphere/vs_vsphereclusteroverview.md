@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-16"
 
 ---
 
 # VMware vSphere on IBM Cloud 概觀
 
-VMware vSphere on {{site.data.keyword.cloud}} 是 VMware 的簡化與最佳化訂購平台，可讓您根據所選取的 VMware 元件，自訂及訂購 VMware 相容硬體，以建置您自己的 IBM 代管 VMware 環境。
+VMware vSphere on {{site.data.keyword.cloud}} 是 VMware 的簡化與最佳化訂購平台。使用此平台，您可以根據所選取的 VMware 元件來自訂及訂購 VMware 相容硬體，以建置您自己的 IBM 代管 VMware 環境。
 
-{{site.data.keyword.vmwaresolutions_short}} 主控台會根據您選取的 VMWare 元件而自動過濾硬體。例如，在建立新的全快閃記憶體 VMware SAN 叢集時，只會呈現根據 [VMware 相容性手冊](https://www.vmware.com/resources/compatibility/search.php)所驗證的硬體，且至少需要 4 部 ESXi 伺服器。
+{{site.data.keyword.vmwaresolutions_short}} 主控台會根據您選取的 VMWare 元件而自動過濾硬體。例如，當您建立新的全快閃記憶體 VMware SAN 叢集時，只會呈現根據 [VMware 相容性手冊](https://www.vmware.com/resources/compatibility/search.php)所驗證的硬體。此外，至少需要四部 ESXi 伺服器。
 
-VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元件的安裝、配置及啟動自動化，它容許最大的彈性來設計及建置代管的 VMware 環境，同時納入 VMware 相容的硬體。
+VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元件的安裝、配置及啟動自動化。平台容許最大的彈性來設計及建置代管的 VMware 環境，同時納入 VMware 相容的硬體。
 
 使用此供應項目來建立 ESXi 伺服器的新叢集，或在 {{site.data.keyword.CloudDataCent_notm}} 中擴充 ESXi 伺服器的現有叢集。視您選取的 VMware 元件而定，您可以只從一部 ESXi 伺服器開始，稍後再視需要擴充叢集。
 
@@ -68,16 +68,16 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 
 ### 擴充節點的硬體
 
-一部具有 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的元件](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)中所呈現之硬體配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server。
+一部具有 [VMware vSphere on {{site.data.keyword.cloud_notm}} 叢集的技術規格](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中所呈現之硬體配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server。
 
 ### 擴充節點的網路
 
-一部具有 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的元件](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)中所呈現之網路配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server。
+一部具有 [VMware vSphere on {{site.data.keyword.cloud_notm}} 叢集的技術規格](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中所呈現之網路配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server。
 
 ### 擴充節點的 VMware 元件
 
 * 一部具有 VMware vSphere Enterprise Plus 6.0u2 或 6.5u1 的 {{site.data.keyword.cloud_notm}} Bare Metal Server。  
-* 在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的元件](../vsphere/vs_vsphereclusteroverview.html#components-of-vmware-vsphere-on-ibm-cloud)中所呈現的選用 VMWare 元件。
+* 在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 叢集的技術規格](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中所呈現的選用 VMWare 元件。
 
 **重要事項**：您只能從 {{site.data.keyword.slportal}} 管理 ESXi 伺服器、選用的 VMware 元件和其他已訂購及遞送至您的 {{site.data.keyword.cloud_notm}} 帳戶中的硬體 。在 {{site.data.keyword.vmwaresolutions_short}} 主控台中建立新的叢集之後，您可以回到主控台，利用已儲存的配置來擴充新的叢集。如需相關資訊，請參閱[擴充現有 vSphere 叢集](vs_scalingexistingclusters.html)。
 
