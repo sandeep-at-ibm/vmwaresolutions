@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -17,6 +17,7 @@ Sie können einen vorhandenen VMware vSphere-Cluster, den Sie bestellt oder gesp
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 *  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen](../vmonic/useraccount.html).
 *  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für vSphere-Cluster](vs_planning.html) vertraut gemacht.
+*  Sie wurden per E-Mail darüber informiert, dass der Cluster, den Sie skalieren möchten, zur Verwendung bereit ist.
 
 ## Vorgehensweise
 
@@ -33,6 +34,8 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 ### Ergebnisse
 
 Die Clusterskalierung wird automatisch gestartet. Sie erhalten eine E-Mail, in der die Bearbeitung der Bestellung bestätigt wird. Sobald der Cluster einsatzbereit ist, werden Sie per E-Mail benachrichtigt.
+
+Wenn der Cluster, den Sie skalieren wollen, nicht zur Verwendung bereit ist, könnte es bei der Prozedur zum Skalieren vorhandener Cluster zur Meldung eines Fehlers kommen.
 
 **Hinweis:** Die vSphere-Cluster werden (anders als die vCenter Server- und Cloud Foundation-Instanzen) auf der Seite **Bereitgestellte Instanzen** nicht angezeigt.
 

@@ -84,7 +84,7 @@ Falls Sie den Kauf einer Lizenz auswählen (vSphere Enterprise Plus und vCenter 
 
 Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} aus, das als Host für den Cluster verwendet werden soll.
 
-**Hinweis:** Falls Sie eine vSAN-Komponente auswählen, wird die Liste der Standorte nach SSD-Verfügbarkeit gefiltert. 
+**Hinweis:** Falls Sie eine vSAN-Komponente auswählen, wird die Liste der Standorte nach SSD-Verfügbarkeit gefiltert.
 
 ### CPU-Modell und RAM
 
@@ -200,7 +200,8 @@ Auf Basis Ihrer Konfigurationen werden die geschätzten Kosten sofort generiert 
 3. Geben Sie den Clusternamen ein.
 4. Wählen Sie die VMware-Komponenten aus:
   * Wenn Sie ein IBM Business Partner sind, wählen Sie ein Lizenzpaket sowie beliebige zusätzliche VMware-Komponenten aus.
-  * Wenn Sie nicht den Status eines IBM Business Partners haben, wählen Sie die Komponente und Edition (soweit verfügbar) aus und geben Sie die Lizenzoption an. Wenn Sie für VMware vSphere Enterprise Plus eine eigene Lizenz verwenden wollen (BYOL = Bring Your Own License), dann wird automatisch ein {{site.data.keyword.cloud_notm}}-Ticket für Sie geöffnet, um die standardmäßigen vSphere-Lizenzen für die bestellten {{site.data.keyword.baremetal_short}}-Instanzen anzufordern, die durch die von Ihnen bereitgestellten Lizenzen ersetzt werden sollen.   
+  * Wenn Sie nicht den Status eines IBM Business Partners haben, wählen Sie die Komponente und Edition (soweit verfügbar) aus und geben Sie die Lizenzoption an.
+  Wenn Sie für VMware vSphere Enterprise Plus eine eigene Lizenz verwenden wollen (BYOL = Bring Your Own License), dann wird automatisch ein {{site.data.keyword.cloud_notm}}-Ticket für Sie geöffnet, um die standardmäßigen vSphere-Lizenzen für die bestellten {{site.data.keyword.baremetal_short}}-Instanzen anzufordern, die durch die von Ihnen bereitgestellten Lizenzen ersetzt werden sollen.   
 
     **Wichtig:** Sie sind selbst für die Verfolgung des Tickets verantwortlich und müssen sicherzustellen, dass Sie die vSphere-Lizenz auf den neu bestellten ESXi-Servern ersetzen. Auf diese Weise wird die Stornierung der Gebühr für die zunächst in der {{site.data.keyword.cloud_notm}}-Infrastruktur bereitgestellte vSphere-Lizenz von der {{site.data.keyword.cloud_notm}}-Infrastruktur bewilligt. Informationen zum Ersetzen Ihrer ESXi-vSphere-Lizenz finden Sie auf der Seite [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
 
