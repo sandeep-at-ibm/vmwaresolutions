@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -17,6 +17,7 @@ Puoi ridimensionare un cluster VMware vSphere che hai ordinato o salvato nella c
 Assicurati di aver completato le seguenti attività:
 *  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](../vmonic/useraccount.html).
 *  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per i cluster vSphere](vs_planning.html).
+*  Sei stato informato per email che il cluster che vuoi ridimensionare è pronto per l'uso.
 
 ## Procedura
 
@@ -33,6 +34,8 @@ Assicurati di aver completato le seguenti attività:
 ### Risultati
 
 Il ridimensionamento del cluster inizia automaticamente. Riceverai un'e-mail di conferma che ti indica che l'ordine è in fase di elaborazione. Quando il cluster è pronto per l'uso, ti viene inviata una notifica via e-mail.
+
+Se il cluster che stai ridimensionando non è pronto per l'uso, la procedura di ridimensionamento del cluster esistente potrebbe segnalare un errore.
 
 **Nota:** i cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Istanze distribuite**.
 
