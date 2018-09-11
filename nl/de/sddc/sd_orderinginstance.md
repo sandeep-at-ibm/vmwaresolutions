@@ -183,7 +183,7 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
      1. Wählen Sie die primäre Instanz aus, mit der die sekundäre Instanz verbunden werden soll.
      2. Wenn für die primäre Instanz, die Sie ausgewählt haben, ein Upgrade auf das Release der Version 2.5 durchgeführt wurde oder die primäre Instanz in Version 2.4 und früheren Releases bereitgestellt oder aktualisiert wurde, überprüfen Sie das voreingetragene **** Administratorkennwort für die PSC in der primären Instanz, um sicherzustellen, dass es korrekt ist.
      
-         **Hinweis:** Das Feld für **** das Administratorkennwort für PSC in der primären Instanz ist nicht für primäre Instanzen verfügbar, die in Version 2.5 oder höheren Releases bereitgestellt werden.      
+         **Hinweis:** Das Feld für **** das Administratorkennwort für PSC in der primären Instanz ist nicht für primäre Instanzen verfügbar, die in Version 2.5 oder höheren Releases bereitgestellt werden.     
 5. Geben Sie die Lizenzeinstellungen für die Instanzkomponenten ein:
    *  Zur Verwendung der von IBM bereitgestellten Lizenzen müssen Sie **In Kauf einbeziehen** auswählen.
    *  Zur Verwendung einer eigenen Lizenz müssen Sie **Lizenz selbst bereitstellen** auswählen und den Lizenzschlüssel eingeben.  
