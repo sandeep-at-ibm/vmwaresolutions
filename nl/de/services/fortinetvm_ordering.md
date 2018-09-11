@@ -44,7 +44,7 @@ Geben Sie den Servicenamen ein.
 Das Lizenzmodell für FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} bietet die folgenden Optionen:
 <dl class="dl">
         <dt class="dt dlterm">Standard FW</dt>
-        <dd class="dd">Dieses Produktpaket beinhaltet Paketprüfung mit Zustandsüberwachung, VLAN-Schutz und erweiterte Protokollierung, Regeln für Firewalleingang/-ausgang, SSL/IPSec-VPN-Beendigung sowie unterbrechungsfreien Support. </dd>
+        <dd class="dd">Dieses Produktpaket beinhaltet Paketprüfung mit Zustandsüberwachung, VLAN-Schutz und erweiterte Protokollierung, Regeln für Firewalleingang/-ausgang, SSL/IPSec-VPN-Beendigung sowie unterbrechungsfreien Support.</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
         <dd class="dd">Dieses Produktpaket beinhaltet alle Firewall-Services des Pakets "Standard" sowie zusätzlich NGFW-IPS- und Webfilterung, Viren- und Spamschutz, IP- & Domänenreputation und zentrale FortiCare-Sicherheitsservices.</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>
