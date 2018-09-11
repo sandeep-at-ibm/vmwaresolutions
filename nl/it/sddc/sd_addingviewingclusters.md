@@ -56,7 +56,7 @@ Per l'impostazione **Personalizzato**, hai una serie di opzioni per il **Modello
 
 Tabella 1. Opzioni per i {{site.data.keyword.baremetal_short}} personalizzati
 
-| Opzioni del modello CPU        | Opzioni RAM   |
+| Opzioni del modello CPU   | Opzioni RAM   |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
