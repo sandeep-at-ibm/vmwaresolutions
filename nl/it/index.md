@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -57,7 +57,7 @@ Devi avere un account {{site.data.keyword.cloud_notm}} e un account dell'infrast
    </tr>
    <tr>
       <td>Account dell'infrastruttura IBM Cloud (SoftLayer)</td>
-      <td>L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) era precedentemente noto come account IBM SoftLayer.  Per ulteriori informazioni sui requisiti che l'account deve soddisfare, vedi [Requisiti per l'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](vmonic/slaccountrequirement.html). <br><br>Puoi collegare gli account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) agli account {{site.data.keyword.cloud_notm}} per utilizzare le risorse combinate IaaS (Infrastructure as a Service) e PaaS (Platform as a Service). Quindi, puoi accedere alle risorse IaaS e alle risorse PaaS effettuando un singolo accesso. Il collegamento dei tuoi account ti fornisce anche una singola fattura per tutte le risorse PaaS e IaaS che utilizzi.<ul><li>Se non disponi di un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), richiedine uno seguendo la procedura in [Registrazione di un account dell'infrastruttura IBM Cloud (SoftLayer)](vmonic/signing_softlayer_account.html) e quindi collega il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) al tuo account {{site.data.keyword.cloud_notm}} seguendo la procedura in [Collegamento degli account ID IBM](https://console.bluemix.net/docs/account/softlayerlink.html).</li><li>Se hai un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), puoi collegarlo al tuo account {{site.data.keyword.cloud_notm}} seguendo la procedura descritta in [Collegamento degli account ID IBM](https://console.bluemix.net/docs/account/softlayerlink.html).</li></ul></td>
+      <td>L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) era precedentemente noto come account IBM SoftLayer.  Per ulteriori informazioni sui requisiti che l'account deve soddisfare, vedi [Requisiti per l'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](vmonic/slaccountrequirement.html).<br><br>Puoi collegare gli account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) agli account {{site.data.keyword.cloud_notm}} per utilizzare le risorse combinate IaaS (Infrastructure as a Service) e PaaS (Platform as a Service). Quindi, puoi accedere alle risorse IaaS e alle risorse PaaS effettuando un singolo accesso. Il collegamento dei tuoi account ti fornisce anche una singola fattura per tutte le risorse PaaS e IaaS che utilizzi.<ul><li>Se non disponi di un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), richiedine uno seguendo la procedura in [Registrazione di un account dell'infrastruttura IBM Cloud (SoftLayer)](vmonic/signing_softlayer_account.html) e quindi collega il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) al tuo account {{site.data.keyword.cloud_notm}} seguendo la procedura in [Collegamento degli account ID IBM](https://console.bluemix.net/docs/account/softlayerlink.html).</li><li>Se hai un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), puoi collegarlo al tuo account {{site.data.keyword.cloud_notm}} seguendo la procedura descritta in [Collegamento degli account ID IBM](https://console.bluemix.net/docs/account/softlayerlink.html).</li></ul></td>
    </tr>
    </table>
 
@@ -130,6 +130,10 @@ Esamina e scegli i servizi aggiuntivi per la tua offerta di distribuzione.
     <tr>
        <td>[HyTrust DataControl on IBM Cloud](services/htdc_considerations.html)</td>
        <td>Il servizio HyTrust DataControl on {{site.data.keyword.cloud_notm}} offre una potente crittografia con gestione delle chiavi integrata per proteggere i carichi di lavoro per tutto il loro ciclo di vita. Il servizio può fornire la crittografia sia a livello di sistema operativo che a livello di dati, il che significa che è possibile crittografare e decrittografare qualsiasi directory, cartella o file all'interno di un carico di lavoro.</td>
+    </tr>
+    <tr>
+       <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
+       <td>Il servizio {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} porta il potere dei microservizi e dei contenitori nel tuo ambiente VMware su {{site.data.keyword.cloud_notm}}. Con questo servizio, puoi estendere lo stesso modello operativo e gli stessi strumenti VMware e {{site.data.keyword.cloud_notm}} Privato con cui hai dimestichezza da una situazione in loco a {{site.data.keyword.cloud_notm}}.</td>
     </tr>
     <tr>
        <td>[IBM Spectrum Protect Plus on IBM Cloud](services/spp_considerations.html)</td>
