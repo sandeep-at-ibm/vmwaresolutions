@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -89,7 +89,7 @@ lastupdated: "2018-08-17"
     </tr>
     <tr>
        <td>[VMware vSphere on IBM Cloud](vsphere/vs_vsphereclusteroverview.html)</td>
-       <td>vSphere on {{site.data.keyword.cloud_notm}} 오퍼링은 자체 IBM 호스팅 VMware 환경을 빌드할 수 있도록 VMware 호환 가능 {{site.data.keyword.baremetal_short}}, 하드웨어 컴포넌트 및 라이센스를 결합하는 사용자 정의 가능한 가상화 서비스를 제공합니다.</td>
+       <td>vSphere on {{site.data.keyword.cloud_notm}} 오퍼링은 고유한 IBM 호스팅 VMware 환경을 빌드할 수 있도록 VMware 호환 가능 {{site.data.keyword.baremetal_short}}, 하드웨어 컴포넌트 및 라이센스를 결합하는 사용자 정의 가능한 가상화 서비스를 제공합니다.</td>
     </tr>
     <tr>
        <td>[NetApp ONTAP Select](netapp/np_netappoverview.html)</td>
@@ -130,6 +130,10 @@ lastupdated: "2018-08-17"
     <tr>
        <td>[HyTrust DataControl on IBM Cloud](services/htdc_considerations.html)</td>
        <td>HyTrust DataControl on {{site.data.keyword.cloud_notm}}는 워크로드를 해당 라이프사이클 동안 보호하기 위해 통합된 키 관리 기능을 포함한 강력한 암호화를 제공합니다. 이 서비스는 운영 체제 레벨 및 데이터 레벨 모두에서 암호화를 제공할 수 있으며, 이는 워크로드 내의 모든 디렉토리, 폴더 및 파일이 암호화되거나 복호화될 수 있음을 의미합니다.</td>
+    </tr>
+    <tr>
+       <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
+       <td>{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 서비스는 마이크로서비스 및 컨테이너의 기능을 {{site.data.keyword.cloud_notm}}의 VMware 환경에 제공합니다. 이 서비스를 사용하면 익숙한 동일 VMware 및 {{site.data.keyword.cloud_notm}} Private 운영 모델과 도구를 온프레미스에서 {{site.data.keyword.cloud_notm}}로 확장할 수 있습니다.</td>
     </tr>
     <tr>
        <td>[IBM Spectrum Protect Plus on IBM Cloud](services/spp_considerations.html)</td>

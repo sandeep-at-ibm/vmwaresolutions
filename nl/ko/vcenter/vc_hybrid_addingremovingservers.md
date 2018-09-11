@@ -64,7 +64,7 @@ lastupdated: "2018-08-07"
 
 ### 관련 링크
 
-* [vCenter Server 소프트웨어 명세서](vc_bom.html)
+* [vCenter Server 명세서](vc_bom.html)
 * [vCenter Server with Hybridity Bundle 인스턴스에 대한 요구사항 및 계획](vc_hybrid_planning.html)
 * [vCenter Server with Hybridity Bundle 인스턴스의 클러스터 추가, 보기 및 삭제](vc_hybrid_addingviewingclusters.html)
 * [Place a host in maintenance mode](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}

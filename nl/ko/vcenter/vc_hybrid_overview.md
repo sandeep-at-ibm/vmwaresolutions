@@ -66,8 +66,8 @@ vCenter Server with Hybridity Bundle 인스턴스에는 다음 컴포넌트가 �
 ### Bare Metal Server
 
 vCenter Server with Hybridity Bundle 인스턴스 주문에는 4개의 사용자 정의된 {{site.data.keyword.baremetal_short}}가 포함됩니다. 다음 CPU 모델이 사용 가능합니다.
-  * 2CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
-  * 2CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
+  * 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
+  * 두 개의 CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
 
 ### 네트워킹
 

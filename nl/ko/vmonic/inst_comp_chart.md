@@ -31,7 +31,7 @@ VMware Cloud Foundation 인스턴스, VMware vCenter Server 인스턴스, VMware
 |vCenter 및 NSX용 BYOL |인스턴스당 전체 지원됨   |인스턴스당 전체 지원됨     |지원되지 않음 |지원됨 |
 |NSX 라이센스 업그레이드 옵션           |없음   |NSX Base에서 Advanced 또는 Enterprise로, NSX Advanced에서 Enterprise로 업그레이드할 수 있음. vCenter Server with Hybridity Bundle로 업그레이드할 수 있음. |NSX Advanced에서 Enterprise로 업그레이드할 수 있음  |없음 |
 |vSAN 라이센스 에디션         |vSAN Advanced 또는 Enterprise  |vSAN Advanced 또는 Enterprise  |vSAN Advanced 또는 Enterprise |vSAN Advanced 또는 Enterprise  |
-|추가 기능 서비스               |지원됨(HCX on {{site.data.keyword.cloud_notm}} 미포함).  |지원됨(HCX on {{site.data.keyword.cloud_notm}} 미포함). vCenter Server with Hybridity Bundle로 업그레이드할 수 있음 |지원됨(HCX on {{site.data.keyword.cloud_notm}} 포함). |이 솔루션의 자동화로 지원되지는 않지만 자체 소프트웨어를 가져와서 설치할 수 있습니다. |
+|추가 기능 서비스               |지원됨(HCX on {{site.data.keyword.cloud_notm}} 미포함).  |지원됨(HCX on {{site.data.keyword.cloud_notm}} 미포함). vCenter Server with Hybridity Bundle로 업그레이드할 수 있음 |지원됨(HCX on {{site.data.keyword.cloud_notm}} 포함). |이 솔루션의 자동화로 지원되지는 않지만 고유의 소프트웨어를 가져와서 설치할 수 있습니다. |
 
 **참고**:
 

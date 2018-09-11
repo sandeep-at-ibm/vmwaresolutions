@@ -14,7 +14,7 @@ lastupdated: "2017-10-13"
 
 ## VMware vSphere on IBM Cloud
 
-이 릴리스에서는 선택된 VMware 컴포넌트를 기반으로 VMware 호환 가능 컴퓨팅, 스토리지 및 네트워크 리소스를 사용자 정의하고 주문하여 자체 IBM 호스팅 VMware 가상 환경을 빌드할 수 있도록 허용하는 VMware vSphere on {{site.data.keyword.cloud_notm}} 오퍼링을 도입했습니다. vSphere on {{site.data.keyword.cloud_notm}}가 선택적 VMware 컴포넌트의 설치, 구성 및 가져오기를 자동화하지는 않지만, 사용자는 비즈니스 요구사항에 가장 적합한 환경을 디자인하고 구축하기 위한 최대한의 유연성을 보유합니다. {{site.data.keyword.CloudDataCent_notm}}에서 기존 vSphere 클러스터를 확장하거나 ESXi 서버의 새 vSphere 클러스터를 작성하여 시작할 수 있습니다.
+이 릴리스에서는 선택된 VMware 컴포넌트를 기반으로 VMware 호환 가능 컴퓨팅, 스토리지 및 네트워크 리소스를 사용자 정의하고 주문하여 고유한 IBM 호스팅 VMware 가상 환경을 빌드할 수 있도록 허용하는 VMware vSphere on {{site.data.keyword.cloud_notm}} 오퍼링을 도입했습니다. vSphere on {{site.data.keyword.cloud_notm}}가 선택적 VMware 컴포넌트의 설치, 구성 및 가져오기를 자동화하지는 않지만, 사용자는 비즈니스 요구사항에 가장 적합한 환경을 디자인하고 구축하기 위한 최대한의 유연성을 보유합니다. {{site.data.keyword.CloudDataCent_notm}}에서 기존 vSphere 클러스터를 확장하거나 ESXi 서버의 새 vSphere 클러스터를 작성하여 시작할 수 있습니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
 * [새 vSphere 클러스터 주문](../vsphere/vs_orderinginstances.html)

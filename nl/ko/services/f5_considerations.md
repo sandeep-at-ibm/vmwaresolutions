@@ -21,12 +21,12 @@ F5 on {{site.data.keyword.cloud}} 서비스(F5 BIG-IP® Virtual Edition)는 로�
 다음 컴포넌트가 F5 on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
 ### 가상 머신
-* 모든 옵션이 사용 가능한 2개의 가상 머신 (VM).
-* 라이센싱 옵션에 따라 가상 머신당 2, 4 또는 8 vCPU
+* 모든 옵션이 사용 가능한 2개의 가상 머신(VM).
+* 라이센싱 옵션에 따라 가상 머신당 2, 4 또는 8개 vCPU
 * 라이센싱 옵션에 따라 가상 머신당 4, 8 또는 16GB RAM
 
 ### 네트워킹
-* HA 동기화를 위한 사설 VXLAN(Private Virtual Extensible LAN)
+* HA 동기화를 위한 사설 VXLAN(Virtual Extensible LAN)
 * 사설 관리 네트워크를 통한 TMSH(Traffic Management Shell) 및 관리 콘솔에 대한 액세스.
 
 ### 라이센스 및 요금

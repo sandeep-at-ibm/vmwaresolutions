@@ -55,7 +55,7 @@ IBM Spectrum Protect Plus 가상 머신을 호스팅하며 백업 스토리지�
 
 ### 라이센스 및 요금
 
-* IBM Spectrum Protect Plus (10개에서 최대 1000개의 VM 라이센스, 10개씩 증가)
+* IBM Spectrum Protect Plus(10개에서 최대 1000개의 VM 라이센스, 10개씩 증가)
 * BYOL로서 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔(10의 패키지의 VM 수)을 통해 제공된 IBM Spectrum Protect Plus 라이센스
 
 ## IBM Spectrum Protect Plus on IBM Cloud 설치 시 고려사항

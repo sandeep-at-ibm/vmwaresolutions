@@ -49,7 +49,7 @@ vCenter Server 배치에서는 배치된 Active Directory 서버를 인스턴스
 
 ### VMware Cloud Foundation
 
-Cloud Foundation 배치에서는 VMware Cloud Foundation 자동화를 사용하며, 이는 SDDC Manager VM 컴포넌트 내에 상주하는 자체 DNS 서버를 사용합니다. vCenter, PSC, NSX 및 ESXi 호스트를 포함하여 SDDC Manager에서 관리하는 Cloud Foundation 컴포넌트는 디자인상 기본 DNS로서 SDDC Manager VM IP 주소를 사용하도록 구성되어 있습니다.
+Cloud Foundation 배치에서는 VMware Cloud Foundation 자동화를 사용하며, 이는 SDDC Manager VM 컴포넌트 내에 상주하는 고유의 DNS 서버를 사용합니다. vCenter, PSC, NSX 및 ESXi 호스트를 포함하여 SDDC Manager에서 관리하는 Cloud Foundation 컴포넌트는 디자인상 기본 DNS로서 SDDC Manager VM IP 주소를 사용하도록 구성되어 있습니다.
 
 SDDC Manager가 자신이 관리하는 컴포넌트에 대한 호스트 이름을 생성하고 유지보수하므로, 호스트를 추가하고 제거할 목적으로 DNS 구역 파일을 직접 조작하지 않도록 권장합니다.
 

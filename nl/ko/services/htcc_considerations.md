@@ -20,10 +20,10 @@ HyTrust CloudControl on {{site.data.keyword.cloud}} 서비스는 보안 표준�
 
 ### HyTrust CloudControl 어플라이언스
 
-* CPU: 4 vCPU
+* CPU: 4개의 vCPU
 * RAM: 16GB
 * 디스크: 통합 클러스터의 vSAN에 상주하는 70GB VMDK
-* 네트워크: 관리용으로 지정된 VLAN-지원 사설 포터블 네트워크에 배치됨
+* 네트워크: 관리용으로 지정된 VLAN 지원 사설 포터블 네트워크에 배치됨
 
 ### 고가용성
 

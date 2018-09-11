@@ -60,11 +60,11 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 
 다음 구성 중 하나로 세 개 이상의 {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
 *  **사용자 정의됨**: 사용자가 선택한 CPU 모델 및 RAM 크기를 사용하는 {{site.data.keyword.baremetal_short}}입니다.   
-   * 2CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
-   * 2CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
+   * 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
+   * 두 개의 CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
 
      **참고:** vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
-*  **사전 구성됨**: 2CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
+*  **사전 구성됨**: 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
    * **소형**(듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz / 128GB RAM / 2개의 디스크)
    * **중형**(듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz / 256GB RAM / 2개의 디스크)
    * **대형**(듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz / 512GB RAM / 2개의 디스크)

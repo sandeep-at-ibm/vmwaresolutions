@@ -49,10 +49,10 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 
 다음 구성 중 하나로 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
 *  **사용자 정의됨**: 사용자가 선택한 CPU 모델 및 RAM 크기를 사용하는 {{site.data.keyword.baremetal_short}}입니다.   
-   * 2CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
-   * 2CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
+   * 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
+   * 두 개의 CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
 **참고:** vSAN 스토리지를 사용하려는 경우 해당 구성은 네 개의 {{site.data.keyword.baremetal_short}}를 필요로 합니다.
-* **사전 구성됨**: 2CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
+* **사전 구성됨**: 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
   * **소형**(듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz / 128GB RAM / 12개의 디스크)
   * **대형**(듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz / 512GB RAM / 12개의 디스크)
 
@@ -70,7 +70,7 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 ### Virtual Server 인스턴스
 
 다음 VSI(Virtual Server Instances)가 주문됩니다.
-* 다중 사이트 구성 지원에 필요한 Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스용 VSI. 이 VSI 스펙은 Windows 2012 R2(8GB RAM / 2개의 CPU 코어 / 100GB 디스크 / 듀얼 1Gbps 사설 업링크)입니다.
+* 다중 사이트 구성 지원에 필요한 Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스용 VSI. 이 VSI 스펙은 Windows 2012 R2(8GB RAM / 두 개의 CPU 코어 / 100GB 디스크 / 듀얼 1Gbps 사설 업링크)입니다.
 * 인스턴스 배치가 완료된 후 시스템이 종료되는 IBM CloudBuilder용 VSI
 * (Veeam on {{site.data.keyword.cloud_notm}}가 주문된 경우) Veeam 백업 서비스용 VSI가 주문됨
 
