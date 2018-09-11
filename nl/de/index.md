@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -57,7 +57,7 @@ Sie benötigen ein {{site.data.keyword.cloud_notm}}-Konto und ein Konto für die
    </tr>
    <tr>
       <td>Konto für die IBM Cloud-Infrastruktur (SoftLayer)</td>
-      <td>Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) wurde früher als IBM SoftLayer-Konto bezeichnet. Weitere Informationen zu den Anforderungen, die das Konto erfüllen muss, finden Sie unter [Anforderungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](vmonic/slaccountrequirement.html).<br><br>Sie können Konten für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit {{site.data.keyword.cloud_notm}}-Konten verknüpfen, um kombinierte Infrastructure as a Service-Ressourcen (IaaS) und Platform as a Service-Ressourcen (PaaS) zu nutzen. Anschließend können Sie auf IaaS-Ressourcen und PaaS-Ressourcen über ein und dieselbe Anmeldung zugreifen. Das Verknüpfen Ihrer Konten hat außerdem zur Folge, dass Sie nur eine Rechnung für alle PaaS- und IaaS-Ressourcen erhalten, die Sie nutzen.<ul><li>Wenn Sie kein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) haben, können Sie eines anfordern, indem Sie die unter [Für ein IBM Cloud-Infrastrukturkonto (SoftLayer-Konto) registrieren](vmonic/signing_softlayer_account.html) beschriebene Prozedur ausführen, und anschließend Ihr Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit Ihrem {{site.data.keyword.cloud_notm}}-Konto verknüpfen, indem Sie die unter [IBMid-Konten verknüpfen](https://console.bluemix.net/docs/account/softlayerlink.html) beschriebene Prozedur ausführen.</li><li>Wenn Sie ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) haben, können Sie es mit Ihrem {{site.data.keyword.cloud_notm}}-Konto verknüpfen, indem Sie die unter [IBMid-Konten verknüpfen](https://console.bluemix.net/docs/account/softlayerlink.html) beschriebene Prozedur ausführen.</li></ul></td>
+      <td>Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) wurde früher als IBM SoftLayer-Konto bezeichnet.  Weitere Informationen zu den Anforderungen, die das Konto erfüllen muss, finden Sie unter [Anforderungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](vmonic/slaccountrequirement.html).<br><br>Sie können Konten für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit {{site.data.keyword.cloud_notm}}-Konten verknüpfen, um kombinierte Infrastructure as a Service-Ressourcen (IaaS) und Platform as a Service-Ressourcen (PaaS) zu nutzen. Anschließend können Sie auf IaaS-Ressourcen und PaaS-Ressourcen über ein und dieselbe Anmeldung zugreifen. Das Verknüpfen Ihrer Konten hat außerdem zur Folge, dass Sie nur eine Rechnung für alle PaaS- und IaaS-Ressourcen erhalten, die Sie nutzen.<ul><li>Wenn Sie kein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) haben, können Sie eines anfordern, indem Sie die unter [Für ein IBM Cloud-Infrastrukturkonto (SoftLayer-Konto) registrieren](vmonic/signing_softlayer_account.html) beschriebene Prozedur ausführen, und anschließend Ihr Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit Ihrem {{site.data.keyword.cloud_notm}}-Konto verknüpfen, indem Sie die unter [IBMid-Konten verknüpfen](https://console.bluemix.net/docs/account/softlayerlink.html) beschriebene Prozedur ausführen.</li><li>Wenn Sie ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) haben, können Sie es mit Ihrem {{site.data.keyword.cloud_notm}}-Konto verknüpfen, indem Sie die unter [IBMid-Konten verknüpfen](https://console.bluemix.net/docs/account/softlayerlink.html) beschriebene Prozedur ausführen.</li></ul></td>
    </tr>
    </table>
 
@@ -132,6 +132,10 @@ Wählen Sie nach Durchsicht der folgenden Tabelle Add-on-Services für Ihr Berei
        <td>Der Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" bietet eine starke Verschlüsselung mit integriertem Schlüsselmanagement, um Workloads über ihren gesamten Lebenszyklus hinweg zu sichern. Der Service kann die Verschlüsselung sowohl auf Betriebssystemebene als auch auf Datenebene bereitstellen. Dies bedeutet, dass alle Verzeichnisse, Ordner oder Dateien innerhalb einer Workload ver- und entschlüsselt werden können.</td>
     </tr>
     <tr>
+       <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
+       <td>Der Service "{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}}" stellt die Leistungsfähigkeit von Mikroservices und Containern in Ihrer VMware-Umgebung unter {{site.data.keyword.cloud_notm}} zur Verfügung. Mit diesem Service können Sie den Einsatz des bereits vertrauten VMware- und {{site.data.keyword.cloud_notm}} Private-Betriebsmodells und der zugehörigen Tools von Ihrem lokalen Standort (On-Premises) auf {{site.data.keyword.cloud_notm}}-Umgebungen ausdehnen.</td>
+    </tr>
+    <tr>
        <td>[IBM Spectrum Protect Plus on IBM Cloud](services/spp_considerations.html)</td>
        <td>Der Service "IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}" bietet eine effiziente und skalierbare Datensicherungs-, Datenwiederverwendungs- und Datenwiederherstellungslösung für virtuelle Umgebungen. Er kann als eigenständige Lösung implementiert oder in Ihre IBM Spectrum Protect-Umgebung integriert werden, um Kopien für die Langzeitspeicherung und Datengovernance auszulagern.</td>
     </tr>
@@ -171,7 +175,7 @@ Informationen zum Konfigurieren des Benutzerkontos und der zugehörigen Einstell
 
 Nehmen Sie den Bestellprozess in Angriff, wenn Sie sich für ein Bereitstellungsangebot, bei dem es sich um eine Instanz in der Konsole handelt, entschieden haben.
 
-Informationen zum Bestellen einer Instanz finden Sie je nach dem von Ihnen ausgewählten Bereitstellungsangebot in den folgenden Abschnitten: 
+Informationen zum Bestellen einer Instanz finden Sie je nach dem von Ihnen ausgewählten Bereitstellungsangebot in den folgenden Abschnitten:
 * [vCenter Server-Instanzen bestellen](vcenter/vc_orderinginstance.html)
 * [vCenter Server with Hybridity Bundle-Instanzen bestellen](vcenter/vc_hybrid_orderinginstance.html)
 * [Cloud Foundation-Instanzen bestellen](sddc/sd_orderinginstance.html)
