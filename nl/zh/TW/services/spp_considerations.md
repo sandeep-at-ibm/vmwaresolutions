@@ -62,7 +62,7 @@ lastupdated: "2018-08-16"
 
 請先檢閱下列考量，再安裝 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服務。
 
-* 確定實例預設叢集中的 CPU 及記憶體足夠用於 IBM Spectrum Protect Plus 虛擬機器。
+* 確定實例預設叢集裡的 CPU 及記憶體足夠用於 IBM Spectrum Protect Plus 虛擬機器。
 * 根據 ESXi 伺服器的版本，確定 ESXi 伺服器上可用的 NFS 裝載足夠。
 
   在 VMware 中，部署在或升級至 2.2 版或更新版本的 Cloud Foundation 實例及 vCenter Server 實例，具有 `NFS.MaxVolumes` 參數設定。此參數定義 ESXi 伺服器的 NFS 裝載數目上限，而且可以設為 ESXi 伺服器版本特有的上限 256。如需相關資訊，請參閱[增加 ESXi/ESX 主機上定義 NFS 裝載數目上限的預設值](https://kb.vmware.com/s/article/2239)。

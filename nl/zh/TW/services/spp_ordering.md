@@ -48,9 +48,9 @@ lastupdated: "2018-07-20"
 
 1. 根據您指定的設定，從 IBM Spectrum Protect Plus 備份儲存庫的 {{site.data.keyword.cloud_notm}} 基礎架構訂購耐久性 NFS 儲存空間。
 2. 根據您指定的設定，從 {{site.data.keyword.cloud_notm}} 基礎架構訂購一些 IBM Spectrum Protect Plus 授權。根據您指定要在訂購 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服務時授權的 VM 數目，來訂購授權，且增量為 10 個虛擬機器 (VM) 授權套件。如果您要攜帶現有 IBM Spectrum Protect Plus 授權，則不會從 {{site.data.keyword.cloud_notm}} 基礎架構訂購授權。
-3. 將針對此服務訂購的 NFS 儲存空間裝載至實例預設叢集中的所有 ESXi 伺服器（包括將每一部 ESXi 伺服器上的正確靜態路徑新增至儲存空間專用子網路）。
+3. 將針對此服務訂購的 NFS 儲存空間裝載至實例預設叢集裡的所有 ESXi 伺服器（包括將每一部 ESXi 伺服器上的正確靜態路徑新增至儲存空間專用子網路）。
 4. 針對裝載至 ESXi 伺服器的所有 NFS 儲存空間磁區，在 vCenter Server 中建立 NFS 資料儲存庫。
-5. 在實例的預設叢集中，部署、啟動及配置 IBM Spectrum Protect Plus VM。
+5. 在實例的預設叢集裡，部署、啟動及配置 IBM Spectrum Protect Plus VM。
 6. 將針對此服務訂購的 NFS 儲存空間附加至 IBM Spectrum Protect Plus VM，並且配置備份儲存庫。
 7. 向實例的 DNS 伺服器，登錄 IBM Spectrum Protect Plus VM 的主機名稱及 IP 位址。
 
