@@ -14,7 +14,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} 是一個提供 VMware vSph
 
 在許多情況下，整個環境可以在一天內佈建完成，且裸機基礎架構可以快速而彈性地擴充運算容量，並依需要擴增及縮減。
 
-部署後，您可以透過從 {{site.data.keyword.slportal}} 訂購其他 NFS（網路檔案系統）檔案共用，來增加共用儲存空間，並在叢集中的所有 ESXi 伺服器之間手動連接它們。如果您需要專用儲存空間，我們以高效能（所有 SSD）及高容量（所有 SATA）兩種配置提供 [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html)。
+部署後，您可以透過從 {{site.data.keyword.slportal}} 訂購其他 NFS（網路檔案系統）檔案共用，來增加共用儲存空間，並在叢集裡的所有 ESXi 伺服器之間手動連接它們。如果您需要專用儲存空間，我們以高效能（所有 SSD）及高容量（所有 SATA）兩種配置提供 [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html)。
 
 VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 vSAN 型儲存空間容量，您可以在部署後新增更多 ESXi 伺服器。
 
@@ -85,7 +85,7 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 
 已訂購下列虛擬伺服器實例 (VSI)：
 * IBM CloudBuilder 的 VSI，在完成實例部署之後會關閉它。
-* （適用於實例 2.2 版及更新版本）您可以選擇在管理叢集中部署單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或兩部高可用性 Microsoft Windows VM，以協助加強安全及穩健性。
+* （適用於實例 2.2 版及更新版本）您可以選擇在管理叢集裡部署單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或兩部高可用性 Microsoft Windows VM，以協助加強安全及穩健性。
 * （適用於實例 1.9 版到 2.1 版）已部署並可查閱 Microsoft Windows Server VSI for Microsoft Active Directory (AD)（其充當已登錄主機及虛擬機器之實例的 DNS）。
 * （適用於實例 1.8 版及更舊版本）用於管理元件 Snapshot 型備份的 VSI，其在實例部署完成之後會保持運作。
 

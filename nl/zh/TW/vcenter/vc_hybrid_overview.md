@@ -87,7 +87,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是�
 
 已訂購下列虛擬伺服器實例 (VSI)：
 * IBM CloudBuilder 的 VSI，在完成實例部署之後會關閉它。
-* 您可以選擇在管理叢集中部署單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或兩部高可用性 Microsoft Windows VM，以協助加強安全及穩健性。
+* 您可以選擇在管理叢集裡部署單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或兩部高可用性 Microsoft Windows VM，以協助加強安全及穩健性。
 
 ### 儲存空間
 
