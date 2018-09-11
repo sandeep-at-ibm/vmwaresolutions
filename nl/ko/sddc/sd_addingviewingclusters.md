@@ -56,7 +56,7 @@ Cloud Foundation 인스턴스에 클러스터를 추가할 때는 다음 설정�
 
 표 1. 사용자 정의된 {{site.data.keyword.baremetal_short}}의 옵션
 
-| CPU 모델 옵션        |RAM 옵션   |
+| CPU 모델 옵션   |RAM 옵션   |
 |:------------- |:------------- |
 | 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
