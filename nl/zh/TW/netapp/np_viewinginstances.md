@@ -116,19 +116,19 @@ lastupdated: "2018-08-14"
 	   </tr>
 	   <tr>
 	     <td>ESXi 伺服器</td>
-	     <td>叢集中的 ESXi 伺服器數目。</td>
+	     <td>叢集裡的 ESXi 伺服器數目。</td>
 	   </tr>
 	   <tr>
 	      <td>CPU </td>
-	      <td>叢集中的 ESXi 伺服器的 CPU 規格。</td>
+	      <td>叢集裡的 ESXi 伺服器的 CPU 規格。</td>
 	   </tr>
 	   <tr>
 	      <td>有效儲存空間</td>
-	      <td>叢集中 ESXi 伺服器的磁碟容量總計。</td>
+	      <td>叢集裡 ESXi 伺服器的磁碟容量總計。</td>
 	   </tr>
 	   <tr>
 	      <td>記憶體</td>
-	      <td>叢集中的 ESXi 伺服器的總記憶體大小。</td>
+	      <td>叢集裡的 ESXi 伺服器的總記憶體大小。</td>
 	   </tr>
 	   <tr>
 	      <td>資料中心位置</td>
