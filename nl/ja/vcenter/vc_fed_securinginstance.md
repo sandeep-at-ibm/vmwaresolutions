@@ -30,7 +30,7 @@ lastupdated: "2018-08-13"
   **注**: この手順を実行する前に、『**始める前に**』セクションにある重要な情報を確認してください。
 
 6. 公開される管理サービス VMware NSX Edge Services Gateway (ESG) をご使用の環境から削除します。オプションで、自動化時にデプロイされるクライアント管理の ESG を削除します。
-7. IBM 自動化で使用されるすべてのアカウントのパスワードまたはキーをリセットします。追加情報については、「[How can I secure my environment to remove access by IBM automation and support?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)」を参照してください。
+7. IBM 自動化で使用されるすべてのアカウントのパスワードまたはキーをリセットします。 追加情報については、「[How can I secure my environment to remove access by IBM automation and support?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)」を参照してください。
 
 ## 結果
 
