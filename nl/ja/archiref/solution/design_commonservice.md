@@ -10,26 +10,26 @@ lastupdated: "2018-08-14"
 
 # 共通サービス設計
 
-共通サービスは、クラウド管理プラットフォームの他のサービスによって使用されるサービスを提供します。 ソリューションの共通サービスには、サービスの識別とアクセス、ドメイン・ネーム・サービス、NTP サービス、SMTP サービス、および認証局サービスが含まれます。
+共通サービスは、クラウド管理プラットフォームの他のサービスによって使用されるサービスを提供します。 ソリューションの共通サービスには、ID およびアクセスのサービス、ドメイン・ネーム・サービス、NTP サービス、SMTP サービス、および認証局サービスが含まれます。
 
 ## ID およびアクセス・サービス
 
-この設計では、ID 管理に Microsoft Active Directory (AD) が使用されます。 この設計では、Cloud Foundation および vCenter Server のデプロイメントの自動化の一環として、1 ないし 2 台の Active Directory 仮想マシンがデプロイされます。 vCenter は AD 認証を利用するように構成されます。
+この設計では、ID 管理に Microsoft Active Directory (AD) が使用されます。 この設計では、Cloud Foundation および vCenter Server のデプロイメントの自動化の一環として、1 つまたは 2 つの Active Directory 仮想マシンがデプロイされます。 vCenter は AD 認証を利用するように構成されます。
 
 ### Microsoft Active Directory
 
-デフォルトで 1 台の Active Directory VSI が {{site.data.keyword.cloud}} インフラストラクチャーに配置されます。 この設計では、オプションで 2 台の高可用性 Microsoft Active Directory サーバーを、専用の Windows Server VM として管理クラスターにデプロイすることもできます。
+デフォルトでは単一の Active Directory VSI が {{site.data.keyword.cloud}} インフラストラクチャーにデプロイされます。 この設計では、オプションで 2 台の高可用性 Microsoft Active Directory サーバーを、専用の Windows Server VM として管理クラスターにデプロイすることもできます。
 
 **注**: このオプションを選択する場合、Microsoft のライセンス取得とアクティベーションはお客様の責任で行っていただきます。
 
-Active Directory の役目は VMware インスタンスを管理するためのアクセスの認証のみで、デプロイされたインスタンスのワークロードのエンド・ユーザーは格納しません。 Active Directory サーバーのフォレスト・ルート・ドメイン名は、ユーザーが指定する DNS ドメイン名と同じです。 複数のインスタンスがリンクされている場合、このドメイン名はプライマリーの Cloud Foundation および vCenter Server インスタンスに対してのみ指定されます。 リンクされたインスタンスの場合、各インスタンスに、フォレスト・ルート・レプリカ・リングに入っている Active Directory サーバーが含まれています。 Active Directory サーバー上には、DNS ゾーン・ファイルも複製されています。
+Active Directory の役目は VMware インスタンスを管理するためのアクセスの認証のみであり、デプロイされたインスタンスでのワークロードのエンド・ユーザーの格納ではありません。 Active Directory サーバーのフォレスト・ルート・ドメイン名は、ユーザーが指定する DNS ドメイン名と同じです。 複数のインスタンスがリンクされている場合、このドメイン名は Cloud Foundation および vCenter Server のプライマリー・インスタンスに対してのみ指定されます。 リンクされたインスタンスの場合、各インスタンスに、フォレスト・ルート・レプリカ・リングに入っている Active Directory サーバーが含まれています。 Active Directory サーバー上には、DNS ゾーン・ファイルも複製されています。
 
 ### vSphere SSO ドメイン
 
 vSphere シングル・サインオン (SSO) ドメインは、単一インスタンスや複数のリンクされたインスタンスのための初期認証メカニズムとして使用されます。 SSO ドメインは、VMware インスタンスや複数のリンクされたインスタンスを Microsoft Active Directory サーバーに接続する役目も担います。 次の SSO 構成が適用されます。  
 * SSO ドメイン `vsphere.local` が、常に使用されます
 * 既存のインスタンスに紐付けられた VMware インスタンスの場合、PSC が既存インスタンスの SSO ドメインに結合されます
-* SSO サイト・ネームはインスタンス名と同じです
+* SSO サイト名はインスタンス名と同じです
 
 ## ドメイン・ネーム・サービス (DNS)
 
@@ -37,7 +37,7 @@ vSphere シングル・サインオン (SSO) ドメインは、単一インス�
 
 ### VMware vCenter Server
 
-vCenter Server デプロイメントでは、デプロイ済みの Active Directory サーバーがインスタンス用の DNS サーバーとして使用されます。 デプロイ済みのコンポーネント (vCenter、PSC、NSX、および ESXi ホスト) はすべて、Active Directory サーバーをデフォルトの DNS サーバーとしてポイントするように構成されます。 DNS ゾーン構成はカスタマイズ可能です。ただしその場合は、カスタマイズした構成が、デプロイ済みのコンポーネントの構成と干渉しないようにする必要があります。
+vCenter Server デプロイメントでは、デプロイ済みの Active Directory サーバーがインスタンス用の DNS サーバーとして使用されます。 デプロイ済みのコンポーネント (vCenter、PSC、NSX、および ESXi ホスト) はすべて、Active Directory サーバーをデフォルトの DNS サーバーとしてポイントするように構成されます。 DNS ゾーン構成はカスタマイズ可能です。これは、カスタマイズした構成が、デプロイ済みのコンポーネントの構成と干渉しない場合に可能です。
 
 この設計では、次の構成によって、Active Directory サーバー上で DNS サービスが統合されます。
 * ドメイン構造は、指定することができます。 ドメイン名のレベル数はいくつでもかまいません (ただし、vCenter Server コンポーネントが処理できる最大数以下)。 最下のレベルが、インスタンスのサブドメインとなります。
@@ -50,11 +50,11 @@ vCenter Server デプロイメントでは、デプロイ済みの Active Direct
 ### VMware Cloud Foundation
 
 Cloud Foundation デプロイメントでは VMware Cloud Foundation 自動化が使用されます。VMware Cloud Foundation 自動化では SDDC Manager VM コンポーネント内にある独自の DNS サーバーが使用されます。 SDDC Manager によって管理される Cloud Foundation のコンポーネント (vCenter、PSC、NSX、ESXi ホストなど) は、
-SDDC Manager VM IP アドレスをデフォルトの DNS として使用するように構成されます (そのような設計になっています)。
+設計により、SDDC Manager VM IP アドレスをデフォルトの DNS として使用するように構成されます。
 
 SDDC Manager が管理するコンポーネントのホスト名は SDDC Manager が生成して保持するので、ホスト名を追加または削除するために DNS ゾーン・ファイルに直接手を加えることは推奨されません。
 
-この設計では、次の構成によって、Active Directory サーバー上の DNS サービスが SDDC Manager VM と統合されます。
+この設計では、次の構成内で、Active Directory サーバー上の DNS サービスが SDDC Manager VM と統合されます。
 * ドメイン構造は、指定することができます。 ドメイン名のレベル数はいくつでもかまいません (ただし、Cloud Foundation コンポーネントが処理できる最大数以下)。
 * 最下のレベルが、SDDC Manager の権限が及ぶサブドメインとなります。
 * 指定した DNS ドメイン名は Active Directory のルート・フォレスト・ドメイン名として使用されます。 例えば、DNS ドメイン名が `cloud.ibm.com` の場合、Active Directory ドメインのフォレスト・ルートは `cloud.ibm.com` になります。 この DNS ドメインと Active Directory ドメインは、リンクされているすべての Cloud Foundation インスタンスで同じです。

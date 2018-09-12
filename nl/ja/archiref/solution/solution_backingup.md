@@ -14,7 +14,7 @@ lastupdated: "2018-08-14"
 
 ソリューションの一部として、{{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} アドオン・サービスまたは Veeam on {{site.data.keyword.cloud_notm}} アドオン・サービスを必要に応じてデプロイできます。 Veeam と IBM Spectrum Protect Plus は、管理コンポーネントをバックアップするための要件を満たすことにつながります。
 
-これらのアドオン・サービスは、{{site.data.keyword.cloud_notm}} エンデュランス・ストレージとともにデプロイされます。 これらのサービスにより、管理コンポーネントおよびワークロードをバックアップしやすくなります。[Spectrum Protect Plus アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}と [Veeam アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}は、デプロイメントの計画とサイジングに関するガイダンスとして役立ちます。 Veeam デプロイメントには、[マネージド・サービス](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)も要求可能です。
+これらのアドオン・サービスは、{{site.data.keyword.cloud_notm}} エンデュランス・ストレージとともにデプロイされます。 これらのサービスにより、管理コンポーネントおよびワークロードをバックアップしやすくなります。 [Spectrum Protect Plus アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}と [Veeam アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}は、デプロイメントの計画とサイジングに関するガイダンスとして役立ちます。 Veeam デプロイメントには、[マネージド・サービス](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)も要求可能です。
 
 必要なバックアップ戦略はソリューション・コンポーネントによって異なります。 イメージ・レベルのバックアップを使用して保護されるコンポーネントもあれば、構成とデータのファイル・ベースのバックアップを使用して保護されるコンポーネントもあります。
 
@@ -24,7 +24,7 @@ VMware vCenter Server、Platform Services Controller (PSC)、VMware NSX など�
 
 これらのバックアップをホストするには、以下のステップに従って、ご使用のクラスターに Linux ファイル・サーバーをデプロイします。
 
-1. {{site.data.keyword.cloud_notm}} インフラストラクチャーから、プライベート・ポータブル・サブネットを注文し、それをシステム・コンポーネントと同じ VLAN 上に配置します。これは、ホストの管理 IP アドレスが存在するプライベート VLAN です。
+1. {{site.data.keyword.cloud_notm}} インフラストラクチャーから、プライベート・ポータブル・サブネットを注文し、それをシステム・コンポーネントと同じ VLAN 上に配置します。 これは、ホストの管理 IP アドレスが存在するプライベート VLAN です。
 2. {{site.data.keyword.cloud_notm}} プライベート・ミラーから、[Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window} などの VMware 管理データ・ストアに、オペレーティング・システム・イメージをアップロードします。
 3. 既に注文したプライベート・ポータブル IP アドレスを使用して、この仮想マシン (VM) をクラスター内の管理ポート・グループにデプロイします。 AD/DNS サーバーを指すように VM を構成し、必要に応じてサブドメインの DNS に VM を追加しておいてください。
 4. このサーバーのバックアップ・ユーザー ID として root 以外のユーザー ID を作成し、必要なすべてのサービスをファイル転送用に構成して開始しておきます。 例えば、FTP や SSH などです。
@@ -38,11 +38,11 @@ VMware vCenter Server と PSC には、さまざまなプロトコルを使用�
 
 ## NSX のファイル・ベースのバックアップ
 
-障害が発生した場合にシステムをその動作状態にリストアするためには、すべての NSX コンポーネントを適切にバックアップしておくことが不可欠です。設計上、NSX マネージャーのバックアップ機能を使用して NSX バックアップを構成する必要があります。 この目的のために、ファイル・サーバーへの[バックアップを定期的に実行するように NSX マネージャーを構成する](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}ことができます。 ファイル・サーバーやそのデータが適切にバックアップされるようにし、古い NSX バックアップのローテーションが確実に行われるようにしてください。
+障害が発生した場合にシステムをその動作状態にリストアするためには、すべての NSX コンポーネントを適切にバックアップしておくことが不可欠です。 設計上、NSX マネージャーのバックアップ機能を使用して NSX バックアップを構成する必要があります。 この目的のために、ファイル・サーバーへの[バックアップを定期的に実行するように NSX マネージャーを構成する](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}ことができます。 ファイル・サーバーやそのデータが適切にバックアップされるようにし、古い NSX バックアップのローテーションが確実に行われるようにしてください。
 
 ## 管理仮想マシンのイメージ・ベースのバックアップ
 
-インスタンスをデプロイし、IBM Spectrum Protect Plus サービスまたは Veeam バックアップ・サービスのいずれかをデプロイしたら、管理仮想マシンのためのバックアップ・ジョブを構成します。以下の VM を日次バックアップで少なくとも 7 日間バックアップすることを計画してください。
+インスタンスをデプロイし、IBM Spectrum Protect Plus サービスまたは Veeam バックアップ・サービスのいずれかをデプロイしたら、管理仮想マシンのためのバックアップ・ジョブを構成します。 以下の VM を日次バックアップで少なくとも 7 日間バックアップすることを計画してください。
 
 * VMware SDDC Manager (存在する場合)
 * Active Directory サーバー (存在する場合)
@@ -72,7 +72,7 @@ VMware vCenter 6.5u2 以降、VMware は、イメージ・ベースのバック�
 
 * vCenter と PSC の場合、VMware には、新しい仮想アプライアンスをデプロイしてバックアップから構成をリストアできるインストーラーが用意されています。
 * バックアップからアプライアンスをリストアする際に、インストーラーは、ユーザーが提供するバックアップ情報に基づいて、アプライアンスのタイプ (vCenter Server または PSC) を検出します。
-* ホストのいずれかに直接デプロイすると、分散スイッチまたは分散ポート・グループにデプロイできないことがあります。 リカバリーされたアプライアンスをデプロイする目的で一時的な標準のスイッチとポート・グループを作成し、このスイッチに vmnic のいずれかを一時的に移行することで、VM がネットワーク接続できるようにしなければならない場合があります。デプロイメント後、VM を分散ポート・グループに移行し、vmnic を dvSwitch に返すことができます。
+* ホストのいずれかに直接デプロイすると、分散スイッチまたは分散ポート・グループにデプロイできないことがあります。 リカバリーされたアプライアンスをデプロイする目的で一時的な標準のスイッチとポート・グループを作成し、このスイッチに vmnic のいずれかを一時的に移行することで、VM がネットワーク接続できるようにしなければならない場合があります。 デプロイメント後、VM を分散ポート・グループに移行し、vmnic を dvSwitch に返すことができます。
 * NSX の場合は、バックアップから構成をリストアする前に、NSX Manager とコントローラーを再デプロイしなければならない場合があります。
 * vCenter のバックアップとリストアに関する VMware の考慮事項と制限事項をよく理解しておいてください。
 

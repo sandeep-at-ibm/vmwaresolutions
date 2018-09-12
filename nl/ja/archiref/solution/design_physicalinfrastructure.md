@@ -27,13 +27,13 @@ lastupdated: "2018-07-17"
 
 ## 物理ホスト設計
 
-物理ホストとは、コンピュート・リソースを提供する環境内の{{site.data.keyword.baremetal_short}}のことです。 このソリューションで適用される{{site.data.keyword.baremetal_short}}は VMware によって認証されます。これらは、[VMware HCG](http://www.vmware.com/resources/compatibility/search.php) にリストされています。
+物理ホストとは、コンピュート・リソースを提供する環境内の{{site.data.keyword.baremetal_short}}のことです。 このソリューションで適用される{{site.data.keyword.baremetal_short}}は VMware によって認証されています。これらは、[VMware HCG](http://www.vmware.com/resources/compatibility/search.php) にリストされています。
 
-ソリューションに用意されているサーバー構成は、vSphere ESXi をインストール、構成、管理するための最小要件を満たしているか上回っています。 それぞれがさまざまな要件を満たす各種構成が使用可能です。 VMware on {{site.data.keyword.cloud_notm}} ソリューションに使用される正確な仕様の詳細リストについては、[Cloud Foundation インスタンス](../../sddc/sd_bom.html)または [vCenter Server インスタンス](../../vcenter/vc_bom.html)の部品構成表を参照してください。 {{site.data.keyword.baremetal_short}}は {{site.data.keyword.cloud_notm}} に常駐することに注意してください。
+ソリューションに用意されているサーバー構成は、vSphere ESXi をインストール、構成、管理するための最小要件を満たしているか上回っています。 さまざまな要件を満たす各種構成が使用可能です。 VMware on {{site.data.keyword.cloud_notm}} ソリューションに使用される正確な仕様の詳細リストについては、[Cloud Foundation インスタンス](../../sddc/sd_bom.html)または [vCenter Server インスタンス](../../vcenter/vc_bom.html)の部品構成表を参照してください。 {{site.data.keyword.baremetal_short}}は {{site.data.keyword.cloud_notm}} 内に存在することに注意してください。
 
 各 Cloud Foundation インスタンスは 4 ホスト・デプロイメントから始まり、各 vCenter Server インスタンスはストレージ・ソリューションの選択に応じて 3 または 4 ホスト・デプロイメントから始まります。
 
-物理ホストでは、vSphere ESXi ハイパーバイザーに割り振られる 2 つのローカル接続ディスクが使用されます。 追加のディスクを割り振るには、このページの『_物理ストレージ設計_』セクションに記載されている vSAN を使用するか、[NetApp ONTAP Select のアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)に記載されている NetApp ONTAP を使用します。 各物理ホストは、パブリック・ネットワーク・アクセスとプライベート・ネットワーク・アクセスの両方に使用できる冗長 10 Gbps ネットワーク接続を備えています。
+物理ホストでは、vSphere ESXi ハイパーバイザーに割り振られる 2 つのローカル接続ディスクが使用されます。 追加のディスクを割り振るには、このページの『_物理ストレージ設計_』セクションに記載されている vSAN を使用するか、[NetApp ONTAP Select のアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)に記載されている NetApp ONTAP を使用します。 各物理ホストは、パブリック・ネットワーク・アクセスとプライベート・ネットワーク・アクセスのために、冗長 10 Gbps ネットワーク接続を備えています。
 
 ベアメタル・サーバーの技術仕様は、以下のとおりです。
 * CPU: デュアル Intel Xeon (コアと速度は可変構成)
@@ -55,7 +55,7 @@ lastupdated: "2018-07-17"
 
 データ・センター内では、{{site.data.keyword.cloud_notm}} は、ピアが集約された別々のフロントエンド・カスタマー・スイッチ (FCS) のペアを介して、1 Gbps または 10 Gbps のネットワーク帯域幅を個々のサーバーに提供します。 これらの集約スイッチは、L3 ネットワーキング用の別々のフロントエンド・カスタマー・ルーター (FCR) のペアに接続されます。
 
-この多層設計により、ネットワークを {{site.data.keyword.CloudDataCent_notm}}内のラック、列、ポッド全体に合わせて拡大縮小できます。
+この多層設計により、ネットワークを {{site.data.keyword.CloudDataCent_notm}}内のラック、列、ポッドにわたって拡張したり縮小したりできます。
 
 ### プライベート・ネットワーク
 
