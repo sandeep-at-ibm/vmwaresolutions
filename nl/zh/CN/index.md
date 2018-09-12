@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -132,6 +132,10 @@ lastupdated: "2018-08-17"
        <td>HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服务通过集成密钥管理提供高强度加密功能，以确保工作负载在整个生命周期中的安全。此服务可以提供操作系统级别和数据级别的加密，这意味着可以对工作负载中的任何目录、文件夹或文件进行加密和解密。</td>
     </tr>
     <tr>
+       <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
+       <td>{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 服务会将微服务和容器的强大功能引入到 {{site.data.keyword.cloud_notm}} 上的 VMware 环境中。使用此服务，可以将内部部署中您所熟悉的相同 VMware 和 {{site.data.keyword.cloud_notm}} Private 操作模型和工具扩展到 {{site.data.keyword.cloud_notm}} 中。</td>
+    </tr>
+    <tr>
        <td>[IBM Spectrum Protect Plus on IBM Cloud](services/spp_considerations.html)</td>
        <td>IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服务为虚拟环境的数据保护、数据复用和数据恢复提供高效、可扩展的解决方案。可以将此服务作为独立解决方案实施，也可以与 IBM Spectrum Protect 环境集成，以便卸载用于长期存储和数据监管的副本。</td>
     </tr>
@@ -159,7 +163,7 @@ lastupdated: "2018-08-17"
 
 要访问 {{site.data.keyword.vmwaresolutions_short}} 控制台：
 1. 转至 https://console.ng.bluemix.net/infrastructure/vmware-solutions/console。
-2. 使用 **IBM 标识**登录到 **IBMid** 控制台。
+2. 使用 **IBM 标识**登录到控制台。
 
 ## 步骤 2：配置用户帐户和设置
 
