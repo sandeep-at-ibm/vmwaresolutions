@@ -49,7 +49,6 @@ Veeam を最新バージョンに更新する責任は、ユーザー側にあ�
 
 詳しくは、[手動によるライセンスの更新](https://helpcenter.veeam.com/docs/backup/vsphere/license_update_manual.html?ver=95)を参照してください。
 
-
 ## V1.8 より前のインスタンスの Veeam VSI を Veeam on IBM Cloud に置き換える
 
 管理コンポーネントとワークロードの両方をバックアップできる Veeam on {{site.data.keyword.cloud_notm}} サービスは、管理コンポーネントのバックアップのみに対応していた以前の Veeam VSI を置き換えるものとして用意されました。Veeam VSI は、V1.8 より前のリリースで VMware Cloud Foundation と VMware vCenter Server に統合されていました。
