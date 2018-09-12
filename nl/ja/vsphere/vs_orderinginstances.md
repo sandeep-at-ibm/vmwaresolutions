@@ -14,7 +14,7 @@ lastupdated: "2018-08-11"
 
 高度にカスタマイズ可能な VMware 仮想化プラットフォームをデプロイするには、VMware vSphere cluster on {{site.data.keyword.cloud}} を注文します。 次の手順を使用して、新規の VMware vSphere クラスターを定義してください。
 
-この手順では、新規クラスターを作成するための VMware コンポーネントの選択、{{site.data.keyword.cloud_notm}} ベア・メタル・サーバーの設定、ストレージ設定、およびネットワーキングの選択について説明します。注文を実行すると、そのクラスター構成が取り込まれるので、必要なときに構成に戻ってクラスターをスケールアウトできます。 注文が完了したら、要件に応じて VMware クラスターを手動で構成できます。
+この手順では、新規クラスターを作成するための VMware コンポーネントの選択、{{site.data.keyword.cloud_notm}} ベア・メタル・サーバーの設定、ストレージ設定、およびネットワーキングの選択について説明します。 注文を実行すると、そのクラスター構成が取り込まれるので、必要なときに構成に戻ってクラスターをスケールアウトできます。 注文が完了したら、要件に応じて VMware クラスターを手動で構成できます。
 
 ## 要件
 
@@ -66,7 +66,7 @@ IBM ビジネス・パートナーは、新規 vSphere クラスターを注文�
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**注:** VMware vSphere Enterprise Plus 6.0 を注文する場合、VMware vSAN コンポーネントは使用できません。 VMware vSphere Enterprise Plus 6.0 にお客様自身のライセンスを使用する場合は、{{site.data.keyword.cloud_notm}} インフラストラクチャー・チケットが自動的にオープンされます。このチケットは、注文した{{site.data.keyword.baremetal_short}}の vSphere ライセンスを、提供したライセンスに置き換えるように要求します。
+**注:** VMware vSphere Enterprise Plus 6.0 を注文する場合、VMware vSAN コンポーネントは使用できません。 VMware vSphere Enterprise Plus 6.0 にお客様自身のライセンスを使用する場合は、{{site.data.keyword.cloud_notm}} インフラストラクチャー・チケットが自動的にオープンされます。 このチケットは、注文した{{site.data.keyword.baremetal_short}}の vSphere ライセンスを、提供したライセンスに置き換えるように要求します。
 
 ### ライセンス・オプション
 
@@ -203,7 +203,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
   * 非ビジネス・パートナーは、コンポーネントとエディション (ある場合) を選択して、ライセンス・オプションを指定してください。
   VMware vSphere Enterprise Plus でライセンス持ち込み (BYOL) を選択すると、注文した{{site.data.keyword.baremetal_short}}のデフォルトの vSphere ライセンスを、自分で提供したライセンスに置き換えるよう要求する {{site.data.keyword.cloud_notm}} チケットが自動的に開きます。   
 
-    **重要:** このチケットを追跡し、新しく注文した ESXi サーバー上で vSphere ライセンスを置き換える作業は、お客様が行う必要があります。このようにして、最初に提供された {{site.data.keyword.cloud_notm}} インフラストラクチャーの vSphere ライセンス料の取り消しが {{site.data.keyword.cloud_notm}} インフラストラクチャーによって許可されます。ESXi vSphere ライセンスを置き換えるには、[Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}を参照してください。
+    **重要:** このチケットを追跡し、新しく注文した ESXi サーバー上で vSphere ライセンスを置き換える作業は、お客様が行う必要があります。 このようにして、最初に提供された {{site.data.keyword.cloud_notm}} インフラストラクチャーの vSphere ライセンス料の取り消しが {{site.data.keyword.cloud_notm}} インフラストラクチャーによって許可されます。 ESXi vSphere ライセンスを置き換えるには、[Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}を参照してください。
 
 5. ベア・メタル・サーバーの設定を次の手順で実行します。
    1. クラスターをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
