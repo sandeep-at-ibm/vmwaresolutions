@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-09"
 
 {{site.data.keyword.vmwaresolutions_full}} を使用すると、スケーラブルで安全な高性能 {{site.data.keyword.cloud_notm}} インフラストラクチャーと業界をリードする VMware ハイブリッド仮想化テクノロジーを活用して、オンプレミスの VMware ワークロードを {{site.data.keyword.cloud_notm}} に迅速かつシームレスに統合または移行できます。
 
-{{site.data.keyword.cloud_notm}} では、簡単に VMware 仮想環境をデプロイしてインフラストラクチャー・リソースを管理することができます。また同時に、引き続き使い慣れた VMware 製品のネイティブ・コンソールを使用して VMware ワークロードを管理できます。
+{{site.data.keyword.cloud_notm}} では、簡単に VMware 仮想環境をデプロイしてインフラストラクチャー・リソースを管理することができます。 また同時に、引き続き使い慣れた VMware 製品のネイティブ・コンソールを使用して VMware ワークロードを管理できます。
 
 ## IBM Cloud for VMware Solutions の利点
 
@@ -97,6 +97,12 @@ HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービスは、セ�
 HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスでは、鍵管理機能が組み込まれた強い暗号を使用して、ワークロードをライフサイクルにわたって保護できます。 このサービスは、オペレーティング・システム・レベルとデータ・レベルの両方で暗号化を実行できます。つまり、ワークロード内で任意のディレクトリー、フォルダー、またはファイルを暗号化/復号できます。
 
 詳しくは、[HyTrust DataControl on {{site.data.keyword.cloud_notm}} の概要](../services/htdc_considerations.html)を参照してください。
+
+### IBM Cloud Private Hosted
+
+{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} サービスは、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。
+
+詳しくは、[{{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html) を参照してください。
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
