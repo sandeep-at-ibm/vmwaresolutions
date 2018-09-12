@@ -35,7 +35,7 @@ vSphere ESXi 構成は、以下の側面から成ります。
 | 時刻同期   | {{site.data.keyword.cloud}} NTP サーバーを使用 |
 | ホスト・アクセス            | DCUI、ESXi Shell、または SSH をサポート |
 | ユーザー・アクセス            | ローカル認証と MSAD |
-| ドメイン・ネームの解決      | DNS を使用 ([共通サービス設計](design_commonservice.html)を参照) |
+| ドメイン・ネームの解決 | DNS を使用 ([共通サービス設計](design_commonservice.html)を参照) |
 
 vSphere クラスターには、中央クラウドおよびユーザー・ワークロード用コンピュート・リソースを管理する仮想マシン (VM) が収容されます。
 
@@ -129,11 +129,11 @@ vSAN の設定は、{{site.data.keyword.cloud_notm}} 内に VMware ソリュー�
 
 初期デプロイメント後、{{site.data.keyword.cloud_notm}} の自動化機能によって、初期クラスター内に 3 つの NSX コントローラーがデプロイされます。 コントローラーのそれぞれに、管理コンポーネント用に指定されたプライベート A ポータブル・サブネットから VLAN-backed IP アドレスが割り当てられます。 さらに、この設計では、クラスター内のホストの中のコントローラーを分離するための VM-VM アンチアフィニティー・ルールが作成されます。 コントローラーの高可用性を確保するためには、初期クラスターに最低 3 つのノードが含まれなければなりません。
 
-コントローラーに加えて、VXLAN トンネル・エンドポイント (VTEP) を介して仮想化ネットワークを使用できるように、NSX VIBS を備えたデプロイ済み vSphere ホストが {{site.data.keyword.cloud_notm}} 自動化機能によって準備されます。 VTEP 用に指定されたプライベート A ポータブル IP アドレス範囲 ([物理インフラストラクチャーの設計](design_physicalinfrastructure.html)の*表 1. VLAN とサブネットの要約*のリストを参照) から VLAN-backed IP アドレスが VTEP に割り当てられます。VXLAN トラフィックはタグの外された VLAN 上に存在し、プライベート vSphere 分散スイッチ (VDS) に割り当てられます。
+コントローラーに加えて、VXLAN トンネル・エンドポイント (VTEP) を介して仮想化ネットワークを使用できるように、NSX VIBS を備えたデプロイ済み vSphere ホストが {{site.data.keyword.cloud_notm}} 自動化機能によって準備されます。 VTEP 用に指定されたプライベート A ポータブル IP アドレス範囲 ([物理インフラストラクチャーの設計](design_physicalinfrastructure.html)の*表 1. VLAN とサブネットの要約*のリストを参照) から VLAN-backed IP アドレスが VTEP に割り当てられます。 VXLAN トラフィックはタグの外された VLAN 上に存在し、プライベート vSphere 分散スイッチ (VDS) に割り当てられます。
 
 続いて、セグメント ID プールが割り当てられ、クラスター内のホストがトランスポート・ゾーンに追加されます。 {{site.data.keyword.cloud_notm}} 内で Internet Group Management Protocol (IGMP) スヌープが構成されないため、トランスポート・ゾーンで使用されるのはユニキャストのみです。
 
-その後、NSX Edge Services Gateway ペアがデプロイされます。 すべての場合において、プライベート・ネットワークに常駐する自動化コンポーネントからのアウトバウンド・トラフィックにゲートウェイ・ペアが 1 つ使用されます。 vCenter Server の場合、2 つ目のゲートウェイ (カスタマー管理エッジと呼ばれる) がデプロイされ、パブリック・ネットワークへのアップリンクとプライベート・ネットワークに割り当てられるインターフェースが構成されます。ソリューションの一部としてデプロイされる NSX Edge Services Gateway について詳しくは、[NSX Edge on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)を参照してください。
+その後、NSX Edge Services Gateway ペアがデプロイされます。 すべての場合において、プライベート・ネットワークに常駐する自動化コンポーネントからのアウトバウンド・トラフィックにゲートウェイ・ペアが 1 つ使用されます。 vCenter Server の場合、2 つ目のゲートウェイ (カスタマー管理エッジと呼ばれる) がデプロイされ、パブリック・ネットワークへのアップリンクとプライベート・ネットワークに割り当てられるインターフェースが構成されます。 ソリューションの一部としてデプロイされる NSX Edge Services Gateway について詳しくは、[NSX Edge on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)を参照してください。
 
 クラウド管理者は、分散論理ルーター (DLR)、論理スイッチ、ファイアウォールなどの必要な NSX コンポーネントを構成できます。 使用可能な NSX の機能は、インスタンスの注文時に選択する NSX ライセンス・エディションによります。 詳しくは、[VMware NSX エディションの比較](appendix.html#vmware-nsx-edition-comparison)を参照してください。 vCenter Server インスタンスの場合、{{site.data.keyword.cloud_notm}} 自動化機能により、vCenter Server Appliance と Platform Services Controller (PSC) が NSX Manager 分散ファイアウォール除外リストに追加されます。
 
@@ -165,7 +165,7 @@ vSphere クラスターは、以下の表のように構成された 2 つの vS
 
 表 4. コンバージド・クラスター分散スイッチ
 
-| vSphere 分散<br>スイッチ名 | 機能 | ネットワーク<br>I/O 制御 | ロード・バランシング・<br>モード| 物理 NIC<br>ポート | MTU |
+| vSphere 分散<br>スイッチ名 | 機能 | ネットワーク<br>I/O 制御 | ロード・バランシング・<br>モード | 物理 NIC<br>ポート | MTU |
 |:------------- |:------------- |:------------- |:------------- |:------------- |:------------- |
 | SDDC - 分散スイッチ - プライベート | ESXi 管理、vSAN、vSphere vMotion、VXLAN トンネル・エンドポイント、NFS (VTEP) | 有効 | 明示的フェイルオーバー (vSAN、vMotion) 起点仮想ポート (その他すべて) に基づくルート | 2 | 9,000<br>(ジャンボ・フレーム) |
 | SDDC - 分散スイッチ - パブリック | 外部管理トラフィック (南北) | 有効 | 起点仮想ポートに基づくルート | 2 | 1,500<br>(デフォルト) |
