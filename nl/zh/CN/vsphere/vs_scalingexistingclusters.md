@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -17,6 +17,7 @@ lastupdated: "2018-08-11"
 确保已完成以下任务：
 *  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[用户帐户和设置](../vmonic/useraccount.html)。
 *  已查看[针对 vSphere 集群的需求和规划](vs_planning.html)中的需求和注意事项。
+*  已收到有关您要扩展的集群已准备就绪的电子邮件通知。
 
 ## 过程
 
@@ -33,6 +34,8 @@ lastupdated: "2018-08-11"
 ### 结果
 
 自动开始集群扩展。您将收到电子邮件确认，指示正在处理订单。集群准备就绪可供使用时，将通过电子邮件通知您。
+
+如果要扩展的集群尚未准备就绪，那么扩展现有集群的过程可能会报告错误。
 
 **注**：与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**部署的实例**页面。
 
