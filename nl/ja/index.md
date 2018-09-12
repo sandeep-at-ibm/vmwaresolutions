@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -18,7 +18,8 @@ lastupdated: "2018-08-17"
 
 # IBM Cloud for VMware Solutions の概説
 
-この概説チュートリアルでは、インスタンスおよびそれに使用するいくつかのアドオン・サービスを注文するプロセスについて説明します。{:shortdesc}
+この概説チュートリアルでは、インスタンスおよびそれに使用するいくつかのアドオン・サービスを注文するプロセスについて説明します。
+{:shortdesc}
 
 ## 始める前に
 {: #prereqs}
@@ -38,7 +39,7 @@ lastupdated: "2018-08-17"
 
 ### ユーザー・アカウント
 
-{{site.data.keyword.cloud_notm}} アカウントおよび {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントが必要です。これらのアカウントは特定の要件を満たしている必要があります。
+{{site.data.keyword.cloud_notm}} アカウントおよび {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントが必要です。 これらのアカウントは特定の要件を満たしている必要があります。
 
    表 1. 必要なユーザー・アカウント
    <table>
@@ -52,7 +53,7 @@ lastupdated: "2018-08-17"
    </tr>
    <tr>
       <td>IBM Cloud アカウント</td>
-      <td>{{site.data.keyword.cloud_notm}} サービスを注文および使用するには、{{site.data.keyword.cloud_notm}} アカウントが必要です。請求情報は {{site.data.keyword.cloud_notm}} アカウントに関連付けられています。 物理インフラストラクチャーと仮想インフラストラクチャーのコスト、最終的に使用されたライセンスは、{{site.data.keyword.cloud_notm}} アカウントに請求されます。</td>
+      <td>{{site.data.keyword.cloud_notm}} サービスを注文および使用するには、{{site.data.keyword.cloud_notm}} アカウントが必要です。 請求情報は {{site.data.keyword.cloud_notm}} アカウントに関連付けられています。 物理インフラストラクチャーと仮想インフラストラクチャーのコスト、最終的に使用されたライセンスは、{{site.data.keyword.cloud_notm}} アカウントに請求されます。</td>
    </tr>
    <tr>
       <td>IBM Cloud インフラストラクチャー (SoftLayer) アカウント</td>
@@ -131,6 +132,10 @@ lastupdated: "2018-08-17"
        <td>HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスでは、鍵管理機能が組み込まれた強い暗号を使用して、ワークロードをライフサイクルにわたって保護できます。 このサービスは、オペレーティング・システム・レベルとデータ・レベルの両方で暗号化を実行できます。つまり、ワークロード内で任意のディレクトリー、フォルダー、またはファイルを暗号化/復号できます。</td>
     </tr>
     <tr>
+       <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
+       <td>{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} サービスは、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。</td>
+    </tr>
+    <tr>
        <td>[IBM Spectrum Protect Plus on IBM Cloud](services/spp_considerations.html)</td>
        <td>IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} サービスは、仮想環境のデータ保護、データ再使用、データ・リカバリーのための効率的でスケーラブルなソリューションを提供します。 サービスをスタンドアロン・ソリューションとして実装することも、お客様の IBM Spectrum Protect 環境と統合して長期保管とデータ・ガバナンスのためにコピーをオフロードすることもできます。</td>
     </tr>
@@ -180,7 +185,7 @@ lastupdated: "2018-08-17"
 
 ## ステップ 4: インスタンスの表示
 
-**ステップ 3** でインスタンスの注文を行うと、インスタンスのデプロイメントが自動的に開始されます。デプロイメントの状況を追跡するには、インスタンスの詳細を表示します。インスタンスのデプロイメントが完了したら、インスタンスの詳細ページでも、インスタンスとそのアドオン・サービスの要約と詳細情報を表示できます。
+**ステップ 3** でインスタンスの注文を行うと、インスタンスのデプロイメントが自動的に開始されます。 デプロイメントの状況を追跡するには、インスタンスの詳細を表示します。 インスタンスのデプロイメントが完了したら、インスタンスの詳細ページでも、インスタンスとそのアドオン・サービスの要約と詳細情報を表示できます。
 
 注文したインスタンスを表示する方法について詳しくは、以下のトピックを参照してください。
 * [vCenter Server インスタンスの表示](vcenter/vc_viewinginstances.html)
