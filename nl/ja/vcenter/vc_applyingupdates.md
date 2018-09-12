@@ -63,7 +63,7 @@ lastupdated: "2018-08-07"
    * 新しい ESXi サーバーが追加された。
    * 新しいクラスターが追加された。
 
-5. NSX ライセンスをアップグレードするには、**「アップグレード」**をクリックします。 **「NSX License Edition のアップグレード (Upgrade NSX License Edition)」**ウィンドウで、アップグレードするエディションを選択し、**「アップグレード」**をクリックします。ライセンスのエディションをダウングレードすることはできません。
+5. NSX ライセンスをアップグレードするには、**「アップグレード」**をクリックします。 **「NSX License Edition のアップグレード (Upgrade NSX License Edition)」**ウィンドウで、アップグレードするエディションを選択し、**「アップグレード」**をクリックします。 ライセンスのエディションをダウングレードすることはできません。
 
    **注:** ライセンスをアップグレードすると、インスタンス上の既存の NSX ライセンスがすべて置き換えられます。 請求サイクルの途中でアップグレードすると、旧ライセンスと新ライセンスの重複により追加料金が発生することがあります。 追加料金を避けるために、請求サイクルの最後にライセンスをアップグレードすることをお勧めします。
 
@@ -76,7 +76,7 @@ lastupdated: "2018-08-07"
 
 vCenter Server インスタンスで現在 VMware NSX Base エディションを使用している場合は、Hybridity Bundle へのライセンス・アップグレード中に、VMware NSX Advanced エディションに自動的にアップグレードされます。
 
-**注:** Hybridity Bundle にアップグレードする場合、vCenter Server インスタンスに既に NFS ファイル・ストレージがあれば、VMware vSAN ストレージには課金されません。vSAN ライセンスは Hybridity Bundle に含まれているため、課金されます。
+**注:** Hybridity Bundle にアップグレードする場合、vCenter Server インスタンスに既に NFS ファイル・ストレージがあれば、VMware vSAN ストレージには課金されません。 vSAN ライセンスは Hybridity Bundle に含まれているため、課金されます。
 
 vCenter Server インスタンスを vCenter Server with Hybridity Bundle にアップグレードするには、以下の手順を実行します。
 
