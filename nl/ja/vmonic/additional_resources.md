@@ -10,7 +10,7 @@ lastupdated: "2018-08-17"
 
 # 追加リソース
 
-より迅速に開始するのに役立つ追加のリソースを確認してください。以下のリソースが用意されています。
+より迅速に開始するのに役立つ追加のリソースを確認してください。 以下のリソースが用意されています。
 * アーキテクチャー・リファレンス情報
 * ビデオ
 * デモンストレーション
@@ -41,7 +41,7 @@ lastupdated: "2018-08-17"
 
 ## IBM Cloud for VMware Solutions のテスト・ドライブ
 
-実際にご覧になりますか?段階的に説明した {{site.data.keyword.vmwaresolutions_short}} ガイド付きデモ [Try VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions) に従って、製品の簡単なテスト・ドライブを実行します。
+実際にご覧になりますか? 段階的に説明した {{site.data.keyword.vmwaresolutions_short}} ガイド付きデモ [Try VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions) に従って、製品の簡単なテスト・ドライブを実行します。
 
 ## developerWorks レシピ
 

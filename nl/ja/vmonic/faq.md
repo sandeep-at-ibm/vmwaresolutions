@@ -20,7 +20,7 @@ lastupdated: "2018-08-14"
 
 ## IBM Cloud インフラストラクチャーの資格情報を IBM Cloud for VMware Solutions コンソールに関連付けるにはどうすればよいですか?
 
-初めてインスタンスを注文するときに、コンソールの**「設定」**ページの指示に従い、{{site.data.keyword.slportal}}で {{site.data.keyword.cloud_notm}} インフラストラクチャーのユーザー名と API 鍵を見つけてコピーしてください。{{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報は、最初の注文の後に {{site.data.keyword.vmwaresolutions_short}} コンソールに保管されます。 それ以降の注文では、保管された資格情報が自動的に使用されます。
+初めてインスタンスを注文するときに、コンソールの**「設定」**ページの指示に従い、{{site.data.keyword.slportal}}で {{site.data.keyword.cloud_notm}} インフラストラクチャーのユーザー名と API 鍵を見つけてコピーしてください。 {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報は、最初の注文の後に {{site.data.keyword.vmwaresolutions_short}} コンソールに保管されます。 それ以降の注文では、保管された資格情報が自動的に使用されます。
 
 ## VMware 仮想プラットフォームの使用料はどのように請求されますか?
 
@@ -68,7 +68,7 @@ vCenter Server インスタンスの場合、デプロイ時に作成される�
 
 ##パッチはどのように管理されていますか?
 
-IBM は、IBM CloudDriver 仮想サーバー・インスタンス (VSI) をオンデマンドでデプロイすることで、IBM コードの継続的な更新を提供しています。Zerto on {{site.data.keyword.cloud_notm}} や Veeam on {{site.data.keyword.cloud_notm}} などのアドオン・サービスについては、継続的な更新を提供していません。 これらの更新は、お客様が入手してインストールしてください。
+IBM は、IBM CloudDriver 仮想サーバー・インスタンス (VSI) をオンデマンドでデプロイすることで、IBM コードの継続的な更新を提供しています。 Zerto on {{site.data.keyword.cloud_notm}} や Veeam on {{site.data.keyword.cloud_notm}} などのアドオン・サービスについては、継続的な更新を提供していません。 これらの更新は、お客様が入手してインストールしてください。
 
 VMware の更新は、デプロイした VMware インスタンスのタイプに応じて異なる方法で適用されます。
 
@@ -119,7 +119,7 @@ VMware の更新は、デプロイした VMware インスタンスのタイプ�
 
 いいえ。VMware vSphere on {{site.data.keyword.cloud_notm}} では、Cloud Foundation および vCenter Server プラットフォームに含まれる高度な自動化機能は使用されません。 注文内容に基づいて、プラットフォームから、オプションの VMware ライセンス、ESXi サーバー、オプションで FortiGate 物理ファイアウォールの HA ペアが用意されます。 新規クラスターが作成されると、3 つの新規 VLAN (パブリック VLAN 1 つ、プライベート VLAN 2 つ) もプロビジョンされます。
 
-VMware ESXi は各ベア・メタル・サーバーに自動的にインストールされますが、vCenter Server や NSX などの追加の VMware コンポーネントのインストールはお客様が行ってください。 vSphere on {{site.data.keyword.cloud_notm}} は、選択された VMware コンポーネントに基づいて VMware 互換ハードウェアを注文することを保証しますが、VMware 環境の構成と機能を自動実行しません。IBM でホストされる環境を設計して構築する作業は、お客様が行ってください。
+VMware ESXi は各ベア・メタル・サーバーに自動的にインストールされますが、vCenter Server や NSX などの追加の VMware コンポーネントのインストールはお客様が行ってください。 vSphere on {{site.data.keyword.cloud_notm}} は、選択された VMware コンポーネントに基づいて VMware 互換ハードウェアを注文することを保証しますが、VMware 環境の構成と機能を自動実行しません。 IBM でホストされる環境を設計して構築する作業は、お客様が行ってください。
 
 ## すべての通知のリストを表示するにはどうすればよいですか?
 
