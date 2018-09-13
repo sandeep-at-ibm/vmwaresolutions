@@ -30,7 +30,7 @@ O nome do cluster deve atender aos requisitos a seguir:
 * O comprimento máximo do nome do cluster é de 30 caracteres.
 * O nome do cluster deve ser exclusivo dentro da instância do vCenter Server with Hybridity Bundle.
 
-#### Local do data center
+#### Local do datacenter
 
 O local do {{site.data.keyword.CloudDataCent_notm}} do cluster é configurado como o {{site.data.keyword.CloudDataCent_notm}} da instância do vCenter Server por padrão. É possível implementar o cluster em um {{site.data.keyword.CloudDataCent_notm}} diferente da instância implementada, mas deve-se assegurar que a latência de rede entre os dois {{site.data.keyword.CloudDataCents_notm}} seja menor que 150 ms. Para verificar a latência de rede, é possível usar uma ferramenta, como o [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 

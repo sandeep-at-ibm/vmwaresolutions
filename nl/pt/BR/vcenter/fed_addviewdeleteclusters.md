@@ -32,7 +32,7 @@ O nome do cluster deve atender aos requisitos a seguir:
 * O comprimento máximo do nome do cluster é de 30 caracteres.
 * O nome do cluster deve ser exclusivo dentro da instância do VMware Federal.
 
-#### Local do data center
+#### Local do datacenter
 
 O data center do cluster é configurado para o data center da instância do VMware Federal por padrão.
 

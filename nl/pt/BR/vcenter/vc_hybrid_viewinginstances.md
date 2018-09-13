@@ -27,13 +27,13 @@ Tabela 1. Itens de instância do VCenter Server with Hybridity Bundle
 | Versão | A versão de liberação na qual a instância foi implementada ou submetida a upgrade |  
 | Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada |  
 | Horário de criação | A data e hora em que a instância foi criada |  
-| Barra de Status | O status da instância |  
+| Status | O status da instância |  
 
 A instância pode ter um intervalo de status.
 
 Tabela 2. Descrições de status de instâncias do vCenter Server with Hybridity Bundle
 
-| Barra de Status        | Descrição       |
+| Status        | Descrição       |
 |:------------- |:------------- |
 | Criando | A instância está sendo criada. |
 | Construindo | A instância está sendo configurada. |
@@ -60,7 +60,7 @@ Tabela 3. Propriedades de instâncias do vCenter Server with Hybridity Bundle
 | Versão atual | A versão atual do {{site.data.keyword.vmwaresolutions_short}}. |
 | Versão do vCenter | A versão do VMware vCenter Server with Hybridity Bundle.<br><br>**Nota**: há uma pequena variação entre a versão do vCenter Server exibida no console do {{site.data.keyword.vmwaresolutions_short}} e do VMware vSphere Web Client. Ambos estão corretos. |
 | NSX for vSphere | A versão do produto VMware NSX for vSphere. |
-| Edição de licença do NSX | A versão e a edição da licença do VMware NSX. |
+| Edição de licença NSX | A versão e a edição da licença do VMware NSX. |
 | DNS, domínio-raiz | O nome do domínio-raiz é o nome de domínio do DNS (Sistema de Nomes de Domínio) e o nome raiz da floresta do Microsoft Active Directory (AD). |
 | DNS, domínio SSO | O domínio SSO é o domínio de Conexão única do vSphere. O nome de domínio SSO é fixo para todas as instâncias implementadas do vCenter Server with Hybridity Bundle com um valor de <samp class="ph codeph">vsphere.local</samp>. |
 | DNS, subdomínio | O subdomínio é o nome de subdomínio do DNS do nome de domínio-raiz no qual os nomes de host da instância local do vCenter Server with Hybridity Bundle residem. O nome do subdomínio está no formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
