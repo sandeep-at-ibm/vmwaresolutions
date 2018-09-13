@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -17,6 +17,7 @@ lastupdated: "2018-08-11"
 Assegure-se de que tenha concluído as tarefas a seguir:
 *  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](../vmonic/useraccount.html).
 *  Você revisou os requisitos e as considerações em [Requisitos e planejamento para clusters do vSphere](vs_planning.html).
+*  Você foi notificado por e-mail de que o cluster que deseja escalar está pronto para uso.
 
 ## Procedimento
 
@@ -33,6 +34,8 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 ### Resultados
 
 O ajuste de escala do cluster é iniciado automaticamente. Você recebe uma confirmação por e-mail de que a ordem está sendo processada. Quando o cluster estiver pronto para usar, você será notificado por e-mail.
+
+Se o cluster que está sendo escalado não estiver pronto para uso, o procedimento de cluster de ajuste de escala existente poderá relatar um erro.
 
 **Nota:** os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Cloud Foundation, não são exibidos na página **Instâncias implementadas**.
 
