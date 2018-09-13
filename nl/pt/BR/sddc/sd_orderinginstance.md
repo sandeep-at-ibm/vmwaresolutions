@@ -50,7 +50,7 @@ Para usuários que não são do Parceiros de negócios, é possível usar as lic
 
 ## Configurações do Bare Metal Server
 
-### Local do data center
+### Local do datacenter
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
 
