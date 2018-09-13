@@ -67,7 +67,7 @@ As configurações do Bare Metal baseiam-se na configuração do {{site.data.key
 
 Quatro servidores ESXi são necessários para os clusters iniciais e pós-implementação para configurações do vSAN. Todos os servidores ESXi compartilham a mesma configuração. Na pós-implementação, é possível incluir mais quatro clusters.
 
-### Local do data center
+### Local do datacenter
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
 

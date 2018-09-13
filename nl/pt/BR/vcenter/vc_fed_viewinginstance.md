@@ -62,7 +62,7 @@ Tabela 3. Propriedades de instância do VMware Federal
 | Versão atual |  A versão atual do {{site.data.keyword.vmwaresolutions_short}}. |
 | Versão do vCenter | A versão do VMware vCenter Server.<br><br>**Nota:** há uma ligeira variação entre a versão do vCenter Server exibida no console do {{site.data.keyword.vmwaresolutions_short}} e o VMware vSphere Web Client. Ambos estão corretos. |
 | NSX for vSphere | A versão do produto VMware NSX for vSphere. |
-| Edição de licença do NSX | A versão e a edição da licença do VMware NSX. |
+| Edição de licença NSX | A versão e a edição da licença do VMware NSX. |
 | Domínio-raiz DNS | O nome do domínio-raiz é o nome de domínio do DNS (Sistema de Nomes de Domínio) e o nome raiz da floresta do Microsoft Active Directory (AD). |
 | Domínio SSO DNC | O domínio SSO é o domínio de Conexão única do vSphere. O nome de domínio SSO é corrigido para todas as instâncias implementadas do vCenter Server com um valor de <samp class="ph codeph">vsphere.local</samp>. |
 | Subdomínio DNS | O subdomínio é o nome do subdomínio do DNS no nome de domínio-raiz no qual os nomes de host da instância local do vCenter Server residem. O nome do subdomínio está no formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |

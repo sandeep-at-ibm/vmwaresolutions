@@ -63,7 +63,7 @@ Tabela 3. Propriedades da instância do vCenter Server
 | Versão do vCenter | A versão do VMware vCenter Server.<br><br>**Nota**: há uma pequena variação entre a versão do vCenter Server exibida no console do {{site.data.keyword.vmwaresolutions_short}} e do VMware vSphere Web Client. Ambos estão corretos. |
 | NSX for vSphere | A versão do produto VMware NSX for vSphere. |
 | Licença do _componente do VMware_ | Se tiver selecionado para usar sua própria licença do VMware para qualquer um dos componentes do VMware na página **Licenciamento** quando pediu a instância, o nome do componente do VMware e a chave de licença inseridos para o componente serão exibidos.<br><br>Exemplos de licenças do componente do VMware podem incluir: **Licença do NSX**, **Licença do vCenter Server** e **Licença do vSAN**. |
-| Edição de licença do NSX | A versão e a edição da licença do VMware NSX. |
+| Edição de licença NSX | A versão e a edição da licença do VMware NSX. |
 | DNS, domínio-raiz | O nome do domínio-raiz é o nome de domínio do DNS (Sistema de Nomes de Domínio) e o nome raiz da floresta do Microsoft Active Directory (AD). |
 | DNS, domínio SSO | O domínio SSO é o domínio de Conexão única do vSphere. O nome de domínio SSO é corrigido para todas as instâncias implementadas do vCenter Server com um valor de <samp class="ph codeph">vsphere.local</samp>. |
 | DNS, subdomínio | O subdomínio é o nome do subdomínio do DNS no nome de domínio-raiz no qual os nomes de host da instância local do vCenter Server residem. O nome do subdomínio está no formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |

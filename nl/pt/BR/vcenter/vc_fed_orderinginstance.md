@@ -69,7 +69,7 @@ Licenças do VMware fornecidas pela IBM para o seguinte:
 
 As configurações de Bare Metal são baseadas em sua configuração customizada. A opção para selecionar uma configuração pré-configurada não é suportada neste momento.
 
-### Local do data center
+### Local do datacenter
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
 
