@@ -93,7 +93,7 @@ Sim. Quando você estiver incluindo mais servidores ESXi em uma instância imple
 Para localizar o número de CPUs disponíveis em sua chave de licença, conclua as etapas a seguir:
 1. Acesse a página **Instâncias implementadas**.
 2. Localize e clique na instância.
-3. Na guia **Infraestrutura**, clique no cluster para o qual você deseja verificar a capacidade de licença.
+3. Na guia **Infraestrutura**, clique no cluster para o qual você deseja verificar a capacidade de licença. 
    O número de CPUs disponíveis é listado na tabela **Licença Fornecida pelo Usuário**.
 
 ## A IBM fornecerá suporte se eu selecionar a opção de licenciamento do BYOL?

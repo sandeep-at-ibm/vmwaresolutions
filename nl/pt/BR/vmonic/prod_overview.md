@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -98,6 +98,12 @@ O serviço HyTrust DataControl on {{site.data.keyword.cloud_notm}} oferece cript
 
 Para obter mais informações, consulte [Visão geral do HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html).
 
+### IBM Cloud Privado Hospedado
+
+O serviço {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} traz o poder de microsserviços e contêineres para o ambiente VMware no {{site.data.keyword.cloud_notm}}. Com esse serviço, é possível ampliar o mesmo VMware familiar, o modelo operacional e as ferramentas do {{site.data.keyword.cloud_notm}} Private, do local para o {{site.data.keyword.cloud_notm}}.
+
+Para obter mais informações, consulte  [ {{site.data.keyword.cloud_notm}}  Privado Hospedado ](../services/managing_icp.html).
+
 ### IBM Spectrum Protect Plus on IBM Cloud
 
 O serviço IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} fornece uma solução eficiente e escalável para proteção de dados, reutilização de dados e recuperação de dados para ambientes virtuais. É possível implementar o serviço como uma solução independente ou integrá-lo ao ambiente do IBM Spectrum Protect para transferir cópias para armazenamento e controle de dados de longo prazo.
@@ -106,8 +112,7 @@ Para obter mais informações, veja [Visão geral do IBM Spectrum Protect Plus o
 
 ### KMIP for VMware on IBM Cloud
 
-O serviço KMIP para VMware no {{site.data.keyword.cloud_notm}} fornece um serviço altamente disponível 24 horas por dia, 7 dias por semana para gerenciar chaves de criptografia que são usadas pelo VMware no {{site.data.keyword.cloud_notm}}. Esse serviço oferece a capacidade de tempo de execução para permitir que os clientes criem, recuperem, ativem, revoguem e
-destruam as chaves de criptografia. Ele também fornece a capacidade de gerenciamento para manter as
+O serviço KMIP para VMware no {{site.data.keyword.cloud_notm}} fornece um serviço altamente disponível 24 horas por dia, 7 dias por semana para gerenciar chaves de criptografia que são usadas pelo VMware no {{site.data.keyword.cloud_notm}}. Esse serviço oferece a capacidade de tempo de execução para permitir que os clientes criem, recuperem, ativem, revoguem e destruam as chaves de criptografia. Ele também fornece a capacidade de gerenciamento para manter as
 associações entre as credenciais do cliente e as chaves de criptografia.
 
 Para obter mais informações, veja [Visão geral do KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html).
