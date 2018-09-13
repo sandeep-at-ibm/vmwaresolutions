@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -57,7 +57,7 @@ Para obter uma visualização ideal e trabalhar no console do {{site.data.keywor
    </tr>
    <tr>
       <td>Conta de infraestrutura do IBM Cloud (SoftLayer)</td>
-      <td>A conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) era conhecida anteriormente como a conta do IBM SoftLayer. Para obter mais informações sobre os requisitos que a conta deve atender, consulte [Requisitos para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}](vmonic/slaccountrequirement.html).<br><br>É possível vincular contas de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) a contas do {{site.data.keyword.cloud_notm}} para usar recursos combinados de infraestrutura como serviço (IaaS) e plataforma como serviço (PaaS). Em seguida, é possível acessar recursos de IaaS e
+      <td>A conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) era conhecida anteriormente como a conta do IBM SoftLayer.  Para obter mais informações sobre os requisitos que a conta deve atender, consulte [Requisitos para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}](vmonic/slaccountrequirement.html).<br><br>É possível vincular contas de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) a contas do {{site.data.keyword.cloud_notm}} para usar recursos combinados de infraestrutura como serviço (IaaS) e plataforma como serviço (PaaS). Em seguida, é possível acessar recursos de IaaS e
 de PaaS por meio de um login único. A vinculação de suas contas também fornece uma única fatura para todos os recursos PaaS e IaaS que você usa.<ul><li>Se você não tiver uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer), solicite uma seguindo o procedimento em [Assinando uma conta de infraestrutura do IBM Cloud (SoftLayer)](vmonic/signing_softlayer_account.html) e, em seguida, vincule sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) à sua conta do {{site.data.keyword.cloud_notm}} seguindo o procedimento em [Vinculando contas do IBMid](https://console.bluemix.net/docs/account/softlayerlink.html).</li><li>Se você tiver uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer), poderá vinculá-la à sua conta do {{site.data.keyword.cloud_notm}} seguindo o procedimento em [Vinculando contas do IBMid](https://console.bluemix.net/docs/account/softlayerlink.html).</li></ul></td>
    </tr>
    </table>
@@ -131,6 +131,10 @@ Revise e escolha os serviços complementares para a oferta de implementação.
     <tr>
        <td>[HyTrust DataControl on IBM Cloud](services/htdc_considerations.html)</td>
        <td>O serviço HyTrust DataControl on {{site.data.keyword.cloud_notm}} oferece criptografia avançada com o gerenciamento de chave integrado para assegurar as cargas de trabalho em todo o seu ciclo de vida. O serviço pode fornecer criptografia no nível do sistema operacional e no nível de dados, o que significa que qualquer diretório, pasta ou arquivo dentro de uma carga de trabalho pode ser criptografado e decriptografado.</td>
+    </tr>
+    <tr>
+       <td>[IBM Cloud Privado Hospedado](services/managing_icp.html)</td>
+       <td>O serviço {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} traz o poder de microsserviços e contêineres para o ambiente VMware no {{site.data.keyword.cloud_notm}}. Com esse serviço, é possível ampliar o mesmo VMware familiar, o modelo operacional e as ferramentas do {{site.data.keyword.cloud_notm}} Private, do local para o {{site.data.keyword.cloud_notm}}.</td>
     </tr>
     <tr>
        <td>[IBM Spectrum Protect Plus on IBM Cloud](services/spp_considerations.html)</td>
