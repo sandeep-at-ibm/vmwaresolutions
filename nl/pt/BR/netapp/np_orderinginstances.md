@@ -68,7 +68,7 @@ Deve-se fazer upload de quatro arquivos de licenciamento NetApp porque cada um d
 
 ## Configurações do Bare Metal Server
 
-### Local do data center
+### Local do datacenter
 
 Deve-se selecionar o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
 
