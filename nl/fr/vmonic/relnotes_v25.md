@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-30"
 
 ---
 
 # Notes sur l'édition pour la version 2.5
 
-Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour la liste des erreurs rectifiées dans les différentes éditions, les problèmes connus concernant le produit et des conseils supplémentaires pour l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des conseils supplémentaires pour l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Résolution de Spectre et Meltdown
 
@@ -28,17 +28,17 @@ Cette édition installe VMware NSX for vSphere 6.4.1 pour les nouveaux déploiem
 
 ## Retrait de la configuration de sauvegarde par défaut
 
-{{site.data.keyword.vmwaresolutions_short}} offre deux services de modules complémentaires intégrés pour la sauvegarde : IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} et Veeam on {{site.data.keyword.cloud_notm}}. Ces services vous permettent de planifier et de fournir la reprise de votre infrastructure de gestion et votre charge de travail. De plus, IBM Resiliency Services offre des services gérés pour les sauvegardes Veeam.
+{{site.data.keyword.vmwaresolutions_short}} offre deux services de modules complémentaires intégrés pour la sauvegarde : IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} et Veeam on {{site.data.keyword.cloud_notm}}. Ces services vous permettent de planifier et de fournir la reprise de votre infrastructure de gestion et votre charge de travail. De plus, IBM Resiliency Services fournit des services gérés pour les sauvegardes Veeam.
 
 A partir de l'édition V2.5, les services IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} et Veeam on {{site.data.keyword.cloud_notm}}, lorsqu'ils sont déployés, ne préconfigurent plus la sauvegarde de machines virtuelles. Ce changement vous permet d'assurer la configuration appropriée de tous les aspects de vos tâches de sauvegarde, y compris la planification, la durée de conservation, l'utilisation du dédoublonnage, la surveillance et les alertes et la gestion de clés de chiffrement. De plus, la machine virtuelle IBM CloudDriver n'est plus configurée en tant que serveur de fichiers permanent pour les sauvegardes NSX.
 
 Vous êtes chargé de configurer, gérer et surveiller tous les composants logiciels, y compris la sauvegarde et la disponibilité de l'infrastructure de gestion et des charges de travail. Pour plus d'informations, voir [Sauvegarde des composants](../archiref/solution/solution_backingup.html#backing-up-components).
 
-**Remarque :** ce changement n'affecte pas les instances déployées antérieures à la version 2.5 ayant déjà installé le service IBM Spectrum Protect Plus sur {{site.data.keyword.cloud_notm}} ou Veeam sur {{site.data.keyword.cloud_notm}}. 
+**Remarque :** ce changement n'affecte pas les instances déployées antérieures à la version 2.5 sur lesquelles le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}} est déjà installé. 
 
 ## Résilience IBM CloudDriver
 
-Pour les instances déployées dans ou mises à niveau vers la version 2.5 ou des éditions ultérieures, le composant IBM CloudDriver n'est plus configuré en tant que machine virtuelle dans le cluster vSphere. Au lieu de cela, il est déployé en tant qu'instance de serveur virtuel d'infrastructure {{site.data.keyword.cloud_notm}} en fonction des besoins avec le dernier code {{site.data.keyword.cloud_notm}} pour VMware pour les opérations, telles que le déploiement de noeuds, de clusters ou de services supplémentaires. De plus, le composant IBM CloudDriver est modifié pour communiquer avec le plan de gestion {{site.data.keyword.cloud_notm}} à l'aide du réseau privé {{site.data.keyword.cloud_notm}}, par conséquent, le pare-feu ESG (Edge Services Gateway) NSX de gestion et les règles NAT autorisant IBM CloudDriver à établir des communications sortantes avec le réseau public sont retirés.
+Pour les instances déployées dans ou mises à niveau vers la version 2.5 ou des éditions ultérieures, le composant IBM CloudDriver n'est plus configuré en tant que machine virtuelle dans le cluster vSphere. Au lieu de cela, il est déployé en tant qu'instance de serveur virtuel d'infrastructure {{site.data.keyword.cloud_notm}} en fonction des besoins avec le dernier code {{site.data.keyword.cloud_notm}} pour VMware pour les opérations, telles que le déploiement de noeuds, de clusters ou de services supplémentaires. De plus, le composant IBM CloudDriver est modifié pour communiquer avec le plan de gestion {{site.data.keyword.cloud_notm}} à l'aide du réseau privé {{site.data.keyword.cloud_notm}}. Par conséquent, le pare-feu ESG (Edge Services Gateway) NSX de gestion et les règles NAT autorisant IBM CloudDriver à établir des communications sortantes avec le réseau public sont retirés. 
 
 Certains services de modules complémentaires, tels que F5 on {{site.data.keyword.cloud_notm}}, FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} et Zerto on {{site.data.keyword.cloud_notm}} nécessitent toujours un accès au réseau public, par conséquent, le pare-feu ESG NSX de gestion reste déployé dans toutes les instances.
 
@@ -68,11 +68,19 @@ Pour plus d'informations sur les comptes utilisateur, reportez-vous aux rubrique
 
 ## Mises à jour apportées aux services complémentaires
 
+### IBM Cloud Private Hosted (mis à jour le 30 août 2018)
+
+Le service {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances vCenter Server déployées dans (ou mises à niveau vers) la version 2.5 ou des éditions ultérieures. 
+
+Le service {{site.data.keyword.cloud_notm}} Private Hosted fournit la puissance des microservices et des conteneurs à votre environnement VMware sur {{site.data.keyword.cloud_notm}}. Grâce à ce service, vous pouvez déployer le même modèle opérationnel et les mêmes outils VMware et {{site.data.keyword.cloud_notm}} locaux dans {{site.data.keyword.cloud_notm}}.
+
+Vous pouvez demander ce service après avoir commandé votre instance vCenter Server. Pour plus d'informations, voir [Demande d'{{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html).
+
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-A partir de l'édition V2.5, le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} est déployé sous forme de deux machines virtuelles distinctes en appliquant les meilleures pratiques, avec une machine virtuelle exécutant le serveur Spectrum Protect Plus et l'autre machine virtuelle exécutant le serveur vSnap et le proxy VADP.
+A partir de l'édition V2.5, le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} est déployé sous forme de deux machines virtuelles distinctes, l'une d'elles exécutant le serveur IBM Spectrum Protect Plus et l'autre exécutant le serveur vSnap et le proxy VADP. 
 
-Vous pouvez désormais commander jusqu'à dix magasins de données de sauvegarde et bénéficier ainsi d'un stockage de sauvegarde pouvant atteindre 120 To. Les machines virtuelles vSnap et VADP sont dimensionnées en fonction de la taille du stockage de sauvegarde que vous avez sélectionnée et conformément aux informations décrites dans le wiki [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints).
+Vous pouvez désormais commander jusqu'à 10 magasins de données de sauvegarde et bénéficier ainsi d'un stockage de sauvegarde pouvant atteindre 120 To. Les machines virtuelles vSnap et VADP sont dimensionnées en fonction de la taille du stockage de sauvegarde que vous avez sélectionnée et conformément aux informations décrites dans le wiki [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints).
 
 ### KMIP for VMware on IBM Cloud
 
