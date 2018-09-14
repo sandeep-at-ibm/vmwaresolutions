@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -17,6 +17,7 @@ Puede escalar un clúster de VMware vSphere que ha solicitado o guardado en la c
 Asegúrese de haber realizado las tareas siguientes:
 *  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Cuentas de usuario y valores](../vmonic/useraccount.html).
 *  Ha revisado los requisitos y las consideraciones del apartado [Requisitos y planificación de clústeres de vSphere](vs_planning.html).
+*  Se le ha notificado por correo electrónico que el clúster que desea escalar está listo para que lo utilice.
 
 ## Procedimiento
 
@@ -33,6 +34,8 @@ Asegúrese de haber realizado las tareas siguientes:
 ### Resultados
 
 El escalado de clúster se inicia automáticamente. El usuario recibirá una confirmación por correo electrónico de que el pedido se está procesando. Cuando el clúster esté listo para ser utilizado, se le notificará por correo electrónico.
+
+Si el clúster que está escalando no está listo para que lo utilice, el procedimiento de clúster existente de escalado podría notificar un error.
 
 **Nota:** a diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Instancias desplegadas**.
 
