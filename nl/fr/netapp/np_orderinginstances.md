@@ -22,7 +22,7 @@ Assurez-vous que :
 
 ## Paramètres système
 
-Lorsque vous commandez une instance NetApp ONTAP Select, vous devez spécifier ses paramètres de base. 
+Lorsque vous commandez une instance NetApp ONTAP Select, vous devez spécifier ses paramètres de base.
 
 ### Nom d'instance
 
