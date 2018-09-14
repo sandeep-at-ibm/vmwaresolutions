@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-11"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-20"
 
 Pour déployer une plateforme virtuelle VMware hautement personnalisable, commandez un cluster VMware vSphere on {{site.data.keyword.cloud}}. Cette procédure permet de définir un nouveau cluster VMware vSphere.
 
-Cette procédure vous guide lors de la sélection des composants VMware, la définition des paramètres de serveur bare metal {{site.data.keyword.cloud_notm}} et des paramètres de stockage et la sélection des options de mise en réseau, pour créer un nouveau cluster. Une fois la commande passée, la configuration de cluster est capturée de sorte que vous pouvez y revenir et continuer, au besoin, à augmenter le cluster. Lorsque la commande est terminée, vous pouvez configurer manuellement le cluster VMware selon vos besoins.
+Cette procédure vous guide lors de la sélection des composants VMware, des paramètres de serveur Bare Metal {{site.data.keyword.cloud_notm}}, des paramètres de stockage, des options de mise en réseau, pour créer un nouveau cluster. Une fois la commande passée, la configuration de cluster est capturée de sorte que vous pouvez y revenir et continuer, au besoin, à augmenter le cluster. Lorsque la commande est terminée, vous pouvez configurer manuellement le cluster VMware selon vos besoins.
 
 ## Conditions requises
 
@@ -34,25 +34,25 @@ Le nom de cluster doit être unique au sein de votre compte.
 
 Sélectionnez les composants VMware à commander avec votre cluster et spécifiez l'option d'octroi de licence pour les composants.
 
-### (Réservé aux partenaires commerciaux) Offres groupées de composants
+### (Partenaires commerciaux IBM uniquement) Offres groupées de composants
 
-Si vous êtes un partenaire commercial, vous pouvez sélectionner une offre groupée de licences de composant lorsque vous commandez un nouveau cluster vSphere. Les offres groupées disponibles sont les suivantes :
+Si vous êtes un partenaire commercial IBM, vous pouvez sélectionner une offre groupée de licences de composant lorsque vous commandez un nouveau cluster vSphere. Les offres groupées suivantes sont disponibles :
 
-Tableau 1. Offres groupées de composants pour les clusters vSphere réservées aux partenaires commerciaux
+Tableau 1. Offres groupées de composants pour les clusters vSphere réservées aux partenaires commerciaux IBM
 
 | Offre groupée | Composants                   |
-|:-------------------------|:-----------------------|
+|:------------------------- |:----------------------- |
 | Standard with Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise |
 | Advanced                 | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vCloud Director, NSX Base |
 | Advanced with Networking | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
 | Advanced with Networking and Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, vCloud Director, NSX Enterprise |
 
-Vous pouvez également inclure dans votre commande les composants VMware supplémentaires suivants :
+Vous pouvez également inclure dans votre commande les composants VMware suivants :
 * VMware vSAN
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**Remarque :** le mode BYOL n'est pas disponible pour les partenaires commerciaux. L'option **Je fournirai la licence** n'est pas disponible lorsqu'ils passent leur commande.
+**Remarque :** l'option BYOL n'est pas disponible pour les partenaires commerciaux IBM.
 
 ### (Réservé aux utilisateurs qui ne sont pas des partenaires commerciaux) Composants individuels
 
@@ -66,7 +66,7 @@ Si vous n'êtes pas un partenaire commercial, vous pouvez sélectionner les comp
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**Remarque :** le composant VMware vSAN n'est pas disponible lorsque vous commandez VMware vSphere Enterprise Plus 6.0. Si vous prévoyez d'utiliser votre propre licence pour VMware vSphere Enterprise Plus 6.0, un ticket d'infrastructure {{site.data.keyword.cloud_notm}} sera ouvert en votre nom pour demander que les licences vSphere des serveurs {{site.data.keyword.baremetal_short}} commandés soient remplacées par vos propres licences.
+**Remarque :** le composant VMware vSAN n'est pas disponible lorsque vous commandez VMware vSphere Enterprise Plus 6.0. Si vous prévoyez d'utiliser votre propre licence pour VMware vSphere Enterprise Plus 6.0, un ticket d'infrastructure {{site.data.keyword.cloud_notm}} sera ouvert en votre nom. Ce ticket demande que les licences vSphere des serveurs {{site.data.keyword.baremetal_short}} commandés soient remplacées par vos propres licences.
 
 ### Options d'octroi de licence
 
@@ -92,7 +92,7 @@ Indiquez le modèle d'UC et la mémoire RAM du serveur bare metal.
 
 Tableau 2. Options pour les serveurs {{site.data.keyword.baremetal_short}} personnalisés
 
-| Options d'UC        | Options de RAM       |
+| Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 384 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 384 Go, 512 Go, 768 Go, 1,5 To |
@@ -105,9 +105,9 @@ Les options disponibles varient selon que vous avez ou non sélectionné le comp
 
 ### Nombre de serveurs bare metal
 
-Nombre de serveurs ESXi que vous voulez ajouter au cluster vSphere. Tous les serveurs ESXi se partagent la même configuration.
-* Si vous avez sélectionné le composant VMware NSX, un minimum de 3 serveurs est requis.
-* Si vous avez sélectionné le composant VMware vSAN, un minimum de 4 serveurs est requis.
+Nombre de serveurs ESXi que vous voulez ajouter au cluster vSphere. Tous les serveurs ESXi ont la même configuration.
+* Si vous avez sélectionné le composant VMware NSX, un minimum de trois serveurs est requis.
+* Si vous avez sélectionné le composant VMware vSAN, un minimum de quatre serveurs est requis.
 
 ## Paramètres de stockage
 
@@ -136,7 +136,7 @@ Vous devez spécifier les paramètres d'interface réseau suivants lorsque vous 
 
 ### Préfixe de nom d'hôte
 
-Le nom d'hôte est utilisé pour toutes les commandes de serveur bare metal. Il est recommandé d'utiliser le nom d'hôte pour toutes les machines virtuelles de gestion, telles que vCenter Server, NSX, etc.
+Le nom d'hôte est utilisé pour toutes les commandes de serveur bare metal. Il est recommandé d'utiliser le nom d'hôte pour toutes les machines virtuelles de gestion, telles que vCenter Server et  NSX.
 
 Le préfixe du nom d'hôte qui doit respecter les règles suivantes :
 * Le nom doit commencer et se terminer par un caractère alphanumérique.
@@ -182,7 +182,7 @@ En fonction de l'{{site.data.keyword.CloudDataCent_notm}} que vous avez sélecti
 
 **Important :**
 * Vérifiez que la configuration de pare-feu sur les VLAN sélectionnés ne bloque pas le trafic des données de gestion.
-* Vérifiez que tous les VLAN sélectionnés se trouvent dans le même pod, car les serveurs ESXi ne peuvent pas être mis à disposition sur des VLAN multi-pods.
+* Vérifiez que tous les VLAN sélectionnés se trouvent dans le même pod. Les serveurs ESXi ne peuvent pas être mis à disposition sur des VLAN multi-pods.
 
 #### Paire à haute disponibilité de dispositifs FortiGate Physical Appliance série 300
 
@@ -190,7 +190,7 @@ Vous pouvez également choisir d'inclure la paire à haute disponibilité de dis
 
 ## Récapitulatif de la commande
 
-Selon vos configurations, le coût estimé est généré et affiché instantanément dans le panneau **Récapitulatif de la commande** sur la droite. Cliquez sur **Détails concernant la tarification** au bas du panneau pour générer un document PDF contenant les détails relatifs à l'estimation.
+Selon vos configurations, le coût estimé est généré et affiché instantanément dans le panneau **Récapitulatif de la commande** sur la droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant les détails de l'estimation.
 
 ## Procédure
 
@@ -199,11 +199,11 @@ Selon vos configurations, le coût estimé est généré et affiché instantané
    Vérifiez que vous vous trouvez sur l'onglet **Créer** et que **Nouveau cluster** est affiché dans la liste **Configurations de cluster**.
 3. Entrez le nom du cluster.
 4. Sélectionnez les composants VMware :
-  * Si vous êtes un partenaire commercial, sélectionnez une offre groupée de licences et des composants VMware disponibles supplémentaires.
-  * Si vous n'êtes pas un partenaire commercial, sélectionnez le composant, l'édition, le cas échéant, et spécifiez l'option d'octroi de licence.
+  * Si vous êtes un partenaire commercial IBM, sélectionnez une offre groupée de licences et d'éventuels composants VMware disponibles supplémentaires.
+  * Si vous n'êtes pas un partenaire commercial, sélectionnez le composant, l'édition, le cas échéant, et spécifiez l'option de licence.
   Lorsque vous choisissez de fournir votre propre licence (mode BYOL) pour VMware vSphere Enterprise Plus, un ticket {{site.data.keyword.cloud_notm}} est ouvert automatiquement en votre nom pour demander que les licences vSphere par défaut sur vos serveurs {{site.data.keyword.baremetal_short}} commandés soient remplacées par vos propres licences.   
 
-    **Important** : vous êtes chargé du suivi du ticket afin de garantir le remplacement de la licence vSphere sur les serveurs ESXi que vous venez de commander et faire en sorte que l'infrastructure {{site.data.keyword.cloud_notm}} accorde l'annulation des frais de la licence vSphere d'infrastructure {{site.data.keyword.cloud_notm}} initialement fournie. Pour remplacer votre licence ESXi vSphere, voir [Configuration des paramètres de licence pour un hôte ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
+    **Important :** vous êtes responsable du suivi du ticket afin de remplacer la licence vSphere sur les nouveaux serveurs ESXi commandés. De la sorte, {{site.data.keyword.cloud_notm}} accorde l'annulation des frais de licence vSphere de l'infrastructure {{site.data.keyword.cloud_notm}} initialement fournie. Pour remplacer votre licence ESXi vSphere, voir [Configuration des paramètres de licence pour un hôte ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
 
 5. Spécifiez les paramètres de serveur bare metal :
    1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger le cluster.
@@ -212,7 +212,7 @@ Selon vos configurations, le coût estimé est généré et affiché instantané
 6. Si vous avez sélectionné **Stockage vSAN**, spécifiez les paramètres de stockage vSAN en renseignant les zones **Type et taille de disque pour disques de capacité vSAN** et **Nombre de disques de capacité vSAN**.
 7. Spécifiez les paramètres d'interface réseau :
    1. Renseignez les zones Préfixe de nom d'hôte, Libelle de sous-domaine et Nom de domaine.
-   2. Sélectionnez l'interface réseau à utiliser :
+   2. Sélectionnez l'interface réseau que vous désirez utiliser .
     * Si vous voulez commander de nouveaux VLAN publics et privés, cliquez sur **Commander de nouveaux VLAN**.
     * Si vous voulez réutiliser les VLAN publics et privés existants lorsqu'ils sont disponibles, cliquez sur **Sélectionner des VLAN existants** et spécifiez les VLAN et éventuellement les sous-réseaux.
     3. Spécifiez si vous souhaitez inclure la paire de dispositifs FortiGate Physical Appliance série 300 à haute disponibilité pour sécuriser votre environnement de cloud.  

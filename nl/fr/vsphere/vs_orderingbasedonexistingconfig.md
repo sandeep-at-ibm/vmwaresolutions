@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -25,18 +25,18 @@ Assurez-vous que :
 2. Sur la page **VMware vSphere on IBM Cloud**, cliquez sur **Créer**.  
 3. Cliquez sur l'onglet **Créer** et sélectionnez un modèle de configuration dans la liste **Configurations de cluster**.
 4. Entrez le nom du nouveau cluster.
-5. Passez en revue ls paramètres de cluster qui sont automatiquement renseignés et mettez à jour les paramètres en fonction de vos besoins. Pour plus d'informations sur les paramètres, voir [Commande de nouveaux clusters vSphere](vs_orderinginstances.html).
+5. Passez en revue les paramètres de cluster renseignés automatiquement et mettez à jour les paramètres en fonction de vos besoins. Pour plus d'informations sur les paramètres, voir [Commande de nouveaux clusters vSphere](vs_orderinginstances.html).
 6. Sur le panneau **Récapitulatif de la commande**, vérifiez la configuration de l'instance et le coût estimé.
    * Pour sauvegarder la configuration en tant que modèle sans passer de commande, cliquez sur **Sauvegarde de la configuration**.
    * Pour passer la commande, assurez-vous que le compte qui devra être facturé est correct, passez en revue et acceptez les conditions, puis cliquez sur **Mettre à disposition**.
 
-   **Remarque** : seuls les serveurs {{site.data.keyword.baremetal_short}} sont installés. Vous êtes responsable de l'installation et de la configuration des divers composants après déploiement du cluster, tels que VMware vCenter, VMware NSX, VMware vSAN.
+   **Remarque** : seuls les serveurs {{site.data.keyword.baremetal_short}} sont installés. L'installation et la configuration de divers composants, comme VMware vCenter, VMware NSX ou VMware vSAN, après le déploiement, vous incombe.
 
 ## Résultats
 
 Si vous avez sauvegardé la configuration de cluster en tant que modèle, vous recevez sur la console une notification vous indiquant que la configuration a été sauvegardée. Le modèle figure alors dans la liste **Configurations de cluster**.
 
-Si vous avez passé la commande, le déploiement du cluster démarre automatiquement et vous recevez par courrier électronique la confirmation que la commande est en cours de traitement. Lorsque le cluster est prêt pour utilisation, une notification vous en averti.
+Si vous avez passé commande, le déploiement du cluster démarre automatiquement. Une conformation par courrier électronique vous avise que la commande est en cours de traitement. Lorsque le cluster est prêt pour son utilisation, une notification vous en avertit.
 
 **Remarque :** contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.
 
