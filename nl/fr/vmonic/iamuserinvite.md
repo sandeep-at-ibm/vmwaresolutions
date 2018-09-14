@@ -10,7 +10,7 @@ lastupdated: "2018-08-15"
 
 # Invitation des utilisateurs à accéder à des services et des ressources
 
-{{site.data.keyword.vmwaresolutions_full}} est intégré à {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) pour permettre à plusieurs utilisateurs de collaborer. Après vous être inscrit à un compte {{site.data.keyword.cloud_notm}} et vous être connecté à la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez ajouter des utilisateurs au compte {{site.data.keyword.cloud_notm}}. Les utilisateurs que vous ajoutez peuvent partager les services et les ressources qui sont mises à disposition pour le compte. 
+{{site.data.keyword.vmwaresolutions_full}} est intégré à {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) pour permettre à plusieurs utilisateurs de collaborer. Après vous être inscrit à un compte {{site.data.keyword.cloud_notm}} et vous être connecté à la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez ajouter des utilisateurs au compte {{site.data.keyword.cloud_notm}}. Les utilisateurs que vous ajoutez peuvent partager les services et les ressources qui sont mises à disposition pour le compte.
 
 ## Avant de commencer
 

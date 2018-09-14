@@ -93,7 +93,8 @@ Oui. Lorsque vous ajoutez des serveurs ESXi à une instance déployée, la capac
 Pour identifier le nombre d'UC utilisables avec votre clé de licence, procédez comme suit :
 1. Accédez à la page **Instances déployées**.
 2. Localisez et cliquez sur l'instance.
-3. Sur l'onglet **Infrastructure**, cliquez sur le cluster pour lequel vous désirez vérifier la capacité de licence. Le nombre d'UC disponibles est indiqué dans le tableau **Licence fournie par l'utilisateur**.
+3. Sur l'onglet **Infrastructure**, cliquez sur le cluster pour lequel vous désirez vérifier la capacité de licence. 
+   Le nombre d'UC disponibles est indiqué dans le tableau **Licence fournie par l'utilisateur**.
 
 ## Est-ce que je bénéficie du support IBM lorsque je sélectionne l'option de licence BYOL ?
 
@@ -131,7 +132,7 @@ vCenter Server with Hybridity Bundle est un ensemble prescrit de licences et d'�
 
 Les nouvelles instances de vCenter Server with Hybridity Bundle incluent VMware vSphere Enterprise Plus, VMware vCenter Standard, VMware NSX Advanced ou Enterprise, VMware vSAN Advanced ou Enterprise et VMware Hybrid Cloud Extension (HCX).
 
-Si vous disposez d'une instance vCenter Server avec une édition NSX Base, une mise à niveau vers l'édition NSX Advanced est effectuée automatiquement lorsque vous commandez vCenter Server avec Hybridity Bundle. 
+Si vous disposez d'une instance vCenter Server avec une édition NSX Base, une mise à niveau vers l'édition NSX Advanced est effectuée automatiquement lorsque vous commandez vCenter Server avec Hybridity Bundle.
 
 ## Puis-je mettre à niveau l'édition NSX Advanced qui est incluse dans vCenter Server with Hybridity Bundle vers l'édition NSX Enterprise ?
 

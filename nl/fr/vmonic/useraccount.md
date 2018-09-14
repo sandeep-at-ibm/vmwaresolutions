@@ -27,13 +27,13 @@ Vous pouvez également indiquer si vous voulez recevoir des notifications par co
 ## Procédure
 
 1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Paramètres** dans le panneau de navigation de gauche.
-2. Dans la zone **Notifications**, spécifiez vos paramètres de notification. 
+2. Dans la zone **Notifications**, spécifiez vos paramètres de notification.
    * Si vous voulez être prévenu par courrier électronique de la survenue d'événements, cliquez sur **Activer les notifications par courrier électronique**.
    * Si vous voulez être prévenu sur la console de la survenue d'événements, cliquez sur **Activer les notifications par console**.
-3. Dans la zone **Données d'identification d'infrastructure IBM Cloud**, entrez le nom d'utilisateur et la clé d'API de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) : 
+3. Dans la zone **Données d'identification d'infrastructure IBM Cloud**, entrez le nom d'utilisateur et la clé d'API de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) :
    * Si votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) et votre compte {{site.data.keyword.cloud_notm}} sont liés, cliquez sur **Extraire** pour activer la saisie automatique des données d'identification.
    * Si ce n'est déjà fait, vous devez lier votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) et votre compte {{site.data.keyword.cloud_notm}}. Connectez-vous au [portail client de l'infrastructure {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/) et suivez les instructions sur la console pour obtenir les données d'identification, puis entrez ces informations.
-   * Si vous ne disposez pas d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), [souscrivez à un compte](../vmonic/signing_softlayer_account.html) et suivez les instructions sur la console pour obtenir les données d'identification, puis entrez ces informations. 
+   * Si vous ne disposez pas d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), [souscrivez à un compte](../vmonic/signing_softlayer_account.html) et suivez les instructions sur la console pour obtenir les données d'identification, puis entrez ces informations.
 4. Cliquez sur **Sauvegarder les données d'identification**.
 
 ## Résultats

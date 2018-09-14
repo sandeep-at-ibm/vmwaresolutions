@@ -50,7 +50,7 @@ Pour plus d'informations, voir [Composants de VMware vSphere on {{site.data.keyw
 
 Il est recommandé de déployer les charges de travail de production dans des environnements dotés d'au moins trois noeuds.
 
-VMware vSphere DRS (Distributed Resource Scheduler, planificateur de ressources distribuées) et VMware HA (High Availability, haute disponibilité) sont activés par défaut. Les pratiques VMware recommandées suggèrent toutefois de placer chacun des trois contrôleurs NSX sur un noeud distinct.
+VMware vSphere DRS (Distributed Resource Scheduler) et VMware HA (High Availability) sont activés par défaut. Les pratiques VMware recommandées suggèrent toutefois de placer chacun des trois contrôleurs NSX sur un noeud distinct.
 
 Dans le déploiement minimum à deux noeuds, l'un des noeuds reçoit un contrôleur NSX et le second, deux contrôleurs NSX. Si le noeud où se trouvent les deux contrôleurs NSX vient à s'arrêter, les opérations du contrôleur NSX sont placées dans un noeud en mode lecture seule et les nouvelles machines virtuelles ou machines virtuelles vMotion risquent d'être confrontées à des problèmes de réseau.
 
