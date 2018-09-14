@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -97,6 +97,12 @@ Para obtener más información, consulte [Visión general de HyTrust CloudContro
 El servicio HyTrust DataControl on {{site.data.keyword.cloud_notm}} ofrece un cifrado de alta seguridad con claves de gestión integrada para proteger las cargas de trabajo en todo su ciclo de vida. El servicio puede proporcionar cifrado tanto a nivel de sistema operativo como a nivel de datos, lo que significa que se puede cifrar y descifrar cualquier directorio, carpeta o archivo de una carga de trabajo.
 
 Para obtener más información, consulte [Visión general de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html).
+
+### IBM Cloud Private Hosted
+
+{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware y {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}.
+
+Para obtener más información, consulte [{{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html).
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
