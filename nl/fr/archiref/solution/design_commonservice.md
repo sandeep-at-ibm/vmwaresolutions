@@ -62,7 +62,7 @@ Cette conception intègre les services DNS sur les serveurs Active Directory ave
 * Les serveurs DNS Active Directory sont configurés comme faisant autorité pour l'espace de domaine DNS au-dessus du sous-domaine d'instance SDDC Manager et Cloud Foundation.
 * Les serveurs DNS Active Directory sont configurés pour pointer vers l'adresse IP SDDC Manager pour la délégation de sous-domaine de la zone pour laquelle SDDC Manager fait autorité.
 * Les serveurs DNS Active Directory sont configurés pour pointer vers les serveurs DNS {{site.data.keyword.cloud_notm}} pour toutes les autres zones.
-* Toutes les instances secondaires devant être intégrées à la première instance ou à l'instance cible doivent utiliser la même structure de nom DNS au-dessus du sous-domaine SDDC Manager. 
+* Toutes les instances secondaires devant être intégrées à la première instance ou à l'instance cible doivent utiliser la même structure de nom DNS au-dessus du sous-domaine SDDC Manager.
 
 ## Services NTP
 

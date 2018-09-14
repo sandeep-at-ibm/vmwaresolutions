@@ -23,9 +23,9 @@ La configuration de vSphere ESXi comprend les aspects suivants :
 
 Le tableau 1 présente les spécifications de chaque aspect. Après la configuration et l'installation d'ESXi, l'hôte est ajouté à une instance VMware vCenter Server et est géré à partir de là.
 
-La conception vous permet d'accéder aux hôtes virtuels via l'interface DCUI (Direct Console User Interface), ESXi Shell et SSH (Secure Shell). 
+La conception vous permet d'accéder aux hôtes virtuels via l'interface DCUI (Direct Console User Interface), ESXi Shell et SSH (Secure Shell).
 
-Par défaut, les seuls utilisateurs qui peuvent se connecter directement sont les utilisateurs _root_ et _ibmvmadmin_ pour la machine physique de l'hôte. L'administrateur peut ajouter des utilisateurs finaux au domaine MSAD (Microsoft Active Directory) pour activer l'accès utilisateur à l'hôte. Tous les hôtes de la conception de solution vCenter Server sont configurés pour être synchronisés avec un serveur NTP central. 
+Par défaut, les seuls utilisateurs qui peuvent se connecter directement sont les utilisateurs _root_ et _ibmvmadmin_ pour la machine physique de l'hôte. L'administrateur peut ajouter des utilisateurs finaux au domaine MSAD (Microsoft Active Directory) pour activer l'accès utilisateur à l'hôte. Tous les hôtes de la conception de solution vCenter Server sont configurés pour être synchronisés avec un serveur NTP central.
 
 Tableau 1. Configuration de vSphere ESXi
 
@@ -35,9 +35,9 @@ Tableau 1. Configuration de vSphere ESXi
 | Synchronisation d'horloge   | Utilise le serveur NTP {{site.data.keyword.cloud}} |
 | Accès à l'hôte            | Prise en charge de DCUI, ESXi Shell ou SSH |
 | Accès utilisateur            | Authentification locale et MSAD |
-| Résolution de nom de domaine| Utilisation de DNS comme indiqué dans [Conception des services communs](design_commonservice.html) |
+| Résolution de nom de domaine | Utilisation de DNS comme indiqué dans [Conception des services communs](design_commonservice.html) |
 
-Le cluster vSphere héberge les machines virtuelles qui gèrent le cloud central, ainsi que les ressources de calcul des charges de travail utilisateur. 
+Le cluster vSphere héberge les machines virtuelles qui gèrent le cloud central, ainsi que les ressources de calcul des charges de travail utilisateur.
 
 Pour les instances Cloud Foundation :
 * Une instance contient 4 hôtes ESXi lors du déploiement initial.
@@ -106,7 +106,7 @@ Les paramètres vSAN sont définis selon les meilleures pratiques relatives au d
 
 ## Conception de VMware NSX
 
-La virtualisation de réseau fournit un réseau dissocié qui existe dans la couche virtuelle. Cette virtualisation offre à l'architecture des fonctions telles que la mise à disposition, le déploiement, la reconfiguration et la destruction rapides de réseaux virtuels à la demande. Cette conception utilise le commutateur VDS (vSphere Distributed Switch) et VMware NSX for vSphere pour implémenter la mise en réseau virtuelle. 
+La virtualisation de réseau fournit un réseau dissocié qui existe dans la couche virtuelle. Cette virtualisation offre à l'architecture des fonctions telles que la mise à disposition, le déploiement, la reconfiguration et la destruction rapides de réseaux virtuels à la demande. Cette conception utilise le commutateur VDS (vSphere Distributed Switch) et VMware NSX for vSphere pour implémenter la mise en réseau virtuelle.
 
 Dans cette conception, NSX Manager est déployé dans le cluster initial. NSX Manager se voit affecter une adresse IP VLAN provenant du bloc d'adresses portables privées conçu pour les composants de gestion et configuré avec les serveurs DNS et NTP décrits dans [Conception des services communs](design_commonservice.html). NSX Manager est installé avec les spécifications recensées dans le tableau 2.
 
@@ -129,7 +129,7 @@ Figure 2. Présentation du réseau NSX Manager
 
 Après le déploiement initial, l'automatisation d'{{site.data.keyword.cloud_notm}} déploie trois contrôleurs NSX dans le cluster initial. Chacun des contrôleurs se voit affecter une adresse IP VLAN provenant du sous-réseau portable destiné aux composants de gestion. En outre, la conception crée des règles anti-affinité MV-MV pour séparer les contrôleurs parmi les hôtes du cluster. Le cluster initial doit contenir un minimum de trois noeuds pour garantir la haute disponibilité des contrôleurs.
 
-Outre les contrôleurs, l'automatisation d'{{site.data.keyword.cloud_notm}} prépare les hôtes vSphere déployés avec NSX VIBS pour permettre l'utilisation d'un réseau virtualisé via des points d'extrémité de tunnel VXLAN (VTEP). Les VTEP se voient affecter des adresses IP VLAN provenant de la plage d'adresses IP du sous-réseau portable privé spécifié pour les VTEP comme indiqué dans le *Tableau 1. Récapitulatif VLAN et sous-réseau* de la rubrique [Conception d'infrastructure physique](design_physicalinfrastructure.html). Le trafic VXLAN réside sur le réseau local virtuel non balisé et est affecté au commutateur VDS (vSphere Distributed Switch) privé. 
+Outre les contrôleurs, l'automatisation d'{{site.data.keyword.cloud_notm}} prépare les hôtes vSphere déployés avec NSX VIBS pour permettre l'utilisation d'un réseau virtualisé via des points d'extrémité de tunnel VXLAN (VTEP). Les VTEP se voient affecter des adresses IP VLAN provenant de la plage d'adresses IP du sous-réseau portable privé spécifié pour les VTEP comme indiqué dans le *Tableau 1. Récapitulatif VLAN et sous-réseau* de la rubrique [Conception d'infrastructure physique](design_physicalinfrastructure.html). Le trafic VXLAN réside sur le réseau local virtuel non balisé et est affecté au commutateur VDS (vSphere Distributed Switch) privé.
 
 Par la suite, un pool d'ID de segment est affecté et les hôtes du cluster sont ajoutés à la zone de transfert. Seul unicast est utilisé dans la zone de transfert car la surveillance IGMP (Internet Group Management Protocol) n'est pas configurée dans {{site.data.keyword.cloud_notm}}.
 
@@ -161,7 +161,7 @@ Tableau 3. Mappage VLAN aux types de trafic
 
 Le trafic issu des charges de travail transite sur des commutateurs logiques VXLAN.
 
-Le cluster vSphere utilise deux commutateurs distribués vSphere configurés comme indiqué dans les tableaux suivants. 
+Le cluster vSphere utilise deux commutateurs distribués vSphere configurés comme indiqué dans les tableaux suivants.
 
 Tableau 4. Commutateurs distribués de cluster convergé
 
