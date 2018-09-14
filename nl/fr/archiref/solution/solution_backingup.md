@@ -48,7 +48,7 @@ Après avoir déployé votre instance et le service de sauvegarde IBM Spectrum P
 * Serveurs Active Directory, si présents
 * Serveur de sauvegarde de fichier (voir ci-dessus)
 
-Prévoyez d'allouer un nombre suffisant de licences Veeam ou IBM Spectrum Protect Plus pour la sauvegarde de ces machines virtuelles et prévoyez au moins 2 To de stockage de sauvegarde pour les machines virtuelles. 
+Prévoyez d'allouer un nombre suffisant de licences Veeam ou IBM Spectrum Protect Plus pour la sauvegarde de ces machines virtuelles et prévoyez au moins 2 To de stockage de sauvegarde pour les machines virtuelles.
 
 ## Services complémentaires
 
@@ -62,7 +62,7 @@ Si vous déployez des composants de solution complémentaires dans votre instanc
 
 ## Autres remarques
 
-Si vous choisissez de déployer votre serveur AD/DNS en tant qu'instance de serveur virtuel {{site.data.keyword.cloud_notm}}, vous ne pouvez pas le sauvegarder à l'aide de Veeam ou IBM Spectrum Protect Plus. Dans ce cas, utilisez votre solution de sauvegarde Windows préférée pour les opérations de sauvegarde et de restauration ou envisagez de déployer votre instance à l'aide de machines virtuelles AD/DNS dans votre cluster VMware, lesquelles peuvent être sauvegardées par Veeam ou IBM Spectrum Protect Plus. 
+Si vous choisissez de déployer votre serveur AD/DNS en tant qu'instance de serveur virtuel {{site.data.keyword.cloud_notm}}, vous ne pouvez pas le sauvegarder à l'aide de Veeam ou IBM Spectrum Protect Plus. Dans ce cas, utilisez votre solution de sauvegarde Windows préférée pour les opérations de sauvegarde et de restauration ou envisagez de déployer votre instance à l'aide de machines virtuelles AD/DNS dans votre cluster VMware, lesquelles peuvent être sauvegardées par Veeam ou IBM Spectrum Protect Plus.
 
 A partir de VMware vCenter 6.5u2, VMware prend en charge la sauvegarde de la base de données vCenter Postgres à l'aide de sauvegardes par image, au moyen de scripts de suspension et de reprise intégrés pour la base de données durant la fenêtre de sauvegarde afin de garantir l'intégrité de la base de données. Si vous mettez à niveau votre instance VMware vers vCenter 6.5u2, vous pouvez choisir d'utiliser Veeam ou IBM Spectrum Protect Plus pour sauvegarder votre serveur vCenter Server et votre contrôleur PSC au lieu d'utiliser des sauvegardes de niveau fichier. Dans ce cas, vous devez utiliser la fonction de mise au repos de Veeam ou d'IBM Spectrum Protect Plus pour assurer l'intégrité des bases de données.
 
@@ -74,7 +74,7 @@ Vous devez tenir compte de plusieurs remarques spécifiques lorsque vous restaur
 * Lors de la restauration d'un dispositif à partir d'une sauvegarde, le programme d'installation détecte le type de dispositif (vCenter Server ou contrôleur PSC) en fonction des informations de sauvegarde que vous indiquez.
 * Etant donné que vous effectuez un déploiement directement sur l'un de vos hôtes, il se peut que vous ne puissiez pas effectuer ce déploiement sur un commutateur ou un groupe de ports distribué. Vous devrez peut-être créer un ensemble commutateur/groupe de ports standard temporaire en vue du déploiement des dispositifs restaurés, puis faire migrer temporairement l'une de vos cartes d'interface réseau de machine virtuelle (VMNIC) vers ce commutateur pour fournir la connectivité réseau nécessaire à vos machines virtuelles. Après le déploiement, vous pouvez faire migrer les machines virtuelles vers le groupe de ports distribué et renvoyer la carte d'interface réseau de machine virtuelle (VMNIC) au commutateur virtuel distribué (dvSwitch).
 * Pour NSX, vous devrez peut-être redéployer votre gestionnaire NSX et vos contrôleurs NSX avant de restaurer la configuration à partir d'une sauvegarde.
-* Prenez soin de vous familiariser avec les remarques et les limitations propres à VMware pour les opérations de sauvegarde et de restauration vCenter. 
+* Prenez soin de vous familiariser avec les remarques et les limitations propres à VMware pour les opérations de sauvegarde et de restauration vCenter.
 
 ## Récapitulatif
 

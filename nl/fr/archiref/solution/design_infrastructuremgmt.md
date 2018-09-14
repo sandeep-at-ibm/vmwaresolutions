@@ -60,7 +60,7 @@ Cette conception vous permet de regrouper en cluster les hôtes vSphere ESXi qui
 
 ### Planificateur DRS (Distributed Resource Scheduler) vSphere
 
-Cette conception utilise la planification DRS (Distributed Resource Scheduling) vSphere dans le cluster initial pour placer les machines virtuelles et dans les autres clusters pour faire migrer dynamiquement des machines virtuelles afin d'obtenir des clusters équilibrés. L'automatisation complète est définie, par conséquent, le placement initial et les recommandations de migration sont automatiquement exécutés par vSphere. En outre, le seuil de migration défini est modéré, ainsi, vCenter appliquera les recommandations de priorité 1, 2, 3 pour obtenir au moins une amélioration décente de l'équilibrage de charge du cluster.
+Cette conception utilise la planification DRS (Distributed Resource Scheduling) vSphere dans le cluster initial pour placer les machines virtuelles et dans les autres clusters pour faire migrer dynamiquement des machines virtuelles afin d'obtenir des clusters équilibrés. La valeur "Fully Automated" est affectée au paramètre Automation Level, par conséquent, les recommandations de placement initial et de migration sont automatiquement exécutées par vSphere. En outre, le seuil de migration défini est modéré, ainsi, vCenter appliquera les recommandations de priorité 1, 2, 3 pour obtenir au moins une amélioration décente de l'équilibrage de charge du cluster.
 
 **Remarque :** la gestion de l'alimentation via la fonction **Distributed Power Management** n'est pas utilisée dans cette conception.
 
