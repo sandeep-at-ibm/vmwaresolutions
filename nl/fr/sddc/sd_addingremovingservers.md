@@ -35,7 +35,7 @@ Une instance Cloud Foundation peut comporter jusqu'à cinq clusters, dont l'un e
 ### Conséquences de l'ajout de serveurs ESXi
 
 1. Un bref délai peut être observé sur la console entre le passage du statut **Prêt à l'emploi** au statut **Modification en cours**. Laissez l'opération s'exécuter complètement avant d'apporter d'autres modifications à l'instance.
-2. Un courrier électronique vous avise de l'ajout de vos serveurs ESXi. 
+2. Un courrier électronique vous avise de l'ajout de vos serveurs ESXi.
 3. Si vous ne voyez pas les serveurs ESXi ajoutés dans la liste du cluster, consultez vos courriers électroniques ou les notifications de la console pour obtenir plus de détails sur la cause de l'échec.
 
 ## Retrait de serveurs ESXi dans des instances Cloud Foundation
@@ -58,7 +58,7 @@ Une instance Cloud Foundation peut comporter jusqu'à cinq clusters, dont l'un e
 ### Conséquences du retrait de serveurs ESXi
 
 1. Un bref délai peut être observé sur la console entre le passage du statut **Prêt à l'emploi** au statut **Modification en cours**. Laissez l'opération s'exécuter complètement avant d'apporter d'autres modifications à l'instance.
-2. Un courrier électronique vous avise du retrait de vos serveurs ESXi. 
+2. Un courrier électronique vous avise du retrait de vos serveurs ESXi.
 3. Les serveurs ESXi sont complètement récupérés par l'infrastructure {{site.data.keyword.cloud_notm}} à la fin de son cycle de facturation, lequel est généralement de 30 jours.
 
    **Attention** : les serveurs ESXi supprimés vous sont facturés jusqu'à échéance du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}.

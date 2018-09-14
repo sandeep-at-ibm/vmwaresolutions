@@ -56,7 +56,7 @@ Avec l'option **Personnalisée**, un certain nombre d'options est disponible pou
 
 Tableau 1. Options pour les serveurs {{site.data.keyword.baremetal_short}} personnalisés
 
-| Options de modèle d'UC        | Options de RAM   |
+| Options de modèle d'UC   | Options de RAM   |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
