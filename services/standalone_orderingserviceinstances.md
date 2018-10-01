@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
 *  You reviewed all the considerations in [Considerations when installing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](../services/standalone_considerations.html).
 
-## Procedure
+## Procedure to order on-premises VMware HCX on IBM Cloud instances
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. Scroll to the **On-premises HCX Instances** table and click **Provision New**.

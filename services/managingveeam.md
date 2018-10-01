@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-15"
 
 After the service is deployed into your instance, you can access the Veeam console by using RDP to manage the backup and restore of all the virtual machines in your environment, including the backup and restore of the management components. You can also upgrade the service by downloading and installing the Veeam updates from the Veeam website.
 
-For instances that were deployed in releases earlier than V1.8, if you want to use the Veeam on {{site.data.keyword.cloud}} service, you must replace the existing Veeam VSI in the instances. For more information, see the _Replacing the Veeam VSI of pre-V1.8 instances with Veeam on IBM Cloud_ section in this topic.
+For instances that were deployed in releases earlier than V1.8, if you want to use the Veeam on {{site.data.keyword.cloud}} service, you must replace the existing Veeam VSI in the instances. For more information, see the _Replacing the Veeam VSI of pre-V1.8 instances with Veeam on IBM Cloud_ section.
 
 ## Accessing the Veeam console by using RDP
 
@@ -55,7 +55,7 @@ The Veeam on {{site.data.keyword.cloud_notm}} service, which can back up both ma
 
 Because of this change, the previous **Backup and Restore** tab on the instance details page was removed and the backup points for the instances are no longer available in the {{site.data.keyword.vmwaresolutions_short}} console, although the Veeam VSI in the pre-V1.8 instances keeps working.
 
-You must create an {{site.data.keyword.cloud_notm}} Support ticket to get assistance with a restore. In addition, the license of the Veeam VSI in pre-V1.8 instances expired on October 14, 2017. Therefore, you must replace the previous Veeam VSI with the new Veeam on {{site.data.keyword.cloud_notm}} service.
+You must create an {{site.data.keyword.cloud_notm}} Support ticket to get assistance with a restore. In addition, the license of the Veeam VSI in pre-V1.8 instances expired on 14 October 2017. Therefore, you must replace the previous Veeam VSI with the new Veeam on {{site.data.keyword.cloud_notm}} service.
 
 Complete the following steps:
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane, and then click the target instance.
@@ -63,7 +63,7 @@ Complete the following steps:
 3. Click the **Services** tab.
 4. On the **Add Services** tab, install the Veeam on {{site.data.keyword.cloud_notm}} service.
 
-After the new Veeam on {{site.data.keyword.cloud_notm}} service is deployed and a successful backup of your management components is completed, you can remove the existing Veeam VSI from your account by creating an {{site.data.keyword.cloud_notm}} Support ticket. IBM Support will then identify and delete the existing Veeam VSI and storage.
+After the new Veeam on {{site.data.keyword.cloud_notm}} service is deployed and a successful backup of your management components is completed, you can remove the existing Veeam VSI from your account by creating an {{site.data.keyword.cloud_notm}} Support ticket. IBM Support identifies and deletes the existing Veeam VSI and storage.
 
 ### Related links
 

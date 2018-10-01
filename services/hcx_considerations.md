@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-26"
 
 ---
 
 # VMware HCX on IBM Cloud overview
 
-The HCX on {{site.data.keyword.cloud}} service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
+The HCX on {{site.data.keyword.cloud}} service seamlessly extends the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows you to migrate virtual machines (VMs) to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
 
 **Availability:** This service is available only to VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle instances that are deployed in V2.3 and later releases.
 
-You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance. For more information on upgrading your instance and deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [Upgrading to the vCenter Server with Hybridity Bundle instance](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance).
+You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance. For more information about upgrading your instance and deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [Upgrading to the vCenter Server with Hybridity Bundle instance](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance).
 
 **Note:** A vCenter Server instance with HCX on {{site.data.keyword.cloud_notm}} is limited to three simultaneous connections from on-premises sites.
 
@@ -22,7 +22,7 @@ You can upgrade your existing vCenter Server instance to a vCenter Server with H
 
 The following components are ordered and included in the HCX on {{site.data.keyword.cloud_notm}} service.
 
-**Note:** On-premises HCX instances only include licensing and activation.
+**Note:** On-premises HCX instances include only licensing and activation.
 
 ### An active/passive pair of VMware NSX Edge Services Gateways for HCX Management
 
@@ -49,7 +49,7 @@ Additional HCX appliances are deployed during configuration as necessary for L2 
 * Base license fee: required charge for service
 * Managed VM fee: charged per VM that is migrated monthly
 
-## Considerations when installing HCX on IBM Cloud
+## Considerations when you install HCX on IBM Cloud
 
 Review the following considerations before attempting to install HCX on {{site.data.keyword.cloud_notm}}.
 
@@ -59,15 +59,15 @@ The HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into an 
 
 ### Requirements on firewall rules
 
-Before installing the HCX on {{site.data.keyword.cloud_notm}} service, you must add a firewall rule to any existing firewalls to allow all outbound HTTPS traffic so that the HCX Manager virtual appliance (HCX Manager) can register itself. After the HCX Manager installation is completed, you can remove the firewall rule. In addition, you must configure firewall rules to allow HCX to function properly. For more information, see *Appendix A - Port Access Requirements* in [HCX on {{site.data.keyword.cloud_notm}} Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
+Before you install the HCX on {{site.data.keyword.cloud_notm}} service, you must add a firewall rule to any existing firewalls to allow all outbound HTTPS traffic so that the HCX Manager virtual appliance (HCX Manager) can register itself. After the HCX Manager installation is completed, you can remove the firewall rule. In addition, you must configure firewall rules to allow HCX to function properly. For more information, see *Appendix A - Port Access Requirements* in [HCX on {{site.data.keyword.cloud_notm}} Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
 
-## Considerations when removing HCX on IBM Cloud
+## Considerations when you remove HCX on IBM Cloud
 
 Review the following considerations before you remove the HCX on {{site.data.keyword.cloud_notm}} service:
 * Ensure that the interconnects and extended networks between the on-premises source site and the {{site.data.keyword.cloud_notm}} target sites are removed. To remove the interconnects and extended networks, use the HCX user interface in the on-premises VMware vSphere Web Client.
 * Ensure that the site pairings between the on-premises source site and the {{site.data.keyword.cloud_notm}} target sites are removed. To remove the site pairings, use the HCX user interface in the on-premises VMware vSphere Web Client.
 * The removal of HCX on {{site.data.keyword.cloud_notm}} is automated. The following procedures are completed for the successful removal of this service:
-   * The HCX license ordered for the cloud-side HCX Manager is deactivated.
+   * The HCX license that is ordered for the cloud-side HCX Manager is deactivated.
    * HCX Manager is deleted.
    * The vMotion IP addresses that were reserved for HCX are released.
    * If empty, the HCX-related resource pools are removed.

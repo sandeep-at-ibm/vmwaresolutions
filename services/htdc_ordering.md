@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-26"
 
 ---
 
 # Ordering HyTrust DataControl on IBM Cloud
 
-You can order the HyTrust DataControl on {{site.data.keyword.cloud}} service while ordering a new instance with a HA-pair of HyTrust DataControl appliances included or by adding the HyTrust DataControl appliances to your existing instance.
+You can order the HyTrust DataControl on {{site.data.keyword.cloud}} service while you order a new instance with a HA-pair of HyTrust DataControl appliances included or by adding the HyTrust DataControl appliances to your existing instance.
 
 ## Ordering HyTrust DataControl on IBM Cloud for a new instance
 
@@ -26,8 +26,8 @@ You can add the HyTrust DataControl on {{site.data.keyword.cloud_notm}} service 
 
 ### Related links
 
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} overview](htcc_considerations.html)
-* [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtcc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} overview](htdc_considerations.html)
+* [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtdc.html)
 * [Ordering, viewing, and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
 * [Ordering, viewing, and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
 * [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](../vcenter/vc_hybrid_addingremovingservices.html)

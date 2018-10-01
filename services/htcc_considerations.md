@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-09-26"
 
 ---
 
 # HyTrust CloudControl on IBM Cloud overview
 
-The HyTrust CloudControl on {{site.data.keyword.cloud}} service enforces and controls compliance against security standards, and provides detailed role-based access control (RBAC), approval, and auditing capabilities. When combined with HyTrust DataControl, the service can ensure that virtual machines and workload data do not leave a particular region, cluster, or ESXi server within the {{site.data.keyword.CloudDataCent_notm}}.
+The HyTrust CloudControl on {{site.data.keyword.cloud}} service enforces and controls compliance against security standards that includes role-based access control (RBAC), approval, and auditing. When the service is combined with HyTrust DataControl, the service ensures that virtual machines and workload data don't leave a particular region, cluster, or ESXi server within the {{site.data.keyword.CloudDataCent_notm}}.
 
-**Availability:** This service is available only to instances that are running vSphere 6.5 and that are deployed in (or upgraded to) V2.3 or later releases.
+**Availability:** This service is available only to instances that are running vSphere 6.5 and that are deployed in, or upgraded to, V2.3 or later releases.
 
 ## Technical specifications for HyTrust CloudControl on IBM Cloud
 
@@ -33,7 +33,7 @@ Two CloudControl appliances are deployed in an active-passive configuration.
 
 Per-host license: A HyTrust CloudControl license is ordered for each host in the environment.
 
-## Considerations when removing HyTrust CloudControl on IBM Cloud
+## Considerations when you remove HyTrust CloudControl on IBM Cloud
 
 Before you remove the HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service, ensure that you disable **Root Password Vaulting**, if configured, and that you delete all protected hosts from HyTrust CloudControl.
 

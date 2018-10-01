@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2018-07-27"
 
 The FortiGate Virtual Appliance on {{site.data.keyword.cloud}} service deploys a pair of FortiGate Virtual Appliances to your environment, which can help you reduce risk by implementing critical security controls within your virtual infrastructure.
 
-You can install multiple instances of this service as needed. You can manage this service by using the FortiOS Web Client or the command line interface via SSH.
+You can install multiple instances of this service as needed. You can manage this service by using the FortiOS Web Client or the command line interface through SSH.
 
-**Availability**: This service is available only to instances that are deployed in V2.0 or later releases.
+**Availability:** This service is available only to instances that are deployed in V2.0 or later releases.
 
 ## Technical specifications for FortiGate Virtual Appliance on IBM Cloud
 

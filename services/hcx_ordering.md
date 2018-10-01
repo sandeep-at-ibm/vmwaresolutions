@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,14 +25,21 @@ To add the VMware HCX on {{site.data.keyword.cloud_notm}} service into an existi
 
 To install HCX on {{site.data.keyword.cloud_notm}}, complete the following settings:
 1. Specify the **HCX interconnect type** by selecting one of the following options:
-  * **Public network**: HCX creates an encrypted connection between sites over the public network.
-  * **Private network**: HCX creates an encrypted connection between sites over the private network.
+  * **Public network:** HCX creates an encrypted connection between sites over the public network. License registration and metering are performed over the public network.
+  * **Private interconnect:** HCX creates an encrypted connection between sites over the private network. License registration and metering are performed over the public network.
+  * **Private network:** HCX creates an encrypted connection between sites over the private network. License registration and metering are performed over private network through HTTP proxy.
+3. If you select **Private network**, complete the following fields:
+  * **Proxy Address:** The IPv4 address of the proxy server.
+  * **Proxy Port:** The proxy server port. The port number is typically 8080 or 3128.
+  * **Username:** The user name if proxy authentication is required.
+  * **Password:** The password if proxy authentication is required.
+  * **Reenter Password:** Reenter the password for proxy authentication validation.
 2. Specify the **Public endpoint certificate type**. If you select **CA Certificate**, configure the following settings:
-  * **Certificate Contents**: Enter the contents of the CA certificate.
-  * **Private Key**: Enter the private key of the CA certificate.
-  * (Optional) **Password**: Enter the password for the private key if it is encrypted.
-  * (Optional) **Reenter Password**: Enter the password for the private key again.
-  * (Optional) **Hostname**: The host name to be mapped to the common name (CN) of the CA certificate. HCX on {{site.data.keyword.cloud_notm}} requires that the format of the CA certificate must be accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+  * **Certificate Contents:** Enter the contents of the CA certificate.
+  * **Private Key:** Enter the private key of the CA certificate.
+  * (Optional) **Password:** Enter the password for the private key if it is encrypted.
+  * (Optional) **Reenter Password:** Enter the password for the private key again.
+  * (Optional) **Hostname:** The host name to be mapped to the common name (CN) of the CA certificate. HCX on {{site.data.keyword.cloud_notm}} requires that the format of the CA certificate must be accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
   <!--Need enhancement, it is still not clear what the key pair is used for, is it for connecting to NSX? This is not in architecture doc either. -->
 
 ## Deployment process for HCX on IBM Cloud
@@ -43,8 +50,8 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether 
    * One private portable subnet for HCX interconnects. This subnet is used when the **Private network** option is selected for **HCX interconnect type**.
    * One public portable subnet for activation and maintenance with VMware. If the **Public network** option is selected for **HCX interconnect type**, this subnet is also used for HCX interconnects.
 
-   **Important:** The IP addresses in the subnets ordered for HCX are intended to be managed by the VMware on {{site.data.keyword.cloud_notm}} automation. These IP addresses cannot be assigned to VMware resources, such as VMs and NSX Edges, that are created by you. If you need additional IP addresses for your VMware artifacts, you must order your own subnets from {{site.data.keyword.cloud_notm}}.
-2. If **Private network** was selected for **HCX interconnect type**, a port group named **SDDC-DPortGroup-HCX-Private** is created on the private Distributed Virtual Switch (DVS).
+   **Important:** The IP addresses in the subnets that are ordered for HCX are intended to be managed by the VMware on {{site.data.keyword.cloud_notm}} automation. These IP addresses cannot be assigned to VMware resources, such as VMs and NSX Edges, that are created by you. If you need additional IP addresses for your VMware artifacts, you must order your own subnets from {{site.data.keyword.cloud_notm}}.
+2. If **Private network** was selected for **HCX interconnect type**, a port group that is named **SDDC-DPortGroup-HCX-Private** is created on the private Distributed Virtual Switch (DVS).
 3. An HCX activation key is ordered from VMware.
 4. Three resource pools and VM folders for HCX are created, which are needed for the HCX interconnects, local HCX components, and remote HCX components.
 5. A pair of VMware NSX Edge Services Gateways (ESGs) for the HCX management traffic is deployed and configured:
@@ -52,9 +59,9 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether 
    * The ESGs are configured as a pair of extra large edge appliances with High Availability (HA) enabled.
    * The firewall rules and network address translation (NAT) rules are configured to allow inbound and outbound HTTPS traffic to and from the HCX Manager.
    * The load balancer rules and resource pools are configured. These rules are resource pools are used to forward HCX-related inbound traffic to the appropriate virtual appliances of HCX Manager, vCenter Server, and Platform Services Controller (PSC).
-   * An SSL certificate to encrypt the HCX related inbound HTTPS traffic coming through the ESGs is applied.
+   * An SSL certificate to encrypt the HCX-related inbound HTTPS traffic that is coming through the ESGs is applied.
 
-   **Important**: The HCX management edge is dedicated to the HCX management traffic between the on-premises HCX components and the cloud-side HCX components. Do not modify the HCX management edge or use it for HCX network extensions. Instead, create separate edges for network extensions. In addition, note that using a firewall or disabling the HCX management edge communications to the private IBM management components or public Internet might adversely impact the HCX functionality.
+   **Important:** The HCX management edge is dedicated to the HCX management traffic between the on-premises HCX components and the cloud-side HCX components. Do not modify the HCX management edge or use it for HCX network extensions. Instead, create separate edges for network extensions. In addition, using a firewall or disabling the HCX management edge communications to the private IBM management components or public internet might adversely impact the HCX functionality.
 
 6. The HCX Manager on {{site.data.keyword.cloud_notm}} is deployed, activated, and configured:
    * The HCX Manager is registered with vCenter Server.

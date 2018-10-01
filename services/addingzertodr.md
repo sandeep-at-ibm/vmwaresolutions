@@ -4,19 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
 # Zerto on IBM Cloud overview
 
-The Zerto on {{site.data.keyword.cloud}} service provides replication and disaster recovery capabilities. These capabilities can be integrated into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud_notm}}.
+The Zerto on {{site.data.keyword.cloud}} service integrates replication and disaster recovery capabilities into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud_notm}}.
 
 ## Technical specifications for Zerto on IBM Cloud
 
 The following components are ordered and included in the Zerto on {{site.data.keyword.cloud_notm}} service.
 
-**Note**: Zerto Virtual Manager (ZVM) components are deployed only into the default cluster.
+**Note:** Zerto Virtual Manager components are deployed only into the default cluster.
 
 ### VSIs
 
@@ -27,7 +27,7 @@ The following components are ordered and included in the Zerto on {{site.data.ke
 
 ### Storage
 
-Disk: 100 GB (SAN)
+100 GB (SAN) disk
 
 ### Networking
 
