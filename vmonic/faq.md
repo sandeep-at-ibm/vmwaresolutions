@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -15,7 +15,7 @@ Find answers to frequently asked questions about {{site.data.keyword.vmwaresolut
 ## What user accounts do I need for IBM Cloud for VMware Solutions?
 
 * **IBMid account**. This account is required to access the {{site.data.keyword.vmwaresolutions_short}} console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.slportal}}. For more information, see [Getting started](../index.html).
-* **{{site.data.keyword.cloud_notm}} account**. This account is required for provisioning. You can sign up for an {{site.data.keyword.cloud_notm}} account by using an existing **IBMid** or by creating a new **IBMid**. 
+* **{{site.data.keyword.cloud_notm}} account**. This account is required for provisioning. You can sign up for an {{site.data.keyword.cloud_notm}} account by using an existing **IBMid** or by creating a new **IBMid**.
 * **{{site.data.keyword.cloud_notm}} infrastructure account**. This account, which was previously known as **IBM SoftLayer** account, is used to log in to the {{site.data.keyword.cloud_notm}} infrastructure customer portal that provides some additional function to manage infrastructure products and services. You can get an {{site.data.keyword.cloud_notm}} infrastructure account by upgrading your **{{site.data.keyword.cloud_notm}} account** to a Pay-As-You-Go type of account, or by linking your existing {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account with your {{site.data.keyword.cloud_notm}} account. The {{site.data.keyword.cloud_notm}} infrastructure account that you are using must meet certain requirements. For more information, see [Signing up for required accounts](signing_softlayer_account.html) and [{{site.data.keyword.cloud_notm}} infrastructure account requirements](slaccountrequirement.html).
 
 ## How do I associate my IBM Cloud infrastructure credentials with the IBM Cloud for VMware Solutions console?
@@ -64,7 +64,7 @@ No, it is not recommended. Failures in the {{site.data.keyword.vmwaresolutions_s
 
 For vCenter Server instances, the first cluster that is created during deployment has a default name of **cluster1**. You can rename the default cluster in the VMware vSphere Client. When you add a cluster to a vCenter Server instance, you can specify the name that you want on the {{site.data.keyword.vmwaresolutions_short}} console.
 
-**Note**: For Cloud Foundation instances, the default cluster name cannot be changed.
+**Note:** For Cloud Foundation instances, the default cluster name cannot be changed.
 
 ##How are patches managed?
 

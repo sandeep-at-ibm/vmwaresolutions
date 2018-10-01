@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -32,21 +32,20 @@ Table 2. BOM for the software components in vCenter Server instances
 
 | Manufacturer  | Component                      | Version       |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.5 U1g (ESXi 6.5u1 with patch level ESXi650-201803001 applied) |
-| VMware       | vCenter Server Appliance        | 6.5 Update 1g |
-| VMware       | Platform Services Controller    | 6.5 Update 1g |
+| VMware       | vSphere ESXi                    | 6.5 Update 2c (up to ESXi650-201808001 patch level) |
+| VMware       | vCenter Server Appliance        | 6.5 Update 2c |
+| VMware       | Platform Services Controller    | 6.5 Update 2c |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX for vSphere                 | 6.4.1        |
-| IBM          | CloudDriver                     | 2.5          |
 | Microsoft    | Windows Server Standard edition | 2012R2       |
 
-**Note**: VMware vSAN is an optional component.
+**Note:** VMware vSAN is an optional component.
 
 ## Advanced configuration settings for ESXi servers
 
-Review the following table for an overview of the advanced configuration settings that are applied to ESXi servers depending on whether the vCenter Server instance is deployed in V2.2 or later, or upgraded to V2.2 or later from a previous V2.1 or earlier release.
+Review the following table for an overview of the advanced configuration settings that are applied to ESXi servers. These settings depend on whether the vCenter Server instance is deployed in V2.2 or later, or upgraded to V2.2 or later from V2.1 or earlier.
 
-The settings apply to new instances and new clusters in new instances V2.2 or later. The settings do not apply to new clusters in existing instances from V2.1 or earlier or existing instances upgraded to V2.2 or later.
+The settings apply to new instances and new clusters in new instances V2.2 or later. The settings don't apply to new clusters in existing instances from V2.1 or earlier or existing instances that are upgraded to V2.2 or later.
 
 Table 3. ESXi servers advanced configuration settings for vCenter Server instances and clusters
 
@@ -62,19 +61,19 @@ Table 3. ESXi servers advanced configuration settings for vCenter Server instanc
 | TCP/IP Heap Size | **TcpipHeapSize** = 32 | Not set |
 | TCP/IP Heap Maximum | **TcpipHeapMax** = 1536 | Not set |
 
-**Notes**:
+**Notes:**
 * The **MaxVolumes** setting is required for the IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service because the service might use more than the default number of NFS mounts on the ESXi server.
-* A value of **Not set** for a configuration setting indicates that the new setting is not automatically applied, because it requires rebooting the ESXi servers, which might be disruptive.
+* A value of **Not set** for a configuration setting indicates that the new setting is not automatically applied because it requires rebooting the ESXi servers, which might be disruptive.
 
   It is recommended that you change the **Not set** configuration settings to the new values for consistency across all instances and to allow adequate support for storage expansion. IBM plans to test only with these new settings for all {{site.data.keyword.vmwaresolutions_short}} V2.2 and later releases.
 
-  For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
+  For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239).
 
 ## NSX and port group configuration settings
 
 Review the following table for an overview of the VMware NSX and port group configuration settings for vCenter Server instances, and the differences between releases.
 
-The settings apply to new instances and new clusters in new instances V2.2 or later. The settings do not apply to new clusters in existing instances from V2.1 or earlier or existing instances upgraded to V2.2 or later.
+The settings apply to new instances and new clusters in new instances V2.2 or later. The settings do not apply to new clusters in existing instances from V2.1 or earlier or existing instances that are upgraded to V2.2 or later.
 
 Table 4. NSX and port group configuration settings for vCenter Server instances
 
@@ -83,16 +82,16 @@ Table 4. NSX and port group configuration settings for vCenter Server instances
 | NSX VXLAN cluster teaming policy | Fail Over | Load Balance - SRCID |
 | NSX VXLAN cluster VTEP | 1 | 2 |
 | Segment ID pool for primary instance | 6000-8000 | 6000-7999 |  
-| Segment ID pool for subsequent secondary instance or instances | 6000-8000 | Previous end range in the multi-site configuration + 1 to Previous end range in the multi-site configuration + 2000 |  
+| Segment ID pool for subsequent secondary instance or instances | 6000-8000 | Previous end range in the multi-site configuration + 1 to the previous end range in the multi-site configuration + 2000 |  
 | Port group SDDC-DPortGroup-VSAN (if applicable) | **Active uplinks** set to **uplink1** and **Standby uplinks** set to **uplink2** | **Active uplinks** set to **uplink2** and **Standby uplinks** set to **uplink1** |  
-| Port group SDDC-DPortGroup-Mgmt | **Port binding** set to **Ephermeral - no binding** and **Load balancing** set to **Route based on originating virtual port** | **Port binding** set to **Static binding** and **Load balancing** set to **Route based on physical NIC load** |  
+| Port group SDDC-DPortGroup-Mgmt | **Port binding** set to **Ephemeral - no binding** and **Load balancing** set to **Route based on originating virtual port** | **Port binding** set to **Static binding** and **Load balancing** set to **Route based on physical NIC load** |  
 | Port group SDDC-DPortGroup-External | **Port binding** set to **Ephemeral - no binding** | **Port binding** set to **Static binding** |
 
 ## Network MTU configuration settings
 
-The vSphere cluster uses two vSphere Virtual Distributed Switches (VDS), one for public network connectivity and the other one for private network connectivity.
+The vSphere cluster uses two vSphere Distributed Switches (vDS), one for public network connectivity and the other one for private network connectivity.
 
-The private network connections are configured to use Jumbo Frames MTU (Maximum Transmission Unit) with the size of 9000, which improves performance for large data transfers such as storage and VMware vMotion. This is the maximum MTU allowed within VMware and by {{site.data.keyword.cloud_notm}}.
+The private network connections are configured to use Jumbo Frames MTU (Maximum Transmission Unit) with the size of 9000, which improves performance for large data transfers such as storage and VMware vMotion. This value is the maximum MTU allowed within VMware and by {{site.data.keyword.cloud_notm}}.
 
 In V2.1 or later, the public network connections use a standard Ethernet MTU of 1500. This setting of 1500 must be maintained; any changes might cause packet fragmentation over the internet.
 
@@ -100,7 +99,7 @@ Review the following table for an overview of the Network MTU configuration sett
 
 Table 5. MTU configuration settings for vCenter Server instances and clusters depending on the instance version
 
-| VDS | V2.1 or later  | V2.0 or earlier (or upgraded from V2.0 or earlier) |
+| vDS | V2.1 or later  | V2.0 or earlier (or upgraded from V2.0 or earlier) |
 |:-------------- |:-------------- |:------------- |
 | Public Switch  | 1500 (default) | 9000 (Jumbo Frames) |
 | Private Switch | 9000 (Jumbo Frames) | 9000 (Jumbo Frames) |
@@ -114,15 +113,15 @@ For instances that were deployed in V2.0 or earlier, it is recommended that you 
 ### Updating the Public Switch MTU setting
 
 To update the MTU setting for the Public Switch, complete the following steps in the VMware vSphere Web Client:
-1. Right-click the VDS and click **Edit Settings**.
+1. Right-click the vDS and click **Edit Settings**.
 2. On the **Properties tab**, select the **Advanced** option.
 3. Ensure that the **Maximum MTU** value is set to 1500.
 
-   **Note**: When changing the MTU size in a vDS, the attached uplinks (physical NICs) are brought down and up again. As a result, a brief outage occurs for the VMs that are using the uplink. Therefore, it is recommended to plan the MTU setting update during scheduled downtime.
+   **Note:** When the MTU size in a vDS is changed, the attached uplinks (physical NICs) are brought down and up again. As a result, a brief outage occurs for the VMs that are using the uplink. Therefore, it is recommended to plan the MTU setting update during scheduled downtime.
 
 ### Related links
 
-* [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
+* [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)

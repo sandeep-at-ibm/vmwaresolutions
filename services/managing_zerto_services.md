@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-16"
 
 The Zerto on {{site.data.keyword.cloud}} service provides replication and disaster recovery capabilities. These capabilities can be integrated into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud_notm}}.
 
-When you request managed services for Zerto on {{site.data.keyword.cloud_notm}}, a fully managed disaster recovery (DR) environment can be deployed using both Zerto DR software and IBM Resiliency Services.
+When you request managed services for Zerto on {{site.data.keyword.cloud_notm}}, a fully managed disaster recovery (DR) environment can be deployed by using both Zerto DR software and IBM Resiliency Services.
 
 The following models for managed services for Zerto on {{site.data.keyword.cloud_notm}} are available.
 
@@ -32,10 +32,10 @@ In this model, a fully managed DR solution is provisioned for Zerto on {{site.da
 
 For more information, see [IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top).
 
-## Procedure
+## Procedure to request managed services for Zerto on IBM Cloud
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Getting Started** from the left navigation pane.
-2. Scroll down the page and, under **Order additional managed services**, click the **Managed Services for Zerto on IBM Cloud** card.
+2. Scroll down the page and under **Order additional managed services**, click the **Managed Services for Zerto on IBM Cloud** card.
 3. On the **Zerto on IBM Cloud** page, review the description and technical specifications for Zerto on {{site.data.keyword.cloud_notm}} as a managed service, and then click **Create**.
 4. Specify the configuration settings according to your requirements or accept the default values.
 5. Click either **vCenter Server** or **Cloud Foundation** to add the service to one of your instances.

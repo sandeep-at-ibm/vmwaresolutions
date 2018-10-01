@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 The ESXi servers that you configured when you ordered an instance are grouped as **cluster1** by default.
 
-You can add clusters to your VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instance to expand the compute and storage capacity. Within a cluster, you can manage ESXi servers for better resource allocation and high availability. When no longer needed, you can delete the added clusters from your instance.
+You can add clusters to your VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instance to expand the compute and storage capacity. Within a cluster, manage the ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instance.
 
 ## Adding clusters to vCenter Server with Hybridity Bundle instances
 
@@ -32,9 +32,9 @@ The cluster name must meet the following requirements:
 
 #### Data center location
 
-The {{site.data.keyword.CloudDataCent_notm}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
+The {{site.data.keyword.CloudDataCent_notm}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} or {{site.data.keyword.cloud_notm}} infrastructure pod, three additional VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
+If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} or {{site.data.keyword.cloud_notm}} infrastructure pod, three more VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
 ### Bare Metal Server settings
 
@@ -56,26 +56,36 @@ Table 2. Options for customized Bare Metal Servers
 
 #### Number of Bare Metal Servers
 
-A minimum of two {{site.data.keyword.baremetal_short}} is required for a cluster.
+At least two {{site.data.keyword.baremetal_short}} is required for a cluster.
 
 You can add up to 59 {{site.data.keyword.baremetal_short}} for a cluster, and you can add 1 - 59 ESXi servers at a time.
 
-After deployment, you can create up to four more clusters. For VMware vSAN storage, 4 servers are required for both the initial cluster and post-deployment clusters.
+After deployment, you can create up to four more clusters. For VMware vSAN storage, four servers are required for both the initial cluster and post-deployment clusters.
 
 ### vSAN storage settings
 
-VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle instance order. You must specify either **Advanced** or **Enterprise** for the license edition.
-
-* **Disk Type and Size for vSAN Capacity Disks**: Select the capacity that meets your shared storage needs.
-* **Number of vSAN Capacity Disks**: Select the number of disks for the vSAN shared storage that you want to add. The disk quantities must be 2, 4, 6, or 8.
-* Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
+VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
+* **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
+* **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
+* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
+* Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
+* **vSAN License**: Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
 
 ### Licensing settings
 
-IBM-provided VMware licenses for the following:
-  * VMware vSphere Enterprise Plus 6.5u1
-  * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
+IBM-provided licenses for the following VMware components:
+  * vSphere Enterprise Plus 6.5u1
+  * vCenter Server 6.5
+  * NSX Service Providers 6.4 (Advanced or Enterprise edition)
+
+### Network interface settings
+
+Network interface card (NIC) settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and aren't available with the private option:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Order summary
 
@@ -86,28 +96,29 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to view the clusters in it.
 
-   **Note**: Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
+   **Note:** Ensure that the instance status is **Ready to Use**. Otherwise, you can't add clusters to the instance.
 
 3. Click **Infrastructure** on the left navigation pane and click **Add** at the upper-right corner of the **CLUSTERS** table.
 4. On the **Add Cluster** page, enter the cluster name.
-5. If you want to host the cluster in a different {{site.data.keyword.CloudDataCent_notm}} than the one that the instance is hosted in, under **Bare Metal Server**, check the **Select a different location** check box and choose the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
+5. You can host the cluster in a different {{site.data.keyword.CloudDataCent_notm}} than the one that the instance is hosted in. To do so, under **Bare Metal Server**, check the **Select a different location** check box and choose the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
 6. Select the **CPU Model**, the amount of **RAM**, and the **Number of Bare Metal Servers** for the Bare Metal configuration.
-7.  Select **vSAN Storage** and select the **Number of vSAN Capacity Disks** and **Disk Type and Size for vSAN Capacity Disks** for the storage configuration.
+7.  Select **vSAN Storage** and specify the disk types for the capacity and cache disks and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
 8. Select the license edition for VMware vSAN for the license configuration.
-9. On the **Order Summary** pane, verify the cluster configuration before you add the cluster.
+9. Select the network setting of either **Public and Private Network** or **Private Network Only**.
+10. On the **Order Summary** pane, verify the cluster configuration before you add the cluster.
    1. Review the settings for the cluster.
    2. Review the estimated cost of the cluster. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you add the cluster.
    4. Click **Provision**.
 
-### Results after adding clusters to vCenter Server with Hybridity Bundle instances
+### Results after you add clusters to vCenter Server with Hybridity Bundle instances
 
 1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history on the **Summary** page of the instance.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
 
-**Important**: You cannot change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
+**Important:** You can't change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
 
-## Viewing clusters in vCenter Server with Hybridity Bundle instances
+## Procedure to view clusters in vCenter Server with Hybridity Bundle instances
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to view the clusters in it.
@@ -165,21 +176,21 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 
 ## Deleting clusters from vCenter Server with Hybridity Bundle instances
 
-You might want to delete a cluster from an instance when it is no longer needed.
+You might want to delete a cluster from an instance when it's no longer needed.
 
 ### Before you delete
 
-* You can delete a single cluster at a time. To delete multiple clusters, you must do it in sequence; waiting for the previous cluster to be deleted before you attempt to delete the next cluster.
-* Ensure that all nodes in a cluster are powered on and operational before deleting the cluster.
-* When you delete a cluster, all VMs (virtual machines) from the cluster will also be deleted and they cannot be recovered. If you want to keep the VMs, migrate them to other clusters.
-* The default cluster cannot be deleted.
+* You can delete a single cluster at a time. To delete multiple clusters, you must do it in sequence; waiting for the previous cluster to be deleted before you delete the next cluster.
+* Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.
+* When you delete a cluster, all VMs (virtual machines) from the cluster are also deleted and they can't be recovered. If you want to keep the VMs, migrate them to other clusters.
+* The default cluster can't be deleted.
 
 ## Procedure to delete clusters from vCenter Server with Hybridity Bundle instances
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to delete clusters from.
 
-   **Note**: Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot remove clusters from the instance.
+   **Note:** Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot remove clusters from the instance.
 
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.
 

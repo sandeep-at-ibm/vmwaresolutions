@@ -10,7 +10,7 @@ lastupdated: "2017-07-05"
 
 # Release notes for V1.7
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Updates for VMware Cloud Foundation instances
 
@@ -24,7 +24,7 @@ This update applies the following upgrades and improvements:
 
   **Note**: EVC mode is not enabled for any existing or new deployments on V4 servers.
 
-* VMware Cloud Foundation deployments that were deployed prior to May 22 and are therefore using V3 servers will now order V4 servers when adding a new node to the instance. These servers have 256 GB of memory; if you require 512 GB of memory, after adding the servers, open a support ticket to request a server upgrade to 512 GB of memory. For more  information about contacting IBM Support, see [Contacting IBM Support](trbl_support.html).
+* VMware Cloud Foundation deployments that were deployed before 22 May and are therefore using V3 servers will now order V4 servers when adding a new node to the instance. These servers have 256 GB of memory; if you require 512 GB of memory, after adding the servers, open a support ticket to request a server upgrade to 512 GB of memory. For more information about contacting IBM Support, see [Contacting IBM Support](trbl_support.html).
 
 For more information about components, see [Technical specifications for Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 

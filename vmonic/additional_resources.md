@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-28"
 
 ---
 
 # Additional resources
 
-Review more resources that can help you get started faster. These resources include:
+Review the following resources to get started faster.
 * Architecture reference information
 * Videos
 * Demonstrations
@@ -19,8 +19,7 @@ Review more resources that can help you get started faster. These resources incl
 
 ## Data sheets
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
+* [{{site.data.keyword.vmwaresolutions_full}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 
 ## Platform extensions
 
@@ -41,7 +40,7 @@ Review the architecture of all the [Virtualization Platform Extensions](https://
 
 ## Test drive IBM Cloud for VMware Solutions
 
-Want to see for yourself? Take a short test drive of the product by following the step-by-step {{site.data.keyword.vmwaresolutions_short}} guided demo [Try VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions).
+Want to see for yourself? Take a short test drive of the product by following the step-by-step {{site.data.keyword.vmwaresolutions_short}} guided demonstration [Try VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions).
 
 ## developerWorks recipes
 

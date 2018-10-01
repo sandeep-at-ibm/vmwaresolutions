@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
 # Ordering Veeam on IBM Cloud
 
-You can order the Veeam on {{site.data.keyword.cloud}} service while ordering a new instance with the service included or by adding the service to your existing instance.
+You can order the Veeam on {{site.data.keyword.cloud}} service when you order a new instance with the service included or by adding the service to your existing instance.
 
 ## Ordering Veeam on IBM Cloud for a new instance
 

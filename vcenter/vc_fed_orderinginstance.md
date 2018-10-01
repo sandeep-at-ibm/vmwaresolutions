@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
 # Ordering VMware Federal instances
 
-To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware Federal instance that enables you to disconnect the open management connection and secure your deployed instance.
+To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware Federal instance. VMware Federal instances help you disconnect the open management connection and secure your deployed instance.
 
-**Note:** Only vCenter Server instances support VMware Federal on {{site.data.keyword.cloud}} at this time.
+**Note:** Currently, only vCenter Server instances support VMware Federal on {{site.data.keyword.cloud}}.
 
-## Requirements
+## Requirements to order VMware Federal instances
 
 Ensure that you completed the following tasks:
 * You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
@@ -32,11 +32,11 @@ Table 1. Value format for instance and domain names
   | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
 
-**Important**: Do not modify any values that are set during ordering and instance deployment. Doing so can result in your instance becoming unusable. For example, public networking might shut down, servers and Virtual Server Instances (VSIs) might move behind a Vyatta when provision is in progress, or the IBM CloudBuilder VSI might stop or be deleted.
+**Important:** Don't modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
 
 ## System settings
 
-You must specify the following system settings when ordering a VMware Federal instance.
+You must specify the following system settings when you order a VMware Federal instance.
 
 ### Instance name
 
@@ -48,16 +48,16 @@ The instance name must meet the following requirements:
 
 ### Primary or secondary
 
-Order a new primary instance. Deploying a secondary instance for high availability is not supported at this time.
+Order a new primary instance. Deploying a secondary instance for high availability is not supported currently.
 
 ## Licensing settings
 
-IBM-provided VMware licenses for the following:
+IBM-provided licenses for the following VMware components:
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
-* (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4 (Base, Advanced, or Enterprise edition)
+* (For vSAN clusters) vSAN 6.6 (Advanced or Enterprise edition)
 
 **Attention:**
 
@@ -66,7 +66,7 @@ IBM-provided VMware licenses for the following:
 
 ## Bare Metal Server settings
 
-Bare Metal settings are based on your customized configuration. The option to select a preconfigured configuration is not supported at this time.
+Bare Metal settings are based on your customized configuration. The option to select a preconfigured configuration is not supported currently.
 
 ### Data center location
 
@@ -99,11 +99,12 @@ Storage settings are based on your selection of Bare Metal Server configuration 
 
 ### vSAN storage
 
-For vSAN, specify the following storage options:
-
-* **Disk Type and Size for vSAN Capacity Disks**: Select the capacity that meets your shared storage needs.
-* **Number of vSAN Capacity Disks**: Select the number of disks for the vSAN shared storage that you want to add. The disk quantities must be 2, 4, 6, or 8.
-* Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
+Specify the following vSAN options:
+* **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
+* **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
+* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
+* Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
+* **vSAN License**: Select the vSAN 6.6 license edition (Advanced or Enterprise).
 
 ### NFS storage
 
@@ -160,21 +161,21 @@ Select the Domain Name System (DNS) configuration for your instance:
 * **Single Public Windows VSI for Active Directory/DNS**: A single Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and virtual machines are registered, is deployed and can be looked up.
 * **Two highly available dedicated Windows Server VMs on the management cluster**: For V2.3 and future releases, two Microsoft Windows virtual machines are deployed, helping enhance security and robustness.
 
-**Important:** You must provide two Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows virtual machines. Use the Microsoft Windows Server 2012 R2 Standard edition license and/or the Microsoft Windows Server 2012 R2 Datacenter edition license.
+**Important:** You must provide two Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows virtual machines. Use the Microsoft Windows Server 2012 R2 Standard edition license or the Microsoft Windows Server 2012 R2 Datacenter edition license or both.
 
-Currently, each license can only be assigned to one single physical server and covers up to two physical processors. One Standard edition license is capable of running two virtualized Microsoft Windows virtual machines per 2-processor server. Therefore, two licenses are required since two Microsoft Windows virtual machines are deployed in two different hosts.
+Currently, each license can be assigned to only one single physical server and covers up to two physical processors. By using one Standard edition license, you can run two virtualized Microsoft Windows virtual machines per 2-processor server. Therefore, two licenses are required since two Microsoft Windows virtual machines are deployed in two different hosts.
 
 You have 30 days to activate the virtual machines.
 
-For more information on ordering Windows licensing, see [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+For more information about ordering Windows licensing, see [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Order summary
 
 Based on your selected configuration for the instance, the estimated cost is instantly generated and displayed in the **Order Summary** section on the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
 
-## Procedure
+## Procedure to order VMware Federal instances
 
-1. From the {{site.data.keyword.cloud_notm}} Catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
+1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
 2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server** card and click **Create**.
 3. On the **vCenter Server** page, enter the instance name.
 4. Click **Primary Instance** to deploy a single instance in the environment.
@@ -183,9 +184,9 @@ Based on your selected configuration for the instance, the estimated cost is ins
   1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
   2. Select the **Customized** CPU model and the amount of **RAM**.
 7. Complete the storage configuration.
-  * When you select **vSAN Storage**, specify the **Disk Type and Size for vSAN Capacity Disks**, **Number of vSAN Capacity Disks**, and how the **vSAN License** is to be provided.
-  * When you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Size**, and **Performance**.
-  * When you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**, then click the **+** icon beside the **Add NFS** label and select the **Size** and **Performance** for each individual file share. You must select at least one file share.
+  * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
+  * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Size**, and **Performance**.
+  * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**, then click the **+** icon next to the **Add NFS** label and select the **Size** and **Performance** for each individual file share. You must select at least one file share.
 8. Complete the network interface configuration.
    1. Enter the host name prefix, subdomain label, and root domain name.
    2. Select the DNS configuration.
@@ -207,7 +208,7 @@ When the instance is ready to use, the status of the instance is changed to **Re
 
 View, manage, or secure the VMware Federal instance that you ordered.
 
-**Important:** You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}} or any other means outside of the console.
+**Important:** You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}}, or any other means outside of the console.
 If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
 **CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:

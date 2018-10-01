@@ -10,7 +10,7 @@ lastupdated: "2018-05-28"
 
 # Release notes for V2.3
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Spectre and Meltdown remediation
 
@@ -52,8 +52,8 @@ This release applies the following upgrades and improvements:
 ### Enhancements for vCenter Server instances and clusters
 
 Starting with the V2.3 release, the following new CPU models are available for deployment when you choose the **Customized** Bare Metal setting:
-* Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz
-* Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz
+* Dual Intel Xeon Silver 4110 processor / 16 cores total, 2.1 GHz
+* Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.2 GHz
 
 For more information, see the following topics:
 
@@ -73,7 +73,7 @@ This release applies the following upgrades and improvements:
 
 You now have the option to select the deployment of a single Microsoft Windows Server Virtual Server Instance (VSI) for Microsoft Active Directory (AD) or two high availability Microsoft Windows virtual machines in the management cluster. For V2.2, the single Microsoft Windows VSI for Microsoft AD was automatically deployed by default. The new option to select two Microsoft Windows virtual machines provides more privacy and the option to backup and restore the virtual machines using the Veeam service.
 
-**Note:** You must provide two Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows virtual machines. Use the Microsoft Windows Server 2012 R2 Standard edition license and/or the Microsoft Windows Server 2012 R2 Datacenter edition license. You have 30 days to activate the virtual machines.
+**Note:** You must provide 2 Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows virtual machines. Use the Microsoft Windows Server 2012 R2 Standard edition license and/or the Microsoft Windows Server 2012 R2 Datacenter edition license. You have 30 days to activate the virtual machines.
 
 For more information, see the *Network interface settings* section in [Ordering VMware Federal instances](../vcenter/vc_fed_orderinginstance.html#network-interface-settings)​.
 
@@ -122,4 +122,4 @@ The user interface is updated and provides the following enhancements:
 * **Ease of access**: You can now access the VMware offerings directly from the {{site.data.keyword.cloud_notm}} **Catalog**.
 * **Streamlined and simplified ordering experience**: You can now complete ordering a VMware instance and deploying its add-on services in a single interface. In addition, estimated cost is calculated and shown instantly in the same interface so that you can adjust your configuration based on your cost plan.
 * The option to Bring Your Own License (BYOL) when ordering instances or adding clusters is not available to Business Partner users.
-* Various error messages and tooltip enhancements have been made to assist you in selecting the appropriate setting on the user interface.
+* Various error messages and tooltip enhancements are available to assist you in selecting the appropriate setting on the user interface.

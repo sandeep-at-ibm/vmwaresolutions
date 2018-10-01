@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-08-15"
 * Ensure that you are the account owner or that your platform management role for the **VMware Solutions** service is **Administrator**.
 * Ensure that you reviewed the user roles and permissions in [Managing user access with Identity and Access Management](iam.html).
 
-## Procedure
+## Procedure to invite users to access services and resources
 
 1. At the left side of the banner, click **Manage > Security > Identity and access**.
 2. On the **Users** page, click **Invite users**.
@@ -30,7 +30,7 @@ lastupdated: "2018-08-15"
 
 ## Results
 
-After the added users accept your invitation, they can log in to the {{site.data.keyword.vmwaresolutions_short}} console and switch to your account. To do so, in their profile settings, users click their avatar in the upper-right corner of the {{site.data.keyword.vmwaresolutions_short}} console. Then, the added users can collaborate and share the services and resources available in your specified account.
+After the added users accept your invitation, they can log in to the {{site.data.keyword.vmwaresolutions_short}} console and switch to your account. To do so, in their profile settings, users click their user account icon from the {{site.data.keyword.vmwaresolutions_short}} console banner. Then, the added users can collaborate and share the services and resources available in your specified account.
 
 ### Related links
 

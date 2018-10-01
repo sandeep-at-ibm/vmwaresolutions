@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,13 +22,13 @@ Use this offering to create a new cluster of ESXi servers or scale out an existi
 
 Review the components of VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
-**Note**: The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
+**Note:** The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
 
 ### VMware components
 
-Licenses (IBM-provided or BYOL) for the following VMware components:
-* VMware vSphere Enterprise Plus 6.0u2 or 6.5u1
-* Optional VMware components:
+Select licenses (IBM-provided or BYOL) for the following VMware components:
+* VMware vSphere Enterprise Plus 6.0u2, 6.5u1, or 6.5u2
+* The following VMware components are optional:
    * VMware vCenter Server Standard
    * VMware NSX (Base, Advanced, or Enterprise)
    * VMware vSAN (Advanced or Enterprise)
@@ -39,32 +39,35 @@ Licenses (IBM-provided or BYOL) for the following VMware components:
 
 ### Bare Metal Server
 
-One or more {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with with your selected CPU model and RAM size:
+Select one or more {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with your selected CPU model and RAM size:
 * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
 * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
 
 The options available depend on whether you selected the VMware vSAN component.
 
-In addition, the following disk and networking specifications:
+Additionally, the following disk and networking specifications:
 * 10 Gbps dual public and private network uplinks
 * One RAID disk controller
 
 ### Networking
 
-* Three VLANs (Virtual LANs): one public VLAN and two private VLANs
+* One VLAN (Virtual LAN) public VLAN and two private VLANs
 * (Optional) An HA-pair of FortiGate Security Appliance devices
 
 ### Storage
 
 User-customized storage for vSAN configuration when the VMware vSAN component is selected:
-* Storage disk options:  960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED
-* Disk quantity options: 2, 4, 6, or 8
+* Storage disk options of 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED
+* Disk quantity options of 2, 4, 6, or 8
 
-**Note:** 3.8 TB SSD (Solid State Disk) drives will be supported when they are made generally available in a data center.
+  Additionally, two cache disks of 960 GB are also ordered per host.
+
+  **Note:** 3.8 TB SSD (Solid State Disk) drives are supported when they are made generally available in a data center.
+* High-Performance Intel Optane option, which provides two extra capacity disk bays for a total of 10 capacity disks. This option depends on the CPU model.
 
 ## Technical specifications for vSphere cluster expansion nodes
 
-Each vSphere cluster expansion node will deploy and incur charges for the following components in your {{site.data.keyword.slportal}} account.
+Each vSphere cluster expansion node deploys and incurs charges for the following components in your {{site.data.keyword.slportal}} account.
 
 ### Hardware for expansion nodes
 
@@ -79,7 +82,7 @@ One {{site.data.keyword.cloud_notm}} Bare Metal Server with the networking confi
 * One {{site.data.keyword.cloud_notm}} Bare Metal Server with VMware vSphere Enterprise Plus 6.0u2 or 6.5u1  
 * Optional VMware components presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
-**Important**: You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console to scale the new cluster using the saved configuration. For more information, see [Scaling existing vSphere clusters](vs_scalingexistingclusters.html).
+**Important:** You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](vs_scalingexistingclusters.html).
 
 ### Related links
 

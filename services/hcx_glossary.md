@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-26"
 
 ---
 
 # Glossary of HCX terms
 
-This glossary provides definitions for the terms associated with the VMware HCX on {{site.data.keyword.cloud}} service.
+This glossary provides definitions for the terms that are associated with the VMware HCX on {{site.data.keyword.cloud}} service.
 
 * **HCX on {{site.data.keyword.cloud_notm}}**: This is the HCX service running in the {{site.data.keyword.cloud_notm}}. The provisioning of the HCX service is automated by {{site.data.keyword.vmwaresolutions_short}}.
 * **HCX On-premises Site**: This is the on-premises environment running your existing VMware deployment. In the context of migrations, this is often referred to as the source site.

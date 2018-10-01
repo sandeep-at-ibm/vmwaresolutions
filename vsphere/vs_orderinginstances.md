@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-11"
 
 # Ordering new vSphere clusters
 
-To deploy a highly customizable VMware virtualized platform, order a VMware vSphere cluster on {{site.data.keyword.cloud}}. Use this procedure to define a new VMware vSphere cluster.
+To deploy a highly customizable VMware virtualized platform, order a VMware vSphere cluster on {{site.data.keyword.cloud}}. Use this procedure to define a new vSphere cluster.
 
 This procedure guides you through the selection of VMware components, {{site.data.keyword.cloud_notm}} Bare Metal Server settings, storage settings, and networking choices, to create a new cluster. After you place the order, the cluster configuration is captured so that you can come back and continue to scale out the cluster as needed. After the order is completed, you can manually configure the VMware cluster based on your requirements.
 
@@ -32,11 +32,11 @@ The cluster name must be unique within your account.
 
 ## Licensing settings
 
-Select the VMware components to be ordered with your cluster, and specify the licensing option for the components.
+Select the VMware components to be ordered with your cluster and specify the licensing option for the components.
 
-### (For IBM Business Partners only) Component bundles
+### Component bundles for IBM Business Partner users
 
-If you're an IBM Business Partner, you can select a component license bundle when you order a new vSphere cluster. The following bundles are available:
+If you're an IBM Business Partner user, you can select a component license bundle when you order a new vSphere cluster. The following bundles are available:
 
 Table 1. IBM Business Partner component bundles for vSphere clusters
 
@@ -52,11 +52,11 @@ You can also include the following VMware components in your order:
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**Note:** For IBM Business Partners, the Bring Your Own License (BYOL) option is not available.
+**Note:** For IBM Business Partner users, the Bring Your Own License (BYOL) option is not available.
 
-### (For non-Business Partners only) Individual components
+### Individual components for non-Business Partner users
 
-If you're a non-Business Partner, you can select the following VMware components flexibly for your vSphere cluster:
+If you're a non-Business Partner, you can select the following components for your vSphere cluster:
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
@@ -76,7 +76,7 @@ You have the following options for licensing the selected VMware components:
 
 If you choose to purchase any license, except for vSphere Enterprise Plus and vCenter Server, and you order multiple ESXi servers, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to combine license keys. You are responsible to follow up with the ticket to ensure that you use only the license keys that the DevOps team generates.
 
-**Important**: Using individual license keys together with the combined license keys does not meet the payment requirements for the licenses you will need.
+**Important:** Using individual license keys together with the combined license keys does not meet the payment requirements for the licenses you will need.
 
 ## Bare Metal Server settings
 
@@ -115,20 +115,11 @@ For orders without vSAN, ESXi servers are ordered with a 12-disk chassis, with t
 
 For orders with vSAN, ESXi servers are ordered with a 12-disk chassis and four disks ordered: two for the ESXi OS and two reserved for caching. These settings are configured by default and cannot be changed. You can order more capacity disks by selecting **Disk Type and Size for vSAN Capacity Disks** and **Number of vSAN Capacity Disks**.
 
-When you selected the VMware vSAN component for the cluster, specify the following settings.
-
-### Disk Type and Size for vSAN Capacity Disks
-
-This option is available only when you selected the VMware vSAN component.
-
-The following disk types are available:
-* 960 GB SSD SED
-* 1.9 TB SSD SED
-* 3.8 TB SSD SED (3.8 TB SSD SED drives are supported when they are made generally available in a data center)
-
-### Number of vSAN Capacity Disks
-
-This option is available only when you selected the VMware vSAN component. The disk quantity options include 2, 4, 6, and 8.
+If you select the VMware vSAN component for the cluster, specify the following settings.
+* **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
+* **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
+* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
+* Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
 
 ## Network interface settings
 
@@ -161,6 +152,15 @@ The domain name is used for all {{site.data.keyword.baremetal_short}} and must m
 * The length of other strings must be in the range 1 - 63 characters.
 * The maximum length of the domain name is 189 characters.
 
+### Public or private network
+
+Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and are not available if you select the private option:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
+
 ### VLANs
 
 Network settings are based on your selection of either **Order New VLANs** or **Select Existing VLANs**.
@@ -192,7 +192,7 @@ You can also select whether to include the FortiGate Physical Appliance 300 Seri
 
 Based on your configurations, the estimated cost is instantly generated and displayed in the **Order Summary** pane on the right. Click **Pricing details** to generate a PDF document that provides the estimate details.
 
-## Procedure
+## Procedure to order vSphere clusters
 
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** on the left navigation pane, and then click **VMware vSphere** in the **Virtual Data Centers** section.
 2. On the **VMware vSphere on IBM Cloud** page, click **Create**.  
@@ -204,23 +204,23 @@ Based on your configurations, the estimated cost is instantly generated and disp
   When you choose to Bring Your Own License (BYOL) for VMware vSphere Enterprise Plus, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to request the default vSphere licenses on your ordered {{site.data.keyword.baremetal_short}} to be replaced with your provided licenses.   
 
     **Important:** You are responsible to track the ticket so that you replace the vSphere license on the newly ordered ESXi servers. This way the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
-
 5. Complete the Bare Metal Server settings:
    1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the cluster.
    2. Select the CPU model and RAM size.
    3. Specify the number of Bare Metal Servers.
-6. If you selected the **VMware vSAN** component, complete the vSAN storage settings by selecting the **Disk Type and Size for vSAN Capacity Disks** and **Number of vSAN Capacity Disks**.
+6. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
 7. Complete the network interface settings:
    1. Enter the host name prefix, subdomain label, and domain name.
-   2. Select the network interface that you want to use.
+   2. Select the network setting of either **Public and Private Network** or **Private Network Only**.
+   3. Select the network interface that you want to use.
     * If you want to order new public and private VLANs, click **Order New VLANs**.
     * If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs** and specify the VLANs and optionally the subnets.
-    3. Specify whether to apply the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment.  
+    4. Specify whether to apply the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment.  
 8. In the **Order Summary** pane, verify the cluster configuration and the estimated cost.
    * To save the configuration as a template without placing an order, click **Save Configuration**.
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.
 
-   **Note**: Only the {{site.data.keyword.baremetal_short}} are installed. You are responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.
+   **Note:** Only the {{site.data.keyword.baremetal_short}} are installed. You are responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.
 
 ### Results
 

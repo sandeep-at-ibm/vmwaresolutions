@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-26"
 
 ---
 
 # Ordering KMIP for VMware on IBM Cloud
 
-You can order the KMIP for VMware on {{site.data.keyword.cloud}} service while ordering a new instance with the service included or by adding service to your existing instance.
+You can order the KMIP for VMware on {{site.data.keyword.cloud}} service while you order a new instance with the service included or by adding service to your existing instance.
 
 ## Ordering KMIP for VMware on IBM Cloud for a new instance
 
@@ -38,7 +38,7 @@ Select the {{site.data.keyword.cloud_notm}} region where your KMIP for VMware {{
 
 For vCenter Server, you must configure a Key Management Server (KMS) cluster. The endpoint in your selected region securely connects to the KMS through the client SSL certificate. See the following table for the endpoint in each region. These endpoints use self-signed certificates that are maintained by the {{site.data.keyword.vmwaresolutions_short}} team. The thumbprint for the certificates is `a9 d0 ff 15 df 85 10 6b 61 88 fe 2e 8b d3 1a af 48 c8 a0 7a`.
 
-Table 1: KMIP for VMware on {{site.data.keyword.cloud_notm}} service endpoint regions
+Table 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} service endpoint regions
 
 | Region         | Endpoint               |
 |:---------------|:-----------------------|
@@ -47,7 +47,7 @@ Table 1: KMIP for VMware on {{site.data.keyword.cloud_notm}} service endpoint re
 | United Kingdom |  `158.175.93.122:5696` |
 | US South       |  `169.60.185.42:5696`  |
 
-This setting is optional at the time of initial configuration. You can leave this field blank at this time because the client certificate of the KMS in vCenter Server is known after your instance is deployed. But you must enter the certificate after your instance is deployed, so that your vCenter Server connection to the KMS can be completed successfully.
+This setting is optional at the time of initial configuration. You can leave this field blank because the client certificate of the KMS in vCenter Server is known after your instance is deployed. But you must enter the certificate after your instance is deployed so that your vCenter Server connection to the KMS can be completed successfully.
 
 ### API Key for Service ID
 

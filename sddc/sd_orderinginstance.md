@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,11 +18,11 @@ Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
 *  You reviewed the requirements and considerations in [Requirements and planning for Cloud Foundation instances](sd_planning.html).
 
-**Important:** Do not modify any values that are set during ordering and instance deployment. Doing so can result in your instance becoming unusable. In addition, do not change the instance name, root domain name, subdomain label, or host name prefix, after the instance is deployed.
+**Important:** Don't modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted. In addition, do not change the instance name, root domain name, subdomain label, or host name prefix, after the instance is deployed.
 
 ## System settings
 
-You must specify the following system settings when ordering a Cloud Foundation instance.
+You must specify the following system settings when you order a Cloud Foundation instance.
 
 ### Instance name
 
@@ -85,17 +85,21 @@ A Cloud Foundation instance comprises four Bare Metal Severs at the initial depl
 
 ## Storage settings
 
-The Cloud Foundation instances support only the vSAN storage.
-* When you select **Preconfigured** Bare Metal Server configuration, the storage settings are standardized and cannot be changed:
-  * For the **Small** Bare Metal Server configuration, 2 disk drives of 1.9 TB SSD SED are ordered.
-  * For the **Large** Bare Metal Server configuration, 4 disk drives of 3.8 TB SSD SED are ordered.
-* When you select the **Customized** Bare Metal Server configuration, you can customize the VMware vSAN storage for your instance by specifying the following settings under **vSAN Storage**:
-  * **Disk Type and Size for vSAN Capacity Disks**: Select the capacity that meets your shared storage needs.
-  * **Number of vSAN Capacity Disks**: Specify the number of disks for the vSAN shared storage that you want to add. The disk quantities must be 2, 4, 6, or 8.
+For Cloud Foundation instances, you can order VMware vSAN storage only.
+
+When you select **Preconfigured** Bare Metal Server configuration, the storage settings are standardized and cannot be changed:
+  * For the **Small** Bare Metal Server configuration, two disk drives of 1.9 TB SSD SED are ordered.
+  * For the **Large** Bare Metal Server configuration, four disk drives of 3.8 TB SSD SED are ordered.
+
+When you select the **Customized** Bare Metal Server configuration, you can customize the vSAN storage for your instance. Specify the following vSAN settings:
+* **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
+* **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
+* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
+* Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
 
 ## Network interface settings
 
-You must specify the following network interface settings when ordering a Cloud Foundation instance.
+You must specify the following network interface settings when you order a Cloud Foundation instance.
 
 ### Hostname prefix
 
@@ -147,10 +151,10 @@ Network settings are based on your selection of either **Order New VLANs** or **
 
 One public VLAN and two private VLANs are required for your instance order. The two private VLANs are trunked into each Bare Metal Server.
 
-**Order New VLANs**  
+#### Order New VLANs
 Select to order one new public VLAN and two new private VLANs.
 
-**Select Existing VLANs**  
+#### Select Existing VLANs  
 Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
 
 When you select to reuse existing public and private VLANs, specify the VLANs and subnets:
@@ -162,29 +166,27 @@ When you select to reuse existing public and private VLANs, specify the VLANs an
 
 **Important:**
 * Ensure that the firewall configuration on the selected VLANs does not block the management data traffic.
-* Ensure that all of the VLANs you select are in the same pod, because ESXi servers cannot be provisioned on mixed-pod VLANs.
+* Ensure that all of the VLANs you select are in the same pod because ESXi servers cannot be provisioned on mixed-pod VLANs.
 
 ## Services
 
-When you order a Cloud Foundation instance, you can also order additional services. For more information about the available services, see [Services for Cloud Foundation instances](sd_planning.html#services-for-cloud-foundation-instances).
+When you order a Cloud Foundation instance, you can also order add-on services. For more information about the available services, see [Services for Cloud Foundation instances](sd_planning.html#services-for-cloud-foundation-instances).
 
 ## Order summary
 
-Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
+Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the right pane. Click **Pricing details** on the right pane to generate a PDF document that provides the estimate details.
 
-## Procedure
+## Procedure to order Cloud Foundation instances
 
-1. From the {{site.data.keyword.cloud_notm}} Catalog, click **VMware** from the left navigation pane and then click **Cloud Foundation** in the **Virtual Data Centers** section.
+1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** from the left navigation pane and then click **Cloud Foundation** in the **Virtual Data Centers** section.
 2. On the **VMware Cloud Foundation on IBM Cloud** page, click **Create**.
 3. On the **Cloud Foundation** page, enter the instance name.
 4. Select the instance type:
    * Click **Primary Instance** to deploy a single instance in the environment or to deploy the first instance in a multi-site topology.
-   * Click **Secondary Instance** to connect the instance with an existing (primary) instance in the environment for high availability and complete the following steps:
+   * Click **Secondary Instance** to connect the instance with an existing (primary) instance in the environment for high availability. Complete the following steps:
      1. Select the primary instance that you want the secondary instance to be connected with.
-     2. If the primary instance that you selected is upgraded to the V2.5 release, or the primary instance is deployed in or upgraded to V2.4 and previous releases, check the prefilled **Administrator Password for the Primary Instance PSC** to ensure that it is correct.
-     
-         **Note:** The **Administrator Password for the Primary Instance PSC** field is not available to primary instances that are 
-       deployed in V2.5 and later releases.     
+     2. For primary instances V2.5 or later, enter the value for the **Administrator Password for the Primary Instance PSC**.
+     3. For primary instances V2.4 or earlier, verify that the prefilled value for the **Administrator Password for the Primary Instance PSC** field is correct.
 5. Complete the license settings for the instance components:
    *  To use IBM-provided licenses, select **Include with purchase**.
    *  To use your own license, select **I will provide** and enter the license key.  
@@ -193,16 +195,16 @@ Based on your selected configuration for the instance and add-on services, the e
    2. Select the Bare Metal Server configuration.
       * When you select **Preconfigured**, choose a configuration from **Small** and **Large**.
       * When you select **Customized**, specify the CPU model and the RAM size.
-7. Complete the storage settings:
-   * If you selected **Preconfigured** for the Bare Metal configuration, note that the storage settings for the **Small** and **Large** standardized Bare Metal Server configurations cannot be changed.
-   * If you selected **Customized** for the Bare Metal configuration, specify the **Disk Type and Size for vSAN Capacity Disks** and **Number of vSAN Capacity Disks**.
+7. Complete the storage configuration.
+   * If you selected **Preconfigured** for the Bare Metal configuration, the storage settings for the **Small** and **Large** standardized Bare Metal Server configurations cannot be changed.
+   * If you selected **Customized** for the Bare Metal configuration, specify the disk types for the vSAN capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
 8. Complete the network interface settings:
-   1. Enter the host name prefix, subdomain label, and root domain name. For a secondary instance, the domain name is automatically filled in.
+   1. Enter the host name prefix, subdomain label, and root domain name. For a secondary instance, the domain name is automatically completed.
    2. Select the VLAN settings:
       * If you want to order new public and private VLANs, click **Order New VLANs**.
       * If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs** and specify the VLANs and the subnets.
 
-9. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** in the pop-up configuration window. For information about how to provide settings for a service, see the corresponding service ordering topic.
+9. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** in the pop-up configuration window. For more information about how to provide settings for a service, see the corresponding ordering services topic.
 
 10. On the **Order Summary** pane, verify the instance configuration before you place the order.
     1. Review the settings for the instance.
@@ -215,7 +217,7 @@ Based on your selected configuration for the instance and add-on services, the e
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [Technical specifications for Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **SDDC-Cluster** by default. If you ordered additional services, the deployment of the services starts after your order is completed.
+When the instance is successfully deployed, the components that are described in [Technical specifications for Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **SDDC-Cluster** by default. If you ordered add-on  services, the deployment of the services starts after your order is completed.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
@@ -225,9 +227,9 @@ When you order a secondary instance, the VMware vSphere Web Client for the prima
 
 View and manage the Cloud Foundation instance that you ordered.
 
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+**Important:** You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
-**CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
+**CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 
 *  Adding, modifying, returning, or removing components
 *  Expanding or contracting instance capacity through adding or removing ESXi servers

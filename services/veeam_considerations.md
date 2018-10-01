@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
 # Veeam on IBM Cloud overview
 
-The Veeam on {{site.data.keyword.cloud}} service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service can provide recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you can control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
+The Veeam on {{site.data.keyword.cloud}} service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
 
-**Availability**: This service is available only to instances deployed in V1.8 or later releases.
+**Availability:** This service is available only to instances deployed in V1.8 or later releases.
 
 ## Technical specifications for Veeam on IBM Cloud
 
@@ -42,15 +42,15 @@ Veeam Backup and Replication 9.5 Enterprise Plus (10, 25, 50, 100, or 200 VM lic
 
 ### Management
 
-Management backups configured by default with up to five VMs and 2000 GB of storage.
+Management backups that are configured by default with up to 5 VMs and 2000 GB of storage.
 
-## Considerations when installing Veeam on IBM Cloud
+## Considerations when you install Veeam on IBM Cloud
 
 The storage repository and the Veeam server are in the original pod and data center. Therefore, the performance of the backup operations for remote clusters might deteriorate.
 
-## Considerations when removing Veeam on IBM Cloud
+## Considerations when you remove Veeam on IBM Cloud
 
-Before you remove the Veeam on {{site.data.keyword.cloud_notm}} service, note that removal of this service stops all backups (including the backup of the management VMs) and deletes all the previous backups (the deletion is irreversible). If the management VMs are corrupted subsequently, they cannot be restored.
+Removal of the Veeam on {{site.data.keyword.cloud_notm}} service stops all backups and deletes all the previous backups. The backups of the management VMs stop and the deletion of previous backups is irreversible. If the management VMs are corrupted, they can't be restored.
 
 ### Related links
 

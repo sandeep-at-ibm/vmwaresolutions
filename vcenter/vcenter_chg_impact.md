@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,17 +18,17 @@ Changing users, resources, or subnets that are reserved for {{site.data.keyword.
 
 The **automation** ID is a user account that is used by the automated operations provided in the {{site.data.keyword.vmwaresolutions_short}} console.
 
-Users and passwords for the automated operations in the console must not be changed because the console operations that depends on those credentials might fail.
+Users and passwords for the automated operations in the console must not be changed because the console operations that depend on those credentials might fail.
 
 ## Service-specific user accounts
 
 Each service creates an internal user account in vCenter Server. This account is necessary so that management operations that are associated to a service can connect to vCenter Server to perform the operations on the service.
 
-**Important**: To prevent outages and connection problems, if you change the user ID, password, or password expiration settings for this user account, ensure that you also update the information in the associated service.
+**Important:** To prevent outages and connection problems, if you change the user ID, password, or password expiration settings for this user account, ensure that you also update the information in the associated service.
 
 The user ID for this account is in the format `<service_name>-<truncated service_uuid>@test.local` or `<service_name>-<truncated service_uuid>@example-domain.local`. For example, the user ID that the Veeam on {{site.data.keyword.cloud_notm}} service uses to connect to vCenter Server to perform scheduled backups is `Veeam-<Veeam_uuid>@test.local`.
 
-**Note**: The `<service_name>` together with the `<service_uuid>` truncates to 20 characters.
+**Note:** The `<service_name>` together with the `<service_uuid>` truncates to 20 characters.
 
 ## VMware resources for vCenter Server instances (V1.9 and later)
 
@@ -63,7 +63,7 @@ Table 2. Operations that are impacted by for the VC/PSC root access (local)
 
 The following information discusses the subnets that are ordered by {{site.data.keyword.vmwaresolutions_short}} and it provides options for you to order extra subnets for your own use.
 
-**CAUTION**: Do not use these components for other purposes, or the stability of your environment is severely compromised.
+**CAUTION:** Do not use these components for other purposes, or the stability of your environment is severely compromised.
 
 With each {{site.data.keyword.cloud_notm}} Bare Metal Server order, the following ranges of IP addresses are ordered by default:
 *  A primary public range of 32 IP addresses

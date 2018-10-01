@@ -10,7 +10,7 @@ lastupdated: "2018-06-22"
 
 # Release notes for V2.4
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Spectre and Meltdown remediation
 
@@ -44,9 +44,9 @@ The following languages are supported, in addition to English:
 
 Starting with the V2.4 release, the following new Bare Metal Server CPU models are available for deployment for VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}, VMware vSphere on {{site.data.keyword.cloud_notm}}, and VMware Federal on {{site.data.keyword.cloud_notm}} instances and clusters:
 
-* Dual Intel Skylake Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz
-* Dual Intel Skylake Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz
-* Dual Intel Skylake Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz
+* Dual Intel Skylake Xeon Silver 4110 processor / 16 cores total, 2.1 GHz
+* Dual Intel Skylake Xeon Gold 5120 processor / 28 cores total, 2.2 GHz
+* Dual Intel Skylake Xeon Gold 6140 processor / 36 cores total, 2.3 GHz
 
 For more information, see the *Bare Metal Server settings* section in:
 
@@ -84,7 +84,7 @@ The {{site.data.keyword.vmwaresolutions_short}} architecture document is now ava
 
 ### Services documentation
 
-The services information has been restructured and the navigation has been improved to easily locate relevant information when ordering services.
+The services information is restructured and the navigation is improved to easily locate relevant information when you order services.
 
 For more information, see the following topics:
 
@@ -103,6 +103,6 @@ For more information, see the following topics:
 The user interface is updated and provides the following enhancements:
 
 * The add cluster and add service panes now use a page format, with a better organized layout, which allows you to complete tasks more efficiently.
-* The functionality of the **Deployed Instances** page is enhanced with search, pagination, and sorting features. These improvements allow you to locate your instances very quickly.
+* The functionality of the **Deployed Instances** page is enhanced with search, pagination, and sorting features. These improvements allow you to locate your instances quickly.
 * The instance detail page now uses a left navigation menu, which allows you to access the instance information easily and quickly.
-* Various error messages and tooltip enhancements have been made to assist you in selecting the appropriate setting on the user interface.
+* Various error messages and tooltip enhancements are available to assist you in selecting the appropriate setting on the user interface.

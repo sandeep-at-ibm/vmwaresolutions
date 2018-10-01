@@ -10,7 +10,7 @@ lastupdated: "2018-08-30"
 
 # Release notes for V2.5
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and more tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Spectre and Meltdown remediation
 
@@ -68,7 +68,7 @@ For more information about user accounts, see the following topics:
 
 ## Updates for add-on services
 
-### IBM Cloud Private Hosted (Updated on August 30, 2018)
+### IBM Cloud Private Hosted (Updated on 30 August 2018)
 
 The {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} service is now available to vCenter Server instances that are deployed in (or upgraded to) V2.5 or later releases.
 
@@ -114,4 +114,4 @@ The user interface is updated and provides the following enhancements:
 
 * If you have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account that is linked to your {{site.data.keyword.cloud_notm}} account, you can now click the newly added **Retrieve** button on the **Settings** page to get the user name and API key for your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account automatically.
 * A new **Deployment History** tab is added on the left navigation pane of the instance details page for you to check deployment history of an instance.
-* Various error messages and tooltip enhancements have been made to assist you in selecting the appropriate setting on the user interface.
+* Various error messages and tooltip enhancements are available to assist you in selecting the appropriate setting on the user interface.

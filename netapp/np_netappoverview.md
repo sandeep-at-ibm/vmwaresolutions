@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ Review the architecture and components of the NetApp ONTAP Select on {{site.data
 
 The NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} offering complements the vCenter Server deployment by providing storage virtualization services.
 
-The following graphic depicts the overall architecture of the NetApp ONTAP Select on vCenter Server deployment.
+The following graphic illustrates the overall architecture of the NetApp ONTAP Select on vCenter Server deployment.
 
 Figure 1. High-level architecture of NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}
 
@@ -33,7 +33,7 @@ This layer virtualizes the physical infrastructure through the following VMware 
 * VMware NSX is the network virtualization platform that provides logical networking components and virtual networks.
 * NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} deploys an ONTAP Select cluster, which consists of four VMs for the four hosts.
 
-The following graphic depicts the components of the NetApp ONTAP Select deployment.
+The following graphic illustrates the components of the NetApp ONTAP Select deployment.
 
 Figure 2. NetApp ONTAP Select components
 
@@ -41,7 +41,15 @@ Figure 2. NetApp ONTAP Select components
 
 ### Virtualization management
 
-This layer consists of vCenter Server virtual appliance, NSX Manager, two NSX ESGs, 3 NSX Controllers, Platform Services Controller (PSC) virtual appliance, vCenter Server Appliance (vCSA), and the IBM CloudDriver virtual server instance (VSI).
+The virtualization management layer consists of the following components:
+
+* vCenter Server virtual appliance
+* NSX Manager
+* Two NSX Edge Services Gateways (ESGs)
+* Three NSX Controllers
+* Platform Services Controller (PSC) virtual appliance
+* vCenter Server Appliance (vCSA)
+* IBM CloudDriver virtual server instance (VSI).
 
 NetApp ONTAP Select runs in a VMware cluster and virtualizes the local storage on the hosts. NetApp ONTAP Select is deployed in the dedicated model, where other workloads are not expected to share the cluster with it. As a result, the hardware configuration of the NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} offering is sized only based on the requirements of NetApp ONTAP Select.
 
@@ -49,11 +57,11 @@ NetApp ONTAP Select runs in a VMware cluster and virtualizes the local storage o
 
 The following components are included in your NetApp ONTAP Select instance.
 
-**Note**: The availability and pricing of standardized configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
+**Note:** The availability and pricing of standardized configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
 
 ### Storage
 
-* Three options: **High Performance (Medium)**, **High Performance (Large)**, and **High Capacity**
+* Choose between **High Performance (Medium)**, **High Performance (Large)**, and **High Capacity**
 * RAID 5 with hot spare
 * Two 1-TB SATA drives ESXi OS – RAID 1
 * Management datastore – 500 GB for management VMs
@@ -61,11 +69,11 @@ The following components are included in your NetApp ONTAP Select instance.
 ### Preset configurations
 
 Four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with the following configuration options are provided:
-* **High Performance (Medium)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 1.9 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 59 TB
-* **High Performance (Large)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 3.8 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 118 TB
+* **High Performance (Medium)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / 22 1.9 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 59 TB
+* **High Performance (Large)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / 22 3.8 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 118 TB
 * **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 64 GB RAM / Thirty Four 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 190 TB
 
-**Note:** 3.8 TB SSD (Solid-State Disk) drives will be supported when they are made generally available in a data center.
+**Note:** 3.8 TB SSD (Solid-State Disk) drives are supported when they are made generally available in a data center.
 
 ### Hardware
 
@@ -88,20 +96,24 @@ Two VSIs (Virtual Server Instances):
 
 ### Licenses and fees
 
-*  Four Premium/Standard Edition NetApp ONTAP Select licenses (user-provided)
+*  Four Premium or Standard Edition NetApp ONTAP Select licenses (user-provided)
 *  VMware vSphere 6.5 Enterprise Plus edition
 *  VMware vCenter Server 6.5
 *  VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 *  Support and Services fee (one license per node)
 
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+**Important:** You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
-**CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
+**CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, removing, or powering off components
 *  Expanding or contracting instance capacity through adding or removing ESXi servers
 *  Restarting services
 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
+
+## Firewall considerations
+
+If you're using firewalls, you must configure rules for all communications from the {{site.data.keyword.IBM}} CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs). These rules must allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`. Examples of such firewalls are NSX Distributed Firewalls (DFW) or Vyatta firewalls.
 
 ### Related links
 

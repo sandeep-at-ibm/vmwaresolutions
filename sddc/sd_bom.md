@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -32,18 +32,17 @@ Table 2. BOM for the software components in Cloud Foundation instances
 
 | Manufacturer | Component                                | Version      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 U1g (ESXi 6.5u1 with patch level ESXi650-201803001 applied) |
-| VMware       | vCenter Server Appliance                 | 6.5 Update 1g |
-| VMware       | Platform Services Controller             | 6.5 Update 1g |
+| VMware       | vSphere ESXi                             | 6.5 Update 2c (up to ESXi650-201808001 patch level) |
+| VMware       | vCenter Server Appliance                 | 6.5 Update 2c |
+| VMware       | Platform Services Controller             | 6.5 Update 2c |
 | VMware       | vSAN                                     | 6.6.1        |
-| VMware       | NSX for vSphere                          | 6.3.5        |
+| VMware       | NSX for vSphere                          | 6.4.1        |
 | VMware       | SDDC Manager                             | 2.4          |
-| IBM          | CloudDriver                              | 2.5          |
 | Microsoft    | Windows Server Standard edition (64-bit) | 2012R2       |
 
 ## Advanced configuration settings for ESXi servers
 
-Review the following table for an overview of the advanced configuration settings that are applied on the ESXi servers depending on whether the Cloud Foundation instance is deployed in V2.2 or later, or upgraded to V2.2 or later from a previous V2.1 or earlier release.
+Review the following table for an overview of the advanced configuration settings that are applied on the ESXi servers. The settings are different depending on whether the Cloud Foundation instance is deployed in (or upgraded to) V2.2 or later from a previous (V2.1 or earlier) release.
 
 Table 3. ESXi servers advanced configuration settings for Cloud Foundation instances and clusters
 
@@ -59,9 +58,9 @@ Table 3. ESXi servers advanced configuration settings for Cloud Foundation insta
 | Queue Full Sample Size | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | Queue Full Threshold | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
-**Notes**:
+**Notes:**
 * The **MaxVolumes** setting is required for the IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service because the service might use more than the default number of NFS mounts on the ESXi server.
-* A value of **Not set** for a configuration setting indicates that the new setting is not automatically applied, because it requires rebooting the ESXi servers, which might be disruptive.
+* A value of **Not set** for a configuration setting indicates that the new setting is not automatically applied because it requires rebooting the ESXi servers, which might be disruptive.
 
   It is recommended that you change the **Not set** configuration settings to the new values for consistency across all instances and to allow adequate support for storage expansion. IBM plans to test only with these new settings for all {{site.data.keyword.vmwaresolutions_short}} V2.2 and later releases.
 

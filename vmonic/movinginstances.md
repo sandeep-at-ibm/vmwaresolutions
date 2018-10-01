@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,7 +22,7 @@ In V1.4 and later releases, several network topology enhancements are available 
 
 If you have not migrated or deleted your instances from pre-V1.4 releases, they might still be visible on the {{site.data.keyword.vmwaresolutions_short}} console in view-only mode. These instances are marked on the user interface as **Deprecated** with a warning symbol icon.
 
-**Note**: The information that is displayed in the instance properties reflects the data as of the V1.4 release date and it is no longer refreshed.
+**Note:** The information that is displayed in the instance properties reflects the data as of the V1.4 release date and it is no longer refreshed.
 
 The following actions are available on the pre-V1.4 instances:
 *  View the information on the instance details page.

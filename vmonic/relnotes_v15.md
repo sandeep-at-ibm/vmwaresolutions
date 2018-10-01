@@ -10,7 +10,7 @@ lastupdated: "2017-03-30"
 
 # Release notes for V1.5
 
-This release includes new features, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## VRF versus classic SoftLayer account requirements
 
@@ -30,5 +30,5 @@ For Cloud Foundation instances, a new _SDDC Manager_ license is introduced, whic
 
 Improvements are made throughout the user interface:
 
-* The availability of various data centers and whether they have sufficient inventory to fulfill the order is clearly indicated on the user interface so you can make an informed decision about the data center to select during instance ordering. For more information, see [Requirements and planning for Cloud Foundation instances](../sddc/sd_planning.html) and [Requirements and planning for vCenter Server instances](../vcenter/vc_planning.html).
-* For Cloud Foundation instances, information such as the instance name, domain and subdomain name, and data center location, is automatically displayed in graphical format while you are entering the required information in the input fields. For more information, see [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html).
+* The availability of various {{site.data.keyword.CloudDataCents_notm}} and whether they have sufficient inventory to fulfill the order is clearly indicated on the user interface. Use these details to make an informed decision about the {{site.data.keyword.CloudDataCent_notm}} to select when you order an instance. For more information, see [Requirements and planning for Cloud Foundation instances](../sddc/sd_planning.html) and [Requirements and planning for vCenter Server instances](../vcenter/vc_planning.html).
+* For Cloud Foundation instances, information such as the instance name, domain and subdomain name, and data center location, is automatically displayed in graphical format as you enter the required information in the input fields. For more information, see [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html).

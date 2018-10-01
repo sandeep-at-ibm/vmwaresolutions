@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -74,7 +74,7 @@ Yes. You can use the BYOL feature or purchase licenses for any combination of th
 
 ## For a specific VMware component, can I use BYOL for some licenses and buy the rest of licenses from IBM?
 
-Yes. If you selected BYOL for a specific VMware component, you have the option when creating a new cluster to enter a new BYOL key, continue using an existing BYOL key, or purchase IBM-provided licensing for that cluster. Currently, only VMware vSphere Enterprise and VMware vSAN are availible for licensing per cluster.
+Yes. If you selected BYOL for a specific VMware component, you have the option when creating a new cluster to enter a new BYOL key, continue using an existing BYOL key, or purchase IBM-provided licensing for that cluster. Currently, only VMware vSphere Enterprise and VMware vSAN are available for licensing per cluster.
 
 ## Can I use BYOL when creating a new cluster?
 
@@ -136,7 +136,7 @@ If you have a vCenter Server instance with NSX Base edition, you are upgraded to
 
 ## Can I upgrade the NSX Advanced edition that is included in vCenter Server with Hybridity Bundle to NSX Enterprise edition?
 
-While the vCenter Server with Hybridity Bundle includes NSX Advanced, you can upgrade to the NSX Enterprise edition after ordering the vCenter Server with Hybridity Bundle. To do so, use the **Update and Patch** tab on the instance details page tab of the {{site.data.keyword.vmwaresolutions_short}} console.
+While the vCenter Server with Hybridity Bundle includes NSX Advanced, you can upgrade to the NSX Enterprise edition after you order the vCenter Server with Hybridity Bundle. To do so, use the **Update and Patch** tab on the instance details page tab of the {{site.data.keyword.vmwaresolutions_short}} console.
 
 ### Related links
 
