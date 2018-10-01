@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -16,13 +16,21 @@ You can easily deploy your VMware virtual environments and manage the infrastruc
 
 ## IBM Cloud for VMware Solutions benefits
 
-{{site.data.keyword.vmwaresolutions_short}} provides the following major benefits:
-* **Global reach**: You can expand your hybrid cloud footprint to up to 30 enterprise-class {{site.data.keyword.CloudDataCents_notm}} around the world.
-* **Seamless integration**: Enables seamless integration across the hybrid cloud with the {{site.data.keyword.cloud_notm}} infrastructure.
-* **Rapid provisioning**: Automates the deployment and configuration of the VMware environment, which allows you to quickly deploy an enterprise-class VMware environment with on-demand {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} and virtual servers.
-* **Simplification**: You can consume a VMware cloud platform without the need to identify, procure, deploy, and manage the underlying physical infrastructure (compute, storage, and network), and the software licenses.
-* **Expansion and contraction flexibility**: Allows you to easily expand and contract your VMware workloads according to your business needs.
-* **Single management console**: Provides a single console to deploy, access, and manage the VMware environments on {{site.data.keyword.cloud_notm}}.
+{{site.data.keyword.vmwaresolutions_short}} provides the following major benefits.
+<dl>
+  <dt>Global reach</dt>
+  <dd>Expand your hybrid cloud footprint to up to 30 enterprise-class {{site.data.keyword.CloudDataCents_notm}} around the world.</dd>
+  <dt>Seamless integration</dt>
+  <dd>Enables seamless integration across the hybrid cloud with the {{site.data.keyword.cloud_notm}} infrastructure.</dd>
+  <dt>Rapid provisioning</dt>
+  <dd>Automates the deployment and configuration of the VMware environment, which allows you to quickly deploy an enterprise-class VMware environment with on-demand {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} and virtual servers.</dd>
+  <dt>Simplification</dt>
+  <dd>You can consume a VMware cloud platform without the need to identify, procure, deploy, and manage the underlying physical infrastructure (compute, storage, and network), and the software licenses.</dd>
+  <dt>Expansion and contraction flexibility</dt>
+  <dd>Allows you to easily expand and contract your VMware workloads according to your business needs.</dd>
+  <dt>Single management console</dt>
+  <dd>Provides a single console to deploy, access, and manage the VMware environments on {{site.data.keyword.cloud_notm}}.</dd>
+</dl>
 
 ## Deployment offerings
 
@@ -98,6 +106,12 @@ The HyTrust DataControl on {{site.data.keyword.cloud_notm}} service offers stron
 
 For more information, see [HyTrust DataControl on {{site.data.keyword.cloud_notm}} overview](../services/htdc_considerations.html).
 
+### HyTrust KeyControl on IBM Cloud
+
+The HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service simplifies the management of encrypted workloads by automating and simplifying the lifecycle of encryption keys. The service can easily manage encryption keys at scale by using FIPS 140-2 compliant encryption. By using this service, you can manage the encryption keys for all your virtual machines and encrypted data stores, and scale it to support thousands of encrypted workloads in large deployments.
+
+For more information, see [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} overview](../services/htkc_considerations.html).
+
 ### IBM Cloud Private Hosted
 
 The {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} service brings the power of microservices and containers to your VMware environment on {{site.data.keyword.cloud_notm}}. With this service, you can extend the same familiar VMware and {{site.data.keyword.cloud_notm}} Private operational model and tools from on-premises into the {{site.data.keyword.cloud_notm}}.
@@ -118,7 +132,7 @@ For more information, see [KMIP for VMware on {{site.data.keyword.cloud_notm}} o
 
 ### Veeam on IBM Cloud
 
-The Veeam on {{site.data.keyword.cloud_notm}} service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service can provide recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you can directly control both the backup and restore of all virtual machines for your infrastructure from the Veeam console.
+The Veeam on {{site.data.keyword.cloud_notm}} service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives are provided in less than 15 minutes after configuration is completed. By using this service, you directly control both the backup and restore of all virtual machines for your infrastructure from the Veeam console.
 
 For more information, see [Veeam on {{site.data.keyword.cloud_notm}} overview](../services/veeam_considerations.html).
 

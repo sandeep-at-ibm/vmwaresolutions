@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-16"
 
 {{site.data.keyword.vmwaresolutions_full}} communicates with the {{site.data.keyword.cloud_notm}} infrastructure through {{site.data.keyword.slapi_short}} calls. To access the {{site.data.keyword.slapi_short}} securely, you must link the credentials of your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account to your {{site.data.keyword.cloud_notm}} account.
 
-**Note**: The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account was previously known as the IBM SoftLayer account.
+**Note:** The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account was previously known as the IBM SoftLayer account.
 
 You can also specify whether you want to receive email and console notifications for various events.
 
@@ -22,9 +22,9 @@ You can also specify whether you want to receive email and console notifications
 * The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account that you're using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} infrastructure account requirements](slaccountrequirement.html).
 * If the API key for your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account changes, you must update the key on the **Settings** page in the {{site.data.keyword.vmwaresolutions_short}} console.
 
-   **Important**: It is your responsibility to ensure that the API key that is saved on the **Settings** page is correct and up-to-date. Otherwise, operations that require API key validation might fail.
+   **Important:** It is your responsibility to ensure that the API key that is saved on the **Settings** page is correct and up-to-date. Otherwise, operations that require API key validation might fail.
 
-## Procedure
+## Procedure to manage user accounts and settings
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Settings** from the left navigation pane.
 2. In the **Notifications** area, specify your notification settings.

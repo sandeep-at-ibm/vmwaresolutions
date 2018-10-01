@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-16"
 
 ## Problem
 
-If you added ESXi servers to a V1.5 or V1.6 VMware Cloud Foundation instance and the add operation failed, the update button is disabled and you are not allowed to apply the V1.5 -> V1.6 or V1.6 -> V1.7 update to the instance.
+If you add ESXi servers to a V1.5 or V1.6 VMware Cloud Foundation instance and the add operation fails, the update option is disabled and you cannot apply the V1.5 to V1.6 or the V1.6 to V1.7 update to the instance.
 
 ## Resolution
 

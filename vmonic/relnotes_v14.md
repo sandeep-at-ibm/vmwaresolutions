@@ -10,13 +10,13 @@ lastupdated: "2017-03-08"
 
 # Release notes for V1.4
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Component updates for Cloud Foundation instances
 
 The following components are new or updated:
 
-* VC/PSC (vCenter/Platform Services Controller) 6.0U2a
+* VC and PSC (vCenter and Platform Services Controller) 6.0U2a
 * VMware Tools 10.1.0
 * SDDC Manager (SP) 2.2
 * VMware ESXi 6.0 u2 p04
@@ -78,7 +78,7 @@ This release includes the following topology enhancements for your instances:
 
 ## Multi-site configuration support for Cloud Foundation instances
 
-You can now deploy either a single Cloud Foundation instance, just like in previous releases or, in addition, deploy secondary instances that are attached to a primary instance. The multi-site configuration model uses a hub and spoke topology with a primary site and a maximum of 7 secondary sites.
+You can now deploy either a single Cloud Foundation instance, just like in previous releases or, in addition, deploy secondary instances that are attached to a primary instance. The multi-site configuration model uses a hub and spoke topology with a primary site and a maximum of seven secondary sites.
 
 For more information, see [Multi-site configuration for Cloud Foundation instances](../sddc/sd_multisite.html).
 
