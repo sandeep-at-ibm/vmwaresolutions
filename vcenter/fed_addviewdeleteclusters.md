@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -14,7 +14,7 @@ The ESXi servers that you configured when you ordered an instance are grouped as
 
 You can add clusters to your VMware Federal instances to expand the compute and storage capacity. Within a cluster, you can manage ESXi servers for better resource allocation and high availability. When no longer needed, you can delete the added clusters from your instances.
 
-**Availability**: The adding and deleting clusters feature is available only to instances that were deployed in (or upgraded to) V2.3 and later releases.
+**Availability:** The adding and deleting clusters feature is available only to instances that were deployed in (or upgraded to) V2.3 and later releases.
 
 ## Adding clusters to VMware Federal instances
 
@@ -59,7 +59,7 @@ A minimum of 2 {{site.data.keyword.baremetal_short}} is required for a cluster.
 
 For VMware Federal instances that are deployed in V2.3 or later, you can add up to 59 {{site.data.keyword.baremetal_short}} for a cluster, and you can add 1 - 59 ESXi servers at a time.
 
-After deployment, you can create up to four more clusters. For vSAN storage settings, 4 servers are required for both the initial cluster and post-deployment clusters.
+After deployment, you can create up to four more clusters. For vSAN storage settings, four servers are required for both the initial cluster and post-deployment clusters.
 
 ### Storage settings
 
@@ -67,13 +67,14 @@ Storage settings are based on your selection of Bare Metal Server configuration 
 
 #### vSAN storage
 
-For vSAN, specify the following storage options:
+Specify the following vSAN options:
+* **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
+* **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
+* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
+* Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
+* **vSAN License**: Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
 
-* **Disk Type and Size for vSAN Capacity Disks**: Select the capacity that meets your shared storage needs.
-* **Number of vSAN Capacity Disks**: Select the number of disks for the vSAN shared storage that you want to add. The disk quantities must be 2, 4, 6, or 8.
-* Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
-
-If your initial cluster was vSAN, any additional vSAN clusters uses the same vSAN license and have the same configuration as the initial vSAN cluster. This is also true if any cluster in the instance has vSAN chosen to be deployed on it (initial or additional). The first time you are prompted for the vSAN license and the edition. The next time you select vSAN for an additional cluster, whatever you chose initially is reused.
+If your initial cluster was added as a vSAN cluster, any additional vSAN clusters use the same vSAN license and the same configuration as the initial vSAN cluster. This is also true if any cluster in the instance has vSAN chosen to be deployed on it (initial or additional). The first time that you add a cluster, you are prompted for the vSAN license and the edition. The next time that you select vSAN for a new cluster, whatever you chose initially is reused.
 
 #### NFS storage
 
@@ -85,7 +86,7 @@ When you select **NFS Storage**, you can add file-level shared storage for your 
 * **Number of Shares**: When using the same configuration setting for each file share, specify the number of file shares for the NFS shared storage that you want to add.
 * **Size**: Select the capacity that meets your shared storage needs.
 * **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
-* **ADD NFS**: Select to add individual file shares that will use different configuration settings.
+* **ADD NFS**: Select to add individual file shares with different configuration settings.
 
 Table 2. NFS performance level options
 
@@ -97,11 +98,11 @@ Table 2. NFS performance level options
 
 ### Licensing settings
 
-	{{site.data.keyword.IBM}}-provided VMware licenses for the following:
-  * VMware vSphere Enterprise Plus 6.5u1
-  * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
-  * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
+{{site.data.keyword.IBM}}-provided licenses for the following VMware components:
+  * vSphere Enterprise Plus 6.5u1
+  * vCenter Server 6.5
+  * NSX Service Providers 6.4 (Base, Advanced, or Enterprise edition)
+  * (For vSAN clusters) vSAN 6.6 (Advanced or Enterprise edition)
 
 ### Order summary
 
@@ -109,18 +110,17 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 
 ## Procedure to add clusters to VMware Federal instances
 
-1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instance** table, click the instance that you want to add clusters to.
 
-   **Note**: Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
-
+   **Note:** Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
 3. Click **Infrastructure** on the left navigation pane and click **Add** at the upper-right corner of the **CLUSTERS** table.
 4. On the **Add Cluster** page, enter the cluster name.
 5. Select the **CPU Model**, the amount of **RAM**, and the **Number of Bare Metal Servers** for the Bare Metal configuration.
 6. Complete the storage configuration.
-  * When you select **vSAN Storage**, specify the **Disk Type and Size for vSAN Capacity Disks**, **Number of vSAN Capacity Disks**, and how the **vSAN License** is to be provided.
-  * When you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Size**, and **Performance**.
-  * When you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**, then click the **+** icon beside the **Add NFS** label and select the **Size** and **Performance** for each individual file share. You must select at least one file share.
+  * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
+  * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Size**, and **Performance**.
+  * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**, then click the **+** icon next to the **Add NFS** label and select the **Size** and **Performance** for each individual file share. You must select at least one file share.
 7. Select the license edition for VMware vSAN for the license configuration.
 8. On the **Order Summary** pane, verify the cluster configuration before you add the cluster.
    1. Review the settings for the cluster.
@@ -133,9 +133,9 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history from the instance summary page.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
 
-**Important**: You cannot change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
+**Important:** You cannot change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
 
-## Viewing clusters in VMware Federal instances
+## Procedure to view clusters in VMware Federal instances
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click an instance to view the clusters in it.
@@ -214,15 +214,15 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 
 You might want to delete a cluster from an instance when it is no longer needed.
 
-**Note**: Use this procedure to remove clusters from instances that are deployed in (or upgraded to) V2.3 and later releases.
+**Note:** Use this procedure to remove clusters from instances that are deployed in (or upgraded to) V2.3 and later releases.
 
 ### Before you delete
 
 * Use this procedure to delete clusters from instances that are deployed in V2.3 or later releases.
 * For clusters deployed in V2.2 or earlier instances, you must upgrade the instance to V2.3 to be able to delete the clusters that you added to the instance.
 * You can delete a single cluster at a time. To delete multiple clusters, you must do it in sequence; waiting for the previous cluster to be deleted before you attempt to delete the next cluster.
-* Ensure that all nodes in a cluster are powered on and operational before deleting the cluster.
-* When you delete a cluster, all VMs (virtual machines) from the cluster will also be deleted and they cannot be recovered. If you want to keep the VMs, migrate them to other clusters.
+* Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.
+* When you delete a cluster, all VMs (virtual machines) from the cluster are also deleted and they cannot be recovered. If you want to keep the VMs, migrate them to other clusters.
 * The default cluster cannot be deleted.
 
 ## Procedure to delete clusters from VMware Federal instances
@@ -230,7 +230,7 @@ You might want to delete a cluster from an instance when it is no longer needed.
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to delete clusters from.
 
-   **Note**: Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot delete clusters from the instance.
+   **Note:** Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot delete clusters from the instance.
 
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.
 

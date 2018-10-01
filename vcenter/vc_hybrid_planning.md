@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -62,7 +62,7 @@ Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when or
 | Status | Status Details |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | The {{site.data.keyword.CloudDataCent_notm}} is not available currently. |
-| Temporarily Out of Inventory  | The {{site.data.keyword.CloudDataCent_notm}} has no availability at this time. |
+| Temporarily Out of Inventory  | The {{site.data.keyword.CloudDataCent_notm}} has no availability currently. |
 | Limited Inventory             | The {{site.data.keyword.CloudDataCent_notm}} has limited availability and the order might not be completed. |
 
 ## Backup of management components
@@ -88,7 +88,7 @@ You can order other add-on services for your instance base on your needs, for ex
 
 ## Capacity considerations
 
-For capacity information and considerations, see [Scaling capacity](../archiref/solution/solution_scaling.html).
+For more information about capacity considerations, see [Scaling capacity](../archiref/solution/solution_scaling.html).
 
 ### Related links
 

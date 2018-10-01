@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -16,9 +16,9 @@ Review the following information for details about networking considerations and
 
 To review the networking components that are included in your VMware Federal instance, see [Technical specifications for VMware Federal on {{site.data.keyword.cloud}} instances](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
-## NSX Firewall considerations
+## Firewall considerations
 
-If you are using NSX Distributed Firewalls (DFW), you must configure rules for all communications from the IBM CloudDriver virtual server instance (VSI) to allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`.
+If you're using firewalls, you must configure rules for all communications from the IBM CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs). These rules must allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`. Examples of such firewalls are NSX Distributed Firewalls (DFW) or Vyatta firewalls.
 
 ## Using NSX with your virtual machines
 
@@ -26,7 +26,7 @@ During VMware Federal instance deployment, VMware NSX is ordered, installed, lic
 
 An NSX Edge Services Gateway is also deployed to be used by your workload virtual machines (VMs). For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-## Considerations when changing passwords for NSX components
+## Considerations when you change passwords for NSX components
 
 Review the following considerations before you change the passwords for the NSX Manager, NSX Controllers, and NSX Edges:
 * Do not change the NSX Manager's password that you can find on the **Summary** page of the instance in the {{site.data.keyword.vmwaresolutions_short}} console.

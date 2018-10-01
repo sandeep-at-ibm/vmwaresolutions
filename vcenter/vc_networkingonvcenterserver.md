@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -16,9 +16,9 @@ Review the following information for details about networking considerations and
 
 To review the networking components that are included in your vCenter Server instance, see [Technical specifications for vCenter Server instances](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
-## NSX Firewall considerations
+## Firewall considerations
 
-If you are using NSX Distributed Firewalls (DFW), you must configure rules for all communications from the IBM CloudDriver virtual server instance (VSI) to allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`.
+If you're using firewalls, you must configure rules for all communications from the {{site.data.keyword.IBM}} CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs). These rules must allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`. Examples of such firewalls are NSX Distributed Firewalls (DFW) or Vyatta firewalls.
 
 ## Using NSX with your virtual machines
 

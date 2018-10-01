@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,9 @@ The process of applying patches and updates to vCenter Server instances is autom
 
 ## Before you begin
 
-**Important:** When upgrading a vCenter Server instance to a vCenter Server with Hybridity Bundle instance, you must first apply, at the minimum, the base vCenter Server V2.3 software update before you can perform the license upgrade to the Hybridity Bundle.
+**Important:** When you upgrade a vCenter Server instance to a vCenter Server with Hybridity Bundle instance, you must first apply at least the base vCenter Server V2.3 software update. You must do so before you can perform the license upgrade to the Hybridity Bundle.
+
+Business Partner users do not have the option to upgrade an existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance.
 
 Before you attempt to apply an update, expand the update entry by clicking the down arrow and verify the following information:
 * The version of the update. You must apply the updates in chronological sequence that is from the earliest one to the most recent one. Ensure that you applied all the previous updates before you apply the most recent one. For example, you must apply the V2.3 update before attempting to apply the V2.4 update.
@@ -46,7 +48,7 @@ Table 1. Update levels and impact
   </tr>
 </table>
 
-## Applying updates and patches to vCenter Server instances
+## Procedure to apply updates and patches to vCenter Server instances
 
 This procedure applies to instances that are deployed in V2.1 or later. For instances that are deployed in V2.0 and earlier, you must apply the VMware updates manually.
 
@@ -56,7 +58,7 @@ This procedure applies to instances that are deployed in V2.1 or later. For inst
    If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver Virtual Server Instance (VSI), as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
 4. Click **Update and Patch** on the left navigation pane.
 
-   **Note**: The **Update and Patch** page for an instance contains only the packages for updating the IBM management components, and not the VMware updates. VMware updates must be applied manually.
+   **Note:** The **Update and Patch** page for an instance contains only the packages for updating the IBM management components, and not the VMware updates. VMware updates must be applied manually.
 
    {{site.data.keyword.vmwaresolutions_short}} applies VMware updates for the following operations:
    * When a new vCenter Server instance is deployed.
@@ -72,7 +74,7 @@ This procedure applies to instances that are deployed in V2.1 or later. For inst
    *  To schedule a future update, click the overflow menu icon in the **Actions** column of the update entry, and then click **Schedule update**. Select the date, time, and time zone when you want the update to be started. Click **OK**.
 7. If you are applying updates to vCenter servers instances in multi-site deployment configuration, a section titled **Steps Required to Update** is displayed. This section lists the update operations required for all instances in the multi-site deployment. You must complete the steps in sequence by clicking **Apply Update** for each step. You must wait for the previous step to complete before you start the next step.   
 
-## Upgrading to the vCenter Server with Hybridity Bundle instance
+## Procedure to upgrade to the vCenter Server with Hybridity Bundle instance
 
 During the license upgrade to the Hybridity Bundle, you are automatically upgraded to the VMware NSX Advanced edition if your vCenter Server instance is currently using the VMware NSX Base edition.
 

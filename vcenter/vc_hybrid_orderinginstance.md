@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instance. Your vCenter Server with Hybridity Bundle instance order includes the VMware Hybrid Cloud Extension (HCX) licensing and entitles you to the VMware HCX on {{site.data.keyword.cloud_notm}} service. You can also add services, such as [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) for disaster recovery.
 
-## Requirements
+## Requirements for ordering vCenter Server with Hybridity Bundle instances
 
 Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
@@ -30,11 +30,11 @@ Table 1. Value format for instance and domain names
   | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
 
-**Important**: Do not modify any values that are set during ordering and instance deployment. Doing so can result in your instance becoming unusable. For example, public networking may shut down, servers and Virtual Server Instances (VSIs) may move behind a Vyatta mid-provision, or the IBM CloudBuilder VSI may stop or be deleted.
+**Important:** Don't modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
 
 ## System settings
 
-You must specify the following system settings when ordering a vCenter Server with Hybridity Bundle instance.
+You must specify the following system settings when you order a vCenter Server with Hybridity Bundle instance.
 
 ### Instance name
 
@@ -50,12 +50,12 @@ Select whether to order a new primary instance or a secondary instance for an ex
 
 ## Licensing settings
 
-The following licenses are included with your vCenter Server with Hybridity Bundle instance order. You must specify either **Advanced** or **Enterprise** for the NSX license editions.
+The following VMware licenses are included with your vCenter Server with Hybridity Bundle instance order. You must specify the edition for the NSX and vSAN licenses.
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
-* VMware vSAN 6.6 license edition (Advanced or Enterprise).
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4 (Advanced or Enterprise edition)
+* vSAN 6.6 (Advanced or Enterprise edition)
 
 **Attention:**
 * vCenter Server with Hybridity Bundle instances do not support Bring Your Own License.
@@ -85,16 +85,18 @@ Table 2. Options for customized {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+
 ### Number of Bare Metal Servers
 
 Four ESXi servers are selected by default and cannot be changed.
 
 ## Storage settings
 
-VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle instance order. You must specify the following storage settings when ordering the instance:
-
-* **Disk Type and Size for vSAN Capacity Disks**: Select the capacity that meets your shared storage needs.
-* **Number of vSAN Capacity Disks**: Select the number of disks for the vSAN shared storage that you want to add. The disk quantities must be 2, 4, 6, or 8.
+VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
+* **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
+* **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
+* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
+* Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
 
 ## Network interface settings
 
@@ -126,6 +128,15 @@ The root domain name must meet the following requirements:
 
 **Note:** The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (virtual machines) is 50 characters. Domain names must accommodate for this maximum length.
 
+### Public or private network
+
+Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and are not available if you select the private option:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
+
 ### Order New VLANs
 
 Select **Order New VLANs** to order one new public VLAN and two new private VLANs.
@@ -142,7 +153,7 @@ Select **Select Existing VLANs** to reuse existing public and private VLANs and 
 
 **Important:**
 * Ensure that the firewall configuration on the selected VLANs does not block the management data traffic.
-* Ensure that all of the VLANs you select are in the same pod, because ESXi servers cannot be provisioned on mixed-pod VLANs.
+* Ensure that all of the VLANs you select are in the same pod because ESXi servers cannot be provisioned on mixed-pod VLANs.
 
 ### DNS configuration
 
@@ -167,9 +178,9 @@ When you order a vCenter Server with Hybridity Bundle instance, you can also ord
 
 Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the **Order Summary** section on the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
 
-## Procedure
+## Procedure to order vCenter Server with Hybridity Bundle instances
 
-1. From the {{site.data.keyword.cloud_notm}} Catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
+1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
 2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server with Hybridity Bundle** card and click **Create**.
 3. On the **vCenter Server** page, enter the instance name.
 4. Select the instance type:
@@ -183,18 +194,17 @@ Based on your selected configuration for the instance and add-on services, the e
   2. Select the **Customized** CPU model and the amount of **RAM**.
 
   **Note:** The **Number of Bare Metal Servers** is set to four by default and cannot be changed.
-
-7. Complete the storage configuration.
-  1. Select the **Disk Type and Size for vSAN Capacity Disks**.
-  2. Select the **Number of vSAN Capacity Disks**.
+7. Complete the storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
 8. Complete the network interface configuration.
   1. Enter the host name prefix, subdomain label, and root domain name.
-  2. Select the VLAN configuration.
+  2. Select the network setting of either **Public and Private Network** or **Private Network Only**.
+  3. Select the VLAN configuration.
      *  If you want to order new public and private VLANs, click **Order New VLANs**.
      *  If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs**, and then select the public VLAN, the primary subnet, the private VLAN, the private primary subnet, and the secondary private VLAN.
-  3. Select the DNS configuration.
-9. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.  
-For information about how to provide settings for a service, see the corresponding service ordering topic.
+  4. Select the DNS configuration.
+9. Complete the configuration for the included HCX on {{site.data.keyword.cloud_notm}} service. For more information about how to provide settings for the service, see the _VMware HCX on IBM Cloud configuration_ section in [Ordering VMware HCX on IBM Cloud](../services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration).
+10. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.  
+For more information about how to provide settings for a service, see the corresponding service ordering topic.
 
 8. On the **Order Summary** pane, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
@@ -206,7 +216,7 @@ For information about how to provide settings for a service, see the correspondi
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server with Hybridity Bundle instances](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered additional services, the deployment of the services starts after your order is completed.
+When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server with Hybridity Bundle instances](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
@@ -216,10 +226,10 @@ When you order a secondary instance, the VMware vSphere Web Client for the prima
 
 View and manage the vCenter Server with Hybridity Bundle instance that you ordered.
 
-**Important**: You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account	 only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}} or any other means outside of the console.
+**Important:** You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account	 only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}}, or any other means outside of the console.
 If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 
-**CAUTION**: Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account	 when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
+**CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account	 when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components
 *  Expanding or contracting instance capacity through adding or removing ESXi servers
 *  Powering off components

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-19"
 
 {{site.data.keyword.vmwaresolutions_full}} allows instances to be deployed across different locations and have them up and running in a short time.
 
-**Notes**:
+**Notes:**
 * Multi-site configuration for vCenter Server instances is supported only to V2.0 and later instances.
 * You cannot link between VMware Cloud Foundation and VMware vCenter Server instances in a multi-site configuration.
 
@@ -30,13 +30,13 @@ A multi-site deployment consists of the following components.
    *  DNS subdomain that is linked to the root domain on the primary instance
    *  DNS and AD replication set-up between the AD virtual machines on the primary and secondary instances.
    *  PSC (Platform Services Controller) deployed and configured to replicate with the PSC on the primary instance.
-   *  VMware vCenter on the secondary instances are set up with Enhanced Linked Mode to the vCenter on the primary instance.
+   *  VMware vCenter on the secondary instances is set up with Enhanced Linked Mode to the vCenter on the primary instance.
 
 ## vCenter Server multi-site deployment
 
 The multi-site configuration feature uses a hub and spoke topology with a primary site and a maximum of seven secondary sites. A single layer of sites is supported, that is, you cannot configure subsequent sites that are linked to other secondary sites. You can have a total of 128 ESXi servers in a multi-site configuration across all instances.
 
-**Note**: If your configuration requires a multi-site deployment with more than 128 ESXi servers, contact IBM Support for assistance. For more information, see [Contacting IBM Support](../vmonic/trbl_support.html).
+**Note:** If your configuration requires a multi-site deployment with more than 128 ESXi servers, contact IBM Support for assistance. For more information, see [Contacting IBM Support](../vmonic/trbl_support.html).
 
 The following graphic depicts the overall view of the vCenter Server multi-site deployment.
 
@@ -53,7 +53,7 @@ You can assign only one secondary instance to a primary instance at a time. You 
 
 You can have a maximum of 8 (1 primary and 7 secondary) instances that are deployed in a multi-site configuration.
 
-**Note**: Deleting vCenter Server instances that are part of a multi-site configuration requires special planning. For more information, see [Deleting vCenter Server instances in a multi-site configuration](vc_deletinginstance_multi.html).
+**Note:** Deleting vCenter Server instances that are part of a multi-site configuration requires special planning. For more information, see [Deleting vCenter Server instances in a multi-site configuration](vc_deletinginstance_multi.html).
 
 ### Related links
 

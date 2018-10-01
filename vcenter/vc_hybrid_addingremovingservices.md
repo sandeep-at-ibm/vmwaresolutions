@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,28 +18,29 @@ The following services are available to vCenter Server with Hybridity Bundle ins
 
 Table 1. Available services for vCenter Server with Hybridity Bundle instances
 
-| Service name | Availability | Instance support |
+| Service name | Service version | Instance version |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)                                 | Yes | V1.9 and later |
-| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | Yes | V1.8 and later |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | Yes | V2.0 and later |
-| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | Yes | V2.3 and later |
-| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | Yes | V2.3 and later |
-| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | Yes | V2.2 and later |
-| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  | Yes | V2.2 and later |
-| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | Yes | V1.8 and later |
-| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | Yes | V2.3 and later |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | Yes | V1.2 and later |
+| [F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1 | V1.9 and later |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | 300 series | V1.8 and later |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 5.6 | V2.0 and later |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 and later |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | V2.3 and later |
+| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 and later |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.1 Patch 1 | V2.2 and later |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 and later |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | 9.5u3 | V1.8 and later |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 Build 8774389 | V2.3 and later |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | 5.5 u4 Patch 2 | V1.2 and later |
 
-## Adding services to vCenter Server with Hybridity Bundle instances
+## Procedure to add services to vCenter Server with Hybridity Bundle instances
 
-To apply a service to your vCenter Server with Hybridity Bundle instance, click the links in the table to review the considerations for the service, check the components that are deployed, and follow the instructions in the ordering topics to place your order.
+To apply a service to your vCenter Server with Hybridity Bundle instance, click the links in the table to review the considerations for the service. Then, check the components that are deployed and follow the instructions in the ordering topics to place your order.
 
 ### Service installation results
 
 When the installation of the service is completed successfully, you are notified by email, and the service is displayed on the **Services** tab of the instance details with the **Installed** status.
 
-## Viewing services for vCenter Server with Hybridity Bundle instances
+## Procedure to view services for vCenter Server with Hybridity Bundle instances
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance for which you want to view services.
@@ -47,7 +48,7 @@ When the installation of the service is completed successfully, you are notified
 4. On the **Services** page, click a service to review information about it, such as the service status and other details.
 5. Depending on the viewed service, you can access the service consoles using the credentials provided on the service details and you can manage the service from here.
 
-## Removing services for vCenter Server with Hybridity Bundle instances
+## Procedure to remove services for vCenter Server with Hybridity Bundle instances
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance for which you want to remove services.
@@ -61,7 +62,7 @@ After your request for service removal is accepted, the service status is change
 
 When the removal of the service is completed successfully, you are notified by email, and the service is removed from the **Services** page of the instance.
 
-**Attention**: You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the removed services.
+**Attention:** You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the removed services.
 
 ### Related links
 

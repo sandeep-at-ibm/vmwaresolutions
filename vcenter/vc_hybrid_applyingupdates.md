@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -33,22 +33,22 @@ Table 1. Update levels and impact
 | Medium | This update might affect some systems. It is recommended that you apply it during scheduled downtime. |  
 | Major  | This update affects some or all systems. You must apply it during scheduled downtime. |  
 
-## Procedure
+## Procedure to apply updates to vCenter Server with Hybridity Bundle instances
 
 1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to update.
-3. On the **Summary** page, verify that all instance details are displayed correctly. Then click **Infrastructure** on the left navigation pane to verify the details on the **Infrastructure** page.
+3. On the **Summary** page, verify that all instance details are displayed correctly. Then, click **Infrastructure** on the left navigation pane to verify the details on the **Infrastructure** page.
    If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver Virtual Server Instance (VSI), as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
 4. Click **Update and Patch** on the left navigation pane.
 
-   **Note**: The **Update and Patch** page contains only the packages for updating the IBM management components, not the VMware updates. {{site.data.keyword.vmwaresolutions_short}} applies VMware updates for the following operations:
+   **Note:** The **Update and Patch** page contains only the packages for updating the IBM management components, not the VMware updates. {{site.data.keyword.vmwaresolutions_short}} applies VMware updates for the following operations:
    * When a new vCenter Server instance is deployed.
    * When new ESXi servers are added.
    * When new clusters are added.
 
 5. For license upgrades, click **Upgrade**. Select the edition you want to upgrade to from the list and click **Upgrade**. License edition downgrades are not available.
 
-   **Note:** The license upgrade replaces all existing NSX licenses on the instance. Additional charges may be incurred from an overlap of old and new licenses if you upgrade in the middle of a billing cycle. To avoid additional charges, it is recommended to upgrade the license at the end of the billing cycle.
+   **Note:** The license upgrade replaces all existing NSX licenses on the instance. Additional charges might be incurred from an overlap of old and new licenses if you upgrade in the middle of a billing cycle. To avoid additional charges, it is recommended to upgrade the license at the end of the billing cycle.
 
 6. For software updates, click the down arrow to expand the update that you want to apply and then complete one of the following steps:
    *  To start the update immediately, click the overflow menu icon in the **Actions** column of the update entry, and then click **Update Now**.
