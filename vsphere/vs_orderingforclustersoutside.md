@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,17 +18,17 @@ Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
 *  You reviewed the requirements and considerations in [Requirements and planning for VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_planning.html).
 
-## Procedure
+## Procedure to scale clusters created outside of the console
 
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** on the left navigation pane, and then click **VMware vSphere** in the **Virtual Data Centers** section.
 2. On the **VMware vSphere on IBM Cloud** page, click **Create**.  
    Ensure that you are on the **Create New** tab and that **New cluster** is displayed in the **Cluster Configurations** list.
 3. Create a cluster with the same settings as the existing cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Ordering new vSphere clusters](vs_orderinginstances.html).  
-   **Note**: For network interface, to scale a cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console, you must select the existing VLANs for the cluster.  
+   **Note:** For network interface, to scale a cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console, you must select the existing VLANs for the cluster.  
 4. In the **Order Summary** pane, verify the cluster configuration, and then click **Save Configuration**.   
 5. On the **Getting Started** page, click the **VMware vSphere on IBM Cloud** card.
 6. On the **VMware vSphere on IBM Cloud** page, click **Create**.
-7. Click the **Scale Existing** tab. From the **Cluster Configurations** list, select the cluster that you recently created. 
+7. Click the **Scale Existing** tab. From the **Cluster Configurations** list, select the cluster that you recently created.
 8. In the **{{site.data.keyword.baremetal_short}}** section, specify the number of {{site.data.keyword.baremetal_short}} that you want to add to the cluster.
 9. If the cluster does not include the FortiGate 300 Series Security Appliance HA Pair on its public VLAN, you can order one by selecting **Include with purchase** under **FortiGate Physical Appliance 300 Series HA Pair**.
 10. In the **Order Summary** pane, verify the instance configuration and the estimated cost, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-10"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -19,7 +19,7 @@ Ensure that you completed the following tasks:
 *  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](vs_planning.html).
 *  You created a configuration template to be reused.
 
-## Procedure
+## Procedure to order vSphere clusters based on existing configurations
 
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** on the left navigation pane, and then click **VMware vSphere** in the **Virtual Data Centers** section.
 2. On the **VMware vSphere on IBM Cloud** page, click **Create**.  
@@ -30,7 +30,7 @@ Ensure that you completed the following tasks:
    * To save the configuration as a template without placing an order, click **Save Configuration**.
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.
 
-   **Note**: Only the {{site.data.keyword.baremetal_short}} are installed. You're responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.
+   **Note:** Only the {{site.data.keyword.baremetal_short}} are installed. You're responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.
 
 ## Results
 
