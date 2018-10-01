@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -35,7 +35,7 @@ Table 1. vSphere ESXi configuration
 | Time synchronization   | Uses {{site.data.keyword.cloud}} NTP server |
 | Host access            | Supports DCUI, ESXi Shell, or SSH |
 | User access            | Local authentication and MSAD |
-| Domain name resolution | Uses DNS as described in [Common services design](design_commonservice.html) |
+| Domain name resolution | Uses DNS as described in [Common services design](design_commonservice.html). |
 
 The vSphere cluster houses the virtual machines (VMs) that manage the central cloud and compute resources for user workloads.
 
@@ -75,7 +75,7 @@ The available vSAN features depend on the license edition that you select when y
 
 ### Virtual network setup for vSAN
 
-For this design, the vSAN traffic traverses between ESXi hosts on a dedicated private VLAN. The two network adapters attached to the private network switch are configured within vSphere as a vSphere distributed switch (VDS) with both network adapters as uplinks. A dedicated vSAN kernel port group configured for the vSAN VLAN resides within the VDS. Jumbo frames (MTU 9000) are enabled for the private VDS.
+For this design, the vSAN traffic traverses between ESXi hosts on a dedicated private VLAN. The two network adapters attached to the private network switch are configured within vSphere as a vSphere Distributed Switch (vDS) with both network adapters as uplinks. A dedicated vSAN kernel port group configured for the vSAN VLAN resides within the vDS. Jumbo frames (MTU 9000) are enabled for the private vDS.
 
 vSAN does not load balance traffic across uplinks. As a result, one adapter is active while the other is in standby to support high availability (HA). The network failover policy for vSAN is configured as **Explicit Failover** between physical network ports.
 
@@ -108,7 +108,7 @@ vSAN settings are set based on best practices for deploying VMware solutions wit
 
 ## VMware NSX design
 
-Network virtualization provides a network overlay that exists within the virtual layer. Network virtualization provides the architecture with features such as rapid provisioning, deployment, reconfiguration and destruction of on-demand virtual networks. This design uses the vSphere Distributed Switch (VDS) and VMware NSX for vSphere to implement virtual networking.
+Network virtualization provides a network overlay that exists within the virtual layer. Network virtualization provides the architecture with features such as rapid provisioning, deployment, reconfiguration and destruction of on-demand virtual networks. This design uses the vDS and VMware NSX for vSphere to implement virtual networking.
 
 In this design, the NSX Manager is deployed in the initial cluster. The NSX Manager is assigned a VLAN-backed IP address from the private portable address block, which is designated for management components and configured with the DNS and NTP servers discussed in [Common services design](design_commonservice.html). The NSX Manager is installed with the specifications listed in Table 2.
 
@@ -131,7 +131,7 @@ Figure 2. NSX Manager network overview
 
 After initial deployment, the {{site.data.keyword.cloud_notm}} automation deploys three NSX controllers within the initial cluster. Each of the controllers is assigned a VLAN-backed IP address from the Private a portable subnet that is designated for management components. Additionally, the design creates VM-VM anti-affinity rules to separate the controllers amongst the hosts in the cluster. The initial cluster must contain a minimum of three nodes to ensure high availability for the controllers.
 
-In addition to the controllers, the {{site.data.keyword.cloud_notm}} automation prepares the deployed vSphere hosts with NSX VIBS to enable the use of a virtualized network through VXLAN Tunnel Endpoints (VTEPs). The VTEPs are assigned a VLAN-backed IP address from the Private a portable IP address range that is specified for VTEPs as listed in *Table 1. VLAN and subnet summary* of [Physical infrastructure design](design_physicalinfrastructure.html). The VXLAN traffic resides on the untagged VLAN and is assigned to the private vSphere Distributed Switch (VDS).
+In addition to the controllers, the {{site.data.keyword.cloud_notm}} automation prepares the deployed vSphere hosts with NSX VIBS to enable the use of a virtualized network through VXLAN Tunnel Endpoints (VTEPs). The VTEPs are assigned a VLAN-backed IP address from the Private a portable IP address range that is specified for VTEPs as listed in *Table 1. VLAN and subnet summary* of [Physical infrastructure design](design_physicalinfrastructure.html). The VXLAN traffic resides on the untagged VLAN and is assigned to the private vDS.
 
 Subsequently, a segment ID pool is assigned and the hosts in the cluster are added to the transport zone. Only unicast is used in the transport zone because Internet Group Management Protocol (IGMP) snooping is not configured within the {{site.data.keyword.cloud_notm}}.
 
@@ -141,13 +141,13 @@ Cloud administrators can configure any required NSX components, such as Distribu
 
 ### Distributed switch design
 
-The design uses a minimum number of vSphere Distributed Switches (VDS). The hosts in the cluster are connected to the public and private networks. The hosts are configured with two distributed virtual switches. The use of two switches follows the practice of {{site.data.keyword.cloud_notm}} network that separates the public and private networks. The following diagram shows the VDS design.
+The design uses a minimum number of vDS Switches. The hosts in the cluster are connected to the public and private networks. The hosts are configured with two distributed virtual switches. The use of two switches follows the practice of {{site.data.keyword.cloud_notm}} network that separates the public and private networks. The following diagram shows the vDS design.
 
 Figure 3. Distributed switch design
 
-![Distributed switch design](virtual_network_distributedswitch.svg "VDS design")
+![Distributed switch design](virtual_network_distributedswitch.svg "vDS design")
 
-As shown in the figure, one VDS is configured for public network connectivity (SDDC-Dswitch-Public) and the other VDS is configured for private network connectivity (SDDC-Dswitch-Private).
+As shown in the figure, one vDS is configured for public network connectivity (SDDC-Dswitch-Public) and the other vDS is configured for private network connectivity (SDDC-Dswitch-Private).
 
 Separating different types of traffic is required to reduce contention and latency and increase security. VLANs are used to segment physical network functions.
 

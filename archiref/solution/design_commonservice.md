@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -59,10 +59,10 @@ This design integrates DNS services on the Active Directory servers with the SDD
 * The DNS domain name you specify will be used as the Active Directory root forest domain name. For example, if the DNS domain name is `cloud.ibm.com`, then the Active Directory domain forest root is `cloud.ibm.com`. This DNS domain and Active Directory domain is the same across all linked Cloud Foundation instances.
 * You can additionally specify a subdomain name for the instance. The subdomain name must be unique across all linked Cloud Foundation instances.  
 * The SDDC Manager DNS configuration is altered to point to the Active Directory servers for all zones except for the zone that it is responsible for.
-* The Active Directory DNS servers are configured to be authoritative for the DNS domain space above the SDDC Manager and Cloud Foundation instance subdomain.
+* The Active Directory DNS servers are configured to be authoritative for the DNS domain space over the SDDC Manager and Cloud Foundation instance subdomain.
 * The Active Directory DNS servers are configured to point to the SDDC Manager IP address for the subdomain delegation of the zone the SDDC Manager is authoritative for.
 * The Active Directory DNS servers are configured to point to the 	{{site.data.keyword.cloud_notm}} DNS servers for all other zones.
-* Any secondary instance that is to be integrated to the first or target instance must utilize the same DNS name structure above the SDDC Manager subdomain.
+* Any secondary instance that is to be integrated to the first or target instance must utilize the same DNS name structure over the SDDC Manager subdomain.
 
 ## NTP services
 
