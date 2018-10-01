@@ -4,21 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-24"
 
 ---
 
 # Attached storage infrastructure design
 
-{{site.data.keyword.vmwaresolutions_full}} provides VMware technology that is deployed in an automated way within {{site.data.keyword.CloudDataCents_notm}} across the globe. Within the {{site.data.keyword.cloud_notm}} solutions portfolio, the base VMware vCenter Server on {{site.data.keyword.cloud_notm}} offering consists of up to 20 vSphere hosts, a single Platform Services Controller (PSC), and a vCenter Server Appliance capable of managing up to 100 hosts and 1,000 virtual machines.
+{{site.data.keyword.vmwaresolutions_full}} provides VMware technology that is deployed in an automated way within {{site.data.keyword.CloudDataCents_notm}} across the globe. Within the {{site.data.keyword.cloud_notm}} solutions portfolio, the base VMware vCenter Server on {{site.data.keyword.cloud_notm}} offering consists of up to 10 clusters each containing up to 59 vSphere hosts, a single Platform Services Controller (PSC), and a vCenter Server Appliance capable of managing up to 400 hosts and 4,000 virtual machines.
 
 The architecture that is presented here complements the vCenter Server solution by adding attached storage as a shared storage device for the environment. The attached storage device is located within the same {{site.data.keyword.CloudDataCent_notm}} as the vCenter Server deployment and it consists of a single Network File System (NFS) share or multiple NFS exports from the {{site.data.keyword.cloud_notm}}.
 
-The following graphic depicts the overall architecture of the NetApp ONTAP Select on vCenter Server deployment.
+The following graphic depicts the overall architecture of the attached storage on vCenter Server deployment.
 
-Figure 1. High-level architecture of NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}
+Figure 1. High-level architecture of attached storage on {{site.data.keyword.cloud_notm}}
 
-![NetApp ONTAP Select architecture](../../netapp/np_architecture.svg "High-level architecture of NetApp ONTAP Select on IBM Cloud")
+![Attached storage architecture](../solution/physical_nfs.svg "High-level architecture of attached storage on IBM Cloud")
 
 ## Physical infrastructure design
 
@@ -52,11 +52,11 @@ This section presents the configuration of the attached storage device that is p
 
 Performance and Endurance storage are {{site.data.keyword.cloud_notm}} storage solutions that are designed to support high I/O applications requiring predictable levels of performance. This predictable performance is achieved through the allocation of protocol-level input/output operations per second (IOPS) to individual volumes.
 
-IOPS ranging from 100 through 48,000 can be provisioned with storage sizes that range from 20 GB to 12 TB. Performance and Endurance storage volumes are available for both block storage and file storage.
+IOPS ranging from 100 through 48,000 can be provisioned with storage sizes of 20 GB - 12 TB. Performance and Endurance storage volumes are available for both block storage and file storage.
 
 In this design, the vCenter Server solution offers Endurance storage for attached storage. As a result, you can select and attach (via automation) Endurance NFS exports ranging in size from 20 GB to a maximum of 12 TB. The {{site.data.keyword.cloud_notm}} allows up to 64 vSphere ESXi hosts to connect to a single Endurance NFS export.
 
-Endurance is available in three IOPS performance tiers to support varying application needs. Note that after an NFS share is provisioned, it cannot be resized or reconfigured to allow for more or less IOPS.
+Endurance is available in three IOPS performance tiers to support varying application needs. Note that after an NFS share is provisioned, it can be resized or reconfigured to allow for more or less IOPS.
 
 For detailed IOPS options, see the _Storage settings_ section in [Ordering vCenter Server instances](../../vcenter/vc_orderinginstance.html).
 

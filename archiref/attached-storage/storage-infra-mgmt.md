@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -20,7 +20,7 @@ The network virtualization that is used in this design uses the existing vSphere
 
 ## vSphere Distributed Switch
 
-As stated previously, another VLAN is created within the vCenter Server solution and used to attach the NFS mount point to the ESXi hosts in the existing cluster. Since the vCenter Server solution already has a vSphere Distributed Switch (vDS) associated with the private network, another port group is created and tagged with the additional VLAN number since this additional VLAN is not native.
+As stated previously, another VLAN is created within the vCenter Server solution and used to attach the NFS mount point to the ESXi hosts in the existing cluster. Since the vCenter Server solution already has a vDS associated with the private network, another port group is created and tagged with the additional VLAN number since this additional VLAN is not native.
 
 The following table describes the default settings of the new port group.
 
