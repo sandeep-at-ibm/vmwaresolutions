@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -16,21 +16,21 @@ Review the following information for details about networking considerations and
 
 To review the networking components that are included in your Cloud Foundation instance, see [Technical specifications for Cloud Foundation instances](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
-## NSX firewall considerations
+## Firewall considerations
 
-If you are using NSX Distributed Firewalls (DFW), you must configure rules for all communications from the {{site.data.keyword.IBM}} CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs) to allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`.
+If you're using firewalls, you must configure rules for all communications from the {{site.data.keyword.IBM}} CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs). These rules must allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`. Examples of such firewalls are NSX Distributed Firewalls (DFW) or Vyatta firewalls.
 
 ## Using VMware NSX with your VMs
 
 During Cloud Foundation instance deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
 
-However, if your workload VMs need to communicate with each other and to access the Internet, it is your responsibility to configure NSX for use by your VMs.
+However, if your workload VMs need to communicate with each other and to access the internet, it is your responsibility to configure NSX for use by your VMs.
 
-For information about how to set up NSX:
+For more information about how to set up NSX, see the following topics:
 * For a primary (single) Cloud Foundation instance, see [Setting up NSX for workload VMs on VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/).
-* For a multi-site Cloud Foundation instance, see [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html).
+* For a multi-site Cloud Foundation instance, see. Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html).
 
-## Considerations when changing passwords for NSX components
+## Considerations when you change passwords for NSX components
 
 Review the following considerations before you change the passwords for the NSX Manager, NSX Controllers, and NSX Edge:
 * Do not change the NSX Manager password. You can find this password on the **Summary** page of the instance in the {{site.data.keyword.vmwaresolutions_short}} console.

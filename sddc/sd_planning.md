@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
 # Requirements and planning for Cloud Foundation instances
 
-Review the following requirements before you order your VMware Cloud Foundation instances. Plan your instance based on the {{site.data.keyword.CloudDataCent}} location, your workload capacity requirements, and additional service requirements.
+Review the following requirements before you order your VMware Cloud Foundation instances. Plan your instance based on the {{site.data.keyword.CloudDataCent}} location, your workload capacity requirements, and service requirements.
 
 ## IBM Cloud account requirements
 
@@ -57,17 +57,17 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} and {{site.data.key
 
 Depending on availability and inventory supply, {{site.data.keyword.CloudDataCents_notm}} might display a status indicator in the {{site.data.keyword.vmwaresolutions_short}} console to help you plan your deployments.
 
-Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when ordering Cloud Foundation instances
+Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when you order Cloud Foundation instances
 
 | Status | Status Details |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | The {{site.data.keyword.CloudDataCent_notm}} is not available currently. |
-| Temporarily Out of Inventory  | The {{site.data.keyword.CloudDataCent_notm}} has no availability at this time. |
+| Temporarily Out of Inventory  | The {{site.data.keyword.CloudDataCent_notm}} has no availability currently. |
 | Limited Inventory             | The {{site.data.keyword.CloudDataCent_notm}} has limited availability and the order might not be completed. |
 
 ## Backup of management components
 
-You are responsible for maintaining and ensuring the availability of all instance components. It is strongly recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](../archiref/solution/solution_backingup.html).
+You are responsible for maintaining and ensuring the availability of all instance components. It is recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](../archiref/solution/solution_backingup.html).
 
 ## Services for Cloud Foundation instances
 
@@ -75,7 +75,7 @@ You can order add-on services for your instance base on your needs, for example,
 
 ## Capacity considerations
 
-For capacity information and considerations, see [Scaling capacity](../archiref/solution/solution_scaling.html).
+For more information about capacity, see [Scaling capacity](../archiref/solution/solution_scaling.html).
 
 ### Related links
 

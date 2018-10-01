@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,17 +12,17 @@ lastupdated: "2018-08-08"
 
 Changing users, resources, or subnets that are reserved for {{site.data.keyword.vmwaresolutions_full}} can impact management operations for VMware Cloud Foundation instances.
 
-**Important:** Do not edit the global permissions of the **ic4v-vCenter** group in the **Users and Groups** page on the VMware vSphere Web Client. Such changes include: changing the user name, deleting the user, or changing its password.
+**Important:** Do not change the global permissions of the **ic4v-vCenter** group in the **Users and Groups** page on the VMware vSphere Web Client. The following examples are global permission changes: changing the user name, deleting the user, or changing its password.
 
 ## Service-specific user accounts
 
 Each service creates an internal user account in vCenter Server. This account is necessary so that management operations that are associated to a service can connect to vCenter Server to perform the operations on the service.
 
-**Important**: To prevent outages and connection problems, if you change the user ID, password, or password expiration settings for this user account, ensure that you also update the information in the associated service.
+**Important:** To prevent outages and connection problems, if you change the user ID, password, or password expiration settings for this user account, ensure that you also update the information in the associated service.
 
 The user ID for this account is in the format `<service_name>-<truncated service_uuid>@test.local` or `<service_name>-<truncated service_uuid>@example-domain.local`. For example, the user ID that the Veeam on {{site.data.keyword.cloud_notm}} service uses to connect to vCenter Server to perform scheduled backups is `Veeam-<Veeam_uuid>@test.local`.
 
-**Note**: The `<service_name>` together with the `<service_uuid>` truncates to 20 characters.
+**Note:** The `<service_name>` together with the `<service_uuid>` truncates to 20 characters.
 
 ## VMware resources for Cloud Foundation instances
 
@@ -43,7 +43,7 @@ Table 1. Operations that are impacted for the SSO admin (customer)
 
 The following information discusses the subnets that are ordered by {{site.data.keyword.vmwaresolutions_short}} and it provides options for you to order extra subnets for your own use.
 
-**CAUTION**: Do not use these components for other purposes, or the stability of your environment is severely compromised.
+**CAUTION:** Do not use these components for other purposes, or the stability of your environment is severely compromised.
 
 With each {{site.data.keyword.cloud_notm}} Bare Metal Server order, the following ranges of IP addresses are ordered by default:
 
@@ -58,5 +58,5 @@ In addition, the following management subnets are also reserved for {{site.data.
 
 If you need more subnets to use, you can obtain IP addresses to use in one of the following ways:
 
-* **Option 1 (recommended)**: Use VMware NSX virtual network overlays. A sample VXLAN template is provided when ordering. This VXLAN template can be used as a starting point for building SDN.
-* **Option 2**: Order your own portable public or private subnets to obtain IP addresses. To distinguish the subnets that you order from the management subnets, you can add notes to all the subnets that you are ordering.
+* **Option 1 (recommended):** Use VMware NSX virtual network overlays. A sample VXLAN template is provided when ordering. This VXLAN template can be used as a starting point for building SDN.
+* **Option 2:** Order your own portable public or private subnets to obtain IP addresses. To distinguish the subnets that you order from the management subnets, you can add notes to all the subnets that you are ordering.
