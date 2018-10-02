@@ -10,15 +10,15 @@ lastupdated: "2018-08-16"
 
 # Demande de services gérés pour Zerto on IBM Cloud
 
-Le service Zerto sur {{site.data.keyword.cloud}} fournit des fonctions de réplication et de reprise après incident. Ces fonctions peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.
+Le service Zerto on {{site.data.keyword.cloud}} fournit des fonctions de réplication et de reprise après incident. Ces fonctions peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.
 
-Lorsque vous demandez des services gérés pour Zerto on  {{site.data.keyword.cloud_notm}}, un environnement de reprise après incident totalement géré peut être déployé à l'aide du logiciel de reprise après incident (DR, Disaster Recovery) Zerto et d'IBM Resiliency Services.
+Lorsque vous demandez des services gérés pour Zerto on {{site.data.keyword.cloud_notm}}, un environnement de reprise après incident totalement géré peut être déployé à l'aide du logiciel de reprise après incident (DR, Disaster Recovery) Zerto et d'IBM Resiliency Services.
 
 Les modèles de services gérés pour Zerto on {{site.data.keyword.cloud_notm}} suivants sont disponibles.
 
 ## Services gérés orchestrés IBM pour Zerto
 
-Ce modèle convient si vous utilisez l'offre Zerto sur {{site.data.keyword.cloud_notm}}.
+Ce modèle convient si vous utilisez l'offre Zerto on {{site.data.keyword.cloud_notm}}.
 
 Avec ce modèle, le service {{site.data.keyword.cloud_notm}} Resiliency Orchestration est mis à disposition pour Zerto on {{site.data.keyword.cloud_notm}}. Ce modèle permet une protection en continu des machines virtuelles, des systèmes d'exploitation et des données sur {{site.data.keyword.cloud_notm}}, avec test de reprise après incident sans provoquer d'interruption, visibilité des objectifs de délai de récupération/de point de récupération, fonctionnalité de basculement et de reprise par restauration.
 

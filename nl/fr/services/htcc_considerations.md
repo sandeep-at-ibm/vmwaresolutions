@@ -35,7 +35,7 @@ Licence par hôte : une licence HyTrust CloudControl est commandée pour chaque 
 
 ## Remarques relatives au retrait de HyTrust CloudControl on IBM Cloud
 
-Avant de retirer le service HyTrust DataControl on {{site.data.keyword.cloud_notm}}, prenez soin de désactiver la **la mise en lieu sûr par mot de passe root**, si elle est configurée, et de supprimer tous les hôtes protégés sur HyTrust DataControl.
+Avant de retirer le service HyTrust CloudControl on {{site.data.keyword.cloud_notm}}, prenez soin de désactiver la **mise en lieu sûr par mot de passe root**, si elle est configurée, et de supprimer tous les hôtes protégés sur HyTrust CloudControl.
 
 ### Liens connexes
 
