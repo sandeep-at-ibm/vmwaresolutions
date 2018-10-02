@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -16,9 +16,9 @@ Passez en revue les informations suivantes pour obtenir des détails relatifs au
 
 Pour passer en revue les composants de mise en réseau inclus dans votre instance vCenter Server with Hybridity Bundle, voir [Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances).
 
-## Remarques relatives au pare-feu NSX
+## Remarques relatives aux pare-feu
 
-Si vous utilisez des pare-feu DFW NSX, vous devez configurer des règles pour toutes les communications établies à partir de l'instance de serveur virtuel IBM CloudDriver de manière à autoriser tous les protocoles à communiquer sur les adresses IP `10.0.0.0/8` et `161.26.0.0/16`.
+Si vous utilisez des pare-feu, vous devez configurer des règles pour toutes les communications établies à partir de l'instance de serveur virtuel {{site.data.keyword.IBM}} CloudDriver et des machines virtuelles SDDC Manager. Ces règles doivent autoriser tous les protocoles à communiquer sur les adresses IP `10.0.0.0/8` et `161.26.0.0/16`. Ces types de pare-feu sont notamment les pare-feu DFW (Distributed Firewall) NSX ou les pare-feu Vyatta. 
 
 ## Utilisation de NSX avec vos machines virtuelles
 

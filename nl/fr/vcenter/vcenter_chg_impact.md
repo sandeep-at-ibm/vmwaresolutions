@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -57,7 +57,7 @@ Tableau 2. Opérations affectées pour l'accès racine VC/PSC (local)
 
 | Modification  | Opérations affectées  | Gravité  | Méthode de récupération  |
 |:------------- |:------------- |:--------------|:--------------|
-| Activation ou désactivation de l'accès au shell.    | L'application de correctifs ou de mises à jour au contrôleur PSC et au serveur vCenter Server risque d'échouer.    | Important    | Non applicable    |
+| Activation ou désactivation de l'accès au shell.    | L'application de modules de correction ou de mises à jour au contrôleur PSC et au serveur vCenter Server risque d'échouer.    | Important    | Non applicable    |
 
 ## Sous-réseaux de gestion pour des instances vCenter Server
 

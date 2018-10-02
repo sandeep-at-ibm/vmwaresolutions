@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -62,7 +62,7 @@ Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_not
 | Statut | Détails du statut |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | L'{{site.data.keyword.CloudDataCent_notm}} n'est pas disponible actuellement. |
-| Temporarily Out of Inventory  | L'{{site.data.keyword.CloudDataCent_notm}} est temporairement en rupture de stock. |
+| Temporarily Out of Inventory  | L'{{site.data.keyword.CloudDataCent_notm}} n'est pas disponible actuellement. |
 | Limited Inventory             | L'{{site.data.keyword.CloudDataCent_notm}} a une disponibilité limitée et la commande risque de ne pas être honorée. |
 
 ## Sauvegarde des composants de gestion
@@ -75,8 +75,8 @@ L'instance vCenter Server with Hybridity Bundle inclut la licence VMware Hybrid 
 
 Lorsque vous déployez ce service, définissez les paramètres suivants :
 * Renseignez la zone **Type d'interconnexion HCX** en sélectionnant l'une des options suivantes :
-  * **Réseau public** : HCX crée une connexion chiffrée entre des sites via le réseau public.
-  * **Réseau privé** : HCX crée une connexion chiffrée entre des sites via le réseau privé.
+  * **Réseau public** : HCX crée une connexion chiffrée entre des sites sur le réseau public.
+  * **Réseau privé** : HCX crée une connexion chiffrée entre des sites sur le réseau privé.
 * Renseignez la zone **Type de certificat de noeud final public**. Si vous sélectionnez **Certificat de l'autorité de certification**, configurez les paramètres suivants :
   * **Contenu de certificat** : entrez le contenu du certificat de l'autorité de certification.
   * **Clé privée** : entrez la clé privée du certificat de l'autorité de certification.
@@ -88,7 +88,7 @@ Vous pouvez commander d'autres services complémentaires pour votre instance en 
 
 ## Remarques sur la capacité
 
-Pour toute information sur la capacité, voir [Mise à l'échelle de la capacité](../archiref/solution/solution_scaling.html).
+Pour plus d'informations sur la capacité, voir [Mise à l'échelle de la capacité](../archiref/solution/solution_scaling.html).
 
 ### Liens connexes
 

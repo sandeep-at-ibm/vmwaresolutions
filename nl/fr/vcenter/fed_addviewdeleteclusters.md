@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -59,7 +59,7 @@ Un minimum de 2 serveurs {{site.data.keyword.baremetal_short}} est requis pour u
 
 Pour les instances VMware Federal déployées dans la version 2.1 ou des éditions ultérieures, vous pouvez ajouter jusqu'à 59 serveurs {{site.data.keyword.baremetal_short}} pour un cluster et entre 1 et 59 serveurs ESXi à la fois.
 
-Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Pour les paramètres de stockage vSAN, 4 serveurs sont nécessaires pour le cluster initial et pour les clusters d'après déploiement.
+Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Pour les paramètres de stockage vSAN, quatre serveurs sont nécessaires pour le cluster initial et pour les clusters post-déploiement.
 
 ### Paramètres de stockage
 
@@ -67,13 +67,20 @@ Les paramètres de stockage varient en fonction de la configuration de serveur b
 
 #### Stockage vSAN
 
-Pour vSAN, spécifiez les options de stockage suivantes :
+Spécifiez les options vSAN suivantes :
 
-* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez la capacité qui répond à vos besoins de stockage partagé.
-* **Nombre de disques de capacité vSAN** : sélectionnez le nombre de disques que vous voulez ajouter pour le stockage partagé vSAN. Le nombre de disques doit être de 2, 4, 6 ou 8.
-* Sélectionnez l'édition de licence VMware vSAN 6.6 (Advanced ou Enterprise).
+* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin. 
+* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter. 
+* **Type de disque pour disques de cache vSAN** : sélectionnez une option correspondant aux disques de cache dont vous avez besoin. 
 
-Si votre cluster initial était de type vSAN, tous les clusters vSAN supplémentaires utilisent la même licence vSAN et ont la même configuration que le cluster vSAN initial. C'est également le cas si vSAN est sélectionné pour être déployé dans un cluster de l'instance (initial ou supplémentaire). La première fois, un message s'affiche pour vous demander d'entrer la licence vSAN et l'édition. Ensuite, chaque fois que vous sélectionnez vSAN pour un cluster supplémentaire, vos choix initiaux sont réutilisés.
+    **Remarque** : pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+
+
+* **Nombre de disques de cache vSAN** : indiquez le nombre de disques de cache que vous souhaitez ajouter. 
+* **Licence vSAN** : sélectionnez l'édition de licence VMware vSAN 6.6 (Advanced ou Enterprise).
+
+Si votre cluster initial a été ajouté en tant que cluster vSAN, tous les clusters vSAN supplémentaires utilisent la même licence vSAN et ont la même configuration que le cluster vSAN initial. C'est également le cas si vSAN est sélectionné pour être déployé dans un cluster de l'instance (initial ou supplémentaire). La première fois que vous ajoutez un cluster, un message s'affiche pour vous demander d'entrer la licence vSAN et l'édition. Ensuite, la prochaine fois que vous sélectionnerez vSAN pour un nouveau cluster, vos choix initiaux seront réutilisés.
 
 #### Stockage NFS
 
@@ -85,7 +92,7 @@ Lorsque vous sélectionnez **Stockage NFS**, vous pouvez ajouter un stockage par
 * **Nombre de partages** : lorsque vous utilisez le même paramètre de configuration pour chaque partage de fichiers, spécifiez le nombre de partages de fichiers pour le stockage partagé NFS que vous souhaitez ajouter.
 * **Taille** : sélectionnez la capacité qui répond à vos besoins de stockage partagé.
 * **Performances** : permet de sélectionner la valeur IOPS (Input/output Operations Per Second) par Go adaptée à vos besoins en matière de charge de travail.
-* **Ajouter NFS** : permet d'ajouter des partages de fichiers individuels qui utiliseront des paramètres de configuration différents.
+* **Ajouter NFS** : permet d'ajouter des partages de fichiers individuels avec des paramètres de configuration différents.
 
 Tableau 2. Options de niveau de performance NFS
 
@@ -97,11 +104,11 @@ Tableau 2. Options de niveau de performance NFS
 
 ### Paramètres d'octroi de licence
 
-	Licences VMware fournies par {{site.data.keyword.IBM}} pour les produits suivants :
-  * VMware vSphere Enterprise Plus 6.5u1
-  * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
-  * (Pour les clusters vSAN) VMware vSAN Advanced ou Enterprise 6.6
+	Licences fournies par {{site.data.keyword.IBM}} pour les composants VMware suivants :
+  * vSphere Enterprise Plus 6.5u1
+  * vCenter Server 6.5
+  * NSX Service Providers 6.4 (édition Base, Advanced ou Enterprise)
+  * (Pour les clusters vSAN) vSAN 6.6 (édition Advanced ou Enterprise)
 
 ### Récapitulatif de la commande
 
@@ -113,14 +120,13 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance à laquelle vous souhaitez ajouter des clusters.
 
    **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas ajouter de clusters à l'instance.
-
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche et cliquez sur **Ajouter** dans l'angle supérieur droit du tableau **CLUSTERS**.
 4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
 5. Renseignez les zones **Modèle UC**, **Mémoire RAM** et **Nombre de serveurs bare metal** pour la configuration de serveur bare metal.
 6. Procédez à la configuration du stockage.
-  * Lorsque vous sélectionnez **Stockage vSAN**, renseignez les zones **Type et taille de disque pour disques de capacité vSAN**, **Nombre de disques de capacité vSAN** et **Licence vSAN**.
-  * Lorsque vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**.
-  * Lorsque vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer des partages de fichiers individuellement, renseignez les zones **Configurer les partages individuellement**, puis cliquez sur l'icône **+** en regard de **Ajouter NFS**. Renseignez ensuite les zones **Taille** et **Performances** pour chaque partage de fichiers individuel. Vous devez sélectionner au moins un partage de fichiers.
+  * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité VSAN, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**. 
+  * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**.
+  * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer des partages de fichiers individuellement, renseignez les zones **Configurer les partages individuellement**, puis cliquez sur l'icône **+** en regard de **Ajouter NFS**. Renseignez ensuite les zones **Taille** et **Performances** pour chaque partage de fichiers individuel. Vous devez sélectionner au moins un partage de fichiers.
 7. Sélectionnez l'édition de licence pour VMware vSAN pour la configuration de licence.
 8. Sur la page **Récapitulatif de la commande**, vérifiez la configuration du cluster avant d'ajouter celui-ci.
    1. Passez en revue les paramètres du cluster.
@@ -175,7 +181,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
    * **Version** : version du serveur ESXi.
    * **Données d'identification** : nom d'utilisateur et mot de passe d'accès au serveur ESXi.
    * **Adresse IP privée** : adresse IP privée du serveur ESXi.
-   * **Status** :  statut du serveur ESXi, qui peut avoir l'une des valeurs suivantes :
+   * **Statut** : statut du serveur ESXi, qui peut avoir l'une des valeurs suivantes :
         <dl class="dl">
         <dt class="dt dlterm">Ajouté</dt>
         <dd class="dd">Le serveur ESXi a été ajouté et est prêt pour utilisation. </dd>

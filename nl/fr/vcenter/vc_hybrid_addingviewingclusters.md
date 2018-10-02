@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 Les serveurs ESXi que vous avez configurés lors de la commande d'une instance sont, par défaut, regroupés sous **cluster1**.
 
-Vous pouvez ajouter des clusters à votre instance VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle afin d'étendre la capacité de calcul et de stockage. Au sein d'un cluster, vous pouvez gérer des serveurs ESXi afin d'optimiser l'allocation des ressources et la haute disponibilité. Lorsque vous n'en avez plus besoin, vous pouvez supprimer les clusters que vous avez ajoutés à votre instance.
+Vous pouvez ajouter des clusters à votre instance VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle afin d'étendre la capacité de calcul et de stockage. Au sein d'un cluster, gérez les serveurs ESXi afin d'optimiser l'allocation des ressources et la haute disponibilité. Lorsque vous n'en avez plus besoin, supprimez les clusters que vous avez ajoutés à votre instance.
 
 ## Ajout de clusters à des instances vCenter Server with Hybridity Bundle
 
@@ -34,7 +34,7 @@ Le nom du cluster qui doit respecter les règles suivantes :
 
 L'emplacement de l'{{site.data.keyword.CloudDataCent_notm}} du cluster est, par défaut, l'{{site.data.keyword.CloudDataCent_notm}} de l'instance vCenter Server. Vous pouvez déployer le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui de l'instance déployée, sous réserve que la latence du réseau entre les deux {{site.data.keyword.CloudDataCents_notm}} soit inférieure à 150 ms. Pour vérifier la latence du réseau, utilisez un outil tel que [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-Si vous déployez le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} ou un pod d'infrastructure {{site.data.keyword.cloud_notm}}, trois VLAN supplémentaires sont commandés pour être utilisés avec les serveurs {{site.data.keyword.baremetal_short}} commandés.
+Si vous déployez le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} ou pod d'infrastructure {{site.data.keyword.cloud_notm}}, trois VLAN supplémentaires sont commandés pour être utilisés avec les serveurs {{site.data.keyword.baremetal_short}} commandés.
 
 ### Paramètres de serveur bare metal
 
@@ -56,26 +56,40 @@ Tableau 2. Options pour les serveurs bare metal personnalisés
 
 #### Nombre de serveurs bare metal
 
-Un minimum de deux serveurs {{site.data.keyword.baremetal_short}} est requis pour un cluster.
+Au moins deux serveurs {{site.data.keyword.baremetal_short}} sont requis pour un cluster.
 
 Vous pouvez ajouter jusqu'à 59 serveurs {{site.data.keyword.baremetal_short}} pour un cluster et entre 1 et 59 serveurs ESXi à la fois.
 
-Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Pour le stockage VMware vSAN, 4 serveurs sont nécessaires pour le cluster initial et pour les clusters d'après déploiement.
+Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Pour le stockage VMware vSAN, quatre serveurs sont requis pour le cluster initial et pour les clusters post-déploiement. 
 
 ### Paramètres de stockage vSAN
 
-VMware vSAN 6.6 est inclus avec votre commande d'instance vCenter Server with Hybridity Bundle. Vous devez spécifier **Advanced** ou **Enterprise** pour l'édition de licence.
+VMware vSAN 6.6 est inclus avec votre commande d'instance vCenter Server with Hybridity Bundle. Spécifiez les options vSAN suivantes :
 
-* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez la capacité qui répond à vos besoins de stockage partagé.
-* **Nombre de disques de capacité vSAN** : sélectionnez le nombre de disques que vous voulez ajouter pour le stockage partagé vSAN. Le nombre de disques doit être de 2, 4, 6 ou 8.
-* Sélectionnez l'édition de licence VMware vSAN 6.6 (Advanced ou Enterprise).
+* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin. 
+* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter. 
+* **Type de disque pour disques de cache vSAN** : sélectionnez une option correspondant aux disques de cache dont vous avez besoin. 
+
+    **Remarque** : pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* **Nombre de disques de cache vSAN** : indiquez le nombre de disques de cache que vous souhaitez ajouter. 
+* **Licence vSAN** : sélectionnez l'édition de licence VMware vSAN 6.6 (Advanced ou Enterprise).
 
 ### Paramètres d'octroi de licence
 
-Licences VMware fournies par IBM pour les produits suivants :
-  * VMware vSphere Enterprise Plus 6.5u1
-  * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Advanced ou Enterprise) 6.4
+Licences fournies par IBM pour les composants VMware suivants :
+  * vSphere Enterprise Plus 6.5u1
+  * vCenter Server 6.5
+  * NSX Service Providers 6.4 (édition Advanced ou Enterprise)
+
+### Paramètres d'interface réseau
+
+Les paramètres de carte d'interface réseau varient selon que vous sélectionnez **Réseau public et réseau privé** ou **Réseau privé uniquement**. Les services complémentaires suivants requièrent des cartes d'interface réseau public et ne sont pas disponibles avec l'option de réseau privé :
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Récapitulatif de la commande
 
@@ -86,15 +100,16 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous voulez afficher les clusters.
 
-   **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas ajouter de clusters à l'instance.
+   **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Si tel n'est pas le cas, vous ne pourrez pas ajouter de clusters à l'instance.
 
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche et cliquez sur **Ajouter** dans l'angle supérieur droit du tableau **CLUSTERS**.
 4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
-5. Si vous souhaitez héberger le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui dans lequel l'instance est hébergée, sous **Serveur bare metal**, cochez la case **Sélectionner un autre emplacement** et choisissez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel héberger l'instance.
+5. Vous pouvez héberger le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui dans lequel l'instance est hébergée. Pour ce faire, sous **Serveur bare metal**, cochez la case **Sélectionner un autre emplacement** et choisissez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel héberger l'instance.
 6. Renseignez les zones **Modèle UC**, **Mémoire RAM** et **Nombre de serveurs bare metal** pour la configuration de serveur bare metal.
-7.  Sélectionnez **Stockage vSAN** et renseignez les zones **Nombre de disques de capacité vSAN**, **Type et taille de disque pour disques de capacité vSAN** ou la configuration de stockage.
+7.  Sélectionnez **Stockage vSAN** et spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**. 
 8. Sélectionnez l'édition de licence pour VMware vSAN pour la configuration de licence.
-9. Sur la page **Récapitulatif de la commande**, vérifiez la configuration du cluster avant d'ajouter celui-ci.
+9. Sélectionnez le paramètre réseau **Réseau public et réseau privé** ou **réseau privé uniquement**.
+10. Sur la page **Récapitulatif de la commande**, vérifiez la configuration du cluster avant d'ajouter celui-ci.
    1. Passez en revue les paramètres du cluster.
    2. Passez en revue le coût estimé du cluster. Cliquez sur **Détails concernant la tarification** pour générer un récapitulatif au format PDF. Pour sauvegarder ou imprimer votre récapitulatif de commande, cliquez sur l'icône d'**impression** ou de **téléchargement** dans l'angle supérieur droit de la fenêtre du PDF.
    3. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant d'ajouter le cluster.
@@ -148,7 +163,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
      * **Version** : version du serveur ESXi.
      * **Données d'identification** : nom d'utilisateur et mot de passe d'accès au serveur ESXi.
      * **Adresse IP privée** : adresse IP privée du serveur ESXi.
-     * **Status** :  statut du serveur ESXi, qui peut avoir l'une des valeurs suivantes :
+     * **Statut** : statut du serveur ESXi, qui peut avoir l'une des valeurs suivantes :
         <dl class="dl">
         <dt class="dt dlterm">Ajouté</dt>
         <dd class="dd">Le serveur ESXi a été ajouté et est prêt pour utilisation. </dd>
@@ -165,11 +180,11 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 
 ## Suppression de clusters des instances vCenter Server with Hybridity Bundle
 
-Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous n'en avez plus besoin.
+Vous souhaiterez peut-être supprimer un cluster d'une instance si vous n'en avez plus besoin.
 
 ### Avant de supprimer
 
-* Vous ne pouvez supprimer qu'un seul cluster à la fois. Pour supprimer plusieurs clusters, vous devez attendre que le cluster précédent soit supprimé avant de tenter de supprimer le cluster suivant.
+* Vous ne pouvez supprimer qu'un seul cluster à la fois. Pour supprimer plusieurs clusters, vous devez le faire de manière séquentielle et attendre que le cluster précédent soit supprimé avant de supprimer le cluster suivant.
 * Assurez-vous que tous les noeuds présents dans un cluster sont sous tension et opérationnels avant de supprimer le cluster.
 * Lorsque vous supprimez un cluster, toutes les machines virtuelles présentes sur le cluster sont également supprimées et ne peuvent pas être récupérées. Si vous souhaitez conserver les machines virtuelles, faites-les migrer vers d'autres clusters.
 * Le cluster par défaut ne peut pas être supprimé.

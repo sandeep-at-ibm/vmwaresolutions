@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -16,7 +16,7 @@ Affichez les informations récapitulatives et détaillées des instances VMware 
 
 Pour afficher un récapitulatif de toutes les instances VMware Federal qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. Dans l'angle supérieur droit de la console, cliquez sur votre avatar, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances. 
+2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances. 
 3. Dans le tableau **vCenter Server**, affichez la liste des instances qui sont mises à disposition dans le compte utilisateur sélectionné.
 
 Tableau 1. Eléments d'une instance VMware Federal
@@ -26,7 +26,7 @@ Tableau 1. Eléments d'une instance VMware Federal
 | Nom | Nom de l'instance. |
 | Version | Version d'édition dans laquelle l'instance a été déployée ou vers laquelle elle a été mise à niveau. |  
 | Emplacement | {{site.data.keyword.CloudDataCent_notm}} où l'instance est hébergée. |  
-| Heure de création | Date et heure de création de l'instance. | 
+| Heure de création | Date et heure de création de l'instance. |
 | Statut | Statut de l'instance. |
 
 L'instance peut prendre différents statuts.
@@ -114,7 +114,7 @@ Gérez vos instances depuis la console {{site.data.keyword.vmwaresolutions_short
 
 Passez en revue les rubriques suivantes pour obtenir des informations qui vous aideront à exécuter les instructions de connexion :
 *  Pour les exigences et procédures à effectuer avant d'accéder au client Web vSphere, voir [Dépassement du délai d'attente lors de la connexion au client Web vSphere](../vmonic/trbl_timeout_vc_console.html).
-*  Pour la liste des points d'accès de connexion au réseau privé de l'infrastructure {{site.data.keyword.cloud_notm}} à l'aide du réseau privé virtuel (VPN), voir [Accès VPN](http://www.softlayer.com/vpn-access){:new_window}.
+*  Pour obtenir la liste des points d'accès de connexion au réseau privé de l'infrastructure {{site.data.keyword.cloud_notm}} à l'aide du réseau privé virtuel (VPN), voir [Accès VPN](http://www.softlayer.com/vpn-access){:new_window}.
 *  Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client Web vSphere, voir [Déploiement d'un fichier OVF à l'aide du client Web vSphere](../vmonic/trbl_deploy_ovf.html).
 
 ### Liens connexes
