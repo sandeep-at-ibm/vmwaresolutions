@@ -4,19 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-24"
 
 ---
 
 # Présentation de Zerto on IBM Cloud
 
-Le service Zerto sur {{site.data.keyword.cloud}} fournit des fonctions de réplication et de reprise après incident. Ces fonctions peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.
+Le service Zerto on {{site.data.keyword.cloud}} fournit des fonctions de réplication et de reprise après incident, qui peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.
 
-## Spécifications techniques relatives à Zerto sur IBM Cloud
+## Spécifications techniques relatives à Zerto on IBM Cloud
 
-Les composants suivants sont commandés et inclus dans le service Zerto sur {{site.data.keyword.cloud_notm}} :
+Les composants suivants sont commandés et inclus dans le service Zerto on {{site.data.keyword.cloud_notm}} :
 
-**Remarque** : les composants de Zerto Virtual Manager (ZVM) ne sont déployés que dans le cluster par défaut.
+**Remarque** : les composants de Zerto Virtual Manager ne sont déployés que dans le cluster par défaut.
 
 ### Instances de serveur virtuel
 
@@ -27,7 +27,7 @@ Les composants suivants sont commandés et inclus dans le service Zerto sur {{si
 
 ### Stockage
 
-Disque : 100 Go (SAN)
+Disque (SAN) 100 Go
 
 ### Utilisation en réseau
 
@@ -40,7 +40,7 @@ Licence Zerto Replication version V5.5
 
 ### Liens connexes
 
-* [A propose de {{site.data.keyword.vmwaresolutions_short}}](../vmonic/prod_overview.html)
+* [A propos d'{{site.data.keyword.vmwaresolutions_short}}](../vmonic/prod_overview.html)
 * [Commande de Zerto on {{site.data.keyword.cloud_notm}}](zerto_ordering.html)
 * [Gestion de Zerto on {{site.data.keyword.cloud_notm}}](managingzertodr.html)
 * [Demande de services gérés pour Zerto on {{site.data.keyword.cloud_notm}}](managing_zerto_services.html)

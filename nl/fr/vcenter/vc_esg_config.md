@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-19"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-24"
 
 Configurez le réseau pour vos machines virtuelles de manière à tirer parti de la passerelle VMware NSX ESG (Edge Services Gateway) déployée dans vos instances VMware vCenter Server. Pour plus d'informations sur les mesures de sécurité mises en place afin de réduire les risques en matière de sécurité, voir [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-VVMware NSX est une plateforme de virtualisation de réseau qui permet de virtualiser des réseaux isolés et qui fournit plusieurs services de
+VMware NSX est une plateforme de virtualisation de réseau qui permet de virtualiser des réseaux isolés et qui fournit plusieurs services de
 mise en réseau, tels que des commutateurs, des routages et des pare-feu. Pour plus d'informations sur NSX, voir [Présentation de NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
 
 Dans le cadre du processus de commande de votre instance vCenter Server, les actions suivantes sont effectuées pour vous :

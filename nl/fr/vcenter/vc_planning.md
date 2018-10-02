@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
 # Exigences et planification pour les instances vCenter Server
 
-Passez en revue les exigences suivantes avant de commander vos instances VMware vCenter Server. Planifiez votre instance en fonction de l'emplacement de l'{{site.data.keyword.CloudDataCent}}, de vos besoins en capacité de charge de travail et de vos besoins en services supplémentaires.
+Passez en revue les exigences suivantes avant de commander vos instances VMware vCenter Server. Planifiez votre instance en fonction de l'emplacement de l'{{site.data.keyword.CloudDataCent}}, de vos besoins en capacité de charge de travail et de vos besoins en services complémentaires. 
 
 ## Exigences liées au compte IBM Cloud
 
@@ -62,7 +62,7 @@ Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_not
 | Statut | Détails du statut |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | L'{{site.data.keyword.CloudDataCent_notm}} n'est pas disponible actuellement. |
-| Temporarily Out of Inventory  | L'{{site.data.keyword.CloudDataCent_notm}} est temporairement en rupture de stock. |
+| Temporarily Out of Inventory  | L'{{site.data.keyword.CloudDataCent_notm}} n'est pas disponible actuellement. |
 | Limited Inventory             | L'{{site.data.keyword.CloudDataCent_notm}} a une disponibilité limitée et la commande risque de ne pas être honorée. |
 
 ## Sauvegarde des composants de gestion
@@ -75,7 +75,7 @@ Vous pouvez commander des services complémentaires pour votre instance en fonct
 
 ## Remarques sur la capacité
 
-Pour toute information sur la capacité, voir [Mise à l'échelle de la capacité](../archiref/solution/solution_scaling.html).
+Pour plus d'informations sur la capacité, voir [Mise à l'échelle de la capacité](../archiref/solution/solution_scaling.html).
 
 ### Liens connexes
 

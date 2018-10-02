@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
 # Exigences et planification pour les instances Cloud Foundation
 
-Passez en revue les exigences suivantes avant de commander vos instances VMware Cloud Foundation. Planifiez votre instance en fonction de l'emplacement de l'{{site.data.keyword.CloudDataCent}}, de vos besoins en capacité de charge de travail et de vos besoins en services supplémentaires.
+Passez en revue les exigences suivantes avant de commander vos instances VMware Cloud Foundation. Planifiez votre instance en fonction de l'emplacement de l'{{site.data.keyword.CloudDataCent}}, de vos besoins en capacité de charge de travail et de vos besoins en services. 
 
 ## Exigences liées au compte IBM Cloud
 
@@ -62,12 +62,12 @@ Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_not
 | Statut | Détails du statut |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | L'{{site.data.keyword.CloudDataCent_notm}} n'est pas disponible actuellement. |
-| Temporarily Out of Inventory  | L'{{site.data.keyword.CloudDataCent_notm}} est temporairement en rupture de stock. |
+| Temporarily Out of Inventory  | L'{{site.data.keyword.CloudDataCent_notm}} n'est pas disponible actuellement. |
 | Limited Inventory             | L'{{site.data.keyword.CloudDataCent_notm}} a une disponibilité limitée et la commande risque de ne pas être honorée. |
 
 ## Sauvegarde des composants de gestion
 
-Vous êtes chargé de gérer et d'assurer la disponibilité de tous les composants d'instance. Il est fortement recommandé de planifier la sauvegarde ou la haute disponibilité de tous les composants de gestion. Pour plus d'informations, voir [Sauvegarde des composants](../archiref/solution/solution_backingup.html).
+Vous êtes chargé de gérer et d'assurer la disponibilité de tous les composants d'instance. Il est recommandé de planifier la sauvegarde ou la haute disponibilité de tous les composants de gestion. Pour plus d'informations, voir [Sauvegarde des composants](../archiref/solution/solution_backingup.html).
 
 ## Services pour les instances Cloud Foundation
 
@@ -75,7 +75,7 @@ Vous pouvez commander des services complémentaires pour votre instance en fonct
 
 ## Remarques sur la capacité
 
-Pour toute information sur la capacité, voir [Mise à l'échelle de la capacité](../archiref/solution/solution_scaling.html).
+Pour plus d'informations sur la capacité, voir [Mise à l'échelle de la capacité](../archiref/solution/solution_scaling.html).
 
 ### Liens connexes
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -16,8 +16,8 @@ Affichez les informations récapitulatives et détaillées des instances NetApp 
 
 Pour afficher un récapitulatif de toutes les instances NetApp ONTAP Select qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 
-1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. Dans l'angle supérieur droit de la console, cliquez sur votre avatar, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances.
+1. A partir de la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances. 
 3. Dans le tableau **Instances NetApp ONTAP Select**, affichez la liste des instances qui sont mises à disposition dans le compte utilisateur sélectionné.
 
 Tableau 1. Eléments d'une instance NetApp ONTAP Select
@@ -153,10 +153,7 @@ Tableau 6. Détails des serveurs ESXi d'un cluster NetApp ONTAP Select
 
 | Elément        | Description       |  
 |:------------|:----------------- |
-| Nom | Nom du serveur ESXi au format `<host_prefix><n>.<subdomain_label>.<root_domain>`, où :<br><br>`host_prefix` est le préfixe de nom d'hôte,
-       `n` est la séquence du serveur,
-       `subdomain_label` est le libellé de sous-domaine et
-       `root_domain` est le nom de domaine racine. |
+| Nom | Nom du serveur ESXi au format `<host_prefix><n>.<subdomain_label>.<root_domain>`, où :<br><br>`host_prefix` est le préfixe de nom d'hôte, `n` est la séquence du serveur, `subdomain_label` est le libellé de sous-domaine et `root_domain` est le nom de domaine racine. |
 | Version | Version du serveur ESXi. |
 | Données d'identification | Nom d'utilisateur et mot de passe d'accès au serveur ESXi. |
 | Adresse IP privée | Adresse IP privée du serveur ESXi. |

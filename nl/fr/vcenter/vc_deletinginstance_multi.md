@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-03-19"
+lastupdated: "2017-09-19"
 
 ---
 
 # Suppression d'instances vCenter Server dans une configuration multisite
 
-Vous devez tenir compte de certaines remarques lorsque vous planifiez la suppression d'instances vCenter Server qui font partie d'une configuration multisite.
+Vous devez tenir compte des remarques suivantes lorsque vous planifiez la suppression d'instances vCenter Server qui font partie d'une configuration multisite :
 
 Lorsque vous supprimez une instance vCenter Server, les composants suivants sont libérés, dans cet ordre :
 1. Tous les services déployés
@@ -24,7 +24,7 @@ En raison des dépendances de ressource, les composants de votre instance ne son
 
 **Attention** : l'instance supprimée vous est facturée jusqu'à échéance du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}.
 
-## Procédure
+## Procédure de suppression d'instances vCenter Server dans une configuration multisite
 
 1. Supprimez tous les services de l'instance vCenter Server secondaire.
 2. Vérifiez qu'aucun objet NSX n'est développé dans l'instance secondaire que vous voulez supprimer.

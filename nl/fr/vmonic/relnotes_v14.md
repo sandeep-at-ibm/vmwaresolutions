@@ -10,13 +10,13 @@ lastupdated: "2017-03-08"
 
 # Notes sur l'édition pour la version 1.4
 
-Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour la liste des erreurs rectifiées dans les différentes éditions, les problèmes connus concernant le produit et des conseils supplémentaires pour l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour obtenir la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des astuces relatives à l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Mises à jour de composants pour les instances Cloud Foundation
 
 Les composants suivants sont nouveaux ou ont été mis à jour :
 
-* Contrôleur VC/PSC (vCenter/Platform Services Controller) 6.0U2a
+* VC et PSC (vCenter et Platform Services Controller) 6.0U2a
 * Outils VMware 10.1.0
 * Gestionnaire SDDC (SP) 2.2
 * VMware ESXi 6.0 u2 p04
@@ -78,7 +78,7 @@ Cette édition inclut les améliorations de topologie suivantes pour vos instanc
 
 ## Prise en charge de configuration multisite pour des instances Cloud Foundation
 
-Vous pouvez désormais déployer soit une instance unique Cloud Foundation, comme dans les éditions précédentes, ou déployer en plus des instances secondaires associées à l'instance principale. Le modèle de configuration multisite utilise un concentrateur et une topologie en étoile (hub and spoke) avec un site principal et un maximum de 7 sites secondaires.
+Vous pouvez désormais déployer soit une instance unique Cloud Foundation, comme dans les éditions précédentes, ou déployer en plus des instances secondaires associées à l'instance principale. Le modèle de configuration multisite utilise un concentrateur et une topologie en étoile (hub and spoke) avec un site principal et un maximum de sept sites secondaires.
 
 Pour plus d'informations, voir [Configuration multisite pour des instances Cloud Foundation](../sddc/sd_multisite.html).
 

@@ -33,7 +33,7 @@ Tous les types d'instance fournissent différentes options de déploiement pour 
 * Lorsque vous commandez une instance VMware vCenter Server, vous déployez un environnement virtuel VMware avec des ressources de calcul, de stockage et de réseau personnalisées. Pour plus d'informations sur les composants déployés, voir [Spécifications techniques relatives aux instances vCenter Server](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 * Lorsque vous commandez une instance VMware Cloud Foundation, vous déployez une plateforme unifiée de centre de données défini par les logiciels (SDDC, Software-Defined Data Center). Pour plus d'informations sur les composants déployés, voir [Spécifications techniques relatives aux instances Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 * Lorsque vous commandez un cluster VMware vSphere, vous obtenez un maximum de souplesse pour concevoir et créer votre environnement VMware hébergé tout en intégrant du matériel compatible VMware. Cela dit, {{site.data.keyword.cloud_notm}} n'automatise pas l'installation, la configuration et l'apport des composants VMware facultatifs pour le cluster VMware vSphere.
-* Les fonctions qui sont prises en charge poru les instances vCenter Server, les instances Cloud Foundation et les clusters vSphere sont différentes. Pour plus d'informations, voir [Graphique de comparaison des offres](inst_comp_chart.html).
+* Les fonctions qui sont prises en charge pour les instances vCenter Server, les instances Cloud Foundation et les clusters vSphere sont différentes. Pour plus d'informations, voir [Graphique de comparaison des offres](inst_comp_chart.html).
 
 ## Qu'inclut une instance vCenter Server ?
 
@@ -64,9 +64,9 @@ Non, ce n'est pas recommandé. Vous risquez des incidents au niveau des fonction
 
 Pour les instances vCenter Server, le premier cluster créé lors du déploiement est, par défaut, nommé **cluster1**. Vous pouvez le renommer dans le client VMware vSphere. Lorsque vous ajoutez un cluster à une instance vCenter Server, vous pouvez spécifier le nom de votre choix sur la console {{site.data.keyword.vmwaresolutions_short}}.
 
-**Remarque**:  pour les instances Cloud Foundation, le nom du cluster par défaut n'est pas modifiable.
+**Remarque** : pour les instances Cloud Foundation, le nom du cluster par défaut n'est pas modifiable.
 
-##Comment sont gérés les correctifs ?
+##Comment sont gérés les modules de correction ?
 
 IBM fournit des mises à jour permanentes du code en déployant l'instance de serveur virtuel (VSI) IBM CloudDriver (VSI) à la demande. IBM ne fournit pas de mises à jour permanentes pour les services complémentaires tels que Zerto on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}}. L'obtention et l'installation de ces mises à jour est de votre responsabilité.
 

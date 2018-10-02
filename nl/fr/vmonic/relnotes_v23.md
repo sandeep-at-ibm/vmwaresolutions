@@ -10,11 +10,11 @@ lastupdated: "2018-05-28"
 
 # Notes sur l'édition pour la version 2.3
 
-Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour la liste des erreurs rectifiées dans les différentes éditions, les problèmes connus concernant le produit et des conseils supplémentaires pour l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour obtenir la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des astuces relatives à l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Résolution de Spectre et Meltdown
 
-{{site.data.keyword.vmwaresolutions_short}} a publié des correctifs depuis VMware afin de remédier à des vulnérabilités identifiées sous l'appellation Spectre et Meltdown (CVE-2017-5753, CVE-2017-5715 et CVE-2017-5754).
+{{site.data.keyword.vmwaresolutions_short}} a publié des modules de correction depuis VMware afin de remédier à des vulnérabilités identifiées sous l'appellation Spectre et Meltdown (CVE-2017-5753, CVE-2017-5715 et CVE-2017-5754).
 
 * CVEID : [CVE-2017-5753](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5753)
 * CVEID : [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
@@ -28,7 +28,7 @@ Cette édition introduit l'offre VMware vCenter Server on {{site.data.keyword.cl
 
 Le service HCX on {{site.data.keyword.cloud_notm}} est disponible uniquement via l'instance vCenter Server with Hybridity Bundle. Vous pouvez mettre à niveau votre instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle après avoir appliqué la mise à jour logicielle vCenter Server V2.3 de base. Pour plus d'informations, voir [Application de mises à jour à des instances vCenter Server](../vcenter/vc_applyingupdates.html).
 
-Pour plus d'informations sur vCenter Server avec Hybridity Bundle, reportez-vous aux rubriques suivantes :
+Pour plus d'informations sur vCenter Server avec Hybridity Bundle, voir les rubriques suivantes :
 
 * [Présentation de vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
 * [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_planning.html)
@@ -51,7 +51,7 @@ Cette édition applique les mises à niveau et améliorations suivantes :
 
 ### Améliorations apportées aux instances et clusters vCenter Server
 
-A compter de l'édition V2.3, les nouveaux modèles d'UC suivants sont disponibles pour déploiement lorsque vous choisissez la configuration de serveur bare metal **Personnalisée** :
+A compter de la version 2.3, les nouveaux modèles d'UC suivants sont disponibles pour déploiement lorsque vous choisissez la configuration de serveur bare metal **Personnalisée** :
 * Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz
 * Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz
 
@@ -71,9 +71,9 @@ Cette édition applique les mises à niveau et améliorations suivantes :
 
 ### Configuration DNS pour les instances VMware Federal
 
-Vous avez maintenant la possibilité de sélectionner le déploiement d'une seule instance de serveur virtuel Microsoft Windows pour Microsoft Active Directory (AD) ou de deux machines virtuelles à haute disponibilité Microsoft Windows dans le cluster de gestion. Pour l'édition V2.2, l'unique instance de serveur virtuel Microsoft Windows pour Microsoft AD a été automatiquement déployée par défaut. La nouvelle option de sélection de deux machines virtuelles Microsoft Windows améliore la confidentialité et offre une possibilité de sauvegarde et de restauration des machines virtuelles à l'aide du service Veeam.
+Vous avez maintenant la possibilité de sélectionner le déploiement d'une seule instance de serveur virtuel Microsoft Windows pour Microsoft Active Directory (AD) ou de deux machines virtuelles à haute disponibilité Microsoft Windows dans le cluster de gestion. Pour la version 2.2, l'unique instance de serveur virtuel Microsoft Windows pour Microsoft AD a été automatiquement déployée par défaut. La nouvelle option de sélection de deux machines virtuelles Microsoft Windows améliore la confidentialité et offre une possibilité de sauvegarde et de restauration des machines virtuelles à l'aide du service Veeam.
 
-**Remarque :** vous devez fournir deux licences Microsoft Windows Server 2012 R2 si vous configurez votre instance de manière à utiliser deux machines virtuelles Microsoft Windows. Utilisez la licence d'édition Microsoft Windows Server 2012 R2 Standard et/ou la licence d'édition Microsoft Windows Server 2012 R2 Datacenter. Vous disposez de 30 jours pour activer les machines virtuelles.
+**Remarque :** vous devez fournir 2 licences Microsoft Windows Server 2012 R2 si vous configurez votre instance de manière à utiliser les deux machines virtuelles Microsoft Windows. Utilisez la licence d'édition Microsoft Windows Server 2012 R2 Standard et/ou la licence d'édition Microsoft Windows Server 2012 R2 Datacenter. Vous disposez de 30 jours pour activer les machines virtuelles.
 
 Pour plus d'informations, voir la section *Paramètres d'interface réseau* dans la rubrique [Commande d'instances VMware Federal](../vcenter/vc_fed_orderinginstance.html#network-interface-settings).
 
@@ -105,7 +105,7 @@ Vous pouvez commander des instances avec le service déjà inclus ou vous pouvez
 
 Pour plus d'informations, voir les rubriques suivantes :
 * [Composants et remarques pour HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)
-* [Gestion de HyTrust DataControl sur {{site.data.keyword.cloud_notm}}](../services/managinghtdc.html)
+* [Gestion de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 

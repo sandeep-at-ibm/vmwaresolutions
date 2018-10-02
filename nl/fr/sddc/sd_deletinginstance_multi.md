@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
 # Suppression d'instances Cloud Foundation dans une configuration multisite
 
-Vous devez tenir compte de certaines remarques lorsque vous planifiez la suppression d'instances Cloud Foundation qui font partie d'une configuration multisite.
+Avant de prévoir de supprimer des instances Cloud Foundation dans une configuration multisite, passez en revue les remarques ci-après. 
 
 Lorsque vous supprimez une instance Cloud Foundation, les composants suivants sont libérés, dans cet ordre :
 1. Tous les services déployés
@@ -32,7 +32,7 @@ En raison des dépendances de ressource, les composants de votre instance ne son
 4. Démontez l'instance de service virtuel (VSI, Virtual Service Instance) du contrôleur de domaine local. Pour plus d'informations, voir [Démontage des contrôleurs de domaine et des domaines](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
 5. Supprimez l'instance Cloud Foundation secondaire de la console {{site.data.keyword.vmwaresolutions_short}}.
 6. Répétez les étapes 1 à 5 pour toutes les instances Cloud Foundation secondaires de votre configuration multisite.
-7. Une fois toutes les instances secondaires supprimées, vous pouvez également supprimer l'instance principale de la console {{site.data.keyword.vmwaresolutions_short}}.
+7. Après avoir supprimé toutes les instances secondaires, vous pouvez également supprimer l'instance principale de la console {{site.data.keyword.vmwaresolutions_short}}.
 
 ### Liens connexes
 

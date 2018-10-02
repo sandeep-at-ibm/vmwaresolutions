@@ -14,13 +14,13 @@ Vous pouvez commander le service {{site.data.keyword.IBM}} Spectrum Protect&trad
 
 ## Commande d'IBM Spectrum Protect Plus on IBM Cloud pour une nouvelle instance
 
-Vous pouvez commander une nouvelle instance avec IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} à l'aide de l'une des méthodes suivantes :
+Vous pouvez commander une nouvelle instance avec IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} en utilisant l'une des méthodes suivantes :
 * Depuis la console {{site.data.keyword.vmwaresolutions_short}}, lorsque vous commandez une nouvelle instance, sélectionnez **IBM Spectrum Protect Plus on IBM Cloud** dans la section **Services**.
 * Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **IBM Spectrum Protect Plus on IBM Cloud**, spécifiez les paramètres de service, puis choisissez **Ajouter à une nouvelle instance**.
 
 ## Commande d'IBM Spectrum Protect Plus on IBM Cloud pour une instance existante
 
-Vous pouvez ajouter le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} dans une instance existante à l'aide de l'une des méthodes suivantes :
+Vous pouvez ajouter le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} dans une instance existante en utilisant l'une des méthodes suivantes :
 * Depuis la console {{site.data.keyword.vmwaresolutions_short}}, affichez l'instance pour laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter**.
 * Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **IBM Spectrum Protect Plus on IBM Cloud**, spécifiez les paramètres de service, puis choisissez **Ajouter à une instance existante**.
 

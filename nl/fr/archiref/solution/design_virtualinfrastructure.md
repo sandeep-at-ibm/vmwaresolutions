@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -73,7 +73,7 @@ Les fonctions vSAN disponibles varient en fonction de l'édition de licence que 
 
 ### Configuration de réseau virtuel pour vSAN
 
-Pour cette conception, le trafic vSAN parcourt les hôtes ESXi sur un réseau local privé dédié. Les deux adaptateurs de réseau connectés au commutateur de réseau privé sont configurés dans vSphere sous la forme d'un commutateur VDS (vSphere Distributed Switch) avec les deux adaptateurs de réseau sous la forme de liaisons montantes. Un groupe de ports de noyau vSAN dédié configuré pour le réseau local virtuel vSAN réside dans le commutateur VDS. Les trames Jumbo (MTU 9000) sont activées pour le commutateur VDS privé.
+Pour cette conception, le trafic vSAN parcourt les hôtes ESXi sur un réseau local privé dédié. Les deux adaptateurs de réseau connectés au commutateur de réseau privé sont configurés dans vSphere sous la forme d'un commutateur vDS avec les deux adaptateurs de réseau sous la forme de liaisons montantes. Un groupe de ports de noyau vSAN dédié configuré pour le réseau local virtuel vSAN réside dans le commutateur vDS. Les trames Jumbo (MTU 9000) sont activées pour le commutateur vDS privé.
 
 vSAN ne procède pas à l'équilibrage de charge du trafic entre les liaisons montantes. Par conséquent, un adaptateur est actif pendant que l'autre est en veille pour prendre en charge la haute disponibilité (HA). La règle de reprise par transfert configurée pour vSAN entre les ports de réseau physique est **Basculement explicite**.
 
@@ -91,7 +91,7 @@ La configuration RAID 6 requiert au moins 6 hôtes. La **duplication** et la **c
 
 Une instance utilise la règle par défaut sauf indication contraire à partir de la console vSphere. Lorsqu'une règle personnalisée est configurée, elle est garantie par vSAN chaque fois que cela est possible. Toutefois, si la règle ne peut pas être garantie, il n'est pas possible de mettre à disposition une machine virtuelle qui utilise la règle sauf si elle est activée pour forcer la mise à disposition.
 
-Les règles de stockage doivent être réappliquées après l'ajout de nouveaux hôtes ESXi ou l'application de correctifs aux hôtes ESXi.
+Les règles de stockage doivent être réappliquées après l'ajout de nouveaux hôtes ESXi ou l'application de modules de correction aux hôtes ESXi.
 
 ### Paramètres vSAN
 
@@ -106,7 +106,7 @@ Les paramètres vSAN sont définis selon les meilleures pratiques relatives au d
 
 ## Conception de VMware NSX
 
-La virtualisation de réseau fournit un réseau dissocié qui existe dans la couche virtuelle. Cette virtualisation offre à l'architecture des fonctions telles que la mise à disposition, le déploiement, la reconfiguration et la destruction rapides de réseaux virtuels à la demande. Cette conception utilise le commutateur VDS (vSphere Distributed Switch) et VMware NSX for vSphere pour implémenter la mise en réseau virtuelle.
+La virtualisation de réseau fournit un réseau dissocié qui existe dans la couche virtuelle. Cette virtualisation offre à l'architecture des fonctions telles que la mise à disposition, le déploiement, la reconfiguration et la destruction rapides de réseaux virtuels à la demande. Cette conception utilise le commutateur vDS et VMware NSX for vSphere pour implémenter la mise en réseau virtuelle.
 
 Dans cette conception, NSX Manager est déployé dans le cluster initial. NSX Manager se voit affecter une adresse IP VLAN provenant du bloc d'adresses portables privées conçu pour les composants de gestion et configuré avec les serveurs DNS et NTP décrits dans [Conception des services communs](design_commonservice.html). NSX Manager est installé avec les spécifications recensées dans le tableau 2.
 
@@ -129,7 +129,7 @@ Figure 2. Présentation du réseau NSX Manager
 
 Après le déploiement initial, l'automatisation d'{{site.data.keyword.cloud_notm}} déploie trois contrôleurs NSX dans le cluster initial. Chacun des contrôleurs se voit affecter une adresse IP VLAN provenant du sous-réseau portable destiné aux composants de gestion. En outre, la conception crée des règles anti-affinité MV-MV pour séparer les contrôleurs parmi les hôtes du cluster. Le cluster initial doit contenir un minimum de trois noeuds pour garantir la haute disponibilité des contrôleurs.
 
-Outre les contrôleurs, l'automatisation d'{{site.data.keyword.cloud_notm}} prépare les hôtes vSphere déployés avec NSX VIBS pour permettre l'utilisation d'un réseau virtualisé via des points d'extrémité de tunnel VXLAN (VTEP). Les VTEP se voient affecter des adresses IP VLAN provenant de la plage d'adresses IP du sous-réseau portable privé spécifié pour les VTEP comme indiqué dans le *Tableau 1. Récapitulatif VLAN et sous-réseau* de la rubrique [Conception d'infrastructure physique](design_physicalinfrastructure.html). Le trafic VXLAN réside sur le réseau local virtuel non balisé et est affecté au commutateur VDS (vSphere Distributed Switch) privé.
+Outre les contrôleurs, l'automatisation d'{{site.data.keyword.cloud_notm}} prépare les hôtes vSphere déployés avec NSX VIBS pour permettre l'utilisation d'un réseau virtualisé via des points d'extrémité de tunnel VXLAN (VTEP). Les VTEP se voient affecter des adresses IP VLAN provenant de la plage d'adresses IP du sous-réseau portable privé spécifié pour les VTEP comme indiqué dans le *Tableau 1. Récapitulatif VLAN et sous-réseau* de la rubrique [Conception d'infrastructure physique](design_physicalinfrastructure.html). Le trafic VXLAN réside sur le réseau local virtuel non balisé et est affecté au commutateur vDS privé.
 
 Par la suite, un pool d'ID de segment est affecté et les hôtes du cluster sont ajoutés à la zone de transfert. Seul unicast est utilisé dans la zone de transfert car la surveillance IGMP (Internet Group Management Protocol) n'est pas configurée dans {{site.data.keyword.cloud_notm}}.
 
@@ -139,13 +139,13 @@ Les administrateurs de cloud peuvent configurer les composants NSX requis, tels 
 
 ### Conception de commutateur distribué
 
-La conception utilise un nombre minimal de commutateurs distribués vSphere (VDS). Les hôtes du cluster sont connectés aux réseaux public et privé. Les hôtes sont configurés avec deux commutateurs virtuels distribués. L'utilisation de deux commutateurs est conforme à la pratique du réseau {{site.data.keyword.cloud_notm}} qui sépare le réseau public et le réseau privé. Le diagramme suivant illustre la conception VDS.
+La conception utilise un nombre minimal de commutateurs vDS. Les hôtes du cluster sont connectés aux réseaux public et privé. Les hôtes sont configurés avec deux commutateurs virtuels distribués. L'utilisation de deux commutateurs est conforme à la pratique du réseau {{site.data.keyword.cloud_notm}} qui sépare le réseau public et le réseau privé. Le diagramme suivant illustre la conception vDS.
 
 Figure 3. Conception de commutateur distribué
 
-![Conception de commutateur distribué](virtual_network_distributedswitch.svg "Conception VDS")
+![Conception de commutateur distribué](virtual_network_distributedswitch.svg "Conception vDS")
 
-Comme illustré dans la figure, un commutateur VDS est configuré pour la connectivité de réseau public (SDDC-Dswitch-Public) et l'autre commutateur VDS est configuré pour la connectivité de réseau privé (SDDC-Dswitch-Private).
+Comme illustré dans la figure, un commutateur vDS est configuré pour la connectivité de réseau public (SDDC-Dswitch-Public) et l'autre commutateur vDS est configuré pour la connectivité de réseau privé (SDDC-Dswitch-Private).
 
 La séparation des différents types de trafic est nécessaire pour réduire les conflits et les temps d'attente et renforcer la sécurité. Les VLAN sont utilisés pour segmenter les fonctions de réseau physique.
 
@@ -156,7 +156,7 @@ Tableau 3. Mappage VLAN aux types de trafic
 | VLAN  | Désignation | Type de trafic |
 |:----- |:----------- |:------------ |
 | VLAN1 | Public      | Disponible pour l'accès Internet |
-| VLAN2 | Privé   | Gestion ESXi, gestion, VXLAN (VTEP) |
+| VLAN2 | Privé A | Gestion ESXi, gestion, VXLAN (VTEP) |
 | VLAN3 | Privé B   | vSAN, NFS, vMotion |
 
 Le trafic issu des charges de travail transite sur des commutateurs logiques VXLAN.

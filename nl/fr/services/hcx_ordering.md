@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-17"
 
 ---
 
@@ -25,8 +25,15 @@ Pour ajouter le service VMware HCX on {{site.data.keyword.cloud_notm}} dans une 
 
 Pour installer HCX on {{site.data.keyword.cloud_notm}}, définissez les paramètres suivants :
 1. Renseignez la zone **Type d'interconnexion HCX** en sélectionnant l'une des options suivantes :
-  * **Réseau public** : HCX crée une connexion chiffrée entre des sites via le réseau public.
-  * **Réseau privé** : HCX crée une connexion chiffrée entre des sites via le réseau privé.
+  * **Réseau public** : HCX crée une connexion chiffrée entre des sites sur le réseau public. L'opération d'enregistrement et de décompte des licences est effectuée sur le réseau public. 
+  * **Interconnexion privée** : HCX crée une connexion chiffrée entre des sites sur le réseau privé. L'opération d'enregistrement et de décompte des licences est effectuée sur le réseau public. 
+  * **Réseau privé** : HCX crée une connexion chiffrée entre des sites sur le réseau privé. L'opération d'enregistrement et de décompte des licences est effectuée sur le réseau privé via un proxy HTTP. 
+3. Si vous sélectionnez **Réseau privé**, renseignez les zones suivantes :
+  * **Adresse du proxy** : adresse IPv4 du serveur proxy. 
+  * **Port du proxy** : port du serveur proxy. Le numéro de port est généralement 8080 ou 3128.
+  * **Nom d'utilisateur** : nom d'utilisateur si l'authentification auprès du proxy est requise. 
+  * **Mot de passe** : mot de passe si l'authentification auprès du proxy est requise. 
+  * **Confirmer le mot de passe** : entrez à nouveau le mot de passe pour la validation de l'authentification auprès du proxy. 
 2. Renseignez la zone **Type de certificat de noeud final public**. Si vous sélectionnez **Certificat de l'autorité de certification**, configurez les paramètres suivants :
   * **Contenu de certificat** : entrez le contenu du certificat de l'autorité de certification.
   * **Clé privée** : entrez la clé privée du certificat de l'autorité de certification.

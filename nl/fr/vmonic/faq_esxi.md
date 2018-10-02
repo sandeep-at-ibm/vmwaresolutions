@@ -47,7 +47,7 @@ Il est recommandé de maintenir activé l'accès racine sur les serveurs ESXi, f
 
 Si nécessaire, vous pouvez désactiver l'accès racine une fois que le statut des serveurs ESXi indique **Prêt à l'emploi** sur la console {{site.data.keyword.vmwaresolutions_short}}.
 
-Vous devez réactiver l'accès racine pour les opérations d'automatisation ultérieures, par exemple lorsque vous ajoutez ou retirez des partages de fichiers ou installez des services complémentaires, tels que Zerto sur {{site.data.keyword.cloud_notm}}.
+Vous devez réactiver l'accès racine pour les opérations d'automatisation ultérieures, par exemple lorsque vous ajoutez ou retirez des partages de fichiers ou installez des services complémentaires, tels que Zerto on {{site.data.keyword.cloud_notm}}.
 
 ## Puis-je ajouter des routes statiques sur mes serveurs ESXi afin de monter du stockage depuis d'autres emplacements ?
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 725 350" style="enable-background:new 0 0 725 350;" xml:space="preserve">
 <style type="text/css">
@@ -208,8 +208,8 @@
 			</g>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 242.5606 223.7695)" class="st6 st7">Paire à haute disponibilité</text>
-	<text transform="matrix(1 0 0 1 542.9683 223.7695)" class="st6 st7">Paire à haute disponibilité</text>
+	<text transform="matrix(1 0 0 1 238.5606 223.7695)" class="st6 st7">Paire HD</text>
+	<text transform="matrix(1 0 0 1 538.9683 223.7695)" class="st6 st7">Paire HD</text>
 </g>
 <g id="Layer_3">
 	<g>
@@ -322,7 +322,7 @@
 		<path class="st17" d="M400.3,72.8c0.3,0.2,0.6,0.5,0.8,0.7c0.2,0.2,0.3,0.5,0.3,0.9c0,0.3-0.3,0.5-0.6,0.5c-0.1,0-0.2-0.1-0.2-0.2
 			c-0.6-1-1.2-1.9-1.8-2.9c-0.1-0.2-0.3-0.4-0.5-0.6c0,0,0,0,0,0C399,71.7,399.6,72.2,400.3,72.8z"/>
 	</g>
-	<text transform="matrix(1 0 0 1 421.1582 81.1553)" class="st10 st19 st20">SE</text>
+	<text transform="matrix(1 0 0 1 421.1582 81.1553)" class="st10 st19 st20">OS</text>
 	
 		<image style="overflow:visible;" width="800" height="600" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzEAAAJcCAYAAADJiyqwAAAACXBIWXMAALTbAAC02wHmPdvjAAAA
 GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAA3SFJREFUeNrsvQmMnOeZ3/nU0XeT
@@ -1323,9 +1323,9 @@ AElFTkSuQmCC" transform="matrix(6.125000e-02 0 0 6.125000e-02 380.3199 45.98)">
 	</image>
 </g>
 <g id="Layer_9">
-	<text transform="matrix(1 0 0 1 501.4014 50.1719)"><tspan x="0" y="0" class="st6 st21">Déploiement de ONTAP Select</tspan><tspan x="0" y="18" class="st6 st21">et administration à l'aide</tspan><tspan x="0" y="36" class="st6 st21">du Web, de l'interface CLI, du swagger ou d'une API</tspan></text>
-	<text transform="matrix(1 0 0 1 9.2403 50.1719)"><tspan x="0" y="0" class="st6 st21">Outil d'administration de</tspan><tspan x="0" y="18" class="st6 st21">ONTAP Select Deploy</tspan></text>
-	<text transform="matrix(1 0 0 1 9.2403 234.9736)"><tspan x="0" y="18" class="st6 st21">Cluster à quatre noeuds</tspan><tspan x="0" y="0" class="st6 st21">ONTAP Select</tspan></text>
+	<text transform="matrix(1 0 0 1 501.4014 50.1719)"><tspan x="0" y="0" class="st6 st21">Déploiement et administration</tspan><tspan x="0" y="18" class="st6 st21">de ONTAP Select à l’aide du </tspan><tspan x="0" y="36" class="st6 st21">Webd, de l’interface CLI, du</tspan><tspan x="0" y="54" class="st6 st21">swagger ou d’une API</tspan></text>
+	<text transform="matrix(1 0 0 1 9.2403 50.1719)"><tspan x="0" y="0" class="st6 st21">Outil d’administration de</tspan><tspan x="0" y="18" class="st6 st21">ONTAP Select Deploy</tspan></text>
+	<text transform="matrix(1 0 0 1 9.2403 234.9736)"><tspan x="0" y="0" class="st6 st21">Cluster à quatre</tspan><tspan x="0" y="18" class="st6 st21">noeuds ONTAP </tspan><tspan x="0" y="36" class="st6 st21">Select</tspan></text>
 	<text transform="matrix(1 0 0 1 9.2403 326.7139)" class="st6 st21">Hyperviseurs</text>
 </g>
 </svg>

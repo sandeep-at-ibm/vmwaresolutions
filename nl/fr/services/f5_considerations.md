@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-23"
 
 Le service F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) fournit des services intelligents d'équilibrage de charge L4-L7 et de gestion du trafic à l'échelle locale et globale, une protection maximale via pare-feu des applications Web et réseau et un accès sécurisé aux applications fédérées.
 
-Vous pouvez installer plusieurs instances de ce service si besoin.
+Vous pouvez installer plusieurs instances de ce service si besoin. 
 
 **Disponibilité** : ce service est disponible uniquement pour les instances qui sont déployées en version 1.9 ou dans des éditions ultérieures.
 
@@ -26,15 +26,15 @@ Les composants suivants sont inclus avec le service F5 on {{site.data.keyword.cl
 * 4, 8 ou 16 Go de mémoire RAM par machine virtuelle en fonction de l'option de l'octroi de licence
 
 ### Utilisation en réseau
-* VXLAN (Private Virtual Extensible LAN) pour la synchronisation haute disponibilité
-* Accès à TMSH (Traffic Management Shell) et à la console de gestion via un réseau de gestion privé
+* VXLAN (Private Virtual Extensible LAN) pour la synchronisation haute disponibilité.
+* Accès à TMSH (Traffic Management Shell) et à la console de gestion via un réseau de gestion privé.
 
 ### Licences et frais
 Des frais de licence sont appliqués pour chaque machine virtuelle à chaque cycle de facturation en fonction de l'option d'octroi de licence (Bien, Mieux ou Meilleur) et de la bande passante choisie.
 
 **Important: ** vous ne pouvez pas modifier le niveau d'octroi de licence près installation du service. Pour modifier le niveau d'octroi de licence, vous devez supprimer le service existant, puis le réinstaller en sélectionnant une autre option d'octroi de licence.
 
-## Remarques relatives à l'installation de F5 on IBM Cloud
+## Remarques relatives à l'installation du service F5 on IBM Cloud
 
 Avant d'installer le service F5 on {{site.data.keyword.cloud_notm}}, passez en revue les remarques suivantes.
 
@@ -74,7 +74,7 @@ Compte tenu de ces exigences, vous devez prévoir l'espace requis pour F5 on {{s
 
 ## Exemple de commande de F5 on IBM Cloud
 
-Vous commandez une instance VMware vCenter Server **Petite** avec 2 serveurs ESXI et la configuration suivante : 16 coeurs à 2,10 GHz avec chacun 128 Go de RAM. Pour F5 on {{site.data.keyword.cloud_notm}}, vous sélectionnez le modèle de licence **Meilleur** et une valeur de 5 Gbit/s pour la **bande passante maximale**.
+Vous commandez une instance VMware vCenter Server **Petite** avec 2 serveurs ESXI et la configuration suivante : seize coeurs à 2,10 GHz avec chacun 128 Go de RAM. Pour F5 on {{site.data.keyword.cloud_notm}}, vous sélectionnez le modèle de licence **Meilleur** et une valeur de 5 Gbit/s pour la **bande passante maximale**.
 
 Dans ce cas, une unique machine virtuelle BIG-IP requiert, sur chaque serveur :
 * 2,1 GHz * 8 UC virtuelles = 16,8 GHz d'UC et
@@ -84,7 +84,7 @@ Au total, 33,6 GHz d'UC et 32 Go de RAM pour les deux machines virtuelles BIG-IP
 
 Chaque serveur ESXi a une capacité de 16 coeurs * 2,1 GHz = 33,6 GHz, de sorte que nous respectons les deux exigences si les deux serveurs sont actifs et qu'au moins 16,8 GHz d'UC et 16 Go de RAM sont disponibles sur chaque serveur.
 
-vSphere HA réserve toutefois par défaut 50 % d'UC et de mémoire RAM pour le basculement sur les instances vCenter Server initialement déployées avec 2 serveurs ESXi, de sorte que nous avons uniquement :
+Toutefois, par défaut, vSphere HA réserve 50 % d'UC et de mémoire RAM pour le basculement sur les instances vCenter Server initialement déployées avec 2 serveurs ESXi. Pour cet exemple, la disponibilité est la suivante : 
 
 `50 % de 2 * 16 coeurs * 2,1 GHz = 33,6 GHz disponibles`
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -17,12 +17,20 @@ Vous pouvez déployer facilement vos environnements virtuels VMware et gérer le
 ## Avantages d'IBM Cloud for VMware Solutions
 
 {{site.data.keyword.vmwaresolutions_short}} offre les avantages majeurs suivants :
-* **Portée mondiale **: vous pouvez développer la présence de votre cloud hybride en exploitant jusqu'à 30 {{site.data.keyword.CloudDataCents_notm}} pour entreprises à travers le monde.
-* **Intégration en toute transparence** : intégration en toute transparence dans le cloud hybride avec l'infrastructure {{site.data.keyword.cloud_notm}}.
-* **Mise à disposition rapide** : automatisation du déploiement et de la configuration de l'environnement VMware, de sorte que vous pouvez déployer rapidement un environnement d'entreprise VMware avec des serveurs {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} à la demande et des serveurs virtuels.
-* **Simplification** : vous pouvez utiliser une plateforme cloud VMware sans avoir à identifier, acquérir, déployer et gérer l'infrastructure physique sous-jacente (traitement, stockage et réseau), ni les licences logicielles.
-* **Souplesse d'extension et de réduction** : possibilité d'étendre et de réduire facilement vos charges de travail VMware en fonction de vos besoins métier.
-* **Console de gestion unique** : console unique pour déployer, accéder et gérer les environnements VMware sur {{site.data.keyword.cloud_notm}}.
+<dl>
+  <dt>Portée mondiale</dt>
+  <dd>Développez la présence de votre cloud hybride en exploitant jusqu'à 30 {{site.data.keyword.CloudDataCents_notm}} pour entreprises à travers le monde.</dd>
+  <dt>Intégration transparente</dt>
+  <dd>Intégration en toute transparence dans le cloud hybride avec l'infrastructure {{site.data.keyword.cloud_notm}}. </dd>
+  <dt>Mise à disposition rapide</dt>
+  <dd>Automatisation du déploiement et de la configuration de l'environnement VMware, de sorte que vous pouvez déployer rapidement un environnement d'entreprise VMware avec des serveurs {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} à la demande et des serveurs virtuels. </dd>
+  <dt>Simplification</dt>
+  <dd>Vous pouvez utiliser une plateforme cloud VMware sans avoir à identifier, acquérir, déployer et gérer l'infrastructure physique sous-jacente (traitement, stockage et réseau), ni les licences logicielles.</dd>
+  <dt>Souplesse d'extension et de réduction</dt>
+  <dd>Vous avez la possibilité d'étendre et de réduire facilement vos charges de travail VMware en fonction de vos besoins métier.</dd>
+  <dt>Console de gestion unique</dt>
+  <dd>Console unique pour déployer, accéder et gérer les environnements VMware sur {{site.data.keyword.cloud_notm}}.</dd>
+</dl>
 
 ## Offres de déploiement
 
@@ -96,7 +104,13 @@ Pour plus d'informations, voir [Présentation de HyTrust CloudControl on {{site.
 
 Le service HyTrust DataControl on {{site.data.keyword.cloud_notm}} offre un chiffrement renforcé avec une gestion de clés intégrée permettant de sécuriser les charges de travail tout au long de leur cycle de vie. Le service peut fournir un chiffrement au niveau du système d'exploitation et au niveau des données, ce qui signifie que n'importe quel répertoire, dossier ou fichier d'une charge de travail peut être chiffré et déchiffré.
 
-Pour plus d'informations, voir [Présentation de HyTrust DataControl sur {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html).
+Pour plus d'informations, voir [Présentation de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html).
+
+### HyTrust KeyControl on IBM Cloud
+
+Le service HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifie la gestion des charges de travail chiffrées en automatisant et en simplifiant le cycle de vie des clés de chiffrement. Le service peut facilement gérer les clés de chiffrement à l'échelle à l'aide du chiffrement compatible avec FIPS 140-2. En utilisant ce service, vous pouvez gérer les clés de chiffrement pour toutes vos machines virtuelles et tous vos magasins de données chiffrés et les faire évoluer pour prendre en charge des milliers de charges de travail chiffrées dans des déploiements de grande taille. 
+
+Pour plus d'informations, voir [Présentation de HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html).
 
 ### IBM Cloud Private Hosted
 
@@ -118,7 +132,7 @@ Pour plus d'informations, voir [Présentation de KMIP for VMware on {{site.data.
 
 ### Veeam on IBM Cloud
 
-Le service Veeam on {{site.data.keyword.cloud_notm}} s'intègre directement et en toute transparence à vos hyperviseurs VMware afin d'aider votre entreprise à obtenir la haute disponibilité requise. Il peut fournir des objectifs de point et de temps de reprise pour vos applications et vos données. Les objectifs de point et de temps de reprise peuvent être fournis moins de 15 minutes après la fin de la configuration. Ce service vous permet de contrôler directement à la fois la sauvegarde et la restauration de toutes les machines virtuelles de votre infrastructure depuis la console Veeam.
+Le service Veeam on {{site.data.keyword.cloud_notm}} s'intègre directement et en toute transparence à vos hyperviseurs VMware afin d'aider votre entreprise à obtenir la haute disponibilité requise. Il fournit des objectifs de point et de temps de reprise pour vos applications et vos données. Les objectifs de point et de temps de reprise sont fournis moins de 15 minutes après la fin de la configuration. Ce service vous permet de contrôler directement à la fois la sauvegarde et la restauration de toutes les machines virtuelles de votre infrastructure depuis la console Veeam.
 
 Pour plus d'informations, voir [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html).
 
@@ -130,7 +144,7 @@ Pour plus d'informations, voir [Présentation de VMware HCX on {{site.data.keywo
 
 ### Zerto on IBM Cloud
 
-Le service Zerto sur {{site.data.keyword.cloud_notm}} fournit des fonctions de réplication et de reprise après incident. Ces fonctions peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.
+Le service Zerto on {{site.data.keyword.cloud_notm}} fournit des fonctions de réplication et de reprise après incident. Ces fonctions peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.
 
 Pour plus d'informations, voir [Présentation de Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html).
 

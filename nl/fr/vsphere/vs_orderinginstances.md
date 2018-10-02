@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-11"
 
 # Commande de nouveaux clusters vSphere
 
-Pour déployer une plateforme virtuelle VMware hautement personnalisable, commandez un cluster VMware vSphere on {{site.data.keyword.cloud}}. Cette procédure permet de définir un nouveau cluster VMware vSphere.
+Pour déployer une plateforme virtuelle VMware hautement personnalisable, commandez un cluster VMware vSphere on {{site.data.keyword.cloud}}. Cette procédure permet de définir un nouveau cluster vSphere.
 
 Cette procédure vous guide lors de la sélection des composants VMware, des paramètres de serveur Bare Metal {{site.data.keyword.cloud_notm}}, des paramètres de stockage, des options de mise en réseau, pour créer un nouveau cluster. Une fois la commande passée, la configuration de cluster est capturée de sorte que vous pouvez y revenir et continuer, au besoin, à augmenter le cluster. Lorsque la commande est terminée, vous pouvez configurer manuellement le cluster VMware selon vos besoins.
 
@@ -34,7 +34,7 @@ Le nom de cluster doit être unique au sein de votre compte.
 
 Sélectionnez les composants VMware à commander avec votre cluster et spécifiez l'option d'octroi de licence pour les composants.
 
-### (Partenaires commerciaux IBM uniquement) Offres groupées de composants
+### Offres groupées de composants pour des partenaires commerciaux IBM
 
 Si vous êtes un partenaire commercial IBM, vous pouvez sélectionner une offre groupée de licences de composant lorsque vous commandez un nouveau cluster vSphere. Les offres groupées suivantes sont disponibles :
 
@@ -54,9 +54,9 @@ Vous pouvez également inclure dans votre commande les composants VMware suivant
 
 **Remarque :** l'option BYOL n'est pas disponible pour les partenaires commerciaux IBM.
 
-### (Réservé aux utilisateurs qui ne sont pas des partenaires commerciaux) Composants individuels
+### Composants individuels pour des partenaires non commerciaux
 
-Si vous n'êtes pas un partenaire commercial, vous pouvez sélectionner les composants VMware suivants pour votre cluster vSphere:
+Si vous n'êtes pas un partenaire commercial, vous pouvez sélectionner les composants suivants pour votre cluster vSphere :
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
@@ -115,20 +115,15 @@ Pour les commandes sans vSAN, les serveurs ESXi sont commandés avec un châssis
 
 Pour les commandes avec vSAN, les serveurs ESXi sont commandés avec un châssis de 12 disques et quatre disques commandés : deux pour le système d'exploitation ESXi et deux réservés à la mise en cache. Ces paramètres sont configurés par défaut et ne sont pas modifiables. Vous pouvez commander davantage de capacité sur disques en renseignant la zone **Type et taille de disque pour disques de capacité vSAN** et **Nombre de disques de capacité vSAN**.
 
-Si vous avez sélectionné le composant VMware vSAN pour le cluster, spécifiez les paramètres suivants :
+Si vous sélectionnez le composant VMware vSAN pour le cluster, spécifiez les paramètres suivants :
 
-### Type et taille de disque pour disques de capacité vSAN
+* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin. 
+* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter. 
+* **Type de disque pour disques de cache vSAN** : sélectionnez une option correspondant aux disques de cache dont vous avez besoin. 
 
-Cette option est disponible uniquement si vous avez sélectionné le composant VMware vSAN.
-
-Les types de disque suivants sont disponibles :
-* SSD SED 960 Go
-* SSD SED 1,9 To
-* SSD SED 3,8 To (les unités SSD SED 3,8 To sont prises en charge lorsqu'elles sont officiellement disponibles dans un centre de données)
-
-### Nombre de disques de capacité vSAN
-
-Cette option est disponible uniquement si vous avez sélectionné le composant VMware vSAN. Les options de nombre de disques sont 2, 4, 6 et 8.
+    **Remarque** : pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* **Nombre de disques de cache vSAN** : indiquez le nombre de disques de cache que vous souhaitez ajouter. 
 
 ## Paramètres d'interface réseau
 
@@ -136,7 +131,7 @@ Vous devez spécifier les paramètres d'interface réseau suivants lorsque vous 
 
 ### Préfixe de nom d'hôte
 
-Le nom d'hôte est utilisé pour toutes les commandes de serveur bare metal. Il est recommandé d'utiliser le nom d'hôte pour toutes les machines virtuelles de gestion, telles que vCenter Server et  NSX.
+Le nom d'hôte est utilisé pour toutes les commandes de serveur bare metal. Il est recommandé d'utiliser le nom d'hôte pour toutes les machines virtuelles de gestion, telles que vCenter Server et NSX.
 
 Le préfixe du nom d'hôte qui doit respecter les règles suivantes :
 * Le nom doit commencer et se terminer par un caractère alphanumérique.
@@ -160,6 +155,15 @@ Le nom de domaine utilisé pour tous les serveurs {{site.data.keyword.baremetal_
 * La dernière chaîne doit comporter entre 2 et 24 caractères.
 * Les autres chaînes doivent comporter entre 1 et 63 caractères.
 * Le nom de domaine ne doit pas dépasser 189 caractères.
+
+### Réseau public ou privé
+
+Les paramètres d'activation de carte d'interface réseau varient selon que vous sélectionnez **Réseau public et réseau privé** ou **Réseau privé uniquement**. Les services complémentaires suivants requièrent des cartes d'interface réseau public et ne sont pas disponibles si vous sélectionnez l'option de réseau privé :
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Réseaux locaux virtuels
 
@@ -192,7 +196,7 @@ Vous pouvez également choisir d'inclure la paire à haute disponibilité de dis
 
 Selon vos configurations, le coût estimé est généré et affiché instantanément dans le panneau **Récapitulatif de la commande** sur la droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant les détails de l'estimation.
 
-## Procédure
+## Procédure de commande de clusters vSphere
 
 1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur **VMware** dans le panneau de navigation de gauche, puis cliquez sur **VMware vSphere** dans la section **Centres de données virtuels**.
 2. Sur la page **VMware vSphere on IBM Cloud**, cliquez sur **Créer**.  
@@ -204,18 +208,18 @@ Selon vos configurations, le coût estimé est généré et affiché instantané
   Lorsque vous choisissez de fournir votre propre licence (mode BYOL) pour VMware vSphere Enterprise Plus, un ticket {{site.data.keyword.cloud_notm}} est ouvert automatiquement en votre nom pour demander que les licences vSphere par défaut sur vos serveurs {{site.data.keyword.baremetal_short}} commandés soient remplacées par vos propres licences.   
 
     **Important :** vous êtes responsable du suivi du ticket afin de remplacer la licence vSphere sur les nouveaux serveurs ESXi commandés. De la sorte, {{site.data.keyword.cloud_notm}} accorde l'annulation des frais de licence vSphere de l'infrastructure {{site.data.keyword.cloud_notm}} initialement fournie. Pour remplacer votre licence ESXi vSphere, voir [Configuration des paramètres de licence pour un hôte ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
-
 5. Spécifiez les paramètres de serveur bare metal :
    1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger le cluster.
    2. Sélectionnez le modèle d'UC et la taille de mémoire RAM.
    3. Spécifiez le nombre de serveurs bare metal.
-6. Si vous avez sélectionné **Stockage vSAN**, spécifiez les paramètres de stockage vSAN en renseignant les zones **Type et taille de disque pour disques de capacité vSAN** et **Nombre de disques de capacité vSAN**.
+6. Si vous avez sélectionné le composant **VMware vSAN**, procédez à la configuration de stockage vSAN. Spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**. 
 7. Spécifiez les paramètres d'interface réseau :
    1. Renseignez les zones Préfixe de nom d'hôte, Libelle de sous-domaine et Nom de domaine.
-   2. Sélectionnez l'interface réseau que vous désirez utiliser .
+   2. Sélectionnez le paramètre réseau **Réseau public et réseau privé** ou **réseau privé uniquement**.
+   3. Sélectionnez l'interface réseau que vous désirez utiliser .
     * Si vous voulez commander de nouveaux VLAN publics et privés, cliquez sur **Commander de nouveaux VLAN**.
     * Si vous voulez réutiliser les VLAN publics et privés existants lorsqu'ils sont disponibles, cliquez sur **Sélectionner des VLAN existants** et spécifiez les VLAN et éventuellement les sous-réseaux.
-    3. Spécifiez si vous souhaitez inclure la paire de dispositifs FortiGate Physical Appliance série 300 à haute disponibilité pour sécuriser votre environnement de cloud.  
+    4. Spécifiez si vous souhaitez inclure la paire de dispositifs FortiGate Physical Appliance série 300 à haute disponibilité pour sécuriser votre environnement de cloud.  
 8. Sur le panneau **Récapitulatif de la commande**, vérifiez la configuration du cluster et le coût estimé.
    * Pour sauvegarder la configuration en tant que modèle sans passer de commande, cliquez sur **Sauvegarde de la configuration**.
    * Pour passer la commande, assurez-vous que le compte qui devra être facturé est correct, passez en revue et acceptez les conditions, puis cliquez sur **Mettre à disposition**.

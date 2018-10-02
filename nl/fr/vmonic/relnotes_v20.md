@@ -10,13 +10,13 @@ lastupdated: "2017-11-20"
 
 # Notes sur l'édition pour la version 2.0
 
-Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour la liste des erreurs rectifiées dans les différentes éditions, les problèmes connus concernant le produit et des conseils supplémentaires pour l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour obtenir la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des astuces relatives à l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## FortiGate Virtual Appliance on IBM Cloud
 
 Le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances VMware Cloud Foundation instances et VMware vCenter Server en version 2.0 et ultérieure. Ce service déploie dans votre environnement une paire à haute disponibilité de dispositifs FortiGate Virtual Appliance qui vous permettent de réduire les risques en implémentant des contrôles de sécurité critiques au sein de votre infrastructure virtuelle.
 
-Vous pouvez commander des instances avec le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes à partir de l'onglet **Services** de la page des détails d'instance. En fonction de vos besoins, sélectionnez pour ce service l'une des trois tailles de déploiement et les options d'octroi de licence. Une fois le service correctement installé, vous pouvez gérer et configurer des règles de pare-feu pour les dispositifs FortiGate Virtual Appliance depuis la console FortiGate.
+Commandez des instances avec le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} déjà inclus ou ajoutez ultérieurement ce service à vos instances existantes à partir de l'onglet **Services** de la page des détails d'instance. En fonction de vos besoins, sélectionnez pour ce service l'une des trois tailles de déploiement et options d'octroi de licence. Une fois le service correctement installé, gérez et configurez des règles de pare-feu pour les dispositifs FortiGate Virtual Appliance depuis la console FortiGate.
 
 Pour plus d'informations, voir les rubriques suivantes :
 * [Composants et remarques pour FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)
@@ -24,7 +24,7 @@ Pour plus d'informations, voir les rubriques suivantes :
 
 ## Installation de plusieurs services pour F5 on IBM Cloud et le service FortiGate Virtual Appliance on IBM Cloud
 
-Vous pouvez désormais installer plusieurs instances du service F5 on {{site.data.keyword.cloud_notm}} et le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} pour une instance Cloud Foundation ou vCenter Server. Lorsque vous sélectionnez le service F5 ou le service FortiGate lors d'une commande d'instance, vous devez indiquer un nom pour l'instance de service de manière à la différentier des instances de service supplémentaires que vous installerez ultérieurement.
+Vous pouvez désormais installer plusieurs instances du service F5 on {{site.data.keyword.cloud_notm}} et le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} pour une instance Cloud Foundation ou vCenter Server. Lorsque vous sélectionnez le service F5 ou le service FortiGate lorsque vous commandez une instance, vous devez indiquer un nom pour l'instance de service de manière à la différentier des instances de service supplémentaires que vous installerez ultérieurement.
 
 Une fois le déploiement de l'instance achevé, vous pouvez ajouter d'autres instances du service F5 ou FortiGate en installant le service à partir de l'onglet **Ajouter des services** de la page des détails de l'instance. Vous ne pouvez ajouter qu'une seule instance de service à la fois et répéter le processus pour toutes les instances que vous voulez ajouter pour un service.
 
@@ -34,15 +34,15 @@ Pour plus d'informations, voir les rubriques suivantes :
 
 ## Mises à jour pour le service FortiGate Security Appliance on IBM Cloud
 
-Dans cette édition, le service Fortinet on {{site.data.keyword.cloud_notm}} a été renommé FortiGate Security Appliance (FSA) on {{site.data.keyword.cloud_notm}} et les deux dispositifs FortiGate Security Appliance du service sont configurés de manière à être sécurisés par défaut lorsqu'ils sont déployés dans votre instance :
-* Si vous déployez une paire de dispositifs FSA  dans le cadre d'une nouvelle instance Cloud Foundation ou vCenter Server, ces dispositifs sont configurés de manière à n'autoriser que les communications sortantes requises depuis votre instance vers le réseau public et à refuser toutes les autres communications.
-* Si vous déployez une paire de dispositifs FSA dans le cadre d'une instance Cloud Foundation ou vCenter Server existante, ces dispositifs sont configurés avec une règle explicite de manière à autoriser toutes les communications de gestion sortantes requises depuis votre instance vers le réseau public, et les dispositifs FSA sont également configurés avec une règle supplémentaire permettant toutes les autres communications afin de garantir que le trafic d'application existant n'est pas interrompu.
+Dans cette édition, le service Fortinet on {{site.data.keyword.cloud_notm}} a été renommé FortiGate Security Appliance (FSA) on {{site.data.keyword.cloud_notm}}. Les deux dispositifs FortiGate Security Appliance (FSA) du service sont configurés de manière à être sécurisés par défaut lorsqu'ils sont déployés dans votre instance. 
+* Si vous déployez une paire de dispositifs FSA dans le cadre d'une nouvelle instance Cloud Foundation ou vCenter Server, ces dispositifs sont configurés de manière à n'autoriser que les communications sortantes requises depuis votre instance vers le réseau public et à refuser toutes les autres communications.
+* Si vous déployez une paire de dispositifs FSA dans le cadre d'une instance Cloud Foundation ou vCenter Server existante, ces dispositifs sont configurés avec une règle explicite de manière à autoriser toutes les communications de gestion sortantes requises depuis votre instance vers le réseau public, et les dispositifs FSA sont également configurés avec une règle permettant toutes les autres communications afin de garantir que le trafic d'application existant n'est pas interrompu.
 
 Dans tous les cas, vous devez gérer la configuration des dispositifs FSA avec la plus grande attention de manière à n'autoriser que les communications nécessaires et à refuser toutes les autres communications.
 
 ## Cohérence du format du nom de domaine complet
 
-Le nom de domaine complet est désormais représenté de manière cohérente pour toutes les instances. Lorsque vous passez une commande, vous pouvez entrer vos propres préfixe de sous-domaine et préfixe de nom d'hôte. Ceci garantit que la convention de l'industrie en matière de format de nom de domaine complet est respectée, soit : `préfixe-nom-hôte<n>.préfixe-sousdomaine.nom-domaine`.
+Le nom de domaine complet est désormais représenté de manière cohérente pour toutes les instances. Lorsque vous passez une commande, vous pouvez entrer vos propres préfixe de sous-domaine et préfixe de nom d'hôte pour faire en sorte que la convention sur le format de nom de domaine complet (industrie) soit appliquée. Par exemple, `préfixe-nom-hôte<n>.préfixe-sousdomaine.nom-domaine`.
 
 Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
@@ -68,7 +68,7 @@ L'édition actuelle applique les améliorations et mises à jour de composant su
 * VMware vCenter Server 6.5U1a
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
-* VMware ESXi 6.5, Patch Release ESXi650-201710401-BG : mises à jour esx-base, esx-tboot, vsan et vsanhealth VIBs (2151061). Pour des détails concernant les correctifs, voir [Correctifs de sécurité du système d'exploitation de VMware vCenter Server Appliance Photon](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window}.
+* VMware ESXi 6.5, Patch Release ESXi650-201710401-BG. Mises à jour esx-base, esx-tboot, vsan et vsanhealth VIBs (2151061). Pour plus d'informations sur les modules de correction, voir [Modules de correction de sécurité du système d'exploitation de VMware vCenter Server Appliance Photon](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window}.
 
 **Remarque** : les instances existantes (à partir des éditions V1.9 et de niveau antérieur) ne peuvent pas être mises à niveau vers les versions de composant figurant dans cette liste.
 
@@ -85,6 +85,7 @@ Vous pouvez afficher les détails du cluster et ajouter jusqu'à cinq clusters �
 Vous pouvez désormais personnaliser la configuration du stockage vSAN en sélectionnant le nombre d'unités de stockage vSAN et leur taille dans votre commande d'instance.
 
 Pour plus d'informations, voir les rubriques suivantes :
+
 * [Présentation de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
 
@@ -98,7 +99,7 @@ Les paramètres de configuration de serveur bare metal suivants sont désormais 
 * Petite (Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz/128 Go de RAM/12 disques)
 * Grande (Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de RAM/12 disques)
 
-**Remarque** : le châssis dispose d'espace pour 12 disques, mais tous les emplacements ne sont pas remplis. La **Petite** configuration fournit deux unités Micron 5100 MAX de 1,9 To et la **Grande** configuration fournit quatre unités Micron 5100 PRO de 3,8 To.
+**Remarque** : le châssis dispose de suffisamment d'espace pour 12 disques. Tous les emplacements ne sont pas remplis. La **Petite** configuration fournit deux unités Micron 5100 MAX de 1,9 To et la **Grande** configuration fournit quatre unités Micron 5100 PRO de 3,8 To.
 
 Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
@@ -113,25 +114,25 @@ L'édition actuelle applique les mises à jour de composant suivantes au nouveau
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
 
-**Remarque :** les commandes personnalisées de vCenter Server avec ou sans le composant VMware vSAN incluent toujours un châssis de 12 disques qui laisse apparaître un coût légèrement supérieur pour les serveurs {{site.data.keyword.baremetal_short}} de la commande sans vSAN dans le PDF du coût estimé.
+**Remarque :** les commandes personnalisées de vCenter Server avec ou sans le composant VMware vSAN incluent toujours un serveur de châssis de 12 disques. Ce serveur laisse apparaître un coût légèrement supérieur pour les serveurs {{site.data.keyword.baremetal_short}} de la commande sans vSAN dans le PDF du coût estimé. 
 
 Pour plus d'informations sur les composants, voir [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html).
 
 ### Prise en charge de configuration multisite pour des instances vCenter Server
 
-Vous pouvez désormais déployer une instance vCenter Server en plus des instances secondaires associées à l'instance principale. Le modèle de configuration multisite utilise un concentrateur et une topologie en étoile (hub and spoke) avec un site principal et un maximum de 7 sites secondaires.
+Vous pouvez désormais déployer une instance vCenter Server en plus des instances secondaires associées à l'instance principale. Le modèle de configuration multisite utilise un concentrateur et une topologie en étoile (hub and spoke) avec un site principal et un maximum de sept sites secondaires.
 
 Pour plus d'informations, voir [Configuration multisite pour des instances vCenter Server](../vcenter/vc_multisite.html).
 
 ### Prise en charge du stockage vSAN personnalisé pour des instances vCenter Server
 
-Le stockage vSAN est désormais disponible sur les instances vCenter Server pour les instances principales comme secondaires. Il n'est disponible que si vous sélectionnez une configuration personnalisée par l'utilisateur. Vous pouvez désormais sélectionner l'édition de licence vSAN (Advanced ou Enterprise) qui vous convient lors de la commande d'une instance vCenter Server. Vous pouvez acheter la licence dans le cadre de votre commande ou fournir votre propre licence (BYOL, Bring Your Own License).
+Le stockage vSAN est désormais disponible sur les instances vCenter Server pour les instances principales comme secondaires. Il n'est disponible que lorsque vous sélectionnez une configuration personnalisée par l'utilisateur. Vous pouvez désormais sélectionner l'édition de licence vSAN (Advanced ou Enterprise) qui vous convient lors de la commande d'une instance vCenter Server. Vous pouvez acheter la licence dans le cadre de votre commande ou fournir votre propre licence (BYOL, Bring Your Own License).
 
 Pour plus d'informations, voir [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html).
 
 ### Apport de votre propre licence (BYOL, Bring Your Own License) pour les instances VMware vCenter Server
 
-BYOL est désormais disponible pour les instances vCenter Server. BYOL vous permet d'utiliser une ou plusieurs de vos propres licences vCenter Server, vSphere, vSAN et NSX VMware lors de la commande d'instances vCenter Server.
+BYOL est désormais disponible pour les instances vCenter Server. utilisez une ou plusieurs de vos propres licences vCenter Server, vSphere, vSAN et NSX VMware lorsque vous commandez des instances vCenter Server.
 
 Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
@@ -147,9 +148,9 @@ Pour le composant VMware vSAN, les types de disque suivants sont désormais disp
 * 1,9 To SSD SED
 * 3,8 To SSD SED
 
-**Remarques :**
-* Les unités SSD SED de 3,8 To seront prises en charge une fois officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
-* Les commandes avec ou sans le composant VMware vSAN incluent toujours un châssis de 12 disques qui laisse apparaître un coût légèrement supérieur pour les serveurs {{site.data.keyword.baremetal_short}} de la commande sans vSAN dans le PDF du coût estimé.
+**Remarques** :
+* Les unités SSD SED de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
+* Les commandes avec ou sans le composant VMware vSAN incluent toujours un serveur de châssis de 12 disques. Ce serveur laisse apparaître un coût légèrement supérieur pour les serveurs {{site.data.keyword.baremetal_short}} de la commande sans vSAN dans le PDF du coût estimé. 
 
 Pour plus d'informations, voir [Commande de nouveaux clusters vSphere](../vsphere/vs_orderinginstances.html).
 
@@ -158,11 +159,11 @@ Pour plus d'informations, voir [Commande de nouveaux clusters vSphere](../vspher
 ### Nouvelles options de serveur bare metal
 
 Les options de configuration de serveur bare metal suivantes sont désormais disponibles :
-* **Hautes performances (Moyenne)** – Licence Premium/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/128 Go de RAM/capacité de vingt-deux unités SSD de 1,9 To par noeud/capacité effective d'un cluster de 4 noeuds – 59 To
-* **Hautes performances (Grande)** – Licence Premium/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/128 Go de RAM/capacité de vingt-deux unités SSD de 3,8 To par noeud/capacité effective d'un cluster de 4 noeuds – 118 To
+* **Hautes performances (Moyenne)** – Licence Premium/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/128 Go de RAM/capacité de 22 unités SSD de 1,9 To par noeud/capacité effective d'un cluster de 4 noeuds – 59 To
+* **Hautes performances (Grande)** – Licence Premium/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/128 Go de RAM/capacité de 22 unités SSD de 3,8 To par noeud/capacité effective d'un cluster de 4 noeuds – 118 To
 * **Haute capacité** – Licence Standard/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/64 Go de RAM/capacité de dix unités SATA de 4 To par noeud/capacité effective d'un cluster de 4 noeuds – 60 To
 
-**Remarque :** les unités SSD de 3,8 To seront prises en charge une fois officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
+**Remarque :** les unités SSD de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
 
 Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation de NetApp ONTAP Select](../netapp/np_netappoverview.html)
@@ -170,7 +171,7 @@ Pour plus d'informations, voir les rubriques suivantes :
 
 ## Documentation nouvelle et mise à jour
 
-Les utilisateurs de VMware Cloud Foundation peuvent utiliser les instructions détaillées et la plateforme NSX de VMware sur {{site.data.keyword.cloud_notm}} pour permettre à des machines virtuelles de communiquer entre elles sur Internet. Pour plus d'informations, voir[Configuration de NSX pour des machines virtuelles de charge de travail sur VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} (VCF)](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}.
+Les utilisateurs de VMware Cloud Foundation peuvent utiliser les instructions détaillées et la plateforme NSX de VMware sur {{site.data.keyword.cloud_notm}} pour permettre à des machines virtuelles de communiquer entre elles et avec internet. Pour plus d'informations, voir[Configuration de NSX pour des machines virtuelles de charge de travail sur VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} (VCF)](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}.
 
 ## Améliorations et mises à jour apportées à l'interface utilisateur
 

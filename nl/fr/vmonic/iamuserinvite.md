@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-08-15"
 
 ## Résultats
 
-Une fois que les utilisateurs ajoutés ont accepté votre invitation, ils peuvent se connecter à la console {{site.data.keyword.vmwaresolutions_short}} et basculer sur votre compte. Pour ce faire, dans leurs paramètres de profil, ils doivent cliquer sur leur avatar à l'angle supérieur droit de la console {{site.data.keyword.vmwaresolutions_short}}. Les utilisateurs ajoutés peuvent alors collaborer et partager les services et les ressources disponibles dans votre compte spécifié.
+Une fois que les utilisateurs ajoutés ont accepté votre invitation, ils peuvent se connecter à la console {{site.data.keyword.vmwaresolutions_short}} et basculer sur votre compte. Pour ce faire, dans leurs paramètres de profil, ils doivent cliquer sur l'icône de leur compte utilisateur dans la bannière de la console {{site.data.keyword.vmwaresolutions_short}}. Les utilisateurs ajoutés peuvent alors collaborer et partager les services et les ressources disponibles dans votre compte spécifié.
 
 ### Liens connexes
 
