@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -32,18 +32,17 @@ Tableau 2. Nomenclature des composants logiciels des instances Cloud Foundation
 
 | Fabricant | Composant                                | Version      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 U1g (ESXi 6.5u1 avec le niveau de module de correction ESXi650-201803001 appliqué) |
-| VMware       | vCenter Server Appliance                 | 6.5 Update 1g |
-| VMware       | Contrôleur PSC (Platform Services Controller)             | 6.5 Update 1g |
+| VMware       | vSphere ESXi                             | 6.5 Update 2c (jusqu'au niveau de module de correction ESXi650-201808001) |
+| VMware       | vCenter Server Appliance                 | 6.5 Update 2c |
+| VMware       | Contrôleur PSC (Platform Services Controller)             | 6.5 Update 2c |
 | VMware       | vSAN                                     | 6.6.1        |
-| VMware       | NSX for vSphere                          | 6.3.5        |
+| VMware       | NSX for vSphere                          | 6.4.1        |
 | VMware       | Gestionnaire SDDC                             | 2.4          |
-| IBM          | CloudDriver                              | 2.5          |
 | Microsoft    | Windows Server édition Standard (64 bits) | 2012R2       |
 
 ## Paramètres de configuration avancée pour les serveurs ESXi
 
-Consultez le tableau suivant pour une présentation des paramètres de configuration avancée applicables aux serveurs ESXi selon que l'instance Cloud Server est déployée dans la version 2.2 ou ultérieure ou mise au niveau vers la version 2.2 ou ultérieure à partir d'une version 2.1 ou d'une édition antérieure.
+Consultez le tableau suivant pour obtenir une présentation des paramètres de configuration avancée appliqués aux serveurs ESXi. Les paramètres varient selon que l'instance Cloud Foundation est déployée dans (ou mise à niveau vers) la version 2.2 ou une version ultérieure à partir d'une édition précédente (V2.1 ou antérieure). 
 
 Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les instances et clusters Cloud Foundation
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -16,19 +16,19 @@ Passez en revue les informations suivantes pour des détails relatifs aux remarq
 
 Pour passer en revue les composants de mise en réseau inclus dans votre instance Cloud Foundation, voir [Spécifications techniques relatives aux instances Cloud Foundation](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
-## Remarques relatives au pare-feu NSX
+## Remarques relatives aux pare-feu
 
-Si vous utilisez des pare-feu DFW NSX, vous devez configurer des règles pour toutes les communications établies à partir de l'instance de serveur virtuel {{site.data.keyword.IBM}} CloudDriver et des machines virtuelles SDDC Manager de manière à autoriser tous les protocoles à communiquer sur les adresses IP `10.0.0.0/8` et `161.26.0.0/16`.
+Si vous utilisez des pare-feu, vous devez configurer des règles pour toutes les communications établies à partir de l'instance de serveur virtuel {{site.data.keyword.IBM}} CloudDriver et des machines virtuelles SDDC Manager. Ces règles doivent autoriser tous les protocoles à communiquer sur les adresses IP `10.0.0.0/8` et `161.26.0.0/16`. Ces types de pare-feu sont notamment les pare-feu DFW (Distributed Firewall) NSX ou les pare-feu Vyatta. 
 
 ## Utilisation de VMware NSX avec vos machines virtuelles
 
 Lors du déploiement d'une instance Cloud Foundation, VMware NSX est commandé, installé, mis sous licence et configuré dans votre instance. De même, NSX Manager, des contrôleurs NSX et la zone de transport NSX sont configurés et chaque serveur ESXi est configuré avec les composants NSX.
 
-Cependant, si vos machines virtuelles de charge de travail ont besoin de communiquer entre elles eet d'accéder à Internet, c'est à vous de configurer NSX pour que vos machines virtuelles l'utilisent.
+Cependant, si vos machines virtuelles de charge de travail ont besoin de communiquer entre elles et d'accéder à internet, c'est à vous de configurer NSX pour que vos machines virtuelles l'utilisent.
 
-Pour plus d'informations sur la configuration de NSX :
+Pour plus d'informations sur la configuration de NSX, voir les rubriques suivantes :
 * Pour une instance Cloud Foundation principale (unique), voir [Configuration de NSX pour des machines virtuelles de charge de travail sur VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/).
-* Pour une instance Cloud Foundation multisite, voir [Connexion sécurisée à vos charges de travail VMware privées dans {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html).
+* Pour une instance Cloud Foundation multisite, voir Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}} (https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html).
 
 ## Remarques relatives à la modification de mots de passe pour des composants NSX
 

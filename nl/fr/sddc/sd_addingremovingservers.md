@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-17"
 
 Vous pouvez accroître ou réduire la capacité de votre instance VMware Cloud Foundation en fonction de vos besoins métier en ajoutant ou en supprimant des serveurs ESXi.
 
-Une instance Cloud Foundation peut comporter jusqu'à cinq clusters, dont l'un est celui par défaut. Chaque cluster initial peut avoir jusqu'à 51 serveurs ESXi et les clusters additionnels jusqu'à 59.
+Une instance Cloud Foundation peut comporter jusqu'à cinq clusters, dont l'un est celui par défaut. Chaque cluster initial peut avoir jusqu'à 51 serveurs ESXi et les clusters supplémentaires jusqu'à 59 serveurs.
 
 ## Ajout de serveurs ESXi à des instances Cloud Foundation
 
@@ -32,7 +32,7 @@ Une instance Cloud Foundation peut comporter jusqu'à cinq clusters, dont l'un e
 5. Dans la section **Serveurs ESXi**, cliquez sur **Ajouter**.
 6. Dans la fenêtre **Ajouter un serveur**, indiquez le nombre de serveurs que vous voulez ajouter, passez en revue le coût estimé, puis cliquez sur **Ajouter**.
 
-### Conséquences de l'ajout de serveurs ESXi
+### Résultats après l'ajout de serveurs ESXi
 
 1. Un bref délai peut être observé sur la console entre le passage du statut **Prêt à l'emploi** au statut **Modification en cours**. Laissez l'opération s'exécuter complètement avant d'apporter d'autres modifications à l'instance.
 2. Un courrier électronique vous avise de l'ajout de vos serveurs ESXi.
@@ -45,7 +45,7 @@ Une instance Cloud Foundation peut comporter jusqu'à cinq clusters, dont l'un e
 * Ne retirez pas de serveurs ESXi depuis le client Web VMware vSphere. Les modifications apportées sur le client Web VMware vSphere ne sont pas synchronisées avec la console {{site.data.keyword.vmwaresolutions_short}}.
 * La plateforme de base que vous avez commandée dispose par défaut de 4 serveurs ESXi. Vous pouvez supprimer les serveurs ESXi que vous avez ajoutés. Vous ne pouvez pas supprimer les serveurs ESXi par défaut.
 * Avant de retirer des serveurs ESXi avec le service F5 on {{site.data.keyword.cloud_notm}} ou FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installé, vous devez faire migrer les machines virtuelles F5 BIG-IP et FortiGate vers un autre serveur ESXi que celui sur lequel elles sont hébergées.
-* Avant de supprimer des serveurs ESXi sur lesquels le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} est installé, vérifiez qu'aucune opération de sauvegarde ou de restauration (en échec ou en cours) n'est active, car ce type d'opération pourrait empêcher la suppression des serveurs ESXi.
+* Avant de retirer des serveurs ESXi sur lesquels le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} est installé, vérifiez qu'aucune opération de sauvegarde ou de restauration n'est active. En effet, les opérations actives, qu'elles aient échoué ou qu'elles soient en cours, pourraient empêcher le retrait des serveurs ESXi. 
 
 ## Procédure de retrait de serveurs ESXi
 
@@ -55,7 +55,7 @@ Une instance Cloud Foundation peut comporter jusqu'à cinq clusters, dont l'un e
 4. Dans le tableau **CLUSTERS**, cliquez sur le cluster sur lequel vous désirez retirer des serveurs ESXi.
 6. Dans la section **Serveurs ESXi**, sélectionnez les serveurs que vous désirez supprimer et cliquez sur **Retirer**.
 
-### Conséquences du retrait de serveurs ESXi
+### Résultats après le retrait de serveurs ESXi
 
 1. Un bref délai peut être observé sur la console entre le passage du statut **Prêt à l'emploi** au statut **Modification en cours**. Laissez l'opération s'exécuter complètement avant d'apporter d'autres modifications à l'instance.
 2. Un courrier électronique vous avise du retrait de vos serveurs ESXi.

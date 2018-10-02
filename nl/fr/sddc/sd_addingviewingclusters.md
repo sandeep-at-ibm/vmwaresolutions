@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-14"
 
 ---
 
@@ -40,11 +40,11 @@ Le nom du cluster qui doit respecter les règles suivantes :
 
 L'{{site.data.keyword.CloudDataCent}} du cluster est, par défaut, l'{{site.data.keyword.CloudDataCent_notm}} de l'instance Cloud Foundation. Vous pouvez déployer le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui de l'instance déployée, sous réserve que la latence du réseau entre les deux {{site.data.keyword.CloudDataCents_notm}} soit inférieure à 150 ms. Pour vérifier la latence du réseau, utilisez un outil tel que [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-Les centres de données dont vous disposez dépendent de la configuration de serveur bare metal sélectionnée pour le déploiement. Si vous sélectionnez la configuration **Personnalisée**, vous pouvez déployer le cluster dans un autre pod de l'infrastructure {{site.data.keyword.cloud}} si le centre de données sélectionné contient des pods supplémentaires. Cette possibilité se révèle utile lorsque le pod de l'infrastructure {{site.data.keyword.cloud_notm}} où est déployée l'instance initiale a atteint sa capacité maximale.
+Les centres de données dont vous disposez dépendent de la configuration de serveur bare metal qui est sélectionnée pour le déploiement. Si vous sélectionnez la configuration **Personnalisée**, vous pouvez également déployer le cluster dans un autre pod de l'infrastructure {{site.data.keyword.cloud}} si le centre de données sélectionné contient des pods supplémentaires. Cette configuration se révèle utile lorsque le pod de l'infrastructure {{site.data.keyword.cloud_notm}} par défaut où est déployée l'instance initiale a atteint sa capacité maximale.
 
 **Remarque** : les configurations de serveur bare metal **Petite** et **Grande** normalisées utilisent un pod par défaut qui ne peut pas être modifié.
 
-Si vous déployez le cluster dans un autre centre de données ou pod, trois VLAN supplémentaires sont commandés pour une utilisation avec les serveurs {{site.data.keyword.baremetal_short}} commandés.
+Si vous déployez le cluster dans un autre centre de données ou pod, au moins trois VLAN supplémentaires sont commandés pour une utilisation avec les serveurs {{site.data.keyword.baremetal_short}} commandés.
 
 ### Paramètres de serveur bare metal
 
@@ -77,7 +77,15 @@ Pour les configurations de serveur bare metal **préconfigurées**, vous ne pouv
 * Pour la configuration de serveur bare metal **Petite**, deux unités de disque SED SSD de 1,9 To sont commandées.
 * Pour la configuration de serveur bare metal **Grande**, quatre unités de disque SED SSD de 3,8 To sont commandées.
 
-Pour la configuration de serveur bare metal **Personnalisée**, vous pouvez personnaliser le stockage vSAN en spécifiant le nombre de disques de capacité vSAN et la taille et le type de disque répondant à vos besoins en matière de stockage.
+Pour la configuration de serveur bare metal **Personnalisée** vous pouvez personnaliser le stockage vSAN en spécifiant les paramètres suivants : 
+
+* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin. 
+* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter. 
+* **Type de disque pour disques de cache vSAN** : sélectionnez une option correspondant aux disques de cache dont vous avez besoin. 
+
+    **Remarque** : pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* **Nombre de disques de cache vSAN** : indiquez le nombre de disques de cache que vous souhaitez ajouter. 
 
 ### Paramètres d'octroi de licence
 
@@ -99,8 +107,8 @@ Vous pouvez spécifier les options d'octroi de licence pour les composants VMwar
    * Si vous avez sélectionné **Personnalisée**, renseignez les zones **Modèle UC** et **Mémoire RAM**.
    * Si vous avez sélectionné **Préconfigurée**, renseignez la zone **Configuration de serveur bare metal**.
 7. Procédez à la configuration du stockage :
-   * Si vous avez sélectionné **Personnalisée** pour la configuration du serveur bare metal, renseignez les zones **Nombre de disques de capacité vSAN** et **Type et taille de disque pour disques de capacité vSAN**.
-   * Si vous avez sélectionné l'option **Préconfigurée** pour la configuration de serveur bare metal, sachez que les paramètres de stockage des configurations de serveur bare metal normalisées **Petite** et **Grande** ne sont pas modifiables.
+   * Si vous avez sélectionné l'option **Préconfigurée** pour la configuration de serveur bare metal, les paramètres de stockage des configurations de serveur bare metal normalisées **Petite** et **Grande** ne sont pas modifiables.
+   * Si vous avez sélectionné le type **Personnalisée** pour la configuration de serveur bare metal, spécifiez les types de disque pour les disques de cache et de capacité VSAN, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**. 
 8. Spécifiez de quelle manière les clés de licence sont fournies :
    * Si vous êtes un partenaire commercial, la licence vSphere (Enterprise Plus edition) et la licence vSAN sont incluses et achetées en votre nom. Vous devez néanmoins spécifier l'édition pour la licence vSAN.
    * Si vous n'êtes pas un partenaire commercial, vous pouvez sélectionnez l'une des options suivantes :
@@ -166,7 +174,7 @@ Vous pouvez spécifier les options d'octroi de licence pour les composants VMwar
         <dt class="dt dlterm">Suppression en cours</dt>
         <dd class="dd">La suppression du serveur ESXi est en cours.</dd>
         </dl>
-   * Le détails de la licence vSAN et de la licence vSphere. Les détails de licence vSphere sont disponibles uniquement lorsque vous avez choisi d'utiliser votre propre licence VMware (mode BYOL) durant la commande du cluster :
+   * Le détails de la licence vSAN et de la licence vSphere. Les détails de licence vSphere sont disponibles uniquement lorsque vous avez choisi d'utiliser votre propre licence VMware (mode BYOL) lorsque vous avez commandé le cluster :
        * **Type de licence** : licence vSAN ou licence vSphere.
        * **Type de commande** : la licence est fournie par l'utilisateur (mode BYOL) ou achetée au nom de l'utilisateur.
        * **Edition de licence** : édition de la licence.

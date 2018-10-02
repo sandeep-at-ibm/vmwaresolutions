@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -37,7 +37,7 @@ Cette couche se compose de vCenter Server, qui représente la couche de gestion 
 
 Sur la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez augmenter et réduire la capacité de vos instances à l'aide des fonctions d'ajout et de suppression de serveurs ESXi. De plus, des fonctions de gestion du cycle de vie, telles que l'application de mises à jour et de mises à niveau des composants VMware dans l'environnement hébergé sont également disponibles.
 
-Pour plus d'informations sur l'architecture, voir [Présentation de Solution](../archiref/solution/solution_overview.html).
+Pour plus d'informations sur l'architecture, voir [Présentation de la solution](../archiref/solution/solution_overview.html).
 
 ## Spécifications techniques relatives aux instances Cloud Foundation
 
@@ -63,14 +63,15 @@ Les composants réseau suivants sont commandés :
 * Trois VLAN (réseaux locaux virtuels) : un VLAN public et deux VLAN privés
 * Passerelle de gestion sécurisée VMware NSX Edge Services Gateway (ESG) pour le trafic de gestion HTTPS sortant, déployée par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **Important** : vous n'avez pas accès à cette passerelle ESG et vous ne pouvez pas l'utiliser. Si vous la modifiez, vous ne pourrez plus gérer l'instance Cloud Foundation depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, sachez que si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
+  **Important** : vous n'avez pas accès à cette passerelle ESG et vous ne pouvez pas l'utiliser. Si vous la modifiez, vous ne pourrez plus gérer l'instance Cloud Foundation depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
+
 
 * La fonction EVC (Enhanced vMotion Compatibility) est automatiquement activée si vous disposez d'un cluster existant avec des serveurs ESXi qui sont pris en charge par la version en cours de VMware vSphere. EVC fournit la compatibilité vMotion pour tous les serveurs ESXi d'un cluster en s'assurant que tous les serveurs ESXi d'un cluster exposent le même jeu de fonctions d'UC aux machines virtuelles. Grâce à EVC, les machines virtuelles peuvent migrer d'un serveur ESXi à l'autre dans le cluster, même si les UC réelles sur les serveurs ESXi sont potentiellement différentes.
 
 ### Instance de serveur virtuel
 
 Les instances de serveur virtuel suivantes sont commandées :
-* Une instance de serveur virtuel pour les services Microsoft Active Directory (AD) et le système de noms de domaine (DNS, Domain Name System), requise pour la prise en charge des configurations multisite. La spécification de cette instance de serveur virtuel est la suivante : Windows 2012 R2 (8 Go de RAM / 2 coeurs d'UC / disque de 100 Go / liaisons montantes privées doubles de 1 Gbps).
+* Une pour les services Microsoft Active Directory (AD) et système de noms de domaine (DNS, Domain Name System). L'instance de serveur virtuel est requise pour le support de configuration multisite. La spécification de cette instance de serveur virtuel est la suivante : Windows 2012 R2 (8 Go de RAM / 2 coeurs d'UC / disque de 100 Go / liaisons montantes privées doubles de 1 Gbps).
 * Une instance de serveur virtuel pour IBM CloudBuilder, fermée une fois le déploiement de l'instance terminé.
 * (Si vous commandez Veeam on {{site.data.keyword.cloud_notm}}) Une instance de serveur virtuel pour le service de sauvegarde Veeam est commandée.
 
@@ -78,9 +79,10 @@ Les instances de serveur virtuel suivantes sont commandées :
 
 Le stockage suivant est commandé selon la configuration des serveurs {{site.data.keyword.baremetal_short}} sélectionnée :
 * Deux disques d'amorçage SATA de 1 To
-* Deux disque cache SSD (Solid State Disk) de 960 Go
+* Deux disques cache SSD (Solid-State Disk) de 960 Go
 * Un contrôleur de disque RAID
-* Pour la configuration **Personnalisée** uniquement, vous pouvez définir le nombre d'unités de disque ainsi que le type et la capacité des disques en fonction de vos besoins.
+* Pour la configuration **Personnalisée** uniquement, vous pouvez définir le nombre d'unités de disque ainsi que le type et la capacité des disques en fonction de vos besoins. De plus, vous disposez de l'option Hautes performances avec Intel Optane, qui fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité.
+L'option Hautes performances avec Intel Optane dépend du modèle d'UC. 
 * Pour la configuration **Préconfigurée**, **Petite** uniquement : deux disques SSD haute capacité de 1,9 To
 * Pour la configuration **Préconfigurée**, **Grande** uniquement : quatre disques SSD haute capacité de 3,8 To
 
@@ -95,7 +97,7 @@ Le stockage suivant est commandé selon la configuration des serveurs {{site.dat
 
 ## Spécifications techniques relatives aux noeuds d'extension Cloud Foundation
 
-Chaque noeud d'extension Cloud Foundation déployé génère des frais, imputés à votre compte {{site.data.keyword.cloud_notm}}, pour les composants suivants.
+Chaque noeud d'extension Cloud Foundation déploie et génère des frais, imputés à votre compte {{site.data.keyword.cloud_notm}}, pour les composants suivants.
 
 ### Matériel pour les noeuds d'extension
 

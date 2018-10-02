@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -19,7 +19,7 @@ Une mise à jour disponible est un enregistrement dans la liste des mises à jou
 ## Avant de commencer
 
 Avant d'appliquer une mise à jour, développez l'entrée de mise à jour en cliquant sur la flèche vers le bas et vérifiez les informations suivantes :
-* La version de la mise à jour. Vous devez appliquer les mises à jour par ordre chronologique, c'est-à-dire de la plus ancienne à la plus récente. Assurez-vous d'avoir appliqué toutes les mises à jour précédentes avant d'appliquer la plus récente. Par exemple, vous devez appliquer la mise à jour V2.3 avant de tenter d'appliquer la mise à jour V2.4.
+* La version de la mise à jour. Vous devez appliquer les mises à jour par ordre chronologique, c'est-à-dire de la plus ancienne à la plus récente. Assurez-vous d'avoir appliqué toutes les mises à jour précédentes avant d'appliquer la plus récente. Par exemple, vous devez appliquer la mise à jour V2.4 avant de tenter d'appliquer la mise à jour V2.5.
 * Si un temps d'indisponibilité est nécessaire.
 * Le temps total estimé pour effectuer la mise à jour.
 * L'impact de la mise à jour sur l'environnement virtuel VMware. Le tableau 1 indique comment les différents niveaux d'impact affectent le système.
@@ -56,7 +56,7 @@ Tableau 1. Niveaux de mise à jour et impact
 5. Cliquez sur la flèche vers le bas pour développer la mise à jour à appliquer, puis effectuez l'une des opérations suivantes :
    *  Pour lancer immédiatement la mise à jour, cliquez sur l'icône de menu déroulant dynamique dans la colonne **Actions** de l'entrée de mise à jour, puis cliquez sur **Mettre à jour maintenant**.
    *  Pour planifier une mise à jour ultérieure, cliquez sur l'icône de menu déroulant dynamique dans la colonne **Actions** de l'entrée de mise à jour, puis cliquez sur **Planifier la mise à jour**. Sélectionnez la date et l'heure ainsi que le fuseau horaire auxquels la mise à jour devra commencer. Cliquez sur **OK**.
-6. Si vous appliquez des mises à jour à des instances Cloud Foundation dans une configuration de déploiement multisite, une section intitulée **Etapes de mise à jour obligatoires** s'affiche. Cette section répertorie les opérations de mise à jour requises pour toutes les instances du déploiement multisite. Effectuez les étapes dans l'ordre en cliquant sur **Appliquer la mise à jour** pour chaque étape. Vous devez attendre la fin de chaque étape avant de passer à la suivante.
+6. Si vous appliquez des mises à jour à des instances Cloud Foundation dans une configuration de déploiement multisite, une section intitulée **Etapes de mise à jour obligatoires** s'affiche, dans laquelle sont répertoriées les opérations de mise à jour qui sont requises pour toutes les instances du déploiement multisite. Effectuez les étapes dans l'ordre en cliquant sur **Appliquer la mise à jour** pour chaque étape. Vous devez attendre la fin de chaque étape avant de passer à la suivante.
 
 ## Résultats
 
@@ -71,7 +71,7 @@ Tableau 1. Niveaux de mise à jour et impact
 
 5. Pour plus d'informations sur les statuts de mise à jour, voir le tableau suivant.
 
-   Tableau 2 : Détails relatifs aux statuts de mise à jour
+   Tableau 2. Détails relatifs aux statuts de mise à jour
 
     <table>
       <tr>
