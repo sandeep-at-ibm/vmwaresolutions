@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -49,7 +49,7 @@ Vous aurez besoin d'un compte {{site.data.keyword.cloud_notm}} et d'un compte d'
    </tr>
    <tr>
       <td>IBMid</td>
-      <td>En utilisant l'**IBMid**, vous pouvez utiliser un seul et même nom d'utilisateur de connexion pour tous vos produits et services IBM, y-compris {{site.data.keyword.cloud_notm}}. {{site.data.keyword.vmwaresolutions_short}} est fourni en tant que solution d'infrastructure dans le catalogue {{site.data.keyword.cloud_notm}}. Pour accéder à la console {{site.data.keyword.vmwaresolutions_short}}, vous devez disposer d'un **IBMid**.<br><br>Afin d'utiliser votre **IBMid** pour vous connecter à la console {{site.data.keyword.vmwaresolutions_short}}, vous devez associer l'**IBMid** à un compte {{site.data.keyword.cloud_notm}}. Lors de votre première connexion à la console, vous avez le choix entre associer votre **IBMid** à un compte {{site.data.keyword.cloud_notm}} existant ou souscrire à un nouveau compte {{site.data.keyword.cloud_notm}}. Le nouveau compte {{site.data.keyword.cloud_notm}} est automatiquement associé à votre **IBMid**. Ce processus n'est à effectuer qu'une seule fois.<br><br>En cas de problème lors de l'association de votre **IBMid** à un compte {{site.data.keyword.cloud_notm}},  voir [Traitement des incidents liés à l'accès à {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html).</td>
+      <td>En utilisant l'**IBMid**, vous pouvez utiliser un seul et même nom d'utilisateur de connexion pour tous vos produits et services IBM, y-compris {{site.data.keyword.cloud_notm}}. {{site.data.keyword.vmwaresolutions_short}} est fourni en tant que solution d'infrastructure dans le catalogue {{site.data.keyword.cloud_notm}}. Pour accéder à la console {{site.data.keyword.vmwaresolutions_short}}, vous devez disposer d'un **IBMid**.<br><br>Afin d'utiliser votre **IBMid** pour vous connecter à la console {{site.data.keyword.vmwaresolutions_short}}, vous devez associer l'**IBMid** à un compte {{site.data.keyword.cloud_notm}}. Lors de votre première connexion à la console, vous avez le choix entre associer votre **IBMid** à un compte {{site.data.keyword.cloud_notm}} existant ou souscrire à un nouveau compte {{site.data.keyword.cloud_notm}}. Le nouveau compte {{site.data.keyword.cloud_notm}} est automatiquement associé à votre **IBMid**. Ce processus n'est à effectuer qu'une seule fois.<br><br>En cas de problème lors de l'association de votre **IBMid** à un compte {{site.data.keyword.cloud_notm}}, voir [Traitement des incidents liés à l'accès à {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html).</td>
    </tr>
    <tr>
       <td>Compte IBM Cloud</td>
@@ -132,6 +132,10 @@ Examinez et sélectionnez des services complémentaires pour votre offre de dép
        <td>Le service HyTrust DataControl on {{site.data.keyword.cloud_notm}} offre un chiffrement renforcé avec une gestion de clés intégrée permettant de sécuriser les charges de travail tout au long de leur cycle de vie. Le service peut fournir un chiffrement au niveau du système d'exploitation et au niveau des données, ce qui signifie que n'importe quel répertoire, dossier ou fichier d'une charge de travail peut être chiffré et déchiffré.</td>
     </tr>
     <tr>
+       <td>[HyTrust KeyControl on IBM Cloud](services/htkc_considerations.html)</td>
+       <td>Le service HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifie la gestion des charges de travail chiffrées en automatisant et en simplifiant le cycle de vie des clés de chiffrement. Le service peut facilement gérer les clés de chiffrement à l'échelle à l'aide du chiffrement compatible avec FIPS 140-2. </td>
+    </tr>
+    <tr>
        <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
        <td>Le service {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} fournit la puissance des microservices et des conteneurs à votre environnement VMware sur {{site.data.keyword.cloud_notm}}. Grâce à ce service, vous pouvez déployer le même modèle opérationnel et les mêmes outils VMware et {{site.data.keyword.cloud_notm}} locaux dans {{site.data.keyword.cloud_notm}}.</td>
     </tr>
@@ -153,7 +157,7 @@ Examinez et sélectionnez des services complémentaires pour votre offre de dép
     </tr>
     <tr>
        <td>[Zerto on IBM Cloud](services/addingzertodr.html)</td>
-       <td>Le service Zerto sur {{site.data.keyword.cloud_notm}} fournit des fonctions de réplication et de reprise après incident, qui peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.</td>
+       <td>Le service Zerto on {{site.data.keyword.cloud_notm}} fournit des fonctions de réplication et de reprise après incident, qui peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.</td>
     </tr>
    </table>
 
@@ -175,7 +179,7 @@ Pour plus d'informations sur la configuration de votre compte utilisateur et des
 
 Après avoir sélectionné une offre de déploiement, laquelle est gérée en tant qu'instance dans la console, lancez la procédure de commande.
 
-Pour plus d'informations sur la commande d'une instance, reportez-vous aux rubriques suivantes en fonction de votre sélection d'une offre de déploiement :
+Pour plus d'informations sur la commande d'une instance, reportez-vous aux rubriques suivantes en fonction de l'offre de déploiement que vous avez sélectionnée :
 * [Commande d'instances vCenter Server](vcenter/vc_orderinginstance.html)
 * [Commande d'instances vCenter Server with Hybridity Bundle](vcenter/vc_hybrid_orderinginstance.html)
 * [Commande d'instances Cloud Foundation](sddc/sd_orderinginstance.html)
@@ -187,7 +191,7 @@ Pour plus d'informations sur la commande d'une instance, reportez-vous aux rubri
 
 Après avoir passé une commande d'instance à l'**étape 3**, le déploiement de l'instance démarre automatiquement. Vous pouvez vérifier le statut du déploiement en affichant les détails de l'instance. Une fois le déploiement de l'instance achevé, vous pouvez également examiner le récapitulatif et les informations détaillées de l'instance et de ses services complémentaires sur la page des détails de l'instance.
 
-Pour plus d'informations sur l'affichage de l'instance que vous avez commandée, reportez-vous aux rubriques suivantes :
+Pour plus d'informations sur l'affichage de l'instance que vous avez commandée, voir les rubriques suivantes :
 * [Affichage des instances vCenter Server](vcenter/vc_viewinginstances.html)
 * [Affichage des instances vCenter Server with Hybridity Bundle](vcenter/vc_hybrid_viewinginstances.html)
 * [Affichage d'instances Cloud Foundation](sddc/sd_viewinginstances.html)
@@ -198,7 +202,7 @@ Pour plus d'informations sur l'affichage de l'instance que vous avez commandée,
 
 Si vous avez commandé des services complémentaires pour votre instance, vous pouvez également gérer ces services.
 
-Pour plus d'informations sur la gestion des services, reportez-vous aux rubriques suivantes :
+Pour plus d'informations sur la gestion des services, voir les rubriques suivantes :
 * [Commande, affichage et retrait de services pour des instances vCenter Server](vcenter/vc_addingremovingservices.html)
 * [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](vcenter/vc_hybrid_addingremovingservices.html)
 * [Commande, affichage et retrait de services pour des instances Cloud Foundation](sddc/sd_addingremovingservices.html)
