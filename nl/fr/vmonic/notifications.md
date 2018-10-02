@@ -33,8 +33,7 @@ Les notifications vous permettent de vérifier le statut des opérations systèm
           <dt class="dt dlterm">Erreur</dt>
           <dd class="dd">Un événement d'erreur se produit durant une opération qui peut nécessiter une intervention de la part de l'administrateur ou de l'utilisateur.</dd>
           <dt class="dt dlterm">Avertissement</dt>
-          <dd class="dd">Echec ou fonctionnement inadéquat d'un composant. L'erreur n'interrompt toutefois pas le processus en cours du
-       composant.</dd>
+          <dd class="dd">Echec ou fonctionnement inadéquat d'un composant. L'erreur n'interrompt toutefois pas le processus en cours du composant.</dd>
             <dt class="dt dlterm">Information</dt>
             <dd class="dd">Achèvement d'une opération utilisateur ou système. En général, les événements suivants génèrent des notifications d'information :
               <ul class="ul">

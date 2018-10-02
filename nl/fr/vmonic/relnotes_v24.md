@@ -10,11 +10,11 @@ lastupdated: "2018-06-22"
 
 # Notes sur l'édition pour la version 2.4
 
-Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour la liste des erreurs rectifiées dans les différentes éditions, les problèmes connus concernant le produit et des conseils supplémentaires pour l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour obtenir la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des astuces relatives à l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Résolution de Spectre et Meltdown
 
-{{site.data.keyword.vmwaresolutions_short}} a publié des correctifs depuis VMware afin de remédier à des vulnérabilités identifiées sous l'appellation Spectre et Meltdown (CVE-2017-5753, CVE-2017-5715 et CVE-2017-5754).
+{{site.data.keyword.vmwaresolutions_short}} a publié des modules de correction depuis VMware afin de remédier à des vulnérabilités identifiées sous l'appellation Spectre et Meltdown (CVE-2017-5753, CVE-2017-5715 et CVE-2017-5754).
 
 * CVEID : [CVE-2017-5753](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5753)
 * CVEID : [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
@@ -24,7 +24,7 @@ Pour plus d'informations, voir [Résolution des vulnérabilités Spectre et Melt
 
 ## Support de langue nationale
 
-A compter de l'édition V2.4, le support de langue nationale est disponible pour {{site.data.keyword.vmwaresolutions_short}}.
+A compter de la version 2.4, le support de langue nationale est disponible pour {{site.data.keyword.vmwaresolutions_short}}.
 Toutes les fonctions de la console, y compris la documentation utilisateur, sont disponibles dans plusieurs langues.
 
 Les langues suivantes sont prises en charge, en plus de l'anglais :
@@ -42,7 +42,7 @@ Les langues suivantes sont prises en charge, en plus de l'anglais :
 
 ## Prise en charge d'UC Skylake Xeon
 
-A compter de l'édition V2.4, les nouveaux modèles d'UC de serveur bare metal suivants sont disponibles pour déploiement pour les instances et les clusters VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}, VMware vSphere on {{site.data.keyword.cloud_notm}} et VMware Federal on {{site.data.keyword.cloud_notm}} :
+A compter de la version 2.4, les nouveaux modèles d'UC de serveur bare metal suivants sont disponibles pour déploiement pour les instances et les clusters VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}, VMware vSphere on {{site.data.keyword.cloud_notm}} et VMware Federal on {{site.data.keyword.cloud_notm}} :
 
 * Processeur Dual Intel Skylake Xeon Silver 4110/16 coeurs au total, 2,1 GHz
 * Processeur Dual Intel Skylake Xeon Gold 5120/28 coeurs au total, 2,2 GHz
@@ -103,6 +103,6 @@ Pour plus d'informations, voir les rubriques suivantes :
 L'interface utilisateur a été mise à jour et présente les améliorations suivantes :
 
 * Les panneaux d'ajout de cluster et d'ajout de service utilisent désormais un format de page, avec une présentation mieux organisée, ce qui vous permet d'exécuter des tâches avec plus d'efficience.
-* La fonctionnalité de la page **Instances déployées** a été améliorée grâce à l'ajout de fonctions de recherche, de pagination et de tri. Ces améliorations vous permettent de localiser très rapidement vos instances.
+* La fonctionnalité de la page **Instances déployées** a été améliorée grâce à l'ajout de fonctions de recherche, de pagination et de tri. Ces améliorations vous permettent de localiser rapidement vos instances.
 * La page des détails d'instance utilise désormais un menu de navigation situé sur la gauche, qui vous permet d'accéder facilement et rapidement aux informations sur l'instance.
 * Diverses améliorations ont été apportées au niveau des messages d'erreur et des infobulles pour vous aider à sélectionner le paramétrage approprié sur l'interface utilisateur.

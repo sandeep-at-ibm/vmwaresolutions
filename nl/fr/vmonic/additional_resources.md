@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-25"
 
 ---
 
 # Ressources supplémentaires
 
-Consultez d'autres ressources pouvant faciliter votre mise en route. Celles-ci comprennent :
+Passez en revue les ressources suivantes pour commencer plus rapidement :
 * Des informations de référence sur l'architecture
 * Des vidéos
 * Des démonstrations

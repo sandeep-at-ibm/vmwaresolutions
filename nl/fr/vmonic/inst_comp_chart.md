@@ -8,7 +8,7 @@ lastupdated: "2018-08-15"
 
 ---
 
-# Graphique de comparison des offres
+# Graphique de comparaison des offres
 
 Passez en revue le graphique suivant pour comprendre les différentes fonctions prises en charge pour les instances VMware Cloud Foundation, les instances VMware vCenter Server, les instances VMware vCenter Server with Hybridity Bundle et les clusters VMware vSphere.
 

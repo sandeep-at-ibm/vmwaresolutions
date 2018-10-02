@@ -10,7 +10,7 @@ lastupdated: "2017-05-22"
 
 # Notes sur l'édition pour la version 1.6
 
-Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour la liste des erreurs rectifiées dans les différentes éditions, les problèmes connus concernant le produit et des conseils supplémentaires pour l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour obtenir la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des astuces relatives à l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Mises à jour des instances VMware Cloud Foundation
 
@@ -36,7 +36,7 @@ A compter de la version 1.6, plusieurs améliorations sont disponibles pour vos 
 *  Jusqu'à sept partages de fichiers NFS peuvent être ajoutés lorsque vous commandez des instances. Les composants de gestion (vCenter, PSC, NSX Manager, NSX Controller, CloudDriver) s'exécutent désormais sur un partage de fichiers NFS pour une haute disponibilité.
 *  Déploiement et configuration automatiques de la passerelle de services VMware NSX Edge gérée par le client.
 
-En raison de ces modifications, vous ne pouvez pas utiliser en l'état (ou mettre à niveau) vos instances vCenter Server existantes de la version actuelle. Les instances vCenter Server antérieures à l'édition V1.6 sont toujours visibles sur la console {{site.data.keyword.vmwaresolutions_short}} en mode d'affichage uniquement. Dans l'interface utilisateur, la mention **Obsolète** apparaît pour ces instances avec une icône de symbole d'avertissement.
+En raison de ces modifications, vous ne pouvez pas utiliser en l'état (ou mettre à niveau) vos instances vCenter Server existantes de la version actuelle. Les instances vCenter Server antérieures à la version 1.6 sont toujours visibles sur la console {{site.data.keyword.vmwaresolutions_short}} en mode d'affichage uniquement. Dans l'interface utilisateur, la mention **Obsolète** apparaît pour ces instances avec une icône de symbole d'avertissement.
 
 Les actions suivantes sont disponibles sur les instances vCenter Server antérieures à la version 1.6 :
 
