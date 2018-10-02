@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -18,11 +18,11 @@ Assurez-vous que :
 *  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
 *  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les instances NetApp ONTAP Select](np_planning.html).
 
-**Important : ne modifiez aucune des valeurs définies lors de la commande et du déploiement de l'instance. Ceci pourrait rendre inutilisable votre instance.**
+**Important** : ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
 
 ## Paramètres système
 
-Lorsque vous commandez une instance NetApp ONTAP Select, vous devez spécifier ses paramètres de base.
+Lorsque vous commandez une instance NetApp ONTAP Select, vous devez spécifier les paramètres de base suivants :
 
 ### Nom d'instance
 
@@ -64,7 +64,7 @@ Le nom du domaine racine qui doit respecter les règles suivantes :
 
 ## Paramètres d'octroi de licence
 
-Vous devez télécharger quatre fichiers de licence NetApp car chacun des quatre {{site.data.keyword.baremetal_short}} nécessite une licence. Contactez l'équipe commerciale NetApp pour vous procurer la licence appropriée pour votre déploiement hautes performances ou haute capacité.
+Vous devez télécharger quatre fichiers de licence NetApp, un pour chacun des quatre serveurs {{site.data.keyword.baremetal_short}}. Contactez l'équipe commerciale NetApp afin de vous procurer la licence appropriée pour votre déploiement hautes performances ou haute capacité.
 
 ## Paramètres de serveur bare metal
 
@@ -75,11 +75,11 @@ Vous devez sélectionner l'{{site.data.keyword.CloudDataCent_notm}} où l'instan
 ### Configuration de serveur bare metal
 
 Sélectionnez une configuration de serveur bare metal adaptée à vos besoins :
-* **Hautes performances (Moyenne)** – Licence Premium/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/128 Go de RAM/capacité de vingt-deux unités SSD de 1,9 To par noeud/capacité effective d'un cluster de 4 noeuds – 59 To
-* **Hautes performances (Grande)** – Licence Premium/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/128 Go de RAM/capacité de vingt-deux unités SSD de 3,8 To par noeud/capacité effective d'un cluster de 4 noeuds – 118 To
+* **Hautes performances (Moyenne)** – Licence Premium/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/128 Go de RAM/capacité de 22 unités SSD de 1,9 To par noeud/capacité effective d'un cluster de 4 noeuds – 59 To
+* **Hautes performances (Grande)** – Licence Premium/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/128 Go de RAM/capacité de 22 unités SSD de 3,8 To par noeud/capacité effective d'un cluster de 4 noeuds – 118 To
 * **Haute capacité** – Licence Standard/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/64 Go de RAM/capacité de trente-quatre unités SATA de 4 To par noeud/capacité effective d'un cluster de 4 noeuds – 190 To
 
-**Remarque :** les unités SSD de 3,8 To B SSD (Solid-State Disk) seront prises en charge une fois officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
+**Remarque :** les unités SSD de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
 
 ### Nombre de serveurs bare metal
 
@@ -97,14 +97,14 @@ Le nombre de serveurs ESXi d'une instance NetApp ONTAP Select est de 4 par défa
    2. Sélectionnez la configuration de serveur bare metal.
 7. Sur la page **Récapitulatif de la commande**, vérifiez la configuration de l'instance avant de passer la commande.
     1. Passez en revue les paramètres de l'instance.
-    2. Passez en revue le coût estimé de l'instance. Cliquez sur **Détails concernant la tarification** pour générer un récapitulatif au format PDF. Pour sauvegarder ou imprimer votre récapitulatif de commande, cliquez sur l'icône d'**impression** ou de **téléchargement** dans l'angle supérieur droit de la fenêtre du PDF.
+    2. Passez en revue le coût estimé de l'instance. Cliquez sur **Détails concernant la tarification** pour générer un récapitulatif au format PDF. Pour sauvegarder ou imprimer votre récapitulatif de commande, cliquez sur l'icône d'**impression** ou de **téléchargement** dans la fenêtre du PDF.
     3. Assurez-vous que le compte qui sera facturé est correct et cochez la case **Je comprends que le compte répertorié ci-dessous sera facturé**.
     4. Cliquez sur le ou les liens des conditions applicables à votre commande. Prenez soin d'accepter ces conditions, puis cochez la case **J'ai lu et j'accepte les accords de services tiers ci-dessous**.
     5. Cliquez sur **Mettre à disposition**.
 
 ## Résultats
 
-Le déploiement de l'instance commence automatiquement. Vous recevez une confirmation vous informant que la commande est en cours de traitement et vous pouvez vérifier le statut du déploiement en affichant les détails de l'instance.
+Le déploiement de l'instance commence automatiquement. Vous recevez une confirmation que la commande est en cours de traitement et vous pouvez vérifier l'état du déploiement en affichant les détails de l'instance.
 
 Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances NetApp ONTAP Select](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) sont installés sur votre plateforme virtuelle VMware.
 
