@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -22,7 +22,7 @@ Par défaut, une seule interface de serveur virtuel est déployée sur l'infrast
 
 **Remarque** : vous êtes tenu de fournir l'octroi de licence et l'activation Microsoft si vous choisissez cette option.
 
-Active Directory sert à authentifier les accès uniquement pour gérer l'instance VMware et non pour héberger les utilisateurs finaux des charges de travail dans les instances déployées. Le  nom de domaine racine de forêt du serveur Active Directory est identique au nom de domaine DNS que vous spécifiez. Ce nom de domaine est indiqué uniquement pour l'instance Cloud Foundation et vCenter Server si plusieurs instances sont liées. Dans le cas d'instances liées, chaque instance contient un serveur Active Directory qui se trouve dans l'anneau de réplique racine de forêt. Les fichiers de la zone DNS sont également répliqués sur les serveurs Active Directory.
+Active Directory sert à authentifier les accès uniquement pour gérer l'instance VMware et non pour héberger les utilisateurs finaux des charges de travail dans les instances déployées. Le nom de domaine racine de forêt du serveur Active Directory est identique au nom de domaine DNS que vous spécifiez. Ce nom de domaine est indiqué uniquement pour l'instance Cloud Foundation et vCenter Server si plusieurs instances sont liées. Dans le cas d'instances liées, chaque instance contient un serveur Active Directory qui se trouve dans l'anneau de réplique racine de forêt. Les fichiers de la zone DNS sont également répliqués sur les serveurs Active Directory.
 
 ### Domaine SSO vSphere
 
@@ -49,7 +49,7 @@ Cette conception intègre les services DNS sur les serveurs Active Directory via
 
 ### VMware Cloud Foundation
 
-Le déploiement Cloud Foundation utilise l'automatisation VMware Cloud Foundation, laquelle utilise son propre serveur DNS qui réside dans le composant de machine virtuelle SDDC Manager. Par leur conception, les composants Cloud Foundation qui sont gérés par SDDC Manager, y compris vCenter, PSC, NSX et les hôtes ESXi, sont configurés pour utiliser l'adresse IP de machine virtuelle  SDDC Manager comme serveur DNS par défaut.
+Le déploiement Cloud Foundation utilise l'automatisation VMware Cloud Foundation, laquelle utilise son propre serveur DNS qui réside dans le composant de machine virtuelle SDDC Manager. Par leur conception, les composants Cloud Foundation qui sont gérés par SDDC Manager, y compris vCenter, PSC, NSX et les hôtes ESXi, sont configurés pour utiliser l'adresse IP de machine virtuelle SDDC Manager comme serveur DNS par défaut.
 
 Etant donné que SDDC Manager génère et conserve les noms d'hôte pour les composants qu'il gère, il n'est pas recommandé de fausser avec son fichier de zone DNS directement pour l'ajout et le retrait d'hôtes.
 
@@ -66,7 +66,7 @@ Cette conception intègre les services DNS sur les serveurs Active Directory ave
 
 ## Services NTP
 
-Cette conception utilise les serveurs NTP de l'infrastructure {{site.data.keyword.cloud_notm}}. Tous les composants déployés sont configurés pour utiliser ces serveurs NTP. Le fait que tous les composants de la conception utilisent le même serveur NTP est essentiel pour que les certificats et l'authentification  Active Directory puissent fonctionner correctement.
+Cette conception utilise les serveurs NTP de l'infrastructure {{site.data.keyword.cloud_notm}}. Tous les composants déployés sont configurés pour utiliser ces serveurs NTP. Le fait que tous les composants de la conception utilisent le même serveur NTP est essentiel pour que les certificats et l'authentification Active Directory puissent fonctionner correctement.
 
 Figure 1. Services NTP
 

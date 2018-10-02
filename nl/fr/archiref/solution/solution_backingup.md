@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -14,7 +14,7 @@ La configuration, la gestion et la surveillance de tous les composants logiciels
 
 Dans le cadre de la solution, vous pouvez éventuellement déployer les services complémentaires {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}}. Veeam et IBM Spectrum Protect Plus peuvent vous aider à répondre aux exigences de sauvegarde relatives à vos composants de gestion.
 
-Ces services complémentaires sont déployés en même temps que le stockage {{site.data.keyword.cloud_notm}} Endurance. Ils vous aident à sauvegarder vos charges de travail et les composants de gestion. Les rubriques de [présentation de l'architecture Spectrum Protect Plus ](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} et de [présentation de l'architecture Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} fournissent des commentaires utiles en matière de planification et de dimensionnement de déploiement. Vous pouvez également demander des [services gérés](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) pour votre déploiement Veeam.
+Ces services complémentaires sont déployés en même temps que le stockage {{site.data.keyword.cloud_notm}} Endurance. Ils vous aident à sauvegarder vos charges de travail et les composants de gestion. Les rubriques de [présentation de l'architecture IBM Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} et de [présentation de l'architecture Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} fournissent des commentaires utiles en matière de planification et de dimensionnement de déploiement. Vous pouvez également demander des [services gérés](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) pour votre déploiement Veeam.
 
 Différents composants de solution requièrent différentes stratégies de sauvegarde. Certains composants sont protégés à l'aide d'une sauvegarde par image et d'autres composants sont protégés à l'aide d'une sauvegarde de niveau fichier pour leur configuration et leurs données.
 
@@ -28,7 +28,7 @@ Pour héberger ces sauvegardes, déployez un serveur de fichiers Linux dans votr
 2. Téléchargez une image de système d’exploitation sur votre magasin de données de gestion VMware, par exemple, [Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window}, depuis le miroir privé d'{{site.data.keyword.cloud_notm}}.
 3. Déployez cette machine virtuelle dans votre cluster sur le groupe de ports de gestion à l'aide d'une adresse IP portable privée commandée précédemment. Vérifiez que la machine virtuelle est configurée pour pointer vers vos serveurs AD/DNS et ajoutez éventuellement la machine virtuelle au serveur DNS de votre sous-domaine.
 4. Créez un ID utilisateur de sauvegarde autre que root sur ce serveur et assurez-vous que tous les services nécessaires sont configurés et démarrés pour les transferts de fichiers. Par exemple FTP ou SSH.
-5. Assurez-vous que cette machine virtuelle est incluse dans votre tâche de sauvegarde de gestion Veeam ou IBM Spectrum Protect Plus (voir ci-dessous).
+5. Assurez-vous que cette machine virtuelle est incluse dans votre tâche de sauvegarde de gestion Veeam ou IBM Spectrum Protect Plus. 
 
 ## Sauvegarde de niveau fichier vCenter
 
@@ -38,7 +38,7 @@ Vous devez sauvegarder le dispositif vCenter Server Appliance et le contrôleur 
 
 ## Sauvegarde de niveau fichier NSX
 
-Il est essentiel de sauvegarder correctement tous les composants NSX afin de pouvoir restaurer l'état opérationnel du système dans l'éventualité d'une panne. La conception exige que vous configuriez la sauvegarde NSX via la fonction de sauvegarde de NSX Manager. Pour cela, vous pouvez [configurer NSX Manager de sorte qu'il effectue régulièrement des sauvegardes](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} sur votre serveur de fichiers. Assurez-vous que votre serveur de fichiers ou ses données sont sauvegardés de manière appropriée et assurez la rotation des anciennes sauvegardes NSX.
+Il est essentiel de sauvegarder correctement tous les composants NSX afin de pouvoir restaurer l'état opérationnel du système dans l'éventualité d'une panne. La conception exige que vous configuriez la sauvegarde NSX via la fonction de sauvegarde de NSX Manager. Pour cela, vous pouvez [configurer NSX Manager de sorte qu'il effectue régulièrement des sauvegardes](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} sur votre serveur de fichiers. Assurez-vous que votre serveur de fichiers ou ses données sont correctement sauvegardés et assurez la rotation des anciennes sauvegardes NSX.
 
 ## Sauvegarde par image des machines virtuelles de gestion
 
@@ -46,7 +46,7 @@ Après avoir déployé votre instance et le service de sauvegarde IBM Spectrum P
 
 * VMware SDDC Manager, si présent
 * Serveurs Active Directory, si présents
-* Serveur de sauvegarde de fichier (voir ci-dessus)
+* Serveur de sauvegarde de fichier
 
 Prévoyez d'allouer un nombre suffisant de licences Veeam ou IBM Spectrum Protect Plus pour la sauvegarde de ces machines virtuelles et prévoyez au moins 2 To de stockage de sauvegarde pour les machines virtuelles.
 
@@ -71,7 +71,7 @@ A partir de VMware vCenter 6.5u2, VMware prend en charge la sauvegarde de la bas
 Vous devez tenir compte de plusieurs remarques spécifiques lorsque vous restaurez vos sauvegardes de gestion :
 
 * Pour vCenter et le contrôleur PSC, VMware fournit un programme d'installation qui peut déployer un nouveau dispositif virtuel et restaurer la configuration à partir d'une sauvegarde.
-* Lors de la restauration d'un dispositif à partir d'une sauvegarde, le programme d'installation détecte le type de dispositif (vCenter Server ou contrôleur PSC) en fonction des informations de sauvegarde que vous indiquez.
+* Lorsque vous restaurez un dispositif à partir d'une sauvegarde, le programme d'installation détecte le type de dispositif (vCenter Server ou contrôleur PSC) en fonction des informations de sauvegarde que vous indiquez.
 * Etant donné que vous effectuez un déploiement directement sur l'un de vos hôtes, il se peut que vous ne puissiez pas effectuer ce déploiement sur un commutateur ou un groupe de ports distribué. Vous devrez peut-être créer un ensemble commutateur/groupe de ports standard temporaire en vue du déploiement des dispositifs restaurés, puis faire migrer temporairement l'une de vos cartes d'interface réseau de machine virtuelle (VMNIC) vers ce commutateur pour fournir la connectivité réseau nécessaire à vos machines virtuelles. Après le déploiement, vous pouvez faire migrer les machines virtuelles vers le groupe de ports distribué et renvoyer la carte d'interface réseau de machine virtuelle (VMNIC) au commutateur virtuel distribué (dvSwitch).
 * Pour NSX, vous devrez peut-être redéployer votre gestionnaire NSX et vos contrôleurs NSX avant de restaurer la configuration à partir d'une sauvegarde.
 * Prenez soin de vous familiariser avec les remarques et les limitations propres à VMware pour les opérations de sauvegarde et de restauration vCenter.

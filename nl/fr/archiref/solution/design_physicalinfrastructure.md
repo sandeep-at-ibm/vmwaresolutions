@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -27,18 +27,18 @@ Pour plus d'informations sur le stockage, voir la documentation sur l'[architect
 
 ## Conception d'hôte physique
 
-L'hôte physique fait référence aux serveurs bare metal dans l'environnement qui sert les ressources de calcul. Les serveurs bare metal appliqués dans cette solution sont certifiés par VMware et répertoriés sur le site [VMware Compatibility Guide](http://www.vmware.com/resources/compatibility/search.php).
+L'hôte physique fait référence aux serveurs {{site.data.keyword.baremetal_short}} dans l'environnement qui sert les ressources de calcul. Les serveurs bare metal appliqués dans cette solution sont certifiés par VMware et répertoriés sur le site [VMware Compatibility Guide](http://www.vmware.com/resources/compatibility/search.php).
 
 Les configurations de serveur disponibles dans la solution sont conformes ou supérieures aux exigences minimales relatives à l'installation, la configuration et la gestion de vSphere ESXi. Différentes configurations sont disponibles pour satisfaire différentes exigences. Pour obtenir la liste détaillée des spécifications exactes utilisées pour la solution VMware on {{site.data.keyword.cloud_notm}}, voir la nomenclature pour l'[instance Cloud Foundation](../../sddc/sd_bom.html) ou l'[instance vCenter Server](../../vcenter/vc_bom.html). Notez que les serveurs bare metal résident dans {{site.data.keyword.cloud_notm}}.
 
 Chaque instance Cloud Foundation commence avec un déploiement de 4 hôtes, et chaque instance vCenter Server commence avec un déploiement de 3 ou 4 hôtes selon la solution de stockage choisie.
 
-L'hôte physique emploie deux disques connectés localement destinés à être alloués à l'hyperviseur vSphere ESXi. Vous pouvez allouer des disques supplémentaires en utilisant vSAN comme indiqué dans la section _Conception de stockage physique_ de cette page ou en utilisant NetApp ONTAP comme indiqué dans la documentation sur l'[architecture NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Chaque hôte physique comporte 10 connexions réseau 10 Gbps redondantes pour l'accès au réseau public et l'accès au réseau privé.
+L'hôte physique emploie deux disques connectés localement destinés à être alloués à l'hyperviseur vSphere ESXi. Vous pouvez allouer davantage de disques en utilisant vSAN comme indiqué dans la section _Conception de stockage physique_ de cette page ou en utilisant NetApp ONTAP comme indiqué dans la documentation sur l'[architecture NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Chaque hôte physique comporte des connexions réseau 10 Gbps redondantes pour l'accès au réseau public et l'accès au réseau privé.
 
 Les spécifications techniques du serveur bare metal sont les suivantes :
 * Unité centrale : Dual Intel Xeon, configuration coeur et vitesse variable
 * Mémoire : Configuration variable, 128 Go ou plus
-* Réseau : 4 × 10 Gbps
+* Réseau : 4 x 10 Gbps
 * Nombre d'unités : Au moins 2
 
 ## Conception de réseau physique
@@ -55,13 +55,13 @@ Le trafic réseau externe depuis n'importe où dans le monde se connecte au PoP 
 
 Au sein du centre de données, {{site.data.keyword.cloud_notm}} fournit 1 Gbps ou 10 Gbps de bande passante réseau à des serveurs individuels via une paire de commutateurs client frontaux distincts homologues. Ces commutateurs agrégés sont connectés à une paire de routeurs client frontaux (FCR) distincts pour la mise en réseau L3.
 
-Cette conception multiniveau permet la mise à l'échelle du réseau dans des armoires et des pods au sein d'un {{site.data.keyword.CloudDataCent_notm}}.
+Cette conception multiniveau permet la mise à l'échelle du réseau dans des armoires, des lignes et des pods au sein d'un {{site.data.keyword.CloudDataCent_notm}}.
 
 ### Réseau privé
 
 Tous les {{site.data.keyword.CloudDataCents_notm}} et PoP sont connectés par un réseau principal privé. Le réseau privé est distinct du réseau public et il permet la connectivité aux services dans des {{site.data.keyword.CloudDataCents_notm}} situés dans le monde entier. Le transfert de données entre plusieurs {{site.data.keyword.CloudDataCents_notm}} est effectué via plusieurs connexions 10 Gbps ou 40 Gbps au réseau privé.
 
-Similaire au réseau public, le réseau privé est multiniveau, ce qui signifie que les serveurs et les autres composants d'infrastructure sont connectés aux commutateurs client frontaux (BCS)agrégés. Ces commutateurs agrégés sont connectés à une paire de routeurs client frontaux (BCR) distincts pour la mise en réseau L3. Le réseau privé prend également en charge l'utilisation de trames jumbo pour des connexions hôte physiques.
+Similaire au réseau public, le réseau privé est multiniveau, ce qui signifie que les serveurs et les autres composants d'infrastructure sont connectés aux commutateurs client frontaux (BCS)agrégés. Ces commutateurs agrégés sont connectés à une paire de routeurs client frontaux (BCR) distincts pour la mise en réseau L3. Le réseau privé prend également en charge l'utilisation de trames jumbo (MTU 9000) pour des connexions hôte physiques.
 
 ### Réseau de gestion
 
@@ -89,7 +89,7 @@ La console {{site.data.keyword.vmwaresolutions_short}} ne peut pas déterminer s
 
 ### Connexions d'hôte physique
 
-Chaque hôte physique de la conception possède deux paires redondantes de connexions Ethernet 10Gbps dans chaque commutateur {{site.data.keyword.cloud_notm}} de niveau supérieur (ToR) (public et privé). Les adaptateurs sont configurés comme des connexions individuelles (non liées) pour un total de 4 connexions 10 Gbps. Cela permet aux connexions de carte d'interface réseau (NIC) de fonctionner indépendamment les unes des autres.
+Chaque hôte physique de la conception possède deux paires redondantes de connexions Ethernet 10 Gbps dans chaque commutateur {{site.data.keyword.cloud_notm}} de niveau supérieur (ToR) (public et privé). Les adaptateurs sont configurés comme des connexions individuelles (non liées) pour un total de 4 connexions 10 Gbps. Cela permet aux connexions de carte d'interface réseau (NIC) de fonctionner indépendamment les unes des autres.
 
 Figure 1. Connexions NIC d'hôte physique
 
@@ -113,7 +113,7 @@ Outre VLAN privé A, il existe un deuxième réseau local virtuel (appelé ici V
    * Lorsque vSAN est utilisé, un sous-réseau est affecté aux groupes de ports de noyau qui sont utilisés pour le trafic vSAN.
    * Lorsque NAS est utilisé, un sous-réseau est affecté au groupe de ports qui est dédié au trafic NFS.
 
-Tous les sous-réseaux configurés dans le cadre d'un déploiement vCenter Server ou Cloud Foundation automatisé utilisent des plages gérées par {{site.data.keyword.cloud_notm}}. Cela garantit que toutes les adresses IP peuvent être routées vers n'importe quel centre de données dans le compte {{site.data.keyword.cloud_notm}} lorsque vous avez besoin de la connexion que ce soit immédiatement ou ultérieurement.
+Tous les sous-réseaux qui sont configurés dans le cadre d'un déploiement vCenter Server ou Cloud Foundation automatisé utilisent des plages gérées par {{site.data.keyword.cloud_notm}}. Cela garantit que toutes les adresses IP peuvent être routées vers n'importe quel centre de données dans le compte {{site.data.keyword.cloud_notm}} lorsque vous avez besoin de la connexion que ce soit immédiatement ou ultérieurement.
 
 Voir le tableau 1.
 
@@ -135,7 +135,7 @@ Les connexions de réseau privé sont configurées pour utiliser 9000 comme tail
 
 ## Conception de stockage physique
 
-La conception de stockage physique fait référence à la configuration des disques physiques qui sont installés dans les hôtes physiques et à la configuration du stockage de niveau fichier partagé. Cela inclut les disques de système d'exploitation de l'hyperviseur vSphere ESXi et ceux qui sont utilisés pour le stockage des machines virtuelles. Le stockage des machines virtuelles peut être constitué de disques locaux qui sont virtualisés par VMware vSAN ou de stockage de niveau fichier partagé.
+La conception de stockage physique fait référence à la configuration des disques physiques qui sont installés dans les hôtes physiques et à la configuration du stockage de niveau fichier partagé. Cela inclut les disques de système d'exploitation de l'hyperviseur vSphere ESXi et ceux qui sont utilisés pour le stockage des machines virtuelles. Le stockage des machines virtuelles peut être constitué de disques locaux qui sont virtualisés par VMware vSAN, ou de stockage de niveau fichier partagé.
 
 ### Disques de système d'exploitation
 
@@ -147,13 +147,13 @@ Cette conception permet d'utiliser le stockage VMware vSAN ou le stockage de niv
 
 ### Disques vSAN
 
-Lorsqu'il est utilisé, VMware vSAN est configuré à l'aide d'une configuration All-Flash. Cette conception offre plusieurs options de configuration, y compris les châssis 2U et 4U, différents nombres de disques et différentes tailles de disque. Toutes les configurations utilisent deux groupes de disques vSAN, avec un disque SSD pour le cache et un ou plusieurs disques SSD pour la capacité. Toutes les unités allouées pour la consommation vSAN sont configurées en RAID-0 à un disque.
+Lorsqu'il est utilisé, VMware vSAN est configuré à l'aide d'une configuration All-Flash. Cette conception offre plusieurs options de configuration, y compris les châssis 2U et 4U, différents nombres de disques et différentes tailles de disque. Toutes les configurations utilisent deux groupes de disques vSAN, avec un disque SSD pour le cache et un ou plusieurs disques SSD pour la capacité. Toutes les unités qui sont allouées pour la consommation vSAN sont configurées en RAID-0 à un disque.
 
-Pour plus d'informations sur les configurations prises en charge, voir la nomenclature pour l'instance [Cloud Foundation](../../sddc/sd_bom.html) ou pour l'[instance vCenter Server](../../vcenter/vc_bom.html).
+Pour en savoir plus sur les configurations prises en charge, voir la nomenclature pour l'[instance Cloud Foundation](../../sddc/sd_bom.html) ou pour l'[instance vCenter Server](../../vcenter/vc_bom.html).
 
 ### Stockage de niveau fichier partagé entre plusieurs hôtes
 
-Lors de l'utilisation d'un stockage de niveau fichier partagé, un partage NFS de 2 To est associé aux hôtes qui constituent le cluster VMware initial. Ce partage, appelé partage de gestion, est utilisé pour les composants de gestion, tels que VMware vCenter Server, Platform Services Controller et VMware NSX. Le stockage est associé via le protocole NFSv3 et peut prendre en charge jusqu'à 4000 IOPS.
+Lors de l'utilisation d'un stockage de niveau fichier partagé, un partage NFS de 2 To est associé aux hôtes qui constituent le cluster VMware initial. Ce partage, appelé partage de gestion, est utilisé pour les composants de gestion, tels que VMware vCenter Server, Platform Services Controller et VMware NSX. Le stockage est associé à l'aide du protocole NFSv3 et peut prendre en charge jusqu'à 4 000 IOPS.
 
 Figure 2. Partages NFS associés au déploiement VMware
 

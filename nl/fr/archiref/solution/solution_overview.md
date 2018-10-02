@@ -29,7 +29,7 @@ VMware Cloud Foundation et vCenter Server sur {{site.data.keyword.cloud_notm}} f
 
 En exploitant l'automatisation avancée et l'infrastructure bare metal à service exclusif, vous pouvez rapidement déployer l'environnement VMware complet sur {{site.data.keyword.cloud_notm}} en quelques heures. Vous pouvez dès lors accéder à l'environnement hébergé par IBM et le gérer via les clients VMware natifs, l'interface de ligne de commande, des scripts existants ou d'autres outils compatibles avec l'API vSphere et qui vous sont familiers.
 
-Après le déploiement, vous pouvez ajouter des noeuds hôtes ESXi et gérer la sauvegarde et l'application de correctifs pour certains composants de gestion. Des services professionnels et gérés d'{{site.data.keyword.cloud_notm}} sont également disponibles pour vous aider à accélérer votre transition vers le cloud avec des offres destinées à la migration, l'implémentation et l'intégration.
+Après le déploiement, vous pouvez ajouter des noeuds hôtes ESXi et gérer la sauvegarde et l'application de modules de correction pour certains composants de gestion. Des services professionnels et gérés d'{{site.data.keyword.cloud_notm}} sont également disponibles pour vous aider à accélérer votre transition vers le cloud avec des offres destinées à la migration, l'implémentation et l'intégration.
 
 Les offres VMware on {{site.data.keyword.cloud_notm}} présentent les avantages suivants :
 
