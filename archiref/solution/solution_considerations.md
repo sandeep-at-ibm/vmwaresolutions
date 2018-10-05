@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-10-03"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-20"
 
 {{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server, and VMware Cloud Foundation offerings are not managed services. You are responsible for the configuration, security, management, and monitoring of all software components. With complete administrative access to the solution, you have great power and flexibility that requires significant technical, administrative, and operational expertise across various domains. Managing a VMware instance in the {{site.data.keyword.cloud_notm}} requires the same planning and expertise as planning for an on-premises instance. Software-defined technologies such as VMware NSX and VMware vSAN greatly simplify some aspects of instance management, but might require new skills and tools to be properly managed and operated. Combining the power, speed, and reliability of {{site.data.keyword.cloud_notm}} automated VMware deployment with the appropriate operational planning and testing ensures quick and successful navigation to hybrid cloud.
 
-Review the following considerations to understand your responsibilities for managing and operating the instance before and after it has been deployed. 
+Review the following considerations to understand your responsibilities for managing and operating the instance before and after it has been deployed.
 
 **Note:** The following list is not exhaustive. For more information, see [IBM-managed services](../../services/managing_imi.html).
 
@@ -76,7 +76,7 @@ Complete the following steps to ensure proper single sign-on (SSO) configuration
 
 Complete the following steps to ensure proper planning for software maintenance.
 
-- Set up VMware Update Manager (VUM) through a proxy to obtain VMware updates.
+- [Set up VMware Update Manager (VUM)](../vum/vum-intro.html) through a proxy to obtain VMware updates.
 - If applicable, set up vSAN through a proxy to maintain the vSAN Hardware Compatibility List (HCL) database.
 - Plan regular maintenance for VMware components that are not supported by VUM. For example, VMware vCenter, PSC, and NSX.
 - Review vSphere Enhanced vMotion Compatibility (EVC) configuration. Your cluster might not be configured with EVC enabled if the current version of vSphere does not support EVC for your hardware level.
@@ -121,4 +121,3 @@ In addition to capacity planning, complete the following to ensure that your sto
 * [Solution overview](solution_overview.html)
 * [Design overview](design_overview.html)
 * [Scaling capacity](solution_scaling.html)
-
