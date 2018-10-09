@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-17"
 
 ESXi サーバーを追加または削除することによって、業務上の必要に従って VMware Cloud Foundation インスタンスの容量を拡張したり縮小したりできます。
 
-Cloud Foundation インスタンスには 5 つまでクラスターを配置できます。そのうち 1 つはデフォルトです。 それぞれの初期クラスターには ESXi サーバーを 51 台まで配置することが可能で、追加クラスターは 59 台まで配置できます。
+Cloud Foundation インスタンスには 5 つまでクラスターを配置できます。そのうち 1 つはデフォルトです。 それぞれの初期クラスターには ESXi サーバーを 51 台まで配置することが可能で、追加のクラスターは 59 台まで配置できます。
 
 ## Cloud Foundation インスタンスへの ESXi サーバーの追加
 
@@ -44,8 +44,8 @@ Cloud Foundation インスタンスには 5 つまでクラスターを配置で
 
 * VMware vSphere Web クライアントから ESXi サーバーの削除を行わないでください。 VMware vSphere Web クライアントで加えた変更は、{{site.data.keyword.vmwaresolutions_short}} コンソールと同期されません。
 * 注文した基本プラットフォームには、デフォルトで 4 台の ESXi サーバーがあります。 追加した ESXi サーバーを削除できます。 デフォルトの ESXi サーバーは削除できません。
-* F5 on {{site.data.keyword.cloud_notm}} サービスまたは FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスがインストールされている ESXi サーバーの場合は、そのサーバーを削除する前に、F5 BIG-IP と FortiGate の VM を、現時点で VM をホスティングしている ESXi サーバーとは別のサーバーにマイグレーションする必要があります。
-* IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスがインストールされている ESXi サーバーを削除する場合は、その前にアクティブな (失敗または進行中の) バックアップ操作やリストア操作がないことを確認してください。これらのアクティブな操作があると、ESXi サーバーを削除できない可能性があるからです。
+* F5 on {{site.data.keyword.cloud_notm}} サービスまたは FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスがインストールされている ESXi サーバーの場合は、そのサーバーを削除する前に、F5 BIG-IP と FortiGate の VM を、VM をホスティングしている ESXi サーバーとは別のサーバーにマイグレーションする必要があります。
+* IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスがインストールされている ESXi サーバーを削除する前に、アクティブなバックアップ操作またはリストア操作がないことを確認してください。アクティブな操作 (失敗または進行中) があると、ESXi サーバーが削除されない可能性があります。
 
 ## ESXi サーバーを削除する手順
 

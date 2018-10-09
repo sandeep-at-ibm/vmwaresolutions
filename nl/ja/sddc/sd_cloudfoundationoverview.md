@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -63,14 +63,14 @@ Cloud Foundation インスタンスには以下のコンポーネントが含ま
 * VLAN (仮想 LAN) 3 つ: パブリック VLAN 1 つとプライベート VLAN 2 つ
 * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX Edge Services Gateway (ESG)。これは、管理ネットワーキング類型の一部として IBM によってデプロイされます。 この ESG は、IBM 管理仮想マシンが、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[管理サービス NSX Edge でセキュリティー・リスクが生じますか?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-) を参照してください。
 
-  **重要**: ユーザーは、この ESG にアクセスすることはできず、使用できません。 これに変更を加えると、{{site.data.keyword.vmwaresolutions_short}} コンソールから Cloud Foundation インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用不可になります。
+  **重要**: ユーザーは、この ESG にアクセスすることはできず、使用できません。 これに変更を加えると、{{site.data.keyword.vmwaresolutions_short}} コンソールから Cloud Foundation インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなります。
 
 * 現行バージョンの VMware vSphere でサポートされる ESXi サーバーの既存クラスターがある場合は、EVC (Enhanced vMotion Compatibility) 機能が自動的に有効になります。 EVC は、クラスター内のすべての ESXi サーバーが同じ CPU 機能セットを仮想マシンに公開するようにして、クラスター内のすべての ESXi サーバーを vMotion 可能にします。 EVC を使用すると、ESXi サーバー上の実際の CPU が異なっていても、クラスター内の任意の ESXi サーバー間で仮想マシンを移行できます。
 
 ### 仮想サーバー・インスタンス
 
 以下の VSI (仮想サーバー・インスタンス) が注文されます。
-* Microsoft Active Directory (AD) とドメイン・ネーム・システム (DNS) サービス用に 1 つの VSI。マルチサイト構成サポートに必要です。 この VSI 仕様は、Windows 2012 R2 (8 GB RAM / 2 CPU コア/ 100 GB ディスク / デュアル 1 Gbps プライベート・アップリンク) です。
+* Microsoft Active Directory (AD) とドメイン・ネーム・システム (DNS) サービス用に 1 つの VSI。VSI はマルチサイト構成のサポートに必要です。この VSI 仕様は、Windows 2012 R2 (8 GB RAM / 2 CPU コア/ 100 GB ディスク / デュアル 1 Gbps プライベート・アップリンク) です。
 * IBM CloudBuilder の VSI。これは、インスタンスのデプロイメントが完了した後にシャットダウンされます。
 * (Veeam on {{site.data.keyword.cloud_notm}} を注文する場合) Veeam バックアップ・サービス用に 1 つの VSI を注文します。
 
@@ -80,7 +80,7 @@ Cloud Foundation インスタンスには以下のコンポーネントが含ま
 * 2 台の 1 TB SATA ブート・ディスク
 * 2 台の 960 GB SSD (ソリッド・ステート・ディスク) キャッシュ・ディスク
 * RAID ディスク・コントローラー 1 つ
-* **カスタマイズ型** 構成の場合のみ、要件に従って、ディスク・ドライブの数、ディスク・タイプ、ディスク容量を設定できます。
+* **カスタマイズ型** 構成の場合のみ、要件に従って、ディスク・ドライブの数、ディスク・タイプ、ディスク容量を設定できます。また、High-Performance Intel Optane オプションもあります。このオプションは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイを提供します。High-Performance Intel Optane オプションは、CPU モデルに応じて異なります。
 * **事前構成型**、**スモール** 構成の場合のみ: 2 台の 1.9 TB SSD キャパシティー・ディスク
 * **事前構成型**、**ラージ** 構成の場合のみ: 4 台の 3.8 TB SSD キャパシティー・ディスク
 
@@ -95,7 +95,7 @@ Cloud Foundation インスタンスには以下のコンポーネントが含ま
 
 ## Cloud Foundation 拡張ノードの技術仕様
 
-それぞれの Cloud Foundation 拡張ノードは、以下のコンポーネントをデプロイし、{{site.data.keyword.cloud_notm}} アカウントに課金します。
+Cloud Foundation 拡張ノードごとに、{{site.data.keyword.cloud_notm}} アカウントに以下のコンポーネントがデプロイされ、料金が発生します。
 
 ### 拡張ノード用のハードウェア
 

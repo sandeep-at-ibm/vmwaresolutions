@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-08"
 
 {{site.data.keyword.vmwaresolutions_full}} 用に予約されているユーザー、リソース、またはサブネットを変更すると、VMware Cloud Foundation インスタンスに対する管理操作に影響する可能性があります。
 
-**重要:** VMware vSphere Web Client の**「ユーザーおよびグループ」**ページで **ic4v-vCenter** グループのグローバル許可を編集しないでください。 例えば、ユーザー名を変更する、ユーザーを削除する、パスワードを変更するなどです。
+**重要:** VMware vSphere Web Client の**「ユーザーおよびグループ」**ページで **ic4v-vCenter** グループのグローバル許可を変更しないでください。グローバル許可の変更の例として、ユーザー名を変更する、ユーザーを削除する、パスワードを変更する、などがあります。
 
 ## サービス固有のユーザー・アカウント
 

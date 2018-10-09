@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -32,18 +32,17 @@ VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情�
 
 | 製造元 | コンポーネント                                | バージョン      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 U1g (パッチ・レベル ESXi650-201803001 を適用済みの ESXi 6.5u1) |
-| VMware       | vCenter Server Appliance                 | 6.5 Update 1g |
-| VMware       | Platform Services Controller             | 6.5 Update 1g |
+| VMware       | vSphere ESXi                             | 6.5 Update 2c (最大パッチ・レベル: ESXi650-201808001) |
+| VMware       | vCenter Server Appliance                 | 6.5 Update 2c |
+| VMware       | Platform Services Controller             | 6.5 Update 2c |
 | VMware       | vSAN                                     | 6.6.1        |
-| VMware       | NSX for vSphere                          | 6.3.5        |
+| VMware       | NSX for vSphere                          | 6.4.1        |
 | VMware       | SDDC Manager                             | 2.4          |
-| IBM          | CloudDriver                              | 2.5          |
 | Microsoft    | Windows Server Standard Edition (64 ビット) | 2012R2       |
 
 ## ESXi サーバーの拡張構成の設定
 
-ESXi サーバーに対して適用される拡張構成設定は、Cloud Foundation インスタンスが V2.2 以降にデプロイされるか、それより前の V2.1 以前のリリースから V2.2 以降にアップグレードされるかによって異なります。これらの設定の概要については、以下の表を参照してください。
+次の表で、ESXi サーバーで適用される拡張構成設定の概要を確認してください。この設定は、Cloud Foundation インスタンスが以前のリリース (V2.1 以前) から V2.2 以降にデプロイ (またはアップグレード) されるかどうかによって異なります。
 
 表 3. Cloud Foundation インスタンスとクラスターに関する ESXi サーバーの拡張構成設定
 
