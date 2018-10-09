@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -41,7 +41,15 @@ lastupdated: "2018-08-13"
 
 ### 仮想化管理
 
-この層は、vCenter Server 仮想アプライアンス、NSX Manager、2 つの NSX ESG、3 つの NSX Controller、Platform Services Controller (PSC) 仮想アプライアンス、vCenter Server Appliance (vCSA)、IBM CloudDriver 仮想サーバー・インスタンス (VSI) からなります。
+仮想化管理レイヤーは、以下のコンポーネントで構成されています。
+
+* vCenter Server 仮想アプライアンス
+* NSX Manager
+* 2 つの NSX Edge Services Gateway (ESG)
+* 3 つの NSX Controller
+* Platform Services Controller (PSC) 仮想アプライアンス
+* vCenter Server Appliance (vCSA)
+* IBM CloudDriver 仮想サーバー・インスタンス (VSI)
 
 NetApp ONTAP Select は、VMware クラスター内で実行され、ホスト上のローカル・ストレージを仮想化します。 NetApp ONTAP Select は専用モデルでデプロイされます。つまり、他のワークロードとクラスターを共有するという想定にはなっていません。 そのため、{{site.data.keyword.cloud_notm}} オファリング上の NetApp ONTAP Select のハードウェア構成のサイズは、NetApp ONTAP Select の要件のみに基づいて決まります。
 
@@ -53,7 +61,7 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
 
 ### ストレージ
 
-* 3 つのオプション: **ハイパフォーマンス (ミディアム)**、**ハイパフォーマンス (ラージ)**、**大容量**
+* **ハイパフォーマンス (ミディアム)**、**ハイパフォーマンス (ラージ)**、**大容量**のいずれかを選択します。
 * RAID 5 とホット・スペア
 * 2 台の 1 TB SATA ドライブ ESXi OS – RAID 1
 * 管理データ・ストア – 管理 VM 用に 500 GB
@@ -61,11 +69,11 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
 ### 事前設定構成
 
 以下の構成オプションがある 4 つの {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}が提供されています。
-* **ハイパフォーマンス (ミディアム)** –プレミアム・ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 128 GB RAM / ノードあたり 22 個の 1.9 TB SSD ドライブ容量 / 4 ノード・クラスターの実効容量– 59 TB
-* **ハイパフォーマンス (ラージ)** –プレミアム・ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 128 GB RAM / ノードあたり 22 個の 3.8 TB SSD ドライブ容量 / 4 ノード・クラスターの実効容量– 118 TB
+* **ハイパフォーマンス (ミディアム)** – プレミアム・ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 128 GB RAM / ノードあたり 22 個の 1.9 TB SSD ドライブ容量 / 4 ノード・クラスターの実効容量 – 59 TB
+* **ハイパフォーマンス (ラージ)** – プレミアム・ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 128 GB RAM / ノードあたり 22 個の 3.8 TB SSD ドライブ容量 / 4 ノード・クラスターの実効容量 – 118 TB
 * **大容量** – 標準ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 64 GB RAM / ノード当たり 34 個の 4 TB SATA ドライブ容量 / 4 ノード・クラスターの有効容量 – 190 TB
 
-**注:** 3.8 TB SSD (ソリッド・ステート・ディスク) ドライブは、データ・センターで一般提供が開始されたらサポートされる予定です。
+**注:** 3.8 TB SSD (ソリッド・ステート・ディスク) ドライブは、データ・センターで一般提供が開始されたらサポートされます。
 
 ### ハードウェア
 
@@ -88,7 +96,7 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
 
 ### ライセンスと料金
 
-*  NetApp ONTAP Select の 4 つの Premium/Standard エディションのライセンス (ユーザー提供)
+*  NetApp ONTAP Select の 4 つの Premium または Standard エディションのライセンス (ユーザー提供)
 *  VMware vSphere 6.5 Enterprise Plus エディション
 *  VMware vCenter Server 6.5
 *  VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.4
@@ -102,6 +110,10 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
 *  サービスの再始動
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
+
+## ファイアウォールに関する考慮事項
+
+ファイアウォールを使用している場合は、{{site.data.keyword.IBM}} CloudDriver 仮想サーバー・インスタンス (VSI) と SDDC Manager 仮想マシン (VM) からのすべての通信に関してルールを構成する必要があります。これらのルールでは、すべてのプロトコルが IP アドレス `10.0.0.0/8` と `161.26.0.0/16` 上で通信できるよう許可する必要があります。このようなファイアウォールの例としては、NSX Distributed Firewalls (DFW)、Vyatta ファイアウォールなどがあります。
 
 ### 関連リンク
 
