@@ -12,7 +12,7 @@ lastupdated: "2018-08-31"
 
 {{site.data.keyword.cloud}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} は、自動的に {{site.data.keyword.cloud_notm}} Private Hosted を VMware vCenter Server インスタンスにデプロイします。
 
-{{site.data.keyword.cloud_notm}} Private Hosted は、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。
+{{site.data.keyword.cloud_notm}} Private Hosted は、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。 このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。
 
 ## IBM Cloud Private Hosted の技術仕様
 
@@ -30,7 +30,7 @@ lastupdated: "2018-08-31"
 
 ## IBM Cloud Private Hosted を要求する手順
 
-1. [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)の手順に従って、新規 vCenter Server インスタンスを注文します。既存のインスタンス用に IBM Cloud Private Hosted を要求することもできます。
+1. [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)の手順に従って、新規 vCenter Server インスタンスを注文します。 既存のインスタンス用に IBM Cloud Private Hosted を要求することもできます。
   **重要**: 使用する環境が、上記の最小要件を満たしていることを確認してください。
 2. IBM Cloud Private のライセンスを持っていることを確認します。
 3. vCenter Server インスタンスを使用する準備ができたことを示す確認メッセージを受け取ったら、IBM Cloud Private Hosted を要求する次の手順に進みます。

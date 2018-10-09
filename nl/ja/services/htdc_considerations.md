@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -33,12 +33,12 @@ HyTrust DataControl on {{site.data.keyword.cloud}} サービスでは、鍵管�
 
 ## HyTrust DataControl on IBM Cloud を削除する際の考慮事項
 
-HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスを削除する前に、DataControl のすべてのディスクを暗号化またはバックアップしたことを確認してください。 サービスを削除した後に、鍵が削除されて、VM からロックアウトされる可能性があります。
+HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスを削除する前に、DataControl を使用しないようにすべてのクライアントを分離したことを確認してください。サービスを削除した後に、鍵が削除されて、VM からロックアウトされる可能性があります。
 
 ### 関連リンク
 
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の注文](htdc_ordering.html)
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の管理](managinghtcc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の管理](managinghtdc.html)
 * [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
 * [FAQ](../vmonic/faq.html)
 * [HyTrust Web サイト](https://www.hytrust.com/)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -29,7 +29,7 @@ vSphere Web Client から HTDC コンソールにアクセスするには、次�
 
 ### 関連リンク
 
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の概要](htcc_considerations.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の概要](htdc_considerations.html)
 * [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
 * [FAQ](../vmonic/faq.html)
 * [HyTrust Web サイト](https://www.hytrust.com/)
