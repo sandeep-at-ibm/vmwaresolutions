@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -18,4 +18,4 @@ lastupdated: "2018-08-15"
 ## 解決方法
 この問題は、共有ストレージが冗長化されていないためにデータ・ストアのハートビートを実行できない場合に発生します。
 
-詳細と問題解決手順については、[HA error: "The number of heartbeat datastores for host is 1, which is less than required: 2" (2004739)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2004739) を参照してください。
+詳細と問題解決手順については、[HA error: "The number of heartbeat data stores for host is 1, which is less than required: 2" (2004739)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2004739) を参照してください。

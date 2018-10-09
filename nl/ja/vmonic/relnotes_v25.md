@@ -10,7 +10,7 @@ lastupdated: "2018-08-30"
 
 # V2.5 のリリース・ノート
 
-このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのその他のヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
+このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
 ## Spectre および Meltdown への対処
 
@@ -28,9 +28,9 @@ lastupdated: "2018-08-30"
 
 ## デフォルト・バックアップ構成の削除
 
-{{site.data.keyword.vmwaresolutions_short}} には、バックアップ用に 2 つのアドオン・サービスが組み込まれています。それらは、IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} および Veeam on {{site.data.keyword.cloud_notm}} です。 これらのサービスにより、管理インフラストラクチャーとワークロードの両方のリカバリーを計画し、準備することができます。さらに、IBM Resiliency Services では Veeam バックアップのためのマネージド・サービスを利用できます。
+{{site.data.keyword.vmwaresolutions_short}} には、バックアップ用に 2 つのアドオン・サービスが組み込まれています。それらは、IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} および Veeam on {{site.data.keyword.cloud_notm}} です。 これらのサービスにより、管理インフラストラクチャーとワークロードの両方のリカバリーを計画し、準備することができます。 さらに、IBM Resiliency Services では Veeam バックアップのためのマネージド・サービスを利用できます。
 
-V2.5 リリース以降、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} および Veeam on {{site.data.keyword.cloud_notm}} サービスは、デプロイ時に VM のバックアップの事前構成を行いません。 この変更により、スケジュール作成、保存期間、重複排除の使用、モニタリングとアラート、暗号キーの管理など、バックアップ・ジョブのすべての側面をユーザーが適切に構成できるようになりました。さらに、IBM CloudDriver VM は、NSX バックアップ用の永続的なファイル・サーバーとしては構成されなくなります。
+V2.5 リリース以降、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} および Veeam on {{site.data.keyword.cloud_notm}} サービスは、デプロイ時に VM のバックアップの事前構成を行いません。 この変更により、スケジュール作成、保存期間、重複排除の使用、モニタリングとアラート、暗号キーの管理など、バックアップ・ジョブのすべての側面をユーザーが適切に構成できるようになりました。 さらに、IBM CloudDriver VM は、NSX バックアップ用の永続的なファイル・サーバーとしては構成されなくなります。
 
 お客様は、管理インフラストラクチャーとワークロードのバックアップと可用性など、すべてのソフトウェア・コンポーネントの構成、管理、およびモニタリングについての責任があります。 詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html#backing-up-components)を参照してください。
 
@@ -38,7 +38,7 @@ V2.5 リリース以降、IBM Spectrum Protect Plus on {{site.data.keyword.cloud
 
 ## IBM CloudDriver の回復力
 
-V2.5 以降のリリースにデプロイまたはアップグレードされたインスタンスの場合、IBM CloudDriver コンポーネントは、vSphere クラスター内の仮想マシン (VM) として構成されることがなくなりました。 代わりに、追加のノード、クラスター、サービスをデプロイするなどの操作のために、最新の {{site.data.keyword.cloud_notm}} for VMware コードと一緒に、{{site.data.keyword.cloud_notm}} インフラストラクチャーの仮想サーバー・インスタンス (VSI) として、必要に応じてデプロイされるようになりました。さらに、IBM CloudDriver は、{{site.data.keyword.cloud_notm}} プライベート・ネットワークを使用して {{site.data.keyword.cloud_notm}} 管理プレーンと通信するように変更されました。この変更により、IBM CloudDriver からパブリック・ネットワークへのアウトバウンド通信を許可する 管理 NSX Edge Services Gateway (ESG) ファイアウォールおよびネットワーク・アドレス変換 (NAT) の規則が削除されました。
+V2.5 以降のリリースにデプロイまたはアップグレードされたインスタンスの場合、IBM CloudDriver コンポーネントは、vSphere クラスター内の仮想マシン (VM) として構成されることがなくなりました。 代わりに、追加のノード、クラスター、サービスをデプロイするなどの操作のために、最新の {{site.data.keyword.cloud_notm}} for VMware コードと一緒に、{{site.data.keyword.cloud_notm}} インフラストラクチャーの仮想サーバー・インスタンス (VSI) として、必要に応じてデプロイされるようになりました。 さらに、IBM CloudDriver は、{{site.data.keyword.cloud_notm}} プライベート・ネットワークを使用して {{site.data.keyword.cloud_notm}} 管理プレーンと通信するように変更されました。 この変更により、IBM CloudDriver からパブリック・ネットワークへのアウトバウンド通信を許可する 管理 NSX Edge Services Gateway (ESG) ファイアウォールおよびネットワーク・アドレス変換 (NAT) の規則が削除されました。
 
 F5 on {{site.data.keyword.cloud_notm}}、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}、Zerto on {{site.data.keyword.cloud_notm}} などいくつかのアドオン・サービスでは引き続きパブリック・ネットワーク・アクセスが必要なので、管理 NSX ESG は引き続きすべてのインスタンスにデプロイされます。
 
@@ -72,15 +72,15 @@ Cloud Foundation インスタンスの場合、**customerroot** ホスト・ユ�
 
 {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} サービスが、V2.5 以降のリリースでデプロイ (または V2.5 以降のリリースにアップグレード) された vCenter Server インスタンスで使用できるようになりました。
 
-{{site.data.keyword.cloud_notm}} Private Hosted は、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。
+{{site.data.keyword.cloud_notm}} Private Hosted は、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。 このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。
 
-このサービスは、vCenter Server インスタンスの注文後に要求できます。詳しくは、[{{site.data.keyword.cloud_notm}} Private Hosted の要求](../services/managing_icp.html)を参照してください。
+このサービスは、vCenter Server インスタンスの注文後に要求できます。 詳しくは、[{{site.data.keyword.cloud_notm}} Private Hosted の要求](../services/managing_icp.html)を参照してください。
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
 V2.5 リリースから、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスは、ベスト・プラクティスに基づいて 2 つの独立した VM としてデプロイされます。1 つの VM は IBM Spectrum Protect Plus サーバーを実行し、もう 1 つの VM は vSnap サーバーと VADP プロキシーを実行します。
 
-最大 10 個のバックアップ・データ・ストアを注文できるので、最大 120 TB のバックアップ・ストレージが可能になります。vSnap および VADP VM は、選択したバックアップ・ストレージ・サイズと [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) の情報に基づいてサイズ変更されます。
+最大 10 個のバックアップ・データ・ストアを注文できるので、最大 120 TB のバックアップ・ストレージが可能になります。 vSnap および VADP VM は、選択したバックアップ・ストレージ・サイズと [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) の情報に基づいてサイズ変更されます。
 
 ### KMIP for VMware on IBM Cloud
 
@@ -114,4 +114,4 @@ vCenter Server on IBM Cloud の接続されたストレージに関する技術�
 
 * {{site.data.keyword.cloud_notm}} アカウントにリンクされた {{site.data.keyword.cloud_notm}}  インフラストラクチャー (SoftLayer) アカウントがある場合、**「設定」**ページで新しく追加された**「取得 (Retrieve)」**ボタンをクリックして、{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントのユーザー名の API 鍵を自動的に取得できるようになりました。
 * インスタンスのデプロイメント履歴を調べるための新しい**「デプロイメント履歴」**タブが、インスタンス詳細ページの左側ナビゲーション・ペインに追加されました。
-* ユーザー・インターフェースで適切な設定を選択できるように、エラー・メッセージとツールチップにさまざまな改善が行われました。
+* ユーザー・インターフェースで適切な設定を選択できるように、エラー・メッセージとツールチップにさまざまな改良が加えられました。

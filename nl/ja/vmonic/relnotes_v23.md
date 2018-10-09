@@ -10,7 +10,7 @@ lastupdated: "2018-05-28"
 
 # V2.3 のリリース・ノート
 
-このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのその他のヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
+このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
 ## Spectre および Meltdown への対処
 
@@ -52,8 +52,8 @@ vCenter Server with Hybridity Bundle について詳しくは、以下のトピ�
 ### vCenter Server インスタンスおよびクラスターの機能強化
 
 V2.3 リリース以降、**カスタマイズ型** のベア・メタル設定を選択した場合に、以下の新しい CPU モデルをデプロイメントできるようになりました。
-* Dual Intel Xeon Silver 4110 Processor / 合計 16 コア、2.1 GHz
-* Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz
+* Dual Intel Xeon Silver 4110 プロセッサー / 合計 16 コア、2.1 GHz
+* Dual Intel Xeon Gold 5120 プロセッサー / 合計 28 コア、2.2 GHz
 
 詳しくは、以下のトピックを参照してください。
 
@@ -122,4 +122,4 @@ V2.3 以降のリリースでデプロイまたは V2.3 以降のリリースに
 * **アクセスの容易さ**: VMware オファリングに {{site.data.keyword.cloud_notm}} **Catalog** から直接アクセスできるようになりました。
 * **合理化されて簡単になった注文の操作環境**: VMware インスタンスの注文とアドオン・サービスのデプロイを単一のインターフェースで行えるようになりました。 また、同じインターフェース上で見積もりコストがすぐに計算されて表示されるので、予算に基づいて構成を調整できます。
 * ビジネス・パートナーであるユーザーは、インスタンスの注文時やクラスターの追加時にライセンス持ち込み (BYOL) オプションを使用できません。
-* ユーザー・インターフェースで適切な設定を選択できるように、エラー・メッセージとツールチップにさまざまな改善が行われました。
+* ユーザー・インターフェースで適切な設定を選択できるように、エラー・メッセージとツールチップにさまざまな改良が加えられました。
