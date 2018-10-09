@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
 # Cloud Foundation インスタンスの要件と計画
 
-VMware Cloud Foundation インスタンスを注文する前に、以下の要件を確認してください。 {{site.data.keyword.CloudDataCent}}のロケーション、ワークロードのキャパシティー要件、および追加のサービス要件に基づいてインスタンスを計画します。
+VMware Cloud Foundation インスタンスを注文する前に、以下の要件を確認してください。 {{site.data.keyword.CloudDataCent}}のロケーション、ワークロードのキャパシティー要件、およびサービス要件に基づいてインスタンスを計画します。
 
 ## IBM Cloud アカウントの要件
 
@@ -62,12 +62,12 @@ Cloud Foundation のデプロイメントには、物理インフラストラク
 | 状況 | 状況の詳細 |
 |:------------------------------|:--------------------------------------------------|
 | 近日対応                   | 現在、{{site.data.keyword.CloudDataCent_notm}}は対応していません。 |
-| 一時的な在庫切れ  | 現時点では、{{site.data.keyword.CloudDataCent_notm}}には在庫がありません。 |
+| 一時的な在庫切れ  | 現時点では、{{site.data.keyword.CloudDataCent_notm}}には在庫がありません。|
 | 限定在庫             | {{site.data.keyword.CloudDataCent_notm}}の在庫は限られているため、注文が満たされない可能性があります。 |
 
 ## 管理コンポーネントのバックアップ
 
-すべてのインスタンス・コンポーネントの可用性を維持し、確保する作業は、お客様が行う必要があります。 すべての管理コンポーネントのバックアップと高可用性について計画を立てることを強くお勧めします。 詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html)を参照してください。
+すべてのインスタンス・コンポーネントの可用性を維持し、確保する作業は、お客様が行う必要があります。 すべての管理コンポーネントのバックアップと高可用性について計画を立てることをお勧めします。詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html)を参照してください。
 
 ## Cloud Foundation インスタンス用サービス
 
@@ -75,7 +75,7 @@ Cloud Foundation のデプロイメントには、物理インフラストラク
 
 ## キャパシティーに関する考慮事項
 
-キャパシティーに関する情報と考慮事項については、[キャパシティーの拡張](../archiref/solution/solution_scaling.html)を参照してください。
+キャパシティーについて詳しくは、[キャパシティーの拡張](../archiref/solution/solution_scaling.html)を参照してください。
 
 ### 関連リンク
 

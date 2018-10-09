@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-07-20"
 1 つのユーザー・アカウントについてプロビジョンされたすべての Cloud Foundation Select インスタンスのサマリーを表示するには、以下の手順を実行します。
 
 1. {{site.data.keyword.vmwaresolutions_full}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
-2. コンソールの右上隅でアバターをクリックし、**「アカウント」**フィールドをクリックして、インスタンスを確認するユーザー・アカウントを選択します。 
+2. コンソール・バナーのユーザー・アカウント・アイコンをクリックし、**「アカウント」**フィールドをクリックして、インスタンスの確認対象となるユーザー・アカウントを選択します。
 3. **「Cloud Foundation インスタンス」**の表で、インスタンスのリストを表示します。
 
 表 1. Cloud Foundation インスタンスの項目
@@ -68,7 +68,7 @@ lastupdated: "2018-07-20"
 | DNS、SSO ドメイン | SSO ドメインは、vSphere のシングル・サインオン・ドメインです。 デプロイされたすべての Cloud Foundation インスタンスで、SSO ドメイン・ネームが値 <samp class="ph codeph">vsphere.local</samp> に固定されています。 |
 | DNS、サブドメイン | サブドメインは、ローカル Cloud Foundation インスタンスのホスト名が存在するルート・ドメイン・ネームの DNS サブドメイン名です。 サブドメイン名の形式は <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp> になります。 |
 | SDDC Manager version  |  インスタンスの SDDC Manager のバージョン |
-| 状況  | インスタンスの状況<br><br>デプロイメント、またはインスタンスで実行したアクションの進行状況を示す情報が表示され、更新されます。 問題がある場合は、問題の調査と解決に役立つメッセージが表示されることがあります。 |
+| 状況  | インスタンスの状況<br><br>デプロイメント、またはインスタンスで実行したアクションの進行状況を示す情報が表示され、更新されます。 問題がある場合は、問題の調査と解決に役立つメッセージが表示されることがあります。|
 
 ## Cloud Foundation インスタンスに関するアクセス情報の表示
 
