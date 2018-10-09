@@ -10,7 +10,7 @@ lastupdated: "2016-12-12"
 
 # V1.2 のリリース・ノート
 
-このリリースには、新機能、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのその他のヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
+このリリースには、新機能、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
 ## コンポーネントの更新
 
@@ -18,7 +18,7 @@ VMware ESXi のバージョンが、前のリリースの ESXi 6.0 u2 から、�
 
 ## IBMid と Bluemix のアカウントの関連付け
 
-{{site.data.keyword.vmwaresolutions_full}} は、IBM Bluemix® カタログのインフラストラクチャー・ソリューションとして提供されています。 したがって、**IBMid** アカウントを使用して {{site.data.keyword.vmwaresolutions_short}} コンソールにログインするために、**IBMid** アカウントを Bluemix アカウントに関連付ける必要があります。
+{{site.data.keyword.vmwaresolutions_full}} は、IBM Bluemix® カタログのインフラストラクチャー・ソリューションとして提供されています。 **IBMid** アカウントを Bluemix アカウントに関連付け、**IBMid** アカウントを使用して {{site.data.keyword.vmwaresolutions_short}} コンソールにログインする必要があります。
 
 詳しくは、以下のトピックを参照してください。
 * [概説](../index.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -17,13 +17,21 @@ lastupdated: "2018-08-27"
 ## IBM Cloud for VMware Solutions の利点
 
 {{site.data.keyword.vmwaresolutions_short}} には、以下のような大きなメリットがあります。
-* **グローバル展開**: ハイブリッド・クラウドのフットプリントを、世界中に設置されているエンタープライズ・クラスの {{site.data.keyword.CloudDataCents_notm}}に最大 30 拠点まで展開できます。
-* **シームレスな統合**: ハイブリッド・クラウド全体にわたる、{{site.data.keyword.cloud_notm}} インフラストラクチャーへのシームレスな統合を実現します。
-* **迅速なプロビジョニング**: VMware 環境のデプロイメントと構成を自動化しているので、オンデマンドで {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}}と仮想サーバーを投入してエンタープライズ・クラスの VMware 環境を迅速にデプロイできます。
-* **シンプル化**: 基礎の物理インフラストラクチャー (コンピュート、ストレージ、ネットワーク) とソフトウェア・ライセンスを定義、調達、デプロイ、管理することなく、VMware クラウド・プラットフォームを利用できます。
-* **拡張と縮小の柔軟性**: ビジネス・ニーズに応じて VMware ワークロードを簡単に拡張および縮小できます。
-* **単一の管理コンソール**: {{site.data.keyword.cloud_notm}} 上の VMware 環境を単一のコンソールでデプロイ、アクセス、管理できます。
-
+<dl>
+  <dt>グローバル展開</dt>
+  <dd>ハイブリッド・クラウドのフットプリントを、世界中に設置されているエンタープライズ・クラスの {{site.data.keyword.CloudDataCents_notm}}に最大 30 拠点まで展開できます。</dd>
+  <dt>シームレスな統合</dt>
+  <dd>ハイブリッド・クラウド全体にわたる、{{site.data.keyword.cloud_notm}} インフラストラクチャーへのシームレスな統合を実現します。</dd>
+  <dt>迅速なプロビジョニング</dt>
+  <dd>VMware 環境のデプロイメントと構成を自動化しているので、オンデマンドで {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}}と仮想サーバーを投入してエンタープライズ・クラスの VMware 環境を迅速にデプロイできます。</dd>
+  <dt>シンプル化</dt>
+  <dd>基礎の物理インフラストラクチャー (コンピュート、ストレージ、ネットワーク) とソフトウェア・ライセンスを定義、調達、デプロイ、管理することなく、VMware クラウド・プラットフォームを利用できます。</dd>
+  <dt>拡張と縮小の柔軟性</dt>
+  <dd>ビジネス・ニーズに応じて VMware ワークロードを簡単に拡張および縮小できます。</dd>
+  <dt>単一の管理コンソール</dt>
+  <dd>{{site.data.keyword.cloud_notm}} 上の VMware 環境を単一のコンソールでデプロイ、アクセス、管理できます。</dd>
+</dl>
+s
 ## デプロイメント・オファリング
 
 {{site.data.keyword.vmwaresolutions_short}} では、VMware 仮想環境のデプロイメントとして、標準化されたデプロイメントとカスタマイズ可能なデプロイメントを選択できます。 以下のデプロイメント・タイプが用意されています。
@@ -98,9 +106,15 @@ HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスでは、鍵
 
 詳しくは、[HyTrust DataControl on {{site.data.keyword.cloud_notm}} の概要](../services/htdc_considerations.html)を参照してください。
 
+### HyTrust KeyControl on IBM Cloud
+
+HyTrust KeyControl on {{site.data.keyword.cloud_notm}} サービスは、暗号鍵のライフサイクルを自動化および単純化することによって、暗号化ワークロードの管理を単純化します。このサービスでは、FIPS 140-2 準拠の暗号化を使用することで、暗号鍵を簡単に一括して管理できるようになります。このサービスを使用すると、すべての仮想マシンと暗号化データ・ストアの暗号鍵を管理することや、大規模なデプロイメントで何千もの暗号化ワークロードをサポートするように拡張することができます。
+
+詳しくは、[HyTrust KeyControl on {{site.data.keyword.cloud_notm}} の概要](../services/htkc_considerations.html)を参照してください。
+
 ### IBM Cloud Private Hosted
 
-{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} サービスは、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。
+{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} サービスは、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。 このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。
 
 詳しくは、[{{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html) を参照してください。
 
@@ -118,7 +132,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスは、{{site.dat
 
 ### IBM Cloud での Veeam
 
-Veeam on {{site.data.keyword.cloud_notm}} サービスは VMware ハイパーバイザーに直接、シームレスに統合され、企業での高可用性の実現を支援します。 このサービスを使用すると、アプリケーションとデータのリカバリー・ポイントと目標復旧時間を利用できます。 リカバリー・ポイントと目標復旧時間は、構成が完了してから 15 分以内に利用可能になります。 このサービスを使用することにより、ご使用のインフラストラクチャーに配置されたすべての仮想マシンのバックアップとリストアの両方を Veeam コンソールから直接制御できます。
+Veeam on {{site.data.keyword.cloud_notm}} サービスは VMware ハイパーバイザーに直接、シームレスに統合され、企業での高可用性の実現を支援します。 このサービスを使用すると、アプリケーションとデータのリカバリー・ポイントと目標復旧時間を設定できます。リカバリー・ポイントと目標復旧時間は、構成が完了してから 15 分以内に提供されます。このサービスを使用して、現在のインフラストラクチャーに配置されたすべての仮想マシンのバックアップとリストアの両方を Veeam コンソールから直接制御します。
 
 詳しくは、[Veeam on {{site.data.keyword.cloud_notm}} の概要](../services/veeam_considerations.html)を参照してください。
 

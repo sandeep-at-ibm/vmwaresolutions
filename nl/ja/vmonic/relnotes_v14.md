@@ -10,13 +10,13 @@ lastupdated: "2017-03-08"
 
 # V1.4 のリリース・ノート
 
-このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのその他のヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
+このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
 ## Cloud Foundation インスタンスのコンポーネントの更新
 
 以下のコンポーネントが新規追加または更新されました。
 
-* VC/PSC (vCenter/Platform Services Controller) 6.0U2a
+* VC および PSC (vCenter および Platform Services Controller) 6.0U2a
 * VMware Tools 10.1.0
 * SDDC Manager (SP) 2.2
 * VMware ESXi 6.0 u2 p04

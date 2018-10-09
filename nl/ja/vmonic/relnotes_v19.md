@@ -10,11 +10,11 @@ lastupdated: "2017-10-13"
 
 # V1.9 のリリース・ノート
 
-このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのその他のヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
+このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
 ## VMware vSphere on IBM Cloud
 
-このリリースでは、VMware vSphere on {{site.data.keyword.cloud_notm}} オファリングが導入されました。このオファリングでは、選択した VMware コンポーネントに基づいて、VMware 互換のコンピュート、ストレージ、ネットワークのリソースをカスタマイズして注文することで、IBM によってホストされる独自の VMware 仮想環境を構築できます。 vSphere on {{site.data.keyword.cloud_notm}} は、オプションの VMware コンポーネントのインストール、構成、起動を自動実行しませんが、ビジネス・ニーズに最適な環境を設計して構築できるように柔軟性が最大化されています。 {{site.data.keyword.CloudDataCent_notm}}で ESXi サーバーの vSphere クラスターを新規作成するか、既存の vSphere クラスターを拡張することから始めることができます。
+このリリースでは、VMware vSphere on {{site.data.keyword.cloud_notm}} オファリングが導入されています。このオファリングでは、選択した VMware コンポーネントに基づいて VMware 互換のコンピュート、ストレージ、ネットワークのリソースをカスタマイズして注文することで、IBM によってホストされる VMware 仮想環境を構築できます。vSphere on {{site.data.keyword.cloud_notm}} は、オプションの VMware コンポーネントのインストール、構成、オープンを自動化するものではありませんが、ビジネス・ニーズに最適な環境を設計して構築できるように柔軟性が最大化されています。{{site.data.keyword.CloudDataCent_notm}}で ESXi サーバーの vSphere クラスターを新規作成するか、既存の vSphere クラスターを拡張することから始めます。
 
 詳しくは、以下のトピックを参照してください。
 * [新規 vSphere クラスターの注文](../vsphere/vs_orderinginstances.html)
@@ -23,7 +23,7 @@ lastupdated: "2017-10-13"
 ## NetApp ONTAP Select on IBM Cloud
 
 このリリースでは、ソフトウェア定義ストレージ用の仮想アプライアンスである NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} オファリングが導入されました。これにより、IBM Cloud の専用{{site.data.keyword.baremetal_short}}上に NetApp ONTAP Select をサービスとして実装できます。 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} は、高性能 (オール SSD) 構成と大容量 (オール SATA) 構成の両方で提供されます。
-専用のインフラストラクチャーでストレージをホストし、重複排除や保存データの圧縮と暗号化などの NetApp 機能を提供します。 このオファリングを使用すると、高速で効率的な NetApp Snapshot® コピー、FlexClone® コピー、SnapMirror® レプリケーションなどの高度なデータ管理機能を使用してデータを保護しながら、俊敏性と柔軟性を備えたストレージ・リソースをプロビジョンできます。
+このオファリングは、専用のインフラストラクチャーでストレージをホストし、重複排除や保存データの圧縮と暗号化などの NetApp 機能を提供します。高度なデータ管理機能を使用してデータを保護しながら、俊敏性と柔軟性を備えたストレージ・リソースをプロビジョンします。例えば、高速で効率的な NetApp Snapshot® コピー、FlexClone® コピー、SnapMirror® レプリケーションなどを使用します。
 
 詳しくは、以下のトピックを参照してください。
 * [NetApp ONTAP Select の概要](../netapp/np_netappoverview.html)
@@ -32,7 +32,7 @@ lastupdated: "2017-10-13"
 ## F5 on IBM Cloud サービス
 
 F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} サービスを、VMware Cloud Foundation と VMware vCenter Server の両方のインスタンスで使用できるようになりました。 このサービスは、ローカルおよびグローバル規模のインテリジェントな L4-L7 ロード・バランシングとトラフィック管理サービス、堅牢なネットワークと Web アプリケーション・ファイアウォール保護、セキュアなフェデレーテッド・アプリケーション・アクセスを提供します。
-F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} サービスを組み込んだ形でインスタンスを注文することも、後から {{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンス・プロパティーの詳細ページにある**「サービス」**タブで既存のインスタンスにこのサービスを追加することもできます。 要件に応じて、BIG-IP VE の 3 つのライセンス・オプションの中から 1 つを選択できます。
+F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} サービスを組み込んだ形でインスタンスを注文するか、後から {{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンス・プロパティーの詳細ページにある**「サービス」**タブで既存のインスタンスにこのサービスを追加します。要件に応じて、BIG-IP VE の 3 つのライセンス・オプションの中から 1 つを選択できます。
 
 詳しくは、以下のトピックを参照してください。
 * [F5 on {{site.data.keyword.cloud_notm}} の考慮事項](../services/f5_considerations.html)
@@ -77,7 +77,7 @@ VMware Cloud Foundation インスタンスで IBM Integrated Managed Infrastruct
 
 ### 追加の RAM サイズ
 
-ワークロードの CPU と RAM の比率に合ったハードウェアを使用できるように、vCenter Server インスタンスを注文する際や、vCenter Server インスタンスのクラスターを追加する際に選択できる RAM サイズが追加されました。 {{site.data.keyword.vmwaresolutions_short}} コンソールからサーバーを注文する際に、**「ユーザー・カスタマイズ型」**構成オプションで 64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB の中から選択できます。
+ワークロードの CPU と RAM の比率に合ったハードウェアを使用できるように、vCenter Server インスタンスを注文する際や、vCenter Server インスタンスのクラスターを追加する際に選択できる RAM サイズが増えました。{{site.data.keyword.vmwaresolutions_short}} コンソールからサーバーを注文する際に、**「ユーザー・カスタマイズ型」**構成オプションで 64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB の中から選択できます。
 
 詳しくは、[vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)を参照してください。
 
@@ -97,9 +97,9 @@ VMware Cloud Foundation インスタンスで IBM Integrated Managed Infrastruct
 
 ## Windows Server の更新の自動インストール要件
 
-Microsoft Active Directory (AD) / ドメイン・ネーム・サーバー (DNS) には、更新プログラムのダウンロードだけが自動的にセットアップされます。 それらの更新プログラムのインストールとリブートは、自動的には行われません。 手動で更新プログラムをインストールし、実行中の Active Directory サーバー構成やその他のバックアップ・ジョブが中断されないように計画した時刻にリブートする必要があります。 Windows 更新プログラムを適用するには、手動で更新プログラムをインストールしてください。
+Microsoft Active Directory (AD) / ドメイン・ネーム・サーバー (DNS) には、更新プログラムのダウンロードだけが自動的にセットアップされます。 それらの更新プログラムのインストールと再始動は、自動的には行われません。 更新プログラムを手動でインストールし、実行中の Active Directory サーバーの構成ジョブやその他のバックアップ・ジョブが中断されないように計画した時刻に再始動する必要があります。Windows 更新プログラムを適用するには、手動で更新プログラムをインストールしてください。
 
 ## 新規資料および更新された資料
 
-* プライベートなマルチサイト VCF インスタンスを保護し、パブリックな {{site.data.keyword.cloud_notm}} サービスを使用するように VMware アプリケーションを拡張する方法を説明します。 詳しくは、[Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window} を参照してください。
-* IBM CloudDriver 仮想マシンと SDDC Manager 仮想マシンからのすべてのプロトコル通信を許可するファイアウォールを構成するために追加資料が提供されました。 詳しくは、[Fortinet on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](../services/fsa_considerations.html)を参照してください。
+* プライベートなマルチサイト Cloud Foundation インスタンスを保護し、パブリックな {{site.data.keyword.cloud_notm}} サービスを使用するように VMware アプリケーションを拡張する方法を説明します。 詳しくは、[Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window} を参照してください。
+* IBM CloudDriver 仮想マシンと SDDC Manager 仮想マシンからのすべてのプロトコル通信を許可するファイアウォールを構成できるように、さらに資料が提供されています。詳しくは、[Fortinet on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](../services/fsa_considerations.html)を参照してください。
