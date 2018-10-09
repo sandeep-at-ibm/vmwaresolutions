@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -62,7 +62,7 @@ Tabla 2. Indicadores de estado para {{site.data.keyword.CloudDataCents_notm}} cu
 | Estado | Detalles del estado |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | El {{site.data.keyword.CloudDataCent_notm}} no está disponible actualmente. |
-| Temporarily Out of Inventory  | El {{site.data.keyword.CloudDataCent_notm}} no ofrece disponibilidad en este momento. |
+| Temporarily Out of Inventory  | El {{site.data.keyword.CloudDataCent_notm}} no tiene disponibilidad actualmente. |
 | Limited Inventory             | El {{site.data.keyword.CloudDataCent_notm}} ofrece disponibilidad limitada y es posible que el pedido no se complete. |
 
 ## Copia de seguridad de los componentes de gestión
@@ -88,7 +88,7 @@ Puede solicitar otros servicios complementarios para su instancia en función de
 
 ## Consideraciones de capacidad
 
-Para obtener información sobre la capacidad y las consideraciones, consulte [Capacidad de escalado](../archiref/solution/solution_scaling.html).
+Para obtener más información sobre las consideraciones sobre la capacidad, consulte [Capacidad de escalado](../archiref/solution/solution_scaling.html).
 
 ### Enlaces relacionados
 

@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
 # Solicitud de instancias de VMware Federal
 
-Para desplegar una plataforma virtualizada VMware flexible y personalizable que se adapte perfectamente a sus necesidades de carga de trabajo, solicite una instancia de VMware Federal que permite desconectar la conexión de gestión abierta y proteger su instancia desplegada.
+Para desplegar una plataforma virtualizada de VMware flexible y personalizable que se ajuste mejor a sus necesidades de carga de trabajo, solicite una instancia de VMware Federal. Las instancias de VMware Federal le ayudan a desconectar la conexión de gestión abierta y a proteger su instancia desplegada.
 
-**Nota:** actualmente solo las instancias de vCenter Server dan soporte a VMware Federal on {{site.data.keyword.cloud}}.
+**Nota:** En la actualidad, solo las instancias de vCenter Server dan soporte a VMware Federal en {{site.data.keyword.cloud}}.
 
-## Requisitos
+## Requisitos para solicitar instancias de VMware Federal
 
 Asegúrese de haber realizado las tareas siguientes:
 * Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
@@ -32,11 +32,11 @@ Tabla 1. Formato del valor de nombres de instancia y de dominio
   | Nombre completo de servidor ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `<n>` es la secuencia del servidor ESXi. La longitud máxima es de 50 caracteres. |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
 
-**Importante:** no modifique ningún valor definido durante la solicitud y el despliegue de la instancia. Si lo hace, la instancia podría quedar inutilizable. Por ejemplo, el sistema de red pública se podría cerrar, los servidores e instancias de servidor virtual (VSI) podrían moverse detrás de una Vyatta cuando el suministro está en curso, o la VSI de IBM CloudBuilder podría detenerse o suprimirse.
+**Importante**: No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime.
 
 ## Valores del sistema
 
-Debe especificar los siguientes valores de sistema cuando solicite una instancia de VMware Federal.
+Debe especificar los valores del sistema siguientes cuando solicite una instancia de VMware Federal.
 
 ### Nombre de instancia
 
@@ -48,16 +48,16 @@ El nombre de instancia debe cumplir los siguientes requisitos:
 
 ### Primaria o secundaria
 
-Solicite una nueva instancia primaria. El despliegue de una instancia secundaria de alta disponibilidad no recibe soporte actualmente.
+Solicite una nueva instancia primaria. El despliegue de una instancia secundaria para alta disponibilidad no está soportado actualmente.
 
 ## Valores de licencia
 
-Licencias de VMware proporcionadas por IBM para:
+Licencias proporcionadas por IBM para los siguientes componentes de VMware:
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
-* (Para clústeres vSAN) VMware vSAN Advanced o Enterprise 6.6
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4 (edición Base, Advanced o Enterprise)
+* (Para clústeres vSAN) vSAN 6.6 (edición Advanced o Enterprise)
 
 **Atención:**
 
@@ -66,7 +66,7 @@ Licencias de VMware proporcionadas por IBM para:
 
 ## Valores de Servidor nativo
 
-Los valores de Bare Metal dependen de su configuración personalizada. La opción de seleccionar una configuración preconfigurada no recibe soporte actualmente.
+Los valores de Bare Metal dependen de su configuración personalizada. La opción de seleccionar una configuración preconfigurada no está soportada actualmente.
 
 ### Ubicación del centro de datos
 
@@ -99,11 +99,15 @@ Los valores de almacenamiento dependen de la opción que seleccione de configura
 
 ### Almacenamiento vSAN
 
-Para vSAN, especifique las siguientes opciones de almacenamiento:
+Especifique las siguientes opciones de vSAN:
 
-* **Tipo y tamaño de disco para discos de capacidad vSAN**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
-* **Número de discos de capacidad vSAN**: seleccione el número de discos para el almacenamiento compartido vSAN que desea añadir. Las cantidades de disco deben ser 2, 4, 6 u 8.
-* Seleccione la edición de licencia de VMware vSAN 6.6 (Advanced o Enterprise).
+* **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
+* **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
+* **Tipo de disco para discos de memoria caché vSAN**: Seleccione una opción para los discos de memoria caché que necesite.
+
+    **Nota**: Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* **Número de discos de memoria caché de vSAN**: Especifique el número de discos de memoria caché que desea añadir.
+* **Licencia de vSAN**: Seleccione la edición de licencia de vSAN 6.6 (Advanced o Enterprise).
 
 ### Almacenamiento NFS
 
@@ -160,21 +164,21 @@ Seleccione la configuración de DNS (sistema de nombres de dominio) para la inst
 * **Una sola VSI pública de Windows para Active Directory/DNS**: se despliega y se puede consultar una sola VSI de Microsoft Windows Server para Microsoft Active Directory (AD), que funciona como DNS para la instancia en la que se han registrado los hosts y máquinas virtuales.
 * **Dos VM dedicadas y altamente disponibles de Windows Server en el clúster de gestión**: Para V2.3 y futuros releases, se despliegan dos máquinas virtuales Microsoft Windows, lo que ayuda a mejorar la seguridad y la solidez.
 
-**Importante:** debe proporcionar dos licencias de Microsoft Windows Server 2012 R2 si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. Utilice la licencia de Microsoft Windows Server 2012 R2 Standard Edition y/o la licencia de Microsoft Windows Server 2012 R2 Datacenter Edition.
+**Importante:** debe proporcionar dos licencias de Microsoft Windows Server 2012 R2 si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. Utilice la licencia de edición Microsoft Windows Server 2012 R2 Standard o la licencia de edición Microsoft Windows Server 2012 R2 Datacenter, o ambas.
 
-Actualmente, cada licencia solo se puede asignar a un solo servidor físico y cubre un máximo de dos procesadores físicos. Una licencia de Standard Edition puede ejecutar dos máquinas virtuales Microsoft Windows virtualizadas por servidor de 2 procesadores. Por lo tanto, se necesitan dos licencias, ya que se despliegan dos máquinas virtuales Microsoft Windows en dos hosts distintos.
+Actualmente, cada licencia se puede asignar a un solo servidor físico y cubre hasta dos procesadores físicos. Al utilizar una licencia de edición Standard, puede ejecutar dos máquinas virtuales Microsoft Windows virtualizadas por servidor de 2 procesadores. Por lo tanto, se necesitan dos licencias, ya que se despliegan dos máquinas virtuales Microsoft Windows en dos hosts distintos.
 
 Tiene 30 días para activar las máquinas virtuales.
 
-Para obtener más información sobre cómo solicitar licencias de Windows, consulte la [documentación de Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+Para obtener más información sobre cómo solicitar licencias de Windows, consulte [Documentación de Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Resumen del pedido
 
 En función de la configuración seleccionada para la instancia, el coste estimado se genera y se muestra al instante en la sección **Resumen de pedido** en el panel derecho. Pulse **Detalles sobre precios** en la parte inferior del panel derecho para generar un documento PDF que proporcione la información estimada.
 
-## Procedimiento
+## Procedimiento para solicitar instancias de VMware Federal
 
-1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** en el panel de navegación izquierdo y pulse **vCenter Server** en la sección **Centros de datos virtuales**.
+1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** desde el panel de navegación de la izquierda y, a continuación, pulse **vCenter Server** en la sección **Centros de datos virtuales**.
 2. En la página **VMware vCenter Server on IBM Cloud**, pulse la tarjeta **vCenter Server** y pulse **Crear**.
 3. En la página **vCenter Server**, escriba el nombre de la instancia.
 4. Pulse **Instancia primaria** para desplegar una sola instancia en el entorno.
@@ -183,9 +187,9 @@ En función de la configuración seleccionada para la instancia, el coste estima
   1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} que va a alojar la instancia.
   2. Seleccione el modelo de CPU **Personalizado** y la cantidad de **RAM**.
 7. Complete la configuración del almacenamiento.
-  * Cuando seleccione **Almacenamiento vSAN**, especifique el **Tipo y tamaño de los discos de capacidad vSAN**, el **Número de discos de capacidad vSAN**, y cómo se proporciona la **Licencia de vSAN**.
-  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar los mismos valores a todas las comparticiones de archivos, especifique el **Número de unidades compartidas**, el **Tamaño** y el **Rendimiento**.
-  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar las comparticiones de archivos individualmente, seleccione **Configurar recursos compartidos individualmente** y a continuación pulse sobre el icono **+** junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivos individual. Debe seleccionar al menos una unidad compartida de archivo.
+  * Si selecciona **Almacenamiento vSAN**, especifique los tipos de disco para la capacidad y los discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
+  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar los mismos valores para todas las comparticiones de archivos, especifique el **Número de comparticiones**, **Tamaño** y **Rendimiento**.
+  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar comparticiones de archivos individualmente, seleccione **Configurar comparticiones individualmente** y, a continuación, pulse el icono **+** junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivos individual. Debe seleccionar al menos una unidad compartida de archivo.
 8. Complete la configuración de interfaz de red.
    1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio raíz.
    2. Seleccione la configuración de DNS.

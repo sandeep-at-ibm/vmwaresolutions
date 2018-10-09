@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -14,9 +14,9 @@ Visualice el resumen y la información detallada de las instancias de VMware Fed
 
 ## Visualización de resumen de instancias de VMware Federal
 
-Para ver un resumen de todas las instancias de VMware Federal que se han suministrado para una cuenta de usuario, complete los pasos siguientes:
+Para ver un resumen de todas las instancias de VMware Federal que se suministran para una cuenta de usuario, complete los pasos siguientes:
 1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
-2. En la esquina superior derecha de la consola, pulse el avatar y, a continuación, pulse el campo **Cuenta** para seleccionar la cuenta de usuario para la que desea comprobar las instancias. 
+2. En el banner de la consola, pulse el icono de la cuenta de usuario y, a continuación, pulse el campo **Cuenta** para seleccionar la cuenta de usuario para la que desea comprobar las instancias.
 3. En la tabla **vCenter Server**, visualice la lista de instancias que se han suministrado en la cuenta de usuario seleccionada.
 
 Tabla 1. Elementos de una instancia de VMware Federal
@@ -26,7 +26,7 @@ Tabla 1. Elementos de una instancia de VMware Federal
 | Nombre | Nombre de la instancia. |
 | Versión | La versión del release en la que se ha desplegado la instancia o a la que se ha actualizado. |  
 | Ubicación | El {{site.data.keyword.CloudDataCent_notm}} en el que se aloja la instancia. |  
-| Hora de creación | La fecha y hora en que se ha creado la instancia. | 
+| Hora de creación | La fecha y hora en que se ha creado la instancia. |
 | Estado | El estado de la instancia. |
 
 La instancia puede tener una serie de estados.
@@ -60,7 +60,7 @@ Tabla 3. Propiedades de instancias de VMware Federal
 | ID | El ID de la instancia. |
 | Ubicación | El {{site.data.keyword.CloudDataCent_notm}} en el que se aloja la instancia. |
 | Versión actual |  La versión actual de {{site.data.keyword.vmwaresolutions_short}}. |
-| Versión de vCenter | La versión de VMware vCenter Server.<br><br>**Nota:** hay una ligera variación entre la versión de vCenter Server que se muestra en la consola de {{site.data.keyword.vmwaresolutions_short}} y en el cliente web de VMware vSphere. Ambas son correctas. |
+| Versión de vCenter | La versión de VMware vCenter Server.<br><br>**Nota:** Hay una ligera variación entre la versión de vCenter Server que se muestra en la consola de {{site.data.keyword.vmwaresolutions_short}} y en el cliente web de VMware vSphere. Ambas son correctas. |
 | NSX for vSphere | La versión del producto VMware NSX for vSphere. |
 | Edición de licencia de NSX | La versión y la edición de la licencia de VMware NSX. |
 | DNS Root Domain | El nombre del dominio raíz es el nombre del dominio DNS (Sistema de nombres de dominio) y el nombre raíz del grupo Microsoft Active Directory (AD). |
@@ -70,7 +70,7 @@ Tabla 3. Propiedades de instancias de VMware Federal
 
 ## Visualización de información de acceso para instancias de VMware Federal
 
-En **Información de acceso**, consulte la información de acceso para los componentes relacionados con la instancia. Las contraseñas que se muestran son contraseñas iniciales que genera el sistema. Si las cambia fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, no se actualizarán en la página de resumen de la instancia.
+En **Información de acceso**, consulte la información de acceso para los componentes relacionados con la instancia. Las contraseñas que se muestran son contraseñas iniciales generadas por el sistema. Si las cambia fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, no se actualizarán en la página de resumen de la instancia.
 
 Tabla 4. Información de acceso correspondiente a los componentes relacionados con la instancia
 
@@ -114,8 +114,8 @@ Gestione sus instancias desde la consola de {{site.data.keyword.vmwaresolutions_
 
 Revise los temas siguientes para obtener información que le ayudará a seguir las instrucciones de inicio de sesión:
 *  Para ver los requisitos y pasos necesarios antes de acceder al cliente web de vSphere, consulte [Se ha alcanzado el tiempo de espera al conectar con el cliente web de vSphere](../vmonic/trbl_timeout_vc_console.html).
-*  Para ver una lista de puntos de acceso para iniciar una sesión en la red privada de la infraestructura de {{site.data.keyword.cloud_notm}} utilizando VPN, consulte [Acceso VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Si tiene problemas al desplegar un archivo OVF (Open Virtualization Format) mediante el cliente web de vSphere, consulte [Despliegue de un archivo OVF mediante el cliente web de vSphere](../vmonic/trbl_deploy_ovf.html).
+*  Para obtener una lista de puntos de acceso para iniciar sesión en la red privada de infraestructura de {{site.data.keyword.cloud_notm}} utilizando VPN, consulte [Acceso a VPN](http://www.softlayer.com/vpn-access){:new_window}.
+*  Si tiene problemas al desplegar un archivo OVF (Open Virtualization Format) utilizando el cliente web de vSphere, consulte [Despliegue de un archivo OVF utilizando el cliente web de vSphere](../vmonic/trbl_deploy_ovf.html).
 
 ### Enlaces relacionados
 

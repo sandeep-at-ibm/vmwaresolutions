@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -16,9 +16,9 @@ Revise la siguiente información para obtener detalles sobre las consideraciones
 
 Para revisar los componentes de red que se incluyen en la instancia de VMware Federal, consulte [Especificaciones técnicas para instancias de VMware Federal on {{site.data.keyword.cloud}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
-## Consideraciones sobre cortafuegos NSX
+## Consideraciones sobre cortafuegos
 
-Si utiliza NSX Distributed Firewalls (DFW), debe configurar reglas para todas las comunicaciones desde la Instancia de servidor virtual (VSI) de IBM CloudDriver para permitir que todos los protocolos se comuniquen en las direcciones IP `10.0.0.0/8` y `161.26.0.0/16`.
+Si utiliza cortafuegos, debe configurar reglas para todas las comunicaciones desde la Instancia de servidor virtual (VSI) de {{site.data.keyword.IBM}} CloudDriver y las máquinas virtuales (VM) de SDDC Manager. Estas reglas deben permitir que todos los protocolos se comuniquen en las direcciones IP `10.0.0.0/8` y `161.26.0.0/16`. Los ejemplos de estos cortafuegos son NSX Distributed Firewalls (DFW) o cortafuegos Vyatta.
 
 ## Utilización de NSX con máquinas virtuales
 
@@ -26,7 +26,7 @@ Durante el despliegue de la instancia de VMware Federal, VMware NSX se solicita,
 
 También se despliega una NSX Edge Services Gateway para que la utilicen las máquinas virtuales (VM) de carga de trabajo. Para obtener más información, consulte [Configuración de la red para que utilice la ESG NSX gestionada por el cliente con las VM](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-## Consideraciones al cambiar contraseñas para los componentes de NSX
+## Consideraciones al cambiar contraseñas para componentes de NSX
 
 Revise las siguientes consideraciones antes de cambiar las contraseñas de NSX Manager, controladores NSX y NSX Edges:
 * No cambie la contraseña de NSX Manager que encontrará en la página **Resumen** de la instancia en la consola de {{site.data.keyword.vmwaresolutions_short}}.

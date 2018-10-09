@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 Para desplegar una plataforma virtualizada VMware flexible y personalizable que se adapte perfectamente a sus necesidades de carga de trabajo, solicite una instancia de VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity). El pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity) incluye la licencia de VMware Hybrid Cloud Extension (HCX) y le autoriza al servicio de VMware HCX on {{site.data.keyword.cloud_notm}}. También puede añadir servicios, como [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html), para la recuperación tras desastre.
 
-## Requisitos
+## Requisitos para solicitar vCenter Server con instancias del paquete híbrido (Hybridity)
 
 Asegúrese de haber realizado las tareas siguientes:
 *  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
@@ -30,11 +30,11 @@ Tabla 1. Formato del valor de nombres de instancia y de dominio
   | Nombre completo de servidor ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `<n>` es la secuencia del servidor ESXi. La longitud máxima es de 50 caracteres. |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
 
-**Importante:** no modifique ningún valor definido durante la solicitud y el despliegue de la instancia. Si lo hace, la instancia podría quedar inutilizable. Por ejemplo, el sistema de red pública se podría cerrar, los servidores e instancias de servidor virtual (VSI) podrían moverse detrás de una disposición media de Vyatta o la VSI de IBM CloudBuilder podría detenerse o suprimirse.
+**Importante**: No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime.
 
 ## Valores del sistema
 
-Debe especificar los siguientes valores de sistema cuando solicite una instancia de vCenter Server con el paquete híbrido (Hybridity).
+Debe especificar los siguientes valores del sistema cuando solicite una instancia de vCenter Server con el paquete híbrido (Hybridity).
 
 ### Nombre de instancia
 
@@ -50,12 +50,12 @@ Seleccione si desea solicitar una nueva instancia primaria o una instancia secun
 
 ## Valores de licencia
 
-Las licencias siguientes se incluyen con el pedido de instancia de vCenter Server con el paquete híbrido (Hybridity). Debe especificar **Advanced** o **Enterprise** para la edición de licencia de NSX.
+Las siguientes licencias de VMware se incluyen con el pedido de instancia de vCenter Server con el paquete híbrido (Hybridity). Debe especificar la edición para las licencias NSX y vSAN.
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Advanced o Enterprise) 6.4
-* Edición de licencia de VMware vSAN 6.6 (Advanced o Enterprise).
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4 (edición Advanced o Enterprise)
+* vSAN 6.6 (edición Advanced o Enterprise)
 
 **Atención:**
 * Las instancias de vCenter Server con el paquete híbrido (Hybridity) no admiten la opción de traer su propia licencia.
@@ -85,16 +85,21 @@ Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} personalizado
 | Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
 ### Número de servidores nativos
 
 De forma predeterminada, se seleccionan cuatro servidores ESXi, y esto no se puede cambiar.
 
 ## Valores de almacenamiento
 
-Se incluye VMware vSAN 6.6 en el pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity). Debe especificar los siguientes valores de almacenamiento cuando solicite la instancia:
+Se incluye VMware vSAN 6.6 en el pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity). Especifique las siguientes opciones de vSAN:
 
-* **Tipo y tamaño de disco para discos de capacidad vSAN**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
-* **Número de discos de capacidad vSAN**: seleccione el número de discos para el almacenamiento compartido vSAN que desea añadir. Las cantidades de disco deben ser 2, 4, 6 u 8.
+* **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
+* **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
+* **Tipo de disco para discos de memoria caché vSAN**: Seleccione una opción para los discos de memoria caché que necesite.
+
+    **Nota**: Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* **Número de discos de memoria caché de vSAN**: Especifique el número de discos de memoria caché que desea añadir.
 
 ## Valores de interfaz de red
 
@@ -126,6 +131,15 @@ El nombre del dominio raíz debe cumplir los siguientes requisitos:
 
 **Nota:** la longitud máxima del FQDN (nombre de dominio completo) para hosts y máquinas virtuales (VM) es de 50 caracteres. Los nombres de dominio deben cumplir con esta longitud máxima.
 
+### Red pública o privada
+
+Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en la selección de **Red pública y privada** o de **Solo red privada**. Los siguientes servicios de complemento necesitan NIC públicos y no están disponibles si selecciona la opción privada:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
+
 ### Realizar pedido de nuevas VLAN
 
 Seleccione **Realizar pedido de nuevas VLAN** para solicitar una VLAN pública nueva y dos VLAN privadas nuevas.
@@ -142,7 +156,7 @@ Seleccione **Seleccionar las VLAN existentes** para reutilizar las VLAN pública
 
 **Importante:**
 * Asegúrese de que la configuración del cortafuegos en las VLAN seleccionadas no bloquee el tráfico de datos de gestión.
-* Asegúrese de que todas las VLAN que seleccione estén en el mismo pod, porque no se pueden suministrar servidores ESXi en VLAN en pods mixtos.
+* Asegúrese de que todas las VLAN que seleccione estén en el mismo pod, porque los servidores ESXi no se pueden suministrar en VLAN de pod mixtos.
 
 ### Configuración DNS
 
@@ -167,9 +181,9 @@ Cuando solicite una instancia de vCenter Server con el paquete híbrido (Hybridi
 
 En función de la configuración seleccionada para la instancia y los servicios de complementos, el coste estimado se genera y se muestra al instante en la sección **Resumen de pedido** en el panel derecho. Pulse **Detalles sobre precios** en la parte inferior del panel derecho para generar un documento PDF que proporcione la información estimada.
 
-## Procedimiento
+## Procedimiento para solicitar instancias de vCenter Server con el paquete híbrido (Hybridity)
 
-1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** en el panel de navegación izquierdo y pulse **vCenter Server** en la sección **Centros de datos virtuales**.
+1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** desde el panel de navegación de la izquierda y, a continuación, pulse **vCenter Server** en la sección **Centros de datos virtuales**.
 2. En la página **VMware vCenter Server on IBM Cloud**, pulse la tarjeta **vCenter Server con el paquete híbrido (Hybridity)** y pulse **Crear**.
 3. En la página **vCenter Server**, escriba el nombre de la instancia.
 4. Seleccione el tipo de instancia:
@@ -183,18 +197,17 @@ En función de la configuración seleccionada para la instancia y los servicios 
   2. Seleccione el modelo de CPU **Personalizado** y la cantidad de **RAM**.
 
   **Nota:** el **Número de servidores nativos** se establece en cuatro de forma predeterminada y no se puede cambiar.
-
-7. Complete la configuración del almacenamiento.
-  1. Seleccione el **Tipo y tamaño de disco para discos de capacidad vSAN**.
-  2. Seleccione el **Número de discos de capacidad vSAN**.
+7. Complete la configuración del almacenamiento. Especifique los tipos de disco para la capacidad y los discos de memoria caché y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
 8. Complete la configuración de interfaz de red.
   1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio raíz.
-  2. Seleccione la configuración de VLAN.
+  2. Seleccione el valor de red de **Red pública y privada** o **Solo red privada**.
+  3. Seleccione la configuración de VLAN.
      *  Si desea solicitar nuevas VLAN públicas y privadas, pulse **Realizar pedido de nuevas VLAN**.
      *  Si desea reutilizar las VLAN públicas y privadas existentes cuando estén disponibles, pulse **Seleccionar las VLAN existentes** y luego seleccione la VLAN pública, la subred primaria, la VLAN privada, la subred primaria privada y la VLAN privada secundaria.
-  3. Seleccione la configuración de DNS.
-9. Seleccione los servicios complementarios que desea desplegar en la instancia pulsando la tarjeta del servicio correspondiente. Si un servicio requiere configuración, complete los valores específicos del servicio y pulse **Añadir servicio** en la tarjeta.  
-Para obtener información sobre cómo proporcionar valores para un servicio, consulte el tema de solicitud de servicio correspondiente.
+  4. Seleccione la configuración de DNS.
+9. Complete la configuración para el servicio de HCX on {{site.data.keyword.cloud_notm}} incluido. Para obtener más información sobre cómo proporcionar valores para el servicio, consulte la sección _Configuración de VMware HCX on IBM Cloud_ en [Solicitud de VMware HCX on IBM Cloud](../services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration).
+10. Seleccione los servicios complementarios que desea desplegar en la instancia pulsando la tarjeta del servicio correspondiente. Si un servicio requiere configuración, complete los valores específicos del servicio y pulse **Añadir servicio** en la tarjeta.  
+Para obtener más información sobre cómo proporcionar valores para un servicio, consulte el tema de ordenación de servicio correspondiente.
 
 8. En el panel **Resumen del pedido**, verifique la configuración de la instancia antes de realizar el pedido.
    1. Revise los valores de la instancia.
@@ -216,7 +229,7 @@ Cuando se solicita una instancia secundaria, es posible que el cliente web de VM
 
 Puede ver y gestionar la instancia de vCenter Server con el paquete híbrido (Hybridity) que ha solicitado.
 
-**Importante**: solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola.
+**Importante**: Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola.
 Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
 
 **ATENCIÓN:**: el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:

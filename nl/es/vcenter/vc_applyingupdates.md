@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-19"
 
 ---
 
@@ -16,7 +16,9 @@ El proceso de aplicar parches y actualizaciones a instancias de vCenter Server s
 
 ## Antes de empezar
 
-**Importante:** Al actualizar una instancia de vCenter Server a una instancia de vCenter Server con el paquete híbrido (Hybridity), debe aplicar en primer lugar, como mínimo, la actualización de software base de vCenter Server V2.3 para poder realizar la actualización de licencia al paquete híbrido (Hybridity).
+**Importante:** Cuando actualice una instancia de vCenter Server a un vCenter Server con la instancia de Hybridity Bundle, primero debe aplicar al menos la actualización de software base de vCenter Server V2.3. Debe hacerlo antes de poder realizar la actualización de la licencia en el paquete híbrido (Hybridity).
+
+Los usuarios de Business Partner no tienen la opción de actualizar una instancia de vCenter Server existente a un vCenter Server con la instancia del paquete híbrido (Hybridity).
 
 Antes de intentar aplicar una actualización, expanda la entrada de la actualización pulsando la flecha hacia abajo y verifique la información siguiente:
 * La versión de la actualización. Debe aplicar las actualizaciones en secuencia cronológica, es decir, desde la primera hasta la más reciente. Asegúrese de haber aplicado todas las actualizaciones anteriores antes de aplicar la más reciente. Por ejemplo, debe aplicar la actualización V2.3 antes de intentar aplicar la actualización V2.4.
