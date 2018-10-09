@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -62,7 +62,7 @@ vCenter Server with Hybridity Bundle のデプロイメントには、物理イ�
 | 状況 | 状況の詳細 |
 |:------------------------------|:--------------------------------------------------|
 | 近日対応                   | 現在、{{site.data.keyword.CloudDataCent_notm}}は対応していません。 |
-| 一時的な在庫切れ  | 現時点では、{{site.data.keyword.CloudDataCent_notm}}には在庫がありません。 |
+| 一時的な在庫切れ  | 現時点では、{{site.data.keyword.CloudDataCent_notm}}には在庫がありません。|
 | 限定在庫             | {{site.data.keyword.CloudDataCent_notm}}の在庫は限られているため、注文が満たされない可能性があります。 |
 
 ## 管理コンポーネントのバックアップ
@@ -88,7 +88,7 @@ vCenter Server with Hybridity Bundle インスタンスには VMware Hybrid Clou
 
 ## キャパシティーに関する考慮事項
 
-キャパシティーに関する情報と考慮事項については、[キャパシティーの拡張](../archiref/solution/solution_scaling.html)を参照してください。
+キャパシティーの考慮事項について詳しくは、[キャパシティーの拡張](../archiref/solution/solution_scaling.html)を参照してください。
 
 ### 関連リンク
 

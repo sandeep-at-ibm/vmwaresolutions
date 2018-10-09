@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -16,9 +16,9 @@ VMware Federal インスタンスに関するネットワーキングの考慮�
 
 VMware Federal インスタンスに含まれているネットワーキング・コンポーネントを確認するには、[{{site.data.keyword.cloud}} インスタンスの技術仕様](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)を参照してください。
 
-## NSX ファイアウォールに関する考慮事項
+## ファイアウォールに関する考慮事項
 
-NSX Distributed Firewalls (DFW) を使用している場合、IBM CloudDriver 仮想サーバー・インスタンス (VSI) からのすべての通信のために、IP アドレス `10.0.0.0/8` および `161.26.0.0/16` でのすべてのプロトコルの通信を許可するルールを構成する必要があります。
+ファイアウォールを使用している場合は、{{site.data.keyword.IBM}} CloudDriver 仮想サーバー・インスタンス (VSI) と SDDC Manager 仮想マシン (VM) からのすべての通信に関してルールを構成する必要があります。これらのルールでは、すべてのプロトコルが IP アドレス `10.0.0.0/8` と `161.26.0.0/16` 上で通信できるよう許可する必要があります。このようなファイアウォールの例としては、NSX Distributed Firewalls (DFW)、Vyatta ファイアウォールなどがあります。
 
 ## 仮想マシンでの NSX の使用
 

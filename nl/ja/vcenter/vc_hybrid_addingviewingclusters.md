@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 インスタンスの注文時に構成した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。
 
-VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle インスタンスにクラスターを追加して、コンピュート能力やストレージ容量を拡張できます。 クラスター内で ESXi サーバーを管理すると、リソース割り振りを改善したり高可用性を実現したりできます。 不要になった場合には、追加したクラスターをインスタンスから削除できます。
+VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle インスタンスにクラスターを追加して、コンピュート能力やストレージ容量を拡張できます。 クラスター内で ESXi サーバーを管理して、リソース割り振りを改善し、高可用性を実現します。不要になった場合は、追加したクラスターをインスタンスから削除します。
 
 ## vCenter Server with Hybridity Bundle インスタンスへのクラスターの追加
 
@@ -32,9 +32,9 @@ vCenter Server with Hybridity Bundle インスタンスにクラスターを追�
 
 #### データ・センターの場所
 
-クラスターの {{site.data.keyword.CloudDataCent_notm}}の場所はデフォルトで、vCenter Server インスタンスの {{site.data.keyword.CloudDataCent_notm}}に設定されます。 デプロイ済みのインスタンスとは異なる {{site.data.keyword.CloudDataCent_notm}}にクラスターをデプロイできますが、それら 2 カ所の {{site.data.keyword.CloudDataCents_notm}}間のネットワーク待ち時間が、150 ms 未満になるようにしてください。 ネットワーク待ち時間を確認するには、[SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} などのツールを使用できます。
+クラスターの {{site.data.keyword.CloudDataCent_notm}}の場所はデフォルトで、vCenter Server インスタンスの {{site.data.keyword.CloudDataCent_notm}}に設定されます。 デプロイ済みのインスタンスとは異なる {{site.data.keyword.CloudDataCent_notm}}にクラスターをデプロイできますが、それら 2 カ所の {{site.data.keyword.CloudDataCents_notm}}間のネットワーク待ち時間が、150 ms 未満になるようにしてください。 ネットワーク待ち時間を確認するには、[SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} などのツールを使用します。
 
-別の {{site.data.keyword.CloudDataCent_notm}}または {{site.data.keyword.cloud_notm}} インフラストラクチャー・ポッドにクラスターをデプロイする場合は、注文した{{site.data.keyword.baremetal_short}}で使用するために 3 つの追加 VLAN が注文されます。
+別の {{site.data.keyword.CloudDataCent_notm}}または {{site.data.keyword.cloud_notm}} インフラストラクチャー・ポッドにクラスターをデプロイする場合は、注文した{{site.data.keyword.baremetal_short}}で使用するためにさらに 3 つの VLAN を注文します。
 
 ### ベア・メタル・サーバーの設定
 
@@ -64,18 +64,31 @@ vCenter Server with Hybridity Bundle インスタンスにクラスターを追�
 
 ### vSAN ストレージ設定
 
-vCenter Server with Hybridity Bundle インスタンスの注文には、VMware vSAN 6.6 が含められます。 ライセンス・エディションは、**「Advanced」**または**「Enterprise」**のいずれかを指定する必要があります。
+vCenter Server with Hybridity Bundle インスタンスの注文には、VMware vSAN 6.6 が含められます。 以下の vSAN オプションを指定します。
 
-* **vSAN 容量ディスクのディスク・タイプとサイズ**: 共有ストレージのニーズを満たす容量を選択します。
-* **vSAN 容量ディスクの数**: 追加する vSAN 共有ストレージのディスク数を選択します。 ディスク数は、2、4、6、または 8 でなければなりません。
-* VMware vSAN 6.6 ライセンス・エディション (Advanced または Enterprise) を選択します。
+* **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
+* **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
+* **vSAN キャッシュ・ディスクのディスク・タイプ**: 必要なキャッシュ・ディスクのオプションを選択します。
+
+    **注**: 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。**「High-Performance Intel Optane」**オプションは、Dual Intel Xeon Gold 5120 および 6140 プロセッサーでのみ使用できます。
+* **vSAN キャッシュ・ディスクの数**: 追加するキャッシュ・ディスクの数を指定します。
+* **vSAN ライセンス**: VMware vSAN 6.6 ライセンス・エディション (Advanced または Enterprise) を選択します。
 
 ### ライセンス交付の設定
 
-以下のための IBM 提供の VMware ライセンス:
-  * VMware vSphere Enterprise Plus 6.5u1
-  * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Advanced または Enterprise) 6.4
+IBM では、以下の VMware コンポーネントのライセンスを提供しています。
+  * vSphere Enterprise Plus 6.5u1
+  * vCenter Server 6.5
+  * NSX Service Providers 6.4 (Advanced または Enterprise エディション)
+
+### ネットワーク・インターフェースの設定
+
+ネットワーク・インターフェース・カード (NIC) の設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。以下のアドオン・サービスはパブリック NIC を必要とするため、プライベート・オプションを選択した場合は利用できません。
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 注文のサマリー
 
@@ -86,15 +99,16 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、VMware 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、クラスターを表示するインスタンスをクリックします。
 
-   **注**: インスタンスの状況が**「使用可能」**であることを確認してください。 そうでない場合、インスタンスにクラスターを追加できません。
+   **注**: インスタンスの状況が**「使用可能」**であることを確認してください。そうでない場合、インスタンスにクラスターを追加できません。
 
 3. 左側のナビゲーション・ペインにある**「インフラストラクチャー」**をクリックし、**「クラスター」**テーブルの右上隅にある**「追加」**をクリックします。
 4. **「Add Cluster」**ページで、クラスター名を入力します。
-5. インスタンスのホスト以外の {{site.data.keyword.CloudDataCent_notm}} でクラスターをホストする場合は、**「Bare Metal Server」**で**「Select a different location」**チェック・ボックスにチェック・マークを付けて、インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}} を選択します。
+5. インスタンスのホスト以外の {{site.data.keyword.CloudDataCent_notm}} でクラスターをホストできます。これを行うには、**「Bare Metal Server」**で**「Select a different location」**チェック・ボックスにチェック・マークを付けて、インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
 6. ベアメタル構成として、**CPU モデル**、**RAM** の量、**ベア・メタル・サーバーの数**を選択します。
-7.  ストレージ構成として、**vSAN ストレージ** を選択し、**「vSAN 容量ディスクの数」**と**「vSAN 容量ディスクのディスク・タイプとサイズ」**を選択します。
+7.  **「vSAN Storage」**を選択し、容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
 8. ライセンス構成として、VMware vSAN のライセンス・エディションを選択します。
-9. **「発注要約」**ペインで、クラスター構成を確認してからクラスターを追加します。
+9. **「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のいずれかのネットワーク設定を選択します。
+10. **「発注要約」**ペインで、クラスター構成を確認してからクラスターを追加します。
    1. クラスターの設定を確認します。
    2. クラスターの見積もりコストを確認します。 PDF のサマリーを生成するには、**「料金詳細」**をクリックします。 注文のサマリーを保存または印刷するには、PDF ウィンドウの右上にある**「印刷」**アイコンまたは **「ダウンロード」**アイコンをクリックします。
    3. 注文に適用される使用条件のリンクをクリックして、クラスターを追加する前にそれらの条件に同意することを確認する必要があります。
@@ -171,7 +185,7 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、VMware 
 
 * クラスターは一度に 1 つしか削除できません。 複数のクラスターを削除する場合は、順番に削除する必要があります。つまり、前のクラスターが削除されるまで待ってから、次のクラスターを削除してください。
 * クラスターを削除する前に、クラスター内のすべてのノードが電源オンの状態で作動可能であることを確認します。
-* クラスターを削除すると、クラスターのすべての VM (仮想マシン) も削除され、復旧できなくなります。 VM を保持したい場合は、他のクラスターに移行してください。
+* クラスターを削除すると、クラスターのすべての VM (仮想マシン) も削除され、復旧できなくなります。VM を保持したい場合は、他のクラスターに移行してください。
 * デフォルトのクラスターは削除できません。
 
 ## vCenter Server with Hybridity Bundle インスタンスからクラスターを削除する手順

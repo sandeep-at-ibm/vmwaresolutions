@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 ワークロードのニーズに合わせて最適化できる、柔軟でカスタマイズ可能な VMware 仮想化プラットフォームをデプロイするには、VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle インスタンスを注文します。 vCenter Server with Hybridity Bundle インスタンスの注文には VMware Hybrid Cloud Extension (HCX) のライセンスが含まれているので、VMware HCX on {{site.data.keyword.cloud_notm}} サービスを利用することができます。 災害復旧のための [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) などのサービスも追加できます。
 
-## 要件
+## vCenter Server with Hybridity Bundle インスタンスを注文するための要件
 
 以下の作業を完了していることを確認してください。
 *  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](../vmonic/useraccount.html)を参照してください。
@@ -30,7 +30,7 @@ lastupdated: "2018-08-02"
   | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。ここで `<n>` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大長は 50 文字です。 |
 
-**重要**: 注文時およびインスタンスのデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスが使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
+**重要**: インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。変更すると、インスタンスを使用できなくなる可能性があります。例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
 
 ## システム設定
 
@@ -50,12 +50,12 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 
 ## ライセンス交付の設定
 
-vCenter Server with Hybridity Bundle インスタンスの注文には、以下のライセンスが含められます。 NSX ライセンス・エディションは、**「Advanced」**または**「Enterprise」**のいずれかを指定する必要があります。
+vCenter Server with Hybridity Bundle インスタンスの注文には、以下の VMware ライセンスが含められます。NSX および vSAN のライセンスのエディションを指定する必要があります。
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Advanced または Enterprise) 6.4
-* VMware vSAN 6.6 ライセンス・エディション (Advanced または Enterprise)
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4 (Advanced または Enterprise エディション)
+* vSAN 6.6 (Advanced または Enterprise エディション)
 
 **注意:**
 * vCenter Server with Hybridity Bundle インスタンスはライセンス持ち込みをサポートしていません。
@@ -85,16 +85,21 @@ vSAN 構成の場合、初期クラスターとデプロイメント後のクラ
 | Dual Intel Xeon Silver 4110 Processor / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
 ### ベア・メタル・サーバーの数
 
 デフォルトで 4 つの ESXi サーバーが選択されます。変更はできません。
 
 ## ストレージ設定
 
-vCenter Server with Hybridity Bundle インスタンスの注文には、VMware vSAN 6.6 が含められます。 このインスタンスを注文する際には、以下のストレージ設定を指定する必要があります。
+vCenter Server with Hybridity Bundle インスタンスの注文には、VMware vSAN 6.6 が含められます。 以下の vSAN オプションを指定します。
 
-* **vSAN 容量ディスクのディスク・タイプとサイズ**: 共有ストレージのニーズを満たす容量を選択します。
-* **vSAN 容量ディスクの数**: 追加する vSAN 共有ストレージのディスク数を選択します。 ディスク数は、2、4、6、または 8 でなければなりません。
+* **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
+* **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
+* **vSAN キャッシュ・ディスクのディスク・タイプ**: 必要なキャッシュ・ディスクのオプションを選択します。
+
+    **注**: 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。**「High-Performance Intel Optane」**オプションは、Dual Intel Xeon Gold 5120 および 6140 プロセッサーでのみ使用できます。
+* **vSAN キャッシュ・ディスクの数**: 追加するキャッシュ・ディスクの数を指定します。
 
 ## ネットワーク・インターフェースの設定
 
@@ -120,11 +125,20 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 ルート・ドメイン・ネームは、次の要件を満たす必要があります。
 * ドメイン・ネームは、ピリオド (.) で区切られた 2 つ以上のストリングで構成されていなければなりません。
 * 最初の文字列は、英字で始まり英数字で終わらなければなりません。
-* 最後の文字列を除き、文字列で使用できるのは、英数字とダッシュ (-) だけです。
+* 最後の文字列を除き、文字列で使用できるのは、英数字とダッシュ (-) のみです。
 * 最後の文字列には、英字しか使用できません。
 * 最後の文字列の長さは、2 文字から 24 文字までの範囲でなければなりません。
 
 **注:** ホストと VM (仮想マシン) の FQDN (完全修飾ドメイン・ネーム) の最大長は 50 文字です。 この最大長に対応するドメイン・ネームにする必要があります。
+
+### パブリックまたはプライベート・ネットワーク
+
+ネットワーク・インターフェース・カード (NIC) の有効化設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。以下のアドオン・サービスはパブリック NIC を必要とするため、プライベート・オプションを選択した場合は利用できません。
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 新規 VLAN を注文
 
@@ -167,7 +181,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
 
 選択したインスタンス構成とアドオン・サービス構成に基づいて、見積もりコストがすぐに生成され、右側のペインの**「注文の要約」**セクションに表示されます。 右側のペインの下部の**「料金詳細」**をクリックすると、見積もりの詳細を示す PDF 文書を生成できます。
 
-## 手順
+## vCenter Server with Hybridity Bundle インスタンスを注文する手順
 
 1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクションの**「vCenter サーバー」**をクリックします。
 2. **「VMware vCenter Server on IBM Cloud」**ページで、**「vCenter Server with Hybridity Bundle」**カードをクリックし、**「作成」**をクリックします。
@@ -183,18 +197,17 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
   2. **「カスタマイズ型」**の CPU モデルと **RAM** の容量を選択します。
 
   **注:** **「ベア・メタル・サーバーの数」**はデフォルトで 4 に設定されます。変更はできません。
-
-7. ストレージ構成を次の手順で実行します。
-  1. **「vSAN 容量ディスクのディスク・タイプとサイズ」**を選択します。
-  2. **「vSAN 容量ディスクの数」**を選択します。
+7. ストレージ構成を次の手順で実行します。容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
 8. ネットワーク・インターフェース構成を行います。
   1. ホスト名接頭部、サブドメイン・ラベル、ルート・ドメイン・ネームを入力します。
-  2. VLAN 構成を選択します。
+  2. **「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のいずれかのネットワーク設定を選択します。
+  3. VLAN 構成を選択します。
      *  新規のパブリック VLAN とプライベート VLAN を注文する場合は、**「新規 VLAN を注文」**をクリックします。
      *  既存のパブリック VLAN とプライベート VLAN を使用できる場合に再利用するには、**「既存の VLAN を選択」**をクリックし、パブリック VLAN、プライマリー・サブネット、プライベート VLAN、プライベート・プライマリー・サブネット、セカンダリー・プライベート VLAN を選択します。
-  3. DNS 構成を選択します。
-9. インスタンスにデプロイするアドオン・サービスを、対応するサービス・カードをクリックして選択します。 サービスに構成が必要な場合は、サービス固有の設定を入力し、カードの**「サービスの追加」**をクリックします。  
-サービスの設定方法については、対応するサービス注文トピックを参照してください。
+  4. DNS 構成を選択します。
+9. 組み込まれている HCX on {{site.data.keyword.cloud_notm}} サービスの構成を完了します。サービスの設定方法について詳しくは、[VMware HCX on IBM Cloud の注文](../services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration)の『_VMware HCX on IBM Cloud の構成_』セクションを参照してください。
+10. インスタンスにデプロイするアドオン・サービスを、対応するサービス・カードをクリックして選択します。 サービスに構成が必要な場合は、サービス固有の設定を入力し、カードの**「サービスの追加」**をクリックします。  
+サービスの設定方法について詳しくは、対応するサービス注文トピックを参照してください。
 
 8. **「発注要約」**ペインで、インスタンス構成を確認してから注文を実行します。
    1. インスタンスの設定を確認します。
@@ -206,7 +219,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
 
-インスタンスが正常にデプロイされると、[vCenter Server with Hybridity Bundle インスタンスの技術仕様](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 追加のサービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
+インスタンスが正常にデプロイされると、[vCenter Server with Hybridity Bundle インスタンスの技術仕様](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 アドオン・サービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
