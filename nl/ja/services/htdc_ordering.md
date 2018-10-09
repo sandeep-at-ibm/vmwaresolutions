@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -26,8 +26,8 @@ HyTrust DataControl on {{site.data.keyword.cloud}} サービスを注文する�
 
 ### 関連リンク
 
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の概要](htcc_considerations.html)
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の管理](managinghtcc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の概要](htdc_considerations.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の管理](managinghtdc.html)
 * [Cloud Foundation インスタンス用サービスの注文、表示、削除](../sddc/sd_addingremovingservices.html)
 * [vCenter Server インスタンスのサービスの注文、表示、削除](../vcenter/vc_addingremovingservices.html)
 * [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](../vcenter/vc_hybrid_addingremovingservices.html)
