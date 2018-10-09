@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -26,9 +26,9 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} では、オプションの V
 
 ### VMware のコンポーネント
 
-以下の VMware コンポーネントのライセンス (IBM 提供ライセンスまたは BYOL ライセンス):
-* VMware vSphere Enterprise Plus 6.0u2 または 6.5u1
-* オプションの VMware コンポーネント:
+以下の VMware コンポーネントのライセンス (IBM 提供または BYOL) を選択します。
+* VMware vSphere Enterprise Plus 6.0u2、6.5u1、または 6.5u2
+* 以下の VMware コンポーネントはオプションです。
    * VMware vCenter Server Standard
    * VMware NSX (Base、Advanced、または Enterprise)
    * VMware vSAN (Advanced または Enterprise)
@@ -39,32 +39,35 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} では、オプションの V
 
 ### ベア・メタル・サーバー
 
-選択した CPU モデルと RAM サイズの 1 つ以上の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}:
+選択した CPU モデルと RAM サイズの 1 つ以上の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} を選択します。
 * 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600 v4 シリーズ)
 * 2-CPU Intel Skylake 世代 (Intel Xeon 4100/5100/6100 シリーズ)
 
 使用可能なオプションは、VMware vSAN コンポーネントを選択したかどうかによります。
 
-さらに、以下のディスク仕様とネットワーキング仕様:
+さらに、以下のディスク仕様とネットワーキング仕様を選択します。
 * 10 Gbps デュアル・ネットワーク・アップリンク (パブリックとプライベート)
 * RAID ディスク・コントローラー 1 つ
 
 ### ネットワーキング
 
-* VLAN (仮想 LAN) 3 つ: パブリック VLAN 1 つとプライベート VLAN 2 つ
+* 1 つの VLAN (仮想 LAN) パブリック VLAN と 2 つのプライベート VLAN
 * (オプション) FortiGate Security Appliance デバイスの HA ペア
 
 ### ストレージ
 
 VMware vSAN コンポーネントを選択した場合は、vSAN 構成用のユーザー・カスタマイズ型のストレージ
-* ストレージ・ディスク・オプション: 960 GB SSD SED、1.9 TB SSD SED、または 3.8 TB SSD SED
-* ディスク数量オプション: 2、4、6、または 8
+* 960 GB SSD SED、1.9 TB SSD SED、または 3.8 TB SSD SED のストレージ・ディスク・オプション
+* 2、4、6、または 8 のディスク数量オプション
 
-**注:** 3.8 TB SSD (ソリッド・ステート・ディスク) ドライブは、データ・センターで一般提供が開始されたらサポートされる予定です。
+  さらに、ホストごとに 960 GB のキャッシュ・ディスクが 2 つ注文されます。
+
+  **注:** 3.8 TB SSD (ソリッド・ステート・ディスク) ドライブは、データ・センターで一般提供が開始されたらサポートされます。
+* High-Performance Intel Optane オプション。合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されます。このオプションは CPU モデルに応じて異なります。
 
 ## vSphere クラスター拡張ノードの技術仕様
 
-各 vSphere クラスター拡張ノードは、{{site.data.keyword.slportal}}のアカウントに以下のコンポーネントをデプロイするので、料金が発生します。
+vSphere クラスター拡張ノードごとに、{{site.data.keyword.slportal}} アカウントに以下のコンポーネントがデプロイされ、料金が発生します。
 
 ### 拡張ノード用のハードウェア
 
@@ -79,7 +82,7 @@ VMware vSAN コンポーネントを選択した場合は、vSAN 構成用のユ
 * VMware vSphere Enterprise Plus 6.0u2 または 6.5u1 が適用された {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。  
 * [VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているオプションの VMware コンポーネント。
 
-**重要**: 注文して {{site.data.keyword.cloud_notm}} アカウントに提供された ESXi サーバー、オプションの VMware コンポーネント、追加のハードウェアの管理は、必ず {{site.data.keyword.slportal}}のみから行う必要があります。 {{site.data.keyword.vmwaresolutions_short}} コンソールで新規クラスターを作成した後、コンソールに戻り、保存されている構成を使用して、その新規クラスターを拡張できます。 詳しくは、[既存の vSphere クラスターの拡張](vs_scalingexistingclusters.html)を参照してください。
+**重要**: 注文して {{site.data.keyword.cloud_notm}} アカウントに提供された ESXi サーバー、オプションの VMware コンポーネント、追加のハードウェアの管理は、必ず {{site.data.keyword.slportal}}のみから行う必要があります。 {{site.data.keyword.vmwaresolutions_short}} コンソールで新規クラスターを作成した後、コンソールに戻り、保存されている情報を使用して、その新規クラスターを拡張できます。詳しくは、[既存の vSphere クラスターの拡張](vs_scalingexistingclusters.html)を参照してください。
 
 ### 関連リンク
 
