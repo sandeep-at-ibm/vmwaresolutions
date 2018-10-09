@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -14,13 +14,13 @@ VMware vCenter Server on {{site.data.keyword.cloud}} は、VMware vSphere スタ
 
 多くの場合、環境全体を 1 日以内でプロビジョンできます。また、このベア・メタル・インフラストラクチャーのコンピュート能力は、必要に応じて迅速かつ伸縮自在に拡張や縮小ができます。
 
-デプロイメント後に、{{site.data.keyword.slportal}}から追加の NFS (ネットワーク・ファイル・システム) ファイル共有を注文して共有ストレージを増やし、クラスター内のすべての ESXi サーバーにそれらを手動で接続できます。 専用ストレージが必要な場合は、[NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html) を、高性能 (オール SSD) 構成と大容量 (オール SATA) 構成の両方で利用できます。
+デプロイメント後に、{{site.data.keyword.slportal}}から NFS (ネットワーク・ファイル・システム) ファイル共有をさらに注文してからクラスター内のすべての ESXi サーバーにそれらを手動で接続することによって、共有ストレージを増やすことができます。専用ストレージが必要な場合は、[NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html) を、高性能 (オール SSD) 構成と大容量 (オール SATA) 構成の両方で利用できます。
 
 VMware vSAN は専用ストレージのオプションとしても利用できます。 vSAN クラスターの vSAN ベース・ストレージの容量を増やすには、デプロイメント後に ESXi サーバーをさらに追加します。
 
-IBM 提供の VMware ライセンスを購入した場合は、VMware NSX Base Edition を Advanced Edition または Enterprise Edition にアップグレードできます。VMware vRealize Operations などの追加の VMware コンポーネントも購入できます。
+IBM 提供の VMware ライセンスを購入した場合は、VMware NSX Base エディションを Advanced エディションまたは Enterprise エディションにアップグレードできます。VMware vRealize Operations などの追加の VMware コンポーネントも購入できます。
 
-仮想化、ゲスト OS、アプリケーション層の日常業務と保守業務から解放されたい場合は、IBM Managed Services を追加できます。 クラウドの利用をすぐに開始できるように移行、実装、計画、オンボーディングのサービスを提供してお客様を支援する、{{site.data.keyword.cloud_notm}} プロフェッショナル・サービス・チームも用意されています。
+仮想化、ゲスト OS、アプリケーション層の日常業務と保守業務から解放されたい場合は、IBM Managed Services を追加できます。クラウドの利用をすぐに開始できるように移行、実装、計画、オンボーディングのサービスを提供してお客様を支援する、{{site.data.keyword.cloud_notm}} プロフェッショナル・サービス・チームも用意されています。
 
 ## vCenter Server アーキテクチャー
 
@@ -48,7 +48,7 @@ IBM 提供の VMware ライセンスを購入した場合は、VMware NSX Base E
 
 合計で、基本オファリングには、仮想化管理層用に予約される 38 個の vCPU と 67 GB の vRAM が必要です。 VM 用の残りのホスト容量は、オーバーサブスクリプション率、VM サイジング、ワークロードのパフォーマンス要件などのいくつかの要因によって決まります。
 
-アーキテクチャーについて詳しくは、[{{site.data.keyword.vmwaresolutions_short}} architecture reference](../archiref/solution/solution_overview.html) を参照してください。
+アーキテクチャーについて詳しくは、[{{site.data.keyword.vmwaresolutions_short}} アーキテクチャーの参照情報](../archiref/solution/solution_overview.html)を参照してください。
 
 ## vCenter Server インスタンスの技術仕様
 
@@ -74,32 +74,37 @@ vCenter Server インスタンスには、以下のコンポーネントが含�
 以下のネットワーキング・コンポーネントが注文されます。
 *  10 Gbps デュアル・ネットワーク・アップリンク (パブリックとプライベート)
 *  VLAN (仮想 LAN) 3 つ: パブリック VLAN 1 つとプライベート VLAN 2 つ
-*  レイヤー 2 (L2) ネットワークに接続されたローカル・ワークロード間で実行される可能性のある東西通信用の DLR (分散論理ルーター) を備えた VXLAN (仮想拡張可能 LAN) 1 つ。 この VXLAN は、サンプルのルーティング・トポロジーとしてデプロイされるので、変更したり、作成の基礎として使用したり、削除したりできます。 また、DLR の新しい論理インターフェースに追加の VXLAN を接続してセキュリティー・ゾーンを追加することもできます。
+*  レイヤー 2 (L2) ネットワークに接続されたローカル・ワークロード間で実行される可能性のある東西通信用の DLR (分散論理ルーター) を備えた VXLAN (仮想拡張可能 LAN) 1 つ。 この VXLAN は、サンプルのルーティング・トポロジーとしてデプロイされるので、変更したり、作成の基礎として使用したり、削除したりできます。 また、DLR の新しい論理インターフェースにさらに VXLAN を接続してセキュリティー・ゾーンを追加することもできます。
 *  以下の 2 つの VMware NSX Edge Services Gateway
   * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX Edge Services Gateway (ESG)。これは、管理ネットワーキング・トポロジーの一部として IBM がデプロイします。 この ESG は、IBM 管理仮想マシンが、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[ユーザー管理の ESG を使用するためのネットワークの構成](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)を参照してください。
 
-    **重要**: ユーザーは、この ESG にアクセスすることはできず、使用できません。 これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用不可になります。
-  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。これは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-) を参照してください。
+    **重要**: ユーザーは、この ESG にアクセスすることはできず、使用できません。 これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなる可能性があります。
+  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。このゲートウェイは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-) を参照してください。
 
 ### 仮想サーバー・インスタンス
 
 以下の仮想サーバー・インスタンス (VSI) が注文されます。
 * IBM CloudBuilder の VSI。これは、インスタンスのデプロイメントが完了した後にシャットダウンされます。
 * (V2.2 以降のインスタンス) Microsoft Active Directory (AD) 用に 1 つの Microsoft Windows Server VSI をデプロイするか、管理クラスターに 2 つの高可用性 Microsoft Windows VM をデプロイしてセキュリティーと堅牢性を強化するかを選択できます。
-* (インスタンス V1.9 から V2.1 の場合) Microsoft Active Directory (AD) 用の Microsoft Windows Server VSI。ホストと仮想マシンが登録されたインスタンスの DNS として機能します。これがデプロイされて参照可能になります。
+* (V1.9 から V2.1 のインスタンス) Microsoft Active Directory (AD) 用の Microsoft Windows Server VSI がデプロイされて参照可能になります。この VSI がインスタンスの DNS として機能し、ここにホストと仮想マシンが登録されます。
 * (インスタンス V1.8 以前の場合) 管理コンポーネントのスナップショット・ベース・バックアップ用の VSI。これは、インスタンスのデプロイメントが完了した後も継続して実行されます。
 
 ### ストレージ
 
 最初のデプロイメントのときに、vSAN と NFS のどちらかのストレージ・オプションを選択できます。
 
-vSAN オプションでは、構成をカスタマイズできます。ディスクのタイプと数にも次のように多様なオプションがあります。
+#### vSAN ストレージ
+
+vSAN オプションでは、構成をカスタマイズできます。ディスクのタイプ、サイズ、数にも次のように多様なオプションがあります。
 * ディスクの数: 2、4、6、8
 * ストレージ・ディスク: 960 GB SSD SED、1.9 TB SSD SED、3.8 TB SSD SED。
 
   さらに、ホストごとに 960 GB のキャッシュ・ディスクが 2 つ注文されます。
 
   **注:** 3.8 TB SSD (ソリッド・ステート・ディスク) ドライブは、データ・センターで一般提供が開始されたらサポートされる予定です。
+* High-Performance Intel Optane オプション。合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されます。このオプションは CPU モデルに応じて異なります。
+
+#### NFS ストレージ
 
 NFS オプションでは、ワークロード用のファイル・レベルの共有ストレージをカスタマイズできます。サイズとパフォーマンスをさまざまなオプションから選択できます。
 * サイズ: 1、2、4、8、12 TB

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -32,21 +32,20 @@ lastupdated: "2018-07-19"
 
 | 製造元  | コンポーネント                      | バージョン       |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.5 U1g (パッチ・レベル ESXi650-201803001 を適用済みの ESXi 6.5u1) |
-| VMware       | vCenter Server Appliance        | 6.5 Update 1g |
-| VMware       | Platform Services Controller    | 6.5 Update 1g |
+| VMware       | vSphere ESXi                    | 6.5 Update 2c (最大パッチ・レベル: ESXi650-201808001) |
+| VMware       | vCenter Server Appliance        | 6.5 Update 2c |
+| VMware       | Platform Services Controller    | 6.5 Update 2c |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX for vSphere                 | 6.4.1        |
-| IBM          | CloudDriver                     | 2.5          |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
 **注**: VMware vSAN はオプションのコンポーネントです。
 
 ## ESXi サーバーの拡張構成の設定
 
-次の表で、ESXi サーバーに適用される拡張構成設定の概要を確認してください。拡張構成設定は、vCenter Server インスタンスが、V2.2 以降でデプロイされたか、V2.1 以前のリリースから V2.2 以降にアップグレードされたかによって異なります。
+次の表で、ESXi サーバーに適用される拡張構成設定の概要を確認してください。これらの設定は、vCenter Server インスタンスが V2.2 以降にデプロイされているか、または V2.1 以前から V2.2 以降にアップグレードされたかによって異なります。
 
-これらの設定は、V2.2 以降の新しいインスタンスと新しいインスタンス内の新しいクラスターに適用されます。 V2.1 以前の既存インスタンス内または V2.2 以降にアップグレードされた既存インスタンス内の新しいクラスターには適用されません。
+これらの設定は、V2.2 以降の新しいインスタンスと新しいインスタンス内の新しいクラスターに適用されます。 これらの設定は、V2.1 以前の既存インスタンス内または V2.2 以降にアップグレードされた既存インスタンス内の新しいクラスターには適用されません。
 
 表 3. vCenter Server インスタンスおよびクラスター用の ESXi サーバー拡張構成設定
 
@@ -68,13 +67,13 @@ lastupdated: "2018-07-19"
 
   ストレージ拡張が適切にサポートされるように、**未設定**の構成設定を新しい値に変更してすべてのインスタンスで統一することをお勧めします。 IBM は、{{site.data.keyword.vmwaresolutions_short}} V2.2 以降のすべてのリリースで、これらの新しい設定だけを使用してテストする予定です。
 
-  詳しくは、[Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239) を参照してください。
+  詳しくは、[Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239) を参照してください。
 
 ## NSX とポート・グループの構成設定
 
 次の表で、vCenter Server インスタンス用の VMware NSX とポート・グループの構成設定の概要、リリース間の相違点を確認してください。
 
-これらの設定は、V2.2 以降の新しいインスタンスと新しいインスタンス内の新しいクラスターに適用されます。 V2.1 以前の既存インスタンス内または V2.2 以降にアップグレードされた既存インスタンス内の新しいクラスターには適用されません。
+これらの設定は、V2.2 以降の新しいインスタンスと新しいインスタンス内の新しいクラスターに適用されます。 これらの設定は、V2.1 以前の既存インスタンス内または V2.2 以降にアップグレードされた既存インスタンス内の新しいクラスターには適用されません。
 
 表 4. vCenter Server インスタンス用の NSX とポート・グループの構成設定
 
@@ -90,7 +89,7 @@ lastupdated: "2018-07-19"
 
 ## ネットワーク MTU の構成設定
 
-vSphere クラスターは 2 つの vSphere 仮想分散スイッチ (VDS) を使用します。1 つはパブリック・ネットワーク接続用で、もう 1 つはプライベート・ネットワーク接続用です。
+vSphere クラスターは 2 つの vSphere 分散スイッチ (vDS) を使用します。1 つはパブリック・ネットワーク接続用で、もう 1 つはプライベート・ネットワーク接続用です。
 
 プライベート・ネットワーク接続は、サイズが 9000 のジャンボ・フレーム MTU (最大伝送単位) を使用するように構成されるので、ストレージや VMware vMotion などの大量のデータ転送のパフォーマンスが向上します。 この値は、VMware 内で、および {{site.data.keyword.cloud_notm}} によって許可される最大の MTU です。
 
@@ -100,7 +99,7 @@ V2.1 以降では、パブリック・ネットワーク接続には標準的な
 
 表 5. vCenter Server インスタンスとクラスターの MTU 構成設定 (インスタンスのバージョンによって異なる)
 
-| VDS | V2.1 以降  | V2.0 以前 (または V2.0 以前からアップグレードされたもの) |
+| vDS | V2.1 以降  | V2.0 以前 (または V2.0 以前からアップグレードされたもの) |
 |:-------------- |:-------------- |:------------- |
 | パブリック・スイッチ  | 1500 (デフォルト) | 9000 (ジャンボ・フレーム) |
 | プライベート・スイッチ | 9000 (ジャンボ・フレーム) | 9000 (ジャンボ・フレーム) |
@@ -114,15 +113,15 @@ V2.0 以前でデプロイされたインスタンスの場合は、パブリッ
 ### パブリック・スイッチ MTU 設定の更新
 
 パブリック・スイッチの MTU 設定を更新するには、VMware vSphere Web Client で以下の手順を実行します。
-1. VDS を右クリックし、**「設定の編集」**をクリックします。
+1. vDS を右クリックし、**「設定の編集」**をクリックします。
 2. **「プロパティ」**タブで、**「詳細」**オプションを選択します。
 3. **「最大 MTU」**値を 1500 に設定します。
 
-   **注**: vDS の MTU サイズを変更すると、接続アップリンク (物理 NIC) が停止した後再開されます。 結果として、アップリンクを使用している VM に短時間の停止が発生します。 そのため、スケジュールされたダウン時間中に MTU 設定更新を計画することをお勧めします。
+   **注**: vDS の MTU サイズを変更すると、接続アップリンク (物理 NIC) が停止した後で再開されます。結果として、アップリンクを使用している VM に短時間の停止が発生します。 そのため、スケジュールされたダウン時間中に MTU 設定更新を計画することをお勧めします。
 
 ### 関連リンク
 
-* [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
+* [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)

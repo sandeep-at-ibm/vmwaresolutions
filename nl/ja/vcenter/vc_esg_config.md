@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-19"
 
 ---
 
 # ユーザー管理の NSX ESG を VM で使用するためのネットワークの構成
 
-VMware vCenter Server インスタンスにデプロイされている VMware NSX Edge Services Gateway (ESG) を活用できるように、仮想マシンのネットワークを構成します。 セキュリティー・リスクを最小化するために適用されるセキュリティー対策については、[管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-) を参照してください。
+VMware vCenter Server インスタンスにデプロイされている VMware NSX Edge Services Gateway (ESG) を活用できるように、仮想マシンのネットワークを構成します。 セキュリティー・リスクを最小化するために適用されるセキュリティー対策について詳しくは、[管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-) を参照してください。
 
 VMware NSX は、分離したネットワークの仮想化を可能にし、スイッチ、ルーティング、ファイアウォールなどの複数のネットワーク・サービスを提供するネットワーク仮想化プラットフォームです。 NSX について詳しくは、[NSX の概要](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}を参照してください。
 

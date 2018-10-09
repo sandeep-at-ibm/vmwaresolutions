@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-07-19"
+lastupdated: "2017-09-20"
 
 ---
 
@@ -24,7 +24,7 @@ vCenter Server with Hybridity Bundle インスタンスを削除すると、以�
 
 **注意**: 削除したインスタンスについての {{site.data.keyword.cloud_notm}} インフラストラクチャーの請求サイクルが終了するまで課金されます。
 
-## 手順
+## マルチサイト構成で vCenter Server with Hybridity Bundle インスタンスを削除する手順
 
 1. セカンダリー vCenter Server with Hybridity Bundle インスタンスからすべてのサービスを削除します。
 2. 削除するセカンダリー・インスタンスに NSX オブジェクトを展開していないことを確認します。
