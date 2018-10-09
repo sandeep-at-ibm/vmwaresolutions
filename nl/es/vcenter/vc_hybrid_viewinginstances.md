@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -16,7 +16,7 @@ Visualice el resumen y la información detallada de las instancias de VMware vCe
 
 Para ver un resumen de todas las instancias de vCenter Server con el paquete híbrido (Hybridity) que se han suministrado para una cuenta de usuario, complete los pasos siguientes:
 1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
-2. En la esquina superior derecha de la consola, pulse el avatar y, a continuación, pulse el campo **Cuenta** para seleccionar la cuenta de usuario para la que desea comprobar las instancias.
+2. En el banner de la consola, pulse el icono de la cuenta de usuario y, a continuación, pulse el campo **Cuenta** para seleccionar la cuenta de usuario para la que desea comprobar las instancias.
 3. En la tabla **vCenter Server**, visualice la lista de instancias que se han suministrado en la cuenta de usuario seleccionada.
 
 Tabla 1. Elementos de las instancias de vCenter Server con el paquete híbrido (Hybridity)

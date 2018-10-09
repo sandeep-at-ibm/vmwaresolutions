@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 Los servidores ESXi que ha configurado al solicitar una instancia se agrupan como **cluster1** de forma predeterminada.
 
-Puede añadir clústeres a la instancia de VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity) para ampliar la capacidad de cálculo y de almacenamiento. Dentro de un clúster, puede gestionar los servidores ESXi para mejorar la asignación de recursos y la alta disponibilidad. Cuando ya no sea necesario, puede suprimir los clústeres añadidos de la instancia.
+Puede añadir clústeres a la instancia de VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity) para ampliar la capacidad de cálculo y de almacenamiento. Dentro de un clúster, gestione los servidores ESXi para mejorar la asignación de recursos y la alta disponibilidad. Cuando ya no sea necesario, suprima los clústeres añadidos de la instancia.
 
 ## Adición de clústeres a instancias de vCenter Server con el paquete híbrido (Hybridity)
 
@@ -32,9 +32,9 @@ El nombre del clúster debe cumplir los siguientes requisitos:
 
 #### Ubicación del centro de datos
 
-La ubicación del {{site.data.keyword.CloudDataCent_notm}} del clúster está definido en {{site.data.keyword.CloudDataCent_notm}} en la instancia de vCenter Server de forma predeterminada. Puede desplegar el clúster en un {{site.data.keyword.CloudDataCent_notm}} distinto del de la instancia desplegada, pero debe asegurarse de que la latencia de red entre los dos {{site.data.keyword.CloudDataCents_notm}} sea inferior a 150 ms. Para comprobar la latencia de red, puede utilizar una herramienta como [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
+La ubicación del {{site.data.keyword.CloudDataCent_notm}} del clúster está definido en {{site.data.keyword.CloudDataCent_notm}} en la instancia de vCenter Server de forma predeterminada. Puede desplegar el clúster en un {{site.data.keyword.CloudDataCent_notm}} distinto del de la instancia desplegada, pero debe asegurarse de que la latencia de red entre los dos {{site.data.keyword.CloudDataCents_notm}} sea inferior a 150 ms. Para comprobar la latencia de red, utilice una herramienta como [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-Si despliega el clúster en otro {{site.data.keyword.CloudDataCent_notm}} o en otro pod de la infraestructura de {{site.data.keyword.cloud_notm}}, se solicitan tres VLAN adicionales para que las utilice con el {{site.data.keyword.baremetal_short}} solicitado.
+Si despliega el clúster en otro {{site.data.keyword.CloudDataCent_notm}} o en otro pod de la infraestructura de {{site.data.keyword.cloud_notm}}, se solicitan tres VLAN más para su uso con el {{site.data.keyword.baremetal_short}} solicitado.
 
 ### Valores de Servidor nativo
 
@@ -56,26 +56,39 @@ Tabla 2. Opciones para servidores nativos personalizados
 
 #### Número de servidores nativos
 
-Se necesita un mínimo de dos {{site.data.keyword.baremetal_short}} para un clúster.
+Se necesitan al menos dos {{site.data.keyword.baremetal_short}} para un clúster.
 
 Puede añadir un máximo de 59 {{site.data.keyword.baremetal_short}} para un clúster y puede añadir entre 1 y 59 servidores ESXi simultáneamente.
 
-Después del despliegue, puede crear un máximo de cuatro clústeres más. Para almacenamiento VMware vSAN, se necesitan 4 servidores para el clúster inicial y los clústeres posteriores al despliegue.
+Después del despliegue, puede crear un máximo de cuatro clústeres más. Para almacenamiento VMware vSAN, se necesitan cuatro servidores para el clúster inicial y los clústeres posteriores al despliegue.
 
 ### Valores de almacenamiento vSAN
 
-Se incluye VMware vSAN 6.6 en el pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity). Debe especificar **Advanced** o **Enterprise** para la edición de licencia.
+Se incluye VMware vSAN 6.6 en el pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity). Especifique las siguientes opciones de vSAN:
 
-* **Tipo y tamaño de disco para discos de capacidad vSAN**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
-* **Número de discos de capacidad vSAN**: seleccione el número de discos para el almacenamiento compartido vSAN que desea añadir. Las cantidades de disco deben ser 2, 4, 6 u 8.
-* Seleccione la edición de licencia de VMware vSAN 6.6 (Advanced o Enterprise).
+* **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
+* **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
+* **Tipo de disco para discos de memoria caché vSAN**: Seleccione una opción para los discos de memoria caché que necesite.
+
+    **Nota**: Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* **Número de discos de memoria caché de vSAN**: Especifique el número de discos de memoria caché que desea añadir.
+* **Licencia de vSAN**: Seleccione la edición de licencia de VMware vSAN 6.6 (Advanced o Enterprise).
 
 ### Valores de licencia
 
-Licencias de VMware proporcionadas por IBM para:
-  * VMware vSphere Enterprise Plus 6.5u1
-  * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Advanced o Enterprise) 6.4
+Licencias proporcionadas por IBM para los siguientes componentes de VMware:
+  * vSphere Enterprise Plus 6.5u1
+  * vCenter Server 6.5
+  * NSX Service Providers 6.4 (edición Advanced o Enterprise)
+
+### Valores de interfaz de red
+
+Los valores de tarjeta de interfaz de red (NIC) se basan en la selección de **Red pública y privada** o de **Solo red privada**. Los siguientes servicios de complemento necesitan NIC públicos y no están disponibles con la opción privada:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Resumen del pedido
 
@@ -86,15 +99,16 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia para ver los clústeres que contiene.
 
-   **Nota**: asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede añadir clústeres a la instancia.
+   **Nota**: Asegúrese de que el estado de la instancia sea **Listo para su uso**. De lo contrario, no puede añadir clústeres a la instancia.
 
 3. Pulse **Infraestructura** en el panel de navegación izquierdo y pulse **Añadir** en la esquina superior derecha de la tabla **CLÚSTERES**.
 4. En la página **Añadir clúster**, escriba el nombre de clúster.
-5. Si desea alojar el clúster en un {{site.data.keyword.CloudDataCent_notm}} diferente al que se aloja la instancia, en **Servidor nativo**, marque el recuadro de selección **Seleccione otra ubicación** y elija el {{site.data.keyword.CloudDataCent_notm}} para alojar la instancia.
+5. Puede alojar el clúster en un {{site.data.keyword.CloudDataCent_notm}} diferente al que se aloja la instancia. Para ello, en **Servidor nativo**, marque el recuadro de selección **Seleccionar una ubicación diferente** y elija el {{site.data.keyword.CloudDataCent_notm}} para alojar la instancia.
 6. Seleccione el **Modelo de CPU**, la cantidad de **RAM** y el **Número de servidores nativos** de la configuración del servidor nativo.
-7.  Seleccione **Almacenamiento vSAN** y seleccione el **Número de discos de capacidad vSAN** y el **Tipo y tamaño de disco para discos de capacidad vSAN** de la configuración de almacenamiento.
+7.  Seleccione **Almacenamiento vSAN** y especifique los tipos de disco para la capacidad y los discos de memoria caché y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
 8. Seleccione la edición de licencia para vSAN VMware para la configuración de licencia.
-9. En el panel **Resumen del pedido**, verifique la configuración del clúster antes de añadir el clúster.
+9. Seleccione el valor de red de **Red pública y privada** o **Solo red privada**.
+10. En el panel **Resumen del pedido**, verifique la configuración del clúster antes de añadir el clúster.
    1. Revise los valores para el clúster.
    2. Revise el coste estimado del clúster. Pulse **Detalles sobre precios** para generar un resumen en PDF. Para guardar o imprimir el resumen del pedido, pulse el icono **Imprimir** o **Descargar** en la parte superior derecha de la ventana del PDF.
    3. Pulse el enlace o enlaces de los términos que se aplican a su pedido y confirme que acepta estos términos antes de añadir el clúster.
@@ -105,7 +119,7 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 1. El despliegue del clúster se inicia automáticamente y el estado del clúster pasa a ser **Inicializando**. Puede comprobar el estado del despliegue viendo el historial de despliegue en la página **Resumen** de la instancia.
 2. Cuando el clúster esté listo para ser utilizado, su estado pasará a ser **Listo para su uso**. El clúster recién añadido está habilitado con alta disponibilidad (HA) de vSphere y con el planificador de recursos distribuidos (DRS) de vSphere.
 
-**Importante**: no puede cambiar el nombre del clúster. Si se cambia el nombre del clúster, es posible que las operaciones de adición o eliminación de servidores ESXi en el clúster fallen.
+**Importante**: No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es posible que las operaciones de adición o eliminación de servidores ESXi en el clúster fallen.
 
 ## Visualización de clústeres en instancias de vCenter Server con el paquete híbrido (Hybridity)
 
@@ -169,9 +183,9 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 
 ### Antes de suprimir
 
-* Puede suprimir un único clúster al mismo tiempo. Para suprimir varios clústeres, debe hacerlo de forma secuencial: esperando a que el clúster anterior se suprima antes de intentar suprimir el clúster siguiente.
-* Asegúrese de que todos los nodos de un clúster están encendidos y en funcionamiento antes de suprimir el clúster.
-* Cuando suprime un clúster, todas las máquinas virtuales (VM) del clúster también se suprimen y no pueden recuperarse. Si desea mantener las VM, mígrelas a otros clústeres.
+* Puede suprimir un único clúster al mismo tiempo. Para suprimir varios clústeres, debe hacerlo en secuencia: esperando a que el clúster anterior se suprima antes de suprimir el clúster siguiente.
+* Asegúrese de que todos los nodos de un clúster estén encendidos y operativos antes de suprimir el clúster.
+* Cuando se suprime un clúster, todas las VM (máquinas virtuales) del clúster también se suprimen y no se pueden recuperar. Si desea mantener las VM, mígrelas a otros clústeres.
 * El clúster predeterminado no se puede suprimir.
 
 ## Procedimiento para suprimir clústeres de instancias de vCenter Server con el paquete híbrido (Hybridity)

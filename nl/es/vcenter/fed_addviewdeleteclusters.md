@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -59,7 +59,7 @@ Se necesita un mínimo de 2 {{site.data.keyword.baremetal_short}} para un clúst
 
 Para instancias de VMware Federal desplegadas en V2.3 o posterior, puede añadir un máximo de 59 {{site.data.keyword.baremetal_short}} para un clúster y puede añadir entre 1 y 59 servidores ESXi simultáneamente.
 
-Después del despliegue, puede crear un máximo de cuatro clústeres más. Para los valores de almacenamiento vSAN, se necesitan 4 servidores para el clúster inicial y para los clústeres posteriores al despliegue.
+Después del despliegue, puede crear un máximo de cuatro clústeres más. Para los valores de almacenamiento vSAN, se necesitan cuatro servidores para el clúster inicial y los clústeres posteriores al despliegue.
 
 ### Valores de almacenamiento
 
@@ -67,13 +67,18 @@ Los valores de almacenamiento dependen de la opción que seleccione de configura
 
 #### Almacenamiento vSAN
 
-Para vSAN, especifique las siguientes opciones de almacenamiento:
+Especifique las siguientes opciones de vSAN:
 
-* **Tipo y tamaño de disco para discos de capacidad vSAN**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
-* **Número de discos de capacidad vSAN**: seleccione el número de discos para el almacenamiento compartido vSAN que desea añadir. Las cantidades de disco deben ser 2, 4, 6 u 8.
-* Seleccione la edición de licencia de VMware vSAN 6.6 (Advanced o Enterprise).
+* **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
+* **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
+* **Tipo de disco para discos de memoria caché vSAN**: Seleccione una opción para los discos de memoria caché que necesite.
 
-Si el clúster inicial era vSAN, los clústeres vSAN adicionales utilizan la misma licencia de vSAN y tienen la misma configuración que el clúster vSAN inicial. Esto también se aplica si se ha elegido que se despliegue vSAN en cualquier clúster de la instancia (inicial o adicional). La primera vez se le solicitará la licencia de vSAN y la edición. La siguiente vez que seleccione vSAN para un clúster adicional, se reutiliza el valor que haya especificado inicialmente.
+    **Nota**: Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+
+* **Número de discos de memoria caché de vSAN**: Especifique el número de discos de memoria caché que desea añadir.
+* **Licencia de vSAN**: Seleccione la edición de licencia de VMware vSAN 6.6 (Advanced o Enterprise).
+
+Si el clúster inicial se ha añadido como un clúster vSAN, los clústeres de vSAN adicionales utilizan la misma licencia de vSAN y la misma configuración que el clúster vSAN inicial. Esto también se aplica si se ha elegido que se despliegue vSAN en cualquier clúster de la instancia (inicial o adicional). La primera vez que añada un clúster, se le solicitará la licencia de vSAN y la edición. La próxima vez que seleccione vSAN para un nuevo clúster, lo que haya elegido inicialmente se reutilizará.
 
 #### Almacenamiento NFS
 
@@ -85,7 +90,7 @@ Cuando seleccione **Almacenamiento de NFS**, puede añadir almacenamiento compar
 * **Número de unidades compartidas**: Al utilizar el mismo valor de configuración para cada compartición de archivos, especifique el número de comparticiones de archivos para el almacenamiento compartido de NFS que desee añadir.
 * **Almacenamiento**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
 * **Rendimiento**: seleccione el valor de IOPS (operaciones de entrada/salida por segundo) por GB en función de sus requisitos de carga de trabajo.
-* **AÑADIR NFS**: Seleccione para añadir comparticiones de archivos individuales que utilizarán distintos valores de configuración.
+* **AÑADIR NFS**: Seleccione esta opción para añadir comparticiones de archivos individuales con distintos valores de configuración.
 
 Tabla 2. Opciones de nivel de rendimiento de NFS
 
@@ -97,11 +102,11 @@ Tabla 2. Opciones de nivel de rendimiento de NFS
 
 ### Valores de licencia
 
-	Licencias de VMware proporcionadas por {{site.data.keyword.IBM}} para:
-  * VMware vSphere Enterprise Plus 6.5u1
-  * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
-  * (Para clústeres vSAN) VMware vSAN Advanced o Enterprise 6.6
+	Licencias proporcionadas por {{site.data.keyword.IBM}} para los siguientes componentes de VMware:
+  * vSphere Enterprise Plus 6.5u1
+  * vCenter Server 6.5
+  * NSX Service Providers 6.4 (edición Base, Advanced o Enterprise)
+  * (Para clústeres vSAN) vSAN 6.6 (edición Advanced o Enterprise)
 
 ### Resumen del pedido
 
@@ -113,14 +118,13 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia a la que desea añadir clústeres.
 
    **Nota**: asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede añadir clústeres a la instancia.
-
 3. Pulse **Infraestructura** en el panel de navegación izquierdo y pulse **Añadir** en la esquina superior derecha de la tabla **CLÚSTERES**.
 4. En la página **Añadir clúster**, escriba el nombre de clúster.
 5. Seleccione el **Modelo de CPU**, la cantidad de **RAM** y el **Número de servidores nativos** de la configuración del servidor nativo.
 6. Complete la configuración del almacenamiento.
-  * Cuando seleccione **Almacenamiento vSAN**, especifique el **Tipo y tamaño de los discos de capacidad vSAN**, el **Número de discos de capacidad vSAN**, y cómo se proporciona la **Licencia de vSAN**.
-  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar los mismos valores a todas las comparticiones de archivos, especifique el **Número de unidades compartidas**, el **Tamaño** y el **Rendimiento**.
-  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar las comparticiones de archivos individualmente, seleccione **Configurar recursos compartidos individualmente** y a continuación pulse sobre el icono **+** junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivos individual. Debe seleccionar al menos una unidad compartida de archivo.
+  * Si selecciona **Almacenamiento vSAN**, especifique los tipos de disco para la capacidad y los discos de memoria caché, y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
+  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar los mismos valores para todas las comparticiones de archivos, especifique el **Número de comparticiones**, **Tamaño** y **Rendimiento**.
+  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar comparticiones de archivos individualmente, seleccione **Configurar comparticiones individualmente** y, a continuación, pulse el icono **+** junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivos individual. Debe seleccionar al menos una unidad compartida de archivo.
 7. Seleccione la edición de licencia para vSAN VMware para la configuración de licencia.
 8. En el panel **Resumen del pedido**, verifique la configuración del clúster antes de añadir el clúster.
    1. Revise los valores para el clúster.
@@ -221,8 +225,8 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 * Utilice este procedimiento para suprimir clústeres de instancias que se han desplegado en V2.3 o releases posteriores.
 * Para los clústeres desplegados en V2.2 o instancias anteriores, debe actualizar la instancia a V2.3 para poder suprimir los clústeres que ha añadido a la instancia.
 * Puede suprimir un único clúster al mismo tiempo. Para suprimir varios clústeres, debe hacerlo de forma secuencial: esperando a que el clúster anterior se suprima antes de intentar suprimir el clúster siguiente.
-* Asegúrese de que todos los nodos de un clúster están encendidos y en funcionamiento antes de suprimir el clúster.
-* Cuando suprime un clúster, todas las máquinas virtuales (VM) del clúster también se suprimen y no pueden recuperarse. Si desea mantener las VM, mígrelas a otros clústeres.
+* Asegúrese de que todos los nodos de un clúster estén encendidos y operativos antes de suprimir el clúster.
+* Cuando se suprime un clúster, todas las VM (máquinas virtuales) del clúster también se suprimen y no se pueden recuperar. Si desea mantener las VM, mígrelas a otros clústeres.
 * El clúster predeterminado no se puede suprimir.
 
 ## Procedimiento para suprimir clústeres de instancias de VMware Federal

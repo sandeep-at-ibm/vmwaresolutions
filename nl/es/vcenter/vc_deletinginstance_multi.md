@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-03-19"
+lastupdated: "2017-09-19"
 
 ---
 
 # Supresión de instancias de vCenter Server en una configuración de varios sitios
 
-Existen consideraciones especiales a tener en cuenta antes de suprimir instancias de vCenter Server que forman parte de una configuración de varios sitios.
+Tenga en cuenta las siguientes consideraciones especiales antes de planificar la supresión de instancias de vCenter Server que forman parte de una configuración de varios sitios.
 
 Cuando suprima una instancia de vCenter Server, los siguientes componentes se liberarán en esta secuencia:
 1. Todos los servicios desplegados
@@ -24,10 +24,10 @@ Debido a las dependencias entre recursos, los componentes de la instancia no se 
 
 **Atención**: se le facturará por la instancia suprimida hasta el final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}.
 
-## Procedimiento
+## Procedimiento para suprimir instancias de vCenter Server en una configuración de varios sitios
 
 1. Elimine todos los servicios desde la instancia secundaria de vCenter Server.
-2. Asegúrese de que no tiene ningún objeto NSX ampliado en la instancia secundaria que desea suprimir.
+2. Asegúrese de que no hay ningún objeto NSX expandido en la instancia secundaria que desea suprimir.
 3. Suprima el vCenter secundario y el PSC (Platform Services Controller) del dominio SSO (inicio de sesión único) primario. Para obtener más información, consulte [Eliminación del registro de vCenter Server de un inicio de sesión único](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2106736){:new_window}.
 4. Disminuya el nivel de la VSI (instancia de servicio virtual) del controlador de dominio local. Para obtener más información, consulte [Disminución del nivel de controladores de dominio y de dominios](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
 5. Suprima la instancia secundaria de vCenter Server de la consola de {{site.data.keyword.vmwaresolutions_short}}.

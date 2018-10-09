@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-19"
 
 ---
 
 # Visión general de VMware Federal on IBM Cloud
 
-VMware Federal on {{site.data.keyword.cloud}} ofrece soporte para solicitar una instancia básica de vCenter Server además de proporcionar a las agencias del gobierno federal de EE.UU. la opción de proteger las instancias desplegadas de vCenter Server. Al seleccionar la opción de proteger las instancias desplegadas, se elimina la información confidencial almacenada sobre la instancia y se elimina la conexión de gestión abierta para el acceso continuo a la instancia para funciones de gestión, como la adición y eliminación de hosts y clústeres. Después de seleccionar la opción segura, todas las funciones de gestión se inhabilitan, excepto para una supresión de instancia completa.
+Con VMware Federal on {{site.data.keyword.cloud}}, puede solicitar una instancia base de vCenter Server además de proporcionar a las agencias gubernamentales federales de EE.UU. la opción de proteger las instancias del vCenter Server desplegadas. Cuando protege una instancia desplegada, la información confidencial que se almacena sobre la instancia se elimina. Además, la conexión abierta para el acceso a instancias se elimina, lo que significa que las funciones de gestión, como añadir y eliminar hosts y clústeres, ya no están disponibles. Después de seleccionar la opción segura, la única función disponible es la supresión de la instancia.
 
 Para obtener más información sobre vCenter Server on {{site.data.keyword.cloud_notm}} y la arquitectura de vCenter Server, consulte [Visión general de vCenter Server](vc_vcenterserveroverview.html).
 
-**Atención:** VMware Federal on {{site.data.keyword.cloud_notm}} solo ofrece un subconjunto de las ofertas de vCenter Server. No se da soporte a la configuración de varios sitios, a los servidores nativos de {{site.data.keyword.cloud_notm}} preconfigurados, a traer su propia licencia ni a la opción de solicitar servicios adicionales.
+**Atención:** VMware Federal on {{site.data.keyword.cloud_notm}} solo ofrece un subconjunto de las ofertas de vCenter Server. No se da soporte a la configuración de varios sitios, a los servidores nativos de {{site.data.keyword.cloud_notm}} preconfigurados, a traer su propia licencia ni a la opción de solicitar servicios complementarios.
 
 ## Especificaciones técnicas para las instancias de VMware Federal en IBM Cloud
 
@@ -35,11 +35,11 @@ Para la configuración de almacenamiento NFS, el número recomendado de {{site.d
 
 Se solicitan los siguientes componentes del sistema de redes:
 *  Tres VLAN (LAN virtuales): una VLAN pública y dos VLAN privadas
-*  Se despliega una VXLAN (LAN extensible virtual) con DLR (direccionador lógico distribuido) para una potencial comunicación este-oeste entre cargas de trabajo locales conectadas a redes de la capa 2 (L2). La VXLAN se despliega como una topología de direccionamiento de ejemplo, que puede modificar o eliminar o a la que puede añadir componentes. También puede añadir zonas de seguridad por conectar VXLAN adicionales a las nuevas interfaces lógicas del DLR.
+*  Se despliega una VXLAN (LAN extensible virtual) con DLR (direccionador lógico distribuido) para una potencial comunicación este-oeste entre cargas de trabajo locales conectadas a redes de la capa 2 (L2). La VXLAN se despliega como una topología de direccionamiento de ejemplo, que puede modificar o eliminar o a la que puede añadir componentes. También puede añadir zonas de seguridad adjuntando más VXLAN a las nuevas interfaces lógicas del DLR.
 *  Dos VMware NSX Edge Services Gateways:
   * Una Edge Services Gateway (ESG) de NSX de VMware de servicios de gestión segura para el tráfico de gestión de HTTPS saliente, desplegado por IBM como parte de la topología del sistema de redes de gestión. Las máquinas virtuales de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Para obtener más información, consulte [Configuración de la red para que utilice la ESG gestionada por el cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-    **Importante**: el usuario no puede acceder ni utilizar esta ESG. Si lo modifica, es posible que no pueda gestionar la instancia de vCenter Server desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, tenga en cuenta que el uso de un cortafuegos o la inhabilitación de las comunicaciones ESG con componentes externos de gestión de IBM harán que {{site.data.keyword.vmwaresolutions_short}} quede inutilizable.
+    **Importante**: el usuario no puede acceder ni utilizar esta ESG. Si lo modifica, es posible que no pueda gestionar la instancia de vCenter Server desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, el uso de un cortafuegos o la inhabilitación de las comunicaciones de ESG a los componentes de gestión externa de IBM hará que {{site.data.keyword.vmwaresolutions_short}} se convierta en inutilizable.
   * Una Edge Services Gateway de NSX de VMware gestionada por el cliente para el tráfico de salida y de entrada de carga de trabajo HTTPS, que IBM despliega como plantilla que puede modificar para proporcionar acceso VPN o acceso público. Para obtener más información, consulte [¿Representa NSX Edge gestionado por el cliente un riesgo para la seguridad?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
   **Nota**: Los VMware NSX Edge Services (ESG) para el tráfico de gestión de HTTPS saliente se elimina como parte de la acción para proteger la instancia de VMware Federal desplegada. Para obtener más información, consulte [Protección de instancias de VMware Federal](vc_fed_securinginstance.html).
@@ -48,18 +48,23 @@ Se solicitan los siguientes componentes del sistema de redes:
 
 Se solicitan las siguientes VSI (instancias de servidor virtual):
 * Una VSI para IBM CloudBuilder, que se cierra una vez completado el despliegue de la instancia.
-* (Para instancias de V2.3 y posteriores) Puede elegir desplegar un único Microsoft Windows Server VSI for Microsoft Active Directory (AD) o dos VM Microsoft Windows de alta disponibilidad en el clúster de gestión para ayudar a mejorar la seguridad y la solidez.
-* (Para instancias de V2.2) Se despliega y se puede consultar una VSI de Microsoft Windows Server para Microsoft Active Directory (AD), que funciona como DNS para la instancia en la que se han registrado los hosts y máquinas virtuales.
+* (Para instancias V2.3 y posteriores) Puede elegir desplegar un único Microsoft Windows Server VSI for Microsoft Active Directory (AD) o dos máquinas virtuales de Microsoft Windows de alta disponibilidad en el clúster de gestión para ayudar a mejorar la seguridad y la fiabilidad.
+* (Para instancias de V2.2) Se despliega y se puede consultar una VSI de Microsoft Windows Server para Microsoft Active Directory (AD). Esta VSI funciona como el DNS para la instancia en la que se han registrado los hosts y las máquinas virtuales.
 
 ### Almacenamiento
 
 Durante el despliegue inicial, puede elegir entre las opciones de almacenamiento vSAN y NFS.
 
+#### Almacenamiento vSAN
+
 La opción vSAN ofrece configuraciones personalizadas, con diversas opciones para el tipo y la cantidad de discos:
 * Cantidad de disco: 2, 4, 6 u 8.
 * Disco de almacenamiento: SSD SED de 960 GB, SSD SED de 1,9 TB o SSD SED de 3,8 TB.
 
-  Además se solicitan 2 discos de caché de 960 GB por host.
+  Además, se solicitan dos discos de memoria caché de 960 GB por host.
+* Opción de Intel Optane de alto rendimiento, que proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad. Esta opción depende del modelo de CPU.
+
+#### Almacenamiento NFS
 
 La opción NFS ofrece almacenamiento a nivel de archivo compartido personalizado para cargas de trabajo con distintas opciones de tamaño y de rendimiento:
 * Tamaño: 1, 2, 4, 8 o 12 TB.
@@ -89,7 +94,7 @@ Un servidor nativo con la configuración presentada en [Especificaciones técnic
 * Un VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * (Para clústeres vSAN) VMware vSAN Advanced o Enterprise 6.6
 
-**Importante**: solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+**Importante**: Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
 
 **ATENCIÓN:**: el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}}, que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia, desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 *  Añadir, modificar, devolver o eliminar componentes
@@ -100,9 +105,9 @@ Un servidor nativo con la configuración presentada en [Especificaciones técnic
 
 ### Enlaces relacionados
 
-* [Lista de materiales de software de vCenter Server](vc_bom.html)
 * [Requisitos y planificación de instancias de VMware Federal](vc_fed_planning.html)
 * [Solicitud de instancias de VMware Federal](vc_fed_orderinginstance.html)
+* [Adición, visualización y supresión de clústeres para instancias de VMware Federal](fed_addviewdeleteclusters.html)
+* [Ampliación y reducción de la capacidad para instancias de VMware Federal](vc_fed_addingremovingservers.html)
 * [Protección de instancias de VMware Federal](vc_fed_securinginstance.html)
-* [Cómo ponerse en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html)
 * [Almacenamiento en bloque y de archivos de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -16,21 +16,21 @@ Siga el procedimiento siguiente para proteger la instancia desplegada de VMware 
 
 Revise la siguiente información para comprender los resultados de proteger la instancia desplegada de VMware Federal:
 
-* Registre y guarde las credenciales que pueda necesitar para el entorno antes de completar este procedimiento. Todas las credenciales correspondientes a su entorno se borran de la base de datos de {{site.data.keyword.vmwaresolutions_full}} y no se pueden recuperar después de que se invoque la acción de protección.
-* Con la excepción de una supresión de la instancia completa, todas las funciones de gestión se inhabilitan después de que se invoque la acción de protección.
+* Registre y guarde las credenciales que pueda necesitar para su entorno antes de completar este procedimiento. Todas las credenciales para el entorno se borran de la base de datos de {{site.data.keyword.vmwaresolutions_full}} y no se pueden recuperar después de que se inicie la acción segura.
+* Excepto para una supresión de instancia completa, todas las demás funciones de gestión se inhabilitan después de que se inicie la acción segura.
 
-## Procedimiento
+## Procedimiento para proteger las instancias de VMware Federal
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia que desea proteger.
-3. Pulse el icono de menú de desbordamiento de la derecha de la **consola de vCenter**.
+3. Pulse el icono de menú de desbordamiento junto a la **consola de vCenter**.
 4. Pulse **Proteger instancia**.
 5. Pulse **Aceptar** para confirmar que desea desconectar la instancia de la automatización.
 
-  **Nota**: Antes de completar este paso, asegúrese de que ha revisado la información de la sección **Antes de empezar**.
+  **Nota**: Antes de completar este paso, asegúrese de que revise la información en la sección **Antes de empezar**.
 
 6. Elimine los servicios de gestión destinados al público de VMware NSX Edge Services Gateway (ESG) del entorno y, opcionalmente, elimine el ESG gestionado por el cliente que se despliega durante la automatización.
-7. Restablezca las contraseñas o claves para todas las cuentas utilizadas por la automatización de IBM. Para obtener información adicional, consulte [¿Cómo puedo proteger mi entorno para eliminar el acceso de la automatización y el soporte de IBM?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/).
+7. Restablezca contraseñas o claves para todas las cuentas que utiliza la automatización de IBM. Para obtener más información, consulte [¿Cómo puedo proteger mi entorno para eliminar el acceso por parte de la automatización y el soporte de IBM?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)
 
 ## Resultados
 

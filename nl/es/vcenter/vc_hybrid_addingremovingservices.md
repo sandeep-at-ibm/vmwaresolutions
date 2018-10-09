@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -18,22 +18,23 @@ Están disponibles los siguientes servicios para las instancias de vCenter Serve
 
 Tabla 1. Servicios disponibles para instancias de vCenter Server con el paquete híbrido (Hybridity)
 
-| Nombre de servicio | Disponibilidad | Soporte instancia |
+| Nombre de servicio | Versión de servicio | Versión de instancia |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)                                 | Sí | V1.9 y posterior |
-| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | Sí | V1.8 y posterior |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | Sí | V2.0 y posterior |
-| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | Sí | V2.3 y posterior |
-| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | Sí | V2.3 y posterior |
-| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | Sí | V2.2 y posterior |
-| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  | Sí | V2.2 y posterior |
-| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | Sí | V1.8 y posterior |
-| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | Sí | V2.3 y posterior |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | Sí | V1.2 y posterior |
+| [F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1 | V1.9 y posterior |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | serie 300 | V1.8 y posterior |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 5.6 | V2.0 y posterior |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 y posterior |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | V2.3 y posterior |
+| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 y posterior |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.1 Parche 1 | V2.2 y posterior |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 y posterior |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | 9.5u3 | V1.8 y posterior |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 Build 8774389 | V2.3 y posterior |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | 5.5 u4 Parche 2 | V1.2 y posterior |
 
 ## Adición de servicios a instancias de vCenter Server con el paquete híbrido (Hybridity)
 
-Para aplicar un servicio a la instancia de vCenter Server con el paquete híbrido (Hybridity), pulse los enlaces en la tabla para revisar las consideraciones para el servicio, comprobar los componentes que se despliegan y seguir las instrucciones de los temas de pedido para solicitar su pedido.
+Para aplicar un servicio a la instancia de vCenter Server con el paquete híbrido (Hybridity), pulse los enlaces de la tabla para revisar las consideraciones para el servicio. A continuación, compruebe los componentes que se despliegan y siga las instrucciones de los temas de pedido para solicitar su pedido.
 
 ### Resultados de la instalación de un servicio
 

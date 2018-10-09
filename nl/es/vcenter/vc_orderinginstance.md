@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -22,7 +22,7 @@ Asegúrese de haber realizado las tareas siguientes:
 Tabla 1. Formato del valor de nombres de instancia y de dominio
 
 | Nombre        | Formato del valor      |
-  |:------------- |:------------- |
+  |:------------|:------------ |
   | Nombre de dominio | `<root_domain>` |  
   | Nombre usuario inicio sesión vCenter Server | `<user_id>@<root_domain>` (usuario de Microsoft Active Directory) o `administrator@vsphere.local` |
   | FQDN de vCenter Server | `vcenter.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
@@ -30,11 +30,11 @@ Tabla 1. Formato del valor de nombres de instancia y de dominio
   | Nombre completo de servidor ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `<n>` es la secuencia del servidor ESXi. La longitud máxima es de 50 caracteres. |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
 
-**Importante:** no modifique ningún valor definido durante la solicitud y el despliegue de la instancia. Si lo hace, la instancia podría quedar inutilizable. Por ejemplo, el sistema de red pública se podría cerrar, los servidores e instancias de servidor virtual (VSI) podrían moverse detrás de una disposición media de Vyatta o la VSI de IBM CloudBuilder podría detenerse o suprimirse.
+**Importante**: No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime.
 
 ## Valores del sistema
 
-Debe especificar los siguientes valores de sistema cuando solicite una instancia de vCenter Server.
+Debe especificar los valores del sistema siguientes cuando solicite una instancia de vCenter Server.
 
 ### Nombre de instancia
 
@@ -51,20 +51,20 @@ Seleccione si desea solicitar una nueva instancia primaria o una instancia secun
 ## Valores de licencia
 
 Especifique las opciones de licencia para los siguientes componentes de VMware de la instancia:
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
+* vCenter Server 6.5 - edición Standard
+* vSphere 6.5u1 - edición Enterprise Plus
+* NSX Service Providers 6.4 (edición Base, Advanced o Enterprise)
 
 Para los usuarios de Business Partners, se incluyen y se adquieren en su nombre la licencia de vCenter Server (edición Standard), la licencia de vSphere (edición Enterprise Plus) y la licencia de NSX. Sin embargo, debe especificar la edición para la licencia de NSX.
 
 Para usuarios que no son Business Partner, puede utilizar las licencias de VMware que proporciona IBM para estos componentes seleccionando **Incluir con la compra** o puede traer su propia licencia (BYOL) seleccionando **Proporcionaré** e indicando sus propias claves de licencia.
 
 **Atención**:
-* Se necesita una licencia con un mínimo de 8 CPU, lo que equivale a 4 servidores con 2 CPU por servidor. La opción de licencia de cada componente de VMware se aplica a la instancia básica y a cualquier servidor ESXi que añada a la instancia posteriormente. Por lo tanto, asegúrese de que la licencia dé soporte a una futura capacidad de expansión en su infraestructura.
+* Se necesita una licencia con un mínimo de ocho CPU, lo que equivale a cuatro servidores con dos CPU por servidor. La opción de licencia de cada componente de VMware se aplica a la instancia básica y a cualquier servidor ESXi que añada a la instancia posteriormente. Asegúrese de que su licencia da soporte a la expansión de capacidad futura en su infraestructura.
 * Las ediciones de licencia mínimas se indican en la interfaz de usuario. Si se da soporte a distintas ediciones de componentes, puede seleccionar la edición que desee. El usuario es el responsable de asegurar que la clave de licencia proporcionada es correcta para cada componente de VMware seleccionado.
-* Para vSphere, se incurrirá en un cargo de licencia en el momento de realizar el pedido, pero posteriormente el cargo por licencia se abonará a su cuenta.
+* Para vSphere, se incurre en un cargo de licencia en el momento de realizar el pedido, pero el cargo por licencia se abonará entonces a su cuenta.
 * Puede cambiar cualquier licencia que haya suministrado mediante el cliente web de VMware vSphere una vez finalizado el despliegue de la instancia.
-* El soporte para los componentes de VMware para los que suministre licencias lo ofrece directamente VMware, no el equipo de soporte de IBM.
+* El soporte para los componentes de VMware para los que suministre licencias lo ofrece VMware, no el equipo de soporte de IBM.
 
 ## Valores de Servidor nativo
 
@@ -106,7 +106,7 @@ Para el clúster inicial de la instancia, puede configurar el número de servido
 * Si ha seleccionado **Preconfigurado**, puede configurar un número de servidores ESXi comprendido entre 2 y 10.
 * Si ha seleccionado **Personalizado**, puede configurar un número de servidores ESXi comprendido entre 2 y 20.
 
-Todos los servidores ESXi comparten la misma configuración. Después del despliegue inicial, puede añadir cuatro clústeres más. Si ha seleccionado la configuración **Personalizado** para vSAN, se necesitan 4 servidores ESXi para el clúster inicial y para los posteriores al despliegue. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+Todos los servidores ESXi comparten la configuración del conjunto. Después del despliegue inicial, puede añadir cuatro clústeres más. Si ha seleccionado la configuración **Personalizado** para VMware vSAN, se necesitan 4 servidores ESXi para el clúster inicial y para los posteriores al despliegue. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Valores de almacenamiento
 
@@ -114,10 +114,14 @@ Los valores de almacenamiento dependen de la opción que seleccione de configura
 
 ### Almacenamiento vSAN
 
-La vSAN solo está disponible si selecciona la configuración de servidor nativo **Personalizado**. Especifique las siguientes opciones de vSAN:
+vSAN está disponible solo para la configuración de servidor nativo **Personalizado**. Especifique las siguientes opciones de vSAN:
 
-* **Número de discos de capacidad vSAN**: especifique el número de discos para el almacenamiento compartido vSAN que desea añadir. Las cantidades de disco deben ser 2, 4, 6 u 8.
-* **Tipo y tamaño de disco para discos de capacidad vSAN**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
+* **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
+* **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
+* **Tipo de disco para discos de memoria caché vSAN**: Seleccione una opción para los discos de memoria caché que necesite.
+
+    **Nota**: Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* **Número de discos de memoria caché de vSAN**: Especifique el número de discos de memoria caché que desea añadir.
 * **Licencia de vSAN**: Utilice la licencia de VMware que proporciona IBM para el componente vSAN seleccionando **Incluir con la compra**, o traiga su propia licencia (BYOL) seleccionando **Proporcionaré** e indicando su propia clave de licencia.
 
 ### Almacenamiento NFS
@@ -127,9 +131,9 @@ Cuando seleccione **Almacenamiento de NFS**, puede añadir almacenamiento compar
 **Nota:** El número de comparticiones de archivo debe estar comprendido entre 1 y 32.
 
 * **Configurar las comparticiones individualmente**: Seleccione para especificar distintos valores de configuración para cada compartición de archivos.
-* **Número de unidades compartidas**: Al utilizar el mismo valor de configuración para cada compartición de archivos, especifique el número de comparticiones de archivos para el almacenamiento compartido de NFS que desee añadir.
+* **Número de comparticiones**: Cuando se utiliza el mismo valor de configuración para cada compartición de archivos, especifique el número de comparticiones de archivos para el almacenamiento compartido de NFS que desee añadir.
 * **Almacenamiento**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
-* **Rendimiento**: seleccione el valor de IOPS (operaciones de entrada/salida por segundo) por GB en función de sus requisitos de carga de trabajo.
+* **Rendimiento**: Seleccione el valor de IOPS (operaciones de entrada/salida por segundo) por GB en función de sus requisitos de carga de trabajo.
 * **AÑADIR NFS**: Seleccione para añadir comparticiones de archivos individuales que utilicen distintos valores de configuración.
 
 Tabla 3. Opciones de nivel de rendimiento de NFS
@@ -170,16 +174,25 @@ El nombre del dominio raíz debe cumplir los siguientes requisitos:
 
 **Nota:** la longitud máxima del nombre de dominio completo (FQDN) para hosts y VM es de 50 caracteres. Los nombres de dominio deben cumplir con esta longitud máxima.
 
+### Red pública o privada
+
+Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en la selección de **Red pública y privada** o de **Solo red privada**. Los siguientes servicios de complemento necesitan NIC públicos y no están disponibles si selecciona la opción privada:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
+
 ### VLAN
 
 Los valores del sistema de redes dependen de si ha seleccionado **Realizar pedido de nuevas VLAN** o **Seleccionar las VLAN existentes**.
 
 Se necesita una VLAN pública y dos VLAN privadas para el pedido de la instancia. Las dos VLAN privadas se conectan en modalidad troncal en cada servidor nativo.
 
-**Realizar pedido de nuevas VLAN**  
+#### Realizar pedido de nuevas VLAN
 Seleccione esta opción para solicitar una VLAN pública nueva y dos VLAN privadas nuevas.
 
-**Seleccionar las VLAN existentes**  
+#### Seleccionar las VLAN existentes 
 En función del {{site.data.keyword.CloudDataCent_notm}} que haya seleccionado, puede que haya VLAN públicas y privadas existentes disponibles.
 
 Cuando seleccione reutilizar las VLAN públicas y privadas existentes, especifique las VLAN y las subredes:
@@ -191,7 +204,7 @@ Cuando seleccione reutilizar las VLAN públicas y privadas existentes, especifiq
 
 **Importante:**
 * Asegúrese de que la configuración del cortafuegos en las VLAN seleccionadas no bloquee el tráfico de datos de gestión.
-* Asegúrese de que todas las VLAN que seleccione estén en el mismo pod, porque no se pueden suministrar servidores ESXi en VLAN en pods mixtos.
+* Asegúrese de que todas las VLAN que seleccione estén en el mismo pod. Los servidores ESXi no se pueden suministrar en VLAN en pods mixtos.
 
 ### Configuración DNS
 
@@ -202,7 +215,7 @@ Seleccione la configuración de DNS (sistema de nombres de dominio) para la inst
 
 **Importante:** Debe proporcionar dos licencias de Microsoft Windows Server 2012 R2 si configura la instancia de modo que utilice las dos VM Microsoft Windows. Utilice la licencia de Microsoft Windows Server 2012 R2 Standard Edition, o la licencia de Microsoft Windows Server 2012 R2 Datacenter Edition, o ambas.
 
-Cada licencia solo se puede asignar a un solo servidor físico y cubre un máximo de dos procesadores físicos. Una licencia de Standard Edition puede ejecutar dos VM Microsoft Windows virtualizadas por servidor de 2 procesadores. Por lo tanto, se necesitan dos licencias, ya que se despliegan dos VM Microsoft Windows en dos hosts distintos.
+Cada licencia solo se puede asignar a un solo servidor físico y cubre un máximo de dos procesadores físicos. Una licencia de edición Standard puede ejecutar dos máquinas virtuales virtualizadas de Microsoft Windows por servidor de 2 procesadores. Por lo tanto, se necesitan dos licencias, ya que se despliegan dos VM Microsoft Windows en dos hosts distintos.
 
 Tiene 30 días para activar las VM.
 
@@ -216,19 +229,18 @@ Cuando solicite una instancia de vCenter Server, también puede solicitar servic
 
 En función de la configuración seleccionada para la instancia y los servicios de complementos, el coste estimado se genera y se muestra al instante en la sección **Resumen de pedido** en el panel derecho. Pulse **Detalles sobre precios** en la parte inferior del panel derecho para generar un documento PDF que proporcione la información estimada.
 
-## Procedimiento
+## Procedimiento para solicitar instancias de vCenter Server
 
-1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** en el panel de navegación izquierdo y pulse **vCenter Server** en la sección **Centros de datos virtuales**.
+1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** desde el panel de navegación de la izquierda y, a continuación, pulse **vCenter Server** en la sección **Centros de datos virtuales**.
 2. En la página **VMware vCenter Server on IBM Cloud**, pulse la tarjeta **vCenter Server** y pulse **Crear**.
 3. En la página **vCenter Server**, escriba el nombre de la instancia.
 4. Seleccione el tipo de instancia:
    * Pulse **Instancia primaria** para desplegar una sola instancia en el entorno o para desplegar la primera instancia en una topología de varios sitios.
    * Pulse **Instancia secundaria** para conectar la instancia con una instancia existente (primaria) en el entorno para conseguir alta disponibilidad y siga estos pasos:
      1. Seleccione la instancia primaria a la que desea conectar la instancia secundaria.
-     2. Si la instancia primaria que ha seleccionado se actualiza al release V2.5, o la instancia primaria se despliega en o se actualiza a V2.4 y releases anteriores, compruebe la **Contraseña de administrador del PSC de la instancia primaria** para asegurarse de que sea correcta.
-     
-        **Nota:** El campo **Contraseña de administrador del PSC de la instancia primaria** no está disponible para las instancias primarias que se despliegan en V2.5 y releases posteriores.     
-5. Complete los valores de licencia de los componentes de la instancia.  
+     2. Para las instancias primarias V2.5 o posteriores, especifique el valor para la **Contraseña de administrador del PSC de la instancia primaria**.
+     3. Para las instancias primarias V2.4 o anteriores, verifique que el valor prerrellenado para el campo **Contraseña del administrador para el PSC de instancia primaria** es correcto.
+5. Complete los valores de licencia de los componentes de la instancia.
    *  Para utilizar licencias proporcionadas por IBM, seleccione **Incluir con la compra** y seleccione la edición de licencia, si es necesario.
    *  Para utilizar su propia licencia, seleccione **Proporcionaré** y escriba la clave de la licencia.
 6. Complete los valores del servidor nativo.
@@ -236,22 +248,21 @@ En función de la configuración seleccionada para la instancia y los servicios 
     2. Seleccione la configuración del servidor nativo.
        * Si selecciona **Preconfigurado**, elija **Pequeño**, **Medio** o **Grande** en la configuración.
        * Si seleccione **Personalizado**, especifique el modelo de CPU y el tamaño de RAM.
-    3. Especifique el número de {{site.data.keyword.baremetal_short}}. Si tiene previsto utilizar vSAN como solución de almacenamiento, tenga en cuenta que se necesitan un mínimo de 4 {{site.data.keyword.baremetal_short}}.  
-
-7. Complete los valores de almacenamiento:
-  * Cuando seleccione **Almacenamiento vSAN**, especifique el **Tipo y tamaño de los discos de capacidad vSAN**, el **Número de discos de capacidad vSAN**, y cómo se proporciona la **Licencia de vSAN**.
-  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar los mismos valores a todas las comparticiones de archivos, especifique el **Número de unidades compartidas**, el **Tamaño** y el **Rendimiento**.
-  * Cuando seleccione **Almacenamiento NFS** y desee añadir y configurar las comparticiones de archivos individualmente, seleccione **Configurar recursos compartidos individualmente** y a continuación pulse sobre el icono **+** junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivos individual. Debe seleccionar al menos una unidad compartida de archivo.
-
+    3. Especifique el número de {{site.data.keyword.baremetal_short}}. Si tiene previsto utilizar vSAN como solución de almacenamiento, se necesitan un mínimo de 4 {{site.data.keyword.baremetal_short}}.  
+7. Complete la configuración del almacenamiento.
+  * Si selecciona **Almacenamiento vSAN**, especifique los tipos de disco para la capacidad y los discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
+  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar los mismos valores para todas las comparticiones de archivos, especifique el **Número de comparticiones**, **Tamaño** y **Rendimiento**.
+  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar comparticiones de archivos individualmente, seleccione **Configurar comparticiones individualmente**. A continuación, pulse el icono **+** situado junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y **Rendimiento** para cada compartición de archivos. Debe seleccionar al menos una unidad compartida de archivo.
 8. Complete los valores de interfaz de red.
    1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio raíz. Para una instancia secundaria, el nombre de dominio se rellena automáticamente.
-   2. Seleccione los valores de VLAN:
+   2. Seleccione el valor de red de **Red pública y privada** o **Solo red privada**.
+   3. Seleccione los valores de VLAN:
       * Si desea solicitar nuevas VLAN públicas y privadas, pulse **Realizar pedido de nuevas VLAN**.
       * Si desea reutilizar las VLAN públicas y privadas existentes cuando estén disponibles, pulse **Seleccionar las VLAN existentes** y especifique las VLAN y las subredes.
-   3. Especifique la configuración de DNS.
+   4. Especifique la configuración de DNS.
 
 9. Seleccione los servicios complementarios que desea desplegar en la instancia pulsando la tarjeta del servicio correspondiente. Si un servicio requiere configuración, complete los valores específicos del servicio y pulse **Añadir servicio** en la tarjeta.
-Para obtener información sobre cómo proporcionar valores para un servicio, consulte el tema de solicitud de servicio correspondiente.
+Para obtener más información sobre cómo proporcionar valores para un servicio, consulte el tema de ordenación de servicio correspondiente.
 
 10. En el panel **Resumen del pedido**, verifique la configuración de la instancia antes de realizar el pedido.
    1. Revise los valores de la instancia.
@@ -273,7 +284,7 @@ Cuando se solicita una instancia secundaria, es posible que el cliente web de VM
 
 Puede ver y gestionar la instancia de vCenter Server que ha solicitado.
 
-**Importante**: solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola.
+**Importante**: Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola.
 Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
 
 **ATENCIÓN:**: el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-19"
 
 ---
 
 # Configuración de la red para que utilice NSX ESG gestionado por el cliente con las VM
 
-Configure la red para las máquinas virtuales de modo que pueda aprovechar el servicio VMware NSX Servicios Edge Gateway (ESG) que se despliega en las instancias de VMware vCenter Server. Para obtener información sobre las medidas de seguridad en vigor para ayudar a minimizar los riesgos de seguridad, consulte [¿Representa NSX Edge de servicios de gestión un riesgo para la seguridad?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+Configure la red para las máquinas virtuales de modo que pueda aprovechar el servicio VMware NSX Servicios Edge Gateway (ESG) que se despliega en las instancias de VMware vCenter Server. Para obtener más información sobre las medidas de seguridad en vigor para ayudar a minimizar los riesgos de seguridad, consulte [¿Representa NSX Edge se servicios de gestión un riesgo para la seguridad?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX es una plataforma de virtualización de red que permite la virtualización de redes aisladas y proporciona varios servicios de red, como conmutadores, direccionamiento y cortafuegos. Para obtener más información sobre NSX, consulte [Visión general de NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
 

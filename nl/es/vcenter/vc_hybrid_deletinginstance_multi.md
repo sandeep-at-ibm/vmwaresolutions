@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-07-19"
+lastupdated: "2017-09-20"
 
 ---
 
@@ -24,7 +24,7 @@ Debido a las dependencias entre recursos, los componentes de la instancia no se 
 
 **Atención**: se le facturará por la instancia suprimida hasta el final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}.
 
-## Procedimiento
+## Procedimiento para suprimir las instancias de vCenter Server con el paquete híbrido (Hybridity) en una configuración de varios sitios
 
 1. Elimine todos los servicios desde la instancia secundaria de vCenter Server con el paquete híbrido (Hybridity).
 2. Asegúrese de que no tiene ningún objeto NSX ampliado en la instancia secundaria que desea suprimir.
@@ -32,7 +32,7 @@ Debido a las dependencias entre recursos, los componentes de la instancia no se 
 4. Disminuya el nivel de la VSI (instancia de servicio virtual) del controlador de dominio local. Para obtener más información, consulte [Disminución del nivel de controladores de dominio y de dominios](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
 5. Suprima la instancia secundaria de vCenter Server con el paquete híbrido (Hybridity) desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
 6. Repita los pasos 1 a 5 para todas las instancias secundarias de vCenter Server con el paquete híbrido (Hybridity) de la configuración de varios sitios.
-7. Después de suprimir todas las instancias secundarias, también puede suprimir la instancia primaria desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
+7. Después de suprimir todas las instancias secundarias, también puede suprimir la instancia secundaria desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
 ### Enlaces relacionados
 

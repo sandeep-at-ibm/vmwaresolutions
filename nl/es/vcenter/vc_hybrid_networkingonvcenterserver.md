@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -16,9 +16,9 @@ Revise la siguiente información para obtener detalles sobre las consideraciones
 
 Para revisar los componentes de red que se incluyen en la instancia del vCenter Server con el paquete híbrido (Hybridity), consulte [Especificaciones técnicas para la instancia de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances).
 
-## Consideraciones sobre cortafuegos NSX
+## Consideraciones sobre cortafuegos
 
-Si utiliza NSX Distributed Firewalls (DFW), debe configurar reglas para todas las comunicaciones desde la Instancia de servidor virtual (VSI) de IBM CloudDriver para permitir que todos los protocolos se comuniquen en las direcciones IP `10.0.0.0/8` y `161.26.0.0/16`.
+Si utiliza cortafuegos, debe configurar reglas para todas las comunicaciones desde la Instancia de servidor virtual (VSI) de {{site.data.keyword.IBM}} CloudDriver y las máquinas virtuales (VM) de SDDC Manager. Estas reglas deben permitir que todos los protocolos se comuniquen en las direcciones IP `10.0.0.0/8` y `161.26.0.0/16`. Los ejemplos de estos cortafuegos son NSX Distributed Firewalls (DFW) o cortafuegos Vyatta.
 
 ## Utilización de NSX con máquinas virtuales
 
