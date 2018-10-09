@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-08-14"
 
 ソリューションの一部として、{{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} アドオン・サービスまたは Veeam on {{site.data.keyword.cloud_notm}} アドオン・サービスを必要に応じてデプロイできます。 Veeam と IBM Spectrum Protect Plus は、管理コンポーネントをバックアップするための要件を満たすことにつながります。
 
-これらのアドオン・サービスは、{{site.data.keyword.cloud_notm}} エンデュランス・ストレージとともにデプロイされます。 これらのサービスにより、管理コンポーネントおよびワークロードをバックアップしやすくなります。 [Spectrum Protect Plus アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}と [Veeam アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}は、デプロイメントの計画とサイジングに関するガイダンスとして役立ちます。 Veeam デプロイメントには、[マネージド・サービス](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)も要求可能です。
+これらのアドオン・サービスは、{{site.data.keyword.cloud_notm}} エンデュランス・ストレージとともにデプロイされます。 これらのサービスにより、管理コンポーネントおよびワークロードをバックアップしやすくなります。 [IBM Spectrum Protect Plus アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}と [Veeam アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}は、デプロイメントの計画とサイジングに関するガイダンスとして役立ちます。 Veeam デプロイメントには、[マネージド・サービス](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)も要求可能です。
 
 必要なバックアップ戦略はソリューション・コンポーネントによって異なります。 イメージ・レベルのバックアップを使用して保護されるコンポーネントもあれば、構成とデータのファイル・ベースのバックアップを使用して保護されるコンポーネントもあります。
 
@@ -28,7 +28,7 @@ VMware vCenter Server、Platform Services Controller (PSC)、VMware NSX など�
 2. {{site.data.keyword.cloud_notm}} プライベート・ミラーから、[Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window} などの VMware 管理データ・ストアに、オペレーティング・システム・イメージをアップロードします。
 3. 既に注文したプライベート・ポータブル IP アドレスを使用して、この仮想マシン (VM) をクラスター内の管理ポート・グループにデプロイします。 AD/DNS サーバーを指すように VM を構成し、必要に応じてサブドメインの DNS に VM を追加しておいてください。
 4. このサーバーのバックアップ・ユーザー ID として root 以外のユーザー ID を作成し、必要なすべてのサービスをファイル転送用に構成して開始しておきます。 例えば、FTP や SSH などです。
-5. この VM が Veeam または IBM Spectrum Protect Plus 管理バックアップ・ジョブ (下記参照) に含まれているようにしてください。
+5. この VM が Veeam または IBM Spectrum Protect Plus 管理バックアップ・ジョブに含まれているようにしてください。
 
 ## vCenter のファイル・ベースのバックアップ
 
@@ -38,7 +38,7 @@ VMware vCenter Server と PSC には、さまざまなプロトコルを使用�
 
 ## NSX のファイル・ベースのバックアップ
 
-障害が発生した場合にシステムをその動作状態にリストアするためには、すべての NSX コンポーネントを適切にバックアップしておくことが不可欠です。 設計上、NSX マネージャーのバックアップ機能を使用して NSX バックアップを構成する必要があります。 この目的のために、ファイル・サーバーへの[バックアップを定期的に実行するように NSX マネージャーを構成する](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}ことができます。 ファイル・サーバーやそのデータが適切にバックアップされるようにし、古い NSX バックアップのローテーションが確実に行われるようにしてください。
+障害が発生した場合にシステムをその動作状態にリストアするためには、すべての NSX コンポーネントを適切にバックアップしておくことが不可欠です。 設計上、NSX マネージャーのバックアップ機能を使用して NSX バックアップを構成する必要があります。 この目的のために、ファイル・サーバーへの[バックアップを定期的に実行するように NSX マネージャーを構成する](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}ことができます。 ファイル・サーバーやそのデータが正しくバックアップされるようにして、古い NSX バックアップのローテーションが確実に行われるようにしてください。
 
 ## 管理仮想マシンのイメージ・ベースのバックアップ
 
@@ -46,7 +46,7 @@ VMware vCenter Server と PSC には、さまざまなプロトコルを使用�
 
 * VMware SDDC Manager (存在する場合)
 * Active Directory サーバー (存在する場合)
-* ファイル・バックアップ・サーバー (上記参照)
+* ファイル・バックアップ・サーバー
 
 これらの仮想マシンをバックアップできるだけの Veeam ライセンスまたは IBM Spectrum Protect Plus ライセンスを割り振ることを計画し、VM 用として少なくとも 2 TB のバックアップ・ストレージを考慮に入れてください。
 

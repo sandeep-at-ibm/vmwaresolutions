@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -60,10 +60,10 @@ SDDC Manager が管理するコンポーネントのホスト名は SDDC Manager
 * 指定した DNS ドメイン名は Active Directory のルート・フォレスト・ドメイン名として使用されます。 例えば、DNS ドメイン名が `cloud.ibm.com` の場合、Active Directory ドメインのフォレスト・ルートは `cloud.ibm.com` になります。 この DNS ドメインと Active Directory ドメインは、リンクされているすべての Cloud Foundation インスタンスで同じです。
 * インスタンスにはサブドメイン名を追加で指定できます。 サブドメイン名はリンクされているすべての Cloud Foundation インスタンスの中で一意である必要があります。  
 * SDDC Manager の DNS 構成は、自身が受け持つゾーン以外のすべてのゾーンに対して Active Directory サーバーをポイントするように変更されます。
-* Active Directory DNS サーバーは、SDDC Manager と Cloud Foundation のインスタンスのサブドメインよりも上の DNS ドメイン領域で権限を持つように構成されます。
+* Active Directory DNS サーバーは、SDDC Manager と Cloud Foundation のインスタンスのサブドメインより上の DNS ドメイン領域で権限を持つように構成されます。
 * Active Directory DNS サーバーは、SDDC Manager の権限が及ぶゾーンのサブドメインの委任に対して SDDC Manager の IP アドレスをポイントするように構成されます。
 * Active Directory DNS サーバーは、他のすべてのゾーンに対して {{site.data.keyword.cloud_notm}} DNS サーバーをポイントするように構成されます。
-* 最初のインスタンスまたはターゲット・インスタンスに統合されるすべてのセカンダリー・インスタンスは、SDDC Manager サブドメインよりも上の同じ DNS 名の構造を使用する必要があります。
+* 最初のインスタンスまたはターゲット・インスタンスに統合されるすべてのセカンダリー・インスタンスは、SDDC Manager サブドメインより上の同じ DNS 名の構造を使用する必要があります。
 
 ## NTP サービス
 

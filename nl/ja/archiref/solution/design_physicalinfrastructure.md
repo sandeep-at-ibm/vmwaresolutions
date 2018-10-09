@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-07-17"
   <dt class="dt dlterm">物理ストレージ</dt>
   <dd class="dd">物理ストレージは、仮想インフラストラクチャーによって使用されるロー・ストレージ容量を提供します。 ストレージ・コンポーネントは、{{site.data.keyword.baremetal_short}}、または NFS v3 を使用する共有 Network Attached Storage (NAS) アレイのいずれかによって提供されます。</dd>
   <dt class="dt dlterm">物理ネットワーク</dt>
-  <dd class="dd">物理ネットワークは、後にネットワーク仮想化で使用される環境へのネットワーク接続を提供します。 ネットワークは {{site.data.keyword.cloud_notm}} サービス・ネットワークによって提供され、DNS や NTP などの追加のサービスを含んでいます。</dd>
+  <dd class="dd">物理ネットワークは、後にネットワーク仮想化で使用される環境へのネットワーク接続を提供します。 このネットワークは {{site.data.keyword.cloud_notm}} サービス・ネットワークによって提供され、DNS や NTP などの追加のサービスが含まれています。</dd>
 </dl>
 
 物理コンポーネントについて詳しくは、[Cloud Foundation インスタンス](../../sddc/sd_bom.html)または [vCenter Server インスタンス](../../vcenter/vc_bom.html)の部品構成表を参照してください。
@@ -33,12 +33,12 @@ lastupdated: "2018-07-17"
 
 各 Cloud Foundation インスタンスは 4 ホスト・デプロイメントから始まり、各 vCenter Server インスタンスはストレージ・ソリューションの選択に応じて 3 または 4 ホスト・デプロイメントから始まります。
 
-物理ホストでは、vSphere ESXi ハイパーバイザーに割り振られる 2 つのローカル接続ディスクが使用されます。 追加のディスクを割り振るには、このページの『_物理ストレージ設計_』セクションに記載されている vSAN を使用するか、[NetApp ONTAP Select のアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)に記載されている NetApp ONTAP を使用します。 各物理ホストは、パブリック・ネットワーク・アクセスとプライベート・ネットワーク・アクセスのために、冗長 10 Gbps ネットワーク接続を備えています。
+物理ホストでは、vSphere ESXi ハイパーバイザーに割り振られる 2 つのローカル接続ディスクが使用されます。 さらにディスクを割り振るには、このページの『_物理ストレージ設計_』セクションに記載されている vSAN を使用するか、[NetApp ONTAP Select のアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)に記載されている NetApp ONTAP を使用します。各物理ホストは、パブリック・ネットワーク・アクセスとプライベート・ネットワーク・アクセスのために、冗長 10 Gbps ネットワーク接続を備えています。
 
-ベアメタル・サーバーの技術仕様は、以下のとおりです。
+ベア・メタル・サーバーの技術仕様は、以下のとおりです。
 * CPU: デュアル Intel Xeon (コアと速度は可変構成)
 * メモリー: 可変構成 (128 GB 以上)
-* ネットワーク: 4 × 10 Gbps
+* ネットワーク: 4 x 10 Gbps
 * ドライブ数: 2 以上
 
 ## 物理ネットワーク設計
@@ -70,7 +70,7 @@ lastupdated: "2018-07-17"
 ### プライマリー IP ブロックとポータブル IP ブロック
 
 {{site.data.keyword.cloud_notm}} は、{{site.data.keyword.cloud_notm}} インフラストラクチャー内で使用される 2 つのタイプの IP アドレスを割り振ります。
-* プライマリー IP アドレスは、{{site.data.keyword.cloud_notm}} によってプロビジョンされるデバイス、ベアメタル・サーバー、仮想サーバーに割り当てられます。 これらのブロックでは、どのような IP アドレスもユーザーが割り当てるべきではありません。
+* プライマリー IP アドレスは、{{site.data.keyword.cloud_notm}} によってプロビジョンされるデバイス、ベア・メタル・サーバー、仮想サーバーに割り当てられます。これらのブロックでは、どのような IP アドレスもユーザーが割り当てるべきではありません。
 * 必要に応じて割り当てたり管理したりするために、ポータブル IP アドレスが用意されています。
 
 {{site.data.keyword.slportal}}内で**「VLAN スパンニング」**を有効にするか、アカウントを**「Virtual Routing and Forwarding (VRF)」**アカウントとして構成すると、お客様のアカウントの範囲内の VLAN にプライマリー IP アドレスまたはポータブル IP アドレスをルーティングできるようになります。
@@ -89,7 +89,7 @@ lastupdated: "2018-07-17"
 
 ### 物理ホスト接続
 
-設計に含まれる各物理ホストは、各 {{site.data.keyword.cloud_notm}} 最上位ラック (ToR) スイッチ (パブリックとプライベート) への 10Gbps イーサネット接続の冗長ペアを 2 つ備えています。 合計 4 つの 10Gbps 接続のためのアダプターが個々の接続 (非結合) としてセットアップされます。 これにより、ネットワーキング・インターフェース・カード (NIC) 接続が相互に独立して動作できるようになります。
+設計に含まれる各物理ホストは、各 {{site.data.keyword.cloud_notm}} 最上位ラック (ToR) スイッチ (パブリックとプライベート) への 10 Gbps イーサネット接続の冗長ペアを 2 つ備えています。 合計 4 つの 10 Gbps 接続のためのアダプターが個々の接続 (非結合) としてセットアップされます。 これにより、ネットワーキング・インターフェース・カード (NIC) 接続が相互に独立して動作できるようになります。
 
 図 1. 物理ホストの NIC 接続
 
@@ -147,21 +147,21 @@ vSphere ESXi ハイパーバイザーは、永続ロケーションにインス�
 
 ### vSAN ディスク
 
-使用する場合は、オール・フラッシュ構成を使用して VMware vSAN が構成されます。 この設計では、2U および 4U シャーシ、さまざまなディスク数、さまざまなディスク・サイズなど、いくつかの構成オプションが用意されています。 すべての構成で 2 つの vSAN ディスク・グループ (キャッシュ用ソリッド・ステート・ディスク (SSD) が 1 つ、容量用 SSD が 1 つ以上) が使用されます。 vSAN 消費に割り振られるドライブはすべて、単一ディスク RAID-0 内に構成されます。
+使用する場合は、オール・フラッシュ構成を使用して VMware vSAN が構成されます。 この設計では、2U および 4U シャーシ、さまざまなディスク数、さまざまなディスク・サイズなど、いくつかの構成オプションが用意されています。すべての構成で 2 つの vSAN ディスク・グループ (キャッシュ用ソリッド・ステート・ディスク (SSD) が 1 つ、容量用 SSD が 1 つ以上) が使用されます。 vSAN 消費に割り振られるドライブはすべて、単一ディスク RAID-0 内に構成されます。
 
-サポートされる構成については、[Cloud Foundation インスタンス](../../sddc/sd_bom.html)または [vCenter Server インスタンス](../../vcenter/vc_bom.html)の部品構成表を参照してください。
+サポートされる構成について詳しくは、[Cloud Foundation インスタンス](../../sddc/sd_bom.html)または [vCenter Server インスタンス](../../vcenter/vc_bom.html)の部品構成表を参照してください。
 
 ### ホスト間のファイル・レベルの共有ストレージ
 
-ファイル・レベルの共有ストレージの使用時は、初期 VMware クラスターを構成するホストに 2TB NFS 共有が接続されます。 この共有は管理共有と呼ばれ、VMware vCenter Server、Platform Services Controller、VMware NSX などの管理コンポーネントに使用されます。 ストレージは NFSv3 プロトコルを介して接続され、最大 4000 IOPS までサポートできます。
+ファイル・レベルの共有ストレージの使用時は、初期 VMware クラスターを構成するホストに 2 TB NFS 共有が接続されます。 この共有は管理共有と呼ばれ、VMware vCenter Server、Platform Services Controller、VMware NSX などの管理コンポーネントに使用されます。ストレージは NFSv3 プロトコルを使用して接続され、最大 4000 IOPS までサポートできます。
 
 図 2. VMware デプロイメントに接続された NFS 共有
 
 ![VMware デプロイメントに接続された NFS 共有](physical_nfs.svg "VMware デプロイメントに接続された NFS 共有: 管理共有とカスタマー指定共有")
 
-購入時または購入後、ワークロードに応じて追加のファイル共有をコンソール内で割り振ってマウントできます。 対応する {{site.data.keyword.CloudDataCent_notm}}内の使用可能な {{site.data.keyword.cloud_notm}} エンデュランス・ファイル・ストレージ容量オプションとパフォーマンス・ティアの中から選択できます。 共有はすべて、NFSv3 プロトコルを使用して接続されます。 また、NetApp ONTAP Select オファリングを適用することによって NFSv3 ファイル共有を接続することができます。
+購入時または購入後、ワークロードに応じてさらにファイル共有をコンソール内で割り振ってマウントできます。対応する {{site.data.keyword.CloudDataCent_notm}}内の使用可能な {{site.data.keyword.cloud_notm}} エンデュランス・ファイル・ストレージ容量オプションとパフォーマンス・ティアの中から選択できます。 共有はすべて、NFSv3 プロトコルを使用して接続されます。 また、NetApp ONTAP Select オファリングを適用することによって NFSv3 ファイル共有を接続することができます。
 
-10 IOPS/GB パフォーマンス・ティアを提供する {{site.data.keyword.CloudDataCents_notm}}は、保存中のデータのプロバイダー管理暗号化 (AES-256 暗号化) も備えており、オール・フラッシュ・ストレージに支えられます。 10 IOPS/GB パフォーマンス・ティアの容量は、最大 4 TB に制限されます。 このソリューションで使用される共有 NAS について詳しくは、[共有ストレージのアーキテクチャー](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf) を参照してください。
+10 IOPS/GB パフォーマンス・ティアを提供する {{site.data.keyword.CloudDataCents_notm}}は、保存中のデータのプロバイダー管理暗号化 (AES-256 暗号化) も備えており、オール・フラッシュ・ストレージによってバックアップされます。10 IOPS/GB パフォーマンス・ティアの容量は、最大 4 TB に制限されます。 このソリューションで使用される共有 NAS について詳しくは、[共有ストレージのアーキテクチャー](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)を参照してください。
 
 ### 関連リンク
 
