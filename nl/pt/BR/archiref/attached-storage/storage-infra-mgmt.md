@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -20,7 +20,7 @@ A virtualização de rede usada neste design usa o vSphere Distributed Switch (v
 
 ## Comutador Distribuído do vSphere
 
-Conforme indicado anteriormente, outra VLAN é criada dentro da solução do vCenter Server e usada para conectar o ponto de montagem NFS aos hosts ESXi no cluster existente. Como a solução do vCenter Server já tem um vSphere Distributed Switch (vDS) associado à rede privada, outro grupo de portas é criado e identificado com o número de VLAN adicional, visto que essa VLAN adicional não é nativa.
+Conforme indicado anteriormente, outra VLAN é criada dentro da solução do vCenter Server e usada para conectar o ponto de montagem NFS aos hosts ESXi no cluster existente. Como a solução vCenter Server já tem um vDS associado à rede privada, outro grupo de portas é criado e identificado com o número de VLAN adicional, já que essa VLAN adicional não é nativa.
 
 A tabela a seguir descreve as configurações padrão do novo grupo de portas.
 
