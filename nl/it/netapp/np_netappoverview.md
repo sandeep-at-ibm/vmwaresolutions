@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -16,7 +16,7 @@ Esamina l'architettura e i componenti della distribuzione NetApp ONTAP Select on
 
 L'offerta NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} integra la distribuzione di vCenter Server fornendo servizi di virtualizzazione dell'archiviazione.
 
-Il seguente grafico illustra l'architettura generale della distribuzione NetApp ONTAP Select su vCenter Server.
+Il seguente grafico illustra l'architettura generale della distribuzione di NetApp ONTAP Select on vCenter Server.
 
 Figura 1. Architettura di alto livello di NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}
 
@@ -33,7 +33,7 @@ Questo livello virtualizza l'infrastruttura fisica attraverso i seguenti prodott
 * VMware NSX è la piattaforma di virtualizzazione di rete che fornisce componenti di rete logica e reti virtuali.
 * NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} distribuisce un cluster ONTAP Select, che è composto da quattro VM per i quattro host.
 
-Il seguente grafico illustra i componenti della distribuzione NetApp ONTAP Select.
+Il seguente grafico illustra i componenti della distribuzione di NetApp ONTAP Select.
 
 Figura 2. Componenti di NetApp ONTAP Select
 
@@ -41,7 +41,15 @@ Figura 2. Componenti di NetApp ONTAP Select
 
 ### Gestione della virtualizzazione
 
-Questo livello comprende il dispositivo virtuale vCenter Server, NSX Manager, due ESG NSX, 3 controller NSX, il dispositivo virtuale PSC (Platform Services Controller), il dispositivo vCenter Server Appliance (vCSA) e la VSI (Virtual Server Instance) IBM CloudDriver.
+Il livello di gestione della virtualizzazione è costituito dai seguenti componenti:
+
+* Dispositivo virtuale vCenter Server
+* NSX Manager
+* Due gateway dei servizi edge (ESG) NSX
+* Tre controller NSX
+* Dispositivo virtuale PSC (Platform Services Controller)
+* vCenter Server Appliance (vCSA)
+* VSI (Virtual Server Instance) IBM CloudDriver.
 
 NetApp ONTAP Select viene eseguito in un cluster VMware e virtualizza l'archiviazione locale sugli host. NetApp ONTAP Select è distribuito nel modello dedicato, dove non è previsto che altri carichi di lavoro condividano il cluster con esso. Di conseguenza, la configurazione hardware dell'offerta NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} viene ridimensionata solo in base ai requisiti di NetApp ONTAP Select.
 
@@ -53,7 +61,7 @@ Nella tua istanza NetApp ONTAP Select sono inclusi i seguenti componenti.
 
 ### Archiviazione
 
-* Tre opzioni: **Alte prestazioni (medio)**, **Alte prestazioni (elevato)** e **Alta capacità**
+* Scegli tra **Alte prestazioni (Medium)**, **Alte prestazioni (Large)** e **Alta capacità**
 * RAID 5 con hot spare
 * SO ESXi con due unità SATA da 1 TB – RAID 1
 * Archivio dati di gestione – 500 GB per le VM di gestione
@@ -61,11 +69,11 @@ Nella tua istanza NetApp ONTAP Select sono inclusi i seguenti componenti.
 ### Configurazioni preimpostate
 
 Sono forniti quattro {{site.data.keyword.baremetal_short}} {{site.data.keyword.cloud_notm}} con le seguenti opzioni di configurazione:
-* **Alte prestazioni (medio)** – Licenza Premium / Dual Intel Xeon E5-2650 v4 (24 core totali, 2,2 GHz) / 128 GB di RAM / Capacità di ventidue unità SSD da 1,9 TB per nodo / Capacità effettiva di un cluster a 4 nodi – 59 TB
-* **Alte prestazioni (elevato)** – Licenza Premium / Dual Intel Xeon E5-2650 v4 (24 core totali, 2,2 GHz) / 128 GB di RAM / Capacità di ventidue unità SSD da 3,8 TB per nodo / Capacità effettiva di un cluster a 4 nodi – 118 TB
+* **Alte prestazioni (Medium)** – Licenza Premium / Dual Intel Xeon E5-2650 v4 (24 core totali, 2,2 GHz) / 128 GB di RAM / Capacità di 22 unità SSD da 1,9 TB per nodo / Capacità effettiva di un cluster a 4 nodi – 59 TB
+* **Alte prestazioni (Large)** – Licenza Premium / Dual Intel Xeon E5-2650 v4 (24 core totali, 2,2 GHz) / 128 GB di RAM / Capacità di 22 unità SSD da 3,8 TB per nodo / Capacità effettiva di un cluster a 4 nodi – 118 TB
 * **Alta capacità** – Licenza Standard / Dual Intel Xeon E5-2650 v4 (24 core totali, 2,2 GHz) / 64 GB di RAM / Capacità di trentaquattro unità SATA da 4 TB per nodo / Capacità effettiva di un cluster a 4 nodi – 190 TB
 
-**Nota:** le unità SSD (Solid-State Disk) da 3,8 TB saranno supportate una volta rese generalmente disponibili in un data center.
+**Nota:** le unità SSD (Solid-State Disk) da 3,8 TB sono supportate quando vengono rese generalmente disponibili in un data center.
 
 ### Hardware
 
@@ -88,7 +96,7 @@ Due VSI (Virtual Server Instance):
 
 ### Licenze e tariffe
 
-*  Quattro licenze Premium/Standard Edition per NetApp ONTAP Select (fornite dall'utente)
+*  Quattro licenze Premium o Standard Edition per NetApp ONTAP Select (fornite dall'utente)
 *  VMware vSphere 6.5 Enterprise Plus edition
 *  VMware vCenter Server 6.5
 *  VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
@@ -102,6 +110,10 @@ Due VSI (Virtual Server Instance):
 *  Riavvio dei servizi
 
    Le eccezioni a queste attività includono la gestione delle condivisioni file di archiviazione condivisa dal {{site.data.keyword.slportal}}. Tali attività includono: l'ordine, l'eliminazione (che potrebbe influire sugli archivi di dati, se montati), l'autorizzazione e il montaggio di condivisioni file di archiviazione condivisa.
+
+## Considerazioni su firewall
+
+Se utilizzi i firewall, devi configurare le regole per tutte le comunicazioni dalla VSI (Virtual Server Instance) {{site.data.keyword.IBM}} CloudDriver e dalle VM (virtual machine) di SDDC Manager. Queste regole devono consentire a tutti i protocolli di comunicare sugli indirizzi IP `10.0.0.0/8` e `161.26.0.0/16`. Esempi di questi firewall sono i DFW (Distributed Firewall) NSX o i firewall Vyatta.
 
 ### Link correlati
 

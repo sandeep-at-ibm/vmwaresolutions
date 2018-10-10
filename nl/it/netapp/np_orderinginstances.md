@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -18,11 +18,11 @@ Assicurati di aver completato le seguenti attività:
 *  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](../vmonic/useraccount.html).
 *  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per le istanze NetApp ONTAP Select](np_planning.html).
 
-**Importante: non modificare alcun valore impostato durante l'ordine e la distribuzione dell'istanza. Ciò potrebbe rendere inutilizzabile la tua istanza.**
+**Importante**: non modificare alcun valore impostato durante l'ordine o la distribuzione dell'istanza. La modifica rende inutilizzabile la tua istanza. Ad esempio, se la rete pubblica si interrompe, se i server e le VSI (Virtual Server Instance) vanno dietro una fornitura media di Vyatta o se la VSI di IBM CloudBuilder si arresta o viene eliminata.
 
 ## Impostazioni di sistema
 
-Quando ordini un'istanza NetApp ONTAP Select, devi specificare le sue impostazioni di base.
+Quando ordini un'istanza NetApp ONTAP Select, devi specificare le seguenti impostazioni di base.
 
 ### Nome istanza
 
@@ -56,15 +56,15 @@ L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
 Il nome del dominio root deve rispettare i seguenti requisiti:
 * Il nome del dominio deve essere composto da due o più stringhe separate da un punto (.)
 * La prima stringa deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
-* Tutte le stringhe, tranne l'ultima, possono contenere solo caratteri alfanumerici e trattini (-).
-* L'ultima stringa può contenere solo caratteri alfabetici.
+* Tutte le stringhe, eccetto l'ultima, possono includere solo caratteri alfanumerici e trattini (-).
+* L'ultima stringa può includere solo caratteri alfabetici.
 * La lunghezza dell'ultima stringa deve essere compresa tra 2 e 24 caratteri.
 
 **Nota:** la lunghezza massima del nome di dominio completo (o FQDN, Fully Qualified Domain Name) per gli host e le VM (macchine virtuali) è di 50 caratteri. I nomi di dominio devono essere adattati a questa lunghezza massima.
 
 ## Impostazioni di licenza
 
-Devi caricare quattro file di licenza NetApp perché ciascuno dei quattro {{site.data.keyword.baremetal_short}} richiede una licenza. Contatta il tuo team di vendita NetApp per ottenere le licenze appropriate per la tua distribuzione ad alte prestazioni o ad alta capacità.
+Devi caricare quattro file di licenza NetApp, uno per ciascuno dei quattro {{site.data.keyword.baremetal_short}}. Contatta il tuo team di vendite NetApp per ottenere le licenze appropriate per la tua distribuzione ad alte prestazioni o ad alta capacità.
 
 ## Impostazioni di Bare Metal Server
 
@@ -75,11 +75,11 @@ Devi selezionare il {{site.data.keyword.CloudDataCent_notm}} in cui deve essere 
 ### Configurazione Bare Metal Server
 
 Seleziona una configurazione Bare Metal Server in base ai tuoi requisiti:
-* **Alte prestazioni (medio)** – Licenza Premium / Dual Intel Xeon E5-2650 v4 (24 core totali, 2,2 GHz) / 128 GB di RAM / Capacità di ventidue unità SSD da 1,9 TB per nodo / Capacità effettiva di un cluster a 4 nodi – 59 TB
-* **Alte prestazioni (elevato)** – Licenza Premium / Dual Intel Xeon E5-2650 v4 (24 core totali, 2,2 GHz) / 128 GB di RAM / Capacità di ventidue unità SSD da 3,8 TB per nodo / Capacità effettiva di un cluster a 4 nodi – 118 TB
+* **Alte prestazioni (Medium)** – Licenza Premium / Dual Intel Xeon E5-2650 v4 (24 core totali, 2,2 GHz) / 128 GB di RAM / Capacità di 22 unità SSD da 1,9 TB per nodo / Capacità effettiva di un cluster a 4 nodi – 59 TB
+* **Alte prestazioni (Large)** – Licenza Premium / Dual Intel Xeon E5-2650 v4 (24 core totali, 2,2 GHz) / 128 GB di RAM / Capacità di 22 unità SSD da 3,8 TB per nodo / Capacità effettiva di un cluster a 4 nodi – 118 TB
 * **Alta capacità** – Licenza Standard / Dual Intel Xeon E5-2650 v4 (24 core totali, 2,2 GHz) / 64 GB di RAM / Capacità di trentaquattro unità SATA da 4 TB per nodo / Capacità effettiva di un cluster a 4 nodi – 190 TB
 
-**Nota:** le unità SSD (Solid-State Disk) da 3,8 TB saranno supportate una volta rese generalmente disponibili in un {{site.data.keyword.CloudDataCent_notm}}.
+**Nota:** le unità SSD (Solid-State Disk) da 3,8 TB sono supportate quando vengono rese generalmente disponibili in un {{site.data.keyword.CloudDataCent_notm}}.
 
 ### Numero di server Bare Metal
 
@@ -97,7 +97,7 @@ Il numero di server ESXi di un'istanza NetApp ONTAP Select è 4 per impostazione
    2. Seleziona la configurazione di Bare Metal Server.
 7. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza prima di effettuare l'ordine.
     1. Esamina le impostazioni per l'istanza.
-    2. Esamina il costo stimato dell'istanza. Fai clic su **Dettagli sui prezzi** per generare un riepilogo in formato PDF. Per salvare o stampare il riepilogo del tuo ordine, fai clic sull'icona **Stampa** o **Download** nella parte superiore destra della finestra PDF.
+    2. Esamina il costo stimato dell'istanza. Fai clic su **Dettagli sui prezzi** per generare un riepilogo in formato PDF. Per salvare o stampare il riepilogo del tuo ordine, fai clic sull'icona **Stampa** o **Download** dalla finestra PDF.
     3. Assicurati che l'account da addebitare sia corretto e seleziona quindi la casella di spunta **Accetto che all'account riportato di seguito venga addebitato un corrispettivo**.
     4. Fai clic sul link o sui link dei termini che si applicano al tuo ordine. Assicurati di accettare questi termini e quindi seleziona la casella di spunta **Ho letto e accetto gli accordi di servizio di terze parti elencati di seguito**.
     5. Fai clic su **Fornitura**.
