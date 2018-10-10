@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -16,19 +16,19 @@ Rivedi le seguenti informazioni per i dettagli sulle considerazioni e sui requis
 
 Per esaminare i componenti di rete inclusi nella tua istanza Cloud Foundation, vedi [Specifiche tecniche per le istanze Cloud Foundation](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
-## Considerazioni sul firewall NSX
+## Considerazioni su firewall
 
-Se utilizzi i DFW (Distributed Firewall) NSX, devi configurare le regole per tutte le comunicazioni dalla VSI (Virtual Server Instance) {{site.data.keyword.IBM}} CloudDriver e le macchine virtuali (VM) SDDC Manager per consentire a tutti i protocolli di comunicare sugli indirizzi IP `10.0.0.0/8` e `161.26.0.0/16`.
+Se utilizzi i firewall, devi configurare le regole per tutte le comunicazioni dalla VSI (Virtual Server Instance) {{site.data.keyword.IBM}} CloudDriver e dalle VM (virtual machine) di SDDC Manager. Queste regole devono consentire a tutti i protocolli di comunicare sugli indirizzi IP `10.0.0.0/8` e `161.26.0.0/16`. Esempi di questi firewall sono i DFW (Distributed Firewall) NSX o i firewall Vyatta.
 
 ## Utilizzo di VMware NSX con le tue VM
 
 Durante la distribuzione dell'istanza Cloud Foundation, VMware NSX viene ordinato, installato, concesso in licenza e configurato nella tua istanza. Inoltre, vengono configurati NSX Manager, i controller NSX e NSX Transport Zone e ciascun server ESXi viene configurato con i componenti NSX.
 
-Tuttavia, se le tue macchine virtuali del carico di lavoro devono comunicare tra loro e accedere a Internet, è tua responsabilità configurare NSX per l'utilizzo da parte delle macchine virtuali.
+Tuttavia, se le tue VM del carico di lavoro devono comunicare tra loro e accedere a Internet, è tua responsabilità configurare NSX per l'utilizzo da parte delle tue VM.
 
-Per informazioni su come configurare NSX:
+Per ulteriori informazioni su come configurare NSX, vedi i seguenti argomenti:
 * Per un'istanza primaria (singola) di Cloud Foundation, vedi [Setting up NSX for workload VMs on VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/).
-* Per un'istanza Cloud Foundation multisito, vedi [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html).
+* Per un'istanza Cloud Foundation multisito, vedi Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html).
 
 ## Considerazioni sulla modifica delle password per i componenti NSX
 

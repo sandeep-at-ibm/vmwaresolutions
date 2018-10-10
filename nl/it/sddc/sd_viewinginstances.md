@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -17,7 +17,7 @@ Visualizza il riepilogo e le informazioni dettagliate delle istanze VMware Cloud
 Per visualizzare un riepilogo di tutte le istanze Cloud Foundation fornite per un account utente, completa la seguente procedura:
 
 1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
-2. Nell'angolo superiore destro della console, fai clic sul tuo avatar e quindi sul campo **Account** per selezionare l'account utente per il quale vuoi controllare le istanze. 
+2. Dal banner della console, fai clic sull'icona del tuo account utente e quindi sul campo **Account** per selezionare l'account utente per il quale vuoi controllare le istanze.
 3. Nella tabella **Istanze Cloud Foundation**, visualizza l'elenco delle tue istanze:
 
 Tabella 1. Elementi dell'istanza Cloud Foundation
@@ -68,11 +68,11 @@ Tabella 3. Proprietà dell'istanza Cloud Foundation
 | DNS, Dominio SSO | Il dominio SSO è il dominio vSphere Single Sign-On. Il nome del dominio SSO viene fissato per tutte le istanze distribuite di Cloud Foundation con il valore <samp class="ph codeph">vsphere.local</samp>. |
 | DNS, Domino secondario | Il dominio secondario è il nome del dominio secondario DNS del nome di dominio root in cui risiedono i nomi host delle istanze Cloud Foundation locali. Il nome del dominio secondario è nel formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 | Versione SDDC Manager  |  La versione di SDDC Manager dell'istanza |
-| Stato  | Lo stato dell'istanza<br><br>Le informazioni visualizzate forniscono un aggiornamento sullo stato di avanzamento della distribuzione o sull'azione eseguita sull'istanza. Se ci sono problemi, potrebbe essere visualizzato un messaggio per aiutarti ad analizzare e risolvere il problema. |
+| Stato  | Lo stato dell'istanza<br><br>Le informazioni visualizzate forniscono un aggiornamento sullo stato di avanzamento della distribuzione o sull'azione eseguita sull'istanza. Se si verificano problemi, potrebbe essere visualizzato un messaggio per aiutarti ad analizzare e risolvere il problema. |
 
 ## Visualizzazione delle informazioni di accesso per le istanze Cloud Foundation
 
-In **Informazioni sull'accesso**, visualizza le informazioni di accesso per i componenti relativi all'istanza. Le password visualizzate sono password iniziali generate dal sistema. Se le modifichi all'esterno della console {{site.data.keyword.vmwaresolutions_short}}, non vengono aggiornate nella pagina di riepilogo dell'istanza.
+In **Informazioni sull'accesso**, visualizza le informazioni di accesso per i componenti relativi all'istanza. Le password visualizzate sono le password iniziali generate dal sistema. Se le modifichi all'esterno della console {{site.data.keyword.vmwaresolutions_short}}, non vengono aggiornate nella pagina di riepilogo dell'istanza.
 
 Tabella 4. Informazioni di accesso di Cloud Foundation per i componenti relativi all'istanza
 
@@ -80,7 +80,7 @@ Tabella 4. Informazioni di accesso di Cloud Foundation per i componenti relativi
 |:------------- |:------------- |
 | IP AD/DNS | L'indirizzo IP dei due server AD |
 | Nome di dominio completo AD/DNS | Il nome di dominio completo del server AD/DNS<br><br>**Nota**: è possibile utilizzare la stessa password amministratore per connettersi a tutti i server AD/DNS utilizzando una connessione al desktop remoto. |
-| ADMIN AD/DNS (Desktop remoto)  | Per le istanze primarie, visualizza il nome utente e la password per accedere al server AD tramite una connessione al desktop remoto.<br><br>Per le istanze secondarie, fai clic sul link **Visualizza nell'istanza primaria** per essere indirizzato alle informazioni di nome utente e password sull'istanza primaria.<br><br>**Nota**: dopo che l'istanza secondaria viene aggiunta al dominio DNS primario e si verifica la replica, la password dell'amministratore locale nell'istanza primaria potrebbe sovrascrivere la password dell'amministratore locale nell'istanza secondaria. Facendo clic sul link **Visualizza nell'istanza primaria**, avrai accesso alla password di amministratore corretta.  |
+| ADMIN AD/DNS (Desktop remoto)  | Per le istanze primarie, visualizza il nome utente e la password per accedere al server AD tramite una connessione al desktop remoto.<br><br>Per le istanze secondarie, fai clic sul link **Visualizza nell'istanza primaria** per essere indirizzato alle informazioni di nome utente e password sull'istanza primaria.<br><br>**Nota**: dopo che l'istanza secondaria viene aggiunta al dominio DNS primario e si verifica la replica, la password dell'amministratore locale nell'istanza primaria potrebbe sovrascrivere la password dell'amministratore locale nell'istanza secondaria. Facendo clic sul link **Visualizza nell'istanza primaria**, hai accesso alla password di amministratore corretta.  |
 | IP NSX Manager  | L'indirizzo IP di NSX Manager  |
 | Nome di dominio completo NSX Manager  | Il nome di dominio completo di NSX Manager  |
 | HTTP NSX Manager  | Il nome utente e la password utilizzati per accedere alla console web di NSX Manager |
@@ -118,7 +118,7 @@ Gestisci le tue istanze dalla console {{site.data.keyword.vmwaresolutions_short}
 Rivedi i seguenti argomenti per informazioni utili per completare le istruzioni di accesso:
 
 * Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](../vmonic/trbl_timeout_vc_console.html).
-* Per un elenco di punti di accesso per accedere alla rete privata di {{site.data.keyword.cloud_notm}} tramite VPN, vedi [Accesso VPN](http://www.softlayer.com/vpn-access){:new_window}.
+* Per un elenco di punti di accesso per accedere alla rete privata di {{site.data.keyword.cloud_notm}} utilizzando la VPN, vedi [Accesso VPN](http://www.softlayer.com/vpn-access){:new_window}.
 * Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](../vmonic/trbl_deploy_ovf.html).
 
 ### Link correlati

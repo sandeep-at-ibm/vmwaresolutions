@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -32,18 +32,17 @@ Tabella 2. Diba per i componenti software nelle istanze Cloud Foundation
 
 | Produttore | Componente                                | Versione      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 U1g (ESXi 6.5u1 con il livello di patch ESXi650-201803001 applicato) |
-| VMware       | vCenter Server Appliance                 | 6.5 Aggiornamento 1g |
-| VMware       | Platform Services Controller             | 6.5 Aggiornamento 1g |
+| VMware       | vSphere ESXi                             | 6.5 Aggiornamento 2c (fino al livello di patch ESXi650-201808001) |
+| VMware       | vCenter Server Appliance                 | 6.5 Aggiornamento 2c |
+| VMware       | Platform Services Controller             | 6.5 Aggiornamento 2c |
 | VMware       | vSAN                                     | 6.6.1        |
-| VMware       | NSX per vSphere                          | 6.3.5        |
+| VMware       | NSX per vSphere                          | 6.4.1        |
 | VMware       | SDDC Manager                             | 2.4          |
-| IBM          | CloudDriver                              | 2.5          |
 | Microsoft    | Windows Server Standard edition (64-bit) | 2012R2       |
 
 ## Impostazioni di configurazione avanzate per i server ESXi
 
-Riesamina la seguente tabella per una panoramica delle impostazioni di configurazione avanzate applicate sui server ESXi a seconda che l'istanza Cloud Foundation sia distribuita nella V2.2 o successive o aggiornata alla V2.2 o successive da una release della V2.1 o precedenti.
+Esamina la seguente tabella per una panoramica delle impostazioni di configurazione avanzate che vengono applicate ai server ESXi. Le impostazioni sono diverse a seconda che l'istanza Cloud Foundation sia distribuita o aggiornata alla V2.2 o successive da una release precedente (V2.1 o precedenti).
 
 Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanze e i cluster Cloud Foundation
 
@@ -61,7 +60,7 @@ Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanz
 
 **Note**:
 * L'impostazione **MaxVolumes** è obbligatoria per il servizio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} perché il servizio potrebbe utilizzare più del numero predefinito di montaggi NFS sul server ESXi.
-* Il valore **Non impostato** per un'impostazione di configurazione indica che la nuova impostazione non viene applicata automaticamente, poiché richiede il riavvio dei server ESXi, il che potrebbe causare un'interruzione.
+* Il valore **Non impostato** per un'impostazione di configurazione indica che la nuova impostazione non viene applicata automaticamente perché richiede il riavvio dei server ESXi, il che potrebbe causare un'interruzione.
 
   Si consiglia di modificare le impostazioni di configurazione **Non impostato** nei nuovi valori per garantire coerenza tra tutte le istanze e per consentire il supporto adeguato per l'espansione dell'archiviazione. IBM prevede di eseguire test solo con queste nuove impostazioni per tutte le release di {{site.data.keyword.vmwaresolutions_short}} V2.2 e versioni successive.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-08"
 
 La modifica di utenti, risorse o sottoreti riservati a {{site.data.keyword.vmwaresolutions_full}} può influire sulle operazioni di gestione per le istanze VMware Cloud Foundation.
 
-**Importante:** non modificare le autorizzazioni globali del gruppo **ic4v-vCenter** nella pagina **Utenti e gruppi** del client web VMware vSphere. Tali modifiche includono la modifica del nome utente, l'eliminazione dell'utente o la modifica della sua password.
+**Importante:** non modificare le autorizzazioni globali del gruppo **ic4v-vCenter** nella pagina **Utenti e gruppi** sul client web VMware vSphere. I seguenti esempi sono modifiche alle autorizzazioni globali: modifica del nome utente, eliminazione dell'utente o modifica della sua password.
 
 ## Account utente specifici del servizio
 

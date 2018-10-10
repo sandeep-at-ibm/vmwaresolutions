@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -19,7 +19,7 @@ Un aggiornamento disponibile è un record nell'elenco di aggiornamenti software 
 ## Prima di iniziare
 
 Prima di tentare di applicare un aggiornamento, espandi la voce di aggiornamento facendo clic sulla freccia in giù e verifica le seguenti informazioni:
-* La versione dell'aggiornamento. Devi applicare gli aggiornamenti in sequenza cronologica, dalla più antica alla più recente. Assicurati di aver applicato tutti gli aggiornamenti precedenti prima di applicare quello più recente. Ad esempio, devi applicare l'aggiornamento alla V2.3 prima di tentare di applicare l'aggiornamento alla V2.4.
+* La versione dell'aggiornamento. Devi applicare gli aggiornamenti in sequenza cronologica, dalla più antica alla più recente. Assicurati di aver applicato tutti gli aggiornamenti precedenti prima di applicare quello più recente. Ad esempio, devi applicare l'aggiornamento V2.4 prima di tentare di applicare l'aggiornamento V2.5.
 * Se è necessario un tempo di inattività.
 * Il tempo totale stimato per completare l'aggiornamento.
 * L'impatto dell'aggiornamento sull'ambiente virtuale VMware. La tabella 1 mostra come i diversi livelli di impatto influiscono sul sistema.
@@ -53,17 +53,17 @@ Tabella 1. Livelli di aggiornamento e impatto
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza da aggiornare.
 3. Nella pagina **Riepilogo**, verifica che tutti i dettagli dell'istanza siano visualizzati correttamente. Quindi, fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra per verificare i dettagli nella pagina **Infrastruttura**.
-   Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la VSI (Virtual Server Instance) IBM CloudDriver, a causa di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'aggiornamento potrebbe non riuscire.
+   Se i dettagli non vengono visualizzati, potrebbe indicare un problema di connettività con la VSI (Virtual Server Instance) IBM CloudDriver, a seguito di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'aggiornamento potrebbe non riuscire.
 4. Fai clic su **Aggiorna e applica patch** nel riquadro di navigazione a sinistra.
 5. Fai clic sulla freccia in giù per espandere l'aggiornamento che vuoi applicare e quindi completa uno dei seguenti passi:
    *  Per avviare immediatamente l'aggiornamento, fai clic sull'icona del menu di overflow nella colonna **Azioni** della voce di aggiornamento, quindi fai clic su **Aggiorna ora**.
    *  Per pianificare un aggiornamento futuro, fai clic sull'icona del menu di overflow nella colonna **Azioni** della voce di aggiornamento, quindi fai clic su **Pianifica aggiornamento**. Seleziona la data, l'ora e il fuso orario in cui vuoi avviare l'aggiornamento. Fai clic su **OK**.
-6. Se applichi aggiornamenti alle istanze Cloud Foundation nella configurazione di distribuzione multisito, viene visualizzata una sezione intitolata **Passi necessari per l'aggiornamento**. Questa sezione elenca le operazioni di aggiornamento richieste per tutte le istanze nella distribuzione multisito. Devi completare i passi in sequenza facendo clic su **Applica aggiornamento** per ciascun passo. Devi attendere il completamento del passo precedente prima di iniziare il passo successivo.
+6. Se applichi aggiornamenti alle istanze Cloud Foundation nella configurazione di distribuzione multisito, viene visualizzata una sezione intitolata **Passi necessari per l'aggiornamento**, che elenca le operazioni di aggiornamento richieste per tutte le istanze nella distribuzione multisito. Devi completare i passi in sequenza facendo clic su **Applica aggiornamento** per ciascun passo. Devi attendere il completamento del passo precedente prima di iniziare il passo successivo.
 
 ## Risultati
 
 1. Prima che venga avviata un'operazione di aggiornamento, viene completato un controllo di integrità dell'istanza. Se il controllo di integrità non riesce, verrai avvisato in modo da poter risolvere il problema prima di applicare l'aggiornamento.
-2. Durante gli aggiornamenti che includono aggiornamenti dei componenti VMware, potrebbe essere necessario eseguire la migrazione delle VM dai server ESXi per passare alla modalità di manutenzione. Se una VM ha un archivio dati locale o un CD-ROM montato, ciò potrebbe impedire la migrazione della VM.
+2. Durante gli aggiornamenti che includono aggiornamenti dei componenti VMware, potrebbe essere necessario eseguire la migrazione delle VM dai server ESXi per passare alla modalità di manutenzione. La migrazione della VM potrebbe essere impedita se in una VM è montato un archivio dati o CD-ROM locale.
 3. Durante il provisioning di un nuovo ambiente, {{site.data.keyword.vmwaresolutions_short}} crea l'ID **automationuser** che viene utilizzato per la gestione dell'istanza, incluso per l'applicazione degli aggiornamenti. Non modificare la password per questo ID utente. La modifica della password potrebbe causare un errore nell'aggiornamento.
 
 4. Dopo aver applicato un aggiornamento, viene visualizzato un record nell'elenco di stato degli aggiornamenti software, in cui puoi visualizzare l'avanzamento dettagliato e lo stato dell'aggiornamento. Al termine dell'aggiornamento, viene visualizzato un record nell'elenco degli aggiornamenti software installati.
@@ -71,7 +71,7 @@ Tabella 1. Livelli di aggiornamento e impatto
   Per recuperare lo stato più recente per un lavoro di aggiornamento, fai clic sull'icona di aggiornamento nella parte superiore destra della pagina.
   {:tip}
 
-5. Per i dettagli sugli stati di aggiornamento, consulta la seguente tabella.
+5. Per ulteriori informazioni sugli stati di aggiornamento, consulta la seguente tabella.
 
    Tabella 2. Dettagli degli stati di aggiornamento
 

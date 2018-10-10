@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -38,10 +38,10 @@ A causa delle dipendenze delle risorse, i componenti della tua istanza non vengo
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza da eliminare.
-3. Fai clic sull'icona del menu di overflow a destra di **Console vCenter** e quindi su **Elimina istanza**.
+3. Fai clic sull'icona del menu di overflow accanto a **Console vCenter** e quindi su **Elimina istanza**.
    Lo stato dell'istanza viene modificato in **In fase di eliminazione**. Una volta che l'istanza è stata eliminata, i suoi componenti vengono rilasciati e il suo stato viene modificato in **Eliminato**.
 4. Se vuoi rimuovere il record dell'istanza dalla console {{site.data.keyword.vmwaresolutions_short}}, completa la seguente procedura:
-   1. Fai di nuovo clic sull'icona del menu di overflow a destra di **Console vCenter** e quindi su **Elimina istanza**.
+   1. Fai di nuovo clic sull'icona del menu di overflow accanto a **Console vCenter** e quindi su **Elimina istanza**.
    2. Nella finestra **Elimina istanza**, fai clic su **OK**.
 
 ### Link correlati

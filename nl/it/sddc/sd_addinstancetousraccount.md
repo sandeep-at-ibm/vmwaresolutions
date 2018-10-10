@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -14,14 +14,19 @@ Le istanze VMware Cloud Foundation che sono state distribuite nelle release dell
 
 Le istanze che sono state distribuite nelle release della V2.4 e precedenti, possono essere migrate ad account {{site.data.keyword.cloud_notm}} specificati per la gestione utente abilitata a IAM.
 
+## Prima di iniziare
 
-## Procedura
+Assicurati che l'account {{site.data.keyword.cloud_notm}} a cui vuoi migrare l'istanza non sia un account solo IaaS. Un account solo IaaS è un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) che non è collegato a un account {{site.data.keyword.cloud_notm}}.
+
+Per ulteriori informazioni su come collegare il tuo account solo IaaS al tuo account PaaS, vedi [Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/blogs/bluemix/2018/03/follow-steps-link-iaas-paas-accounts/).
+
+## Procedura per migrare le istanze
 
 1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
-2. Nell'angolo superiore destro della console, fai clic sul tuo avatar e quindi sul campo **Account** per selezionare l'account utente a cui vuoi migrare l'istanza.
+2. Dal banner della console, fai clic sull'icona del tuo account utente e quindi sul campo **Account** per selezionare l'account utente in cui vuoi migrare l'istanza.
 3. Nella tabella **Istanze Cloud Foundation**, trova l'istanza precedente alla V2.5.
-4. Nella colonna **Azioni**, fai clic sull'icona del menu di overflow e seleziona **Migra istanza all'account**.
-5. Nella finestra **Migra istanza all'account**, conferma l'account a cui migrare l'istanza e fai clic su **Migra**.
+4. Nella colonna **Azioni**, fai clic sull'icona del menu di overflow e seleziona **Migra istanza nell'account**.
+5. Nella finestra **Migra istanza nell'account**, conferma l'account a cui migrare l'istanza e fai clic su **Migra**.
 
 ## Risultati
 

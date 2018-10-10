@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -37,7 +37,7 @@ Questo livello è costituito da vCenter Server, che rappresenta il livello di ge
 
 Nella console {{site.data.keyword.vmwaresolutions_short}}, puoi espandere e contrarre la capacità delle tue istanze utilizzando la funzionalità di aggiunta e rimozione di server ESXi. Inoltre, sono disponibili anche funzioni di gestione del ciclo di vita come l'applicazione di aggiornamenti e l'aggiornamento dei componenti VMware nell'ambiente ospitato.
 
-Per i dettagli sull'architettura, consulta [Panoramica della soluzione](../archiref/solution/solution_overview.html).
+Per ulteriori informazioni sull'architettura, vedi [Panoramica della soluzione](../archiref/solution/solution_overview.html).
 
 ## Specifiche tecniche per le istanze Cloud Foundation
 
@@ -63,14 +63,14 @@ Vengono ordinati i seguenti componenti di rete:
 * Tre VLAN (Virtual LAN): una VLAN pubblica e due VLAN private
 * Gateway dei servizi edge (ESG) VMware NSX sicuro dei servizi di gestione per il traffico di gestione HTTPS in uscita, distribuito da IBM come parte della tipologia di rete di gestione. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. Per ulteriori informazioni, vedi [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **Importante**: questo ESG non è accessibile a te e non puoi usarlo. Se lo modifichi, potresti non essere in grado di gestire l'istanza Cloud Foundation dalla console {{site.data.keyword.vmwaresolutions_short}}. Inoltre, tieni presente che l'utilizzo di un firewall o la disabilitazione delle comunicazioni ESG ai componenti di gestione IBM esterni causerà l'inutilizzabilità di {{site.data.keyword.vmwaresolutions_short}}.
+  **Importante**: questo ESG non è accessibile a te e non puoi usarlo. Se lo modifichi, potresti non essere in grado di gestire l'istanza Cloud Foundation dalla console {{site.data.keyword.vmwaresolutions_short}}. Inoltre, l'utilizzo di un firewall o la disabilitazione delle comunicazioni ESG ai componenti di gestione IBM esterni comporterà l'inutilizzabilità di {{site.data.keyword.vmwaresolutions_short}}.
 
 * La funzione EVC (Enhanced vMotion Compatibility) viene abilitata automaticamente se disponi di un cluster esistente con i server ESXi supportati dalla versione corrente di VMware vSphere. EVC fornisce la compatibilità vMotion per tutti i server ESXi in un cluster garantendo che tutti i server ESXi del cluster espongano lo stesso insieme di funzioni CPU alle macchine virtuali. Utilizzando EVC, le macchine virtuali possono migrare tra qualsiasi server ESXi nel cluster, anche se le reali CPU sui server ESXi potrebbero essere diverse.
 
 ### VSI (Virtual Server Instance)
 
 Vengono ordinate le seguenti VSI (Virtual Server Instance):
-* Una VSI per i servizi Microsoft Active Directory (AD) e Domain Name System (DNS), richiesta per il supporto della configurazione multisito. La specifica di questa VSI è: Windows 2012 R2 (8 GB di RAM / 2 core CPU / disco da 100 GB / Doppi uplink privati da 1 Gbps).
+* Una VSI per i servizi Microsoft AD (Active Directory) e Domain Name System (DNS). La VSI è richiesta per il supporto della configurazione multisito. La specifica di questa VSI è: Windows 2012 R2 (8 GB di RAM / 2 core CPU / disco da 100 GB / Doppi uplink privati da 1 Gbps).
 * Una VSI per IBM CloudBuilder, che viene arrestata al termine della distribuzione dell'istanza.
 * (Se viene ordinato Veeam on {{site.data.keyword.cloud_notm}}) Viene ordinata una VSI per il servizio di backup Veeam.
 
@@ -78,9 +78,9 @@ Vengono ordinate le seguenti VSI (Virtual Server Instance):
 
 Viene ordinata la seguente archiviazione, a seconda della configurazione di {{site.data.keyword.baremetal_short}} che hai selezionato:
 * Due dischi di avvio SATA da 1 TB
-* Due dischi di cache SSD (Solid State Disk) da 960 GB
+* Due dischi di cache SSD (Solid-State Disk) da 960 GB
 * Un controller disco RAID
-* Solo per la configurazione **Personalizzato**, puoi impostare il numero di unità disco e il tipo e la capacità del disco in base ai tuoi requisiti.
+* Solo per la configurazione **Personalizzato**, puoi impostare il numero di unità disco e il tipo e la capacità del disco in base ai tuoi requisiti. Inoltre, hai l'opzione Alta disponibilità con Intel Optane, che fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità. L'opzione Alte prestazioni con Intel Optane dipende dal modello di CPU.
 * Solo per la configurazione **Preconfigurato**, **Small**: due dischi con capacità SSD da 1,9 TB
 * Solo per la configurazione **Preconfigurato**, **Large**: quattro dischi con capacità SSD da 3,8 TB
 
@@ -95,7 +95,7 @@ Viene ordinata la seguente archiviazione, a seconda della configurazione di {{si
 
 ## Specifiche tecniche per i nodi di espansione Cloud Foundation
 
-Ogni nodo di espansione Cloud Foundation verrà distribuito e addebitato per i seguenti componenti nel tuo account {{site.data.keyword.cloud_notm}}.
+Ogni nodo di espansione Cloud Foundation distribuisce e comporta addebiti per i seguenti componenti nel tuo account {{site.data.keyword.cloud_notm}}.
 
 ### Hardware per i nodi di espansione
 

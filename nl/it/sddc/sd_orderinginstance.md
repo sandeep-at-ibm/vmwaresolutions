@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -18,7 +18,7 @@ Assicurati di aver completato le seguenti attività:
 *  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](../vmonic/useraccount.html).
 *  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per le istanze Cloud Foundation](sd_planning.html).
 
-**Importante:** non modificare alcun valore impostato durante l'ordine e la distribuzione dell'istanza. Ciò potrebbe comportare l'inutilizzabilità dell'istanza. Inoltre, non modificare il nome dell'istanza, il nome del dominio root, l'etichetta del dominio secondario o il prefisso del nome host, dopo che l'istanza è stata distribuita.
+**Importante**: non modificare alcun valore impostato durante l'ordine o la distribuzione dell'istanza. La modifica può rendere inutilizzabile la tua istanza. Ad esempio, se la rete pubblica si interrompe, se i server e le VSI (Virtual Server Instance) vanno dietro una fornitura media di Vyatta o se la VSI di IBM CloudBuilder si arresta o viene eliminata.Inoltre, non modificare il nome dell'istanza, il nome del dominio root, l'etichetta del dominio secondario o il prefisso del nome host, dopo che l'istanza è stata distribuita.
 
 ## Impostazioni di sistema
 
@@ -85,13 +85,18 @@ Un'istanza Cloud Foundation comprende quattro server bare metal nella distribuzi
 
 ## Impostazioni di archiviazione
 
-Le istanze Cloud Foundation supportano solo l'archiviazione vSAN.
+Per le istanze Cloud Foundation, puoi ordinare solo l'archiviazione VMware vSAN.
 * Se selezioni la configurazione **Preconfigurato** di Bare Metal Server, le impostazioni di archiviazione sono standardizzate e non possono essere modificate:
-  * Per la configurazione **Small** di Bare Metal Server, vengono ordinate 2 unità disco SED SSD da 1,9 TB.
-  * Per la configurazione **Large** di Bare Metal Server, vengono ordinate 4 unità disco SED SSD da 3,8 TB.
-* Se selezioni la configurazione **Personalizzato** di Bare Metal Server, puoi personalizzare l'archiviazione vSAN VMware per la tua istanza specificando le seguenti impostazioni in **Storage vSAN**:
-  * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona la capacità che soddisfa le tue esigenze di archiviazione condivisa.
-  * **Numero di dischi vSAN**: specifica il numero di dischi per l'archiviazione condivisa vSAN che vuoi aggiungere. Le quantità dei dischi devono essere 2, 4, 6 o 8.
+  * Per la configurazione **Small** di Bare Metal Server, vengono ordinate due unità disco SED SSD da 1,9 TB.
+  * Per la configurazione **Large** di Bare Metal Server, vengono ordinate quattro unità disco SED SSD da 3,8 TB.
+* Se selezioni la configurazione **Personalizzato** di Bare Metal Server, puoi personalizzare l'archiviazione vSAN per la tua istanza. Specifica le seguenti impostazioni vSAN:
+
+* **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
+* **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
+* **Tipo di disco per i dischi cache vSAN**: seleziona un'opzione per i dischi di cache di cui hai bisogno.
+
+    **Nota**: se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
+* **Numero di dischi cache vSAN**: specifica il numero di dischi di cache che vuoi aggiungere.
 
 ## Impostazioni dell'interfaccia di rete
 
@@ -147,10 +152,10 @@ Le impostazioni di rete si basano sulla tua selezione di **Ordina nuove VLAN** o
 
 Per l'ordine della tua istanza sono richieste una VLAN pubblica e due VLAN private. Le due VLAN private sono collegate a ogni Bare Metal Server.
 
-**Ordina nuove VLAN**  
+#### Ordina nuove VLAN
 Seleziona questa opzione per ordinare una nuova VLAN pubblica e due nuove VLAN private.
 
-**Seleziona VLAN esistenti**  
+#### Seleziona VLAN esistenti  
 A seconda del {{site.data.keyword.CloudDataCent_notm}} che hai selezionato, potrebbero essere disponibili VLAN pubbliche e private esistenti.
 
 Se scegli di riutilizzare VLAN pubbliche e private esistenti, specifica le VLAN e le sottoreti:
@@ -162,29 +167,27 @@ Se scegli di riutilizzare VLAN pubbliche e private esistenti, specifica le VLAN 
 
 **Importante:**
 * Assicurati che la configurazione del firewall sulle VLAN selezionate non blocchi il traffico dei dati di gestione.
-* Assicurati che tutte le VLAN selezionate si trovino nello stesso pod, poiché i server ESXi non possono essere forniti su VLAN con pod misti.
+* Assicurati che tutte le VLAN che selezioni si trovino nello stesso pod, poiché i server ESXi non possono essere forniti su VLAN di pod misti.
 
 ## Servizi
 
-Quando ordini un'istanza Cloud Foundation, puoi anche ordinare servizi aggiuntivi. Per ulteriori informazioni sui servizi disponibili, vedi [Servizi per le istanze Cloud Foundation](sd_planning.html#services-for-cloud-foundation-instances).
+Quando ordini un'istanza Cloud Foundation, puoi ordinare anche i servizi aggiuntivi. Per ulteriori informazioni sui servizi disponibili, vedi [Servizi per le istanze Cloud Foundation](sd_planning.html#services-for-cloud-foundation-instances).
 
 ## Riepilogo ordine
 
-In base alla tua configurazione selezionata per l'istanza e i servizi aggiuntivi, il costo stimato viene generato e visualizzato immediatamente nel riquadro di destra. Fai clic su **Dettagli sui prezzi** nella parte inferiore del riquadro di destra per generare un documento PDF che fornisce i dettagli della stima.
+In base alla tua configurazione selezionata per l'istanza e i servizi aggiuntivi, il costo stimato viene generato e visualizzato immediatamente nel riquadro di destra. Fai clic su **Dettagli sui prezzi** nel riquadro di destra per generare un documento PDF che fornisce i dettagli della stima.
 
-## Procedura
+## Procedura per ordinare le istanze Cloud Foundation
 
 1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **Cloud Foundation** nella sezione **Data center virtuali**.
 2. Nella pagina **VMware Cloud Foundation on IBM Cloud**, fai clic su **Crea**.
 3. Nella pagina **Cloud Foundation**, immetti il nome dell'istanza.
 4. Seleziona il tipo di istanza:
    * Fai clic su **Istanza primaria** per distribuire una singola istanza nell'ambiente o per distribuire la prima istanza in una topologia multisito.
-   * Fai clic su **Istanza secondaria** per connettere l'istanza a un'istanza esistente (primaria) nell'ambiente per l'alta disponibilità e completa quindi la seguente procedura:
+   * Fai clic su **Istanza secondaria** per connettere l'istanza a un'istanza esistente (primaria) nell'ambiente per l'alta disponibilità. Completa la seguente procedura:
      1. Seleziona l'istanza primaria a cui desideri collegare l'istanza secondaria.
-     2. Se l'istanza primaria che hai selezionato viene aggiornata alla release della V2.5 o se l'istanza primaria viene distribuita o aggiornata alla release della V2.4 e precedenti, controlla il campo precompilato **Password dell'amministratore PSC per l'istanza primaria** per assicurarti che sia corretto.
-     
-         **Nota:** il campo **Password dell'amministratore PSC per l'istanza primaria** non è disponibile per le istanze primarie
-       distribuite nelle release della V2.5 e successive.     
+     2. Per le istanze primarie della V2.5 o successive, immetti il valore per **Password dell'amministratore per PSC istanza primaria**.
+     3. Per le istanze primarie della V2.4 o precedenti, verifica che il valore precompilato per il campo **Password dell'amministratore per PSC istanza primaria** sia corretto.
 5. Completa le impostazioni di licenza per i componenti dell'istanza:
    *  Per utilizzare le licenze fornite da IBM, seleziona **Includi con l'acquisto**.
    *  Per utilizzare la tua propria licenza, seleziona **Fornita dall'utente** e immetti la chiave di licenza.  
@@ -193,16 +196,16 @@ In base alla tua configurazione selezionata per l'istanza e i servizi aggiuntivi
    2. Seleziona la configurazione di Bare Metal Server.
       * Se selezioni **Preconfigurato**, scegli una configurazione tra **Small** e **Large**.
       * Se selezioni **Personalizzato**, specifica il modello di CPU e la dimensione della RAM.
-7. Completa le impostazioni di archiviazione:
-   * Se hai selezionato **Preconfigurato** per la configurazione Bare Metal, nota che le impostazioni di archiviazione per le configurazioni **Small** e **Large** standardizzate di Bare Metal Server non possono essere modificate.
-   * Se hai selezionato **Personalizzato** per la configurazione Bare Metal, specifica il **Tipo e dimensioni del disco per i dischi vSAN** e il **Numero di dischi vSAN**.
+7. Completa la configurazione di archiviazione.
+   * Se hai selezionato **Preconfigurato** per la configurazione Bare Metal, le impostazioni di archiviazione per le configurazioni **Small** e **Large** standardizzate di Bare Metal Server non possono essere modificate.
+   * Se hai selezionato **Personalizzato** per la configurazione Bare Metal, specifica i tipi di disco per i dischi di capacità vSAN e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
 8. Completa le impostazioni dell'interfaccia di rete:
-   1. Immetti il prefisso del nome host, l'etichetta del dominio secondario e il nome del dominio root. Per un'istanza secondaria, il nome di dominio viene compilato automaticamente.
+   1. Immetti il prefisso del nome host, l'etichetta del dominio secondario e il nome del dominio root. Per un'istanza secondaria, il nome di dominio viene completato automaticamente.
    2. Seleziona le impostazioni della VLAN:
       * Se vuoi ordinare nuove VLAN pubbliche e private, fai clic su **Ordina nuove VLAN**.
       * Se vuoi riutilizzare le VLAN pubbliche e private esistenti quando sono disponibili, fai clic su **Seleziona VLAN esistenti** e specifica le VLAN e le sottoreti.
 
-9. Seleziona i servizi aggiuntivi da distribuire nell'istanza facendo clic sulla scheda del servizio corrispondente. Se un servizio richiede la configurazione, completa le impostazioni specifiche del servizio e fai clic su **Aggiungi servizio** nella finestra di configurazione a comparsa. Per informazioni su come fornire le impostazioni per un servizio, vedi l'argomento relativo all'ordine del servizio corrispondente.
+9. Seleziona i servizi aggiuntivi da distribuire nell'istanza facendo clic sulla scheda del servizio corrispondente. Se un servizio richiede la configurazione, completa le impostazioni specifiche del servizio e fai clic su **Aggiungi servizio** nella finestra di configurazione a comparsa. Per ulteriori informazioni su come fornire le impostazioni per un servizio, vedi l'argomento relativo all'ordine del servizio corrispondente.
 
 10. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza prima di effettuare l'ordine.
     1. Esamina le impostazioni per l'istanza.
@@ -216,7 +219,7 @@ In base alla tua configurazione selezionata per l'istanza e i servizi aggiuntivi
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **SDDC-Cluster** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che l'ordine è stato completato.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **SDDC-Cluster** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 
@@ -226,7 +229,7 @@ Se ordini un'istanza secondaria, il client web VMware vSphere per l'istanza prim
 
 Visualizza e gestisci l'istanza Cloud Foundation che hai ordinato.
 
-**Importante**: devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo all'esterno della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
+**Importante**: devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo al di fuori della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
 
 **ATTENZIONE**: la gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}} (installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza) dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
 

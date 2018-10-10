@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -18,22 +18,22 @@ La seguente tabella mostra i servizi disponibili per le istanze Cloud Foundation
 
 Tabella 1. Servizi disponibili per le istanze Cloud Foundation
 
-| Nome servizio | Disponibilità | Supporto istanza |
+| Nome servizio | Versione servizio | Versione istanza |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | Sì | V1.9 e successive |
-| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | Sì | V1.8 e successive |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | Sì | V2.0 e successive |
-| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | Sì | V2.3 e successive |
-| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | Sì | V2.3 e successive |
-| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | Sì | V2.2 e successive |
-| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  | Sì | V2.2 e successive |
-| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | Sì | V1.8 e successive |
-| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                         | No | Non applicabile |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | Sì | V1.2 e successive |
+| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1 | V1.9 e successive |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | 300 series | V1.8 e successive |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 5.6 | V2.0 e successive |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 e successive |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | V2.3 e successive |
+| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 e successive |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.1 Patch 1 | V2.2 e successive |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 e successive |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | 9.5u3 | V1.8 e successive |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 5.5u4 Patch 2 | V1.2 e successive |
 
 ## Aggiunta di servizi alle istanze Cloud Foundation
 
-Per aggiungere un servizio alla tua istanza Cloud Foundation, fai clic sul link del servizio appropriato nella tabella precedente per esaminare le considerazioni relative al servizio e controllare i componenti distribuiti. Quindi, segui le istruzioni indicate nell'argomento su come ordinare i servizi per aggiungere il servizio alla tua istanza.
+Per aggiungere un servizio alla tua istanza Cloud Foundation, fai clic sul link del servizio appropriato nella tabella precedente per esaminare le considerazioni relative al servizio e controllare i componenti distribuiti. Quindi, segui le istruzioni nell'argomento dell'ordine dei servizi appropriati per aggiungere il servizio alla tua istanza.
 
 ### Risultati dell'installazione del servizio
 
@@ -45,7 +45,7 @@ Una volta completata correttamente l'installazione del servizio, riceverai una n
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza per la quale vuoi visualizzare i servizi.
 3. Fai clic su **Servizi** nel riquadro di navigazione a sinistra.
 4. Nella pagina **Servizi**, fai clic su un servizio per esaminare le relative informazioni, come lo stato del servizio e altri dettagli.
-5. A seconda del servizio visualizzato, puoi accedere alle relative console utilizzando le credenziali fornite nei dettagli del servizio e gestire quindi il servizio da qui.
+5. A seconda del servizio visualizzato, puoi accedere alle relative console utilizzando le credenziali fornite nei dettagli del servizio e puoi gestire il servizio da qui.
 
 ## Rimozione dei servizi per le istanze Cloud Foundation
 
@@ -59,7 +59,7 @@ Una volta completata correttamente l'installazione del servizio, riceverai una n
 
 Dopo che la tua richiesta di rimozione del servizio viene accettata, lo stato del servizio viene modificato in **In fase di rimozione**.
 
-Una volta completata correttamente la rimozione del servizio, riceverai una notifica via e-mail e il servizio verrà rimosso dalla pagina **Servizi** dell'istanza.
+Una volta completata correttamente la rimozione del servizio, ricevi una notifica via e-mail e il servizio viene rimosso dalla pagina **Servizi** dell'istanza.
 
 **Attenzione**: per i servizi rimossi ti vengono addebitati costi fino alla fine del ciclo di fatturazione di {{site.data.keyword.cloud_notm}}.
 
