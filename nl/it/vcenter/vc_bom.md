@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -32,21 +32,20 @@ Tabella 2. Diba per i componenti software nelle istanze vCenter Server
 
 | Produttore  | Componente                      | Versione       |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.5 U1g (ESXi 6.5u1 con il livello di patch ESXi650-201803001 applicato) |
-| VMware       | vCenter Server Appliance        | 6.5 Aggiornamento 1g |
-| VMware       | Platform Services Controller    | 6.5 Aggiornamento 1g |
+| VMware       | vSphere ESXi                    | 6.5 Aggiornamento 2c (fino al livello di patch ESXi650-201808001) |
+| VMware       | vCenter Server Appliance        | 6.5 Aggiornamento 2c |
+| VMware       | Platform Services Controller    | 6.5 Aggiornamento 2c |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX per vSphere                 | 6.4.1        |
-| IBM          | CloudDriver                     | 2.5          |
 | Microsoft    | Windows Server Standard edition | 2012R2       |
 
 **Nota**: VMware vSAN è un componente facoltativo.
 
 ## Impostazioni di configurazione avanzate per i server ESXi
 
-Riesamina la seguente tabella per una panoramica delle impostazioni di configurazione avanzate applicate ai server ESXi a seconda che l'istanza vCenter Server sia distribuita nella V2.2 o successive o aggiornata alla V2.2 o successive da una release della V2.1 o precedenti.
+Esamina la seguente tabella per una panoramica delle impostazioni di configurazione avanzate che vengono applicate ai server ESXi. Queste impostazioni variano a seconda che l'istanza vCenter Server sia distribuita nella V2.2 o successive o aggiornata alla V2.2 o successive dalla V2.1 o precedenti.
 
-Le impostazioni si applicano alle nuove istanze e ai nuovi cluster nelle nuove istanze della V2.2 o successive. Le impostazioni non si applicano ai nuovi cluster in istanze esistenti della V2.1 o precedenti o in istanze esistenti aggiornate alla V2.2 o successive.
+Le impostazioni si applicano alle nuove istanze e ai nuovi cluster nelle nuove istanze della V2.2 o successive. Le impostazioni non si applicano ai nuovi cluster nelle istanze esistenti della V2.1 o precedenti o nelle istanze esistenti aggiornate alla V2.2 o successive.
 
 Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanze e i cluster vCenter Server
 
@@ -64,17 +63,17 @@ Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanz
 
 **Note**:
 * L'impostazione **MaxVolumes** è obbligatoria per il servizio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} perché il servizio potrebbe utilizzare più del numero predefinito di montaggi NFS sul server ESXi.
-* Il valore **Non impostato** per un'impostazione di configurazione indica che la nuova impostazione non viene applicata automaticamente, poiché richiede il riavvio dei server ESXi, il che potrebbe causare un'interruzione.
+* Il valore **Non impostato** per un'impostazione di configurazione indica che la nuova impostazione non viene applicata automaticamente perché richiede il riavvio dei server ESXi, il che potrebbe causare un'interruzione.
 
   Si consiglia di modificare le impostazioni di configurazione **Non impostato** nei nuovi valori per garantire coerenza tra tutte le istanze e per consentire il supporto adeguato per l'espansione dell'archiviazione. IBM prevede di eseguire test solo con queste nuove impostazioni per tutte le release di {{site.data.keyword.vmwaresolutions_short}} V2.2 e versioni successive.
 
-  Per ulteriori informazioni, vedi [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
+  Per ulteriori informazioni, vedi [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239).
 
 ## Impostazioni di configurazione di NSX e del gruppo di porte
 
 Esamina la seguente tabella per una panoramica delle impostazioni di configurazione di VMware NSX e del gruppo di porte per le istanze vCenter Server e le differenze tra le release.
 
-Le impostazioni si applicano alle nuove istanze e ai nuovi cluster nelle nuove istanze della V2.2 o successive. Le impostazioni non si applicano ai nuovi cluster in istanze esistenti della V2.1 o precedenti o in istanze esistenti aggiornate alla V2.2 o successive.
+Le impostazioni si applicano alle nuove istanze e ai nuovi cluster nelle nuove istanze della V2.2 o successive. Le impostazioni non si applicano ai nuovi cluster nelle istanze esistenti della V2.1 o precedenti o nelle istanze esistenti aggiornate alla V2.2 o successive.
 
 Tabella 4. Impostazioni di configurazione di NSX e del gruppo di porte per le istanze vCenter Server
 
@@ -83,16 +82,16 @@ Tabella 4. Impostazioni di configurazione di NSX e del gruppo di porte per le is
 | Politica gruppo cluster VXLAN NSX | Failover | Bilanciamento del carico - SRCID |
 | VTEP cluster VXLAN NSX | 1 | 2 |
 | Pool ID segmento per istanza primaria | 6000-8000 | 6000-7999 |  
-| Pool ID segmento per una o più istanze secondarie successive | 6000-8000 | Da Intervallo finale precedente nella configurazione multisito + 1 a Intervallo finale precedente nella configurazione multisito + 2000 |  
+| Pool ID segmento per una o più istanze secondarie successive | 6000-8000 | Dall'intervallo finale precedente nella configurazione multisito + 1 all'intervallo finale precedente nella configurazione multisito + 2000 |  
 | Gruppo di porte SDDC-DPortGroup-VSAN (se applicabile) | **Active uplinks** impostato su **uplink1** e **Standby uplinks** impostato su **uplink2** | **Active uplinks** impostato su **uplink2** e **Standby uplinks** impostato su **uplink1** |  
-| Gruppo di porte SDDC-DPortGroup-Mgmt | **Port binding** impostato su **Ephermeral - no binding** e **Load balancing** impostato su **Route based on originating virtual port** | **Port binding** impostato su **Static binding** e **Load balancing** impostato su **Route based on physical NIC load** |  
+| Gruppo di porte SDDC-DPortGroup-Mgmt | **Port binding** impostato su **Ephemeral - no binding** e **Load balancing** impostato su **Route based on originating virtual port** | **Port binding** impostato su **Static binding** e **Load balancing** impostato su **Route based on physical NIC load** |  
 | Gruppo di porte SDDC-DPortGroup-External | **Port binding** impostato su **Ephemeral - no binding** | **Port binding** impostato su **Static binding** |
 
 ## Impostazioni di configurazione MTU della rete
 
 Il cluster vSphere utilizza due vDS (vSphere Distributed Switch), uno per la connettività di rete pubblica e l'altro per la connettività di rete privata.
 
-Le connessioni alla rete privata sono configurate per utilizzare la MTU (Maximum Transmission Unit) dei frame Jumbo con la dimensione di 9000, che migliora le prestazioni per i trasferimenti di dati di grandi dimensioni come l'archiviazione e VMware vMotion. Questa è la MTU massima consentita in VMware e da {{site.data.keyword.cloud_notm}}.
+Le connessioni alla rete privata sono configurate per utilizzare la MTU (Maximum Transmission Unit) dei frame Jumbo con la dimensione di 9000, che migliora le prestazioni per i trasferimenti di dati di grandi dimensioni come l'archiviazione e VMware vMotion. Questo valore è la MTU massima consentita in VMware e da {{site.data.keyword.cloud_notm}}.
 
 Nella V2.1 o successive, le connessioni alla rete pubblica utilizzano una MTU Ethernet standard di 1500. Questa impostazione di 1500 deve essere mantenuta; eventuali modifiche potrebbero causare la frammentazione dei pacchetti su Internet.
 
@@ -100,7 +99,7 @@ Riesamina la seguente tabella per una panoramica delle impostazioni di configura
 
 Tabella 5. Impostazioni di configurazione MTU per le istanze e i cluster vCenter Server a seconda della versione dell'istanza
 
-| VDS | V2.1 o successive  | V2.0 o precedenti (o aggiornati dalla V2.0 o precedenti) |
+| vDS | V2.1 o successive  | V2.0 o precedenti (o aggiornati dalla V2.0 o precedenti) |
 |:-------------- |:-------------- |:------------- |
 | Switch pubblico  | 1500 (predefinito) | 9000 (Frame Jumbo) |
 | Switch privato | 9000 (Frame Jumbo) | 9000 (Frame Jumbo) |
@@ -114,15 +113,15 @@ Per le istanze che sono state distribuite nella V2.0 o precedenti, si consiglia 
 ### Aggiornamento dell'impostazione MTU dello Switch pubblico
 
 Per aggiornare l'impostazione MTU per lo Switch pubblico, completa la seguente procedura nel client web VMware vSphere:
-1. Fai clic con il tasto destro e su **Modifica impostazioni**.
+1. Fai clic con il tasto destro del mouse su vDS e seleziona **Modifica impostazioni**.
 2. Nella **scheda Proprietà**, seleziona l'opzione **Avanzate**.
-3. Assicurati che il valore **MTU massimo** sia impostato su 1500.
+3. Assicurati che il valore **MTU massima** sia impostato su 1500.
 
-   **Nota**: quando modifichi la dimensione del MTU in una vDS, gli uplink collegati (NIC fisici) vengono disattivati e riattivati. Di conseguenza, si verifica una breve interruzione per le VM che utilizzano l'uplink. Pertanto, si consiglia si pianificare l'aggiornamento dell'impostazione MTU durante i tempi di inattività pianificati.
+   **Nota**: quando viene modificata la dimensione MTU in un vDS, gli uplink collegati (NIC fisiche) vengono disattivati e riattivati. Di conseguenza, si verifica una breve interruzione per le VM che utilizzano l'uplink. Pertanto, si consiglia si pianificare l'aggiornamento dell'impostazione MTU durante i tempi di inattività pianificati.
 
 ### Link correlati
 
-* [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
+* [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)

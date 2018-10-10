@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -59,7 +59,7 @@ Per un cluster, è richiesto un minimo di 2 {{site.data.keyword.baremetal_short}
 
 Per le istanze VMware Federal distribuite nella V2.3 o successive, puoi aggiungere fino a 59 {{site.data.keyword.baremetal_short}} per un cluster e aggiungere da 1 a 59 server ESXi alla volta.
 
-Dopo la distribuzione, puoi creare fino a quattro ulteriori cluster. Per le impostazioni di archiviazione vSAN, sono richiesti 4 server per il cluster iniziale e i cluster di post-distribuzione.
+Dopo la distribuzione, puoi creare fino a quattro ulteriori cluster. Per le impostazioni di archiviazione vSAN, sono richiesti quattro server sia per il cluster iniziale che per i cluster di post-distribuzione.
 
 ### Impostazioni di archiviazione
 
@@ -67,13 +67,19 @@ Le impostazioni di archiviazione si basano sulla tua selezione della configurazi
 
 #### Archiviazione vSAN
 
-Per vSAN, specifica le seguenti opzioni di archiviazione:
+Specifica le seguenti opzioni vSAN:
 
-* **Tipo e dimensioni del disco per i dischi vSAN**: seleziona la capacità che soddisfa le tue esigenze di archiviazione condivisa.
-* **Numero di dischi vSAN**: seleziona il numero di dischi per l'archiviazione condivisa vSAN che vuoi aggiungere. Le quantità dei dischi devono essere 2, 4, 6 o 8.
-* Seleziona l'edizione della licenza VMware vSAN 6.6 (Advanced o Enterprise).
+* **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
+* **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
+* **Tipo di disco per i dischi cache vSAN**: seleziona un'opzione per i dischi di cache di cui hai bisogno.
 
-Se il tuo cluster iniziale era vSAN, qualsiasi ulteriore cluster vSAN utilizza la stessa licenza vSAN e ha la stessa configurazione del cluster vSAN iniziale. Questo vale anche se in qualsiasi cluster (iniziale o aggiuntivo) dell'istanza è stato scelto di distribuire vSAN. La prima volta, ti viene richiesta la licenza vSAN e l'edizione. La prossima volta che selezioni vSAN per un cluster aggiuntivo, viene riutilizzata qualsiasi cosa tu abbia scelto inizialmente.
+    **Nota**: se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
+
+
+* **Numero di dischi cache vSAN**: specifica il numero di dischi di cache che vuoi aggiungere.
+* **Licenza vSAN**: seleziona l'edizione della licenza VMware vSAN 6.6 (Advanced o Enterprise).
+
+Se il tuo cluster iniziale è stato aggiunto come cluster vSAN, tutti gli ulteriori cluster vSAN utilizzano la stessa licenza vSAN e la stessa configurazione del cluster vSAN iniziale. Questo vale anche se in qualsiasi cluster (iniziale o aggiuntivo) dell'istanza è stato scelto di distribuire vSAN. La prima volta che aggiungi un cluster, ti viene richiesta la licenza vSAN e l'edizione. La prossima volta che selezioni vSAN per un nuovo cluster, viene riutilizzata qualsiasi cosa tu abbia scelto inizialmente.
 
 #### Archiviazione NFS
 
@@ -85,7 +91,7 @@ Se selezioni **Storage NFS**, puoi aggiungere l'archiviazione condivisa a livell
 * **Numero di condivisioni**: quando utilizzi la stessa impostazione di configurazione per ogni condivisione file, specifica il numero di condivisioni file per l'archiviazione condivisa NFS che vuoi aggiungere.
 * **Dimensione**: seleziona la capacità che soddisfa le tue esigenze di archiviazione condivisa.
 * **Prestazioni**: seleziona l'IOPS (Input/output Operations Per Second) per GB in base ai tuoi requisiti del carico di lavoro.
-* **AGGIUNGI NFS**: seleziona questa opzione per aggiungere singole condivisioni file che utilizzeranno impostazioni di configurazione diverse.
+* **AGGIUNGI NFS**: seleziona questa opzione per aggiungere singole condivisioni file con diverse impostazioni di configurazione.
 
 Tabella 2. Opzioni del livello di prestazioni NFS
 
@@ -97,11 +103,11 @@ Tabella 2. Opzioni del livello di prestazioni NFS
 
 ### Impostazioni di licenza
 
-	Licenze VMware fornite da {{site.data.keyword.IBM}} per i seguenti componenti:
-  * VMware vSphere Enterprise Plus 6.5u1
-  * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
-  * (Per i cluster vSAN) VMware vSAN Advanced o Enterprise 6.6
+	Licenze fornite da {{site.data.keyword.IBM}} per i seguenti componenti VMware:
+  * vSphere Enterprise Plus 6.5u1
+  * vCenter Server 6.5
+  * NSX Service Providers 6.4 (Edizione Base, Advanced o Enterprise)
+  * (Per i cluster vSAN) vSAN 6.6 (Edizione Advanced o Enterprise)
 
 ### Riepilogo ordine
 
@@ -113,14 +119,13 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 2. Nella tabella **Istanza vCenter Server**, fai clic sull'istanza a cui vuoi aggiungere i cluster.
 
    **Nota**: assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
-
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra e quindi su **Aggiungi** nell'angolo superiore destro della tabella **CLUSTER**.
 4. Nella pagina **Aggiungi cluster**, immetti il nome del cluster.
 5. Seleziona il **Modello CPU**, la quantità di **RAM** e il **Numero di server Bare Metal** per la configurazione Bare Metal.
 6. Completa la configurazione di archiviazione.
-  * Se selezioni **Storage vSAN**, specifica il **Tipo e dimensioni del disco per i dischi vSAN**, il **Numero di dischi vSAN** e come la **Licenza vSAN** deve essere fornita.
-  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni per tutte le condivisioni file, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
-  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**, fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni singola condivisione file. Devi selezionare almeno una condivisione file.
+  * Se selezioni **Storage vSAN**, specifica i tipi di disco per i dischi di capacità e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**, quindi fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni singola condivisione file. Devi selezionare almeno una condivisione file.
 7. Seleziona l'edizione della licenza di VMware vSAN per la configurazione della licenza.
 8. Nel riquadro **Riepilogo ordine**, verifica la configurazione del cluster prima di aggiungerlo.
    1. Esamina le impostazioni per il cluster.
@@ -222,7 +227,7 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 * Per i cluster distribuiti nelle istanze della V2.2 o precedenti, devi aggiornare l'istanza alla V2.3 per poter eliminare i cluster che hai aggiunto all'istanza.
 * Puoi eliminare un singolo cluster alla volta. Per eliminare più cluster, devi farlo in sequenza: attendere che il cluster precedente venga eliminato prima di tentare di eliminare quello successivo.
 * Assicurati che tutti i nodi in un cluster siano accesi e operativi prima di eliminare il cluster.
-* Quando elimini un cluster, verranno eliminate anche tutte le VM (macchine virtuali) dal cluster e non potranno essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.
+* Quando elimini un cluster, da questo vengono eliminate anche tutte le VM (macchine virtuali) e non possono essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.
 * Non è possibile eliminare il cluster predefinito.
 
 ## Procedura per eliminare i cluster dalle istanze VMware Federal

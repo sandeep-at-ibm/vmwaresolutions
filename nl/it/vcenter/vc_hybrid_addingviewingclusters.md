@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 I server ESXi che hai configurato quando hai ordinato un'istanza vengono raggruppati sotto forma di **cluster1** per impostazione predefinita.
 
-Puoi aggiungere cluster alla tua istanza VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle per espandere la capacità di calcolo e archiviazione. All'interno di un cluster, puoi gestire i server ESXi per una migliore allocazione delle risorse e alta disponibilità. Quando non sono più necessari, puoi eliminare i cluster aggiunti dalla tua istanza.
+Puoi aggiungere cluster alla tua istanza VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle per espandere la capacità di calcolo e archiviazione. All'interno di un cluster, gestisci i server ESXi per una migliore allocazione delle risorse e alta disponibilità. Quando non sono più necessari, elimina i cluster aggiunti dalla tua istanza.
 
 ## Aggiunta di cluster alle istanze vCenter Server with Hybridity Bundle
 
@@ -32,9 +32,9 @@ Il nome del cluster deve rispettare i seguenti requisiti:
 
 #### Ubicazione data center
 
-L'ubicazione del {{site.data.keyword.CloudDataCent_notm}} del cluster è impostata sul {{site.data.keyword.CloudDataCent_notm}} dell'istanza vCenter Server per impostazione predefinita. Puoi distribuire il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso rispetto a quello dell'istanza distribuita, ma devi assicurarti che la latenza di rete tra i due {{site.data.keyword.CloudDataCents_notm}} sia inferiore a 150 ms. Per controllare la latenza di rete, puoi utilizzare uno strumento come [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
+L'ubicazione del {{site.data.keyword.CloudDataCent_notm}} del cluster è impostata sul {{site.data.keyword.CloudDataCent_notm}} dell'istanza vCenter Server per impostazione predefinita. Puoi distribuire il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso rispetto a quello dell'istanza distribuita, ma devi assicurarti che la latenza di rete tra i due {{site.data.keyword.CloudDataCents_notm}} sia inferiore a 150 ms. Per controllare la latenza di rete, utilizza uno strumento come [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-Se distribuisci il cluster in un diverso {{site.data.keyword.CloudDataCent_notm}} o pod dell'infrastruttura {{site.data.keyword.cloud_notm}}, vengono ordinate tre VLAN aggiuntive da utilizzare con i {{site.data.keyword.baremetal_short}} ordinati.
+Se distribuisci il cluster in un diverso {{site.data.keyword.CloudDataCent_notm}} o pod dell'infrastruttura {{site.data.keyword.cloud_notm}}, vengono ordinate altre tre VLAN da utilizzare con i {{site.data.keyword.baremetal_short}} ordinati.
 
 ### Impostazioni di Bare Metal Server
 
@@ -56,26 +56,39 @@ Tabella 2. Opzioni per i server bare metal personalizzati
 
 #### Numero di server Bare Metal
 
-Per un cluster, è richiesto un minimo di due {{site.data.keyword.baremetal_short}}.
+Per un cluster, sono richiesti almeno due {{site.data.keyword.baremetal_short}}.
 
 Puoi aggiungere fino a 59 {{site.data.keyword.baremetal_short}} per un cluster e puoi aggiungere da 1 a 59 server ESXi alla volta.
 
-Dopo la distribuzione, puoi creare fino a quattro ulteriori cluster. Per l'archiviazione vSAN VMware, sono richiesti 4 server per il cluster iniziale e i cluster di post-distribuzione.
+Dopo la distribuzione, puoi creare fino a quattro ulteriori cluster. Per l'archiviazione VMware vSAN, sono richiesti quattro server sia per il cluster iniziale che per i cluster di post-distribuzione.
 
 ### Impostazioni di archiviazione vSAN
 
-VMware vSAN 6.6 è incluso con il tuo ordine dell'istanza vCenter Server with Hybridity Bundle. Per l'edizione della licenza, devi specificare **Advanced** o **Enterprise**.
+VMware vSAN 6.6 è incluso con il tuo ordine dell'istanza vCenter Server with Hybridity Bundle. Specifica le seguenti opzioni vSAN:
 
-* **Tipo e dimensioni del disco per i dischi vSAN**: seleziona la capacità che soddisfa le tue esigenze di archiviazione condivisa.
-* **Numero di dischi vSAN**: seleziona il numero di dischi per l'archiviazione condivisa vSAN che vuoi aggiungere. Le quantità dei dischi devono essere 2, 4, 6 o 8.
-* Seleziona l'edizione della licenza VMware vSAN 6.6 (Advanced o Enterprise).
+* **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
+* **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
+* **Tipo di disco per i dischi cache vSAN**: seleziona un'opzione per i dischi di cache di cui hai bisogno.
+
+    **Nota**: se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
+* **Numero di dischi cache vSAN**: specifica il numero di dischi di cache che vuoi aggiungere.
+* **Licenza vSAN**: seleziona l'edizione della licenza VMware vSAN 6.6 (Advanced o Enterprise).
 
 ### Impostazioni di licenza
 
-Licenze VMware fornite da IBM per i seguenti componenti:
-  * VMware vSphere Enterprise Plus 6.5u1
-  * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Advanced o Enterprise) 6.4
+Licenze fornite da IBM per i seguenti componenti VMware:
+  * vSphere Enterprise Plus 6.5u1
+  * vCenter Server 6.5
+  * NSX Service Providers 6.4 (Edizione Advanced o Enterprise)
+
+### Impostazioni dell'interfaccia di rete
+
+Le impostazioni della scheda di interfaccia di rete (NIC) si basano sulla tua selezione di **Rete pubblica e privata** o **Solo rete privata**. I seguenti servizi aggiuntivi richiedono NIC pubbliche e non sono disponibili con l'opzione privata:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Riepilogo ordine
 
@@ -86,21 +99,22 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza per visualizzare i cluster al suo interno.
 
-   **Nota**: assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
+   **Nota**: assicurati che lo stato dell'istanza sia **Pronto per l'utilizzo**. Altrimenti, non puoi aggiungere i cluster all'istanza.
 
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra e quindi su **Aggiungi** nell'angolo superiore destro della tabella **CLUSTER**.
 4. Nella pagina **Aggiungi cluster**, immetti il nome del cluster.
-5. Se vuoi ospitare il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso da quello in cui è ospitata l'istanza, in **Bare Metal Server**, seleziona la casella di spunta **Seleziona un'ubicazione differente** e scegli il {{site.data.keyword.CloudDataCent_notm}} per ospitare l'istanza.
+5. Puoi ospitare il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso da quello in cui è ospitata l'istanza. Per farlo, in **Bare Metal Server**, seleziona la casella di spunta **Seleziona un'ubicazione differente** e scegli il {{site.data.keyword.CloudDataCent_notm}} in cui ospitare l'istanza.
 6. Seleziona il **Modello CPU**, la quantità di **RAM** e il **Numero di server Bare Metal** per la configurazione Bare Metal.
-7.  Seleziona **Storage vSAN** e seleziona il **Numero di dischi vSAN** e il **Tipo e dimensioni del disco per i dischi vSAN** per la configurazione di archiviazione.
+7.  Seleziona **Storage vSAN** e specifica i tipi di disco per i dischi di capacità e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
 8. Seleziona l'edizione della licenza di VMware vSAN per la configurazione della licenza.
-9. Nel riquadro **Riepilogo ordine**, verifica la configurazione del cluster prima di aggiungerlo.
+9. Seleziona l'impostazione di rete **Rete pubblica e privata** o **Solo rete privata**.
+10. Nel riquadro **Riepilogo ordine**, verifica la configurazione del cluster prima di aggiungerlo.
    1. Esamina le impostazioni per il cluster.
    2. Esamina il costo stimato del cluster. Fai clic su **Dettagli sui prezzi** per generare un riepilogo in formato PDF. Per salvare o stampare il riepilogo del tuo ordine, fai clic sull'icona **Stampa** o **Download** nella parte superiore destra della finestra PDF.
    3. Fai clic sul link o sui link dei termini che si applicano al tuo ordine e conferma di accettare questi termini prima di aggiungere il cluster.
    4. Fai clic su **Fornitura**.
 
-### Risultati dopo l'aggiunta dei cluster alle istanze vCenter Server with Hybridity Bundle
+### Risultati dopo l'aggiunta di cluster alle istanze vCenter Server with Hybridity Bundle
 
 1. La distribuzione del cluster viene avviata automaticamente e lo stato del cluster viene modificato in **Inizializzazione**. Puoi controllare lo stato della distribuzione visualizzando la cronologia di distribuzione nella pagina **Riepilogo** dell'istanza.
 2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere High Availability (HA) e vSphere Distributed Resource Scheduler (DRS).
@@ -169,10 +183,10 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 
 ### Prima di eliminare
 
-* Puoi eliminare un singolo cluster alla volta. Per eliminare più cluster, devi farlo in sequenza: attendere che il cluster precedente venga eliminato prima di tentare di eliminare quello successivo.
+* Puoi eliminare un singolo cluster alla volta. Per eliminare più cluster, devi farlo in sequenza: attendi che il cluster precedente venga eliminato prima di eliminare quello successivo.
 * Assicurati che tutti i nodi in un cluster siano accesi e operativi prima di eliminare il cluster.
-* Quando elimini un cluster, verranno eliminate anche tutte le VM (macchine virtuali) dal cluster e non potranno essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.
-* Non è possibile eliminare il cluster predefinito.
+* Quando elimini un cluster, da questo vengono eliminate anche tutte le VM (macchine virtuali) e non possono essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.
+* Il cluster predefinito non può essere eliminato.
 
 ## Procedura per eliminare i cluster dalle istanze vCenter Server with Hybridity Bundle
 

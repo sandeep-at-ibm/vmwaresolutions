@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-19"
 
 ---
 
@@ -16,7 +16,9 @@ Il processo di applicazione di patch e aggiornamenti alle istanze vCenter Server
 
 ## Prima di iniziare
 
-**Importante:** quando aggiorni un'istanza vCenter Server a un'istanza vCenter Server with Hybridity Bundle, devi prima applicare, come minimo, l'aggiornamento del software vCenter Server V2.3 di base prima di poter eseguire l'aggiornamento della licenza a Hybridity Bundle.
+**Importante:** quando aggiorni un'istanza vCenter Server a un'istanza vCenter Server with Hybridity Bundle, devi prima applicare almeno l'aggiornamento del software vCenter Server V2.3 di base. Devi applicarlo prima di poter eseguire l'aggiornamento della licenza a Hybridity Bundle.
+
+Gli utenti Business Partner non hanno l'opzione di aggiornare un'istanza vCenter Server esistente a un'istanza vCenter Server with Hybridity Bundle.
 
 Prima di tentare di applicare un aggiornamento, espandi la voce di aggiornamento facendo clic sulla freccia in giù e verifica le seguenti informazioni:
 * La versione dell'aggiornamento. Devi applicare gli aggiornamenti in sequenza cronologica, dalla più antica alla più recente. Assicurati di aver applicato tutti gli aggiornamenti precedenti prima di applicare quello più recente. Ad esempio, devi applicare l'aggiornamento alla V2.3 prima di tentare di applicare l'aggiornamento alla V2.4.

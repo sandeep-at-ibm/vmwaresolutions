@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -16,9 +16,9 @@ Rivedi le seguenti informazioni per i dettagli sulle considerazioni e sui requis
 
 Per esaminare i componenti di rete inclusi nella tua istanza vCenter Server, vedi [Specifiche tecniche per le istanze vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
-## Considerazioni sul firewall NSX
+## Considerazioni su firewall
 
-Se utilizzi i DFW (Distributed Firewall) NSX, devi configurare le regole per tutte le comunicazioni dalla VSI (Virtual Server Instance) IBM CloudDriver per consentire a tutti i protocolli di comunicare sugli indirizzi IP `10.0.0.0/8` e `161.26.0.0/16`.
+Se utilizzi i firewall, devi configurare le regole per tutte le comunicazioni dalla VSI (Virtual Server Instance) {{site.data.keyword.IBM}} CloudDriver e dalle VM (virtual machine) di SDDC Manager. Queste regole devono consentire a tutti i protocolli di comunicare sugli indirizzi IP `10.0.0.0/8` e `161.26.0.0/16`. Esempi di questi firewall sono i DFW (Distributed Firewall) NSX o i firewall Vyatta.
 
 ## Utilizzo di NSX con le tue macchine virtuali
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -16,7 +16,7 @@ Visualizza il riepilogo e le informazioni dettagliate delle istanze VMware Feder
 
 Per visualizzare un riepilogo di tutte le istanze VMware Federal fornite per un account utente, completa la seguente procedura:
 1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
-2. Nell'angolo superiore destro della console, fai clic sul tuo avatar e quindi sul campo **Account** per selezionare l'account utente per il quale vuoi controllare le istanze. 
+2. Dal banner della console, fai clic sull'icona del tuo account utente e quindi sul campo **Account** per selezionare l'account utente per il quale vuoi controllare le istanze.
 3. Nella tabella **vCenter Server**, visualizza l'elenco delle istanze fornite nell'account utente selezionato.
 
 Tabella 1. Elementi dell'istanza VMware Federal
@@ -24,9 +24,9 @@ Tabella 1. Elementi dell'istanza VMware Federal
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
 | Nome | Il nome dell'istanza. |
-| Versione | La versione di release in cui è stata distribuita o aggiornata l'istanza. |  
+| Versione | La versione di release in cui è stata distribuita o aggiornata l'istanza.|  
 | Ubicazione | Il {{site.data.keyword.CloudDataCent_notm}} in cui è ospitata l'istanza. |  
-| Ora di creazione | La data e ora di creazione dell'istanza. | 
+| Ora di creazione | La data e ora di creazione dell'istanza. |
 | Stato | Lo stato dell'istanza. |
 
 L'istanza può avere una serie di stati.
@@ -70,7 +70,7 @@ Tabella 3. Proprietà dell'istanza VMware Federal
 
 ## Visualizzazione delle informazioni di accesso per le istanze VMware Federal
 
-In **Informazioni sull'accesso**, visualizza le informazioni di accesso per i componenti relativi all'istanza. Le password visualizzate sono password iniziali generate dal sistema. Se le modifichi all'esterno della console {{site.data.keyword.vmwaresolutions_short}}, non vengono aggiornate nella pagina di riepilogo dell'istanza.
+In **Informazioni sull'accesso**, visualizza le informazioni di accesso per i componenti relativi all'istanza. Le password visualizzate sono le password iniziali generate dal sistema. Se le modifichi all'esterno della console {{site.data.keyword.vmwaresolutions_short}}, non vengono aggiornate nella pagina di riepilogo dell'istanza.
 
 Tabella 4. Informazioni di accesso per i componenti relativi all'istanza
 
@@ -114,7 +114,7 @@ Gestisci le tue istanze dalla console {{site.data.keyword.vmwaresolutions_short}
 
 Rivedi i seguenti argomenti per informazioni utili per completare le istruzioni di accesso:
 *  Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](../vmonic/trbl_timeout_vc_console.html).
-*  Per un elenco di punti di accesso per accedere alla rete privata dell'infrastruttura {{site.data.keyword.cloud_notm}} tramite VPN, vedi [Accesso VPN](http://www.softlayer.com/vpn-access){:new_window}.
+*  Per un elenco di punti di accesso per accedere alla rete privata dell'infrastruttura {{site.data.keyword.cloud_notm}} utilizzando la VPN, vedi [Accesso VPN](http://www.softlayer.com/vpn-access){:new_window}.
 *  Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](../vmonic/trbl_deploy_ovf.html).
 
 ### Link correlati

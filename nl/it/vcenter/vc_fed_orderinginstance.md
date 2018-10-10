@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
 # Ordine di istanze VMware Federal
 
-Per distribuire una piattaforma virtualizzata VMware flessibile e personalizzabile che soddisfi al meglio le tue esigenze del carico di lavoro, ordina un'istanza VMware Federal che ti consente di disconnettere la connessione di gestione aperta e proteggere la tua istanza distribuita.
+Per distribuire una piattaforma virtualizzata VMware flessibile e personalizzabile che soddisfi al meglio le tue esigenze del carico di lavoro, ordina un'istanza VMware Federal. Le istanze VMware Federal ti aiutano a disconnettere la connessione di gestione aperta e a proteggere la tua istanza distribuita.
 
-**Nota:** al momento, solo le istanze vCenter Server supportano VMware Federal on {{site.data.keyword.cloud}}.
+**Nota:** attualmente, solo le istanze vCenter Server supportano VMware Federal on {{site.data.keyword.cloud}}.
 
-## Requisiti
+## Requisiti per ordinare le istanze VMware Federal
 
 Assicurati di aver completato le seguenti attività:
 * Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](../vmonic/useraccount.html).
@@ -32,7 +32,7 @@ Tabella 1. Formato del valore per i nomi di istanza e di dominio
   | Nome completo server ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, dove `<n>` è la sequenza del server ESXi. La lunghezza massima è di 50 caratteri. |  
   | Nome di dominio completo PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La lunghezza massima è di 50 caratteri. |
 
-**Importante**: non modificare alcun valore che è stato impostato durante l'ordine e la distribuzione dell'istanza. Ciò potrebbe comportare l'inutilizzabilità dell'istanza. Ad esempio, la rete pubblica potrebbe arrestarsi, i server e le VSI (Virtual Server Instance) potrebbero spostarsi dietro Vyatta quando è in corso il provisioning o la VSI di IBM CloudBuilder potrebbe interrompersi o essere eliminata.
+**Importante**: non modificare alcun valore impostato durante l'ordine o la distribuzione dell'istanza. La modifica può rendere inutilizzabile la tua istanza. Ad esempio, se la rete pubblica si interrompe, se i server e le VSI (Virtual Server Instance) vanno dietro una fornitura media di Vyatta o se la VSI di IBM CloudBuilder si arresta o viene eliminata.
 
 ## Impostazioni di sistema
 
@@ -52,12 +52,12 @@ Ordina una nuova istanza primaria. La distribuzione di un'istanza secondaria per
 
 ## Impostazioni di licenza
 
-Licenze VMware fornite da IBM per i seguenti componenti:
+Licenze fornite da IBM per i seguenti componenti VMware:
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
-* (Per i cluster vSAN) VMware vSAN Advanced o Enterprise 6.6
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4 (Edizione Base, Advanced o Enterprise)
+* (Per i cluster vSAN) vSAN 6.6 (Edizione Advanced o Enterprise)
 
 **Attenzione:**
 
@@ -99,11 +99,15 @@ Le impostazioni di archiviazione si basano sulla tua selezione della configurazi
 
 ### Archiviazione vSAN
 
-Per vSAN, specifica le seguenti opzioni di archiviazione:
+Specifica le seguenti opzioni vSAN:
 
-* **Tipo e dimensioni del disco per i dischi vSAN**: seleziona la capacità che soddisfa le tue esigenze di archiviazione condivisa.
-* **Numero di dischi vSAN**: seleziona il numero di dischi per l'archiviazione condivisa vSAN che vuoi aggiungere. Le quantità dei dischi devono essere 2, 4, 6 o 8.
-* Seleziona l'edizione della licenza VMware vSAN 6.6 (Advanced o Enterprise).
+* **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
+* **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
+* **Tipo di disco per i dischi cache vSAN**: seleziona un'opzione per i dischi di cache di cui hai bisogno.
+
+    **Nota**: se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
+* **Numero di dischi cache vSAN**: specifica il numero di dischi di cache che vuoi aggiungere.
+* **Licenza vSAN**: seleziona l'edizione della licenza vSAN 6.6 (Advanced o Enterprise).
 
 ### Archiviazione NFS
 
@@ -160,19 +164,19 @@ Seleziona la configurazione DNS (Domain Name System) per la tua istanza:
 * **Singola VSI Windows pubblica per Active Directory/DNS**: viene distribuita una singola VSI di Microsoft Windows Server per Microsoft Active Directory (AD) consultabile, che funziona come DNS per l'istanza in cui sono registrati gli host e le macchine virtuali.
 * **Due VM di Windows Server dedicate e altamente disponibili sul cluster di gestione**: per le release della V2.3 e versioni future, vengono distribuite due macchine virtuali di Microsoft Windows, che aiutano a migliorare la sicurezza e la solidità.
 
-**Importante:** se configuri la tua istanza per utilizzare le due macchine virtuali Microsoft Windows, devi fornire due licenze di Microsoft Windows Server 2012 R2. Utilizza la licenza di Microsoft Windows Server 2012 R2 Standard Edition e/o la licenza di Microsoft Windows Server 2012 R2 Datacenter Edition.
+**Importante:** se configuri la tua istanza per utilizzare le due macchine virtuali Microsoft Windows, devi fornire due licenze di Microsoft Windows Server 2012 R2. Utilizza la licenza Microsoft Windows Server 2012 R2 Standard Edition o la licenza Microsoft Windows Server 2012 R2 Datacenter Edition o entrambe.
 
-Attualmente, ciascuna licenza può essere assegnata a un solo server fisico e copre fino a due processori fisici. Una licenza Standard Edition è in grado di eseguire due macchine virtuali Microsoft Windows virtualizzate per ogni server con 2 processori. Pertanto, sono necessarie due licenze poiché due macchine virtuali Microsoft Windows sono distribuite in due host diversi.
+Attualmente, ciascuna licenza può essere assegnata a un solo server fisico e copre fino a due processori fisici. Utilizzando una licenza Standard Edition, puoi eseguire due macchine virtuali Microsoft Windows virtualizzate per ogni server con 2 processori. Pertanto, sono necessarie due licenze poiché due macchine virtuali Microsoft Windows sono distribuite in due host diversi.
 
 Hai 30 giorni per attivare le macchine virtuali.
 
-Per ulteriori informazioni su come ordinare le licenze di Windows, vedi la [documentazione di Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+Per ulteriori informazioni sull'ordine delle licenze di Windows, vedi la [documentazione di Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Riepilogo ordine
 
 In base alla configurazione che hai selezionato per l'istanza, il costo stimato viene generato e visualizzato immediatamente nella sezione **Riepilogo ordine** nel riquadro di destra. Fai clic su **Dettagli sui prezzi** nella parte inferiore del riquadro di destra per generare un documento PDF che fornisce i dettagli della stima.
 
-## Procedura
+## Procedura per ordinare le istanze VMware Federal
 
 1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **vCenter Server** nella sezione **Data center virtuali**.
 2. Nella pagina **VMware vCenter Server on IBM Cloud**, fai clic sulla scheda **vCenter Server** e quindi su **Crea**.
@@ -183,9 +187,9 @@ In base alla configurazione che hai selezionato per l'istanza, il costo stimato 
   1. Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui ospitare l'istanza.
   2. Seleziona il modello CPU **Personalizzato** e la quantità di **RAM**.
 7. Completa la configurazione di archiviazione.
-  * Se selezioni **Storage vSAN**, specifica il **Tipo e dimensioni del disco per i dischi vSAN**, il **Numero di dischi vSAN** e come la **Licenza vSAN** deve essere fornita.
-  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni per tutte le condivisioni file, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
-  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**, fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni singola condivisione file. Devi selezionare almeno una condivisione file.
+  * Se selezioni **Storage vSAN**, specifica i tipi di disco per i dischi di capacità e cache, il numero di dischi e l'edizione della licenza vSAN. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**, quindi fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni singola condivisione file. Devi selezionare almeno una condivisione file.
 8. Completa la configurazione dell'interfaccia di rete.
    1. Immetti il prefisso del nome host, l'etichetta del dominio secondario e il nome del dominio root.
    2. Seleziona la configurazione DNS.
@@ -207,7 +211,7 @@ Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in 
 
 Visualizza, gestisci o proteggi l'istanza VMware Federal che hai ordinato.
 
-**Importante:** devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo all'esterno della console.
+**Importante:** devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo dalla console {{site.data.keyword.vmwaresolutions_short}}, non dal {{site.data.keyword.slportal}} o da qualsiasi altro mezzo al di fuori della console.
 Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
 
 **ATTENZIONE:** la gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}} (installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza) dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
