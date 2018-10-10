@@ -23,7 +23,7 @@ Il processo di rimozione del servizio Zerto on {{site.data.keyword.cloud}} è au
    2. Disinstalla Zerto Virtual Replication.
    3. Elimina l'istanza di servizio virtuale (o VSI, Virtual Service Instance) di Windows su cui era installato Zerto Virtual Replication.
    4. Restituisci la sottorete portatile privata che era stata ordinata per le comunicazioni di Zerto Virtual Replication all'infrastruttura {{site.data.keyword.cloud_notm}}.   
-   5. Rimuovi i costi del servizio di ripristino di emergenza Zerto dall'istruzione di fatturazione {{site.data.keyword.cloud_notm}}.
+   5. Rimuovi i costi del servizio di ripristino di emergenza Zerto dall'estratto conto di {{site.data.keyword.cloud_notm}}.
 
       **Nota**: per il servizio di ripristino di emergenza Zerto rimosso ti vengono addebitati costi fino alla fine del ciclo di fatturazione.
 

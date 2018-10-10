@@ -30,13 +30,13 @@ Di seguito sono riportati i requisiti minimi per richiedere il servizio {{site.d
 
 ## Procedura per richiedere IBM Cloud Private Hosted
 
-1. Ordina una nuova istanza di vCenter Server attenendoti alla procedura in [Ordinazione di istanze vCenter Server](../vcenter/vc_orderinginstance.html). Puoi anche richiedere IBM Cloud Private Hosted per un'istanza esistente.
+1. Ordina una nuova istanza di vCenter Server attenendoti alla procedura in [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html). Puoi anche richiedere IBM Cloud Private Hosted per un'istanza esistente.
   **Importante**: assicurati che il tuo ambiente soddisfi i requisiti minimi elencati precedentemente.
 2. Assicurati di avere le tue autorizzazioni IBM Cloud privato.
 3. Dopo che hai ricevuto la conferma che l'istanza di vCenter Server è pronta per l'utilizzo, attieniti alla seguente procedura per richiedere IBM Cloud Private Hosted.
 4. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Introduzione** nel riquadro di navigazione a sinistra.
 5. Scorri verso il basso la pagina e, in **Ordina servizi aggiuntivi** fai clic sulla scheda **IBM Cloud Private Hosted**.
-6. Nella pagina **IBM Cloud Private Hosted on vCenter Server on IBM Cloud**, nella casella **Contact the IBM Cloud Private Hosted DevOps Team**, immetti una descrizione dei tuoi requisiti e fai clic su **Request a consultation**.
+6. Nella pagina **IBM Cloud Private Hosted on vCenter Server on IBM Cloud**, nella casella **Rivolgersi al team IBM Cloud Private Hosted DevOps**, immetti una descrizione dei tuoi requisiti e fai clic su **Richiesta di una consultazione**.
 
 Un rappresentante di {{site.data.keyword.cloud_notm}} Private Hosted DevOps ti contatterà tramite le tue informazioni di contatto {{site.data.keyword.cloud_notm}} e ti aiuterà a iniziare a lavorare.
 

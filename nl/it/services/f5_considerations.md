@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-23"
 
 Il servizio F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) fornisce servizi intelligenti di bilanciamento del carico L4-L7 e di gestione del traffico su scala locale e globale, una solida protezione firewall per reti e applicazioni web e accesso sicuro e federato alle applicazioni.
 
-Puoi installare più istanze di questo servizio a seconda delle necessità.
+Puoi installare più di un'istanza di questo servizio a seconda delle necessità.
 
 **Disponibilità**: questo servizio è disponibile solo per le istanze distribuite nelle release della V1.9 o successive.
 
@@ -26,15 +26,15 @@ Con il servizio F5 on {{site.data.keyword.cloud_notm}} sono inclusi i seguenti c
 * 4, 8 o 16 GB di RAM per macchina virtuale in base all'opzione di licenza.
 
 ### Rete
-* VXLAN (Virtual Extensible LAN) privata per la sincronizzazione HA.
-* Accesso a TMSH (Traffic Management Shell) e alla Console di gestione tramite rete di gestione privata.
+* VXLAN (Virtual Extensible LAN) privata per la sincronizzazione ad alta disponibilità (HA).
+* Accesso a TMSH (Traffic Management Shell) e alla Console di gestione tramite la rete di gestione privata.
 
 ### Licenze e tariffe
 Le tariffe della licenza per ciascuna VM vengono applicate a ciascun ciclo di fatturazione in base all'opzione di licenza (Buono, Migliore o Massimo) e alla larghezza di banda selezionata.
 
 **Importante:** non puoi modificare il livello di licenza dopo l'installazione del servizio. Per modificare il livello di licenza, devi rimuovere il servizio esistente e reinstallare il servizio utilizzando un'opzione di licenza diversa.
 
-## Considerazioni sull'istallazione di F5 on IBM Cloud
+## Considerazioni sull'installazione per F5 on IBM Cloud
 
 Prima di installare il servizio F5 on {{site.data.keyword.cloud_notm}}, esamina le seguenti considerazioni.
 
@@ -70,11 +70,11 @@ Per evitare errori con F5 on {{site.data.keyword.cloud_notm}}, devi soddisfare i
 * I due server ESXi attivi hanno sufficienti risorse disponibili in modo che una VM BIG-IP VE possa essere ospitata su ciascun server ESXi con prenotazione del 100% di CPU e RAM.
 * VMware vSphere HA dispone di risorse sufficienti per ospitare due VM BIG-IP con il 100% di CPU e RAM.
 
-A causa di questi requisiti, devi pianificare lo spazio necessario per F5 on {{site.data.keyword.cloud_notm}}. Se necessario, prima di ordinare F5 on {{site.data.keyword.cloud_notm}}, aggiungi 1-2 server ESXi alla tua istanza e/o riduci la prenotazione di CPU di vSphere HA per il failover.
+A causa di questi requisiti, devi pianificare lo spazio che serve per F5 on {{site.data.keyword.cloud_notm}}. Se necessario, prima di ordinare F5 on {{site.data.keyword.cloud_notm}}, aggiungi 1-2 server ESXi alla tua istanza e/o riduci la prenotazione di CPU di vSphere HA per il failover.
 
 ## Esempio di ordine di F5 on IBM Cloud
 
-Ordini un'istanza **Small** di VMware vCenter Server con 2 server ESXI con la seguente configurazione: 16 core a 2,10 GHz ciascuno con 128 GB di RAM. Per F5 on {{site.data.keyword.cloud_notm}}, selezioni il modello di licenza **Massimo** e un valore di 5 Gbps per **Larghezza di banda massima**.
+Ordini un'istanza **Small** di VMware vCenter Server con 2 server ESXI con la seguente configurazione: sedici core a 2,10 GHz ciascuno con 128 GB di RAM. Per F5 on {{site.data.keyword.cloud_notm}}, selezioni il modello di licenza **Massimo** e un valore di 5 Gbps per **Larghezza di banda massima**.
 
 In questo caso, una singola VM BIG-IP richiede, su ciascun server:
 * 2,1 GHz * 8 vCPU = 16,8 GHz di CPU e
@@ -84,7 +84,7 @@ In totale, si tratta di 33,6 GHz di CPU e 32 GB di RAM per due VM BIG-IP.
 
 Ogni server ESXi ha una capacità di 16 core * 2,1 GHz = 33,6 GHz, quindi soddisfiamo i primi due requisiti se entrambi i server sono attivi e ci sono almeno 16,8 GHz di CPU e 16 GB di RAM disponibili su ciascun server.
 
-Tuttavia, per impostazione predefinita, vSphere HA riserva il 50% di CPU e RAM per il failover sulle istanze vCenter Server che sono state inizialmente distribuite con 2 server ESXi, quindi abbiamo solo:
+Tuttavia, per impostazione predefinita, vSphere HA riserva il 50 percento di CPU e RAM per il failover sulle istanze vCenter Server che sono state inizialmente distribuite con 2 server ESXi. Per questo esempio, è disponibile quanto segue:
 
 `50% di 2 * 16 core * 2,1 GHz = 33,6 GHz disponibili`
 

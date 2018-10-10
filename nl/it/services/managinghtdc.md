@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -29,7 +29,7 @@ Per ulteriori informazioni, consulta i seguenti argomenti:
 
 ### Link correlati
 
-* [Panoramica di HyTrust DataControl on {{site.data.keyword.cloud_notm}}](htcc_considerations.html)
+* [Panoramica di HyTrust DataControl on {{site.data.keyword.cloud_notm}}](htdc_considerations.html)
 * [Come contattare il supporto IBM](../vmonic/trbl_support.html)
 * [Domande frequenti](../vmonic/faq.html)
 * [Sito web HyTrust](https://www.hytrust.com/)

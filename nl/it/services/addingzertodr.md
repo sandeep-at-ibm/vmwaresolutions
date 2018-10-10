@@ -4,19 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-24"
 
 ---
 
 # Panoramica di Zerto on IBM Cloud
 
-Il servizio Zerto on {{site.data.keyword.cloud}} fornisce funzionalità di replica e di ripristino di emergenza. Queste funzionalità possono essere integrate nelle offerte di distribuzione per proteggere e recuperare i dati nel tuo ambiente virtuale VMware su {{site.data.keyword.cloud_notm}}.
+Il servizio Zerto on {{site.data.keyword.cloud}} integra le funzionalità di replica e ripristino di emergenza nelle offerte di distribuzione per proteggere e recuperare i dati nel tuo ambiente virtuale VMware su {{site.data.keyword.cloud_notm}}.
 
 ## Specifiche tecniche per Zerto on IBM Cloud
 
 Nel servizio Zerto on {{site.data.keyword.cloud_notm}} vengono ordinati e inclusi i seguenti componenti.
 
-**Nota**: i componenti Zerto Virtual Manager (ZVM) vengono distribuiti solo nel cluster predefinito.
+**Nota**: i componenti di Zerto Virtual Manager vengono distribuiti solo nel cluster predefinito.
 
 ### VSI
 
@@ -27,7 +27,7 @@ Nel servizio Zerto on {{site.data.keyword.cloud_notm}} vengono ordinati e inclus
 
 ### Archiviazione
 
-Disco: 100 GB (SAN)
+Disco da 100 GB (SAN)
 
 ### Rete
 
