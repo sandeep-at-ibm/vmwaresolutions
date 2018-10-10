@@ -4,21 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-24"
 
 ---
 
 # Design da infraestrutura de armazenamento conectado
 
-O {{site.data.keyword.vmwaresolutions_full}} fornece a tecnologia VMware que é implementada de maneira automatizada no {{site.data.keyword.CloudDataCents_notm}} em todo o globo. No portfólio de soluções do {{site.data.keyword.cloud_notm}}, a oferta VMware vCenter Server on {{site.data.keyword.cloud_notm}} consiste em até 20 hosts do vSphere, um único Platform Services Controller (PSC) e um vCenter Server Appliance capazes de gerenciar até 100 hosts e 1.000 máquinas virtuais.
+O {{site.data.keyword.vmwaresolutions_full}} fornece a tecnologia VMware que é implementada de maneira automatizada no {{site.data.keyword.CloudDataCents_notm}} em todo o globo. Dentro do portfólio de soluções do {{site.data.keyword.cloud_notm}}, a oferta base VMware vCenter Server on {{site.data.keyword.cloud_notm}} consiste em até 10 clusters, cada um contendo até 59 hosts do vSphere, um único Platform Services Controller (PSC) e um vCenter Server Appliance capaz de gerenciar até 400 hosts e 4 mil máquinas virtuais.
 
 A arquitetura apresentada aqui complementa a solução do vCenter Server, incluindo armazenamento conectado como um dispositivo de armazenamento compartilhado para o ambiente. O dispositivo de armazenamento conectado está localizado no mesmo {{site.data.keyword.CloudDataCent_notm}} que a implementação do vCenter Server e consiste em um único compartilhamento do Network File System (NFS) ou em várias exportações do NFS por meio do {{site.data.keyword.cloud_notm}}.
 
-O gráfico a seguir descreve a arquitetura geral do NetApp ONTAP Select na implementação do vCenter Server.
+O gráfico a seguir descreve a arquitetura geral do armazenamento conectado à implementação do vCenter Server.
 
-Figura 1. Arquitetura de alto nível do NetApp ONTAP Select no {{site.data.keyword.cloud_notm}}
+Figura 1. Arquitetura de alto nível do armazenamento conectado no {{site.data.keyword.cloud_notm}}
 
-![Arquitetura do NetApp ONTAP Select](../../netapp/np_architecture.svg "Arquitetura de alto nível do NetApp ONTAP Select no IBM Cloud")
+![Arquitetura de armazenamento conectado](../solution/physical_nfs.svg "Arquitetura de alto nível do armazenamento conectado no IBM Cloud")
 
 ## Design da infraestrutura física
 
@@ -52,13 +52,12 @@ Esta seção apresenta a configuração do dispositivo de armazenamento conectad
 
 O armazenamento do Performance e do Endurance são soluções de armazenamento do {{site.data.keyword.cloud_notm}} projetadas para suportar aplicativos de alta E/S que requerem níveis previsíveis de desempenho. Esse desempenho previsível é alcançado por meio da alocação de operações de entrada/saída por segundo (IOPS) no nível de protocolo para volumes individuais.
 
-Entre 100 e 48.000 IOPS podem ser provisionadas com
-tamanhos de armazenamento que variam de 20 GB a 12 TB. Os volumes de armazenamento do Performance e do Endurance estão disponíveis para armazenamento de bloco e armazenamento de arquivo.
+IOPS variando de 100 a 48 mil pode ser provisionado com tamanhos de armazenamento de 20 GB a 12 TB. Os volumes de armazenamento do Performance e do Endurance estão disponíveis para armazenamento de bloco e armazenamento de arquivo.
 
 Nesse design, a solução do vCenter Server oferece armazenamento do Endurance para armazenamento conectado. Como resultado, é possível selecionar e anexar (por meio de automação) as exportações de NFS do Endurance, cujo tamanho varia de 20 GB a um máximo de 12 TB. O {{site.data.keyword.cloud_notm}} permite que até 64 hosts do vSphere ESXi se conectem a uma única exportação de NFS do Endurance.
 
 A Resistência está disponível em três camadas de desempenho de IOPS para suportar diferentes necessidades
-do aplicativo. Observe que após o fornecimento de um compartilhamento de NFS, ele não pode ser redimensionado ou reconfigurado para permitir mais ou menos IOPS.
+do aplicativo. Observe que depois que um compartilhamento NFS é provisionado, ele pode ser redimensionado ou reconfigurado para permitir mais ou menos IOPS.
 
 Para obter opções detalhadas de IOPS, consulte a seção _Configurações de armazenamento_ em [Pedindo instâncias do vCenter Server](../../vcenter/vc_orderinginstance.html).
 
