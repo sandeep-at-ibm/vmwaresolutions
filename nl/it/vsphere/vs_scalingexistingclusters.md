@@ -17,16 +17,16 @@ Puoi ridimensionare un cluster VMware vSphere che hai ordinato o salvato nella c
 Assicurati di aver completato le seguenti attività:
 *  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](../vmonic/useraccount.html).
 *  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per i cluster vSphere](vs_planning.html).
-*  Sei stato informato per email che il cluster che vuoi ridimensionare è pronto per l'uso.
+*  Hai ricevuto un'e-mail con la conferma che il cluster che vuoi ridimensionare è pronto per l'utilizzo.
 
-## Procedura
+## Procedura per ridimensionare i cluster esistenti
 
 1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e poi su **VMware vSphere** nella sezione **Data center virtuali**.
 2. Nella pagina **VMware vSphere on IBM Cloud**, fai clic su **Crea**.  
 3. Fai clic sulla scheda **Scala esistente** e seleziona il cluster che vuoi ridimensionare dall'elenco **Configurazioni cluster**.
 4. Esamina le impostazioni del cluster che vengono completate automaticamente.
 5. Nella sezione **{{site.data.keyword.baremetal_short}}**, specifica il numero di {{site.data.keyword.baremetal_short}} che vuoi aggiungere al cluster.
-6. Se il cluster non include la coppia HA di dispositivi FortiGate Security Appliance della serie 300 sulla sua VLAN pubblica, ne puoi ordinare una selezionando **Includi con l'acquisto** in **Coppia FortiGate Physical Appliance 300 Series HA**.
+6. Se il cluster non include la coppia HA di FortiGate Security Appliance della serie 300 sulla sua VLAN pubblica, puoi ordinare il dispositivo. Per farlo, seleziona la casella di spunta **Includi con l'acquisto** sotto **Coppia FortiGate Physical Appliance 300 Series HA**.
 7. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza e il costo stimato.
    * Per salvare la configurazione come template senza effettuare un ordine, fai clic su **Salva configurazione**.
    * Per effettuare l'ordine, assicurati che l'account da addebitare sia corretto, esamina e accetta i termini e infine fai clic su **Fornitura**.
@@ -35,7 +35,7 @@ Assicurati di aver completato le seguenti attività:
 
 Il ridimensionamento del cluster inizia automaticamente. Riceverai un'e-mail di conferma che ti indica che l'ordine è in fase di elaborazione. Quando il cluster è pronto per l'uso, ti viene inviata una notifica via e-mail.
 
-Se il cluster che stai ridimensionando non è pronto per l'uso, la procedura di ridimensionamento del cluster esistente potrebbe segnalare un errore.
+Se il cluster che stai ridimensionando non è pronto per l'utilizzo, potresti ricevere un messaggio di errore.
 
 **Nota:** i cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Istanze distribuite**.
 

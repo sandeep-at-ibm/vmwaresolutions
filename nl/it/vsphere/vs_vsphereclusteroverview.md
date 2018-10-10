@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -26,9 +26,9 @@ Esamina i componenti di VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
 ### Componenti VMware
 
-Licenze (fornite da IBM o BYOL) per i seguenti componenti VMware:
-* VMware vSphere Enterprise Plus 6.0u2 o 6.5u1
-* Componenti VMware facoltativi:
+Seleziona le licenze (fornite da IBM o BYOL) per i seguenti componenti VMware:
+* VMware vSphere Enterprise Plus 6.0u2, 6.5u1 o 6.5u2
+* I seguenti componenti VMware sono facoltativi:
    * VMware vCenter Server Standard
    * VMware NSX (Base, Advanced o Enterprise)
    * VMware vSAN (Advanced o Enterprise)
@@ -39,7 +39,7 @@ Licenze (fornite da IBM o BYOL) per i seguenti componenti VMware:
 
 ### Bare Metal Server
 
-Uno o più {{site.data.keyword.baremetal_short}} {{site.data.keyword.cloud_notm}} con il modello CPU e la dimensione della RAM da te selezionati:
+Seleziona uno o più {{site.data.keyword.baremetal_short}} {{site.data.keyword.cloud_notm}} con il modello di CPU e la dimensione della RAM da te selezionati:
 * 2-CPU Intel Broadwell (Intel Xeon E5-2600 v4 series)
 * 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series)
 
@@ -51,20 +51,23 @@ Inoltre, le seguenti specifiche di rete e disco:
 
 ### Rete
 
-* Tre VLAN (Virtual LAN): una VLAN pubblica e due VLAN private
+* Una VLAN (Virtual LAN) pubblica e due VLAN private
 * (Facoltativo) Una coppia HA di dispositivi FortiGate Security Appliance
 
 ### Archiviazione
 
 Archiviazione personalizzata dall'utente per la configurazione vSAN quando è selezionato il componente VMware vSAN:
-* Opzioni disco di archiviazione:  SED SSD da 960 GB, SED SSD da 1,9 TB o SED SSD da 3,8 TB
-* Opzioni quantità dischi: 2, 4, 6 o 8
+* Opzioni per disco di archiviazione di SED SSD da 960 GB, SED SSD da 1,9 TB o SED SSD da 3,8 TB
+* Opzioni per quantità dei dischi di 2, 4, 6 o 8
 
-**Nota:** le unità SSD (Solid State Disk) da 3,8 TB saranno supportate una volta rese generalmente disponibili in un data center.
+  Inoltre, vengono ordinati anche due dischi di cache di 960 GB per ciascun host.
+
+  **Nota:** le unità SSD (Solid State Disk) da 3,8 TB sono supportate quando vengono rese generalmente disponibili in un data center.
+* Opzione Alte prestazioni con Intel Optane, che fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità. Questa opzione dipende dal modello di CPU.
 
 ## Specifiche tecniche per i nodi di espansione del cluster vSphere
 
-Ogni nodo di espansione del cluster vSphere verrà distribuito e addebitato per i seguenti componenti nel tuo account {{site.data.keyword.slportal}}.
+Ogni nodo di espansione del cluster vSphere distribuisce e comporta addebiti per i seguenti componenti nel tuo account {{site.data.keyword.slportal}}.
 
 ### Hardware per i nodi di espansione
 
@@ -79,7 +82,7 @@ Un Bare Metal Server {{site.data.keyword.cloud_notm}} con la configurazione di r
 * Un Bare Metal Server {{site.data.keyword.cloud_notm}} con VMware vSphere Enterprise Plus 6.0u2 o 6.5u1  
 * Componenti VMware facoltativi presentati in [Specifiche tecniche per i cluster VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
-**Importante**: devi gestire i server ESXi, i componenti VMware facoltativi e ulteriore hardware ordinato e consegnato al tuo account {{site.data.keyword.cloud_notm}} solo dal {{site.data.keyword.slportal}}. Dopo aver creato un nuovo cluster nella console {{site.data.keyword.vmwaresolutions_short}}, puoi tornare alla console per ridimensionare il nuovo cluster utilizzando la configurazione salvata. Per ulteriori informazioni, vedi [Ridimensionamento di cluster vSphere esistenti](vs_scalingexistingclusters.html).
+**Importante**: devi gestire i server ESXi, i componenti VMware facoltativi e ulteriore hardware ordinato e consegnato al tuo account {{site.data.keyword.cloud_notm}} solo dal {{site.data.keyword.slportal}}. Dopo aver creato un nuovo cluster nella console {{site.data.keyword.vmwaresolutions_short}}, puoi tornare alla console e utilizzare le informazioni salvate per ridimensionare il nuovo cluster. Per ulteriori informazioni, vedi [Ridimensionamento di cluster vSphere esistenti](vs_scalingexistingclusters.html).
 
 ### Link correlati
 
