@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -31,7 +31,7 @@ Una distribuzione multisito è costituita dai seguenti componenti.
    *  Dominio secondario DNS collegato al dominio root sull'istanza primaria
    *  La replica DNS e AD viene configurata tra le macchine virtuali AD sulle istanze primarie e secondarie
    *  PSC (Platform Services Controller) distribuito e configurato per la replica con il PSC sull'istanza primaria
-   *  I VMware vCenter sulle istanze secondarie sono configurati con la modalità di collegamento migliorata per vCenter sull'istanza primaria
+   *  VMware vCenter sulle istanze secondarie è configurato con la modalità di collegamento migliorata per vCenter sull'istanza primaria
 
 ## Distribuzione multisito di Cloud Foundation
 

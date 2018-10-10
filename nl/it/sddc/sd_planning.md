@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
 # Requisiti e pianificazione per le istanze Cloud Foundation
 
-Esamina i seguenti requisiti prima di ordinare le tue istanze VMware Cloud Foundation. Pianifica la tua istanza in base all'ubicazione del {{site.data.keyword.CloudDataCent}}, ai requisiti di capacità del tuo carico di lavoro e ai requisiti di servizi aggiuntivi.
+Esamina i seguenti requisiti prima di ordinare le tue istanze VMware Cloud Foundation. Pianifica la tua istanza in base all'ubicazione del {{site.data.keyword.CloudDataCent}}, ai requisiti di capacità del tuo carico di lavoro e ai requisiti del servizio.
 
 ## Requisiti dell'account IBM Cloud
 
@@ -57,17 +57,17 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} e configurazioni di Bare Me
 
 A seconda della disponibilità e della fornitura di inventario, i {{site.data.keyword.CloudDataCents_notm}} potrebbero visualizzare un indicatore di stato nella console {{site.data.keyword.vmwaresolutions_short}} per aiutarti a pianificare le tue distribuzioni.
 
-Tabella 2. Indicatori di stato per i {{site.data.keyword.CloudDataCents_notm}} quando ordini le istanze Cloud Foundation
+Tabella 2. Indicatori di stato per i {{site.data.keyword.CloudDataCents_notm}} quando ordini istanze Cloud Foundation
 
 | Stato | Dettagli sullo stato |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | Il {{site.data.keyword.CloudDataCent_notm}} non è attualmente disponibile. |
-| Temporarily Out of Inventory  | Il {{site.data.keyword.CloudDataCent_notm}} non ha disponibilità in questo momento. |
+| Temporarily Out of Inventory  | Il {{site.data.keyword.CloudDataCent_notm}} al momento non ha disponibilità. |
 | Limited Inventory             | Il {{site.data.keyword.CloudDataCent_notm}} ha una disponibilità limitata e l'ordine potrebbe non essere completato. |
 
 ## Backup dei componenti di gestione
 
-Sei responsabile del mantenimento e della verifica della disponibilità di tutti i componenti dell'istanza. Si consiglia vivamente di pianificare il backup o l'alta disponibilità di tutti i componenti di gestione. Per ulteriori informazioni, vedi [Backup dei componenti](../archiref/solution/solution_backingup.html).
+Sei responsabile del mantenimento e della verifica della disponibilità di tutti i componenti dell'istanza. Si consiglia di pianificare il backup o l'alta disponibilità di tutti i componenti di gestione. Per ulteriori informazioni, vedi [Backup dei componenti](../archiref/solution/solution_backingup.html).
 
 ## Servizi per le istanze Cloud Foundation
 
@@ -75,7 +75,7 @@ Puoi ordinare servizi aggiuntivi per la tua istanza in base alle tue esigenze, a
 
 ## Considerazioni sulla capacità
 
-Per informazioni e considerazioni sulla capacità, vedi [Ridimensionamento della capacità](../archiref/solution/solution_scaling.html).
+Per ulteriori informazioni sulla capacità, vedi [Ridimensionamento della capacità](../archiref/solution/solution_scaling.html).
 
 ### Link correlati
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-17"
 
 Puoi espandere o contrarre la capacità della tua istanza VMware Cloud Foundation in base alle tue esigenze aziendali, aggiungendo o rimuovendo i server ESXi.
 
-Un'istanza Cloud Foundation può avere fino a cinque cluster, uno dei quali è il predefinito. Ogni cluster iniziale può avere fino a 51 server ESXi e i cluster aggiuntivi possono averne un massimo di 59.
+Un'istanza Cloud Foundation può avere fino a cinque cluster, uno dei quali è il predefinito. Ogni cluster iniziale può avere fino a 51 server ESXi e gli altri cluster possono averne un massimo di 59.
 
 ## Aggiunta di server ESXi alle istanze Cloud Foundation
 
@@ -44,8 +44,8 @@ Un'istanza Cloud Foundation può avere fino a cinque cluster, uno dei quali è i
 
 * Non rimuovere i server ESXi dal client web VMware vSphere. Le modifiche che apporti al client web VMware vSphere non vengono sincronizzate con la console {{site.data.keyword.vmwaresolutions_short}}.
 * La piattaforma di base che hai ordinato ha 4 server ESXi per impostazione predefinita. Puoi rimuovere i server ESXi che hai aggiunto, ma non puoi rimuovere i server ESXi predefiniti.
-* Prima di rimuovere i server ESXi con il servizio F5 on {{site.data.keyword.cloud_notm}} o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installato, devi migrare le VM di F5 BIG-IP e FortiGate su un server ESXi diverso rispetto a quello che ospita attualmente le VM.
-* Prima di rimuovere i server ESXi con il servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} installato, assicurati che non vi siano operazioni di backup o ripristino attive (non riuscite o in corso), poiché queste operazioni attive potrebbero impedire la rimozione dei server ESXi.
+* Prima di rimuovere i server ESXi con il servizio F5 on {{site.data.keyword.cloud_notm}} o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installato, devi migrare le VM di F5 BIG-IP e FortiGate in un server ESXi diverso rispetto a quello che ospita le VM.
+* Prima di rimuovere i server ESXi con il servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} installato, assicurati che non ci siano operazioni di backup o ripristino attive. Le operazioni attive, non riuscite o in corso, potrebbero impedire la rimozione dei server ESXi.
 
 ## Procedura per rimuovere i server ESXi
 
@@ -57,7 +57,7 @@ Un'istanza Cloud Foundation può avere fino a cinque cluster, uno dei quali è i
 
 ### Risultati dopo la rimozione dei server ESXi
 
-1. Si potrebbe verificare un leggero ritardo sulla console mentre lo stato dell'istanza cambia da **Pronto per l'utilizzo** a **In fase di modifica**. Consenti il completamento dell'operazione prima di apportare ulteriori modifiche all'istanza.
+1. Si potrebbe verificare un leggero ritardo sulla console mentre lo stato dell'istanza cambia da **Pronto per l'utilizzo** a **In fase di modifica**. Consenti il completamento dell'operazione prima di apportare altre modifiche all'istanza.
 2. Alla rimozione dei tuoi server ESXi, riceverai una notifica tramite e-mail.
 3. I server ESXi vengono completamente recuperati dall'infrastruttura {{site.data.keyword.cloud_notm}} alla fine del ciclo di fatturazione di {{site.data.keyword.cloud_notm}}, che in genere è di 30 giorni.
 

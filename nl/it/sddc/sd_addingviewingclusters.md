@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-14"
 
 ---
 
@@ -40,11 +40,11 @@ Il nome del cluster deve rispettare i seguenti requisiti:
 
 L'ubicazione del {{site.data.keyword.CloudDataCent}} del cluster è impostata sul {{site.data.keyword.CloudDataCent_notm}} dell'istanza Cloud Foundation per impostazione predefinita. Puoi distribuire il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso rispetto a quello dell'istanza distribuita, ma devi assicurarti che la latenza di rete tra i due {{site.data.keyword.CloudDataCents_notm}} sia inferiore a 150 ms. Per controllare la latenza di rete, puoi utilizzare uno strumento come [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-I data center disponibili dipendono dalla configurazione Bare Metal Server selezionata per la distribuzione. Se selezioni la configurazione **Personalizzato**, puoi anche distribuire il cluster a un pod dell'infrastruttura {{site.data.keyword.cloud}} diverso, nel caso in cui il data center selezionato contenga ulteriori pod. Ciò è utile quando il pod dell'infrastruttura {{site.data.keyword.cloud_notm}} predefinito in cui è distribuita l'istanza iniziale ha raggiunto la sua capacità massima.
+I data center disponibili dipendono dalla configurazione Bare Metal Server selezionata per la distribuzione. Se selezioni la configurazione **Personalizzato**, puoi anche distribuire il cluster in un pod dell'infrastruttura {{site.data.keyword.cloud}} diverso, nel caso in cui il data center selezionato contenga più pod. Questa configurazione è utile quando il pod dell'infrastruttura {{site.data.keyword.cloud_notm}} predefinito in cui è distribuita l'istanza iniziale ha raggiunto la sua capacità massima.
 
 **Nota:** le configurazioni standardizzate **Small** e **Large** di Bare Metal Server utilizzano un pod predefinito che non può essere modificato.
 
-Se distribuisci il cluster in un diverso data center o pod, vengono ordinate tre VLAN aggiuntive da utilizzare con i {{site.data.keyword.baremetal_short}} ordinati.
+Se distribuisci il cluster in un diverso data center o pod, vengono ordinate altre tre VLAN da utilizzare con i {{site.data.keyword.baremetal_short}} ordinati.
 
 ### Impostazioni di Bare Metal Server
 
@@ -77,7 +77,14 @@ Per le configurazioni **Preconfigurato** di Bare Metal Server, non puoi modifica
 * Per la configurazione **Small**, vengono ordinate due unità disco SED SSD da 1,9 TB.
 * Per la configurazione **Large**, vengono ordinate quattro unità disco SED SSD da 3,8 TB.
 
-Per la configurazione **Personalizzato** di Bare Metal Server, puoi personalizzare l'archiviazione vSAN specificando il numero di dischi vSAN il tipo e la dimensione del disco che soddisfano le tue esigenze di archiviazione.
+Per la configurazione **Personalizzato** di Bare Metal Server, puoi personalizzare l'archiviazione vSAN specificando le seguenti impostazioni:
+
+* **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
+* **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
+* **Tipo di disco per i dischi cache vSAN**: seleziona un'opzione per i dischi di cache di cui hai bisogno.
+
+    **Nota**: se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
+* **Numero di dischi cache vSAN**: specifica il numero di dischi di cache che vuoi aggiungere.
 
 ### Impostazioni di licenza
 
@@ -99,8 +106,8 @@ Puoi specificare le opzioni di licenza per i componenti VMware nel cluster, incl
    * Se hai selezionato **Personalizzato**, seleziona il **Modello CPU** e la dimensione della **RAM**.
    * Se hai selezionato **Preconfigurato**, seleziona la **Configurazione Bare Metal Server**.
 7. Completa la configurazione di archiviazione:
-   * Se hai selezionato **Personalizzato** per la configurazione Bare Metal, specifica il **Numero di dischi vSAN** e **Tipo e dimensioni del disco per i dischi vSAN**.
-   * Se hai selezionato **Preconfigurato** per la configurazione Bare Metal, nota che le impostazioni di archiviazione per le configurazioni **Small** e **Large** di Bare Metal Server non possono essere modificate.
+   * Se hai selezionato **Preconfigurato** per la configurazione Bare Metal, le impostazioni di archiviazione per le configurazioni **Small** e **Large** di Bare Metal Server non possono essere modificate.
+   * Se hai selezionato **Personalizzato** per la configurazione Bare Metal, specifica i tipi di disco per i dischi di capacità vSAN e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
 8. Specifica come vengono fornite le tue chiavi di licenza:
    * Per gli utenti Business Partner, la licenza vSphere (Enterprise Plus edition) e la licenza vSAN sono incluse e acquistate per tuo conto. Tuttavia, devi specificare l'edizione per la licenza vSAN.
    * Per gli utenti non Business Partner, puoi selezionare una delle seguenti opzioni:
@@ -112,7 +119,7 @@ Puoi specificare le opzioni di licenza per i componenti VMware nel cluster, incl
    3. Fai clic sul link o sui link dei termini che si applicano al tuo ordine e conferma di accettare questi termini prima di aggiungere il cluster.
    4. Fai clic su **Fornitura**.
 
-### Risultati dopo l'aggiunta dei cluster alle istanze Cloud Foundation
+### Risultati dopo l'aggiunta di cluster alle istanze Cloud Foundation
 
 1. La distribuzione del cluster viene avviata automaticamente e lo stato del cluster viene modificato in **Inizializzazione**. Puoi controllare lo stato della distribuzione visualizzando la cronologia di distribuzione nella pagina di riepilogo dell'istanza.
 2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere High Availability (HA) e vSphere Distributed Resource Scheduler (DRS).
@@ -166,13 +173,13 @@ Puoi specificare le opzioni di licenza per i componenti VMware nel cluster, incl
         <dt class="dt dlterm">In fase di eliminazione</dt>
         <dd class="dd">Il server ESXi è in fase di eliminazione.</dd>
         </dl>
-   * I dettagli della licenza vSAN e della licenza vSphere. I dettagli della licenza vSphere sono disponibili solo se hai scelto di utilizzare la tua propria licenza VMware (BYOL) durante l'ordine del cluster:
+   * I dettagli della licenza vSAN e della licenza vSphere. I dettagli della licenza vSphere sono disponibili solo se scegli di utilizzare la tua propria licenza VMware (BYOL) quando ordini il cluster.
        * **Tipo di licenza**: la licenza vSAN o la licenza vSphere.
        * **Tipo di ordine**: la licenza è fornita dall'utente (BYOL) o acquistata per conto dell'utente.
        * **Edizione licenza**: l'edizione della licenza.
        * **Chiave di licenza**: la chiave di licenza.
        * **Capacità totale (CPU)**: la capacità totale o il numero di CPU fornite dalla licenza.
-       * **Capacità libera (CPU)**: la capacità attualmente disponibile nella licenza.
+       * **Capacità libera  (CPU)**: la capacità disponibile nella licenza.
 
 ## Eliminazione di cluster dalle istanze Cloud Foundation
 
@@ -184,7 +191,7 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 * Per i cluster distribuiti nelle istanze della V2.2 o precedenti, devi aggiornare l'istanza alla V2.3 per poter eliminare i cluster che hai aggiunto all'istanza.
 * Puoi eliminare un singolo cluster alla volta. Per eliminare più cluster, devi farlo in sequenza: attendere che il cluster precedente venga eliminato prima di tentare di eliminare quello successivo.
 * Assicurati che tutti i nodi in un cluster siano accesi e operativi prima di eliminare il cluster.
-* Quando elimini un cluster, verranno eliminate anche tutte le VM (macchine virtuali) dal cluster e non potranno essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.
+* Quando elimini un cluster, da questo vengono eliminate anche tutte le VM (macchine virtuali) e non possono essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.
 * Non è possibile eliminare il cluster predefinito.
 
 ## Procedura per eliminare i cluster dalle istanze Cloud Foundation
