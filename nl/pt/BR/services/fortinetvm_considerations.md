@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-27"
 
 O serviço FortiGate Virtual Appliance on {{site.data.keyword.cloud}} implementa um par de FortiGate Virtual Appliances em seu ambiente, o que pode ajudá-lo a reduzir o risco ao implementar controles de segurança crítica em sua infraestrutura virtual.
 
-É possível instalar múltiplas instâncias desse serviço, conforme necessário. É possível gerenciar esse serviço usando o Web client FortiOS ou a interface da linha de comandos por meio de SSH.
+É possível instalar múltiplas instâncias desse serviço, conforme necessário. É possível gerenciar esse serviço usando o FortiOS Web Client ou a interface da linha de comandos por meio de SSH.
 
 **Disponibilidade**: esse serviço está disponível somente para instâncias que são implementadas na V2.0 ou liberações mais recentes.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -26,8 +26,8 @@ lastupdated: "2018-07-20"
 
 ### Links relacionados
 
-* [HyTrust DataControl no {{site.data.keyword.cloud_notm}} visão geral](htcc_considerations.html)
-* [Gerenciando HyTrust DataControl no {{site.data.keyword.cloud_notm}}](managinghtcc.html)
+* [Visão geral do HyTrust DataControl on {{site.data.keyword.cloud_notm}}](htdc_considerations.html)
+* [Gerenciando HyTrust DataControl no {{site.data.keyword.cloud_notm}}](managinghtdc.html)
 * [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](../vcenter/vc_addingremovingservices.html)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)
