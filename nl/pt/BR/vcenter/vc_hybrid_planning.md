@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -62,7 +62,7 @@ Tabela 2. Indicadores de status para {{site.data.keyword.CloudDataCents_notm}} a
 | Barra de Status | Detalhes do status |
 |:------------------------------|:--------------------------------------------------|
 | Em breve                   | O {{site.data.keyword.CloudDataCent_notm}} não está disponível atualmente. |
-| Provisoriamente fora do inventário  | O {{site.data.keyword.CloudDataCent_notm}} não possui disponibilidade neste momento. |
+| Provisoriamente fora do inventário  | O {{site.data.keyword.CloudDataCent_notm}} não tem disponibilidade atualmente. |
 | Inventário limitado             | O {{site.data.keyword.CloudDataCent_notm}} limitou a disponibilidade e o pedido pode não estar concluído. |
 
 ## Backup de componentes de gerenciamento
@@ -88,7 +88,7 @@ Quando você implementar esse serviço, conclua as configurações a seguir:
 
 ## Considerações sobre capacidade
 
-Para obter informações e considerações de capacidade, consulte [Capacidade de ajuste de escala](../archiref/solution/solution_scaling.html).
+Para obter mais informações sobre considerações de capacidade, consulte [Capacidade de ajuste de escala](../archiref/solution/solution_scaling.html).
 
 ### Links relacionados
 

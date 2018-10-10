@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-19"
 
 ---
 
 # Visão geral do VMware Federal on IBM Cloud
 
-O VMware Federal on {{site.data.keyword.cloud}} fornece suporte para pedir uma instância do vCenter Server base, além de fornecer às agências do Governo Federal dos EUA a opção para proteger as instâncias implementadas do vCenter Server. A seleção da opção para proteger as instâncias implementadas remove as informações confidenciais armazenadas sobre a instância e remove a conexão de gerenciamento aberta para acesso contínuo à instância para funções de gerenciamento, como a inclusão e a remoção de hosts e clusters. Depois de selecionar a opção segura, todas as funções de gerenciamento serão desativadas, exceto uma exclusão total da instância.
+Com o VMware Federal on {{site.data.keyword.cloud}}, é possível pedir uma instância base do vCenter Server além de fornecer às agências do Governo federal dos EUA a opção de proteger as instâncias implementadas do vCenter Server. Ao proteger uma instância implementada, as informações confidenciais armazenadas sobre a instância são removidas. Além disso, a conexão aberta para acesso à instância é removida, o que significa que as funções de gerenciamento, como inclusão e remoção de hosts e clusters, não ficam mais disponíveis. Depois de selecionar a opção segura, a única função disponível é a exclusão da instância.
 
 Para obter mais informações sobre o vCenter Server on {{site.data.keyword.cloud_notm}} e a arquitetura do vCenter Server, veja [Visão geral do vCenter Server](vc_vcenterserveroverview.html).
 
-**Atenção:** o VMware Federal on {{site.data.keyword.cloud_notm}} oferece somente um subconjunto das ofertas do vCenter Server. A configuração de vários sites, {{site.data.keyword.cloud_notm}} Bare Metal Servers pré-configurados, Bring Your Own License e a opção para pedir serviços adicionais não são suportados.
+**Atenção:** o VMware Federal on {{site.data.keyword.cloud_notm}} oferece somente um subconjunto das ofertas do vCenter Server. Configuração multisite, Bare Metal Servers pré-configurados do {{site.data.keyword.cloud_notm}}, Bring Your Own License e a opção de pedir serviços complementares não são suportados.
 
 ## Especificações técnicas para instâncias do VMware Federal on IBM Cloud
 
@@ -35,11 +35,11 @@ Para configuração de armazenamento NFS, o número recomendado de {{site.data.k
 
 Os componentes de rede a seguir são pedidos:
 *  Três VLANs (Virtual LANs): uma VLAN pública e duas VLANs privadas
-*  Uma VXLAN (Virtual eXtensible LAN) com DLR (Distributed Logical Router) para comunicação leste-oeste potencial entre cargas de trabalho locais conectadas a redes de camada 2 (L2). A VXLAN é implementada como uma topologia de roteamento de amostra, que pode ser modificada, usada para construção ou ser removida. Também é possível incluir zonas de segurança anexando VXLANs adicionais em novas interfaces lógicas no DLR.
+*  Uma VXLAN (Virtual eXtensible LAN) com DLR (Distributed Logical Router) para comunicação leste-oeste potencial entre cargas de trabalho locais conectadas a redes de camada 2 (L2). A VXLAN é implementada como uma topologia de roteamento de amostra, que pode ser modificada, usada para construção ou ser removida. Também é possível incluir zonas de segurança, conectando mais VXLANs a novas interfaces lógicas no DLR.
 *  Dois VMware NSX Edge Services Gateways:
   * Um serviço de gerenciamento seguro VMware NSX Edge Services Gateway (ESG) para tráfego de gerenciamento de saída HTTPS, que é implementado pela IBM como parte da tipologia de rede de gerenciamento. Este ESG é usado pelas máquinas virtuais de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Para obter mais informações, veja [Configurando sua rede para usar o ESG gerenciado pelo cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-    **Importante**: esse ESG não está acessível e não pode ser usado. Se você modificá-lo, poderá não ser capaz de gerenciar a instância do vCenter Server do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, observe que usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externo da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
+    **Importante**: esse ESG não está acessível e não pode ser usado. Se você modificá-lo, poderá não ser capaz de gerenciar a instância do vCenter Server do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externos da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
   * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
   **Nota**: o VMware NSX Edge Services (ESG) para o tráfego de gerenciamento HTTPS de saída é removido como parte da ação para proteger sua instância do VMware Federal implementada. Para obter mais informações, veja [Protegendo as instâncias do VMware Federal](vc_fed_securinginstance.html).
@@ -48,18 +48,23 @@ Os componentes de rede a seguir são pedidos:
 
 As VSIs (Virtual Server Instances) a seguir são pedidas:
 * Um VSI for IBM CloudBuilder, que será encerrado depois que a implementação da instância for concluída.
-* (Para instâncias V2.3 e mais recente) É possível escolher implementar um único VSI do Microsoft Windows Server para o Microsoft Active Directory (AD) ou duas VMs do Microsoft Windows de alta disponibilidade no cluster de gerenciamento para ajudar a aprimorar a segurança e robustez.
-* (Para instâncias V2.2) Um VSI do Microsoft Windows Server para Microsoft Active Directory (AD), que funciona como o DNS para a instância na qual os hosts e as máquinas virtuais são registrados, é implementado e pode ser consultado.
+* (Para instâncias V2.3 e mais recentes) É possível escolher a implementação de um único Microsoft Windows Server VSI for Microsoft Active Directory (AD) ou duas VMs Microsoft Windows de alta disponibilidade no cluster de gerenciamento para ajudar a aprimorar a segurança e a confiabilidade.
+* (Para instâncias V2.2) Um Microsoft Windows Server VSI for Microsoft Active Directory (AD) é implementado e pode ser consultado. Esse VSI funciona como o DNS para a instância em que os hosts e as máquinas virtuais são registrados.
 
 ### Armazenamento
 
 Durante a implementação inicial, é possível escolher entre as opções de armazenamento vSAN e NFS.
 
+#### Armazenamento vSAN
+
 A opção vSAN oferece configurações customizadas, com várias opções para tipo de disco e quantidade:
 * Quantidade de disco: 2, 4, 6 ou 8.
 * Disco de armazenamento: SSD SED de 960 GB, SSD SED de 1,9 TB ou SSD SED de 3,8 TB.
 
-  Além disso, também são pedidos 2 discos de cache de 960 GB por host.
+  Além disso, são pedidos dois discos de cache de 960 GB por host.
+* Opção Intel Optane de alto desempenho, que fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade. Essa opção depende do modelo de CPU.
+
+#### Armazenamento NFS
 
 A opção NFS oferece armazenamento compartilhado customizado no nível de arquivo para cargas de trabalho com várias opções para tamanho e desempenho:
 * Tamanho: 1, 2, 4, 8 ou 12 TB.
@@ -91,7 +96,7 @@ VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technic
 * Um VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * (Para clusters do vSAN) VMware vSAN Advanced ou Enterprise 6.6
 
-**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados em sua conta do {{site.data.keyword.cloud_notm}} apenas por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente no console do {{site.data.keyword.vmwaresolutions_short}}, não no {{site.data.keyword.slportal}} nem de qualquer outra maneira fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
 **CUIDADO**: gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância, fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes
@@ -102,9 +107,9 @@ VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technic
 
 ### Links relacionados
 
-* [Lista de materiais do software vCenter Server](vc_bom.html)
 * [Requisitos e planejamento para as instâncias do VMware Federal](vc_fed_planning.html)
 * [Pedindo instâncias do VMware Federal](vc_fed_orderinginstance.html)
+* [Incluindo, visualizando e excluindo clusters para instâncias do VMware Federal](fed_addviewdeleteclusters.html)
+* [Expandindo e contraindo a capacidade para instâncias do VMware Federal](vc_fed_addingremovingservers.html)
 * [Protegendo instâncias do VMware Federal](vc_fed_securinginstance.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
 * [Armazenamento de arquivo e de bloco do {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

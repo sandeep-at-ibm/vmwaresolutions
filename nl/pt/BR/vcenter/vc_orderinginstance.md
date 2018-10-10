@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -22,7 +22,7 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 Tabela 1. Formato de valor para nomes de instância e de domínio
 
 | Nome        | Formato do valor      |
-  |:------------- |:------------- |
+  |:------------|:------------ |
   | Nome de domínio | `<root_domain>` |  
   | Nome do usuário de login do vCenter Server | `<user_id>@<root_domain>` (Usuário do Microsoft Active Directory) ou `administrator@vsphere.local` |
   | FQDN do vCenter Server | `vcenter.<subdomain_label>.<root_domain>`. O comprimento máximo é de 50 caracteres. |
@@ -30,11 +30,11 @@ Tabela 1. Formato de valor para nomes de instância e de domínio
   | Nome do servidor ESXi totalmente qualificado | `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que `<n>` é a sequência do servidor ESXi. O comprimento máximo é de 50 caracteres. |  
   | FQDN do PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é de 50 caracteres. |
 
-**Importante**: não modifique quaisquer valores que são configurados durante o pedido e a implementação da instância. Isso pode fazer com que a instância se torne inutilizável. Por exemplo, a rede pública pode ser encerrada, os servidores e os Virtual Server Instances (VSIs) podem se mover para trás de uma meia provisão do Vyatta ou o IBM CloudBuilder VSI pode ser parado ou excluído.
+**Importante**: não modifique nenhum valor configurado durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
 
 ## Configurações do sistema
 
-Deve-se especificar as configurações do sistema a seguir ao pedir uma instância do vCenter Server.
+Deve-se especificar as seguintes configurações do sistema ao pedir uma instância do vCenter Server.
 
 ### Nome da instância
 
@@ -51,20 +51,20 @@ Selecione se pedirá uma nova instância primária ou uma instância secundária
 ## Configurações de licenciamento
 
 Especifique as opções de licenciamento para os seguintes componentes do VMware na instância:
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
+* vCenter Server 6.5 - edição Standard
+* vSphere 6.5u1 - edição Enterprise Plus
+* NSX Service Providers 6.4 (Edição Base, Advanced ou Enterprise)
 
 Para usuários do Parceiro de Negócios, a licença do vCenter Server (Standard Edition), a licença do vSphere (Enterprise Plus Edition) e a licença do NSX são incluídas e compradas em seu nome. No entanto, deve-se especificar a edição para a licença do NSX.
 
 Para usuários que não são do Parceiros de negócios, é possível usar as licenças do VMware fornecidas pela IBM para esses componentes selecionando **Incluir com a compra** ou é possível usar Bring Your Own License (BYOL) selecionando **Eu fornecerei** e inserindo as suas próprias chaves de licença.
 
 **Atenção**:
-* É necessária uma licença com um mínimo de 8 CPUs, que é para 4 servidores com 2 CPUs por servidor. A opção de licença para cada componente do VMware se aplicará à instância de base e a quaisquer servidores ESXi que forem incluídos na instância posteriormente. Portanto, deve-se assegurar que sua licença suporte a expansão de capacidade futura em sua infraestrutura.
+* É necessária uma licença com um mínimo de oito CPUs, que é para quatro servidores com duas CPUs por servidor. A opção de licença para cada componente do VMware se aplicará à instância de base e a quaisquer servidores ESXi que forem incluídos na instância posteriormente. Assegure-se de que sua licença suporte futura expansão de capacidade em sua infraestrutura.
 * As edições de licença mínimas são indicadas na interface com o usuário. Se diferentes edições de componentes forem suportadas, será possível selecionar a edição desejada. Você é responsável por assegurar que a chave de licença fornecida está correta para cada componente de VMware selecionado.
-* Para o vSphere, um encargo de licença incorrerá no momento do pedido, mas esse encargo será creditado subsequentemente em sua conta.
-* Será possível mudar quaisquer licenças fornecidas usando o VMware vSphere Web Client depois que a implementação da instância for concluída.
-* Suporte para os componentes do VMware para os quais você fornece licenças será diretamente fornecido pelo VMware, não pelo Suporte IBM.
+* Para o vSphere, um encargo de licença é incorrido no momento do pedido, mas esse encargo é creditado em sua conta em seguida.
+* Será possível mudar as licenças fornecidas usando o VMware vSphere Web Client depois que a implementação da instância for concluída.
+* O suporte para os componentes do VMware para os quais você fornece licenças é oferecido pelo VMware, não pelo Suporte IBM.
 
 ## Configurações do Bare Metal Server
 
@@ -106,7 +106,7 @@ Para o cluster inicial na instância, é possível configurar o número de servi
 * Se você selecionou **Pré-configurado**, poderá configurar o número de servidores ESXi no intervalo de 2 a 10.
 * Se você selecionou **Customizado**, poderá configurar o número de servidores ESXi no intervalo de 2 a 20.
 
-Todos os servidores ESXi compartilham a mesma configuração. Após a implementação inicial, é possível incluir mais quatro clusters. Se você selecionou a configuração **Customizada** para vSAN, 4 servidores ESXi serão necessários para os clusters iniciais e pós-implementação. Para obter mais informações sobre o mínimo de servidores ESXi, veja [É uma instância de dois nós do vCenter Server altamente disponível](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
+Todos os servidores ESXi compartilham a configuração configurada. Após a implementação inicial, é possível incluir mais quatro clusters. Se você selecionou a configuração **Customizado** para o VMware vSAN, 4 servidores ESXi serão necessários para os clusters inicial e pós-implementação. Para obter mais informações sobre o mínimo de servidores ESXi, veja [É uma instância de dois nós do vCenter Server altamente disponível](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Configurações de armazenamento
 
@@ -114,10 +114,14 @@ As configurações de armazenamento são baseadas em sua seleção de configura�
 
 ### Armazenamento vSAN
 
-O vSAN está disponível somente quando você seleciona a configuração **Customizado** do Bare Metal. Especifique as seguintes opções vSAN:
+O vSAN está disponível somente para a configuração **Customizado** do Bare Metal. Especifique as seguintes opções vSAN:
 
-* **Número de discos de capacidade vSAN**: especifique o número de discos para o armazenamento compartilhado vSAN que você deseja incluir. As quantidades de disco devem ser 2, 4, 6 ou 8.
-* **Tipo e tamanho do disco para discos de capacidade vSAN**: selecione a capacidade que atenda às suas necessidades de armazenamento compartilhado.
+* **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
+* **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
+* **Tipo de disco para discos de cache vSAN**: selecione uma opção para os discos de cache necessários.
+
+    **Nota**: se desejar incluir discos de capacidade acima do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
+* **Número de discos de cache vSAN**: especifique o número de discos de cache que deseja incluir.
 * **Licença do vSAN**: use a licença do VMware fornecida pela IBM para o componente vSAN selecionando **Incluir com a compra** ou Bring Your Own License (BYOL) selecionando **Eu fornecerei** e inserindo sua própria chave de licença.
 
 ### Armazenamento NFS
@@ -128,9 +132,9 @@ Quando você selecionar **Armazenamento do NFS**, será possível incluir armaze
 
 * **Configurar compartilhamentos individualmente**: selecione para especificar
 diferentes definições de configuração para cada compartilhamento de arquivo.
-* **Número de compartilhamentos**: ao usar a mesma definição de configuração para cada compartilhamento de arquivo, especifique o número de compartilhamentos de arquivos para o armazenamento compartilhado do NFS que você deseja incluir.
+* **Número de compartilhamentos**: ao usar a mesma definição de configuração para cada compartilhamento de arquivo, especifique o número de compartilhamentos de arquivos para o armazenamento compartilhado NFS que você deseja incluir.
 * **Tamanho**: selecione a capacidade que atenda às suas necessidades de armazenamento compartilhado.
-* **Desempenho**: selecione o IOPS (Input/output Operations Per Second) por GB com base em seus requisitos de carga de trabalho.
+* **Desempenho**: selecione o IOPS (operações de entrada/saída por segundo) por GB com base em seus requisitos de carga de trabalho.
 * **ADD NFS**: selecione para incluir compartilhamentos de arquivos individuais que usam definições de configuração diferentes.
 
 Tabela 3. Opções de nível de desempenho do NFS
@@ -143,7 +147,7 @@ Tabela 3. Opções de nível de desempenho do NFS
 
 ## Configurações da interface de rede
 
-Deve-se especificar as configurações da interface de rede a seguir ao pedir uma instância do vCenter Server.
+Deve-se especificar as seguintes configurações de interface de rede ao pedir uma instância do vCenter Server.
 
 ### Prefixo de nome do host
 
@@ -171,16 +175,25 @@ O nome do domínio-raiz deve atender aos requisitos a seguir:
 
 **Nota:** o comprimento máximo do Nome completo do domínio (FQDN) para hosts e VMs é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
 
+### Rede pública ou privada
+
+As configurações de ativação da Placa da interface de rede (NIC) baseiam-se em sua seleção de **Rede pública e privada** ou **Somente rede privada**. Os serviços complementares a seguir requerem NICs públicas e não estarão disponíveis se você selecionar a opção privada:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
+
 ### VLANs
 
 As configurações de rede se baseiam em sua seleção de **Pedir novas VLANs** ou **Selecionar VLANs existentes**.
 
 São necessárias uma VLAN pública e duas VLANs privadas para o seu pedido de instância. As duas VLANs privadas são truncadas em cada Bare Metal Server.
 
-**Pedir novas VLANs**  
+#### Pedir novas VLANs
 Selecione para pedir uma nova VLAN pública e duas novas VLANs privadas.
 
-**Selecionar VLANs existentes**  
+#### Selecionar VLANs existentes 
 Dependendo do {{site.data.keyword.CloudDataCent_notm}} selecionado, VLANs públicas e privadas existentes podem estar disponíveis.
 
 Ao selecionar para reutilizar VLANs públicas e privadas existentes, especifique as VLANs e as sub-redes:
@@ -192,7 +205,7 @@ Ao selecionar para reutilizar VLANs públicas e privadas existentes, especifique
 
 **Importante:**
 * Assegure-se de que a configuração de firewall nas VLANs selecionadas não bloqueie o tráfego de dados de gerenciamento.
-* Assegure-se de que todas as VLANs selecionadas estejam no mesmo pod, porque os servidores ESXi não podem ser provisionados em VLANs de pod misto.
+* Assegure-se de que todas as VLANs selecionadas estejam no mesmo pod. Os servidores ESXi não podem ser provisionados em VLANs de pod misto.
 
 ### Configuração de DNS
 
@@ -203,7 +216,7 @@ Selecione a configuração do Sistema de Nomes de Domínio (DNS) para sua instâ
 
 **Importante:** deve-se fornecer duas licenças do Microsoft Windows Server 2012 R2 caso você configure a sua instância para usar as duas VMs do Microsoft Windows. Use a licença de edição do Microsoft Windows Server 2012 R2 Standard ou a licença de edição do Microsoft Windows Server 2012 R2 Datacenter, ou ambas.
 
-Cada licença pode ser designada apenas a um único servidor físico e abrange até dois processadores físicos. Uma licença de edição Standard é capaz de executar duas VMs virtualizadas do Microsoft Windows por servidor de dois processadores. Portanto, duas licenças são necessárias, pois duas VMs do Microsoft Windows são implementadas em dois hosts diferentes.
+Cada licença pode ser designada apenas a um único servidor físico e abrange até dois processadores físicos. Uma licença da edição Standard pode executar duas VMs virtualizadas do Microsoft Windows por servidor de 2 processadores. Portanto, duas licenças são necessárias, pois duas VMs do Microsoft Windows são implementadas em dois hosts diferentes.
 
 Você tem 30 dias para ativar as VMs.
 
@@ -211,25 +224,24 @@ Para obter mais informações sobre licenciamento do Windows, veja [Documentaç�
 
 ## Configurações de Serviços
 
-Ao pedir uma instância do vCenter Server, é possível também pedir serviços adicionais. Para obter mais informações sobre os serviços, veja [Serviços disponíveis para instâncias do vCenter Server](vc_addingremovingservices.html#available-services-for-vcenter-server-instances).
+Ao pedir uma instância do vCenter Server, também é possível pedir serviços complementares. Para obter mais informações sobre os serviços, veja [Serviços disponíveis para instâncias do vCenter Server](vc_addingremovingservices.html#available-services-for-vcenter-server-instances).
 
 ## Resumo do Pedido
 
 Com base em sua configuração selecionada para os serviços de instância e complemento, o custo estimado é gerado instantaneamente e exibido na seção **Resumo do pedido** na área de janela direita. Clique em **Detalhes da precificação** na parte inferior da área de janela direita para gerar um documento PDF que forneça os detalhes da estimativa.
 
-## Procedimento
+## Procedimento para pedir instâncias do vCenter Server
 
-1. No Catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **vCenter Server** na seção **Datacenters virtuais **.
+1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **vCenter Server** na seção **Data centers virtuais**.
 2. Na página **VMware vCenter Server on IBM Cloud**, clique no cartão **vCenter Server** e clique em **Criar**.
 3. Na página **vCenter Server**, insira o nome da instância.
 4. Selecione o tipo de instância:
    * Clique em **Instância primária** para implementar uma única instância no ambiente ou para implementar a primeira instância em uma topologia multissite.
    * Clique em **Instância secundária** para conectar a instância a uma instância existente (primária) no ambiente para alta disponibilidade e conclua as etapas a seguir:
      1. Selecione a instância primária à qual deseja que a instância secundária seja conectada.
-     2. Se é feito o upgrade da instância primária selecionada a liberação V2.5 ou se é feito o upgrade ou a implementação para as liberações V2.4 e anteriores, verifique a **Senha pré-preenchida do administrador para o PSC da instância primária** para assegurar que ela esteja correta.
-     
-        **Observação:** o campo **Senha do administrador para a instância primária PSC** não está disponível para instâncias primárias que são implementadas nas liberações V2.5 e mais recentes.     
-5. Conclua as configurações de licença para os componentes da instância.  
+     2. Para instâncias primárias V2.5 ou mais recentes, insira o valor para o campo **Senha do administrador para o PSC da instância primária**.
+     3. Para instâncias primárias V2.4 ou anteriores, verifique se o valor pré-preenchido para o campo **Senha do administrador para o PSC da instância primária** está correto.
+5. Conclua as configurações de licença para os componentes da instância.
    *  Para usar licenças fornecidas pela IBM, selecione **Incluir com a compra** e selecione a edição de licença, se necessário.
    *  Para usar sua própria licença, selecione **Eu fornecerei** e insira a chave de licença.
 6. Conclua as configurações de Bare Metal Server.
@@ -237,26 +249,21 @@ Com base em sua configuração selecionada para os serviços de instância e com
     2. Selecione a configuração do Bare Metal Server.
        * Quando você selecionar **Pré-configurado**, escolha **Pequeno**, **Médio** ou **Grande** para a configuração.
        * Ao selecionar **Customizado**, especifique o modelo de CPU e o tamanho da RAM.
-    3. Especifique o número de {{site.data.keyword.baremetal_short}}. Se estiver planejando usar vSAN como sua solução de armazenamento, observe que será necessário um mínimo de 4 {{site.data.keyword.baremetal_short}}.  
-
-7. Conclua as configurações de armazenamento:
-  * Quando você selecionar **Armazenamento vSAN**, especifique o **Tipo
-e tamanho do disco para discos de capacidade vSAN**, o **Número de discos de
-capacidade vSAN** e como a **Licença vSAN** deve ser fornecida.
-  * Quando você selecionar **Armazenamento NFS** e desejar incluir e definir as mesmas configurações para todos os compartilhamentos de arquivos, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
-  * Quando você selecionar **Armazenamento NFS** e desejar incluir e configurar compartilhamentos de arquivos individualmente, selecione **Configurar compartilhamentos
-individualmente**, em seguida, clique no ícone **+** ao lado do rótulo **Incluir NFS** e selecione o **Tamanho** e o **Desempenho**
-para cada compartilhamento de arquivo individual. Deve-se selecionar pelo menos um compartilhamento de arquivo.
-
+    3. Especifique o número de {{site.data.keyword.baremetal_short}}. Se você está planejando usar vSAN como sua solução de armazenamento, no mínimo 4 {{site.data.keyword.baremetal_short}} serão necessários.  
+7. Conclua a configuração de armazenamento.
+  * Se você selecionar **Armazenamento vSAN**, especifique os tipos de disco para os discos de capacidade e de cache, o número de discos e a edição de licença vSAN. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
+  * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar as mesmas configurações para todos os compartilhamentos de arquivo, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
+  * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar compartilhamentos de arquivo individualmente, selecione **Configurar compartilhamentos individualmente**. Em seguida, clique no ícone **+** próximo ao rótulo **Incluir NFS** e selecione o **Tamanho** e o **Desempenho** para cada compartilhamento de arquivo. Deve-se selecionar pelo menos um compartilhamento de arquivo.
 8. Conclua as configurações da interface de rede.
-   1. Insira o prefixo de nome do host, o rótulo do subdomínio e o nome do domínio-raiz. Para uma instância secundária, o nome do domínio é preenchido automaticamente.
-   2. Selecione as configurações de VLAN:
+   1. Insira o prefixo de nome do host, o rótulo do subdomínio e o nome do domínio-raiz. Para uma instância secundária, o nome de domínio é preenchido automaticamente.
+   2. Selecione a configuração de rede de **Rede pública e privada** ou **Somente rede privada**.
+   3. Selecione as configurações de VLAN:
       * Se desejar pedir novas VLANs públicas e privadas, clique em **Pedir novas VLANs**.
       * Se quiser reutilizar as VLANs públicas e privadas existentes quando estiverem disponíveis, clique em **Selecionar VLANs existentes** e especifique as VLANs e as sub-redes.
-   3. Especifique a configuração do DNS.
+   4. Especifique a configuração do DNS.
 
 9. Selecione os serviços complementares a serem implementados na instância clicando no cartão de serviço correspondente. Se um serviço requerer configuração, conclua as configurações específicas do serviço e clique em **Incluir serviço** no cartão.
-Para obter informações sobre como fornecer configurações para um serviço, veja o tópico de ordem de pedido correspondente.
+Para obter mais informações sobre como fornecer configurações para um serviço, consulte o tópico de pedido de serviço correspondente.
 
 10. Na área de janela **Resumo do pedido**, verifique a configuração da instância antes de fazer o pedido.
    1. Revise as configurações para a instância.
@@ -268,7 +275,7 @@ Para obter informações sobre como fornecer configurações para um serviço, v
 
 A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
 
-Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se tiver pedido serviços adicionais, a implementação dos serviços iniciará após a conclusão do pedido.
+Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
 
 Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 
@@ -278,7 +285,7 @@ Quando você pedir uma instância secundária, o VMware vSphere Web Client da in
 
 Visualizar e gerenciar a instância do vCenter Server que você pediu.
 
-**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados em sua conta do {{site.data.keyword.cloud_notm}} apenas por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console.
+**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente no console do {{site.data.keyword.vmwaresolutions_short}}, não no {{site.data.keyword.slportal}} nem de qualquer outra maneira fora do console.
 Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
 **CUIDADO**: gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:

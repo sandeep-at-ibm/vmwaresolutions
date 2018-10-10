@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -16,9 +16,9 @@ Revise as informações a seguir para obter detalhes sobre as considerações de
 
 Para revisar os componentes de rede que estão incluídos em sua instância do VMware Federal, veja [Especificações técnicas para instâncias do VMware Federal on {{site.data.keyword.cloud}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
-## Considerações do NSX Firewall
+## Considerações de firewall
 
-Quando se está usando o NSX Distributed Firewalls (DFW), deve-se configurar regras para todas as comunicações da instância de servidor virtual (VSI) do IBM CloudDriver para permitir que todos os protocolos se comuniquem nos endereços IP `10.0.0.0/8` e `161.26.0.0/16`.
+Caso esteja usando firewalls, deve-se configurar regras para todas as comunicações por meio da instância de servidor virtual (VSI) do {{site.data.keyword.IBM}} CloudDriver e das máquinas virtuais (VMs) do SDDC Manager. Essas regras devem permitir que todos os protocolos se comuniquem nos endereços IP `10.0.0.0/8` e `161.26.0.0/16`. Exemplos desses firewalls são os NSX Distributed Firewalls (DFW) ou os firewalls Vyatta.
 
 ## Usando NSX com suas máquinas virtuais
 
@@ -26,7 +26,7 @@ Durante a implementação da instância do VMware Federal, o VMware NSX é pedid
 
 Um NSX Edge Services Gateway também é implementado para ser usado por suas máquinas virtuais de carga de trabalho (VMs). Para obter mais informações, veja [Configurando sua rede para usar o NSX ESG gerenciado pelo cliente com suas VMs](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-## Considerações ao mudar senhas de componentes NSX
+## Considerações ao mudar senhas para componentes NSX
 
 Revise as considerações a seguir antes de mudar as senhas para o NSX Manager, o NSX Controllers e o NSX Edges:
 * Não mude a senha do NSX Manager, que pode ser localizada na página **Resumo** da instância no console do {{site.data.keyword.vmwaresolutions_short}}.

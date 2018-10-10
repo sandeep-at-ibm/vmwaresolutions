@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 Para implementar uma plataforma virtualizada VMware flexível e customizável que melhor se ajuste às suas necessidades de carga de trabalho, peça uma instância do VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle. O pedido da instância do vCenter Server with Hybridity Bundle inclui o licenciamento do VMware Hybrid Cloud Extension (HCX) e o autoriza para o serviço VMware HCX on {{site.data.keyword.cloud_notm}}. Também é possível incluir serviços, como o [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) para recuperação de desastre.
 
-## Requisitos
+## Requisitos para pedir instâncias do vCenter Server with Hybridity Bundle
 
 Assegure-se de que tenha concluído as tarefas a seguir:
 *  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](../vmonic/useraccount.html).
@@ -30,11 +30,11 @@ Tabela 1. Formato de valor para nomes de instância e de domínio
   | Nome do servidor ESXi totalmente qualificado | `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que `<n>` é a sequência do servidor ESXi. O comprimento máximo é de 50 caracteres. |  
   | FQDN do PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é de 50 caracteres. |
 
-**Importante**: não modifique quaisquer valores que são configurados durante o pedido e a implementação da instância. Isso pode fazer com que a instância se torne inutilizável. Por exemplo, a rede pública pode ser encerrada, os servidores e os Virtual Server Instances (VSIs) podem se mover para trás de uma meia provisão do Vyatta ou o IBM CloudBuilder VSI pode ser parado ou excluído.
+**Importante**: não modifique nenhum valor configurado durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
 
 ## Configurações do sistema
 
-Deve-se especificar as configurações do sistema a seguir ao pedir uma instância do vCenter Server with Hybridity Bundle.
+Deve-se especificar as seguintes configurações do sistema ao pedir uma instância do vCenter Server with Hybridity Bundle.
 
 ### Nome da instância
 
@@ -50,12 +50,12 @@ Selecione se pedirá uma nova instância primária ou uma instância secundária
 
 ## Configurações de licenciamento
 
-As licenças a seguir são incluídas no seu pedido de instância do vCenter Server with Hybridity Bundle. Deve-se especificar **Advanced** ou **Enterprise** para as edições de licença do NSX.
+As licenças VMware a seguir são incluídas com o pedido da instância do vCenter Server with Hybridity Bundle. Deve-se especificar a edição das licenças NSX e vSAN.
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Advanced ou Enterprise) 6.4
-* Edição de licença do VMware vSAN 6.6 (Advanced ou Enterprise).
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4 (Edição Advanced ou Enterprise)
+* vSAN 6.6 (Edição Advanced ou Enterprise)
 
 **Atenção:**
 * As instâncias do vCenter Server with Hybridity Bundle não suportam Bring Your Own License.
@@ -85,16 +85,21 @@ Tabela 2. Opções para {{site.data.keyword.baremetal_short}} customizados
 | Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
 ### Número de Bare Metal Servers
 
 Quatro servidores ESXi são selecionados por padrão e não podem ser mudados.
 
 ## Configurações de armazenamento
 
-O VMware vSAN 6.6 é incluído no seu pedido de instância do vCenter Server with Hybridity Bundle. Deve-se especificar as configurações de armazenamento a seguir ao pedir a instância:
+O VMware vSAN 6.6 é incluído no seu pedido de instância do vCenter Server with Hybridity Bundle. Especifique as seguintes opções vSAN:
 
-* **Tipo e tamanho do disco para discos de capacidade vSAN**: selecione a capacidade que atenda às suas necessidades de armazenamento compartilhado.
-* **Número de discos de capacidade vSAN**: selecione o número de discos para o armazenamento compartilhado vSAN que você deseja incluir. As quantidades de disco devem ser 2, 4, 6 ou 8.
+* **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
+* **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
+* **Tipo de disco para discos de cache vSAN**: selecione uma opção para os discos de cache necessários.
+
+    **Nota**: se desejar incluir discos de capacidade acima do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
+* **Número de discos de cache vSAN**: especifique o número de discos de cache que deseja incluir.
 
 ## Configurações da interface de rede
 
@@ -126,6 +131,15 @@ O nome do domínio-raiz deve atender aos requisitos a seguir:
 
 **Nota:** o comprimento máximo do FQDN (Nome completo do domínio) para hosts e VMs (máquinas virtuais) é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
 
+### Rede pública ou privada
+
+As configurações de ativação da Placa da interface de rede (NIC) baseiam-se em sua seleção de **Rede pública e privada** ou **Somente rede privada**. Os serviços complementares a seguir requerem NICs públicas e não estarão disponíveis se você selecionar a opção privada:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
+
 ### Pedir novas VLANs
 
 Selecione **Pedir novas VLANs** para pedir uma nova VLAN pública e duas novas VLANs privadas.
@@ -142,7 +156,7 @@ Selecione **Selecionar VLANs existentes** para reutilizar VLANs públicas e priv
 
 **Importante:**
 * Assegure-se de que a configuração de firewall nas VLANs selecionadas não bloqueie o tráfego de dados de gerenciamento.
-* Assegure-se de que todas as VLANs selecionadas estejam no mesmo pod, porque os servidores ESXi não podem ser provisionados em VLANs de pod misto.
+* Assegure-se de que todas as VLANs selecionadas estejam no mesmo pod, porque os servidores ESXi não podem ser provisionados em VLANs de pods mistos.
 
 ### Configuração de DNS
 
@@ -167,9 +181,9 @@ Ao pedir uma instância do vCenter Server with Hybridity Bundle, é possível ta
 
 Com base em sua configuração selecionada para os serviços de instância e complemento, o custo estimado é gerado instantaneamente e exibido na seção **Resumo do pedido** na área de janela direita. Clique em **Detalhes da precificação** na parte inferior da área de janela direita para gerar um documento PDF que forneça os detalhes da estimativa.
 
-## Procedimento
+## Procedimento para pedir instâncias do vCenter Server with Hybridity Bundle
 
-1. No Catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **vCenter Server** na seção **Datacenters virtuais **.
+1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **vCenter Server** na seção **Data centers virtuais**.
 2. Na página **VMware vCenter Server on IBM Cloud**, clique no cartão **vCenter Server with Hybridity Bundle** e clique em **Criar**.
 3. Na página **vCenter Server**, insira o nome da instância.
 4. Selecione o tipo de instância:
@@ -183,18 +197,17 @@ Com base em sua configuração selecionada para os serviços de instância e com
   2. Selecione o modelo de CPU **Customizado** e a quantia de **RAM**.
 
   **Nota:** o **Número de Bare Metal Servers** é configurado para quatro por padrão e não pode ser mudado.
-
-7. Conclua a configuração de armazenamento.
-  1. Selecione o **Tipo e tamanho do disco para discos de capacidade de vSAN**.
-  2. Selecione o **Número de discos de capacidade de vSAN**.
+7. Conclua a configuração de armazenamento. Especifique os tipos de disco para os discos de capacidade e de cache, além do número de discos. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
 8. Conclua a configuração da interface de rede.
   1. Insira o prefixo de nome do host, o rótulo do subdomínio e o nome do domínio-raiz.
-  2. Selecione a configuração de VLAN.
+  2. Selecione a configuração de rede de **Rede pública e privada** ou **Somente rede privada**.
+  3. Selecione a configuração de VLAN.
      *  Se desejar pedir novas VLANs públicas e privadas, clique em **Pedir novas VLANs**.
      *  Se você desejar reutilizar as VLANs públicas e privadas existentes quando estiverem disponíveis, clique em **Selecionar VLANs existentes** e, em seguida, selecione a VLAN pública, a sub-rede primária, a VLAN privada, a sub-rede primária privada e a VLAN privada secundária.
-  3. Selecione a configuração do DNS.
-9. Selecione os serviços complementares a serem implementados na instância clicando no cartão de serviço correspondente. Se um serviço requerer configuração, conclua as configurações específicas do serviço e clique em **Incluir serviço** no cartão.  
-Para obter informações sobre como fornecer configurações para um serviço, veja o tópico de ordem de pedido correspondente.
+  4. Selecione a configuração do DNS.
+9. Conclua a configuração do serviço HCX on {{site.data.keyword.cloud_notm}} incluído. Para obter mais informações sobre como fornecer configurações para o serviço, consulte a seção _Configuração do VMware HCX on IBM Cloud_ em [Pedindo o VMware HCX on IBM Cloud](../services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration).
+10. Selecione os serviços complementares a serem implementados na instância clicando no cartão de serviço correspondente. Se um serviço requerer configuração, conclua as configurações específicas do serviço e clique em **Incluir serviço** no cartão.  
+Para obter mais informações sobre como fornecer configurações para um serviço, consulte o tópico de pedido de serviço correspondente.
 
 8. Na área de janela **Resumo do pedido**, verifique a configuração da instância antes de fazer o pedido.
    1. Revise as configurações para a instância.
@@ -206,7 +219,7 @@ Para obter informações sobre como fornecer configurações para um serviço, v
 
 A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
 
-Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se tiver pedido serviços adicionais, a implementação dos serviços iniciará após a conclusão do pedido.
+Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
 
 Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 
@@ -216,7 +229,7 @@ Quando você pedir uma instância secundária, o VMware vSphere Web Client da in
 
 Visualizar e gerenciar a instância do vCenter Server with Hybridity Bundle que você pediu.
 
-**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados em sua conta do {{site.data.keyword.cloud_notm}} apenas por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console.
+**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente no console do {{site.data.keyword.vmwaresolutions_short}}, não no {{site.data.keyword.slportal}} nem de qualquer outra maneira fora do console.
 Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
 **CUIDADO**: gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:

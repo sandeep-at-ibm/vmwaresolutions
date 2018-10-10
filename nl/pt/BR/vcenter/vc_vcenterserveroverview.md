@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -14,13 +14,13 @@ O VMware vCenter Server on {{site.data.keyword.cloud}} é uma nuvem particular h
 
 Em muitos casos, o ambiente inteiro pode ser provisionado em menos de um dia e a infraestrutura bare metal pode aumentar e diminuir rápida e elasticamente a capacidade de cálculo, conforme necessário.
 
-Pós-implementação, é possível aumentar o armazenamento compartilhado pedindo compartilhamentos de arquivos NFS (Network File System) adicionais do {{site.data.keyword.slportal}} e conectá-los manualmente a todos os servidores ESXi em um cluster. Se armazenamento dedicado for requerido, o [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html) será oferecido nas configurações de alto desempenho (todas SSD) e de alta capacidade (todas SATA).
+Pós-implementação, é possível aumentar o armazenamento compartilhado pedindo mais compartilhamentos de arquivos NFS (Network File System) do {{site.data.keyword.slportal}} e anexando-os manualmente a todos os servidores ESXi em um cluster. Se armazenamento dedicado for requerido, o [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html) será oferecido nas configurações de alto desempenho (todas SSD) e de alta capacidade (todas SATA).
 
 VMware vSAN também está disponível como uma opção de armazenamento dedicado. Para aumentar a capacidade de armazenamento baseada em vSAN de um cluster vSAN, é possível incluir mais servidores ESXi após a implementação.
 
-Se você tiver comprado a licença do VMware fornecida pela IBM, poderá fazer upgrade da edição do VMware NSX Base para Advanced ou Enterprise Edition e poderá comprar componentes adicionais do VMware, como VMware vRealize Operations.
+Se você comprou o licenciamento do VMware fornecido pela IBM, será possível fazer upgrade da edição Base do VMware NSX para a edição Advanced ou Enterprise e será possível comprar mais componentes do VMware, como o VMware vRealize Operations.
 
-Será possível incluir Serviços Gerenciados IBM se você quiser transferir as operações diárias e a manutenção da virtualização, o S.O. guest ou camadas de aplicativos. A equipe do {{site.data.keyword.cloud_notm}} Professional Services também está disponível para ajudá-lo a acelerar sua jornada para a nuvem com serviços de migração, implementação, planejamento e onboarding.
+Será possível incluir o IBM Managed Services se você quiser transferir as operações diárias e a manutenção da virtualização, do S.O. guest ou das camadas de aplicativo. A equipe do {{site.data.keyword.cloud_notm}} Professional Services também está disponível para ajudá-lo a acelerar sua jornada para a nuvem com serviços de migração, implementação, planejamento e onboarding.
 
 ## Arquitetura do vCenter Server
 
@@ -48,7 +48,7 @@ A oferta de base é implementada com um dispositivo vCenter Server que é dimens
 
 No total, a oferta de base requer 38 vCPU e 67 GB de vRAM que são reservados para a camada de gerenciamento de virtualização. A capacidade restante do host para suas VMs depende de vários fatores, como a taxa de alocação excessiva, o dimensionamento da VM e os requisitos de desempenho de carga de trabalho.
 
-Para obter detalhes sobre a arquitetura, veja [Referência de arquitetura do {{site.data.keyword.vmwaresolutions_short}}](../archiref/solution/solution_overview.html).
+Para obter mais informações sobre a arquitetura, consulte [Referência de arquitetura do {{site.data.keyword.vmwaresolutions_short}}](../archiref/solution/solution_overview.html).
 
 ## Especificações técnicas para instâncias do vCenter Server
 
@@ -74,32 +74,37 @@ Os componentes a seguir estão incluídos em sua instância do vCenter Server.
 Os componentes de rede a seguir são pedidos:
 *  Uplinks duais de rede pública e privada de 10 Gbps
 *  Três VLANs (Virtual LANs): uma VLAN pública e duas VLANs privadas
-*  Uma VXLAN (Virtual eXtensible LAN) com DLR (Distributed Logical Router) para comunicação leste-oeste potencial entre cargas de trabalho locais conectadas a redes de camada 2 (L2). A VXLAN é implementada como uma topologia de roteamento de amostra, que pode ser modificada, usada para construção ou ser removida. Também é possível incluir zonas de segurança anexando VXLANs adicionais em novas interfaces lógicas no DLR.
+*  Uma VXLAN (Virtual eXtensible LAN) com DLR (Distributed Logical Router) para comunicação leste-oeste potencial entre cargas de trabalho locais conectadas a redes de camada 2 (L2). A VXLAN é implementada como uma topologia de roteamento de amostra, que pode ser modificada, usada para construção ou ser removida. Também é possível incluir zonas de segurança conectando VXLANs extras a novas interfaces lógicas no DLR.
 *  Dois VMware NSX Edge Services Gateways:
   * Um serviço de gerenciamento seguro VMware NSX Edge Services Gateway (ESG) para tráfego de gerenciamento de saída HTTPS, que é implementado pela IBM como parte da tipologia de rede de gerenciamento. Este ESG é usado pelas máquinas virtuais de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Para obter mais informações, veja [Configurando sua rede para usar o ESG gerenciado pelo cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-    **Importante**: esse ESG não está acessível e não pode ser usado. Se você modificá-lo, poderá não ser capaz de gerenciar a instância do vCenter Server do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, observe que usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externo da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
-  * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
+    **Importante**: esse ESG não está acessível e não pode ser usado. Se você modificá-lo, poderá não ser capaz de gerenciar a instância do vCenter Server do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, o uso de um firewall ou a desativação das comunicações do ESG com os componentes de gerenciamento externos da IBM, pode fazer com que o {{site.data.keyword.vmwaresolutions_short}} se torne não utilizável.
+  * Um VMware NSX Edge Services Gateway seguro gerenciado pelo cliente para tráfego de carga de trabalho HTTPS de entrada e de saída. Esse gateway é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso à VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 ### Virtual Server Instances
 
 Os virtual server instances (VSIs) a seguir são pedidos:
 * Um VSI for IBM CloudBuilder, que será encerrado depois que a implementação da instância for concluída.
 * (Para instâncias V2.2 e mais recente) É possível escolher implementar um único VSI do Microsoft Windows Server para o Microsoft Active Directory (AD) ou duas VMs de alta disponibilidade do Microsoft Windows no cluster de gerenciamento para ajudar a aprimorar a segurança e robustez.
-* (Para instâncias V1.9 a V2.1) Um VSI do Microsoft Windows Server para Microsoft Active Directory (AD), que funciona como o DNS para a instância na qual os hosts e as máquinas virtuais são registrados, é implementado e pode ser consultado.
+* (Para instâncias V1.9 à V2.1) Um Microsoft Windows Server VSI for Microsoft Active Directory (AD) é implementado e pode ser consultado. O VSI funciona como o DNS para a instância em que os hosts e as máquinas virtuais são registrados.
 * (Para instâncias V1.8 e anterior) Um VSI para o backup baseado em captura instantânea dos componentes de gerenciamento, que continua em execução depois que a implementação da instância é concluída.
 
 ### Armazenamento
 
 Durante a implementação inicial, é possível escolher entre as opções de armazenamento vSAN e NFS.
 
-A opção vSAN oferece configurações customizadas, com várias opções para tipo de disco e quantidade:
+#### Armazenamento vSAN
+
+A opção vSAN oferece configurações customizadas com várias opções para tipo de disco, tamanho e quantidade:
 * Quantidade de disco: 2, 4, 6 ou 8
 * Disco de armazenamento: SSD SED de 960 GB, SSD SED de 1,9 TB ou SSD SED de 3,8 TB.
 
-  Além disso, também são pedidos 2 discos de cache de 960 GB por host.
+  Além disso, também são pedidos dois discos de cache de 960 GB por host.
 
   **Nota:** as unidades SSD (Solid State Disk) de 3,8 TB serão suportadas quando forem disponibilizadas geralmente em um data center.
+* Opção Intel Optane de alto desempenho, que fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade. Essa opção depende do modelo de CPU.
+
+#### Armazenamento NFS
 
 A opção NFS oferece armazenamento compartilhado customizado no nível de arquivo para cargas de trabalho com várias opções para tamanho e desempenho:
 * Tamanho: 1, 2, 4, 8 ou 12 TB
@@ -131,7 +136,7 @@ Um Bare Metal Server com a configuração apresentada em [Especificações técn
 * Uma taxa de suporte e de serviços
 * (Para clusters do vSAN) VMware vSAN Advanced ou Enterprise 6.6
 
-**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados em sua conta do {{site.data.keyword.cloud_notm}} apenas por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente no console do {{site.data.keyword.vmwaresolutions_short}}, não no {{site.data.keyword.slportal}} nem de qualquer outra maneira fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
 **CUIDADO**: gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância, fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes

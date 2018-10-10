@@ -4,23 +4,23 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-20"
 
 ---
 
 # VCenter Server with Hybridity Bundle Visão Geral
 
-O VCenter Server with Hybridity Bundle é uma instância disponível na V2.3 e liberações mais recentes.
+O VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle é uma instância disponível na V2.3 e liberações mais recentes. A partir da V2.6, a instância do vCenter Server with Hybridity Bundle está disponível para os Parceiros de Negócios.
 
-O VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle é uma nuvem particular host que entrega a pilha do VMware vSphere como um serviço. O ambiente do VMware é construído no topo de quatro {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, inclui o VMware vSAN como armazenamento dedicado, fornece implementação automática e configuração de um firewall de borda lógica fácil de gerenciar que é desenvolvido pelo VMware NSX e inclui o serviço VMware HCX on {{site.data.keyword.cloud_notm}}.
+O vCenter Server with Hybridity Bundle é uma nuvem particular host que entrega a pilha do VMware vSphere como um serviço. O ambiente do VMware é construído no topo de quatro {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, inclui o VMware vSAN como armazenamento dedicado, fornece implementação automática e configuração de um firewall de borda lógica fácil de gerenciar que é desenvolvido pelo VMware NSX e inclui o serviço VMware HCX on {{site.data.keyword.cloud_notm}}.
 
 Em muitos casos, o ambiente inteiro pode ser provisionado em menos de um dia e a infraestrutura bare metal pode aumentar e diminuir rápida e elasticamente a capacidade de cálculo, conforme necessário.
 
 Para aumentar a capacidade de armazenamento baseada em vSAN de um cluster vSAN, é possível incluir mais servidores ESXi após a implementação.
 
-É possível fazer upgrade da edição Advanced do VMware NSX para a edição Enterprise e comprar componentes adicionais do VMware, como VMware vRealize Operations.
+É possível fazer upgrade da edição Advanced do VMware NSX para a edição Enterprise e comprar mais componentes do VMware, como o VMware vRealize Operations.
 
-Será possível incluir Serviços Gerenciados IBM se você desejar transferir as operações diárias e manutenção da virtualização, S.O. guest ou camadas de aplicativo. A equipe do {{site.data.keyword.cloud_notm}} Professional Services também está disponível para ajudá-lo a acelerar sua jornada para a nuvem com serviços de migração, implementação, planejamento e onboarding.
+Será possível incluir o IBM Managed Services se você quiser transferir as operações diárias e a manutenção da virtualização, do S.O. guest ou das camadas de aplicativo. A equipe do {{site.data.keyword.cloud_notm}} Professional Services também está disponível para ajudá-lo a acelerar sua jornada para a nuvem com serviços de migração, implementação, planejamento e onboarding.
 
 ## VCenter Server com arquitetura Hybridity Bundle
 
@@ -79,9 +79,9 @@ Os componentes de rede a seguir são pedidos:
   * Um serviço de gerenciamento seguro VMware NSX Edge Services Gateway (ESG) para tráfego de gerenciamento de saída HTTPS, que é implementado pela IBM como parte da tipologia de rede de gerenciamento. Esse ESG é usado pelas VMs de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Para obter mais informações, veja [Configurando sua rede para usar o ESG gerenciado pelo cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     **Importante**: esse ESG não está acessível e não pode ser usado. Se você o modificar, poderá não ser capaz de gerenciar a instância do vCenter Server with Hybridity Bundle por meio do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, observe que usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externo da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
-  * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
+  * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
-Para obter informações adicionais sobre os componentes de rede pedidos ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, veja [Visão geral do HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+Para obter mais informações sobre componentes de rede pedidos ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
 
 ### Virtual Server Instances
 
@@ -89,13 +89,14 @@ Os virtual server instances (VSIs) a seguir são pedidos:
 * Um VSI for IBM CloudBuilder, que será encerrado depois que a implementação da instância for concluída.
 * É possível escolher implementar um único VSI do Microsoft Windows Server para o Microsoft Active Directory (AD) ou duas VMs de alta disponibilidade do Microsoft Windows no cluster de gerenciamento para ajudar a aprimorar a segurança e robustez.
 
-### Armazenamento
+### Armazenamento vSAN
 
 O armazenamento vSAN oferece configurações customizadas, com várias opções para tipo de disco e quantidade:
 * Quantidade de disco: 2, 4, 6 ou 8.
 * Disco de armazenamento: SSD SED de 960 GB, SSD SED de 1,9 TB ou SSD SED de 3,8 TB.
 
-  Além disso, também são pedidos 2 discos de cache de 960 GB por host.
+  Além disso, são pedidos dois discos de cache de 960 GB por host.
+* Opção Intel Optane de alto desempenho, que fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade. Essa opção depende do modelo de CPU.
 
 ### Licenças e taxas fornecidas pela IBM
 
@@ -123,7 +124,7 @@ Um Bare Metal Server com a configuração customizada.
 * Uma taxa de suporte e de serviços
 * VMware vSAN (Advanced ou Enterprise) 6.6
 
-**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados em sua conta do {{site.data.keyword.cloud_notm}} apenas por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente no console do {{site.data.keyword.vmwaresolutions_short}}, não no {{site.data.keyword.slportal}} nem de qualquer outra maneira fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
 **CUIDADO**: gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância, fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes
