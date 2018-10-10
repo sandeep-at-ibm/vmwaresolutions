@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-19"
 
 ---
 
@@ -16,7 +16,9 @@ O processo de aplicação de correções e atualizações para instâncias do vC
 
 ## Antes de iniciar
 
-**Importante:** ao fazer upgrade de uma instância do vCenter Server para uma instância do vCenter Server with Hybridity Bundle, deve-se primeiro aplicar, no mínimo, a atualização de software do vCenter Server V2.3 base antes de poder executar o upgrade de licença para o Hybridity Bundle.
+**Importante:** ao fazer upgrade de uma instância do vCenter Server para uma instância do vCenter Server with Hybridity Bundle, deve-se primeiro aplicar pelo menos a atualização de software de base do vCenter Server V2.3. Deve-se fazer isso antes de poder executar o upgrade de licença para o Hybridity Bundle.
+
+Os usuários do Parceiro de Negócios não têm a opção de fazer upgrade de uma instância existente do vCenter Server para uma instância do vCenter Server with Hybridity Bundle.
 
 Antes de tentar aplicar uma atualização, expanda a entrada de atualização clicando na seta para baixo e verifique as informações a seguir:
 * A versão da atualização. Deve-se aplicar as atualizações em sequência cronológica que é da mais antiga para a mais recente. Assegure-se de que tenha aplicado todas as atualizações anteriores antes de aplicar a mais recente. Por exemplo, deve-se aplicar a atualização V2.3 antes de tentar aplicar a atualização V2.4.

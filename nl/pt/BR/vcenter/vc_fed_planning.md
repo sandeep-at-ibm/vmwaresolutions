@@ -32,7 +32,7 @@ O VMware Federal on {{site.data.keyword.cloud_notm}} não oferece a opção para
 
 ## Considerações sobre capacidade
 
-Para obter informações e considerações de capacidade, consulte [Capacidade de ajuste de escala](../archiref/solution/solution_scaling.html).
+Para obter informações e considerações sobre capacidade, consulte [Ajustando a escala da capacidade](../archiref/solution/solution_scaling.html).
 
 ### Links relacionados
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -18,7 +18,7 @@ Mudar usuários, recursos ou sub-redes que são reservados para {{site.data.keyw
 
 O ID de **automação** é uma conta do usuário que é usada pelas operações automatizadas fornecidas no console do {{site.data.keyword.vmwaresolutions_short}}.
 
-Usuários e senhas para as operações automatizadas no console não devem ser mudados porque as operações do console que dependem dessas credenciais podem falhar.
+Os usuários e as senhas das operações automatizadas no console não devem ser mudadas porque as operações do console que dependem dessas credenciais podem falhar.
 
 ## As contas do usuário de serviço específico
 

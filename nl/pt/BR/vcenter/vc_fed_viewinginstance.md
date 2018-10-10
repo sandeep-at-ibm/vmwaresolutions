@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -14,9 +14,9 @@ Visualize o resumo e as informações detalhadas das instâncias do VMware Feder
 
 ## Visualizando o resumo de instâncias do VMware Federal
 
-Para visualizar um resumo de todas as instâncias do VMware Federal que são provisionadas para uma conta do usuário, conclua as etapas a seguir:
+Para visualizar um resumo de todas as instâncias do VMware Federal provisionadas para uma conta de usuário, conclua as etapas a seguir:
 1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
-2. No canto superior direito do console, clique em seu avatar e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar instâncias. 
+2. No banner do console, clique em seu ícone de conta do usuário e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar as instâncias.
 3. Na tabela **vCenter Server**, visualize a lista de instâncias que são provisionadas na conta de usuário selecionada.
 
 Tabela 1. Itens de instâncias do VMware Federal
@@ -24,9 +24,9 @@ Tabela 1. Itens de instâncias do VMware Federal
 | Item        | Descrição       |  
 |:------------- |:------------- |
 | Nome | O nome da instância. |
-| Versão | A versão de liberação na qual a instância foi implementada ou para a qual teve upgrade feito. |  
+| Versão | A versão de liberação na qual a instância foi implementada ou submetida a upgrade. |  
 | Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada. |  
-| Horário de criação | A data e hora em que a instância foi criada. | 
+| Horário de criação | A data e hora em que a instância foi criada. |
 | Barra de Status | O status da instância. |
 
 A instância pode ter um intervalo de status.
@@ -60,7 +60,7 @@ Tabela 3. Propriedades de instância do VMware Federal
 | ID | O ID da instância. |
 | Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada. |
 | Versão atual |  A versão atual do {{site.data.keyword.vmwaresolutions_short}}. |
-| Versão do vCenter | A versão do VMware vCenter Server.<br><br>**Nota:** há uma ligeira variação entre a versão do vCenter Server exibida no console do {{site.data.keyword.vmwaresolutions_short}} e o VMware vSphere Web Client. Ambos estão corretos. |
+| Versão do vCenter | A versão do VMware vCenter Server.<br><br>**Nota:** há uma pequena variação entre a versão do vCenter Server que é exibida no console do {{site.data.keyword.vmwaresolutions_short}} e no VMware vSphere Web Client. Ambos estão corretos. |
 | NSX for vSphere | A versão do produto VMware NSX for vSphere. |
 | Edição de licença NSX | A versão e a edição da licença do VMware NSX. |
 | Domínio-raiz DNS | O nome do domínio-raiz é o nome de domínio do DNS (Sistema de Nomes de Domínio) e o nome raiz da floresta do Microsoft Active Directory (AD). |
@@ -114,8 +114,8 @@ Gerencie suas instâncias do console do {{site.data.keyword.vmwaresolutions_shor
 
 Revise os tópicos a seguir para obter informações que ajudarão a concluir as instruções de login:
 *  Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
-*  Para obter uma lista de pontos de acesso para efetuar login na Rede Privada da infraestrutura do {{site.data.keyword.cloud_notm}} usando a VPN, veja [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, veja [Implementando um arquivo OVF usando o vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
+*  Para obter uma lista de pontos de acesso para efetuar login na Rede privada da infraestrutura do {{site.data.keyword.cloud_notm}} usando a VPN, consulte [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
+*  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, consulte [Implementando um arquivo OVF usando o vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
 
 ### Links relacionados
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -12,15 +12,15 @@ lastupdated: "2018-08-02"
 
 Os servidores ESXi configurados quando você pediu uma instância são agrupados como **cluster1** por padrão.
 
-É possível incluir seus próprios clusters em instâncias do VMware vCenter Server para expandir a capacidade de cálculo e armazenamento. Em um cluster, é possível gerenciar servidores ESXi para melhor alocação de recurso e alta disponibilidade. Quando não for mais necessário, será possível excluir os clusters incluídos de suas instâncias.
+É possível incluir seus próprios clusters em instâncias do VMware vCenter Server para expandir a capacidade de cálculo e armazenamento. Em um cluster, é possível gerenciar servidores ESXi para melhor alocação de recurso e alta disponibilidade. Quando não forem mais necessários, exclua os clusters incluídos de suas instâncias.
 
-**Disponibilidade**: o recurso de exclusão está disponível somente para instâncias que são implementadas na (ou submetidas a upgrade para a) V2.3 e liberações mais recentes.
+**Disponibilidade**: o recurso de exclusão de cluster está disponível somente para instâncias que são implementadas (ou submetidas a upgrade) na V2.3 e mais recente.
 
 ## Incluindo clusters para instâncias do vCenter Server
 
 O número de clusters que podem ser incluídos em uma instância depende da versão da instância:
-* Para instâncias que foram implementadas na (ou submetidas a upgrade para a) V2.2 e liberações mais recentes, é possível incluir até 10 clusters.
-* Para instâncias que foram implementadas na V2.2 ou liberações anteriores, é possível incluir até 5 clusters.
+* Para instâncias que foram implementadas (ou submetidas a upgrade) na V2.2 e mais recente, é possível incluir até 10 clusters.
+* Para instâncias que foram implementadas na V2.2 ou anterior, é possível incluir até cinco clusters.
 
 ### Configurações do sistema
 
@@ -31,14 +31,14 @@ Ao incluir um cluster para uma instância do vCenter Server, deve-se especificar
 O nome do cluster deve atender aos requisitos a seguir:
 * Apenas caracteres alfanuméricos e o traço (-) são permitidos.
 * O nome do cluster deve iniciar e terminar com um caractere alfanumérico.
-* O comprimento máximo do nome do cluster é de 30 caracteres.
+* O número máximo de caracteres é 30.
 * O nome do cluster deve ser exclusivo dentro da instância do vCenter Server.
 
 #### Local do datacenter
 
-O local do {{site.data.keyword.CloudDataCent}} do cluster é configurado como o {{site.data.keyword.CloudDataCent_notm}} da instância do vCenter Server por padrão. É possível implementar o cluster em um {{site.data.keyword.CloudDataCent_notm}} diferente da instância implementada, mas deve-se assegurar que a latência de rede entre os dois {{site.data.keyword.CloudDataCents_notm}} seja menor que 150 ms. Para verificar a latência de rede, é possível usar uma ferramenta, como o [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
+O local do {{site.data.keyword.CloudDataCent}} do cluster é configurado como o {{site.data.keyword.CloudDataCent_notm}} da instância do vCenter Server por padrão. É possível implementar o cluster em um {{site.data.keyword.CloudDataCent_notm}} diferente da instância implementada, mas deve-se assegurar que a latência de rede entre os dois {{site.data.keyword.CloudDataCents_notm}} seja menor que 150 ms. Para verificar a latência de rede, é possível usar uma ferramenta, como o [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/).
 
-Se você implementar o cluster em um pod de infraestrutura diferente do {{site.data.keyword.CloudDataCent_notm}} ou {{site.data.keyword.cloud_notm}}, três VLANs adicionais serão pedidas para uso com os {{site.data.keyword.baremetal_short}} pedidos.
+Se você implementar o cluster em um pod de infraestrutura diferente do {{site.data.keyword.CloudDataCent_notm}} ou do {{site.data.keyword.cloud_notm}}, três VLANs extras serão pedidas para uso com o {{site.data.keyword.baremetal_short}} pedido.
 
 ### Configurações do Bare Metal Server
 
@@ -68,15 +68,15 @@ Tabela 1. Opções para {{site.data.keyword.baremetal_short}}customizado
 
 #### Número de Bare Metal Servers
 
-São necessários no mínimo dois {{site.data.keyword.baremetal_short}} para um cluster.
+Os clusters requerem pelo menos dois {{site.data.keyword.baremetal_short}}.
 
-Para instâncias do vCenter Server que são implementadas na V2.1 ou liberações mais recentes, é possível incluir até 59 {{site.data.keyword.baremetal_short}} para um cluster e incluir de 1 a 59 servidores ESXi de cada vez.
+Para instâncias do vCenter Server que são implementadas na V2.1 ou mais recente, é possível incluir até 59 {{site.data.keyword.baremetal_short}} para um cluster. É possível incluir de 1 a 59 servidores ESXi de cada vez.
 
-Para instâncias do vCenter Server que foram implementadas na V2.0 ou liberações anteriores, é possível incluir até 32 {{site.data.keyword.baremetal_short}} para um cluster. O número do {{site.data.keyword.baremetal_short}} que é possível incluir de cada vez é o seguinte:
+Para instâncias do vCenter Server que foram implementadas na V2.0 ou anterior, é possível incluir até 32 {{site.data.keyword.baremetal_short}} para um cluster. O número do {{site.data.keyword.baremetal_short}} que é possível incluir de cada vez é o seguinte:
 * Para as configurações do Bare Metal Server **Pequeno**, **Médio** e **Grande**, é possível incluir de 1 a 10 servidores ESXi de cada vez.
 * Para a configuração do Bare Metal Server **Customizado**, é possível incluir de 1 a 20 servidores ESXi de cada vez.
 
-Após a implementação, é possível criar até mais quatro clusters. Se você selecionar a configuração do Bare Metal Server **Customizado** com armazenamento VMware vSAN, 4 servidores serão necessários para o cluster inicial e os clusters pós-implementação.
+Após a implementação, é possível criar até mais quatro clusters. Se você selecionar a configuração **Customizado** do Bare Metal Server com armazenamento VMware vSAN, serão necessários quatro servidores para o cluster inicial e para os clusters pós-implementação.
 
 ### Configurações de armazenamento
 
@@ -84,9 +84,17 @@ As configurações de armazenamento são baseadas em sua seleção de configura�
 
 #### Armazenamento vSAN
 
-O vSAN está disponível somente para a configuração customizada de Bare Metal. É possível customizar o armazenamento do VMware vSAN especificando o número de discos de capacidade de vSAN (2, 4, 6 ou 8), o tipo de disco e tamanho que atendem às necessidades de armazenamento e a opção de licenciamento do vSAN.
+Especifique as seguintes opções vSAN:
 
-Se o seu cluster inicial era um cluster do vSAN, todos os clusters adicionais do vSAN usam a mesma licença do vSAN e têm a mesma configuração que o inicial. Isso também será verdadeiro se qualquer cluster na instância tiver vSAN escolhido para ser implementado nele (inicial ou adicional). A primeira vez que a licença vSAN (BYOL ou comprada) e a edição forem solicitadas a você. Na próxima vez que você selecionar o vSAN para um cluster adicional, a licença escolhida inicialmente será reutilizada.
+* **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
+* **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
+* **Tipo de disco para discos de cache vSAN**: selecione uma opção para os discos de cache necessários.
+
+    **Nota**: se desejar incluir discos de capacidade acima do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
+* **Número de discos de cache vSAN**: especifique o número de discos de cache que deseja incluir.
+* **Licença do vSAN**: use a licença do VMware fornecida pela IBM para o componente vSAN selecionando **Incluir com a compra** ou Bring Your Own License (BYOL) selecionando **Eu fornecerei** e inserindo sua própria chave de licença.
+
+Se o seu cluster inicial era um cluster do vSAN, todos os clusters adicionais do vSAN usam a mesma licença do vSAN e têm a mesma configuração que o inicial. Isso também será verdadeiro se qualquer cluster na instância tiver vSAN escolhido para ser implementado nele (inicial ou adicional). A primeira vez que você é solicitado pela licença vSAN (BYOL ou comprada) e a edição. Na próxima vez que você selecionar vSAN para um novo cluster, a licença escolhida inicialmente será reutilizada.
 
 #### Armazenamento NFS
 
@@ -96,10 +104,10 @@ Quando você selecionar **Armazenamento do NFS**, será possível incluir armaze
 
 * **Configurar compartilhamentos individualmente**: selecione para especificar
 diferentes definições de configuração para cada compartilhamento de arquivo.
-* **Número de compartilhamentos**: ao usar a mesma definição de configuração para cada compartilhamento de arquivo, especifique o número de compartilhamentos de arquivos para o armazenamento compartilhado do NFS que você deseja incluir.
+* **Número de compartilhamentos**: quando quiser usar a mesma definição de configuração para cada compartilhamento de arquivo, especifique o número de compartilhamentos de arquivos para o armazenamento compartilhado NFS que quiser incluir.
 * **Tamanho**: selecione a capacidade que atenda às suas necessidades de armazenamento compartilhado.
-* **Desempenho**: selecione o IOPS (Input/output Operations Per Second) por GB com base em seus requisitos de carga de trabalho.
-* **ADD NFS**: selecione para incluir compartilhamentos de arquivos individuais que usarão definições de configuração diferentes.
+* **Desempenho**: selecione o IOPS (operações de entrada/saída por segundo) por GB com base em seus requisitos de carga de trabalho.
+* **INCLUIR NFS**: selecione para incluir compartilhamentos de arquivos individuais com definições de configuração diferentes.
 
 Tabela 2. Opções de nível de desempenho do NFS
 
@@ -115,6 +123,15 @@ Especifique a opção de licenciamento para o componente VMware vSphere no clust
 * Para usuários do Parceiro de Negócios, a licença do vSphere (Enterprise Plus edition) é incluída e comprada em seu nome.
 * Para usuários não do Parceiro de Negócios, é possível usar as licenças do VMware fornecidas pela IBM para esse componente selecionando **Incluir com a compra** ou usar o Bring Your Own License (BYOL) selecionando **Eu fornecerei** e inserindo sua própria chave de licença.
 
+### Configurações da interface de rede
+
+As configurações de ativação da Placa da interface de rede (NIC) baseiam-se em sua seleção de **Rede pública e privada** ou **Somente rede privada**. Os serviços complementares a seguir requerem NICs públicas e não estarão disponíveis se você selecionar a opção privada:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
+
 ### Resumo do Pedido
 
 Com base em sua configuração selecionada para o cluster, o custo estimado é gerado instantaneamente e exibido na área de janela direita **Resumo do pedido**.
@@ -125,27 +142,23 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 2. Na tabela **Instâncias do vCenter Server**, clique na instância na qual você deseja incluir clusters.
 
    **Nota**: assegure-se de que a instância esteja no status **Pronto para usar**. Caso contrário, não será possível incluir clusters na instância.
-
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda e clique em **Incluir** no canto superior direito da tabela **CLUSTERS**.
 4. Na página **Incluir cluster**, insira o nome do cluster.
 5. Se você desejar hospedar o cluster em um {{site.data.keyword.CloudDataCent_notm}} diferente daquele no qual a instância está hospedada, sob **Bare Metal Server**, marque a caixa de seleção **Selecionar um local diferente** e escolha o {{site.data.keyword.CloudDataCent_notm}} para hospedar a instância.
 6. Conclua a configuração do Bare Metal.
-   * Se tiver selecionado **Pré-configurado**, especifique a **Configuração do Bare Metal Server** e o **Número de {{site.data.keyword.baremetal_short}}**. Se estiver planejando usar vSAN como sua solução de armazenamento, observe que será necessário um mínimo de 4 {{site.data.keyword.baremetal_short}}.
+   * Se tiver selecionado **Pré-configurado**, especifique a **Configuração do Bare Metal Server** e o **Número de {{site.data.keyword.baremetal_short}}**. Se estiver planejando usar vSAN como sua solução de armazenamento, serão necessários no mínimo quatro {{site.data.keyword.baremetal_short}}.
    * Se tiver selecionado **Customizado**, especifique o **Modelo de CPU**, a quantia de **RAM** e o **Número de {{site.data.keyword.baremetal_short}}**.
 7. Conclua a configuração de armazenamento.
-  * Quando você selecionar **Armazenamento vSAN**, especifique o **Tipo
-e tamanho do disco para discos de capacidade vSAN**, o **Número de discos de
-capacidade vSAN** e como a **Licença vSAN** deve ser fornecida.
-  * Quando você selecionar **Armazenamento NFS** e desejar incluir e definir as mesmas configurações para todos os compartilhamentos de arquivos, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
-  * Quando você selecionar **Armazenamento NFS** e desejar incluir e configurar compartilhamentos de arquivos individualmente, selecione **Configurar compartilhamentos
-individualmente**, em seguida, clique no ícone **+** ao lado do rótulo **Incluir NFS** e selecione o **Tamanho** e o **Desempenho**
-para cada compartilhamento de arquivo individual. Deve-se selecionar pelo menos um compartilhamento de arquivo.
+  * Se você selecionar **Armazenamento vSAN**, especifique os tipos de disco para os discos de capacidade e de cache, o número de discos e a edição de licença vSAN. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
+  * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar as mesmas configurações para todos os compartilhamentos de arquivo, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
+  * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar compartilhamentos de arquivo individualmente, selecione **Configurar compartilhamentos individualmente**. Em seguida, clique no ícone **+** próximo ao rótulo **Incluir NFS** e selecione o **Tamanho** e o **Desempenho** para cada compartilhamento de arquivo. Deve-se selecionar pelo menos um compartilhamento de arquivo.
 8. Especifique como a chave de licença do vSphere é fornecida:
   * Para usuários do Parceiro de Negócios, a licença do vSphere (Enterprise Plus edition) é incluída e comprada em seu nome.
-  * Para usuários que não são Parceiros de Negócios, é possível selecionar uma das opções a seguir:
+  * Para usuários que não são Parceiros de Negócios, é possível selecionar uma das seguintes opções:
       * Se você deseja que novas licenças sejam compradas em seu nome, selecione **Incluir com a compra** para o componente.
-      * Se você deseja usar sua própria licença do VMware para o componente, selecione **Eu fornecerei** e insira sua chave de licença para ele.
-9. Na área de janela **Resumo do pedido**, verifique a configuração de cluster antes de incluir o cluster.
+      * Se quiser usar sua própria licença VMware para o componente, selecione **Eu fornecerei** e insira sua chave de licença.
+9. Selecione a configuração de rede de **Rede pública e privada** ou **Somente rede privada**.
+10. Na área de janela **Resumo do pedido**, verifique a configuração de cluster antes de incluir o cluster.
    1. Revise as configurações para o cluster.
    2. Revise o custo estimado do cluster. Clique em **Detalhes da precificação** para gerar um PDF de resumo. Para salvar ou imprimir o resumo de seu pedido, clique no ícone **Imprimir** ou **Fazer download** no canto superior direito da janela PDF.
    3. Clique no link ou nos links dos termos que se aplicam ao seu pedido e confirme que concorda com esses termos antes de incluir o cluster.
@@ -217,15 +230,15 @@ para cada compartilhamento de arquivo individual. Deve-se selecionar pelo menos 
 
 ## Excluindo os clusters de instâncias do vCenter Server
 
-Talvez você queira excluir um cluster de uma instância quando ela não for mais necessária.
+Talvez você queira excluir um cluster de uma instância no caso de ela não ser mais necessária.
 
 ### Antes de excluir
 
-* Use este procedimento para excluir clusters de instâncias implementadas na V2.3 ou liberações mais recentes.
-* Para clusters implementados em instâncias da V2.2 ou anteriores, deve-se fazer upgrade da instância para a V2.3 para ser possível excluir os clusters incluídos na instância.
-* É possível excluir um único cluster de cada vez. Para excluir múltiplos clusters, deve-se fazer isso em sequência, aguardando que o cluster anterior seja excluído antes de tentar excluir o próximo cluster.
+* Use este procedimento para excluir clusters de instâncias que são implementadas na V2.3 ou mais recente.
+* Para clusters implementados em instâncias V2.2 ou anteriores, deve-se fazer upgrade da instância para a V2.3, no caso de querer excluir os clusters incluídos na instância.
+* É possível excluir um único cluster de cada vez. Para excluir mais de um cluster, deve-se fazê-lo em sequência. Espere que o cluster anterior seja excluído antes de excluir o próximo.
 * Assegure-se de que todos os nós em um cluster estejam ativados e operacionais antes de excluir o cluster.
-* Ao excluir um cluster, todas as VMs (máquinas virtuais) do cluster também serão excluídas e não poderão ser recuperadas. Se quiser manter as VMs, migre-as para outros clusters.
+* Quando você exclui um cluster, todas as VMs (máquinas virtuais) do cluster também são excluídas e não podem ser recuperadas. Se quiser manter as VMs, migre-as para outros clusters.
 * O cluster padrão não pode ser excluído.
 
 ## Procedimento para excluir clusters de instâncias do vCenter Server

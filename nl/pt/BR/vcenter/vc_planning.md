@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
 # Requisitos e planejamento para instâncias do vCenter Server
 
-Revise os seguintes requisitos antes de pedir suas instâncias do VMware vCenter Server. Planeje sua instância com base no {{site.data.keyword.CloudDataCent}} local, nos requisitos de capacidade de carga de trabalho e nos requisitos de serviço adicionais.
+Revise os seguintes requisitos antes de pedir suas instâncias do VMware vCenter Server. Planeje sua instância com base no local do {{site.data.keyword.CloudDataCent}}, nos requisitos de capacidade de carga de trabalho e nos requisitos de serviço complementares.
 
 ## Requisitos da conta do IBM Cloud
 
@@ -62,7 +62,7 @@ Tabela 2. Indicadores de status para {{site.data.keyword.CloudDataCents_notm}} a
 | Status | Detalhes do status |
 |:------------------------------|:--------------------------------------------------|
 | Em breve                   | O {{site.data.keyword.CloudDataCent_notm}} não está disponível atualmente. |
-| Provisoriamente fora do inventário  | O {{site.data.keyword.CloudDataCent_notm}} não possui disponibilidade neste momento. |
+| Provisoriamente fora do inventário  | O  {{site.data.keyword.CloudDataCent_notm}}  não tem nenhuma disponibilidade atualmente. |
 | Inventário limitado             | O {{site.data.keyword.CloudDataCent_notm}} limitou a disponibilidade e o pedido pode não estar concluído. |
 
 ## Backup de componentes de gerenciamento
@@ -75,7 +75,7 @@ Você é responsável por manter e assegurar a disponibilidade de todos os compo
 
 ## Considerações sobre capacidade
 
-Para obter informações e considerações de capacidade, consulte [Capacidade de ajuste de escala](../archiref/solution/solution_scaling.html).
+Para obter mais informações sobre considerações de capacidade, consulte [Capacidade de ajuste de escala](../archiref/solution/solution_scaling.html).
 
 ### Links relacionados
 

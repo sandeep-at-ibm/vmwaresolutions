@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -59,7 +59,7 @@ Um mínimo de 2 {{site.data.keyword.baremetal_short}} é necessário para um clu
 
 Para instâncias do VMware Federal que são implementadas na V2.3 ou mais recente, é possível incluir até 59 {{site.data.keyword.baremetal_short}} para um cluster e incluir de 1 a 59 servidores ESXi de cada vez.
 
-Após a implementação, é possível criar até mais quatro clusters. Para configurações de armazenamento vSAN, 4 servidores são necessários para o cluster inicial e os clusters de pós-implementação.
+Após a implementação, é possível criar até mais quatro clusters. Para configurações de armazenamento vSAN, são necessários quatro servidores para o cluster inicial e para os clusters pós-implementação.
 
 ### Configurações de armazenamento
 
@@ -67,13 +67,18 @@ As configurações de armazenamento são baseadas em sua seleção de configura�
 
 #### Armazenamento vSAN
 
-Para vSAN, especifique as opções de armazenamento a seguir:
+Especifique as seguintes opções vSAN:
 
-* **Tipo e tamanho do disco para discos de capacidade vSAN**: selecione a capacidade que atenda às suas necessidades de armazenamento compartilhado.
-* **Número de discos de capacidade vSAN**: selecione o número de discos para o armazenamento compartilhado vSAN que você deseja incluir. As quantidades de disco devem ser 2, 4, 6 ou 8.
-* Selecione a edição de licença VMware vSAN 6.6 (Avançada ou Corporativa).
+* **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
+* **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
+* **Tipo de disco para discos de cache vSAN**: selecione uma opção para os discos de cache necessários.
 
-Se o seu cluster inicial era vSAN, todos os clusters vSAN adicionais usarão a mesma licença vSAN e terão a mesma configuração que o cluster vSAN inicial. Isso também será verdadeiro se qualquer cluster na instância tiver vSAN escolhido para ser implementado nele (inicial ou adicional). Na primeira vez, você é solicitado para a licença do vSAN e a edição. Na próxima vez que você selecionar vSAN para um cluster adicional, o que você tiver escolhido inicialmente será reutilizado.
+    **Nota**: se desejar incluir discos de capacidade acima do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
+
+* **Número de discos de cache vSAN**: especifique o número de discos de cache que deseja incluir.
+* **Licença vSAN**: selecione a edição de licença VMware vSAN 6.6 (Advanced ou Enterprise).
+
+Se o seu cluster inicial tiver sido incluído como um cluster vSAN, quaisquer clusters vSAN adicionais usarão a mesma licença vSAN e a mesma configuração que o cluster vSAN inicial. Isso também será verdadeiro se qualquer cluster na instância tiver vSAN escolhido para ser implementado nele (inicial ou adicional). Na primeira vez que você incluir um cluster, será solicitada a licença vSAN e a edição. Na próxima vez que você selecionar vSAN para um novo cluster, o que você tiver escolhido inicialmente será reutilizado.
 
 #### Armazenamento NFS
 
@@ -86,7 +91,7 @@ diferentes definições de configuração para cada compartilhamento de arquivo.
 * **Número de compartilhamentos**: ao usar a mesma definição de configuração para cada compartilhamento de arquivo, especifique o número de compartilhamentos de arquivos para o armazenamento compartilhado do NFS que você deseja incluir.
 * **Tamanho**: selecione a capacidade que atenda às suas necessidades de armazenamento compartilhado.
 * **Desempenho**: selecione o IOPS (Input/output Operations Per Second) por GB com base em seus requisitos de carga de trabalho.
-* **ADD NFS**: selecione para incluir compartilhamentos de arquivos individuais que usarão definições de configuração diferentes.
+* **INCLUIR NFS**: selecione para incluir compartilhamentos de arquivos individuais com definições de configuração diferentes.
 
 Tabela 2. Opções de nível de desempenho do NFS
 
@@ -98,11 +103,11 @@ Tabela 2. Opções de nível de desempenho do NFS
 
 ### Configurações de licenciamento
 
-	Licenças do VMware fornecidas pelo {{site.data.keyword.IBM}} para o seguinte:
-  * VMware vSphere Enterprise Plus 6.5u1
-  * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
-  * (Para clusters do vSAN) VMware vSAN Advanced ou Enterprise 6.6
+	Licenças fornecidas pela {{site.data.keyword.IBM}} para os componentes VMware a seguir:
+  * vSphere Enterprise Plus 6.5u1
+  * vCenter Server 6.5
+  * NSX Service Providers 6.4 (Edição Base, Advanced ou Enterprise)
+  * (Para clusters vSAN) vSAN 6.6 (Edição Advanced ou Enterprise)
 
 ### Resumo do Pedido
 
@@ -114,18 +119,13 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 2. Na tabela **Instância do vCenter Server**, clique na instância na qual você deseja incluir clusters.
 
    **Nota**: assegure-se de que a instância esteja no status **Pronto para usar**. Caso contrário, não será possível incluir clusters na instância.
-
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda e clique em **Incluir** no canto superior direito da tabela **CLUSTERS**.
 4. Na página **Incluir cluster**, insira o nome do cluster.
 5. Selecione o **Modelo de CPU**, a quantia de **RAM** e o **Número de Bare Metal Servers** para a configuração do Bare Metal.
 6. Conclua a configuração de armazenamento.
-  * Quando você selecionar **Armazenamento vSAN**, especifique o **Tipo
-e tamanho do disco para discos de capacidade vSAN**, o **Número de discos de
-capacidade vSAN** e como a **Licença vSAN** deve ser fornecida.
-  * Quando você selecionar **Armazenamento NFS** e desejar incluir e definir as mesmas configurações para todos os compartilhamentos de arquivos, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
-  * Quando você selecionar **Armazenamento NFS** e desejar incluir e configurar compartilhamentos de arquivos individualmente, selecione **Configurar compartilhamentos
-individualmente**, em seguida, clique no ícone **+** ao lado do rótulo **Incluir NFS** e selecione o **Tamanho** e o **Desempenho**
-para cada compartilhamento de arquivo individual. Deve-se selecionar pelo menos um compartilhamento de arquivo.
+  * Se você selecionar **Armazenamento vSAN**, especifique os tipos de disco para os discos de capacidade e de cache, além do número de discos. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
+  * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar as mesmas configurações para todos os compartilhamentos de arquivo, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
+  * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar compartilhamentos de arquivo individualmente, selecione **Configurar compartilhamentos individualmente** e, em seguida, clique no ícone **+** próximo à etiqueta **Incluir NFS** e selecione o **Tamanho** e o **Desempenho** para cada compartilhamento de arquivo individual. Deve-se selecionar pelo menos um compartilhamento de arquivo.
 7. Selecione a edição de licença para VMware vSAN para a configuração de licença.
 8. Na área de janela **Resumo do pedido**, verifique a configuração de cluster antes de incluir o cluster.
    1. Revise as configurações para o cluster.
@@ -227,7 +227,7 @@ Talvez você queira excluir um cluster de uma instância quando ela não for mai
 * Para clusters implementados em instâncias da V2.2 ou anteriores, deve-se fazer upgrade da instância para a V2.3 para ser possível excluir os clusters incluídos na instância.
 * É possível excluir um único cluster de cada vez. Para excluir múltiplos clusters, deve-se fazer isso em sequência, aguardando que o cluster anterior seja excluído antes de tentar excluir o próximo cluster.
 * Assegure-se de que todos os nós em um cluster estejam ativados e operacionais antes de excluir o cluster.
-* Ao excluir um cluster, todas as VMs (máquinas virtuais) do cluster também serão excluídas e não poderão ser recuperadas. Se quiser manter as VMs, migre-as para outros clusters.
+* Quando você exclui um cluster, todas as VMs (máquinas virtuais) do cluster também são excluídas e não podem ser recuperadas. Se quiser manter as VMs, migre-as para outros clusters.
 * O cluster padrão não pode ser excluído.
 
 ## Procedimento para excluir clusters de instâncias do VMware Federal

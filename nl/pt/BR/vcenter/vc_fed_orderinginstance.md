@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
 # Pedindo instâncias do VMware Federal
 
-Para implementar uma plataforma virtualizada VMware flexível e customizável que melhor se ajuste às suas necessidades de carga de trabalho, peça uma instância do VMware Federal que permite desconectar a conexão de gerenciamento aberta e proteger a instância implementada.
+Para implementar uma plataforma virtualizada VMware flexível e customizável que melhor atenda às suas necessidades de carga de trabalho, peça uma instância do VMware Federal. As instâncias do VMware Federal ajudam a desconectar a conexão de gerenciamento aberta e a proteger sua instância implementada.
 
-**Nota:** apenas as instâncias do vCenter Server suportam o VMware Federal on {{site.data.keyword.cloud}} neste momento.
+**Nota:** atualmente, somente instâncias do vCenter Server suportam o VMware Federal on {{site.data.keyword.cloud}}.
 
-## Requisitos
+## Requisitos para pedir instâncias do VMware Federal
 
 Assegure-se de que tenha concluído as tarefas a seguir:
 * Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](../vmonic/useraccount.html).
@@ -33,11 +33,11 @@ Tabela 1. Formato de valor para nomes de instância e de domínio
   | Nome do servidor ESXi totalmente qualificado | `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que `<n>` é a sequência do servidor ESXi. O comprimento máximo é de 50 caracteres. |  
   | FQDN do PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é de 50 caracteres. |
 
-**Importante**: não modifique quaisquer valores que são configurados durante o pedido e a implementação da instância. Isso pode fazer com que a instância se torne inutilizável. Por exemplo, a rede pública pode ser encerrada, os servidores e Virtual Server Instances (VSIs) podem mover-se atrás de um Vyatta quando a provisão está em andamento, ou o IBM CloudBuilder VSI pode ser parado ou ser excluído.
+**Importante**: não modifique nenhum valor configurado durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
 
 ## Configurações do sistema
 
-Deve-se especificar as configurações do sistema a seguir ao pedir uma instância do VMware Federal.
+Deve-se especificar as seguintes configurações do sistema ao pedir uma instância do VMware Federal.
 
 ### Nome da instância
 
@@ -49,16 +49,16 @@ O nome da instância deve atender aos requisitos a seguir:
 
 ### Principal ou secundário
 
-Solicite uma nova instância primária. A implementação de uma instância secundária para alta disponibilidade não é suportada neste momento.
+Solicite uma nova instância primária. A implementação de uma instância secundária para alta disponibilidade não é suportada atualmente.
 
 ## Configurações de licenciamento
 
-Licenças do VMware fornecidas pela IBM para o seguinte:
+Licenças fornecidas pela IBM para os seguintes componentes VMware:
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
-* (Para clusters do vSAN) VMware vSAN Advanced ou Enterprise 6.6
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4 (Edição Base, Advanced ou Enterprise)
+* (Para clusters vSAN) vSAN 6.6 (Edição Advanced ou Enterprise)
 
 **Atenção:**
 
@@ -67,7 +67,7 @@ Licenças do VMware fornecidas pela IBM para o seguinte:
 
 ## Configurações do Bare Metal Server
 
-As configurações de Bare Metal são baseadas em sua configuração customizada. A opção para selecionar uma configuração pré-configurada não é suportada neste momento.
+As configurações de Bare Metal são baseadas em sua configuração customizada. A opção para selecionar uma configuração pré-configurada não é suportada atualmente.
 
 ### Local do datacenter
 
@@ -100,11 +100,15 @@ As configurações de armazenamento são baseadas em sua seleção de configura�
 
 ### Armazenamento vSAN
 
-Para vSAN, especifique as opções de armazenamento a seguir:
+Especifique as seguintes opções vSAN:
 
-* **Tipo e tamanho do disco para discos de capacidade vSAN**: selecione a capacidade que atenda às suas necessidades de armazenamento compartilhado.
-* **Número de discos de capacidade vSAN**: selecione o número de discos para o armazenamento compartilhado vSAN que você deseja incluir. As quantidades de disco devem ser 2, 4, 6 ou 8.
-* Selecione a edição de licença VMware vSAN 6.6 (Avançada ou Corporativa).
+* **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
+* **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
+* **Tipo de disco para discos de cache vSAN**: selecione uma opção para os discos de cache necessários.
+
+    **Nota**: se desejar incluir discos de capacidade acima do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
+* **Número de discos de cache vSAN**: especifique o número de discos de cache que deseja incluir.
+* **Licença vSAN**: selecione a edição de licença vSAN 6.6 (Advanced ou Enterprise).
 
 ### Armazenamento NFS
 
@@ -162,21 +166,21 @@ Selecione a configuração do Sistema de Nomes de Domínio (DNS) para sua instâ
 * **Único VSI público do Windows para o Active Directory/DNS**: um único VSI do Microsoft Windows Server para o Microsoft Active Directory (AD), que funciona como o DNS para a instância na qual os hosts e as máquinas virtuais são registrados, é implementado e pode ser consultado.
 * **Duas VMs do Windows Server dedicadas e altamente disponíveis no cluster de gerenciamento**: para a V2.3 e liberações futuras, duas máquinas virtuais do Microsoft Windows são implementadas, ajudando a aprimorar a segurança e robustez.
 
-**Importante:** deve-se fornecer duas licenças do Microsoft Windows Server 2012 R2 se você configurar sua instância para usar as duas máquinas virtuais do Microsoft Windows. Use a licença da edição Microsoft Windows Server 2012 R2 Standard e/ou a licença da edição Microsoft Windows Server 2012 R2 Datacenter.
+**Importante:** deve-se fornecer duas licenças do Microsoft Windows Server 2012 R2 se você configurar sua instância para usar as duas máquinas virtuais do Microsoft Windows. Use a licença da edição Standard do Microsoft Windows Server 2012 R2 ou a licença da edição Datacenter do Microsoft Windows Server 2012 R2 ou ambas.
 
-Atualmente, cada licença pode ser designada a apenas um único servidor físico e abrange até dois processadores físicos. Uma licença Standard Edition é capaz de executar duas máquinas virtuais virtualizadas do Microsoft Windows por servidor com 2 processadores. Portanto, duas licenças são necessárias, pois duas máquinas virtuais do Microsoft Windows são implementadas em dois hosts diferentes.
+Atualmente, cada licença pode ser designada a apenas um único servidor físico e abrange até dois processadores físicos. Usando uma licença da edição Standard, é possível executar duas máquinas virtuais virtualizadas do Microsoft Windows por servidor de 2 processadores. Portanto, duas licenças são necessárias, pois duas máquinas virtuais do Microsoft Windows são implementadas em dois hosts diferentes.
 
 Você tem 30 dias para ativar as máquinas virtuais.
 
-Para obter mais informações sobre como pedir o licenciamento do Windows, veja [Documentação do Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+Para obter mais informações sobre como pedir o licenciamento do Windows, consulte [Documentação do Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Resumo do Pedido
 
 Com base em sua configuração selecionada para a instância, o custo estimado é gerado instantaneamente e exibido na seção **Resumo do pedido** na área de janela direita. Clique em **Detalhes da precificação** na parte inferior da área de janela direita para gerar um documento PDF que forneça os detalhes da estimativa.
 
-## Procedimento
+## Procedimento para pedir instâncias do VMware Federal
 
-1. No Catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **vCenter Server** na seção **Datacenters virtuais **.
+1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **vCenter Server** na seção **Data centers virtuais**.
 2. Na página **VMware vCenter Server on IBM Cloud**, clique no cartão **vCenter Server** e clique em **Criar**.
 3. Na página **vCenter Server**, insira o nome da instância.
 4. Clique em **Instância primária** para implementar uma única instância no ambiente.
@@ -185,13 +189,9 @@ Com base em sua configuração selecionada para a instância, o custo estimado �
   1. Selecione o {{site.data.keyword.CloudDataCent_notm}} para hospedar a instância.
   2. Selecione o modelo de CPU **Customizado** e a quantia de **RAM**.
 7. Conclua a configuração de armazenamento.
-  * Quando você selecionar **Armazenamento vSAN**, especifique o **Tipo
-e tamanho do disco para discos de capacidade vSAN**, o **Número de discos de
-capacidade vSAN** e como a **Licença vSAN** deve ser fornecida.
-  * Quando você selecionar **Armazenamento NFS** e desejar incluir e definir as mesmas configurações para todos os compartilhamentos de arquivos, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
-  * Quando você selecionar **Armazenamento NFS** e desejar incluir e configurar compartilhamentos de arquivos individualmente, selecione **Configurar compartilhamentos
-individualmente**, em seguida, clique no ícone **+** ao lado do rótulo **Incluir NFS** e selecione o **Tamanho** e o **Desempenho**
-para cada compartilhamento de arquivo individual. Deve-se selecionar pelo menos um compartilhamento de arquivo.
+  * Se você selecionar **Armazenamento vSAN**, especifique os tipos de disco para os discos de capacidade e de cache, o número de discos e a edição de licença vSAN. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
+  * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar as mesmas configurações para todos os compartilhamentos de arquivo, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
+  * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar compartilhamentos de arquivo individualmente, selecione **Configurar compartilhamentos individualmente** e, em seguida, clique no ícone **+** próximo à etiqueta **Incluir NFS** e selecione o **Tamanho** e o **Desempenho** para cada compartilhamento de arquivo individual. Deve-se selecionar pelo menos um compartilhamento de arquivo.
 8. Conclua a configuração da interface de rede.
    1. Insira o prefixo de nome do host, o rótulo do subdomínio e o nome do domínio-raiz.
    2. Selecione a configuração do DNS.
@@ -213,7 +213,7 @@ Quando a instância estiver pronta para usar, seu status mudará para **Pronta p
 
 Visualize, gerencie ou proteja a instância do VMware Federal que você pediu.
 
-**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados em sua conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do	{{site.data.keyword.slportal}} ou de qualquer outro meio fora do console.
+**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados na conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não no	{{site.data.keyword.slportal}} ou por qualquer outro meio fora do console.
 Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
 **CUIDADO:** Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:

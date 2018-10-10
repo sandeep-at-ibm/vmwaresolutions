@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -30,7 +30,7 @@ Uma implementação de vários sites consiste nos componentes a seguir.
    *  Subdomínio do DNS que é vinculado ao domínio-raiz na instância primária
    *  Configuração de replicação DNS e AD entre as máquinas virtuais AD nas instâncias primárias e secundárias.
    *  PSC (Platform Services Controller) implementado e configurado para replicar com o PSC na instância primária.
-   *  O VMware vCenter nas instâncias secundárias são configurados com o Modo Vinculado Aprimorado para o vCenter na instância primária.
+   *  O VMware vCenter nas instâncias secundárias é configurado com o Modo vinculado avançado para o vCenter na instância primária.
 
 ## Implementação de vários sites do vCenter Server
 
