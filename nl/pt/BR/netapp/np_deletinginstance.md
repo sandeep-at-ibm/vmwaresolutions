@@ -37,10 +37,10 @@ Devido a dependências de recursos, os componentes em sua instância não são l
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do NetApp ONTAP Select**, clique na instância a ser excluída.
-3. Clique no ícone de menu overflow à direita de **Console do NetApp** e clique em **Excluir instância**.
+3. Clique no ícone do menu overflow próximo ao **console do NetApp** e clique em **Excluir instância**.
    O status da instância é mudado para **Excluindo**. Quando a instância for excluída com êxito, seus componentes serão liberados e seu status mudará para **Excluído**.
 4. Se desejar remover o registro da instância do console do {{site.data.keyword.vmwaresolutions_short}}, conclua as etapas a seguir:
-   1. Clique no ícone de menu overflow à direita do **Console do vCenter** novamente e clique em **Excluir instância**.
+   1. Clique no ícone do menu overflow próximo ao **Console do vCenter** novamente e clique em **Excluir instância**.
    2. Na janela **Excluir instância**, clique em **OK**.
 
 ### Links relacionados

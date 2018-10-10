@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -18,11 +18,11 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 *  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](../vmonic/useraccount.html).
 *  Você revisou os requisitos e considerações em [Requisitos e planejamento para instâncias do NetApp ONTAP Select](np_planning.html).
 
-**Importante: não modifique nenhum valor configurado durante o pedido e a implementação da instância. Fazer isso pode tornar sua instância inutilizável.**
+**Importante**: não modifique nenhum valor configurado durante o pedido ou a implementação da instância. Isso tornará a instância não utilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
 
 ## Configurações do sistema
 
-Ao solicitar uma instância do NetApp ONTAP Select, deve-se especificar suas configurações básicas.
+Ao pedir uma instância do NetApp ONTAP Select, deve-se especificar as configurações básicas a seguir.
 
 ### Nome da instância
 
@@ -56,15 +56,15 @@ O rótulo do subdomínio deve atender aos requisitos a seguir:
 O nome do domínio-raiz deve atender aos requisitos a seguir:
 * O nome de domínio deve consistir em duas ou mais sequências separadas por ponto (.)
 * A primeira sequência deve começar com um caractere alfabético e terminar com um caractere alfanumérico.
-* Todas as sequências, exceto a última, podem conter apenas caracteres alfanuméricos e de traço (-).
-* A última sequência pode conter apenas caracteres alfabéticos.
+* Todas as sequências, exceto a última, podem incluir somente caracteres alfanuméricos e traço (-).
+* A última sequência pode incluir somente caracteres alfabéticos.
 * O comprimento da última sequência deve estar no intervalo de 2 a 24 caracteres.
 
 **Nota:** o comprimento máximo do FQDN (Nome completo do domínio) para hosts e VMs (máquinas virtuais) é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
 
 ## Configurações de licenciamento
 
-Deve-se fazer upload de quatro arquivos de licenciamento NetApp porque cada um dos quatro {{site.data.keyword.baremetal_short}} requer uma licença. Entre em contato com sua equipe de vendas do NetApp para obter o licenciamento adequado para sua implementação de alto desempenho ou de alta capacidade.
+Deve-se fazer upload de quatro arquivos de licenciamento NetApp, um para cada um dos quatro {{site.data.keyword.baremetal_short}}. Entre em contato com a equipe de vendas do NetApp para obter o licenciamento apropriado para sua implementação de alto desempenho ou alta capacidade.
 
 ## Configurações do Bare Metal Server
 
@@ -75,11 +75,11 @@ Deve-se selecionar o {{site.data.keyword.CloudDataCent_notm}} no qual a instânc
 ### Configuração do Bare Metal Server
 
 Selecione uma configuração do Bare Metal Server com base em seus requisitos:
-* **Alto desempenho (Médio)** – Licença completa/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2,2 GHz)/128 GB de RAM/Capacidade de vinte e duas unidades SSD de 1,9 TB por nó/Capacidade efetiva de um cluster de 4 nós – 59 TB
-* **Alto desempenho (Grande)** – Licença completa/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2,2 GHz)/128 GB de RAM/Capacidade de vinte e duas unidades SSD de 3,8 TB por nó/Capacidade efetiva de um cluster de 4 nós – 118 TB
+* **Alto desempenho (Médio)** – Licença Premium/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2.2 GHz)/128 GB de RAM/22 unidades SSD de 1,9 TB de capacidade por nó/Capacidade efetiva de um cluster de 4 nós – 59 TB
+* **Alto desempenho (Grande)** – Licença Premium/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2.2 GHz)/128 GB de RAM/22 unidades SSD de 3,8 TB de capacidade por nó/Capacidade efetiva de um cluster de 4 nós – 118 TB
 * **Alta capacidade** - Licença padrão/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2,2 GHz)/64 GB de RAM/Capacidade de trinta e quatro unidades SATA de 4 TB por nó/Capacidade efetiva de um cluster de 4 nós – 190 TB
 
-**Nota:** as unidades SSD (Solid-State Disk) de 3,8 TB serão suportadas quando forem disponibilizadas de maneira geral em um {{site.data.keyword.CloudDataCent_notm}}.
+**Nota:** as unidades SSD (Solid-State Disk) de 3,8 TB serão suportadas quando forem disponibilizadas geralmente em um {{site.data.keyword.CloudDataCent_notm}}.
 
 ### Número de Bare Metal Servers
 
@@ -97,14 +97,14 @@ O número de servidores ESXi de uma instância do NetApp ONTAP Select é 4 por p
    2. Selecione a configuração do Bare Metal Server.
 7. Na área de janela **Resumo do pedido**, verifique a configuração da instância antes de fazer o pedido.
     1. Revise as configurações para a instância.
-    2. Revise o custo estimado da instância. Clique em **Detalhes da precificação** para gerar um PDF de resumo. Para salvar ou imprimir o resumo de seu pedido, clique no ícone **Imprimir** ou **Fazer download** no canto superior direito da janela PDF.
+    2. Revise o custo estimado da instância. Clique em **Detalhes da precificação** para gerar um PDF de resumo. Para salvar ou imprimir o resumo de seu pedido, clique no ícone **Imprimir** ou **Download** na janela PDF.
     3. Assegure-se de que a conta a ser cobrada esteja correta e, em seguida, marque a caixa de seleção **Entendo que a conta listada abaixo será cobrada**.
     4. Clique no link ou nos links dos termos que se aplicam ao seu pedido. Assegure-se de que concorda com esses termos e, em seguida, marque a caixa de seleção **Li e concordei com os Contratos de Prestação de Serviços de Terceiros listados abaixo**.
     5. Clique em **Provisão**.
 
 ## Resultados
 
-A implementação da instância é iniciada automaticamente. Você receberá confirmação de que o pedido está sendo processado e será possível verificar o status da implementação visualizando os detalhes da instância.
+A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
 
 Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do NetApp ONTAP Select](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) serão instalados em sua plataforma virtual do VMware.
 
