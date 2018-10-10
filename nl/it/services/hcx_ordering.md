@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-17"
 
 ---
 
@@ -25,8 +25,15 @@ Per aggiungere il servizio VMware HCX on {{site.data.keyword.cloud_notm}} in un'
 
 Per installare HCX on {{site.data.keyword.cloud_notm}}, completa le seguenti impostazioni:
 1. Specifica il **Tipo di interconnessione HCX** selezionando una delle seguenti opzioni:
-  * **Rete pubblica**: HCX crea una connessione crittografata tra i siti sulla rete pubblica.
-  * **Rete privata**: HCX crea una connessione crittografata tra i siti sulla rete privata.
+  * **Rete pubblica**: HCX crea una connessione crittografata tra i siti sulla rete pubblica. La registrazione e la misurazione della licenza vengono eseguite sulla rete pubblica.
+  * **Interconnessione privata**: HCX crea una connessione crittografata tra i siti sulla rete privata. La registrazione e la misurazione della licenza vengono eseguite sulla rete pubblica.
+  * **Rete privata**: HCX crea una connessione crittografata tra i siti sulla rete privata. La registrazione e la misurazione della licenza vengono eseguite sulla rete privata tramite il proxy HTTP.
+3. Se selezioni **Rete privata**, completa i seguenti campi:
+  * **Indirizzo proxy**: l'indirizzo IPv4 del server proxy.
+  * **Porta proxy**: la porta del server proxy. Il numero di porta è in genere 8080 o 3128.
+  * **Nome utente**: il nome utente se è richiesta l'autenticazione proxy.
+  * **Password**: la password se è richiesta l'autenticazione proxy.
+  * **Immettere nuovamente la password**: immetti di nuovo la password per la convalida dell'autenticazione proxy.
 2. Specifica il **Tipo di certificato endpoint pubblico**. Se selezioni **Certificato CA**, configura le seguenti impostazioni:
   * **Contenuto del certificato**: immetti il contenuto del certificato CA.
   * **Chiave privata**: immetti la chiave privata del certificato CA.
