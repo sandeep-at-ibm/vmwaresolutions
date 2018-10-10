@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -59,10 +59,10 @@ Questa progettazione integra i servizi DNS sui server Active Directory con la VM
 * Il nome di dominio DNS che specifichi verrà utilizzato come nome di dominio dell'insieme di strutture root di Active Directory. Ad esempio, se il nome del dominio DNS è `cloud.ibm.com`, la root dell'insieme di strutture del dominio Active Directory sarà `cloud.ibm.com`. Questo dominio DNS e Active Directory è uguale per tutte le istanze Cloud Foundation collegate.
 * Puoi anche specificare un nome di dominio secondario per l'istanza. Il nome del dominio secondario deve essere univoco tra tutte le istanze Cloud Foundation collegate.  
 * La configurazione DNS di SDDC Manager viene modificata in modo che punti ai server Active Directory per tutte le zone tranne che per la zona di cui è responsabile.
-* I server DNS di Active Directory sono configurati per essere autorevoli per lo spazio del dominio DNS al di sopra del dominio secondario dell'istanze SDDC Manager e Cloud Foundation.
+* I server DNS di Active Directory sono configurati per essere autorevoli per lo spazio del dominio DNS al di sopra del dominio secondario delle istanze SDDC Manager e Cloud Foundation.
 * I server DNS di Active Directory sono configurati per puntare all'indirizzo IP di SDDC Manager per la delega del dominio secondario della zona di cui è autorevole l'SDDC Manager.
 * I server DNS di Active Directory sono configurati per puntare ai server DNS di {{site.data.keyword.cloud_notm}} per tutte le altre zone.
-* Qualsiasi istanza secondaria da integrare alla prima istanza o all'istanza di destinazione deve utilizzare la stessa struttura di nomi DNS sopra il dominio secondario di SDDC Manager.
+* Qualsiasi istanza secondaria da integrare alla prima istanza o all'istanza di destinazione deve utilizzare la stessa struttura dei nomi DNS sul dominio secondario di SDDC Manager.
 
 ## Servizi NTP
 
