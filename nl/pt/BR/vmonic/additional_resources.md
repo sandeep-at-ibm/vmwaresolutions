@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-25"
 
 ---
 
 # Recursos adicionais
 
-Revise mais recursos que possam ajudá-lo a iniciar mais rapidamente. Esses recursos incluem:
+Revise os recursos a seguir para iniciar mais rapidamente.
 * Informações de referência da arquitetura
 * Vídeos
 * Demonstrações
@@ -42,7 +42,7 @@ do Virtualization Platform](https://www.ibm.com/cloud/garage/architectures/virtu
 
 ## Test drive do IBM Cloud for VMware Solutions
 
-Quer ver por si mesmo? Faça um test drive curto do produto seguindo a demo guiada passo a passo [Experimente o VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions) do {{site.data.keyword.vmwaresolutions_short}}.
+Quer ver por si mesmo? Faça um pequeno test drive do produto seguindo a demonstração guiada passo a passo do {{site.data.keyword.vmwaresolutions_short}} [Tentar o VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions).
 
 ## receitas do developerWorks
 

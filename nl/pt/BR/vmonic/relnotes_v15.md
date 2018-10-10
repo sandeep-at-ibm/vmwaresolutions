@@ -10,7 +10,7 @@ lastupdated: "2017-03-30"
 
 # Notas sobre a liberação para V1.5
 
-Esta liberação inclui novos recursos, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em liberações diferentes, problemas conhecidos com o produto e dicas adicionais para usar o {{site.data.keyword.vmwaresolutions_full}}, veja o [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Esta liberação inclui novos recursos, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte o [{{site.data.keyword.vmwaresolutions_short}}dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Requisitos da conta SoftLayer VRF versus clássica
 
@@ -30,5 +30,5 @@ Para instâncias do Cloud Foundation, uma nova licença _SDDC Manager_ é introd
 
 São feitas melhorias em toda a interface com o usuário:
 
-* A disponibilidade de vários data centers e se eles têm inventário suficiente para atender o pedido é claramente indicado na interface com o usuário para que você possa tomar uma decisão informada sobre o data center a selecionar durante o pedido da instância. para obter mais informações, veja [Requisitos e planejamento para instâncias do Cloud Foundation](../sddc/sd_planning.html) e [Requisitos e planejamento para instâncias do vCenter Server](../vcenter/vc_planning.html).
-* Para instâncias do Cloud Foundation, informações como o nome da instância, nome de domínio e subdomínio, e local do data center, são automaticamente exibidas no formato gráfico enquanto você está inserindo as informações necessárias nos campos de entrada. Para obter mais informações, veja [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html).
+* A disponibilidade de vários {{site.data.keyword.CloudDataCents_notm}} e se eles têm inventário suficiente para atender o pedido é claramente indicado na interface com o usuário. Use esses detalhes para tomar uma decisão informada sobre o {{site.data.keyword.CloudDataCent_notm}} a ser selecionado ao pedir uma instância. para obter mais informações, veja [Requisitos e planejamento para instâncias do Cloud Foundation](../sddc/sd_planning.html) e [Requisitos e planejamento para instâncias do vCenter Server](../vcenter/vc_planning.html).
+* Para instâncias do Cloud Foundation, informações como o nome da instância, o nome do domínio e do subdomínio, além do local do data center, são exibidas automaticamente no formato gráfico ao inserir as informações necessárias nos campos de entrada. Para obter mais informações, veja [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html).

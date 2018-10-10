@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -116,7 +116,7 @@ Não, porque esses produtos do VMware não fazem parte da implementação da ins
 
 Para instâncias implementadas recentemente, somente armazenamento totalmente em flash do vSAN é suportado. A oferta do vCenter Server with Hybridity Bundle inclui o licenciamento do vSAN Advanced ou Enterprise.
 
-Se você tiver uma instância do vCenter Server com armazenamento NFS, será possível fazer upgrade de sua instância existente para o vCenter Server with Hybridity Bundle. Embora o licenciamento do vSAN Advanced seja pedido durante o upgrade, não é necessário provisionar um cluster do vSAN totalmente em flash.
+Se você tiver uma instância do vCenter Server com armazenamento NFS, será possível fazer upgrade de sua instância existente para o vCenter Server with Hybridity Bundle. Embora o licenciamento do vSAN Advanced seja pedido durante o upgrade, não é necessário provisionar um cluster vSAN totalmente em flash.
 
 ## Posso usar o BYOL com o vCenter Server with Hybridity Bundle?
 

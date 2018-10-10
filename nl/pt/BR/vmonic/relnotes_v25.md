@@ -10,8 +10,7 @@ lastupdated: "2018-08-30"
 
 # Notas sobre a Liberação para V2.5
 
-Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e mais dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte
-[{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte o [{{site.data.keyword.vmwaresolutions_short}}dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Correção para Spectre e Meltdown
 
@@ -115,4 +114,4 @@ A interface com o usuário é atualizada e fornece os aprimoramentos a seguir:
 
 * Se você tiver uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) que esteja vinculada à sua conta do {{site.data.keyword.cloud_notm}}, agora será possível clicar no botão **Recuperar** recém-incluído na página **Configurações** para obter o nome do usuário e a chave API para sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) automaticamente.
 * Uma nova guia **Histórico de implementação** foi incluída na área de janela de navegação esquerda da página de detalhes da instância para você verificar o histórico de implementação de uma instância.
-* Várias mensagens de erro e aprimoramentos de dica de ferramenta foram feitos para ajudá-lo na seleção da configuração apropriada na interface com o usuário.
+* Várias mensagens de erro e aprimoramentos de dicas de ferramenta estão disponíveis para ajudá-lo na seleção da configuração apropriada na interface com o usuário.

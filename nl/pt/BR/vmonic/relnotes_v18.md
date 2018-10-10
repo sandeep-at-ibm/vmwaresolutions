@@ -10,7 +10,7 @@ lastupdated: "2017-08-28"
 
 # Notas sobre a liberação para V1.8
 
-Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em liberações diferentes, problemas conhecidos com o produto e dicas adicionais para usar o {{site.data.keyword.vmwaresolutions_full}}, veja o [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte o [{{site.data.keyword.vmwaresolutions_short}}dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Serviço Fortinet on IBM Cloud
 
@@ -28,7 +28,7 @@ Esta liberação apresenta o serviço Veeam on {{site.data.keyword.cloud_notm}},
 
 Por causa dessa mudança, embora o VSI Veeam nas instâncias pré-V1.8 continue funcionando, os pontos de backup para as instâncias não estão mais disponíveis no console do {{site.data.keyword.vmwaresolutions_short}} e deve-se criar um chamado de suporte para obter assistência com uma restauração.
 
-Além disso, a licença do VSI Veeam em instâncias pré-V1.8 expira em 14 de outubro de 2017. Portanto, deve-se substituir o VSI Veeam anterior pelo novo serviço Veeam em sua primeira conveniência.
+Além disso, a licença do VSI Veeam em instâncias anteriores à V1.8 expira em 14 de outubro de 2017. Portanto, deve-se substituir o VSI Veeam anterior pelo novo serviço Veeam em sua primeira conveniência.
 
 Para obter mais informações, veja os tópicos a seguir:
 * [Veeam no {{site.data.keyword.cloud_notm}} visão geral](../services/veeam_considerations.html)

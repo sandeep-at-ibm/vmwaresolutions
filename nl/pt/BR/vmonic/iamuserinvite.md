@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -30,7 +30,7 @@ O {{site.data.keyword.vmwaresolutions_full}} é integrado ao {{site.data.keyword
 
 ## Resultados
 
-Depois que os usuários incluídos aceitarem seu convite, eles poderão efetuar login no console do {{site.data.keyword.vmwaresolutions_short}} e alternar para sua conta. Para fazer isso, em suas configurações de perfil, os usuários clicam em seu avatar no canto superior direito do console do {{site.data.keyword.vmwaresolutions_short}}. Em seguida, os usuários incluídos podem colaborar e compartilhar os serviços e recursos disponíveis em sua conta especificada.
+Depois que os usuários incluídos aceitarem seu convite, eles poderão efetuar login no console do {{site.data.keyword.vmwaresolutions_short}} e alternar para sua conta. Para isso, nas configurações de perfil, os usuários clicam no ícone de contas de usuário no banner do console do {{site.data.keyword.vmwaresolutions_short}}. Em seguida, os usuários incluídos podem colaborar e compartilhar os serviços e recursos disponíveis em sua conta especificada.
 
 ### Links relacionados
 

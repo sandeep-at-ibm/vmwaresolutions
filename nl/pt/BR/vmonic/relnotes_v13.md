@@ -10,8 +10,7 @@ lastupdated: "2017-01-23"
 
 # Notas sobre a liberação para V1.3
 
-Esta liberação inclui novos recursos, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e mais dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte
-[{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Esta liberação inclui novos recursos, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte o [{{site.data.keyword.vmwaresolutions_short}}dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Armazenamento de nível de arquivo compartilhado para instâncias do vCenter Server
 

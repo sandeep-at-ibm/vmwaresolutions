@@ -10,7 +10,7 @@ lastupdated: "2018-05-28"
 
 # Notas sobre a Liberação para V2.3
 
-Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em liberações diferentes, problemas conhecidos com o produto e dicas adicionais para usar o {{site.data.keyword.vmwaresolutions_full}}, veja o [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte o [{{site.data.keyword.vmwaresolutions_short}}dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Correção para Spectre e Meltdown
 
@@ -52,8 +52,8 @@ Esta liberação aplica os upgrades e melhorias a seguir:
 ### Aprimoramentos para instâncias e clusters do vCenter Server
 
 Começando com a liberação V2.3, os novos modelos de CPU a seguir estão disponíveis para implementação quando você escolhe a configuração de Bare Metal **Customizado**:
-* Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz
-* Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz
+* Processador Dual Intel Xeon Silver 4110/Total de 16 núcleos, 2,1 GHz
+* Processador Dual Intel Xeon Gold 5120/Total de 28 núcleos, 2,2 GHz
 
 Para obter mais informações, veja os tópicos a seguir:
 
@@ -73,7 +73,7 @@ Esta liberação aplica os upgrades e melhorias a seguir:
 
 Agora, você tem a opção de selecionar a implementação de um único VSI (Virtual Server Instance) do Microsoft Windows Server para o Microsoft Active Directory (AD) ou duas máquinas virtuais do Microsoft Windows de alta disponibilidade no cluster de gerenciamento. Para V2.2, o único VSI do Microsoft Windows para Microsoft AD foi implementado automaticamente por padrão. A nova opção para selecionar duas máquinas virtuais do Microsoft Windows fornece mais privacidade a e opção para fazer backup e restauração das máquinas virtuais usando o serviço Veeam.
 
-**Nota:** deverão ser fornecidas duas licenças do Microsoft Windows Server 2012 R2 se você configurar sua instância para usar as duas máquinas virtuais do Microsoft Windows. Use a licença da edição Microsoft Windows Server 2012 R2 Standard e/ou a licença da edição Microsoft Windows Server 2012 R2 Datacenter. Você tem 30 dias para ativar as máquinas virtuais.
+**Nota:** deve-se fornecer duas licenças do Microsoft Windows Server 2012 R2 caso você configure sua instância para usar as duas máquinas virtuais do Microsoft Windows. Use a licença da edição Microsoft Windows Server 2012 R2 Standard e/ou a licença da edição Microsoft Windows Server 2012 R2 Datacenter. Você tem 30 dias para ativar as máquinas virtuais.
 
 Para obter mais informações, veja a seção *Configurações de interface de rede* em [Pedindo instâncias do VMware Federal](../vcenter/vc_fed_orderinginstance.html#network-interface-settings).
 
@@ -122,4 +122,4 @@ A interface com o usuário é atualizada e fornece os aprimoramentos a seguir:
 * **Facilidade de acesso**: agora é possível acessar as ofertas do VMware diretamente do **Catálogo** do {{site.data.keyword.cloud_notm}}.
 * **Experiência de pedido aperfeiçoado e simplificado**: agora é possível concluir o pedido de uma instância do VMware e implementar seus serviços complementares em uma única interface. Além disso, o custo estimado é calculado e mostrado instantaneamente na mesma interface para que seja possível ajustar sua configuração com base em seu plano de custo.
 * A opção de Bring Your Own License (BYOL) ao pedir instâncias ou incluir clusters não está disponível para usuários do Parceiro de Negócios.
-* Várias mensagens de erro e aprimoramentos de dica de ferramenta foram feitos para ajudá-lo na seleção da configuração apropriada na interface com o usuário.
+* Várias mensagens de erro e aprimoramentos de dicas de ferramenta estão disponíveis para ajudá-lo na seleção da configuração apropriada na interface com o usuário.
