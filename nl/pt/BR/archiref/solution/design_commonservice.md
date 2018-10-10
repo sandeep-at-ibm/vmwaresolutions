@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -59,10 +59,10 @@ Esse design integra serviços do DNS nos Active Directory Servers com a VM do SD
 * O nome de domínio do DNS especificado será usado como o nome de domínio da floresta raiz do Active Directory. Por exemplo, se o nome de domínio do DNS for `cloud.ibm.com`, a raiz da floresta do domínio do Active Directory será `cloud.ibm.com`. Esse domínio do DNS e o domínio do Active Directory são os mesmos em todas as instâncias vinculadas do Cloud Foundation.
 * É possível especificar adicionalmente um nome de subdomínio para a instância. O nome de subdomínio deve ser exclusivo em todas as instâncias vinculadas do Cloud Foundation.  
 * A configuração do DNS do SDDC Manager é alterada para apontar para os Active Directory Servers para todas as zonas, exceto para a zona pela qual ele é responsável.
-* Os servidores DNS do Active Directory são configurados para serem autorizados para o espaço de domínio do DNS acima do subdomínio da instância do SDDC Manager e do Cloud Foundation.
+* Os servidores DNS do Active Directory são configurados para ser autoritativos para o espaço de domínio do DNS no subdomínio da instância do SDDC Manager e do Cloud Foundation.
 * Os servidores DNS do Active Directory são configurados para apontar para o endereço IP do SDDC Manager para a delegação de subdomínio da zona para a qual o SDDC Manager é autorizado.
 * Os servidores DNS do Active Directory são configurados para apontar para os servidores DNS do {{site.data.keyword.cloud_notm}} para todas as outras zonas.
-* Qualquer instância secundária que deve ser integrada à primeira instância ou à instância de destino deve utilizar a mesma estrutura de nome DNS acima do subdomínio do SDDC Manager.
+* Qualquer instância secundária que deva ser integrada à primeira instância ou à instância de destino deve utilizar a mesma estrutura de nome do DNS no subdomínio do SDDC Manager.
 
 ## Serviços NTP
 
