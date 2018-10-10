@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -75,7 +75,7 @@ Le funzioni vSAN disponibili dipendono dall'edizione della licenza che selezioni
 
 ### Configurazione della rete virtuale per vSAN
 
-Per questa progettazione, il traffico vSAN attraversa gli host ESXi su una VLAN privata dedicata. I due adattatori di rete collegati allo switch di rete privata sono configurati in vSphere come VDS (vSphere Distributed Switch) con entrambi gli adattatori di rete come uplink. Un gruppo di porte kernel vSAN dedicato configurato per la VLAN vSAN risiede all'interno di VDS. I frame Jumbo (MTU 9000) sono abilitati per il VDS privato.
+Per questa progettazione, il traffico vSAN attraversa gli host ESXi su una VLAN privata dedicata. I due adattatori di rete collegati allo switch di rete privata sono configurati all'interno di vSphere come vDS (vSphere Distributed Switch) con entrambi gli adattatori di rete come uplink. Un gruppo di porte kernel vSAN dedicato configurato per la VLAN vSAN risiede all'interno di vDS. I frame Jumbo (MTU 9000) sono abilitati per il vDS privato.
 
 vSAN non bilancia il carico del traffico tra gli uplink. Di conseguenza, un adattatore è attivo mentre l'altro rimane in standby per supportare l'alta disponibilità (HA). La politica di failover della rete per vSAN è configurata come **Failover esplicito** tra le porte della rete fisica.
 
@@ -108,7 +108,7 @@ Le impostazioni vSAN sono impostate in base alle procedure ottimali per la distr
 
 ## Progettazione di VMware NSX
 
-La virtualizzazione di rete fornisce una sovrapposizione di rete che esiste all'interno del livello virtuale. La virtualizzazione di rete offre all'architettura funzioni quali provisioning rapido, distribuzione, riconfigurazione e distruzione di reti virtuali su richiesta. Questa progettazione utilizza il VDS (vSphere Distributed Switch) e VMware NSX for vSphere per implementare la rete virtuale.
+La virtualizzazione di rete fornisce una sovrapposizione di rete che esiste all'interno del livello virtuale. La virtualizzazione di rete offre all'architettura funzioni quali provisioning rapido, distribuzione, riconfigurazione e distruzione di reti virtuali su richiesta. Questa progettazione utilizza vDS e VMware NSX for vSphere per implementare la rete virtuale.
 
 In questa progettazione, NSX Manager viene distribuito nel cluster iniziale. A NSX Manager viene assegnato un indirizzo IP supportato dalla VLAN dal blocco di indirizzi portatili privati, che è designato per i componenti di gestione e configurato con i server DNS e NTP discussi in [Progettazione di servizi comuni](design_commonservice.html). NSX Manager viene installato con le specifiche elencate nella Tabella 2.
 
@@ -131,7 +131,7 @@ Figura 2. Panoramica della rete di NSX Manager
 
 Dopo la distribuzione iniziale, l'automazione di {{site.data.keyword.cloud_notm}} distribuisce tre controller NSX all'interno del cluster iniziale. A ciascun controller viene assegnato un indirizzo IP supportato dalla VLAN dalla sottorete portatile privata A designata per i componenti di gestione. Inoltre, la progettazione crea regole anti-affinità VM-VM per separare i controller tra gli host nel cluster. Il cluster iniziale deve contenere almeno tre nodi per garantire l'alta disponibilità per i controller.
 
-Oltre ai controller, l'automazione di {{site.data.keyword.cloud_notm}} prepara gli host vSphere distribuiti con NSX VIB per abilitare l'uso di una rete virtualizzata tramite i VTEP (VXLAN Tunnel Endpoint). Ai VTEP viene assegnato un indirizzo IP supportato dalla VLAN dall'intervallo di indirizzi IP della rete portatile Privata A specificato per i VTEP, come indicato nella *Tabella 1. Riepilogo VLAN e sottorete* in [Progettazione dell'infrastruttura fisica](design_physicalinfrastructure.html). Il traffico VXLAN risiede sulla VLAN senza tag ed è assegnato al VDS (vSphere Distributed Switch) privato.
+Oltre ai controller, l'automazione di {{site.data.keyword.cloud_notm}} prepara gli host vSphere distribuiti con NSX VIB per abilitare l'uso di una rete virtualizzata tramite i VTEP (VXLAN Tunnel Endpoint). Ai VTEP viene assegnato un indirizzo IP supportato dalla VLAN dall'intervallo di indirizzi IP della rete portatile Privata A specificato per i VTEP, come indicato nella *Tabella 1. Riepilogo VLAN e sottorete* in [Progettazione dell'infrastruttura fisica](design_physicalinfrastructure.html). Il traffico VXLAN risiede sulla VLAN senza tag ed è assegnato al vDS privato.
 
 Successivamente, viene assegnato un pool di ID segmento e gli host nel cluster vengono aggiunti alla zona di trasporto. Nella zona di trasporto viene utilizzato solo unicast poiché lo snooping IGMP (Internet Group Management Protocol) non è configurato all'interno di {{site.data.keyword.cloud_notm}}.
 
@@ -141,13 +141,13 @@ Gli amministratori cloud possono configurare qualsiasi componente NSX richiesto,
 
 ### Progettazione di switch distribuiti
 
-La progettazione utilizza un numero minimo di VDS (vSphere Distributed Switch). Gli host nel cluster sono connessi alle reti pubbliche e private. Gli host sono configurati con due switch virtuali distribuiti. L'utilizzo di due switch segue la procedura della rete {{site.data.keyword.cloud_notm}} che separa le reti pubbliche e private. Il seguente diagramma mostra la progettazione di VDS.
+La progettazione utilizza un numero minimo di switch vDS. Gli host nel cluster sono connessi alle reti pubbliche e private. Gli host sono configurati con due switch virtuali distribuiti. L'utilizzo di due switch segue la procedura della rete {{site.data.keyword.cloud_notm}} che separa le reti pubbliche e private. Il seguente diagramma mostra la progettazione di vDS.
 
 Figura 3. Progettazione di switch distribuiti
 
-![Progettazione di switch distribuiti](virtual_network_distributedswitch.svg "Progettazione di VDS")
+![Progettazione di switch distribuiti](virtual_network_distributedswitch.svg "Progettazione di vDS")
 
-Come mostrato nella figura, un VDS è configurato per la connettività alla rete pubblica (SDDC-Dswitch-Public) e l'altro VDS è configurato per la connettività alla rete privata (SDDC-Dswitch-Private).
+Come mostrato nella figura, un vDS è configurato per la connettività alla rete pubblica (SDDC-Dswitch-Public) e l'altro vDS è configurato per la connettività alla rete privata (SDDC-Dswitch-Private).
 
 Separare i diversi tipi di traffico è necessario per ridurre il conflitto e la latenza e aumentare la sicurezza. Le VLAN vengono utilizzate per segmentare le funzioni della rete fisica.
 
