@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -35,7 +35,7 @@ Tabella 1. Livelli di aggiornamento e impatto
     pianificati. |  
 | Maggiore  | Questo aggiornamento influisce su alcuni o tutti i sistemi. Devi applicarlo durante i tempi di inattività pianificati. |  
 
-## Procedura
+## Procedura per applicare aggiornamenti alle istanze vCenter Server with Hybridity Bundle
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza da aggiornare.
@@ -50,7 +50,7 @@ Tabella 1. Livelli di aggiornamento e impatto
 
 5. Per gli aggiornamenti della licenza, fai clic su **Aggiorna**. Dall'elenco, seleziona l'edizione a cui vuoi aggiornare e fai clic su **Aggiorna**. I downgrade dell'edizione della licenza non sono disponibili.
 
-   **Nota:** l'aggiornamento della licenza sostituisce tutte le licenze NSX esistenti sull'istanza. Se esegui l'aggiornamento nel mezzo di un ciclo di fatturazione, potrebbero essere applicati dei costi aggiuntivi derivanti da una sovrapposizione di vecchie e nuove licenze. Per evitare costi aggiuntivi, si consiglia di aggiornare la licenza alla fine del ciclo di fatturazione.
+   **Nota:** l'aggiornamento della licenza sostituisce tutte le licenze NSX esistenti sull'istanza. Potrebbero essere addebitati costi aggiuntivi derivanti da una sovrapposizione di vecchie e nuove licenze se esegui l'aggiornamento nel mezzo di un ciclo di fatturazione. Per evitare costi aggiuntivi, si consiglia di aggiornare la licenza alla fine del ciclo di fatturazione.
 
 6. Per gli aggiornamenti software, fai clic sulla freccia in giù per espandere l'aggiornamento che vuoi applicare e quindi completa uno dei seguenti passi:
    *  Per avviare immediatamente l'aggiornamento, fai clic sull'icona del menu di overflow nella colonna **Azioni** della voce di aggiornamento, quindi fai clic su **Aggiorna ora**.
