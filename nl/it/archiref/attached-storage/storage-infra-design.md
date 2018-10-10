@@ -4,21 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-24"
 
 ---
 
 # Progettazione dell'infrastruttura di archiviazione collegata
 
-{{site.data.keyword.vmwaresolutions_full}} fornisce la tecnologia VMware che viene distribuita in modo automatizzato all'interno dei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. Nel portfolio di soluzioni {{site.data.keyword.cloud_notm}}, l'offerta VMware vCenter Server on {{site.data.keyword.cloud_notm}} d base consiste in un massimo di 20 host vSphere, un singolo PSC (Platform Services Controller) e una vCenter Server Appliance in grado di gestire fino a 100 host e 1000 macchine virtuali.
+{{site.data.keyword.vmwaresolutions_full}} fornisce la tecnologia VMware che viene distribuita in modo automatizzato all'interno dei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. All'interno del portfolio di soluzioni {{site.data.keyword.cloud_notm}}, l'offerta VMware vCenter Server on {{site.data.keyword.cloud_notm}} di base comprende fino a 10 cluster, ciascuno contenente fino a 59 host vSphere, un singolo PSC (Platform Services Controller) e un vCenter Server Appliance in grado di gestire fino a 400 host e 4.000 macchine virtuali.
 
 L'architettura qui presentata integra la soluzione vCenter Server aggiungendo l'archiviazione collegata come un dispositivo di archiviazione condivisa per l'ambiente. Il dispositivo di archiviazione collegato si trova nello stesso {{site.data.keyword.CloudDataCent_notm}} della distribuzione del vCenter Server e consiste in una singola condivisione NFS (Network File System) o più esportazioni NFS da {{site.data.keyword.cloud_notm}}.
 
-Il seguente grafico illustra l'architettura generale della distribuzione NetApp ONTAP Select su vCenter Server.
+Il seguente grafico illustra l'architettura generale dell'archiviazione collegata sulla distribuzione di vCenter Server.
 
-Figura 1. Architettura di alto livello di NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}
+Figura 1. Architettura di alto livello dell'archiviazione collegata su {{site.data.keyword.cloud_notm}}
 
-![Architettura di NetApp ONTAP Select](../../netapp/np_architecture.svg "Architettura di alto livello di NetApp ONTAP Select on IBM Cloud")
+![Architettura dell'archiviazione collegata](../solution/physical_nfs.svg "Architettura di alto livello dell'archiviazione collegata su IBM Cloud")
 
 ## Progettazione dell'infrastruttura fisica
 
@@ -52,13 +52,13 @@ Questa sezione presenta la configurazione del dispositivo di archiviazione colle
 
 Le archiviazioni Performance e Endurance sono soluzioni di archiviazione {{site.data.keyword.cloud_notm}} progettate per supportare applicazioni ad elevato I/O che richiedono dei livelli prevedibili di prestazioni. Queste prestazioni prevedibili vengono raggiunte tramite l'assegnazione di IOPS (input/output operations per second) a livello di protocollo ai singoli volumi.
 
-È possibile eseguire il provisioning di un IOPS che va da 100 a 48.000 con delle dimensioni dell'archiviazione che vanno da 20 GB a 12 TB. I volumi di archiviazione Performance ed Endurance sono disponibili sia per l'archiviazione blocchi che per l'archiviazione file.
+È possibile eseguire il provisioning di IOPS da 100 a 48.000 con dimensioni di archiviazione da 20 GB a 12 TB. I volumi di archiviazione Performance ed Endurance sono disponibili sia per l'archiviazione blocchi che per l'archiviazione file.
 
 In questa progettazione la soluzione vCenter Server offre l'archiviazione Endurance per l'archiviazione collegata. Di conseguenza, puoi selezionare e collegare (mediante l'automazione) le esportazioni NFS Endurance in un intervallo di dimensioni che va da 20 GB a un massimo di 12 TB. {{site.data.keyword.cloud_notm}} consente a un massimo di 64 host vSphere ESXi di connettersi a una singola esportazione NFS Endurance.
 
-Endurance è disponibile in tre livelli di prestazioni IOPS per supportare esigenze applicative diverse. Nota: dopo che ne è stato eseguito il provisioning, la condivisione NFS non può essere ridimensionata o riconfigurata per consentire più o meno IOPS.
+Endurance è disponibile in tre livelli di prestazioni IOPS per supportare esigenze applicative diverse. Nota che dopo il provisioning di una condivisione NFS, questa può essere ridimensionata o riconfigurata per consentire più o meno IOPS.
 
-Per le opzioni IOPS dettagliate, vedi la sezione _Impostazioni di archiviazione_ in [Ordinazione di istanze vCenter Server](../../vcenter/vc_orderinginstance.html).
+Per le opzioni IOPS dettagliate, vedi la sezione _Impostazioni di archiviazione_ in [Ordine di istanze vCenter Server](../../vcenter/vc_orderinginstance.html).
 
 Oltre ai livelli di archiviazione, l'archiviazione Endurance di {{site.data.keyword.cloud_notm}} supporta un'ampia selezione di esigenze applicative, comprese le istantanee e la replica e la crittografia dei dati inattivi nelle ubicazioni {{site.data.keyword.CloudDataCent_notm}}.
 

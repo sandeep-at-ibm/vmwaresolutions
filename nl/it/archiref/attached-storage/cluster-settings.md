@@ -59,7 +59,7 @@ La funzione VM monitoring utilizza le informazioni di heartbeat acquisite da VMw
 
 #### Failure Conditions and VM Response
 
-Le condizioni di errore definiscono in che modo si verificano le condizioni di errore delle VM e la risposta data a ciascuna di tali condizioni. In questa progettazione, la proprietà di riavvio della VM (VM restart property) è impostata su Medium; si consiglia vivamente di riesaminare questo valore e regolare le impostazioni di conseguenza in modo che la priorità di riavvio corrisponda all'importanza del carico di lavoro. Inoltre, la risposta per l'isolamento host (Response for Host Isolation) è impostata su “Power off and restart VMs” in modo che le VM non siano influenzate da un host isolato nel cluster. Il resto dei valori per questa impostazione sono impostati sul valore predefinito. 
+Le condizioni di errore definiscono in che modo si verificano le condizioni di errore delle VM e la risposta data a ciascuna di tali condizioni. In questa progettazione, la priorità di riavvio della VM (VM restart priority) è impostata su Medium; si consiglia vivamente di riesaminare questo valore e regolare le impostazioni di conseguenza in modo che la priorità di riavvio corrisponda all'importanza del carico di lavoro. Inoltre, la risposta per l'isolamento host (Response for Host Isolation) è impostata su “Power off and restart VMs” in modo che le VM non siano influenzate da un host isolato nel cluster. Il resto dei valori per questa impostazione sono impostati sul valore predefinito.
 
 La seguente tabella mostra le impostazioni per il cluster vSphere HA nel client web VMware vSphere.
 
