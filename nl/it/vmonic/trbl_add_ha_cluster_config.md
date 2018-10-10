@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -18,4 +18,4 @@ Quando aggiungi una configurazione cluster HA (alta disponibilità) con una sola
 ## Risoluzione
 Questo problema si verifica se non vi è ridondanza nell'archiviazione condivisa per consentire l'heartbeat dell'archivio dati.
 
-Per ulteriori informazioni e i passi su come risolvere il problema, vedi [HA error: "The number of heartbeat datastores for host is 1, which is less than required: 2" (2004739)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2004739).
+Per ulteriori informazioni e i passi su come risolvere il problema, vedi [HA error: "The number of heartbeat data stores for host is 1, which is less than required: 2" (2004739)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2004739).

@@ -10,7 +10,7 @@ lastupdated: "2018-05-18"
 
 # Note sulla release per la V2.2
 
-Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e ulteriori suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Correzione Spectre e Meltdown
 
@@ -37,7 +37,7 @@ Per ulteriori informazioni sull'utilizzo del servizio Veeam on {{site.data.keywo
 
 ## Supporto per VMware Federal on IBM Cloud
 
-VMware Federal on {{site.data.keyword.cloud_notm}} fornisce supporto per ordinare un'istanza vCenter Server nel {{site.data.keyword.CloudDataCent_notm}} WDC03 Federal. Oltre a supportare un sottoinsieme di offerte di istanze vCenter Server, VMware Federal on {{site.data.keyword.cloud_notm}} offre alle agenzie del Governo federale degli Stati Uniti l'opzione per proteggere le istanze VMware vCenter Server distribuite. La selezione dell'opzione per proteggere le istanze distribuite rimuove le informazioni sensibili memorizzate sull'istanza e rimuove la connessione di gestione aperta per l'accesso in corso all'istanza per le funzioni di gestione, come l'aggiunta e la rimozione di host e cluster. Dopo aver selezionato l'opzione di protezione, vengono disabilitate tutte le funzioni di gestione ad eccezione dell'eliminazione completa dell'istanza.
+VMware Federal on {{site.data.keyword.cloud_notm}} fornisce l'opzione per ordinare un'istanza vCenter Server di base in WDC03 Federal su {{site.data.keyword.CloudDataCent_notm}}. Oltre a supportare un sottoinsieme di offerte di istanze vCenter Server, VMware Federal on {{site.data.keyword.cloud_notm}} offre alle agenzie del Governo federale degli Stati Uniti l'opzione per proteggere le istanze VMware vCenter Server distribuite. La selezione dell'opzione per proteggere le istanze distribuite rimuove le informazioni sensibili memorizzate relative all'istanza e rimuove la connessione di gestione aperta per l'accesso continuo all'istanza per le funzioni di gestione, come l'aggiunta e la rimozione di host e cluster. Dopo aver selezionato l'opzione di protezione, tutte le funzioni di gestione non sono più disponibili ad eccezione dell'eliminazione completa dell'istanza.
 
 Per importanti considerazioni prima di proteggere un'istanza VMware Federal, vedi [Protezione di istanze VMware Federal](../vcenter/vc_fed_securinginstance.html).
 
@@ -52,7 +52,7 @@ Per ulteriori informazioni, consulta i seguenti argomenti:
 ## Impostazioni di configurazione avanzate sui server ESXi
 
 Per le release della V2.2 o successive, le nuove istanze vengono ordinate con una nuova serie di impostazioni di configurazione avanzate per i server ESXi.
-Per le istanze che vengono aggiornate da una release precedente alla V2.2 o successive, alcune impostazioni richiedono il riavvio dei server ESXi, pertanto viene applicato automaticamente solo un sottoinsieme delle impostazioni di configurazione.
+Per le istanze che vengono aggiornate da una release precedente alla V2.2 o release successive, alcune impostazioni richiedono il riavvio dei server ESXi. Pertanto, solo un sottoinsieme delle impostazioni di configurazione viene applicato automaticamente.
 
 Si consiglia di modificare le restanti impostazioni di configurazione nei nuovi valori per garantire coerenza tra tutte le istanze e per consentire il supporto adeguato per l'espansione dell'archiviazione. IBM prevede di eseguire test solo con queste nuove impostazioni per tutte le release future di {{site.data.keyword.cloud_notm}} for VMware Solutions.
 
@@ -64,11 +64,11 @@ Per ulteriori informazioni, vedi _Impostazioni di configurazione avanzate per i 
 
 Per le release della V2.2 e successive, puoi ora aumentare il numero di server ESXi a un massimo di 51 per un cluster iniziale e a un massimo di 59 per i cluster aggiuntivi.
 
-**Importante:** per le istanze distribuite nelle release della V2.1 o precedenti, devi abilitare il supporto vSAN necessario per aumentare la dimensione del cluster a più di 32. Per ulteriori informazioni e i passi per aumentare il numero di server ESXi, vedi _Quanti server ESXi posso aggiungere a un cluster?_ in [Domande frequenti sui server ESXi](../vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-).
+**Importante:** per le istanze distribuite nelle release della V2.1 o precedenti, devi abilitare il supporto vSAN necessario per aumentare la dimensione del cluster a più di 32. Per ulteriori informazioni sulle procedure per aumentare il numero di server ESXi, vedi _Quanti server ESXi posso aggiungere a un cluster?_ in [Domande frequenti sui server ESXi](../vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-).
 
-## Ulteriori opzioni di configurazione di rete per le istanze vCenter Server e Cloud Foundation
+## Altre opzioni di configurazione di rete per le istanze vCenter Server e Cloud Foundation
 
-Per gli ordini delle istanze vCenter Server e Cloud Foundation, hai ora la possibilità di riutilizzare le VLAN pubbliche e private esistenti per la tua configurazione di rete. Se non sono disponibili VLAN esistenti, continui ad avere la possibilità di ordinare una nuova VLAN pubblica e due nuove VLAN private.
+Per gli ordini delle istanze vCenter Server e Cloud Foundation, puoi ora riutilizzare le VLAN pubbliche e private esistenti per la tua configurazione di rete. Se non sono disponibili VLAN esistenti, puoi ordinare una nuova VLAN pubblica e due nuove VLAN private.
 
 Per importanti considerazioni prima di selezionare le VLAN esistenti, vedi le sezioni *Impostazioni dell'interfaccia di rete* in:
 * [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html)
@@ -80,13 +80,13 @@ Per importanti considerazioni prima di selezionare le VLAN esistenti, vedi le se
 
 La release corrente applica l'aggiornamento del componente VMware NSX per vSphere 6.3.5. Per ulteriori informazioni sui componenti, vedi [Distinta base di vCenter Server](../vcenter/vc_bom.html).
 
-Per le istanze VMware vCenter Server distribuite nelle release della V2.2 o successive, le impostazioni di configurazione di NSX e del gruppo di porte sono state modificate. Per ulteriori informazioni, vedi la sezione *Impostazioni di configurazione di NSX e del gruppo di porte* in [Distinta base del software vCenter Server](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
+Per le istanze VMware vCenter Server distribuite nelle release della V2.2 o successive, le impostazioni di configurazione di NSX e del gruppo di porte sono state modificate. Per ulteriori informazioni, vedi la sezione *Impostazioni di configurazione di NSX e del gruppo di porte* in Distinta base del software vCenter Server](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
 
 ### Nuova opzione per la configurazione DNS
 
-Ora hai la possibilità di selezionare la distribuzione di una singola VSI (Virtual Server Instance) di Microsoft Windows Server per Microsoft Active Directory (AD) o due macchine virtuali Microsoft Windows ad alta disponibilità nel cluster di gestione. Per le release precedenti alla V2.2, la singola VSI di Microsoft Windows per Microsoft AD veniva distribuita automaticamente per impostazione predefinita. La nuova opzione per selezionare due macchine virtuali Microsoft Windows offre maggiore privacy e la possibilità di eseguire il backup e il ripristino delle macchine virtuali mediante il servizio Veeam.
+Puoi ora selezionare la distribuzione di una singola VSI (Virtual Server Instance) di Microsoft Windows Server per Microsoft Active Directory (AD) o due macchine virtuali Microsoft Windows ad alta disponibilità nel cluster di gestione. Per le release precedenti alla V2.2, la singola VSI di Microsoft Windows per Microsoft AD veniva distribuita automaticamente per impostazione predefinita. La nuova opzione per selezionare due macchine virtuali Microsoft Windows offre maggiore privacy e la possibilità di eseguire il backup e il ripristino delle macchine virtuali che utilizzano il servizio Veeam.
 
-**Nota:** se configuri la tua istanza per utilizzare le due macchine virtuali Microsoft Windows, devi fornire due licenze di Microsoft Windows Server 2012 R2. Utilizza la licenza di Microsoft Windows Server 2012 R2 Standard Edition e/o la licenza di Microsoft Windows Server 2012 R2 Datacenter Edition. Hai 30 giorni per attivare le macchine virtuali.
+**Nota:** se configuri la tua istanza per utilizzare le due macchine virtuali di Microsoft Windows, devi fornire 2 licenze Microsoft Windows Server 2012 R2. Utilizza la licenza di Microsoft Windows Server 2012 R2 Standard Edition e/o la licenza di Microsoft Windows Server 2012 R2 Datacenter Edition. Hai 30 giorni per attivare le macchine virtuali.
 
 Per ulteriori informazioni, vedi la sezione *Impostazioni di sistema* in [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html#system-settings).
 
@@ -114,13 +114,13 @@ Sono ora disponibili trentaquattro unità SATA per i {{site.data.keyword.baremet
 
 ### Opzione per l'aumento della larghezza di banda per F5 on IBM Cloud
 
-Hai ora la possibilità di selezionare una larghezza di banda massima di 10 Gbps durante l'installazione del servizio F5 on {{site.data.keyword.cloud_notm}} per le istanze Cloud Foundation e vCenter Server. Per ulteriori informazioni, vedi [Considerazioni su F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html).
+Puoi ora selezionare una larghezza di banda massima di 10 Gbps quando installi il servizio F5 on {{site.data.keyword.cloud_notm}} per le istanze Cloud Foundation e vCenter Server. Per ulteriori informazioni, vedi [Considerazioni su F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html).
 
 ### KMIP for VMware on IBM Cloud
 
 Puoi ora ordinare un'istanza Cloud Foundation o vCenter Server con il servizio KMIP for VMware on {{site.data.keyword.cloud_notm}} incluso o aggiungere il servizio a un'istanza Cloud Foundation o vCenter Server esistente dopo la distribuzione iniziale.
 
-Questo servizio fornisce un servizio altamente disponibile 24x7 per gestire le chiavi di crittografia utilizzate da VMware in {{site.data.keyword.cloud_notm}}. Questo servizio offre funzionalità di runtime per consentire ai clienti di creare, recuperare, attivare, revocare e distruggere le chiavi di crittografia e fornisce inoltre funzionalità di gestione per mantenere le associazioni tra le credenziali del client e quelle chiavi di crittografia.
+Questo servizio fornisce un servizio altamente disponibile 24x7 per gestire le chiavi di crittografia utilizzate da VMware in {{site.data.keyword.cloud_notm}}. Questo servizio offre funzionalità di runtime per consentire ai clienti di creare, recuperare, attivare, revocare ed eliminare le chiavi di crittografia. Inoltre, questo servizio fornisce funzionalità di gestione per mantenere le associazioni tra le credenziali del client e tali chiavi di crittografia.
 
 Per ulteriori informazioni, vedi [Considerazioni su KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html).
 
@@ -136,7 +136,7 @@ Per ulteriori informazioni, vedi [Gestione di IBM Spectrum Protect Plus on {{sit
 
 ### Servizi gestiti
 
-I servizi gestiti per Veeam on {{site.data.keyword.cloud_notm}} e per Zerto on {{site.data.keyword.cloud_notm}} sono ora disponibili per le istanze VMware vCenter Server e VMware Cloud Foundation. Potresti voler richiedere i servizi gestiti se non desideri gestire la complessità della tua propria soluzione e del tuo ambiente.
+I servizi gestiti per Veeam on {{site.data.keyword.cloud_notm}} e per Zerto on {{site.data.keyword.cloud_notm}} sono ora disponibili per le istanze VMware vCenter Server e VMware Cloud Foundation. Richiedi questi servizi gestiti se non vuoi gestire la complessità della tua propria soluzione e del tuo ambiente.
 
 Il servizio Veeam on {{site.data.keyword.cloud_notm}} si integra perfettamente con i tuoi hypervisor VMware per aiutare la tua azienda a raggiungere l'alta disponibilità (HA). È possibile distribuire un ambiente di backup completamente gestito utilizzando sia il software di backup Veeam sia IBM Resiliency Backup as a Service.
 
@@ -152,7 +152,7 @@ Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * Nella documentazione è ora disponibile una tabella di confronto con le funzioni supportate per le istanze Cloud Foundation e vCenter Server, così come per i cluster VMware vSphere. Puoi vedere, a colpo d'occhio, le differenze tra le funzioni fornite da ciascun tipo di istanza. Per ulteriori informazioni, vedi [Tabella di confronto delle offerte](../vmonic/inst_comp_chart.html).
 
-* Nella documentazione viene ora fornita la Distinta base di VLAN e software per le istanze Cloud Foundation e vCenter Server, così come per i cluster VMware vSphere.
+* Nella documentazione viene ora fornita la Distinta base di VLAN e software per i cluster Cloud Foundation, vCenter Server e VMware vSphere.
 
   Per ulteriori informazioni, consulta i seguenti argomenti:
 
@@ -166,4 +166,4 @@ Sono stati apportati miglioramenti in tutta l'interfaccia utente:
 
 * Quando ordini un'istanza, tutte le opzioni hardware vengono ora filtrate in base all'ubicazione e le opzioni non disponibili vengono visualizzate nello stato disabilitato.
 * Quando ordini un cluster, la configurazione di **{{site.data.keyword.baremetal_short}}** viene ora popolata automaticamente in base alle configurazioni esistenti. Puoi aggiornare la configurazione in base ai tuoi requisiti.
-* Sono stati apportati vari miglioramenti ai messaggi di errore e alle descrizioni a comparsa per aiutarti a selezionare l'impostazione appropriata nell'interfaccia utente.
+* Sono disponibili vari messaggi di errore e miglioramenti delle descrizioni a comparsa per aiutarti a selezionare le impostazioni appropriate nell'interfaccia utente.

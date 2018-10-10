@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-08-16"
 I dispositivi VRA (Virtual Replication Appliance) non vengono visualizzati sulla console Zerto Virtual Replication dopo aver aggiunto i server ESXi a un'istanza VMware vCenter Server in cui è installato il ripristino di emergenza Zerto.
 
 ## Risoluzione
-Per le istanze vCenter Server, il servizio di ripristino di emergenza Zerto viene installato solo sul server ESXi dal cluster predefinito, **cluster1**. Per eventuali cluster aggiuntivi nello stesso ambiente vCenter Server non verrà installato automaticamente il ripristino di emergenza Zerto quando viene creato il cluster aggiuntivo, né quando il server ESXi viene aggiunto a tale cluster aggiuntivo.
+Per le istanze vCenter Server, il servizio di ripristino di emergenza Zerto viene installato solo sul server ESXi dal cluster predefinito, **cluster1**. Per qualsiasi cluster aggiuntivo nello stesso ambiente vCenter Server non viene installato automaticamente il ripristino di emergenza Zerto quando il cluster aggiuntivo viene creato, né quando il server ESXi viene aggiunto a quel cluster aggiuntivo.
 
 Sui cluster aggiuntivi, devi installare il ripristino di emergenza Zerto separatamente.
 

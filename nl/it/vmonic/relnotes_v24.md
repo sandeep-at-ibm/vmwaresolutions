@@ -10,7 +10,7 @@ lastupdated: "2018-06-22"
 
 # Note sulla release per la V2.4
 
-Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e ulteriori suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Correzione Spectre e Meltdown
 
@@ -84,7 +84,7 @@ Il documento dell'architettura {{site.data.keyword.vmwaresolutions_short}} è or
 
 ### Documentazione dei servizi
 
-Le informazioni sui servizi sono state ristrutturate e la navigazione è stata migliorata per individuare facilmente le informazioni rilevanti al momento dell'ordine dei servizi.
+Le informazioni sui servizi sono ristrutturate e la navigazione è migliorata per individuare facilmente le informazioni rilevanti quando ordini i servizi.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
 
@@ -103,6 +103,6 @@ Per ulteriori informazioni, consulta i seguenti argomenti:
 L'interfaccia utente è aggiornata e fornisce i seguenti miglioramenti:
 
 * I riquadri di aggiunta cluster e di aggiunta servizio utilizzano ora un formato pagina, con una migliore organizzazione del layout, che ti consente di completare le attività in modo più efficiente.
-* La funzionalità della pagina **Istanze distribuite** è stata migliorata con funzioni di ricerca, impaginazione e ordinamento. Questi miglioramenti ti consentono di individuare le tue istanze molto rapidamente.
+* La funzionalità della pagina **Istanze distribuite** è stata migliorata con funzioni di ricerca, impaginazione e ordinamento. Questi miglioramenti ti consentono di individuare rapidamente le tue istanze.
 * La pagina dei dettagli dell'istanza ora utilizza un menu di navigazione a sinistra, che ti consente di accedere alle informazioni dell'istanza in modo semplice e rapido.
-* Sono stati apportati vari miglioramenti ai messaggi di errore e alle descrizioni a comparsa per aiutarti a selezionare l'impostazione appropriata nell'interfaccia utente.
+* Sono disponibili vari messaggi di errore e miglioramenti delle descrizioni a comparsa per aiutarti a selezionare le impostazioni appropriate nell'interfaccia utente.

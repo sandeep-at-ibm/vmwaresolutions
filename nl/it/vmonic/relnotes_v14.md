@@ -10,13 +10,13 @@ lastupdated: "2017-03-08"
 
 # Note sulla release per la V1.4
 
-Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e ulteriori suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Aggiornamenti dei componenti per le istanze Cloud Foundation
 
 I seguenti componenti sono nuovi o aggiornati:
 
-* VC/PSC (vCenter/Platform Services Controller) 6.0U2a
+* VC e PSC (vCenter e Platform Services Controller) 6.0U2a
 * VMware Tools 10.1.0
 * SDDC Manager (SP) 2.2
 * VMware ESXi 6.0 u2 p04
@@ -78,7 +78,7 @@ Questa release include i seguenti miglioramenti della topologia per le tue istan
 
 ## Supporto della configurazione multisito per le istanze Cloud Foundation
 
-Puoi ora distribuire una singola istanza Cloud Foundation, come nelle release precedenti o, in aggiunta, distribuire istanze secondarie che vengono collegate a un'istanza primaria. Il modello di configurazione multisito utilizza una topologia "hub and spoke" con un sito primario e un massimo di 7 siti secondari.
+Puoi ora distribuire una singola istanza Cloud Foundation, come nelle release precedenti o, in aggiunta, distribuire istanze secondarie che vengono collegate a un'istanza primaria. Il modello di configurazione multisito utilizza una topologia "hub and spoke" con un sito primario e un massimo di sette siti secondari.
 
 Per ulteriori informazioni, vedi [Configurazione multisito per le istanze Cloud Foundation](../sddc/sd_multisite.html).
 

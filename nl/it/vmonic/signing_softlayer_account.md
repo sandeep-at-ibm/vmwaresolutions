@@ -28,7 +28,7 @@ L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), prec
 6. Seleziona la casella di spunta **Accetto i termini dei servizi cloud**.
 7. Fai clic su **Avanti**.
 8. Controlla le informazioni personali, l'indirizzo di fatturazione e i dati della carta di credito.
-9. Fai clic su **Eseguito**. Ti viene inviata una notifica via e-mail che indica che la configurazione del tuo account è in corso.
+9. Fai clic su **Eseguito**. Quando la configurazione del tuo account è in corso, ti viene inviata una notifica tramite e-mail.
 10. Quando riceverai una notifica via e-mail che indica che il tuo account è pronto, vai al {{site.data.keyword.slportal}} e fai clic su **Accedi con ID IBM**.
     Verrai quindi connesso automaticamente.
 
