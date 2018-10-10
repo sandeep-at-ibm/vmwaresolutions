@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
 # Requisitos e planejamento para instâncias do Cloud Foundation
 
-Revise os requisitos a seguir antes de pedir suas instâncias do VMware Cloud Foundation. Planeje sua instância com base no {{site.data.keyword.CloudDataCent}} local, nos requisitos de capacidade de carga de trabalho e nos requisitos de serviço adicionais.
+Revise os requisitos a seguir antes de pedir suas instâncias do VMware Cloud Foundation. Planeje sua instância com base no local do {{site.data.keyword.CloudDataCent}}, nos requisitos de capacidade de carga de trabalho e nos requisitos de serviço.
 
 ## Requisitos da conta do IBM Cloud
 
@@ -62,12 +62,12 @@ Tabela 2. Indicadores de status para o {{site.data.keyword.CloudDataCents_notm}}
 | Barra de Status | Detalhes do status |
 |:------------------------------|:--------------------------------------------------|
 | Em breve                   | O {{site.data.keyword.CloudDataCent_notm}} não está disponível atualmente. |
-| Provisoriamente fora do inventário  | O {{site.data.keyword.CloudDataCent_notm}} não possui disponibilidade neste momento. |
+| Provisoriamente fora do inventário  | O  {{site.data.keyword.CloudDataCent_notm}}  não tem nenhuma disponibilidade atualmente. |
 | Inventário limitado             | O {{site.data.keyword.CloudDataCent_notm}} limitou a disponibilidade e o pedido pode não estar concluído. |
 
 ## Backup de componentes de gerenciamento
 
-Você é responsável por manter e assegurar a disponibilidade de todos os componentes da instância. É altamente recomendável planejar o backup ou a alta disponibilidade de todos os componentes de gerenciamento. Para obter mais informações, consulte [Fazendo backup de componentes](../archiref/solution/solution_backingup.html).
+Você é responsável por manter e assegurar a disponibilidade de todos os componentes da instância. Recomenda-se planejar o backup ou a alta disponibilidade de todos os componentes de gerenciamento. Para obter mais informações, consulte [Fazendo backup de componentes](../archiref/solution/solution_backingup.html).
 
 ## Serviços para instâncias do Cloud Foundation
 
@@ -75,7 +75,7 @@ Você é responsável por manter e assegurar a disponibilidade de todos os compo
 
 ## Considerações sobre capacidade
 
-Para obter informações e considerações de capacidade, consulte [Capacidade de ajuste de escala](../archiref/solution/solution_scaling.html).
+Para obter mais informações sobre capacidade, consulte [Ajustando a escala da capacidade](../archiref/solution/solution_scaling.html).
 
 ### Links relacionados
 

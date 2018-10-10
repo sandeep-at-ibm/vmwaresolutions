@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-08"
 
 Mudar usuários, recursos ou sub-redes que são reservados para o {{site.data.keyword.vmwaresolutions_full}} pode afetar as operações de gerenciamento para instâncias do VMware Cloud Foundation.
 
-**Importante:** não edite as permissões globais do grupo **ic4v-vCenter** na página **Usuários e grupos** no VMware vSphere Web Client. Essas mudanças incluem: mudar o nome do usuário, excluir o usuário ou mudar sua senha.
+**Importante:** não mude as permissões globais do grupo **ic4v-vCenter** na página **Usuários e grupos** no VMware vSphere Web Client. Os exemplos a seguir são mudanças de permissões globais: mudando o nome do usuário, excluindo o usuário ou mudando sua senha.
 
 ## As contas do usuário de serviço específico
 
