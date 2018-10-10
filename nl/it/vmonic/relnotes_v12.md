@@ -10,7 +10,7 @@ lastupdated: "2016-12-12"
 
 # Note sulla release per la V1.2
 
-Questa release include nuove funzioni, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e altri suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Questa release include nuove funzioni, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Aggiornamenti dei componenti
 
@@ -18,7 +18,7 @@ La nuova versione di VMware ESXi è vSphere 6.0 u2 p03, aggiornata da ESXi 6.0 u
 
 ## Associazione degli account ID IBM e Bluemix
 
-{{site.data.keyword.vmwaresolutions_full}} viene fornito come soluzione dell'infrastruttura nel catalogo IBM Bluemix®. Pertanto, per utilizzare il tuo account **ID IBM** per accedere alla console {{site.data.keyword.vmwaresolutions_short}}, devi associare l'account **ID IBM** a un account Bluemix.
+{{site.data.keyword.vmwaresolutions_full}} viene fornito come soluzione dell'infrastruttura nel catalogo IBM Bluemix®. Devi associare l'account **ID IBM** a un account Bluemix per utilizzare il tuo account **ID IBM** per accedere alla console {{site.data.keyword.vmwaresolutions_short}}.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Introduzione](../index.html)

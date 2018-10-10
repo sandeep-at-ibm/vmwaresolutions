@@ -10,7 +10,7 @@ lastupdated: "2017-08-28"
 
 # Note sulla release per la V1.8
 
-Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e ulteriori suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Servizio Fortinet on IBM Cloud
 
@@ -28,7 +28,7 @@ Questa release introduce il servizio Veeam on {{site.data.keyword.cloud_notm}}, 
 
 A causa di questa modifica, sebbene la VSI Veeam nelle istanze precedenti alla V1.8 continui a funzionare, i punti di backup per le istanze non sono più disponibili nella console {{site.data.keyword.vmwaresolutions_short}} e devi creare un ticket di supporto per ottenere assistenza con un ripristino.
 
-Inoltre, la licenza della VSI Veeam nelle istanze precedenti alla V1.8 è scaduta il 14 ottobre 2017. Pertanto, devi sostituire la VSI Veeam precedente con il nuovo servizio Veeam al più presto.
+Inoltre, la licenza della VSI Veeam nelle istanze precedenti alla V1.8 scade il 14 ottobre 2017. Pertanto, devi sostituire la VSI Veeam precedente con il nuovo servizio Veeam al più presto.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Panoramica di Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)

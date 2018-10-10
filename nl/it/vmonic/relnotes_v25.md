@@ -10,7 +10,7 @@ lastupdated: "2018-08-30"
 
 # Note sulla release per la V2.5
 
-Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e altri suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Correzione Spectre e Meltdown
 
@@ -114,4 +114,4 @@ L'interfaccia utente è aggiornata e fornisce i seguenti miglioramenti:
 
 * Se hai un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) collegato al tuo account {{site.data.keyword.cloud_notm}}, puoi ora fare clic sul nuovo pulsante **Recupera** nella pagina **Impostazioni** per ottenere automaticamente il nome utente e la chiave API per il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer).
 * È stata aggiunta una nuova scheda **Cronologia distribuzione** nel riquadro di navigazione a sinistra della pagina dei dettagli dell'istanza che ti consente di verificare la cronologia di distribuzione di un'istanza.
-* Sono stati apportati vari miglioramenti ai messaggi di errore e alle descrizioni a comparsa per aiutarti a selezionare l'impostazione appropriata nell'interfaccia utente.
+* Sono disponibili vari messaggi di errore e miglioramenti delle descrizioni a comparsa per aiutarti a selezionare le impostazioni appropriate nell'interfaccia utente.

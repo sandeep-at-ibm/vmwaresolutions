@@ -10,7 +10,7 @@ lastupdated: "2017-03-30"
 
 # Note sulla release per la V1.5
 
-Questa release include nuove funzioni, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e ulteriori suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Questa release include nuove funzioni, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Requisiti dell'account SoftLayer VRF rispetto all'account classico
 
@@ -30,5 +30,5 @@ Per le istanze Cloud Foundation, viene introdotta una nuova licenza _SDDC Manage
 
 Sono stati apportati miglioramenti in tutta l'interfaccia utente:
 
-* La disponibilità dei vari data center e se hanno un inventario sufficiente per soddisfare l'ordine è chiaramente indicato sull'interfaccia utente in modo da poter prendere una decisione consapevole sul data center da selezionare durante l'ordine dell'istanza. Per ulteriori informazioni, vedi [Requisiti e pianificazione per le istanze Cloud Foundation](../sddc/sd_planning.html) e [Requisiti e pianificazione per le istanze vCenter Server](../vcenter/vc_planning.html).
-* Per le istanze Cloud Foundation, informazioni come il nome dell'istanza, il nome del dominio e del dominio secondario e l'ubicazione del data center vengono automaticamente visualizzate in formato grafico mentre immetti le informazioni richieste nei campi di input. Per ulteriori informazioni, vedi [Ordine di istanze Cloud Foundation](../sddc/sd_orderinginstance.html).
+* La disponibilità dei vari {{site.data.keyword.CloudDataCents_notm}} e se hanno un inventario sufficiente per soddisfare l'ordine è chiaramente indicato sull'interfaccia utente. Utilizza questi dettagli per prendere una decisione consapevole sul {{site.data.keyword.CloudDataCent_notm}} da selezionare quando ordini un'istanza. Per ulteriori informazioni, vedi [Requisiti e pianificazione per le istanze Cloud Foundation](../sddc/sd_planning.html) e [Requisiti e pianificazione per le istanze vCenter Server](../vcenter/vc_planning.html).
+* Per le istanze Cloud Foundation, informazioni come il nome dell'istanza, il nome del dominio e del dominio secondario e l'ubicazione del data center vengono visualizzate automaticamente in formato grafico quando immetti le informazioni richieste nei campi di input. Per ulteriori informazioni, vedi [Ordine di istanze Cloud Foundation](../sddc/sd_orderinginstance.html).

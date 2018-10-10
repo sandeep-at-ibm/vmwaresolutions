@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-25"
 
 ---
 
 # Risorse aggiuntive
 
-Esamina altre risorse che possono aiutarti a iniziare più velocemente. Tali risorse comprendono:
+Rivedi le seguenti risorse per iniziare più velocemente.
 * Informazioni di riferimento sull'architettura
 * Video
 * Dimostrazioni
@@ -41,7 +41,7 @@ Esamina l'architettura di tutte le [estensioni della piattaforma di virtualizzaz
 
 ## Prova IBM Cloud for VMware Solutions
 
-Vuoi provare di persona? Fai un breve test drive del prodotto seguendo la dimostrazione guidata di {{site.data.keyword.vmwaresolutions_short}} [Prova VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions).
+Vuoi provare di persona? Fai un breve test drive del prodotto seguendo la dimostrazione guidata di {{site.data.keyword.vmwaresolutions_short}} [Try VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions).
 
 ## Istruzioni specifiche su developerWorks
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-08-15"
 
 ## Risultati
 
-Dopo che gli utenti aggiunti hanno accettato il tuo invito, possono accedere alla console {{site.data.keyword.vmwaresolutions_short}} e passare al tuo account. Per farlo, nelle impostazioni del loro profilo, gli utenti fanno clic sul proprio avatar nell'angolo superiore destro della console {{site.data.keyword.vmwaresolutions_short}}. Quindi, gli utenti aggiunti possono collaborare e condividere i servizi e le risorse disponibili nel tuo account specificato.
+Dopo che gli utenti aggiunti hanno accettato il tuo invito, possono accedere alla console {{site.data.keyword.vmwaresolutions_short}} e passare al tuo account. Per farlo, nelle impostazioni del loro profilo, gli utenti fanno clic sull'icona del proprio account utente nel banner della console {{site.data.keyword.vmwaresolutions_short}}. Quindi, gli utenti aggiunti possono collaborare e condividere i servizi e le risorse disponibili nel tuo account specificato.
 
 ### Link correlati
 
