@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -35,10 +35,9 @@ Esta camada virtualiza a infraestrutura física por meio de produtos VMware dife
 
 Essa camada consiste no vCenter Server, que representa a camada de gerenciamento para o ambiente virtualizado. As mesmas ferramentas e scripts compatíveis com o vSphere API familiares podem ser usadas para gerenciar o ambiente do VMware hospedado pela IBM.
 
-No console do {{site.data.keyword.vmwaresolutions_short}}, é possível expandir e contrair a capacidade de suas instâncias usando o recurso para incluir ou remover o servidor ESXi. Além disso, as funções de gerenciamento de ciclo de vida, como aplicar atualizações e fazer upgrade dos componentes do VMware no ambiente hospedado, também estão disponíveis.
+No console do {{site.data.keyword.vmwaresolutions_short}}, é possível expandir e contrair a capacidade de suas instâncias usando o recurso de inclusão e remoção de servidores ESXi. Além disso, as funções de gerenciamento de ciclo de vida, como aplicar atualizações e fazer upgrade dos componentes do VMware no ambiente hospedado, também estão disponíveis.
 
-Para obter detalhes sobre a arquitetura, consulte [Visão geral da
-solução](../archiref/solution/solution_overview.html).
+Para obter mais informações sobre a arquitetura, consulte [Visão geral da solução](../archiref/solution/solution_overview.html).
 
 ## Especificações técnicas para instâncias do Cloud Foundation
 
@@ -64,14 +63,14 @@ Os componentes de rede a seguir são pedidos:
 * Três VLANs (Virtual LANs): uma VLAN pública e duas VLANs privadas
 * Serviços de gerenciamento seguro VMware NSX Edge Services Gateway (ESG) para o tráfego de gerenciamento HTTPS de saída, que é implementado pela IBM como parte da tipologia de rede de gerenciamento. Este ESG é usado pelas máquinas virtuais de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Para obter mais informações, veja [Os serviços de gerenciamento NSX Edge representam um risco de segurança?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **Importante**: esse ESG não está acessível e não pode ser usado. Se modificá-lo, talvez você não consiga gerenciar a instância do Cloud Foundation do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, observe que usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externo da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
+  **Importante**: esse ESG não está acessível e não pode ser usado. Se modificá-lo, talvez você não consiga gerenciar a instância do Cloud Foundation do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externos da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
 
 * O recurso EVC (Enhanced vMotion Compatibility) será ativado automaticamente se você tiver um cluster existente com servidores ESXi que são suportados pela versão atual do VMware vSphere. O EVC fornece compatibilidade vMotion para todos os servidores ESXi em um cluster, assegurando que todos os servidores ESXi em um cluster exponham o mesmo conjunto de recursos de CPU para máquinas virtuais. Usando EVC, as máquinas virtuais podem migrar entre quaisquer servidores ESXi no cluster, mesmo que as CPUs reais nos servidores ESXi possam ser diferentes.
 
 ### Virtual Server Instances
 
 As VSIs (Virtual Server Instances) a seguir são pedidas:
-* Um VSI para serviços do Microsoft Active Directory (AD) e do Sistema de Nomes de Domínio (DNS), que é necessária para suporte de configuração de vários sites. Essa especificação da VSI é: Windows 2012 R2 (8 GB de RAM / 2 núcleos de CPU / 100 GB de disco / uplinks privados de 1 Gbps dual).
+* Um VSI para o Active Directory (AD) da Microsoft e serviços do Sistema de Nomes de Domínio (DNS). O VSI é necessário para suporte à configuração multisite. Essa especificação da VSI é: Windows 2012 R2 (8 GB de RAM / 2 núcleos de CPU / 100 GB de disco / uplinks privados de 1 Gbps dual).
 * Um VSI for IBM CloudBuilder, que será encerrado depois que a implementação da instância for concluída.
 * (Se o Veeam no {{site.data.keyword.cloud_notm}} for pedido) É pedido um VSI para o serviço de backup Veeam.
 
@@ -79,9 +78,9 @@ As VSIs (Virtual Server Instances) a seguir são pedidas:
 
 O armazenamento a seguir é pedido, dependendo da configuração do {{site.data.keyword.baremetal_short}} que você selecionar:
 * Dois discos de inicialização SATA de 1 TB
-* Dois discos em cache SSD (Disco de Estado Sólido) de 960 GB
+* Dois discos de cache SSD (Solid-State Disk) de 960 GB
 * Um controlador de disco RAID
-* Apenas para a configuração **Customizado**, é possível configurar o número de unidades de disco, o tipo de disco e a capacidade de acordo com seus requisitos.
+* Apenas para a configuração **Customizado**, é possível configurar o número de unidades de disco, o tipo de disco e a capacidade de acordo com seus requisitos. Além disso, você tem a opção Intel Optane de alto desempenho, que oferece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade. A opção Intel Optane de alto desempenho depende do modelo de CPU.
 * Apenas para a configuração **Pré-configurado**, **Pequeno**: dois discos de capacidade SSD de 1,9 TB
 * Apenas para a configuração **Pré-configurado**, **Grande**: quatro discos de capacidade SSD de 3,8 TB
 
@@ -96,7 +95,7 @@ O armazenamento a seguir é pedido, dependendo da configuração do {{site.data.
 
 ## Especificações técnicas para nós de expansão do Cloud Foundation
 
-Cada nó de expansão do Cloud Foundation implementará e incorrerá em encargos para os seguintes componentes em sua conta do {{site.data.keyword.cloud_notm}}.
+Cada nó de expansão do Cloud Foundation é implementado e incorre em encargos para os seguintes componentes em sua conta do {{site.data.keyword.cloud_notm}}.
 
 ### Hardware para nós de expansão
 

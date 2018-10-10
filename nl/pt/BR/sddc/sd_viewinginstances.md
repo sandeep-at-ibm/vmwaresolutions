@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -17,7 +17,7 @@ Visualize o resumo e as informações detalhadas das instâncias do VMware Cloud
 Para visualizar um resumo de todas as instâncias do Cloud Foundation que são provisionadas para uma conta do usuário, conclua as etapas a seguir:
 
 1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
-2. No canto superior direito do console, clique em seu avatar e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar instâncias. 
+2. No banner do console, clique em seu ícone de conta do usuário e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar as instâncias.
 3. Na tabela **Instâncias do Cloud Foundation**, visualize a lista de suas instâncias:
 
 Tabela 1. Cloud Foundation instância itens
@@ -60,7 +60,7 @@ Tabela 3. Cloud Foundation propriedades da instância
 | ID | O ID da instância |
 | Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada |
 | Versão atual | A versão atual do {{site.data.keyword.vmwaresolutions_short}} |
-| Versão do vCenter | A versão do VMware vCenter Server<br><br>**Nota**: há uma pequena variação entre a versão do vCenter Server exibida no console do {{site.data.keyword.vmwaresolutions_short}} e do VMware vSphere Web Client. Ambos estão corretos. |
+| Versão do vCenter | A versão do VMware vCenter Server<br><br>**Nota**: há uma pequena variação entre a versão do vCenter Server que é exibida no console do {{site.data.keyword.vmwaresolutions_short}} e no VMware vSphere Web Client. Ambos estão corretos. |
 | NSX for vSphere | O VMware NSX para a versão do produto vSphere |
 | Licença do _componente do VMware_ | Se tiver selecionado para usar sua própria licença do VMware para qualquer um dos componentes do VMware na página **Licenciamento** quando pediu a instância, o nome do componente do VMware e a chave de licença inseridos para o componente serão exibidos.<br><br>Exemplos de licenças de componentes do VMware são **Licença do vCenter Server** e **Licença do NSX**. |
 | Edição de licença NSX | A versão e edição da licença do VMware NSX |
@@ -68,7 +68,7 @@ Tabela 3. Cloud Foundation propriedades da instância
 | DNS, domínio SSO | O domínio SSO é o domínio de Conexão única do vSphere. O nome de domínio SSO é fixo para todas as instâncias implementadas do Cloud Foundation com um valor de <samp class="ph codeph">vsphere.local</samp>. |
 | DNS, subdomínio | O subdomínio é o nome do subdomínio DNS do nome do domínio-raiz em que residem os nomes de host da instância do Cloud Foundation local. O nome do subdomínio está no formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 | Versão do SDDC Manager  |  A versão do SDDC Manager da instância |
-| Barra de Status  | O status da instância<br><br>As informações exibidas fornecem uma atualização sobre o progresso da implementação ou a ação que é executada na instância. Se houver problemas, uma mensagem poderá ser exibida para ajudá-lo a investigar e resolver o problema. |
+| Barra de Status  | O status da instância<br><br>As informações exibidas fornecem uma atualização sobre o progresso da implementação ou a ação que é executada na instância. Quando ocorrem problemas, uma mensagem pode ser exibida para ajudar a investigar e resolver o problema. |
 
 ## Visualizando informações de acesso para instâncias do Cloud Foundation
 
@@ -80,11 +80,11 @@ Tabela 4. Informações de acesso do Cloud Foundation para componentes relaciona
 |:------------- |:------------- |
 | AD/DNS IP | O endereço IP dos dois servidores AD |
 | AD/DNS FQDN | O nome completo do domínio do servidor AD/DNS<br><br>**Nota**: a mesma senha do administrador pode ser usada para se conectar a todos os servidores AD/DNS usando uma conexão de área de trabalho remota. |
-| ADMINISTRADOR DO AD/DNS (Área de trabalho remota)  | Para instâncias primárias, ele exibe o nome do usuário e a senha para acessar o servidor AD por meio de uma conexão de área de trabalho remota.<br><br>Para instâncias secundárias, clique no link **Visualizar na instância primária** para ser direcionado para as informações de nome de usuário e senha na instância primária.<br><br>**Nota**: depois que a instância secundária for incluída no domínio DNS primário e a replicação ocorrer, a senha do administrador local na instância primária poderá sobrescrever a senha do administrador local na instância secundária. Ao clicar no link **Visualizar na instância primária**, você obterá acesso à senha correta do administrador.  |
+| ADMINISTRADOR DO AD/DNS (Área de trabalho remota)  | Para instâncias primárias, ele exibe o nome do usuário e a senha para acessar o servidor AD por meio de uma conexão de área de trabalho remota.<br><br>Para instâncias secundárias, clique no link **Visualizar na instância primária** para ser direcionado para as informações de nome de usuário e senha na instância primária.<br><br>**Nota**: depois que a instância secundária for incluída no domínio DNS primário e a replicação ocorrer, a senha do administrador local na instância primária poderá sobrescrever a senha do administrador local na instância secundária. Ao clicar no link **Visualizar na instância primária**, você obtém acesso à senha correta do administrador.  |
 | IP do NSX Manager  | O endereço IP do NSX Manager  |
 | FQDN do NSX Manager  | O nome completo do domínio do NSX Manager  |
 | HTTP do NSX Manager  | O nome do usuário e a senha usados para acessar o console da web do NSX Manager |
-| SSH do NSX Manager | O nome do usuário e a senha que você pode usar para acessar o NSX Manager por meio de uma conexão SSH |
+| SSH do NSX Manager | O nome do usuário e a senha que podem ser usados para acessar o NSX Manager por meio da conexão SSH |
 | IP do PSC  | O endereço IP do Platform Services Controller  |
 | FQDN do PSC  | O nome completo do domínio do PSC  |    
 | SSH do PSC  | O nome do usuário e a senha que você pode usar para acessar a VM do PSC por meio de uma conexão SSH  |
@@ -118,8 +118,8 @@ Gerencie suas instâncias do console do {{site.data.keyword.vmwaresolutions_shor
 Revise os tópicos a seguir para obter informações que ajudarão a concluir as instruções de login:
 
 * Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
-* Para obter uma lista de pontos de acesso para efetuar login no {{site.data.keyword.cloud_notm}} Private Network usando a VPN, veja [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
-* Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, veja [Implementando um arquivo OVF usando o vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
+* Para obter uma lista de pontos de acesso para efetuar login na Rede privada do {{site.data.keyword.cloud_notm}} usando a VPN, consulte [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
+* Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, consulte [Implementando um arquivo OVF usando o vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
 
 ### Links relacionados
 

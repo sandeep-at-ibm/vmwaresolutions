@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -32,18 +32,17 @@ Tabela 2. BOM para os componentes de software em instâncias do Cloud Foundation
 
 | Fabricante | Componente                                | Versão      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 U1g (ESXi 6.5u1 com o nível da correção ESXi650-201803001 aplicado) |
-| VMware       | vCenter Server Appliance                 | 6,5 Atualização 1g |
-| VMware       | Platform Services Controller             | 6,5 Atualização 1g |
+| VMware       | vSphere ESXi                             | 6.5 Atualização 2c (até o nível da correção ESXi650-201808001) |
+| VMware       | vCenter Server Appliance                 | 6.5 Atualização 2c |
+| VMware       | Platform Services Controller             | 6.5 Atualização 2c |
 | VMware       | vSAN                                     | 6.6.1        |
-| VMware       | NSX for vSphere                          | 6.3.5        |
+| VMware       | NSX for vSphere                          | 6.4.1        |
 | VMware       | SDDC Manager                             | 2.4          |
-| IBM          | CloudDriver                              | 2.5          |
 | Microsoft    | Windows Server Standard Edition (64 bits) | 2012R2       |
 
 ## Definições de configuração avançada para servidores ESXi
 
-Revise a tabela a seguir para obter uma visão geral das definições de configuração avançadas que são aplicadas aos servidores ESXi dependendo se a instância do Cloud Foundation é implementada na V2.2 ou mais recente ou se é atualizada para a V2.2 ou mais recente de uma V2.1 anterior ou de uma liberação anterior.
+Revise a tabela a seguir para obter uma visão geral das definições de configuração avançada aplicadas a servidores ESXi. As configurações são diferentes, dependendo se a instância do Cloud Foundation foi implementada (ou submetida a upgrade) na V2.2 ou mais recente de uma liberação anterior (V2.1 ou anterior).
 
 Tabela 3. Definições de configuração avançada de servidores ESXi para instâncias e clusters do Cloud Foundation
 
@@ -61,7 +60,7 @@ Tabela 3. Definições de configuração avançada de servidores ESXi para inst�
 
 **Notas**:
 * A configuração **MaxVolumes** é necessária para o serviço IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} porque o serviço pode usar mais que o número padrão de montagens NFS no servidor ESXi.
-* Um valor de **Não configurado** para uma definição de configuração indica que a nova configuração não será aplicada automaticamente, porque requer a reinicialização dos servidores ESXi, que poderá ser disruptiva.
+* Um valor de **Not set** para uma definição de configuração indica que a nova configuração não é aplicada automaticamente porque requer reinicialização de servidores ESXi, o que pode causar interrupção.
 
   Recomenda-se mudar as definições de configuração **Não configurado** para os novos valores para consistência em todas as instâncias e para permitir suporte adequado para expansão de armazenamento. A IBM planeja testar apenas com essas novas configurações para todos os {{site.data.keyword.vmwaresolutions_short}} V2.2 e liberações mais recentes.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-17"
 
 É possível expandir ou contrair a capacidade de sua instância do VMware Cloud Foundation de acordo com as necessidades do negócio, incluindo ou removendo servidores ESXi.
 
-Uma instância do Cloud Foundation pode ter até cinco clusters, um dos quais é o padrão. Cada cluster inicial pode ter até 51 servidores ESXi e clusters adicionais podem ter até 59.
+Uma instância do Cloud Foundation pode ter até cinco clusters, um dos quais é o padrão. Cada cluster inicial pode ter até 51 servidores ESXi e mais clusters podem ter até 59.
 
 ## Incluindo servidores ESXi em instâncias do Cloud Foundation
 
@@ -34,7 +34,7 @@ Uma instância do Cloud Foundation pode ter até cinco clusters, um dos quais é
 
 ### Resultados após a inclusão de servidores ESXi
 
-1. Você pode ter um pequeno atraso no console enquanto o status da instância é mudado de **Pronto para o uso** para **Modificando**. Permita que a operação seja totalmente concluída antes de fazer mudanças adicionais na instância.
+1. Você pode ter um pequeno atraso no console enquanto o status da instância é mudado de **Pronto para o uso** para **Modificando**. Deixe que a operação seja totalmente concluída antes de fazer mudanças adicionais na instância.
 2. Você é notificado por e-mail quando seus servidores ESXi são incluídos.
 3. Se não vir os novos servidores ESXi incluídos na lista no cluster, verifique as notificações por e-mail ou do console para localizar mais detalhes sobre a falha.
 
@@ -44,8 +44,8 @@ Uma instância do Cloud Foundation pode ter até cinco clusters, um dos quais é
 
 * Não remova servidores ESXi do Web client do VMware vSphere. As mudanças que você faz no VMware vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}.
 * A plataforma base que você pediu tem 4 servidores ESXi por padrão. É possível remover os servidores ESXi que você incluiu. Não é possível remover os servidores ESXi padrão.
-* Antes de remover servidores do ESXi com o serviço F5 on {{site.data.keyword.cloud_notm}} ou o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalado, deve-se migrar as VMs do F5 BIG-IP e do FortiGate para um servidor do ESXi diferente daquele que está atualmente hospedando as VMs.
-* Antes de remover servidores ESXi com o serviço do IBM Spectrum Protect Plus no {{site.data.keyword.cloud_notm}} instalado, certifique-se de que não haja nenhuma operação ativa (com falha ou em andamento) de backup ou restauração, pois essas operações ativas podem impedir que os servidores ESXi sejam removidos.
+* Antes de remover os servidores ESXi com os serviços F5 on {{site.data.keyword.cloud_notm}} ou FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalados, deve-se migrar as VMs F5 BIG-IP e FortiGate para um servidor ESXi diferente daquele que está hospedando as VMs.
+* Antes de remover servidores ESXi com o serviço IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} instalado, assegure-se de que não haja operações de backup ou de restauração ativas. Operações ativas, sejam com falha ou em andamento, podem evitar a remoção dos servidores ESXi.
 
 ## Procedimento para remover servidores ESXi
 
@@ -57,7 +57,7 @@ Uma instância do Cloud Foundation pode ter até cinco clusters, um dos quais é
 
 ### Resultados após a remoção de servidores ESXi
 
-1. Você pode ter um pequeno atraso no console enquanto o status da instância é mudado de **Pronto para o uso** para **Modificando**. Permita que a operação seja totalmente concluída antes de fazer mudanças adicionais na instância.
+1. Você pode ter um pequeno atraso no console enquanto o status da instância é mudado de **Pronto para o uso** para **Modificando**. Permita que a operação seja totalmente concluída antes de fazer mais mudanças na instância.
 2. Você é notificado por e-mail quando seus servidores ESXi são removidos.
 3. Os servidores ESXi são totalmente recuperados pela infraestrutura do {{site.data.keyword.cloud_notm}} no final do ciclo de faturamento do {{site.data.keyword.cloud_notm}}, que geralmente é de 30 dias.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-14"
 
 ---
 
@@ -40,11 +40,11 @@ O nome do cluster deve atender aos requisitos a seguir:
 
 O local do {{site.data.keyword.CloudDataCent}} do cluster é configurado como o {{site.data.keyword.CloudDataCent_notm}} da instância do Cloud Foundation por padrão. É possível implementar o cluster em um {{site.data.keyword.CloudDataCent_notm}} diferente da instância implementada, mas deve-se assegurar que a latência de rede entre os dois {{site.data.keyword.CloudDataCents_notm}} seja menor que 150 ms. Para verificar a latência de rede, é possível usar uma ferramenta, como o [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-Os data centers disponíveis para você dependem da configuração do Bare Metal Server selecionada para implementação. Se você selecionar a configuração **Customizada**, poderá também implementar o cluster em um pod da infraestrutura do {{site.data.keyword.cloud}} diferente, se o data center selecionado contiver pods adicionais. Isso é útil quando o pod da infraestrutura do {{site.data.keyword.cloud_notm}} padrão em que a instância inicial é implementada tiver atingido sua capacidade máxima.
+Os data centers disponíveis a você dependem da configuração do Bare Metal Server selecionada para implementação. Se você selecionar a configuração **Customizado**, também será possível implementar o cluster em um pod de infraestrutura diferente do {{site.data.keyword.cloud}}, se o data center selecionado contiver mais pods. Essa configuração é útil quando o pod de infraestrutura padrão do {{site.data.keyword.cloud_notm}} no qual a instância inicial está implementada atingiu sua capacidade máxima.
 
 **Nota:** as configurações padronizadas **Pequeno** e **Grande** do Bare Metal Server usam um pod padrão que não pode ser mudado.
 
-Se você implementar o cluster em um data center ou pod diferente, três VLANs adicionais serão pedidas para uso com o {{site.data.keyword.baremetal_short}} pedido.
+Se você implementar o cluster em um datacenter ou pod diferente, mais três VLANs serão pedidas para uso com o {{site.data.keyword.baremetal_short}} pedido.
 
 ### Configurações do Bare Metal Server
 
@@ -52,7 +52,7 @@ Se você implementar o cluster em um data center ou pod diferente, três VLANs a
 
 #### Customizado
 
-Para a configuração **Customizada**, você tem um número de opção para o **Modelo de CPU** e **RAM**. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
+Para a configuração **Customizado**, você tem um número de opções para o **Modelo de CPU** e **RAM**. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
 
 Tabela 1. Opções para {{site.data.keyword.baremetal_short}}customizado
 
@@ -77,7 +77,14 @@ Para as configurações **Pré-configuradas** do Bare Metal Server, não é poss
 * Para a configuração **Pequeno**, duas unidades de disco de 1,9 TB SSD SED são pedidas.
 * Para a configuração **Grande**, quatro unidades de disco de 3,8 TB SSD SED são pedidas.
 
-Para a configuração **Customizada** do Bare Metal Server, é possível customizar o armazenamento vSAN especificando o número de discos de capacidade de vSAN e o tipo e o tamanho de disco que atendem às suas necessidades de armazenamento.
+Para a configuração **Customizado** do Bare Metal Server, é possível customizar o armazenamento vSAN especificando as configurações a seguir:
+
+* **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
+* **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
+* **Tipo de disco para discos de cache vSAN**: selecione uma opção para os discos de cache necessários.
+
+    **Nota**: se desejar incluir discos de capacidade acima do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
+* **Número de discos de cache vSAN**: especifique o número de discos de cache que deseja incluir.
 
 ### Configurações de licenciamento
 
@@ -99,8 +106,8 @@ Para a configuração **Customizada** do Bare Metal Server, é possível customi
    * Se tiver selecionado **Customizado**, selecione o **Modelo de CPU** e o tamanho da **RAM**.
    * Se tiver selecionado **Pré-configurado**, selecione a **Configuração do Bare Metal Server**.
 7. Conclua a configuração de armazenamento:
-   * Se tiver selecionado **Customizado** para a configuração de Bare Metal, especifique o **Número de discos de capacidade vSAN** e **Tipo e tamanho do disco para discos de capacidade vSAN**.
-   * Se tiver selecionado **Pré-configurado** para a configuração de Bare Metal, observe que as configurações de armazenamento para as configurações **Pequeno** e **Grande** do Bare Metal Server não poderão ser mudadas.
+   * Se você selecionou **Pré-configurado** para a configuração do Bare Metal, as configurações de armazenamento para as configurações **Pequeno** e **Grande** do Bare Metal Server não poderão ser mudadas.
+   * Se você selecionou **Customizado** para a configuração Bare Metal, especifique os tipos de disco para os discos de capacidade e de cache vSAN, além do número de discos. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
 8. Especifique como suas chaves de licença são fornecidas:
    * Para usuários do Parceiro de Negócios, a licença do vSphere (Enterprise Plus edition) e a licença vSAN são incluídas e compradas em seu nome. No entanto, deve-se especificar a edição da licença vSAN.
    * Para usuários que não são Parceiros de Negócios, é possível selecionar uma das opções a seguir:
@@ -112,7 +119,7 @@ Para a configuração **Customizada** do Bare Metal Server, é possível customi
    3. Clique no link ou nos links dos termos que se aplicam ao seu pedido e confirme que concorda com esses termos antes de incluir o cluster.
    4. Clique em **Provisão**.
 
-### Resultados após incluir clusters para instâncias do Cloud Foundation
+### Resultados após a inclusão de clusters em instâncias do Cloud Foundation
 
 1. A implementação do cluster é iniciada automaticamente e o status do cluster muda para **Inicializando**. É possível verificar o status da implementação visualizando o histórico de implementação na página de resumo da instância.
 2. Quando o cluster estiver pronto para usar, seu status mudará para **Pronto para usar**. O cluster recém-incluído é ativado com a Alta disponibilidade (HA) do vSphere e o Distributed Resource Scheduler (DRS) do vSphere.
@@ -166,13 +173,13 @@ Para a configuração **Customizada** do Bare Metal Server, é possível customi
         <dt class="dt dlterm">Excluindo</dt>
         <dd class="dd">O servidor ESXi está sendo excluído.</dd>
         </dl>
-   * Os detalhes da licença do vSAN e a licença do vSphere. Os detalhes da licença do vSphere estão disponíveis somente quando você selecionou para usar sua própria licença do VMware (BYOL) para isso durante o pedido de cluster:
+   * Os detalhes da licença do vSAN e a licença do vSphere. Os detalhes da licença do vSphere ficam disponíveis somente quando você seleciona para usar sua própria licença do VMware (BYOL) para ele ao pedir o cluster.
        * **Tipo de licença**: a licença do vSAN ou a licença do vSphere.
        * **Tipo de pedido**: a licença é fornecida pelo usuário (BYOL) ou é comprada no nome do usuário.
        * **Edição de licença**: a edição da licença.
        * **chave de licença**: A chave de licença.
        * **Capacidade total (CPU)**: a capacidade total ou o número de CPU fornecido pela licença.
-       * **Capacidade livre (CPU)**: a capacidade que está atualmente disponível na licença.
+       * **Capacidade livre (CPU)**: a capacidade disponível na licença.
 
 ## Excluindo clusters de instâncias do Cloud Foundation
 
@@ -184,7 +191,7 @@ Talvez você queira excluir um cluster de uma instância quando ela não for mai
 * Para clusters implementados em instâncias da V2.2 ou anteriores, deve-se fazer upgrade da instância para a V2.3 para ser possível excluir os clusters incluídos na instância.
 * É possível excluir um único cluster de cada vez. Para excluir múltiplos clusters, deve-se fazer isso em sequência, aguardando que o cluster anterior seja excluído antes de tentar excluir o próximo cluster.
 * Assegure-se de que todos os nós em um cluster estejam ativados e operacionais antes de excluir o cluster.
-* Ao excluir um cluster, todas as VMs (máquinas virtuais) do cluster também serão excluídas e não poderão ser recuperadas. Se quiser manter as VMs, migre-as para outros clusters.
+* Quando você exclui um cluster, todas as VMs (máquinas virtuais) do cluster também são excluídas e não podem ser recuperadas. Se quiser manter as VMs, migre-as para outros clusters.
 * O cluster padrão não pode ser excluído.
 
 ## Procedimento para excluir clusters de instâncias do Cloud Foundation
