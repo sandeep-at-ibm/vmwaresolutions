@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -74,7 +74,7 @@ Os recursos disponíveis do vSAN dependem da edição de licença que você sele
 
 ### Configuração de rede virtual para vSAN
 
-Para esse design, o tráfego do vSAN atravessa entre hosts ESXi em uma VLAN privada dedicada. Os dois adaptadores de rede conectados ao comutador de rede privada são configurados no vSphere como um vSphere Distributed Switch (VDS) com ambos os adaptadores de rede como uplinks. Um grupo de portas do kernel do vSAN dedicado configurado para a VLAN vSAN reside dentro do VDS. Os quadros gigantes (MTU 9000) são ativados para o VDS privado.
+Para esse design, o tráfego do vSAN atravessa entre hosts ESXi em uma VLAN privada dedicada. Os dois adaptadores de rede conectados ao comutador de rede privada são configurados no vSphere como um vSphere Distributed Switch (vDS) com os dois adaptadores de rede como uplinks. Um grupo de portas de kernel vSAN dedicado configurado para a VLAN vSAN reside no vDS. Quadros gigantes (MTU 9000) são ativados para o vDS privado.
 
 O vSAN não carrega o tráfego de balanceamento entre uplinks. Como resultado, um adaptador está ativo enquanto o outro está em espera para suportar a alta disponibilidade (HA). A política de failover de rede para vSAN é configurada como **Failover explícito** entre portas de rede física.
 
@@ -107,7 +107,7 @@ As configurações do vSAN são definidas com base nas melhores práticas para i
 
 ## Design do VMware NSX
 
-A virtualização de rede fornece uma sobreposição de rede que existe dentro da camada virtual. A virtualização de rede fornece a arquitetura com recursos, como fornecimento rápido, implementação, reconfiguração e destruição de redes virtuais sob demanda. Esse design usa o vSphere Distributed Switch (VDS) e o VMware NSX for vSphere para implementar a rede virtual.
+A virtualização de rede fornece uma sobreposição de rede que existe dentro da camada virtual. A virtualização de rede fornece a arquitetura com recursos, como fornecimento rápido, implementação, reconfiguração e destruição de redes virtuais sob demanda. Esse design usa o vDS e o VMware NSX for vSphere para implementar a rede virtual.
 
 Nesse design, o NSX Manager é implementado no cluster inicial. O NSX Manager é designado a um endereço IP suportado pela VLAN do bloco de endereço móvel privado, que é designado para componentes de gerenciamento e configurado com os servidores DNS e NTP discutidos em [Design de serviços comuns](design_commonservice.html). O NSX Manager é instalado com as especificações listadas na Tabela 2.
 
@@ -130,7 +130,7 @@ Figura 2. Visão geral da rede do NSX Manager
 
 Após a implementação inicial, a automação do {{site.data.keyword.cloud_notm}} implementa três controladores NSX dentro do cluster inicial. Cada um dos controladores é designado a um endereço IP suportado pela VLAN da sub-rede privada portátil que é designada para componentes de gerenciamento. Além disso, o design cria regras de antiafinidade VM-VM para separar os controladores entre os hosts no cluster. O cluster inicial deve conter um mínimo de três nós para assegurar alta disponibilidade para os controladores.
 
-Além dos controladores, a automação do {{site.data.keyword.cloud_notm}} prepara os hosts vSphere implementados com o NSX VIBS para permitir o uso de uma rede virtualizada por meio de VXLAN Tunnel Endpoints (VTEPs). Os VTEPs são designados a um endereço IP suportado pela VLAN do intervalo de endereços IP privados portáteis que é especificado para VTEPs, conforme listado na *Tabela 1. Resumo de VLAN e de sub-rede* de [Design de infraestrutura física](design_physicalinfrastructure.html). O tráfego VXLAN reside na VLAN não identificada e é designado ao vSphere Distributed Switch (VDS) privado.
+Além dos controladores, a automação do {{site.data.keyword.cloud_notm}} prepara os hosts vSphere implementados com o NSX VIBS para permitir o uso de uma rede virtualizada por meio de VXLAN Tunnel Endpoints (VTEPs). Os VTEPs são designados a um endereço IP suportado pela VLAN do intervalo de endereços IP privados portáteis que é especificado para VTEPs, conforme listado na *Tabela 1. Resumo de VLAN e de sub-rede* de [Design de infraestrutura física](design_physicalinfrastructure.html). O tráfego de VXLAN reside na VLAN não identificada e é designado ao vDS privado.
 
 Subsequentemente, um conjunto de IDs de segmento é designado e os hosts no cluster são incluídos na zona de transporte. Somente unicast é usado na zona de transporte porque o rastreamento do Internet Group Management Protocol (IGMP) não está configurado dentro do {{site.data.keyword.cloud_notm}}.
 
@@ -141,13 +141,13 @@ na lista de exclusão de firewall distribuída do NSX Manager.
 
 ### Design do comutador distribuído
 
-O design usa um número mínimo de vSphere Distributed Switches (VDS). Os hosts no cluster são conectados às redes pública e privada. Os hosts são configurados com dois comutadores virtuais distribuídos. O uso de dois comutadores segue a prática de rede do {{site.data.keyword.cloud_notm}} que separa as redes pública e privada. O diagrama a seguir mostra o design do VDS.
+O design usa um número mínimo de Comutadores vDS. Os hosts no cluster são conectados às redes pública e privada. Os hosts são configurados com dois comutadores virtuais distribuídos. O uso de dois comutadores segue a prática de rede do {{site.data.keyword.cloud_notm}} que separa as redes pública e privada. O diagrama a seguir mostra o design do vDS.
 
 Figura 3. Design do comutador distribuído
 
-![Distributed switch design](virtual_network_distributedswitch.svg "VDS design")
+![Design do comutador distribuído](virtual_network_distributedswitch.svg "Design do vDS")
 
-Conforme mostrado na figura, um VDS é configurado para conectividade de rede pública (SDDC-Dswitch-Public) e o outro VDS é configurado para conectividade de rede privada (SDDC-Dswitch-Private).
+Conforme mostrado na figura, um vDS é configurado para conectividade de rede pública (SDDC-Dswitch-Public) e o outro vDS é configurado para conectividade de rede privada (SDDC-Dswitch-Private).
 
 A separação de diferentes tipos de tráfego é necessária para reduzir a contenção e a latência e aumentar a segurança. As VLANs são usadas para segmentar funções de rede física.
 
