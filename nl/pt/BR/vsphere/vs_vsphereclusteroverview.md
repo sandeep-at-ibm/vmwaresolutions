@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -26,9 +26,9 @@ Revise os componentes do VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
 ### Componentes do VMware
 
-Licenças (fornecidas pela IBM ou BYOL) para os seguintes componentes do VMware:
-* VMware vSphere Enterprise Plus 6.0u2 ou 6.5u1
-* Componentes opcionais do VMware:
+Selecione licenças (fornecidas pela IBM ou BYOL) para os seguintes componentes do VMware:
+* VMware vSphere Enterprise Plus 6.0u2, 6.5u1 ou 6.5u2
+* Os componentes do VMware a seguir são opcionais:
    * VMware vCenter Server Standard
    * VMware NSX (Base, Advanced ou Enterprise)
    * VMware vSAN (Advanced ou Enterprise)
@@ -39,32 +39,35 @@ Licenças (fornecidas pela IBM ou BYOL) para os seguintes componentes do VMware:
 
 ### Bare Metal Server
 
-Um ou mais {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} com seu modelo de CPU selecionado e tamanho de RAM:
+Selecione um ou mais {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} com seu modelo de CPU e tamanho de RAM selecionados:
 * Geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600 v4)
 * Geração Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100)
 
 As opções disponíveis dependem de se você selecionou o componente vSAN do VMware.
 
-Além disso, as especificações de disco e rede a seguir:
+Além disso, as especificações de disco e de rede a seguir:
 * Uplinks duais de rede pública e privada de 10 Gbps
 * Um controlador de disco RAID
 
 ### Redes
 
-* Três VLANs (Virtual LANs): uma VLAN pública e duas VLANs privadas
+* Uma VLAN pública de VLAN (Virtual LAN) e duas VLANs privadas
 * (Opcional) Um par de HA de dispositivos do FortiGate Security Appliance
 
 ### Armazenamento
 
 Armazenamento customizado pelo usuário para configuração vSAN quando o componente vSAN do VMware é selecionado:
-* Opções de disco de armazenamento: SSD SED de 960 GB, SSD SED de 1,9 TB ou SSD SED de 3,8 TB
-* Opções de quantidade de discos: 2, 4, 6 ou 8
+* Opções de disco de armazenamento de 960 GB SSD SED, 1,9 TB SSD SED ou 3,8 TB SSD SED
+* Opções de quantidade de disco de 2, 4, 6 ou 8
 
-**Nota:** as unidades SSD (Solid State Disk) de 3,8 TB serão suportadas quando forem disponibilizadas geralmente em um data center.
+  Além disso, também são pedidos dois discos de cache de 960 GB por host.
+
+  **Nota:** as unidades SSD (Solid State Disk) de 3,8 TB serão suportadas quando forem disponibilizadas geralmente em um data center.
+* Opção Intel Optane de alto desempenho, que fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade. Essa opção depende do modelo de CPU.
 
 ## Especificações técnicas para nós de expansão de cluster do vSphere
 
-Cada nó de expansão do cluster do vSphere implementará e incorrerá em encargos para os seguintes componentes em sua conta {{site.data.keyword.slportal}}.
+Cada nó de expansão de cluster do vSphere é implementado e incorre em encargos para os seguintes componentes em sua conta do {{site.data.keyword.slportal}}.
 
 ### Hardware para nós de expansão
 
@@ -79,7 +82,7 @@ Um Bare Metal Server {{site.data.keyword.cloud_notm}} com a configuração de re
 * Um {{site.data.keyword.cloud_notm}} Bare Metal Server com o VMware vSphere Enterprise Plus 6.0u2 ou 6.5u1  
 * Componentes opcionais do VMware apresentados em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
-**Importante**: deve-se gerenciar os servidores ESXi, componentes opcionais do VMware e hardware adicional que são pedidos e entregues à sua conta {{site.data.keyword.cloud_notm}} apenas no {{site.data.keyword.slportal}}. Depois de criar um novo cluster no console do {{site.data.keyword.vmwaresolutions_short}}, é possível retornar ao console para escalar o novo cluster usando a configuração salva. Para obter mais informações, consulte [Ajustando a escala de clusters existentes do
+**Importante**: deve-se gerenciar os servidores ESXi, componentes opcionais do VMware e hardware adicional que são pedidos e entregues à sua conta {{site.data.keyword.cloud_notm}} apenas no {{site.data.keyword.slportal}}. Depois de criar um novo cluster no console do {{site.data.keyword.vmwaresolutions_short}}, é possível retornar para o console e usar as informações salvas para escalar o novo cluster. Para obter mais informações, consulte [Ajustando a escala de clusters existentes do
 vSphere](vs_scalingexistingclusters.html).
 
 ### Links relacionados
