@@ -28,7 +28,7 @@ A conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer), que e
 6. Marque a caixa de seleção **Eu aceito os termos do Cloud Services**.
 7. Clique em **Avançar**.
 8. Revise as informações pessoais, o endereço para cobrança e informações do cartão de crédito.
-9. Clique em **Pronto**. Você será notificado por e-mail de que a configuração de sua conta está em processo.
+9. Clique em **Pronto**. Você será notificado por e-mail quando a configuração de sua conta estiver em processo.
 10. Quando for notificado por e-mail de que sua conta está pronta, acesse o {{site.data.keyword.slportal}} e clique em **Efetuar login com o IBMid**.
     Você será, então, automaticamente conectado.
 

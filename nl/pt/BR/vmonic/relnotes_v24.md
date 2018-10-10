@@ -10,7 +10,7 @@ lastupdated: "2018-06-22"
 
 # Notas sobre a Liberação para V2.4
 
-Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em liberações diferentes, problemas conhecidos com o produto e dicas adicionais para usar o {{site.data.keyword.vmwaresolutions_full}}, veja o [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte o [{{site.data.keyword.vmwaresolutions_short}}dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Correção para Spectre e Meltdown
 
@@ -44,9 +44,9 @@ As linguagens a seguir são suportadas, além do inglês:
 
 Iniciando com a liberação V2.4, os novos modelos de CPU Bare Metal Server a seguir estão disponíveis para implementação para instâncias e clusters do VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}, VMware vSphere on {{site.data.keyword.cloud_notm}} e VMware Federal on {{site.data.keyword.cloud_notm}}:
 
-* Processador Dual Intel Skylake Xeon Silver 4110/total de 16 núcleos, 2.1 GHz
-* Processador Dual Intel Skylake Xeon Gold 5120/total de 28 núcleos, 2.2 GHz
-* Processador Dual Intel Skylake Xeon Gold 6140/total de 36 núcleos, 2.3 GHz
+* Processador Dual Intel Skylake Xeon Silver 4110/Total de 16 núcleos, 2.1 GHz
+* Processador Dual Intel Skylake Xeon Gold 5120/Total de 28 núcleos, 2.2 GHz
+* Processador Dual Intel Skylake Xeon Gold 6140/Total de 36 núcleos, 2.3 GHz
 
 Para obter mais informações, veja a seção *Configurações do Bare Metal Server* em:
 
@@ -85,7 +85,7 @@ O documento de arquitetura do {{site.data.keyword.vmwaresolutions_short}} agora 
 
 ### Serviços de documentação
 
-As informações de serviços foram reestruturadas e a navegação foi melhorada para localizar facilmente informações relevantes ao pedir serviços.
+As informações de serviço são reestruturadas e a navegação é melhorada para localizar facilmente informações relevantes ao pedir serviços.
 
 Para obter mais informações, veja os tópicos a seguir:
 
@@ -104,6 +104,6 @@ Para obter mais informações, veja os tópicos a seguir:
 A interface com o usuário é atualizada e fornece os aprimoramentos a seguir:
 
 * As áreas de janela incluir cluster e incluir serviço agora usam um formato de página, com um layout melhor organizado, que permite concluir tarefas de forma mais eficiente.
-* A funcionalidade da página **Instâncias implementadas** foi aprimorada com recursos de procura, paginação e classificar. Essas melhorias permitem localizar as suas instâncias muito rapidamente.
+* A funcionalidade da página **Instâncias implementadas** foi aprimorada com recursos de procura, paginação e classificar. Essas melhorias permitem localizar suas instâncias rapidamente.
 * A página de detalhes da instância agora usa um menu de navegação à esquerda, que permite acessar as informações da instância fácil e rapidamente.
-* Várias mensagens de erro e aprimoramentos de dica de ferramenta foram feitos para ajudá-lo na seleção da configuração apropriada na interface com o usuário.
+* Várias mensagens de erro e aprimoramentos de dicas de ferramenta estão disponíveis para ajudá-lo na seleção da configuração apropriada na interface com o usuário.

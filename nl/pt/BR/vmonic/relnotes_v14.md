@@ -10,13 +10,13 @@ lastupdated: "2017-03-08"
 
 # Notas sobre a liberação para V1.4
 
-Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em liberações diferentes, problemas conhecidos com o produto e dicas adicionais para usar o {{site.data.keyword.vmwaresolutions_full}}, veja o [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte o [{{site.data.keyword.vmwaresolutions_short}}dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Atualizações de componentes para instâncias do Cloud Foundation
 
 Os componentes a seguir são novos ou atualizados:
 
-* VC/PSC (vCenter/Platform Services Controller) 6.0U2a
+* VC e PSC (vCenter e Platform Services Controller) 6.0U2a
 * VMware Tools 10.1.0
 * SDDC Manager (SP) 2.2
 * VMware ESXi 6.0 u2 p04
@@ -78,7 +78,7 @@ Esta liberação inclui os seguintes aprimoramentos de topologia para suas inst�
 
 ## Suporte de configuração de vários sites para instâncias do Cloud Foundation
 
-Agora, é possível implementar uma única instância do Cloud Foundation, como em liberações anteriores ou, além disso, implementar instâncias secundárias que estão conectadas a uma instância primária. O modelo de configuração de vários sites usa uma topologia de hub e spoke com um site primário e um máximo de 7 sites secundários.
+Agora, é possível implementar uma única instância do Cloud Foundation, como em liberações anteriores ou, além disso, implementar instâncias secundárias que estão conectadas a uma instância primária. O modelo de configuração multisite usa uma topologia hub-and-spoke com um site primário e um máximo de sete sites secundários.
 
 Para obter mais informações, veja [Configuração de vários sites para instâncias do Cloud Foundation](../sddc/sd_multisite.html).
 
