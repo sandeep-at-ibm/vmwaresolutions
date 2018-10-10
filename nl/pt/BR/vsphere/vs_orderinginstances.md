@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-11"
 
 # Pedindo novos clusters do vSphere
 
-Para implementar uma plataforma virtualizada VMware altamente customizável, peça um cluster do VMware vSphere no {{site.data.keyword.cloud}}. Use este procedimento para definir um novo cluster do VMware vSphere.
+Para implementar uma plataforma virtualizada VMware altamente customizável, peça um cluster do VMware vSphere no {{site.data.keyword.cloud}}. Use este procedimento para definir um novo cluster do vSphere.
 
 Este procedimento orienta você através da seleção de componentes do VMware, de configurações do Bare Metal Server, configurações de armazenamento e opções de rede do {{site.data.keyword.cloud_notm}}, para criar um novo cluster. Depois de fazer o pedido, a configuração de cluster é capturada para que seja possível voltar e continuar a ajustar a escala do cluster, conforme necessário. Depois que o pedido for concluído, será possível configurar manualmente o cluster do VMware com base em seus requisitos.
 
@@ -34,9 +34,9 @@ O nome do cluster deve ser exclusivo dentro de sua conta.
 
 Selecione os componentes do VMware a serem pedidos com seu cluster e especifique a opção de licenciamento para os componentes.
 
-### (Apenas para Parceiros de Negócios IBM) Pacotes configuráveis de componentes
+### Pacotes configuráveis de componentes para usuários do Parceiro de Negócios IBM
 
-Se você for um Parceiro de Negócios IBM, poderá selecionar um pacote de licenças de componente ao solicitar um novo cluster vSphere. Os pacotes configuráveis a seguir estão disponíveis:
+Se você for um usuário do Parceiro de Negócios IBM, será possível selecionar um pacote configurável de licença do componente ao pedir um novo cluster do vSphere. Os pacotes configuráveis a seguir estão disponíveis:
 
 Tabela 1. Pacotes configuráveis de componentes do Parceiro de Negócios IBM para clusters do vSphere
 
@@ -52,11 +52,11 @@ Também é possível incluir os seguintes componentes do VMware em seu pedido:
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**Nota:** para Parceiros de Negócios IBM, a opção Bring Your Own License (BYOL) não está disponível.
+**Nota:** para usuários do Parceiro de Negócios IBM, a opção Bring Your Own License (BYOL) não está disponível.
 
-### (Apenas para Parceiros não comerciais) Componentes individuais
+### Componentes individuais para usuários do Parceiro de Negócios
 
-Se você for um Parceiro não Comercial, será possível selecionar os seguintes componentes do VMware de maneira flexível para o cluster vSphere:
+Se você não for um Parceiro de Negócios, será possível selecionar os componentes a seguir para seu cluster do vSphere:
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
@@ -115,20 +115,14 @@ Para pedidos sem vSAN, os servidores ESXi são pedidos com um chassi de 12 disco
 
 Para pedidos com vSAN, os servidores ESXi são pedidos com um chassi de 12 discos e quatro discos pedidos: dois para o S.O. ESXi e dois reservados para armazenamento em cache. Essas configurações são definidas por padrão e não podem ser mudadas. É possível pedir mais discos de capacidade selecionando **Tipo e tamanho do disco para discos de capacidade do vSAN** e **Número de discos de capacidade do vSAN**.
 
-Quando você tiver selecionado o componente VMware vSAN para o cluster, especifique as configurações a seguir.
+Se você selecionar o componente VMware vSAN para o cluster, especifique as configurações a seguir.
 
-### Tipo e tamanho do disco para discos de capacidade vSAN
+* **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
+* **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
+* **Tipo de disco para discos de cache vSAN**: selecione uma opção para os discos de cache necessários.
 
-Esta opção fica disponível somente ao selecionar o componente VMware vSAN.
-
-Os seguintes tipos de discos estão disponíveis:
-* SSD SED de 960 GB
-* SSD SED de 1,9 TB
-* SSD SED de 3,8 TB (Unidades SSD SED de 3,8 TB são suportadas quando são disponibilizadas geralmente em um data center)
-
-### Número de discos de capacidade vSAN
-
-Esta opção fica disponível somente ao selecionar o componente VMware vSAN. As opções de quantidade de discos incluem 2, 4, 6 e 8.
+    **Nota**: se desejar incluir discos de capacidade acima do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
+* **Número de discos de cache vSAN**: especifique o número de discos de cache que deseja incluir.
 
 ## Configurações da interface de rede
 
@@ -161,6 +155,15 @@ O nome de domínio é usado para todos os {{site.data.keyword.baremetal_short}} 
 * O comprimento de outras sequências deve estar no intervalo de 1 a 63 caracteres.
 * O comprimento máximo do nome de domínio é de 189 caracteres.
 
+### Rede pública ou privada
+
+As configurações de ativação da Placa da interface de rede (NIC) baseiam-se em sua seleção de **Rede pública e privada** ou **Somente rede privada**. Os serviços complementares a seguir requerem NICs públicas e não estarão disponíveis se você selecionar a opção privada:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
+
 ### VLANs
 
 As configurações de rede se baseiam em sua seleção de **Pedir novas VLANs** ou **Selecionar VLANs existentes**.
@@ -192,7 +195,7 @@ Dependendo do {{site.data.keyword.CloudDataCent_notm}} selecionado, VLANs públi
 
 Com base em suas configurações, o custo estimado é gerado instantaneamente e exibido na área de janela **Resumo da ordem** à direita. Clique em **Detalhes da precificação** para gerar um documento PDF que fornece os detalhes da estimativa.
 
-## Procedimento
+## Procedimento para pedir clusters do vSphere
 
 1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação à esquerda e, em seguida, clique em **VMware vSphere** na seção **Datacenters virtuais**.
 2. Na página **VMware vSphere on IBM Cloud**, clique em **Criar**.  
@@ -204,18 +207,18 @@ Com base em suas configurações, o custo estimado é gerado instantaneamente e 
   Quando você escolhe Bring Your Own License (BYOL) para o VMware vSphere Enterprise Plus, um chamado {{site.data.keyword.cloud_notm}} é aberto automaticamente em seu nome para solicitar que as licenças padrão do vSphere no seu {{site.data.keyword.baremetal_short}} pedido sejam substituídas por suas licenças fornecidas.   
 
     **Importante:** você é responsável por rastrear o chamado para que você substitua a licença do vSphere nos servidores ESXi recém-ordenados. Dessa forma, a infraestrutura do {{site.data.keyword.cloud_notm}} concede o cancelamento do encargo de licença do vSphere da infraestrutura do {{site.data.keyword.cloud_notm}} inicialmente fornecida. Para substituir sua licença ESXi vSphere, veja [Definir Configurações da Licença para um Host ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
-
 5. Conclua as configurações do Bare Metal Server:
    1. Selecione o {{site.data.keyword.CloudDataCent_notm}} para hospedar o cluster.
    2. Selecione o modelo de CPU e o tamanho de RAM.
    3. Especifique o número de Bare Metal Servers.
-6. Se tiver selecionado o componente **VMware vSAN**, conclua as configurações de armazenamento de vSAN selecionando o **Tipo e tamanho do disco para discos de capacidade de vSAN** e **Número de discos de capacidade de vSAN**.
+6. Se você selecionou o componente **VMware vSAN**, conclua a configuração de armazenamento vSAN. Especifique os tipos de disco para os discos de capacidade e de cache, além do número de discos. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
 7. Conclua as configurações da interface de rede:
    1. Insira o prefixo de nome do host, o rótulo do subdomínio e o nome de domínio.
-   2. Selecione a interface de rede que você deseja usar.
+   2. Selecione a configuração de rede de **Rede pública e privada** ou **Somente rede privada**.
+   3. Selecione a interface de rede que você deseja usar.
     * Se desejar pedir novas VLANs públicas e privadas, clique em **Pedir novas VLANs**.
     * Se você desejar reutilizar as VLANs públicas e privadas existentes quando estiverem disponíveis, clique em **Selecionar VLANs existentes** e especifique as VLANs e, opcionalmente, as sub-redes.
-    3. Especifique se deseja aplicar o Par de HA do FortiGate Physical Appliance série 300 para assegurar seu ambiente de nuvem.  
+    4. Especifique se deseja aplicar o Par de HA do FortiGate Physical Appliance série 300 para assegurar seu ambiente de nuvem.  
 8. Na área de janela **Resumo**, verifique a configuração de cluster e o custo estimado.
    * Para salvar a configuração como um modelo sem fazer um pedido, clique em **Salvar configuração**.
    * Para fazer o pedido, assegure-se de que a conta a ser cobrada está correta, revise e aceite os termos e, em seguida, clique em **Provisão**.
