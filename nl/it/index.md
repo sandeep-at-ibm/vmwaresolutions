@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -130,6 +130,10 @@ Esamina e scegli i servizi aggiuntivi per la tua offerta di distribuzione.
     <tr>
        <td>[HyTrust DataControl on IBM Cloud](services/htdc_considerations.html)</td>
        <td>Il servizio HyTrust DataControl on {{site.data.keyword.cloud_notm}} offre una potente crittografia con gestione delle chiavi integrata per proteggere i carichi di lavoro per tutto il loro ciclo di vita. Il servizio può fornire la crittografia sia a livello di sistema operativo che a livello di dati, il che significa che è possibile crittografare e decrittografare qualsiasi directory, cartella o file all'interno di un carico di lavoro.</td>
+    </tr>
+    <tr>
+       <td>[HyTrust KeyControl on IBM Cloud](services/htkc_considerations.html)</td>
+       <td>Il servizio HyTrust KeyControl on {{site.data.keyword.cloud_notm}} semplifica la gestione dei carichi di lavoro crittografati automatizzando e semplificando il ciclo di vita delle chiavi di crittografia. Il servizio può facilmente gestire le chiavi di crittografia in scala utilizzando la crittografia conforme a FIPS 140-2. </td>
     </tr>
     <tr>
        <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
