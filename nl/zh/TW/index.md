@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -130,6 +130,10 @@ lastupdated: "2018-08-27"
     <tr>
        <td>[HyTrust DataControl on IBM Cloud](services/htdc_considerations.html)</td>
        <td>HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務提供具有整合式金鑰管理的高度加密，來保護其整個生命週期的工作負載安全。此服務可以提供作業系統層次及資料層次的加密，表示可以加密及解密工作負載內的任何目錄、資料夾或檔案。</td>
+    </tr>
+    <tr>
+       <td>[HyTrust KeyControl on IBM Cloud](services/htkc_considerations.html)</td>
+       <td>HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 服務藉由自動化及簡化加密金鑰的生命週期，來簡化加密工作負載的管理。服務可以使用符合 FIPS 140-2 標準的加密，輕鬆地管理加密金鑰。</td>
     </tr>
     <tr>
        <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
