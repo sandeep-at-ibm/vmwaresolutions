@@ -31,7 +31,7 @@ lastupdated: "2018-07-20"
 * [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
 * [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
 * [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](../vcenter/vc_hybrid_addingremovingservices.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [常见问题](../vmonic/faq.html)
 * [Fortinet Web 站点](https://www.fortinet.com/){:new_window}
 * [Fortinet 文档库](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

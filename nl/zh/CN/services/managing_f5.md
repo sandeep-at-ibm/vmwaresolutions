@@ -21,6 +21,6 @@ lastupdated: "2018-07-19"
 ### 相关链接
 
 * [F5 on {{site.data.keyword.cloud_notm}} 概述](f5_considerations.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [常见问题](../vmonic/faq.html)
 * [F5 Web 站点](https://f5.com/){:new_window}

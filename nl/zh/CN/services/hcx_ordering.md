@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-17"
 
 ---
 
@@ -25,8 +25,15 @@ lastupdated: "2018-08-16"
 
 要安装 HCX on {{site.data.keyword.cloud_notm}}，请完成以下设置：
 1. 通过选择下列其中一个选项来指定 **HCX 互连类型**：
-  * **公用网络**：HCX 通过公用网络在站点之间创建加密连接。
-  * **专用网络**：HCX 通过专用网络在站点之间创建加密连接。
+  * **公用网络**：HCX 通过公用网络在站点之间创建加密连接。许可证注册和计量通过公用网络执行。
+  * **专用互联**：HCX 通过专用网络在站点之间创建加密连接。许可证注册和计量通过公用网络执行。
+  * **专用网络**：HCX 通过专用网络在站点之间创建加密连接。许可证注册和计量通过专用网络经由 HTTP 代理执行。
+3. 如果选择**专用网络**，请填写以下字段：
+  * **代理地址**：代理服务器的 IPv4 地址。
+  * **代理端口**：代理服务器端口。端口号通常为 8080 或 3128。
+  * **用户名**：用户名（如果需要代理认证）。
+  * **密码**：密码（如果需要代理认证）。
+  * **重新输入密码**：重新输入用于验证代理认证的密码。
 2. 指定**公共端点证书类型**。如果选择 **CA 证书**，请配置以下设置：
   * **证书内容**：输入 CA 证书的内容。
   * **专用密钥**：输入 CA 证书的专用密钥。
@@ -69,6 +76,6 @@ lastupdated: "2018-08-16"
 * [管理 HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)
 * [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](../vcenter/vc_hybrid_addingremovingservices.html)
 * [HCX 术语的词汇表](hcx_glossary.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension 概述](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#vm-documentation)

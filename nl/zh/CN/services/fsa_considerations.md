@@ -56,7 +56,7 @@ FortiGate 300 系列 Security Appliance。
 
 * [订购 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](fsa_ordering.html)
 * [管理 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](managingfsa.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [常见问题](../vmonic/faq.html)
 * [Fortinet Web 站点](https://www.fortinet.com/){:new_window}
 * [Fortinet 文档库](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

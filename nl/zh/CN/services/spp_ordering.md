@@ -63,4 +63,4 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 的部署会自动
 * [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
 * [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](../vcenter/vc_hybrid_addingremovingservices.html)
 * [IBM Spectrum Protect Plus 文档](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)

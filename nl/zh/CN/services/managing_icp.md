@@ -12,14 +12,14 @@ lastupdated: "2018-08-31"
 
 {{site.data.keyword.cloud}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 会自动在 VMware vCenter Server 实例上部署 {{site.data.keyword.cloud_notm}} Private Hosted。
 
-{{site.data.keyword.cloud_notm}} Private Hosted 会将微服务和容器的强大功能引入到 {{site.data.keyword.cloud_notm}} 上的 VMware 环境中。使用此服务，可以将内部部署中您所熟悉的相同 VMware 和 {{site.data.keyword.cloud_notm}} Private 操作模型和工具扩展到 {{site.data.keyword.cloud_notm}} 中。
+{{site.data.keyword.cloud_notm}} Private Hosted 会将微服务和容器的强大功能引入到 {{site.data.keyword.cloud_notm}} 上的 VMware 环境中。使用此服务，可以将内部部署中您熟悉的 VMware 和 {{site.data.keyword.cloud_notm}} Private 操作模型和工具扩展到 {{site.data.keyword.cloud_notm}} 中。
 
 ## IBM Cloud Private Hosted 的技术规范
 
 以下是请求 {{site.data.keyword.cloud_notm}} Private Hosted 服务的最低需求：
 
 * VMware vCenter Server on {{site.data.keyword.cloud_notm}}。**注**：不支持 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle。
-* VMware NSX Advanced 或 Enterprise 版
+* VMware NSX Advanced Edition 或 Enterprise Edition
 * 三个 {{site.data.keyword.baremetal_long}}
 * 双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz
 * 每个服务器 384 GB RAM
@@ -29,7 +29,7 @@ lastupdated: "2018-08-31"
 
 ## 请求 IBM Cloud Private Hosted 的过程
 
-1. 按照[订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)中的步骤，订购新的 vCenter Server 实例。您还可以为现有实例请求 IBM Cloud Private Hosted。**重要信息**：请确保您的环境满足前面列出的最低需求。
+1. 按照[订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)中的步骤订购新的 vCenter Server 实例。您还可以为现有实例请求 IBM Cloud Private Hosted。**重要信息**：请确保您的环境满足前面列出的最低需求。
 2. 确保您具有 IBM Cloud Private 授权。
 3. 在收到 vCenter Server 实例已准备就绪的确认信息后，继续以下步骤来请求 IBM Cloud Private Hosted。
 4. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**入门**。

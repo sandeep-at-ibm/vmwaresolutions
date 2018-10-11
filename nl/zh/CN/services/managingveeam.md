@@ -37,7 +37,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 服务可以配置为使用 Veeam 控�
 
 ## 对 Veeam on IBM Cloud 应用更新
 
-您负责维护 Veeam，以使其保持更新为最新版本。要将 Veeam 升级至最新版本，请从 Veeam Web 站点下载 Veeam 更新，将更新复制到 Veeam VSI，然后安装这些更新。
+您应负责维护 Veeam，以使其保持为最新版本。要将 Veeam 升级至最新版本，请从 Veeam Web 站点下载 Veeam 更新，将更新复制到 Veeam VSI，然后安装这些更新。
 
 ## 更新 Veeam 许可证
 
@@ -68,7 +68,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 服务可以备份管理组件和工�
 ### 相关链接
 
 * [Veeam on {{site.data.keyword.cloud_notm}} 概述](veeam_considerations.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [常见问题](../vmonic/faq.html)
 * [Veeam.com Web 站点](https://www.veeam.com/)
 * [Veeam 技术文档](https://www.veeam.com/documentation-guides-datasheets.html)

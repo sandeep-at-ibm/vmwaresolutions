@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -26,11 +26,11 @@ lastupdated: "2018-07-20"
 
 ### 相关链接
 
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概述](htcc_considerations.html)
-* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtcc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概述](htdc_considerations.html)
+* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtdc.html)
 * [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
 * [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
 * [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](../vcenter/vc_hybrid_addingremovingservices.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [常见问题](../vmonic/faq.html)
 * [HyTrust Web 站点](https://www.hytrust.com/)

@@ -27,7 +27,7 @@ lastupdated: "2018-07-19"
 ### 相关链接
 
 * [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概述](fsa_considerations.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [常见问题](../vmonic/faq.html)
 * [fortinet.com Web 站点](https://www.fortinet.com/)
 * [Fortinet 技术文档](http://docs.fortinet.com/fortigate/admin-guides)

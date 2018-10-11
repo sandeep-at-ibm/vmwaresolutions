@@ -22,7 +22,7 @@ HCX on {{site.data.keyword.cloud}} 服务可以将内部部署数据中心的网
 
 HCX on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
 
-**注：**内部部署 HCX 实例仅包括许可和激活。
+**注**：内部部署 HCX 实例仅包括许可和激活。
 
 ### VMware NSX Edge 服务网关 (ESG) 的主动/被动对，以用于 HCX 管理
 
@@ -79,6 +79,6 @@ HCX on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件�
 * [订购 HCX on {{site.data.keyword.cloud_notm}}](hcx_ordering.html)
 * [管理 HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)
 * [HCX 术语的词汇表](hcx_glossary.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension 概述](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#vm-documentation)

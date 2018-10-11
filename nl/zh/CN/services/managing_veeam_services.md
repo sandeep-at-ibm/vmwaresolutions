@@ -32,5 +32,5 @@ IBM Resiliency Backup as a Service 提供各种稳健的现场、非现场和基
 
 * [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
 * [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [数据备份和保护服务](https://www-935.ibm.com/services/business-continuity/backup-and-data-protection-services/)

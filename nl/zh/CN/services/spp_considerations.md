@@ -82,4 +82,4 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并
 * [管理 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](managingspp.html)
 * [订购 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](spp_ordering.html)
 * [IBM Spectrum Protect Plus 文档](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
