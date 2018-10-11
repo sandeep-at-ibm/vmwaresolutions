@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-20"
 
 若要檢視針對使用者帳戶佈建之所有 VMware Federal 實例的摘要，請完成下列步驟：
 1. 在 {{site.data.keyword.vmwaresolutions_full}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
-2. 在主控台的右上角，按一下您的虛擬人像，然後按一下**帳戶**欄位，選取您要檢查其實例的使用者帳戶。 
+2. 從主控台橫幅中，按一下您的使用者帳戶圖示，然後按一下**帳戶**欄位，選取您要檢查其實例的使用者帳戶。
 3. 在 **vCenter Server** 表格中，檢視所選取使用者帳戶中佈建的實例清單。
 
 表 1. VMware Federal 實例項目
@@ -24,9 +24,9 @@ lastupdated: "2018-07-20"
 |項目        |說明       |  
 |:------------- |:------------- |
 |名稱 |實例的名稱。|
-|版本|實例部署在其中或升級至的發行版本。|  
+|版本|實例部署所使用或升級至的發行版本。|  
 |位置|管理實例的 {{site.data.keyword.CloudDataCent_notm}}。|  
-|建立時間|建立實例的日期和時間。| 
+|建立時間|建立實例的日期和時間。|
 |狀態|實例的狀態。|
 
 實例可以有許多的狀態。
@@ -60,7 +60,7 @@ lastupdated: "2018-07-20"
 |ID |實例的 ID。|
 |位置|管理實例的 {{site.data.keyword.CloudDataCent_notm}}。|
 |現行版本|{{site.data.keyword.vmwaresolutions_short}} 的現行版本。|
-|vCenter 版本|VMware vCenter Server 的版本。<br><br>**附註：**在 {{site.data.keyword.vmwaresolutions_short}} 主控台及 VMware vSphere Web Client 上顯示的 vCenter Server 版本之間略有不同。兩者皆正確。|
+|vCenter 版本|VMware vCenter Server 的版本。<br><br>**附註：**{{site.data.keyword.vmwaresolutions_short}} 主控台及 VMware vSphere Web Client 上所顯示的 vCenter Server 版本之間略有不同。兩者皆正確。|
 |NSX for vSphere |VMware NSX for vSphere 產品版本。|
 |NSX 授權版本|VMware NSX 授權的版本。|
 |DNS 根網域|根網域名稱是 DNS（網域名稱系統）網域名稱及 Microsoft Active Directory (AD) 樹系根名稱。|
@@ -80,7 +80,7 @@ lastupdated: "2018-07-20"
 |AD/DNS FQDN |AD/DNS 伺服器的完整網域名稱。<br><br>**附註**：您可以使用相同的管理者密碼，透過遠端桌面連線來連接至所有 AD/DNS 伺服器。|
 |AD/DNS ADMIN（遠端桌面）|針對主要實例，它會顯示用來透過遠端桌面連線存取 AD 伺服器的使用者名稱及密碼。|NSX Manager IP  |NSX Manager 的 IP 位址。|
 |NSX Manager FQDN  |NSX Manager 的完整網域名稱 (FQDN)。|
-|NSX Manager HTTP  |用來存取 NSX Manager Web 主控台的使用者名稱和密碼。|
+|NSX Manager HTTP  |用來存取 NSX Manager Web 主控台的使用者名稱及密碼。|
 |PSC IP  |Platform Services Controller (PSC) 的 IP 位址。|
 |PSC FQDN  |PSC 完整網域名稱 (FQDN)。|    
 |PSC ADMIN  |您可以用來存取 PSC Web 主控台的 VMware vCenter Single Sign-On 使用者名稱及密碼。|

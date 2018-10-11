@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-09"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -18,18 +18,18 @@ lastupdated: "2018-08-09"
 
 表 1. vCenter Server 實例的可用服務
 
-| 服務名稱                                                                               | 可用性       | 實例支援 |
+| 服務名稱                                                                               | 版本號碼 | 實例版本 |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 |是| 1.9 版以及更新版本 |
-| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)       |是| 2.0 版以及更新版本 |
-| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              |是| 2.3 版以及更新版本 |
-| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              |是| 2.3 版以及更新版本 |
-| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         |是| 2.2 版以及更新版本 |
-| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |是| 2.2 版以及更新版本 |
-| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          |是| 1.8 版以及更新版本 |
-| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                         | 否              | 不適用 |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 |是| 1.2 版以及更新版本 |
-
+| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE 13.1 版 | 1.9 版以及更新版本 |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)       | 300 系列 | 2.0 版以及更新版本 |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 5.6 | 2.0 版以及更新版本 |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | 2.3 版以及更新版本 |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | 2.3 版以及更新版本 |
+| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | 2.5 版以及更新版本 |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | 10.1.1 Patch 1 | 2.2 版以及更新版本 |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | 2.2 版以及更新版本 |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | 9.5u3 | 1.8 版以及更新版本 |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 5.5u4 Patch 2 | 1.2 版以及更新版本 |
 
 ## 將服務新增至 vCenter Server 實例
 

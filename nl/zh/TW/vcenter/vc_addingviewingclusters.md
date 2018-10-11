@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 依預設，您訂購實例時所配置的 ESXi 伺服器會分組為 **cluster1**。
 
-您可以將自己的叢集新增至 VMware vCenter Server 實例，以擴充運算及儲存空間容量。在叢集內，您可以管理 ESXi 伺服器，以進行更適當的資源配置及高可用性。不再需要時，您可以從實例中刪除新增的叢集。
+您可以將自己的叢集新增至 VMware vCenter Server 實例，以擴充運算及儲存空間容量。在叢集內，您可以管理 ESXi 伺服器，以進行更適當的資源配置及高可用性。不再需要時，請從實例中刪除新增的叢集。
 
 **可用性**：只有部署在（或升級至）2.3 版及更新版本的實例，才能使用刪除叢集特性。
 
@@ -31,14 +31,14 @@ lastupdated: "2018-08-02"
 叢集名稱必須符合下列需求：
 * 只容許英數及橫線 (-) 字元。
 * 叢集名稱的開頭及結尾必須是英數字元。
-* 叢集名稱的長度上限為 30 個字元。
+* 字元數目上限為 30。
 * 叢集名稱在 vCenter Server 實例中必須是唯一的。
 
 #### 資料中心位置
 
-依預設，叢集的 {{site.data.keyword.CloudDataCent}} 位置是設為 vCenter Server 實例的 {{site.data.keyword.CloudDataCent_notm}}。您可以將叢集部署至不同於已部署實例的 {{site.data.keyword.CloudDataCent_notm}}，但您必須確定兩個 {{site.data.keyword.CloudDataCents_notm}} 之間的網路延遲少於 150 毫秒。若要檢查網路延遲，您可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 之類的工具。
+依預設，叢集的 {{site.data.keyword.CloudDataCent}} 位置是設為 vCenter Server 實例的 {{site.data.keyword.CloudDataCent_notm}}。您可以將叢集部署至不同於已部署實例的 {{site.data.keyword.CloudDataCent_notm}}，但您必須確定兩個 {{site.data.keyword.CloudDataCents_notm}} 之間的網路延遲少於 150 毫秒。若要檢查網路延遲，您可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/) 之類的工具。
 
-如果您將叢集部署至不同的 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基礎架構 pod，則會訂購另外三個 VLAN，以便與已訂購的 {{site.data.keyword.baremetal_short}} 搭配使用。
+如果您將叢集部署至不同的 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基礎架構 Pod，則會訂購額外三個 VLAN，以與已訂購的 {{site.data.keyword.baremetal_short}} 搭配使用。
 
 ### Bare Metal Server 設定
 
@@ -68,11 +68,11 @@ lastupdated: "2018-08-02"
 
 #### Bare Metal Server 數目
 
-一個叢集至少需要兩部 {{site.data.keyword.baremetal_short}}。
+叢集至少需要 2 個 {{site.data.keyword.baremetal_short}}。
 
-對於在 2.1 版或更新版本中部署的 vCenter Server 實例，您可以針對叢集新增最多 59 部 {{site.data.keyword.baremetal_short}}，並且一次可以新增 1 到 59 部 ESXi 伺服器。
+對於已部署在 2.1 版或更新版本中的 vCenter Server 實例，您可以針對叢集新增最多 59 部 {{site.data.keyword.baremetal_short}}。您一次可以新增 1 - 59 部 ESXi 伺服器。
 
-對於已部署在 2.0 版或更早版本的 vCenter Server 實例，您最多可以為叢集新增 32 部 {{site.data.keyword.baremetal_short}}。您一次可以新增的 {{site.data.keyword.baremetal_short}} 數目如下所示：
+對於在 2.0 版或更舊版本中部署的 vCenter Server 實例，您可以針對叢集新增最多 32 部 {{site.data.keyword.baremetal_short}}。您一次可以新增的 {{site.data.keyword.baremetal_short}} 數目如下所示：
 * 如果是**小型**、**中型**、**大型** Bare Metal Server 配置，您一次可以新增 1 - 10 部 ESXi 伺服器。
 * 如果是**自訂** Bare Metal Server 配置，您一次可以新增 1 - 20 部 ESXi 伺服器。
 
@@ -84,9 +84,17 @@ lastupdated: "2018-08-02"
 
 #### vSAN 儲存空間
 
-vSAN 僅適用於自訂 Bare Metal Server 配置。您可以指定符合您儲存空間需求的 vSAN 容量磁碟數目（2、4、6 或 8）、磁碟類型和大小以及 vSAN 授權選項，來自訂 VMware vSAN 儲存空間。
+請指定下列 vSAN 選項：
 
-如果起始叢集是 vSAN 叢集，則任何其他 vSAN 叢集都使用相同的 vSAN 授權，且與起始 vSAN 叢集具有相同的配置。如果實例中的任何叢集都選擇部署 vSAN（起始或其他），則也是這種情況。第一次會提示您提供 vSAN 授權（BYOL 或購買）和版本。下次選取 vSAN 作為其他叢集時，就會重複使用最初選擇的授權。
+* **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
+* **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
+* **vSAN 快取磁碟的磁碟類型**：選取所需快取磁碟的選項。
+
+    **附註**：如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。此選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲及更高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
+* **vSAN 快取磁碟數目**：指定您要新增的快取磁碟數目。
+* **vSAN 授權**：選取**購買隨附**以將 IBM 提供的 VMware 授權用於 vSAN 元件，也可以選取**我將提供**並輸入自己的授權碼以「自帶授權 (BYOL)」。
+
+如果起始叢集是 vSAN 叢集，則任何其他 vSAN 叢集都使用相同的 vSAN 授權，且與起始 vSAN 叢集具有相同的配置。如果實例中的任何叢集都選擇部署 vSAN（起始或其他），則也是這種情況。第一次系統會提示您提供 vSAN 授權（BYOL 或購買）及版本。下次選取 vSAN 作為新叢集時，就會重複使用最初選擇的授權。
 
 #### NFS 儲存空間
 
@@ -95,10 +103,10 @@ vSAN 僅適用於自訂 Bare Metal Server 配置。您可以指定符合您儲�
 **附註：**檔案共用數目必須在 1 到 32 的範圍內。
 
 * **個別配置共用**：選取以指定每一個檔案共用的不同配置設定。
-* **共用數目**：使用每一個檔案共用的相同配置設定時，請指定您要新增之 NFS 共用儲存空間的檔案共用數目。
+* **共用數目**：要使用每個檔案共用的相同配置設定時，請指定您要新增之 NFS 共用儲存空間的檔案共用數目。
 * **大小**：選取符合共用儲存空間需求的容量。
-* **效能**：根據您的工作負載需求，選取每 GB IOPS（每秒輸入/輸出作業數）。
-* **新增 NFS**：選取以新增將使用不同配置設定的個別檔案共用。
+* **效能**：根據您的工作負載需求，選取每 GB 的 IOPS（每秒輸入/輸出作業數）。
+* **新增 NFS**：選取以新增要使用不同配置設定的個別檔案共用。
 
 表 2. NFS 效能層次選項
 
@@ -114,6 +122,15 @@ vSAN 僅適用於自訂 Bare Metal Server 配置。您可以指定符合您儲�
 * 對於「事業夥伴」使用者，包括 vSphere 授權（Enterprise Plus 版本），並可代表您購買。
 * 對於非「事業夥伴」使用者，您可以選取**購買隨附**以將 IBM 提供的 VMware 授權用於此元件，也可以選取**我將提供**並輸入自己的授權碼以「自帶授權 (BYOL)」。
 
+### 網路介面設定
+
+網路介面卡 (NIC) 啟用設定是根據您選取**公用及專用網路**或**僅限專用網路**而定。下列附加程式服務需要公用 NIC，如果您選取專用選項，則無法使用：
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
+
 ### 訂單摘要
 
 根據您選取的叢集配置，預估成本會立即產生並顯示在**訂單摘要**右窗格中。
@@ -124,23 +141,23 @@ vSAN 僅適用於自訂 Bare Metal Server 配置。您可以指定符合您儲�
 2. 在 **vCenter Server 實例**表格中，按一下您要新增叢集的實例。
 
    **附註**：請確定實例處於**備妥使用**狀態。否則，您無法將叢集新增至實例。
-
 3. 按一下左導覽窗格上的**基礎架構**，然後按一下 **CLUSTERS** 表格右上角的**新增**。
 4. 在**新增叢集**頁面上，輸入叢集名稱。
 5. 如果您要在與實例管理所在不同的 {{site.data.keyword.CloudDataCent_notm}} 中管理叢集，請勾選 **Bare Metal Server** 下的**選取不同的位置**勾選框，然後選擇 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
 6. 完成 Bare Metal Server 配置。
-   * 如果您選取**預先配置**，請指定 **Bare Metal Server 配置**，以及 **{{site.data.keyword.baremetal_short}} 數目**。如果您打算使用 vSAN 作為儲存空間解決方案，請注意，至少需要 4 部 {{site.data.keyword.baremetal_short}}。
+   * 如果您選取**預先配置**，請指定 **Bare Metal Server 配置**，以及 **{{site.data.keyword.baremetal_short}} 數目**。如果您打算使用 vSAN 作為儲存空間解決方案，則至少需要 4 部 {{site.data.keyword.baremetal_short}}。
    * 如果您選取**自訂**，請指定 **CPU 型號**、**RAM** 數量，以及**{{site.data.keyword.baremetal_short}}數目**。
 7. 完成儲存空間配置。
-  * 當您選取 **vSAN 儲存空間**時，請指定 **vSAN 容量磁碟的磁碟類型及大小**、**vSAN 容量磁碟數目**，以及如何提供 **vSAN 授權**。
-  * 當您選取 **NFS 儲存空間**且想要對所有檔案共用新增及配置相同的設定時，請指定**共用數目**、**大小**及**效能**。
-  * 當您選取 **NFS 儲存空間**且想要個別新增及配置檔案共用時，請選取**個別配置共用**，然後按一下**新增 NFS** 標籤旁的 **+** 圖示，並針對每一個個別檔案共用選取**大小**及**效能**。您必須至少選取一個檔案共用。
+  * 如果您選取 **vSAN 儲存空間**，請指定容量及快取磁碟的磁碟類型、磁碟數目以及「vSAN 授權」版本。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
+  * 如果您選取 **NFS 儲存空間**，而且要對所有檔案共用新增及配置相同的設定，請指定**共用數目**、**大小**及**效能**。
+  * 如果您選取 **NFS 儲存空間**，而且要個別新增及配置檔案共用，請選取**個別配置共用**。然後，按一下**新增 NFS** 標籤旁邊的 **+** 圖示，並針對每個檔案共用選取**大小**及**效能**。您必須至少選取一個檔案共用。
 8. 指定如何提供 vSphere 授權碼：
   * 對於「事業夥伴」使用者，包括 vSphere 授權（Enterprise Plus 版本），並可代表您購買。
-  * 對於非「事業夥伴」使用者，您可以選取下列其中一個選項：
+  * 對於非「事業夥伴」的使用者，您可以選取下列其中一個選項：
       * 如果您想要我們代表您購買新授權，請針對元件選取**購買隨附**。
-      * 如果您要針對元件使用自己的 VMware 授權，則請選取**我將提供**，並輸入其授權碼。
-9. 在**訂單摘要**窗格上，先驗證叢集配置，再新增叢集。
+      * 如果您要針對元件使用自己的 VMware 授權，請選取**我將提供**，並輸入授權碼。
+9. 選取**公用及專用網路**或**僅限專用網路**的網路設定。
+10. 在**訂單摘要**窗格上，先驗證叢集配置，再新增叢集。
    1. 檢閱叢集的設定。
    2. 檢閱預估的叢集成本。按一下**定價詳細資料**以產生 PDF 摘要。若要儲存或列印訂單摘要，請按一下 PDF 視窗右上方的**列印**或**下載**圖示。
    3. 按一下適用於您訂單的條款鏈結，並先確定您同意這些條款，再新增叢集。
@@ -217,10 +234,10 @@ vSAN 僅適用於自訂 Bare Metal Server 配置。您可以指定符合您儲�
 ### 刪除之前
 
 * 使用此程序，從部署在 2.3 版或更新版本的實例中刪除叢集。
-* 對於部署在 2.2 版或更早版本實例的叢集，您必須將實例升級至 2.3 版，才能刪除您新增至實例的叢集。
-* 您一次可以刪除單一叢集。若要刪除多個叢集，您必須依序執行它；請先等待刪除前一個叢集，再嘗試刪除下一個叢集。
-* 刪除叢集之前，請確定叢集裡的所有節點都已開啟電源且正常運作。
-* 當您刪除叢集時，也會一併刪除叢集裡的所有 VM（虛擬機器），且無法回復。如果您要保留 VM，請將它們移轉至其他叢集。
+* 對於部署在 2.2 版或更早版本實例的叢集，如果您要刪除已新增至實例的叢集，則必須將實例升級至 2.3 版。
+* 您一次可以刪除單一叢集。若要刪除多個叢集，您必須依序執行它。請等待前一個叢集刪除後，再刪除下一個叢集。
+* 在您刪除叢集之前，請確定叢集中的所有節點都已開啟電源且正常運作。
+* 當您刪除叢集時，也會一併刪除叢集中的所有 VM（虛擬機器），且無法回復。如果您要保留 VM，請將它們移轉至其他叢集。
 * 無法刪除預設叢集。
 
 ## 從 vCenter Server 實例中刪除叢集的程序

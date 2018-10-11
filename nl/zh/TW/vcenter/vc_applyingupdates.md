@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-19"
 
 ---
 
@@ -16,7 +16,9 @@ lastupdated: "2018-08-07"
 
 ## 開始之前
 
-**重要事項：**將 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例時，您必須最少先套用基本 vCenter Server 2.3 版軟體更新，才能對 Hybridity Bundle 執行授權升級。
+**重要事項：**將 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例時，您必須先至少套用基本 vCenter Server 2.3 版軟體更新。必須先執行此動作，才能執行授權升級至 Hybridity Bundle。
+
+「事業夥伴」使用者無法選擇將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。
 
 在您嘗試套用更新之前，請按一下向下箭頭來展開更新項目，並驗證下列資訊：
 * 更新的版本。您必須依最早到最新的時間順序來套用更新。套用最新的更新之前，請確定已套用所有先前的更新。例如，嘗試套用 2.4 版更新之前，您必須套用 2.3 版更新。
