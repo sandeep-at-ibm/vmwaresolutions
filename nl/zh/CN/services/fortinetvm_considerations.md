@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -60,7 +60,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务中订购�
 
 ## FortiGate Virtual Appliance on IBM Cloud 订购示例
 
-您订购了具有 2 个 ESXi 服务器的 VMware vCenter Server **小型**实例，配置如下：16 个核心（2.10 GHz），每个核心 128 GB RAM。对于 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}，您为部署大小和任何预订许可模型选择了**大型**（8 个 vCPU/ 12 GB RAM）。
+您订购了具有 2 个 ESXi 服务器的 VMware vCenter Server **小型**实例，配置如下：16 个核心 (2.10 GHz)，每个核心 128 GB RAM。对于 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}，您为部署大小和任何预订许可模型选择了**大型**（8 个 vCPU/ 12 GB RAM）。
 
 在本例中，在每个服务器上，单个 FortiGate VM 需要：
 * 2.1 GHz * 8 个 vCPU = 16.8 GHz CPU，以及
@@ -88,7 +88,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务中订购�
 
 * [订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_ordering.html)
 * [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](managingfortinetvm.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [常见问题](../vmonic/faq.html)
 * [Fortinet Web 站点](https://www.fortinet.com/){:new_window}
 * [Fortinet 文档库](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

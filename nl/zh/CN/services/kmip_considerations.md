@@ -54,4 +54,4 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 使用 IBM Key Protect for {
 * [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect?&language=javascript_jquery#introduction)
 * [vSphere 安全性](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)
 * [常见问题](../vmonic/faq.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)

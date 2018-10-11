@@ -14,7 +14,7 @@ lastupdated: "2018-07-19"
 
 ## 通过 IBM Cloud for VMware Solutions 控制台访问 HyTrust CloudControl WebGUI
 
-要登录到主或者辅助 HTCC 设备的 WebGUI，请使用在 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务详细信息页面上找到的 WebGUI 凭证。
+要登录到主或辅助 HTCC 设备的 WebGUI，请使用在 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务详细信息页面上找到的 WebGUI 凭证。
 
 ## 通过 vSphere Web Client 访问 HyTrust CloudControl 控制台
 
@@ -30,6 +30,6 @@ lastupdated: "2018-07-19"
 ### 相关链接
 
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 概述](htcc_considerations.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [常见问题](../vmonic/faq.html)
 * [HyTrust Web 站点](https://www.hytrust.com/)

@@ -37,5 +37,5 @@ IMI 售前代表将通过您的 {{site.data.keyword.cloud_notm}} 联系人信息
 ### 相关链接
 
 * [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [常见问题](../vmonic/faq.html)

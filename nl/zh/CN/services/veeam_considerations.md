@@ -57,7 +57,7 @@ Veeam Backup and Replication 9.5 Enterprise Plus（10、25、50、100 或 200 �
 * [订购 Veeam on {{site.data.keyword.cloud_notm}}](veeam_ordering.html)
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](managingveeam.html)
 * [请求 Veeam on {{site.data.keyword.cloud_notm}} 的受管服务](managing_veeam_services.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [常见问题](../vmonic/faq.html)
 * [Veeam Web 站点](https://www.veeam.com/){:new_window}
 * [Veeam 帮助中心](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}

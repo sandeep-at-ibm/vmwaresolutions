@@ -64,4 +64,4 @@ HCX on {{site.data.keyword.cloud_notm}} 组件必须同时安装在 {{site.data.
 * [HCX 术语的词汇表](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#vm-documentation)
 * [VMware HCX Enterprise 安装与用户指南](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf){:new_window}
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)

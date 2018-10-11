@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -26,7 +26,7 @@ F5 on {{site.data.keyword.cloud_notm}} 服务随附以下组件：
 * 每个虚拟机 4、8 或 16 GB RAM，具体取决于许可选项。
 
 ### 联网
-* 用于 HA 同步的专用虚拟可扩展 LAN (VXLAN)。
+* 用于高可用性 (HA) 同步的专用虚拟可扩展 LAN (VXLAN)。
 * 通过专用管理网络访问流量管理 Shell (TMSH) 和管理控制台。
 
 ### 许可证和费用
@@ -34,7 +34,7 @@ F5 on {{site.data.keyword.cloud_notm}} 服务随附以下组件：
 
 **重要信息**：无法在安装服务后更改许可级别。要更改许可级别，必须除去现有服务，然后使用其他许可选项来重新安装该服务。
 
-## 安装 F5 on IBM Cloud 时的注意事项
+## F5 on IBM Cloud 的安装注意事项
 
 安装 F5 on {{site.data.keyword.cloud_notm}} 服务之前，请查看以下注意事项。
 
@@ -74,7 +74,7 @@ F5 on {{site.data.keyword.cloud_notm}} 服务随附以下组件：
 
 ## F5 on IBM Cloud 订购示例
 
-您订购了具有 2 个 ESXi 服务器的 VMware vCenter Server **小型**实例，配置如下：16 个核心（2.10 GHz），每个核心 128 GB RAM。对于 F5 on {{site.data.keyword.cloud_notm}}，您选择了**最佳**许可模型，并且对于**最大带宽**，选择了值 5 Gbps。
+您订购了具有 2 个 ESXi 服务器的 VMware vCenter Server **小型**实例，配置如下：16 个核心 (2.10 GHz)，每个核心 128 GB RAM。对于 F5 on {{site.data.keyword.cloud_notm}}，您选择了**最佳**许可模型，并且对于**最大带宽**，选择了值 5 Gbps。
 
 在本例中，在每个服务器上，单个 BIG-IP VM 需要：
 * 2.1 GHz * 8 个 vCPU = 16.8 GHz CPU，以及
@@ -84,7 +84,7 @@ F5 on {{site.data.keyword.cloud_notm}} 服务随附以下组件：
 
 每个 ESXi 服务器的容量都为 16 个核心 * 2.1 GHz = 33.6 GHz，因此如果这两个服务器都处于活动状态，并且每个服务器上至少有 16.8 GHz 的 CPU 和 16 GB RAM 可用，那么可满足前两个需求。
 
-但是，缺省情况下，vSphere HA 会将 50% 的 CPU 和 RAM 保留用于在最初部署有 2 个 ESXi 服务器的 vCenter Server 实例上进行故障转移，因此我们只有：
+但是，缺省情况下，vSphere HA 会将 50% 的 CPU 和 RAM 保留用于在最初部署有 2 个 ESXi 服务器的 vCenter Server 实例上进行故障转移。对于此示例，以下资源可用：
 
 `2 * 16 个核心 * 2.1 GHz * 50% = 33.6 GHz 可用`
 
@@ -100,6 +100,6 @@ F5 on {{site.data.keyword.cloud_notm}} 服务随附以下组件：
 
 * [订购 F5 on {{site.data.keyword.cloud_notm}}](f5_ordering.html)
 * [管理 F5 on {{site.data.keyword.cloud_notm}}](managing_f5.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [常见问题](../vmonic/faq.html)
 * [F5 Web 站点](https://f5.com/){:new_window}
