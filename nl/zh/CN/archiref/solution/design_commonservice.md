@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -62,7 +62,7 @@ Cloud Foundation 部署使用 VMware Cloud Foundation 自动化，后者使用�
 * Active Directory DNS 服务器配置为对 SDDC Manager 和 Cloud Foundation 实例子域上级的 DNS 域空间具有权威性。
 * Active Directory DNS 服务器配置为指向 SDDC Manager 对其具有权威性的区域的子域授权的 SDDC Manager IP 地址。
 * Active Directory DNS 服务器配置为指向其他所有区域的 {{site.data.keyword.cloud_notm}} DNS 服务器。
-* 要集成到第一个或目标实例的任何辅助实例都必须在 SDDC Manager 子域上方使用相同的 DNS 名称结构。
+* 要集成到第一个实例或目标实例的任何辅助实例都必须在 SDDC Manager 子域上级使用相同的 DNS 名称结构。
 
 ## NTP 服务
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -73,7 +73,7 @@ vSAN 采用以下组件：
 
 ### vSAN 的虚拟网络设置
 
-对于此设计，vSAN 流量会在专用私有、 VLAN 上的 ESXi 主机之间遍历。连接到专用网络交换机的两个网络适配器在 vSphere 中配置为 vSphere 分布式交换机 (VDS)，两个网络适配器均作为上行链路。为 vSAN VLAN 配置的专用 vSAN 内核端口组位于 VDS 中。对专用 VDS 启用了巨型帧 (MTU 9000)。
+对于此设计，vSAN 流量会在专用私有、 VLAN 上的 ESXi 主机之间遍历。连接到专用网络交换机的两个网络适配器在 vSphere 中配置为 vSphere 分布式交换机 (vDS)，两个网络适配器均作为上行链路。为 vSAN VLAN 配置的专用 vSAN 内核端口组位于 vDS 中。对专用 vDS 启用了巨型帧 (MTU 9000)。
 
 vSAN 不会跨上行链路对流量进行负载均衡。因此，一个适配器处于活动状态，而另一个适配器处于备用状态以支持高可用性 (HA)。vSAN 的网络故障转移策略在物理网络端口之间配置为**显式故障转移**。
 
@@ -106,7 +106,7 @@ vSAN 设置是根据在 {{site.data.keyword.cloud_notm}} 中部署 VMware 解决
 
 ## VMware NSX 设计
 
-网络虚拟化提供了存在于虚拟层中的网络覆盖。网络虚拟化为体系结构提供了快速供应、部署、重新配置和销毁随需应变虚拟网络等功能。此设计使用 vSphere 分布式交换机 (VDS) 和 VMware NSX for vSphere 来实现虚拟联网。
+网络虚拟化提供了存在于虚拟层中的网络覆盖。网络虚拟化为体系结构提供了快速供应、部署、重新配置和销毁随需应变虚拟网络等功能。此设计使用 vDS 和 VMware NSX for vSphere 来实现虚拟联网。
 
 在此设计中，初始集群中将部署 NSX Manager。将从专用可移植地址块中为 NSX Manager 分配支持 VLAN 的 IP 地址，该地址块指定用于管理组件，并配置为使用[公共服务设计](design_commonservice.html)中讨论的 DNS 和 NTP 服务器。将使用表 2 中所列的规范安装 NSX Manager。
 
@@ -129,7 +129,7 @@ vSAN 设置是根据在 {{site.data.keyword.cloud_notm}} 中部署 VMware 解决
 
 初始部署后，{{site.data.keyword.cloud_notm}} 自动化会在初始集群中部署三个 NSX 控制器。 将从指定用于管理组件的专用 A 可移植子网中为每个控制器分配一个支持 VLAN 的 IP 地址。此外，此设计还会创建 VM 到 VM 反亲缘关系规则，以在集群中的各主机之间分隔控制器。初始集群必须至少包含 3 个节点，以确保控制器的高可用性。
 
-除了控制器之外，{{site.data.keyword.cloud_notm}} 自动化还会为部署的 vSphere 主机准备 NSX VIBS，以支持通过 VXLAN 隧道端点（VTEP）使用虚拟化网络。将从为 VTEP 指定的专用 A 可移植 IP 地址范围中为 VTEP 分配支持 VLAN 的 IP 地址，如[物理基础架构设计](design_physicalinfrastructure.html)的*表 1. VLAN 和子网摘要*中所列示。VXLAN 流量驻留在未标记的 VLAN 上，并且分配给专用 vSphere 分布式交换机 (VDS)。
+除了控制器之外，{{site.data.keyword.cloud_notm}} 自动化还会为部署的 vSphere 主机准备 NSX VIBS，以支持通过 VXLAN 隧道端点（VTEP）使用虚拟化网络。将从为 VTEP 指定的专用 A 可移植 IP 地址范围中为 VTEP 分配支持 VLAN 的 IP 地址，如[物理基础架构设计](design_physicalinfrastructure.html)的*表 1. VLAN 和子网摘要*中所列示。VXLAN 流量驻留在未标记的 VLAN 上，并且分配给专用 vDS。
 
 随后，将分配分段标识池，并且将集群中的主机添加到传输区域。由于在 {{site.data.keyword.cloud_notm}} 中未配置因特网组管理协议 (IGMP) 监听，因此在传输区域中仅使用单点广播。
 
@@ -139,13 +139,13 @@ vSAN 设置是根据在 {{site.data.keyword.cloud_notm}} 中部署 VMware 解决
 
 ### 分布式交换机设计
 
-该设计使用最小数量的 vSphere 分布式交换机 (VDS)。集群中的主机会连接到公用和专用网络。这些主机均配置有两个分布式虚拟交换机。两个交换机的使用遵循的是用于将公用和专用网络分隔开的 {{site.data.keyword.cloud_notm}} 网络实践。下图显示了 VDS 设计。
+该设计使用最小数量的 vDS 交换机。集群中的主机会连接到公用和专用网络。这些主机均配置有两个分布式虚拟交换机。两个交换机的使用遵循的是用于将公用和专用网络分隔开的 {{site.data.keyword.cloud_notm}} 网络实践。下图显示了 vDS 设计。
 
 图 3. 分布式交换机设计
 
-![分布式交换机设计](virtual_network_distributedswitch.svg "VDS 设计")
+![分布式交换机设计](virtual_network_distributedswitch.svg "vDS 设计")
 
-如图所示，一个 VDS 配置用于公用网络连接 (SDDC-Dswitch-Public)，另一个 VDS 配置用于专用网络连接 (SDDC-Dswitch-Private)。
+如图所示，一个 vDS 配置用于公用网络连接 (SDDC-Dswitch-Public)，另一个 vDS 配置用于专用网络连接 (SDDC-Dswitch-Private)。
 
 不同类型的流量需要进行分隔，以减少争用和等待时间并提高安全性。VLAN 用于对物理网络功能进行分段。
 
@@ -170,7 +170,7 @@ vSphere 集群使用两个 vSphere 分布式交换机，配置如以下各表中
 |SDDC-Dswitch-Private| ESXi 管理、vSAN、vSphere vMotion、VXLAN 隧道端点、NFS (VTEP) |已启用| 基于显式故障转移（vSAN、vMotion）发起虚拟端口进行路由（其他所有）|2|9,000<br>（巨型帧）|
 |SDDC-Dswitch-Public| 外部管理流量（南北） |已启用| 基于发起虚拟端口进行路由|2|1,500<br>（缺省值）|
 
-**注：**根据 {{site.data.keyword.CloudDataCent_notm}} 和主机硬件选择，主机 NIC 的名称、数量和顺序可能有所不同。
+**注**：根据 {{site.data.keyword.CloudDataCent_notm}} 和主机硬件选择，主机 NIC 的名称、数量和顺序可能有所不同。
 
 表 5. 融合集群分布式交换机端口组配置设置
 

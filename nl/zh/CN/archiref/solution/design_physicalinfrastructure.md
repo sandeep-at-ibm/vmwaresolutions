@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-07-17"
   <dt class="dt dlterm">物理存储</dt>
   <dd class="dd">物理存储提供虚拟化基础架构使用的原始存储容量。存储组件由 {{site.data.keyword.baremetal_short}} 或由使用 NFS V3 的共享网络连接的存储器 (NAS) 阵列提供。</dd>
   <dt class="dt dlterm">物理网络</dt>
-  <dd class="dd">物理网络提供环境的网络连接，该连接接着由网络虚拟化使用。网络由 {{site.data.keyword.cloud_notm}} 服务网络提供，并且包含 DNS 和 NTP 等其他服务。</dd>
+  <dd class="dd">物理网络提供环境的网络连接，该连接接着由网络虚拟化使用。网络由 {{site.data.keyword.cloud_notm}} 服务网络提供，并且包含 DNS 和 NTP 等额外服务。</dd>
 </dl>
 
 有关物理组件的更多信息，请参阅 [Cloud Foundation 实例](../../sddc/sd_bom.html)或 [vCenter Server 实例](../../vcenter/vc_bom.html)的材料清单。
@@ -61,7 +61,7 @@ Bare Metal Server 的技术规范如下：
 
 所有 {{site.data.keyword.CloudDataCents_notm}} 和 PoP 均通过专用网络主干进行连接。专用网络独立于公用网络，支持连接到全球的 {{site.data.keyword.CloudDataCents_notm}} 中的服务。在 {{site.data.keyword.CloudDataCents_notm}} 之间移动数据是通过与专用网络的多个 10 Gbps 或 40 Gbps 连接完成的。
 
-与公用网络类似，专用网络也是多层的，其中服务器和其他基础架构组件连接到聚集的后端客户交换机 (BCS)。这些聚集的交换机连接到一对单独的后端客户路由器 (BCR) 以用于 L3 联网。专用网络还支持利用巨型帧 (MTU 9000) 进行物理主机连接的功能。
+与公用网络类似，专用网络也是多层的，其中服务器和其他基础架构组件连接到聚集的后端客户交换机 (BCS)。这些聚集的交换机连接到一对单独的后端客户路由器 (BCR) 以用于 L3 联网。专用网络还支持使用巨型帧 (MTU 9000) 进行物理主机连接的功能。
 
 ### 管理网络
 
@@ -83,7 +83,7 @@ Bare Metal Server 的技术规范如下：
 
 ### 虚拟路由和转发 (VRF)
 
-您还可以将 {{site.data.keyword.slportal}} 帐户配置为 VRF 帐户，以提供与 VLAN 生成类似的功能，从而使子网 IP 块之间能够自动路由。具有直接链接连接的所有帐户都必须转换为或创建为 VRF 帐户。
+您还可以将 {{site.data.keyword.slportal}} 帐户配置为 VRF 帐户，以提供与 VLAN 生成类似的功能，从而使子网 IP 块之间能够自动路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
 
 {{site.data.keyword.vmwaresolutions_short}} 控制台无法检测是否在 {{site.data.keyword.slportal}} 中启用了 VRF。您将收到一条警告，提醒您确保在 {{site.data.keyword.slportal}} 帐户中启用了 **VLAN 生成**或 VRF。
 
@@ -121,7 +121,7 @@ Bare Metal Server 的技术规范如下：
 
 |VLAN|类型|描述|
 |:---- |:---- |:----------- |
-|公用|主|分配给物理主机以用于公用网络访问。初始部署时未利用。|
+|公用|主|分配给物理主机以用于公用网络访问。在初始部署时未使用。|
 |专用 A|主|分配给 {{site.data.keyword.cloud_notm}} 所分配物理主机的单个子网。通过管理接口用于 vSphere 管理流量。|
 |专用 A|可移植|分配给用作管理组件的虚拟机的单个子网|
 |专用 A|可移植|分配给 NSX VTEP 的单个子网|
@@ -147,21 +147,21 @@ vSphere ESXi 系统管理程序设计为安装在持久位置。因此，物理�
 
 ### vSAN 磁盘
 
-使用 VMware vSAN 时，将使用全闪存配置来配置 VMware vSAN。此设计支持多个配置选项，包括 2U 和 4U 机箱、不同磁盘数以及各种磁盘大小。所有配置都使用两个 vSAN 磁盘组，其中一个固态磁盘 (SSD) 用于高速缓存，一个或多个 SSD 用于容量。分配用于 vSAN 使用的所有驱动器均在单磁盘 RAID-0 中配置。
+使用 VMware vSAN 时，将使用全闪存配置来配置 VMware vSAN。此设计支持多个配置选项，包括 2U 和 4U 机箱、不同磁盘数以及各种磁盘大小。所有配置都使用两个 vSAN 磁盘组，其中一个固态磁盘 (SSD) 用于高速缓存，一个或多个 SSD 用于容量。分配供 vSAN 使用的所有驱动器均在单磁盘 RAID-0 中配置。
 
-有关支持的配置的信息，请参阅 [Cloud Foundation 实例](../../sddc/sd_bom.html)或 [vCenter Server 实例](../../vcenter/vc_bom.html)的材料清单。
+有关支持的配置的更多信息，请参阅 [Cloud Foundation 实例](../../sddc/sd_bom.html)或 [vCenter Server 实例](../../vcenter/vc_bom.html)的材料清单。
 
 ### 跨主机共享文件级别的存储器
 
-使用共享文件级别的存储器时，2 TB NFS 共享会连接到组成 VMware 集群的主机。此共享（称为管理共享）用于管理组件，例如 VMware vCenter Server、Platform Services Controller 和 VMware NSX。存储器通过 NFSv3 协议进行连接，并且最多可以支持 4000 IOPS。
+使用共享文件级别的存储器时，2 TB NFS 共享会连接到组成初始 VMware 集群的主机。此共享（称为管理共享）用于管理组件，例如 VMware vCenter Server、Platform Services Controller 和 VMware NSX。存储器使用 NFSv3 协议进行连接，并且最多可以支持 4000 IOPS。
 
 图 2. 连接到 VMware 部署的 NFS 共享
 
 ![连接到 VMware 部署的 NFS 共享](physical_nfs.svg "连接到 VMware 部署的 NFS 共享：管理共享和客户指定的共享")
 
-您可以在购买时或日后在控制台中为工作负载分配和安装其他文件共享。可以从相应的 {{site.data.keyword.CloudDataCent_notm}} 中可用的 {{site.data.keyword.cloud_notm}} 耐久性文件存储器容量选项和性能层中进行选择。所有共享均使用 NFSv3 协议进行连接。此外，还可通过应用 NetApp ONTAP Select 产品来连接 NFSv3 文件共享。
+您可以在购买时或日后在控制台中为工作负载分配和安装更多文件共享。可以从相应的 {{site.data.keyword.CloudDataCent_notm}} 中可用的 {{site.data.keyword.cloud_notm}} 耐久性文件存储器容量选项和性能层中进行选择。所有共享均使用 NFSv3 协议进行连接。此外，还可通过应用 NetApp ONTAP Select 产品来连接 NFSv3 文件共享。
 
-提供 10 IOP/ GB 性能层的 {{site.data.keyword.CloudDataCents_notm}} 还包含提供者管理的静态数据加密（AES-256 加密），并且这些数据中心通过全闪存存储器支持。10 IOPS/GB 性能层限制为最大容量 4 TB。有关此解决方案中使用的共享 NAS 的更多信息，请参阅[共享存储器体系结构](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)。
+提供 10 IOPS/ GB 性能层的 {{site.data.keyword.CloudDataCents_notm}} 还包含提供者管理的静态数据加密（AES-256 加密），并且这些数据中心通过全闪存存储器支持。10 IOPS/GB 性能层限制为最大容量 4 TB。有关此解决方案中使用的共享 NAS 的更多信息，请参阅[共享存储器体系结构](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)。
 
 ### 相关链接
 
