@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-08-14"
 
 作为解决方案的一部分，您可以选择部署 {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 附加组件服务。Veeam 和 IBM Spectrum Protect Plus 可帮助满足备份管理组件的需求。
 
-这些附加组件服务与 {{site.data.keyword.cloud_notm}} 耐久性存储器一起部署。这些服务可帮助您备份工作负载和管理组件。 [Spectrum Protect Plus 体系结构概述](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}和 [Veeam 体系结构概述](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}提供了有关规划部署和调整部署大小的有用指南。您还可以为 Veeam 部署请求[受管服务](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)。
+这些附加组件服务与 {{site.data.keyword.cloud_notm}} 耐久性存储器一起部署。这些服务可帮助您备份工作负载和管理组件。 [IBM Spectrum Protect Plus 体系结构概述](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}和 [Veeam 体系结构概述](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}提供了有关规划部署和调整部署大小的有用指南。您还可以为 Veeam 部署请求[受管服务](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)。
 
 不同的解决方案组件需要不同的备份策略。一些组件使用映像级别的备份进行保护，另一些组件通过将基于文件的备份用于其配置和数据进行保护。
 
@@ -28,7 +28,7 @@ lastupdated: "2018-08-14"
 2. 将操作系统映像上传到 VMware 管理数据存储，例如 {{site.data.keyword.cloud_notm}} 专用镜像中的 [Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window}。
 3. 使用先前订购的专用可移植 IP 地址将此虚拟机 (VM) 部署到管理端口组上的集群中。确保此 VM 已配置为指向 AD/DNS 服务器，并可选择将此 VM 添加到子域的 DNS。
 4. 在此服务器上创建一个非 root 备份用户标识，并确保为文件传输配置并启动所有必需的服务。例如，FTP 或 SSH。
-5. 确保此 VM 包含在 Veeam 或 IBM Spectrum Protect Plus 管理备份作业中（请参阅下文）。
+5. 确保此 VM 包含在 Veeam 或 IBM Spectrum Protect Plus 管理备份作业中。
 
 ## vCenter 基于文件的备份
 
@@ -46,7 +46,7 @@ VMware vCenter Server 和 PSC 提供了使用各种协议[将数据库和配置�
 
 * VMware SDDC Manager（如果存在）
 * Active Directory 服务器（如果存在）
-* 文件备份服务器（请参阅上文）
+* 文件备份服务器
 
 计划分配足够的 Veeam 或 IBM Spectrum Protect Plus 许可证来备份这些虚拟机，并计划至少 2 TB 的备份存储器用于 VM。
 
@@ -64,7 +64,7 @@ VMware vCenter Server 和 PSC 提供了使用各种协议[将数据库和配置�
 
 如果选择将 AD/DNS 服务器部署为 {{site.data.keyword.cloud_notm}} 虚拟服务器实例 (VSI)，那么无法使用 Veeam 或 IBM Spectrum Protect Plus 对其进行备份。在这种情况下，请使用首选 Windows 备份解决方案进行备份和复原操作，或者计划使用 VMware 集群中的 AD/DNS VM 来部署实例，这可通过 Veeam 或 IBM Spectrum Protect Plus 进行备份。
 
-从 VMware vCenter 6.5u2 开始，VMware 支持使用基于映像的备份来备份 vCenter Postgres 数据库，在备份时段内使用集成的暂挂和恢复脚本来确保数据库完整性。如果已将 VMware 实例升级到 vCenter 6.5u2，那么可以选择使用 Veeam 或 IBM Spectrum Protect Plus 来备份 vCenter Server 和 PSC，而不使用基于文件的备份。如果这样做，那么必须使用 Veeam 或 IBM Spectrum Protect Plus 停顿功能来确保数据库完整性。
+从 VMware vCenter 6.5u2 开始，VMware 支持使用基于映像的备份来备份 vCenter Postgres 数据库，在备份时段内使用集成的数据库暂挂和恢复脚本来确保数据库完整性。如果已将 VMware 实例升级到 vCenter 6.5u2，那么可以选择使用 Veeam 或 IBM Spectrum Protect Plus 来备份 vCenter Server 和 PSC，而不使用基于文件的备份。如果这样做，那么必须使用 Veeam 或 IBM Spectrum Protect Plus 停顿功能来确保数据库完整性。
 
 ## 从备份复原
 

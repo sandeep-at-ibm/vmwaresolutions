@@ -10,7 +10,7 @@ lastupdated: "2018-07-10"
 
 # 扩展容量
 
-初始部署后，您可以通过 {{site.data.keyword.vmwaresolutions_full}} 控制台向外扩展计算容量。设计支持以下向外扩展途径：
+初始部署后，您可以通过 {{site.data.keyword.vmwaresolutions_full}} 控制台向外扩展计算容量。本设计支持以下向外扩展途径：
 * 添加由单独 vCenter Server 管理的新站点
 * 添加新集群
 * 向现有集群添加新主机
