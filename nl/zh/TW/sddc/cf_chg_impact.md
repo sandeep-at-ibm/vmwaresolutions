@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-08"
 
 變更保留給 {{site.data.keyword.vmwaresolutions_full}} 的使用者、資源或子網路，可能會影響 VMware Cloud Foundation 實例的管理作業。
 
-**重要事項：**請不要在 VMware vSphere Web Client 的**使用者和群組**頁面中，編輯 **ic4v-vCenter** 群組的廣域許可權。這類變更包括：變更使用者名稱、刪除使用者或變更其密碼。
+**重要事項：**請不要在 VMware vSphere Web Client 的**使用者和群組**頁面中，變更 **ic4v-vCenter** 群組的廣域許可權。下列範例是廣域許可權變更：變更使用者名稱、刪除使用者或變更其密碼。
 
 ## 服務特定使用者帳戶
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-17"
 
 您可以根據商業需求來擴充或縮減 VMware Cloud Foundation 實例的容量，方法是新增或移除 ESXi 伺服器。
 
-Cloud Foundation 實例最多可以有五個叢集，而其中一個是預設值。每一個起始叢集最多都可以有 51 部 ESXi 伺服器，而其他叢集最多可以有 59 部。
+Cloud Foundation 實例最多可以有五個叢集，而其中一個是預設值。每個起始叢集最多都可以有 51 部 ESXi 伺服器，而其他叢集最多可以有 59 部。
 
 ## 將 ESXi 伺服器新增至 Cloud Foundation 實例
 
@@ -32,7 +32,7 @@ Cloud Foundation 實例最多可以有五個叢集，而其中一個是預設值
 5. 在 **ESXi 伺服器**區段中，按一下**新增**。
 6. 在**新增伺服器**視窗中，輸入您要新增的伺服器數目、檢閱預估成本，然後按一下**新增**。
 
-### 新增 ESXi 伺服器後的結果
+### 新增 ESXi 伺服器之後的結果
 
 1. 實例狀態從**備妥使用**變更為**正在修改**時，您可能會在主控台上感覺到稍微延遲。在對實例進行其他變更之前，請讓作業全部完成。
 2. 新增 ESXi 伺服器時，會透過電子郵件通知您。
@@ -44,8 +44,8 @@ Cloud Foundation 實例最多可以有五個叢集，而其中一個是預設值
 
 * 不要從 VMware vSphere Web Client 移除 ESXi 伺服器。您在 VMware vSphere Web Client 上所做的變更不會與 {{site.data.keyword.vmwaresolutions_short}} 主控台同步。
 * 依預設，您訂購的基本平台會有 4 部 ESXi 伺服器。您可以移除所新增的 ESXi 伺服器。您無法移除預設 ESXi 伺服器。
-* 開始移除已安裝 F5 on {{site.data.keyword.cloud_notm}} 或 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務的 ESXi 伺服器之前，您必須將 F5 BIG-IP 及 FortiGate VM 移轉至與目前管理 VM 不同的 ESXi 伺服器。
-* 移除已安裝 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服務的 ESXi 伺服器之前，請確定沒有作用中（失敗或進行中）備份或還原作業，因為這些作用中作業可能會導致無法移除 ESXi 伺服器。
+* 移除已安裝 F5 on {{site.data.keyword.cloud_notm}} 或 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務的 ESXi 伺服器之前，您必須將 F5 BIG-IP 及 FortiGate VM 移轉至與管理 VM 不同的 ESXi 伺服器。
+* 移除已安裝 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服務的 ESXi 伺服器之前，請確定沒有作用中備份或還原作業。作用中作業（失敗或進行中）可能會防止移除 ESXi 伺服器。
 
 ## 移除 ESXi 伺服器的程序
 
@@ -55,7 +55,7 @@ Cloud Foundation 實例最多可以有五個叢集，而其中一個是預設值
 4. 在 **CLUSTERS** 表格中，按一下您要從中移除 ESXi 伺服器的叢集。
 6. 在 **ESXi 伺服器**區段中，選取您要移除的伺服器，然後按一下**移除**。
 
-### 移除 ESXi 伺服器後的結果
+### 移除 ESXi 伺服器之後的結果
 
 1. 實例狀態從**備妥使用**變更為**正在修改**時，您可能會在主控台上感覺到稍微延遲。在對實例進行其他變更之前，請讓作業全部完成。
 2. 移除 ESXi 伺服器時，會透過電子郵件通知您。
