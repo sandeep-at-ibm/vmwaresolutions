@@ -10,7 +10,7 @@ lastupdated: "2018-06-22"
 
 # V2.4 发行说明
 
-此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的更多提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Spectre 和 Meltdown 修复
 
@@ -45,7 +45,7 @@ lastupdated: "2018-06-22"
 
 * 双 Intel Skylake Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz
 * 双 Intel Skylake Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz
-* 双 Intel Skylake Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz
+* 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz
 
 有关更多信息，请参阅以下内容中的*裸机服务器设置*部分：
 
@@ -104,4 +104,4 @@ lastupdated: "2018-06-22"
 * 现在，“添加集群”和“添加服务”窗格使用的页面格式具有更好的组织布局，支持您更高效地完成任务。
 * **部署的实例**页面的功能通过搜索、分页和排序功能得到了增强。通过这些改进，您可以极快找到实例。
 * 现在，实例详细信息页面使用左侧导航菜单，通过该菜单，可以轻松、快速地访问实例信息。
-* 提供了各种错误消息和工具提示增强功能，以帮助您在用户界面上选择适当的设置。
+* 提供了各种错误消息和工具提示增强功能，以帮助您在用户界面上选择相应的设置。

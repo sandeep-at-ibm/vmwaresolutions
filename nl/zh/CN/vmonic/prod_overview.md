@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -16,14 +16,22 @@ lastupdated: "2018-08-27"
 
 ## IBM Cloud for VMware Solutions 优点
 
-{{site.data.keyword.vmwaresolutions_short}} 提供了以下主要优点：
-* **全球覆盖**：您可以将混合云覆盖范围扩展到全球各地多达 30 个企业级 {{site.data.keyword.CloudDataCents_notm}}。
-* **无缝集成**：支持通过 {{site.data.keyword.cloud_notm}} 基础架构实现整个混合云中的无缝集成。
-* **快速供应**：自动执行 VMware 环境的部署和配置，这将支持通过随需应变的 {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} 和虚拟服务器，快速部署企业级 VMware 环境。
-* **简化**：您可以您使用 VMware 云平台，无需确定、购买、部署和管理底层物理基础架构（计算、存储和网络）以及软件许可证。
-* **扩展和收缩灵活性**：支持根据业务需求，轻松扩展和收缩 VMware 工作负载。
-* **单个管理控制台**：提供单个控制台，可部署、访问和管理 {{site.data.keyword.cloud_notm}} 上的 VMware 环境。
-
+{{site.data.keyword.vmwaresolutions_short}} 提供了以下主要优点。
+<dl>
+  <dt>全球覆盖</dt>
+  <dd>将混合云覆盖范围扩展到全球各地多达 30 个企业级 {{site.data.keyword.CloudDataCents_notm}}。</dd>
+  <dt>无缝集成</dt>
+  <dd>支持通过 {{site.data.keyword.cloud_notm}} 基础架构实现整个混合云中的无缝集成。</dd>
+  <dt>快速供应</dt>
+  <dd>自动执行 VMware 环境的部署和配置，这将支持通过随需应变的 {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} 和虚拟服务器，快速部署企业级 VMware 环境。</dd>
+  <dt>简化</dt>
+  <dd>您可以您使用 VMware 云平台，无需确定、购买、部署和管理底层物理基础架构（计算、存储和网络）以及软件许可证。</dd>
+  <dt>扩展和收缩灵活性</dt>
+  <dd>支持根据业务需求，轻松扩展和收缩 VMware 工作负载。</dd>
+  <dt>单个管理控制台</dt>
+  <dd>提供单个控制台，可部署、访问和管理 {{site.data.keyword.cloud_notm}} 上的 VMware 环境。</dd>
+</dl>
+s
 ## 部署产品
 
 {{site.data.keyword.vmwaresolutions_short}} 提供了 VMware 虚拟环境的标准化和可定制部署选项。提供了以下部署类型：
@@ -98,9 +106,15 @@ HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服务通过集成密钥
 
 有关更多信息，请参阅 [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概述](../services/htdc_considerations.html)。
 
+### HyTrust KeyControl on IBM Cloud
+
+HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 服务通过自动化和简化加密密钥的生命周期来简化已加密工作负载的管理工作。该服务可以使用符合 FIPS 140-2 的加密来轻松管理大批加密密钥。通过使用此服务，可以管理所有虚拟机和已加密数据存储的加密密钥，并可对其进行扩展，以支持大型部署中的数千个已加密工作负载。
+
+有关更多信息，请参阅 [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 概述](../services/htkc_considerations.html)。
+
 ### IBM Cloud Private Hosted
 
-{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 服务会将微服务和容器的强大功能引入到 {{site.data.keyword.cloud_notm}} 上的 VMware 环境中。使用此服务，可以将内部部署中您所熟悉的相同 VMware 和 {{site.data.keyword.cloud_notm}} Private 操作模型和工具扩展到 {{site.data.keyword.cloud_notm}} 中。
+{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 服务会将微服务和容器的强大功能引入到 {{site.data.keyword.cloud_notm}} 上的 VMware 环境中。使用此服务，可以将内部部署中您熟悉的 VMware 和 {{site.data.keyword.cloud_notm}} Private 操作模型和工具扩展到 {{site.data.keyword.cloud_notm}} 中。
 
 有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html)。
 
@@ -118,7 +132,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务用于提供全天候�
 
 ### Veeam on IBM Cloud
 
-Veeam on {{site.data.keyword.cloud_notm}} 服务可与 VMware 系统管理程序无缝集成，以帮助企业实现高可用性。此服务可为应用程序和数据提供恢复点和时间目标。在完成配置后的 15 分钟内就会提供恢复点和时间目标。通过使用此服务，您可以在 Veeam 控制台中直接控制基础架构的所有虚拟机的备份和复原。
+Veeam on {{site.data.keyword.cloud_notm}} 服务可与 VMware 系统管理程序无缝集成，以帮助企业实现高可用性。此服务可为应用程序和数据提供恢复点和时间目标。在完成配置后的 15 分钟内会提供恢复点和时间目标。通过使用此服务，您可在 Veeam 控制台中直接控制基础架构的所有虚拟机的备份和复原。
 
 有关更多信息，请参阅 [Veeam on {{site.data.keyword.cloud_notm}} 概述](../services/veeam_considerations.html)。
 

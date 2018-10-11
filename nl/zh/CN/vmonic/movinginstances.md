@@ -43,4 +43,4 @@ V1.4 和更高发行版中的实例网络拓扑与低于 V1.4 的发行版中的
 
 有关导出和导入 VM 的更多信息，请参阅 VMware vSphere 文档。
 
-如果您需要有关 {{site.data.keyword.vmwaresolutions_short}} 的帮助，请通过下列其中一种支持渠道[联系 IBM 支持](trbl_support.html)。
+如果您需要有关 {{site.data.keyword.vmwaresolutions_short}} 的帮助，请通过下列其中一种支持渠道[联系 IBM 支持人员](trbl_support.html)。

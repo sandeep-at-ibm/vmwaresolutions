@@ -127,7 +127,7 @@ VMware ESXi 会自动安装在每个裸机服务器上，但您负责安装 vCen
 
 ## 如果使用 IBM Cloud for VMware Solutions 时发生问题怎么办？
 
-如果您需要有关 {{site.data.keyword.vmwaresolutions_short}} 的帮助，请通过下列其中一种支持渠道联系 IBM 支持。有关更多信息，请参阅[联系 IBM 支持](trbl_support.html)。
+如果您需要有关 {{site.data.keyword.vmwaresolutions_short}} 的帮助，请通过下列其中一种支持渠道联系 IBM 支持人员。有关更多信息，请参阅[联系 IBM 支持人员](trbl_support.html)。
 
 ### 相关链接
 

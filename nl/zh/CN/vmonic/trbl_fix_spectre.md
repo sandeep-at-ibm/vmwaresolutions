@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -24,26 +24,26 @@ V2.0 或更高版本中的实例是随 VMware vSphere 6.5 和 VMware vCenter Ser
 
 #### 对于 VMware vSphere 6.5
 
-* 对于所有新的 V2.3 实例，部署 vSphere 时将应用以下补丁：ESXi650-201712101-SG、ESXi650-201803401-BG 和 ESXi650-201803402-BG。  
-* 对于 V2.3 之前的版本中部署的所有现有实例，将使用以下补丁更新所有新集群和 ESXi 服务器：ESXi650-201712101-SG、ESXi650-201803401-BG 和 ESXi650-201803402-BG。
-* 对于所有现有 ESXi 服务器以及在升级到 V2.3 之前继续部署的任何集群或 ESXi 服务器，必须应用 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中的以下补丁：ESXi650-201712101-SG、ESXi650-201803401-BG 和 ESXi650-201803402-BG。
+* 对于所有新的 V2.6 实例，部署 vSphere 时将应用以下补丁：ESXi650-201712101-SG、ESXi650-201803401-BG、ESXi650-201803402-BG、ESXi650-201808401-BG、ESXi650-201808402-BG 和 ESXi650-201808403-BG。
+* 对于在 V2.5 之前部署但升级到 V2.5 的所有现有实例，将使用以下补丁更新所有新集群和 ESXi 服务器：ESXi650-201712101-SG、ESXi650-201803401-BG、ESXi650-201803402-BG、ESXi650-201808401-BG、ESXi650-201808402-BG 和 ESXi650-201808403-BG。
+* 对于所有现有 ESXi 服务器以及在升级到 V2.5 之前继续部署的任何集群或 ESXi 服务器，必须应用 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中的以下补丁：ESXi650-201712101-SG、ESXi650-201803401-BG、ESXi650-201803402-BG、ESXi650-201808401-BG、ESXi650-201808402-BG 和 ESXi650-201808403-BG。
 
 #### 对于 VMware vCenter Server 6.5
 
-* 对于所有新的 V2.3 实例，部署 vCenter Server 时将应用 vCenter 6.5 U1g 补丁。
-* 对于 V2.3 之前的版本中部署的所有现有实例，必须应用 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中的 vCenter 6.5 U1g 补丁。
+* 对于所有新的 V2.6 实例，部署 vCenter Server 时将应用 vCenter 6.5 U2c 累积补丁。
+* 对于 V2.6 之前的版本中部署的所有现有实例，必须应用 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中的 vCenter 6.5 U2c 补丁。
 
 ### 在 V2.0 或更高版本中部署的 Cloud Foundation 实例
 
-要应用 VMware vSphere 6.5 和 VMware vCenter Server 6.5 的必需补丁，必须将 Cloud Foundation 实例升级到最新的 V2.3 版本。
-
-对于所有现有实例和 ESXi 服务器，系统将提示您在 {{site.data.keyword.vmwaresolutions_full}} 控制台的**更新和补丁**页面上应用补丁（对于 vSphere，应用 ESXi650-201712101-SG、ESXi650-201803401-BG 和 ESXi650-201803402-BG；对于 vCenter Server，应用 vCenter 6.5 U1g）。有关更多信息，请参阅[对 Cloud Foundation 实例应用更新](../sddc/sd_applyingupdates.html)。
+要应用 VMware vSphere 6.5 和 VMware vCenter Server 6.5 的必需补丁，必须将 Cloud Foundation 实例升级到最新的 VMware 补丁捆绑软件。对于所有现有实例和 ESXi 服务器，系统将提示您应用 {{site.data.keyword.vmwaresolutions_full}} 控制台中**更新和补丁**页面上的补丁。有关更多信息，请参阅[对 Cloud Foundation 实例应用更新](../sddc/sd_applyingupdates.html)。
 
 ### 在 V2.0 或更高版本中部署的 VMware vSphere 集群
 
-对于 VMware vSphere 6.5，必须将 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中以下补丁应用于所有 vSphere 集群和 ESXi 服务器（包括新部署的和现有的 vSphere 集群和 ESXi 服务器）：ESXi650-201712101-SG、ESXi650-201803401-BG 和 ESXi650-201803402-BG。
+对于所有新的 VMware vSphere 6.5 集群和 ESXi 服务器，必须应用 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中的以下补丁：ESXi650-201808401-BG、ESXi650-201808402-BG 和 ESXi650-201808403-BG。
 
-对于 VMware vCenter Server 6.5，必须将 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中的 vCenter 6.5 U1g 补丁应用于所有 vCenter Server（包括新部署的和现有的 vCenter Server）。
+对于所有现有 VMware vSphere 6.5 集群，必须应用 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中的以下补丁：ESXi650-201712101-SG、ESXi650-201803401-BG、ESXi650-201803402-BG、ESXi650-201808401-BG、ESXi650-201808402-BG 和 ESXi650-201808403-BG。
+
+对于 VMware vCenter Server 6.5，必须将 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中的 vCenter 6.5 U2c 补丁应用于所有 vCenter Server（包括新部署的和现有的 vCenter Server）。
 
 ## V1.9 或更低版本中部署的实例
 
@@ -51,7 +51,7 @@ V1.9 或更低版本中的 Cloud Foundation 实例、vCenter Server 实例和 VM
 
 ### 在 V1.9 或更低版本中部署的 vCenter Server 实例
 
-对于 VMware vSphere 6.0 和 VMware vCenter Server 6.0，必须将 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中的补丁（对于 vSphere，应用 ESXi600-201711101-SG、ESXi600-201803401-BG 和 ESXi600-201803402-BG；对于 vCenter Server，应用 vCenter 6.0 U3e）应用于所有实例和 ESXi 服务器（包括新部署的和现有的实例和 ESXi 服务器）。
+对于 VMware vSphere 6.0 和 VMware vCenter Server 6.0，必须将 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中的补丁（对于 vSphere，应用 ESXi600-201711101-SG、ESXi600-201803401-BG、ESXi600-201803402-BG、ESXi600-201808401-BG、ESXi600-201808402-BG 和 ESXi600-201808403-BG；对于 vCenter Server，应用 vCenter 6.0 U3h）应用于所有实例和 ESXi 服务器（包括新部署的和现有的实例和 ESXi 服务器）。
 
 ### 在 V1.9 或更低版本中部署的 Cloud Foundation 实例
 
@@ -59,7 +59,7 @@ V1.9 或更低版本中的 Cloud Foundation 实例、vCenter Server 实例和 VM
 
 ### 在 V1.9 或更低版本中部署的 VMware vSphere 集群
 
-对于 VMware vSphere 6.0 和 VMware vCenter Server 6.0，必须将 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中的补丁（对于 vSphere，应用 ESXi600-201711101-SG、ESXi600-201803401-BG 和 ESXi600-201803402-BG；对于 vCenter Server，应用 vCenter 6.0 U3e）应用于所有 vSphere 集群和 ESXi 服务器（包括新部署的和现有的 vSphere 集群和 ESXi 服务器）。
+对于 VMware vSphere 6.0 和 VMware vCenter Server 6.0，必须将 [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)中的补丁（对于 vSphere，应用 ESXi600-201711101-SG、ESXi600-201803401-BG、ESXi600-201803402-BG、ESXi600-201808401-BG、ESXi600-201808402-BG 和 ESXi600-201808403-BG；对于 vCenter Server，应用 vCenter 6.0 U3h）应用于所有 vSphere 集群和 ESXi 服务器（包括新部署的和现有的 vSphere 集群和 ESXi 服务器）。
 
 ### 相关链接
 

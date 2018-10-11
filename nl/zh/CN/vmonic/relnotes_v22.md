@@ -10,7 +10,7 @@ lastupdated: "2018-05-18"
 
 # V2.2 发行说明
 
-此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的更多提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Spectre 和 Meltdown 修复
 
@@ -37,7 +37,7 @@ lastupdated: "2018-05-18"
 
 ## 对 VMware Federal on IBM Cloud 的支持
 
-VMware Federal on {{site.data.keyword.cloud_notm}} 支持在 {{site.data.keyword.CloudDataCent_notm}} 上的 WDC03 Federal 中订购基本 vCenter Server 实例。除了支持一部分 vCenter Server 实例产品之外，VMware Federal on {{site.data.keyword.cloud_notm}} 还为美国联邦政府机构提供了用于确保已部署 VMware vCenter Server 实例安全的选项。选择用于确保已部署实例安全的选项会除去存储的有关实例的敏感信息，并除去打开用于持续访问实例以实现管理功能（例如，添加和除去主机与集群）的管理连接。选择安全选项后，将禁用所有管理功能，但完全实例删除操作除外。
+VMware Federal on {{site.data.keyword.cloud_notm}} 提供了在 {{site.data.keyword.CloudDataCent_notm}} 上的 WDC03 Federal 中订购基本 vCenter Server 实例的选项。除了支持一部分 vCenter Server 实例产品之外，VMware Federal on {{site.data.keyword.cloud_notm}} 还为美国联邦政府机构提供了用于确保已部署 VMware vCenter Server 实例安全的选项。选择用于确保已部署实例安全的选项会除去存储的有关实例的敏感信息，并除去打开用于持续访问实例以实现管理功能（例如，添加和除去主机与集群）的管理连接。选择安全选项后，所有管理功能均不可用，但完全实例删除操作除外。
 
 有关确保 VMware Federal 实例安全之前的重要注意事项，请参阅[确保 VMware Federal 实例安全](../vcenter/vc_fed_securinginstance.html)。
 
@@ -52,7 +52,7 @@ VMware Federal on {{site.data.keyword.cloud_notm}} 支持在 {{site.data.keyword
 ## ESXi 服务器上的高级配置设置
 
 对于 V2.2 或更高发行版，订购的新实例有一组新的高级配置设置用于 ESXi 服务器。
-对于从前发行版升级到 V2.2 或更高发行版的实例，某些设置需要重新引导 ESXi 服务器，因此仅会自动应用一部分配置设置。
+对于从前发行版升级到 V2.2 或更高发行版的实例，某些设置需要重新引导 ESXi 服务器。因此仅会自动应用一部分配置设置。
 
 建议将其余配置设置更改为新值，以实现在所有实例上的一致性，并为存储扩展提供充分支持。对于所有 {{site.data.keyword.cloud_notm}} for VMware Solutions 未来发行版，IBM 计划仅测试这些新设置。
 
@@ -64,11 +64,11 @@ VMware Federal on {{site.data.keyword.cloud_notm}} 支持在 {{site.data.keyword
 
 对于 V2.2 和更高发行版，现在可以将 ESXi 服务器数增加到最大 51 个（对于初始集群）和最大 59 个（对于其他集群）。
 
-**重要信息**：对于 V2.1 或更低发行版中部署的实例，必须启用必要的 vSAN 支持才能将集群大小增加到 32 以上。有关增加 ESXi 服务器数的更多信息和步骤，请参阅[关于 ESXi 服务器的常见问题](../vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-)中的_可以向集群添加多少个 ESXi 服务器？_。
+**重要信息**：对于 V2.1 或更低发行版中部署的实例，必须启用必要的 vSAN 支持才能将集群大小增加到 32 以上。有关增加 ESXi 服务器数的步骤的更多信息，请参阅[关于 ESXi 服务器的常见问题](../vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-)中的_可以向集群添加多少个 ESXi 服务器？_。
 
-## vCenter Server 和 Cloud Foundation 实例的其他网络配置选项
+## vCenter Server 和 Cloud Foundation 实例的更多网络配置选项
 
-对于 vCenter Server 和 Cloud Foundation 实例订单，现在可以选择将现有公用和专用 VLAN 用于网络配置。现有 VLAN 不可用时，您仍可选择订购一个新的公用 VLAN 和两个新的专用 VLAN。
+对于 vCenter Server 和 Cloud Foundation 实例订单，现在可以将现有公用和专用 VLAN 复用于网络配置。现有 VLAN 不可用时，您可以订购一个新的公用 VLAN 和两个新的专用 VLAN。
 
 有关选择现有 VLAN 之前的重要注意事项，请参阅以下内容中的*网络接口设置*部分：
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
@@ -86,7 +86,7 @@ VMware Federal on {{site.data.keyword.cloud_notm}} 支持在 {{site.data.keyword
 
 现在，可以选择在管理集群中部署一个用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server 虚拟服务器实例 (VSI) 或两个高可用性 Microsoft Windows 虚拟机。对于 V2.2 之前的发行版，缺省情况下会自动部署一个用于 Microsoft AD 的 Microsoft Windows VSI。用于选择两个 Microsoft Windows 虚拟机的新选项提供了更多隐私性，并提供了使用 Veeam 服务来备份和复原虚拟机的选项。
 
-**注**：如果将实例配置为使用两个 Microsoft Windows 虚拟机，那么必须提供两个 Microsoft Windows Server 2012 R2 许可证。使用 Microsoft Windows Server 2012 R2 Standard Edition 许可证和/或 Microsoft Windows Server 2012 R2 Datacenter Edition 许可证。您有 30 天的时间来激活虚拟机。
+**注**：如果将实例配置为使用 2 个 Microsoft Windows 虚拟机，那么必须提供 2 个 Microsoft Windows Server 2012 R2 许可证。使用 Microsoft Windows Server 2012 R2 Standard Edition 许可证和/或 Microsoft Windows Server 2012 R2 Datacenter Edition 许可证。您有 30 天的时间来激活虚拟机。
 
 有关更多信息，请参阅[订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html#system-settings)中的*系统设置*部分。
 
@@ -114,13 +114,13 @@ VMware Federal on {{site.data.keyword.cloud_notm}} 支持在 {{site.data.keyword
 
 ### 增大了 F5 on IBM Cloud 的带宽选项
 
-现在，为 Cloud Foundation 和 vCenter Server 实例安装 F5 on {{site.data.keyword.cloud_notm}} 服务时，可以选择最大带宽 10 Gbps。有关更多信息，请参阅 [F5 on {{site.data.keyword.cloud_notm}} 的注意事项](../services/f5_considerations.html)。
+现在，为 Cloud Foundation 和 vCenter Server 实例安装 F5 on {{site.data.keyword.cloud_notm}} 服务时，可以选择的最大带宽为 10 Gbps。有关更多信息，请参阅 [F5 on {{site.data.keyword.cloud_notm}} 的注意事项](../services/f5_considerations.html)。
 
 ### KMIP for VMware on IBM Cloud
 
 现在，可以订购包含 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务的 Cloud Foundation 或 vCenter Server 实例，也可以在初始部署后向现有 Cloud Foundation 或 vCenter Server 实例添加此服务。
 
-此服务用于提供全天候高可用性服务，以管理 {{site.data.keyword.cloud_notm}} 中 VMware 使用的加密密钥。此服务提供了运行时功能，以支持客户创建、检索、激活、撤销和销毁加密密钥，此外还提供了管理功能，以维护客户机凭证与这些加密密钥之间的关联。
+此服务用于提供全天候高可用性服务，以管理 {{site.data.keyword.cloud_notm}} 中 VMware 使用的加密密钥。此服务提供了运行时功能，以支持客户创建、检索、激活、撤销和删除加密密钥。此外，此服务还提供了管理功能，以维护客户机凭证与这些加密密钥之间的关联。
 
 有关更多信息，请参阅 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 的注意事项](../services/kmip_considerations.html)。
 
@@ -136,7 +136,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务仅为工作
 
 ### 受管服务
 
-Veeam on {{site.data.keyword.cloud_notm}} 和 Zerto on {{site.data.keyword.cloud_notm}} 的受管服务现在可用于 VMware vCenter Server 和 VMware Cloud Foundation 实例。如果您不想管理自己解决方案和环境的复杂性，那么您可能希望请求受管服务。
+Veeam on {{site.data.keyword.cloud_notm}} 和 Zerto on {{site.data.keyword.cloud_notm}} 的受管服务现在可用于 VMware vCenter Server 和 VMware Cloud Foundation 实例。如果您不想管理自己解决方案和环境的复杂性，那么请求这些受管服务。
 
 Veeam on {{site.data.keyword.cloud_notm}} 服务可与 VMware 系统管理程序无缝集成，以帮助企业实现高可用性 (HA)。可以使用 Veeam 备份软件和 IBM Resiliency Backup as a Service 来部署完全受管的备份环境。
 
@@ -152,7 +152,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 服务用于提供复制和灾难恢�
 
 * 现在，文档中提供了 Cloud Foundation 和 vCenter Server 实例受支持功能的比较表以及 VMware vSphere 集群的信息。您可以快速查看每种实例类型提供的功能之间的差异。有关更多信息，请参阅[产品比较图表](../vmonic/inst_comp_chart.html)。
 
-* 现在，Cloud Foundation 和 vCenter Server 实例以及 VMware vSphere 集群的文档中提供了 VLAN 和软件材料清单 (BOM)。
+* 现在，Cloud Foundation、vCenter Server 和 VMware vSphere 集群的文档中提供了 VLAN 和软件材料清单 (BOM)。
 
   有关更多信息，请参阅以下主题：
 
@@ -166,4 +166,4 @@ Zerto on {{site.data.keyword.cloud_notm}} 服务用于提供复制和灾难恢�
 
 * 现在，订购实例时，所有硬件选项按位置进行过滤，不可用选项会显示为“已禁用”状态。
 * 现在，根据现有配置订购 vSphere 集群时，会自动填充 **{{site.data.keyword.baremetal_short}}** 配置。您可以根据需求更新该配置。
-* 提供了各种错误消息和工具提示增强功能，以帮助您在用户界面上选择适当的设置。
+* 提供了各种错误消息和工具提示增强功能，以帮助您在用户界面上选择相应的设置。

@@ -10,13 +10,13 @@ lastupdated: "2017-11-20"
 
 # V2.0 发行说明
 
-此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的更多提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## FortiGate Virtual Appliance on IBM Cloud
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可用于 V2.0 和更高版本 VMware Cloud Foundation 实例和 VMware vCenter Server 实例。此服务用于将 FortiGate Virtual Appliance 的高可用性 (HA) 对部署到环境中，这可帮助通过在虚拟基础架构中实施关键安全控制来降低风险。
 
-您可以在订购实例时订购包含 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务的实例，也可以日后在实例详细信息页面上的**服务**选项卡中向现有实例添加此服务。根据您的需求，可为此服务选择三种部署大小和许可选项中的一个选项。成功安装此服务后，可以在 FortiGate 控制台中管理和配置 FortiGate Virtual Appliance 的防火墙规则。
+订购实例时订购包含 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务的实例，也可以日后在实例详细信息页面上的**服务**选项卡中向现有实例添加此服务。根据您的需求，为此服务选择三种部署大小和许可选项之一。成功安装此服务后，在 FortiGate 控制台中管理和配置 FortiGate Virtual Appliance 的防火墙规则。
 
 有关更多信息，请参阅以下主题：
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的组件和注意事项](../services/fortinetvm_considerations.html)
@@ -24,7 +24,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 
 ## F5 on IBM Cloud 和 FortiGate Virtual Appliance on IBM Cloud 的多服务安装
 
-现在，可以为 Cloud Foundation 实例或 vCenter Server 实例安装 F5 on {{site.data.keyword.cloud_notm}} 服务和 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务的多个实例。订购实例期间选择 F5 服务或 FortiGate 服务时，必须指定服务实例的名称，使其区别于日后可能安装的其他服务实例。
+现在，可以为 Cloud Foundation 实例或 vCenter Server 实例安装 F5 on {{site.data.keyword.cloud_notm}} 服务和 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务的多个实例。订购实例期间选择 F5 服务或 FortiGate 服务时，必须指定服务实例的名称，使其区别于日后安装的其他服务实例。
 
 完成实例部署后，可以通过在实例详细信息页面的**添加服务**选项卡上安装 F5 或 FortiGate 服务，以添加该服务的更多实例。一次只能添加一个服务实例，并且必须对要为服务添加的所有实例重复此过程。
 
@@ -34,15 +34,15 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 
 ## 对 FortiGate Security Appliance on IBM Cloud 的更新
 
-在此发行版中，Fortinet on {{site.data.keyword.cloud_notm}} 服务已重命名为 FortiGate Security Appliance {{site.data.keyword.cloud_notm}}，并且此服务的 FortiGate Security Appliance (FSA) 对在部署到实例时，缺省情况下已配置为安全：
+在此发行版中，Fortinet on {{site.data.keyword.cloud_notm}} 服务已重命名为 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}。此服务的 FortiGate Security Appliance (FSA) 对在部署到实例时，缺省情况下已配置为安全。
 * 如果将 FSA 对作为新 Cloud Foundation 实例或 vCenter Server 实例的一部分进行部署，那么这对 FSA 会配置为仅允许从实例到公用网络的必需出站通信，而拒绝其他所有通信。
-* 如果将 FSA 对作为现有 Cloud Foundation 实例或 vCenter Server 实例的一部分进行部署，那么这对 FSA 会配置为使用显式规则以允许从实例到公用网络的所有必需出站管理通信，此外这对 FSA 还会配置为使用其他规则以允许其他所有通信，从而确保现有应用程序流量不会中断。
+* 如果将 FSA 对作为现有 Cloud Foundation 实例或 vCenter Server 实例的一部分进行部署，那么这对 FSA 会配置为使用显式规则以允许从实例到公用网络的所有必需出站管理通信，此外这对 FSA 还会配置为使用规则以允许其他所有通信，从而确保现有应用程序流量不会中断。
 
 在所有情况下，您都必须谨慎管理 FSA 配置，以仅允许必要的通信，而拒绝其他所有通信。
 
 ## 标准域名格式一致性
 
-现在，对于所有实例，标准域名 (FQDN) 都以一致的方式表示。下订单时，可以输入您自己的子域前缀和主机名前缀。这将确保遵循 FQDN 格式的业界约定，例如：`host-name-prefix<n>.subdomain-prefix.domain-name`。
+现在，对于所有实例，标准域名 (FQDN) 都以一致的方式表示。下订单时，可以输入您自己的子域前缀和主机名前缀，以确保遵循 FQDN 格式的行业约定。例如，`host-name-prefix<n>.subdomain-prefix.domain-name`。
 
 有关更多信息，请参阅以下主题：
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
@@ -68,7 +68,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 * VMware vCenter Server 6.5U1a
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
-* VMware ESXi 6.5，补丁发行版 ESXi650-201710401-BG：更新 esx-base、esx-tboot、vsan 和 vsanhealth VIB (2151061)。有关补丁的详细信息，请参阅 [VMware vCenter Server Appliance Photon OS 安全补丁](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window}。
+* VMware ESXi 6.5，补丁发行版 ESXi650-201710401-BG。更新 esx-base、esx-tboot、vsan 和 vsanhealth VIB (2151061)。有关补丁详细信息的更多信息，请参阅 [VMware vCenter Server Appliance Photon OS 安全补丁](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window}。
 
 **注**：现有实例（源自 V1.9 和更低发行版）无法升级到此列表中的组件版本。
 
@@ -85,6 +85,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 现在，在订购实例过程中，可以通过选择 vSAN 存储驱动器的数量和大小来定制 vSAN 存储器配置。
 
 有关更多信息，请参阅以下主题：
+
 * [Cloud Foundation 概述](../sddc/sd_cloudfoundationoverview.html)
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
 
@@ -98,7 +99,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 * 小型（双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz / 128 GB RAM / 12 个磁盘）
 * 大型（双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz / 512 GB RAM / 12 个磁盘）
 
-**注**：机箱的空间可容纳 12 个磁盘，但并非所有插槽都已装满。**小型**配置提供两个 1.9 TB Micron 5100 MAX 驱动器，**大型**配置提供四个 3.8 TB Micron 5100 PRO 驱动器。
+**注**：机箱的空间可容纳 12 个磁盘。但并非所有插槽都已装满。**小型**配置提供两个 1.9 TB Micron 5100 MAX 驱动器，**大型**配置提供四个 3.8 TB Micron 5100 PRO 驱动器。
 
 有关更多信息，请参阅以下主题：
 * [Cloud Foundation 概述](../sddc/sd_cloudfoundationoverview.html)
@@ -113,7 +114,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
 
-**注**：vCenter Server 定制订单（包含或不包含 VMware vSAN 组件）始终包含可容纳 12 个磁盘的机箱服务器，在价格估算 PDF 中对于非 vSAN 订单案例会反映为 {{site.data.keyword.baremetal_short}} 的成本略高。
+**注**：vCenter Server 定制订单（包含或不包含 VMware vSAN 组件）始终包含可容纳 12 个磁盘的机箱服务器。在价格估算 PDF 中，对于非 vSAN 订单，此服务器会导致 {{site.data.keyword.baremetal_short}} 的成本略高。
 
 有关组件的更多信息，请参阅 [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)。
 
@@ -131,7 +132,7 @@ vSAN 存储器现在可用于 vCenter Server 实例，包括主实例和辅助�
 
 ### 自带许可证 (BYOL) 用于 VMware vCenter Server 实例
 
-BYOL 现在可用于 vCenter Server 实例。订购 vCenter Server 实例时，BYOL 支持使用一个或多个您自己的 vCenter Server、vSphere、vSAN 和 NSX VMware 许可证。
+BYOL 现在可用于 vCenter Server 实例。订购 vCenter Server 实例时，请使用一个或多个您自己的 vCenter Server、vSphere、vSAN 和 NSX VMware 许可证。
 
 有关更多信息，请参阅以下主题：
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
@@ -147,9 +148,9 @@ BYOL 现在可用于 vCenter Server 实例。订购 vCenter Server 实例时，B
 * 1.9 TB SSD SED
 * 3.8 TB SSD SED
 
-**注：**
-* 3.8 TB SSD SED 驱动器在 {{site.data.keyword.CloudDataCent_notm}} 中一般可用后就会受到支持。
-* 订单（包含或不包含 VMware vSAN 组件）始终包含可容纳 12 个磁盘的机箱服务器，在价格估算 PDF 中对于非 vSAN 订单案例会反映为 {{site.data.keyword.baremetal_short}} 的成本略高。
+**注**：
+* 3.8 TB SSD SED 驱动器在 {{site.data.keyword.CloudDataCent_notm}} 内普遍可用后就会受到支持。
+* 订单（包含或不包含 VMware vSAN 组件）始终包含可容纳 12 个磁盘的机箱服务器。在价格估算 PDF 中，对于非 vSAN 订单，此服务器会导致 {{site.data.keyword.baremetal_short}} 的成本略高。
 
 有关更多信息，请参阅[订购新的 vSphere 集群](../vsphere/vs_orderinginstances.html)。
 
@@ -162,7 +163,7 @@ BYOL 现在可用于 vCenter Server 实例。订购 vCenter Server 实例时，B
 * **高性能（大型）**- 高级许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 128 GB RAM / 每节点 22 个 3.8 TB SSD 驱动器容量 / 4 节点集群的有效容量 - 118 TB
 * **高容量** - 标准许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 64 GB RAM / 每节点 10 个 4 TB SATA 驱动器容量 / 4 节点集群的有效容量 - 60 TB
 
-**注**：3.8 TB SSD 驱动器在 {{site.data.keyword.CloudDataCent_notm}} 中一般可用后就会受到支持。
+**注**：3.8 TB SSD 驱动器在 {{site.data.keyword.CloudDataCent_notm}} 内普遍可用后就会受到支持。
 
 有关更多信息，请参阅以下主题：
 * [NetApp ONTAP Select 概述](../netapp/np_netappoverview.html)
@@ -170,11 +171,11 @@ BYOL 现在可用于 vCenter Server 实例。订购 vCenter Server 实例时，B
 
 ## 新增和更新的文档
 
-VMware Cloud Foundation 用户可以将逐步指示信息与 {{site.data.keyword.cloud_notm}} 上 VMware 的 NSX 平台一起使用，以允许虚拟机相互通信和使用因特网。有关更多信息，请参阅[针对 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} (VCF) 上的工作负载 VM 设置 NSX](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}。
+VMware Cloud Foundation 用户可按照逐步指示信息，使用 {{site.data.keyword.cloud_notm}} 上 VMware 的 NSX 平台来允许虚拟机相互通信和访问因特网。有关更多信息，请参阅[对 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} (VCF) 上的工作负载 VM 设置 NSX](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}。
 
 ## 用户界面更新和增强功能
 
 * 可以添加到集群的最大 ESXi 服务器数现在已更新为 32 个服务器。最大集群数仍然为 5 个。
 * 在**部署的实例**页面上，实例摘要表中的 **ESXi 服务器**列已替换为**版本**列，在此列中可以找到实例部署或更新到的发行版版本。
 * 实例详细信息页面上现在提供了用于 Cloud Foundation 实例的 SDDC Manager 的版本。
-* 提供了各种错误消息和工具提示增强功能，以帮助您在用户界面上选择适当的设置。
+* 提供了各种错误消息和工具提示增强功能，以帮助您在用户界面上选择相应的设置。

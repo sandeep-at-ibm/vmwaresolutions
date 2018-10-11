@@ -8,13 +8,13 @@ lastupdated: "2018-08-16"
 
 ---
 
-# 联系 IBM 支持
+# 联系 IBM 支持人员
 
 如果您需要有关 {{site.data.keyword.vmwaresolutions_full}} 的帮助，请创建 {{site.data.keyword.cloud_notm}} 支持凭单以通过下面某种渠道获取帮助：
 
 ## 通过 IBM Cloud for VMware Solutions 控制台
 
-要通过 {{site.data.keyword.vmwaresolutions_short}} 控制台联系 IBM 支持，请完成以下步骤：
+要通过 {{site.data.keyword.vmwaresolutions_short}} 控制台联系 IBM 支持人员，请完成以下步骤：
 
 1. 转至
    https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
@@ -41,7 +41,7 @@ lastupdated: "2018-08-16"
 
 ## 通过 IBM Cloud 基础架构客户门户网站
 
-要通过 {{site.data.keyword.slportal}} 联系 IBM 支持，请完成以下步骤：
+要通过 {{site.data.keyword.slportal}} 联系 IBM 支持人员，请完成以下步骤：
 
 1. 转至 https://control.softlayer.com。
 2. 使用 **IBM 标识**帐户登录到该门户网站。

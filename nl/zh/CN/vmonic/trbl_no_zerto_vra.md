@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-08-16"
 向已安装 Zerto 灾难恢复的 VMware vCenter Server 实例添加 ESXi 服务器后，Virtual Replication 设备 (VRA) 未显示在 Zerto Virtual Replication 控制台上。
 
 ## 解决方法
-对于 vCenter Server 实例，Zerto 灾难恢复服务仅安装在缺省集群 **cluster1** 中的 ESXi 服务器上。在创建其他集群时，或将 ESXi 服务器添加到该其他集群时，同一 vCenter Server 环境中的其他任何集群都不会自动安装 Zerto 灾难恢复。
+对于 vCenter Server 实例，Zerto 灾难恢复服务仅安装在缺省集群 **cluster1** 中的 ESXi 服务器上。在同一 vCenter Server 环境中创建其他集群时，或将 ESXi 服务器添加到其他集群时，不会在这些其他集群上自动安装 Zerto 灾难恢复。
 
 在其他集群上，必须单独安装 Zerto 灾难恢复。
 
@@ -22,4 +22,4 @@ lastupdated: "2018-08-16"
 
 要访问 Zerto 控制台，请单击实例的**服务**选项卡中的 Zerto 卡，单击**查看详细信息**，然后单击**查看 Zerto 控制台**。
 
-有关联系 IBM 支持的更多信息，请参阅[联系 IBM 支持](trbl_support.html)。
+有关联系 IBM 支持人员的更多信息，请参阅[联系 IBM 支持人员](trbl_support.html)。

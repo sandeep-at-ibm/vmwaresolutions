@@ -10,7 +10,7 @@ lastupdated: "2018-05-28"
 
 # V2.3 发行说明
 
-此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的更多提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Spectre 和 Meltdown 修复
 
@@ -73,7 +73,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybr
 
 现在，可以选择在管理集群中部署一个用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server 虚拟服务器实例 (VSI) 或两个高可用性 Microsoft Windows 虚拟机。对于 V2.2，缺省情况下会自动部署一个用于 Microsoft AD 的 Microsoft Windows VSI。用于选择两个 Microsoft Windows 虚拟机的新选项提供了更多隐私性，并提供了使用 Veeam 服务来备份和复原虚拟机的选项。
 
-**注**：如果将实例配置为使用两个 Microsoft Windows 虚拟机，那么必须提供两个 Microsoft Windows Server 2012 R2 许可证。使用 Microsoft Windows Server 2012 R2 Standard Edition 许可证和/或 Microsoft Windows Server 2012 R2 Datacenter Edition 许可证。您有 30 天的时间来激活虚拟机。
+**注**：如果将实例配置为使用 2 个 Microsoft Windows 虚拟机，那么必须提供 2 个 Microsoft Windows Server 2012 R2 许可证。使用 Microsoft Windows Server 2012 R2 Standard Edition 许可证和/或 Microsoft Windows Server 2012 R2 Datacenter Edition 许可证。您有 30 天的时间来激活虚拟机。
 
 有关更多信息，请参阅[订购 VMware Federal 实例](../vcenter/vc_fed_orderinginstance.html#network-interface-settings)中的*网络接口设置*部分。
 
@@ -113,7 +113,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybr
 
 ## 新增和更新的文档
 
-新的 developerWorks 方法提供了有关如何在部署后向 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 添加存储器的分步骤指示信息。有关更多信息，请参阅[部署后向 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 添加存储器](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)。
+新的 developerWorks 诀窍提供了有关如何向部署后的 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 添加存储器的逐步指示信息。有关更多信息，请参阅[向部署后的 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 添加存储器](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)。
 
 ## 用户界面更新和增强功能
 
@@ -122,4 +122,4 @@ HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybr
 * **轻松访问**：现在，可以直接在 {{site.data.keyword.cloud_notm}} **目录**中访问 VMware 产品。
 * **精简优化的订购体验**：现在，只要在一个界面中就能完成订购 VMware 实例和部署其附加组件服务。此外，计算了估算成本后，该成本会立即在同一界面中显示，以便您可以根据成本计划来调整配置。
 * 订购实例或添加集群时，自带许可证 (BYOL) 选项对于业务合作伙伴用户不可用。
-* 提供了各种错误消息和工具提示增强功能，以帮助您在用户界面上选择适当的设置。
+* 提供了各种错误消息和工具提示增强功能，以帮助您在用户界面上选择相应的设置。

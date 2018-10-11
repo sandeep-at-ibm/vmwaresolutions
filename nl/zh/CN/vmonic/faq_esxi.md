@@ -17,7 +17,7 @@ lastupdated: "2018-08-14"
 * 对于 vCenter Server 实例，可以将缺省集群扩展为最多具有 51 个 ESXi 服务器。每个非缺省集群可以扩展为最多具有 59 个 ESXi 服务器。由于您最多可以向一个实例添加 10 个集群，因此每个部署的实例在所有集群中最多可以有 51 + 9x59 = 582 个 ESXi 服务器。
 * 对于 Cloud Foundation 实例，标准配置有 4 个 ESXi 服务器。最多可以添加 28 个服务器（总共 32 个服务器）。对于多站点配置中的 Cloud Foundation 实例，在所有实例中最多可以有 128 个 ESXi 服务器。
 
-  **注**：如果 Cloud Foundation 配置需要具有超过 128 个 ESXi 服务器的多站点部署，请[联系 IBM 支持](trbl_support.html)以获取帮助。
+  **注**：如果 Cloud Foundation 配置需要具有超过 128 个 ESXi 服务器的多站点部署，请[联系 IBM 支持人员](trbl_support.html)以获取帮助。
 
 ## 可以向集群添加多少个 ESXi 服务器？
 
@@ -61,4 +61,4 @@ lastupdated: "2018-08-14"
 * [扩展和收缩 Cloud Foundation 实例的容量](../sddc/sd_addingremovingservers.html)
 * [添加、查看和删除 vCenter Server 实例的集群](../vcenter/vc_addingviewingclusters.html)
 * [添加、查看和删除 Cloud Foundation 实例的集群](../sddc/sd_addingviewingclusters.html)
-* [联系 IBM 支持](trbl_support.html)
+* [联系 IBM 支持人员](trbl_support.html)
