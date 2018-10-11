@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2018-08-13"
 
 ## 虛擬網路設計
 
-本設計所使用的網路虛擬化，是使用現有的 vSphere 分散式交換器 (vDS)，其與專用網路相關聯，並指定在 [{{site.data.keyword.vmwaresolutions_full}} 架構](../solution/solution_overview.html)中。
+本設計所使用的網路虛擬化，是使用現有的 vSphere Distributed Switch (vDS)，其與專用網路相關聯，並指定在 [{{site.data.keyword.vmwaresolutions_full}} 架構](../solution/solution_overview.html)中。
 
-##  vSphere 分散式交換器
+## vSphere Distributed Switch
 
-如前所述，在 vCenter Server 解決方案內會建立另一個 VLAN，它用來將 NFS 裝載點連接至現有叢集裡的 ESXi 主機。由於 vCenter Server 解決方案已有與專用網路相關聯的 vSphere 分散式交換器 (vDS)，所以會建立另一個埠群組，並用其他的 VLAN 號碼加上標籤，因為這個其他的 VLAN 不是原生 VLAN。
+如前所述，在 vCenter Server 解決方案內會建立另一個 VLAN，它用來將 NFS 裝載點連接至現有叢集裡的 ESXi 主機。因為 vCenter Server 解決方案已有與專用網路相關聯的 vDS，所以會建立另一個埠群組，並用其他的 VLAN 號碼加上標籤，因為這個其他的 VLAN 不是原生 VLAN。
 
 下表說明新埠群組的預設值。
 

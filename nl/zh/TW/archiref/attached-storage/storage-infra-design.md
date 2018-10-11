@@ -4,21 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-24"
 
 ---
 
 # 連接儲存空間基礎架構設計
 
-{{site.data.keyword.vmwaresolutions_full}} 提供的 VMware 技術是以自動化方式部署在全球各地的 {{site.data.keyword.CloudDataCents_notm}} 內。在 {{site.data.keyword.cloud_notm}} 解決方案組合中，基本的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 供應項目包含最多 20 部 vSphere 主機、單一 Platform Services Controller (PSC)，以及有能力管理最多 100 部主機和 1,000 部虛擬機器的 vCenter Server Appliance。
+{{site.data.keyword.vmwaresolutions_full}} 提供的 VMware 技術是以自動化方式部署在全球各地的 {{site.data.keyword.CloudDataCents_notm}} 內。在 {{site.data.keyword.cloud_notm}} 解決方案組合中，基本 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 供應項目包含最多 10 個叢集，且各包含最多 59 部 vSphere 主機、單一 Platform Services Controller (PSC)，以及有能力管理最多 400 部主機和 4,000 部虛擬機器的 vCenter Server Appliance。
 
 這裡呈現的架構會藉由新增連接儲存空間作為環境的共用儲存裝置，來補充 vCenter Server 解決方案。連接儲存裝置是位於與 vCenter Server 部署相同的 {{site.data.keyword.CloudDataCent_notm}} 內，它包含單一「網路檔案系統 (NFS)」共用，或是來自 {{site.data.keyword.cloud_notm}} 的多個 NFS 匯出。
 
-下圖說明 NetApp ONTAP Select on vCenter Server 部署的整體架構。
+下圖說明 vCenter Server 部署上連接儲存空間的整體架構。
 
-圖 1. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 的高階架構
+圖 1. {{site.data.keyword.cloud_notm}} 上連接儲存空間的高階架構
 
-![NetApp ONTAP Select 架構](../../netapp/np_architecture.svg "NetApp ONTAP Select on IBM Cloud 高階架構")
+![連接儲存空間架構](../solution/physical_nfs.svg "IBM Cloud 上連接儲存空間的高階架構")
 
 ## 實體基礎架構設計
 
@@ -38,7 +38,7 @@ lastupdated: "2018-08-14"
 
 ### 專用服務網路
 
-{{site.data.keyword.cloud_notm}} 包含的專用服務網路提供共用服務，例如區塊儲存空間、檔案儲存空間、物件儲存空間、DNS 解析器及 NTP 伺服器。此專用網路與客戶專用網路區隔，而且它可讓環境無縫連接到位於 {{site.data.keyword.cloud_notm}} 的服務。此專用網路為多層式，伺服器和其他基礎架構是連接到聚集的後端客戶交換器 (BCS)。這些聚集交換器連接到一對個別路由器，亦即後端客戶路由器或 BCR，以執行 L3 網路功能。此專用網路也支援使用巨型頁框的功能，亦即 MTU 9000，以建立實體主機連線。
+{{site.data.keyword.cloud_notm}} 包含的專用服務網路提供共用服務，例如區塊儲存空間、檔案儲存空間、物件儲存空間、DNS 解析器及 NTP 伺服器。此專用網路與客戶專用網路區隔，而且它可讓環境無縫連接到位於 {{site.data.keyword.cloud_notm}} 的服務。此專用網路為多層式，伺服器和其他基礎架構是連接到聚集的後端客戶交換器 (BCS)。這些聚集交換器連接到一對個別路由器，亦即後端客戶路由器或 BCR，以執行 L3 網路功能。此專用網路也支援使用巨大訊框的功能，亦即 MTU 9000，以建立實體主機連線。
 
 ### VLAN
 
@@ -52,11 +52,11 @@ lastupdated: "2018-08-14"
 
 效能和耐久性儲存空間是 {{site.data.keyword.cloud_notm}} 儲存空間解決方案，其設計是為了支援需要可預測效能等級的高 I/O 應用程式。此項可預測的效能，是透過將每秒通訊協定層次輸入/輸出作業數 (IOPS) 配置給個別磁區來達成。
 
-IOPS 的範圍是從 100 到 48,000，可使用範圍從 20 GB 到 12 TB 的儲存空間大小來佈建它。效能和耐久性儲存空間磁區可用於區塊儲存空間和檔案儲存空間。
+IOPS 的範圍是從 100 到 48,000，可使用範圍從 20 GB - 12 TB 的儲存空間大小來佈建它。效能和耐久性儲存空間磁區可用於區塊儲存空間和檔案儲存空間。
 
 在本設計中，vCenter Server 解決方案針對連接儲存空間提供耐久性儲存空間。因此，您可以選取及連接（透過自動化）耐久性 NFS 匯出，其大小的範圍是從 20 GB 到上限 12 TB。{{site.data.keyword.cloud_notm}} 容許最多 64 部 vSphere ESXi 主機連接到單一耐久性 NFS 匯出。
 
-耐久性可用於三個 IOPS 效能層級，以支援不同的應用程式需求。請注意，在佈建 NFS 共用之後，無法將其調整大小或重新配置為容許更多或更少 IOPS。
+耐久性可用於三個 IOPS 效能層級，以支援不同的應用程式需求。請注意，在佈建 NFS 共用之後，可以將其調整大小或重新配置為容許更多或更少 IOPS。
 
 如需詳細的 IOPS 選項，請參閱[訂購 vCenter Server 實例](../../vcenter/vc_orderinginstance.html)中的_儲存空間設定_ 一節。
 
