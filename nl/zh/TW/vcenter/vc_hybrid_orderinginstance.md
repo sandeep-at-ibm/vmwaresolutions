@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 若要部署彈性且可自訂的 VMware 虛擬化平台，以符合您的工作負載需求，請訂購 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 實例。您的 vCenter Server with Hybridity Bundle 實例訂單包括 VMware Hybrid Cloud Extension (HCX) 授權，並授權您使用 VMware HCX on {{site.data.keyword.cloud_notm}} 服務。您也可以新增服務（例如 [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)）來進行災難回復。
 
-## 需求
+## 訂購 vCenter Server with Hybridity Bundle 實例的需求
 
 請確定您已完成下列作業：
 *  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](../vmonic/useraccount.html)。
@@ -30,7 +30,7 @@ lastupdated: "2018-08-02"
   |完整的 ESXi 伺服器名稱| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 伺服器的序號。長度上限為 50 個字元。|  
   |PSC FQDN |`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 長度上限為 50 個字元。|
 
-**重要事項**：請不要修改在訂購及實例部署期間設定的任何值。這樣做會導致您的實例變成無法使用。例如，公用網路可能會關閉、伺服器和虛擬伺服器實例 (VSI) 可能在 Vyatta 佈建進行中落後，或者 IBM CloudBuilder VSI 可能會停止或遭到刪除。
+**重要事項**：請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在 Vyatta 佈建進行中落後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
 
 ## 系統設定
 
@@ -50,12 +50,12 @@ lastupdated: "2018-08-02"
 
 ## 授權設定
 
-vCenter Server with Hybridity Bundle 實例訂單隨附下列授權。您必須為 NSX 授權版本指定 **Advanced** 或 **Enterprise**。
+vCenter Server with Hybridity Bundle 實例訂單隨附下列 VMware 授權。您必須指定 NSX 及 vSAN 授權的版本。
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.4
-* VMware vSAN 6.6 授權版本（Advanced 或 Enterprise）。
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4（Advanced 或 Enterprise 版本）
+* vSAN 6.6（Advanced 或 Enterprise 版本）
 
 **注意：**
 * vCenter Server with Hybridity Bundle 實例不支援「自帶授權」。
@@ -85,16 +85,21 @@ vSAN 配置的起始叢集及後置部署叢集需要四部 ESXi 伺服器。所
 |雙重 Intel Xeon Silver 4110 處理器/總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 5120 處理器/總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 6140 Processor / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
 ### Bare Metal Server 數目
 
 依預設，會選取四部 ESXi 伺服器，且無法變更。
 
 ## 儲存空間設定
 
-vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。訂購實例時，您必須指定下列儲存空間設定：
+vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指定下列 vSAN 選項：
 
-* **vSAN 容量磁碟的磁碟類型及大小**：選取符合共用儲存空間需求的容量。
-* **vSAN 容量磁碟數目**：選取您要新增的 vSAN 共用儲存空間的磁碟數目。磁碟數量必須是 2、4、6 或 8。
+* **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
+* **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
+* **vSAN 快取磁碟的磁碟類型**：選取所需快取磁碟的選項。
+
+    **附註**：如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。此選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲及更高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
+* **vSAN 快取磁碟數目**：指定您要新增的快取磁碟數目。
 
 ## 網路介面設定
 
@@ -125,6 +130,15 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。訂購
 * 最後一個字串的長度範圍必須在 2 到 24 個字元之間。
 
 **附註：**主機和 VM（虛擬機器）的 FQDN（完整網域名稱）長度上限為 50 個字元。網域名稱必須在這個長度上限以內。
+
+### 公用或專用網路
+
+網路介面卡 (NIC) 啟用設定是根據您選取**公用及專用網路**或**僅限專用網路**而定。下列附加程式服務需要公用 NIC，如果您選取專用選項，則無法使用：
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 訂購新的 VLAN
 
@@ -167,9 +181,9 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。訂購
 
 根據您選取的實例及附加程式服務配置，預估成本會立即產生並顯示在右窗格的**訂單摘要**區段中。按一下右窗格底端的**定價詳細資料**，以產生提供預估值詳細資料的 PDF 文件。
 
-## 程序
+## 訂購 vCenter Server with Hybridity Bundle 實例的程序
 
-1. 在「{{site.data.keyword.cloud_notm}} 型錄」中，從左導覽窗格中按一下 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
+1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 頁面上，按一下 **vCenter Server with Hybridity Bundle** 卡片，然後按一下**建立**。
 3. 在 **vCenter Server** 頁面上，輸入實例名稱。
 4. 選取實例類型：
@@ -183,17 +197,16 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。訂購
   2. 選取**自訂** CPU 型號及 **RAM** 數量。
 
   **附註：**依預設，會將 **Bare Metal Server 數目**設為 4，且無法變更。
-
-7. 完成儲存空間配置。
-  1. 選取 **vSAN 容量磁碟的磁碟類型及大小**。
-  2. 選取 **vSAN 容量磁碟數目**。
+7. 完成儲存空間配置。指定容量及快取磁碟的磁碟類型以及磁碟數目。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
 8. 完成網路介面配置。
   1. 輸入主機名稱字首、子網域標籤及根網域名稱。
-  2. 選取 VLAN 配置。
+  2. 選取**公用及專用網路**或**僅限專用網路**的網路設定。
+  3. 選取 VLAN 配置。
      *  如果您要訂購新的公用及專用 VLAN，則請按一下**訂購新的 VLAN**。
      *  如果您要重複使用可用的現有公用及專用 VLAN，則請按一下**選取現有的 VLAN**，然後選取公用 VLAN、主要子網路、專用 VLAN、專用主要子網路及次要專用 VLAN。
-  3. 選取 DNS 配置。
-9. 按一下對應的服務卡，以選取要部署到實例中的附加程式服務。如果需要配置服務，則請完成服務特定設定，然後按一下卡片上的**新增服務**。  
+  4. 選取 DNS 配置。
+9. 完成 {{site.data.keyword.cloud_notm}} 服務上所含 HCX 的配置。如需如何提供服務設定的相關資訊，請參閱[訂購 VMware HCX on IBM Cloud](../services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration) 中的 _VMware HCX on IBM Cloud 配置_ 小節。
+10. 按一下對應的服務卡，以選取要部署到實例中的附加程式服務。如果需要配置服務，則請完成服務特定設定，然後按一下卡片上的**新增服務**。  
 如需如何提供服務設定的相關資訊，請參閱對應的服務訂購主題。
 
 8. 在**訂單摘要**窗格上，先驗證實例配置，再下訂單。
@@ -206,7 +219,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。訂購
 
 實例的部署會自動啟動。您會收到正在處理訂單的確認，您可以檢視實例詳細資料來檢查部署的狀態。
 
-順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server with Hybridity Bundle 實例的技術規格](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購其他服務，則會在完成訂單之後開始部署服務。
+順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server with Hybridity Bundle 實例的技術規格](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
 
 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 

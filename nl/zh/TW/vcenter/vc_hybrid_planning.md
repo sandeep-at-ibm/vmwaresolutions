@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -88,7 +88,7 @@ vCenter Server with Hybridity Bundle 實例包括可授權您使用 VMware HCX o
 
 ## 容量考量
 
-如需容量資訊及考量，請參閱[調整容量](../archiref/solution/solution_scaling.html)。
+如需容量考量的相關資訊，請參閱[調整容量](../archiref/solution/solution_scaling.html)。
 
 ### 相關鏈結
 

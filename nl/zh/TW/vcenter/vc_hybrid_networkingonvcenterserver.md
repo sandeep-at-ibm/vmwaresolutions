@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -16,9 +16,9 @@ lastupdated: "2018-07-24"
 
 若要檢閱 vCenter Server with Hybridity Bundle 實例中所含的網路元件，請參閱 [vCenter Server with Hybridity Bundle 實例的技術規格](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)。
 
-## NSX 防火牆考量
+## 防火牆考量
 
-如果您使用 NSX Distributed Firewall (DFW)，則必須針對來自 IBM CloudDriver 虛擬伺服器實例 (VSI) 的所有通訊配置規則，以容許所有通訊協定在 IP 位址 `10.0.0.0/8` 及 `161.26.0.0/16` 上進行通訊。
+如果您使用防火牆，則必須針對來自 {{site.data.keyword.IBM}} CloudDriver 虛擬伺服器實例 (VSI) 及 SDDC Manager 虛擬機器 (VM) 的所有通訊配置規則。這些規則必須容許所有通訊協定在 IP 位址 `10.0.0.0/8` 及 `161.26.0.0/16` 上進行通訊。這類防火牆的範例包含 NSX Distributed Firewall (DFW) 或 Vyatta 防火牆。
 
 ## 使用 NSX 與虛擬機器搭配
 

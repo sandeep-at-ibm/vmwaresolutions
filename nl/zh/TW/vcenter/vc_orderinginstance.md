@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-08-15"
 表 1. 實例及網域名稱的值格式
 
 |名稱 |值格式            |
-  |:------------- |:------------- |
+  |:------------|:------------ |
   |網域名稱    | `<root_domain>` |  
   |vCenter Server 登入使用者名稱  | `<user_id>@<root_domain>`（Microsoft Active Directory 使用者）或 `administrator@vsphere.local` |
   |vCenter Server FQDN |`vcenter.<subdomain_label>.<root_domain>`. 長度上限為 50 個字元。|
@@ -30,7 +30,7 @@ lastupdated: "2018-08-15"
   |完整的 ESXi 伺服器名稱| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 伺服器的序號。長度上限為 50 個字元。|  
   |PSC FQDN |`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 長度上限為 50 個字元。|
 
-**重要事項**：請不要修改在訂購及實例部署期間設定的任何值。這樣做會導致您的實例變成無法使用。例如，公用網路可能會關閉、伺服器和虛擬伺服器實例 (VSI) 可能在 Vyatta 佈建進行中落後，或者 IBM CloudBuilder VSI 可能會停止或遭到刪除。
+**重要事項**：請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在 Vyatta 佈建進行中落後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
 
 ## 系統設定
 
@@ -51,20 +51,20 @@ lastupdated: "2018-08-15"
 ## 授權設定
 
 在實例中，指定下列 VMware 元件的授權選項：
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware vCenter Server 6.5
-* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
+* vCenter Server 6.5 - Standard 版本
+* vSphere 6.5u1 - Enterprise Plus 版本
+* NSX Service Providers 6.4（Base、Advanced 或 Enterprise 版本）
 
 對於「事業夥伴」使用者，包括 vCenter Server 授權（Standard 版本）、vSphere 授權（Enterprise Plus 版本）及 NSX 授權，並可代表您購買。不過，您必須指定 NSX 授權的版本。
 
 對於非「事業夥伴」使用者，您可以選取**購買隨附**以將 IBM 提供的 VMware 授權用於這些元件，也可以選取**我將提供**並輸入自己的授權碼以「自帶授權 (BYOL)」。
 
 **注意**：
-* 需要最少有 8 個 CPU 的授權，這是針對 4 部伺服器，而每部伺服器都有 2 個 CPU。每個 VMware 元件的授權選項適用於基本實例，以及之後新增至該實例的任何 ESXi 伺服器。因此，您必須確保您的授權支援基礎架構中的未來容量擴充。
+* 需要最少有 8 個 CPU 的授權，這是針對 4 部伺服器，而每部伺服器都有 2 個 CPU。每個 VMware 元件的授權選項適用於基本實例，以及之後新增至該實例的任何 ESXi 伺服器。請確保您的授權支援基礎架構中的未來容量擴充。
 * 使用者介面上會指出最低授權版本。如果支援不同的元件版本，您可以選取您想要的版本。您必須負責確保所提供的授權碼對於每一個選取的 VMware 元件都是正確的。
-* 對於 vSphere，會在訂購時產生授權費用，但授權費用將在後來記入您的帳戶中。
+* 對於 vSphere，會在訂購時產生授權費用，但授權費用接著會記入您的帳戶中。
 * 實例部署完成之後，您可以使用 VMware vSphere Web Client 來變更所提供的任何授權。
-* 針對您提供授權的 VMware 元件，其支援將直接由 VMware 提供，而不是由 IBM 支援中心提供。
+* 您為其提供授權之 VMware 元件的支援是由 VMware 所提供，而不是由「IBM 支援中心」所提供。
 
 ## Bare Metal Server 設定
 
@@ -106,7 +106,7 @@ Bare Metal Server 設定是根據您選取的資料中心，以及選擇預先�
 * 如果您選取**預先配置**，您可以配置在 2 - 10 範圍內的 ESXi 伺服器數目。
 * 如果您選取**自訂**，您可以配置在 2 - 20 範圍內的 ESXi 伺服器數目。
 
-所有 ESXi 伺服器都共用相同的配置。起始部署之後，您可以再新增四個叢集。如果您對 vSAN 選取了**自訂**配置，則起始叢集和後置部署叢集都需要 4 部 ESXi 伺服器。如需最少 ESXi 伺服器數目的相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)。
+所有 ESXi 伺服器都會共用設定的配置。起始部署之後，您可以再新增四個叢集。如果您對 VMware vSAN 選取了**自訂**配置，則起始叢集和後置部署叢集都需要 4 部 ESXi 伺服器。如需最少 ESXi 伺服器數目的相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)。
 
 ## 儲存空間設定
 
@@ -114,10 +114,14 @@ Bare Metal Server 設定是根據您選取的資料中心，以及選擇預先�
 
 ### vSAN 儲存空間
 
-只有選取**自訂** Bare Metal Server 配置時，才能使用 vSAN。請指定下列 vSAN 選項：
+vSAN 僅適用於**自訂** Bare Metal 配置。請指定下列 vSAN 選項：
 
-* **vSAN 容量磁碟數目**：指定您要新增的 vSAN 共用儲存空間的磁碟數目。磁碟數量必須是 2、4、6 或 8。
-* **vSAN 容量磁碟的磁碟類型及大小**：選取符合共用儲存空間需求的容量。
+* **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
+* **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
+* **vSAN 快取磁碟的磁碟類型**：選取所需快取磁碟的選項。
+
+    **附註**：如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。此選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲及更高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
+* **vSAN 快取磁碟數目**：指定您要新增的快取磁碟數目。
 * **vSAN 授權**：選取**購買隨附**以將 IBM 提供的 VMware 授權用於 vSAN 元件，也可以選取**我將提供**並輸入自己的授權碼以「自帶授權 (BYOL)」。
 
 ### NFS 儲存空間
@@ -127,9 +131,9 @@ Bare Metal Server 設定是根據您選取的資料中心，以及選擇預先�
 **附註：**檔案共用數目必須在 1 到 32 的範圍內。
 
 * **個別配置共用**：選取以指定每一個檔案共用的不同配置設定。
-* **共用數目**：使用每一個檔案共用的相同配置設定時，請指定您要新增之 NFS 共用儲存空間的檔案共用數目。
+* **共用數目**：當您使用每個檔案共用的相同配置設定時，請指定您要新增之 NFS 共用儲存空間的檔案共用數目。
 * **大小**：選取符合共用儲存空間需求的容量。
-* **效能**：根據您的工作負載需求，選取每 GB IOPS（每秒輸入/輸出作業數）。
+* **效能**：根據您的工作負載需求，選取每 GB 的 IOPS（每秒輸入/輸出作業數）。
 * **新增 NFS**：選取以新增要使用不同配置設定的個別檔案共用。
 
 表 3. NFS 效能層次選項
@@ -170,16 +174,25 @@ Bare Metal Server 設定是根據您選取的資料中心，以及選擇預先�
 
 **附註：**主機和 VM 的「完整網域名稱 (FQDN)」長度上限為 50 個字元。網域名稱必須在這個長度上限以內。
 
+### 公用或專用網路
+
+網路介面卡 (NIC) 啟用設定是根據您選取**公用及專用網路**或**僅限專用網路**而定。下列附加程式服務需要公用 NIC，如果您選取專用選項，則無法使用：
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
+
 ### VLAN
 
 網路設定是根據您選取**訂購新的 VLAN** 或**選取現有的 VLAN** 而定。
 
 您的實例訂單需要一個公用 VLAN 及兩個專用 VLAN。兩個專用 VLAN 成為每部 Bare Metal Server 的主幹。
 
-**訂購新的 VLAN**  
+#### 訂購新的 VLAN
 選取訂購一個新的公用 VLAN 和兩個新的專用 VLAN。
 
-**選取現有的 VLAN**  
+#### 選取現有的 VLAN 
 視您選取的 {{site.data.keyword.CloudDataCent_notm}} 而定，可能會提供現有的公用和專用 VLAN。
 
 當您選擇重複使用現有的公用及專用 VLAN 時，請指定 VLAN 及子網路：
@@ -191,7 +204,7 @@ Bare Metal Server 設定是根據您選取的資料中心，以及選擇預先�
 
 **重要事項：**
 * 確保所選取 VLAN 上的防火牆配置未封鎖管理資料流量。
-* 確保您選取的所有 VLAN 都在相同的 Pod 中，因為無法在混合 Pod VLAN 上佈建 ESXi 伺服器。
+* 確保您選取的所有 VLAN 都在相同的 Pod 中。無法在混合 Pod VLAN 上佈建 ESXi 伺服器。
 
 ### DNS 配置
 
@@ -202,7 +215,7 @@ Bare Metal Server 設定是根據您選取的資料中心，以及選擇預先�
 
 **重要事項：**如果您將實例配置為使用兩部 Microsoft Windows VM，則必須提供兩個 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及（或）Microsoft Windows Server 2012 R2 Datacenter 版本授權。
 
-每一份授權都只能指派給一部單一實體伺服器，且最多涵蓋兩個實體處理器。以一份 Standard 版本授權而言，每一部雙處理器伺服器都可以執行兩部虛擬化 Microsoft Windows VM。因此，必須有兩份授權，因為兩部 Microsoft Windows VM 部署在兩部不同的主機中。
+每一份授權都只能指派給一部單一實體伺服器，且最多涵蓋兩個實體處理器。以一份 Standard 版本授權而言，每部雙處理器伺服器都可以執行兩部虛擬化 Microsoft Windows VM。因此，必須有兩份授權，因為兩部 Microsoft Windows VM 部署在兩部不同的主機中。
 
 您有 30 天的時間可啟動 VM。
 
@@ -210,25 +223,24 @@ Bare Metal Server 設定是根據您選取的資料中心，以及選擇預先�
 
 ## 服務設定
 
-當您訂購 vCenter Server 實例時，也可以訂購其他服務。如需服務的相關資訊，請參閱 [vCenter Server 實例的可用服務](vc_addingremovingservices.html#available-services-for-vcenter-server-instances)。
+當您訂購 vCenter Server 實例時，也可以訂購附加程式服務。如需服務的相關資訊，請參閱 [vCenter Server 實例的可用服務](vc_addingremovingservices.html#available-services-for-vcenter-server-instances)。
 
 ## 訂單摘要
 
 根據您選取的實例及附加程式服務配置，預估成本會立即產生並顯示在右窗格的**訂單摘要**區段中。按一下右窗格底端的**定價詳細資料**，以產生提供預估值詳細資料的 PDF 文件。
 
-## 程序
+## 訂購 vCenter Server 實例的程序
 
-1. 在「{{site.data.keyword.cloud_notm}} 型錄」中，從左導覽窗格中按一下 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
+1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 頁面上，按一下 **vCenter Server** 卡片，然後按一下**建立**。
 3. 在 **vCenter Server** 頁面上，輸入實例名稱。
 4. 選取實例類型：
    * 按一下**主要實例**，以在環境中部署單一實例，或是部署多站台拓蹼中的第一個實例。
    * 按一下**次要實例**，以連接該實例與環境中的現有（主要）實例以獲得高可用性，然後完成下列步驟：
      1. 選取您要與次要實例連接的主要實例。
-     2. 如果將您選取的主要實例升級為 2.5 版，或將主要實例部署至或升級為 2.4 版及舊版本，請檢查預先填入的**主要實例 PSC 的管理者密碼**，確定它是正確的。
-     
-        **附註：****主要實例 PSC 的管理者密碼**欄位不適用於 2.5 版及更新版本中所部署的主要實例。     
-5. 完成實例元件的授權設定。  
+     2. 對於主要實例 2.5 版或更新版本，輸入**主要實例 PSC 的管理者密碼**的值。
+     3. 對於主要實例 2.4 版或更早版本，驗證**主要實例 PSC 的管理者密碼**欄位的預先填入值正確無誤。
+5. 完成實例元件的授權設定。
    *  若要使用 IBM 提供的授權，請選取**購買隨附**，然後選取授權版本（必要的話）。
    *  若要使用您自己的授權，請選取**我將提供**，然後輸入授權碼。
 6. 完成 Bare Metal Server 設定。
@@ -236,19 +248,18 @@ Bare Metal Server 設定是根據您選取的資料中心，以及選擇預先�
     2. 選取 Bare Metal Server 配置。
        * 當您選取**預先配置**時，請針對配置選擇**小型**、**中型**或**大型**。
        * 當您選取**自訂**時，請指定 CPU 型號及 RAM 大小。
-    3. 指定 {{site.data.keyword.baremetal_short}} 數目。如果您打算使用 vSAN 作為儲存空間解決方案，請注意，至少需要 4 部 {{site.data.keyword.baremetal_short}}。  
-
-7. 完成儲存空間設定：
-  * 當您選取 **vSAN 儲存空間**時，請指定 **vSAN 容量磁碟的磁碟類型及大小**、**vSAN 容量磁碟數目**，以及如何提供 **vSAN 授權**。
-  * 當您選取 **NFS 儲存空間**且想要對所有檔案共用新增及配置相同的設定時，請指定**共用數目**、**大小**及**效能**。
-  * 當您選取 **NFS 儲存空間**且想要個別新增及配置檔案共用時，請選取**個別配置共用**，然後按一下**新增 NFS** 標籤旁的 **+** 圖示，並針對每一個個別檔案共用選取**大小**及**效能**。您必須至少選取一個檔案共用。
-
+    3. 指定 {{site.data.keyword.baremetal_short}} 數目。如果您打算使用 vSAN 作為儲存空間解決方案，則至少需要 4 部 {{site.data.keyword.baremetal_short}}。  
+7. 完成儲存空間配置。
+  * 如果您選取 **vSAN 儲存空間**，請指定容量及快取磁碟的磁碟類型、磁碟數目以及「vSAN 授權」版本。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
+  * 如果您選取 **NFS 儲存空間**，而且要對所有檔案共用新增及配置相同的設定，請指定**共用數目**、**大小**及**效能**。
+  * 如果您選取 **NFS 儲存空間**，而且要個別新增及配置檔案共用，請選取**個別配置共用**。然後，按一下**新增 NFS** 標籤旁的 **+** 圖示，並針對每個檔案共用選取**大小**及**效能**。您必須至少選取一個檔案共用。
 8. 完成網路介面設定。
-   1. 輸入主機名稱字首、子網域標籤及根網域名稱。對於次要實例，會自動填寫網域名稱。
-   2. 選取 VLAN 設定：
+   1. 輸入主機名稱字首、子網域標籤及根網域名稱。對於次要實例，會自動完成網域名稱。
+   2. 選取**公用及專用網路**或**僅限專用網路**的網路設定。
+   3. 選取 VLAN 設定：
       * 如果您要訂購新的公用及專用 VLAN，則請按一下**訂購新的 VLAN**。
       * 如果您要重複使用可用的現有公用及專用 VLAN，則請按一下**選取現有的 VLAN**，然後指定 VLAN 及子網路。
-   3. 指定 DNS 配置。
+   4. 指定 DNS 配置。
 
 9. 按一下對應的服務卡，以選取要部署到實例中的附加程式服務。如果需要配置服務，則請完成服務特定設定，然後按一下卡片上的**新增服務**。如需如何提供服務設定的相關資訊，請參閱對應的服務訂購主題。
 
@@ -262,7 +273,7 @@ Bare Metal Server 設定是根據您選取的資料中心，以及選擇預先�
 
 實例的部署會自動啟動。您會收到正在處理訂單的確認，您可以檢視實例詳細資料來檢查部署的狀態。
 
-順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server 實例的技術規格](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購其他服務，則會在完成訂單之後開始部署服務。
+順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server 實例的技術規格](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
 
 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 

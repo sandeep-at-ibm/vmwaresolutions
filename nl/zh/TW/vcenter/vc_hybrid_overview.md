@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-20"
 
 ---
 
 # vCenter Server with Hybridity Bundle 概觀
 
-vCenter Server with Hybridity Bundle 是可在 2.3 版及更新版本中取得的實例。
+VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是可在 2.3 版及更新版本中取得的實例。從 2.6 版開始，「事業夥伴」可以使用 vCenter Server with Hybridity Bundle 實例。
 
-VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為服務的受管理專用雲端。VMware 環境建置在四部 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 上、包括 VMware vSAN 作為專用儲存空間、自動部署及配置容易管理的邏輯邊緣防火牆（其採用 VMware NSX 技術），以及包括 VMware HCX on {{site.data.keyword.cloud_notm}} 服務。
+vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為服務的代管專用雲端。VMware 環境建置在四部 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 上、包括 VMware vSAN 作為專用儲存空間、自動部署及配置容易管理的邏輯邊緣防火牆（其採用 VMware NSX 技術），以及包括 VMware HCX on {{site.data.keyword.cloud_notm}} 服務。
 
 在許多情況下，整個環境可以在一天內佈建完成，且裸機基礎架構可以快速而彈性地擴充運算容量，並依需要擴增及縮減。
 
@@ -20,7 +20,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是�
 
 您可以將 VMware NSX Advanced 版本升級至 Enterprise 版本，並可購買其他 VMware 元件（例如 VMware vRealize Operations）。
 
-如果您要卸載虛擬化、來賓作業系統或應用程式層的日常作業及維護，則可以新增 IBM Managed Services。{{site.data.keyword.cloud_notm}} Professional Services 團隊也可協助您透過移轉、實作、規劃及上線服務來加速移到雲端。
+如果您要卸載虛擬化、來賓作業系統或應用程式層的日常作業及維護，則可以新增 IBM 管理的服務。{{site.data.keyword.cloud_notm}} Professional Services 團隊也可協助您透過移轉、實作、規劃及上線服務來加速移到雲端。
 
 ## vCenter Server with Hybridity Bundle 架構
 
@@ -79,9 +79,9 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是�
   * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，IBM 將它部署為管理網路拓蹼的一部分。IBM 管理 VM 使用此 ESG，以與跟自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[將您的網路配置成使用客戶管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
     **重要事項**：您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server with Hybridity Bundle 實例。此外，請注意，使用防火牆或停用外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
-  * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway，IBM 將它部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險？](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)。
+  * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway，IBM 將它部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險？](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
-如需部署 HCX on {{site.data.keyword.cloud_notm}} 服務時所訂購之網路元件的其他資訊，請參閱 [HCX on {{site.data.keyword.cloud_notm}} 概觀](../services/hcx_considerations.html)。
+如需部署 HCX on {{site.data.keyword.cloud_notm}} 服務時所訂購之網路元件的相關資訊，請參閱 [HCX on {{site.data.keyword.cloud_notm}} 概觀](../services/hcx_considerations.html)。
 
 ### 虛擬伺服器實例
 
@@ -89,13 +89,14 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是�
 * IBM CloudBuilder 的 VSI，在完成實例部署之後會關閉它。
 * 您可以選擇在管理叢集裡部署單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或兩部高可用性 Microsoft Windows VM，以協助加強安全及穩健性。
 
-### 儲存空間
+### vSAN 儲存空間
 
 vSAN 儲存空間提供自訂的配置，以及磁碟類型和數量的各種選項：
 * 磁碟數量：2、4、6 或 8。
 * 儲存磁碟：960 GB SSD SED、1.9 TB SSD SED 或 3.8 TB SSD SED。
 
-  此外，還訂購了每部主機 2 個快取磁碟 (960 GB)。
+  此外，還訂購每部主機 2 個快取磁碟 (960 GB)。
+* 「高效能 Intel Optane」選項，提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。此選項取決於 CPU 型號。
 
 ### IBM 提供的授權及費用
 
@@ -123,7 +124,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附下列授權。
 * 一筆支援與服務費用
 * VMware vSAN（Advanced 或 Enterprise）6.6
 
-**重要事項**：您必須從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 {{site.data.keyword.cloud_notm}} 帳戶中所建立的 {{site.data.keyword.vmwaresolutions_short}} 元件，而不是在主控台以外的 {{site.data.keyword.slportal}} 或透過任何其他方法進行管理。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項**：您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台而不是 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
 **警告**：從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，可能會讓您的環境不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件

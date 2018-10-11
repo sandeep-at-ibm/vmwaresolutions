@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 依預設，您訂購實例時所配置的 ESXi 伺服器會分組為 **cluster1**。
 
-您可以將叢集新增至 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 實例，以擴充運算及儲存空間容量。在叢集內，您可以管理 ESXi 伺服器，以進行更適當的資源配置及高可用性。不再需要時，您可以從實例中刪除新增的叢集。
+您可以將叢集新增至 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 實例，以擴充運算及儲存空間容量。在叢集內，管理 ESXi 伺服器，以進行更適當的資源配置及高可用性。不再需要時，請從實例中刪除新增的叢集。
 
 ## 將叢集新增至 vCenter Server with Hybridity Bundle 實例
 
@@ -32,9 +32,9 @@ lastupdated: "2018-08-02"
 
 #### 資料中心位置
 
-依預設，叢集的 {{site.data.keyword.CloudDataCent_notm}} 位置是設為 vCenter Server 實例的 {{site.data.keyword.CloudDataCent_notm}}。您可以將叢集部署至不同於已部署實例的 {{site.data.keyword.CloudDataCent_notm}}，但您必須確定兩個 {{site.data.keyword.CloudDataCents_notm}} 之間的網路延遲少於 150 毫秒。若要檢查網路延遲，您可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 之類的工具。
+依預設，叢集的 {{site.data.keyword.CloudDataCent_notm}} 位置是設為 vCenter Server 實例的 {{site.data.keyword.CloudDataCent_notm}}。您可以將叢集部署至不同於已部署實例的 {{site.data.keyword.CloudDataCent_notm}}，但您必須確定兩個 {{site.data.keyword.CloudDataCents_notm}} 之間的網路延遲少於 150 毫秒。若要檢查網路延遲，請使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 這類工具。
 
-如果您將叢集部署至不同的 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基礎架構 pod，則會訂購另外三個 VLAN，以便與已訂購的 {{site.data.keyword.baremetal_short}} 搭配使用。
+如果您將叢集部署至不同的 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基礎架構 Pod，則會訂購其他三個 VLAN，以與已訂購的 {{site.data.keyword.baremetal_short}} 搭配使用。
 
 ### Bare Metal Server 設定
 
@@ -60,22 +60,35 @@ lastupdated: "2018-08-02"
 
 您可以針對叢集新增最多 59 部 {{site.data.keyword.baremetal_short}}，並且一次可以新增 1 到 59 部 ESXi 伺服器。
 
-部署之後，您最多可以建立另外四個叢集。對於 VMware vSAN 儲存空間，起始叢集及後置部署叢集都需要 4 部伺服器。
+部署之後，您最多可以建立另外四個叢集。對於 VMware vSAN 儲存空間，起始叢集及後置部署叢集都需要四部伺服器。
 
 ### vSAN 儲存空間設定
 
-vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。您必須為授權版本指定 **Advanced** 或 **Enterprise**。
+vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指定下列 vSAN 選項：
 
-* **vSAN 容量磁碟的磁碟類型及大小**：選取符合共用儲存空間需求的容量。
-* **vSAN 容量磁碟數目**：選取您要新增的 vSAN 共用儲存空間的磁碟數目。磁碟數量必須是 2、4、6 或 8。
-* 選取 VMware vSAN 6.6 授權版本（Advanced 或 Enterprise）。
+* **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
+* **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
+* **vSAN 快取磁碟的磁碟類型**：選取所需快取磁碟的選項。
+
+    **附註**：如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。此選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲及更高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
+* **vSAN 快取磁碟數目**：指定您要新增的快取磁碟數目。
+* **vSAN 授權**：選取 VMware vSAN 6.6 授權版本（Advanced 或 Enterprise）。
 
 ### 授權設定
 
-下列項目的 IBM 提供的 VMware 授權：
-  * VMware vSphere Enterprise Plus 6.5u1
-  * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.4
+下列 VMware 元件的 IBM 提供授權：
+  * vSphere Enterprise Plus 6.5u1
+  * vCenter Server 6.5
+  * NSX Service Providers 6.4（Advanced 或 Enterprise 版本）
+
+### 網路介面設定
+
+網路介面卡 (NIC) 設定是根據您選取**公用及專用網路**或**僅限專用網路**而定。下列附加程式服務需要公用 NIC，而且在使用專用選項時無法使用：
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 訂單摘要
 
@@ -86,15 +99,16 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。您必
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
 2. 在 **vCenter Server 實例**表格中，按一下實例來檢視其中的叢集。
 
-   **附註**：請確定實例處於**備妥使用**狀態。否則，您無法將叢集新增至實例。
+   **附註**：請確定實例狀態處於**備妥使用**。否則，您無法將叢集新增至實例。
 
 3. 按一下左導覽窗格上的**基礎架構**，然後按一下 **CLUSTERS** 表格右上角的**新增**。
 4. 在**新增叢集**頁面上，輸入叢集名稱。
-5. 如果您要在與實例管理所在不同的 {{site.data.keyword.CloudDataCent_notm}} 中管理叢集，請勾選 **Bare Metal Server** 下的**選取不同的位置**勾選框，然後選擇 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
+5. 您可以在與實例管理所在不同的 {{site.data.keyword.CloudDataCent_notm}} 中管理叢集。若要這樣做，請勾選 **Bare Metal Server** 下的**選取不同的位置**勾選框，然後選擇 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
 6. 針對 Bare Metal Server 配置，選取 **CPU 型號**、**RAM** 數量及 **Bare Metal Server 數目**。
-7.  選取 **vSAN 儲存空間**，然後針對儲存空間配置選取 **vSAN 容量磁碟數目**及 **vSAN 容量磁碟的磁碟類型及大小**。
+7.  選取 **vSAN 儲存空間**，然後指定容量及快取磁碟的磁碟類型以及磁碟數目。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
 8. 選取授權配置的 VMware vSAN 授權版本。
-9. 在**訂單摘要**窗格上，先驗證叢集配置，再新增叢集。
+9. 選取**公用及專用網路**或**僅限專用網路**的網路設定。
+10. 在**訂單摘要**窗格上，先驗證叢集配置，再新增叢集。
    1. 檢閱叢集的設定。
    2. 檢閱預估的叢集成本。按一下**定價詳細資料**以產生 PDF 摘要。若要儲存或列印訂單摘要，請按一下 PDF 視窗右上方的**列印**或**下載**圖示。
    3. 按一下適用於您訂單的條款鏈結，並先確定您同意這些條款，再新增叢集。
@@ -169,9 +183,9 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。您必
 
 ### 刪除之前
 
-* 您一次可以刪除單一叢集。若要刪除多個叢集，您必須依序執行它；請先等待刪除前一個叢集，再嘗試刪除下一個叢集。
-* 刪除叢集之前，請確定叢集裡的所有節點都已開啟電源且正常運作。
-* 當您刪除叢集時，也會一併刪除叢集裡的所有 VM（虛擬機器），且無法回復。如果您要保留 VM，請將它們移轉至其他叢集。
+* 您一次可以刪除單一叢集。若要刪除多個叢集，您必須依序執行它；請等待前一個叢集刪除後，再刪除下一個叢集。
+* 在您刪除叢集之前，請確定叢集中的所有節點都已開啟電源且正常運作。
+* 當您刪除叢集時，也會一併刪除叢集中的所有 VM（虛擬機器），且無法回復。如果您要保留 VM，請將它們移轉至其他叢集。
 * 無法刪除預設叢集。
 
 ## 從 vCenter Server with Hybridity Bundle 實例中刪除叢集的程序

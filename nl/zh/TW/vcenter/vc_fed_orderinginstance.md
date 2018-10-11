@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
 # 訂購 VMware Federal 實例
 
-若要部署彈性且可自訂的 VMware 虛擬化平台，以符合您的工作負載需求，請訂購 VMware Federal 實例，讓您能夠中斷已開啟的管理連線及維護已部署實例的安全。
+若要部署彈性且可自訂的 VMware 虛擬化平台，以符合您的工作負載需求，請訂購 VMware Federal 實例。VMware Federal 實例可協助您中斷已開啟的管理連線，並維護已部署實例的安全。
 
 **附註：**目前只有 vCenter Server 實例支援 VMware Federal on {{site.data.keyword.cloud}}。
 
-## 需求
+## 訂購 VMware Federal 實例的需求
 
 請確定您已完成下列作業：
 * 您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](../vmonic/useraccount.html)。
@@ -32,7 +32,7 @@ lastupdated: "2018-08-14"
   |完整的 ESXi 伺服器名稱| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 伺服器的序號。長度上限為 50 個字元。|  
   |PSC FQDN |`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 長度上限為 50 個字元。|
 
-**重要事項**：請不要修改在訂購及實例部署期間設定的任何值。這樣做會導致您的實例變成無法使用。例如，公用網路可能會關閉、伺服器和「虛擬伺服器實例 (VSI)」在進行佈建時可能會移到 Vyatta 後方，或 IBM CloudBuilder VSI 可能會停止或遭到刪除。
+**重要事項**：請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在 Vyatta 佈建進行中落後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
 
 ## 系統設定
 
@@ -52,12 +52,12 @@ lastupdated: "2018-08-14"
 
 ## 授權設定
 
-下列項目的 IBM 提供的 VMware 授權：
+下列 VMware 元件的 IBM 提供授權：
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
-* （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4（Base、Advanced 或 Enterprise 版本）
+* （針對 vSAN 叢集）vSAN 6.6（Advanced 或 Enterprise 版本）
 
 **注意：**
 
@@ -66,7 +66,7 @@ lastupdated: "2018-08-14"
 
 ## Bare Metal Server 設定
 
-Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預先配置的選項。
+Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預先配置的配置選項。
 
 ### 資料中心位置
 
@@ -99,11 +99,15 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
 ### vSAN 儲存空間
 
-對於 vSAN，請指定下列儲存空間選項：
+請指定下列 vSAN 選項：
 
-* **vSAN 容量磁碟的磁碟類型及大小**：選取符合共用儲存空間需求的容量。
-* **vSAN 容量磁碟數目**：選取您要新增的 vSAN 共用儲存空間的磁碟數目。磁碟數量必須是 2、4、6 或 8。
-* 選取 VMware vSAN 6.6 授權版本（Advanced 或 Enterprise）。
+* **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
+* **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
+* **vSAN 快取磁碟的磁碟類型**：選取所需快取磁碟的選項。
+
+    **附註**：如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。此選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲及更高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
+* **vSAN 快取磁碟數目**：指定您要新增的快取磁碟數目。
+* **vSAN 授權**：選取 vSAN 6.6 授權版本（Advanced 或 Enterprise）。
 
 ### NFS 儲存空間
 
@@ -160,9 +164,9 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 * **適用於 Active Directory/DNS 的單一公用 Windows VSI**：用於 Microsoft Active Directory (AD)（其充當已登錄主機及虛擬機器之實例的 DNS）的 Microsoft Windows Server VSI，已部署並可查閱。
 * **管理叢集上有兩部高可用性的專用 Windows Server VM**：對於 2.3 版及未來版本，會部署兩部 Microsoft Windows 虛擬機器，協助加強安全及穩健性。
 
-**重要事項：**如果您將實例配置為使用兩部 Microsoft Windows 虛擬機器，則必須提供兩個 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及/或 Microsoft Windows Server 2012 R2 Datacenter 版本授權。
+**重要事項：**如果您將實例配置為使用兩部 Microsoft Windows 虛擬機器，則必須提供兩個 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及（或）Microsoft Windows Server 2012 R2 Datacenter 版本授權。
 
-目前，每一份授權只能指派給一部單一實體伺服器，且最多涵蓋兩個實體處理器。以一份 Standard 版本授權而言，每一部雙處理器伺服器可執行兩部虛擬化的 Microsoft Windows 虛擬機器。因此，必須有兩份授權，因為兩部 Microsoft Windows 虛擬機器是部署在兩部不同的主機中。
+目前，每份授權都只能指派給一部單一實體伺服器，且最多涵蓋兩個實體處理器。使用一份 Standard 版本授權，每部雙處理器伺服器都可以執行兩部虛擬化 Microsoft Windows 虛擬機器。因此，必須有兩份授權，因為兩部 Microsoft Windows 虛擬機器是部署在兩部不同的主機中。
 
 您有 30 天的時間可啟動虛擬機器。
 
@@ -172,9 +176,9 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
 根據您選取的實例配置，預估成本會立即產生並顯示在右窗格的**訂單摘要**區段中。按一下右窗格底端的**定價詳細資料**，以產生提供預估值詳細資料的 PDF 文件。
 
-## 程序
+## 訂購 VMware Federal 實例的程序
 
-1. 在「{{site.data.keyword.cloud_notm}} 型錄」中，從左導覽窗格中按一下 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
+1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 頁面上，按一下 **vCenter Server** 卡片，然後按一下**建立**。
 3. 在 **vCenter Server** 頁面上，輸入實例名稱。
 4. 按一下**主要實例**，以在環境中部署單一實例。
@@ -183,9 +187,9 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
   1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
   2. 選取**自訂** CPU 型號及 **RAM** 數量。
 7. 完成儲存空間配置。
-  * 當您選取 **vSAN 儲存空間**時，請指定 **vSAN 容量磁碟的磁碟類型及大小**、**vSAN 容量磁碟數目**，以及如何提供 **vSAN 授權**。
-  * 當您選取 **NFS 儲存空間**且想要對所有檔案共用新增及配置相同的設定時，請指定**共用數目**、**大小**及**效能**。
-  * 當您選取 **NFS 儲存空間**且想要個別新增及配置檔案共用時，請選取**個別配置共用**，然後按一下**新增 NFS** 標籤旁的 **+** 圖示，並針對每一個個別檔案共用選取**大小**及**效能**。您必須至少選取一個檔案共用。
+  * 如果您選取 **vSAN 儲存空間**，請指定容量及快取磁碟的磁碟類型、磁碟數目以及「vSAN 授權」版本。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
+  * 如果您選取 **NFS 儲存空間**，而且要對所有檔案共用新增及配置相同的設定，請指定**共用數目**、**大小**及**效能**。
+  * 如果您選取 **NFS 儲存空間**，而且要個別新增及配置檔案共用，請選取**個別配置共用**，然後按一下**新增 NFS** 標籤旁的 **+** 圖示，並針對每個個別檔案共用選取**大小**及**效能**。您必須至少選取一個檔案共用。
 8. 完成網路介面配置。
    1. 輸入主機名稱字首、子網域標籤及根網域名稱。
    2. 選取 DNS 配置。
@@ -207,7 +211,7 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
 檢視、管理或保護您所訂購的 VMware Federal 實例。
 
-**重要事項：**您必須從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 {{site.data.keyword.cloud_notm}} 帳戶中所建立的 {{site.data.keyword.vmwaresolutions_short}} 元件，而不是在主控台以外的 {{site.data.keyword.slportal}} 或透過任何其他方法進行管理。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台而不是 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
 **警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外來管理您在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，會使您的環境變得不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件
