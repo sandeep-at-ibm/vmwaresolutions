@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -26,9 +26,9 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 
 ### VMware 组件
 
-用于以下 VMware 组件的许可证（IBM 提供或 BYOL）：
-* VMware vSphere Enterprise Plus 6.0u2 或 6.5u1
-* 可选 VMware 组件：
+选择用于以下 VMware 组件的许可证（IBM 提供或 BYOL）：
+* VMware vSphere Enterprise Plus 6.0u2、6.5u1 或 6.5u2
+* 以下 VMware 组件是可选的：
    * VMware vCenter Server Standard
    * VMware NSX（Base、Advanced 或 Enterprise）
    * VMware vSAN（Advanced 或 Enterprise）
@@ -39,7 +39,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 
 ### 裸机服务器
 
-一个或多个 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}，具有所选 CPU 型号和 RAM 大小：
+选择一个或多个 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}，具有所选 CPU 型号和 RAM 大小：
 * 2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
 * 2 个 Intel Skylake 代 CPU（Intel Xeon 4100/5100/6100 系列）
 
@@ -51,7 +51,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 
 ### 联网
 
-* 三个 VLAN（虚拟 LAN）：一个公用 VLAN 和两个专用 VLAN
+* 一个公用 VLAN（虚拟 LAN）和两个专用 VLAN
 * （可选）FortiGate Security Appliance 设备的 HA 对
 
 ### 存储
@@ -60,7 +60,10 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 * 存储磁盘选项：960 GB SSD SED、1.9 TB SSD SED 或 3.8 TB SSD SED
 * 磁盘数量选项：2、4、6 或 8 个
 
-**注**：3.8 TB SSD（固态磁盘）驱动器在数据中心内基本可用后就会受到支持。
+  此外，每个主机还会订购两个 960 GB 高速缓存磁盘。
+
+  **注**：3.8 TB SSD（固态磁盘）驱动器在数据中心内普遍可用后就会受到支持。
+* 高性能 Intel Optane 选项，用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘。此选项取决于 CPU 型号。
 
 ## vSphere 集群扩展节点的技术规范
 
@@ -79,7 +82,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 * 一个 {{site.data.keyword.cloud_notm}} 裸机服务器，带 VMware vSphere Enterprise Plus 6.0u2 或 6.5u1  
 * 可选的 VMware 组件在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 集群的技术规范](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中显示。
 
-**重要信息**：您只能在 {{site.data.keyword.slportal}} 中管理订购并交付给您的 {{site.data.keyword.cloud_notm}} 帐户的 ESXi 服务器、可选 VMware 组件以及其他硬件。在 {{site.data.keyword.vmwaresolutions_short}} 控制台中创建新集群后，可以返回到控制台以使用保存的配置扩展新集群。有关更多信息，请参阅[扩展现有 vSphere 集群](vs_scalingexistingclusters.html)。
+**重要信息**：您只能在 {{site.data.keyword.slportal}} 中管理订购并交付给您的 {{site.data.keyword.cloud_notm}} 帐户的 ESXi 服务器、可选 VMware 组件以及其他硬件。在 {{site.data.keyword.vmwaresolutions_short}} 控制台中创建新集群后，可以返回到控制台并使用保存的信息扩展新集群。有关更多信息，请参阅[扩展现有 vSphere 集群](vs_scalingexistingclusters.html)。
 
 ### 相关链接
 
