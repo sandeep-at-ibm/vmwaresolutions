@@ -10,11 +10,11 @@ lastupdated: "2017-10-13"
 
 # V1.9 发行说明
 
-此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的更多提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## VMware vSphere on IBM Cloud
 
-此发行版引入了 VMware vSphere on {{site.data.keyword.cloud_notm}} 产品，支持根据所选 VMware 组件定制和订购与 VMware 兼容的计算、存储和网络资源，以构建自己的 IBM 托管的 VMware 虚拟环境。虽然 vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置和启动可选的 VMware 组件，但您在设计和构造最适合您业务需求的环境方面将拥有最大的灵活性。您可以首先创建 ESXi 服务器的新 vSphere 集群，或者首先对 {{site.data.keyword.CloudDataCent_notm}} 中的现有 vSphere 集群进行向外扩展。
+本发行版引入了 VMware vSphere on {{site.data.keyword.cloud_notm}} 产品。此产品支持根据所选 VMware 组件定制和订购与 VMware 兼容的计算、存储和网络资源，以构建您自己的 IBM 托管的 VMware 虚拟环境。虽然 vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置和打开可选的 VMware 组件，但您在设计和构造最适合您业务需求的环境方面将拥有最大的灵活性。首先创建 ESXi 服务器的新 vSphere 集群，或者首先对 {{site.data.keyword.CloudDataCent_notm}} 中的现有 vSphere 集群进行向外扩展。
 
 有关更多信息，请参阅以下主题：
 * [订购新的 vSphere 集群](../vsphere/vs_orderinginstances.html)
@@ -23,7 +23,7 @@ lastupdated: "2017-10-13"
 ## NetApp ONTAP Select on IBM Cloud
 
 此发行版引入了 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品，这是一种面向软件定义的存储器的虚拟设备，可将 NetApp ONTAP Select 实现为 IBM Cloud 的专用 {{site.data.keyword.baremetal_short}} 上的服务。NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 同时在高性能（所有 SSD）和高容量（所有 SATA）配置中提供。
-它可托管专用基础架构上的存储器，并提供多种 NetApp 功能，例如静态数据的去重、压缩和加密。通过此产品，使用高级数据管理功能（例如，快速高效的 NetApp Snapshot® 副本、FlexClone® 副本和 SnapMirror® 复制），您可以在保护数据的同时，为存储资源供应敏捷性和灵活性。
+此产品可在专用基础架构上托管存储器，并提供多种 NetApp 功能，例如静态数据的去重、压缩和加密。使用高级数据管理功能，您可以在保护数据的同时，为存储资源供应敏捷性和灵活性。例如，使用快速高效的 NetApp Snapshot® 副本、FlexClone® 副本和 SnapMirror® 复制。
 
 有关更多信息，请参阅以下主题：
 * [NetApp ONTAP Select 概述](../netapp/np_netappoverview.html)
@@ -37,11 +37,11 @@ F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} 服务现在�
 * [F5 on {{site.data.keyword.cloud_notm}} 的注意事项](../services/f5_considerations.html)
 * [管理 F5 on {{site.data.keyword.cloud_notm}}](../services/managing_f5.html)
 
-## IBM Integrated Managed Infrastructure 中的受管服务
+## IBM-Integrated Managed Infrastructure 中的受管服务
 
-IBM Integrated Managed Infrastructure (IMI) 中的受管服务现在可用于 VMware Cloud Foundation 实例。IMI 可以通过模块化服务简化 VMware 虚拟基础架构管理，并可以充当可信的单个提供者，以降低监视和管理虚拟 IT 基础架构的复杂性。将某些日常操作卸载到 IMI（例如，监视），以便您可以将精力集中在更高价值的计划上。
+IBM-Integrated Managed Infrastructure (IMI) 中的受管服务现在可用于 VMware Cloud Foundation 实例。IMI 可以通过模块化服务简化 VMware 虚拟基础架构管理，并可以充当可信的单个提供者，以降低监视和管理虚拟 IT 基础架构的复杂性。将某些日常操作卸载到 IMI（例如，监视），以便您可以将精力集中在更高价值的计划上。
 
-可以在**入门**页面中随时请求咨询和报价。
+可以在**入门**页面中随时请求咨询和估算。
 有关更多信息，请参阅[向 IMI 请求受管服务](../services/managing_imi.html#requesting-managed-services-from-imi)。
 
 ## vCenter Server 和 NetApp ONTAP Select 实例的实例名称限制
@@ -96,9 +96,9 @@ IBM Integrated Managed Infrastructure (IMI) 中的受管服务现在可用于 VM
 
 ## Windows Server 自动安装更新的需求
 
-Microsoft Active Directory (AD) / 域名服务器 (DNS) 自动设置为仅下载更新。不会自动安装和重新引导这些更新。您必须以手动方式安装更新并在安排的时间重新引导，以避免对正在进行的 Active Directory 服务器配置和其他备份作业造成任何中断。要应用 Windows 更新，请手动安装更新。
+Microsoft Active Directory (AD) / 域名服务器 (DNS) 自动设置为仅下载更新。不会自动安装和重新启动这些更新。您必须以手动方式安装更新并在安排的时间重新启动，以避免对正在进行的 Active Directory 服务器配置和其他备份作业造成任何中断。要应用 Windows 更新，请手动安装更新。
 
 ## 新增和更新的文档
 
-* 了解如何保护专用多站点 VCF 实例，同时将 VMware 应用程序扩展为使用公共 {{site.data.keyword.cloud_notm}} 服务。有关更多信息，请参阅[安全连接 {{site.data.keyword.cloud_notm}} 中的专用 VMware 工作负载](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}。
-* 提供了其他文档，描述如何配置防火墙以允许来自 IBM CloudDriver 和 SDDC Manager 虚拟机的所有协议通信。有关更多信息，请参阅 [Fortinet on {{site.data.keyword.cloud_notm}} 的组件和注意事项](../services/fsa_considerations.html)。
+* 了解如何保护专用多站点 Cloud Foundation 实例，同时将 VMware 应用程序扩展为使用公共 {{site.data.keyword.cloud_notm}} 服务。有关更多信息，请参阅[安全连接 {{site.data.keyword.cloud_notm}} 中的专用 VMware 工作负载](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}。
+* 提供了更多文档，描述如何配置防火墙以允许来自 IBM CloudDriver 和 SDDC Manager 虚拟机的所有协议通信。有关更多信息，请参阅 [Fortinet on {{site.data.keyword.cloud_notm}} 的组件和注意事项](../services/fsa_considerations.html)。

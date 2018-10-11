@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -97,7 +97,7 @@ lastupdated: "2018-08-14"
 
 ## 如果选择 BYOL 许可选项，IBM 会提供支持吗？
 
-对于任何实例配置问题，IBM 支持始终是您的联系点。但是，如果确定报告的问题是针对 BYOL VMware 组件的，那么会将您定向至 VMware 支持。
+如有任何实例配置问题，您可以继续联系 IBM 支持人员。但是，如果确定报告的问题是针对 BYOL VMware 组件的，那么会将您定向到 VMware 支持。
 
 ## 如果我使用的是 BYOL，为什么 vSphere 许可费用会在价格估算列表上显示？会因此向我收费吗？
 
@@ -131,16 +131,16 @@ vCenter Server with Hybridity Bundle 是一组按核心（而不按 CPU）许可
 
 vCenter Server with Hybridity Bundle 的新实例包括 VMware vSphere Enterprise Plus、VMware vCenter Standard、VMware NSX Advanced 或 Enterprise、VMware vSAN Advanced 或 Enterprise 以及 VMware Hybrid Cloud Extension (HCX)。
 
-如果您的 vCenter Server 实例具有 NSX Base 版本，那么在订购 vCenter Server with Hybridity Bundle 时，会自动将其升级到 NSX Advanced。
+如果您的 vCenter Server 实例具有 NSX Base Edition，那么在订购 vCenter Server with Hybridity Bundle 时，会自动将其升级到 NSX Advanced。
 
-## 可以将 vCenter Server with Hybridity Bundle 中包含的 NSX Advanced 版本升级到 NSX Enterprise 版本吗？
+## 可以将 vCenter Server with Hybridity Bundle 中包含的 NSX Advanced Edition 升级到 NSX Enterprise Edition 吗？
 
-虽然 vCenter Server with Hybridity Bundle 包含 NSX Advanced，但在订购 vCenter Server with Hybridity Bundle 后，可以升级到 NSX Enterprise 版本。要进行升级，请使用 {{site.data.keyword.vmwaresolutions_short}} 控制台中实例详细信息页面选项卡上的**更新和补丁**选项卡。
+虽然 vCenter Server with Hybridity Bundle 包含 NSX Advanced，但在订购 vCenter Server with Hybridity Bundle 后，可以升级到 NSX Enterprise Edition。要进行升级，请使用 {{site.data.keyword.vmwaresolutions_short}} 控制台中实例详细信息页面选项卡上的**更新和补丁**选项卡。
 
 ### 相关链接
 
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
 * [Cloud Foundation 实例](../sddc/sd_cloudfoundationoverview.html)
 * [访问控制台](loginmethod.html)
-* [联系 IBM 支持](trbl_support.html)
+* [联系 IBM 支持人员](trbl_support.html)
 * [vRealize Automation](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/vRealizeAutomation){:new_window}

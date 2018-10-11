@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-08-15"
 
 ## 结果
 
-添加的用户在接受邀请后，可以登录到 {{site.data.keyword.vmwaresolutions_short}} 控制台并切换到您的帐户。要执行此操作，用户可以在其概要文件设置中单击 {{site.data.keyword.vmwaresolutions_short}} 控制台右上角自己的头像。然后，添加的用户可以进行协作，并共享指定帐户中可用的服务和资源。
+添加的用户在接受邀请后，可以登录到 {{site.data.keyword.vmwaresolutions_short}} 控制台并切换到您的帐户。要执行此操作，用户可以单击 {{site.data.keyword.vmwaresolutions_short}} 控制台条幅中自己的用户帐户图标。然后，添加的用户可以进行协作，并共享指定帐户中可用的服务和资源。
 
 ### 相关链接
 

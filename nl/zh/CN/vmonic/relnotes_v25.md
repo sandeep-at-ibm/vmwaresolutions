@@ -10,7 +10,7 @@ lastupdated: "2018-08-30"
 
 # V2.5 发行说明
 
-此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的更多提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Spectre 和 Meltdown 修复
 
@@ -34,7 +34,7 @@ lastupdated: "2018-08-30"
 
 您负责所有软件组件的配置、管理和监视，包括管理基础架构和工作负载的备份和可用性。有关更多信息，请参阅[备份组件](../archiref/solution/solution_backingup.html#backing-up-components)。
 
-**注：**此更改不会影响已安装 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 服务且在 V2.5 之前部署的实例。
+**注**：此更改不会影响已安装 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 服务且在 V2.5 之前部署的实例。
 
 ## IBM CloudDriver 弹性
 
@@ -45,7 +45,7 @@ lastupdated: "2018-08-30"
 ## 支持 IAM 的用户和访问权管理
 
 从 V2.5 发行版开始，{{site.data.keyword.vmwaresolutions_short}} 与 IBM Identity and Access Management (IAM) 集成，以提供统一的方法来管理 {{site.data.keyword.cloud_notm}} 帐户中的用户帐户和用户访问权。因此，可以实现以下操作：
-* 现在，您可以向 {{site.data.keyword.cloud_notm}} 帐户添加多个用户来进行协作，还可以通过为用户分配不同的平台访问角色，来管理用户对帐户中所供应服务和资源的访问权。  
+* 现在，您可以向 {{site.data.keyword.cloud_notm}} 帐户添加多个用户来进行协作，还可以通过为用户分配不同的平台访问角色来管理用户对帐户中所供应服务和资源的访问权。  
 * 部署在 V2.5 和更高发行版中的实例会自动链接到订购实例时使用的用户帐户。
 * 对于部署在 V2.4 和前发行版中的实例，可以将其迁移到指定的 {{site.data.keyword.cloud_notm}} 帐户，然后同样使用 IAM 来管理这些实例。
 
@@ -72,7 +72,7 @@ lastupdated: "2018-08-30"
 
 {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 服务现在可用于在 V2.5 或更高发行版中部署或升级到这些版本的 vCenter Server 实例。
 
-{{site.data.keyword.cloud_notm}} Private Hosted 会将微服务和容器的强大功能引入到 {{site.data.keyword.cloud_notm}} 上的 VMware 环境中。使用此服务，可以将内部部署中您所熟悉的相同 VMware 和 {{site.data.keyword.cloud_notm}} Private 操作模型和工具扩展到 {{site.data.keyword.cloud_notm}} 中。
+{{site.data.keyword.cloud_notm}} Private Hosted 会将微服务和容器的强大功能引入到 {{site.data.keyword.cloud_notm}} 上的 VMware 环境中。使用此服务，可以将内部部署中您熟悉的 VMware 和 {{site.data.keyword.cloud_notm}} Private 操作模型和工具扩展到 {{site.data.keyword.cloud_notm}} 中。
 
 在订购 vCenter Server 实例后，您可以请求此服务。有关更多信息，请参阅[请求 {{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html)。
 
@@ -114,4 +114,4 @@ lastupdated: "2018-08-30"
 
 * 如果您有链接到 {{site.data.keyword.cloud_notm}} 帐户的 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户，那么现在可以单击**设置**页面上新添加的**检索**按钮，以自动获取 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户的用户名和 API 密钥。
 * 在实例详细信息页面的左侧导航窗格中添加了新的**部署历史记录**选项卡，供您检查实例的部署历史记录。
-* 提供了各种错误消息和工具提示增强功能，以帮助您在用户界面上选择适当的设置。
+* 提供了各种错误消息和工具提示增强功能，以帮助您在用户界面上选择相应的设置。

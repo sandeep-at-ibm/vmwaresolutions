@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-25"
 
 ---
 
 # 其他资源
 
-查看可帮助您快速入门的更多资源。这些资源包括：
+查看以下资源可更快入门。
 * 体系结构参考信息
 * 视频
 * 演示
@@ -41,9 +41,9 @@ lastupdated: "2018-08-17"
 
 ## 试用 IBM Cloud for VMware Solutions
 
-想亲眼看看吗？通过执行分步骤的 {{site.data.keyword.vmwaresolutions_short}} 引导演示[试用 VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions)，简短试用一下该产品。
+想亲眼看看吗？按照 {{site.data.keyword.vmwaresolutions_short}} 逐步指导演示“[试用 VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions)”，快速试用本产品。
 
-## developerWorks 指令集
+## developerWorks 诀窍
 
 * [{{site.data.keyword.vmwaresolutions_short}} - 看看底层](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
 * [为 VMware Solutions on {{site.data.keyword.cloud_notm}} 附加专用存储器的步骤](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

@@ -10,7 +10,7 @@ lastupdated: "2017-07-05"
 
 # V1.7 发行说明
 
-此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的更多提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## 对 VMware Cloud Foundation 实例的更新
 
@@ -24,7 +24,7 @@ lastupdated: "2017-07-05"
 
   **注**：不会对 V4 服务器上的任何现有部署或新部署启用 EVC 方式。
 
-* 现在，向实例添加新节点时，在 5 月 22 日前部署并因此使用 V3 服务器的 VMware Cloud Foundation 部署将订购 V4 服务器。这些服务器的内存为 256 GB；如果需要 512 GB 内存，请在添加服务器后，开具支持凭单以请求将服务器升级到 512 GB 内存。有关联系 IBM 支持的更多信息，请参阅[联系 IBM 支持](trbl_support.html)。
+* 现在，向实例添加新节点时，在 5 月 22 日前部署并因此使用 V3 服务器的 VMware Cloud Foundation 部署将订购 V4 服务器。这些服务器的内存为 256 GB；如果需要 512 GB 内存，请在添加服务器后，开具支持凭单以请求将服务器升级到 512 GB 内存。有关联系 IBM 支持人员的更多信息，请参阅[联系 IBM 支持人员](trbl_support.html)。
 
 有关组件的更多信息，请参阅 [Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 

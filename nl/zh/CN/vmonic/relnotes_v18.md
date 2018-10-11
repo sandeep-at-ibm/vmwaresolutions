@@ -10,7 +10,7 @@ lastupdated: "2017-08-28"
 
 # V1.8 发行说明
 
-此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的更多提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Fortinet on IBM Cloud 服务
 
@@ -40,7 +40,7 @@ Fortinet on {{site.data.keyword.cloud_notm}} 服务现在可用于 Cloud Foundat
 
 从 V1.8 发行版开始，订购 Cloud Foundation 实例时，会向您提供两个用于许可实例的 VMware 组件（包括 vSphere、vCenter Server、NSX 和 vSAN）的选项。您可以选择使用要代表您购买的新许可证。
 
-还可以选择对组件使用您自己的 VMware 许可证，在此情况下，您需要提供许可证密钥。在这种情况下，对为其提供许可证的 VMware 组件的支持将由 VMware 直接提供，而不是由 IBM 支持提供。
+还可以选择对组件使用您自己的 VMware 许可证，这样就需要您提供许可证密钥。在此情况下，对于您提供了许可证的 VMware 组件，将由 VMware 而不是 IBM 支持人员来提供后续支持。
 
 有关更多信息，请参阅以下主题：
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
