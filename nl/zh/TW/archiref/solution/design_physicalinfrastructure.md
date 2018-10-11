@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-07-17"
   <dt class="dt dlterm">實體儲存空間</dt>
   <dd class="dd">實體儲存空間提供虛擬化基礎架構所使用的原始儲存空間容量。儲存空間元件由 {{site.data.keyword.baremetal_short}} 或是使用 NFS 第 3 版的共用「網路連接儲存空間 (NAS)」陣列所提供。</dd>
   <dt class="dt dlterm">實體網路</dt>
-  <dd class="dd">實體網路會提供與環境的網路連線功能，而網路虛擬化之後會使用該環境。網路由 {{site.data.keyword.cloud_notm}} 服務網路所提供，並包括其他服務（例如 DNS 及 NTP）。</dd>
+  <dd class="dd">實體網路會提供與環境的網路連線功能，而網路虛擬化之後會使用該環境。網路由 {{site.data.keyword.cloud_notm}} 服務網路提供，並包括額外服務（例如 DNS 及 NTP）。</dd>
 </dl>
 
 如需實體元件的相關資訊，請參閱 [Cloud Foundation 實例](../../sddc/sd_bom.html)或 [vCenter Server 實例](../../vcenter/vc_bom.html)的「資料清單」。
@@ -33,12 +33,12 @@ lastupdated: "2018-07-17"
 
 每個 Cloud Foundation 實例都是以 4 主機部署開始，而且根據選擇的儲存空間解決方案，每個 vCenter Server 實例都是以 3 或 4 主機部署開始。
 
-實體主機採用兩個要配置給 vSphere ESXi Hypervisor 的本端連接磁碟。您可以使用 vSAN（如本頁的_實體儲存空間設計_ 小節所述）或使用 NetApp ONTAP（如 [NetApp ONTAP Select 架構](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)所述）來配置額外的磁碟。每部實體主機都具有備用 10 Gbps 網路連線，以進行公用及專用網路存取。
+實體主機採用兩個要配置給 vSphere ESXi Hypervisor 的本端連接磁碟。您可以使用 vSAN（如本頁的_實體儲存空間設計_ 小節所述）或使用 NetApp ONTAP（如 [NetApp ONTAP Select 架構](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)所述）來配置更多磁碟。每部實體主機都具有備用 10-Gbps 網路連線，以進行公用及專用網路存取。
 
 Bare Metal Server 的技術規格如下：
 * CPU：雙 Intel Xeon，各種核心及速度配置
 * 記憶體：各種配置，128 GB 或更大
-* 網路：4 × 10 Gbps
+* 網路：4 x 10 Gbps
 * 磁碟機數目：2 台以上
 
 ## 實體網路設計
@@ -49,19 +49,19 @@ Bare Metal Server 的技術規格如下：
 
 ### 公用網路
 
-{{site.data.keyword.CloudDataCents_notm}} 及網路存在點 (PoP) 具有多個 1 Gbps 或 10 Gbps 最上層傳輸及對等網路營運商連線。
+{{site.data.keyword.CloudDataCents_notm}} 及網路存在點 (PoP) 具有多個 1 Gbps 或 10-Gbps 最上層傳輸及對等網路營運商連線。
 
 世界各地的外部網路資料流量都會連接至最近的網路 PoP，並直接透過網路流動至其資料中心，從而最小化提供者之間的網路中繼站數目及遞交次數。
 
 在資料中心內，{{site.data.keyword.cloud_notm}} 透過一對個別的對等節點聚集前端客戶交換器 (FCS)，提供個別伺服器之 1 Gbps 或 10 Gbps 的網路頻寬。這些聚集的交換器會連接至一對個別的前端客戶路由器 (FCR)，以連接 L3 網路。
 
-這個多層設計容許網路在 {{site.data.keyword.CloudDataCent_notm}} 內的框架、列及 Pod 之間進行調整。
+這個多層設計容許網路在 {{site.data.keyword.CloudDataCent_notm}} 內的機架、列及 Pod 之間進行調整。
 
 ### 專用網路
 
-所有 {{site.data.keyword.CloudDataCents_notm}} 及 PoP 都是藉由專用網路骨幹進行連接。專用網路與公用網路分開，而且可以啟用全球各地之 {{site.data.keyword.CloudDataCents_notm}} 中服務的連線功能。透過多個 10 Gbps 或 40 Gbps 專用網路連線，可以在 {{site.data.keyword.CloudDataCents_notm}} 之間移動資料。
+所有 {{site.data.keyword.CloudDataCents_notm}} 及 PoP 都是藉由專用網路骨幹進行連接。專用網路與公用網路分開，而且可以啟用全球各地之 {{site.data.keyword.CloudDataCents_notm}} 中服務的連線功能。透過多個 10 Gbps 或 40-Gbps 專用網路連線，可以在 {{site.data.keyword.CloudDataCents_notm}} 之間移動資料。
 
-與公用網路類似，專用網路在該伺服器中為多層，而其他基礎架構元件會連接至聚集的後端客戶交換器 (BCS)。這些聚集的交換器會連接至一對個別的後端客戶路由器 (BCR)，以連接 L3 網路。專用網路也支援利用巨大訊框 (MTU 9000) 來進行實體主機連線。
+與公用網路類似，專用網路在該伺服器中為多層，而其他基礎架構元件會連接至聚集的後端客戶交換器 (BCS)。這些聚集的交換器會連接至一對個別的後端客戶路由器 (BCR)，以連接 L3 網路。專用網路也支援使用巨大訊框 (MTU 9000) 來進行實體主機連線。
 
 ### 管理網路
 
@@ -83,13 +83,13 @@ Bare Metal Server 的技術規格如下：
 
 ### 虛擬遞送及轉遞 (VRF)
 
-您也可以將 {{site.data.keyword.slportal}} 帳戶配置為 VRF 帳戶來提供與 VLAN Spanning 類似的功能，以啟用子網路 IP 區塊之間的自動遞送。所有具有「直接鏈結」連線的帳戶都必須轉換或建立為 VRF 帳戶。
+您也可以將 {{site.data.keyword.slportal}} 帳戶配置為 VRF 帳戶來提供與 VLAN Spanning 類似的功能，以啟用子網路 IP 區塊之間的自動遞送。所有具有 Direct-Link 連線的帳戶都必須轉換或建立為 VRF 帳戶。
 
 {{site.data.keyword.vmwaresolutions_short}} 主控台無法偵測 {{site.data.keyword.slportal}} 中是否已啟用 VRF。您會收到警告，提醒您確定已在 {{site.data.keyword.slportal}} 帳戶中啟用 **VLAN Spanning** 或 VRF。
 
 ### 實體主機連線
 
-此設計中的每部實體主機都會有兩個備用成對 10Gbps 乙太網路連線，以連接至每台 {{site.data.keyword.cloud_notm}} Top of Rack (ToR) 交換器（公用及專用）。配接卡會設定為共 4 × 10Gbps 連線的個別連線（未結合）。這可讓網路介面卡 (NIC) 連線彼此獨立運作。
+此設計中的每部實體主機都會有兩個備用成對 10 Gbps 乙太網路連線，以連接至每台 {{site.data.keyword.cloud_notm}} Top of Rack (ToR) 交換器（公用及專用）。配接卡會設定為共 4 x 10 Gbps 連線的個別連線（未結合）。這可讓網路介面卡 (NIC) 連線彼此獨立運作。
 
 圖 1. 實體主機 NIC 連線
 
@@ -106,7 +106,7 @@ Bare Metal Server 的技術規格如下：
 * 第二個子網路用於管理虛擬機器（例如 vCenter Server Appliance 及 Platform Services Controller）
 * 第三個子網路用於透過 VMware NSX Manager 指派給每部主機的「VXLAN 通道端點 (VTEP)」。
 
-除了「專用 VLAN A」之外，還有第二個專用 VLAN（這裡為指定的「專用 VLAN B」）可支援 VMware 特性（例如 vSAN 及 vMotion）以及連接至網路連接儲存空間 (NAS)。因此，VLAN 分為兩個或三個可攜式子網路。
+除了「專用 VLAN A」之外，還有第二個專用 VLAN（這裡為指定的「專用 VLAN B」）可支援 VMware 特性（例如 vSAN 及 vMotion）且適用於連接至網路連接儲存空間 (NAS)。因此，VLAN 分為兩個或三個可攜式子網路。
 
 * 第一個子網路會指派給 vMotion 資料流量的核心埠群組。
 * 剩餘的子網路用於儲存空間資料流量：
@@ -121,7 +121,7 @@ Bare Metal Server 的技術規格如下：
 
 |VLAN      |類型      |說明              |
 |:---- |:---- |:----------- |
-| 公用 | 主要     | 指派給實體主機，以進行公用網路存取。在起始部署後未立即使用。|
+| 公用 | 主要     | 指派給實體主機，以進行公用網路存取。在起始部署時不會使用。|
 | 專用 A    | 主要     | 指派給 {{site.data.keyword.cloud_notm}} 所指派之實體主機的單一子網路。由管理介面用於 vSphere 管理資料流量。|
 | 專用 A    | 可攜式   | 指派給作為管理元件一部分運作之虛擬機器的單一子網路 |
 | 專用 A    | 可攜式   | 指派給 NSX VTEP 的單一子網路 |
@@ -129,7 +129,7 @@ Bare Metal Server 的技術規格如下：
 | 專用 B    | 可攜式   | 為 NAS 指派的單一子網路（如果使用中）|
 | 專用 B    | 可攜式   | 為 vMotion 指派的單一子網路 |
 
-在此設計中，所有 VLAN 支援的主機及虛擬機器都會配置成指向 {{site.data.keyword.cloud_notm}} 後端「專用網路」客戶路由器，以作為預設路徑。雖然 vCenter Server 及 Cloud Foundation 實例允許使用「軟體定義網路 (SDN)」，但是 {{site.data.keyword.cloud_notm}} 受管理路由器無法辨識在 VMware 實例內建立且包括遞送至內部子網路的網路套版。因此，您可能需要在部分或所有管理元件的 VMware 實例內建立靜態路徑。
+在此設計中，所有 VLAN 支援的主機及虛擬機器都會配置成指向 {{site.data.keyword.cloud_notm}} 後端「專用網路」客戶路由器，以作為預設路徑。雖然 vCenter Server 及 Cloud Foundation 實例允許使用「軟體定義網路 (SDN)」，但是 {{site.data.keyword.cloud_notm}} 受管理路由器無法辨識在 VMware 實例內建立且包括遞送至內部子網路的網路套版。因此，您可能需要在部分或所有管理元件的 VMware 實例內建立靜態路由。
 
 專用網路連線配置成使用巨大訊框 MTU 大小 9000，以改善大型資料傳送（例如儲存空間及 vMotion）的效能。這是 VMware 內及 {{site.data.keyword.cloud_notm}} 容許的最大 MTU。公用網路連線使用標準乙太網路 MTU 1500。必須維護此值，因為任何變更都可能導致透過網際網路進行封包片段化。
 
@@ -147,21 +147,21 @@ vSphere ESXi Hypervisor 設計成安裝於持續性位置中。因此，實體�
 
 ### vSAN 磁碟
 
-使用時，會使用全快閃記憶體配置來配置 VMware vSAN。此設計容許數個配置選項（包括 2U 和 4U 機箱）、不同數目的磁碟，以及各種磁碟大小。所有配置都會使用兩個 vSAN 磁碟群組，其具有一個固態硬碟 (SSD) 作為快取，以及一個以上的 SSD 作為容量。所有配置給 vSAN 耗用的磁碟機都會配置在單一磁碟 RAID-0 中。
+使用時，會使用全快閃記憶體配置來配置 VMware vSAN。此設計容許數個配置選項（包括 2U 和 4U 機箱）、不同數量的磁碟，以及各種磁碟大小。所有配置都會使用兩個 vSAN 磁碟群組，其具有一個固態硬碟 (SSD) 作為快取，以及一個以上的 SSD 作為容量。所有配置給 vSAN 耗用的磁碟機都會配置在單一磁碟 RAID-0 中。
 
 如需所支援配置的相關資訊，請參閱 [Cloud Foundation 實例](../../sddc/sd_bom.html)或 [vCenter Server 實例](../../vcenter/vc_bom.html)的「資料清單」。
 
 ### 跨主機的共用檔案層次儲存空間
 
-使用共用檔案層次儲存空間時，會將 2TB NFS 共用連接至包含起始 VMware 叢集的主機。此共用（稱為管理共用）用於管理元件（例如 VMware vCenter Server、Platform Services Controller 及 VMware NSX）。儲存空間是透過 NFSv3 通訊協定所連接，而且最多可以支援 4000 個 IOPS。
+使用共用檔案層次儲存空間時，會將 2 TB NFS 共用連接至包含起始 VMware 叢集的主機。此共用（稱為管理共用）用於管理元件（例如 VMware vCenter Server、Platform Services Controller 及 VMware NSX）。儲存空間是使用 NFSv3 通訊協定所連接，而且最多可支援 4000 個 IOPS。
 
 圖 2. 連接至 VMware 部署的 NFS 共用
 
 ![連接至 VMware 部署的 NFS 共用](physical_nfs.svg "連接至 VMware 部署的 NFS 共用：管理共用及客戶指定的共用")
 
-您可以在主控台內購買時或稍後在主控台內時，配置及裝載工作負載的其他檔案共用。您可以從對應 {{site.data.keyword.CloudDataCent_notm}} 的可用「{{site.data.keyword.cloud_notm}} 耐久性」檔案儲存空間容量選項及效能層級中進行選取。所有共用都是使用 NFSv3 通訊協定進行連接。此外，套用 NetApp ONTAP Select 供應項目，即可連接 NFSv3 檔案共用。
+您可以在購買時或稍後在主控台內，配置及裝載工作負載的其他檔案共用。您可以從對應 {{site.data.keyword.CloudDataCent_notm}} 的可用「{{site.data.keyword.cloud_notm}} 耐久性」檔案儲存空間容量選項及效能層級中進行選取。所有共用都是使用 NFSv3 通訊協定進行連接。此外，套用 NetApp ONTAP Select 供應項目，即可連接 NFSv3 檔案共用。
 
-提供 10 個 IOPS/GB 效能層級的 {{site.data.keyword.CloudDataCents_notm}} 也包括提供者管理的靜止中資料加密（AES-256 加密），並由全快閃記憶體儲存空間所支援。10 個 IOPS/GB 效能層級的容量上限只能為 4 TB。如需此解決方案中所使用之共用 NAS 的相關資訊，請參閱[共用儲存空間架構](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)。
+提供 10 個 IOPS/GB 效能層級的 {{site.data.keyword.CloudDataCents_notm}} 也包括提供者管理的靜止中資料加密（AES-256 加密），並由全快閃記憶體儲存空間所備份。10 個 IOPS/GB 效能層級的容量上限只能為 4 TB。如需此解決方案中使用之共用 NAS 的相關資訊，請參閱[共用儲存空間架構](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)。
 
 ### 相關鏈結
 

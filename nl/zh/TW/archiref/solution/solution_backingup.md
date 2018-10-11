@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-08-14"
 
 在解決方案期間，您可以選擇性地部署 {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 附加程式服務。Veeam 及 IBM Spectrum Protect Plus 可協助您滿足備份管理元件的需求。
 
-這些附加程式服務會與「{{site.data.keyword.cloud_notm}} 耐久性」儲存空間一起部署。這些服務可協助您備份工作負載及管理元件。[Spectrum Protect Plus 架構概觀](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}及 [Veeam 架構概觀](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}提供有關規劃及調整部署大小的有用指引。您也可以要求 Veeam 部署的[受管理服務](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)。
+這些附加程式服務會與「{{site.data.keyword.cloud_notm}} 耐久性」儲存空間一起部署。這些服務可協助您備份工作負載及管理元件。[IBM Spectrum Protect Plus 架構概觀](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}及 [Veeam 架構概觀](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}提供有關規劃及調整部署大小的有用指引。您也可以要求 Veeam 部署的[受管理服務](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)。
 
 不同的解決方案元件需要不同的備份策略。部分元件是使用映像檔層次備份進行保護，其他元件則是使用其配置及資料的檔案型備份進行保護。
 
@@ -28,7 +28,7 @@ lastupdated: "2018-08-14"
 2. 將作業系統映像檔從 {{site.data.keyword.cloud_notm}} 專用鏡映上傳至 VMware 管理資料儲存庫（例如 [Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window}）。
 3. 使用先前訂購的專用可攜式 IP 位址，將此虛擬機器 (VM) 部署至管理埠群組上的叢集。請確定 VM 配置成指向 AD/DNS 伺服器，並選擇性地將 VM 新增至子網域的 DNS。
 4. 在此伺服器上建立非根備份使用者 ID，並確定配置及啟動所有必要服務來進行檔案傳送。例如，FTP 或 SSH。
-5. 確定此 VM 內含在您的 Veeam 或 IBM Spectrum Protect Plus 管理備份工作中（請參閱下面的內容）。
+5. 確定此 VM 內含在您的 Veeam 或 IBM Spectrum Protect Plus 管理備份工作中。
 
 ## vCenter 檔案型備份
 
@@ -38,7 +38,7 @@ VMware vCenter Server 及 PSC 提供[應用裝置管理使用者介面及 API �
 
 ## NSX 檔案型備份
 
-發生故障時，所有 NSX 元件的適當備份對於將系統還原為其工作狀態而言十分重要。此設計需要您透過 NSX Manager 備份功能來配置 NSX 備份。基於此目的，您可以[配置 NSX Manager 定期執行備份](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}至檔案伺服器。請確定適當地備份您的檔案伺服器或其資料，並確定循環舊的 NSX 備份。
+發生故障時，所有 NSX 元件的適當備份對於將系統還原為其工作狀態而言十分重要。此設計需要您透過 NSX Manager 備份功能來配置 NSX 備份。基於此目的，您可以[配置 NSX Manager 定期執行備份](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}至檔案伺服器。請確定正確地備份您的檔案伺服器或其資料，並確定循環舊的 NSX 備份。
 
 ## 管理虛擬機器的映像檔型備份
 
@@ -46,7 +46,7 @@ VMware vCenter Server 及 PSC 提供[應用裝置管理使用者介面及 API �
 
 * 如果存在，為 VMware SDDC Manager
 * 如果存在，為 Active Directory 伺服器
-* 檔案備份伺服器（請參閱上方內容）
+* 檔案備份伺服器
 
 規劃配置足夠的 Veeam 或 IBM Spectrum Protect Plus 授權來備份這些虛擬機器，並為 VM 規劃至少 2 TB 的備份儲存空間。
 
@@ -68,7 +68,7 @@ VMware vCenter Server 及 PSC 提供[應用裝置管理使用者介面及 API �
 
 ## 從備份還原
 
-還原管理備份時，有數個特殊考量：
+當您還原管理備份時，有數個特殊考量：
 
 * 對於 vCenter 及 PSC，VMware 提供安裝程式，以部署新的虛擬應用裝置並從備份還原配置。
 * 從備份中還原應用裝置時，安裝程式會根據您提供的備份資訊，來偵測應用裝置的類型（vCenter Server 或 PSC）。
