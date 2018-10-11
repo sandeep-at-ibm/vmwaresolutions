@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-11"
 
 # 訂購新的 vSphere 叢集
 
-若要部署可高度自訂的 VMware 虛擬化平台，請訂購 {{site.data.keyword.cloud}} 上的 VMware vSphere 叢集。使用此程序來定義新的 VMware vSphere 叢集。
+若要部署可高度自訂的 VMware 虛擬化平台，請訂購 {{site.data.keyword.cloud}} 上的 VMware vSphere 叢集。使用此程序來定義新的 vSphere 叢集。
 
 此程序引導您完成選取 VMware 元件、{{site.data.keyword.cloud_notm}} Bare Metal Server 設定、儲存空間設定及網路選項，以建立新叢集。在下單之後，會擷取叢集配置，以便您可以返回並視需要繼續擴充叢集。完成訂單之後，您可以根據需求，手動配置 VMware 叢集。
 
@@ -34,9 +34,9 @@ lastupdated: "2018-08-11"
 
 選取要隨叢集訂購的 VMware 元件，並指定元件的授權選項。
 
-### （僅限 IBM 事業夥伴）元件組合
+### IBM 事業夥伴使用者的元件組合
 
-如果您是「IBM 事業夥伴」，則可以在訂購新的 vSphere 叢集時選取元件授權組合。可用的組合如下：
+如果您是「IBM 事業夥伴」使用者，則可以在訂購新的 vSphere 叢集時選取元件授權組合。可用的組合如下：
 
 表 1. vSphere 叢集的「IBM 事業夥伴」元件組合
 
@@ -52,11 +52,11 @@ lastupdated: "2018-08-11"
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**附註：**對於「IBM 事業夥伴」，無法使用「自帶授權 (BYOL)」選項。
+**附註：**對於「IBM 事業夥伴」使用者，無法使用「自帶授權 (BYOL)」選項。
 
-### （僅限非「事業夥伴」）個別元件
+### 非事業夥伴使用者的個別元件
 
-如果您是非「事業夥伴」，則可以針對 vSphere 叢集彈性地選取下列 VMware 元件：
+如果您是非「事業夥伴」，則可以針對 vSphere 叢集選取下列元件：
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
@@ -115,20 +115,14 @@ lastupdated: "2018-08-11"
 
 對於含有 vSAN 的訂單，會訂購具有 12 磁碟機箱的 ESXi 伺服器，並訂購四個磁碟：兩個用於 ESXi OS，兩個保留供快取使用。依預設會配置這些設定，且無法變更。您可以選取 **vSAN 容量磁碟的磁碟類型及大小**及 **vSAN 容量磁碟數目**，來訂購更多容量磁碟。
 
-當您已選取叢集的 VMware vSAN 元件時，請指定下列設定。
+如果您選取叢集的 VMware vSAN 元件，請指定下列設定。
 
-### vSAN 容量磁碟的磁碟類型及大小
+* **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
+* **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
+* **vSAN 快取磁碟的磁碟類型**：選取所需快取磁碟的選項。
 
-只有在您選取 VMware vSAN 元件時，才能使用此選項。
-
-可用的磁碟類型如下：
-* 960 GB SSD SED
-* 1.9 TB SSD SED
-* 3.8 TB SSD SED（當 3.8 TB SSD SED 磁碟機在正式發行至資料中心時就會予以支援）
-
-### vSAN 容量磁碟數目
-
-只有在您選取 VMware vSAN 元件時，才能使用此選項。磁碟數量選項包括 2、4、6 和 8。
+    **附註**：如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。此選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲及更高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
+* **vSAN 快取磁碟數目**：指定您要新增的快取磁碟數目。
 
 ## 網路介面設定
 
@@ -161,6 +155,15 @@ lastupdated: "2018-08-11"
 * 其他字串的長度必須在 1 - 63 個字元的範圍內。
 * 網域名稱的長度上限為 189 個字元。
 
+### 公用或專用網路
+
+網路介面卡 (NIC) 啟用設定是根據您選取**公用及專用網路**或**僅限專用網路**而定。下列附加程式服務需要公用 NIC，如果您選取專用選項，則無法使用：
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
+
 ### VLAN
 
 網路設定是根據您選取**訂購新的 VLAN** 或**選取現有的 VLAN** 而定。
@@ -192,7 +195,7 @@ lastupdated: "2018-08-11"
 
 根據您的配置，預估成本會立即產生並顯示在右側的**訂單摘要**窗格中。按一下**定價詳細資料**，以產生提供預估值詳細資料的 PDF 文件。
 
-## 程序
+## 訂購 vSphere 叢集的程序
 
 1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware**，然後按一下**虛擬資料中心**區段中的 **VMware vSphere**。
 2. 在 **VMware vSphere on IBM Cloud** 頁面上，按一下**建立**。  
@@ -202,19 +205,19 @@ lastupdated: "2018-08-11"
   * 如果您是「IBM 事業夥伴」，則請選取一個授權組合及任何其他可用的 VMware 元件。
   * 如果您是非「事業夥伴」，則請選取元件（如果有的話，則請選取版本），並指定授權選項。當您選擇針對 VMware vSphere Enterprise Plus「自帶授權 (BYOL)」時，會代表您自動開立 {{site.data.keyword.cloud_notm}} 問題單，要求將您訂購的 {{site.data.keyword.baremetal_short}} 上的預設 vSphere 授權取代為您提供的授權。   
 
-    **Important:**您負責追蹤問題單，以在新訂購的 ESXi 伺服器上取代 vSphere 授權。因此 {{site.data.keyword.cloud_notm}} 基礎架構授權取消初始提供的 {{site.data.keyword.cloud_notm}} 基礎架構 vSphere 授權費。如果要取代您的 ESXi vSphere 授權，請參閱[配置 ESXi 主機的授權設定](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}。
-
+    **重要事項：**您負責追蹤問題單，以在新訂購的 ESXi 伺服器上取代 vSphere 授權。因此 {{site.data.keyword.cloud_notm}} 基礎架構授權取消初始提供的 {{site.data.keyword.cloud_notm}} 基礎架構 vSphere 授權費。如果要取代您的 ESXi vSphere 授權，請參閱[配置 ESXi 主機的授權設定](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}。
 5. 完成 Bare Metal Server 設定：
    1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理叢集。
    2. 選取 CPU 型號及 RAM 大小。
    3. 指定 Bare Metal Server 數目。
-6. 如果您已選取 **VMware vSAN** 元件，請選取 **vSAN 容量磁碟的磁碟類型及大小**及 **vSAN 容量磁碟數目**，來完成 vSAN 儲存空間設定。
+6. 如果您選取 **VMware vSAN** 元件，請完成 vSAN 儲存空間配置。指定容量及快取磁碟的磁碟類型以及磁碟數目。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
 7. 完成網路介面設定：
    1. 輸入主機名稱字首、子網域標籤及網域名稱。
-   2. 選取要使用的網路介面。
+   2. 選取**公用及專用網路**或**僅限專用網路**的網路設定。
+   3. 選取要使用的網路介面。
     * 如果您要訂購新的公用及專用 VLAN，則請按一下**訂購新的 VLAN**。
     * 如果您要重複使用可用的現有公用及專用 VLAN，則請按一下**選取現有的 VLAN**，然後指定 VLAN 及選用子網路。
-    3. 指定是否套用「FortiGate Physical Appliance 300 系列 HA 配對」來保護雲端環境安全。  
+    4. 指定是否套用「FortiGate Physical Appliance 300 系列 HA 配對」來保護雲端環境安全。  
 8. 在**訂單摘要**窗格中，驗證叢集配置及預估成本。
    * 若要將配置儲存為範本而不下訂單，請按一下**儲存配置**。
    * 若要下訂單，請確定要收費的帳戶正確，請檢閱並接受條款，然後按一下**佈建**。
