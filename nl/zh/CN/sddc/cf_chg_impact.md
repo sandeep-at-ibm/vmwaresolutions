@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-08"
 
 更改保留用于 {{site.data.keyword.vmwaresolutions_full}} 的用户、资源或子网可能会影响 VMware Cloud Foundation 实例的管理操作。
 
-**重要信息：**不要在 VMware vSphere Web Client 上的**用户和组**页面中编辑 **ic4v-vCenter** 组的全局许可权。此类更改包括：更改用户名、删除用户或更改其密码。
+**重要信息**：不要在 VMware vSphere Web Client 上的**用户和组**页面中更改 **ic4v-vCenter** 组的全局许可权。以下示例是全局许可权更改：更改用户名、删除用户或更改其密码。
 
 ## 特定于服务的用户帐户
 

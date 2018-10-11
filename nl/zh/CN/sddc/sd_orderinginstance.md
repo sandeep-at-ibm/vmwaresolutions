@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-15"
 *  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
 *  已查看[针对 Cloud Foundation 实例的需求和规划](sd_planning.html)中的需求和注意事项。
 
-**重要信息**：不要修改在订购和实例部署期间设置的任何值。这样做可能会导致实例变得不可用。此外，在部署实例之后，不要更改实例名称、根域名、子域标签或主机名前缀。
+**重要信息**：不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。此外，在部署实例之后，不要更改实例名称、根域名、子域标签或主机名前缀。
 
 ## 系统设置
 
@@ -85,13 +85,18 @@ lastupdated: "2018-08-15"
 
 ## 存储设置
 
-Cloud Foundation 实例仅支持 vSAN 存储器。
+对于 Cloud Foundation 实例，可以仅订购 VMware vSAN 存储器。
 * 选择**预配置**裸机服务器配置时，存储设置已标准化且无法更改：
   * 对于**小型**裸机服务器配置，会订购 2 个 1.9 TB SSD SED 磁盘驱动器。
   * 对于**大型**裸机服务器配置，会订购 4 个 3.8 TB SSD SED 磁盘驱动器。
-* 选择**定制**裸机服务器配置时，可以通过在 **vSAN 存储器**下指定以下设置来定制实例的 VMware vSAN 存储器：
-  * **vSAN 容量磁盘的磁盘类型和大小**：选择满足共享存储器需求的容量。
-  * **vSAN 容量磁盘数**：指定要添加的 vSAN 共享存储器的磁盘数。磁盘数量必须为 2、4、6 或 8 个。
+* 选择**定制**裸机服务器配置时，可以定制实例的 VMware vSAN 存储器。请指定以下 vSAN 设置：
+
+* **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
+* **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
+* **vSAN 高速缓存磁盘的磁盘类型**：选择与所需高速缓存磁盘相应的选项。
+
+    **注**：如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
+* **vSAN 高速缓存磁盘数**：指定要添加的 vSAN 高速缓存磁盘数。
 
 ## 网络接口设置
 
@@ -147,10 +152,10 @@ Cloud Foundation 实例仅支持 vSAN 存储器。
 
 订购实例时，需要包含一个公用 VLAN 和两个专用 VLAN。两个专用 VLAN 用于中继到每个裸机服务器中。
 
-**订购新的 VLAN**  
+#### 订购新的 VLAN
 选择此项可订购一个新的公用 VLAN 和两个新的专用 VLAN。
 
-**选择现有 VLAN**  
+#### 选择现有 VLAN  
 根据选择的 {{site.data.keyword.CloudDataCent_notm}}，可能会有现有公用和专用 VLAN 可用。
 
 选择复用现有公用和专用 VLAN 时，请指定 VLAN 和子网：
@@ -166,24 +171,23 @@ Cloud Foundation 实例仅支持 vSAN 存储器。
 
 ## 服务
 
-订购 Cloud Foundation 实例时，还可以订购更多服务。有关可用服务的更多信息，请参阅 [Cloud Foundation 实例的服务](sd_planning.html#services-for-cloud-foundation-instances)。
+订购 Cloud Foundation 实例时，还可以订购附加组件服务。有关可用服务的更多信息，请参阅 [Cloud Foundation 实例的服务](sd_planning.html#services-for-cloud-foundation-instances)。
 
 ## 订单摘要
 
-根据为实例和附加组件服务选择的配置，估算成本会立即生成并显示在右侧窗格中。单击右侧窗格底部的**定价详细信息**可生成提供估算详细信息的 PDF 文档。
+根据为实例和附加组件服务选择的配置，估算成本会立即生成并显示在右侧窗格中。单击右侧窗格的**定价详细信息**可生成提供估算详细信息的 PDF 文档。
 
-## 过程
+## 订购 Cloud Foundation 实例的过程
 
 1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **Cloud Foundation**。
 2. 在 **VMware Cloud Foundation on IBM Cloud** 页面上，单击**创建**。
 3. 在 **Cloud Foundation** 页面上，输入实例名称。
 4. 选择实例类型：
    * 单击**主实例**以在环境中部署单个实例，或者在多站点拓扑中部署第一个实例。
-   * 单击**辅助实例**以将该实例与环境中的现有（主）实例连接以获取高可用性，并完成以下步骤：
+   * 单击**辅助实例**以将该实例与环境中的现有（主）实例连接以获取高可用性。完成以下步骤：
      1. 选择要与辅助实例连接的主实例。
-     2. 如果您选择的主实例升级到 V2.5 发行版，或者将主实例部署到或升级到 V2.4 或先前发行版，请检查预填充的**主实例 PSC 的管理员密码**以确保它是正确的。
-     
-         **注：****主实例 PSC 的管理员密码**字段对于部署在 V2.5 和更高发行版上的主实例不可用。     
+     2. 对于主实例 V2.5 或更高版本，请输入**主实例 PSC 的管理员密码**的值。
+     3. 对于主实例 V2.4 或更低版本，请验证**主实例 PSC 的管理员密码**字段的预填充值是否正确。
 5. 完成实例组件的许可证设置：
    *  要使用 IBM 提供的许可证，请选择**购买时包含**。
    *  要使用您自己的许可证，请选择**我将提供**并输入许可证密钥。  
@@ -192,16 +196,16 @@ Cloud Foundation 实例仅支持 vSAN 存储器。
    2. 选择裸机服务器配置。
       * 选择**预配置**时，请选择**小型**或**大型**配置。
       * 选择**定制**时，请指定 CPU 型号和 RAM 大小。
-7. 完成存储设置：
-   * 如果对裸机配置选择的是**预配置**，请注意，无法更改**小型**和**大型**标准化裸机服务器配置的存储设置。
-   * 如果对裸机配置选择的是**定制**，请指定 **vSAN 容量磁盘的磁盘类型和大小**和 **vSAN 容量磁盘数**。
+7. 填写存储配置。
+   * 如果对裸机配置选择的是**预配置**，那么无法更改**小型**和**大型**标准化裸机服务器配置的存储设置。
+   * 如果对裸机配置选择的是**定制**，请指定 vSAN 容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
 8. 完成网络接口设置：
    1. 输入主机名前缀、子域标签和根域名。对于辅助实例，系统会自动填写域名。
    2. 选择 VLAN 设置：
       * 如果要订购新的公用和专用 VLAN，请单击**订购新的 VLAN**。
       * 如果要复用可用的现有公用和专用 VLAN，请单击**选择现有 VLAN**，然后指定 VLAN 和子网。
 
-9. 通过单击相应的服务卡，选择要部署到实例中的附加组件服务。如果服务需要配置，请完成特定于服务的设置，然后单击弹出配置窗口中的**添加服务**。有关如何为服务提供设置的信息，请参阅相应的服务订购主题。
+9. 通过单击相应的服务卡，选择要部署到实例中的附加组件服务。如果服务需要配置，请完成特定于服务的设置，然后单击弹出配置窗口中的**添加服务**。有关如何为服务提供设置的更多信息，请参阅相应的订购服务主题。
 
 10. 在**订单摘要**窗格上，验证实例配置，然后再下订单。
     1. 复查实例的设置。
@@ -214,7 +218,7 @@ Cloud Foundation 实例仅支持 vSAN 存储器。
 
 实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
 
-成功部署实例后，[Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **SDDC-Cluster**。如果订购了更多服务，那么这些服务的部署将在订单完成后启动。
+成功部署实例后，[Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **SDDC-Cluster**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
 
 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
@@ -224,7 +228,7 @@ Cloud Foundation 实例仅支持 vSAN 存储器。
 
 查看和管理订购的 Cloud Foundation 实例。
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在控制台外部通过其他任何方法来进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+**重要信息**：您只能通过 {{site.data.keyword.vmwaresolutions_short}} 控制台管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能通过 {{site.data.keyword.slportal}} 或在该控制台外部通过其他任何方法进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 

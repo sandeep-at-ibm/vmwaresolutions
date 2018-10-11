@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-07-20"
 要查看针对用户帐户供应的所有 Cloud Foundation 实例的摘要，请完成以下步骤：
 
 1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**部署的实例**。
-2. 在控制台的右上角，单击您的头像，然后单击**帐户**字段以选择要检查其实例的用户帐户。 
+2. 在控制台条幅中，单击您的用户帐户图标，然后单击**帐户**字段以选择要检查其实例的用户帐户。
 3. 在 **Cloud Foundation 实例**表中，查看实例的列表：
 
 表 1. Cloud Foundation 实例项
@@ -68,7 +68,7 @@ lastupdated: "2018-07-20"
 |DNS - SSO 域|SSO 域是 vSphere Single Sign-On 域。SSO 域名对于所有部署的 Cloud Foundation 实例是固定的，值为 <samp class="ph codeph">vsphere.local</samp>。|
 |DNS - 子域|子域是本地 Cloud Foundation 实例主机名所在的根域名的 DNS 子域名。子域名的格式为 <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>。|
 |SDDC Manager 版本|实例的 SDDC Manager 的版本|
-|状态|实例的状态<br><br>显示的信息提供有关部署进度或对实例所执行操作的更新。如果存在问题，那么可能会显示一条消息以帮助您调查和解决问题。|
+|状态|实例的状态<br><br>显示的信息提供有关部署进度或对实例所执行操作的更新。如果发生问题，那么可能会显示一条消息以帮助您调查和解决问题。|
 
 ## 查看 Cloud Foundation 实例的访问信息
 
@@ -107,7 +107,7 @@ lastupdated: "2018-07-20"
 
 ## 发生错误时要执行的操作
 
-如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持](../vmonic/trbl_support.html)。
+如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持人员](../vmonic/trbl_support.html)。
 
 ## 后续步骤
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-14"
 
 ---
 
@@ -40,11 +40,11 @@ lastupdated: "2018-08-02"
 
 缺省情况下，集群的 {{site.data.keyword.CloudDataCent}} 位置设置为 Cloud Foundation 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 等工具。
 
-可供使用的数据中心取决于您为部署选择的裸机服务器配置。如果选择的是**定制**配置，那么所选数据中心包含更多 pod 时，还可以将集群部署到其他 {{site.data.keyword.cloud}} 基础架构 pod。这在部署了初始实例的缺省 {{site.data.keyword.cloud_notm}} 基础架构 pod 达到其最大容量时非常有用。
+可供使用的数据中心取决于您为部署选择的裸机服务器配置。如果选择的是**定制**配置，那么所选数据中心包含更多 pod 时，还可以将集群部署到其他 {{site.data.keyword.cloud}} 基础架构 pod。此配置在部署了初始实例的缺省 {{site.data.keyword.cloud_notm}} 基础架构 pod 达到其最大容量时非常有用。
 
 **注**：**小型**和**大型**裸机服务器标准化配置使用缺省 pod，该 pod 不能更改。
 
-如果将集群部署到其他数据中心或 pod，那么将订购三个额外的 VLAN 以用于订购的 {{site.data.keyword.baremetal_short}}。
+如果将集群部署到其他数据中心或 pod，应再订购三个 VLAN 用于已订购的 {{site.data.keyword.baremetal_short}}。
 
 ### 裸机服务器设置
 
@@ -77,7 +77,14 @@ lastupdated: "2018-08-02"
 * 对于**小型**配置，会订购两个 1.9 TB SSD SED 磁盘驱动器。
 * 对于**大型**配置，会订购四个 3.8 TB SSD SED 磁盘驱动器。
 
-对于**定制**裸机服务器配置，可以通过指定 vSAN 容量磁盘数、磁盘类型和大小来定制 vSAN 存储器，以满足您的存储需求。
+对于**定制**裸机服务器配置，可以通过指定以下设置来定制 vSAN 存储器：
+
+* **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
+* **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
+* **vSAN 高速缓存磁盘的磁盘类型**：选择与所需高速缓存磁盘相应的选项。
+
+    **注**：如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
+* **vSAN 高速缓存磁盘数**：指定要添加的 vSAN 高速缓存磁盘数。
 
 ### 许可证设置
 
@@ -99,8 +106,8 @@ lastupdated: "2018-08-02"
    * 如果选择的是**定制**，请选择 **CPU 型号**和 **RAM** 大小。
    * 如果选择的是**预配置**，请选择**裸机服务器配置**。
 7. 完成存储配置：
-   * 如果对裸机配置选择的是**定制**，请指定 **vSAN 容量磁盘数**以及 **vSAN 容量磁盘的磁盘类型和大小**。
-   * 如果对裸机配置选择的是**预配置**，请注意，无法更改**小型**和**大型**裸机服务器配置的存储设置。
+   * 如果对裸机配置选择的是**预配置**，那么无法更改**小型**和**大型**裸机服务器配置的存储设置。
+   * 如果对裸机配置选择的是**定制**，请指定 vSAN 容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
 8. 指定许可证密钥的提供方式：
    * 对于业务合作伙伴用户，会包含 vSphere 许可证 (Enterprise Plus Edition) 和 vSAN 许可证，该许可证以您的名义购买。但是，您必须指定 vSAN 许可证的版本。
    * 对于非业务合作伙伴用户，可以选择以下某个选项：
@@ -167,13 +174,13 @@ lastupdated: "2018-08-02"
         <dt class="dt dlterm">正在删除</dt>
         <dd class="dd">正在删除 ESXi 服务器。</dd>
         </dl>
-   * vSAN 许可证和 vSphere 许可证的详细信息。仅当在集群订购期间选择使用您自己的 VMware 许可证 (BYOL) 时，vSphere 许可证详细信息才可用：
+   * vSAN 许可证和 vSphere 许可证的详细信息。仅当订购集群期间选择使用您自己的 VMware 许可证 (BYOL) 时，vSphere 许可证详细信息才可用。
        * **许可证类型**：vSAN 许可证或 vSphere 许可证。
        * **订购类型**：许可证由用户提供 (BYOL)，或以用户名义购买。
        * **许可证版本**：许可证的版本。
        * **许可证密钥**：许可证密钥。
        * **总容量 (CPU)**：许可证提供的 CPU 总容量或 CPU 数。
-       * **可用容量 (CPU)**：许可证中当前可用的容量。
+       * **可用容量 (CPU)**：许可证中可用的容量。
 
 ## 从 Cloud Foundation 实例中删除集群
 
