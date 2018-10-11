@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 缺省情况下，订购实例时配置的 ESXi 服务器会分组为 **cluster1**。
 
-可以向 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 实例添加集群以扩展计算和存储容量。在集群中，可以管理 ESXi 服务器以获得更佳的资源分配和高可用性。不再需要添加的集群时，可以从实例中将其删除。
+可以向 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 实例添加集群以扩展计算和存储容量。在集群中，管理 ESXi 服务器以获得更佳的资源分配和高可用性。不再需要添加的集群时，请从实例中将其删除。
 
 ## 向 vCenter Server with Hybridity Bundle 实例添加集群
 
@@ -32,9 +32,9 @@ lastupdated: "2018-08-02"
 
 #### 数据中心位置
 
-缺省情况下，集群的 {{site.data.keyword.CloudDataCent_notm}} 位置设置为 vCenter Server 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 等工具。
+缺省情况下，集群的 {{site.data.keyword.CloudDataCent_notm}} 位置设置为 vCenter Server 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，请使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 等工具。
 
-如果将集群部署到其他 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基础架构 pod，那么可订购三个额外的 VLAN 以用于订购的 {{site.data.keyword.baremetal_short}}。
+如果将集群部署到其他 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基础架构 pod，应再订购三个 VLAN 用于已订购的 {{site.data.keyword.baremetal_short}}。
 
 ### 裸机服务器设置
 
@@ -56,7 +56,7 @@ lastupdated: "2018-08-02"
 
 #### 裸机服务器的数量
 
-一个集群至少需要 2 个 {{site.data.keyword.baremetal_short}}。
+一个集群至少需要两个 {{site.data.keyword.baremetal_short}}。
 
 可以为一个集群最多添加 59 个 {{site.data.keyword.baremetal_short}}，并且一次可以添加 1 到 59 个 ESXi 服务器。
 
@@ -64,18 +64,31 @@ lastupdated: "2018-08-02"
 
 ### vSAN 存储器设置
 
-vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。您必须将许可证版本指定为 **Advanced** 或 **Enterprise**。
+vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请指定以下 vSAN 选项：
 
-* **vSAN 容量磁盘的磁盘类型和大小**：选择满足共享存储器需求的容量。
-* **vSAN 容量磁盘数**：选择要添加的 vSAN 共享存储器的磁盘数。磁盘数量必须为 2、4、6 或 8 个。
-* 选择 VMware vSAN 6.6 许可证版本（Advanced 或 Enterprise）。
+* **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
+* **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
+* **vSAN 高速缓存磁盘的磁盘类型**：选择与所需高速缓存磁盘相应的选项。
+
+    **注**：如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
+* **vSAN 高速缓存磁盘数**：指定要添加的 vSAN 高速缓存磁盘数。
+* **vSAN 许可证**：选择 VMware vSAN 6.6 许可证版本（Advanced 或 Enterprise）。
 
 ### 许可证设置
 
-用于以下各项的 IBM 提供的 VMware 许可证：
-  * VMware vSphere Enterprise Plus 6.5u1
-  * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.4
+用于以下 VMware 组件的 IBM 提供的许可证：
+  * vSphere Enterprise Plus 6.5u1
+  * vCenter Server 6.5
+  * NSX Service Providers 6.4（Advanced Edition 或 Enterprise Edition）
+
+### 网络接口设置
+
+网络接口卡 (NIC) 设置基于您选择的是**公用和专用网络**还是**仅专用网络**。以下附加组件服务需要公共 NIC，并且这些服务在选择了专用选项时不可用：
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 订单摘要
 
@@ -86,15 +99,16 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。您
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击实例以查看其中的集群。
 
-   **注**：确保实例处于**可供使用**状态。否则，无法向实例添加集群。
+   **注**：确保实例状态为**可供使用**。否则，无法向实例添加集群。
 
 3. 单击左侧导航窗格上的**基础架构**，然后单击**集群**表右上角的**添加**。
 4. 在**添加集群**页面上，输入集群名称。
-5. 如果希望托管集群的 {{site.data.keyword.CloudDataCent_notm}} 与托管实例的不同，请在**裸机服务器**下选中**选择其他位置**复选框，然后选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
+5. 托管集群的 {{site.data.keyword.CloudDataCent_notm}} 可以与托管实例的不同。为此，请在**裸机服务器**下选中**选择其他位置**复选框，然后选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
 6. 针对裸机配置，选择 **CPU 型号**、**RAM** 量和**裸机服务器数**。
-7.  选择 **vSAN 存储器**，然后为存储配置选择 **vSAN 容量磁盘数**以及 **vSAN 容量磁盘的磁盘类型和大小**。
+7.  选择 **vSAN 存储器**，并指定容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
 8. 为 VMware vSAN 选择许可证版本，以进行许可证配置。
-9. 在**订单摘要**窗格上，验证集群配置，然后再添加集群。
+9. 选择网络设置**公用和专用网络**或**仅专用网络**。
+10. 在**订单摘要**窗格上，验证集群配置，然后再添加集群。
    1. 复查集群的设置。
    2. 复查集群的估算成本。单击**定价详细信息**以生成 PDF 摘要。要保存或打印订单摘要，请单击 PDF 窗口右上角的**打印**或**下载**图标。
    3. 单击订单适用条款的链接，并在添加集群之前确认您同意这些条款。
@@ -169,7 +183,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。您
 
 ### 删除之前
 
-* 一次可以删除一个集群。要删除多个集群，必须按顺序依次执行；请等待前一个集群删除后，再尝试删除下一个集群。
+* 一次可以删除一个集群。要删除多个集群，必须按顺序依次执行；请等待前一个集群删除后，再删除下一个集群。
 * 删除集群之前，请确保集群中的所有节点都已打开电源且正常运行。
 * 删除集群时，集群中的所有 VM（虚拟机）也会一起删除且无法恢复。如果要保留这些 VM，请将其迁移到其他集群。
 * 无法删除缺省集群。

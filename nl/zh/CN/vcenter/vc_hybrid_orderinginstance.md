@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 实例。vCenter Server with Hybridity Bundle 实例订单中包含 VMware Hybrid Cloud Extension (HCX) 许可，并授权您使用 VMware HCX on {{site.data.keyword.cloud_notm}} 服务。您还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)。
 
-## 需求
+## 订购 vCenter Server with Hybridity Bundle 实例的需求
 
 确保已完成以下任务：
 *  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
@@ -30,7 +30,7 @@ lastupdated: "2018-08-02"
   |标准 ESXi 服务器名称| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 服务器的序列。最大长度为 50 个字符。|  
   |PSC FQDN|`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大长度为 50 个字符。|
 
-**重要信息**：不要修改在订购和实例部署期间设置的任何值。这样做可能会导致实例变得不可用。例如，公用网络可能会关闭，在供应期间服务器和虚拟服务器实例 (VSI) 可能会移至 Vyatta 后，或者 IBM CloudBuilder VSI 可能会停止或被删除。
+**重要信息**：不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。
 
 ## 系统设置
 
@@ -50,12 +50,12 @@ lastupdated: "2018-08-02"
 
 ## 许可证设置
 
-vCenter Server with Hybridity Bundle 实例订单中包含以下许可证。您必须将 NSX 许可证版本指定为 **Advanced** 或 **Enterprise**。
+vCenter Server with Hybridity Bundle 实例订单中包含以下 VMware 许可证。您必须指定 NSX 和 vSAN 许可证的版本。
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.4
-* VMware vSAN 6.6 许可证版本（Advanced 或 Enterprise）。
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4（Advanced Edition 或 Enterprise Edition）
+* vSAN 6.6（Advanced Edition 或 Enterprise Edition）
 
 **注意：**
 * vCenter Server with Hybridity Bundle 实例不支持自带许可证。
@@ -85,16 +85,21 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下许可证。您�
 |双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 |双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+
 ### 裸机服务器的数量
 
 缺省情况下已选择 4 个 ESXi 服务器，对此无法进行更改。
 
 ## 存储设置
 
-vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。订购该实例时，必须指定以下存储设置：
+vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请指定以下 vSAN 选项：
 
-* **vSAN 容量磁盘的磁盘类型和大小**：选择满足共享存储器需求的容量。
-* **vSAN 容量磁盘数**：选择要添加的 vSAN 共享存储器的磁盘数。磁盘数量必须为 2、4、6 或 8 个。
+* **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
+* **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
+* **vSAN 高速缓存磁盘的磁盘类型**：选择与所需高速缓存磁盘相应的选项。
+
+    **注**：如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
+* **vSAN 高速缓存磁盘数**：指定要添加的 vSAN 高速缓存磁盘数。
 
 ## 网络接口设置
 
@@ -125,6 +130,15 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。订
 * 最后一个字符串的长度必须在 2 到 24 个字符范围内。
 
 **注**：主机和 VM（虚拟机）的 FQDN（标准域名）的最大长度为 50 个字符。域名必须符合此最大长度。
+
+### 公用或专用网络
+
+网络接口卡 (NIC) 启用设置基于您选择的是**公用和专用网络**还是**仅专用网络**。以下附加组件服务需要公共 NIC，并且这些服务在您选择专用选项时不可用：
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 订购新的 VLAN
 
@@ -167,7 +181,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。订
 
 根据为实例和附加组件服务选择的配置，估算成本会立即生成并显示在右侧窗格的**订单摘要**部分中。单击右侧窗格底部的**定价详细信息**可生成提供估算详细信息的 PDF 文档。
 
-## 过程
+## 订购 vCenter Server with Hybridity Bundle 实例的过程
 
 1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 页面上，单击 **vCenter Server with Hybridity Bundle** 卡，然后单击**创建**。
@@ -183,18 +197,17 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。订
   2. 选择**定制** CPU 型号和 **RAM** 量。
 
   **注**：缺省情况下，**裸机服务器数**设置为 4，且无法更改。
-
-7. 填写存储配置。
-  1. 选择 **vSAN 容量磁盘的磁盘类型和大小**。
-  2. 选择 **vSAN 容量磁盘数**。
+7. 填写存储配置。指定容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
 8. 完成网络接口配置。
   1. 输入主机名前缀、子域标签和根域名。
-  2. 选择 VLAN 配置。
+  2. 选择网络设置**公用和专用网络**或**仅专用网络**。
+  3. 选择 VLAN 配置。
      *  如果要订购新的公用和专用 VLAN，请单击**订购新的 VLAN**。
      *  如果要复用可用的现有公用和专用 VLAN，请单击**选择现有 VLAN**，然后选择公用 VLAN、主子网、专用 VLAN、专用主子网和辅助专用 VLAN。
-  3. 选择 DNS 配置。
-9. 通过单击相应的服务卡，选择要部署到实例中的附加组件服务。如果服务需要配置，请完成特定于服务的设置，然后单击相应卡上的**添加服务**。  
-有关如何为服务提供设置的信息，请参阅相应的服务订购主题。
+  4. 选择 DNS 配置。
+9. 完成对包含的 HCX on {{site.data.keyword.cloud_notm}} 服务的配置。有关如何为该服务提供设置的更多信息，请参阅[订购 VMware HCX on IBM Cloud](../services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration) 中的 _VMware HCX on IBM Cloud 配置_部分。
+10. 通过单击相应的服务卡，选择要部署到实例中的附加组件服务。如果服务需要配置，请完成特定于服务的设置，然后单击相应卡上的**添加服务**。  
+有关如何为服务提供设置的更多信息，请参阅相应的服务订购主题。
 
 8. 在**订单摘要**窗格上，验证实例配置，然后再下订单。
    1. 复查实例的设置。
@@ -206,7 +219,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。订
 
 实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
 
-成功部署实例后，[vCenter Server with Hybridity Bundle 实例的技术规范](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。如果订购了更多服务，那么这些服务的部署将在订单完成后启动。
+成功部署实例后，[vCenter Server with Hybridity Bundle 实例的技术规范](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
 
 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
@@ -216,7 +229,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。订
 
 查看和管理订购的 vCenter Server with Hybridity Bundle 实例。
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在控制台外部通过其他任何方法来进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+**重要信息**：您只能通过 {{site.data.keyword.vmwaresolutions_short}} 控制台管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能通过 {{site.data.keyword.slportal}} 或在该控制台外部通过其他任何方法进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件

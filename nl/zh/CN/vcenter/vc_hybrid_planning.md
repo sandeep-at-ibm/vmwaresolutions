@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -62,7 +62,7 @@ vCenter Server with Hybridity Bundle 部署对物理基础架构有严格要求�
 |状态|状态详细信息|
 |:------------------------------|:--------------------------------------------------|
 |即将提供|{{site.data.keyword.CloudDataCent_notm}} 当前不可用。|
-|暂时库存不足|此时 {{site.data.keyword.CloudDataCent_notm}} 不具有可用性。|
+|暂时库存不足|{{site.data.keyword.CloudDataCent_notm}} 当前不可用。|
 |有限库存|{{site.data.keyword.CloudDataCent_notm}} 具有有限可用性，并且订单可能未完成。|
 
 ## 备份管理组件
@@ -88,7 +88,7 @@ vCenter Server with Hybridity Bundle 实例包含授权您使用 VMware HCX on {
 
 ## 容量注意事项
 
-有关容量信息和注意事项，请参阅[扩展容量](../archiref/solution/solution_scaling.html)。
+有关容量注意事项的更多信息，请参阅[扩展容量](../archiref/solution/solution_scaling.html)。
 
 ### 相关链接
 

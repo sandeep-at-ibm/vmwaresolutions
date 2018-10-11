@@ -40,4 +40,4 @@ VMware Federal on {{site.data.keyword.cloud_notm}} 未提供订购更多服务�
 * [VMware Federal on {{site.data.keyword.cloud_notm}} 概述](vc_fed_overview.html)
 * [订购 VMware Federal 实例](vc_fed_orderinginstance.html)
 * [确保 VMware Federal 实例安全](vc_fed_securinginstance.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)

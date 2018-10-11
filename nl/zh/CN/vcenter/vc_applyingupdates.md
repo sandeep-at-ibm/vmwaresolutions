@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-19"
 
 ---
 
@@ -16,7 +16,9 @@ lastupdated: "2018-08-07"
 
 ## 开始之前
 
-**重要信息**：将 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例时，必须至少先应用基本 vCenter Server V2.3 软件更新，然后才能执行 Hybridity Bundle 的许可证升级。
+**重要信息**：将 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例时，必须至少先应用基本 vCenter Server V2.3 软件更新。必须执行此操作后，才能对 Hybridity Bundle 执行许可证升级。
+
+业务合作伙伴用户无法选择将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例。
 
 尝试应用更新之前，请通过单击向下箭头来展开更新条目，然后验证以下信息：
 * 更新的版本。必须按时间顺序应用更新，从最早的更新开始一直应用到最新的更新。在应用最新的更新之前，请确保应用了所有先前的更新。例如，在尝试应用 V2.4 更新之前，必须先应用 V2.3 更新。
@@ -76,13 +78,14 @@ lastupdated: "2018-08-07"
 
 在 Hybridity Bundle 的许可证升级期间，如果 vCenter Server 实例当前使用的是 VMware NSX Base Edition，那么会自动升级到 VMware NSX Advanced Edition。
 
-**注：**如果升级到 Hybridity Bundle，并且 vCenter Server 实例已经有 NFS 文件存储器，那么 VMware vSAN 存储器不收费。vSAN 许可证要收费，因为 Hybridity Bundle 中包含该许可证。
+**注**：如果升级到 Hybridity Bundle，并且 vCenter Server 实例已经有 NFS 文件存储器，那么 VMware vSAN 存储器不收费。vSAN 许可证要收费，因为 Hybridity Bundle 中包含该许可证。
 
 要将 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle，请完成以下步骤。
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要升级的实例。
-3. 在**摘要**页面上，验证是否所有实例详细信息都正确显示。然后在左侧导航窗格上，单击**基础架构**以验证**基础架构**页面上的详细信息。如果未显示详细信息，这可能指示由于防火墙规则或其他网络问题而导致 IBM CloudDriver VSI 发生连接问题。请解决该问题后，再继续下一步，否则更新可能会失败。
+3. 在**摘要**页面上，验证是否所有实例详细信息都正确显示。然后在左侧导航窗格上，单击**基础架构**以验证**基础架构**页面上的详细信息。
+   如果未显示详细信息，这可能指示由于防火墙规则或其他网络问题而导致 IBM CloudDriver VSI 发生连接问题。请解决该问题后，再继续下一步，否则更新可能会失败。
 4. 在左侧导航窗格上，单击**更新和补丁**。
 5. 应用 Hybridity Bundle 许可证升级。在**许可证升级**表中，单击**操作**列中的**升级**，复查估算成本，然后单击**升级**。
 6. （可选）部署 VMware HCX on {{site.data.keyword.cloud_notm}} 服务。在**许可证升级**表上启用了 Hybridity Bundle 时，请完成以下步骤：
@@ -129,14 +132,14 @@ lastupdated: "2018-08-07"
       </tr>
           <tr>
         <td>未知</td>
-      <td>无法获取更新作业的状态。请联系 IBM 支持以获取帮助。</td>
+      <td>无法获取更新作业的状态。请联系 IBM 支持人员以获取帮助。</td>
       </tr>
     </table>
 
-4. 如果更新过程在特定步骤失败，请[联系 IBM 支持](../vmonic/trbl_support.html)以获取帮助。IBM 支持将向您提供如何解决问题的建议，并指导您从失败的步骤重试升级。
+4. 如果更新过程在特定步骤失败，请[联系 IBM 支持人员](../vmonic/trbl_support.html)以获取帮助。IBM 支持将向您提供如何解决问题的建议，并指导您从失败的步骤重试升级。
 
 ### 相关链接
 
 * [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [常见问题](../vmonic/faq.html)

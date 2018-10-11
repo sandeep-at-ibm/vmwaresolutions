@@ -4,21 +4,26 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-09-25"
 
 ---
 
 # 将 V2.5 之前的 vCenter Server with Hybridity Bundle 实例迁移到 IBM Cloud 帐户
 
-在 {{site.data.keyword.cloud}} 帐户中 V2.5 和更高发行版中部署的 VMware vCenter Server with Hybridity Bundle 实例会自动添加到帐户，并由 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 进行管理。
+在 {{site.data.keyword.cloud}} 帐户中 V2.5 和更高版本中部署的 VMware vCenter Server with Hybridity Bundle 实例会自动添加到帐户。这些实例由 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 进行管理。
 
 对于部署在 V2.4 和更低发行版中的实例，可以将其迁移到指定的 {{site.data.keyword.cloud_notm}} 帐户，以进行支持 IAM 的用户管理。
 
+## 开始之前
 
-## 过程
+确保要将实例迁移到的 {{site.data.keyword.cloud_notm}} 帐户不是仅 IaaS 帐户。仅 IaaS 帐户是未链接到 {{site.data.keyword.cloud_notm}} 帐户的 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户。
+
+有关如何将仅 IaaS 帐户链接到 PaaS 帐户的更多信息，请参阅[执行以下步骤来链接 IaaS 和 PaaS 帐户](https://www.ibm.com/blogs/bluemix/2018/03/follow-steps-link-iaas-paas-accounts/)。
+
+## 迁移实例的过程
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
-2. 在控制台的右上角，单击您的头像，然后单击**帐户**字段以选择要将实例迁移到的用户帐户。
+2. 在控制台条幅中，单击您的用户帐户图标，然后单击**帐户**字段以选择要将实例迁移到的用户帐户。
 3. 在 **vCenter Server 实例**表中，找到 V2.5 之前的实例。
 4. 在**操作**列中，单击溢出菜单图标，然后单击**将实例迁移到帐户**。
 5. 在**将实例迁移到帐户**窗口中，确认要将实例迁移到的帐户，然后单击**迁移**。

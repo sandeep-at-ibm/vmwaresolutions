@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-03-19"
+lastupdated: "2017-09-19"
 
 ---
 
 # 删除多站点配置中的 vCenter Server 实例
 
-计划删除属于多站点配置的 vCenter Server 实例之前，有一些特殊注意事项需要留意。
+计划删除属于多站点配置的 vCenter Server 实例之前，请留意以下特殊注意事项。
 
 删除 vCenter Server 实例时，会按顺序释放以下组件：
 1. 所有部署的服务
@@ -24,7 +24,7 @@ lastupdated: "2017-03-19"
 
 **注意**：在所删除实例的 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束之前，仍然会对您计费。
 
-## 过程
+## 删除多站点配置中 vCenter Server 实例的过程
 
 1. 从辅助 vCenter Server 实例中除去所有服务。
 2. 确保没有任何 NSX 对象扩展到要删除的辅助实例中。

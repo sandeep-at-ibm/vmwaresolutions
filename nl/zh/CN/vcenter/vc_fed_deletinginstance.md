@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -37,10 +37,10 @@ lastupdated: "2018-07-19"
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要删除的实例。
-3. 单击 **vCenter 控制台**右侧的溢出菜单图标，然后单击**删除实例**。
+3. 单击 **vCenter 控制台**旁边的溢出菜单图标，然后单击**删除实例**。
    实例的状态会更改为**正在删除**。成功删除实例后，会释放该实例的组件，并且实例的状态会更改为**已删除**。
 4. 如果要在 {{site.data.keyword.vmwaresolutions_short}} 控制台中除去实例记录，请完成以下步骤：
-   1. 再次单击 **vCenter 控制台**右侧的溢出菜单图标，然后单击**删除实例**。
+   1. 再次单击 **vCenter 控制台**旁边的溢出菜单图标，然后单击**删除实例**。
    2. 在**删除实例**窗口中，单击**确定**。
 
 ### 相关链接
@@ -49,4 +49,4 @@ lastupdated: "2018-07-19"
 * [订购 VMware Federal 实例](vc_fed_orderinginstance.html)
 * [确保 VMware Federal 实例安全](vc_fed_securinginstance.html)
 * [查看 VMware Federal 实例](vc_fed_viewinginstance.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)

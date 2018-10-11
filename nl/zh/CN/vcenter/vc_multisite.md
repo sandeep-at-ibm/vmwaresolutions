@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -30,13 +30,13 @@ lastupdated: "2018-07-19"
    *  链接到主实例上根域的 DNS 子域
    *  DNS 和 AD 复制在主实例和辅助实例上的 AD 虚拟机之间设置。
    *  PSC (Platform Services Controller) 部署并配置为通过主实例上的 PSC 进行复制。
-   *  辅助实例上的 VMware vCenter 设置为以增强的链接模式与主实例上的 vCenter 相链接。
+   *  辅助实例上的 VMware vCenter 设置为以“增强链接方式”与主实例上的 vCenter 相链接。
 
 ## vCenter Server 多站点部署
 
 多站点配置功能使用轴辐式拓扑，其中包含一个主站点和最多七个辅助站点。支持单层站点，即无法配置链接到其他辅助站点的后续站点。在跨所有实例的多站点配置中，总共可以有 128 个 ESXi 服务器。
 
-**注**：如果配置需要具有超过 128 个 ESXi 服务器的多站点部署，请联系 IBM 支持人员以获取帮助。有关更多信息，请参阅[联系 IBM 支持](../vmonic/trbl_support.html)。
+**注**：如果配置需要具有超过 128 个 ESXi 服务器的多站点部署，请联系 IBM 支持人员以获取帮助。有关更多信息，请参阅[联系 IBM 支持人员](../vmonic/trbl_support.html)。
 
 下图描绘了 vCenter Server 多站点部署的总体视图。
 
