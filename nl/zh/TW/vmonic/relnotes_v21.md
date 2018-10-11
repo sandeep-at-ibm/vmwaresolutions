@@ -10,7 +10,7 @@ lastupdated: "2018-04-16"
 
 # 2.1 版的版本注意事項
 
-此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之其他要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Spectre 及 Meltdown 補救
 
@@ -24,7 +24,7 @@ lastupdated: "2018-04-16"
 
 ## VMware HCX on IBM Cloud
 
-現在，HCX on {{site.data.keyword.cloud_notm}} 服務可用於執行 vSphere 6.5 以及部署於或升級至 2.1 版或更新版本的 VMware Cloud Foundation 實例及 VMware vCenter Server 實例。此服務可將內部部署資料中心的網路無縫延伸至 {{site.data.keyword.cloud_notm}}，這容許在內部部署資料中心與 {{site.data.keyword.cloud_notm}} 之間雙向移轉虛擬機器 (VM)，而不需要任何變更。透過建立第 2 層橋接器，HCX 運用 WAN 最佳化、刪除重複、壓縮及加密，能更快速而安全地透過 Direct Link 或 VPN 通道來移轉資料。VM 的大量移轉與 VMware vSphere 5.1 以上的舊版相容。如果您在內部部署中使用 vSphere 6.0 以上的版本，則可以將 vMotion 即時（已開啟電源）VM 從內部部署移轉至 {{site.data.keyword.CloudDataCent_notm}}。使用 HCX 時，您不需要在資料中心安裝 VMware NSX。
+現在，HCX on {{site.data.keyword.cloud_notm}} 服務可用於執行 vSphere 6.5 以及部署於或升級至 2.1 版或更新版本的 VMware Cloud Foundation 實例及 VMware vCenter Server 實例。此服務可將內部部署資料中心的網路無縫延伸至 {{site.data.keyword.cloud_notm}}，這容許在內部部署資料中心與 {{site.data.keyword.cloud_notm}} 之間雙向移轉虛擬機器 (VM)，而不需要任何變更。透過建立第 2 層橋接器，HCX 使用 WAN 最佳化、刪除重複、壓縮及加密，能更快速且安全地透過 Direct Link 或 VPN 通道來移轉資料。VM 的大量移轉與 VMware vSphere 5.1 以上的舊版相容。如果您在內部部署中使用 vSphere 6.0 以上的版本，則可以將 vMotion 即時（已開啟電源）VM 從內部部署移轉至 {{site.data.keyword.CloudDataCent_notm}}。使用 HCX 時，您不需要在資料中心安裝 VMware NSX。
 
 您可以在訂購實例時訂購包含 HCX on {{site.data.keyword.cloud_notm}} 服務的 Cloud Foundation 或 vCenter Server 實例，或稍後透過實例詳細資料頁面的**服務**標籤，將此服務新增至現有的實例。
 
@@ -38,9 +38,9 @@ lastupdated: "2018-04-16"
 
 ## 對於 VMware Cloud Foundation 和 vCenter Server 更有彈性的「自帶授權」模型
 
-現在，建立新叢集時，「自帶授權 (BYOL)」或購買 IBM 提供的訂閱授權適用於 2.1 版以及更新版本的 VMware Cloud Foundation 實例及 VMware vCenter Server 實例，讓您能夠運用現有的元件金鑰，或向 IBM 租用授權。在 2.1 版之前，如果您是 BYOL，則無法針對特定 VMware 元件購買 IBM 提供的授權。目前，只有 VMware vSphere 和 VMware vSAN 可以使用每個叢集的授權。
+現在，建立新叢集時，「自帶授權 (BYOL)」或購買 IBM 提供的訂閱授權適用於 2.1 版及更新版本的 VMware Cloud Foundation 實例及 VMware vCenter Server 實例。這些選項可讓您使用現有的元件金鑰，或向 IBM 租用授權。在 2.1 版之前，如果您是 BYOL，則無法針對特定 VMware 元件購買 IBM 提供的授權。目前，每個叢集僅 VMware vSphere 及 VMware vSAN 可用於授權。
 
-此外，將節點新增至使用您的金鑰授權的叢集時，如果節點數目超出金鑰容量，主控台會提示您提供新的授權碼。
+此外，當您將節點新增至使用您的金鑰所授權的叢集時，如果節點數目超出金鑰容量，主控台會提示您提供新的授權碼。
 
 如需相關資訊，請參閱下列主題：
 
@@ -50,7 +50,7 @@ lastupdated: "2018-04-16"
 
 ## Zerto on IBM Cloud 服務元件更新項目
 
-對於部署在 2.1 版以及更新版本 Cloud Foundation 實例及 vCenter Server 實例中的 Zerto on {{site.data.keyword.cloud_notm}} 服務，會佈建 Zerto Virtual Replication 5.5u2。基於效能理由，Zerto 虛擬抄寫應用裝置 (VRA) 現在是部署到管理資料儲存庫（vSAN 或 Endurance）而不是本端資料儲存庫。如果您有現有的 VRA，則應該考慮將其儲存空間移轉至管理資料儲存庫，以獲得更好的效能。
+對於部署在 2.1 版及更新版本 Cloud Foundation 實例及 vCenter Server 實例中的 Zerto on {{site.data.keyword.cloud_notm}} 服務，會佈建 Zerto Virtual Replication 5.5u2。基於效能理由，Zerto 虛擬抄寫應用裝置 (VRA) 現在是部署到管理資料儲存庫（vSAN 或「耐久性」）而不是本端資料儲存庫。如果您有現有的 VRA，則請考慮將其儲存空間移轉至管理資料儲存庫，以獲得更好的效能。
 
 如需相關資訊，請參閱 [Zerto on {{site.data.keyword.cloud_notm}} 概觀](../services/addingzertodr.html)。
 
@@ -65,7 +65,7 @@ lastupdated: "2018-04-16"
 在 2.0 版及更舊版本的 VMware vCenter Server 實例中，修補程式未自動套用至已新增至叢集的 ESXi 主機。
 
 在 2.1 版以及更新版本的實例中，自動化會將修補程式套用至新的 ESXi 主機，使該修補程式層次符合佈建起始實例時的修補程式層次。由您負責手動套用任何未來的修補程式和更新項目。
-當未來版本中提供了 VMware 修補程式及更新項目時，自動化將掃描您現有實例的 ESXi 主機，並以電子郵件提醒您手動套用最新的修補程式和更新項目。
+當未來版本中提供 VMware 修補程式及更新項目時，自動化會掃描您現有實例的 ESXi 主機，並以電子郵件提醒您手動套用最新的修補程式和更新項目。
 
 如需相關資訊，請參閱[將更新套用至 vCenter Server 實例](../vcenter/vc_applyingupdates.html)。
 
@@ -79,7 +79,7 @@ lastupdated: "2018-04-16"
 
 對於實例中的預設叢集，您可以部署或擴充最多 51 部伺服器。對於實例中的所有後續叢集，您可以部署或擴充最多 59 部伺服器。如需相關資訊，請參閱[新增及檢視 vCenter Server 實例的叢集](../vcenter/vc_addingviewingclusters.html)。
 
-**附註：**這項功能僅適用於部署在 2.1 版以及更新版本中的實例。從 2.1 版之前的版本升級至 2.1 版的實例沒有此功能。
+**附註：**這項功能僅適用於部署在 2.1 版以及更新版本中的實例。從 2.1 版之前的版本升級至 2.1 版的實例沒有此選項。
 
 ### 使用者自訂的 IBM Cloud Bare Metal Server 配置選項
 
@@ -91,7 +91,7 @@ lastupdated: "2018-04-16"
 
 ### 個別 NFS 檔案共用配置
 
-現在，您有個別配置 NFS 檔案共用的選項。為每一個別檔案共用選取檔案大小及效能層次，或針對您訂購的所有檔案共用，選取相同的檔案大小及效能層次。
+您現在可以個別配置 NFS 檔案共用。為每一個別檔案共用選取檔案大小及效能層次，或針對您訂購的所有檔案共用，選取相同的檔案大小及效能層次。
 
 如需相關資訊，請參閱下列主題：
 * [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html)
@@ -102,12 +102,12 @@ lastupdated: "2018-04-16"
 
 在整個使用者介面中進行了改善：
 
-* 已從左導覽窗格中移除了**訂購實例**選項。按一下**開始使用**來完成訂購實例的步驟。
+* 左導覽窗格中不再提供**訂購實例**選項。按一下**開始使用**來完成訂購實例的步驟。
 * 訂購實例時，**基本**頁面中的**子網域字首**欄位已重新命名為**子網域標籤**。
-* 訂購主要或次要 vCenter Server 實例或 Cloud Foundation 實例時，除了在**摘要**頁面上檢視成本預估，現在您可以提供實例訂單的詳細資料，然後在任何畫面上計算成本預估。
-* 瀏覽途徑導覽會新增至**已部署的實例**頁面作為替代的導覽方法，從而減少到達這些頁面的母頁面所需的步驟數。
-* 已提供各種錯誤訊息及工具提示加強功能，以協助您在使用者介面上選取適當的設定。
+* 訂購主要或次要 vCenter Server 或 Cloud Foundation 實例時，除了在**摘要**頁面上檢視成本預估，現在您可以提供實例訂單的詳細資料，然後在任何頁面上計算成本預估。
+* 瀏覽途徑導覽會新增至**已部署的實例**頁面作為替代的導覽方法，從而減少到達母頁面所需的步驟數。
+* 提供各種錯誤訊息及工具提示加強功能，以協助您在使用者介面上選取適當的設定。
 
 ## 新的及更新的文件
 
-有新的 developerWorks 秘訣可供使用，其包含的逐步指示是關於如何使用 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}，將專用的儲存空間連接至現有的 {{site.data.keyword.vmwaresolutions_full}} 部署。如需相關資訊，請參閱[將專用的儲存空間連接至 VMware Solutions on IBM  Cloud 的步驟](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)。
+有新的 developerWorks 秘訣可供使用，其包含的逐步指示是關於如何使用 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}，將專用的儲存空間連接至現有的 {{site.data.keyword.vmwaresolutions_full}} 部署。如需相關資訊，請參閱 [Steps to attach dedicated storage to VMware Solutions on IBM Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)。

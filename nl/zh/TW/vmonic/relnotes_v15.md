@@ -10,7 +10,7 @@ lastupdated: "2017-03-30"
 
 # 1.5 版的版本注意事項
 
-此版本包括新增特性、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之其他要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## VRF 與典型 SoftLayer 帳戶需求
 
@@ -30,5 +30,5 @@ lastupdated: "2017-03-30"
 
 在整個使用者介面中進行了改善：
 
-* 使用者介面上明確指出各種資料中心的可用性，以及它們是否具有足夠的庫存來履行訂單，讓您可以做出關於資料中心的明智決策，以便在實例訂購期間選取資料中心。如需相關資訊，請參閱 [Cloud Foundation 實例的需求及規劃](../sddc/sd_planning.html)及 [vCenter Server 實例的需求及規劃](../vcenter/vc_planning.html)。
-* 對於 Cloud Foundation 實例，當您在輸入欄位中輸入必要資訊時，會以圖形格式自動顯示實例名稱、網域和子網域名稱及資料中心位置等資訊。如需相關資訊，請參閱[訂購 Cloud Foundation 實例](../sddc/sd_orderinginstance.html)。
+* 使用者介面上明確指出各種 {{site.data.keyword.CloudDataCents_notm}} 的可用性，以及它們是否具有足夠的庫存來履行訂單。使用這些詳細資料，做出關於 {{site.data.keyword.CloudDataCent_notm}} 的明智決策，以在訂購實例時選取。如需相關資訊，請參閱 [Cloud Foundation 實例的需求及規劃](../sddc/sd_planning.html)及 [vCenter Server 實例的需求及規劃](../vcenter/vc_planning.html)。
+* 對於 Cloud Foundation 實例，當您在輸入欄位中輸入必要資訊時，會以圖形格式自動顯示實例名稱、網域和子網域名稱以及資料中心位置這類資訊。如需相關資訊，請參閱[訂購 Cloud Foundation 實例](../sddc/sd_orderinginstance.html)。

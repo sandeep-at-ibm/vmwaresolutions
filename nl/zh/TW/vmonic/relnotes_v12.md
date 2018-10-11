@@ -10,7 +10,7 @@ lastupdated: "2016-12-12"
 
 # 1.2 版的版本注意事項
 
-此版本包括新增特性、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之更多要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## 元件更新項目
 
@@ -18,7 +18,7 @@ VMware ESXi 的新版本是 vSphere 6.0 u2 p03，這是從舊版的 ESXi 6.0 u2 
 
 ## IBM ID 與 Bluemix 帳戶的關聯
 
-在 IBM Bluemix® 型錄中，{{site.data.keyword.vmwaresolutions_full}} 是提供作為基礎架構解決方案。因此，如果要使用您的 **IBM ID** 帳戶來登入 {{site.data.keyword.vmwaresolutions_short}} 主控台，您必須使 **IBM ID** 帳戶與 Bluemix 帳戶產生關聯。
+在 IBM Bluemix® 型錄中，{{site.data.keyword.vmwaresolutions_full}} 是提供作為基礎架構解決方案。您必須將 **IBM ID** 帳戶與 Bluemix 帳戶相關聯，以使用 **IBM ID** 帳戶來登入 {{site.data.keyword.vmwaresolutions_short}} 主控台。
 
 如需相關資訊，請參閱下列主題：
 * [開始使用](../index.html)

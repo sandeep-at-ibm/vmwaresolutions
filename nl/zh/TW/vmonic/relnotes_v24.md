@@ -10,7 +10,7 @@ lastupdated: "2018-06-22"
 
 # 2.4 版的版本注意事項
 
-此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之其他要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Spectre 及 Meltdown 補救
 
@@ -84,7 +84,7 @@ lastupdated: "2018-06-22"
 
 ### 服務文件
 
-已重組服務資訊，並且已改良導覽，在訂購服務時可輕鬆地找到相關資訊。
+已重組服務資訊，並且已改良導覽，在您訂購服務時可輕鬆地找到相關資訊。
 
 如需相關資訊，請參閱下列主題：
 
@@ -103,6 +103,6 @@ lastupdated: "2018-06-22"
 會更新使用者介面，並提供下列加強功能：
 
 * 新增叢集及新增服務窗格現在會使用具有更有系統佈置的頁面格式，讓您更有效率地完成作業。
-* 已使用搜尋、分頁及排序特性來加強**已部署的實例**頁面的功能。這些改進項目可讓您非常快速地找到實例。
+* 已使用搜尋、分頁及排序特性來加強**已部署的實例**頁面的功能。這些改進項目可讓您快速地找到實例。
 * 實例詳細資料頁面現在使用左導覽功能表，可讓您輕鬆且快速地存取實例資訊。
-* 已提供各種錯誤訊息及工具提示加強功能，以協助您在使用者介面上選取適當的設定。
+* 提供各種錯誤訊息及工具提示加強功能，以協助您在使用者介面上選取適當的設定。

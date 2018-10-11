@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-25"
 
 ---
 
 # 其他資源
 
-請檢閱可協助您更快開始使用的其他資源。這些資源包括：
+請檢閱下列資源，以更快速地開始。
 * 架構參照資訊
 * 視訊
 * 示範
@@ -35,18 +35,18 @@ lastupdated: "2018-08-17"
 
 ## 視訊及示範
 
-* [資源及視訊](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources)
-* [數位技術參與](https://ibm-dte.mybluemix.net/ibm-vmware)
-* [精選資源及個案研討](https://www.ibm.com/cloud/vmware/resources)
+* [Resources and videos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources)
+* [Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)
+* [Featured resources and case studies](https://www.ibm.com/cloud/vmware/resources)
 
 ## 測試磁碟機 IBM Cloud for VMware Solutions
 
-要自行查看嗎？遵循逐步 {{site.data.keyword.vmwaresolutions_short}} 引導展示[嘗試 VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions)，以採用產品的簡短測試磁碟機。
+要自行查看嗎？遵循逐步 {{site.data.keyword.vmwaresolutions_short}} 引導示範[嘗試 VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions)，以採用產品的簡短測試磁碟機。
 
 ## developerWorks 秘訣
 
-* [{{site.data.keyword.vmwaresolutions_short}} - 深入查看](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
-* [將專用的儲存空間連接至 VMware Solutions on {{site.data.keyword.cloud_notm}} 的步驟](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+* [{{site.data.keyword.vmwaresolutions_short}} - Take a look under the hood](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
+* [Steps to attach dedicated storage to VMware Solutions on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
 
 ## VMware 文件
 
