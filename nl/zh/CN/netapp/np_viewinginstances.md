@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -16,8 +16,8 @@ lastupdated: "2018-08-14"
 
 要查看针对用户帐户供应的所有 NetApp ONTAP Select 实例的摘要，请完成以下步骤：
 
-1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**部署的实例**。
-2. 在控制台的右上角，单击您的头像，然后单击**帐户**字段以选择要检查其实例的用户帐户。
+1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格上的**部署的实例**。
+2. 在控制台条幅中，单击您的用户帐户图标，然后单击**帐户**字段以选择要检查其实例的用户帐户。
 3. 在 **NetApp ONTAP Select 实例**表中，查看所选用户帐户中供应的实例的列表。
 
 表 1. NetApp ONTAP Select 实例项
@@ -96,7 +96,7 @@ lastupdated: "2018-08-14"
 |日期|更改实例状态的日期和时间|
 |摘要|更改的详细信息|
 
-如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持](../vmonic/trbl_support.html)。
+如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持人员](../vmonic/trbl_support.html)。
 
 ## 查看 NetApp ONTAP Select 集群
 
