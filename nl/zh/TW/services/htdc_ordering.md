@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -26,8 +26,8 @@ lastupdated: "2018-07-20"
 
 ### 相關鏈結
 
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概觀](htcc_considerations.html)
-* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtcc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概觀](htdc_considerations.html)
+* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtdc.html)
 * [訂購、檢視及移除 Cloud Foundation 實例的服務](../sddc/sd_addingremovingservices.html)
 * [訂購、檢視及移除 vCenter Server 實例的服務](../vcenter/vc_addingremovingservices.html)
 * [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](../vcenter/vc_hybrid_addingremovingservices.html)

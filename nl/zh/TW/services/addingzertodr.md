@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-24"
 
 ---
 
 # Zerto on IBM Cloud 概觀
 
-Zerto on {{site.data.keyword.cloud}} 服務提供抄寫及災難回復功能。這些功能可以整合到部署供應項目，以保護及回復 {{site.data.keyword.cloud_notm}} 上 VMware 虛擬環境中的資料。
+Zerto on {{site.data.keyword.cloud}} 服務可將抄寫及災難回復功能整合到部署供應項目，以保護及回復 {{site.data.keyword.cloud_notm}} 上位於您 VMware 虛擬環境中的資料。
 
 ## Zerto on IBM Cloud 的技術規格
 
@@ -27,7 +27,7 @@ Zerto on {{site.data.keyword.cloud}} 服務提供抄寫及災難回復功能。�
 
 ### 儲存空間
 
-磁碟：100 GB (SAN)
+100 GB (SAN) 磁碟
 
 ### 網路
 

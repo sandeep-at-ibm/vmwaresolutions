@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -26,7 +26,7 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
 * 每部虛擬機器有 4、8 或 16 GB RAM（視授權選項而定）。
 
 ### 網路
-* 進行 HA 同步化的專用虛擬可延伸 LAN (VXLAN)。
+* 進行高可用性 (HA) 同步化的專用虛擬可延伸 LAN (VXLAN)。
 * 透過專用管理網路存取「資料流量管理 Shell (TMSH)」及「管理主控台」。
 
 ### 授權及費用
@@ -34,7 +34,7 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
 
 **重要事項：**您無法在安裝服務之後變更授權層次。若要變更授權層次，您必須移除現有服務，然後使用不同的授權選項來重新安裝服務。
 
-## 安裝 F5 on IBM Cloud 時的考量
+## F5 on IBM Cloud 的安裝考量
 
 在您安裝 F5 on {{site.data.keyword.cloud_notm}} 服務之前，請檢閱下列考量。
 
@@ -70,7 +70,7 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
 * 兩部作用中 ESXi 伺服器具有足夠的可用資源，因此，可以在具有 100% CPU 及 RAM 保留的每一部 ESXi 伺服器上管理一部 BIG-IP VE VM。
 * VMware vSphere HA 具有足夠的資源，可管理兩部具有 100% CPU 及 RAM 的 BIG-IP VM。
 
-基於這些需求，您必須規劃 F5 on {{site.data.keyword.cloud_notm}} 所需的空間。必要的話，訂購 F5 on {{site.data.keyword.cloud_notm}} 之前，請將 1-2 部 ESXi 伺服器新增至實例，以及（或）減少 vSphere HA CPU 保留以進行失效接手。
+基於這些需求，您必須規劃 F5 on {{site.data.keyword.cloud_notm}} 所需的空間。必要的話，在您訂購 F5 on {{site.data.keyword.cloud_notm}} 之前，請將 1-2 部 ESXi 伺服器新增至實例，以及（或）減少 vSphere HA CPU 保留以進行失效接手。
 
 ## F5 on IBM Cloud 訂購範例
 
@@ -84,7 +84,7 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
 
 每一部 ESXi 伺服器都有「16 個核心 * 2.1 GHz = 33.6 GHz」的容量，因此，如果兩部伺服器都作用中，而且每部伺服器上都至少有 16.8 GHz 的 CPU 及 16 GB RAM 可用，則符合前兩項需求。
 
-不過，依預設，在一開始部署 2 部 ESXi 伺服器的 vCenter Server 實例上，vSphere HA 會保留 50% 的 CPU 及 RAM 以進行失效接手，因此，我們只會有：
+不過，依預設，在一開始部署 2 部 ESXi 伺服器的 vCenter Server 實例上，vSphere HA 會保留 50% 的 CPU 及 RAM 以進行失效接手。在此範例中，可以使用下列項目：
 
 `50% 的 2 * 16 個核心 * 2.1 GHz = 33.6 GHz 可用`
 

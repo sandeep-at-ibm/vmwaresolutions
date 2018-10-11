@@ -31,5 +31,5 @@ lastupdated: "2018-07-19"
 ### 相關鏈結
 
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 概觀](spp_considerations.html)
-* [如何增加 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 後置部署的 vsnap 儲存空間](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)
+* [How to increase vsnap storage for IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)
 * [IBM Spectrum Protect Plus 文件](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
