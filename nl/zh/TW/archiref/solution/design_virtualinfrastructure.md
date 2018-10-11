@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -73,7 +73,7 @@ vSAN 會採用下列元件：
 
 ### vSAN 的虛擬網路設定
 
-在此設計中，vSAN 資料流量會遍訪專用的專用 VLAN 上的 ESXi 主機。連接至專用網路交換器的兩張網路配接卡，是在 vSphere 內配置為具有兩張網路配接卡作為上行鏈路的 vSphere 分散式交換器 (VDS)。配置給 vSAN VLAN 的專用 vSAN 核心埠群組位於 VDS 內。專用 VDS 已啟用巨大訊框 (MTU 9000)。
+在此設計中，vSAN 資料流量會遍訪專用的專用 VLAN 上的 ESXi 主機。連接至專用網路交換器的兩張網路配接卡，是在 vSphere 內配置為具有兩張網路配接卡作為上行鏈路的 vSphere Distributed Switch (vDS)。配置給 vSAN VLAN 的專用 vSAN 核心埠群組位於 vDS 內。專用 vDS 已啟用巨大訊框 (MTU 9000)。
 
 vSAN 不會在上行鏈路之間負載平衡資料流量。因此，其中一張配接卡處於作用中狀態，另一張配接卡處於待命狀態，以支援高可用性 (HA)。vSAN 的網路失效接手原則配置為實體網路埠之間的**明確失效接手**。
 
@@ -106,7 +106,7 @@ vSAN 設定的設定是根據在 {{site.data.keyword.cloud_notm}} 內部署 VMwa
 
 ## VMware NSX 設計
 
-網路虛擬化提供存在於虛擬層內的網路套版。網路虛擬化提供具有快速佈建、部署、重新配置及毀損隨需應變虛擬網路這類特性的架構。此設計使用 vSphere Distributed Switch (VDS) 及 VMware NSX for vSphere 來實作虛擬網路。
+網路虛擬化提供存在於虛擬層內的網路套版。網路虛擬化提供具有快速佈建、部署、重新配置及毀損隨需應變虛擬網路這類特性的架構。此設計使用 vDS 及 VMware NSX for vSphere 來實作虛擬網路。
 
 在此設計中，NSX Manager 部署於起始叢集裡。NSX Manager 會獲指派專用可攜式位址區塊中 VLAN 支援的 IP 位址，這是指定給管理元件並已配置[常見服務設計](design_commonservice.html)中所討論的 DNS 及 NTP 伺服器。NSX Manager 會使用表 2 所列的規格進行安裝。
 
@@ -129,7 +129,7 @@ vSAN 設定的設定是根據在 {{site.data.keyword.cloud_notm}} 內部署 VMwa
 
 在起始部署之後，{{site.data.keyword.cloud_notm}} 自動化會在起始叢集內部署三個 NSX Controller。每個控制器都會獲指派「專用 A」可攜式子網路中 VLAN 支援的 IP 位址，這是指定給管理元件的 IP 位址。此外，此設計還會建立 VM-VM 反親緣性規則，以在叢集的主機之間區隔控制器。起始叢集必須至少包含三個節點，以確保控制器具有高可用性。
 
-除了控制器之外，{{site.data.keyword.cloud_notm}} 自動化還會準備具有 NSX VIBS 的已部署 vSphere 主機，以透過「VXLAN 通道端點 (VTEP)」來使用虛擬化網路。VTEP 會獲指派「專用 A」可攜式 IP 位址範圍中 VLAN 支援的 IP 位址，這是指定給[實體基礎架構設計](design_physicalinfrastructure.html)之*表 1. VLAN 及子網路摘要* 中所列的 VTEP。VXLAN 資料流量位於未標記的 VLAN 上，並指派給專用 vSphere Distributed Switch (VDS)。
+除了控制器之外，{{site.data.keyword.cloud_notm}} 自動化還會準備具有 NSX VIBS 的已部署 vSphere 主機，以透過「VXLAN 通道端點 (VTEP)」來使用虛擬化網路。VTEP 會獲指派「專用 A」可攜式 IP 位址範圍中 VLAN 支援的 IP 位址，這是指定給[實體基礎架構設計](design_physicalinfrastructure.html)之*表 1. VLAN 及子網路摘要* 中所列的 VTEP。VXLAN 資料流量位於未標記的 VLAN 上，並指派給專用 vDS。
 
 隨後，會指派區段 ID 儲存區，並將叢集裡的主機新增至傳輸區域。傳輸區域中只會使用單點播送，因為 {{site.data.keyword.cloud_notm}} 內未配置「網際網路群組管理通訊協定 (IGMP)」探查。
 
@@ -139,13 +139,13 @@ vSAN 設定的設定是根據在 {{site.data.keyword.cloud_notm}} 內部署 VMwa
 
 ### 分散式交換器設計
 
-此設計使用最少數目的 vSphere Distributed Switch (VDS)。叢集裡的主機已連接至公用及專用網路。主機已配置兩台分散式虛擬交換器。兩台交換器的使用遵循區隔公用與專用網路之 {{site.data.keyword.cloud_notm}} 網路的作法。下圖顯示 VDS 設計。
+此設計使用最少數目的「vDS 交換器」。叢集裡的主機已連接至公用及專用網路。主機已配置兩台分散式虛擬交換器。兩台交換器的使用遵循區隔公用與專用網路之 {{site.data.keyword.cloud_notm}} 網路的作法。下圖顯示 vDS 設計。
 
 圖 3. 分散式交換器設計
 
-![分散式交換器設計](virtual_network_distributedswitch.svg "VDS 設計")
+![分散式交換器設計](virtual_network_distributedswitch.svg "vDS 設計")
 
-如圖所示，將一個 VDS 配置給公用網路連線功能 (SDDC-Dswitch-Public)，並將另一個 VDS 配置給專用網路連線功能 (SDDC-Dswitch-Private)。
+如圖所示，將一個 vDS 配置給公用網路連線功能 (SDDC-Dswitch-Public)，並將另一個 vDS 配置給專用網路連線功能 (SDDC-Dswitch-Private)。
 
 需要區隔不同類型的資料流量，以降低競用及延遲並增加安全。VLAN 用來區隔實體網路功能。
 
