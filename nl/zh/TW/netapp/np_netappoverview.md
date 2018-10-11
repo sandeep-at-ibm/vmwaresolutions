@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -41,7 +41,15 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目能提供儲
 
 ### 虛擬化管理
 
-這層包含 vCenter Server 虛擬應用裝置、NSX Manager、兩個 NSX ESG、3 個 NSX Controller、Platform Services Controller (PSC) 虛擬應用裝置、vCenter Server Appliance (vCSA) 及 IBM CloudDriver 虛擬伺服器實例 (VSI)。
+虛擬化管理層包含下列元件：
+
+* vCenter Server 虛擬應用裝置
+* NSX Manager
+* 兩個 NSX Edge Services 閘道 (ESG)
+* 三個 NSX 控制器
+* Platform Services Controller (PSC) 虛擬應用裝置
+* vCenter Server Appliance (vCSA)
+* IBM CloudDriver 虛擬伺服器實例 (VSI)。
 
 NetApp ONTAP Select 是在 VMware 叢集裡執行，並將主機上的本端儲存空間虛擬化。NetApp ONTAP Select 部署在專用模型中，其中其他工作負載預期不會與其共用叢集。因此，NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目的硬體配置僅根據 NetApp ONTAP Select 的需求調整大小。
 
@@ -53,7 +61,7 @@ NetApp ONTAP Select 實例中包含下列元件。
 
 ### 儲存空間
 
-* 三個選項：**高效能（中型）**、**高效能（大型）**及**高容量**
+* 在**高效能（中型）**、**高效能（大型）**及**高容量**之間進行選擇
 * 具有緊急備用的 RAID 5
 * 兩個 1-TB SATA 磁碟機 ESXi OS - RAID 1
 * 管理資料儲存庫 - 500 GB 用於管理 VM
@@ -88,7 +96,7 @@ NetApp ONTAP Select 實例中包含下列元件。
 
 ### 授權及費用
 
-*  四個超值/標準版 NetApp ONTAP Select 授權（由使用者提供）
+*  四個超值或標準版 NetApp ONTAP Select 授權（由使用者提供）
 *  VMware vSphere 6.5 Enterprise Plus 版本
 *  VMware vCenter Server 6.5
 *  VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
@@ -102,6 +110,10 @@ NetApp ONTAP Select 實例中包含下列元件。
 *  重新啟動服務
 
    這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
+
+## 防火牆考量
+
+如果您使用防火牆，則必須針對來自 {{site.data.keyword.IBM}} CloudDriver 虛擬伺服器實例 (VSI) 及 SDDC Manager 虛擬機器 (VM) 的所有通訊配置規則。這些規則必須容許所有通訊協定在 IP 位址 `10.0.0.0/8` 及 `161.26.0.0/16` 上進行通訊。這類防火牆的範例包含 NSX Distributed Firewall (DFW) 或 Vyatta 防火牆。
 
 ### 相關鏈結
 
