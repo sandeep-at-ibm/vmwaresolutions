@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -37,11 +37,11 @@ lastupdated: "2018-08-27"
 
 为了使 {{site.data.keyword.vmwaresolutions_short}} 控制台上的查看和工作达到最佳效果，请将屏幕分辨率设置为至少 1024 x 500 像素（宽 x 高）。
 
-### 用户账户
+### 用户帐户
 
 您需要 {{site.data.keyword.cloud_notm}} 帐户和 {{site.data.keyword.cloud_notm}} 基础架构 (SoftLayer) 帐户。 这些帐户必须满足某些需求。
 
-   表 1. 需要的用户账户
+   表 1. 需要的用户帐户
    <table>
    <tr>
       <th>帐户</th>
@@ -132,8 +132,12 @@ lastupdated: "2018-08-27"
        <td>HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服务通过集成密钥管理提供高强度加密功能，以确保工作负载在整个生命周期中的安全。此服务可以提供操作系统级别和数据级别的加密，这意味着可以对工作负载中的任何目录、文件夹或文件进行加密和解密。</td>
     </tr>
     <tr>
+       <td>[HyTrust KeyControl on IBM Cloud](services/htkc_considerations.html)</td>
+       <td>HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 服务通过自动化和简化加密密钥的生命周期来简化已加密工作负载的管理工作。该服务可以使用符合 FIPS 140-2 的加密来轻松管理大批加密密钥。</td>
+    </tr>
+    <tr>
        <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
-       <td>{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 服务会将微服务和容器的强大功能引入到 {{site.data.keyword.cloud_notm}} 上的 VMware 环境中。使用此服务，可以将内部部署中您所熟悉的相同 VMware 和 {{site.data.keyword.cloud_notm}} Private 操作模型和工具扩展到 {{site.data.keyword.cloud_notm}} 中。</td>
+       <td>{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 服务会将微服务和容器的强大功能引入到 {{site.data.keyword.cloud_notm}} 上的 VMware 环境中。使用此服务，可以将内部部署中您熟悉的 VMware 和 {{site.data.keyword.cloud_notm}} Private 操作模型和工具扩展到 {{site.data.keyword.cloud_notm}} 中。</td>
     </tr>
     <tr>
        <td>[IBM Spectrum Protect Plus on IBM Cloud](services/spp_considerations.html)</td>
