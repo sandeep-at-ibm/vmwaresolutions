@@ -4,21 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-24"
 
 ---
 
 # 连接的存储器基础架构设计
 
-{{site.data.keyword.vmwaresolutions_full}} 提供了可在全球范围内的 {{site.data.keyword.CloudDataCents_notm}} 中自动部署的 VMware 技术。在 {{site.data.keyword.cloud_notm}} 解决方案组合中，基本 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 产品由多达 20 个 vSphere 主机、一个 Platform Services Controller (PSC) 和一个 vCenter Server Appliance 组成。一个 vCenter Server Appliance 最多可管理 100 个主机和 1,000 个虚拟机。
+{{site.data.keyword.vmwaresolutions_full}} 提供了可在全球范围内的 {{site.data.keyword.CloudDataCents_notm}} 中自动部署的 VMware 技术。在 {{site.data.keyword.cloud_notm}} 解决方案组合中，基本 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 产品由多达 10 个集群组成（每个集群包含最多 59 个 vSphere 主机）、一个 Platform Services Controller (PSC) 和一个 vCenter Server Appliance 组成。一个 vCenter Server Appliance 最多可管理 400 个主机和 4,000 个虚拟机。
 
-此处介绍的体系结构通过将连接的存储器添加为环境的共享存储设备，来补充 vCenter Server 解决方案。连接的存储设备与 vCenter Server 部署位于相同的 {{site.data.keyword.CloudDataCent_notm}} 中，并且包含单个网络文件系统 (NFS) 共享或来自 {{site.data.keyword.cloud_notm}} 的多个 NFS 导出。
+此处介绍的体系结构通过将连接的存储器添加为环境的共享存储设备，以补充 vCenter Server 解决方案。连接的存储设备与 vCenter Server 部署位于相同的 {{site.data.keyword.CloudDataCent_notm}} 中，并且包含单个网络文件系统 (NFS) 共享或来自 {{site.data.keyword.cloud_notm}} 的多个 NFS 导出。
 
-下图描述了 NetApp ONTAP Select on vCenter Server 部署的总体体系结构。
+下图描述了 vCenter Server 部署上连接的存储器的总体体系结构。
 
-图 1. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 的高级别体系结构
+图 1.{{site.data.keyword.cloud_notm}} 上连接的存储器的高级别体系结构
 
-![NetApp ONTAP Select 体系结构](../../netapp/np_architecture.svg "NetApp ONTAP Select on IBM Cloud 的高级别体系结构")
+![连接的存储器的体系结构](../solution/physical_nfs.svg "IBM Cloud 上连接的存储器的高级别体系结构")
 
 ## 物理基础架构设计
 
