@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -37,7 +37,7 @@ lastupdated: "2018-07-18"
 
 在 {{site.data.keyword.vmwaresolutions_short}} 主控台上，您可以使用新增及移除 ESXi 伺服器功能，來擴充及縮減實例的容量。此外，還可以使用在受管理環境中套用更新及升級 VMware 元件這類的生命週期管理功能。
 
-如需有關架構的詳細資料，請參閱[解決方案概觀](../archiref/solution/solution_overview.html)。
+如需架構的相關資訊，請參閱[解決方案概觀](../archiref/solution/solution_overview.html)。
 
 ## Cloud Foundation 實例的技術規格
 
@@ -63,15 +63,14 @@ Cloud Foundation 實例中包括下列元件。
 * 三個 VLAN（虛擬 LAN）：一個公用 VLAN 和兩個專用 VLAN
 * 用於出埠 HTTPS 管理資料流量的安全管理服務「VMware NSX Edge Services 閘道 (ESG)」，其由 IBM 部署為管理網路拓撲的一部分。IBM 管理虛擬機器利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[管理服務 NSX Edge 是否有安全風險？](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **重要事項**：您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 Cloud Foundation 實例。此外，請注意，使用防火牆或停用外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
-
+  **重要事項**：您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 Cloud Foundation 實例。此外，使用防火牆或停用外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
 
 * 如果您有現有叢集，並且其中具有現行 VMware vSphere 版本所支援的 ESXi 伺服器，則會自動啟用 EVC（加強型 vMotion 相容性）特性。EVC 提供叢集裡所有 ESXi 伺服器的 vMotion 相容性，方法是確保叢集裡的所有 ESXi 伺服器都向虛擬機器公開一組相同的 CPU 特性。透過使用 EVC，即使 ESXi 伺服器上的實際 CPU 可能不同，虛擬機器還是可以在叢集的任何 ESXi 伺服器之間移轉。
 
 ### 虛擬伺服器實例
 
 已訂購下列 VSI（虛擬伺服器實例）：
-* 多站台配置支援所需之 Microsoft Active Directory (AD) 及「網域名稱系統 (DNS)」服務的 VSI。此 VSI 規格為：Windows 2012 R2（8 GB RAM/2 個 CPU 核心/100 GB 磁碟/雙重 1 Gbps 專用上行鏈路）。
+* Microsoft Active Directory (AD) 及「網域名稱系統 (DNS)」服務的 VSI。多站台配置支援需要 VSI。此 VSI 規格為：Windows 2012 R2（8 GB RAM/2 個 CPU 核心/100 GB 磁碟/雙重 1 Gbps 專用上行鏈路）。
 * IBM CloudBuilder 的 VSI，在完成實例部署之後會關閉它。
 * （如果已訂購 Veeam on {{site.data.keyword.cloud_notm}}）已訂購 Veeam 備份服務的 VSI。
 
@@ -81,7 +80,7 @@ Cloud Foundation 實例中包括下列元件。
 * 兩個 1-TB SATA 開機磁碟
 * 兩個 960-GB SSD（固態磁碟）快取磁碟
 * 一個 RAID 磁碟控制器
-* 僅針對**自訂**配置，您可以根據需求來設定磁碟機數目以及磁碟類型和容量。
+* 僅針對**自訂**配置，您可以根據需求來設定磁碟機數目以及磁碟類型和容量。同時，您也具有「高效能 Intel Optane」選項，可提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。「高效能 Intel Optane」選項取決於 CPU 型號。
 * 僅針對**預先配置**、**小型**配置：兩個 1.9 TB SSD 容量磁碟
 * 僅針對**預先配置**、**大型**配置：四個 3.8 TB SSD 容量磁碟
 
@@ -96,7 +95,7 @@ Cloud Foundation 實例中包括下列元件。
 
 ## Cloud Foundation 擴充節點的技術規格
 
-針對 {{site.data.keyword.cloud_notm}} 帳戶中的下列元件，每一個 Cloud Foundation 擴充節點都會部署及產生費用。
+每個 Cloud Foundation 擴充節點會部署下列元件，並在您的 {{site.data.keyword.cloud_notm}} 帳戶中收取其費用。
 
 ### 擴充節點的硬體
 

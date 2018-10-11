@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-14"
 
 ---
 
@@ -40,11 +40,11 @@ lastupdated: "2018-08-02"
 
 依預設，叢集的 {{site.data.keyword.CloudDataCent}} 位置設為 Cloud Foundation 實例的 {{site.data.keyword.CloudDataCent_notm}}。您可以將叢集部署至不同於已部署實例的 {{site.data.keyword.CloudDataCent_notm}}，但您必須確定兩個 {{site.data.keyword.CloudDataCents_notm}} 之間的網路延遲少於 150 毫秒。若要檢查網路延遲，您可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 之類的工具。
 
-您可以使用的資料中心取決於針對部署所選取的 Bare Metal Server 配置。如果您選取**自訂**配置，則也可以在選取的資料中心包含其他 Pod 時，將叢集部署至不同的 {{site.data.keyword.cloud}} 基礎架構 Pod。部署起始實例的預設 {{site.data.keyword.cloud_notm}} 基礎架構 Pod 達到其容量上限時，這十分有用。
+您可以使用的資料中心取決於針對部署所選取的 Bare Metal Server 配置。如果您選取**自訂**配置，則也可以在選取的資料中心包含其他 Pod 時，將叢集部署至不同的 {{site.data.keyword.cloud}} 基礎架構 Pod。部署起始實例的預設 {{site.data.keyword.cloud_notm}} 基礎架構 Pod 達到其容量上限時，此配置非常實用。
 
 **附註：**標準化**小型**及**大型** Bare Metal Server 配置會使用無法變更的預設 Pod。
 
-如果您將叢集部署至不同的資料中心或 Pod，則會訂購三個額外 VLAN 以與已訂購的 {{site.data.keyword.baremetal_short}} 搭配使用。
+如果您將叢集部署至不同的資料中心或 Pod，則會訂購其他三個 VLAN，以與已訂購的 {{site.data.keyword.baremetal_short}} 搭配使用。
 
 ### Bare Metal Server 設定
 
@@ -77,7 +77,14 @@ lastupdated: "2018-08-02"
 * 對於**小型**配置，會訂購兩個 1.9 TB SSD SED 的磁碟機。
 * 對於**大型**配置，會訂購四個 3.8 TB SSD SED 的磁碟機。
 
-對於**自訂**的 Bare Metal Server 配置，您可以指定符合您儲存空間需求的 vSAN 容量磁碟數目以及磁碟類型和大小，來自訂 vSAN 儲存空間。
+對於**自訂** Bare Metal Server 配置，您可以指定下列設定，以自訂 vSAN 儲存空間：
+
+* **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
+* **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
+* **vSAN 快取磁碟的磁碟類型**：選取所需快取磁碟的選項。
+
+    **附註**：如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。此選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲及更高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
+* **vSAN 快取磁碟數目**：指定您要新增的快取磁碟數目。
 
 ### 授權設定
 
@@ -99,8 +106,8 @@ lastupdated: "2018-08-02"
    * 如果您已選取**自訂**，則請選取 **CPU 型號**及 **RAM** 大小。
    * 如果您已選取**預先配置**，則請選取 **Bare Metal Server 配置**。
 7. 完成儲存空間配置：
-   * 如果您已針對 Bare Metal Server 配置選取**自訂**，則請指定 **vSAN 容量磁碟數目**及 **vSAN 容量磁碟的磁碟類型及大小**。
-   * 如果您已針對 Bare Metal Server 配置選取**預先配置**，則請注意無法變更**小型**及**大型** Bare Metal Server 配置的儲存空間設定。
+   * 如果您已針對 Bare Metal Server 配置選取**預先配置**，則無法變更**小型**及**大型** Bare Metal Server 配置的儲存空間設定。
+   * 如果您已針對 Bare Metal Server 配置選取**自訂**，請指定 vSAN 容量和快取磁碟的磁碟類型以及磁碟數目。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
 8. 指定如何提供您的授權碼：
    * 對於「事業夥伴」使用者，包括 vSphere 授權（Enterprise Plus 版本）及 vSAN 授權，並可代表您購買。不過，您必須指定 vSAN 授權的版本。
    * 對於非「事業夥伴」使用者，您可以選取下列其中一個選項：
@@ -123,7 +130,7 @@ lastupdated: "2018-08-02"
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格上的**已部署的實例**。
 2. 在 **Cloud Foundation 實例**表格中，按一下實例來檢視其中的叢集。
-3. 在左導覽窗格上，按一下**基礎架構**。在 **CLUSTERS** 表格中，檢視叢集的相關摘要：
+3. 在左導覽窗格上，按一下**基礎架構**。在 **CLUSTERS** 表格中，檢視叢集的摘要：
    * **名稱**：叢集的名稱。
    * **ESXi 伺服器**：叢集裡的 ESXi 伺服器數目。
    * **CPU**：叢集裡 ESXi 伺服器的 CPU 規格。
@@ -164,13 +171,13 @@ lastupdated: "2018-08-02"
         <dt class="dt dlterm">正在刪除</dt>
         <dd class="dd">正在刪除 ESXi 伺服器。</dd>
         </dl>
-   * vSAN 授權及 vSphere 授權的詳細資料。只有在您選擇於叢集訂購期間使用自己的 VMware 授權 (BYOL) 時，才能使用 vSphere 授權詳細資料：
+   * vSAN 授權及 vSphere 授權的詳細資料。只有在您選擇於訂購叢集時使用自己的 VMware 授權 (BYOL) 時，才能使用 vSphere 授權詳細資料。
        * **授權類型**：vSAN 授權或 vSphere 授權。
        * **訂單類型**：授權由使用者所提供 (BYOL)，或代表使用者購買授權。
        * **授權版本**：授權的版本。
        * **授權碼**：授權碼。
        * **總容量 (CPU)**：授權所提供的總容量或 CPU 數目。
-       * **可用容量 (CPU)**：授權中目前可用的容量。
+       * **可用容量 (CPU)**：授權中可用的容量。
 
 ## 從 Cloud Foundation 實例中刪除叢集
 
@@ -181,8 +188,8 @@ lastupdated: "2018-08-02"
 * 使用此程序，從部署在 2.3 版或更新版本的實例中刪除叢集。
 * 對於部署在 2.2 版或更早版本實例的叢集，您必須將實例升級至 2.3 版，才能刪除您新增至實例的叢集。
 * 您一次可以刪除單一叢集。若要刪除多個叢集，您必須依序執行它；請先等待刪除前一個叢集，再嘗試刪除下一個叢集。
-* 刪除叢集之前，請確定叢集裡的所有節點都已開啟電源且正常運作。
-* 當您刪除叢集時，也會一併刪除叢集裡的所有 VM（虛擬機器），且無法回復。如果您要保留 VM，請將它們移轉至其他叢集。
+* 在您刪除叢集之前，請確定叢集中的所有節點都已開啟電源且正常運作。
+* 當您刪除叢集時，也會一併刪除叢集中的所有 VM（虛擬機器），且無法回復。如果您要保留 VM，請將它們移轉至其他叢集。
 * 無法刪除預設叢集。
 
 ## 從 Cloud Foundation 實例中刪除叢集的程序

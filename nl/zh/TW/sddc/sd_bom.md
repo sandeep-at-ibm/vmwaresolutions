@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -32,32 +32,31 @@ lastupdated: "2018-07-19"
 
 |製造商       |元件                                     |版本         |
 |:-------------|:-----------------------------------------|:-------------|
-|VMware       |vSphere ESXi                             |6.5 U1g（已套用修補程式層次 ESXi650-201803001 的 ESXi 6.5u1）|
-|VMware       |vCenter Server Appliance                 |6.5 Update 1g |
-|VMware       |Platform Services Controller             |6.5 Update 1g |
+|VMware       |vSphere ESXi                             | 6.5 Update 2c（最多 ESXi650-201808001 修補程式層次）|
+|VMware       |vCenter Server Appliance                 | 6.5 Update 2c |
+|VMware       |Platform Services Controller             | 6.5 Update 2c |
 |VMware       |vSAN                                     |6.6.1        |
-|VMware       |NSX for vSphere                          |6.3.5        |
+|VMware       |NSX for vSphere                          |6.4.1        |
 |VMware       |SDDC Manager                             |2.4          |
-|IBM          |CloudDriver                              |2.5          |
 |Microsoft    |Windows Server 標準版（64 位元）         |2012R2       |
 
 ## ESXi 伺服器的進階配置設定
 
-請檢閱下表，以瞭解 ESXi 伺服器上所套用之進階配置設定的概觀，視 Cloud Foundation 實例部署在 2.2 版或更新版本，還是從舊版 2.1 版或更早版本升級至 2.2 版或更新版本。
+請檢閱下表，以取得套用至 ESXi 伺服器的進階配置設定概觀。這些設定根據 Cloud Foundation 實例是部署在（或升級至）2.2 版或更新版本中，還是從舊版（2.1 版或更早版本）升級至 2.2 版或更新版本中，而有所不同。
 
 表 3. Cloud Foundation 實例及叢集的 ESXi 伺服器進階配置設定
 
-|配置設定|如果新部署至 2.2 版或更新版本       |如果從 2.1 版或更早版本升級      |   
+|配置設定              |如果新部署至 2.2 版或更新版本       |如果從 2.1 版或更早版本升級      |   
 |:------------- |:------------- |:------------- |
-|TCP/IP 資料堆大小|**TcpipHeapSize** = 32 |未設定  |
-|TCP/IP 資料堆上限|**TcpipHeapMax** = 1536 |未設定  |  
+|TCP/IP 資料堆大小 |**TcpipHeapSize** = 32 |未設定  |
+|TCP/IP 資料堆上限 |**TcpipHeapMax** = 1536 |未設定  |  
 |磁區數目上限|**MaxVolumes** = 256 |**/NFS/MaxVolumes** 且 **/NFS41/MaxVolumes** = 256 |  
 |活動訊號失敗次數上限|**HeartbeatMaxFailures** = 10 |未設定  |  
-|活動訊號頻率|**HeartbeatFrequency** = 12 |未設定  |  
-|活動訊號逾時|**HeartbeatTimeout** = 5 |未設定  |
-|佇列深度上限|**MaxQueueDepth** = 64 |未設定  |
+|活動訊號頻率      |**HeartbeatFrequency** = 12 |未設定  |  
+|活動訊號逾時      |**HeartbeatTimeout** = 5 |未設定  |
+|佇列深度上限      |**MaxQueueDepth** = 64 |未設定  |
 |佇列已滿樣本大小|**QFullSampleSize** = 32 |**/Disk/QFullSampleSize** = 32 |
-|佇列已滿臨界值|**QFullThreshold** = 8 |**/Disk/QFullThreshold** = 8 |
+|佇列已滿臨界值    |**QFullThreshold** = 8 |**/Disk/QFullThreshold** = 8 |
 
 **附註**：
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服務需要 **MaxVolumes** 設定，因為該服務可能會在 ESXi 伺服器上使用超過預設的 NFS 裝載數目。

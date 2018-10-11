@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -16,9 +16,9 @@ lastupdated: "2018-07-24"
 
 若要檢閱 Cloud Foundation 實例中所含的網路元件，請參閱 [Cloud Foundation 實例的技術規格](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 
-## NSX 防火牆考量
+## 防火牆考量
 
-如果您使用 NSX Distributed Firewall (DFW)，則必須針對來自 {{site.data.keyword.IBM}} CloudDriver 虛擬伺服器實例 (VSI) 及 SDDC Manager 虛擬機器 (VM) 的所有通訊配置規則，以容許所有通訊協定在 IP 位址 `10.0.0.0/8` 及 `161.26.0.0/16` 上進行通訊。
+如果您使用防火牆，則必須針對來自 {{site.data.keyword.IBM}} CloudDriver 虛擬伺服器實例 (VSI) 及 SDDC Manager 虛擬機器 (VM) 的所有通訊配置規則。這些規則必須容許所有通訊協定在 IP 位址 `10.0.0.0/8` 及 `161.26.0.0/16` 上進行通訊。這類防火牆的範例包含 NSX Distributed Firewall (DFW) 或 Vyatta 防火牆。
 
 ## 搭配使用 VMware NSX 與 VM
 
@@ -26,9 +26,9 @@ lastupdated: "2018-07-24"
 
 不過，如果您的工作負載 VM 需要彼此通訊，並存取網際網路，則您必須負責配置 NSX，以供 VM 使用。
 
-如需如何設定 NSX 的相關資訊：
-* 若為主要（單一）Cloud Foundation 實例，請參閱[在 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} 上設定工作負載 VM 的 NSX](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/)。
-* 若為多站台 Cloud Foundation 實例，請參閱[在 {{site.data.keyword.cloud_notm}} 中安全地連接專用 VMware 工作負載](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html)。
+如需如何設定 NSX 的相關資訊，請參閱下列主題：
+* 若為主要（單一）Cloud Foundation 實例，請參閱 [Setting up NSX for workload VMs on VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/)。
+* 針對多站台 Cloud Foundation 實例，請參閱：[Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html)。
 
 ## 變更 NSX 元件密碼時的考量
 

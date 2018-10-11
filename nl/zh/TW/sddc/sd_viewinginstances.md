@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-07-20"
 若要檢視針對使用者帳戶佈建之所有 Cloud Foundation 實例的摘要，請完成下列步驟：
 
 1. 在 {{site.data.keyword.vmwaresolutions_full}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
-2. 在主控台的右上角，按一下您的虛擬人像，然後按一下**帳戶**欄位，選取您要檢查其實例的使用者帳戶。 
+2. 從主控台橫幅中，按一下您的使用者帳戶圖示，然後按一下**帳戶**欄位，選取您要檢查其實例的使用者帳戶。
 3. 在 **Cloud Foundation 實例**表格中，檢視您的實例清單：
 
 表 1. Cloud Foundation 實例項目
@@ -68,7 +68,7 @@ lastupdated: "2018-07-20"
 |DNS、SSO 網域|SSO 網域是 vSphere Single Sign-On 網域。針對值為 <samp class="ph codeph">vsphere.local</samp> 的所有已部署 Cloud Foundation 實例，SSO 網域名稱是固定的。|
 |DNS、子網域|子網域是本端 Cloud Foundation 實例主機名稱所在根網域名稱的 DNS 子網域名稱。子網域名稱的格式為 <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>。|
 |SDDC Manager 版本 |實例的 SDDC Manager 版本 |
-|狀態|實例的狀態<br><br>顯示的資訊會提供關於部署進度或對實例所採取動作的更新。如果發生問題，可能會顯示訊息，以協助您調查及解決問題。|
+|狀態|實例的狀態<br><br>顯示的資訊會提供關於部署進度或對實例所採取動作的更新。發生問題時，可能會顯示訊息，以協助您調查及解決問題。|
 
 ## 檢視 Cloud Foundation 實例的存取資訊
 

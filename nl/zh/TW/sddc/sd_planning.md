@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
 # Cloud Foundation 實例的需求及規劃
 
-請先檢閱下列需求，再訂購 VMware Cloud Foundation 實例。請根據 {{site.data.keyword.CloudDataCent}} 位置、工作負載容量需求及其他服務需求來規劃實例。
+請先檢閱下列需求，再訂購 VMware Cloud Foundation 實例。請根據 {{site.data.keyword.CloudDataCent}} 位置、工作負載容量需求及服務需求來規劃實例。
 
 ## IBM Cloud 帳戶需求
 
@@ -67,7 +67,7 @@ Cloud Foundation 部署具有嚴格的實體基礎架構需求。因此，您只
 
 ## 管理元件的備份
 
-您負責維護及確保所有實例元件的可用性。強烈建議您規劃所有管理元件的備份或高可用性。如需相關資訊，請參閱[備份元件](../archiref/solution/solution_backingup.html)。
+您負責維護及確保所有實例元件的可用性。建議您規劃所有管理元件的備份或高可用性。如需相關資訊，請參閱[備份元件](../archiref/solution/solution_backingup.html)。
 
 ## Cloud Foundation 實例的服務
 
@@ -75,7 +75,7 @@ Cloud Foundation 部署具有嚴格的實體基礎架構需求。因此，您只
 
 ## 容量考量
 
-如需容量資訊及考量，請參閱[調整容量](../archiref/solution/solution_scaling.html)。
+如需容量的相關資訊，請參閱[調整容量](../archiref/solution/solution_scaling.html)。
 
 ### 相關鏈結
 
