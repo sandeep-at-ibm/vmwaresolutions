@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-20"
 
 要查看针对用户帐户供应的所有 VMware Federal 实例的摘要，请完成以下步骤：
 1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**部署的实例**。
-2. 在控制台的右上角，单击您的头像，然后单击**帐户**字段以选择要检查其实例的用户帐户。 
+2. 在控制台条幅中，单击您的用户帐户图标，然后单击**帐户**字段以选择要检查其实例的用户帐户。
 3. 在 **vCenter Server** 表中，查看所选用户帐户中供应的实例的列表。
 
 表 1. VMware Federal 实例项
@@ -26,7 +26,7 @@ lastupdated: "2018-07-20"
 |名称|实例的名称。|
 |版本|实例部署或升级到的发行版版本。|  
 |位置|托管实例的 {{site.data.keyword.CloudDataCent_notm}}。|  
-|创建时间|创建实例的日期和时间。| 
+|创建时间|创建实例的日期和时间。|
 |状态|实例的状态。|
 
 实例可以有一系列状态。
@@ -103,7 +103,7 @@ lastupdated: "2018-07-20"
 
 ## 发生错误时要执行的操作
 
-如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持](../vmonic/trbl_support.html)。
+如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持人员](../vmonic/trbl_support.html)。
 
 ## 后续步骤
 
@@ -113,7 +113,7 @@ lastupdated: "2018-07-20"
 
 查看以下主题，以获取有关帮助您完成登录指示信息的信息：
 *  有关访问 vSphere Web Client 之前的需求和必需步骤，请参阅[连接到 vSphere Web Client 时发生超时](../vmonic/trbl_timeout_vc_console.html)。
-*  有关使用 VPN 登录到 {{site.data.keyword.cloud_notm}} 基础架构专用网络的访问点的列表，请参阅 [VPN 访问](http://www.softlayer.com/vpn-access){:new_window}。
+*  有关使用 VPN 登录到 {{site.data.keyword.cloud_notm}} 基础架构专用网络的访问点列表，请参阅 [VPN 访问](http://www.softlayer.com/vpn-access){:new_window}。
 *  如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](../vmonic/trbl_deploy_ovf.html)。
 
 ### 相关链接
@@ -121,4 +121,4 @@ lastupdated: "2018-07-20"
 * [VMware Federal on {{site.data.keyword.cloud_notm}} 概述](vc_fed_overview.html)
 * [订购 VMware Federal 实例](vc_fed_orderinginstance.html)
 * [删除 VMware Federal 实例](vc_fed_deletinginstance.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)

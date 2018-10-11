@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -14,13 +14,13 @@ VMware vCenter Server on {{site.data.keyword.cloud}} 是一种托管的专用云
 
 在许多情况下，整个环境可以在一天内供应完，而裸机基础架构可根据需要，快速、弹性地向上和向下扩展计算容量。
 
-部署后，可以通过在 {{site.data.keyword.slportal}} 中订购更多 NFS（网络文件系统）文件共享来增加共享存储器，并可以手动连接集群中所有 ESXi 服务器上的共享存储器。如果需要专用存储器，可使用同时在高性能（所有 SSD）和高容量（所有 SATA）配置中提供的 [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html)。
+部署后，可以通过在 {{site.data.keyword.slportal}} 中订购更多 NFS（网络文件系统）文件共享，并手动将其连接到集群中的所有 ESXi 服务器，从而增加共享存储器。如果需要专用存储器，可使用同时在高性能（所有 SSD）和高容量（所有 SATA）配置中提供的 [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html)。
 
 VMware vSAN 还可作为专用存储器选项提供。要增大 vSAN 集群的基于 vSAN 的存储容量，可以在部署后添加更多 ESXi 服务器。
 
-如果购买了 IBM 提供的 VMware 许可，那么可以将 VMware NSX Base Edition 升级到 Advanced 或 Enterprise Edition，并且可以购买更多 VMware 组件，例如 VMware vRealize Operations。
+如果购买了 IBM 提供的 VMware 许可，那么可以将 VMware NSX Base Edition 升级到 Advanced Edition 或 Enterprise Edition，并且可以购买更多 VMware 组件，例如 VMware vRealize Operations。
 
-如果要卸载虚拟化、访客操作系统或应用程序层的日常操作和维护，可以添加 IBM 受管服务。另外还有 {{site.data.keyword.cloud_notm}} 专业服务团队可通过迁移、实施、规划和上线服务，帮助您加速迁移到云。
+如果要卸载虚拟化、访客操作系统或应用程序层的日常操作和维护，可以添加 IBM 管理的服务。另外还有 {{site.data.keyword.cloud_notm}} 专业服务团队可通过迁移、实施、规划和上线服务，帮助您加速迁移到云。
 
 ## vCenter Server 体系结构
 
@@ -48,7 +48,7 @@ VMware vSAN 还可作为专用存储器选项提供。要增大 vSAN 集群的�
 
 基本产品总计需要 38 个 vCPU 和 67 GB vRAM，这些均保留用于虚拟化管理层。VM 的其余主机容量取决于若干因素，例如超额预订比率、VM 大小设置和工作负载性能需求。
 
-有关体系结构的详细信息，请参阅 [{{site.data.keyword.vmwaresolutions_short}} 体系结构参考](../archiref/solution/solution_overview.html)。
+有关体系结构的更多信息，请参阅 [{{site.data.keyword.vmwaresolutions_short}} 体系结构参考](../archiref/solution/solution_overview.html)。
 
 ## vCenter Server 实例的技术规范
 
@@ -74,32 +74,37 @@ vCenter Server 实例中包含以下组件。
 订购了以下联网组件：
 *  10 Gbps 双公用和专用网络上行链路
 *  三个 VLAN（虚拟 LAN）：一个公用 VLAN 和两个专用 VLAN
-*  一个 VXLAN（虚拟可扩展 LAN），带 DLR（分布式逻辑路由器），用于处理连接到第 2 层 (L2) 网络的本地工作负载之间的潜在东-西通信。VXLAN 部署为样本路由拓扑，可以基于该拓扑进行构建，或者进行修改或将其除去。还可以通过将其他 VXLAN 连接到 DLR 上的新逻辑接口来添加安全区域。
+*  一个 VXLAN（虚拟可扩展 LAN），带 DLR（分布式逻辑路由器），用于处理连接到第 2 层 (L2) 网络的本地工作负载之间的潜在东-西通信。VXLAN 部署为样本路由拓扑，可以基于该拓扑进行构建，或者进行修改或将其除去。还可以通过将额外的 VXLAN 连接到 DLR 上的新逻辑接口来添加安全区域。
 *  两个 VMware NSX Edge 服务网关：
   * 用于出站 HTTPS 管理流量的安全管理服务 VMware NSX Edge 服务网关 (ESG)，由 IBM 部署为管理联网拓扑的一部分。IBM 管理虚拟机使用此 ESG 与自动化相关的特定外部 IBM 管理组件进行通信。有关更多信息，请参阅[配置网络以使用客户管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
-    **重要信息**：此 ESG 对您不可访问，因此您无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server 实例。此外，请注意，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信将导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
-  * 用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX Edge 服务网关，由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
+    **重要信息**：此 ESG 对您不可访问，因此您无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server 实例。此外，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信可能导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
+  * 用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX Edge 服务网关。此网关由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 ### 虚拟服务器实例
 
 订购了以下虚拟服务器实例 (VSI)：
 * 用于 IBM CloudBuilder 的 VSI，在完成实例部署后关闭。
 * （对于实例 V2.2 和更高版本）可以选择在管理集群中部署单个 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或两个高可用性 Microsoft Windows VM，以帮助增强安全性和稳健性。
-* （对于实例 V1.9 到 V2.1）用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server VSI，充当在其中注册主机和虚拟机的实例的 DNS，已部署并且可进行查找。
+* （对于实例 V1.9 到 V2.1）用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server VSI 已部署并且可进行查找。此 VSI 充当在其中注册主机和虚拟机的实例的 DNS。
 * （对于实例 V1.8 和更低版本）用于基于快照备份管理组件的 VSI，在完成实例部署后会保持运行。
 
 ### 存储
 
 在初始部署期间，可以选择 vSAN 或 NFS 存储器选项。
 
-vSAN 选项提供定制配置，具有各种磁盘类型和数量的选项：
+#### vSAN 存储器
+
+vSAN 选项提供定制配置，具有各种磁盘类型、大小和数量的选项：
 * 磁盘数量：2、4、6 或 8 个
 * 存储磁盘：960 GB SSD SED、1.9 TB SSD SED 或 3.8 TB SSD SED。
 
-  此外，每个主机还会订购 2 个 960 GB 高速缓存磁盘。
+  此外，每个主机还会订购两个 960 GB 高速缓存磁盘。
 
-  **注**：3.8 TB SSD（固态磁盘）驱动器在数据中心内基本可用后就会受到支持。
+  **注**：3.8 TB SSD（固态磁盘）驱动器在数据中心内普遍可用后就会受到支持。
+* 高性能 Intel Optane 选项，用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘。此选项取决于 CPU 型号。
+
+#### NFS 存储器
 
 NFS 选项为工作负载提供定制的共享文件级别存储器，具有各种大小和性能的选项：
 * 大小：1、2、4、8 或 12 TB
@@ -131,7 +136,7 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 * 一个支持和服务费用
 * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在控制台外部通过其他任何方法来进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+**重要信息**：您只能通过 {{site.data.keyword.vmwaresolutions_short}} 控制台管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能通过 {{site.data.keyword.slportal}} 或在该控制台外部通过其他任何方法进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时已安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件

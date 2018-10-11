@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -32,21 +32,20 @@ lastupdated: "2018-07-19"
 
 |制造商|组件|版本|
 |:------------- |:------------------------------ |:------------- |
-|VMware|vSphere ESXi|6.5 U1g（应用了补丁级别 ESXi650-201803001 的 ESXi 6.5u1）|
-|VMware|vCenter Server Appliance|6.5 Update 1g|
-|VMware|Platform Services Controller|6.5 Update 1g|
+|VMware|vSphere ESXi|6.5 Update 2c（最高更新至 ESXi650-201808001 补丁级别）|
+|VMware|vCenter Server Appliance|6.5 Update 2c|
+|VMware|Platform Services Controller|6.5 Update 2c|
 |VMware|vSAN|6.6.1|
 |VMware|NSX for vSphere|6.4.1|
-|IBM|CloudDriver| 2.5          |
 |Microsoft|Windows Server Standard Edition|2012R2|
 
 **注**：VMware vSAN 是可选组件。
 
 ## ESXi 服务器的高级配置设置
 
-查看下表以了解应用于 ESXi 服务器的高级配置设置的概述，具体取决于 vCenter Server 实例是部署在 V2.2 或更高版本中，还是已从先前 V2.1 或更低发行版升级到 V2.2 或更高版本。
+查看下表以了解应用于 ESXi 服务器的高级配置设置的概述。这些设置取决于 vCenter Server 实例是部署在 V2.2 或更高版本中，还是从 V2.1 或更低版本升级到 V2.2 或更高版本。
 
-这些设置会应用于新实例以及新实例 V2.2 或更高版本中的新集群。这些设置不会应用于 V2.1 或更低版本中现有实例中的新集群，也不会应用于升级到 V2.2 或更高版本的现有实例。
+这些设置会应用于新实例以及新实例 V2.2 或更高版本中的新集群。这些设置不会应用于 V2.1 或更低版本的现有实例中的新集群，也不会应用于升级到 V2.2 或更高版本的现有实例中的新集群。
 
 表 3. vCenter Server 实例和集群的 ESXi 服务器高级配置设置
 
@@ -68,13 +67,13 @@ lastupdated: "2018-07-19"
 
   建议将**未设置**配置设置更改为新值，以实现在所有实例上的一致性，并为存储扩展提供充分支持。对于所有 {{site.data.keyword.vmwaresolutions_short}} V2.2 和更高发行版，IBM 计划仅测试这些新设置。
 
-  有关更多信息，请参阅[增大定义 ESXi/ESX 主机上 NFS 最大挂载量的默认值](https://kb.vmware.com/s/article/2239)。
+  有关更多信息，请参阅[增大定义 ESXi 主机上 NFS 最大安装数的缺省值](https://kb.vmware.com/s/article/2239)。
 
 ## NSX 和端口组配置设置
 
 查看下表以了解 vCenter Server 实例的 VMware NSX 和端口组配置设置的概述，以及发行版之间的差异。
 
-这些设置会应用于新实例以及新实例 V2.2 或更高版本中的新集群。这些设置不会应用于 V2.1 或更低版本中现有实例中的新集群，也不会应用于升级到 V2.2 或更高版本的现有实例。
+这些设置会应用于新实例以及新实例 V2.2 或更高版本中的新集群。这些设置不会应用于 V2.1 或更低版本的现有实例中的新集群，也不会应用于升级到 V2.2 或更高版本的现有实例中的新集群。
 
 表 4. vCenter Server 实例的 NSX 和端口组配置设置
 
@@ -90,9 +89,9 @@ lastupdated: "2018-07-19"
 
 ## 网络 MTU 配置设置
 
-vSphere 集群使用两个 vSphere 虚拟分布式交换机 (VDS)，一个用于公用网络连接，另一个用于专用网络连接。
+vSphere 集群使用两个 vSphere 分布式交换机 (vDS)，一个用于公用网络连接，另一个用于专用网络连接。
 
-专用网络连接配置为使用大小为 9000 的巨型帧 MTU（最大传输单元），这将提高存储和 VMware vMotion 等大型数据传输的性能。这是 VMware 和 {{site.data.keyword.cloud_notm}} 中允许的最大 MTU。
+专用网络连接配置为使用大小为 9000 的巨型帧 MTU（最大传输单元），这将提高存储和 VMware vMotion 等大型数据传输的性能。此值是 VMware 和 {{site.data.keyword.cloud_notm}} 中允许的最大 MTU。
 
 在 V2.1 或更高版本中，公用网络连接使用标准以太网 MTU，即 1500。必须保留此设置 1500；对此设置的任何更改都可能导致因特网上发生包分段。
 
@@ -100,7 +99,7 @@ vSphere 集群使用两个 vSphere 虚拟分布式交换机 (VDS)，一个用于
 
 表 5. 基于实例版本的 vCenter Server 实例和集群的 MTU 配置设置
 
-| VDS |V2.1 或更高版本|V2.0 或更低版本（或从 V2.0 或更低版本升级）|
+|vDS|V2.1 或更高版本|V2.0 或更低版本（或从 V2.0 或更低版本升级）|
 |:-------------- |:-------------- |:------------- |
 |公共交换机|1500（缺省值）|9000（巨型帧）|
 |专用交换机|9000（巨型帧）|9000（巨型帧）|
@@ -114,15 +113,15 @@ vSphere 集群使用两个 vSphere 虚拟分布式交换机 (VDS)，一个用于
 ### 更新公共交换机 MTU 设置
 
 要更新公共交换机的 MTU 设置，请在 VMware vSphere Web Client 中完成以下步骤：
-1. 右键单击 VDS，然后单击**编辑设置**。
+1. 右键单击 vDS，然后单击**编辑设置**。
 2. 在**属性**选项卡上，选择**高级**选项。
 3. 确保将**最大 MTU** 值设置为 1500。
 
-   **注**：在更改 vDS 中的 MTU 大小时，连接的上行链路（物理 NIC）将停止，然后重新运行。这样一来，使用上行链路的 VM 会短暂中断。因此，建议在安排的停机时间内规划 MTU 设置更新。
+   **注**：更改 vDS 中的 MTU 大小后，连接的上行链路（物理 NIC）将停止，然后重新运行。这样一来，使用上行链路的 VM 会短暂中断。因此，建议在安排的停机时间内规划 MTU 设置更新。
 
 ### 相关链接
 
-* [VMware ESXi/ESX 的构建号和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
+* [VMware ESXi 和 ESX 的构建号和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware vCenter Server 的构建号和版本 (2143838)](https://kb.vmware.com/s/article/2143838)
 * [在虚拟分布式交换机上启用巨型帧](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)

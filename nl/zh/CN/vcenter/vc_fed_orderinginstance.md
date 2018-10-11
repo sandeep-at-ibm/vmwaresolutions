@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
 # 订购 VMware Federal 实例
 
-要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware Federal 实例来支持将打开的管理连接断开连接并确保已部署实例的安全。
+要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware Federal 实例。VMware Federal 实例可帮助将打开的管理连接断开连接并确保已部署实例的安全。
 
 **注**：目前仅 vCenter Server 实例支持 VMware Federal on {{site.data.keyword.cloud}}。
 
-## 需求
+## 订购 VMware Federal 实例的需求
 
 确保已完成以下任务：
 * 已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
@@ -32,7 +32,7 @@ lastupdated: "2018-08-14"
   |标准 ESXi 服务器名称| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 服务器的序列。最大长度为 50 个字符。|  
   |PSC FQDN|`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大长度为 50 个字符。|
 
-**重要信息**：不要修改在订购和实例部署期间设置的任何值。这样做可能会导致实例变得不可用。例如，公用网络可能会关闭，在供应期间服务器和虚拟服务器实例 (VSI) 可能会移至 Vyatta 后，或者 IBM CloudBuilder VSI 可能会停止或被删除。
+**重要信息**：不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。
 
 ## 系统设置
 
@@ -52,12 +52,12 @@ lastupdated: "2018-08-14"
 
 ## 许可证设置
 
-用于以下各项的 IBM 提供的 VMware 许可证：
+用于以下 VMware 组件的 IBM 提供的许可证：
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
-* （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4（Base Edition、Advanced Edition 或 Enterprise Edition）
+* （对于 vSAN 集群）vSAN 6.6（Advanced Edition 或 Enterprise Edition）
 
 **注意：**
 
@@ -99,17 +99,21 @@ lastupdated: "2018-08-14"
 
 ### vSAN 存储器
 
-对于 vSAN，指定以下存储选项：
+请指定以下 vSAN 选项：
 
-* **vSAN 容量磁盘的磁盘类型和大小**：选择满足共享存储器需求的容量。
-* **vSAN 容量磁盘数**：选择要添加的 vSAN 共享存储器的磁盘数。磁盘数量必须为 2、4、6 或 8 个。
-* 选择 VMware vSAN 6.6 许可证版本（Advanced 或 Enterprise）。
+* **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
+* **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
+* **vSAN 高速缓存磁盘的磁盘类型**：选择与所需高速缓存磁盘相应的选项。
+
+    **注**：如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
+* **vSAN 高速缓存磁盘数**：指定要添加的 vSAN 高速缓存磁盘数。
+* **vSAN 许可证**：选择 vSAN 6.6 许可证版本（Advanced 或 Enterprise）。
 
 ### NFS 存储器
 
 选择 **NFS 存储器**时，可以为实例添加文件级别的共享存储器，其中所有共享使用相同的设置，也可以对每个文件共享指定不同的配置设置。请指定以下 NFS 选项：
 
-**注：**文件共享数必须在范围 1 到 32 之间。
+**注**：文件共享数必须在范围 1 到 32 之间。
 
 * **分别配置共享**：选择此项以对每个文件共享指定不同的配置设置。
 * **共享数**：对每个文件共享使用相同的配置设置时，指定要添加的 NFS 共享存储器的文件共享数。
@@ -162,7 +166,7 @@ lastupdated: "2018-08-14"
 
 **重要信息**：如果将实例配置为使用两个 Microsoft Windows 虚拟机，那么必须提供两个 Microsoft Windows Server 2012 R2 许可证。使用 Microsoft Windows Server 2012 R2 Standard Edition 许可证和/或 Microsoft Windows Server 2012 R2 Datacenter Edition 许可证。
 
-目前，每个许可证只能分配给一个物理服务器，并且最多包含两个物理处理器。一个 Standard Edition 许可证支持每个双处理器服务器运行两个虚拟化的 Microsoft Windows 虚拟机。因此，需要两个许可证，因为两个 Microsoft Windows 虚拟机会部署在两个不同的主机中。
+目前，每个许可证只能分配给一个物理服务器，并且最多包含两个物理处理器。通过使用一个 Standard Edition 许可证，每个双处理器服务器可以运行两个虚拟化的 Microsoft Windows 虚拟机。因此，需要两个许可证，因为两个 Microsoft Windows 虚拟机会部署在两个不同的主机中。
 
 您有 30 天的时间来激活虚拟机。
 
@@ -172,7 +176,7 @@ lastupdated: "2018-08-14"
 
 根据为实例选择的配置，估算成本会立即生成并显示在右侧窗格的**订单摘要**部分中。单击右侧窗格底部的**定价详细信息**可生成提供估算详细信息的 PDF 文档。
 
-## 过程
+## 订购 VMware Federal 实例的过程
 
 1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 页面上，单击 **vCenter Server** 卡，然后单击**创建**。
@@ -183,9 +187,9 @@ lastupdated: "2018-08-14"
   1. 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
   2. 选择**定制** CPU 型号和 **RAM** 量。
 7. 填写存储配置。
-  * 选择 **vSAN 存储器**时，指定 **vSAN 容量磁盘的磁盘类型和大小**、**vSAN 容量磁盘数**以及要如何提供 **vSAN 许可证**。
-  * 选择 **NFS 存储器**并且想要向所有文件共享添加和配置相同设置时，请指定**共享数**、**大小**和**性能**。
-  * 选择 **NFS 存储器**并想要单独添加和配置文件共享时，请选择**单独配置共享**，然后单击**添加 NFS** 标签旁边的 **+** 图标，然后为每个单独的文件共享选择**大小**和**性能**。必须至少选择一个文件共享。
+  * 如果选择 **vSAN 存储器**，请指定容量和高速缓存磁盘的磁盘类型、磁盘数和 vSAN 许可证版本。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
+  * 如果选择 **NFS 存储器**，并且要向所有文件共享添加和配置相同设置，请指定**共享数**、**大小**和**性能**。
+  * 如果选择 **NFS 存储器**，并要单独添加和配置文件共享，请选择**单独配置共享**，单击**添加 NFS** 标签旁边的 **+** 图标，然后为每个单独的文件共享选择**大小**和**性能**。必须至少选择一个文件共享。
 8. 完成网络接口配置。
    1. 输入主机名前缀、子域标签和根域名。
    2. 选择 DNS 配置。
@@ -207,7 +211,7 @@ lastupdated: "2018-08-14"
 
 查看、管理订购的 VMware Federal 实例或确保其安全。
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在控制台外部通过其他任何方法来进行管理。
+**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。
 如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
@@ -225,4 +229,4 @@ lastupdated: "2018-08-14"
 * [添加、查看和删除 VMware Federal 实例的集群](fed_addviewdeleteclusters.html)
 * [确保 VMware Federal 实例安全](vc_fed_securinginstance.html)
 * [删除 VMware Federal 实例](vc_fed_deletinginstance.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)

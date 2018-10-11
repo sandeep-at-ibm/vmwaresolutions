@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -33,11 +33,12 @@ lastupdated: "2018-08-07"
 |中|此更新可能会影响某些系统。建议在安排的停机时间内应用更新。|  
 |重大|此更新会影响部分系统或所有系统。必须在安排的停机时间内应用更新。|  
 
-## 过程
+## 对 vCenter Server with Hybridity Bundle 实例应用更新的过程
 
 1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要更新的实例。
-3. 在**摘要**页面上，验证是否所有实例详细信息都正确显示。然后在左侧导航窗格上，单击**基础架构**以验证**基础架构**页面上的详细信息。如果未显示详细信息，这可能指示由于防火墙规则或其他网络问题而导致 IBM CloudDriver 虚拟服务器实例 (VSI) 发生连接问题。请解决该问题后，再继续下一步，否则更新可能会失败。
+3. 在**摘要**页面上，验证是否所有实例详细信息都正确显示。然后在左侧导航窗格上，单击**基础架构**以验证**基础架构**页面上的详细信息。
+   如果未显示详细信息，这可能指示由于防火墙规则或其他网络问题而导致 IBM CloudDriver 虚拟服务器实例 (VSI) 发生连接问题。请解决该问题后，再继续下一步，否则更新可能会失败。
 4. 在左侧导航窗格上，单击**更新和补丁**。
 
    **注**：**更新和补丁**页面仅包含用于更新 IBM 管理组件的软件包，而不包含 VMware 更新。执行以下操作时，{{site.data.keyword.vmwaresolutions_short}} 会应用 VMware 更新：
@@ -75,13 +76,13 @@ lastupdated: "2018-08-07"
 <dt class="dt dlterm">已安排</dt>
 <dd class="dd">更新作业已安排为日后执行。更新作业会在安排的时间自动启动。</dd>
 <dt class="dt dlterm">未知</dt>
-<dd class="dd">无法获取更新作业的状态。请联系 IBM 支持以获取帮助。</dd>
+<dd class="dd">无法获取更新作业的状态。请联系 IBM 支持人员以获取帮助。</dd>
 </dl>
 
-4. 如果更新过程在特定步骤失败，请[联系 IBM 支持](../vmonic/trbl_support.html)以获取帮助。IBM 支持将向您提供如何解决问题的建议，并指导您从失败的步骤重试升级。
+4. 如果更新过程在特定步骤失败，请[联系 IBM 支持人员](../vmonic/trbl_support.html)以获取帮助。IBM 支持将向您提供如何解决问题的建议，并指导您从失败的步骤重试升级。
 
 ### 相关链接
 
 * [vCenter Server with Hybridity Bundle 概述](../vcenter/vc_hybrid_overview.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [常见问题](../vmonic/faq.html)

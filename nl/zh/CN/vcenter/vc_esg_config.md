@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-19"
 
 ---
 
 # 将网络配置为将客户管理的 NSX ESG 用于 VM
 
-为虚拟机配置网络，以便您可以利用 VMware vCenter Server 实例中部署的 VMware NSX Edge 服务网关 (ESG)。有关有助于最大限度降低安全风险的安全措施的信息，请参阅[管理服务 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+为虚拟机配置网络，以便您可以利用 VMware vCenter Server 实例中部署的 VMware NSX Edge 服务网关 (ESG)。有关为帮助最大限度降低安全风险而实施的安全措施的更多信息，请参阅[管理服务 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟化，并提供多种联网服务，例如交换机、路由和防火墙。有关 NSX 的更多信息，请参阅 [NSX 概述](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}。
 

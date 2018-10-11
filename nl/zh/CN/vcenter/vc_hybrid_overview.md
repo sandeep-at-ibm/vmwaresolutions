@@ -4,23 +4,23 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-20"
 
 ---
 
 # vCenter Server with Hybridity Bundle 概述
 
-vCenter Server with Hybridity Bundle 是可用于 V2.3 和更高发行版的实例。
+VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是可用于 V2.3 和更高发行版的实例。从 V2.6 开始，vCenter Server with Hybridity Bundle 实例可供业务合作伙伴使用。
 
-VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是一种托管的专用云，可将 VMware vSphere 堆栈作为服务交付。VMware 环境基于四个 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 而构建，该环境中包含作为专用存储器的 VMware vSAN，还可以自动部署并配置基于 VMware NSX 技术的易于管理的逻辑边缘防火墙，并且包含 VMware HCX on {{site.data.keyword.cloud_notm}} 服务。
+vCenter Server with Hybridity Bundle 是一种托管的专用云，可将 VMware vSphere 堆栈作为服务交付。VMware 环境基于四个 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 而构建，该环境中包含作为专用存储器的 VMware vSAN，还可以自动部署并配置基于 VMware NSX 技术的易于管理的逻辑边缘防火墙，并且包含 VMware HCX on {{site.data.keyword.cloud_notm}} 服务。
 
 在许多情况下，整个环境可以在一天内供应完，而裸机基础架构可根据需要，快速、弹性地向上和向下扩展计算容量。
 
 要增大 vSAN 集群的基于 vSAN 的存储容量，可以在部署后添加更多 ESXi 服务器。
 
-可以将 VMware NSX Advanced Edition 升级到 Enterprise Edition，并且可以购买其他 VMware 组件，例如 VMware vRealize Operations。
+可以将 VMware NSX Advanced Edition 升级到 Enterprise Edition，并且可以购买更多 VMware 组件，例如 VMware vRealize Operations。
 
-如果要卸载虚拟化、访客操作系统或应用程序层的日常操作和维护，可以添加 IBM 受管服务。另外还有 {{site.data.keyword.cloud_notm}} 专业服务团队可通过迁移、实施、规划和上线服务，帮助您加速迁移到云。
+如果要卸载虚拟化、访客操作系统或应用程序层的日常操作和维护，可以添加 IBM 管理的服务。另外还有 {{site.data.keyword.cloud_notm}} 专业服务团队可通过迁移、实施、规划和上线服务，帮助您加速迁移到云。
 
 ## vCenter Server with Hybridity Bundle 体系结构
 
@@ -79,9 +79,9 @@ vCenter Server with Hybridity Bundle 实例订单中随附四个定制的 {{site
   * 用于出站 HTTPS 管理流量的安全管理服务 VMware NSX Edge 服务网关 (ESG)，由 IBM 部署为管理联网拓扑的一部分。IBM 管理 VM 使用此 ESG 来与自动化相关的特定外部 IBM 管理组件进行通信。有关更多信息，请参阅[配置网络以使用客户管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
     **重要信息**：此 ESG 对您不可访问，因此您无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server with Hybridity Bundle 实例。此外，请注意，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信将导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
-  * 用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX Edge 服务网关，由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)。
+  * 用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX Edge 服务网关，由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
-有关部署 HCX on {{site.data.keyword.cloud_notm}} 服务时订购的联网组件的其他信息，请参阅 [HCX on {{site.data.keyword.cloud_notm}} 概述](../services/hcx_considerations.html)。
+有关部署 HCX on {{site.data.keyword.cloud_notm}} 服务时订购的联网组件的更多信息，请参阅 [HCX on {{site.data.keyword.cloud_notm}} 概述](../services/hcx_considerations.html)。
 
 ### 虚拟服务器实例
 
@@ -89,13 +89,14 @@ vCenter Server with Hybridity Bundle 实例订单中随附四个定制的 {{site
 * 用于 IBM CloudBuilder 的 VSI，在完成实例部署后关闭。
 * 可以选择在管理集群中部署单个 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或两个高可用性 Microsoft Windows VM，以帮助增强安全性和稳健性。
 
-### 存储
+### vSAN 存储器
 
 vSAN 存储器提供定制配置，具有各种磁盘类型和数量的选项：
 * 磁盘数量：2、4、6 或 8 个。
 * 存储磁盘：960 GB SSD SED、1.9 TB SSD SED 或 3.8 TB SSD SED。
 
-  此外，每个主机还会订购 2 个 960 GB 高速缓存磁盘。
+  此外，每个主机会订购两个 960 GB 高速缓存磁盘。
+* 高性能 Intel Optane 选项，用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘。此选项取决于 CPU 型号。
 
 ### IBM 提供的许可证和费用
 
@@ -123,7 +124,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下许可证。
 * 一个支持和服务费用
 * VMware vSAN（Advanced 或 Enterprise）6.6
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在控制台外部通过其他任何方法来进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+**重要信息**：您只能通过 {{site.data.keyword.vmwaresolutions_short}} 控制台管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能通过 {{site.data.keyword.slportal}} 或在该控制台外部通过其他任何方法进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时已安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件
@@ -139,4 +140,4 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下许可证。
 * [针对 vCenter Server with Hybridity Bundle 实例的需求和规划](vc_hybrid_planning.html)
 * [订购 vCenter Server with Hybridity Bundle 实例](vc_hybrid_orderinginstance.html)
 * [HCX on {{site.data.keyword.cloud_notm}} 概述](../services/hcx_considerations.html)
-* [联系 IBM 支持](../vmonic/trbl_support.html)
+* [联系 IBM 支持人员](../vmonic/trbl_support.html)
