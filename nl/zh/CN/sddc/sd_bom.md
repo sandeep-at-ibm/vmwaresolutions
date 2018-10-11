@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -32,18 +32,17 @@ lastupdated: "2018-07-19"
 
 |制造商|组件|版本|
 |:-------------|:-----------------------------------------|:-------------|
-|VMware|vSphere ESXi|6.5 U1g（应用了补丁级别 ESXi650-201803001 的 ESXi 6.5u1）|
-|VMware|vCenter Server Appliance|6.5 Update 1g|
-|VMware|Platform Services Controller|6.5 Update 1g|
+|VMware|vSphere ESXi|6.5 Update 2c（最高更新至 ESXi650-201808001 补丁级别）|
+|VMware|vCenter Server Appliance|6.5 Update 2c|
+|VMware|Platform Services Controller|6.5 Update 2c|
 |VMware|vSAN|6.6.1|
-|VMware|NSX for vSphere|6.3.5|
+|VMware|NSX for vSphere|6.4.1|
 |VMware|SDDC Manager|2.4|
-|IBM|CloudDriver| 2.5          |
 |Microsoft|Windows Server Standard Edition（64 位）|2012R2|
 
 ## ESXi 服务器的高级配置设置
 
-查看下表以了解在 ESXi 服务器上应用的高级配置设置的概述，具体取决于 Cloud Foundation 实例是部署在 V2.2 或更高版本中，还是从先前 V2.1 或更低发行版升级到 V2.2 或更高版本。
+查看下表以了解在 ESXi 服务器上应用的高级配置设置的概述。根据 Cloud Foundation 实例是否是从先前版本（V2.1 或更低版本）部署到（或升级到）V2.2 或更高版本的，这些设置将有所不同。
 
 表 3. Cloud Foundation 实例和集群的 ESXi 服务器高级配置设置
 

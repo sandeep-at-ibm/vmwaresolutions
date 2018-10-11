@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -37,7 +37,7 @@ lastupdated: "2018-07-18"
 
 在 {{site.data.keyword.vmwaresolutions_short}} 控制台上，可以使用添加和除去 ESXi 服务器功能来扩展和收缩实例的容量。此外，还提供了生命周期管理功能，例如在托管环境中对 VMware 组件应用更新和升级。
 
-有关体系结构的详细信息，请参阅[解决方案概述](../archiref/solution/solution_overview.html)。
+有关体系结构的更多信息，请参阅[解决方案概述](../archiref/solution/solution_overview.html)。
 
 ## Cloud Foundation 实例的技术规范
 
@@ -63,15 +63,14 @@ Cloud Foundation 实例中包含以下组件。
 * 三个 VLAN（虚拟 LAN）：一个公用 VLAN 和两个专用 VLAN
 * 用于出站 HTTPS 管理流量的安全管理服务 VMware NSX Edge 服务网关 (ESG)，由 IBM 部署为管理联网拓扑的一部分。IBM 管理虚拟机使用此 ESG 与自动化相关的特定外部 IBM 管理组件进行通信。有关更多信息，请参阅[管理服务 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **重要信息**：此 ESG 对您不可访问，因此您无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 Cloud Foundation 实例。此外，请注意，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信将导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
-
+  **重要信息**：此 ESG 对您不可访问，因此您无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 Cloud Foundation 实例。此外，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信将导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
 
 * 如果您现有的一个集群中有当前 VMware vSphere 版本支持的 ESXi 服务器，那么会自动启用 EVC (Enhanced vMotion Compatibility) 功能。EVC 通过确保集群中的所有 ESXi 服务器向虚拟机公开一组相同的 CPU 功能，从而为集群中的所有 ESXi 服务器提供 vMotion 兼容性。通过使用 EVC，即使 ESXi 服务器上的实际 CPU 可能不同，虚拟机也可以在集群中的任何 ESXi 服务器之间进行迁移。
 
 ### 虚拟服务器实例
 
 订购了以下 VSI（虚拟服务器实例）：
-* 用于 Microsoft Active Directory (AD) 和域名系统 (DNS) 服务的 VSI，多站点配置支持需要此 VSI。此 VSI 的规范是：Windows 2012 R2（8 GB RAM / 2 个 CPU 核心 / 100 GB 磁盘 / 双 1 Gbps 专用上行链路）。
+* 用于 Microsoft Active Directory (AD) 和域名系统 (DNS) 服务的 VSI。多站点配置支持需要 VSI。此 VSI 的规范是：Windows 2012 R2（8 GB RAM / 2 个 CPU 核心 / 100 GB 磁盘 / 双 1 Gbps 专用上行链路）。
 * 用于 IBM CloudBuilder 的 VSI，在完成实例部署后关闭。
 * （如果订购了 Veeam on {{site.data.keyword.cloud_notm}}）订购了用于 Veeam 备份服务的 VSI。
 
@@ -81,7 +80,7 @@ Cloud Foundation 实例中包含以下组件。
 * 两个 1-TB SATA 引导磁盘
 * 两个 960-GB SSD（固态磁盘）高速缓存磁盘
 * 一个 RAID 磁盘控制器
-* 仅对于**定制**配置，可以根据需求设置磁盘驱动器数以及磁盘类型和容量。
+* 仅对于**定制**配置，可以根据需求设置磁盘驱动器数以及磁盘类型和容量。此外，还有一个高性能 Intel Optane 选项，用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘。高性能 Intel Optane 选项取决于 CPU 型号。
 * 仅对于**预配置**的**小型**配置：两个 1.9 TB SSD 容量磁盘
 * 仅对于**预配置**的**大型**配置：四个 3.8 TB SSD 容量磁盘
 

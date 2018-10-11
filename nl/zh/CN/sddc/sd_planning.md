@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
 # Cloud Foundation 实例的需求和规划
 
-在订购 VMware Cloud Foundation 实例之前，请查看以下需求。根据 {{site.data.keyword.CloudDataCent}} 位置、工作负载容量需求和其他服务需求来规划实例。
+在订购 VMware Cloud Foundation 实例之前，请查看以下需求。根据 {{site.data.keyword.CloudDataCent}} 位置、工作负载容量需求和服务需求来规划实例。
 
 ## IBM Cloud 帐户需求
 
@@ -62,12 +62,12 @@ Cloud Foundation 部署对物理基础架构有严格要求。因此，只能将
 |状态|状态详细信息|
 |:------------------------------|:--------------------------------------------------|
 |即将提供|{{site.data.keyword.CloudDataCent_notm}} 当前不可用。|
-|暂时库存不足|此时 {{site.data.keyword.CloudDataCent_notm}} 不具有可用性。|
+|暂时库存不足|{{site.data.keyword.CloudDataCent_notm}} 当前不可用。|
 |有限库存|{{site.data.keyword.CloudDataCent_notm}} 具有有限可用性，并且订单可能未完成。|
 
 ## 备份管理组件
 
-您负责维护和确保所有实例组件的可用性。强烈建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](../archiref/solution/solution_backingup.html)。
+您负责维护和确保所有实例组件的可用性。建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](../archiref/solution/solution_backingup.html)。
 
 ## Cloud Foundation 实例的服务
 
@@ -75,7 +75,7 @@ Cloud Foundation 部署对物理基础架构有严格要求。因此，只能将
 
 ## 容量注意事项
 
-有关容量信息和注意事项，请参阅[扩展容量](../archiref/solution/solution_scaling.html)。
+有关容量的更多信息，请参阅[扩展容量](../archiref/solution/solution_scaling.html)。
 
 ### 相关链接
 

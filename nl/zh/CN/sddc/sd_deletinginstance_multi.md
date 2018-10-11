@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
 # 删除多站点配置中的 Cloud Foundation 实例
 
-计划删除属于多站点配置的 Cloud Foundation 实例之前，有一些特殊注意事项需要留意。
+在计划删除多站点配置中的 Cloud Foundation 实例之前，请查看以下注意事项。
 
 删除 Cloud Foundation 实例时，会按顺序释放以下组件：
 1. 所有部署的服务
