@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-08-15"
 
 ## 結果
 
-在新增的使用者接受您的邀請之後，他們即可登入 {{site.data.keyword.vmwaresolutions_short}} 主控台，並切換至您的帳戶。若要這樣做，在使用者的設定檔設定中，使用者按一下其在 {{site.data.keyword.vmwaresolutions_short}} 主控台右上角的虛擬人像。然後，新增的使用者即可協作與共用您指定帳戶中可用的服務及資源。
+在新增的使用者接受您的邀請之後，他們即可登入 {{site.data.keyword.vmwaresolutions_short}} 主控台，並切換至您的帳戶。若要這樣做，在使用者的設定檔設定中，使用者按一下其在 {{site.data.keyword.vmwaresolutions_short}} 主控台橫幅中的使用者帳戶圖示。然後，新增的使用者即可協作與共用您指定帳戶中可用的服務及資源。
 
 ### 相關鏈結
 

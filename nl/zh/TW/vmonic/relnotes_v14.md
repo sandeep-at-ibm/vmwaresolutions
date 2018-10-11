@@ -10,13 +10,13 @@ lastupdated: "2017-03-08"
 
 # 1.4 版的版本注意事項
 
-此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之其他要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Cloud Foundation 實例的元件更新項目
 
 下列是新的或更新的元件：
 
-* VC/PSC (vCenter/Platform Services Controller) 6.0U2a
+* VC 及 PSC（vCenter 及 Platform Services Controller）6.0U2a
 * VMware Tools 10.1.0
 * SDDC Manager (SP) 2.2
 * VMware ESXi 6.0 u2 p04
@@ -78,7 +78,7 @@ lastupdated: "2017-03-08"
 
 ## Cloud Foundation 實例的多站台配置支援
 
-您現在可以部署單一 Cloud Foundation 實例，就像先前的版本一樣，或者，也可以部署已連接至主要實例的次要實例。多站台配置模型使用中心與分支拓蹼來搭配一個主要站台及最多七個次要站台。
+您現在可以部署單一 Cloud Foundation 實例，就像先前的版本一樣，或者，也可以部署已連接至主要實例的次要實例。多站台配置模型使用中心與分支拓蹼來搭配一個主要站台及最多 7 個次要站台。
 
 如需相關資訊，請參閱[Cloud Foundation 實例的多站台配置](../sddc/sd_multisite.html)。
 

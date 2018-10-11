@@ -10,7 +10,7 @@ lastupdated: "2017-08-28"
 
 # 1.8 版的版本注意事項
 
-此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之其他要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Fortinet on IBM Cloud 服務
 
@@ -28,7 +28,7 @@ lastupdated: "2017-08-28"
 
 雖然 1.8 版之前的實例中的 Veeam VSI 會繼續運作，但因為這項變更，{{site.data.keyword.vmwaresolutions_short}} 主控台中不再提供實例的備份點，您必須建立支援問題單，才能獲得還原的協助。
 
-此外，1.8 版之前的實例中的 Veeam VSI 的授權會在 2017 年 10 月 14 日到期。因此，您必須儘早將先前的 Veeam VSI 取代為新的 Veeam 服務。
+此外，1.8 版之前的實例中的 Veeam VSI 授權會在 2017 年 10 月 14 日到期。因此，您必須儘早將先前的 Veeam VSI 取代為新的 Veeam 服務。
 
 如需相關資訊，請參閱下列主題：
 * [Veeam on {{site.data.keyword.cloud_notm}} 概觀](../services/veeam_considerations.html)

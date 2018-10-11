@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -18,6 +18,6 @@ Microsoft Active Directory (AD)/網域名稱伺服器 (DNS) 自動設定為只�
 
 ## 選擇 Cloud Foundation 實例的根網域名稱時的考量
 
-在主要或次要 Cloud Foundation 實例的部署期間選擇網域名稱時，您需要使用 `ping` 或 `nslookup` 指令，來驗證 `sddcmanager.<subdomain>` 主機名稱未解析成外部網域。
+當您在主要或次要 Cloud Foundation 實例的部署期間選擇網域名稱時，需要使用 `ping` 或 `nslookup` 指令，來驗證 `sddcmanager.<subdomain>` 主機名稱未解析成外部網域。
 
-Cloud Foundation 實例子網域的結構為 `<VCF instance name>.<domain name>`。例如，如果您的 `<domain name>` 是 `test.local`，而 Cloud Foundation 實例名稱是 `mytest`，則在部署 Cloud Foundation 實例之前，`sddcmanager.mytest.test.local` 主機名稱不得解析成 IP 位址。否則，實例部署可能會失敗。
+Cloud Foundation 實例子網域的結構為 `<VCF instance name>.<domain name>`。例如，如果您的 `<domain name>` 是 `test.local`，而 Cloud Foundation 實例名稱是 `mytest`，則在部署 Cloud Foundation 實例之前，`sddcmanager.mytest.test.local` 主機名稱不會解析成 IP 位址。否則，實例部署可能會失敗。

@@ -10,7 +10,7 @@ lastupdated: "2018-05-28"
 
 # 2.3 版的版本注意事項
 
-此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之其他要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Spectre 及 Meltdown 補救
 
@@ -73,7 +73,7 @@ lastupdated: "2018-05-28"
 
 現在，您可以選擇在管理叢集裡選取適用於 Microsoft Active Directory (AD) 的單一 Microsoft Windows Server 虛擬伺服器實例 (VSI)，或兩部高可用性 Microsoft Windows 虛擬機器的部署。對於 2.2 版，依預設，會自動部署適用於 Microsoft AD 的單一 Microsoft Windows VSI。能選取兩部 Microsoft Windows 虛擬機器的新選項提供更多隱私權，並可選擇使用 Veeam 服務來備份及還原虛擬機器。
 
-**附註：**如果您將實例配置為使用兩部 Microsoft Windows 虛擬機器，則必須提供兩個 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及/或 Microsoft Windows Server 2012 R2 Datacenter 版本授權。您有 30 天的時間可啟動虛擬機器。
+**附註：**如果您將實例配置為使用兩部 Microsoft Windows 虛擬機器，則必須提供 2 個 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及/或 Microsoft Windows Server 2012 R2 Datacenter 版本授權。您有 30 天的時間可啟動虛擬機器。
 
 如需相關資訊，請參閱[訂購 VMware Federal 實例](../vcenter/vc_fed_orderinginstance.html#network-interface-settings)中的*網路介面設定* 小節。
 
@@ -113,7 +113,7 @@ lastupdated: "2018-05-28"
 
 ## 新的及更新的文件
 
-有新的 developerWorks 秘訣可供使用，其包含的逐步指示有關如何將儲存空間新增至 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 後置部署。如需相關資訊，請參閱[將儲存空間新增至 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 後置部署](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)。
+有新的 developerWorks 秘訣可供使用，其包含的逐步指示有關如何將儲存空間新增至 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 後置部署。如需相關資訊，請參閱 [Adding storage to IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)。
 
 ## 使用者介面更新和加強功能
 
@@ -122,4 +122,4 @@ lastupdated: "2018-05-28"
 * **容易存取**：您現在可以直接從 {{site.data.keyword.cloud_notm}} **型錄**存取 VMware 供應項目。
 * **流暢且及簡化的訂購體驗**：您現在可以在單一介面中完成訂購 VMware 實例並部署其附加程式服務。此外，還會計算預估成本，並將其立即顯示在相同的介面中，讓您可以根據成本方案來調整配置。
 * 「事業夥伴」使用者無法使用訂購實例或新增叢集時的「自帶授權 (BYOL)」選項。
-* 已提供各種錯誤訊息及工具提示加強功能，以協助您在使用者介面上選取適當的設定。
+* 提供各種錯誤訊息及工具提示加強功能，以協助您在使用者介面上選取適當的設定。
