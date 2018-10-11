@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-08-13"
 
 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品通过提供存储虚拟化服务，完善了 vCenter Server 部署。
 
-下图描述了 NetApp ONTAP Select on vCenter Server 部署的总体体系结构。
+下图说明了 NetApp ONTAP Select on vCenter Server 部署的总体体系结构。
 
 图 1. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 的高级别体系结构
 
@@ -33,7 +33,7 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品通过提供存储
 * VMware NSX 是网络虚拟化平台，用于提供逻辑联网组件和虚拟网络。
 * NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 部署了由四个主机的四个 VM 组成的 ONTAP Select 集群。
 
-下图描述了 NetApp ONTAP Select 部署上的组件。
+下图说明了 NetApp ONTAP Select 部署中的组件。
 
 图 2. NetApp ONTAP Select 组件
 
@@ -41,7 +41,16 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品通过提供存储
 
 ### 虚拟化管理
 
-此层由 vCenter Server 虚拟设备、NSX Manager、2 个 NSX ESG、3 个 NSX Controller、Platform Services Controller (PSC) 虚拟设备、vCenter Server Appliance (vCSA) 和 IBM CloudDriver 虚拟服务器实例 (VSI) 组成。
+虚拟化管理层包含以下组件：
+
+* vCenter Server 虚拟设备
+* NSX
+Manager
+* 两个 NSX Edge 服务网关 (ESG)
+* 三个 NSX Controller
+* Platform Services Controller (PSC) 虚拟设备
+* vCenter Server Appliance (vCSA)
+* IBM CloudDriver 虚拟服务器实例 (VSI)。
 
 NetApp ONTAP Select 在 VMware 集群中运行，并对主机上的本地存储器进行虚拟化。NetApp ONTAP Select 部署在专用模型中，其他工作负载不应与之共享集群。因此，NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品的硬件配置仅基于 NetApp ONTAP Select 的需求来设置大小。
 
@@ -53,7 +62,7 @@ NetApp ONTAP Select 实例中包含以下组件。
 
 ### 存储
 
-* 三个选项：**高性能（中型）**、**高性能（大型）**和**高容量**
+* 可从以下选项中进行选择：**高性能（中型）**、**高性能（大型）**和**高容量**
 * 具有热备用的 RAID 5
 * 两个 1-TB SATA 驱动器（ESXi 操作系统）- RAID 1
 * 管理数据存储 - 500 GB（对于管理 VM）
@@ -65,7 +74,7 @@ NetApp ONTAP Select 实例中包含以下组件。
 * **高性能（大型）**- 高级许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 128 GB RAM / 每节点 22 个 3.8 TB SSD 驱动器容量 / 4 节点集群的有效容量 - 118 TB
 * **高容量** - 标准许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 64 GB RAM / 每节点 34 个 4 TB SATA 驱动器容量 / 4 节点集群的有效容量 - 190 TB
 
-**注**：3.8 TB SSD（固态磁盘）驱动器在数据中心内一般可用后就会受到支持。
+**注**：3.8 TB SSD（固态磁盘）驱动器在数据中心内普遍可用后就会受到支持。
 
 ### 硬件
 
@@ -88,7 +97,7 @@ NetApp ONTAP Select 实例中包含以下组件。
 
 ### 许可证和费用
 
-*  四个 Premium/Standard Edition NetApp ONTAP Select 许可证（用户提供）
+*  四个 Premium 或 Standard Edition NetApp ONTAP Select 许可证（用户提供）
 *  VMware vSphere 6.5 Enterprise Plus Edition
 *  VMware vCenter Server 6.5
 *  VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
@@ -102,6 +111,10 @@ NetApp ONTAP Select 实例中包含以下组件。
 *  重新启动服务
 
    这些活动的例外情况包括在 {{site.data.keyword.slportal}} 中管理共享存储器文件共享。此类活动包括：订购、删除（如果已安装，可能会影响数据存储）、授权和安装共享存储器文件共享。
+
+## 防火墙注意事项
+
+如果在使用防火墙，那么必须针对来自 {{site.data.keyword.IBM}} CloudDriver 虚拟服务器实例 (VSI) 和 SDDC Manager 虚拟机 (VM) 的所有通信配置规则。这些规则必须允许所有协议在 IP 地址 `10.0.0.0/8` 和 `161.26.0.0/16` 上进行通信。此类防火墙的示例为 NSX 分布式防火墙 (DFW) 或 Vyatta 防火墙。
 
 ### 相关链接
 
