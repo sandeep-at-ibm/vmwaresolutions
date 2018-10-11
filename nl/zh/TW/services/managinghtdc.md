@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -29,7 +29,7 @@ lastupdated: "2018-07-19"
 
 ### 相關鏈結
 
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概觀](htcc_considerations.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概觀](htdc_considerations.html)
 * [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
 * [常見問題](../vmonic/faq.html)
 * [HyTrust 網站](https://www.hytrust.com/)

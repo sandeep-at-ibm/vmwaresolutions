@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -33,12 +33,12 @@ HyTrust DataControl on {{site.data.keyword.cloud}} 服務提供具有整合式�
 
 ## 移除 HyTrust DataControl on IBM Cloud 時的考量
 
-請確定您已加密或備份 DataControl 中的所有磁碟，再移除 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務。在您移除服務之後，可能會刪除金鑰，致使您可能會遭鎖定而無法使用 VM。
+請確定您已使用 DataControl 取消連結所有用戶端，再移除 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務。在您移除服務之後，可能會刪除金鑰，致使您可能會遭鎖定而無法使用 VM。
 
 ### 相關鏈結
 
 * [訂購 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](htdc_ordering.html)
-* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtcc.html)
+* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtdc.html)
 * [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
 * [常見問題](../vmonic/faq.html)
 * [HyTrust 網站](https://www.hytrust.com/)
