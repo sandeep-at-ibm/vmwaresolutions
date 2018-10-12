@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-12"
 
 ---
 
@@ -121,7 +121,7 @@ Table 2. NSX Manager attributes
 | Memory          | 16 GB |
 | Disk            | 60 GB on the management NFS share |
 | Disk type       | Thin-provisioned |
-| Network         | Private a portable designated for management components |
+| Network         | **Private A** portable designated for management components |
 
 The following figure shows the placement of the NSX Manager in relation to other components in the architecture.
 
@@ -129,9 +129,9 @@ Figure 2. NSX Manager network overview
 
 ![NSX Manager network overview](virtual_NSX.svg "NSX Manager in relation to the other components in the architecture")
 
-After initial deployment, the {{site.data.keyword.cloud_notm}} automation deploys three NSX controllers within the initial cluster. Each of the controllers is assigned a VLAN-backed IP address from the Private a portable subnet that is designated for management components. Additionally, the design creates VM-VM anti-affinity rules to separate the controllers amongst the hosts in the cluster. The initial cluster must contain a minimum of three nodes to ensure high availability for the controllers.
+After initial deployment, the {{site.data.keyword.cloud_notm}} automation deploys three NSX controllers within the initial cluster. Each of the controllers is assigned a VLAN-backed IP address from the **Private A** portable subnet that is designated for management components. Additionally, the design creates VM-VM anti-affinity rules to separate the controllers amongst the hosts in the cluster. The initial cluster must contain a minimum of three nodes to ensure high availability for the controllers.
 
-In addition to the controllers, the {{site.data.keyword.cloud_notm}} automation prepares the deployed vSphere hosts with NSX VIBS to enable the use of a virtualized network through VXLAN Tunnel Endpoints (VTEPs). The VTEPs are assigned a VLAN-backed IP address from the Private a portable IP address range that is specified for VTEPs as listed in *Table 1. VLAN and subnet summary* of [Physical infrastructure design](design_physicalinfrastructure.html). The VXLAN traffic resides on the untagged VLAN and is assigned to the private vDS.
+In addition to the controllers, the {{site.data.keyword.cloud_notm}} automation prepares the deployed vSphere hosts with NSX VIBS to enable the use of a virtualized network through VXLAN Tunnel Endpoints (VTEPs). The VTEPs are assigned a VLAN-backed IP address from the **Private A** portable IP address range that is specified for VTEPs as listed in *Table 1. VLAN and subnet summary* in [Physical infrastructure design](design_physicalinfrastructure.html). The VXLAN traffic resides on the untagged VLAN and is assigned to the private vDS.
 
 Subsequently, a segment ID pool is assigned and the hosts in the cluster are added to the transport zone. Only unicast is used in the transport zone because Internet Group Management Protocol (IGMP) snooping is not configured within the {{site.data.keyword.cloud_notm}}.
 
@@ -158,7 +158,7 @@ Table 3. VLAN mapping to traffic types
 | VLAN  | Designation | Traffic type |
 |:----- |:----------- |:------------ |
 | VLAN1 | Public      | Available for internet access |
-| VLAN2 | Private a   | ESXi management, management, VXLAN (VTEP) |
+| VLAN2 | Private A   | ESXi management, management, VXLAN (VTEP) |
 | VLAN3 | Private B   | vSAN, NFS, vMotion |
 
 Traffic from workloads will travel on VXLAN­-backed logical switches.
