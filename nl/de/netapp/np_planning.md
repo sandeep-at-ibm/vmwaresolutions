@@ -10,7 +10,7 @@ lastupdated: "2018-07-12"
 
 # Voraussetzungen und Planung für NetApp ONTAP Select-Instanzen
 
-Überprüfen Sie die nachstehenden Voraussetzungen, bevor Sie Ihre NetApp ONTAP Select-Instanzen bestellen. Legen Sie der Planung für Ihre Instanz den Standort des {{site.data.keyword.CloudDataCent}} sowie Ihre Anforderungen an Workloadleistung und -kapazität zugrunde.
+Überprüfen Sie die nachstehenden Voraussetzungen, bevor Sie Ihre NetApp ONTAP Select-Instanzen bestellen. Legen Sie der Planung für Ihre Instanz den Standort von {{site.data.keyword.CloudDataCent}} sowie Ihre Anforderungen an Workloadleistung und -kapazität zugrunde.
 
 ## Voraussetzungen für IBM Cloud-Konto
 
