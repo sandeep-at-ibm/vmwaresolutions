@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -17,7 +17,7 @@ Sie können die Zusammenfassung und die detaillierten Informationen der VMware v
 Wenn Sie eine Zusammenfassung aller vCenter Server-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
-2. Klicken Sie in der rechten oberen Ecke der Konsole auf Ihren Avatar und klicken Sie auf das Feld **Konto**, um das Benutzerkonto auszuwählen, für das Sie Instanzen prüfen wollen.  
+2. Klicken Sie im Konsolenbanner auf das Symbol Ihres Benutzerkontos und klicken Sie anschließend auf das Feld **Konto**, um das Benutzerkonto auszuwählen, für das Sie Instanzen prüfen wollen.  
 3. Prüfen Sie in der Tabelle **vCenter Server** die Liste der Instanzen, die in dem ausgewählten Benutzerkonto bereitgestellt sind.
 
 Tabelle 1. Elemente von vCenter Server-Instanzen

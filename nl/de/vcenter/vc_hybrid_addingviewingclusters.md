@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-02"
 
 Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, werden standardmäßig unter **cluster1** gruppiert.
 
-Sie können Cluster zu Ihrer VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle-Instanz hinzufügen, um die Rechen- und Speicherkapazität zu erweitern. In einem Cluster können Sie ESXi-Server verwalten, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Die hinzugefügten Cluster können aus Ihrer Instanz gelöscht werden, wenn sie nicht mehr benötigt werden.
+Sie können Cluster zu Ihrer VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle-Instanz hinzufügen, um die Rechen- und Speicherkapazität zu erweitern. Verwalten Sie in einem Cluster ESXi-Server, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Löschen Sie die hinzufügten Cluster aus Ihrer Instanz, wenn sie nicht mehr benötigt werden.
 
 ## Cluster zu vCenter Server with Hybridity Bundle-Instanzen hinzufügen
 
@@ -32,9 +32,9 @@ Der Clustername muss die folgenden Anforderungen erfüllen:
 
 #### Standort des Rechenzentrums
 
-Der Standort des {{site.data.keyword.CloudDataCent_notm}}s für den Cluster wird standardmäßig auf das {{site.data.keyword.CloudDataCent_notm}} der vCenter Server-Instanz gesetzt. Sie können den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}} als die bereitgestellte Instanz bereitstellen, müssen aber sicherstellen, dass die Netzlatenz zwischen den beiden {{site.data.keyword.CloudDataCents_notm}} weniger als 150 Millisekunden beträgt. Zur Überprüfung der Netzlatenz können Sie ein Tool wie [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} verwenden.
+Der Standort des {{site.data.keyword.CloudDataCent_notm}}s für den Cluster wird standardmäßig auf das {{site.data.keyword.CloudDataCent_notm}} der vCenter Server-Instanz gesetzt. Sie können den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}} als die bereitgestellte Instanz bereitstellen, müssen aber sicherstellen, dass die Netzlatenz zwischen den beiden {{site.data.keyword.CloudDataCents_notm}} weniger als 150 Millisekunden beträgt. Verwenden Sie zum Überprüfen der Netzlatenz ein Tool wie [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-Wenn Sie den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}}- oder {{site.data.keyword.cloud_notm}}-Infrastrukturpod bereitstellen, werden drei zusätzliche VLANs zur Verwendung mit den bestellten {{site.data.keyword.baremetal_short}}-Instanzen bestellt.
+Wenn Sie den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}}- oder {{site.data.keyword.cloud_notm}}-Infrastrukturpod bereitstellen, werden drei weitere VLANs zur Verwendung mit den bestellten {{site.data.keyword.baremetal_short}}-Instanzen bestellt.
 
 ### Einstellungen für Bare Metal Server
 
@@ -60,22 +60,35 @@ Für einen Cluster werden mindestens zwei {{site.data.keyword.baremetal_short}}-
 
 Sie können bis zu 59 {{site.data.keyword.baremetal_short}}-Instanzen für einen Cluster und gleichzeitig 1 bis 59 ESXi-Server hinzufügen.
 
-Nach der Implementierung können Sie bis zu vier weitere Cluster erstellen. Für VMware vSAN-Speicher werden für den ersten Cluster und die Cluster nach der Bereitstellung 4 Server benötigt.
+Nach der Implementierung können Sie bis zu vier weitere Cluster erstellen. Für VMware vSAN-Speicher werden für den ersten Cluster und die Cluster nach der Bereitstellung vier Server benötigt.
 
 ### vSAN-Speichereinstellungen
 
-VMware vSAN 6.6 ist Bestandteil der Bestellung Ihrer vCenter Server with Hybridity Bundle-Instanz. Für die Lizenzedition müssen Sie entweder **Advanced** oder **Enterprise** angeben.
+VMware vSAN 6.6 ist Bestandteil der Bestellung Ihrer vCenter Server with Hybridity Bundle-Instanz. Geben Sie die folgenden vSAN-Optionen an:
 
-* **Plattentyp und -größe für vSAN-Kapazitätsplatten**: Wählen Sie die Kapazität aus, die Ihrem Bedarf an gemeinsam genutzten Speicher entspricht.
-* **Anzahl der vSAN-Kapazitätsplatten**: Wählen Sie die Anzahl der Platten für den gemeinsam genutzten vSAN-Speicher aus, die Sie hinzufügen wollen. Die Plattenanzahl muss 2, 4, 6 oder 8 sein.
-* Wählen Sie die VMware vSAN 6.6-Lizenzedition (Advanced oder Enterprise) aus.
+* **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
+* **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
+* **Plattentyp für vSAN-Cacheplatten**: Wählen Sie die für die Cacheplatten benötigte Option aus.
+
+    **Anmerkung**: Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option für **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* **Anzahl der vSAN-Cacheplatten**: Geben Sie die Anzahl der hinzuzufügenden Cacheplatten an.
+* **vSAN-Lizenz**: Wählen Sie die VMware vSAN 6.6-Lizenzedition (Advanced oder Enterprise) aus.
 
 ### Lizenzierungseinstellungen
 
-Von IBM bereitgestellte VMware-Lizenzen für folgende Ressourcen:
-  * VMware vSphere Enterprise Plus 6.5u1
-  * VMware vCenter Server 6.5
-  * VMware NSX Service Providers Edition (Advanced oder Enterprise) 6.4
+Von IBM bereitgestellte Lizenzen für folgende VMware-Komponenten:
+  * vSphere Enterprise Plus 6.5u1
+  * vCenter Server 6.5
+  * NSX Service Providers 6.4 (Advanced oder Enterprise Edition)
+
+### Netzschnittstelleneinstellungen
+
+Die Einstellungen für die Netzschnittstellenkarte (NIC – Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind bei Auswahl der privaten Option nicht verfügbar:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}
+* FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Bestellübersicht
 
@@ -86,15 +99,16 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, um die Cluster in dieser Instanz anzuzeigen.
 
-   **Hinweis**: Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster zur Instanz hinzufügen.
+   **Anmerkung**: Stellen Sie sicher, dass der Instanzstatus **Bereit** lautet. Andernfalls können Sie der Instanz keine Cluster hinzufügen.
 
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur** und anschließend in der rechten oberen Ecke der Tabelle **CLUSTER** auf **Hinzufügen**.
 4. Geben Sie auf der Seite **Cluster hinzufügen** den Clusternamen ein.
-5. Wenn Sie für den Cluster ein anderes {{site.data.keyword.CloudDataCent_notm}} als Host verwenden möchten als das, in dem die Instanz gehostet wird, aktivieren Sie unter **Bare Metal Server** das Kontrollkästchen **Anderen Standort auswählen** und wählen Sie dann das gewünschte {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
+5. Sie können den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}} hosten, als das, in dem die Instanz gehostet wird. Aktivieren Sie dazu unter **Bare Metal Server** das Kontrollkästchen **Anderen Standort auswählen** und wählen Sie dann das gewünschte {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
 6. Wählen Sie das **CPU-Modell**, die Menge des **RAM** und die **Anzahl der Bare Metal Server** für die Bare-Metal-Konfiguration aus.
-7.  Wählen Sie für die Speicherkonfiguration **vSAN-Speicher** und dann **Anzahl der vSAN-Kapazitätsplatten** und **Plattentyp und -größe für vSAN-Kapazitätsplatten** aus.
+7.  Wählen Sie den **vSAN-Speicher** aus und geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten sowie die Anzahl der Platten an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
 8. Wählen Sie die Lizenzedition für VMware vSAN für die Lizenzkonfiguration aus.
-9. Überprüfen Sie im Fenster **Bestellübersicht** die Clusterkonfiguration, bevor Sie den Cluster hinzufügen.
+9. Wählen Sie die Netzeinstellung für entweder **Öffentliches und privates Netz** oder **Nur privates Netz** aus.
+10. Überprüfen Sie im Fenster **Bestellübersicht** die Clusterkonfiguration, bevor Sie den Cluster hinzufügen.
    1. Überprüfen Sie die Einstellungen für den Cluster.
    2. Überprüfen Sie die geschätzten Kosten des Clusters. Klicken Sie auf **Preisdetails**, um eine PDF-Datei mit der Zusammenfassung zu generieren. Ihre Bestellübersicht können Sie speichern oder drucken, indem Sie rechts oben im PDF-Fenster auf das Symbol **Drucken** bzw. **Herunterladen** klicken.
    3. Klicken Sie auf den Link bzw. die Links für die Bedingungen, die für Ihre Bestellung gelten, und vergewissern Sie sich, dass Sie mit diesen Bedingungen einverstanden sind, bevor Sie den Cluster hinzufügen.
@@ -169,9 +183,9 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 
 ### Vorbereitende Schritte für die Löschung
 
-* Es kann immer nur ein Cluster gleichzeitig gelöscht werden. Zum Löschen mehrerer Cluster müssen Sie die entsprechenden Cluster nacheinander löschen und dabei abwarten, bis der vorherige Cluster gelöscht wurde, bevor Sie versuchen, den nächsten Cluster zu löschen.
-* Vergewissern Sie sich, dass alle Knoten in einem Cluster eingeschaltet und betriebsbereit sind, bevor Sie den Cluster löschen.
-* Wenn Sie einen Cluster löschen, dann werden auch alle VMs (virtuellen Maschinen) des Clusters gelöscht und können nicht wiederhergestellt werden. Sollen die VMs beibehalten werden, dann müssen Sie sie auf andere Cluster migrieren.
+* Es kann immer nur ein Cluster gleichzeitig gelöscht werden. Zum Löschen mehrerer Cluster müssen Sie die entsprechenden Cluster nacheinander löschen und dabei abwarten, bis der vorherige Cluster gelöscht wurde, bevor Sie den nächsten Cluster löschen.
+* Stellen Sie sicher, dass alle Knoten in einem Cluster eingeschaltet und betriebsbereit sind, bevor Sie den Cluster löschen.
+* Wenn Sie einen Cluster löschen, werden auch alle VMs (virtuellen Maschinen) des Clusters gelöscht und können nicht wiederhergestellt werden. Sollen die VMs beibehalten werden, dann müssen Sie sie auf andere Cluster migrieren.
 * Der Standardcluster kann nicht gelöscht werden.
 
 ## Vorgehensweise zum Löschen von Clustern aus vCenter Server with Hybridity Bundle-Instanzen

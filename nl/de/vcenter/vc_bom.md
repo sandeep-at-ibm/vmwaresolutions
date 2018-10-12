@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -32,19 +32,18 @@ Tabelle 2. Teileliste für Softwarekomponenten in vCenter Server-Instanzen
 
 | Hersteller  | Komponente                      | Version       |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.5 U1g (ESXi 6.5u1 mit angewendetem Patch-Level ESXi650-201803001) |
-| VMware       | vCenter Server Appliance        | 6.5 Update 1g |
-| VMware       | Platform Services Controller    | 6.5 Update 1g |
+| VMware       | vSphere ESXi                    | 6.5 Update 2c (bis zu Patch-Level ESXi650-201808001) |
+| VMware       | vCenter Server Appliance        | 6.5 Update 2c |
+| VMware       | Platform Services Controller    | 6.5 Update 2c |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX for vSphere                 | 6.4.1        |
-| IBM          | CloudDriver                     | 2.5          |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
 **Hinweis**: VMware vSAN ist eine optionale Komponente.
 
 ## Erweiterte Konfigurationseinstellungen für ESXi-Server
 
-Die folgende Tabelle gibt Ihnen eine Übersicht über die erweiterten Konfigurationseinstellungen, die auf die ESXi-Server abhängig davon angewendet werden, ob die vCenter Server-Instanz in V2.2 oder höher bereitgestellt oder für sie ein Upgrade von V2.1 oder einem älteren Release auf V2.2 oder höher durchgeführt wird.
+Die folgende Tabelle gibt Ihnen eine Übersicht über die erweiterten Konfigurationseinstellungen, die auf ESXi-Server angewendet werden. Die Auswahl dieser Einstellungen hängt davon ab, ob die vCenter Server-Instanz in V2.2 oder höher bereitgestellt oder für sie ein Upgrade von V2.1 oder älter auf V2.2 oder höher durchgeführt wird.
 
 Die Einstellungen gelten für neue Instanzen und neue Cluster in neuen Instanzen aus V2.2 oder höher. Die Einstellungen gelten nicht für neue Cluster in vorhandenen Instanzen aus V2.1 oder früher oder in vorhandenen Instanzen, für die ein Upgrade auf V2.2 oder höher durchgeführt wurde.
 
@@ -68,7 +67,7 @@ Tabelle 3. Erweiterte Konfigurationseinstellungen für ESXi-Server für vCenter 
 
   Es wird empfohlen, die mit **Nicht festgelegt** gekennzeichneten Konfigurationseinstellungen auf die neuen Werte zu setzen, um eine instanzübergreifende Konsistenz zu erreichen und eine adäquate Unterstützung für die Speichererweiterung zu ermöglichen. IBM plant, Tests ausschließlich mit diesen neuen Einstellungen für alle Releases von {{site.data.keyword.vmwaresolutions_short}} V2.2 und höher vorzunehmen.
 
-  Weitere Informationen finden Sie unter [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
+  Weitere Informationen finden Sie unter [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239).
 
 ## Konfigurationseinstellungen für NSX und Portgruppe
 
@@ -83,16 +82,16 @@ Tabelle 4. Konfigurationseinstellungenen für NSX und Portgruppen bei vCenter Se
 | Teambildungsrichtlinie für NSX VXLAN-Cluster | Failover | Lastausgleich - SRCID |
 | VTEP für NSX VXLAN-Cluster | 1 | 2 |
 | Segment-ID-Pool für primäre Instanz | 6000-8000 | 6000-7999 |  
-| Segment-ID-Pool für nachfolgende sekundäre Instanzen oder Instanzen | 6000-8000 | Vorheriger Endbereich in der Konfiguration mit mehreren Standorten + 1 bis vorheriger Endbereich in der Konfiguration mit mehreren Standorten + 2000 |  
+| Segment-ID-Pool für nachfolgende sekundäre Instanzen oder Instanzen | 6000-8000 | Vorheriger Endbereich in der Konfiguration mit mehreren Standorten + 1 bis zum vorherigen Endbereich in der Konfiguration mit mehreren Standorten + 2000 |  
 | SDDC-DPortGroup-VSAN für Portgruppe (sofern maßgeblich) | **Aktive Uplinks** auf **uplink1** und **Standby-Uplinks** auf **uplink2** gesetzt | **Aktive Uplinks** auf **uplink2** und **Standby-Uplinks** auf **uplink1** gesetzt |  
 | SDDC-DPortGroup-Mgmt für Portgruppe | **Portbindung** auf **Ephemer - keine Bindung** und **Lastausgleich** auf **Route auf Basis des virtuellen Ursprungsports** gesetzt | **Portbindung** auf **Statische Bindung** und **Lastausgleich** auf **Routenbasiert auf physischer NIC-Arbeitslast** gesetzt |  
 | SDDC-DPortGroup-External für Portgruppe | **Portbindung** auf **Ephemer - keine Bindung** gesetzt | **Portbindung** auf **Statische Bindung** gesetzt |
 
 ## Konfigurationseinstellungen für Netz-MTU
 
-Der vSphere-Cluster verwendet zwei virtuelle verteilte vSphere-Switches (VDS), von denen einer für die Konnektivität zum öffentlichen Netz und der andere für die Konnektivität zum privaten Netz verwendet wird.
+Der vSphere-Cluster verwendet zwei vSphere Distributed Switches (vDS), von denen einer für die Konnektivität zum öffentlichen Netz und der andere für die Konnektivität zum privaten Netz verwendet wird.
 
-Die Verbindungen zum privaten Netz sind so konfiguriert, dass Jumbo-Frames mit MTUs (Maximum Transmission Units; maximale Übertragungseinheiten) mit einer Größe von 9000 verwendet werden. Dadurch kann die Leistung für umfangreiche Datenübertragungen (z. B. für Speicher und VMware vMotion) verbessert werden. Dies ist der maximale MTU-Wert, der in VMware und durch {{site.data.keyword.cloud_notm}} zugelassen wird.
+Die Verbindungen zum privaten Netz sind so konfiguriert, dass Jumbo-Frames mit MTUs (Maximum Transmission Units; maximale Übertragungseinheiten) mit einer Größe von 9000 verwendet werden. Dadurch kann die Leistung für umfangreiche Datenübertragungen (z. B. für Speicher und VMware vMotion) verbessert werden. Dieser Wert ist der maximale MTU-Wert, der in VMware und durch {{site.data.keyword.cloud_notm}} zugelassen wird.
 
 In V2.1 oder höheren Releases verwenden die Verbindungen zum öffentlichen Netz eine standardmäßige Ethernet-MTU von 1500. Diese Einstellung von 1500 muss beibehalten werden. Änderungen können zur Paketfragmentierung bei der Übertragung im Internet führen.
 
@@ -100,7 +99,7 @@ Die folgende Tabelle gibt Ihnen eine Übersicht über die Konfigurationseinstell
 
 Tabelle 5. MTU-Konfigurationseinstellungen für vCenter Server-Instanzen und -Cluster je nach Version der Instanz
 
-| VDS | V2.1 oder höher  | V2.0 oder früher (oder Upgrade von V2.0 oder früher) |
+| vDS | V2.1 oder höher  | V2.0 oder früher (oder Upgrade von V2.0 oder früher) |
 |:-------------- |:-------------- |:------------- |
 | Öffentlicher Switch  | 1500 (Standardwert) | 9000 (Jumbo-Frames) |
 | Privater Switch | 9000 (Jumbo-Frames) | 9000 (Jumbo-Frames) |
@@ -114,15 +113,15 @@ Für Instanzen, die in V2.0 oder älteren Releases bereitgestellt wurden, sollte
 ### MTU-Einstellung für öffentlichen Switch aktualisieren
 
 Führen Sie zum Aktualisieren der MTU-Einstellung für den öffentlichen Switch die folgenden Schritte in VMware vSphere Web Client aus:
-1. Klicken Sie mit der rechten Maustaste auf den VDS und klicken Sie dann auf **Einstellungen bearbeiten**.
+1. Klicken Sie mit der rechten Maustaste auf den vDS und klicken Sie dann auf **Einstellungen bearbeiten**.
 2. Wählen Sie auf der Registerkarte **Eigenschaften** die Option **Erweitert** aus.
 3. Stellen Sie sicher, dass für **Maximale MTU** der Wert 1500 festgelegt ist.
 
-   **Hinweis**: Wenn in einem verteilten vSphere-Switch (vDS) Änderungen an der MTU-Größe vorgenommen werden, werden die angehängten Uplinks (physischen NICs) herunter- und wieder hochgefahren. Aus diesem Grund kommt es bei den VMs, die den betreffenden Uplink verwenden, zu einem kurzen Ausfall. Daher wird empfohlen, die Aktualisierung der MTU-Einstellung auf eine geplante Ausfallzeit zu legen.
+   **Anmerkung**: Wenn die MTU-Größe in einem vSphere Distributed Switch (vDS) geändert wird, werden die angehängten Uplinks (physischen NICs) herunter- und wieder hochgefahren. Aus diesem Grund kommt es bei den VMs, die den betreffenden Uplink verwenden, zu einem kurzen Ausfall. Daher wird empfohlen, die Aktualisierung der MTU-Einstellung auf eine geplante Ausfallzeit zu legen.
 
 ### Zugehörige Links
 
-* [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
+* [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
