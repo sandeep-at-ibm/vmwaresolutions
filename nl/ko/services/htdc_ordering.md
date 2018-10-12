@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -26,8 +26,8 @@ HyTrust DataControl 어플라이언스의 HA 쌍이 포함된 새 인스턴스�
 
 ### 관련 링크
 
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 개요](htcc_considerations.html)
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 관리](managinghtcc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 개요](htdc_considerations.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 관리](managinghtdc.html)
 * [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](../sddc/sd_addingremovingservices.html)
 * [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_addingremovingservices.html)
 * [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_hybrid_addingremovingservices.html)

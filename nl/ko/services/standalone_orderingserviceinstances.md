@@ -15,7 +15,7 @@ lastupdated: "2018-08-02"
 ## 시작하기 전에
 
 다음 태스크를 완료했는지 확인하십시오.
-*  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 신임 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정](../vmonic/useraccount.html)을 참조하십시오.
+*  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정](../vmonic/useraccount.html)을 참조하십시오.
 *  [온프레미스 HCX on {{site.data.keyword.cloud}} 인스턴스 설치 시 고려사항](../services/standalone_considerations.html)의 모든 고려사항을 검토했습니다.
 
 ## 프로시저

@@ -18,10 +18,10 @@ lastupdated: "2018-08-15"
 
 Veeam on {{site.data.keyword.cloud_notm}} 서비스를 관리하려면 다음 단계를 완료하여 Veeam 콘솔에 액세스하십시오.
 1. RDP(Remote Desktop Protocol)를 사용하여 Windows IP 주소에 연결하십시오.
-2. 관리자 신임 정보를 사용하여 Windows 콘솔에 로그인하십시오.
-3. 관리자 신임 정보를 사용하여 Windows 콘솔에서 Veeam 콘솔에 액세스하십시오.
+2. 관리자 인증 정보를 사용하여 Windows 콘솔에 로그인하십시오.
+3. 관리자 인증 정보를 사용하여 Windows 콘솔에서 Veeam 콘솔에 액세스하십시오.
 
-Windows IP 주소 및 관리자 신임 정보는 Veeam on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 찾을 수 있습니다.
+Windows IP 주소 및 관리자 인증 정보는 Veeam on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 찾을 수 있습니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
 * [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](../sddc/sd_addingremovingservices.html)

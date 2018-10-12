@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-24"
 
 ---
 
 # Zerto on IBM Cloud 개요
 
-Zerto on {{site.data.keyword.cloud}} 서비스는 복제 및 재해 복구 기능을 제공합니다. 이러한 기능은 {{site.data.keyword.cloud_notm}}의 VMware 가상 환경에서 데이터를 보호하고 복구하도록 배치 오퍼링으로 통합될 수 있습니다.
+Zerto on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm}}의 VMware virtual 환경에서 데이터를 보호하고 복구하도록 복제 및 재해 복구 기능을 배치 오퍼링에 통합합니다. 
 
 ## Zerto on IBM Cloud의 기술 스펙
 
@@ -27,7 +27,7 @@ Zerto on {{site.data.keyword.cloud}} 서비스는 복제 및 재해 복구 기�
 
 ### 스토리지
 
-디스크: 100GB(SAN)
+100GB (SAN) 디스크
 
 ### 네트워킹
 
