@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-23"
 
 F5 on {{site.data.keyword.cloud}} 서비스(F5 BIG-IP® Virtual Edition)는 로컬 및 글로벌 스케일의 인텔리전트 L4-L7 로드 밸런싱 및 트래픽 관리 서비스, 강력한 네트워크 및 웹 애플리케이션 방화벽 보호, 안전하고 연합된 애플리케이션 액세스를 제공합니다.
 
-필요에 따라 이 서비스의 다중 인스턴스를 설치할 수 있습니다.
+필요에 따라 이 서비스의 인스턴스를 두 개 이상 설치할 수 있습니다.
 
 **가용성**: 이 서비스는 V1.9 이상 릴리스에 배치된 인스턴스에서만 사용 가능합니다.
 
@@ -26,15 +26,15 @@ F5 on {{site.data.keyword.cloud}} 서비스(F5 BIG-IP® Virtual Edition)는 로�
 * 라이센싱 옵션에 따라 가상 머신당 4, 8 또는 16GB RAM
 
 ### 네트워킹
-* HA 동기화를 위한 사설 VXLAN(Virtual Extensible LAN)
-* 사설 관리 네트워크를 통한 TMSH(Traffic Management Shell) 및 관리 콘솔에 대한 액세스.
+* 고가용성(HA) 동기화를 위한 사설 VXLAN(Virtual Extensible LAN)
+* 사설 관리 네트워크를 통한 TMSH(Traffic Management Shell) 및 관리 콘솔에 대한 액세스
 
 ### 라이센스 및 요금
 각 VM에 대한 라이센스 요금은 라이센싱 옵션(양호, 우수 또는 최상) 및 선택된 대역폭에 따라 각 청구 주기에 적용됩니다.
 
 **중요:** 서비스 설치 이후에는 라이센싱 레벨을 변경할 수 없습니다. 라이센싱 레벨을 변경하려면 기존 서비스를 제거하고 다른 라이센싱 옵션을 사용하여 서비스를 다시 설치해야 합니다.
 
-## F5 on IBM Cloud 설치 시 고려사항
+## F5 on IBM Cloud의 설치 고려사항
 
 F5 on {{site.data.keyword.cloud_notm}} 서비스를 설치하기 전에 다음 고려사항을 검토하십시오.
 
@@ -70,7 +70,7 @@ F5 on {{site.data.keyword.cloud_notm}}가 실패하지 않으려면 다음 요�
 * CPU 및 RAM이 100% 예약된 상태로 각 ESXi 서버에 하나의 BIG-IP VE VM을 호스팅할 수 있도록 두 개의 활성 서버에 사용할 수 있는 충분한 리소스가 있습니다.
 * VMware vSphere HA에는 CPU 및 RAM이 100% 상태로 두 BIG-IP VM을 호스팅할 수 있는 충분한 리소스가 있습니다.
 
-요구사항으로 인해 F5 on {{site.data.keyword.cloud_notm}}에 필요한 공간에 대해 계획해야 합니다. 필요한 경우 F5 on {{site.data.keyword.cloud_notm}}를 주문하기 전에 1 - 2개의 ESXi 서버를 인스턴스에 추가하거나 장애 복구를 위해 vSphere HA CPU 예약을 줄이십시오(또는 둘 다 해당).
+이러한 요구사항으로 인해 F5 on {{site.data.keyword.cloud_notm}}에 필요한 공간을 계획해야 합니다. 필요한 경우 F5 on {{site.data.keyword.cloud_notm}}를 주문하기 전에 1 - 2개의 ESXi 서버를 인스턴스에 추가하거나 장애 복구에 대한 vSphere HA CPU 예약을 줄이십시오. 또는 두 가지 모두를 수행하십시오.
 
 ## F5 on IBM Cloud 주문 예
 
@@ -84,7 +84,7 @@ F5 on {{site.data.keyword.cloud_notm}}가 실패하지 않으려면 다음 요�
 
 각 ESXi 서버에는 16개의 코어 * 2.1GHz = 33.6GHz의 용량이 있습니다. 그러므로 두 서버가 활성이고 각 서버에서 최소 16.8GHz CPU와 16GB RAM을 사용할 수 있는 경우 처음 두 가지 요구사항이 충족됩니다.
 
-그러나 기본적으로 vSphere HA는 두 개의 ESXi 서버로 초기에 배치된 vCenter Server 인스턴스의 장애 복구를 위해 50%의 CPU 및 RAM을 예약하므로 다음 용량만 사용 가능합니다.
+그러나 기본적으로 vSphere HA는 두 개의 ESXi 서버로 초기에 배치된 vCenter Server 인스턴스의 장애 복구를 위해 CPU 및 RAM의 50%를 예약합니다. 이 예제의 경우 다음을 사용할 수 있습니다.
 
 `50% 2개 * 16개의 코어 * 2.1GHz = 33.6GHz 사용 가능`
 

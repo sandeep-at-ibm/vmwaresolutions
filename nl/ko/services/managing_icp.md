@@ -30,7 +30,8 @@ lastupdated: "2018-08-31"
 
 ## IBM Cloud Private Hosted 요청 프로시저
 
-1. [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)의 단계에 따라 새 vCenter Server 인스턴스를 주문하십시오. 또한 기존 인스턴스를 위한 IBM Cloud Private Hosted를 요청할 수 있습니다. **중요**: 사용자 환경이 이전에 나열된 최소 요구사항을 충족하는지 확인하십시오.
+1. [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)의 단계에 따라 새 vCenter Server 인스턴스를 주문하십시오. 또한 기존 인스턴스를 위한 IBM Cloud Private Hosted를 요청할 수 있습니다.
+  **중요**: 사용자 환경이 이전에 나열된 최소 요구사항을 충족하는지 확인하십시오.
 2. IBM Cloud Private 권한 부여가 있는지 확인하십시오.
 3. vCenter Server 인스턴스를 사용할 준비가 되었다는 확인을 받은 후 다음 단계를 진행하여 IBM Cloud Private Hosted를 요청하십시오.
 4. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **시작하기**를 클릭하십시오.

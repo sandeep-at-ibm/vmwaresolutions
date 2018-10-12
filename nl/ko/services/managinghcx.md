@@ -14,8 +14,8 @@ lastupdated: "2018-07-19"
 
 HCX on {{site.data.keyword.cloud}} 서비스를 관리하려면 다음을 수행하여 HCX Cloud 콘솔 또는 HCX Manager 관리 콘솔에 액세스해야 합니다.
 1. {{site.data.keyword.cloud_notm}} 인프라 VPN 또는 점프 서버를 사용하여 HCX Manager 가상 어플라이언스(HCX Manager)의 IP 주소에 대한 액세스를 허용하십시오. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 HCX on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 IP 주소를 찾을 수 있습니다.
-2. HCX Cloud 콘솔에 액세스하려면 HCX on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 **HCX Cloud 콘솔 보기**를 클릭한 후 vCenter Server 신임 정보를 사용하여 로그인하십시오.
-3. HCX Manager 관리 콘솔에 액세스하려면 HCX on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 **HCX Manager 관리 콘솔 보기**를 클릭한 후 동일한 서비스 세부사항 페이지에 나열된 HCX Manager 신임 정보를 사용하여 로그인하십시오.
+2. HCX Cloud 콘솔에 액세스하려면 HCX on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 **HCX Cloud 콘솔 보기**를 클릭한 후 vCenter Server 인증 정보를 사용하여 로그인하십시오.
+3. HCX Manager 관리 콘솔에 액세스하려면 HCX on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 **HCX Manager 관리 콘솔 보기**를 클릭한 후 동일한 서비스 세부사항 페이지에 나열된 HCX Manager 인증 정보를 사용하여 로그인하십시오.
 
 자세한 정보는 [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_hybrid_addingremovingservices.html)를 참조하십시오.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -33,12 +33,12 @@ HyTrust DataControl on {{site.data.keyword.cloud}}는 워크로드를 해당 라
 
 ## HyTrust DataControl on IBM Cloud 제거 시 고려사항
 
-HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 DataControl로부터 모든 디스크를 암호화하거나 백업했는지 확인하십시오. 서비스를 제거하면 키가 삭제될 수 있으며 VM에 액세스하지 못하게 될 수 있습니다.
+HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 DataControl 사용에서 모든 클라이언트를 분리했는지 확인하십시오. 서비스를 제거하면 키가 삭제될 수 있으며 VM에 액세스하지 못하게 될 수 있습니다.
 
 ### 관련 링크
 
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 주문](htdc_ordering.html)
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 관리](managinghtcc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 관리](managinghtdc.html)
 * [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
 * [FAQ](../vmonic/faq.html)
 * [HyTrust 웹 사이트](https://www.hytrust.com/)
