@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -62,8 +62,8 @@ vCenter Server with Hybridity Bundle 배치에는 실제 인프라에 대한 엄
 |상태 |상태 세부사항 |
 |:------------------------------|:--------------------------------------------------|
 |서비스 예정                   |{{site.data.keyword.CloudDataCent_notm}}는 현재 사용할 수 없습니다. |
-|임시적으로 사용 불가능  |{{site.data.keyword.CloudDataCent_notm}}에는 현재 가용성이 없습니다. |
-|제한된 자원 명세             |{{site.data.keyword.CloudDataCent_notm}}에는 제한된 가용성이 있으며 주문이 완료되지 않을 수 있습니다. |
+|임시적으로 사용 불가능        |{{site.data.keyword.CloudDataCent_notm}}는 현재 사용 가능하지 않습니다. |
+|제한된 자원 명세              |{{site.data.keyword.CloudDataCent_notm}}에는 제한된 가용성이 있으며 주문이 완료되지 않을 수 있습니다. |
 
 ## 관리 컴포넌트의 백업
 
@@ -88,7 +88,7 @@ vCenter Server with Hybridity Bundle 인스턴스에는 VMware HCX on {{site.dat
 
 ## 용량 고려사항
 
-용량 정보 및 고려사항은 [용량 스케일링](../archiref/solution/solution_scaling.html)을 참조하십시오.
+용량 고려사항에 대한 자세한 정보는 [용량 스케일링](../archiref/solution/solution_scaling.html)을 참조하십시오.
 
 ### 관련 링크
 

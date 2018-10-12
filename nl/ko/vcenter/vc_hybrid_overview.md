@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-20"
 
 ---
 
 # vCenter Server with Hybridity Bundle 개요
 
-vCenter Server with Hybridity Bundle은 V2.3 이상 릴리스에서 사용 가능한 인스턴스입니다.
+VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle은 V2.3 이상 릴리스에서 사용 가능한 인스턴스입니다. V2.6부터 vCenter Server with Hybridity Bundle 인스턴스를 비즈니스 파트너가 사용할 수 있습니다. 
 
-VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle은 VMware vSphere 스택을 서비스로서 제공하는 호스팅된 프라이빗 클라우드입니다. VMware 환경은 네 개의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 위에 빌드되며, 전용 스토리지인 VMware vSAN을 포함하고, VMware NSX를 기반으로 하면서 관리하기 쉬운 논리 에지 방화벽의 자동 배치 및 구성을 제공하며, VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 포함합니다.
+vCenter Server with Hybridity Bundle은 VMware vSphere 스택을 서비스로 제공하는 호스팅된 프라이빗 클라우드입니다. VMware 환경은 네 개의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 위에 빌드되며, 전용 스토리지인 VMware vSAN을 포함하고, VMware NSX를 기반으로 하면서 관리하기 쉬운 논리 에지 방화벽의 자동 배치 및 구성을 제공하며, VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 포함합니다.
 
 대부분의 경우 전체 환경은 하루 내에 프로비저닝할 수 있으며, 베어메탈 인프라는 필요에 따라 신속하고 탄력적으로 컴퓨팅 용량을 늘리거나 줄이도록 스케일링할 수 있습니다.
 
@@ -20,7 +20,7 @@ vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 
 
 사용자는 VMware NSX Advanced 에디션을 Enterprise 에디션으로 업그레이드할 수 있으며, VMware vRealize Operations와 같은 추가 VMware 컴포넌트를 구매할 수 있습니다.
 
-가상화, 게스트 OS 또는 애플리케이션 계층의 일일 오퍼레이션 및 유지보수를 오프로드하려면 IBM Managed Services를 추가할 수 있습니다. 또한 {{site.data.keyword.cloud_notm}} Professional Services 팀을 활용하면 마이그레이션, 구현, 계획 및 온보딩 서비스를 사용하여 클라우드로의 이동 속도를 높이는 데 도움이 됩니다.
+가상화, 게스트 OS 또는 애플리케이션 계층의 일일 오퍼레이션 및 유지보수를 오프로드하려는 경우 IBM 관리 서비스를 추가할 수 있습니다. 또한 {{site.data.keyword.cloud_notm}} Professional Services 팀을 활용하면 마이그레이션, 구현, 계획 및 온보딩 서비스를 사용하여 클라우드로의 이동 속도를 높이는 데 도움이 됩니다.
 
 ## vCenter Server with Hybridity Bundle 아키텍처
 
@@ -61,7 +61,7 @@ VMware HCX(Hybrid Cloud Extension)를 기반으로, 온프레미스 및 {{site.d
 
 vCenter Server with Hybridity Bundle 인스턴스에는 다음 컴포넌트가 포함됩니다.
 
-**참고:** 표준화된 하드웨어 구성의 가용성 및 가격 책정은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
+**참고:** 표준화된 하드웨어 구성의 가용성 및 가격은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
 
 ### Bare Metal Server
 
@@ -73,15 +73,15 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 4개의 사용자
 
 다음 네트워킹 컴포넌트가 주문됩니다.
 *  10Gbps 듀얼 공용 및 사설 네트워크 업링크
-*  세 개의 VLAN(Virtual LANs): 한 개의 공인 VLAN 및 두 개의 사설 VLAN
+*  세 개의 VLAN(Virtual LANs): 한 개의 공용 VLAN 및 두 개의 사설 VLAN
 *  계층 2(L2) 네트워크에 연결된 로컬 워크로드 간의 잠재적인 동쪽-서쪽 통신을 위해 DLR(Distributed Logical Router)이 포함된 하나의 VXLAN(Virtual eXtensible LAN). VXLAN은 VXLAN을 수정하거나 VXLAN에 빌드하거나 VXLAN을 제거할 수 있는 샘플 라우팅 토폴로지로 배치됩니다. 또한 추가 VXLAN을 연결하여 DLR의 새 논리 인터페이스에 보안 구역을 추가할 수 있습니다.
 *  두 개의 VMware NSX Edge Services Gateway:
   * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 VM에서 사용됩니다. 자세한 정보는 [고객 관리 ESG를 사용하도록 네트워크 구성](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)을 참조하십시오.
 
     **중요**: 이 ESG에 액세스할 수 없고 ESG를 사용할 수 없습니다. 이를 수정하면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server with Hybridity Bundle 인스턴스를 관리하지 못하게 될 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
-  * VPN 액세스 또는 공용 액세스를 제공하도록 사용자가 수정할 수 있는 템플리트로 IBM에서 배치되는 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽을 위한 보안 고객 관리 VMware NSX Edge Services Gateway. 자세한 정보는 [고객 관리 NSX Edge는 보안 위험을 발생시킵니까?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
+  * VPN 액세스 또는 공용 액세스를 제공하도록 사용자가 수정할 수 있는 템플리트로 IBM에서 배치되는 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽을 위한 보안 고객 관리 VMware NSX Edge Services Gateway. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
-HCX on {{site.data.keyword.cloud_notm}} 서비스를 배치할 때 주문된 네트워킹 컴포넌트에 대한 추가 정보는 [HCX on {{site.data.keyword.cloud_notm}} 개요](../services/hcx_considerations.html)를 참조하십시오.
+HCX on {{site.data.keyword.cloud_notm}} 서비스를 배치할 때 주문된 네트워킹 컴포넌트에 대한 자세한 정보는 [HCX on {{site.data.keyword.cloud_notm}} 개요](../services/hcx_considerations.html)를 참조하십시오.
 
 ### Virtual Server 인스턴스
 
@@ -89,13 +89,14 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스를 배치할 때 주문된 네
 * 인스턴스 배치가 완료된 후 시스템이 종료되는 IBM CloudBuilder용 VSI
 * 보안 및 강력한 추진력 향상을 위해 하나의 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI 또는 관리 클러스터에 있는 두 개의 고가용성 Microsoft Windows VM을 배치하도록 선택할 수 있습니다.
 
-### 스토리지
+### vSAN 스토리지
 
 vSAN 스토리지는 디스크 유형과 양에 대한 다양한 옵션을 포함하여 사용자 정의된 구성을 제공합니다.
 * 디스크 양: 2, 4, 6 또는 8.
 * 스토리지 디스크: 960GB SSD SED, 1.9TB SSD SED 또는 3.8TB SSD SED
 
-  또한 호스트당 960GB의 두 가지 캐시 디스크도 주문됩니다.
+  또한 호스트당 960GB의 두 개 캐시 디스크가 주문됩니다.
+* 고성능 Intel Optane 옵션은 총 10개의 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공합니다. 이 옵션은 CPU 모델에 따라 달라집니다.
 
 ### IBM 제공 라이센스 및 요금
 
