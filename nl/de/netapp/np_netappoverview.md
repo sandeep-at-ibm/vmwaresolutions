@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -41,7 +41,16 @@ Abbildung 2. NetApp ONTAP Select-Komponenten
 
 ### Virtualisierungsmanagement
 
-Diese Schicht besteht aus der virtuellen Appliance für vCenter Server, dem NSX-Manager, zwei NSX Edge Services Gateways (ESGs), 3 NSX-Controllern, der virtuellen Appliance für Platform Services Controller (PSC), vCenter Server Appliance (vCSA) und der virtuellen Serverinstanz (VSI) für IBM CloudDriver.
+Die Virtualisierungsmanagementschicht setzt sich aus den folgenden Komponenten zusammen:
+
+* Virtuelle Appliance für vCenter Server
+* NSX-
+Manager
+* Zwei NSX Edge Services Gateways (ESGs)
+* Drei NSX-Controller
+* Virtuelle Appliance für Platform Services Controller (PSC)
+* vCenter Server Appliance (vCSA)
+* Virtuelle Serverinstanz (VSI) für IBM CloudDriver
 
 NetApp ONTAP Select wird in einem VMware-Cluster ausgeführt und virtualisiert den lokalen Speicher auf den Hosts. NetApp ONTAP Select wird im dedizierten Modell bereitgestellt; hierbei wird davon ausgegangen, dass keine anderen Workloads den Cluster in diesem Modell gemeinsam nutzen. Der Umfang der Hardwarekonfiguration des Produktangebots "NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}" richtet sich daher nur nach den Voraussetzungen für NetApp ONTAP Select.
 
@@ -53,7 +62,7 @@ Ihre NetApp ONTAP Select-Instanz enthält die folgenden Komponenten.
 
 ### Speicher
 
-* Drei Optionen: **Hohe Leistung (mittel)**, **Hohe Leistung (groß)** und **Hohe Kapazität**
+* Wählen Sie zwischen **Hohe Leistung (M = Mittel)**, **Hohe Leistung (L = Groß)** und **Hohe Kapazität**
 * RAID 5 mit Hot-Spare-Einheit
 * Zwei 1-TB-SATA-Laufwerke ESXi OS – RAID 1
 * Managementdatenspeicher – 500 GB für Management-VMs
@@ -61,11 +70,11 @@ Ihre NetApp ONTAP Select-Instanz enthält die folgenden Komponenten.
 ### Voreingestellte Konfigurationen
 
 Vier {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen mit den folgenden Konfigurationsoptionen werden zur Verfügung gestellt:
-* **Hohe Leistung (mittel)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 59 TB
-* **Hohe Leistung (groß)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 3,8-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 118 TB
+* **Hohe Leistung (M = Mittel)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 59 TB
+* **Hohe Leistung (L = Groß)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 3,8-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 118 TB
 * **Hohe Kapazität** – Standard-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 64 GB RAM / Kapazität von 34 4-TB-SATA-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 190 TB
 
-**Hinweis:** 3,8-TB-Solid-State-Platten (SSD) werden unterstützt, wenn sie in einem Rechenzentrum allgemein verfügbar gemacht werden.
+**Anmerkung:** 3,8-TB-Solid-State-Platten (SSD) sind unterstützt, wenn sie in einem Rechenzentrum allgemein verfügbar gemacht werden.
 
 ### Hardware
 
@@ -88,7 +97,7 @@ Zwei VSIs (Virtual Server-Instanzen):
 
 ### Lizenzen und Gebühren
 
-*  4 Lizenzen für Premium/Standard Edition von NetApp ONTAP Select (vom Benutzer bereitgestellt)
+*  Vier Lizenzen für Premium oder Standard Edition von NetApp ONTAP Select (vom Benutzer bereitgestellt)
 *  VMware vSphere 6.5 Enterprise Plus Edition
 *  VMware vCenter Server 6.5
 *  VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.4
@@ -101,7 +110,11 @@ Zwei VSIs (Virtual Server-Instanzen):
 *  Instanzkapazität durch das Hinzufügen oder Entfernen von ESXi-Servern erweitern oder verringern
 *  Services erneut starten
 
-   Ausgenommen von diesen Aktivitäten ist unter anderem das Management der Dateifreigaben für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von Dateifreigaben für gemeinsam genutzten Speicher.
+   Ausgenommen von diesen Aktivitäten ist unter anderem das Management der gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher.
+
+## Hinweise zur Firewall
+
+Wenn Sie Firewalls verwenden, müssen Sie Regeln für die gesamte Kommunikation aus der {{site.data.keyword.IBM}} CloudDriver-VSI (VSI – virtuelle Serverinstanz) und den SDDC Manager-VMs konfigurieren. Diese Regeln müssen es zulassen, dass alle Protokolle an den IP-Adressen `10.0.0.0/8` und `161.26.0.0/16` kommunizieren können. Beispiele für solche Firewalls sind NSX Distributed Firewalls (DFW) oder Vyatta-Firewalls.
 
 ### Zugehörige Links
 

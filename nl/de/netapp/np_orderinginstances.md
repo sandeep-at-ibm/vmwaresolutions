@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -18,11 +18,11 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 *  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](../vmonic/useraccount.html).
 *  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für NetApp ONTAP Select-Instanzen](np_planning.html) vertraut gemacht.
 
-**Wichtig: Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung und Instanzbereitstellung festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird.**
+**Wichtig**: Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung oder Bereitstellung der Instanz festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise, wenn der öffentliche Netzbetrieb beendet wird, Server sowie virtuelle Serverinstanzen (VSIs) mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder wenn die Virtual Server-Instanz für IBM CloudBuilder gestoppt oder gelöscht wird.
 
 ## Systemeinstellungen
 
-Wenn Sie eine NetApp ONTAP Select-Instanz bestellen, müssen Sie die zugehörigen Basiseinstellungen angeben.
+Wenn Sie eine NetApp ONTAP Select-Instanz bestellen, müssen Sie die folgenden Basiseinstellungen angeben.
 
 ### Instanzname
 
@@ -56,15 +56,15 @@ Die Unterdomänenbezeichnung muss die folgenden Anforderungen erfüllen:
 Der Rootdomänenname muss die folgenden Anforderungen erfüllen:
 * Der Domänenname muss aus zwei oder mehr Zeichenfolgen bestehen, die jeweils durch einen Punkt (.) voneinander getrennt sind.
 * Die erste Zeichenfolge muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden.
-* Alle Zeichenfolgen mit Ausnahme der letzten darf nur alphanumerische Zeichen und Gedankenstriche (-) enthalten.
-* Die letzte Zeichenfolge darf nur Buchstaben enthalten.
+* In allen Zeichenfolgen mit Ausnahme der letzten dürfen nur alphanumerische Zeichen und Gedankenstriche (-) enthalten sein.
+* In der letzten Zeichenfolge dürfen nur Buchstaben enthalten sein.
 * Die Länge der letzten Zeichenfolge muss zwischen 2 und 24 Zeichen betragen.
 
 **Hinweis:** Die maximale Länge des vollständig qualifizierten Domänennamens für Hosts und VMs beträgt 50 Zeichen. Domänennamen müssen diese maximale Länge zulassen.
 
 ## Lizenzierungseinstellungen
 
-Sie müssen vier NetApp-Lizenzdateien hochladen, da jede der vier {{site.data.keyword.baremetal_short}}-Instanzen eine Lizenz erfordert. Wenden Sie sich an Ihr NetApp-Vertriebsteam, um die entsprechende Lizenzierung für Ihre Hochleistungs- oder Hochkapazitätsbereitstellung zu beschaffen.
+Sie müssen vier NetApp-Lizenzdateien hochladen, jeweils eine für jede der vier {{site.data.keyword.baremetal_short}}-Instanzen. Wenden Sie sich an Ihr NetApp-Vertriebsteam, um die entsprechende Lizenzierung für Ihre Hochleistungs- oder Hochkapazitätsbereitstellung zu erhalten.
 
 ## Einstellungen für Bare Metal Server
 
@@ -75,11 +75,11 @@ Sie müssen das {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) auswäh
 ### Bare Metal Server-Konfiguration
 
 Wählen Sie eine Ihren Anforderungen entsprechende Bare Metal Server-Konfiguration aus:
-* **Hohe Leistung (mittel)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 59 TB
+* **Hohe Leistung (M = Mittel)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 59 TB
 * **Hohe Leistung (groß)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 3,8-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 118 TB
 * **Hohe Kapazität** – Standard-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 64 GB RAM / Kapazität von 34 4-TB-SATA-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 190 TB
 
-**Hinweis:** 3,8-TB-Solid-State-Platten (SSD) werden unterstützt, wenn sie in einem {{site.data.keyword.CloudDataCent_notm}} allgemein verfügbar gemacht werden.
+**Anmerkung:** 3,8-TB-Solid-State-Platten (SSD) sind unterstützt, wenn sie in einem {{site.data.keyword.CloudDataCent_notm}} allgemein verfügbar gemacht werden.
 
 ### Bare Metal Server-Anzahl
 
@@ -97,7 +97,7 @@ Die Anzahl der ESXi-Server einer NetApp ONTAP Select-Instanz ist standardmäßig
    2. Wählen Sie die Bare Metal Server-Konfiguration aus.
 7. Überprüfen Sie im Fenster **Bestellübersicht** die Instanzkonfiguration, bevor Sie die Bestellung aufgeben.
     1. Überprüfen Sie die Einstellungen für die Instanz.
-    2. Überprüfen Sie die geschätzten Kosten der Instanz. Klicken Sie auf **Preisdetails**, um eine PDF-Datei mit der Zusammenfassung zu generieren. Ihre Bestellübersicht können Sie speichern oder drucken, indem Sie rechts oben im PDF-Fenster auf das Symbol **Drucken** bzw. **Herunterladen** klicken.
+    2. Überprüfen Sie die geschätzten Kosten der Instanz. Klicken Sie auf **Preisdetails**, um eine PDF-Datei mit der Zusammenfassung zu generieren. Ihre Bestellübersicht können Sie speichern oder drucken, indem Sie im PDF-Fenster auf das Symbol **Drucken** bzw. **Herunterladen** klicken.
     3. Vergewissern Sie sich, dass das zu belastende Konto korrekt ist und wählen Sie dann das Kontrollkästchen **Ich habe zur Kenntnis genommen, dass das im Folgenden aufgeführte Konto belastet wird** aus.
     4. Klicken Sie auf den Link bzw. die Links für die Bedingungen, die für Ihre Bestellung gelten. Vergewissern Sie sich, dass Sie mit diesen Bedingungen einverstanden sind, und wählen Sie dann das Kontrollkästchen **Ich habe die im Folgenden aufgeführten Vereinbarungen zu dem Service eines anderen Anbieters gelesen und diesen zugestimmt** aus.
     5. Klicken Sie auf **Bereitstellung**.
@@ -120,7 +120,7 @@ Sie können Ihre bestellte NetApp ONTAP Select-Instanz jetzt anzeigen und verwal
 *  Komponenten hinzufügen, ändern, zurückgeben oder entfernen
 *  Komponenten ausschalten
 
-   Ausgenommen von diesen Aktivitäten ist unter anderem das Management der Dateifreigaben für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von Dateifreigaben für gemeinsam genutzten Speicher.
+   Ausgenommen von diesen Aktivitäten ist unter anderem das Management der gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher.
 
 ### Zugehörige Links
 
