@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-11"
 
 # Neue vSphere-Cluster bestellen
 
-Zur Bereitstellung einer hochanpassungsfähigen virtualisierten VMware-Plattform müssen Sie einen VMware vSphere on {{site.data.keyword.cloud}}-Cluster bestellen. In diesem Abschnitt ist beschrieben, wie Sie einen neuen VMware vSphere-Cluster erstellen.
+Zur Bereitstellung einer hochanpassungsfähigen virtualisierten VMware-Plattform müssen Sie einen VMware vSphere on {{site.data.keyword.cloud}}-Cluster bestellen. In diesem Abschnitt ist beschrieben, wie Sie einen neuen vSphere-Cluster definieren.
 
 In dieser Prozedur werden Sie durch die Auswahl von VMware-Komponenten, {{site.data.keyword.cloud_notm}} Bare Metal Server-Einstellungen, Speichereinstellungen und Optionen für den Netzbetrieb geführt, um einen neuen Cluster zu erstellen. Nachdem Sie die Bestellung aufgegeben haben, wird die Clusterkonfiguration gespeichert, damit Sie den Cluster später ausgehend von dieser Konfiguration wie benötigt skalieren können. Nach der Bestellung können Sie den VMware-Cluster manuell gemäß Ihren Anforderungen konfigurieren.
 
@@ -34,9 +34,9 @@ Der Clustername muss innerhalb Ihres Kontos eindeutig sein.
 
 Wählen Sie die VMware-Komponenten aus, die mit Ihrem Cluster bestellt werden sollen, und geben Sie die Lizenzierungsoption für die Komponenten an.
 
-### (Nur für IBM Business Partner) Komponentenpakete
+### Komponentenpakete für IBM Business Partner-Benutzer
 
-IBM Business Partner können bei der Bestellung eines neuen vSphere-Clusters ein Komponentenlizenzpaket auswählen. Folgende Pakete sind verfügbar:
+IBM Business Partner-Benutzer können bei der Bestellung eines neuen vSphere-Clusters ein Komponentenlizenzpaket auswählen. Folgende Pakete sind verfügbar:
 
 Table 1. VSphere-CLuster-Komponentenpakete für IBM Business Partner
 
@@ -52,11 +52,11 @@ Die folgenden VMware-Komponenten können Sie ebenfalls in Ihre Bestellung einbez
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**Hinweis:** Die BYOL-Option (Bring Your Own License) steht IBM Business Partnern nicht zur Verfügung.
+**Anmerkung:** Die BYOL-Option (Bring Your Own License) steht für IBM Business Partner-Benutzer nicht zur Verfügung.
 
-### (Nur für Benutzer ohne Business Partner-Status) Einzelne Komponenten
+### Einzelne Komponenten für Benutzer ohne Business Partner-Status
 
-Wenn Sie kein IBM Business-Partner sind, können Sie die folgenden VMware-Komponenten für Ihren vSphere-Cluster flexibel zusammenstellen:
+Wenn Sie nicht Den IBM Business Partner-Status haben, können Sie für Ihren vSphere Cluster folgende Komponenten auswählen:
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
@@ -115,20 +115,14 @@ Bei Bestellungen ohne vSAN werden ESXi-Server mit einem Chassis für zwölf Plat
 
 Bei Bestellungen mit vSAN werden ESXi-Server mit einem Chassis für zwölf Platten und vier Platten bestellt (zwei Platten für das ESXi-Betriebssystem und zwei für das Caching reservierte Platten). Diese Einstellungen sind standardmäßig konfiguriert und können nicht geändert werden. Sie können weitere Kapazitätsplatten bestellen, indem Sie **Plattentyp und -größe für vSAN-Kapazitätsplatten** und **Anzahl der vSAN-Kapazitätsplatten** auswählen.
 
-Nachdem Sie die Komponente "VMware vSAN" für den Cluster ausgewählt haben, müssen Sie die folgenden Einstellungen angeben.
+Wenn Sie für den Cluster die Komponente "VMware vSAN" ausgewählt haben, müssen Sie folgende Einstellungen angeben.
 
-### Plattentyp und -größe für vSAN-Kapazitätsplatten
+* **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
+* **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
+* **Plattentyp für vSAN-Cacheplatten**: Wählen Sie die für die Cacheplatten benötigte Option aus.
 
-Diese Option ist nur dann verfügbar, wenn Sie die Komponente "VMware vSAN" ausgewählt haben.
-
-Die folgenden Plattentypen sind verfügbar:
-* 960 GB SSD SED
-* 1,9 TB SSD SED
-* 3,8 TB SSD SED (3,8 TB SSD SED-Laufwerke werden unterstützt, wenn sie in einem Rechenzentrum allgemein verfügbar gemacht werden)
-
-### Anzahl der vSAN-Kapazitätsplatten
-
-Diese Option ist nur dann verfügbar, wenn Sie die Komponente "VMware vSAN" ausgewählt haben. Die Optionen für die Plattenanzahl sind 2, 4, 6 oder 8.
+    **Anmerkung**: Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option für **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* **Anzahl der vSAN-Cacheplatten**: Geben Sie die Anzahl der hinzuzufügenden Cacheplatten an.
 
 ## Netzschnittstelleneinstellungen
 
@@ -161,6 +155,15 @@ Der Domänenname wird für alle {{site.data.keyword.baremetal_short}}-Instanzen 
 * Die Länge der anderen Zeichenfolgen muss zwischen 1 und 63 Zeichen liegen.
 * Die maximale Länge des Domänennamens beträgt 189 Zeichen.
 
+### Öffentliches oder privates Netz
+
+Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC – Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}
+* FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
+
 ### VLANs
 
 Die Netzeinstellungen basieren auf Ihrer Auswahl von entweder **Neue VLANs bestellen** oder **Vorhandene VLANs auswählen**.
@@ -192,7 +195,7 @@ Sie können außerdem auswählen, ob das HA-Paar von FortiGate Physical Applianc
 
 Auf Basis Ihrer Konfigurationen werden die geschätzten Kosten sofort generiert und im rechten Fenster **Bestellübersicht** angezeigt. Klicken Sie auf **Preisdetails**, um ein PDF-Dokument zu generieren, das die Kostenschätzungsdetails enthält.
 
-## Vorgehensweise
+## Vorgehensweise zum Bestellen von vSphere-Cluster
 
 1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und anschließend im Abschnitt **Virtuelle Rechenzentren** auf **VMware vSphere**.
 2. Klicken Sie auf der Seite **VMware vSphere on IBM Cloud** auf **Erstellen**.  
@@ -204,18 +207,18 @@ Auf Basis Ihrer Konfigurationen werden die geschätzten Kosten sofort generiert 
   Wenn Sie für VMware vSphere Enterprise Plus eine eigene Lizenz verwenden wollen (BYOL = Bring Your Own License), dann wird automatisch ein {{site.data.keyword.cloud_notm}}-Ticket für Sie geöffnet, um die standardmäßigen vSphere-Lizenzen für die bestellten {{site.data.keyword.baremetal_short}}-Instanzen anzufordern, die durch die von Ihnen bereitgestellten Lizenzen ersetzt werden sollen.   
 
     **Wichtig:** Sie sind selbst für die Verfolgung des Tickets verantwortlich und müssen sicherzustellen, dass Sie die vSphere-Lizenz auf den neu bestellten ESXi-Servern ersetzen. Auf diese Weise wird die Stornierung der Gebühr für die zunächst in der {{site.data.keyword.cloud_notm}}-Infrastruktur bereitgestellte vSphere-Lizenz von der {{site.data.keyword.cloud_notm}}-Infrastruktur bewilligt. Informationen zum Ersetzen Ihrer ESXi-vSphere-Lizenz finden Sie auf der Seite [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
-
 5. Geben Sie die Bare Metal Server-Einstellungen an:
    1. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für den Cluster aus.
    2. Wählen Sie das CPU-Modell und die RAM-Größe aus.
-   3. Geben Sie die Anzahl der Bare Metal Servers an.
-6. Wenn Sie die Komponente **VMware vSAN** ausgewählt haben, dann geben Sie die Einstellungen für den vSAN-Speicher an, indem Sie **Plattentyp und -größe für vSAN-Kapazitätsplatten** und **Anzahl der vSAN-Kapazitätsplatten** auswählen.
+   3. Geben Sie die Anzahl der Bare Metal Server an.
+6. Wenn Sie die Komponente **VMware vSAN** ausgewählt haben, müssen Sie die vSAN-Speicherkonfiguration ausführen. Geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten sowie die Anzahl der Platten an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
 7. Geben Sie die Netzschnittstelleneinstellungen an:
    1. Geben Sie das Hostnamenspräfix, die Unterdomänenbezeichnung und den Domänennamen ein.
-   2. Wählen Sie die Netzschnittstelle aus, die verwendet werden soll.
+   2. Wählen Sie die Netzeinstellung für entweder **Öffentliches und privates Netz** oder **Nur privates Netz** aus.
+   3. Wählen Sie die Netzschnittstelle aus, die verwendet werden soll.
     * Falls Sie neue öffentliche und private VLANs bestellen wollen, klicken Sie auf **Neue VLANs bestellen**.
     * Wenn Sie die vorhandenen öffentlichen und privaten VLANs wiederverwenden möchten, sofern diese verfügbar sind, dann klicken Sie auf **Vorhandene VLANs auswählen** und geben Sie die VLANs und optional die Teilnetze an.
-    3. Geben Sie an, ob das HA-Paar von FortiGate Physical Appliance 300 Series zum Sichern der Cloudumgebung angewendet werden soll.  
+    4. Geben Sie an, ob das HA-Paar von FortiGate Physical Appliance 300 Series zum Sichern der Cloudumgebung angewendet werden soll.  
 8. Überprüfen Sie im Fenster **Bestellübersicht** die Clusterkonfiguration und die geschätzten Kosten.
    * Wenn Sie die Konfiguration als Vorlage speichern wollen, ohne eine Bestellung aufzugeben, klicken Sie auf **Konfiguration speichern**.
    * Wenn Sie die Bestellung aufgeben wollen, dann vergewissern Sie sich, dass das zu belastende Konto korrekt ist, überprüfen und akzeptieren Sie die Bedingungen und klicken Sie dann auf **Bereitstellung**.

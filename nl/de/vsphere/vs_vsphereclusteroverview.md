@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -26,9 +26,9 @@ Verwenden Sie dieses Produktangebot, um einen neuen Cluster aus ESXi-Servern zu 
 
 ### VMware-Komponenten
 
-Lizenzen (von IBM bereitgestellt oder eigene) für die folgenden VMware-Komponenten:
-* VMware vSphere Enterprise Plus 6.0u2 oder 6.5u1
-* Optionale VMware-Komponenten:
+Wählen Sie für folgende VMware-Komponenten (von IBM bereitgestellt oder eigene) Lizenzen aus:
+* VMware vSphere Enterprise Plus 6.0u2, 6.5u1 oder 6.5u2
+* Folgende VMware-Komponenten sind optional:
    * VMware vCenter Server Standard
    * VMware NSX (Base, Advanced oder Enterprise)
    * VMware vSAN (Advanced oder Enterprise)
@@ -39,7 +39,7 @@ Lizenzen (von IBM bereitgestellt oder eigene) für die folgenden VMware-Komponen
 
 ### Bare Metal Server
 
-Eine oder mehrere {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen mit dem ausgewählten CPU-Modell und der ausgewählten RAM-Größe:
+Wählen Sie eine oder mehrere {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen mit dem von Ihnen ausgewählten CPU-Modell und der ausgewählten RAM-Größe aus:
 * 2-CPU Intel Broadwell Generation (Intel Xeon E5-2600 v4 Series)
 * 2-CPU Intel Skylake Generation (Intel Xeon 4100/5100/6100 Series)
 
@@ -51,20 +51,23 @@ Zusätzlich folgende Platten- und Netzspezifikationen:
 
 ### Vernetzung
 
-* 3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
+* 1 öffentliches VLAN (Virtual LAN) und zwei private VLANs
 * (Optional) 1 HA-Paar von FortiGate Security Appliance-Einheiten
 
 ### Speicher
 
 Vom Benutzer angepasster Speicher für vSAN-Konfiguration bei Auswahl der Komponente "VMware vSAN":
-* Optionen für Speicherplatten: 960 GB SSD SED, 1,9 TB SSD SED oder 3,8 TB SSD SED
-* Optionen für die Plattenmenge: 2, 4, 6 oder 8
+* Speicherplattenoptionen (960 GB SSD SED, 1.9 TB SSD SED oder 3.8 TB SSD SED)
+* Optionen für die Plattenmenge (2, 4, 6 oder 8)
 
-**Hinweis:** 3,8-TB-Solid-State-Platten (SSD) werden unterstützt, wenn sie in einem Rechenzentrum allgemein verfügbar gemacht werden.
+  Zusätzlich werden auch zwei Cacheplatten mit 960 GB pro Host bestellt.
+
+  **Anmerkung:** 3,8-TB-Solid-State-Platten (SSD) sind unterstützt, wenn sie in einem Rechenzentrum allgemein verfügbar gemacht werden.
+* Option für "Hohe Leistung mit Intel Optane", die zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereitstellt. Diese Option hängt vom CPU-Modell ab.
 
 ## Technische Spezifikationen für vSphere-Clustererweiterungsknoten
 
-Jeder vSphere-Clustererweiterungsknoten stellt die folgenden Komponenten in Ihrem {{site.data.keyword.slportal}}-Konto mit den entsprechenden anfallenden Gebühren bereit.
+Jeder vSphere-Clustererweiterungsknoten stellt folgende Komponenten in Ihrem {{site.data.keyword.slportal}}-Konto mit den entsprechenden anfallenden Gebühren bereit.
 
 ### Hardware für Erweiterungsknoten
 
