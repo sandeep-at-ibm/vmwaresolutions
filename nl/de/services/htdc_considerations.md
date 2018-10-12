@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-27"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -33,12 +33,12 @@ Lizenz pro Host: Eine HyTrust DataControl-Lizenz wird für jeden Host in der Umg
 
 ## Hinweise zum Entfernen von HyTrust DataControl on IBM Cloud
 
-Vor dem Entfernen des Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" müssen Sie sicherstellen, dass alle Platten von DataControl verschlüsselt oder gesichert wurden. Nachdem Sie den Service entfernt haben, werden die Schlüssel möglicherweise gelöscht, sodass Sie eventuell nicht mehr auf Ihre VMs zugreifen können.
+Vor dem Entfernen des Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" müssen Sie sicherstellen, dass Sie alle Clients von der Verwendung von DataControl entkoppelt haben. Nachdem Sie den Service entfernt haben, werden die Schlüssel möglicherweise gelöscht, sodass Sie eventuell nicht mehr auf Ihre VMs zugreifen können.
 
 ### Zugehörige Links
 
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} bestellen](htdc_ordering.html)
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} verwalten](managinghtcc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} verwalten](managinghtdc.html)
 * [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
 * [Häufig gestellte Fragen](../vmonic/faq.html)
 * [HyTrust-Website](https://www.hytrust.com/)

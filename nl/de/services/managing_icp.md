@@ -10,7 +10,7 @@ lastupdated: "2018-08-31"
 
 # IBM Cloud Private Hosted anfordern
 
-{{site.data.keyword.cloud}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} führt eine automatische Bereitstellung von {{site.data.keyword.cloud_notm}} Private Hosted auf Ihren VMware vCenter Server-Instanzen durch. 
+{{site.data.keyword.cloud}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} führt eine automatische Bereitstellung von {{site.data.keyword.cloud_notm}} Private Hosted auf Ihren VMware vCenter Server-Instanzen durch.
 
 {{site.data.keyword.cloud_notm}} Private Hosted stellt die Leistungsfähigkeit von Mikroservices und Containern in Ihrer VMware-Umgebung unter {{site.data.keyword.cloud_notm}} zur Verfügung. Mit diesem Service können Sie den Einsatz des bereits vertrauten VMware- und {{site.data.keyword.cloud_notm}} Private-Betriebsmodells und der zugehörigen Tools von Ihrem lokalen Standort (On-Premises) auf {{site.data.keyword.cloud_notm}}-Umgebungen ausdehnen.
 
@@ -24,14 +24,14 @@ Im Folgenden sind die Mindestvoraussetzungen zur Anforderung des Service "{{site
 * Drei {{site.data.keyword.baremetal_long}}-Instanzen
 * Dual Intel Xeon Gold 5120-Prozessor / 28 Kerne insgesamt, 2,2 GHz
 * 384 GB Arbeitsspeicher (RAM) pro Server
-* Eine Dateifreigabe des gemeinsam genutzten NFS-Speichers mit 8.000 GB bei 4 IOPS/GB
+* Eine gemeinsam genutzte Dateiressource des gemeinsam genutzten NFS-Speichers mit 8.000 GB bei 4 IOPS/GB
 * 33 IBM Cloud Private Virtual Processor Core-Lizenzen
 * Zur Datensicherung wird die Verwendung des Service "Veeam on IBM Cloud" empfohlen
 
 ## Vorgehensweise zur Anforderung von IBM Cloud Private Hosted
 
 1. Bestellen Sie eine neue vCenter Server-Instanz und führen Sie dazu die Schritte aus, die im Abschnitt zum [Bestellen von vCenter Server-Instanzen](../vcenter/vc_orderinginstance.html) beschrieben werden. Sie können IBM Cloud Private Hosted auch für eine bereits vorhandene Instanz anfordern.
-  **Wichtig**: Vergewissern Sie sich, dass Ihre Umgebung die Mindestvoraussetzungen erfüllt, die hier aufgeführt wurden. 
+  **Wichtig**: Vergewissern Sie sich, dass Ihre Umgebung die Mindestvoraussetzungen erfüllt, die hier aufgeführt wurden.
 2. Vergewissern Sie sich, dass Sie über alle erforderlichen IBM Cloud Private-Berechtigungen verfügen.
 3. Nach Erhalt der Bestätigung, in der Sie darüber informiert werden, dass Ihre vCenter Server-Instanz einsatzbereit ist, führen Sie die folgenden Schritte aus, um IBM Cloud Private Hosted anzufordern.
 4. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Einführung**.
