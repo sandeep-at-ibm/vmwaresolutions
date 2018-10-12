@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -75,7 +75,7 @@ vSAN에서는 다음 컴포넌트를 채택합니다.
 
 ### vSAN의 가상 네트워크 설정
 
-이 디자인의 경우, vSAN 트래픽은 전용 사설 VLAN에서 ESXi 호스트 간에 이동합니다. 사설 네트워크 스위치에 연결된 2개의 네트워크 어댑터는 업링크로서 두 네트워크 어댑터 모두의 vSphere 분배 스위치(VDS)로 vSphere 내에서 구성됩니다. vSAN VLAN에 대해 구성된 전용 vSAN 커널 포트 그룹은 VDS 내에 상주합니다. 점보 프레임(MTU 9000)은 사설 VDS용으로 사용됩니다.
+이 디자인의 경우, vSAN 트래픽은 전용 사설 VLAN에서 ESXi 호스트 간에 이동합니다. 사설 네트워크 스위치에 연결된 2개의 네트워크 어댑터는 업링크로 두 개 네트워크 어댑터가 포함된 vSphere Distributed Switch(vDS)로 vSphere 내에서 구성됩니다. vSAN VLAN에 대해 구성된 전용 vSAN 커널 포트 그룹은 vDS 내에 상주합니다. 점보 프레임(MTU 9000)은 사설 vDS용으로 사용됩니다.
 
 vSAN은 업링크 간의 트래픽을 로드 밸런싱하지 않습니다. 따라서 고가용성(HA)을 지원하기 위해 다른 어댑터가 대기 중인 동안 하나의 어댑터는 활성입니다. vSAN에 대한 네트워크 장애 복구 정책은 실제 네트워크 포트 간에 **명시적 장애 복구**로서 구성됩니다.
 
@@ -108,7 +108,7 @@ vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware 솔루션 배�
 
 ## VMware NSX 디자인
 
-네트워크 가상화는 가상 계층 내에 존재하는 네트워크 오버레이를 제공합니다. 또한 On-Demand 가상 네트워크의 빠른 프로비저닝, 배치, 재구성 및 폐기 등의 기능이 있는 아키텍처를 제공합니다. 이 디자인은 vSphere 분배 스위치(VDS) 및 VMware NSX for vSphere를 사용하여 가상 네트워킹을 구현합니다.
+네트워크 가상화는 가상 계층 내에 존재하는 네트워크 오버레이를 제공합니다. 또한 On-Demand 가상 네트워크의 빠른 프로비저닝, 배치, 재구성 및 폐기 등의 기능이 있는 아키텍처를 제공합니다. 이 디자인은 vDS 및 VMware NSX for vSphere를 사용하여 가상 네트워킹을 구현합니다. 
 
 이 디자인에서 NSX Manager는 초기 클러스터에 배치됩니다. NSX Manager에는 사설 포터블 주소 블록의 VLAN 지원 IP 주소가 지정됩니다. 이는 관리 컴포넌트용으로 지정되며 [공통 서비스 디자인](design_commonservice.html)에서 논의한 DNS 및 NTP 서버로 구성되어 있습니다. NSX Manager는 표 2에 나열된 스펙으로 설치됩니다.
 
@@ -131,7 +131,7 @@ vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware 솔루션 배�
 
 초기 배치 이후 {{site.data.keyword.cloud_notm}} 자동화는 초기 클러스터 내에 3개의 NSX Controller를 배치합니다. 각 제어기에는 관리 컴포넌트용으로 지정된 사설 a 포터블 서브넷의 VLAN 지원 IP 주소가 지정됩니다. 또한 이 디자인은 클러스터의 호스트 간에 제어기를 분리하기 위해 VM-VM 역-친화성 규칙을 작성합니다. 초기 클러스터에는 제어기에 대한 고가용성을 보장할 수 있도록 최소한 3개의 노드가 포함되어 있어야 합니다.
 
-제어기에 추가하여, {{site.data.keyword.cloud_notm}} 자동화는 VTEP(VXLAN Tunnel Endpoint)를 통한 가상화된 네트워크의 사용이 가능하도록 NSX VIBS의 배치된 vSphere 호스트를 준비합니다. VTEP에는 [실제 인프라 디자인](design_physicalinfrastructure.html)의 *표 1. VLAN 및 서브넷 요약*에 나열된 대로 VTEP에 지정된 사설 a 포터블 IP 주소 범위의 VLAN 지원 IP 주소가 지정됩니다. VXLAN 트래픽은 태그 지정되지 않은 VLAN에 상주하며 사설 vSphere 분배 스위치(VDS)에 지정됩니다.
+제어기에 추가하여, {{site.data.keyword.cloud_notm}} 자동화는 VTEP(VXLAN Tunnel Endpoint)를 통한 가상화된 네트워크의 사용이 가능하도록 NSX VIBS의 배치된 vSphere 호스트를 준비합니다. VTEP에는 [실제 인프라 디자인](design_physicalinfrastructure.html)의 *표 1. VLAN 및 서브넷 요약*에 나열된 대로 VTEP에 지정된 사설 a 포터블 IP 주소 범위의 VLAN 지원 IP 주소가 지정됩니다. VXLAN 트래픽은 태그가 지정되지 않은 VLAN에 상주하며 사설 vDS에 지정됩니다.
 
 그 이후에 세그먼트 ID 풀이 지정되며 클러스터의 호스트가 전송 구역에 추가됩니다. IGMP(Internet Group Management Protocol) 스누핑이 {{site.data.keyword.cloud_notm}} 내에서 구성되지 않으므로 전송 구역에서는 유니캐스트만 사용됩니다.
 
@@ -141,13 +141,13 @@ vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware 솔루션 배�
 
 ### 분배 스위치 디자인
 
-디자인에서는 최소 수의 vSphere 분배 스위치(VDS)를 사용합니다. 클러스터의 호스트는 공용 및 사설 네트워크에 연결됩니다. 호스트는 2개의 분배 가상 스위치로 구성되어 있습니다. 2개 스위치의 사용은 공용 및 사설 네트워크를 분리하는 {{site.data.keyword.cloud_notm}} 네트워크의 사례를 따릅니다. 다음 다이어그램에서는 VDS 디자인을 보여줍니다.
+디자인에서는 최소한의 vDS 스위치를 사용합니다. 클러스터의 호스트는 공용 및 사설 네트워크에 연결됩니다. 호스트는 2개의 분배 가상 스위치로 구성되어 있습니다. 2개 스위치의 사용은 공용 및 사설 네트워크를 분리하는 {{site.data.keyword.cloud_notm}} 네트워크의 사례를 따릅니다. 다음 다이어그램은 vDS 디자인을 보여줍니다.
 
 그림 3. 분배 스위치 디자인
 
-![분배 스위치 디자인](virtual_network_distributedswitch.svg "VDS 디자인")
+![분배 스위치 디자인](virtual_network_distributedswitch.svg "vDS 디자인")
 
-그림에 표시된 대로, 하나의 VDS는 공용 네트워크 연결(SDDC-Dswitch-Public)용으로 구성되어 있으며 다른 VDS는 사설 네트워크 연결(SDDC-Dswitch-Private)용으로 구성되어 있습니다.
+그림에 표시된 대로, 하나의 vDS는 공용 네트워크 연결(SDDC-Dswitch-Public)용으로 구성되고 다른 vDS는 사설 네트워크 연결(SDDC-Dswitch-Private)용으로 구성되어 있습니다.
 
 경합과 대기 시간을 줄이고 보안을 강화하기 위해 서로 다른 유형의 트래픽을 분리해야 합니다. VLAN은 실제 네트워크 기능을 세그먼트화하는 데 사용됩니다.
 
