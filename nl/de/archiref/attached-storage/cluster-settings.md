@@ -28,7 +28,7 @@ Die folgende Tabelle enthält die Einstellungen für den vSphere-DRS-Cluster in 
 
 Tabelle 1. Einstellungen zur DRS-Automatisierung für den vSphere-DRS-Cluster
 
-| Einstellung             | Wert   |
+| Einstellung             | Wert  |
 |:------------------- |:------ |
 | vSphere DRS aktivieren | Ausgewählt |
 | Automatisierungsstufe | Vollständig automatisiert |
@@ -46,7 +46,8 @@ In diesem Design wird das Energiemanagement inaktiviert, da sich durch die Ab- o
 
 ## vSphere High Availability (HA)
 
-vSphere stellt Hochverfügbarkeit (HA = High Availability) für VMs bereit, indem die virtuellen Maschinen und die Hosts, auf denen diese platziert wurden, in einem Cluster zusammengefasst werden. Die Hosts im Cluster werden überwacht und im Falle eines Fehlers oder Ausfalls werden die VMs auf dem fehlerhaften oder ausgefallenen Host auf einem Ausweichhost erneut gestartet. In diesem Design wird vSphere High Availability mit der Hostüberwachung und der VM-Überwachung im Cluster aktiviert.
+vSphere stellt Hochverfügbarkeit (HA = High Availability) für VMs bereit, indem die virtuellen Maschinen und die Hosts, auf denen diese platziert wurden, in einem Cluster zusammengefasst werden. Die Hosts im Cluster werden überwacht und im Falle eines Fehlers oder Ausfalls werden die VMs auf dem fehlerhaften oder ausgefallenen Host auf einem Ausweichhost erneut gestartet.
+In diesem Design wird vSphere High Availability mit der Hostüberwachung und der VM-Überwachung im Cluster aktiviert.
 
 ### Hostüberwachung
 
@@ -64,7 +65,7 @@ Die folgende Tabelle enthält die Einstellungen für den vSphere HA-Cluster in V
 
 Tabelle 2. Fehlerbedingungen und Einstellungen für VM-Antworten für vSphere HA-Cluster
 
-| Einstellung             | Wert   |
+| Einstellung             | Wert  |
 |:------------------- |:------ |
 | VM-Neustartpriorität | Mittel |
 | Antwort für Hostisolation | VMs ausschalten und neu starten |
