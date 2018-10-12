@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-08-13"
 
 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링은 스토리지 가상화 서비스를 제공하여 vCenter Server 배치를 보완합니다.
 
-다음 그림은 NetApp ONTAP Select on vCenter Server 배치의 전체 아키텍처에 대해 설명합니다.
+다음 그림은 NetApp ONTAP Select on vCenter Server 배치의 전반적인 아키텍처를 보여줍니다.
 
 그림 1. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}의 상위 레벨 아키텍처
 
@@ -33,7 +33,7 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링은 스토리�
 * VMware NSX는 논리 네트워킹 컴포넌트 및 가상 네트워크를 제공하는 네트워크 가상화 플랫폼입니다.
 * NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}는 4개의 호스트에 대해 4개의 VM으로 구성된 ONTAP Select 클러스터를 배치합니다.
 
-다음 그림은 NetApp ONTAP Select 배치의 컴포넌트에 대해 설명합니다.
+다음 그림은 NetApp ONTAP Select 배치의 컴포넌트를 보여줍니다.
 
 그림 2. NetApp ONTAP Select 컴포넌트
 
@@ -41,7 +41,15 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링은 스토리�
 
 ### 가상화 관리
 
-이 계층은 vCenter Server 가상 어플라이언스, NSX Manager, 두 개의 NSX ESG, 세 개의 NSX Controller, PSC(Platform Services Controller) 가상 어플라이언스, vCSA(vCenter Server Appliance) 및 IBM CloudDriver VSI(Virtual Server Instance)로 구성됩니다.
+가상화 관리 계층은 다음 컴포넌트로 구성됩니다.
+
+* vCenter Server 가상 어플라이언스
+* NSX Manager
+* 두 개의 NSX ESG(Edge Services Gateway)
+* 세 개의 NSX Controllers
+* PSC(Platform Services Controller) 가상 어플라이언스
+* vCSA(vCenter Server Appliance)
+* IBM CloudDriver VSI(Virtual Server Instance).
 
 NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로컬 스토리지를 가상화합니다. NetApp ONTAP Select는 전용 모델에 배치되며, 여기서 기타 워크로드는 이와의 클러스터 공유가 예상되지 않습니다. 결과적으로 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링의 하드웨어 구성은 NetApp ONTAP Select의 요구사항에 따라서만 크기가 조정됩니다.
 
@@ -49,11 +57,11 @@ NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로�
 
 다음 컴포넌트는 NetApp ONTAP Select 인스턴스에 포함됩니다.
 
-**참고**: 표준화된 구성의 가용성 및 가격 책정은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
+**참고**: 표준화된 구성의 가용성 및 가격은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
 
 ### 스토리지
 
-* 세 개의 옵션: **고성능(중형)**, **고성능(대형)** 및 **고용량**
+* **고성능(중형)**, **고성능(대형)** 및 **고용량** 중에 선택
 * 핫 스페어가 포함된 RAID 5
 * 두 개의 1-TB SATA 드라이브 ESXi OS – RAID 1
 * 관리 데이터 저장소 – 관리 VM용 500GB
@@ -61,11 +69,11 @@ NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로�
 ### 사전 설정 구성
 
 다음의 구성 옵션이 포함된 4개의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}가 제공됩니다.
-* **고성능(중형)** – 프리미엄 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 128GB RAM / 노드당 22개의 1.9TB SSD 드라이브 용량 / 네 개의 노드 클러스터의 유효한 용량 – 59TB
-* **고성능(대형)** – 프리미엄 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 128GB RAM / 노드당 22개의 3.8TB SSD 드라이브 용량 / 네 개의 노드 클러스터의 유효한 용량 – 118TB
-* **고용량** – 표준 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 64GB RAM / 노드당 34개의 4TB SATA 드라이브 용량 / 네 개의 노드 클러스터의 유효한 용량 – 190TB
+* **고성능(중형)** – 프리미엄 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 128GB RAM / 노드당 22개의 1.9TB SSD 드라이브 용량 / 4 노드 클러스터의 유효한 용량 – 59TB
+* **고성능(대형)** – 프리미엄 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 128GB RAM / 노드당 22개의 3.8TB SSD 드라이브 용량 / 4 노드 클러스터의 유효한 용량 – 118TB
+* **고용량** – 표준 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 64GB RAM / 노드당 34개의 4TB SATA 드라이브 용량 / 4 노드 클러스터의 유효한 용량 – 190TB
 
-**참고:** 3.8TB SSD(Solid-State Disk) 드라이브는 일반적으로 데이터 센터에서 사용 가능할 때 지원됩니다.
+**참고:** 3.8TB SSD(Solid-State Disk) 드라이브는 데이터 센터에서 일반적으로 사용 가능할 때 지원됩니다.
 
 ### 하드웨어
 
@@ -77,7 +85,7 @@ NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로�
 ### 네트워킹
 
 * 10Gbps 듀얼 공용 및 사설 네트워크 업링크
-* 세 개의 VLAN(Virtual LANs): 한 개의 공인 VLAN 및 두 개의 사설 VLAN
+* 세 개의 VLAN(Virtual LANs): 한 개의 공용 VLAN 및 두 개의 사설 VLAN
 * 하나의 안전한 VMware NSX Edge Services Gateway
 
 ### Virtual Server 인스턴스
@@ -88,7 +96,7 @@ NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로�
 
 ### 라이센스 및 요금
 
-*  네 개의 Premium/Standard Edition NetApp ONTAP Select 라이센스(사용자가 제공함)
+*  네 개의 Premium 또는 Standard Edition NetApp ONTAP Select 라이센스(사용자 제공)
 *  VMware vSphere 6.5 Enterprise Plus 에디션
 *  VMware vCenter Server 6.5
 *  VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4
@@ -102,6 +110,10 @@ NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로�
 *  서비스 다시 시작
 
    이 활동에 대한 예외에는 {{site.data.keyword.slportal}}의 공유 스토리지 파일 공유 관리가 포함됩니다. 이러한 활동에는 공유 스토리지 파일 공유 주문, 삭제(마운트된 경우 데이터 저장소에 영향을 줄 수 있음), 권한 부여 및 마운트가 포함됩니다.
+
+## 방화벽 고려사항
+
+방화벽을 사용 중인 경우에는 {{site.data.keyword.IBM}} CloudDriver VSI(Virtual Server Instance) 및 SDDC Manager 가상 머신(VM)의 모든 통신에 대한 규칙을 구성해야 합니다. 이러한 규칙은 모든 프로토콜이 `10.0.0.0/8` 및 `161.26.0.0/16`의 IP 주소에서 통신할 수 있도록 허용해야 합니다. 이러한 방화벽의 예로는 NSX DFW(Distributed Firewall) 또는 Vyatta 방화벽이 있습니다.
 
 ### 관련 링크
 
