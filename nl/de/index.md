@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -130,6 +130,10 @@ Wählen Sie nach Durchsicht der folgenden Tabelle Add-on-Services für Ihr Berei
     <tr>
        <td>[HyTrust DataControl on IBM Cloud](services/htdc_considerations.html)</td>
        <td>Der Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" bietet eine starke Verschlüsselung mit integriertem Schlüsselmanagement, um Workloads über ihren gesamten Lebenszyklus hinweg zu sichern. Der Service kann die Verschlüsselung sowohl auf Betriebssystemebene als auch auf Datenebene bereitstellen. Dies bedeutet, dass alle Verzeichnisse, Ordner oder Dateien innerhalb einer Workload ver- und entschlüsselt werden können.</td>
+    </tr>
+    <tr>
+       <td>[HyTrust KeyControl on IBM Cloud](services/htkc_considerations.html)</td>
+       <td>Der Service "HyTrust KeyControl on {{site.data.keyword.cloud_notm}}" vereinfacht das Management verschlüsselter Workloads durch Automatisierung und Vereinfachung des Lebenszyklus von Verschlüsselungsschlüsseln. Der Service kann mithilfe der FIPS 140-2-konformen Verschlüsselung ohne großen Aufwand skalierbare Verschlüsselungsschlüssel verwalten.</td>
     </tr>
     <tr>
        <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
