@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
 # Voraussetzungen und Planung für vCenter Server-Instanzen
 
-Überprüfen Sie die nachstehenden Voraussetzungen, bevor Sie Ihre VMware vCenter Server-Instanzen bestellen. Legen Sie der Planung für Ihre Instanz den Standort des {{site.data.keyword.CloudDataCent}} sowie Ihre Anforderungen an die Workloadkapazität und Ihren Bedarf an zusätzlichen Services zugrunde.
+Überprüfen Sie die nachstehenden Voraussetzungen, bevor Sie Ihre VMware vCenter Server-Instanzen bestellen. Legen Sie der Planung für Ihre Instanz den Standort von {{site.data.keyword.CloudDataCent}} sowie Ihre Anforderungen an die Workloadkapazität und Ihren Bedarf an Add-on-Services zugrunde.
 
 ## Voraussetzungen für IBM Cloud-Konto
 
@@ -62,7 +62,7 @@ Tabelle 2. Statusanzeiger für {{site.data.keyword.CloudDataCents_notm}} bei der
 | Status | Statusdetails |
 |:------------------------------|:--------------------------------------------------|
 | Demnächst verfügbar                   | Das {{site.data.keyword.CloudDataCent_notm}} ist gegenwärtig nicht verfügbar. |
-| Vorübergehend ohne Bestand  | Das {{site.data.keyword.CloudDataCent_notm}} bietet gegenwärtig keine Verfügbarkeit. |
+| Vorübergehend ohne Bestand  | Das {{site.data.keyword.CloudDataCent_notm}} ist gegenwärtig nicht verfügbar. |
 | Eingeschränkter Bestand             | Das {{site.data.keyword.CloudDataCent_notm}} bietet eine begrenzte Verfügbarkeit und die Bestellung kann möglicherweise nicht ausgeführt werden. |
 
 ## Sicherung von Managementkomponenten
@@ -75,7 +75,7 @@ Sie können für Ihre Instanz auf der Basis Ihrer Anforderungen Add-on-Services 
 
 ## Kapazitätsaspekte
 
-Informationen und Hinweise zur Kapazität finden Sie unter [Skalierungskapazität](../archiref/solution/solution_scaling.html).
+Weitere Informationen zu Kapazitätsaspekten finden Sie unter [Skalierungskapazität](../archiref/solution/solution_scaling.html).
 
 ### Zugehörige Links
 

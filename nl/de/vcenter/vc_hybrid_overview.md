@@ -4,21 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-20"
 
 ---
 
 # Übersicht über vCenter Server with Hybridity Bundle
 
-vCenter Server with Hybridity Bundle ist eine Instanz, die in V2.3 und höheren Releases verfügbar ist.
+VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle ist eine Instanz, die in V2.3 und höheren Releases verfügbar ist. Ab V2.6 ist die vCenter Server with Hybridity Bundle-Instanz für Business Partner verfügbar.
 
-VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle ist eine gehostete private Cloud, die den VMware vSphere-Stack als Service bereitstellt. Die VMware-Umgebung basiert auf vier {{site.data.keyword.cloud_notm}}-{{site.data.keyword.baremetal_short}}-Instanzen, umfasst VMware vSAN als dedizierten Speicher, bietet die automatische Bereitstellung und Konfiguration einer (über VMware NSX betriebenen) verwaltungsfreundlichen logischen Edge-Firewall und enthält den Service "VMware HCX on {{site.data.keyword.cloud_notm}}".
+vCenter Server with Hybridity Bundle ist eine gehostete private Cloud, die den VMware vSphere-Stack als Service bereitstellt. Die VMware-Umgebung basiert auf vier {{site.data.keyword.cloud_notm}}-{{site.data.keyword.baremetal_short}}-Instanzen, umfasst VMware vSAN als dedizierten Speicher, bietet die automatische Bereitstellung und Konfiguration einer (über VMware NSX betriebenen) verwaltungsfreundlichen logischen Edge-Firewall und enthält den Service "VMware HCX on {{site.data.keyword.cloud_notm}}".
 
 In zahlreichen Fällen kann die gesamte Umgebung in weniger als einem Tag bereitgestellt werden und die Bare-Metal-Infrastruktur kann die Rechenkapazität nach Bedarf schnell und flexibel skalieren.
 
 Wenn Sie die vSAN-basierte Speicherkapazität eines vSAN-Clusters erhöhen möchten, können Sie nach der Bereitstellung weitere ESXi-Server hinzufügen.
 
-Sie können für die VMware NSX Advanced Edition ein Upgrade auf die Enterprise Edition durchführen und zusätzliche VMware-Komponenten wie beispielsweise VMware vRealize Operations erwerben.
+Sie können für die VMware NSX Advanced Edition ein Upgrade auf die Enterprise Edition durchführen und weitere VMware-Komponenten wie beispielsweise VMware vRealize Operations erwerben.
 
 Sie können IBM Managed Services hinzufügen, wenn Sie die Routineabläufe und die Wartung der Virtualisierung, des Gastbetriebssystems oder der Anwendungsschichten auslagern möchten. Das Team von {{site.data.keyword.cloud_notm}} Professional Services kann Ihnen durch Migrations-, Implementierungs-, Planungs- und Onboarding-Services ebenfalls dabei helfen, Ihren Einstieg in die Cloud zu beschleunigen.
 
@@ -79,7 +79,7 @@ Die folgenden Netzkomponenten werden bestellt:
   * 1 sicheres VMware NSX Edge Services Gateway (ESG) für Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Dieses ESG wird von den IBM Management-VMs für die Kommunikation mit bestimmten externen IBM Managementkomponenten verwendet, die mit der Automatisierung zusammenhängen. Weitere Informationen finden Sie unter [Netz zur Verwendung des vom Kunden verwalteten ESG konfigurieren](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     **Wichtig**: Dieses ESG ist für Sie weder zugänglich, noch können Sie es verwenden. Wenn Sie es ändern, sind Sie möglicherweise nicht mehr in der Lage, die vCenter Server with Hybridity Bundle-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Beachten Sie außerdem, dass die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu führt, dass {{site.data.keyword.vmwaresolutions_short}} unbrauchbar wird.
-  * 1 sicheres vom Kunden verwaltetes VMware NSX Edge Services Gateway für eingehenden und abgehenden HTTPS-Workloaddatenverkehr, das von IBM als Vorlage bereitgestellt wird und von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen. Weitere Informationen finden Sie im Abschnitt [Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
+  * 1 sicheres vom Kunden verwaltetes VMware NSX Edge Services Gateway für eingehenden und abgehenden HTTPS-Workloaddatenverkehr, das von IBM als Vorlage bereitgestellt wird und von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen. Weitere Informationen finden Sie im Abschnitt [Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 Weitere Informationen zu Netzkomponenten, die bei der Bereitstellung des Service "HCX on {{site.data.keyword.cloud_notm}}" bestellt werden, finden Sie im Abschnitt [Übersicht über HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
 
@@ -89,13 +89,14 @@ Die folgenden VSIs (Virtual Server-Instanzen) werden bestellt:
 * 1 VSI für IBM CloudBuilder, der nach vollständiger Bereitstellung der Instanz beendet wird.
 * Sie haben die Möglichkeit, die Bereitstellung einer einzigen Virtual Server-Instanz (VSI) von Microsoft Windows für Microsoft Active Directory (AD) oder aber von zwei virtuellen Microsoft Windows-Maschinen für die Hochverfügbarkeit im Management-Cluster auszuwählen, um die Sicherheit und Leistungsfähigkeit zu erhöhen.
 
-### Speicher
+### vSAN-Speicher
 
 Der vSAN-Speicher bietet angepasste Konfigurationen mit unterschiedlichen Optionen für Plattentyp und -menge:
 * Plattenmenge: 2, 4, 6 oder 8.
 * Speicherplatte: 960 GB SSD SED, 1,9 TB SSD SED oder 3,8 TB SSD SED.
 
-  Zusätzlich werden 2 Cacheplatten mit 960 GB pro Host bestellt.
+  Zusätzlich werden zwei Cacheplatten mit 960 GB pro Host bestellt.
+* Option für "Hohe Leistung mit Intel Optane", die zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereitstellt. Diese Option hängt vom CPU-Modell ab.
 
 ### Von IBM bereitgestellte Lizenzen und Gebühren
 
@@ -131,7 +132,7 @@ Jeder vCenter Server with Hybridity Bundle-Erweiterungsknoten stellt die folgend
 *  Komponenten ausschalten
 *  Services erneut starten
 
-   Ausgenommen von diesen Aktivitäten ist unter anderem das Management der Dateifreigaben für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von Dateifreigaben für gemeinsam genutzten Speicher.
+   Ausgenommen von diesen Aktivitäten ist unter anderem das Management der gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher.
 
 ### Zugehörige Links
 

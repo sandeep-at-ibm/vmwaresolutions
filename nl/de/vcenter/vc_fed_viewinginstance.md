@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -16,7 +16,7 @@ Sie können die Zusammenfassung und die detaillierten Informationen der VMware F
 
 Wenn Sie eine Zusammenfassung aller VMware Federal-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
-2. Klicken Sie in der rechten oberen Ecke der Konsole auf Ihren Avatar und klicken Sie auf das Feld **Konto**, um das Benutzerkonto auszuwählen, für das Sie Instanzen prüfen wollen. 
+2. Klicken Sie im Konsolenbanner auf das Symbol Ihres Benutzerkontos und klicken Sie anschließend auf das Feld **Konto**, um das Benutzerkonto auszuwählen, für das Sie Instanzen prüfen wollen.
 3. Prüfen Sie in der Tabelle **vCenter Server** die Liste der Instanzen, die in dem ausgewählten Benutzerkonto bereitgestellt sind.
 
 Tabelle 1. Elemente von VMware Federal-Instanzen
@@ -26,7 +26,7 @@ Tabelle 1. Elemente von VMware Federal-Instanzen
 | Name | Der Name der Instanz. |
 | Version | Die Releaseversion, in der die Instanz bereitgestellt wurde oder auf die ein Upgrade durchgeführt wurde. |  
 | Standort | Das {{site.data.keyword.CloudDataCent_notm}}, in dem die Instanz gehostet wird. |  
-| Erstellungszeit | Der Zeitpunkt (Datum und Uhrzeit), zu dem die Instanz erstellt wurde. | 
+| Erstellungszeit | Der Zeitpunkt (Datum und Uhrzeit), zu dem die Instanz erstellt wurde. |
 | Status | Der Status der Instanz. |
 
 Für die Instanz gibt es eine Reihe von Statuswerten.
@@ -60,7 +60,7 @@ Tabelle 3. Eigenschaften von VMware Federal-Instanzen
 | ID | Die ID der Instanz. |
 | Standort | Das {{site.data.keyword.CloudDataCent_notm}}, in dem die Instanz gehostet wird. |
 | Aktuelle Version |  Die aktuelle Version von {{site.data.keyword.vmwaresolutions_short}}. |
-| vCenter-Version | Die Version von VMware vCenter Server.<br><br>**Hinweis:** Die Versionen von vCenter Server, die in der {{site.data.keyword.vmwaresolutions_short}}-Konsole und in VMware vSphere Web Client angezeigt werden, weichen etwas voneinander ab. Beide Angaben sind richtig. |
+| vCenter-Version | Die Version von VMware vCenter Server.<br><br>**Anmerkung:** Die Versionen von vCenter Server, die in der {{site.data.keyword.vmwaresolutions_short}}-Konsole und in VMware vSphere Web Client angezeigt werden, weichen etwas voneinander ab. Beide Angaben sind richtig. |
 | NSX for vSphere | Die Produktversion von VMware NSX for vSphere. |
 | NSX-Lizenzedition | Die Version und Edition der VMware NSX-Lizenz. |
 | DNS-Rootdomäne | Der Rootdomänenname ist der Domänenname von DNS (Domain Name System) und der Gesamtstrukturrootname von Microsoft Active Directory (AD). |
@@ -115,7 +115,7 @@ Nun können Sie Ihre Instanzen in der {{site.data.keyword.vmwaresolutions_short}
 In den folgenden Abschnitten finden Sie Informationen, die Sie bei der Ausführung der Anmeldeanweisungen unterstützen:
 *  Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
 *  Eine Liste der Zugriffspunkte für die Anmeldung beim privaten Netz der {{site.data.keyword.cloud_notm}}-Infrastruktur mittels VPN finden Sie unter [VPN-Zugriff](http://www.softlayer.com/vpn-access){:new_window}.
-*  Falls Sie beim Bereitstellen einer Datei im Format "OVF" (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](../vmonic/trbl_deploy_ovf.html) weitere Informationen.
+*  Falls Sie beim Bereitstellen einer Datei im Format OVF (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](../vmonic/trbl_deploy_ovf.html) weitere Informationen.
 
 ### Zugehörige Links
 

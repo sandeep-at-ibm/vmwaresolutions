@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
 # VMware Federal-Instanzen bestellen
 
-Um eine flexible und anpassbare virtualisierte VMware-Plattform bereitzustellen, die Ihren Workloadbedarf optimal erfüllt, bestellen Sie eine VMware Federal-Instanz, die es Ihnen ermöglicht, die offene Managementverbindung zu trennen und Ihre bereitgestellte Instanz zu schützen.
+Um eine flexible und anpassbare virtualisierte VMware-Plattform bereitzustellen, die Ihren Workloadbedarf optimal erfüllt, bestellen Sie eine VMware Federal-Instanz. VMware Federal-Instanzen unterstützen Sie beim Trennen der offenen Managementverbindung und beim Schützen Ihrer bereitgestellten Instanz.
 
-**Hinweis:** VMware Federal on {{site.data.keyword.cloud}} wird gegenwärtig nur von vCenter Server-Instanzen unterstützt.
+**Anmerkung:** Aktuell wird VMware Federal on {{site.data.keyword.cloud}} nur von vCenter Server-Instanzen unterstützt.
 
-## Voraussetzungen
+## Voraussetzungen für die Bestellung von VMware Federal-Instanzen
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 * Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](../vmonic/useraccount.html).
@@ -32,11 +32,11 @@ Tabelle 1. Wertformat für Instanz- und Domänennamen
   | Vollständig qualifizierter Name des ESXi-Servers | `<host_prefix><n>.<subdomain_label>.<root_domain>`, hierbei steht `<n>` für die Folgenummer des ESXi-Servers. Die maximale Länge beträgt 50 Zeichen. |  
   | Vollständig qualifizierter Domänenname für PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |
 
-**Wichtig**: Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung und Instanzbereitstellung festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise könnte der öffentliche Netzbetrieb beendet werden, Server sowie Virtual Server-Instanzen (VSIs) könnten mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder die Virtual Server-Instanz für IBM CloudBuilder könnte gestoppt bzw. gelöscht werden.
+**Wichtig**: Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung oder Bereitstellung der Instanz festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise, wenn der öffentliche Netzbetrieb beendet wird, Server sowie virtuelle Serverinstanzen (VSIs) mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder wenn die Virtual Server-Instanz für IBM CloudBuilder gestoppt oder gelöscht wird.
 
 ## Systemeinstellungen
 
-Sie müssen die folgenden Systemeinstellungen angeben, wenn Sie eine VMware Federal-Instanz bestellen.
+Sie müssen folgende Systemeinstellungen angeben, wenn Sie eine VMware Federal-Instanz bestellen.
 
 ### Instanzname
 
@@ -48,16 +48,16 @@ Der Instanzname muss die folgenden Anforderungen erfüllen:
 
 ### Primär oder sekundär
 
-Bestellen Sie eine neue primäre Instanz. Die Bereitstellung einer sekundären Instanz für die Hochverfügbarkeit wird gegenwärtig nicht unterstützt.
+Bestellen Sie eine neue primäre Instanz. Die Bereitstellung einer sekundären Instanz für die Hochverfügbarkeit wird aktuell nicht unterstützt.
 
 ## Lizenzierungseinstellungen
 
-Von IBM bereitgestellte VMware-Lizenzen für folgende Ressourcen:
+Von IBM bereitgestellte Lizenzen für folgende VMware-Komponenten:
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.4
-* (Für vSAN-Cluster) VMware vSAN Advanced oder Enterprise 6.6
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4 (Base, Advanced oder Enterprise Edition)
+* (Für vSAN-Cluster) vSAN 6.6 (Advanced oder Enterprise Edition)
 
 **Achtung:**
 
@@ -66,7 +66,7 @@ Von IBM bereitgestellte VMware-Lizenzen für folgende Ressourcen:
 
 ## Einstellungen für Bare Metal Server
 
-Die Bare-Metal-Einstellungen sind von Ihrer angepassten Konfiguration abhängig. Die Option zum Auswählen einer vordefinierten Konfiguration wird gegenwärtig nicht unterstützt.
+Die Bare-Metal-Einstellungen sind von Ihrer angepassten Konfiguration abhängig. Die Option zum Auswählen einer vordefinierten Konfiguration wird aktuell nicht unterstützt.
 
 ### Standort des Rechenzentrums
 
@@ -99,23 +99,27 @@ Die Speichereinstellungen sind von der Auswahl der Bare Metal Server-Konfigurati
 
 ### vSAN-Speicher
 
-Geben Sie für vSAN die folgenden Speicheroptionen an:
+Geben Sie die folgenden vSAN-Optionen an:
 
-* **Plattentyp und -größe für vSAN-Kapazitätsplatten**: Wählen Sie die Kapazität aus, die Ihrem Bedarf an gemeinsam genutzten Speicher entspricht.
-* **Anzahl der vSAN-Kapazitätsplatten**: Wählen Sie die Anzahl der Platten für den gemeinsam genutzten vSAN-Speicher aus, die Sie hinzufügen wollen. Die Plattenanzahl muss 2, 4, 6 oder 8 sein.
-* Wählen Sie die VMware vSAN 6.6-Lizenzedition (Advanced oder Enterprise) aus.
+* **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
+* **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
+* **Plattentyp für vSAN-Cacheplatten**: Wählen Sie die für die Cacheplatten benötigte Option aus.
+
+    **Anmerkung**: Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option für **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* **Anzahl der vSAN-Cacheplatten**: Geben Sie die Anzahl der hinzuzufügenden Cacheplatten an.
+* **vSAN-Lizenz**: Wählen Sie die vSAN 6.6-Lizenzedition (Advanced oder Enterprise) aus.
 
 ### NFS-Speicher
 
-Wenn Sie **NFS-Speicher** auswählen, können Sie gemeinsam genutzten Speicher auf Dateiebene für Ihre Instanz hinzufügen, wobei für alle Dateifreigaben dieselben Einstellungen verwendet werden. Alternativ können Sie für die einzelnen Dateifreigaben jeweils unterschiedliche Konfigurationseinstellungen angeben. Geben Sie die folgenden NFS-Optionen an:
+Wenn Sie **NFS-Speicher** auswählen, können Sie gemeinsam genutzten Speicher auf Dateiebene für Ihre Instanz hinzufügen, wobei für alle gemeinsam genutzten Ressourcen dieselben Einstellungen verwendet werden; alternativ können Sie für die einzelnen gemeinsam genutzten Dateiressourcen jeweils unterschiedliche Konfigurationseinstellungen angeben. Geben Sie die folgenden NFS-Optionen an:
 
-**Hinweis:** Die Anzahl der Dateifreigaben muss zwischen 1 und 32 liegen.
+**Anmerkung:** Die Anzahl der gemeinsam genutzten Dateiressourcen muss zwischen 1 und 32 liegen.
 
-* **Dateifreigaben einzeln konfigurieren**: Wählen Sie diese Option aus, um für jede einzelne Dateifreigabe unterschiedliche Konfigurationseinstellungen anzugeben.
-* **Anzahl der Dateifreigaben**: Geben Sie bei Verwendung derselben Konfigurationseinstellung für jede Dateifreigabe die Anzahl der Dateifreigaben für den gemeinsam genutzten NFS-Speicher an, die Sie hinzufügen möchten.
+* **Gemeinsam genutzte Ressourcen einzeln konfigurieren**: Wählen Sie diese Option aus, um für jede einzelne gemeinsam genutzte Dateiressource unterschiedliche Konfigurationseinstellungen anzugeben.
+* **Anzahl der gemeinsam genutzten Ressourcen**: Geben Sie bei Verwendung derselben Konfigurationseinstellung für alle gemeinsam genutzten Dateiressourcen die Anzahl der gemeinsam genutzten Dateiressourcen für den gemeinsam genutzten NFS-Speicher an, die Sie hinzufügen möchten.
 * **Größe**: Wählen Sie die Kapazität aus, die Ihrem Bedarf an gemeinsam genutzten Speicher entspricht.
 * **Leistung**: Wählen Sie basierend auf Ihren Workloadanforderungen die E/A-Operationen pro Sekunde (Input/output Operations Per Second, IOPS) pro GB aus.
-* **NFS hinzufügen**: Wählen Sie diese Option aus, um einzelne Dateifreigaben hinzuzufügen, für die unterschiedliche Konfigurationseinstellungen verwendet werden.
+* **NFS hinzufügen**: Wählen Sie diese Option aus, um einzelne gemeinsam genutzte Dateiressourcen hinzuzufügen, für die unterschiedliche Konfigurationseinstellungen verwendet werden.
 
 Tabelle 3. Optionen für die NFS-Leistungsstufe
 
@@ -123,7 +127,7 @@ Tabelle 3. Optionen für die NFS-Leistungsstufe
   |:------------- |:------------- |
   | 2 IOPS/GB | Diese Option ist für die meisten allgemeinen Workloads geeignet. Anwendungsbeispiele sind das Hosting von kompakten Datenbanken, die Sicherung von Webanwendungen oder Plattenimages von virtuellen Maschinen für einen Hypervisor. |
   | 4 IOPS/GB | Diese Option ist für Workloads mit höherer Intensität geeignet, die zu einem bestimmten Zeitpunkt einen hohen Prozentsatz an aktiven Daten aufweisen. Anwendungsbeispiele sind transaktionsorientierte Datenbanken. |
-  | 10 IOPS/GB | Diese Option ist für die aufwändigsten Workloadtypen wie beispielsweise die Analyse gedacht. Anwendungsbeispiele sind Hochtransaktionsdatenbanken und andere leistungskritische Datenbanken. Diese Leistungsstufe ist auf eine maximale Kapazität von 4 TB pro Dateifreigabe begrenzt. |
+  | 10 IOPS/GB | Diese Option ist für die aufwändigsten Workloadtypen wie beispielsweise die Analyse gedacht. Anwendungsbeispiele sind Hochtransaktionsdatenbanken und andere leistungskritische Datenbanken. Diese Leistungsstufe ist auf eine maximale Kapazität von 4 TB pro gemeinsam genutzte Dateiressource begrenzt. |
 
 ## Netzschnittstelleneinstellungen
 
@@ -162,19 +166,19 @@ Wählen Sie die Konfiguration für DNS (Domain Name System) für Ihre Instanz au
 
 **Wichtig:** Sie müssen zwei Lizenzen für Microsoft Windows Server 2012 R2 bereitstellen, wenn Sie Ihre Instanz für die Verwendung der beiden virtuellen Microsoft Windows-Maschinen konfigurieren. Verwenden Sie die Lizenz für Microsoft Windows Server 2012 R2 Standard Edition und/oder die Lizenz für Microsoft Windows Server 2012 R2 Datacenter Edition.
 
-Derzeit kann jede Lizenz nur einem einzigen physischen Server zugeordnet werden und deckt bis zu zwei physische Prozessoren ab. Eine Standard Edition-Lizenz ist in der Lage, zwei virtualisierte virtuelle Microsoft Windows-Maschinen pro 2-Prozessor-Server auszuführen. Die beiden Lizenzen sind deshalb erforderlich, weil zwei virtuelle Microsoft Windows-Maschinen in zwei unterschiedlichen Hosts bereitgestellt werden.
+Derzeit kann jede Lizenz nur einem einzigen physischen Server zugeordnet werden und deckt bis zu zwei physische Prozessoren ab. Durch Verwenden einer einzigen Standard Edition-Lizenz können Sie zwei virtualisierte virtuelle Microsoft Windows-Maschinen pro 2-Prozessor-Server ausführen. Die beiden Lizenzen sind deshalb erforderlich, weil zwei virtuelle Microsoft Windows-Maschinen in zwei unterschiedlichen Hosts bereitgestellt werden.
 
 Sie haben 30 Tage Zeit, um die virtuellen Maschinen zu aktivieren.
 
-Weitere Informationen zum Bestellen der Windows-Lizenzierung finden Sie auf der Seite [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+Weitere Informationen zur Bestellung der Windows-Lizenzierung finden Sie auf der Seite [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Bestellübersicht
 
 Auf Basis der für die Instanz ausgewählten Konfiguration werden die geschätzten Kosten sofort generiert und im rechten Fenster im Abschnitt **Bestellübersicht** angezeigt. Klicken Sie unten im rechten Fenster auf **Preisdetails**, um ein PDF-Dokument zu generieren, das die Kostenschätzungsdetails enthält.
 
-## Vorgehensweise
+## Vorgehensweise beim Bestellen einer VMware Federal-Instanz
 
-1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und anschließend im Abschnitt **Virtuelle Rechenzentren** auf **vCenter Server**.
+1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und klicken Sie anschließend im Abschnitt **Virtuelle Rechenzentren** auf **vCenter Server**.
 2. Klicken Sie auf der Seite **VMware vCenter Server on IBM Cloud** auf die Karte **vCenter Server** und dann auf **Erstellen**.
 3. Geben Sie auf der Seite **vCenter Server** den Instanznamen ein.
 4. Klicken Sie auf **Primäre Instanz**, um eine einzelne Instanz in der Umgebung bereitzustellen.
@@ -183,9 +187,9 @@ Auf Basis der für die Instanz ausgewählten Konfiguration werden die geschätzt
   1. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
   2. Wählen Sie das CPU-Modell **Angepasst** und die Menge des **RAM** aus.
 7. Führen Sie die Speicherkonfiguration durch.
-  * Wenn Sie **vSAN-Speicher** ausgewählt haben, geben Sie **Plattentyp und -größe für vSAN-Kapazitätsplatten** und **Anzahl der vSAN-Kapazitätsplatten** sowie die Methode an, mit der die **vSAN-Lizenz** bereitgestellt werden soll.
-  * Wenn Sie **NFS-Speicher** ausgewählt haben und für alle Dateifreigaben dieselben Einstellungen hinzufügen und konfigurieren wollen, geben Sie die **Anzahl der Dateifreigaben**, **Größe** und **Leistung** an.
-  * Wenn Sie **NFS-Speicher** ausgewählt haben und Dateifreigaben einzeln hinzufügen und bearbeiten möchten, wählen Sie **Dateifreigaben einzeln konfigurieren** aus, klicken Sie neben der Bezeichnung **NFS hinzufügen** auf das Symbol **+** und wählen Sie dann für jede Dateifreigabe jeweils **Größe** und **Leistung** aus. Sie müssen mindestens eine Dateifreigabe auswählen.
+  * Wenn Sie **vSAN-Speicher** auswählen, geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten, die Anzahl der Platten und die vSAN-Lizenzedition an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
+  * Wenn Sie **NFS-Speicher** auswählen und für alle gemeinsam genutzten Dateiressourcen dieselben Einstellungen hinzufügen und konfigurieren wollen, geben Sie die **Anzahl der gemeinsam genutzten Ressourcen**, **Größe** und **Leistung** an.
+  * Wenn Sie **NFS-Speicher** auswählen und gemeinsam genutzte Dateiressourcen einzeln hinzufügen und konfigurieren möchten, wählen Sie **Gemeinsam genutzte Ressourcen einzeln konfigurieren** aus, klicken Sie neben der Bezeichnung **NFS hinzufügen** auf das Symbol **+** und wählen Sie dann für jede gemeinsam genutzte Dateiressource jeweils **Größe** und **Leistung** aus. Sie müssen mindestens eine gemeinsam genutzte Dateiressource auswählen.
 8. Führen Sie die Netzschnittstellenkonfiguration durch.
    1. Geben Sie das Hostnamenspräfix, die Unterdomänenbezeichnung und den Rootdomänennamen ein.
    2. Wählen Sie die DNS-Konfiguration aus.
@@ -215,7 +219,7 @@ Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_sh
 *  Instanzkapazität durch das Entfernen von ESXi-Servern erweitern oder verringern
 *  Komponenten ausschalten
 
-   Ausgenommen von diesen Aktivitäten ist unter anderem das Management der Dateifreigaben für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von Dateifreigaben für gemeinsam genutzten Speicher.
+   Ausgenommen von diesen Aktivitäten ist unter anderem das Management der gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher.
 
 ### Zugehörige Links
 

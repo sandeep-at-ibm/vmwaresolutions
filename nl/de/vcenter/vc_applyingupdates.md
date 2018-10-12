@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-19"
 
 ---
 
@@ -16,7 +16,9 @@ Der Prozess zur Anwendung von Patches und Updates für vCenter Server-Instanzen 
 
 ## Vorbereitende Schritte
 
-**Wichtig:** Wenn Sie ein Upgrade einer vCenter Server-Instanz auf eine vCenter Server with Hybridity Bundle-Instanz durchführen möchten, müssen Sie zunächst mindestens das Basis-Software-Update für vCenter Server V2.3 anwenden, bevor Sie das Upgrade der Lizenz auf Hybridity Bundle durchführen können.
+**Wichtig:** Wenn Sie ein Upgrade einer vCenter Server-Instanz auf eine vCenter Server with Hybridity Bundle-Instanz durchführen möchten, müssen Sie zunächst mindestens das Basis-Software-Update für vCenter Server V2.3 anwenden. Dies müssen Sie tun, bevor Sie das Upgrade auf Hybridity Bundle durchführen können.
+
+Business Partner-Benutzer haben nicht die Option, für eine vorhandene vCenter Server-Instanz ein Upgrade auf eine vCenter Server with Hybridity Bundle-Instanz durchzuführen.
 
 Bevor Sie versuchen, ein Update anzuwenden, erweitern Sie den Update-Eintrag, indem Sie auf den Abwärtspfeil klicken und die folgenden Informationen überprüfen:
 * Überprüfen Sie die Version des Updates. Sie müssen die Updates in chronologischer Reihenfolge anwenden, also zuerst das älteste Update und zuletzt das neueste Update. Stellen Sie sicher, dass Sie alle vorherigen Updates angewendet haben, bevor Sie das aktuelle Update anwenden. Beispielsweise müssen Sie das Update für V2.3 anwenden, bevor Sie versuchen, das Update für V2.4 anzuwenden.

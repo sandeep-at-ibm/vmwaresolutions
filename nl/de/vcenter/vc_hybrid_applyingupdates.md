@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -33,7 +33,7 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
 | Mittel | Dieses Update kann sich auf einige Systeme auswirken. Es empfiehlt sich, es während einer geplanten Ausfallzeit anzuwenden. |  
 | Bedeutend  | Dieses Update wirkt sich auf einige oder alle Systeme aus. Sie müssen es während einer geplanten Ausfallzeit anwenden. |  
 
-## Vorgehensweise
+## Vorgehensweise zum Anwenden von Updates auf vCenter Server with Hybridity Bundle-Instanzen
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, die Sie aktualisieren wollen.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -16,9 +16,9 @@ Die Informationen in diesem Abschnitt enthalten Hinweise und Voraussetzungen fü
 
 Informationen zu den Komponenten für den Netzbetrieb, die in Ihrer VMware Federal-Instanz enthalten sind, finden Sie unter [Technische Spezifikationen für VMware Federal on {{site.data.keyword.cloud}}-Instanzen](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
-## Hinweise zur NSX-Firewall
+## Hinweise zur Firewall
 
-Wenn Sie NSX Distributed Firewalls (DFW) verwenden, müssen Sie Regeln für die gesamte Kommunikation aus der IBM CloudDriver-VSI (VSI - virtuelle Serverinstanz) konfigurieren, damit alle Protokolle an den IP-Adressen `10.0.0.0/8` und `161.26.0.0/16` kommunizieren können.
+Wenn Sie Firewalls verwenden, müssen Sie Regeln für die gesamte Kommunikation aus der {{site.data.keyword.IBM}} CloudDriver-VSI (VSI – virtuelle Serverinstanz) und den SDDC Manager-VMs konfigurieren. Diese Regeln müssen es zulassen, dass alle Protokolle an den IP-Adressen `10.0.0.0/8` und `161.26.0.0/16` kommunizieren können. Beispiele für solche Firewalls sind NSX Distributed Firewalls (DFW) oder Vyatta-Firewalls.
 
 ## NSX mit virtuellen Maschinen verwenden
 

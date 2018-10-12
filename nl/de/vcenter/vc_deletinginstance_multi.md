@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-03-19"
+lastupdated: "2017-09-19"
 
 ---
 
 # vCenter Server-Instanzen in einer Konfiguration mit mehreren Standorten löschen
 
-Vor dem Löschen von vCenter Server-Instanzen, die Teil einer Konfiguration mit mehreren Standorten sind, müssen besondere Aspekte berücksichtigt werden.
+Beachten Sie folgende besondere Aspekte, bevor Sie planen, vCenter Server-Instanzen zu löschen, die Teil einer Konfiguration mit mehreren Standorten sind.
 
 Wenn Sie eine vCenter Server-Instanz löschen, werden die folgenden Komponenten nacheinander freigegeben:
 1. Alle bereitgestellten Services
@@ -24,14 +24,14 @@ Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz n
 
 **Achtung** Die gelöschte Instanz wird Ihnen bis zum Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur berechnet.
 
-## Vorgehensweise
+## Vorgehensweise zum Löschen von vCenter Server-Instanzen in einer Konfiguration mit mehreren Standorten
 
 1. Entfernen Sie alle Services aus der sekundären vCenter Server-Instanz.
-2. Stellen Sie sicher, dass keine NSX-Objekte in die sekundäre Instanz erweitert wurden, die gelöscht werden soll.
+2. Stellen Sie sicher, dass keine NSX-Objekte in die sekundäre Instanz erweitert werden, die Sie löschen möchten.
 3. Löschen Sie die sekundäre vCenter- und PSC-Instanz aus der primären SSO-Domäne. Weitere Informationen finden Sie unter [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2106736){:new_window}.
 4. Stufen Sie die virtuelle Serviceinstanz (VSI) für den lokalen Domänencontroller herab. Weitere Informationen finden Sie unter [Demoting domain controllers and domains](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
 5. Löschen Sie die sekundäre vCenter Server-Instanz in der {{site.data.keyword.vmwaresolutions_short}}-Konsole.
-6. Wiederholen Sie die Schritte 1 bis 5 für alle sekundären vCenter Server-Instanzen in Ihrer Konfiguration mit mehreren Standorten.
+6. Wiederholen Sie die Schritte 1-5 für alle sekundären vCenter Server-Instanzen in Ihrer Konfiguration mit mehreren Standorten.
 7. Nachdem Sie alle sekundären Instanzen gelöscht haben, können Sie auch die primäre Instanz in der {{site.data.keyword.vmwaresolutions_short}}-Konsole löschen.
 
 ### Zugehörige Links
