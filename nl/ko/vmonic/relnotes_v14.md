@@ -10,13 +10,13 @@ lastupdated: "2017-03-08"
 
 # V1.4 릴리스 정보
 
-이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 추가 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
+이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
 ## Cloud Foundation 인스턴스에 대한 컴포넌트 업데이트
 
 다음 컴포넌트가 새로 작성되거나 업데이트됩니다.
 
-* VC/PSC(vCenter/Platform Services Controller) 6.0U2a
+* VC 및 PSC(vCenter 및 Platform Services Controller) 6.0U2a
 * VMware Tools 10.1.0
 * SDDC Manager (SP) 2.2
 * VMware ESXi 6.0 u2 p04
@@ -42,7 +42,7 @@ VMware NSX for vSphere 6.2.4에 도입된 개선사항, 요구사항 및 알려�
 
 NSX Edge는 이제 주문 중인 새 vCenter Server 인스턴스의 일부로 포함됩니다. NSX Edge는 네트워크 에지 보안 및 게이트웨이 서비스를 제공하여 가상화된 네트워크를 격리합니다.
 
-인스턴스 배치 중에 IBM에서 관리 VMware NSX Edge Services Gateway(ESG)가 배치됩니다. 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 이 ESG는 2개의 인터페이스를 포함하기 위해 배치됩니다. 하나의 인터페이스는 {{site.data.keyword.cloud_notm}} 사설 VLAN에 연결되고, 다른 하나의 인터페이스는 {{site.data.keyword.cloud_notm}} 공인 VLAN에 연결됩니다.
+인스턴스 배치 중에 IBM에서 관리 VMware NSX Edge Services Gateway(ESG)가 배치됩니다. 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 이 ESG는 2개의 인터페이스를 포함하기 위해 배치됩니다. 하나의 인터페이스는 {{site.data.keyword.cloud_notm}} 사설 VLAN에 연결되고, 다른 하나의 인터페이스는 {{site.data.keyword.cloud_notm}} 공용 VLAN에 연결됩니다.
 
 보안을 보장하기 위해 관리 가상 머신에서 시작된 아웃바운드 HTTPS 통신만 허용하도록 방화벽 규칙이 제공됩니다. 이 ESG는 대형 구성에 배치되고 IBM 지원 센터만 구성을 수정할 수 있습니다. 자세한 정보는 다음 주제를 참조하십시오.
 
@@ -93,7 +93,7 @@ NSX Edge는 이제 주문 중인 새 vCenter Server 인스턴스의 일부로 �
 
 인스턴스 주문 프로세스가 크게 간소화되었습니다.
 
-* 두 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스의 경우, 주문 프로세스 중에 SoftLayer 신임 정보 페이지가 더 이상 표시되지 않습니다. 설정 페이지에 정의된 SoftLayer 신임 정보가 기본적으로 사용되고 SoftLayer 신임 정보가 요구사항을 충족하지 않는 경우에만 업데이트하도록 프롬프트됩니다.
+* 두 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스의 경우, 주문 프로세스 중에 SoftLayer 인증 정보 페이지가 더 이상 표시되지 않습니다. 설정 페이지에 정의된 SoftLayer 인증 정보가 기본적으로 사용되고 SoftLayer 인증 정보가 요구사항을 충족하지 않는 경우에만 업데이트하도록 프롬프트됩니다.
 * 또한 vCenter Server 인스턴스의 경우, 이제 **하드웨어** 유형의 **대형** 옵션과 **업링크 포트 속도**의 **10Gbps 듀얼** 설정만 사용 가능하며 이를 통해 주문 시 지정할 설정의 수가 줄어듭니다.
 
 자세한 정보는 다음 주제를 참조하십시오.

@@ -10,11 +10,11 @@ lastupdated: "2017-08-28"
 
 # V1.8 릴리스 정보
 
-이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 추가 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
+이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
 ## Fortinet on IBM Cloud 서비스
 
-Fortinet on {{site.data.keyword.cloud_notm}} 서비스는 이제 Cloud Foundation 및 vCenter Server 인스턴스 모두에 사용 가능합니다. 이 서비스는 고가용성 모드에서 방화벽, 라우팅, NAT 및 VPN 서비스를 제공하도록 FSA(FortiGate Security Appliance) 300 시리즈 디바이스의 쌍을 배치하여 인스턴스의 공인 VLAN에서 모든 서버 및 가상 머신을 보호합니다. 인스턴스를 주문할 때 포함된 Fortinet 서비스와 함께 인스턴스를 주문하거나 인스턴스 세부사항 페이지에서 나중에 이 서비스를 기존 인스턴스에 추가할 수 있습니다.
+Fortinet on {{site.data.keyword.cloud_notm}} 서비스는 이제 Cloud Foundation 및 vCenter Server 인스턴스 모두에 사용 가능합니다. 이 서비스는 고가용성 모드에서 방화벽, 라우팅, NAT 및 VPN 서비스를 제공하도록 FSA(FortiGate Security Appliance) 300 시리즈 디바이스의 쌍을 배치하여 인스턴스의 공용 VLAN에서 모든 서버 및 가상 머신을 보호합니다. 인스턴스를 주문할 때 포함된 Fortinet 서비스와 함께 인스턴스를 주문하거나 인스턴스 세부사항 페이지에서 나중에 이 서비스를 기존 인스턴스에 추가할 수 있습니다.
 
 Fortinet 서비스가 설치된 후 FortiGate 콘솔에서 FSA의 방화벽 규칙을 관리하고 구성할 수 있습니다. FSA 방화벽 규칙이 인터넷을 통해 IBM Bluemix®의 외부 관리 데이터베이스와 통신하기 위해 관리 컴포넌트(예: IBM CloudDriver 가상 머신 또는 Zerto Virtual Manager)로 시작되는 아웃바운드 HTTPS 통신을 허용하도록 정의되어 있는지 확인해야 합니다. 아웃바운드 HTTPS 통신은 인스턴스에 있는 관리 서비스 VMware NSX Edge Services Gateway(ESG)의 공인 IP 주소에서 시작됩니다.
 
@@ -74,7 +74,7 @@ V1.8 릴리스부터 Cloud Foundation 인스턴스를 주문하는 경우 vSpher
 
 개선사항은 사용자 인터페이스를 통해 수행됩니다.
 * 왼쪽 탐색 분할창의 **시작하기** 페이지에서 서비스에 대해 알아보고 인스턴스를 주문할 수 있습니다. {{site.data.keyword.cloud_notm}} Secure Virtualization 서비스 아키텍처에 대한 자세한 정보는 [보안 및 준수 - HyTrust](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust)를 참조하십시오.
-* 인스턴스 세부사항 페이지의 오버플로우 메뉴를 사용하여 **사용할 준비** 상태의 인스턴스를 삭제하십시오.
+* 인스턴스 세부사항 페이지의 오버플로우 메뉴를 사용하여 **사용할 준비가 됨** 상태의 인스턴스를 삭제하십시오.
 * NSX 라이센스 에디션을 업그레이드하는 옵션은 이제 **업데이트 및 패치** 탭에서 사용할 수 있습니다. 라이센스 업그레이드는 IBM SoftLayer 계정에 있는 기존의 모든 라이센스를 새 라이센스로 대체합니다.
 * 인스턴스 세부사항 페이지의 **백업 및 복원** 탭은 더 이상 사용할 수 없습니다.
 * 주문 시작 시 다중 서비스를 선택하여 배치할 수 있습니다. Zerto on {{site.data.keyword.cloud_notm}} 서비스에 추가하여, Veeam on {{site.data.keyword.cloud_notm}} 서비스 및 Fortinet on {{site.data.keyword.cloud_notm}} 서비스를 선택하는 옵션도 사용 가능합니다.

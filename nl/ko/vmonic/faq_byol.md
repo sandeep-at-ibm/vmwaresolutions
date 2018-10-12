@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -114,9 +114,9 @@ BYOL 기능의 도입으로 수동 프로세스를 계속 사용하는 것은 �
 
 ## vCenter Server with Hybridity Bundle과 함께 NFS 스토리지를 주문할 수 있습니까?
 
-새로 배치된 인스턴스의 경우 vSAN의 모든 플래시 스토리지만 지원됩니다. vCenter Server with Hybridity Bundle 오퍼링에 vSAN Advanced 또는 Enterprise 라이센싱이 포함됩니다.
+새로 배치된 인스턴스의 경우 vSAN의 올플래시(all-flash) 스토리지만 지원됩니다. vCenter Server with Hybridity Bundle 오퍼링에 vSAN Advanced 또는 Enterprise 라이센싱이 포함됩니다.
 
-NFS 스토리지를 사용하는 vCenter Server 인스턴스가 있는 경우 기존 인스턴스를 vCenter Server with Hybridity Bundle로 업그레이드할 수 있습니다. vSAN Advanced 라이센싱이 업그레이드 중에 주문될 때 모든 플래시 vSAN 클러스터를 프로비저닝하지 않아도 됩니다.
+NFS 스토리지를 사용하는 vCenter Server 인스턴스가 있는 경우 기존 인스턴스를 vCenter Server with Hybridity Bundle로 업그레이드할 수 있습니다. vSAN Advanced 라이센싱이 업그레이드 중에 주문될 때 올플래시 vSAN 클러스터를 프로비저닝하지 않아도 됩니다.
 
 ## vCenter Server with Hybridity Bundle과 함께 BYOL을 사용할 수 있습니까?
 

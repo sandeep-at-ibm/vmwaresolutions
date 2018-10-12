@@ -10,7 +10,7 @@ lastupdated: "2018-05-28"
 
 # V2.3 릴리스 정보
 
-이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 추가 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
+이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
 ## 스펙터(Spectre) 및 멜트다운(Meltdown) 조치 방안
 
@@ -73,7 +73,7 @@ V2.3 릴리스부터, **사용자 정의됨** Bare Metal Server 설정을 선택
 
 이제 Microsoft Active Directory(AD)용 하나의 Microsoft Windows Server Virtual Server Instance(VSI) 또는 관리 클러스터에 있는 두 개의 고가용성 Microsoft Windows 가상 머신의 배치를 선택하는 옵션이 제공됩니다. V2.2의 경우, 기본적으로 하나의 Microsoft AD용 Microsoft Windows VSI가 자동 배치되었습니다. 두 개의 Microsoft Windows 가상 머신을 선택하는 새 옵션은 더 많은 개인정보 보호를 제공하고 Veeam 서비스를 사용하여 가상 머신을 백업하고 복원하는 옵션을 제공합니다.
 
-**참고:** 두 개의 Microsoft Windows 가상 머신을 사용하도록 인스턴스를 구성하는 경우 두 개의 Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스 및/또는 Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스를 사용하십시오. 가상 머신을 활성화할 수 있는 30일의 기간이 제공됩니다.
+**참고:** 2개의 Microsoft Windows 가상 머신을 사용하도록 인스턴스를 구성하는 경우 2개의 Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스 및/또는 Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스를 사용하십시오. 가상 머신을 활성화할 수 있는 30일의 기간이 제공됩니다.
 
 자세한 정보는 [VMware Federal 인스턴스 주문](../vcenter/vc_fed_orderinginstance.html#network-interface-settings)의 *네트워크 인터페이스 설정* 절을 참조하십시오.
 
@@ -122,4 +122,4 @@ HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSph
 * **쉬운 액세스**: 이제 {{site.data.keyword.cloud_notm}} **카탈로그**에서 직접 VMware 오퍼링에 액세스할 수 있습니다.
 * **간결하고 단순해진 주문 경험**: 이제 하나의 인터페이스에서 VMware 인스턴스 주문 및 해당 추가 기능 서비스 배치를 완료할 수 있습니다. 또한, 비용 계획에 따라 구성을 조정할 수 있도록 동일한 인터페이스에서 예상 비용이 즉시 계산되어 표시됩니다.
 * 비즈니스 파트너 사용자는 인스턴스 주문 또는 클러스터 추가 시에 BYOL(Bring Your Own License) 옵션을 사용할 수 없습니다.
-* 다양한 오류 메시지 및 도구 팁 개선사항은 사용자 인터페이스의 설정을 적절하게 선택하는 데 도움이 됩니다.
+* 사용자 인터페이스에서 적절한 설정을 선택하는 데 도움이 되는 다양한 오류 메시지 및 도구 팁 개선사항을 사용할 수 있습니다.

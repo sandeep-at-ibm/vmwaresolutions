@@ -19,7 +19,7 @@ VMware vSphere Web Client **모니터** 페이지에서 Virtual SAN 상태 문�
 
 1. http://partnerweb.vmware.com/service/vsan/all.json 사이트로 이동한 후 로컬 시스템에서 `all.json`이라는 이름으로 JSON 파일을 저장하십시오.
 2. [vCenter 콘솔 제한시간 초과](trbl_timeout_vc_console.html)의 단계를 완료했는지 확인하십시오.
-3. Cloud Foundation 인스턴스의 세부사항 페이지에서 **vCenter 콘솔**을 클릭한 후 {{site.data.keyword.vmwaresolutions_full}} 콘솔에 표시된 신임 정보를 사용하여 vSphere Web Client에 로그인하십시오.
+3. Cloud Foundation 인스턴스의 세부사항 페이지에서 **vCenter 콘솔**을 클릭한 후 {{site.data.keyword.vmwaresolutions_full}} 콘솔에 표시된 인증 정보를 사용하여 vSphere Web Client에 로그인하십시오.
 4. vSphere Web Client에서 **관리 > 설정**으로 이동하여 **Virtual SAN > 상태 > HCL 데이터베이스** 섹션을 여십시오. **파일에서 업데이트**를 클릭한 후 이전에 저장한 `all.json` 파일을 업로드하십시오.
 5. 경고를 지우려면 vSphere Web Client의 오른쪽 상단에 있는 **알람** 분할창으로 이동하십시오. 각 알람을 오른쪽 마우스 단추로 클릭하고 **초록색으로 재설정**을 선택하십시오.
 

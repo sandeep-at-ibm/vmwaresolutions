@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-08-15"
 
 ## 결과
 
-추가된 사용자는 초대를 수락한 후에 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 로그인하고 계정으로 전환할 수 있습니다. 이를 위해 사용자는 프로파일 설정에서 {{site.data.keyword.vmwaresolutions_short}} 콘솔의 오른쪽 상단 모서리에 있는 자신의 아바타를 클릭합니다. 그런 다음 추가된 사용자는 지정된 계정에서 사용 가능한 서비스와 리소스에 대해 협업하고 이를 공유할 수 있습니다.
+추가된 사용자는 초대를 수락한 후에 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 로그인하고 계정으로 전환할 수 있습니다. 이렇게 하기 위해 사용자는 프로파일 설정에서 {{site.data.keyword.vmwaresolutions_short}} 콘솔 배너에 있는 사용자 계정 아이콘을 클릭합니다. 그런 다음 추가된 사용자는 지정된 계정에서 사용 가능한 서비스와 리소스에 대해 협업하고 이를 공유할 수 있습니다.
 
 ### 관련 링크
 
