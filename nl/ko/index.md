@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -117,7 +117,7 @@ lastupdated: "2018-08-27"
     </tr>
     <tr>
        <td>[FortiGate Security Appliance on IBM Cloud](services/fsa_considerations.html)</td>
-       <td>FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스는 고가용성 모드에서 방화벽, 라우팅, NAT 및 VPN 서비스를 제공하도록 FSA(FortiGate Security Appliance) 300 시리즈 디바이스의 쌍을 배치하여 인스턴스의 공인 VLAN에서 모든 서버 및 가상 머신을 보호합니다.</td>
+       <td>FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스는 고가용성 모드에서 방화벽, 라우팅, NAT 및 VPN 서비스를 제공하도록 FSA(FortiGate Security Appliance) 300 시리즈 디바이스의 쌍을 배치하여 인스턴스의 공용 VLAN에서 모든 서버 및 가상 머신을 보호합니다.</td>
     </tr>
     <tr>
        <td>[FortiGate Virtual Appliance on IBM Cloud](services/fortinetvm_considerations.html)</td>
@@ -132,6 +132,10 @@ lastupdated: "2018-08-27"
        <td>HyTrust DataControl on {{site.data.keyword.cloud_notm}}는 워크로드를 해당 라이프사이클 동안 보호하기 위해 통합된 키 관리 기능을 포함한 강력한 암호화를 제공합니다. 이 서비스는 운영 체제 레벨 및 데이터 레벨 모두에서 암호화를 제공할 수 있으며, 이는 워크로드 내의 모든 디렉토리, 폴더 및 파일이 암호화되거나 복호화될 수 있음을 의미합니다.</td>
     </tr>
     <tr>
+       <td>[HyTrust KeyControl on IBM Cloud](services/htkc_considerations.html)</td>
+       <td>HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 서비스는 암호화 키의 라이프사이클을 자동화 및 간소화하여 암호화된 워크로드의 관리를 간소화합니다. 이 서비스는 FIPS 140-2 준수 암호화를 사용하여 암호화 키를 규모에 맞게 쉽게 관리할 수 있습니다.</td>
+    </tr>
+    <tr>
        <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
        <td>{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 서비스는 마이크로서비스 및 컨테이너의 기능을 {{site.data.keyword.cloud_notm}}의 VMware 환경에 제공합니다. 이 서비스를 사용하면 익숙한 동일 VMware 및 {{site.data.keyword.cloud_notm}} Private 운영 모델과 도구를 온프레미스에서 {{site.data.keyword.cloud_notm}}로 확장할 수 있습니다.</td>
     </tr>
@@ -141,7 +145,7 @@ lastupdated: "2018-08-27"
     </tr>
     <tr>
        <td>[KMIP for VMware on IBM Cloud](services/kmip_considerations.html)</td>
-       <td>KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스는 {{site.data.keyword.cloud_notm}}의 VMware에서 사용되는 암호화 키를 관리하기 위해 고가용성 서비스를 제공합니다. 이 서비스는 고객이 암호화 키를 작성, 검색, 활성화, 취소 및 영구 삭제할 수 있도록 하는 런타임 기능을 제공합니다. 또한 클라이언트 신임 정보와 암호화 키 간의 연관을 유지보수하는 관리 기능도 제공합니다.</td>
+       <td>KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스는 {{site.data.keyword.cloud_notm}}의 VMware에서 사용되는 암호화 키를 관리하기 위해 고가용성 서비스를 제공합니다. 이 서비스는 고객이 암호화 키를 작성, 검색, 활성화, 취소 및 영구 삭제할 수 있도록 하는 런타임 기능을 제공합니다. 또한 클라이언트 인증 정보와 암호화 키 간의 연관을 유지보수하는 관리 기능도 제공합니다.</td>
     </tr>
     <tr>
        <td>[Veeam on IBM Cloud](services/veeam_considerations.html)</td>
