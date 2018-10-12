@@ -18,9 +18,9 @@ lastupdated: "2018-08-14"
 * **{{site.data.keyword.cloud_notm}} 계정**. 이 계정은 프로비저닝에 필요합니다. 기존 **IBM ID**를 사용하거나 새 **IBM ID**를 작성하여 {{site.data.keyword.cloud_notm}} 계정을 등록할 수 있습니다. 
 * **{{site.data.keyword.cloud_notm}} 인프라 계정**. 이전에는 **IBM SoftLayer** 계정이라고 부르던 이 계정은 인프라 제품 및 서비스를 관리하기 위한 일부 추가 기능을 제공하는 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에 로그인하는 데 사용됩니다. **{{site.data.keyword.cloud_notm}} 계정**을 종량과금제 유형의 계정으로 업그레이드하거나 기존 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하여 {{site.data.keyword.cloud_notm}} 인프라 계정을 가져올 수 있습니다. 사용 중인 {{site.data.keyword.cloud_notm}} 인프라 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [필수 계정 등록](signing_softlayer_account.html) 및 [{{site.data.keyword.cloud_notm}} 인프라 계정 요구사항](slaccountrequirement.html)을 참조하십시오.
 
-## 내 IBM Cloud 인프라 신임 정보를 IBM Cloud for VMware Solutions 콘솔과 연관시킬 수 있는 방법은 무엇입니까?
+## 내 IBM Cloud 인프라 인증 정보를 IBM Cloud for VMware Solutions 콘솔과 연관시킬 수 있는 방법은 무엇입니까?
 
-처음 인스턴스를 주문할 때는 콘솔의 **설정** 페이지의 지시사항에 따라 {{site.data.keyword.slportal}}에서 {{site.data.keyword.cloud_notm}} 인프라 사용자 이름 및 API 키를 찾아서 복사하십시오. 첫 번째 주문 후 {{site.data.keyword.cloud_notm}} 인프라 신임 정보가 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 저장됩니다. 이후 주문 시 저장된 신임 정보를 자동으로 사용합니다.
+처음 인스턴스를 주문할 때는 콘솔의 **설정** 페이지의 지시사항에 따라 {{site.data.keyword.slportal}}에서 {{site.data.keyword.cloud_notm}} 인프라 사용자 이름 및 API 키를 찾아서 복사하십시오. 첫 번째 주문 후 {{site.data.keyword.cloud_notm}} 인프라 인증 정보가 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 저장됩니다. 이후 주문 시 저장된 인증 정보를 자동으로 사용합니다.
 
 ## VMware 가상 플랫폼 사용 비용은 어떻게 청구됩니까?
 
@@ -93,7 +93,7 @@ VMware 업데이트는 배치한 VMware 인스턴스의 유형에 따라 다른 
 
 ## 고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?
 
-고객 관리 NSX Edge가 공인 VLAN에 연결되지만 보안 위험이 발생하지 않도록 보안 조치가 제공됩니다. 다음 보안 조치가 준비되어 있습니다.
+고객 관리 NSX Edge가 공용 VLAN에 연결되지만 보안 위험이 발생하지 않도록 보안 조치가 제공됩니다. 다음 보안 조치가 준비되어 있습니다.
 *  IP 주소의 사설 서브넷 범위에서 지속적인 트래픽만 허용하도록 방화벽 규칙이 제공됩니다.
 *  SNAT(Source Network Address Translation) 규칙(기본적으로 사용 안함으로 설정됨)이 사설 서브넷에서 공인 서브넷의 단일 IP 주소로 모든 IP 주소를 변환하도록 제공됩니다.
 *  고객 관리 NSX Edge 어플라이언스에 대한 원격 액세스가 사용 안함으로 설정됩니다.
@@ -117,7 +117,7 @@ VMware 업데이트는 배치한 VMware 인스턴스의 유형에 따라 다른 
 
 ## VMware vSphere on IBM Cloud가 VMware 스택을 설치하고 구성하고 가져오는 데 자동화를 사용합니까?
 
-아니오. VMware vSphere on {{site.data.keyword.cloud_notm}}는 Cloud Foundation 및 vCenter Server 플랫폼에 있는 고급 자동화를 사용하지 않습니다. 사용자의 주문 항목에 따라 플랫폼은 선택적 VMware 라이센스, ESXi 서버를 제공하고, 선택적으로 FortiGate 실제 방화벽의 HA 쌍을 제공합니다. 새 클러스터가 작성되는 경우 세 개의 새 VLAN(하나의 공인 VLAN 및 두 개의 사설 VLAN)도 프로비저닝됩니다.
+아니오. VMware vSphere on {{site.data.keyword.cloud_notm}}는 Cloud Foundation 및 vCenter Server 플랫폼에 있는 고급 자동화를 사용하지 않습니다. 사용자의 주문 항목에 따라 플랫폼은 선택적 VMware 라이센스, ESXi 서버를 제공하고, 선택적으로 FortiGate 실제 방화벽의 HA 쌍을 제공합니다. 새 클러스터가 작성되는 경우 세 개의 새 VLAN(하나의 공용 VLAN 및 두 개의 사설 VLAN)도 프로비저닝됩니다.
 
 VMware ESXi는 각 베어메탈 서버에 자동으로 설치되지만 vCenter Server 또는 NSX와 같은 추가 VMware 컴포넌트를 설치해야 합니다. vSphere on {{site.data.keyword.cloud_notm}}는 VMware 호환 하드웨어가 선택된 VMware 컴포넌트에 따라 주문되는지 확인하지만, VMware 환경을 구성하고 가져오기 위해 제공된 자동화가 없습니다. 사용자는 IBM 호스팅 환경을 디자인하고 설계해야 합니다.
 

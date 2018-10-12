@@ -10,7 +10,7 @@ lastupdated: "2017-03-30"
 
 # V1.5 릴리스 정보
 
-이 릴리스에는 새 기능, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 추가 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
+이 릴리스에는 새 기능, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
 ## VRF 대 클래식 SoftLayer 계정 요구사항
 
@@ -30,5 +30,5 @@ Cloud Foundation 인스턴스의 경우, 각 노드에 적용되는 월별 요�
 
 개선사항은 사용자 인터페이스를 통해 수행됩니다.
 
-* 여러 데이터 센터의 사용성 및 데이터 센터에 주문을 수행할 수 있는 충분한 자원 명세가 있는지 여부는 인스턴스 주문 중에 데이터 센터 선택에 대한 올바른 결정을 할 수 있도록 사용자 인터페이스에 명확하게 표시됩니다. 자세한 정보는 [Cloud Foundation 인스턴스에 대한 요구사항 및 계획](../sddc/sd_planning.html) 및 [vCenter Server 인스턴스에 대한 요구사항 및 계획](../vcenter/vc_planning.html)을 참조하십시오.
-* Cloud Foundation 인스턴스의 경우, 입력 필드에 필수 정보를 입력하는 동안 인스턴스 이름, 도메인 및 하위 도메인 이름, 데이터 센터 위치와 같은 정보가 그래프 형식으로 자동 표시됩니다. 자세한 정보는 [Cloud Foundation 인스턴스 주문](../sddc/sd_orderinginstance.html)을 참조하십시오.
+* 여러 {{site.data.keyword.CloudDataCents_notm}}의 가용성 및 주문을 이행할 충분한 재고가 있는지 여부가 사용자 인터페이스에 명확하게 표시되어 있습니다. 이러한 세부사항을 사용하여 인스턴스를 주문할 때 {{site.data.keyword.CloudDataCent_notm}} 선택에 대한 현명한 결정을 내리십시오. 자세한 정보는 [Cloud Foundation 인스턴스에 대한 요구사항 및 계획](../sddc/sd_planning.html) 및 [vCenter Server 인스턴스에 대한 요구사항 및 계획](../vcenter/vc_planning.html)을 참조하십시오.
+* Cloud Foundation 인스턴스의 경우, 입력 필드에 필수 정보를 입력할 때 인스턴스 이름, 도메인 및 하위 도메인 이름, 데이터 센터 위치와 같은 정보는 그래픽 형식으로 자동으로 표시됩니다. 자세한 정보는 [Cloud Foundation 인스턴스 주문](../sddc/sd_orderinginstance.html)을 참조하십시오.

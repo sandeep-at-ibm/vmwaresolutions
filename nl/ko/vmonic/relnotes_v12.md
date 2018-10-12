@@ -10,7 +10,7 @@ lastupdated: "2016-12-12"
 
 # V1.2 릴리스 정보
 
-이 릴리스에는 새 기능, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 추가 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
+이 릴리스에는 새 기능, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
 ## 컴포넌트 업데이트
 
@@ -18,7 +18,7 @@ VMware ESXi의 새 버전은 이전 릴리스의 ESXi 6.0 u2에서 업데이트�
 
 ## IBM ID 및 Bluemix 계정 연관
 
-{{site.data.keyword.vmwaresolutions_full}}는 IBM Bluemix® 카탈로그의 인프라 솔루션으로 제공됩니다. 그러므로 **IBM ID** 계정을 사용하여 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 로그인하려면 **IBM ID** 계정을 Bluemix 계정과 연관시켜야 합니다.
+{{site.data.keyword.vmwaresolutions_full}}는 IBM Bluemix® 카탈로그의 인프라 솔루션으로 제공됩니다. **IBM ID** 계정을 Bluemix 계정과 연관시켜야 **IBM ID** 계정으로 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 로그인할 수 있습니다. 
 
 자세한 정보는 다음 주제를 참조하십시오.
 * [시작하기](../index.html)
@@ -35,9 +35,9 @@ VMware ESXi의 새 버전은 이전 릴리스의 ESXi 6.0 u2에서 업데이트�
 * [vCenter Server 인스턴스 보기](../vcenter/vc_viewinginstances.html)
 * [Zerto 재해 복구](../services/addingzertodr.html)
 
-## 가격 책정 정보
+## 가격 정보
 
-이제 주문을 결정하기 전에 주문된 인스턴스의 예상 비용을 확인하고 검토할 수 있습니다. 컴포넌트를 선택한 후 인스턴스를 주문하는 경우 총 비용 및 모든 컴포넌트의 세부 가격 책정이 **요약** 페이지에 표시됩니다.
+이제 주문을 결정하기 전에 주문된 인스턴스의 예상 비용을 확인하고 검토할 수 있습니다. 컴포넌트를 선택한 후 인스턴스를 주문하는 경우 총 비용 및 모든 컴포넌트의 세부 가격이 **요약** 페이지에 표시됩니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
 * [Cloud Foundation 인스턴스 주문](../sddc/sd_orderinginstance.html)

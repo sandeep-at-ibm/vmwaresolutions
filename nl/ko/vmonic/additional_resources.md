@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-25"
 
 ---
 
 # 추가 리소스
 
-더 빨리 시작하는 데 도움이 될 수 있는 추가 리소스를 검토하십시오. 리소스는 다음과 같습니다.
+더 빠르게 시작하려면 다음 리소스를 검토하십시오.
 * 아키텍처 참조 정보
 * 동영상
 * 데모
@@ -43,7 +43,7 @@ lastupdated: "2018-08-17"
 
 직접 확인하시겠습니까? 단계별 {{site.data.keyword.vmwaresolutions_short}} 안내 데모 [Try VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions)에 따라 제품을 간단하게 테스트해 보십시오.
 
-## developerWorks 방안
+## developerWorks 레시피
 
 * [{{site.data.keyword.vmwaresolutions_short}} - 자세히 보기](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}}에 전용 스토리지를 연결하는 단계](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

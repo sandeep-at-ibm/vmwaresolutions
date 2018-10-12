@@ -10,7 +10,7 @@ lastupdated: "2018-06-22"
 
 # V2.4 릴리스 정보
 
-이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 추가 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
+이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
 ## 스펙터(Spectre) 및 멜트다운(Meltdown) 조치 방안
 
@@ -44,9 +44,9 @@ V2.4 릴리스 이상에서는 자국어 지원(NLS)을 {{site.data.keyword.vmwa
 
 V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}, VMware vSphere on {{site.data.keyword.cloud_notm}} 및 VMware Federal on {{site.data.keyword.cloud_notm}} 인스턴스 및 클러스터에서 배치에 사용 가능합니다.
 
-* 듀얼 Intel Skylake Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz
-* 듀얼 Intel Skylake Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz
-* 듀얼 Intel Skylake Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz
+* 듀얼 Intel Skylake Xeon Silver 4110 프로세서/총 16개 코어, 2.1GHz
+* 듀얼 Intel Skylake Xeon Gold 5120 프로세서/총 28개 코어, 2.2GHz
+* 듀얼 Intel Skylake Xeon Gold 6140 프로세서/총 36개의 코어, 2.3GHz 
 
 자세한 정보는 *Bare Metal Server 설정* 절을 참조하십시오.
 
@@ -84,7 +84,7 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 
 ### 서비스 문서
 
-서비스 주문 시 관련 정보를 쉽게 찾을 수 있도록 서비스 정보가 재구조화되고 탐색이 개선되었습니다.
+서비스 주문 시 관련 정보를 쉽게 찾을 수 있도록 서비스 정보가 재구성되고 탐색이 개선되었습니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
 
@@ -103,6 +103,6 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 사용자 인터페이스가 업데이트되었으며 다음 개선사항을 제공합니다.
 
 * 클러스터 추가 및 서비스 추가 분할창에서는 이제 레이아웃이 잘 구성된 페이지 형식을 사용하므로 태스크를 보다 효율적으로 완료할 수 있습니다.
-* **배치된 인스턴스** 페이지의 기능은 검색, 페이지 매김 및 정렬 기능으로 개선되었습니다. 이러한 개선사항을 통해 매우 빠르게 인스턴스를 찾을 수 있습니다.
+* **배치된 인스턴스** 페이지의 기능은 검색, 페이지 매김 및 정렬 기능으로 개선되었습니다. 이러한 개선사항을 통해 인스턴스를 빠르게 찾을 수 있습니다.
 * 인스턴스 세부사항 페이지에서는 왼쪽 탐색 메뉴를 사용하므로 인스턴스 정보에 쉽고 빠르게 액세스할 수 있습니다.
-* 다양한 오류 메시지 및 도구 팁 개선사항은 사용자 인터페이스의 설정을 적절하게 선택하는 데 도움이 됩니다.
+* 사용자 인터페이스에서 적절한 설정을 선택하는 데 도움이 되는 다양한 오류 메시지 및 도구 팁 개선사항을 사용할 수 있습니다.

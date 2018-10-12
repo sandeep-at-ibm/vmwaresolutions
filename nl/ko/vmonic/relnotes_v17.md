@@ -10,7 +10,7 @@ lastupdated: "2017-07-05"
 
 # V1.7 릴리스 정보
 
-이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 추가 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
+이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
 ## VMware Cloud Foundation 인스턴스에 대한 업데이트
 
@@ -24,7 +24,7 @@ lastupdated: "2017-07-05"
 
   **참고**: EVC 모드는 V4 서버의 기존 또는 새 배치에 사용으로 설정되지 않습니다.
 
-* 5월 22일 이전에 배치되었고 이에 따라 V3 서버를 사용 중인 VMware Cloud Foundation 배치는 이제 새 노드를 인스턴스에 배치할 때 V4 서버를 주문합니다. 이 서버에는 256GB의 메모리가 있습니다. 512GB 메모리가 필요하면 서버를 추가한 후 지원 티켓을 열어 521GB 메모리로 서버 업그레이드를 요청하십시오. IBM 지원 센터 문의에 대한 자세한 정보는 [IBM 지원 센터에 문의](trbl_support.html)를 참조하십시오.
+* 5월 22일 이전에 배치되었으며 이에 따라 V3 서버를 사용 중인 VMware Cloud Foundation 배치는 이제 새 노드를 인스턴스에 추가할 때 V4 서버를 주문합니다. 이 서버에는 256GB의 메모리가 있습니다. 512GB 메모리가 필요하면 서버를 추가한 후 지원 티켓을 열어 521GB 메모리로 서버 업그레이드를 요청하십시오. IBM 지원 센터 문의에 대한 자세한 정보는 [IBM 지원 센터에 문의](trbl_support.html)를 참조하십시오.
 
 컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오.
 

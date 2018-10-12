@@ -10,7 +10,7 @@ lastupdated: "2017-05-22"
 
 # V1.6 릴리스 정보
 
-이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 추가 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
+이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
 ## VMware Cloud Foundation 인스턴스에 대한 업데이트
 
@@ -48,16 +48,16 @@ V1.6 이전 인스턴스의 기타 모든 조치는 더 이상 사용할 수 없
 
 ### vCenter Server 인스턴스에 대한 네트워킹 개선사항
 
-*  사용자 가상 머신(VM)이 인터넷에 액세스할 수 있도록 사용자 대신 공인 VLAN의 16개 IP 주소가 있는 공인 서브넷이 주문됩니다.
+*  사용자 VM(가상 머신)이 인터넷에 액세스할 수 있도록 사용자 대신 공용 VLAN의 16개 IP 주소가 있는 공인 서브넷이 주문됩니다.
 *  사용자 VM이 SoftLayer® 내부 네트워크에 액세스할 수 있도록 사용자 대신 사설 VLAN의 64개 IP 주소가 있는 사설 서브넷이 주문됩니다.
-*  NSX Controller가 연관관계 방지 규칙으로 배치되고 세 개의 노드 배치 구성으로 별도의 ESXi 서버에 실행됨
+*  NSX Controller가 연관관계 방지 규칙으로 배치되고 3 노드 배치 구성으로 별도의 ESXi 서버에 실행됨
 *  고객 사용을 위한 새 VMware NSX Edge Services Gateway
 
    추가 NSX Edge Services Gateway(ESG)가 이제 주문 중인 새 vCenter Server 인스턴스의 일부로 배치됩니다.
 
    이 ESG는 사용자 대신 주문된 사설 서브넷과 공인 서브넷 간의 통신을 위해 고유한 VM에서 사용하도록 제공되고,
    여기에는 두 개의 인터페이스가 포함됩니다. 즉, 하나의 인터페이스는 VM과 연관된 가상화된 VXLAN에 연결되고
-   다른 인터페이스는 공인 VLAN에 연결됩니다. 또한 다음 설정이 구성됩니다.
+   다른 인터페이스는 공용 VLAN에 연결됩니다. 또한 다음 설정이 구성됩니다.
    *  IP 주소의 사설 서브넷 범위에서 모든 지속적인 트래픽을 허용하는 방화벽 규칙
    *  이 사설 서브넷에서 공인 서브넷의 단일 IP 주소로 모든 IP 주소를 변환하는 SNAT(Source Network Address Translation)
    규칙(기본적으로 사용 안함으로 설정됨)
@@ -76,4 +76,4 @@ V1.6 이전 인스턴스의 기타 모든 조치는 더 이상 사용할 수 없
 *  콘솔의 기본 탐색이 사용자 인터페이스의 모든 영역에 대한 액세스 권한이 있는 왼쪽 탐색 분할창의 도입을 통해 크게 개선되었습니다. 새 인스턴스를 빠르게 주문하고, 배치된 인스턴스를 보고, 시스템 알림을 검토하고, 설정을 변경하며, 온라인 문서에 액세스할 수 있습니다.
 *  왼쪽 탐색 분할창에서 액세스할 수 있는 새 **시작하기** 분할창이 주문 중인 인스턴스의 컴포넌트에 대한 올바른 결정을 할 수 있도록 콘솔에 직접 충분한 세부사항을 제공할 수 있습니다. 또한 **시작하기** 페이지에서 필수 사용자 계정과 같이 인스턴스 주문을 위한 모든 전제조건 충족부터 주문하기까지의 인스턴스 주문 프로세스를 통해 단계별로 안내됩니다.
 *  두 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스에 대한 요약이 왼쪽 탐색 분할창의 **배치된 인스턴스** 메뉴에서 액세스할 수 있는 단일 페이지로 통합됩니다. 페이지에서 적절한 탭을 선택하여 Cloud Foundation 인스턴스 또는 vCenter Server 인스턴스를 필터링할 수 있습니다.
-* Zerto 재해 복구가 인스턴스에 설치된 경우 한 번의 클릭으로 직접 서비스 세부사항 페이지에서 Zerto 콘솔에 액세스할 수 있습니다. 자세한 정보는 [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](../sddc/sd_addingremovingservices.html) 및 [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_addingremovingservices.html)를 참조하십시오.
+* Zerto 재해 복구가 인스턴스에 설치된 경우 한 번의 클릭으로 서비스 세부사항 페이지에서 Zerto 콘솔로 바로 액세스할 수 있습니다. 자세한 정보는 [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](../sddc/sd_addingremovingservices.html) 및 [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_addingremovingservices.html)를 참조하십시오.

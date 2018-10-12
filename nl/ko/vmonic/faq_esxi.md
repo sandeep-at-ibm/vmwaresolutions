@@ -45,7 +45,7 @@ ESXi 서버 이름 및 IP 주소는 Windows DNS 해석을 위해 등록되었으
 
 ESXi 서버에서 루트 액세스가 계속해서 사용으로 설정되는 것이 좋습니다. 그렇지 않으면 {{site.data.keyword.vmwaresolutions_short}} 기능의 실패가 발생할 수 있습니다.
 
-필요한 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 ESXi 서버의 상태가 **사용할 준비**로 설정된 후 루트 액세스를 사용 안함으로 설정할 수 있습니다.
+필요한 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 ESXi 서버의 상태가 **사용할 준비가 됨**으로 설정된 후 루트 액세스를 사용 안함으로 설정할 수 있습니다.
 
 후속 자동화 오퍼레이션(예: 파일 공유를 추가하거나 제거하는 경우 또는 Zerto on {{site.data.keyword.cloud_notm}}와 같은 추가 기능 서비스를 설치하는 경우)에 대한 루트 액세스를 다시 사용으로 설정해야 합니다.
 

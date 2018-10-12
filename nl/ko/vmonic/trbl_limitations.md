@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -20,4 +20,4 @@ Microsoft Active Directory(AD)/DNS(Domain Name Server)는 업데이트만 다운
 
 기본 또는 보조 Cloud Foundation 인스턴스 배치 중에 도메인 이름을 선택할 때 `sddcmanager.<subdomain>` 호스트 이름이 `ping` 또는 `nslookup` 명령을 사용하여 외부 도메인으로 분석되지 않는지 확인해야 합니다.
 
-Cloud Foundation 인스턴스 하위 도메인의 구조는 `<VCF instance name>.<domain name>`입니다. 예를 들어, `<domain name>`이 `test.local`이고 Cloud Foundation 인스턴스 이름이 `mytest`인 경우 `sddcmanager.mytest.test.local` 호스트 이름은 Cloud Foundation 인스턴스를 배치하기 전에 IP 주소로 분석되지 않아야 합니다. 그렇지 않으면 인스턴스 배치에 실패할 수 있습니다.
+Cloud Foundation 인스턴스 하위 도메인의 구조는 `<VCF instance name>.<domain name>`입니다. 예를 들어, `<domain name>`이 `test.local`이고 Cloud Foundation 인스턴스 이름이 `mytest`인 경우에는 Cloud Foundation 인스턴스를 배치하기 전에 `sddcmanager.mytest.test.local` 호스트 이름이 IP 주소로 분석되지 않습니다. 그렇지 않으면 인스턴스 배치에 실패할 수 있습니다.
