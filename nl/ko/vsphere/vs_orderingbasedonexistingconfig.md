@@ -15,7 +15,7 @@ lastupdated: "2018-08-10"
 ## 요구사항
 
 다음 태스크를 완료했는지 확인하십시오.
-*  **설정** 페이지에 {{site.data.keyword.cloud}} 인프라 신임 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정](../vmonic/useraccount.html)을 참조하십시오.
+*  **설정** 페이지에 {{site.data.keyword.cloud}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정](../vmonic/useraccount.html)을 참조하십시오.
 *  [vSphere 클러스터에 대한 요구사항 및 계획](vs_planning.html)의 요구사항 및 고려사항을 검토했습니다.
 *  재사용할 구성 템플리트를 작성했습니다.
 
