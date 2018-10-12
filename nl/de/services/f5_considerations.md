@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -26,7 +26,7 @@ Die folgenden Komponenten werden mit dem Service "F5 on {{site.data.keyword.clou
 * 4, 8 oder 16 GB RAM pro virtuelle Maschine, abhängig von der Lizenzierungsoption.
 
 ### Vernetzung
-* Private Virtual Extensible LAN (VXLAN) für HA-Synchronisation.
+* Private Virtual Extensible LAN (VXLAN) für HA-Synchronisation (HA – High Availability).
 * Zugriff auf Konsole für Traffic Management Shell (TMSH) und Management über privates Managementnetz.
 
 ### Lizenzen und Gebühren
@@ -34,9 +34,9 @@ Lizenzgebühren für jede VM werden in jedem Abrechnungszyklus abhängig von der
 
 **Wichtig:** Sie können die Lizenzierungsstufe nach der Serviceinstallation nicht ändern. Wenn Sie die Lizenzstufe ändern möchten, müssen Sie den vorhandenen Service entfernen und den Service anschließend mit einer anderen Lizenzoption erneut installieren.
 
-## Hinweise zur Installation von F5 on IBM Cloud
+## Installationsaspekte für F5 on IBM Cloud
 
-Lesen Sie vor der Installation des Service "F5 on {{site.data.keyword.cloud_notm}}" die folgenden Hinweise.
+Lesen Sie vor der Installation des Service "F5 on {{site.data.keyword.cloud_notm}}" folgende Hinweise.
 
 Basierend auf dem von Ihnen ausgewählten Lizenzmodell und der ausgewählten Bandbreite werden zwei virtuelle Maschinen für BIG-IP VE mit der folgenden Konfiguration bereitgestellt:
 
@@ -74,7 +74,7 @@ Aufgrund dieser Voraussetzungen müssen Sie den für F5 on {{site.data.keyword.c
 
 ## F5 on IBM Cloud - Bestellbeispiel
 
-Sie bestellen eine VMware vCenter Server-Instanz des Typs **S (Klein)** mit 2 ESXi-Servern und der folgenden Konfiguration: 16 Kerne mit 2,10 GHz und jeweils 128 GB RAM. Für F5 on {{site.data.keyword.cloud_notm}} wählen Sie das Lizenzmodell **Optimal** und einen Wert von 5 Gb/s für **Maximale Bandbreite** aus.
+Sie bestellen eine VMware vCenter Server-Instanz des Typs **S (Klein)** mit 2 ESXi-Servern und der folgenden Konfiguration: sechzehn Kerne mit 2,10 GHz und jeweils 128 GB RAM. Für F5 on {{site.data.keyword.cloud_notm}} wählen Sie das Lizenzmodell **Optimal** und einen Wert von 5 Gb/s für **Maximale Bandbreite** aus.
 
 In diesem Fall benötigt eine einzelne virtuelle Maschine für BIG-IP auf jedem Server Folgendes:
 * 2,1 GHz * 8 vCPU = 16,8 GHz CPU sowie
@@ -84,7 +84,7 @@ Insgesamt ergibt dies 33,6 GHz für die CPU und 32 GB RAM für beide virtuellen 
 
 Jeder ESXi-Server hat eine Kapazität von 16 Kernen * 2,1 GHz, also 33,6 GHz. Die ersten beiden Anforderungen sind somit erfüllt, wenn beide Server aktiv sind und auf jedem Server mindestens 16,8 GHz CPU und 16 GB RAM verfügbar sind.
 
-Die vSphere-Hochverfügbarkeit reserviert jedoch standardmäßig 50% von CPU und RAM für das Failover auf vCenter Server-Instanzen, die anfänglich mit 2 ESXi-Servern bereitgestellt werden, so dass nur Folgendes verfügbar ist:
+Die vSphere-Hochverfügbarkeit reserviert jedoch standardmäßig 50 Prozent von CPU und RAM für das Failover auf vCenter Server-Instanzen, die anfänglich mit 2 ESXi-Servern bereitgestellt wurden. Für dieses Beispiel ist das Folgende verfügbar:
 
 `50% von 2 * 16 Kernen * 2,1 GHz = 33,6 GHz verfügbar`
 

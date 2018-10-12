@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -26,8 +26,8 @@ Sie können den Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}
 
 ### Zugehörige Links
 
-* [Übersicht über HyTrust DataControl on {{site.data.keyword.cloud_notm}}](htcc_considerations.html)
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} verwalten](managinghtcc.html)
+* [Übersicht über HyTrust DataControl on {{site.data.keyword.cloud_notm}}](htdc_considerations.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} verwalten](managinghtdc.html)
 * [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
 * [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
 * [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_hybrid_addingremovingservices.html)

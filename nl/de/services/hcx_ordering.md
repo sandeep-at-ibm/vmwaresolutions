@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-17"
 
 ---
 
@@ -25,8 +25,15 @@ Wenn Sie den Service "VMware HCX on {{site.data.keyword.cloud_notm}}" einer vorh
 
 Geben Sie zum Installieren von HCX on {{site.data.keyword.cloud_notm}} die folgenden Einstellungen an:
 1. Geben Sie den **HCX-Verbindungstyp** durch Auswählen einer der folgenden Optionen an:
-  * **Öffentliches Netz**: HCX stellt eine verschlüsselte Verbindung zwischen Standorten im öffentlichen Netz her.
-  * **Privates Netz**: HCX stellt eine verschlüsselte Verbindung zwischen Standorten im privaten Netz her.
+  * **Öffentliches Netz**: HCX stellt eine verschlüsselte Verbindung zwischen Standorten im öffentlichen Netz her. Die Lizenzregistrierung und -messung erfolgt über das öffentliche Netz.
+  * **Private Verbindung**: HCX stellt über das private Netz eine verschlüsselte Verbindung zwischen Standorten her. Die Lizenzregistrierung und -messung erfolgt über das öffentliche Netz.
+  * **Privates Netz**: HCX stellt eine verschlüsselte Verbindung zwischen Standorten im privaten Netz her. Die Lizenzregistrierung und -messung erfolgt im privaten Netz über den HTTP-Proxy.
+3. Bei Auswahl von **Privates Netz** müssen Sie folgende Felder ausfüllen:
+  * **Proxy-Adresse**: Die IPv4-Adresse des Proxy-Servers.
+  * **Proxy-Port**: Der Port des Proxy-Servers. Die Portnummer ist in der Regel 8080 oder 3128.
+  * **Benutzername**: Der Benutzername, falls eine Proxy-Authentifizierung erforderlich ist.
+  * **Kennwort**: Das Kennwort, falls eine Proxy-Authentifizierung erforderlich ist.
+  * **Kennwort erneut eingeben**: Geben Sie zur Überprüfung der Proxy-Authentifizierung erneut das Kennwort ein.
 2. Geben Sie den **Zertifikatstyp für den öffentlichen Endpunkt** an. Bei Auswahl von **CA-Zertifikat** konfigurieren Sie die folgenden Einstellungen:
   * **Zertifikatsinhalt**: Geben Sie den Inhalt des CA-Zertifikats ein.
   * **Privater Schlüssel**: Geben Sie den privaten Schlüssel des CA-Zertifikats ein.
