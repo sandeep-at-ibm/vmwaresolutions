@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -18,11 +18,11 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 *  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](../vmonic/useraccount.html).
 *  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für Cloud Foundation-Instanzen](sd_planning.html) vertraut gemacht.
 
-**Wichtig:** Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung und Instanzbereitstellung festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Ändern Sie darüber hinaus nach der Bereitstellung der Instanz weder den Instanznamen, noch den Rootdomänennamen, die Unterdomänenbezeichnung oder das Hostnamenspräfix.
+**Wichtig**: Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung oder Bereitstellung der Instanz festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise, wenn der öffentliche Netzbetrieb beendet wird, Server sowie virtuelle Serverinstanzen (VSIs) mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder wenn die Virtual Server-Instanz für IBM CloudBuilder gestoppt oder gelöscht wird. Ändern Sie darüber hinaus nach der Bereitstellung der Instanz weder den Instanznamen, noch den Rootdomänennamen, die Unterdomänenbezeichnung oder das Hostnamenspräfix.
 
 ## Systemeinstellungen
 
-Sie müssen die folgenden Systemeinstellungen angeben, wenn Sie eine Cloud Foundation-Instanz bestellen.
+Sie müssen folgende Systemeinstellungen angeben, wenn Sie eine Cloud Foundation-Instanz bestellen.
 
 ### Instanzname
 
@@ -85,17 +85,22 @@ Eine Cloud Foundation-Instanz besteht in der Erstbereitstellung aus vier Bare Me
 
 ## Speichereinstellungen
 
-Die Cloud Foundation-Instanzen unterstützen nur den vSAN-Speicher.
+Für Cloud Foundation-Instanzen können Sie nur VMware vSAN-Speicher bestellen.
 * Wenn Sie für die Bare Metal Server-Konfiguration die Option **Vorkonfiguriert** auswählen, dann sind die Speichereinstellungen standardisiert und können nicht geändert werden:
-  * Für die Bare Metal Server-Konfiguration vom Typ **S (Klein)** werden 2 SSD-SED-Plattenlaufwerke mit jeweils 1,9 TB bestellt.
-  * Für die Bare Metal Server-Konfiguration vom Typ **L (Groß)** werden 4 SSD-SED-Plattenlaufwerke mit jeweils 3,8 TB bestellt.
-* Wenn Sie für die Bare Metal Server-Konfiguration die Option **Angepasst** auswählen, können Sie den VMware vSAN-Speicher für Ihre Instanz anpassen, indem Sie die folgenden Einstellungen unter **vSAN-Speicher** angeben:
-  * **Plattentyp und -größe für vSAN-Kapazitätsplatten**: Wählen Sie die Kapazität aus, die Ihrem Bedarf an gemeinsam genutzten Speicher entspricht.
-  * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der Platten für den gemeinsam genutzten vSAN-Speicher an, die Sie hinzufügen wollen. Die Plattenanzahl muss 2, 4, 6 oder 8 sein.
+  * Für die Bare Metal Server-Konfiguration vom Typ **S (Klein)** werden zwei SSD-SED-Plattenlaufwerke mit jeweils 1,9 TB bestellt.
+  * Für die Bare Metal Server-Konfiguration vom Typ **L (Groß)** werden vier SSD-SED-Plattenlaufwerke mit jeweils 3,8 TB bestellt.
+* Wenn Sie für die Bare Metal Server-Konfiguration die Option **Angepasst** auswählen, können Sie den vSAN-Speicher für Ihre Instanz anpassen. Geben Sie folgende vSAN-Einstellungen an:
+
+* **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
+* **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
+* **Plattentyp für vSAN-Cacheplatten**: Wählen Sie die für die Cacheplatten benötigte Option aus.
+
+    **Anmerkung**: Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option für **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* **Anzahl der vSAN-Cacheplatten**: Geben Sie die Anzahl der hinzuzufügenden Cacheplatten an.
 
 ## Netzschnittstelleneinstellungen
 
-Sie müssen die folgenden Netzschnittstelleneinstellungen angeben, wenn Sie eine Cloud Foundation-Instanz bestellen.
+Sie müssen folgende Netzschnittstelleneinstellungen angeben, wenn Sie eine Cloud Foundation-Instanz bestellen.
 
 ### Hostnamenspräfix
 
@@ -147,10 +152,10 @@ Die Netzeinstellungen basieren auf Ihrer Auswahl von entweder **Neue VLANs beste
 
 Für Ihre Instanzbestellung sind 1 öffentliches VLAN und 2 private VLANs erforderlich. Die zwei privaten VLANs werden in jedem Bare Metal Server zusammengelegt.
 
-**Neue VLANs bestellen**  
+#### Neue VLANs bestellen
 Wählen Sie diese Option aus, um ein neues öffentliches VLANs und zwei neue private VLANs zu bestellen.
 
-**Vorhandene VLANs auswählen**  
+#### Vorhandene VLANs auswählen  
 Abhängig vom ausgewählten {{site.data.keyword.CloudDataCent_notm}} sind möglicherweise vorhandene öffentliche und private VLANs verfügbar.
 
 Wenn Sie vorhandene öffentliche und private VLANs wiederverwenden wollen, dann geben Sie die VLANs und Teilnetze an:
@@ -166,24 +171,23 @@ Wenn Sie vorhandene öffentliche und private VLANs wiederverwenden wollen, dann 
 
 ## Services
 
-Beim Bestellen einer Cloud Foundation-Instanz können Sie auch zusätzliche Services bestellen. Weitere Informationen zu den verfügbaren Services finden Sie unter [Services für Cloud Foundation-Instanzen](sd_planning.html#services-for-cloud-foundation-instances).
+Beim Bestellen einer Cloud Foundation-Instanz können Sie auch Add-on-Services bestellen. Weitere Informationen zu den verfügbaren Services finden Sie unter [Services für Cloud Foundation-Instanzen](sd_planning.html#services-for-cloud-foundation-instances).
 
 ## Bestellübersicht
 
-Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfiguration werden die geschätzten Kosten sofort generiert und im rechten Fenster angezeigt. Klicken Sie unten im rechten Fenster auf **Preisdetails**, um ein PDF-Dokument zu generieren, das die Kostenschätzungsdetails enthält.
+Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfiguration werden die geschätzten Kosten sofort generiert und im rechten Fenster angezeigt. Klicken Sie im rechten Fenster auf **Preisdetails**, um ein PDF-Dokument zu generieren, das die Kostenschätzungsdetails enthält.
 
-## Vorgehensweise
+## Vorgehensweise beim Bestellen von Cloud Foundation-Instanzen
 
 1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und anschließend im Abschnitt **Virtuelle Rechenzentren** auf **Cloud Foundation**.
 2. Klicken Sie auf der Seite **VMware Cloud Foundation on IBM Cloud** auf **Erstellen**.
 3. Geben Sie auf der Seite **Cloud Foundation** den Instanznamen ein.
 4. Wählen Sie den Instanztyp aus:
    * Klicken Sie auf **Primäre Instanz**, um eine einzelne Instanz in der Umgebung bereitzustellen oder um die erste Instanz in einer Topologie mit mehreren Standorten bereitzustellen.
-   * Klicken Sie auf **Sekundäre Instanz**, um die Instanz mit einer vorhandenen (primären) Instanz in der Umgebung zu verbinden, um eine hohe Verfügbarkeit zu erreichen, und führen Sie dann die folgenden Schritte aus:
+   * Klicken Sie auf **Sekundäre Instanz**, um die Instanz mit einer vorhandenen (primären) Instanz in der Umgebung zu verbinden, um eine hohe Verfügbarkeit zu erreichen. Führen Sie die folgenden Schritte aus:
      1. Wählen Sie die primäre Instanz aus, mit der die sekundäre Instanz verbunden werden soll.
-     2. Wenn für die primäre Instanz, die Sie ausgewählt haben, ein Upgrade auf das Release der Version 2.5 durchgeführt wurde oder die primäre Instanz in Version 2.4 und früheren Releases bereitgestellt oder aktualisiert wurde, überprüfen Sie das voreingetragene **** Administratorkennwort für die PSC in der primären Instanz, um sicherzustellen, dass es korrekt ist.
-     
-         **Hinweis:** Das Feld für **** das Administratorkennwort für PSC in der primären Instanz ist nicht für primäre Instanzen verfügbar, die in Version 2.5 oder höheren Releases bereitgestellt werden.     
+     2. Geben Sie für primäre Instanzen ab Version 2.5 den Wert für ****das Administratorkennwort für PSC in der primären Instanz ein.
+     3. Überprüfen Sie für primäre Instanzen der Version 2.4 oder früher, dass der in das Feld ****für das Administratorkennwort für PSC in der primären Instanz voreintragene Wert korrekt ist.
 5. Geben Sie die Lizenzeinstellungen für die Instanzkomponenten ein:
    *  Zur Verwendung der von IBM bereitgestellten Lizenzen müssen Sie **In Kauf einbeziehen** auswählen.
    *  Zur Verwendung einer eigenen Lizenz müssen Sie **Lizenz selbst bereitstellen** auswählen und den Lizenzschlüssel eingeben.  
@@ -192,16 +196,16 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
    2. Wählen Sie die Bare Metal Server-Konfiguration aus.
       * Wenn Sie **Vorkonfiguriert** auswählen, dann können Sie zwischen der Konfiguration **S (Klein)** und der Konfiguration **L (Groß)** wählen.
       * Wenn Sie **Angepasst** auswählen, dann müssen Sie das CPU-Modell und die RAM-Größe angeben.
-7. Geben Sie die Speichereinstellungen an:
-   * Wenn Sie für die Bare-Metal-Konfiguration die Option **Vorkonfiguriert** ausgewählt haben, ist zu beachten, dass die Speichereinstellungen für die standardisierten Bare Metal Server-Konfigurationen **S (Klein)** und **L (Groß)** nicht geändert werden können.
-   * Wenn Sie für die Bare-Metal-Konfiguration die Option **Angepasst** ausgewählt haben, geben Sie **Plattentyp und -größe für vSAN-Kapazitätsplatten** und **Anzahl der vSAN-Kapazitätsplatten** an.
+7. Führen Sie die Speicherkonfiguration durch.
+   * Wenn Sie für die Bare-Metal-Konfiguration die Option **Vorkonfiguriert** ausgewählt haben, können die Speichereinstellungen für die standardisierten Bare-Metal-Serverkonfigurationen **S (Klein)** und **L (Groß)** nicht geändert werden.
+   * Wenn Sie für die Bare-Metal-Konfiguration die Option **Angepasst** ausgewählt haben, geben Sie die Plattentypen für die vSAN-Kapazitäts- und Cacheplatten sowie die Anzahl der Platten an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
 8. Geben Sie die Netzschnittstelleneinstellungen an:
-   1. Geben Sie das Hostnamenspräfix, die Unterdomänenbezeichnung und den Rootdomänennamen ein. Für eine sekundäre Instanz wird der Domänenname automatisch eingetragen.
+   1. Geben Sie das Hostnamenspräfix, die Unterdomänenbezeichnung und den Rootdomänennamen ein. Für eine sekundäre Instanz wird der Domänenname automatisch ergänzt.
    2. Wählen Sie die VLAN-Einstellungen aus:
       * Falls Sie neue öffentliche und private VLANs bestellen wollen, klicken Sie auf **Neue VLANs bestellen**.
       * Wenn Sie die vorhandenen öffentlichen und privaten VLANs wiederverwenden möchten, sofern diese verfügbar sind, dann klicken Sie auf **Vorhandene VLANs auswählen** und geben Sie die VLANs und Teilnetze an.
 
-9. Wählen Sie die Add-on-Services aus, die in der Instanz bereitgestellt werden sollen, indem Sie auf die entsprechende Servicekarte klicken. Wenn ein Service konfiguriert werden muss, dann geben Sie die servicespezifischen Einstellungen an und klicken Sie dann im Popup-Konfigurationsfenster auf **Service hinzufügen**. Informationen zum Angeben von Einstellungen für einen Service finden Sie im entsprechenden Abschnitt zum Bestellen von Services.
+9. Wählen Sie die Add-on-Services aus, die in der Instanz bereitgestellt werden sollen, indem Sie auf die entsprechende Servicekarte klicken. Wenn ein Service konfiguriert werden muss, dann geben Sie die servicespezifischen Einstellungen an und klicken Sie dann im Popup-Konfigurationsfenster auf **Service hinzufügen**. Weitere Informationen zum Angeben von Einstellungen für einen Service finden Sie im entsprechenden Abschnitt zum Bestellen von Services.
 
 10. Überprüfen Sie im Fenster **Bestellübersicht** die Instanzkonfiguration, bevor Sie die Bestellung aufgeben.
     1. Überprüfen Sie die Einstellungen für die Instanz.
@@ -214,7 +218,7 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
 
 Die Bereitstellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen.
 
-Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für Cloud Foundation-Instanzen](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **SDDC-Cluster** gruppiert. Wenn Sie zusätzliche Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
+Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für Cloud Foundation-Instanzen](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **SDDC-Cluster** gruppiert. Wenn Sie Add-on-Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 
@@ -233,7 +237,7 @@ Sie können nun die bestellte Cloud Foundation-Instanz anzeigen und verwalten.
 *  Komponenten ausschalten
 *  Services erneut starten
 
-   Ausgenommen von diesen Aktivitäten ist unter anderem das Management der Dateifreigaben für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von Dateifreigaben für gemeinsam genutzten Speicher.
+   Ausgenommen von diesen Aktivitäten ist unter anderem das Management der gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher.
 
 ### Zugehörige Links
 

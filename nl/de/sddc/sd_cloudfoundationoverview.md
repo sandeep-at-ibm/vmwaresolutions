@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -37,7 +37,7 @@ Diese Schicht besteht aus vCenter Server und stellt die Managementschicht für d
 
 In der {{site.data.keyword.vmwaresolutions_short}}-Konsole können Sie die Kapazität Ihrer Instanzen mithilfe der Funktion zum Hinzufügen und Entfernen von ESXi-Servern erweitern und verringern. Darüber hinaus sind Funktionen für das Lebenszyklusmanagement wie das Anwenden von Updates und das Durchführen von Upgrades für die VMware-Komponenten in der gehosteten Umgebung verfügbar.
 
-Ausführliche Informationen zur Architektur enthält der Abschnitt [Lösungsübersicht](../archiref/solution/solution_overview.html).
+Weitere Informationen zur Architektur enthält der Abschnitt [Lösungsübersicht](../archiref/solution/solution_overview.html).
 
 ## Technische Spezifikationen für Cloud Foundation-Instanzen
 
@@ -63,14 +63,15 @@ Die folgenden Netzkomponenten werden bestellt:
 * 3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
 * Sicheres VMware NSX Edge Services Gateway (ESG) für die Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Über dieses ESG kommunizieren virtuelle IBM Management-Maschinen mit bestimmten externen IBM Managementkomponenten, die mit der Automatisierung zusammenhängen. Weitere Information finden Sie im Abschnitt [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **Wichtig**: Dieses ESG ist für Sie weder zugänglich, noch können Sie es verwenden. Falls Sie es ändern, sind Sie möglicherweise nicht in der Lage, die Cloud Foundation-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Beachten Sie außerdem, dass die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu führt, dass {{site.data.keyword.vmwaresolutions_short}} unbrauchbar wird.
+  **Wichtig**: Dieses ESG ist für Sie weder zugänglich, noch können Sie es verwenden. Falls Sie es ändern, sind Sie möglicherweise nicht in der Lage, die Cloud Foundation-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Außerdem führt die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu, dass {{site.data.keyword.vmwaresolutions_short}} unbrauchbar wird.
+
 
 * Die Funktion für EVC (Enhanced vMotion Compatibility) wird automatisch aktiviert, wenn Sie über einen vorhandenen Cluster mit ESXi-Servern verfügen, die von der aktuellen VMware vSphere-Version unterstützt werden. EVC bietet vMotion-Kompatibilität für alle ESXi-Server in einem Cluster, indem sichergestellt wird, dass alle ESXi-Server in einem Cluster die gleiche Gruppe von CPU-Funktionen für virtuelle Maschinen bereitstellen. Mithilfe von EVC können die virtuellen Maschinen zwischen allen ESXi-Servern im Cluster migriert werden. Dies gilt auch dann, wenn die eigentlichen CPUs auf den ESXi-Servern unterschiedlich sind.
 
 ### Virtual Server-Instanzen
 
 Die folgenden VSIs (Virtual Server-Instanzen) werden bestellt:
-* 1 VSI für Microsoft Active Directory (AD) und DNS-Service, was für die Unterstützung von Konfigurationen mit mehreren Standorten erforderlich ist. Spezifikation dieser VSI: Windows 2012 R2 (8 GB RAM / 2 CPU-Kerne / 100 GB Plattenspeicher / Duale 1-Gbps-Uplinks für private Netze).
+* 1 VSI für Microsoft Active Directory (AD) und DNS-Services Die virtuelle Serverinstanz (VSI) ist für die Unterstützung von Konfigurationen mit mehreren Standorten erforderlich. Spezifikation dieser VSI: Windows 2012 R2 (8 GB RAM / 2 CPU-Kerne / 100 GB Plattenspeicher / Duale 1-Gbps-Uplinks für private Netze).
 * 1 VSI für IBM CloudBuilder (wird nach vollständiger Bereitstellung der Instanz beendet).
 * (Bei Bestellung von Veeam on {{site.data.keyword.cloud_notm}}) 1 VSI für den Veeam-Sicherungsservice wird bestellt.
 
@@ -80,7 +81,7 @@ Abhängig von der von Ihnen ausgewählten {{site.data.keyword.baremetal_short}}-
 * 2 1-TB-SATA-Bootlaufwerke
 * 2 Solid-State-Cacheplatten mit 960 GB
 * 1 RAID-Plattencontroller
-* Nur bei Konfiguration des Typs **Angepasst**: Sie können die Anzahl der Plattenlaufwerke sowie Plattentyp und Kapazität gemäß Ihren Anforderungen festlegen.
+* Nur bei Konfiguration des Typs **Angepasst**: Sie können die Anzahl der Plattenlaufwerke sowie Plattentyp und Kapazität gemäß Ihren Anforderungen festlegen. Darüber hinaus verfügen Sie über die Option für "Hohe Leistung mit Intel Optane", die zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereitstellt. Die Option für "Hohe Leistung mit Intel Optane" hängt vom CPU-Modell ab.
 * Nur bei Konfiguration des Typs **Vorkonfiguriert** - **S (Klein)**: 2 SSD-Kapazitätsplatten mit 1,9 TB.
 * Nur bei Konfiguration des Typs **Vorkonfiguriert** - **L (Groß)**: 4 SSD-Kapazitätsplatten mit 3,8 TB.
 
@@ -95,7 +96,7 @@ Abhängig von der von Ihnen ausgewählten {{site.data.keyword.baremetal_short}}-
 
 ## Technische Spezifikationen für Cloud Foundation-Erweiterungsknoten
 
-Jeder Cloud Foundation-Erweiterungsknoten stellt die folgenden Komponenten in Ihrem {{site.data.keyword.cloud_notm}}-Konto mit den entsprechenden anfallenden Gebühren bereit.
+Jeder Cloud Foundation-Erweiterungsknoten stellt folgende Komponenten in Ihrem {{site.data.keyword.cloud_notm}}-Konto mit den entsprechenden anfallenden Gebühren bereit.
 
 ### Hardware für Erweiterungsknoten
 
@@ -118,7 +119,7 @@ Jeder Cloud Foundation-Erweiterungsknoten stellt die folgenden Komponenten in Ih
 *  Komponenten ausschalten
 *  Services erneut starten
 
-   Ausgenommen von diesen Aktivitäten ist unter anderem das Management der Dateifreigaben für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von Dateifreigaben für gemeinsam genutzten Speicher.
+   Ausgenommen von diesen Aktivitäten ist unter anderem das Management der gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher.
 
 ### Zugehörige Links
 
