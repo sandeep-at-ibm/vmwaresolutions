@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-20"
 
 ---
 
 # vCenter Server 인스턴스 요구사항 및 계획
 
-VMware vCenter Server 인스턴스를 주문하기 전에 다음 요구사항을 검토하십시오. {{site.data.keyword.CloudDataCent}} 위치, 워크로드 용량 요구사항 및 추가 서비스 요구사항에 따라 인스턴스를 계획하십시오.
+VMware vCenter Server 인스턴스를 주문하기 전에 다음 요구사항을 검토하십시오. {{site.data.keyword.CloudDataCent}} 위치, 워크로드 용량 요구사항 및 추가 기능 서비스 요구사항에 따라 인스턴스를 계획하십시오.
 
 ## IBM Cloud 계정 요구사항
 
@@ -62,8 +62,8 @@ vCenter Server 배치에는 실제 인프라에 대한 엄격한 요구사항이
 |상태 |상태 세부사항 |
 |:------------------------------|:--------------------------------------------------|
 |서비스 예정                   |{{site.data.keyword.CloudDataCent_notm}}는 현재 사용할 수 없습니다. |
-|임시적으로 사용 불가능  |{{site.data.keyword.CloudDataCent_notm}}에는 현재 가용성이 없습니다. |
-|제한된 자원 명세             |{{site.data.keyword.CloudDataCent_notm}}에는 제한된 가용성이 있으며 주문이 완료되지 않을 수 있습니다. |
+|임시적으로 사용 불가능        |{{site.data.keyword.CloudDataCent_notm}}는 현재 사용 가능하지 않습니다. |
+|제한된 자원 명세              |{{site.data.keyword.CloudDataCent_notm}}에는 제한된 가용성이 있으며 주문이 완료되지 않을 수 있습니다. |
 
 ## 관리 컴포넌트의 백업
 
@@ -75,7 +75,7 @@ vCenter Server 배치에는 실제 인프라에 대한 엄격한 요구사항이
 
 ## 용량 고려사항
 
-용량 정보 및 고려사항은 [용량 스케일링](../archiref/solution/solution_scaling.html)을 참조하십시오.
+용량 고려사항에 대한 자세한 정보는 [용량 스케일링](../archiref/solution/solution_scaling.html)을 참조하십시오.
 
 ### 관련 링크
 

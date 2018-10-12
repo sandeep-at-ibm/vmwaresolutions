@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-19"
 
 ---
 
@@ -16,7 +16,9 @@ vCenter Server 인스턴스에 패치 및 업데이트를 적용하는 프로세
 
 ## 시작하기 전에
 
-**중요:** vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하는 경우 먼저 최소한 기본 vCenter Server V2.3 소프트웨어 업데이트를 적용해야 Hybridity Bundle로의 라이센스 업그레이드를 수행할 수 있습니다.
+**중요:** vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하는 경우 먼저 최소한 기본 vCenter Server V2.3 소프트웨어 업데이트를 적용해야 합니다. 해당 작업을 수행해야 Hybridity Bundle로의 라이센스 업그레이드를 수행할 수 있습니다.
+
+비즈니스 파트너 사용자에게는 기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하기 위한 옵션이 없습니다.
 
 업데이트를 적용하기 전에 아래로 화살표를 클릭하여 업데이트 항목을 펼치고 다음 정보를 확인하십시오.
 * 업데이트의 버전입니다. 가장 이전 업데이트부터 최신 업데이트까지 시간 순으로 업데이트를 적용해야 합니다. 최신 업데이트를 적용하기 전에 이전 업데이트를 모두 적용했는지 확인하십시오. 예를 들면, V2.4 업데이트를 적용하기 전에 V2.3 업데이트를 적용해야 합니다.

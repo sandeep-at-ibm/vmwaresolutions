@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-08"
 
 **자동화** ID는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 제공된 자동화된 오퍼레이션에 의해 사용되는 사용자 계정입니다.
 
-해당 신임 정보에 기반한 콘솔 오퍼레이션이 실패할 수 있으므로 콘솔에서 자동화된 오퍼레이션의 사용자 및 비밀번호를 변경하면 안 됩니다.
+해당 인증 정보를 기반으로 하는 콘솔 오퍼레이션이 실패할 수 있으므로 콘솔에서 자동화된 오퍼레이션의 사용자 및 비밀번호를 변경하면 안 됩니다.
 
 ## 서비스 고유 사용자 계정
 
@@ -32,7 +32,7 @@ lastupdated: "2018-08-08"
 
 ## vCenter Server 인스턴스용 VMware 리소스(V1.9 이상)
 
-V1.9 이상에 배치된 인스턴스의 경우, vCenter Server 인스턴스가 **사용할 준비** 상태에 있으면 VMware vSphere Web Client에서 VMware 가상 데이터 센터, 클러스터, 스위치, 포트 그룹 및 고객 데이터 저장소 이름을 수정할 수 있습니다. 그러나 관리 데이터 저장소의 이름은 기본값(vSAN 인스턴스의 경우 **vsanDatastore**, Network File System(NFS) 인스턴스의 경우 **management-share**)을 변경하지 않아야 합니다.
+V1.9 이상에 배치된 인스턴스의 경우, vCenter Server 인스턴스가 **사용할 준비가 됨** 상태에 있으면 VMware vSphere Web Client에서 VMware 가상 데이터 센터, 클러스터, 스위치, 포트 그룹 및 고객 데이터 저장소 이름을 수정할 수 있습니다. 그러나 관리 데이터 저장소의 이름은 기본값(vSAN 인스턴스의 경우 **vsanDatastore**, Network File System(NFS) 인스턴스의 경우 **management-share**)을 변경하지 않아야 합니다.
 
 ## vCenter Server 인스턴스용 VMware 리소스(V1.8 이상)
 
@@ -72,7 +72,7 @@ V1.9 이상에 배치된 인스턴스의 경우, vCenter Server 인스턴스가 
 또한 다음 관리 서브넷도 {{site.data.keyword.vmwaresolutions_short}}에 대해 예약됩니다.
 *  첫 번째 VLAN에서 64개 IP 주소의 두 가지 포터블 사설 서브넷(하나는 관리용, 다른 하나는 VTEPS용)
 *  두 번째 VLAN에서 64개 IP 주소의 두 가지 포터블 사설 서브넷(하나는 VMotion용, 다른 하나는 vSAN용)
-*  공인 VLAN에서 16개 IP 주소의 공인 포터블 서브넷
+*  공용 VLAN에서 16개 IP 주소의 공인 포터블 서브넷
 
 사용할 추가 서브넷이 필요한 경우 다음 방법 중 하나로 사용할 IP 주소를 얻을 수 있습니다.
 *  **옵션 1(권장)**: VMware NSX 가상 네트워크 오버레이를 사용하십시오. 샘플 VXLAN 템플리트는 주문 시 제공됩니다. 이 VXLAN은 소프트웨어 정의 네트워킹(SDN)을 빌드하기 위한 시작 지점으로 사용될 수 있습니다. 자세한 정보는 [고객 관리 NSX Edge를 사용하도록 네트워크 구성](vc_esg_config.html)을 참조하십시오.

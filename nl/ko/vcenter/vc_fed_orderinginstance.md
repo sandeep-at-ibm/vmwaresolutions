@@ -4,20 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
 # VMware Federal 인스턴스 주문
 
-워크로드 요구사항에 가장 적합한 유연하고 사용자 정의할 수 있는 VMware 가상화된 플랫폼을 배치하려면 열린 관리 연결을 끊고 배치된 인스턴스를 보안할 수 있는 VMware Federal 인스턴스를 주문하십시오.
+워크로드 요구사항에 가장 적합한 유연하고 사용자 정의할 수 있는 VMware 가상화된 플랫폼을 배치하려면 VMware Federal 인스턴스를 주문하십시오. VMware Federal 인스턴스는 열린 관리 연결을 끊고 배치된 인스턴스를 보호하는 데 도움을 줍니다. 
 
 **참고:** 현재 vCenter Server 인스턴스만 VMware Federal on {{site.data.keyword.cloud}}를 지원합니다.
 
-## 요구사항
+## VMware Federal 인스턴스를 주문하기 위한 요구사항
 
 다음 태스크를 완료했는지 확인하십시오.
-* **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 신임 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](../vmonic/useraccount.html)를 참조하십시오.
+* **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](../vmonic/useraccount.html)를 참조하십시오.
 * [VMware Federal 인스턴스에 대한 요구사항 및 계획](vc_fed_planning.html)의 정보를 검토했습니다.
 * 인스턴스 및 도메인 이름 형식을 검토했습니다. 도메인 이름 및 하위 도메인 레이블은 인스턴스의 사용자 이름 및 서버 이름을 생성하는 데 사용됩니다.
 
@@ -32,7 +32,7 @@ lastupdated: "2018-08-14"
   |완전한 ESXi 서버 이름 | `<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `<n>`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |  
   |PSC FQDN |`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
 
-**중요**: 주문 및 인스턴스 배치 중에 설정된 값을 수정하지 마십시오. 수정하면 인스턴스를 사용할 수 없게 됩니다. 예를 들면, 공용 네트워킹의 작동이 중단되거나, 프로비저닝 중에 서버 및 VSI(Virtual Server Instance)가 Vyatta 뒤로 이동하거나, IBM CloudBuilder VSI가 중지 또는 삭제될 수 있습니다.
+**중요**: 인스턴스 주문 또는 배치 중에 설정된 값을 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다. 
 
 ## 시스템 설정
 
@@ -52,12 +52,12 @@ VMware Federal 인스턴스를 주문할 때는 다음 시스템 설정을 지�
 
 ## 라이센스 부여 설정
 
-다음 항목에 대해 IBM 제공 VMware 라이센스를 선택하십시오.
+다음 VMware 컴포넌트에 대한 IBM 제공 라이센스:
 
-* VMware vCenter Server 6.5
-* VMware vSphere Enterprise Plus 6.5u1
-* VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4
-* (vSAN 클러스터의 경우) VMware vSAN Advanced 또는 Enterprise 6.6
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5u1
+* NSX Service Providers 6.4(Base, Advanced 또는 Enterprise 에디션)
+* (vSAN 클러스터의 경우) vSAN 6.6(Advanced 또는 Enterprise 에디션)
 
 **주의:**
 
@@ -99,11 +99,15 @@ ESXi 서버의 수를 2 - 20의 범위로 구성할 수 있습니다.
 
 ### vSAN 스토리지
 
-vSAN의 경우에는 다음 스토리지 옵션을 지정하십시오.
+다음 vSAN 옵션을 지정하십시오.
 
-* **vSAN 용량 디스크의 디스크 유형 및 크기**: 공유 스토리지 요구사항을 충족하는 용량을 선택하십시오.
-* **vSAN 용량 디스크 수**: 추가할 vSAN 공유 스토리지의 디스크 수를 선택하십시오. 디스크 양은 2, 4, 6 또는 8개여야 합니다.
-* VMware vSAN 6.6 라이센스 에디션(Advanced 또는 Enterprise)을 선택하십시오.
+* **vSAN 용량 디스크의 디스크 유형 및 크기**: 필요한 용량 디스크에 대한 옵션을 선택하십시오.
+* **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오. 
+* **vSAN 캐시 디스크의 디스크 유형**: 필요한 캐시 디스크에 대한 옵션을 선택하십시오.
+
+    **참고**: 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다. **고성능 Intel Optane** 옵션은 듀얼 Intel Xeon Gold 5120 및 6140 프로세서에 대해서만 사용 가능합니다.
+* **vSAN 캐시 디스크 수**: 추가할 캐시 디스크 수를 지정하십시오. 
+* **vSAN 라이센스**: vSAN 6.6 라이센스 에디션(Advanced 또는 Enterprise)을 선택하십시오.
 
 ### NFS 스토리지
 
@@ -160,21 +164,21 @@ vSAN의 경우에는 다음 스토리지 옵션을 지정하십시오.
 * **Active Directory/DNS용 단일 공용 Windows VSI**: 호스트 및 가상 머신이 등록된 인스턴스를 위한 DNS로 작동하는 단일 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI가 배치되고 검색될 수 있습니다.
 * **관리 클러스터에 있는 두 개의 고가용성 전용 Windows Server VM**: V2.3 이상 릴리스의 경우 두 개의 Microsoft Windows 가상 머신이 배치되어 보안 및 강력한 추진력을 향상시킵니다.
 
-**중요:** 두 개의 Microsoft Windows 가상 머신을 사용하도록 인스턴스를 구성하는 경우 두 개의 Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스 및/또는 Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스를 사용하십시오.
+**중요:** 두 개의 Microsoft Windows 가상 머신을 사용하도록 인스턴스를 구성하는 경우 두 개의 Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스, Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스 또는 둘 다 사용하십시오.
 
-현재 각 라이센스는 하나의 실제 서버에 지정될 수 있고 두 개의 실제 프로세서에 적용됩니다. 하나의 Standard 에디션 라이센스로 두 개의 프로세서 서버당 두 개의 가상화된 Microsoft Windows 가상 머신을 실행할 수 있습니다. 그러므로 두 개의 Microsoft Windows 가상 머신이 두 개의 다른 호스트에 배치되기 때문에 두 개의 라이센스가 필요합니다.
+현재 각 라이센스는 단 하나의 실제 서버에 지정될 수 있으며 최대 두 개의 실제 프로세서를 포함합니다. 하나의 Standard 에디션 라이센스를 사용하면 2 프로세서 서버당 두 개의 가상화된 Microsoft Windows 가상 머신(VM)을 실행할 수 있습니다. 따라서 두 개의 Microsoft Windows 가상 머신이 두 개의 다른 호스트에 배치되기 때문에 두 개의 라이센스가 필요합니다.
 
 가상 머신을 활성화할 수 있는 30일의 기간이 제공됩니다.
 
-Windows 라이센스를 주문하는 방법에 대한 자세한 정보는 [Windows Server 2012 R2 문서](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2)를 참조하십시오.
+Windows 라이센싱 주문에 대한 자세한 정보는 [Windows Server 2012 R2 문서](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2)를 참조하십시오.
 
 ## 주문 요약
 
-인스턴스에 대해 선택한 구성에 따라 예상 비용이 즉시 생성되어 오른쪽 분할창에 있는 **주문 요약** 섹션에 표시됩니다. 예상 세부사항을 제공하는 PDF 문서를 생성하려면 오른쪽 분할창 하단에 있는 **가격 책정 세부사항**을 클릭하십시오.
+인스턴스에 대해 선택한 구성에 따라 예상 비용이 즉시 생성되어 오른쪽 분할창에 있는 **주문 요약** 섹션에 표시됩니다. 예상 세부사항을 제공하는 PDF 문서를 생성하려면 오른쪽 분할창 하단에 있는 **가격 세부사항**을 클릭하십시오.
 
-## 프로시저
+## VMware Federal 인스턴스를 주문하는 프로시저
 
-1. {{site.data.keyword.cloud_notm}} 카탈로그의 왼쪽 탐색 분할창에 있는 **VMware**를 클릭한 후 **가상 데이터 센터** 섹션에 있는 **vCenter Server**를 클릭하십시오.
+1. {{site.data.keyword.cloud_notm}} 카탈로그의 왼쪽 탐색 분할창에서 **VMware**를 클릭한 후 **가상 데이터 센터** 섹션에 있는 **vCenter Server**를 클릭하십시오.
 2. **VMware vCenter Server on IBM Cloud** 페이지에서 **vCenter Server** 카드를 클릭하고 **작성**을 클릭하십시오.
 3. **vCenter Server** 페이지에서 인스턴스 이름을 입력하십시오.
 4. 환경에 하나의 인스턴스를 배치하려면 **기본 인스턴스**를 클릭하십시오.
@@ -183,9 +187,9 @@ Windows 라이센스를 주문하는 방법에 대한 자세한 정보는 [Windo
   1. {{site.data.keyword.CloudDataCent_notm}}를 선택하여 인스턴스를 호스팅하십시오.
   2. **사용자 정의됨** CPU 모델 및 **RAM** 양을 선택하십시오.
 7. 스토리지 구성을 완료하십시오.
-  * **vSAN 스토리지**를 선택하는 경우에는 **vSAN 용량 디스크의 디스크 유형 및 크기**, **vSAN 용량 디스크 수** 및 **vSAN 라이센스** 제공 방법을 지정하십시오.
-  * **NFS 스토리지**를 선택하면서 모든 파일 공유에 동일한 설정을 추가하고 구성하려는 경우에는 **공유 수**, **크기** 및 **성능**을 지정하십시오.
-  * **NFS 스토리지**를 선택하면서 파일 공유를 개별적으로 추가하고 구성하려는 경우에는 **공유 개별 구성**을 선택한 후 **NFS 추가** 레이블 옆에 있는 **+** 아이콘을 클릭하고 각 파일 공유에 대해 **크기** 및 **성능**을 선택하십시오. 하나 이상의 파일 공유를 선택해야 합니다.
+  * **vSAN 스토리지**를 선택하는 경우 용량 및 캐시 디스크의 디스크 유형과 디스크 수 및 vSAN License 에디션을 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
+  * **NFS 스토리지**를 선택하고 모든 파일 공유에 동일한 설정을 추가하여 구성하려는 경우에는 **공유 수**, **크기** 및 **성능**을 지정하십시오.
+  * **NFS 스토리지**를 선택하고 파일 공유를 개별적으로 추가하여 구성하려는 경우에는 **공유 개별 구성**을 선택한 후, **NFS 추가** 레이블 옆에 있는 **+** 아이콘을 클릭하고 각 개별 파일 공유에 대한 **크기** 및 **성능**을 선택하십시오. 하나 이상의 파일 공유를 선택해야 합니다.
 8. 네트워크 인터페이스 구성을 완료하십시오.
    1. 호스트 이름 접두부, 하위 도메인 레이블 및 루트 도메인 이름을 입력하십시오.
    2. DNS 구성을 선택하십시오.
@@ -201,13 +205,13 @@ Windows 라이센스를 주문하는 방법에 대한 자세한 정보는 [Windo
 
 인스턴스가 성공적으로 배치된 경우에는 [VMware Federal on {{site.data.keyword.cloud_notm}} 인스턴스의 기술 스펙](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다.
 
-인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비**로 변경되고 이메일로 알림을 받습니다.
+인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
 ## 수행할 작업
 
 주문한 VMware Federal 인스턴스를 보고, 관리하고 보호하십시오.
 
-**중요:** {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
+**중요:** {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
 
 **주의:** {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트(인스턴스 주문 시 {{site.data.keyword.cloud_notm}} 계정에 설치된)를 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
