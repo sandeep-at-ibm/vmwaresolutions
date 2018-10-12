@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -59,10 +59,10 @@ SDDC Manager가 자신이 관리하는 컴포넌트에 대한 호스트 이름�
 * 사용자가 지정하는 DNS 도메인 이름은 Active Directory 루트 포레스트 도메인 이름으로서 사용됩니다. 예를 들어, DNS 도메인 이름이 `cloud.ibm.com`이면 Active Directory 도메인 포레스트 루트는 `cloud.ibm.com`입니다. 이 DNS 도메인과 Active Directory 도메인은 링크된 모든 Cloud Foundation 인스턴스 간에 동일합니다.
 * 사용자는 인스턴스에 대한 하위 도메인 이름을 추가로 지정할 수 있습니다. 하위 도메인 이름은 링크된 모든 Cloud Foundation 인스턴스 간에 고유해야 합니다.  
 * SDDC Manager DNS 구성은 자신이 담당하는 구역을 제외한 모든 구역에 대한 Active Directory 서버를 지시하도록 변경되었습니다.
-* Active Directory DNS 서버는 SDDC Manager 및 Cloud Foundation 인스턴스 하위 도메인 위의 DNS 도메인 영역에 대한 권한을 갖도록 구성되어 있습니다.
+* Active Directory DNS 서버는 SDDC Manager 및 Cloud Foundation 인스턴스 하위 도메인에 대해 DNS 도메인 영역에 대한 권한을 갖도록 구성되어 있습니다.
 * Active Directory DNS 서버는 SDDC Manager가 권한을 갖는 구역의 하위 도메인 위임에 대해 SDDC Manager IP 주소를 지시하도록 구성되어 있습니다.
 * Active Directory DNS 서버는 기타 모든 구역에 대한 {{site.data.keyword.cloud_notm}} DNS 서버를 지시하도록 구성되어 있습니다.
-* 첫 번째 또는 대상 인스턴스에 통합되는 보조 인스턴스는 SDDC Manager 하위 도메인 위에서 동일한 DNS 이름 구조를 활용해야 합니다.
+* 첫 번째 또는 대상 인스턴스에 통합되는 보조 인스턴스는 SDDC Manager 하위 도메인에 대해 동일한 DNS 이름 구조를 활용해야 합니다.
 
 ## NTP 서비스
 
@@ -74,7 +74,7 @@ SDDC Manager가 자신이 관리하는 컴포넌트에 대한 호스트 이름�
 
 ## 인증 기관 서비스
 
-기본적으로 VMware vSphere는 VMCA(VMware Certificate Authority)에서 서명한 TLS 인증서를 사용하며, 이는 VMware Platform Services Controller 어플라이언스에 상주합니다.이러한 인증서를 일반 사용자 디바이스 또는 브라우저는 신뢰하지 않습니다. 사용자 대면 인증서를 써드파티 또는 엔터프라이즈 인증 기관(CA)에서 서명한 인증서로 대체하는 것이 보안 측면에서 가장 좋습니다. 시스템간 통신을 위한 인증서는 VMCA 서명된 인증서로서 유지될 수 있지만, 일반적으로 식별된 엔터프라이즈 CA 사용이 포함된 조직에 맞는 우수 사례를 따르도록 권장합니다.
+기본적으로 VMware vSphere는 VMCA(VMware Certificate Authority)에서 서명한 TLS 인증서를 사용하며, 이는 VMware Platform Services Controller 어플라이언스에 상주합니다.이러한 인증서를 일반 사용자 디바이스 또는 브라우저는 신뢰하지 않습니다. 사용자 대면 인증서를 서드파티 또는 엔터프라이즈 인증 기관(CA)에서 서명한 인증서로 대체하는 것이 보안 측면에서 가장 좋습니다. 시스템간 통신을 위한 인증서는 VMCA 서명된 인증서로서 유지될 수 있지만, 일반적으로 식별된 엔터프라이즈 CA 사용이 포함된 조직에 맞는 우수 사례를 따르도록 권장합니다.
 
 이 디자인 내에서 Windows AD 서버를 사용하여 로컬 인스턴스에서 서명한 인증서를 작성할 수 있습니다. 그러나 필요하면 CA 서비스를 구성하도록 선택할 수도 있습니다.
 
