@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -32,18 +32,17 @@ VMware Cloud Foundation 인스턴스에 대한 BOM(Bill of Materials) 정보를 
 
 |제조업체 |컴포넌트                                |버전      |
 |:-------------|:-----------------------------------------|:-------------|
-|VMware       |vSphere ESXi                             |ESXi 6.5 U1g(패치 레벨 ESXi650-201803001이 적용된 ESXi 6.5u1) |
-|VMware       |vCenter Server Appliance                 |6.5 업데이트 1g |
-|VMware       |Platform Services Controller             |6.5 업데이트 1g |
+|VMware       |vSphere ESXi                             | 6.5 Update 2c(최대 ESXi650-201808001 패치 레벨) |
+|VMware       |vCenter Server Appliance                 | 6.5 Update 2c |
+|VMware       |Platform Services Controller             | 6.5 Update 2c |
 |VMware       |vSAN                                     |6.6.1        |
-|VMware       |NSX for vSphere                          |6.3.5        |
+|VMware       |NSX for vSphere                          | 6.4.1        |
 |VMware       |SDDC Manager                             |2.4          |
-|IBM          |CloudDriver                              | 2.5          |
 |Microsoft    |Windows Server Standard 에디션(64비트) |2012R2       |
 
 ## ESXi 서버의 고급 구성 설정
 
-다음 표에서 Cloud Foundation 인스턴스가 V2.2 이상에 배치되는지 또는 이전 V2.1 이전 릴리스에서 V2.2 이상으로 업그레이드되는지에 따라 ESXi 서버에 적용된 고급 구성 설정의 개요를 검토하십시오.
+ESXi 서버에 적용되는 고급 구성 설정의 개요에 대해서는 아래 표를 검토하십시오. 설정은 Cloud Foundation 인스턴스가 이전(V2.1 이하) 릴리스에서 V2.2 이상에 배치(또는 업그레이드)되었는지에 따라 다릅니다. 
 
 표 3. Cloud Foundation 인스턴스 및 클러스터에 대한 ESXi 서버 고급 구성 설정
 

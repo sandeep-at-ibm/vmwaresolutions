@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -16,9 +16,9 @@ Cloud Foundation 인스턴스에 대한 자세한 네트워킹 고려사항 및 
 
 Cloud Foundation 인스턴스에 포함된 네트워킹 컴포넌트를 검토하려면 [Cloud Foundation 인스턴스의 기술 스펙](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오.
 
-## NSX 방화벽 고려사항
+## 방화벽 고려사항
 
-NSX DFW(Distributed Firewalls)를 사용 중인 경우에는 IP 주소 `10.0.0.0/8` 및 `161.26.0.0/16`에서 모든 프로토콜이 통신할 수 있도록 {{site.data.keyword.IBM}} CloudDriver VSI(Virtual Server Instance) 및 SDDC Manager 가상 머신(VM)의 모든 모든 통신에 대한 규칙을 구성해야 합니다.
+방화벽을 사용 중인 경우에는 {{site.data.keyword.IBM}} CloudDriver VSI(Virtual Server Instance) 및 SDDC Manager 가상 머신(VM)의 모든 통신에 대한 규칙을 구성해야 합니다. 이러한 규칙은 모든 프로토콜이 `10.0.0.0/8` 및 `161.26.0.0/16`의 IP 주소에서 통신할 수 있도록 허용해야 합니다. 이러한 방화벽의 예로는 NSX DFW(Distributed Firewall) 또는 Vyatta 방화벽이 있습니다.
 
 ## VM에서 VMware NSX 사용
 
@@ -26,9 +26,9 @@ Cloud Foundation 인스턴스 배치 중에 VMware NSX는 인스턴스에서 주
 
 그러나 워크로드 VM이 서로 통신하고 인터넷에 액세스해야 하는 경우 VM의 사용을 위해 NSX를 구성해야 합니다.
 
-NSX 설정 방법에 대한 정보는 다음을 참조하십시오.
+NSX 설정 방법에 대한 자세한 정보는 다음 주제를 참조하십시오.
 * 기본(단일) Cloud Foundation 인스턴스에 대해서는 [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}에서 워크로드 VM에 대한 NSX 설정](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/)을 참조하십시오.
-* 다중 사이트 Cloud Foundation 인스턴스에 대해서는 [{{site.data.keyword.cloud_notm}}에서 사설 VMware 워크로드의 보안 연결](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html)을 참조하십시오.
+* 다중 사이트 Cloud Foundation 인스턴스의 경우 [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html)를 참조하십시오.
 
 ## NSX 컴포넌트의 비밀번호 변경 시 고려사항
 
