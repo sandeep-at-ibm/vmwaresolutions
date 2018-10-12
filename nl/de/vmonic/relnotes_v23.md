@@ -10,7 +10,7 @@ lastupdated: "2018-05-28"
 
 # Releaseinformationen für V2.3
 
-Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie zusätzlichen Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Korrektur für Spectre und Meltdown
 
@@ -73,7 +73,7 @@ Mit diesem Release werden die folgenden Upgrades und Verbesserungen angewendet:
 
 Sie haben jetzt die Möglichkeit, die Bereitstellung einer einzigen Virtual Server-Instanz (VSI) von Microsoft Windows für Microsoft Active Directory (AD) oder aber zwei virtuelle Microsoft Windows-Maschinen für die Hochverfügbarkeit im Management-Cluster auszuwählen. Für V2.2 wurde die einzelne Microsoft Windows-VSI für Microsoft AD standardmäßig automatisch bereitgestellt. Die neue Option zur Auswahl von zwei virtuellen Microsoft Windows-Maschinen bietet mehr Datenschutz und die Möglichkeit, die virtuellen Maschinen mit dem Veeam-Service zu sichern und wiederherzustellen.
 
-**Hinweis:** Sie müssen zwei Lizenzen für Microsoft Windows Server 2012 R2 bereitstellen, wenn Sie Ihre Instanz für die Verwendung der beiden virtuellen Microsoft Windows-Maschinen konfigurieren. Verwenden Sie die Lizenz für Microsoft Windows Server 2012 R2 Standard Edition und/oder die Lizenz für Microsoft Windows Server 2012 R2 Datacenter Edition. Sie haben 30 Tage Zeit, um die virtuellen Maschinen zu aktivieren.
+**Anmerkung:** Sie müssen zwei Lizenzen für Microsoft Windows Server 2012 R2 bereitstellen, wenn Sie Ihre Instanz für die Verwendung der beiden virtuellen Microsoft Windows-Maschinen konfigurieren. Verwenden Sie die Lizenz für Microsoft Windows Server 2012 R2 Standard Edition und/oder die Lizenz für Microsoft Windows Server 2012 R2 Datacenter Edition. Sie haben 30 Tage Zeit, um die virtuellen Maschinen zu aktivieren.
 
 Weitere Informationen finden Sie unter *Netzschnittstelleneinstellungen* im Abschnitt [VMware Federal-Instanzen bestellen](../vcenter/vc_fed_orderinginstance.html#network-interface-settings).
 
@@ -122,4 +122,4 @@ Die Benutzerschnittstelle wurde aktualisiert und bietet die folgenden Erweiterun
 * **Einfacher Zugriff**: Sie können nun auf die VMware-Angebote direkt über den **Katalog** von {{site.data.keyword.cloud_notm}} zugreifen.
 * **Optimiertes und vereinfachtes Bestellverfahren**: Sie können die Bestellung einer VMware-Instanz und die Bereitstellung der entsprechenden Add-on-Services nun über eine einzige Schnittstelle durchführen. Darüber hinaus werden die geschätzten Kosten berechnet und sofort in derselben Schnittstelle angezeigt, sodass Sie Ihre Konfiguration auf Basis Ihres Kostenplans anpassen können.
 * Die BYOL-Option (BYOL = Bring Your Own License) beim Bestellen von Instanzen oder Hinzufügen von Clustern steht für Benutzer der Kategorie "Business Partner" nicht zur Verfügung.
-* Verschiedene Fehlernachrichten und QuickInfos wurden erweitert, um Ihnen bei der Auswahl der geeigneten Einstellung in der Benutzerschnittstelle zu helfen.
+* Es sind verschiedene Fehlernachrichten und QuickInfos verfügbar, die Sie bei der Auswahl der geeigneten Einstellung in der Benutzerschnittstelle unterstützen.

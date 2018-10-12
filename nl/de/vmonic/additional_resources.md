@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-25"
 
 ---
 
 # Zusätzliche Ressourcen
 
-Ziehen Sie weitere Ressourcen zurate, die Ihren Einstieg in das Produkt beschleunigen können. Folgende Ressourcen stehen zur Verfügung:
+Ziehen Sie folgende Ressourcen hinzu, um den Einstieg zu beschleunigen.
 * Referenzinformationen zur Architektur
 * Videos
 * Demonstrationen

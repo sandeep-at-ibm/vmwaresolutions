@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-08-15"
 
 ## Ergebnisse
 
-Sobald die hinzugefügten Benutzer Ihre Einladung akzeptiert haben, können sie sich an der {{site.data.keyword.vmwaresolutions_short}}-Konsole anmelden und zu Ihrem Konto wechseln. Den Wechsel führen die Benutzer durch, indem sie in ihren Profileinstellungen in der rechten oberen Ecke der {{site.data.keyword.vmwaresolutions_short}}-Konsole auf ihren Avatar klicken. Anschließend können die hinzugefügten Benutzer zusammenarbeiten und die Services und Ressourcen, die in Ihrem angegebenen Konto verfügbar sind, gemeinsam nutzen.
+Sobald die hinzugefügten Benutzer Ihre Einladung akzeptiert haben, können sie sich an der {{site.data.keyword.vmwaresolutions_short}}-Konsole anmelden und zu Ihrem Konto wechseln. Dazu klicken Benutzer in ihren Profileinstellungen auf das Symbol für das Benutzerkonto im {{site.data.keyword.vmwaresolutions_short}}-Konsolenbanner. Anschließend können die hinzugefügten Benutzer zusammenarbeiten und die Services und Ressourcen, die in Ihrem angegebenen Konto verfügbar sind, gemeinsam nutzen.
 
 ### Zugehörige Links
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -136,7 +136,7 @@ Wenn Sie eine vCenter Server-Instanz mit NSX Base Edition besitzen, wird automat
 
 ## Kann ich ein Upgrade der in vCenter Server with Hybridity Bundle enthaltenen NSX Advanced Edition auf NSX Enterprise Edition durchführen?
 
-vCenter Server with Hybridity Bundle beinhaltet NSX Advanced. Sie können nach dem Bestellen von vCenter Server with Hybridity Bundle jedoch ein Upgrade auf die NSX Enterprise Edition durchführen. Verwenden Sie dazu die Registerkarte **Update und Patch** auf der Seite mit den Instanzdetails der {{site.data.keyword.vmwaresolutions_short}}-Konsole.
+vCenter Server with Hybridity Bundle beinhaltet NSX Advanced; Sie können nach dem Bestellen von vCenter Server with Hybridity Bundle jedoch ein Upgrade auf die NSX Enterprise Edition durchführen. Verwenden Sie dazu die Registerkarte **Update und Patch** auf der Seite mit den Instanzdetails der {{site.data.keyword.vmwaresolutions_short}}-Konsole.
 
 ### Zugehörige Links
 

@@ -10,7 +10,7 @@ lastupdated: "2018-08-30"
 
 # Releaseinformationen für V2.5
 
-Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie weiteren Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Korrektur für Spectre und Meltdown
 
@@ -114,4 +114,4 @@ Die Benutzerschnittstelle wurde aktualisiert und bietet die folgenden Erweiterun
 
 * Wenn Sie ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) haben, das mit Ihrem {{site.data.keyword.cloud_notm}}-Konto verknüpft ist, können Sie jetzt auf die neu hinzugefügte Schaltfläche **Abrufen** auf der Seite **Einstellungen** klicken, um den Benutzernamen und den API-Schlüssel für Ihr Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) automatisch abzurufen.
 * Im linken Navigationsfenster der Instanzdetailseite wurde eine neue Registerkarte **Bereitstellungsverlauf** hinzugefügt, auf der Sie den Bereitstellungsverlauf einer Instanz prüfen können.
-* Verschiedene Fehlernachrichten und QuickInfos wurden erweitert, um Ihnen bei der Auswahl der geeigneten Einstellung in der Benutzerschnittstelle zu helfen.
+* Es sind verschiedene Fehlernachrichten und QuickInfos verfügbar, die Sie bei der Auswahl der geeigneten Einstellung in der Benutzerschnittstelle unterstützen.

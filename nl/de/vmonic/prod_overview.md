@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -16,13 +16,21 @@ Sie können Ihre virtuellen VMware-Umgebungen ohne großen Aufwand bereitstellen
 
 ## Vorteile von IBM Cloud for VMware Solutions
 
-{{site.data.keyword.vmwaresolutions_short}} bietet die folgenden Hauptvorteile:
-* **Globale Reichweite**: Sie können Ihren Hybrid-Cloud-Speicherbedarf in bis zu 30 auf Unternehmen abgestimmten {{site.data.keyword.CloudDataCents_notm}} auf der ganzen Welt erweitern.
-* **Nahtlose Integration**: Durch die {{site.data.keyword.cloud_notm}}-Infrastruktur erreichen Sie eine nahtlose Integration in der gesamten Hybrid-Cloud.
-* **Schnelle Bereitstellung**: Die Bereitstellung und Konfiguration der VMware-Umgebung erfolgt automatisiert, wodurch Sie eine auf Unternehmen abgestimmte VMware-Umgebung mit bedarfsgerechten {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}}-Instanzen und Virtual Server-Instanzen schnell bereitstellen können.
-* **Vereinfachung**: Sie können eine VMware-Cloudplattform nutzen, ohne die zugrunde liegende Infrastruktur (Rechenressourcen, Speicher und Netzbetrieb) sowie die Softwarelizenzen ermitteln, beschaffen, bereitstellen und verwalten zu müssen.
-* **Flexible Erweiterung und Verringerung**: Sie können Ihre VMware-Workloads auf Ihre Geschäftsanforderungen abgestimmt ohne großen Aufwand erweitern und verringern.
-* **Einheitliche Managementkonsole**: Die Bereitstellung von, der Zugriff auf und das Management der VMware-Umgebungen in der {{site.data.keyword.cloud_notm}} erfolgt über eine einzige Konsole.
+{{site.data.keyword.vmwaresolutions_short}} bietet folgende bedeutende Vorteile.
+<dl>
+  <dt>Globale Reichweite</dt>
+  <dd>Sie können Ihren Hybrid-Cloud-Speicherbedarf auf bis zu 30 auf Unternehmen abgestimmte {{site.data.keyword.CloudDataCents_notm}} auf der ganzen Welt ausweiten.</dd>
+  <dt>Nahtlose Integration</dt>
+  <dd>Durch die {{site.data.keyword.cloud_notm}}-Infrastruktur erreichen Sie eine nahtlose Integration in der gesamten Hybrid-Cloud.</dd>
+  <dt>Schnelle Bereitstellung</dt>
+  <dd>Die Bereitstellung und Konfiguration der VMware-Umgebung erfolgt automatisiert, wodurch Sie eine auf Unternehmen abgestimmte VMware-Umgebung mit bedarfsgerechten {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}}-Instanzen und Virtual Server-Instanzen schnell bereitstellen können.</dd>
+  <dt>Vereinfachung</dt>
+  <dd>Sie können eine VMware-Cloudplattform nutzen, ohne die zugrunde liegende Infrastruktur (Rechenressourcen, Speicher und Netzbetrieb) sowie die Softwarelizenzen ermitteln, beschaffen, bereitstellen und verwalten zu müssen.</dd>
+  <dt>Flexible Erweiterung und Verringerung</dt>
+  <dd>Sie können Ihre VMware-Workloads auf Ihre Geschäftsanforderungen abgestimmt ohne großen Aufwand erweitern und verringern.</dd>
+  <dt>Einheitliche Managementkonsole</dt>
+  <dd>Die Bereitstellung von, der Zugriff auf und das Management der VMware-Umgebungen in der {{site.data.keyword.cloud_notm}} erfolgt über eine einzige Konsole.</dd>
+</dl>
 
 ## Bereitstellungsangebote
 
@@ -98,6 +106,12 @@ Der Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" bietet ein
 
 Weitere Informationen enthält der Abschnitt [Übersicht über HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html).
 
+### HyTrust KeyControl on IBM Cloud
+
+Der Service "HyTrust KeyControl on {{site.data.keyword.cloud_notm}}" vereinfacht das Management verschlüsselter Workloads durch Automatisierung und Vereinfachung des Lebenszyklus von Verschlüsselungsschlüsseln. Der Service kann mithilfe der FIPS 140-2-konformen Verschlüsselung ohne großen Aufwand skalierbare Verschlüsselungsschlüssel verwalten. Mithilfe dieses Service können Sie die Verschlüsselungsschlüssel aller virtuellen Maschinen und verschlüsselten Datenspeicher verwalten; darüber hinaus können Sie ihn skalieren, um in großen Bereitstellungen Tausende verschlüsselter Workloads zu unterstützen.
+
+Weitere Informationen enthält der Abschnitt [Übersicht über HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html).
+
 ### IBM Cloud Private Hosted
 
 Der Service "{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}}" stellt die Leistungsfähigkeit von Mikroservices und Containern in Ihrer VMware-Umgebung unter {{site.data.keyword.cloud_notm}} zur Verfügung. Mit diesem Service können Sie den Einsatz des bereits vertrauten VMware- und {{site.data.keyword.cloud_notm}} Private-Betriebsmodells und der zugehörigen Tools von Ihrem lokalen Standort (On-Premises) auf {{site.data.keyword.cloud_notm}}-Umgebungen ausdehnen.
@@ -118,7 +132,7 @@ Weitere Informationen enthält der Abschnitt [Übersicht über KMIP for VMware o
 
 ### Veeam on IBM Cloud
 
-Der Service "Veeam on {{site.data.keyword.cloud_notm}}" wird nahtlos und direkt in Ihre VMware-Hypervisoren integriert und fördert so die Hochverfügbarkeit in Ihrem Unternehmen. Dieser Service kann Wiederherstellungspunkte und Zeitziele für Ihre Anwendungen und Daten bereitstellen. Die Wiederherstellungspunkte und Zeitziele können innerhalb von weniger als 15 Minuten nach Abschluss der Konfiguration bereitgestellt werden. Durch die Verwendung dieses Service können Sie die Sicherung und Wiederherstellung aller virtuellen Maschinen für Ihre Infrastruktur direkt von der Veeam-Konsole aus steuern.
+Der Service "Veeam on {{site.data.keyword.cloud_notm}}" wird nahtlos und direkt in Ihre VMware-Hypervisoren integriert und fördert so die Hochverfügbarkeit in Ihrem Unternehmen. Dieser Service stellt Wiederherstellungspunkte und Zeitziele für Ihre Anwendungen und Daten bereit. Die Wiederherstellungspunkte und Zeitziele werden in weniger als 15 Minuten nach Abschluss der Konfiguration bereitgestellt. Mithilfe dieses Service steuern Sie die Sicherung und Wiederherstellung aller virtuellen Maschinen für Ihre Infrastruktur direkt von der Veeam-Konsole aus.
 
 Weitere Informationen enthält der Abschnitt [Übersicht über Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html).
 

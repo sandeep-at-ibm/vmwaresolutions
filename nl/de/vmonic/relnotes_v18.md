@@ -10,7 +10,7 @@ lastupdated: "2017-08-28"
 
 # Releaseinformationen für V1.8
 
-Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie zusätzlichen Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Service "Fortinet on IBM Cloud"
 
@@ -56,9 +56,9 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
 * [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](../vcenter/vc_addingviewingclusters.html)
 
-### Unterstützung für das Hinzufügen von mehr als sieben NFS-Dateifreigaben
+### Unterstützung für das Hinzufügen von mehr als sieben gemeinsam genutzten NFS-Dateiressourcen
 
- Für alle ESXi-Server in einem Cluster können Sie bis zu maximal 32 Dateifreigaben zuordnen.
+ Für alle ESXi-Server in einem Cluster können Sie bis zu maximal 32 gemeinsam genutzte Dateiressourcen zuordnen.
 
  Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
