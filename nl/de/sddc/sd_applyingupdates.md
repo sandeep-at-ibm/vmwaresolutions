@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -19,7 +19,7 @@ Ein verfügbares Update ist ein Eintrag in der Liste der Software-Updates für d
 ## Vorbereitende Schritte
 
 Bevor Sie versuchen, ein Update anzuwenden, erweitern Sie den Update-Eintrag, indem Sie auf den Abwärtspfeil klicken und die folgenden Informationen überprüfen:
-* Überprüfen Sie die Version des Updates. Sie müssen die Updates in chronologischer Reihenfolge anwenden, also zuerst das älteste Update und zuletzt das neueste Update. Stellen Sie sicher, dass Sie alle vorherigen Updates angewendet haben, bevor Sie das aktuelle Update anwenden. Beispielsweise müssen Sie das Update für V2.3 anwenden, bevor Sie versuchen, das Update für V2.4 anzuwenden.
+* Überprüfen Sie die Version des Updates. Sie müssen die Updates in chronologischer Reihenfolge anwenden, also zuerst das älteste Update und zuletzt das neueste Update. Stellen Sie sicher, dass Sie alle vorherigen Updates angewendet haben, bevor Sie das aktuelle Update anwenden. Beispielsweise müssen Sie das Update für V2.4 anwenden, bevor Sie versuchen, das Update für V2.5 anzuwenden.
 * Ermitteln Sie, ob eine Ausfallzeit erforderlich ist.
 * Prüfen Sie die geschätzte Gesamtzeit für die Ausführung des Updates.
 * Stellen Sie fest, wie sich das Update auf die virtuelle VMware-Umgebung auswirkt. In Tabelle 1 ist dargestellt, wie die verschiedenen Auswirkungsstufen das System beeinflussen.
@@ -56,12 +56,12 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
 5. Klicken Sie auf den Abwärtspfeil, um das Update zu erweitern, das Sie anwenden möchten, und führen Sie dann einen der folgenden Schritte aus:
    *  Um das Update sofort zu starten, klicken Sie auf das Überlaufmenüsymbol in der Spalte **Aktionen** des Update-Eintrags und anschließend auf **Update jetzt ausführen**.
    *  Um ein künftiges Update zu planen, klicken Sie auf das Überlaufmenüsymbol in der Spalte **Aktionen** des Update-Eintrags und anschließend auf **Update planen**. Wählen Sie das Datum, die Uhrzeit und die Zeitzone für den Start des Updates aus. Klicken Sie auf **OK**.
-6. Falls Sie Updates auf Cloud Foundation-Instanzen in Bereitstellungskonfigurationen mit mehreren Standorten anwenden, wird ein Abschnitt namens **Für Update erforderliche Schritte** angezeigt. In diesem Abschnitt werden die Updateoperationen aufgelistet, die für alle Instanzen in der Bereitstellung mit mehreren Standorten erforderlich sind. Sie müssen die Schritte nacheinander ausführen, indem Sie für jeden Schritt auf **Update anwenden** klicken. Vor dem Starten des nächsten Schritts müssen Sie warten, bis der vorherige Schritt abgeschlossen wurde.
+6. Falls Sie Updates auf Cloud Foundation-Instanzen in Bereitstellungskonfigurationen mit mehreren Standorten anwenden, wird ein Abschnitt namens **Für Update erforderliche Schritte** angezeigt, in dem die Updateoperationen aufgelistet sind, die für alle Instanzen in der Bereitstellung mit mehreren Standorten erforderlich sind. Sie müssen die Schritte nacheinander ausführen, indem Sie für jeden Schritt auf **Update anwenden** klicken. Vor dem Starten des nächsten Schritts müssen Sie warten, bis der vorherige Schritt abgeschlossen wurde.
 
 ## Ergebnisse
 
 1. Vor dem Start einer Updateoperation wird eine Zustandsprüfung für die Instanz ausgeführt. Wenn die Zustandsprüfung fehlschlägt, werden Sie benachrichtigt, damit Sie das Problem lösen können, bevor Sie das Update anwenden.
-2. Während Updates, die auch VMware-Komponenten aktualisieren, müssen VMs möglicherweise aus ESXi-Servern migriert werden, damit sie in den Wartungsmodus versetzt werden. Falls eine VM einen lokalen Datenspeicher enthält oder eine CD-ROM angehängt ist, kann dies die Migration der VM verhindern.
+2. Während Updates, die auch VMware-Komponenten aktualisieren, müssen VMs möglicherweise aus ESXi-Servern migriert werden, damit sie in den Wartungsmodus versetzt werden. Die VM-Migration wird möglicherweise verhindert, wenn eine virtuelle Maschine einen lokalen Datenspeicher enthält oder eine CD-ROM angehängt ist.
 3. Bei der Bereitstellung einer neuen Umgebung erstellt {{site.data.keyword.vmwaresolutions_short}} die ID **automationuser**, die für das Instanzmanagement verwendet wird, zu dem auch das Anwenden von Updates gehört. Ändern Sie das Kennwort für diese Benutzer-ID nicht. Das Ändern des Kennworts kann dazu führen, dass das Update fehlschlägt.
 
 4. Nachdem Sie ein Update angewendet haben, wird in der Statusliste der Software-Updates ein Eintrag angezeigt, der Aufschluss über den detaillierten Verarbeitungsfortschritt und den Status des Updates gibt. Sobald das Update erfolgreich abgeschlossen wurde, wird in der Liste der installierten Software-Updates ein Eintrag angezeigt.
@@ -69,9 +69,9 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
   Um den aktuellen Status für einen Update-Job abzufragen, klicken Sie in der rechten oberen Ecke der Seite auf das Aktualisierungssymbol.
   {:tip}
 
-5. Details zu den Statuswerten für Updates finden Sie in der folgenden Tabelle.
+5. Weitere Informationen zu den Statuswerten für Updates finden Sie in der folgenden Tabelle.
 
-   Tabelle 2: Details zu den Statuswerten für Updates
+   Tabelle 2. Details zu den Statuswerten für Updates
 
     <table>
       <tr>

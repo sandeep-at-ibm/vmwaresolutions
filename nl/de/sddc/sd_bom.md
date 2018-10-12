@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -32,18 +32,17 @@ Tabelle 2. Teileliste für Softwarekomponenten in Cloud Foundation-Instanzen
 
 | Hersteller | Komponente                                | Version      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 U1g (ESXi 6.5u1 mit angewendetem Patch-Level ESXi650-201803001) |
-| VMware       | vCenter Server Appliance                 | 6.5 Update 1g |
-| VMware       | Platform Services Controller             | 6.5 Update 1g |
+| VMware       | vSphere ESXi                             | 6.5 Update 2c (bis zu Patch-Level ESXi650-201808001) |
+| VMware       | vCenter Server Appliance                 | 6.5 Update 2c |
+| VMware       | Platform Services Controller             | 6.5 Update 2c |
 | VMware       | vSAN                                     | 6.6.1        |
-| VMware       | NSX for vSphere                          | 6.3.5        |
+| VMware       | NSX for vSphere                          | 6.4.1        |
 | VMware       | SDDC Manager                             | 2.4          |
-| IBM          | CloudDriver                              | 2.5          |
 | Microsoft    | Windows Server Standard Edition (64-Bit) | 2012R2       |
 
 ## Erweiterte Konfigurationseinstellungen für ESXi-Server
 
-Die folgende Tabelle gibt Ihnen eine Übersicht über die erweiterten Konfigurationseinstellungen, die auf die ESXi-Server abhängig davon angewendet werden, ob die Cloud Foundation-Instanz in V2.2 oder höher bereitgestellt oder für sie ein Upgrade von V2.1 oder einem älteren Release auf V2.2 oder höher durchgeführt wird.
+Die folgende Tabelle gibt Ihnen eine Übersicht über die erweiterten Konfigurationseinstellungen, die auf die ESXi-Server angewendet werden. Die Einstellungen unterscheiden sich, je nachdem, ob die Cloud Foundation-Instanz von einem früheren Release (Version 2.1 oder früher) in Version 2.2 oder höher installiert wurde (bzw. ein Upgrade auf diese Version durchgeführt wurde).
 
 Tabelle 3. Erweiterte Konfigurationseinstellungen für ESXi-Server für Cloud Foundation-Instanzen und -Cluster
 

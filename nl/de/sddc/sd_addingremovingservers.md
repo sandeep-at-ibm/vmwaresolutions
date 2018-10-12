@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-17"
 
 Sie können die Kapazität Ihrer VMware Cloud Foundation-Instanz entsprechend Ihren Geschäftsanforderungen erweitern oder verringern, indem Sie ESXi-Server hinzufügen oder entfernen.
 
-Eine Cloud Foundation-Instanz kann bis zu fünf Cluster umfassen, von denen einer der Standardcluster ist. Jeder erste Cluster kann bis zu 51 ESXi-Server umfassen; zusätzliche Cluster können bis zu 59 Server beinhalten.
+Eine Cloud Foundation-Instanz kann bis zu fünf Cluster umfassen, von denen einer der Standardcluster ist. Jeder erste Cluster kann bis zu 51 ESXi-Server umfassen; weitere Cluster können bis zu 59 Server beinhalten.
 
 ## ESXi-Server zu Cloud Foundation-Instanzen hinzufügen
 
@@ -44,8 +44,8 @@ Eine Cloud Foundation-Instanz kann bis zu fünf Cluster umfassen, von denen eine
 
 * Entfernen Sie keine ESXi-Server über VMware vSphere Web Client. Die Änderungen, die Sie in VMware vSphere Web Client vornehmen, werden nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert.
 * Die von Ihnen bestellte Basisplattform umfasst standardmäßig 4 ESXi-Server. Sie können die von Ihnen hinzugefügten ESXi-Server entfernen. Die ESXi-Standardserver können nicht entfernt werden.
-* Bevor Sie ESXi-Server mit installiertem Service "F5 on {{site.data.keyword.cloud_notm}}" oder "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" entfernen, müssen Sie die VMs für F5 BIG-IP und FortiGate auf einen ESXi-Server verlagern, auf dem die VMs nicht aktuell gehostet werden.
-* Stellen Sie vor dem Entfernen von ESXi-Servern mit installiertem Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" sicher, dass keine (fehlgeschlagenen oder laufenden) Sicherungs- oder Wiederherstellungsoperationen aktiv sind, da diese aktiven Operationen das Entfernen der ESXi-Server verhindern könnten.
+* Bevor Sie ESXi-Server mit installiertem Service "F5 on {{site.data.keyword.cloud_notm}}" oder "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" entfernen, müssen Sie die VMs für F5 BIG-IP und FortiGate auf einen ESXi-Server verlagern, auf dem die VMs nicht gehostet werden.
+* Stellen Sie vor dem Entfernen von ESXi-Servern mit installiertem Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" sicher, dass keine Sicherungs- oder Wiederherstellungsoperationen aktiv sind. Aktive Operationen (fehlgeschlagene oder laufende) könnten das Entfernen der ESXi-Server verhindern.
 
 ## Vorgehensweise beim Entfernen von ESXi-Servern
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-14"
 
 ---
 
@@ -40,11 +40,11 @@ Der Clustername muss die folgenden Anforderungen erfüllen:
 
 Der Standort des {{site.data.keyword.CloudDataCent}}s für den Cluster wird standardmäßig auf das {{site.data.keyword.CloudDataCent_notm}} der Cloud Foundation-Instanz gesetzt. Sie können den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}} als die bereitgestellte Instanz bereitstellen, müssen aber sicherstellen, dass die Netzlatenz zwischen den beiden {{site.data.keyword.CloudDataCents_notm}} weniger als 150 Millisekunden beträgt. Zur Überprüfung der Netzlatenz können Sie ein Tool wie [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} verwenden.
 
-Welche Rechenzentren für Sie verfügbar sind, richtet sich nach der Bare Metal Server-Konfiguration, die für die Bereitstellung ausgewählt wurde. Wurde die Konfiguration des Typs **Angepasst** ausgewählt, können Sie den Cluster auch in einem anderen {{site.data.keyword.cloud}}-Infrastruktur-Pod bereitstellen, falls das ausgewählte Rechenzentrum zusätzliche Pods enthält. Dies ist hilfreich, wenn der Standardpod der {{site.data.keyword.cloud_notm}}-Infrastruktur, in dem die erste Instanz bereitgestellt wird, seine maximale Kapazität erreicht hat.
+Welche Rechenzentren für Sie verfügbar sind, richtet sich nach der Bare Metal Server-Konfiguration, die für die Bereitstellung ausgewählt wurde. Wurde die Konfiguration des Typs **Angepasst** ausgewählt, können Sie den Cluster auch in einem anderen {{site.data.keyword.cloud}}-Infrastrukturpod bereitstellen, falls das ausgewählte Rechenzentrum weitere Pods enthält. Diese Konfiguration ist hilfreich, wenn der Standardpod der {{site.data.keyword.cloud_notm}}-Infrastruktur, in dem die erste Instanz bereitgestellt wird, seine maximale Kapazität erreicht hat.
 
 **Hinweis:** Die standardisierten Bare Metal Server-Konfigurationen des Typs **S (Klein)** und **L (Groß)** verwenden einen Standardpod, der nicht geändert werden kann.
 
-Wenn Sie den Cluster in einem anderen Rechenzentrum oder Pod bereitstellen, werden drei zusätzliche VLANs für die Verwendung mit den bestellten {{site.data.keyword.baremetal_short}}-Instanzen bestellt.
+Wenn Sie den Cluster in einem anderen Rechenzentrum oder Pod bereitstellen, werden drei weitere VLANs für die Verwendung mit den bestellten {{site.data.keyword.baremetal_short}}-Instanzen bestellt.
 
 ### Einstellungen für Bare Metal Server
 
@@ -77,7 +77,14 @@ Für die Bare Metal Server-Konfigurationen vom Typ **Vorkonfiguriert** können d
 * Für die Konfiguration vom Typ **S (Klein)** werden zwei SSD-SED-Plattenlaufwerke mit jeweils 1,9 TB bestellt.
 * Für die Konfiguration vom Typ **L (Groß)** werden vier SSD-SED-Plattenlaufwerke mit jeweils 3,8 TB bestellt.
 
-Für die Bare Metal Server-Konfiguration **Angepasst** können Sie den vSAN-Speicher anpassen, indem Sie die Anzahl der vSAN-Kapazitätsplatten, den Plattentyp und die Größe angeben, die Ihren Speicheranforderungen entsprechen.
+Bei Bare Metal Server-Konfigurationen des Typs **Angepasst** können Sie den vSAN-Speicher durch Angeben der folgenden Einstellungen anpassen:
+
+* **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
+* **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
+* **Plattentyp für vSAN-Cacheplatten**: Wählen Sie die für die Cacheplatten benötigte Option aus.
+
+    **Anmerkung**: Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option für **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* **Anzahl der vSAN-Cacheplatten**: Geben Sie die Anzahl der hinzuzufügenden Cacheplatten an.
 
 ### Lizenzierungseinstellungen
 
@@ -99,8 +106,8 @@ Sie können die Lizenzierungsoptionen für die VMware-Komponenten im Cluster ein
    * Wenn Sie **Angepasst** ausgewählt haben, geben Sie das **CPU-Modell** und die Größe des **RAM** an.
    * Wenn Sie **Vorkonfiguriert** ausgewählt haben, geben Sie die **Bare Metal Server-Konfiguration** an.
 7. Führen Sie die Speicherkonfiguration durch:
-   * Falls Sie **Angepasst** für die Bare-Metal-Konfiguration ausgewählt haben, geben Sie die **Anzahl der vSAN-Kapazitätsplatten** sowie **Plattentyp und -größe für vSAN-Kapazitätsplatten** an.
-   * Wenn Sie für die Bare-Metal-Konfiguration die Option **Vorkonfiguriert** ausgewählt haben, ist zu beachten, dass die Speichereinstellungen für die Bare Metal Server-Konfigurationen **S (Klein)** und **L (Groß)** nicht geändert werden können.
+   * Wenn Sie für die Bare Metal-Konfiguration die Option **Vorkonfiguriert** ausgewählt haben, können die Speichereinstellungen für die Bare-Metal-Serverkonfigurationen **S (Klein)** und **L (Groß)** nicht geändert werden.
+   * Wenn Sie für die Bare Metal-Konfiguration die Option **Angepasst** ausgewählt haben, geben Sie die Plattentypen für die vSAN-Kapazitäts- und Cacheplatten sowie die Anzahl der Platten an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
 8. Geben Sie an, wie Ihre Lizenzschlüssel bereitgestellt werden:
    * Für Benutzer der Kategorie "Business Partner" sind die vSphere-Lizenz (Enterprise Plus Edition) und die vSAN-Lizenz enthalten und werden in Ihrem Namen erworben. Für die vSAN-Lizenz muss allerdings die Edition angegeben werden.
    * Für Nicht-Business-Partner-Benutzer können Sie eine der folgenden Optionen auswählen:
@@ -123,7 +130,7 @@ Sie können die Lizenzierungsoptionen für die VMware-Komponenten im Cluster ein
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf eine Instanz, um die Cluster in dieser Instanz anzuzeigen.
-3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Zeigen Sie in der Tabelle **CLUSTER** die Zusammenfassung für die Cluster an:
+3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Prüfen Sie in der Tabelle **CLUSTER** die Zusammenfassung für die Cluster:
    * **Name**: Der Name des Clusters.
    * **ESXi-Server**: Die Anzahl der ESXi-Server im Cluster.
    * **CPU**: Die CPU-Spezifikation der ESXi-Server im Cluster.
@@ -166,13 +173,13 @@ Sie können die Lizenzierungsoptionen für die VMware-Komponenten im Cluster ein
         <dt class="dt dlterm">Wird gelöscht</dt>
         <dd class="dd">Der ESXi-Server wird gerade gelöscht.</dd>
         </dl>
-   * Die Details der vSAN-Lizenz und der vSphere-Lizenz. Die Details der vSphere-Lizenz stehen nur zur Verfügung, wenn Sie bei der Clusterbestellung die Option zur Verwendung Ihrer eigenen VMware-Lizenz (BYOL = Bring Your Own License) ausgewählt haben:
+   * Die Details der vSAN-Lizenz und der vSphere-Lizenz. Die Details der vSphere-Lizenz stehen nur zur Verfügung, wenn Sie bei der Clusterbestellung die Option zur Verwendung Ihrer eigenen VMware-Lizenz (BYOL – Bring Your Own License) ausgewählt haben.
        * **Lizenztyp**: Die vSAN-Lizenz oder die vSphere-Lizenz.
        * **Bestelltyp**: Die Lizenz wird vom Benutzer bereitgestellt (BYOL = Bring Your Own License) oder im Namen des Benutzers erworben.
        * **Lizenzedition**: Die Edition der Lizenz.
        * **Lizenzschlüssel**: Der Lizenzschlüssel.
        * **Gesamtkapazität (CPU)**: Die Gesamtkapazität oder die Anzahl der CPUs, die über die Lizenz bereitgestellt wird.
-       * **Freie Kapazität (CPU)**: Die Kapazität, die momentan über die Lizenz verfügbar ist.
+       * **Freie Kapazität (CPU)**: Die Kapazität, die über die Lizenz verfügbar ist.
 
 ## Cluster aus Cloud Foundation-Instanzen löschen
 
@@ -183,8 +190,8 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 * Gehen Sie wie folgt vor, um Cluster aus Instanzen zu löschen, die in V2.3 oder höheren Releases bereitgestellt werden.
 * Für Cluster, die in Instanzen mit V2.2 oder älteren Releases bereitgestellt wurden, müssen Sie ein Upgrade der Instanz auf V2.3 durchführen, um die Cluster löschen zu können, die Sie zu der Instanz hinzugefügt haben.
 * Es kann immer nur ein Cluster gleichzeitig gelöscht werden. Zum Löschen mehrerer Cluster müssen Sie die entsprechenden Cluster nacheinander löschen und dabei abwarten, bis der vorherige Cluster gelöscht wurde, bevor Sie versuchen, den nächsten Cluster zu löschen.
-* Vergewissern Sie sich, dass alle Knoten in einem Cluster eingeschaltet und betriebsbereit sind, bevor Sie den Cluster löschen.
-* Wenn Sie einen Cluster löschen, dann werden auch alle VMs (virtuellen Maschinen) des Clusters gelöscht und können nicht wiederhergestellt werden. Sollen die VMs beibehalten werden, dann müssen Sie sie auf andere Cluster migrieren.
+* Stellen Sie sicher, dass alle Knoten in einem Cluster eingeschaltet und betriebsbereit sind, bevor Sie den Cluster löschen.
+* Wenn Sie einen Cluster löschen, werden auch alle VMs (virtuellen Maschinen) des Clusters gelöscht und können nicht wiederhergestellt werden. Sollen die VMs beibehalten werden, dann müssen Sie sie auf andere Cluster migrieren.
 * Der Standardcluster kann nicht gelöscht werden.
 
 ## Vorgehensweise zum Löschen von Clustern aus Cloud Foundation-Instanzen

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-24"
 
 ---
 
@@ -18,18 +18,18 @@ In der folgenden Tabelle sind die Services aufgeführt, die für Cloud Foundatio
 
 Tabelle 1. Verfügbare Services für Cloud Foundation-Instanzen
 
-| Servicename | Verfügbarkeit | Unterstützte Instanzen |
+| Servicename | Serviceversion | Instanzversion |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | Ja | V1.9 und höher |
-| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | Ja | V1.8 und höher |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | Ja | V2.0 und höher |
-| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | Ja | V2.3 und höher |
-| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | Ja | V2.3 und höher |
-| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | Ja | V2.2 und höher |
-| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  | Ja | V2.2 und höher |
-| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | Ja | V1.8 und höher |
-| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                         | Nein | Nicht zutreffend |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | Ja | V1.2 und höher |
+| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1 | V1.9 und höher |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | 300 Series | V1.8 und höher |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 5.6 | V2.0 und höher |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 und höher |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | V2.3 und höher |
+| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 und höher |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.1 Patch 1 | V2.2 und höher |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 und höher |
+| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | 9.5u3 | V1.8 und höher |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 5.5u4 Patch 2 | V1.2 und höher |
 
 ## Services zu Cloud Foundation-Instanzen hinzufügen
 

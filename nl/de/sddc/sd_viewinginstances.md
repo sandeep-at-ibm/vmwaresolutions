@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -17,7 +17,7 @@ Sie können die Zusammenfassung und die detaillierten Informationen der VMware C
 Wenn Sie eine Zusammenfassung aller Cloud Foundation-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
-2. Klicken Sie in der rechten oberen Ecke der Konsole auf Ihren Avatar und klicken Sie auf das Feld **Konto**, um das Benutzerkonto auszuwählen, für das Sie Instanzen prüfen wollen. 
+2. Klicken Sie im Konsolenbanner auf das Symbol Ihres Benutzerkontos und klicken Sie anschließend auf das Feld **Konto**, um das Benutzerkonto auszuwählen, für das Sie Instanzen prüfen wollen.
 3. Zeigen Sie in der Tabelle **Cloud Foundation-Instanzen** die Liste Ihrer Instanzen an:
 
 Tabelle 1. Elemente von Cloud Foundation-Instanzen
@@ -80,7 +80,7 @@ Tabelle 4. Cloud-Foundation-Zugriffsinformationen für instanzbezogene Komponent
 |:------------- |:------------- |
 | AD/DNS-IP | Die IP-Adresse der beiden AD-Server. |
 | Vollständig qualifizierter Domänenname für AD/DNS | Der vollständig qualifizierte Domänenname des AD/DNS-Servers.<br><br>**Hinweis:** Zur Herstellung einer Verbindung zu allen AD/DNS-Servern über eine Remote-Desktop-Verbindung kann dasselbe Administratorkennwort verwendet werden. |
-| AD/DNS ADMIN (Remote Desktop)  | Für primäre Instanzen werden der Benutzername und das Kennwort für den Zugriff auf den AD-Server über eine Remote-Desktop-Verbindung angezeigt.<br><br>Klicken Sie für sekundäre Instanzen auf den Link **Für primäre Instanz anzeigen**, um zu den Informationen zu Benutzername und Kennwort in der primären Instanz weitergeleitet zu werden.<br><br>**Hinweis**: Wenn die sekundäre Instanz zur primären DNS-Domäne hinzugefügt wurde und die Replikation stattfindet, überschreibt das lokale Administratorkennwort für die primäre Instanz möglicherweise das lokale Administratorkennwort für die sekundäre Instanz. Wenn Sie auf den Link **Für primäre Instanz anzeigen** klicken, erhalten Sie Zugriff auf das richtige Administratorkennwort.  |
+| AD/DNS ADMIN (Remote Desktop)  | Für primäre Instanzen werden der Benutzername und das Kennwort für den Zugriff auf den AD-Server über eine Remote-Desktop-Verbindung angezeigt.<br><br>Klicken Sie für sekundäre Instanzen auf den Link **Für primäre Instanz anzeigen**, um zu den Informationen zu Benutzername und Kennwort in der primären Instanz weitergeleitet zu werden.<br><br>**Hinweis**: Wenn die sekundäre Instanz zur primären DNS-Domäne hinzugefügt wurde und die Replikation stattfindet, überschreibt das lokale Administratorkennwort für die primäre Instanz möglicherweise das lokale Administratorkennwort für die sekundäre Instanz. Wenn Sie auf den Link **Für primäre Instanz anzeigen** klicken, erhalten Sie Zugriff auf das richtige Administratorkennwort.|
 | NSX-Manager-IP  | Die IP-Adresse des NSX-Managers.  |
 | Vollständig qualifizierter Domänenname für NSX-Manager  | Der vollständig qualifizierte Domänenname des NSX-Managers.  |
 | NSX-Manager-HTTP  | Der Benutzername und das Kennwort für den Zugriff auf die Webkonsole des NSX-Managers. |
@@ -119,7 +119,7 @@ In den folgenden Abschnitten finden Sie Informationen, die Sie bei der Ausführu
 
 * Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
 * Eine Liste der Zugriffspunkte für die Anmeldung beim privaten Netz von {{site.data.keyword.cloud_notm}} mittels VPN finden Sie unter [VPN-Zugriff](http://www.softlayer.com/vpn-access){:new_window}.
-* Falls Sie beim Bereitstellen einer Datei im Format "OVF" (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](../vmonic/trbl_deploy_ovf.html) weitere Informationen.
+* Falls Sie beim Bereitstellen einer Datei im Format OVF (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](../vmonic/trbl_deploy_ovf.html) weitere Informationen.
 
 ### Zugehörige Links
 
