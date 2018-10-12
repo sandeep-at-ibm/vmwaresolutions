@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -20,7 +20,7 @@ Die Netzvirtualisierung, die in diesem Design eingesetzt wird, nutzt einen berei
 
 ## vSphere Distributed Switch (vDS)
 
-Wie bereits erwähnt, wird in der vCenter Server-Lösung ein weiteres VLAN erstellt und zum Anhängen des NFS-Mountpunkts an die ESXi-Hosts im vorhandenen Cluster verwendet. Da die vCenter Server-Lösung bereits über einen vSphere Distributed Switch (vDS) verfügt, der dem privaten Netz zugeordnet ist, wird eine weitere Portgruppe erstellt und mit der Nummer für zusätzliche VLANs markiert, da es sich bei diesem zusätzlichen VLAN nicht um ein natives VLAN handelt.
+Wie bereits erwähnt, wird in der vCenter Server-Lösung ein weiteres VLAN erstellt und zum Anhängen des NFS-Mountpunkts an die ESXi-Hosts im vorhandenen Cluster verwendet. Da die vCenter Server-Lösung bereits über einen vDS verfügt, der dem privaten Netz zugeordnet ist, wird eine weitere Portgruppe erstellt und mit der Nummer für zusätzliche VLANs markiert, da es sich bei diesem zusätzlichen VLAN nicht um ein natives VLAN handelt.
 
 In der folgenden Tabelle werden die Standardeinstellungen für die neue Portgruppe beschrieben.
 
