@@ -4,21 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-24"
 
 ---
 
 # 연결된 스토리지 인프라 디자인
 
-{{site.data.keyword.vmwaresolutions_full}}는 전세계 {{site.data.keyword.CloudDataCents_notm}} 내에 자동화된 방식으로 배치된 VMware 기술을 제공합니다. {{site.data.keyword.cloud_notm}} 솔루션 포트폴리오에서 기본 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 오퍼링은 최대 20개의 vSphere 호스트, 단일 PSC(Platform Services Controller) 및 최대 100개의 호스트와 1,000개의 가상 머신을 관리할 수 있는 vCenter Server Appliance로 구성됩니다.
+{{site.data.keyword.vmwaresolutions_full}}는 전세계 {{site.data.keyword.CloudDataCents_notm}} 내에 자동화된 방식으로 배치된 VMware 기술을 제공합니다. {{site.data.keyword.cloud_notm}} 솔루션 포트폴리오에서 기본 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 오퍼링은 최대 59개의 vSphere 호스트, 단일 PSC(Platform Services Controller) 및 최대 400개의 호스트와 4,000개의 가상 머신을 관리할 수 있는 vCenter Server Appliance로 구성됩니다.
 
 여기에 제공된 아키텍처는 연결된 스토리지를 환경에 맞는 공유 스토리지 디바이스로 추가하여 vCenter Server 솔루션을 보완합니다. 연결된 스토리지 디바이스는 vCenter Server 배치와 동일한 {{site.data.keyword.CloudDataCent_notm}} 내에 있으며 단일 NFS(Network File System) 공유 또는 {{site.data.keyword.cloud_notm}}의 다중 NFS 내보내기로 구성됩니다.
 
-다음 그림은 NetApp ONTAP Select on vCenter Server 배치의 전체 아키텍처에 대해 설명합니다.
+다음 그림은 vCenter Server 배치의 전체 아키텍처에 대해 설명합니다.
 
-그림 1. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}의 상위 레벨 아키텍처
+그림 1. {{site.data.keyword.cloud_notm}}의 연결된 스토리지에 대한 상위 레벨 아키텍처
 
-![NetApp ONTAP Select 아키텍처](../../netapp/np_architecture.svg "NetApp ONTAP Select on IBM Cloud의 상위 레벨 아키텍처")
+![연결된 스토리지 아키텍처](../solution/physical_nfs.svg "IBM Cloud의 연결된 스토리지에 대한 상위 레벨 아키텍처")
 
 ## 실제 인프라 디자인
 
@@ -52,11 +52,11 @@ VLAN에 대한 자세한 정보는 [실제 인프라 디자인](../solution/desi
 
 Performance 및 Endurance 스토리지는 예측 가능한 레벨의 성능을 요구하는 높은 I/O 애플리케이션을 지원하도록 디자인된 {{site.data.keyword.cloud_notm}} 스토리지 솔루션입니다. 이 예측 가능한 성능은 프로토콜 레벨의 초당 입출력(I/O) 오퍼레이션(IOPS)을 개별 볼륨으로 할당하여 달성됩니다.
 
-100 - 48,000 범위의 IOPS에는 20GB - 12TB의 스토리지 크기를 프로비저닝할 수 있습니다. Performance 및 Endurance 스토리지 볼륨은 블록 스토리지 및 파일 스토리지에 사용 가능합니다.
+100 - 48,000 범위의 IOPS는 20GB - 12TB 크기의 스토리지를 프로비저닝할 수 있습니다. Performance 및 Endurance 스토리지 볼륨은 블록 스토리지 및 파일 스토리지에 사용 가능합니다.
 
 이 디자인에서 vCenter Server 솔루션은 연결된 스토리지에 대해 Endurance 스토리지를 제공합니다. 따라서 20GB - 12TB 크기의 Endurance NFS 내보내기를 선택하여 연결할 수 있습니다(자동화를 통해). {{site.data.keyword.cloud_notm}}는 단일 Endurance NFS 내보내기에 연결할 vSphere ESXi 호스트를 64개까지 허용합니다.
 
-Endurance는 다양한 애플리케이션 욕구를 지원하기 위해 세 가지 IOPS 성능 티어에서 사용 가능합니다. NFS 공유를 프로비저닝한 후에는 IOPS를 많이 또는 적게 허용하도록 크기를 조정하거나 재구성할 수 없습니다.
+Endurance는 다양한 애플리케이션 욕구를 지원하기 위해 세 가지 IOPS 성능 티어에서 사용 가능합니다. NFS 공유가 프로비저닝된 후에는 IOPS를 많이 또는 적게 허용하도록 크기를 조정하거나 재구성할 수 있습니다.
 
 자세한 IOPS 옵션은 [vCenter Server 인스턴스 주문](../../vcenter/vc_orderinginstance.html)의 _스토리지 설정_ 섹션을 참조하십시오.
 

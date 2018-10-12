@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-08-13"
 
 ## vSphere 분배 스위치
 
-이전에 언급한 대로 다른 VLAN이 vCenter Server 솔루션 내에 작성되며 기존 클러스터의 ESXi 호스트에 NFS 마운트 지점을 연결하는 데 사용됩니다. vCenter Server 솔루션에 이미 사설 네트워크와 연관된 vDS(vSphere Distributed Switch)가 있으므로 다른 포트 그룹이 작성되고 이 그룹에 추가 VLAN 번호로 태그를 지정합니다. 이 추가 VLAN은 고유 VLAN이 아니기 때문입니다.
+이전에 언급한 대로 다른 VLAN이 vCenter Server 솔루션 내에 작성되며 기존 클러스터의 ESXi 호스트에 NFS 마운트 지점을 연결하는 데 사용됩니다. vCenter Server 솔루션에 이미 사설 네트워크와 연관된 vDS가 있으므로, 다른 포트 그룹이 작성되고 이 그룹에 추가 VLAN 번호로 태그가 지정됩니다. 이 추가 VLAN은 고유 VLAN이 아니기 때문입니다. 
 
 다음 표에서는 새 포트 그룹의 기본 설정에 대해 설명합니다.
 
