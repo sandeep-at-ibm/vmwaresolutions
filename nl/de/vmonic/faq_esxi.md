@@ -47,11 +47,11 @@ Es wird empfohlen, den Rootzugriff auf ESXi-Servern aktiviert zu lassen, da es a
 
 Sollte es erforderlich sein, können Sie den Rootzugriff inaktivieren, nachdem die ESXi-Server den Status **Bereit** in der {{site.data.keyword.vmwaresolutions_short}}-Konsole erreicht haben.
 
-Für nachfolgende Automatisierungsoperationen, beispielsweise beim Hinzufügen und Entfernen von Dateifreigaben oder beim Installieren zusätzlicher Services wie Zerto on {{site.data.keyword.cloud_notm}}, müssen Sie den Rootzugriff erneut aktivieren.
+Für nachfolgende Automatisierungsoperationen, beispielsweise beim Hinzufügen und Entfernen von gemeinsam genutzten Dateiressourcen oder beim Installieren zusätzlicher Services wie Zerto on {{site.data.keyword.cloud_notm}}, müssen Sie den Rootzugriff erneut aktivieren.
 
 ## Kann ich statische Routen auf meinen ESXi-Servern hinzufügen, um Speicher von anderen Speicherorten anzuhängen?
 
-Statische Routen können für Speicher hinzugefügt werden, die Operationen müssen jedoch mit äußerster Sorgfalt ausgeführt werden. Andernfalls könnten die vorhandenen Freigaben abgehängt werden.
+Statische Routen können für Speicher hinzugefügt werden, die Operationen müssen jedoch mit äußerster Sorgfalt ausgeführt werden. Andernfalls könnten die vorhandenen, gemeinsam genutzten Ressourcen abgehängt werden.
 
 **Hinweis**: Das Hinzufügen statischer Routen für vMotion wird nicht unterstützt. Änderungen an der vMotion-Teilnetzkonfiguration könnten zu Störungen bei den Funktionen von {{site.data.keyword.vmwaresolutions_short}} führen.
 

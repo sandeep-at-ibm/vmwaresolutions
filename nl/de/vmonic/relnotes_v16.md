@@ -10,7 +10,7 @@ lastupdated: "2017-05-22"
 
 # Releaseinformationen für V1.6
 
-Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie zusätzlichen Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Updates für VMware Cloud Foundation-Instanzen
 
@@ -33,7 +33,7 @@ Ab dem Release V1.6 sind mehrere Erweiterungen für Ihre vCenter Server-Instanze
 *  Neue Hardwarespezifikationen: **S (Klein)**, **M (Mittel)** oder **L (Groß)**, abhängig von Ihren Anforderungen.
 *  Neue verfügbare Rechenzentren für die Bereitstellung: **HKG02 - Hongkong**, **OSL01 - Oslo**, **SEO01 - Seoul**, **SNG01 - Singapur** und **SYD04 - Sydney**.
 *  In Ihrer Instanzbestellung sind mindestens zwei ESXi-Server mit VMware vSphere DRS (Distributed Resource Scheduler) und VMware HA (High Availability) standardmäßig aktiviert.
-*  Bei der Instanzbestellung können bis zu sieben NFS-Dateifreigaben hinzugefügt werden. Die Managementkomponenten (vCenter, PSC, NSX-Manager und -Controller, CloudDriver) werden nun zur Hochverfügbarkeit in einer NFS-Dateifreigabe ausgeführt.
+*  Bei der Instanzbestellung können bis zu sieben gemeinsam genutzte NFS-Dateiressourcen hinzugefügt werden. Die Managementkomponenten (vCenter, PSC, NSX-Manager und -Controller, CloudDriver) werden nun zur Hochverfügbarkeit in einer gemeinsam genutzten NFS-Dateiressource ausgeführt.
 *  Das vom Kunden verwaltete VMware NSX Edge Services Gateway wird automatisch bereitgestellt und konfiguriert.
 
 Aufgrund dieser Änderungen können Sie die vorhandenen vCenter Server-Instanzen im aktuellen Release nicht im vorliegenden Zustand verwenden oder ein Upgrade durchführen. vCenter Server-Instanzen aus älteren Releases als V1.6 sind jedoch in der {{site.data.keyword.vmwaresolutions_short}}-Konsole weiterhin im Lesezugriffsmodus sichtbar. Solche Instanzen sind in der Benutzerschnittstelle durch ein Warnsymbol als **Veraltet** gekennzeichnet.

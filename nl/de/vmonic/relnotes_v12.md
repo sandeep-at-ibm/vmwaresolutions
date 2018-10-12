@@ -10,7 +10,7 @@ lastupdated: "2016-12-12"
 
 # Releaseinformationen für V1.2
 
-Dieses Release stellt neue Funktionen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie weiteren Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Dieses Release stellt neue Funktionen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Komponentenaktualisierungen
 
@@ -18,7 +18,7 @@ Die neue Version von VMware ESXi ist vSphere 6.0 u2 p03, aktualisiert ausgehend 
 
 ## Kontenzuordnung für IBMid und Bluemix
 
-{{site.data.keyword.vmwaresolutions_full}} wird als Infrastrukturlösung im IBM Bluemix®-Katalog bereitgestellt. Damit Sie Ihr **IBMid**-Konto zur Anmeldung bei der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwenden können, müssen Sie daher Ihr **IBMid**-Konto einem Bluemix-Konto zuordnen.
+{{site.data.keyword.vmwaresolutions_full}} wird als Infrastrukturlösung im IBM Bluemix®-Katalog bereitgestellt. Sie müssen das **IBMid**-Konto einem Bluemix-Konto zuordnen, um Ihr **IBMid**-Konto zur Anmeldung bei der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwenden zu können.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Einführung](../index.html)

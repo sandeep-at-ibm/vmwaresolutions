@@ -10,7 +10,7 @@ lastupdated: "2017-03-30"
 
 # Releaseinformationen für V1.5
 
-Dieses Release stellt neue Funktionen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie zusätzlichen Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Dieses Release stellt neue Funktionen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Voraussetzungen für VRF- und klassisches SoftLayer-Konto im Vergleich
 
@@ -30,5 +30,5 @@ Für Cloud Foundation-Instanztypen wird eine neue Lizenz des Typs _SDDC Manager_
 
 In der gesamten Benutzerschnittstelle wurden Verbesserungen vorgenommen:
 
-* In der Benutzerschnittstelle ist eindeutig angegeben, welche Rechenzentren verfügbar sind und ob der Bestand in diesen Rechenzentren zur Erfüllung der Bestellung ausreicht, damit Sie während der Instanzbestellung eine fundierte Entscheidung über das auszuwählende Rechenzentrum treffen können. Weitere Informationen finden Sie unter [Voraussetzungen und Planung für Cloud Foundation-Instanzen](../sddc/sd_planning.html) und [Voraussetzungen und Planung für vCenter Server-Instanzen](../vcenter/vc_planning.html).
-* Für Cloud Foundation-Instanzen werden Informationen wie der Instanzname, der Domänen- und Unterdomänenname sowie der Standort des Rechenzentrums automatisch im Grafikformat angezeigt, während Sie die erforderlichen Informationen in den Eingabefeldern eingeben. Weitere Informationen finden Sie im Abschnitt [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html).
+* In der Benutzerschnittstelle ist eindeutig angegeben, welche {{site.data.keyword.CloudDataCents_notm}} verfügbar sind und ob der Bestand in diesen Rechenzentren zur Erfüllung der Bestellung ausreicht. Verwenden Sie diese Details, um während der Instanzbestellung eine fundierte Entscheidung über das auszuwählende {{site.data.keyword.CloudDataCent_notm}} treffen zu können. Weitere Informationen finden Sie unter [Voraussetzungen und Planung für Cloud Foundation-Instanzen](../sddc/sd_planning.html) und [Voraussetzungen und Planung für vCenter Server-Instanzen](../vcenter/vc_planning.html).
+* Für Cloud Foundation-Instanzen werden Informationen wie der Instanzname, der Domänen- und Unterdomänenname sowie der Standort des Rechenzentrums automatisch im Grafikformat angezeigt, während Sie die erforderlichen Informationen in die Eingabefelder eingeben. Weitere Informationen finden Sie im Abschnitt [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html).

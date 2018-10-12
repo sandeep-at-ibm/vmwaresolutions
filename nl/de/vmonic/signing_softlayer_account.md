@@ -28,7 +28,7 @@ Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer), d
 6. Wählen Sie das Kontrollkästchen **Ich akzeptiere die Bedingungen für Cloud-Services** aus.
 7. Klicken Sie auf **Weiter**.
 8. Prüfen Sie die persönlichen Daten, die Rechnungsadresse und die Kreditkarteninformationen.
-9. Klicken Sie auf **Fertig**. Sie werden per E-Mail benachrichtigt, dass Ihre Kontoeinrichtung verarbeitet wird.
+9. Klicken Sie auf **Fertig**. Sie werden per E-Mail benachrichtigt, wenn Ihre Kontoeinrichtung verarbeitet wird.
 10. Sobald Sie per E-Mail benachrichtigt werden, dass Ihr Konto bereit ist, rufen Sie das {{site.data.keyword.slportal}} auf und klicken Sie auf **Mit IBMid anmelden**.
     Sie werden dann automatisch angemeldet.
 

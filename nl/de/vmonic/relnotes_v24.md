@@ -10,7 +10,7 @@ lastupdated: "2018-06-22"
 
 # Releaseinformationen für V2.4
 
-Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie zusätzlichen Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Korrektur für Spectre und Meltdown
 
@@ -84,7 +84,7 @@ Das Dokument zur {{site.data.keyword.vmwaresolutions_short}}-Architektur steht n
 
 ### Servicedokumentation
 
-Die Serviceinformationen wurden neu strukturiert und die Navigation wurde verbessert, damit relevante Informationen beim Bestellen von Services leicht gefunden werden können.
+Die Informationen zu den Services sind neu strukturiert und die Navigation ist verbessert, damit Sie beim Bestellen von Services relevante Informationen leicht finden.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 
@@ -103,6 +103,6 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 Die Benutzerschnittstelle wurde aktualisiert und bietet die folgenden Erweiterungen:
 
 * Bei den Teilfenstern zum Hinzufügen von Clustern und Hinzufügen von Services wird nun ein Seitenformat mit besser strukturiertem Aufbau verwendet, der ein effizienteres Ausführen von Aufgaben ermöglicht.
-* Die Funktionalität der Seite **Bereitgestellte Instanzen** wurde um Funktionen für die Suche, Paginierung und Sortierung erweitert. Durch diese Verbesserungen können Sie Ihre Instanzen sehr schnell finden.
+* Die Funktionalität der Seite **Bereitgestellte Instanzen** wurde um Funktionen für die Suche, Paginierung und Sortierung erweitert. Aufgrund dieser Verbesserungen können Sie Ihre Instanzen schnell finden.
 * Auf der Seite mit den Instanzdetails wird links nun ein Navigationsmenü verwendet, über das Sie schnell und einfach auf die Instanzinformationen zugreifen können.
-* Verschiedene Fehlernachrichten und QuickInfos wurden erweitert, um Ihnen bei der Auswahl der geeigneten Einstellung in der Benutzerschnittstelle zu helfen.
+* Es sind verschiedene Fehlernachrichten und QuickInfos verfügbar, die Sie bei der Auswahl der geeigneten Einstellung in der Benutzerschnittstelle unterstützen.

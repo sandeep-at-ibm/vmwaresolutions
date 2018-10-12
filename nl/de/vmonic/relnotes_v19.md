@@ -10,11 +10,11 @@ lastupdated: "2017-10-13"
 
 # Releaseinformationen für V1.9
 
-Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie zusätzlichen Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## VMware vSphere on IBM Cloud
 
-In diesem Release wird das Produktangebot "VMware vSphere on {{site.data.keyword.cloud_notm}}" eingeführt, mit dem Sie Ihre eigene, von IBM gehostete virtuelle VMware-Umgebung erstellen können, indem Sie die VMware-kompatiblen Rechen-, Speicher- und Netzressourcen anpassen und bestellen, die auf ausgewählten VMware-Komponenten basieren. Da vSphere on {{site.data.keyword.cloud_notm}} weder Installation noch Konfiguration oder Inbetriebnahme der optionalen VMware-Komponenten automatisiert, besitzen Sie ein hohes Maß an Flexibilität hinsichtlich des Designs und der Architektur einer Umgebung, die optimal für Ihre Geschäftsanforderungen geeignet ist. Sie können am Anfang einen neuen vSphere-Cluster von ESXi-Servern erstellen oder einen vorhandenen vSphere-Cluster in einem {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) skalieren.
+In diesem Release wird das Produktangebot "VMware vSphere on {{site.data.keyword.cloud_notm}}" eingeführt. Dieses Angebot ermöglicht Ihnen, Ihre eigene, von IBM gehostete virtuelle VMware-Umgebung zu erstellen, indem Sie die VMware-kompatiblen Rechen-, Speicher- und Netzressourcen anpassen und bestellen, die auf ausgewählten VMware-Komponenten basieren. Da vSphere on {{site.data.keyword.cloud_notm}} weder Installation noch Konfiguration oder Öffnung der optionalen VMware-Komponenten automatisiert, besitzen Sie ein hohes Maß an Flexibilität hinsichtlich des Designs und der Architektur einer Umgebung, die optimal für Ihre Geschäftsanforderungen geeignet ist. Beginnen Sie mit der Erstellung eines neuen vSphere-Clusters von ESXi-Servern oder skalieren Sie einen vorhandenen vSphere-Cluster in einem {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum).
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Neue vSphere-Cluster bestellen](../vsphere/vs_orderinginstances.html)
@@ -23,7 +23,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 ## NetApp ONTAP Select on IBM Cloud
 
 In diesem Release wird das Produktangebot "NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}" eingeführt, eine virtuelle Appliance für softwaredefinierten Speicher, die NetApp ONTAP Select als Service in den dedizierten {{site.data.keyword.baremetal_short}}-Instanzen der IBM Cloud implementiert. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} wird in Konfigurationen für hohe Leistung (alle mit SSD) und hohe Kapazität (alle mit SATA) angeboten.
-Es dient als Host für Ihren Speicher in der dedizierten Infrastruktur und stellt NetApp-Funktionalität wie Deduplizierung, Komprimierung und Verschlüsselung für ruhende Daten bereit. Mithilfe dieses Produktangebots können Sie Speicherressourcen dynamisch und flexibel bereitstellen und gleichzeitig Ihre Daten durch die Verwendung von intelligenten Datenmanagementfunktionen wie den schnellen und effizienten NetApp Snapshot®-Kopien, FlexClone®-Kopien und SnapMirror®-Replikation schützen.
+Dieses Angebot dient als Host für Ihren Speicher in der dedizierten Infrastruktur und stellt NetApp-Funktionalität wie Deduplizierung, Komprimierung und Verschlüsselung für ruhende Daten bereit. Stellen Sie Speicherressourcen dynamisch und flexibel bereit und schützen Sie gleichzeitig Ihre Daten durch die Verwendung von intelligenten Datenmanagementfunktionen. Verwenden Sie beispielsweise die schnellen und effizienten NetApp Snapshot®-Kopien, FlexClone®-Kopien und die SnapMirror®-Replikation.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Übersicht über NetApp ONTAP Select](../netapp/np_netappoverview.html)
@@ -32,7 +32,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 ## Service "F5 on IBM Cloud"
 
 Der Service "F5 BI-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}}" ist jetzt für VMware Cloud Foundation- und für VMware vCenter Server-Instanzen verfügbar. Dieser stellt lokal und global einsetzbare intelligente Services für den L4-L7-Lastausgleich, einen stabilen Firewallschutz für Netze und Webanwendungen sowie einen sicheren und eingebundenen Anwendungszugriff zur Verfügung.
-Sie können Instanzen bestellen, die den Service "F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}}" enthalten, oder diesen Service später Ihren vorhandenen Instanzen über die Registerkarte **Services** auf der Detailseite mit den Instanzeigenschaften in der {{site.data.keyword.vmwaresolutions_short}}-Konsole hinzufügen. Je nach Bedarf stehen Ihnen drei Lizenzierungsoptionen für BIG-IP VE zur Auswahl.
+Bestellen Sie Instanzen, die den Service "F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}}" enthalten, oder fügen Sie diesen Service später Ihren vorhandenen Instanzen über die Registerkarte **Services** auf der Detailseite mit den Instanzeigenschaften in der {{site.data.keyword.vmwaresolutions_short}}-Konsole hinzu. Sie können je nach Bedarf eine der drei Lizenzierungsoptionen für BIG-IP VE auswählen.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Hinweise zu F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)
@@ -42,7 +42,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 Für VMware Cloud Foundation-Instanzen sind jetzt verwaltete Services aus IBM Integrated Managed Infrastructure (IMI) verfügbar. IMI kann das Management der virtuellen VMware-Infrastruktur durch modulare Services vereinfachen und als einziger anerkannter Provider eingesetzt werden, um die Überwachung und das Management der virtuellen IT-Infrastrukturen zu vereinfachen. Sie können bestimmte Routineoperationen wie beispielsweise die Überwachung in IMI auslagern und sich hierdurch auf wichtigere Initiativen konzentrieren.
 
-Auf der Seite **Einführung** können Sie jederzeit ein Beratungsgespräch und ein Angebot anfordern.
+Auf der Seite **Einführung** können Sie jederzeit ein Beratungsgespräch und eine Schätzung anfordern.
 Weitere Informationen finden Sie unter [Verwaltete Services von IMI anfordern](../services/managing_imi.html#requesting-managed-services-from-imi).
 
 ## Einschränkungen bei Namen für vCenter Server- und NetApp ONTAP Select-Instanzen
@@ -77,7 +77,7 @@ Weitere Informationen finden Sie im Abschnitt [Auswirkungen bei Änderungen für
 
 ### Zusätzliche RAM-Größen
 
-Beim Bestellen von vCenter Server-Instanzen oder beim Hinzufügen von Clustern für vCenter Server-Instanzen können Sie nun unter mehr RAM-Größen wählen, damit das Verhältnis von CPU zu RAM der Workload besser auf die Hardware abgestimmt ist. Die folgenden Optionen sind bei der Konfigurationsoption **Angepasst** verfügbar, wenn Sie einen Server in der {{site.data.keyword.vmwaresolutions_short}}-Konsole bestellen: 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB und 1,5 TB.
+Wenn Sie vCenter Server-Instanzen bestellen oder Cluster für vCenter Server-Instanzen hinzufügen, können Sie nun unter mehr RAM-Größen wählen, damit das Verhältnis von CPU zu RAM der Workload besser auf die Hardware abgestimmt ist. Die folgenden Optionen sind bei der Konfigurationsoption **Angepasst** verfügbar, wenn Sie einen Server in der {{site.data.keyword.vmwaresolutions_short}}-Konsole bestellen: 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB und 1,5 TB.
 
 Weitere Informationen finden Sie unter [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html).
 
@@ -97,9 +97,9 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 ## Voraussetzungen für die automatische Installation von Updates für Windows Server
 
-Microsoft Active Directory (AD) bzw. der Domänennamensserver (DNS) wird automatisch für das Herunterladen von Updates konfiguriert. Bei diesen Updates erfolgen Installation und Warmstart nicht automatisch. Sie müssen die Updates manuell installieren und den Warmstart zu einem geplanten Zeitpunkt ausführen, zu dem Unterbrechungen der laufenden Active Directory Server-Konfiguration und anderen Sicherungsjobs vermieden werden. Um Windows-Updates anzuwenden, installieren Sie die Updates manuell.
+Microsoft Active Directory (AD) bzw. der Domänennamensserver (DNS) wird automatisch ausschließlich für das Herunterladen der Updates konfiguriert. Bei diesen Updates erfolgen Installation und Neustart nicht automatisch. Sie müssen die Updates manuell installieren und den Neustart zu einem geplanten Zeitpunkt ausführen, zu dem Unterbrechungen der laufenden Active Directory Server-Konfiguration und anderen Sicherungsjobs vermieden werden. Um Windows-Updates anzuwenden, installieren Sie die Updates manuell.
 
 ## Neue und aktualisierte Dokumentation
 
-* Sie können sich darüber informieren, wie Sie Ihre privaten VCF-Instanzen mit mehreren Standorten schützen, während Sie Ihre VMware-Anwendungen auf die Verwendung von öffentlichen {{site.data.keyword.cloud_notm}}-Services erweitern. Weitere Informationen finden Sie auf der Seite [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}.
-* Für die Konfiguration von Firewalls, die die gesamte Protokollkommunikation aus den virtuellen Maschinen für IBM CloudDriver und SDDC Manager zulassen, wird zusätzliche Dokumentation bereitgestellt. Weitere Informationen enthält der Abschnitt [Komponenten und Hinweise für Fortinet on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html).
+* Sie können sich darüber informieren, wie Sie Ihre privaten Cloud Foundation-Instanzen mit mehreren Standorten schützen, während Sie Ihre VMware-Anwendungen auf die Verwendung von öffentlichen {{site.data.keyword.cloud_notm}}-Services erweitern. Weitere Informationen finden Sie auf der Seite [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}.
+* Für die Konfiguration von Firewalls, die die gesamte Protokollkommunikation aus den virtuellen Maschinen für IBM CloudDriver und SDDC Manager zulassen, wird weitere Dokumentation bereitgestellt. Weitere Informationen enthält der Abschnitt [Komponenten und Hinweise für Fortinet on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html).
