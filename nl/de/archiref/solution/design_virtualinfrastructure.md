@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -75,7 +75,7 @@ Die verfügbaren vSAN-Features hängen von der Lizenzedition ab, die Sie bei der
 
 ### Einrichtung des virtuellen Netzes für vSAN
 
-Bei diesem Design fließt der vSAN-Datenverkehr zwischen ESXi-Hosts über ein dediziertes privates VLAN. Die beiden Netzadapter, die mit dem privaten Netzswitch verbunden sind, werden in vSphere als vSphere Distributed Switch (VDS) mit beiden Netzadaptern als Uplinks konfiguriert. Eine dedizierte vSAN-Kernelportgruppe, die für das vSAN-VLAN konfiguriert ist, befindet sich in dem VDS. Jumbo-Frames (MTU 9000) werden für den privaten VDS aktiviert.
+Bei diesem Design fließt der vSAN-Datenverkehr zwischen ESXi-Hosts über ein dediziertes privates VLAN. Die beiden Netzadapter, die mit dem Switch des privaten Netzes verbunden sind, werden in vSphere als vSphere Distributed Switch (vDS) mit beiden Netzadaptern als Uplinks konfiguriert. Eine dedizierte vSAN-Kernelportgruppe, die für das vSAN-VLAN konfiguriert ist, befindet sich in dem vDS. Jumbo-Frames (MTU 9000) werden für den privaten vDS aktiviert.
 
 vSAN führt keinen Lastausgleich für den Datenverkehr zwischen Uplinks aus. Daher ist ein Adapter aktiv, während der andere im Standby-Modus ist, um hohe Verfügbarkeit (HA) zu unterstützen. Die Netzrichtlinie für die Funktionsübernahme (Failover) für vSAN ist als explizites Failover (**Explicit Failover**) zwischen physischen Netzports konfiguriert.
 
@@ -100,15 +100,15 @@ Speicherrichtlinien müssen nach dem Hinzufügen neuer ESXi-Hosts oder nach der 
 vSAN-Einstellungen werden nach bewährten Verfahren für die Bereitstellung von VMware-Lösungen in {{site.data.keyword.cloud_notm}} festgelegt. Zu den VSAN-Einstellungen gehören SIOC-Einstellungen, Einstellungen für die Portgruppe für explizites Failover und Plattencacheeinstellungen.
 * SSD-Cacherichtlinieneinstellungen: Kein **Read Ahead** (Vorauslesen), **Write Through**, **Direct** (NRWTD)
 * Einstellungen der E/A-Netzsteuerung
-   * Management: 20 Freigaben
-   * Virtuelle Maschine: 30 Freigaben
-   * vMotion: 50 Freigaben
-   * vSAN: 100 Freigaben
+   * Management: 20 gemeinsam genutzte Ressourcen
+   * Virtuelle Maschine: 30 gemeinsam genutzte Ressourcen
+   * vMotion: 50 gemeinsam genutzte Ressourcen
+   * vSAN: 100 gemeinsam genutzte Ressourcen
 * vSAN-Kernelports: **Explicit Failover**
 
 ## VMware NSX-Design
 
-Die Netzvirtualisierung stellt ein Netzoverlay zur Verfügung, das in der virtuellen Schicht vorhanden ist. Die Netzvirtualisierung stattet die Architektur mit Funktionen wie schnelle Einrichtung, Bereitstellung, Rekonfiguration und Löschung von virtuellen On-Demand-Netzen aus. In diesem Design wird der vSphere Distributed Switch (VDS) und VMware NSX for vSphere zur Implementierung eines virtuellen Netzes verwendet.
+Die Netzvirtualisierung stellt ein Netzoverlay zur Verfügung, das in der virtuellen Schicht vorhanden ist. Die Netzvirtualisierung stattet die Architektur mit Funktionen wie schnelle Einrichtung, Bereitstellung, Rekonfiguration und Löschung von virtuellen On-Demand-Netzen aus. In diesem Design wird der vDS und VMware NSX for vSphere zur Implementierung eines virtuellen Netzes verwendet.
 
 In diesem Design wird der NSX-Manager im ersten Cluster bereitgestellt. Dem NSX-Manager wird eine VLAN-gestützte IP-Adresse aus dem privaten, portierbaren Adressblock zugeordnet, der für Managementkomponenten vorgesehen ist und der mit den unter [Design der allgemeinen Services](design_commonservice.html) behandelten DNS- und NTP-Servern konfiguriert wird. Der NSX-Manager wird mit den in Tabelle 2 aufgeführten Spezifikationen installiert.
 
@@ -119,7 +119,7 @@ Tabelle 2. NSX-Manager-Attribute
 | NSX-Manager     | Virtual Appliance |
 | Anzahl vCPUs | 4 |
 | Speicher          | 16 GB |
-| Plattenspeicher            | 60 GB auf der Management-NFS-Freigabe |
+| Plattenspeicher            | 60 GB in der gemeinsam genutzten Management-NFS-Ressource |
 | Plattentyp       | Thin-Provisioning |
 | Netz         | Privat A, portierbar, für Managementkomponenten vorgesehen |
 
@@ -131,7 +131,7 @@ Abbildung 2. Übersicht über das NSX-Manager-Netz
 
 Nach der Erstbereitstellung stellt die {{site.data.keyword.cloud_notm}}-Automatisierung drei NSX-Controller im ersten Cluster bereit. Jedem der Controller wird eine VLAN-gestützte IP-Adresse aus dem portierbaren Teilnetz "Privat A" zugeordnet, das für Managementkomponenten vorgesehen ist. Ferner werden in dem Design VM-VM-Anti-Affinitätsregeln erstellt, um die Controller unter den Hosts im Cluster zu separieren. Der erste Cluster muss mindestens drei Knoten enthalten, um hohe Verfügbarkeit für die Controller sicherzustellen.
 
-Neben den Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisierung die bereitgestellten vSphere-Hosts mit NSX-VIBs vor, um die Verwendung eines virtualisierten Netzes durch VXLAN-Tunnelendpunkte (VTEPs) einzurichten. Den VTEPs wird eine VLAN-gestützte IP-Adresse aus dem portierbaren IP-Adressbereich von "Privat A" zugeordnet, der für VTEPs angegeben ist, wie in *Tabelle 1. VLAN- und Teilnetzzusammenfassung* für das [Design der physischen Infrastruktur](design_physicalinfrastructure.html) aufgeführt. Der VXLAN-Datenverkehr befindet sich im nicht mit Tags versehenen VLAN und wird dem privaten vSphere Distributed Switch (VDS) zugewiesen.
+Neben den Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisierung die bereitgestellten vSphere-Hosts mit NSX-VIBs vor, um die Verwendung eines virtualisierten Netzes durch VXLAN-Tunnelendpunkte (VTEPs) einzurichten. Den VTEPs wird eine VLAN-gestützte IP-Adresse aus dem portierbaren IP-Adressbereich von "Privat A" zugeordnet, der für VTEPs angegeben ist, wie in *Tabelle 1. VLAN- und Teilnetzzusammenfassung* für das [Design der physischen Infrastruktur](design_physicalinfrastructure.html) aufgeführt. Der VXLAN-Datenverkehr befindet sich im nicht mit Tags versehenen VLAN und wird dem privaten vDS zugewiesen.
 
 Anschließend wird ein Segment-ID-Pool zugeordnet und die Hosts in dem Cluster werden der Transportzone hinzugefügt. In der Transportzone wird nur Unicast verwendet, da die IGMP-Netzüberwachung (IGMP - Internet Group Management Protocol) in der {{site.data.keyword.cloud_notm}} nicht konfiguriert ist.
 
@@ -141,13 +141,13 @@ Cloudadministratoren können alle erforderlichen NSX-Komponenten wie Distributed
 
 ### Design verteilter Switches
 
-In dem Design wird eine minimale Anzahl von vSphere Distributed Switches (VDS) verwendet. Die Hosts im Cluster werden mit den öffentlichen und privaten Netzen verbunden. Die Hosts werden mit zwei verteilten virtuellen Switches konfiguriert. Die Verwendung von zwei Switches basiert auf der Praxis im {{site.data.keyword.cloud_notm}}-Netz, dass öffentliche und private Netze getrennt werden. Das folgende Diagramm zeigt das VDS-Design.
+In dem Design wird eine minimale Anzahl von vDS-Switches verwendet. Die Hosts im Cluster werden mit den öffentlichen und privaten Netzen verbunden. Die Hosts werden mit zwei verteilten virtuellen Switches konfiguriert. Die Verwendung von zwei Switches basiert auf der Praxis im {{site.data.keyword.cloud_notm}}-Netz, dass öffentliche und private Netze getrennt werden. Das folgende Diagramm zeigt das vDS-Design.
 
 Abbildung 3. Design verteilter Switches
 
-![Design verteilter Switches](virtual_network_distributedswitch.svg "VDS-Design")
+![Design mit verteilten Switches](virtual_network_distributedswitch.svg "vDS-Design")
 
-Wie in der Abbildung gezeigt, wird der eine verteilte virtuelle Switch (VDS - Virtual Distributed Switch) für die öffentliche Netzkonnektivität (SDDC-Dswitch-Public) und der andere VDS für die private Netzkonnektivität (SDDC-Dswitch-Private) konfiguriert.
+Wie in der Abbildung gezeigt, wird der eine vDS für die öffentliche Netzkonnektivität (SDDC-Dswitch-Public) und der andere vDS für die private Netzkonnektivität (SDDC-Dswitch-Private) konfiguriert.
 
 Die Trennung verschiedener Typen von Datenverkehr ist erforderlich, um Konkurrenzsituationen und Latenzzeiten zu verringern und die Sicherheit zu erhöhen. VLANs werden zur Segmentierung physischer Netzfunktionen verwendet.
 

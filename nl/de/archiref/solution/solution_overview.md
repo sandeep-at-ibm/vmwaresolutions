@@ -34,7 +34,7 @@ Nach der Bereitstellung können Sie ESXi-Hostknoten hinzufügen und die Sicherun
 Die VMware on {{site.data.keyword.cloud_notm}}-Angebote bieten die folgenden Vorteile:
 
 * **Beschleunigte Lieferung** von IT-Projekten für Entwickler und Geschäftsbereiche durch Verringerung des Zeitaufwands für Beschaffung, Architektur, Implementierung und Bereitstellung von Ressourcen von Wochen oder Monaten auf Stunden.
-* **Verbesserte Sicherheit** mit dedizierten Bare-Metal-Servers in einer gehosteten privaten Cloud, einschließlich Verschlüsselung ruhender Daten.
+* **Verbesserte Sicherheit** mit dedizierten Bare Metal Servern in einer gehosteten privaten Cloud, einschließlich Verschlüsselung ruhender Daten.
 * **Konsistente Management- und Governancefunktionalität** der bereitgestellten Hybrid-Cloud durch Bereitstellung eines vollständigen Verwaltungszugriffs auf das Virtualisierungsmanagement, sodass vorhandene VMware-Tools, Scripts und Investitionen in Schulungen ihren Wert behalten.
 * **Globale Nutzung von VMware-Know-how** mit IBM Professional Services und IBM Managed Services, die weltweit mehr als 30 {{site.data.keyword.CloudDataCents_notm}} umfassen.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -22,7 +22,7 @@ Standardmäßig wird eine einzelne Active Directory-VSI (VSI - Virtual Server In
 
 **Hinweis:** Wenn Sie diese Option wählen, sind Sie für die Microsoft-Lizenzierung und -Aktivierung verantwortlich.
 
-Active Directory dient nur zur Authentifizierung von Zugriffen für die Verwaltung der VMware-Instanz und nicht zur Speicherung von Endbenutzern der Workloads in bereitgestellten Instanzen. Der Gesamtstrukturrootname des Active Directory Servers stimmt mit dem DNS-Domänennamen überein, den Sie angeben. Dieser Domänenname wird nur für die primäre Cloud Foundation- und vCenter Server-Instanz angegeben, wenn mehrere Instanzen verknüpft sind. Bei verknüpften Instanzen enthält jede Instanz einen Active Directory Server, der sich im Rootreplikatring der Gesamtstruktur befindet. Die DNS-Zonendateien werden ebenfalls auf die Active Directory Server repliziert.
+Active Directory dient nur zur Authentifizierung von Zugriffen für die Verwaltung der VMware-Instanz und nicht zur Speicherung von Endbenutzern der Workloads in bereitgestellten Instanzen. Der Gesamtstrukturrootname des Active Directory-Servers stimmt mit dem DNS-Domänennamen überein, den Sie angeben. Dieser Domänenname wird nur für die primäre Cloud Foundation- und vCenter Server-Instanz angegeben, wenn mehrere Instanzen verknüpft sind. Bei verknüpften Instanzen enthält jede Instanz einen Active Directory Server, der sich im Rootreplikatring der Gesamtstruktur befindet. Die DNS-Zonendateien werden ebenfalls auf die Active Directory Server repliziert.
 
 ### vSphere-SSO-Domäne
 
@@ -59,7 +59,7 @@ In diesem Design werden DNS-Services auf den Active Directory-Servern mit der SD
 * Der von Ihnen angegebene DNS-Domänenname wird als Rootdomänenname der Active Directory-Gesamtstruktur verwendet. Wenn der DNS-Domänenname zum Beispiel `cloud.ibm.com` lautet, ist der Rootname der Active Directory-Gesamtstruktur `cloud.ibm.com`. Diese DNS-Domäne und diese Active Directory-Domäne ist über alle verknüpften Cloud Foundation-Instanzen hinweg identisch.
 * Sie können zusätzlich einen Unterdomänennamen für die Instanz angeben. Der Unterdomänenname muss unter allen verknüpften Cloud Foundation-Instanzen eindeutig sein.  
 * Die DNS-Konfiguration für SDDC Manager wird so geändert, dass sie auf die Active Directory-Server für alle Zonen mit Ausnahme der Zone verweist, für die sie verantwortlich ist.
-* Die DNS-Server für Active Directory werden so konfiguriert, dass sie für den DNS-Domänenbereich über der Unterdomäne für SDDC Manager und die Cloud Foundation-Instanz maßgeblich sind.
+* Die DNS-Server für Active Directory werden so konfiguriert, dass sie für den DNS-Domänenbereich über der Unterdomäne für die SDDC Manager und die Cloud Foundation-Instanz maßgeblich sind.
 * Die DNS-Server für Active Directory werden so konfiguriert, dass sie auf die IP-Adresse von SDDC Manager für die Unterdomänendelegierung der Zone verweisen, für die SDDC Manager maßgeblich ist.
 * Die DNS-Server für Active Directory werden so konfiguriert, dass sie auf die {{site.data.keyword.cloud_notm}}-DNS-Server für alle anderen Zonen verweisen.
 * Jede sekundäre Instanz, die in die erste oder Zielinstanz integriert werden soll, muss dieselbe DNS-Namensstruktur über der SDDC Manager-Unterdomäne verwenden.
