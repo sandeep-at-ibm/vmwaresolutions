@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-08"
 
 {{site.data.keyword.vmwaresolutions_full}}에 대해 예약된 사용자, 리소스 또는 서브넷을 변경하면 VMware Cloud Foundation 인스턴스의 관리 오퍼레이션에 영향을 줄 수 있습니다.
 
-**중요:** VMware vSphere Web Client의 **사용자 및 그룹** 페이지에서 **ic4v-vCenter** 그룹의 글로벌 권한을 편집하지 마십시오. 이러한 변경에는 사용자 이름 변경, 사용자 삭제 또는 해당 비밀번호 변경이 포함됩니다.
+**중요:** VMware vSphere Web Client의 **사용자 및 그룹** 페이지에서 **ic4v-vCenter** 그룹의 글로벌 권한을 변경하지 마십시오. 글로벌 권한 변경에는 사용자 이름 변경, 사용자 삭제 또는 해당 비밀번호 변경이 포함됩니다.
 
 ## 서비스 고유 사용자 계정
 
@@ -54,7 +54,7 @@ lastupdated: "2018-08-08"
 
 *  첫 번째 VLAN에서 64개 IP 주소의 두 가지 포터블 사설 서브넷(하나는 관리용, 다른 하나는 VTEPS용)
 *  두 번째 VLAN에서 64개 IP 주소의 두 가지 포터블 사설 서브넷(하나는 vMotion용, 다른 하나는 vSAN용)
-*  공인 VLAN에서 16개 IP 주소의 공인 포터블 서브넷
+*  공용 VLAN에서 16개 IP 주소의 공인 포터블 서브넷
 
 사용할 추가 서브넷이 필요한 경우 다음 방법 중 하나로 사용할 IP 주소를 얻을 수 있습니다.
 

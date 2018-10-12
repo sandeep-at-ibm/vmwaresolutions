@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -37,7 +37,7 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 ESXi 서버 기능의 추가 및 제거를 사용하여 인스턴스의 기능을 확장하고 축소할 수 있습니다. 또한 호스팅된 환경에서 VMware 컴포넌트의 업데이트 및 업그레이드 적용과 같이 라이프사이클 관리 기능도 사용할 수 있습니다.
 
-아키텍처에 대한 세부사항은 [솔루션 개요](../archiref/solution/solution_overview.html)를 참조하십시오.
+아키텍처에 대한 자세한 정보는 [솔루션 개요](../archiref/solution/solution_overview.html)를 참조하십시오.
 
 ## Cloud Foundation 인스턴스의 기술 스펙
 
@@ -60,17 +60,18 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 
 다음 네트워킹 컴포넌트가 주문됩니다.
 * 10Gbps 듀얼 공용 및 사설 네트워크 업링크
-* 세 개의 VLAN(Virtual LANs): 한 개의 공인 VLAN 및 두 개의 사설 VLAN
+* 세 개의 VLAN(Virtual LANs): 한 개의 공용 VLAN 및 두 개의 사설 VLAN
 * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 자세한 정보는 [관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
   **중요**: 이 ESG에 액세스할 수 없고 ESG를 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 Cloud Foundation 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
+
 
 * 현재 VMware vSphere 버전에서 지원하는 ESXi 서버를 포함하는 기존 클러스터가 있는 경우에는 EVC(Enhanced vMotion Compatibility) 기능이 자동으로 사용 설정됩니다. EVC는 클러스터 내의 모든 ESXi 서버가 가상 머신에 동일한 CPU 사양 세트를 노출하도록 함으로써 클러스터 내의 모든 ESXi 서버에 vMotion 호환성을 제공합니다. EVC를 사용하면 ESXi 서버 간에 실제 CPU가 서로 다르더라도 가상 머신이 클러스터 내 임의의 ESXi 서버로 마이그레이션할 수 있습니다.
 
 ### Virtual Server 인스턴스
 
 다음 VSI(Virtual Server Instances)가 주문됩니다.
-* 다중 사이트 구성 지원에 필요한 Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스용 VSI. 이 VSI 스펙은 Windows 2012 R2(8GB RAM / 두 개의 CPU 코어 / 100GB 디스크 / 듀얼 1Gbps 사설 업링크)입니다.
+* Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스용 VSI. VSI는 다중 사이트 구성 지원에 필요합니다. 이 VSI 스펙은 Windows 2012 R2(8GB RAM / 두 개의 CPU 코어 / 100GB 디스크 / 듀얼 1Gbps 사설 업링크)입니다.
 * 인스턴스 배치가 완료된 후 시스템이 종료되는 IBM CloudBuilder용 VSI
 * (Veeam on {{site.data.keyword.cloud_notm}}가 주문된 경우) Veeam 백업 서비스용 VSI가 주문됨
 
@@ -78,9 +79,9 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 
 선택한 {{site.data.keyword.baremetal_short}} 구성에 따라 다음 스토리지가 주문됩니다.
 * 두 개의 1-TB SATA 부트 디스크
-* 두 개의 960-GB SSD(Solid State Disk) 캐시 디스크
+* 두 개의 960-GB SSD(Solid-State Disk) 캐시 디스크
 * 한 개의 RAID 디스크 제어기
-* **사용자 정의됨** 구성의 경우에만: 사용자의 요구사항에 따라 디스크 드라이브의 수, 디스크 유형 및 용량을 설정할 수 있음
+* **사용자 정의됨** 구성의 경우에만: 사용자의 요구사항에 따라 디스크 드라이브의 수, 디스크 유형 및 용량을 설정할 수 있습니다. 또한 고성능 Intel Optane 옵션은 총 10개의 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공합니다. 고성능 Intel Optane 옵션은 CPU 모델에 따라 다릅니다.
 * **사전 구성됨**, **소형** 구성의 경우에만: 두 개의 1.9TB SSD 용량 디스크
 * **사전 구성됨**, **대형** 구성의 경우에만: 네 개의 3.8TB SSD 용량 디스크
 
