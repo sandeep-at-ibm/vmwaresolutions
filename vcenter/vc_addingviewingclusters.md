@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-16"
 
 ---
 
@@ -20,7 +20,7 @@ You can add your own clusters to VMware vCenter Server instances to expand the c
 
 The number of clusters that can be added to an instance depend on the instance version:
 * For instances that were deployed in (or upgraded to) V2.2 and later, you can add up to 10 clusters.
-* For instances that were deployed in V2.2 or earlier, you can add up to five clusters.
+* For instances that were deployed in V2.1 or earlier, you can add up to five clusters.
 
 ### System settings
 
