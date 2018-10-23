@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-23"
 
 ---
 
@@ -18,10 +18,10 @@ When VUM requests a resource from the update server at VMware, the request is se
 
 This document describes the use of a proxy server based on CentOS and Squid. Squid Proxy is an open source caching proxy for the web and supports many protocols including HTTP and HTTPS. There are a number of VM and appliance-based proxies that are available, and you should select the appropriate one based on your enterprise’s requirements and install and configure following the vendor’s guidance. Clients electing to use a CentOS/Squid implementation should continue with the process below.
 
-*	Download the CentOS ISO to a jump server
-*	Create a vCenter Library
-*	Upload the ISO to the vCenter Library
-*	Create a VM, install, and configure CentOS and install Squid
+* Download the CentOS ISO to a jump server
+* Create a vCenter Library
+* Upload the ISO to the vCenter Library
+* Create a VM, install, and configure CentOS and install Squid
 
 Before you can start this task, you need to collect information to populate Table 1. Review the suggested values and ensure that they are appropriate for your enterprise. This configuration is based on a small proxy for VUM only that uses CentOS-Minimal and Squid.
 
@@ -31,13 +31,13 @@ Table 1. Deployment values
 |:--------- |:-------------- |:------ |
 | Proxy CPU | 1 vCPU | Squid has no minimum requirements |
 | Proxy RAM | 2 GB | Squid has no minimum requirements |
-| Proxy Disk |	25 | GB	Squid has no minimum requirements |
+| Proxy Disk | 25 | GB	Squid has no minimum requirements |
 | Hostname | Proxy01 | |
-| Address |	proxy ip |	A spare IP address should be used from the Customer, private portable subnet assigned during the provisioning process. Only two IP addresses would have been reserved on this subnet; one for the BCR and the other for the customer-esg
-| Netmask |	255.255.255.192 | |
-| Gateway| 	customer-nsx-edge private uplink ip |	This is the default gateway setting for the proxy server, which is the customer-nsx -edge private uplink address. The IP can be found by review the Settings tab for the customer-nsx-edge |
-| DNS Server |	AD/DNS ip | This IP address can be found on the Instance page in the [IC4VS Cloud Console](https://console.bluemix.net/infrastructure/vmware-solutions/console/vcenters/), Deployed Instances; |
-| BCR IP |	bcr ip | This is the IP address of the IBM Cloud Backend Customer Router and is the gateway for 10.0.0.0/8 and 161.26.0.0/16. This address is used in a static route in the proxy server so that it can reach the VCSA and the AD/DNS server |
+| Address | proxy ip | A spare IP address should be used from the Customer, private portable subnet assigned during the provisioning process. Only two IP addresses would have been reserved on this subnet; one for the BCR and the other for the customer-esg
+| Netmask | 255.255.255.192 | |
+| Gateway| customer-nsx-edge private uplink ip | This is the default gateway setting for the proxy server, which is the private uplink IP address of customer-nsx-edge. The IP address can be found by reviewing the **Settings** tab for **customer-nsx-edge**. |
+| DNS Server | AD/DNS ip | This IP address can be found on the instance page in the IBM Cloud for VMware Solutions console, the **Deployed Instances** page. |
+| BCR IP | bcr ip | This is the IP address of the IBM Cloud Backend Customer Router and is the gateway for 10.0.0.0/8 and 161.26.0.0/16. This address is used in a static route in the proxy server so that it can reach the VCSA and the AD/DNS server. |
 
 ## Configuring NSX
 

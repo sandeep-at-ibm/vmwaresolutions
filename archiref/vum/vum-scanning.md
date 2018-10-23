@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-22"
 
 ---
 
@@ -16,16 +16,15 @@ When you scan hosts, virtual machines, and virtual appliances, you evaluate them
 *	**Manually Initiate a Scan of a Container Object** - Start a simultaneous scan of hosts, virtual machines, and virtual appliances, by scanning a container object that is a data center or a data center folder.
 *	**Schedule a Scan** - You can configure the vSphere Web Client to scan virtual machines, virtual appliances, and ESXi hosts at specific times or at intervals that are convenient for you.
 
-##	Manually initiating a acan of vSphere ESXi hosts
+## Manually initiating a scan of vSphere ESXi hosts
 
-1.	Click **Scan for Updates** button and select **Patches and Extensions and Upgrades**, then click **OK**.
-2.	When the scan completes, select **Critical Host Patches** and in the lower pain review for each host
-3.	By clicking the number in the Number of Patches, a Window shows the patch detail.
-4.	Review and repeat for **Non-Critical Patches**.
+1. Click **Scan for Updates**, select **Patches and Extensions and Upgrades**, then click **OK**.
+2. When the scan completes, select **Critical Host Patches**. In the lower pane, review the patch details for each host by clicking the number in **Number of Patches**. A window shows the patch information.
+3. Review and repeat for **Non-Critical Patches**.
 
-Note that VUM log files can be located at _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
+  The VUM log files are located at _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
-##	Manually initiating a scan of virtual machines and virtual appliances
+## Manually initiating a scan of virtual machines and virtual appliances
 
 You can scan virtual machines and virtual appliances in the vSphere inventory against attached baselines and baseline groups. The virtual machines and appliances that you select are scanned against the attached baselines, depending on the options that you select. All child objects are also scanned, so the larger the virtual infrastructure and the higher up in the object hierarchy that you initiate the scan, the longer the scan takes and the more accurate the compliance view is.
 
