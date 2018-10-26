@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -45,7 +45,7 @@ Cloud Foundation インスタンスには 5 つまでクラスターを配置で
 * VMware vSphere Web クライアントから ESXi サーバーの削除を行わないでください。 VMware vSphere Web クライアントで加えた変更は、{{site.data.keyword.vmwaresolutions_short}} コンソールと同期されません。
 * 注文した基本プラットフォームには、デフォルトで 4 台の ESXi サーバーがあります。 追加した ESXi サーバーを削除できます。 デフォルトの ESXi サーバーは削除できません。
 * F5 on {{site.data.keyword.cloud_notm}} サービスまたは FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスがインストールされている ESXi サーバーの場合は、そのサーバーを削除する前に、F5 BIG-IP と FortiGate の VM を、VM をホスティングしている ESXi サーバーとは別のサーバーにマイグレーションする必要があります。
-* IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスがインストールされている ESXi サーバーを削除する前に、アクティブなバックアップ操作またはリストア操作がないことを確認してください。アクティブな操作 (失敗または進行中) があると、ESXi サーバーが削除されない可能性があります。
+* IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスがインストールされている ESXi サーバーを削除する前に、アクティブなバックアップ操作またはリストア操作がないことを確認してください。 アクティブな操作 (失敗または進行中) があると、ESXi サーバーが削除されない可能性があります。
 
 ## ESXi サーバーを削除する手順
 
@@ -61,7 +61,7 @@ Cloud Foundation インスタンスには 5 つまでクラスターを配置で
 2. ESXi サーバーが削除されるときには、E メールで通知されます。
 3. {{site.data.keyword.cloud_notm}} の請求サイクル (通常 30 日) の最後に、{{site.data.keyword.cloud_notm}} インフラストラクチャーによって ESXi サーバーに全面的な再利用処理が施されます。
 
-   **注意**: 削除対象の ESXi サーバーに関する請求は、{{site.data.keyword.cloud_notm}} 請求処理サイクルの終わりまで行われます。
+   **注意:** 削除対象の ESXi サーバーに関する請求は、{{site.data.keyword.cloud_notm}} 請求処理サイクルの終わりまで行われます。
 
 ### 関連リンク
 
