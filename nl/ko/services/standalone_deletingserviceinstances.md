@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-19"
 
 [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 삭제 시 고려사항](../services/standalone_considerations.html)의 모든 고려사항을 검토했는지 확인하십시오.
 
-## 프로시저
+## 온프레미스 VMware HCX on IBM Cloud 인스턴스를 삭제하는 프로시저
 
 1. 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **온프레미스 HCX 인스턴스** 테이블로 스크롤하여 삭제할 인스턴스를 찾으십시오.

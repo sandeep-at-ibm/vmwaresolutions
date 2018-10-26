@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-18"
+lastupdated: "2018-09-26"
 
 ---
 
 # HyTrust DataControl on IBM Cloud 개요
 
-HyTrust DataControl on {{site.data.keyword.cloud}}는 워크로드를 해당 라이프사이클 동안 보호하기 위해 통합된 키 관리 기능을 포함한 강력한 암호화를 제공합니다. 이 서비스는 운영 체제 레벨 및 데이터 레벨 모두에서 암호화를 제공할 수 있으며, 이는 워크로드 내의 모든 디렉토리, 폴더 및 파일이 암호화되거나 복호화될 수 있음을 의미합니다.
+HyTrust DataControl on {{site.data.keyword.cloud}}는 워크로드를 해당 라이프사이클 동안 보호하기 위해 통합된 키 관리 기능을 포함한 강력한 암호화를 제공합니다. 이 서비스는 운영 체제 레벨 및 데이터 레벨 모두에서 암호화를 제공합니다. 이를 통해 워크로드 내의 모든 디렉토리, 폴더 또는 파일이 암호화되거나 복호화될 수 있습니다.
 
-**가용성:** 이 서비스는 vSphere 6.5를 실행하며 V2.3 이상 릴리스로 배치된(또는 이 릴리스로 업그레이드된) 인스턴스에서만 사용할 수 있습니다.
+**가용성:** 이 서비스는 vSphere 6.5를 실행 중이며 V2.3 이상 릴리스에 배치되거나 업그레이드된 인스턴스에서만 사용할 수 있습니다.
 
 ## HyTrust DataControl on IBM Cloud의 기술 스펙
 
@@ -33,7 +33,7 @@ HyTrust DataControl on {{site.data.keyword.cloud}}는 워크로드를 해당 라
 
 ## HyTrust DataControl on IBM Cloud 제거 시 고려사항
 
-HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 DataControl 사용에서 모든 클라이언트를 분리했는지 확인하십시오. 서비스를 제거하면 키가 삭제될 수 있으며 VM에 액세스하지 못하게 될 수 있습니다.
+HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 DataControl 사용에서 모든 클라이언트를 분리하십시오. 서비스를 제거하면 키가 삭제될 수 있으며 VM에 액세스하지 못하게 될 수 있습니다.
 
 ### 관련 링크
 

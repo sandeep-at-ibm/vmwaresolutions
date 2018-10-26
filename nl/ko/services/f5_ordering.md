@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -44,7 +44,7 @@ F5 on {{site.data.keyword.cloud_notm}} 서비스에 대한 라이센스 모델�
         <dd class="dd">**양호** 및 **우수** 오퍼링 외에도 BIG-IP ASM(Application Security Manager™)은 L7 DDoS, OWASP(Open Web Application Security Project) 상위 10개의 위협 및 공통 애플리케이션 취약점에 대한 포괄적인 애플리케이션 보호를 제공합니다. BIG-IP APM(Access Policy Manager™)은 다중 클라우드 환경 내에 있는 애플리케이션에 대한 안전하고 간소화된 액세스, SSO(Single Sign-On) 및 MFA(Multi-Factor Authentication)와 같은 통합 기능을 사용자에게 제공합니다.</dd>
 </dl>
 
-**중요**: 서비스 설치 후 라이센스 모델을 변경할 수 없습니다. 라이센스 모델을 변경하려면 기존 서비스를 제거하고 다른 라이센스 모델을 사용하여 서비스를 다시 설치해야 합니다.
+**중요:** 서비스 설치 후 라이센스 모델을 변경할 수 없습니다. 라이센스 모델을 변경하려면 기존 서비스를 제거하고 다른 라이센스 모델을 사용하여 서비스를 다시 설치해야 합니다.
 
 ### 최대 대역폭
 

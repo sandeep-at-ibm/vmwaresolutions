@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -44,14 +44,14 @@ lastupdated: "2018-08-16"
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}에 대한 라이센스 모델은 다음 옵션을 제공합니다.
 <dl class="dl">
         <dt class="dt dlterm">표준 FW</dt>
-        <dd class="dd">이 번들에는 상태 기반 패킷 검사, VLAN 보호 및 고급 로깅, 유입/유출 방화벽 규칙, SSL/IPSec VPN 종료 및 지속적 지원이 포함됩니다.</dd>
+        <dd class="dd">이 번들에는 상태 기반 패킷 검사, VLAN 보호 및 고급 로깅, 유입 및 유출 방화벽 규칙, SSL/IPSec VPN 종료 및 지속적 지원이 포함됩니다.</dd>
         <dt class="dt dlterm">표준 FW + UTM</dt>
         <dd class="dd">이 번들에는 NGFW IPS 및 웹 필터링, 안티바이러스 및 안티스팸, IP 및 도메인 평판, 코어 FortiCare 보안 서비스 외에도 모든 표준 방화벽 서비스가 포함됩니다.</dd>
         <dt class="dt dlterm">표준 FW + 엔터프라이즈</dt>
         <dd class="dd">이 번들에는 FortiSandbox 클라우드 및 모바일 보안 외에도 모든 표준 방화벽 및 UTM 서비스가 포함됩니다.</dd>
 </dl>
 
-**중요**: 서비스 설치 후 라이센스 모델을 변경할 수 없습니다. 라이센스 모델을 변경하려면 기존 서비스를 제거하고 다른 라이센스 옵션을 선택하여 서비스를 다시 설치해야 합니다.
+**중요:** 서비스 설치 후 라이센스 모델을 변경할 수 없습니다. 라이센스 모델을 변경하려면 기존 서비스를 제거하고 다른 라이센스 옵션을 선택하여 서비스를 다시 설치해야 합니다.
 
 ### 관련 링크
 
