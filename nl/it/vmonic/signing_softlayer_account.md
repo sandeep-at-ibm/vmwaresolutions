@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -18,7 +18,7 @@ Puoi registrarti per un account {{site.data.keyword.cloud}} utilizzando un **ID 
 
 L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), precedentemente noto come account IBM SoftLayer, è utilizzato per accedere al portale del cliente dell'infrastruttura {{site.data.keyword.cloud_notm}} che fornisce alcune funzioni aggiuntive per la gestione di prodotti e servizi dell'infrastruttura. Per registrare un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), aggiorna il tuo account {{site.data.keyword.cloud_notm}} a un tipo di account Pagamento a consumo.
 
-### Procedura
+### Procedura per registrare un account IBM Cloud
 
 1. Accedi alla console {{site.data.keyword.vmwaresolutions_short}} con il tuo **ID IBM**.
 2. Sul lato sinistro del banner, fai clic su **Gestisci > Fatturazione e utilizzo > Fatturazione**.

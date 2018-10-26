@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -33,7 +33,7 @@ Tabella 1. Funzioni supportate per le istanze Cloud Foundation, vCenter Server, 
 | Edizioni della licenza vSAN         | vSAN Advanced o Enterprise  | vSAN Advanced o Enterprise  | vSAN Advanced o Enterprise | vSAN Advanced o Enterprise  |
 | Servizi aggiuntivi               | Supportato, HCX on {{site.data.keyword.cloud_notm}} escluso.  | Supportato, HCX on {{site.data.keyword.cloud_notm}} escluso. Aggiornamento disponibile a vCenter Server with Hybridity Bundle. | Supportato, HCX on {{site.data.keyword.cloud_notm}} incluso. | Non supportato dall'automazione di questa soluzione, ma puoi portare e installare il tuo proprio software. |
 
-**Note**:
+**Note:**
 
 <sup>1</sup> Secondo un progetto convalidato e con verifica durante la distribuzione.
 

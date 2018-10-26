@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -15,7 +15,7 @@ Trova le risposte alle domande frequenti su {{site.data.keyword.vmwaresolutions_
 ## Di quali account utente ho bisogno per IBM Cloud for VMware Solutions?
 
 * **Account ID IBM**. Questo account è richiesto per accedere alla console {{site.data.keyword.vmwaresolutions_short}}. La console è un'interfaccia utente autonoma separata dal {{site.data.keyword.slportal}}. Per ulteriori informazioni, vedi [Introduzione](../index.html).
-* **Account {{site.data.keyword.cloud_notm}}**. Questo account è richiesto per il provisioning. Puoi registrarti per un account {{site.data.keyword.cloud_notm}} utilizzando un **ID IBM** esistente oppure creando un nuovo **ID IBM**. 
+* **Account {{site.data.keyword.cloud_notm}}**. Questo account è richiesto per il provisioning. Puoi registrarti per un account {{site.data.keyword.cloud_notm}} utilizzando un **ID IBM** esistente oppure creando un nuovo **ID IBM**.
 * **Account dell'infrastruttura {{site.data.keyword.cloud_notm}}**. Questo account, precedentemente noto come account **IBM SoftLayer**, è utilizzato per accedere al portale del cliente dell'infrastruttura {{site.data.keyword.cloud_notm}} che fornisce alcune funzioni aggiuntive per la gestione di prodotti e servizi dell'infrastruttura. Puoi ottenere un account dell'infrastruttura {{site.data.keyword.cloud_notm}} aggiornando il tuo **account {{site.data.keyword.cloud_notm}}** a un tipo di account Pagamento a consumo oppure collegando il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) esistente al tuo account {{site.data.keyword.cloud_notm}}. L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Registrazione degli account richiesti](signing_softlayer_account.html) e [Requisiti dell'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
 
 ## Come posso associare le mie credenziali dell'infrastruttura IBM Cloud alla console IBM Cloud for VMware Solutions?
@@ -64,7 +64,7 @@ No, non è consigliato. Potrebbero verificarsi degli errori nelle funzioni di {{
 
 Per le istanze vCenter Server, il primo cluster creato durante la distribuzione ha il nome predefinito **cluster1**. Puoi rinominare il cluster predefinito nel client VMware vSphere. Quando aggiungi un cluster a un'istanza vCenter Server, puoi specificare il nome che vuoi nella console {{site.data.keyword.vmwaresolutions_short}}.
 
-**Nota**: per le istanze Cloud Foundation, il nome cluster predefinito non può essere modificato.
+**Nota:** per le istanze Cloud Foundation, non è possibile modificare il nome cluster predefinito.
 
 ##Come vengono gestite le patch?
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-16"
 
 {{site.data.keyword.vmwaresolutions_full}} comunica con l'infrastruttura {{site.data.keyword.cloud_notm}} attraverso chiamate {{site.data.keyword.slapi_short}}. Per accedere a {{site.data.keyword.slapi_short}} in modo sicuro, devi collegare le credenziali del tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) al tuo account {{site.data.keyword.cloud_notm}}.
 
-**Nota**: l'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) era precedentemente noto come account IBM SoftLayer.
+**Nota:** l'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) era precedentemente noto come account IBM SoftLayer.
 
 Puoi anche specificare se vuoi ricevere notifiche via e-mail o via console per i vari eventi.
 
@@ -22,9 +22,9 @@ Puoi anche specificare se vuoi ricevere notifiche via e-mail o via console per i
 * L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti dell'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
 * Se la chiave API per il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) cambia, devi aggiornare la chiave nella pagina **Impostazioni** nella console {{site.data.keyword.vmwaresolutions_short}}.
 
-   **Importante**: è tua responsabilità garantire che la chiave API salvata nella pagina **Impostazioni** sia corretta e aggiornata. Altrimenti, le operazioni che richiedono la convalida della chiave API potrebbero non riuscire.
+   **Importante:** è tua responsabilità garantire che la chiave API salvata nella pagina **Impostazioni** sia corretta e aggiornata. Altrimenti, le operazioni che richiedono la convalida della chiave API potrebbero non riuscire.
 
-## Procedura
+## Procedura per gestire account utente e impostazioni
 
 1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Impostazioni** dal riquadro di navigazione a sinistra.
 2. Nell'area **Notifiche**, specifica le impostazioni di notifica.

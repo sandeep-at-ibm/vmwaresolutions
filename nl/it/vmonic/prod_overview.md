@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -31,7 +31,7 @@ Puoi distribuire facilmente i tuoi ambienti virtuali VMware e gestire le risorse
   <dt>Singola console di gestione</dt>
   <dd>Fornisce una singola console per distribuire, accedere e gestire gli ambienti VMware su {{site.data.keyword.cloud_notm}}.</dd>
 </dl>
-s
+
 ## Offerte di distribuzione
 
 {{site.data.keyword.vmwaresolutions_short}} offre scelte di distribuzione standardizzate e personalizzabili degli ambienti virtuali VMware. Sono offerti i seguenti tipi di distribuzione:

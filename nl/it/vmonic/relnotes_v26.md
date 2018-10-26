@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-10-01"
 
 ---
 
@@ -119,14 +119,24 @@ Per ulteriori informazioni su Veeam on {{site.data.keyword.cloud_notm}}, vedi [P
 
 ### VMware HCX on IBM Cloud
 
-La release corrente installa VMware HCX 3.5.1 R106 su tutte le istanze appena distribuite. Per ulteriori informazioni sulle nuove funzioni di HCX 3.5.1 R106, vedi la [Documentazione di VMware NSX Hybrid Connect](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html).
+La release corrente installa VMware HCX 3.5.1 su tutte le istanze appena distribuite. Per ulteriori informazioni sulle nuove funzioni di HCX 3.5.1, vedi la [documentazione di VMware NSX Hybrid Connect](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html).
+
+### Supporto di Zerto on IBM Cloud per vSphere ESXi V6.5 Aggiornamento 2c
+
+Se aggiorni gli host esistenti a vSphere ESXi V6.5 Aggiornamento 2 e hai precedentemente installato Zerto on {{site.data.keyword.cloud_notm}}, la console di Zerto Virtual
+Replication potrebbe mostrare il messaggio di avvertenza `Unsupported ESX Version` sotto lo stato dei VRA (Virtual Replication Appliance) Zerto.
+
+Per ulteriori informazioni su come risolvere questo messaggio di avvertenza, vedi:
+
+* [Zerto Virtual Replication Interoperability Matrix](http://s3.amazonaws.com/zertodownload_docs/6.0_Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf)
+* [Updating a ZVM to Support Zerto-Approved Host Releases Prior to a Full ZVR Update](https://www.zerto.com/myzerto/knowledge-base/updating-a-zvm-to-support-zerto-approved-host-releases-prior-to-a-full-zvr-update/)
 
 ## Documentazione nuova e aggiornata
 
 ### Documentazione dell'architettura di riferimento
 Il documento dell'architettura {{site.data.keyword.vmwaresolutions_short}} viene aggiornato per includere considerazioni importanti per comprendere le tue responsabilità in merito alla gestione e al funzionamento della tua istanza VMware.
 
-Per ulteriori informazioni, vedi [Considerazioni sulla post-distribuzione per la tua istanza VMware](../archiref/solution/solution_considerations.md).
+Per ulteriori informazioni, vedi [Considerazioni sulla post-distribuzione per la tua istanza VMware](../archiref/solution/solution_considerations.html).
 
 ## Aggiornamenti e miglioramenti dell'interfaccia utente
 
