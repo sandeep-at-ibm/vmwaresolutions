@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-19"
 
 [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを削除する際の考慮事項](../services/standalone_considerations.html)に記載されている、すべての考慮事項を確認します。
 
-## 手順
+## オンプレミス VMware HCX on IBM Cloud インスタンスを削除する手順
 
 1. 左側のナビゲーション・ペインから**「デプロイ済みインスタンス」**をクリックします。
 2. **「オンプレミス HCX インスタンス」**テーブルにスクロールダウンして、削除するインスタンスを見つけます。

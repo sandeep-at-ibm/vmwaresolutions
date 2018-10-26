@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-02"
 *  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントおよび設定](../vmonic/useraccount.html)を参照してください。
 *  [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスをインストールする際の考慮事項](../services/standalone_considerations.html)に記載されている、すべての考慮事項を確認する。
 
-## 手順
+## オンプレミス VMware HCX on IBM Cloud インスタンスを注文する手順
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「オンプレミス HCX インスタンス」**テーブルにスクロールして、**「新規プロビジョン」**をクリックします。

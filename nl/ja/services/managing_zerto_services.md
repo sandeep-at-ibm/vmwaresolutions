@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -32,7 +32,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスで�
 
 詳しくは、[IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top) を参照してください。
 
-## 手順
+## Zerto on IBM Cloud 用マネージド・サービスを要求する手順
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「開始」**をクリックします。
 2. ページをスクロールダウンし、**「追加マネージド・サービスの注文」**で、**「Zerto on IBM Cloud のマネージド・サービス」**カードをクリックします。
