@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -14,7 +14,8 @@ lastupdated: "2018-07-19"
 
 F5 on {{site.data.keyword.cloud}} 서비스를 관리하려면 F5 on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 찾을 수 있는 해당 인증서를 사용하여 기본 또는 보조 BIG-IP Web UI 콘솔에 로그인하십시오.
 
-서비스 세부사항 보기에 대한 정보는 다음 주제를 참조하십시오.
+서비스 세부사항 보기에 대한 자세한 정보는 다음을 참조하십시오.
+
 * [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](../sddc/sd_addingremovingservices.html)
 * [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_addingremovingservices.html)
 

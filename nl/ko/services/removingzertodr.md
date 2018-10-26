@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,7 +25,7 @@ Zerto on {{site.data.keyword.cloud}} 서비스의 제거 프로세스가 자동�
    4. {{site.data.keyword.cloud_notm}} 인프라에 대한 Zerto Virtual Replication 통신을 위해 주문된 사설 포터블 서브넷을 리턴하십시오.   
    5. {{site.data.keyword.cloud_notm}} 청구서에서 Zerto 재해 복구 서비스의 비용을 제거하십시오.
 
-      **주의**: 제거된 Zerto 재해 복구 서비스에 대한 비용 청구 주기 종료 시 비용이 청구됩니다.
+      **참고:** 제거된 Zerto 재해 복구 서비스에 대한 비용 청구 주기 종료 시 비용이 청구됩니다.
 
 ## 결과
 

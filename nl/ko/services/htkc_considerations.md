@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-11"
+lastupdated: "2018-09-26"
 
 ---
 
 # HyTrust KeyControl on IBM Cloud 개요
 
-HyTrust KeyControl on {{site.data.keyword.cloud}} 서비스는 키 스토리지, 키 분배, 키 순환, 키 취소를 포함하는 암호화 키의 라이프사이클을 자동화 및 간소화하여 암호화된 워크로드의 관리를 간소화합니다. 엔터프라이즈는 FIPS 140-2 준수 암호화를 사용하여 암호화 키를 규모에 맞게 쉽게 관리할 수 있습니다. 
+HyTrust KeyControl on {{site.data.keyword.cloud}} 서비스는 암호화된 워크로드의 관리를 간소화합니다. 이 서비스는 키 스토리지, 키 분배, 키 순환 및 키 취소를 포함하는 암호화 키의 라이프사이클을 자동화하고 간소화합니다. 엔터프라이즈는 FIPS 140-2 준수 암호화를 사용하여 암호화 키를 규모에 맞게 쉽게 관리할 수 있습니다. 
 
 **가용성:** 이 서비스는 vSphere 6.5를 실행하며 V2.5 이상 릴리스로 배치된(또는 이 릴리스로 업그레이드된) 인스턴스에서만 사용할 수 있습니다.
 

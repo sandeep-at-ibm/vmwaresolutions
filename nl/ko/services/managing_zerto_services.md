@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -32,7 +32,7 @@ Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스의 사용 �
 
 자세한 정보는 [IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top)를 참조하십시오.
 
-## 프로시저
+## Zerto on IBM Cloud에 대한 관리 서비스를 요청하는 프로시저
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **시작하기**를 클릭하십시오.
 2. 페이지를 아래로 스크롤하여 **추가 관리 서비스 주문**에서 **Zerto on IBM Cloud에 대한 관리 서비스** 카드를 클릭하십시오.

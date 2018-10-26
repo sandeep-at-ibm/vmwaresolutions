@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -14,7 +14,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 서비스는 가상 �
 
 필요에 따라 이 서비스의 다중 인스턴스를 설치할 수 있습니다. SSH를 통해 FortiOS Web Client 또는 명령 인터페이스를 사용하여 이 서비스를 관리할 수 있습니다.
 
-**가용성**: 이 서비스는 V2.0 이상 릴리스로 배치된 인스턴스에서만 사용 가능합니다.
+**가용성:** 이 서비스는 V2.0 이상 릴리스로 배치된 인스턴스에서만 사용 가능합니다.
 
 ## FortiGate Virtual Appliance on IBM Cloud의 기술 스펙
 

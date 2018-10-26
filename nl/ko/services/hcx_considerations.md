@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-26"
 
 ---
 
 # VMware HCX on IBM Cloud 개요
 
-HCX on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm}}로 온프레미스 데이터 센터의 네트워크를 원활하게 확장할 수 있으며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}}에서 가상 머신(VM)을 마이그레이션할 수 있습니다.
+HCX on {{site.data.keyword.cloud}} 서비스는 온프레미스 데이터 센터의 네트워크를 {{site.data.keyword.cloud_notm}}로 원활하게 확장하며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}} 간에 가상 머신(VM)을 마이그레이션할 수 있습니다.
 
 **가용성:** 이 서비스는 V2.3 이상 릴리스에 배치된 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스에만 사용 가능합니다.
 

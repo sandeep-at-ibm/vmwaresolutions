@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -32,7 +32,7 @@ HCX on {{site.data.keyword.cloud_notm}} 컴포넌트는 {{site.data.keyword.clou
     3. **COPY LINK**를 클릭한 후 이 링크를 사용하여 온프레미스 vSphere 환경에 대한 액세스 권한으로 HCX Enterprise Client를 온프레미스 환경에 다운로드하십시오.
 3. VMware vSphere Web Client에서 HCX Manager 가상 어플라이언스(HCX Manager)로 HCX Enterprise Client를 온프레미스 환경에 배치하십시오.
 
-   **참고**: 사설 네트워크의 온프레미스 HCX Manager를 배치하고 해당 HCX Manager가 공용 네트워크에 액세스할 수 있도록 해야 합니다. NSX Edge, Vyatta 또는 유사한 게이트웨이를 사용하여 온프레미스 HCX Manager에 대한 인터넷 액세스를 허용할 수 있습니다. 사설 네트워크 액세스와 공용 네트워크 액세스에 사용된 게이트웨이가 서로 다른 경우, 사설 네트워크 액세스에 대한 정적 라우트를 작성하도록 기본 게이트웨이를 사용하여 공용 네트워크 액세스 및 온프레미스 **HCX Manager 관리 콘솔**을 허용하는 것이 좋습니다.
+   **참고:** 사설 네트워크의 온프레미스 HCX Manager를 배치하고 해당 HCX Manager가 공용 네트워크에 액세스할 수 있도록 해야 합니다. NSX Edge, Vyatta 또는 유사한 게이트웨이를 사용하여 온프레미스 HCX Manager에 대한 인터넷 액세스를 허용할 수 있습니다. 사설 네트워크 액세스와 공용 네트워크 액세스에 사용된 게이트웨이가 서로 다른 경우, 사설 네트워크 액세스에 대한 정적 라우트를 작성하도록 기본 게이트웨이를 사용하여 공용 네트워크 액세스 및 온프레미스 **HCX Manager 관리 콘솔**을 허용하는 것이 좋습니다.
 4. HCX Manager 배치가 완료된 후 **HCX Manager 관리 콘솔**을 사용하여 온프레미스 HCX Manager를 활성화하십시오. 온프레미스 HCX Manager의 정품 인증 키를 얻으려면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스를 주문하십시오. 자세한 정보는 [온프레미스 HCX 인스턴스 주문](../services/standalone_orderingserviceinstances.html)을 참조하십시오.
 5. HCX on {{site.data.keyword.cloud_notm}} 서비스를 주문할 때 자체 서명된 SSL 인증서를 사용한 경우 다음 단계를 완료하여 인증서를 온프레미스 HCX Manager에 가져와야 합니다.
     1. 온프레미스 **HCX Manager 관리 콘솔**에서 **관리** 탭을 클릭하십시오.
@@ -52,7 +52,7 @@ HCX on {{site.data.keyword.cloud_notm}} 컴포넌트는 {{site.data.keyword.clou
     2. 모든 확장된 네트워크가 제거되었는지 확인하십시오.
     3. 클라이드 사이트가 페어링된 상태에서 모든 상호연결 컴포넌트가 제거되었는지 확인하십시오.
 
-   **중요**: 다음 단계로 진행하기 전에 모든 고려사항을 완료해야 합니다. 그렇지 않은 경우에는 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스에 대한 라이센스가 취소되며, 이는 마이그레이션을 수행할 수 없도록 하고 HCX 컴포넌트에 오류를 발생시킬 수 있습니다.  
+   **중요:** 다음 단계로 진행하기 전에 모든 고려사항을 완료해야 합니다. 그렇지 않은 경우에는 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스에 대한 라이센스가 취소되며, 이는 마이그레이션을 수행할 수 없도록 하고 HCX 컴포넌트에 오류를 발생시킬 수 있습니다.  
 2. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서, 온프레미스 HCX Manager에 대한 정품 인증 키를 얻기 위해 주문한 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스를 삭제하십시오. 다음 단계로 진행하기 전에 삭제된 인스턴스를 더 이상 콘솔에 사용할 수 없음을 확인하십시오.
 
    자세한 정보는 [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 삭제](../services/standalone_deletingserviceinstances.html)를 참조하십시오.
@@ -63,5 +63,5 @@ HCX on {{site.data.keyword.cloud_notm}} 컴포넌트는 {{site.data.keyword.clou
 * [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 보기](../services/standalone_viewingserviceinstances.html)
 * [HCX 용어집](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 문서](https://hcx.vmware.com/#vm-documentation)
-* [VMware HCX Enterprise installation and user guide](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf){:new_window}
+* [VMware HCX 리소스](https://hcx.vmware.com/#/docs)
 * [IBM 지원 센터에 문의](../vmonic/trbl_support.html)

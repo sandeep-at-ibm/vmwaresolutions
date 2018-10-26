@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-02"
 *  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정](../vmonic/useraccount.html)을 참조하십시오.
 *  [온프레미스 HCX on {{site.data.keyword.cloud}} 인스턴스 설치 시 고려사항](../services/standalone_considerations.html)의 모든 고려사항을 검토했습니다.
 
-## 프로시저
+## 온프레미스 VMware HCX on IBM Cloud 인스턴스를 주문하는 프로시저
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **온프레미스 HCX 인스턴스** 테이블로 스크롤하여 **새로 프로비저닝**을 클릭하십시오.

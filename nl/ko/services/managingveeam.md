@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-15"
 
 서비스가 인스턴스에 배치된 후 RDP를 통해 Veeam 콘솔에 액세스하여 환경에 있는 모든 가상 머신의 백업 및 복원(관리 컴포넌트의 백업 및 복원 포함)을 관리할 수 있습니다. 또한 Veeam 웹 사이트에서 Veeam 업데이트를 다운로드하고 설치하여 서비스를 업그레이드할 수도 있습니다.
 
-이전 V1.8 이전의 릴리스에 배치된 인스턴스의 경우, Veeam on {{site.data.keyword.cloud}} 서비스를 사용하려면 인스턴스에서 기존 Veeam VSI를 대체해야 합니다. 자세한 정보는 이 주제의 _V1.8 이전 인스턴스의 Veeam VSI를 Veeam on IBM Cloud로 대체_ 절을 참조하십시오.
+이전 V1.8 이전의 릴리스에 배치된 인스턴스의 경우, Veeam on {{site.data.keyword.cloud}} 서비스를 사용하려면 인스턴스에서 기존 Veeam VSI를 대체해야 합니다. 자세한 정보는 _V1.8 이전 인스턴스의 Veeam VSI를 Veeam on IBM Cloud로 대체_ 절을 참조하십시오.
 
 ## RDP를 사용하여 Veeam 콘솔에 액세스
 
@@ -63,7 +63,7 @@ V1.8 이상 릴리스로 배치된(또는 이러한 릴리스로 업그레이드
 3. **서비스** 탭을 클릭하십시오.
 4. **서비스 추가** 탭에서 Veeam on {{site.data.keyword.cloud_notm}} 서비스를 설치하십시오.
 
-새 Veeam on {{site.data.keyword.cloud_notm}} 서비스가 배치되고 관리 컴포넌트의 백업이 완료된 후 {{site.data.keyword.cloud_notm}} 지원 티켓을 작성하여 계정에서 기존 Veeam VSI를 제거할 수 있습니다. 그런 다음 IBM 지원 센터는 기존 Veeam VSI 및 스토리지를 식별하고 삭제합니다.
+새 Veeam on {{site.data.keyword.cloud_notm}} 서비스가 배치되고 관리 컴포넌트의 백업이 완료된 후 {{site.data.keyword.cloud_notm}} 지원 티켓을 작성하여 계정에서 기존 Veeam VSI를 제거할 수 있습니다. IBM 지원 센터에서 기존 Veeam VSI 및 스토리지를 식별하고 삭제합니다.
 
 ### 관련 링크
 
