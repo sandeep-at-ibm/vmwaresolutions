@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,7 +25,7 @@ Alcuni componenti, come VMware vCenter Server, PSC (Platform Services Controller
 Per ospitare questi backup, distribuisci un file server Linux nel tuo cluster utilizzando la seguente procedura:
 
 1. Ordina una sottorete portatile privata dall'infrastruttura {{site.data.keyword.cloud_notm}} e posizionala sulla stessa VLAN dei tuoi componenti di sistema. Questa è la VLAN privata su cui risiedono gli indirizzi IP di gestione per i tuoi host.
-2. Carica un'immagine del sistema operativo nel tuo archivio dati di gestione VMware, ad esempio [Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window} dal mirror privato di {{site.data.keyword.cloud_notm}}.
+2. Carica un'immagine del sistema operativo nel tuo archivio dati di gestione VMware, ad esempio Ubuntu Server 18.04 LTS, dal mirror privato di {{site.data.keyword.cloud_notm}}.
 3. Distribuisci questa macchina virtuale (VM) nel tuo cluster sul gruppo di porte di gestione utilizzando un indirizzo IP portatile privato ordinato in precedenza. Assicurati che la VM sia configurata per puntare ai tuoi server AD/DNS e, facoltativamente, aggiungi la VM al DNS del tuo dominio secondario.
 4. Crea un ID utente di backup non root su questo server e assicurati che tutti i servizi necessari siano configurati e avviati per i trasferimenti di file. Ad esempio, FTP o SSH.
 5. Assicurati che questa VM sia inclusa nel tuo lavoro di backup di gestione Veeam o IBM Spectrum Protect Plus.

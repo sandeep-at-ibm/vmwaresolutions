@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -35,7 +35,7 @@ Tabella 1. Configurazione di vSphere ESXi
 | Sincronizzazione temporale   | Utilizza il server NTP {{site.data.keyword.cloud}} |
 | Accesso host            | Supporta DCUI, Shell ESXi o SSH |
 | Accesso utente            | Autenticazione locale e MSAD |
-| Risoluzione nomi di dominio | Utilizza  DNS come descritto in [Progettazione di servizi comuni](design_commonservice.html) |
+| Risoluzione nomi di dominio | Utilizza  DNS come descritto in [Progettazione di servizi comuni](design_commonservice.html). |
 
 Il cluster vSphere ospita le macchine virtuali (VM) che gestiscono il cloud centrale e le risorse di calcolo per i carichi di lavoro dell'utente.
 
