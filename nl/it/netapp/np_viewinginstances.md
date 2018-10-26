@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-25"
 
 Visualizza il riepilogo e le informazioni dettagliate delle istanze NetApp ONTAP Select fornite per account utente diversi.
 
-## Visualizzazione del riepilogo delle istanze NetApp ONTAP Select
+## Procedura per visualizzare il riepilogo delle istanze NetApp ONTAP Select
 
 Per visualizzare un riepilogo di tutte le istanze NetApp ONTAP Select fornite per un account utente, completa la seguente procedura:
 
@@ -30,7 +30,7 @@ Tabella 1. Elementi dell'istanza NetApp ONTAP Select
 | Ora di creazione | La data e ora di creazione dell'istanza. |   
 | Stato | Lo stato dell'istanza. Lo stato può assumere uno dei seguenti valori:<ul><li>In fase di creazione: l'istanza è in fase di creazione.</li><li>In fase di build: l'istanza è in fase di configurazione.</li><li>Pronto per l'utilizzo: l'istanza è pronta per l'uso.</li><li>In fase di modifica: l'istanza è in fase di modifica.</li><li>Non riuscito: il processo di creazione, configurazione o modifica non è riuscito.</li><li>In fase di eliminazione: l'istanza è in fase di eliminazione.</li><li>Errore di eliminazione: si è verificato un errore durante l'eliminazione dell'istanza.</li><li>Eliminato: l'istanza è stata eliminata.</li></ul>|
 
-## Visualizzazione dei dettagli delle proprietà delle istanze NetApp ONTAP Select
+## Procedura per visualizzare i dettagli delle proprietà delle istanze NetApp ONTAP Select
 
 Per visualizzare i dettagli delle proprietà di un'istanza:
 
@@ -55,7 +55,7 @@ Tabella 2. Proprietà dell'istanza NetApp ONTAP Select
 | DNS, Domino secondario | Il dominio secondario è il nome del dominio secondario DNS del nome di dominio root in cui risiedono i nomi host delle istanze NetApp ONTAP Select locali. Il nome del dominio secondario è nel formato `<subdomain_label>.<root_domain>`. |
 | Stato | Lo stato dell'istanza. |
 
-## Visualizzazione delle informazioni di accesso per le istanze NetApp ONTAP Select
+## Procedura per visualizzare le informazioni di accesso per le istanze NetApp ONTAP Select
 
 In **Informazioni sull'accesso**, visualizza le informazioni di accesso per i componenti relativi all'istanza. Queste password sono password iniziali generate dal sistema. Se le modifichi all'esterno della console {{site.data.keyword.vmwaresolutions_short}}, non vengono aggiornate nella pagina di riepilogo dell'istanza.
 
@@ -84,7 +84,7 @@ Tabella 3. Informazioni di accesso per i componenti relativi alle istanze NetApp
 | ADMIN vCenter | Il nome utente e la password di VMware vCenter Single Sign-On che puoi utilizzare per accedere a vCenter Server utilizzando il client web vSphere. |
 | SSH vCenter | Il nome utente e la password che puoi utilizzare per accedere alla VM di vCenter Server tramite una connessione SSH. |
 
-## Visualizzazione della cronologia di distribuzione per le istanze NetApp ONTAP Select
+## Procedura per visualizzare la cronologia di distribuzione per le istanze NetApp ONTAP Select
 
 Fai clic su **Cronologia distribuzione** dal riquadro di navigazione a sinistra per visualizzare la cronologia di distribuzione per l'istanza.
 
@@ -102,7 +102,7 @@ Se si verificano degli errori durante la distribuzione o l'eliminazione dell'ist
 1. Fai clic su **Infrastruttura** dal riquadro di navigazione a sinistra.
 2. In **CLUSTER**, visualizza il riepilogo dei cluster NetApp ONTAP Select.
 
-	Tabella 5: Elementi dei cluster NetApp ONTAP Select
+	Tabella5. Elementi dei cluster NetApp ONTAP Select
 
 	 <table>
 	   <tr>
@@ -166,7 +166,7 @@ Tabella 6. Dettagli del server ESXi di un cluster NetApp ONTAP Select
 
 Gestisci le tue istanze dalla console {{site.data.keyword.vmwaresolutions_short}}, dal client web VMware vSphere o dalla console NetApp.
 
-**Importante**: prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza per passare al client web vSphere e iniziare a gestire i tuoi server ESXi, devi accedere al portale VPN del {{site.data.keyword.CloudDataCent_notm}}. Passa con il mouse sul pulsante **Console vCenter** e segui le istruzioni per assicurarti di soddisfare tutti i requisiti e di aver completato i passi necessari prima di accedere al client web vSphere.
+**Importante:** prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza per passare al client web vSphere e iniziare a gestire i tuoi server ESXi, devi accedere al portale VPN del {{site.data.keyword.CloudDataCent_notm}}. Passa con il mouse sul pulsante **Console vCenter** e segui le istruzioni per assicurarti di soddisfare tutti i requisiti e di aver completato i passi necessari prima di accedere al client web vSphere.
 
 Per ulteriori informazioni che ti consentono di completare le istruzioni di accesso, consulta i seguenti argomenti:
 
