@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -46,7 +46,7 @@ lastupdated: "2018-08-28"
   </tr>
 </table>
 
-## 프로시저
+## Cloud Foundation 인스턴스에 업데이트를 적용하는 프로시저
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **Cloud Foundation 인스턴스** 테이블에서 업데이트할 인스턴스를 클릭하십시오.

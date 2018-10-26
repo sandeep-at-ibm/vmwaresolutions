@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-09-26"
 *  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](../vmonic/useraccount.html)를 참조하십시오.
 *  [Cloud Foundation 인스턴스에 대한 요구사항 및 계획](sd_planning.html)의 요구사항 및 고려사항을 검토했습니다.
 
-**중요**: 인스턴스 주문 또는 배치 중에 설정된 값을 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다. 또한 인스턴스가 배치된 후 인스턴스 이름, 루트 도메인 이름, 하위 도메인 레이블 또는 호스트 이름 접두부를 변경하지 마십시오.
+**중요:** 인스턴스 주문 또는 배치 중에 설정된 값을 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다. 또한 인스턴스가 배치된 후 인스턴스 이름, 루트 도메인 이름, 하위 도메인 레이블 또는 호스트 이름 접두부를 변경하지 마십시오.
 
 ## 시스템 설정
 
@@ -86,17 +86,16 @@ Cloud Foundation 인스턴스는 초기 배치 시 네 개의 Bare Metal Server�
 ## 스토리지 설정
 
 Cloud Foundation 인스턴스의 경우, VMware vSAN 스토리지만 주문할 수 있습니다.
-* **사전 구성됨** Bare Metal Server 구성을 선택한 경우에는 스토리지 설정이 표준화되며 변경할 수 없습니다.
+
+**사전 구성됨** Bare Metal Server 구성을 선택한 경우에는 스토리지 설정이 표준화되며 변경할 수 없습니다.
   * **소형** Bare Metal Server 구성의 경우, 두 개의 1.9TB SSD SED 디스크 드라이브가 주문됩니다.
   * **대형** Bare Metal Server 구성의 경우, 네 개의 3.8TB SSD SED 디스크 드라이브가 주문됩니다.
-* **사용자 정의됨** Bare Metal Server 구성을 선택한 경우에는 인스턴스에 대한 vSAN 스토리지를 사용자 정의할 수 있습니다. 다음 vSAN 설정을 지정하십시오.
 
+**사용자 정의됨** Bare Metal Server 구성을 선택한 경우에는 인스턴스에 대한 vSAN 스토리지를 사용자 정의할 수 있습니다. 다음 vSAN 설정을 지정하십시오.
 * **vSAN 용량 디스크의 디스크 유형 및 크기**: 필요한 용량 디스크에 대한 옵션을 선택하십시오.
-* **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오. 
-* **vSAN 캐시 디스크의 디스크 유형**: 필요한 캐시 디스크에 대한 옵션을 선택하십시오.
-
-    **참고**: 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다. **고성능 Intel Optane** 옵션은 듀얼 Intel Xeon Gold 5120 및 6140 프로세서에 대해서만 사용 가능합니다.
-* **vSAN 캐시 디스크 수**: 추가할 캐시 디스크 수를 지정하십시오. 
+* **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
+* 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다. **고성능 Intel Optane** 옵션은 듀얼 Intel Xeon Gold 5120 및 6140 프로세서에 대해서만 사용 가능합니다.
+* **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **고성능 Intel Optane** 상자를 선택했는지 여부에 따라 달라집니다.
 
 ## 네트워크 인터페이스 설정
 
@@ -228,9 +227,9 @@ Cloud Foundation 인스턴스를 주문하는 경우 추가 기능 서비스도 
 
 주문한 Cloud Foundation 인스턴스를 보고 관리하십시오.
 
-**중요**: {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+**중요:** {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
 
-**주의**: {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트(인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치됨)를 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
+**주의:** {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트(인스턴스 주문 시 {{site.data.keyword.cloud_notm}} 계정에 설치된)를 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 
 *  컴포넌트 추가, 수정, 리턴 또는 제거
 *  ESXi 서버 추가 또는 제거를 통한 인스턴스 용량의 확장 또는 축소

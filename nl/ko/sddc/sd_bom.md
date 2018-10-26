@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -42,7 +42,7 @@ VMware Cloud Foundation 인스턴스에 대한 BOM(Bill of Materials) 정보를 
 
 ## ESXi 서버의 고급 구성 설정
 
-ESXi 서버에 적용되는 고급 구성 설정의 개요에 대해서는 아래 표를 검토하십시오. 설정은 Cloud Foundation 인스턴스가 이전(V2.1 이하) 릴리스에서 V2.2 이상에 배치(또는 업그레이드)되었는지에 따라 다릅니다. 
+ESXi 서버에 적용되는 고급 구성 설정의 개요에 대해서는 아래 표를 검토하십시오. 설정은 Cloud Foundation 인스턴스가 이전(V2.1 이하) 릴리스에서 V2.2 이상에 배치(또는 업그레이드)되었는지에 따라 다릅니다.
 
 표 3. Cloud Foundation 인스턴스 및 클러스터에 대한 ESXi 서버 고급 구성 설정
 
@@ -58,7 +58,7 @@ ESXi 서버에 적용되는 고급 구성 설정의 개요에 대해서는 아�
 |큐 전체 샘플 크기 |**QFullSampleSize** = 32 |**/Disk/QFullSampleSize** = 32 |
 |큐 전체 임계값 |**QFullThreshold** = 8 |**/Disk/QFullThreshold** = 8 |
 
-**참고**:
+**참고:**
 * 서비스가 ESXi 서버에서 기본 NFS 마운트 수보다 더 많은 NFS 마운트를 사용할 수 있으므로 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 서비스에 **MaxVolumes** 설정이 필요합니다.
 * 구성 설정에 대한 **설정되지 않음** 값은 새 설정이 자동으로 적용되지 않음을 나타내며, ESXi 서버를 다시 부팅해야 하므로 중단이 발생할 수 있습니다.
 

@@ -28,7 +28,7 @@ Cloud Foundation 인스턴스 배치 중에 VMware NSX는 인스턴스에서 주
 
 NSX 설정 방법에 대한 자세한 정보는 다음 주제를 참조하십시오.
 * 기본(단일) Cloud Foundation 인스턴스에 대해서는 [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}에서 워크로드 VM에 대한 NSX 설정](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/)을 참조하십시오.
-* 다중 사이트 Cloud Foundation 인스턴스의 경우 [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html)를 참조하십시오.
+* 다중 사이트 Cloud Foundation 인스턴스의 경우 Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html)를 참조하십시오.
 
 ## NSX 컴포넌트의 비밀번호 변경 시 고려사항
 

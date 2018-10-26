@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -31,7 +31,7 @@ lastupdated: "2018-09-24"
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | 9.5u3 | V1.8 이상 |
 | [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 5.5u4 패치 2 | V1.2 이상 |
 
-## Cloud Foundation 인스턴스에 서비스 추가
+## Cloud Foundation 인스턴스에 서비스를 추가하는 프로시저
 
 Cloud Foundation 인스턴스에 서비스를 추가하려면 이전 테이블의 해당 서비스 링크를 클릭하여 서비스에 대한 고려사항을 검토하고 배치된 컴포넌트를 확인하십시오. 그런 다음 적절한 주문 서비스 주제의 지시사항에 따라 인스턴스에 서비스를 추가하십시오.
 
@@ -39,7 +39,7 @@ Cloud Foundation 인스턴스에 서비스를 추가하려면 이전 테이블�
 
 서비스 설치가 완료되면 이메일로 알림을 받고 서비스가 **설치됨** 상태로 인스턴스의 **서비스** 페이지에 표시됩니다.
 
-## Cloud Foundation 인스턴스에 대한 서비스 보기
+## Cloud Foundation 인스턴스에 대한 서비스를 보는 프로시저
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **Cloud Foundation 인스턴스** 테이블에서 서비스를 볼 인스턴스를 클릭하십시오.
@@ -47,7 +47,7 @@ Cloud Foundation 인스턴스에 서비스를 추가하려면 이전 테이블�
 4. **서비스** 페이지에서 하나의 서비스를 클릭하여 서비스 상태 및 기타 세부사항과 같은 정보를 검토하십시오.
 5. 확인한 서비스에 따라 서비스 세부사항에 제공된 인증 정보를 사용하여 서비스 콘솔에 액세스하고 여기에서 서비스를 관리할 수 있습니다.
 
-## Cloud Foundation 인스턴스에 대한 서비스 제거
+## Cloud Foundation 인스턴스에 대한 서비스를 제거하는 프로시저
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **Cloud Foundation 인스턴스** 테이블에서 서비스를 제거할 인스턴스를 클릭하십시오.
@@ -61,7 +61,7 @@ Cloud Foundation 인스턴스에 서비스를 추가하려면 이전 테이블�
 
 서비스 제거가 완료되면 이메일로 알림을 받게 되며 인스턴스의 **서비스** 페이지에서 서비스가 제거됩니다.
 
-**주의**: 제거된 서비스에 대한 {{site.data.keyword.cloud_notm}} 비용 청구 주기 종료 시 비용이 청구됩니다.
+**주의:** 제거된 서비스에 대한 {{site.data.keyword.cloud_notm}} 비용 청구 주기 종료 시 비용이 청구됩니다.
 
 ### 관련 링크
 
