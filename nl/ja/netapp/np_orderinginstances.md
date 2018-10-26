@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-09-25"
 *  **「設定」**ページで {{site.data.keyword.cloud}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](../vmonic/useraccount.html)を参照してください。
 *  [NetApp ONTAP Select インスタンスの要件と計画](np_planning.html)に記載されている要件と考慮事項を確認した。
 
-**重要**: インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。変更すると、インスタンスを使用できなくなります。例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
+**重要**: インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
 
 ## システム設定
 
@@ -64,7 +64,7 @@ NetApp ONTAP Select インスタンスを注文する際には、以下のネッ
 
 ## ライセンス交付の設定
 
-4 つの{{site.data.keyword.baremetal_short}}にそれぞれ 1 つのライセンスが必要であるため、4 つの NetApp ライセンス交付ファイルをアップロードする必要があります。高性能または大容量のデプロイメントの場合は、NetApp 営業チームに問い合わせて、該当するライセンス交付を得てください。
+4 つの{{site.data.keyword.baremetal_short}}にそれぞれ 1 つのライセンスが必要であるため、4 つの NetApp ライセンス交付ファイルをアップロードする必要があります。 高性能または大容量のデプロイメントの場合は、NetApp 営業チームに問い合わせて、該当するライセンス交付を得てください。
 
 ## ベア・メタル・サーバーの設定
 
@@ -85,7 +85,7 @@ NetApp ONTAP Select インスタンスを注文する際には、以下のネッ
 
 NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォルトで 4 台です。 これは変更できません。 すべての ESXi サーバーが構成を共有します。
 
-## 手順
+## NetApp ONTAP Select インスタンスを注文する手順
 
 1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「Virtual Data Centers」**セクションの**「NetApp ONTAP Select」**をクリックします。
 2. **「NetApp ONTAP Select」**ページで、**「作成」**をクリックします。
@@ -114,9 +114,9 @@ NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォ
 
 注文した NetApp ONTAP Select インスタンスを表示して管理します。
 
-**重要**: {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
+**重要:** {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
 
-**注意**: インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
+**注意:** インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
 *  コンポーネントの追加、変更、返却、または削除
 *  コンポーネントのパワーオフ
 
