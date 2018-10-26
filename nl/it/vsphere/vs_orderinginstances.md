@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -76,7 +76,7 @@ Per la licenza dei componenti VMware selezionati, hai le seguenti opzioni:
 
 Se scegli di acquistare una qualsiasi licenza, ad eccezione di vSphere Enterprise Plus e vCenter Server, e ordini più server ESXi, viene aperto automaticamente un ticket {{site.data.keyword.cloud_notm}} per tuo conto per combinare le chiavi di licenza. Sei responsabile di controllare il ticket per garantire di utilizzare solo le chiavi di licenza generate dal team DevOps.
 
-**Importante**: l'utilizzo di singole chiavi di licenza insieme alle chiavi di licenza combinate non soddisfa i requisiti di pagamento per le licenze di cui avrai bisogno.
+**Importante:** l'utilizzo di singole chiavi di licenza insieme alle chiavi di licenza combinate non soddisfa i requisiti di pagamento per le licenze di cui avrai bisogno.
 
 ## Impostazioni di Bare Metal Server
 
@@ -116,13 +116,10 @@ Per gli ordini senza vSAN, i server ESXi vengono ordinati con chassis da 12 disc
 Per gli ordini con vSAN, i server ESXi vengono ordinati con chassis da 12 dischi e quattro dischi ordinati: due per il SO ESXi e due riservati per la memorizzazione nella cache. Queste impostazioni sono configurate per impostazione predefinita e non possono essere modificate. Puoi ordinare dischi con più capacità selezionando **Tipo e dimensioni del disco per i dischi vSAN** e **Numero di dischi vSAN**.
 
 Se per il cluster selezioni il componente VMware vSAN, specifica le seguenti impostazioni.
-
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
-* **Tipo di disco per i dischi cache vSAN**: seleziona un'opzione per i dischi di cache di cui hai bisogno.
-
-    **Nota**: se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
-* **Numero di dischi cache vSAN**: specifica il numero di dischi di cache che vuoi aggiungere.
+* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
+* Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
 
 ## Impostazioni dell'interfaccia di rete
 
@@ -223,7 +220,7 @@ In base alle tue configurazioni, il costo stimato viene generato e visualizzato 
    * Per salvare la configurazione come template senza effettuare un ordine, fai clic su **Salva configurazione**.
    * Per effettuare l'ordine, assicurati che l'account da addebitare sia corretto, esamina e accetta i termini e infine fai clic su **Fornitura**.
 
-   **Nota**: vengono installati solo i {{site.data.keyword.baremetal_short}}. Sei responsabile dell'installazione e della configurazione dei vari componenti dopo la distribuzione del cluster, come VMware vCenter, VMware NSX, VMware vSAN.
+   **Nota:** vengono installati solo i {{site.data.keyword.baremetal_short}}. Sei responsabile dell'installazione e della configurazione dei vari componenti dopo la distribuzione del cluster, come VMware vCenter, VMware NSX, VMware vSAN.
 
 ### Risultati
 

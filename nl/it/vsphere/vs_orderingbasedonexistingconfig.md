@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-10"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -19,7 +19,7 @@ Assicurati di aver completato le seguenti attività:
 *  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per i cluster vSphere](vs_planning.html).
 *  Hai creato un template di configurazione da riutilizzare.
 
-## Procedura
+## Procedura per ordinare i cluster vSphere in base alle configurazioni esistenti
 
 1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e poi su **VMware vSphere** nella sezione **Data center virtuali**.
 2. Nella pagina **VMware vSphere on IBM Cloud**, fai clic su **Crea**.  
@@ -30,7 +30,7 @@ Assicurati di aver completato le seguenti attività:
    * Per salvare la configurazione come template senza effettuare un ordine, fai clic su **Salva configurazione**.
    * Per effettuare l'ordine, assicurati che l'account da addebitare sia corretto, esamina e accetta i termini e infine fai clic su **Fornitura**.
 
-   **Nota**: vengono installati solo i {{site.data.keyword.baremetal_short}}. Sei responsabile dell'installazione e della configurazione dei vari componenti dopo la distribuzione del cluster, come VMware vCenter, VMware NSX, VMware vSAN.
+   **Nota:** vengono installati solo i {{site.data.keyword.baremetal_short}}. Sei responsabile dell'installazione e della configurazione dei vari componenti dopo la distribuzione del cluster, come VMware vCenter, VMware NSX, VMware vSAN.
 
 ## Risultati
 
