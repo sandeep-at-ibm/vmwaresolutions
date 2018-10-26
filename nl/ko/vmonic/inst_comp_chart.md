@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -33,7 +33,7 @@ VMware Cloud Foundation 인스턴스, VMware vCenter Server 인스턴스, VMware
 |vSAN 라이센스 에디션         |vSAN Advanced 또는 Enterprise  |vSAN Advanced 또는 Enterprise  |vSAN Advanced 또는 Enterprise |vSAN Advanced 또는 Enterprise  |
 |추가 기능 서비스               |지원됨(HCX on {{site.data.keyword.cloud_notm}} 미포함).  |지원됨(HCX on {{site.data.keyword.cloud_notm}} 미포함). vCenter Server with Hybridity Bundle로 업그레이드할 수 있음 |지원됨(HCX on {{site.data.keyword.cloud_notm}} 포함). |이 솔루션의 자동화로 지원되지는 않지만 고유의 소프트웨어를 가져와서 설치할 수 있습니다. |
 
-**참고**:
+**참고:**
 
 <sup>1</sup> 유효성 검증된 디자인에 따라 그리고 배치 중에 확인하여.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -132,7 +132,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스는 {{site.data.key
 
 ### Veeam on IBM Cloud
 
-Veeam on {{site.data.keyword.cloud_notm}} 서비스는 엔터프라이즈가 고가용성을 달성할 수 있도록 VMware 하이퍼바이저와 직접 원활하게 통합합니다. 이 서비스는 애플리케이션 및 데이터에 대한 복구 지점 및 시간 목표를 제공합니다. 복구 지점 및 시간 목표는 구성이 완료된 후 15분 내에 제공됩니다. 이 서비스를 사용하여 Veeam 콘솔에서 인프라에 대한 모든 가상 머신의 백업 및 복원을 모두 직접 제어합니다. 
+Veeam on {{site.data.keyword.cloud_notm}} 서비스는 엔터프라이즈가 고가용성을 달성할 수 있도록 VMware 하이퍼바이저와 직접 원활하게 통합합니다. 이 서비스는 애플리케이션 및 데이터에 대한 복구 지점 및 시간 목표를 제공합니다. 복구 지점 및 시간 목표는 구성이 완료된 후 15분 내에 제공됩니다. 이 서비스를 사용하여 Veeam 콘솔에서 인프라에 대한 모든 가상 머신의 백업 및 복원을 모두 직접 제어합니다.
 
 자세한 정보는 [Veeam on {{site.data.keyword.cloud_notm}} 개요](../services/veeam_considerations.html)를 참조하십시오.
 

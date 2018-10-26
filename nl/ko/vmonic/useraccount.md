@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-16"
 
 {{site.data.keyword.vmwaresolutions_full}}는 {{site.data.keyword.slapi_short}} 호출을 통해 {{site.data.keyword.cloud_notm}} 인프라와 통신합니다. {{site.data.keyword.slapi_short}}에 안전하게 액세스하려면 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정의 인증 정보를 {{site.data.keyword.cloud_notm}} 계정에 링크해야 합니다.
 
-**참고**: {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 이전에는 IBM SoftLayer 계정이라고 했습니다.
+**참고:** {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 이전에는 IBM SoftLayer 계정이라고 했습니다.
 
 다양한 이벤트에 대한 이메일 및 콘솔 알림을 수신하고자 하는지 여부를 지정할 수도 있습니다.
 
@@ -22,9 +22,9 @@ lastupdated: "2018-08-16"
 * 사용 중인 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정 요구사항](slaccountrequirement.html)을 참조하십시오.
 * {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정의 API키가 변경된 경우에는 {{site.data.keyword.vmwaresolutions_short}} 콘솔의 **설정** 페이지에서 키를 업데이트해야 합니다.
 
-   **중요**: 사용자는 **설정** 페이지에 저장된 API 키가 올바르고 최신 상태인지 확인해야 합니다. 그렇지 않으면, API 키 유효성 검증이 필요한 오퍼레이션에 실패할 수 있습니다.
+   **중요:** 사용자는 **설정** 페이지에 저장된 API 키가 올바르고 최신 상태인지 확인해야 합니다. 그렇지 않으면, API 키 유효성 검증이 필요한 오퍼레이션에 실패할 수 있습니다.
 
-## 프로시저
+## 사용자 계정 및 설정을 관리하는 프로시저
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **설정**을 클릭하십시오.
 2. **알림** 영역에서 알림 설정을 지정하십시오.

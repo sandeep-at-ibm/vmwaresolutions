@@ -46,7 +46,7 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 
 * 듀얼 Intel Skylake Xeon Silver 4110 프로세서/총 16개 코어, 2.1GHz
 * 듀얼 Intel Skylake Xeon Gold 5120 프로세서/총 28개 코어, 2.2GHz
-* 듀얼 Intel Skylake Xeon Gold 6140 프로세서/총 36개의 코어, 2.3GHz 
+* 듀얼 Intel Skylake Xeon Gold 6140 프로세서/총 36개의 코어, 2.3GHz
 
 자세한 정보는 *Bare Metal Server 설정* 절을 참조하십시오.
 

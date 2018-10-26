@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-14"
 
 이전에는 IBM SoftLayer 계정이라고 부르던 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정은 인프라 제품 및 서비스를 관리하기 위한 일부 추가 기능을 제공하는 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에 로그인하는 데 사용됩니다. {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 등록하려면 {{site.data.keyword.cloud_notm}} 계정을 종량과금제 유형의 계정으로 업그레이드하십시오.
 
-### 프로시저
+### IBM Cloud 계정을 등록하는 프로시저
 
 1. **IBM ID** 계정으로 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 로그인하십시오.
 2. 배너의 왼쪽에서 **관리 > 청구 및 사용 > 청구**를 클릭하십시오.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-10-01"
 
 ---
 
@@ -111,7 +111,7 @@ ESXi 서버 요구사항에 대한 자세한 정보는 다음 주제를 참조�
 
 ### vSphere ESXi V6.5 update 2c에 대한 Veeam on IBM Cloud 지원
 
-V2.6부터 새 인스턴스와 새 호스트는 vSphere ESXi V6.5 Update 2c를 사용하여 프로비저닝됩니다. Veeam Backup and Replication을 사용 중인 경우 vSphere ESXi 6.5 Update 2c와 최상의 호환성을 보장하기 위해 Veeam on {{site.data.keyword.cloud_notm}} 인스턴스를 V9.5u3a 이상으로 업데이트하는 것이 좋습니다. 
+V2.6부터 새 인스턴스와 새 호스트는 vSphere ESXi V6.5 Update 2c를 사용하여 프로비저닝됩니다. Veeam Backup and Replication을 사용 중인 경우 vSphere ESXi 6.5 Update 2c와 최상의 호환성을 보장하기 위해 Veeam on {{site.data.keyword.cloud_notm}} 인스턴스를 V9.5u3a 이상으로 업데이트하는 것이 좋습니다.
 
 Veeam on {{site.data.keyword.cloud_notm}}가 설치되어 있는 기존 Cloud Foundation 인스턴스도 V9.5u3a 이상으로 업데이트하는 것이 좋습니다.
 
@@ -119,14 +119,23 @@ Veeam on {{site.data.keyword.cloud_notm}}에 대한 자세한 정보는 [Veeam o
 
 ### VMware HCX on IBM Cloud
 
-현재 릴리스는 새로 배치된 모든 인스턴스에 VMware HCX 3.5.1 R106을 설치합니다. HCX 3.5.1 R106의 새 기능에 대한 자세한 정보는 [VMware NSX Hybrid Connect 문서](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html)를 참조하십시오.
+현재 릴리스는 새로 배치된 모든 인스턴스에 VMware HCX 3.5.1을 설치합니다. HCX 3.5.1의 새 기능에 대한 자세한 정보는 [VMware NSX Hybrid Connect 문서](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html)를 참조하십시오.
+
+### vSphere ESXi V6.5 update 2c에 대한 Zerto on IBM Cloud 지원
+
+기존 호스트를 vSphere ESXi V6.5 update 2로 업데이트하고 이전에 Zerto on {{site.data.keyword.cloud_notm}}를 설치한 경우 Zerto Virtual Replication 콘솔의 VRA(Virtual Replication Appliance) 상태 아래에 `지원되지 않는 ESX 버전` 경고 메시지가 표시될 수 있습니다.
+
+이 경고 메시지를 해결하는 방법에 대한 자세한 정보는 다음을 참조하십시오.
+
+* [Zerto Virtual Replication Interoperability Matrix](http://s3.amazonaws.com/zertodownload_docs/6.0_Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf)
+* [Updating a ZVM to Support Zerto-Approved Host Releases Prior to a Full ZVR Update](https://www.zerto.com/myzerto/knowledge-base/updating-a-zvm-to-support-zerto-approved-host-releases-prior-to-a-full-zvr-update/)
 
 ## 새로 작성되고 업데이트된 문서
 
 ### 참조 아키텍처 문서
 {{site.data.keyword.vmwaresolutions_short}} 아키텍처 문서는 VMware 인스턴스 관리 및 운영에 대한 책임을 이해하는 데 중요한 고려사항을 포함하도록 업데이트됩니다.
 
-자세한 정보는 [VMware 인스턴스에 대한 사후 배치 고려사항](../archiref/solution/solution_considerations.md)을 참조하십시오.
+자세한 정보는 [VMware 인스턴스에 대한 사후 배치 고려사항](../archiref/solution/solution_considerations.html)을 참조하십시오.
 
 ## 사용자 인터페이스 업데이트 및 개선사항
 

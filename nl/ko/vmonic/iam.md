@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-28"
 
 ---
 
 # IAM에서 사용자 액세스 관리
 
-계정의 사용자와 관련한 {{site.data.keyword.vmwaresolutions_full}} 서비스 인스턴스에 대한 액세스는 {{site.data.keyword.cloud}} IAM(Identity and Access Management)에 의해 제어됩니다. 계정에서 {{site.data.keyword.vmwaresolutions_short}} 서비스에 액세스하는 모든 사용자에게는 IAM 사용자 역할이 정의된 액세스 정책이 지정되어야 합니다.
+계정의 사용자와 관련한 {{site.data.keyword.vmwaresolutions_full}} 서비스 인스턴스에 대한 액세스는 {{site.data.keyword.cloud_notm}} IAM(Identity and Access Management)에 의해 제어됩니다. 계정에서 {{site.data.keyword.vmwaresolutions_short}} 서비스에 액세스하는 모든 사용자에게는 IAM 사용자 역할이 정의된 액세스 정책이 지정되어야 합니다.
 
 액세스 정책은 선택된 서비스 또는 인스턴스의 컨텍스트 내에서 사용자가 수행할 수 있는 조치를 결정합니다. 허용되는 조치는 서비스에서 수행 가능한 오퍼레이션으로서 {{site.data.keyword.cloud_notm}} 서비스에 의해 사용자 정의되고 정의됩니다. 그리고 이 조치는 IAM 사용자 역할에 맵핑됩니다.
 

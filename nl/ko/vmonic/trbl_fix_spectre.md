@@ -43,7 +43,7 @@ VMware vSphere 6.5 및 VMware vCenter Server 6.5의 필수 패치를 적용하�
 
 기존의 모든 VMware vSphere 6.5 클러스터의 경우 [VMware 제품 패치 사이트](https://my.vmware.com/group/vmware/patch)에서 ESXi650-201712101-SG, ESXi650-201803401-BG, ESXi650-201803402-BG, ESXi650-201808401-BG, ESXi650-201808402-BG 및 ESXi650-201808403-BG 패치를 적용해야 합니다.
 
-VMware vCenter Server 6.5의 경우, [VMware 제품 패치 사이트](https://my.vmware.com/group/vmware/patch)에서 vCenter 6.5 U2c 패치를 새로 배치되거나 기존 서버인 모든 vCenter Server에 적용해야 합니다. 
+VMware vCenter Server 6.5의 경우, [VMware 제품 패치 사이트](https://my.vmware.com/group/vmware/patch)에서 vCenter 6.5 U2c 패치를 새로 배치되거나 기존 서버인 모든 vCenter Server에 적용해야 합니다.
 
 ## V1.9 이전에 배치된 인스턴스
 
