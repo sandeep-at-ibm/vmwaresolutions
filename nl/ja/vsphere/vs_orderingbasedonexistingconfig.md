@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-10"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-08-10"
 *  [vSphere クラスターの要件と計画](vs_planning.html)に記載されている要件と考慮事項を確認する。
 *  再使用する構成テンプレートを作成する。
 
-## 手順
+## 既存の構成を基にした vSphere クラスターを注文する手順
 
 1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクションの**「VMware vSphere」**をクリックします。
 2. **「VMware vSphere on IBM Cloud」**ページで、**「作成」**をクリックします。  
@@ -30,7 +30,7 @@ lastupdated: "2018-08-10"
    * 注文を実行せずに構成をテンプレートとして保存するには、**「構成の保存」**をクリックします。
    * 注文を実行するには、課金されるアカウントが正しいことを確認し、使用条件を確認して承諾してから、**「プロビジョン」**をクリックします。
 
-   **注**: {{site.data.keyword.baremetal_short}}だけがインストールされます。 クラスターのデプロイメントの後に、VMware vCenter、VMware NSX、VMware vSAN などの各種コンポーネントをインストールして構成する作業は、お客様が行う必要があります。
+   **注:** {{site.data.keyword.baremetal_short}}だけがインストールされます。 クラスターのデプロイメントの後に、VMware vCenter、VMware NSX、VMware vSAN などの各種コンポーネントをインストールして構成する作業は、お客様が行う必要があります。
 
 ## 結果
 

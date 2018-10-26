@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-11"
 
 VMware vSphere on {{site.data.keyword.cloud}} を注文する前に、以下の要件を確認してください。 {{site.data.keyword.CloudDataCent_notm}}のロケーションとワークロードの容量要件に基づいて、VMware vSphere クラスターの計画を立ててください。
 
-**注**: ESXi サーバーがデプロイされた後は、お客様が、環境をセットアップし、さまざまな VMware コンポーネントをインストールして構成する必要があります。 VMware コンポーネントの例としては、VMware vCenter Server、VMware NSX、および VMware vSAN があります。
+**注:** ESXi サーバーがデプロイされた後は、お客様が、環境をセットアップし、さまざまな VMware コンポーネントをインストールして構成する必要があります。 VMware コンポーネントの例としては、VMware vCenter Server、VMware NSX、および VMware vSAN があります。
 
 ## IBM Cloud アカウントの要件
 
