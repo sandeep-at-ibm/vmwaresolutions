@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-24"
 
 VMware vSphere on {{site.data.keyword.cloud}} è una piattaforma di ordinazione semplificata e ottimizzata per VMware. Con questa piattaforma, puoi creare il tuo proprio ambiente VMware ospitato su IBM personalizzando e ordinando l'hardware compatibile con VMware in base ai tuoi componenti VMware selezionati.
 
-La console {{site.data.keyword.vmwaresolutions_short}} filtra l'hardware automaticamente, in base ai componenti VMware che hai selezionato. Ad esempio, quando crei un nuovo cluster VMware vSAN all-flash, viene presentato solo l'hardware convalidato rispetto alla [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php). Inoltre, è richiesto un minimo di quattro server ESXi.
+La console {{site.data.keyword.vmwaresolutions_short}} filtra l'hardware automaticamente, in base ai componenti VMware che hai selezionato. Ad esempio, quando crei un nuovo cluster VMware vSAN all-flash, viene presentato solo l'hardware convalidato rispetto alla [Guida alla compatibilità VMware](https://www.vmware.com/resources/compatibility/search.php). Inoltre, è richiesto un minimo di quattro server ESXi.
 
 VMware vSphere on {{site.data.keyword.cloud_notm}} non automatizza l'istallazione, la configurazione e il richiamo dei componenti VMware facoltativi. La piattaforma consente il massimo della flessibilità per progettare e costruire il tuo ambiente VMware ospitato incorporando l'hardware compatibile con VMware.
 
@@ -22,7 +22,7 @@ Utilizza questa offerta per creare un nuovo cluster di server ESXi o ridimension
 
 Esamina i componenti di VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
-**Nota**: la disponibilità e il prezzo delle configurazioni hardware standard possono variare in base al {{site.data.keyword.CloudDataCent_notm}} selezionato per la distribuzione.
+**Nota:** la disponibilità e il prezzo delle configurazioni hardware standardizzate possono variare in base al {{site.data.keyword.CloudDataCent_notm}} selezionato per la distribuzione.
 
 ### Componenti VMware
 
@@ -82,7 +82,7 @@ Un Bare Metal Server {{site.data.keyword.cloud_notm}} con la configurazione di r
 * Un Bare Metal Server {{site.data.keyword.cloud_notm}} con VMware vSphere Enterprise Plus 6.0u2 o 6.5u1  
 * Componenti VMware facoltativi presentati in [Specifiche tecniche per i cluster VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
-**Importante**: devi gestire i server ESXi, i componenti VMware facoltativi e ulteriore hardware ordinato e consegnato al tuo account {{site.data.keyword.cloud_notm}} solo dal {{site.data.keyword.slportal}}. Dopo aver creato un nuovo cluster nella console {{site.data.keyword.vmwaresolutions_short}}, puoi tornare alla console e utilizzare le informazioni salvate per ridimensionare il nuovo cluster. Per ulteriori informazioni, vedi [Ridimensionamento di cluster vSphere esistenti](vs_scalingexistingclusters.html).
+**Importante:** devi gestire i server ESXi, i componenti VMware facoltativi e l'hardware aggiuntivo ordinato e consegnato al tuo account {{site.data.keyword.cloud_notm}} solo attraverso il {{site.data.keyword.slportal}}. Dopo aver creato un nuovo cluster nella console {{site.data.keyword.vmwaresolutions_short}}, puoi tornare alla console e utilizzare le informazioni salvate per ridimensionare il nuovo cluster. Per ulteriori informazioni, vedi [Ridimensionamento di cluster vSphere esistenti](vs_scalingexistingclusters.html).
 
 ### Link correlati
 
