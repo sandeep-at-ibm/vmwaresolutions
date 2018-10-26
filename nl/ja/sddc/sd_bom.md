@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -42,7 +42,7 @@ VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情�
 
 ## ESXi サーバーの拡張構成の設定
 
-次の表で、ESXi サーバーで適用される拡張構成設定の概要を確認してください。この設定は、Cloud Foundation インスタンスが以前のリリース (V2.1 以前) から V2.2 以降にデプロイ (またはアップグレード) されるかどうかによって異なります。
+次の表で、ESXi サーバーで適用される拡張構成設定の概要を確認してください。 この設定は、Cloud Foundation インスタンスが以前のリリース (V2.1 以前) から V2.2 以降にデプロイ (またはアップグレード) されるかどうかによって異なります。
 
 表 3. Cloud Foundation インスタンスとクラスターに関する ESXi サーバーの拡張構成設定
 
@@ -58,7 +58,7 @@ VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情�
 | キュー・フルのサンプル・サイズ | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | キュー・フルのしきい値 | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
-**注**:
+**注:**
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} サービスには **MaxVolumes** 設定が必要です。このサービスは、ESXi サーバーのデフォルトの NFS マウント数を超える NFS マウントを使用する可能性があるからです。
 * **「未設定」**という構成設定の値は、ESXi サーバーを再起動しないと新しい設定が自動では適用されないことを示していますが、混乱を招く可能性があります。
 
