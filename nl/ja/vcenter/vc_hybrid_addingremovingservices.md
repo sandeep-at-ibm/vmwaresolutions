@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-02"
 
 ---
 
@@ -29,18 +29,18 @@ vCenter Server with Hybridity Bundle インスタンスでは、以下のサー�
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.1 パッチ 1 | V2.2 以降 |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 以降 |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | 9.5u3 | V1.8 以降 |
-| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 ビルド 8774389 | V2.3 以降 |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 | V2.3 以降 |
 | [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | 5.5 u4 パッチ 2 | V1.2 以降 |
 
-## vCenter Server with Hybridity Bundle インスタンスへのサービスの追加
+## vCenter Server with Hybridity Bundle インスタンスにサービスを追加する手順
 
-vCenter Server with Hybridity Bundle インスタンスにサービスを適用するには、前のテーブルで該当リンクをクリックし、そのサービスに関する考慮事項を確認します。その後、デプロイするコンポーネントにチェック・マークを付けて、注文トピックに記されている指示に従って注文を行います。
+vCenter Server with Hybridity Bundle インスタンスにサービスを適用するには、前のテーブルで該当リンクをクリックし、そのサービスに関する考慮事項を確認します。 その後、デプロイするコンポーネントにチェック・マークを付けて、注文トピックに記されている指示に従って注文を行います。
 
 ### サービスのインストールの結果
 
 サービスのインストールが正常に完了すると、E メールで通知が届きます。また、そのサービスがインスタンス詳細の**「サービス」**タブに表示され、サービスの状況が**「インストール済み」**になります。
 
-## vCenter Server with Hybridity Bundle インスタンス用のサービスの参照
+## vCenter Server with Hybridity Bundle インスタンス用のサービスを表示する手順
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、サービスを表示するインスタンスをクリックします。
@@ -48,7 +48,7 @@ vCenter Server with Hybridity Bundle インスタンスにサービスを適用�
 4. **「サービス」**ページでサービスをクリックし、そのサービスの情報 (サービス状況などの詳細) を確認します。
 5. 表示したサービスによっては、サービスの詳細情報に記されている資格情報を使用してサービス・コンソールにアクセスし、そこからサービスを管理することもできます。
 
-## vCenter Server with Hybridity Bundle インスタンス用のサービスの削除
+## vCenter Server with Hybridity Bundle インスタンス用のサービスを削除する手順
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、サービスを削除するインスタンスをクリックします。
@@ -62,7 +62,7 @@ vCenter Server with Hybridity Bundle インスタンスにサービスを適用�
 
 サービスの削除が正常に完了すると、お客様に E メールで通知され、サービスがインスタンスの**「サービス」**ページから削除されます。
 
-**注意**: 削除したサービスは、{{site.data.keyword.cloud_notm}} インフラストラクチャーの請求サイクルの最後まで課金されます。
+**注意:** 削除したサービスは、{{site.data.keyword.cloud_notm}} インフラストラクチャーの請求サイクルの最後まで課金されます。
 
 ### 関連リンク
 

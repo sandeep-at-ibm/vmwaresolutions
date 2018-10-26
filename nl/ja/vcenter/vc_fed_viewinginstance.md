@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-25"
 
 さまざまなユーザー・アカウントに対してプロビジョンされる VMware Federal インスタンスのサマリーおよび詳細情報を表示します。
 
-## VMware Federal インスタンス・サマリーの表示
+## VMware Federal インスタンスのサマリーを表示する手順
 
 ユーザー・アカウントに対してプロビジョンされるすべての VMware Federal のサマリーを表示するには、以下の手順を実行します。
 1. {{site.data.keyword.vmwaresolutions_full}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
@@ -24,7 +24,7 @@ lastupdated: "2018-09-25"
 | 項目        | 説明       |  
 |:------------- |:------------- |
 | 名前 | インスタンスの名前。 |
-| バージョン | インスタンスがデプロイされたリリース・バージョン、またはアップグレード後のリリース・バージョン。|  
+| バージョン | インスタンスがデプロイされたリリース・バージョン、またはアップグレード後のリリース・バージョン。 |  
 | ロケーション | インスタンスがホストされている {{site.data.keyword.CloudDataCent_notm}}。 |  
 | 作成時間 | インスタンスが作成された日時。 |
 | 状況 | インスタンスの状況。 |
@@ -45,7 +45,7 @@ lastupdated: "2018-09-25"
 | 削除エラー | インスタンスの削除中にエラーが発生しました。 |
 | 削除済み | インスタンスは削除されました。 |
 
-## VMware Federal インスタンス・プロパティー詳細の表示
+## VMware Federal インスタンスのプロパティーの詳細を表示する手順
 
 インスタンスのプロパティーの詳細を表示するには、次の手順を実行します。
 
@@ -68,7 +68,7 @@ lastupdated: "2018-09-25"
 | DNS サブドメイン | サブドメインは、ローカル vCenter Server インスタンスのホスト名が存在するルート・ドメイン・ネームの DNS サブドメイン・ネームです。 サブドメイン名の形式は <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp> になります。 |
 | 状況 | インスタンスの状況。 |
 
-## VMware Federal インスタンスのアクセス情報の表示
+## VMware Federal インスタンスのアクセス情報を表示する手順
 
 **「アクセス情報」**の下に、インスタンス関連コンポーネントのアクセス情報が表示されます。 表示されるパスワードは、システムによって生成される初期パスワードです。 それらを {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、インスタンスのサマリー・ページでは更新されません。
 
@@ -77,7 +77,7 @@ lastupdated: "2018-09-25"
 | コンポーネント        | 説明       |
 |:------------- |:------------- |
 | AD/DNS IP | 2 つの AD サーバーの IP アドレス。 |
-| AD/DNS FQDN | AD/DNS サーバーの完全修飾ドメイン・ネーム。<br><br>**注**: すべての AD/DNS サーバーに同じ管理者パスワードを使用してリモート・デスクトップ接続を確立できます。 |
+| AD/DNS FQDN | AD/DNS サーバーの完全修飾ドメイン・ネーム。<br><br>**注:** すべての AD/DNS サーバーに同じ管理者パスワードを使用してリモート・デスクトップ接続を確立できます。 |
 | AD/DNS ADMIN (リモート・デスクトップ)  | プライマリー・インスタンスの場合は、リモート・デスクトップ接続を介して AD サーバーにアクセスするためのユーザー名とパスワードが表示されます。
 | NSX Manager IP  | NSX Manager の IP アドレス。  |
 | NSX Manager FQDN  | NSX Manager の完全修飾ドメイン・ネーム (FQDN)。  |
@@ -91,7 +91,7 @@ lastupdated: "2018-09-25"
 | vCenter ADMIN  | vSphere Web Client を使用して vCenter Server にログインするために使用できる VMware vCenter Single Sign-On ユーザー名とパスワード。  |
 | vCenter SSH  | SSH 接続で vCenter Server VM にアクセスするために使用できるユーザー名とパスワード。  |
 
-## VMware Federal インスタンスのデプロイメント履歴の表示
+## VMware Federal インスタンスのデプロイメント履歴を表示する手順
 
 左側のナビゲーション・ペインで**「デプロイメント履歴」**をクリックすると、インスタンスのデプロイメント履歴が表示されます。
 
@@ -110,7 +110,7 @@ lastupdated: "2018-09-25"
 
 {{site.data.keyword.vmwaresolutions_short}} コンソールまたは VMware vSphere Web Client からインスタンスを管理します。
 
-**重要**: インスタンスのサマリー・ページで**「vCenter コンソール」**をクリックして vSphere Web Client にアクセスし、ESXi サーバーの管理を開始するには、その前に {{site.data.keyword.CloudDataCent_notm}}の VPN ポータルにログインしておく必要があります。 **「vCenter コンソール」**ボタンにマウスオーバーし、指示に従って、すべての要件を満たしていること、また、vSphere Web Client にアクセスするために必要な手順を実行したことを確認してください。
+**重要:** インスタンスのサマリー・ページで**「vCenter コンソール」**をクリックして vSphere Web Client にアクセスし、ESXi サーバーの管理を開始するには、その前に {{site.data.keyword.CloudDataCent_notm}}の VPN ポータルにログインしておく必要があります。 **「vCenter コンソール」**ボタンにマウスオーバーし、指示に従って、すべての要件を満たしていること、また、vSphere Web Client にアクセスするために必要な手順を実行したことを確認してください。
 
 ログイン手順を実行するには、以下のトピックを参照してください。
 *  vSphere Web Client にアクセスするための要件と必要な手順については、[Timeout reached while connecting to the vSphere Web Client](../vmonic/trbl_timeout_vc_console.html) を参照してください。

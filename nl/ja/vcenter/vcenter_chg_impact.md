@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -24,11 +24,11 @@ lastupdated: "2018-09-20"
 
 サービスごとに、vCenter Server 内に内部ユーザー・アカウントが作成されます。 このアカウントは、サービスに関連付けられている管理操作が vCenter Server に接続できるようにすることで、サービスに対して操作を実行できるようにするために必要になります。
 
-**重要**: 障害や接続の問題を防止するために、このユーザー・アカウントのユーザー ID、パスワード、またはパスワードの有効期限設定を変更する場合は、必ず、関連付けられたサービスの情報も更新してください。
+**重要:** 障害や接続の問題を防止するために、このユーザー・アカウントのユーザー ID、パスワード、またはパスワードの有効期限設定を変更する場合は、必ず、関連付けられたサービスの情報も更新してください。
 
 このアカウントのユーザー ID の形式は、`<service_name>-<truncated service_uuid>@test.local` または`<service_name>-<truncated service_uuid>@example-domain.local` です。 例えば、vCenter Server に接続して定期バックアップを実行するために Veeam on {{site.data.keyword.cloud_notm}} サービスで使用するユーザー ID は、`Veeam-<Veeam_uuid>@test.local` です。
 
-**注**: `<service_uuid>` を含む `<service_name>` は 20 文字で切り捨てられます。
+**注:** `<service_uuid>` を含む `<service_name>` は 20 文字で切り捨てられます。
 
 ## vCenter Server インスタンスの VMware リソース (V1.9 以降)
 
@@ -63,7 +63,7 @@ V1.9 以降でデプロイされたインスタンスの場合は、vCenter Serv
 
 {{site.data.keyword.vmwaresolutions_short}} によって注文されるサブネットについて以下に説明します。また、専用のサブネットを追加注文するオプションについても説明します。
 
-**注意**: これらのコンポーネントを他の目的で使用しないでください。環境の安定性が著しく損なわれます。
+**注意:** これらのコンポーネントを他の目的で使用しないでください。環境の安定性が著しく損なわれます。
 
 {{site.data.keyword.cloud_notm}}でベア・メタル・サーバーを注文するたびに、デフォルトで以下の IP アドレス範囲が注文されます。
 *  32 個の IP アドレスを含むプライマリー・パブリック範囲
