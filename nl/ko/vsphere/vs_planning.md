@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-11"
 
 VMware vSphere on {{site.data.keyword.cloud}}를 주문하기 전에 다음 요구사항을 검토하십시오. {{site.data.keyword.CloudDataCent_notm}} 위치와 워크로드 성능 및 용량 요구사항에 따라 VMware vSphere 클러스터를 계획하십시오.
 
-**참고**: 환경을 설정하고, ESXi 서버가 배치된 후 여러 VMware 컴포넌트를 설치하고 구성해야 합니다. 다음 예는 VMware 컴포넌트입니다. VMware vCenter Server, VMware NSX, 및 VMware vSAN.
+**참고:** 환경을 설정하고, ESXi 서버가 배치된 후 여러 VMware 컴포넌트를 설치하고 구성해야 합니다. 다음 예는 VMware 컴포넌트입니다. VMware vCenter Server, VMware NSX, 및 VMware vSAN.
 
 ## IBM Cloud 계정 요구사항
 
