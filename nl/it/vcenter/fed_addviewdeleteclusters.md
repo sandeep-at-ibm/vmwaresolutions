@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -14,7 +14,7 @@ I server ESXi che hai configurato quando hai ordinato un'istanza vengono raggrup
 
 Puoi aggiungere cluster alle tue istanze VMware Federal per espandere la capacità di calcolo e archiviazione. All'interno di un cluster, puoi gestire i server ESXi per una migliore allocazione delle risorse e alta disponibilità. Quando non sono più necessari, puoi eliminare i cluster aggiunti dalle tue istanze.
 
-**Disponibilità**: la funzione di aggiunta ed eliminazione dei cluster è disponibile solo per le istanze che sono state distribuite o aggiornate alle release della V2.3 e successive.
+**Disponibilità:** la funzione di aggiunta ed eliminazione dei cluster è disponibile solo per le istanze che sono state distribuite o aggiornate alle release della V2.3 e successive.
 
 ## Aggiunta di cluster alle istanze VMware Federal
 
@@ -68,15 +68,10 @@ Le impostazioni di archiviazione si basano sulla tua selezione della configurazi
 #### Archiviazione vSAN
 
 Specifica le seguenti opzioni vSAN:
-
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
-* **Tipo di disco per i dischi cache vSAN**: seleziona un'opzione per i dischi di cache di cui hai bisogno.
-
-    **Nota**: se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
-
-
-* **Numero di dischi cache vSAN**: specifica il numero di dischi di cache che vuoi aggiungere.
+* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
+* Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
 * **Licenza vSAN**: seleziona l'edizione della licenza VMware vSAN 6.6 (Advanced o Enterprise).
 
 Se il tuo cluster iniziale è stato aggiunto come cluster vSAN, tutti gli ulteriori cluster vSAN utilizzano la stessa licenza vSAN e la stessa configurazione del cluster vSAN iniziale. Questo vale anche se in qualsiasi cluster (iniziale o aggiuntivo) dell'istanza è stato scelto di distribuire vSAN. La prima volta che aggiungi un cluster, ti viene richiesta la licenza vSAN e l'edizione. La prossima volta che selezioni vSAN per un nuovo cluster, viene riutilizzata qualsiasi cosa tu abbia scelto inizialmente.
@@ -103,7 +98,7 @@ Tabella 2. Opzioni del livello di prestazioni NFS
 
 ### Impostazioni di licenza
 
-	Licenze fornite da {{site.data.keyword.IBM}} per i seguenti componenti VMware:
+Licenze fornite da {{site.data.keyword.IBM}} per i seguenti componenti VMware:
   * vSphere Enterprise Plus 6.5u1
   * vCenter Server 6.5
   * NSX Service Providers 6.4 (Edizione Base, Advanced o Enterprise)
@@ -115,10 +110,10 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 
 ## Procedura per aggiungere i cluster alle istanze VMware Federal
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanza vCenter Server**, fai clic sull'istanza a cui vuoi aggiungere i cluster.
 
-   **Nota**: assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
+   **Nota:** assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra e quindi su **Aggiungi** nell'angolo superiore destro della tabella **CLUSTER**.
 4. Nella pagina **Aggiungi cluster**, immetti il nome del cluster.
 5. Seleziona il **Modello CPU**, la quantità di **RAM** e il **Numero di server Bare Metal** per la configurazione Bare Metal.
@@ -138,9 +133,9 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 1. La distribuzione del cluster viene avviata automaticamente e lo stato del cluster viene modificato in **Inizializzazione**. Puoi controllare lo stato della distribuzione visualizzando la cronologia di distribuzione dalla pagina di riepilogo dell'istanza.
 2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere High Availability (HA) e vSphere Distributed Resource Scheduler (DRS).
 
-**Importante**: non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
+**Importante:** non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
 
-## Visualizzazione dei cluster nelle istanze VMware Federal
+## Procedura per visualizzare i cluster nelle istanze VMware Federal
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic su un'istanza per visualizzare i cluster al suo interno.
@@ -219,7 +214,7 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 
 Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 
-**Nota**: utilizza questa procedura per rimuovere i cluster dalle istanze che sono state distribuite o aggiornate alle release della V2.3 e successive.
+**Nota:** utilizza questa procedura per rimuovere i cluster dalle istanze che sono state distribuite o aggiornate alle release della V2.3 e successive.
 
 ### Prima di eliminare
 
@@ -235,7 +230,7 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza da cui vuoi eliminare i cluster.
 
-   **Nota**: assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. Altrimenti, non potrai eliminare i cluster dall'istanza.
+   **Nota:** assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. Altrimenti, non potrai eliminare i cluster dall'istanza.
 
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, individua il cluster che vuoi eliminare e fai clic sull'icona **Elimina** nella colonna **Azioni**.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-25"
 
 Visualizza il riepilogo e le informazioni dettagliate delle istanze VMware Federal fornite per account utente diversi.
 
-## Visualizzazione del riepilogo delle istanze VMware Federal
+## Procedura per visualizzare il riepilogo delle istanze VMware Federal
 
 Per visualizzare un riepilogo di tutte le istanze VMware Federal fornite per un account utente, completa la seguente procedura:
 1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
@@ -24,7 +24,7 @@ Tabella 1. Elementi dell'istanza VMware Federal
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
 | Nome | Il nome dell'istanza. |
-| Versione | La versione di release in cui è stata distribuita o aggiornata l'istanza.|  
+| Versione | La versione di release in cui è stata distribuita o aggiornata l'istanza. |  
 | Ubicazione | Il {{site.data.keyword.CloudDataCent_notm}} in cui è ospitata l'istanza. |  
 | Ora di creazione | La data e ora di creazione dell'istanza. |
 | Stato | Lo stato dell'istanza. |
@@ -45,7 +45,7 @@ Tabella 2. Descrizioni dello stato delle istanze nel data center VMware Federal
 | Errore di eliminazione | Si è verificato un errore durante l'eliminazione dell'istanza. |
 | Eliminato | L'istanza è stata eliminata. |
 
-## Visualizzazione dei dettagli delle proprietà dell'istanza VMware Federal
+## Procedura per visualizzare i dettagli delle proprietà delle istanze VMware Federal
 
 Per visualizzare i dettagli delle proprietà di un'istanza:
 
@@ -68,7 +68,7 @@ Tabella 3. Proprietà dell'istanza VMware Federal
 | Dominio secondario DNS | Il dominio secondario è il nome del dominio secondario DNS del nome di dominio root in cui risiedono i nomi host delle istanze vCenter Server locali. Il nome del dominio secondario è nel formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 | Stato | Lo stato dell'istanza. |
 
-## Visualizzazione delle informazioni di accesso per le istanze VMware Federal
+## Procedura per visualizzare le informazioni di accesso per le istanze VMware Federal
 
 In **Informazioni sull'accesso**, visualizza le informazioni di accesso per i componenti relativi all'istanza. Le password visualizzate sono le password iniziali generate dal sistema. Se le modifichi all'esterno della console {{site.data.keyword.vmwaresolutions_short}}, non vengono aggiornate nella pagina di riepilogo dell'istanza.
 
@@ -77,7 +77,7 @@ Tabella 4. Informazioni di accesso per i componenti relativi all'istanza
 | Componente        | Descrizione       |
 |:------------- |:------------- |
 | IP AD/DNS | Gli indirizzi IP dei due server AD. |
-| Nomi di dominio completo AD/DNS | I nomi di dominio completi del server AD/DNS.<br><br>**Nota**: è possibile utilizzare la stessa password amministratore per connettersi a tutti i server AD/DNS utilizzando una connessione al desktop remoto. |
+| Nomi di dominio completo AD/DNS | I nomi di dominio completi del server AD/DNS.<br><br>**Nota:** è possibile utilizzare la stessa password amministratore per connettersi a tutti i server AD/DNS utilizzando una connessione al desktop remoto. |
 | ADMIN AD/DNS (Desktop remoto)  | Per le istanze primarie, visualizza il nome utente e la password per accedere al server AD tramite una connessione al desktop remoto.
 | IP NSX Manager  | L'indirizzo IP di NSX Manager.  |
 | Nome di dominio completo NSX Manager  | Il nome di dominio completo di NSX Manager.  |
@@ -91,7 +91,7 @@ Tabella 4. Informazioni di accesso per i componenti relativi all'istanza
 | ADMIN vCenter  | Il nome utente e la password di VMware vCenter Single Sign-On che puoi utilizzare per accedere a vCenter Server utilizzando il client web vSphere.  |
 | SSH vCenter  | Il nome utente e la password che puoi utilizzare per accedere alla VM di vCenter Server tramite una connessione SSH.  |
 
-## Visualizzazione della cronologia di distribuzione per le istanze VMware Federal
+## Procedura per visualizzare la cronologia di distribuzione per le istanze VMware Federal
 
 Fai clic su **Cronologia distribuzione** dal riquadro di navigazione a sinistra per visualizzare la cronologia di distribuzione per l'istanza.
 
@@ -110,7 +110,7 @@ Se si verificano degli errori durante la distribuzione o l'eliminazione dell'ist
 
 Gestisci le tue istanze dalla console {{site.data.keyword.vmwaresolutions_short}} o dal client web VMware vSphere.
 
-**Importante**: prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza per passare al client web vSphere e iniziare a gestire i tuoi server ESXi, devi accedere al portale VPN del {{site.data.keyword.CloudDataCent_notm}}. Passa con il mouse sul pulsante **Console vCenter** e segui le istruzioni per assicurarti di soddisfare tutti i requisiti e di aver completato i passi necessari prima di accedere al client web vSphere.
+**Importante:** prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza per passare al client web vSphere e iniziare a gestire i tuoi server ESXi, devi accedere al portale VPN del {{site.data.keyword.CloudDataCent_notm}}. Passa con il mouse sul pulsante **Console vCenter** e segui le istruzioni per assicurarti di soddisfare tutti i requisiti e di aver completato i passi necessari prima di accedere al client web vSphere.
 
 Rivedi i seguenti argomenti per informazioni utili per completare le istruzioni di accesso:
 *  Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](../vmonic/trbl_timeout_vc_console.html).

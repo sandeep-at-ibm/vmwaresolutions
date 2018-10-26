@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -24,11 +24,11 @@ Gli utenti e le password per le operazioni automatizzate nella console non devon
 
 Ogni servizio crea un account utente interno in vCenter Server. Questo account è necessario affinché le operazioni di gestione associate a un servizio possano connettersi a vCenter Server per eseguire le operazioni sul servizio.
 
-**Importante**: per evitare interruzioni e problemi di connessione, se modifichi le impostazioni di ID utente, password o scadenza password per questo account utente, assicurati di aggiornare le informazioni anche nel servizio associato.
+**Importante:** per evitare interruzioni e problemi di connessione, se modifichi le impostazioni di ID utente, password o scadenza password per questo account utente, assicurati di aggiornare le informazioni anche nel servizio associato.
 
 L'ID utente per questo account è nel formato `<service_name>-<truncated service_uuid>@test.local` o `<service_name>-<truncated service_uuid>@example-domain.local`. Ad esempio, l'ID utente utilizzato dal servizio Veeam on {{site.data.keyword.cloud_notm}} per connettersi a vCenter Server per eseguire backup pianificati è `Veeam-<Veeam_uuid>@test.local`.
 
-**Nota**: il `<service_name>` insieme al `<service_uuid>` viene troncato a 20 caratteri.
+**Nota:** il `<service_name>` insieme al `<service_uuid>` viene troncato a 20 caratteri.
 
 ## Risorse VMware per le istanze vCenter Server (V1.9 e successive)
 
@@ -63,7 +63,7 @@ Tabella 2. Operazioni interessate dall'accesso root VC/PSC (locale)
 
 Le seguenti informazioni trattano le sottoreti ordinate da {{site.data.keyword.vmwaresolutions_short}} e forniscono opzioni per ordinare sottoreti aggiuntive per uso personale.
 
-**ATTENZIONE**: non utilizzare questi componenti per altri scopi o la stabilità del tuo ambiente sarà gravemente compromessa.
+**ATTENZIONE:** non utilizzare questi componenti per altri scopi altrimenti la stabilità del tuo ambiente sarà gravemente compromessa.
 
 Con ogni ordine di Bare Metal Server {{site.data.keyword.cloud_notm}}, vengono ordinati i seguenti intervalli di indirizzi IP per impostazione predefinita:
 *  Un intervallo pubblico primario di 32 indirizzi IP
