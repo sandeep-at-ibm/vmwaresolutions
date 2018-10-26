@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,11 +18,11 @@ La modifica di utenti, risorse o sottoreti riservati a {{site.data.keyword.vmwar
 
 Ogni servizio crea un account utente interno in vCenter Server. Questo account è necessario affinché le operazioni di gestione associate a un servizio possano connettersi a vCenter Server per eseguire le operazioni sul servizio.
 
-**Importante**: per evitare interruzioni e problemi di connessione, se modifichi le impostazioni di ID utente, password o scadenza password per questo account utente, assicurati di aggiornare le informazioni anche nel servizio associato.
+**Importante:** per evitare interruzioni e problemi di connessione, se modifichi le impostazioni di ID utente, password o scadenza password per questo account utente, assicurati di aggiornare le informazioni anche nel servizio associato.
 
 L'ID utente per questo account è nel formato `<service_name>-<truncated service_uuid>@test.local` o `<service_name>-<truncated service_uuid>@example-domain.local`. Ad esempio, l'ID utente utilizzato dal servizio Veeam on {{site.data.keyword.cloud_notm}} per connettersi a vCenter Server per eseguire backup pianificati è `Veeam-<Veeam_uuid>@test.local`.
 
-**Nota**: il `<service_name>` insieme al `<service_uuid>` viene troncato a 20 caratteri.
+**Nota:** il `<service_name>` insieme al `<service_uuid>` viene troncato a 20 caratteri.
 
 ## Risorse VMware per le istanze Cloud Foundation
 
@@ -43,7 +43,7 @@ Tabella 1. Operazioni interessate per l'amministratore SSO (cliente)
 
 Le seguenti informazioni trattano le sottoreti ordinate da {{site.data.keyword.vmwaresolutions_short}} e forniscono opzioni per ordinare sottoreti aggiuntive per uso personale.
 
-**ATTENZIONE**: non utilizzare questi componenti per altri scopi o la stabilità del tuo ambiente sarà gravemente compromessa.
+**ATTENZIONE:** non utilizzare questi componenti per altri scopi altrimenti la stabilità del tuo ambiente sarà gravemente compromessa.
 
 Con ogni ordine di Bare Metal Server {{site.data.keyword.cloud_notm}}, vengono ordinati i seguenti intervalli di indirizzi IP per impostazione predefinita:
 
@@ -58,5 +58,5 @@ Inoltre, a {{site.data.keyword.vmwaresolutions_short}} sono anche riservate le s
 
 Se hai bisogno di utilizzare più sottoreti, puoi ottenere gli indirizzi IP da utilizzare in uno dei seguenti modi:
 
-* **Opzione 1 (consigliata)**: utilizza le sovrapposizioni della rete virtuale VMware NSX. Viene fornito un template VXLAN di esempio al momento dell'ordine. Questo template VXLAN può essere utilizzato come punto di partenza per la creazione di SDN.
-* **Opzione 2**: ordina le tue proprie sottoreti pubbliche o private portatili per ottenere gli indirizzi IP. Per distinguere le sottoreti che ordini da quelle di gestione, puoi aggiungere delle note a tutte le sottoreti che stai ordinando.
+* **Opzione 1 (consigliata):** utilizza le sovrapposizioni della rete virtuale VMware NSX. Viene fornito un template VXLAN di esempio al momento dell'ordine. Questo template VXLAN può essere utilizzato come punto di partenza per la creazione di SDN.
+* **Opzione 2:** ordina le tue proprie sottoreti pubbliche o private portatili per ottenere gli indirizzi IP. Per distinguere le sottoreti che ordini da quelle di gestione, puoi aggiungere delle note a tutte le sottoreti che stai ordinando.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -58,7 +58,7 @@ Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanz
 | Dimensione campione completa della coda | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | Soglia completa della coda | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
-**Note**:
+**Note:**
 * L'impostazione **MaxVolumes** è obbligatoria per il servizio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} perché il servizio potrebbe utilizzare più del numero predefinito di montaggi NFS sul server ESXi.
 * Il valore **Non impostato** per un'impostazione di configurazione indica che la nuova impostazione non viene applicata automaticamente perché richiede il riavvio dei server ESXi, il che potrebbe causare un'interruzione.
 

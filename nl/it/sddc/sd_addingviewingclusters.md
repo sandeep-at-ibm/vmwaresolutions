@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-14"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -16,7 +16,7 @@ I server ESXi che hai configurato quando hai ordinato un'istanza sono raggruppat
 
 Puoi aggiungere i tuoi propri cluster alle istanze VMware Cloud Foundation per espandere la capacità di calcolo e archiviazione. All'interno di un cluster, puoi gestire i server ESXi per una migliore allocazione delle risorse e alta disponibilità. Quando non sono più necessari, puoi eliminare i cluster aggiunti dalle tue istanze.
 
-**Disponibilità**:
+**Disponibilità:**
 * La funzione di aggiunta cluster è disponibile solo per le istanze che sono state distribuite o aggiornate alle release della V2.0 e successive.
 * La funzione di eliminazione cluster è disponibile solo per le istanze che sono state distribuite o aggiornate alle release della V2.3 e successive.  
 
@@ -40,7 +40,7 @@ Il nome del cluster deve rispettare i seguenti requisiti:
 
 L'ubicazione del {{site.data.keyword.CloudDataCent}} del cluster è impostata sul {{site.data.keyword.CloudDataCent_notm}} dell'istanza Cloud Foundation per impostazione predefinita. Puoi distribuire il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso rispetto a quello dell'istanza distribuita, ma devi assicurarti che la latenza di rete tra i due {{site.data.keyword.CloudDataCents_notm}} sia inferiore a 150 ms. Per controllare la latenza di rete, puoi utilizzare uno strumento come [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-I data center disponibili dipendono dalla configurazione Bare Metal Server selezionata per la distribuzione. Se selezioni la configurazione **Personalizzato**, puoi anche distribuire il cluster in un pod dell'infrastruttura {{site.data.keyword.cloud}} diverso, nel caso in cui il data center selezionato contenga più pod. Questa configurazione è utile quando il pod dell'infrastruttura {{site.data.keyword.cloud_notm}} predefinito in cui è distribuita l'istanza iniziale ha raggiunto la sua capacità massima.
+I data center disponibili dipendono dalla configurazione Bare Metal Server selezionata per la distribuzione. Se selezioni la configurazione **Personalizzato**, puoi anche distribuire il cluster in un pod dell'infrastruttura {{site.data.keyword.cloud_notm}} diverso, nel caso in cui il data center selezionato contenga più pod. Questa configurazione è utile quando il pod dell'infrastruttura {{site.data.keyword.cloud_notm}} predefinito in cui è distribuita l'istanza iniziale ha raggiunto la sua capacità massima.
 
 **Nota:** le configurazioni standardizzate **Small** e **Large** di Bare Metal Server utilizzano un pod predefinito che non può essere modificato.
 
@@ -81,16 +81,14 @@ Per la configurazione **Personalizzato** di Bare Metal Server, puoi personalizza
 
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
-* **Tipo di disco per i dischi cache vSAN**: seleziona un'opzione per i dischi di cache di cui hai bisogno.
-
-    **Nota**: se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
-* **Numero di dischi cache vSAN**: specifica il numero di dischi di cache che vuoi aggiungere.
+* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
+* Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
 
 ### Impostazioni di licenza
 
 Puoi specificare le opzioni di licenza per i componenti VMware nel cluster, inclusi VMware vSphere e VMware vSAN:
-* Per gli utenti Business Partner, la licenza vSphere (Enterprise Plus edition) e la licenza vSAN sono incluse e acquistate per tuo conto. Tuttavia, devi specificare l'edizione per la licenza vSAN.
-* Per gli utenti non Business Partner, per i componenti puoi utilizzare le licenze VMware fornite da IBM selezionando **Includi con l'acquisto** o puoi utilizzare l'opzione Bring Your Own License (BYOL) selezionando **Fornita dall'utente** e immettendo le tue chiavi di licenza.
+* Per gli utenti Business Partner IBM, la licenza vSphere (Enterprise Plus edition) e la licenza vSAN sono incluse e acquistate per tuo conto. Tuttavia, devi specificare l'edizione per la licenza vSAN.
+* Per gli utenti che non sono Business Partner IBM, puoi utilizzare le licenze VMware fornite da IBM per i componenti selezionando **Includi con l'acquisto** o puoi utilizzare l'opzione BYOL (Bring Your Own License) selezionando **Fornita dall'utente** e immettendo le tue chiavi di licenza.
 
 ## Procedura per aggiungere i cluster alle istanze Cloud Foundation
 
@@ -99,7 +97,7 @@ Puoi specificare le opzioni di licenza per i componenti VMware nel cluster, incl
 
    **Nota:** assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
 
-3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra e quindi su **Aggiungi** nell'angolo superiore destro della tabella **CLUSTER**.
+3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra e quindi su **Aggiungi** nella parte superiore destra della tabella **CLUSTER**.
 4. Nella pagina **Aggiungi cluster**, immetti il nome del cluster.
 5. Se vuoi ospitare il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso da quello in cui è ospitata l'istanza, in **Bare Metal Server**, seleziona la casella di spunta **Seleziona un'ubicazione differente** e scegli il {{site.data.keyword.CloudDataCent_notm}} per ospitare l'istanza.
 6. Completa la configurazione Bare Metal:
@@ -109,8 +107,8 @@ Puoi specificare le opzioni di licenza per i componenti VMware nel cluster, incl
    * Se hai selezionato **Preconfigurato** per la configurazione Bare Metal, le impostazioni di archiviazione per le configurazioni **Small** e **Large** di Bare Metal Server non possono essere modificate.
    * Se hai selezionato **Personalizzato** per la configurazione Bare Metal, specifica i tipi di disco per i dischi di capacità vSAN e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
 8. Specifica come vengono fornite le tue chiavi di licenza:
-   * Per gli utenti Business Partner, la licenza vSphere (Enterprise Plus edition) e la licenza vSAN sono incluse e acquistate per tuo conto. Tuttavia, devi specificare l'edizione per la licenza vSAN.
-   * Per gli utenti non Business Partner, puoi selezionare una delle seguenti opzioni:
+   * Per gli utenti Business Partner IBM, la licenza vSphere (Enterprise Plus edition) e la licenza vSAN sono incluse e acquistate per tuo conto. Tuttavia, devi specificare l'edizione per la licenza vSAN.
+   * Per gli utenti che non sono Business Partner IBM, puoi selezionare una delle seguenti opzioni:
        * Se vuoi acquistare nuove licenze per tuo conto, seleziona **Includi con l'acquisto** per i componenti. Per VMware vSAN, seleziona anche l'edizione della licenza.
        * Se vuoi utilizzare la tua propria licenza VMware per un componente, seleziona **Fornita dall'utente** e immetti la chiave di licenza per il componente.
 9. Nel riquadro **Riepilogo ordine**, verifica la configurazione del cluster prima di aggiungerlo.
@@ -124,9 +122,9 @@ Puoi specificare le opzioni di licenza per i componenti VMware nel cluster, incl
 1. La distribuzione del cluster viene avviata automaticamente e lo stato del cluster viene modificato in **Inizializzazione**. Puoi controllare lo stato della distribuzione visualizzando la cronologia di distribuzione nella pagina di riepilogo dell'istanza.
 2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere High Availability (HA) e vSphere Distributed Resource Scheduler (DRS).
 
-**Importante**: non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
+**Importante:** non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
 
-## Visualizzazione dei cluster nelle istanze Cloud Foundation
+## Procedura per visualizzare i cluster nelle istanze Cloud Foundation
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic su un'istanza per visualizzare i cluster al suo interno.
@@ -192,14 +190,14 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 * Puoi eliminare un singolo cluster alla volta. Per eliminare più cluster, devi farlo in sequenza: attendere che il cluster precedente venga eliminato prima di tentare di eliminare quello successivo.
 * Assicurati che tutti i nodi in un cluster siano accesi e operativi prima di eliminare il cluster.
 * Quando elimini un cluster, da questo vengono eliminate anche tutte le VM (macchine virtuali) e non possono essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.
-* Non è possibile eliminare il cluster predefinito.
+* Il cluster predefinito non può essere eliminato.
 
 ## Procedura per eliminare i cluster dalle istanze Cloud Foundation
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza da cui vuoi eliminare i cluster.
 
-   **Nota**: assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. Altrimenti, non potrai eliminare i cluster dall'istanza.
+   **Nota:** assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. Altrimenti, non puoi eliminare i cluster dall'istanza.
 
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, individua il cluster che vuoi eliminare e fai clic sull'icona **Elimina**.
 4. Conferma di aver completato la migrazione delle VM in altri cluster, se appropriato, e di voler eliminare il cluster.

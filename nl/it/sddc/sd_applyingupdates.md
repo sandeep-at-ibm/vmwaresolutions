@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -48,7 +48,7 @@ Tabella 1. Livelli di aggiornamento e impatto
   </tr>
 </table>
 
-## Procedura
+## Procedura per applicare aggiornamenti alle istanze Cloud Foundation
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza da aggiornare.

@@ -1,35 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="600px" height="320px" viewBox="0 0 600 320" style="enable-background:new 0 0 600 320;" xml:space="preserve">
+	 viewBox="0 0 600 320" style="enable-background:new 0 0 600 320;" xml:space="preserve">
 <style type="text/css">
-<![CDATA[
-	.st0{fill:#4C85C5;}
-	.st1{font-size:31.4167;}
-	.st2{fill:#1DA88E;}
-	.st3{fill:#969696;}
-	.st4{font-size:15.7941;}
-	.st5{fill:#FFFFFF;}
-	.st6{font-size:22.8137;}
-	.st7{font-family:'Roboto-Light';}
-	.st8{font-size:14;}
-	.st9{font-size:21;}
-	.st10{font-size:23;}
-	.st11{font-size:24;}
-]]>
+	.st0{fill:#4C84C5;}
+	.st1{fill:#959595;}
+	.st2{fill:#1DA78D;}
+	.st3{fill:#FFFFFF;}
+	.st4{font-family:'Roboto-Light';}
+	.st5{font-size:26px;}
+	.st6{font-size:21px;}
+	.st7{font-size:18px;}
+	.st8{font-size:14px;}
 </style>
 <rect class="st0" width="600" height="100"/>
-<rect y="220" class="st3" width="600" height="100"/>
+<rect y="220" class="st1" width="600" height="100"/>
 <rect y="110" class="st2" width="190" height="100"/>
 <rect x="205" y="110" class="st2" width="190" height="100"/>
 <rect x="410" y="110" class="st2" width="190" height="100"/>
-<text transform="matrix(1 0 0 1 181.3018 43.3711)"><tspan x="0" y="0" class="st5 st7 st6">Gestione virtualizzazione</tspan><tspan x="14.2" y="34" class="st5 st7 st9">VMware vCenter Server </tspan></text>
-<text transform="matrix(1 0 0 1 18.7622 155.8755)"><tspan x="0" y="0" class="st5 st7 st4">Virtualizzazione calcolo</tspan><tspan x="25.9" y="23.9" class="st5 st7 st8">VMware vSphere </tspan></text>
-<text transform="matrix(0.9507 0 0 1 224.3594 155.8755)"><tspan x="0" y="0" class="st5 st7 st4">Virtualizzazione archivio</tspan><tspan x="21.4" y="23.9" class="st5 st7 st8">VMware Virtual SAN</tspan></text>
-<text transform="matrix(1 0 0 1 437.9297 155.8755)"><tspan x="0" y="0" class="st5 st7 st4">Virtualizzazione rete</tspan><tspan x="26.2" y="23.9" class="st5 st7 st8">VMware NSX  </tspan></text>
-<text transform="matrix(1 0 0 1 143.0225 263.5371)"><tspan x="0" y="0" class="st5 st7 st10">Infrastruttura fisica su IBM</tspan><tspan x="247.8" y="0" class="st5 st7 st1"> </tspan><tspan x="254.4" y="0" class="st5 st7 st11">Cloud</tspan></text>
-<text transform="matrix(1 0 0 1 271.1309 300.373)" class="st5 st7 st9">Archivio</text>
-<text transform="matrix(1 0 0 1 419.4492 300.373)" class="st5 st7 st9">Rete</text>
-<text transform="matrix(1 0 0 1 137.481 299.2559)" class="st5 st7 st9">Calcolo</text>
+<text transform="matrix(1 0 0 1 152.4775 43.3711)"><tspan x="0" y="0" class="st3 st4 st5">Virtualization Management</tspan><tspan x="45.3" y="34" class="st3 st4 st6">VMware vCenter Server</tspan></text>
+<text transform="matrix(1 0 0 1 8.5747 155.8755)"><tspan x="0" y="0" class="st3 st4 st7">Compute Virtualization</tspan><tspan x="37.6" y="23.9" class="st3 st4 st8">VMware vSphere</tspan></text>
+<text transform="matrix(1 0 0 1 219.127 155.8755)"><tspan x="0" y="0" class="st3 st4 st7">Storage Virtualization</tspan><tspan x="39.8" y="23.9" class="st3 st4 st8">VMware vSAN</tspan></text>
+<text transform="matrix(1 0 0 1 420.666 155.8755)"><tspan x="0" y="0" class="st3 st4 st7">Network Virtualization</tspan><tspan x="46.4" y="23.9" class="st3 st4 st8">VMware NSX</tspan></text>
+<text transform="matrix(1 0 0 1 104.6255 263.5371)" class="st3 st4 st5">Physical Infrastructure on IBM Cloud</text>
+<text transform="matrix(1 0 0 1 273.2098 300.3732)" class="st3 st4 st6">Storage</text>
+<text transform="matrix(1 0 0 1 401.5988 300.3732)" class="st3 st4 st6">Network</text>
+<text transform="matrix(1 0 0 1 128.7132 299.2558)" class="st3 st4 st6">Compute</text>
 </svg>

@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="600px" height="325px" viewBox="0 0 600 325" enable-background="new 0 0 600 325" xml:space="preserve">
+	 viewBox="0 0 450 247.8" style="enable-background:new 0 0 450 247.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#00ABB0;stroke:#00ABB0;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;}
+	.st2{font-family:'Roboto-Regular';}
+	.st3{font-size:13.1137px;}
+	.st4{fill:#118ACB;stroke:#118ACB;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#118ACB;stroke-miterlimit:10;}
+	.st6{fill:#118ACB;}
+</style>
 <g>
-	<rect x="211.065" y="134.546" fill="#00ABB0" stroke="#00ABB0" stroke-miterlimit="10" width="178.681" height="54.786"/>
-	<text transform="matrix(0.9982 0 0 1 231.8291 167.1816)" fill="#FFFFFF" font-family="'Roboto-Regular'" font-size="17.9367">Istanza primaria</text>
+	<rect x="159" y="102.6" class="st0" width="130.6" height="40.1"/>
+	<text transform="matrix(0.9982 0 0 1 174.1595 126.4508)" class="st1 st2 st3">Primary Instance</text>
 	<g>
-		<rect fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" width="178.681" height="54.786"/>
-		<text transform="matrix(0.9982 0 0 1 9.314 32.6348)" fill="#FFFFFF" font-family="'Roboto-Regular'" font-size="17.9367">Istanza secondaria</text>
-		<rect x="421.32" fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" width="178.68" height="54.786"/>
-		<text transform="matrix(0.9982 0 0 1 430.6318 32.6348)" fill="#FFFFFF" font-family="'Roboto-Regular'" font-size="17.9367">Istanza secondaria</text>
+		<rect x="4.7" y="4.2" class="st4" width="130.6" height="40.1"/>
+		<text transform="matrix(0.9982 0 0 1 11.4759 28.0817)" class="st1 st2 st3">Secondary Instance</text>
+		<rect x="312.7" y="4.2" class="st4" width="130.6" height="40.1"/>
+		<text transform="matrix(0.9982 0 0 1 319.5062 28.0817)" class="st1 st2 st3">Secondary Instance</text>
 	</g>
 	<g>
-		<rect y="270.213" fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" width="178.681" height="54.787"/>
-		<text transform="matrix(0.9982 0 0 1 9.314 302.8486)" fill="#FFFFFF" font-family="'Roboto-Regular'" font-size="17.9367">Istanza secondaria</text>
-		<rect x="421.32" y="270.213" fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" width="178.68" height="54.787"/>
-		<text transform="matrix(0.9982 0 0 1 430.6318 302.8486)" fill="#FFFFFF" font-family="'Roboto-Regular'" font-size="17.9367">Istanza secondaria</text>
+		<rect x="4.7" y="201.8" class="st4" width="130.6" height="40.1"/>
+		<text transform="matrix(0.9982 0 0 1 11.4759 225.6383)" class="st1 st2 st3">Secondary Instance</text>
+		<rect x="312.7" y="201.8" class="st4" width="130.6" height="40.1"/>
+		<text transform="matrix(0.9982 0 0 1 319.5062 225.6383)" class="st1 st2 st3">Secondary Instance</text>
 	</g>
 	<g>
 		<g>
 			<g>
-				<line fill="none" stroke="#118ACB" stroke-miterlimit="10" x1="182.443" y1="27.393" x2="294.672" y2="128.856"/>
+				<line class="st5" x1="138.1" y1="24.2" x2="219.4" y2="97.8"/>
 				<g>
-					<path fill="#118ACB" d="M297.358,131.284c-1.688-0.674-3.979-1.292-5.718-1.323l2.679-1.424l1.147-2.809
-						C295.673,127.455,296.518,129.673,297.358,131.284z"/>
+					<path class="st6" d="M222.1,100.2c-1.7-0.7-4-1.3-5.7-1.3l2.7-1.4l1.1-2.8C220.4,96.4,221.2,98.6,222.1,100.2z"/>
 				</g>
 			</g>
 		</g>
 		<g>
 			<g>
-				<line fill="none" stroke="#118ACB" stroke-miterlimit="10" x1="417.11" y1="27.393" x2="304.881" y2="128.856"/>
+				<line class="st5" x1="309.6" y1="24.2" x2="228.3" y2="97.8"/>
 				<g>
-					<path fill="#118ACB" d="M302.194,131.284c0.84-1.612,1.685-3.83,1.891-5.556l1.148,2.809l2.679,1.424
-						C306.174,129.993,303.882,130.61,302.194,131.284z"/>
+					<path class="st6" d="M225.6,100.2c0.8-1.6,1.7-3.8,1.9-5.6l1.1,2.8l2.7,1.4C229.6,98.9,227.3,99.5,225.6,100.2z"/>
 				</g>
 			</g>
 		</g>
@@ -41,33 +47,30 @@
 	<g>
 		<g>
 			<g>
-				<line fill="none" stroke="#118ACB" stroke-miterlimit="10" x1="182.443" y1="297.224" x2="294.672" y2="195.762"/>
+				<line class="st5" x1="138.1" y1="221.5" x2="219.4" y2="148"/>
 				<g>
-					<path fill="#118ACB" d="M297.358,193.333c-0.84,1.611-1.685,3.83-1.891,5.556l-1.148-2.809l-2.679-1.424
-						C293.379,194.625,295.671,194.007,297.358,193.333z"/>
+					<path class="st6" d="M222.1,145.6c-0.8,1.6-1.7,3.8-1.9,5.6l-1.1-2.8l-2.7-1.4C218.1,146.9,220.4,146.2,222.1,145.6z"/>
 				</g>
 			</g>
 		</g>
 		<g>
 			<g>
-				<line fill="none" stroke="#118ACB" stroke-miterlimit="10" x1="417.11" y1="297.224" x2="304.881" y2="195.762"/>
+				<line class="st5" x1="309.6" y1="221.5" x2="228.3" y2="148"/>
 				<g>
-					<path fill="#118ACB" d="M302.194,193.333c1.688,0.674,3.979,1.291,5.718,1.322l-2.679,1.425l-1.148,2.809
-						C303.88,197.162,303.035,194.944,302.194,193.333z"/>
+					<path class="st6" d="M225.6,145.6c1.7,0.7,4,1.3,5.7,1.3l-2.7,1.4l-1.1,2.8C227.3,149.4,226.4,147.2,225.6,145.6z"/>
 				</g>
 			</g>
 		</g>
 	</g>
 	<g>
-		<ellipse fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" cx="79.939" cy="106.871" rx="3.179" ry="3.186"/>
-		<ellipse fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" cx="79.939" cy="166.117" rx="3.179" ry="3.186"/>
-		<ellipse fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" cx="79.939" cy="216.7" rx="3.179" ry="3.186"/>
+		<ellipse class="st4" cx="63.1" cy="82.4" rx="2.3" ry="2.3"/>
+		<ellipse class="st4" cx="63.1" cy="125.7" rx="2.3" ry="2.3"/>
+		<ellipse class="st4" cx="63.1" cy="162.7" rx="2.3" ry="2.3"/>
 	</g>
 	<g>
-		<ellipse fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" cx="504.094" cy="113.598" rx="3.179" ry="3.186"/>
-		<path fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" d="M507.273,172.846c0,1.759-1.424,3.184-3.18,3.184
-			s-3.179-1.425-3.179-3.184c0-1.762,1.423-3.187,3.179-3.187S507.273,171.084,507.273,172.846z"/>
-		<ellipse fill="#118ACB" stroke="#118ACB" stroke-miterlimit="10" cx="504.094" cy="223.428" rx="3.179" ry="3.185"/>
+		<ellipse class="st4" cx="373.2" cy="87.3" rx="2.3" ry="2.3"/>
+		<ellipse class="st4" cx="373.2" cy="130.6" rx="2.3" ry="2.3"/>
+		<ellipse class="st4" cx="373.2" cy="167.6" rx="2.3" ry="2.3"/>
 	</g>
 </g>
 </svg>
