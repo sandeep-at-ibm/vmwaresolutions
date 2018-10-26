@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,7 +22,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} では、オプションの V
 
 ここには、VMware vSphere on {{site.data.keyword.cloud_notm}} のコンポーネントを記載します。
 
-**注**: 標準化されたハードウェア構成の使用可否と価格は、デプロイメントに選択した {{site.data.keyword.CloudDataCent_notm}}によって異なる場合があります。
+**注:** 標準化されたハードウェア構成の使用可否と価格は、デプロイメントに選択した {{site.data.keyword.CloudDataCent_notm}}によって異なる場合があります。
 
 ### VMware のコンポーネント
 
@@ -63,7 +63,7 @@ VMware vSAN コンポーネントを選択した場合は、vSAN 構成用のユ
   さらに、ホストごとに 960 GB のキャッシュ・ディスクが 2 つ注文されます。
 
   **注:** 3.8 TB SSD (ソリッド・ステート・ディスク) ドライブは、データ・センターで一般提供が開始されたらサポートされます。
-* High-Performance Intel Optane オプション。合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されます。このオプションは CPU モデルに応じて異なります。
+* High-Performance Intel Optane オプション。合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されます。 このオプションは CPU モデルに応じて異なります。
 
 ## vSphere クラスター拡張ノードの技術仕様
 
@@ -82,7 +82,7 @@ vSphere クラスター拡張ノードごとに、{{site.data.keyword.slportal}}
 * VMware vSphere Enterprise Plus 6.0u2 または 6.5u1 が適用された {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。  
 * [VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているオプションの VMware コンポーネント。
 
-**重要**: 注文して {{site.data.keyword.cloud_notm}} アカウントに提供された ESXi サーバー、オプションの VMware コンポーネント、追加のハードウェアの管理は、必ず {{site.data.keyword.slportal}}のみから行う必要があります。 {{site.data.keyword.vmwaresolutions_short}} コンソールで新規クラスターを作成した後、コンソールに戻り、保存されている情報を使用して、その新規クラスターを拡張できます。詳しくは、[既存の vSphere クラスターの拡張](vs_scalingexistingclusters.html)を参照してください。
+**重要:** 注文して {{site.data.keyword.cloud_notm}} アカウントに提供された ESXi サーバー、オプションの VMware コンポーネント、追加のハードウェアの管理は、必ず {{site.data.keyword.slportal}}のみから行う必要があります。 {{site.data.keyword.vmwaresolutions_short}} コンソールで新規クラスターを作成した後、コンソールに戻り、保存されている情報を使用して、その新規クラスターを拡張できます。 詳しくは、[既存の vSphere クラスターの拡張](vs_scalingexistingclusters.html)を参照してください。
 
 ### 関連リンク
 
