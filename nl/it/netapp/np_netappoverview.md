@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -57,7 +57,7 @@ NetApp ONTAP Select viene eseguito in un cluster VMware e virtualizza l'archivia
 
 Nella tua istanza NetApp ONTAP Select sono inclusi i seguenti componenti.
 
-**Nota**: la disponibilità e il prezzo delle configurazioni standard possono variare in base al {{site.data.keyword.CloudDataCent_notm}} selezionato per la distribuzione.
+**Nota:** la disponibilità e il prezzo delle configurazioni standardizzate potrebbero variare in base al {{site.data.keyword.CloudDataCent_notm}} selezionato per la distribuzione.
 
 ### Archiviazione
 
@@ -102,9 +102,9 @@ Due VSI (Virtual Server Instance):
 *  VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 *  Tariffa per supporto e servizi (una licenza per nodo)
 
-**Importante**: devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo al di fuori della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
+**Importante:** devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo dalla console {{site.data.keyword.vmwaresolutions_short}}, non dal {{site.data.keyword.slportal}} o da qualsiasi altro mezzo al di fuori della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
 
-**ATTENZIONE**: la gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}} (installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza) dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
+**ATTENZIONE:** la gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}} (installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza) dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
 *  Aggiunta, modifica, restituzione, rimozione o spegnimento dei componenti
 *  Espansione o contrazione della capacità dell'istanza mediante l'aggiunta o la rimozione di server ESXi
 *  Riavvio dei servizi

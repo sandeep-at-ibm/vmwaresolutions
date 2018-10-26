@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -85,7 +85,7 @@ Seleziona una configurazione Bare Metal Server in base ai tuoi requisiti:
 
 Il numero di server ESXi di un'istanza NetApp ONTAP Select è 4 per impostazione predefinita. Non puoi modificare questo valore. Tutti i server ESXi condividono la configurazione.
 
-## Procedura
+## Procedura per ordinare le istanze NetApp ONTAP Select
 
 1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **NetApp ONTAP Select** nella sezione **Data center virtuali**.
 2. Nella pagina **NetApp ONTAP Select**, fai clic su **Crea**.
@@ -114,9 +114,9 @@ Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in 
 
 Visualizza e gestisci l'istanza NetApp ONTAP Select che hai ordinato.
 
-**Importante**: devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo al di fuori della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
+**Importante:** devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo dalla console {{site.data.keyword.vmwaresolutions_short}}, non dal {{site.data.keyword.slportal}} o da qualsiasi altro mezzo al di fuori della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
 
-**ATTENZIONE**: la gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}} (installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza) dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
+**ATTENZIONE:** la gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}} (installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza) dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
 *  Aggiunta, modifica, restituzione o rimozione dei componenti
 *  Spegnimento dei componenti
 
