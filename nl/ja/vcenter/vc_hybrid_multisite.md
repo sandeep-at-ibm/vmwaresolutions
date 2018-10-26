@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2018-09-20"
 
 マルチサイト構成機能では、1 つのプライマリー・サイトおよび最大 7 つのセカンダリー・サイトから成る、ハブ・アンド・スポーク・トポロジーを使用します。 サポートされるのは単一層のサイトであるため、他のセカンダリー・サイトにリンクされた後続のサイトは構成できません。 マルチサイト構成では、すべてのインスタンスにわたって、ESXi サーバーを合計 128 台使用できます。
 
-**注**: 128 台を超える ESXi サーバーのマルチサイト・デプロイメントが必要な構成を使用する場合は、IBM サポートにお問い合わせください。 詳しくは、[IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)を参照してください。
+**注:** 128 台を超える ESXi サーバーのマルチサイト・デプロイメントが必要な構成を使用する場合は、IBM サポートにお問い合わせください。 詳しくは、[IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)を参照してください。
 
 次の図は、vCenter Server with Hybridity Bundle のマルチサイト・デプロイメントの全体像を示しています。
 
@@ -49,7 +49,7 @@ lastupdated: "2018-09-20"
 
 マルチサイト構成では、最大 8 つのインスタンス (プライマリー・インスタンス 1 つとセカンダリー・インスタンス 7 つ) をデプロイできます。
 
-**注**: マルチサイト構成に含まれている vCenter Server with Hybridity Bundle インスタンスを削除するには、特別な計画が必要です。 詳しくは、[マルチサイト構成の vCenter Server with Hybridity Bundle インスタンスの削除](vc_hybrid_deletinginstance_multi.html)を参照してください。
+**注:** マルチサイト構成に含まれている vCenter Server with Hybridity Bundle インスタンスを削除するには、特別な計画が必要です。 詳しくは、[マルチサイト構成の vCenter Server with Hybridity Bundle インスタンスの削除](vc_hybrid_deletinginstance_multi.html)を参照してください。
 
 ### 関連リンク
 

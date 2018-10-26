@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-09-21"
   | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。ここで `<n>` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大長は 50 文字です。 |
 
-**重要**: インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。変更すると、インスタンスを使用できなくなる可能性があります。例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
+**重要:** インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
 
 ## システム設定
 
@@ -50,7 +50,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 
 ## ライセンス交付の設定
 
-vCenter Server with Hybridity Bundle インスタンスの注文には、以下の VMware ライセンスが含められます。NSX および vSAN のライセンスのエディションを指定する必要があります。
+vCenter Server with Hybridity Bundle インスタンスの注文には、以下の VMware ライセンスが含められます。 NSX および vSAN のライセンスのエディションを指定する必要があります。
 
 * vCenter Server 6.5
 * vSphere Enterprise Plus 6.5u1
@@ -93,13 +93,10 @@ vSAN 構成の場合、初期クラスターとデプロイメント後のクラ
 ## ストレージ設定
 
 vCenter Server with Hybridity Bundle インスタンスの注文には、VMware vSAN 6.6 が含められます。 以下の vSAN オプションを指定します。
-
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
-* **vSAN キャッシュ・ディスクのディスク・タイプ**: 必要なキャッシュ・ディスクのオプションを選択します。
-
-    **注**: 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。**「High-Performance Intel Optane」**オプションは、Dual Intel Xeon Gold 5120 および 6140 プロセッサーでのみ使用できます。
-* **vSAN キャッシュ・ディスクの数**: 追加するキャッシュ・ディスクの数を指定します。
+* 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。 **「High-Performance Intel Optane」**オプションは、Dual Intel Xeon Gold 5120 および 6140 プロセッサーでのみ使用できます。
+* **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
 
 ## ネットワーク・インターフェースの設定
 
@@ -133,7 +130,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 
 ### パブリックまたはプライベート・ネットワーク
 
-ネットワーク・インターフェース・カード (NIC) の有効化設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。以下のアドオン・サービスはパブリック NIC を必要とするため、プライベート・オプションを選択した場合は利用できません。
+ネットワーク・インターフェース・カード (NIC) の有効化設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。 以下のアドオン・サービスはパブリック NIC を必要とするため、プライベート・オプションを選択した場合は利用できません。
 
 * F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
@@ -197,7 +194,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
   2. **「カスタマイズ型」**の CPU モデルと **RAM** の容量を選択します。
 
   **注:** **「ベア・メタル・サーバーの数」**はデフォルトで 4 に設定されます。変更はできません。
-7. ストレージ構成を次の手順で実行します。容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
+7. ストレージ構成を次の手順で実行します。 容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
 8. ネットワーク・インターフェース構成を行います。
   1. ホスト名接頭部、サブドメイン・ラベル、ルート・ドメイン・ネームを入力します。
   2. **「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のいずれかのネットワーク設定を選択します。
@@ -205,7 +202,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
      *  新規のパブリック VLAN とプライベート VLAN を注文する場合は、**「新規 VLAN を注文」**をクリックします。
      *  既存のパブリック VLAN とプライベート VLAN を使用できる場合に再利用するには、**「既存の VLAN を選択」**をクリックし、パブリック VLAN、プライマリー・サブネット、プライベート VLAN、プライベート・プライマリー・サブネット、セカンダリー・プライベート VLAN を選択します。
   4. DNS 構成を選択します。
-9. 組み込まれている HCX on {{site.data.keyword.cloud_notm}} サービスの構成を完了します。サービスの設定方法について詳しくは、[VMware HCX on IBM Cloud の注文](../services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration)の『_VMware HCX on IBM Cloud の構成_』セクションを参照してください。
+9. 組み込まれている HCX on {{site.data.keyword.cloud_notm}} サービスの構成を完了します。 サービスの設定方法について詳しくは、[VMware HCX on IBM Cloud の注文](../services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration)の『_VMware HCX on IBM Cloud の構成_』セクションを参照してください。
 10. インスタンスにデプロイするアドオン・サービスを、対応するサービス・カードをクリックして選択します。 サービスに構成が必要な場合は、サービス固有の設定を入力し、カードの**「サービスの追加」**をクリックします。  
 サービスの設定方法について詳しくは、対応するサービス注文トピックを参照してください。
 
@@ -229,10 +226,10 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
 
 注文した vCenter Server with Hybridity Bundle インスタンスを表示して管理します。
 
-**重要**: {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。
+**重要:** {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。
 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
 
-**注意**: インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
+**注意:** インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
 *  コンポーネントの追加、変更、返却、または削除
 *  ESXi サーバーの追加または削除によるインスタンス容量の拡張または縮小
 *  コンポーネントのパワーオフ

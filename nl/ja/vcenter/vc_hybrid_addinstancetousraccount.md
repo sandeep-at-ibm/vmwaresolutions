@@ -10,13 +10,13 @@ lastupdated: "2018-09-25"
 
 # IBM Cloud アカウントへの V2.5 より前の vCenter Server with Hybridity Bundle インスタンスのマイグレーション
 
-{{site.data.keyword.cloud}} アカウントで V2.5 以降にデプロイされた VMware vCenter Server with Hybridity Bundle インスタンスは、自動的にアカウントに追加されます。これらのインスタンスは、{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) によって管理されます。
+{{site.data.keyword.cloud}} アカウントで V2.5 以降にデプロイされた VMware vCenter Server with Hybridity Bundle インスタンスは、自動的にアカウントに追加されます。 これらのインスタンスは、{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) によって管理されます。
 
 V2.4 以前のリリースでデプロイされたインスタンスは、IAM 対応のユーザー管理のために指定された {{site.data.keyword.cloud_notm}} アカウントにマイグレーションできます。
 
 ## 始める前に
 
-インスタンスのマイグレーション先となる {{site.data.keyword.cloud_notm}} アカウントが IaaS 専用アカウントでないことを確認します。IaaS 専用アカウントは、{{site.data.keyword.cloud_notm}} アカウントにリンクされていない {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントです。
+インスタンスのマイグレーション先となる {{site.data.keyword.cloud_notm}} アカウントが IaaS 専用アカウントでないことを確認します。 IaaS 専用アカウントは、{{site.data.keyword.cloud_notm}} アカウントにリンクされていない {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントです。
 
 IaaS 専用アカウントと PaaS アカウントをリンクする方法について詳しくは、[Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/blogs/bluemix/2018/03/follow-steps-link-iaas-paas-accounts/) を参照してください。
 

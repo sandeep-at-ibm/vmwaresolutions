@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -21,10 +21,9 @@ vCenter Server インスタンスの注文プロセスの中で、以下のア�
 * サンプルの NSX 論理スイッチが、お客様のワークロード VM で使用するためにデプロイされます。
 * レイヤー 2 (L2) ネットワークに接続されているローカル・ワークロード間で実行される可能性のある東西通信用のサンプル NSX 分散論理ルーター (DLR) がデプロイされます。
 * NSX Edge アプライアンスがデプロイされ、NAT ルールでワークロード論理スイッチの IP アドレスの範囲をパブリック IP アドレスに変換するネットワーク・アドレス変換 (NAT) を実行するように構成されます。
-* {{site.data.keyword.cloud_notm}} サービスに Veeam をインストールした場合は、NSX Manager が NSX 構成の日次バックアップを実行するように構成されます。 詳しくは、[{{site.data.keyword.cloud_notm}} に Veeam をインストールする際の考慮事項](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud)を参照してください。
+* {{site.data.keyword.cloud_notm}} サービスに Veeam をインストールした場合は、NSX Manager が NSX 構成の日次バックアップを実行するように構成されます。 詳しくは、[{{site.data.keyword.cloud_notm}} に Veeam をインストールする際の考慮事項](../services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud)を参照してください。
 
-
-## VM のネットワーク設定の構成
+## VM のネットワーク設定を構成する手順
 
 ワークロード VM に NSX を利用するには、VM の作成時に次の手順を実行して、いくつかの設定を構成する必要があります。
 
@@ -43,7 +42,7 @@ vCenter Server インスタンスの注文プロセスの中で、以下のア�
 
 3. VM のデフォルト・ゲートウェイに `192.168.10.1` を割り当てます。 このアドレスは、ワークロード VM と同じ論理スイッチ上の NSX DLR の IP アドレスです。
 
-## SNAT ルールの有効化
+## SNAT ルールを有効にする手順
 
 ワークロード VM にインターネットへのアウトバウンド・アクセスを許可するには、関連付けられた SNAT (送信元ネットワーク・アドレス変換) ルールを有効にする必要があります。 SNAT ルールを有効にすると、VM からのインターネット・アクセスを単一のパブリック IP アドレスに変換できます。 VMware vSphere Web Client で以下の手順を実行します。
 
@@ -54,7 +53,7 @@ vCenter Server インスタンスの注文プロセスの中で、以下のア�
 
 NSX Edge NAT ルールについて詳しくは、[NAT ルールの管理](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}を参照してください。
 
-## カスタマー・サブネットの詳細の指定
+## カスタマー・サブネットの詳細を指定する手順
 
 **customer-nsx-edge** はお客様専用のエッジであるため、変更して、インバウンドまたはアウトバウンドのトラフィックに対する追加の NAT ルールを定義できます。 それらのルールでは、自動的に注文されたパブリックまたはプライベートのカスタマー・サブネットの IP アドレスだけを使用する必要があります。
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-25"
 
 さまざまなユーザー・アカウントに対してプロビジョンされる vCenter Server インスタンスのサマリーおよび詳細情報を表示します。
 
-## vCenter Server インスタンスのサマリーの表示
+## vCenter Server インスタンスのサマリーを表示する手順
 
 ユーザー・アカウントに対してプロビジョンされるすべての vCenter Server インスタンスのサマリーを表示するには、以下の手順を実行します。
 
@@ -45,7 +45,7 @@ lastupdated: "2018-09-25"
 | 削除エラー | インスタンスの削除中にエラーが発生しました。 |
 | 削除済み | インスタンスは削除されました。 |
 
-## vCenter Server インスタンスのプロパティーの詳細の表示
+## vCenter Server インスタンスのプロパティーの詳細を表示する手順
 
 インスタンスのプロパティーの詳細を表示するには、次の手順を実行します。
 
@@ -60,7 +60,7 @@ lastupdated: "2018-09-25"
 | ID | インスタンスの ID。 |
 | ロケーション | インスタンスがホストされている {{site.data.keyword.CloudDataCent_notm}}。 |
 | 現行バージョン | {{site.data.keyword.vmwaresolutions_short}} の現行バージョン。 |
-| vCenter バージョン | VMware vCenter Server のバージョン。<br><br>**注**: {{site.data.keyword.vmwaresolutions_short}} コンソールと VMware vSphere Web Client では、vCenter Server バージョンの表示が若干異なります。 どちらも正しい表示です。 |
+| vCenter バージョン | VMware vCenter Server のバージョン。<br><br>**注:** {{site.data.keyword.vmwaresolutions_short}} コンソールと VMware vSphere Web Client では、vCenter Server バージョンの表示が若干異なります。 どちらも正しい表示です。 |
 | NSX for vSphere | VMware NSX for vSphere 製品のバージョン。 |
 | _VMware コンポーネント_のライセンス | インスタンスを注文したときに**「ライセンス適用」**ページで、所有している VMware ライセンスを VMware コンポーネントに使用することを選択した場合は、その VMware コンポーネント名と、コンポーネントに対して入力したライセンス・キーが表示されます。<br><br>VMware コンポーネント・ライセンスには、**NSX ライセンス**、**vCenter Server ライセンス**、**vSAN ライセンス** などがあります。 |
 | NSX ライセンス・エディション | VMware NSX ライセンスのバージョンとエディション。 |
@@ -70,7 +70,7 @@ lastupdated: "2018-09-25"
 | Hybridity Bundle | vCenter Server with Hybridity Bundle がインストールされているかどうかを示します。 |
 | 状況  | インスタンスの状況。<br><br>デプロイメント、またはインスタンスで実行したアクションの進行状況を示す情報が表示され、更新されます。 問題がある場合は、問題の調査と解決に役立つメッセージが表示されることがあります。 |
 
-## vCenter Server インスタンスのアクセス情報の表示
+## vCenter Server インスタンスのアクセス情報を表示する手順
 
 **「アクセス情報」**の下に、インスタンス関連コンポーネントのアクセス情報が表示されます。 表示されるパスワードは、システムによって生成される初期パスワードです。 それらを {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、インスタンスのサマリー・ページでは更新されません。
 
@@ -79,8 +79,8 @@ lastupdated: "2018-09-25"
 | コンポーネント        | 説明       |
 |:------------- |:------------- |
 | AD/DNS IP | 2 つの AD サーバーの IP アドレス。 |
-| AD/DNS FQDN | AD/DNS サーバーの完全修飾ドメイン・ネーム。<br><br>**注**: すべての AD/DNS サーバーに同じ管理者パスワードを使用してリモート・デスクトップ接続を確立できます。 |
-| AD/DNS ADMIN (リモート・デスクトップ)  | プライマリー・インスタンスの場合は、リモート・デスクトップ接続を介して AD サーバーにアクセスするためのユーザー名とパスワードが表示されます。<br><br>セカンダリー・インスタンスの場合は、**「プライマリー・インスタンスで表示」**リンクをクリックして、プライマリー・インスタンスのユーザー名とパスワード情報に移動します。<br><br>**注**: セカンダリー・インスタンスがプライマリー DNS ドメインに追加され、レプリケーションが行われると、セカンダリー・インスタンスのローカル管理者パスワードがプライマリー・インスタンスのローカル管理者パスワードで上書きされることがあります。 **「プライマリー・インスタンスで表示」**リンクをクリックすると、正しい管理者パスワードにアクセスできます。  
+| AD/DNS FQDN | AD/DNS サーバーの完全修飾ドメイン・ネーム。<br><br>**注:** すべての AD/DNS サーバーに同じ管理者パスワードを使用してリモート・デスクトップ接続を確立できます。 |
+| AD/DNS ADMIN (リモート・デスクトップ)  | プライマリー・インスタンスの場合は、リモート・デスクトップ接続を介して AD サーバーにアクセスするためのユーザー名とパスワードが表示されます。<br><br>セカンダリー・インスタンスの場合は、**「プライマリー・インスタンスで表示」**リンクをクリックして、プライマリー・インスタンスのユーザー名とパスワード情報に移動します。<br><br>**注:** セカンダリー・インスタンスがプライマリー DNS ドメインに追加され、レプリケーションが行われると、セカンダリー・インスタンスのローカル管理者パスワードがプライマリー・インスタンスのローカル管理者パスワードで上書きされることがあります。 **「プライマリー・インスタンスで表示」**リンクをクリックすると、正しい管理者パスワードにアクセスできます。  
 | NSX Manager IP  | NSX Manager の IP アドレス。  |
 | NSX Manager FQDN  | NSX Manager の完全修飾ドメイン・ネーム (FQDN)。  |
 | NSX Manager HTTP  | NSX Manager Web コンソールにアクセスするために使用されるユーザー名とパスワード。 |
@@ -93,7 +93,7 @@ lastupdated: "2018-09-25"
 | vCenter ADMIN  | vSphere Web Client を使用して vCenter Server にログインするために使用できる VMware vCenter Single Sign-On ユーザー名とパスワード。  |
 | vCenter SSH  | SSH 接続で vCenter Server VM にアクセスするために使用できるユーザー名とパスワード。  |
 
-## vCenter Server インスタンスのデプロイメント履歴の表示
+## vCenter Server インスタンスのデプロイメント履歴を表示する手順
 
 左側のナビゲーション・ペインで**「デプロイメント履歴」**をクリックすると、インスタンスのデプロイメント履歴が表示されます。
 
@@ -112,7 +112,7 @@ lastupdated: "2018-09-25"
 
 {{site.data.keyword.vmwaresolutions_short}} コンソールまたは VMware vSphere Web Client からインスタンスを管理します。
 
-**重要**: インスタンスのサマリー・ページで**「vCenter コンソール」**をクリックして vSphere Web Client にアクセスし、ESXi サーバーの管理を開始するには、その前に {{site.data.keyword.CloudDataCent_notm}}の VPN ポータルにログインしておく必要があります。 **「vCenter コンソール」**ボタンにマウスオーバーし、指示に従って、すべての要件を満たしていること、また、vSphere Web Client にアクセスするために必要な手順を実行したことを確認してください。
+**重要:** インスタンスのサマリー・ページで**「vCenter コンソール」**をクリックして vSphere Web Client にアクセスし、ESXi サーバーの管理を開始するには、その前に {{site.data.keyword.CloudDataCent_notm}}の VPN ポータルにログインしておく必要があります。 **「vCenter コンソール」**ボタンにマウスオーバーし、指示に従って、すべての要件を満たしていること、また、vSphere Web Client にアクセスするために必要な手順を実行したことを確認してください。
 
 ログイン手順を実行するには、以下のトピックを参照してください。
 *  vSphere Web Client にアクセスするための要件と必要な手順については、[Timeout reached while connecting to the vSphere Web Client](../vmonic/trbl_timeout_vc_console.html) を参照してください。
