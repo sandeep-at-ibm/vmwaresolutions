@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,7 +25,7 @@ VMware vCenter Server、Platform Services Controller (PSC)、VMware NSX など�
 これらのバックアップをホストするには、以下のステップに従って、ご使用のクラスターに Linux ファイル・サーバーをデプロイします。
 
 1. {{site.data.keyword.cloud_notm}} インフラストラクチャーから、プライベート・ポータブル・サブネットを注文し、それをシステム・コンポーネントと同じ VLAN 上に配置します。 これは、ホストの管理 IP アドレスが存在するプライベート VLAN です。
-2. {{site.data.keyword.cloud_notm}} プライベート・ミラーから、[Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window} などの VMware 管理データ・ストアに、オペレーティング・システム・イメージをアップロードします。
+2. {{site.data.keyword.cloud_notm}} プライベート・ミラーから、Ubuntu Server 18.04 LTS などの VMware 管理データ・ストアに、オペレーティング・システム・イメージをアップロードします。
 3. 既に注文したプライベート・ポータブル IP アドレスを使用して、この仮想マシン (VM) をクラスター内の管理ポート・グループにデプロイします。 AD/DNS サーバーを指すように VM を構成し、必要に応じてサブドメインの DNS に VM を追加しておいてください。
 4. このサーバーのバックアップ・ユーザー ID として root 以外のユーザー ID を作成し、必要なすべてのサービスをファイル転送用に構成して開始しておきます。 例えば、FTP や SSH などです。
 5. この VM が Veeam または IBM Spectrum Protect Plus 管理バックアップ・ジョブに含まれているようにしてください。
