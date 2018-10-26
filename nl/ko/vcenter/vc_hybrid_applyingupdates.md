@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -41,7 +41,7 @@ vCenter Server with Hybridity Bundle 인스턴스에 패치 및 업데이트를 
    세부사항이 표시되지 않는 경우, 이는 방화벽 규칙이나 기타 네트워킹 문제로 인한 IBM CloudDriver VSI(Virtual Server Instance)의 연결 문제점을 표시할 수 있습니다. 다음 단계를 계속하기 전에 문제점을 해결하십시오. 그렇지 않으면, 업데이트에 실패할 수 있습니다.
 4. 왼쪽 탐색 분할창에서 **업데이트 및 패치**를 클릭하십시오.
 
-   **참고**: **업데이트 및 패치** 페이지는 IBM 관리 컴포넌트를 업데이트하기 위한 패키지만 포함하며, VMware 업데이트는 포함하지 않습니다. {{site.data.keyword.vmwaresolutions_short}}에서는 다음 조작에 대한 VMware 업데이트를 적용합니다.
+   **참고:** **업데이트 및 패치** 페이지는 IBM 관리 컴포넌트를 업데이트하기 위한 패키지만 포함하며, VMware 업데이트는 포함하지 않습니다. {{site.data.keyword.vmwaresolutions_short}}에서는 다음 조작에 대한 VMware 업데이트를 적용합니다.
    * 새 vCenter Server 인스턴스가 배치될 때.
    * 새 ESXi 서버가 추가될 때.
    * 새 클러스터가 추가될 때.

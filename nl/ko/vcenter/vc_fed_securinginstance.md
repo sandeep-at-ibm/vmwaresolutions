@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -27,7 +27,7 @@ lastupdated: "2018-09-20"
 4. **인스턴스 보호**를 클릭하십시오.
 5. **확인**을 클릭하여 자동화에서 인스턴스의 연결 끊기를 확인하십시오.
 
-  **참고**: 이 단계를 완료하기 전에 **시작하기 전에** 섹션에 있는 정보를 검토했는지 확인하십시오.
+  **참고:** 이 단계를 완료하기 전에 **시작하기 전에** 섹션에 있는 정보를 검토했는지 확인하십시오.
 
 6. 사용자 환경에서 공개용 관리 서비스 VMware NSX ESG(Edge Services Gateway)를 제거하고 선택적으로 자동화 중에 배치된 클라이언트 관리 ESG를 제거하십시오.
 7. IBM 자동화에서 사용하는 모든 계정의 비밀번호와 키를 재설정하십시오. 자세한 정보는 [How can I secure my environment to remove access by IBM automation and support?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)를 참조하십시오.

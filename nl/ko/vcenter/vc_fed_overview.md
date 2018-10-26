@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -39,17 +39,17 @@ NFS 스토리지 구성의 경우 {{site.data.keyword.baremetal_short}}의 권�
 *  두 개의 VMware NSX Edge Services Gateway:
   * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 자세한 정보는 [고객 관리 ESG를 사용하도록 네트워크 구성](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)을 참조하십시오.
 
-    **중요**: 이 ESG에 액세스할 수 없고 ESG를 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
+    **중요:** 이 ESG에 액세스할 수 없고 ESG를 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
   * VPN 액세스 또는 공용 액세스를 제공하도록 사용자가 수정할 수 있는 템플리트로 IBM에서 배치되는 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽을 위한 보안 고객 관리 VMware NSX Edge Services Gateway. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
-  **참고:** 아웃바운드 HTTPS 관리 트래픽을 위한 VMware NSX Edge Services(ESG)가 배치된 VMware Federal 인스턴스를 보안하는 조치의 일부로 제거됩니다. 자세한 정보는 [VMware Federal 인스턴스 보호](vc_fed_securinginstance.html)를 참조하십시오.
+  **참고:** 아웃바운드 HTTPS 관리 트래픽을 위한 VMware NSX Edge Services(ESG)가 배치된 VMware Federal 인스턴스를 보호하는 조치의 일부로 제거됩니다. 자세한 정보는 [VMware Federal 인스턴스 보호](vc_fed_securinginstance.html)를 참조하십시오.
 
 ### Virtual Server 인스턴스
 
 다음 VSI(Virtual Server Instances)가 주문됩니다.
 * 인스턴스 배치가 완료된 후 시스템이 종료되는 IBM CloudBuilder용 VSI
 * (인스턴스 V2.3 이상의 경우) 보안 및 신뢰성 향상을 위해 하나의 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI 또는 관리 클러스터에 있는 두 개의 고가용성 Microsoft Windows VM을 배치하도록 선택할 수 있습니다.
-* (V2.2 인스턴스의 경우) Microsoft Active Directory(AD)용 Microsoft Windows Server VSI가 배치되며 검색할 수 있습니다. 이 VSI는 호스트와 가상 머신이 등록되는 인스턴스에 대한 DNS의 역할을 합니다. 
+* (V2.2 인스턴스의 경우) Microsoft Active Directory(AD)용 Microsoft Windows Server VSI가 배치되며 검색할 수 있습니다. 이 VSI는 호스트와 가상 머신이 등록되는 인스턴스에 대한 DNS의 역할을 합니다.
 
 ### 스토리지
 
@@ -94,9 +94,9 @@ NFS 옵션을 선택한 경우 관리 컴포넌트용 하나의 2TB, 4IOPS/GB �
 * 하나의 VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4
 * (vSAN 클러스터의 경우) VMware vSAN Advanced 또는 Enterprise 6.6
 
-**중요**: {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+**중요:** {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
 
-**주의**: 인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
+**주의:** 인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거
 *  ESXi 서버 추가 또는 제거를 통한 인스턴스 용량의 확장 또는 축소
 *  컴포넌트 전원 끄기

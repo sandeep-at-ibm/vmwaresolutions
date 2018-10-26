@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-25"
 
 서로 다른 사용자 계정에 대해 프로비저닝된 VMware vCenter Server with Hybridity Bundle 인스턴스의 요약과 자세한 정보를 봅니다.
 
-## vCenter Server with Hybridity Bundle 인스턴스 요약 보기
+## vCenter Server with Hybridity Bundle 인스턴스 요약을 보는 프로시저
 
 사용자 계정에 대해 프로비저닝된 모든 vCenter Server with Hybridity Bundle 인스턴스의 요약을 보려면 다음 단계를 완료하십시오.
 1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
@@ -44,7 +44,7 @@ lastupdated: "2018-09-25"
 |삭제 오류 |인스턴스가 삭제 중일 때 오류가 발생했습니다. |
 |삭제됨 |인스턴스가 삭제됩니다. |
 
-## vCenter Server with Hybridity Bundle 인스턴스 특성 세부사항 보기
+## vCenter Server with Hybridity Bundle 인스턴스 특성 세부사항을 보는 프로시저
 
 vCenter Server with Hybridity Bundle 인스턴스의 특성 세부사항을 보려면 다음을 수행하십시오.
 1. **vCenter Server 인스턴스** 테이블에서 인스턴스 이름을 클릭하십시오.
@@ -58,7 +58,7 @@ vCenter Server with Hybridity Bundle 인스턴스의 특성 세부사항을 보�
 |ID |인스턴스의 ID입니다. |
 |위치 |인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}입니다. |
 |현재 버전 |{{site.data.keyword.vmwaresolutions_short}}의 현재 버전입니다. |
-|vCenter 버전 | VMware vCenter Server with Hybridity Bundle 버전입니다.<br><br>**참고**: {{site.data.keyword.vmwaresolutions_short}} 콘솔에 표시된 vCenter Server 버전과 VMware vSphere Web Client 사이에 약간의 차이점이 있습니다. 그러나 모두 올바릅니다. |
+|vCenter 버전 | VMware vCenter Server with Hybridity Bundle 버전입니다.<br><br>**참고:**: {{site.data.keyword.vmwaresolutions_short}} 콘솔에 표시된 vCenter Server 버전과 VMware vSphere Web Client 사이에 약간의 차이점이 있습니다. 그러나 모두 올바릅니다. |
 |NSX for vSphere |VMware NSX for vSphere 제품 버전입니다. |
 |NSX 라이센스 에디션 |VMware NSX 라이센스의 버전 및 에디션입니다. |
 |DNS, 루트 도메인 |루트 도메인 이름은 DNS(Domain Name System) 도메인 이름 및 Microsoft Active Directory(AD) 포리스트 루트 이름입니다. |
@@ -67,7 +67,7 @@ vCenter Server with Hybridity Bundle 인스턴스의 특성 세부사항을 보�
 | Hybridity Bundle |vCenter Server with Hybridity Bundle의 설치 여부를 표시합니다. |
 |상태  |인스턴스의 상태입니다.<br><br>표시된 정보는 배치의 진행상태 또는 인스턴스에서 수행되는 조치에 대한 업데이트를 제공합니다. 문제가 있는 경우 문제점을 조사하고 해결하는 데 도움이 되는 메시지가 표시될 수 있습니다. |
 
-## vCenter Server with Hybridity Bundle 인스턴스에 대한 액세스 정보 보기
+## vCenter Server with Hybridity Bundle 인스턴스에 대한 액세스 정보를 보는 프로시저
 
 **액세스 정보**에서 인스턴스 관련 컴포넌트의 액세스 정보를 보십시오. 표시된 비밀번호는 시스템에서 생성된 초기 비밀번호입니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 비밀번호를 변경하는 경우 이 비밀번호는 인스턴스 요약 페이지에서 업데이트되지 않습니다.
 
@@ -76,8 +76,8 @@ vCenter Server with Hybridity Bundle 인스턴스의 특성 세부사항을 보�
 |컴포넌트        |설명       |
 |:------------- |:------------- |
 |AD/DNS IP |두 AD 서버의 IP 주소입니다. |
-|AD/DNS FQDN |AD/DNS 서버의 완전한 도메인 이름입니다.<br><br>**참고**: 원격 데스크탑 연결을 사용하여 모든 AD/DNS 서버에 연결하는 데 동일한 관리자 비밀번호를 사용할 수 있습니다. |
-|AD/DNS ADMIN(원격 데스크탑)  |기본 인스턴스의 경우, 원격 데스크탑 연결을 통해 AD 서버에 액세스할 수 있는 사용자 이름 및 비밀번호를 표시합니다.<br><br>보조 인스턴스의 경우, **기본 인스턴스에서 보기** 링크를 클릭하여 기본 인스턴스의 사용자 이름 및 비밀번호 정보로 이동합니다.<br><br>**참고**: 보조 인스턴스가 기본 DNS 도메인에 추가되고 복제가 발생한 후 기본 인스턴스의 로컬 관리자 비밀번호가 보조 인스턴스의 로컬 관리자 비밀번호를 겹쳐쓸 수 있습니다. **기본 인스턴스에서 보기** 링크를 클릭하면 올바른 관리자 비밀번호에 대한 액세스 권한을 받습니다.  
+|AD/DNS FQDN |AD/DNS 서버의 완전한 도메인 이름입니다.<br><br>**참고:** 원격 데스크탑 연결을 사용하여 모든 AD/DNS 서버에 연결하는 데 동일한 관리자 비밀번호를 사용할 수 있습니다. |
+|AD/DNS ADMIN(원격 데스크탑)  |기본 인스턴스의 경우, 원격 데스크탑 연결을 통해 AD 서버에 액세스할 수 있는 사용자 이름 및 비밀번호를 표시합니다.<br><br>보조 인스턴스의 경우, **기본 인스턴스에서 보기** 링크를 클릭하여 기본 인스턴스의 사용자 이름 및 비밀번호 정보로 이동합니다.<br><br>**참고:** 보조 인스턴스가 기본 DNS 도메인에 추가되고 복제가 발생한 후 기본 인스턴스의 로컬 관리자 비밀번호가 보조 인스턴스의 로컬 관리자 비밀번호를 겹쳐쓸 수 있습니다. **기본 인스턴스에서 보기** 링크를 클릭하면 올바른 관리자 비밀번호에 대한 액세스 권한을 받습니다.  
 |NSX Manager IP  |NSX Manager의 IP 주소입니다.  |
 |NSX Manager FQDN  |NSX Manager의 완전한 도메인 이름(FQDN)입니다.  |
 |NSX Manager HTTP  |NSX Manager 웹 콘솔에 액세스하는 데 사용되는 사용자 이름 및 비밀번호입니다. |
@@ -90,7 +90,7 @@ vCenter Server with Hybridity Bundle 인스턴스의 특성 세부사항을 보�
 |vCenter ADMIN  |vSphere Web Client를 사용하여 vCenter Server에 로그인하는 데 사용할 수 있는 VMware vCenter Single Sign-On 사용자 이름 및 비밀번호입니다.  |
 |vCenter SSH  |SSH 연결을 통해 vCenter Server VM에 액세스하는 데 사용할 수 있는 사용자 이름 및 비밀번호입니다.  |
 
-## vCenter Server with Hybridity Bundle 인스턴스의 배치 히스토리 보기
+## vCenter Server with Hybridity Bundle 인스턴스에 대한 배치 히스토리를 보는 프로시저
 
 왼쪽 탐색 분할창에서 **배치 히스토리**를 클릭하여 인스턴스에 대한 배치 히스토리를 보십시오.
 
@@ -109,7 +109,7 @@ vCenter Server with Hybridity Bundle 인스턴스의 특성 세부사항을 보�
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔 또는 VMware vSphere Web Client에서 인스턴스를 관리하십시오.
 
-**중요**: vSphere Web Client로 이동해 ESXi 서버 관리를 시작하려면 인스턴스 요약 페이지의 **vCenter 콘솔**을 클릭하기 전에 {{site.data.keyword.CloudDataCent_notm}}의 VPN 포털에 로그인해야 합니다. vSphere Web Client에 액세스하기 전에 **vCenter 콘솔** 단추 위에 마우스를 올려 놓고 지시사항에 따라 모든 요구사항을 충족하고 필요한 단계를 완료했는지 확인하십시오.
+**중요:** 인스턴스 요약 페이지에서 **vCenter 콘솔**을 클릭하여 vSphere Web Client로 이동하고 ESXi 서버 관리를 시작하기 전에 {{site.data.keyword.CloudDataCent_notm}}의 VPN 포털에 로그인해야 합니다. vSphere Web Client에 액세스하기 전에 **vCenter 콘솔** 단추 위에 마우스를 올려 놓고 지시사항에 따라 모든 요구사항을 충족하고 필요한 단계를 완료했는지 확인하십시오.
 
 로그인 지시사항을 완료하는 데 도움이 되는 정보는 다음 주제를 검토하십시오.
 *  vSphere Web Client에 액세스하기 전의 요구사항 및 필요한 단계는 [vSphere Web Client에 연결하는 중에 제한시간이 초과함](../vmonic/trbl_timeout_vc_console.html)을 참조하십시오.
