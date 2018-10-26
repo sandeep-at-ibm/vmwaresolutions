@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -17,7 +17,7 @@ Trova le risposte alle domande frequenti sui server ESXi gestiti nella console {
 * Per le istanze vCenter Server, puoi espandere il cluster predefinito per avere fino a 51 server ESXi. Ciascuno dei cluster non predefiniti può essere espanso per avere fino a 59 server ESXi. Dal momento che puoi aggiungere fino a 10 cluster a un'istanza, ciascuna istanza distribuita può avere un massimo di 51 + 9x59 = 582 server ESXi tra tutti i cluster.
 * Per le istanze Cloud Foundation, la configurazione standard ha quattro server ESXi. Puoi aggiungere un massimo di 28 server (per un totale di 32 server). Per le istanze Cloud Foundation in una configurazione multisito, puoi avere un massimo di 128 server ESXi tra tutte le istanze.
 
-  **Nota**: se la tua configurazione di Cloud Foundation richiede una distribuzione multisito con più di 128 server ESXi, [contatta il supporto IBM](trbl_support.html) per assistenza.
+  **Nota:** se la tua configurazione di Cloud Foundation richiede una distribuzione multisito con più di 128 server ESXi, [contatta il supporto IBM](trbl_support.html) per richiedere assistenza.
 
 ## Quanti server ESXi posso aggiungere a un cluster?
 
@@ -39,7 +39,7 @@ Per le istanze distribuite nelle release della V2.1 o precedenti, devi abilitare
 
 I nomi e gli indirizzi IP del server ESXi non possono essere modificati perché sono registrati per la risoluzione DNS di Windows. Le modifiche potrebbero causare errori durante la distribuzione o nelle funzioni di vCenter Server.
 
-**Nota**: non utilizzare la funzione **Rinomina dispositivo** sull'interfaccia utente di {{site.data.keyword.cloud_notm}} per modificare i nomi dei server ESXi. Questa funzione modificherà effettivamente il nome di dominio completo del server ESXi, ma le registrazioni degli host della VSI di Windows e vCenter Center configurate non saranno corrette e potrebbero causare errori.
+**Nota:** non utilizzare la funzione **Rinomina dispositivo** sull'interfaccia utente di {{site.data.keyword.cloud_notm}} per modificare i nomi dei server ESXi. Questa funzione modificherà effettivamente il nome di dominio completo del server ESXi, ma le registrazioni degli host della VSI di Windows e vCenter Center configurate non saranno corrette e potrebbero causare errori.
 
 ## Posso disabilitare l'accesso root sui miei server ESXi?
 
@@ -53,7 +53,7 @@ Devi riabilitare l'accesso root per le successive operazioni di automazione, ad 
 
 È possibile aggiungere le rotte statiche per l'archiviazione, ma le operazioni devono essere eseguite con estrema attenzione. Altrimenti, le condivisioni esistenti potrebbero essere smontate.
 
-**Nota**: l'aggiunta di rotte statiche per vMotion non è supportata. Le modifiche alla configurazione della sottorete di vMotion potrebbero causare errori nelle funzioni di {{site.data.keyword.vmwaresolutions_short}}.
+**Nota:** l'aggiunta di rotte statiche per vMotion non è supportata. Le modifiche alla configurazione della sottorete di vMotion potrebbero causare errori nelle funzioni di {{site.data.keyword.vmwaresolutions_short}}.
 
 ### Link correlati
 

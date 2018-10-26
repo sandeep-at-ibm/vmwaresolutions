@@ -68,7 +68,7 @@ La release corrente applica i seguenti aggiornamenti e miglioramenti dei compone
 * VMware vCenter Server 6.5U1a
 * VMware vSAN 6.6.1
 * VMware NSX per vSphere 6.3.4
-* VMware ESXi 6.5, Patch Release ESXi650-201710401-BG. Aggiornamenti esx-base, esx-tboot, vsan e vsanhealth VIB (2151061). Per ulteriori informazioni sui dettagli delle patch, vedi [VMware vCenter Server Appliance Photon OS Security Patches](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window}.
+* VMware ESXi 6.5, Patch Release ESXi650-201710401-BG. Aggiorna i VIB esx-base, esx-tboot, vsan e vsanhealth (2151061). Per ulteriori informazioni sui dettagli delle patch, vedi [VMware vCenter Server Appliance Photon OS Security Patches](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window}.
 
 **Nota**: le istanze esistenti (dalle release della V1.9 e precedenti) non possono essere aggiornate alle versioni del componente in questo elenco.
 

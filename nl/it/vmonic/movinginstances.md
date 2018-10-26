@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,7 +22,7 @@ Nelle release della V1.4 e successive, sono disponibili numerosi miglioramenti d
 
 Se non hai migrato o eliminato le tue istanze dalle release precedenti alla V1.4, potrebbero essere ancora visibili sulla console {{site.data.keyword.vmwaresolutions_short}} in modalità di sola visualizzazione. Queste istanze sono contrassegnate nell'interfaccia utente come **Obsolete** con un'icona del simbolo di avvertenza.
 
-**Nota**: le informazioni visualizzate nelle proprietà dell'istanza riflettono i dati a partire dalla data di rilascio della V1.4 e non vengono più aggiornate.
+**Nota:** le informazioni visualizzate nelle proprietà dell'istanza riflettono i dati a partire dalla data di rilascio della V1.4 e non vengono più aggiornate.
 
 Sulle istanze precedenti alla V1.4 sono disponibili le seguenti azioni:
 *  Visualizzare le informazioni nella pagina dei dettagli dell'istanza.
