@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-02"
 
 ---
 
@@ -29,18 +29,18 @@ lastupdated: "2018-09-24"
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.1 패치 1 | V2.2 이상 |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 이상 |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | 9.5u3 | V1.8 이상 |
-| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 빌드 8774389 | V2.3 이상 |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 | V2.3 이상 |
 | [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | 5.5 u4 패치 2 | V1.2 이상 |
 
-## vCenter Server with Hybridity Bundle 인스턴스에 서비스 추가
+## vCenter Server with Hybridity Bundle 인스턴스에 서비스를 추가하는 프로시저
 
-vCenter Server with Hybridity Bundle 인스턴스에 서비스를 적용하려면 표에 있는 링크를 클릭하여 서비스에 대한 고려사항을 검토하십시오. 그런 다음 배치되는 컴포넌트를 확인하고 주문 주제의 지시사항을 따라 주문하십시오. 
+vCenter Server with Hybridity Bundle 인스턴스에 서비스를 적용하려면 표에 있는 링크를 클릭하여 서비스에 대한 고려사항을 검토하십시오. 그런 다음 배치되는 컴포넌트를 확인하고 주문 주제의 지시사항을 따라 주문하십시오.
 
 ### 서비스 설치 결과
 
 서비스 설치가 완료되면 이메일로 알림을 받고 서비스가 **설치됨** 상태로 인스턴스 세부사항의 **서비스** 탭에 표시됩니다.
 
-## vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 보기
+## vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스를 보는 프로시저
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 서비스를 볼 인스턴스를 클릭하십시오.
@@ -48,7 +48,7 @@ vCenter Server with Hybridity Bundle 인스턴스에 서비스를 적용하려�
 4. **서비스** 페이지에서 하나의 서비스를 클릭하여 서비스 상태 및 기타 세부사항과 같은 정보를 검토하십시오.
 5. 확인한 서비스에 따라 서비스 세부사항에 제공된 인증 정보를 사용하여 서비스 콘솔에 액세스하고 여기에서 서비스를 관리할 수 있습니다.
 
-## vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 제거
+## vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스를 제거하는 프로시저
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 서비스를 제거할 인스턴스를 클릭하십시오.
@@ -62,7 +62,7 @@ vCenter Server with Hybridity Bundle 인스턴스에 서비스를 적용하려�
 
 서비스 제거가 완료되면 이메일로 알림을 받고 서비스가 인스턴스의 **서비스** 페이지에서 제거됩니다.
 
-**주의**: 제거된 서비스에 대한 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시 비용이 청구됩니다.
+**주의:** 제거된 서비스에 대한 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시 비용이 청구됩니다.
 
 ### 관련 링크
 

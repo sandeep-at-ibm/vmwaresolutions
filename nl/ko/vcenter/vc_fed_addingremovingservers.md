@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -43,7 +43,7 @@ lastupdated: "2018-08-07"
 
 ### ESXi 서버를 제거하기 전에
 
-* VMware vSphere Web Client에서 ESXi 서버를 제거하지 마십시오. vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_full}} 콘솔과 동기화되지 않습니다.
+* VMware vSphere Web Client에서 ESXi 서버를 제거하지 마십시오. vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다.
 * NFS 스토리지가 포함된 VMware Federal 인스턴스에는 최소 두 개의 ESXi 서버가 있어야 하고 vSAN 스토리지가 포함된 VMware Federal 인스턴스에는 최소 네 개의 ESXi 서버가 있어야 합니다.
 * ESXi 서버를 제거하는 경우 서버가 유지보수 모드로 설정되고, 그 이후 서버에서 실행되는 모든 가상 머신(VM)이 vCenter Server에서 제거되기 전에 마이그레이션됩니다. VM의 재배치에 대한 제어를 최대화하려면 제거할 ESXi 서버를 유지보수 모드로 설정하고 VMware vSphere Web Client를 사용하여 수동으로 ESXi 서버에서 실행되는 VM을 마이그레이션하는 것이 좋습니다. 그런 다음, {{site.data.keyword.vmwaresolutions_short}} 콘솔을 사용하여 ESXi 서버를 제거하십시오.
 
@@ -61,7 +61,7 @@ lastupdated: "2018-08-07"
 2. ESXi 서버를 제거하는 요청이 처리 중이라는 알림을 이메일로 받습니다. 콘솔에서 ESXi 서버와 연관된 클러스터의 상태가 **수정 중**으로 변경되었습니다.
 3. 일반적으로 30일인 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시 ESXi 서버가 {{site.data.keyword.cloud_notm}} 인프라에서 완전히 재확보됩니다.
 
-   **주의**: 제거된 ESXi 서버에 대한 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시 비용이 청구됩니다.
+   **주의:** 제거된 ESXi 서버에 대한 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시 비용이 청구됩니다.
 
 ### 관련 링크
 

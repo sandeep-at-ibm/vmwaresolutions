@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-09-21"
   |완전한 ESXi 서버 이름 | `<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `<n>`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |  
   |PSC FQDN |`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
 
-**중요**: 인스턴스 주문 또는 배치 중에 설정된 값을 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다. 
+**중요:** 인스턴스 주문 또는 배치 중에 설정된 값을 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다.
 
 ## 시스템 설정
 
@@ -93,13 +93,10 @@ vSAN 구성의 초기 및 사후 배치 클러스터 모두에 네 개의 ESXi �
 ## 스토리지 설정
 
 vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6이 포함됩니다. 다음 vSAN 옵션을 지정하십시오.
-
 * **vSAN 용량 디스크의 디스크 유형 및 크기**: 필요한 용량 디스크에 대한 옵션을 선택하십시오.
-* **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오. 
-* **vSAN 캐시 디스크의 디스크 유형**: 필요한 캐시 디스크에 대한 옵션을 선택하십시오.
-
-    **참고**: 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다. **고성능 Intel Optane** 옵션은 듀얼 Intel Xeon Gold 5120 및 6140 프로세서에 대해서만 사용 가능합니다.
-* **vSAN 캐시 디스크 수**: 추가할 캐시 디스크 수를 지정하십시오. 
+* **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
+* 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다. **고성능 Intel Optane** 옵션은 듀얼 Intel Xeon Gold 5120 및 6140 프로세서에 대해서만 사용 가능합니다.
+* **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **고성능 Intel Optane** 상자를 선택했는지 여부에 따라 달라집니다.
 
 ## 네트워크 인터페이스 설정
 
@@ -229,10 +226,10 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 
 주문한 vCenter Server with Hybridity Bundle 인스턴스를 보고 관리하십시오.
 
-**중요**: {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
+**중요:** {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
 
-**주의**: {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트(인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치됨)를 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
+**주의:** {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트(인스턴스 주문 시 {{site.data.keyword.cloud_notm}} 계정에 설치된)를 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거
 *  ESXi 서버 추가 또는 제거를 통한 인스턴스 용량의 확장 또는 축소
 *  컴포넌트 전원 끄기
