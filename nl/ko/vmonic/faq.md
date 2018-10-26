@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-08-14"
 ## IBM Cloud for VMware Solutions에 필요한 사용자 계정은 무엇입니까?
 
 * **IBM ID 계정**. 이 계정은 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 액세스하는 데 필요합니다. 콘솔은 {{site.data.keyword.slportal}}에서 분리된 독립형 사용자 인터페이스입니다. 자세한 정보는 [시작하기](../index.html)를 참조하십시오.
-* **{{site.data.keyword.cloud_notm}} 계정**. 이 계정은 프로비저닝에 필요합니다. 기존 **IBM ID**를 사용하거나 새 **IBM ID**를 작성하여 {{site.data.keyword.cloud_notm}} 계정을 등록할 수 있습니다. 
+* **{{site.data.keyword.cloud_notm}} 계정**. 이 계정은 프로비저닝에 필요합니다. 기존 **IBM ID**를 사용하거나 새 **IBM ID**를 작성하여 {{site.data.keyword.cloud_notm}} 계정을 등록할 수 있습니다.
 * **{{site.data.keyword.cloud_notm}} 인프라 계정**. 이전에는 **IBM SoftLayer** 계정이라고 부르던 이 계정은 인프라 제품 및 서비스를 관리하기 위한 일부 추가 기능을 제공하는 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에 로그인하는 데 사용됩니다. **{{site.data.keyword.cloud_notm}} 계정**을 종량과금제 유형의 계정으로 업그레이드하거나 기존 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하여 {{site.data.keyword.cloud_notm}} 인프라 계정을 가져올 수 있습니다. 사용 중인 {{site.data.keyword.cloud_notm}} 인프라 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [필수 계정 등록](signing_softlayer_account.html) 및 [{{site.data.keyword.cloud_notm}} 인프라 계정 요구사항](slaccountrequirement.html)을 참조하십시오.
 
 ## 내 IBM Cloud 인프라 인증 정보를 IBM Cloud for VMware Solutions 콘솔과 연관시킬 수 있는 방법은 무엇입니까?
@@ -64,7 +64,7 @@ lastupdated: "2018-08-14"
 
 vCenter Server 인스턴스의 경우, 배치 중에 작성된 첫 번째 클러스터의 이름은 기본 이름인 **cluster1**입니다. VMware vSphere Client에서 기본 클러스터의 이름을 변경할 수 있습니다. 클러스터를 vCenter Server 인스턴스에 추가하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 원하는 이름을 지정할 수 있습니다.
 
-**참고**: Cloud Foundation 인스턴스의 경우, 기본 클러스터 이름을 변경할 수 없습니다.
+**참고:** Cloud Foundation 인스턴스의 경우, 기본 클러스터 이름을 변경할 수 없습니다.
 
 ##패치가 어떻게 관리되고 있습니까?
 

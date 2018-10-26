@@ -16,7 +16,7 @@ lastupdated: "2017-11-20"
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이제 V2.0 이상 VMware Cloud Foundation 인스턴스 및 VMware vCenter Server 인스턴스에 사용 가능합니다. 이 서비스는 가상 인프라 내에 중요 보안 제어를 구현하여 위험을 줄일 수 있는 FortiGate Virtual Appliances의 고가용성(HA) 쌍을 환경에 배치합니다.
 
-인스턴스를 주문할 때 포함된 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스와 함께 인스턴스를 주문하거나 인스턴스 세부사항 페이지에 있는 **서비스** 탭에서 나중에 이 서비스를 기존 인스턴스에 추가하십시오. 사용자 요구사항에 따라 이 서비스에 대한 세 가지 배치 크기 및 라이센싱 옵션 중 하나를 선택하십시오. 서비스가 설치되고 나면 FortiGate 콘솔에서 FortiGate 가상 어플라이언스의 방화벽 규칙을 관리하고 구성하십시오. 
+인스턴스를 주문할 때 포함된 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스와 함께 인스턴스를 주문하거나 인스턴스 세부사항 페이지에 있는 **서비스** 탭에서 나중에 이 서비스를 기존 인스턴스에 추가하십시오. 사용자 요구사항에 따라 이 서비스에 대한 세 가지 배치 크기 및 라이센싱 옵션 중 하나를 선택하십시오. 서비스가 설치되고 나면 FortiGate 콘솔에서 FortiGate 가상 어플라이언스의 방화벽 규칙을 관리하고 구성하십시오.
 
 자세한 정보는 다음 주제를 참조하십시오.
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}에 대한 컴포넌트 및 고려사항](../services/fortinetvm_considerations.html)
@@ -34,7 +34,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 
 ## FortiGate Security Appliance on IBM Cloud에 대한 업데이트
 
-이 릴리스에서 Fortinet on {{site.data.keyword.cloud_notm}} 서비스가 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}로 이름이 변경되었습니다. 서비스의 FSA(FortiGate Security Appliances) 쌍은 인스턴스에 배치될 때 기본적으로 보호되도록 구성됩니다. 
+이 릴리스에서 Fortinet on {{site.data.keyword.cloud_notm}} 서비스가 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}로 이름이 변경되었습니다. 서비스의 FSA(FortiGate Security Appliances) 쌍은 인스턴스에 배치될 때 기본적으로 보호되도록 구성됩니다.
 * 새 Cloud Foundation 인스턴스 또는 vCenter Server 인스턴스의 일부로 FSA 쌍을 배치하는 경우 FSA는 인스턴스와 공용 네트워크 간의 필수 아웃바운드 통신만 허용하고 기타 모든 통신을 거부하도록 구성됩니다.
 * 기존 Cloud Foundation 인스턴스 또는 vCenter Server 인스턴스의 일부로 FSA 쌍을 배치하는 경우 FSA는 인스턴스와 공용 네트워크 간의 모든 필수 아웃바운드 관리 통신을 허용하도록 명시적인 규칙으로 구성되고, 또한 FSA는 기존 애플리케이션 트래픽이 인터럽트되지 않는지 확인하기 위해 다른 모든 통신을 허용하는 규칙으로 구성됩니다.
 
@@ -114,7 +114,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
 
-**참고:** vSAN 컴포넌트가 포함되거나 포함되지 않은 vCenter Server 사용자 정의된 주문은 항상 12개의 디스크 섀시 서버를 포함합니다. 이 서버는 가격 예상 PDF에서 비vSAN 주문 케이스에 대한 {{site.data.keyword.baremetal_short}}의 비용이 약간 높아질 수 있습니다. 
+**참고:** vSAN 컴포넌트가 포함되거나 포함되지 않은 vCenter Server 사용자 정의된 주문은 항상 12개의 디스크 섀시 서버를 포함합니다. 이 서버는 가격 예상 PDF에서 비vSAN 주문 케이스에 대한 {{site.data.keyword.baremetal_short}}의 비용이 약간 높아질 수 있습니다.
 
 컴포넌트에 대한 자세한 정보는 [vCenter Server 개요](../vcenter/vc_vcenterserveroverview.html)를 참조하십시오.
 
@@ -132,7 +132,7 @@ vSAN 스토리지는 이제 기본 및 보조 인스턴스 모두에 대한 vCen
 
 ### VMware vCenter Server 인스턴스에 고유한 라이센스 가져오기(BYOL)
 
-BYOL은 이제 vCenter Server 인스턴스에 사용할 수 있습니다. vCenter Server 라이센스를 주문할 떄 하나 이상의 고유 vCenter Server, vSphere, vSAN 및 NSX VMware 라이센스를 사용하십시오. 
+BYOL은 이제 vCenter Server 인스턴스에 사용할 수 있습니다. vCenter Server 라이센스를 주문할 떄 하나 이상의 고유 vCenter Server, vSphere, vSAN 및 NSX VMware 라이센스를 사용하십시오.
 
 자세한 정보는 다음 주제를 참조하십시오.
 * [Cloud Foundation 인스턴스 주문](../sddc/sd_orderinginstance.html)
@@ -150,7 +150,7 @@ VMware vSAN 컴포넌트의 경우 이제 {{site.data.keyword.baremetal_short}}�
 
 **참고**:
 * 3.8TB SSD SED 드라이브는 {{site.data.keyword.CloudDataCent_notm}}에서 일반적으로 사용 가능하게 되면 지원됩니다.
-* VMware vSAN 컴포넌트가 포함되거나 포함되지 않은 주문은 항상 12개 디스크 섀시 서버를 포함합니다. 이 서버는 가격 예상 PDF에서 비vSAN 주문 케이스에 대한 {{site.data.keyword.baremetal_short}}의 비용이 약간 높아질 수 있습니다. 
+* VMware vSAN 컴포넌트가 포함되거나 포함되지 않은 주문은 항상 12개 디스크 섀시 서버를 포함합니다. 이 서버는 가격 예상 PDF에서 비vSAN 주문 케이스에 대한 {{site.data.keyword.baremetal_short}}의 비용이 약간 높아질 수 있습니다.
 
 자세한 정보는 [새 vSphere 클러스터 주문](../vsphere/vs_orderinginstances.html)을 참조하십시오.
 

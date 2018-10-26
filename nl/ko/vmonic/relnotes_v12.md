@@ -18,7 +18,7 @@ VMware ESXi의 새 버전은 이전 릴리스의 ESXi 6.0 u2에서 업데이트�
 
 ## IBM ID 및 Bluemix 계정 연관
 
-{{site.data.keyword.vmwaresolutions_full}}는 IBM Bluemix® 카탈로그의 인프라 솔루션으로 제공됩니다. **IBM ID** 계정을 Bluemix 계정과 연관시켜야 **IBM ID** 계정으로 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 로그인할 수 있습니다. 
+{{site.data.keyword.vmwaresolutions_full}}는 IBM Bluemix® 카탈로그의 인프라 솔루션으로 제공됩니다. **IBM ID** 계정을 Bluemix 계정과 연관시켜야 **IBM ID** 계정으로 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 로그인할 수 있습니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
 * [시작하기](../index.html)

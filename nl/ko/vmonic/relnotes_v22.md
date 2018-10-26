@@ -64,11 +64,11 @@ V2.2 이상 릴리스에서 새 인스턴스는 ESXi 서버에 대한 새 고급
 
 V2.2 이상 릴리스의 경우, 초기 클러스터에 ESXi 서버 수를 최대 51개까지 늘리고 추가 클러스터에 ESXi 서버 수를 최대 59개까지 늘릴 수 있습니다.
 
-**중요:Important:** V2.1 이전 릴리스에 배치된 인스턴스의 경우, 필요한 vSAN 지원을 사용으로 설정하여 32개가 초과하도록 클러스터 크기를 늘려야 합니다. ESXi 서버 수를 늘리는 단계에 대한 자세한 정보는 [ESXi 서버에 대한 FAQ](../vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-)의 _몇 개의 ESXi 서버를 클러스터에 추가할 수 있습니까?_를 참조하십시오. 
+**중요:Important:** V2.1 이전 릴리스에 배치된 인스턴스의 경우, 필요한 vSAN 지원을 사용으로 설정하여 32개가 초과하도록 클러스터 크기를 늘려야 합니다. ESXi 서버 수를 늘리는 단계에 대한 자세한 정보는 [ESXi 서버에 대한 FAQ](../vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-)의 _몇 개의 ESXi 서버를 클러스터에 추가할 수 있습니까?_를 참조하십시오.
 
 ## vCenter Server 및 Cloud Foundation 인스턴스에 대한 추가 네트워크 구성 옵션
 
-vCenter Server 및 Cloud Foundation 인스턴스 주문의 경우, 이제 네트워크 구성을 위해 기존의 공용 및 사설 VLAN을 다시 사용할 수 있습니다. 기존 VLAN을 사용할 수 없는 경우에는 하나의 공용 VLAN 및 두 개의 사설 VLAN을 새로 주문할 수 있습니다. 
+vCenter Server 및 Cloud Foundation 인스턴스 주문의 경우, 이제 네트워크 구성을 위해 기존의 공용 및 사설 VLAN을 다시 사용할 수 있습니다. 기존 VLAN을 사용할 수 없는 경우에는 하나의 공용 VLAN 및 두 개의 사설 VLAN을 새로 주문할 수 있습니다.
 
 기존 VLAN을 선택하기 전의 중요한 고려사항은 다음의 *네트워크 인터페이스 설정* 섹션을 참조하십시오.
 * [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)
@@ -136,7 +136,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 서비스는 워�
 
 ### 관리 서비스
 
-이제 Veeam on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스와 Zerto on {{site.data.keyword.cloud_notm}}는 VMware vCenter Server 및 VMware Cloud Foundation 인스턴스에 사용할 수 있습니다. 자체 솔루션 및 환경의 복잡성을 관리하지 않으려는 경우 이러한 관리 서비스를 요청하십시오. 
+이제 Veeam on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스와 Zerto on {{site.data.keyword.cloud_notm}}는 VMware vCenter Server 및 VMware Cloud Foundation 인스턴스에 사용할 수 있습니다. 자체 솔루션 및 환경의 복잡성을 관리하지 않으려는 경우 이러한 관리 서비스를 요청하십시오.
 
 Veeam on {{site.data.keyword.cloud_notm}} 서비스는 엔터프라이즈가 고가용성(HA)을 달성할 수 있도록 VMware 하이퍼바이저와 원활하게 통합합니다. Veeam 백업 소프트웨어 및 IBM Resiliency Backup as a Service를 모두 사용하여 완전히 관리된 백업 환경을 배치할 수 있습니다.
 
