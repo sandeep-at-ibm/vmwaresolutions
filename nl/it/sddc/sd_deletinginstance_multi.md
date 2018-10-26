@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,9 +22,9 @@ Quando elimini un'istanza Cloud Foundation, i seguenti componenti vengono rilasc
 
 A causa delle dipendenze delle risorse, i componenti della tua istanza non vengono rilasciati immediatamente quando elimini l'istanza. Ad esempio, le sottoreti e le VLAN non possono essere eliminate finché i server ESXi non vengono completamente recuperati dall'infrastruttura {{site.data.keyword.cloud}}, cosa che avviene alla fine del ciclo di fatturazione di {{site.data.keyword.cloud_notm}}. Alla fine del ciclo di fatturazione di {{site.data.keyword.cloud_notm}}, che in genere è di 30 giorni, le sottoreti e le VLAN vengono eliminate e l'eliminazione dell'istanza viene completata.
 
-**Attenzione**: per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di fatturazione di {{site.data.keyword.cloud_notm}}.
+**Attenzione:** per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di fatturazione di {{site.data.keyword.cloud_notm}}.
 
-## Procedura
+## Procedura per eliminare le istanze Cloud Foundation in una configurazione multisito
 
 1. Rimuovi tutti i servizi dall'istanza secondaria di Cloud Foundation.
 2. Assicurati di non avere oggetti NSX espansi nell'istanza secondaria che vuoi eliminare.
