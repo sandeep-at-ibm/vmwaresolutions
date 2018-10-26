@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-15"
 
 ご使用のインスタンスにこのサービスをデプロイすると、RDP を使用して Veeam コンソールにアクセスすることにより、ご使用の環境にあるすべての仮想マシンのバックアップとリストアを管理できるようになります。管理コンポーネントのバックアップとリストアも可能です。 また、Veeam Web サイトから Veeam 更新プログラムをダウンロードしてインストールすることにより、サービスをアップグレードすることもできます。
 
-V1.8 より前のリリースでデプロイされたインスタンスでは、Veeam on {{site.data.keyword.cloud}} サービスを使用する場合は、インスタンス内の既存の Veeam VSI を置き換える必要があります。 詳しくは、このトピックの『_V1.8 より前のインスタンスの Veeam VSI を Veeam on IBM Cloud に置き換える_』セクションを参照してください。
+V1.8 より前のリリースでデプロイされたインスタンスでは、Veeam on {{site.data.keyword.cloud}} サービスを使用する場合は、インスタンス内の既存の Veeam VSI を置き換える必要があります。 詳しくは、『_V1.8 より前のインスタンスの Veeam VSI を Veeam on IBM Cloud に置き換える_』セクションを参照してください。
 
 ## RDP を使用した Veeam コンソールへのアクセス
 
@@ -42,7 +42,7 @@ Veeam を最新バージョンに更新する責任は、ユーザー側にあ�
 ## Veeam ライセンスの更新
 
 オンデマンドで Veeam ライセンスを手動で更新するには、以下のステップを完了します。
-1. [RDP を使用して Veeam Backup および Replication のコンソールにアクセスします](../services/managingveeam.html#accessing-the-veeam-console-by-using-rdp)。
+1. [RDP を使用して Veeam Backup and Replication のコンソールにアクセスします](../services/managingveeam.html#accessing-the-veeam-console-by-using-rdp)。
 2. メインメニューから、**「ライセンス」**をクリックします。
 3. **「ライセンス情報」**ウィンドウで**「今すぐ更新」**をクリックします。
 4. 手動ライセンスの更新プロセスの統計情報を表示するには、**「履歴」**ビューを開き、**「システム」**ノードをクリックします。

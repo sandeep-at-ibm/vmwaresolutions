@@ -4,24 +4,24 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-27"
 
 ---
 
 # Veeam on IBM Cloud 用マネージド・サービスの要求
 
-Veeam on {{site.data.keyword.cloud}} サービスは、ご使用の VMware ハイパーバイザーとシームレスに統合され、企業が高可用性 (HA) を実現できるよう支援します。 このサービスを使用すると、アプリケーションとデータのリカバリー・ポイントと目標復旧時間を利用できます。 リカバリー・ポイントと目標復旧時間は、構成が完了してから 15 分以内に利用可能になります。 このサービスを使用することにより、ご使用のインフラストラクチャーに配置されたすべての仮想マシンのバックアップとリストアの両方を Veeam コンソールから直接制御できます。
+Veeam on {{site.data.keyword.cloud}} サービスは、ご使用の VMware ハイパーバイザーとシームレスに統合され、企業が高可用性 (HA) を実現できるよう支援します。 このサービスを使用すると、アプリケーションとデータのリカバリー・ポイントと目標復旧時間を設定できます。 リカバリー・ポイントと目標復旧時間は、構成が完了してから 15 分以内に利用可能になります。 このサービスを使用して、ご使用のインフラストラクチャーに配置されたすべての仮想マシンのバックアップとリストアの両方を Veeam コンソールから直接制御します。
 
 IBM Resiliency Backup as a Service は、オンサイト・クラウド、オフサイト・クラウド、ハイブリッド・クラウドを対象とした広範囲のデータ保護ソリューションを提供することによって、情報の回復力を高めます。 詳しくは、[IBM Resiliency Backup as a Service](https://www.ibm.com/us-en/marketplace/managed-backup-services) を参照してください。
 
-Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービスを要求すると、Veeam バックアップ・ソフトウェアと IBM Resiliency Backup as a Service の両方を使用して、完全に管理されたバックアップ環境をデプロイできます。このバックアップ環境は、以下のように役立ちます。
+Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービスを要求するときに、Veeam バックアップ・ソフトウェアと IBM Resiliency Backup as a Service の両方を使用して、完全に管理されたバックアップ環境をデプロイします。このように組み合わせて使用すると、以下の点で役立ちます。
 * セキュリティー機能が充実した、重要なビジネス・データを自動的に保護する機能を有効にするためのソリューションを、いくつかの選択肢の中から選択できます。専用オンプレミス環境、{{site.data.keyword.cloud_notm}} インフラストラクチャー、IBM Resiliency Services Center の 1 次ロケーションと 2 次ロケーションすべてがデータ保護の対象になります。
 * また、スケーラブルで柔軟なデータ保護ソリューションを使用できるので、総所有コスト (TCO) が削減され、コンプライアンス要件を管理できるようになります。
 
-## 手順
+## Veeam on IBM Cloud 用マネージド・サービスを要求する手順
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「開始」**をクリックします。
-2. ページをスクロールダウンし、**「追加マネージド・サービスの注文」**で、**「Veeam on IBM Cloud のマネージド・サービス」**カードをクリックします。
+2. ページをスクロールダウンし、**「追加マネージド・サービスの注文 (Order additional managed services)」**で、**「Veeam on IBM Cloud のマネージド・サービス (Managed Services for Veeam on IBM Cloud)」**カードをクリックします。
 3. **「Veeam on IBM Cloud」**ページで、マネージド・サービスとしての Veeam on {{site.data.keyword.cloud_notm}} の説明と技術仕様を確認してから、**「作成」**をクリックします。
 4. 要件に応じて構成設定値を指定するか、またはデフォルト値を受け入れます。
 5. **「vCenter サーバー」**または**「Cloud Foundation」**をクリックして、このサービスをいずれかのインスタンスに追加します。

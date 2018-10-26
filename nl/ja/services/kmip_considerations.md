@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-24"
 
 KMIP for VMware on {{site.data.keyword.cloud}} サービスは、{{site.data.keyword.cloud_notm}} 内の VMware によって使用される暗号鍵を管理するための、24 時間 365 日の高可用性サービスを提供します。 このサービスは、お客様が暗号鍵を作成、取得、活動化、取り消し、破棄できるようにするランタイム機能を提供します。 また、クライアントの資格情報と暗号鍵の関連付けを管理する管理機能も提供します。
 
-**利用可否**: このサービスは、V2.2 以降のリリースでデプロイされたインスタンスでのみ利用可能です。
+**利用可否:** このサービスは、V2.2 以降のリリースでデプロイされたインスタンスでのみ利用可能です。
 
 ## KMIP for VMware on IBM Cloud の技術仕様
 
@@ -34,7 +34,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} は、IBM Key Protect for {{
 * 作成されたサービス ID の API 鍵を所持していること。 その鍵は、サービスを注文する際に必要になります。
 * 少なくとも 1 つのカスタマー・ルート鍵 (CRK) を作成したこと。この CRK は、[ルート鍵の作成](https://console.bluemix.net/docs/services/keymgmt/keyprotect_create_root.html#create_root_keys)に示されているステップに従って Key Protect ユーザー・インターフェースから作成したものであるか、または [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect) の REST API を使用して作成したものでなければなりません。
 
-   **重要**: CRK がなければサービスを注文することはできません。 既存の鍵素材を使用して CRK を作成するという方法を使用すると共に、作成している鍵素材のバックアップを取ることを強くお勧めします。 そうすれば、CRK の保管のために IBM Key Protect を適用しているデータ・センターの機能が障害によって失われたとしても、鍵をリカバリーできるようになります。
+   **重要:** CRK がなければサービスを注文することはできません。 既存の鍵素材を使用して CRK を作成するという方法を使用すると共に、作成している鍵素材のバックアップを取ることを強くお勧めします。 これにより、CRK の保管のために IBM Key Protect を適用しているデータ・センターの機能が障害によって失われた場合に、鍵をリカバリーできるようになります。
 
 ## KMIP for VMware on IBM Cloud を使用する際の考慮事項
 

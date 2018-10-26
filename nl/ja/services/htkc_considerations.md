@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-11"
+lastupdated: "2018-09-26"
 
 ---
 
 # HyTrust KeyControl on IBM Cloud の概要
 
-HyTrust KeyControl on {{site.data.keyword.cloud}} サービスは、暗号鍵のライフサイクルを自動化および単純化することによって、暗号化ワークロードの管理 (鍵の保管、配布、ローテーション、鍵の失効など) を単純化します。FIPS 140-2 準拠の暗号化を使用すると、企業で簡単に暗号鍵を一括して管理できるようになります。 
+HyTrust KeyControl on {{site.data.keyword.cloud}} サービスは、暗号化ワークロードの管理を単純化します。 このサービスは、鍵の保管、鍵の配布、鍵のローテーション、鍵の失効など、暗号鍵のライフサイクルを自動化および単純化します。FIPS 140-2 準拠の暗号化を使用すると、企業で簡単に暗号鍵を一括して管理できるようになります。 
 
 **利用可否:** このサービスは、vSphere 6.5 を実行する、V2.5 以降のリリースでデプロイ (または V2.5 以降にアップグレード) されたインスタンスでのみ利用できます。
 
@@ -37,7 +37,7 @@ HyTrust KeyControl ライセンスは、インスタンスのインストール�
 
 ## HyTrust KeyControl on IBM Cloud を削除する際の考慮事項
 
-HyTrust KeyControl on {{site.data.keyword.cloud_notm}} サービスを削除する前に、KeyContol を使用しないようにすべてのクライアントを分離したことを確認してください。サービスを削除した後に、鍵が削除されて、VM からロックアウトされる可能性があります。
+HyTrust KeyControl on {{site.data.keyword.cloud_notm}} サービスを削除する前に、KeyContol を使用しないようにすべてのクライアントを分離したことを確認してください。 サービスを削除した後に、鍵が削除されて、VM からロックアウトされる可能性があります。
 
 ### 関連リンク
 

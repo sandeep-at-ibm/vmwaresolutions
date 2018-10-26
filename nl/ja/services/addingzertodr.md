@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ Zerto on {{site.data.keyword.cloud}} サービスは、レプリケーション�
 
 以下のコンポーネントが注文されて Zerto on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
-**注**: Zerto Virtual Manager コンポーネントはデフォルト・クラスターにのみデプロイされます。
+**注:** Zerto Virtual Manager コンポーネントはデフォルト・クラスターにのみデプロイされます。
 
 ### VSI
 
