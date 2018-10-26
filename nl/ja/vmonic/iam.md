@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-28"
 
 ---
 
 # IAM でのユーザー・アクセス権限の管理
 
-アカウント内のユーザーの {{site.data.keyword.vmwaresolutions_full}} サービス・インスタンスへのアクセス権限は、{{site.data.keyword.cloud}} Identity and Access Management (IAM) によって制御されます。 アカウント内で {{site.data.keyword.vmwaresolutions_short}} サービスにアクセスするすべてのユーザーには、IAM ユーザー役割の定義されたアクセス・ポリシーが割り当てられている必要があります。
+アカウント内のユーザーの {{site.data.keyword.vmwaresolutions_full}} サービス・インスタンスへのアクセス権限は、{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) によって制御されます。 アカウント内で {{site.data.keyword.vmwaresolutions_short}} サービスにアクセスするすべてのユーザーには、IAM ユーザー役割の定義されたアクセス・ポリシーが割り当てられている必要があります。
 
 アクセス・ポリシーは。選択したサービスまたはインスタンスのコンテキスト内でユーザーが実行できる操作を定義します。 許可される操作は、サービス上で実行できる操作として、{{site.data.keyword.cloud_notm}} サービスによってカスタマイズされて定義されます。 その後、操作は IAM ユーザー役割にマップされます。
 

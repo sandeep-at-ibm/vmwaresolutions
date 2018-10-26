@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-14"
 
 {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウント (以前は IBM SoftLayer アカウントと呼ばれていた) を使用して、インフラストラクチャー製品とサービスを管理するためのいくつかの追加の機能を提供する、{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルにログインします。 {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを登録するには、{{site.data.keyword.cloud_notm}} アカウントを従量課金タイプのアカウントにアップグレードします。
 
-### 手順
+### IBM Cloud アカウントを登録する手順
 
 1. **IBM ID** で {{site.data.keyword.vmwaresolutions_short}} コンソールにログインします。
 2. バナーの左側の**「管理」>「請求および使用量」>「請求処理」**をクリックします。

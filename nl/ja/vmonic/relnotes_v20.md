@@ -16,7 +16,7 @@ lastupdated: "2017-11-20"
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスが、V2.0 以降の VMware Cloud Foundation インスタンスと VMware vCenter Server インスタンスで使用できるようになりました。 このサービスは、お客様の環境に FortiGate Virtual Appliance の高可用性 (HA) ペアをデプロイします。これにより、仮想インフラストラクチャー内にクリティカルなセキュリティー制御を実装してリスクを軽減できます。
 
-FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを組み込んだ形でインスタンスを注文するか、後からインスタンスの詳細ページの**「サービス」**タブで既存のインスタンスにこのサービスを追加します。このサービスで、デプロイメント・サイズとライセンスについての 3 つのオプションの中から 1 つを要件に応じて選択します。サービスが正常にインストールされたら、FortiGate コンソールから FortiGate Virtual Appliance のファイアウォール・ルールを管理および構成します。
+FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを組み込んだ形でインスタンスを注文するか、後からインスタンスの詳細ページの**「サービス」**タブで既存のインスタンスにこのサービスを追加します。 このサービスで、デプロイメント・サイズとライセンスについての 3 つのオプションの中から 1 つを要件に応じて選択します。 サービスが正常にインストールされたら、FortiGate コンソールから FortiGate Virtual Appliance のファイアウォール・ルールを管理および構成します。
 
 詳しくは、以下のトピックを参照してください。
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](../services/fortinetvm_considerations.html)
@@ -34,7 +34,7 @@ Cloud Foundation インスタンスでも vCenter Server インスタンスで�
 
 ## FortiGate Security Appliance on IBM Cloud の更新
 
-このリリースでは、Fortinet on {{site.data.keyword.cloud_notm}} サービスの名前が FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} に変更されました。このサービスの FortiGate Security Appliance (FSA) のペアには、インスタンスへのデプロイ時にデフォルトで保護が構成されます。
+このリリースでは、Fortinet on {{site.data.keyword.cloud_notm}} サービスの名前が FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} に変更されました。 このサービスの FortiGate Security Appliance (FSA) のペアには、インスタンスへのデプロイ時にデフォルトで保護が構成されます。
 * 新規の Cloud Foundation インスタンスまたは vCenter Server インスタンスの一部として FSA のペアをデプロイすると、FSA は、インスタンスからパブリック・ネットワークへの必要なアウトバウンド通信のみを許可し、他のすべての通信を拒否するように構成されます。
 * 既存の Cloud Foundation インスタンスまたは vCenter Server インスタンスの一部として FSA のペアをデプロイすると、FSA には、インスタンスからパブリック・ネットワークへの必要な管理用アウトバウンド通信をすべて許可する明示的なルールが構成されます。また、既存のアプリケーション・トラフィックが中断されないように、他のすべての通信を許可するルールも構成されます。
 
@@ -42,7 +42,7 @@ Cloud Foundation インスタンスでも vCenter Server インスタンスで�
 
 ## 完全修飾ドメイン・ネームの形式の統一
 
-完全修飾ドメイン・ネーム (FQDN) の表記がすべてのインスタンスで統一されました。 注文時に、独自のサブドメイン接頭部とホスト名接頭部を入力すると、FQDN 形式の業界規則に従うことができます。例えば、`host-name-prefix<n>.subdomain-prefix.domain-name` と入力します。
+完全修飾ドメイン・ネーム (FQDN) の表記がすべてのインスタンスで統一されました。 注文時に、独自のサブドメイン接頭部とホスト名接頭部を入力すると、FQDN 形式の業界規則に従うことができます。 例えば、`host-name-prefix<n>.subdomain-prefix.domain-name` と入力します。
 
 詳しくは、以下のトピックを参照してください。
 * [Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)
@@ -68,7 +68,7 @@ Cloud Foundation インスタンスでも vCenter Server インスタンスで�
 * VMware vCenter Server 6.5U1a
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
-* VMware ESXi 6.5、パッチ・リリース ESXi650-201710401-BG。 esx-base、esx-tboot、vsan、vsanhealth VIB の更新 (2151061)。パッチについて詳しくは、[VMware vCenter Server Appliance Photon OS Security Patches](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window} を参照してください。
+* VMware ESXi 6.5、パッチ・リリース ESXi650-201710401-BG。 esx-base、esx-tboot、vsan、vsanhealth VIB の更新 (2151061)。 パッチについて詳しくは、[VMware vCenter Server Appliance Photon OS Security Patches](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window} を参照してください。
 
 **注**: 既存のインスタンス (リリース V1.9 以前) を、このリストに挙げられているコンポーネント・バージョンにアップグレードすることはできません。
 
@@ -99,7 +99,7 @@ Cloud Foundation インスタンスの注文の中で、必要な vSAN ライセ
 * スモール (Dual Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz / 128 GB RAM / 12 ディスク)
 * ラージ (Dual Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz / 512 GB RAM / 12 ディスク)
 
-**注**: シャーシには 12 個のディスク用のスペースがあります。すべてのスロットが使用されているわけではありません。**「スモール」**構成では 2 つの 1.9 TB Micron 5100 MAX ドライブが提供され、**「ラージ」**構成では 4 つの 3.8 TB Micron 5100 PRO ドライブが提供されます。
+**注**: シャーシには 12 個のディスク用のスペースがあります。 すべてのスロットが使用されているわけではありません。 **「スモール」**構成では 2 つの 1.9 TB Micron 5100 MAX ドライブが提供され、**「ラージ」**構成では 4 つの 3.8 TB Micron 5100 PRO ドライブが提供されます。
 
 詳しくは、以下のトピックを参照してください。
 * [Cloud Foundation の概要](../sddc/sd_cloudfoundationoverview.html)
@@ -114,7 +114,7 @@ Cloud Foundation インスタンスの注文の中で、必要な vSAN ライセ
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
 
-**注:** VMware vSAN コンポーネントの有無に関わらず、vCenter Server のカスタマイズ注文には必ず 12 ディスク・シャーシのサーバーが組み込まれます。このサーバーが組み込まれることで、見積もり価格の PDF で vSAN なしの注文の{{site.data.keyword.baremetal_short}}のコストが若干高くなります。
+**注:** VMware vSAN コンポーネントの有無に関わらず、vCenter Server のカスタマイズ注文には必ず 12 ディスク・シャーシのサーバーが組み込まれます。 このサーバーが組み込まれることで、見積もり価格の PDF で vSAN なしの注文の{{site.data.keyword.baremetal_short}}のコストが若干高くなります。
 
 コンポーネントについて詳しくは、[vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html)を参照してください。
 
@@ -150,7 +150,7 @@ VMware vSAN コンポーネントの場合、{{site.data.keyword.baremetal_short
 
 **注**:
 * 3.8 TB SSD SED ドライブは、{{site.data.keyword.CloudDataCent_notm}}で一般提供が開始されたらサポートされます。
-* VMware vSAN コンポーネントの有無に関わらず、注文には必ず 12 ディスク・シャーシのサーバーが組み込まれます。このサーバーが組み込まれることで、見積もり価格の PDF で vSAN なしの注文の{{site.data.keyword.baremetal_short}}のコストが若干高くなります。
+* VMware vSAN コンポーネントの有無に関わらず、注文には必ず 12 ディスク・シャーシのサーバーが組み込まれます。 このサーバーが組み込まれることで、見積もり価格の PDF で vSAN なしの注文の{{site.data.keyword.baremetal_short}}のコストが若干高くなります。
 
 詳しくは、[新規 vSphere クラスターの注文](../vsphere/vs_orderinginstances.html)を参照してください。
 

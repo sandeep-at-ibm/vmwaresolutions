@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-08-16"
 
 ## 通知の表示
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「通知」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_full}} コンソールで、左側のナビゲーション・ペインの**「通知」**をクリックします。
 2. **「通知履歴」**テーブルで、すべての通知に関するサマリーを確認します。
 
    表 1. 通知履歴

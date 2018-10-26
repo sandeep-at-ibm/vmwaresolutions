@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -19,8 +19,7 @@ lastupdated: "2018-09-25"
 
 ## データ・シート
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
+* [{{site.data.keyword.vmwaresolutions_full}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 
 ## プラットフォーム拡張
 
@@ -29,7 +28,7 @@ lastupdated: "2018-09-25"
 * {{site.data.keyword.cloud_notm}} のファイル・ストレージとブロック・ストレージ
 * NSX Edge Services Gateway
 * Secure Virtualization
-* Veeam Backup および Replication
+* Veeam Backup and Replication
 * vRealize Automation
 * Zerto 災害復旧
 
