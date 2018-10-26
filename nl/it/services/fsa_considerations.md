@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -14,7 +14,7 @@ Il servizio FortiGate Security Appliance on {{site.data.keyword.cloud}} distribu
 
 Puoi gestire questo servizio utilizzando il client web FortiOS o l'interfaccia della riga di comando tramite SSH.
 
-**Disponibilità**: questo servizio è disponibile solo per le istanze distribuite nelle release della V1.8 o successive.
+**Disponibilità:** questo servizio è disponibile solo per le istanze distribuite nelle release della V1.8 o successive.
 
 ## Specifiche tecniche per FortiGate Security Appliance on IBM Cloud
 
@@ -38,10 +38,10 @@ Vengono distribuiti due dispositivi in una configurazione attiva-passiva.
 
 Esamina le seguenti considerazioni prima di installare il servizio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}:
 * Assicurati che l'account {{site.data.keyword.cloud_notm}} che stai utilizzando abbia l'autorizzazione **Hardware Firewall**. Questa autorizzazione è necessaria per modificare o visualizzare i log e le impostazioni del firewall per il servizio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} della tua istanza.
-* Se vuoi aggiungere il servizio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} a un'istanza distribuita, assicurati che non vi siano altri firewall dall'infrastruttura {{site.data.keyword.cloud_notm}} già attivi sulla VLAN pubblica dell'istanza.
+* Se vuoi aggiungere il servizio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} a un'istanza distribuita, assicurati che nessun altro firewall dell'infrastruttura {{site.data.keyword.cloud_notm}} sia già attivo sulla VLAN pubblica dell'istanza.
 * L'installazione del servizio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} aggiunge una nuova VLAN pubblica.
 * Durante la distribuzione del servizio, la tua istanza potrebbe non essere in grado di accedere temporaneamente a Internet.
-* Dopo aver installato correttamente il servizio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}, puoi gestire e configurare le regole del firewall per FSA dalla console FortiGate. Devi assicurarti che le regole del firewall FSA siano definite per consentire le comunicazioni HTTPS in uscita (porta TCP 443) che vengono avviate da componenti di gestione come Zerto Virtual Manager per comunicare con il database di gestione esterno in {{site.data.keyword.cloud_notm}} tramite Internet. Le comunicazioni HTTPS in uscita (porta TCP 443) hanno origine dall'indirizzo IP pubblico del gateway dei servizi edge (ESG) VMware NSX dei servizi di gestione nella tua istanza.
+* Dopo aver installato correttamente il servizio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}, puoi gestire e configurare le regole del firewall per FSA dalla console FortiGate. Devi assicurarti che le regole del firewall FSA siano definite per consentire le comunicazioni HTTPS in uscita (porta TCP 443) che vengono avviate dai componenti di gestione come Zerto Virtual Manager per comunicare con il database di gestione esterno su {{site.data.keyword.cloud_notm}} tramite Internet. Le comunicazioni HTTPS in uscita (porta TCP 443) hanno origine dall'indirizzo IP pubblico del gateway dei servizi edge (ESG) VMware NSX dei servizi di gestione nella tua istanza.
 * Devi gestire attentamente la configurazione di FortiGate Security Appliance per consentire solo le comunicazioni necessarie e negare tutte le altre comunicazioni.
 * Se ordini cluster aggiuntivi, le VLAN pubbliche per questi cluster appena aggiunti non hanno la coppia HA di dispositivi di sicurezza.
 

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-11"
+lastupdated: "2018-09-26"
 
 ---
 
 # Panoramica di HyTrust KeyControl on IBM Cloud
 
-Il servizio HyTrust KeyControl on {{site.data.keyword.cloud}} semplifica la gestione dei carichi di lavoro crittografati automatizzando e semplificando il ciclo di vita delle chiavi di crittografia, inclusa l'archiviazione, la distribuzione, la rotazione e la revoca delle chiavi. Utilizzando la crittografia conforme a FIPS 140-2, le aziende possono gestire facilmente le chiavi di crittografia in scala. 
+Il servizio HyTrust KeyControl on {{site.data.keyword.cloud}} semplifica la gestione dei carichi di lavoro crittografati. Questo servizio automatizza e semplifica il ciclo di vita delle chiavi di crittografia, che include l'archiviazione, la distribuzione, la rotazione e la revoca delle chiavi. Utilizzando la crittografia conforme a FIPS 140-2, le aziende possono gestire facilmente le chiavi di crittografia in scala. 
 
 **Disponibilità:** questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o aggiornate alle release della V2.5 o successive.
 
@@ -37,7 +37,7 @@ Viene ordinata una licenza di HyTrust KeyControl per ogni installazione dell'ist
 
 ## Considerazioni sulla rimozione di HyTrust KeyControl on IBM Cloud
 
-Prima di rimuovere il servizio HyTrust KeyControl on {{site.data.keyword.cloud_notm}}, assicurati di aver disaccoppiato tutti i client dall'uso di KeyContol. Dopo aver rimosso il servizio, le chiavi potrebbero essere eliminate e potresti essere bloccato dalle tue VM.
+Prima di rimuovere il servizio HyTrust KeyControl on {{site.data.keyword.cloud_notm}}, assicurati di disaccoppiare tutti i client dall'utilizzo di KeyContol. Dopo aver rimosso il servizio, è possibile che le chiavi vengano eliminate e potresti non avere più accesso alle tue VM.
 
 ### Link correlati
 

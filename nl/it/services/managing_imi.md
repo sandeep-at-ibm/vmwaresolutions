@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -14,25 +14,25 @@ lastupdated: "2018-08-02"
 
 IMI può fungere da unico provider attendibile per ridurre la complessità del monitoraggio e della gestione delle infrastrutture IT virtuali offrendo servizi gestiti a singola schermata per gli ambienti VMware Cloud Foundation e VMware vCenter Server.
 
-IMI fornisce servizi gestiti per le tue istanze Cloud Foundation e vCenter Server, che comprendono la gestione avanzata di VMware vSphere, la completa copertura di VMware NSX per garantire un'infrastruttura di rete virtuale altamente disponibile e sicura e il monitoraggio di VMware vSAN per garantire la disponibilità dei dati.
+IMI fornisce servizi gestiti per le tue istanze Cloud Foundation e vCenter Server. Questi servizi gestiti includono la gestione avanzata di VMware vSphere, la completa copertura di VMware NSX per garantire un'infrastruttura di rete virtuale altamente disponibile e sicura e il monitoraggio di VMware vSAN per garantire la disponibilità dei dati. 
 
 ## Specifiche tecniche per IMI
 
 Nel servizio gestito IMI sono incluse le seguenti specifiche:
 
 * Opzioni di copertura: 8X5, 16X5 o 24X7
-* Strumenti di gestione dei servizi IT e processo di gestione con responsabilità per la distribuzione generale
+* Strumenti di gestione e processo di gestione dei servizi IT con responsabilità per la distribuzione generale
 * Gestione della conformità
 * Gestione del servizio e creazione di report su base giornaliera e settimanale
-* Servizi a valore aggiunto senza aumento dei costi per un miglioramento continuo
+* Servizi con valore aggiunto senza aumento dei costi per il miglioramento continuo
 
-## Procedura
+## Procedura per richiedere i servizi gestiti da IMI
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Introduzione** nel riquadro di navigazione a sinistra.
-2. Scorri la pagina verso il basso e, sotto **Ordina servizi gestiti aggiuntivi**, fai clic sulla scheda **Servizi gestiti da IMI**.
+2. Scorri la pagina e fai clic sulla scheda **Servizi gestiti da IMI** che si trova in **Ordina servizi gestiti aggiuntivi**.
 3. Nella pagina **Servizi gestiti da IMI**, nella casella **Attività pre-vendita di IMI**, immetti una descrizione dei tuoi requisiti per i servizi IMI e fai clic su **Richiesta di una consultazione**.
 
-Un rappresentante di prevendita IMI ti contatterà tramite le tue informazioni di contatto {{site.data.keyword.cloud_notm}} e ti aiuterà con i servizi di cui hai bisogno.
+Un rappresentante di prevendita IMI ti contatterà utilizzando le tue informazioni di contatto {{site.data.keyword.cloud_notm}} per aiutarti con i servizi di cui hai bisogno.
 
 ### Link correlati
 

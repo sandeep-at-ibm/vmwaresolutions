@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,7 +25,7 @@ Il processo di rimozione del servizio Zerto on {{site.data.keyword.cloud}} è au
    4. Restituisci la sottorete portatile privata che era stata ordinata per le comunicazioni di Zerto Virtual Replication all'infrastruttura {{site.data.keyword.cloud_notm}}.   
    5. Rimuovi i costi del servizio di ripristino di emergenza Zerto dall'estratto conto di {{site.data.keyword.cloud_notm}}.
 
-      **Nota**: per il servizio di ripristino di emergenza Zerto rimosso ti vengono addebitati costi fino alla fine del ciclo di fatturazione.
+      **Nota:** per il servizio di ripristino di emergenza Zerto rimosso ti vengono addebitati costi fino alla fine del ciclo di fatturazione.
 
 ## Risultati
 

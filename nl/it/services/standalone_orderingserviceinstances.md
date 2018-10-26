@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ Assicurati di aver completato le seguenti attività:
 *  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](../vmonic/useraccount.html).
 *  Hai esaminato tutte le considerazioni in [Considerazioni sull'istallazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](../services/standalone_considerations.html).
 
-## Procedura
+## Procedura per ordinare le istanze VMware HCX on IBM Cloud in loco
 
 1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
 2. Scorri fino alla tabella **Istanze HCX on-premise** e fai clic su **Esegui provisioning del nuovo**.

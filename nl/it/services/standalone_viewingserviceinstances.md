@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-20"
 
 Utilizza questa procedura per visualizzare le istanze HCX on {{site.data.keyword.cloud}} in loco che hai ordinato per l'utilizzo in loco e informazioni su di esse.
 
-## Procedura
+## Procedura per visualizzare le istanze VMware HCX on IBM Cloud in loco
 
 Fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra e scorri fino alla tabella **Istanze HCX on-premise** per visualizzare informazioni sulle istanze che hai ordinato:
 

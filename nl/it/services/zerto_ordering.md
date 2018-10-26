@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
 # Ordine di Zerto on IBM Cloud
 
-Puoi ordinare il servizio Zerto on {{site.data.keyword.cloud}} mentre ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
+Puoi ordinare il servizio Zerto on {{site.data.keyword.cloud}} quando ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente. 
 
 ## Ordine di Zerto on IBM Cloud per una nuova istanza
 

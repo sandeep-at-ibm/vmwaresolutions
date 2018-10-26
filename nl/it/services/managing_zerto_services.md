@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-16"
 
 Il servizio Zerto on {{site.data.keyword.cloud}} fornisce funzionalità di replica e di ripristino di emergenza. Queste funzionalità possono essere integrate nelle offerte di distribuzione per proteggere e recuperare i dati nel tuo ambiente virtuale VMware su {{site.data.keyword.cloud_notm}}.
 
-Quando richiedi i servizi gestiti per Zerto on {{site.data.keyword.cloud_notm}}, può essere distribuito un ambiente di ripristino di emergenza (DR) completamente gestito utilizzando il software DR Zerto e IBM Resiliency Services.
+Se richiedi i servizi gestiti per Zerto on {{site.data.keyword.cloud_notm}}, può essere distribuito un ambiente di ripristino di emergenza (DR) completamente gestito utilizzando il software DR Zerto e IBM Resiliency Services.
 
 Per Zerto on {{site.data.keyword.cloud_notm}} sono disponibili i seguenti modelli di servizi gestiti.
 
@@ -32,10 +32,10 @@ In questo modello, viene eseguito il provisioning di una soluzione DR completame
 
 Per ulteriori informazioni, vedi [IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top).
 
-## Procedura
+## Procedura per richiedere i servizi gestiti per Zerto on IBM Cloud
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Introduzione** nel riquadro di navigazione a sinistra.
-2. Scorri la pagina verso il basso e, sotto **Ordina servizi gestiti aggiuntivi**, fai clic sulla scheda **Servizi gestiti per Zerto on IBM Cloud**.
+2. Scorri la pagina verso il basso e sotto **Ordina servizi gestiti aggiuntivi** fai clic sulla scheda **Servizi gestiti per Zerto on IBM Cloud**.
 3. Nella pagina **Zerto on IBM Cloud**, controlla la descrizione e le specifiche tecniche per Zerto on {{site.data.keyword.cloud_notm}} come servizio gestito e fai clic su **Crea**.
 4. Specifica le impostazioni di configurazione in base ai tuoi requisiti o accetta i valori predefiniti.
 5. Fai clic su **vCenter Server** o **Cloud Foundation** per aggiungere il servizio a una delle tue istanze.

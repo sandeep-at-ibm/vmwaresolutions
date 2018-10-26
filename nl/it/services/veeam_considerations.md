@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
 # Panoramica di Veeam on IBM Cloud
 
-Il servizio Veeam on {{site.data.keyword.cloud}} si integra perfettamente con i tuoi hypervisor VMware per aiutare la tua azienda a raggiungere l'alta disponibilità. Questo servizio può fornire obiettivi di tempo e punti di ripristino per le tue applicazioni e i tuoi dati. Gli obiettivi di tempo e punti di ripristino possono essere forniti in meno di 15 minuti dopo il completamento della configurazione. Utilizzando questo servizio, puoi controllare il backup e il ripristino di tutte le macchine virtuali (VM) per la tua infrastruttura direttamente dalla console Veeam.
+Il servizio Veeam on {{site.data.keyword.cloud}} si integra perfettamente con i tuoi hypervisor VMware per aiutare la tua azienda a raggiungere l'alta disponibilità. Questo servizio fornisce obiettivi di tempo e punti di ripristino per le tue applicazioni e i tuoi dati. Gli obiettivi di tempo e punti di ripristino possono essere forniti in meno di 15 minuti dopo il completamento della configurazione. Utilizzando questo servizio, controlli il backup e il ripristino di tutte le macchine virtuali (VM) per la tua infrastruttura direttamente dalla console Veeam.
 
-**Disponibilità**: questo servizio è disponibile solo per le istanze distribuite nelle release della V1.8 o successive.
+**Disponibilità:** questo servizio è disponibile solo per le istanze distribuite nelle release della V1.8 o successive.
 
 ## Specifiche tecniche per Veeam on IBM Cloud
 
@@ -42,7 +42,7 @@ Veeam Backup and Replication 9.5 Enterprise Plus (licenza da 10, 25, 50, 100 o 2
 
 ### Gestione
 
-Backup di gestione configurati per impostazione predefinita con un massimo di cinque VM e 2000 GB di archiviazione.
+Backup di gestione configurati per impostazione predefinita con un massimo di 5 VM e 2000 GB di archiviazione.
 
 ## Considerazioni sull'istallazione di Veeam on IBM Cloud
 
@@ -50,7 +50,7 @@ Il repository di archiviazione e il server Veeam si trovano nel pod e nel data c
 
 ## Considerazioni sulla rimozione di Veeam on IBM Cloud
 
-Prima di rimuovere il servizio Veeam on {{site.data.keyword.cloud_notm}}, ricorda che la rimozione di questo servizio interrompe tutti i backup (incluso il backup delle VM di gestione) ed elimina tutti i backup precedenti (l'eliminazione è irreversibile). Se le VM di gestione vengono successivamente danneggiate, non possono essere ripristinate.
+La rimozione del servizio Veeam on {{site.data.keyword.cloud_notm}} arresta tutti i backup ed elimina tutti i backup precedenti. I backup delle VM di gestione vengono arrestati e l'eliminazione dei backup precedenti è irreversibile. Se le VM di gestione sono danneggiate, non possono essere ripristinate.
 
 ### Link correlati
 
