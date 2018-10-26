@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -24,7 +24,7 @@ A causa delle dipendenze delle risorse, i componenti della tua istanza non vengo
 
 **Attenzione:** per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di fatturazione dell'infrastruttura {{site.data.keyword.cloud_notm}}.
 
-## Eliminazione di istanze dalla pagina delle istanze distribuite
+## Procedura per eliminare le istanze dalla pagina Istanze distribuite
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, trova l'istanza da eliminare.
@@ -34,7 +34,7 @@ A causa delle dipendenze delle risorse, i componenti della tua istanza non vengo
    1. Nella colonna **Azioni**, fai di nuovo clic sull'icona Elimina.
    2. Nella finestra **Elimina istanza**, fai clic su **OK**.
 
-## Eliminazione di istanze dalla pagina dei dettagli dell'istanza
+## Procedura per eliminare le istanze dalla pagina dei dettagli dell'istanza
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza da eliminare.

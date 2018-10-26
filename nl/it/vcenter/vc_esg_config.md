@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -23,10 +23,9 @@ Come parte del processo di ordine per la tua istanza di vCenter Server, le segue
 * Un DLR (Distributed Logical Router) NSX di esempio viene distribuito per la potenziale comunicazione est-ovest tra carichi di lavoro locali connessi alle reti di livello 2 (L2).
 * Un dispositivo Edge NSX viene distribuito e configurato per eseguire la conversione degli indirizzi di rete (NAT) dall'intervallo di indirizzi IP
 dello switch logico del carico di lavoro a un indirizzo IP pubblico sulle regole NAT.
-* Se hai installato il servizio Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager è configurato per eseguire un backup giornaliero delle configurazioni NSX. Per ulteriori informazioni, vedi [Considerazioni sull'istallazione di Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
+* Se hai installato il servizio Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager è configurato per eseguire un backup giornaliero delle configurazioni NSX. Per ulteriori informazioni, vedi [Considerazioni sull'istallazione di Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud).
 
-
-## Configurazione delle impostazioni di rete per le tue VM
+## Procedura per configurare le impostazioni di rete per le tue VM
 
 Per usufruire di NSX per le tue VM del carico di lavoro, devi configurare una serie di impostazioni completando le seguenti operazioni quando crei le VM:
 
@@ -47,7 +46,7 @@ Per usufruire di NSX per le tue VM del carico di lavoro, devi configurare una se
 
 3. Assegna il gateway predefinito della VM come `192.168.10.1`. Questo è l'indirizzo IP del DLR NSX sullo stesso switch logico delle VM del carico di lavoro.
 
-## Abilitazione della regola SNAT
+## Procedura per abilitare la regola SNAT
 
 Se vuoi che le tue VM del carico di lavoro abbiano accesso in uscita a Internet, devi abilitare la regola SNAT (Source Network Address Translation) associata. L'abilitazione della regola SNAT consente di convertire l'accesso Internet dalle tue VM in un unico indirizzo IP pubblico. Completa la seguente procedura nel client web VMware vSphere:
 
@@ -58,7 +57,7 @@ Se vuoi che le tue VM del carico di lavoro abbiano accesso in uscita a Internet,
 
 Per ulteriori informazioni sulle regole NAT dell'edge NSX, vedi [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 
-## Identificazione dei dettagli delle sottoreti del cliente
+## Procedura per identificare i dettagli delle sottoreti del cliente
 
 L'edge **customer-nsx-edge** è destinato al tuo utilizzo personale, quindi puoi modificarlo per definire più regole NAT per il traffico in entrata o in uscita. Queste regole devono utilizzare solo gli indirizzi IP sulle sottoreti del cliente pubbliche o private ordinate a tuo nome.
 

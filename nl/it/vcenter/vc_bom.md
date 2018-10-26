@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -39,7 +39,7 @@ Tabella 2. Diba per i componenti software nelle istanze vCenter Server
 | VMware       | NSX per vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server Standard edition | 2012R2       |
 
-**Nota**: VMware vSAN è un componente facoltativo.
+**Nota:** VMware vSAN è un componente facoltativo.
 
 ## Impostazioni di configurazione avanzate per i server ESXi
 
@@ -61,7 +61,7 @@ Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanz
 | Dimensione heap TCP/IP | **TcpipHeapSize** = 32 | Non impostato |
 | Numero massimo di heap TCP/IP | **TcpipHeapMax** = 1536 | Non impostato |
 
-**Note**:
+**Note:**
 * L'impostazione **MaxVolumes** è obbligatoria per il servizio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} perché il servizio potrebbe utilizzare più del numero predefinito di montaggi NFS sul server ESXi.
 * Il valore **Non impostato** per un'impostazione di configurazione indica che la nuova impostazione non viene applicata automaticamente perché richiede il riavvio dei server ESXi, il che potrebbe causare un'interruzione.
 
@@ -117,7 +117,7 @@ Per aggiornare l'impostazione MTU per lo Switch pubblico, completa la seguente p
 2. Nella **scheda Proprietà**, seleziona l'opzione **Avanzate**.
 3. Assicurati che il valore **MTU massima** sia impostato su 1500.
 
-   **Nota**: quando viene modificata la dimensione MTU in un vDS, gli uplink collegati (NIC fisiche) vengono disattivati e riattivati. Di conseguenza, si verifica una breve interruzione per le VM che utilizzano l'uplink. Pertanto, si consiglia si pianificare l'aggiornamento dell'impostazione MTU durante i tempi di inattività pianificati.
+   **Nota:** quando si modifica la dimensione MTU in un vDS, gli uplink collegati (NIC fisiche) vengono disattivati e riattivati. Di conseguenza, si verifica una breve interruzione per le VM che utilizzano l'uplink. Pertanto, si consiglia si pianificare l'aggiornamento dell'impostazione MTU durante i tempi di inattività pianificati.
 
 ### Link correlati
 

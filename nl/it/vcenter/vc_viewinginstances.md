@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-25"
 
 Visualizza il riepilogo e le informazioni dettagliate delle istanze VMware vCenter Server fornite per account utente diversi.
 
-## Visualizzazione del riepilogo delle istanze vCenter Server
+## Procedura per visualizzare il riepilogo delle istanze vCenter Server
 
 Per visualizzare un riepilogo di tutte le istanze vCenter Server fornite per un account utente, completa la seguente procedura:
 
@@ -45,7 +45,7 @@ Tabella 2. Descrizioni dello stato delle istanze vCenter Server
 | Errore di eliminazione | Si è verificato un errore durante l'eliminazione dell'istanza. |
 | Eliminato | L'istanza è stata eliminata. |
 
-## Visualizzazione dei dettagli delle proprietà dell'istanza vCenter Server
+## Procedura per visualizzare i dettagli delle proprietà delle istanze vCenter Server
 
 Per visualizzare i dettagli delle proprietà di un'istanza:
 
@@ -60,7 +60,7 @@ Tabella 3. Proprietà dell'istanza vCenter Server
 | ID | L'ID dell'istanza. |
 | Ubicazione | Il {{site.data.keyword.CloudDataCent_notm}} in cui è ospitata l'istanza. |
 | Versione corrente | La versione corrente di {{site.data.keyword.vmwaresolutions_short}}. |
-| Versione vCenter | La versione di VMware vCenter Server.<br><br>**Nota**: esiste una leggera variazione tra la versione di vCenter Server visualizzata nella console {{site.data.keyword.vmwaresolutions_short}} e nel client web VMware vSphere. Entrambe sono corrette. |
+| Versione vCenter | La versione di VMware vCenter Server.<br><br>**Nota:** esiste una leggera variazione tra la versione di vCenter Server visualizzata nella console {{site.data.keyword.vmwaresolutions_short}} e nel client web VMware vSphere. Entrambe sono corrette. |
 | NSX per vSphere | La versione del prodotto VMware NSX per vSphere. |
 | Licenza _componente VMware_ | Se quando hai ordinato l'istanza hai scelto di utilizzare la tua propria licenza VMware per un qualsiasi componente VMware nella pagina **Licenze**, vengono visualizzati il nome del componente VMware e la chiave di licenza che hai immesso per il componente.<br><br>Esempi di licenze dei componenti VMware possono includere: **Licenza NSX**, **Licenza vCenter Server** e **Licenza vSAN**. |
 | Edizione licenza NSX | La versione e l'edizione della licenza di VMware NSX. |
@@ -70,7 +70,7 @@ Tabella 3. Proprietà dell'istanza vCenter Server
 | Hybridity Bundle | Indica se vCenter Server with Hybridity Bundle è installato. |
 | Stato  | Lo stato dell'istanza.<br><br>Le informazioni visualizzate forniscono un aggiornamento sullo stato di avanzamento della distribuzione o sull'azione eseguita sull'istanza. Se ci sono problemi, potrebbe essere visualizzato un messaggio per aiutarti ad analizzare e risolvere il problema. |
 
-## Visualizzazione delle informazioni di accesso per le istanze vCenter Server
+## Procedura per visualizzare le informazioni di accesso per le istanze vCenter Server
 
 In **Informazioni sull'accesso**, visualizza le informazioni di accesso per i componenti relativi all'istanza. Le password visualizzate sono password iniziali generate dal sistema. Se le modifichi all'esterno della console {{site.data.keyword.vmwaresolutions_short}}, non vengono aggiornate nella pagina di riepilogo dell'istanza.
 
@@ -79,8 +79,8 @@ Tabella 4. Informazioni di accesso di vCenter Server per i componenti relativi a
 | Componente        | Descrizione       |
 |:------------- |:------------- |
 | IP AD/DNS | Gli indirizzi IP dei due server AD. |
-| Nomi di dominio completo AD/DNS | I nomi di dominio completi del server AD/DNS.<br><br>**Nota**: è possibile utilizzare la stessa password amministratore per connettersi a tutti i server AD/DNS utilizzando una connessione al desktop remoto. |
-| ADMIN AD/DNS (Desktop remoto)  | Per le istanze primarie, visualizza il nome utente e la password per accedere al server AD tramite una connessione al desktop remoto.<br><br>Per le istanze secondarie, fai clic sul link **Visualizza nell'istanza primaria** per essere indirizzato alle informazioni di nome utente e password sull'istanza primaria.<br><br>**Nota**: dopo che l'istanza secondaria viene aggiunta al dominio DNS primario e si verifica la replica, la password dell'amministratore locale nell'istanza primaria potrebbe sovrascrivere la password dell'amministratore locale nell'istanza secondaria. Facendo clic sul link **Visualizza nell'istanza primaria**, avrai accesso alla password di amministratore corretta.  
+| Nomi di dominio completo AD/DNS | I nomi di dominio completi del server AD/DNS.<br><br>**Nota:** è possibile utilizzare la stessa password amministratore per connettersi a tutti i server AD/DNS utilizzando una connessione al desktop remoto. |
+| ADMIN AD/DNS (Desktop remoto)  | Per le istanze primarie, visualizza il nome utente e la password per accedere al server AD tramite una connessione al desktop remoto.<br><br>Per le istanze secondarie, fai clic sul link **Visualizza nell'istanza primaria** per essere indirizzato alle informazioni di nome utente e password sull'istanza primaria.<br><br>**Nota:** dopo che l'istanza secondaria viene aggiunta al dominio DNS primario e si verifica la replica, la password dell'amministratore locale nell'istanza primaria potrebbe sovrascrivere la password dell'amministratore locale nell'istanza secondaria. Facendo clic sul link **Visualizza nell'istanza primaria**, avrai accesso alla password di amministratore corretta.  
 | IP NSX Manager  | L'indirizzo IP di NSX Manager.  |
 | Nome di dominio completo NSX Manager  | Il nome di dominio completo di NSX Manager.  |
 | HTTP NSX Manager  | Il nome utente e la password utilizzati per accedere alla console web di NSX Manager. |
@@ -93,7 +93,7 @@ Tabella 4. Informazioni di accesso di vCenter Server per i componenti relativi a
 | ADMIN vCenter  | Il nome utente e la password di VMware vCenter Single Sign-On che puoi utilizzare per accedere a vCenter Server utilizzando il client web vSphere.  |
 | SSH vCenter  | Il nome utente e la password che puoi utilizzare per accedere alla VM di vCenter Server tramite una connessione SSH.  |
 
-## Visualizzazione della cronologia di distribuzione per le istanze vCenter Server
+## Procedura per visualizzare la cronologia di distribuzione per le istanze vCenter Server
 
 Fai clic su **Cronologia distribuzione** dal riquadro di navigazione a sinistra per visualizzare la cronologia di distribuzione per l'istanza.
 
@@ -112,7 +112,7 @@ Se si verificano degli errori durante la distribuzione o l'eliminazione dell'ist
 
 Gestisci le tue istanze dalla console {{site.data.keyword.vmwaresolutions_short}} o dal client web VMware vSphere.
 
-**Importante**: prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza per passare al client web vSphere e iniziare a gestire i tuoi server ESXi, devi accedere al portale VPN del {{site.data.keyword.CloudDataCent_notm}}. Passa con il mouse sul pulsante **Console vCenter** e segui le istruzioni per assicurarti di soddisfare tutti i requisiti e di aver completato i passi necessari prima di accedere al client web vSphere.
+**Importante:** prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza per passare al client web vSphere e iniziare a gestire i tuoi server ESXi, devi accedere al portale VPN del {{site.data.keyword.CloudDataCent_notm}}. Passa con il mouse sul pulsante **Console vCenter** e segui le istruzioni per assicurarti di soddisfare tutti i requisiti e di aver completato i passi necessari prima di accedere al client web vSphere.
 
 Rivedi i seguenti argomenti per informazioni utili per completare le istruzioni di accesso:
 *  Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](../vmonic/trbl_timeout_vc_console.html).
