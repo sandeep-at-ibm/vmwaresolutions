@@ -10,13 +10,13 @@ lastupdated: "2018-08-13"
 
 # vCenter Server の接続ストレージについて
 
-接続ストレージは、VMware vCenter Server on {{site.data.keyword.cloud}} オファリングの拡張機能です。 VMware vCenter Server on {{site.data.keyword.cloud_notm}} の接続ストレージ・ソリューション・アーキテクチャーに、このソリューションの各コンポーネントと、設計のコンポーネント構成の概要を記載しています。
+接続ストレージは、VMware vCenter Server on {{site.data.keyword.cloud}} オファリングの拡張機能です。 VMware vCenter Server on {{site.data.keyword.cloud_notm}} の接続ストレージ・ソリューション・アーキテクチャーに、このソリューションの各コンポーネントと、設計での各コンポーネントの構成概要が詳しく示されます。
 
 vCenter Server の設計について詳しくは、[ソリューションの概要](../solution/solution_overview.html)を参照してください。
 
 ## vCenter Server の接続ストレージの主な利点
 
-接続ストレージは VMware 環境に必須のものではありませんが、共有ストレージ・デバイスとして使用すると、ユーザーの IT 運用に多くのメリットがあります。 共有ストレージ・デバイスを使用すると、次の表に示す vSphere 機能が有効になるので、高可用性、分散リソース・スケジューラー、効率的なストレージ容量の使用、簡素化された管理を実現できます。
+接続ストレージは VMware 環境に必須のものではありませんが、共有ストレージ・デバイスとして使用すると、ユーザーの IT 運用に多くのメリットがあります。 共有ストレージ・デバイスを使用すると、次の表に示す vSphere 機能を有効にすることにより、高可用性、分散リソース・スケジューラー、効率的なストレージ容量の使用、簡素化された管理を実現できます。
 
 表 1. vCenter Server の接続ストレージの機能説明
 
