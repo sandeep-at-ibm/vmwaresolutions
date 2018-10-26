@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-15"
 
 Una volta che il servizio è stato distribuito nella tua istanza, puoi accedere alla console Veeam utilizzando RDP per gestire il backup e il ripristino di tutte le macchine virtuali nel tuo ambiente, compreso il backup e il ripristino dei componenti di gestione. Puoi anche aggiornare il servizio scaricando e installando gli aggiornamenti di Veeam dal sito web Veeam.
 
-Per le istanze che sono state distribuite in release precedenti alla V1.8, se vuoi utilizzare il servizio Veeam on {{site.data.keyword.cloud}}, devi sostituire la VSI Veeam esistente nelle istanze. Per ulteriori informazioni, vedi la sezione _Sostituzione della VSI Veeam delle istanze precedenti alla V1.8 con Veeam on IBM Cloud_ in questo argomento.
+Per le istanze che sono state distribuite in release precedenti alla V1.8, se vuoi utilizzare il servizio Veeam on {{site.data.keyword.cloud}}, devi sostituire la VSI Veeam esistente nelle istanze. Per ulteriori informazioni, vedi la sezione _Sostituzione della VSI Veeam delle istanze precedenti alla V1.8 con Veeam on IBM Cloud_.
 
 ## Accesso alla console Veeam mediante RDP
 
@@ -63,7 +63,7 @@ Completa la seguente procedura:
 3. Fai clic sulla scheda **Servizi**.
 4. Nella scheda **Aggiungi servizi**, installa il servizio Veeam on {{site.data.keyword.cloud_notm}}.
 
-Una volta distribuito il nuovo servizio Veeam on {{site.data.keyword.cloud_notm}} e terminato un backup dei tuoi componenti di gestione, puoi rimuovere la VSI Veeam esistente dal tuo account creando un ticket di supporto {{site.data.keyword.cloud_notm}}. Il supporto IBM identificherà ed eliminerà la VSI Veeam e archiviazione esistenti.
+Una volta distribuito il nuovo servizio Veeam on {{site.data.keyword.cloud_notm}} e terminato un backup dei tuoi componenti di gestione, puoi rimuovere la VSI Veeam esistente dal tuo account creando un ticket di supporto {{site.data.keyword.cloud_notm}}. Il supporto IBM identifica ed elimina l'archiviazione e la VSI Veeam esistenti.
 
 ### Link correlati
 

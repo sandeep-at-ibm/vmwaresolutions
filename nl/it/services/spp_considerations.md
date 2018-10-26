@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-28"
 
 ---
 
 # Panoramica di IBM Spectrum Protect Plus on IBM Cloud
 
-Il servizio {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} fornisce una soluzione efficiente e scalabile per la protezione, il riutilizzo e il recupero dei dati per gli ambienti virtuali. Puoi implementare il servizio come soluzione autonoma o integrarlo con il tuo ambiente IBM Spectrum Protect per scaricare copie per la governance di dati e archiviazione a lungo termine.
+Il servizio {{site.data.keyword.IBM}} Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} fornisce una soluzione efficiente e scalabile per la protezione, il riutilizzo e il recupero dei dati per gli ambienti virtuali. Puoi implementare il servizio come soluzione autonoma o integrarlo con il tuo ambiente IBM Spectrum Protect per scaricare copie per la governance di dati e archiviazione a lungo termine.
 
-**Disponibilità**: questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o aggiornate alle release della V2.2 o successive.
+**Disponibilità:** questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o aggiornate alle release della V2.2 o successive.
 
 **Note:**
 * Se installi il servizio per le istanze distribuite nelle release della V2.4 o successive, viene installato IBM Spectrum Protect Plus V10.1.1 Patch 1.
@@ -27,12 +27,12 @@ Nel servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} vengo
 ### Risorse vCenter
 
 * VM server che esegue il server IBM Spectrum Protect Plus
-   * Sistema operativo: Linux 3.10.0-693.11.1.el7.x86_64
+   * Sistema operativo Linux 3.10.0-693.11.1.el7.x86_64
    * Core da 4 x 2,0 GHz
    * 32 GB di RAM
    * Disco da 370 GB
 * VM secondaria che esegue il server IBM Spectrum Protect Plus vSnap e il proxy VADP
-   * Sistema operativo: Linux 3.10.0-693.11.1.el7.x86_64
+   * Sistema operativo Linux 3.10.0-693.11.1.el7.x86_64
    * CPU e RAM configurate in base alle dimensioni di archiviazione selezionate e alle indicazioni di dimensionamento di [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)
    * Disco da 150 GB
 
@@ -47,7 +47,7 @@ Consulta [IBM Spectrum Protect Plus blueprint and sizing tool](https://www.ibm.c
 
 ### Archiviazione per la gestione
 
-Un'archiviazione di file endurance da 1000 GB e 2 IOPS/GB che ospita la macchina virtuale IBM Spectrum Protect Plus e in esecuzione sulla stessa sottorete dell'archiviazione di backup.
+Un'archiviazione di file endurance da 1000 GB, 2 IOPS/GB che ospita la macchina virtuale IBM Spectrum Protect Plus e che è in esecuzione sulla stessa sottorete dell'archiviazione di backup.
 
 ### Rete
 
@@ -67,14 +67,14 @@ Esamina le seguenti considerazioni prima di installare il servizio IBM Spectrum 
 
   Le istanze Cloud Foundation e vCenter Server distribuite o aggiornate alle release della V2.2 o successive hanno un'impostazione di parametro `NFS.MaxVolumes` in VMware. Questo parametro definisce il numero massimo di montaggi NFS su un server ESXi e può essere impostato su un massimo di 256, che è specifico per la versione del server ESXi. Per ulteriori informazioni, vedi [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
 
-  Il servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} può consumare fino a undici volumi NFS su ciascun server ESXi nel cluster predefinito della tua istanza. Inoltre, il servizio creerà montaggi NFS temporanei per scopi di backup e ripristino. Pertanto, devi impostare il numero di montaggi NFS su un minimo di 64 per garantire che il servizio possa essere installato e funzioni correttamente.
+  Il servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} può utilizzare fino a 11 dei volumi NFS su ogni server ESXi nel cluster predefinito della tua istanza. Inoltre, il servizio crea montaggi NFS temporanei per scopi di backup e ripristino. Pertanto, devi impostare il numero di montaggi NFS su un minimo di 64 per garantire che il servizio possa essere installato e funzioni correttamente.
 
 ## Considerazioni sulla rimozione di IBM Spectrum Protect Plus on IBM Cloud
 
 Esamina le seguenti considerazioni prima di rimuovere il servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}:
-* Assicurati che tutte le configurazioni dei lavori di backup vengano rimosse e che non vi siano operazioni di backup o ripristino attive.
+* Assicurarti che tutte le configurazioni dei lavori di backup vengano rimosse insieme alle operazioni di backup o ripristino attive.
 * Quando rimuovi il servizio, l'archiviazione per il repository di backup viene rimossa dalla VM di IBM Spectrum Protect Plus e l'ordine di archiviazione viene annullato, il che elimina i dati del repository di backup in modo permanente.
-* Quando rimuovi il servizio, viene rimossa anche l'archiviazione di backup ordinata per il servizio. Pertanto, tutti i backup diventano inaccessibili durante la rimozione del servizio.
+* Quando rimuovi il servizio, viene rimossa anche l'archiviazione di backup che viene ordinata per il servizio. Tutti i backup diventano inaccessibili durante la rimozione del servizio.
 
 ### Link correlati
 

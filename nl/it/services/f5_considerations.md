@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -14,7 +14,7 @@ Il servizio F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) forn
 
 Puoi installare più di un'istanza di questo servizio a seconda delle necessità.
 
-**Disponibilità**: questo servizio è disponibile solo per le istanze distribuite nelle release della V1.9 o successive.
+**Disponibilità:** questo servizio è disponibile solo per le istanze distribuite nelle release della V1.9 o successive.
 
 ## Specifiche tecniche per F5 on IBM Cloud
 

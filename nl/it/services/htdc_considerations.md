@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-18"
+lastupdated: "2018-09-26"
 
 ---
 
 # Panoramica di HyTrust DataControl on IBM Cloud
 
-Il servizio HyTrust DataControl on {{site.data.keyword.cloud}} offre una potente crittografia con gestione delle chiavi integrata per proteggere i carichi di lavoro per tutto il loro ciclo di vita. Il servizio può fornire la crittografia sia a livello di sistema operativo che a livello di dati, il che significa che è possibile crittografare e decrittografare qualsiasi directory, cartella o file all'interno di un carico di lavoro.
+Il servizio HyTrust DataControl on {{site.data.keyword.cloud}} offre una potente crittografia con gestione delle chiavi integrata per proteggere i carichi di lavoro per tutto il loro ciclo di vita. Il servizio fornisce la crittografia sia a livello di sistema operativo che a livello di dati. Ciò consente di crittografare e decrittografare qualsiasi directory, cartella o file all'interno di un carico di lavoro.
 
 **Disponibilità:** questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o aggiornate alle release della V2.3 o successive.
 
@@ -33,7 +33,7 @@ Licenza per host: viene ordinata una licenza HyTrust DataControl per ciascun hos
 
 ## Considerazioni sulla rimozione di HyTrust DataControl on IBM Cloud
 
-Prima di rimuovere il servizio HyTrust DataControl on {{site.data.keyword.cloud_notm}}, assicurati di aver disaccoppiato tutti i client dall'uso di DataControl. Dopo aver rimosso il servizio, le chiavi potrebbero essere eliminate e potresti essere bloccato dalle tue VM.
+Prima di rimuovere il servizio HyTrust DataControl on {{site.data.keyword.cloud_notm}}, disaccoppia tutti client dall'utilizzo di DataControl. Dopo aver rimosso il servizio, è possibile che le chiavi vengano eliminate e potresti non avere più accesso alle tue VM.
 
 ### Link correlati
 

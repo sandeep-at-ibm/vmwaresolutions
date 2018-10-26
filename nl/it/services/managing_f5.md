@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -14,7 +14,8 @@ lastupdated: "2018-07-19"
 
 Per gestire il servizio F5 on {{site.data.keyword.cloud}}, accedi alle console dell'interfaccia utente web BIG-IP primaria o secondaria utilizzando le credenziali corrispondenti che puoi trovare nella pagina dei dettagli del servizio F5 on {{site.data.keyword.cloud_notm}}.
 
-Per informazioni sulla visualizzazione dei dettagli del servizio, vedi i seguenti argomenti:
+Per ulteriori informazioni sulla visualizzazione dei dettagli del servizio, vedi:
+
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](../vcenter/vc_addingremovingservices.html)
 

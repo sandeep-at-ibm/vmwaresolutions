@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-26"
 
 ---
 
 # Panoramica di VMware HCX on IBM Cloud
 
-Il servizio HCX on {{site.data.keyword.cloud}} può estendere senza problemi le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione delle macchine virtuali (VM) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
+Il servizio HCX on {{site.data.keyword.cloud}} estende senza problemi le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che ti consente di migrare le macchine virtuali (VM) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
 
 **Disponibilità:** questo servizio è disponibile solo per le istanze VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle distribuite nelle release della V2.3 e successive.
 
@@ -67,12 +67,12 @@ Esamina le seguenti considerazioni prima di rimuovere il servizio HCX on {{site.
 * Assicurati che le interconnessioni e le reti estese tra il sito di origine in loco e i siti di destinazione {{site.data.keyword.cloud_notm}} siano rimossi. Per rimuovere le interconnessioni e le reti estese, utilizza l'interfaccia utente HCX nel client web VMware vSphere installato in loco.
 * Assicurati che gli accoppiamenti di siti tra il sito di origine in loco e i siti di destinazione {{site.data.keyword.cloud_notm}} siano rimossi. Per rimuovere gli accoppiamenti di siti, utilizza l'interfaccia utente HCX nel client web VMware vSphere installato in loco.
 * La rimozione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Per la corretta rimozione di questo servizio vengono completate le seguenti procedure:
-   * La licenza HCX ordinata per HCX Manager lato cloud è disattivata.
-   * HCX Manager è stato eliminato.
-   * Gli indirizzi IP vMotion che erano riservati per HCX sono stati rilasciati.
+   * La licenza HCX ordinata per HCX Manager lato cloud viene disattivata.
+   * HCX Manager viene eliminato.
+   * Gli indirizzi IP vMotion che erano riservati per HCX vengono rilasciati.
    * Se vuoti, i pool della risorsa correlata a HCX vengono rimossi.
    * Se vuote, le cartelle correlate a HCX vengono rimosse.
-   * I dispositivi edge di gestione HCX sono stati eliminati
+   * I dispositivi edge di gestione HCX vengono eliminati.
 
 ### Link correlati
 

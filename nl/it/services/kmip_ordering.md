@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -38,7 +38,7 @@ Seleziona la regione {{site.data.keyword.cloud_notm}} in cui dovrà essere ospit
 
 Per vCenter Server, devi configurare un cluster KMS (Key Management Server). L'endpoint nella tua regione selezionata si collega in modo sicuro al KMS tramite il certificato SSL del client. Vedi la seguente tabella per l'endpoint in ciascuna regione. Questi endpoint utilizzano certificati autofirmati che vengono gestiti dal team {{site.data.keyword.vmwaresolutions_short}}. L'impronta digitale per i certificati è `a9 d0 ff 15 df 85 10 6b 61 88 fe 2e 8b d3 1a af 48 c8 a0 7a`.
 
-Tabella 1: regioni degli endpoint del servizio KMIP for VMware on {{site.data.keyword.cloud_notm}}
+Tabella 1. Regioni degli endpoint del servizio KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
 | Regione         | Endpoint               |
 |:---------------|:-----------------------|
@@ -47,7 +47,7 @@ Tabella 1: regioni degli endpoint del servizio KMIP for VMware on {{site.data.ke
 | Regno Unito |  `158.175.93.122:5696` |
 | Stati Uniti Sud       |  `169.60.185.42:5696`  |
 
-Questa impostazione è facoltativa al momento della configurazione iniziale. Puoi lasciare vuoto questo campo in questo momento perché il certificato client del KMS in vCenter Server è noto dopo la distribuzione dell'istanza. Tuttavia, devi immettere il certificato dopo aver distribuito l'istanza, in modo che la connessione di vCenter Server al KMS possa essere completata correttamente.
+Questa impostazione è facoltativa al momento della configurazione iniziale. Puoi lasciare vuoto questo campo perché il certificato client del KMS in vCenter Server è noto dopo la distribuzione dell'istanza. Tuttavia, devi immettere il certificato dopo che la tua istanza viene distribuita in modo che la connessione di vCenter Server al KMS possa essere completata correttamente.
 
 ### Chiave API per ID servizio
 

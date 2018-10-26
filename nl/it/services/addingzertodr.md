@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ Il servizio Zerto on {{site.data.keyword.cloud}} integra le funzionalità di rep
 
 Nel servizio Zerto on {{site.data.keyword.cloud_notm}} vengono ordinati e inclusi i seguenti componenti.
 
-**Nota**: i componenti di Zerto Virtual Manager vengono distribuiti solo nel cluster predefinito.
+**Nota:** i componenti di Zerto Virtual Manager vengono distribuiti solo nel cluster predefinito.
 
 ### VSI
 

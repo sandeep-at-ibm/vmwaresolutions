@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
 # Ordine di FortiGate Virtual Appliance on IBM Cloud
 
-Puoi ordinare il servizio FortiGate Virtual Appliance on {{site.data.keyword.cloud}} mentre ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
+Puoi ordinare il servizio FortiGate Virtual Appliance on {{site.data.keyword.cloud}} quando ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
 
 ## Ordine di FortiGate Virtual Appliance on IBM Cloud per una nuova istanza
 
@@ -44,14 +44,14 @@ Immetti il nome del servizio.
 Il modello di licenza per FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} offre le seguenti opzioni:
 <dl class="dl">
         <dt class="dt dlterm">Standard FW</dt>
-        <dd class="dd">Questo bundle include Filtraggio stateful dei pacchetti, Protezione VLAN e registrazione avanzata, Regole firewall Ingress/Egress, Terminazione VPN SSL/IPSec e supporto continuo.</dd>
+        <dd class="dd">Questo bundle include Filtraggio stateful dei pacchetti, Protezione VLAN e registrazione avanzata, Regole firewall in entrata e in uscita, Terminazione VPN SSL/IPSec e supporto continuo.</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
-        <dd class="dd">Questo bundle include tutti i servizi Standard Firewall in aggiunta a NGFW IPS e filtro Web, AntiVirus e AntiSpam, Reputazione IP & dominio e servizi di sicurezza FortiCare di base.</dd>
+        <dd class="dd">Questo bundle include tutti i servizi Standard Firewall otre a NGFW IPS e filtro web, AntiVirus e AntiSpam, Reputazione IP e dominio e servizi di sicurezza FortiCare di base.</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>
         <dd class="dd">Questo bundle include tutti i servizi Standard Firewall e UTM in aggiunta a FortiSandbox Cloud e Mobile Security.</dd>
 </dl>
 
-**Importante**: non puoi modificare il modello di licenza dopo l'installazione del servizio. Per modificare il modello di licenza, devi rimuovere il servizio esistente e reinstallare il servizio selezionando un'opzione di licenza diversa.
+**Importante:** non puoi modificare il modello di licenza dopo l'installazione del servizio. Per modificare il modello di licenza, devi rimuovere il servizio esistente e reinstallare il servizio selezionando un'opzione di licenza diversa.
 
 ### Link correlati
 

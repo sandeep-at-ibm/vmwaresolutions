@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ Utilizza questa procedura per eliminare le istanze HCX on {{site.data.keyword.cl
 
 Assicurati di aver esaminato tutte le considerazioni in [Considerazioni sull'eliminazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](../services/standalone_considerations.html).
 
-## Procedura
+## Procedura per eliminare le istanze VMware HCX on IBM Cloud in loco
 
 1. Fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Scorri fino alla tabella **Istanze HCX on-premise** e trova l'istanza da eliminare.
