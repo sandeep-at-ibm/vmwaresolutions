@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-08-14"
 ## IBM Cloud for VMware Solutions にはどのようなユーザー・アカウントが必要ですか?
 
 * **IBMid アカウント**。 {{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスするためには、このアカウントが必要です。 このコンソールは、{{site.data.keyword.slportal}}とは別のスタンドアロンのユーザー・インターフェースです。 詳しくは、[概説](../index.html)を参照してください。
-* **{{site.data.keyword.cloud_notm}} アカウント**。 プロビジョニングにはこのアカウントが必要です。 {{site.data.keyword.cloud_notm}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。 
+* **{{site.data.keyword.cloud_notm}} アカウント**。 プロビジョニングにはこのアカウントが必要です。 {{site.data.keyword.cloud_notm}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。
 * **{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウント**。 このアカウントは以前は **IBM SoftLayer** アカウントと呼ばれていたもので、インフラストラクチャー製品とサービスを管理するための複数の追加機能を提供する {{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルへのログインにはこのアカウントを使用します。 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、**{{site.data.keyword.cloud_notm}} アカウント**を従量課金 (PAYG) タイプのアカウントにアップグレードすることにより、または既存の {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを {{site.data.keyword.cloud_notm}} アカウントにリンクすることにより取得できます。 使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは特定の要件を満たしている必要があります。 詳しくは、[必要なアカウントの登録](signing_softlayer_account.html)および [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](slaccountrequirement.html)を参照してください。
 
 ## IBM Cloud インフラストラクチャーの資格情報を IBM Cloud for VMware Solutions コンソールに関連付けるにはどうすればよいですか?
@@ -64,7 +64,7 @@ VMware vSphere DRS (Distributed Resource Scheduler) と VMware HA (High Availabi
 
 vCenter Server インスタンスの場合、デプロイ時に作成される最初のクラスターのデフォルト名は **cluster1** です。 VMware vSphere Client でデフォルト・クラスターの名前を変更できます。 vCenter Server インスタンスにクラスターを追加するときに、{{site.data.keyword.vmwaresolutions_short}} コンソールで任意の名前を指定できます。
 
-**注**: Cloud Foundation インスタンスの場合、デフォルトのクラスター名は変更できません。
+**注:** Cloud Foundation インスタンスの場合、デフォルトのクラスター名は変更できません。
 
 ##パッチはどのように管理されていますか?
 

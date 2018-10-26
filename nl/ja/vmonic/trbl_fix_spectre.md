@@ -35,7 +35,7 @@ V2.0 以降のインスタンスは、VMware vSphere 6.5 および VMware vCente
 
 ### V2.0 以降でデプロイされた Cloud Foundation インスタンス
 
-VMware vSphere 6.5 および VMware vCenter Server 6.5 に必要なパッチを適用するには、Cloud Foundation インスタンスを最新の VMware パッチ・バンドルにアップグレードする必要があります。既存のすべてのインスタンスと ESXi サーバーでは、{{site.data.keyword.vmwaresolutions_full}} コンソールの**「更新およびパッチ」**ページに、パッチを適用するようプロンプトが出されます。 詳しくは、[Cloud Foundation インスタンスへの更新の適用](../sddc/sd_applyingupdates.html)を参照してください。
+VMware vSphere 6.5 および VMware vCenter Server 6.5 に必要なパッチを適用するには、Cloud Foundation インスタンスを最新の VMware パッチ・バンドルにアップグレードする必要があります。 既存のすべてのインスタンスと ESXi サーバーでは、{{site.data.keyword.vmwaresolutions_full}} コンソールの**「更新およびパッチ」**ページに、パッチを適用するようプロンプトが出されます。 詳しくは、[Cloud Foundation インスタンスへの更新の適用](../sddc/sd_applyingupdates.html)を参照してください。
 
 ### V2.0 以降でデプロイされた VMware vSphere クラスター
 

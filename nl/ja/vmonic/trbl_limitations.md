@@ -20,4 +20,4 @@ Microsoft Active Directory (AD) / ドメイン・ネーム・サーバー (DNS) 
 
 プライマリーまたはセカンダリー Cloud Foundation インスタンスのデプロイメント時にドメイン・ネームを選択するときは、`ping` または `nslookup` コマンドを使用して、`sddcmanager.<subdomain>` ホスト名が外部ドメインに解決されないことを確認する必要があります。
 
-Cloud Foundation インスタンスのサブドメインの構造は、`<VCF instance name>.<domain name>` です。 例えば、`<domain name>` が `test.local` で、Cloud Foundation インスタンス名が `mytest` である場合、Cloud Foundation インスタンスをデプロイしなければ `sddcmanager.mytest.test.local` ホスト名は IP アドレスに解決されません。そうでなければ、インスタンスのデプロイメントは失敗する可能性があります。
+Cloud Foundation インスタンスのサブドメインの構造は、`<VCF instance name>.<domain name>` です。 例えば、`<domain name>` が `test.local` で、Cloud Foundation インスタンス名が `mytest` である場合、Cloud Foundation インスタンスをデプロイしなければ `sddcmanager.mytest.test.local` ホスト名は IP アドレスに解決されません。 そうでなければ、インスタンスのデプロイメントは失敗する可能性があります。

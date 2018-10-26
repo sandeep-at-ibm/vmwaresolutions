@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -33,7 +33,7 @@ lastupdated: "2018-08-15"
 | vSAN ライセンス・エディション         | vSAN Advanced または Enterprise  | vSAN Advanced または Enterprise  | vSAN Advanced または Enterprise | vSAN Advanced または Enterprise  |
 | アドオン・サービス               | HCX on {{site.data.keyword.cloud_notm}} 以外サポートあり。  | HCX on {{site.data.keyword.cloud_notm}} 以外サポートあり。 vCenter Server with Hybridity Bundle へのアップグレードが可能。 | HCX on {{site.data.keyword.cloud_notm}} を含めてサポートあり。 | このソリューションの自動化によってはサポートされませんが、独自のソフトウェアを持ち込んでインストールできます。 |
 
-**注**:
+**注:**
 
 <sup>1</sup> 設計の検証とデプロイメント時の検証に基づきます。
 

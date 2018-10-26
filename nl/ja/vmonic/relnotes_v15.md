@@ -30,5 +30,5 @@ Cloud Foundation インスタンスには、新しい _SDDC Manager_ ライセ�
 
 ユーザー・インターフェース全体が以下のように改善されました。
 
-* さまざまな {{site.data.keyword.CloudDataCents_notm}}の使用可否や、注文に対応する十分な在庫があるかどうかが、ユーザー・インターフェースに明確に表示されます。これらの詳細を使用すると、インスタンスの注文時に選択する {{site.data.keyword.CloudDataCent_notm}}に関して、十分な情報に基づく決定を行えます。詳しくは、[Cloud Foundation インスタンスの要件と計画](../sddc/sd_planning.html)および [vCenter Server インスタンスの要件と計画](../vcenter/vc_planning.html)を参照してください。
-* Cloud Foundation インスタンスの場合は、入力フィールドに必要な情報を入力すると、インスタンス名、ドメイン・ネームとサブドメイン・ネーム、データ・センターの場所などの情報が自動的にグラフィカル形式で表示されます。詳しくは、[Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)を参照してください。
+* さまざまな {{site.data.keyword.CloudDataCents_notm}}の使用可否や、注文に対応する十分な在庫があるかどうかが、ユーザー・インターフェースに明確に表示されます。 これらの詳細を使用すると、インスタンスの注文時に選択する {{site.data.keyword.CloudDataCent_notm}}に関して、十分な情報に基づく決定を行えます。 詳しくは、[Cloud Foundation インスタンスの要件と計画](../sddc/sd_planning.html)および [vCenter Server インスタンスの要件と計画](../vcenter/vc_planning.html)を参照してください。
+* Cloud Foundation インスタンスの場合は、入力フィールドに必要な情報を入力すると、インスタンス名、ドメイン・ネームとサブドメイン・ネーム、データ・センターの場所などの情報が自動的にグラフィカル形式で表示されます。 詳しくは、[Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)を参照してください。

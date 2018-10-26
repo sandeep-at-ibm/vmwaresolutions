@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -31,7 +31,7 @@ lastupdated: "2018-09-25"
   <dt>単一の管理コンソール</dt>
   <dd>{{site.data.keyword.cloud_notm}} 上の VMware 環境を単一のコンソールでデプロイ、アクセス、管理できます。</dd>
 </dl>
-s
+
 ## デプロイメント・オファリング
 
 {{site.data.keyword.vmwaresolutions_short}} では、VMware 仮想環境のデプロイメントとして、標準化されたデプロイメントとカスタマイズ可能なデプロイメントを選択できます。 以下のデプロイメント・タイプが用意されています。
@@ -108,7 +108,7 @@ HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスでは、鍵
 
 ### HyTrust KeyControl on IBM Cloud
 
-HyTrust KeyControl on {{site.data.keyword.cloud_notm}} サービスは、暗号鍵のライフサイクルを自動化および単純化することによって、暗号化ワークロードの管理を単純化します。このサービスでは、FIPS 140-2 準拠の暗号化を使用することで、暗号鍵を簡単に一括して管理できるようになります。このサービスを使用すると、すべての仮想マシンと暗号化データ・ストアの暗号鍵を管理することや、大規模なデプロイメントで何千もの暗号化ワークロードをサポートするように拡張することができます。
+HyTrust KeyControl on {{site.data.keyword.cloud_notm}} サービスは、暗号鍵のライフサイクルを自動化および単純化することによって、暗号化ワークロードの管理を単純化します。 このサービスでは、FIPS 140-2 準拠の暗号化を使用することで、暗号鍵を簡単に一括して管理できるようになります。 このサービスを使用すると、すべての仮想マシンと暗号化データ・ストアの暗号鍵を管理することや、大規模なデプロイメントで何千もの暗号化ワークロードをサポートするように拡張することができます。
 
 詳しくは、[HyTrust KeyControl on {{site.data.keyword.cloud_notm}} の概要](../services/htkc_considerations.html)を参照してください。
 
@@ -132,7 +132,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスは、{{site.dat
 
 ### IBM Cloud での Veeam
 
-Veeam on {{site.data.keyword.cloud_notm}} サービスは VMware ハイパーバイザーに直接、シームレスに統合され、企業での高可用性の実現を支援します。 このサービスを使用すると、アプリケーションとデータのリカバリー・ポイントと目標復旧時間を設定できます。リカバリー・ポイントと目標復旧時間は、構成が完了してから 15 分以内に提供されます。このサービスを使用して、現在のインフラストラクチャーに配置されたすべての仮想マシンのバックアップとリストアの両方を Veeam コンソールから直接制御します。
+Veeam on {{site.data.keyword.cloud_notm}} サービスは VMware ハイパーバイザーに直接、シームレスに統合され、企業での高可用性の実現を支援します。 このサービスを使用すると、アプリケーションとデータのリカバリー・ポイントと目標復旧時間を設定できます。 リカバリー・ポイントと目標復旧時間は、構成が完了してから 15 分以内に提供されます。 このサービスを使用して、現在のインフラストラクチャーに配置されたすべての仮想マシンのバックアップとリストアの両方を Veeam コンソールから直接制御します。
 
 詳しくは、[Veeam on {{site.data.keyword.cloud_notm}} の概要](../services/veeam_considerations.html)を参照してください。
 
