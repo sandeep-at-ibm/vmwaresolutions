@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -108,7 +108,7 @@ vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware 솔루션 배�
 
 ## VMware NSX 디자인
 
-네트워크 가상화는 가상 계층 내에 존재하는 네트워크 오버레이를 제공합니다. 또한 On-Demand 가상 네트워크의 빠른 프로비저닝, 배치, 재구성 및 폐기 등의 기능이 있는 아키텍처를 제공합니다. 이 디자인은 vDS 및 VMware NSX for vSphere를 사용하여 가상 네트워킹을 구현합니다. 
+네트워크 가상화는 가상 계층 내에 존재하는 네트워크 오버레이를 제공합니다. 또한 On-Demand 가상 네트워크의 빠른 프로비저닝, 배치, 재구성 및 폐기 등의 기능이 있는 아키텍처를 제공합니다. 이 디자인은 vDS 및 VMware NSX for vSphere를 사용하여 가상 네트워킹을 구현합니다.
 
 이 디자인에서 NSX Manager는 초기 클러스터에 배치됩니다. NSX Manager에는 사설 포터블 주소 블록의 VLAN 지원 IP 주소가 지정됩니다. 이는 관리 컴포넌트용으로 지정되며 [공통 서비스 디자인](design_commonservice.html)에서 논의한 DNS 및 NTP 서버로 구성되어 있습니다. NSX Manager는 표 2에 나열된 스펙으로 설치됩니다.
 
