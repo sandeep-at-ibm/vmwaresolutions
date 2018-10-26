@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
 # 다중 사이트 구성에서 Cloud Foundation 인스턴스 삭제
 
-다중 사이트 구성에서 Cloud Foundation 인스턴스를 삭제하려고 계획하기 전에, 다음 고려사항을 검토하십시오. 
+다중 사이트 구성에서 Cloud Foundation 인스턴스를 삭제하려고 계획하기 전에, 다음 고려사항을 검토하십시오.
 
 Cloud Foundation 인스턴스를 삭제하는 경우 다음 컴포넌트가 순차적으로 릴리스됩니다.
 1. 배치된 모든 서비스
@@ -24,7 +24,7 @@ Cloud Foundation 인스턴스를 삭제하는 경우 다음 컴포넌트가 순�
 
 **주의**: 삭제된 인스턴스에 대한 {{site.data.keyword.cloud_notm}} 비용 청구 주기 종료 시 비용이 청구됩니다.
 
-## 프로시저
+## 다중 사이트 구성에서 Cloud Foundation 인스턴스를 삭제하는 프로시저
 
 1. 보조 Cloud Foundation 인스턴스에서 모든 서비스를 제거하십시오.
 2. 삭제할 보조 인스턴스로 확장되는 NSX 오브젝트가 없는지 확인하십시오.

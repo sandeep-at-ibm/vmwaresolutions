@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-18"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -43,7 +43,7 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 
 다음 컴포넌트는 Cloud Foundation 인스턴스에 포함됩니다.
 
-**참고**: 하드웨어, 네트워킹, 가상 머신 및 스토리지에 대해 발생하는 비용은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
+**참고:** 하드웨어, 네트워킹, 가상 머신 및 스토리지에 대해 발생하는 비용은 배치하도록 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
 
 ### Bare Metal Server
 
@@ -63,8 +63,7 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 * 세 개의 VLAN(Virtual LANs): 한 개의 공용 VLAN 및 두 개의 사설 VLAN
 * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 자세한 정보는 [관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
-  **중요**: 이 ESG에 액세스할 수 없고 ESG를 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 Cloud Foundation 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
-
+  **중요:** 이 ESG에 액세스할 수 없고 ESG를 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 Cloud Foundation 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
 
 * 현재 VMware vSphere 버전에서 지원하는 ESXi 서버를 포함하는 기존 클러스터가 있는 경우에는 EVC(Enhanced vMotion Compatibility) 기능이 자동으로 사용 설정됩니다. EVC는 클러스터 내의 모든 ESXi 서버가 가상 머신에 동일한 CPU 사양 세트를 노출하도록 함으로써 클러스터 내의 모든 ESXi 서버에 vMotion 호환성을 제공합니다. EVC를 사용하면 ESXi 서버 간에 실제 CPU가 서로 다르더라도 가상 머신이 클러스터 내 임의의 ESXi 서버로 마이그레이션할 수 있습니다.
 
@@ -111,9 +110,9 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 * 하나의 SDDC Manager 라이센스
 * 하나의 지원 및 서비스 요금
 
-**중요**: {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에서 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+**중요:** {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
 
-**주의**: 인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
+**주의:** 인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거
 *  ESXi 서버 추가 또는 제거를 통한 인스턴스 용량의 확장 또는 축소
 *  컴포넌트 전원 끄기

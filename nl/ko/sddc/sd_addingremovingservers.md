@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -61,7 +61,7 @@ Cloud Foundation 인스턴스에는 최대 5개의 클러스터가 포함될 수
 2. ESXi 서버가 제거될 때 이메일로 알림을 받습니다.
 3. 일반적으로 30일인 {{site.data.keyword.cloud_notm}} 비용 청구 주기 종료 시 ESXi 서버가 {{site.data.keyword.cloud_notm}} 인프라에서 완전히 재확보됩니다.
 
-   **주의**: 제거된 ESXi 서버에 대한 {{site.data.keyword.cloud_notm}} 비용 청구 주기 종료 시 비용이 청구됩니다.
+   **주의:** 제거된 ESXi 서버에 대한 {{site.data.keyword.cloud_notm}} 비용 청구 주기 종료 시 비용이 청구됩니다.
 
 ### 관련 링크
 
