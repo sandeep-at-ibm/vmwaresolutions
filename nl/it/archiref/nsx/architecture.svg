@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="725px" height="406.2px" viewBox="0 0 725 406.2" style="enable-background:new 0 0 725 406.2;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:#4B84C4;}
+	.st1{font-family:'IBMPlexSans-Bold';}
+	.st2{fill:#1AA78D;}
+	.st3{fill:#B97BBA;}
+	.st4{fill:#F59C57;}
+	.st5{fill:#959595;}
+	.st6{fill:#FFFFFF;}
+	.st7{font-size:16;}
+	.st8{font-size:18;}
+	.st9{font-size:21;}
+	.st10{font-family:'IBMPlexSans';}
+]]>
+</style>
+<rect x="198.5" y="108" class="st0" width="526.5" height="89.1"/>
+<rect x="-0.3" y="309.8" class="st5" width="725.3" height="96.4"/>
+<rect x="198.5" y="208.8" class="st2" width="526.6" height="89.9"/>
+<g id="Layer_2">
+	<rect x="0.3" y="108.2" class="st4" width="186.9" height="190.5"/>
+</g>
+<g id="Layer_4">
+	<text transform="matrix(1 0 0 1 38.4429 143.0601)" class="st6 st1 st8">Servizi comuni</text>
+	<text transform="matrix(1 0 0 1 41.7686 182.5688)"><tspan x="0" y="0" class="st6 st10 st7">Autenticazione</tspan><tspan x="36" y="31.4" class="st6 st10 st7">DNS</tspan><tspan x="37" y="62.8" class="st6 st10 st7">NTP</tspan><tspan x="-32.7" y="94.3" class="st6 st10 st7">CA (Certificate Authority)</tspan></text>
+	<rect x="0.3" y="0.6" class="st3" width="724.8" height="97.4"/>
+</g>
+<text transform="matrix(1 0 0 1 362.626 146.0601)"><tspan x="0" y="0" class="st6 st1 st9">Gestione infrastruttura</tspan><tspan x="5.8" y="29.8" class="st6 st10 st8">   VMware vCenter Server</tspan></text>
+<text transform="matrix(1 0 0 1 360.3662 242.3511)" class="st6 st1 st9">Infrastruttura virtuale</text>
+<text transform="matrix(1 0 0 1 410.7432 283.1011)" class="st6 st10 st8">VMware vSAN</text>
+<text transform="matrix(1 0 0 1 593.3838 283.1011)"><tspan x="0" y="0" class="st6 st10 st8">VMware NSX</tspan><tspan x="96.2" y="-2.6" class="st6 st10 st8">  </tspan></text>
+<text transform="matrix(1 0 0 1 217.2813 283.1011)"><tspan x="0" y="0" class="st6 st10 st8">VMware vSphere</tspan><tspan x="126.8" y="-2.6" class="st6 st10 st8">  </tspan></text>
+<text transform="matrix(1 0 0 1 280.4219 343.9595)" class="st6 st1 st9">Infrastruttura fisica</text>
+<text transform="matrix(1 0 0 1 288.9424 38.0776)" class="st6 st1 st9">Servizi rete cloud</text>
+<text transform="matrix(1 0 0 1 131.6924 387.9956)" class="st6 st10 st8">Calcolo</text>
+<text transform="matrix(1 0 0 1 316.0713 387.9956)" class="st6 st10 st8">Archiviazione</text>
+<text transform="matrix(1 0 0 1 265.0059 77.5376)" class="st6 st10 st8">Gateway servizi edge NSX</text>
+<text transform="matrix(1 0 0 1 545.1025 387.9956)" class="st6 st10 st8">Rete</text>
+</svg>
