@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -14,7 +14,7 @@ F5 on {{site.data.keyword.cloud}} 服務 (F5 BIG-IP® Virtual Edition) 提供區
 
 您可以視需要安裝此服務的多個實例。
 
-**可用性**：只有部署在 1.9 版或更新版本中的實例，才能使用此服務。
+**可用性：**只有部署在 1.9 版或更新版本中的實例，才能使用此服務。
 
 ## F5 on IBM Cloud 的技術規格
 

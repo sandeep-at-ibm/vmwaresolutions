@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-17"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,21 +25,21 @@ lastupdated: "2018-09-17"
 
 若要在 {{site.data.keyword.cloud_notm}} 上安裝 HCX，請完成下列設定：
 1. 選取下列其中一個選項，以指定 **HCX 交互連接類型**：
-  * **公用網路**：HCX 會透過公用網路建立站台之間的已加密連線。授權登錄及計量是透過公用網路來執行。
-  * **專用交互連接**：HCX 會透過專用網路建立站台之間的已加密連線。授權登錄及計量是透過公用網路來執行。
-  * **專用網路**：HCX 會透過專用網路建立站台之間的已加密連線。授權登錄及計量是透過經由 HTTP Proxy 的專用網路來執行。
+  * **公用網路：**HCX 會透過公用網路建立站台之間的已加密連線。授權登錄及計量是透過公用網路來執行。
+  * **專用交互連接：**HCX 會透過專用網路建立站台之間的已加密連線。授權登錄及計量是透過公用網路來執行。
+  * **專用網路：**HCX 會透過專用網路建立站台之間的已加密連線。授權登錄及計量是透過經由 HTTP Proxy 的專用網路來執行。
 3. 如果您選取**專用網路**，請完成下列欄位：
-  * **Proxy 位址**：Proxy 伺服器的 IPv4 位址。
-  * **Proxy 埠**：Proxy 伺服器埠。埠號通常為 8080 或 3128。
-  * **使用者名稱**：如果需要 Proxy 鑑別，則為使用者名稱。
-  * **密碼**：如果需要 Proxy 鑑別，則為密碼。
-  * **重新輸入密碼**：重新輸入用於 Proxy 鑑別驗證的密碼。
+  * **Proxy 位址：**Proxy 伺服器的 IPv4 位址。
+  * **Proxy 埠：**Proxy 伺服器埠。埠號通常為 8080 或 3128。
+  * **使用者名稱：**如果需要 Proxy 鑑別，則為使用者名稱。
+  * **密碼：**如果需要 Proxy 鑑別，則為密碼。
+  * **重新輸入密碼：**重新輸入用於 Proxy 鑑別驗證的密碼。
 2. 指定**公用端點憑證類型**。如果您選取 **CA 憑證**，請配置下列設定：
-  * **憑證內容**：輸入 CA 憑證的內容。
-  * **私密金鑰**：輸入 CA 憑證的私密金鑰。
-  * （選用）**密碼**：如果私密金鑰已加密，請輸入密碼。
-  * （選用）**重新輸入密碼**：再次輸入私密金鑰的密碼。
-  * （選用）**主機名稱**：要對映至 CA 憑證通用名稱 (CN) 的主機名稱。HCX on {{site.data.keyword.cloud_notm}} 要求 NSX Edge 必須接受 CA 憑證的格式。如需 NSX Edge 憑證格式的相關資訊，請參閱 [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)。
+  * **憑證內容：**輸入 CA 憑證的內容。
+  * **私密金鑰：**輸入 CA 憑證的私密金鑰。
+  * （選用）**密碼：**如果私密金鑰已加密，請輸入密碼。
+  * （選用）**重新輸入密碼：**再次輸入私密金鑰的密碼。
+  * （選用）**主機名稱：**要對映至 CA 憑證通用名稱 (CN) 的主機名稱。HCX on {{site.data.keyword.cloud_notm}} 要求 NSX Edge 必須接受 CA 憑證的格式。如需 NSX Edge 憑證格式的相關資訊，請參閱 [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)。
   <!--Need enhancement, it is still not clear what the key pair is used for, is it for connecting to NSX? This is not in architecture doc either. -->
 
 ## HCX on IBM Cloud 的部署處理程序
@@ -51,17 +51,17 @@ lastupdated: "2018-09-17"
    * 一個公用可攜式子網路，以使用 VMware 啟動及維護。如果針對 **HCX 交互連接類型**選取**公用網路**選項，則此子網路也用於 HCX 交互連接。
 
    **重要事項：**針對 HCX 訂購之子網路中的 IP 位址，是要供 VMware on {{site.data.keyword.cloud_notm}} 自動化進行管理。這些 IP 位址無法指派給您建立的 VMware 資源（例如 VM 及 NSX Edge）。如果您需要 VMware 構件的其他 IP 位址，則必須從 {{site.data.keyword.cloud_notm}} 訂購自己的子網路。
-2. 如果已針對 **HCX 交互連接類型**選取了**專用網路**，即會在專用「分散式虛擬交換器 (DVS)」上建立一個名為 **SDDC-DPortGroup-HCX-Private** 的埠群組。
+2. 如果已針對 **HCX 交互連接類型**選取**專用網路**，即會在專用「分散式虛擬交換器 (DVS)」上建立一個名為 **SDDC-DPortGroup-HCX-Private** 的埠群組。
 3. 從 VMware 訂購 HCX 啟動金鑰。
 4. 為 HCX 建立三個資源儲存區及 VM 資料夾，而 HCX 交互連接、本端 HCX 元件及遠端 HCX 元件需要這些資源儲存區及 VM 資料夾。
-5. 針對 HCX 管理資料流量，部署及配置一組「VMware NSX Edge Services 閘道 (ESG)」：
+5. 針對 HCX 管理資料流量，部署及配置一組 VMware NSX Edge Services Gateway (ESG)：
    * 使用訂購的子網路來配置公用及專用上行鏈路介面。
    * 將 ESG 配置為一組啟用「高可用性 (HA)」的額外大型邊緣應用裝置。
    * 配置防火牆規則及網址轉換 (NAT) 規則，以容許與 HCX Manager 之間往返的入埠及出埠 HTTPS 資料流量。
    * 配置負載平衡器規則及資源儲存區。這些規則是資源儲存區，用來將 HCX 相關入埠資料流量轉遞至 HCX Manager、vCenter Server 及 Platform Services Controller (PSC) 的適當虛擬應用裝置。
    * 套用 SSL 憑證，以加密來自 ESG 的 HCX 相關入埠 HTTPS 資料流量。
 
-   **重要事項**：HCX 管理邊緣專用於內部部署 HCX 元件與雲端 HCX 元件之間的 HCX 管理資料流量。請不要修改 HCX 管理邊緣，或對 HCX 網路延伸使用它。請改為建立網路延伸的個別邊緣。此外，請注意，使用防火牆或停用與專用 IBM 管理元件或公用網際網路的 HCX 管理邊緣通訊，可能會對 HCX 功能造成負面影響。
+   **重要事項：**HCX 管理邊緣專用於內部部署 HCX 元件與雲端 HCX 元件之間的 HCX 管理資料流量。請不要修改 HCX 管理邊緣，或對 HCX 網路延伸使用它。請改為建立網路延伸的個別邊緣。此外，使用防火牆或停用與專用 IBM 管理元件或公用網際網路的 HCX 管理邊緣通訊，可能會對 HCX 功能造成負面影響。
 
 6. 部署、啟動及配置 HCX Manager on {{site.data.keyword.cloud_notm}}：
    * 向 vCenter Server 登錄 HCX Manager。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -14,7 +14,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 Fo
 
 您可以視需要安裝此服務的多個實例。您可以透過 SSH 使用 FortiOS Web Client 或指令行介面，來管理此服務。
 
-**可用性**：只有部署在 2.0 版或更新版本中的實例，才能使用此服務。
+**可用性：**只有部署在 2.0 版或更新版本中的實例，才能使用此服務。
 
 ## FortiGate Virtual Appliance on IBM Cloud 的技術規格
 
@@ -49,7 +49,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 Fo
   若要計算單一 FortiGate VM 的 CPU 及 RAM 保留，請使用下列公式：
    * `CPU 保留 = ESXi 伺服器的 CPU 速度 * vCPU 數目`
    * `RAM 保留 = RAM 大小`
-* 當您將 FortiGate Virtual Appliance 的 HA 配對部署至實例時，已在「管理 NSX Edge Services 閘道 (ESG)」上定義 SNAT 及防火牆規則以及 FortiGate Virtual Appliance 上的靜態路徑，以容許從實例到公用網路的出埠 HTTPS 通訊來啟動授權，以及取得最新安全原則及內容。
+* 當您將 FortiGate Virtual Appliance 的 HA 配對部署至實例時，已在「管理 NSX Edge Services Gateway (ESG)」上定義 SNAT 及防火牆規則以及 FortiGate Virtual Appliance 上的靜態路徑，以容許從實例到公用網路的出埠 HTTPS 通訊來啟動授權，以及取得最新安全原則及內容。
 * 您無法在安裝服務之後變更授權層次。若要變更授權層次，您必須移除現有服務，然後選取不同的授權選項來重新安裝服務。
 * 您必須符合下列需求，才能避免 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 失敗：
    * 至少有兩部作用中 ESXi 伺服器，可使用在個別伺服器上保留 VM 的反親緣性規則來部署兩部 FortiGate VM。

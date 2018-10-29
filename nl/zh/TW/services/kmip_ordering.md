@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-07-20"
 ## 為現有實例訂購 KMIP for VMware on IBM Cloud
 
 您可以使用下列其中一種方法，將 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務新增至現有實例：
-* 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增**。
+* 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增**。
 * 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **KMIP for VMware on IBM Cloud**，指定服務設定，然後選取**新增至現有實例**。
 
 ## KMIP for VMware on IBM Cloud 服務配置
@@ -38,7 +38,7 @@ lastupdated: "2018-07-20"
 
 對於 vCenter Server，您必須配置「金鑰管理伺服器 (KMS)」叢集。所選取地區中的端點會透過用戶端 SSL 憑證安全地連接至 KMS。請參閱下表以瞭解每一個地區中的端點。這些端點使用 {{site.data.keyword.vmwaresolutions_short}} 團隊所維護的自簽憑證。憑證的指模是 `a9 d0 ff 15 df 85 10 6b 61 88 fe 2e 8b d3 1a af 48 c8 a0 7a`。
 
-表 1：KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務端點地區
+表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務端點地區
 
 |地區           |端點                   |
 |:---------------|:-----------------------|
@@ -47,7 +47,7 @@ lastupdated: "2018-07-20"
 |英國           |`158.175.93.122:5696` |
 |美國南部       |`169.60.185.42:5696`  |
 
-在起始配置時，此設定是選用的。此時您可以將此欄位保留空白，因為在部署實例之後，就會知道 vCenter Server 中 KMS 的用戶端憑證。但您必須在部署實例之後輸入憑證，才能順利完成與 KMS 的 vCenter Server 連線。
+在起始配置時，此設定是選用的。您可以將此欄位保留空白，因為在部署實例之後，就會知道 vCenter Server 中 KMS 的用戶端憑證。但您必須在部署實例之後輸入憑證，才能順利完成與 KMS 的 vCenter Server 連線。
 
 ### 服務 ID 的 API 金鑰
 

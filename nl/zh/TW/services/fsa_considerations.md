@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -14,7 +14,7 @@ FortiGate Security Appliance on {{site.data.keyword.cloud}} 服務會以高可�
 
 您可以透過 SSH 使用 FortiOS Web Client 或指令行介面，來管理此服務。
 
-**可用性**：只有部署在 1.8 版或更新版本中的實例，才能使用此服務。
+**可用性：**只有部署在 1.8 版或更新版本中的實例，才能使用此服務。
 
 ## FortiGate Security Appliance on IBM Cloud 的技術規格
 
@@ -41,7 +41,7 @@ FortiGate Security Appliance 300 系列。
 * 如果您要將 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務新增至已部署的實例，則請確定實例的公用 VLAN 上沒有來自 {{site.data.keyword.cloud_notm}} 基礎架構的其他防火牆。
 * 安裝 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務時會新增公用 VLAN。
 * 在服務部署期間，您的實例可能無法暫時存取網際網路。
-* 順利安裝 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務之後，即可從 FortiGate 主控台管理及配置 FSA 的防火牆規則。您必須確定已定義 FSA 防火牆規則，以容許管理元件（例如 Zerto Virtual Manager）所啟動的出埠 HTTPS（TCP 埠 443）通訊，透過網際網路與 {{site.data.keyword.cloud_notm}} 上的外部管理資料庫通訊。出埠 HTTPS（TCP 埠 443）通訊源自實例中管理服務「VMware NSX Edge Services 閘道 (ESG)」的公用 IP 位址。
+* 順利安裝 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務之後，即可從 FortiGate 主控台管理及配置 FSA 的防火牆規則。您必須確定已定義 FSA 防火牆規則，以容許管理元件（例如 Zerto Virtual Manager）所啟動的出埠 HTTPS（TCP 埠 443）通訊，透過網際網路與 {{site.data.keyword.cloud_notm}} 上的外部管理資料庫通訊。出埠 HTTPS（TCP 埠 443）通訊源自實例中管理服務 VMware NSX Edge Services Gateway (ESG) 的公用 IP 位址。
 * 您必須謹慎地管理 FortiGate Security Appliance 配置，僅容許必要通訊以及拒絕所有其他通訊。
 * 如果您訂購其他叢集，則這些新增叢集的公用 VLAN 不會有 Security Appliance 的 HA 配對。
 

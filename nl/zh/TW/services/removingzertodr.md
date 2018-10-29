@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -23,13 +23,13 @@ lastupdated: "2018-07-19"
    2. 解除安裝 Zerto Virtual Replication。
    3. 刪除已安裝 Zerto Virtual Replication 的 Windows VSI（虛擬服務實例）。
    4. 傳回針對 Zerto Virtual Replication 與 {{site.data.keyword.cloud_notm}} 基礎架構的通訊所訂購的專用可攜式子網路。   
-   5. 從 {{site.data.keyword.cloud_notm}} 計費對帳單中移除 Zerto 災難回復服務費用。
+   5. 從 {{site.data.keyword.cloud_notm}} 計費對帳單移除 Zerto 災難回復服務費用。
 
-      **附註**：將向您收取已移除的 Zerto 災難回復服務到計費週期結束為止的費用。
+      **附註：**將向您收取已移除的 Zerto 災難回復服務到計費週期結束為止的費用。
 
 ## 結果
 
-順利完成服務移除之後，會透過電子郵件通知您，而且會從**已安裝的服務**標籤中刪除服務項目。
+順利完成服務移除之後，會透過電子郵件通知您，而且會從**已安裝的服務**標籤刪除服務項目。
 
 ### 相關鏈結
 

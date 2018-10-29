@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-02"
 *  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[使用者帳戶及設定](../vmonic/useraccount.html)。
 *  您已檢閱[安裝內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例時的考量](../services/standalone_considerations.html)中的所有考量。
 
-## 程序
+## 訂購內部部署 VMware HCX on IBM Cloud 實例的程序
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
 2. 捲動至**內部部署 HCX 實例**表格，然後按一下**佈建新項目**。

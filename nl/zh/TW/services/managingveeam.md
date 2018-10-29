@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-15"
 
 將服務部署至實例之後，您可以使用 RDP 來存取 Veeam 主控台，以管理環境中所有虛擬機器的備份及還原（包括管理元件的備份及還原）。您也可以從 Veeam 網站下載並安裝 Veeam 更新，以升級服務。
 
-針對 1.8 版之前版本中所部署的實例，如果您要使用 Veeam on {{site.data.keyword.cloud}} 服務，則必須取代實例中的現有 Veeam VSI。如需相關資訊，請參閱本主題中的_將 1.8 版之前的實例的 Veeam VSI 取代為 Veeam on IBM Cloud_ 小節。
+針對 1.8 版之前版本中所部署的實例，如果您要使用 Veeam on {{site.data.keyword.cloud}} 服務，則必須取代實例中的現有 Veeam VSI。如需相關資訊，請參閱_將 1.8 版之前的實例的 Veeam VSI 取代為 Veeam on IBM Cloud_ 小節。
 
 ## 使用 RDP 來存取 Veeam 主控台
 
@@ -63,7 +63,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 服務可以備份管理元件及工�
 3. 按一下**服務**標籤。
 4. 在**新增服務**標籤上，安裝 Veeam on {{site.data.keyword.cloud_notm}} 服務。
 
-部署新的 Veeam on {{site.data.keyword.cloud_notm}} 服務並完成您管理元件的成功備份之後，即可建立 {{site.data.keyword.cloud_notm}} 支援問題單，以從您的帳戶移除現有 Veeam VSI。「IBM 支援中心」接著會識別並刪除現有 Veeam VSI 及儲存空間。
+部署新的 Veeam on {{site.data.keyword.cloud_notm}} 服務並完成您管理元件的成功備份之後，即可建立 {{site.data.keyword.cloud_notm}} 支援問題單，以從您的帳戶移除現有 Veeam VSI。「IBM 支援中心」會識別並刪除現有 Veeam VSI 及儲存空間。
 
 ### 相關鏈結
 

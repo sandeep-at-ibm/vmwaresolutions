@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-24"
 
 KMIP for VMware on {{site.data.keyword.cloud}} 服務提供全年無休高可性服務，以管理 {{site.data.keyword.cloud_notm}} 中 VMware 所使用的加密金鑰。此服務提供運行環境功能，以容許客戶建立、擷取、啟動、撤銷及毀損加密金鑰。同時提供管理功能來維護用戶端認證與加密金鑰之間的關聯。
 
-**可用性**：只有部署在 2.2 版或更新版本中的實例，才能使用此服務。
+**可用性：**只有部署在 2.2 版或更新版本中的實例，才能使用此服務。
 
 ## KMIP for VMware on IBM Cloud 的技術規格
 
@@ -31,10 +31,10 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 使用 IBM Key Protect for {
 * 已為服務 ID 授與下列存取層次：
    * 在平台存取層次：IBM Key Protect 實例的「檢視者」權限。
    * 在服務存取層次：IBM Key Protect 實例的「寫入者」權限
-* 您具有適用於所建立服務 ID 的 API 金鑰。訂購服務時，需要此金鑰。
+* 您具有適用於所建立服務 ID 的 API 金鑰。當您訂購服務時，需要此金鑰。
 * 您已從 Key Protect 使用者介面建立至少一個客戶主要金鑰 (CRK)，方法是遵循[建立主要金鑰](https://console.bluemix.net/docs/services/keymgmt/keyprotect_create_root.html#create_root_keys)中的步驟，或使用 [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect) 中的 RESTful API。
 
-   **重要事項**：沒有 CRK 就無法訂購服務。強烈建議您使用下列方法：使用現有金鑰資料建立 CRK，並備份您要建立的金鑰資料。這樣做，即可確保您可在套用 IBM Key Protect 以儲存您 CRK 的資料中心發生故障時回復金鑰。
+   **重要事項：**沒有 CRK 就無法訂購服務。強烈建議您使用下列方法：使用現有金鑰資料建立 CRK，並備份您要建立的金鑰資料。這樣做，即可確保您可在套用 IBM Key Protect 以儲存您 CRK 的資料中心故障時回復金鑰。
 
 ## 使用 KMIP for VMware on IBM Cloud 時的考量
 
@@ -43,7 +43,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 使用 IBM Key Protect for {
 
 ## 移除 KMIP for VMware on IBM Cloud 時的考量
 
-將訂購或使用服務期間所提供的 VMware 公用憑證用作用戶端憑證，以與服務實例通訊。移除服務時，會同時移除相關聯 VMware 公用憑證的這個服務實例所建立的所有加密金鑰。
+將訂購期間或使用服務時所提供的 VMware 公用憑證用作用戶端憑證，以與服務實例通訊。移除服務時，會同時移除相關聯 VMware 公用憑證的這個服務實例所建立的所有加密金鑰。
 
 因此，移除此服務之前，請確定未使用 KMIP 服務所建立的金鑰來加密虛擬機器或 vSAN。
 
