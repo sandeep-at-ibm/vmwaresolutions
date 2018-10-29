@@ -10,7 +10,7 @@ lastupdated: "2018-09-24"
 
 # 連接儲存空間基礎架構設計
 
-{{site.data.keyword.vmwaresolutions_full}} 提供的 VMware 技術是以自動化方式部署在全球各地的 {{site.data.keyword.CloudDataCents_notm}} 內。在 {{site.data.keyword.cloud_notm}} 解決方案組合中，基本 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 供應項目包含最多 10 個叢集，且各包含最多 59 部 vSphere 主機、單一 Platform Services Controller (PSC)，以及有能力管理最多 400 部主機和 4,000 部虛擬機器的 vCenter Server Appliance。
+{{site.data.keyword.vmwaresolutions_full}} 提供的 VMware 技術是以自動化方式部署在全球各地的 {{site.data.keyword.CloudDataCents_notm}} 內。在 {{site.data.keyword.cloud_notm}} 解決方案組合中，基礎 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 供應項目包含最多 10 個叢集，且各包含最多 59 部 vSphere 主機、單一 Platform Services Controller (PSC)，以及有能力管理最多 400 部主機和 4,000 部虛擬機器的 vCenter Server Appliance。
 
 這裡呈現的架構會藉由新增連接儲存空間作為環境的共用儲存裝置，來補充 vCenter Server 解決方案。連接儲存裝置是位於與 vCenter Server 部署相同的 {{site.data.keyword.CloudDataCent_notm}} 內，它包含單一「網路檔案系統 (NFS)」共用，或是來自 {{site.data.keyword.cloud_notm}} 的多個 NFS 匯出。
 
