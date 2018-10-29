@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -45,8 +45,8 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目能提供儲
 
 * vCenter Server 虛擬應用裝置
 * NSX Manager
-* 兩個 NSX Edge Services 閘道 (ESG)
-* 三個 NSX 控制器
+* 兩個 NSX Edge Services Gateway (ESG)
+* 三個 NSX Controller
 * Platform Services Controller (PSC) 虛擬應用裝置
 * vCenter Server Appliance (vCSA)
 * IBM CloudDriver 虛擬伺服器實例 (VSI)。
@@ -57,7 +57,7 @@ NetApp ONTAP Select 是在 VMware 叢集裡執行，並將主機上的本端儲�
 
 NetApp ONTAP Select 實例中包含下列元件。
 
-**附註**：標準化配置的可用性及定價可能會根據選取進行部署的 {{site.data.keyword.CloudDataCent_notm}} 而不同。
+**附註：**標準化配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
 
 ### 儲存空間
 
@@ -69,9 +69,9 @@ NetApp ONTAP Select 實例中包含下列元件。
 ### 預設配置
 
 已提供四部具有下列配置選項的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}：
-* **高效能（中型）**- 超值授權/雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/128 GB RAM/每個節點有 22 個 1.9 TB SSD 磁碟機容量/4 節點叢集的有效容量 - 59 TB
-* **高效能（大型）**- 超值授權/雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/128 GB RAM/每個節點有 22 個 3.8 TB SSD 磁碟機容量/4 節點叢集的有效容量 - 118 TB
-* **高容量** - 標準授權/雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/64 GB RAM/每個節點有 34 個 4 TB SATA 磁碟機容量/4 節點叢集的有效容量 - 190 TB
+* **高效能（中型）**- 超值授權 / 雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/ 128 GB RAM / 每個節點有 22 個 1.9 TB SSD 磁碟機容量 / 4 節點叢集的有效容量 - 59 TB
+* **高效能（大型）**- 超值授權 / 雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/ 128 GB RAM / 每個節點有 22 個 3.8 TB SSD 磁碟機容量 / 4 節點叢集的有效容量 - 118 TB
+* **高容量** - 標準授權 / 雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/ 64 GB RAM / 每個節點有 34 個 4 TB SATA 磁碟機容量 / 4 節點叢集的有效容量 - 190 TB
 
 **附註：**當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至資料中心時就會予以支援。
 
@@ -102,9 +102,9 @@ NetApp ONTAP Select 實例中包含下列元件。
 *  VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 *  支援與服務費用（一個節點一份授權）
 
-**重要事項**：您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台而不是 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
-**警告**：從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理任何 {{site.data.keyword.vmwaresolutions_short}} 元件（元件已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶）可能會讓您的環境不穩定。這些管理活動包括：
+**警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外來管理您在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，會使您的環境變得不穩定。這些管理活動包括：
 *  新增、修改、退回、移除元件，或關閉元件電源
 *  透過新增或移除 ESXi 伺服器來擴充或縮減實例容量
 *  重新啟動服務

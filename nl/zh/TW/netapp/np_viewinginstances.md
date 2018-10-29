@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,12 +12,12 @@ lastupdated: "2018-09-25"
 
 檢視針對不同使用者帳戶佈建之 NetApp ONTAP Select 實例的摘要及詳細資訊。
 
-## 檢視 NetApp ONTAP Select 實例摘要
+## 檢視 NetApp ONTAP Select 實例摘要的程序
 
 若要檢視針對使用者帳戶佈建之所有 NetApp ONTAP Select 實例的摘要，請完成下列步驟：
 
-1. 從 {{site.data.keyword.vmwaresolutions_full}} 主控台中，按一下左導覽窗格上的**已部署的實例**。
-2. 從主控台橫幅中，按一下您的使用者帳戶圖示，然後按一下**帳戶**欄位，選取您要檢查其實例的使用者帳戶。
+1. 從 {{site.data.keyword.vmwaresolutions_full}} 主控台，按一下左導覽窗格上的**已部署的實例**。
+2. 從主控台橫幅，按一下您的使用者帳戶圖示，然後按一下**帳戶**欄位，以選取您要檢查其實例的使用者帳戶。
 3. 在 **NetApp ONTAP Select 實例**表格中，檢視所選取使用者帳戶中佈建的實例清單。
 
 表 1. NetApp ONTAP Select 實例項目
@@ -26,12 +26,12 @@ lastupdated: "2018-09-25"
 |:------------- |:--------------- |
 |名稱 |實例的名稱。|
 |版本         |實例的版本。|  
-|位置|管理實例的資料中心。|
+|位置|管理實例所在的資料中心。|
 |建立時間|建立實例的日期和時間。|   
 |狀態|實例的狀態。狀態可以具有下列其中一個值：
      <ul><li>正在建立：正在建立實例。</li><li>正在建置：正在配置實例。</li><li>備妥使用：實例已備妥可供使用。</li><li>正在修改：正在修改實例。</li><li>失敗：建立、配置或修改程序失敗。</li><li>正在刪除：正在刪除實例。</li><li>刪除錯誤：刪除實例時發生錯誤。</li><li>已刪除：已刪除實例。</li></ul>|
 
-## 檢視 NetApp ONTAP Select 實例內容詳細資料
+## 檢視 NetApp ONTAP Select 實例內容詳細資料的程序
 
 若要檢視實例的內容詳細資料，請執行下列動作：
 
@@ -44,7 +44,7 @@ lastupdated: "2018-09-25"
 |:--------------- |:----------------- |
 |名稱 |實例的名稱。|
 |ID |實例的 ID。|
-|位置|管理實例的資料中心。|
+|位置|管理實例所在的資料中心。|
 |已部署的版本|已部署的 {{site.data.keyword.vmwaresolutions_short}} 版本。|
 |vCenter 版本|VMware vCenter Server 的版本。<br><br>**附註**：{{site.data.keyword.vmwaresolutions_short}} 主控台及 VMware vSphere Web Client 上所顯示的 vCenter Server 版本之間有輕微變化。兩者皆正確。|
 |NSX for vSphere |VMware NSX for vSphere 產品版本。|
@@ -56,7 +56,7 @@ lastupdated: "2018-09-25"
 |DNS、子網域|子網域是本端 NetApp ONTAP Select 實例主機名稱所在根網域名稱的 DNS 子網域名稱。子網域名稱的格式為 `<subdomain_label>.<root_domain>`。|
 |狀態|實例的狀態。|
 
-## 檢視 NetApp ONTAP Select 實例的存取資訊
+## 檢視 NetApp ONTAP Select 實例存取資訊的程序
 
 在**存取資訊**下，檢視實例相關元件的存取資訊。這些密碼是系統所產生的起始密碼。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更它們，則不會在實例摘要頁面上更新它們。
 
@@ -64,7 +64,7 @@ lastupdated: "2018-09-25"
 
 |元件        |說明       |
 |:---------------- |:----------------- |
-|AD/DNS IP |兩部 AD 伺服器的 IP 位址 |
+|AD/DNS IP |兩部 AD 伺服器的 IP 位址。|
 |AD/DNS FQDN |AD/DNS 伺服器的完整網域名稱。|
 |AD/DNS ADMIN（遠端桌面）|您可以用來透過遠端桌面連線存取 AD 伺服器的使用者名稱及密碼。|
 |NSX Manager IP  |NSX Manager 的 IP 位址。|
@@ -79,13 +79,13 @@ lastupdated: "2018-09-25"
 |PSC IP  |Platform Services Controller 的 IP 位址。|
 |PSC FQDN |PSC 的完整網域名稱。|
 |PSC ADMIN  |您可以用來存取 PSC Web 主控台的 VMware vCenter Single Sign-On 使用者名稱及密碼。|
-|PSC SSH  |您可用來透過 SSH 連線存取 PSC VM 的使用者名稱及密碼。|
+|PSC SSH  |您可以用來透過 SSH 連線存取 PSC VM 的使用者名稱及密碼。|
 |vCenter IP  |vCenter Server 的 IP 位址。|
 |vCenter FQDN  |vCenter Server 的完整網域名稱。|
 |vCenter ADMIN  |您可以用來使用 vSphere Web Client 登入 vCenter Server 的 VMware vCenter Single Sign-On 使用者名稱及密碼。|
-|vCenter SSH  |您可用來透過 SSH 連線存取 vCenter Server VM 的使用者名稱及密碼。|
+|vCenter SSH  |您可以用來透過 SSH 連線存取 vCenter Server VM 的使用者名稱及密碼。|
 
-## 檢視 NetApp ONTAP Select 實例的部署歷程
+## 檢視 NetApp ONTAP Select 實例部署歷程的程序
 
 按一下左導覽窗格中的**部署歷程**，以檢視該實例的部署歷程。
 
@@ -101,9 +101,9 @@ lastupdated: "2018-09-25"
 ## 檢視 NetApp ONTAP Select 叢集
 
 1. 從左導覽窗格中，按一下**基礎架構**。
-2. 在 **CLUSTERS** 下，檢視 NetApp ONTAP Select 叢集的摘要。
+2. 在**叢集**下，檢視 NetApp ONTAP Select 叢集的摘要。
 
-	表 5：NetApp ONTAP Select 叢集項目
+	表 5. NetApp ONTAP Select 叢集項目
 
 	 <table>
 	   <tr>
@@ -128,11 +128,11 @@ lastupdated: "2018-09-25"
 	   </tr>
 	   <tr>
 	      <td>記憶體</td>
-	      <td>叢集裡的 ESXi 伺服器的總記憶體大小。</td>
+	      <td>叢集裡的 ESXi 伺服器的記憶體大小總計。</td>
 	   </tr>
 	   <tr>
 	      <td>資料中心位置</td>
-	      <td>管理叢集的資料中心。它是與實例的資料中心位置相同。</td>
+	      <td>管理叢集所在的資料中心。它是與實例的資料中心位置相同。</td>
 	   </tr>
 		 <tr>
 		   <td>Pod </td>
@@ -165,7 +165,7 @@ lastupdated: "2018-09-25"
 
 從 {{site.data.keyword.vmwaresolutions_short}} 主控台、VMware vSphere Web Client 或 NetApp 主控台管理實例。
 
-**重要事項**：您必須先登入 {{site.data.keyword.CloudDataCent_notm}} 的 VPN 入口網站，才能在實例摘要頁面上按一下 **vCenter 主控台**，以移至 vSphere Web Client 並開始管理 ESXi 伺服器。將游標移至 **vCenter 主控台**按鈕上方，並遵循指示以確保您符合所有需求，並在存取 vSphere Web Client 之前完成必要的步驟。
+**重要事項：**您必須先登入 {{site.data.keyword.CloudDataCent_notm}} 的 VPN 入口網站，才能在實例摘要頁面上按一下 **vCenter 主控台**，以移至 vSphere Web Client 並開始管理 ESXi 伺服器。將游標移至 **vCenter 主控台**按鈕上方，並遵循指示以確保您符合所有需求，並在存取 vSphere Web Client 之前完成必要的步驟。
 
 如需協助您完成登入指示的相關資訊，請檢閱下列主題：
 

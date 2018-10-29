@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-09-25"
 *  您已在**設定**頁面上配置 {{site.data.keyword.cloud}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](../vmonic/useraccount.html)。
 *  您已檢閱 [NetApp ONTAP Select 實例的需求及規劃](np_planning.html)中的需求及考量。
 
-**重要事項**：請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在 Vyatta 佈建進行中落後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
+**重要事項**：請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
 
 ## 系統設定
 
@@ -64,20 +64,20 @@ lastupdated: "2018-09-25"
 
 ## 授權設定
 
-您必須上傳四個 NetApp 授權檔，這四個 {{site.data.keyword.baremetal_short}} 各需要一個授權。請聯絡您的 NetApp 銷售團隊，以針對高效能或高容量部署取得適當的授權。
+您必須上傳四個 NetApp 授權檔，這四部 {{site.data.keyword.baremetal_short}} 各需要一份授權。請聯絡您的 NetApp 銷售團隊，以針對高效能或高容量部署取得適當的授權。
 
 ## Bare Metal Server 設定
 
 ### 資料中心位置
 
-您必須選取要管理實例的 {{site.data.keyword.CloudDataCent_notm}}。
+您必須選取要在其中管理實例的 {{site.data.keyword.CloudDataCent_notm}}。
 
 ### Bare Metal Server 配置
 
 根據需求來選取 Bare Metal Server 配置：
-* **高效能（中型）**- 超值授權/雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/128-GB RAM/每個節點有 22 個 1.9 TB SSD 磁碟機容量/4 節點叢集的有效容量 - 59 TB
-* **高效能（大型）**- 超值授權/雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/128 GB RAM/每個節點有 22 個 3.8 TB SSD 磁碟機容量/4 節點叢集的有效容量 - 118 TB
-* **高容量** - 標準授權/雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/64 GB RAM/每個節點有 34 個 4 TB SATA 磁碟機容量/4 節點叢集的有效容量 - 190 TB
+* **高效能（中型）**- 超值授權 / 雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/ 128-GB RAM / 每個節點有 22 個 1.9 TB SSD 磁碟機容量 / 4 節點叢集的有效容量 - 59 TB
+* **高效能（大型）**- 超值授權 / 雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/ 128 GB RAM / 每個節點有 22S 個 3.8 TB SSD 磁碟機容量 / 4 節點叢集的有效容量 - 118 TB
+* **高容量** - 標準授權 / 雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/ 64 GB RAM / 每個節點有 34 個 4 TB SATA 磁碟機容量 / 4 節點叢集的有效容量 - 190 TB
 
 **附註：**3.8 TB SSD（固態磁碟）磁碟機在正式發行至 {{site.data.keyword.CloudDataCent_notm}} 時就會予以支援。
 
@@ -85,7 +85,7 @@ lastupdated: "2018-09-25"
 
 依預設，NetApp ONTAP Select 實例的 ESXi 伺服器數目為 4。您無法變更它。所有 ESXi 伺服器都會共用配置。
 
-## 程序
+## 訂購 NetApp ONTAP Select 實例的程序
 
 1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware**，然後按一下**虛擬資料中心**區段中的 **NetApp ONTAP Select**。
 2. 在 **NetApp ONTAP Select** 頁面上，按一下**建立**。
@@ -94,7 +94,7 @@ lastupdated: "2018-09-25"
 5. 按一下**新增授權檔**以上傳四部 {{site.data.keyword.baremetal_short}} 所需的四個 NetApp 授權檔，來完成授權設定。
 6. 完成 Bare Metal Server 設定：
    1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
-   2. 選取「裸機伺服器」配置。
+   2. 選取 Bare Metal Server 配置。
 7. 在**訂單摘要**窗格上，先驗證實例配置，再下訂單。
     1. 檢閱實例的設定。
     2. 檢閱預估實例成本。按一下**定價詳細資料**以產生 PDF 摘要。若要儲存或列印訂單摘要，請按一下 PDF 視窗中的**列印**或**下載**圖示。
@@ -104,7 +104,7 @@ lastupdated: "2018-09-25"
 
 ## 結果
 
-實例的部署會自動啟動。您會收到正在處理訂單的確認，您可以檢視實例詳細資料來檢查部署的狀態。
+實例的部署會自動啟動。您會收到正在處理訂單的確認，並且可以檢視實例詳細資料來檢查部署的狀態。
 
 順利部署實例之後，會在 VMware 虛擬平台上安裝 [NetApp ONTAP Select 實例的技術規格](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)中所說明的元件。
 
@@ -114,9 +114,9 @@ lastupdated: "2018-09-25"
 
 檢視及管理您訂購的 NetApp ONTAP Select 實例。
 
-**重要事項**：您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台而不是 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
-**警告**：從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理任何 {{site.data.keyword.vmwaresolutions_short}} 元件（元件已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶）可能會讓您的環境不穩定。這些管理活動包括：
+**警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外來管理您在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，會使您的環境變得不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件
 *  關閉元件電源
 
