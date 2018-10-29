@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
 # Veeam on IBM Cloud 概觀
 
-Veeam on {{site.data.keyword.cloud}} 服務與 VMware Hypervisor 無縫整合，以協助您的企業達到高可用性。此服務可以提供您應用程式及資料的回復點及時間目標。完成配置之後，可以在 15 分鐘以內提供回復點及時間目標。使用此服務，即可從 Veeam 主控台直接控制基礎架構之所有虛擬機器 (VM) 的備份及還原。
+Veeam on {{site.data.keyword.cloud}} 服務與 VMware Hypervisor 無縫整合，以協助您的企業達到高可用性。此服務提供您應用程式及資料的回復點及時間目標。完成配置之後，可以在 15 分鐘以內提供回復點及時間目標。使用此服務，您可以從 Veeam 主控台直接控制基礎架構之所有虛擬機器 (VM) 的備份及還原。
 
-**可用性**：只有部署在 1.8 版或更新版本中的實例，才能使用此服務。
+**可用性：**只有部署在 1.8 版或更新版本中的實例，才能使用此服務。
 
 ## Veeam on IBM Cloud 的技術規格
 
@@ -42,7 +42,7 @@ Veeam Backup and Replication 9.5 Enterprise Plus（10、25、50、100 或 200 �
 
 ### 管理
 
-依預設最多配置五部 VM 及 2000 GB 儲存空間的管理備份。
+依預設，最多配置 5 部 VM 及 2000 GB 儲存空間的管理備份。
 
 ## 安裝 Veeam on IBM Cloud 時的考量
 
@@ -50,7 +50,7 @@ Veeam Backup and Replication 9.5 Enterprise Plus（10、25、50、100 或 200 �
 
 ## 移除 Veeam on IBM Cloud 時的考量
 
-移除 Veeam on {{site.data.keyword.cloud_notm}} 服務之前，請注意，移除此服務會停止所有備份（包括管理 VM 的備份），並刪除所有先前的備份（刪除是不可逆轉的）。如果管理 VM 之後毀損，則無法予以還原。
+移除 Veeam on {{site.data.keyword.cloud_notm}} 服務會停止所有備份並刪除所有先前的備份。管理 VM 的備份會停止，而且刪除先前的備份是無法逆轉的。如果管理 VM 毀損，則無法予以還原。
 
 ### 相關鏈結
 

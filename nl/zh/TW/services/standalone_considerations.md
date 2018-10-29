@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -32,7 +32,7 @@ HCX on {{site.data.keyword.cloud_notm}} 元件必須同時安裝在 {{site.data.
     3. 按一下**複製鏈結**，然後使用此鏈結將 HCX Enterprise Client 下載至內部部署環境，而且可以存取您的內部部署 vSphere 環境。
 3. 在 VMware vSphere Web Client 中，將 HCX Enterprise Client 當成 HCX Manager 虛擬應用裝置 (HCX Manager) 部署至內部部署環境。
 
-   **附註**：您必須將內部部署 HCX Manager 部署至專用網路，並容許它存取公用網路。您可以使用 NSX Edge、Vyatta 或類似閘道，容許透過網際網路存取內部部署 HCX Manager。如果用於專用網路存取及公用網路存取的閘道不同，則建議您使用預設閘道來容許公用網路存取及內部部署 **HCX Manager 管理主控台**，以建立進行專用網路存取的靜態路徑。
+   **附註：**您必須將內部部署 HCX Manager 部署至專用網路，並容許它存取公用網路。您可以使用 NSX Edge、Vyatta 或類似閘道，容許透過網際網路存取內部部署 HCX Manager。如果用於專用網路存取及公用網路存取的閘道不同，則建議您使用預設閘道來容許公用網路存取及內部部署 **HCX Manager 管理主控台**，以建立進行專用網路存取的靜態路徑。
 4. 完成 HCX Manager 部署之後，請使用 **HCX Manager 管理主控台**來啟動內部部署 HCX Manager。若要取得內部部署 HCX Manager 的啟動金鑰，請在 {{site.data.keyword.vmwaresolutions_short}} 主控台中訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例。如需相關資訊，請參閱[訂購內部部署 HCX 實例](../services/standalone_orderingserviceinstances.html)。
 5. 如果您已在訂購 HCX on {{site.data.keyword.cloud_notm}} 服務時使用自簽 SSL 憑證，則必須完成下列步驟，將憑證匯入至內部部署 HCX Manager：
     1. 在內部部署 **HCX Manager 管理主控台**中，按一下**管理**標籤。
@@ -52,7 +52,7 @@ HCX on {{site.data.keyword.cloud_notm}} 元件必須同時安裝在 {{site.data.
     2. 確定已移除所有延伸網路。
     3. 確定已移除具有配對雲端站台的所有交互連接元件。
 
-   **重要事項**：您必須先完成所有考量，再繼續進行下一步。否則，會取消內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例的授權，因為無法執行移轉，而且 HCX 元件可能發生錯誤。  
+   **重要事項：**您必須先完成所有考量，再繼續進行下一步。否則，會取消內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例的授權，因為無法執行移轉，而且 HCX 元件可能發生錯誤。  
 2. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，刪除已訂購的內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例，以取得內部部署 HCX Manager 的啟動金鑰。請先確定主控台中不再有已刪除的實例，再繼續進行下一步。
 
    如需相關資訊，請參閱[刪除內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](../services/standalone_deletingserviceinstances.html)。
@@ -63,5 +63,5 @@ HCX on {{site.data.keyword.cloud_notm}} 元件必須同時安裝在 {{site.data.
 * [檢視內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](../services/standalone_viewingserviceinstances.html)
 * [HCX 術語名詞解釋](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 文件](https://hcx.vmware.com/#vm-documentation)
-* [VMware HCX Enterprise 安裝和使用手冊](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf){:new_window}
+* [VMware HCX 資源](https://hcx.vmware.com/#/docs)
 * [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)

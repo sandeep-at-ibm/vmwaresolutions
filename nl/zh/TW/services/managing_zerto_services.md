@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -32,9 +32,9 @@ Zerto on {{site.data.keyword.cloud_notm}} 之受管理服務的下列模型可�
 
 如需相關資訊，請參閱 [IBM Resiliency Disaster Recovery 即服務](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top)。
 
-## 程序
+## 要求 Zerto on IBM Cloud 受管理服務的程序
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**開始使用**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**開始使用**。
 2. 向下捲動頁面，然後按一下**訂購其他受管理服務**下的 **Zerto on IBM Cloud 的受管理服務**卡片。
 3. 在 **Zerto on IBM Cloud** 頁面上，檢閱 Zerto on {{site.data.keyword.cloud_notm}} 即受管理服務的說明及技術規格，然後按一下**建立**。
 4. 根據您的需求指定配置設定，或接受預設值。

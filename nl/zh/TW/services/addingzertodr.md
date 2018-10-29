@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ Zerto on {{site.data.keyword.cloud}} 服務可將抄寫及災難回復功能整�
 
 下列元件已訂購並包括在 Zerto on {{site.data.keyword.cloud_notm}} 服務中。
 
-**附註**：Zerto Virtual Manager 元件只會部署至預設叢集。
+**附註：**Zerto Virtual Manager 元件只會部署至預設叢集。
 
 ### VSI
 

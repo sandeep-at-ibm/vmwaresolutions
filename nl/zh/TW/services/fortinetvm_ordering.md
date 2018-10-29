@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-08-16"
 ## 為現有實例訂購 FortiGate Virtual Appliance on IBM Cloud
 
 您可以使用下列其中一種方法，將 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務新增至現有實例：
-* 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增**。
+* 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增**。
 * 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **FortiGate Virtual Appliance on IBM Cloud**，指定服務設定，然後選取**新增至現有實例**。
 
 ## FortiGate Virtual Appliance on IBM Cloud 服務配置
@@ -44,14 +44,14 @@ lastupdated: "2018-08-16"
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的授權模型提供下列選項：
 <dl class="dl">
         <dt class="dt dlterm">Standard FW</dt>
-        <dd class="dd">此組合包括「有狀態封包檢驗」、「VLAN 保護及進階記載」、「Ingress/Egress 防火牆規則」、「SSL/IPSec VPN 終止」及持續支援。</dd>
+        <dd class="dd">此組合包括「有狀態封包檢驗」、「VLAN 保護及進階記載」、「Ingress 及 Egress 防火牆規則」、「SSL/IPSec VPN 終止」及持續支援。</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
         <dd class="dd">除了「NGFW IPS 及 Web 過濾」、「防毒及反垃圾郵件」、「IP 及網域信譽」及核心 FortiCare 安全服務之外，此組合還包括所有標準防火牆服務。</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>
         <dd class="dd">除了 FortiSandbox Cloud 及 Mobile Security 之外，此組合還包括所有標準防火牆及 UTM 服務。</dd>
 </dl>
 
-**重要事項**：您無法在安裝服務之後變更授權模型。若要變更授權模型，您必須移除現有服務，然後選取不同的授權選項來重新安裝服務。
+**重要事項：**您無法在安裝服務之後變更授權模型。若要變更授權模型，您必須移除現有服務，然後選取不同的授權選項來重新安裝服務。
 
 ### 相關鏈結
 

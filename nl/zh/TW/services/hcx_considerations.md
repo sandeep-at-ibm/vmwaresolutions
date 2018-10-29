@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-26"
 
 ---
 
 # VMware HCX on IBM Cloud 概觀
 
-HCX on {{site.data.keyword.cloud}} 服務可以將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}，這容許將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從其移轉，而不需要進行任何轉換或變更。
+HCX on {{site.data.keyword.cloud}} 服務會將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}，這容許您將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從該處移轉，而不需要進行任何轉換或變更。
 
 **可用性：**只有部署在 2.3 版及更新版本中的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 實例，才能使用此服務。
 
@@ -46,7 +46,7 @@ HCX on {{site.data.keyword.cloud}} 服務可以將內部部署資料中心的網
 
 ### 授權及費用
 
-* 基本授權費用：需要的服務費用
+* 基礎授權費用：需要的服務費用
 * 受管理 VM 費用：根據每月移轉的 VM 收費
 
 ## 安裝 HCX on IBM Cloud 時的考量

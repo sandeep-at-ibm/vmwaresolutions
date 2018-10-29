@@ -21,7 +21,7 @@ lastupdated: "2018-07-20"
 ## 為現有實例訂購 IBM Spectrum Protect Plus on IBM Cloud
 
 您可以使用下列其中一種方法，將 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服務新增至現有實例：
-* 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增**。
+* 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增**。
 * 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **IBM Spectrum Protect Plus on IBM Cloud**，指定服務設定，然後選取**新增至現有實例**。
 
 ## IBM Spectrum Protect Plus on IBM Cloud 服務配置

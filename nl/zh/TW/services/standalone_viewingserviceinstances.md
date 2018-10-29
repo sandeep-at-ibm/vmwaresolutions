@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-20"
 
 使用此程序來檢視您針對內部部署使用所訂購的內部部署 HCX on {{site.data.keyword.cloud}} 實例及其相關資訊。
 
-## 程序
+## 檢視內部部署 VMware HCX on IBM Cloud 實例的程序
 
 從左導覽窗格中，按一下**已部署的實例**，並向下捲動至**內部部署 HCX 實例**表格，以檢視您所訂購實例的相關資訊：
 

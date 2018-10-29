@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-18"
+lastupdated: "2018-09-26"
 
 ---
 
 # HyTrust DataControl on IBM Cloud 概觀
 
-HyTrust DataControl on {{site.data.keyword.cloud}} 服務提供具有整合式金鑰管理的高度加密，來保護其整個生命週期的工作負載安全。此服務可以提供作業系統層次及資料層次的加密，表示可以加密及解密工作負載內的任何目錄、資料夾或檔案。
+HyTrust DataControl on {{site.data.keyword.cloud}} 服務提供具有整合式金鑰管理的高度加密，在工作負載的整個生命週期內保護其安全。此服務提供作業系統層次及資料層次的加密。這可以加密及解密工作負載內的任何目錄、資料夾或檔案。
 
-**可用性：**只有執行 vSphere 6.5 並且部署在（或升級至）2.3 版或更新版本的實例，才能使用此服務。
+**可用性：**只有執行 vSphere 6.5 並且部署在或升級至 2.3 版或更新版本的實例，才能使用此服務。
 
 ## HyTrust DataControl on IBM Cloud 的技術規格
 
@@ -33,7 +33,7 @@ HyTrust DataControl on {{site.data.keyword.cloud}} 服務提供具有整合式�
 
 ## 移除 HyTrust DataControl on IBM Cloud 時的考量
 
-請確定您已使用 DataControl 取消連結所有用戶端，再移除 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務。在您移除服務之後，可能會刪除金鑰，致使您可能會遭鎖定而無法使用 VM。
+先使用 DataControl 取消連結所有用戶端，再移除 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務。在您移除服務之後，可能會刪除金鑰，而且您可能會遭鎖定而無法使用 VM。
 
 ### 相關鏈結
 

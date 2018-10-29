@@ -21,7 +21,7 @@ lastupdated: "2018-07-19"
 
 ## 將更新套用至 HCX on IBM Cloud
 
-HCX on {{site.data.keyword.cloud_notm}} 已部署最新已測試建置的 VMware Hybrid Cloud Extension 技術。VMware 會定期提供這些建置的更新項目，其中包括重要修正程式及新增特性。這些建置會自動推送至 HCX on {{site.data.keyword.cloud}} 安裝（包括內部部署 HCX 安裝）。
+HCX on {{site.data.keyword.cloud_notm}} 已部署最新已測試建置的 VMware Hybrid Cloud Extension 技術。VMware 會定期提供這些建置的更新，其中包括重要修正程式及新增特性。這些建置會自動推送至 HCX on {{site.data.keyword.cloud}} 安裝（包括內部部署 HCX 安裝）。
 
 若要套用任何已推送至環境的維護修正程式，您必須使用內部部署資料中心及 vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 實例中的「HCX Manager 管理主控台」。
 

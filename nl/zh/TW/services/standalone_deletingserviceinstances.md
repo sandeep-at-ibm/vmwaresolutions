@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-19"
 
 請確定您已檢閱[刪除內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例時的考量](../services/standalone_considerations.html)中的所有考量。
 
-## 程序
+## 刪除內部部署 VMware HCX on IBM Cloud 實例的程序
 
 1. 從左導覽窗格中，按一下**已部署的實例**。
 2. 向下捲動至**內部部署 HCX 實例**表格，並尋找要刪除的實例。
