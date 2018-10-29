@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -76,7 +76,7 @@ lastupdated: "2018-09-21"
 
 如果您選擇購買任何授權（除了 vSphere Enterprise Plus 及 vCenter Server 以外），且您訂購多部 ESXi 伺服器，則會代表您自動開立 {{site.data.keyword.cloud_notm}} 問題單，以結合授權碼。您負責追蹤問題單，以確保您只使用 DevOps 團隊所產生的授權碼。
 
-**重要事項**：將個別授權碼與結合的授權碼一起使用，不符合您所需授權的付款需求。
+**重要事項：**將個別授權碼與結合的授權碼一起使用，不符合您所需授權的付款需求。
 
 ## Bare Metal Server 設定
 
@@ -94,12 +94,12 @@ lastupdated: "2018-09-21"
 
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
-|雙重 Intel Xeon E5-2620 v4 /總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2650 v4 /總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2690 v4 /總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Silver 4110 處理器/總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 5120 處理器/總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 Processor / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 可用的選項取決於您是否已選取 VMware vSAN 元件。
 
@@ -116,13 +116,11 @@ lastupdated: "2018-09-21"
 對於含有 vSAN 的訂單，會訂購具有 12 磁碟機箱的 ESXi 伺服器，並訂購四個磁碟：兩個用於 ESXi OS，兩個保留供快取使用。依預設會配置這些設定，且無法變更。您可以選取 **vSAN 容量磁碟的磁碟類型及大小**及 **vSAN 容量磁碟數目**，來訂購更多容量磁碟。
 
 如果您選取叢集的 VMware vSAN 元件，請指定下列設定。
-
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
-* **vSAN 快取磁碟的磁碟類型**：選取所需快取磁碟的選項。
+* 如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
 
-    **附註**：如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。此選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲及更高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
-* **vSAN 快取磁碟數目**：指定您要新增的快取磁碟數目。
+* 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
 
 ## 網路介面設定
 
@@ -193,7 +191,7 @@ lastupdated: "2018-09-21"
 
 ## 訂單摘要
 
-根據您的配置，預估成本會立即產生並顯示在右側的**訂單摘要**窗格中。按一下**定價詳細資料**，以產生提供預估值詳細資料的 PDF 文件。
+根據您的配置，預估成本會立即產生並顯示在右側的**訂單摘要**窗格中。按一下**定價詳細資料**，以產生提供預估詳細資料的 PDF 文件。
 
 ## 訂購 vSphere 叢集的程序
 
@@ -222,7 +220,7 @@ lastupdated: "2018-09-21"
    * 若要將配置儲存為範本而不下訂單，請按一下**儲存配置**。
    * 若要下訂單，請確定要收費的帳戶正確，請檢閱並接受條款，然後按一下**佈建**。
 
-   **附註**：僅安裝 {{site.data.keyword.baremetal_short}}。您負責在叢集部署之後安裝及配置各種元件，例如 VMware vCenter、VMware NSX、VMware vSAN。
+   **附註：**僅安裝 {{site.data.keyword.baremetal_short}}。您負責在叢集部署之後安裝及配置各種元件，例如 VMware vCenter、VMware NSX、VMware vSAN。
 
 ### 結果
 

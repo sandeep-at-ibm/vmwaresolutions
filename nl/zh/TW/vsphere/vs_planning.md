@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-11"
 
 在訂購 VMware vSphere on {{site.data.keyword.cloud}} 之前，請檢閱下列需求。根據 {{site.data.keyword.CloudDataCent_notm}} 位置及工作負載容量需求來規劃 VMware vSphere 叢集。
 
-**附註**：部署 ESXi 伺服器之後，您要負責設定環境、安裝和配置各種 VMware 元件。下列範例是 VMware 元件：VMware vCenter Server、VMware NSX 及 VMware vSAN。
+**附註：**部署 ESXi 伺服器之後，您要負責設定環境、安裝和配置各種 VMware 元件。下列範例是 VMware 元件：VMware vCenter Server、VMware NSX 及 VMware vSAN。
 
 ## IBM Cloud 帳戶需求
 

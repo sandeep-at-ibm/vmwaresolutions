@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-10"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-08-10"
 *  您已檢閱 [vSphere 叢集的需求及規劃](vs_planning.html)中的需求及考量。
 *  您已建立要重複使用的配置範本。
 
-## 程序
+## 根據現有配置來訂購 vSphere 叢集的程序
 
 1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware**，然後按一下**虛擬資料中心**區段中的 **VMware vSphere**。
 2. 在 **VMware vSphere on IBM Cloud** 頁面上，按一下**建立**。  
@@ -30,7 +30,7 @@ lastupdated: "2018-08-10"
    * 若要將配置儲存為範本而不下訂單，請按一下**儲存配置**。
    * 若要下訂單，請確定要收費的帳戶正確，請檢閱並接受條款，然後按一下**佈建**。
 
-   **附註**：僅安裝 {{site.data.keyword.baremetal_short}}。您負責在叢集部署之後安裝及配置各種元件，例如 VMware vCenter、VMware NSX、VMware vSAN。
+   **附註：**僅安裝 {{site.data.keyword.baremetal_short}}。您負責在叢集部署之後安裝及配置各種元件，例如 VMware vCenter、VMware NSX、VMware vSAN。
 
 ## 結果
 

@@ -20,7 +20,7 @@ lastupdated: "2018-07-19"
 
 ### 相關鏈結
 
-* [VMware ESXi/ESX 的建置號碼和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
-* [VMware ESXi 6.0 Update 2 版本注意事項](https://docs.vmware.com/en/VMware-vSphere/6.0/rn/vsphere-esxi-60u2-release-notes.html)
+* [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
+* [VMware ESXi 6.0 Update 2 Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.0/rn/vsphere-esxi-60u2-release-notes.html)
 * [VMware vSphere 概觀](vs_vsphereclusteroverview.html)
 * [規劃 vSphere 叢集](vs_planning.html)
