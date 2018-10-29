@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-08-16"
 
 ## 檢視通知
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**通知**。
+1. 從 {{site.data.keyword.vmwaresolutions_full}} 主控台，按一下左導覽窗格中的**通知**。
 2. 在**通知歷程**表格中，檢視關於所有通知的摘要。
 
    表 1. 通知歷程

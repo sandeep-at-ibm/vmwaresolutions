@@ -10,15 +10,15 @@ lastupdated: "2018-04-16"
 
 # 2.1 版的版本注意事項
 
-此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Spectre 及 Meltdown 補救
 
 {{site.data.keyword.vmwaresolutions_short}} 發行來自 VMware 的修補程式，以回應已知的 Spectre 和 Meltdown 的漏洞（CVE-2017-5753、CVE-2017-5715 及 CVE-2017-5754）。
 
-* CVEID: [CVE-2017-5753](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5753)
-* CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
-* CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
+* CVEID：[CVE-2017-5753](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5753)
+* CVEID：[CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
+* CVEID：[CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
 如需相關資訊，請參閱[處理 Spectre 及 Meltdown 漏洞](../vmonic/trbl_fix_spectre.html)。
 
@@ -48,7 +48,7 @@ lastupdated: "2018-04-16"
 * [新增及檢視 vCenter Server 實例的叢集](../vcenter/vc_addingviewingclusters.html)
 * [關於 BYOL 的常見問題](../vmonic/faq_byol.html)
 
-## Zerto on IBM Cloud 服務元件更新項目
+## Zerto on IBM Cloud 服務元件更新
 
 對於部署在 2.1 版及更新版本 Cloud Foundation 實例及 vCenter Server 實例中的 Zerto on {{site.data.keyword.cloud_notm}} 服務，會佈建 Zerto Virtual Replication 5.5u2。基於效能理由，Zerto 虛擬抄寫應用裝置 (VRA) 現在是部署到管理資料儲存庫（vSAN 或「耐久性」）而不是本端資料儲存庫。如果您有現有的 VRA，則請考慮將其儲存空間移轉至管理資料儲存庫，以獲得更好的效能。
 
@@ -60,12 +60,12 @@ lastupdated: "2018-04-16"
 
 對於 2.1 版或更新版本，會訂購將「公用分散式虛擬交換器 (DVS)」設定為 MTU 1500（預設值）的新 vCenter Server 實例。如需相關資訊，請參閱 [vCenter Server 資料清單](../vcenter/vc_bom.html)中的_網路 MTU 配置設定_。
 
-### 對主機自動套用 VMware ESXi 修補程式及更新項目
+### 對主機自動套用 VMware ESXi 修補程式及更新
 
-在 2.0 版及更舊版本的 VMware vCenter Server 實例中，修補程式未自動套用至已新增至叢集的 ESXi 主機。
+在 2.0 版及更早版本的 VMware vCenter Server 實例中，修補程式未自動套用至已新增至叢集的 ESXi 主機。
 
-在 2.1 版以及更新版本的實例中，自動化會將修補程式套用至新的 ESXi 主機，使該修補程式層次符合佈建起始實例時的修補程式層次。由您負責手動套用任何未來的修補程式和更新項目。
-當未來版本中提供 VMware 修補程式及更新項目時，自動化會掃描您現有實例的 ESXi 主機，並以電子郵件提醒您手動套用最新的修補程式和更新項目。
+在 2.1 版以及更新版本的實例中，自動化會將修補程式套用至新的 ESXi 主機，使該修補程式層次符合佈建起始實例時的修補程式層次。由您負責手動套用任何未來的修補程式和更新。
+當未來版本中提供 VMware 修補程式及更新時，自動化會掃描您現有實例的 ESXi 主機，並以電子郵件提醒您手動套用最新的修補程式和更新。
 
 如需相關資訊，請參閱[將更新套用至 vCenter Server 實例](../vcenter/vc_applyingupdates.html)。
 
@@ -79,7 +79,7 @@ lastupdated: "2018-04-16"
 
 對於實例中的預設叢集，您可以部署或擴充最多 51 部伺服器。對於實例中的所有後續叢集，您可以部署或擴充最多 59 部伺服器。如需相關資訊，請參閱[新增及檢視 vCenter Server 實例的叢集](../vcenter/vc_addingviewingclusters.html)。
 
-**附註：**這項功能僅適用於部署在 2.1 版以及更新版本中的實例。從 2.1 版之前的版本升級至 2.1 版的實例沒有此選項。
+**附註：**這項功能僅適用於部署在 2.1 版以及更新版本中的實例。從 2.1 版之前的版本升級至 2.1 版的實例沒有這個選項。
 
 ### 使用者自訂的 IBM Cloud Bare Metal Server 配置選項
 
@@ -108,6 +108,6 @@ lastupdated: "2018-04-16"
 * 瀏覽途徑導覽會新增至**已部署的實例**頁面作為替代的導覽方法，從而減少到達母頁面所需的步驟數。
 * 提供各種錯誤訊息及工具提示加強功能，以協助您在使用者介面上選取適當的設定。
 
-## 新的及更新的文件
+## 新文件與更新的文件
 
 有新的 developerWorks 秘訣可供使用，其包含的逐步指示是關於如何使用 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}，將專用的儲存空間連接至現有的 {{site.data.keyword.vmwaresolutions_full}} 部署。如需相關資訊，請參閱 [Steps to attach dedicated storage to VMware Solutions on IBM Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)。

@@ -45,19 +45,19 @@ lastupdated: "2018-09-20"
 
 對於 VMware vCenter Server 6.5，您必須將 [VMware 產品修補程式站台](https://my.vmware.com/group/vmware/patch)中的 vCenter 6.5 U2c 修補程式套用至所有 vCenter Server，不論是新部署或現有的。
 
-## 已部署在 1.9 版或更舊版本中的實例
+## 已部署在 1.9 版或更早版本中的實例
 
-Cloud Foundation 實例、vCenter Server 實例以及 1.9 版或更舊版本中的 VMware vSphere 叢集，與 VMware vSphere 6.0 及 VMware vCenter Server 6.0 一起部署。
+Cloud Foundation 實例、vCenter Server 實例以及 1.9 版或更早版本中的 VMware vSphere 叢集，與 VMware vSphere 6.0 及 VMware vCenter Server 6.0 一起部署。
 
-### 已部署在 1.9 版或更舊版本中的 vCenter Server 實例
+### 已部署在 1.9 版或更早版本中的 vCenter Server 實例
 
 對於 VMware vSphere 6.0 及 VMware vCenter Server 6.0，您必須將修補程式（適用於 vSphere 的 ESXi600-201711101-SG、ESXi600-201803401-BG、ESXi600-201803402-BG、ESXi600-201808401-BG、ESXi600-201808402-BG 及 ESXi600-201808403-BG，以及適用於 vCenter Server 的 vCenter 6.0 U3h）從 [VMware 產品修補程式站台](https://my.vmware.com/group/vmware/patch)套用至您所有的實例和 ESXi 伺服器，不論是新部署或現有的。
 
-### 已部署在 1.9 版或更舊版本中的 Cloud Foundation 實例
+### 已部署在 1.9 版或更早版本中的 Cloud Foundation 實例
 
-當這些實例所仰賴的必要供應商更新項目釋出時，這些實例的更新項目即可供使用。
+當這些實例所仰賴的必要供應商更新釋出時，這些實例的更新即可供使用。
 
-### 已部署在 1.9 版或更舊版本中的 VMware vSphere 叢集
+### 已部署在 1.9 版或更早版本中的 VMware vSphere 叢集
 
 對於 VMware vSphere 6.0 及 VMware vCenter Server 6.0，您必須將修補程式（適用於 vSphere 的 ESXi600-201711101-SG、ESXi600-201803401-BG、ESXi600-201803402-BG、ESXi600-201808401-BG、ESXi600-201808402-BG 及 ESXi600-201808403-BG，以及適用於 vCenter Server 的 vCenter 6.0 U3h）從 [VMware 產品修補程式站台](https://my.vmware.com/group/vmware/patch)套用至您所有的 vSphere 叢集和 ESXi 伺服器，不論是新部署或現有的。
 

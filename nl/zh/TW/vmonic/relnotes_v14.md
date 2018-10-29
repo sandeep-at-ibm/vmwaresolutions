@@ -10,11 +10,11 @@ lastupdated: "2017-03-08"
 
 # 1.4 版的版本注意事項
 
-此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
-## Cloud Foundation 實例的元件更新項目
+## Cloud Foundation 實例的元件更新
 
-下列是新的或更新的元件：
+以下是新元件或更新的元件：
 
 * VC 及 PSC（vCenter 及 Platform Services Controller）6.0U2a
 * VMware Tools 10.1.0
@@ -24,9 +24,9 @@ lastupdated: "2017-03-08"
 
 如需相關資訊，請參閱 [Cloud Foundation 概觀](../sddc/sd_cloudfoundationoverview.html)。
 
-## vCenter Server 實例的元件更新項目
+## vCenter Server 實例的元件更新
 
-下列是新的或更新的元件：
+以下是新元件或更新的元件：
 
 ### VMware NSX for vSphere 6.2.4
 
@@ -42,7 +42,7 @@ lastupdated: "2017-03-08"
 
 現在，NSX Edge 已包含成為您訂購的新 vCenter Server 實例的一部分。NSX Edge 提供網路 Edge 安全及閘道服務，以隔離虛擬化網路。
 
-在實例部署期間，由 IBM 部署 Management VMware NSX Edge Services Gateway (ESG)。IBM 管理虛擬機器利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。所部署的這個 ESG 包括兩個介面：一個介面連接至 {{site.data.keyword.cloud_notm}} 專用 VLAN，另一個介面連接至 {{site.data.keyword.cloud_notm}} 公用 VLAN。
+在實例部署期間，由 IBM 部署 Management VMware NSX Edge Services Gateway (ESG)。IBM 管理虛擬機器會利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。所部署的這個 ESG 包括兩個介面：一個介面連接至 {{site.data.keyword.cloud_notm}} 專用 VLAN，另一個介面連接至 {{site.data.keyword.cloud_notm}} 公用 VLAN。
 
 為了確保安全，已設置防火牆規則，僅容許管理虛擬機器所起始的出埠 HTTPS 通訊。這個 ESG 部署在「大型」配置中，只有「IBM 支援中心」才能修改此配置。如需相關資訊，請參閱下列主題：
 
@@ -67,7 +67,7 @@ lastupdated: "2017-03-08"
 * 對於 vCenter Server 實例，會停止 _VMware vCenter Server 實例_和 _VMware Solutions Hypervisor_ 費用。
 * 針對這兩個實例類型，會產生新的_支援和服務_費用，這是每一個節點的月費。
 
-## 實例網路拓蹼的更新項目
+## 實例網路拓蹼的更新
 
 此版本包括您實例的下列拓蹼加強功能：
 
@@ -78,14 +78,14 @@ lastupdated: "2017-03-08"
 
 ## Cloud Foundation 實例的多站台配置支援
 
-您現在可以部署單一 Cloud Foundation 實例，就像先前的版本一樣，或者，也可以部署已連接至主要實例的次要實例。多站台配置模型使用中心與分支拓蹼來搭配一個主要站台及最多 7 個次要站台。
+您現在可以部署單一 Cloud Foundation 實例，就像先前的版本一樣，或者，也可以部署已連接至主要實例的次要實例。多站台配置模型使用中心與分支拓蹼，其中會有一個主要站台及最多 7 個次要站台。
 
 如需相關資訊，請參閱[Cloud Foundation 實例的多站台配置](../sddc/sd_multisite.html)。
 
 ## Zerto 災難回復部署的加強功能
 
 * 對於 Cloud Foundation 實例，會自動部署 Zerto 災難回復，而不必透過支援問題單來處理。預估成本會列出所有 Zerto 元件，例如專用可攜式子網路、Windows VSI（虛擬服務實例）及 Zerto 授權費用，讓您在下訂單之前先檢閱。
-* 對於 vCenter Server 實例，會透過支援問題單（如同在舊版中）來執行 Zerto 災難回復的部署。不過，不再需要 NSX Edge 和公用可攜式子網路，因為它們現在已包含在基本部署中。專用可攜式子網路、Windows VSI（虛擬服務實例）及 Zerto 授權仍然要收費。
+* 對於 vCenter Server 實例，會透過支援問題單（如同在舊版中）來執行 Zerto 災難回復的部署。不過，不再需要 NSX Edge 和公用可攜式子網路，因為它們現在已包含在基礎部署中。專用可攜式子網路、Windows VSI（虛擬服務實例）及 Zerto 授權仍然要收費。
 
 如需相關資訊，請參閱 [Zerto 災難回復](../services/addingzertodr.html)。
 
@@ -103,10 +103,10 @@ lastupdated: "2017-03-08"
 
 ## 實例管理
 
-實例管理程序的新增特性及改進項目：
+實例管理程序的新增特性及改善：
 
 * 對於 Cloud Foundation 實例，您可以在實例詳細資料頁面上，檢視各種實例元件的使用者名稱及密碼。如需相關資訊，請參閱[檢視 Cloud Foundation 實例](../sddc/sd_viewinginstances.html)。
-* 對於 vCenter Server 實例，您現在可以直接從主控台安裝 IBM 元件的軟體更新項目及修補程式。如需相關資訊，請參閱[將更新及修補程式套用至 vCenter Server 實例](../vcenter/vc_applyingupdates.html)。
+* 對於 vCenter Server 實例，您現在可以直接從主控台安裝 IBM 元件的軟體更新及修補程式。如需相關資訊，請參閱[將更新及修補程式套用至 vCenter Server 實例](../vcenter/vc_applyingupdates.html)。
 
 ## 主控台通知
 

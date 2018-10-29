@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -17,13 +17,13 @@ lastupdated: "2018-08-14"
 * 對於 vCenter Server 實例，您可以將預設叢集擴充為具有多達 51 部 ESXi 伺服器。每一個非預設叢集可以擴充為具有多達 59 部 ESXi 伺服器。由於您最多可以將 10 個叢集新增至實例中，因此每一個已部署的實例在所有叢集裡最多可以有 51 + 9x59 = 582 部 ESXi 伺服器。
 * 若為 Cloud Foundation 實例，標準配置有四部 ESXi 伺服器。您最多可以新增 28 部伺服器（總共最多 32 部伺服器）。對於多站台配置中的 Cloud Foundation 實例，在所有實例中最多可以有 128 部 ESXi 伺服器。
 
-  **附註**：如果 Cloud Foundation 配置需要超過 128 部 ESXi 伺服器的多站台部署，[請與 IBM 支援中心聯絡](trbl_support.html)以取得協助。
+  **附註：**如果 Cloud Foundation 配置需要超過 128 部 ESXi 伺服器的多站台部署，[請與 IBM 支援中心聯絡](trbl_support.html)以取得協助。
 
 ## 我可以新增多少部 ESXi 伺服器至叢集？
 
 對於 2.2 版以及更新版本，您最多可以將 51 部 ESXi 伺服器新增至起始叢集，以及最多可以將 59 部 ESXi 伺服器新增至已新增的叢集。
 
-如果是部署在 2.1 版或更舊版本中的實例，您必須啟用必要的 vSAN 支援，才能將叢集大小增加到超過 32。請完成下列步驟以啟用必要的 vSAN 支援：
+如果是部署在 2.1 版或更早版本中的實例，您必須啟用必要的 vSAN 支援，才能將叢集大小增加到超過 32。請完成下列步驟以啟用必要的 vSAN 支援：
 
 1. 在每一部已部署的 ESXi 伺服器上，執行下列指令：
 
@@ -31,7 +31,7 @@ lastupdated: "2018-08-14"
 
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
-2. 重新啟動每一部 ESXi 伺服器。如需相關資訊，請參閱[建立最多具有 64 部主機的 vSAN 6.x 叢集](https://kb.vmware.com/s/article/2110081)。
+2. 重新啟動每一部 ESXi 伺服器。如需相關資訊，請參閱 [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081)。
 3. 您可能需要增加 vCenter Server 的大小，以容納所新增的虛擬機器及 ESXi 伺服器。
 4. 開啟「IBM 支援中心」問題單，指出您完成步驟 1 - 3 來手動套用 vSAN 變更。在問題單中，要求針對超過 32 部的 ESXi 伺服器啟用已升級實例。
 
@@ -39,7 +39,7 @@ lastupdated: "2018-08-14"
 
 無法變更 ESXi 伺服器名稱及 IP 位址，因為已登錄它們以進行 Windows DNS 解析。變更可能會導致部署期間失敗或 vCenter Server 功能失敗。
 
-**附註**：請不要在 {{site.data.keyword.cloud_notm}} 使用者介面上使用**重新命名裝置**特性來變更 ESXi 伺服器名稱。此功能的確會變更 ESXi 伺服器的 FQDN，但所配置的 vCenter Center 及 Windows VSI 主機登錄將不正確，而可能導致失敗。
+**附註：**請不要在 {{site.data.keyword.cloud_notm}} 使用者介面上使用**重新命名裝置**特性來變更 ESXi 伺服器名稱。此功能的確會變更 ESXi 伺服器的 FQDN，但所配置的 vCenter Center 及 Windows VSI 主機登錄將不正確，而可能導致失敗。
 
 ## 我可以在 ESXi 伺服器上停用 root 存取權嗎？
 
@@ -53,7 +53,7 @@ lastupdated: "2018-08-14"
 
 可以為儲存空間新增靜態路徑，但必須非常小心地執行作業。否則，現有的共用可能會變成未裝載。
 
-**附註**：不支援為 vMotion 新增靜態路徑。vMotion 子網路配置中的變更可能會導致 {{site.data.keyword.vmwaresolutions_short}} 功能失敗。
+**附註：**不支援為 vMotion 新增靜態路徑。vMotion 子網路配置中的變更可能會導致 {{site.data.keyword.vmwaresolutions_short}} 功能失敗。
 
 ### 相關鏈結
 

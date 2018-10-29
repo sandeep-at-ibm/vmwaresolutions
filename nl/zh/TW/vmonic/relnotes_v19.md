@@ -10,7 +10,7 @@ lastupdated: "2017-10-13"
 
 # 1.9 版的版本注意事項
 
-此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## VMware vSphere on IBM Cloud
 
@@ -53,7 +53,7 @@ lastupdated: "2017-10-13"
 * [訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)
 * [訂購 NetApp ONTAP Select 實例](../netapp/np_orderinginstances.html)
 
-## VMware Cloud Foundation 實例的更新項目
+## VMware Cloud Foundation 實例的更新
 
 ### 自訂實例 CPU 及記憶體
 
@@ -83,7 +83,7 @@ lastupdated: "2017-10-13"
 
 ### 網路檔案系統版本更新
 
-「網路檔案系統 (NFS) 4.1 版」無法再作為使用者介面中的儲存空間設定。所有 vCenter Server 實例都會以 NFS 第 3 版部署。雖然 NFS 第 3 版是較舊的通訊協定版本，但它在 VMware 環境中啟用加強特性，支援 VMware Storage Distributed Resource Scheduler (SDRS) 及 Storage I/O Control (SIOC)。
+「網路檔案系統 (NFS) 4.1 版」無法再作為使用者介面中的儲存空間設定。所有 vCenter Server 實例都會以 NFS 第 3 版部署。雖然 NFS 第 3 版是較舊的通訊協定版本，但它在 VMware 環境中啟用加強特性，支援「VMware 儲存空間分散式資源排程器 (SDRS)」及「儲存空間 I/O 控制 (SIOC)」。
 
 如需相關資訊，請參閱[訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)。
 
@@ -95,11 +95,11 @@ lastupdated: "2017-10-13"
 * [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html)
 * [檢視 vCenter Server 實例](../vcenter/vc_viewinginstances.html)
 
-## 對於 Windows Server 自動安裝更新項目的需求
+## 對於 Windows Server 自動安裝更新的需求
 
-Microsoft Active Directory (AD)/網域名稱伺服器 (DNS) 自動設定為只下載更新項目。它不會自動安裝並重新啟動這些更新項目。您必須在排定的時間手動安裝更新項目並重新啟動，以避免中斷進行中的 Active Directory 伺服器配置及其他備份工作。若要套用 Windows 更新項目，請手動安裝更新項目。
+Microsoft Active Directory (AD) / 網域名稱伺服器 (DNS) 自動設定為只下載更新。它不會自動安裝並重新啟動這些更新。您必須在排定的時間手動安裝更新並重新啟動，以避免中斷進行中的 Active Directory 伺服器配置及其他備份工作。若要套用 Windows 更新，請手動安裝更新。
 
-## 新的及更新的文件
+## 新文件與更新的文件
 
 * 瞭解如何保護專用多站台 Cloud Foundation 實例的安全，同時延伸 VMware 應用程式來使用公用 {{site.data.keyword.cloud_notm}} 服務。如需相關資訊，請參閱[在 {{site.data.keyword.cloud_notm}} 中安全地連接專用 VMware 工作負載](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}。
 * 提供其他文件來配置防火牆，以允許來自 IBM CloudDriver 和 SDDC Manager 虛擬機器的所有通訊協定通訊。如需相關資訊，請參閱 [Fortinet on {{site.data.keyword.cloud_notm}} 的元件及考量](../services/fsa_considerations.html)。

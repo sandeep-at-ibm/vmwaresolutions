@@ -10,15 +10,15 @@ lastupdated: "2018-08-30"
 
 # 2.5 版的版本注意事項
 
-此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Spectre 及 Meltdown 補救
 
 {{site.data.keyword.vmwaresolutions_short}} 發行來自 VMware 的修補程式，以回應已知的 Spectre 及 Meltdown 的漏洞（CVE-2017-5753、CVE-2017-5715 及 CVE-2017-5754）。
 
-* CVEID: [CVE-2017-5753](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5753)
-* CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
-* CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
+* CVEID：[CVE-2017-5753](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5753)
+* CVEID：[CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
+* CVEID：[CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
 如需相關資訊，請參閱[處理 Spectre 及 Meltdown 漏洞](../vmonic/trbl_fix_spectre.html)。
 
@@ -66,7 +66,7 @@ lastupdated: "2018-08-30"
 * [變更 vCenter Server 構件的考量](../vcenter/vcenter_chg_impact.html)
 * [變更 Cloud Foundation 構件的考量](../sddc/cf_chg_impact.html)
 
-## 附加服務的更新項目
+## 附加服務的更新
 
 ### IBM Cloud Private Hosted（在 2018 年 8 月 30 日更新）
 
@@ -88,7 +88,7 @@ lastupdated: "2018-08-30"
 
 如需相關資訊，請參閱 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務配置](../services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration)。
 
-## 新的及更新的文件
+## 新文件與更新的文件
 
 ### 連接儲存空間文件
 
@@ -110,7 +110,7 @@ vCenter Server on IBM Cloud 連接儲存空間技術文件現在位於使用者�
 
 ## 使用者介面更新和加強功能
 
-會更新使用者介面，並提供下列加強功能：
+使用者介面已更新，並提供下列加強功能：
 
 * 如果您的 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶鏈結至 {{site.data.keyword.cloud_notm}} 帳戶，您現在可以按一下**設定**頁面上新增的**擷取**按鈕，以自動取得 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶的使用者名稱及 API 金鑰。
 * 在實例詳細資料頁面的左導覽窗格上新增**部署歷程**標籤，供您檢查實例的部署歷程。
