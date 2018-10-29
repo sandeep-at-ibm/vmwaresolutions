@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -24,17 +24,17 @@ lastupdated: "2018-09-20"
 
 每一個服務都會在 vCenter Server 中建立內部使用者帳戶。此帳戶是必要的，因此與服務相關聯的管理作業可以連接至 vCenter Server，以在服務上執行作業。
 
-**重要事項**：若要防止中斷及連線問題，如果您變更此使用者帳戶的使用者 ID、密碼或密碼有效期限設定，則請確定您也更新相關聯服務中的資訊。
+**重要事項：**若要防止中斷及連線問題，如果您變更此使用者帳戶的使用者 ID、密碼或密碼有效期限設定，則請確定您同時更新了關聯服務中的資訊。
 
 此帳戶的使用者 ID 格式為 `<service_name>-<truncated service_uuid>@test.local` 或 `<service_name>-<truncated service_uuid>@example-domain.local`。例如，Veeam on {{site.data.keyword.cloud_notm}} 服務用來連接至 vCenter Server 以執行排定備份的使用者 ID 為 `Veeam-<Veeam_uuid>@test.local`。
 
-**附註**：`<service_name>` 與 `<service_uuid>` 一起使用會截斷為 20 個字元。
+**附註：**`<service_name>` 與 `<service_uuid>` 一起使用會截斷為 20 個字元。
 
 ## vCenter Server 實例的 VMware 資源（第 1.9 版以及更新版本）
 
 若為部署在 1.9 版以及更新版本中的實例，如果 vCenter Server 實例處於**備妥使用**狀態，您可以從 VMware vSphere Web Client 修改 VMware 虛擬資料中心、叢集、交換器、埠群組及客戶資料儲存庫名稱。不過，您不得變更管理資料儲存庫名稱的預設值：vSAN 實例為 **vsanDatastore**，而「網路檔案系統 (NFS)」實例則為 **management-share**。
 
-## vCenter Server 實例的 VMware 資源（1.8 版及更舊版本）
+## vCenter Server 實例的 VMware 資源（1.8 版及更早版本）
 
 下表列出當 SSO 管理者在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更 VMware vCenter Server 資源時可能受到影響的作業。如果有可用的回復解決方案，則也會提供它。
 
@@ -63,7 +63,7 @@ lastupdated: "2018-09-20"
 
 下列資訊討論 {{site.data.keyword.vmwaresolutions_short}} 所訂購的子網路，並提供選項讓您訂購額外子網路以供您自己使用。
 
-**警告**：請不要將這些元件用於其他用途，否則，您環境的穩定性會受到嚴重影響。
+**警告：**請不要將這些元件用於其他用途，否則，您環境的穩定性會受到嚴重影響。
 
 在每一張 {{site.data.keyword.cloud_notm}} Bare Metal Server 訂單中，依預設，會訂購下列 IP 位址範圍：
 *  32 個 IP 位址的主要公用範圍

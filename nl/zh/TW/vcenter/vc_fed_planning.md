@@ -39,5 +39,5 @@ VMware Federal on {{site.data.keyword.cloud_notm}} 不提供訂購其他服務�
 * [vCenter Server 軟體資料清單](vc_bom.html)
 * [VMware Federal on {{site.data.keyword.cloud_notm}} 概觀](vc_fed_overview.html)
 * [訂購 VMware Federal 實例](vc_fed_orderinginstance.html)
-* [維護 VMware Federal 實例的安全](vc_fed_securinginstance.html)
+* [保護 VMware Federal 實例](vc_fed_securinginstance.html)
 * [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)

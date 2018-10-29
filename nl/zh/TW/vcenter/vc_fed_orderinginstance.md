@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
 # 訂購 VMware Federal 實例
 
-若要部署彈性且可自訂的 VMware 虛擬化平台，以符合您的工作負載需求，請訂購 VMware Federal 實例。VMware Federal 實例可協助您中斷已開啟的管理連線，並維護已部署實例的安全。
+若要部署彈性且可自訂的 VMware 虛擬化平台，以便最符合您的工作負載需求，請訂購 VMware Federal 實例。VMware Federal 實例可協助您中斷已開啟的管理連線，並保護已部署的實例。
 
 **附註：**目前只有 vCenter Server 實例支援 VMware Federal on {{site.data.keyword.cloud}}。
 
@@ -32,7 +32,7 @@ lastupdated: "2018-09-25"
   |完整的 ESXi 伺服器名稱| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 伺服器的序號。長度上限為 50 個字元。|  
   |PSC FQDN |`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 長度上限為 50 個字元。|
 
-**重要事項**：請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在 Vyatta 佈建進行中落後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
+**重要事項：**請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
 
 ## 系統設定
 
@@ -52,7 +52,7 @@ lastupdated: "2018-09-25"
 
 ## 授權設定
 
-下列 VMware 元件的 IBM 提供授權：
+由 IBM 提供的下列 VMware 元件授權：
 
 * vCenter Server 6.5
 * vSphere Enterprise Plus 6.5u1
@@ -80,18 +80,18 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
-|雙重 Intel Xeon E5-2620 v4 /總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB |
-|雙重 Intel Xeon E5-2650 v4 /總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB |
-|雙重 Intel Xeon E5-2690 v4 /總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB |
-|雙重 Intel Xeon Silver 4110 處理器/總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 5120 處理器/總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 Processor / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB |
+|雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB |
+|雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB |
+|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### Bare Metal Server 數目
 
 您可以配置在 2 - 20 範圍內的 ESXi 伺服器數目。
 
-所有 ESXi 伺服器都共用相同的配置。在後置部署中，您可以再新增四個叢集。對於 vSAN 儲存空間設定，起始及後置部署叢集都需要 4 部 ESXi 伺服器。如需最少 ESXi 伺服器的相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性？](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+所有 ESXi 伺服器都共用相同的配置。在部署之後，您可以再新增四個叢集。對於 vSAN 儲存空間設定，起始及部署後的叢集都需要 4 部 ESXi 伺服器。如需最少 ESXi 伺服器的相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性？](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## 儲存空間設定
 
@@ -100,25 +100,23 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 ### vSAN 儲存空間
 
 請指定下列 vSAN 選項：
-
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
-* **vSAN 快取磁碟的磁碟類型**：選取所需快取磁碟的選項。
+* 如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
 
-    **附註**：如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。此選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲及更高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
-* **vSAN 快取磁碟數目**：指定您要新增的快取磁碟數目。
+* 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
 * **vSAN 授權**：選取 vSAN 6.6 授權版本（Advanced 或 Enterprise）。
 
 ### NFS 儲存空間
 
-當您選取 **NFS 儲存空間**時，可以為實例新增所有共用相同設定的檔案層次共用儲存空間，也可以為每一個檔案共用指定不同的配置設定。請指定下列 NFS 選項：
+當您選取 **NFS 儲存空間**時，可以為所有共用使用相同設定的實例新增檔案層次共用儲存空間，也可以為每一個檔案共用指定不同的配置設定。請指定下列 NFS 選項：
 
 **附註：**檔案共用數目必須在 1 到 32 的範圍內。
 
-* **個別配置共用**：選取以指定每一個檔案共用的不同配置設定。
-* **共用數目**：使用每一個檔案共用的相同配置設定時，請指定您要新增之 NFS 共用儲存空間的檔案共用數目。
+* **個別配置共用**：選取以為每一個檔案共用指定不同的配置設定。
+* **共用數目**：為每一個檔案共用使用相同的配置設定時，請指定您要新增之 NFS 共用儲存空間的檔案共用數目。
 * **大小**：選取符合共用儲存空間需求的容量。
-* **效能**：根據您的工作負載需求，選取每 GB IOPS（每秒輸入/輸出作業數）。
+* **效能**：根據您的工作負載需求，選取每 GB 的 IOPS（每秒輸入/輸出作業數）。
 * **新增 NFS**：選取以新增要使用不同配置設定的個別檔案共用。
 
 表 3. NFS 效能層次選項
@@ -161,20 +159,20 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
 選取實例的「網域名稱系統 (DNS)」配置：
 
-* **適用於 Active Directory/DNS 的單一公用 Windows VSI**：用於 Microsoft Active Directory (AD)（其充當已登錄主機及虛擬機器之實例的 DNS）的 Microsoft Windows Server VSI，已部署並可查閱。
+* **適用於 Active Directory/DNS 的單一公用 Windows VSI**：適用於 Microsoft Active Directory (AD) 的單一 Microsoft Windows Server VSI 充當登錄主機及虛擬機器之實例的 DNS，已部署並可查閱。
 * **管理叢集上有兩部高可用性的專用 Windows Server VM**：對於 2.3 版及未來版本，會部署兩部 Microsoft Windows 虛擬機器，協助加強安全及穩健性。
 
-**重要事項：**如果您將實例配置為使用兩部 Microsoft Windows 虛擬機器，則必須提供兩個 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及（或）Microsoft Windows Server 2012 R2 Datacenter 版本授權。
+**重要事項：**如果您將實例配置為使用兩部 Microsoft Windows 虛擬機器，則必須提供兩份 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及（或）Microsoft Windows Server 2012 R2 Datacenter 版本授權。
 
 目前，每份授權都只能指派給一部單一實體伺服器，且最多涵蓋兩個實體處理器。使用一份 Standard 版本授權，每部雙處理器伺服器都可以執行兩部虛擬化 Microsoft Windows 虛擬機器。因此，必須有兩份授權，因為兩部 Microsoft Windows 虛擬機器是部署在兩部不同的主機中。
 
-您有 30 天的時間可啟動虛擬機器。
+您有 30 天的時間可啟動 (activate) 虛擬機器。
 
 如需訂購 Windows 授權的相關資訊，請參閱 [Windows Server 2012 R2 文件](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2)。
 
 ## 訂單摘要
 
-根據您選取的實例配置，預估成本會立即產生並顯示在右窗格的**訂單摘要**區段中。按一下右窗格底端的**定價詳細資料**，以產生提供預估值詳細資料的 PDF 文件。
+根據您選取的實例配置，預估成本會立即產生並顯示在右窗格的**訂單摘要**區段中。按一下右窗格底端的**定價詳細資料**，以產生提供預估詳細資料的 PDF 文件。
 
 ## 訂購 VMware Federal 實例的程序
 
@@ -201,7 +199,7 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
 ## 結果
 
-實例的部署會自動啟動。您會收到正在處理訂單的確認，您可以檢視實例詳細資料來檢查部署的狀態。
+實例的部署會自動啟動。您會收到正在處理訂單的確認，並且可以檢視實例詳細資料來檢查部署的狀態。
 
 順利部署實例之後，會在 VMware 虛擬平台上安裝 [VMware Federal on {{site.data.keyword.cloud_notm}} 實例的技術規格](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。
 
@@ -211,11 +209,11 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 
 檢視、管理或保護您所訂購的 VMware Federal 實例。
 
-**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台而不是 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
 **警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外來管理您在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，會使您的環境變得不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件
-*  透過移除 ESXi 伺服器來擴充或縮減實例容量
+*  透過新增或移除 ESXi 伺服器來擴充或縮減實例容量
 *  關閉元件電源
 
    這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
@@ -226,6 +224,6 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 * [檢視 VMware Federal 實例](vc_fed_viewinginstance.html)
 * [擴充及縮減 VMware Federal 實例的容量](vc_fed_addingremovingservers.html)
 * [新增、檢視及刪除 VMware Federal 實例的叢集](fed_addviewdeleteclusters.html)
-* [維護 VMware Federal 實例的安全](vc_fed_securinginstance.html)
+* [保護 VMware Federal 實例](vc_fed_securinginstance.html)
 * [刪除 VMware Federal 實例](vc_fed_deletinginstance.html)
 * [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)

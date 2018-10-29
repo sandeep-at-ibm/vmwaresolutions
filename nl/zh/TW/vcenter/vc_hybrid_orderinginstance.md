@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-09-21"
   |完整的 ESXi 伺服器名稱| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 伺服器的序號。長度上限為 50 個字元。|  
   |PSC FQDN |`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 長度上限為 50 個字元。|
 
-**重要事項**：請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在 Vyatta 佈建進行中落後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
+**重要事項：**請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
 
 ## 系統設定
 
@@ -65,7 +65,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附下列 VMware 授權。�
 
 Bare Metal Server 設定是根據 {{site.data.keyword.CloudDataCent_notm}} 及自訂配置。
 
-vSAN 配置的起始叢集及後置部署叢集需要四部 ESXi 伺服器。所有 ESXi 伺服器都共用相同的配置。在後置部署中，您可以再新增四個叢集。
+對於 vSAN 配置，起始及部署後的叢集都需要四部 ESXi 伺服器。所有 ESXi 伺服器都共用相同的配置。在部署之後，您可以再新增四個叢集。
 
 ### 資料中心位置
 
@@ -79,12 +79,12 @@ vSAN 配置的起始叢集及後置部署叢集需要四部 ESXi 伺服器。所
 
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
-|雙重 Intel Xeon E5-2620 v4 /總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2650 v4 /總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2690 v4 /總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Silver 4110 處理器/總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 5120 處理器/總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 Processor / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### Bare Metal Server 數目
 
@@ -93,13 +93,11 @@ vSAN 配置的起始叢集及後置部署叢集需要四部 ESXi 伺服器。所
 ## 儲存空間設定
 
 vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指定下列 vSAN 選項：
-
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
-* **vSAN 快取磁碟的磁碟類型**：選取所需快取磁碟的選項。
+* 如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
 
-    **附註**：如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。此選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲及更高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
-* **vSAN 快取磁碟數目**：指定您要新增的快取磁碟數目。
+* 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
 
 ## 網路介面設定
 
@@ -162,10 +160,10 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 
 選取實例的「網域名稱系統 (DNS)」配置：
 
-* **單一公用 Windows VSI for Active Directory/DNS**：已部署並可查閱單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD)（其充當已登錄主機及 VM 之實例的 DNS）。
+* **適用於 Active Directory/DNS 的單一公用 Windows VSI**：適用於 Microsoft Active Directory (AD) 的單一 Microsoft Windows Server VSI 充當登錄主機及 VM 之實例的 DNS，已部署並可查閱。
 * **管理叢集上有兩部高可用性的專用 Windows Server VM**：部署兩部 Microsoft Windows VM，協助加強安全及穩健性。
 
-**重要事項：**如果您將實例配置為使用兩部 Microsoft Windows VM，則必須提供兩個 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及（或）Microsoft Windows Server 2012 R2 Datacenter 版本授權。
+**重要事項：**如果您將實例配置為使用兩部 Microsoft Windows VM，則必須提供兩份 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及（或）Microsoft Windows Server 2012 R2 Datacenter 版本授權。
 
 每一份授權都只能指派給一部單一實體伺服器，且最多涵蓋兩個實體處理器。以一份 Standard 版本授權而言，每一部雙處理器伺服器都可以執行兩部虛擬化 Microsoft Windows VM。因此，必須有兩份授權，因為兩部 Microsoft Windows VM 部署在兩部不同的主機中。
 
@@ -179,7 +177,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 
 ## 訂單摘要
 
-根據您選取的實例及附加程式服務配置，預估成本會立即產生並顯示在右窗格的**訂單摘要**區段中。按一下右窗格底端的**定價詳細資料**，以產生提供預估值詳細資料的 PDF 文件。
+根據您選取的實例及附加程式服務配置，預估成本會立即產生並顯示在右窗格的**訂單摘要**區段中。按一下右窗格底端的**定價詳細資料**，以產生提供預估詳細資料的 PDF 文件。
 
 ## 訂購 vCenter Server with Hybridity Bundle 實例的程序
 
@@ -217,7 +215,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 
 ## 結果
 
-實例的部署會自動啟動。您會收到正在處理訂單的確認，您可以檢視實例詳細資料來檢查部署的狀態。
+實例的部署會自動啟動。您會收到正在處理訂單的確認，並且可以檢視實例詳細資料來檢查部署的狀態。
 
 順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server with Hybridity Bundle 實例的技術規格](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
 
@@ -229,9 +227,9 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 
 檢視及管理您訂購的 vCenter Server with Hybridity Bundle 實例。
 
-**重要事項**：您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台而不是 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
-**警告**：從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外來管理您在訂購實例時所安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，會使您的環境變得不穩定。這些管理活動包括：
+**警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外來管理您在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，會使您的環境變得不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件
 *  透過新增或移除 ESXi 伺服器來擴充或縮減實例容量
 *  關閉元件電源

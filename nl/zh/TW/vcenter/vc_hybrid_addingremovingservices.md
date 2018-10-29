@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-02"
 
 ---
 
 # 訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務
 
-您可以訂購 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 實例的服務，例如災難回復解決方案。當您不再需要這些服務時，可以從實例中移除它們。
+您可以訂購 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 實例的服務，例如災難回復解決方案。當您不再需要這些服務時，可以從實例移除它們。
 
 ## vCenter Server with Hybridity Bundle 實例的可用服務
 
@@ -29,10 +29,10 @@ vCenter Server with Hybridity Bundle 實例可使用下列服務。
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | 10.1.1 Patch 1 | 2.2 版以及更新版本 |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | 2.2 版以及更新版本 |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | 9.5u3 | 1.8 版以及更新版本 |
-| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 建置 8774389 | 2.3 版以及更新版本 |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 | 2.3 版以及更新版本 |
 | [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | 5.5 u4 Patch 2 | 1.2 版以及更新版本 |
 
-## 將服務新增至 vCenter Server with Hybridity Bundle 實例
+## 將服務新增至 vCenter Server with Hybridity Bundle 實例的程序
 
 若要將服務套用至 vCenter Server with Hybridity Bundle 實例，請按一下表格中的鏈結以檢閱服務的考量。然後，檢查所部署的元件，並遵循訂購主題中的指示來下訂單。
 
@@ -40,17 +40,17 @@ vCenter Server with Hybridity Bundle 實例可使用下列服務。
 
 順利完成服務的安裝之後，會透過電子郵件通知您，且該服務會顯示在狀態為**已安裝**之實例詳細資料的**服務**標籤上。
 
-## 檢視 vCenter Server with Hybridity Bundle 實例的服務
+## 檢視 vCenter Server with Hybridity Bundle 實例服務的程序
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格上的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
 2. 在 **vCenter Server 實例**表格中，按一下您要檢視服務的實例。
 3. 在左導覽窗格上，按一下**服務**。
 4. 在**服務**頁面上，按一下服務以檢閱其相關資訊（例如服務狀態及其他詳細資料）。
 5. 根據所檢視的服務，您可以使用服務詳細資料上所提供的認證來存取服務主控台，並可從這裡管理服務。
 
-## 移除 vCenter Server with Hybridity Bundle 實例的服務
+## 移除 vCenter Server with Hybridity Bundle 實例服務的程序
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
 2. 在 **vCenter Server 實例**表格中，按一下您要移除服務的實例。
 3. 在左導覽窗格上，按一下**服務**。
 4. 在**服務**頁面上，找出您要移除的服務實例，然後按一下**刪除**圖示。
@@ -60,9 +60,9 @@ vCenter Server with Hybridity Bundle 實例可使用下列服務。
 
 接受服務移除的要求之後，服務狀態會變更為**正在移除**。
 
-順利完成服務的移除之後，會透過電子郵件通知您，且會從實例的**服務**頁面中移除服務。
+順利完成服務的移除之後，會透過電子郵件通知您，且會從實例的**服務**頁面移除服務。
 
-**注意**：將向您收取已移除的服務到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。
+**注意：**將向您收取已移除的服務到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。
 
 ### 相關鏈結
 
