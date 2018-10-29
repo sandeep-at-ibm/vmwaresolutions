@@ -35,7 +35,7 @@ lastupdated: "2018-09-04"
 請先檢閱下列考量，再變更 NSX Manager、NSX Controller 及 NSX Edge 的密碼：
 * 不要變更 NSX Manager 密碼。您可以在 {{site.data.keyword.vmwaresolutions_short}} 主控台之實例的**摘要**頁面上找到此密碼。
 * 您可以變更 NSX Controller 的密碼。如需如何變更 NSX Controller 密碼的指示，請參閱 [Change Controller Password](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html)。
-* 不要變更管理「VMware NSX Edge Services 閘道 (ESG)」的密碼。
+* 不要變更管理 VMware NSX Edge Services Gateway (ESG) 的密碼。
 
 ### 相關鏈結
 

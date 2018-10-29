@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,11 +18,11 @@ lastupdated: "2018-08-28"
 
 每一個服務都會在 vCenter Server 中建立內部使用者帳戶。此帳戶是必要的，因此與服務相關聯的管理作業可以連接至 vCenter Server，以在服務上執行作業。
 
-**重要事項**：若要防止中斷及連線問題，如果您變更此使用者帳戶的使用者 ID、密碼或密碼有效期限設定，則請確定您也更新相關聯服務中的資訊。
+**重要事項：**若要防止中斷及連線問題，如果您變更此使用者帳戶的使用者 ID、密碼或密碼有效期限設定，則請確定您同時更新了關聯服務中的資訊。
 
 此帳戶的使用者 ID 格式為 `<service_name>-<truncated service_uuid>@test.local` 或 `<service_name>-<truncated service_uuid>@example-domain.local`。例如，Veeam on {{site.data.keyword.cloud_notm}} 服務用來連接至 vCenter Server 以執行排定備份的使用者 ID 為 `Veeam-<Veeam_uuid>@test.local`。
 
-**附註**：`<service_name>` 與 `<service_uuid>` 一起使用會截斷為 20 個字元。
+**附註：**`<service_name>` 與 `<service_uuid>` 一起使用會截斷為 20 個字元。
 
 ## Cloud Foundation 實例的 VMware 資源
 
@@ -43,7 +43,7 @@ lastupdated: "2018-08-28"
 
 下列資訊討論 {{site.data.keyword.vmwaresolutions_short}} 所訂購的子網路，並提供選項讓您訂購額外子網路以供您自己使用。
 
-**警告**：請不要將這些元件用於其他用途，否則，您環境的穩定性會受到嚴重影響。
+**警告：**請不要將這些元件用於其他用途，否則，您環境的穩定性會受到嚴重影響。
 
 在每一張 {{site.data.keyword.cloud_notm}} Bare Metal Server 訂單中，依預設，會訂購下列 IP 位址範圍：
 
@@ -58,5 +58,5 @@ lastupdated: "2018-08-28"
 
 如果您需要使用更多子網路，您可以用下列其中一種方式取得要使用的 IP 位址：
 
-* **選項 1（建議）**：使用 VMware NSX 虛擬網路套版。訂購時會提供範例 VXLAN 範本。此 VXLAN 範本可以用作建置 SDN 的起點。
-* **選項 2**：訂購您自己的可攜式公用或專用子網路來取得 IP 位址。若要區別您訂購的子網路與管理子網路，您可以將附註新增至您訂購的所有子網路。
+* **選項 1（建議）：**使用 VMware NSX 虛擬網路覆蓋。訂購時會提供範例 VXLAN 範本。此 VXLAN 範本可以用作建置 SDN 的起點。
+* **選項 2：**訂購您自己的可攜式公用或專用子網路來取得 IP 位址。若要區別您訂購的子網路與管理子網路，您可以將附註新增至您訂購的所有子網路。
