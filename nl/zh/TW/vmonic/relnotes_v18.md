@@ -10,7 +10,7 @@ lastupdated: "2017-08-28"
 
 # 1.8 版的版本注意事項
 
-此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Fortinet on IBM Cloud 服務
 
@@ -34,7 +34,7 @@ lastupdated: "2017-08-28"
 * [Veeam on {{site.data.keyword.cloud_notm}} 概觀](../services/veeam_considerations.html)
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)
 
-## VMware Cloud Foundation 實例的更新項目
+## VMware Cloud Foundation 實例的更新
 
 ### 訂購 Cloud Foundation 實例時，自帶 VMware 授權 (BYOL)
 

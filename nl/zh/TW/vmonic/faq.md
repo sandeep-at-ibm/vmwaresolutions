@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-08-14"
 ## IBM Cloud for VMware Solutions 需要何種使用者帳戶？
 
 * **IBM ID 帳戶**。需要此帳戶才能存取 {{site.data.keyword.vmwaresolutions_short}} 主控台。主控台是與 {{site.data.keyword.slportal}} 分開的獨立式使用者介面。如需相關資訊，請參閱[開始使用](../index.html)。
-* **{{site.data.keyword.cloud_notm}} 帳戶**。需要此帳戶才能進行佈建。您可以使用現有 **IBM ID** 或建立新的 **IBM ID**，來註冊 {{site.data.keyword.cloud_notm}} 帳戶。 
+* **{{site.data.keyword.cloud_notm}} 帳戶**。需要此帳戶才能進行佈建。您可以使用現有 **IBM ID** 或建立新的 **IBM ID**，來註冊 {{site.data.keyword.cloud_notm}} 帳戶。
 * **{{site.data.keyword.cloud_notm}} 基礎架構帳戶**。此帳戶（先前稱為 **IBM SoftLayer** 帳戶）用來登入 {{site.data.keyword.cloud_notm}} 基礎架構客戶入口網站，以提供一些額外功能來管理基礎架構產品及服務。您可以取得 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，方法是將 **{{site.data.keyword.cloud_notm}} 帳戶**升級至「隨收隨付制」類型的帳戶，或將現有 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。您使用的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須符合特定需求。如需相關資訊，請參閱[註冊必要帳戶](signing_softlayer_account.html)及 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶需求](slaccountrequirement.html)。
 
 ## 如何使 IBM Cloud 基礎架構認證與 IBM Cloud for VMware Solutions 主控台產生關聯？
@@ -64,7 +64,7 @@ lastupdated: "2018-08-14"
 
 對於 vCenter Server 實例，在部署期間建立的第一個叢集，其預設名稱為 **cluster1**。您可以在 VMware vSphere Client 中將預設叢集重新命名。當您將叢集新增至 vCenter Server 實例時，可以在 {{site.data.keyword.vmwaresolutions_short}} 主控台上指定您想要的名稱。
 
-**附註**：對於 Cloud Foundation 實例，無法變更預設叢集名稱。
+**附註：**對於 Cloud Foundation 實例，無法變更預設叢集名稱。
 
 ##如何管理修補程式？
 
@@ -93,7 +93,7 @@ IBM 提供 IBM 程式碼的持續更新，方法是隨需應變部署 IBM CloudD
 
 ## 客戶管理的 NSX Edge 是否造成安全風險？
 
-雖然客戶管理的 NSX Edge 已連接至公用 VLAN，但仍提供安全措施，以確保不會造成安全風險。下列是可用的安全測量：
+雖然客戶管理的 NSX Edge 已連接至公用 VLAN，但仍提供安全措施，以確保不會造成安全風險。以下是可用的安全測量：
 *  已設置防火牆規則，只容許來自專用子網路 IP 位址範圍的送出資料流量。
 *  已設置 SNAT（來源網址轉換）規則（依預設會停用），將專用子網路中的所有 IP 位址轉換為公用子網路上的單一 IP 位址。
 *  已停用對客戶管理的 NSX Edge 應用裝置的遠端存取。

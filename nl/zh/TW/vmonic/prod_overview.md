@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -60,7 +60,7 @@ vSphere on {{site.data.keyword.cloud_notm}} 供應項目提供可自訂的虛擬
 
 如需相關資訊，請參閱 [VMware vSphere on {{site.data.keyword.cloud_notm}} 概觀](../vsphere/vs_vsphereclusteroverview.html)。
 
-### NetApp  ONTAP  Select
+### NetApp ONTAP Select
 
 NetApp ONTAP Select 供應項目容許您部署軟體定義的儲存空間叢集，以根據 NetApp ONTAP Select 來處理您對於專用及高可用性儲存空間應用裝置的需要。
 
@@ -68,7 +68,7 @@ NetApp ONTAP Select 供應項目容許您部署軟體定義的儲存空間叢集
 
 ### VMware Federal on IBM Cloud
 
-VMware Federal on {{site.data.keyword.cloud_notm}} 供應項目除了提供選項來保護已部署實例的安全，同時移除機密性資訊及用於持續存取實例以使用管理功能的開啟管理連線之外，還支援訂購基本 vCenter Server 實例。
+VMware Federal on {{site.data.keyword.cloud_notm}} 供應項目除了提供選項來保護已部署實例的安全，同時移除機密性資訊及用於持續存取實例以使用管理功能的開啟管理連線之外，還支援訂購基礎 vCenter Server 實例。
 
 如需相關資訊，請參閱 [VMware Federal on {{site.data.keyword.cloud_notm}} 概觀](../vcenter/vc_fed_overview.html)。
 
@@ -102,13 +102,13 @@ HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服務會施行並控�
 
 ### HyTrust DataControl on IBM Cloud
 
-HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務提供具有整合式金鑰管理的高度加密，來保護其整個生命週期的工作負載安全。此服務可以提供作業系統層次及資料層次的加密，表示可以加密及解密工作負載內的任何目錄、資料夾或檔案。
+HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務提供具有整合式金鑰管理的高度加密，在工作負載的整個生命週期內保護其安全。此服務可以提供作業系統層次及資料層次的加密，表示可以加密及解密工作負載內的任何目錄、資料夾或檔案。
 
 如需相關資訊，請參閱 [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概觀](../services/htdc_considerations.html)。
 
 ### HyTrust KeyControl on IBM Cloud
 
-HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 服務藉由自動化及簡化加密金鑰的生命週期，來簡化加密工作負載的管理。服務可以使用符合 FIPS 140-2 標準的加密，輕鬆地管理加密金鑰。使用此服務，您可以管理所有虛擬機器及加密資料儲存庫的加密金鑰，並將其調整為在大型部署中支援數千個加密工作負載。
+HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 服務藉由自動化及簡化加密金鑰的生命週期，來簡化加密工作負載的管理。服務可以使用符合 FIPS 140-2 標準的加密，輕鬆地大規模管理加密金鑰。使用此服務，您可以管理所有虛擬機器及加密資料儲存庫的加密金鑰，並將其調整為在大型部署中支援數千個加密工作負載。
 
 如需相關資訊，請參閱 [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 概觀](../services/htkc_considerations.html)。
 
@@ -138,7 +138,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 服務與 VMware Hypervisor 無縫整�
 
 ### VMware HCX on IBM Cloud
 
-HCX on {{site.data.keyword.cloud_notm}} 服務可以將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}，這容許將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從其移轉，而不需要進行任何轉換或變更。
+HCX on {{site.data.keyword.cloud_notm}} 服務可以將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}，這容許將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從該處移轉，而不需要進行任何轉換或變更。
 
 如需相關資訊，請參閱 [VMware HCX on {{site.data.keyword.cloud_notm}} 概觀](../services/hcx_considerations.html)。
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -19,8 +19,7 @@ lastupdated: "2018-09-25"
 
 ## 資料表
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} 保護資料表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} 保護資料表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
+* [{{site.data.keyword.vmwaresolutions_full}} 保護資料表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 
 ## 平台延伸規格
 

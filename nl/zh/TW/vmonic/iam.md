@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-28"
 
 ---
 
 # 利用 IAM 管理使用者存取
 
-您帳戶中使用者的 {{site.data.keyword.vmwaresolutions_full}} 服務實例存取權，是透過 {{site.data.keyword.cloud}} Identity and Access Management (IAM) 所控制。每位存取您帳戶中 {{site.data.keyword.vmwaresolutions_short}} 服務的使用者，都必須獲指派已定義 IAM 使用者角色的存取原則。
+您帳戶中使用者的 {{site.data.keyword.vmwaresolutions_full}} 服務實例存取權，是透過 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 所控制。每位存取您帳戶中 {{site.data.keyword.vmwaresolutions_short}} 服務的使用者，都必須獲指派已定義 IAM 使用者角色的存取原則。
 
 存取原則決定使用者可在您選取之服務或實例的環境定義內執行的動作。{{site.data.keyword.cloud_notm}} 服務會將可容許的動作自訂及定義為容許對服務執行的作業。然後，這些動作會對映至 IAM 使用者角色。
 

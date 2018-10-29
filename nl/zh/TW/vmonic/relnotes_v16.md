@@ -10,11 +10,11 @@ lastupdated: "2017-05-22"
 
 # 1.6 版的版本注意事項
 
-此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之要訣的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
-## VMware Cloud Foundation 實例的更新項目
+## VMware Cloud Foundation 實例的更新
 
-下列是新的或更新的元件：
+以下是新元件或更新的元件：
 
 *  SDDC Manager 2.2.1
 *  IBM 管理元件 1.6 版

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-25"
 
 若要使用 {{site.data.keyword.vmwaresolutions_full}} 來訂購實例，您必須具有 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶。實例中訂購的元件費用會向該 {{site.data.keyword.cloud_notm}}帳戶收費。
 
-**附註**：{{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶先前稱為 IBM SoftLayer 帳戶。
+**附註：**{{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶先前稱為 IBM SoftLayer 帳戶。
 
 ## IBM Cloud 基礎架構帳戶的許可權
 

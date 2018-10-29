@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -27,11 +27,11 @@ lastupdated: "2018-08-16"
 
 6. 按一下橫幅上的**支援 > 新增問題單**。
 7. 在**新增問題單**頁面上，提供下列資訊：
-   1. 從**主旨**清單中，選取 **VMware 解決方案**。如果無法使用此選項，請選取**其他：管理**。   
+   1. 從**主旨**清單中，選取 **VMware 解決方案**。如果無法使用這個選項，請選取**其他：管理**。   
    2. 從**指派給**清單中，選取支援代表。  
    3. 輸入問題的標題。如果您選取**其他：管理**作為主旨，請將標題指定為
    **{{site.data.keyword.vmwaresolutions_short}} (group=VMware solutions)**。  
-   4. 若要通知其他收件者有更新項目或者問題單的狀態，請選取或新增收件者。
+   4. 若要通知其他收件者有更新或者問題單的狀態，請選取或新增收件者。
    5. 若要使問題單與裝置產生關聯，請從清單中選取裝置。  
    6. 輸入關於您問題的下列詳細資訊：      
      * 如果您選取**其他：管理**作為主旨，請在開頭輸入此附註：我使用 {{site.data.keyword.vmwaresolutions_short}}(IC4VS)。請將此 PMR 遞送至 VMware 解決方案群組。   
@@ -48,4 +48,4 @@ lastupdated: "2018-08-16"
 2. 使用 **IBM ID** 帳戶登入到入口網站。
 3. 完成_從 IBM Cloud for VMware Solutions 主控台_ 小節中所述的步驟 6 - 8，以提交問題單。
 
-    **附註**：不論您使用哪個通道來開立支援問題單（{{site.data.keyword.vmwaresolutions_short}} 主控台或 {{site.data.keyword.slportal}}），仍然適用 _{{site.data.keyword.cloud_notm}} 基礎架構及平台服務支援原則_ 的條款。
+    **附註：**不論您使用哪個通道來開立支援問題單（{{site.data.keyword.vmwaresolutions_short}} 主控台或 {{site.data.keyword.slportal}}），仍然適用 _{{site.data.keyword.cloud_notm}} 基礎架構及平台服務支援原則_ 的條款。

@@ -62,7 +62,7 @@ lastupdated: "2018-09-24"
 
 ## 我可以提供超過 8 個 CPU 的授權碼嗎？
 
-是的。對於每一個 VMware 元件，需要每個 CPU 一份授權。目前，所有 vCenter Server 和 Cloud Foundation 伺服器都有兩個 CPU。因此，每部伺服器都需要兩份授權。建議您提供的授權碼能支援基本實例，以及您未來要新增至該實例的任何擴充節點。
+是的。對於每一個 VMware 元件，需要每個 CPU 一份授權。目前，所有 vCenter Server 和 Cloud Foundation 伺服器都有兩個 CPU。因此，每部伺服器都需要兩份授權。建議您提供的授權碼能支援基礎實例，以及您未來要新增至該實例的任何擴充節點。
 
 ## 使用 BYOL 特性時，是否可以提供 SDDC Manager 授權？
 

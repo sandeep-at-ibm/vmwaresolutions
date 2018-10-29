@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-14"
 
 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶（先前稱為 IBM SoftLayer 帳戶）用來登入 {{site.data.keyword.cloud_notm}} 基礎架構客戶入口網站，以提供一些額外功能來管理基礎架構產品及服務。若要註冊 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶，請將 {{site.data.keyword.cloud_notm}} 帳戶升級為「隨收隨付制」類型的帳戶。
 
-### 程序
+### 註冊 IBM Cloud 帳戶的程序
 
 1. 使用您的 **IBM ID** 登入 {{site.data.keyword.vmwaresolutions_short}} 主控台。
 2. 在橫幅左側，按一下**管理 > 計費及用量 > 計費**。
