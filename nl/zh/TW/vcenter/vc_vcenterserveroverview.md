@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -14,7 +14,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} 是一個提供 VMware vSph
 
 在許多情況下，整個環境可以在一天內佈建完成，且裸機基礎架構可以快速而彈性地擴充運算容量，並依需要擴增及縮減。
 
-部署後，您可以藉由從 {{site.data.keyword.slportal}} 訂購其他 NFS（網路檔案系統）檔案共用，以及將它們手動連接至叢集中的所有 ESXi 伺服器，來增加共用儲存空間。如果您需要專用儲存空間，我們以高效能（所有 SSD）及高容量（所有 SATA）兩種配置提供 [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html)。
+部署後，您可以藉由從 {{site.data.keyword.slportal}} 訂購其他 NFS（網路檔案系統）檔案共用，以及將它們手動連接至叢集裡的所有 ESXi 伺服器，來增加共用儲存空間。如果您需要專用儲存空間，我們以高效能（所有 SSD）及高容量（所有 SATA）兩種配置提供 [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html)。
 
 VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 vSAN 型儲存空間容量，您可以在部署後新增更多 ESXi 伺服器。
 
@@ -44,9 +44,9 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 
 此層由 vCenter Server Appliance (vCSA)、NSX Manager、兩個 NSX ESG、三個 NSX Controller、Platform Services Controller (PSC) 虛擬應用裝置及 IBM CloudDriver 虛擬伺服器實例 (VSI) 所組成。針對將主機新增至環境這類特定作業，視需要依需求部署 CloudDriver VSI。
 
-基本供應項目與 vCenter Server Appliance 一起部署，其大小調整後可支援最多 400 部主機及最多 4000 部 VM 的環境。相同的 vSphere API 相容工具及 Script 可用來管理 IBM 管理的 VMware 環境。
+基礎供應項目與 vCenter Server Appliance 一起部署，其大小調整後可支援最多 400 部主機及最多 4000 部 VM 的環境。相同的 vSphere API 相容工具及 Script 可用來管理 IBM 管理的 VMware 環境。
 
-總計，基本供應項目需要 38 個 vCPU 及 67 GB vRAM 保留給虛擬化管理層。VM 的其餘主機容量視數個因素而定，例如超訂閱率、VM 大小調整及工作負載效能需求。
+總計，基礎供應項目需要 38 個 vCPU 及 67 GB vRAM 保留給虛擬化管理層。VM 的其餘主機容量視數個因素而定，例如超訂閱率、VM 大小調整及工作負載效能需求。
 
 如需架構的相關資訊，請參閱 [{{site.data.keyword.vmwaresolutions_short}} 架構參考資料](../archiref/solution/solution_overview.html)。
 
@@ -54,7 +54,7 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 
 下列元件已包含在 vCenter Server 實例中。
 
-**附註**：標準化硬體配置的可用性和定價可能會根據所選取用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+**附註：**標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
 
 ### Bare Metal Server
 
@@ -63,22 +63,22 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
    * 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
    * 2-CPU Intel Skylake Generation（Intel Xeon 4100/5100/6100 系列）
 
-     **附註：**如果您計劃使用 vSAN 儲存空間，則配置需要四部 {{site.data.keyword.baremetal_short}}。
+     **附註：**如果您規劃使用 vSAN 儲存空間，則配置需要四部 {{site.data.keyword.baremetal_short}}。
 *  **預先配置**：2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
-   * **小型**（雙重 Intel Xeon E5-2620 v4 /總計 16 核心，2.1 GHz / 128 GB RAM / 2 個磁碟）
-   * **中型**（雙重 Intel Xeon E5-2650 v4 /總計 24 核心，2.2 GHz / 256 GB RAM / 2 個磁碟）
-   * **大型**（雙重 Intel Xeon E5-2690 v4 /總計 28 核心，2.6 GHz / 512 GB RAM / 2 個磁碟）。
+   * **小型**（雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz / 128 GB RAM / 2 個磁碟）
+   * **中型**（雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz / 256 GB RAM / 2 個磁碟）
+   * **大型**（雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz / 512 GB RAM / 2 個磁碟）。
 
 ### 網路
 
 訂購了下列網路元件：
 *  10 Gbps 雙重公用及專用網路上行鏈路
 *  三個 VLAN（虛擬 LAN）：一個公用 VLAN 和兩個專用 VLAN
-*  在連接至第 2 層 (L2) 網路的本端工作負載之間，用於潛在東西向通訊（水平通訊）的一個具有 DLR（分散式邏輯路由器）的 VXLAN (Virtual eXtensible LAN)。VXLAN 是部署成一個遞送拓蹼範例，您可以在其中修改、建置或移除它。您也可以藉由將額外 VXLAN 連接到 DLR 上的新邏輯介面，來新增安全區域。
+*  一個具有 DLR（分散式邏輯路由器）的 VXLAN (Virtual eXtensible LAN)，以便在連接至第 2 層 (L2) 網路的本端工作負載之間，進行潛在的東西向通訊。VXLAN 是部署成一個遞送拓蹼範例，您可以加以修改、在其上進行建置，或是移除它。您也可以藉由將額外 VXLAN 連接到 DLR 上的新邏輯介面，來新增安全區域。
 *  兩個 VMware NSX Edge Services Gateway：
-  * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，IBM 將它部署為管理網路拓蹼的一部分。IBM 管理虛擬機器利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[將您的網路配置成使用客戶管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
+  * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，IBM 將它部署為管理網路拓蹼的一部分。IBM 管理虛擬機器會利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[將您的網路配置成使用客戶管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
-    **重要事項**：您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server 實例。此外，使用防火牆或停用外部 IBM 管理元件的 ESG 通訊，可能會導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
+    **重要事項：**您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server 實例。此外，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，可能會導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
   * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway。IBM 將此閘道部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險？](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 ### 虛擬伺服器實例
@@ -86,8 +86,8 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 已訂購下列虛擬伺服器實例 (VSI)：
 * IBM CloudBuilder 的 VSI，在完成實例部署之後會關閉它。
 * （適用於實例 2.2 版及更新版本）您可以選擇在管理叢集裡部署單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或兩部高可用性 Microsoft Windows VM，以協助加強安全及穩健性。
-* （適用於實例 1.9 版到 2.1 版）已部署並可查閱 Microsoft Windows Server VSI for Microsoft Active Directory (AD)。此 VSI 充當已登錄主機及虛擬機器之實例的 DNS。
-* （適用於實例 1.8 版及更舊版本）用於管理元件 Snapshot 型備份的 VSI，其在實例部署完成之後會保持運作。
+* （適用於實例 1.9 版到 2.1 版）已部署並可查閱 Microsoft Windows Server VSI for Microsoft Active Directory (AD)。VSI 充當登錄主機及虛擬機器之實例的 DNS。
+* （適用於實例 1.8 版及更早版本）用於管理元件 Snapshot 型備份的 VSI，其在實例部署完成之後會保持運作。
 
 ### 儲存空間
 
@@ -97,12 +97,12 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 
 vSAN 選項提供自訂的配置，以及磁碟類型、大小和數量的各種選項：
 * 磁碟數量：2、4、6 或 8
-* 儲存磁碟：960 GB SSD SED、1.9 TB SSD SED 或 3.8 TB SSD SED。
+* 儲存空間磁碟：960 GB SSD SED、1.9 TB SSD SED 或 3.8 TB SSD SED。
 
-  此外，還會訂購每部主機 2 個快取磁碟 (960 GB)。
+  此外，還為每部主機訂購 2 個 960 GB 的快取磁碟。
 
   **附註：**當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至資料中心時就會予以支援。
-* 「高效能 Intel Optane」選項，提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。此選項取決於 CPU 型號。
+* 「高效能 Intel Optane」選項，提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。這個選項取決於 CPU 型號。
 
 #### NFS 儲存空間
 
@@ -123,7 +123,7 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 
 ## vCenter Server 擴充節點的技術規格
 
-每一個 vCenter Server 擴充節點將部署下列元件，並在您的 {{site.data.keyword.cloud_notm}} 帳戶中收取其費用。
+每一個 vCenter Server 擴充節點都會將下列元件部署在{{site.data.keyword.cloud_notm}} 帳戶中並收取費用。
 
 ### 擴充節點的硬體
 
@@ -136,9 +136,9 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 * 一筆支援與服務費用
 * （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6
 
-**重要事項**：您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台而不是 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
-**警告**：從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，可能會讓您的環境不穩定。這些管理活動包括：
+**警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的所有 {{site.data.keyword.vmwaresolutions_short}} 元件，可能會讓您的環境不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件
 *  透過新增或移除 ESXi 伺服器來擴充或縮減實例容量
 *  關閉元件電源

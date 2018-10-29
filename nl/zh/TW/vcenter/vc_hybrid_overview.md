@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -45,15 +45,15 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 
 此層由 vCenter Server Appliance (vCSA)、NSX Manager、兩個 NSX ESG、三個 NSX Controller、Platform Services Controller (PSC) 虛擬應用裝置及 IBM CloudDriver 虛擬伺服器實例 (VSI) 所組成。針對將主機新增至環境這類特定作業，視需要依需求部署 CloudDriver VSI。
 
-基本供應項目與 vCenter Server Appliance 一起部署，其大小調整後可支援最多 400 部主機及最多 4000 部 VM 的環境。相同的 vSphere API 相容工具及 Script 可用來管理 IBM 管理的 VMware 環境。
+基礎供應項目與 vCenter Server Appliance 一起部署，其大小調整後可支援最多 400 部主機及最多 4000 部 VM 的環境。相同的 vSphere API 相容工具及 Script 可用來管理 IBM 管理的 VMware 環境。
 
-總計，基本供應項目需要 38 個 vCPU 及 67 GB vRAM 保留給虛擬化管理層。VM 的其餘主機容量視數個因素而定，例如超訂閱率、VM 大小調整及工作負載效能需求。
+總計，基礎供應項目需要 38 個 vCPU 及 67 GB vRAM 保留給虛擬化管理層。VM 的其餘主機容量視數個因素而定，例如超訂閱率、VM 大小調整及工作負載效能需求。
 
 如需部署 HCX on {{site.data.keyword.cloud_notm}} 服務時的其他管理資源需求，請參閱 [VMware HCX on {{site.data.keyword.cloud_notm}} 概觀](../services/hcx_considerations.html)。
 
 ### 基礎架構混合
 
-本層會抽象化內部部署站台與 {{site.data.keyword.cloud_notm}} 站台之間的資源，讓您可以安全並輕鬆地來回移動工作量，而不需要變更 VM 特徵（例如其 IP 位址）。
+本層會抽象化內部部署站台與 {{site.data.keyword.cloud_notm}} 站台之間的資源，讓您可以安全並輕鬆地來回移動工作負載，而不需要變更 VM 特徵（例如其 IP 位址）。
 
 根據 VMware Hybrid Cloud Extension (HCX)，您可以在內部部署與 {{site.data.keyword.cloud_notm}} 站台之間建立鬆散耦合交互連接，以在不需要關閉的情況下啟用 VM 的大量移轉或 VM 的即時 vMotion。
 
@@ -65,7 +65,7 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 
 ### Bare Metal Server
 
-您的 vCenter Server with Hybridity Bundle 實例訂單隨附四個自訂 {{site.data.keyword.baremetal_short}}。下列是可用的 CPU 型號：
+您的 vCenter Server with Hybridity Bundle 實例訂單隨附四個自訂 {{site.data.keyword.baremetal_short}}。以下是可用的 CPU 型號：
   * 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
   * 2-CPU Intel Skylake Generation（Intel Xeon 4100/5100/6100 系列）
 
@@ -74,11 +74,11 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 訂購了下列網路元件：
 *  10 Gbps 雙重公用及專用網路上行鏈路
 *  三個 VLAN（虛擬 LAN）：一個公用 VLAN 和兩個專用 VLAN
-*  在連接至第 2 層 (L2) 網路的本端工作負載之間，用於潛在東西向通訊（水平通訊）的一個具有 DLR（分散式邏輯路由器）的 VXLAN (Virtual eXtensible LAN)。VXLAN 是部署成一個遞送拓蹼範例，您可以在其中修改、建置或移除它。您也可以將其他 VXLAN 連接到 DLR 上的新邏輯介面，來新增安全區域。
+*  一個具有 DLR（分散式邏輯路由器）的 VXLAN (Virtual eXtensible LAN)，以便在連接至第 2 層 (L2) 網路的本端工作負載之間，進行潛在的東西向通訊。VXLAN 是部署成一個遞送拓蹼範例，您可以加以修改、在其上進行建置，或是移除它。您也可以將其他 VXLAN 連接到 DLR 上的新邏輯介面，來新增安全區域。
 *  兩個 VMware NSX Edge Services Gateway：
   * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，IBM 將它部署為管理網路拓蹼的一部分。IBM 管理 VM 使用此 ESG，以與跟自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[將您的網路配置成使用客戶管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
-    **重要事項**：您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server with Hybridity Bundle 實例。此外，請注意，使用防火牆或停用外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
+    **重要事項：**您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server with Hybridity Bundle 實例。此外，請注意，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
   * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway，IBM 將它部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險？](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 如需部署 HCX on {{site.data.keyword.cloud_notm}} 服務時所訂購之網路元件的相關資訊，請參閱 [HCX on {{site.data.keyword.cloud_notm}} 概觀](../services/hcx_considerations.html)。
@@ -93,10 +93,10 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 
 vSAN 儲存空間提供自訂的配置，以及磁碟類型和數量的各種選項：
 * 磁碟數量：2、4、6 或 8。
-* 儲存磁碟：960 GB SSD SED、1.9 TB SSD SED 或 3.8 TB SSD SED。
+* 儲存空間磁碟：960 GB SSD SED、1.9 TB SSD SED 或 3.8 TB SSD SED。
 
-  此外，還訂購每部主機 2 個快取磁碟 (960 GB)。
-* 「高效能 Intel Optane」選項，提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。此選項取決於 CPU 型號。
+  此外，還為每部主機訂購 2 個 960 GB 的快取磁碟。
+* 「高效能 Intel Optane」選項，提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。這個選項取決於 CPU 型號。
 
 ### IBM 提供的授權及費用
 
@@ -124,9 +124,9 @@ vCenter Server with Hybridity Bundle 實例訂單隨附下列授權。
 * 一筆支援與服務費用
 * VMware vSAN（Advanced 或 Enterprise）6.6
 
-**重要事項**：您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台而不是 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
-**警告**：從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，可能會讓您的環境不穩定。這些管理活動包括：
+**警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的所有 {{site.data.keyword.vmwaresolutions_short}} 元件，可能會讓您的環境不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件
 *  透過新增或移除 ESXi 伺服器來擴充或縮減實例容量
 *  關閉元件電源
