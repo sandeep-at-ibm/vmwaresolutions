@@ -20,7 +20,7 @@ lastupdated: "2018-09-25"
 
 依預設，單一 Active Directory VSI 會部署至 {{site.data.keyword.cloud}} 基礎架構。此設計還提供選項，可將兩部高可用性 Microsoft Active Directory 伺服器部署為管理叢集裡的專用 Windows Server VM。
 
-**附註**：如果您選擇此選項，則負責提供 Microsoft 授權及啟動。
+**附註**：如果您選擇這個選項，則負責提供 Microsoft 授權及啟動。
 
 Active Directory 僅用來鑑別管理 VMware 實例的存取權，並不會將工作負載的一般使用者存放至已部署的實例。Active Directory 伺服器的樹系根網域名稱等於您指定的 DNS 網域名稱。只有在鏈結多個實例時，才會針對主要 Cloud Foundation 及 vCenter Server 實例指定此網域名稱。如果是已鏈結的實例，則每個實例都會包含位於樹系根抄本環中的 Active Directory 伺服器。DNS 區域檔案也會在 Active Directory 伺服器上進行抄寫。
 
@@ -74,7 +74,7 @@ Cloud Foundation 部署使用 VMware Cloud Foundation 自動化，以使用它�
 
 ## 憑證管理中心服務
 
-依預設，VMware vSphere 會使用位於 VMware Platform Services Controller 應用裝置之「VMware 憑證管理中心 (VMCA)」所簽署的 TLS 憑證。一般使用者裝置或瀏覽器不會信任這些憑證。將使用者面向的憑證取代為協力廠商或企業憑證管理中心 (CA) 所簽署的憑證，是一種安全最佳作法。機器對機器通訊的憑證可以保留作為 VMCA 所簽署的憑證，不過，建議您遵循組織的最佳作法，這通常涉及使用已識別的企業 CA。
+依預設，VMware vSphere 會使用位於 VMware Platform Services Controller 應用裝置之「VMware 憑證管理中心 (VMCA)」所簽署的 TLS 憑證。一般使用者裝置或瀏覽器不會信任這些憑證。將面對使用者的憑證取代為協力廠商或企業憑證管理中心 (CA) 所簽署的憑證，是一種安全最佳作法。機器對機器通訊的憑證可以保留作為 VMCA 所簽署的憑證，不過，建議您遵循組織的最佳作法，這通常涉及使用已識別的企業 CA。
 
 您可以使用此設計內的 Windows AD 伺服器來建立本端實例所簽署的憑證。不過，必要的話，您也可以選擇配置 CA 服務。
 
