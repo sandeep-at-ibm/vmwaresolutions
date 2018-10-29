@@ -92,12 +92,12 @@ lastupdated: "2018-09-07"
        <td>vSphere on {{site.data.keyword.cloud_notm}} 供應項目提供可自訂的虛擬化服務，結合 VMware 相容的 {{site.data.keyword.baremetal_short}}、硬體元件及授權，來建置您自己的 IBM 代管 VMware 環境。</td>
     </tr>
     <tr>
-       <td>[NetApp  ONTAP  Select](netapp/np_netappoverview.html)</td>
+       <td>[NetApp ONTAP Select](netapp/np_netappoverview.html)</td>
        <td>NetApp ONTAP Select 供應項目容許您部署軟體定義的儲存空間叢集，以根據 NetApp ONTAP Select 來處理您對於專用及高可用性儲存空間應用裝置的需要。</td>
     </tr>
     <tr>
        <td>[VMware Federal on IBM Cloud](vcenter/vc_fed_overview.html)</td>
-       <td>VMware Federal on {{site.data.keyword.cloud_notm}} 供應項目除了提供選項來保護已部署實例的安全，同時移除機密性資訊及用於持續存取實例以使用管理功能的開啟管理連線之外，還支援訂購基本 vCenter Server 實例。</td>
+       <td>VMware Federal on {{site.data.keyword.cloud_notm}} 供應項目除了提供選項來保護已部署實例的安全，同時移除機密性資訊及用於持續存取實例以使用管理功能的開啟管理連線之外，還支援訂購基礎 vCenter Server 實例。</td>
     </tr>
   </table>
 
@@ -129,11 +129,11 @@ lastupdated: "2018-09-07"
     </tr>
     <tr>
        <td>[HyTrust DataControl on IBM Cloud](services/htdc_considerations.html)</td>
-       <td>HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務提供具有整合式金鑰管理的高度加密，來保護其整個生命週期的工作負載安全。此服務可以提供作業系統層次及資料層次的加密，表示可以加密及解密工作負載內的任何目錄、資料夾或檔案。</td>
+       <td>HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務提供具有整合式金鑰管理的高度加密，在工作負載的整個生命週期內保護其安全。此服務可以提供作業系統層次及資料層次的加密，表示可以加密及解密工作負載內的任何目錄、資料夾或檔案。</td>
     </tr>
     <tr>
        <td>[HyTrust KeyControl on IBM Cloud](services/htkc_considerations.html)</td>
-       <td>HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 服務藉由自動化及簡化加密金鑰的生命週期，來簡化加密工作負載的管理。服務可以使用符合 FIPS 140-2 標準的加密，輕鬆地管理加密金鑰。</td>
+       <td>HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 服務藉由自動化及簡化加密金鑰的生命週期，來簡化加密工作負載的管理。服務可以使用符合 FIPS 140-2 標準的加密，輕鬆地大規模管理加密金鑰。</td>
     </tr>
     <tr>
        <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
@@ -153,11 +153,11 @@ lastupdated: "2018-09-07"
     </tr>
     <tr>
        <td>[VMware HCX on IBM Cloud](services/hcx_considerations.html)</td>
-       <td>HCX on {{site.data.keyword.cloud_notm}} 服務可以將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}，這容許將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從其移轉，而不需要進行任何轉換或變更。</td>
+       <td>HCX on {{site.data.keyword.cloud_notm}} 服務可以將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}，這容許將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從該處移轉，而不需要進行任何轉換或變更。</td>
     </tr>
     <tr>
        <td>[Zerto on IBM Cloud](services/addingzertodr.html)</td>
-       <td>Zerto on {{site.data.keyword.cloud_notm}} 服務提供抄寫及災難回復功能，可整合至部署供應項目以保護及回復 {{site.data.keyword.cloud_notm}} 上 VMware 虛擬環境中的資料。</td>
+       <td>Zerto on {{site.data.keyword.cloud_notm}} 服務提供抄寫及災難回復功能，其可整合到部署供應項目中，以保護及回復 {{site.data.keyword.cloud_notm}} 上位於您的 VMware 虛擬環境中的資料。</td>
     </tr>
    </table>
 
