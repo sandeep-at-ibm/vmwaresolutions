@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-28"
 
 {{site.data.keyword.vmwaresolutions_full}} 容許在不同的位置部署實例，並在短時間內啟動並執行它們。
 
-**附註**：
+**附註：**
 * 您無法在多站台配置中鏈結 VMware Cloud Foundation 與 VMware vCenter Server 實例。
 * 您無法鏈結 2.0 版中所部署的實例與舊版本中的實例（即使已升級至 2.0 版也是一樣）。
 
@@ -37,7 +37,7 @@ lastupdated: "2018-08-28"
 
 多站台配置特性會搭配使用中心及分支拓蹼與主要站台及最多七個次要站台。支援單層站台，亦即，您無法配置鏈結至其他次要站台的後續站台。在所有實例中，您在多站台配置中共有 128 部 ESXi 伺服器。
 
-**附註**：如果您的配置需要超過 128 部 ESXi 伺服器的多站台部署，則請與「IBM 支援中心」聯絡以取得協助。如需相關資訊，請參閱[與 IBM 支援中心聯絡](../vmonic/trbl_support.html)。
+**附註：**如果您的配置需要超過 128 部 ESXi 伺服器的多站台部署，請與「IBM 支援中心」聯絡以取得協助。如需相關資訊，請參閱[與 IBM 支援中心聯絡](../vmonic/trbl_support.html)。
 
 下圖說明 Cloud Foundation 多站台部署的整體視圖。
 
@@ -54,7 +54,7 @@ lastupdated: "2018-08-28"
 
 您最多可以在多站台配置中部署 8 個（1 個主要及 7 個次要）實例。
 
-**附註**：刪除屬於多站台配置的 Cloud Foundation 實例需要特殊規劃。如需相關資訊，請參閱[刪除多站台配置中的 Cloud Foundation 實例](sd_deletinginstance_multi.html)。
+**附註：**刪除屬於多站台配置的 Cloud Foundation 實例需要特殊規劃。如需相關資訊，請參閱[刪除多站台配置中的 Cloud Foundation 實例](sd_deletinginstance_multi.html)。
 
 ### 相關鏈結
 

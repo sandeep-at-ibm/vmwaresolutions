@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-09-26"
 *  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](../vmonic/useraccount.html)。
 *  您已檢閱 [Cloud Foundation 實例的需求及規劃](sd_planning.html)中的需求及考量。
 
-**重要事項**：請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在 Vyatta 佈建進行中落後，或者 IBM CloudBuilder VSI 停止或遭到刪除。此外，在部署實例之後，請不要變更實例名稱、根網域名稱、子網域標籤或主機名稱字首。
+**重要事項：**請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。此外，在部署實例之後，請不要變更實例名稱、根網域名稱、子網域標籤或主機名稱字首。
 
 ## 系統設定
 
@@ -59,8 +59,8 @@ lastupdated: "2018-09-26"
 當您選取**預先配置**時，無法變更 CPU 或 RAM 設定。
 
 根據您的需求，選取 Bare Metal Server 配置：
-  * 小型（雙重 Intel Xeon E5-2650 v4 /總計 24 核心，2.2 GHz / 128 GB RAM / 12 個磁碟機）
-  * 大型（雙重 Intel Xeon E5-2690 v4 /總計 28 核心，2.6 GHz / 512 GB RAM / 12 個磁碟機）
+  * 小型（雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz / 128 GB RAM / 12 個磁碟機）
+  * 大型（雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz / 512 GB RAM / 12 個磁碟機）
 
 ### 自訂
 
@@ -72,12 +72,12 @@ lastupdated: "2018-09-26"
 
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
-|雙重 Intel Xeon E5-2620 v4 /總計 16 核心，2.1 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2650 v4 /總計 24 核心，2.2 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2690 v4 /總計 28 核心，2.6 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Silver 4110 處理器/總計 16 核心，2.1 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 5120 處理器/總計 28 核心，2.2 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 Processor / 總計 36 核心，2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### Bare Metal Server 數目
 
@@ -86,17 +86,17 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 ## 儲存空間設定
 
 對於 Cloud Foundation 實例，您只能訂購 VMware vSAN 儲存空間。
-* 當您選取**預先配置**的 Bare Metal Server 配置時，儲存空間設定會標準化，且無法變更：
+
+當您選取**預先配置**的 Bare Metal Server 配置時，儲存空間設定會標準化，且無法變更：
   * 針對「**小型**裸機伺服器」配置，會訂購 1.9 TB SSD SED 的兩個磁碟機。
   * 針對「**大型**裸機伺服器」配置，會訂購 3.8 TB SSD SED 的四個磁碟機。
-* 選取**自訂** Bare Metal Server 配置時，您可以自訂實例的 vSAN 儲存空間。請指定下列 vSAN 設定：
 
+選取**自訂** Bare Metal Server 配置時，您可以自訂實例的 vSAN 儲存空間。請指定下列 vSAN 設定：
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
-* **vSAN 快取磁碟的磁碟類型**：選取所需快取磁碟的選項。
+* 如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
 
-    **附註**：如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。此選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲及更高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
-* **vSAN 快取磁碟數目**：指定您要新增的快取磁碟數目。
+* 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
 
 ## 網路介面設定
 
@@ -175,7 +175,7 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 
 ## 訂單摘要
 
-根據您選取的實例及附加程式服務配置，預估成本會立即產生並顯示在右窗格中。按一下右窗格的**定價詳細資料**，以產生提供預估值詳細資料的 PDF 文件。
+根據您選取的實例及附加程式服務配置，預估成本會立即產生並顯示在右窗格中。按一下右窗格的**定價詳細資料**，以產生提供預估詳細資料的 PDF 文件。
 
 ## 訂購 Cloud Foundation 實例的程序
 
@@ -216,7 +216,7 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 
 ## 結果
 
-實例的部署會自動啟動。您會收到正在處理訂單的確認，您可以檢視實例詳細資料來檢查部署的狀態。
+實例的部署會自動啟動。您會收到正在處理訂單的確認，並且可以檢視實例詳細資料來檢查部署的狀態。
 
 順利部署實例之後，會在 VMware 虛擬平台上安裝 [Cloud Foundation 實例的技術規格](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **SDDC-Cluster**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
 
@@ -228,9 +228,9 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 
 檢視及管理您訂購的 Cloud Foundation 實例。
 
-**重要事項**：您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台而不是 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
 
-**警告**：從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理任何 {{site.data.keyword.vmwaresolutions_short}} 元件（元件已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶）可能會讓您的環境不穩定。這些管理活動包括：
+**警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外來管理您在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，會使您的環境變得不穩定。這些管理活動包括：
 
 *  新增、修改、退回或移除元件
 *  透過新增或移除 ESXi 伺服器來擴充或縮減實例容量
