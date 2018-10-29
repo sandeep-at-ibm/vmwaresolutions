@@ -265,9 +265,28 @@ IBM Cloud for VMware Solutions
     
 
     {: .topicgroup}
-    IBM Cloud for VMware Solutions NSX Edge Services Gateway 解決方案架構
+    NSX Edge Services Gateway 解決方案架構
         archiref/nsx/nsx_overview.md
         archiref/nsx/nsx_design.md
         archiref/nsx/networking_services.md
         archiref/nsx/multi_site.md
+
+    {: .topicgroup}
+    VMware Update Manager
+        archiref/vum/vum-intro.md
+        archiref/vum/vum-overview.md
+        archiref/vum/vum-init-config.md
+        archiref/vum/vum-metadata.md
+        archiref/vum/vum-baselines.md
+        archiref/vum/vum-scanning.md
+        archiref/vum/vum-staging.md
+        archiref/vum/vum-updating-nsx.md
+        archiref/vum/vum-updating-vsan.md
+        archiref/vum/vum-updating-vcsa.md
+        archiref/vum/vum-applying-nic.md
+        archiref/vum/vum-type-updates.md
+        archiref/vum/vum-vsan-redundancy.md
+        archiref/vum/vum-orchestr-updates.md
+        archiref/vum/vum-zerto.md
+        archiref/vum/vum-host-profiles.md
     {: .navgroup-end}
