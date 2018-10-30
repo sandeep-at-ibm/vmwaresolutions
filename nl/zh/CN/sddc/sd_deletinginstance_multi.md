@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-08-28"
 
 **注意**：在所删除实例的 {{site.data.keyword.cloud_notm}} 计费周期结束之前，仍然会对您计费。
 
-## 过程
+## 删除多站点配置中 Cloud Foundation 实例的过程
 
 1. 从辅助 Cloud Foundation 实例中除去所有服务。
 2. 确保没有任何 NSX 对象扩展到要删除的辅助实例中。

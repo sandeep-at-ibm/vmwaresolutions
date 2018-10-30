@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2018-08-28"
 
 ## 添加 ESXi 服务器的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在 **Cloud Foundation 实例**表中，单击要扩展容量的实例。
 3. 在左侧导航窗格上，单击**基础架构**。
 4. 在**集群**表中，单击要在其中添加 ESXi 服务器的集群。
@@ -49,7 +49,7 @@ lastupdated: "2018-08-28"
 
 ## 除去 ESXi 服务器的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在 **Cloud Foundation 实例**表中，单击要压缩容量的实例。
 3. 在左侧导航窗格上，单击**基础架构**。
 4. 在**集群**表中，单击要从中除去 ESXi 服务器的集群。

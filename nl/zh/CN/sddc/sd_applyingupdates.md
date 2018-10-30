@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -46,9 +46,9 @@ lastupdated: "2018-08-28"
   </tr>
 </table>
 
-## 过程
+## 对 Cloud Foundation 实例应用更新的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在 **Cloud Foundation 实例**表中，单击要更新的实例。
 3. 在**摘要**页面上，验证是否所有实例详细信息都正确显示。然后在左侧导航窗格上，单击**基础架构**以验证**基础架构**页面上的详细信息。
    如果未显示详细信息，这可能指示由于防火墙规则或其他网络问题而导致 IBM CloudDriver 虚拟服务器实例 (VSI) 发生连接问题。请解决该问题后，再继续下一步，否则更新可能会失败。
