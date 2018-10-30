@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-10"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-08-10"
 *  已查看[针对 vSphere 集群的需求和规划](vs_planning.html)中的需求和注意事项。
 *  已创建要复用的配置模板。
 
-## 过程
+## 基于现有配置订购 vSphere 集群的过程
 
 1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **VMware vSphere**。
 2. 在 **VMware vSphere on IBM Cloud** 页面上，单击**创建**。  
@@ -38,7 +38,7 @@ lastupdated: "2018-08-10"
 
 如果已下订单，那么将自动开始部署集群。您将收到电子邮件确认，指示正在处理订单。集群准备就绪可供使用时，还将通过电子邮件通知您。
 
-**注**：与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**部署的实例**页面。
+**注**：与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**已部署的实例**页面。
 
 ### 相关链接
 
