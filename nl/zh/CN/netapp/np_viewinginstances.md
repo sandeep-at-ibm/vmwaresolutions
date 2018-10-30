@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-09-25"
 
 查看针对不同用户帐户供应的 NetApp ONTAP Select 实例的摘要和详细信息。
 
-## 查看 NetApp ONTAP Select 实例摘要
+## 查看 NetApp ONTAP Select 实例摘要的过程
 
 要查看针对用户帐户供应的所有 NetApp ONTAP Select 实例的摘要，请完成以下步骤：
 
-1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格上的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在控制台条幅中，单击您的用户帐户图标，然后单击**帐户**字段以选择要检查其实例的用户帐户。
 3. 在 **NetApp ONTAP Select 实例**表中，查看所选用户帐户中供应的实例的列表。
 
@@ -29,9 +29,9 @@ lastupdated: "2018-09-25"
 |位置|托管实例的数据中心。|
 |创建时间|创建实例的日期和时间。|   
 |状态|实例的状态。状态可以是下列其中一个值：
-     <ul><li>正在创建：正在创建实例。</li><li>正在构建：正在配置实例。</li><li>可供使用：实例准备就绪，可供使用。</li><li>正在修改：正在修改实例。</li><li>失败：创建、配置或修改过程失败。</li><li>正在删除：正在删除实例。</li><li>删除错误：删除实例时发生错误。</li><li>已删除：实例已删除。</li></ul>|
+    <ul><li>正在创建：正在创建实例。</li><li>正在构建：正在配置实例。</li><li>可供使用：实例准备就绪，可供使用。</li><li>正在修改：正在修改实例。</li><li>失败：创建、配置或修改过程失败。</li><li>正在删除：正在删除实例。</li><li>删除错误：删除实例时发生错误。</li><li>已删除：实例已删除。</li></ul>|
 
-## 查看 NetApp ONTAP Select 实例属性详细信息
+## 查看 NetApp ONTAP Select 实例属性详细信息的过程
 
 要查看实例的属性详细信息，请执行以下操作：
 
@@ -56,7 +56,7 @@ lastupdated: "2018-09-25"
 |DNS - 子域|子域是本地 NetApp ONTAP Select 实例主机名所在的根域名的 DNS 子域名。子域名的格式为 `<subdomain_label>.<root_domain>`. |
 |状态|实例的状态。|
 
-## 查看 NetApp ONTAP Select 实例的访问信息
+## 查看 NetApp ONTAP Select 实例的访问信息的过程
 
 在**访问信息**下，查看与实例相关的组件的访问信息。这些密码是系统生成的初始密码。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部对这些信息进行更改，那么不会在实例摘要页面上更新这些信息。
 
@@ -85,7 +85,7 @@ lastupdated: "2018-09-25"
 |vCenter ADMIN|可用于通过 vSphere Web Client 登录到 vCenter Server 的 VMware vCenter Single Sign-On 用户名和密码。|
 |vCenter SSH|可用于通过 SSH 连接访问 vCenter Server VM 的用户名和密码。|
 
-## 查看 NetApp ONTAP Select 实例的部署历史记录
+## 查看 NetApp ONTAP Select 实例的部署历史记录的过程
 
 单击左侧导航窗格中的**部署历史记录**，以查看实例的部署历史记录。
 
@@ -141,7 +141,7 @@ lastupdated: "2018-09-25"
 		 <tr>
 		  <td>状态</td>
 			<td>集群的状态。状态可以是下列其中一个值：
-     <ul><li>正在初始化：正在创建并配置集群。</li><li>正在修改：正在修改集群。</li><li>可供使用：集群准备就绪，可供使用。</li></ul></td>
+    <ul><li>正在初始化：正在创建并配置集群。</li><li>正在修改：正在修改集群。</li><li>可供使用：集群准备就绪，可供使用。</li></ul></td>
 		 </tr>
 		 <tr>
 		  <td>操作</td>
