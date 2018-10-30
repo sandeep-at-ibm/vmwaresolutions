@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -31,25 +31,25 @@ lastupdated: "2018-09-24"
 |[Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)|9.5u3| V1.8 和更高版本 |
 |[Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)|5.5u4 补丁 2| V1.2 和更高版本 |
 
-## 向 vCenter Server 实例添加服务
+## 向 vCenter Server 实例添加服务的过程
 
-要向 vCenter Server 实例添加服务，请单击上表中的相应服务链接以查看服务的注意事项，并检查部署的组件。然后按服务订购主题中的指示信息向实例添加服务。
+要向 vCenter Server 实例添加服务，请单击上表中的相应服务链接以查看服务的注意事项，并检查部署的组件。然后，按照服务订购主题中的指示信息将服务添加到实例。
 
 ### 服务安装结果
 
 安装服务成功完成后，系统将通过电子邮件通知您，并且该服务会显示在实例的**服务**页面上，状态为**已安装**。
 
-## 查看 vCenter Server 实例的服务
+## 查看 vCenter Server 实例的服务的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要查看其服务的实例。
 3. 在左侧导航窗格上，单击**服务**。
 4. 在**服务**页面上，单击某个服务以查看相关信息，例如服务状态和其他详细信息。
-5. 根据查看的服务，可以使用服务详细信息上提供的凭证来访问服务控制台，并可在其中管理该服务。
+5. 根据查看的服务，可以使用服务详细信息中提供的凭证来访问服务控制台，并可在其中管理该服务。
 
-## 除去 vCenter Server 实例的服务
+## 除去 vCenter Server 实例的服务的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要除去其服务的实例。
 3. 在左侧导航窗格上，单击**服务**。
 4. 在**服务**页面上，找到要除去的服务实例，然后单击**删除**图标。

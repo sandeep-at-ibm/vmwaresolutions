@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-05"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -14,11 +14,11 @@ lastupdated: "2018-09-05"
 
 ## VMware Federal 实例的联网组件
 
-要查看 VMware Federal 实例中包含的联网组件，请参阅 [VMware Federal on {{site.data.keyword.cloud}} 的技术规范](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)。
+要查看 VMware Federal 实例中包含的联网组件，请参阅 [VMware Federal on {{site.data.keyword.cloud}} 实例的技术规范](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)。
 
 ## 防火墙注意事项
 
-如果在使用防火墙，那么必须针对来自 {{site.data.keyword.IBM}} CloudDriver 虚拟服务器实例 (VSI) 和 SDDC Manager 虚拟机 (VM) 的所有通信配置规则。这些规则必须允许所有协议在 IP 地址 `10.0.0.0/8` 和 `161.26.0.0/16` 上进行通信。此类防火墙的示例为 NSX 分布式防火墙 (DFW) 或 Vyatta 防火墙。
+如果在使用防火墙，那么必须针对来自 IBM CloudDriver 虚拟服务器实例 (VSI) 和 SDDC Manager 虚拟机 (VM) 的所有通信配置规则。这些规则必须允许所有协议在 IP 地址 `10.0.0.0/8` 和 `161.26.0.0/16` 上进行通信。此类防火墙的示例为 NSX 分布式防火墙 (DFW) 或 Vyatta 防火墙。
 
 ## 将 NSX 与虚拟机配合使用
 

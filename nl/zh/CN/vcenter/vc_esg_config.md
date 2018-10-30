@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -21,10 +21,9 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
 * 部署样本 NSX 逻辑交换机，以供客户工作负载 VM 使用。
 * 部署样本 NSX 分布式逻辑路由器 (DLR)，以用于处理连接到第 2 层 (L2) 网络的本地工作负载之间的潜在东-西通信。
 * 部署 NSX Edge 设备并将其配置为执行从工作负载逻辑交换机的 IP 地址范围到 NAT 规则上公共 IP 地址的网络地址转换 (NAT)。
-* 如果已安装 Veeam on {{site.data.keyword.cloud_notm}} 服务，那么会将 NSX Manager 配置为每天备份 NSX 配置。有关更多信息，请参阅[安装 Veeam on {{site.data.keyword.cloud_notm}} 时的注意事项](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud)。
+* 如果已安装 Veeam on {{site.data.keyword.cloud_notm}} 服务，那么会将 NSX Manager 配置为每天备份 NSX 配置。有关更多信息，请参阅[安装 Veeam on {{site.data.keyword.cloud_notm}} 时的注意事项](../services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud)。
 
-
-## 配置 VM 的联网设置
+## 配置 VM 联网设置的过程
 
 要将 NSX 用于工作负载 VM，必须在创建 VM 时完成以下步骤来配置一些设置：
 
@@ -37,13 +36,13 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
 
 2. 确定 VM 的可用 IP 地址：
    *  IP 地址必须位于 `192.168.10.0/24` 范围内。请注意，IP 地址 `192.168.10.1` 是保留地址（请参阅**步骤 3**）。
-   *  配置在 VM 上运行的操作系统的联网时，请使用所选 IP 地址和子网掩码 `255.255.255.0`。
+   *  配置在 VM 上运行的操作系统的联网时，请使用所选 IP 地址和网络掩码 `255.255.255.0`。
 
    **注**：您负责管理分配给 VM 的 IP 地址范围。
 
 3. 将 VM 的缺省网关分配为 `192.168.10.1`。此地址是工作负载 VM 所在逻辑交换机上的 NSX DLR 的 IP 地址。
 
-## 启用 SNAT 规则
+## 启用 SNAT 规则的过程
 
 如果希望工作负载 VM 具有对因特网的出站访问权，那么必须启用关联的 SNAT（源网络地址转换）规则。通过启用 SNAT 规则，可将 VM 对因特网的访问转换到单个公共 IP 地址。在 VMware vSphere Web Client 中完成以下步骤：
 
@@ -54,7 +53,7 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
 
 有关 NSX Edge NAT 规则的更多信息，请参阅[管理 NAT 规则](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}。
 
-## 确定客户子网详细信息
+## 确定客户子网详细信息的过程
 
 **customer-nsx-edge** 边缘旨在供您自己使用，因此您可以对其进行修改，以定义更多 NAT 规则用于入站或出站流量。这些规则必须仅使用代表您订购的公用或专用客户子网上的 IP 地址。
 

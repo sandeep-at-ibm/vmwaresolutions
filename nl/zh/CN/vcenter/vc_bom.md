@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -61,7 +61,7 @@ lastupdated: "2018-09-07"
 |TCP/IP 堆大小|**TcpipHeapSize** = 32|未设置|
 |最大 TCP/IP 堆大小|**TcpipHeapMax** = 1536|未设置|
 
-**注**：
+**注：**
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服务需要 **MaxVolumes** 设置，因为该服务可能会在 ESXi 服务器上使用超过缺省数量的 NFS 安装。
 * 配置设置的**未设置**值指示不会自动应用新设置，因为这需要重新引导 ESXi 服务器，这样可能有破坏性。
 

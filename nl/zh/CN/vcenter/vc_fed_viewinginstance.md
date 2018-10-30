@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2018-09-25"
 
 查看针对不同用户帐户供应的 VMware Federal 实例的摘要和详细信息。
 
-## 查看 VMware Federal 实例摘要
+## 查看 VMware Federal 实例摘要的过程
 
 要查看针对用户帐户供应的所有 VMware Federal 实例的摘要，请完成以下步骤：
-1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在控制台条幅中，单击您的用户帐户图标，然后单击**帐户**字段以选择要检查其实例的用户帐户。
 3. 在 **vCenter Server** 表中，查看所选用户帐户中供应的实例的列表。
 
@@ -45,7 +45,7 @@ lastupdated: "2018-09-25"
 |删除错误|删除实例时发生错误。|
 |已删除|实例已删除。|
 
-## 查看 VMware Federal 实例属性详细信息
+## 查看 VMware Federal 实例属性详细信息的过程
 
 要查看实例的属性详细信息，请执行以下操作：
 
@@ -68,7 +68,7 @@ lastupdated: "2018-09-25"
 |DNS 子域|子域是本地 vCenter Server 实例主机名所在的根域名的 DNS 子域名。子域名的格式为 <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>。|
 |状态|实例的状态。|
 
-## 查看 VMware Federal 实例的访问信息
+## 查看 VMware Federal 实例的访问信息的过程
 
 在**访问信息**下，查看与实例相关的组件的访问信息。显示的密码是系统生成的初始密码。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部对这些信息进行更改，那么不会在实例摘要页面上更新这些信息。
 
@@ -77,7 +77,7 @@ lastupdated: "2018-09-25"
 |组件|描述|
 |:------------- |:------------- |
 |AD/DNS IP|两个 AD 服务器的 IP 地址。|
-|AD/DNS FQDN|AD/DNS 服务器标准域名。<br><br>**注**：可使用相同的管理员密码通过远程桌面连接到所有 AD/DNS 服务器。|
+|AD/DNS FQDN|AD/DNS 服务器标准域名。<br><br>**注**：可使用相同的管理员密码通过远程桌面连接来连接到所有 AD/DNS 服务器。|
 |AD/DNS ADMIN（远程桌面）|对于主实例，会显示用于通过远程桌面连接访问 AD 服务器的用户名和密码。|NSX Manager IP|NSX Manager 的 IP 地址。|
 |NSX Manager FQDN|NSX Manager 标准域名 (FQDN)。|
 |NSX Manager HTTP|用于访问 NSX Manager Web 控制台的用户名和密码。|
@@ -90,7 +90,7 @@ lastupdated: "2018-09-25"
 |vCenter ADMIN|可用于通过 vSphere Web Client 登录到 vCenter Server 的 VMware vCenter Single Sign-On 用户名和密码。|
 |vCenter SSH|可用于通过 SSH 连接访问 vCenter Server VM 的用户名和密码。|
 
-## 查看 VMware Federal 实例的部署历史记录
+## 查看 VMware Federal 实例的部署历史记录的过程
 
 单击左侧导航窗格中的**部署历史记录**，以查看实例的部署历史记录。
 

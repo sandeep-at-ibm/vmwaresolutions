@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-20"
 
 {{site.data.keyword.vmwaresolutions_full}} 支持将实例部署在不同位置，在短时间内让这些实例启动并开始运行。
 
-**注**：
+**注：**
 * 仅 V2.0 和更高版本的实例支持 vCenter Server 实例的多站点配置。
 * 无法在多站点配置中将 VMware Cloud Foundation 与 VMware vCenter Server 实例相链接。
 

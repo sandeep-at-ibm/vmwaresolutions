@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -68,15 +68,11 @@ lastupdated: "2018-09-25"
 #### vSAN 存储器
 
 请指定以下 vSAN 选项：
-
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
-* **vSAN 高速缓存磁盘的磁盘类型**：选择与所需高速缓存磁盘相应的选项。
+* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
 
-    **注**：如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
-
-
-* **vSAN 高速缓存磁盘数**：指定要添加的 vSAN 高速缓存磁盘数。
+* 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 * **vSAN 许可证**：选择 VMware vSAN 6.6 许可证版本（Advanced 或 Enterprise）。
 
 如果初始集群已添加为 vSAN 集群，那么其他任何 vSAN 集群都会使用与初始 vSAN 集群相同的 vSAN 许可证和相同的配置。如果实例中的任何集群选择了要部署 vSAN（初始或其他集群），也是如此。第一次添加集群时，系统会提示您提供 vSAN 许可证和版本。下次您为新集群选择 vSAN 时，将复用您最初选择的任何内容。
@@ -103,7 +99,8 @@ lastupdated: "2018-09-25"
 
 ### 许可证设置
 
-	用于以下 VMware 组件的 {{site.data.keyword.IBM}} 提供的许可证：
+用于以下 VMware 组件的 {{site.data.keyword.IBM}} 提供的许可证：
+
   * vSphere Enterprise Plus 6.5u1
   * vCenter Server 6.5
   * NSX Service Providers 6.4（Base Edition、Advanced Edition 或 Enterprise Edition）
@@ -115,7 +112,7 @@ lastupdated: "2018-09-25"
 
 ## 向 VMware Federal 实例添加集群的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要添加集群的实例。
 
    **注**：确保实例处于**可供使用**状态。否则，无法向实例添加集群。
@@ -140,9 +137,9 @@ lastupdated: "2018-09-25"
 
 **重要信息**：不能更改集群名称。更改集群名称可能会导致集群中添加或除去 ESXi 服务器的操作失败。
 
-## 查看 VMware Federal 实例中的集群
+## 查看 VMware Federal 实例中集群的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击实例以查看其中的集群。
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，查看有关集群的摘要：
    * **名称**：集群的名称。
@@ -153,7 +150,7 @@ lastupdated: "2018-09-25"
    * **数据中心位置**：托管集群的数据中心。
    * **pod**：在其中部署集群的 pod。
    * **状态**：集群的状态。状态可以是下列其中一个值：
-     <dl class="dl">
+    <dl class="dl">
          <dt class="dt dlterm">正在初始化</dt>
          <dd class="dd">正在创建并配置集群。</dd>
          <dt class="dt dlterm">正在修改</dt>
@@ -219,7 +216,7 @@ lastupdated: "2018-09-25"
 
 当不再需要集群时，您可能希望将其从实例中删除。
 
-**注**：使用此过程可从部署在（或已升级到）V2.3 和更高发行版中的实例中删除集群。
+**注**：使用此过程可从部署在（或已升级到）V2.3 和更高发行版中的实例中除去集群。
 
 ### 删除之前
 
@@ -232,7 +229,7 @@ lastupdated: "2018-09-25"
 
 ## 从 VMware Federal 实例中删除集群的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要从中删除集群的实例。
 
    **注**：确保实例处于**可供使用**状态。否则，无法从实例中删除集群。
