@@ -4,21 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-27"
 
 ---
 
 # 请求 Veeam on IBM Cloud 的受管服务
 
-Veeam on {{site.data.keyword.cloud}} 服务可与 VMware 系统管理程序无缝集成，以帮助企业实现高可用性 (HA)。此服务可为应用程序和数据提供恢复点和时间目标。在完成配置后的 15 分钟内就会提供恢复点和时间目标。通过使用此服务，您可以在 Veeam 控制台中直接控制基础架构的所有虚拟机的备份和复原。
+Veeam on {{site.data.keyword.cloud}} 服务可与 VMware 系统管理程序无缝集成，以帮助企业实现高可用性 (HA)。此服务可为应用程序和数据提供恢复点和时间目标。在完成配置后的 15 分钟内就会提供恢复点和时间目标。使用此服务可在 Veeam 控制台中直接控制基础架构的所有虚拟机的备份和复原。
 
 IBM Resiliency Backup as a Service 提供各种稳健的现场、非现场和基于混合云的数据保护解决方案，支持实现信息灾备能力。有关更多信息，请参阅 [IBM Resiliency Backup as a Service](https://www.ibm.com/us-en/marketplace/managed-backup-services)。
 
-请求 Veeam on {{site.data.keyword.cloud_notm}} 的受管服务后，可以使用 Veeam 备份软件和 IBM Resiliency Backup as a Service 来部署完全受管的备份环境，这可以通过以下方式为您提供帮助：
+请求 Veeam on {{site.data.keyword.cloud_notm}} 的受管服务后，请使用 Veeam 备份软件和 IBM Resiliency Backup as a Service 来部署完全受管的备份环境。此组合可通过以下方式为您提供帮助：
 * 您有多个数据保护解决方案可供选择，以支持对专用内部部署环境、{{site.data.keyword.cloud_notm}} 基础架构或 IBM Resiliency Services Center（作为主位置或辅助位置）中的关键业务数据进行高度安全的自动化保护。
 * 还可获取可扩展的灵活数据保护解决方案，以减少总体拥有成本，并管理合规性需求。
 
-## 过程
+## 请求 Veeam on IBM Cloud 的受管服务的过程
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**入门**。
 2. 向下滚动该页面，在**订购更多受管服务**下，单击 **Veeam on IBM Cloud 的受管服务**卡。

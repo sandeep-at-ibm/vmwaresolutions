@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -38,7 +38,7 @@ lastupdated: "2018-07-20"
 
 对于 vCenter Server，必须配置密钥管理服务器 (KMS) 集群。所选区域中的端点通过客户机 SSL 证书安全地连接到 KMS。有关每个区域中的端点，请参阅下表。这些端点使用由 {{site.data.keyword.vmwaresolutions_short}} 团队维护的自签名证书。证书的指纹为 `a9 d0 ff 15 df 85 10 6b 61 88 fe 2e 8b d3 1a af 48 c8 a0 7a`。
 
-表 1：KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务端点区域
+表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务端点区域
 
 |区域|端点|
 |:---------------|:-----------------------|
@@ -47,7 +47,7 @@ lastupdated: "2018-07-20"
 |英国|`158.175.93.122:5696`|
 |美国南部|`169.60.185.42:5696`|
 
-此设置在初始配置时是可选的。此时可以将此字段保留为空，因为部署实例之后，vCenter Server 中的 KMS 的客户机证书是已知的。但是，必须在部署实例之后输入证书，才能成功完成 vCenter Server 与 KMS 的连接。
+此设置在初始配置时是可选的。可以将此字段保留为空，因为部署实例之后，vCenter Server 中的 KMS 的客户机证书是已知的。但是，必须在部署实例之后输入证书，才能成功完成 vCenter Server 与 KMS 的连接。
 
 ### 服务标识的 API 密钥
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -32,7 +32,7 @@ HCX on {{site.data.keyword.cloud_notm}} 组件必须同时安装在 {{site.data.
     3. 单击**复制链接**，然后使用此链接将 HCX Enterprise Client 下载到有权访问内部部署 vSphere 环境的内部部署环境中。
 3. 在 VMware vSphere Web Client 中，将 HCX Enterprise Client 作为 HCX Manager 虚拟设备 (HCX Manager) 部署到内部部署环境中。
 
-   **注**：必须在专用网络上内部部署 HCX Manager，并允许它访问公用网络。可以使用 NSX Edge、Vyatta 或类似网关，以允许通过因特网访问内部部署 HCX Manager。如果用于专用网络访问和公用网络访问的网关不同，那么建议您使用缺省网关来允许公用网络访问，并通过内部部署的 **HCX Manager 管理控制台**创建静态路由以用于专用网络访问。
+   **注**：必须在专用网络上部署此内部部署 HCX Manager，并允许它访问公用网络。可以使用 NSX Edge、Vyatta 或类似网关，以允许通过因特网访问内部部署 HCX Manager。如果用于专用网络访问和公用网络访问的网关不同，那么建议您使用缺省网关来允许公用网络访问，并通过内部部署的 **HCX Manager 管理控制台**创建静态路由以用于专用网络访问。
 4. 在 HCX Manager 部署完成后，使用 **HCX Manager 管理控制台**来激活内部部署 HCX Manager。要获取内部部署 HCX Manager 的激活密钥，请在 {{site.data.keyword.vmwaresolutions_short}} 控制台中订购内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例。有关更多信息，请参阅[订购内部部署 HCX 实例](../services/standalone_orderingserviceinstances.html)。
 5. 如果订购 HCX on {{site.data.keyword.cloud_notm}} 服务时使用的是自签名 SSL 证书，那么必须通过完成以下步骤将证书导入到内部部署 HCX Manager：
     1. 在内部部署 **HCX Manager 管理控制台**中，单击**管理**选项卡。
@@ -63,5 +63,5 @@ HCX on {{site.data.keyword.cloud_notm}} 组件必须同时安装在 {{site.data.
 * [查看内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例](../services/standalone_viewingserviceinstances.html)
 * [HCX 术语的词汇表](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#vm-documentation)
-* [VMware HCX Enterprise 安装与用户指南](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf){:new_window}
+* [VMware HCX 资源](https://hcx.vmware.com/#/docs)
 * [联系 IBM 支持人员](../vmonic/trbl_support.html)

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-26"
 
 ---
 
 # 订购 HyTrust DataControl on IBM Cloud
 
-订购 HyTrust DataControl on {{site.data.keyword.cloud}} 服务时，可订购包含 HyTrust DataControl 设备 HA 对的新实例，也可通过向现有实例添加 HyTrust DataControl 设备来进行订购。
+订购 HyTrust DataControl on {{site.data.keyword.cloud}} 服务时，可订购包含 HyTrust CloudControl 设备 HA 对的新实例，也可通过向现有实例添加 HyTrust DataControl 设备来进行订购。
 
 ## 为新实例订购 HyTrust DataControl on IBM Cloud
 

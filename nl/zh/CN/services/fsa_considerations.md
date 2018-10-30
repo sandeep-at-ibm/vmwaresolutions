@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -38,7 +38,7 @@ FortiGate 300 系列 Security Appliance。
 
 安装 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务之前，请查看以下注意事项：
 * 确保要使用的 {{site.data.keyword.cloud_notm}} 帐户具有**硬件防火墙**许可权。要编辑或查看实例的 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务的防火墙日志和设置，需要此许可权。
-* 如果要将 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务添加到部署的实例，请确保该实例的公用 VLAN 上尚未部署 {{site.data.keyword.cloud_notm}} 基础架构中的其他任何防火墙。
+* 如果要将 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务添加到已部署的实例，请确保该实例的公用 VLAN 上尚未部署 {{site.data.keyword.cloud_notm}} 基础架构中的其他任何防火墙。
 * 安装 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务将添加新的公用 VLAN。
 * 在服务部署期间，实例可能暂时无法访问因特网。
 * 成功安装 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务后，可以在 FortiGate 控制台中管理和配置 FSA 的防火墙规则。必须确保将 FSA 防火墙规则定义为允许通过管理组件（例如，Zerto Virtual Manager）启动的出站 HTTPS（TCP 端口 443）通信，以便通过因特网与 {{site.data.keyword.cloud_notm}} 上的外部管理数据库进行通信。出站 HTTPS（TCP 端口 443）通信从实例中的管理服务 VMware NSX Edge 服务网关 (ESG) 的公共 IP 地址发起。

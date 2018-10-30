@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -32,7 +32,7 @@ Zerto on {{site.data.keyword.cloud}} 服务提供了复制和灾难恢复功能�
 
 有关更多信息，请参阅 [IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top)。
 
-## 过程
+## 请求 Zerto on IBM Cloud 的受管服务的过程
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**入门**。
 2. 向下滚动该页面，在**订购更多受管服务**下，单击 **Zerto on IBM Cloud 的受管服务**卡。

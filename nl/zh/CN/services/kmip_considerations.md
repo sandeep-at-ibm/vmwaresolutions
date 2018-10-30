@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -34,7 +34,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 使用 IBM Key Protect for {
 * 您具有所创建的服务标识的 API 密钥。在订购服务时，需要密钥。
 * 您已通过执行[创建根密钥](https://console.bluemix.net/docs/services/keymgmt/keyprotect_create_root.html#create_root_keys)中的步骤或通过使用 [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect) 中的 REST API，在 Key Protect 用户界面中至少创建了一个客户根密钥 (CRK)。
 
-   **重要信息**：没有 CRK，无法订购此服务。强烈建议您通过该方法来使用现有密钥资料创建 CRK，并备份创建的密钥资料。通过执行此操作，可确保在其中应用 IBM Key Protect 来存储 CRK 的数据中心发生故障的情况下，您也可以恢复密钥。
+   **重要信息**：没有 CRK，无法订购此服务。强烈建议您通过该方法来使用现有密钥资料创建 CRK，并备份创建的密钥资料。通过执行此操作，可确保如果在其中应用 IBM Key Protect 来存储 CRK 的数据中心发生故障，您也可以恢复密钥。
 
 ## 使用 KMIP for VMware on IBM Cloud 时的注意事项
 
@@ -45,7 +45,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 使用 IBM Key Protect for {
 
 订购或使用此服务时提供的 VMware 公用证书用作客户机证书来与此服务实例进行通信。除去服务时，此服务实例为关联的 VMware 公用证书创建的所有加密密钥也将除去。
 
-因此，在除去服务之前，确保没有虚拟机或 vSAN 是使用 KMIP 服务创建的密钥进行加密的。
+因此，在除去服务之前，请确保没有虚拟机或 vSAN 是使用 KMIP 服务创建的密钥进行加密的。
 
 ### 相关链接
 

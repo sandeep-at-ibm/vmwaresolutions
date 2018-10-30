@@ -13,7 +13,7 @@ lastupdated: "2018-07-19"
 ## 访问 IBM Spectrum Protect Plus 管理控制台
 
 要管理 {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服务，必须通过完成以下步骤来访问 IBM Spectrum Protect Plus 管理控制台：
-1. 使用 {{site.data.keyword.cloud_notm}} 基础架构 VPN 或跳跃服务器来允许访问 IBM Spectrum Protect Plus 虚拟机 (VM) 的 IP 地址。可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台上 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 的服务详细信息页面中找到该 IP 地址。
+1. 使用 {{site.data.keyword.cloud_notm}} 基础架构 VPN 或跳板机来允许访问 IBM Spectrum Protect Plus 虚拟机 (VM) 的 IP 地址。可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台上 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 的服务详细信息页面中找到该 IP 地址。
 2. 要访问 IBM Spectrum Protect Plus 管理控制台，请单击 IBM Spectrum Protect Plus on {{site.data.keyword.cloud}} 的服务详细信息页面上的**查看 IBM Spectrum Protect Plus 控制台**，然后使用此服务详细信息页面上列出的凭证进行登录。
 
 ## 对 IBM Spectrum Protect Plus on IBM Cloud 应用更新

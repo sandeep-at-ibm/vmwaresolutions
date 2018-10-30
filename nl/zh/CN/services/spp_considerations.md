@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-28"
 
 ---
 
 # IBM Spectrum Protect Plus on IBM Cloud 概述
 
-{{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服务为虚拟环境的数据保护、数据复用和数据恢复提供高效、可扩展的解决方案。可以将此服务作为独立解决方案实施，也可以与 IBM Spectrum Protect 环境集成，以便卸载用于长期存储和数据监管的副本。
+{{site.data.keyword.IBM}} Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务为虚拟环境的数据保护、数据复用和数据恢复提供高效、可扩展的解决方案。可以将此服务作为独立解决方案实施，也可以与 IBM Spectrum Protect 环境集成，以便卸载用于长期存储和数据监管的副本。
 
 **可用性**：此服务仅可用于运行 vSphere 6.5 以及部署在（或升级到）V2.2 或更高发行版的实例。
 
@@ -27,12 +27,12 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并
 ### vCenter 资源
 
 * 运行 IBM Spectrum Protect Plus 服务器的服务器 VM
-   * 操作系统：Linux 3.10.0-693.11.1.el7.x86_64
+   * Linux 3.10.0-693.11.1.el7.x86_64 操作系统
    * 4 个 2.0 GHz 核心
    * 32 GB RAM
    * 370 GB 磁盘
 * 运行 IBM Spectrum Protect Plus vSnap 服务器和 VADP 代理的辅助 VM
-   * 操作系统：Linux 3.10.0-693.11.1.el7.x86_64
+   * Linux 3.10.0-693.11.1.el7.x86_64 操作系统
    * 根据所选存储器大小和 [IBM Spectrum Protect Plus 蓝图](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)中的大小调整指南而配置的 CPU 和 RAM
    * 150 GB 磁盘
 
@@ -67,14 +67,14 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并
 
   部署在（或升级到）V2.2 或更高发行版的 Cloud Foundation 实例和 vCenter Server 实例在 VMware 中有 `NFS.MaxVolumes` 参数设置。此参数定义 ESXi 服务器上的最大 NFS 安装数，并可设置为最大值 256（特定于 ESXi 服务器版本）。有关更多信息，请参阅[增大定义 ESXi/ESX 主机上 NFS 最大挂载量的默认值](https://kb.vmware.com/s/article/2239)。
 
-  在实例的缺省集群中的每个 ESXi 服务器上，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务最多可以使用十一个 NFS 卷。此外，该服务将创建瞬态 NFS 安装以用于备份和复原。因此，必须将 NFS 安装数设置为最小值 64，以确保可以成功安装并运行此服务。
+  在实例的缺省集群中的每个 ESXi 服务器上，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务最多可以使用 11 个 NFS 卷。此外，该服务将创建瞬态 NFS 安装以用于备份和复原。因此，必须将 NFS 安装数设置为最小值 64，以确保可以成功安装并运行此服务。
 
 ## 除去 IBM Spectrum Protect Plus on IBM Cloud 时的注意事项
 
 除去 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务之前，请查看以下注意事项：
-* 确保除去所有备份作业配置，并确保不存在任何活动的备份或复原操作。
+* 确保除去所有备份作业配置以及活动的备份或复原操作。
 * 除去此服务时，将从 IBM Spectrum Protect Plus VM 中除去用于备份存储库的存储器，并取消存储器订单，这会永久删除备份存储库数据。
-* 除去此服务时，还会除去为此服务订购的备份存储器。因此，在除去服务期间，所有备份都会变得不可访问。
+* 除去此服务时，还会除去为此服务订购的备份存储器。在除去服务期间，所有备份都会变得不可访问。
 
 ### 相关链接
 

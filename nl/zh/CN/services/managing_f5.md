@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -14,7 +14,8 @@ lastupdated: "2018-07-19"
 
 要管理 F5 on {{site.data.keyword.cloud}} 服务，请使用相应凭证（可以在 F5 on {{site.data.keyword.cloud_notm}} 服务详细信息页面上找到）登录到主或辅助 BIG-IP Web UI 控制台。
 
-有关查看服务详细信息的信息，请参阅以下主题：
+有关查看服务详细信息的更多信息，请参阅：
+
 * [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
 * [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
 

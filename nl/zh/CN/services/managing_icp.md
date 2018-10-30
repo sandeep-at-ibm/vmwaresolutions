@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-31"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -36,7 +36,7 @@ lastupdated: "2018-08-31"
 5. 向下滚动页面，然后在**订购其他服务**下，单击 **IBM Cloud Private Hosted** 卡。
 6. 在 **IBM Cloud Private Hosted on vCenter Server on IBM Cloud** 页面上的**联系 IBM Cloud Private Hosted DevOps 团队**框中，输入您的需求描述，然后单击**请求咨询**。
 
-{{site.data.keyword.cloud_notm}} Private Hosted DevOps 代表会通过您的 {{site.data.keyword.cloud_notm}} 联系信息与您联系，帮助您快速入门。
+{{site.data.keyword.cloud_notm}} Private Hosted DevOps 代表会通过您的 {{site.data.keyword.cloud_notm}} 联系信息与您联系，以帮助您快速入门。
 
 ### 相关链接
 
