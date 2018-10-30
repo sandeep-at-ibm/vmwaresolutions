@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-14"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-09-14"
 
 可以向 VMware Cloud Foundation 实例添加您自己的集群以扩展计算和存储容量。在集群中，可以管理 ESXi 服务器以获得更佳的资源分配和高可用性。不再需要添加的集群时，可以从实例中将其删除。
 
-**可用性**：
+**可用性：**
 * 添加集群功能仅可用于部署在（或已升级到）V2.0 和更高发行版中的实例。
 * 删除集群功能仅可用于部署在（或已升级到）V2.3 和更高发行版中的实例。  
 
@@ -40,7 +40,7 @@ lastupdated: "2018-09-14"
 
 缺省情况下，集群的 {{site.data.keyword.CloudDataCent}} 位置设置为 Cloud Foundation 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 等工具。
 
-可供使用的数据中心取决于您为部署选择的裸机服务器配置。如果选择的是**定制**配置，那么所选数据中心包含更多 pod 时，还可以将集群部署到其他 {{site.data.keyword.cloud}} 基础架构 pod。此配置在部署了初始实例的缺省 {{site.data.keyword.cloud_notm}} 基础架构 pod 达到其最大容量时非常有用。
+可供使用的数据中心取决于您为部署选择的裸机服务器配置。如果选择的是**定制**配置，那么所选数据中心包含更多 pod 时，还可以将集群部署到其他 {{site.data.keyword.cloud_notm}} 基础架构 pod。此配置在部署了初始实例的缺省 {{site.data.keyword.cloud_notm}} 基础架构 pod 达到其最大容量时非常有用。
 
 **注**：**小型**和**大型**裸机服务器标准化配置使用缺省 pod，该 pod 不能更改。
 
@@ -81,20 +81,19 @@ lastupdated: "2018-09-14"
 
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
-* **vSAN 高速缓存磁盘的磁盘类型**：选择与所需高速缓存磁盘相应的选项。
+* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
 
-    **注**：如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
-* **vSAN 高速缓存磁盘数**：指定要添加的 vSAN 高速缓存磁盘数。
+* 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 
 ### 许可证设置
 
 可以为集群中的 VMware 组件（包括 VMware vSphere 和 VMware vSAN）指定许可选项：
-* 对于业务合作伙伴用户，会包含 vSphere 许可证 (Enterprise Plus Edition) 和 vSAN 许可证，该许可证以您的名义购买。但是，您必须指定 vSAN 许可证的版本。
-* 对于非业务合作伙伴用户，可以通过选择**购买时包含**对组件使用 IBM 提供的 VMware 许可证，或者可以通过选择**我将提供**并输入您自己的许可证密钥以自带许可证 (BYOL)。
+* 对于 IBM 业务合作伙伴用户，会包含 vSphere 许可证 (Enterprise Plus Edition) 和 vSAN 许可证，该许可证以您的名义购买。但是，您必须指定 vSAN 许可证的版本。
+* 对于非 IBM 业务合作伙伴用户，可以通过选择**购买时包含**对组件使用 IBM 提供的 VMware 许可证，或者可以通过选择**我将提供**并输入您自己的许可证密钥以自带许可证 (BYOL)。
 
 ## 向 Cloud Foundation 实例添加集群的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在 **Cloud Foundation 实例**表中，单击要添加集群的实例。
 
    **注**：确保实例处于**可供使用**状态。否则，无法向实例添加集群。
@@ -109,8 +108,8 @@ lastupdated: "2018-09-14"
    * 如果对裸机配置选择的是**预配置**，那么无法更改**小型**和**大型**裸机服务器配置的存储设置。
    * 如果对裸机配置选择的是**定制**，请指定 vSAN 容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
 8. 指定许可证密钥的提供方式：
-   * 对于业务合作伙伴用户，会包含 vSphere 许可证 (Enterprise Plus Edition) 和 vSAN 许可证，该许可证以您的名义购买。但是，您必须指定 vSAN 许可证的版本。
-   * 对于非业务合作伙伴用户，可以选择以下某个选项：
+   * 对于 IBM 业务合作伙伴用户，会包含 vSphere 许可证 (Enterprise Plus Edition) 和 vSAN 许可证，该许可证以您的名义购买。但是，您必须指定 vSAN 许可证的版本。
+   * 对于非 IBM 业务合作伙伴的用户，可以选择下列其中一个选项：
        * 如果希望以您自己的名义购买新许可证，请为组件选择**购买时包含**。对于 VMware vSAN，还要选择许可证版本。
        * 如果要对组件使用您自己的 VMware 许可证，请选择**我将提供**并输入组件的许可证密钥。
 9. 在**订单摘要**窗格上，验证集群配置，然后再添加集群。
@@ -126,9 +125,9 @@ lastupdated: "2018-09-14"
 
 **重要信息**：不能更改集群名称。更改集群名称可能会导致集群中添加或除去 ESXi 服务器的操作失败。
 
-## 查看 Cloud Foundation 实例中的集群
+## 查看 Cloud Foundation 实例中集群的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在 **Cloud Foundation 实例**表中，单击实例以查看其中的集群。
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，查看有关集群的摘要：
    * **名称**：集群的名称。
@@ -139,7 +138,7 @@ lastupdated: "2018-09-14"
    * **数据中心位置**：托管集群的数据中心。
    * **pod**：在其中部署集群的 pod。
    * **状态**：集群的状态。状态可以是下列其中一个值：
-     
+    
    <dl class="dl">
        <dt class="dt dlterm">正在初始化</dt>
        <dd class="dd">正在创建并配置集群。</dd>
@@ -197,7 +196,7 @@ lastupdated: "2018-09-14"
 
 ## 从 Cloud Foundation 实例中删除集群的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在 **Cloud Foundation 实例**表中，单击要从中删除集群的实例。
 
    **注**：确保实例处于**可供使用**状态。否则，无法从实例中删除集群。

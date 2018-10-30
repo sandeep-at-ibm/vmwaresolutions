@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-09-25"
 
 查看针对不同用户帐户供应的 VMware Cloud Foundation 实例的摘要和详细信息。
 
-## 查看 Cloud Foundation 实例摘要
+## 查看 Cloud Foundation 实例摘要的过程
 
 要查看针对用户帐户供应的所有 Cloud Foundation 实例的摘要，请完成以下步骤：
 
-1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在控制台条幅中，单击您的用户帐户图标，然后单击**帐户**字段以选择要检查其实例的用户帐户。
 3. 在 **Cloud Foundation 实例**表中，查看实例的列表：
 
@@ -45,7 +45,7 @@ lastupdated: "2018-09-25"
 |删除错误|删除实例时发生错误。|
 |已删除|实例已删除。|
 
-## 查看 Cloud Foundation 实例属性详细信息
+## 查看 Cloud Foundation 实例属性详细信息的过程
 
 要查看实例的属性详细信息，请执行以下操作：
 
@@ -70,7 +70,7 @@ lastupdated: "2018-09-25"
 |SDDC Manager 版本|实例的 SDDC Manager 的版本|
 |状态|实例的状态<br><br>显示的信息提供有关部署进度或对实例所执行操作的更新。如果发生问题，那么可能会显示一条消息以帮助您调查和解决问题。|
 
-## 查看 Cloud Foundation 实例的访问信息
+## 查看 Cloud Foundation 实例的访问信息的过程
 
 在**访问信息**下，查看与实例相关的组件的访问信息。显示的密码是系统生成的初始密码。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部对这些信息进行更改，那么不会在实例摘要页面上更新这些信息。
 
@@ -79,7 +79,7 @@ lastupdated: "2018-09-25"
 |组件|描述|
 |:------------- |:------------- |
 |AD/DNS IP|两个 AD 服务器的 IP 地址|
-|AD/DNS FQDN|AD/DNS 服务器标准域名<br><br>**注**：可使用相同的管理员密码通过远程桌面连接到所有 AD/DNS 服务器。|
+|AD/DNS FQDN|AD/DNS 服务器标准域名<br><br>**注**：可使用相同的管理员密码通过远程桌面连接来连接到所有 AD/DNS 服务器。|
 |AD/DNS ADMIN（远程桌面）|对于主实例，会显示用于通过远程桌面连接访问 AD 服务器的用户名和密码。<br><br>对于辅助实例，单击**在主实例上查看**链接，以定向到主实例上的用户名和密码信息。<br><br>**注**：将辅助实例添加到主 DNS 域并进行复制后，主实例上的本地管理员密码可能会覆盖辅助实例上的本地管理员密码。通过单击**在主实例上查看**链接，您可访问正确的管理员密码。|
 |NSX Manager IP|NSX Manager 的 IP 地址|
 |NSX Manager FQDN|NSX Manager 标准域名|
@@ -94,7 +94,7 @@ lastupdated: "2018-09-25"
 |vCenter SSH|可用于通过 SSH 连接访问 vCenter Server VM 的用户名和密码|
 |vCenter ADMIN|可用于通过 vSphere Web Client 登录到 vCenter Server 的 VMware vCenter Single Sign-On 用户名和密码|
 
-## 查看 Cloud Foundation 实例的部署历史记录
+## 查看 Cloud Foundation 实例的部署历史记录的过程
 
 单击左侧导航窗格中的**部署历史记录**，以查看实例的部署历史记录。
 

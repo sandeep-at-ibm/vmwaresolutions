@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-09-27"
 
 ---
 
 # 订购 Cloud Foundation 实例
 
-要部署具有标准计算、存储和网络配置的统一软件定义数据中心 (SDDC) 平台，请订购 VMware Cloud Foundation 实例。在初始订购中，还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html)。
+要部署具有标准计算、存储和网络配置的统一软件定义数据中心 (SDDC) 平台，请订购 VMware Cloud Foundation 实例。在初始订购期间，还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html)。
 
 ## 需求
 
@@ -86,17 +86,17 @@ lastupdated: "2018-09-26"
 ## 存储设置
 
 对于 Cloud Foundation 实例，可以仅订购 VMware vSAN 存储器。
-* 选择**预配置**裸机服务器配置时，存储设置已标准化且无法更改：
+
+选择**预配置**裸机服务器配置时，存储设置已标准化且无法更改：
   * 对于**小型**裸机服务器配置，会订购 2 个 1.9 TB SSD SED 磁盘驱动器。
   * 对于**大型**裸机服务器配置，会订购 4 个 3.8 TB SSD SED 磁盘驱动器。
-* 选择**定制**裸机服务器配置时，可以定制实例的 VMware vSAN 存储器。请指定以下 vSAN 设置：
 
+选择**定制**裸机服务器配置时，可以定制实例的 VMware vSAN 存储器。请指定以下 vSAN 设置：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
-* **vSAN 高速缓存磁盘的磁盘类型**：选择与所需高速缓存磁盘相应的选项。
+* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
 
-    **注**：如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
-* **vSAN 高速缓存磁盘数**：指定要添加的 vSAN 高速缓存磁盘数。
+* 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 
 ## 网络接口设置
 
@@ -228,7 +228,8 @@ lastupdated: "2018-09-26"
 
 查看和管理订购的 Cloud Foundation 实例。
 
-**重要信息**：您只能通过 {{site.data.keyword.vmwaresolutions_short}} 控制台管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能通过 {{site.data.keyword.slportal}} 或在该控制台外部通过其他任何方法进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。
+如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 
