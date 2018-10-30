@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-14"
 
 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户先前称为 IBM SoftLayer 帐户，用于登录到 {{site.data.keyword.cloud_notm}} 基础架构客户门户网站，该门户网站提供了某种额外的功能来管理基础架构产品和服务。要注册 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户，请将 {{site.data.keyword.cloud_notm}} 帐户升级到现买现付类型的帐户。
 
-### 过程
+### 注册 IBM Cloud 帐户的过程
 
 1. 使用 **IBM 标识**登录到 {{site.data.keyword.vmwaresolutions_short}} 控制台。
 2. 单击条幅左侧的**管理 > 计费和使用情况 > 计费**。

@@ -24,7 +24,7 @@ Fortinet on {{site.data.keyword.cloud_notm}} 服务现在可用于 Cloud Foundat
 
 ## Veeam on IBM Cloud 服务
 
-此发行版引入了 Veeam on {{site.data.keyword.cloud_notm}} 服务，此服务可以备份管理组件和工作负载。新服务将取代集成到低于 V1.8 的发行版中以用于仅备份管理组件的先前 Veeam VSI。
+此发行版引入了 Veeam on {{site.data.keyword.cloud_notm}} 服务，此服务可以同时备份管理组件和工作负载。此新服务将取代仅备份管理组件且集成在 V1.8 之前发行版中的先前 Veeam VSI。
 
 由于此更改，虽然 1.8 之前的实例中的 Veeam VSI 保持运行，但实例的备份点在 {{site.data.keyword.vmwaresolutions_short}} 控制台中不再可用，您必须创建支持凭单以获取有关复原的帮助。
 

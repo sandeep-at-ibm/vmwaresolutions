@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-10-01"
 
 ---
 
@@ -67,7 +67,7 @@ lastupdated: "2018-09-20"
 
 ### 从 vCenter Server 实例中除去 Hybridity Bundle
 
-现在，您可以从 vCenter Server 实例中除去 Hybridity Bundle 许可证。为此，您需要将 VMware NSX 和 VMware vSAN 租赁许可证密钥替换为自带许可证 (BYOL) 密钥，并开具支持凭单以取消租用许可证的费用。
+现在，您可以从 vCenter Server 实例中除去 Hybridity Bundle 许可证。为此，您需要将 VMware NSX 和 VMware vSAN 租用许可证密钥替换为自带许可证 (BYOL) 密钥，并开具支持凭单以取消租用许可证的费用。
 
 有关更多信息，请参阅[从 vCenter Server 实例中除去 Hybridity Bundle](../vcenter/vc_hybrid_deletingbundle.html)。
 
@@ -119,14 +119,23 @@ lastupdated: "2018-09-20"
 
 ### VMware HCX on IBM Cloud
 
-当前发行版在所有新部署的实例上安装 VMware HCX 3.5.1 R106。有关 HCX 3.5.1 R106 中新增功能的更多信息，请参阅 [VMware NSX Hybrid Connect 文档](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html)。
+当前发行版在所有新部署的实例上安装 VMware HCX 3.5.1。有关 HCX 3.5.1 中新增功能的更多信息，请参阅 [VMware NSX Hybrid Connect 文档](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html)。
+
+### vSphere ESXi V6.5 update 2c 的 Zerto on IBM Cloud 支持
+
+如果将现有主机更新到 vSphere ESXi V6.5 update 2，并且先前已安装 Zerto on {{site.data.keyword.cloud_notm}}，那么 Zerto Virtual Replication 控制台可能会在 Zerto Virtual Replication 设备 (VRA) 状态下显示`不支持的 ESX 版本`警告消息。
+
+有关如何解决此警告消息的更多信息，请参阅：
+
+* [Zerto Virtual Replication 互操作性矩阵](http://s3.amazonaws.com/zertodownload_docs/6.0_Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf)
+* [在完全 ZVR 更新之前更新 ZVM，以支持 Zerto 核准的主机发行版](https://www.zerto.com/myzerto/knowledge-base/updating-a-zvm-to-support-zerto-approved-host-releases-prior-to-a-full-zvr-update/)
 
 ## 新增和更新的文档
 
 ### 参考体系结构文档
 {{site.data.keyword.vmwaresolutions_short}} 体系结构文档已更新，包含了解管理和运行 VMware 实例的责任的重要注意事项。
 
-有关更多信息，请参阅 [VMware 实例的部署后注意事项](../archiref/solution/solution_considerations.md)。
+有关更多信息，请参阅 [VMware 实例的部署后注意事项](../archiref/solution/solution_considerations.html)。
 
 ## 用户界面更新和增强功能
 

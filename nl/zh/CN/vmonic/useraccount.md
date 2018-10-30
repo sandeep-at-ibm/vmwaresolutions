@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,10 +22,9 @@ lastupdated: "2018-08-16"
 * 要使用的 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](slaccountrequirement.html)。
 * 如果 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户中的 API 密钥发生更改，那么必须在 {{site.data.keyword.vmwaresolutions_short}} 控制台的**设置**页面上更新密钥。
 
-   **重要信息**：您负责确保**设置**页面上保存的 API 密钥正确且最新。
-   否则，需要 API 密钥验证的操作可能会失败。
+   **重要信息**：您负责确保**设置**页面上保存的 API 密钥正确且最新。否则，需要 API 密钥验证的操作可能会失败。
 
-## 过程
+## 管理用户帐户和设置的过程
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**设置**。
 2. 在**通知**区域中，指定通知设置。

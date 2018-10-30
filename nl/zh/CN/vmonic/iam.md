@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-28"
 
 ---
 
 # 使用 IAM 管理用户访问权
 
-帐户中用户对 {{site.data.keyword.vmwaresolutions_full}} 服务实例的访问权通过 {{site.data.keyword.cloud}} Identity and Access Management (IAM) 进行控制。对于访问帐户中 {{site.data.keyword.vmwaresolutions_short}} 服务的每个用户，必须为其分配定义了 IAM 用户角色的访问策略。
+帐户中用户对 {{site.data.keyword.vmwaresolutions_full}} 服务实例的访问权通过 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 进行控制。对于访问帐户中 {{site.data.keyword.vmwaresolutions_short}} 服务的每个用户，必须为其分配定义了 IAM 用户角色的访问策略。
 
 访问策略确定用户可在所选服务或实例的上下文中执行的操作。允许的操作由 {{site.data.keyword.cloud_notm}} 服务作为允许在该服务上执行的操作进行定制和定义。然后，这些操作将映射到 IAM 用户角色。
 

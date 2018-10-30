@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-08-14"
 ## 我需要将哪些用户帐户用于 IBM Cloud for VMware Solutions？
 
 * **IBM 标识帐户**。需要此帐户才能访问 {{site.data.keyword.vmwaresolutions_short}} 控制台。控制台是与 {{site.data.keyword.slportal}} 分开的独立用户界面。有关更多信息，请参阅[入门](../index.html)。
-* **{{site.data.keyword.cloud_notm}} 帐户**。需要此帐户才能进行供应。您可以使用现有 **IBM 标识**或创建新的 **IBM 标识**来注册 {{site.data.keyword.cloud_notm}} 帐户。 
+* **{{site.data.keyword.cloud_notm}} 帐户**。需要此帐户才能进行供应。您可以使用现有 **IBM 标识**或创建新的 **IBM 标识**来注册 {{site.data.keyword.cloud_notm}} 帐户。
 * **{{site.data.keyword.cloud_notm}} 基础架构帐户**。此帐户先前称为 **IBM SoftLayer** 帐户，用于登录到 {{site.data.keyword.cloud_notm}} 基础架构客户门户网站，该门户网站提供了某种额外的功能来管理基础架构产品和服务。您可以通过将 **{{site.data.keyword.cloud_notm}} 帐户**升级到现买现付类型的帐户，或通过将现有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户与 {{site.data.keyword.cloud_notm}} 帐户链接，获取 {{site.data.keyword.cloud_notm}} 基础架构帐户。要使用的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须满足特定需求。有关更多信息，请参阅[注册必需的帐户](signing_softlayer_account.html)和 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](slaccountrequirement.html)。
 
 ## 如何将我的 IBM Cloud Infrastructure 凭证与 IBM Cloud for VMware Solutions 控制台相关联？
@@ -52,7 +52,7 @@ lastupdated: "2018-08-14"
 
 缺省情况下，VMware vSphere DRS（分布式资源调度程序）和 VMware HA（高可用性）已启用。但 VMware 的最佳实践建议您将三个 NSX Controller 分别放在单独的节点上。
 
-在双节点最低部署中，一个节点有一个 NSX Controller，另一个节点有两个 NSX Controller。如果带有两个 NSX Controller 的节点关闭，那么 NSX Controller 操作将置于只读方式，并且新的 VM（虚拟机）或 vMotion VM 可能会遇到联网问题。
+在双节点最低部署中，一个节点有一个 NSX Controller，另一个节点有两个 NSX Controller。如果带有两个 NSX Controller 的节点关闭，那么 NSX Controller 操作将置于只读模式，并且新的 VM（虚拟机）或 vMotion VM 可能会遇到联网问题。
 
 将第三个节点添加到双节点集群后，vCenter Server 会自动在这三个节点之间重新均衡三个 NSX Controller，并创建高可用性环境。
 
@@ -75,7 +75,7 @@ IBM 通过按需部署 IBM CloudDriver 虚拟服务器实例 (VSI)，提供 IBM 
 * 对于 VMware Cloud Foundation 实例，将通过 {{site.data.keyword.vmwaresolutions_short}} 控制台提供对 vSphere ESXi、NSX、vCenter、Platform Services Controller 和 SDDC Manager 组件的更新。
 * 对于 VMware vCenter Server 实例：
   * 对于部署或升级到 V2.1 或更高版本的实例，将使用 VMware 中最近（但不一定是最新）的 ESXi 更新，对新部署的 ESXi 服务器和集群进行修补。
-  * 您负责对 VMware 组件执行其他所有更新，包括确保新部署的 ESXi 服务器和集群都具有所需的所有最新更新。
+  * 您负责对 VMware 组件执行其他所有更新，包括确保新部署的 ESXi 服务器和集群都具有全部所需的最新更新。
   * 对于部署到 V2.0 或更高版本的实例，VMware Update Manager (VUM) 将集成到 vCenter Server 中。可以将 VUM 配置为从 VMware 下载 ESXi 更新。
 
 有关更多信息，请参阅以下资源：
