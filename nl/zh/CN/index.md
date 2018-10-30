@@ -97,7 +97,7 @@ lastupdated: "2018-09-07"
     </tr>
     <tr>
        <td>[VMware Federal on IBM Cloud](vcenter/vc_fed_overview.html)</td>
-       <td>VMware Federal on {{site.data.keyword.cloud_notm}} 产品除了提供用于确保已部署实例安全的选项、除去敏感信息以及用于持续访问实例以获取管理功能的开放管理连接外，还支持订购基本 vCenter Server 实例。</td>
+       <td>VMware Federal on {{site.data.keyword.cloud_notm}} 产品除了提供用于确保已部署实例安全的选项、除去敏感信息以及用于持续访问实例以获取管理功能的开放式管理连接外，还支持订购基本 vCenter Server 实例。</td>
     </tr>
   </table>
 
