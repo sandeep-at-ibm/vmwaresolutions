@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
 # Veeam on IBM Cloud 概述
 
-Veeam on {{site.data.keyword.cloud}} 服务可与 VMware 系统管理程序无缝集成，以帮助企业实现高可用性。此服务可为应用程序和数据提供恢复点和时间目标。在完成配置后的 15 分钟内就会提供恢复点和时间目标。通过使用此服务，您可以在 Veeam 控制台中直接控制基础架构的所有虚拟机 (VM) 的备份和复原。
+Veeam on {{site.data.keyword.cloud}} 服务可与 VMware 系统管理程序无缝集成，以帮助企业实现高可用性。此服务可为应用程序和数据提供恢复点和时间目标。在完成配置后的 15 分钟内就会提供恢复点和时间目标。通过使用此服务，您可在 Veeam 控制台中直接控制基础架构的所有虚拟机 (VM) 的备份和复原。
 
 **可用性**：此服务仅可用于在 V1.8 或更高发行版中部署的实例。
 
@@ -50,7 +50,7 @@ Veeam Backup and Replication 9.5 Enterprise Plus（10、25、50、100 或 200 �
 
 ## 除去 Veeam on IBM Cloud 时的注意事项
 
-在除去 Veeam on {{site.data.keyword.cloud_notm}} 服务之前，请注意，除去此服务将停止所有备份（包括管理 VM 的备份），并且将删除所有先前的备份（此删除操作不可撤销）。如果管理 VM 后续损坏，将无法对其进行复原。
+除去 Veeam on {{site.data.keyword.cloud_notm}} 服务将停止所有备份并删除所有先前的备份。管理 VM 的备份将停止，并且删除先前备份的操作不可撤销。如果管理 VM 损坏，将无法对其进行复原。
 
 ### 相关链接
 

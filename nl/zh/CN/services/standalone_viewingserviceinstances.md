@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2018-07-20"
 
 使用此过程可查看针对内部部署使用而订购的内部部署 HCX on {{site.data.keyword.cloud}} 实例以及有关这些实例的详细信息。
 
-## 过程
+## 查看内部部署 VMware HCX on IBM Cloud 实例的过程
 
-在左侧导航窗格中，单击**部署的实例**，然后向下滚动到**内部部署 HCX 实例**表，以查看有关所订购实例的信息：
+在左侧导航窗格中，单击**已部署的实例**，然后向下滚动到**内部部署 HCX 实例**表，以查看有关所订购实例的信息：
 
 表 1. 内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例项
 

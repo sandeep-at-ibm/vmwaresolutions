@@ -13,7 +13,7 @@ lastupdated: "2018-07-19"
 ## 访问 HCX on IBM Cloud 管理控制台
 
 要管理 HCX on {{site.data.keyword.cloud}} 服务，必须访问 HCX 云控制台或 HCX Manager 管理控制台：
-1. 使用 {{site.data.keyword.cloud_notm}} 基础架构 VPN 或跳跃服务器来允许访问 HCX Manager 虚拟设备 (HCX Manager) 的 IP 地址。可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台上 HCX on {{site.data.keyword.cloud_notm}} 服务详细信息页面中找到该 IP 地址。
+1. 使用 {{site.data.keyword.cloud_notm}} 基础架构 VPN 或跳板机来允许访问 HCX Manager 虚拟设备 (HCX Manager) 的 IP 地址。可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台上 HCX on {{site.data.keyword.cloud_notm}} 服务详细信息页面中找到该 IP 地址。
 2. 要访问 HCX 云控制台，请单击 HCX on {{site.data.keyword.cloud_notm}} 服务详细信息页面上的**查看 HCX 云控制台**，然后使用 vCenter Server 凭证登录。
 3. 要访问 HCX Manager 管理控制台，请单击 HCX on {{site.data.keyword.cloud_notm}} 服务详细信息页面上的**查看 HCX Manager 管理控制台**，然后使用此服务详细信息页面上列出的 HCX Manager 凭证进行登录。
 
