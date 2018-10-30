@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-09-27"
 
 ---
 
 # 订购 vCenter Server 实例
 
-要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware vCenter Server 实例。在初始订购中，还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html)。
+要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware vCenter Server 实例。在初始订购期间，还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html)。
 
 ## 需求
 
@@ -59,7 +59,7 @@ lastupdated: "2018-09-26"
 
 对于非业务合作伙伴用户，可以通过选择**购买时包含**对这些组件使用 IBM 提供的 VMware 许可证，或者可以通过选择**我将提供**并输入您自己的许可证密钥以自带许可证 (BYOL)。
 
-**注意**：
+**注意：**
 * 需要至少具有 8 个 CPU 的许可证，即用于 4 个服务器，每个服务器 2 个 CPU。每个 VMware 组件的许可证选项会应用于基本实例以及日后添加到该实例的任何 ESXi 服务器。因此，请确保您的许可证在基础架构中支持未来的容量扩展。
 * 用户界面上指示了最低许可证版本。如果支持不同的组件版本，那么可以选择所需的版本。您负责确保提供的许可证密钥对于选择的每个 VMware 组件都正确。
 * 对于 vSphere，在订购时会发生许可费用，但随后会将该许可费用计入您的帐户。
@@ -115,13 +115,11 @@ lastupdated: "2018-09-26"
 ### vSAN 存储器
 
 vSAN 仅可用于**定制**裸机配置。请指定以下 vSAN 选项：
-
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
-* **vSAN 高速缓存磁盘的磁盘类型**：选择与所需高速缓存磁盘相应的选项。
+* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
 
-    **注**：如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
-* **vSAN 高速缓存磁盘数**：指定要添加的 vSAN 高速缓存磁盘数。
+* 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 * **vSAN 许可证**：通过选择**购买时包含**对 vSAN 组件使用 IBM 提供的 VMware 许可证，或者通过选择**我将提供**并输入您自己的许可证密钥以自带许可证 (BYOL)。
 
 ### NFS 存储器
@@ -192,7 +190,7 @@ vSAN 仅可用于**定制**裸机配置。请指定以下 vSAN 选项：
 #### 订购新的 VLAN
 选择此项可订购一个新的公用 VLAN 和两个新的专用 VLAN。
 
-#### 选择现有 VLAN 
+#### 选择现有 VLAN
 根据选择的 {{site.data.keyword.CloudDataCent_notm}}，可能会有现有公用和专用 VLAN 可用。
 
 选择复用现有公用和专用 VLAN 时，请指定 VLAN 和子网：
@@ -283,7 +281,8 @@ vSAN 仅可用于**定制**裸机配置。请指定以下 vSAN 选项：
 
 查看和管理订购的 vCenter Server 实例。
 
-**重要信息**：您只能通过 {{site.data.keyword.vmwaresolutions_short}} 控制台管理 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能通过 {{site.data.keyword.slportal}} 或在该控制台外部通过其他任何方法进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。
+如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件

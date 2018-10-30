@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-05"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -27,7 +27,7 @@ lastupdated: "2018-09-05"
 
 ## 添加 ESXi 服务器的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要扩展容量的实例。
 3. 在左侧导航窗格上，单击**基础架构**。
 4. 在**集群**表中，单击要在其中添加 ESXi 服务器的集群。
@@ -48,11 +48,11 @@ lastupdated: "2018-09-05"
 * 使用 NFS 存储器的 vCenter Server 实例必须至少有 2 个 ESXi 服务器，使用 vSAN 存储器的 vCenter Server 实例必须至少有 4 个 ESXi 服务器。
 * 在除去安装有 F5 on {{site.data.keyword.cloud_notm}} 或 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务的 ESXi 服务器之前，必须将 F5 BIG-IP 和 FortiGate VM 迁移到与托管 VM 的 ESXi 服务器不同的 ESXi 服务器。
 * 在除去安装了 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服务的 ESXi 服务器之前，请确保没有任何活动（失败或正在进行）的备份或复原操作，因为这些活动的操作可能会阻止除去 ESXi 服务器。
-* 除去 ESXi 服务器时，这些服务器会置于维护模式，接着会迁移在这些服务器上运行的所有虚拟机 (VM)，然后从 vCenter Server 中除去这些服务器。为了最大程度地控制 VM 的重新定位，建议您先将要除去的 ESXi 服务器置于维护模式，然后使用 VMware vSphere Web Client 来手动迁移在这些 ESXi 服务器上运行的 VM。在此之后，使用 {{site.data.keyword.vmwaresolutions_short}} 控制台来除去 ESXi 服务器。
+* 除去 ESXi 服务器时，会将这些服务器置于维护模式，接着会迁移在这些服务器上运行的所有虚拟机 (VM)，然后从 vCenter Server 中除去这些服务器。为了最大程度地控制 VM 的重新定位，建议您先将要除去的 ESXi 服务器置于维护模式，然后使用 VMware vSphere Web Client 来手动迁移在这些 ESXi 服务器上运行的 VM。在此之后，使用 {{site.data.keyword.vmwaresolutions_short}} 控制台来除去 ESXi 服务器。
 
 ## 除去 ESXi 服务器的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要压缩容量的实例。
 3. 在左侧导航窗格上，单击**基础架构**。
 4. 在**集群**表中，单击要从中除去 ESXi 服务器的集群。
@@ -64,7 +64,7 @@ lastupdated: "2018-09-05"
 2. 系统将通过电子邮件通知您，正在处理除去 ESXi 服务器的请求。在控制台上，与 ESXi 服务器关联的集群的状态会更改为**正在修改**。
 3. {{site.data.keyword.cloud_notm}} 基础架构将在 {{site.data.keyword.cloud_notm}} 基础架构计费周期（通常为 30 天）结束时完全回收 ESXi 服务器。
 
-   **注意**：对于已除去的 ESXi 服务器，计费时间将持续到 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束时为止。
+   **注意**：在所除去 ESXi 服务器的 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束之前，仍然会对您计费。
 
 ### 相关链接
 

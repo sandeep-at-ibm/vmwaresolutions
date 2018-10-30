@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-02"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-09-24"
 
 ## vCenter Server with Hybridity Bundle 实例的可用服务
 
-以下服务可用于 vvCenter Server with Hybridity Bundle 实例。
+以下服务可用于 vCenter Server with Hybridity Bundle 实例。
 
 表 1. 可用于 vCenter Server with Hybridity Bundle 实例的服务
 
@@ -29,10 +29,10 @@ lastupdated: "2018-09-24"
 |[IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)|10.1.1 补丁 1| V2.2 和更高版本 |
 |[KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)|   | V2.2 和更高版本 |
 |[Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)|9.5u3| V1.8 和更高版本 |
-|[VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)|3.5.1 构建 8774389| V2.3 和更高版本 |
+|[VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)|3.5.1| V2.3 和更高版本 |
 |[Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)|5.5u4 补丁 2| V1.2 和更高版本 |
 
-## 向 vCenter Server with Hybridity Bundle 实例添加服务
+## 向 vCenter Server with Hybridity Bundle 实例添加服务的过程
 
 要将服务应用于 vCenter Server with Hybridity Bundle 实例，请单击表中的相应链接以查看服务的注意事项。然后，检查部署的组件，并遵循订购主题中的指示信息来下订单。
 
@@ -40,17 +40,17 @@ lastupdated: "2018-09-24"
 
 安装服务成功完成后，系统将通过电子邮件通知您，并且该服务会显示在实例详细信息的**服务**选项卡上，状态为**已安装**。
 
-## 查看 vCenter Server with Hybridity Bundle 实例的服务
+## 查看 vCenter Server with Hybridity Bundle 实例的服务的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要查看其服务的实例。
 3. 在左侧导航窗格上，单击**服务**。
 4. 在**服务**页面上，单击某个服务以查看相关信息，例如服务状态和其他详细信息。
 5. 根据查看的服务，可以使用服务详细信息上提供的凭证来访问服务控制台，并在其中管理该服务。
 
-## 除去 vCenter Server with Hybridity Bundle 实例的服务
+## 除去 vCenter Server with Hybridity Bundle 实例的服务的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要除去其服务的实例。
 3. 在左侧导航窗格上，单击**服务**。
 4. 在**服务**页面上，找到要除去的服务实例，然后单击**删除**图标。

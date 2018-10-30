@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -48,11 +48,11 @@ lastupdated: "2018-09-19"
   </tr>
 </table>
 
-## 对 vCenter Server 实例应用更新和补丁
+## 对 vCenter Server 实例应用更新和补丁的过程
 
 此过程适用于在 V2.1 或更高版本中部署的实例。对于在 V2.0 和更低版本中部署的实例，必须手动应用 VMware 更新。
 
-1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要更新的实例。
 3. 在**摘要**页面上，验证是否所有实例详细信息都正确显示。然后在左侧导航窗格上，单击**基础架构**以验证**基础架构**页面上的详细信息。
    如果未显示详细信息，这可能指示由于防火墙规则或其他网络问题而导致 IBM CloudDriver 虚拟服务器实例 (VSI) 发生连接问题。请解决该问题后，再继续下一步，否则更新可能会失败。
@@ -74,7 +74,7 @@ lastupdated: "2018-09-19"
    *  要安排未来更新，请单击更新条目的**操作**列中的溢出菜单图标，然后单击**安排更新**。选择要启动更新的日期、时间和时区。单击**确定**。
 7. 如果要在多站点部署配置中将更新应用于 vCenter Server 实例，那么会显示标题为**更新所需的步骤**的部分。此部分列出多站点部署中所有实例所需的更新操作。必须通过对每个步骤单击**应用更新**来按顺序完成这些步骤。必须等待上一步完成后，才能开始下一步。   
 
-## 升级到 vCenter Server with Hybridity Bundle 实例
+## 升级到 vCenter Server with Hybridity Bundle 实例的过程
 
 在 Hybridity Bundle 的许可证升级期间，如果 vCenter Server 实例当前使用的是 VMware NSX Base Edition，那么会自动升级到 VMware NSX Advanced Edition。
 
@@ -82,7 +82,7 @@ lastupdated: "2018-09-19"
 
 要将 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle，请完成以下步骤。
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要升级的实例。
 3. 在**摘要**页面上，验证是否所有实例详细信息都正确显示。然后在左侧导航窗格上，单击**基础架构**以验证**基础架构**页面上的详细信息。
    如果未显示详细信息，这可能指示由于防火墙规则或其他网络问题而导致 IBM CloudDriver VSI 发生连接问题。请解决该问题后，再继续下一步，否则更新可能会失败。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -65,13 +65,11 @@ lastupdated: "2018-09-20"
 ### vSAN 存储器设置
 
 vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请指定以下 vSAN 选项：
-
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
-* **vSAN 高速缓存磁盘的磁盘类型**：选择与所需高速缓存磁盘相应的选项。
+* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
 
-    **注**：如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
-* **vSAN 高速缓存磁盘数**：指定要添加的 vSAN 高速缓存磁盘数。
+* 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 * **vSAN 许可证**：选择 VMware vSAN 6.6 许可证版本（Advanced 或 Enterprise）。
 
 ### 许可证设置
@@ -96,7 +94,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 
 ## 向 vCenter Server with Hybridity Bundle 实例添加集群的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击实例以查看其中的集群。
 
    **注**：确保实例状态为**可供使用**。否则，无法向实例添加集群。
@@ -121,9 +119,9 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 
 **重要信息**：不能更改集群名称。更改集群名称可能会导致集群中添加或除去 ESXi 服务器的操作失败。
 
-## 查看 vCenter Server with Hybridity Bundle 实例中的集群
+## 查看 vCenter Server with Hybridity Bundle 实例中集群的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击实例以查看其中的集群。
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，查看有关集群的摘要：
   * **名称**：集群的名称。
@@ -190,7 +188,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 
 ## 从 vCenter Server with Hybridity Bundle 实例中删除集群的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要从中删除集群的实例。
 
    **注**：确保实例处于**可供使用**状态。否则，无法从实例中除去集群。
