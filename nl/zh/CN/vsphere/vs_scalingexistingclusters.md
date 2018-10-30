@@ -37,7 +37,7 @@ lastupdated: "2018-09-04"
 
 如果要扩展的集群尚未准备就绪，那么可能会收到错误消息。
 
-**注**：与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**部署的实例**页面。
+**注**：与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**已部署的实例**页面。
 
 ### 相关链接
 
