@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -31,7 +31,7 @@ lastupdated: "2018-09-25"
   <dt>单个管理控制台</dt>
   <dd>提供单个控制台，可部署、访问和管理 {{site.data.keyword.cloud_notm}} 上的 VMware 环境。</dd>
 </dl>
-s
+
 ## 部署产品
 
 {{site.data.keyword.vmwaresolutions_short}} 提供了 VMware 虚拟环境的标准化和可定制部署选项。提供了以下部署类型：
@@ -68,7 +68,7 @@ NetApp ONTAP Select 产品支持部署软件定义的存储器集群，以满足
 
 ### VMware Federal on IBM Cloud
 
-VMware Federal on {{site.data.keyword.cloud_notm}} 产品除了提供用于确保已部署实例安全的选项、除去敏感信息以及用于持续访问实例以获取管理功能的开放管理连接外，还支持订购基本 vCenter Server 实例。
+VMware Federal on {{site.data.keyword.cloud_notm}} 产品除了提供用于确保已部署实例安全的选项、除去敏感信息以及用于持续访问实例以获取管理功能的开放式管理连接外，还支持订购基本 vCenter Server 实例。
 
 有关更多信息，请参阅 [VMware Federal on {{site.data.keyword.cloud_notm}} 概述](../vcenter/vc_fed_overview.html)。
 

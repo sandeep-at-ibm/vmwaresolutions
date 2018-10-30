@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -19,8 +19,7 @@ lastupdated: "2018-09-25"
 
 ## 数据表
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
+* [{{site.data.keyword.vmwaresolutions_full}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 
 ## 平台扩展
 
@@ -36,7 +35,7 @@ lastupdated: "2018-09-25"
 ## 视频和演示
 
 * [资源和视频](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources)
-* [数字技术合作](https://ibm-dte.mybluemix.net/ibm-vmware)
+* [数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)
 * [特色资源和案例研究](https://www.ibm.com/cloud/vmware/resources)
 
 ## 试用 IBM Cloud for VMware Solutions

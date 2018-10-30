@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -33,7 +33,7 @@ lastupdated: "2018-08-15"
 |vSAN 许可证版本|vSAN Advanced 或 Enterprise|vSAN Advanced 或 Enterprise|vSAN Advanced 或 Enterprise|vSAN Advanced 或 Enterprise|
 |附加组件服务|支持，不包括 HCX on {{site.data.keyword.cloud_notm}}。|支持，不包括 HCX on {{site.data.keyword.cloud_notm}}。可升级到 vCenter Server with Hybridity Bundle。|支持，包括 HCX on {{site.data.keyword.cloud_notm}}。|此解决方案的自动化不支持，但您可以使用并安装自己的软件。|
 
-**注**：
+**注：**
 
 <sup>1</sup> 根据经过验证的设计并在部署期间进行过验证。
 

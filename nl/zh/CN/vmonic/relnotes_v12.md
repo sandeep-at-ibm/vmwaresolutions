@@ -43,9 +43,9 @@ VMware ESXi 的新版本为 vSphere 6.0 u2 p03，是从前发行版中的 ESXi 6
 * [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
 
-## 实例订购流程的增强功能
+## 实例订购过程的增强功能
 
-通过以下增强功能，极大改进了实例订购流程：
+通过以下增强功能，极大改进了实例订购过程：
 * 对于 Cloud Foundation 实例和 vCenter Server 实例，采用了新的验证检查，以确保您使用的 SoftLayer® 用户帐户具有必需的用户许可权，VLAN 生成功能已启用，以及提供了正确的 API 密钥。如果不满足任一需求，您都会直接在用户界面上收到用于解决问题的相关指示信息。
 *  对于 vCenter Server 实例，优化了在其中选择实例组件的订单，以便仅显示具有您需要的可用硬件和 ESXi 服务器的数据中心。此更改可最大限度降低稍后发生错误的可能性。
 
