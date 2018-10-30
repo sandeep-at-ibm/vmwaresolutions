@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2018-09-25"
 要托管这些备份，请使用以下步骤将 Linux 文件服务器部署到集群中：
 
 1. 从 {{site.data.keyword.cloud_notm}} 基础架构订购专用可移植子网，并在系统组件所在的 VLAN 上找到该子网。这是主机的管理 IP 地址所在的专用 VLAN。
-2. 将操作系统映像上传到 VMware 管理数据存储，例如 {{site.data.keyword.cloud_notm}} 专用镜像中的 [Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window}。
+2. 将操作系统映像上传到 VMware 管理数据存储，例如 {{site.data.keyword.cloud_notm}} 专用镜像中的 Ubuntu Server 18.04 LTS。
 3. 使用先前订购的专用可移植 IP 地址将此虚拟机 (VM) 部署到管理端口组上的集群中。确保此 VM 已配置为指向 AD/DNS 服务器，并可选择将此 VM 添加到子域的 DNS。
 4. 在此服务器上创建一个非 root 备份用户标识，并确保为文件传输配置并启动所有必需的服务。例如，FTP 或 SSH。
 5. 确保此 VM 包含在 Veeam 或 IBM Spectrum Protect Plus 管理备份作业中。
@@ -54,7 +54,7 @@ VMware vCenter Server 和 PSC 提供了使用各种协议[将数据库和配置�
 
 如果已将附加组件解决方案组件部署到您的实例，那么作为管理备份策略的一部分，还应计划备份这些组件：
 
-* Zerta Virtual Replication：Zerto Virtual Manager (ZVM) 系统部署为 {{site.data.keyword.cloud_notm}} 虚拟服务器实例 (VSI)，但 Veeam 或 IBM Spectrum Protect Plus 不支持其备份。如果灾难恢复策略需要您在不执行站点故障转移的情况下恢复 ZVM，那么应使用首选 Windows 备份解决方案来备份和复原 ZVM。
+* Zerto Virtual Replication：Zerto Virtual Manager (ZVM) 系统部署为 {{site.data.keyword.cloud_notm}} 虚拟服务器实例 (VSI)，但 Veeam 或 IBM Spectrum Protect Plus 不支持其备份。如果灾难恢复策略需要您在不执行站点故障转移的情况下恢复 ZVM，那么应使用首选 Windows 备份解决方案来备份和复原 ZVM。
 * F5 BIG-IP：F5 建议使用[基于文件的 F5 配置备份](https://support.f5.com/csp/article/K13132){:new_window}，您可以将其定向到文件服务器。
 * FortiGate Security Appliance 或 VM：Fortinet 建议使用[基于文件的 FortiGate 配置备份](http://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}，您可以将其定向到文件服务器。
 * HyTrust Cloud Control 和 Data Control：HyTrust 支持对 HyTrust 服务器设备进行基于映像和基于文件的备份。有关更多信息，请参阅 HyTrust 管理指南。

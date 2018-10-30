@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -35,7 +35,7 @@ vSphere ESXi 配置由以下方面构成：
 |时间同步| 使用 {{site.data.keyword.cloud}} NTP 服务器 |
 |主机访问|支持 DCUI、ESXi Shell 或 SSH|
 |用户访问| 本地认证和 MSAD |
-| 域名解析 |使用 DNS，如[公共服务设计](design_commonservice.html)中所述|
+| 域名解析 |使用 DNS，如[公共服务设计](design_commonservice.html)中所述。|
 
 vSphere 集群包含用于管理针对用户工作负载的中央云和计算资源的虚拟机 (VM)。
 
@@ -73,7 +73,7 @@ vSAN 采用以下组件：
 
 ### vSAN 的虚拟网络设置
 
-对于此设计，vSAN 流量会在专用私有、 VLAN 上的 ESXi 主机之间遍历。连接到专用网络交换机的两个网络适配器在 vSphere 中配置为 vSphere 分布式交换机 (vDS)，两个网络适配器均作为上行链路。为 vSAN VLAN 配置的专用 vSAN 内核端口组位于 vDS 中。对专用 vDS 启用了巨型帧 (MTU 9000)。
+对于此设计，vSAN 流量会在专用私有、VLAN 上的 ESXi 主机之间遍历。连接到专用网络交换机的两个网络适配器在 vSphere 中配置为 vSphere 分布式交换机 (vDS)，两个网络适配器均作为上行链路。为 vSAN VLAN 配置的专用 vSAN 内核端口组位于 vDS 中。对专用 vDS 启用了巨型帧 (MTU 9000)。
 
 vSAN 不会跨上行链路对流量进行负载均衡。因此，一个适配器处于活动状态，而另一个适配器处于备用状态以支持高可用性 (HA)。vSAN 的网络故障转移策略在物理网络端口之间配置为**显式故障转移**。
 
