@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-10-03"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-20"
 
 {{site.data.keyword.vmwaresolutions_full}}、VMware vCenter Server 和 VMware Cloud Foundation 产品不是受管服务。您负责所有软件组件的配置、安全性、管理和监视。借助对解决方案的完整管理访问权，您拥有强大的能力和灵活性，这需要在各种领域具备丰富的技术、管理和运作专业知识。在 {{site.data.keyword.cloud_notm}} 中管理 VMware 实例需要的规划和专业知识与规划内部部署实例时相同。软件定义的技术（例如，VMware NSX 和 VMware vSAN）大大简化了实例管理的某些方面，但这可能需要具备新的技能和工具，才能妥善进行管理和操作。将 {{site.data.keyword.cloud_notm}} 自动化 VMware 部署的能力、速度和可靠性与相应的操作规划和测试相结合，可确保快速成功地实现混合云。
 
-请查看以下注意事项，以了解您在部署实例前后须承担的管理和操作责任。 
+请查看以下注意事项，以了解您在部署实例前后须承担的管理和操作责任。
 
 **注**：以下列表并非详尽无遗。有关更多信息，请参阅 [IBM 管理的服务](../../services/managing_imi.html)。
 
@@ -58,7 +58,7 @@ lastupdated: "2018-09-20"
 - 使用您自己的认证中心 (CA) 为组件（例如，vCenter、VMware Platform Services Controller (PSC) 和 NSX Manager）生成证书。
 - 配置部署的服务。例如：
   - 对于 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}，请配置 AD 集成、访问控制、简单电子邮件传输协议 (SMTP) 设置和合规性策略。
-  - 对于 Zerto on {{site.data.keyword.cloud_notm}}，由于不支持网络地址转换程序 (NAT) 遍历，因此请规划 Zerta Virtual Replication Appliance (VRA) 通信的 IP 寻址和路由。请考虑使用隧道或重新部署 VRA，以便执行相应的寻址和路由。
+  - 对于 Zerto on {{site.data.keyword.cloud_notm}}，由于不支持网络地址转换程序 (NAT) 遍历，因此请规划 Zerto Virtual Replication Appliance (VRA) 通信的 IP 寻址和路由。请考虑使用隧道或重新部署 VRA，以便执行相应的寻址和路由。
   - 对于 Veeam on {{site.data.keyword.cloud_notm}} 和 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 等备份服务，请配置备份作业，（可选）配置其他存储器，以及配置监视警报。
   - 对于 F5 on {{site.data.keyword.cloud_notm}} 和 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 等联网和安全服务，请根据网络拓扑和其他需求来配置网络接口、证书、高可用性 (HA) 配置和规则。
 
@@ -76,7 +76,7 @@ lastupdated: "2018-09-20"
 
 完成以下步骤以确保正确规划软件维护。
 
-- 通过代理设置 VMware 更新管理器 (VUM) 以获取 VMware 更新。
+- 通过代理[设置 VMware Update Manager (VUM)](../vum/vum-intro.html) 以获取 VMware 更新。
 - 如果适用，请通过代理设置 vSAN，以维护 vSAN 硬件兼容性列表 (HCL) 数据库。
 - 针对 VUM 不支持的 VMware 组件，规划常规维护。例如，VMware vCenter、PSC 和 NSX。
 - 复查 vSphere Enhanced vMotion Compatibility (EVC) 配置。如果当前版本的 vSphere 不支持 EVC 用于您的硬件级别，那么说明您的集群可能未配置为启用 EVC。
@@ -121,4 +121,3 @@ lastupdated: "2018-09-20"
 * [解决方案概述](solution_overview.html)
 * [设计概述](design_overview.html)
 * [扩展容量](solution_scaling.html)
-
