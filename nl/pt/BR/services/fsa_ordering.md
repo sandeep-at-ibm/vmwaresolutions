@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-26"
 
 ---
 
 # Pedindo o FortiGate Security Appliance on IBM Cloud
 
-É possível pedir o serviço FortiGate Security Appliance on {{site.data.keyword.cloud}} ao pedir uma nova instância com o par de HA do FSA série 300 incluído ou incluindo o FSA série 300 em sua instância existente.
+É possível pedir o serviço FortiGate Security Appliance on {{site.data.keyword.cloud}} ao pedir uma nova instância com o par de HA de série FSA 300 incluso ou incluindo a série FSA 300 em sua instância existente.
 
 ## Pedindo o FortiGate Security Appliance on IBM Cloud para uma nova instância
 

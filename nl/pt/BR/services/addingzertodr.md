@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ O serviço Zerto on {{site.data.keyword.cloud}} integra os recursos de replicaç
 
 Os componentes a seguir são pedidos e incluídos no serviço Zerto on {{site.data.keyword.cloud_notm}}.
 
-**Nota**: os componentes do Zerto Virtual Manager são implementados somente no cluster padrão.
+**Nota:** os componentes do Zerto Virtual Manager são implementados somente no cluster padrão.
 
 ### VSIs
 

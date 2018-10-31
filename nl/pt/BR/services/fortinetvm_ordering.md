@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
 # Pedindo o FortiGate Virtual Appliance on IBM Cloud
 
-É possível pedir o serviço FortiGate Virtual Appliance on {{site.data.keyword.cloud}} ao pedir uma nova instância com o serviço incluído ou incluindo o serviço em sua instância existente.
+É possível pedir o serviço FortiGate Virtual Appliance on {{site.data.keyword.cloud}} ao pedir uma nova instância com o serviço incluso ou incluindo o serviço em sua instância existente.
 
 ## Pedindo o FortiGate Virtual Appliance on IBM Cloud para uma nova instância
 
@@ -44,14 +44,14 @@ O {{site.data.keyword.cloud_notm}}  fornece as seguintes opções de tamanho de 
 O modelo de licença para o FortiGate Virtual Appliance no {{site.data.keyword.cloud_notm}} oferece as seguintes opções:
 <dl class="dl">
         <dt class="dt dlterm">Standard FW</dt>
-        <dd class="dd">Este pacote inclui Inspeção de Pacote Stateful, Proteção de VLAN e Criação de Log Avançada, Regras de Firewall de Entrada/Saída, Rescisão de VPN SSL/IPSec e suporte contínuo.</dd>
+        <dd class="dd">Esse pacote configurável inclui Inspeção de Pacotes Stateful, Proteção de VLAN e Criação de Log Avançado, Regras de Firewall de Ingresso e Egresso, Encerramento de VPN SSL/IPSec e suporte contínuo.</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
-        <dd class="dd">Esse pacote configurável inclui todos os serviços de firewall padrão, além de NGFW IPS e filtragem da web, antivírus e antispam, reputação de domínio e de IP e os principais serviços de segurança FortiCare.</dd>
+        <dd class="dd">Esse pacote configurável inclui todos os serviços de firewall padrão além do NGFW IPS e Filtragem da web, AntiVirus e AntiSpam, Reputação de IP e Domínio e principais serviços de segurança do FortiCare.</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>
         <dd class="dd">Esse pacote configurável inclui todos os serviços de firewall padrão e UTM além do FortiSandbox Cloud e do Mobile Security.</dd>
 </dl>
 
-**Importante**: não é possível mudar o modelo de licença após a instalação do serviço. Para mudar o modelo de licença, deve-se remover o serviço existente e reinstalar o serviço selecionando uma opção de licença diferente.
+**Importante:** não é possível mudar o modelo de licença após a instalação do serviço. Para mudar o modelo de licença, deve-se remover o serviço existente e reinstalar o serviço selecionando uma opção de licença diferente.
 
 ### Links relacionados
 

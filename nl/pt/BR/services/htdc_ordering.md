@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-26"
 
 ---
 
 # Solicitando HyTrust DataControl no IBM Cloud
 
-É possível pedir o serviço HyTrust DataControl on {{site.data.keyword.cloud}} ao pedir uma nova instância com um par de HA de dispositivos HyTrust DataControl incluídos ou incluindo os dispositivos HyTrust DataControl em sua instância existente.
+É possível pedir o serviço HyTrust DataControl on {{site.data.keyword.cloud}} enquanto pede uma nova instância com um par de HA de dispositivos HyTrust DataControl incluso ou incluindo os dispositivos HyTrust DataControl em sua instância existente.
 
 ## Pedindo o HyTrust DataControl on IBM Cloud para uma nova instância
 

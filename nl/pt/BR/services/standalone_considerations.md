@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -32,7 +32,7 @@ Deve-se concluir as tarefas a seguir para uma instalação bem-sucedida da inst�
     3. Clique em **COPIAR LINK** e, em seguida, use esse link para fazer download do HCX Enterprise Client para um ambiente local com acesso ao ambiente do vSphere local.
 3. No VMware vSphere Web Client, implemente o HCX Enterprise Client como um dispositivo virtual do HCX Manager (HCX Manager) em seu ambiente local.
 
-   **Nota**: deve-se implementar o HCX Manager local em uma rede privada e permitir que ele acesse a rede pública. É possível usar um NSX Edge, Vyatta ou gateways semelhantes para permitir acesso à Internet ao HCX Manager local. Se os gateways usados para acesso à rede privada e acesso à rede pública forem diferentes, recomenda-se que você use o gateway padrão para permitir o acesso à rede pública e permitir que o **Console do Administrador do HCX Manager** crie uma rota estática para o acesso à rede privada.
+   **Nota:** deve-se implementar o HCX Manager no local em uma rede privada e permitir que ele acesse a rede pública. É possível usar um NSX Edge, Vyatta ou gateways semelhantes para permitir acesso à Internet ao HCX Manager local. Se os gateways usados para acesso à rede privada e acesso à rede pública forem diferentes, recomenda-se que você use o gateway padrão para permitir o acesso à rede pública e permitir que o **Console do Administrador do HCX Manager** crie uma rota estática para o acesso à rede privada.
 4. Após a conclusão da implementação do HCX Manager, use o **Console do Administrador do HCX Manager** para ativar o HCX Manager local. Para obter uma chave de ativação para o HCX Manager no local, peça uma instância do HCX on {{site.data.keyword.cloud_notm}} no local no console do {{site.data.keyword.vmwaresolutions_short}}. Para obter mais informações, veja [Pedindo instâncias do HCX locais](../services/standalone_orderingserviceinstances.html).
 5. Se você usou um certificado SSL autoassinado ao pedir o HCX no serviço {{site.data.keyword.cloud_notm}}, deverá importar o certificado para o HCX Manager local concluindo as etapas a seguir:
     1. No **Console do Administrador do HCX Manager** local, clique na guia **Administração**.
@@ -52,7 +52,7 @@ Revise as considerações a seguir antes de excluir uma instância do HCX on {{s
     2. Assegure-se de que todas as redes estendidas sejam removidas.
     3. Assegure-se de que todos os componentes de interconexão com sites em nuvem emparelhados sejam removidos.
 
-   **Importante**: deve-se concluir todas as considerações antes de continuar com a próxima etapa. Caso contrário, a licença para a instância do HCX on {{site.data.keyword.cloud_notm}} no local é cancelada, razão pela qual migrações não podem ser executadas e erros podem ocorrer nos componentes do HCX.  
+   **Importante:** deve-se concluir todas as considerações antes de continuar com a próxima etapa. Caso contrário, a licença para a instância do HCX on {{site.data.keyword.cloud_notm}} no local é cancelada, razão pela qual migrações não podem ser executadas e erros podem ocorrer nos componentes do HCX.  
 2. No console do {{site.data.keyword.vmwaresolutions_short}}, exclua a instância do HCX on {{site.data.keyword.cloud_notm}} no local que foi pedida para obter a chave de ativação para o HCX Manager no local. Assegure-se de que a instância excluída não esteja mais disponível no console antes de passar para a próxima etapa.
 
    Para obter mais informações, veja [Excluindo instâncias do HCX on {{site.data.keyword.cloud_notm}} no local](../services/standalone_deletingserviceinstances.html).
@@ -63,5 +63,5 @@ Revise as considerações a seguir antes de excluir uma instância do HCX on {{s
 * [Visualizando HCX no {{site.data.keyword.cloud_notm}} instâncias](../services/standalone_viewingserviceinstances.html)
 * [Glossário de termos do HCX](hcx_glossary.html)
 * [Documentação do VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
-* [Guia do usuário e de instalação do VMware HCX Enterprise](https://hcx.vmware.com/content/docs/vmware-hcx-enterprise-install-guide.pdf){:new_window}
+* [ Recursos do VMware HCX ](https://hcx.vmware.com/#/docs)
 * [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)

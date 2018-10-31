@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 *  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](../vmonic/useraccount.html).
 *  Você revisou todas as considerações em [Considerações ao instalar as instâncias do HCX on {{site.data.keyword.cloud_notm}} no local](../services/standalone_considerations.html).
 
-## Procedimento
+## Procedimento para pedir instâncias do VMware HCX on IBM Cloud no local
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Role para a tabela **Instâncias do HCX no local** e clique em **Provisionar novo**.

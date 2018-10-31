@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ Use este procedimento para excluir as instâncias do HCX on {{site.data.keyword.
 
 Assegure-se de ter revisado todas as considerações em [Considerações ao excluir instâncias do HCX on {{site.data.keyword.cloud_notm}} no local](../services/standalone_considerations.html).
 
-## Procedimento
+## Procedimento para excluir instâncias do VMware HCX on IBM Cloud no local
 
 1. Clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Role para baixo até a tabela **Instâncias do HCX no local** e localize a instância a ser excluída.

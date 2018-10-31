@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-11"
+lastupdated: "2018-09-26"
 
 ---
 
 # Pedindo o HyTrust KeyControl on IBM Cloud
 
-É possível pedir o serviço HyTrust KeyControl on {{site.data.keyword.cloud}} ao pedir uma nova instância com um par de HA dos dispositivos HyTrust KeyControl incluídos ou incluindo os dispositivos HyTrust KeyControl em sua instância existente.
+É possível pedir o serviço HyTrust KeyControl on {{site.data.keyword.cloud}} ao pedir uma nova instância com um par de HA de dispositivos HyTrust KeyControl incluso ou incluindo os dispositivos HyTrust KeyControl em sua instância existente.
 
 ## Pedindo o HyTrust KeyControl on IBM Cloud para uma nova instância
 
@@ -28,7 +28,7 @@ lastupdated: "2018-09-11"
 
 Quando você pedir o serviço, forneça as configurações a seguir.
 
-Especifique se deseja criar um cluster KeyControl altamente disponível de dois nós:
+Especifique se você deseja criar um cluster do KeyControl Altamente Disponível com dois nós:
 * Se selecionar essa opção, dois nós do KeyControl serão implementados e um novo cluster ativo/ativo altamente disponível será criado. Esse é a opção padrão.
 * Se não selecionar essa opção, dois nós independentes do KeyControl serão implementados sem a criação do cluster. Os nós independentes podem ser agrupados manualmente ou incluídos em clusters existentes do KeyControl após a implementação.
 
