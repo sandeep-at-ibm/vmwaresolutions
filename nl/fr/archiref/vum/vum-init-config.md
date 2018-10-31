@@ -1,0 +1,168 @@
+---
+
+copyright:
+
+  years:  2016, 2018
+
+lastupdated: "2018-10-05"
+
+---
+
+# Configuration initiale
+
+L'automatisation IC4VS configure le dispositif VCSA avec une passerelle par défaut définie sur le routeur BCR (Backend Customer Router) d'IBM Cloud. Cependant, il n'y a pas de route vers Internet via le routeur BCR. La route standard vers Internet à partir de l'instance VCS passe par la passerelle Management ESG. Comme il n'est pas recommandé de modifier la configuration du dispositif VCSA ou Management ESG, l'implémentation d'un serveur proxy sur le sous-réseau du client est recommandée pour activer VUM.
+
+Cette approche signifie que les dispositifs VCSA ou Management ESG n'ont pas à être reconfigurés. Cependant, une machine virtuelle ou un dispositif de petite taille doit être installé. Un serveur proxy est un système, installé entre deux unités de noeud final qui fait office d'unité intermédiaire. Dans ce cas, il est placé entre VUM et les serveurs de mises à jour dans VMware.
+
+Lorsque VUM demande une ressource du serveur de mises à jour dans VMware, la demande est d'abord envoyée au serveur proxy qui l'envoie ensuite au serveur de mises à jour. Une fois que le serveur proxy obtient la ressource, il l'envoie à VUM. Un serveur proxy peut être utilisé pour faciliter la sécurité, les contrôles administratifs et les services de mise en cache.
+
+Ce document présente l'utilisation d'un serveur proxy basé sur CentOS et Squid. Le proxy Squid est un proxy de mise en cache open source pour le Web. Il prend en charge de nombreux protocoles, notamment HTTP et HTTPS. Il existe un certain nombre de proxys basés sur les machines virtuelles et les dispositifs accessibles et vous devez sélectionner celui qui vous convient en fonction des exigences de votre entreprise, puis effectuer l'installation et la configuration selon les conseils du fournisseur. Les clients qui optent pour l'utilisation d'une implémentation de type CentOS/Squid doivent suivre la procédure ci-dessous.
+
+*	Télécharger CentOS ISO sur un serveur intermédiaire
+*	Créer une bibliothèque vCenter
+*	Transférer ISO sur la bibliothèque vCenter
+*	Créer une machine virtuelle, installer et configurer CentOS, puis installer Squid
+
+Avant de démarrer cette tâche, vous devez collecter des informations pour remplir le tableau 1. Passez en revue les valeurs suggérées et vérifiez qu'elles conviennent à votre entreprise. Cette configuration est basée sur un proxy de petite taille conçu uniquement pour VUM et utilisant CentOS-Minimal et Squid.
+
+Tableau 1. Valeurs de déploiement
+
+| Paramètre | Valeurs suggérées | Remarques |
+|:--------- |:-------------- |:------ |
+| UC du proxy | 1 vCPU | Squid n'a pas de configuration requise minimale |
+| Mémoire RAM du proxy | 2 Go | Squid n'a pas de configuration requise minimale |
+| Disque du proxy |	25 Go | Squid n'a pas de configuration requise minimale |
+| Nom d'hôte | Proxy01 | |
+| Adresse |	IP proxy |	Une Adresse IP de secours doit être utilisée à partir du sous-réseau portable privé du client affectée lors du processus de mise à disposition. Seules deux adresses IP ont été réservées sur ce sous-réseau ; l'une pour le routeur BCR et l'autre pour le dispositif ESG du client (customer-esg)
+| Masque de réseau |	255.255.255.192 | |
+| Passerelle | 	Adresse IP de la liaison montante privée customer-nsx-edge |	Il s'agit du paramètre de passerelle par défaut pour le serveur proxy, qui correspond à l'adresse de la liaison montante privée customer-nsx-edge. L'adresse IP peut être obtenue en consultant l'onglet des paramètres de customer-nsx-edge |
+| Serveur DNS |	Adresse IP AD/DNS | Cette adresse IP peut être obtenue sur la page Instances Déployées dans la console [IC4VS Cloud Console](https://console.bluemix.net/infrastructure/vmware-solutions/console/vcenters/) ; |
+| IP BCR |	Adresse IP du routeur BCR | Il s'agit de l'adresse IP du routeur BCR (Backend Customer Router) d'IBM Cloud qui est la passerelle pour 10.0.0.0/8 et 161.26.0.0/16. Cette adresse est utilisée dans une route statique du serveur proxy pour que le dispositif VCSA et le serveur AD/DNS puissent y accéder |
+
+## Configuration de NSX
+
+Le pare-feu NSX ESG du client et les paramètres de conversion NAT sont requis pour activer le trafic du serveur proxy.
+
+### Pare-feu
+
+1. Accédez à **Home** > **Networking & Security**.
+2. Sélectionnez **NSX Edges**, customer-nsx-edge, puis **Firewall**.
+3. Cliquez sur le symbole **+** et ajoutez une règle de pare-feu
+4. Fournissez les paramètres requis comme indiqué dans le tableau suivant. La nouvelle règle de pare-feu doit s'insérer avant la dernière règle par défaut Deny.
+
+Tableau 2. Règle de pare-feu
+
+| Paramètre | Valeurs suggérées |
+|:--------- |:-------------- |
+| Nom | Proxy01 sortant |
+| Type | Utilisateur |
+| Source | IP du serveur proxy |
+| Destination | N'importe laquelle |
+| Service | HTTP/HTTPS/ICMP Echo |
+| Action | Accepter |
+
+Une fois les paramètres indiqués, cliquez sur **Publish Changes**.
+
+### Installation et configuration d'un serveur proxy
+
+Le processus suivant déploie une machine virtuelle pour héberger CentOS et Squid à partir de la bibliothèque de contenu et comprend les étapes suivantes. Il suppose que vous ayez Windows VSI mis à disposition pour servir de serveur intermédiaire et que vous utilisiez le protocole RDP (Remote Desktop Protocol) pour vous connecter à l'interface publique de VSI :
+
+* Téléchargement du fichier CentOS-Minimal ISO
+* Configuration d'une bibliothèque de contenu vCenter et remplissage avec le fichier CentOS ISO
+* Configuration de la machine virtuelle du proxy et installation de CentOS et de Squid
+
+### Téléchargement du fichier CentOS-Minimal ISO
+
+Dans un navigateur sur votre serveur intermédiaire, téléchargez le fichier CentOS-Minimal ISO depuis [CentOS](https://www.centos.org/download/). Notez qu'IBM Cloud conserve un miroir de nombreuses distributions Linux populaires. Ce miroir n'est disponible que sur le réseau privé et les fichiers CentOS ISO sont disponibles à l'adresse suivante : http://mirrors.service.softlayer.com/centos/7/isos/x86_64/.
+
+### Configuration d'une bibliothèque de contenu et remplissage avec le fichier CentOS ISO
+
+Créez une bibliothèque de contenu vCenter locale. La bibliothèque est accessible uniquement dans l'instance vCenter Server dans laquelle elle a été créée. Remplissez la bibliothèque avec les modèles et les fichiers ISO requis pour déployer des machines virtuelles.
+
+1. Via le client vSphere Web Client, accédez à **Home** > **Content library** > **Objects** > **Create a new content library** > **Create subscribed library on the vCenter**.
+2. Entrez un nom pour la bibliothèque de contenu, par exemple, ISO, et dans la zone de texte Notes, entrez sa description et cliquez sur **Next**.
+3. Sélectionnez **Local content library** et cliquez sur **Next**.
+4. Sélectionnez un magasin de données puis cliquez sur un magasin de données adapté, par exemple, vsanDatastore.
+5. Passez en revue les informations sur la page Ready to Complete et cliquez sur **Finish**.
+
+### Configuration de la machine virtuelle du proxy et installation de CentOS et Squid
+
+Cette activité comprend les tâches suivantes :
+
+*	Création d'une machine virtuelle
+*	Installation de CentOS
+*	Installation de Squid
+
+#### Création d'une nouvelle machine virtuelle
+
+Cette tâche permet de créer une machine virtuelle prête à l'emploi à utiliser comme serveur proxy. Les paramètres figurant dans le Tableau 1 - Valeurs de déploiement doivent être utilisés dans la configuration.
+
+1.	Via le client vSphere Web Client, accédez à **Home** > **VMs and Templates**.
+2.	Dans le volet de navigation, cliquez sur **datacenter1**, puis cliquez avec le bouton droit de la souris et sélectionnez **New Virtual Machine** > **New Virtual Machine**.
+3.	Sélectionnez **Create a new Virtual Machine** et cliquez sur **Next**.
+4.	Entrez un nom pour la machine virtuelle, par exemple, Proxy01, puis sélectionnez **datacenter1** et cliquez sur **Next**.
+5.	Sélectionnez **cluster1** et cliquez sur **Next**.
+6.	Sélectionnez un magasin de données approprié, par exemple, vsanDatastore, puis cliquez sur **Next** et à nouveau sur **Next**.
+7.	Dans la zone **Guest OS Family**, sélectionnez **Linux** et dans la zone **Guest OS version**, sélectionnez **CentOS 7 (64-bit)** et cliquez sur **Next**.
+8.	Définissez l'**UC avec la valeur 1**, la **mémoire avec la valeur 2048 Mo** et le **nouveau disque dur avec la valeur 25 Go**. Sélectionnez **Content Library ISO File** puis **CentOS-7-x86_64-Minimal**, cliquez sur **OK** et cochez la case **Connected**.
+9.	Dans la zone New device, sélectionnez **Network** et cliquez sur **Add**.
+10.	Sélectionnez le réseau **SDDC-DPortGroup-Mgmt** et vérifiez que la case Connect est cochée avant de cliquer sur **Next**.
+11.	Révisez vos options et cliquez sur **Finish**
+
+#### Installation de CentOS
+
+Cette tâche permet d'installer et de configurer la machine virtuelle qui vient d'être créée pour qu'elle soit prête pour l'installation de Squid
+
+1.	Dans le volet de navigation du client vSphere Web Client, sélectionnez la **machine virtuelle** qui vient d'être créée, Proxy01, puis sélectionnez l'onglet **Summary**.
+2.	Cliquez sur le bouton **"Play"** pour mettre sous tension la machine virtuelle.
+3.	La machine virtuelle est à présent sous tension et démarre à partir de l'image ISO CentOS 7. Démarrez soit une **console distante ou une console Web** sur la machine virtuelle. Notez que la console distante doit être installée et que le système qui exécute le navigateur doit résoudre les hôtes vSphere ESXi par nom.
+4.	Dans l'écran de bienvenue de CentOS 7, sélectionnez la langue requise et cliquez sur **Continue**.
+5.	Dans l'écran **LOCALIZATION**, cliquez sur **DATE & TIME** et sélectionnez votre fuseau horaire, puis cliquez sur **Done**.
+6.	Dans l'écran **LOCALIZATION**, cliquez sur **KEYBOARD** pour modifier la valeur par défaut si nécessaire, puis cliquez sur **Done**.
+7.	Dans l'écran **LOCALIZATION**, cliquez sur **INSTALLATION DESTINATION**, cliquez sur l'**icône du disque virtuel VMware**, puis sur **Done**.
+8.	Dans l'écran **LOCALIZATION**, cliquez sur **NETWORK & HOSTNAME**, remplacez le nom d'hôte par le nom d'hôte de votre choix, par exemple, Proxy01.
+9.	Cliquez sur le bouton **Configure**, puis sur **IPv4 Settings** et dans la zone **Method**, sélectionnez **Manual**.
+10.	En utilisant le bouton **Add**, insérez une _adresse et un masque de réseau_, ainsi qu'une _passerelle_ à partir du _Tableau 1 – Valeurs de déploiement_
+11.	Entrez l'_adresse IP du serveur DNS_ indiqué dans le Tableau 1 – Valeurs de déploiement
+12.	Cliquez sur le bouton **Routes** et ajoutez les routes statiques suivantes : _10.0.0.0/8 et 161.26.0.0/16_ avec une adresse IP de passerelle correspondant à l'_adresse IP BCR_ du Tableau 1 Valeurs de déploiement, comme passerelle. Cette route statique permet au serveur proxy d'accéder au serveur DNS
+13.	Cliquez sur **Save** et vérifiez que l'interface Ethernet est activée (On) et qu'elle est à l'état connecté. Cliquez sur **Done** et **Begin Installation**
+14.	Au cours du processus d'installation, définissez un mot de passe root et configurez un utilisateur.
+15.	Une fois l'installation terminée, connectez-vous en tant qu'utilisateur, puis entrez la commande _ping vmware.com_. Le nom doit être résolu avec une adresse IP et vous devez obtenir une réponse. Si vous n'obtenez pas de réponse, vérifiez les adresses IP, les règles de pare-feu et les paramètres NAT.
+
+#### Installation et configuration de Squid
+
+Squid n'a pas de configuration matérielle requise minimale mais la quantité de mémoire RAM peut varier en fonction des utilisateurs qui accèdent à Internet via votre proxy et des objets stockés en mémoire cache. Comme le serveur proxy n'est accessible que par VUM et que le cache n'est pas activé, une seule machine virtuelle de petite taille a été configurée.
+
+1. A l'aide de la console Web ou de la console distante de vSphere Web Client, connectez-vous au serveur proxy en tant qu'utilisateur, puis exécutez `su` avec le mot de passe root.
+2. Avant toute installation de package, il est recommandé de mettre à jour le système et les packages à l'aide de la commande suivante :
+  `yum -y update`
+
+3. Pour installer Squid, vous devez installer le référentiel EPEL sur le système car Squid n'est pas disponible dans le référentiel yum par défaut. Exécutez la commande suivante pour installer le référentiel EPEL :
+  `yum -y install epel-release`
+
+4. Effectuez une mise à jour et un nettoyage à l'aide des commandes suivantes :
+
+  `yum -y update`
+  `yum clean all`
+
+5. Squid est installé en exécutant la commande suivante : `yum -y install squid`
+6. Dès qu'il est installé, démarrez immédiatement Squid à l'aide de la commande suivante : `systemctl start squid`
+7. Pour lancer Squid automatiquement au démarrage, exécutez la commande suivante : `systemctl enable squid`
+8. Vérifiez que Squid est opérationnel en exécutant la commande suivante : `systemctl status squid`
+9. Le pare-feu de CentOS nécessite d'autoriser l'accès au port de Squid, TCP 3128, à l'aide de la commande suivante :  `firewall-cmd –add-port=3128/tcp –permanent`
+10.	Pour sauvegarder la règle et redémarrer le service, utilisez la commande suivante : `firewall-cmd –reload`
+
+## Configuration initiale de VUM
+
+Configurez VUM pour utiliser le serveur proxy afin d'accéder aux référentiels sur Internet.
+1.	A l'aide du client vSphere Web Client, accédez à **Home** > **Update Manager**. Cliquez sur votre vCenter Server.
+2.	Sélectionnez l'**onglet Manage** et cliquez sur le bouton **Settings**.
+3.	Sélectionnez **Download Settings**, puis sous _Proxy settings_, cliquez sur le bouton **Edit**.
+4.	Cochez la case **Use Proxy** et entrez l'_adresse IP du serveur proxy_ et le _port 3128_, puis cliquez sur **OK**
+5.	La zone Connectivity Status doit passer à _Validating_ puis à _Connected_.
+6.	Cliquez sur le bouton **Download Now** et dans le panneau _Recent Tasks_, vous devez voir que cette activité est terminée.
+
+### Liens connexes
+
+* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)
