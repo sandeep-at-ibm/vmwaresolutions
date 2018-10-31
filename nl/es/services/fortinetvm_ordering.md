@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
 # Solicitud de FortiGate Virtual Appliance on IBM Cloud
 
-Puede solicitar el servicio de FortiGate Virtual Appliance on {{site.data.keyword.cloud}} al pedir una instancia nueva incluida con el servicio o añadiendo el servicio a la instancia existente.
+Puede solicitar FortiGate Virtual Appliance en el servicio de {{site.data.keyword.cloud}}, a continuación solicite una nueva instancia con el servicio incluido o añadiendo el servicio a la instancia existente.
 
 ## Solicitud de FortiGate Virtual Appliance on IBM Cloud para una nueva instancia
 
@@ -44,14 +44,14 @@ Especifique el nombre de servicio.
 El modelo de licencia de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} ofrece las siguientes opciones:
 <dl class="dl">
         <dt class="dt dlterm">Standard FW</dt>
-        <dd class="dd">Este paquete incluye inspección de paquetes con estado, registro avanzado y protección de VLAN, reglas de cortafuegos Ingress/Egress, terminación SSL/IPSec VPN y soporte continuo.</dd>
+        <dd class="dd">Este paquete incluye Stateful Packet Inspection, VLAN Protection y Advanced Logging, Ingress and Egress Firewall Rules, SSL/IPSec VPN Termination y soporte continuo.</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
-        <dd class="dd">Este paquete incluye todos los servicios del cortafuegos estándar además de NGFW IPS y filtrado de web, AntiVirus y AntiSpam, reputación de IP y de dominio y servicios de seguridad de núcleo de FortiCare.</dd>
+        <dd class="dd">Este paquete incluye todos los servicios de cortafuegos estándar además de NGFW IPS y web Filtering, AntiVirus y AntiSpam, IP y Domain Reputation, y los servicios de seguridad de core FortiCare.</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>
         <dd class="dd">Este paquete incluye todos los servicios de cortafuegos estándar y de UTM además de FortiSandbox Cloud y seguridad de datos móviles.</dd>
 </dl>
 
-**Importante**: No puede cambiar el modelo de licencia después de la instalación del servicio. Para cambiar el modelo de licencia, debe eliminar el servicio existente y reinstalar el servicio seleccionando otra opción de licencia.
+**Importante:** No puede cambiar el modelo de licencia después de la instalación del servicio. Para cambiar el modelo de licencia, debe eliminar el servicio existente y reinstalar el servicio seleccionando otra opción de licencia.
 
 ### Enlaces relacionados
 

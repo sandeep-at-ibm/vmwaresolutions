@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-15"
 
 Después de desplegar el servicio en la instancia, puede acceder a la consola de Veeam utilizando RDP para gestionar la copia de seguridad y restauración de todas las máquinas virtuales del entorno, incluida la copia de seguridad y la restauración de los componentes de gestión. También puede actualizar el servicio descargando e instalando las actualizaciones de Veeam desde el sitio web de Veeam.
 
-Para las instancias que se han desplegado en releases anteriores a V1.8, si desea utilizar el servicio Veeam on {{site.data.keyword.cloud}}, debe sustituir la VSI de Veeam existente en las instancias. Para obtener más información, consulte la sección _Sustitución de la VSI de Veeam de instancias anteriores a V1.8 con Veeam on IBM Cloud_ en este tema.
+Para las instancias que se han desplegado en releases anteriores a V1.8, si desea utilizar el servicio Veeam on {{site.data.keyword.cloud}}, debe sustituir la VSI de Veeam existente en las instancias. Para obtener más información, consulte la sección _Sustitución de la VSI de Veeam de instancias anteriores a V1.8 con Veeam on IBM Cloud_.
 
 ## Acceso a la consola de Veeam mediante RDP
 
@@ -63,7 +63,7 @@ Siga estos pasos:
 3. Pulse el separador **Servicios**.
 4. En el separador **Añadir servicios**, instale el servicio Veeam on {{site.data.keyword.cloud_notm}}.
 
-Después de que se haya desplegado el nuevo servicio Veeam on {{site.data.keyword.cloud_notm}} y se haya realizado correctamente una copia de seguridad de los componentes de gestión, puede eliminar la VSI de Veeam existente de la cuenta mediante la creación de una incidencia de soporte de {{site.data.keyword.cloud_notm}}. El equipo de soporte de IBM identificará y suprimirá la VSI de Veeam existente y el almacenamiento.
+Después de que se haya desplegado el nuevo servicio Veeam on {{site.data.keyword.cloud_notm}} y se haya realizado correctamente una copia de seguridad de los componentes de gestión, puede eliminar la VSI de Veeam existente de la cuenta mediante la creación de una incidencia de soporte de {{site.data.keyword.cloud_notm}}. El equipo de soporte de IBM identifica y suprime la VSI de Veeam existente y el almacenamiento.
 
 ### Enlaces relacionados
 

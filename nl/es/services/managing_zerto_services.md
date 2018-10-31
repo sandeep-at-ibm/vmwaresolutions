@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-16"
 
 El servicio Zerto on {{site.data.keyword.cloud}} proporciona funciones de réplica y recuperación tras desastre. Estas funciones se pueden integrar en las ofertas de despliegue para proteger y recuperar los datos del entorno virtual VMware en {{site.data.keyword.cloud_notm}}.
 
-Cuando solicita servicios gestionados para Zerto on {{site.data.keyword.cloud_notm}}, se puede desplegar un entorno de recuperación tras desastre (DR) completamente gestionado mediante el software Zerto DR e IBM Resiliency Services.
+Cuando se solicitan servicios gestionados para Zerto on {{site.data.keyword.cloud_notm}}, se puede desplegar un entorno de recuperación tras desastre totalmente gestionado (DR) mediante el software Zerto DR y los IBM Resiliency Services.
 
 Dispone de los siguientes modelos de servicios gestionados para Zerto on {{site.data.keyword.cloud_notm}}.
 
@@ -32,10 +32,10 @@ En este modelo, se suministra una solución de DR completamente gestionada para 
 
 Para obtener más información, consulte [IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top).
 
-## Procedimiento
+## Procedimiento para solicitar servicios gestionados para Zerto on IBM Cloud
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Cómo comenzar** en el panel de navegación izquierdo.
-2. Desplácese hacia abajo por la página y, bajo **Pedido de servicios gestionados adicionales**, pulse la tarjeta **Servicios gestionados para Zerto on IBM Cloud**.
+2. Desplácese hacia abajo por la página y bajo **Pedido de servicios gestionados adicionales**, pulse la tarjeta **Servicios gestionados para Zerto on IBM Cloud**.
 3. En la página **Zerto on IBM Cloud**, revise la descripción y las especificaciones técnicas para Zerto on {{site.data.keyword.cloud_notm}} como un servicio gestionado y, a continuación, pulse **Crear**.
 4. Especifique los valores de configuración que se ajusten a sus necesidades o acepte los valores predeterminados.
 5. Pulse **vCenter Server** o **Cloud Foundation** para añadir el servicio a una de sus instancias.

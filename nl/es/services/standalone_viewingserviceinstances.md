@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-20"
 
 Utilice este procedimiento para ver las instancias locales de HCX on {{site.data.keyword.cloud}} que ha solicitado para su uso local e información sobre las mismas.
 
-## Procedimiento
+## Procedimiento para visualizar instancias locales de VMware HCX on IBM Cloud
 
 Pulse **Instancias desplegadas** en el panel de navegación izquierdo y desplácese a la tabla **Instancias locales de HCX** para ver información sobre las instancias que ha solicitado:
 

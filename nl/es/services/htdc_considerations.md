@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-18"
+lastupdated: "2018-09-26"
 
 ---
 
 # Visión general de HyTrust DataControl on IBM Cloud
 
-El servicio HyTrust DataControl on {{site.data.keyword.cloud}} ofrece un cifrado de alta seguridad con claves de gestión integrada para proteger las cargas de trabajo en todo su ciclo de vida. El servicio puede proporcionar cifrado tanto a nivel de sistema operativo como a nivel de datos, lo que significa que se puede cifrar y descifrar cualquier directorio, carpeta o archivo de una carga de trabajo.
+El servicio HyTrust DataControl on {{site.data.keyword.cloud}} ofrece un cifrado de alta seguridad con claves de gestión integrada para proteger las cargas de trabajo en todo su ciclo de vida. El servicio proporciona cifrado tanto en el nivel de sistema operativo como en el nivel de datos. Esto permite que cualquier directorio, carpeta o archivo de una carga de trabajo esté cifrado y descifrado.
 
-**Disponibilidad:** este servicio solo está disponible para las instancias que se ejecutan en vSphere 6.5 y que se han desplegado en la V2.3 y posteriores releases o que se han actualizado a estos.
+**Disponibilidad:** Este servicio solo está disponible para las instancias que están ejecutando vSphere 6.5 y se despliegan en, o se actualizan a, V2.3 o releases posteriores.
 
 ## Especificaciones técnicas para HyTrust DataControl on IBM Cloud
 
@@ -33,7 +33,7 @@ Licencia por host: se solicita una licencia de HyTrust DataControl por cada host
 
 ## Consideraciones al eliminar HyTrust DataControl on IBM Cloud
 
-Antes de eliminar el HyTrust DataControl en el servicio de {{site.data.keyword.cloud_notm}}, asegúrese de que ha desvinculado a todos los clientes del uso de DataControl. Después de eliminar el servicio, puede que las claves se supriman y que se le desconecte de las VM por seguridad.
+Antes de eliminar el HyTrust DataControl en el servicio de {{site.data.keyword.cloud_notm}}, desacopla a todos los clientes de utilizar DataControl. Después de eliminar el servicio, es posible que se supriman las claves y que se le bloqueen de las máquinas virtuales.
 
 ### Enlaces relacionados
 

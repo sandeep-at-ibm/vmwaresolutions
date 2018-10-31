@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -14,7 +14,7 @@ El servicio de FortiGate Security Appliance on {{site.data.keyword.cloud}} despl
 
 Puede gestionar este servicio mediante el cliente web FortiOS o la interfaz de línea de mandatos a través de SSH.
 
-**Disponibilidad**: Este servicio solo está disponible para instancias desplegadas en V1.8 o releases posteriores.
+**Disponibilidad:** Este servicio solo está disponible para las instancias que se despliegan en releases de V1.8 o posteriores.
 
 ## Especificaciones técnicas para FortiGate Security Appliance on IBM Cloud
 
@@ -37,15 +37,15 @@ Se despliegan dos dispositivos en una configuración activa-pasiva.
 ## Consideraciones al instalar FortiGate Security Appliance on IBM Cloud
 
 Revise las siguientes consideraciones antes de instalar el servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}:
-* Asegúrese de que la cuenta de {{site.data.keyword.cloud_notm}} que utiliza tiene el permiso **Hardware Firewall**. Este permiso se necesita para editar o ver registros y valores del cortafuegos correspondientes al servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} en su instancia.
-* Si desea añadir el servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} a una instancia desplegada, asegúrese de que no hay otro cortafuego desde la infraestructura {{site.data.keyword.cloud_notm}} ya instalado en la VLAN pública de la instancia.
+* Asegúrese de que la cuenta de {{site.data.keyword.cloud_notm}} que está utilizando tiene el permiso **Hardware Firewall**. Este permiso se necesita para editar o ver registros y valores del cortafuegos correspondientes al servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} en su instancia.
+* Si desea añadir el servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} a una instancia desplegada, asegúrese de que no haya ya otro cortafuegos de la infraestructura de {{site.data.keyword.cloud_notm}} en marcha en la VLAN pública de la instancia.
 * La instalación del servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} añade una nueva VLAN pública.
 * Durante el despliegue del servicio, es posible que la instancia no pueda acceder a Internet temporalmente.
-* Después de que se instale correctamente el servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}, podrá gestionar y configurar reglas de cortafuegos para FSA desde la consola de FortiGate. Debe asegurarse de que las reglas de cortafuegos de FSA estén definidas de modo que permitan comunicaciones HTTPS salientes (puerto TCP 443) iniciadas por componentes de gestión, como Zerto Virtual Manager, para establecer comunicación con la base de datos de gestión externa de {{site.data.keyword.cloud_notm}} a través de Internet. Las comunicaciones HTTPS salientes (puerto TCP 443) se originan en la dirección IP pública de los servicios de gestión de VMware NSX Edge Services Gateway (ESG) de su instancia.
+* Después de que se instale correctamente el servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}, podrá gestionar y configurar reglas de cortafuegos para FSA desde la consola de FortiGate. Debe asegurarse de que las reglas de cortafuegos de FSA estén definidas de modo que permitan comunicaciones HTTPS (TCP puerto 443) salientes que inician los componentes de gestión como el Zerto Virtual Manager para comunicarse con la base de datos de gestión externa en {{site.data.keyword.cloud_notm}} a través de Internet. Las comunicaciones HTTPS salientes (puerto TCP 443) se originan en la dirección IP pública de los servicios de gestión de VMware NSX Edge Services Gateway (ESG) de su instancia.
 * Debe gestionar la configuración del dispositivo de seguridad FortiGate cuidadosamente para que se permitan solo las comunicaciones necesarias y se denieguen todas las demás comunicaciones.
 * Si solicita clústeres adicionales, las VLAN públicas para estos clústeres recién añadidos no tienen el par HA de dispositivos de seguridad.
 
-## Consideraciones al eliminar FortiGate Security Appliance on IBM Cloud
+## Consideraciones sobre la eliminación de FortiGate Security Appliance on IBM Cloud
 
 Revise las siguientes consideraciones antes de eliminar el servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}:
 * La eliminación del servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} elimina la VLAN pública que se ha añadido.
