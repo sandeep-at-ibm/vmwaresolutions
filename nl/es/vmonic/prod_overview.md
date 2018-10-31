@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -31,7 +31,7 @@ Puede desplegar fácilmente sus entornos virtuales de VMware y gestionar los rec
   <dt>Una sola consola de gestión</dt>
   <dd>Proporciona una sola consola para desplegar, acceder y gestionar los entornos de VMware en {{site.data.keyword.cloud_notm}}.</dd>
 </dl>
-s
+
 ## Ofertas de despliegue
 
 {{site.data.keyword.vmwaresolutions_short}} proporciona opciones de despliegue estandarizados y personalizables de entornos virtuales VMware. Se ofrecen los siguientes tipos de despliegues:
