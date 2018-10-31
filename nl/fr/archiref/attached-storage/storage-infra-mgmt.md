@@ -20,7 +20,7 @@ La virtualisation de réseau qui est utilisée dans cette conception utilise le 
 
 ## Commutateur vDS (vSphere Distributed Switch)
 
-Comme indiqué précédemment, un autre réseau local virtuel est créé dans la solution vCenter Server et utilisé pour connecter le point de montage NFS aux hôtes ESXi du cluster existant. Dans la mesure où la solution vCenter Server comporte déjà un commutateur vDS associé au réseau privé, un autre groupe de ports est créé et balisé avec le numéro du réseau local virtuel supplémentaire car ce dernier n'est pas natif. 
+Comme indiqué précédemment, un autre réseau local virtuel est créé dans la solution vCenter Server et utilisé pour connecter le point de montage NFS aux hôtes ESXi du cluster existant. Dans la mesure où la solution vCenter Server comporte déjà un commutateur vDS associé au réseau privé, un autre groupe de ports est créé et balisé avec le numéro du réseau local virtuel supplémentaire car ce dernier n'est pas natif.
 
 Le tableau suivant contient les paramètres par défaut du nouveau groupe de ports :
 
