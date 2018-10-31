@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -33,7 +33,7 @@ Tabela 1. Funções suportadas para os clusters do Cloud Foundation, vCenter Ser
 | Edições de licença do vSAN         | vSAN Advanced ou Enterprise  | vSAN Advanced ou Enterprise  | vSAN Advanced ou Enterprise | vSAN Advanced ou Enterprise  |
 | Serviços de complemento               | Suportados, não incluindo o HCX no {{site.data.keyword.cloud_notm}}.  | Suportados, não incluindo o HCX no {{site.data.keyword.cloud_notm}}. O upgrade para o Pacote configurável vCenter Server with Hybridity está disponível. | Suportado, incluindo o HCX no {{site.data.keyword.cloud_notm}}. | Não suportado pela automação dessa solução, mas é possível trazer e instalar o seu próprio software. |
 
-**Notas**:
+**Notas:**
 
 <sup>1</sup> Segundo um design validado e com a verificação durante a implementação.
 

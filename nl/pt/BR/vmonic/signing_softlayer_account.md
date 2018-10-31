@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-08-14"
 
 A conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer), que era conhecida anteriormente como a conta do IBM SoftLayer, é usada para efetuar login no portal do cliente de infraestrutura do {{site.data.keyword.cloud_notm}} que fornece alguma função adicional para gerenciar produtos e serviços de infraestrutura. Para inscrever-se para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer), faça upgrade de sua conta do {{site.data.keyword.cloud_notm}} para o tipo de conta Pagamento conforme uso.
 
-### Procedimento
+### Procedimento para se inscrever para uma conta do IBM Cloud
 
 1. Efetue login no console do {{site.data.keyword.vmwaresolutions_short}} com seu **IBMid**.
 2. No lado esquerdo do banner, clique em **Gerenciar > Faturamento e uso > Faturamento**.

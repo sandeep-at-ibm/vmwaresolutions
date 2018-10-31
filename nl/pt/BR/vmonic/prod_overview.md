@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -31,7 +31,7 @@ O {{site.data.keyword.vmwaresolutions_short}} fornece os benefícios principais 
   <dt>Console de gerenciamento único</dt>
   <dd>Fornece um único console para implementar, acessar e gerenciar os ambientes VMware no {{site.data.keyword.cloud_notm}}.</dd>
 </dl>
-s
+
 ## Ofertas de implementação
 
 O {{site.data.keyword.vmwaresolutions_short}} fornece opções de implementação padronizadas e customizáveis de ambientes virtuais do VMware. Os tipos de implementação a seguir são oferecidos:

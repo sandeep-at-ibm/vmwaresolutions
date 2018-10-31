@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -17,7 +17,7 @@ Encontre respostas às perguntas mais frequentes sobre os servidores ESXi gerenc
 * Para instâncias do vCenter Server, é possível expandir o cluster padrão para ter até 51 servidores ESXi. Cada um dos clusters não padrão pode ser expandido para ter até 59 servidores ESXi. Como é possível incluir até 10 clusters em uma instância, cada instância implementada pode ter um máximo de 51 + 9x59 = 582 servidores ESXi em todos os clusters.
 * Para instâncias do Cloud Foundation, a configuração padrão tem quatro servidores ESXi. É possível incluir um máximo de 28 servidores (para um total de 32 servidores). Para instâncias do Cloud Foundation em uma configuração de vários sites, é possível ter um máximo de 128 servidores ESXi em todas as instâncias.
 
-  **Nota**: se sua configuração do Cloud Foundation exigir uma implementação de vários sites com mais de 128 servidores ESXi, [entre em contato com o Suporte IBM](trbl_support.html) para obter assistência.
+  **Nota:** se a configuração do Cloud Foundation requerer uma implementação multisite com mais de 128 servidores ESXi, [entre em contato com o Suporte IBM](trbl_support.html) para obter assistência.
 
 ## Quantos servidores ESXi posso incluir em um cluster?
 
@@ -39,7 +39,7 @@ Para instâncias implementadas na V2.1 ou liberações anteriores, deve-se ativa
 
 Os nomes do servidor ESXi e os endereços IP não podem ser mudados porque estão registrados para a resolução DNS do Windows. As mudanças podem resultar em falhas durante a implementação ou em falhas de funções do vCenter Server.
 
-**Nota**: não use o recurso **Renomear dispositivo** na interface com o usuário do {{site.data.keyword.cloud_notm}} para mudar os nomes do servidor ESXi. Essa função realmente mudará o FQDN do servidor ESXi, mas o vCenter Center configurado e os registros do host do VSI do Windows estarão incorretos e podem causar falhas.
+**Nota:** não use o recurso **Renomear dispositivo** na interface com o usuário do {{site.data.keyword.cloud_notm}} para mudar nomes de servidores ESXi. Essa função realmente mudará o FQDN do servidor ESXi, mas o vCenter Center configurado e os registros do host do VSI do Windows estarão incorretos e podem causar falhas.
 
 ## Posso desativar o acesso raiz nos meus servidores ESXi?
 
@@ -53,7 +53,7 @@ Deve-se reativar o acesso raiz para operações de automação subsequentes, por
 
 Rotas estáticas podem ser incluídas para armazenamento, mas as operações devem ser realizadas com extremo cuidado. Caso contrário, os compartilhamentos existentes poderão se tornar desmontados.
 
-**Nota**: a inclusão de rotas estáticas para o vMotion não é suportada. Mudanças na configuração de sub-rede do vMotion poderão resultar em falhas nas funções do {{site.data.keyword.vmwaresolutions_short}}.
+**Nota:** a inclusão de rotas estáticas para vMotion não é suportada. Mudanças na configuração de sub-rede do vMotion poderão resultar em falhas nas funções do {{site.data.keyword.vmwaresolutions_short}}.
 
 ### Links relacionados
 
