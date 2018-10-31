@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-26"
 
 ---
 
 # Commande de KMIP for VMware on IBM Cloud
 
-Vous pouvez commander le service KMIP for VMware on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance avec le service inclus ou vous pouvez ajouter le service à votre instance existante.
+Vous pouvez commander le service KMIP for VMware on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance avec le service inclus ou en ajoutant le service à votre instance existante.
 
 ## Commande de KMIP for VMware on IBM Cloud pour une nouvelle instance
 
@@ -38,7 +38,7 @@ Sélectionnez la région {{site.data.keyword.cloud_notm}} dans laquelle votre in
 
 Pour vCenter Server, vous devez configurer un cluster KMS (Key Management Server). Le noeud final situé dans la région que vous avez sélectionnée se connecte de manière sécurisée à KMS via le certificat SSL client. Pour le noeud final dans chaque région, voir le tableau suivant. Ces noeuds finaux utilisent des certificats autosignés gérés par l'équipe {{site.data.keyword.vmwaresolutions_short}}. L'empreinte des certificats est `a9 d0 ff 15 df 85 10 6b 61 88 fe 2e 8b d3 1a af 48 c8 a0 7a`.
 
-Tableau 1 : Régions de noeud final de service KMIP for VMware on {{site.data.keyword.cloud_notm}}
+Tableau 1. Régions de noeud final de service KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
 | Région         | Noeud final               |
 |:---------------|:-----------------------|
@@ -47,7 +47,7 @@ Tableau 1 : Régions de noeud final de service KMIP for VMware on {{site.data.ke
 | Royaume-Uni |  `158.175.93.122:5696` |
 | Sud des Etats-Unis       |  `169.60.185.42:5696`  |
 
-Ce paramètre est facultatif lors de la configuration initiale. Vous pouvez laisser cette zone vide à ce moment-là car le certificat client de KMS dans vCenter Server est connu une fois votre instance déployée. Mais vous devez indiquer le certificat une fois votre instance déployée, de sorte que votre connexion vCenter Server à KMS puisse aboutir.
+Ce paramètre est facultatif lors de la configuration initiale. Vous pouvez laisser cette zone vide car le certificat client de KMS dans vCenter Server est connu une fois votre instance déployée. Mais vous devez indiquer le certificat une fois votre instance déployée pour que votre connexion vCenter Server à KMS puisse aboutir.
 
 ### Clé d'API pour ID de service
 

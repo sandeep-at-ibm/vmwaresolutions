@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,7 +25,7 @@ Le processus de retrait du service Zerto on {{site.data.keyword.cloud}} est auto
    4. Retour du sous-réseau portable privé qui avait été commandé pour la communication de la réplication virtuelle Zerto avec l'infrastructure {{site.data.keyword.cloud_notm}}.   
    5. Suppression des frais liés au service de reprise après incident Zerto de votre relevé de facturation {{site.data.keyword.cloud_notm}}.
 
-      **Remarque** : le service de reprise après incident Zerto supprimé vous est facturé jusqu'à échéance du cycle de facturation.
+      **Remarque :** le service de reprise après incident Zerto supprimé vous est facturé jusqu'à échéance du cycle de facturation.
 
 ## Résultats
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ Cette procédure permet de supprimer les instances HCX on {{site.data.keyword.cl
 
 Prenez soin de passer en revue toutes les remarques énoncées dans la rubrique [Remarques relatives au retrait d'instances HCX on {{site.data.keyword.cloud_notm}} locales](../services/standalone_considerations.html).
 
-## Procédure
+## Procédure de suppression d'instances VMware HCX on IBM Cloud locales
 
 1. Cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Faites défiler l'écran vers le tableau **Instances HCX locales** et localisez l'instance à supprimer.

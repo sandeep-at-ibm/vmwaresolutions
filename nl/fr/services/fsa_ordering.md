@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-26"
 
 ---
 
 # Commande de FortiGate Security Appliance on IBM Cloud
 
-Vous pouvez commander le service FortiGate Security Appliance on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance avec la paire à haute disponibilité de dispositifs FSA série 300 incluse ou vous pouvez ajouter le dispositif FSA série 300 à votre instance existante.
+Vous pouvez commander le service FortiGate Security Appliance on {{site.data.keyword.cloud}} lorsque vous commandez une nouvelle instance avec la paire à haute disponibilité de dispositifs FSA série 300 incluse ou en ajoutant le dispositif FSA série 300 à votre instance existante.
 
 ## Commande de FortiGate Security Appliance on IBM Cloud pour une nouvelle instance
 

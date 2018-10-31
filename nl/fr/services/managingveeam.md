@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-15"
 
 Une fois le service déployé dans votre instance, vous pouvez accéder à la console Veeam à l'aide de RDP afin de gérer la sauvegarde et la restauration de toutes les machines virtuelles de votre environnement, y compris la sauvegarde et la restauration des composants de gestion. Vous pouvez également effectuer une mise à niveau du service en téléchargeant et en installant les mises à jour Veeam depuis le site Web Veeam.
 
-Si vous voulez utiliser le service Veeam on {{site.data.keyword.cloud}} pour des instances déployées dans des éditions antérieures à la version 1.8, vous devez remplacer l'instance de serveur virtuel Veeam existante dans les instances. Pour plus d'informations, voir la section _Remplacement des instances de serveur virtuel Veeam antérieures à V1.8 par Veeam on IBM Cloud_ dans cette rubrique.
+Si vous voulez utiliser le service Veeam on {{site.data.keyword.cloud}} pour des instances déployées dans des éditions antérieures à la version 1.8, vous devez remplacer l'instance de serveur virtuel Veeam existante dans les instances. Pour plus d'informations, voir la section _Remplacement des instances de serveur virtuel Veeam antérieures à V1.8 par Veeam on IBM Cloud_.
 
 ## Accès à la console Veeam à l'aide du protocole RDP
 
@@ -55,7 +55,7 @@ Le service Veeam on {{site.data.keyword.cloud_notm}}, capable de sauvegarder aus
 
 En raison de cette modification, l'onglet **Sauvegarde et restauration** de la page des détails de l'instance a été retiré et les points de sauvegarde des instances ne sont plus disponibles sur la console {{site.data.keyword.vmwaresolutions_short}}. Cela dit, l'instance de serveur virtuel Veeam des instances de version antérieure à 1.8 fonctionne toujours.
 
-Vous devez créer un ticket de demande de service {{site.data.keyword.cloud_notm}} pour obtenir de l'aide concernant une restauration. De plus, la licence de l'instance de serveur virtuel Veeam des instances de version antérieure à 1.8 a expiré le 14 octobre 2017. Par conséquent, vous devez remplacer l'ancienne instance de serveur virtuel Veeam par le nouveau service Veeam on {{site.data.keyword.cloud_notm}}.
+Vous devez créer un ticket de demande de service {{site.data.keyword.cloud_notm}} pour obtenir de l'aide concernant une restauration. De plus, la licence des instances de serveur virtuel Veeam antérieures à la version 1.8 a expiré le 14 octobre 2017. Par conséquent, vous devez remplacer l'ancienne instance de serveur virtuel Veeam par le nouveau service Veeam on {{site.data.keyword.cloud_notm}}.
 
 Effectuez les opérations suivantes :
 1. Sur la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche, puis cliquez sur l'instance cible.
@@ -63,7 +63,7 @@ Effectuez les opérations suivantes :
 3. Cliquez sur l'onglet **Services**.
 4. Dans l'onglet **Ajouter des services**, installez le service Veeam on {{site.data.keyword.cloud_notm}}.
 
-Une fois le nouveau service Veeam on {{site.data.keyword.cloud_notm}} déployé et une sauvegarde réussie de vos composants de gestion effectuée, vous pouvez supprimer de votre compte l'instance de serveur virtuel Veeam existante en créant un ticket de demande de service {{site.data.keyword.cloud_notm}}. Le support IBM identifiera alors et supprimera l'instance de serveur virtuel et le stockage Veeam existants.
+Une fois le nouveau service Veeam on {{site.data.keyword.cloud_notm}} déployé et une sauvegarde réussie de vos composants de gestion effectuée, vous pouvez supprimer de votre compte l'instance de serveur virtuel Veeam existante en créant un ticket de demande de service {{site.data.keyword.cloud_notm}}. Le support IBM identifie et supprime l'instance de serveur virtuel et le stockage Veeam existants.
 
 ### Liens connexes
 

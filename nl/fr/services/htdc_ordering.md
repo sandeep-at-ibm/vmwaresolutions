@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-26"
 
 ---
 
 # Commande de HyTrust DataControl on IBM Cloud
 
-Vous pouvez commander le service HyTrust DataControl on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance avec une paire à haute disponibilité de dispositifs HyTrust DataControl incluse ou vous pouvez ajouter le dispositif HyTrust DataControl à votre instance existante.
+Vous pouvez commander le service HyTrust DataControl on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance avec une paire à haute disponibilité de dispositifs HyTrust DataControl incluse ou en ajoutant le dispositif HyTrust DataControl à votre instance existante.
 
 ## Commande de HyTrust DataControl on IBM Cloud pour une nouvelle instance
 

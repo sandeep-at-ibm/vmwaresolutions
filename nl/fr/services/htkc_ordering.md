@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-11"
+lastupdated: "2018-09-26"
 
 ---
 
 # Commande de HyTrust KeyControl on IBM Cloud
 
-Vous pouvez commander le service HyTrust KeyControl on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance avec une paire à haute disponibilité de dispositifs HyTrust KeyControl incluse ou vous pouvez ajouter les dispositifs HyTrust CloudControl à votre instance existante. 
+Vous pouvez commander le service HyTrust KeyControl on {{site.data.keyword.cloud}} lorsque vous commandez une nouvelle instance avec une paire à haute disponibilité de dispositifs HyTrust KeyControl incluse ou en ajoutant les dispositifs HyTrust CloudControl à votre instance existante. 
 
 ## Commande de HyTrust KeyControl on IBM Cloud pour une nouvelle instance
 
@@ -30,7 +30,7 @@ Lorsque vous commandez le service, indiquez les paramètres suivants :
 
 Indiquez si vous souhaitez créer un cluster KeyControl hautement disponible à deux noeuds :
 * Si vous sélectionnez cette option, deux noeuds KeyControl sont déployés et un nouveau cluster hautement disponible active-active est créé. Il s'agit de l'option par défaut.
-* Si vous ne sélectionnez pas cette option, deux noeuds KeyControl autonomes sont déployés et aucun cluster n'est créé. Les noeuds autonomes peuvent être manuellement regroupés en cluster ou ajoutés à des clusters KeyControl existants après leur déploiement. 
+* Si vous ne sélectionnez pas cette option, deux noeuds KeyControl autonomes sont déployés et aucun cluster n'est créé. Les noeuds autonomes peuvent être manuellement regroupés en cluster ou ajoutés à des clusters KeyControl existants après leur déploiement.
 
 ### Liens connexes
 

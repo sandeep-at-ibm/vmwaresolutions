@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-28"
 
 ---
 
 # Présentation d'IBM Spectrum Protect Plus on IBM Cloud
 
-Le service {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} fournit une solution évolutive et efficace de protection, de réutilisation et de reprise des données pour les environnements virtuels. Vous pouvez implémenter le service en tant que solution autonome ou vous pouvez l'intégrer à votre environnement IBM Spectrum Protect Plus pour décharger des copies de stockage à long terme et pour la gouvernance des données.
+Le service {{site.data.keyword.IBM}} Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} fournit une solution évolutive et efficace de protection, de réutilisation et de récupération des données pour les environnements virtuels. Vous pouvez implémenter le service en tant que solution autonome ou vous pouvez l'intégrer à votre environnement IBM Spectrum Protect Plus pour décharger des copies de stockage à long terme et pour la gouvernance des données.
 
 **Disponibilité :** ce service n'est disponible que pour les instances qui exécutent vSphere 6.5 et qui sont déployées dans (ou mises à niveau vers) la version 2.2 ou des éditions ultérieures.
 
@@ -27,13 +27,13 @@ Les composants suivants sont commandés et inclus dans le service IBM Spectrum P
 ### Ressources vCenter
 
 * Machine virtuelle de serveur exécutant un serveur IBM Spectrum Protect Plus
-   * Système d'exploitation : Linux 3.10.0-693.11.1.el7.x86_64
-   * 4 Coeurs de 2,0 GHz
+   * Système d'exploitation Linux 3.10.0-693.11.1.el7.x86_64
+   * 4 coeurs de 2 GHz
    * 32 Go de mémoire RAM
    * Disque de 370 Go
 * Machine virtuelle secondaire exécutant un serveur IBM Spectrum Protect Plus vSnap et un proxy VADP
-   * Système d'exploitation : Linux 3.10.0-693.11.1.el7.x86_64
-   * UC et mémoire RAM configurées en fonction de la taille de stockage sélectionnée et des conseils de dimensionnement fournis dans le wiki[IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints).
+   * Système d'exploitation Linux 3.10.0-693.11.1.el7.x86_64
+   * UC et mémoire RAM configurées en fonction de la taille de stockage sélectionnée et des conseils de dimensionnement fournis dans le wiki [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints).
    * Disque de 150 Go
 
 ### Stockage pour les sauvegardes
@@ -58,7 +58,7 @@ Deux adresses IP privées portables.
 * IBM Spectrum Protect Plus (10 à 1000 licences de machine virtuelle au maximum, par incréments de 10)
 * Licence IBM Spectrum Protect Plus offerte via la console {{site.data.keyword.vmwaresolutions_short}} (nombre de machines virtuelles dans des packages de 10) ou proposée en mode BYOL
 
-## Remarques relatives à l'installation du service IBM Spectrum Protect Plus on IBM Cloud
+## Considérations à prendre en compte lorsque vous installez IBM Spectrum Protect Plus on IBM Cloud
 
 Passez en revue les remarques suivantes avant d'installer le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}.
 
@@ -67,14 +67,14 @@ Passez en revue les remarques suivantes avant d'installer le service IBM Spectru
 
   Les instances Cloud Foundation et vCenter Server déployées dans (ou mises à niveau vers) la version 2.2 ou des éditions ultérieures disposent d'un paramètre `NFS.MaxVolumes` dans VMware. Ce paramètre définit le nombre maximum de montages NFS sur un serveur ESXi et accepte la valeur maximale de 256 propre à la version du serveur ESXi. Pour plus d'informations, voir [Augmentation de la valeur par défaut qui définit le nombre maximum de montages NFS sur un hôte ESXi/ESX](https://kb.vmware.com/s/article/2239).
 
-  Le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} peut consommer jusqu'à onze volumes NFS sur chaque serveur ESXi dans le cluster par défaut de votre instance. En outre, le service créera des montages NFS transitoires à des fins de sauvegarde et de restauration. Par conséquent, vous devez définir un minimum de 64 montages NFS pour que le service puisse être installé et fonctionne correctement.
+  Le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} peut utiliser jusqu'à 11 volumes NFS sur chaque serveur ESXi dans le cluster par défaut de votre instance. En outre, le service crée des montages NFS transitoires à des fins de sauvegarde et de restauration. Par conséquent, vous devez définir un minimum de 64 montages NFS pour que le service puisse être installé et fonctionner correctement.
 
-## Remarques relatives au retrait du service IBM Spectrum Protect Plus on IBM Cloud
+## Considérations à prendre en compte lorsque vous retirez IBM Spectrum Protect Plus on IBM Cloud
 
-Passez en revue les remarques suivantes avant de supprimer le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} :
-* Vérifiez que toutes les configurations de tâche de sauvegarde ont été supprimées et qu'il ne reste aucune opération de sauvegarde ou de restauration active.
+Passez en revue les remarques suivantes avant de retirer le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} :
+* Assurez-vous que toutes les configurations de tâche de sauvegarde ont été supprimées, ainsi que toute opération de sauvegarde ou de restauration active.
 * Lorsque vous retirez le service, le stockage pour le référentiel des sauvegardes est supprimé de la machine virtuelle IBM Spectrum Protect Plus et la commande de stockage est annulée, ce qui supprime définitivement les données du référentiel des sauvegardes.
-* Lorsque vous supprimez le service, le stockage de sauvegarde commandé pour le service est également supprimé. Par conséquent, toutes les sauvegardes sont inaccessibles pendant la suppression du service.
+* Lorsque vous retirez le service, le stockage de sauvegarde qui a été commandé pour le service est également retiré. Toutes les sauvegardes deviennent inaccessibles pendant le retrait du service.
 
 ### Liens connexes
 

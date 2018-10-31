@@ -13,7 +13,7 @@ lastupdated: "2018-07-19"
 ## Accès aux consoles de gestion de HCX on IBM Cloud
 
 Pour gérer le service HCX on {{site.data.keyword.cloud}}, vous devez accéder à la console HCX Cloud ou à la console d'administration de HCX Manager :
-1. Utilisez le réseau privé virtuel de l'infrastructure {{site.data.keyword.cloud_notm}} ou un serveur de saut pour autoriser l'accès à l'adresse IP du dispositif virtuel HCX Manager. Vous trouverez l'adresse IP sur la page des détails du service HCX on {{site.data.keyword.cloud_notm}} sur la console {{site.data.keyword.vmwaresolutions_short}}.
+1. Utilisez le réseau privé virtuel de l'infrastructure {{site.data.keyword.cloud_notm}} ou un serveur intermédiaire pour autoriser l'accès à l'adresse IP du dispositif virtuel HCX Manager. Vous trouverez l'adresse IP sur la page des détails du service HCX on {{site.data.keyword.cloud_notm}} sur la console {{site.data.keyword.vmwaresolutions_short}}.
 2. Pour accéder à la console HCX Cloud, cliquez sur **Afficher la console HCX Cloud** sur la page des détails du service HCX on {{site.data.keyword.cloud_notm}}, puis connectez-vous à l'aide des données d'identification vCenter Server.
 3. Pour accéder à la console d'administration de HCX Manager, cliquez sur **Afficher la console d'administration de HCX Manager** sur la page des détails du service HCX on {{site.data.keyword.cloud_notm}}, puis connectez-vous à l'aide des données d'identification de HCX Manager indiquées sur cette même page des détails du service.
 
