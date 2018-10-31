@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,7 +25,7 @@ Alguns componentes, como o VMware vCenter Server, o Platform Services Controller
 Para hospedar esses backups, implemente um servidor de arquivos Linux em seu cluster usando as etapas a seguir:
 
 1. Solicite uma sub-rede portátil privada por meio da infraestrutura do {{site.data.keyword.cloud_notm}} e localize-a na mesma VLAN que os componentes do sistema. Esta é a VLAN privada na qual residem os endereços IP de gerenciamento para seus hosts.
-2. Faça upload de uma imagem do sistema operacional para o armazenamento de dados de gerenciamento do VMware, como o [Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window} do espelho privado do {{site.data.keyword.cloud_notm}}.
+2. Faça upload de uma imagem do sistema operacional para o armazenamento de dados de gerenciamento do VMware, como Ubuntu Server 18.04 LTS, por meio do espelho privado do {{site.data.keyword.cloud_notm}}.
 3. Implemente essa máquina virtual (VM) em seu cluster no grupo de portas de gerenciamento usando um endereço IP móvel privado pedido anteriormente. Assegure-se de que a VM esteja configurada para apontar para seus servidores AD/DNS e, opcionalmente, inclua a VM no DNS de seu subdomínio.
 4. Crie um ID de usuário de backup não raiz nesse servidor e assegure-se de que todos os serviços necessários sejam configurados e iniciados para transferências de arquivos. Por exemplo, FTP ou SSH.
 5. Assegure-se de que essa VM esteja incluída em sua tarefa de backup de gerenciamento do Veeam ou do IBM Spectrum Protect Plus.
