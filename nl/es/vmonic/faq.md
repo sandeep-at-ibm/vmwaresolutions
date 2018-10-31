@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ Encuentre las respuestas a las preguntas más frecuentes sobre {{site.data.keywo
 
 * **Cuenta de IBMid**. Se necesita esta cuenta para acceder a la consola de {{site.data.keyword.vmwaresolutions_short}}. La consola es una interfaz de usuario autónoma, independiente del {{site.data.keyword.slportal}}. Para obtener más información, consulte
 [Iniciación](../index.html).
-* **Cuenta de {{site.data.keyword.cloud_notm}}**. Se necesita esta cuenta para el suministro. Puede registrarse para una cuenta de {{site.data.keyword.cloud_notm}} utilizando un **IBMid** existente o creando un nuevo **IBMid**. 
+* **Cuenta de {{site.data.keyword.cloud_notm}}**. Se necesita esta cuenta para el suministro. Puede registrarse para una cuenta de {{site.data.keyword.cloud_notm}} utilizando un **IBMid** existente o creando un nuevo **IBMid**.
 * **Cuenta de infraestructura de {{site.data.keyword.cloud_notm}}**. Esta cuenta, conocida anteriormente como la cuenta de **IBM SoftLayer**, se utiliza para iniciar la sesión en el portal de clientes de infraestructura de {{site.data.keyword.cloud_notm}} que proporciona alguna función adicional para gestionar los productos y servicios de la infraestructura. Puede obtener una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} actualizando su **cuenta de {{site.data.keyword.cloud_notm}}** a un tipo de cuenta de Pago según uso, o enlazando su cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) existente con su cuenta de {{site.data.keyword.cloud_notm}}. La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} que está utilizando debe cumplir determinados requisitos. Para obtener más información, consulte [Registro para las cuentas necesarias](signing_softlayer_account.html) y [requisitos de cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
 
 ## ¿Cómo puedo asociar mis credenciales de la infraestructura IBM Cloud a la consola de IBM Cloud for VMware Solutions?
@@ -66,7 +66,7 @@ No, no se recomienda. Podrían producirse errores en las funciones de {{site.dat
 
 Para instancias de vCenter Server, el primer clúster que se crea durante el despliegue tiene el nombre predeterminado **cluster1**. Puede cambiar el nombre del clúster predeterminado en el cliente de VMware vSphere. Cuando añada un clúster a una instancia de vCenter Server, puede especificar el nombre que desee en la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
-**Nota**: para instancias de Cloud Foundation, el nombre de clúster predeterminado no se puede cambiar.
+**Nota:** para instancias de Cloud Foundation, el nombre de clúster predeterminado no se puede cambiar.
 
 ##¿Cómo se gestionan los parches?
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -18,7 +18,7 @@ Puede registrarse para una cuenta de {{site.data.keyword.cloud}} utilizando un *
 
 La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer), conocida anteriormente como la cuenta de IBM SoftLayer, se utiliza para iniciar la sesión en el portal de clientes de infraestructura de {{site.data.keyword.cloud_notm}} que proporciona alguna función adicional para gestionar los productos y servicios de la infraestructura. Para registrar una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer), actualice su cuenta de {{site.data.keyword.cloud_notm}} al tipo de cuenta Pago según uso.
 
-### Procedimiento
+### Procedimiento para registrarse en una cuenta de IBM Cloud
 
 1. Inicie sesión en la consola de {{site.data.keyword.vmwaresolutions_short}} con su **IBMid**.
 2. En la parte izquierda de la cabecera, pulse **Gestionar > Facturación y uso > Facturación**.

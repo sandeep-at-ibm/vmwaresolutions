@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,7 +22,7 @@ En V1.4 y releases posteriores, dispone de diversas mejoras en la topología de 
 
 Si no ha migrado o suprimido sus instancias de releases anteriores a V1.4, aún podrían estar visibles en la consola de {{site.data.keyword.vmwaresolutions_short}} en modalidad de solo vista. Estas instancias están marcadas en la interfaz de usuario como **En desuso** con un icono con un símbolo de aviso.
 
-**Nota**: la información que se muestra en las propiedades de la instancia refleja los datos en la fecha del release V1.4 y ya no se renueva.
+**Nota:** la información que se muestra en las propiedades de la instancia refleja los datos en la fecha del release V1.4 y ya no se renueva.
 
 Dispone de las siguientes acciones en las instancias anteriores a V1.4:
 *  Ver la información en la página de detalles de la instancia.

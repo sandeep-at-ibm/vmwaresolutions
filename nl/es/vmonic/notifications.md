@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -14,7 +14,7 @@ Puede comprobar las notificaciones sobre el estado del sistema o sobre las opera
 
 ## Visualización de notificaciones
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Notificaciones** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Notificaciones** en el panel de navegación izquierdo.
 2. En la tabla **Historial de notificaciones** puede ver el resumen de todas las notificaciones.
 
    Tabla 1. Historial de notificaciones

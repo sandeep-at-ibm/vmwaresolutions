@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-10-01"
 
 ---
 
@@ -119,14 +119,24 @@ Para obtener más información sobre Veeam on {{site.data.keyword.cloud_notm}}, 
 
 ### VMware HCX on IBM Cloud
 
-El release actual instala VMware HCX 3.5.1 R106 en todas las instancias desplegadas recientemente. Para obtener más información sobre las nuevas características de HCX 3.5.1 R106, consulte [Documentación de VMware NSX Hybrid Connect](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html).
+El release actual instala VMware HCX 3.5.1 en todas las instancias desplegadas recientemente. Para obtener más información sobre las nuevas características de HCX 3.5.1, consulte [Documentación de VMware NSX Hybrid Connect](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html).
+
+### Soporte de Zerto on IBM Cloud para vSphere ESXi V6.5 actualización 2c
+
+Si actualiza hosts existentes a vSphere ESXi V6.5 update 2, y ya ha instalado Zerto en {{site.data.keyword.cloud_notm}}, la consola de Zerto Virtual
+Replication puede mostrar el mensaje de aviso `Versión de ESX no soportado` bajo el estado Zerto Virtual Replication Appliances (VRA).
+
+Para obtener más información sobre cómo resolver este mensaje de aviso, consulte:
+
+* [Matriz de interoperatividad de réplica virtual de Zerto](http://s3.amazonaws.com/zertodownload_docs/6.0_Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf)
+* [Actualización de un ZVM para dar soporte a los releases de host de Zerto-Approved anteriores a una actualización ZVR completa](https://www.zerto.com/myzerto/knowledge-base/updating-a-zvm-to-support-zerto-approved-host-releases-prior-to-a-full-zvr-update/)
 
 ## Documentación nueva y actualizada
 
 ### Documentación de arquitectura de referencia
 El documento de arquitectura de {{site.data.keyword.vmwaresolutions_short}} se actualiza para incluir consideraciones importantes para comprender las responsabilidades que tiene para gestionar y operar con la instancia de VMware.
 
-Para obtener más información, consulte [Consideraciones posteriores al despliegue para la instancia de VMware](../archiref/solution/solution_considerations.md).
+Para obtener más información, consulte [Consideraciones posteriores al despliegue para la instancia de VMware](../archiref/solution/solution_considerations.html).
 
 ## Actualizaciones y mejoras de la interfaz de usuario
 

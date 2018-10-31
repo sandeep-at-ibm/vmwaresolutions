@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-09-25"
 * Asegúrese de que es el propietario de la cuenta o de que el rol de gestión de plataforma para el servicio **Soluciones de VMware** sea **Administrador**.
 * Asegúrese de que ha revisado los roles de usuario y los permisos en [Gestión del acceso de usuario con Identity and Access Management](iam.html).
 
-## Procedimiento
+## Procedimiento para invitar a usuarios a acceder a servicios y recursos
 
 1. En el lado izquierdo de la cabecera, pulse **Gestionar > Seguridad > Identidad y acceso**.
 2. En la página **Usuarios**, pulse **Invitar usuarios**.
