@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-25"
 
 Sie können die Zusammenfassung und die detaillierten Informationen der NetApp ONTAP Select-Instanzen anzeigen, die für verschiedene Benutzerkonten bereitgestellt wurden.
 
-## Zusammenfassung der NetApp ONTAP Select-Instanzen anzeigen
+## Vorgehensweise zum Anzeigen einer Zusammenfassung der NetApp ONTAP Select-Instanzen
 
 Wenn Sie eine Zusammenfassung aller NetApp ONTAP Select-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
 
@@ -30,7 +30,7 @@ Tabelle 1. Elemente von NetApp ONTAP Select-Instanzen
 | Erstellungszeit | Der Zeitpunkt (Datum und Uhrzeit), zu dem die Instanz erstellt wurde. |   
 | Status | Der Status der Instanz. Der Status kann einen der folgenden Werte aufweisen:<ul><li>Wird erstellt: Die Instanz wird gerade erstellt.</li><li>Wird aufgebaut: Die Instanz wird gerade konfiguriert.</li><li>Bereit: Die Instanz ist zur Verwendung bereit.</li><li>Wird geändert: Die Instanz wird gerade geändert.</li><li>Fehlgeschlagen: Der Erstellungs-, Konfigurations- oder Änderungsprozess ist fehlgeschlagen.</li><li>Wird gelöscht: Die Instanz wird gerade gelöscht.</li><li>Fehler beim Löschvorgang: Beim Löschen der Instanz ist ein Fehler aufgetreten.</li><li>Gelöscht: Die Instanz wurde gelöscht.</li></ul>|
 
-## Eigenschaftsdetails von NetApp ONTAP Select-Instanzen anzeigen
+## Vorgehensweise zum Anzeigen von Eigenschaftsdetails von NetApp ONTAP Select-Instanzen
 
 Gehen Sie wie folgt vor, um die Eigenschaftsdetails einer Instanz anzuzeigen:
 
@@ -55,7 +55,7 @@ Tabelle 2. Eigenschaften von NetApp ONTAP Select-Instanzen
 | DNS, Unterdomäne | Die Unterdomäne ist im DNS-Unterdomänennamen des Namens der Rootdomäne angegeben, in der sich die Hostnamen der lokalen NetApp ONTAP Select-Instanz befinden. Der Unterdomänenname hat das Format `<subdomain_label>.<root_domain>`. |
 | Status | Der Status der Instanz. |
 
-## Zugriffsinformationen für NetApp ONTAP Select-Instanzen anzeigen
+## Vorgehensweise zum Anzeigen von Zugriffsinformationen für NetApp ONTAP Select-Instanzen
 
 Zeigen Sie unter **Zugriffsinformationen** die Zugriffsinformationen für die instanzbezogenen Komponenten an. Bei diesen Kennwörtern handelt es sich um Anfangskennwörter, die vom System generiert werden. Wenn Sie sie außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden sie auf der Seite mit der Instanzzusammenfassung nicht aktualisiert.
 
@@ -84,7 +84,7 @@ Tabelle 3. Zugriffsinformationen für instanzbezogene NetApp ONTAP Select-Kompon
 | vCenter-ADMIN | Der SSO-Benutzername und das Kennwort für VMware vCenter, mit dem Sie sich unter Verwendung von vSphere Web Client bei vCenter Server anmelden können. |
 | vCenter-SSH | Der Benutzername und das Kennwort, die Sie für den Zugriff auf die VM für vCenter Server über eine SSH-Verbindung verwenden können. |
 
-## Bereitstellungsverlauf für NetApp ONTAP Select-Instanzen anzeigen
+## Vorgehensweise zum Anzeigen des Bereitstellungsverlaufs für NetApp ONTAP Select-Instanzen
 
 Klicken Sie im linken Navigationsfenster auf **Bereitstellungsverlauf**, um den Bereitstellungsverlauf für die Instanz anzuzeigen.
 
@@ -102,7 +102,7 @@ Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, w
 1. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
 2. Zeigen Sie unter **CLUSTER** die Zusammenfassung zu den NetApp ONTAP Select-Clustern an.
 
-	Tabelle 5: Elemente von NetApp ONTAP Select-Clustern
+	Tabelle 5. Elemente von NetApp ONTAP Select-Clustern
 
 	 <table>
 	   <tr>
@@ -163,7 +163,7 @@ Tabelle 6. ESXi-Serverdetails eines NetApp ONTAP Select-Clusters
 
 Nun können Sie Ihre Instanzen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole, in VMware vSphere Web Client oder in der NetApp-Konsole verwalten.
 
-**Wichtig**: Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** klicken, um vSphere Web Client aufzurufen und Ihre ESXi-Server zu verwalten, müssen Sie sich beim VPN-Portal des {{site.data.keyword.CloudDataCent_notm}} anmelden. Bewegen Sie den Mauszeiger über die Schaltfläche **vCenter-Konsole** und befolgen Sie die Anweisungen, um sicherzustellen, dass Sie alle Voraussetzungen erfüllen und Sie alle erforderlichen Schritte ausgeführt haben, bevor Sie auf vSphere Web Client zugreifen.
+**Wichtig:** Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** klicken, um vSphere Web Client aufzurufen und Ihre ESXi-Server zu verwalten, müssen Sie sich beim VPN-Portal des {{site.data.keyword.CloudDataCent_notm}} anmelden. Bewegen Sie den Mauszeiger über die Schaltfläche **vCenter-Konsole** und befolgen Sie die Anweisungen, um sicherzustellen, dass Sie alle Voraussetzungen erfüllen und Sie alle erforderlichen Schritte ausgeführt haben, bevor Sie auf vSphere Web Client zugreifen.
 
 Weitere Informationen, die Sie beim Umsetzen der Anmeldeanweisungen unterstützen, finden Sie in den folgenden Abschnitten:
 
