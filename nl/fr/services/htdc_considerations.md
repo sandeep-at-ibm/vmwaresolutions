@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-18"
+lastupdated: "2018-09-26"
 
 ---
 
 # Présentation de HyTrust DataControl on IBM Cloud
 
-Le service HyTrust DataControl on {{site.data.keyword.cloud}} offre un chiffrement renforcé avec une gestion de clés intégrée permettant de sécuriser les charges de travail tout au long de leur cycle de vie. Le service peut fournir un chiffrement au niveau du système d'exploitation et au niveau des données, ce qui signifie que n'importe quel répertoire, dossier ou fichier d'une charge de travail peut être chiffré et déchiffré.
+Le service HyTrust DataControl on {{site.data.keyword.cloud}} offre un chiffrement renforcé avec une gestion de clés intégrée permettant de sécuriser les charges de travail tout au long de leur cycle de vie. Le service fournit un chiffrement au niveau du système d'exploitation et au niveau des données. Cela permet à n'importe quel répertoire, dossier ou fichier d'une charge de travail d'être chiffré et déchiffré.
 
-**Disponibilité :** ce service n'est disponible que pour les instances qui exécutent vSphere 6.5 et qui sont déployées dans (ou mises à niveau vers) la version 2.3 ou des éditions ultérieures.
+**Disponibilité :** ce service n'est disponible que pour les instances qui exécutent vSphere 6.5 et qui sont déployées dans, ou mises à niveau vers, la version 2.3 ou des éditions ultérieures.
 
 ## Spécifications techniques relatives à HyTrust DataControl on IBM Cloud
 
@@ -31,9 +31,9 @@ Deux dispositifs DataControl déployés dans une configuration active-active
 
 Licence par hôte : une licence HyTrust DataControl est commandée pour chaque hôte de l'environnement
 
-## Remarques relatives au retrait de HyTrust DataControl on IBM Cloud
+## Considérations à prendre en compte lorsque vous retirez HyTrust DataControl on IBM Cloud
 
-Avant de retirer le service HyTrust DataControl on {{site.data.keyword.cloud_notm}}, prenez soin de dissocier tous les clients de l'utilisation de DataControl. Il est possible que le retrait du service entraîne la suppression des clés, auquel cas, vous vous verrez peut-être refuser l'accès à vos machines virtuelles.
+Avant de retirer le service HyTrust DataControl on {{site.data.keyword.cloud_notm}}, dissociez tous les clients pour qu'il n'utilisent pas DataControl. Après avoir retiré le service, les clés peuvent être supprimées et vous risquez de ne plus pouvoir accéder à vos machines virtuelles.
 
 ### Liens connexes
 

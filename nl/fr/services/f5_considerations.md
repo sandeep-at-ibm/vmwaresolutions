@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2018-09-24"
 
 Le service F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) fournit des services intelligents d'équilibrage de charge L4-L7 et de gestion du trafic à l'échelle locale et globale, une protection maximale via pare-feu des applications Web et réseau et un accès sécurisé aux applications fédérées.
 
-Vous pouvez installer plusieurs instances de ce service si besoin. 
+Vous pouvez installer plusieurs instances de ce service si besoin.
 
-**Disponibilité** : ce service est disponible uniquement pour les instances qui sont déployées en version 1.9 ou dans des éditions ultérieures.
+**Disponibilité :** ce service est disponible uniquement sur les instances déployées en version 1.9 ou dans des éditions ultérieures.
 
 ## Spécifications techniques relatives à F5 on IBM Cloud
 
@@ -84,7 +84,7 @@ Au total, 33,6 GHz d'UC et 32 Go de RAM pour les deux machines virtuelles BIG-IP
 
 Chaque serveur ESXi a une capacité de 16 coeurs * 2,1 GHz = 33,6 GHz, de sorte que nous respectons les deux exigences si les deux serveurs sont actifs et qu'au moins 16,8 GHz d'UC et 16 Go de RAM sont disponibles sur chaque serveur.
 
-Toutefois, par défaut, vSphere HA réserve 50 % d'UC et de mémoire RAM pour le basculement sur les instances vCenter Server initialement déployées avec 2 serveurs ESXi. Pour cet exemple, la disponibilité est la suivante : 
+Toutefois, par défaut, vSphere HA réserve 50 % d'UC et de mémoire RAM pour le basculement sur les instances vCenter Server initialement déployées avec 2 serveurs ESXi. Pour cet exemple, la disponibilité est la suivante :
 
 `50 % de 2 * 16 coeurs * 2,1 GHz = 33,6 GHz disponibles`
 

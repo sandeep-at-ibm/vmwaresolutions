@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-20"
 
 Cette procédure permet d'afficher les instances HCX on {{site.data.keyword.cloud}} locales que vous avez commandées, ainsi que des informations détaillées les concernant.
 
-## Procédure
+## Procédure d'affichage des instances VMware HCX on IBM Cloud locales
 
 Cliquez sur **Instances déployées** dans le panneau de navigation de gauche, puis faites défiler l'écran vers le tableau **Instances HCX locales** pour afficher des informations relatives aux instances que vous avez commandées :
 

@@ -13,7 +13,7 @@ lastupdated: "2018-07-19"
 ## Accès à la console de gestion d'IBM Spectrum Protect Plus
 
 Pour gérer le service {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}, vous devez accéder à la console de gestion d'IBM Spectrum Protect Plus en procédant comme suit :
-1. Utilisez le réseau privé virtuel de l'infrastructure {{site.data.keyword.cloud_notm}} ou un serveur de saut pour autoriser l'accès à l'adresse IP de la machine virtuelle IBM Spectrum Protect Plus. Vous trouverez l'adresse IP sur la page des détails d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} dans la console {{site.data.keyword.vmwaresolutions_short}}.
+1. Utilisez le réseau privé virtuel de l'infrastructure {{site.data.keyword.cloud_notm}} ou un serveur intermédiaire pour autoriser l'accès à l'adresse IP de la machine virtuelle IBM Spectrum Protect Plus. Vous trouverez l'adresse IP sur la page des détails d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} dans la console {{site.data.keyword.vmwaresolutions_short}}.
 2. Pour accéder à la console de gestion d'IBM Spectrum Protect Plus, cliquez sur **Afficher la console IBM Spectrum Protect Plus** sur la page des détails de service d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud}}, puis connectez-vous à l'aide des données d'identification répertoriées sur cette même page des détails de service.
 
 ## Application de mises à jour à IBM Spectrum Protect Plus on IBM Cloud

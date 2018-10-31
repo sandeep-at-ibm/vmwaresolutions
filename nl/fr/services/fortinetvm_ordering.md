@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
 # Commande de FortiGate Virtual Appliance on IBM Cloud
 
-Vous pouvez commander le service FortiGate Virtual Appliance on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance avec le service inclus ou vous pouvez ajouter le service à votre instance existante.
+Vous pouvez commander le service FortiGate Virtual Appliance on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance avec le service inclus ou en ajoutant le service à votre instance existante.
 
 ## Commande de FortiGate Virtual Appliance on IBM Cloud pour une nouvelle instance
 
@@ -44,14 +44,14 @@ Entrez le nom du service.
 Le modèle de licence pour le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} propose les options suivantes :
 <dl class="dl">
         <dt class="dt dlterm">Pare-feu standard</dt>
-        <dd class="dd">Cette offre groupée inclut Stateful Packet Inspection, VLAN Protection and Advanced Logging, Ingress/Egress Firewall Rules, SSL/IPSec VPN Termination, et un support continu.</dd>
+        <dd class="dd">Cette offre groupée inclut Inspection de paquet avec état, Protection VLAN et consignation avancée, Règles de pare-feu d'entrée et de sortie, Terminaison VPN SSL/IPSec et support continu.</dd>
         <dt class="dt dlterm">Pare-feu standard + UTM</dt>
-        <dd class="dd">Cette offre groupée inclut tous les services de pare-feu standard en plus de IPS NGFW et filtrage Web, Antivirus et antispam, Réputation de l'adresse IP et du domaine et les services de sécurité FortiGate principaux.</dd>
+        <dd class="dd">Cette offre groupée inclut tous les services de pare-feu standard en plus de IPS NGFW et filtrage Web, Antivirus et antispam, Réputation d'adresse IP et de domaine et les services de sécurité FortiGate principaux.</dd>
         <dt class="dt dlterm">Pare-feu standard + Enterprise</dt>
         <dd class="dd">Cette offre groupée inclut tous les services UTM et de pare-feu standard en plus de FortiSandbox Cloud et Mobile Security.</dd>
 </dl>
 
-**Important** : vous ne pouvez pas modifier le modèle de licence après l'installation du service. Pour modifier le modèle de licence, vous devez retirer le service existant, puis le réinstaller en sélectionnant une autre option de licence.
+**Important :** vous ne pouvez pas modifier le modèle de licence après l'installation du service. Pour modifier le modèle de licence, vous devez retirer le service existant, puis le réinstaller en sélectionnant une autre option de licence.
 
 ### Liens connexes
 

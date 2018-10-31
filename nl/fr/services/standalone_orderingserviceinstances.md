@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ Assurez-vous que :
 *  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Paramètres et comptes utilisateur](../vmonic/useraccount.html).
 *  Vous avez passé en revue toutes les remarques énoncées dans la rubrique [Remarques relatives à l'installation d'instances HCX on {{site.data.keyword.cloud_notm}} locales](../services/standalone_considerations.html).
 
-## Procédure
+## Procédure pour commander des instances VMware HCX on IBM Cloud locales
 
 1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Faites défiler l'écran vers le tableau **Instances HCX locales** et cliquez sur **Mettre à disposition un nouvel élément**.

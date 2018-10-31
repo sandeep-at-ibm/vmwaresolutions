@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,12 +16,12 @@ Le service Zerto on {{site.data.keyword.cloud}} fournit des fonctions de réplic
 
 Les composants suivants sont commandés et inclus dans le service Zerto on {{site.data.keyword.cloud_notm}} :
 
-**Remarque** : les composants de Zerto Virtual Manager ne sont déployés que dans le cluster par défaut.
+**Remarque :** les composants de Zerto Virtual Manager ne sont déployés que dans le cluster par défaut.
 
 ### Instances de serveur virtuel
 
 * Une instance de serveur virtuel - Zerto Virtual Manager
-* Coeurs 2 x 2,0 GHz
+* 2 coeurs de 2 GHz
 * 4 Go de mémoire RAM
 * Windows Server 2012 R2 Standard Edition (64 bits)
 
