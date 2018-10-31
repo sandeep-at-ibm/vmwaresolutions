@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -24,11 +24,11 @@ Benutzer und Kennwörter für die automatisierten Operationen in der Konsole dü
 
 Jeder Service erstellt ein internes Benutzerkonto in vCenter Server. Dieses Konto ist erforderlich, damit Managementoperationen, die einem Service zugeordnet sind, eine vCenter Server-Verbindung herstellen können, um die Operationen für den Service ausführen zu können.
 
-**Wichtig**: Um Ausfälle und Verbindungsprobleme zu vermeiden, sollten Sie beim Ändern der Benutzer-ID, des Kennworts oder der Einstellungen für den Ablauf des Kennworts für dieses Benutzerkonto sicherstellen, dass auch die Informationen im zugeordneten Service geändert werden.
+**Wichtig:** Um Ausfälle und Verbindungsprobleme zu vermeiden, sollten Sie beim Ändern der Benutzer-ID, des Kennworts oder der Einstellungen für den Ablauf des Kennworts für dieses Benutzerkonto sicherstellen, dass auch die Informationen im zugeordneten Service geändert werden.
 
 Die Benutzer-ID für dieses Konto ist im Format `<service_name>-<truncated service_uuid>@test.local` oder `<service_name>-<truncated service_uuid>@example-domain.local` angegeben. Die Benutzer-ID, die vom Service "Veeam on {{site.data.keyword.cloud_notm}}" verwendet wird, um eine vCenter Server-Verbindung zur Durchführung geplanter Sicherungen herzustellen, lautet z. B. `Veeam-<Veeam_uuid>@test.local`.
 
-**Hinweis**: Die aus `<service_name>` und `<service_uuid>` zusammengesetzte Zeichenfolge wird bei einer Länge von 20 Zeichen abgeschnitten.
+**Hinweis:** Die aus `<service_name>` und `<service_uuid>` zusammengesetzte Zeichenfolge wird bei einer Länge von 20 Zeichen abgeschnitten.
 
 ## VMware-Ressourcen für vCenter Server-Instanzen (V1.9 und höher)
 
@@ -63,7 +63,7 @@ Tabelle 2. Durch VC/PSC-Rootzugriff (lokal) betroffene Operationen
 
 Nachfolgend sind die Teilnetze beschrieben, die von {{site.data.keyword.vmwaresolutions_short}} bestellt werden. Außerdem werden Sie über die Optionen für die Bestellung von zusätzlichen Teilnetzen für Ihre eigene Verwendung informiert.
 
-**VORSICHT**: Verwenden Sie diese Komponenten nicht für andere Zwecke, da die Stabilität Ihrer Umgebung andernfalls erheblich beeinträchtigt wird.
+**VORSICHT:** Verwenden Sie diese Komponenten nicht für andere Zwecke, da die Stabilität Ihrer Umgebung andernfalls erheblich beeinträchtigt wird.
 
 Mit jeder {{site.data.keyword.cloud_notm}} Bare Metal Server-Bestellung werden standardmäßig die folgenden IP-Adressbereiche bestellt:
 *  1 primärer öffentlicher Bereich von 32 IP-Adressen

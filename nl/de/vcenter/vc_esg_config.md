@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -21,10 +21,9 @@ Im Rahmen des Bestellablaufs für Ihre vCenter Server-Instanz werden die folgend
 * Ein Beispiel für einen logischen NSX-Switch wird zur Verwendung durch die VMs für die Kundenworkload bereitgestellt.
 * Ein Beispiel für einen verteilten logischen NSX-Router (Distributed Logical Router, DLR) wird für die potenzielle Ost-West-Kommunikation zwischen lokalen Workloads bereitgestellt, die mit Netzen der Schicht 2 (L2) verbunden sind.
 * Eine NSX Edge-Appliance wird zur Ausführung der Netzadressumsetzung (Network Address Translation, NAT) aus dem Bereich der IP-Adressen eines logischen Workload-Switch in eine öffentliche IP-Adresse nach den NAT-Regeln bereitgestellt und konfiguriert.
-* Wenn Sie den Service "Veeam on {{site.data.keyword.cloud_notm}}" installiert haben, wird der NSX-Manager für eine tägliche Sicherung der NSX-Konfigurationen konfiguriert. Weitere Informationen finden Sie unter [Hinweise zur Installation von Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
+* Wenn Sie den Service "Veeam on {{site.data.keyword.cloud_notm}}" installiert haben, wird der NSX-Manager für eine tägliche Sicherung der NSX-Konfigurationen konfiguriert. Weitere Informationen finden Sie unter [Hinweise zur Installation von Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud).
 
-
-## Netzeinstellungen für Ihre VMs konfigurieren
+## Vorgehensweise zum Konfigurieren der Netzeinstellungen für Ihre VMs
 
 Um die Vorteile von NSX für Ihre Workload-VMs nutzen zu können, müssen Sie eine Reihe von Einstellungen konfigurieren, indem Sie bei der Erstellung Ihrer VMs die folgenden Schritte ausführen:
 
@@ -43,7 +42,7 @@ Um die Vorteile von NSX für Ihre Workload-VMs nutzen zu können, müssen Sie ei
 
 3. Ordnen Sie das Standardgateway der VM als `192.168.10.1` zu. Diese Adresse ist die IP-Adresse des NSX-DLR auf demselben logischen Switch wie die Workload-VMs.
 
-## SNAT-Regel aktivieren
+## Vorgehensweise zum Aktivieren der SNAT-Regel
 
 Falls Ihre Workload-VMs abgehenden Zugriff auf das Internet besitzen sollen, müssen Sie die zugehörige Regel für SNAT (Source Network Address Translation) aktivieren. Durch die Aktivierung der SNAT-Regel kann der Internetzugriff von Ihren VMs in eine einzige öffentliche IP-Adresse umgesetzt werden. Führen Sie die folgenden Schritte in VMware vSphere Web Client aus:
 
@@ -54,7 +53,7 @@ Falls Ihre Workload-VMs abgehenden Zugriff auf das Internet besitzen sollen, mü
 
 Weitere Informationen zu NAT-Regeln für NSX Edge finden Sie auf der Seite [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 
-## Details für Kundenteilnetze angeben
+## Vorgehensweise zum Angeben von Details für Kundenteilnetze
 
 Die Edge **customer-nsx-edge** ist für Ihre eigene Verwendung vorgesehen. Sie können sie daher ändern, um weitere NAT-Regeln für eingehenden oder abgehenden Datenverkehr zu definieren. Diese Regeln dürfen nur die IP-Adressen im öffentlichen oder privaten Kundenteilnetz verwenden, die in Ihrem Namen bestellt worden sind.
 
@@ -62,7 +61,7 @@ Führen Sie die folgenden Schritte in VMware vSphere Web Client aus, um die Deta
 
 1. Klicken Sie auf **Home > Networking & Security**.
 2. Klicken Sie im Navigatorfenster auf **NSX Edges** und doppelklicken Sie auf die Edge **customer-nsx-edge**.
-3. Sehen Sie sich auf der Registerkarte **Summary** für diese Edge die Edgebeschreibung an, die die Teilnetz-IDs für das private und das öffentliche Kundenteilnetz enthält.
+3. Sehen Sie sich auf der Registerkarte **Summary** für diese Edge die Edge-Beschreibung an, die die Teilnetz-IDs für das private und das öffentliche Kundenteilnetz enthält.
 
 Weitere Details über die Kundenteilnetze können Sie außerdem mit den folgenden Schritten im {{site.data.keyword.slportal}} ermitteln:
 

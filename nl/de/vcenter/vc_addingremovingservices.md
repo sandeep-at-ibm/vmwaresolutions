@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -31,7 +31,7 @@ Tabelle 1. Verfügbare Services für vCenter Server-Instanzen
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html) | 9.5u3 | V1.8 und höher |
 | [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) | 5.5u4 Patch 2 | V1.2 und höher |
 
-## Services zu vCenter Server-Instanzen hinzufügen
+## Vorgehensweise zum Hinzufügen von Services zu vCenter Server-Instanzen
 
 Klicken Sie zum Hinzufügen eines Service zu Ihrer vCenter Server-Instanz auf den entsprechenden Service-Link in der vorherigen Tabelle, um die Hinweise zu dem Service zu prüfen und die bereitgestellten Komponenten zu überprüfen. Befolgen Sie anschließend die Anweisungen im Abschnitt zum Bestellen von Services, um den Service Ihrer Instanz hinzuzufügen.
 
@@ -39,7 +39,7 @@ Klicken Sie zum Hinzufügen eines Service zu Ihrer vCenter Server-Instanz auf de
 
 Nachdem die Installation des Service erfolgreich abgeschlossen wurde, werden Sie per E-Mail benachrichtigt und der Service wird auf der Seite **Services** der Instanz mit dem Status **Installiert** angezeigt.
 
-## Services für vCenter Server-Instanzen anzeigen
+## Vorgehensweise zum Anzeigen von vCenter Server-Instanzen
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die Sie Services anzeigen wollen.
@@ -47,7 +47,7 @@ Nachdem die Installation des Service erfolgreich abgeschlossen wurde, werden Sie
 4. Klicken Sie auf der Seite **Services** auf einen Service, um die zugehörigen Informationen, beispielsweise den Servicestatus und andere Details, zu prüfen.
 5. Je nach dem angezeigten Service können Sie über die in den Servicedetails bereitgestellten Berechtigungsnachweise auf die Servicekonsolen zugreifen und den Service von hier aus verwalten.
 
-## Services für vCenter Server-Instanzen entfernen
+## Vorgehensweise zum Entfernen von vCenter Server-Instanzen
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die Sie Services entfernen wollen.
@@ -61,7 +61,7 @@ Nachdem Ihre Anforderung zum Entfernen des Service akzeptiert wurde, ändert sic
 
 Nachdem die Entfernung des Service erfolgreich abgeschlossen wurde, werden Sie per E-Mail benachrichtigt und der Service wird von der Seite **Services** der Instanz entfernt.
 
-**Achtung** Die entfernten Services werden Ihnen bis zum Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur berechnet.
+**Achtung:** Die entfernten Services werden Ihnen bis zum Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur berechnet.
 
 ### Zugehörige Links
 

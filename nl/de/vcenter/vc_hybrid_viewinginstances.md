@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-25"
 
 Sie können die Zusammenfassung und die detaillierten Informationen der VMware vCenter Server with Hybridity Bundle-Instanzen anzeigen, die für verschiedene Benutzerkonten bereitgestellt wurden.
 
-## Zusammenfassung der vCenter Server with Hybridity Bundle-Instanzen anzeigen
+## Vorgehensweise zum Anzeigen der Zusammenfassung der vCenter Server with Hybridity Bundle-Instanzen
 
 Wenn Sie eine Zusammenfassung aller vCenter Server with Hybridity Bundle-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
@@ -44,7 +44,7 @@ Tabelle 2. Statusbeschreibungen der vCenter Server with Hybridity Bundle-Instanz
 | Fehler beim Löschvorgang | Beim Löschen der Instanz ist ein Fehler aufgetreten. |
 | Gelöscht | Die Instanz wurde gelöscht. |
 
-## Eigenschaftsdetails von vCenter Server with Hybridity Bundle-Instanzen anzeigen
+## Vorgehensweise zum Anzeigen der Eigenschaftsdetails von vCenter Server with Hybridity Bundle-Instanzen
 
 Gehen Sie wie folgt vor, um die Eigenschaftsdetails einer vCenter Server with Hybridity Bundle-Instanz anzuzeigen:
 1. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf einen Instanznamen.
@@ -67,7 +67,7 @@ Tabelle 3. Eigenschaften der vCenter Server with Hybridity Bundle-Instanzen
 | Hybridity Bundle | Gibt an, ob vCenter Server with Hybridity Bundle installiert ist. |
 | Status  | Der Status der Instanz.<br><br>Die angezeigten Informationen aktualisieren den Verarbeitungsfortschritt bei der Bereitstellung bzw. der für die Instanz ausgeführten Aktion. Falls Probleme auftreten, wird möglicherweise eine Nachricht angezeigt, die Sie bei der Untersuchung und Lösung des Problems unterstützt. |
 
-## Zugriffsinformationen für vCenter Server with Hybridity Bundle-Instanzen anzeigen
+## Vorgehensweise zum Anzeigen von Zugriffsinformationen für vCenter Server with Hybridity Bundle-Instanzen
 
 Zeigen Sie unter **Zugriffsinformationen** die Zugriffsinformationen für die instanzbezogenen Komponenten an. Bei den angezeigten Kennwörtern handelt es sich um Anfangskennwörter, die vom System generiert werden. Wenn Sie sie außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden sie auf der Seite mit der Instanzzusammenfassung nicht aktualisiert.
 
@@ -77,7 +77,7 @@ Tabelle 4. vCenter Server with Hybridity Bundle-Zugriffsinformationen für insta
 |:------------- |:------------- |
 | AD/DNS-IPs | Die IP-Adressen der beiden AD-Server. |
 | Vollständig qualifizierte Domänennamen für AD/DNS | Die vollständig qualifizierten Domänennamen des AD/DNS-Servers.<br><br>**Hinweis:** Zur Herstellung einer Verbindung zu allen AD/DNS-Servern über eine Remote-Desktop-Verbindung kann dasselbe Administratorkennwort verwendet werden. |
-| AD/DNS ADMIN (Remote Desktop)  | Für primäre Instanzen werden der Benutzername und das Kennwort für den Zugriff auf den AD-Server über eine Remote-Desktop-Verbindung angezeigt.<br><br>Klicken Sie für sekundäre Instanzen auf den Link **Für primäre Instanz anzeigen**, um zu den Informationen zu Benutzername und Kennwort in der primären Instanz weitergeleitet zu werden.<br><br>**Hinweis**: Wenn die sekundäre Instanz zur primären DNS-Domäne hinzugefügt wurde und die Replikation stattfindet, überschreibt das lokale Administratorkennwort für die primäre Instanz möglicherweise das lokale Administratorkennwort für die sekundäre Instanz. Wenn Sie auf den Link **Für primäre Instanz anzeigen** klicken, erhalten Sie Zugriff auf das richtige Administratorkennwort.  
+| AD/DNS ADMIN (Remote Desktop)  | Für primäre Instanzen werden der Benutzername und das Kennwort für den Zugriff auf den AD-Server über eine Remote-Desktop-Verbindung angezeigt.<br><br>Klicken Sie für sekundäre Instanzen auf den Link **Für primäre Instanz anzeigen**, um zu den Informationen zu Benutzername und Kennwort in der primären Instanz weitergeleitet zu werden.<br><br>**Hinweis:** Wenn die sekundäre Instanz zur primären DNS-Domäne hinzugefügt wurde und die Replikation stattfindet, überschreibt das lokale Administratorkennwort für die primäre Instanz möglicherweise das lokale Administratorkennwort für die sekundäre Instanz. Wenn Sie auf den Link **Für primäre Instanz anzeigen** klicken, erhalten Sie Zugriff auf das richtige Administratorkennwort.  
 | NSX-Manager-IP  | Die IP-Adresse des NSX-Managers.  |
 | Vollständig qualifizierter Domänenname für NSX-Manager  | Der vollständig qualifizierte Domänenname des NSX-Managers.  |
 | NSX-Manager-HTTP  | Der Benutzername und das Kennwort für den Zugriff auf die Webkonsole des NSX-Managers. |
@@ -90,7 +90,7 @@ Tabelle 4. vCenter Server with Hybridity Bundle-Zugriffsinformationen für insta
 | vCenter-ADMIN  | Der SSO-Benutzername und das Kennwort für VMware vCenter, mit dem Sie sich unter Verwendung von vSphere Web Client bei vCenter Server anmelden können.  |
 | vCenter-SSH  | Der Benutzername und das Kennwort, die Sie für den Zugriff auf die VM für vCenter Server über eine SSH-Verbindung verwenden können.  |
 
-## Bereitstellungsverlauf für vCenter Server with Hybridity Bundle-Instanzen anzeigen
+## Vorgehensweise zum Anzeigen des Bereitstellungsverlaufs für vCenter Server with Hybridity Bundle-Instanzen
 
 Klicken Sie im linken Navigationsfenster auf **Bereitstellungsverlauf**, um den Bereitstellungsverlauf für die Instanz anzuzeigen.
 
@@ -109,7 +109,7 @@ Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, w
 
 Nun können Sie Ihre Instanzen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole oder in VMware vSphere Web Client verwalten.
 
-**Wichtig**: Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** klicken, um vSphere Web Client aufzurufen und Ihre ESXi-Server zu verwalten, müssen Sie sich beim VPN-Portal des {{site.data.keyword.CloudDataCent_notm}} anmelden. Bewegen Sie den Mauszeiger über die Schaltfläche **vCenter-Konsole** und befolgen Sie die Anweisungen, um sicherzustellen, dass Sie alle Voraussetzungen erfüllen und Sie alle erforderlichen Schritte ausgeführt haben, bevor Sie auf vSphere Web Client zugreifen.
+**Wichtig:** Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** klicken, um vSphere Web Client aufzurufen und Ihre ESXi-Server zu verwalten, müssen Sie sich beim VPN-Portal des {{site.data.keyword.CloudDataCent_notm}} anmelden. Bewegen Sie den Mauszeiger über die Schaltfläche **vCenter-Konsole** und befolgen Sie die Anweisungen, um sicherzustellen, dass Sie alle Voraussetzungen erfüllen und Sie alle erforderlichen Schritte ausgeführt haben, bevor Sie auf vSphere Web Client zugreifen.
 
 In den folgenden Abschnitten finden Sie Informationen, die Sie bei der Ausführung der Anmeldeanweisungen unterstützen:
 *  Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-25"
 
 Sie können die Zusammenfassung und die detaillierten Informationen der VMware Federal-Instanzen anzeigen, die für verschiedene Benutzerkonten bereitgestellt wurden.
 
-## Zusammenfassung für VMware Federal-Instanzen anzeigen
+## Vorgehensweise zum Anzeigen einer Zusammenfassung der VMware Federal-Instanzen
 
 Wenn Sie eine Zusammenfassung aller VMware Federal-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
@@ -45,7 +45,7 @@ Tabelle 2. Statusbeschreibungen der VMware Federal-Instanz
 | Fehler beim Löschvorgang | Beim Löschen der Instanz ist ein Fehler aufgetreten. |
 | Gelöscht | Die Instanz wurde gelöscht. |
 
-## Eigenschaftsdetails der VMware Federal-Instanz anzeigen
+## Vorgehensweise zum Anzeigen von Eigenschaftsdetails einer VMware Federal-Instanz
 
 Gehen Sie wie folgt vor, um die Eigenschaftsdetails einer Instanz anzuzeigen:
 
@@ -68,7 +68,7 @@ Tabelle 3. Eigenschaften von VMware Federal-Instanzen
 | DNS-Unterdomäne | Die Unterdomäne ist im DNS-Unterdomänennamen des Namens der Rootdomäne angegeben, in der sich die Hostnamen der lokalen vCenter Server-Instanz befinden. Der Unterdomänenname hat das Format <samp class="ph codeph"><var class="keyword varname">name_der_vcenter_server-instanz</var>.<var class="keyword varname">root.domänenname</var></samp>. |
 | Status | Der Status der Instanz. |
 
-## Zugriffsinformationen für VMware Federal-Instanzen anzeigen
+## Vorgehensweise zum Anzeigen von Zugriffsinformationen für VMware Federal-Instanzen
 
 Zeigen Sie unter **Zugriffsinformationen** die Zugriffsinformationen für die instanzbezogenen Komponenten an. Bei den angezeigten Kennwörtern handelt es sich um Anfangskennwörter, die vom System generiert werden. Wenn Sie sie außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden sie auf der Seite mit der Instanzzusammenfassung nicht aktualisiert.
 
@@ -91,7 +91,7 @@ Tabelle 4. Zugriffsinformationen für instanzbezogene Komponenten
 | vCenter-ADMIN  | Der SSO-Benutzername und das Kennwort für VMware vCenter, mit dem Sie sich unter Verwendung von vSphere Web Client bei vCenter Server anmelden können.  |
 | vCenter-SSH  | Der Benutzername und das Kennwort, die Sie für den Zugriff auf die VM für vCenter Server über eine SSH-Verbindung verwenden können.  |
 
-## Bereitstellungsverlauf für VMware Federal-Instanzen anzeigen
+## Vorgehensweise zum Anzeigen des Bereitstellungsverlaufs für VMware Federal-Instanzen
 
 Klicken Sie im linken Navigationsfenster auf **Bereitstellungsverlauf**, um den Bereitstellungsverlauf für die Instanz anzuzeigen.
 
@@ -110,7 +110,7 @@ Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, w
 
 Nun können Sie Ihre Instanzen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole oder in VMware vSphere Web Client verwalten.
 
-**Wichtig**: Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** klicken, um vSphere Web Client aufzurufen und Ihre ESXi-Server zu verwalten, müssen Sie sich beim VPN-Portal des {{site.data.keyword.CloudDataCent_notm}} anmelden. Bewegen Sie den Mauszeiger über die Schaltfläche **vCenter-Konsole** und befolgen Sie die Anweisungen, um sicherzustellen, dass Sie alle Voraussetzungen erfüllen und Sie alle erforderlichen Schritte ausgeführt haben, bevor Sie auf vSphere Web Client zugreifen.
+**Wichtig:** Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** klicken, um vSphere Web Client aufzurufen und Ihre ESXi-Server zu verwalten, müssen Sie sich beim VPN-Portal des {{site.data.keyword.CloudDataCent_notm}} anmelden. Bewegen Sie den Mauszeiger über die Schaltfläche **vCenter-Konsole** und befolgen Sie die Anweisungen, um sicherzustellen, dass Sie alle Voraussetzungen erfüllen und Sie alle erforderlichen Schritte ausgeführt haben, bevor Sie auf vSphere Web Client zugreifen.
 
 In den folgenden Abschnitten finden Sie Informationen, die Sie bei der Ausführung der Anmeldeanweisungen unterstützen:
 *  Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
