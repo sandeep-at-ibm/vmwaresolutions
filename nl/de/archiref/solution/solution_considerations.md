@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-10-03"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-20"
 
 Bei den Produktangeboten {{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server und VMware Cloud Foundation handelt es sich um nicht verwaltetes Services. Sie selbst sind für die Konfiguration, Sicherheit, Verwaltung und Überwachung sämtlicher Softwarekomponenten verantwortlich. Aufgrund Ihres vollständigen Verwaltungszugriffs auf die Lösung verfügen Sie über großes Potenzial und Flexibilität, für die fundiertes technisches, verwaltungstechnisches und operatives Fachwissen zu mehreren Domänen erforderlich ist. Die Verwaltung einer VMware-Instanz in {{site.data.keyword.cloud_notm}} erfordert dieselbe Planung und dasselbe Fachwissen, wie sie auch für eine lokale Instanz erforderlich sind. Softwaredefinierte Technologien wie VMware NSX und VMware vSAN vereinfachen einige Aspekte der Instanzenverwaltung erheblich, erfordern jedoch neue Kenntnisse zur ordnungsgemäßen Verwaltung sowie den Betrieb von Tools. Durch die Kombination aus Leistung, Geschwindigkeit sowie Zuverlässigkeit der durch {{site.data.keyword.cloud_notm}} automatisierten VMware-Bereitstellung und der entsprechenden Betriebsplanung und Tests wird eine schnelle und erfolgreiche Navigation zur Hybrid-Cloud sichergestellt.
 
-Lesen Sie die folgenden Hinweise, denen Sie die Verantwortlichkeiten des Kunden bei Verwaltung und Betrieb der Instanz vor und nach der Bereitstellung entnehmen können. 
+Lesen Sie die folgenden Hinweise, denen Sie die Verantwortlichkeiten des Kunden bei Verwaltung und Betrieb der Instanz vor und nach der Bereitstellung entnehmen können.
 
 **Anmerkung:** Die folgende Liste ist nicht vollständig. Weitere Informationen finden Sie in [Von IBM verwaltete Services](../../services/managing_imi.html).
 
@@ -76,7 +76,7 @@ Führen Sie folgende Schritte aus, um eine ordnungsgemäße Konfiguration und Ve
 
 Führen Sie folgende Schritte aus, um eine ordnungsgemäße Planung der Softwarewartung sicherzustellen.
 
-- Richten Sie VMware Update Manager (VUM) über einen Proxy ein, um VMware-Aktualisierungen zu erhalten.
+- [Richten Sie VMware Update Manager (VUM)](../vum/vum-intro.html) über einen Proxy ein, um VMware-Aktualisierungen zu erhalten.
 - Konfigurieren Sie, falls zutreffend, vSAN über einen Proxy, um die vSAN-HCL-Datenbank (HCL – Hardware Compatibility List) zu warten.
 - Planen Sie für VMware-Komponenten, die nicht von VUM unterstützt werden, eine regelmäßige Wartung ein. Beispiel: VMware vCenter, PSC und NSX.
 - Überprüfen Sie die vSphere-EVC-Konfiguration (EVC – Enhanced Motion Compatibility). Ihr Cluster wird möglicherweise nicht mit aktivierter EVC konfiguriert, wenn die aktuelle Version von vSphere EVC für Ihre Hardwarestufe nicht unterstützt.
@@ -121,4 +121,3 @@ Führen Sie zusätzlich zur Kapazitätsplanung die folgenden Maßnahmen aus, um 
 * [Lösungsübersicht](solution_overview.html)
 * [Übersicht über das Design](design_overview.html)
 * [Skalierungskapazität](solution_scaling.html)
-

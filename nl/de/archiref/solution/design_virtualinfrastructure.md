@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -104,7 +104,7 @@ vSAN-Einstellungen werden nach bewährten Verfahren für die Bereitstellung von 
    * Virtuelle Maschine: 30 gemeinsam genutzte Ressourcen
    * vMotion: 50 gemeinsam genutzte Ressourcen
    * vSAN: 100 gemeinsam genutzte Ressourcen
-* vSAN-Kernelports: **Explicit Failover**
+* vSAN-Kernel-Ports: **Explicit Failover**
 
 ## VMware NSX-Design
 
@@ -209,7 +209,7 @@ Tabelle 7. VM-Kerneladapter für konvergierte Cluster
 
 ### NSX-Konfiguration
 
-Dieses Design spezifiziert die Konfiguration von NSX-Komponenten, wendet jedoch keine Konfiguration von Netzoverlaykomponenten an. Sie können das Netzoverlay Ihren Anforderungen entsprechend gestalten. Die folgenden Aspekte werden vorkonfiguriert:
+Dieses Design spezifiziert die Konfiguration von NSX-Komponenten, wendet jedoch keine Konfiguration von Netzoverlay-Komponenten an. Sie können das Netzoverlay Ihren Anforderungen entsprechend gestalten. Die folgenden Aspekte werden vorkonfiguriert:
 
 * Management-Server und -Controller werden installiert und in die vCenter-Webbenutzerschnittstelle integriert.
 * ESXi-Agenten werden installiert und VTEP-IP-Adressen werden für jeden ESXi-Host konfiguriert.
