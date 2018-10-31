@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -20,9 +20,9 @@ Als bewährtes Verfahren sollten Sie Ihr eigenes SSL-Zertifikat für Zerto Virtu
 
 Zum Verwalten der Konfiguration von Zerto-Replikationen (z. B. zum Reparieren von Zerto-Instanzen oder zum Konfigurieren von virtuellen Schutzgruppen zur Replikation virtueller Maschinen) melden Sie sich bei der Konsole von Zerto Virtual Replication unter Verwendung der vCenter-Berechtigungsnachweise mit Administratorberechtigungen an.
 
-Wenn Sie Replikationen zwischen unterschiedlichen {{site.data.keyword.cloud_notm}} Zerto-Instanzen durchführen, können Sie die Replikation direkt zwischen den Zerto-Instanzen konfigurieren. Falls Sie die Replikation zwischen der {{site.data.keyword.cloud_notm}} Zerto-Instanz und Ihrem eigenen Rechenzentrum durchführen, müssen Sie Zerto selbst in Ihrem eigenen Rechenzentrum installieren. Diese in Ihrem eigenen Rechenzentrum installierte Zerto-Instanz kann sich selbst automatisch lizenzieren, wenn Sie sie in einem Paar mit der {{site.data.keyword.cloud_notm}} Zerto-Instanz verbinden.
+Wenn Sie Replikationen zwischen unterschiedlichen {{site.data.keyword.cloud_notm}} Zerto-Instanzen durchführen, können Sie die Replikation direkt zwischen den Zerto-Instanzen konfigurieren. Falls Sie die Replikation zwischen der {{site.data.keyword.cloud_notm}} Zerto-Instanz und Ihrem eigenen Rechenzentrum durchführen, müssen Sie Zerto selbst in Ihrem eigenen Rechenzentrum installieren. Diese Instanz kann sich selbst automatisch lizenzieren, wenn Sie sie in einem Paar mit der {{site.data.keyword.cloud_notm}} Zerto-Instanz verbinden.
 
-Da die Zerto-Replikation die NAT-Traversierung nicht unterstützt, müssen zum Aufbau der Konnektivität zwischen der {{site.data.keyword.cloud_notm}} Zerto-Instanz und Ihrem eigenen Rechenzentrum möglicherweise Routen für Appliances von Zerto Virtual Manager (ZVM) oder von Zerto Virtual Replication Appliances (VRAs) auf beiden Seiten angepasst werden und unter Umständen ist auch eine sichere Tunnelung zwischen den Standorten erforderlich. Wenn Sie Routen für ZVM-Appliances konfigurieren oder rekonfigurieren, müssen Sie sicherstellen, dass alle ZVM-Appliances zur Erstellung von Nutzungsberichten erfolgreich eine Verbindung zu `zerto.com` herstellen können. Diese Verbindung können Sie überprüfen, indem Sie von der ZVM-Appliance aus eine Browsersitzung für `https://www.zerto.com` öffnen.
+Die Zerto-Replikation unterstützt die NAT-Traversierung (NAT – Network Address Translation) nicht. Zum Aufbau der Konnektivität zwischen der {{site.data.keyword.cloud_notm}} Zerto-Instanz und Ihrem eigenen Rechenzentrum müssen möglicherweise Routen für Appliances von Zerto Virtual Manager (ZVM) oder von Zerto Virtual Replication Appliances (VRAs) auf beiden Seiten angepasst werden. Zum Aufbau der Konnektivität ist unter Umständen auch eine sichere Tunnelung zwischen den Standorten erforderlich. Wenn Sie Routen für ZVM-Appliances konfigurieren oder rekonfigurieren, müssen Sie sicherstellen, dass alle ZVM-Appliances zur Erstellung von Nutzungsberichten erfolgreich eine Verbindung zu `zerto.com` herstellen können. Diese Verbindung können Sie überprüfen, indem Sie von der ZVM-Appliance aus eine Browsersitzung für `https://www.zerto.com` öffnen.
 
 **Hinweis**: Das VMware NSX Edge Services Gateway (ESG) für das Management von Cloud Foundation-Instanzen und vCenter Server-Instanzen in {{site.data.keyword.cloud_notm}} ist so vorkonfiguriert, dass abgehende HTTPS-Kommunikation (TCP-Port 443) zulässig ist, die aus ZVM stammt.
 
@@ -32,7 +32,7 @@ Zur Aktualisierung von Zerto Virtual Replication melden Sie sich bei der Konsole
 
 ## VRAs auf neu hinzugefügten ESXi-Servern bereitstellen
 
-Wenn Sie ESXi-Server für den primären Cluster Ihrer Instanz hinzufügen oder entfernen, werden VRAs automatisch bereitgestellt oder entfernt. Auf den ESXi-Servern in den sekundären Clustern Ihrer Instanz werden VRAs nicht automatisch bereitgestellt. Sie können sie jedoch selbst über die Konsole von Zerto Virtual Replication bereitstellen.
+Wenn Sie ESXi-Server für den primären Cluster Ihrer Instanz hinzufügen oder entfernen, werden VRAs automatisch bereitgestellt oder entfernt. Auf den ESXi-Servern in den sekundären Clustern Ihrer Instanz werden VRAs nicht automatisch bereitgestellt. Sie können VRAs jedoch selbst über die Konsole von Zerto Virtual Replication bereitstellen.
 
 ### Zugehörige Links
 

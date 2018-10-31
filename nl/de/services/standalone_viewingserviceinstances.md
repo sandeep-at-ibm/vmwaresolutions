@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-20"
 
 Mit dem hier beschriebenen Verfahren können Sie die lokalen HCX on {{site.data.keyword.cloud}}-Instanzen, die Sie für die lokale Verwendung bestellt haben, und Informationen zu diesen Instanzen anzeigen.
 
-## Vorgehensweise
+## Vorgehensweise zum Anzeigen lokaler VMware HCX on IBM Cloud-Instanzen
 
 Klicken Sie im linken Navigationsfenster auf **Bereitgestellte Instanzen** und blättern Sie abwärts zur Tabelle **Lokale HCX-Instanzen**, um die Informationen zu den von Ihnen bestellten Instanzen anzuzeigen:
 

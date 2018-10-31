@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-31"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-08-31"
 Im Folgenden sind die Mindestvoraussetzungen zur Anforderung des Service "{{site.data.keyword.cloud_notm}} Private Hosted" aufgeführt:
 
 * VMware vCenter Server on {{site.data.keyword.cloud_notm}}
-  **Hinweis**: VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle wird nicht unterstützt.
+  **Hinweis:** VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle wird nicht unterstützt.
 * VMware NSX Advanced oder Enterprise Edition
 * Drei {{site.data.keyword.baremetal_long}}-Instanzen
 * Dual Intel Xeon Gold 5120-Prozessor / 28 Kerne insgesamt, 2,2 GHz
@@ -31,14 +31,14 @@ Im Folgenden sind die Mindestvoraussetzungen zur Anforderung des Service "{{site
 ## Vorgehensweise zur Anforderung von IBM Cloud Private Hosted
 
 1. Bestellen Sie eine neue vCenter Server-Instanz und führen Sie dazu die Schritte aus, die im Abschnitt zum [Bestellen von vCenter Server-Instanzen](../vcenter/vc_orderinginstance.html) beschrieben werden. Sie können IBM Cloud Private Hosted auch für eine bereits vorhandene Instanz anfordern.
-  **Wichtig**: Vergewissern Sie sich, dass Ihre Umgebung die Mindestvoraussetzungen erfüllt, die hier aufgeführt wurden.
+  **Wichtig:** Vergewissern Sie sich, dass Ihre Umgebung die Mindestvoraussetzungen erfüllt, die hier aufgeführt wurden.
 2. Vergewissern Sie sich, dass Sie über alle erforderlichen IBM Cloud Private-Berechtigungen verfügen.
 3. Nach Erhalt der Bestätigung, in der Sie darüber informiert werden, dass Ihre vCenter Server-Instanz einsatzbereit ist, führen Sie die folgenden Schritte aus, um IBM Cloud Private Hosted anzufordern.
 4. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Einführung**.
 5. Blättern Sie auf der Seite nach unten und klicken Sie unter **Zusätzliche Services bestellen** auf die Karte für **IBM Cloud Private Hosted**.
 6. Geben Sie auf der Seite **IBM Cloud Private Hosted on vCenter Server on IBM Cloud** im Feld zur **Kontaktaufnahme mit dem IBM Cloud Private Hosted-DevOps-Team** eine Beschreibung Ihrer Voraussetzungen ein und klicken Sie dann auf **Beratungsgespräch anfordern**.
 
-Der zuständige {{site.data.keyword.cloud_notm}} Private Hosted-DevOps-Mitarbeiter wird sich dann über Ihre {{site.data.keyword.cloud_notm}}-Kontaktinformationen mit Ihnen in Verbindung setzen und Sie bei den ersten Schritten unterstützen.
+Der zuständige {{site.data.keyword.cloud_notm}} Private Hosted-DevOps-Mitarbeiter setzt sich dann über Ihre {{site.data.keyword.cloud_notm}}-Kontaktinformationen mit Ihnen in Verbindung, um Sie bei den ersten Schritten zu unterstützen.
 
 ### Zugehörige Links
 

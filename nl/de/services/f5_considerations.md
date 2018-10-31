@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -14,7 +14,7 @@ Der Service "F5 on {{site.data.keyword.cloud}}" (F5 BIG-IP® Virtual Edition) st
 
 Sie können je nach Bedarf mehrere Instanzen dieses Service installieren.
 
-**Verfügbarkeit**: Dieser Service ist nur für Instanzen verfügbar, die in V1.9 oder höheren Releases bereitgestellt werden.
+**Verfügbarkeit:** Dieser Service ist nur für Instanzen verfügbar, die in V1.9 und höheren Releases bereitgestellt werden.
 
 ## Technische Spezifikationen für F5 on IBM Cloud
 
@@ -53,7 +53,7 @@ Tabelle 1. CPU- und RAM-Bereitstellungen für unterschiedliche Bandbreiten- und 
 
 **Hinweise:**
 
-* F5 BIG–IP begrenzt den Appliancedurchsatz aufgrund der von Ihnen ausgewählten maximalen Bandbreite. Da die Netzleistung durch viele Faktoren beeinflusst wird, sind möglicherweise nicht alle Konfigurationen und Topologien in der Lage, die ausgewählte maximale Bandbreite zu erzielen.
+* F5 BIG–IP begrenzt den Appliance-Durchsatz aufgrund der von Ihnen ausgewählten maximalen Bandbreite. Da die Netzleistung durch viele Faktoren beeinflusst wird, sind möglicherweise nicht alle Konfigurationen und Topologien in der Lage, die ausgewählte maximale Bandbreite zu erzielen.
 * Das Hochverfügbarkeitspaar (HA-Paar) der virtuellen Maschinen für BIG-IP VE wird nur im Standardcluster bereitgestellt.
 
   Außerdem sind 100% der CPU und des RAM für die zwei virtuellen Maschinen für BIG-IP VE ebenfalls reserviert, weil sich diese virtuellen Maschinen auf der Datenebene der Netzkommunikation befinden und es entscheidend ist, dass für sie immer Ressourcen verfügbar sind.

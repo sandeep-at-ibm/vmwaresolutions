@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -14,7 +14,7 @@ Der Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud}}" stellt 
 
 Sie können je nach Bedarf mehrere Instanzen dieses Service installieren. Zur Verwaltung dieses Service können Sie FortiOS Web Client oder die Befehlszeilenschnittstelle über SSH verwenden.
 
-**Verfügbarkeit**: Dieser Service ist nur für Instanzen verfügbar, die in V2.0 und höheren Releases bereitgestellt werden.
+**Verfügbarkeit:** Dieser Service ist nur für Instanzen verfügbar, die in V2.0 und höheren Releases bereitgestellt werden.
 
 ## Technische Spezifikationen für FortiGate Virtual Appliance on IBM Cloud
 

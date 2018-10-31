@@ -4,21 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-27"
 
 ---
 
 # Verwaltete Services für Veeam on IBM Cloud anfordern
 
-Der Service "Veeam on {{site.data.keyword.cloud}}" wird nahtlos in Ihre VMware-Hypervisoren integriert und fördert so die Hochverfügbarkeit in Ihrem Unternehmen. Dieser Service kann Wiederherstellungspunkte und Zeitziele für Ihre Anwendungen und Daten bereitstellen. Die Wiederherstellungspunkte und Zeitziele können innerhalb von weniger als 15 Minuten nach Abschluss der Konfiguration bereitgestellt werden. Durch die Verwendung dieses Service können Sie die Sicherung und Wiederherstellung aller virtuellen Maschinen für Ihre Infrastruktur direkt von der Veeam-Konsole aus steuern.
+Der Service "Veeam on {{site.data.keyword.cloud}}" wird nahtlos in Ihre VMware-Hypervisoren integriert und fördert so die Hochverfügbarkeit in Ihrem Unternehmen. Dieser Service stellt Wiederherstellungspunkte und Zeitziele für Ihre Anwendungen und Daten bereit. Die Wiederherstellungspunkte und Zeitziele können innerhalb von weniger als 15 Minuten nach Abschluss der Konfiguration bereitgestellt werden. Mithilfe dieses Service steuern Sie die Sicherung und Wiederherstellung aller virtuellen Maschinen für Ihre Infrastruktur direkt von der Veeam-Konsole aus.
 
 IBM Resiliency Backup as a Service bietet zur Unterstützung der Ausfallsicherheit von Informationen eine leistungsfähige Palette von lokalen, ausgelagerten und Hybrid-Cloud-basierten Datenschutzlösungen. Weitere Informationen finden Sie unter [IBM Resiliency Backup as a Service](https://www.ibm.com/us-en/marketplace/managed-backup-services).
 
-Wenn Sie verwaltete Services für Veeam on {{site.data.keyword.cloud_notm}} anfordern, kann eine vollständig verwaltete Sicherungsumgebung sowohl mit Veeam-Sicherungssoftware als auch IBM Resiliency Backup as a Service bereitgestellt werden, die Ihnen folgendermaßen von Nutzen sein kann:
+Wenn Sie verwaltete Services für Veeam on {{site.data.keyword.cloud_notm}} anfordern, müssen Sie sowohl mit Veeam-Sicherungssoftware als auch IBM Resiliency Backup as a Service verwenden, um eine vollständig verwaltete Sicherungsumgebung bereitzustellen. Diese Kombination hilft Ihnen auf folgende Weise:
 * Sie haben eine Auswahl an Datenschutzlösungen, um einen sicheren und automatisierten Schutz kritischer Geschäftsdaten in dedizierten lokalen Umgebungen, {{site.data.keyword.cloud_notm}}-Infrastrukturen oder IBM Resiliency Services Center, entweder als primäre oder sekundäre Standorte, zu ermöglichen.
 * Sie erhalten außerdem eine skalierbare und flexible Datenschutzlösung und können so die Gesamtbetriebskosten reduzieren und Ihre Compliance-Anforderungen verwalten.
 
-## Vorgehensweise
+## Vorgehensweise zum Anfordern von verwalteten Services für Veeam in IBM Cloud
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Einführung**.
 2. Blättern Sie auf der Seite abwärts und klicken Sie unter **Zusätzliche verwaltete Services bestellen** auf die Karte **Verwaltete Services für Veeam on IBM Cloud**.

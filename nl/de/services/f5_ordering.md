@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -44,7 +44,7 @@ Das Lizenzmodell für den Service "F5 on {{site.data.keyword.cloud_notm}}" biete
         <dd class="dd">Dieses Angebot ergänzt die Optionen **Gut** und **Besser** durch BIG-IP Application Security Manager™ (ASM) mit einem umfassenden Anwendungsschutz vor L7 DDoS-Attacken und durch Open Web Application Security Project (OWASP) mit einem Schutz vor den 10 wichtigsten Sicherheitsbedrohungen und allgemeinen Anwendungssicherheitslücken. Durch die Einbindung von Funktionen wie Single Sign-on und Mehrfaktorauthentifizierung ermöglicht BIG-IP Access Policy Manager™ (APM) Benutzern einen sicheren und einfachen Zugriff auf Anwendungen, die sich an einer beliebigen Stelle in Mehrcloudumgebungen befinden können.</dd>
 </dl>
 
-**Wichtig**: Nach der Installation des Service kann das Lizenzmodell nicht mehr geändert werden. Wenn Sie das Lizenzmodell ändern möchten, müssen Sie den vorhandenen Service entfernen und den Service mit einem anderen Lizenzmodell erneut installieren.
+**Wichtig:** Nach der Installation des Service kann das Lizenzmodell nicht mehr geändert werden. Wenn Sie das Lizenzmodell ändern möchten, müssen Sie den vorhandenen Service entfernen und den Service mit einem anderen Lizenzmodell erneut installieren.
 
 ### Maximale Bandbreite
 
