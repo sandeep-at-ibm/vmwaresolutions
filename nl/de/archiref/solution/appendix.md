@@ -29,7 +29,7 @@ Tabelle 1. Vergleichsdiagramm der VMware NSX-Editionen
 | Automatische Sicherheitsrichtlinien mit vRealize |      | •        | •          |
 | SW L2-Überbrückung zur physischen Umgebung        |      | •        | •          |
 | Dynamisches Routing mit ECMP (aktiv-aktiv)     |      | •        | •          |
-| Verteilte Firewallfunktionaltität                       |      | •        | •          |
+| Verteilte Firewallfunktionalität                       |      | •        | •          |
 | Integration in Active Directory             |      | •        | •          |
 | Überwachung der Serveraktivität                    |      | •        | •          |
 | Serviceeinfügung (Integration für Drittanbieter)     |      | •        | •          |

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,7 +25,7 @@ Für einige Komponenten, wie VMware vCenter Server, Platform Services Controller
 Stellen Sie zur Speicherung dieser Sicherungen einen Linux-Dateiserver in Ihrem Cluster mithilfe der folgenden Schritte bereit:
 
 1. Bestellen Sie ein privates portierbares Teilnetz aus der {{site.data.keyword.cloud_notm}}-Infrastruktur und verwenden Sie für dieses Teilnetz dasselbe VLAN wie für Ihre Systemkomponenten. Dies ist das private VLAN, in dem sich die Management-IP-Adressen für Ihre Hosts befinden.
-2. Laden Sie ein Betriebssystemimage in Ihren VMware-Managementdatenspeicher, wie zum Beispiel ein Image für [Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window}, aus der privaten {{site.data.keyword.cloud_notm}}-Spiegelung (Mirror) hoch.
+2. Laden Sie ein Betriebssystemimage in Ihren VMware-Managementdatenspeicher, wie zum Beispiel ein Image für Ubuntu Server 18.04 LTS, aus der privaten {{site.data.keyword.cloud_notm}}-Spiegelung (Mirror) hoch.
 3. Stellen Sie diese virtuelle Maschine (VM) in Ihrem Cluster über die Management-Portgruppe unter Verwendung einer zuvor bestellten privaten portierbaren IP-Adresse bereit. Stellen Sie sicher, dass die VM so konfiguriert wird, dass sie auf Ihre Active Directory/DNS-Server verweist, und fügen Sie die VM optional dem DNS Ihrer Unterdomäne hinzu.
 4. Erstellen Sie auf diesem Server eine Sicherungsbenutzer-ID (kein Rootbenutzer) und stellen Sie sicher, dass alle erforderlichen Services konfiguriert und für Dateiübertragungen gestartet werden. Beispiel: FTP oder SSH.
 5. Stellen Sie sicher, dass diese virtuelle Maschine in Ihren Veeam- oder IBM Spectrum Protect Plus-Managementsicherungsjob eingefügt wird.
