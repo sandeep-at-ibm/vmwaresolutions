@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -39,7 +39,7 @@ Tabelle 2. Teileliste für Softwarekomponenten in vCenter Server-Instanzen
 | VMware       | NSX for vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
-**Hinweis**: VMware vSAN ist eine optionale Komponente.
+**Hinweis:** VMware vSAN ist eine optionale Komponente.
 
 ## Erweiterte Konfigurationseinstellungen für ESXi-Server
 
@@ -61,7 +61,7 @@ Tabelle 3. Erweiterte Konfigurationseinstellungen für ESXi-Server für vCenter 
 | TCP/IP-Heapspeichergröße | **TcpipHeapSize** = 32 | Nicht festgelegt |
 | Max. TCP/IP-Heapspeicher | **TcpipHeapMax** = 1536 | Nicht festgelegt |
 
-**Hinweise**:
+**Hinweise:**
 * Die Einstellung **MaxVolumes** ist für den Service "IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}" erforderlich, weil der Service möglicherweise mehr als die Standardanzahl von NFS-Mounts auf dem ESXi-Server verwendet.
 * Der Wert **Nicht festgelegt** für eine Konfigurationseinstellung gibt an, dass die neue Einstellung nicht automatisch angewendet wird, da dies einen Warmstart für die ESXi-Server erforderlich macht, der zu einer Unterbrechung des Betriebs führen könnte.
 
@@ -75,7 +75,7 @@ Die folgende Tabelle gibt Ihnen eine Übersicht über die Konfigurationseinstell
 
 Die Einstellungen gelten für neue Instanzen und neue Cluster in neuen Instanzen aus V2.2 oder höher. Die Einstellungen gelten nicht für neue Cluster in vorhandenen Instanzen aus V2.1 oder früher oder in vorhandenen Instanzen, für die ein Upgrade auf V2.2 oder höher durchgeführt wurde.
 
-Tabelle 4. Konfigurationseinstellungenen für NSX und Portgruppen bei vCenter Server-Instanzen
+Tabelle 4. Konfigurationseinstellungen für NSX und Portgruppen bei vCenter Server-Instanzen
 
 | Konfigurationseinstellung | V2.1 oder früher  | V2.2 oder höher |   
 |:------------- |:------------- |:------------- |
@@ -117,7 +117,7 @@ Führen Sie zum Aktualisieren der MTU-Einstellung für den öffentlichen Switch 
 2. Wählen Sie auf der Registerkarte **Eigenschaften** die Option **Erweitert** aus.
 3. Stellen Sie sicher, dass für **Maximale MTU** der Wert 1500 festgelegt ist.
 
-   **Anmerkung**: Wenn die MTU-Größe in einem vSphere Distributed Switch (vDS) geändert wird, werden die angehängten Uplinks (physischen NICs) herunter- und wieder hochgefahren. Aus diesem Grund kommt es bei den VMs, die den betreffenden Uplink verwenden, zu einem kurzen Ausfall. Daher wird empfohlen, die Aktualisierung der MTU-Einstellung auf eine geplante Ausfallzeit zu legen.
+   **Anmerkung:** Wenn die MTU-Größe in einem vSphere Distributed Switch (vDS) geändert wird, werden die angehängten Uplinks (physischen NICs) herunter- und wieder hochgefahren. Aus diesem Grund kommt es bei den VMs, die den betreffenden Uplink verwenden, zu einem kurzen Ausfall. Daher wird empfohlen, die Aktualisierung der MTU-Einstellung auf eine geplante Ausfallzeit zu legen.
 
 ### Zugehörige Links
 
