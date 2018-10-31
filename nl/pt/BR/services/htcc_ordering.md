@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-26"
 
 ---
 
 # Pedindo o HyTrust CloudControl on IBM Cloud
 
-É possível pedir o serviço HyTrust CloudControl on {{site.data.keyword.cloud}} ao pedir uma nova instância com um par de HA de dispositivos HyTrust DataControl incluídos ou incluindo os dispositivos HyTrust DataControl em sua instância existente.
+É possível pedir o serviço HyTrust CloudControl on {{site.data.keyword.cloud}} ao pedir uma nova instância com um par de HA de dispositivos HyTrust DataControl incluso ou incluindo os dispositivos HyTrust DataControl em sua instância existente.
 
 ## Pedindo o HyTrust CloudControl on IBM Cloud para uma nova instância
 
@@ -22,7 +22,7 @@ lastupdated: "2018-07-20"
 
 É possível incluir o serviço HyTrust CloudControl on {{site.data.keyword.cloud_notm}} em uma instância existente usando um dos métodos a seguir:
 * No console do {{site.data.keyword.vmwaresolutions_short}}, visualize a instância para a qual você deseja incluir o serviço, clique em **Serviços** na área de janela de navegação esquerda e clique em **Incluir**.
-* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **HyTrust CloudControl on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir em instância existente**.
+* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **HyTrust CloudControl on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir na instância existente**.
 
 ### Links relacionados
 

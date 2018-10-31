@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -12,8 +12,7 @@ lastupdated: "2018-08-15"
 
 Depois que o serviço for implementado em sua instância, será possível acessar o console do Veeam usando RDP para gerenciar o backup e a restauração de todas as máquinas virtuais em seu ambiente, incluindo o backup e a restauração dos componentes de gerenciamento. É possível também fazer upgrade do serviço fazendo download e instalando as atualizações do Veeam do website do Veeam.
 
-Para instâncias que foram implementadas em liberações anteriores à V1.8, se você quiser usar o serviço Veeam no {{site.data.keyword.cloud}}, deve-se substituir a VSI do Veeam existente nas instâncias. Para obter mais informações, consulte a seção _Substituindo a VSI do Veeam de instâncias pré-V1.8 pelo Veeam on IBM
-Cloud_ neste tópico.
+Para instâncias que foram implementadas em liberações anteriores à V1.8, se você quiser usar o serviço Veeam no {{site.data.keyword.cloud}}, deve-se substituir a VSI do Veeam existente nas instâncias. Para obter mais informações, veja a seção _Substituindo a VSI do Veeam de instâncias pré-V1.8 pelo Veeam on IBM Cloud_.
 
 ## Acessando o console do Veeam usando RDP
 
@@ -66,7 +65,7 @@ foi removida e os pontos de backup para as instâncias não estão mais disponí
 console do {{site.data.keyword.vmwaresolutions_short}}, embora a VSI do Veeam nas instâncias pré-V1.8 continuem
 funcionando.
 
-Deve-se criar um chamado de suporte do {{site.data.keyword.cloud_notm}} para obter assistência com uma restauração. Além disso, a licença da VSI do Veeam em instâncias anteriores à V1.8 expirou em 14 de outubro de 2017. Portanto, deve-se substituir a VSI do Veeam anterior pelo novo serviço Veeam no {{site.data.keyword.cloud_notm}}.
+Deve-se criar um chamado de suporte do {{site.data.keyword.cloud_notm}} para obter assistência com uma restauração. Além disso, a licença da VSI do Veeam em instâncias pré-V1.8 expirou em 14 de outubro de 2017. Portanto, deve-se substituir a VSI do Veeam anterior pelo novo serviço Veeam no {{site.data.keyword.cloud_notm}}.
 
 Conclua as etapas a seguir:
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda e, em seguida, clique na instância de destino.
@@ -74,7 +73,7 @@ Conclua as etapas a seguir:
 3. Clique na guia **Serviços**.
 4. Na guia **Incluir serviços**, instale o serviço Veeam no {{site.data.keyword.cloud_notm}}.
 
-Depois que o novo serviço Veeam no {{site.data.keyword.cloud_notm}} é implementado e um backup bem-sucedido dos componentes de gerenciamento é concluído, é possível remover a VSI do Veeam existente de sua conta criando um chamado de suporte do {{site.data.keyword.cloud_notm}}. O Suporte IBM identificará e excluirá a VSI do Veeam existente e o armazenamento.
+Depois que o novo serviço Veeam no {{site.data.keyword.cloud_notm}} é implementado e um backup bem-sucedido dos componentes de gerenciamento é concluído, é possível remover a VSI do Veeam existente de sua conta criando um chamado de suporte do {{site.data.keyword.cloud_notm}}. O Suporte IBM identifica e exclui a VSI e o armazenamento existentes do Veeam.
 
 ### Links relacionados
 

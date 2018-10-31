@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-25"
 
 ---
 
 # Solicitando Zerto on IBM Cloud
 
-É possível pedir o serviço Zerto on {{site.data.keyword.cloud}} ao pedir uma nova instância com o serviço incluído ou incluindo o serviço em sua instância existente.
+É possível pedir o serviço Zerto on {{site.data.keyword.cloud}} ao pedir uma nova instância com o serviço incluso ou incluindo o serviço em sua instância existente.
 
 ## Pedindo o Zerto on IBM Cloud para uma nova instância
 

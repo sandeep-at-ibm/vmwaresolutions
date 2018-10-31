@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-20"
 
 Use este procedimento para visualizar as instâncias do HCX on {{site.data.keyword.cloud}} no local que você pediu para uso no local e informações sobre elas.
 
-## Procedimento
+## Procedimento para visualizar as instâncias do VMware HCX on IBM Cloud no local
 
 Clique em **Instâncias implementadas** na área de janela de navegação esquerda e role para baixo até a tabela **Instâncias do HCX no local** para visualizar informações sobre as instâncias que você pediu:
 

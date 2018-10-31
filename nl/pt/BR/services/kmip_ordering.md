@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-26"
 
 ---
 
 # Pedindo o KMIP for VMware on IBM Cloud
 
-É possível pedir o serviço KMIP for VMware on {{site.data.keyword.cloud}} ao pedir uma nova instância com o serviço incluído ou incluindo o serviço em sua instância existente.
+É possível pedir o serviço KMIP for VMware on {{site.data.keyword.cloud}} ao pedir uma nova instância com o serviço incluso ou incluindo serviço em sua instância existente.
 
 ## Pedindo o KMIP for VMware on IBM Cloud para uma nova instância
 
@@ -38,7 +38,7 @@ O {{site.data.keyword.cloud_notm}} mantém um terminal de serviço KMIP para VMw
 
 Para vCenter Server, deve-se configurar um cluster Key Server Management (KMS). O terminal em sua região selecionada se conecta de forma segura ao KMS por meio do certificado SSL do cliente. Veja a tabela a seguir para o terminal em cada região. Esses terminais usam certificados autoassinados que são mantidos pela equipe do {{site.data.keyword.vmwaresolutions_short}}. A impressão digital para os certificados é `a9 d0 ff 15 df 85 10 6b 61 88 fe 2e 8b d3 1a af 48 c8 a0 7a`.
 
-Tabela 1: Regiões de terminal do serviço KMIP for VMware on {{site.data.keyword.cloud_notm}}
+Tabela 1. Regiões do terminal do serviço KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
 | Região         | Terminal               |
 |:---------------|:-----------------------|
@@ -47,7 +47,7 @@ Tabela 1: Regiões de terminal do serviço KMIP for VMware on {{site.data.keywor
 | Reino Unido |  `158.175.93.122:5696` |
 | Sul dos EUA       |  `169.60.185.42:5696`  |
 
-Essa configuração é opcional no momento da configuração inicial. É possível deixar esse campo em branco neste momento porque o certificado de cliente do KMS no vCenter Server é conhecido após sua instância ser implementada. Mas é necessário inserir o certificado após a implementação da instância, para que a conexão do vCenter Server com o KMS possa ser concluída com êxito.
+Essa configuração é opcional no momento da configuração inicial. É possível deixar esse campo em branco porque o certificado de cliente do KMS no vCenter Server é conhecido depois que sua instância é implementada. Mas deve-se inserir o certificado depois que sua instância é implementada para que a conexão do vCenter Server com o KMS possa ser concluída com êxito.
 
 ### Chave API para o ID do serviço
 

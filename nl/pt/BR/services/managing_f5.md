@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -14,7 +14,8 @@ lastupdated: "2018-07-19"
 
 Para gerenciar o serviço F5 no {{site.data.keyword.cloud}}, efetue login nos consoles de IU da Web do BIG-IP primário ou secundário usando as credenciais correspondentes que podem ser localizadas no F5 na página de detalhes do serviço {{site.data.keyword.cloud_notm}}.
 
-Para obter informações sobre como visualizar os detalhes do serviço, veja os tópicos a seguir:
+Para obter mais informações sobre como visualizar os detalhes do serviço, veja:
+
 * [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](../vcenter/vc_addingremovingservices.html)
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-08-02"
 
 O IMI pode servir como um provedor único e confiável para reduzir a complexidade de monitoramento e gerenciamento de infraestruturas de TI virtuais oferecendo serviços gerenciados de painel único de controle para ambientes do VMware Cloud Foundation e do VMware vCenter Server.
 
-O IMI fornece serviços gerenciados para instâncias do Cloud Foundation e do vCenter Server, que incluem gerenciamento avançado do VMware vSphere, cobertura total do VMware NSX para assegurar uma infraestrutura de rede virtual segura e altamente disponível, e monitoramento do VMware vSAN para assegurar a disponibilidade dos dados.
+O IMI fornece serviços gerenciados para as instâncias do Cloud Foundation e do vCenter Server. Esses serviços gerenciados incluem gerenciamento avançado do VMware vSphere, cobertura integral do VMware NSX para assegurar a infraestrutura de rede virtual altamente disponível e segura e o monitoramento do VMware vSAN para assegurar a disponibilidade de dados.
 
 ## Especificações técnicas do IMI
 
@@ -24,15 +24,15 @@ As especificações a seguir estão incluídas no serviço gerenciado IMI:
 * Ferramentas de gerenciamento de serviço de TI e processo de gerenciamento com prestação de contas para a entrega geral
 * Gerenciamento de conformidade
 * Gerenciamento e relatório de serviço diário e semanal
-* Serviços com valor agregado sem aumento de custos para melhoria contínua
+* Serviços com valor agregado sem aumento de custos para melhoria continuada
 
-## Procedimento
+## Procedimento para solicitar serviços gerenciados do IMI
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Introdução** na área de janela de navegação esquerda.
-2. Role para baixo na página e, em **Pedir serviços gerenciados adicionais**, clique no cartão **Serviços gerenciados do IMI**.
+2. Role para baixo na página e clique no cartão **Serviços gerenciados do IMI** que está localizado em **Pedir serviços gerenciados adicionais**.
 3. Na página **Serviços gerenciados do IMI**, na caixa **Encaixar pré-vendas do IMI**, insira uma descrição de seus requisitos para os serviços IMI e clique em **Solicitar uma consulta**.
 
-Um representante de pré-vendas do IMI entrará em contato com você através de suas informações de contato do {{site.data.keyword.cloud_notm}} e o ajudará com os serviços que você precisar.
+Um representante de pré-vendas do IMI entra em contato com você usando suas informações de contato do {{site.data.keyword.cloud_notm}} para ajudá-lo com os serviços necessários.
 
 ### Links relacionados
 
