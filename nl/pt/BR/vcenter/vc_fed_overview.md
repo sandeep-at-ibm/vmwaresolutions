@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -39,10 +39,10 @@ Os componentes de rede a seguir são pedidos:
 *  Dois VMware NSX Edge Services Gateways:
   * Um serviço de gerenciamento seguro VMware NSX Edge Services Gateway (ESG) para tráfego de gerenciamento de saída HTTPS, que é implementado pela IBM como parte da tipologia de rede de gerenciamento. Este ESG é usado pelas máquinas virtuais de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Para obter mais informações, veja [Configurando sua rede para usar o ESG gerenciado pelo cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-    **Importante**: esse ESG não está acessível e não pode ser usado. Se você modificá-lo, poderá não ser capaz de gerenciar a instância do vCenter Server do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externos da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
+    **Importante:** esse ESG não está acessível para você e não é possível usá-lo. Se você modificá-lo, poderá não ser capaz de gerenciar a instância do vCenter Server do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externos da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
   * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
-  **Nota**: o VMware NSX Edge Services (ESG) para o tráfego de gerenciamento HTTPS de saída é removido como parte da ação para proteger sua instância do VMware Federal implementada. Para obter mais informações, veja [Protegendo as instâncias do VMware Federal](vc_fed_securinginstance.html).
+  **Nota:** o VMware NSX Edge Services (ESG) para o tráfego de gerenciamento HTTPS de saída é removido como parte da ação para proteger sua instância do VMware Federal implementada. Para obter mais informações, veja [Protegendo as instâncias do VMware Federal](vc_fed_securinginstance.html).
 
 ### Virtual Server Instances
 
@@ -96,9 +96,9 @@ VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technic
 * Um VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * (Para clusters do vSAN) VMware vSAN Advanced ou Enterprise 6.6
 
-**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente no console do {{site.data.keyword.vmwaresolutions_short}}, não no {{site.data.keyword.slportal}} nem de qualquer outra maneira fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados na conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não no	{{site.data.keyword.slportal}} ou por qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
-**CUIDADO**: gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância, fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
+**CUIDADO:** gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}}, que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você solicitou a instância, fora do console do {{site.data.keyword.vmwaresolutions_short}} pode tornar seu ambiente instável. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes
 *  Expandindo ou contraindo a capacidade da instância por meio da inclusão ou remoção de servidores ESXi
 *  Desativando componentes

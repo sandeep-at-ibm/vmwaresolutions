@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -14,7 +14,7 @@ Os servidores ESXi configurados quando você pediu uma instância são agrupados
 
 É possível incluir seus próprios clusters em instâncias do VMware vCenter Server para expandir a capacidade de cálculo e armazenamento. Em um cluster, é possível gerenciar servidores ESXi para melhor alocação de recurso e alta disponibilidade. Quando não forem mais necessários, exclua os clusters incluídos de suas instâncias.
 
-**Disponibilidade**: o recurso de exclusão de cluster está disponível somente para instâncias que são implementadas (ou submetidas a upgrade) na V2.3 e mais recente.
+**Disponibilidade:** o recurso de exclusão de cluster está disponível somente para instâncias que são implementadas na (ou submetidas a upgrade para) V2.3 e mais recente.
 
 ## Incluindo clusters para instâncias do vCenter Server
 
@@ -85,13 +85,10 @@ As configurações de armazenamento são baseadas em sua seleção de configura�
 #### Armazenamento vSAN
 
 Especifique as seguintes opções vSAN:
-
 * **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
 * **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
-* **Tipo de disco para discos de cache vSAN**: selecione uma opção para os discos de cache necessários.
-
-    **Nota**: se desejar incluir discos de capacidade acima do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
-* **Número de discos de cache vSAN**: especifique o número de discos de cache que deseja incluir.
+* Se você desejar incluir discos de capacidade além do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
+* Revise os valores **Tipo de disco para discos de cache vSAN** e **Número de discos de cache vSAN**. Esses valores dependem de a caixa **Intel Optane de alto desempenho** estar ou não marcada.
 * **Licença do vSAN**: use a licença do VMware fornecida pela IBM para o componente vSAN selecionando **Incluir com a compra** ou Bring Your Own License (BYOL) selecionando **Eu fornecerei** e inserindo sua própria chave de licença.
 
 Se o seu cluster inicial era um cluster do vSAN, todos os clusters adicionais do vSAN usam a mesma licença do vSAN e têm a mesma configuração que o inicial. Isso também será verdadeiro se qualquer cluster na instância tiver vSAN escolhido para ser implementado nele (inicial ou adicional). A primeira vez que você é solicitado pela licença vSAN (BYOL ou comprada) e a edição. Na próxima vez que você selecionar vSAN para um novo cluster, a licença escolhida inicialmente será reutilizada.
@@ -127,10 +124,10 @@ Especifique a opção de licenciamento para o componente VMware vSphere no clust
 
 As configurações de ativação da Placa da interface de rede (NIC) baseiam-se em sua seleção de **Rede pública e privada** ou **Somente rede privada**. Os serviços complementares a seguir requerem NICs públicas e não estarão disponíveis se você selecionar a opção privada:
 
-* F5 on {{site.data.keyword.cloud_notm}}
+* F5 em  {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+* Zerto on  {{site.data.keyword.cloud_notm}}
 
 ### Resumo do Pedido
 
@@ -141,7 +138,7 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância na qual você deseja incluir clusters.
 
-   **Nota**: assegure-se de que a instância esteja no status **Pronto para usar**. Caso contrário, não será possível incluir clusters na instância.
+   **Nota:** assegure-se de que a instância esteja no status **Pronto para uso**. Caso contrário, não será possível incluir clusters na instância.
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda e clique em **Incluir** no canto superior direito da tabela **CLUSTERS**.
 4. Na página **Incluir cluster**, insira o nome do cluster.
 5. Se você desejar hospedar o cluster em um {{site.data.keyword.CloudDataCent_notm}} diferente daquele no qual a instância está hospedada, sob **Bare Metal Server**, marque a caixa de seleção **Selecionar um local diferente** e escolha o {{site.data.keyword.CloudDataCent_notm}} para hospedar a instância.
@@ -169,9 +166,9 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 1. A implementação do cluster é iniciada automaticamente e o status do cluster muda para **Inicializando**. É possível verificar o status da implementação visualizando o histórico de implementação na página **Resumo** da instância.
 2. Quando o cluster estiver pronto para usar, seu status mudará para **Pronto para usar**. O cluster recém-incluído é ativado com a Alta disponibilidade (HA) do vSphere e o Distributed Resource Scheduler (DRS) do vSphere.
 
-**Importante**: não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar falha das operações de inclusão ou remoção de servidores ESXi no cluster.
+**Importante:** não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar falha das operações de inclusão ou remoção de servidores ESXi no cluster.
 
-## Visualizando clusters em instâncias do vCenter Server
+## Procedimento para visualizar clusters em instâncias do vCenter Server
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique em uma instância para visualizar os clusters contidos.
@@ -241,12 +238,12 @@ Talvez você queira excluir um cluster de uma instância no caso de ela não ser
 * Quando você exclui um cluster, todas as VMs (máquinas virtuais) do cluster também são excluídas e não podem ser recuperadas. Se quiser manter as VMs, migre-as para outros clusters.
 * O cluster padrão não pode ser excluído.
 
-## Procedimento para excluir clusters de instâncias do vCenter Server
+### Procedimento para excluir clusters de instâncias do vCenter Server
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância da qual deseja excluir clusters.
 
-   **Nota**: assegure-se de que a instância esteja no status **Pronto para usar**. Caso contrário, não será possível excluir clusters da instância.
+   **Nota:** assegure-se de que a instância esteja no status **Pronto para uso**. Caso contrário, não será possível excluir clusters da instância.
 
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda. Na tabela **CLUSTERS**, localize o cluster que você deseja excluir e clique no ícone **Excluir** na coluna **Ações**.
 4. Confirme que você concluiu a migração de máquinas virtuais para outros clusters, se necessário, e que deseja excluir o cluster.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -39,7 +39,7 @@ Tabela 2. BOM para os componentes de software em instâncias do vCenter Server
 | VMware       | NSX for vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
-**Nota**: VMware vSAN é um componente opcional.
+**Nota:** o VMware vSAN é um componente opcional.
 
 ## Definições de configuração avançada para servidores ESXi
 
@@ -61,7 +61,7 @@ Tabela 3. Definições de configuração avançadas de servidores ESXi para inst
 | Tamanho do heap TCP/IP | **TcpipHeapSize** = 32 | Não configurado |
 | Heap máximo de TCP/IP | **TcpipHeapMax** = 1536 | Não configurado |
 
-**Notas**:
+**Notas:**
 * A configuração **MaxVolumes** é necessária para o serviço IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} porque o serviço pode usar mais que o número padrão de montagens NFS no servidor ESXi.
 * Um valor de **Not set** para uma definição de configuração indica que a nova configuração não é aplicada automaticamente porque requer reinicialização de servidores ESXi, o que pode causar interrupção.
 
@@ -118,7 +118,7 @@ Para atualizar a configuração de MTU para o comutador público, conclua as seg
 2. Na **guia Propriedades**, selecione a opção **Avançado**.
 3. Certifique-se de que o valor de **MTU máximo** esteja configurado para 1500.
 
-   **Nota**: quando o tamanho da MTU em um vDS muda, os uplinks conectados (NICs físicas) são desativados e ativados novamente. Como resultado, uma breve interrupção ocorre para as VMs que estão usando o uplink. Portanto, é
+   **Nota:** quando o tamanho de MTU em um vDS é mudado, os uplinks conectados (NICs físicos) são desativados e ativados novamente. Como resultado, uma breve interrupção ocorre para as VMs que estão usando o uplink. Portanto, é
 recomendável planejar a atualização de configuração do MTU durante o tempo de inatividade planejado.
 
 ### Links relacionados

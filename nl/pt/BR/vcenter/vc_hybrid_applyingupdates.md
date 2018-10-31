@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -41,7 +41,7 @@ Tabela 1. Atualize os níveis e o impacto
    Se os detalhes não forem exibidos, isso poderá indicar um problema de conectividade com a Virtual Server Instance (VSI) do IBM CloudDriver, como resultado de uma regra de firewall ou outro problema de rede. Resolva o problema antes de continuar com a próxima etapa, caso contrário, a atualização poderá falhar.
 4. Clique em **Atualização e correção** na área de janela de navegação esquerda.
 
-   **Nota**: a página **Atualização e correção** contém apenas os pacotes para atualizar os componentes de gerenciamento da IBM, não as atualizações do VMware. O {{site.data.keyword.vmwaresolutions_short}} aplica atualizações do VMware às operações a seguir:
+   **Nota:** a página **Atualização e correção** contém somente os pacotes para atualizar os componentes de gerenciamento da IBM, não as atualizações do VMware. O {{site.data.keyword.vmwaresolutions_short}} aplica atualizações do VMware às operações a seguir:
    * Quando uma nova instância do vCenter Server é implementada.
    * Quando novos servidores ESXi são incluídos.
    * Quando novos clusters são incluídos.

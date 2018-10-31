@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -13,6 +13,14 @@ lastupdated: "2018-09-21"
 Para remover a licença do Hybridity Bundle de sua instância do vCenter Server, deve-se substituir as chaves de licença de aluguel do VMware NSX e VMware vSAN por chaves Bring Your Own License (BYOL) no VMware vSphere Web Client. Além disso, deve-se abrir um chamado de suporte para cancelar encargos das licenças de aluguel.
 
 **Importante:** fazer downgrade de sua licença pode causar falha na instância do vCenter Server. É possível optar por fazer downgrade de uma licença por sua conta e risco, mas primeiro considere as funções que não estão disponíveis ao fazer o downgrade. Para obter mais informações, consulte [Gráfico de comparação para edições do componente VMware](../archiref/solution/appendix.html).
+
+## Considerações importantes antes de remover o Hybridity Bundle de um ambiente multisite
+
+Revise as considerações a seguir antes de remover o Hybridity Bundle de um ambiente multisite:
+
+* Deve-se aplicar licenças BYOL a todas as implementações multisite antes de remover as licenças de aluguel.
+* Deve-se combinar licenças NSX e ter capacidade suficiente para usar em todas as implementações multisite.
+* Deve-se criar um único chamado de suporte para remover o Hybridity Bundle de todas as implementações multisite.
 
 ## Antes de remover o Hybridity Bundle
 
@@ -26,7 +34,7 @@ Verifique os requisitos a seguir antes de remover o Hybridity Bundle:
 
 ## Procedimento para remover o Hybridity Bundle
 
-1. Efetue login no VMware vSphere Web Client como **Administrador**.
+1. Efetue login como **Administrador** para o VMware vSphere Web Client no qual você deseja remover o Hybridity Bundle.
 2. Clique em **Página inicial > Administração > Licenciamento > Licenças**.
 3. Clique na guia **Ativos**.
 4. Conclua as etapas a seguir para instalar um BYOL do VMware NSX:
@@ -65,13 +73,13 @@ Verifique os requisitos a seguir antes de remover o Hybridity Bundle:
     6. Clique em **OK** para designar a licença.
 8. Remova as licenças de aluguel.
    1. Clique na guia **Licenças**.
-   2. Selecione as licenças substituídas nas etapas 4 a 7.
+   2. Selecione as licenças que você substituiu nas etapas 4 a 7.
    3. Clique no ícone **Remover licenças**.
 9. Abra um chamado de suporte e forneça as seguintes informações para cancelar encargos das licenças de aluguel:
-  * O nome de sua instância do vCenter Server.
-  * O ID associado à instância do vCenter Server.
-  * Uma lista das chaves de licença de BYOL instaladas neste procedimento. Quando aplicável, forneça o nome do cluster com chaves de licença para os clusters vSphere e vSAN.
-  * Uma lista das chaves de licença de aluguel removidas neste procedimento. Quando aplicável, forneça o nome do cluster com chaves de licença para os clusters vSphere e vSAN.
+  * O nome de sua instância ou de suas instâncias do vCenter Server.
+  * O ID associado à instância ou instâncias do vCenter Server.
+  * Uma lista das chaves de licença de BYOL instaladas neste procedimento. Quando aplicável, forneça a instância e o nome do cluster com chaves de licença para o vSphere e os clusters vSAN.
+  * Uma lista das chaves de licença de aluguel removidas neste procedimento. Quando aplicável, forneça a instância e o nome do cluster com chaves de licença para clusters vSphere e vSAN.
 
   **Nota:** as equipes de Suporte e Operações da IBM acessam a camada de gerenciamento do vCenter de sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) para verificar se as licenças de aluguel foram removidas antes de cancelar os encargos de licença de aluguel do Hybridity Bundle.
 
