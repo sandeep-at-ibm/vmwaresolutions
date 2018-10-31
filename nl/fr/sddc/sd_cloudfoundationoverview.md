@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-18"
+lastupdated: "2018-09-27"
 
 ---
 
 # Présentation de Cloud Foundation
 
-Lorsque vous commandez VMware Cloud Foundation on {{site.data.keyword.cloud}}, un environnement VMware complet est automatiquement déployé. Le déploiement de base se compose de quatre serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.bshort}} avec la pile VMware Cloud Foundation préinstallée et configurée de manière à fournir une plateforme de centre de données défini par les logiciels (SDDC, Software-Defined Data Center). Cloud Foundation intègre en natif VMware vSphere, VMware NSX, VMware Virtual SAN et son architecture est basée sur des conceptions validées par VMware.
+Lorsque vous commandez VMware Cloud Foundation on {{site.data.keyword.cloud}}, un environnement VMware complet est automatiquement déployé. Le déploiement de base se compose de quatre serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} avec la pile VMware Cloud Foundation préinstallée et configurée de manière à fournir une plateforme de centre de données défini par les logiciels (SDDC, Software-Defined Data Center). Cloud Foundation intègre en natif VMware vSphere, VMware NSX, VMware Virtual SAN et son architecture est basée sur des conceptions validées par VMware.
 
 ## Architecture Cloud Foundation
 
@@ -43,7 +43,7 @@ Pour plus d'informations sur l'architecture, voir [Présentation de la solution]
 
 Les composants suivants sont inclus dans votre instance Cloud Foundation.
 
-**Remarque** : les frais encourus pour le matériel, la mise en réseau, les machines virtuelles et le stockage varient en fonction de l'{{site.data.keyword.CloudDataCent_notm}} sélectionné pour le déploiement.
+**Remarque :** les frais encourus pour le matériel, la mise en réseau, les machines virtuelles et le stockage varient en fonction de l'{{site.data.keyword.CloudDataCent_notm}} sélectionné pour le déploiement.
 
 ### Serveur bare metal
 
@@ -63,8 +63,7 @@ Les composants réseau suivants sont commandés :
 * Trois VLAN (réseaux locaux virtuels) : un VLAN public et deux VLAN privés
 * Passerelle de gestion sécurisée VMware NSX Edge Services Gateway (ESG) pour le trafic de gestion HTTPS sortant, déployée par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **Important** : vous n'avez pas accès à cette passerelle ESG et vous ne pouvez pas l'utiliser. Si vous la modifiez, vous ne pourrez plus gérer l'instance Cloud Foundation depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
-
+  **Important :** vous n'avez pas accès à cette passerelle ESG et vous ne pouvez pas l'utiliser. Si vous la modifiez, vous ne pourrez plus gérer l'instance Cloud Foundation depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
 
 * La fonction EVC (Enhanced vMotion Compatibility) est automatiquement activée si vous disposez d'un cluster existant avec des serveurs ESXi qui sont pris en charge par la version en cours de VMware vSphere. EVC fournit la compatibilité vMotion pour tous les serveurs ESXi d'un cluster en s'assurant que tous les serveurs ESXi d'un cluster exposent le même jeu de fonctions d'UC aux machines virtuelles. Grâce à EVC, les machines virtuelles peuvent migrer d'un serveur ESXi à l'autre dans le cluster, même si les UC réelles sur les serveurs ESXi sont potentiellement différentes.
 
@@ -81,8 +80,7 @@ Le stockage suivant est commandé selon la configuration des serveurs {{site.dat
 * Deux disques d'amorçage SATA de 1 To
 * Deux disques cache SSD (Solid-State Disk) de 960 Go
 * Un contrôleur de disque RAID
-* Pour la configuration **Personnalisée** uniquement, vous pouvez définir le nombre d'unités de disque ainsi que le type et la capacité des disques en fonction de vos besoins. De plus, vous disposez de l'option Hautes performances avec Intel Optane, qui fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité.
-L'option Hautes performances avec Intel Optane dépend du modèle d'UC. 
+* Pour la configuration **Personnalisée** uniquement, vous pouvez définir le nombre d'unités de disque ainsi que le type et la capacité des disques en fonction de vos besoins. De plus, vous disposez de l'option Hautes performances avec Intel Optane, qui fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. L'option Hautes performances avec Intel Optane dépend du modèle d'UC.
 * Pour la configuration **Préconfigurée**, **Petite** uniquement : deux disques SSD haute capacité de 1,9 To
 * Pour la configuration **Préconfigurée**, **Grande** uniquement : quatre disques SSD haute capacité de 3,8 To
 
@@ -112,9 +110,9 @@ Un serveur bare metal {{site.data.keyword.cloud_notm}} doté de la configuration
 * Une licence de gestionnaire SDDC
 * Frais de support et de services
 
-**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+**Important :** vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail {{site.data.keyword.slportal}} ou tout autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
 
-**ATTENTION** : gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lors de la commande de l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque d'entraîner une instabilité de votre environnement. Ces activités de gestion incluent :
+**ATTENTION :** gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lors de la commande de l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque d'entraîner une instabilité de votre environnement. Ces activités de gestion incluent :
 *  L'ajout, la modification, le retour ou la suppression de composants
 *  L'extension ou la réduction de la capacité de l'instance via l'ajout ou la suppression de serveurs ESXi
 *  La mise hors tension de composants

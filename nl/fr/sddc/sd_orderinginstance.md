@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ Assurez-vous que :
 *  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
 *  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les instances Cloud Foundation](sd_planning.html).
 
-**Important** : ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.De plus, ne modifiez pas le nom d'instance, le nom de domaine racine, le libellé de sous-domaine ou le préfixe de nom d'hôte une fois l'instance déployée.
+**Important :** ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée. De plus, ne modifiez pas le nom d'instance, le nom de domaine racine, le libellé de sous-domaine ou le préfixe de nom d'hôte une fois l'instance déployée.
 
 ## Paramètres système
 
@@ -85,19 +85,17 @@ Une instance Cloud Foundation comprend quatre serveurs bare metal lors du déplo
 
 ## Paramètres de stockage
 
-Pour les instances Cloud Foundation, vous pouvez commander un stockage VMware vSAN uniquement. 
-* Lorsque vous sélectionnez la configuration de serveur bare metal **Préconfigurée**, les paramètres de stockage sont normalisés et ne peuvent pas être modifiés :
+Pour les instances Cloud Foundation, vous pouvez commander un stockage VMware vSAN uniquement.
+
+Lorsque vous sélectionnez la configuration de serveur bare metal **Préconfigurée**, les paramètres de stockage sont normalisés et ne peuvent pas être modifiés :
   * Pour la configuration de serveur bare metal **Petite**, deux unités de disque SED SSD de 1,9 To sont commandées.
   * Pour la configuration de serveur bare metal **Grande**, quatre unités de disque SED SSD de 3,8 To sont commandées.
-* Lorsque vous sélectionnez la configuration de serveur bare metal **Personnalisée** vous pouvez personnaliser le stockage VMware vSAN pour votre instance. Spécifiez les paramètres vSAN suivants :
 
-* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin. 
-* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter. 
-* **Type de disque pour disques de cache vSAN** : sélectionnez une option correspondant aux disques de cache dont vous avez besoin. 
-
-    **Remarque** : pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
-L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
-* **Nombre de disques de cache vSAN** : indiquez le nombre de disques de cache que vous souhaitez ajouter. 
+Lorsque vous sélectionnez la configuration de serveur bare metal **Personnalisée** vous pouvez personnaliser le stockage VMware vSAN pour votre instance. Spécifiez les paramètres vSAN suivants :
+* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
+* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
+* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 
 ## Paramètres d'interface réseau
 
@@ -178,7 +176,7 @@ Lorsque vous commandez une instance Cloud Foundation, vous pouvez également com
 
 Selon la configuration que vous avez sélectionnée pour l'instance et les services complémentaires, le coût estimé est généré et affiché instantanément dans le panneau de droite. Cliquez sur **Détails concernant la tarification** dans le panneau de droite pour générer un document PDF contenant les détails relatifs à l'estimation.
 
-## Procédure de commande d'instances Cloud Foundation
+## Procédure à utiliser pour commander des instances Cloud Foundation
 
 1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur **VMware** dans le panneau de navigation de gauche, puis cliquez sur **Cloud Foundation** dans la section **Centres de données virtuels**.
 2. Sur la page **VMware Cloud Foundation on IBM Cloud**, cliquez sur **Créer**.
@@ -188,7 +186,7 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
    * Cliquez sur **Instance secondaire** pour connecter l'instance à une instance (principale) existante dans l'environnement à des fins de haute disponibilité. Effectuez les opérations suivantes :
      1. Sélectionnez l'instance principale à laquelle vous voulez que l'instance secondaire soit connectée.
      2. Pour les instances principales V2.5 ou ultérieures, entrez une valeur dans la zone **Mot de passe de l'administrateur PSC pour l'instance principale**.
-     3. Pour les instances principales V2.4 ou antérieures, assurez-vous que la valeur préremplie dans la zone **Mot de passe de l'administrateur PSC pour l'instance principale** est correcte. 
+     3. Pour les instances principales V2.4 ou antérieures, assurez-vous que la valeur préremplie dans la zone **Mot de passe de l'administrateur PSC pour l'instance principale** est correcte.
 5. Spécifiez les paramètres de licence pour les composants d'instance:
    *  Pour utiliser des licences fournies par IBM, sélectionnez **Inclure avec achat**.
    *  Pour utiliser votre propre licence, sélectionnez **Je fournirai** et entrez la clé de licence.  
@@ -199,7 +197,7 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
       * Lorsque vous sélectionnez **Personnalisée**, spécifiez le modèle d'UC et la taille de mémoire RAM.
 7. Procédez à la configuration du stockage.
    * Si vous avez sélectionné l'option **Préconfigurée** pour la configuration de serveur bare metal, les paramètres de stockage des configurations de serveur bare metal normalisées **Petite** et **Grande** ne sont pas modifiables.
-   * Si vous avez sélectionné le type **Personnalisée** pour la configuration de serveur bare metal, spécifiez les types de disque pour les disques de cache et de capacité VSAN, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**. 
+   * Si vous avez sélectionné le type **Personnalisée** pour la configuration de serveur bare metal, spécifiez les types de disque pour les disques de cache et de capacité VSAN, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 8. Spécifiez les paramètres d'interface réseau :
    1. Renseignez les zones Préfixe de nom d'hôte, Libelle de sous-domaine et Nom de domaine racine. Pour une instance secondaire, le nom de domaine est automatiquement renseigné.
    2. Sélectionnez les paramètres VLAN :
@@ -229,9 +227,9 @@ Lorsque vous commandez une instance secondaire, le client Web VMware vSphere de 
 
 Affichez et gérez l'instance Cloud Foundation que vous avez commandée.
 
-**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non pas le {{site.data.keyword.slportal}} ou tout autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
 
-**ATTENTION** : gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lorsque vous avez commandé l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque de rendre votre environnement instable. Ces activités de gestion incluent :
+**ATTENTION :** gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lorsque vous avez commandé l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque de rendre votre environnement instable. Ces activités de gestion incluent :
 
 *  L'ajout, la modification, le retour ou la suppression de composants
 *  L'extension ou la réduction de la capacité de l'instance via l'ajout ou la suppression de serveurs ESXi

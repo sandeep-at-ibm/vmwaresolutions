@@ -10,7 +10,7 @@ lastupdated: "2018-08-28"
 
 # Exigences et planification pour les instances Cloud Foundation
 
-Passez en revue les exigences suivantes avant de commander vos instances VMware Cloud Foundation. Planifiez votre instance en fonction de l'emplacement de l'{{site.data.keyword.CloudDataCent}}, de vos besoins en capacité de charge de travail et de vos besoins en services. 
+Passez en revue les exigences suivantes avant de commander vos instances VMware Cloud Foundation. Planifiez votre instance en fonction de l'emplacement de l'{{site.data.keyword.CloudDataCent}}, de vos besoins en capacité de charge de travail et de vos besoins en services.
 
 ## Exigences liées au compte IBM Cloud
 

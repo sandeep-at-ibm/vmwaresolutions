@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
 # Suppression d'instances Cloud Foundation dans une configuration multisite
 
-Avant de prévoir de supprimer des instances Cloud Foundation dans une configuration multisite, passez en revue les remarques ci-après. 
+Avant de prévoir de supprimer des instances Cloud Foundation dans une configuration multisite, passez en revue les remarques ci-après.
 
 Lorsque vous supprimez une instance Cloud Foundation, les composants suivants sont libérés, dans cet ordre :
 1. Tous les services déployés
@@ -22,9 +22,9 @@ Lorsque vous supprimez une instance Cloud Foundation, les composants suivants so
 
 En raison des dépendances de ressource, les composants de votre instance ne sont pas libérés immédiatement lorsque vous supprimez cette dernière. Par exemple, les sous-réseaux et les réseaux locaux virtuels ne peuvent pas être supprimés tant que l'infrastructure {{site.data.keyword.cloud}} n'a pas récupéré tous les serveurs ESXi, opération qui s'effectue en fin de cycle de facturation d'{{site.data.keyword.cloud_notm}}. A la fin du cycle de facturation d'{{site.data.keyword.cloud_notm}}, qui est généralement de 30 jours, les sous-réseaux et les réseaux locaux virtuels sont supprimés et la suppression de l'instance est effective.
 
-**Attention** : l'instance supprimée vous est facturée jusqu'à échéance du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}.
+**Attention :** l'instance supprimée vous est facturée jusqu'à échéance du cycle de facturation d'{{site.data.keyword.cloud_notm}}.
 
-## Procédure
+## Procédure de suppression d'instances Cloud Foundation dans une configuration multisite
 
 1. Supprimez tous les services de l'instance Cloud Foundation secondaire.
 2. Vérifiez qu'aucun objet NSX n'est développé dans l'instance secondaire que vous voulez supprimer.
