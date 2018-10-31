@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-10-01"
 
 ---
 
@@ -34,7 +34,7 @@ Weitere Informationen finden Sie in dem für Ihre Instanz oder Ihren Clustertyp 
 
 ## Öffentliches oder privates Netz aktivieren
 
-Sie können nun vCenter Server- und vCenter Server with Hybridity Bundle-Instanzen sowie VMware vSphere-Cluster bereitstellen, die eine für das öffentliche und private Netz aktivierte Schnittstellenkarte (NIC – Networt Interface Card) oder eine nur für das private Netz aktivierte NIC haben. Diese Option ist auch verfügbar, wenn Sie Ihrer vCenter Server- bzw. vCenter Server with Hybridity Bundle-Instanz einen neuen Cluster hinzufügen.
+Sie können nun vCenter Server- und vCenter Server with Hybridity Bundle-Instanzen sowie VMware vSphere-Cluster bereitstellen, die eine für das öffentliche und private Netz aktivierte Schnittstellenkarte (NIC – Network Interface Card) oder eine nur für das private Netz aktivierte NIC haben. Diese Option ist auch verfügbar, wenn Sie Ihrer vCenter Server- bzw. vCenter Server with Hybridity Bundle-Instanz einen neuen Cluster hinzufügen.
 
 Einige Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie das ausschließlich private Netz auswählen.
 
@@ -119,14 +119,23 @@ Weitere Informationen zu Veeam on {{site.data.keyword.cloud_notm}} finden Sie in
 
 ### VMware HCX on IBM Cloud
 
-Das aktuelle Release installiert VMware HCX 3.5.1 R106 auf allen neu bereitgestellten Instanzen. Weitere Informationen zu den neuen Funktionen in HCX 3.5.1 R106 finden Sie in der [Dokumentation zu VMware NSX Hybrid Connect](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html).
+Das aktuelle Release installiert VMware HCX 3.5.1 auf allen neu bereitgestellten Instanzen. Weitere Informationen zu den neuen Funktionen in HCX 3.5.1 finden Sie in der [Dokumentation zu VMware NSX Hybrid Connect](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html).
+
+### Zerto on IBM Cloud-Unterstützung für vSphere ESXi V6.5 Update 2c
+
+Wenn Sie vorhandene Hosts auf vSphere ESXi V6.5 Update 2 aktualisieren und zuvor Zerto on {{site.data.keyword.cloud_notm}} installiert haben, kann die Zerto Virtual Replication-Konsole unter Umständen die Warnung `Unsupported ESX Version` unter dem Status 'Zerto Virtual Replication Appliances (VRAs)' anzeigen.
+
+Weitere Informationen zum Beheben dieser Warnung finden Sie in den folgenden Abschnitten:
+
+* [Zerto Virtual Replication Interoperability Matrix](http://s3.amazonaws.com/zertodownload_docs/6.0_Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf)
+* [Updating a ZVM to Support Zerto-Approved Host Releases Prior to a Full ZVR Update](https://www.zerto.com/myzerto/knowledge-base/updating-a-zvm-to-support-zerto-approved-host-releases-prior-to-a-full-zvr-update/)
 
 ## Neue und aktualisierte Dokumentation
 
 ### Referenzdokumentation zur Architektur
 Das {{site.data.keyword.vmwaresolutions_short}}-Architekturdokument wurde aktualisiert, um wichtige Hinweise für das Verständnis Ihrer Verantwortlichkeiten hinsichtlich der Verwaltung und des Betriebs Ihrer VMware-Instanz zu verstehen.
 
-Weitere Informationen finden Sie in [Nach der Bereitstellung zu beachtende Aspekte für Ihre VMware-Instanz](../archiref/solution/solution_considerations.md).
+Weitere Informationen finden Sie in [Nach der Bereitstellung zu beachtende Aspekte für Ihre VMware-Instanz](../archiref/solution/solution_considerations.html).
 
 ## Updates und Erweiterungen der Benutzerschnittstelle
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-09-25"
 * Stellen Sie sicher, dass Sie der Kontoeigner sind oder dass Sie die Plattformmanagementrolle **Administrator** für den Service **VMware Solutions** besitzen.
 * Stellen Sie sicher, dass Sie die Benutzerrollen und Berechtigungen geprüft haben, die unter [Benutzerzugriff mit Identity and Access Management verwalten](iam.html) aufgeführt sind.
 
-## Vorgehensweise
+## Vorgehensweise zum Einladen von Benutzern für den Zugriff auf Services und Ressourcen
 
 1. Klicken Sie auf der linken Seite des Banners auf **Verwalten > Sicherheit > Identität und Zugriff**.
 2. Klicken Sie auf der Seite **Benutzer**  auf **Benutzer einladen**.

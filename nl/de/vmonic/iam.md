@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-28"
 
 ---
 
 # Benutzerzugriff mit IAM verwalten
 
-Der Zugriff auf {{site.data.keyword.vmwaresolutions_full}}-Serviceinstanzen für die Benutzer in Ihrem Konto wird durch {{site.data.keyword.cloud}} Identity and Access Management (IAM) gesteuert. Jeder Benutzer, der auf die {{site.data.keyword.vmwaresolutions_short}}-Services in Ihrem Konto zugreift, muss über eine zugeordnete Zugriffsrichtlinie mit einer definierten IAM-Benutzerrolle verfügen.
+Der Zugriff auf {{site.data.keyword.vmwaresolutions_full}}-Serviceinstanzen für die Benutzer in Ihrem Konto wird durch {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) gesteuert. Jeder Benutzer, der auf die {{site.data.keyword.vmwaresolutions_short}}-Services in Ihrem Konto zugreift, muss über eine zugeordnete Zugriffsrichtlinie mit einer definierten IAM-Benutzerrolle verfügen.
 
 Die Zugriffsrichtlinie bestimmt die Aktionen, die der Benutzer im Kontext des von Ihnen ausgewählten Service oder der von Ihnen ausgewählten Instanz ausführen kann. Die zulässigen Aktionen werden durch den {{site.data.keyword.cloud_notm}}-Service als Operationen angepasst und definiert, deren Ausführung im Service zulässig ist. Anschließend werden die Aktionen IAM-Benutzerrollen zugeordnet.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -24,7 +24,7 @@ Sie können außerdem angeben, ob Sie E-Mail- und Konsolenbenachrichtigungen fü
 
    **Wichtig:** Sie müssen dafür sorgen, dass der auf der Seite **Einstellungen** gespeicherte API-Schlüssel richtig und aktuell ist. Andernfalls können Operationen fehlschlagen, die eine Validierung des API-Schlüssels erforderlich machen.
 
-## Vorgehensweise
+## Vorgehensweise zum Verwalten von Benutzerkonten und -einstellungen
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Einstellungen**.
 2. Geben Sie im Bereich **Benachrichtigungen** Ihre Benachrichtigungseinstellungen an.

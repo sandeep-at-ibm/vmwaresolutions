@@ -91,7 +91,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 ### Konfigurationen für einzelne gemeinsam genutzte NFS-Dateiressourcen
 
-Sie können die gemeinsam genutzten NFS-Dateiressourcen jetzt einzeln konfigurieren. Sie können die Dateigröße und die Leistungsstufe für jede gemeinsam genutzte Dateiressourse individuell auswählen oder für alle bestellten gemeinsam genutzten Dateiressourcen dieselbe Dateigröße und Leistungsstufe verwenden.
+Sie können die gemeinsam genutzten NFS-Dateiressourcen jetzt einzeln konfigurieren. Sie können die Dateigröße und die Leistungsstufe für jede gemeinsam genutzte Dateiressource individuell auswählen oder für alle bestellten gemeinsam genutzten Dateiressourcen dieselbe Dateigröße und Leistungsstufe verwenden.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html)
