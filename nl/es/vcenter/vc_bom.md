@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -39,7 +39,7 @@ Tabla 2. Lista de materiales para los componentes de software de instancias de v
 | VMware       | NSX for vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
-**Nota**: VMware vSAN es un componente opcional.
+**Nota:** VMware vSAN es un componente opcional.
 
 ## Valores de configuración avanzada para servidores ESXi
 
@@ -61,7 +61,7 @@ Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e
 | Tamaño pila TCP/IP | **TcpipHeapSize** = 32 | No definido |
 | Máx. pila TCP/IP | **TcpipHeapMax** = 1536 | No definido |
 
-**Notas**:
+**Notas:**
 * El valor **MaxVolumes** es obligatorio para el servicio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} porque el servicio puede utilizar más del número predeterminado de montajes de NFS en el servidor ESXi.
 * Un valor de **No definido** para un valor de configuración indica que el nuevo valor no se aplica automáticamente porque requiere que se rearranquen los servidores ESXi, lo que puede suponer una interrupción.
 
@@ -117,7 +117,7 @@ Para actualizar el valor de MTU del conmutador público, siga estos pasos en el 
 2. En el separador **Propiedades**, seleccione la opción **Avanzadas**.
 3. Asegúrese de que el valor de **MTU máxima** está establecido en 1500.
 
-   **Nota**: Cuando se cambia el tamaño de MTU en un vDS, los enlaces ascendentes adjuntos (NIC físicos) se detienen y se vuelven a iniciar. Como resultado se produce una breve parada para las máquinas virtuales que están utilizando el enlace ascendente. Por lo tanto se recomienda planear la actualización del valor de la MTU durante una parada planificada.
+   **Nota:** Cuando se cambia el tamaño de MTU en un vDS, los enlaces ascendentes adjuntos (NIC físicos) se detienen y se vuelven a iniciar. Como resultado se produce una breve parada para las máquinas virtuales que están utilizando el enlace ascendente. Por lo tanto se recomienda planear la actualización del valor de la MTU durante una parada planificada.
 
 ### Enlaces relacionados
 

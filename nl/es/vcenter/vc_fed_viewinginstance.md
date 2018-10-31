@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-25"
 
 Visualice el resumen y la información detallada de las instancias de VMware Federal que se suministran para cuentas de usuario diferentes.
 
-## Visualización de resumen de instancias de VMware Federal
+## Procedimiento para visualizar el resumen de instancias de VMware Federal
 
 Para ver un resumen de todas las instancias de VMware Federal que se suministran para una cuenta de usuario, complete los pasos siguientes:
 1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
@@ -45,7 +45,7 @@ Tabla 2. Descripciones de los estados de una instancia de centro de datos de VMw
 | Error de supresión | Se ha producido un error cuando se estaba suprimiendo la instancia. |
 | Suprimido | La instancia se ha suprimido. |
 
-## Visualización de detalles de las propiedades de una instancia de VMware Federal
+## Procedimiento para visualizar detalles de las propiedades de una instancia de VMware Federal
 
 Para ver los detalles de las propiedades de una instancia:
 
@@ -68,7 +68,7 @@ Tabla 3. Propiedades de instancias de VMware Federal
 | DNS Subdomain | El subdominio es el nombre del subdominio DNS del nombre del dominio raíz en el que residen los nombres de host de la instancia local de vCenter Server. El nombre del subdominio está en el formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 | Estado | El estado de la instancia. |
 
-## Visualización de información de acceso para instancias de VMware Federal
+## Procedimiento para visualizar la información de acceso para instancias de VMware Federal
 
 En **Información de acceso**, consulte la información de acceso para los componentes relacionados con la instancia. Las contraseñas que se muestran son contraseñas iniciales generadas por el sistema. Si las cambia fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, no se actualizarán en la página de resumen de la instancia.
 
@@ -91,7 +91,7 @@ Tabla 4. Información de acceso correspondiente a los componentes relacionados c
 | vCenter ADMIN  | El nombre de usuario y la contraseña de inicio de sesión único de VMware vCenter que puede utilizar para iniciar una sesión en vCenter Server mediante el cliente web de vSphere.  |
 | vCenter SSH  | El nombre de usuario y la contraseña que puede utilizar para acceder a vCenter Server VM mediante una conexión SSH.  |
 
-## Visualización del historial de despliegues de instancias de VMware Federal
+## Procedimiento para visualizar el historial de despliegues de las instancias de VMware Federal
 
 Pulse **Historial de despliegue** en el panel de navegación izquierdo para ver el historial de despliegue de la instancia.
 
@@ -110,7 +110,7 @@ Si se producen errores durante el despliegue o durante la supresión de la insta
 
 Gestione sus instancias desde la consola de {{site.data.keyword.vmwaresolutions_short}} o desde el cliente web de VMware vSphere.
 
-**Importante**: Antes de pulsar la **Consola de vCenter** en la página de resumen de la instancia para ir al cliente web de vSphere y empezar a gestionar sus servidores ESXi, debe iniciar una sesión en el portal VPN del {{site.data.keyword.CloudDataCent_notm}}. Mueva el puntero del ratón sobre el botón de la **consola de vCenter** y siga las instrucciones para asegurarse de que cumple los requisitos y de que ha realizado los pasos necesarios antes de acceder al cliente web de vSphere.
+**Importante:** Antes de pulsar la **Consola de vCenter** en la página de resumen de la instancia para ir al cliente web de vSphere y empezar a gestionar sus servidores ESXi, debe iniciar una sesión en el portal VPN del {{site.data.keyword.CloudDataCent_notm}}. Mueva el puntero del ratón sobre el botón de la **consola de vCenter** y siga las instrucciones para asegurarse de que cumple los requisitos y de que ha realizado los pasos necesarios antes de acceder al cliente web de vSphere.
 
 Revise los temas siguientes para obtener información que le ayudará a seguir las instrucciones de inicio de sesión:
 *  Para ver los requisitos y pasos necesarios antes de acceder al cliente web de vSphere, consulte [Se ha alcanzado el tiempo de espera al conectar con el cliente web de vSphere](../vmonic/trbl_timeout_vc_console.html).

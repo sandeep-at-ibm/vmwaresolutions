@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-05"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -64,7 +64,7 @@ Si el clúster inicial tiene vSAN como almacenamiento, el hecho de añadir uno o
 2. Se le notificará por correo electrónico de que su solicitud para eliminar servidores ESXi se está procesando. En la consola, el estado del clúster asociado con los servidores ESXi se cambia a **Modificando**.
 3. La infraestructura de {{site.data.keyword.cloud_notm}} reclama por completo los servidores ESXi al final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}, que suele ser de 30 días.
 
-   **Atención**: Se le facturará por lo servidores ESXi eliminados hasta el final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}.
+   **Atención:** Se le facturará por lo servidores ESXi eliminados hasta el final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}.
 
 ### Enlaces relacionados
 

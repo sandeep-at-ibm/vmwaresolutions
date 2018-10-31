@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -48,7 +48,7 @@ Tabla 1. Niveles de actualización e impacto
   </tr>
 </table>
 
-## Aplicación de actualizaciones y de parches a instancias de vCenter Server
+## Procedimiento para aplicar actualizaciones y parches a las instancias de vCenter Server
 
 Este procedimiento se aplica a las instancias desplegadas en V2.1 o posterior. Para instancias desplegadas en V2.0 y anteriores, debe aplicar las actualizaciones de VMware manualmente.
 
@@ -58,7 +58,7 @@ Este procedimiento se aplica a las instancias desplegadas en V2.1 o posterior. P
    Si no se visualizan los detalles, esto podría indicar un problema de conectividad con la Instancia de servidor virtual (VSI) de IBM CloudDriver, como resultado de una regla de cortafuegos u otro problema de la red. Resuelva el problema antes de continuar con el siguiente paso; de lo contrario, la actualización puede fallar.
 4. Pulse **Actualización y parche** en el panel de navegación izquierdo.
 
-   **Nota**: la página **Actualización y parche** de una instancia solo contiene los paquetes para actualizar los componentes de gestión de IBM y no las actualizaciones de VMware. Las actualizaciones de VMware deben aplicarse manualmente.
+   **Nota:** La página **Actualizar y parchear** de una instancia solo contiene los paquetes para la actualización de los componentes de gestión de IBM y no las actualizaciones de VMware. Las actualizaciones de VMware deben aplicarse manualmente.
 
    {{site.data.keyword.vmwaresolutions_short}} aplica las actualizaciones de VMware para las operaciones siguientes:
    * Cuando se despliega una instancia nueva de vCenter Server.
@@ -74,7 +74,7 @@ Este procedimiento se aplica a las instancias desplegadas en V2.1 o posterior. P
    *  Para planificar una actualización futura, pulse el icono de menú de desbordamiento en la columna **Acciones** de la entrada de la actualización y pulse **Planificar actualización**. Seleccione la fecha, la hora y el huso horario en que desea que comience la actualización. Pulse **Aceptar**.
 7. Si está aplicando actualizaciones a instancias de servidores vCenter en una configuración de despliegue de varios sitios, aparecerá una sección llamada **Pasos necesarios para actualizar**. En esta sección se enumeran las operaciones de actualización necesarias para todas las instancias del despliegue de varios sitios. Debe completar los pasos en secuencia pulsando **Aplicar actualización** para cada paso. Debe esperar a que finalice el paso anterior antes de iniciar el paso siguiente.   
 
-## Actualización a vCenter Server con el paquete híbrido (Hybridity)
+## Procedimiento para actualizar a la instancia de vCenter Server con Hybridity Bundle
 
 Durante la actualización de licencia al paquete híbrido (Hybridity), se actualizará automáticamente a la edición VMware NSX Advanced si la instancia de vCenter Server utiliza actualmente la edición Base de VMware NSX.
 

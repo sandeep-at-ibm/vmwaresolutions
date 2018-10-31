@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -21,10 +21,9 @@ Como parte del proceso de pedido de la instancia de vCenter Server, se llevan a 
 * Se despliega un conmutador lógico NSX de ejemplo que utilizarán las VM de carga de trabajo del cliente.
 * Se despliega un direccionador lógico distribuido (DLR) NSX para una potencial comunicación este-oeste entre cargas de trabajo locales conectadas a redes de la capa 2 (L2).
 * Se despliega y se configura un dispositivo NSX Edge para que realiza la conversión de direcciones de red (NAT) entre el rango de direcciones IP del conmutador lógico de carga de trabajo y una dirección IP pública en las reglas NAT.
-* Si ha instalado el servicio Veeam on {{site.data.keyword.cloud_notm}}, se configura NSX Manager para que realice una copia de seguridad diaria de las configuraciones NSX. Para obtener más información, consulte [Consideraciones al instalar Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
+* Si ha instalado el servicio Veeam on {{site.data.keyword.cloud_notm}}, se configura NSX Manager para que realice una copia de seguridad diaria de las configuraciones NSX. Para obtener más información, consulte [Consideraciones al instalar Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud).
 
-
-## Configuración de valores de red para sus VM
+## Procedimiento para configurar los valores de red para las máquinas virtuales
 
 Para aprovechar el servicio NSX para sus VM de carga de trabajo, debe configurar una serie de valores siguiendo los siguientes pasos cuando al crear las VM:
 
@@ -43,7 +42,7 @@ Para aprovechar el servicio NSX para sus VM de carga de trabajo, debe configurar
 
 3. Asignar la pasarela predeterminada de la VM como `192.168.10.1`. Esta dirección es la dirección IP de NSX DLR del mismo conmutador lógico que las VM de carga de trabajo.
 
-## Habilitación de la regla SNAT
+## Procedimiento para habilitar la regla de SNAT
 
 Si desea que sus máquinas virtuales de carga de trabajo tengan acceso de salida a Internet, debe habilitar la regla SNAT (conversión de direcciones de red de origen) asociada. La habilitación de la regla SNAT permite convertir el acceso a Internet desde las VM en una sola dirección IP pública. Siga estos pasos en el cliente web de VMware vSphere:
 
@@ -54,7 +53,7 @@ Si desea que sus máquinas virtuales de carga de trabajo tengan acceso de salida
 
 Para obtener más información sobre las reglas NAT de NSX Edge, consulte [Gestión de reglas NAT](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 
-## Identificación de detalles de subredes del cliente
+## Procedimiento para identificar los detalles de subredes del cliente
 
 El extremo **customer-nsx-edge** está pensado para que lo utilice el cliente, de modo que puede modificarlo para definir más reglas NAT para el tráfico de entrada o de salida. Estas reglas solo deben utilizar direcciones IP de las subredes públicas o privadas del cliente que se han solicitado en su nombre.
 

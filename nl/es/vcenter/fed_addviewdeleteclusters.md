@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -14,7 +14,7 @@ Los servidores ESXi que ha configurado al solicitar una instancia se agrupan com
 
 Puede añadir clústeres a las instancias de VMware Federal para ampliar la capacidad de cálculo y de almacenamiento. Dentro de un clúster, puede gestionar los servidores ESXi para mejorar la asignación de recursos y la alta disponibilidad. Cuando ya no sea necesario, puede suprimir los clústeres añadidos de las instancias.
 
-**Disponibilidad**: La característica de adición y de supresión de clústeres solo está disponible para las instancias que se han desplegado en la V2.3 y posteriores releases o que se han actualizado a estos.
+**Disponibilidad:** La característica de adición y de supresión de clústeres solo está disponible para las instancias que se han desplegado en la V2.3 y posteriores releases o que se han actualizado a estos.
 
 ## Adición de clústeres a instancias de VMware Federal
 
@@ -68,14 +68,10 @@ Los valores de almacenamiento dependen de la opción que seleccione de configura
 #### Almacenamiento vSAN
 
 Especifique las siguientes opciones de vSAN:
-
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
-* **Tipo de disco para discos de memoria caché vSAN**: Seleccione una opción para los discos de memoria caché que necesite.
-
-    **Nota**: Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
-
-* **Número de discos de memoria caché de vSAN**: Especifique el número de discos de memoria caché que desea añadir.
+* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
 * **Licencia de vSAN**: Seleccione la edición de licencia de VMware vSAN 6.6 (Advanced o Enterprise).
 
 Si el clúster inicial se ha añadido como un clúster vSAN, los clústeres de vSAN adicionales utilizan la misma licencia de vSAN y la misma configuración que el clúster vSAN inicial. Esto también se aplica si se ha elegido que se despliegue vSAN en cualquier clúster de la instancia (inicial o adicional). La primera vez que añada un clúster, se le solicitará la licencia de vSAN y la edición. La próxima vez que seleccione vSAN para un nuevo clúster, lo que haya elegido inicialmente se reutilizará.
@@ -102,7 +98,7 @@ Tabla 2. Opciones de nivel de rendimiento de NFS
 
 ### Valores de licencia
 
-	Licencias proporcionadas por {{site.data.keyword.IBM}} para los siguientes componentes de VMware:
+Licencias proporcionadas por {{site.data.keyword.IBM}} para los siguientes componentes de VMware:
   * vSphere Enterprise Plus 6.5u1
   * vCenter Server 6.5
   * NSX Service Providers 6.4 (edición Base, Advanced o Enterprise)
@@ -114,10 +110,10 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 
 ## Procedimiento para añadir clústeres a instancias de VMware Federal
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia a la que desea añadir clústeres.
 
-   **Nota**: asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede añadir clústeres a la instancia.
+   **Nota:** asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede añadir clústeres a la instancia.
 3. Pulse **Infraestructura** en el panel de navegación izquierdo y pulse **Añadir** en la esquina superior derecha de la tabla **CLÚSTERES**.
 4. En la página **Añadir clúster**, escriba el nombre de clúster.
 5. Seleccione el **Modelo de CPU**, la cantidad de **RAM** y el **Número de servidores nativos** de la configuración del servidor nativo.
@@ -137,9 +133,9 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 1. El despliegue del clúster se inicia automáticamente y el estado del clúster pasa a ser **Inicializando**. Puede comprobar el estado del despliegue consultando el historial de despliegue desde la página de resumen de la instancia.
 2. Cuando el clúster esté listo para ser utilizado, su estado pasará a ser **Listo para su uso**. El clúster recién añadido está habilitado con alta disponibilidad (HA) de vSphere y con el planificador de recursos distribuidos (DRS) de vSphere.
 
-**Importante**: no puede cambiar el nombre del clúster. Si se cambia el nombre del clúster, es posible que las operaciones de adición o eliminación de servidores ESXi en el clúster fallen.
+**Importante:** No puede cambiar el nombre del clúster. Si se cambia el nombre del clúster, es posible que las operaciones de adición o eliminación de servidores ESXi en el clúster fallen.
 
-## Visualización de clústeres en instancias de VMware Federal
+## Procedimiento para visualizar clústeres en instancias de VMware Federal
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse una instancia para ver los clústeres que contiene.
@@ -218,7 +214,7 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 
 Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario.
 
-**Nota**: utilice este procedimiento para eliminar clústeres de instancias que se han desplegado en la V2.3 y posteriores releases o que se han actualizado a estos.
+**Nota:** utilice este procedimiento para eliminar clústeres de instancias que se han desplegado en la V2.3 y posteriores releases o que se han actualizado a estos.
 
 ### Antes de suprimir
 
@@ -234,7 +230,7 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia de la que desea suprimir clústeres.
 
-   **Nota**: asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede suprimir clústeres de la instancia.
+   **Nota:** asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede suprimir clústeres de la instancia.
 
 3. Pulse **Infraestructura** en el panel de navegación izquierdo. En la tabla **CLÚSTERES**, localice el clúster que desea suprimir y pulse el icono **Suprimir** en la columna **Acciones**.
 

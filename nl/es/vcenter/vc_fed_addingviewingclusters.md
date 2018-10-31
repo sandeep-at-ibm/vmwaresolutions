@@ -93,7 +93,7 @@ Tabla 6. Descripciones del resumen de licencia
 3. Pulse el separador **Infraestructura** y revise el resumen del clúster predeterminado.
 4. En la tabla **CLÚSTERES**, pulse **cluster1** y revise los detalles del clúster.
 
-**Importante**: no puede cambiar el nombre del clúster. Si se cambia el nombre del clúster, es posible que las operaciones de adición o eliminación de servidores ESXi en el clúster fallen.
+**Importante**: No puede cambiar el nombre del clúster. Si se cambia el nombre del clúster, es posible que las operaciones de adición o eliminación de servidores ESXi en el clúster fallen.
 
 ## Enlaces relacionados
 
