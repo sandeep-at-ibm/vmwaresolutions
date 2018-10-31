@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -31,7 +31,7 @@ Tabla 1. Servicios disponibles para las instancias de Cloud Foundation
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | 9.5u3 | V1.8 y posterior |
 | [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 5.5u4 Parche 2 | V1.2 y posterior |
 
-## Adición de servicios a instancias de Cloud Foundation
+## Procedimiento para añadir servicios a instancias de Cloud Foundation
 
 Para añadir un servicio a la instancia de Cloud Foundation, pulse el enlace de servicio adecuado en la tabla anterior para revisar las consideraciones para el servicio y comprobar los componentes que se despliegan. A continuación, siga las instrucciones del tema de servicios de ordenación adecuados para añadir el servicio a la instancia.
 
@@ -39,7 +39,7 @@ Para añadir un servicio a la instancia de Cloud Foundation, pulse el enlace de 
 
 Cuando la instalación del servicio finalice correctamente, recibirá una notificación por correo electrónico y el servicio se mostrará en la página **Servicios** de la instancia con el estado **Instalado**.
 
-## Visualización de servicios para instancias de Cloud Foundation
+## Procedimiento para visualizar servicios para instancias de Cloud Foundation
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia para la que desea ver los servicios.
@@ -47,7 +47,7 @@ Cuando la instalación del servicio finalice correctamente, recibirá una notifi
 4. En la página **Servicios**, pulse un servicio para revisar información sobre el mismo, como por ejemplo el estado del servicio y otros detalles.
 5. Dependiendo del servicio visualizado, puede acceder a las consolas de servicio utilizando las credenciales proporcionadas en los detalles del servicio y puede gestionar el servicio desde aquí.
 
-## Eliminación de servicios para instancias de Cloud Foundation
+## Procedimiento para eliminar servicios para instancias de Cloud Foundation
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia para la que desea eliminar servicios.
@@ -61,7 +61,7 @@ Una vez aceptada su solicitud de eliminación del servicio, el estado del servic
 
 Cuando la eliminación del servicio finalice correctamente, recibirá una notificación por correo electrónico y el servicio se eliminará de la página **Servicios** de la instancia.
 
-**Atención**: se le facturará por los servicios eliminados hasta el final del ciclo de facturación de {{site.data.keyword.cloud_notm}}.
+**Atención:** se le facturará por los servicios eliminados hasta el final del ciclo de facturación de {{site.data.keyword.cloud_notm}}.
 
 ### Enlaces relacionados
 

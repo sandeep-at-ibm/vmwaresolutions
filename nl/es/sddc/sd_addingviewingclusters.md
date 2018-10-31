@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-14"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -16,7 +16,7 @@ Los servidores ESXi que ha configurado al solicitar una instancia se agrupan baj
 
 Puede añadir sus propios clústeres a las instancias de VMware Cloud Foundation para ampliar la capacidad de cálculo y de almacenamiento. Dentro de un clúster, puede gestionar los servidores ESXi para mejorar la asignación de recursos y la alta disponibilidad. Cuando ya no sea necesario, puede suprimir los clústeres añadidos de las instancias.
 
-**Disponibilidad**:
+**Disponibilidad:**
 * La característica de adición de clúster solo está disponible para las instancias que se han desplegado en la V2.0 y posteriores releases o que se han actualizado a estos.
 * La característica de supresión de clúster solo está disponible para las instancias que se han desplegado en la V2.3 y posteriores releases o que se han actualizado a estos.  
 
@@ -40,9 +40,9 @@ El nombre del clúster debe cumplir los siguientes requisitos:
 
 La ubicación del {{site.data.keyword.CloudDataCent}} del clúster está definido en {{site.data.keyword.CloudDataCent_notm}} en la instancia de Cloud Foundation de forma predeterminada. Puede desplegar el clúster en un {{site.data.keyword.CloudDataCent_notm}} distinto del de la instancia desplegada, pero debe asegurarse de que la latencia de red entre los dos {{site.data.keyword.CloudDataCents_notm}} sea inferior a 150 ms. Para comprobar la latencia de red, puede utilizar una herramienta como [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-Los centros de datos de los que dispone dependen de la configuración del servidor nativo seleccionada para el despliegue. Si selecciona la configuración **Personalizada**, también puede desplegar el clúster en un pod de infraestructura de {{site.data.keyword.cloud}} diferente, si el centro de datos seleccionado contiene más pods. Esta configuración es útil cuando el pod de infraestructura de {{site.data.keyword.cloud_notm}} predeterminado en el que se ha desplegado la instancia inicial ha alcanzado su capacidad máxima.
+Los centros de datos de los que dispone dependen de la configuración del servidor nativo seleccionada para el despliegue. Si selecciona la configuración **Personalizada**, también puede desplegar el clúster en un pod de infraestructura de {{site.data.keyword.cloud_notm}} diferente, si el centro de datos seleccionado contiene más pods. Esta configuración es útil cuando el pod de infraestructura de {{site.data.keyword.cloud_notm}} predeterminado en el que se ha desplegado la instancia inicial ha alcanzado su capacidad máxima.
 
-**Nota:** las configuraciones nativas estandarizadas **Pequeño** y **Grande** utilizan un pod predeterminado que no se puede modificar.
+**Nota:** las configuraciones de servidor nativo **Pequeño** y **Grande** estandarizadas utilizan un pod predeterminado que no se puede modificar.
 
 Si despliega el clúster en un centro de datos o pod diferente, se solicitan otras tres VLAN para que se utilicen con el {{site.data.keyword.baremetal_short}} solicitado.
 
@@ -81,16 +81,14 @@ Para la configuración del servidor nativo **Personalizado**, puede personalizar
 
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
-* **Tipo de disco para discos de memoria caché vSAN**: Seleccione una opción para los discos de memoria caché que necesite.
-
-    **Nota**: Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
-* **Número de discos de memoria caché de vSAN**: Especifique el número de discos de memoria caché que desea añadir.
+* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
 
 ### Valores de licencia
 
 Puede especificar las opciones de licencia para los componentes de VMware en el clúster, incluidos VMware vSphere y VMware vSAN:
-* Para los usuarios de Business Partners, se incluyen y se adquieren en su nombre la licencia de vSphere (edición Enterprise Plus) y la licencia de vSAN. Sin embargo, debe especificar la edición para la licencia de vSAN.
-* Para usuarios que no son Business Partners, puede utilizar las licencias de VMware que proporciona IBM para los componentes seleccionando **Incluir con la compra** o puede traer su propia licencia (BYOL) para los componentes seleccionando **Proporcionaré** e indicando sus propias claves de licencia.
+* Para los usuarios de IBM Business Partners, se incluyen y se adquieren en su nombre la licencia de vSphere (edición Enterprise Plus) y la licencia de vSAN. Sin embargo, debe especificar la edición para la licencia de vSAN.
+* Para usuarios que no son IBM Business Partners, puede utilizar las licencias de VMware que proporciona IBM para los componentes seleccionando **Incluir con la compra** o puede traer su propia licencia (BYOL) para los componentes seleccionando **Proporcionaré** e indicando sus propias claves de licencia.
 
 ## Procedimiento para añadir clústeres a instancias de Cloud Foundation
 
@@ -99,7 +97,7 @@ Puede especificar las opciones de licencia para los componentes de VMware en el 
 
    **Nota:** asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede añadir clústeres a la instancia.
 
-3. Pulse **Infraestructura** en el panel de navegación izquierdo y pulse **Añadir** en la esquina superior derecha de la tabla **CLÚSTERES**.
+3. Pulse **Infraestructura** en el panel de navegación izquierdo y pulse **Añadir** en la parte superior derecha de la tabla **CLÚSTERES**.
 4. En la página **Añadir clúster**, escriba el nombre de clúster.
 5. Si desea alojar el clúster en un {{site.data.keyword.CloudDataCent_notm}} diferente al que se aloja la instancia, en **Servidor nativo**, marque el recuadro de selección **Seleccione otra ubicación** y elija el {{site.data.keyword.CloudDataCent_notm}} para alojar la instancia.
 6. Complete la configuración del servidor nativo:
@@ -109,8 +107,8 @@ Puede especificar las opciones de licencia para los componentes de VMware en el 
    * Si ha seleccionado **Preconfigurado** para la configuración de servidor nativo, los valores de almacenamiento para las configuraciones de servidor nativo **Pequeño** y **Grande** no se pueden cambiar.
    * Si ha seleccionado **Personalizado** para la configuración de servidor nativo, especifique los tipos de disco para la capacidad vSAN y los discos de memoria caché, y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
 8. Especifique cómo se proporcionan las claves de licencia:
-   * Para los usuarios de Business Partners, se incluyen y se adquieren en su nombre la licencia de vSphere (edición Enterprise Plus) y la licencia de vSAN. Sin embargo, debe especificar la edición para la licencia de vSAN.
-   * Para los usuarios que no son Business Partners, puede seleccionar una de las siguientes opciones:
+   * Para los usuarios de IBM Business Partners, se incluyen y se adquieren en su nombre la licencia de vSphere (edición Enterprise Plus) y la licencia de vSAN. Sin embargo, debe especificar la edición para la licencia de vSAN.
+   * Para los usuarios que no son IBM Business Partners, puede seleccionar una de las opciones siguientes:
        * Si desea que se adquieran nuevas licencias en su nombre, seleccione **Incluir con la compra** para los componentes. Para VMware vSAN, seleccione también la edición de la licencia.
        * Si desea utilizar su propia licencia de VMware para un componente, seleccione **Proporcionaré** y escriba la clave de la licencia del componente.
 9. En el panel **Resumen del pedido**, verifique la configuración del clúster antes de añadir el clúster.
@@ -124,9 +122,9 @@ Puede especificar las opciones de licencia para los componentes de VMware en el 
 1. El despliegue del clúster se inicia automáticamente y el estado del clúster pasa a ser **Inicializando**. Puede comprobar el estado del despliegue consultando el historial de despliegue en la página de resumen de la instancia.
 2. Cuando el clúster esté listo para ser utilizado, su estado pasará a ser **Listo para su uso**. El clúster recién añadido está habilitado con alta disponibilidad (HA) de vSphere y con el planificador de recursos distribuidos (DRS) de vSphere.
 
-**Importante**: no puede cambiar el nombre del clúster. Si se cambia el nombre del clúster, es posible que las operaciones de adición o eliminación de servidores ESXi en el clúster fallen.
+**Importante:** No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es posible que las operaciones de adición o eliminación de servidores ESXi en el clúster fallen.
 
-## Visualización de clústeres en instancias de Cloud Foundation
+## Procedimiento para visualizar clústeres en instancias de Cloud Foundation
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse una instancia para ver los clústeres que contiene.
@@ -199,7 +197,7 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia de la que desea suprimir clústeres.
 
-   **Nota**: asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede suprimir clústeres de la instancia.
+   **Nota:** asegúrese de que la instancia está en el estado **Listo para su uso**. De lo contrario, no puede suprimir clústeres de la instancia.
 
 3. Pulse **Infraestructura** en el panel de navegación izquierdo. En la tabla **CLÚSTERES**, localice el clúster que desea suprimir y pulse el icono **Suprimir**.
 4. Confirme que ha completado la migración de las VM a otros clústeres, si corresponde, y que desea suprimir el clúster.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ Asegúrese de haber realizado las tareas siguientes:
 *  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
 *  Ha revisado los requisitos y las consideraciones del apartado [Requisitos y planificación de instancias de Cloud Foundation](sd_planning.html).
 
-**Importante**: No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime. Tampoco cambie el nombre de la instancia, el nombre del dominio raíz, la etiqueta de subdominio ni el prefijo de nombre de host después de que se haya desplegado la instancia.
+**Importante:** No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime. Tampoco cambie el nombre de la instancia, el nombre del dominio raíz, la etiqueta de subdominio ni el prefijo de nombre de host después de que se haya desplegado la instancia.
 
 ## Valores del sistema
 
@@ -86,17 +86,16 @@ Una instancia de Cloud Foundation consta de cuatro servidores nativos en el desp
 ## Valores de almacenamiento
 
 Para las instancias de Cloud Foundation, solo puede solicitar almacenamiento VMware vSAN.
-* Cuando selecciona una configuración de servidor nativo **Preconfigurado**, los valores de almacenamiento están estandarizados y no se pueden cambiar:
+
+Cuando selecciona una configuración de servidor nativo **Preconfigurado**, los valores de almacenamiento están estandarizados y no se pueden cambiar:
   * Para la configuración de servidor nativo **Pequeño**, se solicitan dos unidades de disco de 1,9 TB SSD SED.
   * Para la configuración de servidor nativo **Grande**, se solicitan cuatro unidades de disco de 3,8 TB SSD SED.
-* Cuando selecciona la configuración de servidor nativo **Personalizado**, puede personalizar el almacenamiento vSAN para la instancia. Especifique los siguientes valores de vSAN:
 
+Cuando selecciona la configuración de servidor nativo **Personalizado**, puede personalizar el almacenamiento vSAN para la instancia. Especifique los siguientes valores de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
-* **Tipo de disco para discos de memoria caché vSAN**: Seleccione una opción para los discos de memoria caché que necesite.
-
-    **Nota**: Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
-* **Número de discos de memoria caché de vSAN**: Especifique el número de discos de memoria caché que desea añadir.
+* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
 
 ## Valores de interfaz de red
 
@@ -228,9 +227,9 @@ Cuando se solicita una instancia secundaria, es posible que el cliente web de VM
 
 Puede ver y gestionar la instancia de Cloud Foundation que ha solicitado.
 
-**Importante**: Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+**Importante:** Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el 	{{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
 
-**ATENCIÓN**: el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
+**ATENCIÓN:** el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 
 *  Añadir, modificar, devolver o eliminar componentes
 *  Ampliar o reducir la capacidad de la instancia mediante la adición o eliminación de servidores ESXi
