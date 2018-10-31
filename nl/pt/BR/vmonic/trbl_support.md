@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -49,4 +49,4 @@ Para entrar em contato com o Suporte IBM no {{site.data.keyword.slportal}}, conc
 2. Efetue login no portal com sua conta **IBMid**.
 3. Conclua as etapas 6 a 8 descritas na seção _No console do IBM Cloud for VMware Solutions_ neste tópico para enviar seu chamado.
 
-    **Nota**: independentemente do canal que você usa para abrir o chamado de suporte (seja o console do {{site.data.keyword.vmwaresolutions_short}} ou o {{site.data.keyword.slportal}}), os termos da _Política de suporte de serviços de infraestrutura e plataforma do {{site.data.keyword.cloud_notm}}_ ainda se aplicam.
+    **Nota:** independentemente do canal usado para abrir o chamado de suporte (o console do {{site.data.keyword.vmwaresolutions_short}} ou o {{site.data.keyword.slportal}}), os termos da _Política de suporte de serviços de infraestrutura e plataforma do {{site.data.keyword.cloud_notm}}_ ainda se aplicam.

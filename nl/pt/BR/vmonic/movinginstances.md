@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,7 +22,7 @@ Na V1.4 e liberações mais recentes, vários aprimoramentos da topologia de red
 
 Se você não tiver migrado ou excluído suas instâncias de liberações pré-V1.4, elas poderão ainda estar visíveis no console do {{site.data.keyword.vmwaresolutions_short}} no modo somente visualização. Estas instâncias são marcadas na interface com o usuário como **Descontinuadas** com um ícone de símbolo de aviso.
 
-**Nota**: as informações que são exibidas nas propriedades da instância refletem os dados a partir da data de liberação da V1.4 e não são mais atualizadas.
+**Nota:** as informações que são exibidas nas propriedades de instância refletem os dados a partir da data de liberação da V1.4 e não são mais atualizadas.
 
 As ações a seguir estão disponíveis nas instâncias pré-V1.4:
 *  Visualize as informações na página de detalhes da instância.

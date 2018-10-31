@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-16"
 
 O {{site.data.keyword.vmwaresolutions_full}} se comunica com a infraestrutura do {{site.data.keyword.cloud_notm}} por meio de chamadas do {{site.data.keyword.slapi_short}}. Para acessar o {{site.data.keyword.slapi_short}} com segurança, deve-se vincular as credenciais de sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) à sua conta do {{site.data.keyword.cloud_notm}}.
 
-**Nota**: a conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) era conhecida anteriormente como a conta do IBM SoftLayer.
+**Nota:** a conta da infraestrutura {{site.data.keyword.cloud_notm}} (SoftLayer) anteriormente era conhecida como a conta da IBM SoftLayer.
 
 Também é possível especificar se você deseja receber notificações por e-mail e do console para vários eventos.
 
@@ -22,9 +22,9 @@ Também é possível especificar se você deseja receber notificações por e-ma
 * A conta e infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) que você está usando deve atender a determinados requisitos. Para obter mais informações, veja [Requisitos de conta de infraestrutura do {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
 * Caso a chave API para sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) mude, deve-se atualizar a chave na página **Configurações** no console do {{site.data.keyword.vmwaresolutions_short}}.
 
-   **Importante**: é sua responsabilidade assegurar que a chave API que é salva na página **Configurações** esteja correta e atualizada. Caso contrário, as operações que requerem validação da chave API podem falhar.
+   **Importante:** é sua responsabilidade assegurar que a chave API salva na página **Configurações** esteja correta e atualizada. Caso contrário, as operações que requerem validação da chave API podem falhar.
 
-## Procedimento
+## Procedimento para gerenciar contas do usuário e configurações
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Configurações** na área de janela de navegação esquerda.
 2. Na área **Notificações**, especifique suas configurações de notificação.

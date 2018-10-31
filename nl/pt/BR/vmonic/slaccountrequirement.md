@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-25"
 
 Para usar {{site.data.keyword.vmwaresolutions_full}} para pedir instâncias, deve-se ter uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer). O custo dos componentes que são pedidos em suas instâncias é faturado para aquela conta {{site.data.keyword.cloud_notm}}.
 
-**Nota**: a conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) era conhecida anteriormente como a conta do IBM SoftLayer.
+**Nota:** a conta da infraestrutura {{site.data.keyword.cloud_notm}} (SoftLayer) anteriormente era conhecida como a conta da IBM SoftLayer.
 
 ## Permissões para a conta de infraestrutura do IBM Cloud
 

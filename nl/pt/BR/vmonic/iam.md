@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-28"
 
 ---
 
 # Gerenciando o acesso de usuário com o IAM
 
-O acesso às instâncias de serviço do {{site.data.keyword.vmwaresolutions_full}} para os usuários em sua conta é controlado pelo {{site.data.keyword.cloud}} Identity and Access Management (IAM). Cada usuário que acessa os serviços do {{site.data.keyword.vmwaresolutions_short}} em sua conta deve ser designado a uma política de acesso com uma função de usuário do IAM definida.
+O acesso às instâncias de serviço do {{site.data.keyword.vmwaresolutions_full}} para os usuários em sua conta é controlado pelo {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). Cada usuário que acessa os serviços do {{site.data.keyword.vmwaresolutions_short}} em sua conta deve ser designado a uma política de acesso com uma função de usuário do IAM definida.
 
 A política de acesso determina as ações que o usuário pode executar dentro do contexto do serviço ou da instância que você seleciona. As ações permitidas são customizadas e definidas pelo serviço {{site.data.keyword.cloud_notm}} como operações que têm permissão para serem executadas no serviço. As ações são, então, mapeadas para funções de usuário do IAM.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -17,7 +17,7 @@ O {{site.data.keyword.vmwaresolutions_full}} é integrado ao {{site.data.keyword
 * Assegure-se de que você seja o proprietário da conta ou de que sua função de gerenciamento de plataforma para o serviço **VMware Solutions** seja **Administrador**.
 * Assegure-se de ter revisado as funções de usuário e as permissões em [Gerenciando o acesso de usuário com o Identity and Access Management](iam.html).
 
-## Procedimento
+## Procedimento para convidar usuários para acessar serviços e recursos
 
 1. No lado esquerdo do banner, clique em ** Gerenciar > Segurança > Identidade e acesso**.
 2. Na página **Usuários**, clique em **Convidar usuários**.

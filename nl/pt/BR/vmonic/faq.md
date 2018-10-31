@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ Encontre respostas às perguntas mais frequentes sobre o {{site.data.keyword.vmw
 
 * **Conta IBMid**. Esta conta é necessária para acessar o console do {{site.data.keyword.vmwaresolutions_short}}. O console é uma interface com o usuário independente separada do {{site.data.keyword.slportal}}. Para obter mais informações, veja
 [Introdução](../index.html).
-* **Conta {{site.data.keyword.cloud_notm}}**. Esta conta é necessária para fornecimento. É possível inscrever-se para uma conta do {{site.data.keyword.cloud_notm}} usando um **IBMid** existente ou criando um novo **IBMid**. 
+* **Conta {{site.data.keyword.cloud_notm}}**. Esta conta é necessária para fornecimento. É possível inscrever-se para uma conta do {{site.data.keyword.cloud_notm}} usando um **IBMid** existente ou criando um novo **IBMid**.
 * ** {{site.data.keyword.cloud_notm}}  conta de infraestrutura **. Essa conta, que era conhecida anteriormente como conta do **IBM SoftLayer**, é usada para efetuar login no portal do cliente de infraestrutura do {{site.data.keyword.cloud_notm}} que fornece alguma função adicional para gerenciar produtos e serviços de infraestrutura. É possível obter uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} fazendo upgrade de sua **conta do {{site.data.keyword.cloud_notm}}** para um tipo de conta Pagamento conforme uso ou vinculando sua conta de infraestrutura existente (SoftLayer) do {{site.data.keyword.cloud_notm}} à sua conta do {{site.data.keyword.cloud_notm}}. A conta de infraestrutura do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, veja [Inscrevendo-se para contas necessárias](signing_softlayer_account.html) e [Requisitos de conta de infraestrutura do {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
 
 ## Como eu associo minhas credenciais de infraestrutura do IBM Cloud ao console do IBM Cloud for VMware Solutions?
@@ -65,7 +65,7 @@ Não, não é recomendado. Podem ocorrer falhas nas funções do {{site.data.key
 
 Para instâncias do vCenter Server, o primeiro cluster que é criado durante a implementação tem um nome padrão de **cluster1**. É possível renomear o cluster padrão no VMware vSphere Client. Ao incluir um cluster em uma instância do vCenter Server, é possível especificar o nome que você deseja no console do {{site.data.keyword.vmwaresolutions_short}}.
 
-**Nota**: para instâncias do Cloud Foundation, o nome do cluster padrão não pode ser mudado.
+**Nota:** para instâncias do Cloud Foundation, o nome do cluster padrão não pode ser mudado.
 
 ##Como as correções são gerenciadas?
 
