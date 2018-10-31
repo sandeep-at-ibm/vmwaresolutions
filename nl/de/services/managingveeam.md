@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-15"
 
 Nachdem der Service in Ihrer Instanz bereitgestellt wurde, können Sie über RDP auf die Veeam-Konsole zugreifen, um die Sicherung und Wiederherstellung aller virtuellen Maschinen in Ihrer Umgebung zu verwalten, einschließlich der Sicherung und Wiederherstellung von Managementkomponenten. Sie können auch ein Upgrade für den Service durchführen, indem Sie die Veeam-Updates von der Veeam-Website herunterladen und installieren.
 
-Bei Instanzen, die in früheren Releases als V1.8 bereitgestellt wurden, müssen Sie die virtuelle Serverinstanz für Veeam ersetzen, die in den Instanzen vorhanden ist, wenn Sie den Service "Veeam on {{site.data.keyword.cloud}}" nutzen wollen. Weitere Informationen finden Sie im Abschnitt _Virtuelle Serverinstanz für Veeam in Instanzen vor V1.8 durch Veeam on IBM Cloud ersetzen_ des vorliegenden Themas.
+Bei Instanzen, die in früheren Releases als V1.8 bereitgestellt wurden, müssen Sie die virtuelle Serverinstanz für Veeam ersetzen, die in den Instanzen vorhanden ist, wenn Sie den Service "Veeam on {{site.data.keyword.cloud}}" nutzen wollen. Weitere Informationen finden Sie im Abschnitt _Virtuelle Serverinstanz für Veeam in Instanzen vor V1.8 durch Veeam on IBM Cloud ersetzen_. 
 
 ## Mit RDP auf die Veeam-Konsole zugreifen
 
@@ -55,7 +55,7 @@ Der Service "Veeam on {{site.data.keyword.cloud_notm}}" der sowohl Managementkom
 
 Aufgrund dieser Änderung wurde die vorherige Registerkarte **Sicherung und Wiederherstellung** auf der Seite mit den Instanzdetails entfernt und die Sicherungspunkte für die Instanzen sind in der {{site.data.keyword.vmwaresolutions_short}}-Konsole nicht mehr verfügbar, auch wenn die virtuelle Serverinstanz für Veeam in den Instanzen vor V1.8 funktioniert.
 
-Sie müssen ein {{site.data.keyword.cloud_notm}}-Support-Ticket erstellen, um Unterstützung bei einer Wiederherstellung zu erhalten. Darüber hinaus ist die Lizenz für die virtuelle Serverinstanz für Veeam in den Versionen vor V1.8 am 14. Oktober 2017 abgelaufen. Daher müssen Sie die vorherige virtuelle Serverinstanz für Veeam durch den neuen Service "Veeam on {{site.data.keyword.cloud_notm}}" ersetzen.
+Sie müssen ein {{site.data.keyword.cloud_notm}}-Support-Ticket erstellen, um Unterstützung bei einer Wiederherstellung zu erhalten. Darüber hinaus lief die Lizenz der virtuellen Serverinstanz für Veeam in Instanzen aus Releases vor V1.8 am 14. Oktober 2017 ab. Daher müssen Sie die vorherige virtuelle Serverinstanz für Veeam durch den neuen Service "Veeam on {{site.data.keyword.cloud_notm}}" ersetzen.
 
 Führen Sie die folgenden Schritte aus:
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen** und klicken Sie dann auf die Zielinstanz.
@@ -63,7 +63,7 @@ Führen Sie die folgenden Schritte aus:
 3. Klicken Sie auf die Registerkarte **Services**.
 4. Installieren Sie auf der Registerkarte **Services hinzufügen** den Service "Veeam on {{site.data.keyword.cloud_notm}}".
 
-Nachdem der neue Service "Veeam on {{site.data.keyword.cloud_notm}}" bereitgestellt worden ist und eine erfolgreiche Sicherung Ihrer Managementkomponenten ausgeführt wurde, können Sie die vorhandene virtuelle Serverinstanz für Veeam aus Ihrem Konto entfernen, indem Sie ein {{site.data.keyword.cloud_notm}}-Support-Ticket erstellen. Vom IBM Support werden dann die vorhandene virtuelle Serverinstanz für Veeam sowie der Speicher ermittelt und gelöscht.
+Nachdem der neue Service "Veeam on {{site.data.keyword.cloud_notm}}" bereitgestellt worden ist und eine erfolgreiche Sicherung Ihrer Managementkomponenten ausgeführt wurde, können Sie die vorhandene virtuelle Serverinstanz für Veeam aus Ihrem Konto entfernen, indem Sie ein {{site.data.keyword.cloud_notm}}-Support-Ticket erstellen. Vom IBM Support werden die vorhandene virtuelle Serverinstanz für Veeam sowie der Speicher ermittelt und gelöscht.
 
 ### Zugehörige Links
 

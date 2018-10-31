@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -15,6 +15,7 @@ lastupdated: "2018-07-19"
 Zum Verwalten des Service "F5 on {{site.data.keyword.cloud}}" melden Sie sich bei den primären oder sekundären Konsolen der BIG-IP-Webbenutzerschnittstelle mit den entsprechenden Berechtigungsnachweisen an, die Sie auf der Seite mit den Details des Service "F5 on {{site.data.keyword.cloud_notm}}" finden.
 
 Weitere Informationen zum Anzeigen der Servicedetails finden Sie in den folgenden Abschnitten:
+
 * [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
 * [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
 

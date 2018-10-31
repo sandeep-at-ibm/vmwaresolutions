@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -32,7 +32,7 @@ In diesem Modell wird eine vollständig verwaltete Disaster-Recovery-Lösung fü
 
 Weitere Informationen finden Sie unter [IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top).
 
-## Vorgehensweise
+## Vorgehensweise zum Anfordern von verwalteten Services für Zerto in IBM Cloud
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Einführung**.
 2. Blättern Sie auf der Seite abwärts und klicken Sie unter **Zusätzliche verwaltete Services bestellen** auf die Karte **Verwaltete Services für Zerto on IBM Cloud**.

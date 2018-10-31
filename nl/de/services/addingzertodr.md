@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ Der Service "Zerto on {{site.data.keyword.cloud}}" integriert Replikations- und 
 
 Mit dem Service "Zerto on {{site.data.keyword.cloud_notm}}" werden die folgenden Komponenten bestellt und einbezogen.
 
-**Anmerkung:** Die Komponenten von Zerto Virtual Manager (ZVM) werden nur im Standardcluster bereitgestellt.
+**Hinweis:** Die Komponenten von Zerto Virtual Manager (ZVM) werden nur im Standardcluster bereitgestellt.
 
 ### VSIs
 

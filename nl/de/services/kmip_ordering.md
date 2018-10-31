@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -38,7 +38,7 @@ Wählen Sie die {{site.data.keyword.cloud_notm}}-Region aus, in der Ihre KMIP fo
 
 Für vCenter Server müssen Sie einen KMS-Cluster (KMS = Key Management Server) konfigurieren. Der Endpunkt in der ausgewählten Region stellt eine sichere Verbindung zum KMS über das Client-SSL-Zertifikat her. Den Endpunkt für jede Region können Sie der folgenden Tabelle entnehmen. Diese Endpunkte verwenden selbst signierte Zertifikate, die vom {{site.data.keyword.vmwaresolutions_short}}-Team verwaltet werden. Der Fingerabdruck für die Zertifikate ist `a9 d0 ff 15 df 85 10 6b 61 88 fe 2e 8b d3 1a af 48 c8 a0 7a`.
 
-Tabelle 1: Regionen mit Serviceendpunkten für KMIP for VMware on {{site.data.keyword.cloud_notm}}
+Tabelle 1. Regionen mit Serviceendpunkten für KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
 | Region         | Endpunkt               |
 |:---------------|:-----------------------|
@@ -47,7 +47,7 @@ Tabelle 1: Regionen mit Serviceendpunkten für KMIP for VMware on {{site.data.ke
 | Großbritannien |  `158.175.93.122:5696` |
 | USA (Süden)       |  `169.60.185.42:5696`  |
 
-Diese Einstellung ist bei der Erstkonfiguration optional. Sie können dieses Feld zu diesem Zeitpunkt leer lassen, da das Clientzertifikat des KMS in vCenter Server nach der Bereitstellung Ihrer Instanz bekannt ist. Nach der Bereitstellung Ihrer Instanz müssen Sie das Zertifikat allerdings eingeben, damit Ihre vCenter Server-Verbindung zum KMS erfolgreich hergestellt werden kann.
+Diese Einstellung ist bei der Erstkonfiguration optional. Sie können dieses Feld leer lassen, da das Clientzertifikat des KMS in vCenter Server nach der Bereitstellung Ihrer Instanz bekannt ist. Nach der Bereitstellung Ihrer Instanz müssen Sie das Zertifikat allerdings eingeben, damit Ihre vCenter Server-Verbindung zum KMS erfolgreich hergestellt werden kann.
 
 ### API-Schlüssel für Service-ID
 

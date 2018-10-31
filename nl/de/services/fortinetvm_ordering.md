@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -46,12 +46,12 @@ Das Lizenzmodell für FortiGate Virtual Appliance on {{site.data.keyword.cloud_n
         <dt class="dt dlterm">Standard FW</dt>
         <dd class="dd">Dieses Produktpaket beinhaltet Paketprüfung mit Zustandsüberwachung, VLAN-Schutz und erweiterte Protokollierung, Regeln für Firewalleingang/-ausgang, SSL/IPSec-VPN-Beendigung sowie unterbrechungsfreien Support.</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
-        <dd class="dd">Dieses Produktpaket beinhaltet alle Firewall-Services des Pakets "Standard" sowie zusätzlich NGFW-IPS- und Webfilterung, Viren- und Spamschutz, IP- & Domänenreputation und zentrale FortiCare-Sicherheitsservices.</dd>
+        <dd class="dd">Dieses Produktpaket beinhaltet alle Firewall-Services des Pakets "Standard" sowie zusätzlich NGFW-IPS- und Webfilterung, Viren- und Spamschutz, IP- und Domänenreputation und zentrale FortiCare-Sicherheitsservices.</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>
         <dd class="dd">Dieses Produktpaket beinhaltet neben allen Firewall-Services der Pakete "Standard" und "UTM" die FortiSandbox-Sicherheit für Cloud und Mobilgeräte.</dd>
 </dl>
 
-**Wichtig**: Nach der Installation des Service kann das Lizenzmodell nicht mehr geändert werden. Wenn Sie das Lizenzmodell ändern möchten, müssen Sie den vorhandenen Service entfernen und ihn mit einer anderen Lizenzoption erneut installieren.
+**Wichtig:** Nach der Installation des Service kann das Lizenzmodell nicht mehr geändert werden. Wenn Sie das Lizenzmodell ändern möchten, müssen Sie den vorhandenen Service entfernen und ihn mit einer anderen Lizenzoption erneut installieren.
 
 ### Zugehörige Links
 

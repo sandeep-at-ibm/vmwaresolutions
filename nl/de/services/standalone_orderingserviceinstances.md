@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 *  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen](../vmonic/useraccount.html).
 *  Sie haben alle Hinweise im Abschnitt [Hinweise zur Installation von lokalen HCX on {{site.data.keyword.cloud_notm}}-Instanzen](../services/standalone_considerations.html) gelesen.
 
-## Vorgehensweise
+## Vorgehensweise zum Bestellen von VMware HCX on IBM Cloud-Instanzen
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Blättern Sie abwärts zur Tabelle **Lokale HCX-Instanzen** und klicken Sie dann auf **Neu bereitstellen**.

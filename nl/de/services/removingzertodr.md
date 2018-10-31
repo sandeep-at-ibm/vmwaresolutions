@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,7 +25,7 @@ Der Löschprozess für den Service "Zerto on {{site.data.keyword.cloud}}" ist au
    4. Das private portierbare Teilnetz, das für die Kommunikation von Zerto Virtual Replication bestellt wurde, wird an die {{site.data.keyword.cloud_notm}}-Infrastruktur zurückgegeben.   
    5. Die Gebühren für den Disaster-Recovery-Service von Zerto werden aus Ihrer {{site.data.keyword.cloud_notm}}-Abrechnungsanweisung entfernt.
 
-      **Hinweis** Der entfernte Disaster-Recovery-Service von Zerto wird Ihnen bis zum Ende des Abrechnungszyklus berechnet.
+      **Hinweis:** Der entfernte Disaster-Recovery-Service von Zerto wird Ihnen bis zum Ende des Abrechnungszyklus berechnet.
 
 ## Ergebnisse
 

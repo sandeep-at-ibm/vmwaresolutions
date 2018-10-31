@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-11"
+lastupdated: "2018-09-26"
 
 ---
 
 # Übersicht über HyTrust KeyControl on IBM Cloud
 
-Der Service "HyTrust KeyControl on {{site.data.keyword.cloud}}" vereinfacht das Management verschlüsselter Workloads durch Automatisierung und Vereinfachung des Lebenszyklus von Verschlüsselungsschlüsseln, wobei Speicherung, Verteilung, Rotation und Widerruf von Schlüsseln eingeschlossen sind. Mithilfe der FIPS 140-2-konformen Verschlüsselung kann der Service ohne großen Aufwand skalierbare Verschlüsselungsschlüssel verwalten. 
+Der Service "HyTrust KeyControl on {{site.data.keyword.cloud}}" vereinfacht das Management verschlüsselter Workloads. Dieser Service automatisiert und vereinfacht den Lebenszyklus von Verschlüsselungsschlüsseln, einschließlich Speicherung, Verteilung, Rotation und Widerruf von Schlüsseln. Mithilfe der FIPS 140-2-konformen Verschlüsselung kann der Service ohne großen Aufwand skalierbare Verschlüsselungsschlüssel verwalten. 
 
 **Verfügbarkeit:** Dieser Service ist nur für Instanzen verfügbar, auf denen vSphere 6.5 ausgeführt wird und die in V2.5 oder höheren Releases bereitgestellt werden oder für die ein Upgrade auf diese Releases durchgeführt wurde.
 
@@ -37,7 +37,7 @@ Für jede Instanzinstallation wird eine HyTrust KeyControl-Lizenz bestellt.
 
 ## Hinweise zum Entfernen von HyTrust KeyControl on IBM Cloud
 
-Vor dem Entfernen des Service "HyTrust KeyControl on {{site.data.keyword.cloud_notm}}" müssen Sie sicherstellen, dass Sie alle Clients von der Verwendung von KeyContol entkoppelt haben. Nachdem Sie den Service entfernt haben, werden die Schlüssel möglicherweise gelöscht, sodass Sie eventuell nicht mehr auf Ihre VMs zugreifen können.
+Vor dem Entfernen des Service "HyTrust KeyControl on {{site.data.keyword.cloud_notm}}" müssen Sie alle Clients von der Verwendung von KeyContol entkoppeln. Nachdem Sie den Service entfernt haben, werden die Schlüssel möglicherweise gelöscht, sodass Sie eventuell nicht mehr auf Ihre VMs zugreifen können.
 
 ### Zugehörige Links
 

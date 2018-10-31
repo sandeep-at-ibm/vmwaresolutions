@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
 # Übersicht über Veeam on IBM Cloud
 
-Der Service "Veeam on {{site.data.keyword.cloud}}" wird nahtlos und direkt in Ihre VMware-Hypervisoren integriert und unterstützt so die Hochverfügbarkeit in Ihrem Unternehmen. Dieser Service kann Wiederherstellungspunkte und Zeitziele für Ihre Anwendungen und Daten bereitstellen. Die Wiederherstellungspunkte und Zeitziele können in weniger als 15 Minuten nach Abschluss der Konfiguration bereitgestellt werden. Durch die Verwendung dieses Service können Sie die Sicherung und Wiederherstellung aller virtuellen Maschinen (VMs) für Ihre Infrastruktur direkt über die Veeam-Konsole steuern.
+Der Service "Veeam on {{site.data.keyword.cloud}}" wird nahtlos und direkt in Ihre VMware-Hypervisoren integriert und unterstützt so die Hochverfügbarkeit in Ihrem Unternehmen. Dieser Service stellt Wiederherstellungspunkte und Zeitziele für Ihre Anwendungen und Daten bereit. Die Wiederherstellungspunkte und Zeitziele können in weniger als 15 Minuten nach Abschluss der Konfiguration bereitgestellt werden. Durch die Verwendung dieses Service steuern Sie die Sicherung und Wiederherstellung aller virtuellen Maschinen (VMs) für Ihre Infrastruktur direkt über die Veeam-Konsole. 
 
-**Verfügbarkeit:** Dieser Service ist nur für Instanzen verfügbar, die in V1.8 oder höheren Releases bereitgestellt werden.
+**Verfügbarkeit:** Dieser Service ist nur für Instanzen verfügbar, die in V1.8 und höheren Releases bereitgestellt werden.
 
 ## Technische Spezifikationen für Veeam on IBM Cloud
 
@@ -50,7 +50,7 @@ Das Speicherrepository und der Veeam-Server befinden sich im ursprünglichen Pod
 
 ## Hinweise zum Entfernen von Veeam on IBM Cloud
 
-Beachten Sie vor dem Entfernen des Service "Veeam on {{site.data.keyword.cloud_notm}}", dass hierdurch alle Sicherungen (inklusive der Sicherung der Management-VMs) gestoppt und alle vorherigen Sicherungen gelöscht werden (der Löschvorgang ist irreversibel). Falls die Management-VMs später beschädigt werden, ist ihre Wiederherstellung nicht möglich.
+Durch das Entfernen des Veeam on {{site.data.keyword.cloud_notm}}-Service werden alle Sicherungen gestoppt und alle vorherigen Sicherungen gelöscht. Die Sicherungen der Management-VMs werden gestoppt und der Löschvorgang für vorherige Sicherungen kann nicht rückgängig gemacht werden. Wenn die Management-VMs beschädigt sind, können sie nicht wiederhergestellt werden.
 
 ### Zugehörige Links
 

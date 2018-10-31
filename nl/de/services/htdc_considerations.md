@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-18"
+lastupdated: "2018-09-26"
 
 ---
 
 # Übersicht über HyTrust DataControl on IBM Cloud
 
-Der Service "HyTrust DataControl on {{site.data.keyword.cloud}}" bietet eine starke Verschlüsselung mit integriertem Schlüsselmanagement, um Workloads über ihren gesamten Lebenszyklus hinweg zu sichern. Der Service kann die Verschlüsselung sowohl auf Betriebssystemebene als auch auf Datenebene bereitstellen. Dies bedeutet, dass alle Verzeichnisse, Ordner oder Dateien innerhalb einer Workload ver- und entschlüsselt werden können.
+Der Service "HyTrust DataControl on {{site.data.keyword.cloud}}" bietet eine starke Verschlüsselung mit integriertem Schlüsselmanagement, um Workloads über ihren gesamten Lebenszyklus hinweg zu sichern. Der Service stellt die Verschlüsselung sowohl auf Betriebssystemebene als auch auf Datenebene bereit. Auf diese Weise können alle Verzeichnisse, Ordner oder Dateien in einer Workload verschlüsselt und entschlüsselt werden.
 
 **Verfügbarkeit:** Dieser Service ist nur für Instanzen verfügbar, auf denen vSphere 6.5 ausgeführt wird und die in V2.3 oder höheren Releases bereitgestellt werden oder für die ein Upgrade auf diese Releases durchgeführt wurde.
 
@@ -33,7 +33,7 @@ Lizenz pro Host: Eine HyTrust DataControl-Lizenz wird für jeden Host in der Umg
 
 ## Hinweise zum Entfernen von HyTrust DataControl on IBM Cloud
 
-Vor dem Entfernen des Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" müssen Sie sicherstellen, dass Sie alle Clients von der Verwendung von DataControl entkoppelt haben. Nachdem Sie den Service entfernt haben, werden die Schlüssel möglicherweise gelöscht, sodass Sie eventuell nicht mehr auf Ihre VMs zugreifen können.
+Vor dem Entfernen des Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" müssen Sie alle Clients von der Verwendung von DataControl entkoppeln. Nachdem Sie den Service entfernt haben, werden die Schlüssel möglicherweise gelöscht, sodass Sie eventuell nicht mehr auf Ihre VMs zugreifen können.
 
 ### Zugehörige Links
 

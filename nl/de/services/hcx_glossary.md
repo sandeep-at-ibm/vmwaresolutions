@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-23"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -20,7 +20,6 @@ Dieses Glossar enthält Definitionen der Begriffe, die im Zusammenhang mit dem S
 * **Lokaler HCX-Standort**: Dies ist die lokale Umgebung (auch "On-Premises-Umgebung" genannt), in der Ihre vorhandene VMware-Bereitstellung ausgeführt wird. Im Zusammenhang mit Migrationen wird dies häufig als Quellenstandort bezeichnet.
 * **Virtuelle Appliance für HCX-Manager**: Dies ist die virtuelle Managementmaschine für HCX, die kurz auch als "HCX-Manager" bezeichnet wird.
 
-
-## Zugehörige Links
+### Zugehörige Links
 
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
