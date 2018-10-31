@@ -133,7 +133,7 @@ Examinez et sélectionnez des services complémentaires pour votre offre de dép
     </tr>
     <tr>
        <td>[HyTrust KeyControl on IBM Cloud](services/htkc_considerations.html)</td>
-       <td>Le service HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifie la gestion des charges de travail chiffrées en automatisant et en simplifiant le cycle de vie des clés de chiffrement. Le service peut facilement gérer les clés de chiffrement à l'échelle à l'aide du chiffrement compatible avec FIPS 140-2. </td>
+       <td>Le service HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifie la gestion des charges de travail chiffrées en automatisant et en simplifiant le cycle de vie des clés de chiffrement. Le service peut facilement gérer les clés de chiffrement à l'échelle à l'aide du chiffrement compatible avec FIPS 140-2.</td>
     </tr>
     <tr>
        <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
@@ -141,7 +141,7 @@ Examinez et sélectionnez des services complémentaires pour votre offre de dép
     </tr>
     <tr>
        <td>[IBM Spectrum Protect Plus on IBM Cloud](services/spp_considerations.html)</td>
-       <td>Le service IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} fournit une solution évolutive et efficace de protection, de réutilisation et de reprise des données pour les environnements virtuels. Vous pouvez implémenter le service en tant que solution autonome ou vous pouvez l'intégrer à votre environnement IBM Spectrum Protect Plus pour décharger des copies de stockage à long terme et pour la gouvernance des données.</td>
+       <td>Le service IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} fournit une solution évolutive et efficace de protection, de réutilisation et de récupération des données pour les environnements virtuels. Vous pouvez implémenter le service en tant que solution autonome ou vous pouvez l'intégrer à votre environnement IBM Spectrum Protect Plus pour décharger des copies de stockage à long terme et pour la gouvernance des données.</td>
     </tr>
     <tr>
        <td>[KMIP for VMware on IBM Cloud](services/kmip_considerations.html)</td>
