@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-10-03"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-20"
 
 Las ofertas de {{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server y VMware Cloud Foundation no son servicios gestionados. Usted es responsable de la configuración, la seguridad, la gestión y la supervisión de todos los componentes de software. Con el acceso administrativo completo a la solución, tiene una gran potencia y flexibilidad que requiere conocimientos técnicos, administrativos y operativos significativos en varios dominios. La gestión de una instancia de VMware en el {{site.data.keyword.cloud_notm}} requiere la misma planificación y experiencia que la planificación de una instancia local. Las tecnologías definidas por software, como VMware NSX y VMware vSAN, simplifican considerablemente algunos aspectos de la gestión de instancias, pero pueden requerir nuevas habilidades y herramientas para gestionarse y operarse correctamente. Combinar la potencia, la velocidad y la fiabilidad del despliegue de VMware automatizado de {{site.data.keyword.cloud_notm}} con la planificación operativa adecuada y las pruebas garantiza una navegación rápida y satisfactoria en la nube híbrida.
 
-Revise las siguientes consideraciones para comprender las responsabilidades que tiene para gestionar y operar con la instancia antes y después de que se haya desplegado. 
+Revise las siguientes consideraciones para comprender las responsabilidades que tiene para gestionar y operar con la instancia antes y después de que se haya desplegado.
 
 **Nota:** La lista siguiente no es exhaustiva. Para obtener más información, consulte [Servicios gestionados por IBM](../../services/managing_imi.html).
 
@@ -76,7 +76,7 @@ Complete los pasos siguientes para garantizar la configuración y gestión adecu
 
 Complete los pasos siguientes para garantizar una planificación adecuada para el mantenimiento de software.
 
-- Configure VMware Update Manager (VUM) a través de un proxy para obtener actualizaciones de VMware.
+- [Configure VMware Update Manager (VUM)](../vum/vum-intro.html) a través de un proxy para obtener actualizaciones de VMware.
 - Si es aplicable, configure vSAN a través de un proxy para mantener la base de datos de la lista de compatibilidad de hardware (HCL) de vSAN.
 - Planifique el mantenimiento normal de los componentes de VMware que no están soportados por VUM. Por ejemplo, VMware vCenter, PSC y NSX.
 - Revise la configuración de EVC (Enhanced vMotion Compatibility) de vSphere. Es posible que el clúster no esté configurado con EVC habilitado si la versión actual de vSphere no da soporte a EVC para el nivel de hardware.
@@ -121,4 +121,3 @@ Además de la planificación de la capacidad, complete los siguientes pasos para
 * [Visión general de la solución](solution_overview.html)
 * [Visión general del diseño](design_overview.html)
 * [Capacidad de escalado](solution_scaling.html)
-
