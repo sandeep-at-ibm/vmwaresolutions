@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 478 272" style="enable-background:new 0 0 478 272;" xml:space="preserve">
+	 viewBox="0 0 500 300" style="enable-background:new 0 0 500 300;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
 	.st1{font-family:'IBMPlexSans';}
@@ -17,12 +17,10 @@
 	.st11{fill:none;stroke:#000000;stroke-miterlimit:10;}
 </style>
 <g>
-	<g>
-		<rect x="16.5" y="57.5" class="st0" width="180" height="53"/>
-		<path d="M196,58v52H17V58H196 M197,57H16v54h181V57L197,57z"/>
-	</g>
-	<text transform="matrix(1 0 0 1 22.5 74.5)"><tspan x="0" y="0" class="st1 st2">SDDC-DPG-Mgmt</tspan><tspan x="0" y="14.4" class="st1 st2">VLAN-ID: --</tspan><tspan x="0" y="28.8" class="st1 st2">vmk0: Primäre private Adresse</tspan></text>
+	<rect x="11.5" y="57.5" class="st0" width="195.9" height="53"/>
+	<path d="M206.9,58v52H12V58H206.9 M207.9,57H11v54h196.9V57L207.9,57z"/>
 </g>
+<text transform="matrix(1 0 0 1 15.5 74.5)"><tspan x="0" y="0" class="st1 st2">SDDC-DPG-Mgmt</tspan><tspan x="0" y="14.4" class="st1 st2">VLAN-ID: --</tspan><tspan x="0" y="28.8" class="st1 st2">vmk0: Primäre private Adresse</tspan></text>
 <g>
 	<g>
 		<rect x="232.5" y="71" class="st0" width="233" height="102"/>
@@ -30,19 +28,15 @@
 	</g>
 </g>
 <g>
-	<g>
-		<rect x="17.5" y="130.5" class="st0" width="180" height="53"/>
-		<path d="M197,131v52H18v-52H197 M198,130H17v54h181V130L198,130z"/>
-	</g>
-	<text transform="matrix(1 0 0 1 23.5 147.5)"><tspan x="0" y="0" class="st1 st2">SDDC-DPG-vMotion</tspan><tspan x="0" y="14.4" class="st1 st2">VLAN-ID: --</tspan><tspan x="0" y="28.8" class="st1 st2">vmk1: Portierbare private Adresse</tspan></text>
+	<rect x="12.6" y="130.5" class="st0" width="195.9" height="53"/>
+	<path d="M208,131v52H13.1v-52H208 M209,130H12.1v54H209V130L209,130z"/>
 </g>
+<text transform="matrix(1 0 0 1 16.5 147.5)"><tspan x="0" y="0" class="st1 st2">SDDC-DPG-vMotion</tspan><tspan x="0" y="14.4" class="st1 st2">VLAN-ID: --</tspan><tspan x="0" y="28.8" class="st1 st2">vmk1: Portierbare private Adresse</tspan></text>
 <g>
-	<g>
-		<rect x="16.5" y="201.5" class="st0" width="180" height="53"/>
-		<path d="M196,202v52H17v-52H196 M197,201H16v54h181V201L197,201z"/>
-	</g>
-	<text transform="matrix(1 0 0 1 23.5 218.5)"><tspan x="0" y="0" class="st1 st2">SDDC-DPG-NFS</tspan><tspan x="0" y="14.4" class="st1 st2">VLAN-ID: &lt;Privates VLAN B&gt;</tspan><tspan x="0" y="28.8" class="st1 st2">vmk2: Portierbare private Adresse</tspan></text>
+	<rect x="11.5" y="201.5" class="st0" width="195.9" height="53"/>
+	<path d="M206.9,202v52H12v-52H206.9 M207.9,201H11v54h196.9V201L207.9,201z"/>
 </g>
+<text transform="matrix(1 0 0 1 16.5 218.5)"><tspan x="0" y="0" class="st1 st2">SDDC-DPG-NFS</tspan><tspan x="0" y="14.4" class="st1 st2">VLAN-ID: &lt;Privates VLAN B&gt;</tspan><tspan x="0" y="28.8" class="st1 st2">vmk2: Portierbare private Adresse</tspan></text>
 <g>
 	<g>
 		<g>
@@ -73,13 +67,13 @@
 	<rect x="272.1" y="88.5" class="st4" width="8.2" height="0.7"/>
 	<rect x="281" y="85.8" class="st4" width="5.1" height="0.7"/>
 	
-		<rect x="278.9" y="87.2" transform="matrix(6.123234e-17 -1 1 6.123234e-17 193.0976 368.1219)" class="st4" width="3.4" height="0.7"/>
+		<rect x="278.9" y="87.2" transform="matrix(6.123234e-17 -1 1 6.123234e-17 193.0975 368.1219)" class="st4" width="3.4" height="0.7"/>
 	
 		<rect x="289.7" y="90.1" transform="matrix(6.123234e-17 -1 1 6.123234e-17 200.7805 381.6097)" class="st4" width="3.1" height="0.7"/>
 	
 		<rect x="276.2" y="89.6" transform="matrix(6.123234e-17 -1 1 6.123234e-17 187.6341 367.439)" class="st4" width="2.7" height="0.7"/>
 	
-		<rect x="289.1" y="95.7" transform="matrix(6.123234e-17 -1 1 6.123234e-17 194.8049 386.9024)" class="st4" width="3.4" height="0.7"/>
+		<rect x="289.1" y="95.7" transform="matrix(6.123234e-17 -1 1 6.123234e-17 194.8048 386.9024)" class="st4" width="3.4" height="0.7"/>
 	
 		<rect x="290.5" y="97.4" transform="matrix(6.123234e-17 -1 1 6.123234e-17 194.4634 389.9756)" class="st4" width="3.4" height="0.7"/>
 	<rect x="277.2" y="91.3" class="st4" width="1.7" height="0.7"/>
@@ -120,13 +114,13 @@
 	<rect x="271.1" y="138.5" class="st4" width="8.2" height="0.7"/>
 	<rect x="280" y="135.8" class="st4" width="5.1" height="0.7"/>
 	
-		<rect x="277.9" y="137.2" transform="matrix(6.123234e-17 -1 1 6.123234e-17 142.0976 417.1219)" class="st4" width="3.4" height="0.7"/>
+		<rect x="277.9" y="137.2" transform="matrix(6.123234e-17 -1 1 6.123234e-17 142.0975 417.1219)" class="st4" width="3.4" height="0.7"/>
 	
 		<rect x="288.7" y="140.1" transform="matrix(6.123234e-17 -1 1 6.123234e-17 149.7805 430.6097)" class="st4" width="3.1" height="0.7"/>
 	
 		<rect x="275.2" y="139.6" transform="matrix(6.123234e-17 -1 1 6.123234e-17 136.6341 416.439)" class="st4" width="2.7" height="0.7"/>
 	
-		<rect x="288.1" y="145.7" transform="matrix(6.123234e-17 -1 1 6.123234e-17 143.8049 435.9024)" class="st4" width="3.4" height="0.7"/>
+		<rect x="288.1" y="145.7" transform="matrix(6.123234e-17 -1 1 6.123234e-17 143.8048 435.9024)" class="st4" width="3.4" height="0.7"/>
 	
 		<rect x="289.5" y="147.4" transform="matrix(6.123234e-17 -1 1 6.123234e-17 143.4634 438.9756)" class="st4" width="3.4" height="0.7"/>
 	<rect x="276.2" y="141.3" class="st4" width="1.7" height="0.7"/>
