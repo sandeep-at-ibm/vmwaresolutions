@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -18,7 +18,7 @@ Sie können sich für ein {{site.data.keyword.cloud}}-Konto registrieren, indem 
 
 Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer), das früher als IBM SoftLayer-Konto bezeichnet wurde, wird zur Anmeldung am Kundenportal für die {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet, das weitere Funktionen zur Verwaltung von Infrastrukturprodukten und -services zur Verfügung stellt. Sie können sich für ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) registrieren, indem Sie Ihr {{site.data.keyword.cloud_notm}}-Konto in ein nutzungsabhängiges Konto aktualisieren.
 
-### Vorgehensweise
+### Vorgehensweise zur Registrierung für ein IBM Cloud-Konto
 
 1. Melden Sie sich bei der {{site.data.keyword.vmwaresolutions_short}}-Konsole mit Ihrer **IBMid** an.
 2. Klicken Sie auf der rechten Seite des Banners auf **Verwalten > Abrechnung und Nutzung > Abrechnung**.

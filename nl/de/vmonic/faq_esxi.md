@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -17,7 +17,7 @@ Hier finden Sie Antworten auf häufig gestellte Fragen zu den ESXi-Servern, die 
 * Bei vCenter Server-Instanzen können Sie den Standardcluster auf bis zu 51 ESXi-Server erweitern. Jeder Cluster, bei dem es sich nicht um den Standardcluster handelt, kann auf bis zu 59 ESXi-Server erweitert werden. Da Sie bis zu 10 Cluster zu einer Instanz hinzufügen können, kann jede bereitgestellte Instanz in allen Clustern maximal 51 + 9 x 59 = 582 ESXi-Server umfassen.
 * Bei Cloud Foundation-Instanzen enthält die Standardkonfiguration vier ESXi-Server. Sie können maximal 28 Server hinzufügen (also insgesamt 32 Server verwenden). Bei Cloud Foundation-Instanzen in einer Konfiguration mit mehreren Standorten können insgesamt bis zu 128 ESXi-Server in allen Instanzen verwendet werden.
 
-  **Hinweis**: Falls Ihre Cloud Foundation-Konfiguration eine Bereitstellung mit mehreren Standorten mit mehr als 128 ESXi-Servern erforderlich macht, bitten Sie den [IBM Support](trbl_support.html) um Unterstützung.
+  **Hinweis:** Falls Ihre Cloud Foundation-Konfiguration eine Bereitstellung mit mehreren Standorten mit mehr als 128 ESXi-Servern erforderlich macht, bitten Sie den [IBM Support](trbl_support.html) um Unterstützung.
 
 ## Wie viele ESXi-Server kann ich zu einem Cluster hinzufügen?
 
@@ -53,7 +53,7 @@ Für nachfolgende Automatisierungsoperationen, beispielsweise beim Hinzufügen u
 
 Statische Routen können für Speicher hinzugefügt werden, die Operationen müssen jedoch mit äußerster Sorgfalt ausgeführt werden. Andernfalls könnten die vorhandenen, gemeinsam genutzten Ressourcen abgehängt werden.
 
-**Hinweis**: Das Hinzufügen statischer Routen für vMotion wird nicht unterstützt. Änderungen an der vMotion-Teilnetzkonfiguration könnten zu Störungen bei den Funktionen von {{site.data.keyword.vmwaresolutions_short}} führen.
+**Hinweis:** Das Hinzufügen statischer Routen für vMotion wird nicht unterstützt. Änderungen an der vMotion-Teilnetzkonfiguration könnten zu Störungen bei den Funktionen von {{site.data.keyword.vmwaresolutions_short}} führen.
 
 ### Zugehörige Links
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -49,4 +49,4 @@ Führen Sie die folgenden Schritte aus, um über das {{site.data.keyword.slporta
 2. Melden Sie sich mit Ihrem **IBMid**-Konto beim Portal an.
 3. Führen Sie die Schritte 6 bis 8 wie unter _Über die Konsole von IBM Cloud for VMware Solutions_ im vorliegenden Abschnitt beschrieben aus, um Ihr Ticket abzuschicken.
 
-    **Hinweis**: Unabhängig von dem zum Öffnen des Support-Tickets verwendeten Kanal ({{site.data.keyword.vmwaresolutions_short}}-Konsole oder {{site.data.keyword.slportal}}), gelten die Bedingungen der Supportrichtlinie für die _{{site.data.keyword.cloud_notm}}-Infrastruktur und -Plattformservices_.
+    **Hinweis:** Unabhängig von dem zum Öffnen des Support-Tickets verwendeten Kanal ({{site.data.keyword.vmwaresolutions_short}}-Konsole oder {{site.data.keyword.slportal}}), gelten die Bedingungen der Supportrichtlinie für die _{{site.data.keyword.cloud_notm}}-Infrastruktur und -Plattformservices_.

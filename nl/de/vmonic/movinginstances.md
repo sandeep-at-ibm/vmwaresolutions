@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,7 +22,7 @@ In V1.4 und höheren Releases sind verschiedene Netztopologieerweiterungen für 
 
 Falls Sie Ihre Instanzen aus Releases vor V1.4 nicht migriert oder gelöscht haben, sind sie möglicherweise weiterhin im Lesezugriffsmodus in der {{site.data.keyword.vmwaresolutions_short}}-Konsole sichtbar. Solche Instanzen sind in der Benutzerschnittstelle durch ein Warnsymbol als **Veraltet** gekennzeichnet.
 
-**Hinweis**: Die in den Instanzeigenschaften angezeigten Informationen geben die Daten gemäß dem Release V1.4 wieder und werden nicht mehr aktualisiert.
+**Hinweis:** Die in den Instanzeigenschaften angezeigten Informationen geben die Daten gemäß dem Release V1.4 wieder und werden nicht mehr aktualisiert.
 
 Für die Instanzen aus einem Release vor V1.4 sind die folgenden Aktionen verfügbar:
 *  Sie können die Informationen auf der Seite mit den Instanzdetails anzeigen.

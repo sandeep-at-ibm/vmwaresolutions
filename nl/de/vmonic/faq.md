@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -15,7 +15,7 @@ Hier finden Sie Antworten auf häufig gestellte Fragen zu {{site.data.keyword.vm
 ## Welche Benutzerkonten benötige ich für IBM Cloud for VMware Solutions?
 
 * **IBMid-Konto**. Dieses Konto ist für den Zugriff auf die {{site.data.keyword.vmwaresolutions_short}}-Konsole erforderlich. Die Konsole ist eine eigenständige und vom {{site.data.keyword.slportal}} getrennte Benutzerschnittstelle. Weitere Informationen finden Sie unter [Einführung](../index.html).
-* **{{site.data.keyword.cloud_notm}}-Konto**. Dieses Konto ist für die Bereitstellung erforderlich. Sie können sich für ein {{site.data.keyword.cloud_notm}}-Konto registrieren, indem Sie eine vorhandene **IBMid** verwenden oder eine neue **IBMid** erstellen. 
+* **{{site.data.keyword.cloud_notm}}-Konto**. Dieses Konto ist für die Bereitstellung erforderlich. Sie können sich für ein {{site.data.keyword.cloud_notm}}-Konto registrieren, indem Sie eine vorhandene **IBMid** verwenden oder eine neue **IBMid** erstellen.
 * **{{site.data.keyword.cloud_notm}}-Infrastrukturkonto**. Dieses Konto, das früher als **IBM SoftLayer-Konto** bezeichnet wurde, wird zur Anmeldung am Kundenportal für die {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet, das weitere Funktionen zur Verwaltung von Infrastrukturprodukten und -services zur Verfügung stellt. Sie erhalten ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto, indem Sie Ihr **{{site.data.keyword.cloud_notm}}-Konto** auf ein nutzungsabhängiges Konto aktualisieren oder indem Sie Ihr vorhandenes Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit Ihrem {{site.data.keyword.cloud_notm}}-Konto verknüpfen. Das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Für erforderliche Konten registrieren](signing_softlayer_account.html) und [Anforderungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](slaccountrequirement.html).
 
 ## Wie kann ich meine Berechtigungsnachweise für die IBM Cloud-Infrastruktur zur IBM Cloud for VMware Solutions-Konsole zuordnen?
@@ -31,7 +31,7 @@ Alle Kosten für die physische und virtuelle Infrastruktur sowie die aus der Ins
 Alle Instanztypen bieten Bereitstellungsoptionen für virtuelle VMware-Umgebungen. Der Unterschied liegt dabei im Maß der Anpassungsfähigkeit und Automatisierung.
 
 * Wenn Sie eine VMware vCenter Server-Instanz bestellen, stellen Sie eine virtuelle VMware-Umgebung mit angepassten Rechen-, Speicher- und Netzressourcen bereit. Weitere Informationen zu den bereitgestellten Komponenten finden Sie unter [Technische Spezifikationen für vCenter Server-Instanzen](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
-* Wenn Sie eine VMware Cloud Foundation-Instanz bestellen, stellen Sie eine einheitliche Plattform für ein softwaredefiniertes Rechenzentrum (Software-defined Data Center, SDDC) bereit. Weitere Informationen zu den bereitgestellten Komponenten finden Sie unter [Technische Spezifikationen für Cloud Foundation-Instanzen](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+* Wenn Sie eine VMware Cloud Foundation-Instanz bestellen, stellen Sie eine einheitliche Plattform für ein softwaredefiniertes Rechenzentrum (Software-Defined Data Center, SDDC) bereit. Weitere Informationen zu den bereitgestellten Komponenten finden Sie unter [Technische Spezifikationen für Cloud Foundation-Instanzen](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 * Wenn Sie einen VMware vSphere-Cluster bestellen, erhalten Sie hinsichtlich des Designs und Aufbaus Ihrer gehosteten VMware-Umgebung maximale Flexibilität beim Integrieren der VMware-kompatiblen Hardware. {{site.data.keyword.cloud_notm}} automatisiert jedoch weder Installation noch Konfiguration oder Inbetriebnahme der optionalen VMware-Komponenten für den VMware vSphere-Cluster.
 * Die Funktionen, die für vCenter Server-Instanzen, Cloud Foundation-Instanzen und vSphere-Cluster unterstützt werden, sind unterschiedlich. Weitere Informationen finden Sie im [Angebotsvergleichsdiagramm](inst_comp_chart.html).
 
@@ -64,7 +64,7 @@ Nein, dies ist nicht zu empfehlen. Es könnte zu Störungen bei den {{site.data.
 
 Bei vCenter Server-Instanzen hat der erste Cluster, der während der Bereitstellung erstellt wird, den Standardnamen **cluster1**. Sie können den Standardcluster in VMware vSphere Client umbenennen. Wenn Sie einen Cluster zu einer vCenter Server-Instanz hinzufügen, können Sie den gewünschten Namen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole angeben.
 
-**Hinweis**: Bei Cloud Foundation-Instanzen kann der Standardclustername nicht geändert werden.
+**Hinweis:** Bei Cloud Foundation-Instanzen kann der Standardclustername nicht geändert werden.
 
 ##Wie werden Patches verwaltet?
 
