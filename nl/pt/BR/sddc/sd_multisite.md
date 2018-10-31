@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-28"
 
 O {{site.data.keyword.vmwaresolutions_full}} permite que as instâncias sejam implementadas em locais diferentes e fiquem funcionais em pouco tempo.
 
-**Notas**:
+**Notas:**
 * Não é possível vincular entre as instâncias do VMware Cloud Foundation e do VMware vCenter Server em uma configuração de vários sites.
 * Não é possível vincular instâncias que são implementadas na V2.0 a instâncias de liberações anteriores (mesmo que elas tenham sido atualizadas para a V2.0).
 
@@ -37,7 +37,7 @@ Uma implementação de vários sites consiste nos componentes a seguir.
 
 O recurso de configuração de vários sites usa uma topologia de hub e spoke com um site primário e um máximo de sete sites secundários. Uma única camada de sites é suportada, ou seja, não é possível configurar sites subsequentes vinculados a outros sites secundários. É possível ter um total de 128 servidores ESXi em uma configuração de vários sites em todas as instâncias.
 
-**Nota**: se a sua configuração requerer uma implementação de vários sites com mais de 128 servidores ESXi, entre em contato com o Suporte IBM para obter assistência. Para obter mais informações, veja [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html).
+**Nota:** se sua configuração exigir uma implementação em vários locais com mais de 128 servidores ESXi, entre em contato com o Suporte IBM para obter assistência. Para obter mais informações, veja [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html).
 
 O gráfico a seguir descreve a visão geral da implementação de vários sites do Cloud Foundation.
 
@@ -54,7 +54,7 @@ O modelo contém as camadas a seguir:
 
 É possível ter um máximo de 8 instâncias (1 primária e 7 secundárias) que serão implementadas em uma configuração de vários sites.
 
-**Nota**: excluir instâncias do Cloud Foundation que fazem parte de uma configuração de vários sites requer planejamento especial. Para obter mais informações, veja [Excluindo instâncias do Cloud Foundation em uma configuração de vários sites](sd_deletinginstance_multi.html).
+**Nota:** a exclusão de instâncias do Cloud Foundation que fazem parte de uma configuração multisite requer planejamento especial. Para obter mais informações, veja [Excluindo instâncias do Cloud Foundation em uma configuração de vários sites](sd_deletinginstance_multi.html).
 
 ### Links relacionados
 

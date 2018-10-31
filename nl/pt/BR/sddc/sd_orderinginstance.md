@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,7 +18,7 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 *  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](../vmonic/useraccount.html).
 *  Você revisou os requisitos e considerações em [Requisitos e planejamento para instâncias do Cloud Foundation](sd_planning.html).
 
-**Importante**: não modifique nenhum valor configurado durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.Além disso, não mude o nome da instância, o nome do domínio-raiz, o rótulo do subdomínio ou o prefixo de nome do host depois que a instância for implementada.
+**Importante:** não modifique nenhum valor definido durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído. Além disso, não mude o nome da instância, o nome do domínio-raiz, o rótulo do subdomínio ou o prefixo de nome do host depois que a instância for implementada.
 
 ## Configurações do sistema
 
@@ -86,17 +86,16 @@ Uma instância do Cloud Foundation inclui quatro Bare Metal Servers na implement
 ## Configurações de armazenamento
 
 Para instâncias do Cloud Foundation, é possível pedir somente o armazenamento VMware vSAN.
-* Quando você seleciona a configuração **Pré-configurado** do Bare Metal Server, as configurações de armazenamento são padronizadas e não podem ser mudadas:
+
+Quando você seleciona a configuração **Pré-configurado** do Bare Metal Server, as configurações de armazenamento são padronizadas e não podem ser mudadas:
   * Para a configuração **Pequeno** do Bare Metal Server, são pedidas duas unidades de disco SSD SED de 1,9 TB.
   * Para a configuração **Grande** do Bare Metal Server, são pedidas quatro unidades de disco SSD SED de 3,8 TB.
-* Ao selecionar a configuração **Customizado** do Bare Metal Server, é possível customizar o armazenamento vSAN para sua instância. Especifique as seguintes configurações vSAN:
 
+Ao selecionar a configuração **Customizado** do Bare Metal Server, é possível customizar o armazenamento vSAN para sua instância. Especifique as seguintes configurações vSAN:
 * **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
 * **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
-* **Tipo de disco para discos de cache vSAN**: selecione uma opção para os discos de cache necessários.
-
-    **Nota**: se desejar incluir discos de capacidade acima do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
-* **Número de discos de cache vSAN**: especifique o número de discos de cache que deseja incluir.
+* Se você desejar incluir discos de capacidade além do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
+* Revise os valores **Tipo de disco para discos de cache vSAN** e **Número de discos de cache vSAN**. Esses valores dependem de a caixa **Intel Optane de alto desempenho** estar ou não marcada.
 
 ## Configurações da interface de rede
 
@@ -228,9 +227,9 @@ Quando você pedir uma instância secundária, o VMware vSphere Web Client da in
 
 Visualizar e gerenciar a instância do Cloud Foundation que você pediu.
 
-**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente no console do {{site.data.keyword.vmwaresolutions_short}}, não no {{site.data.keyword.slportal}} nem de qualquer outra maneira fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados na conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não no	{{site.data.keyword.slportal}} ou por qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
-**CUIDADO**: gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
+**CUIDADO:** Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 
 *  Incluindo, modificando, retornando ou removendo componentes
 *  Expandindo ou contraindo a capacidade da instância por meio da inclusão ou remoção de servidores ESXi

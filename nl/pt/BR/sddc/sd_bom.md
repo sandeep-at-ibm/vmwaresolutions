@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -58,7 +58,7 @@ Tabela 3. Definições de configuração avançada de servidores ESXi para inst�
 | Tamanho da amostra completa da fila | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | Limite completo da fila | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
-**Notas**:
+**Notas:**
 * A configuração **MaxVolumes** é necessária para o serviço IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} porque o serviço pode usar mais que o número padrão de montagens NFS no servidor ESXi.
 * Um valor de **Not set** para uma definição de configuração indica que a nova configuração não é aplicada automaticamente porque requer reinicialização de servidores ESXi, o que pode causar interrupção.
 
