@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -14,7 +14,7 @@ Les notifications vous permettent de vérifier le statut des opérations systèm
 
 ## Affichage des notifications
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Notifications** dans le panneau de navigation de gauche.
+1. A partir de la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Notifications** dans le panneau de navigation de gauche.
 2. Dans le tableau **Historique des notifications**, consultez le récapitulatif de toutes les notifications.
 
    Tableau 1. Historique des notifications

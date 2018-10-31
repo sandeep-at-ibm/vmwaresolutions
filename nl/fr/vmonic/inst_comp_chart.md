@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -33,7 +33,7 @@ Tableau 1. Fonctions prises en charge pour les instances Cloud Foundation, vCent
 | Editions de licence vSAN         | vSAN Advanced ou Enterprise  | vSAN Advanced ou Enterprise  | vSAN Advanced ou Enterprise | vSAN Advanced ou Enterprise  |
 | Services complémentaires               | Pris en charge, sans inclure le service HCX on {{site.data.keyword.cloud_notm}}.  | Pris en charge, sans inclure le service HCX on {{site.data.keyword.cloud_notm}}. La mise à niveau vers l'instance vCenter Server with Hybridity Bundle est disponible. | Pris en charge, avec le service HCX on {{site.data.keyword.cloud_notm}} inclus. | Non pris en charge par l'automatisation de cette solution, mais vous pouvez fournir et installer vos propres logiciels. |
 
-**Remarques** :
+**Remarques :**
 
 <sup>1</sup> Conformément à une conception validée et avec une vérification durant le déploiement.
 

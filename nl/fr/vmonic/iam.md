@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-28"
 
 ---
 
 # Gestion des accès utilisateur à l'aide d'IAM
 
-L'accès aux instances de service {{site.data.keyword.vmwaresolutions_full}} pour les utilisateurs de votre compte est contrôlé par {{site.data.keyword.cloud}} Identity and Access Management (IAM). Chaque utilisateur qui accède aux services {{site.data.keyword.vmwaresolutions_short}} de votre compte doit se voir attribuer une règle d'accès pour laquelle un rôle utilisateur IAM est défini.
+L'accès aux instances de service {{site.data.keyword.vmwaresolutions_full}} pour les utilisateurs de votre compte est contrôlé par {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). Chaque utilisateur qui accède aux services {{site.data.keyword.vmwaresolutions_short}} de votre compte doit se voir attribuer une règle d'accès pour laquelle un rôle utilisateur IAM est défini.
 
 La règle d'accès détermine les actions que l'utilisateur peut effectuer dans le contexte du service ou de l'instance que vous sélectionnez. Les actions autorisées sont personnalisées et définies par le service {{site.data.keyword.cloud_notm}} en tant qu'opérations pouvant être réalisées sur le service. Les actions sont ensuite mappées à des rôles utilisateur IAM.
 

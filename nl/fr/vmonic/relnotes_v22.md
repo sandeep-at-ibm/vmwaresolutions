@@ -52,7 +52,7 @@ Pour plus d'informations, voir les rubriques suivantes :
 ## Paramètres de configuration avancée sur les serveurs ESXi
 
 Pour la version 2.2 ou des éditions ultérieures, les nouvelles instances sont commandées avec un nouveau jeu de paramètres de configuration avancée pour les serveurs ESXi.
-Pour les instances mises au niveau depuis une édition antérieure vers la version 2.2 ou des éditions ultérieures, certains paramètres nécessitent un réamorçage des serveurs ESXi. Par conséquent, seul un sous-ensemble des paramètres de configuration est appliqué automatiquement. 
+Pour les instances mises au niveau depuis une édition antérieure vers la version 2.2 ou des éditions ultérieures, certains paramètres nécessitent un réamorçage des serveurs ESXi. Par conséquent, seul un sous-ensemble des paramètres de configuration est appliqué automatiquement.
 
 Il est recommandé de modifier les paramètres de configuration restants avec les nouvelles valeurs afin de garantir la cohérence entre toutes les instances et permettre la prise en charge de l'extension de stockage. IBM prévoit de n'effectuer ses tests qu'avec ces nouvelles valeurs pour toutes les éditions ultérieures des solutions {{site.data.keyword.cloud_notm}} pour VMware.
 
@@ -92,7 +92,7 @@ Pour plus d'informations, voir la section *Paramètres de configuration du syst�
 
 ### Augmentation du nombre de clusters par instance
 
-Vous pouvez désormais ajouter jusqu'à 10 clusters aux instances VMware vCenter Server déployées dans (ou mises à niveau vers) la version 2.2. et versions ultérieures. Pour plus d'informations, voir [Ajout et affichage des clusters des instances vCenter Server](../vcenter/vc_addingviewingclusters.html)​.
+Vous pouvez désormais ajouter jusqu'à 10 clusters aux instances VMware vCenter Server déployées dans (ou mises à niveau vers) la version 2.2. et dans des éditions ultérieures. Pour plus d'informations, voir [Ajout et affichage des clusters des instances vCenter Server](../vcenter/vc_addingviewingclusters.html)​.
 
 ## Mises à jour des clusters VMware vSphere
 
@@ -128,7 +128,7 @@ Pour plus d'informations, voir [Remarques relatives à KMIP for VMware on {{site
 
 Le service IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances déployées dans (ou mises à niveau vers) la version 2.2 ou des éditions ultérieures.
 
-Ce service fournit une solution évolutive et efficace de protection, de réutilisation et de reprise des données pour les environnements virtuels. Vous pouvez l'implémenter en tant que solution autonome ou vous pouvez l'intégrer à votre environnement IBM Spectrum Protect&trade; Plus pour décharger des copies de stockage à long terme et pour la gouvernance des données.
+Ce service fournit une solution évolutive et efficace de protection, de réutilisation et de récupération des données pour les environnements virtuels. Vous pouvez l'implémenter en tant que solution autonome ou vous pouvez l'intégrer à votre environnement IBM Spectrum Protect&trade; Plus pour décharger des copies de stockage à long terme et pour la gouvernance des données.
 
 Le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} fournit une protection des données uniquement pour les machines virtuelles de charge de travail.
 

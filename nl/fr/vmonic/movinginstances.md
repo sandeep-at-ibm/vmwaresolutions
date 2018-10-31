@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,7 +22,7 @@ En version 1.4 et éditions ultérieures, plusieurs améliorations de la topolog
 
 Si vous n'avez pas migré ou supprimé vos instances des éditions antérieures à la version 1.4, elles seront visibles sur la console {{site.data.keyword.vmwaresolutions_short}} mais en mode affichage uniquement. Dans l'interface utilisateur, la mention **Obsolète** apparaît pour ces instances avec une icône de symbole d'avertissement.
 
-**Remarque** : es informations affichées dans les propriétés d'instance correspondent aux données de la date d'édition de la version 1.4 et ne peuvent plus être actualisée.
+**Remarque :** les informations affichées dans les propriétés d'instance correspondent aux données de la date d'édition de la version 1.4 et ne peuvent plus être actualisées.
 
 Les actions suivantes sont disponibles sur les instances antérieures à la version 1.4 :
 *  Affichage des informations sur la page des détails de l'instance.
@@ -38,7 +38,7 @@ Si vos instances sont en version antérieure à 1.4 et que vous prévoyez de con
 Pour déplacer vos instances de version antérieur à 1.4 vers de nouvelles instances, procédez comme suit depuis le client Web vSphere :
 1. Depuis votre instance de version antérieur à 1.4, exportez toutes les machines virtuelles.
 2. Créez une instance dans l'édition actuelle.
-3. Importez toutes les machines virtuelles exportées à l'**Etape 1**.
+3. Importez toutes les machines virtuelles exportées à l'**étape 1**.
 4. Utilisez votre nouvelle instance.
 
 Pour plus d'informations sur l'exportation et l'importation de machines virtuelles, reportez-vous à votre documentation VMware vSphere.

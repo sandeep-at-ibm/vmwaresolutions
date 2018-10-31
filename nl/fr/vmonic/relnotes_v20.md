@@ -34,7 +34,7 @@ Pour plus d'informations, voir les rubriques suivantes :
 
 ## Mises à jour pour le service FortiGate Security Appliance on IBM Cloud
 
-Dans cette édition, le service Fortinet on {{site.data.keyword.cloud_notm}} a été renommé FortiGate Security Appliance (FSA) on {{site.data.keyword.cloud_notm}}. Les deux dispositifs FortiGate Security Appliance (FSA) du service sont configurés de manière à être sécurisés par défaut lorsqu'ils sont déployés dans votre instance. 
+Dans cette édition, le service Fortinet on {{site.data.keyword.cloud_notm}} a été renommé FortiGate Security Appliance (FSA) on {{site.data.keyword.cloud_notm}}. Les deux dispositifs FortiGate Security Appliance (FSA) du service sont configurés de manière à être sécurisés par défaut lorsqu'ils sont déployés dans votre instance.
 * Si vous déployez une paire de dispositifs FSA dans le cadre d'une nouvelle instance Cloud Foundation ou vCenter Server, ces dispositifs sont configurés de manière à n'autoriser que les communications sortantes requises depuis votre instance vers le réseau public et à refuser toutes les autres communications.
 * Si vous déployez une paire de dispositifs FSA dans le cadre d'une instance Cloud Foundation ou vCenter Server existante, ces dispositifs sont configurés avec une règle explicite de manière à autoriser toutes les communications de gestion sortantes requises depuis votre instance vers le réseau public, et les dispositifs FSA sont également configurés avec une règle permettant toutes les autres communications afin de garantir que le trafic d'application existant n'est pas interrompu.
 
@@ -114,7 +114,7 @@ L'édition actuelle applique les mises à jour de composant suivantes au nouveau
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
 
-**Remarque :** les commandes personnalisées de vCenter Server avec ou sans le composant VMware vSAN incluent toujours un serveur de châssis de 12 disques. Ce serveur laisse apparaître un coût légèrement supérieur pour les serveurs {{site.data.keyword.baremetal_short}} de la commande sans vSAN dans le PDF du coût estimé. 
+**Remarque :** les commandes personnalisées de vCenter Server avec ou sans le composant VMware vSAN incluent toujours un serveur de châssis de 12 disques. Ce serveur laisse apparaître un coût légèrement supérieur pour les serveurs {{site.data.keyword.baremetal_short}} de la commande sans vSAN dans le PDF du coût estimé.
 
 Pour plus d'informations sur les composants, voir [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html).
 
@@ -150,7 +150,7 @@ Pour le composant VMware vSAN, les types de disque suivants sont désormais disp
 
 **Remarques** :
 * Les unités SSD SED de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
-* Les commandes avec ou sans le composant VMware vSAN incluent toujours un serveur de châssis de 12 disques. Ce serveur laisse apparaître un coût légèrement supérieur pour les serveurs {{site.data.keyword.baremetal_short}} de la commande sans vSAN dans le PDF du coût estimé. 
+* Les commandes avec ou sans le composant VMware vSAN incluent toujours un serveur de châssis de 12 disques. Ce serveur laisse apparaître un coût légèrement supérieur pour les serveurs {{site.data.keyword.baremetal_short}} de la commande sans vSAN dans le PDF du coût estimé.
 
 Pour plus d'informations, voir [Commande de nouveaux clusters vSphere](../vsphere/vs_orderinginstances.html).
 

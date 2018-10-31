@@ -79,7 +79,7 @@ Pour plus d'informations, voir [Présentation de vCenter Server](../vcenter/vc_v
 
 Vous pouvez déployer ou augmenter le nombre de serveurs du cluster par défaut d'une instance jusqu'à 51 serveurs. Pour tous les clusters suivants d'une instance, vous pouvez déployer ou augmenter jusqu'à 59 serveurs. Pour plus d'informations, voir [Ajout et affichage des clusters des instances vCenter Server](../vcenter/vc_addingviewingclusters.html).
 
-**Remarque :** cette option n'est offerte qu'aux instances déployées en version 2.1 et ultérieures. Les instances mises à niveau vers la version 2.1 depuis des éditions antérieures ne disposent pas de cette option. 
+**Remarque :** cette option n'est offerte qu'aux instances déployées en version 2.1 et ultérieures. Les instances mises à niveau vers la version 2.1 depuis des éditions antérieures ne disposent pas de cette option.
 
 ### Options de configuration des serveurs bare metal IBM Cloud Server personnalisée par l'utilisateur
 
@@ -105,7 +105,7 @@ Des améliorations ont été apportées à l'interface utilisateur, à savoir :
 * L'option **Commander une instance** n'est plus disponible dans le panneau de navigation de gauche. Cliquez sur **Initiation** pour finaliser la procédure de commande d'une instance.
 * La zone **Préfixe de sous-domaine** sur la page **De base** lorsque vous commandez une instance a été renommée **Libellé de sous-domaine**.
 * En plus de pouvoir afficher le coût estimé sur la page **Récapitulatif** lorsque vous commandez une instance vCenter Server ou Cloud Foundation principale ou secondaire, vous pouvez désormais calculer le coût estimé sur chaque panneau à mesure que vous fournissez les détails de votre commande d'instance.
-* Le trajet de navigation a été ajouté à la page **Instances déployées** comme méthode de navigation alternative, ce qui réduit le nombre d'étapes nécessaires pour accéder aux pages parent. 
+* Le trajet de navigation a été ajouté à la page **Instances déployées** comme méthode de navigation alternative, ce qui réduit le nombre d'étapes nécessaires pour accéder aux pages parent.
 * Diverses améliorations ont été apportées au niveau des messages d'erreur et des infobulles pour vous aider à sélectionner le paramétrage approprié sur l'interface utilisateur.
 
 ## Documentation nouvelle et mise à jour

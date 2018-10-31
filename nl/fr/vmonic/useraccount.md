@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-16"
 
 {{site.data.keyword.vmwaresolutions_full}} communique avec l'infrastructure {{site.data.keyword.cloud_notm}} via des appels {{site.data.keyword.slapi_short}}. Pour accéder en toute sécurité à {{site.data.keyword.slapi_short}}, vous devez associer les données d'identification de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) à votre compte {{site.data.keyword.cloud_notm}}.
 
-**Remarque** : auparavant, le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) s'appelait compte IBM SoftLayer.
+**Remarque :** auparavant, le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) était appelé compte IBM SoftLayer.
 
 Vous pouvez également indiquer si vous voulez recevoir des notifications par courrier électronique et par console concernant divers événements.
 
@@ -22,9 +22,9 @@ Vous pouvez également indiquer si vous voulez recevoir des notifications par co
 * Le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte d'infrastructure {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
 * Si la clé d'API de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) change, vous devez mettre à jour la clé sur la page **Paramètres** de la console {{site.data.keyword.vmwaresolutions_short}}.
 
-   **Important** : il vous incombe de vérifier que la clé d'API enregistrée sur la page **Paramètres** est correcte et à jour. Sinon, les opérations qui nécessitent la clé d'API risquent d'échouer.
+   **Important :** il vous incombe de vérifier que la clé d'API sauvegardée sur la page **Paramètres** est correcte et à jour. Sinon, les opérations qui nécessitent la clé d'API risquent d'échouer.
 
-## Procédure
+## Procédure à utiliser pour gérer les paramètres et les comptes utilisateur
 
 1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Paramètres** dans le panneau de navigation de gauche.
 2. Dans la zone **Notifications**, spécifiez vos paramètres de notification.

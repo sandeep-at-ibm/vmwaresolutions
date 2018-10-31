@@ -23,7 +23,7 @@ Pour plus d'informations, voir les rubriques suivantes :
 ## NetApp ONTAP Select on IBM Cloud
 
 Cette édition introduit l'offre NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}, un dispositif virtuel de stockage défini par les logiciels, qui implémente NetApp ONTAP Select en tant que service sur les serveurs {{site.data.keyword.baremetal_short}} dédiés d'IBM Cloud. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} est proposé en configuration hautes performances (entièrement SSD) et en configuration haute capacité (entièrement SATA).
-Cette offre héberge votre stockage sur une infrastructure dédiée et fournit des fonctionnalités NetApp, telles que la déduplication, la compression et le chiffrement des données au repos. Mettez à disposition des ressources de stockage avec souplesse et flexibilité tout en protégeant les données à l'aide de fonctions avancées de gestion des données. Par exemple, utilisez les copies NetApp Snapshot® rapides et efficaces, les copies FlexClone® et la réplication SnapMirror®. 
+Cette offre héberge votre stockage sur une infrastructure dédiée et fournit des fonctionnalités NetApp, telles que la déduplication, la compression et le chiffrement des données au repos. Mettez à disposition des ressources de stockage avec souplesse et flexibilité tout en protégeant les données à l'aide de fonctions avancées de gestion des données. Par exemple, utilisez les copies NetApp Snapshot® rapides et efficaces, les copies FlexClone® et la réplication SnapMirror®.
 
 Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation de NetApp ONTAP Select](../netapp/np_netappoverview.html)

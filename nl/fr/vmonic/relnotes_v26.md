@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-10-01"
 
 ---
 
@@ -24,18 +24,17 @@ Pour plus d'informations, voir [Résolution des vulnérabilités Spectre et Melt
 
 ## Option Hautes performances avec Intel Optane
 
-Cette édition fournit une option vous permettant d'ajouter un cache hautes performances pour le stockage vSAN lorsque vous commandez une nouvelle instance ou que vous ajoutez un nouveau cluster vSAN après le déploiement initial. 
+Cette édition fournit une option vous permettant d'ajouter un cache hautes performances pour le stockage vSAN lorsque vous commandez une nouvelle instance ou que vous ajoutez un nouveau cluster vSAN après le déploiement initial.
 
-Cette option vous permet d'augmenter le nombre de disques de capacité de stockage et de le faire passer de huit à dix au maximum. 
+Cette option vous permet d'augmenter le nombre de disques de capacité de stockage et de le faire passer de huit à dix au maximum.
 
 L'option Hautes performances avec Intel Optane est disponible uniquement pour les configurations personnalisées avec des processeurs Dual Intel Xeon Gold 5120 et Dual Intel Xeon Gold 6140.
 
-
-Pour plus d'informations, voir la rubrique de commande appropriée pour votre type d'instance ou de cluster. 
+Pour plus d'informations, voir la rubrique de commande appropriée pour votre type d'instance ou de cluster.
 
 ## Activation d'un réseau public ou privé
 
-Vous pouvez désormais déployer des instances vCenter Server et vCenter Server with Hybridity Bundle, ainsi que des clusters VMware vSphere, avec des cartes d'interface réseau public et privé activées ou des cartes d'interface réseau privé uniquement activées. Cette option est également disponible lorsque vous ajoutez un nouveau cluster à vos instances vCenter Server et vCenter Server with Hybridity Bundle. 
+Vous pouvez désormais déployer des instances vCenter Server et vCenter Server with Hybridity Bundle, ainsi que des clusters VMware vSphere, avec des cartes d'interface réseau public et privé activées ou des cartes d'interface réseau privé uniquement activées. Cette option est également disponible lorsque vous ajoutez un nouveau cluster à vos instances vCenter Server et vCenter Server with Hybridity Bundle.
 
 Certains services complémentaires requièrent des cartes d'interface réseau public et ne sont pas disponibles si vous sélectionnez l'option d'activation de réseau privé uniquement :
 
@@ -47,7 +46,7 @@ Pour plus d'informations, voir la section _Paramètres d'interface réseau_ dans
 
 ## Suppression de serveurs ESXi
 
-Vous pouvez désormais supprimer un serveur ESXi de votre instance vCenter Server, vCenter Server with Hybridity Bundle ou Cloud Foundation si vous respectez la configuration minimale requise pour votre instance. 
+Vous pouvez désormais supprimer un serveur ESXi de votre instance vCenter Server, vCenter Server with Hybridity Bundle ou Cloud Foundation si vous respectez la configuration minimale requise pour votre instance.
 
 Pour plus d'informations sur la configuration requise pour les serveurs ESXi, voir les rubriques suivantes :
 
@@ -68,13 +67,13 @@ Cette édition applique les mises à niveau et améliorations suivantes :
 
 ### Retrait de la licence Hybridity Bundle d'une instance vCenter Server
 
-Vous pouvez désormais retirer la licence Hybridity Bundle de votre instance vCenter Server. Pour ce faire, vous devez remplacer les clés de licence locative VMware NSX et VMware vSAN par des clés BYOL (Bring Your Own License) et ouvrir un ticket de demande de service pour annuler les frais liés aux licences locatives. 
+Vous pouvez désormais retirer la licence Hybridity Bundle de votre instance vCenter Server. Pour ce faire, vous devez remplacer les clés de licence locative VMware NSX et VMware vSAN par des clés BYOL (Bring Your Own License) et ouvrir un ticket de demande de service pour annuler les frais liés aux licences locatives.
 
 Pour plus d'informations, voir [Retrait de la licence Hybridity Bundle d'une instance vCenter Server](../vcenter/vc_hybrid_deletingbundle.html).
 
 ### Disponibilité de vCenter Server with Hybridity Bundle
 
-Les partenaires commerciaux peuvent désormais commander une instance vCenter Server with Hybridity Bundle. Les partenaires commerciaux ne peuvent pas mettre à niveau une instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle et ne peuvent pas retirer la licence Hybridity Bundle d'une instance vCenter Server with Hybridity Bundle. 
+Les partenaires commerciaux peuvent désormais commander une instance vCenter Server with Hybridity Bundle. Les partenaires commerciaux ne peuvent pas mettre à niveau une instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle et ne peuvent pas retirer la licence Hybridity Bundle d'une instance vCenter Server with Hybridity Bundle.
 
 Pour plus d'informations, voir les rubriques suivantes :
 
@@ -94,7 +93,7 @@ Cette édition applique les mises à niveau et améliorations suivantes :
 
 ### HyTrust KeyControl on IBM Cloud
 
-Le service HyTrust KeyControl on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances VMware Cloud Foundation et VMware vCenter Server qui exécutent vSphere 6.5 et qui sont déployées dans ou mises à niveau vers la version 2.5 et des éditions ultérieures. Le service simplifie la gestion des charges de travail chiffrées en automatisant et en simplifiant le cycle de vie des clés de chiffrement. Le service peut facilement gérer les clés de chiffrement à l'échelle à l'aide du chiffrement compatible avec FIPS 140-2. En utilisant ce service, vous pouvez gérer les clés de chiffrement pour toutes vos machines virtuelles et tous vos magasins de données chiffrés et les faire évoluer pour prendre en charge des milliers de charges de travail chiffrées dans des déploiements de grande taille. 
+Le service HyTrust KeyControl on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances VMware Cloud Foundation et VMware vCenter Server qui exécutent vSphere 6.5 et qui sont déployées dans ou mises à niveau vers la version 2.5 et des éditions ultérieures. Le service simplifie la gestion des charges de travail chiffrées en automatisant et en simplifiant le cycle de vie des clés de chiffrement. Le service peut facilement gérer les clés de chiffrement à l'échelle à l'aide du chiffrement compatible avec FIPS 140-2. En utilisant ce service, vous pouvez gérer les clés de chiffrement pour toutes vos machines virtuelles et tous vos magasins de données chiffrés et les faire évoluer pour prendre en charge des milliers de charges de travail chiffrées dans des déploiements de grande taille.
 
 Vous pouvez commander des instances avec le service déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes.
 
@@ -114,20 +113,30 @@ L'édition en cours installe HyTrust DataControl 4.2 sur toutes les instances no
 
 A compter de la version 2.6, de nouvelles instances et de nouveaux hôtes sont mis à disposition à l'aide de vSphere ESXi V6.5 Update 2c. Si vous utilisez Veeam Backup and Replication, Veeam vous recommande de mettre à jour votre instance Veeam on {{site.data.keyword.cloud_notm}} vers V9.5u3a ou une édition ultérieure afin de garantir une compatibilité optimale avec vSphere ESXi 6.5 Update 2c.
 
-Il est recommandé de mettre à jour également les instances Cloud Foundation existantes dotées de Veeam on {{site.data.keyword.cloud_notm}} vers V9.5u3a ou une édition ultérieure. 
+Il est recommandé de mettre à jour également les instances Cloud Foundation existantes dotées de Veeam on {{site.data.keyword.cloud_notm}} vers V9.5u3a ou une édition ultérieure.
 
 Pour plus d'informations sur Veeam on {{site.data.keyword.cloud_notm}}, voir [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html).
 
 ### VMware HCX on IBM Cloud
 
-L'édition en cours installe VMware HCX 3.5.1 R106 sur toutes les instances nouvellement déployées. Pour plus d'informations sur les nouvelles fonctions dans HCX 3.5.1 R106, voir [VMware NSX Hybrid Connect Documentation](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html).
+L'édition en cours installe VMware HCX 3.5.1 sur toutes les instances nouvellement déployées. Pour plus d'informations sur les nouvelles fonctions de HCX 3.5.1, voir [VMware NSX Hybrid Connect Documentation](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html).
+
+### Prise en charge de Zerto on IBM Cloud pour vSphere ESXi V6.5 update 2c
+
+Si vous mettez à jour des hôtes existants vers vSphere ESXi V6.5 update 2 et que vous avez déjà installé Zerto on {{site.data.keyword.cloud_notm}}, la console de réplication virtuelle de Zerto
+peut afficher le message d'avertissement `Unsupported ESX Version` sous le statut des dispositifs VRA (Virtual Replication Appliance) de Zerto.
+
+Pour en savoir plus sur comment résoudre ce message d'avertissement, voir :
+
+* [Zerto Virtual Replication Interoperability Matrix](http://s3.amazonaws.com/zertodownload_docs/6.0_Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf)
+* [Updating a ZVM to Support Zerto-Approved Host Releases Prior to a Full ZVR Update](https://www.zerto.com/myzerto/knowledge-base/updating-a-zvm-to-support-zerto-approved-host-releases-prior-to-a-full-zvr-update/)
 
 ## Documentation nouvelle et mise à jour
 
 ### Documentation d'architecture de référence
-Le document sur l'architecture {{site.data.keyword.vmwaresolutions_short}} a été mis à jour avec des remarques importantes destinées à vous permettre de bien comprendre quelles sont vos responsabilités en termes de gestion et d'exécution de votre instance VMware. 
+Le document sur l'architecture {{site.data.keyword.vmwaresolutions_short}} a été mis à jour avec des remarques importantes destinées à vous permettre de bien comprendre quelles sont vos responsabilités en termes de gestion et d'exécution de votre instance VMware.
 
-Pour plus d'informations, voir [Remarques relatives au post-déploiement pour votre instance VMware](../archiref/solution/solution_considerations.md).
+Pour plus d'informations, voir [Remarques relatives au post-déploiement pour votre instance VMware](../archiref/solution/solution_considerations.html).
 
 ## Améliorations et mises à jour apportées à l'interface utilisateur
 
