@@ -62,7 +62,7 @@ Tabela 2. Indicadores de status para {{site.data.keyword.CloudDataCents_notm}} a
 | Barra de Status | Detalhes do status |
 |:------------------------------|:--------------------------------------------------|
 | Em breve                   | O {{site.data.keyword.CloudDataCent_notm}} não está disponível atualmente. |
-| Provisoriamente fora do inventário  | O {{site.data.keyword.CloudDataCent_notm}} não tem disponibilidade atualmente. |
+| Provisoriamente fora do inventário  | O  {{site.data.keyword.CloudDataCent_notm}}  não tem nenhuma disponibilidade atualmente. |
 | Inventário limitado             | O {{site.data.keyword.CloudDataCent_notm}} limitou a disponibilidade e o pedido pode não estar concluído. |
 
 ## Backup de componentes de gerenciamento

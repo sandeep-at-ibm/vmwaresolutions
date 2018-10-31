@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-02"
 
 ---
 
@@ -29,10 +29,10 @@ Tabela 1. Serviços disponíveis para instâncias do vCenter Server with Hybridi
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.1 Correção 1 | V2.2 e mais recentes |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 e mais recentes |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | 9.5u3 | V1.8 e mais recentes |
-| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 Compilação 8774389 | V2.3 e mais recentes |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 | V2.3 e mais recentes |
 | [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | 5.5 u4 Correção 2 | V1.2 e mais recentes |
 
-## Incluindo serviços em instâncias do vCenter Server with Hybridity Bundle
+## Procedimento para incluir serviços em instâncias do vCenter Server with Hybridity Bundle
 
 Para aplicar um serviço à instância do vCenter Server with Hybridity Bundle, clique nos links da tabela para revisar as considerações do serviço. Em seguida, verifique os componentes implementados e siga as instruções nos tópicos de solicitação para fazer seu pedido.
 
@@ -40,7 +40,7 @@ Para aplicar um serviço à instância do vCenter Server with Hybridity Bundle, 
 
 Quando a instalação do serviço for concluída com êxito, você será notificado por e-mail e o serviço será exibido na guia **Serviços** dos detalhes da instância com o status **Instalado**.
 
-## Visualizando serviços para instâncias do vCenter Server with Hybridity Bundle
+## Procedimento para visualizar serviços para instâncias do vCenter Server with Hybridity Bundle
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância da qual deseja visualizar serviços.
@@ -48,7 +48,7 @@ Quando a instalação do serviço for concluída com êxito, você será notific
 4. Na página **Serviços**, clique em um serviço para revisar informações sobre ele, como o status de serviço e outros detalhes.
 5. Dependendo do serviço visualizado, é possível acessar os consoles de serviço usando as credenciais fornecidas nos detalhes do serviço e é possível gerenciar o serviço daqui.
 
-## Removendo serviços para instâncias do vCenter Server with Hybridity Bundle
+## Procedimento para remover serviços para instâncias do vCenter Server with Hybridity Bundle
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância da qual deseja remover serviços.
@@ -62,7 +62,7 @@ Depois que sua solicitação para remoção do serviço for aceita, o status do 
 
 Quando a remoção do serviço for concluída com êxito, você será notificado por e-mail e o serviço será removido da página **Serviços** da instância.
 
-**Atenção**: você será cobrado até o final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}} pelos serviços removidos.
+**Atenção:** você será cobrado até o término do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}} pelos serviços removidos.
 
 ### Links relacionados
 
