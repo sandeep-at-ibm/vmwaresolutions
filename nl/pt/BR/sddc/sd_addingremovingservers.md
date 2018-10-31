@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -61,7 +61,7 @@ Uma instância do Cloud Foundation pode ter até cinco clusters, um dos quais é
 2. Você é notificado por e-mail quando seus servidores ESXi são removidos.
 3. Os servidores ESXi são totalmente recuperados pela infraestrutura do {{site.data.keyword.cloud_notm}} no final do ciclo de faturamento do {{site.data.keyword.cloud_notm}}, que geralmente é de 30 dias.
 
-   **Atenção**: você será cobrado até o final do ciclo de faturamento do {{site.data.keyword.cloud_notm}} pelos servidores ESXi removidos.
+   **Atenção:** você é cobrado até o término do ciclo de faturamento do {{site.data.keyword.cloud_notm}} pelos servidores ESXi removidos.
 
 ### Links relacionados
 

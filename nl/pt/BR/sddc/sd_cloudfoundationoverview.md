@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-18"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -43,7 +43,7 @@ Para obter mais informações sobre a arquitetura, consulte [Visão geral da sol
 
 Os componentes a seguir estão incluídos em sua instância do Cloud Foundation.
 
-**Nota**: os encargos incorridos para o hardware, rede, máquinas virtuais e armazenamento podem variar com base no {{site.data.keyword.CloudDataCent_notm}} que é selecionado para implementação.
+**Nota:** os encargos que são incorridos para o hardware, a rede, as máquinas virtuais e o armazenamento podem variar com base no {{site.data.keyword.CloudDataCent_notm}} que é selecionado para implementação.
 
 ### Bare Metal Server
 
@@ -63,7 +63,7 @@ Os componentes de rede a seguir são pedidos:
 * Três VLANs (Virtual LANs): uma VLAN pública e duas VLANs privadas
 * Serviços de gerenciamento seguro VMware NSX Edge Services Gateway (ESG) para o tráfego de gerenciamento HTTPS de saída, que é implementado pela IBM como parte da tipologia de rede de gerenciamento. Este ESG é usado pelas máquinas virtuais de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Para obter mais informações, veja [Os serviços de gerenciamento NSX Edge representam um risco de segurança?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **Importante**: esse ESG não está acessível e não pode ser usado. Se modificá-lo, talvez você não consiga gerenciar a instância do Cloud Foundation do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externos da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
+  **Importante:** esse ESG não está acessível para você e não é possível usá-lo. Se modificá-lo, talvez você não consiga gerenciar a instância do Cloud Foundation do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externos da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
 
 * O recurso EVC (Enhanced vMotion Compatibility) será ativado automaticamente se você tiver um cluster existente com servidores ESXi que são suportados pela versão atual do VMware vSphere. O EVC fornece compatibilidade vMotion para todos os servidores ESXi em um cluster, assegurando que todos os servidores ESXi em um cluster exponham o mesmo conjunto de recursos de CPU para máquinas virtuais. Usando EVC, as máquinas virtuais podem migrar entre quaisquer servidores ESXi no cluster, mesmo que as CPUs reais nos servidores ESXi possam ser diferentes.
 
@@ -110,9 +110,9 @@ Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração apres
 * Uma licença do SDDC Manager
 * Uma taxa de Suporte e Serviços
 
-**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados em sua conta do {{site.data.keyword.cloud_notm}} apenas por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados em sua conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do	{{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
-**CUIDADO**: gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância, fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
+**CUIDADO:** gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}}, que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você solicitou a instância, fora do console do {{site.data.keyword.vmwaresolutions_short}} pode tornar seu ambiente instável. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes
 *  Expandindo ou contraindo a capacidade da instância por meio da inclusão ou remoção de servidores ESXi
 *  Desativando componentes

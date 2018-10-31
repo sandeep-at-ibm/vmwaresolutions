@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,11 +18,11 @@ Mudar usuários, recursos ou sub-redes que são reservados para o {{site.data.ke
 
 Cada serviço cria uma conta de usuário interna no vCenter Server. Esta conta é necessária para que as operações de gerenciamento associadas a um serviço possam se conectar ao vCenter Server para executar as operações no serviço.
 
-**Importante**: para evitar indisponibilidades e problemas de conexão, se você mudar as configurações de ID do usuário, senha ou expiração de senha para essa conta do usuário, assegure-se de também atualizar as informações no serviço associado.
+**Importante:** para evitar indisponibilidades e problemas de conexão, se você mudar as configurações de ID do usuário, de senha ou de expiração de senha para essa conta de usuário, assegure-se de atualizar também as informações no serviço associado.
 
 O ID do usuário para esta conta está no formato `<service_name>-<truncated service_uuid>@test.local` ou `<service_name>-<truncated service_uuid>@example-domain.local`. Por exemplo, o ID do usuário usado pelo serviço Veeam on {{site.data.keyword.cloud_notm}} para se conectar ao vCenter Server para executar backups planejados é `Veeam-<Veeam_uuid>@test.local`.
 
-**Nota**: o `<service_name>` junto com o `<service_uuid>` trunca para 20 caracteres.
+** Nota: **  o  `<service_name>` junto com o `<service_uuid>` trunca para 20 caracteres.
 
 ## Recursos do VMware para instâncias do Cloud Foundation
 
@@ -43,7 +43,7 @@ Tabela 1. Operações que são afetadas para o administrador SSO (cliente)
 
 As informações a seguir discutem as sub-redes pedidas pelo {{site.data.keyword.vmwaresolutions_short}} e fornecem opções para você pedir sub-redes extras para seu próprio uso.
 
-**CUIDADO**: não use esses componentes para outros propósitos ou a estabilidade de seu ambiente será seriamente comprometida.
+**CUIDADO:** não use esses componentes para outros propósitos, ou a estabilidade do seu ambiente será seriamente comprometida.
 
 Com cada pedido do Bare Metal Server do {{site.data.keyword.cloud_notm}}, os intervalos de endereços IP a seguir são pedidos por padrão:
 
@@ -58,5 +58,5 @@ Além disso, as sub-redes de gerenciamento a seguir também são reservadas para
 
 Se precisar usar mais sub-redes, será possível obter endereços IP para usar em uma das maneiras a seguir:
 
-* **Opção 1 (recomendado)**: use sobreposições de rede virtual VMware NSX. Um modelo VXLAN de amostra é fornecido quando pedido. Esse modelo VXLAN pode ser usado como um ponto de início para construir a SDN.
-* **Opção 2**: peça suas próprias sub-redes móveis públicas ou privadas para obter endereços IP. Para distinguir as sub-redes pedidas das sub-redes de gerenciamento, é possível incluir notas em todas as sub-redes que estão sendo pedidas.
+* **Opção 1 (recomendada):** use sobreposições de rede virtual do VMware NSX. Um modelo VXLAN de amostra é fornecido quando pedido. Esse modelo VXLAN pode ser usado como um ponto de início para construir a SDN.
+* **Opção 2:** peça suas próprias sub-redes públicas ou privadas móveis para obter endereços IP. Para distinguir as sub-redes pedidas das sub-redes de gerenciamento, é possível incluir notas em todas as sub-redes que estão sendo pedidas.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -31,7 +31,7 @@ Tabela 1. Serviços disponíveis para instâncias do Cloud Foundation
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | 9.5u3 | V1.8 e mais recentes |
 | [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 5.5u4 Correção 2 | V1.2 e mais recentes |
 
-## Incluindo serviços para instâncias do Cloud Foundation
+## Procedimento para incluir serviços em instâncias do Cloud Foundation
 
 Para incluir um serviço em sua instância do Cloud Foundation, clique no link de serviço apropriado na tabela anterior para revisar as considerações para o serviço e verifique os componentes que estão implementados. Depois, siga as instruções no tópico apropriado de serviços de solicitação para incluir o serviço em sua instância.
 
@@ -39,7 +39,7 @@ Para incluir um serviço em sua instância do Cloud Foundation, clique no link d
 
 Quando a instalação do serviço for concluída com êxito, você será notificado por e-mail e o serviço será exibido na página **Serviços** da instância com o status **Instalado**.
 
-## Visualizando serviços para instâncias do Cloud Foundation
+## Procedimento para visualizar serviços para instâncias do Cloud Foundation
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do Cloud Foundation**, clique na instância para a qual você deseja visualizar serviços.
@@ -47,7 +47,7 @@ Quando a instalação do serviço for concluída com êxito, você será notific
 4. Na página **Serviços**, clique em um serviço para revisar informações sobre ele, como o status de serviço e outros detalhes.
 5. Dependendo do serviço visualizado, é possível acessar os consoles de serviço usando as credenciais fornecidas nos detalhes do serviço e gerenciar o serviço por meio deles.
 
-## Removendo serviços para instâncias do Cloud Foundation
+## Procedimento para remover serviços para instâncias do Cloud Foundation
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do Cloud Foundation**, clique na instância para a qual você deseja remover serviços.
@@ -61,7 +61,7 @@ Depois que sua solicitação para remoção do serviço for aceita, o status do 
 
 Quando a remoção do serviço for concluída com êxito, você será notificado por e-mail e o serviço será removido da página **Serviços** da instância.
 
-**Atenção**: você será cobrado até o final do ciclo de faturamento do {{site.data.keyword.cloud_notm}} pelos serviços removidos.
+**Atenção:** você é cobrado até o término do ciclo de faturamento do {{site.data.keyword.cloud_notm}} pelos serviços removidos.
 
 ### Links relacionados
 
