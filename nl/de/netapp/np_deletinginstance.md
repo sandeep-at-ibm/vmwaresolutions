@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,7 +22,7 @@ Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz n
 
 **Achtung:** Die gelöschte Instanz wird bis zum Ende des Abrechnungszyklus berechnet.
 
-## Instanzen auf der Seite "Bereitgestellte Instanzen" löschen
+## Vorgehensweise zum Löschen von Instanzen auf der Seite "Bereitgestellte Instanzen"
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Suchen Sie in der Tabelle **NetApp ONTAP Select-Instanzen** nach der Instanz, die gelöscht werden soll.
@@ -32,12 +32,12 @@ Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz n
    1. Klicken Sie in der Spalte **Aktionen** erneut auf das Symbol "Löschen".
    2. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
 
-## Instanzen auf der Seite mit den Instanzdetails löschen
+## Vorgehensweise zum Löschen von Instanzen auf der Seite "Instanzdetails"
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **NetApp ONTAP Select-Instanzen** auf die Instanz, die gelöscht werden soll.
 3. Klicken Sie auf das Überlaufmenüsymbol neben der **NetApp-Konsole** und klicken Sie auf **Instanz löschen**.
-Der Status der Instanz ändert sich in **Wird gelöscht**. Nachdem die Instanz erfolgreich gelöscht wurde, werden die Komponenten der Instanz freigegeben und der Status der Instanz ändert sich in **Gelöscht**.
+   Der Status der Instanz ändert sich in **Wird gelöscht**. Nachdem die Instanz erfolgreich gelöscht wurde, werden die Komponenten der Instanz freigegeben und der Status der Instanz ändert sich in **Gelöscht**.
 4. Wenn Sie den Instanzdatensatz aus der {{site.data.keyword.vmwaresolutions_short}}-Konsole entfernen möchten, führen Sie die folgenden Schritte aus:
    1. Klicken Sie erneut auf das Überlaufmenüsymbol neben der **vCenter-Konsole** und klicken Sie auf **Instanz löschen**.
    2. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
