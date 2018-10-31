@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-11"
 
 Passez en revue les exigences suivantes avant de commander VMware vSphere on {{site.data.keyword.cloud}}. Planifiez vos clusters VMware vSphere en fonction de l'emplacement de l'{{site.data.keyword.CloudDataCent_notm}} et de vos besoins en matière de capacité de charge de travail.
 
-**Remarque** : vous êtes responsable de la configuration de l'environnement, de l'installation et de la configuration des divers composants VMware après le déploiement des serveurs ESXi. Les exemples suivants se réfèrent à des composants VMware : VMware vCenter Server, VMware NSX et VMware vSAN.
+**Remarque :** vous êtes responsable de la configuration de l'environnement, de l'installation et de la configuration des divers composants VMware après le déploiement des serveurs ESXi. Les exemples suivants se réfèrent à des composants VMware : VMware vCenter Server, VMware NSX et VMware vSAN.
 
 ## Exigences liées au compte IBM Cloud
 

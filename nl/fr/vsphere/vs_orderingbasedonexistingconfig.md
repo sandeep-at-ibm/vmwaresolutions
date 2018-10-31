@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-10"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -19,7 +19,7 @@ Assurez-vous que :
 *  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les clusters vSphere](vs_planning.html).
 *  Vous avez créé un modèle de configuration qui sera réutilisé.
 
-## Procédure
+## Procédure pour commander des clusters vSphere en fonction des configurations existantes
 
 1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur **VMware** dans le panneau de navigation de gauche, puis cliquez sur **VMware vSphere** dans la section **Centres de données virtuels**.
 2. Sur la page **VMware vSphere on IBM Cloud**, cliquez sur **Créer**.  
@@ -30,7 +30,7 @@ Assurez-vous que :
    * Pour sauvegarder la configuration en tant que modèle sans passer de commande, cliquez sur **Sauvegarde de la configuration**.
    * Pour passer la commande, assurez-vous que le compte qui devra être facturé est correct, passez en revue et acceptez les conditions, puis cliquez sur **Mettre à disposition**.
 
-   **Remarque** : seuls les serveurs {{site.data.keyword.baremetal_short}} sont installés. L'installation et la configuration de divers composants, comme VMware vCenter, VMware NSX ou VMware vSAN, après le déploiement, vous incombe.
+   **Remarque :** seuls les serveurs de type {{site.data.keyword.baremetal_short}} sont installés. L'installation et la configuration de divers composants, comme VMware vCenter, VMware NSX ou VMware vSAN, après le déploiement, vous incombe.
 
 ## Résultats
 
