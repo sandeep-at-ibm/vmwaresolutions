@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -60,19 +60,15 @@ Au moins deux serveurs {{site.data.keyword.baremetal_short}} sont requis pour un
 
 Vous pouvez ajouter jusqu'à 59 serveurs {{site.data.keyword.baremetal_short}} pour un cluster et entre 1 et 59 serveurs ESXi à la fois.
 
-Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Pour le stockage VMware vSAN, quatre serveurs sont requis pour le cluster initial et pour les clusters post-déploiement. 
+Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Pour le stockage VMware vSAN, quatre serveurs sont requis pour le cluster initial et pour les clusters post-déploiement.
 
 ### Paramètres de stockage vSAN
 
 VMware vSAN 6.6 est inclus avec votre commande d'instance vCenter Server with Hybridity Bundle. Spécifiez les options vSAN suivantes :
-
-* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin. 
-* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter. 
-* **Type de disque pour disques de cache vSAN** : sélectionnez une option correspondant aux disques de cache dont vous avez besoin. 
-
-    **Remarque** : pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
-L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
-* **Nombre de disques de cache vSAN** : indiquez le nombre de disques de cache que vous souhaitez ajouter. 
+* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
+* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
+* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 * **Licence vSAN** : sélectionnez l'édition de licence VMware vSAN 6.6 (Advanced ou Enterprise).
 
 ### Paramètres d'octroi de licence
@@ -100,13 +96,13 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous voulez afficher les clusters.
 
-   **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Si tel n'est pas le cas, vous ne pourrez pas ajouter de clusters à l'instance.
+   **Remarque :** assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Si tel n'est pas le cas, vous ne pourrez pas ajouter de clusters à l'instance.
 
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche et cliquez sur **Ajouter** dans l'angle supérieur droit du tableau **CLUSTERS**.
 4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
 5. Vous pouvez héberger le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui dans lequel l'instance est hébergée. Pour ce faire, sous **Serveur bare metal**, cochez la case **Sélectionner un autre emplacement** et choisissez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel héberger l'instance.
 6. Renseignez les zones **Modèle UC**, **Mémoire RAM** et **Nombre de serveurs bare metal** pour la configuration de serveur bare metal.
-7.  Sélectionnez **Stockage vSAN** et spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**. 
+7.  Sélectionnez **Stockage vSAN** et spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 8. Sélectionnez l'édition de licence pour VMware vSAN pour la configuration de licence.
 9. Sélectionnez le paramètre réseau **Réseau public et réseau privé** ou **réseau privé uniquement**.
 10. Sur la page **Récapitulatif de la commande**, vérifiez la configuration du cluster avant d'ajouter celui-ci.
@@ -120,9 +116,9 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 1. Le déploiement du cluster démarre automatiquement et celui-ci prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page **Récapitulatif** de l'instance.
 2. Lorsque le cluster est prêt pour utilisation, il prend le statut **Prêt à l'emploi**. Le cluster qui vient d'être ajouté est activé avec vSphere haute disponibilité et vSphere Distributed Resource Scheduler (DRS).
 
-**Important** : vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
+**Important :** vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
 
-## Affichage des clusters dans les instances vCenter Server with Hybridity Bundle
+## Procédure d'affichage des clusters dans les instances vCenter Server with Hybridity Bundle
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous voulez afficher les clusters.

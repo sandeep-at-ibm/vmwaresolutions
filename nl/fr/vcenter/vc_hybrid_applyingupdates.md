@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -41,7 +41,7 @@ Tableau 1. Niveaux de mise à jour et impact
    S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec l'instance de serveur virtuel IBM CloudDriver, lié à une règle de pare-feu ou à un autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
 4. Cliquez sur **Mise à jour et module de correction** dans le panneau de navigation de gauche.
 
-   **Remarque** : la page **Mise à jour et module de correction** ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. {{site.data.keyword.vmwaresolutions_short}} applique les mises à jour VMware dans les circonstances suivantes :
+   **Remarque :** la page **Mise à jour et module de correction** ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. {{site.data.keyword.vmwaresolutions_short}} applique les mises à jour VMware dans les circonstances suivantes :
    * Lorsqu'une nouvelle instance vCenter Server est déployée
    * Lorsque de nouveaux serveurs ESXi sont ajoutés
    * Lorsque de nouveaux clusters sont ajoutés

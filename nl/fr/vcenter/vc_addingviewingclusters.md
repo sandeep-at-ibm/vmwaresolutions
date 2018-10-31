@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -14,7 +14,7 @@ Les serveurs ESXi que vous avez configurés lors de la commande d'une instance s
 
 Vous pouvez ajouter vos propres clusters à vos instances VMware vCenter Server afin d'étendre la capacité de calcul et de stockage. Au sein d'un cluster, vous pouvez gérer des serveurs ESXi afin d'optimiser l'allocation des ressources et la haute disponibilité. Lorsque vous n'en avez plus besoin, supprimez les clusters que vous avez ajoutés à vos instances.
 
-**Disponibilité** : le dispositif de suppression de cluster est disponible uniquement pour les instances déployées dans (ou mises à niveau vers) la version 2.3 et des éditions ultérieures.
+**Disponibilité :** la fonction de suppression de cluster est disponible uniquement pour les instances déployées dans (ou mises à niveau vers) la version 2.3 et des éditions ultérieures.
 
 ## Ajout de clusters à des instances vCenter Server
 
@@ -31,7 +31,7 @@ Lorsque vous ajoutez un cluster pour une instance vCenter Server, vous devez sp�
 Le nom du cluster qui doit respecter les règles suivantes :
 * Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
 * Le nom de cluster doit commencer et se terminer par un caractère alphanumérique.
-* Le nombre maximal de caractères autorisés est 30. 
+* Le nombre maximal de caractères autorisés est 30.
 * Le nom de cluster doit être unique au sein de l'instance vCenter Server.
 
 #### Emplacement de centre de données
@@ -70,13 +70,13 @@ Tableau 1. Options pour les serveurs {{site.data.keyword.baremetal_short}} perso
 
 Les clusters requièrent au moins deux serveurs {{site.data.keyword.baremetal_short}}.
 
-Pour les instances vCenter Server déployées dans la version 2.1 ou des versions antérieures, vous pouvez ajouter jusqu'à 59 serveurs {{site.data.keyword.baremetal_short}} pour un cluster. Vous pouvez ajouter de 1 à 59 serveurs ESXi à la fois. 
+Pour les instances vCenter Server déployées dans la version 2.1 ou des versions antérieures, vous pouvez ajouter jusqu'à 59 serveurs {{site.data.keyword.baremetal_short}} pour un cluster. Vous pouvez ajouter de 1 à 59 serveurs ESXi à la fois.
 
 Pour les instances vCenter Server déployées dans la version 2.0 ou des versions antérieures, vous pouvez ajouter jusqu'à 32 serveurs {{site.data.keyword.baremetal_short}} pour un cluster. Le nombre de serveurs {{site.data.keyword.baremetal_short}} que vous pouvez ajouter simultanément est le suivant :
 * Pour les configurations de serveur bare metal **Petite**, **Moyenne** et **Grande**, vous pouvez ajouter entre 1 et 10 serveurs ESXi à la fois.
 * Pour la configuration de serveur bare metal **Personnalisée**, vous pouvez ajouter entre 1 et 20 serveurs ESXi à la fois.
 
-Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Si vous sélectionnez la configuration de serveur bare metal **Personnalisée** avec un stockage VMware vSAN, quatre serveurs sont nécessaires pour le cluster initial et pour les clusters post-déploiement. 
+Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Si vous sélectionnez la configuration de serveur bare metal **Personnalisée** avec un stockage VMware vSAN, quatre serveurs sont nécessaires pour le cluster initial et pour les clusters post-déploiement.
 
 ### Paramètres de stockage
 
@@ -85,14 +85,10 @@ Les paramètres de stockage varient en fonction de la configuration de serveur b
 #### Stockage vSAN
 
 Spécifiez les options vSAN suivantes :
-
-* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin. 
-* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter. 
-* **Type de disque pour disques de cache vSAN** : sélectionnez une option correspondant aux disques de cache dont vous avez besoin. 
-
-    **Remarque** : pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
-L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
-* **Nombre de disques de cache vSAN** : indiquez le nombre de disques de cache que vous souhaitez ajouter. 
+* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
+* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
+* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 * **Licence vSAN** : utilisez la licence VMware fournie par IBM pour le composant vSAN en sélectionnant **Inclure avec achat** ou fournissez votre propre licence (mode BYOL) en sélectionnant **Je fournirai** et en entrant votre propre clé de licence
 
 Si votre cluster initial était de type vSAN, tous les clusters vSAN supplémentaires utilisent la même licence vSAN et ont la même configuration que le cluster vSAN initial. C'est également le cas si vSAN est sélectionné pour être déployé dans un cluster de l'instance (initial ou supplémentaire). La première fois, un message vous demande la licence vSAN (licence achetée ou la vôtre) et l'édition. Ensuite, la prochaine fois que vous sélectionnerez vSAN pour un nouveau cluster, la licence que vous avez choisie initialement sera réutilisée.
@@ -149,14 +145,14 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
    * Si vous avez sélectionné **Préconfigurée**, renseignez les zones **Configuration de serveur bare metal**, et **Nombre de serveurs {{site.data.keyword.baremetal_short}}**. Si vous prévoyez d'utiliser vSAN comme solution de stockage, au moins quatre serveurs {{site.data.keyword.baremetal_short}} sont nécessaires.
    * Si vous avez sélectionné **Personnalisée**, renseignez les zones **Modèle UC**, **Mémoire RAM** et **Nombre de serveurs {{site.data.keyword.baremetal_short}}**.
 7. Procédez à la configuration du stockage.
-  * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**. 
+  * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
   * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**.
   * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer des partages de fichiers individuellement, sélectionnez **Configurer les partages individuellement**. Cliquez ensuite sur l'icône **+** en regard de **Ajouter NFS** et renseignez les zones **Taille** et **Performances** pour chaque partage de fichiers. Vous devez sélectionner au moins un partage de fichiers.
 8. Spécifiez de quelle manière la clé de licence vSphere est fournie :
   * Si vous êtes un partenaire commercial, la licence vCenter (édition Enterprise Plus) est incluse et achetée en votre nom.
   * Si vous n'êtes pas un partenaire commercial, vous pouvez sélectionnez l'une des options suivantes :
       * Si vous voulez que de nouvelles licences soient achetées en votre nom, sélectionnez **Inclure avec achat** pour le composant.
-      * Si vous voulez utiliser votre propre licence VMware pour le composant, sélectionnez **Je fournirai** et entrez votre clé de licence. 
+      * Si vous voulez utiliser votre propre licence VMware pour le composant, sélectionnez **Je fournirai** et entrez votre clé de licence.
 9. Sélectionnez le paramètre réseau **Réseau public et réseau privé** ou **réseau privé uniquement**.
 10. Sur la page **Récapitulatif de la commande**, vérifiez la configuration du cluster avant d'ajouter celui-ci.
    1. Passez en revue les paramètres du cluster.
@@ -169,9 +165,9 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 1. Le déploiement du cluster démarre automatiquement et celui-ci prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page **Récapitulatif** de l'instance.
 2. Lorsque le cluster est prêt pour utilisation, il prend le statut **Prêt à l'emploi**. Le cluster qui vient d'être ajouté est activé avec vSphere haute disponibilité et vSphere Distributed Resource Scheduler (DRS).
 
-**Important** : vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
+**Important :** vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
 
-## Affichage des clusters dans les instances vCenter Server
+## Procédure d'affichage des clusters dans les instances vCenter Server
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous voulez afficher les clusters.
@@ -234,14 +230,14 @@ Vous souhaiterez peut-être supprimer un cluster d'une instance si vous n'en ave
 
 ### Avant de supprimer
 
-* Utilisez cette procédure pour supprimer des clusters des instances qui sont déployées dans la version 2.3 ou dans des versions ultérieures. 
+* Utilisez cette procédure pour supprimer des clusters des instances qui sont déployées dans la version 2.3 ou dans des versions ultérieures.
 * Pour les clusters déployés dans des instances V2.2 ou antérieures, vous devez mettre à niveau l'instance vers la version 2.3 si vous souhaitez supprimer les clusters que vous lui avez ajoutés.
-* Vous ne pouvez supprimer qu'un seul cluster à la fois. Pour supprimer plusieurs clusters, vous devez le faire de manière séquentielle. Attendez que le cluster précédent soit supprimé avant de supprimer le cluster suivant. 
+* Vous ne pouvez supprimer qu'un seul cluster à la fois. Pour supprimer plusieurs clusters, vous devez le faire de manière séquentielle. Attendez que le cluster précédent soit supprimé avant de supprimer le cluster suivant.
 * Assurez-vous que tous les noeuds présents dans un cluster sont sous tension et opérationnels avant de supprimer le cluster.
 * Lorsque vous supprimez un cluster, toutes les machines virtuelles présentes sur le cluster sont également supprimées et ne peuvent pas être récupérées. Si vous souhaitez conserver les machines virtuelles, faites-les migrer vers d'autres clusters.
 * Le cluster par défaut ne peut pas être supprimé.
 
-## Procédure de suppression de clusters des instances vCenter Server
+### Procédure de suppression de clusters des instances vCenter Server
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous souhaitez supprimer les clusters.

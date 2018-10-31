@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -30,7 +30,7 @@ Tableau 1. Format de la valeur des noms d'instance et de domaine
   | Nom de serveur ESXi qualifié complet | `<host_prefix><n>.<subdomain_label>.<root_domain>`, où `<n>` est la séquence du serveur ESXi. La longueur maximale admise est de 50 caractères. |  
   | Nom de domaine complet PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La longueur maximale admise est de 50 caractères. |
 
-**Important** : ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
+**Important :** ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
 
 ## Paramètres système
 
@@ -59,7 +59,7 @@ Si vous êtes un partenaire commercial, la licence vCenter Server (édition Stan
 
 Si vous n'êtes pas un partenaire commercial, vous pouvez utiliser les licences VMware fournies par IBM pour ces composants en sélectionnant **Inclure avec achat** ou vous pouvez fournir votre propre licence (mode BYOL) en sélectionnant **Je fournirai** et en entrant vos propres clés de licence.
 
-**Attention** :
+**Attention :**
 * Une licence avec un minimum de huit UC est requise, ce qui vaut pour quatre serveurs avec deux UC par serveur. Le choix de licence pour chaque composant VMware s'applique à l'instance de base et à tous les serveurs ESXi ajoutés ultérieurement à l'instance. Veillez à ce que votre licence soit à même de prendre en charge une future extension de capacité de votre infrastructure.
 * Les éditions de licence minimum sont indiquées sur l'interface utilisateur. Si différentes éditions de composant sont prises en charge, vous pouvez sélectionner celle qui vous convient. Il est de votre responsabilité de vous assurer que la clé de licence fournie est correcte pour chaque composant VMware sélectionné.
 * Pour vSphere, des frais de licence sont imputés au moment de la commande, mais ces frais sont ensuite crédités à votre compte.
@@ -115,14 +115,10 @@ Les paramètres de stockage varient en fonction de la configuration de serveur b
 ### Stockage vSAN
 
 vSAN n'est disponible que pour la configuration bare metal **Personnalisée**. Spécifiez les options vSAN suivantes :
-
-* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin. 
-* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter. 
-* **Type de disque pour disques de cache vSAN** : sélectionnez une option correspondant aux disques de cache dont vous avez besoin. 
-
-    **Remarque** : pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
-L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
-* **Nombre de disques de cache vSAN** : indiquez le nombre de disques de cache que vous souhaitez ajouter. 
+* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
+* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
+* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 * **Licence vSAN** : utilisez la licence VMware fournie par IBM pour le composant vSAN en sélectionnant **Inclure avec achat** ou fournissez votre propre licence (mode BYOL) en sélectionnant **Je fournirai** et en entrant votre propre clé de licence
 
 ### Stockage NFS
@@ -193,7 +189,7 @@ Un VLAN public et deux VLAN privés sont nécessaires pour votre commande d'inst
 #### Commander de nouveaux VLAN
 Sélectionnez cette option pour commander un nouveau VLAN public et deux nouveaux VLAN privés.
 
-#### Sélectionner des VLAN existants 
+#### Sélectionner des VLAN existants
 En fonction de l'{{site.data.keyword.CloudDataCent_notm}} que vous avez sélectionné, des VLAN publics et privés existants peuvent être disponibles.
 
 Lorsque vous sélectionnez cette option pour réutiliser des VLAN publics et privés existants, spécifiez les VLAN et les sous-réseaux :
@@ -240,7 +236,7 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
    * Cliquez sur **Instance secondaire** pour connecter l'instance à une instance (principale) existante dans l'environnement à des fins de haute disponibilité et procédez comme suit :
      1. Sélectionnez l'instance principale à laquelle vous voulez que l'instance secondaire soit connectée.
      2. Pour les instances principales V2.5 ou ultérieures, entrez une valeur dans la zone **Mot de passe de l'administrateur PSC pour l'instance principale**.
-     3. Pour les instances principales V2.4 ou antérieures, assurez-vous que la valeur préremplie dans la zone **Mot de passe de l'administrateur PSC pour l'instance principale** est correcte. 
+     3. Pour les instances principales V2.4 ou antérieures, assurez-vous que la valeur préremplie dans la zone **Mot de passe de l'administrateur PSC pour l'instance principale** est correcte.
 5. Spécifiez les paramètres de licence pour les composants d'instance.
    *  Pour utiliser des licences fournies par IBM, sélectionnez **Inclure avec achat** et sélectionnez l'édition de licence, le cas échéant.
    *  Pour utiliser votre propre licence, sélectionnez **Je fournirai** et entrez la clé de licence.
@@ -251,7 +247,7 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
        * Lorsque vous sélectionnez **Personnalisée**, spécifiez le modèle d'UC et la taille de mémoire RAM.
     3. Spécifiez le nombre de serveurs {{site.data.keyword.baremetal_short}}. Si vous prévoyez d'utiliser vSAN comme solution de stockage, au moins 4 serveurs {{site.data.keyword.baremetal_short}} sont nécessaires.  
 7. Procédez à la configuration du stockage.
-  * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**. 
+  * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
   * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**.
   * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer des partages de fichiers individuellement, sélectionnez **Configurer les partages individuellement**. Cliquez ensuite sur l'icône **+** en regard de **Ajouter NFS** et renseignez les zones **Taille** et **Performances** pour chaque partage de fichiers. Vous devez sélectionner au moins un partage de fichiers.
 8. Spécifiez les paramètres d'interface réseau.
@@ -285,10 +281,10 @@ Lorsque vous commandez une instance secondaire, le client Web VMware vSphere de 
 
 Affichez et gérez l'instance vCenter Server que vous avez commandée.
 
-**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non pas le {{site.data.keyword.slportal}} ou tout autre élément extérieur à la console.
+**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console.
 Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
 
-**ATTENTION** : gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lorsque vous avez commandé l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque de rendre votre environnement instable. Ces activités de gestion incluent :
+**ATTENTION :** gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lorsque vous avez commandé l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque de rendre votre environnement instable. Ces activités de gestion incluent :
 *  L'ajout, la modification, le retour ou la suppression de composants
 *  L'extension ou la réduction de la capacité de l'instance via l'ajout ou la suppression de serveurs ESXi
 *  La mise hors tension de composants

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -14,7 +14,7 @@ Les serveurs ESXi que vous avez configurés lors de la commande d'une instance s
 
 Vous pouvez ajouter des clusters à vos instances VMware Federal Server afin d'étendre la capacité de calcul et de stockage. Au sein d'un cluster, vous pouvez gérer des serveurs ESXi afin d'optimiser l'allocation des ressources et la haute disponibilité. Lorsque vous n'en avez plus besoin, vous pouvez supprimer les clusters que vous avez ajoutés à vos instances.
 
-**Disponibilité** : le dispositif d'ajout et de suppression de clusters est disponible uniquement pour les instances qui ont été déployées dans (ou mises à niveau vers) la version 2.3 et des éditions ultérieures.
+**Disponibilité :** la fonction d'ajout et de suppression de clusters est disponible uniquement pour les instances qui ont été déployées dans (ou mises à niveau vers) la version 2.3 et des éditions ultérieures.
 
 ## Ajout de clusters à des instances VMware Federal
 
@@ -68,16 +68,10 @@ Les paramètres de stockage varient en fonction de la configuration de serveur b
 #### Stockage vSAN
 
 Spécifiez les options vSAN suivantes :
-
-* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin. 
-* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter. 
-* **Type de disque pour disques de cache vSAN** : sélectionnez une option correspondant aux disques de cache dont vous avez besoin. 
-
-    **Remarque** : pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
-L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
-
-
-* **Nombre de disques de cache vSAN** : indiquez le nombre de disques de cache que vous souhaitez ajouter. 
+* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
+* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
+* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 * **Licence vSAN** : sélectionnez l'édition de licence VMware vSAN 6.6 (Advanced ou Enterprise).
 
 Si votre cluster initial a été ajouté en tant que cluster vSAN, tous les clusters vSAN supplémentaires utilisent la même licence vSAN et ont la même configuration que le cluster vSAN initial. C'est également le cas si vSAN est sélectionné pour être déployé dans un cluster de l'instance (initial ou supplémentaire). La première fois que vous ajoutez un cluster, un message s'affiche pour vous demander d'entrer la licence vSAN et l'édition. Ensuite, la prochaine fois que vous sélectionnerez vSAN pour un nouveau cluster, vos choix initiaux seront réutilisés.
@@ -104,7 +98,7 @@ Tableau 2. Options de niveau de performance NFS
 
 ### Paramètres d'octroi de licence
 
-	Licences fournies par {{site.data.keyword.IBM}} pour les composants VMware suivants :
+Licences fournies par {{site.data.keyword.IBM}} pour les composants VMware suivants :
   * vSphere Enterprise Plus 6.5u1
   * vCenter Server 6.5
   * NSX Service Providers 6.4 (édition Base, Advanced ou Enterprise)
@@ -116,7 +110,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 
 ## Procédure d'ajout de clusters à des instances VMware Federal
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance à laquelle vous souhaitez ajouter des clusters.
 
    **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas ajouter de clusters à l'instance.
@@ -124,7 +118,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
 5. Renseignez les zones **Modèle UC**, **Mémoire RAM** et **Nombre de serveurs bare metal** pour la configuration de serveur bare metal.
 6. Procédez à la configuration du stockage.
-  * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité VSAN, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**. 
+  * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité VSAN, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
   * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**.
   * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer des partages de fichiers individuellement, renseignez les zones **Configurer les partages individuellement**, puis cliquez sur l'icône **+** en regard de **Ajouter NFS**. Renseignez ensuite les zones **Taille** et **Performances** pour chaque partage de fichiers individuel. Vous devez sélectionner au moins un partage de fichiers.
 7. Sélectionnez l'édition de licence pour VMware vSAN pour la configuration de licence.
@@ -139,9 +133,9 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 1. Le déploiement du cluster démarre automatiquement et celui-ci prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page récapitulative de l'instance.
 2. Lorsque le cluster est prêt pour utilisation, il prend le statut **Prêt à l'emploi**. Le cluster qui vient d'être ajouté est activé avec vSphere haute disponibilité et vSphere Distributed Resource Scheduler (DRS).
 
-**Important** : vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
+**Important :** vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
 
-## Affichage des clusters dans les instances VMware Federal
+## Procédure d'affichage des clusters dans les instances VMware Federal
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous voulez afficher les clusters.
@@ -220,7 +214,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 
 Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous n'en avez plus besoin.
 
-**Remarque** : utilisez cette procédure pour retirer des clusters des instances qui sont déployées dans (ou mis à niveau vers) la version 2.3 et des éditions ultérieures.
+**Remarque :** utilisez cette procédure pour retirer des clusters des instances qui sont déployées dans (ou mises à niveau vers) la version 2.3 et des éditions ultérieures.
 
 ### Avant de supprimer
 

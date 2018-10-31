@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-02"
 
 ---
 
@@ -29,18 +29,18 @@ Tableau 1. Services disponibles pour les instances vCenter Server with Hybridity
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.1 Patch 1 | A partir de V2.2 |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | A partir de V2.2 |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | 9.5u3 | A partir de V1.8 |
-| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 Build 8774389 | A partir de V2.3 |
+| [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 | A partir de V2.3 |
 | [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | 5.5 u4 Patch 2 | A partir de V1.2 |
 
-## Ajout de services à des instances vCenter Server with Hybridity Bundle
+## Procédure d'ajout de services à des instances vCenter Server with Hybridity Bundle
 
-Afin d'appliquer un service à votre instance vCenter Server with Hybridity Bundle, cliquez sur les liens dans le tableau pour passer en revue les remarques relatives au service. Ensuite, vérifiez les composants qui sont déployés et suivez les instructions décrites dans les rubriques de commande pour passer votre commande. 
+Afin d'appliquer un service à votre instance vCenter Server with Hybridity Bundle, cliquez sur les liens dans le tableau pour passer en revue les remarques relatives au service. Ensuite, vérifiez les composants qui sont déployés et suivez les instructions décrites dans les rubriques de commande pour passer votre commande.
 
 ### Résultats de l'installation d'un service
 
 Lorsque l'installation du service est terminée, vous êtes prévenu par un courrier électronique, et le service s'affiche sur l'onglet **Services** de la page des détails de l'instance avec le statut **Installé**.
 
-## Affichage des services pour les instances vCenter Server with Hybridity Bundle
+## Procédure d'affichage de services pour des instances vCenter Server with Hybridity Bundle
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous souhaitez afficher les services.
@@ -48,7 +48,7 @@ Lorsque l'installation du service est terminée, vous êtes prévenu par un cour
 4. Sur la page **Services**, cliquez sur un service pour passer en revue les informations le concernant, par exemple, le statut du service et d'autres détails.
 5. Selon le service visualisé, vous pouvez accéder aux consoles de service à l'aide des données d'identification fournies sur la page des détails de service et vous pouvez gérer le service à partir de là.
 
-## Retrait de services pour les instances vCenter Server with Hybridity Bundle
+## Procédure de retrait de services pour des instances vCenter Server with Hybridity Bundle
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous souhaitez retirer des services.
