@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -61,7 +61,7 @@ Eine Cloud Foundation-Instanz kann bis zu fünf Cluster umfassen, von denen eine
 2. Sie werden per E-Mail benachrichtigt, wenn Ihre ESXi-Server entfernt wurden.
 3. Die ESXi-Server werden am Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus (der in der Regel 30 Tage umfasst) vollständig von der {{site.data.keyword.cloud_notm}}-Infrastruktur zurückgefordert.
 
-   **Achtung**: Die entfernten ESXi-Server werden Ihnen bis zum Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus berechnet.
+   **Achtung:** Die entfernten ESXi-Server werden Ihnen bis zum Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus berechnet.
 
 ### Zugehörige Links
 
