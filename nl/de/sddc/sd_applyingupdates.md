@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -46,7 +46,7 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
   </tr>
 </table>
 
-## Vorgehensweise
+## Vorgehensweise zum Anwenden von Updates auf Cloud Foundation-Instanzen
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf die Instanz, die Sie aktualisieren wollen.

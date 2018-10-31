@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-14"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -16,7 +16,7 @@ Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, we
 
 Sie können eigene Cluster zu Ihren VMware Cloud Foundation-Instanzen hinzufügen, um die Rechen- und Speicherkapazität zu erweitern. In einem Cluster können Sie ESXi-Server verwalten, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Die hinzugefügten Cluster können aus Ihren Instanzen gelöscht werden, wenn sie nicht mehr benötigt werden.
 
-**Verfügbarkeit**:
+**Verfügbarkeit:**
 * Die Funktion zum Hinzufügen von Clustern steht nur für Instanzen zur Verfügung, die in V2.0 oder höheren Releases bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden.
 * Die Funktion zum Löschen von Clustern steht nur für Instanzen zur Verfügung, die in V2.3 oder höheren Releases bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden.  
 
@@ -40,7 +40,7 @@ Der Clustername muss die folgenden Anforderungen erfüllen:
 
 Der Standort des {{site.data.keyword.CloudDataCent}}s für den Cluster wird standardmäßig auf das {{site.data.keyword.CloudDataCent_notm}} der Cloud Foundation-Instanz gesetzt. Sie können den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}} als die bereitgestellte Instanz bereitstellen, müssen aber sicherstellen, dass die Netzlatenz zwischen den beiden {{site.data.keyword.CloudDataCents_notm}} weniger als 150 Millisekunden beträgt. Zur Überprüfung der Netzlatenz können Sie ein Tool wie [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} verwenden.
 
-Welche Rechenzentren für Sie verfügbar sind, richtet sich nach der Bare Metal Server-Konfiguration, die für die Bereitstellung ausgewählt wurde. Wurde die Konfiguration des Typs **Angepasst** ausgewählt, können Sie den Cluster auch in einem anderen {{site.data.keyword.cloud}}-Infrastrukturpod bereitstellen, falls das ausgewählte Rechenzentrum weitere Pods enthält. Diese Konfiguration ist hilfreich, wenn der Standardpod der {{site.data.keyword.cloud_notm}}-Infrastruktur, in dem die erste Instanz bereitgestellt wird, seine maximale Kapazität erreicht hat.
+Welche Rechenzentren für Sie verfügbar sind, richtet sich nach der Bare Metal Server-Konfiguration, die für die Bereitstellung ausgewählt wurde. Wurde die Konfiguration des Typs **Angepasst** ausgewählt, können Sie den Cluster auch in einem anderen {{site.data.keyword.cloud_notm}}-Infrastrukturpod bereitstellen, falls das ausgewählte Rechenzentrum weitere Pods enthält. Diese Konfiguration ist hilfreich, wenn der Standardpod der {{site.data.keyword.cloud_notm}}-Infrastruktur, in dem die erste Instanz bereitgestellt wird, seine maximale Kapazität erreicht hat.
 
 **Hinweis:** Die standardisierten Bare Metal Server-Konfigurationen des Typs **S (Klein)** und **L (Groß)** verwenden einen Standardpod, der nicht geändert werden kann.
 
@@ -81,16 +81,14 @@ Bei Bare Metal Server-Konfigurationen des Typs **Angepasst** können Sie den vSA
 
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
-* **Plattentyp für vSAN-Cacheplatten**: Wählen Sie die für die Cacheplatten benötigte Option aus.
-
-    **Anmerkung**: Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option für **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
-* **Anzahl der vSAN-Cacheplatten**: Geben Sie die Anzahl der hinzuzufügenden Cacheplatten an.
+* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
 
 ### Lizenzierungseinstellungen
 
 Sie können die Lizenzierungsoptionen für die VMware-Komponenten im Cluster einschließlich VMware vSphere und VMware vSAN angeben:
-* Für Benutzer der Kategorie "Business Partner" sind die vSphere-Lizenz (Enterprise Plus Edition) und die vSAN-Lizenz enthalten und werden in Ihrem Namen erworben. Für die vSAN-Lizenz muss allerdings die Edition angegeben werden.
-* Für Nicht-Business-Partner-Benutzer können die von IBM bereitgestellten VMware-Lizenzen für die Komponenten benutzt werden. Wählen Sie hierzu **In Kauf einbeziehen** aus. Alternativ hierzu können Sie auch eigene Lizenzen (Bring Your Own License; BYOL) für die Komponenten verwenden, indem Sie **Lizenz selbst bereitstellen** auswählen und die eigenen Lizenzschlüssel angeben.
+* Für Benutzer der Kategorie "IBM Business Partner" sind die vSphere-Lizenz (Enterprise Plus Edition) und die vSAN-Lizenz enthalten und werden in Ihrem Namen erworben. Für die vSAN-Lizenz muss allerdings die Edition angegeben werden.
+* Für Benutzer, die keine IBM Business Partner sind, können die von IBM bereitgestellten VMware-Lizenzen für die Komponenten verwendet werden. Wählen Sie hierzu **In Kauf einbeziehen** aus. Alternativ hierzu können Sie auch eigene Lizenzen (Bring Your Own License; BYOL) für die Komponenten verwenden, indem Sie **Lizenz selbst bereitstellen** auswählen und die eigenen Lizenzschlüssel angeben.
 
 ## Vorgehensweise zum Hinzufügen von Clustern zu Cloud Foundation-Instanzen
 
@@ -99,7 +97,7 @@ Sie können die Lizenzierungsoptionen für die VMware-Komponenten im Cluster ein
 
    **Hinweis:** Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster zur Instanz hinzufügen.
 
-3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur** und anschließend in der rechten oberen Ecke der Tabelle **CLUSTER** auf **Hinzufügen**.
+3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur** und anschließend rechts oben in der Tabelle **CLUSTER** auf **Hinzufügen**.
 4. Geben Sie auf der Seite **Cluster hinzufügen** den Clusternamen ein.
 5. Wenn Sie für den Cluster ein anderes {{site.data.keyword.CloudDataCent_notm}} als Host verwenden möchten als das, in dem die Instanz gehostet wird, aktivieren Sie unter **Bare Metal Server** das Kontrollkästchen **Anderen Standort auswählen** und wählen Sie dann das gewünschte {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
 6. Führen Sie die Bare-Metal-Konfiguration durch:
@@ -109,8 +107,8 @@ Sie können die Lizenzierungsoptionen für die VMware-Komponenten im Cluster ein
    * Wenn Sie für die Bare Metal-Konfiguration die Option **Vorkonfiguriert** ausgewählt haben, können die Speichereinstellungen für die Bare-Metal-Serverkonfigurationen **S (Klein)** und **L (Groß)** nicht geändert werden.
    * Wenn Sie für die Bare Metal-Konfiguration die Option **Angepasst** ausgewählt haben, geben Sie die Plattentypen für die vSAN-Kapazitäts- und Cacheplatten sowie die Anzahl der Platten an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
 8. Geben Sie an, wie Ihre Lizenzschlüssel bereitgestellt werden:
-   * Für Benutzer der Kategorie "Business Partner" sind die vSphere-Lizenz (Enterprise Plus Edition) und die vSAN-Lizenz enthalten und werden in Ihrem Namen erworben. Für die vSAN-Lizenz muss allerdings die Edition angegeben werden.
-   * Für Nicht-Business-Partner-Benutzer können Sie eine der folgenden Optionen auswählen:
+   * Für Benutzer der Kategorie "IBM Business Partner" sind die vSphere-Lizenz (Enterprise Plus Edition) und die vSAN-Lizenz enthalten und werden in Ihrem Namen erworben. Für die vSAN-Lizenz muss allerdings die Edition angegeben werden.
+   * Für Benutzer, bei denen es sich nicht um IBM Business Partner handelt, können Sie eine der folgenden Optionen auswählen:
        * Wenn Sie neue Lizenzen für sich erwerben möchten, wählen Sie **In Kauf einbeziehen** für die Komponenten aus. Wählen Sie für VMware vSAN auch die Lizenzedition aus.
        * Wenn Sie Ihre eigene VMware-Lizenz für eine Komponente verwenden möchten, wählen Sie die Option **Lizenz selbst bereitstellen** aus und geben Sie den Lizenzschlüssel für die Komponente ein.
 9. Überprüfen Sie im Fenster **Bestellübersicht** die Clusterkonfiguration, bevor Sie den Cluster hinzufügen.
@@ -124,9 +122,9 @@ Sie können die Lizenzierungsoptionen für die VMware-Komponenten im Cluster ein
 1. Die Bereitstellung des Clusters wird automatisch gestartet und der Status des Clusters ändert sich in **Wird initialisiert**. Sie können den Status der Bereitstellung überprüfen, indem Sie den Bereitstellungsverlauf auf der Übersichtsseite für die Instanz anzeigen.
 2. Sobald der Cluster einsatzbereit ist, ändert sich sein Status in **Bereit**. Der neu hinzugefügte Cluster wird mit vSphere High Availability (HA) und vSphere Distributed Resource Scheduler (DRS) aktiviert.
 
-**Wichtig**: Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, kann die Operation zum Hinzufügen oder Entfernen von ESXi-Servern im Cluster fehlschlagen.
+**Wichtig:** Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, kann die Operation zum Hinzufügen oder Entfernen von ESXi-Servern im Cluster fehlschlagen.
 
-## Cluster in Cloud Foundation-Instanzen anzeigen
+## Vorgehensweise zum Anzeigen von Clustern in Cloud Foundation-Instanzen
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf eine Instanz, um die Cluster in dieser Instanz anzuzeigen.
@@ -199,7 +197,7 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf die Instanz, aus der Cluster gelöscht werden sollen.
 
-   **Hinweis**: Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster aus der Instanz löschen.
+   **Hinweis:** Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster aus der Instanz löschen.
 
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Suchen Sie in der Tabelle **CLUSTER** den Cluster, der gelöscht werden soll, und klicken Sie dann auf das Symbol **Löschen**.
 4. Vergewissern Sie sich, dass die Migration der VMs auf andere Cluster (sofern erforderlich) durchgeführt wurde und dass der Cluster tatsächlich gelöscht werden soll.

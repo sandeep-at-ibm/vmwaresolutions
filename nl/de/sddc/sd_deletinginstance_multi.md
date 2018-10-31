@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,9 +22,9 @@ Wenn Sie eine Cloud Foundation-Instanz löschen, werden die folgenden Komponente
 
 Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz nicht sofort freigegeben, wenn Sie die Instanz löschen. Beispielsweise können die Teilnetze und VLANs erst gelöscht werden, nachdem die ESXi-Server vollständig von der {{site.data.keyword.cloud}}-Infrastruktur zurückgefordert wurden, was am Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus passiert. Am Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus, der normalerweise 30 Tage beträgt, werden die Teilnetze und VLANs gelöscht und die Instanzlöschung ist abgeschlossen.
 
-**Achtung** Die gelöschte Instanz wird Ihnen bis zum Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus berechnet.
+**Achtung:** Die gelöschte Instanz wird bis zum Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus berechnet.
 
-## Vorgehensweise
+## Vorgehensweise zum Löschen von Cloud Foundation-Instanzen in einer Konfiguration mit mehreren Standorten
 
 1. Entfernen Sie alle Services aus der sekundären Cloud Foundation-Instanz.
 2. Stellen Sie sicher, dass in die zu löschende sekundäre Instanz keine NSX-Objekte erweitert wurden.
