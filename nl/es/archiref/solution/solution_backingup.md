@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,7 +25,7 @@ Algunos componentes, como por ejemplo VMware vCenter Server, Platform Services C
 Para alojar estas copias de seguridad, despliegue un servidor de archivos de Linux en el clúster utilizando los pasos siguientes:
 
 1. Solicite una subred portátil privada desde la infraestructura de {{site.data.keyword.cloud_notm}} y ubíquela en la misma VLAN que los componentes de sistema. Se trata de la VLAN privada en la que residen las direcciones IP de gestión para los hosts.
-2. Suba una imagen del sistema operativo al almacén de datos de gestión de VMware, como por ejemplo [Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window} desde el duplicado privado de {{site.data.keyword.cloud_notm}}.
+2. Suba una imagen del sistema operativo al almacén de datos de gestión de VMware, como por ejemplo Ubuntu Server 18.04 LTS desde el duplicado privado de {{site.data.keyword.cloud_notm}}.
 3. Despliegue esta máquina virtual (VM) en el clúster en el grupo de puertos de gestión utilizando una dirección IP portátil privada que se ha solicitado anteriormente. Asegúrese de que la máquina virtual esté configurada para apuntar a los servidores de AD/DNS y, opcionalmente, añadir la máquina virtual al DNS del subdominio.
 4. Cree un ID de usuario de copia de seguridad no root en este servidor y asegúrese de que todos los servicios necesarios estén configurados e iniciados para las transferencias de archivos. Por ejemplo, FTP o SSH.
 5. Asegúrese de que esta máquina virtual esté incluida en el trabajo de copia de seguridad de gestión de Veeam o IBM Spectrum Protect Plus.
