@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,7 +22,7 @@ Verwenden Sie dieses Produktangebot, um einen neuen Cluster aus ESXi-Servern zu 
 
 Überprüfen Sie die Komponenten von VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
-**Hinweis**: Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen können abhängig vom {{site.data.keyword.CloudDataCent_notm}}, das für die Bereitstellung ausgewählt ist, variieren.
+**Hinweis:** Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen können abhängig vom {{site.data.keyword.CloudDataCent_notm}}, das für die Bereitstellung ausgewählt wird, variieren.
 
 ### VMware-Komponenten
 
@@ -82,7 +82,7 @@ Jeder vSphere-Clustererweiterungsknoten stellt folgende Komponenten in Ihrem {{s
 * 1 {{site.data.keyword.cloud_notm}} Bare Metal Server mit VMware vSphere Enterprise Plus 6.0u2 oder 6.5u1  
 * Optionale VMware-Komponenten, die unter [Technische Spezifikationen für VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters) aufgeführt sind.
 
-**Wichtig**: Sie dürfen die ESXi-Server, die optionalen VMware-Komponenten und die zusätzliche Hardware, die bestellt und Ihrem {{site.data.keyword.cloud_notm}}-Konto übergeben wurden, nur im {{site.data.keyword.slportal}} verwalten. Nachdem Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole einen neuen Cluster erstellt haben, können Sie die Konsole erneut aufrufen, um den neuen Cluster unter Verwendung der gespeicherten Konfiguration zu skalieren. Weitere Informationen finden Sie unter [Vorhandene vSphere-Cluster skalieren](vs_scalingexistingclusters.html).
+**Wichtig:** Sie dürfen die ESXi-Server, die optionalen VMware-Komponenten und die zusätzliche Hardware, die bestellt und Ihrem {{site.data.keyword.cloud_notm}}-Konto übergeben wurden, nur im {{site.data.keyword.slportal}} verwalten. Nachdem Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole einen neuen Cluster erstellt haben, können Sie die Konsole erneut aufrufen, um den neuen Cluster unter Verwendung der gespeicherten Konfiguration zu skalieren. Weitere Informationen finden Sie unter [Vorhandene vSphere-Cluster skalieren](vs_scalingexistingclusters.html).
 
 ### Zugehörige Links
 

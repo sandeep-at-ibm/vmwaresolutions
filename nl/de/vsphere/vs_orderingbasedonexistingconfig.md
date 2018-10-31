@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-10"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -19,7 +19,7 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 *  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für vSphere-Cluster](vs_planning.html) vertraut gemacht.
 *  Sie haben eine Konfigurationsvorlage für die Wiederverwendung erstellt.
 
-## Vorgehensweise
+## Vorgehensweise zum Bestellen von vSphere-Clustern, die auf vorhandenen Konfigurationen basieren
 
 1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und anschließend im Abschnitt **Virtuelle Rechenzentren** auf **VMware vSphere**.
 2. Klicken Sie auf der Seite **VMware vSphere on IBM Cloud** auf **Erstellen**.  
@@ -30,7 +30,7 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
    * Wenn Sie die Konfiguration als Vorlage speichern wollen, ohne eine Bestellung aufzugeben, klicken Sie auf **Konfiguration speichern**.
    * Wenn Sie die Bestellung aufgeben wollen, dann vergewissern Sie sich, dass das zu belastende Konto korrekt ist, überprüfen und akzeptieren Sie die Bedingungen und klicken Sie dann auf **Bereitstellung**.
 
-   **Hinweis**: Nur die {{site.data.keyword.baremetal_short}}-Instanzen werden installiert. Für die Installation und Konfiguration verschiedener Komponenten nach der Clusterbereitstellung (z. B. VMware vCenter, VMware NSX, VMware vSAN) sind Sie selbst zuständig.
+   **Hinweis:** Nur die {{site.data.keyword.baremetal_short}}-Instanzen werden installiert. Für die Installation und Konfiguration verschiedener Komponenten nach der Clusterbereitstellung (z. B. VMware vCenter, VMware NSX, VMware vSAN) sind Sie selbst zuständig.
 
 ## Ergebnisse
 
