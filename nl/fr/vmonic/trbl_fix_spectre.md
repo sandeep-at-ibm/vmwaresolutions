@@ -51,7 +51,7 @@ Instances Cloud Foundation, instances vCenter Server et clusters VMware vSphere 
 
 ### Instances vCenter Server déployées dans la version 1.9 ou antérieure
 
-Pour VMware vSphere 6.0 et pour VMware vCenter Server 6.0, vous devez appliquer les modules de correction ESXi600-201711101-SG, ESXi600-201803401-BG, ESXi600-201803402-BG, ESXi600-201808401-BG, ESXi600-201808402-BG et ESXi600-201808403-BG pour vSphere et vCenter 6.0 U3h pour vCenter Server, disponibles sur le [site des modules de correction pour les produits VMware](https://my.vmware.com/group/vmware/patch), à toutes les instances et à tous les serveurs ESXi, nouvellement déployés ou existants. 
+Pour VMware vSphere 6.0 et pour VMware vCenter Server 6.0, vous devez appliquer les modules de correction ESXi600-201711101-SG, ESXi600-201803401-BG, ESXi600-201803402-BG, ESXi600-201808401-BG, ESXi600-201808402-BG et ESXi600-201808403-BG pour vSphere et vCenter 6.0 U3h pour vCenter Server, disponibles sur le [site des modules de correction pour les produits VMware](https://my.vmware.com/group/vmware/patch), à toutes les instances et à tous les serveurs ESXi, nouvellement déployés ou existants.
 
 ### Instances Cloud Foundation déployées dans la version 1.9 ou antérieure
 
@@ -59,7 +59,7 @@ Des mises à jour pour ces instances seront disponibles lorsque les mises à jou
 
 ### Clusters VMware vSphere déployés avec la version 1.9 ou ultérieure
 
-Pour VMware vSphere 6.0 et pour VMware vCenter Server 6.0, vous devez appliquer les modules de correction ESXi600-201711101-SG, ESXi600-201803401-BG, ESXi600-201803402-BG, ESXi600-201808401-BG, ESXi600-201808402-BG et ESXi600-201808403-BG pour vSphere et vCenter 6.0 U3h pour vCenter Server, disponibles sur le [site des modules de correction pour les produits VMware](https://my.vmware.com/group/vmware/patch), à tous les clusters vSphere et à tous les serveurs ESXi, nouvellement déployés ou existants. 
+Pour VMware vSphere 6.0 et pour VMware vCenter Server 6.0, vous devez appliquer les modules de correction ESXi600-201711101-SG, ESXi600-201803401-BG, ESXi600-201803402-BG, ESXi600-201808401-BG, ESXi600-201808402-BG et ESXi600-201808403-BG pour vSphere et vCenter 6.0 U3h pour vCenter Server, disponibles sur le [site des modules de correction pour les produits VMware](https://my.vmware.com/group/vmware/patch), à tous les clusters vSphere et à tous les serveurs ESXi, nouvellement déployés ou existants.
 
 ### Liens connexes
 

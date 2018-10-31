@@ -18,7 +18,7 @@ La nouvelle version de VMware ESXi est vSphere 6.0 u2 p03, mise à jour depuis E
 
 ## Association de comptes IBMid et Bluemix
 
-{{site.data.keyword.vmwaresolutions_full}} est fourni en tant que solution d'infrastructure dans le catalogue IBM Bluemix®. Vous devez associer le compte **IBMid** à un compte Bluemix afin d'utiliser votre compte **IBMid** pour vous connecter à la console {{site.data.keyword.vmwaresolutions_short}}. 
+{{site.data.keyword.vmwaresolutions_full}} est fourni en tant que solution d'infrastructure dans le catalogue IBM Bluemix®. Vous devez associer le compte **IBMid** à un compte Bluemix afin d'utiliser votre compte **IBMid** pour vous connecter à la console {{site.data.keyword.vmwaresolutions_short}}.
 
 Pour plus d'informations, voir les rubriques suivantes :
 * [Initiation](../index.html)

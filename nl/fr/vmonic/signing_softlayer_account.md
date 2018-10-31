@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-08-14"
 
 ## Inscription à un compte IBM Cloud
 
-Vous pouvez vous inscrire pour obtenir un compte {{site.data.keyword.cloud}} en effectuant une utilisant un **IBMid** existant ou en créant un nouvel **IBMid**. Pour en savoir plus sur la procédure d'inscription à un compte {{site.data.keyword.cloud_notm}}, voir[Inscription à un compte {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
+Vous pouvez vous inscrire pour obtenir un compte {{site.data.keyword.cloud}} en utilisant un **IBMid** existant ou en créant un nouvel **IBMid**. Pour en savoir plus sur la procédure d'inscription à un compte {{site.data.keyword.cloud_notm}}, voir [Inscription à un compte {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
 
 ## Inscription à un compte d'infrastructure IBM Cloud (SoftLayer)
 
 Le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), auparavant appelé compte IBM SoftLayer, permet de se connecter au portail client d'infrastructure {{site.data.keyword.cloud_notm}} qui fournit certaines fonctions supplémentaires pour gérer des produits et des services d'infrastructure. Pour vous inscrire à un compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), effectuez une mise à niveau de votre compte {{site.data.keyword.cloud_notm}} vers un compte de paiement à la carte.
 
-### Procédure
+### Procédure d'inscription à un compte IBM Cloud
 
 1. Connectez-vous à la console {{site.data.keyword.vmwaresolutions_short}} avec votre **IBMid**.
 2. Sur le côté gauche de la bannière, cliquez sur **Gestion > Facturation et utilisation > Facturation**.

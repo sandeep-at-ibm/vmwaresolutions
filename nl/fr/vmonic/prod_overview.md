@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -21,9 +21,9 @@ Vous pouvez déployer facilement vos environnements virtuels VMware et gérer le
   <dt>Portée mondiale</dt>
   <dd>Développez la présence de votre cloud hybride en exploitant jusqu'à 30 {{site.data.keyword.CloudDataCents_notm}} pour entreprises à travers le monde.</dd>
   <dt>Intégration transparente</dt>
-  <dd>Intégration en toute transparence dans le cloud hybride avec l'infrastructure {{site.data.keyword.cloud_notm}}. </dd>
+  <dd>Intégration en toute transparence dans le cloud hybride avec l'infrastructure {{site.data.keyword.cloud_notm}}.</dd>
   <dt>Mise à disposition rapide</dt>
-  <dd>Automatisation du déploiement et de la configuration de l'environnement VMware, de sorte que vous pouvez déployer rapidement un environnement d'entreprise VMware avec des serveurs {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} à la demande et des serveurs virtuels. </dd>
+  <dd>Automatisation du déploiement et de la configuration de l'environnement VMware, de sorte que vous pouvez déployer rapidement un environnement d'entreprise VMware avec des serveurs {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} à la demande et des serveurs virtuels.</dd>
   <dt>Simplification</dt>
   <dd>Vous pouvez utiliser une plateforme cloud VMware sans avoir à identifier, acquérir, déployer et gérer l'infrastructure physique sous-jacente (traitement, stockage et réseau), ni les licences logicielles.</dd>
   <dt>Souplesse d'extension et de réduction</dt>
@@ -108,7 +108,7 @@ Pour plus d'informations, voir [Présentation de HyTrust DataControl on {{site.d
 
 ### HyTrust KeyControl on IBM Cloud
 
-Le service HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifie la gestion des charges de travail chiffrées en automatisant et en simplifiant le cycle de vie des clés de chiffrement. Le service peut facilement gérer les clés de chiffrement à l'échelle à l'aide du chiffrement compatible avec FIPS 140-2. En utilisant ce service, vous pouvez gérer les clés de chiffrement pour toutes vos machines virtuelles et tous vos magasins de données chiffrés et les faire évoluer pour prendre en charge des milliers de charges de travail chiffrées dans des déploiements de grande taille. 
+Le service HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifie la gestion des charges de travail chiffrées en automatisant et en simplifiant le cycle de vie des clés de chiffrement. Le service peut facilement gérer les clés de chiffrement à l'échelle à l'aide du chiffrement compatible avec FIPS 140-2. En utilisant ce service, vous pouvez gérer les clés de chiffrement pour toutes vos machines virtuelles et tous vos magasins de données chiffrés et les faire évoluer pour prendre en charge des milliers de charges de travail chiffrées dans des déploiements de grande taille.
 
 Pour plus d'informations, voir [Présentation de HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html).
 
@@ -120,7 +120,7 @@ Pour plus d'informations, voir [{{site.data.keyword.cloud_notm}} Private Hosted]
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-Le service IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} fournit une solution évolutive et efficace de protection, de réutilisation et de reprise des données pour les environnements virtuels. Vous pouvez implémenter le service en tant que solution autonome ou vous pouvez l'intégrer à votre environnement IBM Spectrum Protect Plus pour décharger des copies de stockage à long terme et pour la gouvernance des données.
+Le service IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} fournit une solution évolutive et efficace de protection, de réutilisation et de récupération des données pour les environnements virtuels. Vous pouvez implémenter le service en tant que solution autonome ou vous pouvez l'intégrer à votre environnement IBM Spectrum Protect Plus pour décharger des copies de stockage à long terme et pour la gouvernance des données.
 
 Pour plus d'informations, voir [Présentation d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html).
 

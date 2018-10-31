@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -17,7 +17,7 @@ Trouvez les réponses aux questions fréquemment posées au sujet des serveurs E
 * Pour les instances vCenter Server, vous pouvez développer le cluster par défaut jusqu'à contenir 51 serveurs ESXi. Chacun des autres clusters peut contenir jusqu'à 59 serveurs ESXi. Etant donné que vous pouvez ajouter jusqu'à 10 clusters à une instance, chaque instance déployée peut avoir un maximum de 51 + 9x59 = 582 serveurs ESXi pour l'ensemble des clusters.
 * Pour les instances Cloud Foundation, la configuration standard contient quatre serveurs ESXi. Vous pouvez ajouter jusqu'à 28 serveurs au maximum (soit un total de 32 serveurs). Pour les instances Cloud Foundation d'une configuration multisite, vous pouvez avoir jusqu'à 128 serveurs ESXi au maximum pour toutes les instances.
 
-  **Remarque** : si votre configuration Cloud Foundation nécessite un déploiement multisite de plus de 128 serveurs ESXi, [contactez le support IBM](trbl_support.html) pour obtenir de l'aide.
+  **Remarque :** si votre configuration Cloud Foundation nécessite un déploiement multisite de plus de 128 serveurs ESXi, [contactez le support IBM](trbl_support.html) pour obtenir de l'aide.
 
 ## Combien de serveurs ESXi puis-je ajouter à un cluster ?
 
@@ -39,7 +39,7 @@ Pour les instances déployées dans la version 2.1 ou des éditions antérieures
 
 Vous ne pouvez pas modifier les noms et les adresses IP des serveurs ESXi car ils sont enregistrés pour la résolution DNS Windows. Toute modification pourrait entraîner des échecs durant le déploiement ou dans les fonctions de vCenter Server.
 
-**Remarque** : n'utilisez pas la fonction **Renommer unité** de l'interface utilisateur {{site.data.keyword.cloud_notm}} pour modifier des noms de serveur ESXi. Cette fonction modifie en fait le nom de domaine complet du serveur ESXi, mais le centre vCenter configuré et les enregistrements d'hôte d'instance de serveur virtuel Windows VSI seront incorrects et risquent de provoquer des incidents.
+**Remarque :** n'utilisez pas la fonction **Renommer unité** de l'interface utilisateur {{site.data.keyword.cloud_notm}} pour modifier des noms de serveur ESXi. Cette fonction modifie en fait le nom de domaine complet du serveur ESXi, mais le centre vCenter configuré et les enregistrements d'hôte d'instance de serveur virtuel Windows VSI seront incorrects et risquent de provoquer des incidents.
 
 ## Puis-je désactiver l'accès racine sur mes serveurs ESXi ?
 
@@ -53,7 +53,7 @@ Vous devez réactiver l'accès racine pour les opérations d'automatisation ult�
 
 Vous pouvez ajouter des routes statiques pour le stockage mais les opérations doivent être effectuées avec la plus grande prudence. Sinon, les partages existants risquent d'être démontés.
 
-**Remarque** : l'ajout de routes statiques n'est pas pris en charge pour vMotion. Une modification de la configuration de sous-réseau vMotion pourrait entraîner des échecs des fonctions d'{{site.data.keyword.vmwaresolutions_short}}.
+**Remarque :** l'ajout de routes statiques n'est pas pris en charge pour vMotion. Une modification de la configuration de sous-réseau vMotion pourrait entraîner des échecs des fonctions d'{{site.data.keyword.vmwaresolutions_short}}.
 
 ### Liens connexes
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -48,4 +48,4 @@ Pour contacter le support IBM à partir du portail {{site.data.keyword.slportal}
 2. Connectez-vous au portail avec votre compte **IBMid**.
 3. Effectuez les étapes 6 à 8 de la section _A partir de la console IBM Cloud for VMware Solutions_ de cette rubrique pour soumettre votre ticket.
 
-    **Remarque** : quel que soit le canal que vous utilisez pour ouvrir le ticket de demande de service (console {{site.data.keyword.vmwaresolutions_short}} ou portail {{site.data.keyword.slportal}}), les conditions d'utilisation de la _politique de support des services de plateforme et d'infrastructure {{site.data.keyword.cloud_notm}}_ s'appliquera.
+    **Remarque :** quel que soit le canal que vous utilisez pour ouvrir le ticket de demande de service (console {{site.data.keyword.vmwaresolutions_short}} ou portail {{site.data.keyword.slportal}}), les conditions d'utilisation de la _politique de support des services de plateforme et d'infrastructure {{site.data.keyword.cloud_notm}}_ s'appliquera.
