@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -76,7 +76,7 @@ Vous disposez des options d'octroi de licence suivantes pour les composants VMwa
 
 Si vous choisissez d'acheter toutes les licences, sauf pour vSphere Enterprise Plus et vCenter Server, et que vous commandez plusieurs serveurs ESXi, un ticket {{site.data.keyword.cloud_notm}} est automatiquement ouvert en votre nom afin de combiner les clés de licence. Vous êtes chargé du suivi du ticket afin de vous assurer que vous n'utilisez que les clés de licence générées par l'équipe DevOps.
 
-**Important** : l'utilisation de clés de licence individuelles avec les clés de licence combinées ne répond pas aux exigences de paiement des licences dont vous aurez besoin.
+**Important :** l'utilisation de clés de licence individuelles avec les clés de licence combinées ne répond pas aux exigences de paiement des licences dont vous aurez besoin.
 
 ## Paramètres de serveur bare metal
 
@@ -116,14 +116,10 @@ Pour les commandes sans vSAN, les serveurs ESXi sont commandés avec un châssis
 Pour les commandes avec vSAN, les serveurs ESXi sont commandés avec un châssis de 12 disques et quatre disques commandés : deux pour le système d'exploitation ESXi et deux réservés à la mise en cache. Ces paramètres sont configurés par défaut et ne sont pas modifiables. Vous pouvez commander davantage de capacité sur disques en renseignant la zone **Type et taille de disque pour disques de capacité vSAN** et **Nombre de disques de capacité vSAN**.
 
 Si vous sélectionnez le composant VMware vSAN pour le cluster, spécifiez les paramètres suivants :
-
-* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin. 
-* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter. 
-* **Type de disque pour disques de cache vSAN** : sélectionnez une option correspondant aux disques de cache dont vous avez besoin. 
-
-    **Remarque** : pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
-L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
-* **Nombre de disques de cache vSAN** : indiquez le nombre de disques de cache que vous souhaitez ajouter. 
+* **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
+* **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
+* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 
 ## Paramètres d'interface réseau
 
@@ -212,7 +208,7 @@ Selon vos configurations, le coût estimé est généré et affiché instantané
    1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger le cluster.
    2. Sélectionnez le modèle d'UC et la taille de mémoire RAM.
    3. Spécifiez le nombre de serveurs bare metal.
-6. Si vous avez sélectionné le composant **VMware vSAN**, procédez à la configuration de stockage vSAN. Spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**. 
+6. Si vous avez sélectionné le composant **VMware vSAN**, procédez à la configuration de stockage vSAN. Spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 7. Spécifiez les paramètres d'interface réseau :
    1. Renseignez les zones Préfixe de nom d'hôte, Libelle de sous-domaine et Nom de domaine.
    2. Sélectionnez le paramètre réseau **Réseau public et réseau privé** ou **réseau privé uniquement**.
@@ -224,7 +220,7 @@ Selon vos configurations, le coût estimé est généré et affiché instantané
    * Pour sauvegarder la configuration en tant que modèle sans passer de commande, cliquez sur **Sauvegarde de la configuration**.
    * Pour passer la commande, assurez-vous que le compte qui devra être facturé est correct, passez en revue et acceptez les conditions, puis cliquez sur **Mettre à disposition**.
 
-   **Remarque** : seuls les serveurs {{site.data.keyword.baremetal_short}} sont installés. Vous êtes responsable de l'installation et de la configuration des divers composants après déploiement du cluster, tels que VMware vCenter, VMware NSX, VMware vSAN.
+   **Remarque :** seuls les serveurs de type {{site.data.keyword.baremetal_short}} sont installés. Vous êtes responsable de l'installation et de la configuration des divers composants après déploiement du cluster, tels que VMware vCenter, VMware NSX, VMware vSAN.
 
 ### Résultats
 
