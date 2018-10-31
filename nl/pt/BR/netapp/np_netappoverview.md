@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -57,7 +57,7 @@ O NetApp ONTAP Select é executado em um cluster VMware e virtualiza o armazenam
 
 Os componentes a seguir estão incluídos em sua instância do NetApp ONTAP Select.
 
-**Nota**: a disponibilidade e a precificação de configurações padronizadas podem variar com base no {{site.data.keyword.CloudDataCent_notm}} que é selecionado para implementação.
+**Nota:** a disponibilidade e a precificação de configurações padronizadas podem variar com base no {{site.data.keyword.CloudDataCent_notm}} que está selecionado para implementação.
 
 ### Armazenamento
 
@@ -102,9 +102,9 @@ Duas VSIs (Virtual Server Instances):
 *  VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 *  Taxa de suporte e serviços (uma licença por nó)
 
-**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente no console do {{site.data.keyword.vmwaresolutions_short}}, não no {{site.data.keyword.slportal}} nem de qualquer outra maneira fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados na conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não no	{{site.data.keyword.slportal}} ou por qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
-**CUIDADO**: gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
+**CUIDADO:** Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Inclusão, modificação, retorno, remoção ou desligamento de componentes
 *  Expansão ou redução da capacidade da instância por meio da inclusão ou remoção de servidores ESXi
 *  Reinício dos serviços

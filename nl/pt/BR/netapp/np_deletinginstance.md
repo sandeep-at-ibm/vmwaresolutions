@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,7 +22,7 @@ Devido a dependências de recursos, os componentes em sua instância não são l
 
 **Atenção:** você é cobrado até o final do ciclo de faturamento pela instância excluída.
 
-## Excluindo instâncias da página Instâncias implementadas
+## Procedimento para excluir instâncias da página Instâncias implementadas
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do NetApp ONTAP Select**, localize a instância a ser excluída.
@@ -33,7 +33,7 @@ Devido a dependências de recursos, os componentes em sua instância não são l
    1. Na coluna **Ações**, clique no ícone Excluir novamente.
    2. Na janela **Excluir instância**, clique em **OK**.
 
-## Excluindo instâncias da página de detalhes da instância
+## Procedimento para excluir instâncias da página Detalhes da instância
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do NetApp ONTAP Select**, clique na instância a ser excluída.

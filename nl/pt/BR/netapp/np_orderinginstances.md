@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -85,7 +85,7 @@ Selecione uma configuração do Bare Metal Server com base em seus requisitos:
 
 O número de servidores ESXi de uma instância do NetApp ONTAP Select é 4 por padrão. Isso não pode ser mudado. Todos os servidores ESXi compartilham a configuração.
 
-## Procedimento
+## Procedimento para pedir instâncias do NetApp ONTAP Select
 
 1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação à esquerda e, em seguida, clique em **NetApp ONTAP Select** na seção **Data centers virtuais**.
 2. Na página **NetApp ONTAP Select**, clique em **Criar**.
@@ -114,9 +114,9 @@ Quando a instância estiver pronta para usar, seu status mudará para **Pronta p
 
 Visualizar e gerenciar a instância do NetApp ONTAP Select que você pediu.
 
-**Importante**: deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente no console do {{site.data.keyword.vmwaresolutions_short}}, não no {{site.data.keyword.slportal}} nem de qualquer outra maneira fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados na conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não no	{{site.data.keyword.slportal}} ou por qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 
-**CUIDADO**: gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
+**CUIDADO:** Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes
 *  Desativando componentes
 
