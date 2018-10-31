@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ Utilice este procedimiento para suprimir las instancias locales de HCX on {{site
 
 Asegúrese de haber revisado las consideraciones del apartado [Consideraciones al suprimir instancias locales de HCX on {{site.data.keyword.cloud_notm}}](../services/standalone_considerations.html).
 
-## Procedimiento
+## Procedimiento para suprimir instancias locales de VMware HCX on IBM Cloud
 
 1. Pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. Desplácese a la tabla **Instancias locales de HCX** y busque la instancia que desea suprimir.

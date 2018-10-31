@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,7 +16,7 @@ El servicio Zerto on {{site.data.keyword.cloud}} integra las funciones de répli
 
 Los siguientes componentes se solicitan y se incluyen en el servicio Zerto on {{site.data.keyword.cloud_notm}}.
 
-**Nota**: Los componentes de Zerto Virtual Manager se despliegan solo en el clúster predeterminado.
+**Nota:** Los componentes de Zerto Virtual Manager se despliegan solo en el clúster predeterminado.
 
 ### VSI
 

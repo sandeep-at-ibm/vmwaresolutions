@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-24"
 
 El servicio KMIP for VMware on {{site.data.keyword.cloud}} ofrece un servicio altamente disponible de tipo 24x7 para gestionar las claves de cifrado que utiliza VMware en {{site.data.keyword.cloud_notm}}. Este servicio ofrece capacidad de tiempo de ejecución que permite a los clientes crear, recuperar, activar, revocar y destruir las claves de cifrado. También proporciona capacidad de gestión para mantener las asociaciones entre las credenciales del cliente y las claves de cifrado.
 
-**Disponibilidad**: Este servicio solo está disponible para instancias desplegadas en V2.2 o releases posteriores.
+**Disponibilidad:** Este servicio solo está disponible para instancias desplegadas en V2.2 o releases posteriores.
 
 ## Especificaciones técnicas para KMIP for VMware on IBM Cloud
 
@@ -34,18 +34,18 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} utiliza el servicio IBM Key 
 * Tiene una clave de API para el ID de servicio creado. La clave es necesaria al solicitar el servicio.
 * Ha creado al menos una clave raíz de cliente (CRK) desde la interfaz de usuario de Key Protect siguiendo los pasos del apartado [Creación de claves raíz](https://console.bluemix.net/docs/services/keymgmt/keyprotect_create_root.html#create_root_keys) o utilizando la API REST de [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect).
 
-   **Importante**: No puede solicitar el servicio sin CRK. Se recomienda utilizar el método para crear una CRK utilizando el material de claves existente y hacer una copia de seguridad del material de claves que se crea. De este modo se asegura de que puede recuperar sus claves en el caso de que se produzca un fallo del centro de datos en el que se aplica IBM Key Protect para almacenar los CRK.
+   **Importante:** No puede solicitar el servicio sin CRK. Se recomienda utilizar el método para crear una CRK utilizando el material de claves existente y hacer una copia de seguridad del material de claves que se crea. De este modo se asegura de que puede recuperar sus claves en el caso de que se produzca un fallo del centro de datos en el que se aplica IBM Key Protect para almacenar los CRK.
 
-## Consideraciones sobre la utilización de KMIP for VMware on IBM Cloud
+## Consideraciones al utilizar KMIP for VMware on IBM Cloud
 
 * Para utilizar un servicio KMIP for VMware on {{site.data.keyword.cloud_notm}} solicitado como Servidor de gestión de claves (KMS) registrado ante VMware vCenter Server, asegúrese de que la conectividad de red entre vCenter Server y el punto final del servicio KMIP for VMware on {{site.data.keyword.cloud_notm}} solicitado resulte funcional.
 * Para utilizar el servicio para el cifrado de VMware vSAN, asegúrese de que la conectividad de red entre los hosts del vSAN de destino y el punto final del servicio KMIP for VMware on {{site.data.keyword.cloud_notm}} resulte funcional.
 
-## Consideraciones al eliminar KMIP for VMware on IBM Cloud
+## Consideraciones sobre la eliminación de KMIP para VMware on IBM Cloud
 
-El certificado público de VMware que proporcione durante la solicitud o la utilización del servicio se utiliza como certificado cliente para comunicarse con la instancia de servicio. Cuando se elimina el servicio, también se eliminan todas las claves de cifrado creadas por esta instancia de servicio para el certificado público asociado de VMware.
+El certificado público de VMware que proporcione durante la solicitud o la utilización del servicio se utiliza como el certificado cliente para comunicarse con la instancia de servicio. Cuando se elimine el servicio, también se eliminan todas las claves de cifrado creadas por esta instancia de servicio para el certificado público de VMware asociado.
 
-Por lo tanto, antes de eliminar el servicio, asegúrese de que no se cifre ninguna máquina virtual ni vSAN mediante las claves creadas por el servicio KMIP.
+Por lo tanto, antes de eliminar el servicio, asegúrese de que ninguna máquina virtual o vSAN se cifren utilizando las claves creadas por el servicio KMIP.
 
 ### Enlaces relacionados
 

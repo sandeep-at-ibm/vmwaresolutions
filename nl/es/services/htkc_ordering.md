@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-11"
+lastupdated: "2018-09-26"
 
 ---
 
 # Solicitud de HyTrust KeyControl on IBM Cloud
 
-Puede solicitar el servicio de HyTrust KeyControl on {{site.data.keyword.cloud}} al solicitar una nueva instancia con un par de HA de dispositivos de HyTrust KeyControl incluidos o añadiendo los dispositivos de HyTrust KeyControl a la instancia existente.
+Puede solicitar el servicio de HyTrust KeyControl on {{site.data.keyword.cloud}} cuando solicite una nueva instancia con un par de HA de dispositivos de HyTrust KeyControl incluidos o añadiendo los dispositivos de HyTrust KeyControl a la instancia existente.
 
 ## Solicitud de HyTrust KeyControl on IBM Cloud para una nueva instancia
 
