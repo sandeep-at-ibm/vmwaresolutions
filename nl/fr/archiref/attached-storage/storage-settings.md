@@ -10,9 +10,9 @@ lastupdated: "2018-09-25"
 
 # Paramètres de stockage
 
-Cette conception prend en charge la connexion de stockage partagé via NFS v3 uniquement. NFS v4 et v4.1 ne sont pas pris en charge. 
+Cette conception prend en charge la connexion de stockage partagé via NFS v3 uniquement. NFS v4 et v4.1 ne sont pas pris en charge.
 
-**Remarque** : tout le stockage connecté pour cette conception est limité au stockage {{site.data.keyword.cloud_notm}} disponible dans le même {{site.data.keyword.CloudDataCent_notm}} que la solution vCenter Server. De plus, tous les disques virtuels qui sont stockés dans le magasin de données sont par défaut alloués de manière dynamique. 
+**Remarque** : tout le stockage connecté pour cette conception est limité au stockage {{site.data.keyword.cloud_notm}} disponible dans le même {{site.data.keyword.CloudDataCent_notm}} que la solution vCenter Server. De plus, tous les disques virtuels qui sont stockés dans le magasin de données sont par défaut alloués de manière dynamique.
 
 L'architecture indique que les magasins de données NFS v3 sont connectés à l'aide du même nom DNS à partir du stockage {{site.data.keyword.cloud_notm}} pour la connexion au partage. De plus, le partage NFS est connecté à tous les hôtes dans le cluster vCenter Server et placé dans un cluster de magasins de données pour lequel la fonction Storage DRS est activée.
 
@@ -58,9 +58,9 @@ Lorsque le paramètre SIOC (Storage I/O Control) est activé dans l'environnemen
 
 Vous devez définir un seuil pour que la fonction SIOC puisse déterminer quand une unité de stockage est saturée ou contrainte. Le temps d'attente du seuil de surcharge est différent selon les types de stockage. Cette conception recommande et implémente un temps d'attente de seuil de 10 millisecondes.
 
-Vous pouvez également limiter des disques virtuels individuels de machines virtuelles individuelles ou leur accorder des partages différents grâce à la fonction SIOC. La limitation des disques et l'octroi de différents partages vous permettent de faire correspondre et d'aligner l'environnement à la charge de travail avec le nombre d'IOPS de volume de stockage de fichier acquis. Cette limite est définie par le nombre d'IOPS et il est possible de définir une pondération différente ou des partages. 
+Vous pouvez également limiter des disques virtuels individuels de machines virtuelles individuelles ou leur accorder des partages différents grâce à la fonction SIOC. La limitation des disques et l'octroi de différents partages vous permettent de faire correspondre et d'aligner l'environnement à la charge de travail avec le nombre d'IOPS de volume de stockage de fichier acquis. Cette limite est définie par le nombre d'IOPS et il est possible de définir une pondération différente ou des partages.
 
-Les partages de disques virtuels ayant pour valeur **High** (2 000 partages) reçoivent deux fois plus d'entrées-sorties qu'un disque ayant pour valeur **Normal** (1 000 partages) et quatre fois plus qu'un disque ayant pour valeur **Low** (500 partages). La valeur **Normal** est définie par défaut pour toutes les machines virtuelles, par conséquent, vous devez ajuster les valeurs **Normal** pour les machines virtuelles qui l'exigent. 
+Les partages de disques virtuels ayant pour valeur **High** (2 000 partages) reçoivent deux fois plus d'entrées-sorties qu'un disque ayant pour valeur **Normal** (1 000 partages) et quatre fois plus qu'un disque ayant pour valeur **Low** (500 partages). La valeur **Normal** est définie par défaut pour toutes les machines virtuelles, par conséquent, vous devez ajuster les valeurs **Normal** pour les machines virtuelles qui l'exigent.
 
 ## Stockage supplémentaire pour NFS v3
 

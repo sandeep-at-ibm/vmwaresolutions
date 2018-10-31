@@ -10,7 +10,7 @@ lastupdated: "2018-09-24"
 
 # Conception d'infrastructure de stockage connecté
 
-{{site.data.keyword.vmwaresolutions_full}} fournit la technologie VMware qui est déployée de façon automatisée dans {{site.data.keyword.CloudDataCents_notm}} partout dans le monde. Dans le portefeuille de solutions {{site.data.keyword.cloud_notm}}, l'offre VMware vCenter Server on {{site.data.keyword.cloud_notm}} de base comprend 10 clusters contenant chacun jusqu'à 59 hôtes vSphere, un contrôleur PSC (Platform Services Controller) et un dispositif vCenter Server Appliance pouvant gérer jusqu'à 400 hôtes et 4 000 machines virtuelles. 
+{{site.data.keyword.vmwaresolutions_full}} fournit la technologie VMware qui est déployée de façon automatisée dans {{site.data.keyword.CloudDataCents_notm}} partout dans le monde. Dans le portefeuille de solutions {{site.data.keyword.cloud_notm}}, l'offre VMware vCenter Server on {{site.data.keyword.cloud_notm}} de base comprend 10 clusters contenant chacun jusqu'à 59 hôtes vSphere, un contrôleur PSC (Platform Services Controller) et un dispositif vCenter Server Appliance pouvant gérer jusqu'à 400 hôtes et 4 000 machines virtuelles.
 
 L'architecture qui est présentée ici complète la solution vCenter Server en ajoutant du stockage connecté sous la forme d'une unité de stockage partagé pour l'environnement. L'unité de stockage connecté se situé dans le même {{site.data.keyword.CloudDataCent_notm}} que le déploiement de vCenter Server et comprend un partage NFS (Network File System) ou plusieurs exportations NFS à partir d'{{site.data.keyword.cloud_notm}}.
 
@@ -56,7 +56,7 @@ Entre 100 et 48 000 IOPS peuvent être mises à disposition avec des tailles de 
 
 Dans cette conception, la solution vCenter Server offre le stockage Endurance pour le stockage connecté. Par conséquent, vous pouvez sélectionner et connecter (via l'automatisation) des exportations Endurance NFS dont la taille est comprise entre 20 Go et 12 To. {{site.data.keyword.cloud_notm}} permet à 64 hôtes vSphere ESXi au maximum de se connecter à une exportation Endurance NFS.
 
-Endurance est disponible dans trois niveaux de performance d'IOPS pour prendre en charge les divers besoins des applications. Notez qu'après la mise à disposition d'un partage NFS, celui-ci peut être redimensionné ou reconfiguré pour permettre davantage ou moins d'IOPS. 
+Endurance est disponible dans trois niveaux de performance d'IOPS pour prendre en charge les divers besoins des applications. Notez qu'après la mise à disposition d'un partage NFS, celui-ci peut être redimensionné ou reconfiguré pour permettre davantage ou moins d'IOPS.
 
 Pour connaître les options d'IOPS détaillées, voir la section _Paramètres de stockage_ dans la rubrique [Commande d'instances vCenter Server](../../vcenter/vc_orderinginstance.html).
 
