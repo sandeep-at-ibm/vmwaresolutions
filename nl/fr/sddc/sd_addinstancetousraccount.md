@@ -16,14 +16,14 @@ Quant aux instances déployées dans la version 2.4 et dans des éditions antér
 
 ## Avant de commencer
 
-Assurez-vous que le compte {{site.data.keyword.cloud_notm}} vers lequel vous souhaitez faire migrer l'instance n'est pas un compte IaaS-only. Un compte IaaS-only est un compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) qui n'est pas lié à un compte {{site.data.keyword.cloud_notm}}. 
+Assurez-vous que le compte {{site.data.keyword.cloud_notm}} vers lequel vous souhaitez faire migrer l'instance n'est pas un compte IaaS-only. Un compte IaaS-only est un compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) qui n'est pas lié à un compte {{site.data.keyword.cloud_notm}}.
 
 Pour savoir comment lier votre compte Iaas-only à votre compte PaaS, voir [Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/blogs/bluemix/2018/03/follow-steps-link-iaas-paas-accounts/).
 
 ## Procédure de migration des instances
 
 1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur vers lequel vous souhaitez faire migrer l'instance. 
+2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur vers lequel vous souhaitez faire migrer l'instance.
 3. Dans le tableau **Instances Cloud Foundation**, recherchez l'instance antérieure à la version 2.5.
 4. Dans la colonne **Actions**, cliquez sur l'icône de menu déroulant dynamique, puis cliquez sur **Migrer une instance vers un compte**.
 5. Dans la fenêtre **Migrer une instance vers un compte**, confirmez le compte vers lequel vous souhaitez faire migrer l'instance, puis cliquez sur **Migrer**.

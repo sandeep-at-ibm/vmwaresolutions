@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -45,7 +45,7 @@ Une instance Cloud Foundation peut comporter jusqu'à cinq clusters, dont l'un e
 * Ne retirez pas de serveurs ESXi depuis le client Web VMware vSphere. Les modifications apportées sur le client Web VMware vSphere ne sont pas synchronisées avec la console {{site.data.keyword.vmwaresolutions_short}}.
 * La plateforme de base que vous avez commandée dispose par défaut de 4 serveurs ESXi. Vous pouvez supprimer les serveurs ESXi que vous avez ajoutés. Vous ne pouvez pas supprimer les serveurs ESXi par défaut.
 * Avant de retirer des serveurs ESXi avec le service F5 on {{site.data.keyword.cloud_notm}} ou FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installé, vous devez faire migrer les machines virtuelles F5 BIG-IP et FortiGate vers un autre serveur ESXi que celui sur lequel elles sont hébergées.
-* Avant de retirer des serveurs ESXi sur lesquels le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} est installé, vérifiez qu'aucune opération de sauvegarde ou de restauration n'est active. En effet, les opérations actives, qu'elles aient échoué ou qu'elles soient en cours, pourraient empêcher le retrait des serveurs ESXi. 
+* Avant de retirer des serveurs ESXi sur lesquels le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} est installé, vérifiez qu'aucune opération de sauvegarde ou de restauration n'est active. En effet, les opérations actives, qu'elles aient échoué ou qu'elles soient en cours, pourraient empêcher le retrait des serveurs ESXi.
 
 ## Procédure de retrait de serveurs ESXi
 
@@ -61,7 +61,7 @@ Une instance Cloud Foundation peut comporter jusqu'à cinq clusters, dont l'un e
 2. Un courrier électronique vous avise du retrait de vos serveurs ESXi.
 3. Les serveurs ESXi sont complètement récupérés par l'infrastructure {{site.data.keyword.cloud_notm}} à la fin de son cycle de facturation, lequel est généralement de 30 jours.
 
-   **Attention** : les serveurs ESXi supprimés vous sont facturés jusqu'à échéance du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}.
+   **Attention :** les serveurs retirés vous sont facturés jusqu'à échéance du cycle de facturation d'{{site.data.keyword.cloud_notm}}.
 
 ### Liens connexes
 

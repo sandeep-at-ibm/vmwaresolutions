@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,12 +12,12 @@ lastupdated: "2018-09-25"
 
 Affichez les informations récapitulatives et détaillées des instances VMware Cloud Foundation qui sont mises à disposition pour différents comptes utilisateur.
 
-## Affichage du récapitulatif des instances Cloud Foundation
+## Procédure d'affichage du récapitulatif des instances Cloud Foundation
 
 Pour afficher un récapitulatif de toutes les instances Cloud Foundation qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 
 1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances. 
+2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances.
 3. Dans le tableau **Instances Cloud Foundation Select**, affichez la liste de vos instances :
 
 Tableau 1. Eléments d'une instance Cloud Foundation
@@ -45,7 +45,7 @@ Tableau 2. Description des statuts des instances Cloud Foundation
 | Erreur de suppression | Une erreur s'est produite au cours du processus de suppression de l'instance. |
 | Supprimé | L'instance a été supprimée. |
 
-## Affichage des détails des propriétés d'une instance Cloud Foundation
+## Procédure d'affichage des détails des propriétés des instances Cloud Foundation
 
 Pour afficher les détails des propriétés d'une instance :
 
@@ -60,7 +60,7 @@ Tableau 3. Propriétés d'instance Cloud Foundation
 | ID | ID de l'instance |
 | Emplacement | {{site.data.keyword.CloudDataCent_notm}} où l'instance est hébergée |
 | Version en cours | Version en cours d'{{site.data.keyword.vmwaresolutions_short}} |
-| Version de vCenter | Version de VMware vCenter Server<br><br>**Remarque** : la version vCenter Server affichée sur la console {{site.data.keyword.vmwaresolutions_short}} et celle sur le client Web VMware vSphere sont légèrement différentes. Les deux sont correctes. |
+| Version de vCenter | Version de VMware vCenter Server<br><br>**Remarque :** la version vCenter Server affichée sur la console {{site.data.keyword.vmwaresolutions_short}} et celle sur le client Web VMware vSphere sont légèrement différentes. Les deux sont correctes. |
 | NSX for vSphere | Version du produit VMware NSX for vSphere |
 | Licence de _composant VMware_ | Si vous avez sélectionné d'utiliser votre propre licence VMware pour tous les composants VMware sur la page **Octroi de licence** lors de la commande de l'instance, le nom du composant VMware et la clé de licence entrée pour le composant sont affichés.<br><br>**Licence vCenter Server** et **License NSX** sont des exemple de licences de composant VMware. |
 | Edition de licence NSX | Version et édition de la licence VMware NSX |
@@ -70,7 +70,7 @@ Tableau 3. Propriétés d'instance Cloud Foundation
 | Version de SDDC Manager  |  Version du gestionnaire SDDC Manager de l'instance |
 | Statut  | Statut de l'instance<br><br>Les informations affichées fournissent une mise à jour de la progression du déploiement ou de l'action appliquée à l'instance. En cas de problème, un message peut s'afficher pour vous aider à identifier et résoudre le problème. |
 
-## Affichage des informations d'accès relatives aux instances Cloud Foundation
+## Procédure d'affichage des informations d'accès aux instances Cloud Foundation
 
 Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance.
 
@@ -80,7 +80,7 @@ Tableau 4. Informations d'accès Cloud Foundation pour les composants liés à l
 |:------------- |:------------- |
 | AD/DNS IP | Les adresses IP des deux serveurs AD |
 | AD/DNS FQDN | Les noms de domaine complets des serveurs AD/DNS<br><br>**Remarque :** le même mot de passe administrateur peut être utilisé pour établir une connexion à tous les serveurs AD/DNS via une connexion bureau à distance. |
-| AD/DNS ADMIN (Remote Desktop)  | Pour les instances principales, affiche le nom d'utilisateur et le mot de passe d'accès au serveur AD avec une connexion bureau à distance.<br><br>Pour les instances secondaires, cliquez sur le lien **Afficher sur l'instance principale** afin d'être dirigé vers les informations de nom d'utilisateur et de mot de passe sur l'instance principale.<br><br>**Remarque** : une fois l'instance secondaire ajoutée au domaine DNS principal et la réplication lancée, le mot de passe administrateur local sur l'instance principale est susceptible de remplacer le mot de passe administrateur local sur l'instance secondaire. En cliquant sur le lien **Afficher sur l'instance principale**, vous obtiendrez le mot de passe administrateur correct.|
+| AD/DNS ADMIN (Remote Desktop)  | Pour les instances principales, affiche le nom d'utilisateur et le mot de passe d'accès au serveur AD avec une connexion bureau à distance.<br><br>Pour les instances secondaires, cliquez sur le lien **Afficher sur l'instance principale** afin d'être dirigé vers les informations de nom d'utilisateur et de mot de passe sur l'instance principale.<br><br>**Remarque :** une fois l'instance secondaire ajoutée au domaine DNS principal et la réplication lancée, le mot de passe administrateur local sur l'instance principale est susceptible de remplacer le mot de passe administrateur local sur l'instance secondaire. En cliquant sur le lien **Afficher sur l'instance principale**, vous obtiendrez le mot de passe administrateur correct.  |
 | NSX Manager IP  | L'adresse IP de NSX Manager  |
 | NSX Manager FQDN  | Le nom de domaine complet de NSX Manager  |
 | NSX Manager HTTP  | Le nom d'utilisateur et mot de passe utilisés pour accéder à la console Web de NSX Manager. |
@@ -94,7 +94,7 @@ Tableau 4. Informations d'accès Cloud Foundation pour les composants liés à l
 | vCenter SSH  | Le nom d'utilisateur et le mot de passe que vous pouvez utiliser pour accéder à la machine virtuelle vCenter Server via une connexion SSH |
 | vCenter ADMIN  | Le nom d'utilisateur et le mot de passe de connexion unique VMware vCenter que vous pouvez utiliser pour vous connecter au serveur vCenter Server à l'aide du client Web vSphere  |
 
-## Affichage de l'historique de déploiement des instances Cloud Foundation
+## Procédure d'affichage de l'historique de déploiement des instances Cloud Foundation
 
 Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance.
 
@@ -113,7 +113,7 @@ Si des erreurs se produisent lors du déploiement ou de la suppression d'une ins
 
 Gérez vos instances depuis la console {{site.data.keyword.vmwaresolutions_short}} ou le client Web vSphere.
 
-**Important** : avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client Web vSphere et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton de la console vCenter et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.
+**Important :** avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client vSphere Web Client et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton de la console vCenter et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.
 
 Passez en revue les rubriques suivantes pour obtenir des informations qui vous aideront à exécuter les instructions de connexion :
 

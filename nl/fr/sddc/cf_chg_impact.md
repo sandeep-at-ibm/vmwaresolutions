@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -18,11 +18,11 @@ Modifier des utilisateurs, des ressources ou des sous-réseaux réservés à {{s
 
 Chaque service crée un compte utilisateur interne dans vCenter Server. Ce compte est nécessaire pour que les opérations de gestion associées à un service puissent se connecter à vCenter Server afin d'effectuer les opérations sur le service.
 
-**Important** : pour empêcher les indisponibilités et les problèmes de connexion, si vous modifiez l'ID utilisateur, le mot de passe ou les paramètres d'expiration de mot de passe pour ce compte utilisateur, prenez soin de mettre également à jour les informations dans le service associé.
+**Important :** pour éviter les indisponibilités et les problèmes de connexion, si vous modifiez l'ID utilisateur, le mot de passe ou les paramètres d'expiration de mot de passe pour ce compte utilisateur, prenez soin de mettre également à jour les informations dans le service associé.
 
 L'ID utilisateur de ce compte est au format `<service_name>-<truncated service_uuid>@test.local` ou `<service_name>-<truncated service_uuid>@example-domain.local`. Par exemple, l'ID utilisateur dont se sert le service Veeam on {{site.data.keyword.cloud_notm}} pour se connecter à vCenter Server afin d'effectuer des sauvegardes planifiées est `Veeam-<Veeam_uuid>@test.local`.
 
-****Remarque : le répertoire `<service_name>` conjointement avec `<service_uuid>` est tronqué à 20 caractères.
+**Remarque :** le nom du service (`<service_name>`) ainsi que l'identificateur unique universel `<service_uuid>` est tronqué à 20 caractères.
 
 ## Ressources VMware pour les instances Cloud Foundation
 
@@ -43,7 +43,7 @@ Tableau 1. Opérations affectées pour l'administrateur de la connexion unique (
 
 Les informations suivantes concernent les sous-réseaux commandés par {{site.data.keyword.vmwaresolutions_short}} et indiquent les options de commande de sous-réseaux supplémentaires à votre usage personnel dont vous disposez.
 
-**ATTENTION** : n'utilisez pas ces composants à d'autres fins ; vous risqueriez de compromettre grandement la stabilité de votre environnement.
+**ATTENTION :** n'utilisez pas ces composants à d'autres fins ; vous risqueriez de compromettre grandement la stabilité de votre environnement.
 
 Avec chaque commande de serveur bare metal {{site.data.keyword.cloud_notm}}, les plages d'adresses IP suivantes sont commandées par défaut :
 
@@ -58,5 +58,5 @@ De plus, les sous-réseaux de gestion suivants sont également réservés pour {
 
 Si vous avez besoin de davantage de sous-réseaux, vous pouvez obtenir des adresses IP à utiliser de l'une des manières suivantes :
 
-* **Option 1 (recommandée)** : utilisez les chevauchements de réseau virtuel VMware NSX. Un exemple de modèle VXLAN est fourni lors de la commande. Ce modèle VXLAN peut être utilisé comme point de départ pour la génération de la mise en réseau définie par logiciel.
-* **Option 2** : commandez vos propres sous-réseaux portables publics ou privés afin d'obtenir des adresses IP. Pour différentier les sous-réseaux que vous commandez des sous-réseaux de gestion, vous pouvez ajouter des notes aux sous-réseaux commandés.
+* **Option 1 (recommandée) :** utilisez les superpositions de réseaux virtuels de VMware NSX. Un exemple de modèle VXLAN est fourni lors de la commande. Ce modèle VXLAN peut être utilisé comme point de départ pour la génération de la mise en réseau définie par logiciel.
+* **Option 2 :** commandez vos propres sous-réseaux portables publics ou privés afin d'obtenir des adresses IP. Pour différentier les sous-réseaux que vous commandez des sous-réseaux de gestion, vous pouvez ajouter des notes aux sous-réseaux commandés.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -46,7 +46,7 @@ Tableau 1. Niveaux de mise à jour et impact
   </tr>
 </table>
 
-## Procédure
+## Procédure d'application de mises à jour à des instances Cloud Foundation
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance à supprimer.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -42,7 +42,7 @@ Tableau 2. Nomenclature des composants logiciels des instances Cloud Foundation
 
 ## Paramètres de configuration avancée pour les serveurs ESXi
 
-Consultez le tableau suivant pour obtenir une présentation des paramètres de configuration avancée appliqués aux serveurs ESXi. Les paramètres varient selon que l'instance Cloud Foundation est déployée dans (ou mise à niveau vers) la version 2.2 ou une version ultérieure à partir d'une édition précédente (V2.1 ou antérieure). 
+Consultez le tableau suivant pour obtenir une présentation des paramètres de configuration avancée appliqués aux serveurs ESXi. Les paramètres varient selon que l'instance Cloud Foundation est déployée dans (ou mise à niveau vers) la version 2.2 ou une version ultérieure à partir d'une édition précédente (V2.1 ou antérieure).
 
 Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les instances et clusters Cloud Foundation
 
@@ -58,7 +58,7 @@ Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les inst
 | Queue Full Sample Size | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | Queue Full Threshold | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
-**Remarques** :
+**Remarques :**
 * Le paramètre **MaxVolumes** est obligatoire pour le service IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} car ce service risque d'utiliser plus que le nombre de montages NFS par défaut sur le serveur ESXi.
 * La valeur **Non défini** d'un paramètre de configuration indique que le nouveau paramètre n'est pas automatiquement appliqué car il nécessite un réamorçage des serveurs ESXi, ce qui risque de provoquer une interruption.
 

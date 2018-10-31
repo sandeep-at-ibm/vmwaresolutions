@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -31,7 +31,7 @@ Tableau 1. Services disponibles pour les instances Cloud Foundation
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | 9.5u3 | A partir de V1.8 |
 | [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 5.5u4 Patch 2 | A partir de V1.2 |
 
-## Ajout de services à des instances Cloud Foundation
+## Procédure d'ajout de services à des instances Cloud Foundation
 
 Pour ajouter un service à votre instance Cloud Foundation, cliquez sur le lien de service approprié dans le tableau précédent pour passer en revue les remarques relatives au service et vérifiez les composants qui sont déployés. Suivez ensuite les instructions de la rubrique appropriée sur les services de commande afin d'ajouter le service à votre instance.
 
@@ -39,7 +39,7 @@ Pour ajouter un service à votre instance Cloud Foundation, cliquez sur le lien 
 
 Lorsque l'installation du service est terminée, vous êtes prévenu par un courrier électronique, et le service s'affiche sur la page **Services** de l'instance avec le statut **Installé**.
 
-## Affichage des services des instances Cloud Foundation
+## Procédure d'affichage de services pour des instances Cloud Foundation
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance pour laquelle vous souhaitez installer des services.
@@ -47,7 +47,7 @@ Lorsque l'installation du service est terminée, vous êtes prévenu par un cour
 4. Sur la page **Services**, cliquez sur un service pour passer en revue les informations le concernant, par exemple, le statut du service et d'autres détails.
 5. Selon le service visualisé, vous pouvez accéder aux consoles de service à l'aide des données d'identification qui sont fournies sur la page des détails de service et vous pouvez gérer le service à partir de là.
 
-## Suppression de services des instances Cloud Foundation
+## Procédure de retrait de services pour des instances Cloud Foundation
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance dont vous souhaitez retirer des services.
@@ -61,7 +61,7 @@ Une fois votre demande de retrait du service acceptée, le service prend le stat
 
 Lorsque le retrait du service est terminé, vous êtes prévenu par un courrier électronique, et le service est retiré de la page **Services** de l'instance.
 
-**Attention** : les services retirés vous sont facturés jusqu'à échéance du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}.
+**Attention :** les services retirés vous sont facturés jusqu'à échéance du cycle de facturation d'{{site.data.keyword.cloud_notm}}.
 
 ### Liens connexes
 
