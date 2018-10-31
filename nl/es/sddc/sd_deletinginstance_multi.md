@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,9 +22,9 @@ Cuando suprima una instancia de Cloud Foundation, los siguientes componentes se 
 
 Debido a las dependencias entre recursos, los componentes de la instancia no se liberan inmediatamente cuando se suprime la instancia. Por ejemplo, las subredes y las VLAN no se pueden suprimir hasta que la infraestructura de {{site.data.keyword.cloud}} haya reclamado por completo los servidores ESXi, lo cual sucede al final del ciclo de facturación de {{site.data.keyword.cloud_notm}}. Al final del ciclo de facturación de {{site.data.keyword.cloud_notm}}, que suele ser de 30 días, se suprimen las subredes y las VLAN y se completa la supresión de la instancia.
 
-**Atención**: se le facturará por la instancia suprimida hasta el final del ciclo de facturación de {{site.data.keyword.cloud_notm}}.
+**Atención:** se le facturará por la instancia suprimida hasta el final del ciclo de facturación de {{site.data.keyword.cloud_notm}}.
 
-## Procedimiento
+## Procedimiento para suprimir instancias de Cloud Foundation en una configuración de varios sitios
 
 1. Elimine todos los servicios desde la instancia secundaria de Cloud Foundation.
 2. Asegúrese de que no tiene ningún objeto NSX ampliado en la instancia secundaria que desea suprimir.

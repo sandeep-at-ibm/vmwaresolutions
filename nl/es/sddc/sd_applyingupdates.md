@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -46,7 +46,7 @@ Tabla 1. Niveles de actualización e impacto
   </tr>
 </table>
 
-## Procedimiento
+## Procedimiento para aplicar actualizaciones a instancias de Cloud Foundation
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia que desea actualizar.

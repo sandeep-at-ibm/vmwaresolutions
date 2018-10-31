@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -61,7 +61,7 @@ Una instancia de Cloud Foundation puede tener un máximo de cinco clústeres, un
 2. Se le notificará mediante correo electrónico cuando se hayan eliminado servidores ESXi.
 3. La infraestructura de {{site.data.keyword.cloud_notm}} reclama por completo los servidores ESXi al final del ciclo de facturación de {{site.data.keyword.cloud_notm}}, que suele ser de 30 días.
 
-   **Atención**: se le facturará por los servidores ESXi eliminados hasta el final del ciclo de facturación de {{site.data.keyword.cloud_notm}}.
+   **Atención:** se le facturará por los servidores ESXi eliminados hasta el final del ciclo de facturación de {{site.data.keyword.cloud_notm}}.
 
 ### Enlaces relacionados
 
