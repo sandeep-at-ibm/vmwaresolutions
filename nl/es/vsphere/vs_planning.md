@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-11"
 
 Revise los siguientes requisitos antes de solicitar VMware vSphere on {{site.data.keyword.cloud}}. Planifique los clústeres de VMware vSphere en función de la ubicación del {{site.data.keyword.CloudDataCent_notm}} y de sus requisitos de capacidad de la carga de trabajo.
 
-**Nota**: el usuario es el responsable de configurar el entorno y de instalar y configurar diversos componentes de VMware después de que se desplieguen los servidores ESXi. Los ejemplos siguientes son los componentes de VMware: VMware vCenter Server, VMware NSX y VMware vSAN.
+**Nota:** el usuario es el responsable de configurar el entorno y de instalar y configurar diversos componentes de VMware después de que se desplieguen los servidores ESXi. Los ejemplos siguientes son los componentes de VMware: VMware vCenter Server, VMware NSX y VMware vSAN.
 
 ## Requisitos de la cuenta de IBM Cloud
 

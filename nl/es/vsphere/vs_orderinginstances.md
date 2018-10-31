@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -76,7 +76,7 @@ Tiene las siguientes opciones para las licencias de los componentes seleccionado
 
 Si elige adquirir alguna licencia, excepto para vSphere Enterprise Plus y vCenter Server, y ha solicitado varios servidores ESXi, se abre automáticamente una incidencia de {{site.data.keyword.cloud_notm}} en su nombre para combinar las claves de licencia. El usuario es el responsable de realizar el seguimiento de la incidencia para asegurarse de utilizar las claves de licencia que genera el equipo de DevOps.
 
-**Importante**: el uso de claves de licencia individuales junto con las claves de licencia combinadas no cumple los requisitos de pago de las licencias que necesitará.
+**Importante:** el uso de claves de licencia individuales junto con las claves de licencia combinadas no cumple los requisitos de pago de las licencias que necesitará.
 
 ## Valores de Servidor nativo
 
@@ -116,13 +116,10 @@ Para pedidos sin vSAN, se solicitan servidores ESXi con un chasis de 12 discos, 
 Para pedidos con vSAN, se solicitan servidores ESXi con un chasis de 12 discos y se solicitan cuatro discos: dos para el SO ESXi y dos reservados para la colocación en memoria caché. Estos valores se configuran de forma predeterminada y no se puede cambiar. Puede solicitar más discos de capacidad seleccionando **Tipo y tamaño de disco para discos de capacidad vSAN** y **Número de discos de capacidad vSAN**.
 
 Si selecciona el componente VMware vSAN para el clúster, especifique los valores siguientes.
-
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
-* **Tipo de disco para discos de memoria caché vSAN**: Seleccione una opción para los discos de memoria caché que necesite.
-
-    **Nota**: Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
-* **Número de discos de memoria caché de vSAN**: Especifique el número de discos de memoria caché que desea añadir.
+* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
 
 ## Valores de interfaz de red
 
@@ -223,7 +220,7 @@ En función de sus configuraciones, el coste estimado se genera y se muestra al 
    * Para guardar la configuración como una plantilla sin realizar un pedido, pulse **Guardar configuración**.
    * Para realizar el pedido, asegúrese de que la cuenta a la que se va a realizar el cobro es correcta; revise y acepte los términos y, a continuación, pulse **Suministro**.
 
-   **Nota**: solo se instalan los {{site.data.keyword.baremetal_short}}. El usuario es el responsable de instalar y configurar los distintos componentes después del despliegue del clúster, como por ejemplo VMware vCenter, VMware NSX, VMware vSAN.
+   **Nota:** solo se instalan los {{site.data.keyword.baremetal_short}}. El usuario es el responsable de instalar y configurar los distintos componentes después del despliegue del clúster, como por ejemplo VMware vCenter, VMware NSX, VMware vSAN.
 
 ### Resultados
 
