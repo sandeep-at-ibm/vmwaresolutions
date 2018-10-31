@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -23,10 +23,9 @@ Dans le cadre du processus de commande de votre instance vCenter Server, les act
 * Déploiement d'un exemple de routeur logique distribué (DLR) NSX pour éventuelle communication d'est en ouest entre des charges de travail locales connectées à des réseaux de la couche 2 (L2).
 * Déploiement et configuration d'un dispositif NSX Edge pour la conversion des adresses réseau de la plage d'adresses IP du
 commutateur logique de charge de travail en une adresse IP publique sur les règles de conversion d'adresses réseau.
-* Si vous avez installé le service Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager est configuré de manière à effectuer une sauvegarde quotidienne des configurations NSX. Pour plus d'informations, voir [Remarques relatives à l'installation de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-installing-veeam-on-ibm-cloud).
+* Si vous avez installé le service Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager est configuré de manière à effectuer une sauvegarde quotidienne des configurations NSX. Pour plus d'informations, voir [Remarques relatives à l'installation de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud).
 
-
-## Configuration des paramètres réseau pour vos machines virtuelles
+## Procédure de configuration des paramètres réseau pour vos machines virtuelles
 
 Pour profiter des avantages de NSX sur vos machines virtuelles de charge de travail, vous devez configurer un certain nombre de paramètres, comme suit, lorsque vous créez vos machines virtuelles :
 
@@ -47,9 +46,9 @@ Pour profiter des avantages de NSX sur vos machines virtuelles de charge de trav
 
 3. Affectez la passerelle par défaut de la machine virtuelle avec `192.168.10.1`. Cette adresse IP est celle de NSX DLR sur le même commutateur logique que les machines virtuelles de la charge de travail.
 
-## Activation de la règle de conversion des adresses réseau source
+## Procédure d'activation de la règle SNAT
 
-Si vous voulez que vos machines virtuelles de charge de travail bénéficient d'un accès sortant à Internet, vous devez activer la règle de conversion d'adresses réseau source associée. L'activation de la règle de conversion d'adresses réseau source permet de convertir l'accès à Internet depuis vos machines virtuelles en une seule adresse IP publique. Effectuez les opérations suivantes sur le client Web VMware vSphere :
+Si vous voulez que vos machines virtuelles de charge de travail bénéficient d'un accès sortant à Internet, vous devez activer la règle de conversion d'adresses réseau source (SNAT) associée. L'activation de la règle SNAT permet de convertir l'accès à Internet depuis vos machines virtuelles en une seule adresse IP publique. Effectuez les opérations suivantes sur le client VMware vSphere Web Client :
 
 1. Cliquez sur **Home > Networking & Security**.
 2. Dans le volet de navigation, cliquez sur **NSX Edges**, puis cliquez deux fois sur le serveur de périphérie nommé **customer-nsx-edge**.
@@ -58,7 +57,7 @@ Si vous voulez que vos machines virtuelles de charge de travail bénéficient d'
 
 Pour plus d'informations sur les règles de conversion d'adresses réseau source de NSX Edge, voir [Gestion des règles de conversion d'adresses réseau](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 
-## Identification des détails des sous-réseau client
+## Procédure d'identification des détails des sous-réseaux client
 
 Etant donné que le serveur de périphérie **customer-nsx-edge** est conçu pour votre usage exclusif, vous pouvez le modifier afin de définir d'autres règles de conversion d'adresses réseau pour le trafic entrant ou sortant. Ces règles doivent utiliser uniquement les adresses IP des sous-réseaux client publics ou privés commandés pour vous.
 

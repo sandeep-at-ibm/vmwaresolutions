@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,9 +16,9 @@ Le processus d'application de modules de correction et de mises à jour aux inst
 
 ## Avant de commencer
 
-**Important :** lors de la mise à niveau d'une instance vCenter Server vers une instance vCenter Server with Hybridity Bundle, vous devez d'abord appliquer au moins la mise à jour logicielle vCenter Server V2.3 de base. Vous devez le faire avant de pouvoir effectuer la mise à niveau de licence vers Hybridity Bundle. 
+**Important :** lors de la mise à niveau d'une instance vCenter Server vers une instance vCenter Server with Hybridity Bundle, vous devez d'abord appliquer au moins la mise à jour logicielle vCenter Server V2.3 de base. Vous devez le faire avant de pouvoir effectuer la mise à niveau de licence vers Hybridity Bundle.
 
-Les partenaires commerciaux n'ont pas la possibilité de mettre à niveau une instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle. 
+Les partenaires commerciaux n'ont pas la possibilité de mettre à niveau une instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle.
 
 Avant d'appliquer une mise à jour, développez l'entrée de mise à jour en cliquant sur la flèche vers le bas et vérifiez les informations suivantes :
 * La version de la mise à jour. Vous devez appliquer les mises à jour par ordre chronologique, c'est-à-dire de la plus ancienne à la plus récente. Assurez-vous d'avoir appliqué toutes les mises à jour précédentes avant d'appliquer la plus récente. Par exemple, vous devez appliquer la mise à jour V2.3 avant de tenter d'appliquer la mise à jour V2.4.
@@ -48,7 +48,7 @@ Tableau 1. Niveaux de mise à jour et impact
   </tr>
 </table>
 
-## Application de mises à jour et de modules de correction à des instances vCenter Server
+## Procédure d'application de mises à jour et de modules de correction à des instances vCenter Server
 
 Cette procédure s'applique aux instances déployées en version 2.1 et ultérieures. Pour les instances déployées en version 2.0 et antérieures, vous devez appliquer les mises à jour VMware manuellement.
 
@@ -58,7 +58,7 @@ Cette procédure s'applique aux instances déployées en version 2.1 et ultérie
    S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec l'instance de serveur virtuel IBM CloudDriver, lié à une règle de pare-feu ou à un autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
 4. Cliquez sur **Mise à jour et module de correction** dans le panneau de navigation de gauche.
 
-   **Remarque** : la page **Mise à jour et module de correction** pour une instance ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. Les mises à jour VMware doivent être appliquées manuellement.
+   **Remarque :** la page **Mise à jour et module de correction** d'une instance ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. Les mises à jour VMware doivent être appliquées manuellement.
 
    {{site.data.keyword.vmwaresolutions_short}} applique les mises à jour VMware dans les circonstances suivantes :
    * Lorsqu'une nouvelle instance vCenter Server est déployée
@@ -74,7 +74,7 @@ Cette procédure s'applique aux instances déployées en version 2.1 et ultérie
    *  Pour planifier une mise à jour ultérieure, cliquez sur l'icône de menu déroulant dynamique dans la colonne **Actions** de l'entrée de mise à jour, puis cliquez sur **Planifier la mise à jour**. Sélectionnez la date et l'heure ainsi que le fuseau horaire auxquels la mise à jour devra commencer. Cliquez sur **OK**.
 7. Si vous appliquez des mises à jour à des instances de serveurs vCenter dans une configuration de déploiement multisite, une section intitulée **Etapes de mise à jour obligatoires** s'affiche. Cette section répertorie les opérations de mise à jour requises pour toutes les instances du déploiement multisite. Effectuez les étapes dans l'ordre en cliquant sur **Appliquer la mise à jour** pour chaque étape. Vous devez attendre la fin de chaque étape avant de passer à la suivante.   
 
-## Mise à niveau vers l'instance vCenter Server with Hybridity Bundle
+## Procédure de mise à niveau vers l'instance vCenter Server with Hybridity Bundle
 
 Durant la mise à niveau de licence vers Hybridity Bundle, une mise à niveau vers l'édition VMware NSX Advanced s'effectue immédiatement si votre instance vCenter Server utilise l'édition VMware NSX Base.
 

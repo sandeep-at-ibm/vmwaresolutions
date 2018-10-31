@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -39,11 +39,11 @@ Tableau 2. Nomenclature des composants logiciels des instances vCenter Server
 | VMware       | NSX for vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server édition Standard | 2012R2       |
 
-**Remarque** : VMware vSAN est un composant optionnel.
+**Remarque :** VMware vSAN est un composant optionnel.
 
 ## Paramètres de configuration avancée pour les serveurs ESXi
 
-Consultez le tableau suivant pour obtenir une présentation des paramètres de configuration avancée appliqués aux serveurs ESXi. Ces paramètres varient selon que l'instance vCenter Server est déployée dans la version V2.2 ou dans une version ultérieure, ou mise à niveau vers la version 2.2 ou une version ultérieure à partir de la version 2.1 ou d'une version antérieure. 
+Consultez le tableau suivant pour obtenir une présentation des paramètres de configuration avancée appliqués aux serveurs ESXi. Ces paramètres varient selon que l'instance vCenter Server est déployée dans la version V2.2 ou dans une version ultérieure, ou mise à niveau vers la version 2.2 ou une version ultérieure à partir de la version 2.1 ou d'une version antérieure.
 
 Les paramètres s'appliquent aux nouvelles instances et aux nouveaux clusters des instances de version 2.2 ou ultérieure. Ils ne s'appliquent pas aux nouveaux clusters d'instances existantes de la version 2.1 ou d'une version antérieure ou d'instances existantes qui sont mises au niveau vers la version 2.2 ou une version ultérieure.
 
@@ -61,7 +61,7 @@ Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les inst
 | TCP/IP Heap Size | **TcpipHeapSize** = 32 | Non défini |
 | TCP/IP Heap Maximum | **TcpipHeapMax** = 1536 | Non défini |
 
-**Remarques** :
+**Remarques :**
 * Le paramètre **MaxVolumes** est obligatoire pour le service IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} car ce service risque d'utiliser plus que le nombre de montages NFS par défaut sur le serveur ESXi.
 * La valeur **Non défini** d'un paramètre de configuration indique que le nouveau paramètre n'est pas automatiquement appliqué car il nécessite un réamorçage des serveurs ESXi, ce qui risque de provoquer une interruption.
 
@@ -117,7 +117,7 @@ Afin de mettre à jour le paramètre de MTU pour le commutateur public, procéde
 2. Sur l'onglet **Propriétés**, sélectionnez l'option **Avancé**.
 3. Assurez-vous que la valeur maximale indiquée pour **MTU** est 1500.
 
-   **Remarque** : lorsque la taille de MTU dans un commutateur vDS est modifiée, les liaisons montantes connectées (NIC physiques) sont à nouveau désactivées, puis activées. Il en résulte une brève indisponibilité pour les machines virtuelles qui utilisent la liaison montante. Par conséquent, il est recommandé de planifier la mise à jour du paramètre de MTU durant le temps d'indisponibilité planifié.
+   **Remarque :** lorsque la taille de MTU dans un commutateur vDS est modifiée, les liaisons montantes connectées (NIC physiques) sont désactivées, puis réactivées. Il en résulte une brève indisponibilité pour les machines virtuelles qui utilisent la liaison montante. Par conséquent, il est recommandé de planifier la mise à jour du paramètre de MTU durant le temps d'indisponibilité planifié.
 
 ### Liens connexes
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-09-25"
 
 Affichez les informations récapitulatives et détaillées des instances VMware Federal qui sont mises à disposition pour différents comptes utilisateur.
 
-## Affichage du récapitulatif des instances VMware Federal
+## Procédure d'affichage du récapitulatif des instances VMware Federal
 
 Pour afficher un récapitulatif de toutes les instances VMware Federal qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances. 
+2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances.
 3. Dans le tableau **vCenter Server**, affichez la liste des instances qui sont mises à disposition dans le compte utilisateur sélectionné.
 
 Tableau 1. Eléments d'une instance VMware Federal
@@ -45,7 +45,7 @@ Tableau 2. Description des statuts des instances d'un centre de données VMware 
 | Erreur de suppression | Une erreur s'est produite au cours du processus de suppression de l'instance. |
 | Supprimé | L'instance a été supprimée. |
 
-## Affichage des détails des propriétés d'une instance VMware Federal
+## Procédure d'affichage des détails des propriétés d'une instance VMware Federal
 
 Pour afficher les détails des propriétés d'une instance :
 
@@ -68,7 +68,7 @@ Tableau 3. Propriétés d'instance VMware Federal
 | Sous-domaine DNS | Il s'agit du sous-domaine DNS du nom de domaine racine où résident les noms d'hôte des instances vCenter Server locales. Le nom de sous-domaine est au format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 | Statut | Statut de l'instance. |
 
-## Affichage des informations d'accès relatives aux instances VMware Federal
+## Procédure d'affichage des informations d'accès aux instances VMware Federal
 
 Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance.
 
@@ -91,7 +91,7 @@ Tableau 4. Informations d'accès relatives aux composants d'instance
 | vCenter ADMIN  | Le nom d'utilisateur et le mot de passe de connexion unique VMware vCenter que vous pouvez utiliser pour vous connecter au serveur vCenter Server à l'aide du client Web vSphere.  |
 | vCenter SSH  | Le nom d'utilisateur et le mot de passe que vous pouvez utiliser pour accéder à la machine virtuelle vCenter Server via une connexion SSH.  |
 
-## Affichage de l'historique de déploiement des instances VMware Federal
+## Procédure d'affichage de l'historique de déploiement des instances VMware Federal
 
 Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance.
 
@@ -110,7 +110,7 @@ Si des erreurs se produisent lors du déploiement ou de la suppression d'une ins
 
 Gérez vos instances depuis la console {{site.data.keyword.vmwaresolutions_short}} ou le client Web VMware vSphere.
 
-**Important** : avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client Web vSphere et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton **Console vCenter** et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.
+**Important :** avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client vSphere Web Client et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton **Console vCenter** et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.
 
 Passez en revue les rubriques suivantes pour obtenir des informations qui vous aideront à exécuter les instructions de connexion :
 *  Pour les exigences et procédures à effectuer avant d'accéder au client Web vSphere, voir [Dépassement du délai d'attente lors de la connexion au client Web vSphere](../vmonic/trbl_timeout_vc_console.html).
