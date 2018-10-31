@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,12 +12,12 @@ lastupdated: "2018-09-25"
 
 Affichez les informations récapitulatives et détaillées des instances NetApp ONTAP Select qui sont mises à disposition pour différents comptes utilisateur.
 
-## Affichage du récapitulatif des instances NetApp ONTAP Select
+## Procédure d'affichage du récapitulatif des instances NetApp ONTAP
 
 Pour afficher un récapitulatif de toutes les instances NetApp ONTAP Select qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
-2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances. 
+2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances.
 3. Dans le tableau **Instances NetApp ONTAP Select**, affichez la liste des instances qui sont mises à disposition dans le compte utilisateur sélectionné.
 
 Tableau 1. Eléments d'une instance NetApp ONTAP Select
@@ -30,7 +30,7 @@ Tableau 1. Eléments d'une instance NetApp ONTAP Select
 | Heure de création | Date et heure de création de l'instance. |   
 | Statut | Statut de l'instance. Ce statut peut prendre l'une des valeurs suivantes :<ul><li>Création en cours : l'instance est en cours de création.</li><li>Génération en cours ; l'instance est en cours de configuration.</li><li>Prêt à l'emploi : l'instance est prête à l'emploi.</li><li>Modification en cours : l'instance est en cours de modification.</li><li>Echec : le processus de création, de configuration ou de modification a échoué.</li><li>Suppression en cours : l'instance est en cours de suppression.</li><li>Erreur de suppression : une erreur s'est produite au cours de la suppression de l'instance.</li><li>Supprimé : l'instance est supprimée.</li></ul>|
 
-## Affichage des détails des propriétés d'une instance NetApp ONTAP Select
+## Procédure d'affichage des détails des propriétés des instances NetApp ONTAP
 
 Pour afficher les détails des propriétés d'une instance :
 
@@ -55,7 +55,7 @@ Tableau 2. Propriétés d'instance NetApp ONTAP Select
 | Sous-domaine DNS | Le sous-domaine est le nom du sous-domaine DNS du nom de domaine racine où résident les noms d'hôte des instances NetApp ONTAP Select locales. Le nom de sous-domaine est au format `<subdomain_label>.<root_domain>`. |
 | Statut | Statut de l'instance. |
 
-## Affichage des informations d'accès relatives aux instances NetApp ONTAP Select
+## Procédure d'affichage des informations d'accès aux instances NetApp ONTAP
 
 Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance.
 
@@ -84,7 +84,7 @@ Tableau 3. Informations d'accès relatives aux composants des instances NetApp O
 | vCenter ADMIN | Nom d'utilisateur et mot de passe de connexion unique VMware vCenter que vous pouvez utiliser pour vous connecter au serveur vCenter Server à l'aide du client Web vSphere. |
 | vCenter SSH | Nom d'utilisateur et mot de passe que vous pouvez utiliser pour accéder à la machine virtuelle vCenter Server via une connexion SSH. |
 
-## Affichage de l'historique de déploiement des instances NetApp ONTAP Select
+## Procédure d'affichage de l'historique de déploiement des instances NetApp ONTAP
 
 Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance.
 
@@ -102,7 +102,7 @@ Si des erreurs se produisent lors du déploiement ou de la suppression d'une ins
 1. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche.
 2. Sous **CLUSTERS**, affichez le récapitulatif concernant les clusters NetApp ONTAP Select.
 
-	Tableau 5: Eléments des clusters NetApp ONTAP Select
+	Tableau 5. Eléments des clusters NetApp ONTAP Select
 
 	 <table>
 	   <tr>
@@ -163,7 +163,7 @@ Tableau 6. Détails des serveurs ESXi d'un cluster NetApp ONTAP Select
 
 Gérez vos instances depuis la console {{site.data.keyword.vmwaresolutions_short}}, le client Web VMware vSphere ou la console NetApp.
 
-**Important** : avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client Web vSphere et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton **Console vCenter** et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.
+**Important :** avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client vSphere Web Client et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton **Console vCenter** et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.
 
 Consultez les rubriques suivantes pour plus d'informations sur l'exécution des instructions de connexion :
 
