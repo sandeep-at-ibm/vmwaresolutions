@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -13,6 +13,14 @@ lastupdated: "2018-09-21"
 Para eliminar la licencia del paquete híbrido (Hybridity) de la instancia de vCenter Server, debe sustituir las claves de licencia de alquiler de VMware NSX y VMware vSAN con las claves de Traiga su propia licencia (BYOL) en el cliente web de VMware vSphere. Además, debe abrir una incidencia de soporte para cancelar los cargos de las licencias de alquiler.
 
 **Importante:** La degradación de la licencia puede hacer que falle la instancia de vCenter Server. Puede optar por degradar una licencia bajo su propio riesgo, pero en primer lugar tenga en cuenta las funciones que no están disponibles cuando degrade. Para obtener más información, consulte [Gráfico de comparación para las ediciones de componentes de VMware](../archiref/solution/appendix.html).
+
+## Consideraciones importantes antes de eliminar el paquete de Hybridity de un entorno de varios sitios
+
+Revise las consideraciones siguientes antes de eliminar el paquete de Hybridity de un entorno de varios sitios:
+
+* Debe aplicar las licencias BYOL a todos los despliegues de varios sitios antes de eliminar las licencias de alquiler.
+* Debe combinar las licencias NSX y tener suficiente capacidad para utilizar en todos los despliegues de varios sitios.
+* Debe crear una sola incidencia de soporte para eliminar el paquete de Hybridity de todos los despliegues de varios sitios.
 
 ## Antes de eliminar el paquete híbrido (Hybridity)
 
@@ -26,7 +34,7 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
 
 ## Procedimiento para eliminar el paquete híbrido (Hybridity)
 
-1. Inicie sesión en el cliente web de VMware vSphere como **administrador**.
+1. Inicie la sesión como **Administrador** en el cliente web de VMware vSphere en el que desea eliminar el paquete de Hybridity.
 2. Pulse **Inicio > Administración > Licencia > Licencias**.
 3. Pulse el separador **Activos**.
 4. Siga los pasos siguientes para instalar un BYOL de VMware NSX:
@@ -65,13 +73,13 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
     6. Pulse **Aceptar** para asignar la licencia.
 8. Elimine las licencias de alquiler.
    1. Pulse el separador **Licencias**.
-   2. Seleccione las licencias que ha sustituido en los pasos 4 a 7.
+   2. Seleccione las licencias que ha sustituido en los pasos 4 - 7.
    3. Pulse el icono **Eliminar licencias**.
 9. Abra una incidencia de soporte y proporcione la siguiente información para cancelar los cargos de las licencias de alquiler:
-  * El nombre de la instancia de vCenter Server.
-  * El ID asociado con la instancia de vCenter Server.
-  * Una lista de las claves de licencia de BYOL que ha instalado en este procedimiento. Cuando sea aplicable, proporcione el nombre del clúster con las claves de licencia para los clústeres vSphere y vSAN.
-  * Una lista de las claves de licencia de alquiler que ha eliminado en este procedimiento. Cuando sea aplicable, proporcione el nombre del clúster con las claves de licencia para los clústeres vSphere y vSAN.
+  * El nombre de la instancia o instancias de vCenter Server.
+  * El ID asociado con la instancia o instancias de vCenter Server.
+  * Una lista de las claves de licencia de BYOL que ha instalado en este procedimiento. Cuando sea aplicable, proporcione la instancia y el nombre de clúster con las claves de licencia para los clústeres vSphere y vSAN.
+  * Una lista de las claves de licencia de alquiler que ha eliminado en este procedimiento. Cuando sea aplicable, proporcione la instancia y el nombre de clúster con las claves de licencia para los clústeres vSphere y vSAN.
 
   **Nota:** Los equipos de operaciones y soporte de IBM acceden a la capa de gestión de vCenter de la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) para verificar que se han eliminado las licencias de alquiler antes de cancelar los cargos de licencia de alquiler del paquete híbrido (Hybridity).
 

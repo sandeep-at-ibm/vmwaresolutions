@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -24,11 +24,11 @@ Los usuarios y las contraseñas correspondientes a las operaciones automáticas 
 
 Cada servicio crea una cuenta de usuario interna en vCenter Server. Esta cuenta es necesaria para que las operaciones de gestión que están asociadas a un servicio se puedan conectar con vCenter Server para realizar las operaciones en el servicio.
 
-**Importante**: Para evitar interrupciones y problemas de conexión, si cambia el ID de usuario, la contraseña o los valores de caducidad de contraseña de esta cuenta de usuario, asegúrese de actualizar también la información en el servicio asociado.
+**Importante:** Para evitar interrupciones y problemas de conexión, si cambia el ID de usuario, la contraseña o los valores de caducidad de contraseña de esta cuenta de usuario, asegúrese de actualizar también la información en el servicio asociado.
 
 El ID de usuario de esta cuenta está en el formato `<service_name>-<truncated service_uuid>@test.local` o `<service_name>-<truncated service_uuid>@example-domain.local`. Por ejemplo, el ID de usuario que utiliza el servicio Veeam on {{site.data.keyword.cloud_notm}} para conectarse a vCenter Server para realizar copias de seguridad planificadas es `Veeam-<Veeam_uuid>@test.local`.
 
-**Nota**: `<service_name>` junto con `<service_uuid>` se trunca a 20 caracteres.
+**Nota:** El servicio `<service_name>` junto con `<service_uuid>` se trunca a 20 caracteres.
 
 ## Recursos de VMware para instancias de vCenter Server (V1.9 y posteriores)
 
@@ -63,7 +63,7 @@ Tabla 2. Operaciones que se ven afectadas para el acceso raíz de VC/PSC (local)
 
 En la siguiente información se describen las subredes solicitadas por {{site.data.keyword.vmwaresolutions_short}} y se muestran opciones para que pueda solicitar subredes adicionales para su propio uso.
 
-**ATENCIÓN**: no utilice estos componentes para otros fines o la estabilidad del entorno se verá seriamente comprometida.
+** PRECAUCIÓN: ** No utilice estos componentes para otros fines, o la estabilidad de su entorno se vea gravemente comprometida.
 
 Con cada pedido de servidor nativo de {{site.data.keyword.cloud_notm}}, se solicitan de forma predeterminada los siguientes rangos de direcciones IP:
 *  Un rango público primario de 32 direcciones IP
@@ -76,4 +76,4 @@ Además, las siguientes subredes de gestión también están reservadas para {{s
 
 Si necesita utilizar más subredes, puede obtener las direcciones IP que puede utilizar de una de las siguientes formas:
 *  **Opción 1 (recomendada)**: utilice superposiciones de red virtual VMware NSX. Se proporciona una plantilla de VXLAN de muestra cuando se realiza el pedido. Esta VXLAN se puede utilizar como punto de partida para crear sistemas de redes definidos por software (SDN). Para obtener más información, consulte [Configuración de la red para que utilice la NSX Edge gestionado por el cliente](vc_esg_config.html).
-*  **Opción 2**: solicite sus propias redes públicas o privadas portátiles para obtener direcciones IP. Para distinguir las subredes que solicita de las subredes de gestión, puede añadir notas a todas las subredes que solicite.
+*  **Opción 2**: Solicite sus propias subredes públicas o privadas portátiles para obtener direcciones IP. Para distinguir las subredes que solicita de las subredes de gestión, puede añadir notas a todas las subredes que solicite.

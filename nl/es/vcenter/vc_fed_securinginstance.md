@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -27,7 +27,7 @@ Revise la siguiente información para comprender los resultados de proteger la i
 4. Pulse **Proteger instancia**.
 5. Pulse **Aceptar** para confirmar que desea desconectar la instancia de la automatización.
 
-  **Nota**: Antes de completar este paso, asegúrese de que revise la información en la sección **Antes de empezar**.
+  **Nota:** Antes de completar este paso, asegúrese de que revise la información en la sección **Antes de empezar**.
 
 6. Elimine los servicios de gestión destinados al público de VMware NSX Edge Services Gateway (ESG) del entorno y, opcionalmente, elimine el ESG gestionado por el cliente que se despliega durante la automatización.
 7. Restablezca contraseñas o claves para todas las cuentas que utiliza la automatización de IBM. Para obtener más información, consulte [¿Cómo puedo proteger mi entorno para eliminar el acceso por parte de la automatización y el soporte de IBM?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)
