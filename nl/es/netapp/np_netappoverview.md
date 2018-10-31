@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -57,7 +57,7 @@ NetApp ONTAP Select se ejecuta en un clúster de VMware y virtualiza el almacena
 
 En la instancia de NetApp ONTAP Select se incluyen los siguientes componentes.
 
-**Nota**: la disponibilidad y los precios de las configuraciones estandarizadas pueden variar en función del {{site.data.keyword.CloudDataCent_notm}} seleccionado para el despliegue.
+**Nota:** La disponibilidad y los precios de las configuraciones estandarizadas pueden variar en función del {{site.data.keyword.CloudDataCent_notm}} seleccionado para el despliegue.
 
 ### Almacenamiento
 
@@ -102,9 +102,9 @@ Dos VSI (instancias de servidor virtual):
 *  VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 *  Cuota de soporte y servicios (una licencia por nodo)
 
-**Importante**: Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+**Importante:** Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el 	{{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
 
-**ATENCIÓN**: el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
+**ATENCIÓN:** el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 *  Añadir, modificar, devolver, eliminar o apagar componentes
 *  Ampliar o reducir la capacidad de la instancia mediante la adición o eliminación de servidores ESXi
 *  Rearrancar servicios

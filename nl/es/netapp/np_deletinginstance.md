@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,7 +22,7 @@ Debido a las dependencias entre recursos, los componentes de la instancia no se 
 
 **Atención:** se le facturará por la instancia suprimida hasta el final del ciclo de facturación.
 
-## Supresión de instancias de la página Instancias desplegadas
+## Procedimiento para suprimir instancias de la página Instancias desplegadas
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de NetApp ONTAP Select**, localice la instancia que desea suprimir.
@@ -32,7 +32,7 @@ Debido a las dependencias entre recursos, los componentes de la instancia no se 
    1. En la columna **Acciones**, pulse el icono Suprimir de nuevo.
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
-## Supresión de instancias de la página de detalles de la instancia
+## Procedimiento para suprimir instancias de la página de detalles de la instancia
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de NetApp ONTAP Select**, pulse la instancia que desea suprimir.

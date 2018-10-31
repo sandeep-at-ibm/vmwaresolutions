@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-25"
 
 Ver el resumen y la información detallada de las instancias de NetApp ONTAP Select que se suministran para cuentas de usuario diferentes.
 
-## Visualización del resumen de instancias de NetApp ONTAP Select
+## Procedimiento para visualizar el resumen de instancias de NetApp ONTAP Select
 
 Para ver un resumen de todas las instancias de NetApp ONTAP Select que se han suministrado para una cuenta de usuario, complete los pasos siguientes:
 
@@ -30,7 +30,7 @@ Tabla 1. Elementos de la instancia de NetApp ONTAP Select
 | Hora de creación | La fecha y hora en que se ha creado la instancia. |   
 | Estado | El estado de la instancia. El estado puede tener uno de los valores siguientes:<ul><li>Creando: la instancia se está creando.</li><li>Compilando: la instancia se está configurando.</li><li>Listo para su uso: la instancia está lista para ser utilizada.</li><li>Modificando: la instancia se está modificando.</li><li>Fallido: Se ha producido un error durante el proceso de creación, configuración o modificación.</li><li>Suprimiendo: la instancia se está suprimiendo.</li><li>Error de supresión: se ha producido un error cuando se estaba suprimiendo la instancia.</li><li>Suprimido: la instancia se ha suprimido.</li></ul>|
 
-## Visualización de los detalles de las propiedades de las instancias de NetApp ONTAP Select
+## Procedimiento para visualizar los detalles de las propiedades de las instancias de NetApp ONTAP Select
 
 Para ver los detalles de las propiedades de una instancia:
 
@@ -55,7 +55,7 @@ Tabla 2. Propiedades de la instancia de NetApp ONTAP Select
 | DNS, Subdomain | El subdominio es el nombre del subdominio DNS del nombre del dominio raíz en el que residen los nombres de host de la instancia local de NetApp ONTAP Select. El nombre del subdominio está en el formato `<subdomain_label>.<root_domain>`. |
 | Estado | El estado de la instancia. |
 
-## Visualización de información de acceso para instancias de NetApp ONTAP Select
+## Procedimiento para visualizar información de acceso para instancias de NetApp ONTAP Select
 
 En **Información de acceso**, consulte la información de acceso para los componentes relacionados con la instancia. Estas contraseñas son contraseñas iniciales que genera el sistema. Si las cambia fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, no se actualizarán en la página de resumen de la instancia.
 
@@ -84,7 +84,7 @@ Tabla 3. Información de acceso correspondiente a los componentes relacionados c
 | vCenter ADMIN | El nombre de usuario y la contraseña de inicio de sesión único de VMware vCenter que puede utilizar para iniciar una sesión en vCenter Server mediante el cliente web de vSphere. |
 | vCenter SSH | El nombre de usuario y la contraseña que puede utilizar para acceder a vCenter Server VM mediante una conexión SSH. |
 
-## Visualización del historial de despliegues de instancias de NetApp ONTAP Select
+## Procedimiento para visualizar el historial de despliegues de instancias de NetApp ONTAP Select
 
 Pulse **Historial de despliegue** en el panel de navegación izquierdo para ver el historial de despliegue de la instancia.
 
@@ -102,7 +102,7 @@ Si se producen errores durante el despliegue o durante la supresión de la insta
 1. Pulse **Infraestructura** en el panel de navegación izquierdo.
 2. En **CLÚSTERES**, vea el resumen sobre los clústeres de NetApp ONTAP Select.
 
-	Tabla 5: Elementos de clústeres de NetApp ONTAP Select
+	Tabla 5. Elementos de clústeres de NetApp ONTAP Select
 
 	 <table>
 	   <tr>
@@ -163,7 +163,7 @@ Tabla 6. Detalles de servidor ESXi de un clúster de NetApp ONTAP Select
 
 Gestione sus instancias desde la consola de {{site.data.keyword.vmwaresolutions_short}}, el cliente web de VMware vSphere o la consola de NetApp.
 
-**Importante**: Antes de pulsar la **Consola de vCenter** en la página de resumen de la instancia para ir al cliente web de vSphere y empezar a gestionar sus servidores ESXi, debe iniciar una sesión en el portal VPN del {{site.data.keyword.CloudDataCent_notm}}. Mueva el puntero del ratón sobre el botón de la **consola de vCenter** y siga las instrucciones para asegurarse de que cumple los requisitos y de que ha realizado los pasos necesarios antes de acceder al cliente web de vSphere.
+**Importante:** Antes de pulsar la **Consola de vCenter** en la página de resumen de la instancia para ir al cliente web de vSphere y empezar a gestionar sus servidores ESXi, debe iniciar una sesión en el portal VPN del {{site.data.keyword.CloudDataCent_notm}}. Mueva el puntero del ratón sobre el botón de la **consola de vCenter** y siga las instrucciones para asegurarse de que cumple los requisitos y de que ha realizado los pasos necesarios antes de acceder al cliente web de vSphere.
 
 Para obtener más información que le ayudará a seguir las instrucciones de inicio de sesión, revise los temas siguientes:
 
