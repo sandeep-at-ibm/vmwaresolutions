@@ -60,7 +60,7 @@ Para que o SIOC determine quando um dispositivo de armazenamento está congestio
 
 Também é possível limitar discos virtuais individuais para VMs individuais ou conceder a eles compartilhamentos diferentes com SIOC. A limitação de discos e a concessão de compartilhamentos diferentes permite que você corresponda e alinhe o ambiente à carga de trabalho com o número de IOPS do volume de armazenamento de arquivo adquirido. O limite é configurado pelo IOPS e é possível configurar um peso ou compartilhamentos diferentes.
 
-Compartilhamentos de discos virtuais configurados como **Alto** (2.000 compartilhamentos) recebem duas vezes mais E/S do que um disco configurado como **Normal** (1.000 compartilhamentos) e quatro vezes mais do que um configurado como **Baixo** (500 compartilhamentos).**Normal** é o valor padrão para todas as VMs, portanto, será necessário ajustar as configurações **Normal** das VMs que precisarem.
+Compartilhamentos de discos virtuais configurados como **Alto** (2.000 compartilhamentos) recebem duas vezes mais E/S do que um disco configurado como **Normal** (1.000 compartilhamentos) e quatro vezes mais do que um configurado como **Baixo** (500 compartilhamentos). **Normal** é o valor padrão para todas as VMs, portanto, será necessário ajustar as configurações **Normal** das VMs que precisarem.
 
 ## Armazenamento adicional para NFS v3
 
