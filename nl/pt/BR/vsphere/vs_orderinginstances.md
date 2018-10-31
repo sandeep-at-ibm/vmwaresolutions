@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -76,7 +76,7 @@ Você tem as seguintes opções para licenciamento dos componentes do VMware sel
 
 Se você optar por comprar qualquer licença, exceto para o vSphere Enterprise Plus e o vCenter Server, e pedir vários servidores ESXi, um chamado do {{site.data.keyword.cloud_notm}} será aberto automaticamente em seu nome para combinar as chaves de licença. Você é responsável por acompanhar o chamado para assegurar que você use apenas as chaves de licença geradas pela equipe do DevOps.
 
-**Importante**: usar chaves de licença individuais juntamente com as chaves de licença combinadas não atende aos requisitos de pagamento para as licenças que você precisará.
+**Importante:** usar chaves de licença individuais com as chaves de licença combinadas não atende aos requisitos de pagamento para as licenças de que você precisará.
 
 ## Configurações do Bare Metal Server
 
@@ -116,13 +116,10 @@ Para pedidos sem vSAN, os servidores ESXi são pedidos com um chassi de 12 disco
 Para pedidos com vSAN, os servidores ESXi são pedidos com um chassi de 12 discos e quatro discos pedidos: dois para o S.O. ESXi e dois reservados para armazenamento em cache. Essas configurações são definidas por padrão e não podem ser mudadas. É possível pedir mais discos de capacidade selecionando **Tipo e tamanho do disco para discos de capacidade do vSAN** e **Número de discos de capacidade do vSAN**.
 
 Se você selecionar o componente VMware vSAN para o cluster, especifique as configurações a seguir.
-
 * **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
 * **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
-* **Tipo de disco para discos de cache vSAN**: selecione uma opção para os discos de cache necessários.
-
-    **Nota**: se desejar incluir discos de capacidade acima do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
-* **Número de discos de cache vSAN**: especifique o número de discos de cache que deseja incluir.
+* Se você desejar incluir discos de capacidade além do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
+* Revise os valores **Tipo de disco para discos de cache vSAN** e **Número de discos de cache vSAN**. Esses valores dependem de a caixa **Intel Optane de alto desempenho** estar ou não marcada.
 
 ## Configurações da interface de rede
 
@@ -223,7 +220,7 @@ Com base em suas configurações, o custo estimado é gerado instantaneamente e 
    * Para salvar a configuração como um modelo sem fazer um pedido, clique em **Salvar configuração**.
    * Para fazer o pedido, assegure-se de que a conta a ser cobrada está correta, revise e aceite os termos e, em seguida, clique em **Provisão**.
 
-   **Nota**: Apenas o {{site.data.keyword.baremetal_short}} são instalados. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como VMware vCenter, VMware NSX, VMware vSAN.
+   ** Nota: **  somente o  {{site.data.keyword.baremetal_short}}  está instalado. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como VMware vCenter, VMware NSX, VMware vSAN.
 
 ### Resultados
 

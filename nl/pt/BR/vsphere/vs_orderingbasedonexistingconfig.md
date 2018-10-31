@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-10"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -19,7 +19,7 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 *  Você revisou os requisitos e as considerações em [Requisitos e planejamento para clusters do vSphere](vs_planning.html).
 *  Você criou um modelo de configuração para ser reutilizado.
 
-## Procedimento
+## Procedimento para pedir clusters do vSphere com base nas configurações existentes
 
 1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação à esquerda e, em seguida, clique em **VMware vSphere** na seção **Datacenters virtuais**.
 2. Na página **VMware vSphere on IBM Cloud**, clique em **Criar**.  
@@ -30,7 +30,7 @@ Assegure-se de que tenha concluído as tarefas a seguir:
    * Para salvar a configuração como um modelo sem fazer um pedido, clique em **Salvar configuração**.
    * Para fazer o pedido, assegure-se de que a conta a ser cobrada está correta, revise e aceite os termos e, em seguida, clique em **Provisão**.
 
-   **Nota**: Apenas o {{site.data.keyword.baremetal_short}} são instalados. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como o VMware vCenter, o VMware NSX, o VMware vSAN.
+   ** Nota: **  somente o  {{site.data.keyword.baremetal_short}}  está instalado. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como o VMware vCenter, o VMware NSX, o VMware vSAN.
 
 ## Resultados
 

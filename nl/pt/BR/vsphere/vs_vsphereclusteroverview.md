@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -22,7 +22,7 @@ Use essa oferta para criar um novo cluster de servidores ESXi ou ajuste a escala
 
 Revise os componentes do VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
-**Nota**: a disponibilidade e a precificação de configurações de hardware padronizadas podem variar com base no {{site.data.keyword.CloudDataCent_notm}} selecionado para implementação.
+**Nota:** a disponibilidade e a precificação de configurações de hardware padronizadas podem variar com base no {{site.data.keyword.CloudDataCent_notm}} que está selecionado para implementação.
 
 ### Componentes do VMware
 
@@ -82,7 +82,7 @@ Um Bare Metal Server {{site.data.keyword.cloud_notm}} com a configuração de re
 * Um {{site.data.keyword.cloud_notm}} Bare Metal Server com o VMware vSphere Enterprise Plus 6.0u2 ou 6.5u1  
 * Componentes opcionais do VMware apresentados em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
-**Importante**: deve-se gerenciar os servidores ESXi, componentes opcionais do VMware e hardware adicional que são pedidos e entregues à sua conta {{site.data.keyword.cloud_notm}} apenas no {{site.data.keyword.slportal}}. Depois de criar um novo cluster no console do {{site.data.keyword.vmwaresolutions_short}}, é possível retornar para o console e usar as informações salvas para escalar o novo cluster. Para obter mais informações, consulte [Ajustando a escala de clusters existentes do
+**Importante:** deve-se gerenciar os servidores ESXi, os componentes opcionais do VMware e o hardware adicional que são pedidos e entregues à sua conta do {{site.data.keyword.cloud_notm}} somente por meio do {{site.data.keyword.slportal}}. Depois de criar um novo cluster no console do {{site.data.keyword.vmwaresolutions_short}}, é possível retornar para o console e usar as informações salvas para escalar o novo cluster. Para obter mais informações, consulte [Ajustando a escala de clusters existentes do
 vSphere](vs_scalingexistingclusters.html).
 
 ### Links relacionados
