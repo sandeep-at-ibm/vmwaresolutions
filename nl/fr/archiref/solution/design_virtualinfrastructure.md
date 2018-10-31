@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-09-28"
 
 ---
 
@@ -35,7 +35,7 @@ Tableau 1. Configuration de vSphere ESXi
 | Synchronisation d'horloge   | Utilise le serveur NTP {{site.data.keyword.cloud}} |
 | Accès à l'hôte            | Prise en charge de DCUI, ESXi Shell ou SSH |
 | Accès utilisateur            | Authentification locale et MSAD |
-| Résolution de nom de domaine | Utilisation de DNS comme indiqué dans [Conception des services communs](design_commonservice.html) |
+| Résolution de nom de domaine | Utilisation de DNS comme indiqué dans [Conception des services communs](design_commonservice.html). |
 
 Le cluster vSphere héberge les machines virtuelles qui gèrent le cloud central, ainsi que les ressources de calcul des charges de travail utilisateur.
 
@@ -156,7 +156,7 @@ Tableau 3. Mappage VLAN aux types de trafic
 | VLAN  | Désignation | Type de trafic |
 |:----- |:----------- |:------------ |
 | VLAN1 | Public      | Disponible pour l'accès Internet |
-| VLAN2 | Privé A | Gestion ESXi, gestion, VXLAN (VTEP) |
+| VLAN2 | Privé A   | Gestion ESXi, gestion, VXLAN (VTEP) |
 | VLAN3 | Privé B   | vSAN, NFS, vMotion |
 
 Le trafic issu des charges de travail transite sur des commutateurs logiques VXLAN.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -25,10 +25,10 @@ Certains composants, tels que VMware vCenter Server, Platform Services Controlle
 Pour héberger ces sauvegardes, déployez un serveur de fichiers Linux dans votre cluster en procédant comme suit :
 
 1. Commandez un sous-réseau portable privé depuis l'infrastructure {{site.data.keyword.cloud_notm}} et implantez-le sur le même réseau local virtuel que vos composants système. Il s'agit du réseau local virtuel privé sur lequel résident les adresses IP de gestion de vos hôtes.
-2. Téléchargez une image de système d’exploitation sur votre magasin de données de gestion VMware, par exemple, [Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window}, depuis le miroir privé d'{{site.data.keyword.cloud_notm}}.
+2. Téléchargez une image de système d’exploitation sur votre magasin de données de gestion VMware, par exemple, Ubuntu Server 18.04 LTS, depuis le miroir privé d'{{site.data.keyword.cloud_notm}}.
 3. Déployez cette machine virtuelle dans votre cluster sur le groupe de ports de gestion à l'aide d'une adresse IP portable privée commandée précédemment. Vérifiez que la machine virtuelle est configurée pour pointer vers vos serveurs AD/DNS et ajoutez éventuellement la machine virtuelle au serveur DNS de votre sous-domaine.
 4. Créez un ID utilisateur de sauvegarde autre que root sur ce serveur et assurez-vous que tous les services nécessaires sont configurés et démarrés pour les transferts de fichiers. Par exemple FTP ou SSH.
-5. Assurez-vous que cette machine virtuelle est incluse dans votre tâche de sauvegarde de gestion Veeam ou IBM Spectrum Protect Plus. 
+5. Assurez-vous que cette machine virtuelle est incluse dans votre tâche de sauvegarde de gestion Veeam ou IBM Spectrum Protect Plus.
 
 ## Sauvegarde de niveau fichier vCenter
 
