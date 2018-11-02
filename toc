@@ -164,8 +164,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     IBM Cloud Private Hosted
-        services/icp_overview.md
-        services/icp_ordering.md
+        services/managing_icp.md
 
     {: .topicgroup}
     IBM Spectrum Protect Plus on IBM Cloud
