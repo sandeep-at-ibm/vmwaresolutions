@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -34,7 +34,7 @@ For each host, successively:
 
 If you need to revert, and you cannot SSH to the vSphere ESXi host, then you need to log in to the KVM console for the host that needs the revert via the IBM Cloud control window.
 
-Use the ID and password that are listed in the IBM Cloud control window with the IPMI IP address to log in to the IPMI web interface. You need to be connected to the data center where the host is located through VPN. For more information, see [Getting started with the IBM Cloud VPN](https://console.bluemix.net/docs/infrastructure/iaas-vpn/getting-started.html#getting-started-with-virtual-private-networking-vpn).
+Use the ID and password that are listed in the IBM Cloud control window with the IPMI IP address to log in to the IPMI web interface. You need to be connected to the data center where the host is located through VPN. For more information, see [Getting started with VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
 
 1. Go to the Device Details, Remote Mgmt page for the vSphere ESXi host and select **Actions** > **KVM Console**. Another window will open for you to enter the IPMI User and Password.
 2. Select **Remote Control** > **iKVM/HTML5** and click **iKVM/HTML5** to relaunch. You will now be able to access the vSphere ESXi host’s console.
@@ -47,5 +47,5 @@ Use the ID and password that are listed in the IBM Cloud control window with the
 
 ### Related links
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

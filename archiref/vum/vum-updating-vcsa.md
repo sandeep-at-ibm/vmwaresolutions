@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
-#	VCSA Update and SSO Linked vCenters
+# VCSA update and SSO-linked vCenters
 
-## VCSA Update
+## VCSA update
 
 VUM does not update the VCSA, so this section describes the process of updating this appliance. The VCSA deployed in a VCS instance has no internet access, so the update bundle should be downloaded to a jump-server first.
 
@@ -30,7 +30,7 @@ To update the VCSA, follow these steps:
 9. Log back into the vSphere Web Client and check for any errors. Perform a manual scan of VUM, **Home** > **Hosts and Cluster**, then select a datacenter or cluster and select **Update Manager tab** and then click **Scan for Updates**. If this results in an error, see [Resetting VMware Update Manager database on a vCenter Server appliance 6.5 (2147284)](https://kb.vmware.com/s/article/2147284).
 10. After testing, if you need to back out, revert to snapshot or restore the vCenter with a previous backup.
 
-## SSO Linked vCenters
+## SSO-linked vCenters
 
 If you have primary and secondary VCS instances, then your VCSAs are configured to be in a single vCenter Single Sign-On (SSO) domain. Each VCSA will have a deployed VUM instance. The configuration properties that you modify are applied only to the VUM instance that you specify and are not propagated to the other instances in the group.
 
@@ -38,5 +38,5 @@ You can specify a VUM instance by selecting the name of the VCSA with which the 
 
 ### Related links
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

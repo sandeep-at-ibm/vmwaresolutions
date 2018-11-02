@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -17,7 +17,7 @@ If you need to upgrade both NSX and vSphere, VMware recommends completing the NS
 1. **Upgrade ESXi** - Once the ESXi upgrade completes, the host exits maintenance mode, however, you cannot move VMs connected to logical switches to the host until the next step has completed.
 2. **Upgrade NSX VIBs** - Once the VIBs are upgraded and the host has been removed from maintenance mode, you can move VMs connected to logical switches to the host.
 
-NSX is updated by updating NSX Manager by using a download from _my.vmware.com_. Therefore, you need an account to the download the update. If you are consuming IBM Cloud subscription licensing with your VCS instance, you will not be able to download the updates with your **my.vmware.com** account. Therefore, you need to [contact IBM Support](../../vmonic/trbl_support.html).
+NSX is updated by updating NSX Manager by using a download from _my.vmware.com_. Therefore, you need an account to the download the update. If you are consuming {{site.data.keyword.cloud}} subscription licensing with your VCS instance, you will not be able to download the updates with your **my.vmware.com** account. Therefore, you need to [contact IBM Support](../../vmonic/trbl_support.html).
 
 Before beginning the upgrade, check the release notes as known upgrade issues and workarounds are documented in these NSX release notes. Using the release notes, verify that vCenter meets the new system requirements for NSX.
 
@@ -63,5 +63,5 @@ The workflow is as follows:
 
 ### Related links
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

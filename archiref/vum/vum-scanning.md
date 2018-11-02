@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-22"
+lastupdated: "2018-11-01"
 
 ---
 
 # Scanning and review
 
-When you scan hosts, virtual machines, and virtual appliances, you evaluate them against baselines and baseline groups to determine their level of compliance. Inventory objects are scanned, and the results are reviewed to determine how they comply with the baselines and baseline groups. Scan results can be filtered by text search, group selection, baseline selection, and compliance status selection. You can initiate the following scans:
+When you scan hosts, virtual machines (VMs), and virtual appliances, you evaluate them against baselines and baseline groups to determine their level of compliance. Inventory objects are scanned, and the results are reviewed to determine how they comply with the baselines and baseline groups. Scan results can be filtered by text search, group selection, baseline selection, and compliance status selection. You can initiate the following scans:
 *	**Manually Initiate a Scan of vSphere ESXi Hosts** - You can scan vSphere ESXi hosts in the vSphere inventory against attached baselines and baseline groups.
-*	**Manually Initiate a Scan of Virtual Machines and Virtual Appliances** - You can scan virtual machines and virtual appliances in the vSphere inventory against attached baselines and baseline groups.
-*	**Manually Initiate a Scan of a Container Object** - Start a simultaneous scan of hosts, virtual machines, and virtual appliances, by scanning a container object that is a data center or a data center folder.
-*	**Schedule a Scan** - You can configure the vSphere Web Client to scan virtual machines, virtual appliances, and ESXi hosts at specific times or at intervals that are convenient for you.
+*	**Manually Initiate a Scan of Virtual Machines and Virtual Appliances** - You can scan VMs and virtual appliances in the vSphere inventory against attached baselines and baseline groups.
+*	**Manually Initiate a Scan of a Container Object** - Start a simultaneous scan of hosts, VMs, and virtual appliances, by scanning a container object that is a data center or a data center folder.
+*	**Schedule a Scan** - You can configure the vSphere Web Client to scan VMs, virtual appliances, and ESXi hosts at specific times or at intervals that are convenient for you.
 
 ## Manually initiating a scan of vSphere ESXi hosts
 
@@ -26,7 +26,7 @@ When you scan hosts, virtual machines, and virtual appliances, you evaluate them
 
 ## Manually initiating a scan of virtual machines and virtual appliances
 
-You can scan virtual machines and virtual appliances in the vSphere inventory against attached baselines and baseline groups. The virtual machines and appliances that you select are scanned against the attached baselines, depending on the options that you select. All child objects are also scanned, so the larger the virtual infrastructure and the higher up in the object hierarchy that you initiate the scan, the longer the scan takes and the more accurate the compliance view is.
+You can scan VMs and virtual appliances in the vSphere inventory against attached baselines and baseline groups. The VMs and appliances that you select are scanned against the attached baselines, depending on the options that you select. All child objects are also scanned, so the larger the virtual infrastructure and the higher up in the object hierarchy that you initiate the scan, the longer the scan takes and the more accurate the compliance view is.
 
 1.	Using the vSphere Web Client, select **Home** > **VMs and Templates**.
 2.	Right-click a _virtual machine_, _virtual appliance_, or a _folder of virtual machines and appliances_ and click **Scan for Updates**.
@@ -35,7 +35,7 @@ You can scan virtual machines and virtual appliances in the vSphere inventory ag
 
 ##	Manually Initiating a scan of a container object
 
-Start a simultaneous scan of hosts, virtual machines, and virtual appliances, by scanning a container object that is a data center or a data center folder.
+Start a simultaneous scan of hosts, VMs, and virtual appliances, by scanning a container object that is a data center or a data center folder.
 1.	Using the vSphere Web Client, select **Home** > **VMs and Templates**.
 2.	Right-click a _datacenter_ or _datacenter folder_ and click **Scan for Updates**.
 3.	Select the types of updates to scan for. The options are _Virtual Appliance upgrades, VM Hardware upgrades_, and _VMware Tools upgrades_.
@@ -43,7 +43,7 @@ Start a simultaneous scan of hosts, virtual machines, and virtual appliances, by
 
 ##	Scheduling a scan
 
-You can configure the vSphere Web Client to scan virtual machines, virtual appliances, and vSphere ESXi hosts at specific times or at intervals that are convenient for you.
+You can configure the vSphere Web Client to scan VMs, virtual appliances, and vSphere ESXi hosts at specific times or at intervals that are convenient for you.
 
 1.	Using the vSphere Web Client select an object from the inventory. All child objects of the object that you select are also scanned.
 2.	Select the **Monitor tab** and click **Task & Events**.
@@ -55,5 +55,5 @@ You can configure the vSphere Web Client to scan virtual machines, virtual appli
 
 ### Related links
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX on 	{{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
