@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Post-deployment considerations for your VMware instance
 
@@ -14,7 +18,8 @@ lastupdated: "2018-10-03"
 
 Review the following considerations to understand your responsibilities for managing and operating the instance before and after it has been deployed.
 
-**Note:** The following list is not exhaustive. For more information, see [IBM-managed services](../../services/managing_imi.html).
+The following list is not exhaustive. For more information, see [IBM-managed services](../../services/managing_imi.html).
+{:note}
 
 ## IBM Cloud account access
 
@@ -32,7 +37,7 @@ Familiarize yourself with the following limitations for your instance:
 
 Complete the following steps to manage access to your {{site.data.keyword.cloud_notm}} network and to your VMware management components and to plan your {{site.data.keyword.cloud_notm}} network topology.
 
-- Access instance management endpoints using the [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) or your [{{site.data.keyword.cloud_notm}} Direct-Link connection](https://www.ibm.com/cloud/direct-link).
+- Access instance management endpoints by using the [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) or your [{{site.data.keyword.cloud_notm}} Direct-Link connection](https://www.ibm.com/cloud/direct-link).
 - Devise a strategy for public network connectivity from within your instance. Your options include: the sample customer VMware NSX Edge Services Gateway (ESG), gateway appliances such as Vyatta and FortiGate, and proxy servers deployed in the {{site.data.keyword.cloud_notm}} network or on your own network accessed through DirectLink.
 - Plan whether to deploy your workload on {{site.data.keyword.cloud_notm}} VLANs with [{{site.data.keyword.cloud_notm}} portable IP addresses](https://console.bluemix.net/docs/infrastructure/subnets/getting-started.html) or [on NSX logical switches (VXLANs) using your own IP addresses](../nsx/nsx_overview.html). Note that using NSX software-defined networking (SDN) gives you the greatest flexibility to manage and secure your workload network in the {{site.data.keyword.cloud_notm}}.
 - Use NSX ESGs, [IBM Cloud Vyatta](https://console.bluemix.net/catalog/infrastructure/virtual-router-appliance), and DirectLink peering to plan for connectivity to workloads (Network Address Translation, Virtual Private Network, routing).

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Physical infrastructure design
 
@@ -16,7 +20,7 @@ The physical infrastructure comprises the following components:
   <dt class="dt dlterm">Physical compute</dt>
   <dd class="dd">The physical compute provides the physical processing and memory that is used by the virtualization infrastructure. For this design, the compute components are provided by {{site.data.keyword.baremetal_long}} and are listed in the [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php).</dd>
   <dt class="dt dlterm">Physical storage</dt>
-  <dd class="dd">The physical storage provides the raw storage capacity used by the virtualization infrastructure. Storage components are provided either by {{site.data.keyword.baremetal_short}} or by shared Network Attached Storage (NAS) array using NFS v3.</dd>
+  <dd class="dd">The physical storage provides the raw storage capacity that is used by the virtualization infrastructure. Storage components are provided either by {{site.data.keyword.baremetal_short}} or by shared Network Attached Storage (NAS) array by using NFS v3.</dd>
   <dt class="dt dlterm">Physical network</dt>
   <dd class="dd">The physical network provides the network connectivity into the environment that is then used by the network virtualization. The network is provided by the {{site.data.keyword.cloud_notm}} services network and it includes extra services such as DNS and NTP.</dd>
 </dl>
@@ -29,14 +33,17 @@ For more information about storage, see [Shared storage architecture](https://ww
 
 Physical host refers to the {{site.data.keyword.baremetal_short}} in the environment that serves compute resources. The {{site.data.keyword.baremetal_short}} applied in this solution are certified by VMware and listed in the [VMware HCG](http://www.vmware.com/resources/compatibility/search.php).
 
-The server configurations available in the solution meet or exceed the minimum requirements to install, configure, and manage vSphere ESXi. Various configurations are available to satisfy different requirements. For the detailed listing of the exact specifications used for the VMware on {{site.data.keyword.cloud_notm}} solution, see the Bill of Materials for [Cloud Foundation instance](../../sddc/sd_bom.html) or [vCenter Server instance](../../vcenter/vc_bom.html). Note that the {{site.data.keyword.baremetal_short}} reside in the {{site.data.keyword.cloud_notm}}.
+The server configurations available in the solution meet or exceed the minimum requirements to install, configure, and manage vSphere ESXi. Various configurations are available to satisfy different requirements. For the detailed listing of the exact specifications used for the VMware on {{site.data.keyword.cloud_notm}} solution, see the Bill of Materials for [Cloud Foundation instance](../../sddc/sd_bom.html) or [vCenter Server instance](../../vcenter/vc_bom.html).
 
-Each Cloud Foundation instance begins with a 4-host deployment, and each vCenter Server instance begins with a 3- or 4-host deployment depending on the choice of storage solution.
+The {{site.data.keyword.baremetal_short}} reside in the {{site.data.keyword.cloud_notm}}.
+{:note}
 
-The physical host employs two locally attached disks to be allocated to the vSphere ESXi hypervisor. You can allocate more disks by using vSAN as described in the _Physical storage design_ section on this page or by using NetApp ONTAP as described in [NetApp ONTAP Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Each
+Each Cloud Foundation instance begins with a 4-host deployment, and each vCenter Server instance begins with a 3- or 4-host deployment, depending on the choice of storage solution.
+
+The physical host employs two locally attached disks to be allocated to the vSphere ESXi hypervisor. You can allocate more disks by using vSAN as described in the _Physical storage design_ section or by using NetApp ONTAP as described in [NetApp ONTAP Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Each
 physical host has redundant 10-Gbps network connections for both public and private network access.
 
-The technical specifications of the Bare Metal Server are the following:
+The Bare Metal Server has the following specifications:
 * CPU: Dual Intel Xeon, varying core and speed configuration
 * Memory: Varying configuration, 128 GB or larger
 * Network: 4 x 10 Gbps
@@ -71,7 +78,7 @@ In addition to the public and private networks, each {{site.data.keyword.cloud_n
 ### Primary and portable IP blocks
 
 {{site.data.keyword.cloud_notm}} allocates two types of IP addresses to be used within the {{site.data.keyword.cloud_notm}} infrastructure:
-* Primary IP addresses are assigned to devices, Bare Metal, and virtual servers that are provisioned by {{site.data.keyword.cloud_notm}}. You should not assign any IP addresses in these blocks.
+* Primary IP addresses are assigned to devices, Bare Metal, and virtual servers that are provisioned by {{site.data.keyword.cloud_notm}}. Do not assign any IP addresses in these blocks.
 * Portable IP addresses are provided for you to assign and manage as needed.
 
 Primary or portable IP addresses can be made routable to any VLAN within the customer account when **VLAN spanning** is enabled within the {{site.data.keyword.slportal}} or the account is configured as a **Virtual Routing and Forwarding (VRF)** account.
@@ -84,13 +91,13 @@ To allow transparent connection across various subnets where the solution compon
 
 ### Virtual Routing and Forwarding (VRF)
 
-You can also configure the {{site.data.keyword.slportal}} account as a VRF account to provide similar functionality to VLAN spanning, enabling automatic routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
+You can also configure the {{site.data.keyword.slportal}} account as a VRF account to provide similar functions to VLAN spanning, enabling automatic routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
 
 The {{site.data.keyword.vmwaresolutions_short}} console cannot detect whether VRF is enabled in the {{site.data.keyword.slportal}}. You will receive a warning that reminds you to ensure that you enabled either **VLAN spanning** or VRF in your {{site.data.keyword.slportal}} account.
 
 ### Physical host connections
 
-Each physical host in the design has two redundant pairs of 10 Gbps Ethernet connections into each {{site.data.keyword.cloud_notm}} Top of Rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 x 10 Gbps connections. This allows networking interface card (NIC) connections to work independently from each other.
+Each physical host in the design has two redundant pairs of 10-Gbps Ethernet connections into each {{site.data.keyword.cloud_notm}} Top of Rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 x 10-Gbps connections. This allows networking interface card (NIC) connections to work independently from each other.
 
 Figure 1. Physical host NIC connections
 
@@ -136,11 +143,11 @@ The private network connections are configured to use a jumbo frame MTU size of 
 
 ## Physical storage design
 
-Physical storage design consists of the configuration of the physical disks that are installed in the physical hosts and the configuration of the shared file-level storage. This includes the operating system disks of the vSphere ESXi hypervisor and those used for storage of the virtual machines (VMs). Storage for VMs can consist of local disks that are virtualized by VMware vSAN, or of shared file-level storage.
+Physical storage design consists of the configuration of the physical disks that are installed in the physical hosts and the configuration of the shared file-level storage. This includes the operating system disks of the vSphere ESXi hypervisor and the disks that are used for storage of the virtual machines (VMs). Storage for VMs can consist of local disks that are virtualized by VMware vSAN, or of shared file-level storage.
 
 ### Operating system disks
 
-The vSphere ESXi hypervisor is designed to be installed in a persistent location. As a result, the physical hosts contain two 1TB SATA disks in RAID-1 configuration to support redundancy for the vSphere ESXi hypervisor.
+The vSphere ESXi hypervisor is designed to be installed in a persistent location. As a result, the physical hosts contain two 1-TB SATA disks in RAID-1 configuration to support redundancy for the vSphere ESXi hypervisor.
 
 ### Virtual machine storage
 
@@ -154,11 +161,11 @@ For more information about the supported configurations, see the Bill of Materia
 
 ### Shared File-level storage across hosts
 
-When using shared file-level storage, a 2 TB NFS share is attached to the hosts that comprise the initial VMware cluster. This share, which is known as the management share, is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX. The storage is attached by using the NFSv3 protocol and can support up to 4000 IOPS.
+When using shared file-level storage, a 2-TB NFS share is attached to the hosts that comprise the initial VMware cluster. This share, which is known as the management share, is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX. The storage is attached by using the NFSv3 protocol and can support up to 4000 IOPS.
 
-Figure 2. NFS shares attached to VMware deployment
+Figure 2. NFS shares that are attached to VMware deployment
 
-![NFS shares attached to VMware deployment](physical_nfs.svg "NFS shares attached to VMware deployment: management share and customer specified share")
+![NFS shares that are attached to VMware deployment](physical_nfs.svg "NFS shares that are attached to VMware deployment: management share and customer specified share")
 
 You can allocate and mount more file shares for your workloads at the time of purchase or later within the console. You can select from the available {{site.data.keyword.cloud_notm}} Endurance file storage capacity options and performance tiers in the corresponding {{site.data.keyword.CloudDataCent_notm}}. All shares are attached by using the NFSv3 protocol. Additionally, it is possible to attach NFSv3 file shares by applying the NetApp ONTAP Select offering.
 
