@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -18,7 +18,7 @@ There are two main features that are enabled when turning on vSphere DRS on a cl
 
 ### Load Balancing
 
-With load balancing, the distribution and usage of CPU and memory resources for all hosts and virtual machines (VMs) in the cluster are continuously monitored. DRS compares these metrics to an ideal resource utilization given the attributes of the cluster’s resource pools and VMs, the current demand, and the imbalance target. It then performs (or recommends) VM migrations accordingly.
+With load balancing, the distribution and usage of CPU and memory resources for all hosts and virtual machines (VMs) in the cluster are continuously monitored. DRS compares these metrics to an ideal resource utilization given the attributes of the cluster’s resource pools and VMs, and the current demand. It then performs or recommends VM migrations accordingly.
 
 When a VM is first powered on in the cluster, DRS attempts to maintain proper load balancing by either placing the VM on an appropriate host or making a recommendation. The placement or recommendation settings are set in the DRS Automation section of the cluster settings.
 
@@ -84,7 +84,7 @@ For more information about configuring these settings in the vSphere Web Client,
 
 vCenter Server uses admission control to ensure that sufficient resources are available in a cluster to provide failover protection and to ensure that VM resource reservations are respected. In this design, the failover capacity is reserved by specifying a percentage of the cluster resources. The defined failover capacity is set to 25% CPU and 25% memory.
 
-#### Datastore for Heartbeating
+#### Datastore for heartbeating
 
 vSphere HA uses datastore heartbeating to distinguish between hosts that have failed and hosts that reside on a network partition. Datastore heartbeating allows vSphere HA to monitor hosts when a management network partition occurs and to continue to respond to failures that occur. In this design, the heartbeat datastore selection policy is set to “Automatically select datastores accessible from the host”.
 

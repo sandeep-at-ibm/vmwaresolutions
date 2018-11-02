@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -17,7 +17,7 @@ One key differentiator between {{site.data.keyword.cloud}} and other cloud offer
 The cross-vCenter NSX capability allows for linking in a primary, secondary relationship of up to nine NSX managers: one primary and eight secondary. While it is not required to have vCenter servers in an Enhanced Linked Mode (ELM) relationship for cross-vCenter NSX to function, it provides the following benefits:
 
 * Simplified primary, secondary relationship creation by using Single sign-on (SSO) credentials
-* vCenter Server and Cloud Foundation automation configures DNS name resolution for all the sites that are linked together
+* vCenter Server and Cloud Foundation automation configuration for DNS name resolution for all the sites that are linked together
 * Single pane of glass management across all sites for both NSX and normal vCenter functions
 
 ## Multi-site example

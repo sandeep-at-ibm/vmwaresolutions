@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-01"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # NSX Edge Services Gateway design
 
@@ -16,7 +20,8 @@ The NSX Edge Services Gateway on {{site.data.keyword.cloud}} solution provides V
 
 The internal architecture specifies the deployment of the necessary NSX Edge components in a resource pool in either a VMware Cloud Foundation converged cluster or a VMware vCenter Server cluster.
 
-**Note:** VMware vSAN is optional in the following figure.
+VMware vSAN is optional in the following figure.
+{:note}
 
 Figure 1. Cloud Networking Services on {{site.data.keyword.cloud_notm}}
 

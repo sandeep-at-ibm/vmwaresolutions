@@ -4,15 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Networking services on IBM Cloud
 
 Networking services on {{site.data.keyword.cloud}} consists of two pairs of VMware NSX Edge Services Gateways (ESGs) for communication between the {{site.data.keyword.cloud_notm}} and either the public internet or customer on-premises network through a Virtual Private Network (VPN). These ESGs are segregated to support internal {{site.data.keyword.cloud_notm}} management function and egress traffic, ingress of customer-related network traffic.
 
-The following graphic is a simplified network diagram, which depicts the pair of management and the pair of workload ESGs. It also shows an NSX Distributed Logical Router (DLR) and workload VXLAN. These components are intended to be an initial landing point for customer workloads without requiring the specific knowledge to set them up within NSX. A DLR is typically employed to route traffic between VMware Cloud Foundation or VMware vCenter Server and East-West traffic, between separate layer 2 networks within the instance. This behavior is in contrast to an ESG, which functions to facilitate North-South network traffic traversing in and out of the Cloud Foundation or vCenter Server instance.
+The following graphic is a simplified network diagram, which depicts the pair of management and the pair of workload ESGs. It also shows an NSX Distributed Logical Router (DLR) and workload VXLAN. These components are intended to be an initial landing point for customer workloads without requiring the specific knowledge to set them up within NSX. A DLR is typically employed to route traffic between VMware Cloud Foundation or VMware vCenter Server and East-West traffic, between separate layer 2 networks within the instance. This behavior is in contrast to an ESG, which functions to facilitate North-South network traffic that traverses in and out of the Cloud Foundation or vCenter Server instance.
 
 Figure 1. Cloud networking services on Cloud Foundation
 
@@ -20,7 +24,8 @@ Figure 1. Cloud networking services on Cloud Foundation
 
 While a single ESG might suffice for both management and customer workload traffic, the separation of management and customer traffic is a design decision made to prevent accidental misconfiguration of the management ESG.
 
-**Note:** Misconfiguration or disabling of the management ESG does not keep the Cloud Foundation or vCenter Server instance from functioning, but disables all portal management functions.
+Misconfiguration or disabling of the management ESG does not keep the Cloud Foundation or vCenter Server instance from functioning, but disables all portal management functions.
+{:note}
 
 ## IBM management services NSX Edge
 
@@ -38,14 +43,15 @@ Table 1. IBM management NSX ESG specifications
 
 | IBM management NSX Edge | vCPU | Memory | Disk size | Storage location |
 |:----------------------- |:---- |:------ |:--------- |:---------------- |
-| IBM Management NSX ESG 1 | 2 | 1 GB | 1 GB | vSAN Datastore (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
-| IBM Management NSX ESG 2 | 2 | 1 GB | 1 GB | vSAN Datastore (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
+| IBM Management NSX ESG 1 | 2 | 1 GB | 1 GB | vSAN data store (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
+| IBM Management NSX ESG 2 | 2 | 1 GB | 1 GB | vSAN data store (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
 
 ### Management services
 
 Outbound access is required to the following services:
 
 * Zerto Virtual Manager. If installed, Zerto on {{site.data.keyword.cloud_notm}} requires outbound access to the internet for licensing activation and usage reporting.
+* Veeam backup and replication. If installed, Veeam on {{site.data.keyword.cloud_notm}} requires outbound access to the internet for downloading product and license updates.
 * FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} requires outbound access to the internet for licensing activation and licensing monitoring.
 * F5 on {{site.data.keyword.cloud_notm}} requires outbound access to the internet for licensing activation.
 
@@ -57,9 +63,9 @@ Table 2. NSX ESG interface configuration
 
 | Interface | Interface type | Connected to | Description |
 |:--------- |:-------------- |:------------ |:----------- |
-| Public Uplink | Uplink | SDDC-DportGroup-External | Public internet facing interface |
-| Private Uplink | Uplink | SDDC-DportGroup-Mgmt | Internal private network facing interface |
-| Internal | Internal | Workload HA VXLAN | Internal interface used for ESG HA pair heartbeat; portgroup on SDDC-Dswitch-Private |
+| Public Uplink | Uplink | **SDDC-DportGroup-External** | Public internet-facing interface |
+| Private Uplink | Uplink | **SDDC-DportGroup-Mgmt** | Internal private network facing interface |
+| Internal | Internal | Workload HA VXLAN | Internal interface used for ESG HA pair heartbeat; portgroup on **SDDC-Dswitch-Private** |
 
 ### Subnets
 
@@ -120,6 +126,7 @@ Table 6. NSX ESG firewall configuration
 | Service | Source | Destination | Protocol | Action |
 |:------- |:------ |:----------- |:-------- |:------ |
 | Zerto on {{site.data.keyword.cloud_notm}} | Zerto Management VM | Any | Port 443 | Allow |
+| Veeam on {{site.data.keyword.cloud_notm}} | Veeam Backup and Replication VM | Any | Port 443 | Allow |
 | FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} | Service VMs | Any | Port 443 | Allow |
 | F5 on {{site.data.keyword.cloud_notm}} | Service VMs | Any | Port 443 | Allow |
 | Any | Any | Any | Any | Deny |
@@ -147,12 +154,12 @@ Table 7. Workload Edge interface configuration
 
 | Interface | Interface type | Connected to | Description |
 |:--------- |:-------------- |:------------ |:----------- |
-| Public Uplink | Uplink | SDDC-DportGroup-External | Public internet facing interface |
-| Private Uplink | Uplink | SDDC-DportGroup-Mgmt | Internal private network facing interface |
+| Public Uplink | Uplink | SDDC-DportGroup-External | Public internet-facing interface |
+| Private Uplink | Uplink | SDDC-DportGroup-Mgmt | Internal private network-facing interface |
 | Transit Uplink | Uplink | Workload-Trasit | Transit VXLAN between the Workload ESG and the Workload DLR |
 | Internal | Internal | Workload HA VXLAN | Internal interface used for ESG HA pair heartbeat |
 
-In this design, a DLR is employed to allow for potential East-West routing between local workload connected L2 networks. As this topology is intended to be a simple example, only one L2 network intended for workloads is described. Adding additional security zones can be achieved by simply adding additional VXLANs attached to new interfaces on the DLR. The following are the DLR interfaces to configure:
+In this design, a DLR is employed to allow for potential East-West routing between local workload connected L2 networks. As this topology is intended to be a simple example, only one L2 network that is intended for workloads is described. Adding more security zones can be achieved by adding more VXLANs attached to new interfaces on the DLR. The following table shows the DLR interfaces to configure:
 
 Table 8. DLR interfaces
 
@@ -170,8 +177,8 @@ Table 9. DLR and Workload ESG IP configuration
 
 | Interface | Interface type | IP v4 subnet type | Range | Description |
 |:--------- |:-------------- |:----------------- |:----- |:----------- |
-| Public Uplink (ESG) | Uplink | {{site.data.keyword.cloud_notm}} portable public | /30 – renders one assignable IP address | Public internet facing interface (customer can order additional IPs separately) |
-| Private Uplink (ESG) | Uplink | {{site.data.keyword.cloud_notm}} portable private (existing management) | /26 – renders 61 assignable IP addresses | Internal private network facing interface |
+| Public Uplink (ESG) | Uplink | {{site.data.keyword.cloud_notm}} portable public | /30 – renders one assignable IP address | Public internet-facing interface (customer can order more IP addresses separately) |
+| Private Uplink (ESG) | Uplink | {{site.data.keyword.cloud_notm}} portable private (existing management) | /26 – renders 61 assignable IP addresses | Internal private network-facing interface |
 | Internal (ESG and DLR) | Internal | Link local | 169.254.0.0/16 | Internal interface used for ESG HA pair communication |
 | Transit Uplink (ESG and DLR) | Uplink | Assigned by customer | TBD | Transit network connection for ESG to DLR |
 | Workload (DLR) | Uplink | Assigned by customer | TBD | Workload subnet |
@@ -180,7 +187,7 @@ Table 9. DLR and Workload ESG IP configuration
 
 NAT is employed on the Workload ESG for the means of allowing network traffic to traverse between one IP address space and another. For the workload ESG, NAT is required not only to allow for communication to internet destinations, but also to communicate to any {{site.data.keyword.cloud_notm}} sourced IP ranges. For this design, workload traffic is allowed to exit to the internet, but not to the management or any {{site.data.keyword.cloud_notm}} networks. As such, only a SNAT need be defined on the Workload ESG. Note that the entire workload portable subnet is configured to traverse through the SNAT.
 
-While it is possible to use NAT to allow for workload communication across multiple instances of Cloud Foundation or vCeter Server, this becomes impractical when many workloads need to be connected across instances. For examples of using advanced NSX capabilities to create an L2 overly transit network across Cloud Foundation or vCeter Server instances, see [Multi-site architecture](multi_site.html).
+While it is possible to use NAT to allow for workload communication across multiple instances of Cloud Foundation or vCenter Server, doing this becomes impractical when many workloads need to be connected across instances. For examples of using advanced NSX capabilities to create an L2 overly transit network across Cloud Foundation or vCeter Server instances, see [Multi-site architecture](multi_site.html).
 
 Table 10. Workload ESG NAT rules
 
@@ -190,7 +197,7 @@ Table 10. Workload ESG NAT rules
 
 ### Routing for the IBM workload NSX edge
 
-Within this design, the only requirement for workloads traversing the DLR to the workload ESG is to access the internet. The Workload ESG needs to understand the path to the workload VXLAN and any future workload VXLAN/subnets created behind the DLR. While this could be achieved through static routes on the ESG, the intent of the workload topology is that of a demonstrated best practice design. Therefore, Open Shortest Path First (OSPF) is configured between the Workload ESG and the downstream DLR.
+Within this design, the only requirement for workloads that traverse the DLR to the workload ESG is to access the internet. The Workload ESG needs to understand the path to the workload VXLAN and any future workload VXLAN/subnets created behind the DLR. While this can be achieved through static routes on the ESG, the intent of the workload topology is that of a demonstrated best practice design. Therefore, Open Shortest Path First (OSPF) is configured between the Workload ESG and the downstream DLR.
 
 For more information about the configuration, see [Configure OSPF Protocol](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-6E985577-3629-42FE-AC22-C4B56EFA8C9B.html).
 
@@ -217,15 +224,15 @@ Table 12. Workload ESG firewall rules
 
 ### VXLAN definitions for the IBM workload NSX edge
 
-The Workload topology ESG and DLR HA pairs require L2 segments (VXLAN) for the connection of the internal interfaces, data transit between the two, and finally, for workloads.
+The Workload topology ESG and DLR HA pairs require L2 segments (VXLAN) for the connection of the internal interfaces, data transit between the two, and for workloads.
 
 Table 13. Workload ESG internal interfaces
 
 | VXLAN name | Cloud Foundation or vCenter Server transport zone | Type |
 |:---------- |:------------------------------------------------- |:---- |
-| Workload HA | transit-1 | global |
-| Workload transit | transit-1 | global |
-| Workload | transit-1 | global |
+| Workload HA | transit-1 | Global |
+| Workload transit | transit-1 | Global |
+| Workload | transit-1 | Global |
 
 ### ESG DLR settings for the IBM workload NSX edge
 

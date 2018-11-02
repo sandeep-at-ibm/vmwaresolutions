@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-27"
 
 You’re responsible for the configuration, management, and monitoring of all software components, including the backup and availability of your management infrastructure and workloads.
 
-As part of the solution, you can optionally deploy the {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}} add-on services. Veeam and IBM Spectrum Protect Plus can help satisfy the requirement to back up your management components.
+As part of the solution, you can optionally deploy the IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}} add-on services. Veeam and IBM Spectrum Protect Plus can help satisfy the requirement to back up your management components.
 
 These add-on services are deployed together with {{site.data.keyword.cloud_notm}} Endurance storage. The services help you back up your workloads and the management components. The [IBM Spectrum Protect Plus architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} and [Veeam architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} provide helpful guidance on planning and sizing your deployment. You can also request [managed services](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) for your Veeam deployment.
 
@@ -34,7 +34,10 @@ To host these backups, deploy a Linux file server into your cluster by using the
 
 VMware vCenter Server and PSC provide an [appliance management user interface and API to export the database and configuration to a file server](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} using various protocols. VMware documents an example of how you can configure this to [run periodically as a cron job](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} directly on the vCenter Server Appliance and PSC, which you can adapt for your use.
 
-You must back up both the vCenter Server Appliance and the PSC separately using this technique. Familiarize yourself with and plan for the considerations and limitations that are documented by VMware. Also, plan for a regular rotation and expiration of the file backups on your file server. Note that VMware requires the backup location to be an empty folder, so you should plan for your backup rotation or automation to leave the location empty for each subsequent backup job.
+You must back up both the vCenter Server Appliance and the PSC separately by using this technique. Familiarize yourself with and plan for the considerations and limitations that are documented by VMware. Also, plan for a regular rotation and expiration of the file backups on your file server.
+
+VMware requires the backup location to be an empty folder, so plan for your backup rotation or automation to leave the location empty for each subsequent backup job.
+{:note}
 
 ## NSX file-based backup
 

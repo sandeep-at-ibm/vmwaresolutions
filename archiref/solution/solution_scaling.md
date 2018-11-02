@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-07-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Scaling capacity
 
@@ -40,7 +44,8 @@ This method enables you to achieve the following things:
 * Segregating workloads based on other characteristics, for example, Microsoft SQL database cluster.
 * Deploying applications in highly available topologies.
 
-**Note**: When the initial cluster is converted into a management-only cluster, the migration of existing workloads will involve manual steps to be taken by the user. This might involve the reattachment of data stores to the new cluster or alternately storage migration. The IP addresses of the workloads might need to be changed if the new cluster resides in a different {{site.data.keyword.cloud_notm}} pod or is assigned a different VLAN ID.
+When the initial cluster is converted into a management-only cluster, the migration of existing workloads will involve manual steps to be taken by the user. This might involve the reattachment of data stores to the new cluster or alternately storage migration. The IP addresses of the workloads might need to be changed if the new cluster resides in a different {{site.data.keyword.cloud_notm}} pod or is assigned a different VLAN ID.
+{:note}
 
 ## Adding ESXi hosts into existing clusters
 

@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-11-01"
 
 ---
 
-# VUM overview
+# VMware Update Manager overview
 
-VUM uses a multistage process to upgrading vSphere objects and applying patches or extensions. This process enables a smooth update procedure with a minimum of system downtime. Before we look at this process, we need to understand the following terms:
-* **Inventory Object** - an object within vCenter such as virtual machine, virtual appliances, or vSphere ESXi host
+VMware Update Manager (VUM) uses a multistage process to upgrading vSphere objects and applying patches or extensions. This process enables a smooth update procedure with a minimum of system downtime. Before we look at this process, we need to understand the following terms:
+* **Inventory Object** - an object within vCenter such as virtual machine, virtual appliances, or vSphere ESXi host.
 * **Baseline** - Baselines contain a collection of one or more patches, extensions, service packs, bug fixes, or upgrades and can be classified as patch, extension, or upgrade baselines. There are two classifications of baselines: Host and VM/VA and both have predefined baselines by VMware and Custom ones can be added as required:
   - Pre-defined Hosts Baselines:
     - Critical Host Patches
@@ -63,5 +63,5 @@ The compliance view of a selected inventory object is accessed by navigating to 
 
 ### Related links
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
