@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Attached storage infrastructure design
 
@@ -56,7 +60,10 @@ IOPS ranging from 100 through 48,000 can be provisioned with storage sizes of 20
 
 In this design, the vCenter Server solution offers Endurance storage for attached storage. As a result, you can select and attach (via automation) Endurance NFS exports ranging in size from 20 GB to a maximum of 12 TB. The {{site.data.keyword.cloud_notm}} allows up to 64 vSphere ESXi hosts to connect to a single Endurance NFS export.
 
-Endurance is available in three IOPS performance tiers to support varying application needs. Note that after an NFS share is provisioned, it can be resized or reconfigured to allow for more or less IOPS.
+Endurance is available in three IOPS performance tiers to support varying application needs.
+
+After an NFS share is provisioned, it can be resized or reconfigured to allow for more or less IOPS.
+{:note}
 
 For detailed IOPS options, see the _Storage settings_ section in [Ordering vCenter Server instances](../../vcenter/vc_orderinginstance.html).
 
