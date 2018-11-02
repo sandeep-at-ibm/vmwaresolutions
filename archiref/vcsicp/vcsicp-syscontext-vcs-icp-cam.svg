@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1096px" height="843px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(.5 .5)">
+  <ellipse cx="515" cy="585" rx="375" ry="255" fill="#dae8fc" pointer-events="none" stroke="#6c8ebf"/>
+  <g transform="translate(500.5,821.5)">
+   <switch>
+    <foreignObject width="28" height="14" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="Helvetica" font-size="14px" font-weight="bold" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap;width:30px;word-wrap:normal">
+      <xhtml:div display="inline-block" text-align="inherit" text-decoration="inherit">VCS</xhtml:div>
+     </xhtml:div>
+    </foreignObject>
+    <text x="14" y="14" fill="#000000" font-family="Helvetica" font-size="14px" font-weight="bold" text-anchor="middle">VCS</text>
+   </switch>
+  </g>
+  <ellipse transform="rotate(-1,514.5,530)" cx="515" cy="530" rx="295.5" ry="180" fill="#f8cecc" pointer-events="none" stroke="#b85450"/>
+  <g transform="translate(505.5,691.5)rotate(-1,11.5,14)">
+   <switch>
+    <foreignObject width="23" height="14" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="Helvetica" font-size="14px" font-weight="bold" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap">
+      <xhtml:div display="inline-block" text-align="inherit" text-decoration="inherit">ICP</xhtml:div>
+     </xhtml:div>
+    </foreignObject>
+    <text x="12" y="14" fill="#000000" font-family="Helvetica" font-size="14px" font-weight="bold" text-anchor="middle">ICP</text>
+   </switch>
+  </g>
+  <rect x="350" y="770" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" font-weight="bold" text-anchor="middle">
+   <text x="409.5" y="788.5">vCenter</text>
+  </g>
+  <ellipse cx="225" cy="205" rx="225" ry="95" fill="#e1d5e7" pointer-events="none" stroke="#9673a6"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="224.5" y="128.5">On-premises Virtualization</text>
+  </g>
+  <rect x="55" y="185" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="114.5" y="208.5">vCenter</text>
+  </g>
+  <ellipse cx="640" cy="505" rx="140" ry="95" fill="#3ff" pointer-events="none" stroke="#82b366"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="639.5" y="428.5">CAM</text>
+  </g>
+  <rect x="300" y="185" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="359.5" y="208.5">On-premises VM</text>
+  </g>
+  <ellipse cx="955" cy="548" rx="7.5" ry="7.5" fill="#fff" pointer-events="none" stroke="#000"/>
+  <path d="m955 555v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <rect x="927" y="609" width="57" height="15" fill="#fff" stroke-width="0"/>
+   <text x="954.5" y="618.5">Developer</text>
+  </g>
+  <ellipse cx="570" cy="8" rx="7.5" ry="7.5" fill="#fff" pointer-events="none" stroke="#000"/>
+  <path d="m570 15v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <rect x="544" y="69" width="54" height="15" fill="#fff" stroke-width="0"/>
+   <text x="569.5" y="78.5">Customer</text>
+  </g>
+  <ellipse cx="995" cy="220" rx="100" ry="70" fill="#b266ff" pointer-events="none" stroke="#82b366"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="994.5" y="168.5">IBM Cloud</text>
+   <text x="994.5" y="182.5">Services</text>
+  </g>
+  <path d="m250.35 384.87 10.21-2.43-10.68 22.07-19.48-14.89 10.22-2.43-15.97-67.06-10.21 2.43 10.68-22.07 19.48 14.89-10.22 2.43z" fill="#fff" pointer-events="none" stroke="#00f" stroke-dasharray="3 3" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <rect x="213" y="346" width="49" height="15" fill="#fff" stroke-width="0"/>
+   <text x="236.28999" y="355.73001">Hybridity</text>
+  </g>
+  <path d="m781.24 385.61 6.42 8.31-24.51-0.65 5.56-23.88 6.42 8.31 130.38-100.73-6.42-8.31 24.51 0.65-5.55 23.88-6.42-8.31z" fill="#fff" pointer-events="none" stroke="#00f" stroke-dasharray="3 3" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <rect x="811" y="317" width="82" height="29" fill="#fff" stroke-width="0"/>
+   <text x="851.23" y="320.09">IBM Cloud</text>
+   <text x="851.23" y="334.09">Public Network</text>
+  </g>
+  <rect x="310" y="430" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="369.5" y="453.5">Containerized Apps</text>
+  </g>
+  <rect x="310" y="480" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="369.5" y="496.5">Enterprise Content</text>
+   <text x="369.5" y="510.5">Catalog</text>
+  </g>
+  <rect x="310" y="520" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="369.5" y="536.5">Core Operational</text>
+   <text x="369.5" y="550.5">Services</text>
+  </g>
+  <rect x="565" y="480" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="624.5" y="503.5">Chef</text>
+  </g>
+  <rect x="565" y="440" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="624.5" y="463.5">Terraform / HELM</text>
+  </g>
+  <path d="m600 30h385q10 0 10 10v101.88" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <path d="m995 148.88-3.5-7h7z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <rect x="875" y="48" width="53" height="29" fill="#fff" stroke-width="0"/>
+   <text x="900" y="57.5">Consume</text>
+   <text x="900" y="71.5">Services</text>
+  </g>
+  <path d="m930 570h-70q-10 0-10-10v-45q0-10-10-10h-113.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <path d="m721.12 505 7-3.5-1.75 3.5 1.75 3.5z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <rect x="542" y="364" width="96" height="43" fill="#fff" stroke-width="0"/>
+   <text x="589" y="374">Deploy / Lifecycle</text>
+   <text x="589" y="402">Apps</text>
+  </g>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <rect x="443" y="590" width="96" height="43" fill="#fff" stroke-width="0"/>
+   <text x="490" y="600">Deploy / Lifecycle</text>
+   <text x="490" y="628">Apps</text>
+  </g>
+  <path d="m540 30h-170q-10 0-10 10v138.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <path d="m360 183.88-3.5-7 3.5 1.75 3.5-1.75z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <rect x="335" y="48" width="53" height="29" fill="#fff" stroke-width="0"/>
+   <text x="360" y="57.5">Consume</text>
+   <text x="360" y="71.5">Services</text>
+  </g>
+  <ellipse cx="86" cy="768" rx="7.5" ry="7.5" fill="#fff" pointer-events="none" stroke="#000"/>
+  <path d="m86 775v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <rect x="29" y="829" width="116" height="15" fill="#fff" stroke-width="0"/>
+   <text x="85.5" y="838.5">System Administrator</text>
+  </g>
+  <path d="m85 740v-508.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <path d="m85 226.12 3.5 7-3.5-1.75-3.5 1.75z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <rect x="65" y="607" width="45" height="15" fill="#fff" stroke-width="0"/>
+   <text x="86" y="617">Manage</text>
+  </g>
+  <rect x="350" y="730" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="409.5" y="753.5">On cloud VM</text>
+  </g>
+  <g pointer-events="none" stroke="#000">
+   <path d="m565 550h-15q-10 0-10 10v220q0 10-10 10h-53.63" fill="none" stroke-miterlimit="10"/>
+   <path d="m471.12 790 7-3.5-1.75 3.5 1.75 3.5z" stroke-miterlimit="10"/>
+   <rect x="565" y="530" width="120" height="40" fill="#fff"/>
+  </g>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="624.5" y="553.5">Services</text>
+  </g>
+  <g pointer-events="none">
+   <path d="m565 550h-15q-10 0-10 10v13q0 10-10 10h-93.63" fill="none" stroke="#000" stroke-miterlimit="10"/>
+   <path d="m431.12 583 7-3.5-1.75 3.5 1.75 3.5z" stroke="#000" stroke-miterlimit="10"/>
+   <ellipse cx="640" cy="640" rx="60" ry="30" fill="#fff2cc" stroke="#d6b656"/>
+  </g>
+  <g font-family="Helvetica" font-size="13px" text-anchor="middle">
+   <text x="639.5" y="644">MCM</text>
+  </g>
+  <path d="m430 450v-130q0-10 10-10h350q10 0 10-10v-58q0-10 10-10h78.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <path d="m893.88 232-7 3.5 1.75-3.5-1.75-3.5z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <rect x="784" y="207" width="53" height="29" fill="#fff" stroke-width="0"/>
+   <text x="809.5" y="216.5">Consume</text>
+   <text x="809.5" y="230.5">Services</text>
+  </g>
+  <rect x="690" y="440" width="30" height="130" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="704.5" y="487.5">GUI</text>
+   <text x="704.5" y="501.5">CLI</text>
+   <text x="704.5" y="515.5">API</text>
+  </g>
+  <rect x="310" y="563" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="369.5" y="579.5">Management</text>
+   <text x="369.5" y="593.5">Console</text>
+  </g>
+  <path d="m570 100v190q0 10-10 10h-80q-10 0-20 0h-80q-10 0-10 10v113.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <path d="m370 428.88-3.5-7 3.5 1.75 3.5-1.75z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <rect x="545" y="157" width="53" height="29" fill="#fff" stroke-width="0"/>
+   <text x="570.5" y="167">Consume</text>
+   <text x="570.5" y="181">Services</text>
+  </g>
+  <path d="m120 790h223.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <path d="m348.88 790-7 3.5 1.75-3.5-1.75-3.5z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <g transform="translate(197.5,784.5)">
+   <switch transform="translate(0,2)">
+    <foreignObject width="43" height="12" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="Helvetica" font-size="12px" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap">
+      <xhtml:div display="inline-block" text-align="inherit" text-decoration="inherit" style="background-color:#ffffff">Manage</xhtml:div>
+     </xhtml:div>
+    </foreignObject>
+    <text x="22" y="12" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">Manage</text>
+   </switch>
+  </g>
+  <path d="m310 450h-10q-10 0-10 10v280q0 10 10 10h43.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <path d="m348.88 750-7 3.5 1.75-3.5-1.75-3.5z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <rect x="265" y="657" width="53" height="29" fill="#fff" stroke-width="0"/>
+   <text x="290" y="667">Consume</text>
+   <text x="290" y="681">Services</text>
+  </g>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="850.5" y="543.5">Deploy / Lifecycle</text>
+   <text x="850.5" y="557.5">Apps</text>
+  </g>
+  <rect x="945" y="195" width="120" height="30" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="1004.5" y="213.5">Watson</text>
+  </g>
+  <rect x="945" y="235" width="120" height="30" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="1004.5" y="253.5">IKS</text>
+  </g>
+ </g>
+</svg>
