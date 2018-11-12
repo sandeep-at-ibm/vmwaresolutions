@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server Bill of Materials
 
@@ -39,7 +43,8 @@ Table 2. BOM for the software components in vCenter Server instances
 | VMware       | NSX for vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server Standard edition | 2012R2       |
 
-**Note:** VMware vSAN is an optional component.
+VMware vSAN is an optional component.
+{:note}
 
 ## Advanced configuration settings for ESXi servers
 

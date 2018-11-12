@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -51,13 +51,16 @@ Table 1. Operations that are impacted by changing VMware resources
 | Change the vSAN datastore name in the instance that uses vSAN. | Adding an ESXi server might fail.<br><br>Upgrading the instance might fail. | Important | Change the vSAN datastore name back to the original name, **vsanDatastore**.
 | Change the management NFS datastore name in the instance that uses NFS. | Adding an ESXi server might fail.<br><br>Upgrading the instance might fail. | Important | Change the NFS management datastore name back to the original name, **management-share**, and remount the NFS datastore as read-only on the ESXi server.
 
-The following table lists the operations that might be impacted if the VC/PSC root user changes vCenter Server resources outside of the {{site.data.keyword.vmwaresolutions_short}} console.
+The following table lists the operations that might be impacted if SSH or shell access is disabled for various resources.
 
-Table 2. Operations that are impacted by for the VC/PSC root access (local)
+Table 2. Operations that are impacted by SSH and shell access (local)
 
 | Attempted change  | Impacted operations  | Severity  | Recovery method  |
 |:------------- |:------------- |:--------------|:--------------|
-| Enable or disable shell access.    | Patching and updating for PSC and vCenter Server might fail.    | Important    | N/A    |
+| Disable SSH or shell access for vCenter Server or PSC.    | Pairing a primary and secondary instance might fail.    | Important    | N/A    |
+| Disable SSH or shell access for ESXi.    | Adding and removing hosts, services, and network storage to the instance might fail.    | Important    | N/A    |
+
+If you choose to disable SSH or shell access, you should re-enable it temporarily before performing the indicated operations.
 
 ## Management subnets for vCenter Server instances
 

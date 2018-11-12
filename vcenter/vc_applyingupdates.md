@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-07"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Applying updates to vCenter Server instances
 
@@ -16,15 +18,19 @@ The process of applying patches and updates to vCenter Server instances is autom
 
 ## Before you begin
 
-**Important:** When you upgrade a vCenter Server instance to a vCenter Server with Hybridity Bundle instance, you must first apply at least the base vCenter Server V2.3 software update. You must do so before you can perform the license upgrade to the Hybridity Bundle.
+When you upgrade a vCenter Server instance to a vCenter Server with Hybridity Bundle instance, you must first apply at least the base vCenter Server V2.3 software update. You must do so before you can perform the license upgrade to the Hybridity Bundle.
+{:important}
 
 Business Partner users do not have the option to upgrade an existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance.
+
+Beginning with V2.5, IBM CloudDriver updates are no longer listed because automatic updates are enabled. Actions such as adding a host, adding a cluster, and ordering a service automatically updates the instance to the latest version. For more information about automatic updates, see the *IBM CloudDriver resiliency* section in [Release notes for V2.5](../vmonic/relnotes_v25.html).
+{:note}
 
 Before you attempt to apply an update, expand the update entry by clicking the down arrow and verify the following information:
 * The version of the update. You must apply the updates in chronological sequence that is from the earliest one to the most recent one. Ensure that you applied all the previous updates before you apply the most recent one. For example, you must apply the V2.3 update before attempting to apply the V2.4 update.
 * Whether downtime is required.
 * The total estimated time to complete the update.
-* The impact of the update on the VMware virtual environment. Table 1 shows how different levels of impact affect the system.
+* The impact of the update on the VMware virtual environment. Table 1 shows how different levels of updates impact the system.
 * The update details.
 
 Table 1. Update levels and impact
@@ -48,7 +54,7 @@ Table 1. Update levels and impact
   </tr>
 </table>
 
-## Procedure to apply updates and patches to vCenter Server instances
+## Procedure to apply updates and patches to vCenter Server instances (V2.1 or later)
 
 This procedure applies to instances that are deployed in V2.1 or later. For instances that are deployed in V2.0 and earlier, you must apply the VMware updates manually.
 
@@ -58,16 +64,16 @@ This procedure applies to instances that are deployed in V2.1 or later. For inst
    If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver Virtual Server Instance (VSI), as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
 4. Click **Update and Patch** on the left navigation pane.
 
-   **Note:** The **Update and Patch** page for an instance contains only the packages for updating the IBM management components, and not the VMware updates. VMware updates must be applied manually.
-
-   {{site.data.keyword.vmwaresolutions_short}} applies VMware updates for the following operations:
+   The **Update and Patch** page for an instance contains only the packages for updating the IBM management components, and not the VMware updates. VMware updates must be applied manually.   {{site.data.keyword.vmwaresolutions_short}} applies VMware updates for the following operations:
    * When a new vCenter Server instance is deployed.
-   * When new ESXi servers are added.
-   * When new clusters are added.
+   * When new ESXi servers are added, the new ESXi servers are provisioned with VMware updates, but the existing ESXi servers are not updated.
+   * When new clusters are added, the new clusters are provisioned with VMware updates, but the existing clusters are not updated.
+   {:note}
 
 5. For NSX license upgrades, click **Upgrade**. In the **Upgrade NSX License Edition** window, select the edition that you want to upgrade to and click **Upgrade**. License edition downgrades are not available.
 
-   **Note:** The license upgrade replaces all existing NSX licenses on the instance. Additional charges may be incurred from an overlap of old and new licenses if you upgrade in the middle of a billing cycle. To avoid additional charges, it is recommended to upgrade the license at the end of the billing cycle.
+   The license upgrade replaces all existing NSX licenses on the instance. Additional charges may be incurred from an overlap of old and new licenses if you upgrade in the middle of a billing cycle. To avoid additional charges, it is recommended to upgrade the license at the end of the billing cycle.
+   {:note}
 
 6. For software updates, click the down arrow to expand the update that you want to apply and then complete one of the following steps:
    *  To start the update immediately, click the overflow menu icon in the **Actions** column of the update entry, and then click **Update Now**.
@@ -78,7 +84,8 @@ This procedure applies to instances that are deployed in V2.1 or later. For inst
 
 During the license upgrade to the Hybridity Bundle, you are automatically upgraded to the VMware NSX Advanced edition if your vCenter Server instance is currently using the VMware NSX Base edition.
 
-**Note:** If you upgrade to the Hybridity Bundle and your vCenter Server instance already has NFS file storage, you are not charged for the VMware vSAN storage. You are charged for the vSAN license because it is included with the Hybridity Bundle.
+If you upgrade to the Hybridity Bundle and your vCenter Server instance already has NFS file storage, you are not charged for the VMware vSAN storage. You are charged for the vSAN license because it is included with the Hybridity Bundle.
+{:note}
 
 Complete the following steps to upgrade a vCenter Server instance to the vCenter Server with Hybridity Bundle.
 

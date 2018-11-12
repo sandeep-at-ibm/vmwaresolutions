@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-16"
+lastupdated: "2018-11-06"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Adding, viewing, and deleting clusters for vCenter Server instances
 
@@ -14,7 +18,8 @@ The ESXi servers that you configured when you ordered an instance are grouped as
 
 You can add your own clusters to VMware vCenter Server instances to expand the compute and storage capacity. Within a cluster, you can manage ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instances.
 
-**Availability:** The delete cluster feature is available only to instances that are deployed in (or upgraded to) V2.3 and later.
+The delete cluster feature is available only to instances that are deployed in (or upgraded to) V2.3 and later.
+{:note}
 
 ## Adding clusters to vCenter Server instances
 
@@ -42,29 +47,40 @@ If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}
 
 ### Bare Metal Server settings
 
-You can choose either **Preconfigured** or **Customized**.
+You can choose **Skylake**, **SAP-certified**, or **Broadwell**.
 
-#### Preconfigured
+#### Skylake
 
-For the **Preconfigured** setting, you can choose a **Bare Metal Server Configuration** depending on your requirements:
-* Small (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz / 128 GB RAM / 2 disks)
-* Medium (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 256 GB RAM / 2 disks)
-* Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 2 disks)
+For the **Skylake** setting, you have a number of options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
-#### Customized
+Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}
 
-For the **Customized** setting, you have a number of options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
+| CPU model options        | RAM options       |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
-Table 1. Options for customized {{site.data.keyword.baremetal_short}}
+#### SAP-certified
+
+When you select **SAP-certified**, you cannot alter the CPU or RAM settings.
+
+Based on your requirements, select a Bare Metal Server configuration:
+* Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 192 GB RAM
+* Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 384 GB RAM
+* Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 768 GB RAM
+
+#### Broadwell
+
+For the **Broadwell** setting, you have a number of options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
+
+Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 #### Number of Bare Metal Servers
 
@@ -72,11 +88,9 @@ Clusters require at least two {{site.data.keyword.baremetal_short}}.
 
 For vCenter Server instances that are deployed in V2.1 or later, you can add up to 59 {{site.data.keyword.baremetal_short}} for a cluster. You can add 1 - 59 ESXi servers at a time.
 
-For vCenter Server instances that were deployed in V2.0 or earlier, you can add up to 32 {{site.data.keyword.baremetal_short}} for a cluster. The number of the {{site.data.keyword.baremetal_short}} that you can add at a time is as follows:
-* For the **Small**, **Medium**, and **Large** Bare Metal Server configurations, you can add 1 - 10 ESXi servers at a time.
-* For the **Customized** Bare Metal Server configuration, you can add 1 - 20 ESXi servers at a time.
+For vCenter Server instances that were deployed in V2.0 or earlier, you can add up to 32 {{site.data.keyword.baremetal_short}} for a cluster. You can add 1 - 20 ESXi servers at a time for the **Skylake**, **SAP-certified**, and **Broadwell** Bare Metal Server configuration.
 
-After deployment, you can create up to four more clusters. If you select the **Customized** Bare Metal Server configuration with VMware vSAN storage, four servers are required for both the initial cluster and post-deployment clusters.
+After deployment, you can create up to four more clusters. If you select the **Skylake** or **Broadwell** Bare Metal Server configuration with VMware vSAN storage, four servers are required for both the initial cluster and post-deployment clusters.
 
 ### Storage settings
 
@@ -97,7 +111,8 @@ If your initial cluster was a vSAN cluster, any additional vSAN clusters use the
 
 When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
 
-**Note:** The number of file shares must be in the range of 1 to 32.
+The number of file shares must be in the range of 1 to 32.
+{:note}
 
 * **Configure shares individually**: Select to specify different configuration settings for each file share.
 * **Number of Shares**: When want to use the same configuration setting for each file share, specify the number of file shares for the NFS shared storage that you want to add.
@@ -105,7 +120,7 @@ When you select **NFS Storage**, you can add file-level shared storage for your 
 * **Performance**: Select the IOPS (input/output operations per second) per GB based on your workload requirements.
 * **ADD NFS**: Select to add individual file shares with different configuration settings.
 
-Table 2. NFS performance level options
+Table 3. NFS performance level options
 
 | Option        | Details       |
   |:------------- |:------------- |
@@ -137,13 +152,14 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to add clusters to.
 
-   **Note:** Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
+   Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
+   {:note}
 3. Click **Infrastructure** on the left navigation pane and click **Add** on the upper-right corner of the **CLUSTERS** table.
 4. On the **Add Cluster** page, enter the cluster name.
 5. If you want to host the cluster in a different {{site.data.keyword.CloudDataCent_notm}} than the one that the instance is hosted in, under **Bare Metal Server**, check the **Select a different location** check box and choose the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
 6. Complete the Bare Metal configuration.
-   * If you selected **Preconfigured**, specify the **Bare Metal Server Configuration**, and the **Number of {{site.data.keyword.baremetal_short}}**. If you are planning to use vSAN as your storage solution, a minimum of four {{site.data.keyword.baremetal_short}} are needed.
-   * If you selected **Customized**, specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
+   * If you selected **Skylake** or **Broadwell**, specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
+   * If you selected **SAP-certified**, specify the CPU model.
 7. Complete the storage configuration.
   * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
   * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Size**, and **Performance**.
@@ -165,7 +181,8 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history from the **Summary** page of the instance.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
 
-**Important:** You can't change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
+You can't change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
+{:important}
 
 ## Procedure to view clusters in vCenter Server instances
 
@@ -242,7 +259,8 @@ You might want to delete a cluster from an instance when it's no longer needed.
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to delete clusters from.
 
-   **Note:** Ensure that the instance is in the **Ready to Use** status. Otherwise, you can't delete clusters from the instance.
+   Ensure that the instance is in the **Ready to Use** status. Otherwise, you can't delete clusters from the instance.
+   {:note}
 
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.
 4. Confirm that you completed the migration of virtual machines to other clusters, if needed, and that you want to delete the cluster.

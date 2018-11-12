@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Configuring your network to use the customer-managed NSX ESG with your VMs
 
@@ -34,14 +38,16 @@ To take advantage of NSX for your workload VMs, you must configure a number of s
    3. On the newly added network adapter, select the workload logical switch from the menu. An example name of the workload logical switch
    is **vxw-dvs-17-virtualwire-1-sid-6000-Workload**.
 
-   **Important:** Ensure that you do not select the **Workload Transit** switch.
+   Ensure that you do not select the **Workload Transit** switch.
+   {:important}
 
 2. Identify an available IP address for the VM:
    *  The IP address must be in the range of `192.168.10.0/24`. Note that the IP address `192.168.10.1` is reserved (see **Step 3**).
    *  When you configure the networking of the operating system that runs on the VM, use the selected IP address and the netmask
    `255.255.255.0`.
 
-   **Note:** You are responsible for managing the range of IP addresses to which you assigned your VMs.
+   You are responsible for managing the range of IP addresses to which you assigned your VMs.
+   {:note}
 
 3. Assign the default gateway of the VM as `192.168.10.1`. This address is the IP address of the NSX DLR on the same logical switch as the workload VMs.
 
@@ -74,6 +80,7 @@ Additionally, you can find more details about the customer subnets by completing
 
    **Warning:** Do not use the IP addresses that are ordered and used during the initial setup. However, you can use other IP addresses on
    these subnets according to your requirements. To set up additional network address translation rules, see [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+   {:important}
 
 ### Related links
 

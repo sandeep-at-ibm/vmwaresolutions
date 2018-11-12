@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ordering vCenter Server instances
 
@@ -30,7 +34,8 @@ Table 1. Value format for instance and domain names
   | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
 
-**Important:** Don't modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
+Don't modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
+{:important}
 
 ## System settings
 
@@ -59,54 +64,61 @@ For Business Partner users, the vCenter Server license (Standard edition), the v
 
 For non-Business Partner users, you can use the IBM-provided VMware licenses for these components by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license keys.
 
+
 **Attention:**
 * A license with a minimum of eight CPUs is required, which is for four servers with two CPUs per server. The license choice for each VMware component applies to the base instance and to any ESXi servers that you add to the instance later. Ensure that your license supports future capacity expansion in your infrastructure.
 * The minimum license editions are indicated on the user interface. If different component editions are supported, you can select the edition that you want. You are responsible to ensure that the license key provided is correct for each VMware component selected.
 * For vSphere, a license charge is incurred at the time of order, but the license charge is then credited to your account.
 * You can change any licenses that you provided by using the VMware vSphere Web Client after the instance deployment is completed.
 * Support for the VMware components that you provide licenses is provided by VMware, not by IBM Support.
+{:important}
 
 ## Bare Metal Server settings
 
-Bare Metal settings are based on your data center selection and whether you choose a preconfigured or customized configuration.
+Bare Metal settings are based on your data center selection and bare metal server configuration.
 
 ### Data center location
 
 Select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.
 
-### Preconfigured
+### Skylake
 
-When you select **Preconfigured**, you cannot alter the CPU or RAM settings.
+When you select **Skylake**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
+
+Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}
+
+| CPU model options        | RAM options       |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+
+### SAP-certified
+
+When you select **SAP-certified**, you cannot alter the CPU or RAM settings.
 
 Based on your requirements, select a Bare Metal Server configuration:
-  * Small (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz / 128 GB RAM / 2 drives)
-  * Medium (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 256 GB RAM / 2 drives)
-  * Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 2 drives)
+  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 192 GB RAM
+  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 384 GB RAM
+  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 768 GB RAM
 
-### Customized
+### Broadwell
 
-When you select **Customized**, you can choose the CPU and RAM combination according to your needs.
+When you select **Broadwell**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
-Select the CPU model and RAM for the Bare Metal Server.
-
-Table 2. Options for customized {{site.data.keyword.baremetal_short}}
+Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 ### Number of Bare Metal Servers
 
-For the initial cluster in the instance, you can configure the number of ESXi servers as follows:
-* If you selected **Preconfigured**, you can configure the number of ESXi servers in the range 2 - 10.
-* If you selected **Customized**, you can configure the number of ESXi servers in the range 2 - 20.
+For the initial cluster in the instance, you can configure the number of ESXi servers in the range 2 - 20. All ESXi servers share the set configuration. 
 
-All ESXi servers share the set configuration. After initial deployment, you can add four more clusters. If you selected the **Customized** configuration for VMware vSAN, 4 ESXi servers are required for both the initial and post-deployment clusters. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
+After initial deployment, you can add four more clusters. If you selected the **Skylake** or **Broadwell** configuration for VMware vSAN, 4 ESXi servers are required for both the initial and post-deployment clusters. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Storage settings
 
@@ -114,7 +126,7 @@ Storage settings are based on your selection of Bare Metal Server configuration 
 
 ### vSAN storage
 
-vSAN is available for the **Customized** Bare Metal configuration only. Specify the following vSAN options:
+vSAN is available for the **Skylake** and **Broadwell** Bare Metal configuration only. Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
 * If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
@@ -125,7 +137,8 @@ vSAN is available for the **Customized** Bare Metal configuration only. Specify 
 
 When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
 
-**Note:** The number of file shares must be in the range of 1 to 32.
+The number of file shares must be in the range of 1 to 32.
+{:note}
 
 * **Configure shares individually**: Select to specify different configuration settings for each file share.
 * **Number of Shares**: When you use the same configuration setting for each file share, specify the number of file shares for the NFS shared storage that you want to add.
@@ -133,7 +146,7 @@ When you select **NFS Storage**, you can add file-level shared storage for your 
 * **Performance**: Select the IOPS (input/output operations per second) per GB based on your workload requirements.
 * **ADD NFS**: Select to add individual file shares that use different configuration settings.
 
-Table 3. NFS performance level options
+Table 4. NFS performance level options
 
 | Option        | Details       |
   |:------------- |:------------- |
@@ -169,7 +182,8 @@ The root domain name must meet the following requirements:
 * The last string can contain only alphabetic characters.
 * The length of the last string must be in the range 2 - 24 characters.
 
-**Note:** The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs is 50 characters. Domain names must accommodate for this maximum length.
+The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs is 50 characters. Domain names must accommodate for this maximum length.
+{:note}
 
 ### Public or private network
 
@@ -199,9 +213,9 @@ When you select to reuse existing public and private VLANs, specify the VLANs an
 * **Primary Subnet** is assigned to physical hosts for public network access.
 * **Primary Private Subnet** is assigned to physical hosts for management traffic.
 
-**Important:**
 * Ensure that the firewall configuration on the selected VLANs does not block the management data traffic.
 * Ensure that all of the VLANs you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
+{:important}
 
 ### DNS configuration
 
@@ -210,7 +224,8 @@ Select the Domain Name System (DNS) configuration for your instance:
 * **Single Public Windows VSI for Active Directory/DNS**: A single Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up. This option has been deployed by default for V1.9 and later instances.
 * **Two highly available dedicated Windows Server VMs on the management cluster**: Two Microsoft Windows VMs are deployed, helping enhance security and robustness.
 
-**Important:** You must provide two Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows VMs. Use the Microsoft Windows Server 2012 R2 Standard edition license, or the Microsoft Windows Server 2012 R2 Datacenter edition license, or both.
+You must provide two Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows VMs. Use the Microsoft Windows Server 2012 R2 Standard edition license, or the Microsoft Windows Server 2012 R2 Datacenter edition license, or both.
+{:important}
 
 Each license can be assigned only to one single physical server and covers up to two physical processors. One Standard edition license can run two virtualized Microsoft Windows VMs per 2-processor server. Therefore, two licenses are required since two Microsoft Windows VMs are deployed in two different hosts.
 
@@ -243,8 +258,8 @@ Based on your selected configuration for the instance and add-on services, the e
 6. Complete the Bare Metal Server settings.
     1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
     2. Select the Bare Metal Server configuration.
-       * When you select **Preconfigured**, choose **Small**, **Medium**, or **Large** for the configuration.
-       * When you select **Customized**, specify the CPU model and the RAM size.
+       * When you select **Skylake** or **Broadwell**, specify the CPU model and the RAM size.
+       * When you select **SAP-certified**, choose the CPU model.
     3. Specify the number of {{site.data.keyword.baremetal_short}}. If you are planning to use vSAN as your storage solution, a minimum of 4 {{site.data.keyword.baremetal_short}} are needed.  
 7. Complete the storage configuration.
   * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
@@ -281,8 +296,9 @@ When you order a secondary instance, the VMware vSphere Web Client for the prima
 
 View and manage the vCenter Server instance that you ordered.
 
-**Important:** You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account	 only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}}, or any other means outside of the console.
+You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account	 only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}}, or any other means outside of the console.
 If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+{:important}
 
 **CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account	 when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances
 
@@ -38,21 +42,31 @@ If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}
 
 ### Bare Metal Server settings
 
-#### Customized
-
 Specify the CPU model and RAM for the Bare Metal Server. Available options might differ depending on the version that your instance was initially deployed in.
 
-Table 2. Options for customized Bare Metal Servers
+#### Skylake
+
+When you select **Skylake**, you can choose the CPU and RAM combination according to your needs.
+
+Table 1. Options for Skylake Bare Metal Servers
+
+| CPU model options        | RAM options       |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+
+#### Broadwell
+
+When you select **Broadwell**, you can choose the CPU and RAM combination according to your needs.
+
+Table 2. Options for Broadwell Bare Metal Servers
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 96 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 #### Number of Bare Metal Servers
 
@@ -96,7 +110,8 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to view the clusters in it.
 
-   **Note:** Ensure that the instance status is **Ready to Use**. Otherwise, you can't add clusters to the instance.
+   Ensure that the instance status is **Ready to Use**. Otherwise, you can't add clusters to the instance.
+   {:note}
 
 3. Click **Infrastructure** on the left navigation pane and click **Add** at the upper-right corner of the **CLUSTERS** table.
 4. On the **Add Cluster** page, enter the cluster name.
@@ -116,7 +131,8 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history on the **Summary** page of the instance.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
 
-**Important:** You can't change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
+You can't change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
+{:important}
 
 ## Procedure to view clusters in vCenter Server with Hybridity Bundle instances
 
