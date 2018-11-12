@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Cloud Foundation overview
 
@@ -43,18 +47,16 @@ For more information about the architecture, see [Solution overview](../archiref
 
 The following components are included in your Cloud Foundation instance.
 
-**Note:** Charges that are incurred for the hardware, networking, virtual machines, and storage might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
+Charges that are incurred for the hardware, networking, virtual machines, and storage might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
+{:note}
 
 ### Bare Metal Server
 
 You can order {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with one of the following configurations:
-*  **Customized**: {{site.data.keyword.baremetal_short}} with your selected CPU model and RAM size.   
-   * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
-   * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
-   **Note:** If you plan to use vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
-* **Preconfigured**: 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
-  * **Small** (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 128 GB RAM / 12 disks)
-  * **Large** (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 12 disks)
+*  **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.   
+*  **Broadwell**: 2-CPU Intel Broadwell generation servers (Intel Xeon E5-2600 v4 series) with your selected CPU model and RAM size.   
+   If you plan to use vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
+   {:note}
 
 ### Networking
 
@@ -63,7 +65,8 @@ The following networking components are ordered:
 * Three VLANs (Virtual LANs): one public VLAN and two private VLANs
 * Secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Does the management services NSX Edge pose a security risk?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **Important:** This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the Cloud Foundation instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
+  This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the Cloud Foundation instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
+  {:important}
 
 * The EVC (Enhanced vMotion Compatibility) feature is automatically enabled if you have an existing cluster with ESXi servers that are supported by the current VMware vSphere version. EVC provides vMotion compatibility for all ESXi servers in a cluster by ensuring that all ESXi servers in a cluster expose the same set of CPU features to virtual machines. By using EVC, the virtual machines can migrate between any ESXi servers in the cluster, even if the actual CPUs on the ESXi servers might be different.
 
@@ -80,9 +83,7 @@ The following storage is ordered, depending on the {{site.data.keyword.baremetal
 * Two 1-TB SATA boot disks
 * Two 960-GB SSD (Solid-State Disk) cache disks
 * One RAID disk controller
-* For the **Customized** configuration only, you can set the number of disk drives and the disk type and capacity according to your requirements. Also, you have the High-Performance Intel Optane option, which provides two extra capacity disk bays for a total of 10 capacity disks. The High-Performance Intel Optane option is dependent on the CPU model.
-* For the **Preconfigured**, **Small** configuration only: Two 1.9 TB SSD capacity disks
-* For the **Preconfigured**, **Large** configuration only: Four 3.8 TB SSD capacity disks
+* For the **Skylake** and **Broadwell** configuration only, you can set the number of disk drives and the disk type and capacity according to your requirements. Also, you have the High-Performance Intel Optane option, which provides two extra capacity disk bays for a total of 10 capacity disks. The High-Performance Intel Optane option is dependent on the CPU model.
 
 ### Licenses (IBM-provided or BYOL) and fees
 
@@ -110,7 +111,8 @@ One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration pr
 * One SDDC Manager license
 * One Support and Services fee
 
-**Important:** You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}} or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+{:important}
 
 **CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance, from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components

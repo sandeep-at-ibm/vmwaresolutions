@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Multi-site configuration for Cloud Foundation instances
 
@@ -37,7 +41,8 @@ A multi-site deployment consists of the following components.
 
 The multi-site configuration feature uses a hub and spoke topology with a primary site and a maximum of seven secondary sites. A single layer of sites is supported, that is, you cannot configure subsequent sites that are linked to other secondary sites. You can have a total of 128 ESXi servers in a multi-site configuration across all instances.
 
-**Note:** If your configuration requires a multi-site deployment with more than 128 ESXi servers, contact IBM Support for assistance. For more information, see [Contacting IBM Support](../vmonic/trbl_support.html).
+If your configuration requires a multi-site deployment with more than 128 ESXi servers, contact IBM Support for assistance. For more information, see [Contacting IBM Support](../vmonic/trbl_support.html).
+{:note}
 
 The following graphic depicts the overall view of the Cloud Foundation multi-site deployment.
 
@@ -54,7 +59,8 @@ You can assign only one secondary instance to a primary instance at a time. You 
 
 You can have a maximum of 8 (1 primary and 7 secondary) instances that are deployed in a multi-site configuration.
 
-**Note:** Deleting Cloud Foundation instances that are part of a multi-site configuration requires special planning. For more information, see [Deleting Cloud Foundation instances in a multi-site configuration](sd_deletinginstance_multi.html).
+Deleting Cloud Foundation instances that are part of a multi-site configuration requires special planning. For more information, see [Deleting Cloud Foundation instances in a multi-site configuration](sd_deletinginstance_multi.html).
+{:note}
 
 ### Related links
 

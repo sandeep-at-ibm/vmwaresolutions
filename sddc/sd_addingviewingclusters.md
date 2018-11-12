@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-06"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Adding, viewing, and deleting clusters for Cloud Foundation instances
 
@@ -40,45 +44,41 @@ The cluster name must meet the following requirements:
 
 The {{site.data.keyword.CloudDataCent}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the Cloud Foundation instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-The data centers available to you depend on the Bare Metal Server configuration that is selected for deployment. If you select the **Customized** configuration, you can also deploy the cluster to a different {{site.data.keyword.cloud_notm}} infrastructure pod, if the selected data center contains more pods. This configuration is useful when the default {{site.data.keyword.cloud_notm}} infrastructure pod where the initial instance is deployed has reached its maximum capacity.
-
-**Note:** The standardized **Small** and **Large** Bare Metal Server configurations use a default pod that can't be changed.
+The data centers available to you depend on the Bare Metal Server configuration that is selected for deployment. If you select the **Skylake** or **Broadwell** configuration, you can also deploy the cluster to a different {{site.data.keyword.cloud_notm}} infrastructure pod, if the selected data center contains more pods. This configuration is useful when the default {{site.data.keyword.cloud_notm}} infrastructure pod where the initial instance is deployed has reached its maximum capacity.
 
 If you deploy the cluster to a different data center or pod, three more VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
 ### Bare Metal Server settings
 
-You can choose either **Customized** or **Preconfigured**.
+You can choose **Skylake** or **Broadwell**.
 
-#### Customized
+#### Skylake
 
-For the **Customized** setting, you have a number of options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
+For the **Skylake** setting, you have a number of options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
-Table 1. Options for customized {{site.data.keyword.baremetal_short}}
+Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}
+
+| CPU model options   | RAM options   |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+
+#### Broadwell
+
+For the **Broadwell** setting, you have a number of options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
+
+Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU model options   | RAM options   |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-
-#### Preconfigured
-
-For the **Preconfigured** setting, you can choose a **Bare Metal Server Configuration** depending on your requirements:
-* Small (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 128 GB RAM / 12 disks)
-* Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 12 disks)
 
 ### vSAN storage settings
 
-For the **Preconfigured** Bare Metal Server configurations, you can't change the vSAN storage settings:
-* For the **Small** configuration, two disk drives of 1.9 TB SSD SED are ordered.
-* For the **Large** configuration, four disk drives of 3.8 TB SSD SED are ordered.
-
-For the **Customized** Bare Metal Server configuration, you can customize the vSAN storage by specifying the following settings:
-
+For the **Skylake** and **Broadwell** Bare Metal Server configuration, you can customize the vSAN storage by specifying the following settings:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
 * If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
@@ -95,17 +95,16 @@ You can specify the licensing options for the VMware components in the cluster, 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
 2. In the **Cloud Foundation instances** table, click the instance that you want to add clusters to.
 
-   **Note:** Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
+   Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
+   {:note}
 
 3. Click **Infrastructure** on the left navigation pane and click **Add** at the upper right of the **CLUSTERS** table.
 4. On the **Add Cluster** page, enter the cluster name.
 5. If you want to host the cluster in a different {{site.data.keyword.CloudDataCent_notm}} than the one that the instance is hosted in, under **Bare Metal Server**, check the **Select a different location** check box and choose the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
-6. Complete the Bare Metal configuration:
-   * If you selected **Customized**, select the **CPU Model** and the **RAM** size.
-   * If you selected **Preconfigured**, select the **Bare Metal Server Configuration**.
+6. Complete the Bare Metal configuration by specifying the **CPU Model** and the **RAM** size.
 7. Complete the storage configuration:
-   * If you selected **Preconfigured** for the Bare Metal configuration, the storage settings for the **Small** and **Large** Bare Metal Server configurations can't be changed.
-   * If you selected **Customized** for the Bare Metal configuration, specify the disk types for the vSAN capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
+   1. Specify the disk types for the vSAN capacity and cache disks, and the number of disks.
+   2. If you want more storage, select the **High-Performance with Intel Optane** check box.
 8. Specify how your license keys are provided:
    * For IBM Business Partner users, the vSphere license (Enterprise Plus edition) and the vSAN license are included and purchased on your behalf. However, you must specify the edition for the vSAN license.
    * For users who aren't IBM Business Partners, you can select one of the following options:
@@ -122,7 +121,8 @@ You can specify the licensing options for the VMware components in the cluster, 
 1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history on the instance summary page.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
 
-**Important:** You can't change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
+You can't change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
+{:important}
 
 ## Procedure to view clusters in Cloud Foundation instances
 
@@ -197,7 +197,8 @@ You might want to delete a cluster from an instance when it is no longer needed.
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
 2. In the **Cloud Foundation instances** table, click the instance that you want to delete clusters from.
 
-   **Note:** Ensure that the instance is in the **Ready to Use** status. Otherwise, you can't delete clusters from the instance.
+   Ensure that the instance is in the **Ready to Use** status. Otherwise, you can't delete clusters from the instance.
+   {:note}
 
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon.
 4. Confirm that you completed the migration of VMs to other clusters, if appropriate, and that you want to delete the cluster.

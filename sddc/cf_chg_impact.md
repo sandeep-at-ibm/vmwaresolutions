@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -38,6 +38,17 @@ Table 1. Operations that are impacted for the SSO admin (customer)
 | Change the public or private Distributed Virtual Switch (DVS) name. | Adding an ESXi server might fail. | Important | Change the DVS name back to the original name.
 | Change the VSAN datastore name. | Adding an ESXi server might fail.<br><br>Upgrading the instance might fail. | Important | Change the VSAN datastore name back to the original name, **vsanDatastore**.
 | Change the instance name or the domain name. | Instance is unusable. | Critical | N/A
+
+The following table lists the operations that might be impacted if SSH or shell access is disabled for various resources.
+
+Table 2. Operations that are impacted by SSH and shell access (local)
+
+| Attempted change  | Impacted operations  | Severity  | Recovery method  |
+|:------------- |:------------- |:--------------|:--------------|
+| Disable SSH or shell access for vCenter Server or PSC.    | Pairing a primary and secondary instance might fail. Applying patches to the resources might fail.    | Important    | N/A    |
+| Disable SSH or shell access for ESXi.    | Adding and removing hosts, services, and network storage to the instance might fail. Applying patches to the resources might fail.    | Important    | N/A    |
+
+If you choose to disable SSH or shell access, you should re-enable it temporarily before performing the indicated operations.
 
 ## Management subnets for Cloud Foundation instances
 

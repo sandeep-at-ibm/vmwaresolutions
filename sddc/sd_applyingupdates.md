@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Applying updates to Cloud Foundation instances
 
@@ -16,13 +18,16 @@ The {{site.data.keyword.vmwaresolutions_full}} console periodically detects and 
 
 An available update is a record in the software updates list of the instance, which can be applied immediately or scheduled for a later time. The update is a bundle that contains one or more packages for updating the IBM management components and the VMware components.
 
+Beginning with V2.5, IBM CloudDriver updates are no longer listed because automatic updates are enabled. Actions such as adding a host, adding a cluster, and ordering a service automatically updates the instance to the latest version. For more information about automatic updates, see the *IBM CloudDriver resiliency* section in [Release notes for V2.5](../vmonic/relnotes_v25.html).
+{:note}
+
 ## Before you begin
 
 Before you attempt to apply an update, expand the update entry by clicking the down arrow and verify the following information:
 * The version of the update. You must apply the updates in chronological sequence that is from the earliest one to the most recent one. Ensure that you applied all the previous updates before you apply the most recent one. For example, you must apply the V2.4 update before you attempt to apply the V2.5 update.
 * Whether downtime is required.
 * The total estimated time to complete the update.
-* The impact of the update on the VMware virtual environment. Table 1 shows how different levels of impact affect the system.
+* The impact of the update on the VMware virtual environment. Table 1 shows how different levels of updates impact the system.
 * The update details.
 
 Table 1. Update levels and impact
