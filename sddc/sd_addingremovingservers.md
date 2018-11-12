@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Expanding and contracting capacity for Cloud Foundation instances
 
@@ -21,7 +25,7 @@ A Cloud Foundation instance can have up to five clusters, one of which is the de
 * Do not add ESXi servers from the VMware vSphere Web Client. The changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_full}} console.
 * The base platform that you ordered has 4 ESXi servers by default. You can expand the platform to a maximum of 32 ESXi servers. However, the number of the {{site.data.keyword.baremetal_short}} that you can add at a time is as follows:
    * For the **Small** and **Large** configuration, you can add 1 - 10 ESXi servers at a time.
-   * For the **Customized** configuration, you can add 1 - 20 ESXi servers at a time.
+   * For the **Skylake** and **Broadwell** configuration, you can add 1 - 20 ESXi servers at a time.
 
 ## Procedure to add ESXi servers
 
@@ -61,7 +65,8 @@ A Cloud Foundation instance can have up to five clusters, one of which is the de
 2. You are notified by email when your ESXi servers are removed.
 3. The ESXi servers are fully reclaimed by the {{site.data.keyword.cloud_notm}} infrastructure at the end of the {{site.data.keyword.cloud_notm}} billing cycle, which is typically 30 days.
 
-   **Attention:** You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cycle for the removed ESXi servers.
+   You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cycle for the removed ESXi servers.
+   {:note}
 
 ### Related links
 

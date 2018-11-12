@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Viewing Cloud Foundation instances
 
@@ -113,7 +117,8 @@ If errors occur during instance deployment or instance deletion, the {{site.data
 
 Manage your instances from the {{site.data.keyword.vmwaresolutions_short}} console or the vSphere Web Client.
 
-**Important:** Before you click **vCenter console** on the instance summary page to go to the vSphere Web Client and start managing your ESXi servers, you must log in to the VPN portal of the {{site.data.keyword.CloudDataCent_notm}}. Hover over the vCenter console button and follow the instructions to ensure that you meet all requirements and you completed the necessary steps before you access the vSphere Web Client.
+Before you click **vCenter console** on the instance summary page to go to the vSphere Web Client and start managing your ESXi servers, you must log in to the VPN portal of the {{site.data.keyword.CloudDataCent_notm}}. Hover over the vCenter console button and follow the instructions to ensure that you meet all requirements and you completed the necessary steps before you access the vSphere Web Client.
+{:important}
 
 Review the following topics for information to help you complete the login instructions:
 

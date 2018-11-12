@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ordering Cloud Foundation instances
 
@@ -18,7 +22,8 @@ Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
 *  You reviewed the requirements and considerations in [Requirements and planning for Cloud Foundation instances](sd_planning.html).
 
-**Important:** Don't modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted. In addition, do not change the instance name, root domain name, subdomain label, or host name prefix, after the instance is deployed.
+Don't modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted. In addition, do not change the instance name, root domain name, subdomain label, or host name prefix, after the instance is deployed.
+{:important}
 
 ## System settings
 
@@ -54,30 +59,29 @@ For non-Business Partner users, you can use the IBM-provided VMware licenses for
 
 Select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.
 
-### Preconfigured
+### Skylake
 
-When you select **Preconfigured**, you cannot change the CPU or RAM settings.
+When you select **Skylake**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
-Based on your requirements, select a Bare Metal Server configuration:
-  * Small (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 128 GB RAM / 12 drives)
-  * Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 12 drives)
+Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}
 
-### Customized
+| CPU model options  | RAM options       |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
-When you select **Customized**, you can choose the CPU and RAM combination according to your needs.
+### Broadwell
 
-Select the CPU model and RAM for the Bare Metal Server.
+When you select **Broadwell**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
-Table 1. Options for customized {{site.data.keyword.baremetal_short}}
+Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 ### Number of Bare Metal Servers
 
@@ -87,11 +91,7 @@ A Cloud Foundation instance comprises four Bare Metal Severs at the initial depl
 
 For Cloud Foundation instances, you can order VMware vSAN storage only.
 
-When you select **Preconfigured** Bare Metal Server configuration, the storage settings are standardized and cannot be changed:
-  * For the **Small** Bare Metal Server configuration, two disk drives of 1.9 TB SSD SED are ordered.
-  * For the **Large** Bare Metal Server configuration, four disk drives of 3.8 TB SSD SED are ordered.
-
-When you select the **Customized** Bare Metal Server configuration, you can customize the vSAN storage for your instance. Specify the following vSAN settings:
+When you select the **Skylake** or **Broadwell** Bare Metal Server configuration, you can customize the vSAN storage for your instance. Specify the following vSAN settings:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
 * If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
@@ -125,13 +125,14 @@ The root domain name must meet the following requirements:
 * The last string can contain only alphabetic characters.
 * The length of the last string must be in the range 2 - 24 characters.
 
-**Note:** The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (virtual machines) is 50 characters. Domain names must accommodate for this maximum length.
+The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (virtual machines) is 50 characters. Domain names must accommodate for this maximum length.
+{:note}
 
 ### Value format for network settings
 
 The domain name and subdomain label are used to generate the user name and server names of the instance, as shown in the following table.
 
-Table 2. Value format for user names, domain names, and server names
+Table 3. Value format for user names, domain names, and server names
 
 | Name        | Value Format      |
   |:------------- |:------------- |
@@ -192,12 +193,10 @@ Based on your selected configuration for the instance and add-on services, the e
    *  To use your own license, select **I will provide** and enter the license key.  
 6. Complete the Bare Metal Server settings:
    1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
-   2. Select the Bare Metal Server configuration.
-      * When you select **Preconfigured**, choose a configuration from **Small** and **Large**.
-      * When you select **Customized**, specify the CPU model and the RAM size.
+   2. Select the Bare Metal Server configuration, and then specify the CPU model and the RAM size.
 7. Complete the storage configuration.
-   * If you selected **Preconfigured** for the Bare Metal configuration, the storage settings for the **Small** and **Large** standardized Bare Metal Server configurations cannot be changed.
-   * If you selected **Customized** for the Bare Metal configuration, specify the disk types for the vSAN capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
+   1. Specify the disk types for the vSAN capacity and cache disks, and the number of disks.
+   2. If you want more storage, select the **High-Performance with Intel Optane** check box.
 8. Complete the network interface settings:
    1. Enter the host name prefix, subdomain label, and root domain name. For a secondary instance, the domain name is automatically completed.
    2. Select the VLAN settings:
@@ -227,7 +226,8 @@ When you order a secondary instance, the VMware vSphere Web Client for the prima
 
 View and manage the Cloud Foundation instance that you ordered.
 
-**Important:** You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+{:important}
 
 **CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 
