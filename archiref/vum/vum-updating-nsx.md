@@ -17,11 +17,11 @@ If you need to upgrade both NSX and vSphere, VMware recommends completing the NS
 1. **Upgrade ESXi** - Once the ESXi upgrade completes, the host exits maintenance mode, however, you cannot move VMs connected to logical switches to the host until the next step has completed.
 2. **Upgrade NSX VIBs** - Once the VIBs are upgraded and the host has been removed from maintenance mode, you can move VMs connected to logical switches to the host.
 
-NSX is updated by updating NSX Manager by using a download from _my.vmware.com_. Therefore, you need an account to the download the update. If you are consuming {{site.data.keyword.cloud}} subscription licensing with your VCS instance, you will not be able to download the updates with your **my.vmware.com** account. Therefore, you need to [contact IBM Support](../../vmonic/trbl_support.html).
+NSX is updated by updating NSX Manager by using a download from _my.vmware.com_. Therefore, you need an account to the download the update. If you are consuming {{site.data.keyword.cloud}} subscription licensing with your VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance, you will not be able to download the updates with your **my.vmware.com** account. Therefore, you need to [contact IBM Support](../../vmonic/trbl_support.html).
 
 Before beginning the upgrade, check the release notes as known upgrade issues and workarounds are documented in these NSX release notes. Using the release notes, verify that vCenter meets the new system requirements for NSX.
 
-If you installed any additional software from VMware partners, consult the partner documentation for compatibility and upgrade details. If you have deployed VCS primary and secondary instances and have a cross-vCenter NSX environment, refer to the release notes foe the correct upgrade process.
+If you installed any additional software from VMware partners, consult the partner documentation for compatibility and upgrade details. If you have deployed vCenter Server primary and secondary instances and have a cross-vCenter NSX environment, refer to the release notes foe the correct upgrade process.
 
 In a cross-vCenter NSX environment, the Primary NSX Manager appliance is updated first, followed by all the secondary NSX Manager appliances.
 **Downgrades are not supported**, so take a backup of NSX Manager before proceeding with an upgrade, all NSX Edge configurations, logical routers, and edge services gateways are backed up as part of the NSX Manager backup.

@@ -38,7 +38,7 @@ The downloading of upgrades, host patches, extensions, and related metadata is a
 * Notifications, alerts, and patch recalls for ESXi 5.5 and ESXi 6.x hosts.
 * Metadata about upgrades for virtual appliances.
 
-VUM supports the recall of patches for hosts that are running ESXi 5.0 or later. A patch is recalled if the released patch has problems or potential issues. After you scan the hosts in your VCS instance, VUM alerts you if the recalled patch has been installed on a certain host. Recalled patches cannot be installed on hosts with VUM. VUM also deletes all the recalled patches from the patch repository. After a patch fixing the problem is released, VUM downloads the new patch to its patch repository. If you have already installed the problematic patch, VUM notifies you that a fix was released and prompts you to apply the new patch.
+VUM supports the recall of patches for hosts that are running ESXi 5.0 or later. A patch is recalled if the released patch has problems or potential issues. After you scan the hosts in your VMware vCenter Server on {{site.data.keyword.cloud}} instance, VUM alerts you if the recalled patch has been installed on a certain host. Recalled patches cannot be installed on hosts with VUM. VUM also deletes all the recalled patches from the patch repository. After a patch fixing the problem is released, VUM downloads the new patch to its patch repository. If you have already installed the problematic patch, VUM notifies you that a fix was released and prompts you to apply the new patch.
 
 The VUM client interface provides two main views:
 *	Administration View
@@ -63,5 +63,5 @@ The compliance view of a selected inventory object is accessed by navigating to 
 
 ### Related links
 
-* [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

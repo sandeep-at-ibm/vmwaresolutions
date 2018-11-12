@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-29"
 
 ## VCSA update
 
-VUM does not update the VCSA, so this section describes the process of updating this appliance. The VCSA deployed in a VCS instance has no internet access, so the update bundle should be downloaded to a jump-server first.
+VUM does not update the VCSA, so this section describes the process of updating this appliance. The VCSA deployed in a VMware vCenter Server on {{site.data.keyword.cloud}} instance has no internet access, so the update bundle should be downloaded to a jump-server first.
 
 The VCSA is updated via appliance management console, not the vSphere Web Client. The VCSA appliance management console is accessed by using a browser, the VCSA IP address, and port 5480.
 
@@ -32,11 +32,11 @@ To update the VCSA, follow these steps:
 
 ## SSO-linked vCenters
 
-If you have primary and secondary VCS instances, then your VCSAs are configured to be in a single vCenter Single Sign-On (SSO) domain. Each VCSA will have a deployed VUM instance. The configuration properties that you modify are applied only to the VUM instance that you specify and are not propagated to the other instances in the group.
+If you have primary and secondary vCenter Server instances, then your VCSAs are configured to be in a single vCenter Single Sign-On (SSO) domain. Each VCSA will have a deployed VUM instance. The configuration properties that you modify are applied only to the VUM instance that you specify and are not propagated to the other instances in the group.
 
 You can specify a VUM instance by selecting the name of the VCSA with which the VUM instance is registered from the navigation bar. You can also manage baselines and baseline groups as well as scan and remediate only the inventory objects that are managed by the VCSA with which the VUM instance is registered.
 
 ### Related links
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
