@@ -4,23 +4,23 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-30"
+lastupdated: "2018-11-06"
 
 ---
 
 # Architecture overview
-The IBM Cloud for VMware offerings provide automation to deploy VMware
-technology components in IBM Cloud data centers across the globe. The
+The {{site.data.keyword.cloud}} for VMware offerings provide automation to deploy VMware
+technology components in {{site.data.keyword.CloudDataCents_notm}} across the globe. The
 architecture consists of a single cloud region and supports the ability
 to extend into more cloud regions that are located in another
-geography and/or into another IBM Cloud pod within the same data center.
+geography and/or into another {{site.data.keyword.cloud_notm}} pod within the same data center.
 
-The IBM Cloud Private (ICP) and Cloud Automation Manager (CAM) products
+The {{site.data.keyword.cloud_notm}} Private (ICP) and Cloud Automation Manager (CAM) products
 can be manually deployed into your on-premises virtualization platform,
 enabling cloud management from on-premises locations. Alternatively, ICP
 and CAM are offered as service extensions to an existing or new VMware
-vCenter Server on IBM Cloud (VCS) deployment, via automation, enabling
-cloud management from IBM Cloud.
+vCenter Server on {{site.data.keyword.cloud_notm}} (VCS) deployment, via automation, enabling
+cloud management from {{site.data.keyword.cloud_notm}}.
 
 ICP is an application platform for developing and managing on-premises,
 containerized applications. It is an integrated environment for managing
@@ -35,8 +35,8 @@ you have control of your Kubernetes clusters. You can ensure that your
 clusters are secure, operating efficiently, and delivering the service
 levels that applications expect.
 
-IBM Cloud Automation Manager is a multi-cloud, self-service management
-platform running on IBM Cloud Private that empowers developers and
+{{site.data.keyword.cloud_notm}} Automation Manager is a multi-cloud, self-service management
+platform running on {{site.data.keyword.cloud_notm}} Private that empowers developers and
 administrators to meet business demands. Cloud Automation Manager
 Service Composer allows you to expose hybrid cloud services in the IBM
 Cloud Private catalog.
@@ -46,9 +46,9 @@ Cloud Private catalog.
 Figure 1. Cloud management from cloud side
 ![On cloud - cloud management](vcsiks-oncloud-cloudmgt.svg)
 
-The above diagram represents ICP and CAM deployed with the IBM Cloud
+The above diagram represents ICP and CAM deployed with the {{site.data.keyword.cloud_notm}}
 infrastructure, with connections to the on-premises vCenter and IBM
-Kubernetes Service (IKS) service deployed on IBM Cloud. Users are able
+Kubernetes Service (IKS) service deployed on {{site.data.keyword.cloud_notm}}. Users are able
 to deploy virtual machines on-premises and virtual machines into VCS
 instance and containers to the ICP and IKS cluster.
 
@@ -62,7 +62,7 @@ enables the ICP virtual machines to run on the VXLAN network and utilize
 Kubernetes Calico internal networking.
 
 ICP with NSX-T, allowing users to control and configure networking,
-subnet, policies from central UI (NSX-T Manager). Visit the [IBM Cloud
+subnet, policies from central UI (NSX-T Manager). Visit the [{{site.data.keyword.cloud_notm}}
 VCS Networking reference architecture](../vcsnsxt/vcsnsxt-intro.html)
 for the differences between NSX-V and NSX-T.
 
@@ -89,4 +89,4 @@ mechanism to connect the ICP clusters into a single management view.
 
 ### Related links
 
-* [VCS Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html) 
+* [VCS Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
