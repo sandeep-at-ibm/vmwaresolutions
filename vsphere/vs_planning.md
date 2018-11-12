@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-31"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Requirements and planning for VMware vSphere on IBM Cloud
 
 Review the following requirements before you order VMware vSphere on {{site.data.keyword.cloud}}. Plan your VMware vSphere clusters based on the {{site.data.keyword.CloudDataCent_notm}} location and your workload capacity requirements.
 
-**Note:** You are responsible for setting up the environment, installing, and configuring various VMware components after the ESXi servers are deployed. The following examples are VMware components: VMware vCenter Server, VMware NSX, and VMware vSAN.
+You are responsible for setting up the environment, installing, and configuring various VMware components after the ESXi servers are deployed. The following examples are VMware components: VMware vCenter Server, VMware NSX, and VMware vSAN.
+{:note}
 
 ## IBM Cloud account requirements
 
@@ -22,7 +27,8 @@ The {{site.data.keyword.cloud_notm}} account that you are using must meet certai
 
 The vSphere deployment has strict requirements on the physical infrastructure. Therefore, you can deploy clusters only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following {{site.data.keyword.CloudDataCent_notm}} are available for vSphere deployment.
 
-**Note:** If you select a vSAN component, the location list is filtered by SSD (Solid-State Disk) availability.
+If you select a vSAN component, the location list is filtered by SSD (Solid-State Disk) availability.
+{:note}
 
 Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vSphere clusters
 
@@ -36,9 +42,11 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vSphere cluster
 | DAL13 | Dallas | NA South |
 | FRA02 | Frankfurt | Europe |
 | FRA04 | Frankfurt | Europe |
+| FRA05 | Frankfurt | Europe |
 | HKG02 | Hong Kong | Asia Pacific |
 | LON02 | London | Europe |
 | LON04 | London | Europe |
+| LON05 | London | Europe |
 | LON06 | London | Europe |
 | MEL01 | Melbourne | Asia Pacific |
 | MEX01 | Queretaro | NA South |
