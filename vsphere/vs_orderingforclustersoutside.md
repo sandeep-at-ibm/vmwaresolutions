@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Scaling clusters created outside of the console
 
@@ -24,7 +28,8 @@ Ensure that you completed the following tasks:
 2. On the **VMware vSphere on IBM Cloud** page, click **Create**.  
    Ensure that you are on the **Create New** tab and that **New cluster** is displayed in the **Cluster Configurations** list.
 3. Create a cluster with the same settings as the existing cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Ordering new vSphere clusters](vs_orderinginstances.html).  
-   **Note:** For network interface, to scale a cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console, you must select the existing VLANs for the cluster.  
+   For network interface, to scale a cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console, you must select the existing VLANs for the cluster.
+   {:note}
 4. In the **Order Summary** pane, verify the cluster configuration, and then click **Save Configuration**.   
 5. On the **Getting Started** page, click the **VMware vSphere on IBM Cloud** card.
 6. On the **VMware vSphere on IBM Cloud** page, click **Create**.
@@ -37,7 +42,8 @@ Ensure that you completed the following tasks:
 
 The deployment of the cluster starts automatically, and you receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email.
 
-**Note:** The vSphere clusters are not displayed on the **Deployed Instances** page, together with the vCenter Server and Cloud Foundation instances.
+The vSphere clusters are not displayed on the **Deployed Instances** page, together with the vCenter Server and Cloud Foundation instances.
+{:note}
 
 ### Related links
 

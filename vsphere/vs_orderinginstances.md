@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-31"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ordering new vSphere clusters
 
@@ -52,7 +54,8 @@ You can also include the following VMware components in your order:
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**Note:** For IBM Business Partner users, the Bring Your Own License (BYOL) option is not available.
+For IBM Business Partner users, the Bring Your Own License (BYOL) option is not available.
+{:note}
 
 ### Individual components for non-Business Partner users
 
@@ -66,7 +69,8 @@ If you're a non-Business Partner, you can select the following components for yo
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**Note:** The VMware vSAN component is not available when you order VMware vSphere Enterprise Plus 6.0. If you plan to use your own license for VMware vSphere Enterprise Plus 6.0, an {{site.data.keyword.cloud_notm}} infrastructure ticket is opened on your behalf. The ticket requests that the vSphere licenses of the ordered {{site.data.keyword.baremetal_short}} are replaced with your provided licenses.
+The VMware vSAN component is not available when you order VMware vSphere Enterprise Plus 6.0. If you plan to use your own license for VMware vSphere Enterprise Plus 6.0, an {{site.data.keyword.cloud_notm}} infrastructure ticket is opened on your behalf. The ticket requests that the vSphere licenses of the ordered {{site.data.keyword.baremetal_short}} are replaced with your provided licenses.
+{:note}
 
 ### Licensing options
 
@@ -76,7 +80,8 @@ You have the following options for licensing the selected VMware components:
 
 If you choose to purchase any license, except for vSphere Enterprise Plus and vCenter Server, and you order multiple ESXi servers, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to combine license keys. You are responsible to follow up with the ticket to ensure that you use only the license keys that the DevOps team generates.
 
-**Important:** Using individual license keys together with the combined license keys does not meet the payment requirements for the licenses you will need.
+Using individual license keys together with the combined license keys does not meet the payment requirements for the licenses you will need.
+{:important}
 
 ## Bare Metal Server settings
 
@@ -84,24 +89,43 @@ If you choose to purchase any license, except for vSphere Enterprise Plus and vC
 
 Select the {{site.data.keyword.CloudDataCent_notm}} where the cluster is to be hosted.
 
-**Note:** If you select a vSAN component, the location list is filtered by SSD availability.
+**Notes:**
+* If you select a vSAN component, the location list is filtered by SSD availability.
+* The FRA05 data center does not support Broadwell bare metal server.
+* The LON05 data center does not support SAP-certified or Broadwell bare metal server.
 
-### CPU model and RAM
+### Skylake
 
-Specify the CPU model and RAM for the Bare Metal Server.
+When you select **Skylake**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs. Options available depend on whether you selected the VMware vSAN component.
 
-Table 2. Options for customized {{site.data.keyword.baremetal_short}}
+Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}
+
+| CPU model options        | RAM options       |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+
+### SAP-certified
+
+The **SAP-certified** tab is not available if you selected VMware vSAN previously. When you select **SAP-certified**, you cannot alter the CPU or RAM settings.
+
+Based on your requirements, select a Bare Metal Server configuration:
+  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 192 GB RAM
+  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.2 GHz / 384 GB RAM
+  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 768 GB RAM
+
+### Broadwell
+
+When you select **Broadwell**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs. Options available depend on whether you selected the VMware vSAN component.
+
+Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-
-Options available depend on whether you selected the VMware vSAN component.
 
 ### Number of Bare Metal Servers
 
@@ -206,7 +230,9 @@ Based on your configurations, the estimated cost is instantly generated and disp
     **Important:** You are responsible to track the ticket so that you replace the vSphere license on the newly ordered ESXi servers. This way the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
 5. Complete the Bare Metal Server settings:
    1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the cluster.
-   2. Select the CPU model and RAM size.
+   2. Select the Bare Metal Server configuration.
+      * When you select **Skylake** or **Broadwell**, specify the CPU model and the RAM size.
+      * When you select **SAP-certified**, choose the CPU model.
    3. Specify the number of Bare Metal Servers.
 6. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
 7. Complete the network interface settings:
@@ -220,7 +246,8 @@ Based on your configurations, the estimated cost is instantly generated and disp
    * To save the configuration as a template without placing an order, click **Save Configuration**.
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.
 
-   **Note:** Only the {{site.data.keyword.baremetal_short}} are installed. You are responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.
+   Only the {{site.data.keyword.baremetal_short}} are installed. You are responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.
+   {:note}
 
 ### Results
 
@@ -228,7 +255,8 @@ If you saved the cluster configuration as a template, you get a console notifica
 
 If you placed an order, the deployment of the cluster starts automatically, and you receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email.
 
-**Note:** The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Deployed Instances** page.
+The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Deployed Instances** page.
+{:note}
 
 ### Related links
 

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Scaling existing vSphere clusters
 
@@ -37,7 +41,8 @@ The cluster scaling starts automatically. You receive an email confirmation that
 
 If the cluster you are scaling is not ready to use, you might receive an error message.
 
-**Note:** The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Deployed Instances** page.
+The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Deployed Instances** page.
+{:note}
 
 ### Related links
 
