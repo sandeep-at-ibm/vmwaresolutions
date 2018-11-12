@@ -11,6 +11,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Release notes
+        vmonic/relnotes_v27.md
         vmonic/relnotes_v26.md
         vmonic/relnotes_v25.md
         vmonic/relnotes_v24.md
@@ -50,6 +51,7 @@ IBM Cloud for VMware Solutions
         vcenter/vc_networkingonvcenterserver.md
         vcenter/vc_esg_config.md
         vcenter/vc_multisite.md
+        vcenter/vc_compl_info.md
         vcenter/vc_orderinginstance.md
         vcenter/vc_addingviewingclusters.md
         vcenter/vc_addingremovingservers.md
@@ -66,6 +68,7 @@ IBM Cloud for VMware Solutions
         vcenter/vc_hybrid_planning.md
         vcenter/vc_hybrid_networkingonvcenterserver.md
         vcenter/vc_hybrid_multisite.md
+        vcenter/vc_compl_info.md
         vcenter/vc_hybrid_orderinginstance.md
         vcenter/vc_hybrid_addingviewingclusters.md
         vcenter/vc_hybrid_addingremovingservers.md
@@ -164,7 +167,8 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     IBM Cloud Private Hosted
-        services/managing_icp.md
+        services/icp_overview.md
+        services/icp_ordering.md
 
     {: .topicgroup}
     IBM Spectrum Protect Plus on IBM Cloud
