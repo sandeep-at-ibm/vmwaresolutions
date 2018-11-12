@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-30"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -196,10 +196,10 @@ ICP catalog.
   - Helm Command Line.
   - Use Multizone clusters to increase high availability.
 
-[Planning your cluster and worker node setup](../../../containers/cs_clusters_planning.html#plan_clusters) explains the options and process to design a solution to meet your requirements.
+[Planning your cluster and worker node setup](../../../../containers/cs_clusters_planning.html#plan_clusters) explains the options and process to design a solution to meet your requirements.
 
 ## Security and compliance
-When it comes to meeting strict industry guidelines, IBM Cloud has done the work for you, fostering true compliance. [Compliance on the IBM Cloud](https://www.ibm.com/cloud/compliance) provides details on the specific compliance certifications, global regulations, alignments, and frameworks for security and privacy. [Security for IBM Cloud Kubernetes Service](../../../containers/cs_secure.html#security) details IKS security features.
+When it comes to meeting strict industry guidelines, IBM Cloud has done the work for you, fostering true compliance. [Compliance on the IBM Cloud](https://www.ibm.com/cloud/compliance) provides details on the specific compliance certifications, global regulations, alignments, and frameworks for security and privacy. [Security for IBM Cloud Kubernetes Service](../../../../containers/cs_secure.html#security) details IKS security features.
 
 ### Related links
 
