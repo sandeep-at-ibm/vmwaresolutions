@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ordering NetApp ONTAP Select instances
 
@@ -18,7 +22,8 @@ Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
 *  You reviewed the requirements and considerations in [Requirements and planning for NetApp ONTAP Select instances](np_planning.html).
 
-**Important**: Do not modify any values that are set during instance order or deployment. Doing so make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
+Do not modify any values that are set during instance order or deployment. Doing so make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
+{:important}
 
 ## System settings
 
@@ -60,7 +65,8 @@ The root domain name must meet the following requirements:
 * The last string can include only alphabetic characters.
 * The length of the last string must be in the range 2 - 24 characters.
 
-**Note:** The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (virtual machines) is 50 characters. Domain names must accommodate for this maximum length.
+The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (virtual machines) is 50 characters. Domain names must accommodate for this maximum length.
+{:note}
 
 ## Licensing settings
 
@@ -79,7 +85,8 @@ Select a Bare Metal Server configuration based on your requirements:
 * **High Performance (Large)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / 22S 3.8 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 118 TB
 * **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 64 GB RAM / Thirty Four 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 190 TB
 
-**Note:** 3.8 TB SSD (Solid-State Disk) drives are supported when they are made generally available in an {{site.data.keyword.CloudDataCent_notm}}.
+3.8 TB SSD (Solid-State Disk) drives are supported when they are made generally available in an {{site.data.keyword.CloudDataCent_notm}}.
+{:note}
 
 ### Number of Bare Metal Servers
 
@@ -114,7 +121,8 @@ When the instance is ready to use, the status of the instance is changed to **Re
 
 View and manage the NetApp ONTAP Select instance that you ordered.
 
-**Important:** You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+{:important}
 
 **CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components

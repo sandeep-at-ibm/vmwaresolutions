@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # NetApp ONTAP Select overview
 
@@ -57,7 +61,8 @@ NetApp ONTAP Select runs in a VMware cluster and virtualizes the local storage o
 
 The following components are included in your NetApp ONTAP Select instance.
 
-**Note:** The availability and pricing of standardized configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
+The availability and pricing of standardized configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
+{:note}
 
 ### Storage
 
@@ -73,7 +78,8 @@ Four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with
 * **High Performance (Large)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / 22 3.8 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 118 TB
 * **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 64 GB RAM / Thirty Four 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 190 TB
 
-**Note:** 3.8 TB SSD (Solid-State Disk) drives are supported when they are made generally available in a data center.
+3.8 TB SSD (Solid-State Disk) drives are supported when they are made generally available in a data center.
+{:note}
 
 ### Hardware
 
@@ -102,7 +108,8 @@ Two VSIs (Virtual Server Instances):
 *  VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 *  Support and Services fee (one license per node)
 
-**Important:** You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+{:important}
 
 **CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, removing, or powering off components
