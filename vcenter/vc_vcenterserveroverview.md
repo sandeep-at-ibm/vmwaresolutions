@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server overview
 
@@ -27,7 +31,6 @@ You can add IBM-Managed Services if you want to offload the day-to-day operation
 The following graphic depicts the high-level architecture and components of a three-node vCenter Server deployment.
 
 Figure 1. vCenter Server high-level architecture for a three-node cluster
-
 ![vCenter Server architecture](vc_architecture.svg "vCenter Server high-level architecture for a three-node cluster")
 
 ### Physical infrastructure
@@ -54,21 +57,21 @@ For more information about the architecture, see [{{site.data.keyword.vmwaresolu
 
 The following components are included in your vCenter Server instance.
 
-**Note:** The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
+The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
+{:note}
 
 ### Bare Metal Server
 
 You can order three or more {{site.data.keyword.baremetal_short}} with one of the following configurations:
-*  **Customized**: {{site.data.keyword.baremetal_short}} with your selected CPU model and RAM size.   
-   * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
-   * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
-
-     **Note:** If you plan to use vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
-*  **Preconfigured**: 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
-   * **Small** (Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz / 128 GB RAM / 2 disks)
-   * **Medium** (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 256 GB RAM / 2 disks)
-   * **Large** (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 2 disks).
-
+* **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.  
+* **SAP-certified**: {{site.data.keyword.baremetal_short}} with your selected CPU model.
+  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 192 GB RAM
+  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 384 GB RAM
+  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 768 GB RAM
+* **Broadwell**: 2-CPU Intel Broadwell generation servers (Intel Xeon E5-2600 v4 series) with your selected CPU model and RAM size.  
+     If you plan to use vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
+     {:note}
+     
 ### Networking
 
 The following networking components are ordered:
@@ -78,7 +81,8 @@ The following networking components are ordered:
 *  Two VMware NSX Edge Services Gateways:
   * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-    **Important:** This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, by using a firewall or disabling the ESG communications to the external IBM management components might cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
+    This ESG is named **mgmt-nsx-edge**, it's not accessible to you and you can't use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, by using a firewall or disabling the ESG communications to the external IBM management components might cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
+    {:important}
   * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic. This gateway is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 ### Virtual Server Instances
@@ -101,7 +105,8 @@ The vSAN option offers customized configurations, with various options for disk 
 
   In addition, two cache disks of 960 GB are also ordered per host.
 
-  **Note:** 3.8 TB SSD (Solid State Disk) drives will be supported when they are made generally available in a data center.
+  3.8 TB SSD (Solid State Disk) drives will be supported when they are made generally available in a data center.
+  {:note}
 * High-Performance Intel Optane option, which provides two extra capacity disk bays for a total of 10 capacity disks. This option depends on the CPU model.
 
 #### NFS storage
@@ -136,15 +141,14 @@ One Bare Metal Server with the configuration presented in [Technical specificati
 * One Support and Services fee
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
-**Important:** You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
-
-**CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance, from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
+You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
+Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance, from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components
 *  Expanding or contracting instance capacity through adding or removing ESXi servers
 *  Powering off components
 *  Restarting services
-
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
+   {:important}
 
 ### Related links
 

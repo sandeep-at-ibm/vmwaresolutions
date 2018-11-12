@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Viewing VMware Federal instances
 
@@ -17,7 +21,7 @@ View the summary and detailed information of the VMware Federal instances that a
 To view a summary of all the VMware Federal instances that are provisioned for a user account, complete the following steps:
 1. In the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane.
 2. From the console banner, click your user account icon, and then click the **Account** field to select the user account that you want to check instances for.
-3. In the **vCenter Server** table, view the list of instances that are provisioned in the selected user account.
+3. In the **vCenter Server Instances** table, view the list of instances that are provisioned in the selected user account.
 
 Table 1. VMware Federal instance items
 
@@ -110,7 +114,8 @@ If errors occur during instance deployment or instance deletion, the {{site.data
 
 Manage your instances from the {{site.data.keyword.vmwaresolutions_short}} console or the VMware vSphere Web Client.
 
-**Important:** Before you click **vCenter console** on the instance summary page to go to the vSphere Web Client and start managing your ESXi servers, you must log in to the VPN portal of the {{site.data.keyword.CloudDataCent_notm}}. Hover over the **vCenter console** button and follow the instructions to ensure that you meet all requirements and you completed the necessary steps before you access the vSphere Web Client.
+Before you click **vCenter console** on the instance summary page to go to the vSphere Web Client and start managing your ESXi servers, you must log in to the VPN portal of the {{site.data.keyword.CloudDataCent_notm}}. Hover over the **vCenter console** button and follow the instructions to ensure that you meet all requirements and you completed the necessary steps before you access the vSphere Web Client.
+{:important}
 
 Review the following topics for information to help you complete the login instructions:
 *  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).

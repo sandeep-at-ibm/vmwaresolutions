@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware Federal on IBM Cloud overview
 
@@ -14,7 +18,8 @@ With VMware Federal on {{site.data.keyword.cloud}}, you can order a base vCenter
 
 For more information about vCenter Server on {{site.data.keyword.cloud_notm}} and the vCenter Server architecture, see [vCenter Server overview](vc_vcenterserveroverview.html).
 
-**Attention:** VMware Federal on {{site.data.keyword.cloud_notm}} offers only a subset of the vCenter Server offerings. Multi-site configuration, preconfigured {{site.data.keyword.cloud_notm}} Bare Metal Servers, Bring Your Own License, and the option to order add-on services are not supported.
+VMware Federal on {{site.data.keyword.cloud_notm}} offers only a subset of the vCenter Server offerings. Multi-site configuration, Bring Your Own License, and the option to order add-on services are not supported.
+{:note}
 
 ## Technical specifications for VMware Federal on IBM Cloud instances
 
@@ -22,14 +27,15 @@ The following components are included:
 
 ### Bare Metal Server
 
-You can order two or more customized {{site.data.keyword.baremetal_short}} with one of the following configurations:
+You can order two or more {{site.data.keyword.baremetal_short}} with one of the following configurations:
 
 * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
 * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
 
 For NFS storage configuration, the recommended number of {{site.data.keyword.baremetal_short}} is set to the default of three.
 
-**Note:** If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
+If you select vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
+{:note}
 
 ### Networking
 
@@ -39,10 +45,12 @@ The following networking components are ordered:
 *  Two VMware NSX Edge Services Gateways:
   * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-    **Important:** This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
+    This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
+    {:important}
   * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
-  **Note:** The VMware NSX Edge Services (ESG) for outbound HTTPS management traffic is removed as part of the action to secure your deployed VMware Federal instance. For more information, see [Securing VMware Federal instances](vc_fed_securinginstance.html).
+  The VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic is removed as part of the action to secure your deployed VMware Federal instance. For more information, see [Securing VMware Federal instances](vc_fed_securinginstance.html).
+  {:note}
 
 ### Virtual Server Instances
 
@@ -94,7 +102,8 @@ One Bare Metal Server with the configuration presented in [Technical specificati
 * One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
-**Important:** You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes aren't synchronized with the console.
+You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes aren't synchronized with the console.
+{:important}
 
 **CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance, from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Adding, viewing, and deleting clusters for VMware Federal instances
 
@@ -38,20 +42,29 @@ The data center of the cluster is set to the data center of the VMware Federal i
 
 ### Bare Metal Server settings
 
-#### Customized
+#### Skylake
 
 Specify the CPU model and RAM for the Bare Metal Server. Available options might differ depending on the version that your instance was initially deployed in.
 
-Table 1. Options for customized {{site.data.keyword.baremetal_short}}
+Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}
+
+| CPU model options        | RAM options       |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+
+#### Broadwell
+
+Specify the CPU model and RAM for the Bare Metal Server. Available options might differ depending on the version that your instance was initially deployed in.
+
+Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 #### Number of Bare Metal Servers
 
@@ -80,7 +93,8 @@ If your initial cluster was added as a vSAN cluster, any additional vSAN cluster
 
 When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
 
-**Note:** The number of file shares must be in the range of 1 to 32.
+The number of file shares must be in the range of 1 to 32.
+{:note}
 
 * **Configure shares individually**: Select to specify different configuration settings for each file share.
 * **Number of Shares**: When using the same configuration setting for each file share, specify the number of file shares for the NFS shared storage that you want to add.
@@ -88,7 +102,7 @@ When you select **NFS Storage**, you can add file-level shared storage for your 
 * **Performance**: Select the IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
 * **ADD NFS**: Select to add individual file shares with different configuration settings.
 
-Table 2. NFS performance level options
+Table 3. NFS performance level options
 
 | Option        | Details       |
   |:------------- |:------------- |
@@ -113,7 +127,8 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instance** table, click the instance that you want to add clusters to.
 
-   **Note:** Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
+   Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
+   {:note}
 3. Click **Infrastructure** on the left navigation pane and click **Add** at the upper-right corner of the **CLUSTERS** table.
 4. On the **Add Cluster** page, enter the cluster name.
 5. Select the **CPU Model**, the amount of **RAM**, and the **Number of Bare Metal Servers** for the Bare Metal configuration.
@@ -133,7 +148,8 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history from the instance summary page.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
 
-**Important:** You cannot change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
+You cannot change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
+{:important}
 
 ## Procedure to view clusters in VMware Federal instances
 
@@ -214,7 +230,8 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 
 You might want to delete a cluster from an instance when it is no longer needed.
 
-**Note:** Use this procedure to remove clusters from instances that are deployed in (or upgraded to) V2.3 and later releases.
+Use this procedure to remove clusters from instances that are deployed in (or upgraded to) V2.3 and later releases.
+{:note}
 
 ### Before you delete
 
@@ -230,7 +247,8 @@ You might want to delete a cluster from an instance when it is no longer needed.
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to delete clusters from.
 
-   **Note:** Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot delete clusters from the instance.
+   Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot delete clusters from the instance.
+   {:note}
 
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.
 
