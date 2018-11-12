@@ -4,25 +4,25 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
 # IBM Cloud Private
 
-IBM Cloud Private (ICP) is an application platform for developing and managing containerized applications. It is an integrated environment that includes the container orchestrator Kubernetes, a private image repository, a management console, monitoring frameworks and a graphical user interface, which provides a centralized location from where you can deploy, manage, monitor, and scale your applications.
+{{site.data.keyword.cloud}} Private (ICP) is an application platform for developing and managing containerized applications. It is an integrated environment that includes the container orchestrator Kubernetes, a private image repository, a management console, monitoring frameworks and a graphical user interface, which provides a centralized location from where you can deploy, manage, monitor, and scale your applications.
 
-IBM Cloud Private has the following features:
+{{site.data.keyword.cloud_notm}} Private has the following features:
 -	**Unified installer** – The installer rapidly sets up a Kubernetes based cluster with master, worker, and proxy nodes by using an Ansible based installer.
--	**IBM Cloud Private management console** – Allows you to manage, monitor, and troubleshoot your applications and cluster from a single, centralized, and secure management console.
+-	**{{site.data.keyword.cloud_notm}} Private management console** – Allows you to manage, monitor, and troubleshoot your applications and cluster from a single, centralized, and secure management console.
 -	**Private Docker image registry** - This local registry has all the same features as Docker Hub but also allows you to restrict which users can view or pull images.
--	**Catalog of containerized software and services** - The catalog provides a centralized location from which you can browse for and install packages in your cluster. Packages for extra IBM products are available from curated repositories that are included in the default IBM Cloud Private repository list.
+-	**Catalog of containerized software and services** - The catalog provides a centralized location from which you can browse for and install packages in your cluster. Packages for extra IBM products are available from curated repositories that are included in the default {{site.data.keyword.cloud_notm}} Private repository list.
 -	**Isolated tenant networks** - Calico allows for improved performance and network isolation inside your cluster. With Calico, you can create an isolated subnet for each project inside your cluster. This network isolation provides you with added security during data transmissions and reduces the chances of compromising applications and their data. Calico also facilitates the creation of new network policies that can enable fine grained control over the sharing of objects within a single namespace.
--	**Robust monitoring and logging with ELK stack** - IBM Cloud Private uses Elasticsearch, Logstash, Filebeat, and Heapster for the collection, storage, and querying of logs and metrics. This monitoring and logging process provides a centralized store for all logs and metrics, better performance, and increased stability when you access and query logs and metrics.
+-	**Robust monitoring and logging with ELK stack** - {{site.data.keyword.cloud_notm}} Private uses Elasticsearch, Logstash, Filebeat, and Heapster for the collection, storage, and querying of logs and metrics. This monitoring and logging process provides a centralized store for all logs and metrics, better performance, and increased stability when you access and query logs and metrics.
 
 ## ICP components
 
-An IBM Cloud Private cluster has four main classes of nodes: boot, master, worker, and proxy. You can optionally specify management, Vulnerability Advisor (VA), and etcd nodes in your cluster.
+An {{site.data.keyword.cloud_notm}} Private cluster has four main classes of nodes: boot, master, worker, and proxy. You can optionally specify management, Vulnerability Advisor (VA), and etcd nodes in your cluster.
 -	**Boot node** - A boot node is used for running installation, configuration, node scaling, and cluster updates.
 -	**Master node** - A master node provides management services and controls the worker nodes in a cluster. Master nodes host processes that are responsible for resource allocation, state maintenance, scheduling, and monitoring.
 -	**Worker node** - A worker node is a node that provides a containerized environment for running tasks. As demands increase, more worker nodes can easily be added to your cluster to improve performance and efficiency.
