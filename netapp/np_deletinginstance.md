@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Deleting NetApp ONTAP Select instances
 
@@ -20,7 +24,8 @@ If you delete a NetApp ONTAP Select instance, the following components are relea
 
 Because of resource dependencies, the components in your instance are not released immediately when you delete the instance. For example, the subnets and VLANs cannot be deleted until the ESXi servers are fully reclaimed by {{site.data.keyword.cloud}} infrastructure, which happens at the end of the {{site.data.keyword.cloud_notm}} billing cycle. At the end of the billing cycle, which is typically 30 days, the subnets and VLANs are reclaimed and the instance deletion is completed.
 
-**Attention:** You are billed until the end of the billing cycle for the deleted instance.
+You are billed until the end of the billing cycle for the deleted instance.
+{:note}
 
 ## Procedure to delete instances from the Deployed Instances page
 

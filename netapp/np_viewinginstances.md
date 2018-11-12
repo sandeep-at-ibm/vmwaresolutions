@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Viewing NetApp ONTAP Select instances
 
@@ -163,7 +167,8 @@ Table 6. ESXi server details of a NetApp ONTAP Select cluster
 
 Manage your instances from the {{site.data.keyword.vmwaresolutions_short}} console, the VMware vSphere Web Client, or the NetApp console.
 
-**Important:** Before you click **vCenter console** on the instance summary page to go to the vSphere Web Client and start managing your ESXi servers, you must log in to the VPN portal of the {{site.data.keyword.CloudDataCent_notm}}. Hover over the **vCenter console** button and follow the instructions to ensure that you meet all requirements and you completed the necessary steps before you access the vSphere Web Client.
+Before you click **vCenter console** on the instance summary page to go to the vSphere Web Client and start managing your ESXi servers, you must log in to the VPN portal of the {{site.data.keyword.CloudDataCent_notm}}. Hover over the **vCenter console** button and follow the instructions to ensure that you meet all requirements and you completed the necessary steps before you access the vSphere Web Client.
+{:important}
 
 For more information to help you complete the login instructions, review the following topics:
 
