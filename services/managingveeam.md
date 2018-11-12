@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -37,17 +37,25 @@ When failures occur on the management components, you can restore the management
 
 ## Applying updates to Veeam on IBM Cloud
 
-You are responsible for maintaining Veeam to keep it updated to the most recent version. To upgrade Veeam to the latest version, download the Veeam updates from the Veeam website, copy the updates to the Veeam VSI, and then install them.
+You are responsible for maintaining the Veeam software to keep it updated to the most recent version.
+
+### For instances deployed with public and private network
+
+If the Veeam service is installed on an instance with public and private network, you can check for and download the updates by using the Veeam software itself.
+
+### For instances deployed with private network only
+
+If the Veeam service is installed on an instance with private network only, because the Veeam VSI is configured with no public network access, you cannot check for or download updates by using the Veeam software itself. Instead, you must download updates from the Veeam website, transfer them to the Veeam VM, and then install them.
 
 ## Updating Veeam licenses
 
-You can update your Veeam license manually on demand by completing the following steps:
-1. [Access the Veeam Backup and Replication console by using RDP](../services/managingveeam.html#accessing-the-veeam-console-by-using-rdp).
-2. From the main menu, click **License**.
-3. In the **License Information** window, click **Update Now**.
-4. To view the statistics of the manual license update process, open the **History** view, and then click the **System** node.
+### For instances deployed with public and private network
 
-For more information, see [Updating License Manually](https://helpcenter.veeam.com/docs/backup/vsphere/license_update_manual.html?ver=95).
+If the Veeam service is installed on an instance with public and private network, you can update your Veeam license either automatically or manually by following the Veeam instructions at [Updating license]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html).
+
+### For instances deployed with private network only
+
+If the Veeam service is installed on an instance with private network only, you must take note of the expiration date for your license and contact [IBM Support](../vmonic/trbl_support.html) to get assistance with updating the license key when the renewal is needed.
 
 ## Replacing the Veeam VSI of pre-V1.8 instances with Veeam on IBM Cloud
 

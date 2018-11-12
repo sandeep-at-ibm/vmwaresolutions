@@ -4,25 +4,32 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware HCX on IBM Cloud overview
 
 The HCX on {{site.data.keyword.cloud}} service seamlessly extends the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows you to migrate virtual machines (VMs) to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
 
-**Availability:** This service is available only to VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle instances that are deployed in V2.3 and later releases.
+This service is available only to VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle instances that are deployed in V2.3 and later.
+{:note}
 
-You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance. For more information about upgrading your instance and deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [Upgrading to the vCenter Server with Hybridity Bundle instance](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance).
+You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance. For more information about upgrading your instance and deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [Procedure to upgrade to the vCenter Server with Hybridity Bundle instance](../vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance).
 
-**Note:** A vCenter Server instance with HCX on {{site.data.keyword.cloud_notm}} is limited to three simultaneous connections from on-premises sites.
+A vCenter Server instance with HCX on {{site.data.keyword.cloud_notm}} is limited to three simultaneous connections from on-premises sites.
+{:note}
 
 ## Technical specifications for HCX on IBM Cloud
 
 The following components are ordered and included in the HCX on {{site.data.keyword.cloud_notm}} service.
 
-**Note:** On-premises HCX instances include only licensing and activation.
+On-premises HCX instances include only licensing and activation.
+{:note}
 
 ### An active/passive pair of VMware NSX Edge Services Gateways for HCX Management
 
@@ -81,4 +88,4 @@ Review the following considerations before you remove the HCX on {{site.data.key
 * [Glossary of HCX terms](hcx_glossary.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources)

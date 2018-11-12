@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # FortiGate Virtual Appliance on IBM Cloud overview
 
@@ -14,7 +18,8 @@ The FortiGate Virtual Appliance on {{site.data.keyword.cloud}} service deploys a
 
 You can install multiple instances of this service as needed. You can manage this service by using the FortiOS Web Client or the command line interface through SSH.
 
-**Availability:** This service is available only to instances that are deployed in V2.0 or later releases.
+This service is available only to instances that are deployed in V2.0 or later releases. The current service version that is installed is 6.0.3.
+{:note}
 
 ## Technical specifications for FortiGate Virtual Appliance on IBM Cloud
 
@@ -38,14 +43,14 @@ Access to the FortiGate® console is provided through a private management netwo
 
 License fees for each virtual machine are applied to each billing cycle depending on the selected deployment size and monthly subscription license model.
 
-**Important:** You cannot change the licensing level after service installation. To change the licensing level, you must remove the existing service and reinstall the service using a different licensing option.
+You cannot change the licensing level after service installation. To change the licensing level, you must remove the existing service and reinstall the service using a different licensing option.
+{:important}
 
 ## Considerations when installing FortiGate Virtual Appliance on IBM Cloud
 
 Review the following considerations before you install the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service:
 * The FortiGate virtual machines (VMs) are deployed only into the default cluster.
-* 100% of CPU and RAM for the two FortiGate VMs are also reserved because these VMs are in the data plane of the network
-  communications and it is critical that resources are still available for them.
+* 100% of CPU and RAM for the two FortiGate VMs are also reserved because these VMs are in the data plane of the network communications and it is critical that resources are still available for them.
 
   To calculate the CPU and RAM reservation for a single FortiGate VM, use the following formula:
    * `CPU reservation = CPU speed of ESXi server * number of vCPUs`
