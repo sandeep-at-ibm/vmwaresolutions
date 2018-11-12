@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-30"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -29,7 +29,7 @@ The NSX Manager is deployed on the initial cluster. Additionally, the NSX Manage
 
 ### NSX Controllers
 
-The IBM Cloud automation deploys three NSX Controllers within the initial cluster. The controllers are assigned a VLAN–backed IP address from the private portable subnet that is designated for management components.
+The {{site.data.keyword.cloud}} automation deploys three NSX Controllers within the initial cluster. The controllers are assigned a VLAN–backed IP address from the private portable subnet that is designated for management components.
 
 ### NSX Edge / DLR
 
@@ -54,7 +54,7 @@ Edge size	Compact | Number of vCPUs	1
 Memory	| 512-MB Disk	| 1000 GB on local datastore
 
 ## ICP components
-IBM Cloud Private is an application platform for developing and managing on-premises, containerized applications. It is an integrated environment for managing containers that includes the container orchestrator Kubernetes, a private image repository, a management console, and monitoring frameworks.
+{{site.data.keyword.cloud_notm}} Private is an application platform for developing and managing on-premises, containerized applications. It is an integrated environment for managing containers that includes the container orchestrator Kubernetes, a private image repository, a management console, and monitoring frameworks.
 
 Figure 2. Virtual ICP deployment with VCS
 ![Virtual ICP deployment with VCS](vcsicp-virtual-icp-deployment-vcs.svg)
@@ -77,7 +77,7 @@ A proxy node is a node that transmits external request to the services created i
 
 ### Management Node
 
-A management node is an optional node that hosts only management services such as monitoring, metering, and logging. By configuring dedicated management nodes, you can prevent the master node from becoming overloaded. You can enable the management node only during IBM Cloud Private installation.
+A management node is an optional node that hosts only management services such as monitoring, metering, and logging. By configuring dedicated management nodes, you can prevent the master node from becoming overloaded. You can enable the management node only during {{site.data.keyword.cloud_notm}} Private installation.
 
 ###	VA Node
 
@@ -106,7 +106,7 @@ worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 ## CAM Components
 
-IBM Cloud Automation Manager (CAM) is a multi-cloud, self-service management platform running on ICP that empowers developers and administrators to meet business demands.
+{{site.data.keyword.cloud_notm}} Automation Manager (CAM) is a multi-cloud, self-service management platform running on ICP that empowers developers and administrators to meet business demands.
 
 Fig 3. CAM component reference
 ![CAM component reference](vcsicp-cam-component-ref.svg)

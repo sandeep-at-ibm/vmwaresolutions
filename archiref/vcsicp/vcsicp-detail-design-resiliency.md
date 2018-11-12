@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-30"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-30"
 
 ###	VCS backup
 
-As part of IBM Cloud for VMware Solutions, Veeam backup software is optionally deployed on an IBM Cloud virtual server instance (VSI) using IBM Cloud Endurance Storage outside the VMware cluster. The purpose of this software is to back up the management components in this solution.
+As part of {{site.data.keyword.vmwaresolutions_full}}, Veeam backup software is optionally deployed on an {{site.data.keyword.cloud_notm}} virtual server instance (VSI) using {{site.data.keyword.cloud_notm}} Endurance Storage outside the VMware cluster. The purpose of this software is to back up the management components in this solution.
 
 ### NSX backup
 
@@ -25,7 +25,7 @@ The NSX Manager backup contains all of the NSX configuration, including controll
 
 Backups for an ICP deployment are crucial to restore the system to its working state if failure occurs. On top of a traditional VM backup, there is a sticking point, every ICP master node runs etcd, and etcd documentation clearly states not to use traditional VM backup to restore it.
 
-IBM Cloud Private at the platform level, you need to back up these components:
+{{site.data.keyword.cloud_notm}} Private at the platform level, you need to back up these components:
 
 -	**Etcd** — is used to store Kubernetes resources as well as Calico state information.
 -	**Docker Registry** — private image registry that is used to store container image files in an image repository.
@@ -48,7 +48,7 @@ Backups of the etcd database are provided to the customer as part of the managed
 
 ### VCS scalability
 
-After the deployment of the initial hosts, the user has the ability to scale out the compute capacity from within the IBM Cloud for VMware portal.
+After the deployment of the initial hosts, the user has the ability to scale out the compute capacity from within the {{site.data.keyword.cloud_notm}} for VMware portal.
 
 This scale out of the environment follows one of three paths:
 - Addition of new sites managed by separate vCenter Servers.
@@ -56,7 +56,7 @@ This scale out of the environment follows one of three paths:
 - Addition of new hosts to an existing cluster.
 
 ####	Multi site deployments
-VMware on IBM Cloud can leverage IBM Cloud’s world–wide data center presence and integrated network backbone to allow for various cross–geography use cases to be deployed and functioning within a fraction of the time it would take to build such an infrastructure from scratch.
+VMware on {{site.data.keyword.cloud_notm}} can leverage IBM Cloud’s world–wide data center presence and integrated network backbone to allow for various cross–geography use cases to be deployed and functioning within a fraction of the time it would take to build such an infrastructure from scratch.
 
 ####	Scale out with new cluster
 The user also has the option to scale out the compute capacity by creating a new cluster from within the console, ordering the hosts, and the new hosts are automatically added to the new cluster. This option will create a separate cluster in the environment and give users the ability to physically and logically segregate management workloads from application workloads, the ability to segregate workloads based on other characteristics (for example, Microsoft SQL database cluster), and the ability to deploy applications in highly available topologies.
@@ -79,7 +79,7 @@ ICP worker virtual machine nodes are scaled to expand the compute/application:
 
 
 ###  IKS expansion
-Users can provision an IKS environment via the IBM Cloud Portal to extend/utilize a container environment.
+Users can provision an IKS environment via the {{site.data.keyword.cloud_notm}} Portal to extend/utilize a container environment.
 
 Application deployments into IKS can be done via:
 - IKS connection/services are developed in CAM and published to ICP catalog.
@@ -88,8 +88,8 @@ Application deployments into IKS can be done via:
 - Use Multizone clusters to increase high availability.
 
 ### Related links
-* [Adding or Removing Cluster Nodes](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/installing/modify_cluster.html)
-* [Adding worker nodes by resizing an existing worker pool](https://console.bluemix.net/docs/containers/cs_clusters.html#add_workers)
-* [How to back up and restore IBM Cloud Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
-* [ICP backup](https://github.com/ibm-cloud-architecture/icp-backup/)
+* [Adding or removing cluster nodes](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/installing/modify_cluster.html)
+* [Adding worker nodes by resizing an existing worker pool](../../../../containers/cs_clusters.html#resize_pool)
+* [How to back up and restore {{site.data.keyword.cloud_notm}} Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
+* [ICP backup GitHub](https://github.com/ibm-cloud-architecture/icp-backup/)
 * [VCS Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)

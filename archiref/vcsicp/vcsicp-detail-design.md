@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-30"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -24,7 +24,7 @@ As part of the VCS automation, a Microsoft Active Directory (AD) is employed for
 The VCS deployment utilizes the deployed Microsoft Active Directory (AD) VSIs as DNS servers for the instance. All deployed components (vCenter, PSC, NSX, ESXi hosts) are configured to point to the MS AD as their default DNS.
 
 ###	NTP services
-The VCS deployment utilizes the IBM Cloud infrastructure NTP servers. All deployed components will be configured to utilize these NTP servers. Having all components within the design utilizing the same NTP servers is critical for certificates and MS AD authentication to function correctly
+The VCS deployment utilizes the {{site.data.keyword.cloud}} infrastructure NTP servers. All deployed components will be configured to utilize these NTP servers. Having all components within the design utilizing the same NTP servers is critical for certificates and MS AD authentication to function correctly
 
 ## Networking
 
