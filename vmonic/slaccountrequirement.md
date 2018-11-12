@@ -4,21 +4,26 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Requirements for the IBM Cloud infrastructure account
 
 To use {{site.data.keyword.vmwaresolutions_full}} to order instances, you must have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account. The cost of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
 
-**Note:** The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account was previously known as the IBM SoftLayer account.
+The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account was previously known as the IBM SoftLayer account.
+{:note}
 
 ## Permissions for the IBM Cloud infrastructure account
 
 The {{site.data.keyword.cloud_notm}} infrastructure account that you are using must have certain permissions to be able to order the components in your instances and perform operations on your behalf. The permission requirements are applicable to all types of instances and services you are ordering from the {{site.data.keyword.vmwaresolutions_short}} console.
 
-Authorized users can verify and update the permissions for an {{site.data.keyword.cloud_notm}} infrastructure account in the {{site.data.keyword.slportal}}. For more information, see _Editing a user's customer portal permissions_ in [Managing a user profile](../../../customer-portal/cpmanuserprof.html){:new_window}.
+Authorized users can verify and update the permissions for an {{site.data.keyword.cloud_notm}} infrastructure account in the {{site.data.keyword.slportal}}. For more information, see [Editing a user's customer portal permissions](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
 
 Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} infrastructure account
 
@@ -42,7 +47,7 @@ Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} infrastru
 
 ## VLAN spanning for classic (non-VRF) accounts
 
-If you are using a classic (non-VRF) {{site.data.keyword.cloud_notm}} infrastructure account, VLAN spanning must be enabled. If VLAN spanning is not enabled for classic accounts, the various components of the VMware virtualization environment might not be able to communicate with each other. To enable VLAN spanning in your {{site.data.keyword.cloud_notm}} infrastructure account, see [Enable or Disable VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+If you are using a classic (non-VRF) {{site.data.keyword.cloud_notm}} infrastructure account, VLAN spanning must be enabled. If VLAN spanning is not enabled for classic accounts, the various components of the VMware virtualization environment might not be able to communicate with each other. To enable VLAN spanning in your {{site.data.keyword.cloud_notm}} infrastructure account, see [VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ### Related links
 

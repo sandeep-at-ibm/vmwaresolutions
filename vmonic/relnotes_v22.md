@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-10-19"
 
 ---
 
@@ -80,7 +80,7 @@ For important considerations before you select existing VLANs, see the *Network 
 
 The current release applies the VMware NSX for vSphere 6.3.5 component update. For more information about components, see [vCenter Server Bill of Materials](../vcenter/vc_bom.html).
 
-For VMware vCenter Server instances that are deployed in V2.2 or later releases, the NSX and port group configuration settings have changed. For more information, see the *NSX and port group configuration settings* section in vCenter Server Software Bill of Materials](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
+For VMware vCenter Server instances that are deployed in V2.2 or later releases, the NSX and port group configuration settings have changed. For more information, see the *NSX and port group configuration settings* section in [vCenter Server Software Bill of Materials](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
 
 ### New option for DNS configuration
 
