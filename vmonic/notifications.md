@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -15,7 +15,7 @@ You can check notifications for the status of system or user operations. You can
 ## Viewing notifications
 
 1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Notifications** from the left navigation pane.
-2. In the **Notification History** table, view the summary about all notifications.
+2. View the summary about all notifications.
 
    Table 1. Notification history
 

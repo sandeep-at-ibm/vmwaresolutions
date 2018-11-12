@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-26"
 
 ## Signing up for an IBM Cloud account
 
-You can sign up for an {{site.data.keyword.cloud}} account by using an existing **IBMid** or by creating a new **IBMid**. For more information about how to sign up for an {{site.data.keyword.cloud_notm}} account, see [Signing up for {{site.data.keyword.cloud_notm}} account](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
+You can sign up for an {{site.data.keyword.cloud}} account by using an existing **IBMid** or by creating a new **IBMid**. For more information about how to sign up for an {{site.data.keyword.cloud_notm}} account, see [Signing up for {{site.data.keyword.cloud_notm}}](../../../account/adminpublic.html).
 
 ## Signing up for an IBM Cloud infrastructure (SoftLayer) account
 
@@ -38,4 +38,4 @@ The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, which w
 * [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](slaccountrequirement.html)
 * [Video - How to create an {{site.data.keyword.cloud_notm}} account](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
-* [Switching to IBMid](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}
+* [Switching to IBMid and linking accounts](../../../admin/softlayerlink.html){:new_window}
