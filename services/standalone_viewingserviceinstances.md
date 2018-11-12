@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -41,4 +41,4 @@ Table 2. On-premises HCX on {{site.data.keyword.cloud_notm}} instances status de
 * [Ordering on-premises HCX on {{site.data.keyword.cloud_notm}} instances](standalone_orderingserviceinstances.html)
 * [Deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](standalone_deletingserviceinstances.html)
 * [Glossary of HCX terms](hcx_glossary.html)
-* [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources)

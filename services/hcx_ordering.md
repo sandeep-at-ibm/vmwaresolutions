@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ordering VMware HCX on IBM Cloud
 
@@ -50,7 +54,8 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether 
    * One private portable subnet for HCX interconnects. This subnet is used when the **Private network** option is selected for **HCX interconnect type**.
    * One public portable subnet for activation and maintenance with VMware. If the **Public network** option is selected for **HCX interconnect type**, this subnet is also used for HCX interconnects.
 
-   **Important:** The IP addresses in the subnets that are ordered for HCX are intended to be managed by the VMware on {{site.data.keyword.cloud_notm}} automation. These IP addresses cannot be assigned to VMware resources, such as VMs and NSX Edges, that are created by you. If you need additional IP addresses for your VMware artifacts, you must order your own subnets from {{site.data.keyword.cloud_notm}}.
+   The IP addresses in the subnets that are ordered for HCX are intended to be managed by the VMware on {{site.data.keyword.cloud_notm}} automation. These IP addresses cannot be assigned to VMware resources, such as VMs and NSX Edges, that are created by you. If you need additional IP addresses for your VMware artifacts, you must order your own subnets from {{site.data.keyword.cloud_notm}}.
+   {:important}
 2. If **Private network** was selected for **HCX interconnect type**, a port group that is named **SDDC-DPortGroup-HCX-Private** is created on the private Distributed Virtual Switch (DVS).
 3. An HCX activation key is ordered from VMware.
 4. Three resource pools and VM folders for HCX are created, which are needed for the HCX interconnects, local HCX components, and remote HCX components.
@@ -61,7 +66,8 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether 
    * The load balancer rules and resource pools are configured. These rules are resource pools are used to forward HCX-related inbound traffic to the appropriate virtual appliances of HCX Manager, vCenter Server, and Platform Services Controller (PSC).
    * An SSL certificate to encrypt the HCX-related inbound HTTPS traffic that is coming through the ESGs is applied.
 
-   **Important:** The HCX management edge is dedicated to the HCX management traffic between the on-premises HCX components and the cloud-side HCX components. Do not modify the HCX management edge or use it for HCX network extensions. Instead, create separate edges for network extensions. In addition, using a firewall or disabling the HCX management edge communications to the private IBM management components or public internet might adversely impact the HCX functionality.
+   The HCX management edge is dedicated to the HCX management traffic between the on-premises HCX components and the cloud-side HCX components. Do not modify the HCX management edge or use it for HCX network extensions. Instead, create separate edges for network extensions. In addition, using a firewall or disabling the HCX management edge communications to the private IBM management components or public internet might adversely impact the HCX functionality.
+   {:important}
 
 6. The HCX Manager on {{site.data.keyword.cloud_notm}} is deployed, activated, and configured:
    * The HCX Manager is registered with vCenter Server.
@@ -78,4 +84,4 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether 
 * [Glossary of HCX terms](hcx_glossary.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources)

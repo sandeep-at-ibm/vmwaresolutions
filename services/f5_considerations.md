@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-09"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # F5 on IBM Cloud overview
 
@@ -14,7 +18,8 @@ The F5 on {{site.data.keyword.cloud}} service (F5 BIG-IP® Virtual Edition) prov
 
 You can install more than one instance of this service as needed.
 
-**Availability:** This service is available only to instances that are deployed in V1.9 or later releases.
+This service is available only to instances that are deployed in V1.9 or later. The current BIG-IP VE version that is installed is v13.1.1.2.
+{:note}
 
 ## Technical specifications for F5 on IBM Cloud
 
@@ -32,7 +37,8 @@ The following components are included with the F5 on {{site.data.keyword.cloud_n
 ### Licenses and fees
 License fees for each VM are applied to each billing cycle depending on the licensing option (Good, Better, or Best) and the selected bandwidth.
 
-**Important:** You cannot change the licensing level after service installation. To change the licensing level, you must remove the existing service and reinstall the service using a different licensing option.
+You cannot change the licensing level after service installation. To change the licensing level, you must remove the existing service and reinstall the service using a different licensing option.
+{:important}
 
 ## Installation considerations for F5 on IBM Cloud
 
@@ -51,7 +57,7 @@ Table 1. CPU and RAM deployments for different bandwidth and license model selec
 | 5 Gbps            | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
 | 10 Gbps           | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
 
-**Notes:**
+### Additional considerations
 
 * F5 BIG–IP limits the appliance throughput based on your chosen maximum bandwidth. Because network performance is affected by many factors, not all configurations and topologies may be able to achieve your chosen maximum bandwidth.
 * The HA (High Availability) pair of BIG-IP VE VMs will be deployed only into the default cluster.

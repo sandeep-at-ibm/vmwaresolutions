@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # KMIP for VMware on IBM Cloud overview
 
 The KMIP for VMware on {{site.data.keyword.cloud}} service provides a 24x7 highly available service to manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}. This service offers runtime capability to allow customers to create, retrieve, activate, revoke, and destroy the encryption keys. It also provides management capability to maintain the associations between the client credentials and the encryption keys.
 
-**Availability:** This service is available only to instances deployed in V2.2 or later releases.
+This service is available only to instances deployed in V2.2 or later.
+{:note}
 
 ## Technical specifications for KMIP for VMware on IBM Cloud
 

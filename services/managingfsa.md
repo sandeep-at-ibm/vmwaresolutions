@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-076"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Managing FortiGate Security Appliance on IBM Cloud
 
 After the FortiGate Security Appliance on {{site.data.keyword.cloud}} service is installed successfully, you can manage and configure firewall rules for the FSA from the FortiGate console.
 
-**Important**: You must ensure that the FSA firewall rules are defined to allow outbound HTTPS (TCP port 443) communications that are initiated by management components such as the Zerto Virtual Manager to communicate with the external management database on the {{site.data.keyword.cloud_notm}} infrastructure over the internet. The outbound HTTPS (TCP port 443) communications originate from the public IP address of the management services VMware NSX Edge Services Gateway (ESG) in your instance.
+You must ensure that the FSA firewall rules are defined to allow outbound HTTPS (TCP port 443) communications that are initiated by management components such as the Zerto Virtual Manager to communicate with the external management database on the {{site.data.keyword.cloud_notm}} infrastructure over the internet. The outbound HTTPS (TCP port 443) communications originate from the public IP address of the management services VMware NSX Edge Services Gateway (ESG) in your instance.
+{:important}
 
 ## Accessing the FortiGate 300 series console
 

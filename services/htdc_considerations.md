@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-27"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # HyTrust DataControl on IBM Cloud overview
 
 The HyTrust DataControl on {{site.data.keyword.cloud}} service offers strong encryption with integrated key management to secure workloads throughout their lifecycle. The service provides encryption at both the operating system level and at the data level. This enables any directory, folder, or file within a workload to be encrypted and decrypted.
 
-**Availability:** This service is available only to instances that are running vSphere 6.5 and are deployed in, or upgraded to, V2.3 or later releases.
+This service is available only to instances that are running vSphere 6.5 and are deployed in or upgraded to V2.3 or later. The current HyTrust DataControl version that is installed is 4.2.1.
+{:note}
 
 ## Technical specifications for HyTrust DataControl on IBM Cloud
 
