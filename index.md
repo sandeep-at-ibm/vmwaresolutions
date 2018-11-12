@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -136,7 +136,7 @@ Review and choose add-on services for your deployment offering.
        <td>The HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service simplifies the management of encrypted workloads by automating and simplifying the lifecycle of encryption keys. The service can easily manage encryption keys at scale by using FIPS 140-2 compliant encryption.</td>
     </tr>
     <tr>
-       <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
+       <td>[IBM Cloud Private Hosted](services/icp_overview.html)</td>
        <td>The {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} service brings the power of microservices and containers to your VMware environment on {{site.data.keyword.cloud_notm}}. With this service, you can extend the same familiar VMware and {{site.data.keyword.cloud_notm}} Private operational model and tools from on-premises into the {{site.data.keyword.cloud_notm}}.</td>
     </tr>
     <tr>
