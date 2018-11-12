@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-07"
 
 ---
 
 # Initial configuration
 
-The IC4VS automation configures the VCSA with a default gateway set to the {{site.data.keyword.cloud}} Backend Customer Router (BCR). However, there is no route to the Internet via the BCR. The standard route to the Internet from the VCS instance is via the Management ESG. As it is not advised to change the configuration of the VCSA or the Management ESG, a proxy server implementation on the customer subnet is recommended to enable VUM.
+The IC4VS automation configures the VCSA with a default gateway set to the {{site.data.keyword.cloud}} Backend Customer Router (BCR). However, there is no route to the Internet via the BCR. The standard route to the Internet from the VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance is via the Management ESG. As it is not advised to change the configuration of the VCSA or the Management ESG, a proxy server implementation on the customer subnet is recommended to enable VUM.
 
 This approach means that the VCSA or the Management ESG do not have to be reconfigured, however, a small virtual machine (VM) or appliance needs to be installed. A proxy server is a system, which sits between two endpoint devices and acts as an intermediate device. In this case, it sits between VUM and the update servers at VMware.
 

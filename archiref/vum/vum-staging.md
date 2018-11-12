@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -34,7 +34,7 @@ Remediation is the process in which VUM applies patches, extensions, and upgrade
 *	Powered on, suspended, or powered off VMs and templates for VMware Tools and VM hardware upgrade.
 *	Powered on virtual appliances that are created with VMware Studio 2.0 and later, for virtual appliance upgrade.
 
-If the update requires it, hosts are put into maintenance mode before remediation. The VCSA migrates the VMs to other hosts within VCS instance before the host is put in maintenance mode.
+If the update requires it, hosts are put into maintenance mode before remediation. The VCSA migrates the VMs to other hosts within VMware vCenter Server on {{site.data.keyword.cloud}} instance before the host is put in maintenance mode.
 
 ## For hosts in a vSAN cluster
 Be aware of the following behavior for hosts that are part of a vSAN cluster:
@@ -59,7 +59,7 @@ To remediate hosts and clusters, follow these steps:
 
 8.	Optionally, select **Disable any removable media devices connected to the virtual machine on the host**. VUM does not remediate hosts on which VMs have connected CD, DVD, or diskette drives. In cluster environments, connected media devices might prevent vMotion if the destination host does not have an identical device or mounted ISO image, which in turn prevents the source host from entering maintenance mode. After remediation, VUM reconnects the removable media devices if they are still available.
 9.	Optionally, select **Retry entering maintenance mode in case of failure**, specify the number of retries, and specify the time to wait between retries. VUM waits for the retry delay period and retries putting the host into maintenance mode as many times as you indicate in Number of retries field.
-10.	There is no requirement in a VCS instance to select the check box under ESXi Patch Settings to enable Update Manager to patch powered on PXE booted ESXi hosts.
+10.	There is no requirement in a vCenter Server instance to select the check box under ESXi Patch Settings to enable Update Manager to patch powered on PXE booted ESXi hosts.
 11.	Click **Next**.
 12.	If you remediate hosts in a cluster, edit the cluster remediation options. The **Cluster remediation options** page is available only when you remediate clusters. The following options can be selected:
 
@@ -75,5 +75,5 @@ To remediate hosts and clusters, follow these steps:
 
 ### Related links
 
-* [VMware HCX on 	{{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

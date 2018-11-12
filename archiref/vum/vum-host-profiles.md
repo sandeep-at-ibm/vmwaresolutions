@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-29"
 
 vCenter has a feature called Host Profiles. This feature creates a profile that captures a pre-configured and validated reference host configuration and helps a system administrator manage the host configurations in a cluster. Host Profiles provide an automated and centrally managed mechanism for host configuration and configuration compliance. Host Profiles enable the configuration to be treated as a managed object, which contains a catalog of parameters to configure; networking, storage, security, and other host-level parameters. These Host Profiles can be applied to individual hosts, a cluster, or all the hosts and clusters associated to a host profile.
 
-As more VCS vSphere ESXi hosts are deployed by the IC4VS automation that deployed the original cluster, there will be less configuration drift than with manual methods of adding hosts. However, system administrator actions, outside of the automation can make the hosts configuration different. For example, more NFS storage has been added or extra VLANs have been added. Therefore, the use of Host Profiles to validate the configuration of a new host by checking compliance of this host against an existing host is a valid use case of this tool within IBM Cloud.
+As more VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi hosts are deployed by the IC4VS automation that deployed the original cluster, there will be less configuration drift than with manual methods of adding hosts. However, system administrator actions, outside of the automation can make the hosts configuration different. For example, more NFS storage has been added or extra VLANs have been added. Therefore, the use of Host Profiles to validate the configuration of a new host by checking compliance of this host against an existing host is a valid use case of this tool within {{site.data.keyword.cloud_notm}}.
 
 To add more hosts to your vCenter Server cluster, see [Expanding and contracting capacity for vCenter Server instances](../../vcenter/vc_addingremovingservers.html).
 
@@ -52,7 +52,7 @@ The following sequence is required to check compliance:
 2.	Click the Check **Host Profile Compliance icon**.
 3.	In the **Objects tab**, the compliance status is updated as; _Compliant, Unknown, or _Non-compliant_. A non-compliant status indicates a discovered and specific inconsistency between the profile and the new host.
 
-##	Reviewing compliance failures and remediating
+##	Reviewing compliance failures and remediation
 
 1.	To see more detail on compliance failures, select the **Host Profile** from the **Objects** tab that is used in the compliance check.
 2.	In order to see specific detail on which parameters differ between the host that failed compliance and the Host Profile, click on the **Monitor tab** and select the **Compliance view**.
@@ -62,5 +62,5 @@ The following sequence is required to check compliance:
 
 ### Related links
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

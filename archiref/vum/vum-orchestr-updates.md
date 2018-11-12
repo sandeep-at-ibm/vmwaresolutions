@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -56,9 +56,9 @@ The following workflow describes the process to perform an orchestrated upgrade:
 * During an upgrade of VMware Tools, the virtual machines must be powered on. If a virtual machine is in a powered off or suspended state before remediation, VUM powers on the machine. After the upgrade is completed, VUM restarts the machine and restores the original power state of the virtual machine.
 * During a virtual machine hardware upgrade, the virtual machines must be shut down. After the remediation is completed, VUM restores the original power state of the virtual machines. If a virtual machine is powered on, VUM powers off the machine, upgrades the virtual hardware, and then powers on the virtual machine.
 
-You can now use these baseline groups in the scan, review, staging, and remediate processes.
+You can now use these baseline groups in the scan, review, staging, and remediation processes.
 
 ### Related links
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
