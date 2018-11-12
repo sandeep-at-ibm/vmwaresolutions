@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -15,13 +15,13 @@ lastupdated: "2018-10-29"
 The IBM Kubernetes Service (IKS) provides an isolated and secure platform for managing containers. This platform is portable, extensible, and self-healing in case of failover.
 
 The architecture consists of the following key components:
--	**IBM Cloud account** – Worker nodes are deployed into an IBM Cloud account. The master node is deployed in a central Cloud Account that is managed by IBM.
+-	**{{site.data.keyword.cloud}} account** – Worker nodes are deployed into an {{site.data.keyword.cloud_notm}} account. The master node is deployed in a central Cloud Account that is managed by IBM.
 -	**Cluster** - A Kubernetes cluster consists of one or more worker nodes.
 -	**Worker nodes** – A worker node is a bare metal, or a virtual server instance hosted in an IBM account. When you provision a worker node, you determine the resources that are available to the containers that are hosted on that worker node. The worker nodes include an IBM-managed Docker Engine, separate compute resources, networking, and a storage volume service.
 -	**Master node** - Worker nodes are managed by a Kubernetes master node that centrally controls and monitors all Kubernetes resources in the cluster. This master node is managed by IBM.
 
 IKS has the following concepts:
--	**Service** - A service is a Kubernetes resource that groups a set of pods and provides network connectivity to these pods without exposing the actual private IP address of each pod. You can use a service to make your app available within your cluster or to the public internet.
+-	**Service** - A service is a Kubernetes resource that groups a set of pods and provides network connectivity to these pods without exposing the actual private IP address of each pod. You can use a service to make your app available within your cluster or to the public Internet.
 -	**Deployment** - A deployment is a Kubernetes resource where you might specify information about other resources or capabilities that are required to run your app, such as services, persistent storage, or annotations. You document a deployment in a configuration YAML file, and then apply it to the cluster. The Kubernetes master configures the resources and deploys containers into pods on the worker nodes with available capacity. Define update strategies for your app, including the number of pods that you want to add during a rolling update and the number of pods that can be unavailable at a time. When you perform a rolling update, the deployment checks whether the update is working and stops the rollout when failures are detected.
 -	**Pod** - Every app in a cluster is deployed, run, and managed by a Kubernetes resource that is called a pod. Pods represent small deployable units in a Kubernetes cluster and are used to group the containers that must be treated as a single unit. In most cases, each container is deployed in its own pod. An application might require a container and other helper containers to be deployed into one pod so that those containers are addressable by using the same private IP address.
 -	**Application** - An app might refer to a complete app or a component of an app. You might deploy components of an app in separate pods or separate worker nodes.
@@ -45,7 +45,7 @@ There are two central definitions in the context of CNI in Kubernetes:
 - **Pod** - Synonymous with a Linux network namespace. The unit of scheduling in Kubernetes is a pod, essentially, this is a tightly coupled set of one or more containers that are always colocated (scheduled onto a node as a unit). A pod cannot be spread over multiple worker nodes.
 - **Network** - A uniquely addressable group of entities that can communicate with one another. These entities might be an individual container, a machine, or some other network device such as a router.
 
-For the CNI to add a container to a network, the container runtime must first create a new network namespace for the container and then start one or more of the defined plug-ins. The network configuration is in JSON format and includes mandatory fields such as name and type as well as plug-in type–specific fields. A CNI plug-in is expected to assign an IP address to the interface and set up network routes relevant for it. IKS uses Calico as the network plug-in for CNI. Calico assigns each workload an IP address. In IKS, Calico uses IP-in-IP tunneling so that the container network IP addresses are hidden from the IBM Cloud Network.
+For the CNI to add a container to a network, the container runtime must first create a new network namespace for the container and then start one or more of the defined plug-ins. The network configuration is in JSON format and includes mandatory fields such as name and type as well as plug-in type–specific fields. A CNI plug-in is expected to assign an IP address to the interface and set up network routes relevant for it. IKS uses Calico as the network plug-in for CNI. Calico assigns each workload an IP address. In IKS, Calico uses IP-in-IP tunneling so that the container network IP addresses are hidden from the {{site.data.keyword.cloud_notm}} Network.
 
 From a network traffic perspective, we differentiate between four types in IKS, as shown in the following diagram.
 
@@ -56,7 +56,7 @@ Figure 1. Container network traffic types
 
 - **Inter-pod networking** – Also known as “pod-to-pod” communications. There are three types of east–west traffic:
   - Pods can directly communicate with other pods on the same subnet. In IKS, each pod has an IP address that is assigned from an IKS provided range. Each worker node is assigned a subnet on provisioning. Pod to pod communication without proxies, tunneling, or NAT occurs with pods in the same subnet and host.
-  - Pods can directly communicate with other pods on different subnets. IP-in-IP encapsulation is automatically configured in IKS to encapsulate only packets that are traveling across subnets. This encapsulation hides the pod network address space from the IBM Cloud network. The encapsulation uses the IP address from the IBM Cloud primary private subnet.
+  - Pods can directly communicate with other pods on different subnets. IP-in-IP encapsulation is automatically configured in IKS to encapsulate only packets that are traveling across subnets. This encapsulation hides the pod network address space from the {{site.data.keyword.cloud_notm}} network. The encapsulation uses the IP address from the {{site.data.keyword.cloud_notm}} primary private subnet.
   - Pods can use services to communicate with other pods, known as pod to service communications. However, pods can directly communicate with other pods as per the two points above pods are mortal. They are born and when they die they are not resurrected. Replica sets create and destroy pods dynamically such as when scaling up or down. While each pod gets its own IP address, even those IP addresses cannot be relied upon to be stable over time. Preferably, developers will use a service construct for communication, where, a stable virtual IP address is used that can be discovered via DNS.
 
 - **Ingress** - Refers to routing traffic from external users or apps to pods. A service provides a stable virtual IP (vIP) address for a set of pods. While pods are ephemeral, services allow clients to reliably discover and connect to the containers running in the pods by using the vIP. This vIP is not an actual IP address connected to a network interface. Its purpose is purely to act as the stable endpoint to forward traffic to one or more pods. Accessing a pod from outside the cluster is a bit more challenging. Kubernetes aims to provide highly available, high-performance load balancing for services.
@@ -69,11 +69,11 @@ There are three options for North-South traffic in IKS:
 - **Egress** - Refers to calling external resources outside of the pods such as APIs or consuming resources from VMs. Egress options:
     - Define a service resource for a system running outside of the cluster. An Endpoint resource is created that details the external system; IP address and port number. The Endpoint resource can have several addresses listed, and Kubernetes will round-robin between those addresses just like between pods that are running inside the cluster. Then, a Service resource is used to create a Cluster IP and a DNS name in kube-dns for the service.
     - Use the stongSwan IPSec VPN you can connect to applications that are external to the cluster. By the use of a Helm chart, a strongSwan IPSec VPN service inside of a Kubernetes pod is deployed and configured. When VPN connectivity is established, routes are automatically configured on all of the worker nodes in the cluster. These routes allow two-way connectivity through the VPN tunnel between pods on any worker node and the remote system. If the pod fails, the cluster restarts the pod, however, you might experience a short downtime while the new pod starts and the VPN connection is reestablished. A portable public or private IP address is used for the strongSwan VPN service. The local.subnet setting can use the cluster pod subnet, the cluster service subnet or the public or private portable subnet. Remap cluster subnets can be achieved by using the localSubnetNAT setting. Alternatively, the cluster IP addresses can be hidden behind a single IP address by setting enableSingleSourceIP to true. To remap the remote network subnets, use the remoteSubnetNAT setting.
-    - An IBM Cloud Virtual Router Appliance can be deployed as a VPN gateway to securely connect to an external network. Public or private network traffic can be routed through the VRA. The VRA creates an encrypted IPSec tunnel to the remote VPN gateway.
+    - An {{site.data.keyword.cloud_notm}} Virtual Router Appliance can be deployed as a VPN gateway to securely connect to an external network. Public or private network traffic can be routed through the VRA. The VRA creates an encrypted IPSec tunnel to the remote VPN gateway.
 
 ## IKS components
 
-Worker nodes are managed by a Kubernetes master node that centrally controls and monitors all Kubernetes resources in the cluster. When a developer deploys the resources for a container, the master node decides which worker node to deploy those resources on, taking into account the deployment requirements and available capacity in the cluster. The master and the worker nodes communicate with each other through secure TLS certificates and an openVPN connection via the IBM Cloud public network. The developers access the kube-apiserver, hosted on the Master Node via the internet.
+Worker nodes are managed by a Kubernetes master node that centrally controls and monitors all Kubernetes resources in the cluster. When a developer deploys the resources for a container, the master node decides which worker node to deploy those resources on, taking into account the deployment requirements and available capacity in the cluster. The master and the worker nodes communicate with each other through secure TLS certificates and an openVPN connection via the {{site.data.keyword.cloud_notm}} public network. The developers access the kube-apiserver, hosted on the Master Node via the Internet.
 
 The kubelet in the worker node watches the kube-apiserver in the master node for updates and reports the status. The kubelet is a pod that runs on every worker node and is responsible for monitoring the health of pods that run on the worker node and for watching the events that the Kubernetes API server sends. Based on the events, the kubelet creates or removes pods, issues liveness and readiness probes, and reports back the status of the pods to the Kubernetes API server.
 
@@ -112,11 +112,11 @@ The diagram above shows the following Calico components:
  - **BIRD** - BIRD is an open source BGP client that is used to exchange routing information between hosts. When Felix inserts routes into the Linux kernel FIB, the BGP client picks them up and distribute them to the other nodes in the deployment. This ensures that traffic is efficiently routed around the deployment.
  - **Confd** - The confd templating engine monitors the etcd datastore for any changes to BGP configuration and some top-level global default configuration such as AS Number, logging levels, and IPAM information. It then dynamically generates BIRD configuration files based on the data in etcd, triggered automatically from updates to the data. When the configuration file changes, confd triggers BIRD to load the new files.
 
-As the IBM Cloud Private network forwards IBM Cloud IP addressing schemas only, Calico is required to use IP-in-IP encapsulation of the inter-workload traffic in IKS to hide the pod network IP addresses. IKS uses IP-in-IP cross subnet mode.
+As the {{site.data.keyword.cloud_notm}} Private network forwards {{site.data.keyword.cloud_notm}} IP addressing schemas only, Calico is required to use IP-in-IP encapsulation of the inter-workload traffic in IKS to hide the pod network IP addresses. IKS uses IP-in-IP cross subnet mode.
 
 ### Calico in IKS
 
-Calico is installed and configured automatically in IKS. Default policies are created to protect the Kubernetes cluster, with the option to create your own policies to protect specific services. IP-in-IP encapsulation is automatically configured to encapsulate only packets traveling across subnets and uses NAT for outgoing connections from your containers. Workload-to-WAN Traffic is also enabled automatically in the IBM Cloud Kubernetes Service, so no additional configuration of Calico is necessary.
+Calico is installed and configured automatically in IKS. Default policies are created to protect the Kubernetes cluster, with the option to create your own policies to protect specific services. IP-in-IP encapsulation is automatically configured to encapsulate only packets traveling across subnets and uses NAT for outgoing connections from your containers. Workload-to-WAN Traffic is also enabled automatically in the {{site.data.keyword.cloud_notm}} Kubernetes Service, so no additional configuration of Calico is necessary.
 
 #### Network scalability with Calico
 
@@ -128,7 +128,7 @@ Calico uses a set of policies that controls every component of the system, these
 
 #### Integration with Calico
 
-Calico provides a highly scalable networking and network policy solution for connecting Kubernetes pods based on the same IP networking principles as the internet. It can be deployed without encapsulation or overlays to provide high performance, high scale data center networking. Calico provides fine-grained, intent-based network security policy for Kubernetes pods via its distributed firewall. Calico can also run in policy enforcement mode along with other networking solutions such as Flannel, also known as canal, or native GCE networking.
+Calico provides a highly scalable networking and network policy solution for connecting Kubernetes pods based on the same IP networking principles as the Internet. It can be deployed without encapsulation or overlays to provide high performance, high scale data center networking. Calico provides fine-grained, intent-based network security policy for Kubernetes pods via its distributed firewall. Calico can also run in policy enforcement mode along with other networking solutions such as Flannel, also known as canal, or native GCE networking.
 
 ## IKS Networking
 
@@ -139,17 +139,17 @@ By default, IKS sets up the cluster with access to a public VLAN and a private V
 -	A private IP address for each worker node, which gives worker nodes a private network interface.
 -	An automatic, secure OpenVPN connection between all worker nodes and the master node.
 
-The first time a cluster is created in a zone, a public VLAN, and a private VLAN in that zone are automatically provisioned for you in the IBM Cloud infrastructure account. For every subsequent cluster created in that zone, you can reuse the same public and private VLAN because multiple clusters can share VLANs.
+The first time a cluster is created in a zone, a public VLAN, and a private VLAN in that zone are automatically provisioned for you in the {{site.data.keyword.cloud_notm}} infrastructure account. For every subsequent cluster created in that zone, you can reuse the same public and private VLAN because multiple clusters can share VLANs.
 
 Worker nodes can be connected to both a public VLAN and the private VLAN, or to the private VLAN only. If you want to connect your worker nodes to a private VLAN only, you can use the ID of an existing private VLAN or create a private VLAN and use the ID during cluster creation.
 
 IP subnets for worker nodes and pods, are also automatically provisioned onto VLANs. Subnets provide network connectivity to the cluster components by assigning IP addresses to them. The following subnets are automatically provisioned on the default public and private VLANs:
 -	**Public VLAN subnets:**
     - The primary public subnet determines the public IP addresses that are assigned to worker nodes during cluster creation. Multiple clusters in on the same VLAN can share one primary public subnet.
-    - The portable public subnet is bound to one cluster only and provides the cluster with 8 public IP addresses. 3 IPs are reserved for network functions. 1 IP is used by the default public Ingress ALB and 4 IPs can be used to create public load balancer networking services. Portable public IPs are permanent, fixed IP addresses that can be used to access load balancer services over the internet.
+    - The portable public subnet is bound to one cluster only and provides the cluster with 8 public IP addresses. 3 IPs are reserved for network functions. 1 IP is used by the default public Ingress ALB and 4 IPs can be used to create public load balancer networking services. Portable public IPs are permanent, fixed IP addresses that can be used to access load balancer services over the Internet.
 -	**Private VLAN subnets:**
     - The primary private subnet determines the private IP addresses that are assigned to worker nodes during cluster creation. Multiple clusters in on the same VLAN can share one primary private subnet.
-    - The portable private subnet is bound to one cluster only and provides the cluster with 8 private IP addresses. 3 IPs are reserved for network functions. 1 IP is used by the default private Ingress ALB and 4 IPs can be used to create private load balancer networking services. Portable private IPs are permanent, fixed IP addresses that can be used to access load balancer services over the internet.
+    - The portable private subnet is bound to one cluster only and provides the cluster with 8 private IP addresses. 3 IPs are reserved for network functions. 1 IP is used by the default private Ingress ALB and 4 IPs can be used to create private load balancer networking services. Portable private IPs are permanent, fixed IP addresses that can be used to access load balancer services over the Internet.
 
 ### Related links
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -38,15 +38,15 @@ Figure 1. NSX-V and T management component layout
 
 ### Initial configuration
 
-The IBM Cloud automation deploys the NSX-T Manager, a controller cluster that consists of three controllers and an edge cluster within the initial VCS cluster. All components are assigned IP addresses from the Private A portable subnet.
+Deploy the NSX-T Manager, a controller cluster that consists of three controllers and an edge cluster within the initial VCS cluster. Assign IP addresses to all components from the **Private A** portable subnet.
 
-VM–VM anti–affinity rules are created such that controllers are separated among the hosts in the cluster. Note that the initial cluster is deployed with a minimum of three nodes to ensure high availability for the controllers.
+Create VM–VM anti–affinity rules in such a way that controllers are separated among the hosts in the cluster. Note that the initial cluster is deployed with a minimum of three nodes to ensure high availability for the controllers.
 
-The IBM Cloud automation also deploys two more vSphere hosts for the NSX-T Manager and installs the NSX-T software (VIBs) on them. It also creates the host and edge uplink profiles, the NIOC profile, and defines the IP pool that is used for Tunnel Endpoint (TEP) communication. Refer to the uplink profile definition table, and the NIOC profile definitions table for details.
+Deploy two more vSphere hosts for the NSX-T Manager and install the NSX-T software (VIBs) on them. Create the host and edge uplink profiles, the NIOC profile, and define the IP pool that is used for Tunnel Endpoint (TEP) communication. For more information, see the uplink profile definition table and the NIOC profile definitions table.
 
-The IP addresses defined in the pools are from the Private A portable IP address range. VLAN and overlay transport zones are created, and the two extra ESXi hosts are configured as transport nodes for both zones. Currently, the equivalent uplink profiles are assigned. An N-VDS switch is created on the ESXi hosts and assigned to uplink1 and uplink2.
+The IP addresses defined in the pools are from the **Private A** portable IP address range. VLAN and overlay transport zones are created, and the two extra ESXi hosts are configured as transport nodes for both zones. Currently, the equivalent uplink profiles are assigned. Create an N-VDS switch on the ESXi hosts and assigned to uplink1 and uplink2.
 
-At the time, of this writing two extra VLANs are required to accommodate the teaming, failover, and uplink policies for vmkernel port migration from the vDS port group to NSX-T logical VLAN switches. The logical VLAN switches are created with the appropriate VLAN IDs and the vmkernel ports are migrated.
+At the time, two extra VLANs are required to accommodate the teaming, failover, and uplink policies for vmkernel port migration from the vDS port group to NSX-T logical VLAN switches. The logical VLAN switches are created with the appropriate VLAN IDs and the vmkernel ports are migrated.
 
 NSX-T creates vmk10, which is used for the encapsulation interface and vmk50, which is used for intra Tier0 transit and intra Tier0-Tier1 transit subnets on the ESXi hosts. By default, the 169.254.0.0/28 subnet is used for intra Tier0 transit and 100.64.0.0/16 subnet for Tier0-Tier1 transit.
 
@@ -109,7 +109,7 @@ NSX-V is designed for vSphere deployments only and is architected so a single NS
 
 NSX-V highlights:
 -	VMware-centric.
--	Designed for SDN within vSphere (single pain of glass for network virtualization in the vSphere UI).
+-	Designed for SDN within vSphere (single pain of glass for network virtualization in the vSphere user interface).
 -	Uses VXLAN encapsulation protocol (supported by most third-party vendors).
 -	Physical NICs are not owned by NSX-V they are assigned to the virtual distributed switches (vDS) SDDC-Dswitch-Private and SDDC-Dswitch-Public.
 -	Terminology differences Distributed Logical Router (DLR) for east-west traffic and Edge Service Gateway (ESG) for north-south traffic.
@@ -215,11 +215,11 @@ VMware NSX-V allows you to define security policies that are defined consistentl
 
 #### Security with NSX-T
 
-VMware NSX-T provides the same capabilities as NSX-V with in a VMware vSphere environment. In addition, NSX-T delivers consistent and scalable micro-segmentation security for application running in private and public cloud environments like IBM Cloud Private and IBM Kubernetes Services along with other cloud offerings.
+VMware NSX-T provides the same capabilities as NSX-V with in a VMware vSphere environment. In addition, NSX-T delivers consistent and scalable micro-segmentation security for application running in private and public cloud environments like {{site.data.keyword.cloud}} Private and IBM Kubernetes Services along with other cloud offerings.
 
 #### Integration with NSX-V
 
-For NSX-V integration with Kubernetes IBM Cloud automation installs ICP on top of a VCS instance. A dedicated switch/VXLAN, DLR, and ESG are created specifically for the Kubernetes network. Day 1 overlay network for ICP is a 192.168.20.0/24 subnet with routing setup through the ESG for access to the underlay network.
+For NSX-V integration with Kubernetes {{site.data.keyword.cloud_notm}} automation installs ICP on top of a VCS instance. A dedicated switch/VXLAN, DLR, and ESG are created specifically for the Kubernetes network. Day 1 overlay network for ICP is a 192.168.20.0/24 subnet with routing setup through the ESG for access to the underlay network.
 
 Figure 7. NSX-V and Kubernetes
 ![NSX-V and Kubernetes](vcsnsxt-transitnet.svg)

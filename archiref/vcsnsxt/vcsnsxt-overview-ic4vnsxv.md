@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -30,15 +30,15 @@ The NSX-V Manager network overview below shows the placement of the NSX Manager 
 Figure 1. NSX-V Manager network overview
 ![NSX-V Manager network overview](vcsnsxt-vmgmt.svg)
 
-After initial deployment, the IBM Cloud automation deploys three NSX Controllers within the initial cluster. The controllers are assigned an IP address from the Private A portable subnet that is designated for management components. VM–VM anti–affinity rules are created such that controllers are separated among the hosts in the cluster. Note that the initial cluster should be deployed with a minimum of three nodes to ensure high availability for the controllers.
+After initial deployment, the {{site.data.keyword.cloud}} automation deploys three NSX Controllers within the initial cluster. The controllers are assigned an IP address from the Private A portable subnet that is designated for management components. VM–VM anti–affinity rules are created such that controllers are separated among the hosts in the cluster. Note that the initial cluster should be deployed with a minimum of three nodes to ensure high availability for the controllers.
 
-In addition to the controllers, the IBM Cloud automation prepares the deployed vSphere hosts with NSX VIBS that enable the use of a virtualized network (VXLAN) via the use of VXLAN Tunnel Endpoints (VTEP). The VTEPs are assigned IP addresses from the Private A portable IP address range that is specified for VTEPs. The VXLAN traffic resides on the untagged VLAN and is assigned to the private virtual distributed switch (vDS). Later, a segment ID pool is assigned and the hosts in the cluster are added to the transport zone. Note that only unicast is used in the transport zone since IGMP snooping is not configured within the IBM Cloud.
+In addition to the controllers, the {{site.data.keyword.cloud_notm}} automation prepares the deployed vSphere hosts with NSX VIBS that enable the use of a virtualized network (VXLAN) via the use of VXLAN Tunnel Endpoints (VTEP). The VTEPs are assigned IP addresses from the Private A portable IP address range that is specified for VTEPs. The VXLAN traffic resides on the untagged VLAN and is assigned to the private virtual distributed switch (vDS). Later, a segment ID pool is assigned and the hosts in the cluster are added to the transport zone. Note that only unicast is used in the transport zone since IGMP snooping is not configured within the {{site.data.keyword.cloud_notm}}.
 
 NSX Edge Services Gateway (ESG) pairs are then deployed. In all deployments one gateway pair is used for outbound traffic from automation components residing on the private network. VCS instances include a second gateway, which is known as the customer–managed edge, that is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. Any required NSX component such as Distributed Logical Routers (DLR), logical switches, and firewalls can be configured by the administrator.
 
 ## Distribute switch design
 
-The design uses a minimum number of virtual distributed switches (vDS). The hosts in the cluster are connected to public and private networks. They are configured with two virtual distributed switches. The use of two switches follows the physical network separation of the public and private networks that are implemented within IBM Cloud.
+The design uses a minimum number of virtual distributed switches (vDS). The hosts in the cluster are connected to public and private networks. They are configured with two virtual distributed switches. The use of two switches follows the physical network separation of the public and private networks that are implemented within {{site.data.keyword.cloud_notm}}.
 
 A total of two distributed switches are configured. The first is for public network connectivity (SDDC-Dswitch-Public) and the second is for private network connectivity (SDDC-Dswitch-Private).
 Separating different types of traffic is required to reduce contention and latency. Separate networks are also required for access security. VLANs are used to segment physical network functions. This design uses three VLANs. Two for private network traffic and one for public network traffic.
@@ -47,7 +47,7 @@ Table 2. VLAN traffic mapping
 
 VLAN |Designation |Traffic Type
 ---|---|---
-VLAN1 | Public | Available for internet access
+VLAN1 | Public | Available for Internet access
 VLAN2 | Private A | ESXi Management, Management, VXLAN (VTEP)
 VLAN3 | Private B | vSAN, NFS, vMotion
 
@@ -91,7 +91,7 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|Originating virtual port	|Activ
 This design specifies the configuration of NSX components but does not apply any network overlay component configuration. It is left up to the customer to design the network overlay based on their needs.
 
 The following components are configured:
--	Management servers and controllers are installed and integrated into the vCenter web UI.
+-	Management servers and controllers are installed and integrated into the vCenter web user interface.
 -	ESXi agents are installed and VTEP IP addresses are configured per ESXi host.
 -	VTEP configuration, controller configuration, VXLAN configuration (transport zone).
 -	NSX Edge Services Gateway (ESG) appliances for use by management components.

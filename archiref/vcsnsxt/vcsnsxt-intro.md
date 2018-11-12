@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-30"
+lastupdated: "2018-11-08"
 
 ---
 
 # vCenter Server networking introduction
 
-This document provides a view on the application modernization journey to IBM Cloud, focusing on the network aspects of the following platforms to allow an integrated multi-cloud to be used for application modernization:
+This document provides a view on the application modernization journey to {{site.data.keyword.cloud}}, focusing on the network aspects of the following platforms to allow an integrated multi-cloud to be used for application modernization:
 
-- **VMware vCenter Server on IBM Cloud** - an offering from IBM Cloud for VMware Solutions, which is a VMware-based platform automatically provisioned on IBM Cloud.
+- **VMware vCenter Server on IBM Cloud** - an offering from {{site.data.keyword.vmwaresolutions_short}}, which is a VMware-based platform automatically provisioned on {{site.data.keyword.cloud_notm}}.
 - **IBM Cloud Private** - an application platform for developing and managing containerized applications, which are deployed on to a virtualized infrastructure platform, such as VCS or an on-premises vSphere environment.
-- **IBM Kubernetes Services** - a managed service on IBM Cloud that uses Kubernetes as the orchestration engine for automating deployment, scaling, and operations of application containers across a single-tenant cluster.
+- **IBM Kubernetes Services** - a managed service on {{site.data.keyword.cloud_notm}} that uses Kubernetes as the orchestration engine for automating deployment, scaling, and operations of application containers across a single-tenant cluster.
 
 The biggest challenges in application modernization are migration, networking, and security. VCS, VMware Hybrid Cloud Extension (HCX), VMware NSX, IKS, and ICP help solve some of those challenges. The following network architecture describes an approach that uses Acme Skateboards as an example to connect components that are split across cloud and on-premises environments.
 
@@ -45,22 +45,18 @@ For example, a common pattern is to have front end SoE applications that are dep
 
 Because your IT infrastructure and business needs are unique, you need an approach to modernization that accelerates business value, minimizes delivery time, reduces your risks, and preserves your existing investments. IBM provides just such an approach to application modernization that is customizable to address your unique business and technology needs.
 
-This document provides different views on the technologies that are used in the application modernization journey to IBM Cloud:
+This document provides different views on the technologies that are used in the application modernization journey to {{site.data.keyword.cloud_notm}}:
 
-* [vCenter Server and IBM Cloud Private](../vcsicp/vcsicp-intro.html) - This guide is a reference architecture for deploying the following platforms:
-   - **VMware vCenter Server on IBM Cloud** - an offering from IBM Cloud for VMware Solutions that is a VMware based platform automatically provisioned on IBM Cloud.
+* [vCenter Server and {{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html) - This guide is a reference architecture for deploying the following platforms:
+   - **VMware vCenter Server on IBM Cloud** - an offering from {{site.data.keyword.vmwaresolutions_short}} that is a VMware based platform automatically provisioned on {{site.data.keyword.cloud_notm}}.
    - **IBM Cloud Private** – ICP is an application platform for developing and managing containerized applications. It is an integrated environment that includes the container orchestrator Kubernetes, as well as a private image repository, a management console, monitoring frameworks and a graphical user interface, which provides a centralized location from where you can deploy, manage, monitor, and scale your applications.
    - **IBM Cloud Automation Manager** – CAM is an enterprise-ready infrastructure as code platform that provides a single pane of glass to provision VM-based workloads alongside Kubernetes based workloads by simply using templates that are stored and versioned in a repository.
-
 * [vCenter Server and IBM Kubernetes service](../vcsiks/vcsiks-intro.html) - This guide is a reference architecture for deploying the following platforms:
-   - **VMware vCenter Server on IBM Cloud** - an offering from IBM Cloud for VMware Solutions that is a VMware based platform automatically provisioned on IBM Cloud.
-   - **IBM Cloud Kubernetes Service** – a managed service on IBM Cloud that uses Kubernetes as the orchestration engine for automating deployment, scaling, and operations of application containers across a single-tenant cluster.
-
+   - **VMware vCenter Server on IBM Cloud** - an offering from {{site.data.keyword.vmwaresolutions_short}} that is a VMware based platform automatically provisioned on {{site.data.keyword.cloud_notm}}.
+   - **IBM Cloud Kubernetes Service** – a managed service on {{site.data.keyword.cloud_notm}} that uses Kubernetes as the orchestration engine for automating deployment, scaling, and operations of application containers across a single-tenant cluster.
 * _vCenter Server networking_ - The current guide focuses on the network technologies that are used for integration between VCS, ICP, and IKS such as NSX-V and Calico along with a technology preview of NSX-T.
-
 * [VMware and Skate Advisor Concept Car](../vcscar/vcscar-intro.html) - This reference architecture is a “concept car”, that is, a mechanism to highlight and show technologies solving real world problems. We wanted to demonstrate an interaction between Watson AI and machine learning in a real way. Above all, through the culture of skateboarding, we demonstrate cloud services in a unique way. The implementation of the “concept car” is an extension to the Acme Skateboard application called Skate Advisor. Skate Advisor is a tool, which allows users to have skateboarding trick conversations with a Watson driven engine.
-
-* [VMware: The modernization journey of Stock Trader](../vcscontent/vcscontent-intro.html) - Our reference use case describes a classic WebSphere Application Server application being modernized using IBM Cloud Private, IBM Middleware content, IBM Cloud Kubernetes Service, and vCenter Server on IBM Cloud. We are all on a cloud journey, and we are all at different points on that journey. Through incremental steps by the application architect, Jane, and the cloud infrastructure architect, Todd, we modernize an existing app called Stock Trader. It shows examples that help you take each step in your journey, and the value realized to your business, regardless of how large or small each step is. We focus on four themes: applications, DevOps, integration, and management. Each work together to help you achieve your goals, and in fact, modernizing one without the others results in problems all around.
+* [VMware: The modernization journey of Stock Trader](../vcscontent/vcscontent-modjourney.html) - Our reference use case describes a classic WebSphere Application Server application being modernized using {{site.data.keyword.cloud_notm}} Private, IBM Middleware content, {{site.data.keyword.cloud_notm}} Kubernetes Service, and vCenter Server on {{site.data.keyword.cloud_notm}}. We are all on a cloud journey, and we are all at different points on that journey. Through incremental steps by the application architect, Jane, and the cloud infrastructure architect, Todd, we modernize an existing application called Stock Trader. It shows examples that help you take each step in your journey, and the value realized to your business, regardless of how large or small each step is. We focus on four themes: applications, DevOps, integration, and management. Each work together to help you achieve your goals, and in fact, modernizing one without the others results in problems all around.
 
 ### Related links
 
