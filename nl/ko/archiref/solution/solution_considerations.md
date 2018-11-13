@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware 인스턴스에 대한 배치 후 고려사항
 
@@ -14,7 +18,8 @@ lastupdated: "2018-10-03"
 
 다음 고려사항을 검토하여 인스턴스 배치 전후의 인스턴스 관리 및 운영에 대한 책임을 이해하십시오.
 
-**참고:** 다음 목록은 완전하지 않습니다. 자세한 정보는 [IBM 관리 서비스](../../services/managing_imi.html)를 참조하십시오.
+다음 목록은 완전하지 않습니다. 자세한 정보는 [IBM 관리 서비스](../../services/managing_imi.html)를 참조하십시오.
+{:note}
 
 ## IBM Cloud 계정 액세스
 

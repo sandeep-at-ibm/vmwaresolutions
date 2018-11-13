@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-27"
 
 사용자는 관리 인프라 및 워크로드의 백업과 가용성을 포함하여 모든 소프트웨어 컴포넌트의 구성, 관리 및 모니터링에 대한 책임이 있습니다.
 
-솔루션의 일부로서 선택적으로 {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 또는 Veeam on {{site.data.keyword.cloud_notm}} 추가 기능 서비스를 배치할 수 있습니다. Veeam 및 IBM Spectrum Protect Plus는 관리 컴포넌트를 백업하기 위한 요구사항의 충족에 도움이 될 수 있습니다.
+솔루션의 일부로 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 또는 Veeam on {{site.data.keyword.cloud_notm}} 추가 기능 서비스를 선택적으로 배치할 수 있습니다. Veeam 및 IBM Spectrum Protect Plus는 관리 컴포넌트를 백업하기 위한 요구사항의 충족에 도움이 될 수 있습니다.
 
 이러한 추가 기능 서비스는 {{site.data.keyword.cloud_notm}} Endurance 스토리지와 함께 배치됩니다. 서비스는 관리 컴포넌트 및 워크로드를 백업하는 데 도움이 됩니다. [IBM Spectrum Protect Plus 아키텍처 개요](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} 및 [Veeam 아키텍처 개요](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}는 배치의 계획 및 크기 조정에 관한 유용한 지침을 제공합니다. 또한 Veeam 배치를 위한 [관리 서비스](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)를 요청할 수 있습니다.
 
@@ -34,7 +34,10 @@ VMware vCenter Server, PSC(Platform Services Controller) 및 VMware NSX 등의 �
 
 VMware vCenter Server 및 PSC는 다양한 프로토콜을 사용하여 [데이터베이스 및 구성을 파일 서버로 내보내기 위한 어플라이언스 관리 사용자 인터페이스 및 API](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window}를 제공합니다. VMware에는 vCenter Server Appliance 및 PSC에서 직접 [cron 작업으로서 주기적으로 실행](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window}하도록 이를 구성하는 방법의 예가 문서화되어 있으며, 이는 용도에 맞게 수정이 가능합니다.
 
-이 기술을 사용하여 vCenter Server Appliance 및 PSC를 둘 다 별도로 백업해야 합니다. VMware에서 문서화한 고려사항과 제한사항을 숙지하고 이에 대한 계획을 세우십시오. 또한 파일 서버에서 파일 백업의 정기적인 순환과 만료에 대해서도 계획하십시오. 참고로, VMware에서 백업 위치가 비어 있는 폴더임을 요구하므로 사용자는 각 후속 백업 작업을 위해 위치를 비워 두도록 백업 순환이나 자동화에 대한 계획을 수립해야 합니다.
+이 기술을 사용하여 vCenter Server Appliance 및 PSC를 둘 다 별도로 백업해야 합니다. VMware에서 문서화한 고려사항과 제한사항을 숙지하고 이에 대한 계획을 세우십시오. 또한 파일 서버에서 파일 백업의 정기적인 순환과 만료에 대해서도 계획하십시오.
+
+VMware는 백업 위치가 비어 있는 폴더여야 하므로 각 후속 백업 작업에 대한 위치를 비워 두도록 백업 순환 또는 자동화를 계획하십시오.
+{:note}
 
 ## NSX 파일 기반 백업
 

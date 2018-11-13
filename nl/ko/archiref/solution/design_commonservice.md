@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 공통 서비스 디자인
 
@@ -14,15 +18,16 @@ lastupdated: "2018-09-25"
 
 ## ID 및 액세스 서비스
 
-이 디자인에서 Microsoft Active Directory(AD)는 ID 관리에 사용됩니다. 이 디자인은 1 - 2개의 Windows Active Directory 가상 머신을 Cloud Foundation 및 vCenter Server 배치 자동화의 일부로서 배치합니다. vCenter는 AD 자동화를 활용하도록 구성됩니다.
+이 디자인에서 Microsoft Active Directory(AD)는 ID 관리에 사용됩니다. 이 디자인은 1 - 2개의 Windows Active Directory 가상 머신을 Cloud Foundation 및 vCenter Server 배치 자동화의 일부로서 배치합니다. vCenter는 AD 인증을 사용하도록 구성됩니다. 
 
 ### Microsoft Active Directory
 
 기본적으로, 단일 Active Directory VSI는 {{site.data.keyword.cloud}} 인프라에 배치됩니다. 이 디자인에서는 관리 클러스터의 전용 Windows Server VM으로서 2개의 고가용성 Microsoft Active Directory 서버를 배치하는 옵션도 제공합니다.
 
-**참고**: 이 옵션을 선택하는 경우에는 Microsoft 라이센싱 및 활성화를 제공할 책임이 있습니다.
+이 옵션을 선택하는 경우에는 Microsoft 라이센싱 및 활성화를 제공할 책임이 있습니다.
+{:note}
 
-Active Directory는 배치된 인스턴스에서 워크로드의 일반 사용자 수용이 아닌 VMware 인스턴스 관리를 위한 액세스 인증만 서비스합니다. Active Directory 서버의 포레스트 루트 도메인 이름은 사용자가 지정하는 DNS 도메인 이름과 동일합니다. 여러 인스턴스가 링크된 경우, 이 도메인 이름은 기본 Cloud Foundation 및 vCenter Server 인스턴스에 대해서만 지정됩니다. 링크된 인스턴스의 경우, 각 인스턴스에는 포레스트 루트 복제본 링에 있는 Active Directory 서버가 포함되어 있습니다. DNS 구역 파일도 Active Directory 서버에서 복제됩니다.
+Active Directory는 배치된 인스턴스에 있는 워크로드의 사용자를 수용하기 위해서가 아니라 VMware 인스턴스만을 관리하기 위해 액세스 인증을 제공합니다. Active Directory 서버의 포레스트 루트 도메인 이름은 사용자가 지정하는 DNS 도메인 이름과 동일합니다. 여러 인스턴스가 링크된 경우, 이 도메인 이름은 기본 Cloud Foundation 및 vCenter Server 인스턴스에 대해서만 지정됩니다. 링크된 인스턴스의 경우, 각 인스턴스에는 포레스트 루트 복제본 링에 있는 Active Directory 서버가 포함되어 있습니다. DNS 구역 파일도 Active Directory 서버에서 복제됩니다.
 
 ### vSphere SSO 도메인
 
@@ -40,9 +45,9 @@ vSphere 싱글 사인온(SSO) 도메인은 단일 인스턴스 또는 다중 링
 vCenter Server 배치에서는 배치된 Active Directory 서버를 인스턴스의 DNS 서버로서 사용합니다. 배치된 모든 컴포넌트(vCenter, PSC, NSX 및 ESXi 호스트)는 자체 기본 DNS 서버로서 Active Directory 서버를 지시하도록 구성되어 있습니다. 해당 구성이 배치된 컴포넌트의 구성에 관여하지 않는 경우, 사용자는 DNS 구역 구성을 사용자 정의할 수 있습니다.
 
 이 디자인은 다음의 구성을 통해 Active Directory 서버에서 DNS 서비스를 통합합니다.
-* 사용자는 도메인 구조를 지정할 수 있습니다. 도메인 이름은 임의의 수의 레벨일 수 있습니다(vCenter Server 컴포넌트가 처리할 최대값까지). 최하위 레벨은 인스턴스에 대한 하위 도메인입니다.
-   * 사용자가 지정하는 DNS 도메인 이름은 Active Directory 루트 포레스트 도메인 이름으로서 사용됩니다. 예를 들어, DNS 도메인 이름이 `cloud.ibm.com`이면 Active Directory 포레스트 도메인 이름은 `cloud.ibm.com`입니다. 이 DNS 및 Active Directory 도메인 이름은 링크된 모든 vCenter Server 인스턴스 간에 동일합니다.
-   * 사용자는 인스턴스에 대한 하위 도메인 이름을 추가로 지정할 수 있습니다. 하위 도메인 이름은 링크된 모든 vCenter Server 인스턴스 간에 고유해야 합니다.
+* 사용자는 도메인 구조를 지정할 수 있습니다. 도메인 이름은 여러 레벨일 수 있습니다(최대 vCenter Server 컴포넌트가 처리할 최대값). 최하위 레벨은 인스턴스에 대한 하위 도메인입니다.
+   * 사용자가 지정하는 DNS 도메인 이름은 Active Directory 루트 포레스트 도메인 이름으로 사용됩니다. 예를 들어, DNS 도메인 이름이 `cloud.ibm.com`이면 Active Directory 포레스트 도메인 이름은 `cloud.ibm.com`입니다. 이 DNS 및 Active Directory 도메인 이름은 링크된 모든 vCenter Server 인스턴스 간에 동일합니다.
+   * 또한 인스턴스에 대한 하위 도메인 이름을 지정할 수 있습니다. 하위 도메인 이름은 링크된 모든 vCenter Server 인스턴스 간에 고유해야 합니다.
 * Active Directory DNS 서버는 DNS 도메인과 하위 도메인 영역 모두에 대해 권한을 갖도록 구성되어 있습니다.
 * Active Directory DNS 서버는 기타 모든 구역에 대한 {{site.data.keyword.cloud_notm}} DNS 서버를 지시하도록 구성되어 있습니다.
 * 기존 대상 인스턴스에 통합되는 인스턴스는 기본 인스턴스와 동일한 도메인 이름을 사용해야 합니다.
@@ -56,8 +61,8 @@ SDDC Manager가 자신이 관리하는 컴포넌트에 대한 호스트 이름�
 이 디자인은 다음의 구성에서 Active Directory 서버의 DNS 서비스를 SDDC Manager VM과 통합합니다.
 * 사용자는 도메인 구조를 지정할 수 있습니다. 도메인 이름은 임의의 수의 레벨일 수 있습니다(Cloud Foundation 컴포넌트가 처리할 최대값까지).
 * 최하위 레벨은 SDDC Manager가 권한을 갖는 하위 도메인입니다.
-* 사용자가 지정하는 DNS 도메인 이름은 Active Directory 루트 포레스트 도메인 이름으로서 사용됩니다. 예를 들어, DNS 도메인 이름이 `cloud.ibm.com`이면 Active Directory 도메인 포레스트 루트는 `cloud.ibm.com`입니다. 이 DNS 도메인과 Active Directory 도메인은 링크된 모든 Cloud Foundation 인스턴스 간에 동일합니다.
-* 사용자는 인스턴스에 대한 하위 도메인 이름을 추가로 지정할 수 있습니다. 하위 도메인 이름은 링크된 모든 Cloud Foundation 인스턴스 간에 고유해야 합니다.  
+* 사용자가 지정하는 DNS 도메인 이름은 Active Directory 루트 포레스트 도메인 이름으로 사용됩니다. 예를 들어, DNS 도메인 이름이 `cloud.ibm.com`이면 Active Directory 도메인 포레스트 루트는 `cloud.ibm.com`입니다. 이 DNS 도메인과 Active Directory 도메인은 링크된 모든 Cloud Foundation 인스턴스에서 동일합니다.
+* 또한 인스턴스에 대한 하위 도메인 이름을 지정할 수 있습니다. 하위 도메인 이름은 링크된 모든 Cloud Foundation 인스턴스 간에 고유해야 합니다.  
 * SDDC Manager DNS 구성은 자신이 담당하는 구역을 제외한 모든 구역에 대한 Active Directory 서버를 지시하도록 변경되었습니다.
 * Active Directory DNS 서버는 SDDC Manager 및 Cloud Foundation 인스턴스 하위 도메인에 대해 DNS 도메인 영역에 대한 권한을 갖도록 구성되어 있습니다.
 * Active Directory DNS 서버는 SDDC Manager가 권한을 갖는 구역의 하위 도메인 위임에 대해 SDDC Manager IP 주소를 지시하도록 구성되어 있습니다.
