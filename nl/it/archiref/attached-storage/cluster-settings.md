@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -18,7 +18,7 @@ Ci sono due funzioni principali che sono abilitate quando si attiva vSphere DRS 
 
 ### Bilanciamento del carico
 
-Con il bilanciamento del carico, la distribuzione e l'utilizzo delle risorse di CPU e memoria per tutti gli host e le macchine virtuali (VM, Virtual Machine) nel cluster sono monitorati costantemente. DRS confronta queste metriche a un utilizzo delle risorse ideale dati gli attributi dei pool di risorse e delle VM del cluster, la domanda attuale e la destinazione dello squilibrio. Esegue (o suggerisce) quindi le migrazioni di VM di conseguenza.
+Con il bilanciamento del carico, la distribuzione e l'utilizzo delle risorse di CPU e memoria per tutti gli host e le macchine virtuali (VM, Virtual Machine) nel cluster sono monitorati costantemente. DRS confronta queste metriche a un utilizzo delle risorse ideale dati gli attributi dei pool di risorse e delle VM del cluster e la domanda attuale. Esegue o suggerisce quindi le migrazioni di VM di conseguenza.
 
 Quando una VM viene accesa per la prima volta nel cluster, DRS prova a mantenere un corretto bilanciamento del carico posizionando la VM su un host appropriato oppure formulando un suggerimento. Le impostazioni di posizionamento o suggerimento sono impostate nella sezione DRS Automation delle impostazioni del cluster.
 
@@ -84,7 +84,7 @@ Per ulteriori informazioni sulla configurazione di queste impostazioni nel clien
 
 vCenter Server utilizza la funzione Admission Control (Controllo di ammissione) per garantire che siano disponibili risorse sufficienti in un cluster per fornire la protezione da failover e per garantire che le prenotazioni di risorse VM siano rispettate. In questa progettazione, la capacità di failover è riservata specificando una percentuale delle risorse del cluster. La capacità di failover definita è impostata sul 25% della CPU e il 25% della memoria.
 
-#### Datastore Heartbeating
+#### Datastore heartbeating
 
 vSphere HA utilizza la funzione Datastore Heartbeating (Heartbeat degli archivi dati) per distinguere tra gli host malfunzionanti e quelli che risiedono su una partizione di rete. Datastore Heartbeating consente a vSphere HA di monitorare gli host quando si verifica una partizione della rete di gestione e di continuare a rispondere alle condizioni di errore che si verificano. In questa progettazione, la politica di selezione di Datastore Heartbeating è impostata su “Automatically select datastores accessible from the host”.
 

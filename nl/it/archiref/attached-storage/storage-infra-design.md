@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Progettazione dell'infrastruttura di archiviazione collegata
 
@@ -56,7 +60,10 @@ Le archiviazioni Performance e Endurance sono soluzioni di archiviazione {{site.
 
 In questa progettazione la soluzione vCenter Server offre l'archiviazione Endurance per l'archiviazione collegata. Di conseguenza, puoi selezionare e collegare (mediante l'automazione) le esportazioni NFS Endurance in un intervallo di dimensioni che va da 20 GB a un massimo di 12 TB. {{site.data.keyword.cloud_notm}} consente a un massimo di 64 host vSphere ESXi di connettersi a una singola esportazione NFS Endurance.
 
-Endurance è disponibile in tre livelli di prestazioni IOPS per supportare esigenze applicative diverse. Nota che dopo il provisioning di una condivisione NFS, questa può essere ridimensionata o riconfigurata per consentire più o meno IOPS.
+Endurance è disponibile in tre livelli di prestazioni IOPS per supportare esigenze applicative diverse.
+
+Dopo il provisioning di una condivisione NFS, questa può essere ridimensionata o riconfigurata per consentire più o meno IOPS.
+{:note}
 
 Per le opzioni IOPS dettagliate, vedi la sezione _Impostazioni di archiviazione_ in [Ordine di istanze vCenter Server](../../vcenter/vc_orderinginstance.html).
 
