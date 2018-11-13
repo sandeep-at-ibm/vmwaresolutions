@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -37,17 +37,25 @@ Quando si verificano errori nei componenti di gestione, puoi ripristinare tali c
 
 ## Applicazione degli aggiornamenti a Veeam on IBM Cloud
 
-Sei responsabile di mantenere Veeam aggiornato alla versione più recente. Per aggiornare Veeam all'ultima versione, scarica gli aggiornamenti dal sito web di Veeam, copia gli aggiornamenti nella VSI Veeam e quindi installali.
+Sei responsabile di mantenere il software Veeam aggiornato alla versione più recente. 
+
+### Per le istanze distribuite con rete pubblica e privata
+
+Se il servizio Veeam viene installato su un'istanza con la rete pubblica e privata, puoi controllare e scaricare gli aggiornamenti utilizzando il software Veeam.
+
+### Per le istanze distribuite solo con rete privata
+
+Se il servizio Veeam viene installato su un'istanza solo con la rete privata, poiché la macchina virtuale (VM) Veeam è configurata senza accesso alla rete pubblica, non puoi controllare o scaricare gli aggiornamenti utilizzando il software Veeam. Invece, devi scaricare gli aggiornamenti dal sito web Veeam, trasferirli alla VM Veeam e poi installarli.
 
 ## Aggiornamento delle licenze Veeam
 
-Puoi aggiornare manualmente la licenza Veeam su richiesta completando la seguente procedura:
-1. [Accedi alla console Veeam Backup and Replication utilizzando RDP](../services/managingveeam.html#accessing-the-veeam-console-by-using-rdp).
-2. Dal menu principale, fai clic su **Licenza**.
-3. Nella finestra **Informazioni sulla licenza**, fai clic su **Aggiorna ora**.
-4. Per visualizzare le statistiche del processo di aggiornamento manuale della licenza, apri la vista **Cronologia** e fai clic sul nodo **Sistema**.
+### Per le istanze distribuite con rete pubblica e privata
 
-Per ulteriori informazioni, vedi [Updating License Manually](https://helpcenter.veeam.com/docs/backup/vsphere/license_update_manual.html?ver=95).
+Se il servizio Veeam è installato su un'istanza con rete pubblica e privata, puoi aggiornare la tua licenza Veeam automaticamente o manualmente seguendo le istruzioni Veeam in [Updating license]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html).
+
+### Per le istanze distribuite solo con rete privata
+
+Se il servizio Veeam è installato su un'istanza solo con la rete privata, devi prendere nota della data di scadenza della licenza e rivolgerti al [Supporto IBM](../vmonic/trbl_support.html) per ottenere assistenza con l'aggiornamento della chiave di licenza quando è necessario il rinnovo.
 
 ## Sostituzione della VSI Veeam delle istanze precedenti alla V1.8 con Veeam on IBM Cloud
 

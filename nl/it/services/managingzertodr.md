@@ -18,7 +18,7 @@ Come procedura consigliata, utilizza il tuo certificato SSL per Zerto Virtual Ma
 
 ## Gestione della configurazione delle repliche Zerto
 
-Per gestire la configurazione delle repliche Zerto, accedi alla console di Zerto Virtual Replication utilizzando le credenziali di vCenter con autorizzazioni di amministratore. Ad esempio, la riassociazione delle istanze Zerto o la configurazione dei gruppi di protezione virtuali per replicare le macchine virtuali. 
+Per gestire la configurazione delle repliche Zerto, accedi alla console di Zerto Virtual Replication utilizzando le credenziali di vCenter con autorizzazioni di amministratore. Ad esempio, la riassociazione delle istanze Zerto o la configurazione dei gruppi di protezione virtuali per replicare le macchine virtuali.
 
 Se esegui la replica tra istanze {{site.data.keyword.cloud_notm}} Zerto diverse, puoi configurare la replica direttamente tra le istanze Zerto. Se esegui la replica tra l'istanza {{site.data.keyword.cloud_notm}} Zerto e il tuo proprio data center, devi installare tu stesso Zerto nel tuo data center. Questa istanza può autorizzarsi automaticamente quando la associ all'istanza {{site.data.keyword.cloud_notm}} Zerto.
 

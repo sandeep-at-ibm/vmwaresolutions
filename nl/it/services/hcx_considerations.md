@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Panoramica di VMware HCX on IBM Cloud
 
 Il servizio HCX on {{site.data.keyword.cloud}} estende senza problemi le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che ti consente di migrare le macchine virtuali (VM) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
 
-**Disponibilità:** questo servizio è disponibile solo per le istanze VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle distribuite nelle release della V2.3 e successive.
+Questo servizio è disponibile solo per le istanze VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle distribuite nella V2.3 e successive.
+{:note}
 
 Puoi aggiornare la tua istanza vCenter Server esistente a un'istanza vCenter Server with Hybridity Bundle. Per ulteriori informazioni sull'aggiornamento della tua istanza e sulla distribuzione del servizio HCX on {{site.data.keyword.cloud_notm}}, vedi [Aggiornamento all'istanza vCenter Server with Hybridity Bundle](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance).
 

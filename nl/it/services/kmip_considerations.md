@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Panoramica di KMIP for VMware on IBM Cloud
 
 Il servizio KMIP for VMware on {{site.data.keyword.cloud}} fornisce un servizio altamente disponibile 24x7 per gestire le chiavi di crittografia utilizzate da VMware in {{site.data.keyword.cloud_notm}}. Questo servizio offre funzionalità di runtime per consentire ai clienti di creare, recuperare, attivare, revocare e distruggere le chiavi di crittografia. Fornisce inoltre funzionalità di gestione per mantenere le associazioni tra le credenziali del client e le chiavi di crittografia.
 
-**Disponibilità:** questo servizio è disponibile solo per le istanze distribuite nelle release della V2.2 o successive.
+Questo servizio è disponibile solo per le istanze distribuite nella V2.2 o successive.
+{:note}
 
 ## Specifiche tecniche per KMIP for VMware on IBM Cloud
 
@@ -45,7 +50,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} utilizza il servizio IBM Key
 
 Il certificato pubblico VMware che hai fornito durante l'ordine o l'utilizzo del servizio viene usato come certificato client per comunicare con l'istanza del servizio. Quando il servizio viene rimosso, vengono rimosse anche tutte le chiavi di crittografia che sono state create da questa istanza del servizio per il certificato pubblico VMware associato.
 
-Pertanto, prima di rimuovere il servizio, assicurati che non venga crittografata alcuna macchina virtuale o vSAN utilizzando le chiavi create dal servizio KMIP. 
+Pertanto, prima di rimuovere il servizio, assicurati che non venga crittografata alcuna macchina virtuale o vSAN utilizzando le chiavi create dal servizio KMIP.
 
 ### Link correlati
 
