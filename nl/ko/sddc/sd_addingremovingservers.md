@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Cloud Foundation 인스턴스에 대한 용량 확장 및 축소
 
@@ -21,7 +25,7 @@ Cloud Foundation 인스턴스에는 최대 5개의 클러스터가 포함될 수
 * VMware vSphere Web Client에서 ESXi 서버를 추가하지 마십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_full}} 콘솔과 동기화되지 않습니다.
 * 주문한 기본 플랫폼에는 기본적으로 네 개의 ESXi 서버가 있습니다. 최대 32개의 ESXi 서버까지 플랫폼을 확장할 수 있습니다. 그러나 한 번에 추가할 수 있는 {{site.data.keyword.baremetal_short}}의 수는 다음과 같습니다.
    * **소형** 및 **대형** 구성의 경우 한 번에 1 - 10개의 ESXi 서버를 추가할 수 있습니다.
-   * **사용자 정의됨** 구성의 경우 한 번에 1 - 20개의 ESXi 서버를 추가할 수 있습니다.
+   * **Skylake** 및 **Broadwell** 구성의 경우, 한 번에 1 - 20개의 ESXi 서버를 추가할 수 있습니다. 
 
 ## ESXi 서버를 추가하는 프로시저
 
@@ -61,7 +65,8 @@ Cloud Foundation 인스턴스에는 최대 5개의 클러스터가 포함될 수
 2. ESXi 서버가 제거될 때 이메일로 알림을 받습니다.
 3. 일반적으로 30일인 {{site.data.keyword.cloud_notm}} 비용 청구 주기 종료 시 ESXi 서버가 {{site.data.keyword.cloud_notm}} 인프라에서 완전히 재확보됩니다.
 
-   **주의:** 제거된 ESXi 서버에 대한 {{site.data.keyword.cloud_notm}} 비용 청구 주기 종료 시 비용이 청구됩니다.
+   제거된 ESXi 서버에 대한 {{site.data.keyword.cloud_notm}} 비용 청구 주기 종료 시까지 비용이 청구됩니다.
+   {:note}
 
 ### 관련 링크
 
