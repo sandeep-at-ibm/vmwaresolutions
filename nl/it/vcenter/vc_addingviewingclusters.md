@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server
 
@@ -14,13 +18,14 @@ I server ESXi che hai configurato quando hai ordinato un'istanza vengono raggrup
 
 Puoi aggiungere i tuoi propri cluster alle istanze VMware vCenter Server per espandere la capacità di calcolo e archiviazione. All'interno di un cluster, puoi gestire i server ESXi per una migliore allocazione delle risorse e alta disponibilità. Quando non sono più necessari, elimina i cluster aggiunti dalle tue istanze.
 
-**Disponibilità:** la funzione di eliminazione cluster è disponibile solo per le istanze che sono state distribuite o aggiornate alla V2.3 e versioni successive.
+La funzione di eliminazione cluster è disponibile solo per le istanze che sono state distribuite o aggiornate alla V2.3 e successive.
+{:note}
 
 ## Aggiunta di cluster alle istanze vCenter Server
 
 Il numero di cluster che possono essere aggiunti a un'istanza dipende dalla versione dell'istanza:
 * Per le istanze che sono state distribuite o aggiornate alla V2.2 e versioni successive, puoi aggiungere fino a 10 cluster.
-* Per le istanze che sono state distribuite nella V2.2 o versioni precedenti, puoi aggiungere fino a cinque cluster.
+* Per le istanze che sono state distribuite nella V2.1 o versioni precedenti, puoi aggiungere fino a cinque cluster.
 
 ### Impostazioni di sistema
 
@@ -42,7 +47,40 @@ Se distribuisci il cluster in un diverso {{site.data.keyword.CloudDataCent_notm}
 
 ### Impostazioni di Bare Metal Server
 
-Puoi scegliere **Preconfigurato** o **Personalizzato**.
+Puoi scegliere **Skylake**, **Certificato SAP**, **Broadwell** o **Preconfigurato**.
+
+#### Skylake
+
+Per l'impostazione **Skylake**, hai una serie di opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
+
+Tabella 1. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
+
+| Opzioni del modello CPU        | Opzioni RAM       |
+|:------------- |:------------- |
+| Processore Dual Intel Xeon Silver 4110 / 16 core totali, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+#### Certificato SAP
+
+Se selezioni **Certificato SAP**, non puoi modificare le impostazioni di CPU o RAM.
+
+In base ai tuoi requisiti, seleziona una configurazione di Bare Metal Server:
+* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 192 GB RAM
+* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 384 GB RAM
+* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 768 GB RAM
+
+#### Broadwell
+
+Per l'impostazione **Broadwell**, hai una serie di opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
+
+Tabella 2. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
+
+| Opzioni del modello CPU        | Opzioni RAM       |
+|:------------- |:------------- |
+| Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 
 #### Preconfigurato
 
@@ -50,21 +88,6 @@ Per l'impostazione **Preconfigurato**, puoi scegliere una **Configurazione Bare 
 * Small (Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz / 128 GB di RAM / 2 dischi)
 * Medium (Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz / 256 GB di RAM / 2 dischi)
 * Large (Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz / 512 GB di RAM / 2 dischi)
-
-#### Personalizzato
-
-Per l'impostazione **Personalizzato**, hai una serie di opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
-
-Tabella 1. Opzioni per i {{site.data.keyword.baremetal_short}} personalizzati
-
-| Opzioni del modello CPU        | Opzioni RAM       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Silver 4110 / 16 core totali, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### Numero di server Bare Metal
 
@@ -74,9 +97,9 @@ Per le istanze vCenter Server distribuite nella V2.1 o successive, puoi aggiunge
 
 Per le istanze vCenter Server distribuite nella V2.0 o precedenti, puoi aggiungere fino a 32 {{site.data.keyword.baremetal_short}} per un cluster. Il numero di {{site.data.keyword.baremetal_short}} che puoi aggiungere alla volta è il seguente:
 * Per le configurazioni **Small**, **Medium** e **Large** di Bare Metal Server, puoi aggiungere da 1 a 10 server ESXi alla volta.
-* Per la configurazione **Personalizzato** di Bare Metal Server, puoi aggiungere da 1 a 20 server ESXi alla volta.
+* Per le configurazioni **Skylake** o **Broadwell** Bare Metal Server, puoi aggiungere da 1 a 20 server ESXi alla volta.
 
-Dopo la distribuzione, puoi creare fino a quattro ulteriori cluster. Se selezioni la configurazione **Personalizzato** di Bare Metal Server con l'archiviazione VMware vSAN, sono richiesti quattro server sia per il cluster iniziale che per i cluster di post-distribuzione.
+Dopo la distribuzione, puoi creare fino a quattro ulteriori cluster. Se selezioni la configurazione **Skylake** o **Broadwell** di Bare Metal Server con l'archiviazione VMware vSAN, sono richiesti quattro server sia per il cluster iniziale che per i cluster di post-distribuzione.
 
 ### Impostazioni di archiviazione
 
@@ -97,7 +120,8 @@ Se il tuo cluster iniziale era un cluster vSAN, qualsiasi ulteriore cluster vSAN
 
 Se selezioni **Storage NFS**, puoi aggiungere l'archiviazione condivisa a livello di file per la tua istanza in cui tutte le condivisioni utilizzano le stesse impostazioni o puoi specificare impostazioni di configurazione diverse per ogni condivisione file. Specifica le seguenti opzioni NFS:
 
-**Nota:** il numero di condivisioni file deve essere compreso tra 1 e 32.
+Il numero di condivisioni file deve essere compreso tra 1 e 32.
+{:note}
 
 * **Configura le condivisioni singolarmente**: seleziona questa opzione per specificare diverse impostazioni di configurazione per ogni condivisione file.
 * **Numero di condivisioni**: se vuoi utilizzare la stessa impostazione di configurazione per ogni condivisione file, specifica il numero di condivisioni file per l'archiviazione condivisa NFS che vuoi aggiungere.
@@ -105,7 +129,7 @@ Se selezioni **Storage NFS**, puoi aggiungere l'archiviazione condivisa a livell
 * **Prestazioni**: seleziona l'IOPS (input/output operations per second) per GB in base ai tuoi requisiti del carico di lavoro.
 * **AGGIUNGI NFS**: seleziona questa opzione per aggiungere singole condivisioni file con diverse impostazioni di configurazione.
 
-Tabella 2. Opzioni del livello di prestazioni NFS
+Tabella 3. Opzioni del livello di prestazioni NFS
 
 | Opzione        | Dettagli       |
   |:------------- |:------------- |
@@ -137,13 +161,15 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza a cui vuoi aggiungere i cluster.
 
-   **Nota:** assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
+   Assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
+   {:note}
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra e quindi su **Aggiungi** nell'angolo superiore destro della tabella **CLUSTER**.
 4. Nella pagina **Aggiungi cluster**, immetti il nome del cluster.
 5. Se vuoi ospitare il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso da quello in cui è ospitata l'istanza, in **Bare Metal Server**, seleziona la casella di spunta **Seleziona un'ubicazione differente** e scegli il {{site.data.keyword.CloudDataCent_notm}} per ospitare l'istanza.
 6. Completa la configurazione Bare Metal.
+   * Se hai selezionato **Skylake** o **Broadwell**, specifica il **Modello CPU**, la quantità di **RAM** e il **Numero di {{site.data.keyword.baremetal_short}}**.
+   * Se hai selezionato **Certificato SAP**, specifica il modello CPU.
    * Se hai selezionato **Preconfigurato**, specifica la **Configurazione Bare Metal Server** e il **Numero di {{site.data.keyword.baremetal_short}}**. Se intendi utilizzare vSAN come soluzione di archiviazione, sono richiesti almeno quattro {{site.data.keyword.baremetal_short}}.
-   * Se hai selezionato **Personalizzato**, specifica il **Modello CPU**, la quantità di **RAM** e il **Numero di {{site.data.keyword.baremetal_short}}**.
 7. Completa la configurazione di archiviazione.
   * Se selezioni **Storage vSAN**, specifica i tipi di disco per i dischi di capacità e cache, il numero di dischi e l'edizione della licenza vSAN. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
   * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
@@ -165,7 +191,8 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 1. La distribuzione del cluster viene avviata automaticamente e lo stato del cluster viene modificato in **Inizializzazione**. Puoi controllare lo stato della distribuzione visualizzando la cronologia di distribuzione dalla pagina **Riepilogo** dell'istanza.
 2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere High Availability (HA) e vSphere Distributed Resource Scheduler (DRS).
 
-**Importante:** non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
+Non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
+{:important}
 
 ## Procedura per visualizzare i cluster nelle istanze vCenter Server
 
@@ -242,7 +269,8 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza da cui vuoi eliminare i cluster.
 
-   **Nota:** assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. Altrimenti, non puoi eliminare i cluster dall'istanza.
+   Assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. Altrimenti, non puoi eliminare i cluster dall'istanza.
+   {:note}
 
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, individua il cluster che vuoi eliminare e fai clic sull'icona **Elimina** nella colonna **Azioni**.
 4. Conferma di aver completato la migrazione delle macchine virtuali in altri cluster, se necessario, e di voler eliminare il cluster.

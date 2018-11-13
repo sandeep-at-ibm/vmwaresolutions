@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -66,26 +66,35 @@ Licenze fornite da IBM per i seguenti componenti VMware:
 
 ## Impostazioni di Bare Metal Server
 
-Le impostazioni Bare Metal si basano sulla tua configurazione personalizzata. L'opzione per selezionare una configurazione preconfigurata non è attualmente supportata.
+Le impostazioni di Bare Metal sono basate sulla tua selezione del data center e sulla configurazione del server bare metal. L'opzione per selezionare una configurazione preconfigurata non è attualmente supportata.
 
 ### Ubicazione data center
 
 Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui deve essere ospitata l'istanza.
 
-### Personalizzato
+### Skylake
 
 Specifica il modello di CPU e la RAM per il Bare Metal Server.
 
-Tabella 2. Opzioni per i {{site.data.keyword.baremetal_short}} personalizzati
+Tabella 2. Opzioni per Skylake {{site.data.keyword.baremetal_short}} 
+
+| Opzioni del modello CPU        | Opzioni RAM       |
+|:------------- |:------------- |
+| Processore Dual Intel Xeon Silver 4110 / 16 core totali, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+### Broadwell
+
+Specifica il modello di CPU e la RAM per il Bare Metal Server.
+
+Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}} 
 
 | Opzioni del modello CPU        | Opzioni RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
 | Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
 | Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
-| Processore Dual Intel Xeon Silver 4110 / 16 core totali, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 ### Numero di server Bare Metal
 
@@ -163,7 +172,7 @@ Seleziona la configurazione DNS (Domain Name System) per la tua istanza:
 
 **Importante:** se configuri la tua istanza per utilizzare le due macchine virtuali Microsoft Windows, devi fornire due licenze di Microsoft Windows Server 2012 R2. Utilizza la licenza Microsoft Windows Server 2012 R2 Standard Edition o la licenza Microsoft Windows Server 2012 R2 Datacenter Edition o entrambe.
 
-Attualmente, ciascuna licenza può essere assegnata a un solo server fisico e copre fino a due processori fisici. Utilizzando una licenza Standard Edition, puoi eseguire due macchine virtuali Microsoft Windows virtualizzate per ogni server con 2 processori. Pertanto, sono necessarie due licenze poiché due macchine virtuali Microsoft Windows sono distribuite in due host diversi.
+Attualmente, ciascuna licenza può essere assegnata a un solo server fisico e comprende fino a due processori fisici. Utilizzando una licenza Standard Edition, puoi eseguire due macchine virtuali Microsoft Windows virtualizzate per ogni server con 2 processori. Pertanto, sono necessarie due licenze poiché due macchine virtuali Microsoft Windows sono distribuite in due host diversi.
 
 Hai 30 giorni per attivare le macchine virtuali.
 
@@ -181,12 +190,12 @@ In base alla configurazione che hai selezionato per l'istanza, il costo stimato 
 4. Fai clic su **Istanza primaria** per distribuire una singola istanza nell'ambiente.
 5. Specifica l'edizione della licenza VMware NSX.
 6. Completa la configurazione di Bare Metal Server:
-  1. Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui ospitare l'istanza.
-  2. Seleziona il modello CPU **Personalizzato** e la quantità di **RAM**.
+   1. Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui ospitare l'istanza.
+   2. Seleziona il modello CPU **Skylake** o **Broadwell** e la quantità di **RAM**.
 7. Completa la configurazione di archiviazione.
-  * Se selezioni **Storage vSAN**, specifica i tipi di disco per i dischi di capacità e cache, il numero di dischi e l'edizione della licenza vSAN. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
-  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
-  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**, quindi fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni singola condivisione file. Devi selezionare almeno una condivisione file.
+   * Se selezioni **Storage vSAN**, specifica i tipi di disco per i dischi di capacità e cache, il numero di dischi e l'edizione della licenza vSAN. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
+   * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
+   * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**, quindi fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni singola condivisione file. Devi selezionare almeno una condivisione file.
 8. Completa la configurazione dell'interfaccia di rete.
    1. Immetti il prefisso del nome host, l'etichetta del dominio secondario e il nome del dominio root.
    2. Seleziona la configurazione DNS.
@@ -213,7 +222,7 @@ Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmw
 
 **ATTENZIONE:** la gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}} (installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza) dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
 *  Aggiunta, modifica, restituzione o rimozione dei componenti
-*  Espansione o contrazione della capacità dell'istanza mediante la rimozione di server ESXi
+*  Espansione o contrazione della capacità dell'istanza mediante l'aggiunta o la rimozione di server ESXi
 *  Spegnimento dei componenti
 
    Le eccezioni a queste attività includono la gestione delle condivisioni file di archiviazione condivisa dal {{site.data.keyword.slportal}}. Tali attività includono: l'ordine, l'eliminazione (che potrebbe influire sugli archivi di dati, se montati), l'autorizzazione e il montaggio di condivisioni file di archiviazione condivisa.

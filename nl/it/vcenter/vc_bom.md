@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Distinta base di vCenter Server
 
@@ -39,7 +43,8 @@ Tabella 2. Diba per i componenti software nelle istanze vCenter Server
 | VMware       | NSX per vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server Standard edition | 2012R2       |
 
-**Nota:** VMware vSAN è un componente facoltativo.
+VMware vSAN è un componente facoltativo.
+{:note}
 
 ## Impostazioni di configurazione avanzate per i server ESXi
 

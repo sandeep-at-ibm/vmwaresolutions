@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visualizzazione delle istanze vCenter Server with Hybridity Bundle
 
@@ -17,13 +21,14 @@ Visualizza il riepilogo e le informazioni dettagliate delle istanze VMware vCent
 Per visualizzare un riepilogo di tutte le istanze vCenter Server with Hybridity Bundle fornite per un account utente, completa la seguente procedura:
 1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
 2. Dal banner della console, fai clic sull'icona del tuo account utente e quindi sul campo **Account** per selezionare l'account utente per il quale vuoi controllare le istanze.
-3. Nella tabella **vCenter Server**, visualizza l'elenco delle istanze fornite nell'account utente selezionato.
+3. Nella tabella **Istanze di vCenter Server**, visualizza l'elenco delle istanze fornite nell'account utente selezionato.
 
 Tabella 1. Elementi dell'istanza vCenter Server with Hybridity Bundle
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
 | Nome | Il nome dell'istanza |
+| Tipo | Il tipo dell'istanza vCenter Server |
 | Versione | La versione di release in cui è stata distribuita o aggiornata l'istanza |  
 | Ubicazione | Il {{site.data.keyword.CloudDataCent_notm}} in cui è ospitata l'istanza |  
 | Ora di creazione | La data e ora di creazione dell'istanza |  
@@ -58,7 +63,7 @@ Tabella 3. Proprietà delle istanze vCenter Server with Hybridity Bundle
 | ID | L'ID dell'istanza. |
 | Ubicazione | Il {{site.data.keyword.CloudDataCent_notm}} in cui è ospitata l'istanza. |
 | Versione corrente | La versione corrente di {{site.data.keyword.vmwaresolutions_short}}. |
-| Versione vCenter | La versione di VMware vCenter Server with Hybridity Bundle.<br><br>**Nota:** esiste una leggera variazione tra la versione di vCenter Server visualizzata nella console {{site.data.keyword.vmwaresolutions_short}} e nel client web VMware vSphere. Entrambe sono corrette. |
+| Versione vCenter | La versione di VMware vCenter Server with Hybridity Bundle.<br><br>Esiste una leggera variazione tra la versione di vCenter Server visualizzata nella console {{site.data.keyword.vmwaresolutions_short}} e nel client web VMware vSphere. Entrambe sono corrette.{:note} |
 | NSX per vSphere | La versione del prodotto VMware NSX per vSphere. |
 | Edizione licenza NSX | La versione e l'edizione della licenza di VMware NSX. |
 | DNS, Dominio root | Il nome del dominio root è il nome del dominio DNS (Domain Name System) e il nome root dell'insieme di strutture Microsoft Active Directory (AD). |
@@ -109,7 +114,8 @@ Se si verificano degli errori durante la distribuzione o l'eliminazione dell'ist
 
 Gestisci le tue istanze dalla console {{site.data.keyword.vmwaresolutions_short}} o dal client web VMware vSphere.
 
-**Importante:** prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza per passare al client web vSphere e iniziare a gestire i tuoi server ESXi, devi accedere al portale VPN del {{site.data.keyword.CloudDataCent_notm}}. Passa con il mouse sul pulsante **Console vCenter** e segui le istruzioni per assicurarti di soddisfare tutti i requisiti e di aver completato i passi necessari prima di accedere al client web vSphere.
+Prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza per passare al client web vSphere e iniziare a gestire i tuoi server ESXi, devi accedere al portale VPN del {{site.data.keyword.CloudDataCent_notm}}. Passa con il mouse sul pulsante **Console vCenter** e segui le istruzioni per assicurarti di soddisfare tutti i requisiti e di aver completato i passi necessari prima di accedere al client web vSphere.
+{:important}
 
 Rivedi i seguenti argomenti per informazioni utili per completare le istruzioni di accesso:
 *  Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](../vmonic/trbl_timeout_vc_console.html).

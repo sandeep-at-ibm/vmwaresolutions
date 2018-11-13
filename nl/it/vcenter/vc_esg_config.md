@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Configurazione della rete per utilizzare l'ESG NSX gestito dal cliente con le tue VM
 
@@ -35,14 +39,16 @@ Per usufruire di NSX per le tue VM del carico di lavoro, devi configurare una se
    3. Sull'adattatore di rete appena aggiunto, seleziona lo switch logico del carico di lavoro dal menu. Un nome di esempio per lo switch logico del carico di lavoro
    è **vxw-dvs-17-virtualwire-1-sid-6000-Workload**.
 
-   **Importante:** assicurati di non selezionare lo switch **Workload Transit**.
+   Assicurati di non selezionare lo switch **Workload Transit**.
+{:important}
 
 2. Identifica un indirizzo IP disponibile per la VM:
    *  L'indirizzo IP deve essere compreso nell'intervallo `192.168.10.0/24`. Nota che l'indirizzo IP `192.168.10.1` è riservato (vedi il **Passo 3**).
    *  Quando configuri la rete del sistema operativo che viene eseguito sulla VM, utilizza l'indirizzo IP selezionato e la maschera di rete
    `255.255.255.0`.
 
-   **Nota:** sei responsabile della gestione dell'intervallo di indirizzi IP a cui hai assegnato le tue VM.
+   Sei responsabile della gestione dell'intervallo di indirizzi IP a cui hai assegnato le tue VM.
+   {:note}
 
 3. Assegna il gateway predefinito della VM come `192.168.10.1`. Questo è l'indirizzo IP del DLR NSX sullo stesso switch logico delle VM del carico di lavoro.
 
@@ -75,6 +81,7 @@ Inoltre, puoi trovare ulteriori dettagli sulle sottoreti del cliente completando
 
    **Avvertenza:** non utilizzare gli indirizzi IP che vengono ordinati e utilizzati durante la configurazione iniziale. Puoi comunque utilizzare altri indirizzi IP
    su queste sottoreti in base ai tuoi requisiti. Per configurare ulteriori regole NAT (network address translation), vedi [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+   {:important}
 
 ### Link correlati
 
