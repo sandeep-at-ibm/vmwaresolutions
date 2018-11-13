@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-01"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # NSX Edge Services Gateway 디자인
 
@@ -16,7 +20,8 @@ NSX Edge Services Gateway on {{site.data.keyword.cloud}} 솔루션은 전세계 
 
 내부 아키텍처는 VMware Cloud Foundation 통합 클러스터 또는 VMware vCenter Server 클러스터의 리소스 풀에서 필요한 NSX Edge 컴포넌트의 배치를 지정합니다.
 
-**참고:** 다음 그림에서 VMware vSAN은 선택사항입니다.
+다음 그림에서 VMware vSAN은 선택사항입니다.
+{:note}
 
 그림 1. {{site.data.keyword.cloud_notm}}의 클라우드 네트워킹 서비스
 
@@ -26,9 +31,9 @@ NSX Edge Services Gateway on {{site.data.keyword.cloud}} 솔루션은 전세계 
 
 전용 아키텍처는 실제 네트워크 인프라와의 중요한 상호작용을 제공하여 NSX Edge 전용으로 사용되는 별도의 2-노드 vSphere 클러스터에 필요한 NSX Edge 컴포넌트를 배치합니다. 전용 아키텍처에는 다음과 같은 특성과 기능이 있습니다.
 
-* 실제 네트워크에 대한 온램프(on-ramp) 및 오프램프(off-ramp) 연결을 제공합니다(예: NSX Edge 가상 어플라이언스의 North-South L3 라우팅).
+* 실제 네트워크에 대한 온램프(on-ramp) 및 오프램프(off-ramp) 연결을 제공합니다 (예: NSX Edge 가상 어플라이언스의 North-South L3 라우팅).
 * NSX L2 브릿징을 통해 실제 네트워크의 VLAN에 연결된 실제 디바이스와의 통신을 허용하고 DLR(Distributed Logical Router) 라우팅을 위해 제어 가상 머신(VM)을 호스팅합니다.
-* 중앙 집중식 논리 또는 실제 서비스가 있을 수 있습니다(예: 방화벽, 로드 밸런서, 가상 사설망(VPN) 모니터링 컴포넌트 및 Log Insight VM).
+* 중앙 집중식 논리 또는 실제 서비스가 있을 수 있습니다 (예: 방화벽, 로드 밸런서, 가상 사설망(VPN) 모니터링 컴포넌트 및 Log Insight VM).
 * 전용 vCenter를 사용하여 컴퓨팅 및 에지 리소스를 관리하는 경우 에지 클러스터에서 NSX Controller를 호스팅할 수 있습니다.
 * 에지 클러스터 리소스에는 활성 대기 구성을 보호하거나 장애 발생 시 대역폭 가용성을 유지보수하기 위한 선호도 방지 요구사항이 있습니다.
 
