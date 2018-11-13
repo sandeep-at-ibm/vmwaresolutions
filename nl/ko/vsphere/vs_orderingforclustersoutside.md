@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 콘솔 외부에서 작성된 클러스터 스케일링
 
@@ -24,7 +28,8 @@ VMware vSphere 오퍼링을 사용하여 {{site.data.keyword.vmwaresolutions_ful
 2. **VMware vSphere on IBM Cloud** 페이지에서 **작성**을 클릭하십시오.  
    사용자가 **새로 작성** 탭에 있으며 **클러스터 구성** 목록에 **새 클러스터**가 표시되어 있는지 확인하십시오.
 3. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 작성된 기존 클러스터와 동일한 설정을 사용하여 클러스터를 작성하십시오. 자세한 정보는 [새 vSphere 클러스터 주문](vs_orderinginstances.html)을 참조하십시오.  
-   **참고:** 네트워크 인터페이스의 경우에는 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 작성된 클러스터를 스케일링하려면 해당 클러스터의 기존 VLAN을 선택해야 합니다.  
+   네트워크 인터페이스의 경우에는 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 작성된 클러스터를 스케일링하려면 해당 클러스터의 기존 VLAN을 선택해야 합니다.
+   {:note}
 4. **주문 요약** 분할창에서 클러스터 구성을 확인한 후 **구성 저장**을 클릭하십시오.   
 5. **시작하기** 페이지에서 **VMware vSphere on IBM Cloud** 카드를 클릭하십시오.
 6. **VMware vSphere on IBM Cloud** 페이지에서 **작성**을 클릭하십시오.
@@ -37,7 +42,8 @@ VMware vSphere 오퍼링을 사용하여 {{site.data.keyword.vmwaresolutions_ful
 
 클러스터의 배치가 자동으로 시작되고 주문이 처리 중이라는 이메일 확인을 수신합니다. 클러스터를 사용할 준비가 되면 이메일로 알림을 받습니다.
 
-**참고:** vSphere 클러스터가 vCenter Server 및 Cloud Foundation 인스턴스와 함께 **배치된 인스턴스** 페이지에 표시되지 않습니다.
+vSphere 클러스터는 vCenter Server 및 Cloud Foundation 인스턴스와 함께 **배치된 인스턴스** 페이지에 표시되지 않습니다.
+{:note}
 
 ### 관련 링크
 
