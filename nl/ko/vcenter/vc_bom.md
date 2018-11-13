@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server 명세서
 
@@ -39,7 +43,8 @@ VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 �
 |VMware       |NSX for vSphere                 | 6.4.1        |
 |Microsoft    |Windows Server Standard 에디션 |2012R2       |
 
-**참고:** VMware vSAN은 선택적 컴포넌트입니다.
+VMware vSAN은 선택적 컴포넌트입니다.
+{:note}
 
 ## ESXi 서버의 고급 구성 설정
 

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server 인스턴스 주문
 
@@ -30,7 +34,8 @@ lastupdated: "2018-09-27"
   |완전한 ESXi 서버 이름 | `<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `<n>`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |  
   |PSC FQDN |`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
 
-**중요:** 인스턴스 주문 또는 배치 중에 설정된 값을 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다.
+인스턴스 주문 또는 배치 중에 설정되는 값은 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다.
+{:important}
 
 ## 시스템 설정
 
@@ -59,20 +64,55 @@ vCenter Server 인스턴스를 주문할 때는 다음 시스템 설정을 지�
 
 비즈니스 파트너가 아닌 사용자의 경우에는 **구매에 포함**을 선택하여 이 컴포넌트에 대해 IBM 제공 VMware 라이센스를 사용하거나, **라이센스를 제공함**을 선택하고 고유한 라이센스 키를 입력하여 고유한 라이센스를 가져올(BYOL) 수 있습니다.
 
+
 **주의:**
 * 최소 8개의 CPU가 있는 라이센스가 필요합니다. 즉, 서버당 2개의 CPU가 있는 4개의 서버용입니다. 각 VMware 컴포넌트의 라이센스 선택사항은 기본 인스턴스와 나중에 라이센스에 추가하는 ESXi 서버에 적용됩니다. 라이센스가 인프라의 향후 용량 확장을 지원하는지 확인하십시오.
 * 최소 라이센스 에디션은 사용자 인터페이스에 표시됩니다. 다른 컴포넌트 에디션이 지원되는 경우 원하는 에디션을 선택할 수 있습니다. 선택한 각 VMware 컴포넌트에 올바른 라이센스 키가 제공되었는지 확인해야 합니다.
 * vSphere의 경우 라이센스 비용은 주문 시 발생하지만 라이센스 비용이 나중에 사용자 계정으로 청구됩니다.
 * 인스턴스 배치가 완료되고 나면 VMware vSphere Web Client를 사용하여 제공한 라이센스를 변경할 수 있습니다.
 * 라이센스를 제공하는 VMware 컴포넌트에 대한 지원은 IBM 지원 센터가 아닌 VMware에서 제공합니다.
+{:important}
 
 ## Bare Metal Server 설정
 
-Bare Metal Server 설정은 사용자의 데이터 센터 선택, 그리고 사전 구성됨 또는 사용자 정의됨 구성의 선택 여부에 따라 달라집니다.
+Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성을 기반으로 합니다. 
 
 ### 데이터 센터 위치
 
 인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}를 선택하십시오.
+
+### Skylake
+
+**Skylake**를 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다.
+
+표 2. Skylake {{site.data.keyword.baremetal_short}}의 옵션
+
+| CPU 모델 옵션        |RAM 옵션       |
+|:------------- |:------------- |
+|듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+
+### SAP 인증
+
+**SAP 인증**을 선택하는 경우 CPU 또는 RAM 설정을 변경할 수 없습니다.
+
+자신의 요구사항에 따라 Bare Metal Server 구성을 선택하십시오.
+  * 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 192GB RAM
+  * 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 384GB RAM
+  * 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 768GB RAM
+
+### Broadwell
+
+**Broadwell**을 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다.
+
+표 3. Broadwell {{site.data.keyword.baremetal_short}}의 옵션
+
+| CPU 모델 옵션        |RAM 옵션       |
+|:------------- |:------------- |
+| 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
+| 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
+| 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 
 ### 사전 구성됨
 
@@ -83,30 +123,13 @@ Bare Metal Server 설정은 사용자의 데이터 센터 선택, 그리고 사�
   * 중형(듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz / 256GB RAM / 2개의 드라이브)
   * 대형(듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz / 512GB RAM / 2개의 드라이브)
 
-### 사용자 정의됨
-
-**사용자 정의됨**을 선택하는 경우에는 필요에 따라 CPU 및 RAM 조합을 선택할 수 있습니다.
-
-Bare Metal Server의 CPU 모델 및 RAM을 선택하십시오.
-
-표 2. 사용자 정의된 {{site.data.keyword.baremetal_short}}의 옵션
-
-| CPU 모델 옵션        |RAM 옵션       |
-|:------------- |:------------- |
-| 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
-
 ### Bare Metal Server 수
 
 인스턴스에 있는 초기 클러스터의 경우 다음과 같이 ESXi 서버의 수를 구성할 수 있습니다.
+* **Skylake** 또는 **Broadwell**을 선택한 경우 ESXi 서버의 수를 2 - 20개 범위로 구성할 수 있습니다.
 * **사전 구성됨**을 선택한 경우 ESXi 서버의 수를 2 - 10의 범위로 구성할 수 있습니다.
-* **사용자 정의됨**을 선택한 경우 ESXi 서버의 수를 2 - 20의 범위로 구성할 수 있습니다.
 
-모든 ESXi 서버는 설정 구성을 공유한다. 초기 배치 후에는 네 개의 클러스터를 추가할 수 있습니다. VMware vSAN에 대한 **사용자 정의됨** 구성을 선택한 경우 초기 및 사후 배치 클러스터 둘 다를 위해 네 개의 ESXi 서버가 필요합니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
+모든 ESXi 서버는 설정 구성을 공유한다. 초기 배치 후에는 네 개의 클러스터를 추가할 수 있습니다. VMware vSAN에 대해 **Skylake** 또는 **Broadwell** 구성을 선택한 경우 초기 및 사후 배치 클러스터 둘 다를 위해 네 개의 ESXi 서버가 필요합니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
 
 ## 스토리지 설정
 
@@ -114,7 +137,7 @@ Bare Metal Server의 CPU 모델 및 RAM을 선택하십시오.
 
 ### vSAN 스토리지
 
-vSAN은 **사용자 정의됨** Bare Metal Server 구성에만 사용 가능합니다. 다음 vSAN 옵션을 지정하십시오.
+vSAN은 **Skylake** 및 **Broadwell** Bare Metal Server 구성에만 사용할 수 있습니다. 다음 vSAN 옵션을 지정하십시오.
 * **vSAN 용량 디스크의 디스크 유형 및 크기**: 필요한 용량 디스크에 대한 옵션을 선택하십시오.
 * **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
 * 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다. **고성능 Intel Optane** 옵션은 듀얼 Intel Xeon Gold 5120 및 6140 프로세서에 대해서만 사용 가능합니다.
@@ -125,7 +148,8 @@ vSAN은 **사용자 정의됨** Bare Metal Server 구성에만 사용 가능합�
 
 **NFS 스토리지**를 선택할 때 모든 공유가 동일한 설정을 사용하는 인스턴스에 대한 파일 레벨 공유 스토리지를 추가하거나 각 파일 공유에 서로 다른 구성 설정을 지정할 수 있습니다. 다음 NFS 옵션을 지정하십시오.
 
-**참고:** 파일 공유의 수는 1 - 32 범위에 있어야 합니다.
+파일 공유의 수는 1 - 32 사이여야 합니다.
+{:note}
 
 * **공유 개별 구성**: 각 파일 공유에 대해 서로 다른 구성 설정을 지정하려면 선택하십시오.
 * **공유 수**: 각 파일 공유에 동일한 구성 설정을 사용하는 경우 추가할 NFS 공유 스토리지에 대한 파일 공유 수를 지정하십시오.
@@ -133,7 +157,7 @@ vSAN은 **사용자 정의됨** Bare Metal Server 구성에만 사용 가능합�
 * **성능**: 워크로드 요구사항에 기반한 GB당 IOPS(Input/output Operations Per Second)를 선택하십시오.
 * **NFS 추가**: 여러 구성 설정을 사용하는 개별 파일 공유를 추가하도록 선택하십시오.
 
-표 3. NFS 성능 레벨 옵션
+표 4. NFS 성능 레벨 옵션
 
 |옵션        |세부사항       |
   |:------------- |:------------- |
@@ -169,7 +193,8 @@ vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이
 * 마지막 문자열은 영문자만 포함할 수 있습니다.
 * 마지막 문자열의 길이는 2 - 24자 사이여야 합니다.
 
-**참고:** 호스트 및 VM의 완전한 도메인 이름(FQDN)의 최대 길이는 50자입니다. 도메인 이름은 이 최대 길이를 포함할 수 있어야 합니다.
+호스트 및 VM의 완전한 도메인 이름(FQDN)의 최대 길이는 50자입니다. 도메인 이름은 이 최대 길이를 포함할 수 있어야 합니다.
+{:note}
 
 ### 공용 또는 사설 네트워크
 
@@ -199,9 +224,9 @@ vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이
 * **기본 서브넷**은 공용 네트워크 액세스를 위한 실제 호스트에 지정됩니다.
 * **사설 기본 서브넷**은 관리 트래픽을 위한 실제 호스트에 지정됩니다.
 
-**중요:**
 * 선택된 VLAN의 방화벽 구성이 관리 데이터 트래픽을 차단하지 않는지 확인하십시오.
 * 선택한 모든 VLAN이 동일한 팟(Pod)에 있는지 확인하십시오. 혼합 팟(pod) VLAN에서 ESXi 서버를 프로비저닝할 수 없습니다.
+{:important}
 
 ### DNS 구성
 
@@ -210,7 +235,8 @@ vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이
 * **Active Directory/DNS용 단일 공용 Windows VSI**: 호스트 및 VM이 등록된 인스턴스를 위한 DNS로 작동하는 단일 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI가 배치되고 검색될 수 있습니다. 기본적으로 이 옵션은 V1.9 이상 인스턴스를 위해 배치됩니다.
 * **관리 클러스터에 있는 두 개의 고가용성 전용 Windows Server VM**: 두 개의 Microsoft Windows VM이 배치되어 보안 및 강력한 추진력을 향상시킵니다.
 
-**중요:** 두 개의 Microsoft Windows VM을 사용하도록 인스턴스를 구성하는 경우 두 개의 Microsoft Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스, Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스 또는 둘 다 사용하십시오.
+두 개의 Microsoft Windows VM을 사용하도록 인스턴스를 구성하는 경우 두 개의 Microsoft Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스, Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스 또는 둘 다 사용하십시오.
+{:important}
 
 각 라이센스는 하나의 실제 서버에만 지정될 수 있고 최대 두 개의 실제 프로세서에 적용됩니다. 하나의 Standard 에디션 라이센스는 2 프로세서 서버당 두 개의 가상화된 Microsoft Windows VM을 실행할 수 있습니다. 그러므로 두 개의 Microsoft Windows VM이 두 개의 서로 다른 호스트에 배치되기 때문에 두 개의 라이센스가 필요합니다.
 
@@ -243,8 +269,9 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
 6. Bare Metal Server 설정을 완료하십시오.
     1. {{site.data.keyword.CloudDataCent_notm}}를 선택하여 인스턴스를 호스팅하십시오.
     2. Bare Metal Server 구성을 선택하십시오.
+       * **Skylake** 또는 **Broadwell**을 선택하는 경우 CPU 모델 및 RAM 크기를 지정하십시오.
+       * **SAP 인증**을 선택하는 경우 CPU 모델을 선택하십시오.
        * **사전 구성됨**을 선택한 경우에는 구성에 대해 **소형**, **중형** 또는 **대형**을 선택하십시오.
-       * **사용자 정의됨**을 선택한 경우에는 CPU 모델 및 RAM 크기를 지정하십시오.
     3. {{site.data.keyword.baremetal_short}}의 수를 지정하십시오. 스토리지 솔루션으로 vSAN을 사용할 계획인 경우 최소 네 개의 {{site.data.keyword.baremetal_short}}가 필요합니다.  
 7. 스토리지 구성을 완료하십시오.
   * **vSAN 스토리지**를 선택하는 경우 용량 및 캐시 디스크의 디스크 유형과 디스크 수 및 vSAN License 에디션을 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
@@ -281,8 +308,9 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
 
 주문한 vCenter Server 인스턴스를 보고 관리하십시오.
 
-**중요:** {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
+{{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌, {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성되는 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+{:important}
 
 **주의:** {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트(인스턴스 주문 시 {{site.data.keyword.cloud_notm}} 계정에 설치된)를 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거

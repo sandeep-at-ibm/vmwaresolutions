@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -66,26 +66,35 @@ VMware Federal 인스턴스를 주문할 때는 다음 시스템 설정을 지�
 
 ## Bare Metal Server 설정
 
-베어메탈 설정은 사용자 정의된 구성을 기반으로 합니다. 사전 구성된 구성을 선택하는 옵션은 현재 지원되지 않습니다.
+Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성을 기반으로 합니다. 사전 구성된 구성을 선택하는 옵션은 현재 지원되지 않습니다.
 
 ### 데이터 센터 위치
 
 인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}를 선택하십시오.
 
-### 사용자 정의됨
+### Skylake
 
 Bare Metal Server의 CPU 모델 및 RAM을 지정하십시오.
 
-표 2. 사용자 정의된 {{site.data.keyword.baremetal_short}}의 옵션
+표 2. Skylake {{site.data.keyword.baremetal_short}}의 옵션
+
+| CPU 모델 옵션        |RAM 옵션       |
+|:------------- |:------------- |
+|듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+
+### Broadwell
+
+Bare Metal Server의 CPU 모델 및 RAM을 지정하십시오.
+
+표 3. Broadwell {{site.data.keyword.baremetal_short}}의 옵션
 
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
 | 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz | 64GB, 128GB, 256GB, 512GB |
 | 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz | 64GB, 128GB, 256GB, 512GB |
 | 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz | 64GB, 128GB, 256GB, 512GB |
-|듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 
 ### Bare Metal Server 수
 
@@ -181,12 +190,12 @@ Windows 라이센싱 주문에 대한 자세한 정보는 [Windows Server 2012 R
 4. 환경에 하나의 인스턴스를 배치하려면 **기본 인스턴스**를 클릭하십시오.
 5. VMware NSX 라이센스 에디션을 지정하십시오.
 6. Bare Metal Server 구성을 완료하십시오.
-  1. {{site.data.keyword.CloudDataCent_notm}}를 선택하여 인스턴스를 호스팅하십시오.
-  2. **사용자 정의됨** CPU 모델 및 **RAM** 양을 선택하십시오.
+   1. {{site.data.keyword.CloudDataCent_notm}}를 선택하여 인스턴스를 호스팅하십시오.
+   2. **Skylake** 또는 **Broadwell** CPU 모델 및 **RAM** 크기를 선택하십시오.
 7. 스토리지 구성을 완료하십시오.
-  * **vSAN 스토리지**를 선택하는 경우 용량 및 캐시 디스크의 디스크 유형과 디스크 수 및 vSAN License 에디션을 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
-  * **NFS 스토리지**를 선택하고 모든 파일 공유에 동일한 설정을 추가하여 구성하려는 경우에는 **공유 수**, **크기** 및 **성능**을 지정하십시오.
-  * **NFS 스토리지**를 선택하고 파일 공유를 개별적으로 추가하여 구성하려는 경우에는 **공유 개별 구성**을 선택한 후, **NFS 추가** 레이블 옆에 있는 **+** 아이콘을 클릭하고 각 개별 파일 공유에 대한 **크기** 및 **성능**을 선택하십시오. 하나 이상의 파일 공유를 선택해야 합니다.
+   * **vSAN 스토리지**를 선택하는 경우 용량 및 캐시 디스크의 디스크 유형과 디스크 수 및 vSAN License 에디션을 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
+   * **NFS 스토리지**를 선택하고 모든 파일 공유에 동일한 설정을 추가하여 구성하려는 경우에는 **공유 수**, **크기** 및 **성능**을 지정하십시오.
+   * **NFS 스토리지**를 선택하고 파일 공유를 개별적으로 추가하여 구성하려는 경우에는 **공유 개별 구성**을 선택한 후, **NFS 추가** 레이블 옆에 있는 **+** 아이콘을 클릭하고 각 개별 파일 공유에 대한 **크기** 및 **성능**을 선택하십시오. 하나 이상의 파일 공유를 선택해야 합니다.
 8. 네트워크 인터페이스 구성을 완료하십시오.
    1. 호스트 이름 접두부, 하위 도메인 레이블 및 루트 도메인 이름을 입력하십시오.
    2. DNS 구성을 선택하십시오.

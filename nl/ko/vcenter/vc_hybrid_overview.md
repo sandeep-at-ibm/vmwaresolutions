@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server with Hybridity Bundle 개요
 
@@ -61,13 +65,14 @@ VMware HCX(Hybrid Cloud Extension)를 기반으로, 온프레미스 및 {{site.d
 
 vCenter Server with Hybridity Bundle 인스턴스에는 다음 컴포넌트가 포함됩니다.
 
-**참고:** 표준화된 하드웨어 구성의 가용성 및 가격은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
+표준화된 하드웨어 구성의 가용성 및 가격은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
+{:note}
 
 ### Bare Metal Server
 
-vCenter Server with Hybridity Bundle 인스턴스 주문에는 4개의 사용자 정의된 {{site.data.keyword.baremetal_short}}가 포함됩니다. 다음 CPU 모델이 사용 가능합니다.
-  * 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
+4개의 **Skylake** 또는 **Broadwell** {{site.data.keyword.baremetal_short}}는 vCenter Server with Hybridity Bundle 인스턴스 주문에 포함됩니다. 다음 CPU 모델이 사용 가능합니다.
   * 두 개의 CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
+  * 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
 
 ### 네트워킹
 
@@ -78,7 +83,8 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 4개의 사용자
 *  두 개의 VMware NSX Edge Services Gateway:
   * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 VM에서 사용됩니다. 자세한 정보는 [고객 관리 ESG를 사용하도록 네트워크 구성](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)을 참조하십시오.
 
-    **중요:** 이 ESG에 액세스할 수 없고 ESG를 사용할 수 없습니다. 이를 수정하면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server with Hybridity Bundle 인스턴스를 관리하지 못하게 될 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
+    사용자는 이 ESG에 액세스할 수 없고 사용할 수 없습니다. 이를 수정하면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server with Hybridity Bundle 인스턴스를 관리하지 못하게 될 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
+    {:important}
   * VPN 액세스 또는 공용 액세스를 제공하도록 사용자가 수정할 수 있는 템플리트로 IBM에서 배치되는 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽을 위한 보안 고객 관리 VMware NSX Edge Services Gateway. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
 HCX on {{site.data.keyword.cloud_notm}} 서비스를 배치할 때 주문된 네트워킹 컴포넌트에 대한 자세한 정보는 [HCX on {{site.data.keyword.cloud_notm}} 개요](../services/hcx_considerations.html)를 참조하십시오.
@@ -115,7 +121,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 라이센�
 
 ### 확장 노드를 위한 하드웨어
 
-사용자 정의된 구성을 가진 하나의 Bare Metal Server.
+[vCenter Server with Hybridity Bundle 인스턴스의 기술 스펙](../vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)에 제시된 구성을 사용하는 하나의 Bare Metal Server.
 
 ### 확장 노드의 라이센스 및 요금
 
@@ -124,7 +130,8 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 라이센�
 * 하나의 지원 및 서비스 요금
 * VMware vSAN(Advanced 또는 Enterprise) 6.6
 
-**중요:** {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+{{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌, {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성되는 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+{:important}
 
 **주의:** 인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거
