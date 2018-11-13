@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -32,7 +32,7 @@ ixgben은 vmklinux net-ixgbe 드라이버를 대체하지만 SR-IOV 및 SW FcOE�
 
 되돌려야 하고 vSphere ESXi 호스트에 SSH로 연결할 수 없는 경우 IBM Cloud 제어 창을 통해 되돌려야 하는 호스트에 대한 KVM 콘솔에 로그인해야 합니다.
 
-IPMI IP 주소와 함께 IBM Cloud 제어 창에 나열된 ID 및 비밀번호를 사용하여 IPMI 웹 인터페이스에 로그인하십시오. VPN을 통해 호스트가 있는 데이터 센터에 연결되어야 합니다. 자세한 정보는 [IBM Cloud VPN 시작하기](https://console.bluemix.net/docs/infrastructure/iaas-vpn/getting-started.html#getting-started-with-virtual-private-networking-vpn)를 참조하십시오.
+IPMI IP 주소와 함께 IBM Cloud 제어 창에 나열된 ID 및 비밀번호를 사용하여 IPMI 웹 인터페이스에 로그인하십시오. VPN을 통해 호스트가 있는 데이터 센터에 연결되어야 합니다. 자세한 정보는 [VPN 시작하기](../../../../infrastructure/iaas-vpn/getting-started.html)를 참조하십시오.
 
 1. 디바이스 세부사항, vSphere ESXi 호스트에 대한 원격 관리 페이지로 이동하여 **조치** > **KVM 콘솔**을 선택하십시오. IPMI 사용자 및 비밀번호를 입력할 수 있는 다른 창이 열립니다.
 2. **원격 제어** > **iKVM/HTML5**를 선택하고 **iKVM/HTML5**를 클릭하여 재실행하십시오. 이제 vSphere ESXi 호스트의 콘솔에 액세스할 수 있습니다.
@@ -45,5 +45,5 @@ IPMI IP 주소와 함께 IBM Cloud 제어 창에 나열된 ID 및 비밀번호�
 
 ### 관련 링크
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

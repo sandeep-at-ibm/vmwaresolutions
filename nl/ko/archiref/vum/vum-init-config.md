@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -18,10 +18,10 @@ VUM이 VMware에 있는 업데이트 서버의 리소스를 요청하면 먼저 
 
 이 문서에서는 CentOS와 Squid에 기반한 프록시 서버 사용에 대해 설명합니다. 스퀴드 프록시는 웹용 오픈 소스 캐싱 프록시이며 HTTP 및 HTTPS를 포함한 많은 프로토콜을 지원합니다. 사용 가능한 여러 VM 및 어플라이언스 기반 프록시가 있으며 엔터프라이즈 요구사항에 따라 적합한 프록시를 선택하고 공급업체의 지침에 따라 설치 및 구성해야 합니다. CentOS/Squid 구현을 사용하도록 선택하는 클라이언트는 아래 프로세스를 계속 진행해야 합니다.
 
-*	CentOS ISO를 점프 서버에 다운로드
-*	vCenter 라이브러리 작성
-*	ISO를 vCenter 라이브러리에 업로드
-*	VM 작성, CentOS 설치 및 구성, Squid 설치
+* CentOS ISO를 점프 서버에 다운로드
+* vCenter 라이브러리 작성
+* ISO를 vCenter 라이브러리에 업로드
+* VM 작성, CentOS 설치 및 구성, Squid 설치
 
 이 태스크를 시작하기 전에 표 1을 채우기 위한 정보를 수집해야 합니다. 제안 값을 검토하고 제안 값이 엔터프라이즈에 적합한지 확인하십시오. 이 구성은 CentOS-Minimal 및 Squid를 사용하는 VUM 전용 소규모 프록시를 기반으로 합니다.
 
@@ -31,13 +31,13 @@ VUM이 VMware에 있는 업데이트 서버의 리소스를 요청하면 먼저 
 |:--------- |:-------------- |:------ |
 |프록시 CPU |1개의 vCPU |Squid에는 최소 요구사항이 없음 |
 |프록시 RAM |2GB |Squid에는 최소 요구사항이 없음 |
-|프록시 디스크 |	25GB |Squid에는 최소 요구사항이 없음 |
+|프록시 디스크 |25GB |Squid에는 최소 요구사항이 없음 |
 |호스트 이름 |Proxy01 | |
-|주소 |	프록시 IP |	예비 IP 주소는 프로비저닝 프로세스 중에 지정된 고객의 사설 포터블 서브넷에서 사용되어야 합니다. 이 서브넷에는 두 개의 IP 주소만 예약되어 있을 수 있습니다(하나는 BCR용, 다른 하나는 customer-esg용).
-|넷마스크 |	255.255.255.192 | |
-|게이트웨이 | 	customer-nsx-edge 사설 업링크 IP |	customer-nsx-edge 사설 업링크 주소인 프록시 서버에 대한 기본 게이트웨이 설정입니다. customer-nsx-edge에 대한 설정 탭을 검토하여 IP를 찾을 수 있습니다. |
-|DNS 서버 |	AD/DNS ip |[IC4VS 클라우드 콘솔](https://console.bluemix.net/infrastructure/vmware-solutions/console/vcenters/)의 인스턴스 페이지(배치된 인스턴스)에서 이 IP 주소를 찾을 수 있습니다. |
-|BCR IP |	bcr ip |IBM Cloud Backend Customer Router의 IP 주소이며 10.0.0.0/8 및 161.26.0.0/16의 게이트웨이입니다. 이 주소는 VCSA 및 AD/DNS 서버에 연결할 수 있도록 프록시 서버의 정적 라우트에서 사용됩니다. |
+|주소 |프록시 IP |예비 IP 주소는 프로비저닝 프로세스 중에 지정된 고객의 사설 포터블 서브넷에서 사용되어야 합니다. 이 서브넷에는 두 개의 IP 주소만 예약되어 있을 수 있습니다(하나는 BCR용, 다른 하나는 customer-esg용).
+|넷마스크 |255.255.255.192 | |
+|게이트웨이| customer-nsx-edge private uplink ip | customer-nsx-edge의 사설 업링크 주소인 프록시 서버에 대한 기본 게이트웨이 설정입니다. IP 주소는 **customer-nsx-edge**에 대한 **설정** 탭을 검토하여 찾을 수 있습니다. |
+|DNS 서버 |AD/DNS ip | 이 IP 주소는 IBM Cloud for VMware Solutions 콘솔에 있는 인스턴스 페이지 **배치된 인스턴스** 페이지에서 찾을 수 있습니다.|
+|BCR IP |bcr ip |IBM Cloud Backend Customer Router의 IP 주소이며 10.0.0.0/8 및 161.26.0.0/16의 게이트웨이입니다. 이 주소는 VCSA 및 AD/DNS 서버에 연결할 수 있도록 프록시 서버의 정적 라우트에 사용됩니다. |
 
 ## NSX 구성
 
@@ -55,11 +55,11 @@ VUM이 VMware에 있는 업데이트 서버의 리소스를 요청하면 먼저 
 |매개변수 |제안 값 |
 |:--------- |:-------------- |
 |이름 |아웃바운드 Proxy01 |
-|유형 |사용자 |
+|유형 | User |
 |소스 |프록시 서버 IP |
-|대상 |임의 |
+|대상 | any |
 |서비스 |HTTP/HTTPS/ICMP Echo |
-| 조치 | 허용 |
+| 조치 | Accept |
 
 매개변수가 제공된 후 **변경사항 공개**를 클릭하십시오.
 
@@ -73,7 +73,7 @@ VUM이 VMware에 있는 업데이트 서버의 리소스를 요청하면 먼저 
 
 ### CentOS-Minimal ISO 파일 다운로드
 
-점프 서버에서 브라우저를 사용하여 [CentOS](https://www.centos.org/download/)에서 CentOS-Minimal ISO 파일을 다운로드하십시오. IBM Cloud는 많이 사용하는 여러 Linux 배포판의 미러를 유지보수합니다. 이 미러는 사설 네트워크에서만 사용할 수 있으며 CentOS ISO는 http://mirrors.service.softlayer.com/centos/7/isos/x86_64/에서 사용할 수 있습니다.
+점프 서버에서 브라우저를 사용하여 [CentOS](https://www.centos.org/download/)에서 CentOS-Minimal ISO 파일을 다운로드하십시오. IBM Cloud는 많이 사용하는 여러 Linux 배포판의 미러를 유지보수합니다. 이 미러는 사설 네트워크에서만 사용할 수 있으며 CentOS ISO는 `http://mirrors.service.softlayer.com/centos/7/isos/x86_64/`에서 사용할 수 있습니다.
 
 ### 컨텐츠 라이브러리를 구성하고 CentOS ISO 파일로 채우기
 
@@ -153,14 +153,13 @@ Squid는 최소 하드웨어 요구사항을 갖추고 있지 않지만 프록�
 ## VUM의 초기 설정
 
 프록시 서버를 사용하여 인터넷에서 저장소에 액세스하도록 VUM을 구성하십시오.
-1.	vSphere Web Client를 사용하여 **홈** > **Update Manager**로 이동하십시오. vCenter Server를 클릭하십시오.
-2.	**관리 탭**을 선택하고 **설정** 단추를 클릭하십시오.
-3.	**다운로드 설정**을 선택한 후 _프록시 설정_에서 **편집** 단추를 클릭하십시오.
-4.	**프록시 사용** 상자에 체크 표시를 하고 _프록시 서버 IP 주소_ 및 _포트 3128_을 입력한 후 **확인**을 클릭하십시오.
-5.	연결 상태가 _유효성 검증 중_으로 변경된 후 _연결됨_으로 변경되어야 합니다.
-6.	**지금 다운로드** 단추를 클릭하면 _최근 태스크_ 분할창에 이 활동이 완료된 것으로 표시되어야 합니다.
+1. vSphere Web Client를 사용하여 **홈** > **Update Manager**로 이동하십시오. vCenter Server를 클릭하십시오.
+2. **관리 탭**을 선택하고 **설정** 단추를 클릭하십시오.
+3. **다운로드 설정**을 선택한 후 _프록시 설정_ 아래 **편집**을 클릭하십시오.
+4. **프록시 사용** 상자를 선택하고 _프록시 서버 IP 주소_ 및 _포트 3128_을 입력한 후 **확인**을 클릭하십시오. 연결 상태가 _유효성 검증 중_으로 변경된 후 _연결됨_으로 변경됩니다.
+5. **지금 다운로드**를 클릭하십시오. _최근 태스크_ 분할창에 이 활동이 완료됨으로 표시되어야 합니다.
 
 ### 관련 링크
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

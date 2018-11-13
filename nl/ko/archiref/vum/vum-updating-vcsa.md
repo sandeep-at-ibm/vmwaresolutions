@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
-#	VCSA 업데이트 및 SSO로 연결된 vCenter
+# VCSA 업데이트 및 SSO 링크된 vCenter
 
 ## VCSA 업데이트
 
@@ -30,7 +30,7 @@ VCSA를 업데이트하려면 다음 단계를 따르십시오.
 9. vSphere Web Client에 다시 로그인하여 오류가 있는지 확인하십시오. **홈** > **호스트 및 클러스터**를 선택한 후 데이터 센터 또는 클러스터를 선택하고 **Update Manager 탭**을 선택한 후 **업데이트 스캔**을 클릭하여 VUM의 수동 스캔을 수행하십시오. 이 결과 오류가 발생하는 경우 [Resetting VMware Update Manager database on a vCenter Server appliance 6.5 (2147284)](https://kb.vmware.com/s/article/2147284)를 참조하십시오.
 10. 테스트 후 취소해야 하는 경우 스냅샷으로 되돌리거나 이전 백업을 사용하여 vCenter를 복원하십시오.
 
-## SSO로 연결된 vCenter
+## SSO 링크된 vCenters
 
 기본 및 보조 VCS 인스턴스가 있는 경우 VCSA가 단일 vCenter 싱글 사인온(SSO) 도메인에 있도록 구성됩니다. 각 VCSA에는 배치된 VUM 인스턴스가 있습니다. 수정하는 구성 특성은 사용자가 지정하는 VLM 인스턴스에만 적용되며 그룹에 있는 다른 인스턴스에 전파되지 않습니다.
 
@@ -38,5 +38,5 @@ VCSA를 업데이트하려면 다음 단계를 따르십시오.
 
 ### 관련 링크
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

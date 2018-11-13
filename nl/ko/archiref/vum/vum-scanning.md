@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -16,16 +16,15 @@ lastupdated: "2018-10-03"
 *	**컨테이너 오브젝트의 스캔을 수동으로 시작** - 데이터 센터 또는 데이터 센터 폴더인 컨테이너 오브젝트를 스캔하여 호스트, 가상 머신 및 가상 어플라이언스의 동시 스캔을 시작합니다.
 *	**검색 스케줄** - 특정 시간이나 사용자에게 편리한 간격으로 가상 머신, 가상 어플라이언스 및 ESXi 호스트를 스캔하도록 vSphere Web Client를 구성할 수 있습니다.
 
-##	vSphere ESXi 호스트의 스캔을 수동으로 시작
+## vSphere ESXi 호스트의 스캔을 수동으로 시작
 
-1.	**업데이트 스캔** 단추를 클릭하고 **패치 및 확장과 업그레이드**를 선택한 후 **확인**을 클릭하십시오.
-2.	스캔이 완료되면 **중요 호스트 패치**를 선택하고 하단 분할창에서 각 호스트에 대해 검토하십시오.
-3.	패치 수의 숫자를 클릭하면 창에 패치 세부사항이 표시됩니다.
-4.	검토한 후 **중요하지 않은 패치**에 대해 반복하십시오.
+1. **업데이트 스캔**을 클릭하고, **패치 및 확장과 업그레이드**를 선택한 후 **확인**을 클릭하십시오.
+2. 스캔이 완료되면 **중요 호스트 패치**를 선택하십시오. 아래쪽 분할창에서 **패치 수**의 숫자를 클릭하여 각 호스트의 패치 세부사항을 검토하십시오. 창에 패치 정보가 표시됩니다.
+3. 검토한 후 **중요하지 않은 패치**에 대해 반복하십시오.
 
-VUM 로그 파일은 _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_에서 찾을 수 있습니다.
+  VUM 로그 파일은 _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_에 있습니다.
 
-##	가상 머신 및 가상 어플라이언스의 스캔을 수동으로 시작
+## 가상 머신 및 가상 어플라이언스의 스캔을 수동으로 시작
 
 연결된 기준선 및 기준선 그룹을 기반으로 vSphere 인벤토리의 가상 머신 및 가상 어플라이언스를 스캔할 수 있습니다. 선택한 가상 머신 및 어플라이언스가 선택한 옵션에 따라 연결된 기준선에 대해 스캔됩니다. 모든 하위 오브젝트도 스캔되므로 가상 인프라의 규모가 크고 스캔을 시작하는 오브젝트 계층이 높을수록 스캔 시간이 더 길어지고 준수 보기의 정확성이 높아집니다.
 
@@ -56,5 +55,5 @@ VUM 로그 파일은 _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-ser
 
 ### 관련 링크
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)
