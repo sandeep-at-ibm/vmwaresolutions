@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ordine di cluster vSphere in base alle configurazioni esistenti
 
@@ -30,7 +34,8 @@ Assicurati di aver completato le seguenti attività:
    * Per salvare la configurazione come template senza effettuare un ordine, fai clic su **Salva configurazione**.
    * Per effettuare l'ordine, assicurati che l'account da addebitare sia corretto, esamina e accetta i termini e infine fai clic su **Fornitura**.
 
-   **Nota:** vengono installati solo i {{site.data.keyword.baremetal_short}}. Sei responsabile dell'installazione e della configurazione dei vari componenti dopo la distribuzione del cluster, come VMware vCenter, VMware NSX, VMware vSAN.
+   Vengono installati solo i {{site.data.keyword.baremetal_short}}. Sei responsabile dell'installazione e della configurazione dei vari componenti dopo la distribuzione del cluster, come VMware vCenter, VMware NSX, VMware vSAN.
+   {:note}
 
 ## Risultati
 
@@ -38,7 +43,8 @@ Se hai salvato la configurazione del cluster come template, ricevi una notifica 
 
 Se hai effettuato un ordine, la distribuzione del cluster inizia automaticamente. Riceverai un'e-mail di conferma che ti indica che l'ordine è in fase di elaborazione. Quando il cluster è pronto per l'uso, ti viene inviata un'altra notifica e-mail.
 
-**Nota:** i cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Istanze distribuite**.
+I cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Istanze distribuite**.
+{:note}
 
 ### Link correlati
 

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ridimensionamento di cluster vSphere esistenti
 
@@ -37,7 +41,8 @@ Il ridimensionamento del cluster inizia automaticamente. Riceverai un'e-mail di 
 
 Se il cluster che stai ridimensionando non è pronto per l'utilizzo, potresti ricevere un messaggio di errore.
 
-**Nota:** i cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Istanze distribuite**.
+I cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Istanze distribuite**.
+{:note}
 
 ### Link correlati
 

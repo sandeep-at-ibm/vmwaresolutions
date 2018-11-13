@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Requisiti e pianificazione per VMware vSphere on IBM Cloud
 
 Esamina i seguenti requisiti prima di ordinare VMware vSphere on {{site.data.keyword.cloud}}. Pianifica i tuoi cluster VMware vSphere in base all'ubicazione del {{site.data.keyword.CloudDataCent_notm}} e ai requisiti di capacità del carico di lavoro.
 
-**Nota:** sei responsabile della configurazione dell'ambiente, dell'installazione e della configurazione dei vari componenti VMware dopo la distribuzione dei server ESXi. I seguenti esempi sono componenti VMware: VMware vCenter Server, VMware NSX e VMware vSAN.
+Sei responsabile della configurazione dell'ambiente, dell'installazione e della configurazione dei vari componenti VMware dopo la distribuzione dei server ESXi. I seguenti esempi sono componenti VMware: VMware vCenter Server, VMware NSX e VMware vSAN.
+{:note}
 
 ## Requisiti dell'account IBM Cloud
 
@@ -22,7 +27,8 @@ L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determin
 
 La distribuzione di vSphere ha requisiti rigorosi sull'infrastruttura fisica. Pertanto, puoi distribuire i cluster solo nei {{site.data.keyword.CloudDataCents_notm}} che soddisfano i requisiti. Per la distribuzione di vSphere sono disponibili i seguenti {{site.data.keyword.CloudDataCent_notm}}.
 
-**Nota:** se selezioni un componente vSAN, l'elenco di ubicazioni viene filtrato in base alla disponibilità SSD (Solid-State Disk).
+Se selezioni un componente vSAN, l'elenco di ubicazioni viene filtrato in base alla disponibilità SSD (Solid-State Disk).
+{:note}
 
 Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per i cluster vSphere
 
