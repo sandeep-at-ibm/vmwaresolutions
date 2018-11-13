@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 가상 인프라 디자인
 
@@ -23,19 +27,19 @@ vSphere ESXi 구성은 다음과 같은 측면으로 구성되어 있습니다.
 
 표 1에는 각 측면에 대한 스펙이 개략적으로 설명되어 있습니다. ESXi의 구성 및 설치 이후에 호스트는 VMware vCenter Server에 추가되며 여기에서 관리됩니다.
 
-디자인을 사용하면 DCUI(Direct Console User Interface), ESXi 쉘 및 SSH(Secure Shell)를 통해 가상 호스트에 액세스할 수 있습니다.
+이 디자인을 사용하면 DCUI(Direct Console User Interface), ESXi 쉘 및 SSH(Secure Shell)를 통해 가상 호스트에 액세스할 수 있습니다.
 
-기본적으로, 직접 로그인할 수 있는 유일한 사용자는 호스트의 실제 시스템에 대한 _root_ 및 _ibmvmadmin_ 사용자입니다. 관리자는 MSAD(Microsoft Active Directory) 도메인의 일반 사용자를 추가하여 호스트에 대한 사용자 액세스를 가능하게 할 수 있습니다. vCenter Server 솔루션 디자인의 모든 호스트는 중앙 NTP 서버와 동기화하도록 구성되어 있습니다.
+기본적으로, 직접 로그인할 수 있는 유일한 사용자는 호스트의 실제 시스템에 대한 _root_ 및 _ibmvmadmin_ 사용자입니다. 관리자는 MSAD(Microsoft Active Directory) 도메인에서 사용자를 추가하여 호스트에 대한 사용자 액세스를 사용으로 설정할 수 있습니다. vCenter Server 솔루션 디자인의 모든 호스트는 중앙 NTP 서버와 동기화하도록 구성되어 있습니다.
 
 표 1. vSphere ESXi 구성
 
 | 속성              | 구성 매개변수 |
 |:---------------------- |:----------------------- |
-| ESXi 부트 위치     | RAID-1에서 구성된 로컬 디스크 사용 |
+| ESXi 부트 위치     | RAID-1에 구성되는 로컬 디스크 사용 |
 | 시간 동기화   | {{site.data.keyword.cloud}} NTP 서버 사용 |
 | 호스트 액세스            | DCUI, ESXi 쉘 또는 SSH 지원 |
 | 사용자 액세스            | 로컬 인증 및 MSAD |
-| 도메인 이름 해석 |[공통 서비스 디자인](design_commonservice.html)에서 설명된 대로 DNS 사용 |
+| 도메인 이름 분석 |[공통 서비스 디자인](design_commonservice.html)에서 설명된 대로 DNS 사용 |
 
 vSphere 클러스터는 사용자 워크로드에 대한 컴퓨팅 리소스 및 중앙 클라우드를 관리하는 가상 머신(VM)을 수용합니다.
 
@@ -67,7 +71,7 @@ ESXi 설치를 수용하기 위해 2개의 1-TB SATA 드라이브가 각 노드�
 ![vSAN 개념](virtual_vSAN.svg "vSAN은 vSphere 클러스터 내에서 다중 ESXi 호스트 간에 로컬 스토리지를 집계하고, 집계된 스토리지를 단일 VM 데이터 저장소로서 관리함")
 
 vSAN에서는 다음 컴포넌트를 채택합니다.
-* 각 디스크 그룹이 2개 이상의 디스크로 구성된 2-디스크 그룹 vSAN 디자인. 그룹에서 최소 크기의 하나의 SSD는 캐시 티어로서 제공되며, 나머지 SSD는 용량 티어로서 제공됩니다.
+* 2-디스크 그룹 vSAN 디자인. 각 디스크 그룹에 두 개 이상의 디스크 포함. 그룹에서 최소 크기의 하나의 SSD는 캐시 티어로서 제공되며, 나머지 SSD는 용량 티어로서 제공됩니다.
 * 온보드 RAID 제어기는 RAID-0 레벨에서 2개의 OS 드라이브를 제외한 각 드라이브마다 구성됩니다.
 * 단일 vSAN 데이터 저장소가 모든 스토리지에서 작성됩니다.
 
@@ -85,13 +89,13 @@ vSAN은 업링크 간의 트래픽을 로드 밸런싱하지 않습니다. 따�
 
 vSAN이 사용되어 구성된 경우에는 VM 스토리지 특성을 정의하기 위해 스토리지 정책이 구성됩니다. 스토리지 특성은 서로 다른 VM에 대해 서로 다른 서비스 레벨을 지정합니다.
 
-이 디자인의 기본 스토리지 정책은 단일 장애를 허용합니다. 기본 정책은 **장애 허용 방법**이 **RAID-5/6(삭제 코딩) - 용량**으로 설정되고 **기본 장애 레벨**이 1로 설정된 RAID 5 삭제 코딩으로 구성되어 있습니다.
+이 디자인의 기본 스토리지 정책은 단일 장애를 허용합니다. 기본 정책은 **내장애성 방법**이 **RAID-5/6(삭제 코딩) - 용량**으로 설정되고 **기본 장애 레벨**이 1로 설정된 RAID 5 삭제 코딩으로 구성되어 있습니다.
 
-RAID 5 구성에서는 최소 4개의 호스트가 필요합니다. 또는 **장애 허용 방법**이 **RAID-5/6(삭제 코딩) - 용량**으로 설정되고 **기본 장애 레벨**이 2로 설정된 RAID 6 구성을 선택할 수도 있습니다.
+RAID 5 구성에서는 최소 4개의 호스트가 필요합니다. 또는 **내장애성 방법**이 **RAID-5/6(삭제 코딩) - 용량**으로 설정되고 **기본 장애 레벨**이 2로 설정된 RAID 6 구성을 선택할 수도 있습니다.
 
 RAID 6 구성에서는 최소 6개의 호스트가 필요합니다. **중복** 및 **압축**은 기본 스토리지 정책에서도 사용됩니다.
 
-vSphere 콘솔에서 달리 지정되지 않는 한 인스턴스는 기본 정책을 사용합니다. 사용자 정의 정책이 구성된 경우, vSAN은 가급적 이를 보장합니다. 그러나 정책을 보장할 수 없는 경우, 프로비저닝 강제 실행을 사용하지 않는 한 정책을 사용하는 VM을 프로비저닝할 수 없습니다.
+vSphere 콘솔에서 달리 지정되지 않는 한 인스턴스는 기본 정책을 사용합니다. 사용자 정의 정책이 구성된 경우, vSAN은 가급적 이를 보장합니다. 그러나 정책을 보장할 수 없는 경우, 프로비저닝을 강제 실행하도록 설정되어 있지 않는 한 정책을 사용하는 VM을 프로비저닝할 수 없습니다.
 
 스토리지 정책은 새 ESXi 호스트 또는 ESXi 호스트의 패치가 추가된 후에 재적용되어야 합니다.
 
@@ -100,17 +104,17 @@ vSphere 콘솔에서 달리 지정되지 않는 한 인스턴스는 기본 정�
 vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware 솔루션 배치를 위한 우수 사례를 기반으로 설정됩니다. vSAN 설정에는 SIOC 설정, 명시적 장애 복구 설정 포트 그룹 및 디스크 캐시 설정이 포함됩니다.
 * SSD 캐시 정책 설정: **미리 읽기**, **Write Through**, **직접** 없음(NRWTD)
 * 네트워크 I/O 제어 설정
-   * 관리: 20개 공유
-   * 가상 머신: 30개 공유
-   * vMotion: 50개 공유
-   * vSAN: 100개 공유
+   * 관리 - 20개 공유
+   * 가상 머신 - 30개 공유
+   * vMotion - 50개 공유
+   * vSAN - 100개 공유
 * vSAN 커널 포트: **명시적 장애 복구**
 
 ## VMware NSX 디자인
 
-네트워크 가상화는 가상 계층 내에 존재하는 네트워크 오버레이를 제공합니다. 또한 On-Demand 가상 네트워크의 빠른 프로비저닝, 배치, 재구성 및 폐기 등의 기능이 있는 아키텍처를 제공합니다. 이 디자인은 vDS 및 VMware NSX for vSphere를 사용하여 가상 네트워킹을 구현합니다.
+네트워크 가상화는 가상 계층 내에 존재하는 네트워크 오버레이를 제공합니다. 네트워크 가상화에서는 On-Demand 가상 네트워크의 빠른 프로비저닝, 배치, 재구성 및 폐기 등의 기능을 아키텍처에 제공합니다. 이 디자인은 vDS 및 VMware NSX for vSphere를 사용하여 가상 네트워킹을 구현합니다.
 
-이 디자인에서 NSX Manager는 초기 클러스터에 배치됩니다. NSX Manager에는 사설 포터블 주소 블록의 VLAN 지원 IP 주소가 지정됩니다. 이는 관리 컴포넌트용으로 지정되며 [공통 서비스 디자인](design_commonservice.html)에서 논의한 DNS 및 NTP 서버로 구성되어 있습니다. NSX Manager는 표 2에 나열된 스펙으로 설치됩니다.
+이 디자인에서 NSX Manager는 초기 클러스터에 배치됩니다. NSX Manager에는 사설 포터블 주소 블록의 VLAN 지원 IP 주소가 지정됩니다. 이는 관리 컴포넌트용으로 지정되고 [공통 서비스 디자인](design_commonservice.html)에 표시되는 DNS 및 NTP 서버로 구성됩니다. NSX Manager는 표 2에 나열된 스펙으로 설치됩니다.
 
 표 2. NSX Manager 속성
 
@@ -121,7 +125,7 @@ vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware 솔루션 배�
 | 메모리          | 16GB |
 | 디스크            | 관리 NFS 공유의 60GB |
 | 디스크 유형       | 씬 프로비저닝됨 |
-| 네트워크         | 관리 컴포넌트용으로 지정된 사설 a 포터블 |
+| 네트워크         | 관리 컴포넌트용으로 지정된 **사설 A** 포터블 |
 
 다음 그림에서는 아키텍처의 기타 컴포넌트와 연관된 NSX Manager의 배치를 보여줍니다.
 
@@ -129,11 +133,11 @@ vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware 솔루션 배�
 
 ![NSX Manager 네트워크 개요](virtual_NSX.svg "아키텍처의 기타 컴포넌트와 연관된 NSX Manager")
 
-초기 배치 이후 {{site.data.keyword.cloud_notm}} 자동화는 초기 클러스터 내에 3개의 NSX Controller를 배치합니다. 각 제어기에는 관리 컴포넌트용으로 지정된 사설 a 포터블 서브넷의 VLAN 지원 IP 주소가 지정됩니다. 또한 이 디자인은 클러스터의 호스트 간에 제어기를 분리하기 위해 VM-VM 역-친화성 규칙을 작성합니다. 초기 클러스터에는 제어기에 대한 고가용성을 보장할 수 있도록 최소한 3개의 노드가 포함되어 있어야 합니다.
+초기 배치 이후 {{site.data.keyword.cloud_notm}} 자동화는 초기 클러스터 내에 3개의 NSX Controller를 배치합니다. 각 제어기에는 관리 컴포넌트용으로 지정된 **사설 A** 포터블 서브넷의 VLAN 지원 IP 주소가 지정됩니다. 또한 이 디자인은 클러스터의 호스트 간에 제어기를 분리하기 위해 VM-VM 역-친화성 규칙을 작성합니다. 초기 클러스터에는 제어기에 대한 고가용성을 보장할 수 있도록 최소한 3개의 노드가 포함되어 있어야 합니다.
 
-제어기에 추가하여, {{site.data.keyword.cloud_notm}} 자동화는 VTEP(VXLAN Tunnel Endpoint)를 통한 가상화된 네트워크의 사용이 가능하도록 NSX VIBS의 배치된 vSphere 호스트를 준비합니다. VTEP에는 [실제 인프라 디자인](design_physicalinfrastructure.html)의 *표 1. VLAN 및 서브넷 요약*에 나열된 대로 VTEP에 지정된 사설 a 포터블 IP 주소 범위의 VLAN 지원 IP 주소가 지정됩니다. VXLAN 트래픽은 태그가 지정되지 않은 VLAN에 상주하며 사설 vDS에 지정됩니다.
+제어기에 추가하여, {{site.data.keyword.cloud_notm}} 자동화는 VTEP(VXLAN Tunnel Endpoint)를 통한 가상화된 네트워크의 사용이 가능하도록 NSX VIBS의 배치된 vSphere 호스트를 준비합니다. VTEP에는 [실제 인프라 디자인](design_physicalinfrastructure.html)의 *표 1. VLAN 및 서브넷 요약*에 나열된 대로 VTEP에 지정된 **사설 A** 포터블 IP 주소 범위의 VLAN 지원 IP 주소가 지정됩니다. VXLAN 트래픽은 태그가 지정되지 않은 VLAN에 상주하며 사설 vDS에 지정됩니다.
 
-그 이후에 세그먼트 ID 풀이 지정되며 클러스터의 호스트가 전송 구역에 추가됩니다. IGMP(Internet Group Management Protocol) 스누핑이 {{site.data.keyword.cloud_notm}} 내에서 구성되지 않으므로 전송 구역에서는 유니캐스트만 사용됩니다.
+그런 다음 세그먼트 ID 풀이 지정되고 클러스터에 있는 호스트가 전송 구역에 추가됩니다. IGMP(Internet Group Management Protocol) 스누핑이 {{site.data.keyword.cloud_notm}} 내에서 구성되지 않으므로 전송 구역에서는 유니캐스트만 사용됩니다.
 
 이후에 NSX Edge Services Gateway 쌍이 배치됩니다. 모든 경우에, 하나의 게이트웨이 쌍은 사설 네트워크에 상주하는 자동화 컴포넌트의 아웃바운드 트래픽에 사용됩니다. vCenter Server의 경우, 고객 관리 에지라고 하는 두 번째 게이트웨이가 배치되며 사설 네트워크에 지정된 인터페이스와 공용 네트워크에 대한 업링크로 구성됩니다. 솔루션의 일부로서 배치된 NSX Edge Services Gateway에 대한 자세한 정보는 [NSX Edge on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)를 참조하십시오.
 
@@ -158,21 +162,22 @@ vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware 솔루션 배�
 |VLAN  | 대상 | 트래픽 유형 |
 |:----- |:----------- |:------------ |
 |VLAN1 | 공용      |인터넷 액세스를 위해 사용 가능 |
-|VLAN2 | 사설 a   | ESXi 관리, 관리, VXLAN(VTEP) |
+|VLAN2 | 사설 A   | ESXi 관리, 관리, VXLAN(VTEP) |
 |VLAN3 | 사설 B   | vSAN, NFS, vMotion |
 
 워크로드의 트래픽이 VXLAN-지원 논리 스위치에서 이동합니다.
 
-vSphere 클러스터는 다음 표에서와 같이 구성된 2개의 vSphere 분배 스위치를 사용합니다.
+vSphere 클러스터는 다음 표에서 처럼 구성된 2개의 vSphere 분배 스위치를 사용합니다.
 
 표 4. 통합된 교환 분배 스위치
 
-| vSphere 분배<br>스위치 이름 |기능 |네트워크<br>I/O 제어 |로드 밸런싱<br>모드 |실제 NIC<br>포트 | MTU |
+| vSphere 분배<br>스위치 이름 |기능 |네트워크<br>I/O 제어 |로드 밸런싱<br>모드 |실제 NIC<br>포트| MTU |
 |:------------- |:------------- |:------------- |:------------- |:------------- |:------------- |
 | SDDC-Dswitch-Private | ESXi 관리, vSAN, vSphere vMotion, VXLAN 터널 엔드포인트, NFS(VTEP) |사용 | 명시적 장애 복구(vSAN, vMotion)의 원래 가상 포트 기반 라우트(기타 모두) |2 | 9,000<br>(점보 프레임) |
 | SDDC-Dswitch-Public | 외부 관리 트래픽(north-south) |사용 | 원래 가상 포트 기반 라우트 |2 | 1,500<br>(기본값) |
 
-**참고:** 호스트 NIC의 이름, 번호 및 순서는 {{site.data.keyword.CloudDataCent_notm}} 및 호스트 하드웨어 선택에 따라 서로 다를 수 있습니다.
+호스트 NIC의 이름, 번호 및 순서는 {{site.data.keyword.CloudDataCent_notm}} 및 호스트 하드웨어 선택에 따라 다를 수 있습니다.
+{:note}
 
 표 5. 통합 클러스터 분배 스위치 포트 그룹 구성 설정
 
@@ -184,7 +189,8 @@ vSphere 클러스터는 다음 표에서와 같이 구성된 2개의 vSphere 분
 | 장애 조치           |아니오 |
 |장애 복구 순서     |활성 업링크: Uplink1, Uplink2 \* |
 
-\* **참고:** vSAN 스토리지 트래픽의 로드 밸런싱을 지원하지 않으므로 vSAN 포트 그룹은 활성/대기의 명시적 장애 복구를 사용합니다.
+\* vSAN 스토리지 트래픽의 로드 밸런싱을 지원하지 않으므로 vSAN 포트 그룹은 활성/대기의 명시적 장애 복구를 사용합니다.
+{:note}
 
 표 6. 통합 클러스터 가상 스위치 포트 그룹 및 VLAN
 

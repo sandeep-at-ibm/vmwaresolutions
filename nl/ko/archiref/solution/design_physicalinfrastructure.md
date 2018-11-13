@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 실제 인프라 디자인
 
@@ -16,7 +20,7 @@ lastupdated: "2018-09-25"
   <dt class="dt dlterm">실제 컴퓨팅</dt>
   <dd class="dd">실제 컴퓨팅은 가상화 인프라에서 사용하는 실제 처리와 메모리를 제공합니다. 이 디자인의 경우, 컴퓨팅 컴포넌트는 {{site.data.keyword.baremetal_long}}에 의해 제공되며 [VMware HCG(Hardware Compatibility Guide)](https://www.vmware.com/resources/compatibility/search.php)에 나열되어 있습니다.</dd>
   <dt class="dt dlterm">실제 스토리지</dt>
-  <dd class="dd">실제 스토리지는 가상화 인프라에서 사용하는 원시 스토리지 용량을 제공합니다. 스토리지 컴포넌트는 NFS v3를 사용한 공유 NAS(Network Attached Storage) 어레이 또는 {{site.data.keyword.baremetal_short}}에 의해 제공됩니다.</dd>
+  <dd class="dd">실제 스토리지는 가상화 인프라에서 사용하는 원시 스토리지 용량을 제공합니다. 스토리지 컴포넌트는 NFS v3를 사용하는 공유 NAS(Network Attached Storage) 어레이 또는 {{site.data.keyword.baremetal_short}}에 의해 제공됩니다.</dd>
   <dt class="dt dlterm">실제 네트워크</dt>
   <dd class="dd">실제 네트워크는 해당 환경으로의 네트워크 연결을 제공하며, 이는 다시 네트워크 가상화에 의해 사용됩니다. 네트워크는 {{site.data.keyword.cloud_notm}} 서비스 네트워크에서 제공하며 여기에는 DNS 및 NTP 등의 추가 서비스가 포함되어 있습니다.</dd>
 </dl>
@@ -29,13 +33,16 @@ lastupdated: "2018-09-25"
 
 실제 호스트는 컴퓨팅 리소스를 제공하는 환경의 {{site.data.keyword.baremetal_short}}를 의미합니다. 이 솔루션에서 적용된 {{site.data.keyword.baremetal_short}}는 VMware에 의해 인증되며 [VMware HCG](http://www.vmware.com/resources/compatibility/search.php)에 나열되어 있습니다.
 
-솔루션에서 사용 가능한 서버 구성은 vSphere ESXi를 설치, 구성하고 관리하기 위한 최소 요구사항을 충족하거나 초과합니다. 서로 다른 요구사항을 충족하기 위해 다양한 구성을 사용할 수 있습니다. VMware on {{site.data.keyword.cloud_notm}} 솔루션에 사용되는 정확한 스펙의 세부 목록은 [Cloud Foundation 인스턴스](../../sddc/sd_bom.html) 또는 [vCenter Server 인스턴스](../../vcenter/vc_bom.html)의 명세서를 참조하십시오. 참고로, {{site.data.keyword.baremetal_short}}는 {{site.data.keyword.cloud_notm}}에 상주합니다.
+솔루션에서 사용 가능한 서버 구성은 vSphere ESXi를 설치, 구성하고 관리하기 위한 최소 요구사항을 충족하거나 초과합니다. 서로 다른 요구사항을 충족하기 위해 다양한 구성을 사용할 수 있습니다. VMware on {{site.data.keyword.cloud_notm}} 솔루션에 사용되는 정확한 스펙의 세부 목록은 [Cloud Foundation 인스턴스](../../sddc/sd_bom.html) 또는 [vCenter Server 인스턴스](../../vcenter/vc_bom.html)의 명세서를 참조하십시오.
 
-각 Cloud Foundation 인스턴스는 4-호스트 배치에서 시작되며, 각 vCenter Server 인스턴스는 스토리지 솔루션의 선택사항에 따라 3-호스트 또는 4-호스트 배치에서 시작됩니다.
+{{site.data.keyword.baremetal_short}}는 {{site.data.keyword.cloud_notm}}에 상주합니다.
+{:note}
 
-실제 호스트는 vSphere ESXi 하이퍼바이저에 할당될 2개의 로컬로 연결된 디스크를 이용합니다. 이 페이지의 _실제 스토리지 디자인_ 섹션에 설명된 대로 vSAN을 사용하거나 [NetApp ONTAP Select 아키텍처](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)에 설명된 대로 NetApp ONTAP를 사용하여 추가로 디스크를 할당할 수 있습니다. 각각의 실제 호스트에는 공용 및 사설 네트워크 액세스 둘 다를 위한 중복 10Gbps 네트워크 연결이 있습니다.
+각 Cloud Foundation 인스턴스는 4-호스트 배치로 시작되며, 각 vCenter Server 인스턴스는 스토리지 솔루션의 선택사항에 따라 3-호스트 또는 4-호스트 배치로 시작됩니다.
 
-Bare Metal Server의 기술 스펙은 다음과 같습니다.
+실제 호스트는 vSphere ESXi 하이퍼바이저에 할당될 2개의 로컬로 연결된 디스크를 이용합니다. _실제 스토리지 디자인_ 섹션에 설명된 대로 vSAN을 사용하거나 [NetApp ONTAP Select 아키텍처](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)에 설명된 대로 NetApp ONTAP을 사용하여 추가로 디스크를 할당할 수 있습니다. 각각의 실제 호스트에는 공용 및 사설 네트워크 액세스 둘 다를 위한 중복 10Gbps 네트워크 연결이 있습니다.
+
+Bare Metal Server의 스펙은 다음과 같습니다.
 * CPU: 듀얼 Intel Xeon, 다양한 코어 및 속도 구성
 * 메모리: 다양한 구성, 128GB 이상
 * 네트워크: 4 x 10Gbps
@@ -70,7 +77,7 @@ Bare Metal Server의 기술 스펙은 다음과 같습니다.
 ### 기본 및 포터블 IP 블록
 
 {{site.data.keyword.cloud_notm}}는 {{site.data.keyword.cloud_notm}} 인프라 내에서 사용되는 두 가지 유형의 IP 주소를 할당합니다.
-* 기본 IP 주소는 디바이스, 베어메탈 및 {{site.data.keyword.cloud_notm}}에서 프로비저닝하는 가상 서버에 지정됩니다. 사용자는 이러한 블록에서 IP 주소를 지정하지 않아야 합니다.
+* 기본 IP 주소는 디바이스, 베어메탈 및 {{site.data.keyword.cloud_notm}}에서 프로비저닝하는 가상 서버에 지정됩니다. 이러한 블록에 IP 주소를 지정하지 마십시오. 
 * 포터블 IP 주소는 사용자가 필요에 따라 지정 및 관리할 수 있도록 제공됩니다.
 
 기본 및 포터블 IP 주소는 **VLAN Spanning**이 {{site.data.keyword.slportal}} 내에서 사용되거나 계정이 **VRF(Virtual Routing and Forwarding)** 계정으로 구성된 경우에 고객 계정 내에서 임의의 VLAN으로 라우팅 가능합니다.
@@ -83,7 +90,7 @@ Bare Metal Server의 기술 스펙은 다음과 같습니다.
 
 ### VRF(Virtual Routing and Forwarding)
 
-서브넷 IP 블록 간에 자동 라우팅을 사용하여 VLAN Spanning과 유사한 기능을 제공하도록 {{site.data.keyword.slportal}} 계정을 VRF 계정으로서 구성할 수도 있습니다. Direct-Link Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
+서브넷 IP 블록 간에 자동 라우팅을 사용하여 VLAN Spanning과 유사한 기능을 제공하도록 {{site.data.keyword.slportal}} 계정을 VRF 계정으로서 구성할 수도 있습니다. Direct-Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔은 VRF가 {{site.data.keyword.slportal}}에서 사용되는지 여부를 감지할 수 없습니다. 사용자는 {{site.data.keyword.slportal}} 계정에서 **VLAN Spanning** 또는 VRF를 사용하는지 확인하도록 상기시키는 경고를 받습니다.
 
@@ -135,7 +142,7 @@ vCenter Server 또는 Cloud Foundation 자동화된 배치의 일부로 구성�
 
 ## 실제 스토리지 디자인
 
-실제 스토리지 디자인은 실제 호스트에 설치된 실제 디스크의 구성 및 공유 파일 레벨 스토리지의 구성으로 이루어져 있습니다. 여기에는 vSphere ESXi 하이퍼바이저의 운영 체제 디스크와 가상 머신(VM)의 스토리지에 사용되는 운영 체제 디스크가 포함됩니다. VM용 스토리지는 공유 파일 레벨 스토리지로 또는 VMware vSAN에 의해 가상화된 로컬 디스크로 구성할 수 있습니다.
+실제 스토리지 디자인은 실제 호스트에 설치된 실제 디스크의 구성 및 공유 파일 레벨 스토리지의 구성으로 이루어져 있습니다. 여기에는 vSphere ESXi 하이퍼바이저의 운영 체제 디스크와 가상 머신(VM)의 스토리지에 사용되는 디스크가 포함됩니다. VM용 스토리지는 공유 파일 레벨 스토리지로 또는 VMware vSAN에 의해 가상화된 로컬 디스크로 구성할 수 있습니다.
 
 ### 운영 체제 디스크
 
@@ -155,9 +162,9 @@ vSphere ESXi 하이퍼바이저는 지속적 위치에 설치되도록 디자인
 
 공유 파일 레벨 스토리지를 사용하는 경우에는 2TB NFS 공유가 초기 VMware 클러스터를 구성하는 호스트에 연결됩니다. 관리 공유라고 하는 이 공유는 VMware vCenter Server, Platform Services Controller 및 VMware NSX 등의 관리 컴포넌트에 사용됩니다. 이 스토리지는 NFSv3 프로토콜을 사용하여 연결되며 최대 4000 IOPS까지 지원할 수 있습니다.
 
-그림 2. VMware 배치에 연결된 NFS 공유
+그림 2. VMware 배치에 연결되는 NFS 공유
 
-![VMware 배치에 연결된 NFS 공유](physical_nfs.svg "VMware 배치에 연결된 NFS 공유: 관리 공유 및 고객 지정 공유")
+![VMware 배치에 연결되는 NFS 공유](physical_nfs.svg "VMware 배치에 연결되는 NFS 공유: 관리 공유 및 고객 지정 공유")
 
 구매 시에 또는 나중에 콘솔 내에서 워크로드에 대한 추가 파일 공유를 할당하고 마운트할 수 있습니다. 대응되는 {{site.data.keyword.CloudDataCent_notm}}의 사용 가능한 {{site.data.keyword.cloud_notm}} Endurance 파일 스토리지 용량 옵션 및 성능 티어에서 선택할 수 있습니다. 모든 공유는 NFSv3 프로토콜을 사용하여 연결됩니다. 또한 NetApp ONTAP Select 오퍼링을 적용하여 NFSv3 파일 공유를 연결할 수 있습니다.
 
