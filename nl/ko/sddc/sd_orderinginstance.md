@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Cloud Foundation 인스턴스 주문
 
@@ -18,7 +22,8 @@ lastupdated: "2018-09-27"
 *  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](../vmonic/useraccount.html)를 참조하십시오.
 *  [Cloud Foundation 인스턴스에 대한 요구사항 및 계획](sd_planning.html)의 요구사항 및 고려사항을 검토했습니다.
 
-**중요:** 인스턴스 주문 또는 배치 중에 설정된 값을 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다. 또한 인스턴스가 배치된 후 인스턴스 이름, 루트 도메인 이름, 하위 도메인 레이블 또는 호스트 이름 접두부를 변경하지 마십시오.
+인스턴스 주문 또는 배치 중에 설정되는 값은 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다. 또한 인스턴스가 배치된 후 인스턴스 이름, 루트 도메인 이름, 하위 도메인 레이블 또는 호스트 이름 접두부를 변경하지 마십시오.
+{:important}
 
 ## 시스템 설정
 
@@ -54,6 +59,34 @@ Cloud Foundation 인스턴스를 주문할 때는 다음 시스템 설정을 지
 
 인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}를 선택하십시오.
 
+### Skylake
+
+**Skylake**를 선택하는 경우 필요에 따라 CPU 및 RAM 조합을 선택할 수 있습니다.
+
+Bare Metal Server의 CPU 모델 및 RAM을 선택하십시오.
+
+표 1. Skylake {{site.data.keyword.baremetal_short}}의 옵션
+
+| CPU 모델 옵션        |RAM 옵션       |
+|:------------- |:------------- |
+|듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
+
+### Broadwell
+
+**Broadwell**을 선택하는 경우 필요에 따라 CPU 및 RAM 조합을 선택할 수 있습니다.
+
+Bare Metal Server의 CPU 모델 및 RAM을 선택하십시오.
+
+표 1. Broadwell {{site.data.keyword.baremetal_short}}의 옵션
+
+| CPU 모델 옵션        |RAM 옵션       |
+|:------------- |:------------- |
+| 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
+| 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
+| 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
+
 ### 사전 구성됨
 
 **사전 구성됨**을 선택하는 경우에는 CPU 또는 RAM 설정을 변경할 수 없습니다.
@@ -61,23 +94,6 @@ Cloud Foundation 인스턴스를 주문할 때는 다음 시스템 설정을 지
 자신의 요구사항에 따라 Bare Metal Server 구성을 선택하십시오.
   * 소형(듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz / 128GB RAM / 12개의 드라이브)
   * 대형(듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz / 512GB RAM / 12개의 드라이브)
-
-### 사용자 정의됨
-
-**사용자 정의됨**을 선택하는 경우에는 필요에 따라 CPU 및 RAM 조합을 선택할 수 있습니다.
-
-Bare Metal Server의 CPU 모델 및 RAM을 선택하십시오.
-
-표 1. 사용자 정의된 {{site.data.keyword.baremetal_short}}의 옵션
-
-| CPU 모델 옵션        |RAM 옵션       |
-|:------------- |:------------- |
-| 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
 
 ### Bare Metal Server 수
 
@@ -91,7 +107,7 @@ Cloud Foundation 인스턴스의 경우, VMware vSAN 스토리지만 주문할 �
   * **소형** Bare Metal Server 구성의 경우, 두 개의 1.9TB SSD SED 디스크 드라이브가 주문됩니다.
   * **대형** Bare Metal Server 구성의 경우, 네 개의 3.8TB SSD SED 디스크 드라이브가 주문됩니다.
 
-**사용자 정의됨** Bare Metal Server 구성을 선택한 경우에는 인스턴스에 대한 vSAN 스토리지를 사용자 정의할 수 있습니다. 다음 vSAN 설정을 지정하십시오.
+**Skylake** 또는 **Broadwell** Bare Metal Server 구성을 선택하는 경우 인스턴스에 대한 vSAN 스토리지를 사용자 정의할 수 있습니다. 다음 vSAN 설정을 지정하십시오.
 * **vSAN 용량 디스크의 디스크 유형 및 크기**: 필요한 용량 디스크에 대한 옵션을 선택하십시오.
 * **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
 * 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다. **고성능 Intel Optane** 옵션은 듀얼 Intel Xeon Gold 5120 및 6140 프로세서에 대해서만 사용 가능합니다.
@@ -125,7 +141,8 @@ Cloud Foundation 인스턴스를 주문할 때는 다음 네트워크 인터페�
 * 마지막 문자열은 영문자만 포함할 수 있습니다.
 * 마지막 문자열의 길이는 2 - 24자 사이여야 합니다.
 
-**참고:** 호스트 및 가상 머신(VM)에 대한 FQDN(Fully Qualified Domain Name)의 최대 길이는 50자입니다. 도메인 이름은 이 최대 길이를 포함할 수 있어야 합니다.
+호스트 및 가상 머신(VM)에 대한 FQDN(Fully Qualified Domain Name)의 최대 길이는 50자입니다. 도메인 이름은 이 최대 길이를 포함할 수 있어야 합니다.
+{:note}
 
 ### 네트워크 설정의 값 형식
 
@@ -193,11 +210,11 @@ Cloud Foundation 인스턴스를 주문하는 경우 추가 기능 서비스도 
 6. Bare Metal Server 설정을 완료하십시오.
    1. {{site.data.keyword.CloudDataCent_notm}}를 선택하여 인스턴스를 호스팅하십시오.
    2. Bare Metal Server 구성을 선택하십시오.
+      * **Skylake** 또는 **Broadwell**을 선택하는 경우 CPU 모델 및 RAM 크기를 지정하십시오.
       * **사전 구성됨**을 선택한 경우에는 **소형** 및 **대형** 중에서 구성을 선택하십시오.
-      * **사용자 정의됨**을 선택한 경우에는 CPU 모델 및 RAM 크기를 지정하십시오.
 7. 스토리지 구성을 완료하십시오.
+   * Bare Metal Server 구성에 대해 **Skylake** 또는 **Broadwell**을 선택한 경우 vSAN 용량의 디스크 유형 및 캐시 디스크, 디스크 수를 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
    * Bare Metal Server 구성에 대해 **사전 구성됨**을 선택한 경우에는 **소형** 및 **대형** 표준화된 Bare Metal Server 구성의 스토리지 설정을 변경할 수 없습니다.
-   * Bare Metal Server 구성에 대해 **사용자 정의됨**을 선택한 경우에는 vSAN 용량 및 캐시 디스크의 디스크 유형 및 디스크 수를 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
 8. 네트워크 인터페이스 설정을 완료하십시오.
    1. 호스트 이름 접두부, 하위 도메인 레이블 및 루트 도메인 이름을 입력하십시오. 보조 인스턴스의 경우에는 도메인 이름이 자동으로 입력됩니다.
    2. VLAN 설정을 선택하십시오.
@@ -227,7 +244,8 @@ Cloud Foundation 인스턴스를 주문하는 경우 추가 기능 서비스도 
 
 주문한 Cloud Foundation 인스턴스를 보고 관리하십시오.
 
-**중요:** {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+{{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌, {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성되는 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+{:important}
 
 **주의:** {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트(인스턴스 주문 시 {{site.data.keyword.cloud_notm}} 계정에 설치된)를 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 

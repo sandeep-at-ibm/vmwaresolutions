@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -24,36 +24,36 @@ Cloud Foundation 배치에는 실제 인프라에 대한 엄격한 요구사항�
 
 | {{site.data.keyword.CloudDataCent_notm}} |위치 |지역 |서버 구성 |
 |:----------------------|:---------|:-------|:----------------------|
-|AMS03 |암스테르담 |유럽 |사용자 정의됨 |
-|CHE01 |첸나이 |아시아 태평양 |사용자 정의됨 |
-|DAL09 |댈러스 |북미 남부 |사용자 정의됨 |
-|DAL10 |댈러스 |북미 남부 |사용자 정의됨, 소형, 대형 |
-|DAL12 |댈러스 |북미 남부 |사용자 정의됨 |
-|DAL13 |댈러스 |북미 남부 |사용자 정의됨 |
-|FRA02 |프랑크푸르트 |유럽 |사용자 정의됨, 대형 |
-| FRA04 |프랑크푸르트 |유럽 |사용자 정의됨 |
-|HKG02 |홍콩 |아시아 태평양 |사용자 정의됨 |
-|LON02 |런던 |유럽 |사용자 정의됨 |
-|LON04 |런던 |유럽 |사용자 정의됨 |
-|LON06 |런던 |유럽 |사용자 정의됨, 소형, 대형 |
-|MEL01 |멜버른 |아시아 태평양 |사용자 정의됨 |
-|MEX01 |케레타로 |북미 남부 |사용자 정의됨 |
-|MIL01 |밀라노 |유럽 |사용자 정의됨 |
-|MON01 |몬트리올 |북미 동부 |사용자 정의됨 |
-|OSL01 |오슬로 |유럽 |사용자 정의됨 |
-|PAR01 |파리 |유럽 |사용자 정의됨 |
-|SAO01 |상파울루 |남미 |사용자 정의됨 |
-|SEO01 |서울 |아시아 태평양 |사용자 정의됨 |
-|SJC03 |산호세 |북미 서부 |사용자 정의됨 |
-|SJC04 |산호세 |북미 서부 |사용자 정의됨 |
-|SNG01 |싱가포르 |아시아 태평양 |사용자 정의됨 |
-|SYD01 |시드니 |아시아 태평양 |사용자 정의됨 |
-|SYD04 |시드니 |아시아 태평양 |사용자 정의됨 |
-|TOK02 |도쿄 |아시아 태평양 |사용자 정의됨 |
-|TOR01 |토론토 |북미 동부 |사용자 정의됨, 소형, 대형 |
-|WDC04 |워싱턴, DC |북미 동부 |사용자 정의됨, 소형, 대형 |
-|WDC06 |워싱턴, DC |북미 동부 |사용자 정의됨 |
-|WDC07 |워싱턴, DC |북미 동부 |사용자 정의됨 |
+|AMS03 |암스테르담 |유럽 | Skylake, Broadwell |
+|CHE01 |첸나이 |아시아 태평양 | Skylake, Broadwell |
+|DAL09 |댈러스 |북미 남부 | Skylake, Broadwell |
+|DAL10 |댈러스 |북미 남부 | Skylake, Broadwell, 소형, 대형 |
+|DAL12 |댈러스 |북미 남부 | Skylake, Broadwell |
+|DAL13 |댈러스 |북미 남부 | Skylake, Broadwell |
+|FRA02 |프랑크푸르트 |유럽 | Skylake, Broadwell, 대형 |
+|FRA04 |프랑크푸르트 |유럽 | Skylake, Broadwell |
+|HKG02 |홍콩 |아시아 태평양 | Skylake, Broadwell |
+|LON02 |런던 |유럽 | Skylake, Broadwell |
+|LON04 |런던 |유럽 | Skylake, Broadwell |
+|LON06 |런던 |유럽 | Skylake, Broadwell, 소형, 대형 |
+|MEL01 |멜버른 |아시아 태평양 | Skylake, Broadwell |
+|MEX01 |케레타로 |북미 남부 | Skylake, Broadwell |
+|MIL01 |밀라노 |유럽 | Skylake, Broadwell |
+|MON01 |몬트리올 |북미 동부 | Skylake, Broadwell |
+|OSL01 |오슬로 |유럽 | Skylake, Broadwell |
+|PAR01 |파리 |유럽 | Skylake, Broadwell |
+|SAO01 |상파울루 |남미 | Skylake, Broadwell |
+|SEO01 |서울 |아시아 태평양 | Skylake, Broadwell |
+|SJC03 |산호세 |북미 서부 | Skylake, Broadwell |
+|SJC04 |산호세 |북미 서부 | Skylake, Broadwell |
+|SNG01 |싱가포르 |아시아 태평양 | Skylake, Broadwell |
+|SYD01 |시드니 |아시아 태평양 | Skylake, Broadwell |
+|SYD04 |시드니 |아시아 태평양 | Skylake, Broadwell |
+|TOK02 |도쿄 |아시아 태평양 | Skylake, Broadwell |
+|TOR01 |토론토 |북미 동부 | Skylake, Broadwell, 소형, 대형 |
+|WDC04 |워싱턴, DC |북미 동부 | Skylake, Broadwell, 소형, 대형 |
+|WDC06 |워싱턴, DC |북미 동부 | Skylake, Broadwell |
+|WDC07 |워싱턴, DC |북미 동부 | Skylake, Broadwell |
 
 가용성 및 자원 명세 제공에 따라 {{site.data.keyword.CloudDataCents_notm}}는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 상태 표시기를 표시하여 배치를 계획할 수 있습니다.
 
