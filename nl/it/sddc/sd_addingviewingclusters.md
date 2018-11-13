@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Aggiunta, visualizzazione ed eliminazione di cluster per le istanze Cloud Foundation
 
@@ -40,30 +44,40 @@ Il nome del cluster deve rispettare i seguenti requisiti:
 
 L'ubicazione del {{site.data.keyword.CloudDataCent}} del cluster è impostata sul {{site.data.keyword.CloudDataCent_notm}} dell'istanza Cloud Foundation per impostazione predefinita. Puoi distribuire il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso rispetto a quello dell'istanza distribuita, ma devi assicurarti che la latenza di rete tra i due {{site.data.keyword.CloudDataCents_notm}} sia inferiore a 150 ms. Per controllare la latenza di rete, puoi utilizzare uno strumento come [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-I data center disponibili dipendono dalla configurazione Bare Metal Server selezionata per la distribuzione. Se selezioni la configurazione **Personalizzato**, puoi anche distribuire il cluster in un pod dell'infrastruttura {{site.data.keyword.cloud_notm}} diverso, nel caso in cui il data center selezionato contenga più pod. Questa configurazione è utile quando il pod dell'infrastruttura {{site.data.keyword.cloud_notm}} predefinito in cui è distribuita l'istanza iniziale ha raggiunto la sua capacità massima.
+I data center disponibili dipendono dalla configurazione Bare Metal Server selezionata per la distribuzione. Se selezioni la configurazione **Skylake** o **Broadwell**, puoi anche distribuire il cluster in un pod dell'infrastruttura {{site.data.keyword.cloud_notm}} diverso, nel caso in cui il data center selezionato contenga più pod. Questa configurazione è utile quando il pod dell'infrastruttura {{site.data.keyword.cloud_notm}} predefinito in cui è distribuita l'istanza iniziale ha raggiunto la sua capacità massima.
 
-**Nota:** le configurazioni standardizzate **Small** e **Large** di Bare Metal Server utilizzano un pod predefinito che non può essere modificato.
+Le configurazioni standardizzate **Small** e **Large** di Bare Metal Server utilizzano un pod predefinito che non può essere modificato.
+{:note}
 
 Se distribuisci il cluster in un diverso data center o pod, vengono ordinate altre tre VLAN da utilizzare con i {{site.data.keyword.baremetal_short}} ordinati.
 
 ### Impostazioni di Bare Metal Server
 
-Puoi scegliere **Personalizzato** o **Preconfigurato**.
+Puoi scegliere **Skylake**, **Broadwell** o **Preconfigurato**.
 
-#### Personalizzato
+#### Skylake
 
-Per l'impostazione **Personalizzato**, hai una serie di opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
+Per l'impostazione **Skylake**, hai una serie di opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
 
-Tabella 1. Opzioni per i {{site.data.keyword.baremetal_short}} personalizzati
+Tabella 1. Opzioni per Skylake {{site.data.keyword.baremetal_short}} 
+
+| Opzioni del modello CPU   | Opzioni RAM   |
+|:------------- |:------------- |
+| Processore Dual Intel Xeon Silver 4110 / 16 core totali, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+#### Broadwell
+
+Per l'impostazione **Broadwell**, hai una serie di opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
+
+Tabella 2. Opzioni per Broadwell {{site.data.keyword.baremetal_short}} 
 
 | Opzioni del modello CPU   | Opzioni RAM   |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Silver 4110 / 16 core totali, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### Preconfigurato
 
@@ -73,16 +87,15 @@ Per l'impostazione **Preconfigurato**, puoi scegliere una **Configurazione Bare 
 
 ### Impostazioni di archiviazione vSAN
 
-Per le configurazioni **Preconfigurato** di Bare Metal Server, non puoi modificare le impostazioni dell'archiviazione vSAN:
-* Per la configurazione **Small**, vengono ordinate due unità disco SED SSD da 1,9 TB.
-* Per la configurazione **Large**, vengono ordinate quattro unità disco SED SSD da 3,8 TB.
-
-Per la configurazione **Personalizzato** di Bare Metal Server, puoi personalizzare l'archiviazione vSAN specificando le seguenti impostazioni:
-
+Per la configurazione **Skylake** e **Broadwell** di Bare Metal Server, puoi personalizzare l'archiviazione vSAN specificando le seguenti impostazioni:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
 * Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
+
+Per le configurazioni **Preconfigurato** di Bare Metal Server, non puoi modificare le impostazioni dell'archiviazione vSAN:
+* Per la configurazione **Small**, vengono ordinate due unità disco SED SSD da 1,9 TB.
+* Per la configurazione **Large**, vengono ordinate quattro unità disco SED SSD da 3,8 TB.
 
 ### Impostazioni di licenza
 
@@ -95,17 +108,18 @@ Puoi specificare le opzioni di licenza per i componenti VMware nel cluster, incl
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza a cui vuoi aggiungere i cluster.
 
-   **Nota:** assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
+   Assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
+   {:note}
 
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra e quindi su **Aggiungi** nella parte superiore destra della tabella **CLUSTER**.
 4. Nella pagina **Aggiungi cluster**, immetti il nome del cluster.
 5. Se vuoi ospitare il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso da quello in cui è ospitata l'istanza, in **Bare Metal Server**, seleziona la casella di spunta **Seleziona un'ubicazione differente** e scegli il {{site.data.keyword.CloudDataCent_notm}} per ospitare l'istanza.
 6. Completa la configurazione Bare Metal:
-   * Se hai selezionato **Personalizzato**, seleziona il **Modello CPU** e la dimensione della **RAM**.
+   * Se hai selezionato **Skylake** o **Broadwell**, seleziona il **Modello CPU** e la dimensione della **RAM**.
    * Se hai selezionato **Preconfigurato**, seleziona la **Configurazione Bare Metal Server**.
 7. Completa la configurazione di archiviazione:
+   * Se hai selezionato **Skylake** o **Broadwell** per la configurazione Bare Metal, specifica i tipi di disco per i dischi di capacità vSAN e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
    * Se hai selezionato **Preconfigurato** per la configurazione Bare Metal, le impostazioni di archiviazione per le configurazioni **Small** e **Large** di Bare Metal Server non possono essere modificate.
-   * Se hai selezionato **Personalizzato** per la configurazione Bare Metal, specifica i tipi di disco per i dischi di capacità vSAN e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
 8. Specifica come vengono fornite le tue chiavi di licenza:
    * Per gli utenti Business Partner IBM, la licenza vSphere (Enterprise Plus edition) e la licenza vSAN sono incluse e acquistate per tuo conto. Tuttavia, devi specificare l'edizione per la licenza vSAN.
    * Per gli utenti che non sono Business Partner IBM, puoi selezionare una delle seguenti opzioni:
@@ -122,7 +136,8 @@ Puoi specificare le opzioni di licenza per i componenti VMware nel cluster, incl
 1. La distribuzione del cluster viene avviata automaticamente e lo stato del cluster viene modificato in **Inizializzazione**. Puoi controllare lo stato della distribuzione visualizzando la cronologia di distribuzione nella pagina di riepilogo dell'istanza.
 2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere High Availability (HA) e vSphere Distributed Resource Scheduler (DRS).
 
-**Importante:** non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
+Non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
+{:important}
 
 ## Procedura per visualizzare i cluster nelle istanze Cloud Foundation
 
@@ -197,7 +212,8 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza da cui vuoi eliminare i cluster.
 
-   **Nota:** assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. Altrimenti, non puoi eliminare i cluster dall'istanza.
+   Assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. Altrimenti, non puoi eliminare i cluster dall'istanza.
+   {:note}
 
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, individua il cluster che vuoi eliminare e fai clic sull'icona **Elimina**.
 4. Conferma di aver completato la migrazione delle VM in altri cluster, se appropriato, e di voler eliminare il cluster.

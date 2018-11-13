@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -24,36 +24,36 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} e configurazioni di Bare Me
 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicazione | Regione | Configurazioni server |
 |:----------------------|:---------|:-------|:----------------------|
-| AMS03 | Amsterdam | Europa | Personalizzato |
-| CHE01 | Chennai | Asia Pacifico | Personalizzato |
-| DAL09 | Dallas | Nord America meridionale | Personalizzato |
-| DAL10 | Dallas | Nord America meridionale | Personalizzato, Small, Large |
-| DAL12 | Dallas | Nord America meridionale | Personalizzato |
-| DAL13 | Dallas | Nord America meridionale | Personalizzato |
-| FRA02 | Francoforte | Europa | Personalizzato, Large |
-| FRA04 | Francoforte | Europa | Personalizzato |
-| HKG02 | Hong Kong | Asia Pacifico | Personalizzato |
-| LON02 | Londra | Europa | Personalizzato |
-| LON04 | Londra | Europa | Personalizzato |
-| LON06 | Londra | Europa | Personalizzato, Small, Large |
-| MEL01 | Melbourne | Asia Pacifico | Personalizzato |
-| MEX01 | Queretaro | Nord America meridionale | Personalizzato |
-| MIL01 | Milano | Europa | Personalizzato |
-| MON01 | Montreal | Nord America orientale | Personalizzato |
-| OSL01 | Oslo | Europa | Personalizzato |
-| PAR01 | Parigi | Europa | Personalizzato |
-| SAO01 | San Paolo | Sud America | Personalizzato |
-| SEO01 | Seul | Asia Pacifico | Personalizzato |
-| SJC03 | San Jose | Nord America occidentale | Personalizzato |
-| SJC04 | San Jose | Nord America occidentale | Personalizzato |
-| SNG01 | Singapore | Asia Pacifico | Personalizzato |
-| SYD01 | Sydney | Asia Pacifico | Personalizzato |
-| SYD04 | Sydney | Asia Pacifico | Personalizzato |
-| TOK02 | Tokyo | Asia Pacifico | Personalizzato |
-| TOR01 | Toronto | Nord America orientale | Personalizzato, Small, Large |
-| WDC04 | Washington, DC | Nord America orientale | Personalizzato, Small, Large |
-| WDC06 | Washington, DC | Nord America orientale | Personalizzato |
-| WDC07 | Washington, DC | Nord America orientale | Personalizzato |
+| AMS03 | Amsterdam | Europa | Skylake, Broadwell |
+| CHE01 | Chennai | Asia Pacifico | Skylake, Broadwell |
+| DAL09 | Dallas | Nord America meridionale | Skylake, Broadwell |
+| DAL10 | Dallas | Nord America meridionale | Skylake, Broadwell, Small, Large |
+| DAL12 | Dallas | Nord America meridionale | Skylake, Broadwell |
+| DAL13 | Dallas | Nord America meridionale | Skylake, Broadwell |
+| FRA02 | Francoforte | Europa | Skylake, Broadwell, Large |
+| FRA04 | Francoforte | Europa | Skylake, Broadwell |
+| HKG02 | Hong Kong | Asia Pacifico | Skylake, Broadwell |
+| LON02 | Londra | Europa | Skylake, Broadwell |
+| LON04 | Londra | Europa | Skylake, Broadwell |
+| LON06 | Londra | Europa | Skylake, Broadwell, Small, Large |
+| MEL01 | Melbourne | Asia Pacifico | Skylake, Broadwell |
+| MEX01 | Queretaro | Nord America meridionale | Skylake, Broadwell |
+| MIL01 | Milano | Europa | Skylake, Broadwell |
+| MON01 | Montreal | Nord America orientale | Skylake, Broadwell |
+| OSL01 | Oslo | Europa | Skylake, Broadwell |
+| PAR01 | Parigi | Europa | Skylake, Broadwell |
+| SAO01 | San Paolo | Sud America | Skylake, Broadwell |
+| SEO01 | Seul | Asia Pacifico | Skylake, Broadwell |
+| SJC03 | San Jose | Nord America occidentale | Skylake, Broadwell |
+| SJC04 | San Jose | Nord America occidentale | Skylake, Broadwell |
+| SNG01 | Singapore | Asia Pacifico | Skylake, Broadwell |
+| SYD01 | Sydney | Asia Pacifico | Skylake, Broadwell |
+| SYD04 | Sydney | Asia Pacifico | Skylake, Broadwell |
+| TOK02 | Tokyo | Asia Pacifico | Skylake, Broadwell |
+| TOR01 | Toronto | Nord America orientale | Skylake, Broadwell, Small, Large |
+| WDC04 | Washington, DC | Nord America orientale | Skylake, Broadwell, Small, Large |
+| WDC06 | Washington, DC | Nord America orientale | Skylake, Broadwell |
+| WDC07 | Washington, DC | Nord America orientale | Skylake, Broadwell |
 
 A seconda della disponibilità e della fornitura di inventario, i {{site.data.keyword.CloudDataCents_notm}} potrebbero visualizzare un indicatore di stato nella console {{site.data.keyword.vmwaresolutions_short}} per aiutarti a pianificare le tue distribuzioni.
 
