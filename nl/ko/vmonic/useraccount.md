@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 사용자 계정 및 설정 관리
 
 {{site.data.keyword.vmwaresolutions_full}}는 {{site.data.keyword.slapi_short}} 호출을 통해 {{site.data.keyword.cloud_notm}} 인프라와 통신합니다. {{site.data.keyword.slapi_short}}에 안전하게 액세스하려면 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정의 인증 정보를 {{site.data.keyword.cloud_notm}} 계정에 링크해야 합니다.
 
-**참고:** {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 이전에는 IBM SoftLayer 계정이라고 했습니다.
+{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 이전에는 IBM SoftLayer 계정이라고 했습니다.
+{:note}
 
 다양한 이벤트에 대한 이메일 및 콘솔 알림을 수신하고자 하는지 여부를 지정할 수도 있습니다.
 

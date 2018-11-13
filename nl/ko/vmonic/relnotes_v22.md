@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-10-19"
 
 ---
 
@@ -80,7 +80,7 @@ vCenter Server 및 Cloud Foundation 인스턴스 주문의 경우, 이제 네트
 
 현재 릴리스에서는 VMware NSX for vSphere 6.3.5 컴포넌트 업데이트가 적용되었습니다. 컴포넌트에 대한 자세한 정보는 [vCenter Server 명세서](../vcenter/vc_bom.html)를 참조하십시오.
 
-V2.2 이상 릴리스에 배치된 VMware vCenter Server 인스턴스의 경우, NSX 및 포트 그룹 구성 설정이 변경되었습니다. 자세한 정보는 vCenter Server 소프트웨어 명세서](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings)의 *NSX 및 포트 그룹 구성 설정* 섹션을 참조하십시오.
+V2.2 이상 릴리스에 배치된 VMware vCenter Server 인스턴스의 경우, NSX 및 포트 그룹 구성 설정이 변경되었습니다. 자세한 정보는 [vCenter Server 소프트웨어 명세서](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings)의 *NSX 및 포트 그룹 구성 설정* 섹션을 참조하십시오.
 
 ### DNS 구성에 대한 새 옵션
 
