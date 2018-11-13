@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -16,16 +16,15 @@ Quando esegui la scansione di host, macchine virtuali e dispositivi virtuali, li
 *	**Avviare manualmente una scansione di un oggetto contenitore** - Avvia una scansione simultanea di host, macchine virtuali e dispositivi virtuali, eseguendo la scansione di un oggetto contenitore che sia un data center o una cartella del data center.
 *	**Pianificare una scansione** - Puoi configurare il client web vSphere per eseguire la scansione di macchine virtuali, dispositivi virtuali e host ESXi in momenti specifici o a intervalli appropriati.
 
-##	Avvio manuale di una scansione degli host vSphere ESXi
+## Avvio manuale di una scansione degli host vSphere ESXi
 
-1.	Fai clic sul pulsante **Scan for Updates** e seleziona **Patches and Extensions and Upgrades**, quindi fai clic su **OK**.
-2.	Al termine della scansione, seleziona **Critical Host Patches** e nel riquadro inferiore controlla ciascun host
-3.	Facendo clic sul numero in Number of Patches, una finestra mostra i dettagli della patch.
-4.	Esamina i dettagli e ripeti per le **Non-Critical Patches**.
+1. Fai clic su **Scan for Updates** e seleziona **Patches and Extensions and Upgrades**, quindi fai clic su **OK**.
+2. Al termine della scansione, seleziona **Critical Host Patches**. Nel pannello in basso, controlla i dettagli della patch per ciascun host facendo clic sul numero in **Number of Patches**. Una finestra mostra le informazioni sulla patch.
+3. Esamina i dettagli e ripeti per le **Non-Critical Patches**.
 
-Nota che i file di log VUM possono essere trovati in _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
+  I file di log di VUM sono ubicati in _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
-##	Avvio manuale di una scansione di macchine virtuali e dispositivi virtuali
+## Avvio manuale di una scansione di macchine virtuali e dispositivi virtuali
 
 Puoi eseguire la scansione di macchine virtuali e dispositivi virtuali nell'inventario di vSphere in base alle baseline e ai gruppi di baseline collegati. Le macchine e i dispositivi virtuali selezionati vengono scansionati rispetto alle baseline collegate, a seconda delle opzioni che selezioni. Vengono scansionati anche tutti gli oggetti figlio, quindi quanto più grande è l'infrastruttura virtuale e più in alto nella gerarchia di oggetti di cui avvii la scansione, tanto più tempo impiegherà la scansione e più accurata sarà la vista di conformità.
 
@@ -56,5 +55,5 @@ Puoi configurare il client web vSphere per eseguire la scansione di macchine vir
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)

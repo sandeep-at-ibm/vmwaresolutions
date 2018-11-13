@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -32,9 +32,9 @@ Per ogni host, effettua le seguenti operazioni in successione:
 8. Se non riesci a connetterti all'host tramite la rete, esegui il comando precedente dalla console IPMI utilizzando la finestra di controllo di IBM Cloud.
 9. Dopo aver riavviato l'host vSphere ESXi, puoi ora vedere che il driver ixgbe predefinito è stato caricato e abilitato.
 
-Se hai bisogno di ripristinare e non puoi eseguire l'SSH nell'host vSphere ESXi, devi accedere alla console KVM per l'host che richiede il ripristino tramite la finestra di controllo di IBM Cloud. 
+Se hai bisogno di ripristinare e non puoi eseguire l'SSH nell'host vSphere ESXi, devi accedere alla console KVM per l'host che richiede il ripristino tramite la finestra di controllo di IBM Cloud.
 
-Utilizza l'ID e la password elencati nella finestra di controllo di IBM Cloud con l'indirizzo IP IPMI per accedere all'interfaccia web IPMI. Devi essere connesso al data center in cui si trova l'host tramite VPN. Per ulteriori informazioni, vedi [Getting started with the IBM Cloud VPN](https://console.bluemix.net/docs/infrastructure/iaas-vpn/getting-started.html#getting-started-with-virtual-private-networking-vpn).
+Utilizza l'ID e la password elencati nella finestra di controllo di IBM Cloud con l'indirizzo IP IPMI per accedere all'interfaccia web IPMI. Devi essere connesso al data center in cui si trova l'host tramite VPN. Per ulteriori informazioni, vedi [Introduzione a VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
 
 1. Vai alla pagina Device Details, Remote Mgmt per l'host vSphere ESXi e seleziona **Actions** > **KVM Console**. Si aprirà un'altra finestra in cui dovrai immettere utente e password IPMI.
 2. Seleziona **Remote Control** > **iKVM/HTML5** e fai clic su **iKVM/HTML5** per riavviare. Potrai ora accedere alla console dell'host vSphere ESXi.
@@ -47,5 +47,5 @@ Utilizza l'ID e la password elencati nella finestra di controllo di IBM Cloud co
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)

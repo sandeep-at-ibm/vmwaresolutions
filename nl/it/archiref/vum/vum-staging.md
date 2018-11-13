@@ -4,13 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
-#	Preparazione e correzione
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
-Le patch e le estensioni possono essere facoltativamente preparate prima della correzione per garantire che vengano scaricate da VUM sull'host vSphere ESXi senza applicarle immediatamente. Durante la correzione, VUM applica le patch, le estensioni e gli aggiornamenti agli oggetti di inventario. La preparazione di patch ed estensioni accelera il processo di correzione in quanto le patch e le estensioni sono già disponibili localmente sugli host. 
+# Preparazione e correzione
+
+Le patch e le estensioni possono essere facoltativamente preparate prima della correzione per garantire che vengano scaricate da VUM sull'host vSphere ESXi senza applicarle immediatamente. Durante la correzione, VUM applica le patch, le estensioni e gli aggiornamenti agli oggetti di inventario. La preparazione di patch ed estensioni accelera il processo di correzione in quanto le patch e le estensioni sono già disponibili localmente sugli host.
 
 Se durante il processo di correzione un qualsiasi host non entra in modalità di manutenzione, VUM segnalerà un errore e il processo di correzione si interrompe e avrà esito negativo. Gli host vSphere ESXi che sono già stati corretti rimangono al livello aggiornato.
 
@@ -32,13 +36,13 @@ La correzione è il processo in cui VUM applica patch, estensioni e aggiornament
 
 Se l'aggiornamento lo richiede, gli host vengono messi in modalità di manutenzione prima della correzione. VCSA migra le macchine virtuali su altri host all'interno dell'istanza VCS prima che l'host venga messo in modalità di manutenzione.
 
-  Nota importante per gli host in un cluster vSAN
-  Tieni presente il seguente comportamento per gli host che fanno parte di un cluster vSAN:
-  *	Il completamento del processo di correzione dell'host potrebbe richiedere molto tempo.
-  *	In base alla progettazione, solo un host da un cluster VSAN può essere in una modalità di manutenzione in un determinato momento.
-  *	VUM corregge gli host che fanno parte di un cluster VSAN in modo sequenziale anche se imposti l'opzione per correggere gli host in parallelo.
-  *	Per qualsiasi macchina virtuale sull'host che utilizza una politica di archiviazione della VM con un'impostazione per "Numero di errori da tollerare=0", l'host potrebbe riscontrare dei ritardi insoliti quando entra in modalità di manutenzione. Il ritardo si verifica perché vSAN deve migrare i dati della macchina virtuale da un disco a un altro nel cluster dell'archivio dati vSAN e questo può richiedere molte ore. Puoi aggirare questo problema impostando il "Numero di errori da tollerare=1" per la politica di archiviazione della VM, che comporta la creazione di due copie dei file della macchina virtuale nell'archivio dati vSAN.
-  *	Per qualsiasi macchina virtuale sull'host che utilizza una politica di archiviazione della VM con un'impostazione per "Numero di errori da tollerare=1", la VM diventerà non ridondante quando l'host entra in modalità di manutenzione. Se questo non è accettabile, vedi [Ridondanza vSAN della macchina virtuale](vum-vsan-redundancy.html).
+## Per gli host in un cluster vSAN
+Tieni presente il seguente comportamento per gli host che fanno parte di un cluster vSAN:
+* Il completamento del processo di correzione dell'host potrebbe richiedere molto tempo.
+* In base alla progettazione, solo un host da un cluster VSAN può essere in una modalità di manutenzione in un determinato momento.
+* VUM corregge gli host che fanno parte di un cluster VSAN in modo sequenziale anche se imposti l'opzione per correggere gli host in parallelo.
+* Per qualsiasi macchina virtuale sull'host che utilizza una politica di archiviazione della VM con un'impostazione per "Numero di errori da tollerare=0", l'host potrebbe riscontrare dei ritardi insoliti quando entra in modalità di manutenzione. Il ritardo si verifica perché vSAN deve migrare i dati della macchina virtuale da un disco a un altro nel cluster dell'archivio dati vSAN e questo può richiedere molte ore. Puoi aggirare questo problema impostando il "Numero di errori da tollerare=1" per la politica di archiviazione della VM, che comporta la creazione di due copie dei file della macchina virtuale nell'archivio dati vSAN.
+* Per qualsiasi macchina virtuale sull'host che utilizza una politica di archiviazione della VM con un'impostazione per "Numero di errori da tollerare=1", la VM diventerà non ridondante quando l'host entra in modalità di manutenzione. Se questo non è accettabile, vedi [Ridondanza vSAN della macchina virtuale](vum-vsan-redundancy.html).
 
 Per correggere host e cluster, completa la seguente procedura:
 1.	Utilizzando il client web vSphere, seleziona **Home** > **Hosts and Clusters**.
@@ -71,5 +75,5 @@ Per correggere host e cluster, completa la seguente procedura:
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)

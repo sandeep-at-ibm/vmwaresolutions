@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -14,7 +14,7 @@ VUM scarica i metadati relativi ad aggiornamenti, patch o estensioni tramite un 
 
 VUM visualizza le baseline gestite dal sistema generate da vSAN. Le baseline gestite dal sistema aggiornano automaticamente il loro contenuto su base periodica, il che richiede che VUM abbia accesso costante a Internet. Le baseline del sistema vSAN vengono in genere aggiornate ogni 24 ore.
 
-Puoi utilizzare le baseline gestite dal sistema per aggiornare i cluster vSAN alle patch, ai driver, agli aggiornamenti critici consigliati o alla versione host ESXi più recente supportata per vSAN. 
+Puoi utilizzare le baseline gestite dal sistema per aggiornare i cluster vSAN alle patch, ai driver, agli aggiornamenti critici consigliati o alla versione host ESXi più recente supportata per vSAN.
 
 Per la maggior parte delle aziende, le impostazioni predefinite di VMware per VUM sono considerate adeguate. Se la tua azienda vuole utilizzare impostazioni diverse, di seguito viene indicato come modificare tali impostazioni.
 
@@ -32,5 +32,5 @@ Per modificare le impostazioni di host e cluster, accesi al client web vSphere, 
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)

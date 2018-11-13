@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -43,7 +43,7 @@ Il seguente flusso di lavoro descrive il processo per eseguire un aggiornamento 
 7. Seleziona le baseline di patch che vuoi includere nel gruppo di baseline.
 8. Facoltativamente, crea una nuova baseline di patch facendo clic su **Create a new Host Patch Baseline** nella parte inferiore della pagina Patches e completa la procedura guidata per la nuova baseline. Fai clic su **Next**.
 9. Seleziona le baseline di estensione da includere nel gruppo di baseline.
-10. Facoltativamente, crea una nuova baseline di estensione facendo clic su **Create a new Extension Baseline** nella parte inferiore della pagina Patches e completa la procedura guidata per la nuova baseline. 
+10. Facoltativamente, crea una nuova baseline di estensione facendo clic su **Create a new Extension Baseline** nella parte inferiore della pagina Patches e completa la procedura guidata per la nuova baseline.
 11. Esamina la pagina Ready to Complete, fai clic su **Finish** e il gruppo di baseline dell'host verrà visualizzato nel riquadro Baseline Groups.
 
 ## Passo 2
@@ -60,5 +60,5 @@ Puoi ora utilizzare questi gruppi di baseline nei processi di scansione, revisio
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)

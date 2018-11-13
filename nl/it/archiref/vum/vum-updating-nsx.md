@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
 # Aggiornamento di NSX
 
-Questa sezione è stata aggiunta a questo documento per darti un'idea del processo di aggiornamento di NSX. Per il processo di aggiornamento della versione NSX che vuoi aggiornare, devi fare riferimento alla guida di VMware. 
+Questa sezione è stata aggiunta a questo documento per darti un'idea del processo di aggiornamento di NSX. Per il processo di aggiornamento della versione NSX che vuoi aggiornare, devi fare riferimento alla guida di VMware.
 
 Se devi aggiornare sia NSX che vSphere, VMware consiglia di completare prima l'aggiornamento di NSX e quindi di completare l'aggiornamento di vSphere poiché i VIB NSX sono specifici della versione di ESXi installata sull'host. Tuttavia, si consiglia di utilizzare VUM come specificato in questo documento; se eseguito manualmente, utilizza il seguente flusso di lavoro, un host alla volta:
 
@@ -51,10 +51,10 @@ Il flusso di lavoro è il seguente:
 7. **Aggiorna il cluster controller NSX**:
   - Apri il client web vSphere e accedi al VCSA.
   - Passa a **Home** > **Networking & Security** > **Installation**, seleziona la **scheda Management** e fai clic su **Upgrade Available** nella colonna Controller Cluster Status.
-  - I controller nel tuo ambiente vengono aggiornati e riavviati uno alla volta. Dopo aver avviato l'aggiornamento, il sistema scarica il file di aggiornamento e aggiorna, riavvia e modifica lo stato di aggiornamento di ciascun controller. 
+  - I controller nel tuo ambiente vengono aggiornati e riavviati uno alla volta. Dopo aver avviato l'aggiornamento, il sistema scarica il file di aggiornamento e aggiorna, riavvia e modifica lo stato di aggiornamento di ciascun controller.
 8. **Aggiorna i cluster host NSX**:
   - Dopo aver aggiornato NSX Manager e i controller NSX, i cluster host vengono aggiornati con i VIB NSX sugli host vSphere ESXi.
-  - Nel client web vSphere, passa a **Home** > **Networking & Security** > **Installation** e seleziona la **scheda Host Preparation**. Per ogni cluster che vuoi aggiornare, fai clic su **Upgrade available**. Lo stato di installazione è Installing. 
+  - Nel client web vSphere, passa a **Home** > **Networking & Security** > **Installation** e seleziona la **scheda Host Preparation**. Per ogni cluster che vuoi aggiornare, fai clic su **Upgrade available**. Lo stato di installazione è Installing.
   - Lo stato di installazione del cluster è _Not Ready_. Fai clic su **Not Ready** per visualizzare ulteriori informazioni e fai clic su **Resolve all** per tentare di completare l'installazione di VIB. L'host viene messo in modalità di manutenzione e riavviato, se necessario, per completare l'aggiornamento. La colonna dello stato di installazione mostra Installing. Al completamento dell'aggiornamento, la colonna dello stato di installazione visualizza un segno di spunta verde e la versione NSX aggiornata.
 9. **Gateway dei servizi edge**:
   - Durante il processo di aggiornamento, viene distribuito un nuovo dispositivo virtuale Edge insieme a quello esistente. Quando il nuovo Edge è pronto, le vNIC del vecchio Edge vengono disconnesse e le vNIC del nuovo Edge vengono connesse. Il nuovo Edge invia quindi pacchetti ARP gratuiti (GARP) per aggiornare la cache ARP degli switch connessi. Quando viene distribuita l'HA, il processo di aggiornamento viene eseguito due volte. Questo processo può influire temporaneamente sull'inoltro dei pacchetti.
@@ -63,5 +63,5 @@ Il flusso di lavoro è il seguente:
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)
