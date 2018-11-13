@@ -33,8 +33,7 @@ Puoi controllare le notifiche per verificare lo stato delle operazioni di sistem
           <dt class="dt dlterm">Errore</dt>
           <dd class="dd">Si verifica un evento di errore durante un'operazione che potrebbe richiedere l'intervento dell'amministratore o dell'utente.</dd>
           <dt class="dt dlterm">Avvertenza</dt>
-          <dd class="dd">Un componente produce errori o non funziona correttamente. Tuttavia, l'errore non interrompere il processo in corso del
-       componente.</dd>
+          <dd class="dd">Un componente produce errori o non funziona correttamente. Tuttavia, l'errore non interrompere il processo in corso del componente.</dd>
             <dt class="dt dlterm">Informativo</dt>
             <dd class="dd">È stata completata un'operazione di sistema o utente. In genere, i seguenti eventi segnalano notifiche informative:
               <ul class="ul">
