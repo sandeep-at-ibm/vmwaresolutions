@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 연결된 스토리지 인프라 디자인
 
@@ -56,7 +60,10 @@ Performance 및 Endurance 스토리지는 예측 가능한 레벨의 성능을 �
 
 이 디자인에서 vCenter Server 솔루션은 연결된 스토리지에 대해 Endurance 스토리지를 제공합니다. 따라서 20GB - 12TB 크기의 Endurance NFS 내보내기를 선택하여 연결할 수 있습니다(자동화를 통해). {{site.data.keyword.cloud_notm}}는 단일 Endurance NFS 내보내기에 연결할 vSphere ESXi 호스트를 64개까지 허용합니다.
 
-Endurance는 다양한 애플리케이션 욕구를 지원하기 위해 세 가지 IOPS 성능 티어에서 사용 가능합니다. NFS 공유가 프로비저닝된 후에는 IOPS를 많이 또는 적게 허용하도록 크기를 조정하거나 재구성할 수 있습니다.
+Endurance는 다양한 애플리케이션 욕구를 지원하기 위해 세 가지 IOPS 성능 티어에서 사용 가능합니다.
+
+NFS 공유가 프로비저닝된 후에는 IOPS를 많이 또는 적게 허용하도록 크기를 조정하거나 재구성할 수 있습니다.
+{:note}
 
 자세한 IOPS 옵션은 [vCenter Server 인스턴스 주문](../../vcenter/vc_orderinginstance.html)의 _스토리지 설정_ 섹션을 참조하십시오.
 
