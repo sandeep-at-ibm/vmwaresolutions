@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server with Hybridity Bundle 인스턴스의 용량 확장 및 축소
 
@@ -60,7 +64,8 @@ lastupdated: "2018-09-27"
 2. ESXi 서버를 제거하는 요청이 처리 중이라는 알림을 이메일로 받습니다. 콘솔에서 ESXi 서버와 연관된 클러스터의 상태가 **수정 중**으로 변경되었습니다.
 3. 일반적으로 30일인 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시 ESXi 서버가 {{site.data.keyword.cloud_notm}} 인프라에서 완전히 재확보됩니다.
 
-   **주의:** 제거된 ESXi 서버에 대한 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시 비용이 청구됩니다.
+   제거된 ESXi 서버에 대한 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시까지 비용이 청구됩니다.
+   {:note}
 
 ### 관련 링크
 

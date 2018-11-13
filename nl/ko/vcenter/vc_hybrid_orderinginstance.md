@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server with Hybridity Bundle 인스턴스 주문
 
@@ -30,7 +34,8 @@ lastupdated: "2018-09-27"
   |완전한 ESXi 서버 이름 | `<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `<n>`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |  
   |PSC FQDN |`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
 
-**중요:** 인스턴스 주문 또는 배치 중에 설정된 값을 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다.
+인스턴스 주문 또는 배치 중에 설정되는 값은 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다.
+{:important}
 
 ## 시스템 설정
 
@@ -63,7 +68,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 VMware 라
 
 ## Bare Metal Server 설정
 
-Bare Metal Server 설정은 사용자의 {{site.data.keyword.CloudDataCent_notm}} 및 사용자 정의된 구성에 따라 달라집니다.
+Bare Metal Server 설정은 {{site.data.keyword.CloudDataCent_notm}}의 선택 및 Bare Metal Server 구성을 기반으로 합니다.
 
 vSAN 구성의 초기 및 사후 배치 클러스터 모두에 네 개의 ESXi 서버가 필요합니다. 모든 ESXi 서버는 동일한 구성을 공유합니다. 사후 배치에서 네 개의 추가 클러스터를 추가할 수 있습니다.
 
@@ -71,20 +76,29 @@ vSAN 구성의 초기 및 사후 배치 클러스터 모두에 네 개의 ESXi �
 
 인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}를 선택하십시오.
 
-### 사용자 정의됨
+### Skylake
 
-사용자 정의된 Bare Metal Server의 CPU 모델 및 RAM 양을 지정하십시오.
+**Skylake**를 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다.
 
-표 2. 사용자 정의된 {{site.data.keyword.baremetal_short}}의 옵션
+표 2. Skylake {{site.data.keyword.baremetal_short}}의 옵션
+
+| CPU 모델 옵션        |RAM 옵션       |
+|:------------- |:------------- |
+|듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+
+### Broadwell
+
+**Broadwell**을 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다.
+
+표 3. Broadwell {{site.data.keyword.baremetal_short}}의 옵션
 
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
 | 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 
 ### Bare Metal Server 수
 
@@ -126,7 +140,8 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때는 다음 네
 * 마지막 문자열은 영문자만 포함할 수 있습니다.
 * 마지막 문자열의 길이는 2 - 24자 사이여야 합니다.
 
-**참고:** 호스트 및 가상 머신(VM)에 대한 FQDN(Fully Qualified Domain Name)의 최대 길이는 50자입니다. 도메인 이름은 이 최대 길이를 포함할 수 있어야 합니다.
+호스트 및 가상 머신(VM)에 대한 FQDN(Fully Qualified Domain Name)의 최대 길이는 50자입니다. 도메인 이름은 이 최대 길이를 포함할 수 있어야 합니다.
+{:note}
 
 ### 공용 또는 사설 네트워크
 
@@ -151,9 +166,10 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때는 다음 네
 
 **기존 VLAN 선택**을 선택하여 기존 공용 및 사설 VLAN을 재사용하며 사용 가능한 VLAN 및 서브넷 중에서 선택하십시오.
 
-**중요:**
+
 * 선택된 VLAN의 방화벽 구성이 관리 데이터 트래픽을 차단하지 않는지 확인하십시오.
 * ESXi 서버는 혼합 팟(Pod) VLAN에서 프로비저닝될 수 없으므로 선택한 모든 VLAN이 동일한 팟(Pod)에 있는지 확인하십시오.
+{:important}
 
 ### DNS 구성
 
@@ -162,7 +178,8 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때는 다음 네
 * **Active Directory/DNS용 단일 공용 Windows VSI**: 호스트 및 VM이 등록된 인스턴스를 위한 DNS로 작동하는 단일 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI가 배치되고 검색될 수 있습니다.
 * **관리 클러스터에 있는 두 개의 고가용성 전용 Windows Server VM**: 두 개의 Microsoft Windows VM이 배치되어 보안 및 강력한 추진력을 향상시킵니다.
 
-**중요:** 두 개의 Microsoft Windows VM을 사용하도록 인스턴스를 구성하는 경우 두 개의 Microsoft Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스, Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스 또는 둘 다 사용하십시오.
+두 개의 Microsoft Windows VM을 사용하도록 인스턴스를 구성하는 경우 두 개의 Microsoft Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스, Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스 또는 둘 다 사용하십시오.
+{:important}
 
 각 라이센스는 하나의 실제 서버에만 지정될 수 있고 최대 두 개의 실제 프로세서에 적용됩니다. 하나의 Standard 에디션 라이센스는 두 개의 프로세서 서버당 두 개의 가상화된 Microsoft Windows VM을 실행할 수 있습니다. 그러므로 두 개의 Microsoft Windows VM이 두 개의 서로 다른 호스트에 배치되기 때문에 두 개의 라이센스가 필요합니다.
 
@@ -191,9 +208,10 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 5. NSX 라이센스 에디션 및 vSAN 라이센스 에디션을 선택하십시오.
 6. Bare Metal Server 설정을 완료하십시오.
   1. {{site.data.keyword.CloudDataCent_notm}}를 선택하여 인스턴스를 호스팅하십시오.
-  2. **사용자 정의됨** CPU 모델 및 **RAM** 양을 선택하십시오.
+  2. **Skylake** 또는 **Broadwell** CPU 모델 및 **RAM** 크기를 선택하십시오.
 
-  **참고:** **Bare Metal Server 수**는 기본적으로 네 개로 설정되어 있으며 변경할 수 없습니다.
+  **Bare Metal Server 수**는 기본적으로 네 개로 설정되어 있으며 변경할 수 없습니다.
+   {:note}
 7. 스토리지 구성을 완료하십시오. 용량 및 캐시 디스크에 대한 디스크 유형과 디스크 수를 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
 8. 네트워크 인터페이스 구성을 완료하십시오.
   1. 호스트 이름 접두부, 하위 도메인 레이블 및 루트 도메인 이름을 입력하십시오.
@@ -226,8 +244,9 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 
 주문한 vCenter Server with Hybridity Bundle 인스턴스를 보고 관리하십시오.
 
-**중요:** {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
+{{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌, {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성되는 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+{:important}
 
 **주의:** {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트(인스턴스 주문 시 {{site.data.keyword.cloud_notm}} 계정에 설치된)를 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server 개요
 
@@ -27,8 +31,7 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 다음 그림은 3 노드 vCenter 배치의 상위 레벨 아키텍처 및 컴포넌트에 대해 설명합니다.
 
 그림 1. 3 노드 클러스터에 대한 vCenter Server 상위 레벨 아키텍처
-
-![vCenter Server 아키텍처](vc_architecture.svg "3-노드 클러스터에 대한 vCenter Server 상위 레벨 아키텍처")
+![vCenter Server 아키텍처](vc_architecture.svg "3 노드 클러스터에 대한 vCenter Server 상위 레벨 아키텍처")
 
 ### 실제 인프라
 
@@ -54,20 +57,26 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 
 다음 컴포넌트는 vCenter Server 인스턴스에 포함됩니다.
 
-**참고:** 표준화된 하드웨어 구성의 가용성 및 가격은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
+표준화된 하드웨어 구성의 가용성 및 가격은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
+{:note}
 
 ### Bare Metal Server
 
 다음 구성 중 하나로 세 개 이상의 {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
-*  **사용자 정의됨**: 사용자가 선택한 CPU 모델 및 RAM 크기를 사용하는 {{site.data.keyword.baremetal_short}}입니다.   
-   * 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
-   * 두 개의 CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
+* **Skylake** 또는 **Broadwell**: 선택한 CPU 모델 및 RAM 크기의 {{site.data.keyword.baremetal_short}}  
+  * 두 개의 CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
+  * 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
 
-     **참고:** vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
-*  **사전 구성됨**: 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
-   * **소형**(듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz / 128GB RAM / 2개의 디스크)
-   * **중형**(듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz / 256GB RAM / 2개의 디스크)
-   * **대형**(듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz / 512GB RAM / 2개의 디스크)
+     vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
+     {:note}
+* **SAP 인증**: 선택한 CPU 모델의 {{site.data.keyword.baremetal_short}}
+  * 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 192GB RAM
+  * 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 384GB RAM
+  * 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 768GB RAM
+* **사전 구성됨**: 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
+  * **소형**(듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz / 128GB RAM / 2개의 디스크)
+  * **중형**(듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz / 256GB RAM / 2개의 디스크)
+  * **대형**(듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz / 512GB RAM / 2개의 디스크)
 
 ### 네트워킹
 
@@ -78,7 +87,8 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 *  두 개의 VMware NSX Edge Services Gateway:
   * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 자세한 정보는 [고객 관리 ESG를 사용하도록 네트워크 구성](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)을 참조하십시오.
 
-    **중요:** 이 ESG에 액세스할 수 없고 ESG를 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트에 대한 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
+    이 ESG는 **mgmt-nsx-edge**로 이름이 지정되고 사용자가 액세스할 수 없으며 사용자는 ESG를 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트에 대한 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
+    {:important}
   * 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽에 대한 보안 고객 관리 VMware NSX Edge Services Gateway. 이 게이트웨이는 VPN 액세스 또는 공용 액세스를 제공하기 위해 사용자가 수정할 수 있는 템플리트로 IBM에 의해 배치됩니다. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
 ### Virtual Server 인스턴스
@@ -101,7 +111,8 @@ vSAN 옵션은 디스크 유형, 크기 및 양에 대한 다양한 옵션을 �
 
   또한 호스트당 960GB의 두 개 캐시 디스크도 주문됩니다.
 
-  **참고:** 3.8TB SSD(Solid State Disk) 드라이브는 데이터 센터에서 일반적으로 사용 가능할 때 지원됩니다.
+  3.8TB SSD(Solid State Disk) 드라이브는 데이터 센터에서 일반적으로 사용 가능하게 되는 경우 지원됩니다.
+  {:note}
 * 고성능 Intel Optane 옵션은 총 10개의 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공합니다. 이 옵션은 CPU 모델에 따라 달라집니다.
 
 #### NFS 스토리지
@@ -136,15 +147,14 @@ NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 
 * 하나의 지원 및 서비스 요금
 * (vSAN 클러스터의 경우) VMware vSAN Advanced 또는 Enterprise 6.6
 
-**중요:** {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
-
-**주의:** 인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
+{{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌, {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성되는 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거
 *  ESXi 서버 추가 또는 제거를 통한 인스턴스 용량의 확장 또는 축소
 *  컴포넌트 전원 끄기
 *  서비스 다시 시작
-
-   이 활동에 대한 예외에는 {{site.data.keyword.slportal}}의 공유 스토리지 파일 공유 관리가 포함됩니다. 이러한 활동에는 공유 스토리지 파일 공유 주문, 삭제(마운트된 경우 데이터 저장소에 영향을 줄 수 있음), 권한 부여 및 마운트가 포함됩니다.
+   이러한 활동의 예외에는 {{site.data.keyword.slportal}}의 공유 스토리지 파일 공유 관리가 포함됩니다. 이러한 활동에는 공유 스토리지 파일 공유 주문, 삭제(마운트된 경우 데이터 저장소에 영향을 줄 수 있음), 권한 부여 및 마운트가 포함됩니다.
+   {:important}
 
 ### 관련 링크
 

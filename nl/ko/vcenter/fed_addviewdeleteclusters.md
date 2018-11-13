@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -38,20 +38,29 @@ VMware Federal 인스턴스에 클러스터를 추가할 때는 다음 설정을
 
 ### Bare Metal Server 설정
 
-#### 사용자 정의됨
+#### Skylake
 
 Bare Metal Server의 CPU 모델 및 RAM을 지정하십시오. 사용 가능한 옵션은 인스턴스가 처음에 배치된 버전에 따라 다를 수 있습니다.
 
-표 1. 사용자 정의된 {{site.data.keyword.baremetal_short}}의 옵션
+표 1. Skylake {{site.data.keyword.baremetal_short}}의 옵션
+
+| CPU 모델 옵션        |RAM 옵션       |
+|:------------- |:------------- |
+|듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+
+#### Broadwell
+
+Bare Metal Server의 CPU 모델 및 RAM을 지정하십시오. 사용 가능한 옵션은 인스턴스가 처음에 배치된 버전에 따라 다를 수 있습니다.
+
+표 2. Broadwell {{site.data.keyword.baremetal_short}}의 옵션
 
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
 | 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 
 #### Bare Metal Server 수
 
@@ -88,7 +97,7 @@ V2.3 이상으로 배치된 VMware Federal 인스턴스의 경우, 클러스터�
 * **성능**: 워크로드 요구사항에 기반한 GB당 IOPS(Input/output Operations Per Second)를 선택하십시오.
 * **NFS 추가**: 다른 구성 설정을 사용하는 개별 파일 공유를 추가하도록 선택하십시오.
 
-표 2. NFS 성능 레벨 옵션
+표 3. NFS 성능 레벨 옵션
 
 |옵션        |세부사항       |
   |:------------- |:------------- |

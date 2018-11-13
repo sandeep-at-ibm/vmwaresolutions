@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server with Hybridity Bundle 인스턴스의 클러스터 추가, 보기 및 삭제
 
@@ -38,21 +42,31 @@ vCenter Server with Hybridity Bundle 인스턴스에 클러스터를 추가할 �
 
 ### Bare Metal Server 설정
 
-#### 사용자 정의됨
-
 Bare Metal Server의 CPU 모델 및 RAM을 지정하십시오. 사용 가능한 옵션은 인스턴스가 처음에 배치된 버전에 따라 다를 수 있습니다.
 
-표 2. 사용자 정의된 Bare Metal Server의 옵션
+#### Skylake
+
+**Skylake**를 선택하는 경우 필요에 따라 CPU 및 RAM 조합을 선택할 수 있습니다.
+
+표 1. Skylake Bare Metal Server의 옵션
+
+| CPU 모델 옵션        |RAM 옵션       |
+|:------------- |:------------- |
+|듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+
+#### Broadwell
+
+**Broadwell**을 선택하는 경우 필요에 따라 CPU 및 RAM 조합을 선택할 수 있습니다.
+
+표 2. Broadwell Bare Metal Server의 옵션
 
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
 | 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |96GB, 192GB, 384GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
-|듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 
 #### Bare Metal Server 수
 
@@ -96,7 +110,8 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 클러스터를 볼 인스턴스를 클릭하십시오.
 
-   **참고:** 인스턴스가 **사용할 준비가 됨** 상태인지 확인하십시오. 그렇지 않으면, 클러스터를 인스턴스에 추가할 수 없습니다.
+   인스턴스가 **사용할 준비가 됨** 상태인지 확인하십시오. 그렇지 않으면, 클러스터를 인스턴스에 추가할 수 없습니다.
+   {:note}
 
 3. 왼쪽 탐색 분할창의 **인프라**를 클릭하고 **클러스터** 테이블의 오른쪽 상단 모서리에 있는 **추가**를 클릭하십시오.
 4. **클러스터 추가** 페이지에서 인스턴스 이름을 입력하십시오.
@@ -116,7 +131,8 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
 1. 클러스터의 배치가 자동으로 시작되며 클러스터의 상태가 **초기화 중**으로 변경됩니다. 인스턴스의 **요약** 페이지에서 배치 히스토리를 보고 배치의 상태를 확인할 수 있습니다.
 2. 클러스터를 사용할 준비가 되면 클러스터의 상태가 **사용할 준비가 됨**으로 변경됩니다. 새로 추가된 클러스터는 vSphere HA(High Availability) 및 vSphere DRS(Distributed Resource Scheduler)로 사용 가능합니다.
 
-**중요:** 클러스터 이름을 변경할 수 없습니다. 클러스터 이름을 변경하면 클러스터의 ESXi 서버 오퍼레이션을 추가하거나 제거하는 데 실패할 수 있습니다.
+클러스터 이름은 변경할 수 없습니다. 클러스터 이름을 변경하면 클러스터의 ESXi 서버 오퍼레이션을 추가하거나 제거하는 데 실패할 수 있습니다.
+{:important}
 
 ## vCenter Server with Hybridity Bundle 인스턴스의 클러스터를 보는 프로시저
 

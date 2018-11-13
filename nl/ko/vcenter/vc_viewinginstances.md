@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server 인스턴스 보기
 
@@ -18,13 +22,14 @@ lastupdated: "2018-09-27"
 
 1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. 콘솔 배너에서 사용자 계정 아이콘을 클릭한 다음 **계정** 필드를 클릭하여 인스턴스를 확인하려는 사용자 계정을 선택하십시오.  
-3. **vCenter Server** 테이블에서, 선택된 사용자 계정에서 프로비저닝된 인스턴스의 목록을 보십시오.
+3. **vCenter Server 인스턴스** 테이블에서, 선택된 사용자 계정에서 프로비저닝된 인스턴스의 목록을 보십시오.
 
 표 1. vCenter Server 인스턴스 항목
 
 |항목        |설명       |  
 |:------------- |:------------- |
 |이름 |인스턴스의 이름입니다. |
+|유형 |vCenter Server 인스턴스의 유형입니다. |
 |버전 |인스턴스가 배치되거나 업그레이드된 릴리스 버전입니다. |  
 |위치 |인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}입니다. |  
 |작성 시간 |인스턴스가 작성된 날짜 및 시간입니다. |
@@ -112,7 +117,8 @@ lastupdated: "2018-09-27"
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔 또는 VMware vSphere Web Client에서 인스턴스를 관리하십시오.
 
-**중요:** 인스턴스 요약 페이지에서 **vCenter 콘솔**을 클릭하여 vSphere Web Client로 이동하고 ESXi 서버 관리를 시작하기 전에 {{site.data.keyword.CloudDataCent_notm}}의 VPN 포털에 로그인해야 합니다. vSphere Web Client에 액세스하기 전에 **vCenter 콘솔** 단추 위에 마우스를 올려 놓고 지시사항에 따라 모든 요구사항을 충족하고 필요한 단계를 완료했는지 확인하십시오.
+인스턴스 요약 페이지에서 **vCenter 콘솔**을 클릭하여 vSphere Web Client로 이동하고 ESXi 서버 관리를 시작하기 전에, {{site.data.keyword.CloudDataCent_notm}}의 VPN 포털에 로그인해야 합니다. vSphere Web Client에 액세스하기 전에 **vCenter 콘솔** 단추 위에 마우스를 올려 놓고 지시사항에 따라 모든 요구사항을 충족하고 필요한 단계를 완료했는지 확인하십시오.
+{:important}
 
 로그인 지시사항을 완료하는 데 도움이 되는 정보는 다음 주제를 검토하십시오.
 *  vSphere Web Client에 액세스하기 전의 요구사항 및 필요한 단계는 [vSphere Web Client에 연결하는 중에 제한시간이 초과함](../vmonic/trbl_timeout_vc_console.html)을 참조하십시오.

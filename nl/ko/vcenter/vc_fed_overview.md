@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -22,7 +22,7 @@ vCenter Server on {{site.data.keyword.cloud_notm}} 및 vCenter Server 아키텍�
 
 ### Bare Metal Server
 
-다음 구성 중 하나로 둘 이상의 사용자 정의된 {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
+다음 구성 중 하나를 사용하여 두 개 이상의 {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
 
 * 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
 * 두 개의 CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
@@ -42,7 +42,7 @@ NFS 스토리지 구성의 경우 {{site.data.keyword.baremetal_short}}의 권�
     **중요:** 이 ESG에 액세스할 수 없고 ESG를 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
   * VPN 액세스 또는 공용 액세스를 제공하도록 사용자가 수정할 수 있는 템플리트로 IBM에서 배치되는 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽을 위한 보안 고객 관리 VMware NSX Edge Services Gateway. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
-  **참고:** 아웃바운드 HTTPS 관리 트래픽을 위한 VMware NSX Edge Services(ESG)가 배치된 VMware Federal 인스턴스를 보호하는 조치의 일부로 제거됩니다. 자세한 정보는 [VMware Federal 인스턴스 보호](vc_fed_securinginstance.html)를 참조하십시오.
+  **참고:** 아웃바운드 HTTPS 관리 트래픽을 위한 VMware NSX Edge Services Gateway(ESG)가 배치된 VMware Federal 인스턴스를 보호하는 조치의 일부로 제거됩니다. 자세한 정보는 [VMware Federal 인스턴스 보호](vc_fed_securinginstance.html)를 참조하십시오.
 
 ### Virtual Server 인스턴스
 

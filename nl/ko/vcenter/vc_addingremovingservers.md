@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server 인스턴스에 대한 용량 확장 및 축소
 
@@ -23,7 +27,7 @@ lastupdated: "2018-09-27"
 * vSAN 스토리지가 포함된 vCenter Server 인스턴스에는 최소 네 개의 ESXi 서버가 있어야 합니다.
 * V2.0 이전에 배치된 vCenter Server 인스턴스의 경우, 최대 32개의 ESXi 서버를 보유하도록 각 클러스터를 확장할 수 있습니다. 한 번에 추가할 수 있는 {{site.data.keyword.baremetal_short}}의 수는 다음과 같습니다.
    * **소형**, **중형** 및 **대형** 구성의 경우, 한 번에 1 - 10개의 ESXi 서버를 추가할 수 있습니다.
-   * **사용자 정의됨** 구성의 경우 한 번에 1 - 20개의 ESXi 서버를 추가할 수 있습니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
+   * **Skylake** 및 **Broadwell** 구성의 경우, 한 번에 1 - 20개의 ESXi 서버를 추가할 수 있습니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
 
 ## ESXi 서버를 추가하는 프로시저
 
@@ -64,7 +68,8 @@ lastupdated: "2018-09-27"
 2. ESXi 서버를 제거하는 요청이 처리 중이라는 알림을 이메일로 받습니다. 콘솔에서 ESXi 서버와 연관된 클러스터의 상태가 **수정 중**으로 변경되었습니다.
 3. 일반적으로 30일인 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시 ESXi 서버가 {{site.data.keyword.cloud_notm}} 인프라에서 완전히 재확보됩니다.
 
-   **주의:** 제거된 ESXi 서버에 대한 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시 비용이 청구됩니다.
+   제거된 ESXi 서버에 대한 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시까지 비용이 청구됩니다.
+   {:note}
 
 ### 관련 링크
 
