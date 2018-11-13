@@ -4,13 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Zerto on IBM Cloud 개요
 
 Zerto on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm}}의 VMware virtual 환경에서 데이터를 보호하고 복구하도록 복제 및 재해 복구 기능을 배치 오퍼링에 통합합니다.
+
+이 서비스는 V1.2 이상에 배치되는 인스턴스에 대해서만 사용 가능합니다. 설치된 현재 Zerto 버전은 6.0 update 3입니다.
+{:note}
 
 ## Zerto on IBM Cloud의 기술 스펙
 
@@ -23,7 +30,7 @@ Zerto on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm
 * 하나의 VSI(Virtual Service Instance) - ZVM(Zerto Virtual Manager)
 * 2 x 2.0GHz 코어
 * 4GB RAM
-* Windows Server 2012 R2 Standard Edition(64비트)
+* Windows Server 2016 Standard Edition(64비트)
 
 ### 스토리지
 
@@ -36,7 +43,7 @@ Zerto on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm
 
 ### 라이센스 및 요금
 
-Zerto Replication V5.5 라이센스
+Zerto Replication V6.0 update 3 라이센스
 
 ### 관련 링크
 

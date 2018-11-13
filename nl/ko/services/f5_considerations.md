@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # F5 on IBM Cloud 개요
 
@@ -14,7 +18,8 @@ F5 on {{site.data.keyword.cloud}} 서비스(F5 BIG-IP® Virtual Edition)는 로�
 
 필요에 따라 이 서비스의 인스턴스를 두 개 이상 설치할 수 있습니다.
 
-**가용성:** 이 서비스는 V1.9 이상 릴리스에 배치된 인스턴스에서만 사용 가능합니다.
+이 서비스는 V1.9 이상에 배치되는 인스턴스에 대해서만 사용 가능합니다. 설치된 현재 BIG-IP VE 버전은 v13.1입니다.
+{:note}
 
 ## F5 on IBM Cloud의 기술 스펙
 
@@ -32,7 +37,8 @@ F5 on {{site.data.keyword.cloud}} 서비스(F5 BIG-IP® Virtual Edition)는 로�
 ### 라이센스 및 요금
 각 VM에 대한 라이센스 요금은 라이센싱 옵션(양호, 우수 또는 최상) 및 선택된 대역폭에 따라 각 청구 주기에 적용됩니다.
 
-**중요:** 서비스 설치 이후에는 라이센싱 레벨을 변경할 수 없습니다. 라이센싱 레벨을 변경하려면 기존 서비스를 제거하고 다른 라이센싱 옵션을 사용하여 서비스를 다시 설치해야 합니다.
+서비스 설치 후에는 라이센싱 레벨을 변경할 수 없습니다. 라이센싱 레벨을 변경하려면 기존 서비스를 제거하고 다른 라이센싱 옵션을 사용하여 서비스를 다시 설치해야 합니다.
+{:important}
 
 ## F5 on IBM Cloud의 설치 고려사항
 
@@ -51,7 +57,7 @@ F5 on {{site.data.keyword.cloud_notm}} 서비스를 설치하기 전에 다음 �
 |5Gbps            |8개의 vCPU, 16GB RAM   |8개의 vCPU, 16GB RAM     |8개의 vCPU, 16GB RAM   |
 |10Gbps           |8개의 vCPU, 16GB RAM   |8개의 vCPU, 16GB RAM     |8개의 vCPU, 16GB RAM   |
 
-**참고:**
+### 추가 고려사항
 
 * F5 BIG–IP는 선택한 최대 대역폭에 따라 어플라이언스 처리량을 제한합니다. 네트워크 성능이 많은 요소의 영향을 받기 때문에 모든 구성 및 토폴로지가 선택한 최대 대역폭을 수행할 수 있는 것은 아닙니다.
 * BIG-IP VE VM의 HA(High Availability) 쌍이 기본 클러스터에만 배치됩니다.
