@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
-# VUM 개요
+# VMware Update Manager 개요
 
-VUM은 vSphere 오브젝트를 업그레이드하고 패치 또는 확장을 적용하는 다단계 프로세스입니다. 이 프로세스를 사용하면 시스템 중단 시간을 최소화하여 업데이트 프로시저를 원활하게 수행할 수 있습니다. 이 프로세스를 살펴보기 전에 다음 용어를 이해해야 합니다.
+VUM(VMware Update Manager)은 다단계 프로세스를 사용하여 vSphere 오브젝트를 업그레이드하고 패치 또는 확장을 적용합니다. 이 프로세스를 사용하면 시스템 중단 시간을 최소화하여 업데이트 프로시저를 원활하게 수행할 수 있습니다. 이 프로세스를 살펴보기 전에 다음 용어를 이해해야 합니다.
 * **인벤토리 오브젝트** - 가상 머신, 가상 어플라이언스 또는 vSphere ESXi 호스트와 같은 vCenter 내의 오브젝트
 * **기준선** - 기준선에는 하나 이상의 패치, 확장, 서비스 팩, 버그 수정 또는 업그레이드의 콜렉션이 포함되며 패치, 확장 또는 업그레이드 기준선으로 분류될 수 있습니다. 두 가지 분류의 기준선(호스트 및 VM/VA)이 있으며 둘 다 VMware에서 사전 정의된 기준선입니다. 필요에 따라 사용자 정의 기준선을 추가할 수 있습니다.
   - 사전 정의된 호스트 기준선:
@@ -63,5 +63,5 @@ VUM 클라이언트 인터페이스는 두 가지 기본 보기를 제공합니�
 
 ### 관련 링크
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* VMware HCX on IBM Cloud 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

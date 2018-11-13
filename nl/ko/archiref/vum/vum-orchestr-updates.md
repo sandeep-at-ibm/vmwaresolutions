@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -43,7 +43,7 @@ vSphere ESXI 호스트가 vSAN 클러스터의 일부이면 조치방안 마법�
 7. 기준선 그룹에 포함할 패치 기준선을 선택하십시오.
 8. 선택적으로 패치 페이지의 맨 아래에서 **새 호스트 패치 기준선 작성**을 클릭하여 새 패치 기준선을 작성한 후 새 기준선 마법사를 완료하십시오. **다음**을 클릭하십시오.
 9. 기준선 그룹에 포함할 확장 기준선을 선택하십시오.
-10. 선택적으로 패치 페이지의 맨 아래에서 **새 확장 기준선 작성**을 클릭하여 새 확장 기준선을 작성한 후 새 기준선 마법사를 완료하십시오. 
+10. 선택적으로 패치 페이지의 맨 아래에서 **새 확장 기준선 작성**을 클릭하여 새 확장 기준선을 작성한 후 새 기준선 마법사를 완료하십시오.
 11. 완료 준비 페이지를 검토하고 **완료**를 클릭하면 호스트 기준선 그룹이 기준선 그룹 분할창에 표시됩니다.
 
 ## 2단계
@@ -60,5 +60,5 @@ vSphere ESXI 호스트가 vSAN 클러스터의 일부이면 조치방안 마법�
 
 ### 관련 링크
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)
