@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ridimensionamento di cluster creati all'esterno della console
 
@@ -24,7 +28,8 @@ Assicurati di aver completato le seguenti attività:
 2. Nella pagina **VMware vSphere on IBM Cloud**, fai clic su **Crea**.  
    Assicurati di essere nella scheda **Crea nuovo** e che **Nuovo cluster** sia visualizzato nell'elenco **Configurazioni cluster**.
 3. Crea un cluster con le stesse impostazioni del cluster esistente creato al di fuori della console {{site.data.keyword.vmwaresolutions_short}}. Per ulteriori informazioni, vedi [Ordine di nuovi cluster vSphere](vs_orderinginstances.html).  
-   **Nota:** per l'interfaccia di rete, per ridimensionare un cluster creato all'esterno della console {{site.data.keyword.vmwaresolutions_short}}, devi selezionare le VLAN esistenti per il cluster.  
+   Per l'interfaccia di rete, per ridimensionare un cluster creato all'esterno della console {{site.data.keyword.vmwaresolutions_short}}, devi selezionare le VLAN esistenti per il cluster.
+   {:note}
 4. Nel riquadro **Riepilogo ordine**, verifica la configurazione del cluster e fai quindi clic su **Salva configurazione**.   
 5. Nella pagina **Introduzione**, fai clic sulla scheda **VMware vSphere on IBM Cloud**.
 6. Nella pagina **VMware vSphere on IBM Cloud**, fai clic su **Crea**.
@@ -37,7 +42,8 @@ Assicurati di aver completato le seguenti attività:
 
 La distribuzione del cluster inizia automaticamente e ricevi un'e-mail di conferma che ti indica che l'ordine è in fase di elaborazione. Quando il cluster è pronto per l'uso, ti viene inviata una notifica via e-mail.
 
-**Nota:** i cluster vSphere non vengono visualizzati nella pagina **Istanze distribuite** insieme alle istanze vCenter Server e Cloud Foundation.
+I cluster vSphere non vengono visualizzati nella pagina **Istanze distribuite** insieme alle istanze vCenter Server e Cloud Foundation.
+{:note}
 
 ### Link correlati
 

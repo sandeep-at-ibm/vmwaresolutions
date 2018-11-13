@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -32,7 +32,7 @@ Eseguendo le attività indicate in questa sezione si rendono disponibili le base
 
 Prima di continuare, assicurati che VCSA sia vCenter 6.5 Patch 2 o versione più recente, in quanto vengono risolti alcuni problemi di utilizzo del proxy. Per ulteriori informazioni, vedi [Aggiornamento di VCSA e vCenter collegati a SSO](vum-updating-vcsa.html).
 
-Per vedere gli aggiornamenti vSAN in VUM viene seguito il flusso di lavoro di vSAN Online Health. Pertanto, vSAN Online Health deve connettersi a https://vcsa.vmware.com e http://www.vmware.com per eseguire questi controlli di integrità online; per abilitare il flusso di lavoro di vSAN Online Health dobbiamo:
+Per vedere gli aggiornamenti vSAN in VUM viene seguito il flusso di lavoro di vSAN Online Health. Pertanto, vSAN Online Health deve connettersi ai siti `vcsa.vmware.com` e `vmware.com` per eseguire questi controlli di integrità online; per abilitare il flusso di lavoro di vSAN Online Health dobbiamo:
 * Configurare il VCSA per utilizzare il proxy.
 * Configurare vSAN per utilizzare il proxy.
 * Abilitare il programma per il miglioramento dell'esperienza del cliente (Customer Experience Improvement Program, CEIP).
@@ -54,7 +54,7 @@ Se i parametri HTTPS non sono impostati, utilizza il seguente comando:
   `proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
 
 ### Configura vSAN per utilizzare il proxy
-1. Passa a **Home** > **Hosts and Clusters**, seleziona il **Cluster vSAN** nel riquadro di navigazione, seleziona la **scheda Configure** e passa a **vSAN** e quindi a **General**. Scorri fino alla sezione della connessione a Internet (Internet Connectivity) e fai clic **Edit**.
+1. Passa a **Home** > **Hosts and Clusters**, seleziona il **Cluster vSAN** nel riquadro di navigazione, seleziona la **scheda Configure** e passa a **vSAN** e quindi a **General**. Scorri fino alla sezione **Internet Connectivity** e fai clic su **Edit**.
 2. Immetti l'indirizzo IP e il numero di porta del proxy e fai clic su **OK**.
 
 ### Abilita il programma per il miglioramento dell'esperienza del cliente (Customer Experience Improvement Program, CEIP)
@@ -136,5 +136,5 @@ Molte attività amministrative di base possono essere eseguite in modo molto pi�
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)

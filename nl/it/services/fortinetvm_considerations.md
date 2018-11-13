@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Panoramica di FortiGate Virtual Appliance on IBM Cloud
 
@@ -14,7 +18,8 @@ Il servizio FortiGate Virtual Appliance on {{site.data.keyword.cloud}} distribui
 
 Puoi installare più istanze di questo servizio a seconda delle necessità. Puoi gestire questo servizio utilizzando il client web FortiOS o l'interfaccia della riga di comando tramite SSH.
 
-**Disponibilità:** questo servizio è disponibile solo per le istanze distribuite nelle release della V2.0 o successive.
+Questo servizio è disponibile solo per le istanze distribuite nelle release della V2.0 o successive. La versione del servizio corrente installata è la 6.0.3.
+{:note}
 
 ## Specifiche tecniche per FortiGate Virtual Appliance on IBM Cloud
 
@@ -38,14 +43,14 @@ L'accesso alla console FortiGate® viene fornito tramite una rete di gestione pr
 
 Le tariffe della licenza per ogni macchina virtuale vengono applicate a ciascun ciclo di fatturazione in base alla dimensione della distribuzione selezionata e al modello di licenza di sottoscrizione mensile.
 
-**Importante:** non puoi modificare il livello di licenza dopo l'installazione del servizio. Per modificare il livello di licenza, devi rimuovere il servizio esistente e reinstallare il servizio utilizzando un'opzione di licenza diversa.
+Non puoi modificare il livello di licenza dopo l'installazione del servizio. Per modificare il livello di licenza, devi rimuovere il servizio esistente e reinstallare il servizio utilizzando un'opzione di licenza diversa.
+{:important}
 
 ## Considerazioni sull'istallazione di FortiGate Virtual Appliance on IBM Cloud
 
 Esamina le seguenti considerazioni prima di installare il servizio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}:
 * Le macchine virtuali (VM) FortiGate vengono distribuite solo nel cluster predefinito.
-* Viene anche prenotato il 100% di CPU e RAM per le due VM FortiGate perché queste VM si trovano nel piano dati delle comunicazioni di rete
-  ed è fondamentale che per loro siano ancora disponibili risorse.
+* Viene anche prenotato il 100% di CPU e RAM per le due VM FortiGate perché queste VM si trovano nel piano dati delle comunicazioni di rete ed è fondamentale che per loro siano ancora disponibili risorse.
 
   Per calcolare la prenotazione di CPU e RAM per una singola VM FortiGate, utilizza la seguente formula:
    * `Prenotazione CPU = velocità CPU del server ESXi * numero di vCPU`

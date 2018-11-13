@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visualizzazione delle istanze vCenter Server
 
@@ -18,13 +22,14 @@ Per visualizzare un riepilogo di tutte le istanze vCenter Server fornite per un 
 
 1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
 2. Dal banner della console, fai clic sull'icona del tuo account utente e quindi sul campo **Account** per selezionare l'account utente per il quale vuoi controllare le istanze.  
-3. Nella tabella **vCenter Server**, visualizza l'elenco delle istanze fornite nell'account utente selezionato.
+3. Nella tabella **Istanze di vCenter Server**, visualizza l'elenco delle istanze fornite nell'account utente selezionato.
 
 Tabella 1. Elementi dell'istanza vCenter Server
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
 | Nome | Il nome dell'istanza |
+| Tipo | Il tipo dell'istanza vCenter Server |
 | Versione | La versione di release in cui è stata distribuita o aggiornata l'istanza |  
 | Ubicazione | Il {{site.data.keyword.CloudDataCent_notm}} in cui è ospitata l'istanza |  
 | Ora di creazione | La data e ora di creazione dell'istanza |
@@ -112,7 +117,8 @@ Se si verificano degli errori durante la distribuzione o l'eliminazione dell'ist
 
 Gestisci le tue istanze dalla console {{site.data.keyword.vmwaresolutions_short}} o dal client web VMware vSphere.
 
-**Importante:** prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza per passare al client web vSphere e iniziare a gestire i tuoi server ESXi, devi accedere al portale VPN del {{site.data.keyword.CloudDataCent_notm}}. Passa con il mouse sul pulsante **Console vCenter** e segui le istruzioni per assicurarti di soddisfare tutti i requisiti e di aver completato i passi necessari prima di accedere al client web vSphere.
+Prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza per passare al client web vSphere e iniziare a gestire i tuoi server ESXi, devi accedere al portale VPN del {{site.data.keyword.CloudDataCent_notm}}. Passa con il mouse sul pulsante **Console vCenter** e segui le istruzioni per assicurarti di soddisfare tutti i requisiti e di aver completato i passi necessari prima di accedere al client web vSphere.
+{:important}
 
 Rivedi i seguenti argomenti per informazioni utili per completare le istruzioni di accesso:
 *  Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](../vmonic/trbl_timeout_vc_console.html).

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -17,14 +17,15 @@ VUM consente la gestione centralizzata e automatizzata delle patch e delle versi
 * Installare e aggiornare software di terze parti sugli host.
 * Aggiornare l'hardware delle macchine virtuali, i VMware Tools e i dispositivi virtuali.
 
-Nota che questo documento descrive anche i processi per mantenere i seguenti componenti della tua istanza VCS:
+Questo documento descrive anche i processi per conservare i seguenti componenti della tua istanza VCS:
 * vCenter Server Appliance
 * NSX
 * vSAN
 
 Questo documento descrive l'utilizzo di un'implementazione del server proxy, basata su CentOS e Squid, per consentire a VUM di accedere ai repository VMware. Quando VUM richiede una risorsa dal server di aggiornamento su VMware, la richiesta viene prima inviata al server proxy e il server proxy invia quindi la richiesta al server di aggiornamento tramite il gateway dei servizi esterno (ESG). Una volta che il server proxy ottiene la risorsa, la invia a VUM.
 
-![Overview_Diagram](vum-vcsproxy.svg)
+Figura 1. Diagramma della panoramica
+![Diagramma della panoramica](vum-vcsproxy.svg)
 
 VCS attualmente distribuisce vSphere 6.5, il che significa che VUM è ora integrato all'interno di vCenter Server Appliance (VCSA) e, poiché il componente client VUM è un plug-in che viene eseguito sul client web vSphere, viene automaticamente abilitato dopo la distribuzione di VCSA. Tuttavia, VUM non avrà accesso a Internet per accedere ai repository VMware.
 
@@ -37,14 +38,14 @@ Anche se VUM può essere configurato per importare gli aggiornamenti da un repos
 Pertanto, nota che in vSphere 6.5 non è più supportato registrare VUM su un VCSA durante l'installazione del server VUM su una macchina Windows separata e non puoi distribuire VUM in una VM all'interno dell'ambiente VCS.
 
 Questo documento è suddiviso nelle seguenti sezioni:
-* [Panoramica di VUM](vum-overview.html) - Questa sezione descrive il processo VUM e introduce i termini chiave necessari per comprendere le operazioni e l'interfaccia utente dello strumento
+* [Panoramica di VMware Update Manager](vum-overview.html) - Questa sezione descrive il processo VUM e introduce i termini chiave necessari per comprendere le operazioni e l'interfaccia utente dello strumento
 * **Installazione, configurazione e utilizzo** - Questa sezione descrive i passi necessari per far funzionare VUM in un'istanza VCS:
   - [Configurazione iniziale](vum-init-config.html) - Un'attività unica per:
       - Configurare la rete NSX per consentire al server proxy di accedere a Internet
       - Installare e configurare un server proxy per l'accesso a Internet per VUM
       - La configurazione iniziale di VUM per utilizzare il server proxy
   - [Raccolta di metadati](vum-metadata.html) - VUM scarica i metadati relativi ad aggiornamenti, patch o estensioni tramite un processo automatico predefinito che puoi modificare. A intervalli regolari configurabili, VUM contatta VMware o fonti di terze parti per raccogliere i metadati più recenti relativi ad aggiornamenti, patch o estensioni disponibili
-  - [Creazione di baseline e collegamento a oggetti di inventario](vum-baselines.html) - Utilizza le baseline e i gruppi di baseline predefiniti o crea quelli personalizzati. Le baseline e i gruppi di baseline vengono quindi collegati agli oggetti di inventario
+  - [Creazione di baseline](vum-baselines.html) - Utilizza le baseline e i gruppi di baseline predefiniti o crea quelli personalizzati. Le baseline e i gruppi di baseline vengono quindi collegati agli oggetti di inventario
   - [Scansione e revisione](vum-scanning.html) - Gli oggetti di inventario vengono sottoposti a scansione e i risultati vengono esaminati per determinare la loro conformità alle baseline e ai gruppi di baseline. I risultati della scansione possono essere filtrati mediante ricerca di testo, selezione del gruppo, selezione della baseline e selezione dello stato di conformità
   - [Preparazione e correzione](vum-staging.html) - Le patch e le estensioni possono essere facoltativamente preparate prima della correzione per garantire che vengano scaricate sull'host. Durante la correzione, VUM applica le patch, le estensioni e gli aggiornamenti agli oggetti di inventario
 
@@ -64,5 +65,5 @@ Questa funzione consente l'aggiornamento automatizzato solo per i componenti di 
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)

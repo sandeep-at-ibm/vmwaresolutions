@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Impostazioni di archiviazione
 
 Questa progettazione supporta il collegamento dell'archiviazione condivisa solo tramite NFS v3. NFS v4 e v4.1 non sono supportati.
 
-**Nota**: tutta l'archiviazione collegata per questa progettazione è limitata all'archiviazione {{site.data.keyword.cloud_notm}} disponibile nello stesso {{site.data.keyword.CloudDataCent_notm}} della soluzione vCenter Server. Inoltre, tutti i dischi virtuali memorizzati nell'archivio dati sono forniti con thin-provisioning per impostazione predefinita.
+Tutta l'archiviazione collegata per questa progettazione è limitata all'archiviazione {{site.data.keyword.cloud_notm}} disponibile nello stesso {{site.data.keyword.CloudDataCent_notm}} della soluzione vCenter Server. Inoltre, tutti i dischi virtuali memorizzati nell'archivio dati sono forniti con thin-provisioning per impostazione predefinita.
+{:note}
 
 L'architettura specifica che gli archivi dati NFS v3 vengono collegati utilizzando il nome DNS dall'archiviazione {{site.data.keyword.cloud_notm}} per connettersi alla condivisione. Inoltre, la condivisione NFS viene collegata a tutti gli host nel cluster di vCenter Server e posizionata in un cluster di archivi dati con Storage DRS abilitato.
 

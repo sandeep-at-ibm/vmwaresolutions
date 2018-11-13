@@ -4,15 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-13"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Progettazione della gestione dell'infrastruttura
 
 La gestione dell'infrastruttura si riferisce ai componenti che stanno gestendo l'infrastruttura VMware. Questa progettazione utilizza una singola istanza PSC (Platform Services Controller) esterna e una singola istanza vCenter Server:
 * vCenter Server è la piattaforma centralizzata per la gestione degli ambienti vSphere ed è uno dei componenti fondamentali di questa soluzione.
-* Il PSC viene utilizzato in questa soluzione per fornire una serie di servizi di infrastruttura tra cui VMware vCenter Single Sign On, il servizio di licenza, il servizio di ricerca e VMware Certificate Authority.
+* Il PSC viene utilizzato in questa soluzione per fornire una serie di servizi dell'infrastruttura tra cui VMware vCenter Single Sign On, il servizio di licenza, il servizio di ricerca e VMware certificate authority.
 
 Le istanze PSC e le istanze vCenter Server sono macchine virtuali (VM) separate.
 
@@ -20,7 +24,8 @@ Le istanze PSC e le istanze vCenter Server sono macchine virtuali (VM) separate.
 
 Questa progettazione distribuisce un singolo PSC esterno come dispositivo virtuale su una sottorete portatile nella VLAN privata associata alle VM di gestione. Il suo gateway predefinito è impostato sul BCR (back-end customer router). Il dispositivo virtuale è configurato con le specifiche indicate nella seguente tabella.
 
-**Nota**: questi valori vengono impostati al momento della distribuzione e non possono essere modificati.
+Questi valori vengono impostati al momento della distribuzione e non possono essere modificati.
+{:note}
 
 Tabella 1. Specifiche del PSC (Platform Services Controller)
 
@@ -56,19 +61,21 @@ La configurazione di vCenter Server utilizza un database PostgreSQL integrato e 
 
 ### Specifica del cluster vCenter Server
 
-Questa progettazione ti consente di raggruppare gli host vSphere ESXi forniti tramite la soluzione. Prima che i cluster possano essere creati, tuttavia, viene creato un oggetto data center che indica l'ubicazione degli host vSphere ESXi nonché il pod all'interno del data center. Un cluster viene creato dopo la creazione dell'oggetto data center. Il cluster viene distribuito con VMware vSphere High Availability (HA) e VMware vSphere Distributed Resource Scheduler (DRS) abilitati.
+Con questa progettazione, puoi raggruppare gli host vSphere ESXi forniti tramite la soluzione. Tuttavia, prima che i cluster possano essere creati viene creato un oggetto data center che indica l'ubicazione degli host vSphere ESXi nonché il pod all'interno del data center. Un cluster viene creato dopo la creazione dell'oggetto data center. Il cluster viene distribuito con VMware vSphere High Availability (HA) e VMware vSphere Distributed Resource Scheduler (DRS) abilitati.
 
 ### vSphere Distributed Resource Scheduler
 
 Questa progettazione utilizza vSphere Distributed Resource Scheduling (DRS) nel cluster iniziale per posizionare le VM e utilizza DRS nei cluster aggiuntivi per migrare dinamicamente le VM per ottenere dei cluster bilanciati. Il livello di automazione è impostato sull'automazione completa in modo che le raccomandazioni di posizionamento e migrazione iniziali vengano eseguite automaticamente da vSphere. Inoltre, la soglia di migrazione è impostata su moderata in modo che vCenter applichi le raccomandazioni di priorità 1, 2, 3 per ottenere almeno un miglioramento decente nel bilanciamento del carico del cluster.
 
-**Nota:** in questa progettazione non viene utilizzato il risparmio energia tramite la funzione **Distributed Power Management**.
+In questa progettazione non viene utilizzato il risparmio energia tramite la funzione **Distributed Power Management**.
+{:note}
 
 ### vSphere High Availability
 
-Questa progettazione utilizza vSphere High Availability (HA) nel cluster iniziale e nei cluster aggiuntivi per rilevare gli errori di calcolo e ripristinare le VM eseguite in un cluster. La funzione vSphere HA in questa progettazione è configurata con le opzioni **Host Monitoring** e **Admission Control** abilitate all'interno del cluster. Inoltre, il cluster iniziale prenota le risorse di un nodo come capacità di riserva per la politica di controllo di ammissione.
+Questa progettazione utilizza vSphere High Availability (HA) nel cluster iniziale e nei cluster aggiuntivi per rilevare gli errori di calcolo e ripristinare le VM eseguite in un cluster. La funzione vSphere HA in questa progettazione è configurata con le opzioni **Host Monitoring** e **Admission Control** abilitate nel cluster. Inoltre, il cluster iniziale prenota le risorse di un nodo come capacità di riserva per la politica di controllo di ammissione.
 
-**Nota**: sei responsabile di regolare la politica di controllo di ammissione quando il cluster viene successivamente espanso o contratto.
+Sei responsabile di regolare la politica di controllo di ammissione quando il cluster viene successivamente espanso o contratto.
+{:note}
 
 Per impostazione predefinita, l'opzione **VM restart priority** è impostata su medio e l'opzione **Host isolation response** è disabilitata. Inoltre, **VM monitoring** è disabilitata e la funzione **Datastore Heartbeating** è configurata per includere uno qualsiasi degli archivi dati del cluster. Questo approccio utilizza, se presenti, gli archivi dati NAS.
 
@@ -79,7 +86,7 @@ Il punto cardine di queste soluzioni è l'automazione. L'automazione offre i seg
 * Riduce drasticamente i tempi di distribuzione.
 * Garantisce che l'istanza VMware sia distribuita in modo coerente.
 
-Le VM {{site.data.keyword.IBM}} CloudBuilder, IBM CloudDriver e SDDC Manager lavorano insieme per presentare una nuova istanza VMware ed eseguire funzioni di gestione del ciclo di vita.
+Le VM {{site.data.keyword.IBM}} CloudBuilder, IBM CloudDriver e SDDC Manager lavorano insieme per avviare una nuova istanza VMware ed eseguire funzioni di gestione del ciclo di vita.
 
 ### IBM CloudBuilder e IBM CloudDriver
 
@@ -98,7 +105,7 @@ Le VSI (Virtual Server Instance) IBM CloudBuilder e IBM CloudDriver sono compone
 
 Per le istanze Cloud Foundation, la VM SDDC Manager è un componente sviluppato e gestito da VMware. Rimane come parte dell'istanza durante tutto il suo ciclo di vita. È responsabile delle seguenti funzioni del ciclo di vita delle istanze:
 * Gestione dei componenti VMware: vCenter Server, PSC (Platform Services Controller), vSAN e NSX, compresa l'assegnazione degli indirizzi IP e la risoluzione del nome host.
-* Espansione e rimozione degli host ESXi all'interno del cluster, inclusi eventuali servizi interessati, quali VTEP NSX, vSAN, pool di risorse.
+* Espansione e rimozione degli host ESXi all'interno del cluster, inclusi eventuali servizi interessati, quali VTEP NSX, vSAN e pool di risorse.
 
 Per le istanze vCenter Server, queste attività vengono eseguite da IBM CloudDriver in quanto non esiste alcun SDDC Manager.
 

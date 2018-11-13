@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server with Hybridity Bundle
 
@@ -38,21 +42,31 @@ Se distribuisci il cluster in un diverso {{site.data.keyword.CloudDataCent_notm}
 
 ### Impostazioni di Bare Metal Server
 
-#### Personalizzato
-
 Specifica il modello di CPU e la RAM per il Bare Metal Server. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
 
-Tabella 2. Opzioni per i server bare metal personalizzati
+#### Skylake
+
+Se selezioni **Skylake**, puoi scegliere la combinazione di CPU e RAM in base alle tue esigenze.
+
+Tabella 1. Opzioni per i server bare metal Skylake
+
+| Opzioni del modello CPU        | Opzioni RAM       |
+|:------------- |:------------- |
+| Processore Dual Intel Xeon Silver 4110 / 16 core totali, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+#### Broadwell
+
+Se selezioni **Broadwell**, puoi scegliere la combinazione di CPU e RAM in base alle tue esigenze.
+
+Tabella 2. Opzioni per i server bare metal Broadwell
 
 | Opzioni del modello CPU        | Opzioni RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 96 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Silver 4110 / 16 core totali, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### Numero di server Bare Metal
 
@@ -96,7 +110,8 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza per visualizzare i cluster al suo interno.
 
-   **Nota:** assicurati che lo stato dell'istanza sia **Pronto per l'utilizzo**. Altrimenti, non puoi aggiungere i cluster all'istanza.
+   Assicurati che lo stato dell'istanza sia **Pronto per l'utilizzo**. Altrimenti, non puoi aggiungere i cluster all'istanza.
+   {:note}
 
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra e quindi su **Aggiungi** nell'angolo superiore destro della tabella **CLUSTER**.
 4. Nella pagina **Aggiungi cluster**, immetti il nome del cluster.
@@ -116,7 +131,8 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 1. La distribuzione del cluster viene avviata automaticamente e lo stato del cluster viene modificato in **Inizializzazione**. Puoi controllare lo stato della distribuzione visualizzando la cronologia di distribuzione nella pagina **Riepilogo** dell'istanza.
 2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere High Availability (HA) e vSphere Distributed Resource Scheduler (DRS).
 
-**Importante:** non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
+Non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
+{:important}
 
 ## Procedura per visualizzare i cluster nelle istanze vCenter Server with Hybridity Bundle
 

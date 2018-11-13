@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Applicazione di aggiornamenti alle istanze vCenter Server with Hybridity Bundle
 
@@ -43,14 +45,16 @@ Tabella 1. Livelli di aggiornamento e impatto
    Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la VSI (Virtual Server Instance) IBM CloudDriver, a causa di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'aggiornamento potrebbe non riuscire.
 4. Fai clic su **Aggiorna e applica patch** nel riquadro di navigazione a sinistra.
 
-   **Nota:** la pagina **Aggiorna e applica patch** contiene solo i pacchetti per l'aggiornamento dei componenti di gestione IBM e non gli aggiornamenti di VMware. {{site.data.keyword.vmwaresolutions_short}} applica gli aggiornamenti di VMware per le seguenti operazioni:
+   La pagina **Aggiorna e applica patch** contiene solo i pacchetti per l'aggiornamento dei componenti di gestione IBM e non gli aggiornamenti di VMware. {{site.data.keyword.vmwaresolutions_short}} applica gli aggiornamenti di VMware per le seguenti operazioni:
    * Quando viene distribuita una nuova istanza vCenter Server.
    * Quando vengono aggiunti nuovi server ESXi.
    * Quando vengono aggiunti nuovi cluster.
+   {:note}
 
 5. Per gli aggiornamenti della licenza, fai clic su **Aggiorna**. Dall'elenco, seleziona l'edizione a cui vuoi aggiornare e fai clic su **Aggiorna**. I downgrade dell'edizione della licenza non sono disponibili.
 
-   **Nota:** l'aggiornamento della licenza sostituisce tutte le licenze NSX esistenti sull'istanza. Potrebbero essere addebitati costi aggiuntivi derivanti da una sovrapposizione di vecchie e nuove licenze se esegui l'aggiornamento nel mezzo di un ciclo di fatturazione. Per evitare costi aggiuntivi, si consiglia di aggiornare la licenza alla fine del ciclo di fatturazione.
+   L'aggiornamento della licenza sostituisce tutte le licenze NSX esistenti sull'istanza. Potrebbero essere addebitati costi aggiuntivi derivanti da una sovrapposizione di vecchie e nuove licenze se esegui l'aggiornamento nel mezzo di un ciclo di fatturazione. Per evitare costi aggiuntivi, si consiglia di aggiornare la licenza alla fine del ciclo di fatturazione.
+   {:note}
 
 6. Per gli aggiornamenti software, fai clic sulla freccia in giù per espandere l'aggiornamento che vuoi applicare e quindi completa uno dei seguenti passi:
    *  Per avviare immediatamente l'aggiornamento, fai clic sull'icona del menu di overflow nella colonna **Azioni** della voce di aggiornamento, quindi fai clic su **Aggiorna ora**.

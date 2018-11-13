@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ordine di istanze Cloud Foundation
 
@@ -18,7 +22,8 @@ Assicurati di aver completato le seguenti attività:
 *  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](../vmonic/useraccount.html).
 *  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per le istanze Cloud Foundation](sd_planning.html).
 
-**Importante:** non modificare alcun valore impostato durante l'ordine o la distribuzione dell'istanza. La modifica può rendere inutilizzabile la tua istanza. Ad esempio, se la rete pubblica si interrompe, se i server e le VSI (Virtual Server Instance) vanno dietro una fornitura media di Vyatta o se la VSI di IBM CloudBuilder si arresta o viene eliminata. Inoltre, non modificare il nome dell'istanza, il nome del dominio root, l'etichetta del dominio secondario o il prefisso del nome host, dopo che l'istanza è stata distribuita.
+Non modificare alcun valore impostato durante l'ordine o la distribuzione dell'istanza. La modifica può rendere inutilizzabile la tua istanza. Ad esempio, se la rete pubblica si interrompe, se i server e le VSI (Virtual Server Instance) vanno dietro una fornitura media di Vyatta o se la VSI di IBM CloudBuilder si arresta o viene eliminata. Inoltre, non modificare il nome dell'istanza, il nome del dominio root, l'etichetta del dominio secondario o il prefisso del nome host, dopo che l'istanza è stata distribuita.
+{:important}
 
 ## Impostazioni di sistema
 
@@ -54,6 +59,34 @@ Per gli utenti non Business Partner, puoi utilizzare le licenze VMware fornite d
 
 Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui deve essere ospitata l'istanza.
 
+### Skylake
+
+Se selezioni **Skylake**, puoi scegliere la combinazione di CPU e RAM in base alle tue esigenze.
+
+Seleziona il modello di CPU e la RAM per il Bare Metal Server.
+
+Tabella 1. Opzioni per Skylake {{site.data.keyword.baremetal_short}} 
+
+| Opzioni del modello CPU        | Opzioni RAM       |
+|:------------- |:------------- |
+| Processore Dual Intel Xeon Silver 4110 / 16 core totali, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+### Broadwell
+
+Se selezioni **Broadwell**, puoi scegliere la combinazione di CPU e RAM in base alle tue esigenze.
+
+Seleziona il modello di CPU e la RAM per il Bare Metal Server.
+
+Tabella 1. Opzioni per Broadwell {{site.data.keyword.baremetal_short}} 
+
+| Opzioni del modello CPU        | Opzioni RAM       |
+|:------------- |:------------- |
+| Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+
 ### Preconfigurato
 
 Se selezioni **Preconfigurato**, non puoi modificare le impostazioni di CPU o RAM.
@@ -61,23 +94,6 @@ Se selezioni **Preconfigurato**, non puoi modificare le impostazioni di CPU o RA
 In base ai tuoi requisiti, seleziona una configurazione di Bare Metal Server:
   * Small (Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz / 128 GB di RAM / 12 unità)
   * Large (Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz / 512 GB di RAM / 12 unità)
-
-### Personalizzato
-
-Se selezioni **Personalizzato**, puoi scegliere la combinazione di CPU e RAM in base alle tue esigenze.
-
-Seleziona il modello di CPU e la RAM per il Bare Metal Server.
-
-Tabella 1. Opzioni per i {{site.data.keyword.baremetal_short}} personalizzati
-
-| Opzioni del modello CPU        | Opzioni RAM       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Silver 4110 / 16 core totali, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 ### Numero di server Bare Metal
 
@@ -91,7 +107,7 @@ Se selezioni la configurazione **Preconfigurato** di Bare Metal Server, le impos
   * Per la configurazione **Small** di Bare Metal Server, vengono ordinate due unità disco SED SSD da 1,9 TB.
   * Per la configurazione **Large** di Bare Metal Server, vengono ordinate quattro unità disco SED SSD da 3,8 TB.
 
-Se selezioni la configurazione **Personalizzato** di Bare Metal Server, puoi personalizzare l'archiviazione vSAN per la tua istanza. Specifica le seguenti impostazioni vSAN:
+Se selezioni la configurazione **Skylake** o **Broadwell** di Bare Metal Server, puoi personalizzare l'archiviazione vSAN per la tua istanza. Specifica le seguenti impostazioni vSAN:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
 * Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
@@ -125,7 +141,8 @@ Il nome del dominio root deve rispettare i seguenti requisiti:
 * L'ultima stringa può contenere solo caratteri alfabetici.
 * La lunghezza dell'ultima stringa deve essere compresa tra 2 e 24 caratteri.
 
-**Nota:** la lunghezza massima del nome di dominio completo (o FQDN, Fully Qualified Domain Name) per gli host e le VM (macchine virtuali) è di 50 caratteri. I nomi di dominio devono essere adattati a questa lunghezza massima.
+La lunghezza massima del nome di dominio completo (o FQDN, Fully Qualified Domain Name) per gli host e le VM (macchine virtuali) è di 50 caratteri. I nomi di dominio devono essere adattati a questa lunghezza massima.
+{:note}
 
 ### Formato del valore per le impostazioni di rete
 
@@ -193,11 +210,11 @@ In base alla tua configurazione selezionata per l'istanza e i servizi aggiuntivi
 6. Completa le impostazioni di Bare Metal Server:
    1. Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui ospitare l'istanza.
    2. Seleziona la configurazione di Bare Metal Server.
+      * Se selezioni **Skylake** o **Broadwell**, specifica il modello di CPU e la dimensione della RAM.
       * Se selezioni **Preconfigurato**, scegli una configurazione tra **Small** e **Large**.
-      * Se selezioni **Personalizzato**, specifica il modello di CPU e la dimensione della RAM.
 7. Completa la configurazione di archiviazione.
+   * Se hai selezionato **Skylake** o **Broadwell** per la configurazione Bare Metal, specifica i tipi di disco per i dischi di capacità vSAN e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
    * Se hai selezionato **Preconfigurato** per la configurazione Bare Metal, le impostazioni di archiviazione per le configurazioni **Small** e **Large** standardizzate di Bare Metal Server non possono essere modificate.
-   * Se hai selezionato **Personalizzato** per la configurazione Bare Metal, specifica i tipi di disco per i dischi di capacità vSAN e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
 8. Completa le impostazioni dell'interfaccia di rete:
    1. Immetti il prefisso del nome host, l'etichetta del dominio secondario e il nome del dominio root. Per un'istanza secondaria, il nome di dominio viene completato automaticamente.
    2. Seleziona le impostazioni della VLAN:
@@ -228,7 +245,8 @@ Se ordini un'istanza secondaria, il client web VMware vSphere per l'istanza prim
 
 Visualizza e gestisci l'istanza Cloud Foundation che hai ordinato.
 
-**Importante:** devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo dalla console {{site.data.keyword.vmwaresolutions_short}}, non dal {{site.data.keyword.slportal}} o da qualsiasi altro mezzo al di fuori della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
+Devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo all'esterno della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
+{:important}
 
 **ATTENZIONE:** la gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}} (installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza) dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
 

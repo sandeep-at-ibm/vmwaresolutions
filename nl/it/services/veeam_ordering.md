@@ -10,7 +10,7 @@ lastupdated: "2018-09-25"
 
 # Ordine di Veeam on IBM Cloud
 
-Puoi ordinare il servizio Veeam on {{site.data.keyword.cloud}} quando ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente. 
+Puoi ordinare il servizio Veeam on {{site.data.keyword.cloud}} quando ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
 
 ## Ordine di Veeam on IBM Cloud per una nuova istanza
 

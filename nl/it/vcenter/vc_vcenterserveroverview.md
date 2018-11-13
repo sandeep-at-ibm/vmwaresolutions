@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Panoramica di vCenter Server
 
@@ -27,7 +31,6 @@ Puoi aggiungere i servizi gestiti IBM se vuoi scaricare le operazioni quotidiane
 Il seguente grafico illustra l'architettura di alto livello e i componenti di una distribuzione vCenter Server a tre nodi.
 
 Figura 1. Architettura di alto livello di vCenter Server per un cluster a tre nodi
-
 ![Architettura di vCenter Server](vc_architecture.svg "Architettura di alto livello di vCenter Server per un cluster a tre nodi")
 
 ### Infrastruttura fisica
@@ -54,20 +57,26 @@ Per ulteriori informazioni sull'architettura, vedi [Riferimento all'architettura
 
 Nella tua istanza vCenter Server sono inclusi i seguenti componenti.
 
-**Nota:** la disponibilità e il prezzo delle configurazioni hardware standardizzate possono variare in base al {{site.data.keyword.CloudDataCent_notm}} selezionato per la distribuzione.
+La disponibilità e il prezzo delle configurazioni hardware standardizzate possono variare in base al {{site.data.keyword.CloudDataCent_notm}} selezionato per la distribuzione.
+{:note}
 
 ### Bare Metal Server
 
 Puoi ordinare tre o più {{site.data.keyword.baremetal_short}} con una delle seguenti configurazioni:
-*  **Personalizzato**: {{site.data.keyword.baremetal_short}} con il modello CPU e la dimensione della RAM da te selezionati.   
-   * 2-CPU Intel Broadwell (Intel Xeon E5-2600 v4 series)
-   * 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series)
+* **Skylake** o **Broadwell**: {{site.data.keyword.baremetal_short}} con il modello CPU e la dimensione della RAM da te selezionati.  
+  * 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series)
+  * 2-CPU Intel Broadwell (Intel Xeon E5-2600 v4 series)
 
-     **Nota:** se intendi utilizzare l'archiviazione vSAN, la configurazione richiede quattro {{site.data.keyword.baremetal_short}}.
-*  **Preconfigurato**: 2-CPU Intel Broadwell (Intel Xeon E5-2600 v4 series)
-   * **Small** (Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz / 128 GB di RAM / 2 dischi)
-   * **Medium** (Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz / 256 GB di RAM / 2 dischi)
-   * **Large** (Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz / 512 GB di RAM / 2 dischi).
+     Se intendi utilizzare l'archiviazione vSAN, la configurazione richiede quattro {{site.data.keyword.baremetal_short}}.
+     {:note}
+* **Certificato SAP**: {{site.data.keyword.baremetal_short}} con il modello CPU da te selezionato.
+  * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 192 GB RAM
+  * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 384 GB RAM
+  * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 768 GB RAM
+* **Preconfigurato**: 2-CPU Intel Broadwell (Intel Xeon E5-2600 v4 series)
+  * **Small** (Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz / 128 GB di RAM / 2 dischi)
+  * **Medium** (Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz / 256 GB di RAM / 2 dischi)
+  * **Large** (Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz / 512 GB di RAM / 2 dischi).
 
 ### Rete
 
@@ -78,7 +87,8 @@ Vengono ordinati i seguenti componenti di rete:
 *  Due gateway dei servizi edge VMware NSX:
   * Un gateway dei servizi edge (ESG) VMware NSX sicuro dei servizi di gestione per il traffico di gestione HTTPS in uscita, distribuito da IBM come parte della tipologia di rete di gestione. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. Per ulteriori informazioni, vedi [Configurazione della rete per utilizzare l'ESG gestito dal cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-    **Importante:** questo ESG non è accessibile a te e non puoi usarlo. Se lo modifichi, potresti non essere in grado di gestire l'istanza vCenter Server dalla console {{site.data.keyword.vmwaresolutions_short}}. Inoltre, l'utilizzo di un firewall o la disabilitazione delle comunicazioni ESG ai componenti di gestione IBM esterni potrebbe comportare l'inutilizzabilità di {{site.data.keyword.vmwaresolutions_short}}.
+    Questo ESG è denominato **mgmt-nsx-edge**, non puoi accedervi e usarlo. Se lo modifichi, potresti non essere in grado di gestire l'istanza vCenter Server dalla console {{site.data.keyword.vmwaresolutions_short}}. Inoltre, l'utilizzo di un firewall o la disabilitazione delle comunicazioni ESG ai componenti di gestione IBM esterni potrebbe comportare l'inutilizzabilità di {{site.data.keyword.vmwaresolutions_short}}.
+    {:important}
   * Un gateway dei servizi edge VMware NSX sicuro gestito dal cliente per il traffico del carico di lavoro HTTPS in uscita e in entrata. Questo gateway è distribuito da IBM come template che puoi modificare per fornire l'accesso VPN o l'accesso pubblico. Per ulteriori informazioni, vedi [L'edge NSX gestito dal cliente rappresenta un rischio per la sicurezza?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 ### VSI (Virtual Server Instance)
@@ -101,7 +111,8 @@ L'opzione vSAN offre configurazioni personalizzate, con varie opzioni per tipo, 
 
   Inoltre, vengono ordinati anche due dischi di cache di 960 GB per ciascun host.
 
-  **Nota:** le unità SSD (Solid State Disk) da 3,8 TB saranno supportate una volta rese generalmente disponibili in un data center.
+  Le unità SSD (Solid State Disk) da 3,8 TB saranno supportate una volta rese generalmente disponibili in un data center.
+{:note}
 * Opzione Alte prestazioni con Intel Optane, che fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità. Questa opzione dipende dal modello di CPU.
 
 #### Archiviazione NFS
@@ -136,15 +147,14 @@ Un Bare Metal Server con la configurazione presentata in [Specifiche tecniche pe
 * Una tariffa per supporto e servizi
 * (Per i cluster vSAN) VMware vSAN Advanced o Enterprise 6.6
 
-**Importante:** devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo dalla console {{site.data.keyword.vmwaresolutions_short}}, non dal {{site.data.keyword.slportal}} o da qualsiasi altro mezzo al di fuori della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
-
-**ATTENZIONE:** la gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}}, installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza, dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
+Devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo all'esterno della console. Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
+La gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}}, installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza, dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
 *  Aggiunta, modifica, restituzione o rimozione dei componenti
 *  Espansione o contrazione della capacità dell'istanza mediante l'aggiunta o la rimozione di server ESXi
 *  Spegnimento dei componenti
 *  Riavvio dei servizi
-
    Le eccezioni a queste attività includono la gestione delle condivisioni file di archiviazione condivisa dal {{site.data.keyword.slportal}}. Tali attività includono: l'ordine, l'eliminazione (che potrebbe influire sugli archivi di dati, se montati), l'autorizzazione e il montaggio di condivisioni file di archiviazione condivisa.
+   {:important}
 
 ### Link correlati
 

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Progettazione dell'infrastruttura fisica
 
@@ -29,14 +33,17 @@ Per ulteriori informazioni sull'archiviazione, vedi [Architettura dell'archiviaz
 
 L'host fisico si riferisce ai {{site.data.keyword.baremetal_short}} nell'ambiente che fornisce risorse di calcolo. I {{site.data.keyword.baremetal_short}} applicati in questa soluzione sono certificati da VMware ed elencati nella guida [VMware HCG](http://www.vmware.com/resources/compatibility/search.php).
 
-Le configurazioni del server disponibili nella soluzione soddisfano o superano i requisiti minimi per installare, configurare e gestire vSphere ESXi. Sono disponibili varie configurazioni per soddisfare diversi requisiti. Per l'elenco dettagliato delle specifiche esatte utilizzate per la soluzione VMware on {{site.data.keyword.cloud_notm}}, vedi la distinta base per l'[istanza Cloud Foundation](../../sddc/sd_bom.html) o l'[istanza vCenter Server](../../vcenter/vc_bom.html). Nota che i {{site.data.keyword.baremetal_short}} risiedono in {{site.data.keyword.cloud_notm}}.
+Le configurazioni del server disponibili nella soluzione soddisfano o superano i requisiti minimi per installare, configurare e gestire vSphere ESXi. Sono disponibili varie configurazioni per soddisfare diversi requisiti. Per l'elenco dettagliato delle specifiche esatte utilizzate per la soluzione VMware on {{site.data.keyword.cloud_notm}}, vedi la distinta base per l'[istanza Cloud Foundation](../../sddc/sd_bom.html) o l'[istanza vCenter Server](../../vcenter/vc_bom.html).
+
+I {{site.data.keyword.baremetal_short}} risiedono in {{site.data.keyword.cloud_notm}}.
+{:note}
 
 Ogni istanza Cloud Foundation inizia con una distribuzione a 4 host e ogni istanza vCenter Server inizia con una distribuzione a 3 o 4 host a seconda della scelta della soluzione di archiviazione.
 
-L'host fisico utilizza due dischi collegati localmente da assegnare all'hypervisor vSphere ESXi. Puoi assegnare altri dischi utilizzando vSAN come descritto nella sezione _Progettazione dell'archiviazione fisica_ presente in questa pagina o utilizzando NetApp ONTAP come descritto in [Architettura di NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Ogni
+L'host fisico utilizza due dischi collegati localmente da assegnare all'hypervisor vSphere ESXi. Puoi assegnare altri dischi utilizzando vSAN come descritto nella sezione _Progettazione dell'archiviazione fisica_ o utilizzando NetApp ONTAP come descritto in [Architettura di NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Ogni
 host fisico ha connessioni di rete ridondanti da 10 Gbps per l'accesso alla rete pubblica e privata.
 
-Le specifiche tecniche del Bare Metal Server sono le seguenti:
+Il Bare Metal Server ha le seguenti specifiche:
 * CPU: Dual Intel Xeon, configurazione core e velocità variabile
 * Memoria: configurazione variabile, da 128 GB o superiore
 * Rete: 4 x 10 Gbps
@@ -71,7 +78,7 @@ Oltre alle reti pubbliche e private, ogni server {{site.data.keyword.cloud_notm}
 ### Blocchi di IP primari e portatili
 
 {{site.data.keyword.cloud_notm}} assegna due tipi di indirizzi IP da utilizzare all'interno dell'infrastruttura {{site.data.keyword.cloud_notm}}:
-* Gli indirizzi IP primari sono assegnati a dispositivi, server virtuali e Bare Metal forniti da {{site.data.keyword.cloud_notm}}. In questi blocchi, non devi assegnare alcun indirizzo IP.
+* Gli indirizzi IP primari sono assegnati a dispositivi, server virtuali e Bare Metal forniti da {{site.data.keyword.cloud_notm}}. Non assegnare alcun indirizzo IP in questi blocchi.
 * Gli indirizzi IP portatili ti vengono forniti per l'assegnazione e la gestione in base alle esigenze.
 
 Gli indirizzi IP primari o portatili possono essere resi instradabili a qualsiasi VLAN all'interno dell'account del cliente quando lo **spanning della VLAN** è abilitato all'interno del {{site.data.keyword.slportal}} o l'account è configurato come account **VRF (Virtual Routing and Forwarding)**.
@@ -84,13 +91,13 @@ Per consentire la connessione trasparente tra varie sottoreti in cui risiedono i
 
 ### VRF (Virtual Routing and Forwarding)
 
-Puoi anche configurare l'account del {{site.data.keyword.slportal}} come account VRF per fornire funzionalità simili allo spanning della VLAN, consentendo l'instradamento automatico tra i blocchi di IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
+Puoi anche configurare l'account del {{site.data.keyword.slportal}} come account VRF per fornire funzioni simili allo spanning della VLAN, consentendo l'instradamento automatico tra i blocchi di IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
 
 La console {{site.data.keyword.vmwaresolutions_short}} non è in grado di rilevare se VRF è abilitato nel {{site.data.keyword.slportal}}. Riceverai un'avvertenza che ti ricorda di verificare di aver abilitato lo **spanning della VLAN** o VRF nel tuo account del {{site.data.keyword.slportal}}.
 
 ### Connessioni all'host fisico
 
-Ogni host fisico nella progettazione ha due coppie ridondanti di connessioni Ethernet da 10 Gbps in ogni switch (pubblico e privato) ToR (Top of Rack) di {{site.data.keyword.cloud_notm}}. Gli adattatori sono configurati come connessioni individuali (non collegate) per un totale di 4 connessioni da 10 Gbps. Ciò consente alle connessioni della scheda dell'interfaccia di rete (NIC) di funzionare indipendentemente l'una dall'altra.
+Ogni host fisico nella progettazione ha due coppie ridondanti di connessioni Ethernet da 10-Gbps in ogni switch ToR (Top of Rack) {{site.data.keyword.cloud_notm}} (pubblico e privato). Gli adattatori sono configurati come connessioni individuali (non collegate) per un totale di 4 connessioni da 10-Gbps. Ciò consente alle connessioni della scheda dell'interfaccia di rete (NIC) di funzionare indipendentemente l'una dall'altra.
 
 Figura 1. Connessioni NIC all'host fisico
 
@@ -140,7 +147,7 @@ La progettazione dell'archiviazione fisica consiste nella configurazione dei dis
 
 ### Dischi del sistema operativo
 
-L'hypervisor vSphere ESXi è progettato per essere installato in una ubicazione persistente. Di conseguenza, gli host fisici contengono due dischi SATA da 1 TB nella configurazione RAID-1 per supportare la ridondanza per l'hypervisor vSphere ESXi.
+L'hypervisor vSphere ESXi è progettato per essere installato in una ubicazione persistente. Di conseguenza, gli host fisici contengono due dischi SATA da 1-TB nella configurazione RAID-1 per supportare la ridondanza per l'hypervisor vSphere ESXi.
 
 ### Archiviazione delle macchine virtuali
 
@@ -154,7 +161,7 @@ Per ulteriori informazioni sulle configurazioni supportate, vedi la distinta bas
 
 ### Archiviazione a livello di file condivisa tra gli host
 
-Quando si utilizza l'archiviazione a livello di file condivisa, una condivisione NFS da 2 TB viene collegata agli host che comprendono il cluster VMware iniziale. Questa condivisione, che è nota come condivisione di gestione, viene utilizzata per i componenti di gestione come VMware vCenter Server, PSC (Platform Services Controller) e VMware NSX. L'archiviazione viene collegata utilizzando il protocollo NFSv3 e può supportare fino a 4000 IOPS.
+Quando si utilizza l'archiviazione a livello di file condivisa, una condivisione NFS da 2-TB è collegata agli host che comprendono il cluster VMware iniziale. Questa condivisione, che è nota come condivisione di gestione, viene utilizzata per i componenti di gestione come VMware vCenter Server, PSC (Platform Services Controller) e VMware NSX. L'archiviazione viene collegata utilizzando il protocollo NFSv3 e può supportare fino a 4000 IOPS.
 
 Figura 2. Condivisioni NFS collegate alla distribuzione VMware
 

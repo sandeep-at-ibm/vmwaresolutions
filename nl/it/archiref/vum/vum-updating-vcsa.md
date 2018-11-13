@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
-#	Aggiornamento di VCSA e vCenter collegati a SSO
+# Aggiornamento di VCSA e vCenter collegati a SSO
 
 ## Aggiornamento di VCSA
 
@@ -30,7 +30,7 @@ Per aggiornare il VCSA, completa la seguente procedura:
 9. Accedi di nuovo al client web vSphere e verifica eventuali errori. Esegui una scansione manuale di VUM, fai clic su **Home** > **Hosts and Cluster**, seleziona un data center o un cluster, seleziona la **scheda Update Manager** e fai quindi clic su **Scan for Updates**. Se questo produce un errore, consulta l'articolo [Resetting VMware Update Manager database on a vCenter Server appliance 6.5 (2147284)](https://kb.vmware.com/s/article/2147284).
 10. Dopo il test, se devi annullare le modifiche, ripristina l'istantanea o ripristina il vCenter con un backup precedente.
 
-## vCenter collegati a SSO
+## vCenter collegati a SSO 
 
 Se hai istanze VCS primarie e secondarie, i tuoi VCSA vengono configurati in un singolo dominio SSO (Single Sign-On) di vCenter. Ogni VCSA avrà un'istanza VUM distribuita. Le proprietà di configurazione che modifichi vengono applicate solo all'istanza VUM specificata e non vengono propagate alle altre istanze nel gruppo.
 
@@ -38,5 +38,5 @@ Puoi specificare un'istanza VUM selezionando il nome del VCSA con il quale è re
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)

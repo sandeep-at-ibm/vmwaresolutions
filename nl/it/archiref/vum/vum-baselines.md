@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-03"
 
 Le baseline contengono una raccolta di una o più patch, estensioni, service pack, correzioni di bug o aggiornamenti e possono essere classificate come baseline di patch, estensione o aggiornamento. I gruppi di baseline vengono assemblate dalle baseline esistenti. I gruppi di baseline dell'host possono contenere una singola baseline di aggiornamento e varie baseline di patch ed estensione. I gruppi di baseline di macchine virtuali e dispositivi virtuali possono contenere fino a tre baseline di aggiornamento: una baseline di aggiornamento per VMware Tools, una baseline di aggiornamento per l'hardware della macchina virtuale e una baseline di aggiornamento per il dispositivo virtuale.
 
-VUM include baseline predefinite che non possono essere modificate o eliminate. Puoi utilizzare le baseline predefinite oppure creare baseline di patch, estensione e aggiornamento che soddisfino i tuoi criteri. Le baseline personalizzate che crei e le baseline predefinite possono essere combinate in gruppi di baseline. 
+VUM include baseline predefinite che non possono essere modificate o eliminate. Puoi utilizzare le baseline predefinite oppure creare baseline di patch, estensione e aggiornamento che soddisfino i tuoi criteri. Le baseline personalizzate che crei e le baseline predefinite possono essere combinate in gruppi di baseline.
 
 VUM include baseline predefinite che puoi utilizzare per eseguire la scansione di uno qualsiasi dei seguenti dispositivi per determinare se gli host nel tuo ambiente sono aggiornati con le patch più recenti o se i dispositivi virtuali e le macchine virtuali sono aggiornati alla versione più recente:
 * Qualsiasi macchina virtuale
@@ -34,5 +34,5 @@ Per utilizzare le baseline e i gruppi di baseline, devi collegarli agli oggetti 
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)

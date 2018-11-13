@@ -153,10 +153,7 @@ Tabella 6. Dettagli del server ESXi di un cluster NetApp ONTAP Select
 
 | Elemento        | Descrizione       |  
 |:------------|:----------------- |
-| Nome | Il nome del server ESXi nel formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, dove:<br><br>`host_prefix` è il prefisso del nome host,
-       `n` è la sequenza del server,
-       `subdomain_label` è l'etichetta del dominio secondario e
-       `root_domain` è il nome del dominio root. |
+| Nome | Il nome del server ESXi nel formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, dove:<br><br>`host_prefix` è il prefisso del nome host, `n` è la sequenza del server, `subdomain_label` è l'etichetta del dominio secondario e `root_domain` è il nome del dominio root. |
 | Versione | La versione del server ESXi. |
 | Credenziali | Il nome utente e la password per accedere al server ESXi. |
 | IP privato | L'indirizzo IP privato del server ESXi. |

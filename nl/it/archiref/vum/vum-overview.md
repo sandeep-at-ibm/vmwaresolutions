@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
-# Panoramica di VUM
+# Panoramica di VMware Update Manager
 
-VUM utilizza un processo a più fasi per aggiornare gli oggetti vSphere e applicare patch o estensioni. Questo processo consente una procedura di aggiornamento uniforme con un tempo di inattività minimo del sistema. Prima di esaminare questo processo, dobbiamo comprendere i seguenti termini:
+VMware Update Manager (VUM) utilizza un processo a più fasi per aggiornare gli oggetti vSphere e applicare patch o estensioni. Questo processo consente una procedura di aggiornamento uniforme con un tempo di inattività minimo del sistema. Prima di esaminare questo processo, dobbiamo comprendere i seguenti termini:
 * **Oggetto di inventario** - Un oggetto all'interno di vCenter come, ad esempio, la macchina virtuale, i dispositivi virtuali o l'host vSphere ESXi
 * **Baseline** - Le baseline contengono una raccolta di una o più patch, estensioni, service pack, correzioni di bug o aggiornamenti e possono essere classificate come baseline di patch, estensione o aggiornamento. Esistono due classificazioni di baseline: host e VM/VA che hanno entrambe baseline predefinite da VMware ed è possibile aggiungere quelle personalizzate secondo necessità:
   - Baseline host predefinite:
@@ -23,7 +23,7 @@ VUM utilizza un processo a più fasi per aggiornare gli oggetti vSphere e applic
     - VMware Tools Upgrade to Match Host
 
 * **Gruppo di baseline** - Un insieme di baseline non conflittuali, che combina diversi tipi di baseline e che in base alle quali scansiona e corregge un oggetto di inventario nel complesso. Se il gruppo di baseline contiene sia baseline di aggiornamento che di patch o estensione, l'aggiornamento viene eseguito per primo.
-* **Scansione** - La scansione è il processo in cui uno o più oggetti di inventario vengono valutati in base alla baseline o al gruppo di baseline. 
+* **Scansione** - La scansione è il processo in cui uno o più oggetti di inventario vengono valutati in base alla baseline o al gruppo di baseline.
 * **Preparazione** - La preparazione garantisce che le patch e le estensioni vengano scaricate negli host vSphere ESXi prima della correzione ed è un passo facoltativo per ridurre al minimo il tempo in cui gli host restano in modalità di manutenzione.
 * **Correzione** - La correzione è il processo in cui VUM applica patch, estensioni e aggiornamenti a uno o più oggetti di inventario.
 
@@ -63,5 +63,5 @@ Per accedere alla vista di conformità di un oggetto di inventario selezionato, 
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)

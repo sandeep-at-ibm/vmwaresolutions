@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -22,7 +22,7 @@ Sono inclusi i seguenti componenti:
 
 ### Bare Metal Server
 
-Puoi ordinare due o più {{site.data.keyword.baremetal_short}} personalizzati con una delle seguenti configurazioni:
+Puoi ordinare due o più {{site.data.keyword.baremetal_short}} con una delle seguenti configurazioni:
 
 * 2-CPU Intel Broadwell (Intel Xeon E5-2600 v4 series)
 * 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series)
@@ -39,7 +39,7 @@ Vengono ordinati i seguenti componenti di rete:
 *  Due gateway dei servizi edge VMware NSX:
   * Un gateway dei servizi edge (ESG) VMware NSX sicuro dei servizi di gestione per il traffico di gestione HTTPS in uscita, distribuito da IBM come parte della tipologia di rete di gestione. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. Per ulteriori informazioni, vedi [Configurazione della rete per utilizzare l'ESG gestito dal cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-    **Importante:** questo ESG non è accessibile a te e non puoi usarlo. Se lo modifichi, potresti non essere in grado di gestire l'istanza vCenter Server dalla console {{site.data.keyword.vmwaresolutions_short}}. Inoltre, l'utilizzo di un firewall o la disabilitazione delle comunicazioni ESG ai componenti di gestione IBM esterni comporterà l'inutilizzabilità di {{site.data.keyword.vmwaresolutions_short}}.
+    **Importante:** non puoi accedere a questo ESG e non puoi usarlo. Se lo modifichi, potresti non essere in grado di gestire l'istanza vCenter Server dalla console {{site.data.keyword.vmwaresolutions_short}}. Inoltre, l'utilizzo di un firewall o la disabilitazione delle comunicazioni ESG ai componenti di gestione IBM esterni comporterà l'inutilizzabilità di {{site.data.keyword.vmwaresolutions_short}}.
   * Un gateway dei servizi edge VMware NSX sicuro gestito dal cliente per il traffico del carico di lavoro HTTPS in uscita e in entrata, distribuito da IBM come template che puoi modificare per fornire l'accesso VPN o l'accesso pubblico. Per ulteriori informazioni, vedi [L'edge NSX gestito dal cliente rappresenta un rischio per la sicurezza?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
   **Nota:** il gateway dei servizi edge (ESG) VMware NSX per il traffico di gestione HTTPS in uscita viene rimosso come parte dell'azione per proteggere la tua istanza VMware Federal distribuita. Per ulteriori informazioni, vedi [Protezione di istanze VMware Federal](vc_fed_securinginstance.html).

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Progettazione di servizi comuni
 
@@ -14,15 +18,16 @@ I servizi comuni forniscono i servizi che vengono utilizzati da altri servizi ne
 
 ## Servizi di identità e accesso
 
-In questa progettazione, Microsoft Active Directory (AD) viene utilizzato per la gestione delle identità. La progettazione distribuisce una o due macchine virtuali Windows Active Directory come parte dell'automazione della distribuzione di Cloud Foundation e vCenter Server. vCenter verrà configurato per utilizzare l'autenticazione AD.
+In questa progettazione, Microsoft Active Directory (AD) viene utilizzato per la gestione delle identità. La progettazione distribuisce una o due macchine virtuali Windows Active Directory come parte dell'automazione della distribuzione di Cloud Foundation e vCenter Server. vCenter viene configurato per utilizzare l'autenticazione AD.
 
 ### Microsoft Active Directory
 
 Per impostazione predefinita, una singola VSI di Active Directory viene distribuita sull'infrastruttura {{site.data.keyword.cloud}}. La progettazione offre inoltre la possibilità di distribuire due server Microsoft Active Directory altamente disponibili come VM di Windows Server dedicate nel cluster di gestione.
 
-**Nota**: se scegli questa opzione, sei responsabile di fornire licenze e attivazione Microsoft.
+Se scegli questa opzione, sei responsabile di fornire licenze e attivazione Microsoft.
+{:note}
 
-Active Directory serve per autenticare gli accessi per gestire solo l'istanza VMware e non per ospitare gli utenti finali dei carichi di lavoro nelle istanze distribuite. Il nome di dominio root dell'insieme di strutture del server Active Directory corrisponde al nome di dominio DNS da te specificato. Questo nome di dominio è specificato solo per l'istanza primaria di Cloud Foundation e vCenter Server se sono collegate più istanze. Nel caso di istanze collegate, ciascuna istanza contiene un server Active Directory che si trova nell'anello di replica root dell'insieme di strutture. Anche i file di zona DNS vengono replicati sui server Active Directory.
+Active Directory serve per autenticare gli accessi per gestire solo l'istanza VMware e non per ospitare gli utenti dei carichi di lavoro nelle istanze distribuite. Il nome di dominio root dell'insieme di strutture del server Active Directory corrisponde al nome di dominio DNS da te specificato. Questo nome di dominio è specificato solo per l'istanza primaria di Cloud Foundation e vCenter Server se sono collegate più istanze. Per le istanze collegate, ciascuna istanza contiene un server Active Directory che si trova nell'anello di replica root dell'insieme di strutture. Anche i file di zona DNS vengono replicati sui server Active Directory.
 
 ### Dominio SSO vSphere
 
@@ -40,9 +45,9 @@ Il DNS in questa progettazione è solo per i componenti di infrastruttura e gest
 La distribuzione di vCenter Server utilizza i server Active Directory distribuiti come server DNS per l'istanza. Tutti i componenti distribuiti (vCenter, PSC, NSX e host ESXi) sono configurati in modo da puntare al server Active Directory come proprio server DNS predefinito. Puoi personalizzare la configurazione della zona DNS se la tua configurazione non interferisce con quella dei componenti distribuiti.
 
 Questa progettazione integra i servizi DNS sui server Active Directory tramite la seguente configurazione:
-* Puoi specificare la struttura del dominio. Il nome di dominio può essere un numero qualsiasi di livelli (fino al massimo che i componenti di vCenter Server gestiranno). Il livello più basso è il dominio secondario per l'istanza.
-   * Il nome di dominio DNS che specifichi verrà utilizzato come nome di dominio dell'insieme di strutture root di Active Directory. Ad esempio, se il nome del dominio DNS è `cloud.ibm.com`, il nome di dominio root dell'insieme di strutture di Active Directory sarà anche `cloud.ibm.com`. Questo nome di dominio DNS e Active Directory è uguale per tutte le istanze vCenter Server collegate.
-   * Puoi anche specificare un nome di dominio secondario per l'istanza. Il nome del dominio secondario deve essere univoco tra tutte le istanze vCenter Server collegate.
+* Puoi specificare la struttura del dominio. Il nome di dominio può essere un numero qualsiasi di livelli (fino al massimo che i componenti di vCenter Server possono gestire). Il livello più basso è il dominio secondario per l'istanza.
+   * Il nome di dominio DNS che specifichi viene utilizzato come nome di dominio dell'insieme di strutture root di Active Directory. Ad esempio, se il nome del dominio DNS è `cloud.ibm.com`, il nome di dominio root dell'insieme di strutture di Active Directory sarà anche `cloud.ibm.com`. Questo nome di dominio DNS e Active Directory è uguale per tutte le istanze vCenter Server collegate.
+   * Inoltre, puoi specificare un nome di dominio secondario per l'istanza. Il nome del dominio secondario deve essere univoco tra tutte le istanze vCenter Server collegate.
 * I server DNS di Active Directory sono configurati per essere autorevoli sia per lo spazio del dominio che del dominio secondario DNS.
 * I server DNS di Active Directory sono configurati per puntare ai server DNS di {{site.data.keyword.cloud_notm}} per tutte le altre zone.
 * Qualsiasi istanza da integrare a un'istanza di destinazione esistente deve utilizzare lo stesso nome di dominio dell'istanza primaria.
@@ -57,7 +62,7 @@ Questa progettazione integra i servizi DNS sui server Active Directory con la VM
 * Puoi specificare la struttura del dominio. Il nome di dominio può essere un numero qualsiasi di livelli (fino al massimo che i componenti di Cloud Foundation gestiranno).
 * Il livello più basso è il dominio secondario di cui è autorevole l'SDDC Manager.
 * Il nome di dominio DNS che specifichi verrà utilizzato come nome di dominio dell'insieme di strutture root di Active Directory. Ad esempio, se il nome del dominio DNS è `cloud.ibm.com`, la root dell'insieme di strutture del dominio Active Directory sarà `cloud.ibm.com`. Questo dominio DNS e Active Directory è uguale per tutte le istanze Cloud Foundation collegate.
-* Puoi anche specificare un nome di dominio secondario per l'istanza. Il nome del dominio secondario deve essere univoco tra tutte le istanze Cloud Foundation collegate.  
+* Inoltre, puoi specificare un nome di dominio secondario per l'istanza. Il nome del dominio secondario deve essere univoco tra tutte le istanze Cloud Foundation collegate.  
 * La configurazione DNS di SDDC Manager viene modificata in modo che punti ai server Active Directory per tutte le zone tranne che per la zona di cui è responsabile.
 * I server DNS di Active Directory sono configurati per essere autorevoli per lo spazio del dominio DNS al di sopra del dominio secondario delle istanze SDDC Manager e Cloud Foundation.
 * I server DNS di Active Directory sono configurati per puntare all'indirizzo IP di SDDC Manager per la delega del dominio secondario della zona di cui è autorevole l'SDDC Manager.
