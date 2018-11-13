@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # FortiGate Virtual Appliance on IBM Cloud 개요
 
@@ -14,7 +18,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 서비스는 가상 �
 
 필요에 따라 이 서비스의 다중 인스턴스를 설치할 수 있습니다. SSH를 통해 FortiOS Web Client 또는 명령 인터페이스를 사용하여 이 서비스를 관리할 수 있습니다.
 
-**가용성:** 이 서비스는 V2.0 이상 릴리스로 배치된 인스턴스에서만 사용 가능합니다.
+이 서비스는 V2.0 이상 릴리스에 배치된 인스턴스에 대해서만 사용 가능합니다. 설치된 현재 서비스 버전은 6.0.3입니다.
+{:note}
 
 ## FortiGate Virtual Appliance on IBM Cloud의 기술 스펙
 
@@ -38,7 +43,8 @@ FortiGate® 콘솔에 대한 액세스는 사설 관리 네트워크를 통해 �
 
 각 가상 머신에 대한 라이센스 요금은 선택된 배치 크기와 월별 구독 라이센스 모델에 따라 각 청구 주기에 적용됩니다.
 
-**중요:** 서비스 설치 이후에는 라이센싱 레벨을 변경할 수 없습니다. 라이센싱 레벨을 변경하려면 기존 서비스를 제거하고 다른 라이센싱 옵션을 사용하여 서비스를 다시 설치해야 합니다.
+서비스 설치 후에는 라이센싱 레벨을 변경할 수 없습니다. 라이센싱 레벨을 변경하려면 기존 서비스를 제거하고 다른 라이센싱 옵션을 사용하여 서비스를 다시 설치해야 합니다.
+{:important}
 
 ## FortiGate Virtual Appliance on IBM Cloud 설치 시 고려사항
 
