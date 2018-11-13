@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-07-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ridimensionamento della capacità
 
@@ -40,7 +44,8 @@ Questo metodo ti consente di ottenere i seguenti risultati:
 * Segregazione dei carichi di lavoro in base ad altre caratteristiche, ad esempio, il cluster di database Microsoft SQL.
 * Distribuzione di applicazioni in topologie altamente disponibili.
 
-**Nota**: quando il cluster iniziale viene convertito in un cluster di sola gestione, la migrazione dei carichi di lavoro esistenti implicherà dei passi manuali che dovranno essere eseguiti dall'utente. Ciò potrebbe comportare il ricollegamento degli archivi dati dal nuovo cluster o, in alternativa, la migrazione dell'archiviazione. Potrebbe essere necessario modificare gli indirizzi IP dei carichi di lavoro se il nuovo cluster risiede in un pod {{site.data.keyword.cloud_notm}} diverso o se gli viene assegnato un ID VLAN differente.
+Quando il cluster iniziale viene convertito in un cluster di sola gestione, la migrazione dei carichi di lavoro esistenti implicherà dei passi manuali che dovranno essere eseguiti dall'utente. Ciò potrebbe comportare il ricollegamento degli archivi dati dal nuovo cluster o, in alternativa, la migrazione dell'archiviazione. Potrebbe essere necessario modificare gli indirizzi IP dei carichi di lavoro se il nuovo cluster risiede in un pod {{site.data.keyword.cloud_notm}} diverso o se gli viene assegnato un ID VLAN differente.
+{:note}
 
 ## Aggiunta di host ESXi nei cluster esistenti
 

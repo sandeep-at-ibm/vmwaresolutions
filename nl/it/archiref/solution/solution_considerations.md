@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Considerazioni sulla post-distribuzione per la tua istanza VMware
 
@@ -14,7 +18,8 @@ Le offerte {{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server e V
 
 Esamina le seguenti considerazioni per comprendere le tue responsabilità per la gestione e il funzionamento dell'istanza prima e dopo la sua distribuzione.
 
-**Nota:** il seguente elenco non è completo. Per ulteriori informazioni, vedi [Servizi gestiti IBM](../../services/managing_imi.html).
+Il seguente elenco non è completo. Per ulteriori informazioni, vedi [Servizi gestiti IBM](../../services/managing_imi.html).
+{:note}
 
 ## Accesso all'account IBM Cloud
 
