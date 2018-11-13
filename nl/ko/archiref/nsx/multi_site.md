@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-10-05"
 교차 vCenter NSX 기능을 사용하면 최대 9개의 NSX Manager를 기본, 보조 관계로 링크할 수 있습니다(기본 1개 및 보조 8개). 교차 vCenter NSX가 작동하기 위해 vCenter Server가 ELM(Enhanced Linked Mode) 관계로 설정될 필요는 없지만 다음과 같은 이점을 제공합니다.
 
 * 싱글 사인온(SSO) 인증 정보를 사용하여 간소화된 기본, 보조 관계 작성
-* vCenter Server 및 Cloud Foundation 자동화를 통해 함께 링크된 모든 사이트에 대한 DNS 이름 해석 구성
+* 함께 링크되는 모든 사이트의 DNS 이름 분석에 대한 vCenter Server 및 Cloud Foundation 자동화 구성
 * 모든 사이트에서 NSX 및 일반 vCenter 기능 모두에 대한 단일 분할창 방식(Single Pane of Glass)의 관리
 
 ## 다중 사이트 예
