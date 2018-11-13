@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware vSphere on IBM Cloud 개요
 
@@ -22,7 +26,8 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}는 선택적 VMware 컴포넌
 
 VMware vSphere on {{site.data.keyword.cloud_notm}}의 컴포넌트를 검토하십시오.
 
-**참고:** 표준화된 하드웨어 구성의 가용성 및 가격은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
+표준화된 하드웨어 구성의 가용성 및 가격은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
+{:note}
 
 ### VMware 컴포넌트
 
@@ -62,7 +67,8 @@ VMware vSAN 컴포넌트가 선택될 때 vSAN 구성을 위한 사용자 정의
 
   또한 호스트당 960GB의 두 개 캐시 디스크도 주문됩니다.
 
-  **참고:** 3.8TB SSD(Solid State Disk) 드라이브는 데이터 센터에서 일반적으로 사용 가능하게 되는 경우 지원됩니다.
+  3.8TB SSD(Solid State Disk) 드라이브는 데이터 센터에서 일반적으로 사용 가능하게 되는 경우 지원됩니다.
+  {:note}
 * 고성능 Intel Optane 옵션은 총 10개의 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공합니다. 이 옵션은 CPU 모델에 따라 달라집니다.
 
 ## vSphere 클러스터 확장 노드의 기술 스펙
@@ -82,7 +88,8 @@ VMware vSAN 컴포넌트가 선택될 때 vSAN 구성을 위한 사용자 정의
 * VMware vSphere Enterprise Plus 6.0u2 또는 6.5u1의 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server  
 * [VMware vSphere on {{site.data.keyword.cloud_notm}} 클러스터의 기술 스펙](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)에 표시된 선택적 VMware 컴포넌트입니다.
 
-**중요:** {{site.data.keyword.slportal}}에서만 주문되고 {{site.data.keyword.cloud_notm}} 계정에 제공된 ESXi 서버, 선택적 VMware 컴포넌트 및 추가 하드웨어를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 새 클러스터를 작성한 후에는 콘솔로 돌아가서 저장된 구성을 사용하여 새 클러스터를 스케일링할 수 있습니다. 자세한 정보는 [기존 vSphere 클러스터 스케일링](vs_scalingexistingclusters.html)을 참조하십시오.
+{{site.data.keyword.slportal}}에서만 {{site.data.keyword.cloud_notm}} 계정에 주문되어 제공되는 ESXi 서버, 선택적 VMware 컴포넌트 및 추가적인 하드웨어를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 새 클러스터를 작성한 후에는 콘솔로 돌아가서 저장된 구성을 사용하여 새 클러스터를 스케일링할 수 있습니다. 자세한 정보는 [기존 vSphere 클러스터 스케일링](vs_scalingexistingclusters.html)을 참조하십시오.
+{:important}
 
 ### 관련 링크
 
