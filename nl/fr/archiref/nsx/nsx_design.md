@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-01"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Conception de NSX Edge Services Gateway (ESG)
 
@@ -16,7 +20,8 @@ La solution NSX Edge Services Gateway (ESG) sur {{site.data.keyword.cloud}} offr
 
 L'architecture interne spécifie le déploiement des composants NSX Edge nécessaires dans un pool de ressources soit dans un cluster convergé VMware Cloud Foundation ou dans un cluster VMware vCenter Server.
 
-**Remarque :** VMware vSAN est facultatif dans la figure suivante.
+VMware vSAN est facultatif dans la figure suivante.
+{:note}
 
 Figure 1. Services de mise en réseau de cloud sur {{site.data.keyword.cloud_notm}}
 
