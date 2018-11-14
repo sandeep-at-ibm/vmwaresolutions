@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 物理基础架构设计
 
@@ -16,7 +20,7 @@ lastupdated: "2018-09-25"
   <dt class="dt dlterm">物理计算</dt>
   <dd class="dd">物理计算提供虚拟化基础架构使用的物理处理和内存。对于此设计，计算组件由 {{site.data.keyword.baremetal_long}} 提供，并在 [VMware 硬件兼容性指南 (HCG)](https://www.vmware.com/resources/compatibility/search.php) 中列出。</dd>
   <dt class="dt dlterm">物理存储</dt>
-  <dd class="dd">物理存储提供虚拟化基础架构使用的原始存储容量。存储组件由 {{site.data.keyword.baremetal_short}} 或由使用 NFS V3 的共享网络连接的存储器 (NAS) 阵列提供。</dd>
+  <dd class="dd">物理存储器提供虚拟化基础架构使用的原始存储容量。存储组件由 {{site.data.keyword.baremetal_short}} 或由使用 NFS V3 的共享网络连接的存储器 (NAS) 阵列提供。</dd>
   <dt class="dt dlterm">物理网络</dt>
   <dd class="dd">物理网络提供环境的网络连接，该连接接着由网络虚拟化使用。网络由 {{site.data.keyword.cloud_notm}} 服务网络提供，并且包含 DNS 和 NTP 等额外服务。</dd>
 </dl>
@@ -29,13 +33,16 @@ lastupdated: "2018-09-25"
 
 物理主机是指环境中提供计算资源的 {{site.data.keyword.baremetal_short}}。在此解决方案中应用的 {{site.data.keyword.baremetal_short}} 由 VMware 进行认证，并在 [VMware HCG](http://www.vmware.com/resources/compatibility/search.php) 中列出。
 
-解决方案中可用的服务器配置满足或超过安装、配置和管理 vSphere ESXi 的最低需求。有各种配置可用于满足不同需求。有关用于 VMware on {{site.data.keyword.cloud_notm}} 解决方案的确切规范的详细列表，请参阅 [Cloud Foundation 实例](../../sddc/sd_bom.html)或 [vCenter Server 实例](../../vcenter/vc_bom.html)的材料清单。请注意，{{site.data.keyword.baremetal_short}} 位于 {{site.data.keyword.cloud_notm}} 中。
+解决方案中可用的服务器配置满足或超过安装、配置和管理 vSphere ESXi 的最低需求。有各种配置可用于满足不同需求。有关用于 VMware on {{site.data.keyword.cloud_notm}} 解决方案的确切规范的详细列表，请参阅 [Cloud Foundation 实例](../../sddc/sd_bom.html)或 [vCenter Server 实例](../../vcenter/vc_bom.html)的材料清单。
+
+{{site.data.keyword.baremetal_short}} 位于 {{site.data.keyword.cloud_notm}} 中。
+{:note}
 
 每个 Cloud Foundation 实例都以 4 主机部署开始，每个 vCenter Server 实例以 3 主机或 4 主机部署开始，具体取决于存储解决方案的选择。
 
-物理主机采用要分配给 vSphere ESXi 系统管理程序的两个本地连接的磁盘。您可以使用 vSAN（如本页上_物理存储器设计_部分中所述）或使用 NetApp ONTAP（如 [NetApp ONTAP Select 体系结构](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)中所述）来分配更多磁盘。每个物理主机都具有冗余的 10 Gbps 网络连接，支持公用和专用网络访问。
+物理主机采用要分配给 vSphere ESXi 系统管理程序的两个本地连接的磁盘。您可以使用 vSAN（如_物理存储器设计_部分中所述）或使用 NetApp ONTAP（如 [NetApp ONTAP Select 体系结构](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)中所述）来分配更多磁盘。每个物理主机都具有冗余的 10 Gbps 网络连接，支持公用和专用网络访问。
 
-Bare Metal Server 的技术规范如下：
+裸机服务器具有以下规范：
 * CPU：双 Intel Xeon，不同核心和速度配置
 * 内存：不同配置，128 GB 或更大
 * 网络：4 个 10 Gbps
@@ -70,7 +77,7 @@ Bare Metal Server 的技术规范如下：
 ### 主 IP 块和可移植 IP 块
 
 {{site.data.keyword.cloud_notm}} 会分配要在 {{site.data.keyword.cloud_notm}} 基础架构中使用的两种类型的 IP 地址：
-* 主 IP 地址，分配给由 {{site.data.keyword.cloud_notm}} 供应的设备、裸机服务器和虚拟服务器。您不应分配这些块中的任何 IP 地址。
+* 主 IP 地址，分配给由 {{site.data.keyword.cloud_notm}} 供应的设备、裸机服务器和虚拟服务器。不要分配这些块中的任何 IP 地址。
 * 可移植 IP 地址，供您根据需要进行分配和管理。
 
 在 {{site.data.keyword.slportal}} 中启用了 **VLAN 生成**，或者帐户配置为**虚拟路由和转发 (VRF)** 帐户时，主 IP 地址或可移植 IP 地址可以设置为可路由到客户帐户内的任何 VLAN。
@@ -135,7 +142,7 @@ Bare Metal Server 的技术规范如下：
 
 ## 物理存储器设计
 
-物理存储器设计由物理主机中安装的物理磁盘的配置以及共享文件级别存储器的配置组成。这包括 vSphere ESXi 系统管理程序的操作系统磁盘以及用于存储虚拟机 (VM) 的操作系统磁盘。VM 的存储器可以由 VMware vSAN 虚拟化的本地磁盘或共享文件级别的存储器组成。
+物理存储器设计由物理主机中安装的物理磁盘的配置以及共享文件级别存储器的配置组成。这包括 vSphere ESXi 系统管理程序的操作系统磁盘以及用于存储虚拟机 (VM) 的磁盘。VM 的存储器可以由 VMware vSAN 虚拟化的本地磁盘或共享文件级别的存储器组成。
 
 ### 操作系统磁盘
 
@@ -153,7 +160,7 @@ vSphere ESXi 系统管理程序设计为安装在持久位置。因此，物理�
 
 ### 跨主机共享文件级别的存储器
 
-使用共享文件级别的存储器时，2 TB NFS 共享会连接到组成初始 VMware 集群的主机。此共享（称为管理共享）用于管理组件，例如 VMware vCenter Server、Platform Services Controller 和 VMware NSX。存储器使用 NFSv3 协议进行连接，并且最多可以支持 4000 IOPS。
+使用共享文件级别的存储器时，2-TB TB NFS 共享会连接到组成初始 VMware 集群的主机。此共享（称为管理共享）用于管理组件，例如 VMware vCenter Server、Platform Services Controller 和 VMware NSX。存储器使用 NFSv3 协议进行连接，并且最多可以支持 4000 IOPS。
 
 图 2. 连接到 VMware 部署的 NFS 共享
 
