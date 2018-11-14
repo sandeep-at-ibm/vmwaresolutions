@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Commande de nouveaux clusters vSphere
 
@@ -52,7 +54,7 @@ Vous pouvez également inclure dans votre commande les composants VMware suivant
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**Remarque :** l'option BYOL n'est pas disponible pour les partenaires commerciaux IBM.
+L'option BYOL n'est pas disponible pour les partenaires commerciaux IBM.{:note}
 
 ### Composants individuels pour des partenaires non commerciaux
 
@@ -66,7 +68,8 @@ Si vous n'êtes pas un partenaire commercial, vous pouvez sélectionner les comp
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**Remarque :** le composant VMware vSAN n'est pas disponible lorsque vous commandez VMware vSphere Enterprise Plus 6.0. Si vous prévoyez d'utiliser votre propre licence pour VMware vSphere Enterprise Plus 6.0, un ticket d'infrastructure {{site.data.keyword.cloud_notm}} sera ouvert en votre nom. Ce ticket demande que les licences vSphere des serveurs {{site.data.keyword.baremetal_short}} commandés soient remplacées par vos propres licences.
+Le composant VMware vSAN n'est pas disponible lorsque vous commandez VMware vSphere Enterprise Plus 6.0. Si vous prévoyez d'utiliser votre propre licence pour VMware vSphere Enterprise Plus 6.0, un ticket d'infrastructure {{site.data.keyword.cloud_notm}} sera ouvert en votre nom. Ce ticket demande que les licences vSphere des serveurs {{site.data.keyword.baremetal_short}} commandés soient remplacées par vos propres licences.
+{:note}
 
 ### Options d'octroi de licence
 
@@ -76,7 +79,7 @@ Vous disposez des options d'octroi de licence suivantes pour les composants VMwa
 
 Si vous choisissez d'acheter toutes les licences, sauf pour vSphere Enterprise Plus et vCenter Server, et que vous commandez plusieurs serveurs ESXi, un ticket {{site.data.keyword.cloud_notm}} est automatiquement ouvert en votre nom afin de combiner les clés de licence. Vous êtes chargé du suivi du ticket afin de vous assurer que vous n'utilisez que les clés de licence générées par l'équipe DevOps.
 
-**Important :** l'utilisation de clés de licence individuelles avec les clés de licence combinées ne répond pas aux exigences de paiement des licences dont vous aurez besoin.
+L'utilisation de clés de licence individuelles avec les clés de licence combinées ne répond pas aux exigences de paiement des licences dont vous aurez besoin.{:important}
 
 ## Paramètres de serveur bare metal
 
@@ -84,24 +87,40 @@ Si vous choisissez d'acheter toutes les licences, sauf pour vSphere Enterprise P
 
 Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel le cluster doit être hébergé.
 
-**Remarque :** si vous sélectionnez un composant vSAN, la liste des emplacements est filtrée par disponibilité SSD.
+Si vous sélectionnez un composant vSAN, la liste des emplacements est filtrée par disponibilité SSD. {:note}
 
-### Modèle d'UC et mémoire RAM
+### Skylake
 
-Indiquez le modèle d'UC et la mémoire RAM du serveur bare metal.
+Lorsque vous sélectionnez **Skylake**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM de serveur bare metal adaptée à vos besoins. Les options disponibles varient selon que vous avez ou non sélectionné le composant VMware vSAN.
 
-Tableau 2. Options pour les serveurs {{site.data.keyword.baremetal_short}} personnalisés
+Tableau 2. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}
+
+| Options de modèle d'UC        | Options de RAM       |
+|:------------- |:------------- |
+| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+
+### Certifiés SAP
+
+L'onglet **Certifiés SAP** n'est pas disponible si vous avez précédemment sélectionné VMware vSAN. Lorsque vous sélectionnez **Certifiés SAP**, vous ne pouvez pas modifier les paramètres d'UC ou de mémoire RAM.
+
+En fonction de vos besoins, sélectionnez une configuration de serveur bare metal :
+  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/192 Go de mémoire RAM
+  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,2 GHz/384 Go de mémoire RAM
+  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/768 Go de mémoire RAM
+
+### Broadwell
+
+Lorsque vous sélectionnez **Broadwell**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM de serveur bare metal adaptée à vos besoins. Les options disponibles varient selon que vous avez ou non sélectionné le composant VMware vSAN.
+
+Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}
 
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 384 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 384 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 384 Go, 512 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
-
-Les options disponibles varient selon que vous avez ou non sélectionné le composant VMware vSAN.
 
 ### Nombre de serveurs bare metal
 
@@ -206,7 +225,9 @@ Selon vos configurations, le coût estimé est généré et affiché instantané
     **Important :** vous êtes responsable du suivi du ticket afin de remplacer la licence vSphere sur les nouveaux serveurs ESXi commandés. De la sorte, {{site.data.keyword.cloud_notm}} accorde l'annulation des frais de licence vSphere de l'infrastructure {{site.data.keyword.cloud_notm}} initialement fournie. Pour remplacer votre licence ESXi vSphere, voir [Configuration des paramètres de licence pour un hôte ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
 5. Spécifiez les paramètres de serveur bare metal :
    1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger le cluster.
-   2. Sélectionnez le modèle d'UC et la taille de mémoire RAM.
+   2. Sélectionnez la configuration de serveur bare metal.
+      * Lorsque vous sélectionnez **Skylake** ou **Broadwell**, spécifiez le modèle d'UC et la taille de mémoire RAM. 
+      * Lorsque vous sélectionnez **Certifiés SAP**, choisissez le modèle d'UC. 
    3. Spécifiez le nombre de serveurs bare metal.
 6. Si vous avez sélectionné le composant **VMware vSAN**, procédez à la configuration de stockage vSAN. Spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 7. Spécifiez les paramètres d'interface réseau :
@@ -220,7 +241,8 @@ Selon vos configurations, le coût estimé est généré et affiché instantané
    * Pour sauvegarder la configuration en tant que modèle sans passer de commande, cliquez sur **Sauvegarde de la configuration**.
    * Pour passer la commande, assurez-vous que le compte qui devra être facturé est correct, passez en revue et acceptez les conditions, puis cliquez sur **Mettre à disposition**.
 
-   **Remarque :** seuls les serveurs de type {{site.data.keyword.baremetal_short}} sont installés. Vous êtes responsable de l'installation et de la configuration des divers composants après déploiement du cluster, tels que VMware vCenter, VMware NSX, VMware vSAN.
+   Seuls les serveurs {{site.data.keyword.baremetal_short}} sont installés. Vous êtes responsable de l'installation et de la configuration des divers composants après déploiement du cluster, tels que VMware vCenter, VMware NSX, VMware vSAN.
+   {:note}
 
 ### Résultats
 
@@ -228,7 +250,7 @@ Si vous avez sauvegardé la configuration en tant que modèle, vous obtenez une 
 
 Si vous avez passé la commande, le déploiement du cluster démarre automatiquement et vous recevez par courrier électronique la confirmation que la commande est en cours de traitement. Lorsque le cluster est prêt pour utilisation, un courrier électronique vous en avertit.
 
-**Remarque :** contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.
+Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.{:note}
 
 ### Liens connexes
 

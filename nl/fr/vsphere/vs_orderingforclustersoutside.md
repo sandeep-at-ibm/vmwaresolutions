@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Mise à l'échelle de clusters créés en dehors de la console
 
@@ -24,7 +28,8 @@ Assurez-vous que :
 2. Sur la page **VMware vSphere on IBM Cloud**, cliquez sur **Créer**.  
    Vérifiez que vous vous trouvez sur l'onglet **Créer** et que **Nouveau cluster** est affiché dans la liste **Configurations de cluster**.
 3. Créez un cluster avec les mêmes paramètres que le cluster existant créé en dehors de la console {{site.data.keyword.vmwaresolutions_short}}. Pour plus d'informations, voir [Commande de nouveaux clusters vSphere](vs_orderinginstances.html).  
-   **Remarque :** dans le cadre de l'interface réseau, pour mettre à l'échelle un cluster qui est créé en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, vous devez sélectionner les VLAN existants pour le cluster.  
+   Dans le cadre de l'interface réseau, pour mettre à l'échelle un cluster qui est créé en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, vous devez sélectionner les VLAN existants pour le cluster.
+   {:note}
 4. Sur le panneau **Récapitulatif de la commande**, vérifiez la configuration du cluster, puis cliquez sur **Sauvegarde de la configuration**.   
 5. Sur la page **Initiation**, cliquez sur la carte **VMware vSphere on IBM Cloud**.
 6. Sur la page **VMware vSphere on IBM Cloud**, cliquez sur **Créer**.
@@ -37,7 +42,8 @@ Assurez-vous que :
 
 Le déploiement du cluster démarre automatiquement et vous recevez par courrier électronique la confirmation que la commande est en cours de traitement. Lorsque le cluster est prêt pour utilisation, un courrier électronique vous en avertit.
 
-**Remarque :** les clusters vSphere ne s'affichent pas sur la page **Instances déployées**, avec les instances vCenter Server et Cloud Foundation.
+Les clusters vSphere ne s'affichent pas sur la page **Deployed Instances**, avec les instances vCenter Server et Cloud Foundation.
+{:note}
 
 ### Liens connexes
 
