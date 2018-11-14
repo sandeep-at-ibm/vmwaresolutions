@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -32,7 +32,7 @@ L'exécution des tâches présentées dans cette section rendra les lignes de ba
 
 Vérifiez que VCSA correspond à vCenter 6.5 Patch 2 ou une version plus récente avant de continuer car ces versions corrigent des erreurs liées à l'utilisation d'un proxy. Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](vum-updating-vcsa.html).
 
-Pour voir les mises à jour de vSAN dans VUM et vérifier que le workflow vSAN online Health est suivi, procédez comme suit. vSAN Online Health doit se connecter à https://vcsa.vmware.com et http://www.vmware.com pour effectuer ces contrôles de santé en ligne. Pour activer vSAN Online Health Workflow, nous devons :
+Pour voir les mises à jour de vSAN dans VUM et vérifier que le workflow vSAN online Health est suivi, procédez comme suit. Par conséquent, vSAN Online Health doit se connecter aux sites `vcsa.vmware.com` et `vmware.com` pour effectuer ces contrôles de santé en ligne. Pour activer vSAN Online Health Workflow, nous devons : 
 * Configurer VCSA pour utiliser le proxy.
 * Configurer vSAN pour utiliser le proxy.
 * Activer le programme d'amélioration de l'expérience client (CEIP).
@@ -42,7 +42,7 @@ La première étape consiste à ajouter vos données d'identification my.vmware.
 
 ### Configuration de VCSA pour utiliser le proxy
 
-1.	Dans le navigateur de votre serveur intermédiaire, connectez-vous à l'interface de gestion de VCSA  `https://<vCenter ip>:5480`
+1.	Dans le navigateur de votre serveur intermédiaire, connectez-vous à l'interface de gestion de VCSA `https://<vCenter ip>:5480`
 2.	En utilisant les données d'identification de la console IC4VS, connectez-vous à l'interface de gestion VCSA en tant qu'utilisateur racine (root).
 3.	Dans l'interface de gestion de vCenter Server Appliance, cliquez sur **Networking**, puis sur **Manage**.
 4.	Pour configurer un serveur proxy, dans le panneau Paramètres proxy, cliquez sur **Edit**.
@@ -54,7 +54,7 @@ Si les paramètres HTTPS ne sont pas définis, utilisez la commande suivante :
   `proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
 
 ### Configuration de vSAN pour utiliser le proxy
-1. Accédez à **Home** > **Hosts and Clusters**, sélectionnez **vSAN cluster** dans le panneau de navigation, puis sélectionnez l'onglet **Configure** et accédez à **vSAN**, puis **General**. Faites défiler la section de connexion à Internet et cliquez sur **Edit**.
+1. Accédez à **Home** > **Hosts and Clusters**, sélectionnez **vSAN cluster** dans le panneau de navigation, puis sélectionnez l'onglet **Configure** et accédez à **vSAN**, puis **General**. Faites défiler l'écran jusqu'à la section **Internet Connectivity** et cliquez sur **Edit**.
 2. Entrez l'adresse IP et le numéro de port du proxy, puis cliquez sur **OK**.
 
 ### Activation du programme d'amélioration de l'expérience client (CEIP)
@@ -80,7 +80,7 @@ Avant de lancer le processus de mise à niveau de vSAN, vérifiez que les condit
 * **Tous les disques vSAN doivent être sains** :
   - Aucun disque ne doit être à l'état d'échec ou absent. Vous pouvez le vérifier via la vue **vSAN Disk Management** dans le client vSphere Web Client. **Home** > **Hosts and Clusters**, en sélectionnant le **cluster vSAN** puis en cliquant sur l'onglet **vSAN**, puis sur **Physical Disks**. Faites défiler tous les disques et consultez le statut vSAN Health Status.
   - Aucun objet vSAN ne doit être inaccessible. Vous pouvez le vérifier avec le service **vSAN Health Service** en cliquant sur **Home** > **Hosts and Clusters**, puis en sélectionnant **vSAN Cluster**. Cliquez sur l'onglet **Monitor**, **vSAN**, puis sur **Health**. Consultez les résultats de test.
-  - Il ne doit y avoir aucune resynchronisation active au lancement du processus de mise à niveau en cliquant sur **Home** > **Hosts and Clusters**, puis en sélectionnant **vSAN Cluster** et en cliquant sur l'onglet **vSAN**, puis sur **Resync Components**. _Le nombre de composants de resynchronisation doit être 0_. Notez qu'une activité de resynchronisation peut être prévue lors du processus de mise à niveau, car les données doivent être synchronisées suivant les redémarrages d'hôte.
+  - Il ne doit y avoir aucune resynchronisation active au lancement du processus de mise à niveau en cliquant sur **Home** > **Hosts and Clusters**, puis en sélectionnant **vSAN Cluster** et en cliquant sur l'onglet **vSAN**, puis sur **Resync Components**. _Le nombre de composants de resynchronisation doit être 0_. Notez qu'une activité de resynchronisation est attendue lors du processus de mise à niveau, car les données doivent être synchronisées après les redémarrages d'hôte.
 * **Préparation de l'hôte vSphere ESXi** - Lorsque vous placez un hôte en mode maintenance dans un cluster vSAN, vous disposez de trois options au choix :
   - **No data migration** - Si vous sélectionnez cette option, vSAN n'évacue aucune données en provenance de cet hôte. Si vous mettez hors tension ou retirer l'hôte du cluster, certaines machines virtuelles risquent de ne plus être accessibles.
   - **Ensure availability** - Si vous sélectionnez cette option, vSAN vous permet de placer l'hôte en mode maintenance plus rapidement qu'avec l'option Full data migration et autorise l'accès aux machines virtuelles dans l'environnement.
@@ -136,5 +136,5 @@ De nombreuses tâches administratives de base peuvent s'effectuer avec plus d'ef
 
 ### Liens connexes
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

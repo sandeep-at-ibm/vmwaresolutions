@@ -4,11 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
-#	Transfert et résolution
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# Transfert et résolution
 
 Les correctifs et les extensions peuvent être éventuellement transférés avant toute résolution pour garantir qu'ils sont téléchargés de VUM vers l'hôte vSphere ESXi sans appliquer les correctifs ou les extensions immédiatement. Lors de la résolution, VUM applique les correctifs, les extensions et les mises à niveau aux objets d'inventaire. Le transfert des correctifs et des extensions accélère le processus de résolution car les correctifs et les extensions sont déjà disponibles en local sur les hôtes.
 
@@ -22,7 +26,7 @@ En exécutant l'assistant de résolution, vous pouvez également générer des r
 3.	Dans la page de sélection des lignes de base sur l'assistant de transfert, sélectionnez les lignes de base des correctifs et extensions à transférer.
 4.	Sélectionnez les hôtes sur lesquels les correctifs et les extensions seront appliqués et cliquez sur **Next**. Si vous avez choisi de transférer des correctifs et des extensions sur un seul hôte, l'hôte est sélectionné par défaut.
 5.	Facultatif : désélectionnez les correctifs et les extensions à exclure de l'opération de transfert. Pour effectuer une recherche dans la liste des correctifs et des extensions, saisissez du texte dans la zone de texte de la zone de filtre. Cliquez sur **Next**.
-6.	Passez en revue la page Ready to Complete et cliquez sur **Finish**.
+6.	Consultez la page Ready to Complete et cliquez sur **Finish**.
 
 Le nombre de correctifs et d'extensions transférés pour l'hôte spécifique s'affiche dans les colonnes Patches et Extensions dans le panneau inférieur de l'onglet Update Manager. Lorsqu'une résolution a abouti, tous les correctifs et toutes les extensions, qu'ils aient ou non été installés lors de la résolution, seront supprimés sur l'hôte.
 La résolution est un processus au cours duquel VUM applique des correctifs, des extensions et des mises à niveau aux hôtes vSphere ESXi, aux machines virtuelles ou aux dispositifs virtuels après l'exécution d'une analyse et qui rend conformes les objets sélectionnés. Vous pouvez résoudre des hôtes, des machines virtuelles ou des dispositifs virtuels uniques ou effectuer la résolution au niveau d'un dossier, d'un cluster ou d'un centre de données. VUM prend en charge la résolution des objets d'inventaire suivants en utilisant soit une résolution manuelle, soit une résolution planifiée :
@@ -32,18 +36,18 @@ La résolution est un processus au cours duquel VUM applique des correctifs, des
 
 Si la mise à jour l'exige, les hôtes sont placés en mode maintenance avant la résolution. Le dispositif VCSA effectue la migration des machines virtuelles sur d'autres hôtes au sein de l'instance VCS avant que l'hôte soit en mode maintenance.
 
-  Remarque importante pour les hôtes figurant dans un cluster vSAN -
-  Tenez compte du comportement suivant des hôtes faisant partie d'un cluster vSAN :
-  *	L'exécution du processus de résolution d'hôte peut prendre énormément de temps.
-  *	Conformément à la conception, il ne peut y avoir qu'un seul hôte d'un cluster VSAN en mode maintenance à la fois.
-  *	VUM résout les hôtes faisant partie d'un cluster VSAN de manière séquentielle même si vous avez défini l'option pour les résoudre en parallèle.
-  *	Si une machine virtuelle sur l'hôte utilise une règle de stockage de machine virtuelle avec le paramètre "Number of failures to tolerate=0", cela peut entraîner des retards inhabituels pour le passage en mode maintenance de l'hôte. Ce retard est dû au fait que vSAN doit migrer les données de la machine virtuelle d'un disque à un autre dans le cluster du magasin de données vSAN, ce qui peut prendre plusieurs heures. Vous pouvez contourner ce problème en définissant le paramètre "Number of failures to tolerate=1" pour la règle de stockage de la machine virtuelle, ce qui entraîne la création de deux copies des fichiers de la machine virtuelle dans le magasin de données vSAN.
-  *	Si une machine virtuelle sur l'hôte utilise une règle de stockage de machine virtuelle avec le paramètre "Number of failures to tolerate=1", la machine virtuelle devient non redondante lorsque l'hôte bascule en mode maintenance. Si c'est inacceptable, voir [Redondance de machine virtuelle vSAN](vum-vsan-redundancy.html).
+## Pour les hôtes figurant dans un cluster vSAN
+Tenez compte du comportement suivant des hôtes faisant partie d'un cluster vSAN :
+* L'exécution du processus de résolution d'hôte peut prendre énormément de temps.
+* Conformément à la conception, il ne peut y avoir qu'un seul hôte d'un cluster VSAN en mode maintenance à la fois.
+* VUM résout les hôtes faisant partie d'un cluster VSAN de manière séquentielle même si vous avez défini l'option pour les résoudre en parallèle.
+* Si une machine virtuelle sur l'hôte utilise une règle de stockage de machine virtuelle avec le paramètre "Number of failures to tolerate=0", cela peut entraîner des retards inhabituels pour le passage en mode maintenance de l'hôte. Ce retard est dû au fait que vSAN doit migrer les données de la machine virtuelle d'un disque à un autre dans le cluster du magasin de données vSAN, ce qui peut prendre plusieurs heures. Vous pouvez contourner ce problème en définissant le paramètre "Number of failures to tolerate=1" pour la règle de stockage de la machine virtuelle, ce qui entraîne la création de deux copies des fichiers de la machine virtuelle dans le magasin de données vSAN.
+* Si une machine virtuelle sur l'hôte utilise une règle de stockage de machine virtuelle avec le paramètre "Number of failures to tolerate=1", la machine virtuelle devient non redondante lorsque l'hôte bascule en mode maintenance. Si cela n'est pas inacceptable, voir [Redondance de machine virtuelle vSAN](vum-vsan-redundancy.html).
 
 Pour résoudre des hôtes et des clusters, procédez comme suit :
 1.	Dans le client vSphere Web Client, sélectionnez **Home** > **Hosts and Clusters**.
 2.	Dans le navigateur des objets d'inventaire, sélectionnez un centre de données, un cluster ou un hôte, cliquez sur l'onglet **Update Manager**, puis sur **Remediate**. Si vous avez sélectionné un objet conteneur, tous les hôtes sous l'objet sélectionné sont résolus. L'assistant de résolution s'ouvre.
-3.	Sélectionnez **Patch Baselines** ou **Extension Baselines** selon le type de mise à jour que vous souhaitez effectuer sur l'hôte. Sur la page de sélection de ligne de base de l'assistant de résolution, sélectionnez le **groupe de lignes de base** et  les **lignes de base** à appliquer.
+3.	Sélectionnez **Patch Baselines** ou **Extension Baselines** selon le type de mise à jour que vous souhaitez effectuer sur l'hôte. Sur la page de sélection de ligne de base de l'assistant de résolution, sélectionnez le **groupe de lignes de base** et les **lignes de base** à appliquer.
 4.	Sélectionnez les hôtes cible que vous souhaitez résoudre et cliquez sur **Next**. Si vous avez opté pour la résolution d'un seul hôte et non d'un objet conteneur, l'hôte est sélectionné par défaut.
 5.	Facultatif : sur la page **Patches and Extensions**, désélectionnez des correctifs et des extensions spécifiques à exclure du processus de résolution, puis cliquez sur **Next**.
 6.	Facultatif : sur la page **Advanced options**, sélectionnez l'option permettant de planifier la résolution pour une exécution ultérieure et indiquez un nom unique et une description facultative pour cette tâche. L'heure que vous définissez dans la tâche planifiée correspond à l'heure sur le dispositif VCSA. Facultatif : sélectionnez l'option permettant d'ignorer les avertissements sur les dispositifs non pris en charge sur l'hôte ou sur le magasin VMFS qui n'est plus pris en charge, pour poursuivre la résolution. Cliquez sur **Next**.
@@ -53,7 +57,7 @@ Pour résoudre des hôtes et des clusters, procédez comme suit :
   - **Suspend virtual machines** - Suspend toutes les machines virtuelles et tous les dispositifs virtuels avant la résolution.
   - **Do Not Change VM Power State** - Laisse les machines virtuelles et les dispositifs virtuels dans leur état d'alimentation en cours.
 
-8.	Facultatif : sélectionnez l'option **Disable any removable media devices connected to the virtual machine on the host**. VUM ne résout pas les hôtes sur lesquels les machines virtuelles disposent de CD, DVD ou unités de disquette connectés. Dans les environnements en cluster, les unités de stockage connectées peuvent empêcher vMotion de fonctionner si l'hôte de destination n'a pas d'unité identique ou d'image ISO montée, ce qui empêche à son tour l'hôte source de basculer en mode maintenance. Après la résolution, VUM reconnecte les unités de stockage amovibles si elles sont toujours disponibles. 
+8.	Facultatif : sélectionnez l'option **Disable any removable media devices connected to the virtual machine on the host**. VUM ne résout pas les hôtes sur lesquels les machines virtuelles disposent de CD, DVD ou unités de disquette connectés. Dans les environnements en cluster, les unités de stockage connectées peuvent empêcher vMotion de fonctionner si l'hôte de destination n'a pas d'unité identique ou d'image ISO montée, ce qui empêche à son tour l'hôte source de basculer en mode maintenance. Après la résolution, VUM reconnecte les unités de stockage amovibles si elles sont toujours disponibles.
 9.	Facultatif : sélectionnez l'option **Retry entering maintenance mode in case of failure**, indiquez le nombre de nouvelles tentatives et spécifiez le délai d'attente entre les tentatives. VUM patiente pendant ce délai et effectue une nouvelle tentative pour placer l'hôte en mode maintenance autant de fois que vous indiquez dans la zone du nombre de nouvelles tentatives.
 10.	Il n'y a aucune condition requise dans une instance VCS pour sélectionner la case à cocher sous ESXi Patch Settings afin d'autoriser Update Manager à appliquer des correctifs sur des hôtes ESXi sous tension démarrés avec PXE.
 11.	Cliquez sur **Next**.
@@ -71,5 +75,5 @@ Pour résoudre des hôtes et des clusters, procédez comme suit :
 
 ### Liens connexes
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

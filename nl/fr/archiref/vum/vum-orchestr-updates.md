@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -41,7 +41,7 @@ La procédure suivante décrit le processus pour exécuter une mise à niveau or
 5. Sélectionnez une ligne de base de mise à niveau d'hôte pour l'inclure dans le groupe de lignes de base.
 6. Créez éventuellement une nouvelle ligne de base de mise à niveau d'hôte en cliquant sur **Create a new Host Upgrade Baseline** au bas de la page Upgrades et exécutez l'assistant de nouvelle ligne de base. Cliquez sur **Next**.
 7. Sélectionnez les lignes de base de correctifs que vous souhaitez inclure dans le groupe de lignes de base.
-8. Créez  éventuellement une nouvelle ligne de base de correctifs en cliquant sur **Create a new Host Patch Baseline** au bas de la page Patches et exécutez l'assistant de nouvelle ligne de base. Cliquez sur **Next**.
+8. Créez éventuellement une nouvelle ligne de base de correctifs en cliquant sur **Create a new Host Patch Baseline** au bas de la page Patches et exécutez l'assistant de nouvelle ligne de base. Cliquez sur **Next**.
 9. Sélectionnez les lignes de base d'extensions à inclure dans le groupe de lignes de base.
 10. Créez éventuellement une nouvelle ligne de base d'extension en cliquant sur **Create a new Extension Baseline** au bas de la page Extensions et exécutez l'assistant nouvelle ligne de base.
 11. Passez en revue la page Ready to Complete, cliquez sur **Finish** et le groupe de lignes de base d'hôte s'affiche dans le panneau Baseline Groups.
@@ -60,5 +60,5 @@ Vous pouvez désormais utiliser ces groupes de lignes de base dans les processus
 
 ### Liens connexes
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)
