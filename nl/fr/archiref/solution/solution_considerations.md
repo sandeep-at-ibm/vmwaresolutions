@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Remarques relatives au post-déploiement pour votre instance VMware
 
@@ -14,7 +18,8 @@ Les offres {{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server et 
 
 Consultez les remarques ci-après pour bien comprendre quelles sont vos responsabilités en termes de gestion et d'exécution de l'instance avant et après son déploiement.
 
-**Remarque :** la liste suivante n'est pas exhaustive. Pour plus d'informations, voir [Services gérés par IBM](../../services/managing_imi.html).
+La liste suivante n'est pas exhaustive. Pour plus d'informations, voir [Services gérés par IBM](../../services/managing_imi.html).
+{:note}
 
 ## Accès à un compte IBM Cloud
 

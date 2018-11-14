@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-07-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Mise à l'échelle de la capacité
 
@@ -40,7 +44,8 @@ Cette méthode vous permet de réaliser les opérations suivantes :
 * Séparation des charges de travail en fonction d'autres caractéristiques, par exemple, un cluster de base de données Microsoft SQL
 * Déploiement d'applications dans des topologies à haute disponibilité
 
-**Remarque** : lorsque le cluster initial est converti en un cluster de gestion uniquement, la migration des charges de travail existantes implique des étapes que l'utilisateur doit réaliser manuellement. Il peut s'agir de réassocier les magasins de données au nouveau cluster ou d'effectuer une migration de stockage. Les adresses IP des charges de travail devront peut-être être modifiées si le nouveau cluster réside dans un autre pod {{site.data.keyword.cloud_notm}} ou si un autre ID VLAN lui est affecté.
+Lorsque le cluster initial est converti en un cluster de gestion uniquement, la migration des charges de travail existantes implique des étapes que l'utilisateur doit réaliser manuellement. Il peut s'agir de réassocier les magasins de données au nouveau cluster ou d'effectuer une migration de stockage. Les adresses IP des charges de travail devront peut-être être modifiées si le nouveau cluster réside dans un autre pod {{site.data.keyword.cloud_notm}} ou si un autre ID VLAN lui est affecté.
+{:note}
 
 ## Ajout d'hôtes ESXi dans des clusters existants
 

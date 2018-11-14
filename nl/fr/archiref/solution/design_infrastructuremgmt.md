@@ -4,15 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-13"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Conception de gestion d'infrastructure
 
 La gestion d'infrastructure fait référence aux composants qui gèrent l'infrastructure VMware. Cette conception utilise une seule instance PSC (Platform Services Controller) externe et une seule instance vCenter Server :
 * vCenter Server est la plateforme centralisée dédiée à la gestion des environnements vSphere ; il s'agit de l'un des composants fondamentaux de cette solution.
-* Le contrôleur PSC est optimisé dans cette solution pour fournir un ensemble de services d'infrastructure, y compris VMware vCenter Single Sign On, un service de licence, un service de consultation et l'autorité de certification VMware.
+* Le contrôleur PSC est utilisé dans cette solution pour fournir un ensemble de services d'infrastructure, y compris VMware vCenter Single Sign On, un service de licence, un service de consultation et l'autorité de certification VMware.
 
 Les instances PSC et les instances vCenter Server sont des machines virtuelles distinctes.
 
@@ -20,7 +24,7 @@ Les instances PSC et les instances vCenter Server sont des machines virtuelles d
 
 Cette conception déploie une seule instance PSC externe en tant que dispositif virtuel sur un sous-réseau portable, sur le VLAN privé qui est associé aux machines virtuelles de gestion. Le routeur BCR (Back-end Customer Router) lui sert de passerelle par défaut. Le dispositif virtuel est configuré avec les spécifications décrites dans le tableau suivant.
 
-**Remarque** : ces valeurs sont définies au moment du déploiement et elles ne peuvent pas être modifiées.
+Ces valeurs sont définies au moment du déploiement et elles ne peuvent pas être modifiées.{:note}
 
 Tableau 1. Spécifications PSC (Platform Services Controller)
 
@@ -60,15 +64,15 @@ Cette conception vous permet de regrouper en cluster les hôtes vSphere ESXi qui
 
 ### Planificateur DRS (Distributed Resource Scheduler) vSphere
 
-Cette conception utilise la planification DRS (Distributed Resource Scheduling) vSphere dans le cluster initial pour placer les machines virtuelles et dans les autres clusters pour faire migrer dynamiquement des machines virtuelles afin d'obtenir des clusters équilibrés. La valeur "Fully Automated" est affectée au paramètre Automation Level, par conséquent, les recommandations de placement initial et de migration sont automatiquement exécutées par vSphere. En outre, le seuil de migration défini est modéré, ainsi, vCenter appliquera les recommandations de priorité 1, 2, 3 pour obtenir au moins une amélioration décente de l'équilibrage de charge du cluster.
+Cette conception utilise la planification DRS (Distributed Resource Scheduling) vSphere dans le cluster initial pour placer les machines virtuelles et dans les autres clusters pour faire migrer dynamiquement des machines virtuelles afin d'obtenir des clusters équilibrés. La valeur "Fully Automated" est affectée au paramètre Automation Level, par conséquent, les recommandations de placement initial et de migration sont automatiquement exécutées par vSphere. En outre, le seuil de migration défini est modéré, ainsi, vCenter applique les recommandations de priorité 1, 2, 3 pour obtenir au moins une amélioration décente de l'équilibrage de charge du cluster.
 
-**Remarque :** la gestion de l'alimentation via la fonction **Distributed Power Management** n'est pas utilisée dans cette conception.
+La gestion de l'alimentation via la fonction **Distributed Power Management** n'est pas utilisée dans cette conception.{:note}
 
 ### Haute disponibilité vSphere
 
 Cette conception utilise la haute disponibilité vSphere dans le cluster initial et les autres clusters pour détecter les pannes de traitement et récupérer les machines virtuelles qui s'exécutent dans un cluster. La haute disponibilité vSphere dans cette conception est configurée avec les options de **surveillance hôte** et de **contrôle d'admission** activées dans le cluster. De plus, le cluster initial réserve les ressources d'un noeud comme capacité de secours pour la règle de contrôle d'admission.
 
-**Remarque** : vous êtes chargé d'ajuster la règle de contrôle d'admission lorsque le cluster est développé ou réduit par la suite.
+Vous êtes chargé d'ajuster la règle de contrôle d'admission lorsque le cluster est développé ou réduit par la suite.{:note}
 
 Par défaut, une valeur moyenne est affectée à l'option de **priorité de redémarrage des machines virtuelles** et l'option de **réponse d'isolement hôte** est désactivée. De plus, l'option de **surveillance des machines virtuelles** est désactivée et la fonction de **pulsation de magasin de données** est configurée pour inclure n'importe lequel des magasins de données de cluster. Cette approche utilise les magasins de données NAS éventuellement présents.
 
@@ -79,13 +83,13 @@ L'automatisation est l'élément central de ces solutions. Elle offre les avanta
 * Elle réduit le temps de déploiement
 * Elle assure un déploiement cohérent de l'instance VMware
 
-Les machines virtuelles {{site.data.keyword.IBM}} CloudBuilder, IBM CloudDriver et SDDC Manager fonctionnent conjointement pour fournir une nouvelle instance VMware et effectuer des fonctions de gestion de cycle de vie.
+Les machines virtuelles {{site.data.keyword.IBM}} CloudBuilder, IBM CloudDriver et SDDC Manager fonctionnent conjointement pour démarrer une nouvelle instance VMware et effectuer des fonctions de gestion de cycle de vie.
 
 ### IBM CloudBuilder et IBM CloudDriver
 
 Les instances de serveur virtuel IBM CloudBuilder et IBM CloudDriver sont des composants développés par IBM auxquels vous ne pouvez pas accéder.
 * IBM CloudBuilder est une instance de serveur virtuel {{site.data.keyword.cloud_notm}} temporaire qui amorce le déploiement, la configuration et la validation des composants de solution dans les hôtes ESXi bare metal mis à disposition.
-* L'instance de serveur virtuel IBM CloudDriver est déployée pour la création d'instance, puis régulièrement, selon les besoins, avec le dernier code {{site.data.keyword.cloud_notm}} pour VMware pour les opérations, telles que le déploiement de noeuds, de clusters ou de services supplémentaires. IBM CloudDriver communique avec la console {{site.data.keyword.vmwaresolutions_short}} via une passerelle VMware NSX ESG (Edge Services Gateway) déployée exclusivement à des fins de gestion d'instance, et agit en tant qu'agent chargé de gérer l'instance. IBM CloudDriver est responsable des actions en cours, telles que l'ajout de nouveaux hôtes bare metal au cluster et le déploiement de services complémentaires dans l'instance. Pour les instances Cloud Foundation, IBM CloudDriver communique avec la machine virtuelle VMware SDDC Manager pour effectuer des fonctions, telles que l'ajout d'hôtes et l'application de modules de correction à des hôtes.
+* L'instance de serveur virtuel IBM CloudDriver est déployée pour la création d'instance, puis régulièrement, selon les besoins, avec le dernier code {{site.data.keyword.cloud_notm}} pour VMware pour les opérations, telles que le déploiement de noeuds, de clusters ou de services supplémentaires. IBM CloudDriver communique avec la console {{site.data.keyword.vmwaresolutions_short}} via une passerelle VMware NSX Edge Services déployée exclusivement à des fins de gestion d'instance, et agit en tant qu'agent chargé de gérer l'instance. IBM CloudDriver est responsable des actions en cours, telles que l'ajout de nouveaux hôtes bare metal au cluster et le déploiement de services complémentaires dans l'instance. Pour les instances Cloud Foundation, IBM CloudDriver communique avec la machine virtuelle VMware SDDC Manager pour effectuer des fonctions, telles que l'ajout d'hôtes et l'application de modules de correction à des hôtes.
 
 L'utilisateur peut supprimer ou endommager les machines virtuelles décrites dans les sections ci-dessous. Lorsqu'une machine virtuelle est retirée, arrêtée ou lorsqu'elle devient inutilisable, les opérations Cloud Foundation ou vCenter Server suivantes sur la console {{site.data.keyword.vmwaresolutions_short}} sont interrompues :
 * Affichage de l'état de l'hôte ou de l'instance
