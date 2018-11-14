@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 添加、查看和删除 Cloud Foundation 实例的集群
 
@@ -40,30 +44,40 @@ lastupdated: "2018-09-28"
 
 缺省情况下，集群的 {{site.data.keyword.CloudDataCent}} 位置设置为 Cloud Foundation 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 等工具。
 
-可供使用的数据中心取决于您为部署选择的裸机服务器配置。如果选择的是**定制**配置，那么所选数据中心包含更多 pod 时，还可以将集群部署到其他 {{site.data.keyword.cloud_notm}} 基础架构 pod。此配置在部署了初始实例的缺省 {{site.data.keyword.cloud_notm}} 基础架构 pod 达到其最大容量时非常有用。
+可供使用的数据中心取决于您为部署选择的裸机服务器配置。如果选择的是 **Skylake** 或 **Broadwell** 配置，那么所选数据中心包含更多 pod 时，还可以将集群部署到其他 {{site.data.keyword.cloud_notm}} 基础架构 pod。此配置在部署了初始实例的缺省 {{site.data.keyword.cloud_notm}} 基础架构 pod 达到其最大容量时非常有用。
 
-**注**：**小型**和**大型**裸机服务器标准化配置使用缺省 pod，该 pod 不能更改。
+**小型**和**大型**裸机服务器标准化配置使用缺省 pod，该 pod 不能更改。
+{:note}
 
 如果将集群部署到其他数据中心或 pod，应再订购三个 VLAN 用于已订购的 {{site.data.keyword.baremetal_short}}。
 
 ### 裸机服务器设置
 
-可以选择**定制**或**预配置**。
+您可以选择 **Skylake**、**Broadwell** 或**预配置**。
 
-#### 定制
+#### Skylake
 
-对于**定制**设置，您有许多 **CPU 型号**和 **RAM** 选项。可用选项可能有所不同，具体取决于初始部署实例的版本。
+对于 **Skylake** 设置，您有多个 **CPU 型号**和 **RAM** 选项。可用选项可能有所不同，具体取决于初始部署实例的版本。
 
-表 1. 定制 {{site.data.keyword.baremetal_short}} 的选项
+表 1. Skylake {{site.data.keyword.baremetal_short}} 的选项
+
+| CPU 模型选项   |RAM 选项|
+|:------------- |:------------- |
+|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
+
+#### Broadwell
+
+对于 **Broadwell** 设置，您有多个 **CPU 型号**和 **RAM** 选项。可用选项可能有所不同，具体取决于初始部署实例的版本。
+
+表 2. Broadwell {{site.data.keyword.baremetal_short}} 的选项
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
 #### 预配置
 
@@ -73,17 +87,16 @@ lastupdated: "2018-09-28"
 
 ### vSAN 存储器设置
 
-对于**预配置**裸机服务器配置，无法更改 vSAN 存储设置：
-* 对于**小型**配置，会订购两个 1.9 TB SSD SED 磁盘驱动器。
-* 对于**大型**配置，会订购四个 3.8 TB SSD SED 磁盘驱动器。
-
-对于**定制**裸机服务器配置，可以通过指定以下设置来定制 vSAN 存储器：
-
+对于 **Skylake** 和 **Broadwell** 裸机服务器配置，可以通过指定以下设置来定制 vSAN 存储器：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
 * 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
 
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
+
+对于**预配置**裸机服务器配置，无法更改 vSAN 存储设置：
+* 对于**小型**配置，会订购两个 1.9 TB SSD SED 磁盘驱动器。
+* 对于**大型**配置，会订购四个 3.8 TB SSD SED 磁盘驱动器。
 
 ### 许可证设置
 
@@ -96,17 +109,18 @@ lastupdated: "2018-09-28"
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在 **Cloud Foundation 实例**表中，单击要添加集群的实例。
 
-   **注**：确保实例处于**可供使用**状态。否则，无法向实例添加集群。
+   确保实例处于**可供使用**状态。否则，无法向实例添加集群。
+   {:note}
 
 3. 单击左侧导航窗格上的**基础架构**，然后单击**集群**表右上角的**添加**。
 4. 在**添加集群**页面上，输入集群名称。
 5. 如果希望托管集群的 {{site.data.keyword.CloudDataCent_notm}} 与托管实例的不同，请在**裸机服务器**下选中**选择其他位置**复选框，然后选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
 6. 完成裸机配置：
-   * 如果选择的是**定制**，请选择 **CPU 型号**和 **RAM** 大小。
+   * 如果选择的是 **Skylake** 或 **Broadwell**，请选择 **CPU 型号**和 **RAM** 大小。
    * 如果选择的是**预配置**，请选择**裸机服务器配置**。
 7. 完成存储配置：
+   * 如果对裸机配置选择的是 **Skylake** 或 **Broadwell**，请指定 vSAN 容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
    * 如果对裸机配置选择的是**预配置**，那么无法更改**小型**和**大型**裸机服务器配置的存储设置。
-   * 如果对裸机配置选择的是**定制**，请指定 vSAN 容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
 8. 指定许可证密钥的提供方式：
    * 对于 IBM 业务合作伙伴用户，会包含 vSphere 许可证 (Enterprise Plus Edition) 和 vSAN 许可证，该许可证以您的名义购买。但是，您必须指定 vSAN 许可证的版本。
    * 对于非 IBM 业务合作伙伴的用户，可以选择下列其中一个选项：
@@ -123,7 +137,8 @@ lastupdated: "2018-09-28"
 1. 集群部署会自动启动，并且集群的状态会更改为**正在初始化**。可以通过在实例摘要页面上查看部署历史记录，以检查部署的状态。
 2. 集群准备就绪可供使用后，其状态会更改为**可供使用**。将对新添加的集群启用 vSphere 高可用性 (HA) 和 vSphere 分布式资源调度程序 (DRS)。
 
-**重要信息**：不能更改集群名称。更改集群名称可能会导致集群中添加或除去 ESXi 服务器的操作失败。
+不能更改集群名称。更改集群名称可能会导致集群中添加或除去 ESXi 服务器的操作失败。
+{:important}
 
 ## 查看 Cloud Foundation 实例中集群的过程
 
@@ -199,7 +214,8 @@ lastupdated: "2018-09-28"
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在 **Cloud Foundation 实例**表中，单击要从中删除集群的实例。
 
-   **注**：确保实例处于**可供使用**状态。否则，无法从实例中删除集群。
+   确保实例处于**可供使用**状态。否则，无法从实例中删除集群。
+   {:note}
 
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，找到要删除的集群，然后单击**删除**图标。
 4. 确认已完成将 VM 迁移到其他集群（如果适用），并确认要删除该集群。

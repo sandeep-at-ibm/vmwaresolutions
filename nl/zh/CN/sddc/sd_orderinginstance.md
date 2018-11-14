@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 订购 Cloud Foundation 实例
 
@@ -18,7 +22,8 @@ lastupdated: "2018-09-27"
 *  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
 *  已查看[针对 Cloud Foundation 实例的需求和规划](sd_planning.html)中的需求和注意事项。
 
-**重要信息**：不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。此外，在部署实例之后，不要更改实例名称、根域名、子域标签或主机名前缀。
+不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。此外，在部署实例之后，不要更改实例名称、根域名、子域标签或主机名前缀。
+{:important}
 
 ## 系统设置
 
@@ -54,6 +59,34 @@ lastupdated: "2018-09-27"
 
 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
 
+### Skylake
+
+选择 **Skylake** 时，可以根据需要选择 CPU 和 RAM 组合。
+
+选择用于裸机服务器的 CPU 型号和 RAM。
+
+表 1. Skylake {{site.data.keyword.baremetal_short}} 的选项
+
+| CPU 模型选项   |RAM 选项|
+|:------------- |:------------- |
+|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
+
+### Broadwell
+
+选择 **Broadwell** 时，可以根据需要选择 CPU 和 RAM 组合。
+
+选择用于裸机服务器的 CPU 型号和 RAM。
+
+表 1. Broadwell {{site.data.keyword.baremetal_short}} 的选项
+
+| CPU 模型选项   |RAM 选项|
+|:------------- |:------------- |
+|双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
+|双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
+|双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
+
 ### 预配置
 
 选择**预配置**后，无法更改 CPU 或 RAM 设置。
@@ -61,23 +94,6 @@ lastupdated: "2018-09-27"
 根据需求，选择裸机服务器配置：
   * 小型（双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz / 128 GB RAM / 12 个驱动器）
   * 大型（双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz / 512 GB RAM / 12 个驱动器）
-
-### 定制
-
-选择**定制**时，可以根据需要选择 CPU 和 RAM 组合。
-
-选择用于裸机服务器的 CPU 型号和 RAM。
-
-表 1. 定制 {{site.data.keyword.baremetal_short}} 的选项
-
-| CPU 模型选项   |RAM 选项|
-|:------------- |:------------- |
-|双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
 ### 裸机服务器的数量
 
@@ -91,7 +107,7 @@ lastupdated: "2018-09-27"
   * 对于**小型**裸机服务器配置，会订购 2 个 1.9 TB SSD SED 磁盘驱动器。
   * 对于**大型**裸机服务器配置，会订购 4 个 3.8 TB SSD SED 磁盘驱动器。
 
-选择**定制**裸机服务器配置时，可以定制实例的 VMware vSAN 存储器。请指定以下 vSAN 设置：
+选择 **Skylake** 或 **Broadwell** 裸机服务器配置时，可以定制实例的 vSAN 存储器。请指定以下 vSAN 设置：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
 * 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
@@ -126,7 +142,8 @@ lastupdated: "2018-09-27"
 * 最后一个字符串只能包含字母字符。
 * 最后一个字符串的长度必须在 2 到 24 个字符范围内。
 
-**注**：主机和 VM（虚拟机）的 FQDN（标准域名）的最大长度为 50 个字符。域名必须符合此最大长度。
+主机和 VM（虚拟机）的 FQDN（标准域名）的最大长度为 50 个字符。域名必须符合此最大长度。
+{:note}
 
 ### 网络设置的值格式
 
@@ -194,11 +211,11 @@ lastupdated: "2018-09-27"
 6. 完成裸机服务器设置：
    1. 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
    2. 选择裸机服务器配置。
+      * 选择 **Skylake** 或 **Broadwell** 时，请指定 CPU 型号和 RAM 大小。
       * 选择**预配置**时，请选择**小型**或**大型**配置。
-      * 选择**定制**时，请指定 CPU 型号和 RAM 大小。
 7. 填写存储配置。
+   * 如果对裸机配置选择的是 **Skylake** 或 **Broadwell**，请指定 vSAN 容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
    * 如果对裸机配置选择的是**预配置**，那么无法更改**小型**和**大型**标准化裸机服务器配置的存储设置。
-   * 如果对裸机配置选择的是**定制**，请指定 vSAN 容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
 8. 完成网络接口设置：
    1. 输入主机名前缀、子域标签和根域名。对于辅助实例，系统会自动填写域名。
    2. 选择 VLAN 设置：
@@ -228,8 +245,8 @@ lastupdated: "2018-09-27"
 
 查看和管理订购的 Cloud Foundation 实例。
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。
-如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+{:important}
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 

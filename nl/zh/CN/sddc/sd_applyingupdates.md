@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -15,6 +15,8 @@ lastupdated: "2018-09-27"
 {{site.data.keyword.vmwaresolutions_full}} 控制台会定期检测并列出可应用于 VMware 虚拟环境的可用软件更新。
 
 可用更新是实例软件更新列表中的一个记录，可以立即应用，也可以安排在日后应用。更新是一个捆绑软件，包含一个或多个用于更新 IBM 管理组件和 VMware 组件的软件包。
+
+从 V2.5 开始，不会再列出 IBM CloudDriver 更新，因为已启用自动更新。 
 
 ## 开始之前
 

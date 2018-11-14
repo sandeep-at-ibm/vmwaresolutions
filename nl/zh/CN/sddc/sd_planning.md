@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -24,36 +24,36 @@ Cloud Foundation 部署对物理基础架构有严格要求。因此，只能将
 
 | {{site.data.keyword.CloudDataCent_notm}} |位置|区域|服务器配置|
 |:----------------------|:---------|:-------|:----------------------|
-|AMS03|阿姆斯特丹|欧洲|定制|
-|CHE01|金奈|亚太地区|定制|
-|DAL09|达拉斯|北美南部|定制|
-|DAL10|达拉斯|北美南部|定制、小型、大型|
-|DAL12|达拉斯|北美南部|定制|
-|DAL13|达拉斯|北美南部|定制|
-|FRA02|法兰克福|欧洲|定制、大型|
-|FRA04|法兰克福|欧洲|定制|
-|HKG02|中国香港特别行政区|亚太地区|定制|
-|LON02|伦敦|欧洲|定制|
-|LON04|伦敦|欧洲|定制|
-|LON06|伦敦|欧洲|定制、小型、大型|
-|MEL01|墨尔本|亚太地区|定制|
-|MEX01|克雷塔罗|北美南部|定制|
-|MIL01|米兰|欧洲|定制|
-|MON01|蒙特利尔|北美东部|定制|
-|OSL01|奥斯陆|欧洲|定制|
-|PAR01|巴黎|欧洲|定制|
-|SAO01|圣保罗|南美|定制|
-|SEO01|首尔|亚太地区|定制|
-|SJC03|圣何塞|北美西部|定制|
-|SJC04|圣何塞|北美西部|定制|
-|SNG01|新加坡|亚太地区|定制|
-|SYD01|悉尼|亚太地区|定制|
-|SYD04|悉尼|亚太地区|定制|
-|TOK02|东京|亚太地区|定制|
-|TOR01|多伦多|北美东部|定制、小型、大型|
-|WDC04|华盛顿|北美东部|定制、小型、大型|
-|WDC06|华盛顿|北美东部|定制|
-|WDC07|华盛顿|北美东部|定制|
+|AMS03|阿姆斯特丹|欧洲|Skylake、Broadwell|
+|CHE01|金奈|亚太地区|Skylake、Broadwell|
+|DAL09|达拉斯|北美南部|Skylake、Broadwell|
+|DAL10|达拉斯|北美南部|Skylake、Broadwell、小型、大型|
+|DAL12|达拉斯|北美南部|Skylake、Broadwell|
+|DAL13|达拉斯|北美南部|Skylake、Broadwell|
+|FRA02|法兰克福|欧洲|Skylake、Broadwell、大型|
+|FRA04|法兰克福|欧洲|Skylake、Broadwell|
+|HKG02|中国香港特别行政区|亚太地区|Skylake、Broadwell|
+|LON02|伦敦|欧洲|Skylake、Broadwell|
+|LON04|伦敦|欧洲|Skylake、Broadwell|
+|LON06|伦敦|欧洲|Skylake、Broadwell、小型、大型|
+|MEL01|墨尔本|亚太地区|Skylake、Broadwell|
+|MEX01|克雷塔罗|北美南部|Skylake、Broadwell|
+|MIL01|米兰|欧洲|Skylake、Broadwell|
+|MON01|蒙特利尔|北美东部|Skylake、Broadwell|
+|OSL01|奥斯陆|欧洲|Skylake、Broadwell|
+|PAR01|巴黎|欧洲|Skylake、Broadwell|
+|SAO01|圣保罗|南美|Skylake、Broadwell|
+|SEO01|首尔|亚太地区|Skylake、Broadwell|
+|SJC03|圣何塞|北美西部|Skylake、Broadwell|
+|SJC04|圣何塞|北美西部|Skylake、Broadwell|
+|SNG01|新加坡|亚太地区|Skylake、Broadwell|
+|SYD01|悉尼|亚太地区|Skylake、Broadwell|
+|SYD04|悉尼|亚太地区|Skylake、Broadwell|
+|TOK02|东京|亚太地区|Skylake、Broadwell|
+|TOR01|多伦多|北美东部|Skylake、Broadwell、小型、大型|
+|WDC04|华盛顿|北美东部|Skylake、Broadwell、小型、大型|
+|WDC06|华盛顿|北美东部|Skylake、Broadwell|
+|WDC07|华盛顿|北美东部|Skylake、Broadwell|
 
 根据可用性和库存供应，{{site.data.keyword.CloudDataCents_notm}} 可能会在 {{site.data.keyword.vmwaresolutions_short}} 控制台中显示状态指示符，以帮助您规划部署。
 
