@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Conception d'infrastructure de stockage connecté
 
@@ -56,7 +60,9 @@ Entre 100 et 48 000 IOPS peuvent être mises à disposition avec des tailles de 
 
 Dans cette conception, la solution vCenter Server offre le stockage Endurance pour le stockage connecté. Par conséquent, vous pouvez sélectionner et connecter (via l'automatisation) des exportations Endurance NFS dont la taille est comprise entre 20 Go et 12 To. {{site.data.keyword.cloud_notm}} permet à 64 hôtes vSphere ESXi au maximum de se connecter à une exportation Endurance NFS.
 
-Endurance est disponible dans trois niveaux de performance d'IOPS pour prendre en charge les divers besoins des applications. Notez qu'après la mise à disposition d'un partage NFS, celui-ci peut être redimensionné ou reconfiguré pour permettre davantage ou moins d'IOPS.
+Endurance est disponible dans trois niveaux de performance d'IOPS pour prendre en charge les divers besoins des applications.
+
+Après la mise à disposition d'un partage NFS, celui-ci peut être redimensionné ou reconfiguré pour permettre davantage ou moins d'IOPS.{:note}
 
 Pour connaître les options d'IOPS détaillées, voir la section _Paramètres de stockage_ dans la rubrique [Commande d'instances vCenter Server](../../vcenter/vc_orderinginstance.html).
 

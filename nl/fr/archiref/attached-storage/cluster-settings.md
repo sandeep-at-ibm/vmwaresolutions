@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -18,7 +18,7 @@ Deux fonctions principales sont activées en même temps que la fonction vSphere
 
 ### Equilibrage de charge
 
-Avec l'équilibrage de charge, la distribution et l'utilisation des ressources d'unité centrale et de mémoire pour tous les hôtes et toutes les machines virtuelles du cluster sont surveillées en permanence. La fonction DRS compare ces métriques à une utilisation de ressource idéale en fonction des attributs des pools de ressources et des machines virtuelles du cluster, de la demande en cours et de la cible de déséquilibre. Ensuite, elle effectue (ou recommande d'effectuer) des migrations de machine virtuelle en conséquence.
+Avec l'équilibrage de charge, la distribution et l'utilisation des ressources d'unité centrale et de mémoire pour tous les hôtes et toutes les machines virtuelles du cluster sont surveillées en permanence. La fonction DRS compare ces métriques à une utilisation de ressource idéale en fonction des attributs des pools de ressources et des machines virtuelles du cluster et de la demande en cours. Ensuite, elle effectue ou recommande d'effectuer des migrations de machine virtuelle en conséquence.
 
 Lorsqu'une machine virtuelle est mise sous tension dans le cluster pour la première fois, la fonction DRS tente de maintenir un équilibrage de charge adéquat en plaçant la machine virtuelle sur un hôte approprié ou en effectuant une recommandation. Les paramètres de placement ou de recommandation sont définis dans la section DRS Automation des paramètres du cluster.
 
