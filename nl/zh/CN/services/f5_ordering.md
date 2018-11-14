@@ -4,13 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
 # 订购 F5 on IBM Cloud
 
-订购 F5 on {{site.data.keyword.cloud}} 服务时，可订购包含 BIG-IP Virtual Edition (VE) 的新实例，也可通过向现有实例添加 BIG-IP VE 来进行订购。
+订购 F5 on {{site.data.keyword.cloud}} 服务时，可订购包含此服务的新实例，也可通过向现有实例添加此服务来进行订购。
 
 ## 为新实例订购 F5 on IBM Cloud
 
@@ -28,27 +32,39 @@ lastupdated: "2018-09-27"
 
 订购此服务时，请提供以下设置。
 
+### F5 许可证激活连接
+
+选择**公用网络**或**专用网络**以激活许可证。如果目标集群配置为仅使用专用网络接口，那么仅**专用网络**选项可用。此选项会确定 F5 虚拟服务器将如何联系 F5 许可证服务器，并且此选项不会影响工作负载数据平面。
+
+如果选择**专用网络**，请指定以下设置：
+* **代理 IP 地址**：代理服务器的 IPv4 地址。
+* **代理端口号**：代理服务器的端口号，通常为 8080 或 3128。
+
+不支持认证代理。
+{:note}
+
 ### 名称
 
 输入服务名称。
+
+### 最大带宽
+
+指定 F5 BIG-IP 设备的最大吞吐量。
 
 ### 许可模型
 
 F5 on {{site.data.keyword.cloud_notm}} 服务的许可模型提供了以下选项：
 <dl class="dl">
         <dt class="dt dlterm">良好</dt>
-        <dd class="dd">此选项利用 BIG-IP Local Traffic Manager™ (LTM) VE 作为完整代理体系结构运行，提供智能本地流量管理、完整的 SSL 流量可视性以及分析和运行状况监视，以确保应用程序服务器始终可供用户使用。</dd>
+        <dd class="dd">此选项使用作为完整代理体系结构运行的 BIG-IP Local Traffic Manager™ (LTM) VE，提供智能本地流量管理、完整的 SSL 流量可视性以及分析和运行状况监视，以确保应用程序服务器始终可供用户使用。</dd>
         <dt class="dt dlterm">更佳</dt>
         <dd class="dd">此选项基于**良好**选项的优点而构建，增加了 BIG-IP DNS™、BIG-IP Advanced Firewall Manager™ (AFM) 和 BIG-IP Application Acceleration Manager™ (AAM) 模块。此项提供全球流量管理服务、应用程序性能优化以及高级网络防火墙和分布式拒绝服务 (DDoS) 缓解功能。</dd>
         <dt class="dt dlterm">最佳</dt>
         <dd class="dd">除了具备**良好**和**更佳**选项的优点外，BIG-IP Application Security Manager™ (ASM) 还提供针对 L7 DDoS、Open Web Application Security Project (OWASP) 十大威胁及常见应用程序漏洞的综合应用程序保护。BIG-IP Access Policy Manager™ (APM) 为用户提供对多云环境中任何位置内应用程序的简化的安全访问，包括 SSO (Single Sign-On) 和 MFA（多因子认证）等功能。</dd>
 </dl>
 
-**重要信息**：无法在安装服务后更改许可模型。要更改许可模型，必须除去现有服务，然后使用其他许可模型重新安装该服务。
-
-### 最大带宽
-
-指定 F5 BIG-IP 设备的最大吞吐量。
+无法在安装服务后更改许可模型。要更改许可模型，必须除去现有服务，然后通过选择其他许可模型重新安装该服务。
+{:important}
 
 ### 相关链接
 

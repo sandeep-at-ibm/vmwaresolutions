@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware HCX on IBM Cloud 概述
 
 HCX on {{site.data.keyword.cloud}} 服务可将内部部署数据中心的网络无缝扩展到 {{site.data.keyword.cloud_notm}}，这允许虚拟机 (VM) 在不进行任何转换或更改的情况下，迁移到 {{site.data.keyword.cloud_notm}} 或从中迁移出来。
 
-**可用性**：此服务仅可用于在 V2.3 和更高发行版中部署的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 实例。
+此服务仅可用于在 V2.3 和更高发行版中部署的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 实例。
+{:note}
 
 可以将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例。有关升级实例和部署 HCX on {{site.data.keyword.cloud_notm}} 服务的更多信息，请参阅[升级到 vCenter Server with Hybridity Bundle 实例](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance)。
 

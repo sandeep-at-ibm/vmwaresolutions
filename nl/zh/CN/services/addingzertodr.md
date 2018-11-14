@@ -4,13 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Zerto on IBM Cloud 概述
 
 Zerto on {{site.data.keyword.cloud}} 服务用于将复制和灾难恢复功能集成到部署产品中，以保护和恢复 {{site.data.keyword.cloud_notm}} 上 VMware 虚拟环境中的数据。
+
+此服务仅可用于在 V1.2 或更高版本中部署的实例。安装的当前 Zerto 版本为 6.0 Update 3。
+{:note}
 
 ## Zerto on IBM Cloud 技术规范
 
@@ -23,7 +30,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组�
 * 一个虚拟服务实例 (VSI) - Zerto Virtual Manager
 * 2 个 2.0 GHz 核心
 * 4 GB RAM
-* Windows Server 2012 R2 Standard Edition（64 位）
+* Windows Server 2016 Standard Edition（64 位）
 
 ### 存储
 
@@ -36,7 +43,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组�
 
 ### 许可证和费用
 
-Zerto Replication V5.5 许可证
+Zerto Replication V6.0 Update 3 许可证
 
 ### 相关链接
 
