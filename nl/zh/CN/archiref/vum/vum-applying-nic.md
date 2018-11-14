@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -34,7 +34,7 @@ ixgben 是用于替换 vmklinux net-ixgbe 驱动程序的本机驱动程序，�
 
 如果需要还原，但无法通过 SSH 登录到 vSphere ESXi 主机，那么您需要通过 IBM Cloud 控制窗口登录到需要还原的主机的 KVM 控制台。
 
-将 IBM Cloud 控制窗口中列出的标识和密码与 IPMI IP 地址一起使用，以登录到 IPMI Web 界面。您需要通过 VPN 连接到主机所在的数据中心。有关更多信息，请参阅 [IBM Cloud VPN 入门](https://console.bluemix.net/docs/infrastructure/iaas-vpn/getting-started.html#getting-started-with-virtual-private-networking-vpn)。
+将 IBM Cloud 控制窗口中列出的标识和密码与 IPMI IP 地址一起使用，以登录到 IPMI Web 界面。您需要通过 VPN 连接到主机所在的数据中心。有关更多信息，请参阅 [VPN 入门](../../../../infrastructure/iaas-vpn/getting-started.html)。
 
 1. 转至 vSphere ESXi 主机的“设备详细信息”>“远程管理”页面，然后选择**操作** > **KVM 控制台**。这将打开另一个窗口，供您输入 IPMI 用户和密码。
 2. 选择**远程控制** > **iKVM/HTML5**，然后单击 **iKVM/HTML5** 以重新启动。现在，您将能够访问 vSphere ESXi 主机的控制台。
@@ -47,5 +47,5 @@ ixgben 是用于替换 vmklinux net-ixgbe 驱动程序的本机驱动程序，�
 
 ### 相关链接
 
-* [VMware HCX on IBM Cloud 解决方案](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）

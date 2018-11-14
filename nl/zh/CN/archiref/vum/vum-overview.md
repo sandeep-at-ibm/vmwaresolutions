@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
-# VUM 概述
+# VMware Update Manager 概述
 
-VUM 使用多阶段过程来升级 vSphere 对象以及应用补丁或扩展。通过此过程，能以最少的系统停机时间顺利更新。在查看此过程之前，需要先了解以下术语：
+VMware Update Manager (VUM) 使用多阶段过程来升级 vSphere 对象以及应用补丁或扩展。通过此过程，能以最少的系统停机时间顺利更新。在查看此过程之前，需要先了解以下术语：
 * **库存对象** - vCenter 中的对象，例如虚拟机、虚拟设备或 vSphere ESXi 主机
 * **基线** - 基线包含由一个或多个补丁、扩展、Service Pack、错误修订或升级构成的集合，可以分类为补丁、扩展或升级基线。基线分为两类：主机和 VM/VA；这两类都包含 VMware 提供的预定义基线，也都可以根据需要添加定制基线：
   - 预定义的主机基线：
@@ -63,5 +63,5 @@ VUM 客户机界面提供了两个主视图：
 
 ### 相关链接
 
-* [VMware HCX on IBM Cloud 解决方案](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）

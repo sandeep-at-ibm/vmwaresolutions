@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -32,7 +32,7 @@ vSAN 集群升级将按以下顺序执行任务：
 
 确保 VCSA 为 vCenter 6.5 补丁 2 或更高版本，然后再继续，因为这样会修复一些代理使用问题。有关更多信息，请参阅 [VCSA 更新和 SSO 链接的 vCenter](vum-updating-vcsa.html)。
 
-要查看 VUM 中的 vSAN 更新，请执行 vSAN 联机运行状况工作流程。因此，vSAN 联机运行状况需要连接到 https://vcsa.vmware.com 和 http://www.vmware.com 以执行这些联机运行状况检查，从而启用 vSAN 联机运行状况工作流程，我们需要执行以下操作：
+要查看 VUM 中的 vSAN 更新，请执行 vSAN 联机运行状况工作流程。因此，vSAN 联机运行状况需要连接到 `vcsa.vmware.com` 和 `vmware.com` 站点以执行这些联机运行状况检查，从而启用 vSAN 联机运行状况工作流程，我们需要执行以下操作：
 * 配置 VCSA 以使用代理。
 * 配置 vSAN 以使用代理。
 * 启用客户体验改善计划 (CEIP)。
@@ -54,7 +54,7 @@ vSAN 集群升级将按以下顺序执行任务：
   `proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
 
 ### 配置 vSAN 以使用代理
-1. 浏览至**主页** > **主机和集群**，选择“导航”窗格中的 **vSAN 集群**，选择**配置**选项卡并浏览至 **vSAN**，然后选择**常规**。滚动到“因特网连接”部分，然后单击**编辑**。
+1. 浏览至**主页** > **主机和集群**，选择“导航”窗格中的 **vSAN 集群**，选择**配置**选项卡并浏览至 **vSAN**，然后选择**常规**。滚动到**因特网连接**部分，然后单击**编辑**。
 2. 输入代理的 IP 地址和端口号，然后单击**确定**。
 
 ### 启用客户体验改善计划 (CEIP)
@@ -135,5 +135,5 @@ Ruby vSphere Console (RVC) 是面向 vSphere 的基于 Ruby 的命令行界面�
 
 ### 相关链接
 
-* [VMware HCX on IBM Cloud 解决方案](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）

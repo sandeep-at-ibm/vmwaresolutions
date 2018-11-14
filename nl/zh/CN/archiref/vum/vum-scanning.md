@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -16,16 +16,15 @@ lastupdated: "2018-10-03"
 *	**手动启动容器对象扫描** - 通过扫描作为数据中心或数据中心文件夹的容器对象，对主机、虚拟机和虚拟设备启动同时扫描。
 *	**安排扫描** - 可以配置 vSphere Web Client 以在特定时间扫描虚拟机、虚拟设备和 ESXi 主机，或按您方便的时间间隔对这些对象进行扫描。
 
-##	手动启动 vSphere ESXi 主机扫描
+## 手动启动 vSphere ESXi 主机扫描
 
-1.	单击**扫描更新**按钮，选择**补丁、扩展和升级**，然后单击**确定**。
-2.	扫描完成后，选择**关键主机补丁**，然后在下方窗格中，针对每个主机进行复查。
-3.	通过单击“补丁数”中的数字，将有一个窗口会显示补丁详细信息。
-4.	查看**非关键补丁**，并重复上述步骤。
+1. 单击**扫描更新**，选择**补丁、扩展和升级**，然后单击**确定**。
+2. 扫描完成后，选择**关键主机补丁**。在下方窗格中，通过单击**补丁编号**中的相应编号来查看每个主机的补丁详细信息。这将出现一个窗口，其中显示补丁信息。
+3. 查看**非关键补丁**，并重复上述步骤。
 
-请注意，VUM 日志文件可能位于 _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
+  VUM 日志文件位于 _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
-##	手动启动虚拟机和虚拟设备扫描
+## 手动启动虚拟机和虚拟设备扫描
 
 可以根据连接的基线和基线组来扫描 vSphere 库存中的虚拟机和虚拟设备。这将根据连接的基线扫描所选虚拟机和设备，具体取决于您选择的选项。此外，还会扫描所有子对象，因此虚拟基础架构越大，在其中启动扫描的对象层次结构中的层级越高，扫描用时就越长，一致性视图也越准确。
 
@@ -56,5 +55,5 @@ lastupdated: "2018-10-03"
 
 ### 相关链接
 
-* [VMware HCX on IBM Cloud 解决方案](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）
