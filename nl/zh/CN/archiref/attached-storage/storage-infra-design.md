@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 连接的存储器基础架构设计
 
@@ -56,7 +60,10 @@ lastupdated: "2018-09-24"
 
 在此设计中，vCenter Server 解决方案会为连接的存储器提供耐久性存储器。因此，您可以选择和附加（通过自动化）大小范围从 20 GB 到最大 12 TB 的耐久性 NFS 导出。{{site.data.keyword.cloud_notm}} 最多允许 64 个 vSphere ESXi 主机连接到单个耐久性 NFS 导出。
 
-耐久性有三个 IOPS 性能层，分别支持不同的应用程序需求。请注意，在供应 NFS 共享后，无法调整其大小或对其重新配置来允许更多或更少的 IOPS。
+耐久性有三个 IOPS 性能层，分别支持不同的应用程序需求。
+
+在供应 NFS 共享后，无法调整其大小或对其重新配置来允许更多或更少的 IOPS。
+{:note}
 
 有关详细的 IOPS 选项，请参阅[订购 vCenter Server 实例](../../vcenter/vc_orderinginstance.html)中的_存储设置_部分。
 
