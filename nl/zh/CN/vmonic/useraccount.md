@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 管理用户帐户和设置
 
 {{site.data.keyword.vmwaresolutions_full}} 通过 {{site.data.keyword.slapi_short}} 调用与 {{site.data.keyword.cloud_notm}} 基础架构进行通信。要安全地访问 {{site.data.keyword.slapi_short}}，必须将您的 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户的凭证链接到您的 {{site.data.keyword.cloud_notm}} 帐户。
 
-**注**：{{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户先前称为 IBM SoftLayer 帐户。
+{{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户先前称为 IBM SoftLayer 帐户。
+{:note}
 
 您还可以指定是否要针对各种事件接收电子邮件和控制台通知。
 
