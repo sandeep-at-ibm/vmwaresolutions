@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ajout, affichage et suppression de clusters pour des instances vCenter Server
 
@@ -14,13 +18,13 @@ Les serveurs ESXi que vous avez configurés lors de la commande d'une instance s
 
 Vous pouvez ajouter vos propres clusters à vos instances VMware vCenter Server afin d'étendre la capacité de calcul et de stockage. Au sein d'un cluster, vous pouvez gérer des serveurs ESXi afin d'optimiser l'allocation des ressources et la haute disponibilité. Lorsque vous n'en avez plus besoin, supprimez les clusters que vous avez ajoutés à vos instances.
 
-**Disponibilité :** la fonction de suppression de cluster est disponible uniquement pour les instances déployées dans (ou mises à niveau vers) la version 2.3 et des éditions ultérieures.
+La fonction de suppression de cluster est disponible uniquement pour les instances qui ont été déployées dans (ou mises à niveau vers) la version 2.3 et les versions ultérieures. {:note}
 
 ## Ajout de clusters à des instances vCenter Server
 
 Le nombre de clusters pouvant être ajoutés à une instance varie en fonction de la version de l'instance :
-* Pour les instances déployées dans (ou mises à niveau vers) la version 2.0 et des éditions ultérieures, vous pouvez ajouter jusqu'à 10 clusters.
-* Pour les instances déployées dans la version 2.2 ou des éditions antérieures, vous pouvez ajouter jusqu'à cinq clusters.
+* Pour les instances déployées dans (ou mises à niveau vers) la version 2.0 et des versions ultérieures, vous pouvez ajouter jusqu'à 10 clusters.
+* Pour les instances déployées dans la version 2.1 ou dans des versions antérieures, vous pouvez ajouter jusqu'à cinq clusters.
 
 ### Paramètres système
 
@@ -42,7 +46,40 @@ Si vous déployez le cluster dans un autre {{site.data.keyword.CloudDataCent_not
 
 ### Paramètres de serveur bare metal
 
-Vous pouvez choisir l'option **Préconfigurée** ou **Personnalisée**.
+Vous pouvez choisir **Skylake**, **Certifiés SAP**, **Broadwell** ou **Préconfigurée**.
+
+#### Skylake
+
+Avec l'option **Skylake**, un certain nombre d'options est disponible pour les paramètres **Modèle UC** et **Mémoire RAM**. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
+
+Tableau 1. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}
+
+| Options de modèle d'UC        | Options de RAM       |
+|:------------- |:------------- |
+| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+
+#### Certifiés SAP
+
+Lorsque vous sélectionnez **Certifiés SAP**, vous ne pouvez pas modifier les paramètres d'UC ou de mémoire RAM.
+
+En fonction de vos besoins, sélectionnez une configuration de serveur bare metal :
+* Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/192 Go de mémoire RAM
+* Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/384 Go de mémoire RAM
+* Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/768 Go de mémoire RAM
+
+#### Broadwell
+
+Avec l'option **Broadwell**, un certain nombre d'options est disponible pour les paramètres **Modèle UC** et **Mémoire RAM**. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
+
+Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}
+
+| Options de modèle d'UC        | Options de RAM       |
+|:------------- |:------------- |
+| Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+| Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+| Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 
 #### Préconfigurée
 
@@ -50,21 +87,6 @@ Pour l'option **Préconfigurée**, vous pouvez choisir une **configuration de se
 * Petite (Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz/128 Go de RAM/2 disques)
 * Moyenne (Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz/256 Go de RAM/2 disques)
 * Grande (Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de RAM/2 disques)
-
-#### Personnalisée
-
-Avec l'option **Personnalisée**, un certain nombre d'options est disponible pour les paramètres **Modèle UC** et **Mémoire RAM**. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
-
-Tableau 1. Options pour les serveurs {{site.data.keyword.baremetal_short}} personnalisés
-
-| Options de modèle d'UC        | Options de RAM       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
 
 #### Nombre de serveurs bare metal
 
@@ -74,9 +96,9 @@ Pour les instances vCenter Server déployées dans la version 2.1 ou des version
 
 Pour les instances vCenter Server déployées dans la version 2.0 ou des versions antérieures, vous pouvez ajouter jusqu'à 32 serveurs {{site.data.keyword.baremetal_short}} pour un cluster. Le nombre de serveurs {{site.data.keyword.baremetal_short}} que vous pouvez ajouter simultanément est le suivant :
 * Pour les configurations de serveur bare metal **Petite**, **Moyenne** et **Grande**, vous pouvez ajouter entre 1 et 10 serveurs ESXi à la fois.
-* Pour la configuration de serveur bare metal **Personnalisée**, vous pouvez ajouter entre 1 et 20 serveurs ESXi à la fois.
+* Pour la configuration de serveur bare metal **Skylake** ou **Broadwell**, vous pouvez ajouter 1 à 20 serveurs ESXi à la fois. 
 
-Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Si vous sélectionnez la configuration de serveur bare metal **Personnalisée** avec un stockage VMware vSAN, quatre serveurs sont nécessaires pour le cluster initial et pour les clusters post-déploiement.
+Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Si vous sélectionnez la configuration de serveur bare metal **Skylake** ou**Broadwell** avec un stockage VMware vSAN, quatre serveurs sont nécessaires pour le cluster initial et pour les clusters post-déploiement.
 
 ### Paramètres de stockage
 
@@ -97,7 +119,7 @@ Si votre cluster initial était de type vSAN, tous les clusters vSAN supplément
 
 Lorsque vous sélectionnez **Stockage NFS**, vous pouvez ajouter un stockage partagé de niveau fichier pour votre instance dans lequel tous les partages utilisent les mêmes paramètres ou vous pouvez spécifier des paramètres de configuration différents pour chaque partage de fichiers. Spécifiez les options NFS suivantes :
 
-**Remarque :** le nombre de partages de fichiers doit être compris entre 1 et 32.
+Le nombre de partages de fichiers doit être compris entre 1 et 32.{:note}
 
 * **Configurer les partages individuellement** : permet de spécifier des paramètres de configuration différents pour chaque partage de fichiers.
 * **Nombre de partages** : lorsque vous souhaitez utiliser le même paramètre de configuration pour chaque partage de fichiers, spécifiez le nombre de partages de fichiers pour le stockage partagé NFS que vous souhaitez ajouter.
@@ -105,7 +127,7 @@ Lorsque vous sélectionnez **Stockage NFS**, vous pouvez ajouter un stockage par
 * **Performances** : sélectionnez la valeur IOPS (opérations d'entrée/sortie par seconde) par Go adaptée à vos besoins en matière de charge de travail.
 * **Ajouter NFS** : permet d'ajouter des partages de fichiers individuels avec des paramètres de configuration différents.
 
-Tableau 2. Options de niveau de performance NFS
+Tableau 3. Options de niveau de performance NFS
 
 | Option        | Détails       |
   |:------------- |:------------- |
@@ -137,13 +159,15 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance à laquelle vous souhaitez ajouter des clusters.
 
-   **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas ajouter de clusters à l'instance.
+   Assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas ajouter de clusters à l'instance.
+   {:note}
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche et cliquez sur **Ajouter** dans l'angle supérieur droit du tableau **CLUSTERS**.
 4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
 5. Si vous souhaitez héberger le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui dans lequel l'instance est hébergée, sous **Serveur bare metal**, cochez la case **Sélectionner un autre emplacement** et choisissez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel héberger l'instance.
 6. Procédez à la configuration du serveur bare metal.
+   * Si vous avez sélectionné **Skylake** ou **Broadwell**, renseignez les zones **Modèle d'UC**, **Mémoire RAM** et **Nombre de serveurs {{site.data.keyword.baremetal_short}}**.
+   * Si vous avez sélectionné **Certifiés SAP**, spécifiez le modèle d'UC. 
    * Si vous avez sélectionné **Préconfigurée**, renseignez les zones **Configuration de serveur bare metal**, et **Nombre de serveurs {{site.data.keyword.baremetal_short}}**. Si vous prévoyez d'utiliser vSAN comme solution de stockage, au moins quatre serveurs {{site.data.keyword.baremetal_short}} sont nécessaires.
-   * Si vous avez sélectionné **Personnalisée**, renseignez les zones **Modèle UC**, **Mémoire RAM** et **Nombre de serveurs {{site.data.keyword.baremetal_short}}**.
 7. Procédez à la configuration du stockage.
   * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
   * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**.
@@ -165,7 +189,8 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 1. Le déploiement du cluster démarre automatiquement et celui-ci prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page **Récapitulatif** de l'instance.
 2. Lorsque le cluster est prêt pour utilisation, il prend le statut **Prêt à l'emploi**. Le cluster qui vient d'être ajouté est activé avec vSphere haute disponibilité et vSphere Distributed Resource Scheduler (DRS).
 
-**Important :** vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
+Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
+{:important}
 
 ## Procédure d'affichage des clusters dans les instances vCenter Server
 
@@ -242,7 +267,8 @@ Vous souhaiterez peut-être supprimer un cluster d'une instance si vous n'en ave
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous souhaitez supprimer les clusters.
 
-   **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas supprimer de clusters de l'instance.
+   Assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas supprimer de clusters de l'instance.
+   {:note}
 
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, localisez le cluster que vous souhaitez supprimer et cliquez sur l'icône **Supprimer** dans la colonne **Actions**.
 4. Confirmez que vous avez terminé la migration de machines virtuelles vers d'autres clusters, le cas échéant, et que vous souhaitez supprimer le cluster.

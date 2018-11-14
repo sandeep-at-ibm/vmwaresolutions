@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Configuration multisite pour des instances vCenter Server with Hybridity Bundle
 
@@ -32,7 +36,8 @@ Un déploiement multisite est constitué des composants suivants.
 
 Le modèle de configuration multisite utilise un concentrateur et une topologie en étoile (hub and spoke) avec un site principal et un maximum de sept sites secondaires. Une seule couche de sites est prise en charge, c'est-à-dire que vous ne pouvez pas configurer de sites supplémentaires qui sont liés à d'autres sites secondaires. Une configuration multisite accepte jusqu'à 128 serveurs ESXi répartis dans toutes les instances.
 
-**Remarque :** si votre configuration nécessite un déploiement multisite de plus de 128 serveurs ESXi, contactez le support IBM pour obtenir de l'aide. Pour plus d'informations, voir [Contacter le support IBM](../vmonic/trbl_support.html).
+Si votre configuration nécessite un déploiement multisite de plus de 128 serveurs ESXi, contactez le support IBM pour obtenir de l'aide. Pour plus d'informations, voir [Contacter le support IBM](../vmonic/trbl_support.html).
+{:note}
 
 Le graphique suivant décrit la vue globale du déploiement multisite vCenter Server with Hybridity Bundle.
 
@@ -49,7 +54,8 @@ Vous ne pouvez affecter qu'une seule instance secondaire à la fois à une insta
 
 Vous pouvez avoir jusqu'à 8 instances (1 principale et 7 secondaires) au maximum déployées dans une configuration multisite.
 
-**Remarque :** la suppression d'instances vCenter Server with Hybridity Bundle qui font partie d'une configuration multisite requiert une planification spéciale. Pour plus d'informations, voir [Suppression d'instances vCenter Server with Hybridity Bundle dans une configuration multisite](vc_hybrid_deletinginstance_multi.html).
+La suppression d'instances vCenter Server with Hybridity Bundle qui font partie d'une configuration multisite requiert une planification spéciale. Pour plus d'informations, voir [Suppression d'instances vCenter Server with Hybridity Bundle dans une configuration multisite](vc_hybrid_deletinginstance_multi.html).
+{:note}
 
 ### Liens connexes
 

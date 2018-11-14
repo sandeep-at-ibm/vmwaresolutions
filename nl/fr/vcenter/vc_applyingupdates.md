@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Application de mises à jour à des instances vCenter Server
 
@@ -16,7 +18,8 @@ Le processus d'application de modules de correction et de mises à jour aux inst
 
 ## Avant de commencer
 
-**Important :** lors de la mise à niveau d'une instance vCenter Server vers une instance vCenter Server with Hybridity Bundle, vous devez d'abord appliquer au moins la mise à jour logicielle vCenter Server V2.3 de base. Vous devez le faire avant de pouvoir effectuer la mise à niveau de licence vers Hybridity Bundle.
+Lors de la mise à niveau d'une instance vCenter Server vers une instance vCenter Server with Hybridity Bundle, vous devez d'abord appliquer au moins la mise à jour logicielle vCenter Server V2.3 de base. Vous devez le faire avant de pouvoir effectuer la mise à niveau de licence vers Hybridity Bundle.
+{:important}
 
 Les partenaires commerciaux n'ont pas la possibilité de mettre à niveau une instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle.
 
@@ -24,7 +27,7 @@ Avant d'appliquer une mise à jour, développez l'entrée de mise à jour en cli
 * La version de la mise à jour. Vous devez appliquer les mises à jour par ordre chronologique, c'est-à-dire de la plus ancienne à la plus récente. Assurez-vous d'avoir appliqué toutes les mises à jour précédentes avant d'appliquer la plus récente. Par exemple, vous devez appliquer la mise à jour V2.3 avant de tenter d'appliquer la mise à jour V2.4.
 * Si un temps d'indisponibilité est nécessaire.
 * Le temps total estimé pour effectuer la mise à jour.
-* L'impact de la mise à jour sur l'environnement virtuel VMware. Le tableau 1 indique comment les différents niveaux d'impact affectent le système.
+* L'impact de la mise à jour sur l'environnement virtuel VMware. Le tableau 1 indique comment les différents niveaux des mises à jour affectent le système.
 * Les détails de la mise à jour.
 
 Tableau 1. Niveaux de mise à jour et impact
@@ -58,7 +61,8 @@ Cette procédure s'applique aux instances déployées en version 2.1 et ultérie
    S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec l'instance de serveur virtuel IBM CloudDriver, lié à une règle de pare-feu ou à un autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
 4. Cliquez sur **Mise à jour et module de correction** dans le panneau de navigation de gauche.
 
-   **Remarque :** la page **Mise à jour et module de correction** d'une instance ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. Les mises à jour VMware doivent être appliquées manuellement.
+   La page **Mise à jour et module de correction** d'une instance ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. Les mises à jour VMware doivent être appliquées manuellement.
+   {:note}
 
    {{site.data.keyword.vmwaresolutions_short}} applique les mises à jour VMware dans les circonstances suivantes :
    * Lorsqu'une nouvelle instance vCenter Server est déployée
@@ -67,7 +71,8 @@ Cette procédure s'applique aux instances déployées en version 2.1 et ultérie
 
 5. Pour des mises à niveau de licence NSX, cliquez sur **Mettre à niveau**. Dans la fenêtre **Mettre à niveau l'édition de licence NSX**, sélectionnez celle voulue et cliquez sur **Mettre à niveau**. Les rétromigrations d'édition de licence ne sont pas disponibles.
 
-   **Remarque** : la mise à niveau de licence remplace toutes les licences NSX existantes sur l'instance. Des frais supplémentaires peuvent découler d'un chevauchement entre les anciennes et les nouvelles licences si vous effectuez la mise à niveau en cours de cycle de facturation. Pour éviter des frais supplémentaires, il est recommandé d'effectuer la mise à niveau de la licence à la fin du cycle de facturation.
+   La mise à niveau de licence remplace toutes les licences NSX existantes sur l'instance. Des frais supplémentaires peuvent découler d'un chevauchement entre les anciennes et les nouvelles licences si vous effectuez la mise à niveau en cours de cycle de facturation. Pour éviter des frais supplémentaires, il est recommandé d'effectuer la mise à niveau de la licence à la fin du cycle de facturation.
+   {:note}
 
 6. Pour les mises à jour logicielles, cliquez sur la flèche vers le bas afin de développer la mise à jour que vous voulez appliquer, puis effectuez l'une des opérations suivantes :
    *  Pour lancer immédiatement la mise à jour, cliquez sur l'icône de menu déroulant dynamique dans la colonne **Actions** de l'entrée de mise à jour, puis cliquez sur **Mettre à jour maintenant**.
@@ -78,7 +83,8 @@ Cette procédure s'applique aux instances déployées en version 2.1 et ultérie
 
 Durant la mise à niveau de licence vers Hybridity Bundle, une mise à niveau vers l'édition VMware NSX Advanced s'effectue immédiatement si votre instance vCenter Server utilise l'édition VMware NSX Base.
 
-**Remarque :** si vous effectuez une mise à niveau vers Hybridity Bundle et que votre instance vCenter Server utilise déjà le stockage NFS, vous n'êtes pas facturé pour le stockage vSan VMware. Vous êtes facturé pour la licence vSAN vu qu'elle est incluse avec Hybridity Bundle.
+Si vous effectuez une mise à niveau vers Hybridity Bundle et que votre instance vCenter Server utilise déjà le stockage de fichiers NFS, vous n'êtes pas facturé pour le stockage vSan VMware. Vous êtes facturé pour la licence vSAN vu qu'elle est incluse avec Hybridity Bundle.
+{:note}
 
 Procédez comme suit pour mettre à niveau d'une instance vCenter Server vers vCenter Server with Hybridity Bundle :
 

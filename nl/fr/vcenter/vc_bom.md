@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Nomenclature de vCenter Server
 
@@ -39,7 +43,8 @@ Tableau 2. Nomenclature des composants logiciels des instances vCenter Server
 | VMware       | NSX for vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server édition Standard | 2012R2       |
 
-**Remarque :** VMware vSAN est un composant optionnel.
+VMware vSAN est un composant optionnel.
+{:note}
 
 ## Paramètres de configuration avancée pour les serveurs ESXi
 
