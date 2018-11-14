@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 存储设置
 
 此设计支持仅通过 NFS V3 来连接共享存储器。不支持 NFS V4 和 V4.1。
 
-**注**：此设计的所有连接存储器仅限于 vCenter Server 解决方案所在 {{site.data.keyword.CloudDataCent_notm}} 中可用的 {{site.data.keyword.cloud_notm}} 存储器。此外，缺省情况下，存储到数据存储的所有虚拟磁盘均为自动精简配置。
+此设计的所有连接存储器仅限于 vCenter Server 解决方案所在的 {{site.data.keyword.CloudDataCent_notm}} 中可用的 {{site.data.keyword.cloud_notm}} 存储器。此外，缺省情况下，存储到数据存储的所有虚拟磁盘均为自动精简配置。
+{:note}
 
 体系结构指定使用 DNS 名称将 NFS V3 数据存储从 {{site.data.keyword.cloud_notm}} 存储器连接到共享。此外，还会将 NFS 共享连接到 vCenter Server 集群中的所有主机，并放置在已启用 Storage DRS 的数据存储集群中。
 
