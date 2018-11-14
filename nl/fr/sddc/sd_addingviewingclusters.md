@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ajout, affichage et suppression de clusters pour des instances Cloud Foundation
 
@@ -40,30 +44,39 @@ Le nom du cluster qui doit respecter les règles suivantes :
 
 L'{{site.data.keyword.CloudDataCent}} du cluster est, par défaut, l'{{site.data.keyword.CloudDataCent_notm}} de l'instance Cloud Foundation. Vous pouvez déployer le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui de l'instance déployée, sous réserve que la latence du réseau entre les deux {{site.data.keyword.CloudDataCents_notm}} soit inférieure à 150 ms. Pour vérifier la latence du réseau, utilisez un outil tel que [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-Les centres de données dont vous disposez dépendent de la configuration de serveur bare metal qui est sélectionnée pour le déploiement. Si vous sélectionnez la configuration **Personnalisée**, vous pouvez également déployer le cluster dans un autre pod de l'infrastructure {{site.data.keyword.cloud_notm}} si le centre de données sélectionné contient des pods supplémentaires. Cette configuration se révèle utile lorsque le pod de l'infrastructure {{site.data.keyword.cloud_notm}} par défaut où est déployée l'instance initiale a atteint sa capacité maximale.
+Les centres de données dont vous disposez dépendent de la configuration de serveur bare metal qui est sélectionnée pour le déploiement. Si vous sélectionnez la configuration **Skylake** ou **Broadwell**, vous pouvez également déployer le cluster dans un autre pod de l'infrastructure {{site.data.keyword.cloud_notm}} si le centre de données sélectionné contient des pods supplémentaires. Cette configuration se révèle utile lorsque le pod de l'infrastructure {{site.data.keyword.cloud_notm}} par défaut où est déployée l'instance initiale a atteint sa capacité maximale.
 
-**Remarque** : les configurations de serveur bare metal **Petite** et **Grande** normalisées utilisent un pod par défaut non modifiable.
+Les configurations de serveur bare metal **Petite** et **Grande** normalisées utilisent un pod par défaut non modifiable.{:note}
 
 Si vous déployez le cluster dans un autre centre de données ou pod, au moins trois VLAN supplémentaires sont commandés pour une utilisation avec les serveurs {{site.data.keyword.baremetal_short}} commandés.
 
 ### Paramètres de serveur bare metal
 
-Vous pouvez choisir l'option **Personnalisée** ou **Préconfigurée**.
+Vous pouvez choisir l'option **Skylake**, **Broadwell** ou **Préconfigurée**.
 
-#### Personnalisée
+#### Skylake
 
-Avec l'option **Personnalisée**, un certain nombre d'options est disponible pour les paramètres **Modèle UC** et **Mémoire RAM**. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
+Avec l'option **Skylake**, un certain nombre d'options est disponible pour les paramètres **Modèle UC** et **Mémoire RAM**. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
 
-Tableau 1. Options pour les serveurs {{site.data.keyword.baremetal_short}} personnalisés
+Tableau 1. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}
+
+| Options de modèle d'UC   | Options de RAM   |
+|:------------- |:------------- |
+| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
+| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
+| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
+
+#### Broadwell
+
+Avec l'option **Broadwell**, un certain nombre d'options est disponible pour les paramètres **Modèle UC** et **Mémoire RAM**. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
+
+Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}
 
 | Options de modèle d'UC   | Options de RAM   |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
-| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
-| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
 
 #### Préconfigurée
 
@@ -73,16 +86,15 @@ Pour l'option **Préconfigurée**, vous pouvez choisir une **configuration de se
 
 ### Paramètres de stockage vSAN
 
-Pour les configurations de serveur bare metal **préconfigurées**, vous ne pouvez pas modifier les paramètres de stockage vSAN :
-* Pour la configuration de serveur bare metal **Petite**, deux unités de disque SED SSD de 1,9 To sont commandées.
-* Pour la configuration de serveur bare metal **Grande**, quatre unités de disque SED SSD de 3,8 To sont commandées.
-
-Pour la configuration de serveur bare metal **Personnalisée** vous pouvez personnaliser le stockage vSAN en spécifiant les paramètres suivants :
-
+Pour les configurations de serveur bare metal **Skylake** et **Broadwell**, vous pouvez personnaliser le stockage vSAN en spécifiant les paramètres suivants : 
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
 * Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
+
+Pour les configurations de serveur bare metal **préconfigurées**, vous ne pouvez pas modifier les paramètres de stockage vSAN :
+* Pour la configuration de serveur bare metal **Petite**, deux unités de disque SED SSD de 1,9 To sont commandées.
+* Pour la configuration de serveur bare metal **Grande**, quatre unités de disque SED SSD de 3,8 To sont commandées.
 
 ### Paramètres d'octroi de licence
 
@@ -95,17 +107,18 @@ Vous pouvez spécifier les options d'octroi de licence pour les composants VMwar
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance à laquelle vous souhaitez ajouter des clusters.
 
-   **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas ajouter de clusters à l'instance.
+   Assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas ajouter de clusters à l'instance.
+   {:note}
 
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche et cliquez sur **Ajouter** en haut à droite du tableau **CLUSTERS**.
 4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
 5. Si vous souhaitez héberger le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui dans lequel l'instance est hébergée, sous **Serveur bare metal**, cochez la case **Sélectionner un autre emplacement** et choisissez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel héberger l'instance.
 6. Procédez à la configuration du serveur bare metal :
-   * Si vous avez sélectionné **Personnalisée**, renseignez les zones **Modèle UC** et **Mémoire RAM**.
+   * Si vous avez sélectionné **Skylake** ou **Broadwell**, renseignez les zones **Modèle UC** et **Mémoire RAM**.
    * Si vous avez sélectionné **Préconfigurée**, renseignez la zone **Configuration de serveur bare metal**.
 7. Procédez à la configuration du stockage :
+   * Si vous avez sélectionné **Skylake** ou **Broadwell** pour la configuration bare metal, spécifiez les types de disque pour la capacité et les caches de disque vSAN, et le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
    * Si vous avez sélectionné l'option **Préconfigurée** pour la configuration de serveur bare metal, les paramètres de stockage des configurations de serveur bare metal normalisées **Petite** et **Grande** ne sont pas modifiables.
-   * Si vous avez sélectionné le type **Personnalisée** pour la configuration de serveur bare metal, spécifiez les types de disque pour les disques de cache et de capacité VSAN, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 8. Spécifiez de quelle manière les clés de licence sont fournies :
    * Si vous êtes un partenaire commercial IBM, la licence vSphere (Enterprise Plus edition) et la licence vSAN sont incluses et achetées en votre nom. Vous devez néanmoins spécifier l'édition pour la licence vSAN.
    * Si vous n'êtes pas un partenaire commercial IBM, vous pouvez sélectionnez l'une des options suivantes :
@@ -122,7 +135,8 @@ Vous pouvez spécifier les options d'octroi de licence pour les composants VMwar
 1. Le déploiement du cluster démarre automatiquement et le cluster prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page récapitulative de l'instance.
 2. Lorsque le cluster est prêt pour utilisation, il prend le statut **Prêt à l'emploi**. Le cluster qui vient d'être ajouté est activé avec vSphere à haute disponibilité et vSphere Distributed Resource Scheduler (DRS).
 
-**Important :** vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
+Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
+{:important}
 
 ## Procédure d'affichage des clusters dans les instances Cloud Foundation
 
@@ -197,7 +211,8 @@ Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance dont vous souhaitez supprimer des clusters.
 
-   **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas supprimer de clusters de l'instance.
+   Assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas supprimer de clusters de l'instance.
+   {:note}
 
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, localisez le cluster que vous souhaitez supprimer et cliquez sur l'icône **Supprimer**.
 4. Confirmez que vous avez terminé la migration de machines virtuelles vers d'autres clusters, le cas échéant, et que vous souhaitez supprimer le cluster.

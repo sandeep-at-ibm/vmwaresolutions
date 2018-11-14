@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -24,36 +24,36 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} et configurations de serveu
 
 | {{site.data.keyword.CloudDataCent_notm}} | Emplacement | Région | Configurations de serveur |
 |:----------------------|:---------|:-------|:----------------------|
-| AMS03 | Amsterdam | Europe | Personnalisée |
-| CHE01 | Chennai | Asie-Pacifique | Personnalisée |
-| DAL09 | Dallas | Sud des Etats-Unis | Personnalisée |
-| DAL10 | Dallas | Sud des Etats-Unis | Personnalisée, Petite, Grande |
-| DAL12 | Dallas | Sud des Etats-Unis | Personnalisée |
-| DAL13 | Dallas | Sud des Etats-Unis | Personnalisée |
-| FRA02 | Francfort | Europe | Personnalisée, Grande |
-| FRA04 | Francfort | Europe | Personnalisée |
-| HKG02 | Hong Kong | Asie-Pacifique | Personnalisée |
-| LON02 | Londres | Europe | Personnalisée |
-| LON04 | Londres | Europe | Personnalisée |
-| LON06 | Londres | Europe | Personnalisée, Petite, Grande |
-| MEL01 | Melbourne | Asie-Pacifique | Personnalisée |
-| MEX01 | Querétaro | Sud des Etats-Unis | Personnalisée |
-| MIL01 | Milan | Europe | Personnalisée |
-| MON01 | Montréal | Est des Etats-Unis | Personnalisée |
-| OSL01 | Oslo | Europe | Personnalisée |
-| PAR01 | Paris | Europe | Personnalisée |
-| SAO01 | São Paulo | Amérique du Sud | Personnalisée |
-| SEO01 | Séoul | Asie-Pacifique | Personnalisée |
-| SJC03 | San José | Ouest des Etats-Unis | Personnalisée |
-| SJC04 | San José | Ouest des Etats-Unis | Personnalisée |
-| SNG01 | Singapour | Asie-Pacifique | Personnalisée |
-| SYD01 | Sydney | Asie-Pacifique | Personnalisée |
-| SYD04 | Sydney | Asie-Pacifique | Personnalisée |
-| TOK02 | Tokyo | Asie-Pacifique | Personnalisée |
-| TOR01 | Toronto | Est des Etats-Unis | Personnalisée, Petite, Grande |
-| WDC04 | Washington, DC | Est des Etats-Unis | Personnalisée, Petite, Grande |
-| WDC06 | Washington, DC | Est des Etats-Unis | Personnalisée |
-| WDC07 | Washington, DC | Est des Etats-Unis | Personnalisée |
+| AMS03 | Amsterdam | Europe | Skylake, Broadwell |
+| CHE01 | Chennai | Asie-Pacifique | Skylake, Broadwell |
+| DAL09 | Dallas | Sud des Etats-Unis | Skylake, Broadwell |
+| DAL10 | Dallas | Sud des Etats-Unis | Skylake, Broadwell, Petite, Grande |
+| DAL12 | Dallas | Sud des Etats-Unis | Skylake, Broadwell |
+| DAL13 | Dallas | Sud des Etats-Unis | Skylake, Broadwell |
+| FRA02 | Francfort | Europe | Skylake, Broadwell, Grande |
+| FRA04 | Francfort | Europe | Skylake, Broadwell |
+| HKG02 | Hong Kong | Asie-Pacifique | Skylake, Broadwell |
+| LON02 | Londres | Europe | Skylake, Broadwell |
+| LON04 | Londres | Europe | Skylake, Broadwell |
+| LON06 | Londres | Europe | Skylake, Broadwell, Petite, Grande |
+| MEL01 | Melbourne | Asie-Pacifique | Skylake, Broadwell |
+| MEX01 | Querétaro | Sud des Etats-Unis | Skylake, Broadwell |
+| MIL01 | Milan | Europe | Skylake, Broadwell |
+| MON01 | Montréal | Est des Etats-Unis | Skylake, Broadwell |
+| OSL01 | Oslo | Europe | Skylake, Broadwell |
+| PAR01 | Paris | Europe | Skylake, Broadwell |
+| SAO01 | São Paulo | Amérique du Sud | Skylake, Broadwell |
+| SEO01 | Séoul | Asie-Pacifique | Skylake, Broadwell |
+| SJC03 | San José | Ouest des Etats-Unis | Skylake, Broadwell |
+| SJC04 | San José | Ouest des Etats-Unis | Skylake, Broadwell |
+| SNG01 | Singapour | Asie-Pacifique | Skylake, Broadwell |
+| SYD01 | Sydney | Asie-Pacifique | Skylake, Broadwell |
+| SYD04 | Sydney | Asie-Pacifique | Skylake, Broadwell |
+| TOK02 | Tokyo | Asie-Pacifique | Skylake, Broadwell |
+| TOR01 | Toronto | Est des Etats-Unis | Skylake, Broadwell, Petite, Grande |
+| WDC04 | Washington, DC | Est des Etats-Unis | Skylake, Broadwell, Petite, Grande |
+| WDC06 | Washington, DC | Est des Etats-Unis | Skylake, Broadwell |
+| WDC07 | Washington, DC | Est des Etats-Unis | Skylake, Broadwell |
 
 Selon la disponibilité et l'approvisionnement du stock, les {{site.data.keyword.CloudDataCents_notm}} peuvent afficher un indicateur de statut sur la console {{site.data.keyword.vmwaresolutions_short}} pour vous aider à planifier vos déploiements.
 
