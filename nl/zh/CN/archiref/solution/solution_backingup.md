@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-27"
 
 您负责配置、管理和监视所有软件组件，包括管理基础架构和工作负载的备份和可用性。
 
-作为解决方案的一部分，您可以选择部署 {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 附加组件服务。Veeam 和 IBM Spectrum Protect Plus 可帮助满足备份管理组件的需求。
+作为解决方案的一部分，您可以选择部署 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 附加组件服务。Veeam 和 IBM Spectrum Protect Plus 可帮助满足备份管理组件的需求。
 
 这些附加组件服务与 {{site.data.keyword.cloud_notm}} 耐久性存储器一起部署。这些服务可帮助您备份工作负载和管理组件。 [IBM Spectrum Protect Plus 体系结构概述](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}和 [Veeam 体系结构概述](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}提供了有关规划部署和调整部署大小的有用指南。您还可以为 Veeam 部署请求[受管服务](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)。
 
@@ -34,7 +34,10 @@ lastupdated: "2018-09-27"
 
 VMware vCenter Server 和 PSC 提供了使用各种协议[将数据库和配置导出到文件服务器的设备管理用户界面和 API](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window}。VMware 记录了一个示例，说明如何将这种情况配置为直接在 vCenter Server Appliance 和 PSC 上[作为定时作业定期运行](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window}，您可以对其进行调整以适合您的使用情况。
 
-您必须使用此技术分别备份 vCenter Server Appliance 和 PSC。熟悉并计划 VMware 记录的注意事项和限制。另外，计划文件服务器上文件备份的定期轮换和到期时间。请注意，VMware 要求备份位置为空文件夹，因此您应该计划备份轮换或自动化，将该位置保留为空以用于每个后续备份作业。
+您必须使用此技术分别备份 vCenter Server Appliance 和 PSC。熟悉并计划 VMware 记录的注意事项和限制。另外，计划文件服务器上文件备份的定期轮换和到期时间。
+
+VMware 要求备份位置为空文件夹，因此您应该计划备份轮换或自动化，使该位置保留为空以用于每个后续备份作业。
+{:note}
 
 ## NSX 基于文件的备份
 

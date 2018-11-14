@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware 实例的部署后注意事项
 
@@ -14,7 +18,8 @@ lastupdated: "2018-10-03"
 
 请查看以下注意事项，以了解您在部署实例前后须承担的管理和操作责任。
 
-**注**：以下列表并非详尽无遗。有关更多信息，请参阅 [IBM 管理的服务](../../services/managing_imi.html)。
+以下列表并非详尽无遗。有关更多信息，请参阅 [IBM 管理的服务](../../services/managing_imi.html)。
+{:note}
 
 ## IBM Cloud 帐户访问权
 

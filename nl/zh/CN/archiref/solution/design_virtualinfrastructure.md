@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 虚拟基础架构设计
 
@@ -23,15 +27,15 @@ vSphere ESXi 配置由以下方面构成：
 
 表 1 概述了各个方面的规范。在配置和安装 ESXi 之后，该主机会添加到 VMware vCenter Server，并在其中对该主机进行管理。
 
-该设计允许您通过直接控制台用户界面 (DCUI)、ESXi Shell 和安全 Shell (SSH) 来访问虚拟主机。
+借助此设计，您可以通过直接控制台用户界面 (DCUI)、ESXi Shell 和安全 Shell (SSH) 来访问虚拟主机。
 
-缺省情况下，唯一可以直接登录的用户是主机物理机器的 _root_ 和 _ibmvmadmin_ 用户。管理员可以添加 Microsoft Active Directory (MSAD) 域中的最终用户，以允许用户访问主机。vCenter Server 解决方案设计中的所有主机都配置为与中央 NTP 服务器同步。
+缺省情况下，唯一可以直接登录的用户是主机物理机器的 _root_ 和 _ibmvmadmin_ 用户。管理员可以添加 Microsoft Active Directory (MSAD) 域中的用户，以允许用户访问主机。vCenter Server 解决方案设计中的所有主机都配置为与中央 NTP 服务器同步。
 
 表 1. vSphere ESXi 配置
 
 |属性|配置参数|
 |:---------------------- |:----------------------- |
-|ESXi 引导位置|使用在 RAID-1 中配置的本地磁盘|
+|ESXi 引导位置|使用以 RAID-1 方式配置的本地磁盘|
 |时间同步| 使用 {{site.data.keyword.cloud}} NTP 服务器 |
 |主机访问|支持 DCUI、ESXi Shell 或 SSH|
 |用户访问| 本地认证和 MSAD |
@@ -49,7 +53,7 @@ vSphere 集群包含用于管理针对用户工作负载的中央云和计算资
 
 要支持更多用户工作负载，可以通过以下方式扩展环境：  
 * 为现有集群部署更多计算主机
-* 部署由同一 vCenter Server Appliance 管理的其他集群
+* 部署由同一 vCenter Server Appliance 管理的更多集群
 * 使用自己的 vCenter Server Appliance 部署新的 vCenter Server 或 Cloud Foundation 实例
 
 有关集群的更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 运行 VMware 集群解决方案体系结构文档](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf)。
@@ -98,17 +102,17 @@ RAID 6 配置至少需要 6 个主机。在缺省存储策略中，**复制**和
 vSAN 设置是根据在 {{site.data.keyword.cloud_notm}} 中部署 VMware 解决方案的最佳实践设置的。vSAN 设置包含 SIOC 设置、显式故障转移设置端口组和磁盘高速缓存设置。
 * SSD 高速缓存策略设置：**非预读**、**直写**、**直接** (NRWTD)
 * 网络 I/O 控制设置
-   * 管理：20 个共享
-   * 虚拟机：30 个共享
-   * vMotion：50 个共享
-   * vSAN：100 个共享
+   * 管理 - 20 个共享
+   * 虚拟机 - 30 个共享
+   * vMotion - 50 个共享
+   * vSAN - 100 个共享
 * vSAN 内核端口：**显式故障转移**
 
 ## VMware NSX 设计
 
 网络虚拟化提供了存在于虚拟层中的网络覆盖。网络虚拟化为体系结构提供了快速供应、部署、重新配置和销毁随需应变虚拟网络等功能。此设计使用 vDS 和 VMware NSX for vSphere 来实现虚拟联网。
 
-在此设计中，初始集群中将部署 NSX Manager。将从专用可移植地址块中为 NSX Manager 分配支持 VLAN 的 IP 地址，该地址块指定用于管理组件，并配置为使用[公共服务设计](design_commonservice.html)中讨论的 DNS 和 NTP 服务器。将使用表 2 中所列的规范安装 NSX Manager。
+在此设计中，初始集群中将部署 NSX Manager。将从专用可移植地址块中为 NSX Manager 分配支持 VLAN 的 IP 地址，该地址块指定用于管理组件，并配置为使用[公共服务设计](design_commonservice.html)中提供的 DNS 和 NTP 服务器。将使用表 2 中所列的规范安装 NSX Manager。
 
 表 2. NSX Manager 属性
 
@@ -119,7 +123,7 @@ vSAN 设置是根据在 {{site.data.keyword.cloud_notm}} 中部署 VMware 解决
 |内存|16 GB|
 |磁盘|管理 NFS 共享上 60 GB|
 |磁盘类型|自动精简配置|
-|网络|指定用于管理组件的专用 A 可移植|
+|网络|指定用于管理组件的**专用 A** 可移植子网|
 
 下图显示了 NSX Manager 相对于体系结构中其他组件的位置。
 
@@ -127,13 +131,13 @@ vSAN 设置是根据在 {{site.data.keyword.cloud_notm}} 中部署 VMware 解决
 
 ![NSX Manager 网络概述](virtual_NSX.svg "相对于体系结构中其他组件的 NSX Manager")
 
-初始部署后，{{site.data.keyword.cloud_notm}} 自动化会在初始集群中部署三个 NSX 控制器。 将从指定用于管理组件的专用 A 可移植子网中为每个控制器分配一个支持 VLAN 的 IP 地址。此外，此设计还会创建 VM 到 VM 反亲缘关系规则，以在集群中的各主机之间分隔控制器。初始集群必须至少包含 3 个节点，以确保控制器的高可用性。
+初始部署后，{{site.data.keyword.cloud_notm}} 自动化会在初始集群中部署三个 NSX 控制器。 将从指定用于管理组件的**专用 A** 可移植子网中为每个控制器分配一个支持 VLAN 的 IP 地址。此外，此设计还会创建 VM 到 VM 反亲缘关系规则，以在集群中的各主机之间分隔控制器。初始集群必须至少包含 3 个节点，以确保控制器的高可用性。
 
-除了控制器之外，{{site.data.keyword.cloud_notm}} 自动化还会为部署的 vSphere 主机准备 NSX VIBS，以支持通过 VXLAN 隧道端点（VTEP）使用虚拟化网络。将从为 VTEP 指定的专用 A 可移植 IP 地址范围中为 VTEP 分配支持 VLAN 的 IP 地址，如[物理基础架构设计](design_physicalinfrastructure.html)的*表 1. VLAN 和子网摘要*中所列示。VXLAN 流量驻留在未标记的 VLAN 上，并且分配给专用 vDS。
+除了控制器之外，{{site.data.keyword.cloud_notm}} 自动化还会为部署的 vSphere 主机准备 NSX VIBS，以支持通过 VXLAN 隧道端点（VTEP）使用虚拟化网络。将从为 VTEP 指定的**专用 A** 可移植 IP 地址范围中为 VTEP 分配支持 VLAN 的 IP 地址，如[物理基础架构设计](design_physicalinfrastructure.html)的*表 1. VLAN 和子网摘要*中所列示。VXLAN 流量驻留在未标记的 VLAN 上，并且分配给专用 vDS。
 
-随后，将分配分段标识池，并且将集群中的主机添加到传输区域。由于在 {{site.data.keyword.cloud_notm}} 中未配置因特网组管理协议 (IGMP) 监听，因此在传输区域中仅使用单点广播。
+然后，将分配分段标识池，并且将集群中的主机添加到传输区域。由于在 {{site.data.keyword.cloud_notm}} 中未配置因特网组管理协议 (IGMP) 监听，因此在传输区域中仅使用单点广播。
 
-在此之后，将部署 NSX Edge 服务网关对。在所有情况下，都会使用一个网关对来处理位于专用网络中的自动化组件的出站流量。对于 vCenter Server，将部署另一个称为客户管理的 Edge 的网关，并将其配置为使用上行链路连接公用网络，还会为专用网络分配一个接口。有关作为解决方案的一部分部署的 NSX Edge 服务网关的更多信息，请参阅 [NSX Edge on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)。
+在此之后，将部署 NSX Edge 服务网关对。在所有情况下，都会使用一个网关对来处理位于专用网络中的自动化组件的出站流量。对于 vCenter Server，将部署另一个称为客户管理的 Edge 的网关，并将其配置为使用上行链路连接公用网络，还会配置一个分配给专用网络的接口。有关作为解决方案的一部分部署的 NSX Edge 服务网关的更多信息，请参阅 [NSX Edge on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)。
 
 云管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。可用的 NSX 功能部件取决于在订购实例时选择的 NSX 许可证版本。有关更多信息，请参阅 [VMware NSX 版本比较](appendix.html#vmware-nsx-edition-comparison)。对于 vCenter Server 实例，{{site.data.keyword.cloud_notm}} 自动化会将 vCenter Server Appliance 和 Platform Services Controller (PSC) 添加到 NSX Manager 分布式防火墙排除列表中。
 
@@ -165,12 +169,13 @@ vSphere 集群使用两个 vSphere 分布式交换机，配置如以下各表中
 
 表 4. 融合集群分布式交换机
 
-|vSphere 分布式<br>交换机名称 |功能|网络<br>I/O 控制|负载均衡<br>模式 |物理 NIC<br>端口 |MTU|
+|vSphere 分布式<br>交换机名称|功能|网络<br>I/O 控制|负载均衡<br>方式|物理 NIC<br>端口|MTU|
 |:------------- |:------------- |:------------- |:------------- |:------------- |:------------- |
 |SDDC-Dswitch-Private| ESXi 管理、vSAN、vSphere vMotion、VXLAN 隧道端点、NFS (VTEP) |已启用| 基于显式故障转移（vSAN、vMotion）发起虚拟端口进行路由（其他所有）|2|9,000<br>（巨型帧）|
 |SDDC-Dswitch-Public| 外部管理流量（南北） |已启用| 基于发起虚拟端口进行路由|2|1,500<br>（缺省值）|
 
-**注**：根据 {{site.data.keyword.CloudDataCent_notm}} 和主机硬件选择，主机 NIC 的名称、数量和顺序可能有所不同。
+根据 {{site.data.keyword.CloudDataCent_notm}} 和主机硬件选择，主机 NIC 的名称、数量和顺序可能有所不同。
+{:note}
 
 表 5. 融合集群分布式交换机端口组配置设置
 
@@ -182,7 +187,8 @@ vSphere 集群使用两个 vSphere 分布式交换机，配置如以下各表中
 |故障恢复|否|
 |故障转移顺序|活动上行链路：Uplink1 或 Uplink2 \* |
 
-\* **注**：vSAN 端口组使用采用活动/备用方式的显式故障转移，因为它不支持对 vSAN 存储器流量进行负载均衡。
+\* vSAN 端口组使用采用活动或备用方式的显式故障转移，因为它不支持对 vSAN 存储器流量进行负载均衡。
+{:note}
 
 表 6. 融合集群虚拟交换机端口组和 VLAN
 
