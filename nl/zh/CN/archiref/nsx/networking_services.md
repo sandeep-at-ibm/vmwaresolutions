@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # IBM Cloud 上的联网服务
 
@@ -20,7 +24,8 @@ lastupdated: "2018-10-05"
 
 虽然单个 ESG 可能足以应对管理和客户的工作负载流量，但隔离管理和客户流量是一项设计决策，可防止意外的管理 ESG 配置错误。
 
-**注**：管理 ESG 配置错误或禁用管理 ESG 不会妨碍 Cloud Foundation 或 vCenter Server 实例正常运行，但会禁用所有门户网站管理功能。
+管理 ESG 配置错误或禁用管理 ESG 不会妨碍 Cloud Foundation 或 vCenter Server 实例正常运行，但会禁用所有门户网站管理功能。
+{:note}
 
 ## IBM 管理服务 NSX Edge
 
@@ -46,6 +51,7 @@ IBM 管理 ESG 是一种专用 NSX Edge 集群，仅用于 {{site.data.keyword.c
 需要对以下服务进行出站访问：
 
 * Zerto Virtual Manager。如果已安装，那么 Zerto on {{site.data.keyword.cloud_notm}} 需要对因特网进行出站访问以获取许可激活和使用情况报告。
+* Veeam Backup and Replication。如果已安装，那么 Veeam on {{site.data.keyword.cloud_notm}} 需要对因特网进行出站访问以下载产品和许可证更新。
 * FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 需要对因特网进行出站访问以获取许可激活和许可监视。
 * F5 on {{site.data.keyword.cloud_notm}} 需要对因特网进行出站访问以获取许可激活。
 
@@ -57,9 +63,9 @@ ESG 接口的配置定义了 ESG 有权访问的 L2 网络。要实现 Cloud Fou
 
 |接口|接口类型|连接到|描述|
 |:--------- |:-------------- |:------------ |:----------- |
-|公共上行链路|上行链路|SDDC-DportGroup-External|面向公用因特网的接口|
-|专用上行链路|上行链路|SDDC-DportGroup-Mgmt|面向内部专用网络的接口|
-|内部|内部|工作负载 HA VXLAN|用于 ESG HA 对脉动信号的内部接口；SDDC-Dswitch-Private 上的端口组|
+|公共上行链路|上行链路|**SDDC-DportGroup-External**|面向公用因特网的接口|
+|专用上行链路|上行链路|**SDDC-DportGroup-Mgmt**|面向内部专用网络的接口|
+|内部|内部|工作负载 HA VXLAN|用于 ESG HA 对脉动信号的内部接口；**SDDC-Dswitch-Private** 上的端口组|
 
 ### 子网
 
@@ -120,6 +126,7 @@ ESG 接口的配置定义了 ESG 有权访问的 L2 网络。要实现 Cloud Fou
 |服务|源|目标|协议|操作|
 |:------- |:------ |:----------- |:-------- |:------ |
 |Zerto on {{site.data.keyword.cloud_notm}}|Zerto 管理 VM|任意|端口 443|允许|
+|Veeam on {{site.data.keyword.cloud_notm}}|Veeam Backup and Replication VM|任意|端口 443|允许|
 |FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}|服务 VM|任意|端口 443|允许|
 |F5 on {{site.data.keyword.cloud_notm}}|服务 VM|任意|端口 443|允许|
 |任意|任意|任意|任意|拒绝|
@@ -152,7 +159,7 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 |传输上行链路|上行链路|Workload-Trasit|工作负载 ESG 与工作负载 DLR 之间的传输 VXLAN|
 |内部|内部|工作负载 HA VXLAN|用于 ESG HA 对脉动信号的内部接口|
 
-在此设计中，利用 DLR 来支持在本地工作负载连接的 L2 网络之间进行潜在的东-西路由。由于此拓扑旨在作为简单示例，因此仅描述了一个用于工作负载的 L2 网络。只需通过添加连接到 DLS 上新接口的更多 VXLAN，就可以实现添加更多安全区域。下面是要配置的 DLR 接口：
+在此设计中，利用 DLR 来支持在本地工作负载连接的 L2 网络之间进行潜在的东-西路由。由于此拓扑旨在作为简单示例，因此仅描述了一个用于工作负载的 L2 网络。通过添加连接到 DLR 上新接口的更多 VXLAN，就可以实现添加更多安全专区。下表显示了要配置的 DLR 接口：
 
 表 8. DLR 接口
 
@@ -170,7 +177,7 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 
 |接口|接口类型|IPv4 子网类型|范围|描述|
 |:--------- |:-------------- |:----------------- |:----- |:----------- |
-|公共上行链路 (ESG)|上行链路|{{site.data.keyword.cloud_notm}} 可移植公共|/30 - 提供一个可分配的 IP 地址|面向因特网的公共接口（客户可以单独订购更多 IP）|
+|公共上行链路 (ESG)|上行链路|{{site.data.keyword.cloud_notm}} 可移植公共|/30 - 提供一个可分配的 IP 地址|面向公用因特网的接口（客户可以单独订购更多 IP 地址） |
 |专用上行链路 (ESG)|上行链路|{{site.data.keyword.cloud_notm}} 可移植专用（现有管理）|/26 - 提供 61 个可分配的 IP 地址|面向内部专用网络的接口|
 |内部（ESG 和 DLR）|内部|本地链接|169.254.0.0/16|用于 ESG HA 对通信的内部接口|
 |传输上行链路（ESG 和 DLR）|上行链路|由客户分配|待定|用于 ESG 到 DLR 的传输网络连接|
@@ -180,7 +187,7 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 
 在工作负载 ESG 上，NAT 用于允许网络流量在不同 IP 地址空间之间遍历。对于工作负载 ESG, 需要 NAT 不仅允许与因特网目标进行通信，还允许与任何以 {{site.data.keyword.cloud_notm}} 为源的 IP 范围进行通信。对于此设计，允许工作负载流量流出到因特网，但不允许流出到管理或任何 {{site.data.keyword.cloud_notm}} 网络。因此，只需要在工作负载 ESG 上定义 SNAT。请注意，整个工作负载可移植子网会配置为遍历 SNAT。
 
-虽然可以使用 NAT 来支持在 Cloud Foundation 或 vCeter Server 的多个实例之间进行工作负载通信，但当许多工作负载需要跨实例进行连接时，这种做法会变得不切实际。有关使用高级 NSX 功能在 Cloud Foundation 或 vCeter Server 实例中创建 L2 覆盖传输网络的示例，请参阅[多站点体系结构](multi_site.html)。
+虽然可以使用 NAT 来支持在 Cloud Foundation 或 vCenter Server 的多个实例之间进行工作负载通信，但当许多工作负载需要跨实例进行连接时，这种做法会变得不切实际。有关使用高级 NSX 功能在 Cloud Foundation 或 vCeter Server 实例中创建 L2 覆盖传输网络的示例，请参阅[多站点体系结构](multi_site.html)。
 
 表 10. 工作负载 ESG NAT 规则
 
@@ -217,7 +224,7 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 
 ### IBM 工作负载 NSX Edge 的 VXLAN 定义
 
-工作负载拓扑 ESG 和 DLR HA 对需要 L2 分段 (VXLAN) 来连接内部接口、在两个接口之间传输数据，以及最终用于工作负载。
+工作负载拓扑 ESG 和 DLR HA 对需要 L2 分段 (VXLAN) 来连接内部接口、在两个接口之间传输数据，以及用于工作负载。
 
 表 13. 工作负载 ESG 内部接口
 

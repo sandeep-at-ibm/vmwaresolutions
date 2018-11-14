@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-10-05"
 跨 vCenter NSX 功能支持以主/辅助关系链接最多 9 个 NSX Manager：1 个主 NSX Manager 和 8 个辅助 NSX Manager。虽然整个 vCenter NSX 正常运行无需采用增强链接方式 (ELM) 关系的 vCenter Server，但具有这样的 vCenter Server 可提供以下优点：
 
 * 使用单点登录 (SSO) 凭证简化了主/辅助关系创建
-* vCenter Server 和 Cloud Foundation 自动化将配置 DNS 名称解析以用于链接在一起的所有站点
+* vCenter Server 和 Cloud Foundation 自动化配置用于链接在一起的所有站点的 DNS 名称解析
 * 在所有站点中，通过一个窗格，对 NSX 和常规 vCenter 功能进行管理
 
 ## 多站点示例
