@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 订购新的 vSphere 集群
 
@@ -52,7 +54,8 @@ lastupdated: "2018-09-27"
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**注**：对于 IBM 业务合作伙伴用户，自带许可证 (BYOL) 选项不可用。
+对于 IBM 业务合作伙伴用户，自带许可证 (BYOL) 选项不可用。
+{:note}
 
 ### 针对非业务合作伙伴用户的单独组件
 
@@ -66,7 +69,8 @@ lastupdated: "2018-09-27"
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**注**：订购 VMware vSphere Enterprise Plus 6.0 时，VMware vSAN 组件不可用。如果计划使用您自己的 VMware vSphere Enterprise Plus 6.0 许可证，那么系统将代表您开具 {{site.data.keyword.cloud_notm}} 基础架构凭单。凭单会请求用您提供的许可证替换已订购的 {{site.data.keyword.baremetal_short}} 的 vSphere 许可证。
+订购 VMware vSphere Enterprise Plus 6.0 时，VMware vSAN 组件不可用。如果计划使用您自己的 VMware vSphere Enterprise Plus 6.0 许可证，那么系统将代表您开具 {{site.data.keyword.cloud_notm}} 基础架构凭单。凭单会请求用您提供的许可证替换已订购的 {{site.data.keyword.baremetal_short}} 的 vSphere 许可证。
+{:note}
 
 ### 许可选项
 
@@ -76,7 +80,8 @@ lastupdated: "2018-09-27"
 
 如果选择购买任何许可证（vSphere Enterprise Plus 和 vCenter Server 除外），并且订购了多个 ESXi 服务器，那么系统会自动代表您开具 {{site.data.keyword.cloud_notm}} 凭单以组合许可证密钥。您负责跟踪凭单以确保仅使用 DevOps 团队生成的许可证密钥。
 
-**重要信息**：将单独的许可证密钥与组合的许可证密钥配合使用，不符合您所需许可证的付款需求。
+将单独的许可证密钥与组合的许可证密钥配合使用，不符合您所需许可证的付款需求。
+{:important}
 
 ## 裸机服务器设置
 
@@ -84,24 +89,41 @@ lastupdated: "2018-09-27"
 
 选择要托管集群的 {{site.data.keyword.CloudDataCent_notm}}。
 
-**注**：如果选择的是 vSAN 组件，那么位置列表将按 SSD 可用性进行过滤。
+如果选择的是 vSAN 组件，那么位置列表将按 SSD 可用性进行过滤。
+{:note}
 
-### CPU 型号和 RAM
+### Skylake
 
-指定用于裸机服务器的 CPU 型号和 RAM。
+选择 **Skylake** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。可用的选项取决于是否选择了 VMware vSAN 组件。
 
-表 2. 定制 {{site.data.keyword.baremetal_short}} 的选项
+表 2. Skylake {{site.data.keyword.baremetal_short}} 的选项
+
+| CPU 模型选项   |RAM 选项|
+|:------------- |:------------- |
+|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+
+### SAP 认证
+
+如果先前选择的是 VMware vSAN，那么 **SAP 认证**选项卡不可用。选择 **SAP 认证**后，无法变更 CPU 或 RAM 设置。
+
+根据需求，选择裸机服务器配置：
+  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 192 GB RAM
+  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.2 GHz / 384 GB RAM
+  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 768 GB RAM
+
+### Broadwell
+
+选择 **Broadwell** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。可用的选项取决于是否选择了 VMware vSAN 组件。
+
+表 3. Broadwell {{site.data.keyword.baremetal_short}} 的选项
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-
-可用的选项取决于是否选择了 VMware vSAN 组件。
 
 ### 裸机服务器的数量
 
@@ -206,7 +228,9 @@ lastupdated: "2018-09-27"
     **重要信息**：您负责跟踪凭单以确保替换新订购的 ESXi 服务器上的 vSphere 许可证。这样 {{site.data.keyword.cloud_notm}} 基础架构就会授权取消对初始提供的 {{site.data.keyword.cloud_notm}} 基础架构 vSphere 许可证收费。要替换 ESXi vSphere 许可证，请参阅[为 ESXi 主机配置许可证设置](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}。
 5. 完成裸机服务器设置：
    1. 选择要托管集群的 {{site.data.keyword.CloudDataCent_notm}}。
-   2. 选择 CPU 型号和 RAM 大小。
+   2. 选择裸机服务器配置。
+      * 选择 **Skylake** 或 **Broadwell** 时，请指定 CPU 型号和 RAM 大小。
+      * 选择的是 **SAP 认证**时，请选择 CPU 型号。
    3. 指定裸机服务器数。
 6. 如果选择的是 **VMware vSAN** 组件，请完成 vSAN 存储配置。指定容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
 7. 完成网络接口设置：
@@ -220,7 +244,8 @@ lastupdated: "2018-09-27"
    * 要将配置另存为模板而不下订单，请单击**保存配置**。
    * 要下订单，请确保要向其收费的帐户正确，复查并接受条款，然后单击**供应**。
 
-   **注**：这将仅安装 {{site.data.keyword.baremetal_short}}。您负责在集群部署后安装和配置各种组件（例如，VMware vCenter、VMware NSX 和 VMware vSAN）。
+   这将仅安装 {{site.data.keyword.baremetal_short}}。您负责在集群部署后安装和配置各种组件（例如，VMware vCenter、VMware NSX 和 VMware vSAN）。
+   {:note}
 
 ### 结果
 
@@ -228,7 +253,8 @@ lastupdated: "2018-09-27"
 
 如果已下订单，那么集群的部署将自动启动，并且您将收到电子邮件确认，指示正在处理订单。集群准备就绪可供使用时，将通过电子邮件通知您。
 
-**注**：与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**已部署的实例**页面。
+与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**已部署的实例**页面上。
+{:note}
 
 ### 相关链接
 

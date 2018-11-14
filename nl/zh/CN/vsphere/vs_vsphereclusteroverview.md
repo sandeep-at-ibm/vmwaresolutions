@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware vSphere on IBM Cloud 概述
 
@@ -22,7 +26,8 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 
 复查 VMware vSphere on {{site.data.keyword.cloud_notm}} 的组件。
 
-**注**：标准化硬件配置的可用性和定价可能会因选择用于部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+标准化硬件配置的可用性和定价可能会因选择用于部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+{:note}
 
 ### VMware 组件
 
@@ -62,7 +67,8 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 
   此外，每个主机还会订购两个 960 GB 高速缓存磁盘。
 
-  **注**：3.8 TB SSD（固态磁盘）驱动器在数据中心内普遍可用后就会受到支持。
+  3.8 TB SSD（固态磁盘）驱动器在数据中心内普遍可用后就会受到支持。
+  {:note}
 * 高性能 Intel Optane 选项，用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘。此选项取决于 CPU 型号。
 
 ## vSphere 集群扩展节点的技术规范
@@ -82,7 +88,8 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 * 一个 {{site.data.keyword.cloud_notm}} 裸机服务器，带 VMware vSphere Enterprise Plus 6.0u2 或 6.5u1  
 * 可选的 VMware 组件在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 集群的技术规范](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中显示。
 
-**重要信息**：您只能在 {{site.data.keyword.slportal}} 中管理订购并交付给您的 {{site.data.keyword.cloud_notm}} 帐户的 ESXi 服务器、可选 VMware 组件以及其他硬件。在 {{site.data.keyword.vmwaresolutions_short}} 控制台中创建新集群后，可以返回到控制台并使用保存的信息扩展新集群。有关更多信息，请参阅[扩展现有 vSphere 集群](vs_scalingexistingclusters.html)。
+您只能在 {{site.data.keyword.slportal}} 中管理订购并交付给您的 {{site.data.keyword.cloud_notm}} 帐户的 ESXi 服务器、可选 VMware 组件以及其他硬件。在 {{site.data.keyword.vmwaresolutions_short}} 控制台中创建新集群后，可以返回到控制台并使用保存的信息扩展新集群。有关更多信息，请参阅[扩展现有 vSphere 集群](vs_scalingexistingclusters.html)。
+{:important}
 
 ### 相关链接
 

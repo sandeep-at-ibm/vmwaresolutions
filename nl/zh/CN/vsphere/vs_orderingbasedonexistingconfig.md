@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 基于现有配置订购 vSphere 集群
 
@@ -30,7 +34,8 @@ lastupdated: "2018-09-27"
    * 要将配置另存为模板而不下订单，请单击**保存配置**。
    * 要下订单，请确保要向其收费的帐户正确，复查并接受条款，然后单击**供应**。
 
-   **注**：这将仅安装 {{site.data.keyword.baremetal_short}}。您负责在集群部署后安装和配置各种组件（例如，VMware vCenter、VMware NSX 和 VMware vSAN）。
+   这将仅安装 {{site.data.keyword.baremetal_short}}。您负责在集群部署后安装和配置各种组件（例如，VMware vCenter、VMware NSX 和 VMware vSAN）。
+   {:note}
 
 ## 结果
 
@@ -38,7 +43,8 @@ lastupdated: "2018-09-27"
 
 如果已下订单，那么将自动开始部署集群。您将收到电子邮件确认，指示正在处理订单。集群准备就绪可供使用时，还将通过电子邮件通知您。
 
-**注**：与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**已部署的实例**页面。
+与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**已部署的实例**页面上。
+{:note}
 
 ### 相关链接
 

@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 针对 VMware vSphere on IBM Cloud 的需求和规划
 
 在订购 VMware vSphere on {{site.data.keyword.cloud}} 之前，请查看以下需求。根据 {{site.data.keyword.CloudDataCent_notm}} 位置以及工作负载容量需求来规划 VMware vSphere 集群。
 
-**注**：部署 ESXi 服务器后，您负责设置环境、安装和配置各种 VMware 组件。下面是 VMware 组件的示例：VMware vCenter Server、VMware NSX 和 VMware vSAN。
+部署 ESXi 服务器后，您负责设置环境、安装和配置各种 VMware 组件。下面是 VMware 组件的示例：VMware vCenter Server、VMware NSX 和 VMware vSAN。
+{:note}
 
 ## IBM Cloud 帐户需求
 
@@ -22,7 +27,8 @@ lastupdated: "2018-09-27"
 
 vSphere 部署对物理基础架构有严格要求。因此，只能将集群部署在满足这些需求的 {{site.data.keyword.CloudDataCents_notm}} 中。以下 {{site.data.keyword.CloudDataCent_notm}} 可用于 vSphere 部署。
 
-**注**：如果选择的是 vSAN 组件，那么位置列表将按 SSD（固态磁盘）可用性进行过滤。
+如果选择的是 vSAN 组件，那么位置列表将按 SSD（固态磁盘）可用性进行过滤。
+{:note}
 
 表 1. 可用于 vSphere 集群的 {{site.data.keyword.CloudDataCents_notm}}
 
