@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 订购 FortiGate Virtual Appliance on IBM Cloud
 
@@ -28,6 +32,16 @@ lastupdated: "2018-09-27"
 
 订购此服务时，请提供以下设置。
 
+### FortiGuard 网络连接
+
+为 FortiGuard 选择**公用网络**或**专用网络**。如果目标集群配置为仅使用专用网络接口，那么仅**专用网络**选项可用。此选项会确定 FortiGuard 将如何联系 Fortinet 许可证服务器以激活许可证和下载安全补丁，并且此选项不会影响工作负载数据平面。
+
+如果选择**专用网络**，请指定以下设置：
+* **代理 IP 地址**：代理服务器的 IPv4 地址。
+* **代理端口号**：代理服务器的端口号，通常为 8080 或 3128。
+* **代理用户名**：如果您需要代理认证，请输入代理服务器的用户名。
+* **代理密码**：如果您需要代理认证，请输入代理服务器的密码。
+
 ### 名称
 
 输入服务名称。
@@ -44,14 +58,18 @@ lastupdated: "2018-09-27"
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的许可模型提供了以下选项：
 <dl class="dl">
         <dt class="dt dlterm">标准 FW</dt>
-        <dd class="dd">此捆绑软件包含有状态包检查、VLAN 保护和高级日志记录、流入和流出防火墙规则、SSL/IPSec VPN 终止以及连续支持。</dd>
+        <dd class="dd">此捆绑软件包含有状态包检查、VLAN 保护和高级日志记录、流入和流出防火墙规则、SSL/IPSec VPN 终止以及全天候支持。</dd>
         <dt class="dt dlterm">标准 FW + UTM</dt>
-        <dd class="dd">此捆绑软件除了包含 NGFW IPS 和 web 过滤、AntiVirus 和 AntiSpam、IP and Domain Reputation 和核心 FortiCare 安全服务之外，还包含所有标准防火墙服务。</dd>
+        <dd class="dd">此捆绑软件除了包含高级恶意软件防护 (AMP) 服务（包括 Antivirus、Botnet IP/Domain Service、Mobile Malware Security、FortiSandbox Cloud、Virus Outbreak Protection Service 和 Content Disarm & Reconstruct）外，还包含所有标准防火墙服务，以及 Web 过滤、IPS、反垃圾邮件、应用程序控制和 FortiCare 服务。</dd>
         <dt class="dt dlterm">标准 FW + Enterprise</dt>
-        <dd class="dd">此捆绑软件除了包含 FortiSandbox Cloud 和 Mobile Security 外，还包含所有标准防火墙和 UTM 服务。</dd>
+        <dd class="dd">此捆绑软件包含所有标准防火墙和 UTM 服务，以及以下服务：<ul><li>Cloud Access Security Broker (CASB)：此服务为基于云的服务提供可视性、合规性、数据安全性和威胁保护。</li><li>Industrial Security：此服务提供通用 ICS/SCADA 协议的签名。</li><li>Security Rating：此服务提供审计功能，用于识别关键漏洞和配置弱点，并实施最佳实践建议。</li></ul></dd>
 </dl>
 
-**重要信息**：无法在安装服务后更改许可模型。要更改许可模型，必须除去现有服务，然后通过选择其他许可选项来重新安装该服务。
+在 2018 年第 3 季度，Fortinet 向其企业捆绑软件添加了三个新服务（CASB、Industrial Security 和 Security Rating）。这些服务仅在 FortiGate 6.0 上可用。
+{:note}
+
+无法在安装服务后更改许可模型。要更改许可模型，必须除去现有服务，然后通过选择其他许可选项来重新安装该服务。
+{:important}
 
 ### 相关链接
 

@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # KMIP for VMware on IBM Cloud 概述
 
 KMIP for VMware on {{site.data.keyword.cloud}} 服务用于提供全天候高可用性服务，以管理 {{site.data.keyword.cloud_notm}} 中 VMware 使用的加密密钥。此服务提供了运行时功能，以支持客户创建、检索、激活、撤销和销毁加密密钥。还提供了管理功能，以维护客户机凭证与加密密钥之间的关联。
 
-**可用性**：此服务仅可用于在 V2.2 或更高发行版中部署的实例。
+此服务仅可用于在 V2.2 或更高版本中部署的实例。
+{:note}
 
 ## KMIP for VMware on IBM Cloud 的技术规范
 

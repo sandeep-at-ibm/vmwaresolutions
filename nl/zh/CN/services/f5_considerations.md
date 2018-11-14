@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # F5 on IBM Cloud 概述
 
@@ -14,7 +18,8 @@ F5 on {{site.data.keyword.cloud}} 服务 (F5 BIG-IP® Virtual Edition) 用于提
 
 可以根据需要安装此服务的多个实例。
 
-**可用性**：此服务仅可用于在 V1.9 或更高发行版中部署的实例。
+此服务仅可用于在 V1.9 或更高发行版中部署的实例。当前安装的 BIG-IP VE 版本为 V13.1。
+{:note}
 
 ## F5 on IBM Cloud 的技术规范
 
@@ -32,7 +37,8 @@ F5 on {{site.data.keyword.cloud_notm}} 服务随附以下组件：
 ### 许可证和费用
 每个 VM 的许可费用将应用于每个计费周期，具体取决于许可选项（“良好”、“更佳”或“最佳”）和所选带宽。
 
-**重要信息**：无法在安装服务后更改许可级别。要更改许可级别，必须除去现有服务，然后使用其他许可选项来重新安装该服务。
+服务安装后即无法更改许可级别。要更改许可级别，必须除去现有服务，然后使用其他许可选项来重新安装该服务。
+{:important}
 
 ## F5 on IBM Cloud 的安装注意事项
 
@@ -51,7 +57,7 @@ F5 on {{site.data.keyword.cloud_notm}} 服务随附以下组件：
 |5 Gbps|8 个 vCPU，16 GB RAM|8 个 vCPU，16 GB RAM|8 个 vCPU，16 GB RAM|
 |10 Gbps|8 个 vCPU，16 GB RAM|8 个 vCPU，16 GB RAM|8 个 vCPU，16 GB RAM|
 
-**注：**
+### 其他注意事项
 
 * F5 BIG-IP 根据选择的最大带宽来限制设备吞吐量。由于网络性能受许多因素的影响，因此并非所有配置和拓扑都能达到所选的最大带宽。
 * BIG-IP VE VM 的 HA（高可用性）对将仅部署到缺省集群中。

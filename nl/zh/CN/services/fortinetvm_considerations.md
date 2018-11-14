@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # FortiGate Virtual Appliance on IBM Cloud 概述
 
@@ -14,7 +18,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服务用于将 Forti
 
 可以根据需要安装此服务的多个实例。可以使用 FortiOS Web Client 或通过 SSH 连接的命令行界面来管理此服务。
 
-**可用性**：此服务仅可用于在 V2.0 或更高发行版中部署的实例。
+此服务仅可用于在 V2.0 或更高发行版中部署的实例。当前安装的服务版本为 6.0.3。
+{:note}
 
 ## FortiGate Virtual Appliance on IBM Cloud 的技术规范
 
@@ -38,7 +43,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务中订购�
 
 每个虚拟机的许可费用将应用于每个计费周期，具体取决于所选的部署大小和每月预订许可模型。
 
-**重要信息**：无法在安装服务后更改许可级别。要更改许可级别，必须除去现有服务，然后使用其他许可选项来重新安装该服务。
+服务安装后即无法更改许可级别。要更改许可级别，必须除去现有服务，然后使用其他许可选项来重新安装该服务。
+{:important}
 
 ## 安装 FortiGate Virtual Appliance on IBM Cloud 时的注意事项
 
