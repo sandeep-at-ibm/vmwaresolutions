@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 对 vCenter Server 实例应用更新
 
@@ -16,7 +18,8 @@ lastupdated: "2018-09-27"
 
 ## 开始之前
 
-**重要信息**：将 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例时，必须至少先应用基本 vCenter Server V2.3 软件更新。必须执行此操作后，才能对 Hybridity Bundle 执行许可证升级。
+将 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例时，必须至少先应用基本 vCenter Server V2.3 软件更新。必须执行此操作后，才能对 Hybridity Bundle 执行许可证升级。
+{:important}
 
 业务合作伙伴用户无法选择将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例。
 
@@ -58,7 +61,8 @@ lastupdated: "2018-09-27"
    如果未显示详细信息，这可能指示由于防火墙规则或其他网络问题而导致 IBM CloudDriver 虚拟服务器实例 (VSI) 发生连接问题。请解决该问题后，再继续下一步，否则更新可能会失败。
 4. 在左侧导航窗格上，单击**更新和补丁**。
 
-   **注**：实例的**更新和补丁**页面仅包含用于更新 IBM 管理组件的软件包，而不包含 VMware 更新。必须手动应用 VMware 更新。
+   实例的**更新和补丁**页面仅包含用于更新 IBM 管理组件的软件包，而不包含 VMware 更新。必须手动应用 VMware 更新。
+   {:note}
 
    执行以下操作时，{{site.data.keyword.vmwaresolutions_short}} 会应用 VMware 更新：
    * 部署新的 vCenter Server 实例时。
@@ -67,7 +71,8 @@ lastupdated: "2018-09-27"
 
 5. 要升级 NSX 许可证，请单击**升级**。在**升级 NSX 许可证修订版**窗口中，选择要升级到的修订版，然后单击**升级**。许可证版本降级不可用。
 
-   **注**：许可证升级将替换实例上的所有现有 NSX 许可证。如果在计费周期内进行升级，那么可能会因旧许可证与新许可证重叠而发生额外费用。为了避免发生额外费用，建议在计费周期结束时升级许可证。
+   许可证升级将替换实例上的所有现有 NSX 许可证。如果在计费周期内进行升级，那么可能会因旧许可证与新许可证重叠而发生额外费用。为了避免发生额外费用，建议在计费周期结束时升级许可证。
+   {:note}
 
 6. 对于软件更新，单击向下箭头以展开要应用的更新，然后完成下列其中一个步骤：
    *  要立即启动更新，请单击更新条目的**操作**列中的溢出菜单图标，然后单击**立即更新**。
@@ -78,7 +83,8 @@ lastupdated: "2018-09-27"
 
 在 Hybridity Bundle 的许可证升级期间，如果 vCenter Server 实例当前使用的是 VMware NSX Base Edition，那么会自动升级到 VMware NSX Advanced Edition。
 
-**注**：如果升级到 Hybridity Bundle，并且 vCenter Server 实例已经有 NFS 文件存储器，那么 VMware vSAN 存储器不收费。vSAN 许可证要收费，因为 Hybridity Bundle 中包含该许可证。
+如果升级到 Hybridity Bundle，并且 vCenter Server 实例已经有 NFS 文件存储器，那么不会向您收取 VMware vSAN 存储器的费用。vSAN 许可证要收费，因为 Hybridity Bundle 中包含该许可证。
+{:note}
 
 要将 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle，请完成以下步骤。
 

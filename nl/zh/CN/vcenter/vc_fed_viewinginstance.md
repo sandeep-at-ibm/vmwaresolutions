@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-09-27"
 要查看针对用户帐户供应的所有 VMware Federal 实例的摘要，请完成以下步骤：
 1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在控制台条幅中，单击您的用户帐户图标，然后单击**帐户**字段以选择要检查其实例的用户帐户。
-3. 在 **vCenter Server** 表中，查看所选用户帐户中供应的实例的列表。
+3. 在 **vCenter Server 实例**表中，查看所选用户帐户中供应的实例的列表。
 
 表 1. VMware Federal 实例项
 

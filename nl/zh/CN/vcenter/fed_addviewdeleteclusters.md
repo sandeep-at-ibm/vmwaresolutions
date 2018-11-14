@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -38,20 +38,29 @@ lastupdated: "2018-09-28"
 
 ### 裸机服务器设置
 
-#### 定制
+#### Skylake
 
 指定用于裸机服务器的 CPU 型号和 RAM。可用选项可能有所不同，具体取决于初始部署实例的版本。
 
-表 1. 定制 {{site.data.keyword.baremetal_short}} 的选项
+表 1. Skylake {{site.data.keyword.baremetal_short}} 的选项
+
+| CPU 模型选项   |RAM 选项|
+|:------------- |:------------- |
+|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+
+#### Broadwell
+
+指定用于裸机服务器的 CPU 型号和 RAM。可用选项可能有所不同，具体取决于初始部署实例的版本。
+
+表 2. Broadwell {{site.data.keyword.baremetal_short}} 的选项
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
 #### 裸机服务器的数量
 
@@ -89,7 +98,7 @@ lastupdated: "2018-09-28"
 * **性能**：选择基于工作负载需求的 IOPS（每秒输入/输出操作数）/GB。
 * **添加 NFS**：选择此项以添加使用不同配置设置的单个文件共享。
 
-表 2. NFS 性能级别选项
+表 3. NFS 性能级别选项
 
 |选项|详细信息|
   |:------------- |:------------- |

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server 材料清单
 
@@ -39,7 +43,8 @@ lastupdated: "2018-09-27"
 |VMware|NSX for vSphere|6.4.1|
 |Microsoft|Windows Server Standard Edition|2012R2|
 
-**注**：VMware vSAN 是可选组件。
+VMware vSAN 是可选组件。
+{:note}
 
 ## ESXi 服务器的高级配置设置
 

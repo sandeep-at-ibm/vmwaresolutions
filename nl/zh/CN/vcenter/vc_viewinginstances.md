@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 查看 vCenter Server 实例
 
@@ -18,13 +22,14 @@ lastupdated: "2018-09-27"
 
 1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在控制台条幅中，单击您的用户帐户图标，然后单击**帐户**字段以选择要检查其实例的用户帐户。  
-3. 在 **vCenter Server** 表中，查看所选用户帐户中供应的实例的列表。
+3. 在 **vCenter Server 实例**表中，查看所选用户帐户中供应的实例的列表。
 
 表 1. vCenter Server 实例项
 
 |项|描述|  
 |:------------- |:------------- |
 |名称|实例的名称|
+|类型|vCenter Server 实例的类型|
 |版本|实例部署或升级到的发行版版本|  
 |位置|托管实例的 {{site.data.keyword.CloudDataCent_notm}}|  
 |创建时间|创建实例的日期和时间|
@@ -112,7 +117,8 @@ lastupdated: "2018-09-27"
 
 通过 {{site.data.keyword.vmwaresolutions_short}} 控制台或 VMware vSphere Web Client 来管理实例。
 
-**重要信息**：在实例摘要页面上单击 **vCenter 控制台**以转至 vSphere Web Client 并开始管理 ESXi 服务器之前，必须先登录到 {{site.data.keyword.CloudDataCent_notm}} 的 VPN 门户网站。请将鼠标悬停在 **vCenter 控制台**按钮上，并遵循指示信息以确保在访问 vSphere Web Client 之前满足所有需求并完成了必需的步骤。
+在实例摘要页面上单击 **vCenter 控制台**以转至 vSphere Web Client 并开始管理 ESXi 服务器之前，必须先登录到 {{site.data.keyword.CloudDataCent_notm}} 的 VPN 门户网站。请将鼠标悬停在 **vCenter 控制台**按钮上，并遵循指示信息以确保在访问 vSphere Web Client 之前满足所有需求并完成了必需的步骤。
+{:important}
 
 查看以下主题，以获取有关帮助您完成登录指示信息的信息：
 *  有关访问 vSphere Web Client 之前的需求和必需步骤，请参阅[连接到 vSphere Web Client 时发生超时](../vmonic/trbl_timeout_vc_console.html)。

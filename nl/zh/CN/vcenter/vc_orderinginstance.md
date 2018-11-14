@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 订购 vCenter Server 实例
 
@@ -30,7 +34,8 @@ lastupdated: "2018-09-27"
   |标准 ESXi 服务器名称| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 服务器的序列。最大长度为 50 个字符。|  
   |PSC FQDN|`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大长度为 50 个字符。|
 
-**重要信息**：不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。
+不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。
+{:important}
 
 ## 系统设置
 
@@ -59,20 +64,55 @@ lastupdated: "2018-09-27"
 
 对于非业务合作伙伴用户，可以通过选择**购买时包含**对这些组件使用 IBM 提供的 VMware 许可证，或者可以通过选择**我将提供**并输入您自己的许可证密钥以自带许可证 (BYOL)。
 
+
 **注意：**
 * 需要至少具有 8 个 CPU 的许可证，即用于 4 个服务器，每个服务器 2 个 CPU。每个 VMware 组件的许可证选项会应用于基本实例以及日后添加到该实例的任何 ESXi 服务器。因此，请确保您的许可证在基础架构中支持未来的容量扩展。
 * 用户界面上指示了最低许可证版本。如果支持不同的组件版本，那么可以选择所需的版本。您负责确保提供的许可证密钥对于选择的每个 VMware 组件都正确。
 * 对于 vSphere，在订购时会发生许可费用，但随后会将该许可费用计入您的帐户。
 * 可以在完成实例部署后，使用 VMware vSphere Web Client 来更改已提供的任何许可证。
 * 对于您提供了许可证的 VMware 组件，将由 VMware 而不是 IBM 支持人员来提供后续支持。
+{:important}
 
 ## 裸机服务器设置
 
-裸机设置基于您选择的数据中心，以及您选择的是预配置的配置还是定制配置。
+裸机设置基于您选择的数据中心以及裸机服务器配置。
 
 ### 数据中心位置
 
 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
+
+### Skylake
+
+选择 **Skylake** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。
+
+表 2. Skylake {{site.data.keyword.baremetal_short}} 的选项
+
+| CPU 模型选项   |RAM 选项|
+|:------------- |:------------- |
+|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+
+### SAP 认证
+
+选择 **SAP 认证**后，无法变更 CPU 或 RAM 设置。
+
+根据需求，选择裸机服务器配置：
+  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 192 GB RAM
+  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 384 GB RAM
+  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 768 GB RAM
+
+### Broadwell
+
+选择 **Broadwell** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。
+
+表 3. Broadwell {{site.data.keyword.baremetal_short}} 的选项
+
+| CPU 模型选项   |RAM 选项|
+|:------------- |:------------- |
+|双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
+|双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
+|双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 
 ### 预配置
 
@@ -83,30 +123,13 @@ lastupdated: "2018-09-27"
   * 中型（双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz / 256 GB RAM / 2 个驱动器）
   * 大型（双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz / 512 GB RAM / 2 个驱动器）
 
-### 定制
-
-选择**定制**时，可以根据需要选择 CPU 和 RAM 组合。
-
-选择用于裸机服务器的 CPU 型号和 RAM。
-
-表 2. 定制 {{site.data.keyword.baremetal_short}} 的选项
-
-| CPU 模型选项   |RAM 选项|
-|:------------- |:------------- |
-|双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-
 ### 裸机服务器的数量
 
 对于实例中的初始集群，可以按如下所示配置 ESXi 服务器数：
+* 如果选择的是 **Skylake** 或 **Broadwell**，那么可以配置的 ESXi 服务器数的范围为 2 到 20 个。
 * 如果选择的是**预配置**，那么可以配置的 ESXi 服务器数的范围为 2 到 10 个。
-* 如果选择的是**定制**，那么可以配置的 ESXi 服务器数的范围为 2 到 20 个。
 
-所有 ESXi 服务器共享所设置的配置。初始部署后，可以再添加四个集群。如果为 VMware vSAN 选择的是**定制**配置，那么初始集群和部署后集群都需要 4 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)。
+所有 ESXi 服务器共享所设置的配置。初始部署后，可以再添加四个集群。如果为 VMware vSAN 选择的是 **Skylake** 或 **Broadwell** 配置，那么初始集群和部署后集群都需要 4 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)。
 
 ## 存储设置
 
@@ -114,7 +137,7 @@ lastupdated: "2018-09-27"
 
 ### vSAN 存储器
 
-vSAN 仅可用于**定制**裸机配置。请指定以下 vSAN 选项：
+vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 vSAN 选项：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
 * 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
@@ -126,7 +149,8 @@ vSAN 仅可用于**定制**裸机配置。请指定以下 vSAN 选项：
 
 选择 **NFS 存储器**时，可以为实例添加文件级别的共享存储器，其中所有共享使用相同的设置，也可以对每个文件共享指定不同的配置设置。请指定以下 NFS 选项：
 
-**注**：文件共享数必须在范围 1 到 32 之间。
+文件共享数必须在范围 1 到 32 之间。
+{:note}
 
 * **分别配置共享**：选择此项以对每个文件共享指定不同的配置设置。
 * **共享数**：对每个文件共享使用相同的配置设置时，指定要添加的 NFS 共享存储器的文件共享数。
@@ -134,7 +158,7 @@ vSAN 仅可用于**定制**裸机配置。请指定以下 vSAN 选项：
 * **性能**：选择基于工作负载需求的 IOPS（每秒输入/输出操作数）/GB。
 * **添加 NFS**：选择此项以添加使用不同配置设置的单个文件共享。
 
-表 3. NFS 性能级别选项
+表 4. NFS 性能级别选项
 
 |选项|详细信息|
   |:------------- |:------------- |
@@ -170,7 +194,8 @@ vSAN 仅可用于**定制**裸机配置。请指定以下 vSAN 选项：
 * 最后一个字符串只能包含字母字符。
 * 最后一个字符串的长度必须在 2 到 24 个字符范围内。
 
-**注**：主机和 VM 的标准域名 (FQDN) 的最大长度为 50 个字符。域名必须符合此最大长度。
+主机和 VM 的标准域名 (FQDN) 的最大长度为 50 个字符。域名必须符合此最大长度。
+{:note}
 
 ### 公用或专用网络
 
@@ -200,9 +225,9 @@ vSAN 仅可用于**定制**裸机配置。请指定以下 vSAN 选项：
 * **主子网**分配给物理主机以用于公用网络访问。
 * **主专用子网**分配给物理主机以用于管理流量。
 
-**重要信息：**
 * 确保所选 VLAN 上的防火墙配置不会阻止管理数据流量。
 * 确保选择的所有 VLAN 都在同一 pod 中。在混合 pod VLAN 上无法供应 ESXi 服务器。
+{:important}
 
 ### DNS 配置
 
@@ -211,7 +236,8 @@ vSAN 仅可用于**定制**裸机配置。请指定以下 vSAN 选项：
 * **一个用于 Active Directory/DNS 的公共 Windows VSI**：一个用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server VSI，充当在其中注册主机和 VM 的实例的 DNS，已部署并且可进行查找。对于 V1.9 和更高版本的实例，缺省情况下已部署此选项。
 * **管理集群上两个高可用性专用 Windows Server VM**：部署了两个 Microsoft Windows 虚拟机，以帮助增强安全性和稳健性。
 
-**重要信息**：如果将实例配置为使用两个 Microsoft Windows VM，那么必须提供两个 Microsoft Windows Server 2012 R2 许可证。使用 Microsoft Windows Server 2012 R2 Standard Edition 许可证和/或 Microsoft Windows Server 2012 R2 Datacenter Edition 许可证。
+如果将实例配置为使用两个 Microsoft Windows VM，那么必须提供两个 Microsoft Windows Server 2012 R2 许可证。使用 Microsoft Windows Server 2012 R2 Standard Edition 许可证和/或 Microsoft Windows Server 2012 R2 Datacenter Edition 许可证。
+{:important}
 
 每个许可证只能分配给一个物理服务器，并且最多包含两个物理处理器。一个 Standard Edition 许可证支持每个双处理器服务器运行两个虚拟化的 Microsoft Windows VM。因此，需要两个许可证，因为两个 Microsoft Windows VM 会部署在两个不同的主机中。
 
@@ -244,8 +270,9 @@ vSAN 仅可用于**定制**裸机配置。请指定以下 vSAN 选项：
 6. 完成裸机服务器设置。
     1. 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
     2. 选择裸机服务器配置。
+       * 选择 **Skylake** 或 **Broadwell** 时，请指定 CPU 型号和 RAM 大小。
+       * 选择的是 **SAP 认证**时，请选择 CPU 型号。
        * 选择**预配置**时，请为配置选择**小型**、**中型**或**大型**。
-       * 选择**定制**时，请指定 CPU 型号和 RAM 大小。
     3. 指定 {{site.data.keyword.baremetal_short}} 数。如果计划将 vSAN 用作存储解决方案，那么至少需要 4 个 {{site.data.keyword.baremetal_short}}。  
 7. 填写存储配置。
   * 如果选择 **vSAN 存储器**，请指定容量和高速缓存磁盘的磁盘类型、磁盘数和 vSAN 许可证版本。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
@@ -281,8 +308,8 @@ vSAN 仅可用于**定制**裸机配置。请指定以下 vSAN 选项：
 
 查看和管理订购的 vCenter Server 实例。
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。
-如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+{:important}
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件

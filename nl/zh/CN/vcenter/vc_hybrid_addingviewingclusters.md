@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 添加、查看和删除 vCenter Server with Hybridity Bundle 实例的集群
 
@@ -38,21 +42,31 @@ lastupdated: "2018-09-27"
 
 ### 裸机服务器设置
 
-#### 定制
-
 指定用于裸机服务器的 CPU 型号和 RAM。可用选项可能有所不同，具体取决于初始部署实例的版本。
 
-表 2. 定制裸机服务器的选项
+#### Skylake
+
+选择 **Skylake** 时，可以根据需要选择 CPU 和 RAM 组合。
+
+表 1. Skylake 裸机服务器的选项
+
+| CPU 模型选项   |RAM 选项|
+|:------------- |:------------- |
+|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+
+#### Broadwell
+
+选择 **Broadwell** 时，可以根据需要选择 CPU 和 RAM 组合。
+
+表 2. Broadwell 裸机服务器的选项
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|96 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
 #### 裸机服务器的数量
 
@@ -97,7 +111,8 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击实例以查看其中的集群。
 
-   **注**：确保实例状态为**可供使用**。否则，无法向实例添加集群。
+   确保实例状态为**可供使用**。否则，无法向实例添加集群。
+   {:note}
 
 3. 单击左侧导航窗格上的**基础架构**，然后单击**集群**表右上角的**添加**。
 4. 在**添加集群**页面上，输入集群名称。
@@ -117,7 +132,8 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 1. 集群部署会自动启动，并且集群的状态会更改为**正在初始化**。可以通过在实例的**摘要**页面上查看部署历史记录，以检查部署的状态。
 2. 集群准备就绪可供使用后，其状态会更改为**可供使用**。将对新添加的集群启用 vSphere 高可用性 (HA) 和 vSphere 分布式资源调度程序 (DRS)。
 
-**重要信息**：不能更改集群名称。更改集群名称可能会导致集群中添加或除去 ESXi 服务器的操作失败。
+不能更改集群名称。更改集群名称可能会导致集群中添加或除去 ESXi 服务器的操作失败。
+{:important}
 
 ## 查看 vCenter Server with Hybridity Bundle 实例中集群的过程
 
