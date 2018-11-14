@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Gestion des paramètres et comptes utilisateur
 
 {{site.data.keyword.vmwaresolutions_full}} communique avec l'infrastructure {{site.data.keyword.cloud_notm}} via des appels {{site.data.keyword.slapi_short}}. Pour accéder en toute sécurité à {{site.data.keyword.slapi_short}}, vous devez associer les données d'identification de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) à votre compte {{site.data.keyword.cloud_notm}}.
 
-**Remarque :** auparavant, le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) était appelé compte IBM SoftLayer.
+Auparavant, le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) était appelé compte IBM SoftLayer.
+{:note}
 
 Vous pouvez également indiquer si vous voulez recevoir des notifications par courrier électronique et par console concernant divers événements.
 

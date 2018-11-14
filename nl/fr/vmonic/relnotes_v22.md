@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-10-19"
 
 ---
 
@@ -80,7 +80,7 @@ Pour prendre connaissance des remarques importantes à connaître avant de séle
 
 L'édition actuelle s'applique à la mise à jour du composante VMware NSX pour vSphere 6.3.5. Pour plus d'informations sur les composants, voir [Nomenclature de vCenter Server](../vcenter/vc_bom.html).
 
-Pour les instances VMware vCenter Server déployées dans la version 2.2 ou des éditions ultérieures, les paramètres de configuration de NSX et du groupe de ports ont été modifiés. Pour plus d'informations, voir la section *Paramètres de configuration de NSX et du groupe de ports* dans la nomenclature du logiciel vCenter Server (../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
+Pour les instances VMware vCenter Server déployées dans la version 2.2 ou des éditions ultérieures, les paramètres de configuration de NSX et du groupe de ports ont été modifiés. Pour plus d'informations, voir la section *Paramètres de configuration de NSX et du groupe de ports* dans la [nomenclature du logiciel vCenter Server](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings). 
 
 ### Nouvelle option de configuration pour DNS
 
