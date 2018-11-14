@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 扩展和收缩 Cloud Foundation 实例的容量
 
@@ -21,7 +25,7 @@ lastupdated: "2018-09-27"
 * 不要通过 VMware vSphere Web Client 来添加 ESXi 服务器。在 VMware vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_full}} 控制台同步。
 * 缺省情况下，订购的基本平台具有 4 个 ESXi 服务器。可以将该平台扩展到最多 32 个 ESXi 服务器。但是，一次可以添加的 {{site.data.keyword.baremetal_short}} 数量如下：
    * 对于**小型**和**大型**配置，一次可以添加 1 到 10 个 ESXi 服务器。
-   * 对于**定制**配置，一次可以添加 1 到 20 个 ESXi 服务器。
+   * 对于 **Skylake** 和 **Broadwell** 配置，一次可以添加 1 到 20 个 ESXi 服务器。
 
 ## 添加 ESXi 服务器的过程
 
@@ -61,7 +65,8 @@ lastupdated: "2018-09-27"
 2. 除去 ESXi 服务器后，系统会通过电子邮件通知您。
 3. {{site.data.keyword.cloud_notm}} 基础架构将在 {{site.data.keyword.cloud_notm}} 计费周期（通常为 30 天）结束时完全回收 ESXi 服务器。
 
-   **注意**：在所除去 ESXi 服务器的 {{site.data.keyword.cloud_notm}} 计费周期结束之前，仍然会对您计费。
+   在所除去 ESXi 服务器的 {{site.data.keyword.cloud_notm}} 计费周期结束之前，仍然会对您计费。
+   {:note}
 
 ### 相关链接
 

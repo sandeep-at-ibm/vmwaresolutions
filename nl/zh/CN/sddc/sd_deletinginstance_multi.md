@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 删除多站点配置中的 Cloud Foundation 实例
 
@@ -22,7 +26,8 @@ lastupdated: "2018-09-27"
 
 由于资源依赖关系，删除实例后，不会立即释放该实例中的组件。例如，在 {{site.data.keyword.cloud}} 基础架构完全回收 ESXi 服务器（在 {{site.data.keyword.cloud_notm}} 计费周期结束时发生）后，才能删除子网和 VLAN。在 {{site.data.keyword.cloud_notm}} 计费周期（通常为 30 天）结束时，将删除子网和 VLAN，此时实例删除操作完成。
 
-**注意**：在所删除实例的 {{site.data.keyword.cloud_notm}} 计费周期结束之前，仍然会对您计费。
+在所删除实例的 {{site.data.keyword.cloud_notm}} 计费周期结束之前，仍然会对您计费。
+   {:note}
 
 ## 删除多站点配置中 Cloud Foundation 实例的过程
 
