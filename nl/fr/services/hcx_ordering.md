@@ -25,9 +25,9 @@ Pour ajouter le service VMware HCX on {{site.data.keyword.cloud_notm}} dans une 
 
 Pour installer HCX on {{site.data.keyword.cloud_notm}}, définissez les paramètres suivants :
 1. Renseignez la zone **Type d'interconnexion HCX** en sélectionnant l'une des options suivantes :
-  * **Réseau public :** HCX crée une connexion chiffrée entre les sites sur le réseau public. Les opérations d'enregistrement et de décompte des licences sont effectuées sur le réseau public. 
-  * **Interconnexion privée :** HCX crée une connexion chiffrée entre les sites sur le réseau privé. Les opérations d'enregistrement et de décompte des licences sont effectuées sur le réseau public. 
-  * **Réseau privé :** HCX crée une connexion chiffrée entre les sites sur le réseau privé. Les opérations d'enregistrement et de décompte des licences sont effectuées sur le réseau privé via un proxy HTTP. 
+  * **Réseau public :** HCX crée une connexion chiffrée entre les sites sur le réseau public. Les opérations d'enregistrement et de décompte des licences sont effectuées sur le réseau public.
+  * **Interconnexion privée :** HCX crée une connexion chiffrée entre les sites sur le réseau privé. Les opérations d'enregistrement et de décompte des licences sont effectuées sur le réseau public.
+  * **Réseau privé :** HCX crée une connexion chiffrée entre les sites sur le réseau privé. Les opérations d'enregistrement et de décompte des licences sont effectuées sur le réseau privé via un proxy HTTP.
 3. Si vous sélectionnez **Réseau privé**, renseignez les zones suivantes :
   * **Adresse IP du proxy :** adresse IPv4 du serveur proxy.
   * **Port du proxy :** port du serveur proxy. Le numéro de port est généralement 8080 ou 3128.

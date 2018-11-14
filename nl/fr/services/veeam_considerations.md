@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Présentation de Veeam on IBM Cloud
 
 Le service Veeam on {{site.data.keyword.cloud}} s'intègre directement et en toute transparence à vos hyperviseurs VMware afin d'aider votre entreprise à obtenir la haute disponibilité requise. Il fournit des objectifs de points de récupération et de temps de reprise pour vos applications et vos données. Ces objectifs peuvent être fournis en moins de 15 minutes après la fin de la configuration. Ce service vous permet de contrôler directement à la fois la sauvegarde et la restauration de toutes les machines virtuelles de votre infrastructure depuis la console Veeam.
 
-**Disponibilité :** ce service est disponible uniquement sur les instances déployées en version 1.8 ou dans des éditions ultérieures.
+Ce service est disponible uniquement sur les instances déployées en version 1.8 ou dans des éditions ultérieures. La version de Veeam en cours qui est installée est la version 9.5u3.
+{:note}
 
 ## Spécifications techniques relatives à Veeam on IBM Cloud
 

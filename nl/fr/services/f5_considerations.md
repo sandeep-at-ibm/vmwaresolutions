@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Présentation de F5 on IBM Cloud
 
@@ -14,7 +18,8 @@ Le service F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) fourn
 
 Vous pouvez installer plusieurs instances de ce service si besoin.
 
-**Disponibilité :** ce service est disponible uniquement sur les instances déployées en version 1.9 ou dans des éditions ultérieures.
+Ce service est disponible uniquement sur les instances déployées en version 1.9 ou dans des éditions ultérieures. La version BIG-IP VE en cours qui est installée est la version 13.1.
+{:note}
 
 ## Spécifications techniques relatives à F5 on IBM Cloud
 
@@ -32,7 +37,8 @@ Les composants suivants sont inclus avec le service F5 on {{site.data.keyword.cl
 ### Licences et frais
 Des frais de licence sont appliqués pour chaque machine virtuelle à chaque cycle de facturation en fonction de l'option d'octroi de licence (Bien, Mieux ou Meilleur) et de la bande passante choisie.
 
-**Important: ** vous ne pouvez pas modifier le niveau d'octroi de licence près installation du service. Pour modifier le niveau d'octroi de licence, vous devez supprimer le service existant, puis le réinstaller en sélectionnant une autre option d'octroi de licence.
+Vous ne pouvez pas modifier le niveau d'octroi de licence après installation du service. Pour modifier le niveau d'octroi de licence, vous devez supprimer le service existant, puis le réinstaller en sélectionnant une autre option d'octroi de licence.
+{:important}
 
 ## Remarques relatives à l'installation du service F5 on IBM Cloud
 
@@ -51,7 +57,7 @@ Tableau 1. Déploiements d'UC et de RAM selon la bande passante et le modèle de
 | 5 Gbit/s            | 8 UC virtuelles, 16 Go de RAM   | 8 UC virtuelles, 16 Go de RAM     | 8 UC virtuelles, 16 Go de RAM   |
 | 10 Gbit/s           | 8 UC virtuelles, 16 Go de RAM   | 8 UC virtuelles, 16 Go de RAM     | 8 UC virtuelles, 16 Go de RAM   |
 
-**Remarques :**
+### Autres remarques
 
 * F5 BIG–IP limite le débit du dispositif en fonction de la bande passante maximale sélectionnée. Etant donnée que de nombreux facteurs affectent les performances réseau, toutes les configurations et topologies ne sont pas à même d'offrir la bande passante maximale sélectionnée.
 * La paire de machines virtuelles BIG-IP VE à haute disponibilité ne sera déployée que dans le cluster par défaut.
