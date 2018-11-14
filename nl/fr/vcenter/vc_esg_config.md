@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Configuration du réseau en vue d'utiliser la passerelle NSX ESG gérée par le client avec vos machines virtuelles
 
@@ -35,14 +39,14 @@ Pour profiter des avantages de NSX sur vos machines virtuelles de charge de trav
    3. Sur l'adaptateur de réseau que vous venez d'ajouter, sélectionnez le commutateur logique de la charge de travail dans le menu. Exemple de nom de commutateur logique de charge de travail :
    **vxw-dvs-17-virtualwire-1-sid-6000-Workload**.
 
-   **Important :** veillez à ne pas sélectionner le commutateur **Workload Transit**.
+   Veillez à ne pas sélectionner le commutateur **Workload Transit**.{:important}
 
 2. Identifiez une adresse IP disponible pour la machine virtuelle :
    *  L'adresse IP doit se trouver dans la plage `192.168.10.0/24`. Notez que l'adresse IP `192.168.10.1` est réservée (voir **Etape 3**).
    *  Lorsque vous configurez la mise en réseau du système d'exploitation qui s'exécute sur la machine virtuelle, utilisez l'adresse IP sélectionnée et le masque de réseau
    `255.255.255.0`.
 
-   **Remarque :** vous êtes responsable de la gestion de la plage des adresses IP que vous affectez à vos machines virtuelles.
+   Vous êtes responsable de la gestion de la plage des adresses IP que vous affectez à vos machines virtuelles.{:note}
 
 3. Affectez la passerelle par défaut de la machine virtuelle avec `192.168.10.1`. Cette adresse IP est celle de NSX DLR sur le même commutateur logique que les machines virtuelles de la charge de travail.
 
@@ -75,6 +79,7 @@ Vous trouverez d'autres détails concernant les sous-réseau client en effectuan
 
    **Avertissement :** n'utilisez pas les adresses IP commandées et utilisées au cours de la configuration initiale. Toutefois, vous pouvez, au besoin, utiliser d'autres
    adresses IP sur ces sous-réseaux. Pour définir des règles de conversion d'adresses réseau supplémentaires, voir [Gestion des règles de conversion d'adresses réseau](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+   {:important}
 
 ### Liens connexes
 

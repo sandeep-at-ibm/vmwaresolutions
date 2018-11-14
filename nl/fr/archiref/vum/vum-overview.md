@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
-# Présentation de VUM
+# Présentation de VMware Update Manager
 
-VUM utilise un processus à plusieurs étapes pour mettre à niveau des objets vSphere et appliquer des correctifs ou des extensions. Ce processus permet une procédure de mise à jour sans heurts avec un minimum d'indisponibilité du système. Avant d'examiner ce processus, vous devez comprendre les termes suivants :
+VMware Update Manager (VUM) utilise un processus à plusieurs étapes pour mettre à niveau des objets vSphere et appliquer des correctifs ou des extensions. Ce processus permet une procédure de mise à jour sans heurts avec un minimum d'indisponibilité du système. Avant d'examiner ce processus, vous devez comprendre les termes suivants :
 * **Objet d'inventaire** - Il s'agit d'un objet dans vCenter, tel qu'une machine virtuelle, un dispositif virtuel ou un hôte vSphere ESXi
 * **Ligne de base** - Les lignes de base contiennent une collection d'un ou plusieurs correctifs, extensions, packs de service, correctifs de bogue ou mises à niveau pouvant être classées comme lignes de base de correctifs, d'extensions ou de mises à niveau. Il existe deux classifications de lignes de base : Hôte et VM/VA (machine virtuelle ou dispositif virtuel) comportant des lignes de base prédéfinies par VMware et des lignes de base personnalisées pouvant être ajoutées si nécessaire.
   - Lignes de base d'hôte prédéfinies :
@@ -63,5 +63,5 @@ L'accès à la vue de conformité (Compliance) d'un objet d'inventaire sélectio
 
 ### Liens connexes
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

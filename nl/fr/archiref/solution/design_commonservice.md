@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Conception des services communs
 
@@ -14,15 +18,15 @@ Les services communs fournissent les services qui sont utilisés par d'autres se
 
 ## Services d'identité et d'accès
 
-Dans cette conception, Microsoft Active Directory (AD) est utilisé pour la gestion des identités. La conception déploie une ou deux machines virtuelles Windows Active Directory dans le cadre de l'automatisation du déploiement Cloud Foundation et vCenter Server. vCenter sera configuré pour utiliser l'authentification AD.
+Dans cette conception, Microsoft Active Directory (AD) est utilisé pour la gestion des identités. La conception déploie une ou deux machines virtuelles Windows Active Directory dans le cadre de l'automatisation du déploiement Cloud Foundation et vCenter Server. vCenter est configuré pour utiliser l'authentification AD.
 
 ### Microsoft Active Directory
 
 Par défaut, une seule interface de serveur virtuel est déployée sur l'infrastructure {{site.data.keyword.cloud}}. La conception permet également de déployer deux serveurs Microsoft Active Directory haute disponibilité en tant que machines virtuelles Windows Server dédiées dans le cluster de gestion.
 
-**Remarque** : vous êtes tenu de fournir l'octroi de licence et l'activation Microsoft si vous choisissez cette option.
+Vous êtes tenu de fournir l'octroi de licence et l'activation Microsoft si vous choisissez cette option.{:note}
 
-Active Directory sert à authentifier les accès uniquement pour gérer l'instance VMware et non pour héberger les utilisateurs finaux des charges de travail dans les instances déployées. Le nom de domaine racine de forêt du serveur Active Directory est identique au nom de domaine DNS que vous spécifiez. Ce nom de domaine est indiqué uniquement pour l'instance Cloud Foundation et vCenter Server si plusieurs instances sont liées. Dans le cas d'instances liées, chaque instance contient un serveur Active Directory qui se trouve dans l'anneau de réplique racine de forêt. Les fichiers de la zone DNS sont également répliqués sur les serveurs Active Directory.
+Active Directory sert à authentifier les accès uniquement pour gérer l'instance VMware et non pour héberger les utilisateurs des charges de travail dans les instances déployées. Le nom de domaine racine de forêt du serveur Active Directory est identique au nom de domaine DNS que vous spécifiez. Ce nom de domaine est indiqué uniquement pour l'instance Cloud Foundation et vCenter Server si plusieurs instances sont liées. Pour les instances liées, chaque instance contient un serveur Active Directory qui se trouve dans l'anneau de réplique racine de forêt. Les fichiers de la zone DNS sont également répliqués sur les serveurs Active Directory.
 
 ### Domaine SSO vSphere
 
@@ -41,7 +45,7 @@ Le déploiement vCenter Server utilise les serveurs Active Directory déployés 
 
 Cette conception intègre les services DNS sur les serveurs Active Directory via la configuration suivante :
 * Vous pouvez spécifier la structure de domaine. Le nom de domaine peut comporter un nombre quelconque de niveaux (jusqu'au nombre maximum pouvant être géré par les composants vCenter Server). Le niveau le plus bas est le sous-domaine de l'instance.
-   * Le nom de domaine DNS que vous spécifiez sera utilisé comme nom de domaine racine de forêt Active Directory. Par exemple, si le nom de domaine DNS est `cloud.ibm.com`, le nom de domaine racine de forêt Active Directory est `cloud.ibm.com`. Ce nom de domaine DNS et ce nom de domaine Active Directory sont identiques dans toutes les instances vCenter Server liées.
+   * Le nom de domaine DNS que vous spécifiez est utilisé comme nom de domaine racine de forêt Active Directory. Par exemple, si le nom de domaine DNS est `cloud.ibm.com`, le nom de domaine racine de forêt Active Directory est `cloud.ibm.com`. Ce nom de domaine DNS et ce nom de domaine Active Directory sont identiques dans toutes les instances vCenter Server liées.
    * Vous pouvez également indiquer un nom de sous-domaine pour l'instance. Le nom de sous-domaine doit être unique dans toutes les instances vCenter Server liées.
 * Les serveurs DNS Active Directory sont configurés comme faisant autorité pour le domaine et l'espace de sous-domaine DNS.
 * Les serveurs DNS Active Directory sont configurés pour pointer vers les serveurs DNS {{site.data.keyword.cloud_notm}} pour toutes les autres zones.

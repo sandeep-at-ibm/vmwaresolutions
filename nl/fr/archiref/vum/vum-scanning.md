@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -16,16 +16,15 @@ Lorsque vous analysez des hôtes, des machines virtuelles et des dispositifs vir
 *	**Lancement manuel d'une analyse d'objet conteneur** - Lancez l'analyse simultanée des hôtes, des machines virtuelles et des dispositifs virtuels, en effectuant l'analyse d'un objet conteneur qui correspond à un centre de données ou un dossier de centre de données.
 *	**Planification d'une analyse** - Vous pouvez configurer le client vSphere Web Client pour analyser des machines virtuelles, des dispositifs virtuels et des hôtes ESXi à des heures spécifiques ou aux intervalles qui vous conviennent.
 
-##	Lancement manuel d'une analyse d'hôtes vSphere ESXi
+## Lancement manuel d'une analyse d'hôtes vSphere ESXi
 
-1.	Cliquez sur le bouton **Scan for Updates** et sélectionnez **Patches and Extensions and Upgrades**, cliquez ensuite sur **OK**.
-2.	Une fois l'analyse terminée, sélectionnez **Critical Host Patches** et dans le panneau inférieur, passez en revue les correctifs de chaque hôte
-3.	En cliquant sur le numéro d'un correctif, une fenêtre s'affiche avec les détails du correctif.
-4.	Passez-en revue et répétez ces étapes pour les correctifs non critiques (**Non-Critical Patches**).
+1. Cliquez sur **Scan for Updates**, sélectionnez **Patches and Extensions and Upgrades**, puis cliquez sur **OK**.
+2. Une fois l'analyse terminée, sélectionnez **Critical Host Patches**. Dans le panneau inférieur, passez en revue les correctifs de chaque hôte en cliquant sur le nombre figurant dans **Number of Patches**. Une fenêtre s'affiche avec les informations relatives au correctif.
+3. Passez en revue ces informations et répétez ces étapes pour les correctifs non critiques (**Non-Critical Patches**).
 
-Notez que les fichiers journaux de VUM peuvent se trouver dans _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
+  Les fichiers journaux de VUM se trouvent dans _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
-##	Lancement manuel d'une analyse de machines virtuelles et de dispositifs virtuels
+## Lancement manuel d'une analyse de machines virtuelles et de dispositifs virtuels
 
 Vous pouvez analyser des machines virtuelles et des dispositifs virtuels dans l'inventaire vSphere par rapport aux lignes de base et aux groupes de lignes de base associés. Les machines et dispositifs virtuels que vous sélectionnez sont analysés par rapport aux lignes de base associées, en fonction des options que vous avez choisies. Tous les objets enfant sont également analysés, de sorte que plus l'infrastructure virtuelle est importante et plus vous lancez l'analyse au niveau le plus haut dans la hiérarchie des objets, plus l'analyse prend du temps et plus la vue de conformité est précise.
 
@@ -56,5 +55,5 @@ Vous pouvez configurer le client vSphere Web Client pour analyser des machines v
 
 ### Liens connexes
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

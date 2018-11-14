@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Affichage d'instances Cloud Foundation
 
@@ -113,7 +117,8 @@ Si des erreurs se produisent lors du déploiement ou de la suppression d'une ins
 
 Gérez vos instances depuis la console {{site.data.keyword.vmwaresolutions_short}} ou le client Web vSphere.
 
-**Important :** avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client vSphere Web Client et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton de la console vCenter et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.
+Avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client Web vSphere et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton de la console vCenter et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.
+{:important}
 
 Passez en revue les rubriques suivantes pour obtenir des informations qui vous aideront à exécuter les instructions de connexion :
 

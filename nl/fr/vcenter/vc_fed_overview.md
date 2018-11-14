@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -22,7 +22,7 @@ Les composants réseau suivants sont inclus :
 
 ### Serveur bare metal
 
-Vous pouvez commander au moins deux serveurs {{site.data.keyword.baremetal_short}} personnalisés avec l'une des configurations suivantes :
+Vous pouvez commander au moins deux serveurs {{site.data.keyword.baremetal_short}} avec l'une des configurations suivantes :
 
 * Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4)
 * Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100)
@@ -42,7 +42,7 @@ Les composants réseau suivants sont commandés :
     **Important :** vous n'avez pas accès à cette passerelle ESG et vous ne pouvez pas l'utiliser. Si vous la modifiez, vous ne pourrez plus gérer l'instance vCenter Server depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
   * Une passerelle VMware NSX Edge Services Gateway sécurisée gérée par le client pour le trafic de charge de travail HTTPS sortant et entrant, déployée par IBM en tant que modèle que vous pouvez modifier pour fournir un accès au réseau privé virtuel ou un accès public. Pour plus d'informations, voir [La passerelle NSX Edge gérée par le client présente-t-elle un risque pour la sécurité ?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
-  **Remarque :** la passerelle VMware NSX Edge Services (ESG) pour le trafic de gestion HTTPS sortant est retirée dans le cadre de l'action de sécurisation de votre instance VMware Federal déployée. Pour plus d'informations, voir [Sécurisation des instances VMware Federal](vc_fed_securinginstance.html).
+  **Remarque :** la passerelle VMware NSX Edge Services Gateway (ESG) pour le trafic de gestion HTTPS sortant est retirée dans le cadre de l'action de sécurisation de votre instance VMware Federal déployée. Pour plus d'informations, voir [Sécurisation des instances VMware Federal](vc_fed_securinginstance.html).
 
 ### Instance de serveur virtuel
 

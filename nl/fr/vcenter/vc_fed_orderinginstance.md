@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -66,26 +66,35 @@ Licences fournies par IBM pour les composants VMware suivants :
 
 ## Paramètres de serveur bare metal
 
-Les paramètres de serveur bare metal sont basés sur votre configuration personnalisée. L'option de sélection d'une configuration préconfigurée n'est pas prise en charge actuellement.
+Les paramètres bare metal dépendent du centre de données que vous sélectionnez et de la configuration de serveur bare metal. L'option de sélection d'une configuration préconfigurée n'est pas prise en charge actuellement.
 
 ### Emplacement de centre de données
 
 Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} où l'instance doit être hébergée.
 
-### Personnalisée
+### Skylake
 
 Indiquez le modèle d'UC et la mémoire RAM du serveur bare metal.
 
-Tableau 2. Options pour les serveurs {{site.data.keyword.baremetal_short}} personnalisés
+Tableau 2. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}
+
+| Options de modèle d'UC        | Options de RAM       |
+|:------------- |:------------- |
+| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+
+### Broadwell
+
+Indiquez le modèle d'UC et la mémoire RAM du serveur bare metal.
+
+Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}
 
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 512 Go |
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go |
 | Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go |
-| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
 
 ### Nombre de serveurs bare metal
 
@@ -181,12 +190,12 @@ Selon la configuration que vous avez sélectionnée pour l'instance, le coût es
 4. Cliquez sur **Instance principale** pour déployer une seule instance dans l'environnement.
 5. Spécifiez l'édition de licence VMware NSX.
 6. Procédez à la configuration du serveur bare metal :
-  1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger l'instance.
-  2. Sélectionnez le modèle d'UC **Personnalisé** et la quantité de mémoire **RAM**.
+   1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger l'instance.
+   2. Sélectionnez le modèle d'UC **Skylake** ou **Broadwell** et la quantité de mémoire **RAM**.
 7. Procédez à la configuration du stockage.
-  * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
-  * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**.
-  * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer des partages de fichiers individuellement, renseignez les zones **Configurer les partages individuellement**, puis cliquez sur l'icône **+** en regard de **Ajouter NFS**. Renseignez ensuite les zones **Taille** et **Performances** pour chaque partage de fichiers individuel. Vous devez sélectionner au moins un partage de fichiers.
+   * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
+   * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**.
+   * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer des partages de fichiers individuellement, renseignez les zones **Configurer les partages individuellement**, puis cliquez sur l'icône **+** en regard de **Ajouter NFS**. Renseignez ensuite les zones **Taille** et **Performances** pour chaque partage de fichiers individuel. Vous devez sélectionner au moins un partage de fichiers.
 8. Procédez à la configuration de l'interface réseau.
    1. Renseignez les zones Préfixe de nom d'hôte, Libelle de sous-domaine et Nom de domaine racine.
    2. Sélectionnez la configuration DNS.
@@ -213,7 +222,7 @@ Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwa
 
 **ATTENTION :** gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lorsque vous avez commandé l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque de rendre votre environnement instable. Ces activités de gestion incluent :
 *  L'ajout, la modification, le retour ou la suppression de composants
-*  Le développement ou la réduction de la capacité de l'instance via le retrait de serveurs ESXi
+*  L'extension ou la réduction de la capacité de l'instance via l'ajout ou la suppression de serveurs ESXi
 *  La mise hors tension de composants
 
    Seules les activités de gestion des partages de fichiers du stockage partagé depuis le portail {{site.data.keyword.slportal}} font exception. Il s'agit des activités suivantes : commande, suppression (pouvant avoir un impact sur des magasins de données éventuellement montés), accord d'autorisation et montage de partages de fichiers de stockage partagé.

@@ -4,13 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Présentation de Zerto on IBM Cloud
 
 Le service Zerto on {{site.data.keyword.cloud}} fournit des fonctions de réplication et de reprise après incident, qui peuvent être intégrées aux offres de déploiement de manière à assurer la protection et la récupération des données dans votre environnement virtuel VMware sur {{site.data.keyword.cloud_notm}}.
+
+Ce service est disponible uniquement sur les instances qui sont déployées en version 1.2 ou dans des versions ultérieures. La version de Zerto en cours qui est installée est 6.0 update 3.{:note}
 
 ## Spécifications techniques relatives à Zerto on IBM Cloud
 
@@ -23,7 +29,7 @@ Les composants suivants sont commandés et inclus dans le service Zerto on {{sit
 * Une instance de serveur virtuel - Zerto Virtual Manager
 * 2 coeurs de 2 GHz
 * 4 Go de mémoire RAM
-* Windows Server 2012 R2 Standard Edition (64 bits)
+* Windows Server 2016 Standard Edition (64 bits)
 
 ### Stockage
 
@@ -36,7 +42,7 @@ Disque (SAN) 100 Go
 
 ### Licences et frais
 
-Licence Zerto Replication version V5.5
+Licence Zerto Replication V6.0 update 3
 
 ### Liens connexes
 

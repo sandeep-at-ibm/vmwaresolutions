@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -37,4 +37,4 @@ Pour savoir comment lier votre compte Iaas-only à votre compte PaaS, voir [Foll
 
 * [Gestion des accès utilisateur à l'aide d'IAM](../vmonic/iam.html)
 * [Invitation des utilisateurs à accéder à des services et des ressources](../vmonic/iamuserinvite.html)
-* [Présentation d'IBM Cloud IAM](https://console.stage1.bluemix.net/docs/iam/index.html#iamoverview)
+* [Présentation d'IBM Cloud IAM](../../../iam/index.html)

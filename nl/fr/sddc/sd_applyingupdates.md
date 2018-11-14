@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -16,13 +16,15 @@ La console {{site.data.keyword.vmwaresolutions_full}} détecte et répertorie r�
 
 Une mise à jour disponible est un enregistrement dans la liste des mises à jour logicielles disponibles de l'instance, qui peut être appliquée immédiatement ou planifiée pour une application ultérieure. La mise à jour est une offre groupée qui contient un ou plusieurs packages pour la mise à jour des composants de gestion IBM et des composants VMware.
 
+A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. 
+
 ## Avant de commencer
 
 Avant d'appliquer une mise à jour, développez l'entrée de mise à jour en cliquant sur la flèche vers le bas et vérifiez les informations suivantes :
 * La version de la mise à jour. Vous devez appliquer les mises à jour par ordre chronologique, c'est-à-dire de la plus ancienne à la plus récente. Assurez-vous d'avoir appliqué toutes les mises à jour précédentes avant d'appliquer la plus récente. Par exemple, vous devez appliquer la mise à jour V2.4 avant de tenter d'appliquer la mise à jour V2.5.
 * Si un temps d'indisponibilité est nécessaire.
 * Le temps total estimé pour effectuer la mise à jour.
-* L'impact de la mise à jour sur l'environnement virtuel VMware. Le tableau 1 indique comment les différents niveaux d'impact affectent le système.
+* L'impact de la mise à jour sur l'environnement virtuel VMware. Le tableau 1 indique comment les différents niveaux des mises à jour affectent le système.
 * Les détails de la mise à jour.
 
 Tableau 1. Niveaux de mise à jour et impact

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Affichage des instances vCenter Server with Hybridity Bundle
 
@@ -17,13 +21,14 @@ Affichez les informations récapitulatives et détaillées des instances VMware 
 Pour afficher un récapitulatif de toutes les instances vCenter Server with Hybridity Bundle qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances.
-3. Dans le tableau **vCenter Server**, affichez la liste des instances qui sont mises à disposition dans le compte utilisateur sélectionné.
+3. Dans le tableau **Instances vCenter Server**, affichez la liste des instances qui sont mises à disposition dans le compte utilisateur sélectionné. 
 
 Tableau 1. Eléments d'une instance vCenter Server with Hybridity Bundle
 
 | Elément        | Description       |  
 |:------------- |:------------- |
 | Nom | Nom de l'instance |
+| Type | Type de l'instance vCenter Server |
 | Version | Version d'édition dans laquelle l'instance a été déployée ou vers laquelle elle a été mise à niveau |  
 | Emplacement | {{site.data.keyword.CloudDataCent_notm}} où l'instance est hébergée |  
 | Heure de création | Date et heure de création de l'instance |  
@@ -58,7 +63,7 @@ Tableau 3. Propriétés d'instance vCenter Server with Hybridity Bundle
 | ID | ID de l'instance. |
 | Emplacement | {{site.data.keyword.CloudDataCent_notm}} où l'instance est hébergée. |
 | Version en cours | Version en cours d'{{site.data.keyword.vmwaresolutions_short}}. |
-| Version de vCenter | Version de VMware vCenter Server with Hybridity Bundle.<br><br>**Remarque :** la version vCenter Server affichée sur la console {{site.data.keyword.vmwaresolutions_short}} et celle sur le client VMware vSphere Web Client sont légèrement différentes. Les deux sont correctes. |
+| Version de vCenter | Version de VMware vCenter Server with Hybridity Bundle.<br><br>La version vCenter Server affichée sur la console {{site.data.keyword.vmwaresolutions_short}} et celle du client Web VMware vSphere sont légèrement différentes. Les deux sont correctes.{:note} |
 | NSX for vSphere | Version du produit VMware NSX for vSphere. |
 | Edition de licence NSX | Version et édition de la licence VMware NSX. |
 | Domaine racine DNS | Il s'agit du nom de domaine du serveur de noms de domaine (DNS, Domain Name System) et du nom de l'approbation de la racine Microsoft Active Directory (AD). |
@@ -109,7 +114,7 @@ Si des erreurs se produisent lors du déploiement ou de la suppression d'une ins
 
 Gérez vos instances depuis la console {{site.data.keyword.vmwaresolutions_short}} ou le client Web VMware vSphere.
 
-**Important :** avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client vSphere Web Client et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton **Console vCenter** et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client vSphere Web Client.
+Avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client Web vSphere et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton **Console vCenter** et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.{:important}
 
 Passez en revue les rubriques suivantes pour obtenir des informations qui vous aideront à exécuter les instructions de connexion :
 *  Pour les exigences et procédures à effectuer avant d'accéder au client vSphere Web Client, voir [Dépassement du délai d'attente lors de la connexion au client vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).

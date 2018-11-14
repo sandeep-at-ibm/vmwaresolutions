@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Commande d'instances Cloud Foundation
 
@@ -18,7 +22,8 @@ Assurez-vous que :
 *  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
 *  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les instances Cloud Foundation](sd_planning.html).
 
-**Important :** ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée. De plus, ne modifiez pas le nom d'instance, le nom de domaine racine, le libellé de sous-domaine ou le préfixe de nom d'hôte une fois l'instance déployée.
+Ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée. De plus, ne modifiez pas le nom d'instance, le nom de domaine racine, le libellé de sous-domaine ou le préfixe de nom d'hôte une fois l'instance déployée.
+{:important}
 
 ## Paramètres système
 
@@ -54,6 +59,34 @@ Si vous n'êtes pas un partenaire commercial, vous pouvez utiliser les licences 
 
 Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} où l'instance doit être hébergée.
 
+### Skylake
+
+Lorsque vous sélectionnez **Skylake**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM adaptée à vos besoins.
+
+Sélectionnez le modèle d'UC et la mémoire RAM du serveur bare metal.
+
+Tableau 1. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}
+
+| Options de modèle d'UC        | Options de RAM       |
+|:------------- |:------------- |
+| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
+| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
+| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
+
+### Broadwell
+
+Lorsque vous sélectionnez **Broadwell**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM adaptée à vos besoins.
+
+Sélectionnez le modèle d'UC et la mémoire RAM du serveur bare metal.
+
+Tableau 1. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}
+
+| Options de modèle d'UC        | Options de RAM       |
+|:------------- |:------------- |
+| Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+| Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+| Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+
 ### Préconfigurée
 
 Lorsque vous sélectionnez **Préconfigurée**, vous ne pouvez pas modifier les paramètres d'UC ou de mémoire RAM.
@@ -61,23 +94,6 @@ Lorsque vous sélectionnez **Préconfigurée**, vous ne pouvez pas modifier les 
 En fonction de vos besoins, sélectionnez une configuration de serveur bare metal :
   * Petite (Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz/128 Go de RAM/12 unités)
   * Grande (Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de RAM/12 unités)
-
-### Personnalisée
-
-Lorsque vous sélectionnez **Personnalisée**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM adaptée à vos besoins.
-
-Sélectionnez le modèle d'UC et la mémoire RAM du serveur bare metal.
-
-Tableau 1. Options pour les serveurs {{site.data.keyword.baremetal_short}} personnalisés
-
-| Options de modèle d'UC        | Options de RAM       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
-| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
-| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
 
 ### Nombre de serveurs bare metal
 
@@ -91,7 +107,7 @@ Lorsque vous sélectionnez la configuration de serveur bare metal **Préconfigur
   * Pour la configuration de serveur bare metal **Petite**, deux unités de disque SED SSD de 1,9 To sont commandées.
   * Pour la configuration de serveur bare metal **Grande**, quatre unités de disque SED SSD de 3,8 To sont commandées.
 
-Lorsque vous sélectionnez la configuration de serveur bare metal **Personnalisée** vous pouvez personnaliser le stockage VMware vSAN pour votre instance. Spécifiez les paramètres vSAN suivants :
+Lorsque vous sélectionnez la configuration de serveur bare metal **Skylake** ou **Broadwell**, vous pouvez personnaliser le stockage vSAN pour votre instance. Spécifiez les paramètres vSAN suivants :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
 * Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
@@ -125,7 +141,8 @@ Le nom du domaine racine qui doit respecter les règles suivantes :
 * La dernière chaîne ne peut contenir que des caractères alphabétiques.
 * La dernière chaîne doit comporter entre 2 et 24 caractères.
 
-**Remarque :** la longueur maximale du nom de domaine complet des hôtes et des machines virtuelles est de 50 caractères. Les noms de domaine doivent respecter cette longueur maximale.
+La longueur maximale du nom de domaine complet des hôtes et des machines virtuelles est de 50 caractères. Les noms de domaine doivent respecter cette longueur maximale.
+{:note}
 
 ### Format de valeur pour les paramètres réseau
 
@@ -193,11 +210,11 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
 6. Spécifiez les paramètres de serveur bare metal :
    1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger l'instance.
    2. Sélectionnez la configuration de serveur bare metal.
+      * Lorsque vous sélectionnez **Skylake** ou **Broadwell**, spécifiez le modèle d'UC et la taille de mémoire RAM. 
       * Lorsque vous sélectionnez **Préconfigurée**, choisissez une configuration **Petite**, Moyenne ou **Grande**.
-      * Lorsque vous sélectionnez **Personnalisée**, spécifiez le modèle d'UC et la taille de mémoire RAM.
 7. Procédez à la configuration du stockage.
+   * Si vous avez sélectionné **Skylake** ou **Broadwell** pour la configuration bare metal, spécifiez les types de disque pour la capacité et les caches de disque vSAN, et le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
    * Si vous avez sélectionné l'option **Préconfigurée** pour la configuration de serveur bare metal, les paramètres de stockage des configurations de serveur bare metal normalisées **Petite** et **Grande** ne sont pas modifiables.
-   * Si vous avez sélectionné le type **Personnalisée** pour la configuration de serveur bare metal, spécifiez les types de disque pour les disques de cache et de capacité VSAN, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 8. Spécifiez les paramètres d'interface réseau :
    1. Renseignez les zones Préfixe de nom d'hôte, Libelle de sous-domaine et Nom de domaine racine. Pour une instance secondaire, le nom de domaine est automatiquement renseigné.
    2. Sélectionnez les paramètres VLAN :
@@ -227,7 +244,9 @@ Lorsque vous commandez une instance secondaire, le client Web VMware vSphere de 
 
 Affichez et gérez l'instance Cloud Foundation que vous avez commandée.
 
-**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console.
+Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+{:important}
 
 **ATTENTION :** gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lorsque vous avez commandé l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque de rendre votre environnement instable. Ces activités de gestion incluent :
 

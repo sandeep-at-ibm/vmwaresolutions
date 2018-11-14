@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -34,7 +34,7 @@ Pour chaque hôte, procédez comme suit :
 
 Si vous souhaitez revenir à l'état antérieur et que vous ne pouvez pas vous connecter via SSH à l'hôte vSphere ESXi, vous devez vous connecter à la console KVM pour l'hôte qui doit être rétabli via la fenêtre de contrôle d'IBM Cloud.
 
-Utilisez l'ID et le mot de passe répertoriés dans la fenêtre de contrôle d'IBM Cloud avec l'adresse IP IPMI pour vous connecter à l'interface Web d'IPMI. Vous devez être connecté au centre de données dans lequel se trouve l'hôte via le réseau privé virtuel (VPN). Pour plus d'informations, voir [Initiation au VPN IBM Cloud](https://console.bluemix.net/docs/infrastructure/iaas-vpn/getting-started.html#getting-started-with-virtual-private-networking-vpn).
+Utilisez l'ID et le mot de passe répertoriés dans la fenêtre de contrôle d'IBM Cloud avec l'adresse IP IPMI pour vous connecter à l'interface Web d'IPMI. Vous devez être connecté au centre de données dans lequel se trouve l'hôte via le réseau privé virtuel (VPN). Pour plus d'informations, voir [Initiation au VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
 
 1. Accédez à la section Détails de l'unité, page Gestion à distance correspondant à l'hôte vSphere ESXi et sélectionnez **Actions** > **Console KVM**. Une autre fenêtre s'affiche en vous demandant le nom d'utilisateur et le mot de passe IPMI.
 2. Sélectionnez **Contrôle à distance** > **iKVM/HTML5** et cliquez sur **iKVM/HTML5** pour relancer. Vous pourrez maintenant accéder à la console de l'hôte vSphere ESXi.
@@ -47,5 +47,5 @@ Utilisez l'ID et le mot de passe répertoriés dans la fenêtre de contrôle d'I
 
 ### Liens connexes
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

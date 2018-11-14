@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="vmware-solutions" audience="infrastructure" arm="3662801" href="/docs/services/vmwaresolutions/index.html"}
+{: .toc subcollection="vmware-solutions" audience="infrastructure" arm="3662801" href="/docs/services/vmwaresolutions/index.html" path="services/vmwaresolutions"}
 IBM Cloud for VMware Solutions
 
     {: .navgroup id="learn"}
@@ -11,6 +11,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Notes sur l'édition
+        vmonic/relnotes_v27.md
         vmonic/relnotes_v26.md
         vmonic/relnotes_v25.md
         vmonic/relnotes_v24.md
@@ -164,7 +165,8 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     IBM Cloud Private Hosted
-        services/managing_icp.md
+        services/icp_overview.md
+        services/icp_ordering.md
 
     {: .topicgroup}
     IBM Spectrum Protect Plus on IBM Cloud
@@ -176,6 +178,11 @@ IBM Cloud for VMware Solutions
     KMIP for VMware on IBM Cloud
         services/kmip_considerations.md
         services/kmip_ordering.md
+
+    {: .topicgroup}
+    Mission Critical VMware on IBM Cloud
+        services/mcv_overview.md
+        services/managing_mcv.md
 
     {: .topicgroup}
     Veeam on IBM Cloud
@@ -227,8 +234,6 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Identification et résolution des problèmes
-        Identification et résolution des problèmes
-        vmonic/trbl_fix_spectre.md
         vmonic/trbl_timeout_vc_console.md
         vmonic/trbl_sec_inst_not_visible.md
         vmonic/trbl_cfupdatesfail.md
@@ -272,7 +277,8 @@ IBM Cloud for VMware Solutions
         archiref/nsx/multi_site.md
 
     {: .topicgroup}
-    VMware Update Manager
+    Guide VMware Update Manager
+        archiref/vcs/vcs-hybridity-intro.md
         archiref/vum/vum-intro.md
         archiref/vum/vum-overview.md
         archiref/vum/vum-init-config.md
@@ -289,4 +295,69 @@ IBM Cloud for VMware Solutions
         archiref/vum/vum-orchestr-updates.md
         archiref/vum/vum-zerto.md
         archiref/vum/vum-host-profiles.md
+
+    {: .topicgroup}
+    Guide de mise en réseau de vCenter Server
+        archiref/vcs/vcs-hybridity-intro.md
+        archiref/vcsnsxt/vcsnsxt-intro.md
+        archiref/vcsnsxt/vcsnsxt-systemcontext.md
+        archiref/vcsnsxt/vcsnsxt-appmod.md
+        archiref/vcsnsxt/vcsnsxt-usecases.md
+        archiref/vcsnsxt/vcsnsxt-overview.md
+        archiref/vcsnsxt/vcsnsxt-overview-ic4vnetwork.md
+        archiref/vcsnsxt/vcsnsxt-overview-ic4vnsxv.md
+        archiref/vcsnsxt/vcsnsxt-overview-iks.md
+        archiref/vcsnsxt/vcsnsxt-overview-icp.md
+        archiref/vcsnsxt/vcsnsxt-overview-integration.md
+        archiref/vcsnsxt/vcsnsxt-operations.md
+        archiref/vcsnsxt/vcsnsxt-techpreview.md
+
+    {: .topicgroup}
+    Guide vCenter Server et IBM Cloud Private
+        archiref/vcs/vcs-hybridity-intro.md
+        archiref/vcsicp/vcsicp-intro.md
+        archiref/vcsicp/vcsicp-systemcontext.md
+        archiref/vcsicp/vcsicp-appmod.md
+        archiref/vcsicp/vcsicp-usecases.md
+        archiref/vcsicp/vcsicp-arch-overview.md
+        archiref/vcsicp/vcsicp-arch-overview-infrastructure.md
+        archiref/vcsicp/vcsicp-arch-overview-solution.md
+        archiref/vcsicp/vcsicp-detail-design.md
+        archiref/vcsicp/vcsicp-detail-design-network.md
+        archiref/vcsicp/vcsicp-detail-design-resiliency.md
+
+    {: .topicgroup}
+    Guide de maintenance de vCenter Server et IBM Kubernetes
+        archiref/vcs/vcs-hybridity-intro.md
+        archiref/vcsiks/vcsiks-intro.md
+        archiref/vcsiks/vcsiks-systemcontext.md
+        archiref/vcsiks/vcsiks-appmod.md
+        archiref/vcsiks/vcsiks-usecases.md
+        archiref/vcsiks/vcsiks-arch-overview.md
+        archiref/vcsiks/vcsiks-arch-overview-infrastructure.md
+        archiref/vcsiks/vcsiks-overview-network.md
+
+    {: .topicgroup}
+    Guide Concept Car pour VMware et Skate Advisor
+        archiref/vcscar/vcscar-preface.md
+        archiref/vcs/vcs-hybridity-intro.md
+        archiref/vcscar/vcscar-intro.md
+        archiref/vcscar/vcscar-syscontext.md
+        archiref/vcscar/vcscar-concepts.md
+        archiref/vcscar/vcscar-logical.md
+        archiref/vcscar/vcscar-physical.md
+        archiref/vcscar/vcscar-vcscar-arch-overview-solution.md
+        archiref/vcscar/vcscar-arch-overview-infrastructure.md
+        archiref/vcscar/vcscar-commonservices.md
+
+    {: .topicgroup}
+    VMware : Le parcours de modernisation de Stock Trader
+        archiref/vcscontent/vcscontent-modjourney.md
+        archiref/vcscontent/vcscontent-hcx.md
+        archiref/vcscontent/vcscontent-stocktrmod.md
+        archiref/vcscontent/vcscontent-addmidware.md
+        archiref/vcscontent/vcscontent-aianalytics.md
+        archiref/vcscontent/vcscontent-iks.md
+        archiref/vcscontent/vcscontent-summary.md
+
     {: .navgroup-end}

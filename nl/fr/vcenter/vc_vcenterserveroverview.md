@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Présentation de vCenter Server
 
@@ -26,9 +30,7 @@ Vous pouvez ajouter des services gérés par IBM si vous voulez décharger les o
 
 Le graphique suivant décrit l'architecture de haut niveau et les composants d'un déploiement vCenter Server à trois noeuds.
 
-Figure 1. Architecture vCenter Server de haut niveau pour un cluster à trois noeuds
-
-![Architecture vCenter Server](vc_architecture.svg "Architecture vCenter Server de haut niveau pour un cluster à trois noeuds")
+Figure 1. Architecture vCenter Server de haut niveau pour un cluster à trois noeuds ![Architecture vCenter Server](vc_architecture.svg "Architecture vCenter Server de haut niveau pour un cluster à trois noeuds")
 
 ### Infrastructure physique
 
@@ -54,20 +56,25 @@ Pour plus d'informations sur l'architecture, voir [Référence de l'architecture
 
 Les composants suivants sont inclus dans votre instance vCenter Server.
 
-**Remarque :** la disponibilité et la tarification des configurations matérielles normalisées peuvent varier en fonction de l'{{site.data.keyword.CloudDataCent_notm}} sélectionné pour le déploiement.
+La disponibilité et la tarification des configurations matérielles normalisées peuvent varier en fonction de l'{{site.data.keyword.CloudDataCent_notm}} sélectionné pour le déploiement.{:note}
 
 ### Serveur bare metal
 
 Vous pouvez commander trois serveurs {{site.data.keyword.baremetal_short}} ou plus dans l'une des configurations suivantes :
-*  **Personnalisée** : serveurs {{site.data.keyword.baremetal_short}} avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.   
-   * Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4)
-   * Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100)
+* **Skylake** ou **Broadwell** : serveurs {{site.data.keyword.baremetal_short}} avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.   
+  * Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100)
+  * Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4)
 
-     **Remarque :** si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.
-*  **Préconfigurée** : Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4)
-   * **Petite** (Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz/128 Go de RAM/2 disques)
-   * **Moyenne** (Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz/256 Go de RAM/2 disques)
-   * **Grande** (Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de RAM /2 disques)
+Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.
+{:note}
+* **Certifiés SAP** : serveurs {{site.data.keyword.baremetal_short}} avec le modèle d'UC que vous avez sélectionné. 
+  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/192 Go de mémoire RAM
+  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/384 Go de mémoire RAM
+  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/768 Go de mémoire RAM
+* **Préconfigurée** : Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4)
+  * **Petite** (Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz/128 Go de RAM/2 disques)
+  * **Moyenne** (Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz/256 Go de RAM/2 disques)
+  * **Grande** (Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de RAM /2 disques)
 
 ### Utilisation en réseau
 
@@ -78,7 +85,8 @@ Les composants réseau suivants sont commandés :
 *  Deux passerelles de services périphériques VMware NSX :
   * Une passerelle de gestion sécurisée VMware NSX Edge Services Gateway (ESG) pour le trafic de gestion HTTPS sortant, déployée par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle ESG gérée par le client](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-    **Important :** vous n'avez pas accès à cette passerelle ESG et vous ne pouvez pas l'utiliser. Si vous la modifiez, vous ne pourrez plus gérer l'instance vCenter Server depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
+    Cette passerelle ESG se nomme **mgmt-nsx-edge**. Vous n'avez pas accès à cette passerelle ESG et vous ne pouvez pas l'utiliser. Si vous la modifiez, vous ne pourrez plus gérer l'instance vCenter Server depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
+    {:important}
   * Une passerelle VMware NSX Edge Services Gateway sécurisée gérée par le client pour le trafic de charge de travail HTTPS sortant et entrant. Cette passerelle est déployée par IBM en tant que modèle que vous pouvez modifier pour fournir un accès au réseau privé virtuel ou un accès public. Pour plus d'informations, voir [La passerelle NSX Edge gérée par le client présente-t-elle un risque pour la sécurité ?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 ### Instance de serveur virtuel
@@ -101,7 +109,7 @@ L'option vSAN offre des configurations personnalisées, avec différentes option
 
   De plus, deux disques cache de 960 Go par hôte sont également commandés.
 
-  **Remarque :** les unités SSD (Solid State Disk) de 3,8 To seront prises en charge une fois qu'elles sont officiellement disponibles dans un centre de données.
+  Les unités SSD (Solid State Disk) de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un centre de données. {:note}
 * L'option Hautes performances avec Intel Optane, qui fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Cette option dépend du modèle d'UC.
 
 #### Stockage NFS
@@ -136,15 +144,15 @@ Un serveur bare metal doté de la configuration présentée dans [Spécification
 * Frais de support et de services
 * (Pour les clusters vSAN) VMware vSAN Advanced ou Enterprise 6.6
 
-**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
-
-**ATTENTION :** gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lors de la commande de l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque d'entraîner une instabilité de votre environnement. Ces activités de gestion incluent :
+Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console.
+Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+Gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lors de la commande de l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque d'entraîner une instabilité de votre environnement. Ces activités de gestion incluent :
 *  L'ajout, la modification, le retour ou la suppression de composants
 *  L'extension ou la réduction de la capacité de l'instance via l'ajout ou la suppression de serveurs ESXi
 *  La mise hors tension de composants
-*  Le redémarrage de services
-
+*  Redémarrage des services
    Seules les activités de gestion des partages de fichiers du stockage partagé depuis le portail {{site.data.keyword.slportal}} font exception. Il s'agit des activités suivantes : commande, suppression (pouvant avoir un impact sur des magasins de données éventuellement montés), accord d'autorisation et montage de partages de fichiers de stockage partagé.
+   {:important}
 
 ### Liens connexes
 

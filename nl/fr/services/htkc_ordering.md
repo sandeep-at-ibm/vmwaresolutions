@@ -10,7 +10,7 @@ lastupdated: "2018-09-26"
 
 # Commande de HyTrust KeyControl on IBM Cloud
 
-Vous pouvez commander le service HyTrust KeyControl on {{site.data.keyword.cloud}} lorsque vous commandez une nouvelle instance avec une paire à haute disponibilité de dispositifs HyTrust KeyControl incluse ou en ajoutant les dispositifs HyTrust CloudControl à votre instance existante. 
+Vous pouvez commander le service HyTrust KeyControl on {{site.data.keyword.cloud}} lorsque vous commandez une nouvelle instance avec une paire à haute disponibilité de dispositifs HyTrust KeyControl incluse ou en ajoutant les dispositifs HyTrust CloudControl à votre instance existante.
 
 ## Commande de HyTrust KeyControl on IBM Cloud pour une nouvelle instance
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-27"
 
 La configuration, la gestion et la surveillance de tous les composants logiciels, notamment la sauvegarde et la disponibilité de votre infrastructure de gestion et de vos charges de travail, vous incombent.
 
-Dans le cadre de la solution, vous pouvez éventuellement déployer les services complémentaires {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}}. Veeam et IBM Spectrum Protect Plus peuvent vous aider à répondre aux exigences de sauvegarde relatives à vos composants de gestion.
+Dans le cadre de la solution, vous pouvez éventuellement déployer les services complémentaires IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}}. Veeam et IBM Spectrum Protect Plus peuvent vous aider à répondre aux exigences de sauvegarde relatives à vos composants de gestion.
 
 Ces services complémentaires sont déployés en même temps que le stockage {{site.data.keyword.cloud_notm}} Endurance. Ils vous aident à sauvegarder vos charges de travail et les composants de gestion. Les rubriques de [présentation de l'architecture IBM Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} et de [présentation de l'architecture Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} fournissent des commentaires utiles en matière de planification et de dimensionnement de déploiement. Vous pouvez également demander des [services gérés](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) pour votre déploiement Veeam.
 
@@ -34,7 +34,9 @@ Pour héberger ces sauvegardes, déployez un serveur de fichiers Linux dans votr
 
 VMware vCenter Server et PSC fournissent une[interface utilisateur de gestion de dispositif et une API permettant d'exporter la base de données et la configuration dans un serveur de fichiers](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} à l'aide de divers protocoles. Vous trouverez dans VMware un exemple montrant comment configurer cette opération [pour qu'elle s'exécute régulièrement en tant que travail cron](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} directement sur le dispositif vCenter Server Appliance et le contrôleur PSC.
 
-Vous devez sauvegarder le dispositif vCenter Server Appliance et le contrôleur PSC séparément à l'aide de cette technique. Familiarisez-vous avec cette technique et planifiez les aspects et les limitations documentés par VMware. En outre, planifiez une rotation et une expiration régulières des sauvegardes de fichiers sur votre serveur de fichiers. Notez que VMware exige que l'emplacement de sauvegarde soit un dossier vide, par conséquent, vous devez planifier votre rotation ou automatisation de sauvegarde de manière à laisser l'emplacement vacant pour chaque tâche de sauvegarde successive.
+Vous devez sauvegarder le dispositif vCenter Server Appliance et le contrôleur PSC séparément à l'aide de cette technique. Familiarisez-vous avec cette technique et planifiez les aspects et les limitations documentés par VMware. En outre, planifiez une rotation et une expiration régulières des sauvegardes de fichiers sur votre serveur de fichiers.
+
+VMware exige que l'emplacement de sauvegarde soit un dossier vide, par conséquent, vous devez planifier votre rotation ou automatisation de sauvegarde de manière à laisser l'emplacement vacant pour chaque tâche de sauvegarde successive.{:note}
 
 ## Sauvegarde de niveau fichier NSX
 

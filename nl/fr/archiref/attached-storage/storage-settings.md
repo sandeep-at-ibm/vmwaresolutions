@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Paramètres de stockage
 
 Cette conception prend en charge la connexion de stockage partagé via NFS v3 uniquement. NFS v4 et v4.1 ne sont pas pris en charge.
 
-**Remarque** : tout le stockage connecté pour cette conception est limité au stockage {{site.data.keyword.cloud_notm}} disponible dans le même {{site.data.keyword.CloudDataCent_notm}} que la solution vCenter Server. De plus, tous les disques virtuels qui sont stockés dans le magasin de données sont par défaut alloués de manière dynamique.
+Tout le stockage connecté pour cette conception est limité au stockage {{site.data.keyword.cloud_notm}} disponible dans le même {{site.data.keyword.CloudDataCent_notm}} que la solution vCenter Server. De plus, tous les disques virtuels qui sont stockés dans le magasin de données sont par défaut alloués de manière dynamique.
+{:note}
 
 L'architecture indique que les magasins de données NFS v3 sont connectés à l'aide du même nom DNS à partir du stockage {{site.data.keyword.cloud_notm}} pour la connexion au partage. De plus, le partage NFS est connecté à tous les hôtes dans le cluster vCenter Server et placé dans un cluster de magasins de données pour lequel la fonction Storage DRS est activée.
 

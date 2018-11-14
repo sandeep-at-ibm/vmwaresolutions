@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Application de mises à jour à des instances vCenter Server with Hybridity Bundle
 
@@ -41,14 +43,16 @@ Tableau 1. Niveaux de mise à jour et impact
    S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec l'instance de serveur virtuel IBM CloudDriver, lié à une règle de pare-feu ou à un autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
 4. Cliquez sur **Mise à jour et module de correction** dans le panneau de navigation de gauche.
 
-   **Remarque :** la page **Mise à jour et module de correction** ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. {{site.data.keyword.vmwaresolutions_short}} applique les mises à jour VMware dans les circonstances suivantes :
+   La page **Mise à jour et module de correction** ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. {{site.data.keyword.vmwaresolutions_short}} applique les mises à jour VMware dans les circonstances suivantes :
    * Lorsqu'une nouvelle instance vCenter Server est déployée
    * Lorsque de nouveaux serveurs ESXi sont ajoutés
    * Lorsque de nouveaux clusters sont ajoutés
+   {:note}
 
 5. Pour des mises à niveau de licence, cliquez sur **Mettre à niveau**. Sélectionnez dans la liste l'édition vers laquelle vous souhaitez effectuer une mise à niveau, puis cliquez sur **Mettre à niveau**. Les rétromigrations d'édition de licence ne sont pas disponibles.
 
-   **Remarque** : la mise à niveau de licence remplace toutes les licences NSX existantes sur l'instance. Des frais supplémentaires peuvent découler d'un chevauchement entre les anciennes et les nouvelles licences si vous effectuez la mise à niveau en cours de cycle de facturation. Pour éviter des frais supplémentaires, il est recommandé d'effectuer la mise à niveau de la licence à la fin du cycle de facturation.
+   La mise à niveau de licence remplace toutes les licences NSX existantes sur l'instance. Des frais supplémentaires peuvent découler d'un chevauchement entre les anciennes et les nouvelles licences si vous effectuez la mise à niveau en cours de cycle de facturation. Pour éviter des frais supplémentaires, il est recommandé d'effectuer la mise à niveau de la licence à la fin du cycle de facturation.
+   {:note}
 
 6. Pour les mises à jour logicielles, cliquez sur la flèche vers le bas afin de développer la mise à jour que vous voulez appliquer, puis effectuez l'une des opérations suivantes :
    *  Pour lancer immédiatement la mise à jour, cliquez sur l'icône de menu déroulant dynamique dans la colonne **Actions** de l'entrée de mise à jour, puis cliquez sur **Mettre à jour maintenant**.

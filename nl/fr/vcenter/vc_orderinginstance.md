@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Commande d'instances vCenter Server
 
@@ -30,7 +34,8 @@ Tableau 1. Format de la valeur des noms d'instance et de domaine
   | Nom de serveur ESXi qualifié complet | `<host_prefix><n>.<subdomain_label>.<root_domain>`, où `<n>` est la séquence du serveur ESXi. La longueur maximale admise est de 50 caractères. |  
   | Nom de domaine complet PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La longueur maximale admise est de 50 caractères. |
 
-**Important :** ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
+Ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
+{:important}
 
 ## Paramètres système
 
@@ -59,20 +64,55 @@ Si vous êtes un partenaire commercial, la licence vCenter Server (édition Stan
 
 Si vous n'êtes pas un partenaire commercial, vous pouvez utiliser les licences VMware fournies par IBM pour ces composants en sélectionnant **Inclure avec achat** ou vous pouvez fournir votre propre licence (mode BYOL) en sélectionnant **Je fournirai** et en entrant vos propres clés de licence.
 
+
 **Attention :**
 * Une licence avec un minimum de huit UC est requise, ce qui vaut pour quatre serveurs avec deux UC par serveur. Le choix de licence pour chaque composant VMware s'applique à l'instance de base et à tous les serveurs ESXi ajoutés ultérieurement à l'instance. Veillez à ce que votre licence soit à même de prendre en charge une future extension de capacité de votre infrastructure.
 * Les éditions de licence minimum sont indiquées sur l'interface utilisateur. Si différentes éditions de composant sont prises en charge, vous pouvez sélectionner celle qui vous convient. Il est de votre responsabilité de vous assurer que la clé de licence fournie est correcte pour chaque composant VMware sélectionné.
 * Pour vSphere, des frais de licence sont imputés au moment de la commande, mais ces frais sont ensuite crédités à votre compte.
 * Vous pouvez modifier toute licence que vous avez fournie à l'aide du client Web VMware vSphere une fois le déploiement de l'instance terminé.
 * La prise en charge des composants VMware pour lesquels vous avez fourni des licences est assurée par VMware et non par le support IBM.
+{:important}
 
 ## Paramètres de serveur bare metal
 
-Les paramètres bare metal dépendent du centre de données que vous sélectionnez et varient selon que vous choisissez une configuration préconfigurée ou personnalisée.
+Les paramètres bare metal dépendent du centre de données que vous sélectionnez et de la configuration de serveur bare metal. 
 
 ### Emplacement de centre de données
 
 Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} où l'instance doit être hébergée.
+
+### Skylake
+
+Lorsque vous sélectionnez **Skylake**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM de serveur bare metal adaptée à vos besoins.
+
+Tableau 2. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}
+
+| Options de modèle d'UC        | Options de RAM       |
+|:------------- |:------------- |
+| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+
+### Certifiés SAP
+
+Lorsque vous sélectionnez **Certifiés SAP**, vous ne pouvez pas modifier les paramètres d'UC ou de mémoire RAM.
+
+En fonction de vos besoins, sélectionnez une configuration de serveur bare metal :
+  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/192 Go de mémoire RAM
+  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/384 Go de mémoire RAM
+  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/768 Go de mémoire RAM
+
+### Broadwell
+
+Lorsque vous sélectionnez **Broadwell**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM de serveur bare metal adaptée à vos besoins.
+
+Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}
+
+| Options de modèle d'UC        | Options de RAM       |
+|:------------- |:------------- |
+| Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+| Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+| Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 
 ### Préconfigurée
 
@@ -83,30 +123,13 @@ En fonction de vos besoins, sélectionnez une configuration de serveur bare meta
   * Moyenne (Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz/256 Go de RAM/2 unités)
   * Grande (Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de RAM/2 unités)
 
-### Personnalisée
-
-Lorsque vous sélectionnez **Personnalisée**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM adaptée à vos besoins.
-
-Sélectionnez le modèle d'UC et la mémoire RAM du serveur bare metal.
-
-Tableau 2. Options pour les serveurs {{site.data.keyword.baremetal_short}} personnalisés
-
-| Options de modèle d'UC        | Options de RAM       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
-
 ### Nombre de serveurs bare metal
 
 Pour le cluster initial de l'instance, vous pouvez configurer le nombre de serveurs ESXi comme suit :
+* Si vous avez sélectionné **Skylake** ou **Broadwell**, vous pouvez configurer de 2 à 20 serveurs ESXi. 
 * Si vous avez sélectionné **Préconfigurée**, vous pouvez configurer de 2 à 10 serveurs ESXi.
-* Si vous avez sélectionné **Personnalisée**, vous pouvez configurer de 2 à 20 serveurs ESXi.
 
-Tous les serveurs ESXi se partagent la configuration définie. Après le déploiement initial, vous pouvez ajouter quatre clusters supplémentaires. Si vous avez sélectionné la configuration **Personnalisée** pour VMware vSAN, 4 serveurs ESXi sont requis à la fois pour le cluster initial et pour les clusters post-déploiement. Pour plus d'informations sur le nombre minimum de serveurs ESXi, voir [Une instance vCenter Server à deux noeuds est-elle à haute disponibilité](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
+Tous les serveurs ESXi se partagent la configuration définie. Après le déploiement initial, vous pouvez ajouter quatre clusters supplémentaires. Si vous avez sélectionné la configuration **Skylake** ou **Broadwell** pour VMware vSAN, 4 serveurs ESXi sont requis à la fois pour le cluster initial et pour les clusters post-déploiement. Pour plus d'informations sur le nombre minimum de serveurs ESXi, voir [Une instance vCenter Server à deux noeuds est-elle à haute disponibilité](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Paramètres de stockage
 
@@ -114,7 +137,7 @@ Les paramètres de stockage varient en fonction de la configuration de serveur b
 
 ### Stockage vSAN
 
-vSAN n'est disponible que pour la configuration bare metal **Personnalisée**. Spécifiez les options vSAN suivantes :
+vSAN n'est disponible que pour les configurations bare metal **Skylake** et **Broadwell**. Spécifiez les options vSAN suivantes :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
 * Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
@@ -125,7 +148,7 @@ vSAN n'est disponible que pour la configuration bare metal **Personnalisée**. S
 
 Lorsque vous sélectionnez **Stockage NFS**, vous pouvez ajouter un stockage partagé de niveau fichier pour votre instance dans lequel tous les partages utilisent les mêmes paramètres ou vous pouvez spécifier des paramètres de configuration différents pour chaque partage de fichiers. Spécifiez les options NFS suivantes :
 
-**Remarque :** le nombre de partages de fichiers doit être compris entre 1 et 32.
+Le nombre de partages de fichiers doit être compris entre 1 et 32.{:note}
 
 * **Configurer les partages individuellement** : permet de spécifier des paramètres de configuration différents pour chaque partage de fichiers.
 * **Nombre de partages** : lorsque vous utilisez le même paramètre de configuration pour chaque partage de fichiers, spécifiez le nombre de partages de fichiers pour le stockage partagé NFS que vous souhaitez ajouter.
@@ -133,7 +156,7 @@ Lorsque vous sélectionnez **Stockage NFS**, vous pouvez ajouter un stockage par
 * **Performances** : sélectionnez la valeur IOPS (opérations d'entrée/sortie par seconde) par Go adaptée à vos besoins en matière de charge de travail.
 * **Ajouter NFS** : permet d'ajouter des partages de fichiers individuels qui utilisent des paramètres de configuration différents.
 
-Tableau 3. Options de niveau de performance NFS
+Tableau 4. Options de niveau de performance NFS
 
 | Option        | Détails       |
   |:------------- |:------------- |
@@ -169,7 +192,8 @@ Le nom du domaine racine qui doit respecter les règles suivantes :
 * La dernière chaîne ne peut contenir que des caractères alphabétiques.
 * La dernière chaîne doit comporter entre 2 et 24 caractères.
 
-**Remarque :** la longueur maximale du nom de domaine complet des hôtes et des machines virtuelles est de 50 caractères. Les noms de domaine doivent respecter cette longueur maximale.
+La longueur maximale du nom de domaine complet des hôtes et des machines virtuelles est de 50 caractères. Les noms de domaine doivent respecter cette longueur maximale.
+{:note}
 
 ### Réseau public ou privé
 
@@ -199,9 +223,9 @@ Lorsque vous sélectionnez cette option pour réutiliser des VLAN publics et pri
 * **Sous-réseau principal**, affecté aux hôtes physiques pour l'accès au réseau public.
 * **Sous-réseau privé principal**, affecté aux hôtes physiques pour le trafic de gestion.
 
-**Important :**
 * Vérifiez que la configuration de pare-feu sur les VLAN sélectionnés ne bloque pas le trafic des données de gestion.
 * Vérifiez que tous les VLAN que vous sélectionnez se trouvent dans le même pod. Les serveurs ESXi ne peuvent pas être mis à disposition sur des VLAN multi-pods.
+{:important}
 
 ### Configuration DNS
 
@@ -210,7 +234,8 @@ Sélectionnez la configuration de système de noms de domaine (DNS, Domain Name 
 * **Une instance de serveur virtuel Windows publique pour Active Directory/DNS** : une unique instance de serveur virtuel Windows Microsoft pour Microsoft Active Directory (AD), qui fonctionne en tant que serveur de noms de domaine pour l'instance où sont enregistrés les hôtes et les machines virtuelles, est déployée et peut être interrogée. Cette option a été déployée par défaut pour les instances de version 1.9 et ultérieures.
 * **Deux machines virtuelles Windows Server dédiées à haute disponibilité sur le cluster de gestion** : deux machines virtuelles Microsoft Windows sont déployées, pour plus de sécurité et de robustesse.
 
-**Important :** vous devez fournir deux licences Microsoft Windows Server 2012 R2 si vous configurez votre instance de manière à utiliser deux machines virtuelles Microsoft Windows. Utilisez la licence d'édition Microsoft Windows Server 2012 R2 Standard et/ou la licence d'édition Microsoft Windows Server 2012 R2 Datacenter.
+Vous devez fournir deux licences Microsoft Windows Server 2012 R2 si vous configurez votre instance de manière à utiliser les deux machines virtuelles Microsoft Windows. Utilisez la licence d'édition Microsoft Windows Server 2012 R2 Standard et/ou la licence d'édition Microsoft Windows Server 2012 R2 Datacenter.
+{:important}
 
 Chaque licence ne peut être affectée qu'à un seul serveur physique et couvre jusqu'à deux processeurs physiques. Une licence d'édition Standard peut exécuter deux machines virtuelles Microsoft Windows virtualisées par serveur à 2 processeurs. Par conséquent, deux licences sont nécessaires puisque deux machines virtuelles Microsoft Windows sont déployées sur deux hôtes différents.
 
@@ -243,8 +268,9 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
 6. Spécifiez les paramètres de serveur bare metal.
     1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger l'instance.
     2. Sélectionnez la configuration de serveur bare metal.
+       * Lorsque vous sélectionnez **Skylake** ou **Broadwell**, spécifiez le modèle d'UC et la taille de mémoire RAM. 
+       * Lorsque vous sélectionnez **Certifiés SAP**, choisissez le modèle d'UC. 
        * Lorsque vous sélectionnez **Préconfigurée**, choisissez **Petite**, **Moyenne** ou **Grande** pour la configuration.
-       * Lorsque vous sélectionnez **Personnalisée**, spécifiez le modèle d'UC et la taille de mémoire RAM.
     3. Spécifiez le nombre de serveurs {{site.data.keyword.baremetal_short}}. Si vous prévoyez d'utiliser vSAN comme solution de stockage, au moins 4 serveurs {{site.data.keyword.baremetal_short}} sont nécessaires.  
 7. Procédez à la configuration du stockage.
   * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
@@ -281,8 +307,9 @@ Lorsque vous commandez une instance secondaire, le client Web VMware vSphere de 
 
 Affichez et gérez l'instance vCenter Server que vous avez commandée.
 
-**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console.
+Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console.
 Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+{:important}
 
 **ATTENTION :** gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lorsque vous avez commandé l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque de rendre votre environnement instable. Ces activités de gestion incluent :
 *  L'ajout, la modification, le retour ou la suppression de composants

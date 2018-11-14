@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Conception d'infrastructure physique
 
@@ -16,7 +20,7 @@ L'infrastructure physique est constituée des composants suivants :
   <dt class="dt dlterm">Calcul physique</dt>
   <dd class="dd">Le calcul physique fournit le traitement et la mémoire physiques utilisés par l'infrastructure de virtualisation. Pour cette conception, les composants de calcul sont fournis par les serveurs bare metal IBM Cloud et sont répertoriés dans le document [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php).</dd>
   <dt class="dt dlterm">Stockage physique</dt>
-  <dd class="dd">Le stockage physique fournit la capacité de stockage brut utilisée par l'infrastructure de virtualisation. Les composants de stockage sont fournis par les serveurs bare metal ou par la matrice NAS (Network Attached Storage) à l'aide de NFS v3.</dd>
+  <dd class="dd">Le stockage physique fournit la capacité de stockage brut qui est utilisée par l'infrastructure de virtualisation. Les composants de stockage sont fournis par les serveurs  {{site.data.keyword.baremetal_short}} ou par la matrice NAS (Network Attached Storage) partagée à l'aide de NFS v3.</dd>
   <dt class="dt dlterm">Réseau physique</dt>
   <dd class="dd">Le réseau physique fournit la connectivité réseau dans l'environnement qui est ensuite utilisé par la virtualisation de réseau. Le réseau est fourni par le réseau des services {{site.data.keyword.cloud_notm}} et comprend d'autres services, tels que DNS et NTP.</dd>
 </dl>
@@ -29,13 +33,16 @@ Pour plus d'informations sur le stockage, voir la documentation sur l'[architect
 
 L'hôte physique fait référence aux serveurs {{site.data.keyword.baremetal_short}} dans l'environnement qui sert les ressources de calcul. Les serveurs bare metal appliqués dans cette solution sont certifiés par VMware et répertoriés sur le site [VMware Compatibility Guide](http://www.vmware.com/resources/compatibility/search.php).
 
-Les configurations de serveur disponibles dans la solution sont conformes ou supérieures aux exigences minimales relatives à l'installation, la configuration et la gestion de vSphere ESXi. Différentes configurations sont disponibles pour satisfaire différentes exigences. Pour obtenir la liste détaillée des spécifications exactes utilisées pour la solution VMware on {{site.data.keyword.cloud_notm}}, voir la nomenclature pour l'[instance Cloud Foundation](../../sddc/sd_bom.html) ou l'[instance vCenter Server](../../vcenter/vc_bom.html). Notez que les serveurs bare metal résident dans {{site.data.keyword.cloud_notm}}.
+Les configurations de serveur disponibles dans la solution sont conformes ou supérieures aux exigences minimales relatives à l'installation, la configuration et la gestion de vSphere ESXi. Différentes configurations sont disponibles pour satisfaire différentes exigences. Pour obtenir la liste détaillée des spécifications exactes utilisées pour la solution VMware on {{site.data.keyword.cloud_notm}}, voir la nomenclature pour l'[instance Cloud Foundation](../../sddc/sd_bom.html) ou l'[instance vCenter Server](../../vcenter/vc_bom.html).
+
+Les serveurs {{site.data.keyword.baremetal_short}} résident dans {{site.data.keyword.cloud_notm}}.
+{:note}
 
 Chaque instance Cloud Foundation commence avec un déploiement de 4 hôtes, et chaque instance vCenter Server commence avec un déploiement de 3 ou 4 hôtes selon la solution de stockage choisie.
 
-L'hôte physique emploie deux disques connectés localement destinés à être alloués à l'hyperviseur vSphere ESXi. Vous pouvez allouer davantage de disques en utilisant vSAN comme indiqué dans la section _Conception de stockage physique_ de cette page ou en utilisant NetApp ONTAP comme indiqué dans la documentation sur l'[architecture NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Chaque hôte physique comporte des connexions réseau 10 Gbps redondantes pour l'accès au réseau public et l'accès au réseau privé.
+L'hôte physique emploie deux disques connectés localement destinés à être alloués à l'hyperviseur vSphere ESXi. Vous pouvez allouer davantage de disques en utilisant vSAN comme indiqué dans la section _Conception de stockage physique_ ou en utilisant NetApp ONTAP comme indiqué dans la documentation sur l'[architecture NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Chaque hôte physique comporte des connexions réseau 10 Gbps redondantes pour l'accès au réseau public et l'accès au réseau privé.
 
-Les spécifications techniques du serveur bare metal sont les suivantes :
+Les spécifications du serveur bare metal sont les suivantes :
 * Unité centrale : Dual Intel Xeon, configuration coeur et vitesse variable
 * Mémoire : Configuration variable, 128 Go ou plus
 * Réseau : 4 x 10 Gbps
@@ -83,7 +90,7 @@ Pour permettre des connexions transparentes entre les différents sous-réseaux 
 
 ### Acheminement et routage virtuels (VRF)
 
-Vous pouvez également configurer le compte de portail client d'infrastructure IBM Cloud comme compte VRF pour fournir une fonctionnalité similaire à VLAN spanning et activer ainsi le routage automatique entre les blocs d'adresses IP de sous-réseau. Tous les comptes dotés de connexions Direct Link doivent être convertis en ou créés en tant que compte VRF.
+Vous pouvez également configurer le compte {{site.data.keyword.slportal}} comme compte VRF pour fournir une fonctionnalité similaire à VLAN spanning et activer ainsi le routage automatique entre les blocs d'adresses IP de sous-réseau. Tous les comptes dotés de connexions Direct Link doivent être convertis en ou créés en tant que compte VRF.
 
 La console {{site.data.keyword.vmwaresolutions_short}} ne peut pas déterminer si VRF est activé dans le portail client d'infrastructure IBM Cloud. Vous recevrez un avertissement vous rappelant que vous devez vérifier que **VLAN spanning** ou VRF est activé dans votre compte de portail client d'infrastructure IBM Cloud.
 
@@ -135,11 +142,11 @@ Les connexions de réseau privé sont configurées pour utiliser 9000 comme tail
 
 ## Conception de stockage physique
 
-La conception de stockage physique fait référence à la configuration des disques physiques qui sont installés dans les hôtes physiques et à la configuration du stockage de niveau fichier partagé. Cela inclut les disques de système d'exploitation de l'hyperviseur vSphere ESXi et ceux qui sont utilisés pour le stockage des machines virtuelles. Le stockage des machines virtuelles peut être constitué de disques locaux qui sont virtualisés par VMware vSAN, ou de stockage de niveau fichier partagé.
+La conception de stockage physique fait référence à la configuration des disques physiques qui sont installés dans les hôtes physiques et à la configuration du stockage de niveau fichier partagé. Cela inclut les disques de système d'exploitation de l'hyperviseur vSphere ESXi et les disques qui sont utilisés pour le stockage des machines virtuelles. Le stockage des machines virtuelles peut être constitué de disques locaux qui sont virtualisés par VMware vSAN, ou de stockage de niveau fichier partagé.
 
 ### Disques de système d'exploitation
 
-L'hyperviseur vSphere ESXi est conçu pour être installé dans un emplacement persistant. Par conséquent, les hôtes physiques contiennent deux disques SATA 1 To dans la configuration RAID afin d'assurer la prise en charge de la redondance pour l'hyperviseur vSphere ESXi.
+L'hyperviseur vSphere ESXi est conçu pour être installé dans un emplacement persistant. Par conséquent, les hôtes physiques contiennent deux disques SATA 1 To dans la configuration RAID-1 afin d'assurer la prise en charge de la redondance pour l'hyperviseur vSphere ESXi.
 
 ### Stockage de machine virtuelle
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -18,10 +18,10 @@ Lorsque VUM demande une ressource du serveur de mises à jour dans VMware, la de
 
 Ce document présente l'utilisation d'un serveur proxy basé sur CentOS et Squid. Le proxy Squid est un proxy de mise en cache open source pour le Web. Il prend en charge de nombreux protocoles, notamment HTTP et HTTPS. Il existe un certain nombre de proxys basés sur les machines virtuelles et les dispositifs accessibles et vous devez sélectionner celui qui vous convient en fonction des exigences de votre entreprise, puis effectuer l'installation et la configuration selon les conseils du fournisseur. Les clients qui optent pour l'utilisation d'une implémentation de type CentOS/Squid doivent suivre la procédure ci-dessous.
 
-*	Télécharger CentOS ISO sur un serveur intermédiaire
-*	Créer une bibliothèque vCenter
-*	Transférer ISO sur la bibliothèque vCenter
-*	Créer une machine virtuelle, installer et configurer CentOS, puis installer Squid
+* Télécharger CentOS ISO sur un serveur intermédiaire
+* Créer une bibliothèque vCenter
+* Transférer ISO sur la bibliothèque vCenter
+* Créer une machine virtuelle, installer et configurer CentOS, puis installer Squid
 
 Avant de démarrer cette tâche, vous devez collecter des informations pour remplir le tableau 1. Passez en revue les valeurs suggérées et vérifiez qu'elles conviennent à votre entreprise. Cette configuration est basée sur un proxy de petite taille conçu uniquement pour VUM et utilisant CentOS-Minimal et Squid.
 
@@ -31,13 +31,13 @@ Tableau 1. Valeurs de déploiement
 |:--------- |:-------------- |:------ |
 | UC du proxy | 1 vCPU | Squid n'a pas de configuration requise minimale |
 | Mémoire RAM du proxy | 2 Go | Squid n'a pas de configuration requise minimale |
-| Disque du proxy |	25 Go | Squid n'a pas de configuration requise minimale |
+| Disque du proxy | 25 Go | Squid n'a pas de configuration requise minimale |
 | Nom d'hôte | Proxy01 | |
-| Adresse |	IP proxy |	Une Adresse IP de secours doit être utilisée à partir du sous-réseau portable privé du client affectée lors du processus de mise à disposition. Seules deux adresses IP ont été réservées sur ce sous-réseau ; l'une pour le routeur BCR et l'autre pour le dispositif ESG du client (customer-esg)
-| Masque de réseau |	255.255.255.192 | |
-| Passerelle | 	Adresse IP de la liaison montante privée customer-nsx-edge |	Il s'agit du paramètre de passerelle par défaut pour le serveur proxy, qui correspond à l'adresse de la liaison montante privée customer-nsx-edge. L'adresse IP peut être obtenue en consultant l'onglet des paramètres de customer-nsx-edge |
-| Serveur DNS |	Adresse IP AD/DNS | Cette adresse IP peut être obtenue sur la page Instances Déployées dans la console [IC4VS Cloud Console](https://console.bluemix.net/infrastructure/vmware-solutions/console/vcenters/) ; |
-| IP BCR |	Adresse IP du routeur BCR | Il s'agit de l'adresse IP du routeur BCR (Backend Customer Router) d'IBM Cloud qui est la passerelle pour 10.0.0.0/8 et 161.26.0.0/16. Cette adresse est utilisée dans une route statique du serveur proxy pour que le dispositif VCSA et le serveur AD/DNS puissent y accéder |
+| Adresse | IP proxy | Une Adresse IP de secours doit être utilisée à partir du sous-réseau portable privé du client affectée lors du processus de mise à disposition. Seules deux adresses IP ont été réservées sur ce sous-réseau ; l'une pour le routeur BCR et l'autre pour le dispositif ESG du client (customer-esg)
+| Masque de réseau | 255.255.255.192 | |
+| Passerelle| Adresse IP de la liaison montante privée customer-nsx-edge | Il s'agit du paramètre de passerelle par défaut pour le serveur proxy, qui correspond à l'adresse IP de la liaison montante privée de customer-nsx-edge. L'adresse IP peut être obtenue en consultant l'onglet **Paramètres** pour **customer-nsx-edge**. |
+| Serveur DNS | Adresse IP AD/DNS | Cette adresse IP peut être obtenue sur la page **Instances déployées** dans la console IBM Cloud for VMware Solutions. |
+| IP BCR | Adresse IP du routeur BCR | Il s'agit de l'adresse IP du routeur BCR (Backend Customer Router) d'IBM Cloud qui est la passerelle pour 10.0.0.0/8 et 161.26.0.0/16. Cette adresse est utilisée dans une route statique du serveur proxy pour que le dispositif VCSA et le serveur AD/DNS puissent y accéder. |
 
 ## Configuration de NSX
 
@@ -73,7 +73,7 @@ Le processus suivant déploie une machine virtuelle pour héberger CentOS et Squ
 
 ### Téléchargement du fichier CentOS-Minimal ISO
 
-Dans un navigateur sur votre serveur intermédiaire, téléchargez le fichier CentOS-Minimal ISO depuis [CentOS](https://www.centos.org/download/). Notez qu'IBM Cloud conserve un miroir de nombreuses distributions Linux populaires. Ce miroir n'est disponible que sur le réseau privé et les fichiers CentOS ISO sont disponibles à l'adresse suivante : http://mirrors.service.softlayer.com/centos/7/isos/x86_64/.
+Dans un navigateur sur votre serveur intermédiaire, téléchargez le fichier CentOS-Minimal ISO depuis [CentOS](https://www.centos.org/download/). Notez qu'IBM Cloud conserve un miroir de nombreuses distributions Linux populaires. Ce miroir n'est disponible que sur le réseau privé et les fichiers CentOS ISO sont disponibles à l'adresse suivante : `http://mirrors.service.softlayer.com/centos/7/isos/x86_64/`
 
 ### Configuration d'une bibliothèque de contenu et remplissage avec le fichier CentOS ISO
 
@@ -89,7 +89,7 @@ Créez une bibliothèque de contenu vCenter locale. La bibliothèque est accessi
 
 Cette activité comprend les tâches suivantes :
 
-*	Création d'une machine virtuelle
+*	Création d'une nouvelle machine virtuelle
 *	Installation de CentOS
 *	Installation de Squid
 
@@ -155,14 +155,13 @@ Squid n'a pas de configuration matérielle requise minimale mais la quantité de
 ## Configuration initiale de VUM
 
 Configurez VUM pour utiliser le serveur proxy afin d'accéder aux référentiels sur Internet.
-1.	A l'aide du client vSphere Web Client, accédez à **Home** > **Update Manager**. Cliquez sur votre vCenter Server.
-2.	Sélectionnez l'**onglet Manage** et cliquez sur le bouton **Settings**.
-3.	Sélectionnez **Download Settings**, puis sous _Proxy settings_, cliquez sur le bouton **Edit**.
-4.	Cochez la case **Use Proxy** et entrez l'_adresse IP du serveur proxy_ et le _port 3128_, puis cliquez sur **OK**
-5.	La zone Connectivity Status doit passer à _Validating_ puis à _Connected_.
-6.	Cliquez sur le bouton **Download Now** et dans le panneau _Recent Tasks_, vous devez voir que cette activité est terminée.
+1. A l'aide du client vSphere Web Client, accédez à **Home** > **Update Manager**. Cliquez sur votre vCenter Server.
+2. Sélectionnez l'**onglet Manage** et cliquez sur le bouton **Settings**.
+3. Sélectionnez **Download Settings**, puis sous _Proxy settings_, cliquez sur **Edit**.
+4. Cochez la case **Use Proxy** et entrez l'_adresse IP du serveur proxy_ et le _port 3128_, puis cliquez sur **OK**. La zone Connectivity Status passe à _Validating_ puis à _Connected_.
+5. Cliquez sur **Download Now**. Dans le panneau _Recent Tasks_, vous devez voir que cette activité est terminée.
 
 ### Liens connexes
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

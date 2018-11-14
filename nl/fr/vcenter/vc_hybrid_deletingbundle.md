@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Retrait d'Hybridity Bundle d'une instance vCenter Server
 
 Pour retirer la licence Hybridity Bundle de votre instance vCenter Server, vous devez remplacer les clés de licence locative VMware NSX et VMware vSAN par des clés BYOL (Bring Your Own License) dans le client Web VMware vSphere. De plus, vous devez ouvrir un ticket de demande de service pour annuler les frais liés aux licences locatives.
 
-**Important :** le fait de rétromigrer votre licence peut provoquer l'échec de votre instance vCenter Server. Vous pouvez choisir de rétromigrer une licence à vos risques et périls, mais avant, examinez attentivement les fonctions qui ne seront plus disponibles à l'issue de cette opération. Pour plus d'informations, voir [Graphique de comparaison des éditions de composant VMware](../archiref/solution/appendix.html).
+Le fait de rétromigrer votre licence peut provoquer l'échec de votre instance vCenter Server. Vous pouvez choisir de rétromigrer une licence à vos risques et périls, mais avant, examinez attentivement les fonctions qui ne seront plus disponibles à l'issue de cette opération. Pour plus d'informations, voir [Graphique de comparaison des éditions de composant VMware](../archiref/solution/appendix.html).
+{:important}
 
 ## Considérations importantes à prendre en compte lorsque vous retirez Hybridity Bundle d'un environnement multisite
 
@@ -43,7 +48,7 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
    3. Cliquez sur l'icône **Ajouter** et saisissez la clé de licence. Cliquez sur **Suivant**.
    4. Tapez le nom de la licence et cliquez sur **Suivant**. Cliquez sur **Terminer** pour ajouter la licence.
    5. Sélectionnez la nouvelle clé de licence.
-   6. Notez les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée. **Important :** vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure.
+   6. Notez les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée. Vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure. {:important}
    7. Cliquez sur **OK** pour affecter la licence.
 5. Procédez comme suit pour installer une licence BYOL pour VMware vSAN :
    1. Cliquez sur l'onglet **Clusters**.
@@ -52,7 +57,8 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
     2. Cliquez sur l'icône **Ajouter** et saisissez la clé de licence. Cliquez sur **Suivant**.
     3. Tapez le nom de la licence et cliquez sur **Suivant**. Cliquez sur **Terminer** pour ajouter la licence.
     4. Sélectionnez la nouvelle clé de licence.
-    5. Notez le nom de cluster et les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée. **Important :** vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure.
+    5. Notez le nom de cluster et les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée.
+    Vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure. {:important}
     6. Cliquez sur **OK** pour affecter la licence.
 6. Procédez éventuellement comme suit pour installer une licence BYOL pour VMware vCenter Server :
    1. Cliquez sur l'onglet **Systèmes vCenter Server**.
@@ -60,7 +66,7 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
    3. Cliquez sur l'icône **Ajouter** et saisissez la clé de licence. Cliquez sur **Suivant**.
    4. Tapez le nom de la licence et cliquez sur **Suivant**. Cliquez sur **Terminer** pour ajouter la licence.
    5. Sélectionnez la nouvelle clé de licence.
-   6. Notez les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée. **Important :** vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure.
+   6. Notez les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée. Vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure. {:important}
    7. Cliquez sur **OK** pour affecter la licence.
 7. Procédez éventuellement comme suit pour installer une licence BYOL pour VMware vSphere Enterprise Plus :
   1. Cliquez sur l'onglet **Hôtes**.
@@ -69,7 +75,9 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
     2. Cliquez sur l'icône **Ajouter** et saisissez la clé de licence. Cliquez sur **Suivant**.
     3. Tapez le nom de la licence et cliquez sur **Suivant**. Cliquez sur **Terminer** pour ajouter la licence.
     4. Sélectionnez la nouvelle clé de licence.
-    5. Notez le nom de cluster et les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée. **Important :** vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure. Si les clés de licence ne sont pas identiques d'un cluster à l'autre, prenez soin de noter le nom de cluster associé à chacune d'elles.
+    5. Notez le nom de cluster et les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée.
+    Vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure. Si les clés de licence ne sont pas identiques d'un cluster à l'autre, prenez soin de noter le nom de cluster associé à chacune d'elles.
+    {:important}
     6. Cliquez sur **OK** pour affecter la licence.
 8. Retirez les licences locatives.
    1. Cliquez sur l'onglet **Licences**.
@@ -81,7 +89,7 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
   * La liste des clés de licence BYOL que vous avez installées au cours de cette procédure. Le cas échéant, indiquez le nom de l'instance et du cluster avec les clés de licence pour vSphere et les clusters vSAN.
   * La liste des clés de licence locative que vous avez retirées au cours de cette procédure. Le cas échéant, indiquez le nom de l'instance et du cluster avec les clés de licence pour vSphere et les clusters vSAN.
 
-  **Remarque :** avant d'annuler les frais liés à la licence locative Hybridity Bundle, les équipes chargées du support et des opérations IBM accèdent à la couche de gestion vCenter de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) pour s'assurer que les licences locatives ont été retirées.
+  Avant d'annuler les frais liés à la licence locative Hybridity Bundle, les équipes chargées du support et des opérations IBM accèdent à la couche de gestion vCenter de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) pour s'assurer que les licences locatives ont été retirées.{:note}
 
 ### Liens connexes
 

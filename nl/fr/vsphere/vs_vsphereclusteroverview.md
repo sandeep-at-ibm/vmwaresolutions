@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Présentation de VMware vSphere on IBM Cloud
 
@@ -22,7 +26,7 @@ Utilisez cette offre pour créer un cluster de serveurs ESXi ou en augmenter un 
 
 Passez en revue les composants VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
-**Remarque :** la disponibilité et la tarification des configurations matérielles normalisées peuvent varier en fonction de l'{{site.data.keyword.CloudDataCent_notm}} sélectionné pour le déploiement.
+La disponibilité et la tarification des configurations matérielles normalisées peuvent varier en fonction de l'{{site.data.keyword.CloudDataCent_notm}} sélectionné pour le déploiement.{:note}
 
 ### Composants VMware
 
@@ -62,7 +66,7 @@ Stockage personnalisé par l'utilisateur pour la configuration vSAN lorsque le c
 
   De plus, deux disques cache de 960 Go par hôte sont également commandés.
 
-  **Remarque :** les unités SSD (Solid Disk) de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un centre de données.
+  Les unités SSD (Solid Disk) de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un centre de données.{:note}
 * L'option Hautes performances avec Intel Optane, qui fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Cette option dépend du modèle d'UC.
 
 ## Spécifications techniques relatives aux noeuds d'extension de cluster vSphere
@@ -82,7 +86,8 @@ Un serveur bare metal {{site.data.keyword.cloud_notm}} doté de la configuration
 * Un serveur bare metal {{site.data.keyword.cloud_notm}} avec VMware vSphere Enterprise Plus 6.0u2 ou 6.5u1  
 * Composants VMware facultatifs présentés dans [Spécifications techniques relatives à vSphere sur clusters {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
-**Important :** vous devez gérer les serveurs ESXi, les composants VMware facultatifs et le matériel supplémentaire commandés et livrés sur votre compte {{site.data.keyword.cloud_notm}} uniquement à partir du portail {{site.data.keyword.slportal}}. Après avoir créé un nouveau cluster sur la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez revenir sur la console pour mettre à l'échelle le nouveau cluster à l'aide de la configuration enregistrée. Pour plus d'informations, voir [Mise à l'échelle de clusters existants](vs_scalingexistingclusters.html).
+Vous devez gérer les serveurs ESXi, les composants VMware facultatifs et le matériel supplémentaire commandés et livrés sur votre compte {{site.data.keyword.cloud_notm}} uniquement à partir du portail {{site.data.keyword.slportal}}. Après avoir créé un nouveau cluster sur la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez revenir sur la console pour mettre à l'échelle le nouveau cluster à l'aide de la configuration enregistrée. Pour plus d'informations, voir [Mise à l'échelle de clusters existants](vs_scalingexistingclusters.html).
+{:important}
 
 ### Liens connexes
 

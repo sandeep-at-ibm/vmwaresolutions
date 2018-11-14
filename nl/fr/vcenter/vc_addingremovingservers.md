@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Extension et réduction de capacité pour des instances vCenter Server
 
@@ -23,7 +27,7 @@ Si votre cluster initial dispose d'un stockage vSAN, l'ajout d'un ou plusieurs s
 * Une instance vCenter Server avec un stockage vSAN doit disposer au minimum de 4 serveurs ESXi.
 * Pour les instances vCenter Server déployées en version 2.0 ou antérieure, vous pouvez développer chaque cluster jusqu'à contenir 32 serveurs ESXi. Le nombre de serveurs {{site.data.keyword.baremetal_short}} que vous pouvez ajouter à la fois est le suivant :
    * Pour les configurations **Petite**, **Moyenne** et **Grande**, vous pouvez ajouter de 1 à 10 serveurs ESXi à la fois.
-   * Pour la configuration **Personnalisée**, vous pouvez ajouter de 1 à 20 serveurs ESXi à la fois. Pour plus d'informations sur le nombre minimum de serveurs ESXi, voir [Une instance vCenter Server à deux noeuds est-elle à haute disponibilité ?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+   * Pour les configurations **Skylake** et **Broadwell**, vous pouvez ajouter 1 à 20 serveurs ESXi à la fois. Pour plus d'informations sur le nombre minimum de serveurs ESXi, voir [Une instance vCenter Server à deux noeuds est-elle à haute disponibilité ?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Procédure d'ajout de serveurs ESXi
 
@@ -64,7 +68,7 @@ Si votre cluster initial dispose d'un stockage vSAN, l'ajout d'un ou plusieurs s
 2. Un courrier électronique vous avise que votre demande de retrait de serveurs ESXi est en cours de traitement. Sur la console, le statut du cluster qui est associé aux serveurs ESXi passe à **Modification en cours**.
 3. Les serveurs ESXi sont complètement récupérés par l'infrastructure {{site.data.keyword.cloud_notm}} à la fin de son cycle de facturation, lequel est généralement de 30 jours.
 
-   **Attention :** les serveurs ESXi retirés vous sont facturés jusqu'à échéance du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}.
+   Les serveurs ESXi retirés vous sont facturés jusqu'à échéance du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}.{:note}
 
 ### Liens connexes
 

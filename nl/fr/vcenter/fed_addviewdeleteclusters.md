@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -38,20 +38,29 @@ Le centre de données du cluster est, par défaut, le centre de données de l'in
 
 ### Paramètres de serveur bare metal
 
-#### Personnalisée
+#### Skylake
 
 Indiquez le modèle d'UC et la mémoire RAM du serveur bare metal. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
 
-Tableau 1. Options pour les serveurs {{site.data.keyword.baremetal_short}} personnalisés
+Tableau 1. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}
+
+| Options de modèle d'UC        | Options de RAM       |
+|:------------- |:------------- |
+| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+
+#### Broadwell
+
+Indiquez le modèle d'UC et la mémoire RAM du serveur bare metal. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
+
+Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}
 
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
-| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
 
 #### Nombre de serveurs bare metal
 
@@ -88,7 +97,7 @@ Lorsque vous sélectionnez **Stockage NFS**, vous pouvez ajouter un stockage par
 * **Performances** : permet de sélectionner la valeur IOPS (Input/output Operations Per Second) par Go adaptée à vos besoins en matière de charge de travail.
 * **Ajouter NFS** : permet d'ajouter des partages de fichiers individuels avec des paramètres de configuration différents.
 
-Tableau 2. Options de niveau de performance NFS
+Tableau 3. Options de niveau de performance NFS
 
 | Option        | Détails       |
   |:------------- |:------------- |

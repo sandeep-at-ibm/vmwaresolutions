@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -17,14 +17,14 @@ VUM active la gestion automatique centralisée des versions et des correctifs po
 * Installer et mettre à jour des logiciels tiers sur les hôtes.
 * Mettre à niveau le matériel des machines virtuelles, les outils VMware Tools et les dispositifs virtuels.
 
-Notez que ce document décrit également les processus permettant de gérer les composants de votre instance VCS :
+Ce document décrit également les processus permettant de gérer les composants suivants de votre instance VCS :
 * vCenter Server Appliance
 * NSX
 * vSAN
 
-Ce document présente l'utilisation de l'implémentation d'un serveur proxy, basé sur CentOS et Squid, pour permettre à VUM d'accéder aux référentiels de VMware. Lorsque VUM demande une ressource du serveur de mises à jour dans VMware, la demande est d'abord envoyée au serveur proxy qui l'envoie ensuite au serveur de mise à jour via la passerelle ESG (External Services Gateway). Une fois que le serveur proxy obtient la ressource, il l'envoie à VUM. 
+Ce document présente l'utilisation de l'implémentation d'un serveur proxy, basé sur CentOS et Squid, pour permettre à VUM d'accéder aux référentiels de VMware. Lorsque VUM demande une ressource du serveur de mises à jour dans VMware, la demande est d'abord envoyée au serveur proxy qui l'envoie ensuite au serveur de mise à jour via la passerelle ESG (External Services Gateway). Une fois que le serveur proxy obtient la ressource, il l'envoie à VUM.
 
-![Diagramme de présentation](vum-vcsproxy.svg)
+Figure 1. Diagramme de présentation![Diagramme de présentation](vum-vcsproxy.svg)
 
 VCS déploie actuellement vSphere 6.5, ce qui signifie que VUM est désormais intégré dans le dispositif vCenter Server Appliance (VCSA), et comme le composant client de VUM est un plug-in qui s'exécute sur vSphere Web Client, il est automatiquement activé après le déploiement du dispositif VCSA. Cependant, VUM n'a aucun accès à Internet pour accéder aux référentiels de VMware.
 
@@ -37,16 +37,16 @@ VUM peut être configuré pour importer des mises à jour depuis un référentie
 Ainsi, notez que dans vSphere 6.5, l'enregistrement de VUM dans un dispositif VCSA n'est plus pris en charge lors de l'installation du serveur VUM sur une machine Windows distincte. Vous ne pouvez pas déployer VUM sur une machine virtuelle dans un environnement VCS.
 
 Ce document comprend les sections suivantes :
-* [Présentation de VUM](vum-overview.html) - Cette section présente le processus VUM et les termes clés nécessaires pour comprendre les opérations et l'interface utilisateur de l'outil
+* [Présentation de VMware Update Manager](vum-overview.html) - Cette section présente le processus VUM et les termes clés nécessaires pour comprendre les opérations et l'interface utilisateur de l'outil.
 * **Installation, configuration et utilisation** - Cette section présente les étapes requises pour le fonctionnement de VUM dans une instance VCS :
   - [Configuration initiale](vum-init-config.html) - Tâche unique pour :
       - Configurer la mise en réseau NSX pour autoriser l'accès du serveur proxy à Internet
       - Installer et configurer un serveur proxy pour fournir l'accès Internet pour VUM
       - Effectuer la configuration initiale de VUM pour l'utilisation du serveur proxy
-  - [Collecte de métadonnées](vum-metadata.html) - VUM télécharge des métadonnées sur les mises à niveau, les correctifs ou les extensions via un processus automatique prédéfini. A intervalles réguliers pouvant être configurés, VUM contacte VMware ou des sources tierces, pour rassembler les métadonnées les plus récentes sur les mises à niveau, les correctifs ou les extensions disponibles
-  - [Création de lignes de base et association à des objets d'inventaire](vum-baselines.html) - Utilisez les lignes de base et les groupes de lignes de base prédéfinis ou créez les vôtres. Les lignes de base et les groupes de lignes de base sont ensuite rattachés aux objets d'inventaire
+  - [Collecte des métadonnées](vum-metadata.html) - VUM télécharge des métadonnées relatives aux mises à niveau, aux correctifs ou aux extensions via un processus automatique prédéfini que vous pouvez modifier. A intervalles réguliers pouvant être configurés, VUM contacte VMware ou des sources tierces, pour rassembler les métadonnées les plus récentes sur les mises à niveau, les correctifs ou les extensions disponibles
+  - [Création de lignes de base](vum-baselines.html) - Utilisez les lignes de base et les groupes de lignes de base prédéfinis ou créez les vôtres. Les lignes de base et les groupes de lignes de base sont ensuite rattachés aux objets d'inventaire
   - [Analyse et vérification](vum-scanning.html) - Les objets d'inventaire sont analysés et les résultats sont vérifiés pour déterminer leur conformité par rapport aux lignes de base et aux groupes de lignes de base. Les résultats d'analyse peuvent être filtrés avec une recherche de texte, une sélection de groupe ou de ligne de base et une sélection d'état de conformité
-  - [Transfert et résolution](vum-staging.html) - Des correctifs et des extensions peuvent être éventuellement transférés avant la résolution pour s'assurer qu'ils sont téléchargés sur l'hôte. Lors de la résolution, VUM applique les correctifs, les extensions et les mises à niveau aux objets d'inventaire 
+  - [Transfert et résolution](vum-staging.html) - Des correctifs et des extensions peuvent être éventuellement transférés avant la résolution pour s'assurer qu'ils sont téléchargés sur l'hôte. Lors de la résolution, VUM applique les correctifs, les extensions et les mises à niveau aux objets d'inventaire
 
 Ce document considère que vous disposez d'une instance VCS principale déployée ou d'un certain nombre d'instances VCS principales distinctes. Si vous disposez d'instances VCS principales et secondaires déployées et que vous utilisez SSO (Single Sign On), voir [vCenters liés via SSO](vum-updating-vcsa.html).
 
@@ -64,5 +64,5 @@ Cette fonction permet la mise à jour automatique des composants de gestion des 
 
 ### Liens connexes
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

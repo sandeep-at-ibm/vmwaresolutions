@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Mise à l'échelle de clusters vSphere existants
 
@@ -37,7 +41,7 @@ La mise à l'échelle du cluster démarre automatiquement. Une conformation par 
 
 Si le cluster que vous mettez à l'échelle n'est pas prêt à être utilisé, il se peut qu'un message d'erreur s'affiche.
 
-**Remarque :** contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.
+Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.{:note}
 
 ### Liens connexes
 
