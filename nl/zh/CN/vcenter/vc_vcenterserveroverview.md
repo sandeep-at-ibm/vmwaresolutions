@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server 概述
 
@@ -27,8 +31,7 @@ VMware vSAN 还可作为专用存储器选项提供。要增大 vSAN 集群的�
 下图描绘了三节点 vCenter Server 部署的高级别体系结构和组件。
 
 图 1. 三节点集群的 vCenter Server 高级别体系结构
-
-![vCenter Server 体系结构](vc_architecture.svg "针对三节点集群的 vCenter Server 高级别体系结构")
+![vCenter Server 体系结构](vc_architecture.svg "三节点集群的 vCenter Server 高级别体系结构")
 
 ### 物理基础架构
 
@@ -54,20 +57,26 @@ VMware vSAN 还可作为专用存储器选项提供。要增大 vSAN 集群的�
 
 vCenter Server 实例中包含以下组件。
 
-**注**：标准化硬件配置的可用性和定价可能会因选择用于部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+标准化硬件配置的可用性和定价可能会因选择用于部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+{:note}
 
 ### 裸机服务器
 
 可以使用下列其中一个配置来订购三个或更多 {{site.data.keyword.baremetal_short}}：
-*  **定制**：具有所选 CPU 型号和 RAM 大小的 {{site.data.keyword.baremetal_short}}。   
-   * 2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
-   * 2 个 Intel Skylake 代 CPU（Intel Xeon 4100/5100/6100 系列）
+* **Skylake** 或 **Broadwell**：具有所选 CPU 型号和 RAM 大小的 {{site.data.keyword.baremetal_short}}。  
+  * 2 个 Intel Skylake 代 CPU（Intel Xeon 4100/5100/6100 系列）
+  * 2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
 
-     **注**：如果计划使用 vSAN 存储器，那么配置需要 4 个 {{site.data.keyword.baremetal_short}}。
-*  **预配置**：2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
-   * **小型**（双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz / 128 GB RAM / 2 个磁盘）
-   * **中型**（双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz / 256 GB RAM / 2 个磁盘）
-   * **大型**（双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz / 512 GB RAM / 2 个磁盘）
+     如果计划使用 vSAN 存储器，那么配置需要 4 个 {{site.data.keyword.baremetal_short}}。
+     {:note}
+* **SAP 认证**：具有所选 CPU 型号的 {{site.data.keyword.baremetal_short}}。
+  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 192 GB RAM
+  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 384 GB RAM
+  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 768 GB RAM
+* **预配置**：2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
+  * **小型**（双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz / 128 GB RAM / 2 个磁盘）
+  * **中型**（双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz / 256 GB RAM / 2 个磁盘）
+  * **大型**（双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz / 512 GB RAM / 2 个磁盘）
 
 ### 联网
 
@@ -78,7 +87,8 @@ vCenter Server 实例中包含以下组件。
 *  两个 VMware NSX Edge 服务网关：
   * 用于出站 HTTPS 管理流量的安全管理服务 VMware NSX Edge 服务网关 (ESG)，由 IBM 部署为管理联网拓扑的一部分。IBM 管理虚拟机使用此 ESG 与自动化相关的特定外部 IBM 管理组件进行通信。有关更多信息，请参阅[配置网络以使用客户管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
-    **重要信息**：此 ESG 对您不可访问，因此您无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server 实例。此外，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信可能导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
+    此 ESG 名为 **mgmt-nsx-edge**，您无法对其进行访问，也无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server 实例。此外，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信可能导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
+{:important}
   * 用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX Edge 服务网关。此网关由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 ### 虚拟服务器实例
@@ -101,7 +111,8 @@ vSAN 选项提供定制配置，具有各种磁盘类型、大小和数量的选
 
   此外，每个主机还会订购两个 960 GB 高速缓存磁盘。
 
-  **注**：3.8 TB SSD（固态磁盘）驱动器在数据中心内普遍可用后就会受到支持。
+  3.8 TB SSD（固态磁盘）驱动器在数据中心内普遍可用后就会受到支持。
+  {:note}
 * 高性能 Intel Optane 选项，用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘。此选项取决于 CPU 型号。
 
 #### NFS 存储器
@@ -136,16 +147,13 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 * 一个支持和服务费用
 * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。
-如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
-
-**注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时已安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
+您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时已安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件
 *  通过添加或除去 ESXi 服务器来扩展或收缩实例容量
 *  关闭组件电源
 *  重新启动服务
-
    这些活动的例外情况包括在 {{site.data.keyword.slportal}} 中管理共享存储器文件共享。此类活动包括：订购、删除（如果已安装，可能会影响数据存储）、授权和安装共享存储器文件共享。
+   {:important}
 
 ### 相关链接
 

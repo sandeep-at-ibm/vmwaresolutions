@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 扩展和收缩 vCenter Server 实例的容量
 
@@ -23,7 +27,7 @@ lastupdated: "2018-09-27"
 * 使用 vSAN 存储器的 vCenter Server 实例必须至少具有 4 个 ESXi 服务器。
 * 对于在 V2.0 或更低版本中部署的 vCenter Server 实例，可以将每个集群扩展为最多具有 32 个 ESXi 服务器。一次可以添加的 {{site.data.keyword.baremetal_short}} 数量如下：
    * 对于**小型**、**中型**和**大型**配置，一次可以添加 1 到 10 个 ESXi 服务器。
-   * 对于**定制**配置，一次可以添加 1 到 20 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗？](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+   * 对于 **Skylake** 和 **Broadwell** 配置，一次可以添加 1 到 20 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗？](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## 添加 ESXi 服务器的过程
 
@@ -64,7 +68,8 @@ lastupdated: "2018-09-27"
 2. 系统将通过电子邮件通知您，正在处理除去 ESXi 服务器的请求。在控制台上，与 ESXi 服务器关联的集群的状态会更改为**正在修改**。
 3. {{site.data.keyword.cloud_notm}} 基础架构将在 {{site.data.keyword.cloud_notm}} 基础架构计费周期（通常为 30 天）结束时完全回收 ESXi 服务器。
 
-   **注意**：在所除去 ESXi 服务器的 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束之前，仍然会对您计费。
+   在所除去 ESXi 服务器的 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束之前，仍然会对您计费。
+   {:note}
 
 ### 相关链接
 

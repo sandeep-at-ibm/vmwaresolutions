@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -66,26 +66,35 @@ lastupdated: "2018-09-27"
 
 ## 裸机服务器设置
 
-裸机设置基于您的定制配置。目前不支持用于选择预配置的配置的选项。
+裸机设置基于您选择的数据中心以及裸机服务器配置。目前不支持用于选择预配置的配置的选项。
 
 ### 数据中心位置
 
 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
 
-### 定制
+### Skylake
 
 指定用于裸机服务器的 CPU 型号和 RAM。
 
-表 2. 定制 {{site.data.keyword.baremetal_short}} 的选项
+表 2. Skylake {{site.data.keyword.baremetal_short}} 的选项
+
+| CPU 模型选项   |RAM 选项|
+|:------------- |:------------- |
+|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+
+### Broadwell
+
+指定用于裸机服务器的 CPU 型号和 RAM。
+
+表 3. Broadwell {{site.data.keyword.baremetal_short}} 的选项
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、512 GB |
 |双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB |
 |双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB |
-|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
 ### 裸机服务器的数量
 
@@ -182,12 +191,12 @@ lastupdated: "2018-09-27"
 4. 单击**主实例**以在环境中部署单个实例。
 5. 指定 VMware NSX 许可证版本。
 6. 完成裸机服务器配置：
-  1. 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
-  2. 选择**定制** CPU 型号和 **RAM** 量。
+   1. 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
+   2. 选择 **Skylake** 或 **Broadwell** CPU 型号以及 **RAM** 量。
 7. 填写存储配置。
-  * 如果选择 **vSAN 存储器**，请指定容量和高速缓存磁盘的磁盘类型、磁盘数和 vSAN 许可证版本。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
-  * 如果选择 **NFS 存储器**，并且要向所有文件共享添加和配置相同设置，请指定**共享数**、**大小**和**性能**。
-  * 如果选择 **NFS 存储器**，并要单独添加和配置文件共享，请选择**单独配置共享**，单击**添加 NFS** 标签旁边的 **+** 图标，然后为每个单独的文件共享选择**大小**和**性能**。必须至少选择一个文件共享。
+   * 如果选择 **vSAN 存储器**，请指定容量和高速缓存磁盘的磁盘类型、磁盘数和 vSAN 许可证版本。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
+   * 如果选择 **NFS 存储器**，并且要向所有文件共享添加和配置相同设置，请指定**共享数**、**大小**和**性能**。
+   * 如果选择 **NFS 存储器**，并要单独添加和配置文件共享，请选择**单独配置共享**，单击**添加 NFS** 标签旁边的 **+** 图标，然后为每个单独的文件共享选择**大小**和**性能**。必须至少选择一个文件共享。
 8. 完成网络接口配置。
    1. 输入主机名前缀、子域标签和根域名。
    2. 选择 DNS 配置。

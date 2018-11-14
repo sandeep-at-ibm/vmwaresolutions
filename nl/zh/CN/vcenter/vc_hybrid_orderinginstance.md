@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 订购 vCenter Server with Hybridity Bundle 实例
 
@@ -30,7 +34,8 @@ lastupdated: "2018-09-27"
   |标准 ESXi 服务器名称| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 服务器的序列。最大长度为 50 个字符。|  
   |PSC FQDN|`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大长度为 50 个字符。|
 
-**重要信息**：不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。
+不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。
+{:important}
 
 ## 系统设置
 
@@ -63,7 +68,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下 VMware 许可�
 
 ## 裸机服务器设置
 
-裸机设置基于 {{site.data.keyword.CloudDataCent_notm}} 和定制配置。
+裸机设置基于您选择的 {{site.data.keyword.CloudDataCent_notm}} 以及裸机服务器配置。
 
 对于 vSAN 配置，初始集群和部署后集群都需要 4 个 ESXi 服务器。所有 ESXi 服务器共享相同的配置。部署后，可以再添加四个集群。
 
@@ -71,20 +76,29 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下 VMware 许可�
 
 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
 
-### 定制
+### Skylake
 
-为定制的裸机服务器指定 CPU 型号和 RAM 量。
+选择 **Skylake** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。
 
-表 2. 定制 {{site.data.keyword.baremetal_short}} 的选项
+表 2. Skylake {{site.data.keyword.baremetal_short}} 的选项
+
+| CPU 模型选项   |RAM 选项|
+|:------------- |:------------- |
+|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+
+### Broadwell
+
+选择 **Broadwell** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。
+
+表 3. Broadwell {{site.data.keyword.baremetal_short}} 的选项
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
-|双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
 ### 裸机服务器的数量
 
@@ -127,7 +141,8 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 * 最后一个字符串只能包含字母字符。
 * 最后一个字符串的长度必须在 2 到 24 个字符范围内。
 
-**注**：主机和 VM（虚拟机）的 FQDN（标准域名）的最大长度为 50 个字符。域名必须符合此最大长度。
+主机和 VM（虚拟机）的 FQDN（标准域名）的最大长度为 50 个字符。域名必须符合此最大长度。
+{:note}
 
 ### 公用或专用网络
 
@@ -152,9 +167,10 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 
 选择**选择现有 VLAN** 可复用现有公用 VLAN 和专用 VLAN，并可从可用的 VLAN 和子网中进行选择。
 
-**重要信息：**
+
 * 确保所选 VLAN 上的防火墙配置不会阻止管理数据流量。
 * 确保选择的所有 VLAN 都在同一 pod 中，因为 ESXi 服务器不能在混合 pod VLAN 上进行供应。
+{:important}
 
 ### DNS 配置
 
@@ -163,7 +179,8 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 * **一个用于 Active Directory/DNS 的公共 Windows VSI**：一个用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server VSI，充当在其中注册主机和 VM 的实例的 DNS，已部署并且可进行查找。
 * **管理集群上两个高可用性专用 Windows Server VM**：部署了两个 Microsoft Windows 虚拟机，以帮助增强安全性和稳健性。
 
-**重要信息**：如果将实例配置为使用两个 Microsoft Windows VM，那么必须提供两个 Microsoft Windows Server 2012 R2 许可证。使用 Microsoft Windows Server 2012 R2 Standard Edition 许可证和/或 Microsoft Windows Server 2012 R2 Datacenter Edition 许可证。
+如果将实例配置为使用两个 Microsoft Windows VM，那么必须提供两个 Microsoft Windows Server 2012 R2 许可证。使用 Microsoft Windows Server 2012 R2 Standard Edition 许可证和/或 Microsoft Windows Server 2012 R2 Datacenter Edition 许可证。
+{:important}
 
 每个许可证只能分配给一个物理服务器，并且最多包含两个物理处理器。一个 Standard Edition 许可证支持每个双处理器服务器运行两个虚拟化的 Microsoft Windows VM。因此，需要两个许可证，因为两个 Microsoft Windows VM 会部署在两个不同的主机中。
 
@@ -192,9 +209,10 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 5. 选择 NSX 许可证版本和 vSAN 许可证版本。
 6. 完成裸机服务器设置。
   1. 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
-  2. 选择**定制** CPU 型号和 **RAM** 量。
+  2. 选择 **Skylake** 或 **Broadwell** CPU 型号以及 **RAM** 量。
 
-  **注**：缺省情况下，**裸机服务器数**设置为 4，且无法更改。
+  缺省情况下，**裸机服务器数**设置为 4，且无法更改。
+{:note}
 7. 填写存储配置。指定容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
 8. 完成网络接口配置。
   1. 输入主机名前缀、子域标签和根域名。
@@ -227,8 +245,8 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 
 查看和管理订购的 vCenter Server with Hybridity Bundle 实例。
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。
-如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+{:important}
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件

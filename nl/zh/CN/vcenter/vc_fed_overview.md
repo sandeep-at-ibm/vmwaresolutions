@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-09-27"
 
 ### 裸机服务器
 
-可以使用下列其中一个配置来订购两个或更多定制 {{site.data.keyword.baremetal_short}}：
+可以使用下列其中一个配置来订购两个或更多 {{site.data.keyword.baremetal_short}}：
 
 * 2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
 * 2 个 Intel Skylake 代 CPU（Intel Xeon 4100/5100/6100 系列）

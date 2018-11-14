@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server with Hybridity Bundle 概述
 
@@ -61,13 +65,14 @@ vCenter Server with Hybridity Bundle 是一种托管的专用云，可将 VMware
 
 vCenter Server with Hybridity Bundle 实例中包含以下组件：
 
-**注**：标准化硬件配置的可用性和定价可能会因选择用于部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+标准化硬件配置的可用性和定价可能会因选择用于部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+{:note}
 
 ### 裸机服务器
 
-vCenter Server with Hybridity Bundle 实例订单中随附四个定制的 {{site.data.keyword.baremetal_short}}。提供了以下 CPU 型号：
-  * 2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
+vCenter Server with Hybridity Bundle 实例订单中随附四个 **Skylake** 或 **Broadwell** {{site.data.keyword.baremetal_short}}。提供了以下 CPU 型号：
   * 2 个 Intel Skylake 代 CPU（Intel Xeon 4100/5100/6100 系列）
+  * 2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
 
 ### 联网
 
@@ -78,7 +83,8 @@ vCenter Server with Hybridity Bundle 实例订单中随附四个定制的 {{site
 *  两个 VMware NSX Edge 服务网关：
   * 用于出站 HTTPS 管理流量的安全管理服务 VMware NSX Edge 服务网关 (ESG)，由 IBM 部署为管理联网拓扑的一部分。IBM 管理 VM 使用此 ESG 来与自动化相关的特定外部 IBM 管理组件进行通信。有关更多信息，请参阅[配置网络以使用客户管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
-    **重要信息**：此 ESG 对您不可访问，因此您无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server with Hybridity Bundle 实例。此外，请注意，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信将导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
+    您无法访问此 ESG，也无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server with Hybridity Bundle 实例。此外，请注意，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信将导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
+{:important}
   * 用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX Edge 服务网关，由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 有关部署 HCX on {{site.data.keyword.cloud_notm}} 服务时订购的联网组件的更多信息，请参阅 [HCX on {{site.data.keyword.cloud_notm}} 概述](../services/hcx_considerations.html)。
@@ -115,7 +121,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下许可证。
 
 ### 扩展节点的硬件
 
-具有定制配置的一个裸机服务器。
+一个裸机服务器，其配置在 [vCenter Server with Hybridity Bundle 实例的技术规范](../vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中提供。
 
 ### 扩展节点的许可证和费用
 
@@ -124,8 +130,8 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下许可证。
 * 一个支持和服务费用
 * VMware vSAN（Advanced 或 Enterprise）6.6
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。
-如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+{:important}
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时已安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件
