@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-07-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Escalando a capacidade
 
@@ -40,7 +44,8 @@ Esse método permite que você realize as coisas a seguir:
 * Segregando cargas de trabalho com base em outras características, por exemplo, cluster do banco de dados Microsoft SQL.
 * Implementando aplicativos em topologias altamente disponíveis.
 
-**Nota**: quando o cluster inicial for convertido em um cluster somente de gerenciamento, a migração de cargas de trabalho existentes envolverá etapas manuais a serem seguidas pelo usuário. Isso pode envolver a reconexão de armazenamentos de dados ao novo cluster ou, alternadamente, a migração de armazenamento. Os endereços IP das cargas de trabalho poderão precisar ser mudados se o novo cluster residir em um pod do {{site.data.keyword.cloud_notm}} diferente ou se for designado para um ID de VLAN diferente.
+Quando o cluster inicial for convertido em um cluster somente de gerenciamento, a migração de cargas de trabalho existentes envolverá etapas manuais a serem executadas pelo usuário. Isso pode envolver a reconexão de armazenamentos de dados ao novo cluster ou, alternadamente, a migração de armazenamento. Os endereços IP das cargas de trabalho poderão precisar ser mudados se o novo cluster residir em um pod do {{site.data.keyword.cloud_notm}} diferente ou se for designado para um ID de VLAN diferente.
+{:note}
 
 ## Incluindo hosts ESXi em clusters existentes
 

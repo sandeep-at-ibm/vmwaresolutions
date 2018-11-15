@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Considerações pós-implementação para sua instância do VMware
 
@@ -14,7 +18,8 @@ As ofertas {{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server e V
 
 Revise as considerações a seguir para entender suas responsabilidades para gerenciar e operar a instância antes e após sua implementação.
 
-**Nota:** a lista a seguir não é completa. Para obter mais informações, consulte [Serviços gerenciados pela IBM](../../services/managing_imi.html).
+A lista a seguir não é exaustiva. Para obter mais informações, consulte [Serviços gerenciados pela IBM](../../services/managing_imi.html).
+{:note}
 
 ## Acesso à conta do IBM Cloud
 
@@ -32,7 +37,7 @@ Familiarize-se com as seguintes limitações de sua instância:
 
 Conclua as etapas a seguir para gerenciar o acesso à rede do {{site.data.keyword.cloud_notm}} e aos componentes de gerenciamento do VMware e para planejar sua topologia de rede do {{site.data.keyword.cloud_notm}}.
 
-- Acesse os terminais de gerenciamento da instância usando a [VPN do {{site.data.keyword.cloud_notm}}](https://www.softlayer.com/vpn-access) ou sua [conexão de link direto do {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/direct-link).
+- Acesse os terminais de gerenciamento de instância usando a [VPN do {{site.data.keyword.cloud_notm}}](https://www.softlayer.com/vpn-access) ou a sua [Conexão do {{site.data.keyword.cloud_notm}} Direct-Link](https://www.ibm.com/cloud/direct-link).
 - Conceba uma estratégia para conectividade de rede pública de dentro de sua instância. Suas opções incluem: a amostra do VMware NSX Edge Services Gateway (ESG) do cliente, dispositivos de gateway, como o Vyatta e o FortiGate, além de servidores proxy implementados na rede do {{site.data.keyword.cloud_notm}} ou em sua própria rede acessada por meio do DirectLink.
 - Planeje se deve implementar sua carga de trabalho nas VLANs do {{site.data.keyword.cloud_notm}} com [endereços IP móveis do {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/infrastructure/subnets/getting-started.html) ou [em comutadores lógicos NSX (VXLANs) usando seus próprios endereços IP](../nsx/nsx_overview.html). Observe que o uso da rede definida por software (SDN) do NSX oferece a maior flexibilidade para gerenciar e proteger sua rede de carga de trabalho no {{site.data.keyword.cloud_notm}}.
 - Use ESGs do NSX, o [IBM Cloud Vyatta](https://console.bluemix.net/catalog/infrastructure/virtual-router-appliance) e o peer DirectLink para planejar a conectividade para cargas de trabalho (Conversão de endereço de rede, Rede privada virtual, roteamento).
