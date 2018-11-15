@@ -4,16 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visão geral do KMIP for VMware on IBM Cloud
 
 O serviço KMIP para VMware no {{site.data.keyword.cloud}} fornece um serviço altamente disponível 24 horas por dia, 7 dias por semana para gerenciar chaves de criptografia que são usadas pelo VMware no {{site.data.keyword.cloud_notm}}. Esse serviço oferece a capacidade de tempo de execução para permitir que os clientes criem, recuperem, ativem, revoguem e destruam as chaves de criptografia. Ele também fornece a capacidade de gerenciamento para manter as
 associações entre as credenciais do cliente e as chaves de criptografia.
 
-**Disponibilidade:** esse serviço está disponível somente para instâncias implementadas na V2.2 ou liberações mais recentes.
+Esse serviço está disponível somente para instâncias implementadas na V2.2 ou mais recente.
+{:note}
 
 ## Especificações técnicas para o KMIP for VMware on IBM Cloud
 

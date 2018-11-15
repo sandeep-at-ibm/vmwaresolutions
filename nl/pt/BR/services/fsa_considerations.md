@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visão geral do FortiGate Security Appliance on IBM Cloud
 
@@ -14,7 +18,8 @@ O serviço FortiGate Security Appliance on {{site.data.keyword.cloud}} implement
 
 É possível gerenciar esse serviço usando o FortiOS Web Client ou a interface da linha de comandos por meio de SSH.
 
-**Disponibilidade:** esse serviço está disponível somente para instâncias que são implementadas na V1.8 ou liberações mais recentes.
+Este serviço está disponível somente para instâncias implementadas na V1.8 ou liberações mais recentes.
+{:note}
 
 ## Especificações técnicas para o FortiGate Security Appliance on IBM Cloud
 

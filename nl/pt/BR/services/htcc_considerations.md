@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # HyTrust CloudControl on IBM Cloud Visão Geral
 
 O serviço HyTrust CloudControl on {{site.data.keyword.cloud}} cumpre e controla a conformidade com relação a padrões de segurança que incluem controle de acesso baseado na função (RBAC), aprovação e auditoria. Quando o serviço é combinado com o HyTrust DataControl, o serviço assegura que as máquinas virtuais e os dados de carga de trabalho não saiam de uma determinada região, cluster ou servidor ESXi dentro do {{site.data.keyword.CloudDataCent_notm}}.
 
-**Disponibilidade:** esse serviço está disponível somente para instâncias que estão executando o vSphere 6.5 e que são implementadas na, ou submetidas a upgrade para, V2.3 ou liberações mais recentes.
+Esse serviço está disponível somente para instâncias que estão executando o vSphere 6.5 e que são implementadas ou submetidas a upgrade para a V2.3 ou mais recente. A versão atual do HyTrust CloudControl que está instalada é 5.4.0.
+{:note}
 
 ## Especificações técnicas para o HyTrust CloudControl on IBM Cloud
 
