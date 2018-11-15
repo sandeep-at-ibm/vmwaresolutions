@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visualizando instâncias do vCenter Server
 
@@ -18,13 +22,14 @@ Para visualizar um resumo de todas as instâncias do vCenter Server que são pro
 
 1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. No banner do console, clique em seu ícone de conta do usuário e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar as instâncias.  
-3. Na tabela **vCenter Server**, visualize a lista de instâncias que são provisionadas na conta de usuário selecionada.
+3. Na tabela **Instâncias do vCenter Server**, visualize a lista de instâncias que são provisionadas na conta do usuário selecionada.
 
 Tabela 1. Itens de instância do vCenter Server
 
 | Item        | Descrição       |  
 |:------------- |:------------- |
 | Nome | O nome da instância |
+| Tipo | O tipo de instância do vCenter Server |
 | Versão | A versão de liberação na qual a instância foi implementada ou submetida a upgrade |  
 | Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada |  
 | Horário de criação | A data e hora em que a instância foi criada |
@@ -112,7 +117,8 @@ Se ocorrerem erros durante a implementação ou exclusão da instância, a equip
 
 Gerencie suas instâncias do console do {{site.data.keyword.vmwaresolutions_short}} ou do VMware vSphere Web Client.
 
-**Importante:** antes de clicar no **Console do vCenter** na página de resumo da instância para acessar o vSphere Web Client e iniciar o gerenciamento de seus servidores ESXi, deve-se efetuar login no portal VPN do {{site.data.keyword.CloudDataCent_notm}}. Passe o mouse sobre o botão **console do vCenter** e siga as instruções para assegurar-se de que atenda a todos os requisitos e que tenha concluído as etapas necessárias antes de acessar o vSphere Web Client.
+Antes de clicar no **Console do vCenter** na página de resumo da instância para acessar o Web client do vSphere e começar a gerenciar seus servidores ESXi, deve-se efetuar login no portal VPN do {{site.data.keyword.CloudDataCent_notm}}. Passe o mouse sobre o botão **console do vCenter** e siga as instruções para assegurar-se de que atenda a todos os requisitos e que tenha concluído as etapas necessárias antes de acessar o vSphere Web Client.
+{:important}
 
 Revise os tópicos a seguir para obter informações que ajudarão a concluir as instruções de login:
 *  Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).

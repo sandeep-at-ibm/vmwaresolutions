@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Lista de materiais do vCenter Server
 
@@ -39,7 +43,8 @@ Tabela 2. BOM para os componentes de software em instâncias do vCenter Server
 | VMware       | NSX for vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
-**Nota:** o VMware vSAN é um componente opcional.
+VMware vSAN é um componente opcional.
+{:note}
 
 ## Definições de configuração avançada para servidores ESXi
 

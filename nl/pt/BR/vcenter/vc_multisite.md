@@ -4,17 +4,21 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Configuração de vários sites para instâncias do vCenter Server on IBM Cloud
 
 O {{site.data.keyword.vmwaresolutions_full}} permite que as instâncias sejam implementadas em locais diferentes e fiquem funcionais em pouco tempo.
 
-**Notas:**
 * A configuração de vários sites para instâncias do vCenter Server é suportada apenas para instâncias da V2.0 e mais recentes.
 * Não é possível vincular entre as instâncias do VMware Cloud Foundation e do VMware vCenter Server em uma configuração de vários sites.
+{:note}
 
 ## Componentes de implementação de vários sites
 
@@ -36,7 +40,8 @@ Uma implementação de vários sites consiste nos componentes a seguir.
 
 O recurso de configuração de vários sites usa uma topologia de hub e spoke com um site primário e um máximo de sete sites secundários. Uma única camada de sites é suportada, ou seja, não é possível configurar sites subsequentes vinculados a outros sites secundários. É possível ter um total de 128 servidores ESXi em uma configuração de vários sites em todas as instâncias.
 
-**Nota:** se sua configuração exigir uma implementação em vários locais com mais de 128 servidores ESXi, entre em contato com o Suporte IBM para obter assistência. Para obter mais informações, veja [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html).
+Se a sua configuração requerer uma implementação de vários sites com mais de 128 servidores ESXi, entre em contato com o Suporte IBM para obter assistência. Para obter mais informações, veja [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html).
+{:note}
 
 O gráfico a seguir representa a visão geral da implementação de vários sites do vCenter Server.
 
@@ -53,7 +58,8 @@ O modelo contém as camadas a seguir:
 
 É possível ter um máximo de 8 instâncias (1 primária e 7 secundárias) que serão implementadas em uma configuração de vários sites.
 
-**Nota:** a exclusão de instâncias do vCenter Server que fazem parte de uma configuração multisite requer planejamento especial. Para obter mais informações, veja [Excluindo instâncias do vCenter Server em uma configuração de vários sites](vc_deletinginstance_multi.html).
+A exclusão de instâncias do vCenter Server que fazem parte de uma configuração multisite requer planejamento especial. Para obter mais informações, veja [Excluindo instâncias do vCenter Server em uma configuração de vários sites](vc_deletinginstance_multi.html).
+{:note}
 
 ### Links relacionados
 

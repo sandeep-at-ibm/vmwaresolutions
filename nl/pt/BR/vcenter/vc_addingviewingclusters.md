@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server
 
@@ -14,13 +18,14 @@ Os servidores ESXi configurados quando você pediu uma instância são agrupados
 
 É possível incluir seus próprios clusters em instâncias do VMware vCenter Server para expandir a capacidade de cálculo e armazenamento. Em um cluster, é possível gerenciar servidores ESXi para melhor alocação de recurso e alta disponibilidade. Quando não forem mais necessários, exclua os clusters incluídos de suas instâncias.
 
-**Disponibilidade:** o recurso de exclusão de cluster está disponível somente para instâncias que são implementadas na (ou submetidas a upgrade para) V2.3 e mais recente.
+O recurso de exclusão de cluster está disponível somente para instâncias que são implementadas na (ou submetidas a upgrade para a) V2.3 e mais recente.
+{:note}
 
 ## Incluindo clusters para instâncias do vCenter Server
 
 O número de clusters que podem ser incluídos em uma instância depende da versão da instância:
-* Para instâncias que foram implementadas (ou submetidas a upgrade) na V2.2 e mais recente, é possível incluir até 10 clusters.
-* Para instâncias que foram implementadas na V2.2 ou anterior, é possível incluir até cinco clusters.
+* Para instâncias que foram implementadas na (ou submetidas a upgrade para) V2.2 e mais recente, é possível incluir até 10 clusters.
+* Para instâncias que foram implementadas na V2.1 ou anterior, é possível incluir até cinco clusters.
 
 ### Configurações do sistema
 
@@ -42,7 +47,40 @@ Se você implementar o cluster em um pod de infraestrutura diferente do {{site.d
 
 ### Configurações do Bare Metal Server
 
-É possível escolher **Pré-configurado** ou **Customizado**.
+É possível escolher **Skylake**, **Certificado pelo SAP**, **Broadwell** ou **Pré-configurado**.
+
+#### Skylake
+
+Para a configuração do **Skylake**, há várias opções para o **Modelo de CPU** e a **RAM**. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
+
+Tabela 1. Opções para Skylake  {{site.data.keyword.baremetal_short}}
+
+| Opções de modelo da CPU        | Opções de RAM       |
+|:------------- |:------------- |
+| Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+#### SAP-certificado
+
+Quando você seleciona **Certificado por SAP**, não é possível alterar as configurações de CPU ou RAM.
+
+Com base em seus requisitos, selecione uma configuração do Bare Metal Server:
+* Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 192 GB de RAM
+* Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 384 GB de RAM
+* Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 768 GB de RAM
+
+#### Broadwell
+
+Para a configuração do **Broadwell**, há várias opções para o **Modelo de CPU** e a **RAM**. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
+
+Tabela 2. Opções para Broadwell  {{site.data.keyword.baremetal_short}}
+
+| Opções de modelo da CPU        | Opções de RAM       |
+|:------------- |:------------- |
+| Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 
 #### Pré-configurado
 
@@ -50,21 +88,6 @@ Para a configuração **Pré-configurado**, é possível escolher uma **Configur
 * Pequeno (Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz/128 GB de RAM/2 discos)
 * Médio (Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz/256 GB de RAM/2 discos)
 * Grande (Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz/512 GB de RAM/2 discos)
-
-#### Customizado
-
-Para a configuração **Customizado**, você tem um número de opções para o **Modelo de CPU** e **RAM**. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
-
-Tabela 1. Opções para {{site.data.keyword.baremetal_short}}customizado
-
-| Opções de modelo da CPU        | Opções de RAM       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### Número de Bare Metal Servers
 
@@ -74,9 +97,9 @@ Para instâncias do vCenter Server que são implementadas na V2.1 ou mais recent
 
 Para instâncias do vCenter Server que foram implementadas na V2.0 ou anterior, é possível incluir até 32 {{site.data.keyword.baremetal_short}} para um cluster. O número do {{site.data.keyword.baremetal_short}} que é possível incluir de cada vez é o seguinte:
 * Para as configurações do Bare Metal Server **Pequeno**, **Médio** e **Grande**, é possível incluir de 1 a 10 servidores ESXi de cada vez.
-* Para a configuração do Bare Metal Server **Customizado**, é possível incluir de 1 a 20 servidores ESXi de cada vez.
+* Para a configuração **Skylake** ou **Broadwell** do Bare Metal Server, é possível incluir de 1 a 20 servidores ESXi de cada vez.
 
-Após a implementação, é possível criar até mais quatro clusters. Se você selecionar a configuração **Customizado** do Bare Metal Server com armazenamento VMware vSAN, serão necessários quatro servidores para o cluster inicial e para os clusters pós-implementação.
+Após a implementação, é possível criar até mais quatro clusters. Se você selecionar a configuração **Skylake** ou **Broadwell** do Bare Metal Server com armazenamento VMware vSAN, quatro servidores serão necessários para o cluster inicial e para os clusters pós-implementação.
 
 ### Configurações de armazenamento
 
@@ -97,7 +120,8 @@ Se o seu cluster inicial era um cluster do vSAN, todos os clusters adicionais do
 
 Quando você selecionar **Armazenamento do NFS**, será possível incluir armazenamento compartilhado no nível de arquivo para a sua instância na qual todas as ações usam as mesmas configurações ou será possível especificar definições de configuração diferentes para cada compartilhamento de arquivo. Especifique as seguintes opções NFS:
 
-**Nota:** o número de compartilhamentos de arquivos deve estar no intervalo de 1 a 32.
+O número de compartilhamentos de arquivo deve estar no intervalo de 1 a 32.
+{:note}
 
 * **Configurar compartilhamentos individualmente**: selecione para especificar
 diferentes definições de configuração para cada compartilhamento de arquivo.
@@ -106,7 +130,7 @@ diferentes definições de configuração para cada compartilhamento de arquivo.
 * **Desempenho**: selecione o IOPS (operações de entrada/saída por segundo) por GB com base em seus requisitos de carga de trabalho.
 * **INCLUIR NFS**: selecione para incluir compartilhamentos de arquivos individuais com definições de configuração diferentes.
 
-Tabela 2. Opções de nível de desempenho do NFS
+Tabela 3. Opções de nível de desempenho do NFS
 
 | Opção        | Detalhes       |
   |:------------- |:------------- |
@@ -124,10 +148,10 @@ Especifique a opção de licenciamento para o componente VMware vSphere no clust
 
 As configurações de ativação da Placa da interface de rede (NIC) baseiam-se em sua seleção de **Rede pública e privada** ou **Somente rede privada**. Os serviços complementares a seguir requerem NICs públicas e não estarão disponíveis se você selecionar a opção privada:
 
-* F5 em  {{site.data.keyword.cloud_notm}}
+* F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on  {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Resumo do Pedido
 
@@ -138,13 +162,15 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância na qual você deseja incluir clusters.
 
-   **Nota:** assegure-se de que a instância esteja no status **Pronto para uso**. Caso contrário, não será possível incluir clusters na instância.
+   Assegure-se de que a instância esteja no status **Pronta para uso**. Caso contrário, não será possível incluir clusters na instância.
+   {:note}
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda e clique em **Incluir** no canto superior direito da tabela **CLUSTERS**.
 4. Na página **Incluir cluster**, insira o nome do cluster.
 5. Se você desejar hospedar o cluster em um {{site.data.keyword.CloudDataCent_notm}} diferente daquele no qual a instância está hospedada, sob **Bare Metal Server**, marque a caixa de seleção **Selecionar um local diferente** e escolha o {{site.data.keyword.CloudDataCent_notm}} para hospedar a instância.
 6. Conclua a configuração do Bare Metal.
+   * Se você selecionou **Skylake** ou **Broadwell**, especifique o **Modelo de CPU**, a quantia de **RAM** e o **Número de {{site.data.keyword.baremetal_short}}**.
+   * Se você selecionou **Certificado pelo SAP**, especifique o modelo de CPU.
    * Se tiver selecionado **Pré-configurado**, especifique a **Configuração do Bare Metal Server** e o **Número de {{site.data.keyword.baremetal_short}}**. Se estiver planejando usar vSAN como sua solução de armazenamento, serão necessários no mínimo quatro {{site.data.keyword.baremetal_short}}.
-   * Se tiver selecionado **Customizado**, especifique o **Modelo de CPU**, a quantia de **RAM** e o **Número de {{site.data.keyword.baremetal_short}}**.
 7. Conclua a configuração de armazenamento.
   * Se você selecionar **Armazenamento vSAN**, especifique os tipos de disco para os discos de capacidade e de cache, o número de discos e a edição de licença vSAN. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
   * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar as mesmas configurações para todos os compartilhamentos de arquivo, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
@@ -166,7 +192,8 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 1. A implementação do cluster é iniciada automaticamente e o status do cluster muda para **Inicializando**. É possível verificar o status da implementação visualizando o histórico de implementação na página **Resumo** da instância.
 2. Quando o cluster estiver pronto para usar, seu status mudará para **Pronto para usar**. O cluster recém-incluído é ativado com a Alta disponibilidade (HA) do vSphere e o Distributed Resource Scheduler (DRS) do vSphere.
 
-**Importante:** não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar falha das operações de inclusão ou remoção de servidores ESXi no cluster.
+Não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar falha das operações de inclusão ou remoção de servidores ESXi no cluster.
+{:important}
 
 ## Procedimento para visualizar clusters em instâncias do vCenter Server
 
@@ -243,7 +270,8 @@ Talvez você queira excluir um cluster de uma instância no caso de ela não ser
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância da qual deseja excluir clusters.
 
-   **Nota:** assegure-se de que a instância esteja no status **Pronto para uso**. Caso contrário, não será possível excluir clusters da instância.
+   Assegure-se de que a instância esteja no status **Pronta para uso**. Caso contrário, não será possível excluir clusters da instância.
+   {:note}
 
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda. Na tabela **CLUSTERS**, localize o cluster que você deseja excluir e clique no ícone **Excluir** na coluna **Ações**.
 4. Confirme que você concluiu a migração de máquinas virtuais para outros clusters, se necessário, e que deseja excluir o cluster.

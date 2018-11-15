@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -22,7 +22,7 @@ Os componentes a seguir estão incluídos:
 
 ### Bare Metal Server
 
-É possível pedir dois ou mais {{site.data.keyword.baremetal_short}} customizados com uma das configurações a seguir:
+É possível pedir dois ou mais {{site.data.keyword.baremetal_short}} com uma das configurações a seguir:
 
 * Geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600 v4)
 * Geração Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100)
@@ -42,7 +42,7 @@ Os componentes de rede a seguir são pedidos:
     **Importante:** esse ESG não está acessível para você e não é possível usá-lo. Se você modificá-lo, poderá não ser capaz de gerenciar a instância do vCenter Server do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externos da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
   * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
-  **Nota:** o VMware NSX Edge Services (ESG) para o tráfego de gerenciamento HTTPS de saída é removido como parte da ação para proteger sua instância do VMware Federal implementada. Para obter mais informações, veja [Protegendo as instâncias do VMware Federal](vc_fed_securinginstance.html).
+  **Nota:** o VMware NSX Edge Services Gateway (ESG) para o tráfego de gerenciamento HTTPS de saída é removido como parte da ação para proteger sua instância do VMware Federal implementada. Para obter mais informações, veja [Protegendo as instâncias do VMware Federal](vc_fed_securinginstance.html).
 
 ### Virtual Server Instances
 

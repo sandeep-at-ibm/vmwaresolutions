@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
 
@@ -17,7 +17,7 @@ Visualize o resumo e as informações detalhadas das instâncias do VMware Feder
 Para visualizar um resumo de todas as instâncias do VMware Federal provisionadas para uma conta de usuário, conclua as etapas a seguir:
 1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. No banner do console, clique em seu ícone de conta do usuário e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar as instâncias.
-3. Na tabela **vCenter Server**, visualize a lista de instâncias que são provisionadas na conta de usuário selecionada.
+3. Na tabela **Instâncias do vCenter Server**, visualize a lista de instâncias que são provisionadas na conta do usuário selecionada.
 
 Tabela 1. Itens de instâncias do VMware Federal
 

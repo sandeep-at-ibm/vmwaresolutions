@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visualizando instâncias do vCenter Server with Hybridity Bundle
 
@@ -17,23 +21,24 @@ Visualize o resumo e as informações detalhadas das instâncias do VMware vCent
 Para visualizar um resumo de todas as instâncias do vCenter Server with Hybridity Bundle que são provisionadas para uma conta do usuário, conclua as etapas a seguir:
 1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. No banner do console, clique em seu ícone de conta do usuário e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar as instâncias.
-3. Na tabela **vCenter Server**, visualize a lista de instâncias que são provisionadas na conta de usuário selecionada.
+3. Na tabela **Instâncias do vCenter Server**, visualize a lista de instâncias que são provisionadas na conta do usuário selecionada.
 
 Tabela 1. Itens de instância do VCenter Server with Hybridity Bundle
 
 | Item        | Descrição       |  
 |:------------- |:------------- |
 | Nome | O nome da instância |
+| Tipo | O tipo de instância do vCenter Server |
 | Versão | A versão de liberação na qual a instância foi implementada ou submetida a upgrade |  
 | Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada |  
 | Horário de criação | A data e hora em que a instância foi criada |  
-| Status | O status da instância |  
+| Barra de Status | O status da instância |  
 
 A instância pode ter um intervalo de status.
 
 Tabela 2. Descrições de status de instâncias do vCenter Server with Hybridity Bundle
 
-| Status        | Descrição       |
+| Barra de Status        | Descrição       |
 |:------------- |:------------- |
 | Criando | A instância está sendo criada. |
 | Construindo | A instância está sendo configurada. |
@@ -58,7 +63,7 @@ Tabela 3. Propriedades de instâncias do vCenter Server with Hybridity Bundle
 | ID | O ID da instância. |
 | Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada. |
 | Versão atual | A versão atual do {{site.data.keyword.vmwaresolutions_short}}. |
-| Versão do vCenter | A versão do VMware vCenter Server with Hybridity Bundle.<br><br>**Nota:** há uma ligeira variação entre a versão do vCenter Server exibida no console do {{site.data.keyword.vmwaresolutions_short}} e o VMware vSphere Web Client. Ambos estão corretos. |
+| Versão do vCenter | A versão do VMware vCenter Server with Hybridity Bundle.<br><br>Há uma pequena variação entre a versão do vCenter Server exibida no console do {{site.data.keyword.vmwaresolutions_short}} e o VMware vSphere Web Client. Ambos estão corretos.{:note} |
 | NSX for vSphere | A versão do produto VMware NSX for vSphere. |
 | Edição de licença NSX | A versão e a edição da licença do VMware NSX. |
 | DNS, domínio-raiz | O nome do domínio-raiz é o nome de domínio do DNS (Sistema de Nomes de Domínio) e o nome raiz da floresta do Microsoft Active Directory (AD). |
@@ -109,7 +114,8 @@ Se ocorrerem erros durante a implementação ou exclusão da instância, a equip
 
 Gerencie suas instâncias do console do {{site.data.keyword.vmwaresolutions_short}} ou do VMware vSphere Web Client.
 
-**Importante:** antes de clicar no **Console do vCenter** na página de resumo da instância para acessar o vSphere Web Client e iniciar o gerenciamento de seus servidores ESXi, deve-se efetuar login no portal VPN do {{site.data.keyword.CloudDataCent_notm}}. Passe o mouse sobre o botão **console do vCenter** e siga as instruções para assegurar-se de que atenda a todos os requisitos e que tenha concluído as etapas necessárias antes de acessar o vSphere Web Client.
+Antes de clicar no **Console do vCenter** na página de resumo da instância para acessar o Web client do vSphere e começar a gerenciar seus servidores ESXi, deve-se efetuar login no portal VPN do {{site.data.keyword.CloudDataCent_notm}}. Passe o mouse sobre o botão **console do vCenter** e siga as instruções para assegurar-se de que atenda a todos os requisitos e que tenha concluído as etapas necessárias antes de acessar o vSphere Web Client.
+{:important}
 
 Revise os tópicos a seguir para obter informações que ajudarão a concluir as instruções de login:
 *  Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
