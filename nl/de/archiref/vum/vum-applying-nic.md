@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -34,7 +34,7 @@ Führen Sie die folgenden Schritte für jeden Host in der angegebenen Reihenfolg
 
 Wenn Sie den Vorgang rückgängig machen müssen und Sie nicht über SSH auf den vSphere ESXi-Host zugreifen können, müssen Sie sich bei der KVM-Konsole für den Host anmelden, der über das IBM Cloud-Steuerfenster zurückgesetzt werden muss.
 
-Verwenden Sie die ID und das Kennwort, die im IBM Cloud-Steuerfenster mit der IPMI-IP-Adresse aufgelistet sind, um sich bei der IPMI-Webschnittstelle anzumelden. Sie müssen mit dem Rechenzentrum, in dem sich der Host befindet, über VPN verbunden sein. Weitere Informationen finden Sie unter [Einführung in die Arbeit mit VPN](https://console.bluemix.net/docs/infrastructure/iaas-vpn/getting-started.html#getting-started-with-virtual-private-networking-vpn).
+Verwenden Sie die ID und das Kennwort, die im IBM Cloud-Steuerfenster mit der IPMI-IP-Adresse aufgelistet sind, um sich bei der IPMI-Webschnittstelle anzumelden. Sie müssen mit dem Rechenzentrum, in dem sich der Host befindet, über VPN verbunden sein. Weitere Informationen finden Sie unter [Einführung in die Arbeit mit VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
 
 1. Wechseln Sie zur Seite 'Gerätedetails, Fernverwaltung' für den vSphere ESXi-Host und wählen Sie **Aktionen** > **KVM-Konsole** aus. Ein anderes Fenster wird geöffnet, in dem Sie den IPMI-Benutzer und das zugehörige Kennwort eingeben können.
 2. Wählen Sie **Fernsteuerung** > **iKVM/HTML5** aus und klicken Sie auf **iKVM/HTML5**, um neu zu starten. Sie können nun auf die Konsole des vSphere ESXi-Hosts zugreifen.
@@ -47,5 +47,5 @@ Verwenden Sie die ID und das Kennwort, die im IBM Cloud-Steuerfenster mit der IP
 
 ### Zugehörige Links
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

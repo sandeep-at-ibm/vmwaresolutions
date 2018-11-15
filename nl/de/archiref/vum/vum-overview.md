@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
-# VUM-Übersicht
+# Übersicht über VMware Update Manager
 
-VUM verwendet einen mehrstufigen Prozess, um vSphere-Objekte zu aktualisieren und Patches oder Erweiterungen anzuwenden. Dieser Prozess ermöglicht eine reibungslose Aktualisierungsprozedur mit minimaler Systemausfallzeit. Zum Verständnis dieses Prozesses sind folgende Begriffe wichtig: 
+VMware Update Manager (VUM) verwendet einen mehrstufigen Prozess, um vSphere-Objekte zu aktualisieren und Patches oder Erweiterungen anzuwenden. Dieser Prozess ermöglicht eine reibungslose Aktualisierungsprozedur mit minimaler Systemausfallzeit. Zum Verständnis dieses Prozesses sind folgende Begriffe wichtig:
 * **Bestandsobjekt** - Ein Objekt in vCenter, wie z. B. eine virtuelle Maschine, eine virtuelle Appliance oder ein vSphere ESXi-Host.
 * **Baseline** - Baselines enthalten eine Sammlung von Patches, Erweiterungen, Service-Packs, Fehlerkorrekturen oder Upgrades und können als Patch-, Erweiterungs- oder Upgrade-Baselines klassifiziert werden. Es gibt zwei Klassifizierungen von Baselines: Host und VM/VM. Beide verfügen über von VMware vordefinierte Baselines und benutzerdefinierte Baselines können nach Bedarf hinzugefügt werden:
   - Vordefinierte Host-Baselines:
@@ -31,7 +31,7 @@ Daher läuft der VUM-Prozess wie folgt ab:
 * Ein Bestandsobjekt oder eine Gruppe von Objekten wird auf Konformität mit einer Baseline oder einer Baselinegruppe geprüft.
 * Nach einer Überprüfung können Patches und Erweiterungen optional zwischengespeichert werden, bevor eine Korrektur durchgeführt wird.
 
-Das Herunterladen von Upgrades, Host-Patches, Erweiterungen und zugehörigen Metadaten ist ein vordefinierter automatischer Prozess, der geändert werden kann. Standardmäßig nimmt VUM in regelmäßigen konfigurierbaren Intervallen Kontakt zu VMware oder Drittanbieterquellen auf, um folgende Metadaten zu verfügbaren Upgrades, Patches oder Erweiterungen zu erfassen: 
+Das Herunterladen von Upgrades, Host-Patches, Erweiterungen und zugehörigen Metadaten ist ein vordefinierter automatischer Prozess, der geändert werden kann. Standardmäßig nimmt VUM in regelmäßigen konfigurierbaren Intervallen Kontakt zu VMware oder Drittanbieterquellen auf, um folgende Metadaten zu verfügbaren Upgrades, Patches oder Erweiterungen zu erfassen:
 
 * Metadaten über alle ESXi 5.5- und ESXi 6.x-Patches unabhängig davon, ob es Hosts dieser Versionen in Ihrer Umgebung gibt.
 * Metadaten zu ESXi 5.5- und ESXi 6.x-Patches sowie zu Erweiterungen von URL-Adressen von Drittanbietern.
@@ -63,5 +63,5 @@ Sie rufen die Konformitätsansicht eines ausgewählten Bestandsobjekts auf, inde
 
 ### Zugehörige Links
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

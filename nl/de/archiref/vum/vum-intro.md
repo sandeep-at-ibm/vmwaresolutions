@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -17,13 +17,14 @@ VUM ermöglicht ein zentrales, automatisiertes Patch- und Versionsmanagement fü
 * Installieren und Aktualisieren von Software anderer Anbieter auf den Hosts.
 * Durchführen von Upgrades für VM-Hardware, VMware Tools und virtuelle Appliances.
 
-Beachten Sie, dass in diesem Dokument auch die Prozesse beschrieben werden, mit denen die folgenden Komponenten Ihrer VCS-Instanz verwaltet werden:
+In diesem Dokument werden auch die Prozesse beschrieben, mit denen die folgenden Komponenten Ihrer VCS-Instanz verwaltet werden:
 * vCenter Server Appliance
 * NSX
 * vSAN
 
 Dieses Dokument beschreibt die Verwendung einer Proxy-Server-Implementierung auf der Basis von CentOS und Squid, sodass VUM auf die VMware-Repositorys zugreifen kann. Wenn VUM eine Ressource vom Update-Server bei VMware anfordert, wird die Anforderung zuerst an den Proxy-Server gesendet und der Proxy-Server sendet die Anforderung dann über das External Services Gateway (ESG) an den Update-Server. Sobald die Ressource vom Proxy-Server empfangen wurde, sendet er die Ressource an VUM.
 
+Abbildung 1. Übersichtsdiagramm
 ![Übersichtsdiagramm](vum-vcsproxy.svg)
 
 VCS stellt derzeit vSphere 6.5 bereit. Das bedeutet, dass VUM nun in die vCenter Server Appliance (VCSA) integriert ist, und da die VUM-Clientkomponente ein Plug-in ist, das auf dem vSphere Web Client ausgeführt wird, wird sie nach der Bereitstellung von VCSA automatisch aktiviert. VUM erhält jedoch keinen Zugriff auf das Internet, um auf die VMware-Repositorys zuzugreifen.
@@ -37,14 +38,14 @@ VUM kann zwar auch so konfiguriert werden, dass Updates aus einem gemeinsam genu
 Beachten Sie daher, dass es in vSphere 6.5 nicht mehr möglich ist, VUM während der Installation des VUM-Servers auf einer separaten Windows-Maschine bei einer VCSA zu registrieren; Sie können VUM nicht in einer VM in der VCS-Umgebung bereitstellen.
 
 Dieses Dokument setzt sich aus folgenden Abschnitten zusammen:
-* [VUM-Übersicht](vum-overview.html) - In diesem Abschnitt wird der VUM-Prozess beschrieben und es werden Schlüsselbegriffe eingeführt, die erforderlich sind, um die Operationen und die Benutzeroberfläche des Tools zu verstehen.
+* [Übersicht über VMware Update Manager](vum-overview.html) - In diesem Abschnitt wird der VUM-Prozess beschrieben und es werden Schlüsselbegriffe eingeführt, die erforderlich sind, um die Operationen und die Benutzeroberfläche des Tools zu verstehen.
 * **Installation, Konfiguration und Verwendung** - In diesem Abschnitt werden die Schritte beschrieben, die erforderlich sind, um VUM in einer VCS-Instanz in Betrieb zu nehmen:
   - [Erstkonfiguration](vum-init-config.html) - eine einmalige Aufgabe, die Folgendes umfasst:
       - Konfiguration der NSX-Vernetzung, um den Zugriff des Proxy-Servers auf das Internet zu ermöglichen
       - Installation und Konfiguration eines Proxy-Servers, um den Internetzugriff für VUM bereitzustellen
       - Ersteinrichtung von VUM für die Verwendung des Proxy-Servers
-  - [Metadatensammlung](vum-metadata.html) - VUM lädt Metadaten zu den Upgrades, Patches oder Erweiterungen über einen vordefinierten automatischen Prozess herunter, den Sie ändern können. In regelmäßigen konfigurierbaren Intervallen nimmt VUM Kontakt zu VMware oder Drittanbieterquellen auf, um die aktuellen Metadaten zu verfügbaren Upgrades, Patches oder Erweiterungen zu erfassen.
-  - [Erstellen von Baselines und Anhängen an Bestandsobjekte](vum-baselines.html) - Sie können die vordefinierten Baselines und Baselinegruppe verwenden oder neue angepasste erstellen. Die Baselines und Baselinegruppen werden dann an Bestandsobjekte angehängt.
+  - [Sammeln von Metadaten](vum-metadata.html) - VUM lädt Metadaten zu den Upgrades, Patches oder Erweiterungen über einen vordefinierten automatischen Prozess herunter, den Sie ändern können. In regelmäßigen konfigurierbaren Intervallen nimmt VUM Kontakt zu VMware oder Drittanbieterquellen auf, um die aktuellen Metadaten zu verfügbaren Upgrades, Patches oder Erweiterungen zu erfassen.
+  - [Erstellen von Baselines](vum-baselines.html) - Sie können die vordefinierten Baselines und Baselinegruppe verwenden oder neue angepasste erstellen. Die Baselines und Baselinegruppen werden dann an Bestandsobjekte angehängt.
   - [Prüfen und Auswerten](vum-scanning.html) - Die Bestandsobjekte werden geprüft und die Ergebnisse ausgewertet, um zu ermitteln, wie sie den Baselines und Baselinegruppen entsprechen. Die Prüfergebnisse können anhand von Textsuche, Gruppenauswahl, Baselineauswahl und Konformitätsstatusauswahl gefiltert werden.
   - [Staging und Korrektur](vum-staging.html) - Patches und Erweiterungen können optional vor der Korrektur zwischengespeichert ('staged') werden, um sicherzustellen, dass sie auf den Host heruntergeladen werden. Bei der Korrektur ('remediation') wendet VUM die Patches, Erweiterungen und Upgrades auf die Bestandsobjekte an.
 
@@ -64,5 +65,5 @@ Diese Funktion ermöglicht die automatisierte Aktualisierung nur für die Manage
 
 ### Zugehörige Links
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
