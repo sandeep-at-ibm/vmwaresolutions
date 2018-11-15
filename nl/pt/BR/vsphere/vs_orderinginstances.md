@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Pedindo novos clusters do vSphere
 
@@ -52,7 +54,8 @@ Também é possível incluir os seguintes componentes do VMware em seu pedido:
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**Nota:** para usuários do Parceiro de Negócios IBM, a opção Bring Your Own License (BYOL) não está disponível.
+Para usuários do Parceiro de Negócios IBM, a opção Bring Your Own License (BYOL) não está disponível.
+{:note}
 
 ### Componentes individuais para usuários do Parceiro de Negócios
 
@@ -66,7 +69,8 @@ Se você não for um Parceiro de Negócios, será possível selecionar os compon
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**Nota:** o componente vSAN do VMware não está disponível quando você pede o VMware vSphere Enterprise Plus 6.0. Se você planeja usar sua própria licença para o VMware vSphere Enterprise Plus 6.0, um chamado de infraestrutura do {{site.data.keyword.cloud_notm}} será aberto em seu nome. O chamado solicita que as licenças vSphere do {{site.data.keyword.baremetal_short}} solicitado sejam substituídas por suas licenças fornecidas.
+O componente VMware vSAN não está disponível quando você pede o VMware vSphere Enterprise Plus 6.0. Se você planeja usar sua própria licença para o VMware vSphere Enterprise Plus 6.0, um chamado de infraestrutura do {{site.data.keyword.cloud_notm}} será aberto em seu nome. O chamado solicita que as licenças vSphere do {{site.data.keyword.baremetal_short}} solicitado sejam substituídas por suas licenças fornecidas.
+{:note}
 
 ### Opções de Licenciamento
 
@@ -76,7 +80,8 @@ Você tem as seguintes opções para licenciamento dos componentes do VMware sel
 
 Se você optar por comprar qualquer licença, exceto para o vSphere Enterprise Plus e o vCenter Server, e pedir vários servidores ESXi, um chamado do {{site.data.keyword.cloud_notm}} será aberto automaticamente em seu nome para combinar as chaves de licença. Você é responsável por acompanhar o chamado para assegurar que você use apenas as chaves de licença geradas pela equipe do DevOps.
 
-**Importante:** usar chaves de licença individuais com as chaves de licença combinadas não atende aos requisitos de pagamento para as licenças de que você precisará.
+O uso de chaves de licença individuais junto com as chaves de licença combinadas não atende aos requisitos de pagamento para as licenças que você precisará.
+{:important}
 
 ## Configurações do Bare Metal Server
 
@@ -84,24 +89,41 @@ Se você optar por comprar qualquer licença, exceto para o vSphere Enterprise P
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} em que o cluster deve ser hospedado.
 
-**Nota:** se você selecionar um componente vSAN, a lista de locais será filtrada pela disponibilidade do SSD.
+Se você selecionar um componente vSAN, a lista de locais será filtrada pela disponibilidade do SSD.
+{:note}
 
-### Modelo de CPU e RAM
+### Skylake
 
-Especifique o modelo de CPU e RAM para o Bare Metal Server.
+Quando você seleciona **Skylake**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades. As opções disponíveis dependem de se você selecionou o componente vSAN do VMware.
 
-Tabela 2. Opções para {{site.data.keyword.baremetal_short}} customizados
+Tabela 2. Opções para Skylake  {{site.data.keyword.baremetal_short}}
+
+| Opções de modelo da CPU        | Opções de RAM       |
+|:------------- |:------------- |
+| Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+### SAP-certificado
+
+A guia **Certificado pelo SAP** não estará disponível se você tiver selecionado VMware vSAN anteriormente. Quando você seleciona **Certificado por SAP**, não é possível alterar as configurações de CPU ou RAM.
+
+Com base em seus requisitos, selecione uma configuração do Bare Metal Server:
+  * Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 192 GB de RAM
+  * Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.2 GHz / 384 GB de RAM
+  * Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 768 GB de RAM
+
+### Broadwell
+
+Quando você seleciona **Broadwell**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades. As opções disponíveis dependem de se você selecionou o componente vSAN do VMware.
+
+Tabela 3. Opções para Broadwell  {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-
-As opções disponíveis dependem de se você selecionou o componente vSAN do VMware.
 
 ### Número de Bare Metal Servers
 
@@ -123,7 +145,7 @@ Se você selecionar o componente VMware vSAN para o cluster, especifique as conf
 
 ## Configurações da interface de rede
 
-Deve-se especificar as configurações de interface de rede a seguir quando solicitar um novo cluster vSphere.
+Deve-se especificar as configurações de interface de rede a seguir quando solicitar um novo cluster do vSphere.
 
 ### Prefixo de nome do host
 
@@ -206,7 +228,9 @@ Com base em suas configurações, o custo estimado é gerado instantaneamente e 
     **Importante:** você é responsável por rastrear o chamado para que você substitua a licença do vSphere nos servidores ESXi recém-ordenados. Dessa forma, a infraestrutura do {{site.data.keyword.cloud_notm}} concede o cancelamento do encargo de licença do vSphere da infraestrutura do {{site.data.keyword.cloud_notm}} inicialmente fornecida. Para substituir sua licença ESXi vSphere, veja [Definir Configurações da Licença para um Host ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
 5. Conclua as configurações do Bare Metal Server:
    1. Selecione o {{site.data.keyword.CloudDataCent_notm}} para hospedar o cluster.
-   2. Selecione o modelo de CPU e o tamanho de RAM.
+   2. Selecione a configuração do Bare Metal Server.
+      * Ao selecionar **Skylake** ou **Broadwell**, especifique o modelo de CPU e o tamanho da RAM.
+      * Ao selecionar **Certificado por SAP**, escolha o modelo de CPU.
    3. Especifique o número de Bare Metal Servers.
 6. Se você selecionou o componente **VMware vSAN**, conclua a configuração de armazenamento vSAN. Especifique os tipos de disco para os discos de capacidade e de cache, além do número de discos. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
 7. Conclua as configurações da interface de rede:
@@ -220,7 +244,8 @@ Com base em suas configurações, o custo estimado é gerado instantaneamente e 
    * Para salvar a configuração como um modelo sem fazer um pedido, clique em **Salvar configuração**.
    * Para fazer o pedido, assegure-se de que a conta a ser cobrada está correta, revise e aceite os termos e, em seguida, clique em **Provisão**.
 
-   ** Nota: **  somente o  {{site.data.keyword.baremetal_short}}  está instalado. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como VMware vCenter, VMware NSX, VMware vSAN.
+   Apenas o  {{site.data.keyword.baremetal_short}}  está instalado. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como VMware vCenter, VMware NSX, VMware vSAN.
+   {:note}
 
 ### Resultados
 
@@ -228,7 +253,8 @@ Se você salvou a configuração de cluster como um modelo, obterá uma notifica
 
 Se tiver feito um pedido, a implementação do cluster será iniciada automaticamente e você receberá uma confirmação por e-mail de que o pedido está sendo processado. Quando o cluster estiver pronto para usar, você será notificado por e-mail.
 
-**Nota:** os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Cloud Foundation, não são exibidos na página **Instâncias implementadas**.
+Os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Cloud Foundation, não são exibidos na página **Instâncias implementadas**.
+{:note}
 
 ### Links relacionados
 
