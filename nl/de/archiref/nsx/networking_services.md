@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Netzservices unter IBM Cloud
 
@@ -20,7 +24,8 @@ Abbildung 1. Cloud-Netzservices unter Cloud Foundation
 
 Während ein einzelnes ESG möglicherweise für den Management- und Workloaddatenverkehr beim Kunden ausreicht, kann beim Design eine Trennung von Management und Kundendatenverkehr vorgenommen werden, um eine versehentliche Fehlkonfiguration des Management-ESGs zu verhindern.
 
-**Hinweis:** Bei einer fehlerhaften Konfiguration oder Inaktivierung des Management-ESGs ist die Cloud Foundation- oder vCenter Server-Instanz zwar funktionsfähig, aber es werden alle Portalmanagementfunktionen inaktiviert.
+Bei einer fehlerhaften Konfiguration oder Inaktivierung des Management-ESGs ist die Cloud Foundation- oder vCenter Server-Instanz zwar funktionsfähig, aber es werden alle Portalmanagementfunktionen inaktiviert.
+{:note}
 
 ## IBM Management Services NSX Edge
 
@@ -38,14 +43,15 @@ Tabelle 1. Spezifikationen für IBM Management NSX ESG
 
 | IBM Management NSX Edge | vCPU | Speicher | Plattengröße | Speicherposition |
 |:----------------------- |:---- |:------ |:--------- |:---------------- |
-| IBM Management NSX ESG 1 | 2 | 1 GB | 1 GB | vSAN Datastore (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
-| IBM Management NSX ESG 2 | 2 | 1 GB | 1 GB | vSAN Datastore (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
+| IBM Management NSX ESG 1 | 2 | 1 GB | 1 GB | vSAN Data Store (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
+| IBM Management NSX ESG 2 | 2 | 1 GB | 1 GB | vSAN Data Store (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
 
 ### Management-Services
 
 Ein abgehender Zugriff ist für die folgenden Services erforderlich:
 
-* Zerto Virtual Manager. Wenn Zerto on {{site.data.keyword.cloud_notm}} installiert ist, ist für die Lizenzaktivierung und Nutzungsberichte ein abgehender Zugriff auf das Internet.
+* Zerto Virtual Manager. Wenn Zerto on {{site.data.keyword.cloud_notm}} installiert ist, ist für die Lizenzaktivierung und Nutzungsberichte ein abgehender Zugriff auf das Internet erforderlich.
+* Veeam Backup and Replication. Wenn Veeam on {{site.data.keyword.cloud_notm}} installiert ist, ist für das Herunterladen von Produkt- und Lizenzaktualisierungen ein abgehender Zugriff auf das Internet erforderlich.
 * FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} erfordert für die Lizenzaktivierung und -überwachung einen abgehenden Zugriff auf das Internet.
 * F5 on {{site.data.keyword.cloud_notm}} erfordert für die Lizenzaktivierung einen abgehenden Zugriff auf das Internet.
 
@@ -57,9 +63,9 @@ Tabelle 2. NSX ESG-Schnittstellenkonfiguration
 
 | Schnittstelle | Schnittstellentyp | Verbunden mit | Beschreibung |
 |:--------- |:-------------- |:------------ |:----------- |
-| Öffentlicher Uplink | Uplink | SDDC-DportGroup-External | Öffentliche Internetschnittstelle |
-| Privater Uplink | Uplink | SDDC-DportGroup-Mgmt | Interne private Netzschnittstelle |
-| Intern | Intern | Workload HA VXLAN | Interne Schnittstelle für HA-Paar-Heartbeat; Portgruppe an SDDC-Dswitch-Private |
+| Öffentlicher Uplink | Uplink | **SDDC-DportGroup-External** | Öffentliche Internetschnittstelle |
+| Privater Uplink | Uplink | **SDDC-DportGroup-Mgmt** | Interne private Netzschnittstelle |
+| Intern | Intern | Workload-HA-VXLAN |  Interne Schnittstelle für HA-Paar-Heartbeat; Portgruppe an SDDC-Dswitch-Private **SDDC-Dswitch-Private** |
 
 ### Teilnetze
 
@@ -120,6 +126,7 @@ Tabelle 6. NSX ESG-Firewallkonfiguration
 | Service | Quelle | Ziel | Protokoll | Aktion |
 |:------- |:------ |:----------- |:-------- |:------ |
 | Zerto on {{site.data.keyword.cloud_notm}} | Zerto Management VM | Beliebig | Port 443 | Zulassen |
+| Veeam on {{site.data.keyword.cloud_notm}} | Veeam Backup and Replication VM | Beliebig | Port 443 | Zulassen |
 | FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} | Service-VMs | Beliebig | Port 443 | Zulassen |
 | F5 on {{site.data.keyword.cloud_notm}} | Service-VMs | Beliebig | Port 443 | Zulassen |
 | Beliebig | Beliebig | Beliebig | Beliebig | Verweigern |
@@ -150,9 +157,9 @@ Tabelle 7. Workload Edge-Schnittstellenkonfiguration
 | Öffentlicher Uplink | Uplink | SDDC-DportGroup-External | Öffentliche Internetschnittstelle |
 | Privater Uplink | Uplink | SDDC-DportGroup-Mgmt | Interne private Netzschnittstelle |
 | Transit-Uplink | Uplink | Workload-Transit | Transit-VXLAN zwischen Workload-ESG und Workload-DLR |
-| Intern | Intern | Workload HA VXLAN | Interne Schnittstelle für ESG-HA-Paar-Heartbeat |
+| Intern | Intern | Workload-HA-VXLAN | Interne Schnittstelle für ESG-HA-Paar-Heartbeat |
 
-Bei diesem Design wird ein DLR eingesetzt, um ein potenzielles Ost-West-Routing zwischen L2-Netzen für lokale Workloads zu ermöglichen. Da es sich bei dieser Topologie um ein einfaches Beispiel handelt, wird nur ein L2-Netz beschrieben, das für Workloads bestimmt ist. Das Hinzufügen zusätzlicher Sicherheitszonen kann einfach durch Aufnahme zusätzlicher VXLANs, die neuen Schnittstellen beim DLR zugeordnet sind, erreicht werden. Die folgenden Schnittstellen müssen konfiguriert werden:
+Bei diesem Design wird ein DLR eingesetzt, um ein potenzielles Ost-West-Routing zwischen L2-Netzen für lokale Workloads zu ermöglichen. Da es sich bei dieser Topologie um ein einfaches Beispiel handelt, wird nur ein L2-Netz beschrieben, das für Workloads bestimmt ist. Das Hinzufügen zusätzlicher Sicherheitszonen kann einfach durch Aufnahme zusätzlicher VXLANs, die neuen Schnittstellen beim DLR zugeordnet sind, erreicht werden. In der folgenden Tabelle sind die zu konfigurierbaren DLR-Schnittstellen aufgeführt:
 
 Tabelle 8. DLR-Schnittstellen
 
@@ -180,7 +187,7 @@ Tabelle 9. IP-Konfiguration für DLR und Workload-ESG
 
 NAT wird im Workload-ESG verwendet, um die Traversierung des Netzverkehrs zwischen zwei IP-Adressräumen zu ermöglichen. Für das ESG muss NAT die Kommunikation nicht nur zu Internetzielen ermöglichen, sondern zu allen IP-Bereichen, die auf {{site.data.keyword.cloud_notm}} zurückgehen. Bei diesem Design kann der Workloaddatenverkehr ins Internet gelangen, aber nicht zum Management- oder einem der {{site.data.keyword.cloud_notm}}-Netze. Daher muss im Workload-ESG nur ein SNAT definiert sein. Dabei ist zu beachten, dass das gesamte Workload-portierbare Teilnetz für die Traversierung durch SNAT konfiguriert wird.
 
-Auch wenn es möglich ist, NAT zu verwenden, um die Workloadkommunikation über mehrere Instanzen von Cloud Foundation oder vCeter Server zu ermöglichen, ist dies nicht mehr praktikabel, wenn viele Workloads über Instanzen hinweg verbunden werden müssen. Beispiele für die Verwendung erweiterter NSX-Funktionen zum Erstellen eines L2-Overly-Transit-Netzes über Cloud Foundation- oder vCenter Server-Instanzen hinweg finden Sie unter [Architektur mit mehreren Standorten](multi_site.html).
+Auch wenn es möglich ist, NAT zu verwenden, um die Workloadkommunikation über mehrere Instanzen von Cloud Foundation oder vCenter Server zu ermöglichen, ist dies nicht mehr praktikabel, wenn viele Workloads über Instanzen hinweg verbunden werden müssen. Beispiele für die Verwendung erweiterter NSX-Funktionen zum Erstellen eines L2-Overly-Transit-Netzes über Cloud Foundation- oder vCenter Server-Instanzen hinweg finden Sie unter [Architektur mit mehreren Standorten](multi_site.html).
 
 Tabelle 10. Workload-ESG-NAT-Regeln
 
@@ -217,15 +224,15 @@ Tabelle 12. Workload-ESG-Firewallregeln
 
 ### VXLAN-Definitionen für IBM Workload NSX Edge
 
-Die ESG- und DLR-HA-Paare der Workloadtopologie erfordern L2-Segmente (VXLAN) für die Verbindung der internen Schnittstellen, Datentransit zwischen den beiden und schließlich für Workloads.
+Die ESG- und DLR-HA-Paare der Workloadtopologie erfordern L2-Segmente (VXLAN) für die Verbindung der internen Schnittstellen, Datentransit zwischen den beiden und für Workloads.
 
 Tabelle 13. Interne Schnittstellen für das Workload-ESG
 
 | VXLAN-Name | Cloud Foundation- oder vCenter Server-Transportzone | Typ |
 |:---------- |:------------------------------------------------- |:---- |
-| Workload-HA | transit-1 | global |
-| Workload-Transit | transit-1 | global |
-| Workload | transit-1 | global |
+| Workload-HA | transit-1 | Global |
+| Workload-Transit | transit-1 | Global |
+| Workload | transit-1 | Global |
 
 ### ESG-DLR-Einstellungen für IBM Workload NSX Edge
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -17,7 +17,7 @@ Ein wichtiges Differenzierungsmerkmal zwischen {{site.data.keyword.cloud}} und a
 Die Cross-vCenter NSX-Funktionalität ermöglicht die Verknüpfung von bis zu neun NSX-Managern - in einer Beziehung von einem primären und acht sekundären NSX-Managern. vCenter Server in einer ELM-Beziehung (Enhanced Linked Mode) sind zwar nicht für den Betrieb von Cross-vCenter NSX erforderlich, sie bieten jedoch die folgenden Vorteile:
 
 * Vereinfachte Erstellung einer Primär/Sekundär-Beziehung mithilfe von SSO-Berechtigungsnachweisen (SSO = Single Sign-on)
-* vCenter Server- und Cloud Foundation-Automation konfiguriert die DNS-Namensauflösung für alle verbundenen Standorte
+* Konfiguration der vCenter Server- und Cloud Foundation-Automation für die DNS-Namensauflösung für alle verbundenen Standorte
 * Zentrales Management auf einen Blick über alle Standorte hinweg für NSX- und normale vCenter-Funktionen
 
 ## Beispiel für mehrere Standorte
