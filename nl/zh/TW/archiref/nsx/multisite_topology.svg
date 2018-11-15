@@ -332,7 +332,7 @@
 			<ellipse class="st24" cx="73" cy="91.3" rx="15" ry="7.6"/>
 			<ellipse class="st24" cx="60.5" cy="95.9" rx="6.1" ry="3"/>
 		</g>
-		<text class="st3 st25" transform="translate(46 93.83)">本端工作負載</text>
+		<text class="st3 st25" transform="translate(44.59 93.83)">本端工作負載</text>
 	</g>
 	<line class="st20" x1="626.5" x2="658.5" y1="79.5" y2="79.5"/>
 	<g id="Cloud_rightside">
@@ -342,7 +342,7 @@
 			<ellipse class="st24" cx="665.7" cy="85.3" rx="13.7" ry="7.6"/>
 			<ellipse class="st24" cx="677.1" cy="89.9" rx="5.6" ry="3"/>
 		</g>
-		<text class="st3 st25" transform="translate(657 86.83)">本端工作負載</text>
+		<text class="st3 st25" transform="translate(652.59 86.83)">本端工作負載</text>
 	</g>
 		<g id="mgmt_VMs_group_leftside">
 				<rect class="st26" x="41.3" y="167" width="10.5" height="10.5"/>
