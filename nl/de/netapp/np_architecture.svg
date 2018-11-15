@@ -1,43 +1,212 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 725 315" style="enable-background:new 0 0 725 315;" xml:space="preserve">
-<style type="text/css">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 725 315"
+   style="enable-background:new 0 0 725 315;"
+   xml:space="preserve"
+   sodipodi:docname="np_architecture.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><metadata
+     id="metadata71"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs69" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview67"
+     showgrid="false"
+     inkscape:zoom="1.2562118"
+     inkscape:cx="391.94892"
+     inkscape:cy="129.87442"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style2">
 	.st0{fill:#4B84C4;}
 	.st1{fill:#959595;}
 	.st2{fill:#1AA78D;}
 	.st3{fill:#F59C57;}
 	.st4{fill:#FFFFFF;}
 	.st5{font-family:'Roboto-Light';}
-	.st6{font-size:21px;}
+	.st6{font-size:22.7167px;}
 	.st7{font-size:15.7941px;}
 	.st8{font-size:22.8137px;}
 	.st9{font-size:18.4264px;}
-	.st10{font-size:12.2843px;}
-	.st11{font-size:10.5294px;}
+	.st10{font-size:16px;}
+	.st11{font-size:14px;}
 	.st12{font-size:23px;}
 	.st13{font-size:31.4167px;}
 	.st14{font-size:24px;}
 	.st15{font-size:19px;}
-</style>
-<rect x="198.5" y="-2.2" class="st0" width="526.5" height="89.1"/>
-<rect x="-2.7" y="194.1" class="st1" width="727.7" height="120.8"/>
-<rect x="198.5" y="95.7" class="st2" width="170.7" height="89.9"/>
-<rect x="375.4" y="96.7" class="st2" width="169.8" height="87.7"/>
-<rect x="551.9" y="96.7" class="st2" width="173.1" height="87.7"/>
-<g id="Layer_2">
-	<rect x="-2.7" y="-2.2" class="st3" width="194.7" height="186.7"/>
-</g>
-<g id="Layer_4">
-	<text transform="matrix(1 0 0 1 5.171 35.8409)" class="st4 st5 st6">Allgemeine Services</text>
-	<text transform="matrix(1 0 0 1 35.6105 75.3497)"><tspan x="0" y="0" class="st4 st5 st7">Authentifizierung</tspan><tspan x="43.2" y="31.4" class="st4 st5 st7">DNS</tspan><tspan x="43.5" y="62.8" class="st4 st5 st7">NTP</tspan><tspan x="-9.1" y="94.3" class="st4 st5 st7">Zertifizierungsstelle</tspan></text>
-</g>
-<text transform="matrix(1 0 0 1 317.7374 35.8409)"><tspan x="0" y="0" class="st4 st5 st8">Virtualisierungsmanagement</tspan><tspan x="46.9" y="29.8" class="st4 st5 st9">VMware vCenter-Server </tspan></text>
-<text transform="matrix(1 0 0 1 234.6212 126.9747)"><tspan x="0" y="0" class="st4 st5 st7">Berechnungs-</tspan><tspan x="-0.7" y="19" class="st4 st5 st7">virtualisierung</tspan><tspan x="0.7" y="39.9" class="st4 st5 st10">VMware vSphere </tspan></text>
-<text transform="matrix(1 0 0 1 558.172 145.4337)" class="st4 st5 st7">NetApp  ONTAP  Select</text>
-<text transform="matrix(1 0 0 1 397.2726 136.9747)"><tspan x="0" y="0" class="st4 st5 st7">Netzvirtualisierung</tspan><tspan x="26.4" y="20.9" class="st4 st5 st10">VMware NSX</tspan><tspan x="97.4" y="18.3" class="st4 st5 st11">  </tspan></text>
-<text transform="matrix(1 0 0 1 177.1891 246.7403)"><tspan x="0" y="0" class="st4 st5 st12">Physische Infrastruktur in IBM</tspan><tspan x="302.1" y="0" class="st4 st5 st13"> </tspan><tspan x="309.7" y="0" class="st4 st5 st14">Cloud</tspan></text>
-<text transform="matrix(1 0 0 1 187.9778 294.1616)" class="st4 st5 st15">Berechnung</text>
-<text transform="matrix(1 0 0 1 328.3803 294.1616)" class="st4 st5 st15">Speicher </text>
-<text transform="matrix(1 0 0 1 463.6169 293.2401)" class="st4 st5 st15">Netz</text>
-</svg>
+</style><rect
+     x="198.5"
+     y="0.8"
+     class="st0"
+     width="526.5"
+     height="89.1"
+     id="rect4" /><rect
+     x="198.5"
+     y="101.6"
+     class="st2"
+     width="170.7"
+     height="89.9"
+     id="rect8" /><rect
+     x="375.4"
+     y="103.7"
+     class="st2"
+     width="169.8"
+     height="87.7"
+     id="rect10" /><rect
+     x="551.9"
+     y="103.7"
+     class="st2"
+     width="173.1"
+     height="87.7"
+     id="rect12" /><g
+     id="Layer_2"><rect
+       x="0.30000001"
+       y="0.89999998"
+       class="st3"
+       width="186.89999"
+       height="190.5"
+       id="rect14"
+       style="fill:#f59c57" /></g><text
+     style="font-size:22.7166996px;font-family:Roboto-Light;fill:#ffffff"
+     id="text17"
+     class="st4 st5 st6"
+     x="30.596907"
+     y="27.8409">Allgemeine</text>
+<text
+     id="text27"
+     x="32.19183"
+     y="75.349701"><tspan
+       style="font-size:15.79409981px;font-family:Roboto-Light;fill:#ffffff"
+       id="tspan19"
+       class="st4 st5 st7"
+       y="75.349701"
+       x="32.19183">Authentifizierung</tspan><tspan
+       style="font-size:15.79409981px;font-family:Roboto-Light;fill:#ffffff"
+       id="tspan21"
+       class="st4 st5 st7"
+       y="106.7497"
+       x="67.39183">DNS</tspan><tspan
+       style="font-size:15.79409981px;font-family:Roboto-Light;fill:#ffffff"
+       id="tspan23"
+       class="st4 st5 st7"
+       y="138.1497"
+       x="68.39183">NTP</tspan><tspan
+       style="font-size:15.79409981px;font-family:Roboto-Light;fill:#ffffff"
+       id="tspan25"
+       class="st4 st5 st7"
+       y="169.6497"
+       x="15.091831">Zertifizierungsstelle</tspan></text>
+<text
+     transform="matrix(1 0 0 1 332.3229 38.8409)"
+     id="text34"><tspan
+       x="0"
+       y="0"
+       class="st4 st5 st8"
+       id="tspan30">Virtualisierungsmanagement</tspan><tspan
+       x="39.7"
+       y="29.8"
+       class="st4 st5 st9"
+       id="tspan32">VMware vCenter Server</tspan></text>
+<text
+     id="text40"
+     x="197.0602"
+     y="139.9747"><tspan
+       x="197.0602"
+       y="139.9747"
+       class="st4 st5 st10"
+       id="tspan36"
+       style="font-size:16px;font-family:Roboto-Light;fill:#ffffff">Rechenvirtualisierung</tspan><tspan
+       x="224.96021"
+       y="160.87469"
+       class="st4 st5 st11"
+       id="tspan38"
+       style="font-size:14px;font-family:Roboto-Light;fill:#ffffff">VMware vSphere</tspan></text>
+<text
+     class="st4 st5 st10"
+     id="text42"
+     x="551.74719"
+     y="141.4337"
+     style="font-size:16px;font-family:Roboto-Light;fill:#ffffff">NetApp ONTAP Select</text>
+<text
+     transform="matrix(1 0 0 1 385.2491 140.9747)"
+     id="text50"><tspan
+       x="0"
+       y="0"
+       class="st4 st5 st10"
+       id="tspan44">Netzvirtualisierung</tspan><tspan
+       x="34.2"
+       y="20.9"
+       class="st4 st5 st11"
+       id="tspan46">VMware NSX</tspan><tspan
+       x="108.9"
+       y="18.3"
+       class="st4 st5 st11"
+       id="tspan48" /></text>
+<text
+     style="font-size:22.7166996px;font-family:Roboto-Light;fill:#ffffff"
+     id="text17-4"
+     class="st4 st5 st6"
+     x="45.643394"
+     y="50.980408">Services</text>
+<g
+     id="g929"
+     transform="translate(-96.657596)"><rect
+       style="fill:#959595"
+       id="rect6"
+       height="110.1"
+       width="725.29999"
+       class="st1"
+       y="204.89999"
+       x="96.957596" /><text
+       style="font-size:19px;font-family:Roboto-Light;fill:#ffffff"
+       y="294.16159"
+       x="150.6517"
+       id="text60"
+       class="st4 st5 st15">Rechenressourcen</text>
+<text
+       style="font-size:19px;font-family:Roboto-Light;fill:#ffffff"
+       y="294.16159"
+       x="594.38135"
+       id="text62"
+       class="st4 st5 st15">Speicher </text>
+<text
+       style="font-size:19px;font-family:Roboto-Light;fill:#ffffff"
+       y="293.24011"
+       x="449.01782"
+       id="text64"
+       class="st4 st5 st15">Netz</text>
+<text
+       y="241.32465"
+       x="254.74699"
+       id="text58-2"><tspan
+         style="font-size:23px;font-family:Roboto-Light;fill:#ffffff"
+         id="tspan52-0"
+         class="st4 st5 st12"
+         y="241.32465"
+         x="254.74699">Physische Infrastruktur in IBMCloud</tspan></text>
+</g></svg>
