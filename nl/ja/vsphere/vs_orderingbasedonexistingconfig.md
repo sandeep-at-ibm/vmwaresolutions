@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 既存の構成を基にした vSphere クラスターの注文
 
@@ -30,7 +34,8 @@ lastupdated: "2018-09-27"
    * 注文を実行せずに構成をテンプレートとして保存するには、**「構成の保存」**をクリックします。
    * 注文を実行するには、課金されるアカウントが正しいことを確認し、使用条件を確認して承諾してから、**「プロビジョン」**をクリックします。
 
-   **注:** {{site.data.keyword.baremetal_short}}だけがインストールされます。 クラスターのデプロイメントの後に、VMware vCenter、VMware NSX、VMware vSAN などの各種コンポーネントをインストールして構成する作業は、お客様が行う必要があります。
+   {{site.data.keyword.baremetal_short}}だけがインストールされます。 クラスターのデプロイメントの後に、VMware vCenter、VMware NSX、VMware vSAN などの各種コンポーネントをインストールして構成する作業は、お客様が行う必要があります。
+   {:note}
 
 ## 結果
 
@@ -38,7 +43,8 @@ lastupdated: "2018-09-27"
 
 注文を実行した場合は、クラスターのデプロイメントが自動的に開始されます。 注文が処理中であることを示す E メール確認を受け取ります。 クラスターが使用可能になったときにも、E メールで通知されます。
 
-**注:** vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスとは異なり、**「デプロイ済みインスタンス」**ページに表示されません。
+vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスとは異なり、**「デプロイ済みインスタンス」**ページに表示されません。
+{:note}
 
 ### 関連リンク
 

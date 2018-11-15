@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 新規 vSphere クラスターの注文
 
@@ -52,7 +54,8 @@ IBM ビジネス・パートナーのユーザーは、新規 vSphere クラス�
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**注:** IBM ビジネス・パートナーのユーザーの場合、ライセンス持ち込み (BYOL) オプションは利用できません。
+IBM ビジネス・パートナーのユーザーの場合、ライセンス持ち込み (BYOL) オプションは利用できません。
+{:note}
 
 ### 非ビジネス・パートナーのユーザー用の個別コンポーネント
 
@@ -66,7 +69,8 @@ IBM ビジネス・パートナーのユーザーは、新規 vSphere クラス�
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**注:** VMware vSphere Enterprise Plus 6.0 を注文する場合、VMware vSAN コンポーネントは使用できません。 VMware vSphere Enterprise Plus 6.0 にお客様自身のライセンスを使用する場合は、{{site.data.keyword.cloud_notm}} インフラストラクチャー・チケットが自動的にオープンされます。 このチケットは、注文した{{site.data.keyword.baremetal_short}}の vSphere ライセンスを、提供したライセンスに置き換えるように要求します。
+VMware vSphere Enterprise Plus 6.0 を注文する場合、VMware vSAN コンポーネントは使用できません。 VMware vSphere Enterprise Plus 6.0 にお客様自身のライセンスを使用する場合は、{{site.data.keyword.cloud_notm}} インフラストラクチャー・チケットが自動的にオープンされます。 このチケットは、注文した{{site.data.keyword.baremetal_short}}の vSphere ライセンスを、提供したライセンスに置き換えるように要求します。
+{:note}
 
 ### ライセンス・オプション
 
@@ -76,7 +80,8 @@ IBM ビジネス・パートナーのユーザーは、新規 vSphere クラス�
 
 vSphere Enterprise Plus と vCenter Server を除き、ライセンスを購入することを選択して複数の ESXi サーバーを注文した場合は、複数のライセンス・キーを結合するための {{site.data.keyword.cloud_notm}} チケットが自動的にオープンされます。 このチケットに対応し、DevOps チームで生成したライセンス・キーだけを使用するようにする作業は、お客様が行う必要があります。
 
-**重要:** 個々のライセンス・キーを、結合されたライセンス・キーと一緒に使用しても、必要なライセンスの支払要件は満たされません。
+個々のライセンス・キーを、結合されたライセンス・キーと一緒に使用しても、必要なライセンスの支払要件は満たされません。
+{:important}
 
 ## ベア・メタル・サーバーの設定
 
@@ -84,24 +89,41 @@ vSphere Enterprise Plus と vCenter Server を除き、ライセンスを購入�
 
 クラスターをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
 
-**注:** vSAN コンポーネントを選択した場合は、SSD の使用可否によってロケーション・リストがフィルタリングされます。
+vSAN コンポーネントを選択した場合は、SSD の使用可否によってロケーション・リストがフィルタリングされます。
+{:note}
 
-### CPU モデルと RAM
+### Skylake
 
-ベア・メタル・サーバーの CPU モデルと RAM を指定します。
+**「Skylake」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。使用できるオプションは、VMware vSAN コンポーネントを選択したかどうかによって異なります。
 
-表 2. カスタマイズ型{{site.data.keyword.baremetal_short}}のオプション
+表 2. Skylake {{site.data.keyword.baremetal_short}}のオプション
+
+| CPU モデル・オプション        | RAM オプション       |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110 プロセッサー / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
+### SAP 認定
+
+VMware vSAN を以前に選択した場合、**「SAP 認定」**タブは使用できません。**「SAP 認定」**を選択した場合、CPU や RAM の設定は変更できません。
+
+要件に基づいて、以下のベア・メタル・サーバー構成を選択します。
+  * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 192 GB RAM
+  * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.2 GHz / 384 GB RAM
+  * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 768 GB RAM
+
+### Broadwell
+
+**「Broadwell」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。使用できるオプションは、VMware vSAN コンポーネントを選択したかどうかによって異なります。
+
+表 3. Broadwell {{site.data.keyword.baremetal_short}}のオプション
 
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
 | デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
 | デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
 | デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Silver 4110 Processor / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-
-使用できるオプションは、VMware vSAN コンポーネントを選択したかどうかによって異なります。
 
 ### ベア・メタル・サーバーの数
 
@@ -119,7 +141,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
 * 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。 **「High-Performance Intel Optane」**オプションは、Dual Intel Xeon Gold 5120 および 6140 プロセッサーでのみ使用できます。
-* **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
+* **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
 
 ## ネットワーク・インターフェースの設定
 
@@ -206,7 +228,9 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
     **重要:** このチケットを追跡し、新しく注文した ESXi サーバー上で vSphere ライセンスを置き換える作業は、お客様が行う必要があります。 このようにして、最初に提供された {{site.data.keyword.cloud_notm}} インフラストラクチャーの vSphere ライセンス料の取り消しが {{site.data.keyword.cloud_notm}} インフラストラクチャーによって許可されます。 ESXi vSphere ライセンスを置き換えるには、[Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window} を参照してください。
 5. ベア・メタル・サーバーの設定を次の手順で実行します。
    1. クラスターをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
-   2. CPU モデルと RAM サイズを選択します。
+   2. ベア・メタル・サーバー構成を選択します。
+      * **「Skylake」**または**「Broadwell」**を選択した場合は、CPU モデルと RAM サイズを指定します。
+      * **「SAP 認定」**を選択した場合は、CPU モデルを選択します。
    3. ベア・メタル・サーバーの数を指定します。
 6. **VMware vSAN** コンポーネントを選択した場合は、vSAN ストレージの構成を完了します。 容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
 7. ネットワーク・インターフェースの設定を行います。
@@ -220,7 +244,8 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
    * 注文を実行せずに構成をテンプレートとして保存するには、**「構成の保存」**をクリックします。
    * 注文を実行するには、課金されるアカウントが正しいことを確認し、使用条件を確認して承諾してから、**「プロビジョン」**をクリックします。
 
-   **注:** {{site.data.keyword.baremetal_short}}だけがインストールされます。 クラスターのデプロイメントの後に、VMware vCenter、VMware NSX、VMware vSAN などの各種コンポーネントをインストールして構成する作業は、お客様が行う必要があります。
+   {{site.data.keyword.baremetal_short}}だけがインストールされます。 クラスターのデプロイメントの後に、VMware vCenter、VMware NSX、VMware vSAN などの各種コンポーネントをインストールして構成する作業は、お客様が行う必要があります。
+   {:note}
 
 ### 結果
 
@@ -228,7 +253,8 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 
 注文を実行した場合は、クラスターのデプロイメントが自動的に開始され、注文が処理中であることを示す E メール確認を受け取ります。 クラスターが使用可能になると、E メールで通知されます。
 
-**注:** vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスとは異なり、**「デプロイ済みインスタンス」**ページに表示されません。
+vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスとは異なり、**「デプロイ済みインスタンス」**ページに表示されません。
+{:note}
 
 ### 関連リンク
 
