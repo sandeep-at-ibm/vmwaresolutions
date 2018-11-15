@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Benutzerkonten und -einstellungen verwalten
 
 {{site.data.keyword.vmwaresolutions_full}} kommuniziert mit der {{site.data.keyword.cloud_notm}}-Infrastruktur über {{site.data.keyword.slapi_short}}-Aufrufe. Für den sicheren Zugriff auf die {{site.data.keyword.slapi_short}} müssen Sie die Berechtigungsnachweise Ihres Kontos für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit Ihrem {{site.data.keyword.cloud_notm}}-Konto verknüpfen.
 
-**Hinweis:** Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) wurde früher als IBM SoftLayer-Konto bezeichnet.
+Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) wurde früher als IBM SoftLayer-Konto bezeichnet.
+{:note}
 
 Sie können außerdem angeben, ob Sie E-Mail- und Konsolenbenachrichtigungen für verschiedene Ereignisse empfangen wollen.
 
