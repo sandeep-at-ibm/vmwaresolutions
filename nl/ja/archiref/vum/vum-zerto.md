@@ -10,7 +10,7 @@ lastupdated: "2018-10-03"
 
 # Zerto
 
-修復中に vSphere ESXi ホストを保守モードにできない場合、Zerto が妨げている可能性があります。初期デプロイメント以降に Zerto を更新した場合は、以下の手順を実行してこれを修正します。更新していない場合は、[How to place a host with an associated VRA into maintenance mode](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/) の指示に従ってください。
+修復中に vSphere ESXi ホストを保守モードにできない場合、Zerto が妨げている可能性があります。 初期デプロイメント以降に Zerto を更新した場合は、以下の手順を実行してこれを修正します。 更新していない場合は、[How to place a host with an associated VRA into maintenance mode](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/) の指示に従ってください。
 
 1. Zerto Web UI にログインします。
 2. ドロップダウン・メニューから、**「Site Settings」**を選択します。
