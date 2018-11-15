@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 擴充現有的 vSphere 叢集
 
@@ -37,10 +41,10 @@ lastupdated: "2018-09-04"
 
 如果您擴充的叢集尚無法使用，則您可能會收到錯誤訊息。
 
-**附註：**vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。
+vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。{:note}
 
 ### 相關鏈結
 
 * [訂購新的 vSphere 叢集](vs_orderinginstances.html)
 * [根據現有配置來訂購 vSphere 叢集](vs_orderingbasedonexistingconfig.html)
-* [擴充在主控台以外建立的叢集](vs_orderingforclustersoutside.html)
+* [擴充在主控台之外建立的叢集](vs_orderingforclustersoutside.html)

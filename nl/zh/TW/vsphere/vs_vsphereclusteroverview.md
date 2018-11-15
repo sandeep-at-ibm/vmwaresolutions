@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware vSphere on IBM Cloud 概觀
 
@@ -22,7 +26,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 
 檢閱 VMware vSphere on {{site.data.keyword.cloud_notm}} 的元件。
 
-**附註：**標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。{:note}
 
 ### VMware 元件
 
@@ -62,7 +66,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 
   此外，還為每部主機訂購 2 個 960 GB 的快取磁碟。
 
-  **附註：**當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至資料中心時就會予以支援。
+  當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至資料中心時，就會予以支援。{:note}
 * 「高效能 Intel Optane」選項，提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。這個選項取決於 CPU 型號。
 
 ## vSphere 叢集擴充節點的技術規格
@@ -82,7 +86,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 * 一部具有 VMware vSphere Enterprise Plus 6.0u2 或 6.5u1 的 {{site.data.keyword.cloud_notm}} Bare Metal Server。  
 * 在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 叢集的技術規格](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中所呈現的選用 VMWare 元件。
 
-**重要事項：**您只能從 {{site.data.keyword.slportal}} 管理 ESXi 伺服器、選用的 VMware 元件和其他已訂購及遞送至您的 {{site.data.keyword.cloud_notm}} 帳戶中的硬體。在 {{site.data.keyword.vmwaresolutions_short}} 主控台中建立新的叢集之後，您可以回到主控台，並使用已儲存的資訊來擴充新的叢集。如需相關資訊，請參閱[擴充現有 vSphere 叢集](vs_scalingexistingclusters.html)。
+您只能從 {{site.data.keyword.slportal}} 管理 ESXi 伺服器、選用的 VMware 元件和其他已訂購及遞送至您的 {{site.data.keyword.cloud_notm}} 帳戶中的硬體。在 {{site.data.keyword.vmwaresolutions_short}} 主控台中建立新的叢集之後，您可以回到主控台，並使用已儲存的資訊來擴充新的叢集。如需相關資訊，請參閱[擴充現有 vSphere 叢集](vs_scalingexistingclusters.html)。{:important}
 
 ### 相關鏈結
 
