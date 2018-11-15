@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 檢視 vCenter Server with Hybridity Bundle 實例
 
@@ -17,13 +21,14 @@ lastupdated: "2018-09-27"
 若要檢視針對使用者帳戶佈建之所有 vCenter Server with Hybridity Bundle 實例的摘要，請完成下列步驟：
 1. 在 {{site.data.keyword.vmwaresolutions_full}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
 2. 從主控台橫幅，按一下您的使用者帳戶圖示，然後按一下**帳戶**欄位，以選取您要檢查其實例的使用者帳戶。
-3. 在 **vCenter Server** 表格中，檢視所選取使用者帳戶中佈建的實例清單。
+3. 在 **vCenter Server 實例**表格中，檢視佈建在所選取使用者帳戶中的實例清單。
 
 表 1. vCenter Server with Hybridity Bundle 實例項目
 
 |項目        |說明       |  
 |:------------- |:------------- |
 |名稱 |實例的名稱|
+|類型      | vCenter Server 實例的類型 |
 |版本|實例部署所使用或升級至的發行版本|  
 |位置|管理實例所在的 {{site.data.keyword.CloudDataCent_notm}} |  
 |建立時間|建立實例的日期和時間|  
@@ -58,7 +63,7 @@ lastupdated: "2018-09-27"
 |ID |實例的 ID。|
 |位置|管理實例所在的 {{site.data.keyword.CloudDataCent_notm}}。|
 |現行版本|{{site.data.keyword.vmwaresolutions_short}} 的現行版本。|
-|vCenter 版本|VMware vCenter Server with Hybridity Bundle 版本。<br><br>**附註：**在 {{site.data.keyword.vmwaresolutions_short}} 主控台及 VMware vSphere Web Client 上顯示的 vCenter Server 版本之間略有不同。兩者皆正確。|
+|vCenter 版本|VMware vCenter Server with Hybridity Bundle 版本。<br><br>{{site.data.keyword.vmwaresolutions_short}} 主控台與 VMware vSphere Web Client 上所顯示的 vCenter Server 版本之間略有不同。兩者皆正確。{:note} |
 |NSX for vSphere |VMware NSX for vSphere 產品版本。|
 |NSX 授權版本|VMware NSX 授權的版本。|
 |DNS、根網域|根網域名稱是 DNS（網域名稱系統）網域名稱及 Microsoft Active Directory (AD) 樹系根名稱。|
@@ -109,7 +114,7 @@ lastupdated: "2018-09-27"
 
 從 {{site.data.keyword.vmwaresolutions_short}} 主控台或 VMware vSphere Web Client 管理實例。
 
-**重要事項：**您必須先登入 {{site.data.keyword.CloudDataCent_notm}} 的 VPN 入口網站，才能在實例摘要頁面上按一下 **vCenter 主控台**，以移至 vSphere Web Client 並開始管理 ESXi 伺服器。將游標移至 **vCenter 主控台**按鈕上方，並遵循指示以確保您符合所有需求，並在存取 vSphere Web Client 之前完成必要的步驟。
+您必須先登入 {{site.data.keyword.CloudDataCent_notm}} 的 VPN 入口網站，才能在實例摘要頁面上按一下 **vCenter 主控台**，以移至 vSphere Web Client 並開始管理 ESXi 伺服器。將游標移至 **vCenter 主控台**按鈕上方，並遵循指示以確保您符合所有需求，並在存取 vSphere Web Client 之前完成必要的步驟。{:important}
 
 如需可協助您完成登入指示的資訊，請檢閱下列主題：
 *  如需存取 vSphere Web Client 之前的需求及必要步驟，請參閱[連接至 vSphere Web Client 時發生逾時](../vmonic/trbl_timeout_vc_console.html)。

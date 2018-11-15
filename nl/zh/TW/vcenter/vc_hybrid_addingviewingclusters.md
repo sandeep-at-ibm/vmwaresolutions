@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 新增、檢視及刪除 vCenter Server with Hybridity Bundle 實例的叢集
 
@@ -38,21 +42,31 @@ lastupdated: "2018-09-27"
 
 ### Bare Metal Server 設定
 
-#### 自訂
-
 指定 Bare Metal Server 的 CPU 型號及 RAM。可用的選項可能會根據一開始部署您實例所用的版本而不同。
 
-表 2. 自訂的 Bare Metal Server 選項
+#### Skylake
+
+當您選取 **Skylake** 時，可以根據需求來選擇 CPU 與 RAM 組合。
+
+表 1. Skylake Bare Metal Server 的選項
+
+| CPU 型號選項             |RAM 選項          |
+|:------------- |:------------- |
+|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
+#### Broadwell
+
+當您選取 **Broadwell** 時，可以根據需求來選擇 CPU 與 RAM 組合。
+
+表 2. Broadwell Bare Metal Server 的選項
 
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |96 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 #### Bare Metal Server 數目
 
@@ -97,7 +111,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
 2. 在 **vCenter Server 實例**表格中，按一下實例來檢視其中的叢集。
 
-   **附註：**請確定實例狀態處於**備妥使用**。否則，您無法將叢集新增至實例。
+   請確定實例狀態處於**備妥使用**。否則，您無法將叢集新增至實例。{:note}
 
 3. 按一下左導覽窗格上的**基礎架構**，然後按一下**叢集**表格右上角的**新增**。
 4. 在**新增叢集**頁面上，輸入叢集名稱。
@@ -117,7 +131,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 1. 會自動啟動叢集的部署，而且叢集的狀態變更為**正在起始設定**。您可以在實例的**摘要**頁面上檢視部署歷程，以檢查部署的狀態。
 2. 叢集備妥可用時，其狀態會變更為**備妥使用**。新增的叢集已啟用「vSphere 高可用性 (HA)」及「vSphere 分散式資源排程器 (DRS)」。
 
-**重要事項：**您不能變更叢集名稱。變更叢集名稱可能會導致在叢集裡新增或移除 ESXi 伺服器的作業失敗。
+您不能變更叢集名稱。變更叢集名稱可能會導致在叢集裡新增或移除 ESXi 伺服器的作業失敗。{:important}
 
 ## 檢視 vCenter Server with Hybridity Bundle 實例中叢集的程序
 

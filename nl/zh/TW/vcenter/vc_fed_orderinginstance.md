@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -66,26 +66,35 @@ lastupdated: "2018-09-27"
 
 ## Bare Metal Server 設定
 
-Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預先配置的配置選項。
+Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server 配置。目前不支援選取預先配置的配置選項。
 
 ### 資料中心位置
 
 選取要在其中管理實例的 {{site.data.keyword.CloudDataCent_notm}}。
 
-### 自訂
+### Skylake
 
 指定 Bare Metal Server 的 CPU 型號及 RAM。
 
-表 2. 自訂 {{site.data.keyword.baremetal_short}} 的選項
+表 2. Skylake {{site.data.keyword.baremetal_short}} 的選項
+
+| CPU 型號選項             |RAM 選項          |
+|:------------- |:------------- |
+|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
+### Broadwell
+
+指定 Bare Metal Server 的 CPU 型號及 RAM。
+
+表 3. Broadwell {{site.data.keyword.baremetal_short}} 的選項
 
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB |
 |雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB |
 |雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB |
-|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### Bare Metal Server 數目
 
@@ -182,12 +191,12 @@ Bare Metal Server 設定是根據您的自訂配置。目前不支援選取預�
 4. 按一下**主要實例**，以在環境中部署單一實例。
 5. 指定 VMware NSX 授權版本。
 6. 完成 Bare Metal Server 配置：
-  1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
-  2. 選取**自訂** CPU 型號及 **RAM** 數量。
+   1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
+   2. 選取 **Skylake** 或 **Broadwell** CPU 模型，以及 **RAM** 的數量。
 7. 完成儲存空間配置。
-  * 如果您選取 **vSAN 儲存空間**，請指定容量及快取磁碟的磁碟類型、磁碟數目以及「vSAN 授權」版本。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
-  * 如果您選取 **NFS 儲存空間**，而且要對所有檔案共用新增及配置相同的設定，請指定**共用數目**、**大小**及**效能**。
-  * 如果您選取 **NFS 儲存空間**，而且要個別新增及配置檔案共用，請選取**個別配置共用**，然後按一下**新增 NFS** 標籤旁的 **+** 圖示，並針對每個個別檔案共用選取**大小**及**效能**。您必須至少選取一個檔案共用。
+   * 如果您選取 **vSAN 儲存空間**，請指定容量及快取磁碟的磁碟類型、磁碟數目以及「vSAN 授權」版本。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
+   * 如果您選取 **NFS 儲存空間**，而且要對所有檔案共用新增及配置相同的設定，請指定**共用數目**、**大小**及**效能**。
+   * 如果您選取 **NFS 儲存空間**，而且要個別新增及配置檔案共用，請選取**個別配置共用**，然後按一下**新增 NFS** 標籤旁的 **+** 圖示，並針對每個個別檔案共用選取**大小**及**效能**。您必須至少選取一個檔案共用。
 8. 完成網路介面配置。
    1. 輸入主機名稱字首、子網域標籤及根網域名稱。
    2. 選取 DNS 配置。

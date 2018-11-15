@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 新增、檢視及刪除 vCenter Server 實例的叢集
 
@@ -14,7 +18,7 @@ lastupdated: "2018-09-27"
 
 您可以將自己的叢集新增至 VMware vCenter Server 實例，以擴充運算及儲存空間容量。在叢集內，您可以管理 ESXi 伺服器，以進行更適當的資源配置及高可用性。不再需要時，請從實例刪除新增的叢集。
 
-**可用性：**只有部署在（或升級至）2.3 版及更新版本的實例，才能使用刪除叢集特性。
+只有部署在（或升級至）2.3 版及更新版本的實例，才能使用刪除叢集特性。{:note}
 
 ## 將叢集新增至 vCenter Server 實例
 
@@ -42,7 +46,40 @@ lastupdated: "2018-09-27"
 
 ### Bare Metal Server 設定
 
-您可以選擇**預先配置**或**自訂**。
+您可以選擇 **Skylake**、**SAP 認證**、**Broadwell** 或**預先配置**。
+
+#### Skylake
+
+若為 **Skylake** 設定，您有數個選項可用於 **CPU 型號**和 **RAM**。可用的選項可能會根據一開始部署您實例所用的版本而不同。
+
+表 1. Skylake {{site.data.keyword.baremetal_short}} 的選項
+
+| CPU 型號選項             |RAM 選項          |
+|:------------- |:------------- |
+|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
+#### SAP 認證
+
+當您選取 **SAP 認證**時，無法變更 CPU 或 RAM 設定。
+
+根據您的需求，選取 Bare Metal Server 配置：
+* 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 192 GB RAM
+* 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 384 GB RAM
+* 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 768 GB RAM
+
+#### Broadwell
+
+若為 **Broadwell** 設定，您有數個選項可用於 **CPU 型號**和 **RAM**。可用的選項可能會根據一開始部署您實例所用的版本而不同。
+
+表 2. Broadwell {{site.data.keyword.baremetal_short}} 的選項
+
+| CPU 型號選項             |RAM 選項          |
+|:------------- |:------------- |
+|雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 
 #### 預先配置
 
@@ -50,21 +87,6 @@ lastupdated: "2018-09-27"
 * 小型（雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz / 128 GB RAM / 2 個磁碟）
 * 中型（雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz / 256 GB RAM / 2 個磁碟）
 * 大型（雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz / 512 GB RAM / 2 個磁碟）
-
-#### 自訂
-
-對於**自訂**設定，您有數個 **CPU 型號**及 **RAM** 選項。可用的選項可能會根據一開始部署您實例所用的版本而不同。
-
-表 1. 自訂 {{site.data.keyword.baremetal_short}} 的選項
-
-| CPU 型號選項             |RAM 選項          |
-|:------------- |:------------- |
-|雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 #### Bare Metal Server 數目
 
@@ -74,9 +96,9 @@ lastupdated: "2018-09-27"
 
 對於已部署在 2.0 版或更早版本的 vCenter Server 實例，您可以針對叢集新增最多 32 部 {{site.data.keyword.baremetal_short}}。您一次可以新增的 {{site.data.keyword.baremetal_short}} 數目如下所示：
 * 如果是**小型**、**中型**、**大型** Bare Metal Server 配置，您一次可以新增 1 - 10 部 ESXi 伺服器。
-* 如果是**自訂** Bare Metal Server 配置，您一次可以新增 1 - 20 部 ESXi 伺服器。
+* 如果是 **Skylake** 或 **Broadwell** Bare Metal Server 配置，您一次可以新增 1 - 20 部 ESXi 伺服器。
 
-部署之後，您最多可以建立另外四個叢集。如果您選取**自訂** Bare Metal Server 配置搭配 VMware vSAN 儲存空間，則起始叢集和部署後的叢集都需要 4 部伺服器。
+部署之後，您最多可以建立另外四個叢集。如果您選取 **Skylake** 或 **Broadwell** Bare Metal Server 配置搭配 VMware vSAN 儲存空間，則起始叢集和部署後的叢集都需要 4 部伺服器。
 
 ### 儲存空間設定
 
@@ -98,7 +120,7 @@ lastupdated: "2018-09-27"
 
 當您選取 **NFS 儲存空間**時，可以為所有共用使用相同設定的實例新增檔案層次共用儲存空間，也可以為每一個檔案共用指定不同的配置設定。請指定下列 NFS 選項：
 
-**附註：**檔案共用數目必須在 1 到 32 的範圍內。
+檔案共用數目必須在 1 到 32 的範圍內。{:note}
 
 * **個別配置共用**：選取以為每一個檔案共用指定不同的配置設定。
 * **共用數目**：要為每個檔案共用使用相同的配置設定時，請指定您要新增之 NFS 共用儲存空間的檔案共用數目。
@@ -106,7 +128,7 @@ lastupdated: "2018-09-27"
 * **效能**：根據您的工作負載需求，選取每 GB 的 IOPS（每秒輸入/輸出作業數）。
 * **新增 NFS**：選取以新增要使用不同配置設定的個別檔案共用。
 
-表 2. NFS 效能層次選項
+表 3. NFS 效能層次選項
 
 |選項          |詳細資料      |
   |:------------- |:------------- |
@@ -138,13 +160,14 @@ lastupdated: "2018-09-27"
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
 2. 在 **vCenter Server 實例**表格中，按一下您要新增叢集的實例。
 
-   **附註：**請確定實例處於**備妥使用**狀態。否則，您無法將叢集新增至實例。
+   請確定實例處於**備妥使用**狀態。否則，您無法將叢集新增至實例。{:note}
 3. 按一下左導覽窗格上的**基礎架構**，然後按一下**叢集**表格右上角的**新增**。
 4. 在**新增叢集**頁面上，輸入叢集名稱。
 5. 如果您要在與實例管理所在不同的 {{site.data.keyword.CloudDataCent_notm}} 中管理叢集，請勾選 **Bare Metal Server** 下的**選取不同的位置**勾選框，然後選擇 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
 6. 完成 Bare Metal Server 配置。
+   * 如果您選取 **Skylake** 或 **Broadwell**，請指定 **CPU 型號**、**RAM** 數量，以及 **{{site.data.keyword.baremetal_short}} 數目**。
+   * 如果您選取 **SAP 認證**，請指定 CPU 模型。
    * 如果您選取**預先配置**，請指定 **Bare Metal Server 配置**，以及 **{{site.data.keyword.baremetal_short}} 數目**。如果您打算使用 vSAN 作為儲存空間解決方案，則至少需要 4 部 {{site.data.keyword.baremetal_short}}。
-   * 如果您選取**自訂**，請指定 **CPU 型號**、**RAM** 數量，以及**{{site.data.keyword.baremetal_short}}數目**。
 7. 完成儲存空間配置。
   * 如果您選取 **vSAN 儲存空間**，請指定容量及快取磁碟的磁碟類型、磁碟數目以及「vSAN 授權」版本。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
   * 如果您選取 **NFS 儲存空間**，而且要對所有檔案共用新增及配置相同的設定，請指定**共用數目**、**大小**及**效能**。
@@ -166,7 +189,7 @@ lastupdated: "2018-09-27"
 1. 會自動啟動叢集的部署，而且叢集的狀態變更為**正在起始設定**。您可以從實例的**摘要**頁面檢視部署歷程，以檢查部署的狀態。
 2. 叢集備妥可用時，其狀態會變更為**備妥使用**。新增的叢集已啟用「vSphere 高可用性 (HA)」及「vSphere 分散式資源排程器 (DRS)」。
 
-**重要事項：**您不能變更叢集名稱。變更叢集名稱可能會導致在叢集裡新增或移除 ESXi 伺服器的作業失敗。
+您不能變更叢集名稱。變更叢集名稱可能會導致在叢集裡新增或移除 ESXi 伺服器的作業失敗。{:important}
 
 ## 在 vCenter Server 實例中檢視叢集的程序
 
@@ -243,7 +266,7 @@ lastupdated: "2018-09-27"
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
 2. 在 **vCenter Server 實例**表格中，按一下您要從中刪除叢集的實例。
 
-   **附註：**請確定實例處於**備妥使用**狀態。否則，您無法從實例刪除叢集。
+   請確定實例處於**備妥使用**狀態。否則，您無法從實例刪除叢集。{:note}
 
 3. 在左導覽窗格上，按一下**基礎架構**。在**叢集**表格中，找出您要刪除的叢集，然後按一下**動作**直欄中的**刪除**圖示。
 4. 確認您已完成將虛擬機器移轉至其他叢集（必要的話），並確認您要刪除叢集。

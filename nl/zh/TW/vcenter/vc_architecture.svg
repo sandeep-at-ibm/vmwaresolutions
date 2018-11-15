@@ -18,8 +18,8 @@
 <text transform="matrix(1 0 0 1 152.4775 43.3711)"><tspan x="60" y="0" class="st3 st4 st5">虛擬化管理</tspan><tspan x="45.3" y="34" class="st3 st4 st6">VMware vCenter Server</tspan></text>
 <text transform="matrix(1 0 0 1 19.6601 158.6688)"><tspan x="60" y="0" class="st3 st4 st5">運算虛擬化</tspan><tspan x="51.6" y="23.9" class="st3 st4 st6">VMware vSphere</tspan></text>
 <text transform="matrix(1 0 0 1 333.6861 159.7861)"><tspan x="60" y="0" class="st3 st4 st5">網路虛擬化</tspan><tspan x="65" y="23.9" class="st3 st4 st6">VMware NSX </tspan></text>
-<text transform="matrix(1 0 0 1 130 263.5371)"><tspan x="0" y="0" class="st3 st4 st5">IBM Cloud 上的實體基礎架構</tspan><tspan x="390.7" y="0" class="st3 st4 st6"> </tspan></text>
-<text transform="matrix(1 0 0 1 430 302.2838)" class="st3 st4 st6">網路</text>
-<text transform="matrix(1 0 0 1 260 302.8424)" class="st3 st4 st6">儲存空間</text>
-<text transform="matrix(1 0 0 1 130 302.7475)" class="st3 st4 st6">運算</text>
+<text transform="matrix(1 0 0 1 102.3994 263.5371)"><tspan x="0" y="0" class="st3 st4 st5">IBM Cloud 上的實體基礎架構</tspan><tspan x="390.7" y="0" class="st3 st4 st6"> </tspan></text>
+<text transform="matrix(1 0 0 1 410.2971 302.2838)" class="st3 st4 st6">網路</text>
+<text transform="matrix(1 0 0 1 273.8523 302.8424)" class="st3 st4 st6">儲存空間</text>
+<text transform="matrix(1 0 0 1 114.1154 302.7475)" class="st3 st4 st6">運算</text>
 </svg>

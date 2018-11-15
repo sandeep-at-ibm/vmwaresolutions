@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server with Hybridity Bundle 概觀
 
@@ -61,13 +65,13 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 
 下列元件已包含在 vCenter Server with Hybridity Bundle 實例中：
 
-**附註：**標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。{:note}
 
 ### Bare Metal Server
 
-您的 vCenter Server with Hybridity Bundle 實例訂單隨附四個自訂 {{site.data.keyword.baremetal_short}}。以下是可用的 CPU 型號：
-  * 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
+您的 vCenter Server with Hybridity Bundle 實例訂單隨附四個 **Skylake** 或 **Broadwell** {{site.data.keyword.baremetal_short}}。以下是可用的 CPU 型號：
   * 2-CPU Intel Skylake Generation（Intel Xeon 4100/5100/6100 系列）
+  * 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
 
 ### 網路
 
@@ -78,7 +82,8 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 *  兩個 VMware NSX Edge Services Gateway：
   * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，IBM 將它部署為管理網路拓蹼的一部分。IBM 管理 VM 使用此 ESG，以與跟自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[將您的網路配置成使用客戶管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
-    **重要事項：**您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server with Hybridity Bundle 實例。此外，請注意，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
+您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server with Hybridity Bundle 實例。此外，請注意，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
+{:important}
   * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway，IBM 將它部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險？](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 如需部署 HCX on {{site.data.keyword.cloud_notm}} 服務時所訂購之網路元件的相關資訊，請參閱 [HCX on {{site.data.keyword.cloud_notm}} 概觀](../services/hcx_considerations.html)。
@@ -115,7 +120,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附下列授權。
 
 ### 擴充節點的硬體
 
-一個具有自訂配置的 Bare Metal Server。
+一部配置如 [vCenter Server with Hybridity Bundle 實例的技術規格](../vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中所示的 Bare Metal Server。
 
 ### 擴充節點的授權與費用
 
@@ -124,7 +129,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附下列授權。
 * 一筆支援與服務費用
 * VMware vSAN（Advanced 或 Enterprise）6.6
 
-**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。{:important}
 
 **警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的所有 {{site.data.keyword.vmwaresolutions_short}} 元件，可能會讓您的環境不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件
