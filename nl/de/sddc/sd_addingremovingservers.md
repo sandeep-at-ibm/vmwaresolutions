@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Kapazität für Cloud Foundation-Instanzen erweitern und verringern
 
@@ -21,7 +25,7 @@ Eine Cloud Foundation-Instanz kann bis zu fünf Cluster umfassen, von denen eine
 * Fügen Sie keine ESXi-Server über VMware vSphere Web Client hinzu. Die Änderungen, die Sie in VMware vSphere Web Client vornehmen, werden nicht mit der {{site.data.keyword.vmwaresolutions_full}}-Konsole synchronisiert.
 * Die von Ihnen bestellte Basisplattform umfasst standardmäßig 4 ESXi-Server. Sie können die Plattform auf maximal 32 ESXi-Server erweitern. Für die Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen, die Sie jeweils hinzufügen können, gilt jedoch Folgendes:
    * Bei Konfigurationen des Typs **S (Klein)** und **L (Groß)** können Sie gleichzeitig 1 bis 10 ESXi-Server hinzufügen.
-   * Bei Konfigurationen des Typs **Angepasst** können Sie gleichzeitig 1 bis 20 ESXi-Server hinzufügen.
+   * Bei Konfigurationen des Typs **Skylake** und **Broadwell** können Sie gleichzeitig 1 bis 20 ESXi-Server hinzufügen.
 
 ## Vorgehensweise beim Hinzufügen von ESXi-Servern
 
@@ -61,7 +65,8 @@ Eine Cloud Foundation-Instanz kann bis zu fünf Cluster umfassen, von denen eine
 2. Sie werden per E-Mail benachrichtigt, wenn Ihre ESXi-Server entfernt wurden.
 3. Die ESXi-Server werden am Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus (der in der Regel 30 Tage umfasst) vollständig von der {{site.data.keyword.cloud_notm}}-Infrastruktur zurückgefordert.
 
-   **Achtung:** Die entfernten ESXi-Server werden Ihnen bis zum Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus berechnet.
+   Die entfernten ESXi-Server werden Ihnen bis zum Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus berechnet.
+   {:note}
 
 ### Zugehörige Links
 
