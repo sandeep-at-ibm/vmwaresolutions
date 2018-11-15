@@ -4,13 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
 # Ajustando a escala de clusters criados fora do console
 
-É possível usar a oferta do VMware vSphere para escalar clusters do vSphere existentes que são criados fora do console do {{site.data.keyword.vmwaresolutions_full}}. Para escalar um cluster vSphere que é criado fora do console, recrie o cluster com as mesmas configurações com o console e, em seguida, escale o cluster.
+É possível usar a oferta do VMware vSphere para escalar clusters do vSphere existentes que são criados fora do console do {{site.data.keyword.vmwaresolutions_full}}. Para escalar um cluster do vSphere que é criado fora do console, recrie o cluster com as mesmas configurações com o console e, em seguida, escale o cluster.
 
 ## Requisitos
 
@@ -25,7 +29,8 @@ on {{site.data.keyword.cloud_notm}}](vs_planning.html).
 2. Na página **VMware vSphere on IBM Cloud**, clique em **Criar**.  
    Assegure-se de que está na guia **Criar novo** e que **Novo cluster** está exibido na lista **Configurações de cluster**.
 3. Crie um cluster com as mesmas configurações que o cluster existente que foi criado fora do console do {{site.data.keyword.vmwaresolutions_short}}. Para obter mais informações, veja [Pedindo novos clusters do vSphere](vs_orderinginstances.html).  
-   **Nota:** para a interface de rede, para escalar um cluster que é criado fora do console do {{site.data.keyword.vmwaresolutions_short}}, deve-se selecionar as VLANs existentes para o cluster.  
+   Para a interface de rede, para escalar um cluster que é criado fora do console do {{site.data.keyword.vmwaresolutions_short}}, deve-se selecionar as VLANs existentes para o cluster.
+   {:note}
 4. Na área de janela **Resumo**, verifique a configuração de cluster e, em seguida, clique em **Salvar configuração**.   
 5. Na página **Introdução**, clique no cartão **VMware vSphere on IBM Cloud**.
 6. Na página **VMware vSphere on IBM Cloud**, clique em **Criar**.
@@ -38,7 +43,8 @@ on {{site.data.keyword.cloud_notm}}](vs_planning.html).
 
 A implementação do cluster começa automaticamente e você recebe uma confirmação por e-mail de que o pedido está sendo processado. Quando o cluster estiver pronto para usar, você será notificado por e-mail.
 
-**Nota:** os clusters do vSphere não são exibidos na página **Instâncias implementadas**, junto às instâncias do vCenter Server e do Cloud Foundation.
+Os clusters do vSphere não são exibidos na página **Instâncias implementadas**, junto com as instâncias do vCenter Server e do Cloud Foundation.
+{:note}
 
 ### Links relacionados
 

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Pedindo clusters do vSphere com base nas configurações existentes
 
@@ -30,7 +34,8 @@ Assegure-se de que tenha concluído as tarefas a seguir:
    * Para salvar a configuração como um modelo sem fazer um pedido, clique em **Salvar configuração**.
    * Para fazer o pedido, assegure-se de que a conta a ser cobrada está correta, revise e aceite os termos e, em seguida, clique em **Provisão**.
 
-   ** Nota: **  somente o  {{site.data.keyword.baremetal_short}}  está instalado. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como o VMware vCenter, o VMware NSX, o VMware vSAN.
+   Somente os {{site.data.keyword.baremetal_short}} estão instalados. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como o VMware vCenter, o VMware NSX, o VMware vSAN.
+   {:note}
 
 ## Resultados
 
@@ -38,7 +43,8 @@ Se salvou a configuração de cluster como um modelo, você receberá uma notifi
 
 Se você fez um pedido, a implementação do cluster será iniciada automaticamente. Você recebe uma confirmação por e-mail de que a ordem está sendo processada. Quando o cluster estiver pronto para ser usado, você também será notificado por e-mail.
 
-**Nota:** os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Cloud Foundation, não são exibidos na página **Instâncias implementadas**.
+Os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Cloud Foundation, não são exibidos na página **Instâncias implementadas**.
+{:note}
 
 ### Links relacionados
 

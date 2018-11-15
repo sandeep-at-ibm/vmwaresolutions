@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ajustando a escala dos clusters do vSphere existentes
 
@@ -17,7 +21,7 @@ lastupdated: "2018-09-04"
 Assegure-se de que tenha concluído as tarefas a seguir:
 *  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](../vmonic/useraccount.html).
 *  Você revisou os requisitos e as considerações em [Requisitos e planejamento para clusters do vSphere](vs_planning.html).
-*  Você recebeu um e-mail com a confirmação de que o cluster que deseja escalar está pronto para uso.
+*  Você recebeu um e-mail com a confirmação de que o cluster que você deseja escalar está pronto para uso.
 
 ## Procedimento para escalar clusters existentes
 
@@ -26,7 +30,7 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 3. Clique na guia **Escala existente** e selecione o cluster que você deseja escalar na lista **Configurações do cluster**.
 4. Revise as configurações do cluster que são concluídas automaticamente.
 5. Na seção **{{site.data.keyword.baremetal_short}}**, especifique o número de {{site.data.keyword.baremetal_short}} que você deseja incluir no cluster.
-6. Se o cluster não incluir o Par de HA do FortiGate 300 Series Security Appliance em sua VLAN pública, será possível pedir o dispositivo. Para fazer isso, marque a caixa de seleção **Incluir com a compra** em **Par de HA do FortiGate Physical Appliance 300 Series**.
+6. Se o cluster não incluir o Par de HA do FortiGate 300 Series Security Appliance em sua VLAN pública, será possível pedir o dispositivo. Para fazer isso, marque a caixa de seleção **Incluir com compra** sob **Par de HA do FortiGate Physical Appliance 300 Series**.
 7. Na área de janela **Resumo do pedido**, verifique a configuração da instância e o custo estimado.
    * Para salvar a configuração como um modelo sem fazer um pedido, clique em **Salvar configuração**.
    * Para fazer o pedido, assegure-se de que a conta a ser cobrada está correta, revise e aceite os termos e, em seguida, clique em **Provisão**.
@@ -35,9 +39,10 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 
 O ajuste de escala do cluster é iniciado automaticamente. Você recebe uma confirmação por e-mail de que a ordem está sendo processada. Quando o cluster estiver pronto para usar, você será notificado por e-mail.
 
-Se o cluster que você está escalando não estiver pronto para uso, você poderá receber uma mensagem de erro.
+Se o cluster que você está escalando não estiver pronto para uso, uma mensagem de erro poderá ser recebida.
 
-**Nota:** os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Cloud Foundation, não são exibidos na página **Instâncias implementadas**.
+Os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Cloud Foundation, não são exibidos na página **Instâncias implementadas**.
+{:note}
 
 ### Links relacionados
 
