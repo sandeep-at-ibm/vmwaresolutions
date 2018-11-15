@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visão geral do Cloud Foundation
 
@@ -43,15 +47,18 @@ Para obter mais informações sobre a arquitetura, consulte [Visão geral da sol
 
 Os componentes a seguir estão incluídos em sua instância do Cloud Foundation.
 
-**Nota:** os encargos que são incorridos para o hardware, a rede, as máquinas virtuais e o armazenamento podem variar com base no {{site.data.keyword.CloudDataCent_notm}} que é selecionado para implementação.
+Os encargos incorridos para o hardware, rede, máquinas virtuais e armazenamento podem variar com base no {{site.data.keyword.CloudDataCent_notm}} que é selecionado para implementação.
+{:note}
 
 ### Bare Metal Server
 
 É possível pedir o {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} com uma das configurações a seguir:
-*  **Customizado**: {{site.data.keyword.baremetal_short}} com seu modelo de CPU selecionado e tamanho de RAM.   
-   * Geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600 v4)
+*  **Skylake** ou **Broadwell**: {{site.data.keyword.baremetal_short}} com seu modelo de CPU e tamanho de RAM selecionados.   
    * Geração Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100)
-**Nota:** se você planeja usar o armazenamento vSAN, a configuração requer quatro {{site.data.keyword.baremetal_short}}.
+   * Geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600 v4)
+
+   Se você planeja usar o armazenamento vSAN, a configuração requer quatro {{site.data.keyword.baremetal_short}}.
+   {:note}
 * **Pré-configurado**: geração Intel Broadwell de 2 CPUs (série Intel Xeon E5-2600 v4)
   * **Pequeno** (Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz/128 GB de RAM/12 discos)
   * **Grande** (Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz/512 GB de RAM/12 discos)
@@ -63,7 +70,8 @@ Os componentes de rede a seguir são pedidos:
 * Três VLANs (Virtual LANs): uma VLAN pública e duas VLANs privadas
 * Serviços de gerenciamento seguro VMware NSX Edge Services Gateway (ESG) para o tráfego de gerenciamento HTTPS de saída, que é implementado pela IBM como parte da tipologia de rede de gerenciamento. Este ESG é usado pelas máquinas virtuais de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Para obter mais informações, veja [Os serviços de gerenciamento NSX Edge representam um risco de segurança?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **Importante:** esse ESG não está acessível para você e não é possível usá-lo. Se modificá-lo, talvez você não consiga gerenciar a instância do Cloud Foundation do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externos da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
+  Este ESG não está acessível a você e não pode ser usado. Se modificá-lo, talvez você não consiga gerenciar a instância do Cloud Foundation do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externos da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
+  {:important}
 
 * O recurso EVC (Enhanced vMotion Compatibility) será ativado automaticamente se você tiver um cluster existente com servidores ESXi que são suportados pela versão atual do VMware vSphere. O EVC fornece compatibilidade vMotion para todos os servidores ESXi em um cluster, assegurando que todos os servidores ESXi em um cluster exponham o mesmo conjunto de recursos de CPU para máquinas virtuais. Usando EVC, as máquinas virtuais podem migrar entre quaisquer servidores ESXi no cluster, mesmo que as CPUs reais nos servidores ESXi possam ser diferentes.
 
@@ -80,7 +88,7 @@ O armazenamento a seguir é pedido, dependendo da configuração do {{site.data.
 * Dois discos de inicialização SATA de 1 TB
 * Dois discos de cache SSD (Solid-State Disk) de 960 GB
 * Um controlador de disco RAID
-* Apenas para a configuração **Customizado**, é possível configurar o número de unidades de disco, o tipo de disco e a capacidade de acordo com seus requisitos. Além disso, você tem a opção Intel Optane de alto desempenho, que oferece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade. A opção Intel Optane de alto desempenho depende do modelo de CPU.
+* Somente para a configuração **Skylake** e **Broadwell**, é possível configurar o número de unidades de disco e o tipo de disco e a capacidade de acordo com seus requisitos. Além disso, você tem a opção Intel Optane de alto desempenho, que oferece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade. A opção Intel Optane de alto desempenho depende do modelo de CPU.
 * Apenas para a configuração **Pré-configurado**, **Pequeno**: dois discos de capacidade SSD de 1,9 TB
 * Apenas para a configuração **Pré-configurado**, **Grande**: quatro discos de capacidade SSD de 3,8 TB
 
@@ -110,7 +118,8 @@ Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração apres
 * Uma licença do SDDC Manager
 * Uma taxa de Suporte e Serviços
 
-**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados em sua conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do	{{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+{:important}
 
 **CUIDADO:** gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}}, que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você solicitou a instância, fora do console do {{site.data.keyword.vmwaresolutions_short}} pode tornar seu ambiente instável. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes

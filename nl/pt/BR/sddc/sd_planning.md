@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -24,36 +24,36 @@ Tabela 1. Configurações do Bare Metal Server do {{site.data.keyword.CloudDataC
 
 | {{site.data.keyword.CloudDataCent_notm}} | Localização | Região | Configurações do servidor |
 |:----------------------|:---------|:-------|:----------------------|
-| AMS03 | Amsterdã | Europa | Customizado |
-| CHE01 | Chennai | Ásia Pacífico | Customizado |
-| DAL09 | Dallas | NA Sul | Customizado |
-| DAL10 | Dallas | NA Sul | Customizado, Pequeno, Grande |
-| DAL12 | Dallas | NA Sul | Customizado |
-| DAL13 | Dallas | NA Sul | Customizado |
-| FRA02 | Frankfurt | Europa | Customizado, Grande |
-| FRA04 | Frankfurt | Europa | Customizado |
-| HKG02 | Hong Kong | Ásia Pacífico | Customizado |
-| LON02 | Londres | Europa | Customizado |
-| LON04 | Londres | Europa | Customizado |
-| LON06 | Londres | Europa | Customizado, Pequeno, Grande |
-| MEL01 | Melbourne | Ásia Pacífico | Customizado |
-| MEX01 | Querétaro | NA Sul | Customizado |
-| MIL01 | Milão | Europa | Customizado |
-| MON01 | Montreal | NA Leste | Customizado |
-| OSL01 | Oslo | Europa | Customizado |
-| PAR01 | Paris | Europa | Customizado |
-| SAO01 | São Paulo | América do Sul | Customizado |
-| SEO01 | Seul | Ásia Pacífico | Customizado |
-| SJC03 | São José | Oeste ND | Customizado |
-| SJC04 | São José | Oeste ND | Customizado |
-| SNG01 | Cingapura | Ásia Pacífico | Customizado |
-| SYD01 | Sydney | Ásia Pacífico | Customizado |
-| SYD04 | Sydney | Ásia Pacífico | Customizado |
-| TOK02 | Tóquio | Ásia Pacífico | Customizado |
-| TOR01 | Toronto | NA Leste | Customizado, Pequeno, Grande |
-| WDC04 | Washington, DC | NA Leste | Customizado, Pequeno, Grande |
-| WDC06 | Washington, DC | NA Leste | Customizado |
-| WDC07 | Washington, DC | NA Leste | Customizado |
+| AMS03 | Amsterdã | Europa | Skylake, Broadwell |
+| CHE01 | Chennai | Ásia Pacífico | Skylake, Broadwell |
+| DAL09 | Dallas | NA Sul | Skylake, Broadwell |
+| DAL10 | Dallas | NA Sul | Skylake, Broadwell, Small, Large |
+| DAL12 | Dallas | NA Sul | Skylake, Broadwell |
+| DAL13 | Dallas | NA Sul | Skylake, Broadwell |
+| FRA02 | Frankfurt | Europa | Skylake, Broadwell, Large |
+| FRA04 | Frankfurt | Europa | Skylake, Broadwell |
+| HKG02 | Hong Kong | Ásia Pacífico | Skylake, Broadwell |
+| LON02 | Londres | Europa | Skylake, Broadwell |
+| LON04 | Londres | Europa | Skylake, Broadwell |
+| LON06 | Londres | Europa | Skylake, Broadwell, Small, Large |
+| MEL01 | Melbourne | Ásia Pacífico | Skylake, Broadwell |
+| MEX01 | Querétaro | NA Sul | Skylake, Broadwell |
+| MIL01 | Milão | Europa | Skylake, Broadwell |
+| MON01 | Montreal | NA Leste | Skylake, Broadwell |
+| OSL01 | Oslo | Europa | Skylake, Broadwell |
+| PAR01 | Paris | Europa | Skylake, Broadwell |
+| SAO01 | São Paulo | América do Sul | Skylake, Broadwell |
+| SEO01 | Seul | Ásia Pacífico | Skylake, Broadwell |
+| SJC03 | São José | Oeste ND | Skylake, Broadwell |
+| SJC04 | São José | Oeste ND | Skylake, Broadwell |
+| SNG01 | Cingapura | Ásia Pacífico | Skylake, Broadwell |
+| SYD01 | Sydney | Ásia Pacífico | Skylake, Broadwell |
+| SYD04 | Sydney | Ásia Pacífico | Skylake, Broadwell |
+| TOK02 | Tóquio | Ásia Pacífico | Skylake, Broadwell |
+| TOR01 | Toronto | NA Leste | Skylake, Broadwell, Small, Large |
+| WDC04 | Washington, DC | NA Leste | Skylake, Broadwell, Small, Large |
+| WDC06 | Washington, DC | NA Leste | Skylake, Broadwell |
+| WDC07 | Washington, DC | NA Leste | Skylake, Broadwell |
 
 Dependendo da disponibilidade e do fornecimento do inventário, o {{site.data.keyword.CloudDataCents_notm}} pode exibir um indicador de status no console do {{site.data.keyword.vmwaresolutions_short}} para ajudá-lo a planejar suas implementações.
 

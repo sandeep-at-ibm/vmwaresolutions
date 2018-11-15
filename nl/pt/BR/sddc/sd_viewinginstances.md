@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visualizando instâncias do Cloud Foundation
 
@@ -113,7 +117,8 @@ Se ocorrerem erros durante a implementação ou exclusão da instância, a equip
 
 Gerencie suas instâncias do console do {{site.data.keyword.vmwaresolutions_short}} ou do vSphere Web Client.
 
-**Importante:** antes de clicar no **Console do vCenter** na página de resumo da instância para acessar o vSphere Web Client e iniciar o gerenciamento de seus servidores ESXi, deve-se efetuar login no portal VPN do {{site.data.keyword.CloudDataCent_notm}}. Passe o mouse sobre o botão do console do vCenter e siga as instruções para assegurar que você atenda a todos os requisitos e que tenha concluído as etapas necessárias antes de acessar o vSphere Web Client.
+Antes de clicar no **Console do vCenter** na página de resumo da instância para acessar o Web client do vSphere e começar a gerenciar seus servidores ESXi, deve-se efetuar login no portal VPN do {{site.data.keyword.CloudDataCent_notm}}. Passe o mouse sobre o botão do console do vCenter e siga as instruções para assegurar que você atenda a todos os requisitos e que tenha concluído as etapas necessárias antes de acessar o vSphere Web Client.
+{:important}
 
 Revise os tópicos a seguir para obter informações que ajudarão a concluir as instruções de login:
 
