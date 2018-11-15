@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-27"
 
 Você é responsável pela configuração, o gerenciamento e o monitoramento de todos os componentes de software, incluindo o backup e a disponibilidade de sua infraestrutura de gerenciamento e de cargas de trabalho.
 
-Como parte da solução, é possível implementar opcionalmente os serviços de complemento {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}}. O Veeam e o IBM Spectrum Protect Plus podem ajudar a satisfazer o requisito para fazer backup dos componentes de gerenciamento.
+Como parte da solução, é possível implementar opcionalmente os serviços de complemento IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}}. O Veeam e o IBM Spectrum Protect Plus podem ajudar a satisfazer o requisito para fazer backup dos componentes de gerenciamento.
 
 Esses serviços de complemento são implementados juntos com o armazenamento do {{site.data.keyword.cloud_notm}} Endurance. Os serviços ajudam a fazer backup de suas cargas de trabalho e dos componentes de gerenciamento. A [Visão geral da arquitetura do IBM Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} e a [Visão geral da arquitetura do Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} fornecem orientação útil sobre planejamento e dimensionamento de sua implementação. Também é possível solicitar [serviços gerenciados](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) para a sua implementação do Veeam.
 
@@ -34,7 +34,10 @@ Para hospedar esses backups, implemente um servidor de arquivos Linux em seu clu
 
 O VMware vCenter Server e o PSC fornecem uma [interface com o usuário de gerenciamento de dispositivo e API para exportar o banco de dados e a configuração para um servidor de arquivos](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} usando vários protocolos. O VMware documenta um exemplo de como é possível configurar isso para [ ser executado periodicamente como uma tarefa cron](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} diretamente no vCenter Server Appliance e no PSC, que você pode adaptar para seu uso.
 
-Deve-se fazer backup do vCenter Server Appliance e do PSC separadamente usando essa técnica. Familiarize-se e planeje as considerações e limitações documentadas pelo VMware. Além disso, planeje uma rotação e expiração regulares dos backups de arquivos em seu servidor de arquivos. Observe que o VMware requer que o local de backup seja uma pasta vazia, portanto, é necessário planejar a sua rotação de backup ou automação para deixar o local vazio para cada tarefa de backup subsequente.
+Deve-se fazer backup do vCenter Server Appliance e do PSC separadamente usando essa técnica. Familiarize-se e planeje as considerações e limitações documentadas pelo VMware. Além disso, planeje uma rotação e expiração regulares dos backups de arquivos em seu servidor de arquivos.
+
+O VMware requer que o local de backup seja uma pasta vazia, portanto, planeje a sua rotação de backup ou automação para deixar o local vazio para cada tarefa de backup subsequente.
+{:note}
 
 ## Backup baseado em arquivo NSX
 
