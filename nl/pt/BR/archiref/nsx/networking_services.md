@@ -4,15 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Serviços de rede no IBM Cloud
 
 Os serviços de rede no {{site.data.keyword.cloud}} consistem em dois pares de Edge Services Gateways (ESGs) do VMware NSX para comunicação entre o {{site.data.keyword.cloud_notm}} e a Internet pública ou a rede no local do cliente por meio de uma Rede Privada Virtual (VPN). Esses ESGs são segregados para suportar a função de gerenciamento interno do {{site.data.keyword.cloud_notm}}, o tráfego egresso e o ingresso do tráfego de rede relacionado ao cliente.
 
-O gráfico a seguir é um diagrama de rede simplificado, que descreve o par de gerenciamento e o par de ESGs de carga de trabalho. Ele também mostra um NSX Distributed Logical Router (DLR) e uma VXLAN de carga de trabalho. Esses componentes são destinados a ser um ponto de entrada inicial para cargas de trabalho do cliente sem requerer o conhecimento específico para configurá-las no NSX. Um DLR é geralmente empregado para rotear o tráfego entre o VMware Cloud Foundation ou o VMware vCenter Server e o tráfego Leste-Oeste, entre as redes separadas da camada 2 dentro da instância. Esse comportamento é em contraste com um ESG, que funciona para facilitar o tráfego de rede Norte-Sul dentro e fora da instância do Cloud Foundation ou do vCenter Server.
+O gráfico a seguir é um diagrama de rede simplificado, que descreve o par de gerenciamento e o par de ESGs de carga de trabalho. Ele também mostra um NSX Distributed Logical Router (DLR) e uma VXLAN de carga de trabalho. Esses componentes são destinados a ser um ponto de entrada inicial para cargas de trabalho do cliente sem requerer o conhecimento específico para configurá-las no NSX. Um DLR é geralmente empregado para rotear o tráfego entre o VMware Cloud Foundation ou o VMware vCenter Server e o tráfego Leste-Oeste, entre as redes separadas da camada 2 dentro da instância. Esse comportamento é em contraste com um ESG, que funciona para facilitar o tráfego de rede Norte-Sul que atravessa dentro e fora da instância do Cloud Foundation ou do vCenter Server.
 
 Figura 1. Serviços de rede de nuvem no Cloud Foundation
 
@@ -20,7 +24,8 @@ Figura 1. Serviços de rede de nuvem no Cloud Foundation
 
 Embora um único ESG possa ser suficiente para o tráfego de carga de trabalho de gerenciamento e do cliente, a separação do tráfego de gerenciamento e do cliente é uma decisão de design feita para evitar a configuração incorreta acidental do ESG de gerenciamento.
 
-**Nota:** a configuração incorreta ou a desativação do ESG de gerenciamento não impede o funcionamento da instância do Cloud Foundation ou do vCenter Server, mas desativa todas as funções de gerenciamento do portal.
+A configuração incorreta ou a desativação do ESG de gerenciamento não impede o funcionamento da instância do Cloud Foundation ou do vCenter Server, mas desativa todas as funções de gerenciamento do portal.
+{:note}
 
 ## NSX Edge de serviços de gerenciamento IBM
 
@@ -38,14 +43,15 @@ Tabela 1. Especificações do NSX ESG de gerenciamento IBM
 
 | NSX Edge de gerenciamento IBM | vCPU | Memória | Tamanho do disco | Local de armazenamento |
 |:----------------------- |:---- |:------ |:--------- |:---------------- |
-| NSX ESG de gerenciamento IBM 1 | 2 | 1 GB | 1 GB | Armazenamento de dados vSAN (Cloud Foundation); armazenamento anexado compartilhado para gerenciamento (vCenter Server) |
-| NSX ESG de gerenciamento IBM 2 | 2 | 1 GB | 1 GB | Armazenamento de dados vSAN (Cloud Foundation); armazenamento anexado compartilhado para gerenciamento (vCenter Server) |
+| NSX ESG de gerenciamento IBM 1 | 2 | 1 GB | 1 GB | Armazenamento de dados vSAN (Cloud Foundation); Armazenamento conectado compartilhado para gerenciamento (vCenter Server) |
+| NSX ESG de gerenciamento IBM 2 | 2 | 1 GB | 1 GB | Armazenamento de dados vSAN (Cloud Foundation); Armazenamento conectado compartilhado para gerenciamento (vCenter Server) |
 
 ### Serviços de gerenciamento
 
 O acesso de saída é necessário para os serviços a seguir:
 
 * Zerto Virtual Manager. Se instalado, o Zerto on {{site.data.keyword.cloud_notm}} requer acesso de saída para a Internet para ativação de licenciamento e relatório de uso.
+* Backup e replicação do Veeam. Se instalado, o Veeam on {{site.data.keyword.cloud_notm}} requer acesso de saída para a Internet para fazer download das atualizações de produto e de licença.
 * O FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} requer acesso de saída para a Internet para ativação de licenciamento e monitoramento de licenciamento.
 * O F5 on {{site.data.keyword.cloud_notm}} requer acesso de saída para a Internet para ativação de licenciamento.
 
@@ -57,9 +63,9 @@ Tabela 2. Configuração da interface NSX ESG
 
 | Interface | Tipo de interface | Conectado ao | Descrição |
 |:--------- |:-------------- |:------------ |:----------- |
-| Uplink público | Uplink | SDDC-DportGroup-External | Interface pública voltada à Internet |
-| Uplink privado | Uplink | SDDC-DportGroup-Mgmt | Interface voltada à rede privada interna |
-| Interno | Interno | Workload HA VXLAN | Interface interna usada para pulsação do par de HA do ESG; portgroup em SDDC-Dswitch-Private |
+| Uplink público | Uplink | **SDDC-DportGroup-External** | Interface voltada à Internet pública |
+| Uplink privado | Uplink | **SDDC-DportGroup-Mgmt** | Interface voltada à rede privada interna |
+| Interno | Interno | Workload HA VXLAN | Interface interna usada para pulsação de par de HA do ESG; grupo da porta em **SDDC-Dswitch-Private** |
 
 ### Subnets
 
@@ -69,8 +75,8 @@ Tabela 3. Configuração de IP do NSX ESX
 
 | Interface | Tipo de interface | Tipo de sub-rede do IP v4 | Intervalo | Descrição |
 |:--------- |:-------------- |:----------------- |:----- |:----------- |
-| Uplink público | Uplink |Pública móvel do {{site.data.keyword.cloud_notm}} | /30 – renderiza um endereço IP designável | Interface pública voltada à Internet |
-| Uplink privado | Uplink |Privada móvel do {{site.data.keyword.cloud_notm}} (gerenciamento existente) | /26 – renderiza 61 endereços IP designáveis | Interface voltada à rede privada interna |
+| Uplink público | Uplink | Pública móvel do {{site.data.keyword.cloud_notm}} | /30 – renderiza um endereço IP designável | Interface pública voltada à Internet |
+| Uplink privado | Uplink | Privada móvel do {{site.data.keyword.cloud_notm}} (gerenciamento existente) | /26 – renderiza 61 endereços IP designáveis | Interface voltada à rede privada interna |
 | Interno | Interno | Link local | 169.254.0.0/ 16 | Interface interna usada para comunicação de pares de HA do ESG |
 
 ### Definições de Conversão de Endereço de Rede
@@ -81,7 +87,7 @@ Tabela 4. Configuração NAT do NSX ESG
 
 | Aplicado na interface | Intervalo IP de origem | IP de origem convertida |
 |:-------------------- |:--------------- |:-------------------- |
-| Uplink público | Endereços IP individuais no Gerenciamento Móvel /26 |Público móvel do {{site.data.keyword.cloud_notm}}  |
+| Uplink público | Endereços IP individuais no Gerenciamento Móvel /26 | Pública móvel do {{site.data.keyword.cloud_notm}} |
 
 ### Roteamento
 
@@ -120,6 +126,7 @@ Tabela 6. Configuração de firewall NSX ESG
 | Serviço | Origem | Destino | Protocolo | Ação |
 |:------- |:------ |:----------- |:-------- |:------ |
 | Zerto on {{site.data.keyword.cloud_notm}} | Zerto Management VM | Qualquer | Porta 443 | Permitir |
+| Veeam on {{site.data.keyword.cloud_notm}} | VM de Backup e Replicação do Veeam | Qualquer | Porta 443 | Permitir |
 | FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} | VMs de serviço | Qualquer | Porta 443 | Permitir |
 | F5 on {{site.data.keyword.cloud_notm}} | VMs de serviço | Qualquer | Porta 443 | Permitir |
 | Qualquer | Qualquer | Qualquer | Qualquer | Negar |
@@ -147,12 +154,12 @@ Tabela 7. Configuração da interface do Workload Edge
 
 | Interface | Tipo de interface | Conectado ao | Descrição |
 |:--------- |:-------------- |:------------ |:----------- |
-| Uplink público | Uplink | SDDC-DportGroup-External | Interface pública voltada à Internet |
+| Uplink público | Uplink | SDDC-DportGroup-External | Interface voltada à Internet pública |
 | Uplink privado | Uplink | SDDC-DportGroup-Mgmt | Interface voltada à rede privada interna |
 | Transit Uplink | Uplink | Workload-Trasit | VXLAN de trânsito entre o ESG da carga de trabalho e o DLR da carga de trabalho |
 | Interno | Interno | Workload HA VXLAN | Interface interna usada para pulsação de pares de HA do ESG |
 
-Nesse design, um DLR é empregado para permitir o roteamento Leste-Oeste em potencial entre as redes L2 conectadas da carga de trabalho local. Como essa topologia se destina a ser um exemplo simples, somente uma rede L2 destinada a cargas de trabalho é descrita. A inclusão de zonas de segurança adicionais pode ser alcançada simplesmente incluindo VXLANs adicionais conectadas a novas interfaces no DLR. A seguir estão as interfaces do DLR para configurar:
+Nesse design, um DLR é empregado para permitir o roteamento Leste-Oeste em potencial entre as redes L2 conectadas da carga de trabalho local. Como essa topologia se destina a ser um exemplo simples, somente uma rede L2 que está destinada a cargas de trabalho é descrita. A inclusão de mais zonas de segurança pode ser alcançada incluindo mais VXLANs conectadas a novas interfaces no DLR. A tabela a seguir mostra as interfaces DLR a serem configuradas:
 
 Tabela 8. interfaces DLR
 
@@ -170,8 +177,8 @@ Tabela 9. Configuração de DLR e de IP do ESG de Carga de Trabalho
 
 | Interface | Tipo de interface | Tipo de sub-rede do IP v4 | Intervalo | Descrição |
 |:--------- |:-------------- |:----------------- |:----- |:----------- |
-| Uplink Público (ESG) | Uplink |Pública móvel do {{site.data.keyword.cloud_notm}} | /30 – renderiza um endereço IP designável | Interface pública voltada para a Internet (o cliente pode pedir IPs adicionais separadamente) |
-| Uplink privado (ESG) | Uplink |Privada móvel do {{site.data.keyword.cloud_notm}} (gerenciamento existente) | /26 – renderiza 61 endereços IP designáveis | Interface voltada à rede privada interna |
+| Uplink Público (ESG) | Uplink | Pública móvel do {{site.data.keyword.cloud_notm}} | /30 – renderiza um endereço IP designável | Interface voltada à Internet pública (o cliente pode pedir mais endereços IP separadamente) |
+| Uplink privado (ESG) | Uplink | Privada móvel do {{site.data.keyword.cloud_notm}} (gerenciamento existente) | /26 – renderiza 61 endereços IP designáveis | Interface voltada à rede privada interna |
 | Interno (ESG e DLR) | Interno | Link local | 169.254.0.0/ 16 | Interface interna usada para comunicação de pares de HA do ESG |
 | Transit Uplink (ESG e DLR) | Uplink | Designado pelo cliente | TBD | Conexão de rede de trânsito de ESG para DLR |
 | Carga de trabalho (DLR) | Uplink | Designado pelo cliente | TBD | Sub-rede de carga |
@@ -180,7 +187,7 @@ Tabela 9. Configuração de DLR e de IP do ESG de Carga de Trabalho
 
 A NAT é empregada no ESG de Carga de Trabalho para permitir que o tráfego de rede atravesse em um espaço de endereço IP e outro. Para o ESG de carga de trabalho, a NAT é necessária não somente para permitir a comunicação com destinos da Internet, mas também para comunicar-se com qualquer intervalo de IP de origem do {{site.data.keyword.cloud_notm}}. Para esse design, o tráfego de carga de trabalho tem permissão para sair para a Internet, mas não para o gerenciamento ou quaisquer redes do {{site.data.keyword.cloud_notm}}. Como tal, somente uma SNAT precisa ser definida no ESG da Carga de Trabalho. Observe que a sub-rede móvel de carga de trabalho inteira é configurada para atravessar a SNAT.
 
-Embora seja possível usar a NAT para permitir a comunicação de carga de trabalho entre múltiplas instâncias do Cloud Foundation ou do vCenter Server, isso se torna impraticável quando muitas cargas de trabalho precisam ser conectadas entre instâncias. Para obter exemplos de uso de recursos NSX avançados para criar uma rede de trânsito de sobreposição L2 ao longo das instâncias do Cloud Foundation ou do vCenter Server, veja [Arquitetura multisite](multi_site.html).
+Embora seja possível usar NAT para permitir a comunicação de carga de trabalho entre múltiplas instâncias do Cloud Foundation ou do vCenter Server, isso se torna impraticável quando muitas cargas de trabalho precisam ser conectadas entre as instâncias. Para obter exemplos de uso de recursos NSX avançados para criar uma rede de trânsito de sobreposição L2 ao longo das instâncias do Cloud Foundation ou do vCenter Server, veja [Arquitetura multisite](multi_site.html).
 
 Tabela 10. Regras NAT do Workload ESG
 
@@ -190,7 +197,7 @@ Tabela 10. Regras NAT do Workload ESG
 
 ### Roteamento para o NSX Edge de carga de trabalho IBM
 
-Dentro desse design, o único requisito para cargas de trabalho que atravessam o DLR para o ESG de carga de trabalho é acessar a Internet. O ESG de Carga de Trabalho precisa entender o caminho para a VXLAN de carga de trabalho e quaisquer futuras VXLAN/sub-redes de carga de trabalho criadas por trás do DLR. Embora isso possa ser alcançado por meio de rotas estáticas no ESG, a intenção da topologia de carga de trabalho é a de um design de melhor prática demonstrado. Portanto, o Open Shortest Path First (OSPF) é configurado entre o ESG de Carga de Trabalho e o DLR de recebimento de dados.
+Dentro desse design, o único requisito para cargas de trabalho que atravessam o DLR para o ESG de carga de trabalho é acessar a Internet. O ESG de Carga de Trabalho precisa entender o caminho para a VXLAN de carga de trabalho e quaisquer futuras VXLAN/sub-redes de carga de trabalho criadas por trás do DLR. Embora isso possa ser alcançado por meio de rotas estáticas no ESG, a intenção da topologia de carga de trabalho é a de um design de melhor prática demonstrada. Portanto, o Open Shortest Path First (OSPF) é configurado entre o ESG de Carga de Trabalho e o DLR de recebimento de dados.
 
 Para obter mais informações sobre a configuração, veja [Configurar o protocolo OSPF](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-6E985577-3629-42FE-AC22-C4B56EFA8C9B.html).
 
@@ -217,15 +224,15 @@ Tabela 12. Regras de firewall do Workload ESG
 
 ### Definições de VXLAN para o NSX Edge de carga de trabalho IBM
 
-Os pares de HA de ESG e DLR da topologia de carga de trabalho requerem segmentos L2 (VXLAN) para a conexão das interfaces internas, o trânsito de dados entre os dois e, por fim, para cargas de trabalho.
+Os pares de HA de topologia de carga de trabalho ESG e DLR requerem segmentos L2 (VXLAN) para a conexão das interfaces internas, para o trânsito de dados entre os dois e para cargas de trabalho.
 
 Tabela 13. Interfaces internas do Workload ESG
 
 | Nome do VXLAN | Zona de transporte do Cloud Foundation ou vCenter Server | Tipo |
 |:---------- |:------------------------------------------------- |:---- |
-| Workload HA | transitório -1 | global |
-| Carga de trabalho | transitório -1 | global |
-| Carga de trabalho | transitório -1 | global |
+| Workload HA | transitório -1 | Global |
+| Carga de trabalho | transitório -1 | Global |
+| Carga de trabalho | transitório -1 | Global |
 
 ### Configurações de ESG DLR para o NSX Edge de carga de trabalho IBM
 

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-01"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Design do NSX Edge Services Gateway
 
@@ -16,7 +20,8 @@ A solução NSX Edge Services Gateway on {{site.data.keyword.cloud}} fornece tec
 
 A arquitetura interna especifica a implementação dos componentes necessários do NSX Edge em um conjunto de recursos em um cluster convergido do VMware Cloud Foundation ou em um cluster do VMware vCenter Server.
 
-**Nota:** o VMware vSAN é opcional na figura a seguir.
+O VMware vSAN é opcional na figura a seguir.
+{:note}
 
 Figura 1. Serviços de rede de nuvem no {{site.data.keyword.cloud_notm}}
 
@@ -24,7 +29,7 @@ Figura 1. Serviços de rede de nuvem no {{site.data.keyword.cloud_notm}}
 
 ## Design de arquitetura dedicada
 
-A arquitetura dedicada implementa os componentes necessários do NSX Edge em um cluster vSphere de dois nós separados que é dedicado ao uso do NSX Edge, fornecendo interação crítica com a infraestrutura de rede física. A arquitetura dedicada tem as características e funções a seguir:
+A arquitetura dedicada implementa os componentes necessários do NSX Edge em um cluster do vSphere de dois nós separados que é dedicado ao uso do NSX Edge, fornecendo interação crítica com a infraestrutura de rede física. A arquitetura dedicada tem as características e funções a seguir:
 
 * Fornece conectividade de via de acesso de entrada e via de acesso de saída para redes físicas. Por exemplo, roteamento Norte-Sul L3 nos dispositivos virtuais NSX Edge.
 * Permite a comunicação com dispositivos físicos que são conectados a VLANs nas redes físicas por meio da ponte NSX L2 e hospeda a máquina virtual (VM) de controle para roteamento do Distributed Logical Router (DLR).
