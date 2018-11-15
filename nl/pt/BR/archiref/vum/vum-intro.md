@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -17,14 +17,14 @@ O VUM permite o gerenciamento de correção e versão automatizado e centralizad
 * Instalar e atualizar o software de terceiros nos hosts.
 * Faça upgrade do hardware da máquina virtual, do VMware Tools e dos dispositivos virtuais.
 
-Observe que este documento também descreve os processos para manter os componentes a seguir de sua instância do VCS:
+Este documento também descreve os processos para manter os componentes a seguir de sua instância do VCS:
 * vCenter Server Appliance
 * NSX
 * vSAN
 
 Este documento descreve o uso de uma implementação do servidor proxy, com base no CentOS e Squid, para permitir que o VUM acesse os repositórios do VMware. Quando um VUM solicita um recurso do servidor de atualização no VMware, a solicitação é enviada para o servidor proxy primeiro e o servidor proxy, em seguida, envia a solicitação para o servidor de atualização por meio do External Services Gateway (ESG). Depois que o recurso é obtido pelo servidor proxy, ele envia o recurso para VUM.
 
-![Overview_Diagram](vum-vcsproxy.svg)
+Figura 1. Diagrama de visão geral  ![Overview diagram](vum-vcsproxy.svg)
 
 O VCS implementa atualmente o vSphere 6.5, que significa que o VUM agora está integrado ao vCenter Server Appliance (VCSA) e, como o componente do cliente VUM é um plug-in que é executado no vSphere Web Client, ele é ativado automaticamente após a implementação do VCSA. No entanto, o VUM não terá acesso à Internet para acessar os repositórios do VMware.
 
@@ -37,18 +37,18 @@ Embora o VUM possa ser configurado para importar atualizações de um repositór
 Portanto, observe que, no vSphere 6.5, não é mais suportado registrar o VUM em um VCSA. Durante a instalação do servidor VUM em uma máquina Windows separada não será possível implementar o VUM em uma VM dentro do ambiente do VCS.
 
 Este documento é organizado nas seções a seguir:
-* [Visão geral do VUM](vum-overview.html) - esta seção descreve o processo do VUM e introduz termos chave que são necessários para entender as operações e a UI da ferramenta
+* [Visão geral do VMware Update Manager](vum-overview.html) - esta seção descreve o processo do VUM e introduz termos chave que são necessários para entender as operações e a UI da ferramenta
 * **Instalação, configuração e uso** - esta seção descreve as etapas que são necessárias para ter o VUM funcionando em uma instância do VCS:
   - [Configuração inicial](vum-init-config.html) - uma tarefa única para:
       - Configurar a rede NSX para permitir que o servidor proxy acesse a Internet
       - Instalar e configurar um servidor proxy para fornecer acesso à Internet para o VUM
       - A configuração inicial do VUM para usar o servidor proxy
-  - [Coleta de metadados](vum-metadata.html) - o VUM faz download de metadados sobre os upgrades, correções ou extensões por meio de um processo automático predefinido que pode ser modificado. Em intervalos configuráveis regulares, o VUM entra em contato com o VMware, ou origens de terceiros, para reunir os metadados mais recentes sobre upgrades, correções ou extensões disponíveis
-  - [Criar linhas de base e anexar a Objetos de Inventário](vum-baselines.html) - use as linhas de base e os grupos de linhas de base predefinidos ou crie os customizados. As linhas de base e os grupos de linhas de base são, então, anexados a objetos de inventário
+  - [Coletando os metadados](vum-metadata.html) - o VUM faz download de metadados sobre os upgrades, as correções ou as extensões por meio de um processo automático predefinido que pode ser modificado. Em intervalos configuráveis regulares, o VUM entra em contato com o VMware, ou origens de terceiros, para reunir os metadados mais recentes sobre upgrades, correções ou extensões disponíveis
+  - [Criando linhas de base](vum-baselines.html) - use as linhas de base predefinidas e os grupos de linhas de base ou crie os customizados. As linhas de base e os grupos de linhas de base são, então, anexados a objetos de inventário
   - [Varredura e revisão](vum-scanning.html) - os objetos de inventário são varridos e os resultados são revisados para determinar como eles obedecem às linhas de base e aos grupos de linhas de base. Os resultados da varredura podem ser filtrados por procura de texto, seleção de grupo, seleção de linha de base e seleção de status de conformidade
   - [Preparação e correção](vum-staging.html) - as correções e extensões podem ser opcionalmente montadas antes da correção para assegurar que sejam transferidas por download para o host. Durante a correção, o VUM aplica as correções, as extensões e os upgrades aos objetos de inventário
 
-Este documento supõe que você tenha uma instância primária do VCS implementada ou várias instâncias primárias do VCS separadas. Se você tiver instâncias do VCS primárias e secundárias implementadas e estiver, portanto, usando a Conexão única (SSO), veja [vCenters vinculados à SSO](vum-updating-vcsa.html).
+Este documento supõe que você tenha uma instância primária do VCS implementada ou várias instâncias primárias do VCS separadas. Se você tiver instâncias do VCS primárias e secundárias implementadas e, portanto, estiver usando a Conexão Única (SSO), veja [vCenters vinculados à SSO](vum-updating-vcsa.html).
 
 Se você implementou um VCS usando vSAN, veja [Atualizando clusters vSAN](vum-updating-vsan.html) primeiro.
 
@@ -64,5 +64,5 @@ Esse recurso ativa a atualização automatizada para os componentes de gerenciam
 
 ### Links relacionados
 
-* [ VMware HCX on IBM Cloud Solution ](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [Soluções VMware no IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -20,8 +20,8 @@ Essas atualizações recomendadas fornecem a melhor liberação disponível para
 O upgrade do cluster vSAN continua na sequência de tarefas a seguir:
 * **Ativar o fluxo de trabalho Funcionamento on-line do vSAN** - esse fluxo de trabalho ativa as linhas de base do vSAN no VUM para que as atualizações possam ser revisadas e corrigidas. Isso precisa ser realizado inicialmente somente para ativar o vSAN com o VUM
 * **Pré-requisitos** – entenda os pré-requisitos, o processo e as restrições
-* ** Fazer upgrade do vCenter Server Appliance **. Para obter mais informações, veja [Atualização do VCSA e vCenters vinculados por SSO](vum-updating-vcsa.html).
-* **Fazer upgrade dos hosts vSphere ESXi** - para obter mais informações, veja [Criar linhas de base e anexar a objetos de inventário](vum-baselines.html).
+* ** Fazer upgrade do vCenter Server Appliance **. Para obter mais informações, consulte [Atualização do VCSA e vCenters vinculados por SSO](vum-updating-vcsa.html).
+* **Fazer upgrade dos hosts vSphere ESXi** – para obter mais informações, veja [Criando linhas de base e anexando a objetos de inventário](vum-baselines.html).
 * **Fazer upgrade do formato de disco vSAN** - consulte Fazer upgrade do formato de disco vSAN. O upgrade do formato de disco é opcional, mas, para obter melhores resultados, faça upgrade dos objetos para usar a versão mais recente. O formato no disco expõe seu ambiente ao conjunto de recursos completo de vSAN.
 
 ## Ativar o fluxo de trabalho de funcionamento on-line do vSAN
@@ -30,9 +30,9 @@ Seguir as tarefas nesta seção tornarão as linhas de base do vSAN disponíveis
 * **Recomendações de versão do vSAN** - geradas automaticamente usando informações do VMware Compatibility Guide, do catálogo de liberações do vSAN e do reconhecimento da configuração de hardware subjacente. Isso também inclui os drivers necessários e as atualizações de correção para a liberação recomendada em sua linha de base do sistema.
 * **Recomendações de construção do vSAN** - assegura que os clusters permaneçam no status de compatibilidade de hardware atual ou melhor.
 
-Assegure-se de que o VCSA seja o vCenter 6.5 Correção 2 ou a versão mais recente antes de continuar, pois isso corrige alguns problemas de uso de proxy. Para obter mais informações, veja [Atualização do VCSA e vCenters vinculados por SSO](vum-updating-vcsa.html).
+Assegure-se de que o VCSA seja o vCenter 6.5 Correção 2 ou a versão mais recente antes de continuar, pois isso corrige alguns problemas de uso de proxy. Para obter mais informações, consulte [Atualização do VCSA e vCenters vinculados por SSO](vum-updating-vcsa.html).
 
-Para ver as atualizações do vSAN no VUM, o fluxo de trabalho Funcionamento on-line do vSAN é seguido. Portanto, o Funcionamento on-line do vSAN precisa se conectar a https://vcsa.vmware.com e http://www.vmware.com para executar essas verificações de funcionamento on-line. Para ativar o fluxo de trabalho Funcionamento on-line do vSAN, precisamos:
+Para ver as atualizações do vSAN no VUM, o fluxo de trabalho Funcionamento on-line do vSAN é seguido. Portanto, o Funcionamento on-line do vSAN precisa se conectar aos sites `vcsa.vmware.com` e `vmware.com` para executar essas verificações de funcionamento on-line. Para ativar o fluxo de trabalho Funcionamento on-line do vSAN, precisamos:
 * Configurar o VCSA para usar o proxy.
 * Configurar o vSAN para usar o proxy.
 * Ativar o Customer Experience Improvement Program (CEIP).
@@ -54,7 +54,7 @@ Se os parâmetros HTTPS não estiverem configurados, use o comando a seguir:
    `proxy.set --protocol https --server ``<proxy ip>` `  -- port 3128 `
 
 ### Configure o vSAN para usar o proxy
-1. Navegue para **Página inicial** > **Hosts e clusters**, selecione o **Cluster vSAN** na área de janela de Navegação e, em seguida, selecione a **guia Configurar** e navegue para **vSAN** e, em seguida, **Geral**. Role até a seção Conectividade de Internet e clique em **Editar**.
+1. Navegue para **Página inicial** > **Hosts e clusters**, selecione o **Cluster vSAN** na área de janela de Navegação e, em seguida, selecione a **guia Configurar** e navegue para **vSAN** e, em seguida, **Geral**. Role para a seção **Conectividade de Internet** e clique em **Editar**.
 2. Insira o endereço IP e o número da porta do proxy, clique em **OK**.
 
 ### Ativar o Customer Experience Improvement Program (CEIP)
@@ -94,11 +94,11 @@ Antes de iniciar o processo de upgrade do vSAN, assegure-se de que os requisitos
 
 ## Fazer upgrade do vCenter Server Appliance
 
-Para obter mais informações, veja [Atualização do VCSA e vCenters vinculados por SSO](vum-updating-vcsa.html).
+Para obter mais informações, consulte [Atualização do VCSA e vCenters vinculados por SSO](vum-updating-vcsa.html).
 
 ##	Fazer upgrade dos hosts do vSphere ESXi
 
-Para obter mais informações, veja [Criar linhas de base e anexar a objetos de inventário](vum-baselines.html).
+Para obter mais informações, veja [Criando linhas de base e conectando a objetos de inventário](vum-baselines.html).
 
 ##	Fazer upgrade do formato de disco vSAN
 
@@ -136,5 +136,5 @@ Muitas tarefas administrativas básicas podem ser feitas muito mais eficientemen
 
 ### Links relacionados
 
-* [ VMware HCX on IBM Cloud Solution ](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [Soluções VMware no IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
