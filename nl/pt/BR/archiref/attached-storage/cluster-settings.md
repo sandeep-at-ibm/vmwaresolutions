@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -18,7 +18,7 @@ Há dois recursos principais que são ativados ao habilitar o vSphere DRS em um 
 
 ### Balanceamento de Car
 
-Com o balanceamento de carga, a distribuição e o uso de recursos de CPU e de memória para todos os hosts e máquinas virtuais (VMs) no cluster são monitorados continuamente. O DRS compara essas métricas com uma utilização ideal de recursos, dados os atributos dos conjuntos de recursos e das VMs do cluster, a demanda atual e o destino de desequilíbrio. Ele, então, executa (ou recomenda) migrações da VM adequadamente.
+Com o balanceamento de carga, a distribuição e o uso de recursos de CPU e de memória para todos os hosts e máquinas virtuais (VMs) no cluster são monitorados continuamente. O DRS compara essas métricas a uma utilização ideal de recursos, considerando os atributos dos conjuntos de recursos e de VMs do cluster e a demanda atual. Em seguida, ele executa ou recomenda migrações de VM de acordo.
 
 Quando uma VM é ligada pela primeira vez no cluster, o DRS tenta manter um balanceamento de carga adequado, colocando a VM em um host apropriado ou fazendo uma recomendação. As configurações de posicionamento ou de recomendação são configuradas na seção Automação do DRS das configurações de cluster.
 
@@ -84,7 +84,7 @@ Para obter mais informações sobre como configurar essas definições no vSpher
 
 O vCenter Server usa o controle de admissão para assegurar que recursos suficientes estejam disponíveis em um cluster para fornecer proteção contra failover e assegurar que as reservas de recursos da VM sejam respeitadas. Nesse design, a capacidade de failover é reservada especificando uma porcentagem dos recursos de cluster. A capacidade de failover definida é configurada como 25% de CPU e 25% de memória.
 
-#### Datastore para Pulsação
+#### Datastore para pulsação
 
 O vSphere HA usa a pulsação de armazenamento de dados para distinguir entre hosts que falharam e hosts que residem em uma partição da rede. A pulsação de armazenamento de dados permite que o vSphere HA monitore os hosts quando ocorre uma partição da rede de gerenciamento e continue a responder a falhas que ocorrem. Nesse design, a política de seleção de armazenamento de dados de pulsação é configurada como "Selecionar automaticamente os armazenamentos de dados acessíveis por meio do host".
 
