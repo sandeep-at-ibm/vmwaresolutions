@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 訂購 FortiGate Virtual Appliance on IBM Cloud
 
@@ -28,6 +32,16 @@ lastupdated: "2018-09-27"
 
 當您訂購此服務時，請提供下列設定。
 
+### FortiGuard 網路連線
+
+為 FortiGuard 選取**公用網路**或**專用網路**。如果目標叢集配置了僅限專用網路介面，則只能使用**專用網路**選項。此選項可決定 FortiGuard 如何聯絡 Fortinet 授權伺服器來啟動授權及下載安全修補程式，這不會影響工作負載資料平面。
+
+如果您選取**專用網路**，請指定下列設定：
+* **Proxy IP 位址**：Proxy 伺服器的 IPv4 位址。
+* **Proxy 埠號**：Proxy 伺服器的埠號，通常是 8080 或 3128。
+* **Proxy 使用者名稱**：如果您需要 Proxy 鑑別，請輸入 Proxy 伺服器的使用者名稱。
+* **Proxy 密碼**：如果您需要 Proxy 鑑別，請輸入 Proxy 伺服器的密碼。
+
 ### 名稱 
 
 輸入服務名稱。
@@ -44,14 +58,16 @@ lastupdated: "2018-09-27"
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的授權模型提供下列選項：
 <dl class="dl">
         <dt class="dt dlterm">Standard FW</dt>
-        <dd class="dd">此組合包括「有狀態封包檢驗」、「VLAN 保護及進階記載」、「Ingress 及 Egress 防火牆規則」、「SSL/IPSec VPN 終止」及持續支援。</dd>
+        <dd class="dd">此組合包含「有狀態封包檢驗」、「VLAN 保護及進階記載」、「Ingress 及 Egress 防火牆規則」、「SSL/IPSec VPN 終止」，以及 24 小時全年無休的支援。</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
-        <dd class="dd">除了「NGFW IPS 及 Web 過濾」、「防毒及反垃圾郵件」、「IP 及網域信譽」及核心 FortiCare 安全服務之外，此組合還包括所有標準防火牆服務。</dd>
+        <dd class="dd">除了「進階惡意軟體保護 (AMP)」服務（包括防毒、Botnet IP/網域服務、行動惡意軟體安全、FortiSandbox Cloud、Virus Outbreak Protection Service 和 Content Disarm & Reconstruct）之外，此組合還包括所有標準防火牆服務，以及 Web 過濾、IPS、反垃圾郵件、應用程式控制項和 FortiCare 服務。</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>
-        <dd class="dd">除了 FortiSandbox Cloud 及 Mobile Security 之外，此組合還包括所有標準防火牆及 UTM 服務。</dd>
+        <dd class="dd">除了下列服務之外，此組合還包括所有標準防火牆和 UTM 服務：<ul><li>雲端存取安全分配管理系統 (CASB)：此服務為雲端型服務提供可見性、相符性、資料安全及威脅保護。</li><li>工業安全：此服務為一般 ICS/SCADA 通訊協定提供簽章。</li><li>安全評級：此服務提供審核功能，以識別重要漏洞和配置弱點，並實作最佳作法建議。</li></ul></dd>
 </dl>
 
-**重要事項：**您無法在安裝服務之後變更授權模型。若要變更授權模型，您必須移除現有服務，然後選取不同的授權選項來重新安裝服務。
+在 2018 年第三季，Fortinet 在其企業組合中新增了三項新服務（CASB 、「工業安全」和「安全評級」）。這些服務僅適用於 FortiGate 6.0。{:note}
+
+您無法在安裝服務之後變更授權模型。若要變更授權模型，您必須移除現有服務，然後選取不同的授權選項來重新安裝服務。{:important}
 
 ### 相關鏈結
 

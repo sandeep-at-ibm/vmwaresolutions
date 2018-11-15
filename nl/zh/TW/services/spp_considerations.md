@@ -4,21 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # IBM Spectrum Protect Plus on IBM Cloud 概觀
 
 {{site.data.keyword.IBM}} Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服務提供有效且可調式解決方案，以進行虛擬環境的資料保護、資料重複使用及資料回復。您可以將服務當成獨立式解決方案來實作，或與 IBM Spectrum Protect 環境整合以卸載副本，進行長期儲存及資料控管。
 
-**可用性：**只有執行 vSphere 6.5 並且部署在（或升級至）2.2 版或更新版本的實例，才能使用此服務。
-
-**附註：**
-* 如果您針對部署在 2.4 版或更新版本的實例安裝服務，則會安裝 IBM Spectrum Protect Plus 10.1.1 版 Patch 1。
-* 如果您針對部署在 2.3 版的實例安裝服務，則會安 IBM Spectrum Protect Plus 10.1.1 版。
-* 如果您針對部署在 2.2 版的實例安裝服務，則會安裝 IBM Spectrum Protect Plus 10.1.0 版。
-
+只有執行 vSphere 6.5 以及部署在（或升級至）2.2 版或更新版本的實例，才能使用此服務。目前安裝的 {{site.data.keyword.IBM}} Spectrum Protect Plus 版本為 10.1.1 版修補程式 1。
+{:note}
 
 ## IBM Spectrum Protect Plus on IBM Cloud 的技術規格
 
@@ -65,7 +64,7 @@ lastupdated: "2018-09-28"
 * 確定實例預設叢集裡的 CPU 及記憶體足夠用於 IBM Spectrum Protect Plus 虛擬機器。
 * 根據 ESXi 伺服器的版本，確定 ESXi 伺服器上可用的 NFS 裝載足夠。
 
-  在 VMware 中，部署在或升級至 2.2 版或更新版本的 Cloud Foundation 實例及 vCenter Server 實例，具有 `NFS.MaxVolumes` 參數設定。此參數定義 ESXi 伺服器的 NFS 裝載數目上限，而且可以設為 ESXi 伺服器版本特有的上限 256。如需相關資訊，請參閱 [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239)。
+  在 VMware 中，部署在（或升級至）2.2 版或更新版本的 Cloud Foundation 實例及 vCenter Server 實例，具有 `NFS.MaxVolumes` 參數設定。此參數定義 ESXi 伺服器的 NFS 裝載數目上限，而且可以設為 ESXi 伺服器版本特有的上限 256。如需相關資訊，請參閱 [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239)。
 
   在實例預設叢集的每一部 ESXi 伺服器上，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服務最多會使用 11 個 NFS 磁區。此外，此服務還會建立暫時性 NFS 裝載來進行備份及還原。因此，您必須將 NFS 裝載數目設為至少 64，確保服務可以順利安裝及運作。
 

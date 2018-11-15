@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -37,17 +37,25 @@ Veeam on {{site.data.keyword.cloud_notm}} 服務可以配置成使用 Veeam 主�
 
 ## 將更新套用至 Veeam on IBM Cloud
 
-您負責維護 Veeam，以保持更新至最新版本。若要將 Veeam 升級至最新版本，請從 Veeam 網站下載 Veeam 更新，並將更新複製到 Veeam VSI，然後進行安裝。
+您負責維護 Veeam 軟體，以保持更新至最新版本。
+
+### 針對已部署公用和專用網路的實例
+
+如果 Veeam 服務安裝在具有公用和專用網路的實例上，您可以使用 Veeam 軟體本身來檢查及下載更新項目。
+
+### 針對只部署專用網路的實例
+
+如果 Veeam 服務安裝在只有專用網路的實例上，由於 Veeam 虛擬機器 (VM) 沒有配置公用網路存取權，所以您無法使用 Veeam軟體本身來檢查或下載更新項目。您只能從 Veeam 網站下載更新項目，將其傳送至 Veeam VM，然後再加以安裝。
 
 ## 更新 Veeam 授權
 
-您可以完成下列步驟，以隨需應變手動更新 Veeam 授權：
-1. [使用 RDP 存取 Veeam Backup and Replication 主控台](../services/managingveeam.html#accessing-the-veeam-console-by-using-rdp)。
-2. 從主功能表中，按一下**授權**。
-3. 在**授權資訊**視窗中，按一下**立即更新**。
-4. 若要檢視手動授權更新處理程序的統計資料，請開啟**歷程**視圖，然後按一下**系統**節點。
+### 針對已部署公用和專用網路的實例
 
-如需相關資訊，請參閱[手動更新授權](https://helpcenter.veeam.com/docs/backup/vsphere/license_update_manual.html?ver=95)。
+如果 Veeam 服務安裝在具有公用和專用網路的實例上，您可以遵循[更新授權]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html)的 Veeam 指示，自動或手動更新您的 Veeam 授權。
+
+### 針對只部署專用網路的實例
+
+如果 Veeam 服務安裝在只有專用網路的實例上，您必須記下授權的到期日，在需要更新時，與 [IBM 支援中心](../vmonic/trbl_support.html)聯絡，以協助您更新授權碼。
 
 ## 將 1.8 版之前的實例的 Veeam VSI 取代為 Veeam on IBM Cloud
 
