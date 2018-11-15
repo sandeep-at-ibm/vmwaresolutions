@@ -4,13 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
 # F5 on IBM Cloud bestellen
 
-Sie können den Service "F5 on {{site.data.keyword.cloud}}" durch Bestellen einer neuen Instanz mit enthaltener BIG-IP Virtual Edition (VE) oder durch Hinzufügen von BIG-IP VE zu Ihrer vorhandenen Instanz bestellen.
+Sie können den Service "F5 on {{site.data.keyword.cloud}}" durch Bestellen einer neuen Instanz, die den Service beinhaltet, oder durch Hinzufügen des Service zu Ihrer vorhandenen Instanz bestellen.
 
 ## F5 on IBM Cloud für eine neue Instanz bestellen
 
@@ -28,27 +32,39 @@ Sie können den Service "F5 on {{site.data.keyword.cloud_notm}}" mit einer der f
 
 Geben Sie beim Bestellen des Service die folgenden Einstellungen an.
 
+### Verbindung zu F5-Lizenzaktivierung
+
+Wählen Sie **Öffentliches Netz** oder **Privates Netz** für die Lizenzaktivierung aus. Wenn der Zielcluster nur mit privaten Netzschnittstellen konfiguriert ist, ist nur die Option **Privates Netz** verfügbar. Diese Auswahl bestimmt, wie die virtuellen F5-Server eine Verbindung zum F5-Lizenzserver herstellen, und sie wirkt sich nicht auf die Workloaddatenebene aus.
+
+Bei Auswahl von **Privates Netz** müssen Sie folgende Einstellungen vornehmen:
+* **Proxy-IP-Adresse**: Die IPv4-Adresse des Proxy-Servers.
+* **Proxy-Portnummer**: Die Portnummer des Proxy-Servers, normalerweise 8080 oder 3128.
+
+Ein authentifizierter Proxy wird nicht unterstützt.
+{:note}
+
 ### Name
 
 Geben Sie den Servicenamen ein.
+
+### Maximale Bandbreite
+
+Geben Sie den maximalen Durchsatz der F5 BIG–IP-Appliance an.
 
 ### Lizenzmodell
 
 Das Lizenzmodell für den Service "F5 on {{site.data.keyword.cloud_notm}}" bietet die folgenden Optionen:
 <dl class="dl">
         <dt class="dt dlterm">Gut</dt>
-        <dd class="dd">Dieses Angebot nutzt den als Vollproxyarchitektur betriebenen BIG-IP Local Traffic Manager™ (LTM) VE, um ein intelligentes lokales Datenverkehrsmanagement, die Sichtbarkeit des gesamten SSL-Datenverkehrs sowie Analyse und Zustandsüberwachung bereitzustellen, damit Anwendungsserver jederzeit für Ihre Benutzer verfügbar sind.</dd>
+        <dd class="dd">Dieses Angebot nutzt den als Vollproxy-Architektur betriebenen BIG-IP Local Traffic Manager™ (LTM) VE, um ein intelligentes lokales Datenverkehrsmanagement, die Sichtbarkeit des gesamten SSL-Datenverkehrs sowie Analyse und Zustandsüberwachung bereitzustellen, um sicherzustellen, dass die Anwendungsserver jederzeit für Ihre Benutzer verfügbar sind.</dd>
         <dt class="dt dlterm">Besser</dt>
         <dd class="dd">Dieses Angebot ergänzt die Option **Gut** durch Module für BIG-IP DNS™, BIG-IP Advanced Firewall Manager™ (AFM) und BIG-IP Application Acceleration Manager™ (AAM). Es stellt Services für das globale Datenverkehrsmanagement, eine Optimierung der Anwendungsleistung sowie erweiterte Funktionalität für Netzfirewalls und Entschärfung von DDoS-Attacken (Distributed Denial of Service) bereit.</dd>
         <dt class="dt dlterm">Optimal</dt>
         <dd class="dd">Dieses Angebot ergänzt die Optionen **Gut** und **Besser** durch BIG-IP Application Security Manager™ (ASM) mit einem umfassenden Anwendungsschutz vor L7 DDoS-Attacken und durch Open Web Application Security Project (OWASP) mit einem Schutz vor den 10 wichtigsten Sicherheitsbedrohungen und allgemeinen Anwendungssicherheitslücken. Durch die Einbindung von Funktionen wie Single Sign-on und Mehrfaktorauthentifizierung ermöglicht BIG-IP Access Policy Manager™ (APM) Benutzern einen sicheren und einfachen Zugriff auf Anwendungen, die sich an einer beliebigen Stelle in Mehrcloudumgebungen befinden können.</dd>
 </dl>
 
-**Wichtig:** Nach der Installation des Service kann das Lizenzmodell nicht mehr geändert werden. Wenn Sie das Lizenzmodell ändern möchten, müssen Sie den vorhandenen Service entfernen und den Service mit einem anderen Lizenzmodell erneut installieren.
-
-### Maximale Bandbreite
-
-Geben Sie den maximalen Durchsatz der F5 BIG–IP-Appliance an.
+Sie können das Lizenzmodell nach der Serviceinstallation nicht mehr ändern. Wenn Sie das Lizenzmodell ändern möchten, müssen Sie den vorhandenen Service entfernen und den Service mit einem anderen Lizenzmodell erneut installieren.
+{:important}
 
 ### Zugehörige Links
 

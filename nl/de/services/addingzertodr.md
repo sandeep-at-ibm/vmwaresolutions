@@ -4,13 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Übersicht über Zerto on IBM Cloud
 
 Der Service "Zerto on {{site.data.keyword.cloud}}" integriert Replikations- und Disaster-Recovery-Funktionen in die Bereitstellungsangebote, um Daten in Ihrer virtuellen VMware-Umgebung in {{site.data.keyword.cloud_notm}} zu schützen und wiederherzustellen.
+
+Dieser Service ist nur für Instanzen verfügbar, die in V1.2 (oder höher) bereitgestellt werden. Die aktuell installierte Zerto-Version ist 6.0 Update 3.
+{:note}
 
 ## Technische Spezifikationen für Zerto on IBM Cloud
 
@@ -23,7 +30,7 @@ Mit dem Service "Zerto on {{site.data.keyword.cloud_notm}}" werden die folgenden
 * Eine Virtual Service Instance (VSI) - Zerto Virtual Manager
 * 2 Kerne mit je 2.0 GHz
 * 4 GB RAM
-* Windows Server 2012 R2 Standard Edition (64-Bit)
+* Windows Server 2016 Standard Edition (64-Bit)
 
 ### Speicher
 
@@ -36,7 +43,7 @@ Mit dem Service "Zerto on {{site.data.keyword.cloud_notm}}" werden die folgenden
 
 ### Lizenzen und Gebühren
 
-Lizenz für Zerto Replication Version 5.5
+Lizenz für Zerto Replication V6.0 Update 3
 
 ### Zugehörige Links
 

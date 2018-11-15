@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-26"
 
 Nachdem der Service in Ihrer Instanz bereitgestellt wurde, können Sie über RDP auf die Veeam-Konsole zugreifen, um die Sicherung und Wiederherstellung aller virtuellen Maschinen in Ihrer Umgebung zu verwalten, einschließlich der Sicherung und Wiederherstellung von Managementkomponenten. Sie können auch ein Upgrade für den Service durchführen, indem Sie die Veeam-Updates von der Veeam-Website herunterladen und installieren.
 
-Bei Instanzen, die in früheren Releases als V1.8 bereitgestellt wurden, müssen Sie die virtuelle Serverinstanz für Veeam ersetzen, die in den Instanzen vorhanden ist, wenn Sie den Service "Veeam on {{site.data.keyword.cloud}}" nutzen wollen. Weitere Informationen finden Sie im Abschnitt _Virtuelle Serverinstanz für Veeam in Instanzen vor V1.8 durch Veeam on IBM Cloud ersetzen_. 
+Bei Instanzen, die in früheren Releases als V1.8 bereitgestellt wurden, müssen Sie die virtuelle Serverinstanz für Veeam ersetzen, die in den Instanzen vorhanden ist, wenn Sie den Service "Veeam on {{site.data.keyword.cloud}}" nutzen wollen. Weitere Informationen finden Sie im Abschnitt _Virtuelle Serverinstanz für Veeam in Instanzen vor V1.8 durch Veeam on IBM Cloud ersetzen_.
 
 ## Mit RDP auf die Veeam-Konsole zugreifen
 
@@ -37,17 +37,25 @@ Wenn Fehler in den Managementkomponenten auftreten, können Sie die Managementko
 
 ## Updates auf Veeam on IBM Cloud anwenden
 
-Sie sind dafür verantwortlich, dass sich Veeam jeweils auf dem aktuellsten Versionsstand befindet. Wenn Sie für Veeam ein Upgrade auf die neueste Version durchführen möchten, laden Sie die Veeam-Updates von der Veeam-Website herunter, kopieren Sie die Updates in die virtuelle Serverinstanz für VSI und installieren Sie sie.
+Sie sind dafür verantwortlich, dass sich die Veeam-Software jeweils auf dem aktuellsten Versionsstand befindet.
+
+### Instanzen, die mit öffentlichem und privatem Netz bereitgestellt wurden
+
+Wenn der Veeam-Service auf einer Instanz mit öffentlichem und privaten Netz installiert ist, können Sie die Veeam-Software verwenden, um Updates zu suchen und herunterzuladen.
+
+### Instanzen, die nur mit privatem Netz bereitgestellt wurden
+
+Wenn der Veeam-Service nur auf einer Instanz mit privatem Netz installiert ist, weil die Veeam-VM ohne öffentliche Netzzugangsberechtigung konfiguriert ist, können Sie die Veeam-Software nicht verwenden, um Updates zu suchen und herunterzuladen. Stattdessen müssen Sie Updates von der Veeam-Website herunterladen, sie an die Veeam-VM übertragen und sie anschließend installieren.
 
 ## Veeam-Lizenzen aktualisieren
 
-Führen Sie zum manuellen Aktualisieren Ihrer Veeam-Lizenz bei Bedarf die folgenden Schritte aus:
-1. [Greifen Sie mit RDP auf die Konsole von Veeam Backup and Replication zu](../services/managingveeam.html#accessing-the-veeam-console-by-using-rdp).
-2. Klicken Sie im Hauptmenü auf die Lizenzoption****.
-3. Klicken Sie im Fenster mit den Lizenzinformationen**** auf die Schaltfläche für sofortige Aktualisierung****.
-4. Statistikdaten zum manuellen Prozess für die Lizenzaktualisierung werden angezeigt, werden Sie die Verlaufsansicht**** aufrufen und anschließend auf den Knoten **System** klicken.
+### Instanzen, die mit öffentlichem und privatem Netz bereitgestellt wurden
 
-Weitere Informationen finden Sie auf der Seite zur [manuellen Lizenzaktualisierung](https://helpcenter.veeam.com/docs/backup/vsphere/license_update_manual.html?ver=95).
+Wenn der Veeam-Service auf einer Instanz mit öffentlichem und privaten Netz installiert ist, können Sie Ihre Veeam-Lizenz entweder automatisch oder manuell aktualisieren, indem Sie den Veeam-Anweisungen im Abschnitt zur [Lizenzaktualisierung]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html) folgen.
+
+### Instanzen, die nur mit privatem Netz bereitgestellt wurden
+
+Wenn der Veeam-Service auf einer Instanz mit nur privatem Netz installiert ist, müssen Sie das Ablaufdatum Ihrer Lizenz notieren und sich an den [IBM Support](../vmonic/trbl_support.html) wenden, um Unterstützung bei der Aktualisierung des Lizenzschlüssels zu erhalten, wenn die Verlängerung erforderlich wird.
 
 ## Virtuelle Serverinstanz für Veeam in Instanzen vor V1.8 durch Veeam on IBM Cloud ersetzen
 
