@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -22,7 +22,7 @@ vCenter Server on {{site.data.keyword.cloud_notm}} および vCenter Server ア�
 
 ### ベア・メタル・サーバー
 
-以下のいずれかの構成でカスタマイズ型{{site.data.keyword.baremetal_short}}を 2 つ以上注文できます。
+以下のいずれかの構成で{{site.data.keyword.baremetal_short}}を 2 つ以上注文できます。
 
 * 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600 v4 シリーズ)
 * 2-CPU Intel Skylake 世代 (Intel Xeon 4100/5100/6100 シリーズ)
@@ -42,7 +42,7 @@ NFS ストレージ構成の場合、推奨する{{site.data.keyword.baremetal_s
     **重要:** ユーザーは、この ESG にアクセスすることはできず、使用できません。 これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなります。
   * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。これは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-) を参照してください。
 
-  **注:** アウトバウンド HTTPS 管理トラフィック用の VMware NSX Edge Services (ESG) は、デプロイされた VMware Federal インスタンスを保護するアクションの一環として削除されます。 詳しくは、[VMware Federal インスタンスの保護](vc_fed_securinginstance.html)を参照してください。
+  **注意:** アウトバウンド HTTPS 管理トラフィック用の VMware NSX Edge Services Gateway (ESG) は、デプロイされた VMware Federal インスタンスを保護するアクションの一環として削除されます。詳しくは、[VMware Federal インスタンスの保護](vc_fed_securinginstance.html)を参照してください。
 
 ### 仮想サーバー・インスタンス
 

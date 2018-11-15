@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server with Hybridity Bundle インスタンスの表示
 
@@ -17,13 +21,14 @@ lastupdated: "2018-09-27"
 ユーザー・アカウントに対してプロビジョンされるすべての vCenter Server with Hybridity Bundle インスタンスのサマリーを表示するには、以下の手順を実行します。
 1. {{site.data.keyword.vmwaresolutions_full}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. コンソール・バナーのユーザー・アカウント・アイコンをクリックし、**「アカウント」**フィールドをクリックして、インスタンスの確認対象となるユーザー・アカウントを選択します。
-3. **「vCenter Server」**の表で、選択したユーザー・アカウントでプロビジョンされるインスタンスのリストを表示します。
+3. **vCenter Server インスタンス**の表で、選択したユーザー・アカウントでプロビジョンされているインスタンスのリストを表示します。
 
 表 1. vCenter Server with Hybridity Bundle インスタンスの項目
 
 | 項目        | 説明       |  
 |:------------- |:------------- |
 | 名前 | インスタンスの名前 |
+| タイプ | vCenter Server インスタンスのタイプ |
 | バージョン | インスタンスがデプロイまたはアップグレードされたリリース・バージョン。 |  
 | ロケーション | インスタンスがホストされている {{site.data.keyword.CloudDataCent_notm}}。 |  
 | 作成時間 | インスタンスが作成された日時 |  
@@ -58,7 +63,7 @@ vCenter Server with Hybridity Bundle インスタンスのプロパティーの�
 | ID | インスタンスの ID。 |
 | ロケーション | インスタンスがホストされている {{site.data.keyword.CloudDataCent_notm}}。 |
 | 現行バージョン | {{site.data.keyword.vmwaresolutions_short}} の現行バージョン。 |
-| vCenter バージョン | VMware vCenter Server with Hybridity Bundle のバージョン。<br><br>**注:** {{site.data.keyword.vmwaresolutions_short}} コンソールと VMware vSphere Web Client では、vCenter Server バージョンの表示が若干異なります。 どちらも正しい表示です。 |
+| vCenter バージョン | VMware vCenter Server with Hybridity Bundle のバージョン。<br><br>{{site.data.keyword.vmwaresolutions_short}} コンソールと VMware vSphere Web Client では、vCenter Server バージョンの表示が若干異なります。 どちらも正しい表示です。{:note} |
 | NSX for vSphere | VMware NSX for vSphere 製品のバージョン。 |
 | NSX ライセンス・エディション | VMware NSX ライセンスのバージョンとエディション。 |
 | DNS、ルート・ドメイン | ルート・ドメイン・ネームは、DNS (ドメイン・ネーム・システム) ドメイン・ネームと Microsoft Active Directory (AD) フォレストのルート名です。 |
@@ -109,7 +114,8 @@ vCenter Server with Hybridity Bundle インスタンスのプロパティーの�
 
 {{site.data.keyword.vmwaresolutions_short}} コンソールまたは VMware vSphere Web Client からインスタンスを管理します。
 
-**重要:** インスタンスのサマリー・ページで**「vCenter コンソール」**をクリックして vSphere Web Client にアクセスし、ESXi サーバーの管理を開始するには、その前に {{site.data.keyword.CloudDataCent_notm}}の VPN ポータルにログインしておく必要があります。 **「vCenter コンソール」**ボタンにマウスオーバーし、指示に従って、すべての要件を満たしていること、また、vSphere Web Client にアクセスするために必要な手順を実行したことを確認してください。
+インスタンスのサマリー・ページで**「vCenter コンソール」**をクリックして vSphere Web Client にアクセスし、ESXi サーバーの管理を開始するには、その前に {{site.data.keyword.CloudDataCent_notm}}の VPN ポータルにログインしておく必要があります。 **「vCenter コンソール」**ボタンにマウスオーバーし、指示に従って、すべての要件を満たしていること、また、vSphere Web Client にアクセスするために必要な手順を実行したことを確認してください。
+{:important}
 
 ログイン手順を実行するには、以下のトピックを参照してください。
 *  vSphere Web Client にアクセスするための要件と必要な手順については、[Timeout reached while connecting to the vSphere Web Client](../vmonic/trbl_timeout_vc_console.html) を参照してください。

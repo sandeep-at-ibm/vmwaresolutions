@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -38,20 +38,29 @@ VMware Federal インスタンスにクラスターを追加するときには�
 
 ### ベア・メタル・サーバーの設定
 
-#### カスタマイズ型
+#### Skylake
 
 ベア・メタル・サーバーの CPU モデルと RAM を指定します。 利用できるオプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
 
-表 1. カスタマイズ型{{site.data.keyword.baremetal_short}}のオプション
+表 1. Skylake {{site.data.keyword.baremetal_short}}のオプション
+
+| CPU モデル・オプション        | RAM オプション       |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110 プロセッサー / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
+#### Broadwell
+
+ベア・メタル・サーバーの CPU モデルと RAM を指定します。 利用できるオプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
+
+表 2. Broadwell {{site.data.keyword.baremetal_short}}のオプション
 
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
 | デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Silver 4110 Processor / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 #### ベア・メタル・サーバーの数
 
@@ -71,7 +80,7 @@ V2.3 以降でデプロイされた VMware Federal インスタンスの場合�
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
 * 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。 **「High-Performance Intel Optane」**オプションは、Dual Intel Xeon Gold 5120 および 6140 プロセッサーでのみ使用できます。
-* **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
+* **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
 * **vSAN ライセンス**: VMware vSAN 6.6 ライセンス・エディション (Advanced または Enterprise) を選択します。
 
 初期クラスターが vSAN クラスターとして追加された場合、追加の vSAN クラスターは同じ vSAN ライセンスを使用し、初期 vSAN クラスターと同じ構成になります。 インスタンス内のいずれかのクラスター (初期または追加) に対し、vSAN を選択してデプロイした場合も同様になります。 初めてクラスターを追加するときには、vSAN ライセンスとエディションを入力するように求められます。 次回に新規クラスター用に vSAN を選択するときには、初回に選択した内容が再使用されます。
@@ -88,7 +97,7 @@ V2.3 以降でデプロイされた VMware Federal インスタンスの場合�
 * **パフォーマンス**: ワークロードの要件に基づいて、1 GB あたりの IOPS (入出力操作数/秒) を選択します。
 * **ADD NFS**: 別々の構成設定を使用する個々のファイル共有を追加する場合に選択します。
 
-表 2. NFS パフォーマンス・レベルのオプション
+表 3. NFS パフォーマンス・レベルのオプション
 
 | オプション        | 詳細       |
   |:------------- |:------------- |

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -66,26 +66,35 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 
 ## ベア・メタル・サーバーの設定
 
-ベア・メタルの設定は、ユーザーがカスタマイズした構成に基づきます。 現時点では、事前構成型の構成を選択するオプションはサポートされていません。
+ベアメタルの設定は、選択したデータ・センターやベアメタル・サーバーの構成に基づきます。現時点では、事前構成型の構成を選択するオプションはサポートされていません。
 
 ### データ・センターの場所
 
 インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
 
-### カスタマイズ型
+### Skylake
 
 ベア・メタル・サーバーの CPU モデルと RAM を指定します。
 
-表 2. カスタマイズ型{{site.data.keyword.baremetal_short}}のオプション
+表 2. Skylake {{site.data.keyword.baremetal_short}}のオプション
+
+| CPU モデル・オプション        | RAM オプション       |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110 プロセッサー / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
+### Broadwell
+
+ベア・メタル・サーバーの CPU モデルと RAM を指定します。
+
+表 3. Broadwell {{site.data.keyword.baremetal_short}}のオプション
 
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
 | デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 64 GB、128 GB、256 GB、512 GB |
 | デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 64 GB、128 GB、256 GB、512 GB |
 | デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 64 GB、128 GB、256 GB、512 GB |
-| Dual Intel Xeon Silver 4110 Processor / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### ベア・メタル・サーバーの数
 
@@ -103,7 +112,7 @@ ESXi サーバーの数は、2 台から 20 台の範囲内で構成できます
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
 * 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。 **「High-Performance Intel Optane」**オプションは、Dual Intel Xeon Gold 5120 および 6140 プロセッサーでのみ使用できます。
-* **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
+* **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
 * **vSAN ライセンス**: vSAN 6.6 ライセンス・エディション (Advanced または Enterprise) を選択します。
 
 ### NFS ストレージ
@@ -181,12 +190,12 @@ Windows ライセンスの注文方法について詳しくは、[Windows Server
 4. **「プライマリー・インスタンス」**をクリックして、環境内に単一インスタンスをデプロイします。
 5. VMware NSX ライセンス・エディションを指定します。
 6. ベア・メタル・サーバーの構成を次の手順で実行します。
-  1. インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
-  2. **「カスタマイズ型」**の CPU モデルと **RAM** の容量を選択します。
+   1. インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
+   2. **「Skylake」**または**「Broadwell」**の CPU モデルと **RAM** の容量を選択します。
 7. ストレージ構成を次の手順で実行します。
-  * **「vSAN Storage」**を選択した場合は、容量ディスクおよびキャッシュ・ディスクのディスク・タイプ、ディスク数、vSAN ライセンス・エディションを指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
-  * **「NFS Storage」**を選択し、すべてのファイル共有に同じ設定を追加して構成する場合は、**「Number of Shares」**、**「Size」**、**「Performance」**を指定します。
-  * **「NFS Storage」**を選択し、ファイル共有を個別に追加して構成する場合は、**「Configure shares individually」**を選択し、ファイル共有ごとに、**「Add NFS」**ラベルの横にある**「+」**アイコンをクリックして、**「Size」**と**「Performance」**を選択します。 少なくとも 1 つのファイル共有を選択する必要があります。
+   * **「vSAN Storage」**を選択した場合は、容量ディスクおよびキャッシュ・ディスクのディスク・タイプ、ディスク数、vSAN ライセンス・エディションを指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
+   * **「NFS Storage」**を選択し、すべてのファイル共有に同じ設定を追加して構成する場合は、**「Number of Shares」**、**「Size」**、**「Performance」**を指定します。
+   * **「NFS Storage」**を選択し、ファイル共有を個別に追加して構成する場合は、**「Configure shares individually」**を選択し、ファイル共有ごとに、**「Add NFS」**ラベルの横にある**「+」**アイコンをクリックして、**「Size」**と**「Performance」**を選択します。 少なくとも 1 つのファイル共有を選択する必要があります。
 8. ネットワーク・インターフェース構成を行います。
    1. ホスト名接頭部、サブドメイン・ラベル、ルート・ドメイン・ネームを入力します。
    2. DNS 構成を選択します。
@@ -213,7 +222,7 @@ Windows ライセンスの注文方法について詳しくは、[Windows Server
 
 **注意:** インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
 *  コンポーネントの追加、変更、返却、または削除
-*  ESXi サーバーの削除によるインスタンス容量の拡張または縮小
+*  ESXi サーバーの追加または削除によるインスタンス容量の拡張または縮小
 *  コンポーネントのパワーオフ
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
