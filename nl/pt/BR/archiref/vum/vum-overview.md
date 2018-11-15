@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
-# Visão geral do VUM
+# Visão geral do VMware Update Manager
 
-O VUM usa um processo multiestágio para fazer upgrade de objetos do vSphere e aplicar correções ou extensões. Esse processo permite um procedimento de atualização suave com um mínimo de tempo de inatividade do sistema. Antes de olharmos para este processo, precisamos entender os termos a seguir:
+O VMware Update Manager (VUM) usa um processo multiestágio para fazer upgrade de objetos do vSphere e aplicar correções ou extensões. Esse processo permite um procedimento de atualização suave com um mínimo de tempo de inatividade do sistema. Antes de olharmos para este processo, precisamos entender os termos a seguir:
 * **Objeto de inventário** - um objeto dentro do vCenter, como máquina virtual, dispositivos virtuais ou host do vSphere ESXi
 * **Linha de base** - as linhas de base contêm uma coleção de uma ou mais correções, extensões, service packs, correções de bug ou upgrades e podem ser classificadas como linhas de base de correção, extensão ou upgrade. Há duas classificações de linhas de base: Host e VM/VA e ambas têm linhas de base predefinidas pelo VMware e as Customizadas podem ser incluídas conforme necessário:
   - Linhas de Base de Hosts predefinidas:
@@ -19,8 +19,8 @@ O VUM usa um processo multiestágio para fazer upgrade de objetos do vSphere e a
 
   - Linha de base VMs/VAs predefinida:
     - Upgrade de VA para Mais Recente
-    - Upgrade de Hardware da VM para o Host Correspondente
-    - Upgrade do VMware Tools para o Host Correspondente
+    - Upgrade de hardware da VM para corresponder ao host
+    - Upgrade do VMware Tools para corresponder ao host
 
 * **Grupo de linhas de base** - um conjunto de linhas de base não conflitantes, que combina diferentes tipos de linhas de base e varre e corrige um objeto de inventário com relação a elas como um todo. Se um grupo de linhas de base contiver linhas de base de upgrade e correção ou extensão, o upgrade será executado primeiro.
 * **Varredura** - a varredura é o processo no qual o objeto ou objetos de Inventário são avaliados com relação à linha de base ou ao grupo de linhas de base.
@@ -63,5 +63,5 @@ A visualização de conformidade de um objeto de inventário selecionado é aces
 
 ### Links relacionados
 
-* [ VMware HCX on IBM Cloud Solution ](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* Arquitetura da solução VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [Soluções VMware no IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

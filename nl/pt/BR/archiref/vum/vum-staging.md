@@ -4,11 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
-#	Temporariedade e remediação
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# Temporariedade e remediação
 
 As correções e extensões podem ser opcionalmente montadas antes da correção para assegurar que sejam transferidas por download do VUM para o host do vSphere ESXi sem aplicar as correções ou extensões imediatamente. Durante a correção, o VUM aplica as correções, as extensões e os upgrades aos objetos de inventário. Montar as correções e extensões acelera o processo de correção porque as correções e extensões já estão disponíveis localmente nos hosts.
 
@@ -32,13 +36,13 @@ A correção é o processo no qual o VUM aplica correções, extensões e upgrad
 
 Se a atualização requerer, os hosts serão colocados no modo de manutenção antes da correção. O VCSA migra as máquinas virtuais para outros hosts dentro da instância do VCS antes que o host seja colocado no modo de manutenção.
 
-  Nota importante para hosts em um cluster vSAN
-  Esteja ciente do comportamento a seguir para hosts que fazem parte de um cluster vSAN:
-  *	O processo de correção do host pode levar uma quantia extensiva de tempo para ser concluída.
-  *	Por design, somente um host de um cluster VSAN pode estar em um modo de manutenção a qualquer momento.
-  *	O VUM corrige hosts que fazem parte de um cluster VSAN sequencialmente, mesmo se você configura a opção para corrigir os hosts em paralelo.
-  *	Para qualquer máquina virtual no host que use uma política de armazenamento de VM com uma configuração para "Número de falhas a serem toleradas=0", o host pode ter atrasos incomuns ao entrar no modo de manutenção. O atraso ocorre porque o vSAN deve migrar os dados de máquina virtual de um disco para outro no cluster de armazenamento de dados vSAN e isso pode levar muitas horas. Uma solução alternativa é configurar o "Número de falhas a serem toleradas=1" para a política de armazenamento de VM, que resulta na criação de duas cópias dos arquivos de máquina virtual no armazenamento de dados vSAN.
-  *	Para qualquer máquina virtual no host que use uma política de armazenamento de VM com uma configuração para "Número de falhas a serem toleradas=1", a VM se tornará não redundante quando o host entrar no modo de manutenção. Se isso não for aceitável, veja [Redundância de vSAN da máquina virtual](vum-vsan-redundancy.html).
+## Para hosts em um cluster vSAN
+Esteja ciente do comportamento a seguir para hosts que fazem parte de um cluster vSAN:
+* O processo de correção do host pode levar uma quantia extensiva de tempo para ser concluída.
+* Por design, somente um host de um cluster VSAN pode estar em um modo de manutenção a qualquer momento.
+* O VUM corrige hosts que fazem parte de um cluster VSAN sequencialmente, mesmo se você configura a opção para corrigir os hosts em paralelo.
+* Para qualquer máquina virtual no host que use uma política de armazenamento de VM com uma configuração para "Número de falhas a serem toleradas=0", o host pode ter atrasos incomuns ao entrar no modo de manutenção. O atraso ocorre porque o vSAN deve migrar os dados de máquina virtual de um disco para outro no cluster de armazenamento de dados vSAN e isso pode levar muitas horas. Uma solução alternativa é configurar o "Número de falhas a serem toleradas=1" para a política de armazenamento de VM, que resulta na criação de duas cópias dos arquivos de máquina virtual no armazenamento de dados vSAN.
+* Para qualquer máquina virtual no host que use uma política de armazenamento de VM com uma configuração para "Número de falhas a serem toleradas=1", a VM se tornará não redundante quando o host entrar no modo de manutenção. Se isso não for aceitável, veja [Redundância de vSAN da máquina virtual](vum-vsan-redundancy.html).
 
 Para corrigir hosts e clusters, siga estas etapas:
 1.	Use o vSphere Web Client, selecione **Página inicial** > **Hosts e clusters**.
@@ -71,5 +75,5 @@ Para corrigir hosts e clusters, siga estas etapas:
 
 ### Links relacionados
 
-* [ VMware HCX on IBM Cloud Solution ](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [Soluções VMware no IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

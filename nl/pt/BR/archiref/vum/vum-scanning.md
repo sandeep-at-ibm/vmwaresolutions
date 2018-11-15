@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -16,16 +16,15 @@ Ao varrer hosts, máquinas virtuais e dispositivos virtuais, você os avalia com
 *	**Iniciar manualmente uma varredura de um objeto contêiner** - inicie uma varredura simultânea de hosts, máquinas virtuais e dispositivos virtuais, varrendo um objeto contêiner que é um data center ou uma pasta do data center.
 *	**Planejar uma varredura** - é possível configurar o vSphere Web Client para varrer máquinas virtuais, dispositivos virtuais e hosts ESXi em horários específicos ou em intervalos que são convenientes para você.
 
-##	Iniciando manualmente uma varredura de hosts vSphere ESXi
+## Iniciando manualmente uma varredura de hosts vSphere ESXi
 
-1.	Clique no botão **Varrer atualizações** e selecione **Correções e extensões e upgrades** e, em seguida, clique em **OK**.
-2.	Quando a varredura for concluída, selecione **Correções críticas do host** e a revisão de impacto inferior para cada host
-3.	Clicando no número no Número de correções, uma Janela mostra o detalhe da correção.
-4.	Revise e repita para  ** Correções não Críticas **.
+1. Clique em **Varrer para atualizações**, selecione **Correções e extensões e upgrades**, em seguida, clique em **OK**.
+2. Quando a varredura for concluída, selecione **Correções críticas do host**. Na área de janela inferior, revise os detalhes da correção para cada host clicando no número em **Número de correções**. Uma janela mostra as informações de correção.
+3. Revise e repita para  ** Correções não Críticas **.
 
-Observe que os arquivos de log do VUM podem ser localizados em _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
+  Os arquivos de log do VUM estão localizados em _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
-##	Iniciando manualmente uma varredura de máquinas virtuais e dispositivos virtuais
+## Iniciando manualmente uma varredura de máquinas virtuais e dispositivos virtuais
 
 É possível varrer máquinas virtuais e dispositivos virtuais no inventário do vSphere com relação a linhas de base e grupos de linhas de base anexados. As máquinas virtuais e os dispositivos que você seleciona são varridos com relação às linhas de base anexadas, dependendo das opções selecionadas. Todos os objetos-filhos também são varridos, portanto, quanto maior a infraestrutura virtual e maior na hierarquia de objeto em que você inicia a varredura, mais tempo a varredura leva e mais precisa é a visualização de conformidade.
 
@@ -56,5 +55,5 @@ Inicie uma varredura simultânea de hosts, máquinas virtuais e dispositivos vir
 
 ### Links relacionados
 
-* [ VMware HCX on IBM Cloud Solution ](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [Soluções VMware no IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
