@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Speichereinstellungen
 
 Dieses Design unterstützt nur das Anhängen von gemeinsamem Speicher über NFS v3. NFS v4 und v4.1 werden nicht unterstützt.
 
-**Hinweis**: Der gesamte angehängte Speicher dieses Designs ist auf den {{site.data.keyword.cloud_notm}}-Speicher beschränkt, der innerhalb desselben {{site.data.keyword.CloudDataCent_notm}} verfügbaren ist, in dem sich auch die vCenter Server-Lösung befindet. Außerdem handelt es sich bei allen im Datenspeicher gespeicherten virtuellen Platten standardmäßig um Thin-Provisioning-Einheiten.
+Der gesamte angehängte Speicher dieses Designs ist auf den {{site.data.keyword.cloud_notm}}-Speicher beschränkt, der innerhalb desselben {{site.data.keyword.CloudDataCent_notm}} verfügbaren ist, in dem sich auch die vCenter Server-Lösung befindet. Außerdem handelt es sich bei allen im Datenspeicher gespeicherten virtuellen Platten standardmäßig um Thin-Provisioning-Einheiten.
+{:note}
 
 Die Architektur gibt an, dass NFS v3-Datenspeicher unter Verwendung des DNS-Namens aus dem {{site.data.keyword.cloud_notm}}-Speicher angehängt werden, um eine Verbindung zur gemeinsam genutzten Ressource herzustellen. Darüber hinaus wird die gemeinsam genutzte NFS-Ressource auf allen Hosts im vCenter Server-Cluster angehängt und in einem Datenspeichercluster platziert, in dem die Storage DRS-Funktion aktiviert wurde.
 

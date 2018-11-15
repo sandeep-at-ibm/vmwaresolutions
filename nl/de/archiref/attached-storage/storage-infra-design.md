@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Design der Infrastruktur für angehängten Speicher
 
@@ -56,7 +60,10 @@ Mit den Speichergrößen 20 GB bis 12 TB kann eine Anzahl E/A-Operationen pro Se
 
 In diesem Design bietet die vCenter Server-Lösung Endurance-Speicher für den angehängten Speicher. Demzufolge können Sie (via Automatisierung) Endurance NFS-Exporte auswählen und anhängen, deren Größe zwischen 20 GB und maximal 12 TB liegen kann. Mit {{site.data.keyword.cloud_notm}} können bis zu 64 vSphere ESXi-Hosts mit einem einzigen Endurance NFS-Export verbunden werden.
 
-Endurance steht in drei IOPS-Leistungsstufen zur Unterstützung unterschiedlicher Anwendungsanforderungen zur Verfügung. Hierbei ist zu beachten, dass die Größe einer gemeinsam genutzten NFS-Ressource nach der Bereitstellung geändert oder neu konfiguriert werden kann, um eine größere oder geringere Anzahl von IOPS zu ermöglichen.
+Endurance steht in drei IOPS-Leistungsstufen zur Unterstützung unterschiedlicher Anwendungsanforderungen zur Verfügung.
+
+Die Größe einer gemeinsam genutzten NFS-Ressource kann nach der Bereitstellung geändert oder neu konfiguriert werden, um eine größere oder geringere Anzahl von IOPS zu ermöglichen.
+{:note}
 
 Detaillierte Informationen zu den IOPS-Optionen finden Sie im Abschnitt mit den _Speichereinstellungen_ unter dem Thema zum [Bestellen von vCenter Server-Instanzen](../../vcenter/vc_orderinginstance.html).
 
