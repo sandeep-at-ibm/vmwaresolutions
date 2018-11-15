@@ -14,7 +14,7 @@ lastupdated: "2018-09-26"
 
 ## 独自の証明書を Zerto に使用する
 
-ベスト・プラクティスとして、Zerto Virtual Manager (ZVM) には独自の SSL 証明書を使用します。Zerto on {{site.data.keyword.cloud_notm}} をデプロイした後、ZVM 用の SSL 証明書を独自の証明書に置き換えてください。 詳しくは、[How to use a CER SSL Certificate to Replace the Self-Signed Certificate for the ZVM, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window} を参照してください。
+ベスト・プラクティスとして、Zerto Virtual Manager (ZVM) には独自の SSL 証明書を使用します。 Zerto on {{site.data.keyword.cloud_notm}} をデプロイした後、ZVM 用の SSL 証明書を独自の証明書に置き換えてください。 詳しくは、[How to use a CER SSL Certificate to Replace the Self-Signed Certificate for the ZVM, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window} を参照してください。
 
 ## Zerto レプリケーションの構成の管理
 
@@ -22,7 +22,7 @@ Zerto レプリケーションの構成を管理するには、vCenter 資格情
 
 2 つの異なる {{site.data.keyword.cloud_notm}} Zerto インスタンス間で複製する場合は、それらの Zerto インスタンス間で直接複製するように構成できます。 {{site.data.keyword.cloud_notm}} Zerto インスタンスとお客様所有のデータ・センターの間で複製する場合は、お客様所有のデータ・センターに自分で Zerto をインストールする必要があります。 このインスタンスのライセンスは、このインスタンスと {{site.data.keyword.cloud_notm}} Zerto インスタンスをペアにすると自動的に交付されます。
 
-Zerto レプリケーションでは、ネットワーク・アドレス変換 (NAT) トラバーサルはサポートされていません。{{site.data.keyword.cloud_notm}} Zerto インスタンスとお客様所有のデータ・センターの間の接続を確立するためには、いずれかの側の Zerto Virtual Manager (ZVM) アプライアンスまたは Zerto Virtual Replication Appliance (VRA) 上の経路のカスタマイズが必要になる場合があります。 接続を確立するには、サイト間のセキュア・トンネリングが必要になる場合もあります。ZVM アプライアンス上の経路を構成したり再構成したりするときは、使用レポートが作成されるように、すべての ZVM アプライアンスが `zerto.com` に正常に接続できるようにする必要があります。 この接続は、`https://www.zerto.com` へのブラウザー・セッションを ZVM アプライアンスから開くことによって確認できます。
+Zerto レプリケーションでは、ネットワーク・アドレス変換 (NAT) トラバーサルはサポートされていません。 {{site.data.keyword.cloud_notm}} Zerto インスタンスとお客様所有のデータ・センターの間の接続を確立するためには、いずれかの側の Zerto Virtual Manager (ZVM) アプライアンスまたは Zerto Virtual Replication Appliance (VRA) 上の経路のカスタマイズが必要になる場合があります。 接続を確立するには、サイト間のセキュア・トンネリングが必要になる場合もあります。 ZVM アプライアンス上の経路を構成したり再構成したりするときは、使用レポートが作成されるように、すべての ZVM アプライアンスが `zerto.com` に正常に接続できるようにする必要があります。 この接続は、`https://www.zerto.com` へのブラウザー・セッションを ZVM アプライアンスから開くことによって確認できます。
 
 **注**: {{site.data.keyword.cloud_notm}} 上の Cloud Foundation インスタンスと vCenter Server インスタンスの Management VMware NSX Edge Services Gateway (ESG) は、ZVM から発信されるアウトバウンド HTTPS (TCP ポート 443) 通信を許可するように事前構成されています。
 
