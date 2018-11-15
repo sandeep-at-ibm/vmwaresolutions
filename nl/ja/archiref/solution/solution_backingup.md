@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-27"
 
 すべてのソフトウェア・コンポーネントの構成、管理、モニタリングに関する責任は、お客様側にあります。その中には、管理インフラストラクチャーとワークロードのバックアップと可用性も含まれます。
 
-ソリューションの一部として、{{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} アドオン・サービスまたは Veeam on {{site.data.keyword.cloud_notm}} アドオン・サービスを必要に応じてデプロイできます。 Veeam と IBM Spectrum Protect Plus は、管理コンポーネントをバックアップするための要件を満たすことにつながります。
+ソリューションの一部として、IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} アドオン・サービスまたは Veeam on {{site.data.keyword.cloud_notm}} アドオン・サービスを必要に応じてデプロイできます。 Veeam と IBM Spectrum Protect Plus は、管理コンポーネントをバックアップするための要件を満たすことにつながります。
 
 これらのアドオン・サービスは、{{site.data.keyword.cloud_notm}} エンデュランス・ストレージとともにデプロイされます。 これらのサービスにより、管理コンポーネントおよびワークロードをバックアップしやすくなります。 [IBM Spectrum Protect Plus アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}と [Veeam アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}は、デプロイメントの計画とサイジングに関するガイダンスとして役立ちます。 Veeam デプロイメントには、[マネージド・サービス](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)も要求可能です。
 
@@ -34,7 +34,10 @@ VMware vCenter Server、Platform Services Controller (PSC)、VMware NSX など�
 
 VMware vCenter Server と PSC には、さまざまなプロトコルを使用して[データベースと構成をファイル・サーバーにエクスポートするためのアプライアンス管理用ユーザー・インターフェースと API](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} が用意されています。 VMware は、直接 vCenter Server Appliance と PSC 上で[クーロン・ジョブとして定期的に実行する](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window}ようにこれを構成する方法の例が記述されています。この例を適応させて使用できます。
 
-この手法を使用して、vCenter Server Appliance と PSC の両方を別々にバックアップする必要があります。 VMware が文書化した考慮事項と制限事項をよく理解し、それに基づいて計画を立ててください。 また、ファイル・サーバー上のファイル・バックアップの定期的ローテーションと有効期限の計画を立ててください。 VMware のバックアップ・ロケーションは空のフォルダーである必要があります。したがって、後続のバックアップ・ジョブのためにロケーションを空にしておくようにバックアップ・ローテーションや自動化の計画を立てる必要があります。
+この手法を使用して、vCenter Server Appliance と PSC の両方を別々にバックアップする必要があります。 VMware が文書化した考慮事項と制限事項をよく理解し、それに基づいて計画を立ててください。 また、ファイル・サーバー上のファイル・バックアップの定期的ローテーションと有効期限の計画を立ててください。
+
+VMware のバックアップ・ロケーションは空のフォルダーでなければならないので、後続の各バックアップ・ジョブのためにロケーションを空にしておくようにバックアップ・ローテーションや自動化の計画を立ててください。
+{:note}
 
 ## NSX のファイル・ベースのバックアップ
 

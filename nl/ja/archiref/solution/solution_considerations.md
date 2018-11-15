@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # デプロイメント後の VMware インスタンスの考慮事項
 
@@ -14,7 +18,8 @@ lastupdated: "2018-10-03"
 
 デプロイ前およびデプロイ後に、以下の考慮事項を検討して、インスタンスを管理および操作する自分の責任について理解してください。
 
-**注:** 次のリストは、すべてを網羅しているわけではありません。 詳しくは、[IBM Managed Services](../../services/managing_imi.html) を参照してください。
+次のリストは、すべてを網羅しているわけではありません。 詳しくは、[IBM Managed Services](../../services/managing_imi.html) を参照してください。
+{:note}
 
 ## IBM Cloud アカウントのアクセス
 

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 物理インフラストラクチャー設計
 
@@ -29,13 +33,16 @@ lastupdated: "2018-09-25"
 
 物理ホストとは、コンピュート・リソースを提供する環境内の{{site.data.keyword.baremetal_short}}のことです。 このソリューションで適用される{{site.data.keyword.baremetal_short}}は VMware によって認証されています。これらは、[VMware HCG](http://www.vmware.com/resources/compatibility/search.php) にリストされています。
 
-ソリューションに用意されているサーバー構成は、vSphere ESXi をインストール、構成、管理するための最小要件を満たしているか上回っています。 さまざまな要件を満たす各種構成が使用可能です。 VMware on {{site.data.keyword.cloud_notm}} ソリューションに使用される正確な仕様の詳細リストについては、[Cloud Foundation インスタンス](../../sddc/sd_bom.html)または [vCenter Server インスタンス](../../vcenter/vc_bom.html)の部品構成表を参照してください。 {{site.data.keyword.baremetal_short}}は {{site.data.keyword.cloud_notm}} 内に存在することに注意してください。
+ソリューションに用意されているサーバー構成は、vSphere ESXi をインストール、構成、管理するための最小要件を満たしているか上回っています。 さまざまな要件を満たす各種構成が使用可能です。 VMware on {{site.data.keyword.cloud_notm}} ソリューションに使用される正確な仕様の詳細リストについては、[Cloud Foundation インスタンス](../../sddc/sd_bom.html)または [vCenter Server インスタンス](../../vcenter/vc_bom.html)の部品構成表を参照してください。
+
+{{site.data.keyword.baremetal_short}}は {{site.data.keyword.cloud_notm}} 内に存在します。
+{:note}
 
 各 Cloud Foundation インスタンスは 4 ホスト・デプロイメントから始まり、各 vCenter Server インスタンスはストレージ・ソリューションの選択に応じて 3 または 4 ホスト・デプロイメントから始まります。
 
-物理ホストでは、vSphere ESXi ハイパーバイザーに割り振られる 2 つのローカル接続ディスクが使用されます。 さらにディスクを割り振るには、このページの『_物理ストレージ設計_』セクションに記載されている vSAN を使用するか、[NetApp ONTAP Select のアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)に記載されている NetApp ONTAP を使用します。 各物理ホストは、パブリック・ネットワーク・アクセスとプライベート・ネットワーク・アクセスのために、冗長 10 Gbps ネットワーク接続を備えています。
+物理ホストでは、vSphere ESXi ハイパーバイザーに割り振られる 2 つのローカル接続ディスクが使用されます。 さらにディスクを割り振るには、『_物理ストレージ設計_』セクションに記載されている vSAN を使用するか、[NetApp ONTAP Select のアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)に記載されている NetApp ONTAP を使用します。 各物理ホストは、パブリック・ネットワーク・アクセスとプライベート・ネットワーク・アクセスのために、冗長 10 Gbps ネットワーク接続を備えています。
 
-ベア・メタル・サーバーの技術仕様は、以下のとおりです。
+ベアメタル・サーバーには以下の仕様があります。
 * CPU: デュアル Intel Xeon (コアと速度は可変構成)
 * メモリー: 可変構成 (128 GB 以上)
 * ネットワーク: 4 x 10 Gbps
@@ -70,7 +77,7 @@ lastupdated: "2018-09-25"
 ### プライマリー IP ブロックとポータブル IP ブロック
 
 {{site.data.keyword.cloud_notm}} は、{{site.data.keyword.cloud_notm}} インフラストラクチャー内で使用される 2 つのタイプの IP アドレスを割り振ります。
-* プライマリー IP アドレスは、{{site.data.keyword.cloud_notm}} によってプロビジョンされるデバイス、ベア・メタル・サーバー、仮想サーバーに割り当てられます。 これらのブロックでは、どのような IP アドレスもユーザーが割り当てるべきではありません。
+* プライマリー IP アドレスは、{{site.data.keyword.cloud_notm}} によってプロビジョンされるデバイス、ベア・メタル・サーバー、仮想サーバーに割り当てられます。 これらのブロックでは、どのような IP アドレスも割り当てないでください。
 * 必要に応じて割り当てたり管理したりするために、ポータブル IP アドレスが用意されています。
 
 {{site.data.keyword.slportal}}内で**「VLAN スパンニング」**を有効にするか、アカウントを**「Virtual Routing and Forwarding (VRF)」**アカウントとして構成すると、お客様のアカウントの範囲内の VLAN にプライマリー IP アドレスまたはポータブル IP アドレスをルーティングできるようになります。
@@ -135,11 +142,11 @@ vCenter Server 自動デプロイメントまたは Cloud Foundation 自動デ�
 
 ## 物理ストレージ設計
 
-物理ストレージ設計は、物理ホストに搭載される物理ディスクの構成と、ファイル・レベルの共有ストレージの構成から成ります。 これには、vSphere ESXi ハイパーバイザーのオペレーティング・システム・ディスクと、仮想マシン (VM) のストレージに使用されるオペレーティング・システム・ディスクが含まれます。 VM 用ストレージは、VMware vSAN によって仮想化されるローカル・ディスク、またはファイル・レベルの共有ストレージで構成できます。
+物理ストレージ設計は、物理ホストに搭載される物理ディスクの構成と、ファイル・レベルの共有ストレージの構成から成ります。 これには、vSphere ESXi ハイパーバイザーのオペレーティング・システム・ディスクと、仮想マシン (VM) のストレージに使用されるディスクが含まれます。VM 用ストレージは、VMware vSAN によって仮想化されるローカル・ディスク、またはファイル・レベルの共有ストレージで構成できます。
 
 ### オペレーティング・システム・ディスク
 
-vSphere ESXi ハイパーバイザーは、永続ロケーションにインストールされるように設計されています。 結果として、vSphere ESXi ハイパーバイザーの冗長性をサポートするための 2 つの 1TB SATA ディスクが、物理ホストの RAID-1 構成に含まれます。
+vSphere ESXi ハイパーバイザーは、永続ロケーションにインストールされるように設計されています。 結果として、vSphere ESXi ハイパーバイザーの冗長性をサポートするための 2 つの 1 TB SATA ディスクが、物理ホストの RAID-1 構成に含まれます。
 
 ### 仮想マシン・ストレージ
 
