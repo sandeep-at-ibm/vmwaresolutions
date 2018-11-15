@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen
 
@@ -14,7 +18,7 @@ Sie können Services für Ihre VMware vCenter Server-Instanzen bestellen, beispi
 
 ## Verfügbare Services für vCenter Server-Instanzen
 
-In der folgenden Tabelle sind die Services aufgeführt, die für vCenter Server-Instanzen verfügbar sind.
+In der folgenden Tabelle sind die Services aufgeführt, die für vCenter Server-Instanzen verfügbar sind, sowie die installierten Serviceversionen.
 
 Tabelle 1. Verfügbare Services für vCenter Server-Instanzen
 
@@ -22,14 +26,14 @@ Tabelle 1. Verfügbare Services für vCenter Server-Instanzen
 |----------------------------------------------------------------------------------------|------------------|
 | [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html) | BIG-IP VE v13.1 | V1.9 und höher |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 300 Series | V2.0 und höher |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 5.6 | V2.0 und höher |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 6.0.3 | V2.0 und höher |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html) | 5.4.0 | V2.3 und höher |
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)  | 4.2.1 | V2.3 und höher |
 | [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 und höher |
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html) | 10.1.1 Patch 1 | V2.2 und höher |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html) |   | V2.2 und höher |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html) | 9.5u3 | V1.8 und höher |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) | 5.5u4 Patch 2 | V1.2 und höher |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) | 6.0 Update 3 | V1.2 und höher |
 
 ## Vorgehensweise zum Hinzufügen von Services zu vCenter Server-Instanzen
 
@@ -61,7 +65,8 @@ Nachdem Ihre Anforderung zum Entfernen des Service akzeptiert wurde, ändert sic
 
 Nachdem die Entfernung des Service erfolgreich abgeschlossen wurde, werden Sie per E-Mail benachrichtigt und der Service wird von der Seite **Services** der Instanz entfernt.
 
-**Achtung:** Die entfernten Services werden Ihnen bis zum Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur berechnet.
+Die entfernten Services werden Ihnen bis zum Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur berechnet.
+{:note}
 
 ### Zugehörige Links
 

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-02"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen
 
@@ -14,7 +18,7 @@ Sie können Services für Ihre VMware vCenter Server on {{site.data.keyword.clou
 
 ## Verfügbare Services für vCenter Server with Hybridity Bundle-Instanzen
 
-Die folgenden Services sind für vCenter Server with Hybridity Bundle-Instanzen verfügbar.
+In der folgenden Tabelle sind die Services aufgeführt, die für vCenter Server with Hybridity Bundle-Instanzen verfügbar sind, sowie die installierten Serviceversionen.
 
 Tabelle 1. Verfügbare Services für vCenter Server with Hybridity Bundle-Instanzen
 
@@ -22,7 +26,7 @@ Tabelle 1. Verfügbare Services für vCenter Server with Hybridity Bundle-Instan
 |----------------------------------------------------------------------------------------|------------------|
 | [F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1 | V1.9 und höher |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | 300 Series | V1.8 und höher |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 5.6 | V2.0 und höher |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 6.0.3 | V2.0 und höher |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 und höher |
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | V2.3 und höher |
 | [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 und höher |
@@ -30,7 +34,7 @@ Tabelle 1. Verfügbare Services für vCenter Server with Hybridity Bundle-Instan
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 und höher |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | 9.5u3 | V1.8 und höher |
 | [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 | V2.3 und höher |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | 5.5 u4 Patch 2 | V1.2 und höher |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | 6.0 Update 3 | V1.2 und höher |
 
 ## Vorgehensweise zum Hinzufügen von Services zu vCenter Server with Hybridity Bundle-Instanzen
 
@@ -62,7 +66,8 @@ Nachdem Ihre Anforderung zum Entfernen des Service akzeptiert wurde, ändert sic
 
 Nachdem die Entfernung des Service erfolgreich abgeschlossen wurde, werden Sie per E-Mail benachrichtigt und der Service wird von der Seite **Services** der Instanz entfernt.
 
-**Achtung:** Die entfernten Services werden Ihnen bis zum Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur berechnet.
+Die entfernten Services werden Ihnen bis zum Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur berechnet.
+{:note}
 
 ### Zugehörige Links
 

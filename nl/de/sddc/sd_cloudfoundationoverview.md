@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Übersicht über Cloud Foundation
 
@@ -43,15 +47,18 @@ Weitere Informationen zur Architektur enthält der Abschnitt [Lösungsübersicht
 
 Ihre Cloud Foundation-Instanz enthält die folgenden Komponenten.
 
-**Hinweis:** Die für Hardware, Netzbetrieb, virtuelle Maschinen und Speicher anfallenden Gebühren können abhängig vom {{site.data.keyword.CloudDataCent_notm}}, das für die Bereitstellung ausgewählt ist, variieren.
+Die für Hardware, Netzbetrieb, virtuelle Maschinen und Speicher anfallenden Gebühren können abhängig vom {{site.data.keyword.CloudDataCent_notm}}, das für die Bereitstellung ausgewählt ist, variieren.
+{:note}
 
 ### Bare Metal Server
 
 Sie können {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen mit einer der folgenden Konfigurationen bestellen:
-*  **Angepasst**: {{site.data.keyword.baremetal_short}}-Instanzen mit dem ausgewählten CPU-Modell und der ausgewählten RAM-Größe.   
-   * 2-CPU Intel Broadwell Generation (Intel Xeon E5-2600 v4 Series)
+*  **Skylake** oder **Broadwell**: {{site.data.keyword.baremetal_short}}-Instanzen mit dem ausgewählten CPU-Modell und der ausgewählten RAM-Größe.   
    * 2-CPU Intel Skylake Generation (Intel Xeon 4100/5100/6100 Series)
-**Hinweis:** Wenn Sie vSAN-Speicher verwenden wollen, dann benötigt die Konfiguration vier {{site.data.keyword.baremetal_short}}-Instanzen.
+   * 2-CPU Intel Broadwell Generation (Intel Xeon E5-2600 v4 Series)
+
+   Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
+   {:note}
 * **Vorkonfiguriert**: 2-CPU Intel Broadwell Generation (Intel Xeon E5-2600 v4 Series)
   * **S (Klein)**: Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz / 128 GB RAM / 12 Platten
   * **L (Groß)**: Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM / 12 Platten
@@ -63,7 +70,8 @@ Die folgenden Netzkomponenten werden bestellt:
 * 3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
 * Sicheres VMware NSX Edge Services Gateway (ESG) für die Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Über dieses ESG kommunizieren virtuelle IBM Management-Maschinen mit bestimmten externen IBM Managementkomponenten, die mit der Automatisierung zusammenhängen. Weitere Information finden Sie im Abschnitt [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **Wichtig:** Dieses ESG ist für Sie weder zugänglich, noch können Sie es verwenden. Falls Sie es ändern, sind Sie möglicherweise nicht in der Lage, die Cloud Foundation-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Außerdem führt die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu, dass {{site.data.keyword.vmwaresolutions_short}} unbrauchbar wird.
+  Dieses ESG ist für Sie weder zugänglich, noch können Sie es verwenden. Falls Sie es ändern, sind Sie möglicherweise nicht in der Lage, die Cloud Foundation-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Außerdem führt die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu, dass {{site.data.keyword.vmwaresolutions_short}} unbrauchbar wird.
+  {:important}
 
 * Die Funktion für EVC (Enhanced vMotion Compatibility) wird automatisch aktiviert, wenn Sie über einen vorhandenen Cluster mit ESXi-Servern verfügen, die von der aktuellen VMware vSphere-Version unterstützt werden. EVC bietet vMotion-Kompatibilität für alle ESXi-Server in einem Cluster, indem sichergestellt wird, dass alle ESXi-Server in einem Cluster die gleiche Gruppe von CPU-Funktionen für virtuelle Maschinen bereitstellen. Mithilfe von EVC können die virtuellen Maschinen zwischen allen ESXi-Servern im Cluster migriert werden. Dies gilt auch dann, wenn die eigentlichen CPUs auf den ESXi-Servern unterschiedlich sind.
 
@@ -80,7 +88,7 @@ Abhängig von der von Ihnen ausgewählten {{site.data.keyword.baremetal_short}}-
 * 2 1-TB-SATA-Bootlaufwerke
 * 2 Solid-State-Cacheplatten mit 960 GB
 * 1 RAID-Plattencontroller
-* Nur bei Konfiguration des Typs **Angepasst**: Sie können die Anzahl der Plattenlaufwerke sowie Plattentyp und Kapazität gemäß Ihren Anforderungen festlegen. Darüber hinaus verfügen Sie über die Option für "Hohe Leistung mit Intel Optane", die zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereitstellt. Die Option für "Hohe Leistung mit Intel Optane" hängt vom CPU-Modell ab.
+* Nur bei Konfigurationen des Typs **Skylake** and **Broadwell**: Sie können die Anzahl der Plattenlaufwerke sowie Plattentyp und Kapazität gemäß Ihren Anforderungen festlegen. Darüber hinaus verfügen Sie über die Option für "Hohe Leistung mit Intel Optane", die zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereitstellt. Die Option für "Hohe Leistung mit Intel Optane" hängt vom CPU-Modell ab.
 * Nur bei Konfiguration des Typs **Vorkonfiguriert** - **S (Klein)**: 2 SSD-Kapazitätsplatten mit 1,9 TB.
 * Nur bei Konfiguration des Typs **Vorkonfiguriert** - **L (Groß)**: 4 SSD-Kapazitätsplatten mit 3,8 TB.
 
@@ -110,7 +118,8 @@ Jeder Cloud Foundation-Erweiterungsknoten stellt folgende Komponenten in Ihrem {
 * 1 Lizenz für SDDC Manager
 * 1 Support- und Servicegebühr
 
-**Wichtig:** Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal}} oder über ein anderes Verfahren außerhalb der Konsole verwalten. Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert.
+Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal}} oder über ein anderes Verfahren außerhalb der Konsole verwalten. Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert.
+{:important}
 
 **VORSICHT:** Wenn Sie {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto installiert wurden, als Sie die Instanz bestellt haben, außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwalten, kann dies zur Instabilität Ihrer Umgebung führen. Zu diesen Managementaktivitäten gehören:
 *  Komponenten hinzufügen, ändern, zurückgeben oder entfernen

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -16,13 +16,15 @@ Die {{site.data.keyword.vmwaresolutions_full}}-Konsole führt laufend Erkennunge
 
 Ein verfügbares Update ist ein Eintrag in der Liste der Software-Updates für die Instanz, das sofort angewendet oder für einen späteren Zeitpunkt geplant werden kann. Das Update ist ein Bundle, das eines oder mehrere Pakete für die Aktualisierung der IBM Managementkomponenten und der VMware-Komponenten enthält.
 
+Ab Version 2.5 werden IBM CloudDriver-Updates nicht mehr aufgelistet, da automatische Aktualisierungsfunktionalität aktiviert ist. 
+
 ## Vorbereitende Schritte
 
 Bevor Sie versuchen, ein Update anzuwenden, erweitern Sie den Update-Eintrag, indem Sie auf den Abwärtspfeil klicken und die folgenden Informationen überprüfen:
 * Überprüfen Sie die Version des Updates. Sie müssen die Updates in chronologischer Reihenfolge anwenden, also zuerst das älteste Update und zuletzt das neueste Update. Stellen Sie sicher, dass Sie alle vorherigen Updates angewendet haben, bevor Sie das aktuelle Update anwenden. Beispielsweise müssen Sie das Update für V2.4 anwenden, bevor Sie versuchen, das Update für V2.5 anzuwenden.
 * Ermitteln Sie, ob eine Ausfallzeit erforderlich ist.
 * Prüfen Sie die geschätzte Gesamtzeit für die Ausführung des Updates.
-* Stellen Sie fest, wie sich das Update auf die virtuelle VMware-Umgebung auswirkt. In Tabelle 1 ist dargestellt, wie die verschiedenen Auswirkungsstufen das System beeinflussen.
+* Stellen Sie fest, wie sich das Update auf die virtuelle VMware-Umgebung auswirkt. Tabelle 1 zeigt, wie sich die verschiedenen Aktualisierungsstufen auf das System auswirken.
 * Lesen Sie die Details über das Update.
 
 Tabelle 1. Aktualisierungsstufen und Auswirkungen

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -18,7 +18,7 @@ Beim Aktivieren von vSphere DRS in einem Cluster werden die beiden folgenden wic
 
 ### Lastausgleich
 
-Die Lastausgleichsfunktion erlaubt die kontinuierliche Überwachung der Verteilung und Belegung von CPU- und Speicherressourcen für alle Hosts und virtuellen Maschinen (VMs) innerhalb des Clusters. DRS vergleicht diese Metriken mit einer idealen Ressourcenauslastung unter Berücksichtigung der Attribute für die Ressourcenpools und VMs des Clusters sowie des aktuellen Bedarfs und des Unausgeglichenheitsziels. Anschließend werden geeignete VM-Migrationen ausgeführt (oder vorgeschlagen).
+Die Lastausgleichsfunktion erlaubt die kontinuierliche Überwachung der Verteilung und Belegung von CPU- und Speicherressourcen für alle Hosts und virtuellen Maschinen (VMs) innerhalb des Clusters. DRS vergleicht diese Metriken mit einer idealen Ressourcenauslastung unter Berücksichtigung der Attribute für die Ressourcenpools und VMs des Clusters sowie des aktuellen Bedarfs. Anschließend werden geeignete VM-Migrationen ausgeführt oder vorgeschlagen.
 
 Wird eine virtuelle Maschine (VM) zum ersten Mal eingeschaltet, dann versucht DRS, den korrekten Lastausgleich aufrechtzuerhalten, indem die VM entweder auf einem geeigneten Host platziert oder eine entsprechende Empfehlung ausgegeben wird. Die Einstellungen für Platzierungen oder Empfehlungen werden im Abschnitt für die DRS-Automatisierung in den Clustereinstellungen festgelegt.
 

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-01"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # NSX Edge Services Gateway-Design
 
@@ -16,7 +20,8 @@ Die Lösung 'NSX Edge Services Gateway on {{site.data.keyword.cloud}}' bietet VM
 
 Die interne Architektur gibt die Bereitstellung der erforderlichen NSX Edge-Komponenten in einem Ressourcenpool in einem konvergierten VMware Cloud Foundation-Cluster oder einem VMware vCenter Server-Cluster an.
 
-**Hinweis:** VMware vSAN ist in der folgenden Abbildung optional.
+VMware vSAN ist in der folgenden Abbildung optional.
+{:note}
 
 Abbildung 1. Cloud Networking Services on {{site.data.keyword.cloud_notm}}
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-27"
 
 Sie sind für die Konfiguration, Verwaltung und Überwachung sämtlicher Softwarekomponenten verantwortlich. Dies schließt die Sicherung Ihrer Managementinfrastruktur und Ihrer Workloads sowie die Gewährleistung der Verfügbarkeit dieser Komponenten ein.
 
-Als Teil der Lösung können Sie optional {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus in {{site.data.keyword.cloud_notm}} oder Veeam auf {{site.data.keyword.cloud_notm}}-Add-on-Services bereitstellen. Veeam und IBM Spectrum Protect Plus können helfen, die Sicherungsanforderungen für Ihre Managementkomponenten zu erfüllen.
+Als Teil der Lösung können Sie optional IBM Spectrum Protect&trade; Plus in {{site.data.keyword.cloud_notm}} oder Veeam auf {{site.data.keyword.cloud_notm}}-Add-on-Services bereitstellen. Veeam und IBM Spectrum Protect Plus können helfen, die Sicherungsanforderungen für Ihre Managementkomponenten zu erfüllen.
 
 Diese Add-on-Services werden zusammen mit {{site.data.keyword.cloud_notm}} Endurance-Speicher bereitgestellt. Die Services unterstützen Sie bei der Sicherung Ihrer Workloads und der Managementkomponenten. Die [Übersicht über die IBM Spectrum Protect Plus-Architektur](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} und die [Übersicht über die Veeam-Architektur](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} bieten nützliche Anleitungen zur Planung und Dimensionierung Ihrer Bereitstellung. Sie können auch [verwaltete Services](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) für Ihre Veeam-Bereitstellung anfordern.
 
@@ -34,7 +34,10 @@ Stellen Sie zur Speicherung dieser Sicherungen einen Linux-Dateiserver in Ihrem 
 
 VMware vCenter Server und PSC stellen eine [Benutzerschnittstelle für das Appliance-Management und eine API zum Exportieren der Datenbank und der Konfiguration auf einen Dateiserver ](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} unter Verwendung verschiedener Protokolle zur Verfügung. VMware dokumentiert ein Beispiel dafür, wie diese zur [regelmäßigen Ausführung als Cron-Job](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} direkt auf der vCenter Server Appliance und dem PSC konfiguriert werden kann. Sie können dieses Beispiel für Ihren Verwendungszweck anpassen.
 
-Bei diesem Verfahren müssen Sie sowohl die vCenter Server Appliance als auch PSC separat sichern. Machen Sie sich mit den von VMware dokumentierten Aspekten und Einschränkungen vertraut und planen Sie entsprechend. Sehen Sie außerdem eine regelmäßige Rotation und einen regelmäßigen Gültigkeitsablauf für die Dateisicherungen auf Ihrem Dateiserver vor. Beachten Sie, dass VMware voraussetzt, dass die Sicherungsposition ein leerer Ordner ist. Daher müssen Sie dafür sorgen, dass Ihre Sicherungsrotation oder -automatisierung die Position für jeden nachfolgenden Sicherungsjob leer zurücklässt.
+Bei diesem Verfahren müssen Sie sowohl die vCenter Server Appliance als auch PSC separat sichern. Machen Sie sich mit den von VMware dokumentierten Aspekten und Einschränkungen vertraut und planen Sie entsprechend. Sehen Sie außerdem eine regelmäßige Rotation und einen regelmäßigen Gültigkeitsablauf für die Dateisicherungen auf Ihrem Dateiserver vor.
+
+VMware setzt voraus, dass die Sicherungsposition ein leerer Ordner ist. Daher müssen Sie dafür sorgen, dass Ihre Sicherungsrotation oder -automatisierung die Position für jeden nachfolgenden Sicherungsjob leer zurücklässt.
+{:note}
 
 ## Dateibasierte NSX-Sicherung
 

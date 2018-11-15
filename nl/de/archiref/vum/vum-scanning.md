@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -16,16 +16,15 @@ Wenn Sie Hosts, virtuelle Maschinen und virtuelle Appliances prüfen (scannen), 
 *	**Manuelles Initiieren einer Prüfung eines Containerobjekts** - Sie können eine simultane Prüfung von Hosts, virtuellen Maschinen und virtuellen Appliances starten, indem Sie ein Containerobjekt prüfen, das ein Rechenzentrum oder ein Rechenzentrumsordner ist.
 *	**Planen einer Prüfung** - Sie können den vSphere Web Client so konfigurieren, dass virtuelle Maschinen, virtuelle Appliances und ESXi-Hosts zu bestimmten Zeiten oder in den gewünschten Abständen durchsucht werden.
 
-##	Prüfung von vSphere ESXi-Hosts manuell initiieren
+## Prüfung von vSphere ESXi-Hosts manuell initiieren
 
-1.	Klicken Sie auf die Schaltfläche **Auf Updates prüfen**, wählen Sie **Patches und Erweiterungen und Upgrades** aus und klicken Sie anschließend auf **OK**.
-2.	Wenn die Prüfung abgeschlossen ist, wählen Sie **Kritische Host-Patches** aus und werten Sie die untere Anzeige nach den einzelnen Hosts aus.
-3.	Wenn Sie auf die Zahl unter 'Anzahl Patches' klicken, zeigt ein Fenster die Patchdetails an.
-4.	Nehmen Sie die Prüfung vor und wiederholen Sie den Vorgang für **Nicht kritische Patches**.
+1. Klicken Sie auf **Auf Updates prüfen**, wählen Sie **Patches und Erweiterungen und Upgrades** aus und klicken Sie anschließend auf **OK**.
+2. Wenn die Prüfung abgeschlossen ist, wählen Sie **Kritische Host-Patches** aus. Überprüfen Sie im unteren Teilfenster die Patchdetails für die einzelnen Hosts, indem Sie auf die Zahl in **Anzahl der Patches** klicken. In einem Fenster werden die Patchinformationen angezeigt.
+3. Nehmen Sie die Prüfung vor und wiederholen Sie den Vorgang für **Nicht kritische Patches**.
 
-Beachten Sie, dass sich die VUM-Protokolldateien unter _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_ befinden können.
+  Die VUM-Protokolldateien befinden sich unter _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_.
 
-##	Prüfung von virtuellen Maschinen und virtuellen Appliances manuell initiieren
+## Prüfung von virtuellen Maschinen und virtuellen Appliances manuell initiieren
 
 Sie können virtuelle Maschinen und virtuelle Appliances anhand angehängter Baselines und Baselinegruppen prüfen. Die virtuellen Maschinen und Appliances, die Sie auswählen, werden - je nach den von Ihnen ausgewählten Optionen - anhand der angehängten Baselines geprüft. Alle untergeordneten Objekte werden ebenfalls geprüft, d. h. je größer die virtuelle Infrastruktur ist und je weiter oben in der Objekthierarchie sie die Prüfung initiieren, umso länger dauert die Prüfung und umso genauer wird die Konformitätsansicht.
 
@@ -56,5 +55,5 @@ Sie können den vSphere Web Client so konfigurieren, dass virtuelle Maschinen, v
 
 ### Zugehörige Links
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

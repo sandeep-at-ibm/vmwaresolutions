@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Cluster für Cloud Foundation-Instanzen hinzufügen, anzeigen und löschen
 
@@ -40,30 +44,40 @@ Der Clustername muss die folgenden Anforderungen erfüllen:
 
 Der Standort des {{site.data.keyword.CloudDataCent}}s für den Cluster wird standardmäßig auf das {{site.data.keyword.CloudDataCent_notm}} der Cloud Foundation-Instanz gesetzt. Sie können den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}} als die bereitgestellte Instanz bereitstellen, müssen aber sicherstellen, dass die Netzlatenz zwischen den beiden {{site.data.keyword.CloudDataCents_notm}} weniger als 150 Millisekunden beträgt. Zur Überprüfung der Netzlatenz können Sie ein Tool wie [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} verwenden.
 
-Welche Rechenzentren für Sie verfügbar sind, richtet sich nach der Bare Metal Server-Konfiguration, die für die Bereitstellung ausgewählt wurde. Wurde die Konfiguration des Typs **Angepasst** ausgewählt, können Sie den Cluster auch in einem anderen {{site.data.keyword.cloud_notm}}-Infrastrukturpod bereitstellen, falls das ausgewählte Rechenzentrum weitere Pods enthält. Diese Konfiguration ist hilfreich, wenn der Standardpod der {{site.data.keyword.cloud_notm}}-Infrastruktur, in dem die erste Instanz bereitgestellt wird, seine maximale Kapazität erreicht hat.
+Welche Rechenzentren für Sie verfügbar sind, richtet sich nach der Bare Metal Server-Konfiguration, die für die Bereitstellung ausgewählt wurde. Wurde die Konfiguration des Typs **Skylake** oder **Broadwell** ausgewählt, können Sie den Cluster auch in einem anderen {{site.data.keyword.cloud_notm}}-Infrastrukturpod bereitstellen, falls das ausgewählte Rechenzentrum weitere Pods enthält. Diese Konfiguration ist hilfreich, wenn der Standardpod der {{site.data.keyword.cloud_notm}}-Infrastruktur, in dem die erste Instanz bereitgestellt wird, seine maximale Kapazität erreicht hat.
 
-**Hinweis:** Die standardisierten Bare Metal Server-Konfigurationen des Typs **S (Klein)** und **L (Groß)** verwenden einen Standardpod, der nicht geändert werden kann.
+Die standardisierten Bare Metal Server-Konfigurationen des Typs **S (Klein)** und **L (Groß)** verwenden einen Standardpod, der nicht geändert werden kann.
+{:note}
 
 Wenn Sie den Cluster in einem anderen Rechenzentrum oder Pod bereitstellen, werden drei weitere VLANs für die Verwendung mit den bestellten {{site.data.keyword.baremetal_short}}-Instanzen bestellt.
 
 ### Einstellungen für Bare Metal Server
 
-Sie können entweder **Angepasst** oder **Vorkonfiguriert** auswählen.
+Sie können entweder **Skylake** oder **Broadwell** oder **Vorkonfiguriert** auswählen.
 
-#### Angepasst
+#### Skylake
 
-Für die Einstellung **Angepasst** steht eine Reihe von Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
+Für die Einstellung **Skylake** steht eine Reihe von Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
 
-Tabelle 1. Optionen für angepasste {{site.data.keyword.baremetal_short}}-Instanzen
+Tabelle 1. Optionen für Skylake {{site.data.keyword.baremetal_short}}
+
+| CPU-Modelloptionen   | RAM-Optionen   |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110-Prozessor / 16 Kerne insgesamt, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon Gold 5120-Prozessor / 28 Kerne insgesamt, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+#### Broadwell
+
+Für die Einstellung **Broadwell** steht eine Reihe von Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
+
+Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU-Modelloptionen   | RAM-Optionen   |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon Silver 4110-Prozessor / 16 Kerne insgesamt, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon Gold 5120-Prozessor / 28 Kerne insgesamt, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### Vorkonfiguriert
 
@@ -73,16 +87,15 @@ Für die Einstellung **Vorkonfiguriert** können Sie abhängig von Ihren Anforde
 
 ### vSAN-Speichereinstellungen
 
-Für die Bare Metal Server-Konfigurationen vom Typ **Vorkonfiguriert** können die vSAN-Speichereinstellungen nicht geändert werden:
-* Für die Konfiguration vom Typ **S (Klein)** werden zwei SSD-SED-Plattenlaufwerke mit jeweils 1,9 TB bestellt.
-* Für die Konfiguration vom Typ **L (Groß)** werden vier SSD-SED-Plattenlaufwerke mit jeweils 3,8 TB bestellt.
-
-Bei Bare Metal Server-Konfigurationen des Typs **Angepasst** können Sie den vSAN-Speicher durch Angeben der folgenden Einstellungen anpassen:
-
+Bei Bare Metal Server-Konfigurationen des Typs **Skylake** und **Broadwell** können Sie den vSAN-Speicher durch Angeben der folgenden Einstellungen anpassen:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
 * Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
+
+Für die Bare Metal Server-Konfigurationen vom Typ **Vorkonfiguriert** können die vSAN-Speichereinstellungen nicht geändert werden:
+* Für die Konfiguration vom Typ **S (Klein)** werden zwei SSD-SED-Plattenlaufwerke mit jeweils 1,9 TB bestellt.
+* Für die Konfiguration vom Typ **L (Groß)** werden vier SSD-SED-Plattenlaufwerke mit jeweils 3,8 TB bestellt.
 
 ### Lizenzierungseinstellungen
 
@@ -95,17 +108,18 @@ Sie können die Lizenzierungsoptionen für die VMware-Komponenten im Cluster ein
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf die Instanz, zu der Cluster hinzugefügt werden sollen.
 
-   **Hinweis:** Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster zur Instanz hinzufügen.
+   Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster zur Instanz hinzufügen.
+   {:note}
 
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur** und anschließend rechts oben in der Tabelle **CLUSTER** auf **Hinzufügen**.
 4. Geben Sie auf der Seite **Cluster hinzufügen** den Clusternamen ein.
 5. Wenn Sie für den Cluster ein anderes {{site.data.keyword.CloudDataCent_notm}} als Host verwenden möchten als das, in dem die Instanz gehostet wird, aktivieren Sie unter **Bare Metal Server** das Kontrollkästchen **Anderen Standort auswählen** und wählen Sie dann das gewünschte {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
 6. Führen Sie die Bare-Metal-Konfiguration durch:
-   * Wenn Sie **Angepasst** ausgewählt haben, geben Sie das **CPU-Modell** und die Größe des **RAM** an.
+   * Wenn Sie **Skylake** oder **Broadwell** ausgewählt haben, geben Sie das **CPU-Modell** und die Größe des **RAM** an.
    * Wenn Sie **Vorkonfiguriert** ausgewählt haben, geben Sie die **Bare Metal Server-Konfiguration** an.
 7. Führen Sie die Speicherkonfiguration durch:
+   * Wenn Sie für die Bare Metal-Konfiguration die Option **Skylake** oder **Broadwell** ausgewählt haben, geben Sie die Plattentypen für die vSAN-Kapazitäts- und Cacheplatten sowie die Anzahl der Platten an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
    * Wenn Sie für die Bare Metal-Konfiguration die Option **Vorkonfiguriert** ausgewählt haben, können die Speichereinstellungen für die Bare-Metal-Serverkonfigurationen **S (Klein)** und **L (Groß)** nicht geändert werden.
-   * Wenn Sie für die Bare Metal-Konfiguration die Option **Angepasst** ausgewählt haben, geben Sie die Plattentypen für die vSAN-Kapazitäts- und Cacheplatten sowie die Anzahl der Platten an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
 8. Geben Sie an, wie Ihre Lizenzschlüssel bereitgestellt werden:
    * Für Benutzer der Kategorie "IBM Business Partner" sind die vSphere-Lizenz (Enterprise Plus Edition) und die vSAN-Lizenz enthalten und werden in Ihrem Namen erworben. Für die vSAN-Lizenz muss allerdings die Edition angegeben werden.
    * Für Benutzer, bei denen es sich nicht um IBM Business Partner handelt, können Sie eine der folgenden Optionen auswählen:
@@ -122,7 +136,8 @@ Sie können die Lizenzierungsoptionen für die VMware-Komponenten im Cluster ein
 1. Die Bereitstellung des Clusters wird automatisch gestartet und der Status des Clusters ändert sich in **Wird initialisiert**. Sie können den Status der Bereitstellung überprüfen, indem Sie den Bereitstellungsverlauf auf der Übersichtsseite für die Instanz anzeigen.
 2. Sobald der Cluster einsatzbereit ist, ändert sich sein Status in **Bereit**. Der neu hinzugefügte Cluster wird mit vSphere High Availability (HA) und vSphere Distributed Resource Scheduler (DRS) aktiviert.
 
-**Wichtig:** Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, kann die Operation zum Hinzufügen oder Entfernen von ESXi-Servern im Cluster fehlschlagen.
+Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, kann die Operation zum Hinzufügen oder Entfernen von ESXi-Servern im Cluster fehlschlagen.
+{:important}
 
 ## Vorgehensweise zum Anzeigen von Clustern in Cloud Foundation-Instanzen
 
@@ -197,7 +212,8 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf die Instanz, aus der Cluster gelöscht werden sollen.
 
-   **Hinweis:** Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster aus der Instanz löschen.
+   Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster aus der Instanz löschen.
+   {:note}
 
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Suchen Sie in der Tabelle **CLUSTER** den Cluster, der gelöscht werden soll, und klicken Sie dann auf das Symbol **Löschen**.
 4. Vergewissern Sie sich, dass die Migration der VMs auf andere Cluster (sofern erforderlich) durchgeführt wurde und dass der Cluster tatsächlich gelöscht werden soll.

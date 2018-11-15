@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Außerhalb der Konsole erstellte Cluster skalieren
 
@@ -24,7 +28,8 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 2. Klicken Sie auf der Seite **VMware vSphere on IBM Cloud** auf **Erstellen**.  
    Vergewissern Sie sich, dass Sie sich auf der Registerkarte **Neue erstellen** befinden und dass in der Liste **Clusterkonfigurationen** der Eintrag **Neuer Cluster** angezeigt wird.
 3. Erstellen Sie einen Cluster mit denselben Einstellungen wie Ihr vorhandener Cluster, der außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole erstellt wird. Weitere Informationen finden Sie unter [Neue vSphere-Cluster bestellen](vs_orderinginstances.html).  
-   **Hinweis:** Zum Skalieren eines Clusters, der außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole erstellt wird, müssen Sie im Falle der Netzschnittstelle die vorhandenen VLANs für den Cluster auswählen.  
+   Zum Skalieren eines Clusters, der außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole erstellt wird, müssen Sie im Falle der Netzschnittstelle die vorhandenen VLANs für den Cluster auswählen.
+   {:note}
 4. Überprüfen Sie im Fenster **Bestellübersicht** die Clusterkonfiguration und klicken Sie dann auf **Konfiguration speichern**.   
 5. Klicken Sie auf der Seite **Einführung** auf die Karte **VMware vSphere on IBM Cloud**.
 6. Klicken Sie auf der Seite **VMware vSphere on IBM Cloud** auf **Erstellen**.
@@ -37,7 +42,8 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 
 Die Bereitstellung des Clusters beginnt automatisch und Sie empfangen eine E-Mail-Bestätigung, dass die Bestellung bearbeitet wird. Sobald der Cluster einsatzbereit ist, werden Sie per E-Mail benachrichtigt.
 
-**Hinweis:** Die vSphere-Cluster werden auf der Seite **Bereitgestellte Instanzen** nicht zusammen mit den vCenter Server- und Cloud Foundation-Instanzen angezeigt.
+Die vSphere-Cluster werden auf der Seite **Bereitgestellte Instanzen** nicht zusammen mit den vCenter Server- und Cloud Foundation-Instanzen angezeigt.
+{:note}
 
 ### Zugehörige Links
 

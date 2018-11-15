@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Vorhandene vSphere-Cluster skalieren
 
@@ -37,7 +41,8 @@ Die Clusterskalierung wird automatisch gestartet. Sie erhalten eine E-Mail, in d
 
 Wenn der Cluster, den Sie skalieren möchten, nicht zur Verwendung bereit ist, erhalten Sie möglicherweise eine Fehlernachricht.
 
-**Hinweis:** Die vSphere-Cluster werden (anders als die vCenter Server- und Cloud Foundation-Instanzen) auf der Seite **Bereitgestellte Instanzen** nicht angezeigt.
+Die vSphere-Cluster werden (anders als die vCenter Server- und Cloud Foundation-Instanzen) auf der Seite **Bereitgestellte Instanzen** nicht angezeigt.
+{:note}
 
 ### Zugehörige Links
 

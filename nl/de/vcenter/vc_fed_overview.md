@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -22,7 +22,7 @@ Die folgenden Komponenten sind enthalten:
 
 ### Bare Metal Server
 
-Sie können zwei oder mehr angepasste {{site.data.keyword.baremetal_short}}-Instanzen mit einer der folgenden Konfigurationen bestellen:
+Sie können zwei oder mehr {{site.data.keyword.baremetal_short}}-Instanzen mit einer der folgenden Konfigurationen bestellen:
 
 * 2-CPU Intel Broadwell Generation (Intel Xeon E5-2600 v4 Series)
 * 2-CPU Intel Skylake Generation (Intel Xeon 4100/5100/6100 Series)

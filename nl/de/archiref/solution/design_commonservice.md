@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Design der allgemeinen Services
 
@@ -20,9 +24,10 @@ In diesem Design wird Microsoft Active Directory (AD) für das Identitätsmanage
 
 Standardmäßig wird eine einzelne Active Directory-VSI (VSI - Virtual Server Instance) auf der {{site.data.keyword.cloud}}-Infrastruktur bereitgestellt. Das Design bietet darüber hinaus die Option, zwei hoch verfügbare Microsoft Active Directory-Server als dedizierte Windows Server-VMs im Management-Cluster bereitzustellen.
 
-**Hinweis:** Wenn Sie diese Option wählen, sind Sie für die Microsoft-Lizenzierung und -Aktivierung verantwortlich.
+Wenn Sie diese Option wählen, sind Sie für die Microsoft-Lizenzierung und -Aktivierung verantwortlich.
+{:note}
 
-Active Directory dient nur zur Authentifizierung von Zugriffen für die Verwaltung der VMware-Instanz und nicht zur Speicherung von Endbenutzern der Workloads in bereitgestellten Instanzen. Der Gesamtstrukturrootname des Active Directory-Servers stimmt mit dem DNS-Domänennamen überein, den Sie angeben. Dieser Domänenname wird nur für die primäre Cloud Foundation- und vCenter Server-Instanz angegeben, wenn mehrere Instanzen verknüpft sind. Bei verknüpften Instanzen enthält jede Instanz einen Active Directory Server, der sich im Rootreplikatring der Gesamtstruktur befindet. Die DNS-Zonendateien werden ebenfalls auf die Active Directory Server repliziert.
+Active Directory dient nur zur Authentifizierung von Zugriffen für die Verwaltung der VMware-Instanz und nicht zur Speicherung von Benutzern der Workloads in bereitgestellten Instanzen. Der Gesamtstrukturrootname des Active Directory-Servers stimmt mit dem DNS-Domänennamen überein, den Sie angeben. Dieser Domänenname wird nur für die primäre Cloud Foundation- und vCenter Server-Instanz angegeben, wenn mehrere Instanzen verknüpft sind. Bei verknüpften Instanzen enthält jede Instanz einen Active Directory Server, der sich im Rootreplikatring der Gesamtstruktur befindet. Die DNS-Zonendateien werden ebenfalls auf die Active Directory Server repliziert.
 
 ### vSphere-SSO-Domäne
 
@@ -56,7 +61,7 @@ Da SDDC Manager die Hostnamen für die zugehörigen verwalteten Komponenten gene
 In diesem Design werden DNS-Services auf den Active Directory-Servern mit der SDDC Manager-VM in der folgenden Konfiguration integriert:
 * Sie können die Domänenstruktur angeben. Der Domänenname kann eine beliebige Anzahl von Ebenen umfassen (bis zu dem Maximum, das die Cloud Foundation-Komponenten verarbeiten können).
 * Die unterste Ebene ist die Unterdomäne, für SDDC Manager maßgeblich ist.
-* Der von Ihnen angegebene DNS-Domänenname wird als Rootdomänenname der Active Directory-Gesamtstruktur verwendet. Wenn der DNS-Domänenname zum Beispiel `cloud.ibm.com` lautet, ist der Rootname der Active Directory-Gesamtstruktur `cloud.ibm.com`. Diese DNS-Domäne und diese Active Directory-Domäne ist über alle verknüpften Cloud Foundation-Instanzen hinweg identisch.
+* Der von Ihnen angegebene DNS-Domänenname wird als Rootdomänenname der Active Directory-Gesamtstruktur verwendet. Wenn der DNS-Domänenname zum Beispiel `cloud.ibm.com` lautet, ist der Rootname der Active Directory-Gesamtstruktur `cloud.ibm.com`. Diese DNS-Domäne und diese Active Directory-Domäne sind über alle verknüpften Cloud Foundation-Instanzen hinweg identisch.
 * Sie können zusätzlich einen Unterdomänennamen für die Instanz angeben. Der Unterdomänenname muss unter allen verknüpften Cloud Foundation-Instanzen eindeutig sein.  
 * Die DNS-Konfiguration für SDDC Manager wird so geändert, dass sie auf die Active Directory-Server für alle Zonen mit Ausnahme der Zone verweist, für die sie verantwortlich ist.
 * Die DNS-Server für Active Directory werden so konfiguriert, dass sie für den DNS-Domänenbereich über der Unterdomäne für die SDDC Manager und die Cloud Foundation-Instanz maßgeblich sind.

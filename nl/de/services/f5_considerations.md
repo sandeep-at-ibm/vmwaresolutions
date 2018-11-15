@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Übersicht über F5 on IBM Cloud
 
@@ -14,7 +18,8 @@ Der Service "F5 on {{site.data.keyword.cloud}}" (F5 BIG-IP® Virtual Edition) st
 
 Sie können je nach Bedarf mehrere Instanzen dieses Service installieren.
 
-**Verfügbarkeit:** Dieser Service ist nur für Instanzen verfügbar, die in V1.9 und höheren Releases bereitgestellt werden.
+Dieser Service ist nur für Instanzen verfügbar, die in V1.9 (oder höher) bereitgestellt werden. Die aktuell installierte Version von BIG-IP VE ist V13.1.
+{:note}
 
 ## Technische Spezifikationen für F5 on IBM Cloud
 
@@ -32,7 +37,8 @@ Die folgenden Komponenten werden mit dem Service "F5 on {{site.data.keyword.clou
 ### Lizenzen und Gebühren
 Lizenzgebühren für jede VM werden in jedem Abrechnungszyklus abhängig von der Lizenzierungsoption (Gut, Besser oder Optimal) und der ausgewählten Bandbreite berechnet.
 
-**Wichtig:** Sie können die Lizenzierungsstufe nach der Serviceinstallation nicht ändern. Wenn Sie die Lizenzstufe ändern möchten, müssen Sie den vorhandenen Service entfernen und den Service anschließend mit einer anderen Lizenzoption erneut installieren.
+Sie können die Lizenzierungsstufe nach der Serviceinstallation nicht mehr ändern. Wenn Sie die Lizenzstufe ändern möchten, müssen Sie den vorhandenen Service entfernen und den Service anschließend mit einer anderen Lizenzoption erneut installieren.
+{:important}
 
 ## Installationsaspekte für F5 on IBM Cloud
 
@@ -51,7 +57,7 @@ Tabelle 1. CPU- und RAM-Bereitstellungen für unterschiedliche Bandbreiten- und 
 | 5 Gb/s            | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
 | 10 Gb/s           | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
 
-**Hinweise:**
+### Weitere Aspekte
 
 * F5 BIG–IP begrenzt den Appliance-Durchsatz aufgrund der von Ihnen ausgewählten maximalen Bandbreite. Da die Netzleistung durch viele Faktoren beeinflusst wird, sind möglicherweise nicht alle Konfigurationen und Topologien in der Lage, die ausgewählte maximale Bandbreite zu erzielen.
 * Das Hochverfügbarkeitspaar (HA-Paar) der virtuellen Maschinen für BIG-IP VE wird nur im Standardcluster bereitgestellt.
@@ -90,7 +96,7 @@ Die vSphere-Hochverfügbarkeit reserviert jedoch standardmäßig 50 Prozent von 
 
 Da auf den ESXi-Servern weitere Workloads wie beispielsweise VMware vCenter Server, VMware NSX Controller oder VMware NSX Edge verarbeitet werden, kann die dritte Voraussetzung bei Verwendung dieser Ressourcen nicht erfüllt werden, weil 33,6 GHz CPU und 32 GB RAM für die beiden virtuellen Maschinen für BIG-IP erforderlich sind.
 
-In diesem Fall schlägt die Installation von F5 on {{site.data.keyword.cloud_notm}} fehl, sofern nicht mindestens ein ESXi-Server zur Umgebung hinzugefügt wird und die Failoverreservierungen der vShpere-Hochverfügbarkeit entsprechend aktualisiert werden, damit ausreichend Ressourcen für die beiden virtuellen Maschinen für BIG-IP VE gewährleistet sind. Wenn zur Ausführung des Service "F5 on {{site.data.keyword.cloud_notm}}" zusätzliche Ressourcen benötigt werden, können Sie weitere ESXi-Server hinzufügen, bevor Sie F5 on {{site.data.keyword.cloud_notm}} installieren.
+In diesem Fall schlägt die Installation von F5 on {{site.data.keyword.cloud_notm}} fehl, sofern nicht mindestens ein ESXi-Server zur Umgebung hinzugefügt wird und die Failover-Reservierungen der vSphere-Hochverfügbarkeit entsprechend aktualisiert werden, damit ausreichend Ressourcen für die beiden virtuellen Maschinen für BIG-IP VE gewährleistet sind. Wenn zur Ausführung des Service "F5 on {{site.data.keyword.cloud_notm}}" zusätzliche Ressourcen benötigt werden, können Sie weitere ESXi-Server hinzufügen, bevor Sie F5 on {{site.data.keyword.cloud_notm}} installieren.
 
 ## Hinweise zum Entfernen von F5 on IBM Cloud
 

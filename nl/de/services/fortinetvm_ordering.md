@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # FortiGate Virtual Appliance on IBM Cloud bestellen
 
@@ -28,6 +32,16 @@ Sie können den Service "FortiGate Virtual Appliance on {{site.data.keyword.clou
 
 Geben Sie beim Bestellen des Service die folgenden Einstellungen an.
 
+### FortiGuard-Netzverbindung
+
+Wählen Sie **Öffentliches Netz** oder **Privates Netz** für FortiGuard aus. Wenn der Zielcluster nur mit privaten Netzschnittstellen konfiguriert ist, ist nur die Option **Privates Netz** verfügbar. Diese Auswahl bestimmt, wie FortiGuard eine Verbindung zum Fortinet-Lizenzserver herstellt, um die Lizenz zu aktivieren und die Sicherheitspatches herunterzuladen, und sie wirkt sich nicht auf die Workloaddatenebene aus.
+
+Bei Auswahl von **Privates Netz** müssen Sie folgende Einstellungen angeben:
+* **Proxy-IP-Adresse**: Die IPv4-Adresse des Proxy-Servers.
+* **Proxy-Portnummer**: Die Portnummer des Proxy-Servers, normalerweise 8080 oder 3128.
+* **Proxy-Benutzername**: Wenn Sie eine Proxy-Authentifizierung benötigen, geben Sie den Benutzernamen des Proxy-Servers ein.
+* **Proxy-Kennwort**: Wenn Sie eine Proxy-Authentifizierung benötigen, geben Sie das Kennwort des Proxy-Servers ein.
+
 ### Name
 
 Geben Sie den Servicenamen ein.
@@ -44,14 +58,18 @@ Geben Sie den Servicenamen ein.
 Das Lizenzmodell für FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} bietet die folgenden Optionen:
 <dl class="dl">
         <dt class="dt dlterm">Standard FW</dt>
-        <dd class="dd">Dieses Produktpaket beinhaltet Paketprüfung mit Zustandsüberwachung, VLAN-Schutz und erweiterte Protokollierung, Regeln für Firewalleingang/-ausgang, SSL/IPSec-VPN-Beendigung sowie unterbrechungsfreien Support.</dd>
+        <dd class="dd">Dieses Produktpaket beinhaltet Paketprüfung mit Zustandsüberwachung, VLAN-Schutz und erweiterte Protokollierung, Regeln für Firewalleingang/-ausgang, SSL/IPSec-VPN-Beendigung sowie 24x7-Support.</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
-        <dd class="dd">Dieses Produktpaket beinhaltet alle Firewall-Services des Pakets "Standard" sowie zusätzlich NGFW-IPS- und Webfilterung, Viren- und Spamschutz, IP- und Domänenreputation und zentrale FortiCare-Sicherheitsservices.</dd>
+        <dd class="dd">Dieses Bundle enthält alle Standard-Firewall-Services zusätzlich zum AMP-Service (Advanced Malware Protection) - einschließlich Antivirus, Botnet IP/Domain Service, Mobile Malware Security, FortiSandbox Cloud, Virus Outbreak Protection Service und Content Disarm & Reconstruct) sowie Web-Filtering-, IPS-, Antispam-, Application Control- und FortiCare-Services.</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>
-        <dd class="dd">Dieses Produktpaket beinhaltet neben allen Firewall-Services der Pakete "Standard" und "UTM" die FortiSandbox-Sicherheit für Cloud und Mobilgeräte.</dd>
+        <dd class="dd">Dieses Bundle enthält alle Standard-Firewall- und UTM-Services zusätzlich zu folgenden Services:<ul><li>Cloud Access Security Broker (CASB): Dieser Service bietet Transparenz, Konformität, Datensicherheit und Schutz vor Bedrohungen für cloudbasierte Services.</li><li>Industrial Security: Dieser Service stellt Signaturen für gängige ICS/SCADA-Protokolle bereit.</li><li>Security Rating: Dieser Service stellt Prüffunktionen zur Erkennung von kritischen Sicherheitslücken und Konfigurationsschwachstellen sowie zur Implementierung von Best-Practice-Empfehlungen zur Verfügung.</li></ul></dd>
 </dl>
 
-**Wichtig:** Nach der Installation des Service kann das Lizenzmodell nicht mehr geändert werden. Wenn Sie das Lizenzmodell ändern möchten, müssen Sie den vorhandenen Service entfernen und ihn mit einer anderen Lizenzoption erneut installieren.
+Im 3. Quartal 2018 hat Fortinet drei neue Services (CASB, Industrial Security und Security Rating) in sein Enterprise-Bundle aufgenommen. Diese Services sind nur auf FortiGate 6.0 verfügbar.
+{:note}
+
+Sie können das Lizenzmodell nach der Serviceinstallation nicht mehr ändern. Wenn Sie das Lizenzmodell ändern möchten, müssen Sie den vorhandenen Service entfernen und ihn mit einer anderen Lizenzoption erneut installieren.
+{:important}
 
 ### Zugehörige Links
 

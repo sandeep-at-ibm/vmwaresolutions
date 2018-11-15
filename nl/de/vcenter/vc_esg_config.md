@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Netz zur Verwendung des vom Kunden verwalteten NSX ESG mit eigenen virtuellen Maschinen konfigurieren
 
@@ -32,13 +36,15 @@ Um die Vorteile von NSX für Ihre Workload-VMs nutzen zu können, müssen Sie ei
    2. Wählen Sie im Menü **Neue Einheit** die Option **Netz** aus und klicken Sie auf **Hinzufügen**.
    3. Wählen Sie für den neu hinzugefügten Netzadapter den logischen Workload-Switch im Menü aus. Ein Beispielname für den logischen Workload-Switch ist **vxw-dvs-17-virtualwire-1-sid-6000-Workload**.
 
-   **Wichtig:** Achten Sie darauf, nicht den Switch **Workloadtransit** auszuwählen.
+   Achten Sie darauf, nicht den Switch **Workloadtransit** auszuwählen.
+   {:important}
 
 2. Geben Sie eine verfügbare IP-Adresse für die VM an:
    *  Die IP-Adresse muss im Bereich `192.168.10.0/24` liegen. Bitte beachten Sie, dass die IP-Adresse `192.168.10.1` reserviert ist (siehe **Schritt 3**).
    *  Wenn Sie den Netzbetrieb des Betriebssystems konfigurieren, das auf der VM ausgeführt wird, verwenden Sie die ausgewählte IP-Adresse und die Netzmaske `255.255.255.0`.
 
-   **Hinweis:** Für das Management des Bereiches von IP-Adressen, denen Sie Ihre VMs zugeordnet haben, sind Sie selbst zuständig.
+   Für das Management des Bereiches von IP-Adressen, denen Sie Ihre VMs zugeordnet haben, sind Sie selbst zuständig.
+   {:note}
 
 3. Ordnen Sie das Standardgateway der VM als `192.168.10.1` zu. Diese Adresse ist die IP-Adresse des NSX-DLR auf demselben logischen Switch wie die Workload-VMs.
 
@@ -70,6 +76,7 @@ Weitere Details über die Kundenteilnetze können Sie außerdem mit den folgende
 3. Lesen Sie die Hinweise, die für die IP-Adressen angezeigt werden. Diese Hinweise geben an, welche der Teilnetze und IP-Adressen bestellt und während der Erstkonfiguration verwendet werden.
 
    **Warnung:** Verwenden Sie nicht die IP-Adressen, die bestellt und während der Erstkonfiguration verwendet werden. Sie können jedoch nach Bedarf andere IP-Adressen in diesen Teilnetzen verwenden. Informationen zum Konfigurieren zusätzlicher Regeln für die Netzadressumsetzung finden Sie auf der Seite [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+   {:important}
 
 ### Zugehörige Links
 

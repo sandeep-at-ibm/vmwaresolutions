@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Updates auf vCenter Server-Instanzen anwenden
 
@@ -16,7 +18,8 @@ Der Prozess zur Anwendung von Patches und Updates für vCenter Server-Instanzen 
 
 ## Vorbereitende Schritte
 
-**Wichtig:** Wenn Sie ein Upgrade einer vCenter Server-Instanz auf eine vCenter Server with Hybridity Bundle-Instanz durchführen möchten, müssen Sie zunächst mindestens das Basis-Software-Update für vCenter Server V2.3 anwenden. Dies müssen Sie tun, bevor Sie das Upgrade auf Hybridity Bundle durchführen können.
+Wenn Sie ein Upgrade einer vCenter Server-Instanz auf eine vCenter Server with Hybridity Bundle-Instanz durchführen möchten, müssen Sie zunächst mindestens das Basis-Software-Update für vCenter Server V2.3 anwenden. Dies müssen Sie tun, bevor Sie das Upgrade auf Hybridity Bundle durchführen können.
+{:important}
 
 Business Partner-Benutzer haben nicht die Option, für eine vorhandene vCenter Server-Instanz ein Upgrade auf eine vCenter Server with Hybridity Bundle-Instanz durchzuführen.
 
@@ -24,7 +27,7 @@ Bevor Sie versuchen, ein Update anzuwenden, erweitern Sie den Update-Eintrag, in
 * Überprüfen Sie die Version des Updates. Sie müssen die Updates in chronologischer Reihenfolge anwenden, also zuerst das älteste Update und zuletzt das neueste Update. Stellen Sie sicher, dass Sie alle vorherigen Updates angewendet haben, bevor Sie das aktuelle Update anwenden. Beispielsweise müssen Sie das Update für V2.3 anwenden, bevor Sie versuchen, das Update für V2.4 anzuwenden.
 * Ermitteln Sie, ob eine Ausfallzeit erforderlich ist.
 * Prüfen Sie die geschätzte Gesamtzeit für die Ausführung des Updates.
-* Stellen Sie fest, wie sich das Update auf die virtuelle VMware-Umgebung auswirkt. In Tabelle 1 ist dargestellt, wie die verschiedenen Auswirkungsstufen das System beeinflussen.
+* Stellen Sie fest, wie sich das Update auf die virtuelle VMware-Umgebung auswirkt. Tabelle 1 zeigt, wie sich die verschiedenen Aktualisierungsstufen auf das System auswirken.
 * Lesen Sie die Details über das Update.
 
 Tabelle 1. Aktualisierungsstufen und Auswirkungen
@@ -58,7 +61,8 @@ Dieses Verfahren gilt für Instanzen, die in V2.1 oder höher bereitgestellt wer
    Wenn die Details nicht angezeigt werden, kann dies auf ein Konnektivitätsproblem mit der virtuellen Serverinstanz (VSI) von IBM CloudDriver hinweisen, das aufgrund eines Problems mit einer Firewallregel oder aufgrund eines anderen Netzproblems aufgetreten ist. Lösen Sie das Problem, bevor Sie mit dem nächsten Schritt fortfahren, da das Update andernfalls fehlschlagen könnte.
 4. Klicken Sie im linken Navigationsfenster auf **Update und Patch**.
 
-   **Hinweis:** Die Seite **Update und Patch** für eine Instanz enthält nur die Pakete für die Aktualisierung der IBM Managementkomponenten, nicht jedoch die VMware-Updates. VMware-Updates müssen manuell angewendet werden.
+   Die Seite **Update und Patch** für eine Instanz enthält nur die Pakete für die Aktualisierung der IBM Managementkomponenten, nicht jedoch die VMware-Updates. VMware-Updates müssen manuell angewendet werden.
+   {:note}
 
    {{site.data.keyword.vmwaresolutions_short}} wendet VMware-Updates für die folgenden Operationen an:
    * Wenn eine neue vCenter Server-Instanz bereitgestellt wird.
@@ -67,7 +71,8 @@ Dieses Verfahren gilt für Instanzen, die in V2.1 oder höher bereitgestellt wer
 
 5. Klicken Sie für NSX-Lizenzaktualisierungen auf **Upgrade**. Wählen Sie im Fenster für das Upgrade von NSX-Lizenzeditionen ****die Edition aus, auf die das Upgrade durchgeführt werden soll, und klicken Sie dann auf **Upgrade**. Downgrades für Lizenzeditionen sind nicht verfügbar.
 
-   **Hinweis:** Die Aktualisierung der Lizenz ersetzt alle vorhandenen NSX-Lizenzen in der Instanz. Zusätzliche Gebühren können bei einer Überschneidung von alten und neuen Lizenzen entstehen, wenn Sie ein Upgrade in der Mitte eines Abrechnungszyklus durchführen. Um zusätzliche Gebühren zu vermeiden, wird empfohlen, die Lizenz am Ende des Abrechnungszyklus zu aktualisieren.
+   Die Aktualisierung der Lizenz ersetzt alle vorhandenen NSX-Lizenzen in der Instanz. Zusätzliche Gebühren können bei einer Überschneidung von alten und neuen Lizenzen entstehen, wenn Sie ein Upgrade in der Mitte eines Abrechnungszyklus durchführen. Um zusätzliche Gebühren zu vermeiden, wird empfohlen, die Lizenz am Ende des Abrechnungszyklus zu aktualisieren.
+   {:note}
 
 6. Klicken Sie bei Software-Updates auf den Abwärtspfeil, um das Update zu erweitern, das Sie anwenden möchten, und führen Sie dann einen der folgenden Schritte aus:
    *  Um das Update sofort zu starten, klicken Sie auf das Überlaufmenüsymbol in der Spalte **Aktionen** des Update-Eintrags und anschließend auf **Update jetzt ausführen**.
@@ -78,7 +83,8 @@ Dieses Verfahren gilt für Instanzen, die in V2.1 oder höher bereitgestellt wer
 
 Während der Aktualisierung der Lizenz auf Hybridity Bundle wird für Sie automatisch ein Upgrade auf die VMware NSX Advanced Edition durchgeführt, wenn Ihre vCenter Server-Instanz momentan die VMware NSX Base Edition verwendet.
 
-**Hinweis:** Wenn Sie ein Upgrade auf Hybridity Bundle durchführen und Ihre vCenter Server-Instanz bereits über NFS-Dateispeicher verfügt, entstehen keine Gebühren für den VMware vSAN-Speicher. Es entstehen Gebühren für die vSAN-Lizenz, da VMware vSAN in Hybridity Bundle enthalten ist.
+Wenn Sie ein Upgrade auf Hybridity Bundle durchführen und Ihre vCenter Server-Instanz bereits über NFS-Dateispeicher verfügt, entstehen keine Gebühren für den VMware vSAN-Speicher. Es entstehen Gebühren für die vSAN-Lizenz, da VMware vSAN in Hybridity Bundle enthalten ist.
+{:note}
 
 Führen Sie die folgenden Schritte aus, um für eine vCenter Server-Instanz ein Upgrade auf vCenter Server with Hybridity Bundle durchzuführen.
 

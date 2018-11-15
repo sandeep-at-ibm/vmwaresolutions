@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Übersicht über FortiGate Virtual Appliance on IBM Cloud
 
@@ -14,7 +18,8 @@ Der Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud}}" stellt 
 
 Sie können je nach Bedarf mehrere Instanzen dieses Service installieren. Zur Verwaltung dieses Service können Sie FortiOS Web Client oder die Befehlszeilenschnittstelle über SSH verwenden.
 
-**Verfügbarkeit:** Dieser Service ist nur für Instanzen verfügbar, die in V2.0 und höheren Releases bereitgestellt werden.
+Dieser Service ist nur für Instanzen verfügbar, die in V2.0 oder höheren Releases bereitgestellt werden. Die aktuell installierte Serviceversion ist 6.0.3.
+{:note}
 
 ## Technische Spezifikationen für FortiGate Virtual Appliance on IBM Cloud
 
@@ -38,7 +43,8 @@ Der Zugriff auf die FortiGate®-Konsole erfolgt über das private Managementnetz
 
 Lizenzgebühren für jede virtuelle Maschine werden in jedem Abrechnungszyklus abhängig von der ausgewählten Bereitstellungsgröße und dem Lizenzierungsmodell für die monatliche Subskription berechnet.
 
-**Wichtig:** Sie können die Lizenzierungsstufe nach der Serviceinstallation nicht ändern. Wenn Sie die Lizenzstufe ändern möchten, müssen Sie den vorhandenen Service entfernen und den Service anschließend mit einer anderen Lizenzoption erneut installieren.
+Sie können die Lizenzierungsstufe nach der Serviceinstallation nicht mehr ändern. Wenn Sie die Lizenzstufe ändern möchten, müssen Sie den vorhandenen Service entfernen und den Service anschließend mit einer anderen Lizenzoption erneut installieren.
+{:important}
 
 ## Hinweise zur Installation von FortiGate Virtual Appliance on IBM Cloud
 
@@ -76,7 +82,7 @@ Die vSphere-Hochverfügbarkeit reserviert jedoch standardmäßig 50% von CPU und
 
 Da auf den ESXi-Servern weitere Workloads wie beispielsweise VMware vCenter Server, VMware NSX Controller oder VMware NSX Edge vorhanden sind, wird bei Verwendung dieser Ressourcen die dritte Voraussetzung nicht erfüllt. Der Grund hierfür ist, dass für die beiden FortiGate-VMs 33,6 GHz CPU und 24 GB RAM erforderlich sind.
 
-In diesem Fall schlägt die Installation von FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} fehl, sofern nicht mindestens ein ESXi-Server zur Umgebung hinzugefügt wird und die Failoverreservierungen der vShpere-Hochverfügbarkeit entsprechend aktualisiert werden, damit ausreichend Ressourcen für die beiden FortiGate-VMs gewährleistet sind.
+In diesem Fall schlägt die Installation von FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} fehl, sofern nicht mindestens ein ESXi-Server zur Umgebung hinzugefügt wird und die Failover-Reservierungen der vSphere-Hochverfügbarkeit entsprechend aktualisiert werden, damit ausreichend Ressourcen für die beiden FortiGate-VMs gewährleistet sind.
 
 Wenn zur Ausführung des Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" zusätzliche Ressourcen benötigt werden, können Sie weitere ESXi-Server hinzufügen, bevor Sie den Service installieren.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -14,7 +14,7 @@ Baselines enthalten eine Sammlung von Patches, Erweiterungen, Service-Packs, Feh
 
 VUM enthält vordefinierte Baselines, die Sie nicht bearbeiten oder löschen können. Sie können die vordefinierten Baselines verwenden oder Patch-, Erweiterungs- und Upgrade-Baselines erstellen, die Ihren Kriterien entsprechen. Die von Ihnen erstellten angepassten Baselines und die vordefinierten Baselines können in Baselinegruppen kombiniert werden.
 
-VUM enthält Standardbaselines, mit denen Sie beliebige der folgenden Geräte prüfen können, um festzustellen, ob die Hosts in Ihrer Umgebung mit den neuesten Patches aktualisiert sind oder ob die virtuellen Appliances und virtuellen Maschinen auf die neueste Version aktualisiert sind: 
+VUM enthält Standardbaselines, mit denen Sie beliebige der folgenden Geräte prüfen können, um festzustellen, ob die Hosts in Ihrer Umgebung mit den neuesten Patches aktualisiert sind oder ob die virtuellen Appliances und virtuellen Maschinen auf die neueste Version aktualisiert sind:
 * Beliebige virtuelle Maschine
 * Beliebige virtuelle Appliance
 * Beliebiger Host
@@ -34,5 +34,5 @@ Wenn Sie Baselines und Baselinegruppen verwenden möchten, müssen Sie sie an au
 
 ### Zugehörige Links
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

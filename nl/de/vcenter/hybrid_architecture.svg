@@ -1,83 +1,192 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 600 320" style="enable-background:new 0 0 600 320;" xml:space="preserve">
-<style type="text/css">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 600 320"
+   style="enable-background:new 0 0 600 320;"
+   xml:space="preserve"
+   sodipodi:docname="hybrid_architecture.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><metadata
+     id="metadata59"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs57" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview55"
+     showgrid="false"
+     inkscape:zoom="1.5179226"
+     inkscape:cx="399.13709"
+     inkscape:cy="129.82803"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style2">
 	.st0{fill:#4C84C5;}
 	.st1{fill:#F49C58;}
 	.st2{fill:#959595;}
 	.st3{fill:#1DA78D;}
 	.st4{fill:#FFFFFF;}
-	.st5{font-family:'ArialMT';}
+	.st5{font-family:'Roboto-Light';}
 	.st6{font-size:21px;}
 	.st7{font-size:18px;}
-	.st8{enable-background:new    ;}
-	.st9{font-size:14px;}
-</style>
-<font horiz-adv-x="1000">
-<!-- Copyright (c) 1991, 1993, 1996, 1997, 1998, 1999 Adobe Systems Incorporated.  All Rights Reserved.Arial is a trademark of The Monotype Corporation, registered in the US Patent and Trademark Office and elsewhere. -->
-<font-face font-family="ArialMT" units-per-em="1000" underline-position="-100" underline-thickness="50"/>
-<missing-glyph horiz-adv-x="278"/>
-<glyph unicode="A" horiz-adv-x="667" d="M-1,0l100,0l79,218l299,0l84,-218l107,0l-292,716l-102,0M284,504C301,549 313,594 322,641l2,0C339,583 355,539 373,492l75,-199l-243,0z"/>
-<glyph unicode="B" horiz-adv-x="667" d="M74,0l274,0C389,0 440,0 502,25C570,52 615,127 615,208C615,264 591,348 481,381C574,428 580,507 580,533C580,586 555,638 510,673C457,714 387,716 343,716l-269,0M169,331l166,0C393,331 517,331 517,208C517,84 397,85 347,85l-178,0M169,631l143,0C391,631 487,631 487,521C487,415 387,416 324,416l-155,0z"/>
-<glyph unicode="C" horiz-adv-x="722" d="M589,251C570,164 515,69 379,69C319,69 255,91 211,143C151,213 149,333 149,364C149,479 190,647 387,647C519,647 559,555 578,497l93,22C629,666 516,728 388,728C213,728 51,615 51,363C51,283 71,166 144,82C189,30 263,-12 387,-12C464,-12 628,12 683,227z"/>
-<glyph unicode="E" horiz-adv-x="667" d="M79,0l535,0l0,85l-440,0l0,242l396,0l0,85l-396,0l0,219l423,0l0,85l-518,0z"/>
-<glyph unicode="H" horiz-adv-x="722" d="M80,0l95,0l0,337l372,0l0,-337l95,0l0,716l-95,0l0,-294l-372,0l0,294l-95,0z"/>
-<glyph unicode="I" horiz-adv-x="278" d="M92,0l95,0l0,716l-95,0z"/>
-<glyph unicode="M" horiz-adv-x="833" d="M76,0l90,0l0,609l3,0l205,-609l85,0l206,599l2,0l0,-599l90,0l0,716l-126,0l-171,-498C437,150 434,142 422,103l-2,0C415,124 411,138 387,209l-169,507l-142,0z"/>
-<glyph unicode="N" horiz-adv-x="722" d="M79,0l90,0l0,562l2,0l374,-562l97,0l0,716l-90,0l0,-562l-2,0l-374,562l-97,0z"/>
-<glyph unicode="P" horiz-adv-x="667" d="M77,0l95,0l0,290l183,0C394,290 448,292 511,318C583,348 623,426 623,509C623,565 603,628 554,668C496,716 411,716 347,716l-270,0M172,631l182,0C413,631 453,631 486,601C516,574 525,536 525,506C525,380 408,375 356,375l-184,0z"/>
-<glyph unicode="S" horiz-adv-x="667" d="M45,230C46,211 47,181 63,142C100,54 178,-12 350,-12C513,-12 615,83 615,202C615,359 465,393 334,422C203,451 163,474 163,536C163,625 266,643 328,643C476,643 497,558 502,506l91,7C588,654 478,728 324,728C165,728 73,641 73,530C73,387 214,354 307,332C452,297 524,279 524,195C524,115 445,73 346,73C293,73 194,88 154,165C140,192 136,222 135,238z"/>
-<glyph unicode="V" horiz-adv-x="667" d="M283,0l97,0l280,716l-96,0l-194,-520C357,159 343,118 333,79l-2,0C316,137 313,145 299,184l-5,12l-186,520l-102,0z"/>
-<glyph unicode="X" horiz-adv-x="667" d="M5,0l114,0l179,249C309,265 320,282 327,294C328,296 332,302 332,303l2,0C341,290 348,277 364,255l180,-255l117,0l-271,379l251,337l-103,0l-144,-190C387,517 376,500 367,488C348,460 345,457 337,444C321,475 300,503 280,532l-130,184l-113,0l245,-343z"/>
-<glyph unicode="a" horiz-adv-x="556" d="M139,359C150,402 164,458 274,458C403,458 402,385 400,329C350,311 255,301 242,299C185,292 38,275 38,137C38,51 101,-12 215,-12C271,-12 332,1 406,64C408,51 410,27 424,0l92,0C488,50 488,84 488,217l0,118C488,425 488,530 287,530C87,530 63,416 53,370M400,228C400,185 396,144 361,106C320,62 261,57 236,57C157,57 132,102 132,139C132,209 201,219 255,227C301,234 366,247 400,260z"/>
-<glyph unicode="b" horiz-adv-x="556" d="M149,0l0,65l2,0C199,-9 271,-12 293,-12C376,-12 517,48 517,267C517,416 437,530 297,530C211,530 169,478 157,460l-2,0l0,256l-88,0l0,-716M148,263C148,368 198,458 289,458C380,458 427,374 427,260C427,118 356,60 286,60C237,60 201,88 174,128C162,146 148,175 148,263z"/>
-<glyph unicode="c" horiz-adv-x="500" d="M404,190C401,164 386,60 274,60C129,60 129,227 129,260C129,321 142,458 279,458C333,458 379,428 397,353l85,13C478,388 472,418 450,449C404,516 324,530 275,530C172,530 39,474 39,258C39,120 104,-12 275,-12C319,-12 463,4 491,179z"/>
-<glyph unicode="d" horiz-adv-x="556" d="M404,0l82,0l0,716l-88,0l0,-257l-2,0C369,500 320,530 255,530C125,530 36,428 36,259C36,93 136,-12 259,-12C278,-12 355,-12 402,66l2,0M126,259C126,297 132,458 264,458C371,458 406,352 406,251C406,73 296,60 268,60C217,60 126,96 126,259z"/>
-<glyph unicode="e" horiz-adv-x="556" d="M424,167C413,137 386,60 287,60C209,60 136,113 129,237l388,0C525,517 326,530 282,530C124,530 39,413 39,255C39,95 126,-12 287,-12C415,-12 488,58 514,156M134,309C139,377 184,458 282,458C345,458 395,419 413,375C423,350 425,328 427,309z"/>
-<glyph unicode="f" horiz-adv-x="278" d="M86,0l88,0l0,450l100,0l0,68l-100,0l0,49C174,609 177,647 246,647C265,647 282,645 298,642l13,77C291,723 266,728 229,728C86,728 86,624 86,574l0,-56l-78,0l0,-68l78,0z"/>
-<glyph unicode="g" horiz-adv-x="556" d="M52,-43C48,-191 192,-210 257,-210C333,-210 416,-187 459,-116C489,-66 491,27 491,70l0,448l-81,0l0,-62l-2,0C353,527 288,530 259,530C97,530 34,389 34,263C34,123 113,0 258,0C299,0 353,10 402,68C402,-35 403,-138 256,-138C153,-138 141,-83 137,-56M124,268C124,393 187,458 265,458C326,458 409,414 409,266C409,218 404,169 376,130C353,98 315,72 266,72C221,72 181,95 156,131C124,177 124,254 124,268z"/>
-<glyph unicode="h" horiz-adv-x="556" d="M67,0l88,0l0,283C155,317 157,353 177,391C196,427 244,454 293,454C402,454 402,357 402,327l0,-327l88,0l0,328C490,367 489,416 466,457C436,510 366,530 311,530C274,530 212,524 155,459l0,257l-88,0z"/>
-<glyph unicode="-" horiz-adv-x="333" d="M32,215l269,0l0,88l-269,0z"/>
-<glyph unicode="i" horiz-adv-x="222" d="M67,0l88,0l0,518l-88,0M67,616l88,0l0,100l-88,0z"/>
-<glyph unicode="k" horiz-adv-x="500" d="M66,0l88,0l0,206l62,59l172,-265l108,0l-218,326l198,192l-114,0l-208,-210l0,408l-88,0z"/>
-<glyph unicode="l" horiz-adv-x="222" d="M67,0l88,0l0,716l-88,0z"/>
-<glyph unicode="m" horiz-adv-x="833" d="M65,0l88,0l0,269C153,314 156,352 175,394C191,429 235,454 282,454C368,454 373,386 373,337l0,-337l88,0l0,301C461,340 467,371 484,400C505,435 550,454 588,454C681,454 681,377 681,327l0,-327l88,0l0,356C769,393 768,530 608,530C511,530 466,467 448,439C427,499 375,530 301,530C226,530 174,492 146,446l-2,0l0,72l-79,0z"/>
-<glyph unicode="n" horiz-adv-x="556" d="M68,0l88,0l0,283C156,314 157,352 174,389C193,428 244,454 294,454C402,454 402,360 402,315l0,-315l88,0l0,319C490,374 490,411 467,454C437,510 366,530 312,530C277,530 200,523 149,445l-2,0l0,73l-79,0z"/>
-<glyph unicode="o" horiz-adv-x="556" d="M35,259C35,220 38,136 86,76C135,15 208,-12 278,-12C347,-12 420,16 469,76C493,105 521,156 521,267C521,465 387,530 278,530C210,530 135,504 88,444C44,388 35,315 35,259M125,259C125,427 223,458 278,458C357,458 431,400 431,262C431,180 403,60 278,60C226,60 125,90 125,259z"/>
-<glyph unicode="p" horiz-adv-x="556" d="M68,-199l88,0l0,253l2,0C184,19 230,-12 292,-12C406,-12 518,79 518,263C518,408 445,530 298,530C204,530 165,475 150,451l-2,0l0,67l-80,0M147,256C147,377 206,461 290,461C356,461 428,409 428,263C428,93 338,60 286,60C226,60 147,100 147,256z"/>
-<glyph unicode="(" horiz-adv-x="333" d="M234,728C224,715 206,691 180,648C101,520 60,403 60,259C60,24 195,-161 234,-210l63,0C191,-40 151,117 151,260C151,477 230,613 291,718l6,10z"/>
-<glyph unicode=")" horiz-adv-x="333" d="M99,-210C109,-197 127,-173 153,-130C232,-2 273,115 273,259C273,494 138,679 99,728l-63,0C142,558 182,401 182,258C182,41 104,-96 42,-200l-6,-10z"/>
-<glyph unicode="r" horiz-adv-x="333" d="M64,0l88,0l0,272C152,325 161,440 252,440C275,440 297,432 316,421l30,81C331,511 301,530 256,530C193,530 166,480 146,440l-2,0l0,78l-80,0z"/>
-<glyph unicode="s" horiz-adv-x="500" d="M31,155C40,103 65,-12 253,-12C388,-12 461,66 461,152C461,259 388,280 252,315C167,337 130,347 130,391C130,450 207,458 242,458C277,458 345,452 356,373l86,12C435,425 418,530 236,530C111,530 45,461 45,381C45,273 147,246 226,227l58,-14C336,200 371,185 371,143C371,108 343,60 252,60C169,60 127,99 118,168z"/>
-<glyph unicode=" " horiz-adv-x="278" d="M182,0z"/>
-<glyph unicode="t" horiz-adv-x="278" d="M257,79C247,77 233,75 218,75C169,75 169,105 169,147l0,303l88,0l0,68l-88,0l0,182l-88,-53l0,-129l-64,0l0,-68l64,0l0,-298C81,66 81,-7 203,-7C232,-7 254,-2 269,1z"/>
-<glyph unicode="u" horiz-adv-x="556" d="M408,0l79,0l0,518l-88,0l0,-277C399,204 397,169 381,133C362,91 310,64 261,64C217,64 174,86 162,128C154,155 154,177 154,231l0,287l-88,0l0,-321C66,150 67,107 90,64C118,12 187,-12 243,-12C270,-12 349,-9 406,76l2,0z"/>
-<glyph unicode="v" horiz-adv-x="500" d="M210,0l82,0l196,518l-90,0l-115,-316C274,179 261,143 251,103l-2,0C243,127 235,158 217,208l-111,310l-93,0z"/>
-<glyph unicode="w" horiz-adv-x="722" d="M164,0l92,0l103,399l2,0C361,397 362,391 363,387C366,374 380,311 381,311l82,-311l91,0l163,518l-86,0l-89,-299C540,212 535,193 530,177C520,145 517,134 513,119l-2,0C508,135 506,145 496,181C495,187 490,205 486,218l-77,300l-90,0l-83,-303C235,212 233,200 230,191C228,182 210,110 209,108C201,136 188,185 185,194l-6,25l-83,299l-91,0z"/>
-<glyph unicode="x" horiz-adv-x="500" d="M7,0l107,0l136,205l18,-27C272,171 277,163 279,161l106,-161l108,0l-193,275l179,243l-105,0l-87,-122C268,370 266,367 247,339C239,354 234,362 211,397l-80,121l-109,0l175,-248z"/>
-<glyph unicode="y" horiz-adv-x="500" d="M62,-200C76,-204 94,-210 119,-210C219,-210 251,-125 289,-22C292,-16 293,-11 294,-9l198,527l-89,0l-110,-301C278,177 267,140 258,98l-2,0C250,122 240,161 219,218l-108,300l-95,0l197,-519C212,-4 208,-15 205,-22C181,-90 169,-125 103,-125C82,-125 66,-121 53,-117z"/>
-<glyph unicode="z" horiz-adv-x="500" d="M20,0l459,0l0,76l-240,0C199,76 151,74 128,72C129,74 135,81 139,85C154,101 179,129 182,133l281,328l0,57l-424,0l0,-72l212,0C292,446 308,447 350,449l-330,-378z"/>
-</font>
-
-	<rect y="81.7" class="st0" width="600" height="75.3"/>
-<rect x="0.6" y="0.6" class="st1" width="600" height="74.3"/>
-<rect y="239.7" class="st2" width="600" height="80.3"/>
-<rect y="164" class="st3" width="190" height="68"/>
-<rect x="205" y="163.4" class="st3" width="190" height="68.6"/>
-<rect x="410" y="164" class="st3" width="190" height="68"/>
-<text transform="matrix(1 0 0 1 184.7242 110.3711)" class="st4 st5 st6">Virtualisierungsmanagement</text>
-<text transform="matrix(1 0 0 1 216.2242 144.3711)" class="st4 st5 st7">VMware vCenter Server</text>
-<text transform="matrix(1 0 0 1 25.5747 180.0498)" class="st8"><tspan x="0" y="0" class="st4 st5 st7">Berechnungs-</tspan><tspan x="0" y="21.6" class="st4 st5 st7">virtualisierung</tspan></text>
-<text transform="matrix(1 0 0 1 44.1746 225.4498)" class="st4 st5 st9">VMware vSphere</text>
-<text transform="matrix(1 0 0 1 209.0037 192.0498)" class="st4 st5 st7">Speichervirtualisierung</text>
-<text transform="matrix(1 0 0 1 248.8036 225.4495)" class="st4 st5 st9">VMware vSAN</text>
-<text transform="matrix(1 0 0 1 420.666 192.0498)" class="st4 st5 st7">Netzvirtualisierung</text>
-<text transform="matrix(1 0 0 1 463.166 225.4491)" class="st4 st5 st9">VMware NSX </text>
-<text transform="matrix(1 0 0 1 146.074 272.5371)" class="st4 st5 st6">Physische Infrastruktur in IBM Cloud</text>
-<text transform="matrix(1 0 0 1 201.7869 27.4924)" class="st4 st5 st6">Infrastruktur Hybridity</text>
-<text transform="matrix(1 0 0 1 159.8869 61.4924)" class="st4 st5 st7">VMware Hybrid Cloud Extension (HCX)</text>
-<text transform="matrix(1 0 0 1 273.3247 303.3732)" class="st4 st5 st7">Speicher</text>
-<text transform="matrix(1 0 0 1 406.9552 303.3732)" class="st4 st5 st7">Netz</text>
-<text transform="matrix(1 0 0 1 134.5858 303.373)" class="st4 st5 st7">Berechnung</text>
-</svg>
+	.st8{font-size:14px;}
+</style><rect
+     y="81.699997"
+     class="st0"
+     width="663.83929"
+     height="75.300003"
+     id="rect4"
+     x="0"
+     style="fill:#4c84c5;stroke-width:1.05185497" /><rect
+     x="0.66383934"
+     y="0.60000002"
+     class="st1"
+     width="663.83929"
+     height="74.300003"
+     id="rect6"
+     style="fill:#f49c58;stroke-width:1.05185497" /><rect
+     y="239.7"
+     class="st2"
+     width="663.83929"
+     height="80.300003"
+     id="rect8"
+     x="0"
+     style="fill:#959595;stroke-width:1.05185497" /><rect
+     y="164"
+     class="st3"
+     width="210.21577"
+     height="68"
+     id="rect10"
+     x="0"
+     style="fill:#1da78d;stroke-width:1.05185497" /><rect
+     x="226.81175"
+     y="163.39999"
+     class="st3"
+     width="210.21577"
+     height="68.599998"
+     id="rect12"
+     style="fill:#1da78d;stroke-width:1.05185497" /><rect
+     x="453.6235"
+     y="164"
+     class="st3"
+     width="210.21577"
+     height="68"
+     id="rect14"
+     style="fill:#1da78d;stroke-width:1.05185497" /><text
+     id="text20"
+     x="179.82346"
+     y="108.3711"><tspan
+       x="179.82346"
+       y="108.3711"
+       class="st4 st5 st6"
+       id="tspan16"
+       style="font-size:21px;font-family:Roboto-Light;fill:#ffffff">Virtualisierungsmanagement</tspan><tspan
+       x="211.32346"
+       y="142.37109"
+       class="st4 st5 st7"
+       id="tspan18"
+       style="font-size:18px;font-family:Roboto-Light;fill:#ffffff">VMware vCenter Server</tspan></text>
+<text
+     id="text26"
+     x="6.8681412"
+     y="191.8755"><tspan
+       x="6.8681412"
+       y="191.8755"
+       class="st4 st5 st7"
+       id="tspan22"
+       style="font-size:18px;font-family:Roboto-Light;fill:#ffffff">Rechenvirtualisierung</tspan><tspan
+       x="44.46814"
+       y="215.7755"
+       class="st4 st5 st8"
+       id="tspan24"
+       style="font-size:14px;font-family:Roboto-Light;fill:#ffffff">VMware vSphere</tspan></text>
+<text
+     id="text32"
+     x="227.90549"
+     y="192.8755"><tspan
+       x="227.90549"
+       y="192.8755"
+       class="st4 st5 st7"
+       id="tspan28"
+       style="font-size:18px;font-family:Roboto-Light;fill:#ffffff">Speichervirtualisierung</tspan><tspan
+       x="267.70551"
+       y="216.7755"
+       class="st4 st5 st8"
+       id="tspan30"
+       style="font-size:14px;font-family:Roboto-Light;fill:#ffffff">VMware vSAN</tspan></text>
+<text
+     id="text38"
+     x="473.27094"
+     y="193.8755"><tspan
+       x="473.27094"
+       y="193.8755"
+       class="st4 st5 st7"
+       id="tspan34"
+       style="font-size:18px;font-family:Roboto-Light;fill:#ffffff">Netzvirtualisierung</tspan><tspan
+       x="518.27094"
+       y="217.7755"
+       class="st4 st5 st8"
+       id="tspan36"
+       style="font-size:14px;font-family:Roboto-Light;fill:#ffffff">VMware NSX</tspan></text>
+<text
+     class="st4 st5 st6"
+     id="text40"
+     x="141.53024"
+     y="272.53711"
+     style="font-size:21px;font-family:Roboto-Light;fill:#ffffff">Physische Infrastruktur in IBM Cloud</text>
+<text
+     id="text46"
+     x="201.95859"
+     y="27.492399"><tspan
+       x="201.95859"
+       y="27.492399"
+       class="st4 st5 st6"
+       id="tspan42"
+       style="font-size:21px;font-family:Roboto-Light;fill:#ffffff">Infrastruktur Hybridity</tspan><tspan
+       x="160.05858"
+       y="61.492401"
+       class="st4 st5 st7"
+       id="tspan44"
+       style="font-size:18px;font-family:Roboto-Light;fill:#ffffff">VMware Hybrid Cloud Extension (HCX)</tspan></text>
+<g
+     id="g869"
+     transform="translate(-3.8742904)"><text
+       style="font-size:18px;font-family:Roboto-Light;fill:#ffffff"
+       y="303.3732"
+       x="361.32471"
+       id="text48"
+       class="st4 st5 st7">Speicher</text>
+<text
+       style="font-size:18px;font-family:Roboto-Light;fill:#ffffff"
+       y="303.3732"
+       x="494.9552"
+       id="text50"
+       class="st4 st5 st7">Netz</text>
+<text
+       id="text52"
+       class="st4 st5 st7"
+       transform="translate(134.5858,303.373)"
+       style="font-size:18px;font-family:Roboto-Light;fill:#ffffff">Rechenressourcen</text>
+</g></svg>

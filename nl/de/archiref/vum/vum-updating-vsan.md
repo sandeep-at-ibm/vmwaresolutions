@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -32,7 +32,7 @@ Durch Ausführung der Tasks in diesem Abschnitt werden die vSAN-Baselines in VUM
 
 Stellen Sie sicher, dass die VCSA über vCenter 6.5 Patch 2 oder eine neuere Version verfügt, bevor Sie den Vorgang fortsetzen, da hierdurch bestimmte Probleme beim Proxy-Einsatz behoben werden. Weitere Informationen finden Sie unter [VCSA-Update und über SSO angebundene vCenter](vum-updating-vcsa.html).
 
-Um die vSAN-Updates in VUM sehen zu können, muss der vSAN Online Health Workflow befolgt werden. Daher muss vSAN Online Health eine Verbindung zu https://vcsa.vmware.com und http://www.vmware.com herstellen, um diese Onlinestatusprüfungen durchführen zu können. Zum Aktivieren von vSAN Online Health Workflow sind folgende Aktivitäten erforderlich:
+Um die vSAN-Updates in VUM sehen zu können, muss der vSAN Online Health Workflow befolgt werden. Daher muss vSAN Online Health eine Verbindung zu den Sites `vcsa.vmware.com` und `vmware.com` herstellen, um diese Onlinestatusprüfungen durchführen zu können. Zum Aktivieren von vSAN Online Health Workflow sind folgende Aktivitäten erforderlich:
 * VCSA für die Verwendung des Proxys konfigurieren
 * vSAN für die Verwendung des Proxys konfigurieren
 * Customer Experience Improvement Program (CEIP) aktivieren
@@ -54,7 +54,7 @@ Wenn die HTTPS-Parameter nicht definiert sind, verwenden Sie den folgenden Befeh
   `proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
 
 ### vSAN für die Verwendung des Proxys konfigurieren
-1. Navigieren Sie zu **Home** > **Hosts und Cluster**, wählen Sie **vSAN-Cluster** im Navigationsfenster aus, wählen Sie dann die Registerkarte **Konfigurieren** aus und navigieren Sie zu **vSAN** und dann zu **Allgemein**. Blättern Sie zum Abschnitt 'Internetkonnektivität' und klicken Sie auf **Bearbeiten**.
+1. Navigieren Sie zu **Home** > **Hosts und Cluster**, wählen Sie **vSAN-Cluster** im Navigationsfenster aus, wählen Sie dann die Registerkarte **Konfigurieren** aus und navigieren Sie zu **vSAN** und dann zu **Allgemein**. Blättern Sie zum Abschnitt **Internetkonnektivität** und klicken Sie auf **Bearbeiten**.
 2. Geben Sie die IP-Adresse und die Portnummer des Proxys ein und klicken Sie auf **OK**.
 
 ### Customer Experience Improvement Program (CEIP) aktivieren
@@ -136,5 +136,5 @@ Viele grundlegende Verwaltungstasks können so wesentlich effizienter ausgeführ
 
 ### Zugehörige Links
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

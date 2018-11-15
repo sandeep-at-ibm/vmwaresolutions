@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Übersicht über KMIP for VMware on IBM Cloud
 
 Der Service "KMIP for VMware on {{site.data.keyword.cloud}}" stellt täglich rund um die Uhr einen hoch verfügbaren Service für das Management von Verschlüsselungsschlüsseln bereit, die von VMware in der {{site.data.keyword.cloud_notm}} verwendet werden. Dieser Service bietet Laufzeitfunktionalität, mit der Kunden die Verschlüsselungsschlüssel erstellen, abrufen, aktivieren, widerrufen und zerstören können. Außerdem stellt er Managementfunktionen zum Verwalten der Zuordnungen zwischen den Clientberechtigungsnachweisen und den Verschlüsselungsschlüsseln bereit.
 
-**Verfügbarkeit:** Dieser Service ist nur für Instanzen verfügbar, die in V2.2 und höheren Releases bereitgestellt werden.
+Dieser Service ist nur für Instanzen verfügbar, die in V2.2 (und höher) bereitgestellt werden.
+{:note}
 
 ## Technische Spezifikationen für KMIP for VMware on IBM Cloud
 

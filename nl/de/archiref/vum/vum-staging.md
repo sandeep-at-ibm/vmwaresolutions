@@ -4,17 +4,22 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
-#	Staging und Korrektur
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# Staging und Korrektur
 
 Patches und Erweiterungen können optional vor der Korrektur zwischengespeichert ('staged') werden, um sicherzustellen, dass sie von VUM auf den vSphere ESXi-Host heruntergeladen werden, ohne dass die Patches oder Erweiterungen sofort angewendet werden. Bei der Korrektur ('remediation') wendet VUM die Patches, Erweiterungen und Upgrades auf die Bestandsobjekte an. Das Staging von Patches und Erweiterungen beschleunigt den Korrekturprozess, da die Patches und Erweiterungen bereits lokal auf den Hosts verfügbar sind.
 
 Wenn während des Korrekturprozesses ein Host nicht in den Wartungsmodus wechselt, meldet VUM einen Fehler und der Korrekturprozess wird gestoppt und schlägt fehl. Die vSphere ESXi-Hosts, die bereits korrigiert wurden, bleiben auf der aktualisierten Ebene erhalten.
 
-Damit der Korrekturprozess reibungslos abläuft, sollten Sie einige der Cluster-Features wie DPM, HA Admission Control und Fault Tolerance (FT) inaktivieren und alle Wechselmedien von den virtuellen Maschinen trennen, damit DRS bei der Migration von VMs auf andere Hosts nicht auf Probleme stößt. Außerdem können Sie bei der Ausführung des Assistenten für die Korrektur Berichte generieren, um sicherzustellen, dass auf der Host-/VM-Ebene keine inkonsistenten Einstellungen vorliegen, die dazu führen, dass die Korrektur fehlschlägt.
+Damit der Korrekturprozess reibungslos abläuft, sollten Sie einige der Cluster-Features wie DPM, HA Admission Control und Fault Tolerance (FT) inaktivieren und alle Wechselmedien von den virtuellen Maschinen trennen, damit DRS bei der Migration von VMs auf andere Hosts nicht auf Probleme stößt.
+Außerdem können Sie bei der Ausführung des Assistenten für die Korrektur Berichte generieren, um sicherzustellen, dass auf der Host-/VM-Ebene keine inkonsistenten Einstellungen vorliegen, die dazu führen, dass die Korrektur fehlschlägt.
 
 1.	Bei Verwendung des vSphere Web Client wählen Sie **Home** > **Hosts und Cluster** aus.
 2.	Klicken Sie auf ein Rechenzentrum, einen Cluster oder einen Host und klicken Sie auf **Patches zwischenspeichern**.
@@ -23,19 +28,21 @@ Damit der Korrekturprozess reibungslos abläuft, sollten Sie einige der Cluster-
 5.	Wahlweise können Sie die Patches und Erweiterungen abwählen, die von der Staging-Operation ausgeschlossen werden sollen. Um in der Liste der Patches und Erweiterungen zu suchen, geben Sie den Text in das Textfeld im Filterfeld ein. Klicken Sie auf **Weiter**.
 6.	Überprüfen Sie die Seite 'Bereit zum Abschließen' und klicken Sie auf **Fertigstellen**.
 
-Die Anzahl der zwischengespeicherten Patches und Erweiterungen für den entsprechenden Host wird in der Spalte 'Patches und Erweiterungen' im unteren Bereich der Registerkarte 'Update Manager' angezeigt. Nach dem ordnungsgemäßen Abschluss einer Korrektur werden alle zwischengespeicherten Patches und Erweiterungen auf dem Host gelöscht, und zwar unabhängig davon, ob sie während der Korrektur installiert wurden oder nicht. Die Korrektur (Remediation) ist der Prozess, in dem VUM Patches, Erweiterungen und Upgrades auf vSphere ESXi-Hosts, virtuelle Maschinen oder virtuelle Appliances nach Abschluss einer Prüfung (Scan) anwendet und die Konformität der ausgewählten Objekte ermöglicht. Sie können einzelne Hosts, virtuelle Maschinen oder virtuelle Appliances korrigieren oder Sie können sie auf Ordner-, Cluster- oder Rechenzentrumsebene korrigieren. VUM unterstützt für die folgenden Bestandsobjekte entweder eine manuelle oder eine geplante Korrektur:
+Die Anzahl der zwischengespeicherten Patches und Erweiterungen für den entsprechenden Host wird in der Spalte 'Patches und Erweiterungen' im unteren Bereich der Registerkarte 'Update Manager' angezeigt. Nach dem ordnungsgemäßen Abschluss einer Korrektur werden alle zwischengespeicherten Patches und Erweiterungen auf dem Host gelöscht, und zwar unabhängig davon, ob sie während der Korrektur installiert wurden oder nicht.
+Die Korrektur (Remediation) ist der Prozess, in dem VUM Patches, Erweiterungen und Upgrades auf vSphere ESXi-Hosts, virtuelle Maschinen oder virtuelle Appliances nach Abschluss einer Prüfung (Scan) anwendet und die Konformität der ausgewählten Objekte ermöglicht. Sie können einzelne Hosts, virtuelle Maschinen oder virtuelle Appliances korrigieren oder Sie können sie auf Ordner-, Cluster- oder Rechenzentrumsebene korrigieren. VUM unterstützt für die folgenden Bestandsobjekte entweder eine manuelle oder eine geplante Korrektur:
 *	ESXi-Hosts für die Korrektur von Patches, Erweiterungen und Upgrades
 *	Eingeschaltete, ausgesetzte oder ausgeschaltete virtuelle Maschinen und Vorlagen für VMware Tools und Hardware-Upgrade für virtuelle Maschinen
 *	Eingeschaltete virtuelle Appliances, die mit VMware Studio 2.0 und höher erstellt wurden, für das Upgrade der virtuellen Appliance
 
 Wenn es das Update erfordert, werden die Hosts vor der Korrektur in den Wartungsmodus versetzt. Die VCSA migriert die virtuellen Maschinen auf andere Hosts innerhalb der VCS-Instanz, bevor der Host in den Wartungsmodus versetzt wird.
 
-  Wichtiger Hinweis für Hosts in einem vSAN-Cluster: Beachten Sie das folgende Verhalten bei Hosts, die Teil eines vSAN-Clusters sind:
-  *	Der Hostkorrekturprozess nimmt möglicherweise sehr viel Zeit in Anspruch.
-  *	Designbedingt kann sich immer nur ein Host eines VSAN-Clusters im Wartungsmodus befinden.
-  *	VUM korrigiert Hosts, die Teil eines VSAN-Clusters sind, immer sequenziell, auch wenn Sie angegeben haben, dass die Hosts parallel korrigiert werden sollen.
-  *	Für jede virtuelle Maschine auf dem Host, die eine VM-Speicherrichtlinie mit einer Einstellung für "Anzahl der zu tolerierenden Fehler=0" verwendet, können beim Host ungewöhnliche Verzögerungen beim Wechseln in den Wartungsmodus auftreten. Die Verzögerung tritt auf, weil vSAN die Daten der virtuellen Maschine von einer Platte auf eine andere im vSAN-Datenspeichercluster migrieren muss, und dies kann mehrere Stunden dauern. Sie können dies umgehen, indem Sie für die VM-Speicherrichtlinie die "Anzahl der zu tolerierenden Fehler=1" festlegen. Dies bewirkt, dass zwei Kopien der VM-Dateien im vSAN-Datenspeicher erstellt werden.
-  *	Für jede virtuelle Maschine auf dem Host, die eine VM-Speicherrichtlinie mit einer Einstellung für "Anzahl der zu tolerierenden Fehler=1" verwendet, wird die virtuelle Maschine nicht redundant, wenn der Host in den Wartungsmodus wechselt. Wenn dies nicht akzeptabel ist, finden Sie weitere Informationen im Abschnitt [Redundanz virtueller vSAN-Maschinen](vum-vsan-redundancy.html).
+## Hinweis für Hosts in einem vSAN-Cluster
+Beachten Sie das folgende Verhalten bei Hosts, die Teil eines vSAN-Clusters sind:
+* Der Hostkorrekturprozess nimmt möglicherweise sehr viel Zeit in Anspruch.
+* Designbedingt kann sich immer nur ein Host eines VSAN-Clusters im Wartungsmodus befinden.
+* VUM korrigiert Hosts, die Teil eines VSAN-Clusters sind, immer sequenziell, auch wenn Sie angegeben haben, dass die Hosts parallel korrigiert werden sollen.
+* Für jede virtuelle Maschine auf dem Host, die eine VM-Speicherrichtlinie mit einer Einstellung für "Anzahl der zu tolerierenden Fehler=0" verwendet, können beim Host ungewöhnliche Verzögerungen beim Wechseln in den Wartungsmodus auftreten. Die Verzögerung tritt auf, weil vSAN die Daten der virtuellen Maschine von einer Platte auf eine andere im vSAN-Datenspeichercluster migrieren muss, und dies kann mehrere Stunden dauern. Sie können dies umgehen, indem Sie für die VM-Speicherrichtlinie die "Anzahl der zu tolerierenden Fehler=1" festlegen. Dies bewirkt, dass zwei Kopien der VM-Dateien im vSAN-Datenspeicher erstellt werden.
+* Für jede virtuelle Maschine auf dem Host, die eine VM-Speicherrichtlinie mit einer Einstellung für "Anzahl der zu tolerierenden Fehler=1" verwendet, wird die virtuelle Maschine nicht redundant, wenn der Host in den Wartungsmodus wechselt. Wenn dies nicht akzeptabel ist, finden Sie weitere Informationen im Abschnitt [Redundanz virtueller vSAN-Maschinen](vum-vsan-redundancy.html).
 
 Führen Sie die folgenden Schritte aus, um Hosts und Cluster zu korrigieren:
 1.	Bei Verwendung des vSphere Web Client wählen Sie **Home** > **Hosts und Cluster** aus.
@@ -68,5 +75,5 @@ Führen Sie die folgenden Schritte aus, um Hosts und Cluster zu korrigieren:
 
 ### Zugehörige Links
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
