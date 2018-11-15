@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -15,6 +15,8 @@ lastupdated: "2018-09-27"
 {{site.data.keyword.vmwaresolutions_full}} 主控台會定期偵測並列出您可套用至 VMware 虛擬環境的可用軟體更新。
 
 可用的更新是實例的軟體更新清單中的記錄，可立即套用或排定稍後進行。更新是一個組合，包含一個以上用來更新 IBM 管理元件及 VMware 元件的套件。
+
+因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。 
 
 ## 開始之前
 

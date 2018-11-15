@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 新增、檢視及刪除 Cloud Foundation 實例的叢集
 
@@ -40,30 +44,39 @@ lastupdated: "2018-09-28"
 
 依預設，叢集的 {{site.data.keyword.CloudDataCent}} 位置設為 Cloud Foundation 實例的 {{site.data.keyword.CloudDataCent_notm}}。您可以將叢集部署至不同於已部署實例的 {{site.data.keyword.CloudDataCent_notm}}，但您必須確定兩個 {{site.data.keyword.CloudDataCents_notm}} 之間的網路延遲少於 150 毫秒。若要檢查網路延遲，您可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 之類的工具。
 
-您可以使用的資料中心取決於針對部署所選取的 Bare Metal Server 配置。如果您選取**自訂**配置，則也可以在選取的資料中心包含其他 Pod 時，將叢集部署至不同的 {{site.data.keyword.cloud_notm}} 基礎架構 Pod。部署起始實例的預設 {{site.data.keyword.cloud_notm}} 基礎架構 Pod 達到其容量上限時，此配置非常實用。
+您可以使用的資料中心取決於針對部署所選取的 Bare Metal Server 配置。如果您選取 **Skylake** 或 **Broadwell** 配置，則也可以在選取的資料中心包含其他 Pod 時，將叢集部署至不同的 {{site.data.keyword.cloud_notm}} 基礎架構 Pod。部署起始實例的預設 {{site.data.keyword.cloud_notm}} 基礎架構 Pod 達到其容量上限時，此配置非常實用。
 
-**附註：**標準化**小型**及**大型** Bare Metal Server 配置會使用無法變更的預設 Pod。
+標準化的**小型**及**大型** Bare Metal Server 配置會使用無法變更的預設 Pod。{:note}
 
 如果您將叢集部署至不同的資料中心或 Pod，則會訂購其他三個 VLAN，以與已訂購的 {{site.data.keyword.baremetal_short}} 搭配使用。
 
 ### Bare Metal Server 設定
 
-您可以選擇**自訂**或**預先配置**。
+您可以選擇 **Skylake**、**Broadwell** 或**預先配置**。
 
-#### 自訂
+#### Skylake
 
-對於**自訂**設定，您有數個 **CPU 型號**及 **RAM** 選項。可用的選項可能會根據一開始部署您實例所用的版本而不同。
+若為 **Skylake** 設定，您有數個選項可用於 **CPU 型號**和 **RAM**。可用的選項可能會根據一開始部署您實例所用的版本而不同。
 
-表 1. 自訂 {{site.data.keyword.baremetal_short}} 的選項
+表 1. Skylake {{site.data.keyword.baremetal_short}} 的選項
+
+| CPU 型號選項        |RAM 選項          |
+|:------------- |:------------- |
+|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
+#### Broadwell
+
+若為 **Broadwell** 設定，您有數個選項可用於 **CPU 型號**和 **RAM**。可用的選項可能會根據一開始部署您實例所用的版本而不同。
+
+表 2. Broadwell {{site.data.keyword.baremetal_short}} 的選項
 
 | CPU 型號選項        |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 #### 預先配置
 
@@ -73,17 +86,16 @@ lastupdated: "2018-09-28"
 
 ### vSAN 儲存空間設定
 
-對於**預先配置**的 Bare Metal Server 配置，您無法變更 vSAN 儲存空間設定：
-* 對於**小型**配置，會訂購兩個 1.9 TB SSD SED 的磁碟機。
-* 對於**大型**配置，會訂購四個 3.8 TB SSD SED 的磁碟機。
-
-對於**自訂** Bare Metal Server 配置，您可以指定下列設定，以自訂 vSAN 儲存空間：
-
+若為 **Skylake** 和 **Broadwell** Bare Metal Server 配置，您可以指定下列設定，以自訂 vSAN 儲存空間：
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
 * 如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
 
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
+
+對於**預先配置** 的 Bare Metal Server 配置，您無法變更 vSAN 儲存空間設定：
+* 對於**小型**配置，會訂購兩個 1.9 TB SSD SED 的磁碟機。
+* 對於**大型**配置，會訂購四個 3.8 TB SSD SED 的磁碟機。
 
 ### 授權設定
 
@@ -96,17 +108,17 @@ lastupdated: "2018-09-28"
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
 2. 在 **Cloud Foundation 實例**表格中，按一下您要新增叢集的實例。
 
-   **附註：**請確定實例處於**備妥使用**狀態。否則，您無法將叢集新增至實例。
+   請確定實例處於**備妥使用**狀態。否則，您無法將叢集新增至實例。{:note}
 
 3. 按一下左導覽窗格上的**基礎架構**，然後按一下**叢集**表格右上方的**新增**。
 4. 在**新增叢集**頁面上，輸入叢集名稱。
 5. 如果您要在與實例管理所在不同的 {{site.data.keyword.CloudDataCent_notm}} 中管理叢集，請勾選 **Bare Metal Server** 下的**選取不同的位置**勾選框，然後選擇 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
 6. 完成 Bare Metal Server 配置：
-   * 如果您已選取**自訂**，則請選取 **CPU 型號**及 **RAM** 大小。
+   * 如果您已選取 **Skylake** 或 **Broadwell**，則請選取 **CPU 型號**及 **RAM** 大小。
    * 如果您已選取**預先配置**，則請選取 **Bare Metal Server 配置**。
 7. 完成儲存空間配置：
+   * 如果您已針對 Bare Metal Server 配置選取 **Skylake** 或 **Broadwell**，請指定 vSAN 容量和快取磁碟的磁碟類型以及磁碟數目。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
    * 如果您已針對 Bare Metal Server 配置選取**預先配置**，則無法變更**小型**及**大型** Bare Metal Server 配置的儲存空間設定。
-   * 如果您已針對 Bare Metal Server 配置選取**自訂**，請指定 vSAN 容量和快取磁碟的磁碟類型以及磁碟數目。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
 8. 指定如何提供您的授權碼：
    * 對於「IBM 事業夥伴」使用者，包括 vSphere 授權（Enterprise Plus 版本）及 vSAN 授權，並可代表您購買。不過，您必須指定 vSAN 授權的版本。
    * 對於非「IBM 事業夥伴」的使用者，您可以選取下列其中一個選項：
@@ -123,7 +135,7 @@ lastupdated: "2018-09-28"
 1. 會自動啟動叢集的部署，而且叢集的狀態變更為**正在起始設定**。您可以在實例摘要頁面上檢視部署歷程，以檢查部署的狀態。
 2. 叢集備妥可用時，其狀態會變更為**備妥使用**。新增的叢集已啟用「vSphere 高可用性 (HA)」及「vSphere 分散式資源排程器 (DRS)」。
 
-**重要事項：**您不能變更叢集名稱。變更叢集名稱可能會導致在叢集裡新增或移除 ESXi 伺服器的作業失敗。
+您不能變更叢集名稱。變更叢集名稱可能會導致在叢集裡新增或移除 ESXi 伺服器的作業失敗。{:important}
 
 ## 在 Cloud Foundation 實例中檢視叢集的程序
 
@@ -196,7 +208,7 @@ lastupdated: "2018-09-28"
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
 2. 在 **Cloud Foundation 實例**表格中，按一下您要從中刪除叢集的實例。
 
-   **附註：**請確定實例處於**備妥使用**狀態。否則，您無法從實例刪除叢集。
+   請確定實例處於**備妥使用**狀態。否則，您無法從實例刪除叢集。{:note}
 
 3. 在左導覽窗格上，按一下**基礎架構**。在**叢集**表格中，找出您要刪除的叢集，然後按一下**刪除**圖示。
 4. 確認您已完成將 VM 移轉至其他叢集（適當的話），以及您要刪除叢集。
