@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # マルチサイト構成での Cloud Foundation インスタンスの削除
 
@@ -22,7 +26,8 @@ Cloud Foundation インスタンスを削除すると、以下のコンポーネ
 
 リソースに依存関係があるため、インスタンスのコンポーネントは、インスタンスを削除してもすぐには解放されません。 例えば、サブネットと VLAN は、{{site.data.keyword.cloud}} インフラストラクチャーによって ESXi サーバーが完全にレクラメーション処理されるまで削除できませんが、この処理は {{site.data.keyword.cloud_notm}} 請求処理サイクルの終わりに行われます。 {{site.data.keyword.cloud_notm}} 請求処理サイクル (標準的には 30 日) の終わりに、サブネットと VLAN は削除され、インスタンスの削除が完了します。
 
-**注意:** 削除対象のインスタンスに関する請求は、{{site.data.keyword.cloud_notm}} 請求処理サイクルの終わりまで行われます。
+削除対象のインスタンスに関する請求は、{{site.data.keyword.cloud_notm}} 請求処理サイクルの終わりまで行われます。
+{:note}
 
 ## マルチサイト構成で Cloud Foundation インスタンスを削除する手順
 
