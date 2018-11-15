@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Design da infraestrutura de armazenamento conectado
 
@@ -57,7 +61,10 @@ IOPS variando de 100 a 48 mil pode ser provisionado com tamanhos de armazenament
 Nesse design, a solução do vCenter Server oferece armazenamento do Endurance para armazenamento conectado. Como resultado, é possível selecionar e anexar (por meio de automação) as exportações de NFS do Endurance, cujo tamanho varia de 20 GB a um máximo de 12 TB. O {{site.data.keyword.cloud_notm}} permite que até 64 hosts do vSphere ESXi se conectem a uma única exportação de NFS do Endurance.
 
 A Resistência está disponível em três camadas de desempenho de IOPS para suportar diferentes necessidades
-do aplicativo. Observe que depois que um compartilhamento NFS é provisionado, ele pode ser redimensionado ou reconfigurado para permitir mais ou menos IOPS.
+do aplicativo.
+
+Depois que um compartilhamento NFS é provisionado, ele pode ser redimensionado ou reconfigurado para permitir mais ou menos IOPS.
+{:note}
 
 Para obter opções detalhadas de IOPS, consulte a seção _Configurações de armazenamento_ em [Pedindo instâncias do vCenter Server](../../vcenter/vc_orderinginstance.html).
 

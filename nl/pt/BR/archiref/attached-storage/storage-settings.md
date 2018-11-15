@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Configurações de armazenamento
 
 Esse design suporta a conexão de armazenamento compartilhado somente por meio do NFS v3. NFS v4 e v4.1 não são suportados.
 
-**Nota**: todo o armazenamento conectado para esse design está limitado ao armazenamento do {{site.data.keyword.cloud_notm}} disponível no mesmo {{site.data.keyword.CloudDataCent_notm}} que a solução do vCenter Server. Além disso, todos os discos virtuais armazenados no armazenamento de dados são thin-provisioned por padrão.
+Todo o armazenamento conectado para esse design é limitado ao armazenamento do {{site.data.keyword.cloud_notm}} disponível no mesmo {{site.data.keyword.CloudDataCent_notm}} que a solução vCenter Server. Além disso, todos os discos virtuais armazenados no armazenamento de dados são thin-provisioned por padrão.
+{:note}
 
 A arquitetura especifica que os armazenamentos de dados do NFS v3 são conectados usando o nome do DNS do armazenamento do {{site.data.keyword.cloud_notm}} para se conectar ao compartilhamento. Além disso, o compartilhamento de NFS é conectado a todos os hosts no cluster do vCenter Server e colocado em um cluster de armazenamento de dados com o Storage DRS ativado.
 
