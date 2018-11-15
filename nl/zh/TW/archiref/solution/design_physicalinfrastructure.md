@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 實體基礎架構設計
 
@@ -16,7 +20,7 @@ lastupdated: "2018-09-25"
   <dt class="dt dlterm">實體運算</dt>
   <dd class="dd">實體運算提供虛擬化基礎架構所使用的實體處理及記憶體。在此設計中，運算元件由 {{site.data.keyword.baremetal_long}} 提供，並列在 [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php) 中。</dd>
   <dt class="dt dlterm">實體儲存空間</dt>
-  <dd class="dd">實體儲存空間提供虛擬化基礎架構所使用的原始儲存空間容量。儲存空間元件由 {{site.data.keyword.baremetal_short}} 或是使用 NFS 第 3 版的共用「網路連接儲存空間 (NAS)」陣列所提供。</dd>
+  <dd class="dd">實體儲存空間提供虛擬化基礎架構所使用的原始儲存空間容量。儲存空間元件是由 {{site.data.keyword.baremetal_short}} 提供，或是由使用 NFS 第 3 版的共用「網路連接儲存空間 (NAS)」陣列所提供。</dd>
   <dt class="dt dlterm">實體網路</dt>
   <dd class="dd">實體網路會提供與環境的網路連線功能，而之後網路虛擬化會使用該環境。網路由 {{site.data.keyword.cloud_notm}} 服務網路提供，並包含額外服務（例如 DNS 及 NTP）。</dd>
 </dl>
@@ -29,13 +33,15 @@ lastupdated: "2018-09-25"
 
 實體主機是指環境中用來提供運算資源的 {{site.data.keyword.baremetal_short}}。此解決方案中所套用的 {{site.data.keyword.baremetal_short}} 已經過 VMware 認證，並列在 [VMware HCG](http://www.vmware.com/resources/compatibility/search.php) 中。
 
-解決方案中可用的伺服器配置符合或超出安裝、配置及管理 vSphere ESXi 的最低需求。有各種配置可用來滿足不同的需求。如需用於 VMware on {{site.data.keyword.cloud_notm}} 解決方案之確切規格的詳細清單，請參閱 [Cloud Foundation 實例](../../sddc/sd_bom.html)或 [vCenter Server 實例](../../vcenter/vc_bom.html)的「資料清單」。請注意，{{site.data.keyword.baremetal_short}} 位於 {{site.data.keyword.cloud_notm}} 中。
+解決方案中可用的伺服器配置符合或超出安裝、配置及管理 vSphere ESXi 的最低需求。有各種配置可用來滿足不同的需求。如需用於 VMware on {{site.data.keyword.cloud_notm}} 解決方案之確切規格的詳細清單，請參閱 [Cloud Foundation 實例](../../sddc/sd_bom.html)或 [vCenter Server 實例](../../vcenter/vc_bom.html)的「資料清單」。
 
-每個 Cloud Foundation 實例都是以 4 部主機的部署開始，而且根據選擇的儲存空間解決方案，每個 vCenter Server 實例都是以 3 或 4 部主機的部署開始。
+{{site.data.keyword.baremetal_short}} 位於 {{site.data.keyword.cloud_notm}}。{:note}
 
-實體主機採用兩個要配置給 vSphere ESXi Hypervisor 的本端連接磁碟。您可以使用 vSAN（如本頁的_實體儲存空間設計_ 小節所述）或使用 NetApp ONTAP（如 [NetApp ONTAP Select 架構](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)所述）來配置更多磁碟。每部實體主機都具有備用的 10-Gbps 網路連線，以進行公用及專用網路存取。
+每個 Cloud Foundation 實例都是從 4 部主機的部署開始，而每個 vCenter Server 實例都是從 3 或 4 部主機的部署開始，視所選擇的儲存空間解決方案而定。
 
-Bare Metal Server 的技術規格如下：
+實體主機採用兩個要配置給 vSphere ESXi Hypervisor 的本端連接磁碟。您可以使用 vSAN（如_實體儲存空間設計_ 小節所述）或使用 NetApp ONTAP（如 [NetApp ONTAP Select 架構](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)所述）來配置更多磁碟。每部實體主機都具有備用的 10-Gbps 網路連線，以進行公用及專用網路存取。
+
+Bare Metal Server 的規格如下：
 * CPU：雙 Intel Xeon，各種核心及速度配置
 * 記憶體：各種配置，128 GB 或更大
 * 網路：4 x 10 Gbps
@@ -70,7 +76,7 @@ Bare Metal Server 的技術規格如下：
 ### 主要及可攜式 IP 區塊
 
 {{site.data.keyword.cloud_notm}} 配置兩種類型的 IP 位址，以在 {{site.data.keyword.cloud_notm}} 基礎架構內使用：
-* 主要 IP 位址會被指派給 {{site.data.keyword.cloud_notm}} 所佈建的裝置、Bare Metal Server 及虛擬伺服器。您不應該指派這些區塊中的任何 IP 位址。
+* 主要 IP 位址會被指派給 {{site.data.keyword.cloud_notm}} 所佈建的裝置、Bare Metal Server 及虛擬伺服器。不要指派這些區塊中的任何 IP 位址。
 * 我們提供了可攜式 IP 位址，供您視需要指派及管理。
 
 若在 {{site.data.keyword.slportal}} 內啟用 **VLAN Spanning**，或將帳戶配置為**虛擬遞送及轉遞 (VRF)** 帳戶，則可以將主要或可攜式 IP 位址變成可遞送給客戶帳戶內的任何 VLAN。
@@ -89,7 +95,7 @@ Bare Metal Server 的技術規格如下：
 
 ### 實體主機連線
 
-此設計中的每部實體主機都會有兩對備用的 10 Gbps 乙太網路連線，以連接至每台 {{site.data.keyword.cloud_notm}} Top of Rack (ToR) 交換器（公用及專用）。配接卡會設定為總共 4 個 10 Gbps 連線的個別連線（未結合）。這樣可讓網路介面卡 (NIC) 連線彼此獨立地運作。
+此設計中的每部實體主機都會有兩對備用的 10-Gbps 乙太網路連線，以連接至每台 {{site.data.keyword.cloud_notm}} Top of Rack (ToR) 交換器（公用及專用）。配接卡會設定為總共 4 個 10-Gbps 連線的個別連線（未結合）。這樣可讓網路介面卡 (NIC) 連線彼此獨立地運作。
 
 圖 1. 實體主機 NIC 連線
 
@@ -135,11 +141,11 @@ Bare Metal Server 的技術規格如下：
 
 ## 實體儲存空間設計
 
-實體儲存空間設計包含實體主機中所安裝實體磁碟的配置，以及共用檔案層次儲存空間的配置。這包括 vSphere ESXi Hypervisor 的作業系統磁碟，以及用於虛擬機器 (VM) 儲存空間的作業系統磁碟。VM 的儲存空間可以包含 VMware vSAN 所虛擬化的本端磁碟，或是包含共用檔案層次儲存空間。
+實體儲存空間設計包含實體主機中所安裝實體磁碟的配置，以及共用檔案層次儲存空間的配置。這包括 vSphere ESXi Hypervisor 的作業系統磁碟，以及用於虛擬機器 (VM) 儲存空間的磁碟。VM 的儲存空間可以包含 VMware vSAN 所虛擬化的本端磁碟，或是包含共用檔案層次儲存空間。
 
 ### 作業系統磁碟
 
-vSphere ESXi Hypervisor 設計成安裝於持續性位置中。因此，實體主機在 RAID-1 配置中包含兩個 1TB SATA 磁碟，以支援 vSphere ESXi Hypervisor 的備援。
+vSphere ESXi Hypervisor 設計成安裝於持續性位置中。因此，實體主機在 RAID-1 配置中包含兩個 1-TB SATA 磁碟，以支援 vSphere ESXi Hypervisor 的備援。
 
 ### 虛擬機器儲存空間
 
@@ -153,7 +159,7 @@ vSphere ESXi Hypervisor 設計成安裝於持續性位置中。因此，實體�
 
 ### 跨主機的共用檔案層次儲存空間
 
-使用共用檔案層次儲存空間時，會將 2 TB NFS 共用連接至構成起始 VMware 叢集的主機。這個共用（稱為管理共用）用於管理元件（例如 VMware vCenter Server、Platform Services Controller 及 VMware NSX）。儲存空間是使用 NFS 第 3 版通訊協定所連接，而且最多可支援 4000 IOPS。
+使用共用檔案層次儲存空間時，會將 2-TB NFS 共用連接至構成起始 VMware 叢集的主機。這個共用（稱為管理共用）用於管理元件（例如 VMware vCenter Server、Platform Services Controller 及 VMware NSX）。儲存空間是使用 NFS 第 3 版通訊協定所連接，而且最多可支援 4000 IOPS。
 
 圖 2. 連接至 VMware 部署的 NFS 共用
 

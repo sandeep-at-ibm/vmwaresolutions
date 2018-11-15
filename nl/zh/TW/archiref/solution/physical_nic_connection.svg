@@ -159,8 +159,8 @@
 <text transform="matrix(1 0 0 1 650 122.7798)" class="st3 st4">IBM Cloud </text>
 <text transform="matrix(1 0 0 1 650 144.3798)" class="st3 st4">專用網路</text>
 <rect x="84" y="110" class="st2" width="177" height="44"/>
-<text transform="matrix(1 0 0 1 110 129.7798)" class="st3 st4">IBM Cloud </text>
-<text transform="matrix(1 0 0 1 110 151.3798)" class="st3 st4">管理網路</text>
+<text transform="matrix(1 0 0 1 84 129.7798)" class="st3 st4">IBM Cloud </text>
+<text transform="matrix(1 0 0 1 84 151.3798)" class="st3 st4">管理網路</text>
 <line class="st7" x1="458.3" y1="388.7" x2="683" y2="390"/>
 <line class="st7" x1="407" y1="408.3" x2="722.5" y2="409.5"/>
 <line class="st7" x1="682" y1="282" x2="682" y2="390.8"/>

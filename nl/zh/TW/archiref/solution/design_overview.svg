@@ -41,11 +41,11 @@
 <polygon class="st2" points="211.9,24.5 839.2,24.5 839.2,136.1 211.9,136.1 211.9,24.5 "/>
 <polygon class="st3" points="9.6,272.3 839.2,272.3 839.2,383 9.6,383 9.6,272.3 "/>
 <rect x="31.5" y="62" class="st4" width="168" height="45"/>
-<text transform="matrix(1 0 0 1 70 75.3198)" class="st5 st6 st7">常見服務</text>
-<text transform="matrix(1 0 0 1 88 124)" class="st5 st8 st9">鑑別</text>
+<text transform="matrix(1 0 0 1 31.4505 75.3198)" class="st5 st6 st7">常見服務</text>
+<text transform="matrix(1 0 0 1 56.1668 124)" class="st5 st8 st9">鑑別</text>
 <text transform="matrix(1 0 0 1 88.7376 157)" class="st5 st8 st9">DNS</text>
 <text transform="matrix(1 0 0 1 89.2557 193)" class="st5 st8 st9">NTP</text>
-<text transform="matrix(1 0 0 1 65 223)" class="st5 st8 st9">憑證管理中心</text>
+<text transform="matrix(1 0 0 1 38.3895 223)" class="st5 st8 st9">憑證管理中心</text>
 <rect x="389" y="43" class="st4" width="283" height="39"/>
 <text transform="matrix(1 0 0 1 389 58.54)" class="st5 st6 st10">基礎架構管理</text>
 <rect x="406" y="172" class="st4" width="217" height="45"/>
