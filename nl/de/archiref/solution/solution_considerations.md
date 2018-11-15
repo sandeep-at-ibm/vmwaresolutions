@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Nach der Bereitstellung zu beachtende Aspekte für Ihre VMware-Instanz
 
@@ -14,7 +18,8 @@ Bei den Produktangeboten {{site.data.keyword.vmwaresolutions_full}}, VMware vCen
 
 Lesen Sie die folgenden Hinweise, denen Sie die Verantwortlichkeiten des Kunden bei Verwaltung und Betrieb der Instanz vor und nach der Bereitstellung entnehmen können.
 
-**Anmerkung:** Die folgende Liste ist nicht vollständig. Weitere Informationen finden Sie in [Von IBM verwaltete Services](../../services/managing_imi.html).
+Die folgende Liste ist nicht vollständig. Weitere Informationen finden Sie in [Von IBM verwaltete Services](../../services/managing_imi.html).
+{:note}
 
 ## Zugriff auf das IBM Cloud-Konto
 

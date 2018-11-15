@@ -1,8 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 850 608" style="enable-background:new 0 0 850 608;" xml:space="preserve">
-<style type="text/css">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 850 608"
+   style="enable-background:new 0 0 850 608;"
+   xml:space="preserve"
+   sodipodi:docname="commonservice_ntp.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><metadata
+     id="metadata101"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs99" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview97"
+     showgrid="false"
+     inkscape:zoom="0.75764706"
+     inkscape:cx="-0.26988334"
+     inkscape:cy="180.0734"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style2">
 	.st0{fill:#F59C57;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#F1F2F1;}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#1DA78D;}
@@ -20,58 +61,179 @@
 	.st14{font-family:'IBMPlexSans';}
 	.st15{font-size:21px;}
 	.st16{font-size:18px;}
-</style>
-<rect x="97.3" y="393.9" class="st0" width="186.9" height="163.1"/>
-<polygon class="st1" points="65.3,20 795.9,20 795.9,313.8 65.3,313.8 65.3,20 "/>
-<polygon class="st2" points="99.4,185.4 745.5,185.4 745.5,281.1 99.4,281.1 99.4,185.4 "/>
-<polygon class="st3" points="99.4,65.3 745.5,65.3 745.5,161.7 99.4,161.7 99.4,65.3 "/>
-<polygon class="st4" points="552.6,393.9 748,393.9 748,549 552.6,549 552.6,393.9 "/>
-<g>
-	<line class="st5" x1="192.2" y1="292.3" x2="192.2" y2="381"/>
-	<polygon class="st6" points="198.8,378.7 192.2,392.1 185.5,378.7 198.8,378.7 	"/>
-	<polygon class="st6" points="185.5,294.5 192.2,281.1 198.8,294.5 185.5,294.5 	"/>
-</g>
-<g>
-	<defs>
-		<polygon id="SVGID_1_" points="65.3,589 795.9,589 795.9,20 65.3,20 65.3,589 		"/>
-	</defs>
-	<clipPath id="SVGID_2_">
-		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-	</clipPath>
-	<g class="st7">
-		<defs>
-			<polygon id="SVGID_3_" points="65.3,589 795.9,589 795.9,20 65.3,20 65.3,589 			"/>
-		</defs>
-		<clipPath id="SVGID_4_">
-			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
-		</clipPath>
-		<g class="st8">
-			<line class="st9" x1="539.7" y1="489.6" x2="296.3" y2="489.6"/>
-			<polygon class="st6" points="298.6,482.9 285,489.6 298.6,496.3 298.6,482.9 			"/>
-			<polygon class="st6" points="537.4,496.3 551,489.6 537.4,482.9 537.4,496.3 			"/>
-		</g>
-	</g>
-</g>
-<rect x="279" y="87" class="st10" width="329" height="45"/>
-<text transform="matrix(1 0 0 1 279 104.7598)" class="st11 st12 st13">Infrastrukturmanagement</text>
-<rect x="302" y="206" class="st10" width="283" height="45"/>
-<text transform="matrix(1 0 0 1 302 223.7598)" class="st11 st12 st13">Virtuelle Infrastruktur </text>
-<text transform="matrix(1 0 0 1 325 143)" class="st11 st14 st15">VMware vCenter Server</text>
-<text transform="matrix(1 0 0 1 346 260)" class="st11 st14 st15">VMware vSphere</text>
-<rect x="115" y="426" class="st10" width="168" height="45"/>
-<text transform="matrix(1 0 0 1 115 439.3198)"><tspan x="0" y="0" class="st11 st12 st16">Allgemeine </tspan><tspan x="0" y="21.6" class="st11 st12 st16">Services</tspan></text>
-<text transform="matrix(1 0 0 1 123 488)" class="st11 st14 st16">Active Directory</text>
-<text transform="matrix(1 0 0 1 166 523)" class="st11 st14 st16">DNS</text>
-<rect x="569" y="424" class="st10" width="168" height="45"/>
-<text transform="matrix(1 0 0 1 569 437.3198)" class="st11 st12 st16">IBM Cloud Services</text>
-<text transform="matrix(1 0 0 1 626 487)" class="st11 st14 st16">DNS</text>
-<text transform="matrix(1 0 0 1 627 522)" class="st11 st14 st16">NTP</text>
-<text transform="matrix(1 0 0 1 195 340)"><tspan x="0" y="0" class="st14 st15">Authentifizierung</tspan><tspan x="0" y="25.2" class="st14 st15">Domänennamensauflösung</tspan></text>
-<text transform="matrix(1 0 0 1 490 338)"><tspan x="0" y="0" class="st14 st15">Networkzeit-</tspan><tspan x="0" y="25.2" class="st14 st15">synchronisation</tspan></text>
-<text transform="matrix(1 0 0 1 290 473)" class="st14 st15">Domänennamensauflösung</text>
-<g>
-	<line class="st5" x1="645.2" y1="293.3" x2="645.2" y2="382"/>
-	<polygon class="st6" points="651.8,379.7 645.2,393.1 638.5,379.7 651.8,379.7 	"/>
-	<polygon class="st6" points="638.5,295.5 645.2,282.1 651.8,295.5 638.5,295.5 	"/>
-</g>
-</svg>
+</style><rect
+     x="97.3"
+     y="393.9"
+     class="st0"
+     width="186.9"
+     height="163.1"
+     id="rect4" /><polygon
+     class="st1"
+     points="65.3,20 795.9,20 795.9,313.8 65.3,313.8 65.3,20 "
+     id="polygon6" /><polygon
+     class="st2"
+     points="99.4,185.4 745.5,185.4 745.5,281.1 99.4,281.1 99.4,185.4 "
+     id="polygon8" /><polygon
+     class="st3"
+     points="99.4,65.3 745.5,65.3 745.5,161.7 99.4,161.7 99.4,65.3 "
+     id="polygon10" /><polygon
+     class="st4"
+     points="552.6,393.9 748,393.9 748,549 552.6,549 552.6,393.9 "
+     id="polygon12" /><g
+     id="g20"><line
+       class="st5"
+       x1="192.2"
+       y1="292.3"
+       x2="192.2"
+       y2="381"
+       id="line14" /><polygon
+       class="st6"
+       points="198.8,378.7 192.2,392.1 185.5,378.7 198.8,378.7  "
+       id="polygon16" /><polygon
+       class="st6"
+       points="185.5,294.5 192.2,281.1 198.8,294.5 185.5,294.5  "
+       id="polygon18" /></g><g
+     id="g44"><defs
+       id="defs23"><polygon
+         id="SVGID_1_"
+         points="65.3,589 795.9,589 795.9,20 65.3,20 65.3,589   " /></defs><clipPath
+       id="SVGID_2_"><use
+         xlink:href="#SVGID_1_"
+         style="overflow:visible;"
+         id="use25" /></clipPath><g
+       class="st7"
+       clip-path="url(#SVGID_2_)"
+       id="g42"><defs
+         id="defs29"><polygon
+           id="SVGID_3_"
+           points="65.3,589 795.9,589 795.9,20 65.3,20 65.3,589    " /></defs><clipPath
+         id="SVGID_4_"><use
+           xlink:href="#SVGID_3_"
+           style="overflow:visible;"
+           id="use31" /></clipPath><g
+         class="st8"
+         clip-path="url(#SVGID_4_)"
+         id="g40"><line
+           class="st9"
+           x1="539.7"
+           y1="489.6"
+           x2="296.3"
+           y2="489.6"
+           id="line34" /><polygon
+           class="st6"
+           points="298.6,482.9 285,489.6 298.6,496.3 298.6,482.9    "
+           id="polygon36" /><polygon
+           class="st6"
+           points="537.4,496.3 551,489.6 537.4,482.9 537.4,496.3    "
+           id="polygon38" /></g></g></g><rect
+     x="279"
+     y="87"
+     class="st10"
+     width="329"
+     height="45"
+     id="rect46" /><text
+     transform="matrix(1 0 0 1 279 104.7598)"
+     class="st11 st12 st13"
+     id="text48">Infrastrukturmanagement</text>
+<rect
+     x="302"
+     y="206"
+     class="st10"
+     width="283"
+     height="45"
+     id="rect50" /><text
+     transform="matrix(1 0 0 1 302 223.7598)"
+     class="st11 st12 st13"
+     id="text52">Virtuelle Infrastruktur </text>
+<text
+     transform="matrix(1 0 0 1 325 143)"
+     class="st11 st14 st15"
+     id="text54">VMware vCenter Server</text>
+<text
+     transform="matrix(1 0 0 1 346 260)"
+     class="st11 st14 st15"
+     id="text56">VMware vSphere</text>
+<rect
+     x="115"
+     y="426"
+     class="st10"
+     width="168"
+     height="45"
+     id="rect58" /><text
+     class="st11 st12 st16"
+     id="text60"
+     x="99.840332"
+     y="439.31979"
+     style="font-size:18px;font-family:IBMPlexSans-Bold;fill:#ffffff">Allgemeine Services</text>
+<text
+     class="st11 st14 st16"
+     id="text62"
+     x="126.47453"
+     y="488"
+     style="font-size:18px;font-family:IBMPlexSans;fill:#ffffff">Active Directory</text>
+<text
+     class="st11 st14 st16"
+     id="text64"
+     x="172.74184"
+     y="523"
+     style="font-size:18px;font-family:IBMPlexSans;fill:#ffffff">DNS</text>
+<rect
+     x="569"
+     y="424"
+     class="st10"
+     width="168"
+     height="45"
+     id="rect66" /><text
+     transform="matrix(1 0 0 1 569 437.3198)"
+     class="st11 st12 st16"
+     id="text68">IBM Cloud Services</text>
+<text
+     transform="matrix(1 0 0 1 626 487)"
+     class="st11 st14 st16"
+     id="text70">DNS</text>
+<text
+     transform="matrix(1 0 0 1 627 522)"
+     class="st11 st14 st16"
+     id="text72">NTP</text>
+<text
+     transform="matrix(1 0 0 1 195 340)"
+     id="text78"><tspan
+       x="0"
+       y="0"
+       class="st14 st15"
+       id="tspan74">Authentifizierung</tspan><tspan
+       x="0"
+       y="25.2"
+       class="st14 st15"
+       id="tspan76">Domänennamensauflösung</tspan></text>
+<text
+     transform="matrix(1 0 0 1 490 338)"
+     id="text84"><tspan
+       x="0"
+       y="0"
+       class="st14 st15"
+       id="tspan80">Netzzeit-</tspan><tspan
+       x="0"
+       y="25.2"
+       class="st14 st15"
+       id="tspan82">synchronisation</tspan></text>
+<text
+     class="st14 st15"
+     id="text86"
+     x="289"
+     y="473"
+     style="font-size:21px;font-family:IBMPlexSans">Domänennamensauflösung</text>
+<g
+     id="g94"><line
+       class="st5"
+       x1="645.2"
+       y1="293.3"
+       x2="645.2"
+       y2="382"
+       id="line88" /><polygon
+       class="st6"
+       points="651.8,379.7 645.2,393.1 638.5,379.7 651.8,379.7  "
+       id="polygon90" /><polygon
+       class="st6"
+       points="638.5,295.5 645.2,282.1 651.8,295.5 638.5,295.5  "
+       id="polygon92" /></g></svg>

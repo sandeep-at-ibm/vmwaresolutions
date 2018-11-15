@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-07-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Skalierungskapazität
 
@@ -40,7 +44,8 @@ Durch diese Methode lassen sich folgende Zwecke realisieren:
 * Trennung von Workloads nach anderen Merkmalen, zum Beispiel Microsoft SQL-Datenbankcluster
 * Bereitstellung von Anwendungen in hoch verfügbaren Topologien
 
-**Hinweis:** Wenn der erste Cluster in einen reinen Management-Cluster konvertiert wird, erfordert die Migration vorhandener Workloads manuelle Schritte, die der Benutzer ausführen muss. Es kann zum Beispiel eine erneute Herstellung von Verbindungen von Datenspeichern zu dem neuen Cluster oder, alternativ, eine Speichermigration erforderlich sein. Die IP-Adressen der Workloads müssen möglicherweise geändert werden, wenn sich der neue Cluster in einem anderen {{site.data.keyword.cloud_notm}}-Pod befindet oder dem Cluster eine andere VLAN-ID zugeordnet wird.
+Wenn der erste Cluster in einen reinen Management-Cluster konvertiert wird, erfordert die Migration vorhandener Workloads manuelle Schritte, die der Benutzer ausführen muss. Es kann zum Beispiel eine erneute Herstellung von Verbindungen von Datenspeichern zu dem neuen Cluster oder, alternativ, eine Speichermigration erforderlich sein. Die IP-Adressen der Workloads müssen möglicherweise geändert werden, wenn sich der neue Cluster in einem anderen {{site.data.keyword.cloud_notm}}-Pod befindet oder dem Cluster eine andere VLAN-ID zugeordnet wird.
+{:note}
 
 ## ESXi-Hosts in vorhandenen Clustern hinzufügen
 

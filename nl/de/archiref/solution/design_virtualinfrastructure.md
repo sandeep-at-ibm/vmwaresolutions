@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Design der virtuellen Infrastruktur
 
@@ -23,9 +27,9 @@ Die vSphere ESXi-Konfiguration umfasst die folgenden Aspekte:
 
 In Tabelle 1 sind die Spezifikationen für die einzelnen Aspekte aufgeführt. Wenn ESXi konfiguriert und installiert wurde, wird der Host einem VMware vCenter-Server hinzugefügt und von dort aus verwaltet.
 
-Das Design ermöglicht Ihnen, über Console User Interface (DCUI), ESXi Shell und Secure Shell (SSH) auf die virtuellen Hosts zuzugreifen.
+Mit diesem Design können Sie über Console User Interface (DCUI), ESXi Shell und Secure Shell (SSH) auf die virtuellen Hosts zugreifen.
 
-Die einzigen Benutzer, die sich standardmäßig direkt anmelden können, sind die Benutzer _root_ und _ibmvmadmin_ für die physische Maschine des Hosts. Der Administrator kann Endbenutzer aus der Microsoft Active Directory-Domäne (MSAD) hinzufügen, um den Benutzerzugriff auf den Host zu ermöglichen. Alle Hosts im Design der vCenter Server-Lösung werden zur Synchronisation mit einem zentralen NTP-Server konfiguriert.
+Die einzigen Benutzer, die sich standardmäßig direkt anmelden können, sind die Benutzer _root_ und _ibmvmadmin_ für die physische Maschine des Hosts. Der Administrator kann Benutzer aus der Microsoft Active Directory-Domäne (MSAD) hinzufügen, um den Benutzerzugriff auf den Host zu ermöglichen. Alle Hosts im Design der vCenter Server-Lösung werden zur Synchronisation mit einem zentralen NTP-Server konfiguriert.
 
 Tabelle 1. vSphere ESXi-Konfiguration
 
@@ -67,7 +71,7 @@ Abbildung 1. vSAN-Konzept
 ![vSAN-Konzept](virtual_vSAN.svg "vSAN fasst den lokalen Speicher über mehrere ESXi-Hosts in einem vSphere-Cluster zusammen und verwaltet den zusammengefassten Speicher als einzelnen VM-Datenspeicher")
 
 vSAN arbeitet mit den folgenden Komponenten:
-* vSAN-Design mit zwei Plattengruppen, wobei jede Plattengruppe aus zwei oder mehr Platten besteht. Eine SSD (Solid State Disk) der kleinsten Größe in der Gruppe dient als Cacheschicht, während die übrigen SSDs als Kapazitätsschicht verwendet werden.
+* vSAN-Design mit zwei Plattengruppen; jede Plattengruppe besteht aus zwei oder mehr Platten. Eine SSD (Solid State Disk) der kleinsten Größe in der Gruppe dient als Cacheschicht, während die übrigen SSDs als Kapazitätsschicht verwendet werden.
 * Der Onboard-RAID-Controller wird für jedes Laufwerk außer den beiden Betriebssystemlaufwerken (BS-Laufwerken) auf der Ebene RAID-0 konfiguriert.
 * Aus allen Speicherressourcen wird ein einzelner vSAN-Datenspeicher erstellt.
 
@@ -100,10 +104,10 @@ Speicherrichtlinien müssen nach dem Hinzufügen neuer ESXi-Hosts oder nach der 
 vSAN-Einstellungen werden nach bewährten Verfahren für die Bereitstellung von VMware-Lösungen in {{site.data.keyword.cloud_notm}} festgelegt. Zu den VSAN-Einstellungen gehören SIOC-Einstellungen, Einstellungen für die Portgruppe für explizites Failover und Plattencacheeinstellungen.
 * SSD-Cacherichtlinieneinstellungen: Kein **Read Ahead** (Vorauslesen), **Write Through**, **Direct** (NRWTD)
 * Einstellungen der E/A-Netzsteuerung
-   * Management: 20 gemeinsam genutzte Ressourcen
-   * Virtuelle Maschine: 30 gemeinsam genutzte Ressourcen
-   * vMotion: 50 gemeinsam genutzte Ressourcen
-   * vSAN: 100 gemeinsam genutzte Ressourcen
+   * Management - 20 gemeinsam genutzte Ressourcen
+   * Virtuelle Maschine - 30 gemeinsam genutzte Ressourcen
+   * vMotion - 50 gemeinsam genutzte Ressourcen
+   * vSAN - 100 gemeinsam genutzte Ressourcen
 * vSAN-Kernel-Ports: **Explicit Failover**
 
 ## VMware NSX-Design
@@ -121,7 +125,7 @@ Tabelle 2. NSX-Manager-Attribute
 | Speicher          | 16 GB |
 | Plattenspeicher            | 60 GB in der gemeinsam genutzten Management-NFS-Ressource |
 | Plattentyp       | Thin-Provisioning |
-| Netz         | Privat A, portierbar, für Managementkomponenten vorgesehen |
+| Netz         | **Privat A**, portierbar, für Managementkomponenten vorgesehen |
 
 Die folgende Abbildung zeigt die Anordnung des NSX-Managers in Relation zu anderen Komponenten in der Architektur.
 
@@ -129,9 +133,9 @@ Abbildung 2. Übersicht über das NSX-Manager-Netz
 
 ![Übersicht über das NSX-Manager-Netz](virtual_NSX.svg "NSX-Manager in Relation zu den anderen Komponenten in der Architektur")
 
-Nach der Erstbereitstellung stellt die {{site.data.keyword.cloud_notm}}-Automatisierung drei NSX-Controller im ersten Cluster bereit. Jedem der Controller wird eine VLAN-gestützte IP-Adresse aus dem portierbaren Teilnetz "Privat A" zugeordnet, das für Managementkomponenten vorgesehen ist. Ferner werden in dem Design VM-VM-Anti-Affinitätsregeln erstellt, um die Controller unter den Hosts im Cluster zu separieren. Der erste Cluster muss mindestens drei Knoten enthalten, um hohe Verfügbarkeit für die Controller sicherzustellen.
+Nach der Erstbereitstellung stellt die {{site.data.keyword.cloud_notm}}-Automatisierung drei NSX-Controller im ersten Cluster bereit. Jedem der Controller wird eine VLAN-gestützte IP-Adresse aus dem portierbaren Teilnetz **Private A** zugeordnet, das für Managementkomponenten vorgesehen ist. Ferner werden in dem Design VM-VM-Anti-Affinitätsregeln erstellt, um die Controller unter den Hosts im Cluster zu separieren. Der erste Cluster muss mindestens drei Knoten enthalten, um hohe Verfügbarkeit für die Controller sicherzustellen.
 
-Neben den Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisierung die bereitgestellten vSphere-Hosts mit NSX-VIBs vor, um die Verwendung eines virtualisierten Netzes durch VXLAN-Tunnelendpunkte (VTEPs) einzurichten. Den VTEPs wird eine VLAN-gestützte IP-Adresse aus dem portierbaren IP-Adressbereich von "Privat A" zugeordnet, der für VTEPs angegeben ist, wie in *Tabelle 1. VLAN- und Teilnetzzusammenfassung* für das [Design der physischen Infrastruktur](design_physicalinfrastructure.html) aufgeführt. Der VXLAN-Datenverkehr befindet sich im nicht mit Tags versehenen VLAN und wird dem privaten vDS zugewiesen.
+Neben den Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisierung die bereitgestellten vSphere-Hosts mit NSX-VIBs vor, um die Verwendung eines virtualisierten Netzes durch VXLAN-Tunnelendpunkte (VTEPs) einzurichten. Den VTEPs wird eine VLAN-gestützte IP-Adresse aus dem portierbaren IP-Adressbereich von **Privat A** zugeordnet, der für VTEPs angegeben ist, wie in *Tabelle 1. VLAN- und Teilnetzzusammenfassung* für das [Design der physischen Infrastruktur](design_physicalinfrastructure.html) aufgeführt. Der VXLAN-Datenverkehr befindet sich im nicht mit Tags versehenen VLAN und wird dem privaten vDS zugewiesen.
 
 Anschließend wird ein Segment-ID-Pool zugeordnet und die Hosts in dem Cluster werden der Transportzone hinzugefügt. In der Transportzone wird nur Unicast verwendet, da die IGMP-Netzüberwachung (IGMP - Internet Group Management Protocol) in der {{site.data.keyword.cloud_notm}} nicht konfiguriert ist.
 
@@ -167,12 +171,13 @@ Der vSphere-Cluster nutzt zwei vSphere Distributed Switches mit der in den folge
 
 Tabelle 4. Verteilte Switches konvergierter Cluster
 
-| vSphere Distributed<br>Switchname | Funktion | Netz-<br>E/A-Steuerung | Lastausgleichs-<br>modus | Physische <br>NIC-Ports | MTU |
+| vSphere Distributed<br>Switchname | Funktion | Netz-<br>E/A-Steuerung | Lastausgleichs-<br>modus | Physische <br>Ports | MTU |
 |:------------- |:------------- |:------------- |:------------- |:------------- |:------------- |
 | SDDC-Dswitch-Private | ESXi-Management, vSAN, vSphere vMotion, VXLAN-Tunnelendpunkt, NFS (VTEP) | Aktiviert | Route basierend auf explizitem Failover (vSAN, vMotion) von virtuellem Ursprungsport (alle anderen) | 2 | 9000<br>(Jumbo-Frames) |
 | SDDC-Dswitch-Public | Externer Managementdatenverkehr (Nord-Süd) | Aktiviert | Route basierend auf virtuellem Ursprungsport \* | 2 | 1500<br>(Standard) |
 
-**Hinweis:** Namen, Anzahl und Anordnung der Host-NICs können abhängig vom {{site.data.keyword.CloudDataCent_notm}} und Ihrer Auswahl der Host-Hardware variieren.
+Namen, Anzahl und Anordnung der Host-NICs können abhängig vom {{site.data.keyword.CloudDataCent_notm}} und Ihrer Auswahl der Host-Hardware variieren.
+{:note}
 
 Tabelle 5. Einstellungen für die Portgruppenkonfiguration für verteilte Switches konvergierter Cluster
 
@@ -182,9 +187,10 @@ Tabelle 5. Einstellungen für die Portgruppenkonfiguration für verteilte Switch
 | Failover-Erkennung | Nur Linkstatus |
 | Switches benachrichtigen    | Aktiviert |
 | Failback           | Nein |
-| Failoverreihenfolge     | Aktive Uplinks: uplink1, uplink2 \* |
+| Failover-Reihenfolge     | Aktive Uplinks: uplink1, uplink2 \* |
 
-\* **Hinweis**: Die vSAN-Portgruppe verwendet explizites Failover mit Aktiv/Standby-Konfiguration, da sie keinen Lastausgleich für vSAN-Speicherdatenverkehr unterstützt.
+\* Die vSAN-Portgruppe verwendet explizites Failover mit Aktiv/Standby-Konfiguration, da sie keinen Lastausgleich für vSAN-Speicherdatenverkehr unterstützt.
+{:note}
 
 Tabelle 6. Portgruppen und VLANs für virtuelle Switches konvergierter Cluster
 
