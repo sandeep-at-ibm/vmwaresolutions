@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server インスタンスの注文
 
@@ -30,7 +34,8 @@ lastupdated: "2018-09-27"
   | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。ここで `<n>` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大長は 50 文字です。 |
 
-**重要:** インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
+インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
+{:important}
 
 ## システム設定
 
@@ -59,20 +64,55 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 
 ビジネス・パートナーでないユーザーの場合、**「購入に含める」**を選択してこれらのコンポーネントに IBM 提供 VMware ライセンスを使用することも、**「自分で提供する」**を選択し、所有するライセンス・キーを入力してライセンス持ち込み (BYOL) を適用することもできます。
 
+
 **注意:**
 * CPU を 2 つ搭載したサーバー 4 台を使用するため、8 個以上の CPU を使用できるライセンスが必要です。 各 VMware コンポーネントに選択したライセンスは、基本インスタンスと、そのインスタンスに後から追加する ESXi サーバーに適用されます。 ご使用のライセンスが、インフラストラクチャーの今後の容量拡張に対応できることを確認してください。
 * 最小のライセンス・エディションが、ユーザー・インターフェースに表示されます。 複数のコンポーネント・エディションがサポートされている場合は、必要なエディションを選択できます。 選択した VMware コンポーネントごとに、指定したライセンス・キーが正しいことを確認してください。
 * vSphere の場合は、注文時にライセンス料が発生しますが、そのライセンス料は後でアカウントに返金されます。
 * インスタンスのデプロイメントが完了したら、VMware vSphere Web Client を使用して、提供したライセンスを変更できます。
 * 自分でライセンスを提供した VMware コンポーネントのサポートは、IBM サポートからではなく、VMware から提供されます。
+{:important}
 
 ## ベア・メタル・サーバーの設定
 
-ベア・メタルの設定は、選択したデータ・センターや、カスタマイズ型と事前構成型のどちらの構成を選択したかによって異なります。
+ベアメタルの設定は、選択したデータ・センターやベアメタル・サーバーの構成に基づきます。
 
 ### データ・センターの場所
 
 インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
+
+### Skylake
+
+**「Skylake」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。
+
+表 2. Skylake {{site.data.keyword.baremetal_short}}のオプション
+
+| CPU モデル・オプション        | RAM オプション       |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110 プロセッサー / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
+### SAP 認定
+
+**「SAP 認定」**を選択した場合、CPU や RAM の設定は変更できません。
+
+要件に基づいて、以下のベア・メタル・サーバー構成を選択します。
+  * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 192 GB RAM
+  * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 384 GB RAM
+  * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 768 GB RAM
+
+### Broadwell
+
+**「Broadwell」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。
+
+表 3. Broadwell {{site.data.keyword.baremetal_short}}のオプション
+
+| CPU モデル・オプション        | RAM オプション       |
+|:------------- |:------------- |
+| デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
+| デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
+| デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 
 ### 事前構成型
 
@@ -83,30 +123,13 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
   * ミディアム (デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz / 256 GB RAM / 2 ドライブ)
   * ラージ (デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz / 512 GB RAM / 2 ドライブ)
 
-### カスタマイズ型
-
-**「カスタマイズ型」**を選択した場合、必要に応じて CPU と RAM の組み合わせを選択できます。
-
-ベア・メタル・サーバーの CPU モデルと RAM を選択します。
-
-表 2. カスタマイズ型{{site.data.keyword.baremetal_short}}のオプション
-
-| CPU モデル・オプション        | RAM オプション       |
-|:------------- |:------------- |
-| デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Silver 4110 Processor / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-
 ### ベア・メタル・サーバーの数
 
 インスタンス内の最初のクラスターでは、ESXi サーバーの数を次のように構成できます。
+* **「Skylake」**または**「Broadwell」**を選択した場合は、ESXi サーバーの数は 2 台から 20 台までの範囲内で構成できます。
 * **「事前構成型」**を選択した場合は、ESXi サーバーの数は 2 台から 10 台までの範囲内で構成できます。
-* **「カスタマイズ型」**を選択した場合は、ESXi サーバーの数は 2 台から 20 台までの範囲内で構成できます。
 
-すべての ESXi サーバーが設定済み構成を共有します。 初期デプロイメントの後に、さらに 4 つのクラスターを追加できます。 VMware vSAN の**「カスタマイズ型」**構成を選択した場合は、初期クラスターとデプロイメント後のクラスターの両方に 4 つの ESXi サーバーが必要です。 ESXi サーバーの最小数について詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
+すべての ESXi サーバーが設定済み構成を共有します。 初期デプロイメントの後に、さらに 4 つのクラスターを追加できます。 VMware vSAN に**「Skylake」**または**「Broadwell」**の構成を選択した場合は、初期クラスターとデプロイメント後のクラスターの両方に 4 つの ESXi サーバーが必要です。ESXi サーバーの最小数について詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
 
 ## ストレージ設定
 
@@ -114,18 +137,19 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 
 ### vSAN ストレージ
 
-vSAN は、**「カスタマイズ型」**のベア・メタル構成でのみ使用できます。 以下の vSAN オプションを指定します。
+vSAN は、**「Skylake」**と**「Broadwell」**のベアメタル構成でのみ使用できます。以下の vSAN オプションを指定します。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
 * 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。 **「High-Performance Intel Optane」**オプションは、Dual Intel Xeon Gold 5120 および 6140 プロセッサーでのみ使用できます。
-* **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
+* **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
 * **vSAN License**: **「Include with purchase」**を選択して vSAN コンポーネントで IBM 提供 VMware ライセンスを使用するか、**「I will provide」**を選択し、所有するライセンス・キーを入力してライセンス持ち込み (BYOL) を適用します。
 
 ### NFS ストレージ
 
 **「NFS Storage」**を選択する場合は、インスタンスにファイル・レベルの共有ストレージを追加し、すべての共有で同じ設定を使用することも、ファイル共有ごとに別々の構成設定を指定することもできます。 以下の NFS オプションを指定します。
 
-**注**: ファイル共有の数は 1 から 32 までの範囲で指定する必要があります。
+ファイル共有の数は 1 から 32 までの範囲で指定する必要があります。
+{:note}
 
 * **Configure shares individually**: ファイル共有ごとに異なる構成設定を指定する場合に選択します。
 * **Number of Shares**: どのファイル共有でも同じ構成設定を使用する場合に、追加する NFS 共有ストレージのファイル共有の数を指定します。
@@ -133,7 +157,7 @@ vSAN は、**「カスタマイズ型」**のベア・メタル構成でのみ�
 * **パフォーマンス (Performance)**: ワークロードの要件に基づいて、1 GB あたりの IOPS (入出力操作数/秒) を選択します。
 * **ADD NFS**: 別々の構成設定を使用する個々のファイル共有を追加する時に選択します。
 
-表 3. NFS パフォーマンス・レベルのオプション
+表 4. NFS パフォーマンス・レベルのオプション
 
 | オプション        | 詳細       |
   |:------------- |:------------- |
@@ -169,7 +193,8 @@ vCenter Server インスタンスを注文する際には、以下のネット�
 * 最後の文字列には、英字しか使用できません。
 * 最後の文字列の長さは、2 文字から 24 文字までの範囲でなければなりません。
 
-**注:** ホストと VM の完全修飾ドメイン・ネーム (FQDN) の最大長は 50 文字です。 この最大長に対応するドメイン・ネームにする必要があります。
+ホストと VM の完全修飾ドメイン・ネーム (FQDN) の最大長は 50 文字です。 この最大長に対応するドメイン・ネームにする必要があります。
+{:note}
 
 ### パブリックまたはプライベート・ネットワーク
 
@@ -199,9 +224,9 @@ vCenter Server インスタンスを注文する際には、以下のネット�
 * **プライマリー・サブネット**は、パブリック・ネットワーク・アクセス用に物理ホストに割り当てられます。
 * **プライマリー・プライベート・サブネット**は、管理トラフィック用に物理ホストに割り当てられます。
 
-**重要:**
 * 選択した VLAN のファイアウォール構成が管理用データ・トラフィックをブロックしていないことを確認してください。
 * 選択したすべての VLAN が同じポッドに含まれていることを確認してください。 複数のポッドの VLAN に ESXi サーバーをプロビジョンすることはできません。
+{:important}
 
 ### DNS 構成
 
@@ -210,7 +235,8 @@ vCenter Server インスタンスを注文する際には、以下のネット�
 * **Active Directory/DNS 用の単一のパブリック Windows VSI**: Microsoft Active Directory (AD) 用の単一の Microsoft Windows Server VSI。ホストと VM が登録されたインスタンスの DNS として機能します。これがデプロイされて参照可能になります。 このオプションは、V1.9 以降のインスタンスではデフォルトでデプロイされます。
 * **管理クラスター上の高可用性構成の 2 つの専用 Windows Server VM**: 2 つの Microsoft Windows VM がデプロイされるので、セキュリティーと堅牢性が向上します。
 
-**重要:** 2 つの Microsoft Windows VM を使用するようにインスタンスを構成する場合は、2 つの Microsoft Windows Server 2012 R2 ライセンスを提供する必要があります。 Microsoft Windows Server 2012 R2 Standard エディションのライセンスと Microsoft Windows Server 2012 R2 Datacenter エディションのライセンスのいずれかまたは両方を使用してください。
+2 つの Microsoft Windows VM を使用するようにインスタンスを構成する場合は、2 つの Microsoft Windows Server 2012 R2 ライセンスを提供する必要があります。 Microsoft Windows Server 2012 R2 Standard エディションのライセンスと Microsoft Windows Server 2012 R2 Datacenter エディションのライセンスのいずれかまたは両方を使用してください。
+{:important}
 
 各ライセンスは単一の物理サーバーにのみ割り当てられ、最大 2 つの物理プロセッサーをカバーします。 1 つの Standard エディション・ライセンスでは、2 プロセッサーのサーバーで 2 台の仮想化 Microsoft Windows VM を実行できます。 したがって、ライセンスは 2 つ必要になります。2 つの異なるホストに 2 つの Microsoft Windows VM がデプロイされるからです。
 
@@ -243,8 +269,9 @@ vCenter Server インスタンスを注文するときには、アドオン・�
 6. ベア・メタル・サーバーの設定を次の手順で実行します。
     1. インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
     2. ベア・メタル・サーバー構成を選択します。
+       * **「Skylake」**または**「Broadwell」**を選択した場合は、CPU モデルと RAM サイズを指定します。
+       * **「SAP 認定」**を選択した場合は、CPU モデルを選択します。
        * **「事前構成型」**を選択した場合は、**「スモール」**、**「ミディアム」**、または**「ラージ」**の構成を選択します。
-       * **「カスタマイズ型」**を選択した場合は、CPU モデルと RAM サイズを指定します。
     3. {{site.data.keyword.baremetal_short}}の数を指定します。 vSAN をストレージ・ソリューションとして使用する場合は、4 台以上の{{site.data.keyword.baremetal_short}}が必要です。  
 7. ストレージ構成を次の手順で実行します。
   * **「vSAN Storage」**を選択した場合は、容量ディスクおよびキャッシュ・ディスクのディスク・タイプ、ディスク数、vSAN ライセンス・エディションを指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
@@ -281,8 +308,9 @@ vCenter Server インスタンスを注文するときには、アドオン・�
 
 注文した vCenter Server インスタンスを表示および管理します。
 
-**重要:** {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。
+{{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。
 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
+{:important}
 
 **注意:** インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
 *  コンポーネントの追加、変更、返却、または削除

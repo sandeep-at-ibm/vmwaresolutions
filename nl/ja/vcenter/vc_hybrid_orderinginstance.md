@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server with Hybridity Bundle インスタンスの注文
 
@@ -30,7 +34,8 @@ lastupdated: "2018-09-27"
   | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。ここで `<n>` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大長は 50 文字です。 |
 
-**重要:** インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
+インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
+{:important}
 
 ## システム設定
 
@@ -63,7 +68,7 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、以下�
 
 ## ベア・メタル・サーバーの設定
 
-ベア・メタルの設定は、ユーザーが{{site.data.keyword.CloudDataCent_notm}}およびカスタマイズした構成に基づきます。
+ベアメタルの設定は、選択した{{site.data.keyword.CloudDataCent_notm}}やベアメタル・サーバーの構成に基づきます。
 
 vSAN 構成の場合、初期クラスターとデプロイメント後のクラスターの両方に 4 つの ESXi サーバーが必要です。 すべての ESXi サーバーが同じ構成を共有します。 デプロイメント後には、さらに 4 つのクラスターを追加できます。
 
@@ -71,20 +76,29 @@ vSAN 構成の場合、初期クラスターとデプロイメント後のクラ
 
 インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
 
-### カスタマイズ型
+### Skylake
 
-カスタマイズ型ベア・メタル・サーバーの CPU モデルと RAM の量を指定します。
+**「Skylake」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。
 
-表 2. カスタマイズ型{{site.data.keyword.baremetal_short}}のオプション
+表 2. Skylake {{site.data.keyword.baremetal_short}}のオプション
+
+| CPU モデル・オプション        | RAM オプション       |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110 プロセッサー / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
+### Broadwell
+
+**「Broadwell」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。
+
+表 3. Broadwell {{site.data.keyword.baremetal_short}}のオプション
 
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
 | デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Silver 4110 Processor / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### ベア・メタル・サーバーの数
 
@@ -96,7 +110,7 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、VMware 
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
 * 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。 **「High-Performance Intel Optane」**オプションは、Dual Intel Xeon Gold 5120 および 6140 プロセッサーでのみ使用できます。
-* **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
+* **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
 
 ## ネットワーク・インターフェースの設定
 
@@ -126,7 +140,8 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 * 最後の文字列には、英字しか使用できません。
 * 最後の文字列の長さは、2 文字から 24 文字までの範囲でなければなりません。
 
-**注:** ホストと VM (仮想マシン) の FQDN (完全修飾ドメイン・ネーム) の最大長は 50 文字です。 この最大長に対応するドメイン・ネームにする必要があります。
+ホストと VM (仮想マシン) の FQDN (完全修飾ドメイン・ネーム) の最大長は 50 文字です。 この最大長に対応するドメイン・ネームにする必要があります。
+{:note}
 
 ### パブリックまたはプライベート・ネットワーク
 
@@ -151,9 +166,10 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 
 **「既存の VLAN を選択」**を選択して、既存のパブリック VLAN とプライベート VLAN を再使用し、使用可能な VLAN とサブネットの中から選択します。
 
-**重要:**
+
 * 選択した VLAN のファイアウォール構成が管理用データ・トラフィックをブロックしていないことを確認してください。
 * 選択したすべての VLAN が同じポッドに含まれていることを確認してください。複数のポッドの VLAN に ESXi サーバーをプロビジョンすることはできません。
+{:important}
 
 ### DNS 構成
 
@@ -162,7 +178,8 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 * **Active Directory/DNS 用の単一のパブリック Windows VSI**: Microsoft Active Directory (AD) 用の単一の Microsoft Windows Server VSI。ホストと VM が登録されたインスタンスの DNS として機能します。これがデプロイされて参照可能になります。
 * **管理クラスター上の高可用性構成の 2 つの専用 Windows Server VM**: 2 つの Microsoft Windows VM がデプロイされるので、セキュリティーと堅牢性が向上します。
 
-**重要:** 2 つの Microsoft Windows VM を使用するようにインスタンスを構成する場合は、2 つの Microsoft Windows Server 2012 R2 ライセンスを提供する必要があります。 Microsoft Windows Server 2012 R2 Standard エディションのライセンスと Microsoft Windows Server 2012 R2 Datacenter エディションのライセンスのいずれかまたは両方を使用してください。
+2 つの Microsoft Windows VM を使用するようにインスタンスを構成する場合は、2 つの Microsoft Windows Server 2012 R2 ライセンスを提供する必要があります。 Microsoft Windows Server 2012 R2 Standard エディションのライセンスと Microsoft Windows Server 2012 R2 Datacenter エディションのライセンスのいずれかまたは両方を使用してください。
+{:important}
 
 各ライセンスは単一の物理サーバーにのみ割り当てられ、最大 2 つの物理プロセッサーをカバーします。 1 つの Standard エディション・ライセンスでは、2 プロセッサーのサーバーで 2 つの Microsoft Windows VM を実行できます。 したがって、ライセンスは 2 つ必要になります。2 つの異なるホストに 2 つの Microsoft Windows VM がデプロイされるからです。
 
@@ -191,9 +208,10 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
 5. NSX ライセンス・エディションと vSAN ライセンス・エディションを選択します。
 6. ベア・メタル・サーバーの設定を次の手順で実行します。
   1. インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
-  2. **「カスタマイズ型」**の CPU モデルと **RAM** の容量を選択します。
+  2. **「Skylake」**または**「Broadwell」**の CPU モデルと **RAM** の容量を選択します。
 
-  **注:** **「ベア・メタル・サーバーの数」**はデフォルトで 4 に設定されます。変更はできません。
+  **「ベア・メタル・サーバーの数」**はデフォルトで 4 に設定されます。変更はできません。
+  {:note}
 7. ストレージ構成を次の手順で実行します。 容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
 8. ネットワーク・インターフェース構成を行います。
   1. ホスト名接頭部、サブドメイン・ラベル、ルート・ドメイン・ネームを入力します。
@@ -226,8 +244,9 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
 
 注文した vCenter Server with Hybridity Bundle インスタンスを表示して管理します。
 
-**重要:** {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。
+{{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。
 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
+{:important}
 
 **注意:** インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
 *  コンポーネントの追加、変更、返却、または削除

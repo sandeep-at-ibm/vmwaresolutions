@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -37,4 +37,4 @@ IaaS 専用アカウントと PaaS アカウントをリンクする方法につ
 
 * [IAM でのユーザー・アクセスの管理](../vmonic/iam.html)
 * [サービスとリソースにアクセスするようにユーザーを招待する](../vmonic/iamuserinvite.html)
-* [IBM Cloud IAM とは](https://console.stage1.bluemix.net/docs/iam/index.html#iamoverview)
+* [IBM Cloud IAM とは](../../../iam/index.html)

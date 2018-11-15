@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server の部品構成表
 
@@ -39,7 +43,8 @@ lastupdated: "2018-09-27"
 | VMware       | NSX for vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
-**注:** VMware vSAN はオプションのコンポーネントです。
+VMware vSAN はオプションのコンポーネントです。
+{:note}
 
 ## ESXi サーバーの拡張構成の設定
 

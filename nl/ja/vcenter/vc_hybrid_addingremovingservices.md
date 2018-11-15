@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-02"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除
 
@@ -14,7 +18,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle イ�
 
 ## vCenter Server with Hybridity Bundle インスタンスで使用可能なサービス
 
-vCenter Server with Hybridity Bundle インスタンスでは、以下のサービスを使用できます。
+vCenter Server with Hybridity Bundle インスタンスで使用できるサービスと、インストール済みのサービスのバージョンを以下にまとめます。
 
 表 1. vCenter Server with Hybridity Bundle インスタンスに使用可能なサービス
 
@@ -22,7 +26,7 @@ vCenter Server with Hybridity Bundle インスタンスでは、以下のサー�
 |----------------------------------------------------------------------------------------|------------------|
 | [F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1 | V1.9 以降 |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | 300 シリーズ | V1.8 以降 |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 5.6 | V2.0 以降 |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 6.0.3 | V2.0 以降 |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 以降 |
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | V2.3 以降 |
 | [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 以降 |
@@ -30,7 +34,7 @@ vCenter Server with Hybridity Bundle インスタンスでは、以下のサー�
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 以降 |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | 9.5u3 | V1.8 以降 |
 | [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 | V2.3 以降 |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | 5.5 u4 パッチ 2 | V1.2 以降 |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | 6.0 update 3 | V1.2 以降 |
 
 ## vCenter Server with Hybridity Bundle インスタンスにサービスを追加する手順
 
@@ -62,7 +66,8 @@ vCenter Server with Hybridity Bundle インスタンスにサービスを適用�
 
 サービスの削除が正常に完了すると、お客様に E メールで通知され、サービスがインスタンスの**「サービス」**ページから削除されます。
 
-**注意:** 削除したサービスは、{{site.data.keyword.cloud_notm}} インフラストラクチャーの請求サイクルの最後まで課金されます。
+削除したサービスは、{{site.data.keyword.cloud_notm}} インフラストラクチャーの請求サイクルの最後まで課金されます。
+{:note}
 
 ### 関連リンク
 
