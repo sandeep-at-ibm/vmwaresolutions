@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-25"
 
 ---
 
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
 # Visão geral do HyTrust KeyControl on IBM Cloud
 
-O serviço HyTrust KeyControl on {{site.data.keyword.cloud}} simplifica o gerenciamento de cargas de trabalho criptografadas. Esse serviço automatiza e simplifica o ciclo de vida de chaves de criptografia, inclui o armazenamento de chave, a distribuição de chave, a rotação de chave e a revogação de chave. Usando a criptografia compatível com FIPS 140-2, as empresas podem gerenciar facilmente as chaves de criptografia na escala. 
+O serviço HyTrust KeyControl on {{site.data.keyword.cloud}} simplifica o gerenciamento de cargas de trabalho criptografadas. Esse serviço automatiza e simplifica o ciclo de vida de chaves de criptografia, inclui o armazenamento de chave, a distribuição de chave, a rotação de chave e a revogação de chave. Usando a criptografia compatível com FIPS 140-2, as empresas podem gerenciar facilmente as chaves de criptografia na escala.
 
-**Disponibilidade:** esse serviço está disponível somente para instâncias que estão executando o vSphere 6.5 e que são implementadas (ou submetidas a upgrade) na V2.5 e liberações mais recentes.
+Esse serviço está disponível somente para instâncias que estão executando o vSphere 6.5 e que são implementadas ou submetidas a upgrade para a V2.5 e mais recente. A versão atual do HyTrust KeyControl que está instalada é 4.2.
+{:note}
 
 ## Especificações técnicas para o HyTrust KeyControl on IBM Cloud
 

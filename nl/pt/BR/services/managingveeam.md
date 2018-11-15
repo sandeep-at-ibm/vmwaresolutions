@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -42,19 +42,25 @@ técnicas do Veeam]( https://helpcenter.veeam.com/backup/vsphere/performing_full
 
 ## Aplicando atualizações ao Veeam on IBM Cloud
 
-Você é responsável por manter o Veeam atualizado para a versão mais recente. Para fazer upgrade do Veeam para a versão
-mais recente, faça download das atualizações do Veeam no website do Veeam, copie as atualizações para a VSI do Veeam e, em seguida,
-instale-as.
+Você é responsável por manter o software Veeam atualizado para a versão mais recente.
+
+### Para instâncias implementadas com rede pública e privada
+
+Se o serviço Veeam estiver instalado em uma instância com rede pública e privada, será possível verificar e fazer download das atualizações usando o próprio software Veeam.
+
+### Para instâncias implementadas somente com rede privada
+
+Se o serviço Veeam estiver instalado em uma instância somente com rede privada, porque a máquina virtual (VM) do Veeam está configurada sem acesso à rede pública, não será possível verificar nem fazer download de atualizações usando o próprio software Veeam. Em vez disso, deve-se fazer download das atualizações por meio do website do Veeam, transferi-las para a VM do Veeam e, em seguida, instalá-las.
 
 ## Atualizando Licenças de Veeam
 
-É possível atualizar a licença do Veeam manualmente on demand, concluindo as etapas a seguir:
-1. [Acesse o console de Backup e Replicação do Veeam usando RDP](../services/managingveeam.html#accessing-the-veeam-console-by-using-rdp).
-2. No menu principal, clique em **Licença**.
-3. Na janela **Informações sobre licença**, clique em **Atualizar agora**.
-4. Para visualizar as estatísticas do processo de atualização de licença manual, abra a visualização **Histórico** e, em seguida, clique no nó **Sistema**.
+### Para instâncias implementadas com rede pública e privada
 
-Para obter mais informações, consulte [Atualizando a licença manualmente](https://helpcenter.veeam.com/docs/backup/vsphere/license_update_manual.html?ver=95).
+Se o serviço Veeam estiver instalado em uma instância com rede pública e privada, será possível atualizar a licença do Veeam automaticamente ou manualmente seguindo as instruções do Veeam em [Atualizando a licença]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html).
+
+### Para instâncias implementadas somente com rede privada
+
+Se o serviço Veeam está instalado em uma instância somente com rede privada, deve-se anotar a data de expiração para sua licença e contatar o [Suporte IBM](../vmonic/trbl_support.html) para obter assistência para atualizar a chave de licença quando a renovação for necessária.
 
 ## Substituindo a VSI do Veeam de instâncias anteriores à V1.8 por Veeam no IBM Cloud
 
