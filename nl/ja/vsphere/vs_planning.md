@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware vSphere on IBM Cloud の要件と計画
 
 VMware vSphere on {{site.data.keyword.cloud}} を注文する前に、以下の要件を確認してください。 {{site.data.keyword.CloudDataCent_notm}}のロケーションとワークロードの容量要件に基づいて、VMware vSphere クラスターの計画を立ててください。
 
-**注:** ESXi サーバーがデプロイされた後は、お客様が、環境をセットアップし、さまざまな VMware コンポーネントをインストールして構成する必要があります。 VMware コンポーネントの例としては、VMware vCenter Server、VMware NSX、および VMware vSAN があります。
+ESXi サーバーがデプロイされた後は、お客様が、環境をセットアップし、さまざまな VMware コンポーネントをインストールして構成する必要があります。 VMware コンポーネントの例としては、VMware vCenter Server、VMware NSX、および VMware vSAN があります。
+{:note}
 
 ## IBM Cloud アカウントの要件
 
@@ -22,7 +27,8 @@ VMware vSphere on {{site.data.keyword.cloud}} を注文する前に、以下の�
 
 vSphere のデプロイメントには、物理インフラストラクチャーに関する厳密な要件があります。 そのため、要件を満たす {{site.data.keyword.CloudDataCents_notm}}にしかクラスターはデプロイできません。 vSphere のデプロイメントには、以下の {{site.data.keyword.CloudDataCent_notm}}を使用可能です。
 
-**注:** vSAN コンポーネントを選択した場合は、SSD (ソリッド・ステート・ディスク) の使用可否によってロケーション・リストがフィルタリングされます。
+vSAN コンポーネントを選択した場合は、SSD (ソリッド・ステート・ディスク) の使用可否によってロケーション・リストがフィルタリングされます。
+{:note}
 
 表 1. vSphere クラスターに使用可能な {{site.data.keyword.CloudDataCents_notm}}
 

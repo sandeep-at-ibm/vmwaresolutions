@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # コンソール以外で作成されたクラスターの拡張
 
@@ -24,7 +28,8 @@ lastupdated: "2018-09-27"
 2. **「VMware vSphere on IBM Cloud」**ページで、**「作成」**をクリックします。  
    **「新規作成」**タブが表示され、**「クラスター構成」**リストに**「新規クラスター」**が表示されていることを確認します。
 3. {{site.data.keyword.vmwaresolutions_short}} コンソール以外で作成された既存のクラスターと同じ設定を使用して、クラスターを作成します。 詳しくは、[新規 vSphere クラスターの注文](vs_orderinginstances.html)を参照してください。  
-   **注:** ネットワーク・インターフェースについては、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で作成されたクラスターを拡張するには、クラスターの既存の VLAN を選択する必要があります。  
+   ネットワーク・インターフェースについては、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で作成されたクラスターを拡張するには、クラスターの既存の VLAN を選択する必要があります。
+   {:note}
 4. **「注文のサマリー」**ペインで、クラスター構成を確認してから、**「構成の保存」**をクリックします。   
 5. **「開始」**ページで、**「VMware vSphere on IBM Cloud」**カードをクリックします。
 6. **「VMware vSphere on IBM Cloud」**ページで、**「作成」**をクリックします。
@@ -37,7 +42,8 @@ lastupdated: "2018-09-27"
 
 クラスターのデプロイメントが自動的に開始され、注文が処理中であることを示す E メール確認を受け取ります。 クラスターが使用可能になると、E メールで通知されます。
 
-**注:** vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスと一緒に**「デプロイ済みインスタンス」**ページに表示されません。
+vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスと一緒に**「デプロイ済みインスタンス」**ページに表示されません。
+{:note}
 
 ### 関連リンク
 
