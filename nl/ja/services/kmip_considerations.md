@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # KMIP for VMware on IBM Cloud の概要
 
 KMIP for VMware on {{site.data.keyword.cloud}} サービスは、{{site.data.keyword.cloud_notm}} 内の VMware によって使用される暗号鍵を管理するための、24 時間 365 日の高可用性サービスを提供します。 このサービスは、お客様が暗号鍵を作成、取得、活動化、取り消し、破棄できるようにするランタイム機能を提供します。 また、クライアントの資格情報と暗号鍵の関連付けを管理する管理機能も提供します。
 
-**利用可否:** このサービスは、V2.2 以降のリリースでデプロイされたインスタンスでのみ利用可能です。
+このサービスは、V2.2 以降でデプロイされたインスタンスでのみ利用可能です。
+{:note}
 
 ## KMIP for VMware on IBM Cloud の技術仕様
 

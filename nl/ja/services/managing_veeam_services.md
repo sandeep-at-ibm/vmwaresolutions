@@ -14,7 +14,7 @@ Veeam on {{site.data.keyword.cloud}} サービスは、ご使用の VMware ハ�
 
 IBM Resiliency Backup as a Service は、オンサイト・クラウド、オフサイト・クラウド、ハイブリッド・クラウドを対象とした広範囲のデータ保護ソリューションを提供することによって、情報の回復力を高めます。 詳しくは、[IBM Resiliency Backup as a Service](https://www.ibm.com/us-en/marketplace/managed-backup-services) を参照してください。
 
-Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービスを要求するときに、Veeam バックアップ・ソフトウェアと IBM Resiliency Backup as a Service の両方を使用して、完全に管理されたバックアップ環境をデプロイします。このように組み合わせて使用すると、以下の点で役立ちます。
+Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービスを要求するときに、Veeam バックアップ・ソフトウェアと IBM Resiliency Backup as a Service の両方を使用して、完全に管理されたバックアップ環境をデプロイします。 このように組み合わせて使用すると、以下の点で役立ちます。
 * セキュリティー機能が充実した、重要なビジネス・データを自動的に保護する機能を有効にするためのソリューションを、いくつかの選択肢の中から選択できます。専用オンプレミス環境、{{site.data.keyword.cloud_notm}} インフラストラクチャー、IBM Resiliency Services Center の 1 次ロケーションと 2 次ロケーションすべてがデータ保護の対象になります。
 * また、スケーラブルで柔軟なデータ保護ソリューションを使用できるので、総所有コスト (TCO) が削減され、コンプライアンス要件を管理できるようになります。
 

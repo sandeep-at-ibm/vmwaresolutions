@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # FortiGate Security Appliance on IBM Cloud の概要
 
@@ -14,7 +18,8 @@ FortiGate Security Appliance on {{site.data.keyword.cloud}} サービスでは�
 
 このサービスの管理には、FortiOS Web Client、または SSH を介したコマンド・ライン・インターフェースを使用します。
 
-**利用可否:** このサービスは、V1.8 以降のリリースでデプロイされたインスタンスでのみ利用可能です。
+このサービスは、V1.8 以降のリリースでデプロイされたインスタンスでのみ利用可能です。
+{:note}
 
 ## FortiGate Security Appliance on IBM Cloud の技術仕様
 
