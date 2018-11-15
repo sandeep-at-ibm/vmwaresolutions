@@ -323,7 +323,7 @@
 			<text class="st2 st3" transform="translate(496 282)">DLR</text>
 	<text transform="translate(321.67 374.33)"><tspan class="st2 st5" x="0" y="0"> Controlador de</tspan><tspan class="st2 st5" x="0" y="14.4"> serviços de</tspan><tspan class="st2 st5" x="0" y="28.8">plataforma</tspan></text>
 	<text transform="translate(401.33 388.33)"><tspan class="st2 st5" x="0" y="0">NSX</tspan><tspan class="st2 st5" x="0" y="14.4">Manager</tspan></text>
-	<text transform="translate(268.33 293)"><tspan class="st2 st5" x="0" y="0"> Controladores</tspan><tspan class="st2 st5" x="0" y="14.4">NSX</tspan> </text>
+	<text transform="translate(268.33 293)"><tspan class="st2 st5" x="0" y="0"> Controladores</tspan><tspan class="st2 st5" x="0" y="14.4">NSX</tspan></text>
 	<polygon id="purple_arrow_point_to_data_center" class="st37" points="347.5 230.5 335.5 238.5 348.5 243.5"/>
 	<polygon id="purple_arrow_point_to_VM_1_" class="st38" points="861.6 538.2 847.4 540.8 857.4 550.5"/>
 </g>

@@ -321,7 +321,7 @@
 			<text class="st2 st3" transform="translate(496 282)">DLR</text>
 	<text transform="translate(313.67 374.33)"><tspan class="st2 st5" x="0" y="0"> Controlador de</tspan><tspan class="st2 st5" x="0" y="14.4"> serviços de</tspan><tspan class="st2 st5" x="0" y="28.8">plataforma</tspan></text>
 	<text transform="translate(401.33 388.33)"><tspan class="st2 st5" x="0" y="0">NSX</tspan><tspan class="st2 st5" x="0" y="14.4">Manager</tspan></text>
-	<text transform="translate(231.33 291)"><tspan class="st2 st5" x="0" y="0"> Controladores</tspan><tspan class="st2 st5" x="0" y="14.4">NSX</tspan> </text>
+	<text transform="translate(231.33 291)"><tspan class="st2 st5" x="0" y="0"> Controladores</tspan><tspan class="st2 st5" x="0" y="14.4">NSX</tspan></text>
 </g>
 <g id="NSX_Controller">
 				<ellipse class="st33" transform="matrix(.8383 -.5452 .5452 .8383 -135.16 191.78)" cx="255.8" cy="323.8" rx="12.8" ry="12.8"/>

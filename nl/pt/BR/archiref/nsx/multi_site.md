@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -17,7 +17,7 @@ Um diferenciador principal entre o {{site.data.keyword.cloud}} e outras ofertas 
 O recurso cross-vCenter NSX permite a vinculação em um relacionamento primário e secundário de até nove gerenciadores NSX: um primário e oito secundários. Embora não seja necessário ter servidores vCenter em um relacionamento Enhanced Linked Mode (ELM) para que o cross-vCenter NSX funcione, isso fornece os benefícios a seguir:
 
 * Criação simplificada de relacionamento primário e secundário usando credenciais de Conexão Única (SSO)
-* A automação do vCenter Server e do Cloud Foundation configura a resolução do nome do DNS para todos os sites que estão vinculados
+* Configuração de automação do vCenter Server e do Cloud Foundation para a resolução do nome do DNS para todos os sites que estão vinculados
 * Área de janela única de gerenciamento de vidro em todos os sites para as funções normais do vCenter e do NSX
 
 ## Exemplo de multissite
