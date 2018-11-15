@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Voraussetzungen und Planung für VMware vSphere on IBM Cloud
 
 Überprüfen Sie die nachstehenden Voraussetzungen, bevor Sie VMware vSphere on {{site.data.keyword.cloud}} bestellen. Legen Sie der Planung für Ihre VMware vSphere-Cluster den Standort des {{site.data.keyword.CloudDataCent_notm}} sowie Ihre Anforderungen an Workloadkapazität zugrunde.
 
-**Hinweis:** Für die Einrichtung der Umgebung, die Installation und die Konfiguration der verschiedenen VMware-Komponenten nach der Bereitstellung der ESXi-Server sind Sie selbst zuständig. Bei den folgenden Beispielen handelt es sich um VMware-Komponenten: VMware vCenter Server, VMware NSX und VMware vSAN.
+Für die Einrichtung der Umgebung, die Installation und die Konfiguration der verschiedenen VMware-Komponenten nach der Bereitstellung der ESXi-Server sind Sie selbst zuständig. Bei den folgenden Beispielen handelt es sich um VMware-Komponenten: VMware vCenter Server, VMware NSX und VMware vSAN.
+{:note}
 
 ## Voraussetzungen für IBM Cloud-Konto
 
@@ -22,7 +27,8 @@ Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Vo
 
 Die vSphere-Bereitstellung stellt strenge Anforderungen an die physische Infrastruktur. Sie können Cluster daher nur in {{site.data.keyword.CloudDataCents_notm}} bereitstellen, die diese Anforderungen erfüllen. Die folgenden {{site.data.keyword.CloudDataCent_notm}} stehen für die Bereitstellung von vSphere zur Verfügung.
 
-**Hinweis:** Falls Sie eine vSAN-Komponente auswählen, wird die Liste der Standorte nach Verfügbarkeit von SSD (Solid-State-Platten) gefiltert.
+Falls Sie eine vSAN-Komponente auswählen, wird die Liste der Standorte nach Verfügbarkeit von SSD (Solid-State-Platten) gefiltert.
+{:note}
 
 Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vSphere-Cluster
 
