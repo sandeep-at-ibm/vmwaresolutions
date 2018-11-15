@@ -4,15 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-13"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # インフラストラクチャーの管理の設計
 
 インフラストラクチャーの管理とは、VMware インフラストラクチャーを管理するコンポーネントのことを指します。 この設計では 1 つの外部 Platform Services Controller (PSC) インスタンスと 1 つの vCenter Server インスタンスを使用します。
 * vCenter Server は vSphere 環境を管理するための中央プラットフォームで、このソリューションの基本的なコンポーネントの 1 つです。
-* このソリューションでは PSC を利用して、VMware vCenter のシングル・サインオン、ライセンス・サービス、ルックアップ・サービス、VMware 証明局など、一連のインフラストラクチャー・サービスを提供します。
+* このソリューションでは PSC を使用して、VMware vCenter のシングル・サインオン、ライセンス・サービス、ルックアップ・サービス、VMware 認証局など、一連のインフラストラクチャー・サービスを提供します。
 
 PSC インスタンスと vCenter Server インスタンスは別々の仮想マシン (VM) です。
 
@@ -20,7 +24,8 @@ PSC インスタンスと vCenter Server インスタンスは別々の仮想マ
 
 この設計では、管理 VM と関連付けられたプライベート VLAN のポータブル・サブネット上に、1 つの外部 PSC が仮想アプライアンスとしてデプロイされます。 このデフォルト・ゲートウェイは、バックエンド・カスタマー・ルーター (BCR) に設定されます。 仮想アプライアンスは、次の表の仕様を使って構成されます。
 
-**注**: これらの値はデプロイメント時に設定され、変更できません。
+これらの値はデプロイメント時に設定され、変更できません。
+{:note}
 
 表 1. Platform Services Controller の仕様
 
@@ -56,19 +61,21 @@ vCenter Server の構成では、アプライアンスに含まれているロ�
 
 ### vCenter Server クラスターの仕様
 
-この設計では、ソリューションでプロビジョニングされた vSphere ESXi ホストをクラスター化することができます。 ただし、クラスターを作成する前に、vSphere ESXi ホストとデータ・センター内のポッドの場所を指示するデータ・センター・オブジェクトを作成します。 クラスターは、データ・センター・オブジェクトが作成された後に作成されます。 クラスターは、VMware vSphere High Availability (HA) と VMware vSphere Distributed Resource Scheduler (DRS) を有効にした状態でデプロイされます。
+この設計では、ソリューションでプロビジョンされた vSphere ESXi ホストをクラスター化することができます。ただし、クラスターを作成する前に、vSphere ESXi ホストとデータ・センター内のポッドの場所を指示するデータ・センター・オブジェクトを作成します。クラスターは、データ・センター・オブジェクトが作成された後に作成されます。 クラスターは、VMware vSphere High Availability (HA) と VMware vSphere Distributed Resource Scheduler (DRS) を有効にした状態でデプロイされます。
 
 ### vSphere Distributed Resource Scheduler
 
 この設計では、初期クラスターで vSphere Distributed Resource Scheduling (DRS) を使用して VM を配置し、追加のクラスターで DRS を使用して VM を動的にマイグレーションして、バランスのとれたクラスターを実現します。 自動化レベルを「完全自動化」に設定して、最初の配置とマイグレーションの推奨が vSphere によって自動的に実行されるようにします。 さらに、マイグレーションのしきい値を「中度」に設定することにより、vCenter が優先度 1、2、3 の推奨を適用して、クラスターのロード・バランシングにしかるべき程度以上の改善が見られるようにする必要があります。
 
-**注:** この設計では**分散電源管理**機能での電源管理は使用しません。
+この設計では**分散電源管理**機能での電源管理は使用しません。
+{:note}
 
 ### vSphere High Availability
 
 この設計では、初期クラスターおよび追加クラスターで vSphere High Availability (HA) によりコンピューティングの障害が検出され、クラスター内で実行されている VM が修復されます。 この設計の vSphere HA 機能は、クラスター内で「**ホストのモニタリング (Host Monitoring)**」と「**アドミッション制御 (Admission Control)**」の両方のオプションを有効にして構成されます。 さらに、初期クラスターには、アドミッション制御ポリシーのための予備容量として 1 ノード分のリソースが予約されています。
 
-**注**: クラスターが後に拡張または縮小されるときは、お客様にアドミッション制御ポリシーを調整する責任があります。
+クラスターが後に拡張または縮小されるときは、お客様にアドミッション制御ポリシーを調整する責任があります。
+{:note}
 
 デフォルトで、「**VM 再起動優先順位 (VM restart priority)**」オプションは「中 (medium)」に、「**ホスト分離応答 (Host isolation response)**」オプションは無効に設定されています。 さらに、「**VM のモニタリング (VM monitoring)**」は無効に設定され、「**データストア・ハートビート (Datastore Heartbeating)**」フィーチャーはすべてのクラスター・データ・ストアを含めるように構成されます。 この方法では、NAS データ・ストアがあるときにはそれらを使用します。
 
@@ -79,7 +86,7 @@ vCenter Server の構成では、アプライアンスに含まれているロ�
 * デプロイメントの時間を劇的に短縮します。
 * VMware インスタンスが一貫した方法でデプロイされることが保証されます。
 
-{{site.data.keyword.IBM}} CloudBuilder、IBM CloudDriver、および SDDC Manager の VM は連携して新たな VMware インスタンスを提供し、ライフサイクル管理機能を実行します。
+{{site.data.keyword.IBM}} CloudBuilder、IBM CloudDriver、および SDDC Manager の VM は、連携して新たな VMware インスタンスを開始し、ライフサイクル管理機能を実行します。
 
 ### IBM CloudBuilder と IBM CloudDriver
 
@@ -98,7 +105,7 @@ IBM CloudBuilder と IBM CloudDriver の仮想サーバー・インスタンス 
 
 Cloud Foundation インスタンスの場合、SDDC Manager VM は、VMware によって開発され、保守されるコンポーネントです。 そのライフサイクル全体にわたって、インスタンスの一部となります。 これは、インスタンスの次のライフサイクル機能に対して責任を負います。
 * VMware コンポーネント (vCenter Server、Platform Services Controller (PSC)、vSAN、および NSX) の管理。これには、IP アドレスの割り振りとホスト名の解決などが含まれます。
-* NSX VTEP、vSAN、リソース・プールなどの影響を受けるサービスが含まれるクラスター内の ESXi ホストの拡張または縮小。
+* NSX VTEP、vSAN、リソース・プールなどの、影響を受けるサービスが含まれるクラスター内の ESXi ホストの拡張または縮小。
 
 vCenter Server インスタンスでは SDDC Manager がないため、これらのアクティビティーは IBM CloudDriver によって実行されます。
 

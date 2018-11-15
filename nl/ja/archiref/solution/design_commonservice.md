@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 共通サービス設計
 
@@ -20,9 +24,10 @@ lastupdated: "2018-09-25"
 
 デフォルトでは単一の Active Directory VSI が {{site.data.keyword.cloud}} インフラストラクチャーにデプロイされます。 この設計では、オプションで 2 台の高可用性 Microsoft Active Directory サーバーを、専用の Windows Server VM として管理クラスターにデプロイすることもできます。
 
-**注**: このオプションを選択する場合、Microsoft のライセンス取得とアクティベーションはお客様の責任で行っていただきます。
+このオプションを選択する場合、Microsoft のライセンス取得とアクティベーションはお客様の責任で行っていただきます。
+{:note}
 
-Active Directory の役目は VMware インスタンスを管理するためのアクセスの認証のみであり、デプロイされたインスタンスでのワークロードのエンド・ユーザーの格納ではありません。 Active Directory サーバーのフォレスト・ルート・ドメイン名は、ユーザーが指定する DNS ドメイン名と同じです。 複数のインスタンスがリンクされている場合、このドメイン名は Cloud Foundation および vCenter Server のプライマリー・インスタンスに対してのみ指定されます。 リンクされたインスタンスの場合、各インスタンスに、フォレスト・ルート・レプリカ・リングに入っている Active Directory サーバーが含まれています。 Active Directory サーバー上には、DNS ゾーン・ファイルも複製されています。
+Active Directory の役目は VMware インスタンスを管理するためのアクセスの認証のみであり、デプロイされたインスタンスでのワークロードのユーザーの格納ではありません。 Active Directory サーバーのフォレスト・ルート・ドメイン名は、ユーザーが指定する DNS ドメイン名と同じです。 複数のインスタンスがリンクされている場合、このドメイン名は Cloud Foundation および vCenter Server のプライマリー・インスタンスに対してのみ指定されます。 リンクされたインスタンスでは、各インスタンスに、フォレスト・ルート・レプリカ・リングに入っている Active Directory サーバーが含まれています。Active Directory サーバー上には、DNS ゾーン・ファイルも複製されています。
 
 ### vSphere SSO ドメイン
 
@@ -42,7 +47,7 @@ vCenter Server デプロイメントでは、デプロイ済みの Active Direct
 この設計では、次の構成によって、Active Directory サーバー上で DNS サービスが統合されます。
 * ドメイン構造は、指定することができます。 ドメイン名のレベル数はいくつでもかまいません (ただし、vCenter Server コンポーネントが処理できる最大数以下)。 最下のレベルが、インスタンスのサブドメインとなります。
    * 指定した DNS ドメイン名は Active Directory のルート・フォレスト・ドメイン名として使用されます。 例えば、DNS ドメイン名が `cloud.ibm.com` の場合、Active Directory のフォレスト・ルート・ドメイン名は `cloud.ibm.com` になります。 この DNS と Active Directory のドメイン名は、リンクされているすべての vCenter Server インスタンスで同じとなります。
-   * インスタンスにはサブドメイン名を追加で指定できます。 サブドメイン名はリンクされているすべての vCenter Server インスタンスで一意である必要があります。
+   * さらに、インスタンスにはサブドメイン名を指定できます。サブドメイン名はリンクされているすべての vCenter Server インスタンスで一意である必要があります。
 * Active Directory DNS サーバーは、DNS ドメインとサブドメイン領域の両方で権限を持つように構成されます。
 * Active Directory DNS サーバーは、他のすべてのゾーンに対して  {{site.data.keyword.cloud_notm}} DNS サーバーをポイントするように構成されます。
 * 既存のターゲット・インスタンスに統合するすべてのインスタンスは、プライマリー・インスタンスと同じドメイン名を使用する必要があります。
@@ -58,7 +63,7 @@ SDDC Manager が管理するコンポーネントのホスト名は SDDC Manager
 * ドメイン構造は、指定することができます。 ドメイン名のレベル数はいくつでもかまいません (ただし、Cloud Foundation コンポーネントが処理できる最大数以下)。
 * 最下のレベルが、SDDC Manager の権限が及ぶサブドメインとなります。
 * 指定した DNS ドメイン名は Active Directory のルート・フォレスト・ドメイン名として使用されます。 例えば、DNS ドメイン名が `cloud.ibm.com` の場合、Active Directory ドメインのフォレスト・ルートは `cloud.ibm.com` になります。 この DNS ドメインと Active Directory ドメインは、リンクされているすべての Cloud Foundation インスタンスで同じです。
-* インスタンスにはサブドメイン名を追加で指定できます。 サブドメイン名はリンクされているすべての Cloud Foundation インスタンスの中で一意である必要があります。  
+* さらに、インスタンスにはサブドメイン名を指定できます。サブドメイン名はリンクされているすべての Cloud Foundation インスタンスの中で一意である必要があります。  
 * SDDC Manager の DNS 構成は、自身が受け持つゾーン以外のすべてのゾーンに対して Active Directory サーバーをポイントするように変更されます。
 * Active Directory DNS サーバーは、SDDC Manager と Cloud Foundation のインスタンスのサブドメインより上の DNS ドメイン領域で権限を持つように構成されます。
 * Active Directory DNS サーバーは、SDDC Manager の権限が及ぶゾーンのサブドメインの委任に対して SDDC Manager の IP アドレスをポイントするように構成されます。
