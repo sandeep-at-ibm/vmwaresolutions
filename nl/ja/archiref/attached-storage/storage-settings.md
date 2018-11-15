@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # ストレージ設定
 
 この設計は、NFS v3 による共有ストレージの接続のみをサポートしています。 NFS v4 および v4.1 はサポートされていません。
 
-**注**: この設計のすべての接続ストレージは、vCenter Server ソリューションと同じ {{site.data.keyword.CloudDataCent_notm}}で提供されている {{site.data.keyword.cloud_notm}} ストレージに制限されます。 また、データ・ストアに格納されるすべての仮想ディスクは、デフォルトでシン・プロビジョニングされます。
+この設計のすべての接続ストレージは、vCenter Server ソリューションと同じ {{site.data.keyword.CloudDataCent_notm}}で提供されている {{site.data.keyword.cloud_notm}} ストレージに制限されます。 また、データ・ストアに格納されるすべての仮想ディスクは、デフォルトでシン・プロビジョニングされます。
+{:note}
 
 このアーキテクチャーでは、共有に接続できるように、{{site.data.keyword.cloud_notm}} ストレージの DNS 名を使用して NFS v3 データ・ストアが接続されるように指定しています。 また、NFS 共有は、vCenter Server クラスター内のすべてのホストに接続され、Storage DRS が有効にされたデータ・ストア・クラスターに組み込まれます。
 
