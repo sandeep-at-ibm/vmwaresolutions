@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Configurando sua rede para usar o NSX ESG gerenciado pelo cliente com suas VMs
 
@@ -35,14 +39,16 @@ Para aproveitar o NSX para suas VMs de carga de trabalho, deve-se definir vária
    3. No adaptador de rede recém-incluído, selecione o comutador lógico de carga de trabalho no menu. Um nome de exemplo do comutador lógico de carga de trabalho
    é **vxw-dvs-17-virtualwire-1-sid-6000-Workload**.
 
-   **Importante:** assegure-se de não selecionar o comutador **Workload Transit**.
+   Assegure-se de não selecionar o comutador **Trânsito de carga de trabalho**.
+   {:important}
 
 2. Identifique um endereço IP disponível para a VM:
    *  O endereço IP deve estar no intervalo de `192.168.10.0/24`. Observe que o endereço IP `192.168.10.1` é reservado (veja a **Etapa 3**).
    *  Quando configurar a rede do sistema operacional que é executado na VM, use o endereço IP selecionado e a máscara de rede
    `255.255.255.0`.
 
-   **Nota:** você é responsável por gerenciar o intervalo de endereços IP para os quais designou suas VMs.
+   Você é responsável por gerenciar o intervalo de endereços IP para os quais designou suas VMs.
+   {:note}
 
 3. Designe o gateway padrão da VM como `192.168.10.1`. Este é o endereço IP do NSX DLR no mesmo comutador lógico das VMs de carga de trabalho.
 
@@ -75,9 +81,10 @@ Além disso, é possível localizar mais detalhes sobre as sub-redes do cliente 
 
    **Aviso:** não use os endereços IP que são ordenados e usados durante a configuração inicial. No entanto, é possível usar outros endereços IP nessas
    sub-redes de acordo com os seus requisitos. Para configurar regras adicionais de conversão de endereço de rede, veja [Gerenciando regras NAT](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+   {:important}
 
 ### Links relacionados
 
 * [Resolução de problemas](../vcenter/vcenter_chg_impact.html)
 * [Perguntas Mais Frequentes](../vmonic/faq.html)
-* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
+* [Gateway de Serviços de Edge NSX](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

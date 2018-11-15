@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VCenter Server with Hybridity Bundle Visão Geral
 
@@ -61,13 +65,14 @@ Com base no VMware Hybrid Cloud Extension (HCX), é possível criar interconexõ
 
 Os componentes a seguir estão incluídos em sua instância do vCenter Server with Hybridity Bundle:
 
-**Nota:** a disponibilidade e a precificação de configurações de hardware padronizadas podem variar com base no {{site.data.keyword.CloudDataCent_notm}} que está selecionado para implementação.
+A disponibilidade e a precificação de configurações padronizadas de hardware podem variar com base no {{site.data.keyword.CloudDataCent_notm}} que é selecionado para implementação.
+{:note}
 
 ### Bare Metal Server
 
-Quatro {{site.data.keyword.baremetal_short}} customizados vêm com sua ordem da instância do vCenter Server with Hybridity Bundle. Os seguintes modelos de CPU estão disponíveis:
-  * Geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600 v4)
+Quatro {{site.data.keyword.baremetal_short}} de **Skylake** ou **Broadwell** são fornecidos com a ordem de instância do vCenter Server with Hybridity Bundle. Os seguintes modelos de CPU estão disponíveis:
   * Geração Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100)
+  * Geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600 v4)
 
 ### Rede
 
@@ -78,7 +83,8 @@ Os componentes de rede a seguir são pedidos:
 *  Dois VMware NSX Edge Services Gateways:
   * Um serviço de gerenciamento seguro VMware NSX Edge Services Gateway (ESG) para tráfego de gerenciamento de saída HTTPS, que é implementado pela IBM como parte da tipologia de rede de gerenciamento. Esse ESG é usado pelas VMs de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Para obter mais informações, veja [Configurando sua rede para usar o ESG gerenciado pelo cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-    **Importante:** esse ESG não está acessível para você e não é possível usá-lo. Se você o modificar, poderá não ser capaz de gerenciar a instância do vCenter Server with Hybridity Bundle por meio do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, observe que usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externo da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
+    Este ESG não está acessível a você e não pode ser usado. Se você o modificar, poderá não ser capaz de gerenciar a instância do vCenter Server with Hybridity Bundle por meio do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, observe que usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externo da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
+    {:important}
   * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 Para obter mais informações sobre componentes de rede pedidos ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
@@ -115,7 +121,7 @@ Cada nó de expansão do vCenter Server with Hybridity Bundle implementará e in
 
 ### Hardware para nós de expansão
 
-Um Bare Metal Server com a configuração customizada.
+Um Bare Metal Server com a configuração apresentada em [Especificações técnicas para instâncias do vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances).
 
 ### Licenças e taxas para os nós de expansão
 
@@ -124,7 +130,9 @@ Um Bare Metal Server com a configuração customizada.
 * Uma taxa de suporte e de serviços
 * VMware vSAN (Advanced ou Enterprise) 6.6
 
-**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados na conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não no	{{site.data.keyword.slportal}} ou por qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente por meio do console do
+{{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+{:important}
 
 **CUIDADO:** gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}}, que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você solicitou a instância, fora do console do {{site.data.keyword.vmwaresolutions_short}} pode tornar seu ambiente instável. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes

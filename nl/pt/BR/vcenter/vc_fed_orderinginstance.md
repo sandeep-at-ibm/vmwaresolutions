@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -67,26 +67,35 @@ Licenças fornecidas pela IBM para os seguintes componentes VMware:
 
 ## Configurações do Bare Metal Server
 
-As configurações de Bare Metal são baseadas em sua configuração customizada. A opção para selecionar uma configuração pré-configurada não é suportada atualmente.
+As configurações de Bare Metal são baseadas em sua seleção de data center e na configuração do servidor bare metal. A opção para selecionar uma configuração pré-configurada não é suportada atualmente.
 
 ### Local do datacenter
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
 
-### Customizado
+### Skylake
 
 Especifique o modelo de CPU e RAM para o Bare Metal Server.
 
-Tabela 2. Opções para {{site.data.keyword.baremetal_short}} customizados
+Tabela 2. Opções para o Skylake {{site.data.keyword.baremetal_short}}
+
+| Opções de modelo da CPU        | Opções de RAM       |
+|:------------- |:------------- |
+| Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+### Broadwell
+
+Especifique o modelo de CPU e RAM para o Bare Metal Server.
+
+Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
 | Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
 | Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
-| Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 ### Número de Bare Metal Servers
 
@@ -183,12 +192,12 @@ Com base em sua configuração selecionada para a instância, o custo estimado �
 4. Clique em **Instância primária** para implementar uma única instância no ambiente.
 5. Especifique a edição de licença do VMware NSX.
 6. Conclua a configuração do Bare Metal Server:
-  1. Selecione o {{site.data.keyword.CloudDataCent_notm}} para hospedar a instância.
-  2. Selecione o modelo de CPU **Customizado** e a quantia de **RAM**.
+   1. Selecione o {{site.data.keyword.CloudDataCent_notm}} para hospedar a instância.
+   2. Selecione o modelo de CPU **Skylake** ou **Broadwell** e a quantia de **RAM**.
 7. Conclua a configuração de armazenamento.
-  * Se você selecionar **Armazenamento vSAN**, especifique os tipos de disco para os discos de capacidade e de cache, o número de discos e a edição de licença vSAN. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
-  * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar as mesmas configurações para todos os compartilhamentos de arquivo, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
-  * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar compartilhamentos de arquivo individualmente, selecione **Configurar compartilhamentos individualmente** e, em seguida, clique no ícone **+** próximo à etiqueta **Incluir NFS** e selecione o **Tamanho** e o **Desempenho** para cada compartilhamento de arquivo individual. Deve-se selecionar pelo menos um compartilhamento de arquivo.
+   * Se você selecionar **Armazenamento vSAN**, especifique os tipos de disco para os discos de capacidade e de cache, o número de discos e a edição de licença vSAN. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
+   * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar as mesmas configurações para todos os compartilhamentos de arquivo, especifique o **Número de compartilhamentos**, o **Tamanho** e o **Desempenho**.
+   * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar compartilhamentos de arquivo individualmente, selecione **Configurar compartilhamentos individualmente** e, em seguida, clique no ícone **+** próximo à etiqueta **Incluir NFS** e selecione o **Tamanho** e o **Desempenho** para cada compartilhamento de arquivo individual. Deve-se selecionar pelo menos um compartilhamento de arquivo.
 8. Conclua a configuração da interface de rede.
    1. Insira o prefixo de nome do host, o rótulo do subdomínio e o nome do domínio-raiz.
    2. Selecione a configuração do DNS.
@@ -215,7 +224,7 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 
 **CUIDADO:** Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes
-*  Expandindo ou contraindo a capacidade da instância por meio da remoção de servidores ESXi
+*  Expansão ou redução da capacidade da instância por meio da inclusão ou remoção de servidores ESXi
 *  Desativando componentes
 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhados.

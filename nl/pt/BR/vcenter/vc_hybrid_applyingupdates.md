@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Aplicando atualizações a instâncias do vCenter Server with Hybridity Bundle
 
@@ -41,14 +43,16 @@ Tabela 1. Atualize os níveis e o impacto
    Se os detalhes não forem exibidos, isso poderá indicar um problema de conectividade com a Virtual Server Instance (VSI) do IBM CloudDriver, como resultado de uma regra de firewall ou outro problema de rede. Resolva o problema antes de continuar com a próxima etapa, caso contrário, a atualização poderá falhar.
 4. Clique em **Atualização e correção** na área de janela de navegação esquerda.
 
-   **Nota:** a página **Atualização e correção** contém somente os pacotes para atualizar os componentes de gerenciamento da IBM, não as atualizações do VMware. O {{site.data.keyword.vmwaresolutions_short}} aplica atualizações do VMware às operações a seguir:
+   A página **Atualização e correção** contém somente os pacotes para atualizar os componentes de gerenciamento da IBM, não as atualizações do VMware. O {{site.data.keyword.vmwaresolutions_short}} aplica atualizações do VMware às operações a seguir:
    * Quando uma nova instância do vCenter Server é implementada.
    * Quando novos servidores ESXi são incluídos.
    * Quando novos clusters são incluídos.
+   {:note}
 
 5. Para upgrades de licença, clique em  ** Atualizar **. Selecione a edição para a qual você deseja fazer upgrade na lista e clique em **Fazer upgrade**. Downgrades da edição da licença não estão disponíveis.
 
-   **Nota:** o upgrade de licença substitui todas as licenças NSX existentes na instância. Encargos adicionais poderão incorrer de uma sobreposição de licenças antigas e novas, se você fizer upgrade no meio de um ciclo de faturamento. Para evitar encargos adicionais, recomenda-se fazer upgrade da licença no final do ciclo de faturamento.
+   O upgrade de licença substitui todas as licenças NSX existentes na instância. Encargos adicionais poderão incorrer de uma sobreposição de licenças antigas e novas, se você fizer upgrade no meio de um ciclo de faturamento. Para evitar encargos adicionais, recomenda-se fazer upgrade da licença no final do ciclo de faturamento.
+   {:note}
 
 6. Para atualizações de software, clique na seta para baixo para expandir a atualização que você deseja aplicar e, em seguida, conclua uma das etapas a seguir:
    *  Para iniciar a atualização imediatamente, clique no ícone de menu overflow na coluna **Ações** da entrada de atualização e, em seguida, clique em **Atualizar agora**.

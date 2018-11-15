@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -37,4 +37,4 @@ Para obter mais informações sobre como vincular sua conta somente IaaS à sua 
 
 * [ Gerenciando o acesso de usuário com o IAM ](../vmonic/iam.html)
 * [Convidando usuários para acessar serviços e recursos](../vmonic/iamuserinvite.html)
-* [ O que é IBM Cloud IAM ](https://console.stage1.bluemix.net/docs/iam/index.html#iamoverview)
+* [ O que é IBM Cloud IAM ](../../../iam/index.html)

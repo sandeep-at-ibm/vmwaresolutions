@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Pedindo instâncias do vCenter Server with Hybridity Bundle
 
@@ -30,7 +34,8 @@ Tabela 1. Formato de valor para nomes de instância e de domínio
   | Nome do servidor ESXi totalmente qualificado | `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que `<n>` é a sequência do servidor ESXi. O comprimento máximo é de 50 caracteres. |  
   | FQDN do PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é de 50 caracteres. |
 
-**Importante:** não modifique nenhum valor definido durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
+Não modifique nenhum valor que seja configurado durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
+{:important}
 
 ## Configurações do sistema
 
@@ -63,7 +68,7 @@ As licenças VMware a seguir são incluídas com o pedido da instância do vCent
 
 ## Configurações do Bare Metal Server
 
-As configurações do Bare Metal baseiam-se na configuração do {{site.data.keyword.CloudDataCent_notm}} e customizada.
+As configurações de Bare Metal são baseadas em sua seleção de configuração do servidor {{site.data.keyword.CloudDataCent_notm}} e bare metal.
 
 Quatro servidores ESXi são necessários para os clusters iniciais e pós-implementação para configurações do vSAN. Todos os servidores ESXi compartilham a mesma configuração. Na pós-implementação, é possível incluir mais quatro clusters.
 
@@ -71,20 +76,29 @@ Quatro servidores ESXi são necessários para os clusters iniciais e pós-implem
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
 
-### Customizado
+### Skylake
 
-Especifique o modelo de CPU e a quantia de RAM para o Bare Metal Server customizado.
+Quando você seleciona **Skylake**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades.
 
-Tabela 2. Opções para {{site.data.keyword.baremetal_short}} customizados
+Tabela 2. Opções para Skylake  {{site.data.keyword.baremetal_short}}
+
+| Opções de modelo da CPU        | Opções de RAM       |
+|:------------- |:------------- |
+| Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+### Broadwell
+
+Quando você seleciona **Broadwell**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades.
+
+Tabela 3. Opções para Broadwell  {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 ### Número de Bare Metal Servers
 
@@ -126,7 +140,8 @@ O nome do domínio-raiz deve atender aos requisitos a seguir:
 * A última sequência pode conter apenas caracteres alfabéticos.
 * O comprimento da última sequência deve estar no intervalo de 2 a 24 caracteres.
 
-**Nota:** o comprimento máximo do FQDN (Nome completo do domínio) para hosts e VMs (máquinas virtuais) é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
+O comprimento máximo do nome completo do domínio (FQDN) para hosts e máquinas virtuais (VMs) é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
+{:note}
 
 ### Rede pública ou privada
 
@@ -151,9 +166,10 @@ São necessárias uma VLAN pública e duas VLANs privadas para o seu pedido de i
 
 Selecione **Selecionar VLANs existentes** para reutilizar VLANs públicas e privadas existentes e escolher entre as VLANs e sub-redes disponíveis.
 
-**Importante:**
+
 * Assegure-se de que a configuração de firewall nas VLANs selecionadas não bloqueie o tráfego de dados de gerenciamento.
 * Assegure-se de que todas as VLANs selecionadas estejam no mesmo pod, porque os servidores ESXi não podem ser provisionados em VLANs de pods mistos.
+{:important}
 
 ### Configuração de DNS
 
@@ -162,7 +178,8 @@ Selecione a configuração do Sistema de Nomes de Domínio (DNS) para sua instâ
 * **VSI pública única do Windows para o Active Directory/DNS**: uma VSI única do Microsoft Windows Server para o Microsoft Active Directory (AD), que funciona como o DNS para a instância na qual os hosts e as VMs são registrados, é implementada e pode ser consultada.
 * **Duas VMs do Windows Server dedicadas, altamente disponíveis no cluster de gerenciamento**: duas VMs do Microsoft Windows são implementadas, ajudando a aprimorar a segurança e a robustez.
 
-**Importante:** deve-se fornecer duas licenças do Microsoft Windows Server 2012 R2 caso você configure a sua instância para usar as duas VMs do Microsoft Windows. Use a licença de edição do Microsoft Windows Server 2012 R2 Standard ou a licença de edição do Microsoft Windows Server 2012 R2 Datacenter, ou ambas.
+Deve-se fornecer duas licenças do Microsoft Windows Server 2012 R2 quando você configura sua instância para usar as duas VMs do Microsoft Windows. Use a licença de edição do Microsoft Windows Server 2012 R2 Standard ou a licença de edição do Microsoft Windows Server 2012 R2 Datacenter, ou ambas.
+{:important}
 
 Cada licença pode ser designada apenas a um único servidor físico e abrange até dois processadores físicos. Uma licença de edição Standard é capaz de executar duas VMs virtualizadas do Microsoft Windows por servidor de dois processadores. Portanto, duas licenças são necessárias, pois duas VMs do Microsoft Windows são implementadas em dois hosts diferentes.
 
@@ -191,9 +208,10 @@ Com base em sua configuração selecionada para os serviços de instância e com
 5. Selecione a edição de licença do NSX e a edição de licença do vSAN.
 6. Conclua as configurações de Bare Metal Server.
   1. Selecione o {{site.data.keyword.CloudDataCent_notm}} para hospedar a instância.
-  2. Selecione o modelo de CPU **Customizado** e a quantia de **RAM**.
+  2. Selecione o modelo de CPU **Skylake** ou **Broadwell** e a quantia de **RAM**.
 
-  **Nota:** o **Número de Bare Metal Servers** é configurado para quatro por padrão e não pode ser mudado.
+  O **Número de Bare Metal Servers** é configurado para quatro por padrão e não pode ser mudado.
+  {:note}
 7. Conclua a configuração de armazenamento. Especifique os tipos de disco para os discos de capacidade e de cache, além do número de discos. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
 8. Conclua a configuração da interface de rede.
   1. Insira o prefixo de nome do host, o rótulo do subdomínio e o nome do domínio-raiz.
@@ -226,8 +244,10 @@ Quando você pedir uma instância secundária, o VMware vSphere Web Client da in
 
 Visualizar e gerenciar a instância do vCenter Server with Hybridity Bundle que você pediu.
 
-**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados na conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não no	{{site.data.keyword.slportal}} ou por qualquer outro meio fora do console.
+Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente por meio do console do
+{{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console.
 Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+{:important}
 
 **CUIDADO:** Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes

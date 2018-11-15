@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Pedindo instâncias do vCenter Server
 
@@ -30,7 +34,8 @@ Tabela 1. Formato de valor para nomes de instância e de domínio
   | Nome do servidor ESXi totalmente qualificado | `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que `<n>` é a sequência do servidor ESXi. O comprimento máximo é de 50 caracteres. |  
   | FQDN do PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é de 50 caracteres. |
 
-**Importante:** não modifique nenhum valor definido durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
+Não modifique nenhum valor que seja configurado durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
+{:important}
 
 ## Configurações do sistema
 
@@ -59,20 +64,55 @@ Para usuários do Parceiro de Negócios, a licença do vCenter Server (Standard 
 
 Para usuários que não são do Parceiros de negócios, é possível usar as licenças do VMware fornecidas pela IBM para esses componentes selecionando **Incluir com a compra** ou é possível usar Bring Your Own License (BYOL) selecionando **Eu fornecerei** e inserindo as suas próprias chaves de licença.
 
+
 **Atenção:**
 * É necessária uma licença com um mínimo de oito CPUs, que é para quatro servidores com duas CPUs por servidor. A opção de licença para cada componente do VMware se aplicará à instância de base e a quaisquer servidores ESXi que forem incluídos na instância posteriormente. Assegure-se de que sua licença suporte futura expansão de capacidade em sua infraestrutura.
 * As edições de licença mínimas são indicadas na interface com o usuário. Se diferentes edições de componentes forem suportadas, será possível selecionar a edição desejada. Você é responsável por assegurar que a chave de licença fornecida está correta para cada componente de VMware selecionado.
 * Para o vSphere, um encargo de licença é incorrido no momento do pedido, mas esse encargo é creditado em sua conta em seguida.
 * Será possível mudar as licenças fornecidas usando o VMware vSphere Web Client depois que a implementação da instância for concluída.
 * O suporte para os componentes do VMware para os quais você fornece licenças é oferecido pelo VMware, não pelo Suporte IBM.
+{:important}
 
 ## Configurações do Bare Metal Server
 
-As configurações do Bare Metal baseiam-se em sua seleção de data center e se você escolheu uma configuração customizada ou pré-configurada.
+As configurações de Bare Metal são baseadas em sua seleção de data center e na configuração do servidor bare metal.
 
 ### Local do datacenter
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
+
+### Skylake
+
+Quando você seleciona **Skylake**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades.
+
+Tabela 2. Opções para Skylake  {{site.data.keyword.baremetal_short}}
+
+| Opções de modelo da CPU        | Opções de RAM       |
+|:------------- |:------------- |
+| Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+### SAP-certificado
+
+Quando você seleciona **Certificado por SAP**, não é possível alterar as configurações de CPU ou RAM.
+
+Com base em seus requisitos, selecione uma configuração do Bare Metal Server:
+  * Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 192 GB de RAM
+  * Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 384 GB de RAM
+  * Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 768 GB de RAM
+
+### Broadwell
+
+Quando você seleciona **Broadwell**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades.
+
+Tabela 3. Opções para Broadwell  {{site.data.keyword.baremetal_short}}
+
+| Opções de modelo da CPU        | Opções de RAM       |
+|:------------- |:------------- |
+| Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 
 ### Pré-configurado
 
@@ -83,30 +123,13 @@ Com base em seus requisitos, selecione uma configuração do Bare Metal Server:
   * Médio (Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz/256 GB de RAM/2 unidades)
   * Grande (Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz/512 GB de RAM/2 unidades)
 
-### Customizado
-
-Ao selecionar **Customizado**, será possível escolher a combinação de CPU e RAM de acordo com suas necessidades.
-
-Selecione o modelo de CPU e RAM para o Bare Metal Server.
-
-Tabela 2. Opções para {{site.data.keyword.baremetal_short}} customizados
-
-| Opções de modelo da CPU        | Opções de RAM       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-
 ### Número de Bare Metal Servers
 
 Para o cluster inicial na instância, é possível configurar o número de servidores ESXi da seguinte maneira:
+* Se você selecionou **Skylake** ou **Broadwell**, é possível configurar o número de servidores ESXi no intervalo de 2 a 20.
 * Se você selecionou **Pré-configurado**, poderá configurar o número de servidores ESXi no intervalo de 2 a 10.
-* Se você selecionou **Customizado**, poderá configurar o número de servidores ESXi no intervalo de 2 a 20.
 
-Todos os servidores ESXi compartilham a configuração configurada. Após a implementação inicial, é possível incluir mais quatro clusters. Se você selecionou a configuração **Customizado** para o VMware vSAN, 4 servidores ESXi serão necessários para os clusters inicial e pós-implementação. Para obter mais informações sobre o mínimo de servidores ESXi, veja [É uma instância de dois nós do vCenter Server altamente disponível](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
+Todos os servidores ESXi compartilham a configuração configurada. Após a implementação inicial, é possível incluir mais quatro clusters. Se você tiver selecionado a configuração **Skylake** ou **Broadwell** para o VMware vSAN, 4 servidores ESXi serão necessários para os clusters iniciais e pós-implementação. Para obter mais informações sobre o mínimo de servidores ESXi, veja [É uma instância de dois nós do vCenter Server altamente disponível](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Configurações de armazenamento
 
@@ -114,7 +137,7 @@ As configurações de armazenamento são baseadas em sua seleção de configura�
 
 ### Armazenamento vSAN
 
-O vSAN está disponível somente para a configuração **Customizado** do Bare Metal. Especifique as seguintes opções vSAN:
+O vSAN está disponível somente para a configuração de Bare Metal **Skylake** e **Broadwell**. Especifique as seguintes opções vSAN:
 * **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
 * **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
 * Se você desejar incluir discos de capacidade além do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
@@ -125,7 +148,8 @@ O vSAN está disponível somente para a configuração **Customizado** do Bare M
 
 Quando você selecionar **Armazenamento do NFS**, será possível incluir armazenamento compartilhado no nível de arquivo para a sua instância na qual todas as ações usam as mesmas configurações ou será possível especificar definições de configuração diferentes para cada compartilhamento de arquivo. Especifique as seguintes opções NFS:
 
-**Nota:** o número de compartilhamentos de arquivos deve estar no intervalo de 1 a 32.
+O número de compartilhamentos de arquivo deve estar no intervalo de 1 a 32.
+{:note}
 
 * **Configurar compartilhamentos individualmente**: selecione para especificar
 diferentes definições de configuração para cada compartilhamento de arquivo.
@@ -134,7 +158,7 @@ diferentes definições de configuração para cada compartilhamento de arquivo.
 * **Desempenho**: selecione o IOPS (operações de entrada/saída por segundo) por GB com base em seus requisitos de carga de trabalho.
 * **ADD NFS**: selecione para incluir compartilhamentos de arquivos individuais que usam definições de configuração diferentes.
 
-Tabela 3. Opções de nível de desempenho do NFS
+Tabela 4. Opções de nível de desempenho do NFS
 
 | Opção        | Detalhes       |
   |:------------- |:------------- |
@@ -170,7 +194,8 @@ O nome do domínio-raiz deve atender aos requisitos a seguir:
 * A última sequência pode conter apenas caracteres alfabéticos.
 * O comprimento da última sequência deve estar no intervalo de 2 a 24 caracteres.
 
-**Nota:** o comprimento máximo do Nome completo do domínio (FQDN) para hosts e VMs é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
+O comprimento máximo do Nome Completo do Domínio (FQDN) para hosts e VMs é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
+{:note}
 
 ### Rede pública ou privada
 
@@ -200,9 +225,9 @@ Ao selecionar para reutilizar VLANs públicas e privadas existentes, especifique
 * **Sub-rede primária** é designada a hosts físicos para o acesso à rede pública.
 * **Sub-rede privada primária** é designada a hosts físicos para o tráfego de gerenciamento.
 
-**Importante:**
 * Assegure-se de que a configuração de firewall nas VLANs selecionadas não bloqueie o tráfego de dados de gerenciamento.
 * Assegure-se de que todas as VLANs selecionadas estejam no mesmo pod. Os servidores ESXi não podem ser provisionados em VLANs de pod misto.
+{:important}
 
 ### Configuração de DNS
 
@@ -211,7 +236,8 @@ Selecione a configuração do Sistema de Nomes de Domínio (DNS) para sua instâ
 * **VSI pública única do Windows para o Active Directory/DNS**: uma VSI única do Microsoft Windows Server para o Microsoft Active Directory (AD), que funciona como o DNS para a instância na qual os hosts e as VMs são registrados, é implementada e pode ser consultada. Essa opção foi implementada por padrão para instâncias da V1.9 e mais recentes.
 * **Duas VMs do Windows Server dedicadas, altamente disponíveis no cluster de gerenciamento**: duas VMs do Microsoft Windows são implementadas, ajudando a aprimorar a segurança e a robustez.
 
-**Importante:** deve-se fornecer duas licenças do Microsoft Windows Server 2012 R2 caso você configure a sua instância para usar as duas VMs do Microsoft Windows. Use a licença de edição do Microsoft Windows Server 2012 R2 Standard ou a licença de edição do Microsoft Windows Server 2012 R2 Datacenter, ou ambas.
+Deve-se fornecer duas licenças do Microsoft Windows Server 2012 R2 quando você configura sua instância para usar as duas VMs do Microsoft Windows. Use a licença de edição do Microsoft Windows Server 2012 R2 Standard ou a licença de edição do Microsoft Windows Server 2012 R2 Datacenter, ou ambas.
+{:important}
 
 Cada licença pode ser designada apenas a um único servidor físico e abrange até dois processadores físicos. Uma licença da edição Standard pode executar duas VMs virtualizadas do Microsoft Windows por servidor de 2 processadores. Portanto, duas licenças são necessárias, pois duas VMs do Microsoft Windows são implementadas em dois hosts diferentes.
 
@@ -244,8 +270,9 @@ Com base em sua configuração selecionada para os serviços de instância e com
 6. Conclua as configurações de Bare Metal Server.
     1. Selecione o {{site.data.keyword.CloudDataCent_notm}} para hospedar a instância.
     2. Selecione a configuração do Bare Metal Server.
+       * Ao selecionar **Skylake** ou **Broadwell**, especifique o modelo de CPU e o tamanho da RAM.
+       * Ao selecionar **Certificado por SAP**, escolha o modelo de CPU.
        * Quando você selecionar **Pré-configurado**, escolha **Pequeno**, **Médio** ou **Grande** para a configuração.
-       * Ao selecionar **Customizado**, especifique o modelo de CPU e o tamanho da RAM.
     3. Especifique o número de {{site.data.keyword.baremetal_short}}. Se você está planejando usar vSAN como sua solução de armazenamento, no mínimo 4 {{site.data.keyword.baremetal_short}} serão necessários.  
 7. Conclua a configuração de armazenamento.
   * Se você selecionar **Armazenamento vSAN**, especifique os tipos de disco para os discos de capacidade e de cache, o número de discos e a edição de licença vSAN. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
@@ -282,8 +309,10 @@ Quando você pedir uma instância secundária, o VMware vSphere Web Client da in
 
 Visualizar e gerenciar a instância do vCenter Server que você pediu.
 
-**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados na conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não no	{{site.data.keyword.slportal}} ou por qualquer outro meio fora do console.
+Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente por meio do console do
+{{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console.
 Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+{:important}
 
 **CUIDADO:** Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes

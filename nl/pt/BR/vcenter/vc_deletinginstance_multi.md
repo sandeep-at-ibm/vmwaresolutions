@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-09-27"
+lastupdated: "2017-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Excluindo instâncias do vCenter Server em uma configuração de vários sites
 
@@ -22,7 +26,8 @@ Quando você excluir uma instância do vCenter Server, os componentes a seguir s
 
 Devido a dependências de recursos, os componentes em sua instância não são liberados imediatamente quando você exclui a instância. Por exemplo, as sub-redes e VLANs não podem ser excluídas até que os servidores ESXi sejam totalmente recuperados pela infraestrutura do {{site.data.keyword.cloud}}, o que acontece no final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}}. No final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}}, que geralmente é de 30 dias, as sub-redes e VLANs são excluídas e a exclusão da instância é concluída.
 
-**Atenção:** você é cobrado até o término do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}} para a instância excluída.
+Você é faturado até o final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}} para a instância excluída.
+{:note}
 
 ## Procedimento para excluir instâncias do vCenter Server em uma configuração multisite
 

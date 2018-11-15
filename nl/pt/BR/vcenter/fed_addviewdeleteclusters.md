@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -38,20 +38,29 @@ O data center do cluster é configurado para o data center da instância do VMwa
 
 ### Configurações do Bare Metal Server
 
-#### Customizado
+#### Skylake
 
 Especifique o modelo de CPU e RAM para o Bare Metal Server. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
 
-Tabela 1. Opções para {{site.data.keyword.baremetal_short}}customizado
+Tabela 1. Opções para o Skylake {{site.data.keyword.baremetal_short}}
+
+| Opções de modelo da CPU        | Opções de RAM       |
+|:------------- |:------------- |
+| Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+#### Broadwell
+
+Especifique o modelo de CPU e RAM para o Bare Metal Server. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
+
+Tabela 2. Opções para o Broadwell {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### Número de Bare Metal Servers
 
@@ -89,7 +98,7 @@ diferentes definições de configuração para cada compartilhamento de arquivo.
 * **Desempenho**: selecione o IOPS (Input/output Operations Per Second) por GB com base em seus requisitos de carga de trabalho.
 * **INCLUIR NFS**: selecione para incluir compartilhamentos de arquivos individuais com definições de configuração diferentes.
 
-Tabela 2. Opções de nível de desempenho do NFS
+Tabela 3. Opções de nível de desempenho do NFS
 
 | Opção        | Detalhes       |
   |:------------- |:------------- |

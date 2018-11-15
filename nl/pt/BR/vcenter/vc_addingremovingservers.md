@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Expandindo e contraindo a capacidade para instâncias do vCenter Server
 
@@ -23,7 +27,7 @@ Se seu cluster inicial tiver vSAN como seu armazenamento, incluir um ou mais ser
 * Uma instância do vCenter Server com armazenamento vSAN deve ter pelo menos 4 servidores ESXi.
 * Para instâncias do vCenter Server que foram implementadas na V2.0 ou anterior, é possível expandir cada cluster para ter até 32 servidores ESXi. O número de {{site.data.keyword.baremetal_short}} que pode ser incluído de cada vez é o seguinte:
    * Para as configurações **Pequeno**, **Médio** e **Grande**, é possível incluir de 1 a 10 servidores ESXi de cada vez.
-   * Para a configuração **Customizado**, é possível incluir de 1 a 20 servidores ESXi de cada vez. Para obter mais informações sobre o mínimo de servidores ESXi, veja [Uma instância do vCenter Server com dois nós é altamente disponível?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+   * Para as configurações **Skylake** e **Broadwell**, é possível incluir de 1 a 20 servidores ESXi de cada vez. Para obter mais informações sobre o mínimo de servidores ESXi, veja [Uma instância do vCenter Server com dois nós é altamente disponível?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Procedimento para Incluir Servidores ESXi
 
@@ -65,7 +69,8 @@ deve ter pelo menos 4 servidores ESXi.
 2. Você é notificado por e-mail de que sua solicitação para remover servidores ESXi está sendo processada. No console, o status do cluster que está associado a servidores ESXi foi mudado para **Modificando**.
 3. Os servidores ESXi são totalmente recuperados pela infraestrutura do {{site.data.keyword.cloud_notm}} no final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}}, que é tipicamente de 30 dias.
 
-   **Atenção:** você será cobrado até o fim do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}} pelos servidores ESXi removidos.
+   Você é faturado até o final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}} para os servidores ESXi removidos.
+   {:note}
 
 ### Links relacionados
 
