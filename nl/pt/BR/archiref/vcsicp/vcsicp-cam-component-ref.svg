@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="691px" height="759px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(.5 .5)">
+  <g fill="none" pointer-events="none" stroke-width="2">
+   <rect x="77.5" y="1" width="492" height="150" stroke="#999"/>
+   <ellipse cx="431" cy="499" rx="259" ry="259" stroke="#33f"/>
+   <rect x="255" y="424" width="250" height="97" stroke="#00994d"/>
+   <rect x="458.5" y="536" width="120" height="130" stroke="#00994d"/>
+   <rect x="351" y="51" width="160" height="60" stroke="#000"/>
+   <rect x="361" y="66" width="140" height="35" stroke="#33f"/>
+  </g>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="430" y="86">CAM</text>
+  </g>
+  <g fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10" stroke-width="2">
+   <path d="m431 111"/>
+   <path d="m431 111"/>
+   <path d="m431 111"/>
+  </g>
+  <g font-family="Helvetica" font-size="11px" text-anchor="middle">
+   <text x="433" y="44">Nós do trabalhador do ICP</text>
+  </g>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="430.5" y="284">Cloud Automation Manager (CAM)</text>
+  </g>
+  <g fill="none" pointer-events="none" stroke-width="2">
+   <path d="m248 315 148-214" stroke="#33f" stroke-miterlimit="10"/>
+   <path d="m614 315-148-214" stroke="#33f" stroke-miterlimit="10"/>
+   <rect x="101" y="51" width="171" height="60" stroke="#000"/>
+   <path d="m187 99v222h242v25.53" stroke="#c60" stroke-miterlimit="10"/>
+   <path d="m425 340.76 4 8 4-8" stroke="#c60" stroke-miterlimit="10"/>
+   <rect x="117" y="63.5" width="140" height="35" stroke="#999"/>
+  </g>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="186" y="83.5">Ingress Controller</text>
+  </g>
+  <g font-family="Helvetica" font-size="11px" text-anchor="middle">
+   <text x="181.5" y="44">Nós do proxy do ICP</text>
+  </g>
+  <rect x="358.5" y="351" width="140" height="35" fill="none" pointer-events="none" stroke="#00994d" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="427.5" y="371">Proxy do CAM</text>
+  </g>
+  <rect x="278.5" y="446.5" width="90" height="35" fill="none" pointer-events="none" stroke="#39f" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="322.5" y="466.5">UIs do CAM</text>
+  </g>
+  <rect x="393.5" y="446.5" width="90" height="35" fill="none" pointer-events="none" stroke="#39f" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="437.5" y="466.5">APIs do CAM</text>
+  </g>
+  <rect x="514.5" y="446.5" width="140" height="35" fill="none" pointer-events="none" stroke="#39f" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="583.5" y="466.5">Designer de Modelo</text>
+  </g>
+  <rect x="473.5" y="576" width="85" height="35" fill="none" pointer-events="none" stroke="#39f" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="515" y="596">Helm</text>
+  </g>
+  <rect x="473.5" y="616" width="85" height="35" fill="none" pointer-events="none" stroke="#39f" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="515" y="636">Terraform</text>
+  </g>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="520.5" y="549">Mecanismos de implementação</text>
+  </g>
+  <path d="m296 590.17v-23.34c0-3.22 10.52-5.83 23.5-5.83s23.5 2.61 23.5 5.83v23.34c0 3.22-10.52 5.83-23.5 5.83s-23.5-2.61-23.5-5.83z" fill="none" pointer-events="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
+  <path d="m296 566.83c0 3.22 10.52 5.84 23.5 5.84s23.5-2.62 23.5-5.84" fill="none" pointer-events="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="11px" text-anchor="middle">
+   <text x="318.5" y="581">Mongo</text>
+  </g>
+  <path d="m361 590.17v-23.34c0-3.22 10.52-5.83 23.5-5.83s23.5 2.61 23.5 5.83v23.34c0 3.22-10.52 5.83-23.5 5.83s-23.5-2.61-23.5-5.83z" fill="none" pointer-events="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
+  <path d="m361 566.83c0 3.22 10.52 5.84 23.5 5.84s23.5-2.62 23.5-5.84" fill="none" pointer-events="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="11px" text-anchor="middle">
+   <text x="383.5" y="581">Redis</text>
+  </g>
+  <path d="m608.5 515.17v-23.34c0-3.22 10.52-5.83 23.5-5.83s23.5 2.61 23.5 5.83v23.34c0 3.22-10.52 5.83-23.5 5.83s-23.5-2.61-23.5-5.83z" fill="none" pointer-events="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
+  <path d="m608.5 491.83c0 3.22 10.52 5.84 23.5 5.84s23.5-2.62 23.5-5.84" fill="none" pointer-events="none" stroke="#999" stroke-miterlimit="10" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="11px" text-anchor="middle">
+   <text x="631" y="506">MariaDB</text>
+  </g>
+  <rect x="294" y="611" width="118" height="35" fill="none" pointer-events="none" stroke="#39f" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="352" y="631">Armazenamento de logs</text>
+  </g>
+  <g fill="none" pointer-events="none" stroke-width="2">
+   <path d="m31 81h81.53" stroke="#c60" stroke-miterlimit="10"/>
+   <path d="m106.76 85 8-4-8-4" stroke="#c60" stroke-miterlimit="10"/>
+   <ellipse cx="16" cy="59" rx="7.5" ry="7.5" stroke="#33f"/>
+   <path d="m16 66v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20" stroke="#33f" stroke-miterlimit="10"/>
+  </g>
+  <g font-family="Helvetica" font-size="11px" text-anchor="middle">
+   <rect x="4" y="120" width="25" height="14" fill="#fff" stroke-width="0"/>
+   <text x="15" y="128.5">User</text>
+  </g>
+  <path d="m499 369h86v73.53" fill="none" pointer-events="none" stroke="#c60" stroke-miterlimit="10" stroke-width="2"/>
+  <path d="m581 436.76 4 8 4-8" fill="none" pointer-events="none" stroke="#c60" stroke-miterlimit="10" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="373.5" y="501.5">Gerenciamento de instância</text>
+  </g>
+  <path d="m359 369h-35v73.53" fill="none" pointer-events="none" stroke="#c60" stroke-miterlimit="10" stroke-width="2"/>
+  <path d="m320 436.76 4 8 4-8" fill="none" pointer-events="none" stroke="#c60" stroke-miterlimit="10" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="16px" font-weight="bold" text-anchor="middle">
+   <text x="319" y="16.5">Plataforma ICP</text>
+  </g>
+ </g>
+</svg>
