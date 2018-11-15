@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -24,36 +24,36 @@ Cloud Foundation のデプロイメントには、物理インフラストラク
 
 | {{site.data.keyword.CloudDataCent_notm}} | ロケーション | 地域 | サーバー構成 |
 |:----------------------|:---------|:-------|:----------------------|
-| AMS03 | アムステルダム | ヨーロッパ | Customized |
-| CHE01 | チェンナイ | アジア太平洋 | Customized |
-| DAL09 | ダラス | 北米南部 | Customized |
-| DAL10 | ダラス | 北米南部 | Customized、Small、Large |
-| DAL12 | ダラス | 北米南部 | Customized |
-| DAL13 | ダラス | 北米南部 | Customized |
-| FRA02 | フランクフルト | ヨーロッパ | Customized、Large |
-| FRA04 | フランクフルト | ヨーロッパ | Customized |
-| HKG02 | 香港 | アジア太平洋 | Customized |
-| LON02 | London (ロンドン) | ヨーロッパ | Customized |
-| LON04 | London (ロンドン) | ヨーロッパ | Customized |
-| LON06 | London (ロンドン) | ヨーロッパ | Customized、Small、Large |
-| MEL01 | メルボルン | アジア太平洋 | Customized |
-| MEX01 | ケレタロ | 北米南部 | Customized |
-| MIL01 | ミラノ | ヨーロッパ | Customized |
-| MON01 | モントリオール | 北米東部 | Customized |
-| OSL01 | オスロ | ヨーロッパ | Customized |
-| PAR01 | パリ | ヨーロッパ | Customized |
-| SAO01 | サンパウロ | 南米 | Customized |
-| SEO01 | ソウル | アジア太平洋 | Customized |
-| SJC03 | サンノゼ | 北米西部 | Customized |
-| SJC04 | サンノゼ | 北米西部 | Customized |
-| SNG01 | シンガポール | アジア太平洋 | Customized |
-| SYD01 | シドニー | アジア太平洋 | Customized |
-| SYD04 | シドニー | アジア太平洋 | Customized |
-| TOK02 | 東京 | アジア太平洋 | Customized |
-| TOR01 | トロント | 北米東部 | Customized、Small、Large |
-| WDC04 | ワシントン、DC | 北米東部 | Customized、Small、Large |
-| WDC06 | ワシントン、DC | 北米東部 | Customized |
-| WDC07 | ワシントン、DC | 北米東部 | Customized |
+| AMS03 | アムステルダム | ヨーロッパ | Skylake、Broadwell |
+| CHE01 | チェンナイ | アジア太平洋 | Skylake、Broadwell |
+| DAL09 | ダラス | 北米南部 | Skylake、Broadwell |
+| DAL10 | ダラス | 北米南部 | Skylake、Broadwell、スモール、ラージ |
+| DAL12 | ダラス | 北米南部 | Skylake、Broadwell |
+| DAL13 | ダラス | 北米南部 | Skylake、Broadwell |
+| FRA02 | フランクフルト | ヨーロッパ | Skylake、Broadwell、ラージ |
+| FRA04 | フランクフルト | ヨーロッパ | Skylake、Broadwell |
+| HKG02 | 香港 | アジア太平洋 | Skylake、Broadwell |
+| LON02 | London (ロンドン) | ヨーロッパ | Skylake、Broadwell |
+| LON04 | London (ロンドン) | ヨーロッパ | Skylake、Broadwell |
+| LON06 | London (ロンドン) | ヨーロッパ | Skylake、Broadwell、スモール、ラージ |
+| MEL01 | メルボルン | アジア太平洋 | Skylake、Broadwell |
+| MEX01 | ケレタロ | 北米南部 | Skylake、Broadwell |
+| MIL01 | ミラノ | ヨーロッパ | Skylake、Broadwell |
+| MON01 | モントリオール | 北米東部 | Skylake、Broadwell |
+| OSL01 | オスロ | ヨーロッパ | Skylake、Broadwell |
+| PAR01 | パリ | ヨーロッパ | Skylake、Broadwell |
+| SAO01 | サンパウロ | 南米 | Skylake、Broadwell |
+| SEO01 | ソウル | アジア太平洋 | Skylake、Broadwell |
+| SJC03 | サンノゼ | 北米西部 | Skylake、Broadwell |
+| SJC04 | サンノゼ | 北米西部 | Skylake、Broadwell |
+| SNG01 | シンガポール | アジア太平洋 | Skylake、Broadwell |
+| SYD01 | シドニー | アジア太平洋 | Skylake、Broadwell |
+| SYD04 | シドニー | アジア太平洋 | Skylake、Broadwell |
+| TOK02 | 東京 | アジア太平洋 | Skylake、Broadwell |
+| TOR01 | トロント | 北米東部 | Skylake、Broadwell、スモール、ラージ |
+| WDC04 | ワシントン、DC | 北米東部 | Skylake、Broadwell、スモール、ラージ |
+| WDC06 | ワシントン、DC | 北米東部 | Skylake、Broadwell |
+| WDC07 | ワシントン、DC | 北米東部 | Skylake、Broadwell |
 
 入手可能状況と在庫状況によっては、デプロイメントの計画に役立つように、{{site.data.keyword.CloudDataCents_notm}}の {{site.data.keyword.vmwaresolutions_short}} コンソールに状況標識が表示される場合があります。
 

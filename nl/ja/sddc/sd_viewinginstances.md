@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Cloud Foundation インスタンスの表示
 
@@ -113,7 +117,8 @@ lastupdated: "2018-09-27"
 
 {{site.data.keyword.vmwaresolutions_short}} コンソールまたは vSphere Web クライアントからインスタンスを管理します。
 
-**重要:** インスタンスのサマリー・ページで**「vCenter コンソール」**をクリックして vSphere Web Client にアクセスし、ESXi サーバーの管理を開始するには、その前に {{site.data.keyword.CloudDataCent_notm}}の VPN ポータルにログインしておく必要があります。 vSphere Web クライアントにアクセスする前に、「vCenter コンソール」ボタンの上にカーソルを移動し、指示に従って、すべての要件を満たしており必要なステップを完了したことを確認してください。
+インスタンスのサマリー・ページで**「vCenter コンソール」**をクリックして vSphere Web Client にアクセスし、ESXi サーバーの管理を開始するには、その前に {{site.data.keyword.CloudDataCent_notm}}の VPN ポータルにログインしておく必要があります。 vSphere Web クライアントにアクセスする前に、「vCenter コンソール」ボタンの上にカーソルを移動し、指示に従って、すべての要件を満たしており必要なステップを完了したことを確認してください。
+{:important}
 
 ログイン手順を実行するには、以下のトピックを参照してください。
 

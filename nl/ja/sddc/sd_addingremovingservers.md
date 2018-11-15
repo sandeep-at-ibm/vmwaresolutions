@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Cloud Foundation インスタンスの容量の拡張と縮小
 
@@ -21,7 +25,7 @@ Cloud Foundation インスタンスには 5 つまでクラスターを配置で
 * VMware vSphere Web クライアントから ESXi サーバーの追加を行わないでください。 VMware vSphere Web クライアントで加えた変更は、{{site.data.keyword.vmwaresolutions_full}} コンソールと同期されません。
 * 注文した基本プラットフォームには、デフォルトで 4 台の ESXi サーバーがあります。 プラットフォームは、最大で 32 台の ESXi サーバーに拡張できます。 しかし、一度に追加できる{{site.data.keyword.baremetal_short}}の数は以下のとおりです。
    * **スモール** 構成と **ラージ** 構成の場合、一度に 1 台から 10 台まで ESXi サーバーを追加できます。
-   * **「カスタマイズ型」**構成では、一度に 1 から 20 個の ESXi サーバーを追加できます。
+   * **「Skylake」**構成と**「Broadwell」**構成の場合、一度に 1 台から 20 台までの ESXi サーバーを追加できます。
 
 ## ESXi サーバーを追加する手順
 
@@ -61,7 +65,8 @@ Cloud Foundation インスタンスには 5 つまでクラスターを配置で
 2. ESXi サーバーが削除されるときには、E メールで通知されます。
 3. {{site.data.keyword.cloud_notm}} の請求サイクル (通常 30 日) の最後に、{{site.data.keyword.cloud_notm}} インフラストラクチャーによって ESXi サーバーに全面的な再利用処理が施されます。
 
-   **注意:** 削除対象の ESXi サーバーに関する請求は、{{site.data.keyword.cloud_notm}} 請求処理サイクルの終わりまで行われます。
+   削除対象の ESXi サーバーに関する請求は、{{site.data.keyword.cloud_notm}} 請求処理サイクルの終わりまで行われます。
+   {:note}
 
 ### 関連リンク
 

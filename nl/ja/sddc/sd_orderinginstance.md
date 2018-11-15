@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Cloud Foundation インスタンスの注文
 
@@ -18,7 +22,8 @@ lastupdated: "2018-09-27"
 *  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](../vmonic/useraccount.html)を参照してください。
 *  [Cloud Foundation インスタンスの要件と計画](sd_planning.html)に記載されている要件と考慮事項を確認した。
 
-**重要:** インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。 また、インスタンスがデプロイされた後は、インスタンス名、ルート・ドメイン・ネーム、サブドメイン・ラベル、ホスト名接頭部を変更しないでください。
+インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。 また、インスタンスがデプロイされた後は、インスタンス名、ルート・ドメイン・ネーム、サブドメイン・ラベル、ホスト名接頭部を変更しないでください。
+{:important}
 
 ## システム設定
 
@@ -54,6 +59,34 @@ Cloud Foundation インスタンスを注文する際には、以下のシステ
 
 インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
 
+### Skylake
+
+**「Skylake」**を選択した場合、必要に応じて CPU と RAM の組み合わせを選択できます。
+
+ベア・メタル・サーバーの CPU モデルと RAM を選択します。
+
+表 1. Skylake {{site.data.keyword.baremetal_short}}のオプション
+
+| CPU モデル・オプション        | RAM オプション       |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110 プロセッサー / 合計 16 コア、2.1 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
+### Broadwell
+
+**「Broadwell」**を選択した場合、必要に応じて CPU と RAM の組み合わせを選択できます。
+
+ベア・メタル・サーバーの CPU モデルと RAM を選択します。
+
+表 1. Broadwell {{site.data.keyword.baremetal_short}}のオプション
+
+| CPU モデル・オプション        | RAM オプション       |
+|:------------- |:------------- |
+| デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
+| デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
+| デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
+
 ### 事前構成型
 
 **「事前構成型」**を選択した場合は、CPU 設定も RAM 設定も変更できません。
@@ -61,23 +94,6 @@ Cloud Foundation インスタンスを注文する際には、以下のシステ
 要件に基づいて、以下のベア・メタル・サーバー構成を選択します。
   * スモール (デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz / 128 GB RAM / 12 ドライブ)
   * ラージ (デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz / 512 GB RAM / 12 ドライブ)
-
-### カスタマイズ型
-
-**「カスタマイズ型」**を選択した場合、必要に応じて CPU と RAM の組み合わせを選択できます。
-
-ベア・メタル・サーバーの CPU モデルと RAM を選択します。
-
-表 1. カスタマイズ型{{site.data.keyword.baremetal_short}}のオプション
-
-| CPU モデル・オプション        | RAM オプション       |
-|:------------- |:------------- |
-| デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Silver 4110 Processor / 合計 16 コア、2.1 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### ベア・メタル・サーバーの数
 
@@ -91,11 +107,11 @@ Cloud Foundation インスタンスの場合は、VMware vSAN ストレージの
   * **「スモール」**ベア・メタル・サーバー構成の場合は、2 ディスク・ドライブ (1.9 TB SSD SED) が注文されます。
   * **「ラージ」**ベア・メタル・サーバー構成の場合は、4 ディスク・ドライブ (3.8 TB SSD SED) が注文されます。
 
-**「カスタマイズ型」**のベア・メタル・サーバー構成を選択した場合は、インスタンスの vSAN ストレージをカスタマイズできます。 以下の vSAN 設定を指定します。
+**「Skylake」**または**「Broadwell」**ベアメタル・サーバー構成を選択した場合は、インスタンスの vSAN ストレージをカスタマイズできます。以下の vSAN 設定を指定します。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
 * 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。 **「High-Performance Intel Optane」**オプションは、Dual Intel Xeon Gold 5120 および 6140 プロセッサーでのみ使用できます。
-* **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
+* **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
 
 ## ネットワーク・インターフェースの設定
 
@@ -125,7 +141,8 @@ Cloud Foundation インスタンスを注文する際には、以下のネット
 * 最後の文字列には、英字しか使用できません。
 * 最後の文字列の長さは、2 文字から 24 文字までの範囲でなければなりません。
 
-**注:** ホストと VM (仮想マシン) の FQDN (完全修飾ドメイン・ネーム) の最大長は 50 文字です。 この最大長に対応するドメイン・ネームにする必要があります。
+ホストと VM (仮想マシン) の FQDN (完全修飾ドメイン・ネーム) の最大長は 50 文字です。 この最大長に対応するドメイン・ネームにする必要があります。
+{:note}
 
 ### ネットワーク設定の値の形式
 
@@ -193,11 +210,11 @@ Cloud Foundation インスタンスを注文するときに、アドオン・サ
 6. ベア・メタル・サーバーの設定を次の手順で実行します。
    1. インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
    2. ベア・メタル・サーバー構成を選択します。
+      * **「Skylake」**または**「Broadwell」**を選択した場合は、CPU モデルと RAM サイズを指定します。
       * **「事前構成型」**を選択した場合は、**「スモール」**と**「ラージ」**から構成を選択します。
-      * **「カスタマイズ型」**を選択した場合は、CPU モデルと RAM サイズを指定します。
 7. ストレージ構成を次の手順で実行します。
+   * **「Skylake」**または**「Broadwell」**のベアメタル構成を選択した場合は、容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
    * ベア・メタル構成に**「事前構成型」**を選択した場合、**「スモール」**と**「ラージ」**の標準ベア・メタル・サーバー構成でのストレージ設定は変更できません。
-   * **「カスタマイズ型」**のベア・メタル構成を選択した場合は、vSAN 容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
 8. ネットワーク・インターフェースの設定を行います。
    1. ホスト名接頭部、サブドメイン・ラベル、ルート・ドメイン・ネームを入力します。 セカンダリー・インスタンスの場合、ドメイン・ネームは自動的に入力されます。
    2. VLAN 設定を選択します。
@@ -227,7 +244,8 @@ Cloud Foundation インスタンスを注文するときに、アドオン・サ
 
 注文した Cloud Foundation インスタンスを表示して管理します。
 
-**重要:** {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
+{{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
+{:important}
 
 **注意:** インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
 
