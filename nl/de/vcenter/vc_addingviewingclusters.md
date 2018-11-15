@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen
 
@@ -14,13 +18,14 @@ Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, we
 
 Sie können eigene Cluster zu Ihren VMware vCenter Server-Instanzen hinzufügen, um die Rechen- und Speicherkapazität zu erweitern. In einem Cluster können Sie ESXi-Server verwalten, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Löschen Sie die hinzufügten Cluster aus Ihrer Instanz, wenn sie nicht mehr benötigt werden.
 
-**Verfügbarkeit:** Die Funktion zum Löschen von Clustern steht nur für Instanzen zur Verfügung, die in V2.3 oder höher bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden.
+Die Funktion zum Löschen von Clustern steht nur für Instanzen zur Verfügung, die in V2.3 oder höher bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden.
+{:note}
 
 ## Cluster zu vCenter Server-Instanzen hinzufügen
 
 Die Anzahl der Cluster, die zu einer Instanz hinzugefügt werden können, hängt von der Instanzversion ab:
 * Für Instanzen, die in V2.2 oder höher bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden, können Sie bis zu 10 Cluster hinzufügen.
-* Für Instanzen, die in V2.2 oder früher bereitgestellt wurden, können Sie bis zu fünf Cluster hinzufügen.
+* Für Instanzen, die in V2.1 oder früher bereitgestellt wurden, können Sie bis zu fünf Cluster hinzufügen.
 
 ### Systemeinstellungen
 
@@ -42,7 +47,40 @@ Wenn Sie den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}}- 
 
 ### Einstellungen für Bare Metal Server
 
-Sie können entweder **Vorkonfiguriert** oder **Angepasst** auswählen.
+Sie können entweder **Skylake**, **SAP-zertifiziert**, **Broadwell** oder **Vorkonfiguriert** auswählen.
+
+#### Skylake
+
+Für die Einstellung **Skylake** steht eine Reihe von Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
+
+Tabelle 1. Optionen für Skylake {{site.data.keyword.baremetal_short}}
+
+| CPU-Modelloptionen        | RAM-Optionen       |
+|:------------- |:------------- |
+| Dual Intel Xeon Silver 4110-Prozessor / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon Gold 5120-Prozessor / 28 Kerne insgesamt, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+#### SAP-zertifiziert
+
+Wenn Sie **SAP-zertifiziert** auswählen, dann können Sie die CPU- oder RAM-Einstellungen nicht ändern.
+
+Wählen Sie gemäß Ihren Anforderungen eine Bare Metal Server-Konfiguration aus:
+* Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 192 GB RAM
+* Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 384 GB RAM
+* Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 768 GB RAM
+
+#### Broadwell
+
+Für die Einstellung **Broadwell** steht eine Reihe von Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
+
+Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
+
+| CPU-Modelloptionen        | RAM-Optionen       |
+|:------------- |:------------- |
+| Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 
 #### Vorkonfiguriert
 
@@ -50,21 +88,6 @@ Für die Einstellung **Vorkonfiguriert** können Sie abhängig von Ihren Anforde
 * S (Klein): Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz / 128 GB RAM / 2 Platten
 * M (Mittel): Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz / 256 GB RAM / 2 Platten
 * L (Groß): Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM / 2 Platten
-
-#### Angepasst
-
-Für die Einstellung **Angepasst** steht eine Reihe von Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
-
-Tabelle 1. Optionen für angepasste {{site.data.keyword.baremetal_short}}-Instanzen
-
-| CPU-Modelloptionen        | RAM-Optionen       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon Silver 4110-Prozessor / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon Gold 5120-Prozessor / 28 Kerne insgesamt, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### Bare Metal Server-Anzahl
 
@@ -74,9 +97,9 @@ Für vCenter Server-Instanzen, die in V2.1 oder früher bereitgestellt wurden, k
 
 Für vCenter Server-Instanzen, die in V2.0 oder früher bereitgestellt wurden, können Sie bis zu 32 {{site.data.keyword.baremetal_short}}-Instanzen für einen Cluster hinzufügen. Für die Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen, die Sie jeweils hinzufügen können, gilt Folgendes:
 * Bei Konfigurationen des Typs **S (Klein)**, **M (Mittel)** und **L (Groß)** können Sie gleichzeitig 1 bis 10 ESXi-Server hinzufügen.
-* Bei Bare Metal Server-Konfigurationen des Typs **Angepasst** können Sie gleichzeitig 1 bis 20 ESXi-Server hinzufügen.
+* Bei Bare Metal Server-Konfigurationen des Typs **Skylake** und **Broadwell** können Sie gleichzeitig 1 bis 20 ESXi-Server hinzufügen.
 
-Nach der Implementierung können Sie bis zu vier weitere Cluster erstellen. Wenn Sie die Bare Metal Server-Konfiguration **Angepasst** mit VMware vSAN-Speicher auswählen, werden für den ersten Cluster und die Cluster nach der Bereitstellung vier Server benötigt.
+Nach der Bereitstellung können Sie bis zu vier weitere Cluster erstellen. Wenn Sie die Bare Metal Server-Konfiguration **Skylake** oder **Broadwell** mit VMware vSAN-Speicher auswählen, werden für den ersten Cluster und die Cluster nach der Bereitstellung vier Server benötigt.
 
 ### Speichereinstellungen
 
@@ -97,7 +120,8 @@ Wenn Ihr erster Cluster ein vSAN-Cluster war, verwenden alle zusätzlichen vSAN-
 
 Wenn Sie **NFS-Speicher** auswählen, können Sie gemeinsam genutzten Speicher auf Dateiebene für Ihre Instanz hinzufügen, wobei für alle gemeinsam genutzten Ressourcen dieselben Einstellungen verwendet werden; alternativ können Sie für die einzelnen gemeinsam genutzten Dateiressourcen jeweils unterschiedliche Konfigurationseinstellungen angeben. Geben Sie die folgenden NFS-Optionen an:
 
-**Anmerkung:** Die Anzahl der gemeinsam genutzten Dateiressourcen muss zwischen 1 und 32 liegen.
+Die Anzahl der gemeinsam genutzten Dateiressourcen muss zwischen 1 und 32 liegen.
+{:note}
 
 * **Gemeinsam genutzte Ressourcen einzeln konfigurieren**: Wählen Sie diese Option aus, um für jede einzelne gemeinsam genutzte Dateiressource unterschiedliche Konfigurationseinstellungen anzugeben.
 * **Anzahl der gemeinsam genutzten Ressourcen**: Geben Sie bei Verwendung derselben Konfigurationseinstellung für alle gemeinsam genutzten Dateiressourcen die Anzahl der gemeinsam genutzten Dateiressourcen für den gemeinsam genutzten NFS-Speicher an, die Sie hinzufügen möchten.
@@ -105,7 +129,7 @@ Wenn Sie **NFS-Speicher** auswählen, können Sie gemeinsam genutzten Speicher a
 * **Leistung**: Wählen Sie basierend auf Ihren Workloadanforderungen die pro GB geltende Anzahl von E/A-Operationen pro Sekunde aus.
 * **NFS hinzufügen**: Wählen Sie diese Option aus, um einzelne gemeinsam genutzte Dateiressourcen mit anderen Konfigurationseinstellungen hinzuzufügen.
 
-Tabelle 2. Optionen für die NFS-Leistungsstufe
+Tabelle 3. Optionen für die NFS-Leistungsstufe
 
 | Option        | Details       |
   |:------------- |:------------- |
@@ -137,13 +161,15 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, zu der Cluster hinzugefügt werden sollen.
 
-   **Hinweis:** Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster zur Instanz hinzufügen.
+   Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster zur Instanz hinzufügen.
+   {:note}
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur** und anschließend in der rechten oberen Ecke der Tabelle **CLUSTER** auf **Hinzufügen**.
 4. Geben Sie auf der Seite **Cluster hinzufügen** den Clusternamen ein.
 5. Wenn Sie für den Cluster ein anderes {{site.data.keyword.CloudDataCent_notm}} als Host verwenden möchten als das, in dem die Instanz gehostet wird, aktivieren Sie unter **Bare Metal Server** das Kontrollkästchen **Anderen Standort auswählen** und wählen Sie dann das gewünschte {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
 6. Führen Sie die Bare-Metal-Konfiguration durch.
+   * Wenn Sie **Skylake** oder **Broadwell** ausgewählt haben, geben Sie das **CPU-Modell**, die Größe des **RAM** und die **Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen** an.
+   * Wenn Sie **SAP-zertifiziert** ausgewählt haben, geben Sie das CPU-Modell an.
    * Wenn Sie **Vorkonfiguriert** ausgewählt haben, geben Sie die **Bare Metal Server-Konfiguration** und die **Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen** an. Wenn vSAN als Speicherlösung verwendet werden soll, sind mindestens vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
-   * Wenn Sie **Angepasst** ausgewählt haben, geben Sie das **CPU-Modell**, die Größe des **RAM** und die **Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen** an.
 7. Führen Sie die Speicherkonfiguration durch.
   * Wenn Sie **vSAN-Speicher** auswählen, geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten, die Anzahl der Platten und die vSAN-Lizenzedition an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
   * Wenn Sie **NFS-Speicher** auswählen und für alle gemeinsam genutzten Dateiressourcen dieselben Einstellungen hinzufügen und konfigurieren wollen, geben Sie die **Anzahl der gemeinsam genutzten Ressourcen**, **Größe** und **Leistung** an.
@@ -165,7 +191,8 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 1. Die Bereitstellung des Clusters wird automatisch gestartet und der Status des Clusters ändert sich in **Wird initialisiert**. Sie können den Status der Bereitstellung überprüfen, indem Sie den Bereitstellungsverlauf über die Seite **Zusammenfassung** der Instanz anzeigen.
 2. Sobald der Cluster einsatzbereit ist, ändert sich sein Status in **Bereit**. Der neu hinzugefügte Cluster wird mit vSphere High Availability (HA) und vSphere Distributed Resource Scheduler (DRS) aktiviert.
 
-**Wichtig:** Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, kann die Operation zum Hinzufügen oder Entfernen von ESXi-Servern im Cluster fehlschlagen.
+Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, kann die Operation zum Hinzufügen oder Entfernen von ESXi-Servern im Cluster fehlschlagen.
+{:important}
 
 ## Vorgehensweise zum Anzeigen von Clustern in vCenter Server-Instanzen
 
@@ -242,7 +269,8 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, aus der Cluster gelöscht werden sollen.
 
-   **Hinweis:** Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster aus der Instanz löschen.
+   Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster aus der Instanz löschen.
+   {:note}
 
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Suchen Sie in der Tabelle **CLUSTER** den Cluster, der gelöscht werden soll, und klicken Sie dann auf das Symbol **Löschen** in der Spalte **Aktionen**.
 4. Vergewissern Sie sich, dass die Migration der virtuellen Maschinen (VMs) auf andere Cluster (sofern erforderlich) durchgeführt wurde und dass der Cluster tatsächlich gelöscht werden soll.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -37,4 +37,4 @@ Weitere Informationen zum Verknüpfen Ihres Nur-IaaS-Kontos mit Ihrem PaaS-Konto
 
 * [Benutzerzugriff mit IAM verwalten](../vmonic/iam.html)
 * [Benutzer für den Zugriff auf Services und Ressourcen einladen](../vmonic/iamuserinvite.html)
-* [Was ist IBM Cloud IAM?](https://console.stage1.bluemix.net/docs/iam/index.html#iamoverview)
+* [Was ist IBM Cloud IAM?](../../../iam/index.html)

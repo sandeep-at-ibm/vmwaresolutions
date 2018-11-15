@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server with Hybridity Bundle-Instanzen anzeigen
 
@@ -17,13 +21,14 @@ Sie können die Zusammenfassung und die detaillierten Informationen der VMware v
 Wenn Sie eine Zusammenfassung aller vCenter Server with Hybridity Bundle-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie im Konsolenbanner auf das Symbol Ihres Benutzerkontos und klicken Sie anschließend auf das Feld **Konto**, um das Benutzerkonto auszuwählen, für das Sie Instanzen prüfen wollen.
-3. Prüfen Sie in der Tabelle **vCenter Server** die Liste der Instanzen, die in dem ausgewählten Benutzerkonto bereitgestellt sind.
+3. Prüfen Sie in der Tabelle **vCenter Server-Instanzen** die Liste der Instanzen, die in dem ausgewählten Benutzerkonto bereitgestellt sind.
 
 Tabelle 1. Elemente von vCenter Server with Hybridity Bundle-Instanzen
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
 | Name | Der Name der Instanz. |
+| Typ | Der Typ der vCenter Server-Instanz. |
 | Version | Die Releaseversion, in der die Instanz bereitgestellt wurde oder auf die ein Upgrade durchgeführt wurde. |  
 | Standort | Das {{site.data.keyword.CloudDataCent_notm}}, in dem die Instanz gehostet wird. |  
 | Erstellungszeit | Der Zeitpunkt (Datum und Uhrzeit), zu dem die Instanz erstellt wurde. |  
@@ -58,7 +63,7 @@ Tabelle 3. Eigenschaften der vCenter Server with Hybridity Bundle-Instanzen
 | ID | Die ID der Instanz. |
 | Standort | Das {{site.data.keyword.CloudDataCent_notm}}, in dem die Instanz gehostet wird. |
 | Aktuelle Version | Die aktuelle Version von {{site.data.keyword.vmwaresolutions_short}}. |
-| vCenter-Version | Die Version von VMware vCenter Server with Hybridity Bundle.<br><br>**Hinweis:** Die Versionen von vCenter Server, die in der {{site.data.keyword.vmwaresolutions_short}}-Konsole und in VMware vSphere Web Client angezeigt werden, weichen etwas voneinander ab. Beide Angaben sind richtig. |
+| vCenter-Version | Die Version von VMware vCenter Server with Hybridity Bundle.<br><br>Die Versionen von vCenter Server, die in der {{site.data.keyword.vmwaresolutions_short}}-Konsole und in VMware vSphere Web Client angezeigt werden, weichen etwas voneinander ab. Beide Angaben sind richtig.{:note} |
 | NSX for vSphere | Die Produktversion von VMware NSX for vSphere. |
 | NSX-Lizenzedition | Die Version und Edition der VMware NSX-Lizenz. |
 | DNS, Rootdomäne | Der Rootdomänenname ist der Domänenname von DNS (Domain Name System) und der Gesamtstrukturrootname von Microsoft Active Directory (AD). |
@@ -109,7 +114,8 @@ Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, w
 
 Nun können Sie Ihre Instanzen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole oder in VMware vSphere Web Client verwalten.
 
-**Wichtig:** Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** klicken, um vSphere Web Client aufzurufen und Ihre ESXi-Server zu verwalten, müssen Sie sich beim VPN-Portal des {{site.data.keyword.CloudDataCent_notm}} anmelden. Bewegen Sie den Mauszeiger über die Schaltfläche **vCenter-Konsole** und befolgen Sie die Anweisungen, um sicherzustellen, dass Sie alle Voraussetzungen erfüllen und Sie alle erforderlichen Schritte ausgeführt haben, bevor Sie auf vSphere Web Client zugreifen.
+Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** klicken, um vSphere Web Client aufzurufen und Ihre ESXi-Server zu verwalten, müssen Sie sich beim VPN-Portal des {{site.data.keyword.CloudDataCent_notm}} anmelden. Bewegen Sie den Mauszeiger über die Schaltfläche **vCenter-Konsole** und befolgen Sie die Anweisungen, um sicherzustellen, dass Sie alle Voraussetzungen erfüllen und Sie alle erforderlichen Schritte ausgeführt haben, bevor Sie auf vSphere Web Client zugreifen.
+{:important}
 
 In den folgenden Abschnitten finden Sie Informationen, die Sie bei der Ausführung der Anmeldeanweisungen unterstützen:
 *  Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
