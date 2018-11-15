@@ -89,7 +89,7 @@
 	<line class="st1" x1="44" x2="674" y1="592" y2="592"/>
 	<line class="st1" x1="76" x2="76" y1="562" y2="592"/>
 	<line class="st4" x1="189" x2="189" y1="562" y2="592"/><g font-family="IBMPlexSans" font-size="12px">
-	<text class="st2 st5" x="43" y="605.66699">IBM Cloud インフラストラクチャー</text>
+	<text class="st2 st5" x="43" y="605.66699">IBM Cloud インフラストラクチャー </text>
 <text class="st2 st5" x="42.878681" y="616.93909">プライベート・ネットワーク (プライマリー・サブネット)</text>
 	<text class="st2 st5" x="42.171574" y="666.3949">サービス・ネットワーク</text>
 	</g><line class="st1" x1="731" x2="698" y1="542" y2="584"/>
