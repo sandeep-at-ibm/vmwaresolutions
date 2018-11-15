@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Expandindo e contraindo a capacidade para instâncias do Cloud Foundation
 
@@ -21,7 +25,7 @@ Uma instância do Cloud Foundation pode ter até cinco clusters, um dos quais é
 * Não inclua servidores ESXi do Web client do VMware vSphere. As mudanças que você faz no VMware vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_full}}.
 * A plataforma base que você pediu tem 4 servidores ESXi por padrão. É possível expandir a plataforma para no máximo 32 servidores ESXi. No entanto, o número de {{site.data.keyword.baremetal_short}} que você pode incluir de cada vez é o seguinte:
    * Para a configuração **Pequena** e **Grande**, é possível incluir de 1 a 10 servidores ESXi de cada vez.
-   * Para a configuração **Customizado**, é possível incluir de 1 a 20 servidores ESXi de cada vez.
+   * Para a configuração **Skylake** e **Broadwell**, é possível incluir de 1 a 20 servidores ESXi de cada vez.
 
 ## Procedimento para Incluir Servidores ESXi
 
@@ -61,7 +65,8 @@ Uma instância do Cloud Foundation pode ter até cinco clusters, um dos quais é
 2. Você é notificado por e-mail quando seus servidores ESXi são removidos.
 3. Os servidores ESXi são totalmente recuperados pela infraestrutura do {{site.data.keyword.cloud_notm}} no final do ciclo de faturamento do {{site.data.keyword.cloud_notm}}, que geralmente é de 30 dias.
 
-   **Atenção:** você é cobrado até o término do ciclo de faturamento do {{site.data.keyword.cloud_notm}} pelos servidores ESXi removidos.
+   Você é faturado até o término do ciclo de faturamento do {{site.data.keyword.cloud_notm}} para os servidores ESXi removidos.
+   {:note}
 
 ### Links relacionados
 

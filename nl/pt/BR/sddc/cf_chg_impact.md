@@ -22,7 +22,7 @@ Cada serviço cria uma conta de usuário interna no vCenter Server. Esta conta �
 
 O ID do usuário para esta conta está no formato `<service_name>-<truncated service_uuid>@test.local` ou `<service_name>-<truncated service_uuid>@example-domain.local`. Por exemplo, o ID do usuário usado pelo serviço Veeam on {{site.data.keyword.cloud_notm}} para se conectar ao vCenter Server para executar backups planejados é `Veeam-<Veeam_uuid>@test.local`.
 
-** Nota: **  o  `<service_name>` junto com o `<service_uuid>` trunca para 20 caracteres.
+**Nota:** O `<service_name>` junto com o `<service_uuid>` trunca para 20 caracteres.
 
 ## Recursos do VMware para instâncias do Cloud Foundation
 
