@@ -4,15 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 連接儲存空間基礎架構設計
 
 {{site.data.keyword.vmwaresolutions_full}} 提供的 VMware 技術是以自動化方式部署在全球各地的 {{site.data.keyword.CloudDataCents_notm}} 內。在 {{site.data.keyword.cloud_notm}} 解決方案組合中，基礎 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 供應項目包含最多 10 個叢集，且各包含最多 59 部 vSphere 主機、單一 Platform Services Controller (PSC)，以及有能力管理最多 400 部主機和 4,000 部虛擬機器的 vCenter Server Appliance。
 
-這裡呈現的架構會藉由新增連接儲存空間作為環境的共用儲存裝置，來補充 vCenter Server 解決方案。連接儲存裝置是位於與 vCenter Server 部署相同的 {{site.data.keyword.CloudDataCent_notm}} 內，它包含單一「網路檔案系統 (NFS)」共用，或是來自 {{site.data.keyword.cloud_notm}} 的多個 NFS 匯出。
+這裡呈現的架構會藉由新增連接儲存空間作為環境的共用儲存裝置，補足 vCenter Server 解決方案。連接儲存裝置是位於與 vCenter Server 部署相同的 {{site.data.keyword.CloudDataCent_notm}} 內，它包含單一「網路檔案系統 (NFS)」共用，或是來自 {{site.data.keyword.cloud_notm}} 的多個 NFS 匯出。
 
 下圖說明 vCenter Server 部署上連接儲存空間的整體架構。
 
@@ -26,7 +30,7 @@ lastupdated: "2018-09-24"
 
 ## 實體網路設計
 
-實體網路是由 {{site.data.keyword.cloud_notm}} 處理。本節說明 {{site.data.keyword.cloud_notm}} 提供的實體網路，它與連接儲存空間相關。
+實體網路是由 {{site.data.keyword.cloud_notm}} 處理。本節說明 {{site.data.keyword.cloud_notm}} 提供的實體網路與連接儲存空間的關係。
 
 ### IBM Cloud 網路概觀
 
@@ -46,7 +50,7 @@ lastupdated: "2018-09-24"
 
 ## 實體儲存空間設計
 
-本節呈現出現在 {{site.data.keyword.cloud_notm}} 中的連接儲存裝置配置。連接儲存裝置會補充現有的 vCenter Server 解決方案。因此，不會呈現實體主機內部的本端連接磁碟。
+本節呈現出現在 {{site.data.keyword.cloud_notm}} 中的連接儲存裝置配置。連接儲存裝置補足了現有的 vCenter Server 解決方案。因此，不會呈現實體主機內部的本端連接磁碟。
 
 ## 連接儲存空間效能
 
@@ -56,7 +60,9 @@ IOPS 的範圍是從 100 到 48,000，可使用範圍從 20 GB - 12 TB 的儲存
 
 在本設計中，vCenter Server 解決方案針對連接儲存空間提供耐久性儲存空間。因此，您可以選取及連接（透過自動化）耐久性 NFS 匯出，其大小的範圍是從 20 GB 到上限 12 TB。{{site.data.keyword.cloud_notm}} 容許最多 64 部 vSphere ESXi 主機連接到單一耐久性 NFS 匯出。
 
-耐久性可用於三個 IOPS 效能層級，以支援不同的應用程式需求。請注意，在佈建 NFS 共用之後，可以將其調整大小或重新配置為容許更多或更少 IOPS。
+耐久性提供三種 IOPS 效能層級，以支援不同的應用程式需求。
+
+在佈建 NFS 共用之後，可以調整其大小或重新配置，以容許更多或更少 IOPS。{:note}
 
 如需詳細的 IOPS 選項，請參閱[訂購 vCenter Server 實例](../../vcenter/vc_orderinginstance.html)中的_儲存空間設定_ 一節。
 
