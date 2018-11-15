@@ -16,7 +16,7 @@ VMware NSX Edge Services Gateway (ESG) 解決方案是 {{site.data.keyword.cloud
 
 ## NSX Edge Services Gateway 概觀
 
-NSX Edge Services Gateway 會提供一般閘道服務（例如「動態主機配置通訊協定 (DHCP)」、「虛擬私密網路 (VPN)」、「網址轉換 (NAT)」、動態遞送及負載平衡），以將隔離的 Stub 網路連接至共用（上行鏈路）網路。NSX Edge 的一般部署包括非管制區 (DMZ)、VPN Extranets 及多方承租戶雲端環境，而在這些環境中，NSX Edge 會建立每個承租戶、工作負載或管理元件的虛擬界限。NSX Edge Service Gateway 內提供下列特性。
+NSX Edge Services Gateway 會提供一般閘道服務（例如「動態主機配置通訊協定 (DHCP)」、「虛擬專用網路 (VPN)」、「網址轉換 (NAT)」、動態遞送及負載平衡），以將隔離的 Stub 網路連接至共用（上行鏈路）網路。NSX Edge 的一般部署包括非管制區 (DMZ)、VPN Extranets 及多方承租戶雲端環境，而在這些環境中，NSX Edge 會建立每個承租戶、工作負載或管理元件的虛擬界限。NSX Edge Service Gateway 內提供下列特性。
 
 表格 1. NSX Edge Service Gateway 提供的特性
 

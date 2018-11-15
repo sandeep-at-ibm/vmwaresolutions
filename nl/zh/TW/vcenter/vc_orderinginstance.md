@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 訂購 vCenter Server 實例
 
@@ -30,7 +34,7 @@ lastupdated: "2018-09-27"
   |完整的 ESXi 伺服器名稱| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 伺服器的序號。長度上限為 50 個字元。|  
   |PSC FQDN |`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 長度上限為 50 個字元。|
 
-**重要事項：**請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
+請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。{:important}
 
 ## 系統設定
 
@@ -59,20 +63,54 @@ lastupdated: "2018-09-27"
 
 對於非「事業夥伴」使用者，您可以選取**購買隨附**以將 IBM 提供的 VMware 授權用於這些元件，也可以選取**我將提供**並輸入自己的授權碼以「自帶授權 (BYOL)」。
 
+
 **注意：**
 * 需要最少有 8 個 CPU 的授權，這是針對 4 部伺服器，而每部伺服器都有 2 個 CPU。每個 VMware 元件的授權選項適用於基礎實例，以及之後新增至該實例的任何 ESXi 伺服器。請確保您的授權支援基礎架構中的未來容量擴充。
 * 使用者介面上會指出最低授權版本。如果支援不同的元件版本，您可以選取您想要的版本。您必須負責確保所提供的授權碼對於每一個選取的 VMware 元件都是正確的。
 * 對於 vSphere，會在訂購時產生授權費用，但授權費用接著會記入您的帳戶中。
 * 實例部署完成之後，您可以使用 VMware vSphere Web Client 來變更所提供的任何授權。
-* 您為其提供授權之 VMware 元件的支援是由 VMware 所提供，而不是由「IBM 支援中心」所提供。
+* 您為其提供授權之 VMware 元件的支援是由 VMware 所提供，而不是由「IBM 支援中心」所提供。{:important}
 
 ## Bare Metal Server 設定
 
-Bare Metal Server 設定是根據您選取的資料中心，以及選擇預先配置還是自訂配置。
+Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server 配置。
 
 ### 資料中心位置
 
 選取要在其中管理實例的 {{site.data.keyword.CloudDataCent_notm}}。
+
+### Skylake
+
+當您選取 **Skylake** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。
+
+表 2. Skylake {{site.data.keyword.baremetal_short}} 的選項
+
+| CPU 型號選項             |RAM 選項          |
+|:------------- |:------------- |
+|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
+### SAP 認證
+
+當您選取 **SAP 認證**時，無法變更 CPU 或 RAM 設定。
+
+根據您的需求，選取 Bare Metal Server 配置：
+  * 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 192 GB RAM
+  * 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 384 GB RAM
+  * 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 768 GB RAM
+
+### Broadwell
+
+當您選取 **Broadwell** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。
+
+表 3. Broadwell {{site.data.keyword.baremetal_short}} 的選項
+
+| CPU 型號選項             |RAM 選項          |
+|:------------- |:------------- |
+|雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 
 ### 預先配置
 
@@ -83,30 +121,13 @@ Bare Metal Server 設定是根據您選取的資料中心，以及選擇預先�
   * 中型（雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz / 256 GB RAM / 2 個磁碟機）
   * 大型（雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz / 512 GB RAM / 2 個磁碟機）
 
-### 自訂
-
-當您選取**自訂**時，可以根據需求來選擇 CPU 與 RAM 組合。
-
-選取 Bare Metal Server 的 CPU 型號及 RAM。
-
-表 2. 自訂 {{site.data.keyword.baremetal_short}} 的選項
-
-| CPU 型號選項             |RAM 選項          |
-|:------------- |:------------- |
-|雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-
 ### Bare Metal Server 數目
 
 對於實例中的起始叢集，您可以如下所示配置 ESXi 伺服器數目：
+* 如果您選取 **Skylake** 或 **Broadwell**，則可以配置在 2 - 20 範圍內的 ESXi 伺服器數目。
 * 如果您選取**預先配置**，您可以配置在 2 - 10 範圍內的 ESXi 伺服器數目。
-* 如果您選取**自訂**，您可以配置在 2 - 20 範圍內的 ESXi 伺服器數目。
 
-所有 ESXi 伺服器都會共用設定的配置。起始部署之後，您可以再新增四個叢集。如果您對 VMware vSAN 選取了**自訂**配置，則起始叢集和部署後的叢集都需要 4 部 ESXi 伺服器。如需最少 ESXi 伺服器數目的相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)。
+所有 ESXi 伺服器都會共用設定的配置。起始部署之後，您可以再新增四個叢集。如果您對 VMware vSAN 選取 **Skylake** 或 **Broadwell** 配置，則起始叢集和部署後的叢集都需要 4 部 ESXi 伺服器。如需最少 ESXi 伺服器數目的相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)。
 
 ## 儲存空間設定
 
@@ -114,7 +135,7 @@ Bare Metal Server 設定是根據您選取的資料中心，以及選擇預先�
 
 ### vSAN 儲存空間
 
-vSAN 僅適用於**自訂** Bare Metal 配置。請指定下列 vSAN 選項：
+vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下列 vSAN 選項：
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
 * 如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
@@ -126,7 +147,7 @@ vSAN 僅適用於**自訂** Bare Metal 配置。請指定下列 vSAN 選項：
 
 當您選取 **NFS 儲存空間**時，可以為所有共用使用相同設定的實例新增檔案層次共用儲存空間，也可以為每一個檔案共用指定不同的配置設定。請指定下列 NFS 選項：
 
-**附註：**檔案共用數目必須在 1 到 32 的範圍內。
+檔案共用數目必須在 1 到 32 的範圍內。{:note}
 
 * **個別配置共用**：選取以為每一個檔案共用指定不同的配置設定。
 * **共用數目**：當您使用每個檔案共用的相同配置設定時，請指定您要新增之 NFS 共用儲存空間的檔案共用數目。
@@ -134,7 +155,7 @@ vSAN 僅適用於**自訂** Bare Metal 配置。請指定下列 vSAN 選項：
 * **效能**：根據您的工作負載需求，選取每 GB 的 IOPS（每秒輸入/輸出作業數）。
 * **新增 NFS**：選取以新增要使用不同配置設定的個別檔案共用。
 
-表 3. NFS 效能層次選項
+表 4. NFS 效能層次選項
 
 |選項          |詳細資料      |
   |:------------- |:------------- |
@@ -170,7 +191,7 @@ vSAN 僅適用於**自訂** Bare Metal 配置。請指定下列 vSAN 選項：
 * 最後一個字串只能包含英文字母。
 * 最後一個字串的長度範圍必須在 2 到 24 個字元之間。
 
-**附註：**主機和 VM 的「完整網域名稱 (FQDN)」長度上限為 50 個字元。網域名稱必須在這個長度上限以內。
+主機和 VM 的「完整網域名稱 (FQDN)」長度上限為 50 個字元。網域名稱必須在這個長度上限以內。{:note}
 
 ### 公用或專用網路
 
@@ -200,9 +221,8 @@ vSAN 僅適用於**自訂** Bare Metal 配置。請指定下列 vSAN 選項：
 * **主要子網路**已指派給實體主機，以進行公用網路存取。
 * **主要專用子網路**已指派給實體主機，以處理管理資料流量。
 
-**重要事項：**
 * 確保所選取 VLAN 上的防火牆配置未封鎖管理資料流量。
-* 確保您選取的所有 VLAN 都在相同的 Pod 中。無法在混合 Pod VLAN 上佈建 ESXi 伺服器。
+* 確保您選取的所有 VLAN 都在相同的 Pod 中。無法在混合 Pod VLAN 上佈建 ESXi 伺服器。{:important}
 
 ### DNS 配置
 
@@ -211,7 +231,7 @@ vSAN 僅適用於**自訂** Bare Metal 配置。請指定下列 vSAN 選項：
 * **適用於 Active Directory/DNS 的單一公用 Windows VSI**：適用於 Microsoft Active Directory (AD) 的單一 Microsoft Windows Server VSI 充當登錄主機及 VM 之實例的 DNS，已部署並可查閱。依預設，已對 1.9 版以及更新版本的實例部署這個選項。
 * **管理叢集上有兩部高可用性的專用 Windows Server VM**：部署兩部 Microsoft Windows VM，協助加強安全及穩健性。
 
-**重要事項：**如果您將實例配置為使用兩部 Microsoft Windows VM，則必須提供兩份 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及（或）Microsoft Windows Server 2012 R2 Datacenter 版本授權。
+如果您將實例配置為使用兩部 Microsoft Windows VM，則必須提供兩份 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及（或）Microsoft Windows Server 2012 R2 Datacenter 版本授權。{:important}
 
 每一份授權都只能指派給一部單一實體伺服器，且最多涵蓋兩個實體處理器。以一份 Standard 版本授權而言，每部雙處理器伺服器都可以執行兩部虛擬化 Microsoft Windows VM。因此，必須有兩份授權，因為兩部 Microsoft Windows VM 部署在兩部不同的主機中。
 
@@ -244,8 +264,9 @@ vSAN 僅適用於**自訂** Bare Metal 配置。請指定下列 vSAN 選項：
 6. 完成 Bare Metal Server 設定。
     1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
     2. 選取 Bare Metal Server 配置。
+       * 當您選取 **Skylake** 或 **Broadwell** 時，請指定 CPU 型號及 RAM 大小。
+       * 當您選取 **SAP 認證**時，請選擇 CPU 型號。
        * 當您選取**預先配置**時，請針對配置選擇**小型**、**中型**或**大型**。
-       * 當您選取**自訂**時，請指定 CPU 型號及 RAM 大小。
     3. 指定 {{site.data.keyword.baremetal_short}} 數目。如果您打算使用 vSAN 作為儲存空間解決方案，則至少需要 4 部 {{site.data.keyword.baremetal_short}}。  
 7. 完成儲存空間配置。
   * 如果您選取 **vSAN 儲存空間**，請指定容量及快取磁碟的磁碟類型、磁碟數目以及「vSAN 授權」版本。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
@@ -281,7 +302,7 @@ vSAN 僅適用於**自訂** Bare Metal 配置。請指定下列 vSAN 選項：
 
 檢視及管理您訂購的 vCenter Server 實例。
 
-**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。{:important}
 
 **警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外來管理您在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，會使您的環境變得不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件

@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 訂購新的 vSphere 叢集
 
@@ -52,7 +54,7 @@ lastupdated: "2018-09-27"
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**附註：**對於「IBM 事業夥伴」使用者，無法使用「自帶授權 (BYOL)」選項。
+對於「IBM 事業夥伴」使用者，無法使用「自帶授權 (BYOL)」選項。{:note}
 
 ### 非事業夥伴使用者的個別元件
 
@@ -66,7 +68,7 @@ lastupdated: "2018-09-27"
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**附註：**當您訂購 VMware vSphere Enterprise Plus 6.0 時，VMware vSAN 元件無法使用。如果您打算使用自己的 VMware vSphere Enterprise Plus 6.0 授權，則會代表您開立 {{site.data.keyword.cloud_notm}} 基礎架構問題單。此問題單要求將已訂購的 {{site.data.keyword.baremetal_short}} 的 vSphere 授權取代為您提供的授權。
+當您訂購 VMware vSphere Enterprise Plus 6.0 時，VMware vSAN 元件無法使用。如果您打算使用自己的 VMware vSphere Enterprise Plus 6.0 授權，則會代表您開立 {{site.data.keyword.cloud_notm}} 基礎架構問題單。此問題單要求將已訂購的 {{site.data.keyword.baremetal_short}} 的 vSphere 授權取代為您提供的授權。{:note}
 
 ### 授權選項
 
@@ -76,7 +78,7 @@ lastupdated: "2018-09-27"
 
 如果您選擇購買任何授權（除了 vSphere Enterprise Plus 及 vCenter Server 以外），且您訂購多部 ESXi 伺服器，則會代表您自動開立 {{site.data.keyword.cloud_notm}} 問題單，以結合授權碼。您負責追蹤問題單，以確保您只使用 DevOps 團隊所產生的授權碼。
 
-**重要事項：**將個別授權碼與結合的授權碼一起使用，不符合您所需授權的付款需求。
+將個別授權碼與結合的授權碼一起使用，不符合您所需授權的付款需求。{:important}
 
 ## Bare Metal Server 設定
 
@@ -84,24 +86,40 @@ lastupdated: "2018-09-27"
 
 選取要在其中管理叢集的 {{site.data.keyword.CloudDataCent_notm}}。
 
-**附註：**如果您選取 vSAN 元件，則會依 SSD 可用性來過濾位置清單。
+如果您選取 vSAN 元件，則會依 SSD 可用性來過濾位置清單。{:note}
 
-### CPU 型號及 RAM
+### Skylake
 
-指定 Bare Metal Server 的 CPU 型號及 RAM。
+當您選取 **Skylake** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。可用的選項取決於您是否已選取 VMware vSAN 元件。
 
-表 2. 自訂 {{site.data.keyword.baremetal_short}} 的選項
+表 2. Skylake {{site.data.keyword.baremetal_short}} 的選項
+
+| CPU 型號選項             |RAM 選項          |
+|:------------- |:------------- |
+|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
+### SAP 認證
+
+如果您先前已選取 VMware vSAN，則無法使用 **SAP 認證**標籤。當您選取 **SAP 認證**時，無法變更 CPU 或 RAM 設定。
+
+根據您的需求，選取 Bare Metal Server 配置：
+  * 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 192 GB RAM
+  * 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.2 GHz / 384 GB RAM
+  * 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 768 GB RAM
+
+### Broadwell
+
+當您選取 **Broadwell** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。可用的選項取決於您是否已選取 VMware vSAN 元件。
+
+表 3. Broadwell {{site.data.keyword.baremetal_short}} 的選項
 
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-
-可用的選項取決於您是否已選取 VMware vSAN 元件。
 
 ### Bare Metal Server 數目
 
@@ -206,7 +224,9 @@ lastupdated: "2018-09-27"
     **重要事項：**您負責追蹤問題單，以在新訂購的 ESXi 伺服器上取代 vSphere 授權。因此 {{site.data.keyword.cloud_notm}} 基礎架構授權取消初始提供的 {{site.data.keyword.cloud_notm}} 基礎架構 vSphere 授權費。如果要取代您的 ESXi vSphere 授權，請參閱[配置 ESXi 主機的授權設定](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}。
 5. 完成 Bare Metal Server 設定：
    1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理叢集。
-   2. 選取 CPU 型號及 RAM 大小。
+   2. 選取 Bare Metal Server 配置。
+      * 當您選取 **Skylake** 或 **Broadwell** 時，請指定 CPU 型號及 RAM 大小。
+      * 當您選取 **SAP 認證**時，請選擇 CPU 型號。
    3. 指定 Bare Metal Server 數目。
 6. 如果您選取 **VMware vSAN** 元件，請完成 vSAN 儲存空間配置。指定容量及快取磁碟的磁碟類型以及磁碟數目。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
 7. 完成網路介面設定：
@@ -220,7 +240,7 @@ lastupdated: "2018-09-27"
    * 若要將配置儲存為範本而不下訂單，請按一下**儲存配置**。
    * 若要下訂單，請確定要收費的帳戶正確，請檢閱並接受條款，然後按一下**佈建**。
 
-   **附註：**僅安裝 {{site.data.keyword.baremetal_short}}。您負責在叢集部署之後安裝及配置各種元件，例如 VMware vCenter、VMware NSX、VMware vSAN。
+   僅安裝 {{site.data.keyword.baremetal_short}}。您負責在叢集部署之後安裝及配置各種元件，例如 VMware vCenter、VMware NSX、VMware vSAN。{:note}
 
 ### 結果
 
@@ -228,7 +248,7 @@ lastupdated: "2018-09-27"
 
 如果您已下訂單，則會自動啟動叢集的部署，且您會收到電子郵件確認，指出正在處理該訂單。當叢集已備妥可供使用時，會透過電子郵件通知您。
 
-**附註：**vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。
+vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。{:note}
 
 ### 相關鏈結
 

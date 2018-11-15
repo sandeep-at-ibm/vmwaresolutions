@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -37,4 +37,4 @@ lastupdated: "2018-09-25"
 
 * [利用 IAM 管理使用者存取](../vmonic/iam.html)
 * [邀請使用者存取服務及資源](../vmonic/iamuserinvite.html)
-* [何謂 IBM Cloud IAM](https://console.stage1.bluemix.net/docs/iam/index.html#iamoverview)
+* [何謂 IBM Cloud IAM](../../../iam/index.html)

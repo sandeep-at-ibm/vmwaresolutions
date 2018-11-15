@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -38,20 +38,29 @@ lastupdated: "2018-09-28"
 
 ### Bare Metal Server 設定
 
-#### 自訂
+#### Skylake
 
 指定 Bare Metal Server 的 CPU 型號及 RAM。可用的選項可能會根據一開始部署您實例所用的版本而不同。
 
-表 1. 自訂 {{site.data.keyword.baremetal_short}} 的選項
+表 1. Skylake {{site.data.keyword.baremetal_short}} 的選項
+
+| CPU 型號選項             |RAM 選項          |
+|:------------- |:------------- |
+|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+
+#### Broadwell
+
+指定 Bare Metal Server 的 CPU 型號及 RAM。可用的選項可能會根據一開始部署您實例所用的版本而不同。
+
+表 2. Broadwell {{site.data.keyword.baremetal_short}} 的選項
 
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 #### Bare Metal Server 數目
 
@@ -89,7 +98,7 @@ lastupdated: "2018-09-28"
 * **效能**：根據您的工作負載需求，選取每 GB 的 IOPS（每秒輸入/輸出作業數）。
 * **新增 NFS**：選取以新增要使用不同配置設定的個別檔案共用。
 
-表 2. NFS 效能層次選項
+表 3. NFS 效能層次選項
 
 |選項          |詳細資料      |
   |:------------- |:------------- |

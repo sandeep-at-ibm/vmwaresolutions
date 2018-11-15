@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 擴充及縮減 Cloud Foundation 實例的容量
 
@@ -21,7 +25,7 @@ Cloud Foundation 實例最多可以有五個叢集，而其中一個是預設值
 * 不要從 VMware vSphere Web Client 新增 ESXi 伺服器。您在 VMware vSphere Web Client 上所做的變更不會與 {{site.data.keyword.vmwaresolutions_full}} 主控台同步。
 * 依預設，您訂購的基礎平台會有 4 部 ESXi 伺服器。您可以將平台擴充至最多 32 部 ESXi 伺服器。不過，您可以同時新增的 {{site.data.keyword.baremetal_short}} 數目如下所示：
    * 如果是**小型**及**大型**配置，您一次可以新增 1 - 10 部 ESXi 伺服器。
-   * 如果是**自訂**配置，您一次可以新增 1 - 20 部 ESXi 伺服器。
+   * 如果是 **Skylake** 和 **Broadwell** 配置，您一次可以新增 1 - 20 部 ESXi 伺服器。
 
 ## 新增 ESXi 伺服器的程序
 
@@ -61,7 +65,7 @@ Cloud Foundation 實例最多可以有五個叢集，而其中一個是預設值
 2. 移除 ESXi 伺服器時，會透過電子郵件通知您。
 3. 在 {{site.data.keyword.cloud_notm}} 計費週期（通常是 30 天）結束時，{{site.data.keyword.cloud_notm}} 基礎架構會完全收回 ESXi 伺服器。
 
-   **注意：**將向您收取已移除的 ESXi 伺服器到 {{site.data.keyword.cloud_notm}} 計費週期結束為止的費用。
+   將針對已移除的 ESXi 伺服器，向您收取到 {{site.data.keyword.cloud_notm}} 計費週期結束為止的費用。{:note}
 
 ### 相關鏈結
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-10-19"
 
 ---
 
@@ -80,7 +80,7 @@ VMware Federal on {{site.data.keyword.cloud_notm}} 提供選項，以在 WDC03 F
 
 現行版本會套用 VMware NSX for vSphere 6.3.5 元件更新。如需元件的相關資訊，請參閱 [vCenter Server 資料清單](../vcenter/vc_bom.html)。
 
-對於已部署在 2.2 版或更新版本的 VMware vCenter Server 實例，NSX 及埠群組配置設定已變更。如需相關資訊，請參閱 [vCenter Server 軟體資料清單](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings)中的 *NSX 及埠群組配置設定* 小節。
+對於已部署在 2.2 版或更新版本的 VMware vCenter Server 實例，NSX 及埠群組配置設定已變更。如需相關資訊，請參閱 [vCenter Server 軟體資料清單](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings)的 *NSX 及埠群組配置設定*小節。
 
 ### DNS 配置的新選項
 

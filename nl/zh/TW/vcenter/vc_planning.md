@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -24,36 +24,36 @@ vCenter Server 部署具有嚴格的實體基礎架構需求。因此，您只�
 
 | {{site.data.keyword.CloudDataCent_notm}} |位置|地區           |伺服器選項     |
 |:----------------------|:---------|:-------|:---------------|
-|AMS03 |阿姆斯特丹|歐洲|自訂|
-|CHE01 |清奈|亞太地區|自訂|
-|DAL09 |達拉斯|NA 南部|自訂|
-|DAL10 |達拉斯|NA 南部|自訂、小型、中型、大型|
-|DAL12 |達拉斯|NA 南部|自訂|
-|DAL13 |達拉斯|NA 南部|自訂|
-|FRA02 |法蘭克福|歐洲|自訂、小型、中型、大型|
-|FRA04 |法蘭克福|歐洲|自訂|
-|HKG02 |香港|亞太地區|自訂|
-|LON02 |倫敦|歐洲|自訂|
-|LON04 |倫敦|歐洲|自訂|
-|LON06 |倫敦|歐洲|自訂、小型、中型、大型|
-|MEL01 |墨爾本|亞太地區|自訂|
-|MEX01 |克雷塔羅|NA 南部|自訂|
-|MIL01 |米蘭|歐洲|自訂|
-|MON01 |蒙特婁|NA 東部|自訂|
-|OSL01 |奧斯陸|歐洲|自訂|
-|PAR01 |巴黎|歐洲|自訂|
-|SAO01 |聖保羅|南美洲|自訂|
-|SEO01 |首爾|亞太地區|自訂|
-|SJC03 |聖荷西|NA 西部|自訂、小型、中型、大型|
-|SJC04 |聖荷西|NA 西部|自訂|
-|SNG01 |新加坡|亞太地區|自訂|
-|SYD01 |雪梨|亞太地區|自訂|
-|SYD04 |雪梨|亞太地區|自訂|
-|TOK02 |東京|亞太地區|自訂|
-|TOR01 |多倫多|NA 東部|自訂、小型、中型、大型|
-|WDC04 |華盛頓特區|NA 東部|自訂、小型、中型、大型|
-|WDC06 |華盛頓特區|NA 東部|自訂|
-|WDC07 |華盛頓特區|NA 東部|自訂|
+|AMS03 |阿姆斯特丹|歐洲| Skylake、Broadwell |
+|CHE01 |清奈|亞太地區| Skylake、Broadwell |
+|DAL09 |達拉斯|NA 南部| Skylake、Broadwell |
+|DAL10 |達拉斯|NA 南部| Skylake、Broadwell、小型、中型、大型 |
+|DAL12 |達拉斯|NA 南部| Skylake、Broadwell |
+|DAL13 |達拉斯|NA 南部| Skylake、Broadwell |
+|FRA02 |法蘭克福|歐洲| Skylake、Broadwell、小型、中型、大型 |
+|FRA04 |法蘭克福|歐洲| Skylake、Broadwell |
+|HKG02 |香港|亞太地區| Skylake、Broadwell |
+|LON02 |倫敦|歐洲| Skylake、Broadwell |
+|LON04 |倫敦|歐洲| Skylake、Broadwell |
+|LON06 |倫敦|歐洲| Skylake、Broadwell、小型、中型、大型 |
+|MEL01 |墨爾本|亞太地區| Skylake、Broadwell |
+|MEX01 |克雷塔羅|NA 南部| Skylake、Broadwell |
+|MIL01 |米蘭|歐洲| Skylake、Broadwell |
+|MON01 |蒙特婁|NA 東部| Skylake、Broadwell |
+|OSL01 |奧斯陸|歐洲| Skylake、Broadwell |
+|PAR01 |巴黎|歐洲| Skylake、Broadwell |
+|SAO01 |聖保羅|南美洲| Skylake、Broadwell |
+|SEO01 |首爾|亞太地區| Skylake、Broadwell |
+|SJC03 |聖荷西|NA 西部| Skylake、Broadwell、小型、中型、大型 |
+|SJC04 |聖荷西|NA 西部| Skylake、Broadwell |
+|SNG01 |新加坡|亞太地區| Skylake、Broadwell |
+|SYD01 |雪梨|亞太地區| Skylake、Broadwell |
+|SYD04 |雪梨|亞太地區| Skylake、Broadwell |
+|TOK02 |東京|亞太地區| Skylake、Broadwell |
+|TOR01 |多倫多|NA 東部| Skylake、Broadwell、小型、中型、大型 |
+|WDC04 |華盛頓特區|NA 東部| Skylake、Broadwell、小型、中型、大型 |
+|WDC06 |華盛頓特區|NA 東部| Skylake、Broadwell |
+|WDC07 |華盛頓特區|NA 東部| Skylake、Broadwell |
 
 部分 {{site.data.keyword.CloudDataCents_notm}} 提供預先配置的**小型**、**中型**及**大型** Bare Metal Server 選項。根據可用性及庫存供應，{{site.data.keyword.CloudDataCents_notm}} 可能會在 {{site.data.keyword.vmwaresolutions_short}} 主控台中顯示狀態指示器，以協助您規劃部署。
 

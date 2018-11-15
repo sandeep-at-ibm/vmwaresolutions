@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware 實例的部署後考量
 
@@ -14,7 +18,7 @@ lastupdated: "2018-10-03"
 
 請檢閱下列考量，以瞭解您在部署實例前後管理及操作實例的責任。
 
-**附註：**以下並非完整清單。如需相關資訊，請參閱 [IBM 管理服務](../../services/managing_imi.html)。
+以下並非完整清單。如需相關資訊，請參閱 [IBM 管理服務](../../services/managing_imi.html)。{:note}
 
 ## IBM Cloud 帳戶存取
 

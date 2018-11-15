@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-01"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # NSX Edge Services Gateway 設計
 
@@ -16,7 +20,8 @@ NSX Edge Services Gateway on {{site.data.keyword.cloud}} 解決方案提供的 V
 
 內部架構指定將必要 NSX Edge 元件部署至 VMware Cloud Foundation 聚合叢集或 VMware vCenter Server 叢集的資源儲存區中。
 
-**附註：**在下圖中，VMware vSAN 是選用項目。
+在下圖中，VMware vSAN 是選用項目。
+{:note}
 
 圖 1. {{site.data.keyword.cloud_notm}} 上的雲端網路服務
 

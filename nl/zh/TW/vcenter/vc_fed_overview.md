@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-09-27"
 
 ### Bare Metal Server
 
-您可以使用下列其中一項配置，訂購兩部以上的自訂 {{site.data.keyword.baremetal_short}}：
+您可以使用下列其中一項配置，訂購兩部以上的 {{site.data.keyword.baremetal_short}}：
 
 * 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
 * 2-CPU Intel Skylake Generation（Intel Xeon 4100/5100/6100 系列）
@@ -42,7 +42,7 @@ lastupdated: "2018-09-27"
     **重要事項：**您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server 實例。此外，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
   * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway，IBM 將它部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)。
 
-  **附註：**在執行保護已部署的 VMware Federal 實例的動作時，會移除用於出埠 HTTPS 管理資料流量的 VMware NSX Edge Services (ESG)。如需相關資訊，請參閱[保護 VMware Federal 實例](vc_fed_securinginstance.html)。
+  **附註：**在執行保護已部署的 VMware Federal 實例的動作時，會移除用於出埠 HTTPS 管理資料流量的 VMware NSX Edge Services Gateway (ESG)。如需相關資訊，請參閱[保護 VMware Federal 實例](vc_fed_securinginstance.html)。
 
 ### 虛擬伺服器實例
 

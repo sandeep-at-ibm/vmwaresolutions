@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
-# VUM 概觀
+# VMware Update Manager 概觀
 
-VUM 使用多階段處理程序來升級 vSphere 物件以及套用修補程式或延伸規格。此處理程序會啟用具有最小系統關閉時間的順利更新程序。在我們查看此處理程序之前，必須瞭解下列術語：
+VMware Update Manager (VUM) 使用多階段處理程序來升級 vSphere 物件以及套用修補程式或延伸規格。此處理程序會啟用具有最小系統關閉時間的順利更新程序。在我們查看此處理程序之前，必須瞭解下列術語：
 * **庫存物件** - vCenter 內的物件，例如虛擬機器、虛擬應用裝置或 vSphere ESXi 主機
 * **基準線** - 基準線包含一個以上修補程式、延伸規格、服務套件、錯誤修正程式或升級的集合，而且可以分類為修補程式、延伸規格或升級基準線。有兩種分類的基準線：「主機」及 VM/VA，而且兩者都有 VMware 預先定義的基準線，「自訂」基準線可以新增為必要項目：
   - 預先定義的主機基準線：
@@ -63,5 +63,5 @@ VUM 用戶端介面提供兩個主視圖：
 
 ### 相關鏈結
 
-* [VMware HCX on IBM Cloud 解決方案](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* VMware HCX on IBM Cloud 解決方案架構 (https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（展示）

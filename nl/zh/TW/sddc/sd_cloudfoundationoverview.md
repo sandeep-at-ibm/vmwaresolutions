@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Cloud Foundation 概觀
 
@@ -43,15 +47,16 @@ lastupdated: "2018-09-27"
 
 Cloud Foundation 實例中包括下列元件。
 
-**附註：**硬體、網路、虛擬機器及儲存空間所產生的費用可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+硬體、網路、虛擬機器及儲存空間所產生的費用，可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。{:note}
 
 ### Bare Metal Server
 
 您可以使用下列其中一個配置來訂購 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}：
-*  **自訂**：具有所選取 CPU 型號及 RAM 大小的 {{site.data.keyword.baremetal_short}}。   
-   * 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
+*  **Skylake** 或 **Broadwell**：具有所選取 CPU 型號及 RAM 大小的 {{site.data.keyword.baremetal_short}}。   
    * 2-CPU Intel Skylake Generation（Intel Xeon 4100/5100/6100 系列）
-**附註：**如果您規劃使用 vSAN 儲存空間，則配置需要四部 {{site.data.keyword.baremetal_short}}。
+   * 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
+
+   如果您計劃使用 vSAN 儲存空間，則配置需要四個 {{site.data.keyword.baremetal_short}}。{:note}
 * **預先配置**：2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
   * **小型**（雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz / 128 GB RAM / 12 個磁碟）
   * **大型**（雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz / 512 GB RAM / 12 個磁碟）
@@ -63,7 +68,8 @@ Cloud Foundation 實例中包括下列元件。
 * 三個 VLAN（虛擬 LAN）：一個公用 VLAN 和兩個專用 VLAN
 * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，其由 IBM 部署為管理網路拓撲的一部分。IBM 管理虛擬機器會利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[管理服務 NSX Edge 是否有安全風險？](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **重要事項：**您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 Cloud Foundation 實例。此外，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
+  您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 Cloud Foundation 實例。此外，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
+{:important}
 
 * 如果您有現有叢集，並且其中具有現行 VMware vSphere 版本所支援的 ESXi 伺服器，則會自動啟用 EVC（加強型 vMotion 相容性）特性。EVC 提供叢集裡所有 ESXi 伺服器的 vMotion 相容性，方法是確保叢集裡的所有 ESXi 伺服器都向虛擬機器公開一組相同的 CPU 特性。透過使用 EVC，即使 ESXi 伺服器上的實際 CPU 可能不同，虛擬機器還是可以在叢集的任何 ESXi 伺服器之間移轉。
 
@@ -80,7 +86,7 @@ Cloud Foundation 實例中包括下列元件。
 * 兩個 1-TB SATA 開機磁碟
 * 兩個 960-GB SSD（固態磁碟）快取磁碟
 * 一個 RAID 磁碟控制器
-* 僅針對**自訂**配置，您可以根據需求來設定磁碟機數目以及磁碟類型和容量。同時，您也具有「高效能 Intel Optane」選項，可提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。「高效能 Intel Optane」選項取決於 CPU 型號。
+* 僅針對 **Skylake** 和 **Broadwell** 配置，您可以根據需求來設定磁碟機數目以及磁碟類型和容量。同時，您也具有「高效能 Intel Optane」選項，可提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。「高效能 Intel Optane」選項取決於 CPU 型號。
 * 僅針對**預先配置**、**小型**配置：兩個 1.9 TB SSD 容量磁碟
 * 僅針對**預先配置**、**大型**配置：四個 3.8 TB SSD 容量磁碟
 
@@ -110,7 +116,7 @@ Cloud Foundation 實例中包括下列元件。
 * 一個 SDDC Manager 授權
 * 一筆支援與服務費用
 
-**重要事項：**您必須從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 {{site.data.keyword.cloud_notm}} 帳戶中所建立的 {{site.data.keyword.vmwaresolutions_short}} 元件，而不是在主控台以外的 {{site.data.keyword.slportal}} 或透過任何其他方法進行管理。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。{:important}
 
 **警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的所有 {{site.data.keyword.vmwaresolutions_short}} 元件，可能會讓您的環境不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件

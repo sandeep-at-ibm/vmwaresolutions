@@ -4,13 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Zerto on IBM Cloud 概觀
 
 Zerto on {{site.data.keyword.cloud}} 服務可將抄寫及災難回復功能整合到部署供應項目，以保護及回復 {{site.data.keyword.cloud_notm}} 上位於您 VMware 虛擬環境中的資料。
+
+只有在 1.2 版或更新版本中部署的實例，才能使用此服務。目前安裝的 Zerto 版本為 6.0 更新 3。
+{:note}
 
 ## Zerto on IBM Cloud 的技術規格
 
@@ -23,7 +30,7 @@ Zerto on {{site.data.keyword.cloud}} 服務可將抄寫及災難回復功能整�
 * 一個虛擬服務實例 (VSI) - Zerto Virtual Manager
 * 2 x 2.0 GHz 核心
 * 4 GB RAM
-* Windows Server 2012 R2 Standard Edition（64 位元）
+* Windows Server 2016 Standard Edition（64 位元）
 
 ### 儲存空間
 
@@ -36,7 +43,7 @@ Zerto on {{site.data.keyword.cloud}} 服務可將抄寫及災難回復功能整�
 
 ### 授權及費用
 
-Zerto Replication 5.5 版授權
+Zerto Replication 6.0 版更新 3 授權
 
 ### 相關鏈結
 

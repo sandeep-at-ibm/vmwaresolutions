@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 訂購、檢視及移除 vCenter Server 實例的服務
 
@@ -14,7 +18,7 @@ lastupdated: "2018-09-27"
 
 ## vCenter Server 實例可用的服務
 
-下表顯示可用於 vCenter Server 實例的服務。
+下表顯示可用於 vCenter Server 實例的服務，以及已安裝的服務版本。
 
 表 1. vCenter Server 實例的可用服務
 
@@ -22,14 +26,14 @@ lastupdated: "2018-09-27"
 |----------------------------------------------------------------------------------------|------------------|
 | [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE 13.1 版 | 1.9 版以及更新版本 |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)       | 300 系列 | 2.0 版以及更新版本 |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 5.6 | 2.0 版以及更新版本 |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 6.0.3 | 2.0 版以及更新版本 |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | 2.3 版以及更新版本 |
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | 2.3 版以及更新版本 |
 | [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | 2.5 版以及更新版本 |
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | 10.1.1 Patch 1 | 2.2 版以及更新版本 |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | 2.2 版以及更新版本 |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | 9.5u3 | 1.8 版以及更新版本 |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 5.5u4 Patch 2 | 1.2 版以及更新版本 |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 6.0 更新 3 | 1.2 版以及更新版本 |
 
 ## 將服務新增至 vCenter Server 實例的程序
 
@@ -61,7 +65,7 @@ lastupdated: "2018-09-27"
 
 順利完成服務的移除之後，會透過電子郵件通知您，且會從實例的**服務**頁面移除服務。
 
-**注意：**將向您收取已移除的服務到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。
+將針對已移除的服務，向您收取到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。{:note}
 
 ### 相關鏈結
 

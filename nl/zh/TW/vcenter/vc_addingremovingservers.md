@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 擴充及縮減 vCenter Server 實例的容量
 
@@ -19,11 +23,11 @@ lastupdated: "2018-09-27"
 ### 新增 ESXi 伺服器之前
 
 * 不要從 VMware vSphere Web Client 新增 ESXi 伺服器。您在 vSphere Web Client 上所做的變更不會與 {{site.data.keyword.vmwaresolutions_full}} 主控台同步。
-* 具有 NFS 儲存空間的 vCenter Server 實例至少必須有 2 部 ESXi 伺服器。對於已部署在 2.1 版或更新版本的實例，您可以將預設叢集擴充為具有多達 51 部 ESXi 伺服器。每一個非預設叢集可以擴充為具有多達 59 部 ESXi 伺服器。
+* 具有 NFS 儲存空間的 vCenter Server 實例至少必須有 2 部 ESXi 伺服器。對於在 2.1 版或更新版本中部署的實例，您可以將預設叢集擴充為具有多達 51 部 ESXi 伺服器。每一個非預設叢集可以擴充為具有多達 59 部 ESXi 伺服器。
 * 具有 vSAN 儲存空間的 vCenter Server 實例至少必須有 4 部 ESXi 伺服器。
-* 對於已部署在 2.0 版或更早版本的 vCenter Server 實例，您可以將每一個叢集擴充為具有多達 32 部 ESXi 伺服器。您可以一次新增的 {{site.data.keyword.baremetal_short}} 數目如下所示：
+* 對於 2.0 版或更舊版本中部署的 vCenter Server 實例，您可以將每一個叢集擴充為具有多達 32 部 ESXi 伺服器。您可以一次新增的 {{site.data.keyword.baremetal_short}} 數目如下所示：
    * 如果是**小型**、**中型**、**大型**配置，您一次可以新增 1 - 10 部 ESXi 伺服器。
-   * 如果是**自訂**配置，您一次可以新增 1 - 20 部 ESXi 伺服器。如需最少 ESXi 伺服器的相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性？](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+   * 如果是 **Skylake** 和 **Broadwell** 配置，您一次可以新增 1 - 20 部 ESXi 伺服器。如需最少 ESXi 伺服器的相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性？](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## 新增 ESXi 伺服器的程序
 
@@ -64,7 +68,7 @@ lastupdated: "2018-09-27"
 2. 您將會收到電子郵件，通知正在處理您的移除 ESXi 伺服器要求。在主控台上，與 ESXi 伺服器相關聯的叢集狀態會變更為**正在修改**。
 3. 在 {{site.data.keyword.cloud_notm}} 基礎架構計費週期（通常是 30 天）結束時，{{site.data.keyword.cloud_notm}} 基礎架構會完全收回 ESXi 伺服器。
 
-   **注意：**將向您收取已移除的 ESXi 伺服器到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。
+   將針對已移除的 ESXi 伺服器，向您收取到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。{:note}
 
 ### 相關鏈結
 

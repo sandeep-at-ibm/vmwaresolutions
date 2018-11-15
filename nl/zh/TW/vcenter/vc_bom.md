@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server 資料清單
 
@@ -30,7 +34,7 @@ lastupdated: "2018-09-27"
 
 表 2. vCenter Server 實例中的軟體元件的 BOM
 
-|製造商       |元件                            |版本         |
+|製造商       |元件                            |版本|
 |:------------- |:------------------------------ |:------------- |
 |VMware       |vSphere ESXi                    |6.5 Update 2c（最多為 ESXi650-201808001 修補程式層次）|
 |VMware       |vCenter Server Appliance        | 6.5 Update 2c |
@@ -39,17 +43,18 @@ lastupdated: "2018-09-27"
 |VMware       |NSX for vSphere                 |6.4.1        |
 |Microsoft    |Windows Server Standard Edition |2012R2       |
 
-**附註：**VMWare vSAN 是選用元件。
+VMware vSAN 是選用元件。
+{:note}
 
 ## ESXi 伺服器的進階配置設定
 
 請檢閱下表，以取得套用至 ESXi 伺服器之進階配置設定的概觀。這些設定取決於 vCenter Server 實例是部署在 2.2 版或更新版本，還是從 2.1 版或更早版本升級至 2.2 版或更新版本。
 
-這些設定適用於 2.2 版或更新版本的新實例及新實例中的新叢集。這些設定不適用於 2.1 版或更早版本現有實例中的新叢集，或升級至 2.2 版或更新版本之現有實例中的新叢集。
+這些設定會套用至新實例及新實例 2.2 版或更新版本中的新叢集。這些設定不適用於 2.1 版或更早版本現有實例中的新叢集，或升級至 2.2 版或更新版本之現有實例中的新叢集。
 
 表 3. vCenter Server 實例及叢集的 ESXi 伺服器進階配置設定
 
-|配置設定|如果新部署在 2.2 版或更新版本|如果從 2.1 版或更早版本升級      |
+|配置設定|如果新部署至 2.2 版或更新版本       |如果從 2.1 版或更早版本升級      |
 |:------------- |:------------- |:------------- |
 |磁區數目上限|**MaxVolumes** = 256 |**/NFS/MaxVolumes** 且 **/NFS41/MaxVolumes** = 256 |
 |活動訊號失敗次數上限|**HeartbeatMaxFailures** = 10 |未設定 |
@@ -65,19 +70,19 @@ lastupdated: "2018-09-27"
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服務需要 **MaxVolumes** 設定，因為服務可能會在 ESXi 伺服器上使用超過預設的 NFS 裝載數目。
 * 配置設定的**未設定**值指出未自動套用新設定，因為它需要重新啟動 ESXi 伺服器，這可能會造成干擾。
 
-  建議您將**未設定**配置設定變更為新值，以維持所有實例的一致性，並容許提供儲存空間擴充的足夠支援。IBM 只打算對所有 {{site.data.keyword.vmwaresolutions_short}} 2.2 版以及更新版本測試這些新設定。
+  建議您將**未設定**配置設定變更為新值，以維持所有實例的一致性，並容許提供儲存空間擴充足夠的支援。IBM 只打算對所有 {{site.data.keyword.vmwaresolutions_short}} 2.2 版以及更新版本測試這些新設定。
 
   如需相關資訊，請參閱 [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239)。
 
 ## NSX 和埠群組配置設定
 
-請檢閱下表，以取得 vCenter Server 實例之 VMware NSX 及埠群組配置設定的概觀，以及版本之間的差異。
+請檢閱下表，以取得 vCenter Server 實例的 VMware NSX 及埠群組配置設定的概觀，以及版本之間的差異。
 
-這些設定適用於 2.2 版或更新版本的新實例及新實例中的新叢集。這些設定不適用於 2.1 版或更早版本的現有實例中的新叢集，或升級至 2.2 版或更新版本的現有實例中的新叢集。
+這些設定會套用至新實例及新實例 2.2 版或更新版本中的新叢集。這些設定不適用於 2.1 版或更早版本的現有實例中的新叢集，或升級至 2.2 版或更新版本的現有實例中的新叢集。
 
 表 4. vCenter Server 實例的 NSX 及埠群組配置設定
 
-|配置設定|2.1 版或更早版本|2.2 版或更新版本|   
+|配置設定|2.1 版或更舊版本|2.2 版或更新版本|   
 |:------------- |:------------- |:------------- |
 |NSX VXLAN 叢集小組原則|失效接手|負載平衡 - SRCID |
 |NSX VXLAN 叢集 VTEP |1 |2 |
@@ -93,7 +98,7 @@ vSphere 叢集使用兩個 vSphere Distributed Switch (vDS)：一個用於公用
 
 專用網路連線配置成使用大小為 9000 的「巨大訊框 MTU（最大傳輸單位）」，以改善大型資料傳送（例如儲存空間及 VMware vMotion）的效能。此值是 VMware 內及 {{site.data.keyword.cloud_notm}} 容許的最大 MTU。
 
-在 2.1 版或更新版本中，公用網路連線使用標準乙太網路 MTU 1500。必須維護此設定 1500；任何變更都可能會導致透過網際網路傳送時發生封包片段化。
+在 2.1 版或更新版本中，公用網路連線使用標準乙太網路 MTU 1500。必須維護此設定 1500；任何變更都可能會導致透過網際網路進行封包片段化。
 
 請檢閱下表，以取得「網路 MTU」配置設定的概觀，這些設定會根據 vCenter Server 實例是否部署在 2.1 版或更新版本上，而套用至公用及專用「分散式虛擬交換器 (DVS)」。
 
@@ -104,11 +109,11 @@ vSphere 叢集使用兩個 vSphere Distributed Switch (vDS)：一個用於公用
 |公用交換器|1500（預設值）|9000（巨大訊框）|
 |專用交換器|9000（巨大訊框）|9000（巨大訊框）|
 
-這些設定適用於部署在 2.1 版或更新版本的新實例以及實例中的新叢集。這些設定也適用於跨 {{site.data.keyword.CloudDataCents_notm}}，升級至 2.1 版或更新版本之實例的新叢集。
+這些設定適用於新實例以及部署在 2.1 版或更新版本中的實例的新叢集。這些設定也適用於跨 {{site.data.keyword.CloudDataCents_notm}} 中已升級至 2.1 版或更新版本的實例內的新叢集。
 
-這些設定不適用於相同 {{site.data.keyword.CloudDataCent_notm}} 中，2.0 版或更早版本現有實例的新叢集，或升級至 2.1 版或更新版本之現有實例的新叢集。
+這些設定不適用於相同 {{site.data.keyword.CloudDataCent_notm}} 中的新叢集，而新叢集位於 2.0 版或更早版本中的現有實例，或升級至 2.1 版或更新版本的現有實例。
 
-對於已部署在 2.0 版或更早版本的實例，建議您將公用交換器 MTU 設定更新為 1500。
+對於已部署在 2.0 版或更早版本中的實例，建議您將公用交換器 MTU 設定更新為 1500。
 
 ### 更新公用交換器 MTU 設定
 
@@ -117,13 +122,13 @@ vSphere 叢集使用兩個 vSphere Distributed Switch (vDS)：一個用於公用
 2. 在**內容**標籤上，選取**進階**選項。
 3. 確定**最大 MTU** 值已設為 1500。
 
-   **附註**：當 vDS 中的 MTU 大小變更時，會將連接的上行鏈路（實體 NIC）卸下再重新連接。因此，使用此上行鏈路的 VM 會短暫地中斷。所以，建議您規劃在排定的關閉時間進行 MTU 設定更新。
+   **附註**：當 vDS 中的 MTU 大小變更時，會將連接的上行鏈路（實體 NIC）卸下再重新連接。因此，使用此上行鏈路的 VM 會短暫的中斷。所以，建議您在排定的關閉時間計劃 MTU 設定更新。
 
 ### 相關鏈結
 
 * [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
-* [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
-* [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+* [VMware vCenter Server 的建置號碼和版本 (2143838)](https://kb.vmware.com/s/article/2143838)
+* [在虛擬分散式交換器上啟用巨大訊框](https://kb.vmware.com/s/article/1038827)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} 保護資料表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 * [vCenter Server 概觀](vc_vcenterserveroverview.html)
 * [規劃 vCenter Server 實例](vc_planning.html)
