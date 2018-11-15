@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-10-19"
 
 ---
 
@@ -80,7 +80,7 @@ vCenter Server および Cloud Foundation インスタンスの注文で、既�
 
 現行リリースでは、VMware NSX for vSphere 6.3.5 コンポーネントの更新が適用されます。 コンポーネントについて詳しくは、[vCenter Server の部品構成表](../vcenter/vc_bom.html)を参照してください。
 
-V2.2 以降のリリースでデプロイされる VMware vCenter Server インスタンスでは、NSX およびポート・グループの構成設定が変更されています。 詳しくは、vCenter Server Software 部品構成表](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings) の『*NSX とポート・グループの構成設定*』セクションを参照してください。
+V2.2 以降のリリースでデプロイされる VMware vCenter Server インスタンスでは、NSX およびポート・グループの構成設定が変更されています。 詳しくは、[vCenter Server Software 部品構成表](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings)の『*NSX とポート・グループの構成設定*』セクションを参照してください。
 
 ### DNS 構成の新しいオプション
 

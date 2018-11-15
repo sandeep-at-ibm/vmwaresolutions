@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # ユーザー・アカウントと設定の管理
 
 {{site.data.keyword.vmwaresolutions_full}} は、{{site.data.keyword.slapi_short}} 呼び出しを介して {{site.data.keyword.cloud_notm}} インフラストラクチャーと対話します。 {{site.data.keyword.slapi_short}} に安全にアクセスするには、{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントの資格情報を {{site.data.keyword.cloud_notm}} アカウントにリンクさせる必要があります。
 
-**注:** {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントは、以前は IBM SoftLayer アカウントと呼ばれていました。
+{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントは、以前は IBM SoftLayer アカウントと呼ばれていました。
+{:note}
 
 各種イベントの E メールとコンソールの通知を受け取るかどうかを指定することもできます。
 

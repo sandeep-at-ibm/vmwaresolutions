@@ -12,7 +12,7 @@ lastupdated: "2017-11-20"
 
 このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
-## IBM Cloud での FortiGate Virtual Appliance
+## FortiGate Virtual Appliance on IBM Cloud
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスが、V2.0 以降の VMware Cloud Foundation インスタンスと VMware vCenter Server インスタンスで使用できるようになりました。 このサービスは、お客様の環境に FortiGate Virtual Appliance の高可用性 (HA) ペアをデプロイします。これにより、仮想インフラストラクチャー内にクリティカルなセキュリティー制御を実装してリスクを軽減できます。
 
