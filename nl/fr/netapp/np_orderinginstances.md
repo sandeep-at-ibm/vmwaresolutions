@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Commande d'instances NetApp ONTAP Select
 
@@ -18,7 +22,8 @@ Assurez-vous que :
 *  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
 *  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les instances NetApp ONTAP Select](np_planning.html).
 
-**Important** : ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
+Ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
+{:important}
 
 ## Paramètres système
 
@@ -60,7 +65,8 @@ Le nom du domaine racine qui doit respecter les règles suivantes :
 * La dernière chaîne ne peut contenir que des caractères alphabétiques.
 * La dernière chaîne doit comporter entre 2 et 24 caractères.
 
-**Remarque :** la longueur maximale du nom de domaine complet des hôtes et des machines virtuelles est de 50 caractères. Les noms de domaine doivent respecter cette longueur maximale.
+La longueur maximale du nom de domaine complet des hôtes et des machines virtuelles est de 50 caractères. Les noms de domaine doivent respecter cette longueur maximale.
+{:note}
 
 ## Paramètres d'octroi de licence
 
@@ -79,7 +85,8 @@ Sélectionnez une configuration de serveur bare metal adaptée à vos besoins :
 * **Hautes performances (Grande)** – Licence Premium/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/128 Go de RAM/capacité de 22 unités SSD de 3,8 To par noeud/capacité effective d'un cluster de 4 noeuds – 118 To
 * **Haute capacité** – Licence Standard/Dual Intel Xeon E5-2650 v4 (24 coeurs au total, 2,2 GHz)/64 Go de RAM/capacité de trente-quatre unités SATA de 4 To par noeud/capacité effective d'un cluster de 4 noeuds – 190 To
 
-**Remarque :** les unités SSD de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
+Les unités SSD de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
+{:note}
 
 ### Nombre de serveurs bare metal
 
@@ -114,7 +121,8 @@ Lorsque l'instance est prête pour utilisation, l'instance prend le statut **Pr�
 
 Affichez et gérez l'instance NetApp ONTAP Select que vous avez commandée.
 
-**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+{:important}
 
 **ATTENTION :** gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lorsque vous avez commandé l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque de rendre votre environnement instable. Ces activités de gestion incluent :
 *  L'ajout, la modification, le retour ou la suppression de composants
