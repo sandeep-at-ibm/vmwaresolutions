@@ -68,7 +68,7 @@ Les licences VMware suivantes sont incluses avec votre commande d'instance vCent
 
 ## Paramètres de serveur bare metal
 
-Les paramètres bare metal dépendent de l'{{site.data.keyword.CloudDataCent_notm}} que vous sélectionnez et de la configuration de serveur bare metal. 
+Les paramètres bare metal dépendent de l'{{site.data.keyword.CloudDataCent_notm}} que vous sélectionnez et de la configuration de serveur bare metal.
 
 Quatre serveurs ESXi sont nécessaires pour le cluster initial et pour les clusters post-déploiement dans le cadre des configurations vSAN. Tous les serveurs ESXi se partagent la même configuration. Après le déploiement, vous pouvez ajouter quatre clusters supplémentaires.
 
@@ -210,7 +210,8 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
   1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger l'instance.
   2. Sélectionnez le modèle d'UC **Skylake** ou **Broadwell** et la quantité de mémoire **RAM**.
 
-  La valeur quatre, affectée par défaut à la zone **Nombre de serveurs bare metal**, ne peut pas être modifiée.{:note}
+  La valeur quatre, affectée par défaut à la zone **Nombre de serveurs bare metal**, ne peut pas être modifiée.
+  {:note}
 7. Procédez à la configuration du stockage. Spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 8. Procédez à la configuration de l'interface réseau.
   1. Renseignez les zones Préfixe de nom d'hôte, Libelle de sous-domaine et Nom de domaine racine.

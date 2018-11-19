@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -56,26 +56,21 @@ Pour plus d'informations sur l'architecture, voir [Référence de l'architecture
 
 Les composants suivants sont inclus dans votre instance vCenter Server.
 
-La disponibilité et la tarification des configurations matérielles normalisées peuvent varier en fonction de l'{{site.data.keyword.CloudDataCent_notm}} sélectionné pour le déploiement.{:note}
+La disponibilité et la tarification des configurations matérielles normalisées peuvent varier en fonction de l'{{site.data.keyword.CloudDataCent_notm}} sélectionné pour le déploiement.
+{:note}
 
 ### Serveur bare metal
 
 Vous pouvez commander trois serveurs {{site.data.keyword.baremetal_short}} ou plus dans l'une des configurations suivantes :
-* **Skylake** ou **Broadwell** : serveurs {{site.data.keyword.baremetal_short}} avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.   
-  * Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100)
-  * Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4)
-
-Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.
-{:note}
-* **Certifiés SAP** : serveurs {{site.data.keyword.baremetal_short}} avec le modèle d'UC que vous avez sélectionné. 
+* **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.   
+* **Certifiés SAP** : Sserveur {{site.data.keyword.baremetal_short}} avec le modèle d'UC que vous avez sélectionné. 
   * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/192 Go de mémoire RAM
   * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/384 Go de mémoire RAM
   * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/768 Go de mémoire RAM
-* **Préconfigurée** : Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4)
-  * **Petite** (Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz/128 Go de RAM/2 disques)
-  * **Moyenne** (Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz/256 Go de RAM/2 disques)
-  * **Grande** (Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de RAM /2 disques)
-
+* **Broadwell** : Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.   
+     Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.
+     {:note}
+     
 ### Utilisation en réseau
 
 Les composants réseau suivants sont commandés :
@@ -109,7 +104,8 @@ L'option vSAN offre des configurations personnalisées, avec différentes option
 
   De plus, deux disques cache de 960 Go par hôte sont également commandés.
 
-  Les unités SSD (Solid State Disk) de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un centre de données. {:note}
+  Les unités SSD (Solid State Disk) de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un centre de données.
+  {:note}
 * L'option Hautes performances avec Intel Optane, qui fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Cette option dépend du modèle d'UC.
 
 #### Stockage NFS
@@ -144,8 +140,7 @@ Un serveur bare metal doté de la configuration présentée dans [Spécification
 * Frais de support et de services
 * (Pour les clusters vSAN) VMware vSAN Advanced ou Enterprise 6.6
 
-Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console.
-Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
 Gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lors de la commande de l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque d'entraîner une instabilité de votre environnement. Ces activités de gestion incluent :
 *  L'ajout, la modification, le retour ou la suppression de composants
 *  L'extension ou la réduction de la capacité de l'instance via l'ajout ou la suppression de serveurs ESXi

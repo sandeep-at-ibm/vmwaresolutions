@@ -4,15 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Commande d'instances VMware Federal
 
 Afin de déployer une plateforme virtuelle VMware personnalisable et flexible totalement adaptée à vos besoins en charge de travail, commandez une instance VMware Federal. Les instances VMware Federal vous permettent de déconnecter la connexion de gestion ouverte et de sécuriser votre instance déployée.
 
-**Remarque :** actuellement, seules les instances vCenter Server prennent en charge VMware Federal on {{site.data.keyword.cloud}}.
+Actuellement, seules les instances vCenter Server prennent en charge VMware Federal on {{site.data.keyword.cloud}}.{:note}
 
 ## Exigences relatives à la commande d'instances VMware Federal
 
@@ -32,7 +36,8 @@ Tableau 1. Format de la valeur des noms d'instance et de domaine
   | Nom de serveur ESXi qualifié complet | `<host_prefix><n>.<subdomain_label>.<root_domain>`, où `<n>` est la séquence du serveur ESXi. La longueur maximale admise est de 50 caractères. |  
   | Nom de domaine complet PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La longueur maximale admise est de 50 caractères. |
 
-**Important :** ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
+Ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
+{:important}
 
 ## Paramètres système
 
@@ -66,7 +71,7 @@ Licences fournies par IBM pour les composants VMware suivants :
 
 ## Paramètres de serveur bare metal
 
-Les paramètres bare metal dépendent du centre de données que vous sélectionnez et de la configuration de serveur bare metal. L'option de sélection d'une configuration préconfigurée n'est pas prise en charge actuellement.
+Les paramètres bare metal dépendent du centre de données que vous sélectionnez et de la configuration de serveur bare metal.
 
 ### Emplacement de centre de données
 
@@ -119,7 +124,8 @@ Spécifiez les options vSAN suivantes :
 
 Lorsque vous sélectionnez **Stockage NFS**, vous pouvez ajouter un stockage partagé de niveau fichier pour votre instance dans lequel tous les partages utilisent les mêmes paramètres ou vous pouvez spécifier des paramètres de configuration différents pour chaque partage de fichiers. Spécifiez les options NFS suivantes :
 
-**Remarque :** le nombre de partages de fichiers doit être compris entre 1 et 32.
+Le nombre de partages de fichiers doit être compris entre 1 et 32.
+{:note}
 
 * **Configurer les partages individuellement** : permet de spécifier des paramètres de configuration différents pour chaque partage de fichiers.
 * **Nombre de partages** : lorsque vous utilisez le même paramètre de configuration pour chaque partage de fichiers, spécifiez le nombre de partages de fichiers pour le stockage partagé NFS que vous souhaitez ajouter.
@@ -161,7 +167,8 @@ Le nom du domaine racine qui doit respecter les règles suivantes :
 * La dernière chaîne ne peut contenir que des caractères alphabétiques.
 * La dernière chaîne doit comporter entre 2 et 24 caractères.
 
-**Remarque :** la longueur maximale du nom de domaine complet des hôtes et des machines virtuelles est de 50 caractères. Les noms de domaine doivent respecter cette longueur maximale.
+La longueur maximale du nom de domaine complet des hôtes et des machines virtuelles est de 50 caractères. Les noms de domaine doivent respecter cette longueur maximale.
+{:note}
 
 ### Configuration DNS
 
@@ -170,7 +177,8 @@ Sélectionnez la configuration de système de noms de domaine (DNS, Domain Name 
 * **Une instance de serveur virtuel Windows publique pour Active Directory/DNS** : une unique instance de serveur virtuel Windows Microsoft pour Microsoft Active Directory (AD), qui fonctionne en tant que serveur de noms de domaine pour l'instance où sont enregistrés les hôtes et les machines virtuelles, est déployée et peut être interrogée.
 * **Deux machines virtuelles Windows Server dédiées à haute disponibilité sur le cluster de gestion** : à compter de la version 2.3, deux machines virtuelles Microsoft Windows virtual sont déployées, pour plus de sécurité et de robustesse.
 
-**Important :** vous devez fournir deux licences Microsoft Windows Server 2012 R2 si vous configurez votre instance de manière à utiliser deux machines virtuelles Microsoft Windows. Utilisez la licence d'édition Microsoft Windows Server 2012 R2 Standard et/ou la licence d'édition Microsoft Windows Server 2012 R2 Datacenter.
+Vous devez fournir deux licences Microsoft Windows Server 2012 R2 si vous configurez votre instance de manière à utiliser les deux machines virtuelles Microsoft Windows. Utilisez la licence d'édition Microsoft Windows Server 2012 R2 Standard et/ou la licence d'édition Microsoft Windows Server 2012 R2 Datacenter.
+{:important}
 
 Actuellement, chaque licence ne peut être affectée qu'à un seul serveur physique et couvre jusqu'à deux processeurs physiques. En utilisant une licence d'édition Standard, vous pouvez exécuter deux machines virtuelles Microsoft Windows virtualisées par serveur à 2 processeurs. Par conséquent, deux licences sont nécessaires puisque deux machines virtuelles Microsoft Windows sont déployées sur deux hôtes différents.
 
@@ -217,8 +225,9 @@ Lorsque l'instance est prête pour utilisation, elle prend le statut **Prêt à 
 
 Affichez, gérez ou sécurisez l'instance VMware Federal que vous avez commandée.
 
-**Important** : vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console.
+Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console.
 Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+{:important}
 
 **ATTENTION :** gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lorsque vous avez commandé l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque de rendre votre environnement instable. Ces activités de gestion incluent :
 *  L'ajout, la modification, le retour ou la suppression de composants

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -18,7 +18,8 @@ Les serveurs ESXi que vous avez configurés lors de la commande d'une instance s
 
 Vous pouvez ajouter vos propres clusters à vos instances VMware vCenter Server afin d'étendre la capacité de calcul et de stockage. Au sein d'un cluster, vous pouvez gérer des serveurs ESXi afin d'optimiser l'allocation des ressources et la haute disponibilité. Lorsque vous n'en avez plus besoin, supprimez les clusters que vous avez ajoutés à vos instances.
 
-La fonction de suppression de cluster est disponible uniquement pour les instances qui ont été déployées dans (ou mises à niveau vers) la version 2.3 et les versions ultérieures. {:note}
+La fonction de suppression de cluster est disponible uniquement pour les instances qui ont été déployées dans (ou mises à niveau vers) la version 2.3 et les versions ultérieures.
+{:note}
 
 ## Ajout de clusters à des instances vCenter Server
 
@@ -46,7 +47,7 @@ Si vous déployez le cluster dans un autre {{site.data.keyword.CloudDataCent_not
 
 ### Paramètres de serveur bare metal
 
-Vous pouvez choisir **Skylake**, **Certifiés SAP**, **Broadwell** ou **Préconfigurée**.
+Vous pouvez choisir l'option **Skylake**, **Certifiés SAP** ou **Broadwell**.
 
 #### Skylake
 
@@ -81,22 +82,13 @@ Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 
-#### Préconfigurée
-
-Pour l'option **Préconfigurée**, vous pouvez choisir une **configuration de serveur bare metal** adaptée à vos besoins :
-* Petite (Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz/128 Go de RAM/2 disques)
-* Moyenne (Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz/256 Go de RAM/2 disques)
-* Grande (Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de RAM/2 disques)
-
 #### Nombre de serveurs bare metal
 
 Les clusters requièrent au moins deux serveurs {{site.data.keyword.baremetal_short}}.
 
 Pour les instances vCenter Server déployées dans la version 2.1 ou des versions antérieures, vous pouvez ajouter jusqu'à 59 serveurs {{site.data.keyword.baremetal_short}} pour un cluster. Vous pouvez ajouter de 1 à 59 serveurs ESXi à la fois.
 
-Pour les instances vCenter Server déployées dans la version 2.0 ou des versions antérieures, vous pouvez ajouter jusqu'à 32 serveurs {{site.data.keyword.baremetal_short}} pour un cluster. Le nombre de serveurs {{site.data.keyword.baremetal_short}} que vous pouvez ajouter simultanément est le suivant :
-* Pour les configurations de serveur bare metal **Petite**, **Moyenne** et **Grande**, vous pouvez ajouter entre 1 et 10 serveurs ESXi à la fois.
-* Pour la configuration de serveur bare metal **Skylake** ou **Broadwell**, vous pouvez ajouter 1 à 20 serveurs ESXi à la fois. 
+Pour les instances vCenter Server déployées dans la version 2.0 ou des versions antérieures, vous pouvez ajouter jusqu'à 32 serveurs {{site.data.keyword.baremetal_short}} pour un cluster. Vous pouvez ajouter 1 à 20 serveurs ESXi à la fois pour la configuration de serveur bare metal **Skylake**, **Certifiés SAP** ou **Broadwell**. 
 
 Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Si vous sélectionnez la configuration de serveur bare metal **Skylake** ou**Broadwell** avec un stockage VMware vSAN, quatre serveurs sont nécessaires pour le cluster initial et pour les clusters post-déploiement.
 
@@ -119,7 +111,8 @@ Si votre cluster initial était de type vSAN, tous les clusters vSAN supplément
 
 Lorsque vous sélectionnez **Stockage NFS**, vous pouvez ajouter un stockage partagé de niveau fichier pour votre instance dans lequel tous les partages utilisent les mêmes paramètres ou vous pouvez spécifier des paramètres de configuration différents pour chaque partage de fichiers. Spécifiez les options NFS suivantes :
 
-Le nombre de partages de fichiers doit être compris entre 1 et 32.{:note}
+Le nombre de partages de fichiers doit être compris entre 1 et 32.
+{:note}
 
 * **Configurer les partages individuellement** : permet de spécifier des paramètres de configuration différents pour chaque partage de fichiers.
 * **Nombre de partages** : lorsque vous souhaitez utiliser le même paramètre de configuration pour chaque partage de fichiers, spécifiez le nombre de partages de fichiers pour le stockage partagé NFS que vous souhaitez ajouter.
@@ -166,8 +159,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 5. Si vous souhaitez héberger le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui dans lequel l'instance est hébergée, sous **Serveur bare metal**, cochez la case **Sélectionner un autre emplacement** et choisissez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel héberger l'instance.
 6. Procédez à la configuration du serveur bare metal.
    * Si vous avez sélectionné **Skylake** ou **Broadwell**, renseignez les zones **Modèle d'UC**, **Mémoire RAM** et **Nombre de serveurs {{site.data.keyword.baremetal_short}}**.
-   * Si vous avez sélectionné **Certifiés SAP**, spécifiez le modèle d'UC. 
-   * Si vous avez sélectionné **Préconfigurée**, renseignez les zones **Configuration de serveur bare metal**, et **Nombre de serveurs {{site.data.keyword.baremetal_short}}**. Si vous prévoyez d'utiliser vSAN comme solution de stockage, au moins quatre serveurs {{site.data.keyword.baremetal_short}} sont nécessaires.
+   * Si vous avez sélectionné **Certifiés SAP**, spécifiez le modèle d'UC.
 7. Procédez à la configuration du stockage.
   * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
   * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**.

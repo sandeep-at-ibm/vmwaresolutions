@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ajout, affichage et suppression de clusters pour des instances VMware Federal
 
@@ -89,7 +93,8 @@ Si votre cluster initial a été ajouté en tant que cluster vSAN, tous les clus
 
 Lorsque vous sélectionnez **Stockage NFS**, vous pouvez ajouter un stockage partagé de niveau fichier pour votre instance dans lequel tous les partages utilisent les mêmes paramètres ou vous pouvez spécifier des paramètres de configuration différents pour chaque partage de fichiers. Spécifiez les options NFS suivantes :
 
-**Remarque :** le nombre de partages de fichiers doit être compris entre 1 et 32.
+Le nombre de partages de fichiers doit être compris entre 1 et 32.
+{:note}
 
 * **Configurer les partages individuellement** : permet de spécifier des paramètres de configuration différents pour chaque partage de fichiers.
 * **Nombre de partages** : lorsque vous utilisez le même paramètre de configuration pour chaque partage de fichiers, spécifiez le nombre de partages de fichiers pour le stockage partagé NFS que vous souhaitez ajouter.
@@ -122,7 +127,8 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance à laquelle vous souhaitez ajouter des clusters.
 
-   **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas ajouter de clusters à l'instance.
+   Assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas ajouter de clusters à l'instance.
+   {:note}
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche et cliquez sur **Ajouter** dans l'angle supérieur droit du tableau **CLUSTERS**.
 4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
 5. Renseignez les zones **Modèle UC**, **Mémoire RAM** et **Nombre de serveurs bare metal** pour la configuration de serveur bare metal.
@@ -142,7 +148,8 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 1. Le déploiement du cluster démarre automatiquement et celui-ci prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page récapitulative de l'instance.
 2. Lorsque le cluster est prêt pour utilisation, il prend le statut **Prêt à l'emploi**. Le cluster qui vient d'être ajouté est activé avec vSphere haute disponibilité et vSphere Distributed Resource Scheduler (DRS).
 
-**Important :** vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
+Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
+{:important}
 
 ## Procédure d'affichage des clusters dans les instances VMware Federal
 
@@ -223,7 +230,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 
 Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous n'en avez plus besoin.
 
-**Remarque :** utilisez cette procédure pour retirer des clusters des instances qui sont déployées dans (ou mises à niveau vers) la version 2.3 et des éditions ultérieures.
+Utilisez cette procédure pour retirer des clusters des instances qui sont déployées dans (ou mises à niveau vers) la version 2.3 et des éditions ultérieures.{:note}
 
 ### Avant de supprimer
 
@@ -239,7 +246,8 @@ Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous souhaitez supprimer les clusters.
 
-   **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas supprimer de clusters de l'instance.
+   Assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas supprimer de clusters de l'instance.
+   {:note}
 
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, localisez le cluster que vous souhaitez supprimer et cliquez sur l'icône **Supprimer** dans la colonne **Actions**.
 

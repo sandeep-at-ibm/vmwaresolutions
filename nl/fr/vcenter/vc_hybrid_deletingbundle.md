@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -23,9 +23,12 @@ Le fait de rétromigrer votre licence peut provoquer l'échec de votre instance 
 
 Voici les considérations que vous devez prendre en compte avant de retirer Hybridity Bundle d'un environnement multisite :
 
-* Vous devez appliquer des licences BYOL à tous les déploiements multisite avant de retirer les licences locatives.
-* Vous devez combiner les licences NSX et disposer d'une capacité suffisante à utiliser sur tous les déploiements multisite.
+* Vous devez appliquer des licences BYOL à tous les déploiements multi-site avant de retirer les licences locatives.
+* Vous devez combiner les licences VMware NSX et disposer d'une capacité d'utilisation suffisante sur tous les déploiements multisite.
 * Vous devez créer un seul ticket de demande de service pour retirer Hybridity Bundle de tous les déploiements multisite.
+
+Lors du retrait de Hybridity Bundle d'un environnement multisite, les licences BYOL sont appliquées. Pour tous les sites d'une configuration multisite, la licence NSX revient automatiquement à son niveau d'édition le plus bas sur tous les sites. Vous devez vous assurer que les éditions de licence sont cohérentes sur tous les sites d'une configuration multisite.
+{:note}
 
 ## Avant de retirer Hybridity Bundle
 
@@ -48,7 +51,10 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
    3. Cliquez sur l'icône **Ajouter** et saisissez la clé de licence. Cliquez sur **Suivant**.
    4. Tapez le nom de la licence et cliquez sur **Suivant**. Cliquez sur **Terminer** pour ajouter la licence.
    5. Sélectionnez la nouvelle clé de licence.
-   6. Notez les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée. Vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure. {:important}
+   6. Notez les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée.
+
+   Vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure.
+   {:important}
    7. Cliquez sur **OK** pour affecter la licence.
 5. Procédez comme suit pour installer une licence BYOL pour VMware vSAN :
    1. Cliquez sur l'onglet **Clusters**.
@@ -58,7 +64,9 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
     3. Tapez le nom de la licence et cliquez sur **Suivant**. Cliquez sur **Terminer** pour ajouter la licence.
     4. Sélectionnez la nouvelle clé de licence.
     5. Notez le nom de cluster et les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée.
-    Vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure. {:important}
+
+    Vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure.
+    {:important}
     6. Cliquez sur **OK** pour affecter la licence.
 6. Procédez éventuellement comme suit pour installer une licence BYOL pour VMware vCenter Server :
    1. Cliquez sur l'onglet **Systèmes vCenter Server**.
@@ -66,7 +74,11 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
    3. Cliquez sur l'icône **Ajouter** et saisissez la clé de licence. Cliquez sur **Suivant**.
    4. Tapez le nom de la licence et cliquez sur **Suivant**. Cliquez sur **Terminer** pour ajouter la licence.
    5. Sélectionnez la nouvelle clé de licence.
-   6. Notez les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée. Vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure. {:important}
+   6. Notez les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée.
+
+   Vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure.
+   {:important}
+
    7. Cliquez sur **OK** pour affecter la licence.
 7. Procédez éventuellement comme suit pour installer une licence BYOL pour VMware vSphere Enterprise Plus :
   1. Cliquez sur l'onglet **Hôtes**.
@@ -76,8 +88,10 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
     3. Tapez le nom de la licence et cliquez sur **Suivant**. Cliquez sur **Terminer** pour ajouter la licence.
     4. Sélectionnez la nouvelle clé de licence.
     5. Notez le nom de cluster et les clés de licence complètes de la licence qui est appliquée et de la licence qui est remplacée.
+
     Vous devez disposer des détails de licence afin de pouvoir les utiliser ultérieurement dans cette procédure. Si les clés de licence ne sont pas identiques d'un cluster à l'autre, prenez soin de noter le nom de cluster associé à chacune d'elles.
     {:important}
+
     6. Cliquez sur **OK** pour affecter la licence.
 8. Retirez les licences locatives.
    1. Cliquez sur l'onglet **Licences**.
@@ -89,7 +103,8 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
   * La liste des clés de licence BYOL que vous avez installées au cours de cette procédure. Le cas échéant, indiquez le nom de l'instance et du cluster avec les clés de licence pour vSphere et les clusters vSAN.
   * La liste des clés de licence locative que vous avez retirées au cours de cette procédure. Le cas échéant, indiquez le nom de l'instance et du cluster avec les clés de licence pour vSphere et les clusters vSAN.
 
-  Avant d'annuler les frais liés à la licence locative Hybridity Bundle, les équipes chargées du support et des opérations IBM accèdent à la couche de gestion vCenter de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) pour s'assurer que les licences locatives ont été retirées.{:note}
+  Avant d'annuler les frais liés à la licence locative Hybridity Bundle, les équipes chargées du support et des opérations IBM accèdent à la couche de gestion vCenter de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) pour s'assurer que les licences locatives ont été retirées.
+  {:note}
 
 ### Liens connexes
 

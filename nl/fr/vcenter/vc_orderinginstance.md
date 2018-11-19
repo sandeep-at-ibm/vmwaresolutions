@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -75,7 +75,7 @@ Si vous n'êtes pas un partenaire commercial, vous pouvez utiliser les licences 
 
 ## Paramètres de serveur bare metal
 
-Les paramètres bare metal dépendent du centre de données que vous sélectionnez et de la configuration de serveur bare metal. 
+Les paramètres bare metal dépendent du centre de données que vous sélectionnez et de la configuration de serveur bare metal.
 
 ### Emplacement de centre de données
 
@@ -114,22 +114,11 @@ Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 
-### Préconfigurée
-
-Lorsque vous sélectionnez **Préconfigurée**, vous ne pouvez pas modifier les paramètres d'UC ou de mémoire RAM.
-
-En fonction de vos besoins, sélectionnez une configuration de serveur bare metal :
-  * Petite (Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz/128 Go de RAM/2 unités)
-  * Moyenne (Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz/256 Go de RAM/2 unités)
-  * Grande (Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de RAM/2 unités)
-
 ### Nombre de serveurs bare metal
 
-Pour le cluster initial de l'instance, vous pouvez configurer le nombre de serveurs ESXi comme suit :
-* Si vous avez sélectionné **Skylake** ou **Broadwell**, vous pouvez configurer de 2 à 20 serveurs ESXi. 
-* Si vous avez sélectionné **Préconfigurée**, vous pouvez configurer de 2 à 10 serveurs ESXi.
+Pour le cluster initial de l'instance, vous pouvez configurer de 2 à 20 serveurs ESXi. Tous les serveurs ESXi se partagent la configuration définie. 
 
-Tous les serveurs ESXi se partagent la configuration définie. Après le déploiement initial, vous pouvez ajouter quatre clusters supplémentaires. Si vous avez sélectionné la configuration **Skylake** ou **Broadwell** pour VMware vSAN, 4 serveurs ESXi sont requis à la fois pour le cluster initial et pour les clusters post-déploiement. Pour plus d'informations sur le nombre minimum de serveurs ESXi, voir [Une instance vCenter Server à deux noeuds est-elle à haute disponibilité](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
+Après le déploiement initial, vous pouvez ajouter quatre clusters supplémentaires. Si vous avez sélectionné la configuration **Skylake** ou **Broadwell** pour VMware vSAN, 4 serveurs ESXi sont requis à la fois pour le cluster initial et pour les clusters post-déploiement. Pour plus d'informations sur le nombre minimum de serveurs ESXi, voir [Une instance vCenter Server à deux noeuds est-elle à haute disponibilité](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Paramètres de stockage
 
@@ -148,7 +137,8 @@ vSAN n'est disponible que pour les configurations bare metal **Skylake** et **Br
 
 Lorsque vous sélectionnez **Stockage NFS**, vous pouvez ajouter un stockage partagé de niveau fichier pour votre instance dans lequel tous les partages utilisent les mêmes paramètres ou vous pouvez spécifier des paramètres de configuration différents pour chaque partage de fichiers. Spécifiez les options NFS suivantes :
 
-Le nombre de partages de fichiers doit être compris entre 1 et 32.{:note}
+Le nombre de partages de fichiers doit être compris entre 1 et 32.
+{:note}
 
 * **Configurer les partages individuellement** : permet de spécifier des paramètres de configuration différents pour chaque partage de fichiers.
 * **Nombre de partages** : lorsque vous utilisez le même paramètre de configuration pour chaque partage de fichiers, spécifiez le nombre de partages de fichiers pour le stockage partagé NFS que vous souhaitez ajouter.
@@ -268,9 +258,8 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
 6. Spécifiez les paramètres de serveur bare metal.
     1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger l'instance.
     2. Sélectionnez la configuration de serveur bare metal.
-       * Lorsque vous sélectionnez **Skylake** ou **Broadwell**, spécifiez le modèle d'UC et la taille de mémoire RAM. 
-       * Lorsque vous sélectionnez **Certifiés SAP**, choisissez le modèle d'UC. 
-       * Lorsque vous sélectionnez **Préconfigurée**, choisissez **Petite**, **Moyenne** ou **Grande** pour la configuration.
+       * Lorsque vous sélectionnez **Skylake** ou **Broadwell**, spécifiez le modèle d'UC et la taille de mémoire RAM.
+       * Lorsque vous sélectionnez **Certifiés SAP**, choisissez le modèle d'UC.
     3. Spécifiez le nombre de serveurs {{site.data.keyword.baremetal_short}}. Si vous prévoyez d'utiliser vSAN comme solution de stockage, au moins 4 serveurs {{site.data.keyword.baremetal_short}} sont nécessaires.  
 7. Procédez à la configuration du stockage.
   * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.

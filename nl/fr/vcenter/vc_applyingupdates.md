@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -22,6 +22,9 @@ Lors de la mise à niveau d'une instance vCenter Server vers une instance vCente
 {:important}
 
 Les partenaires commerciaux n'ont pas la possibilité de mettre à niveau une instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle.
+
+A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](../vmonic/relnotes_v25.html).
+{:note}
 
 Avant d'appliquer une mise à jour, développez l'entrée de mise à jour en cliquant sur la flèche vers le bas et vérifiez les informations suivantes :
 * La version de la mise à jour. Vous devez appliquer les mises à jour par ordre chronologique, c'est-à-dire de la plus ancienne à la plus récente. Assurez-vous d'avoir appliqué toutes les mises à jour précédentes avant d'appliquer la plus récente. Par exemple, vous devez appliquer la mise à jour V2.3 avant de tenter d'appliquer la mise à jour V2.4.
@@ -51,7 +54,7 @@ Tableau 1. Niveaux de mise à jour et impact
   </tr>
 </table>
 
-## Procédure d'application de mises à jour et de modules de correction à des instances vCenter Server
+## Procédure d'application de mises à jour et de modules de correction à des instances vCenter Server (version 2.1 ou ultérieures)
 
 Cette procédure s'applique aux instances déployées en version 2.1 et ultérieures. Pour les instances déployées en version 2.0 et antérieures, vous devez appliquer les mises à jour VMware manuellement.
 
@@ -61,13 +64,10 @@ Cette procédure s'applique aux instances déployées en version 2.1 et ultérie
    S'ils ne sont pas affichés, cela indique probablement un problème de connectivité avec l'instance de serveur virtuel IBM CloudDriver, lié à une règle de pare-feu ou à un autre problème de réseau. Résolvez le problème avant de passer à l'étape suivante, sinon la mise à jour risque d'échouer.
 4. Cliquez sur **Mise à jour et module de correction** dans le panneau de navigation de gauche.
 
-   La page **Mise à jour et module de correction** d'une instance ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. Les mises à jour VMware doivent être appliquées manuellement.
-   {:note}
-
-   {{site.data.keyword.vmwaresolutions_short}} applique les mises à jour VMware dans les circonstances suivantes :
+   La page **Mise à jour et module de correction** d'une instance ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. Les mises à jour VMware doivent être appliquées manuellement.   {{site.data.keyword.vmwaresolutions_short}} applique les mises à jour VMware dans les circonstances suivantes :
    * Lorsqu'une nouvelle instance vCenter Server est déployée
-   * Lorsque de nouveaux serveurs ESXi sont ajoutés
-   * Lorsque de nouveaux clusters sont ajoutés
+   * Lorsque de nouveaux serveurs ESXi sont ajoutés, ils sont mis à disposition avec des mises à jour VMware, mais les serveurs ESXi existants ne sont pas mis à jour. 
+   * Lorsque de nouveaux clusters sont ajoutés, ils sont mis à disposition avec des mises à jour VMware, mais les clusters existants ne sont pas mis à jour. {:note}
 
 5. Pour des mises à niveau de licence NSX, cliquez sur **Mettre à niveau**. Dans la fenêtre **Mettre à niveau l'édition de licence NSX**, sélectionnez celle voulue et cliquez sur **Mettre à niveau**. Les rétromigrations d'édition de licence ne sont pas disponibles.
 

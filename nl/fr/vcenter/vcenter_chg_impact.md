@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -51,13 +51,16 @@ Tableau 1. Opérations affectées par des modifications de ressources VMware
 | Modification du nom du magasin de données vSAN dans l'instance qui utilise vSAN. | L'ajout d'un serveur ESXi risque d'échouer.<br><br>La mise à niveau de l'instance risque d'échouer. | Important | Redonnez au magasin de données vSAN son nom d'origine, à savoir **vsanDatastore**.
 | Modification du nom du magasin de données NFS de gestion dans l'instance qui utilise NFS. | L'ajout d'un serveur ESXi risque d'échouer.<br><br>La mise à niveau de l'instance risque d'échouer. | Important | Redonnez au magasin de données de gestion NFS son nom d'origine, à savoir **management-share** et remontez le magasin de données NFS en lecture seule sur le serveur ESXi. 0
 
-Le tableau suivant répertorie les opérations susceptibles d'être affectées lorsque le superutilisateur VC/PSC modifie des ressources vCenter Server en dehors de la console {{site.data.keyword.vmwaresolutions_short}}.
+Le tableau suivant répertorie les opérations susceptibles d'être affectées lorsque l'accès à SSH ou à l'interpréteur de commandes est désactivé pour différentes ressources. 
 
-Tableau 2. Opérations affectées pour l'accès racine VC/PSC (local)
+Tableau 2. Opérations affectées pour l'accès à SSH et à l'interpréteur de commandes (local)
 
 | Modification  | Opérations affectées  | Gravité  | Méthode de récupération  |
 |:------------- |:------------- |:--------------|:--------------|
-| Activation ou désactivation de l'accès au shell.    | L'application de modules de correction ou de mises à jour au contrôleur PSC et au serveur vCenter Server risque d'échouer.    | Important    | Non applicable    |
+| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour vCenter Server ou PSC. | L'appariement d'une instance principale et d'une instance secondaire peut échouer. | Important    | Non applicable    |
+| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour ESXi. | L'ajout et le retrait d'hôtes, de services et de stockage réseau à l'instance peut échouer. | Important    | Non applicable    |
+
+Si vous choisissez de désactiver l'accès à SSH ou à l'interpréteur de commandes, vous devez le réactiver temporairement avant d'effectuer les opérations indiquées. 
 
 ## Sous-réseaux de gestion pour des instances vCenter Server
 
