@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -27,17 +27,17 @@ Pour plus d'informations, voir la section *Paramètres de serveur {{site.data.ke
 
 ### IBM Cloud Private Hosted
 
-Le service {{site.data.keyword.cloud_notm}} Private Hosted est désormais disponible pour les instances VMware vCenter Server with Hybridity Bundle, en plus des instances VMware vCenter Server déployées dans (ou mises à niveau vers) la version 2.5 et des éditions ultérieures. Vous pouvez désormais commander une instance vCenter Server ou une instance vCenter Server with Hybridity Bundle avec le service inclus ou vous pouvez ajouter le service à une instance vCenter Server ou vCenter Server with Hybridity Bundle existante après le déploiement initial. 
+Le service {{site.data.keyword.cloud_notm}} Private Hosted est désormais disponible pour les instances VMware vCenter Server with Hybridity Bundle, en plus des instances VMware vCenter Server déployées dans (ou mises à niveau vers) la version 2.5 et des éditions ultérieures. Vous pouvez désormais commander une instance vCenter Server ou une instance vCenter Server with Hybridity Bundle avec le service inclus. Ou vous pouvez ajouter le service à une instance vCenter Server ou vCenter Server with Hybridity Bundle existante après le déploiement initial. 
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation d'{{site.data.keyword.cloud_notm}} Private Hosted](../services/icp_overview.html)
 * [Commande d'{{site.data.keyword.cloud_notm}} Private Hosted](../services/icp_ordering.html)
 
 ### Mission Critical VMware on IBM Cloud
 
-Le service Mission Critical VMware on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances qui sont déployées dans, ou mises à niveau vers, la version 2.7 ou des éditions ultérieures. 
+Le service Mission Critical VMware on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances qui sont déployées dans, ou mises à niveau vers, la version 2.7 ou des éditions ultérieures.
 
-Mission Critical VMware on {{site.data.keyword.cloud_notm}} fournit une architecture de cloud multi-zone qui permet aux entreprises d'empêcher les temps d'indisponibilité pour les applications en cloud et qui permet d'automatiser les basculements dans une région de cloud. Grâce à cette architecture de cloud, vous pouvez atteindre un taux de réussite de disponibilité et de basculement plus élevé que celui obtenu par la plupart des clients VMware avec des environnements sur site ou des plateformes cloud concurrentes. 
+Mission Critical VMware on {{site.data.keyword.cloud_notm}} fournit une architecture de cloud multi-zone qui permet aux entreprises d'empêcher les temps d'indisponibilité pour les applications en cloud et qui permet d'automatiser les basculements dans une région de cloud. Grâce à cette architecture de cloud, vous pouvez atteindre un taux de réussite de disponibilité et de basculement plus élevé que celui obtenu par la plupart des clients VMware avec des environnements sur site ou des plateformes cloud concurrentes.
 
 Pour plus d'informations, voir [Présentation de Mission Critical VMware on {{site.data.keyword.cloud_notm}}](../services/mcv_overview.html).
 
@@ -49,9 +49,9 @@ Désormais, lorsque vous commandez le service F5 on {{site.data.keyword.cloud_no
 
 Au cours du troisième trimestre 2018, Fortinet a modifié ses offres groupées d'abonnement. Pour plus d'informations, voir [Commande de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html).
 
-Pour le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} qui est déployé dans les instances Cloud Foundation et vCenter Server versions 2.7 et ultérieures, FortiOS 6.0.3 est mis à disposition. 
+Pour le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} qui est déployé dans les instances Cloud Foundation et vCenter Server versions 2.7 et ultérieures, FortiOS 6.0.3 est mis à disposition.
 
-De plus, lorsque vous commandez le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, vous pouvez indiquer si FortiGuard doit appliquer les mises à jour de licence et de sécurité sur un réseau public ou un réseau privé avec un serveur proxy. Pour plus d'informations, voir [Commande de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html).
+Lorsque vous commandez le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, vous pouvez indiquer si FortiGuard doit appliquer les mises à jour de licence et de sécurité sur un réseau public ou un réseau privé avec un serveur proxy. Pour plus d'informations, voir [Commande de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html).
 
 ### Mises à jour du composant de service Zerto on IBM Cloud
 
@@ -59,7 +59,7 @@ Pour le service Zerto on {{site.data.keyword.cloud_notm}} qui est déployé dans
 
 ### Intégration de KMIP for VMware on IBM Cloud à IBM Cloud Activity Tracker
 
-En plus des événements d'instance VMware, les événements pour votre instance KMIP for VMware on {{site.data.keyword.cloud_notm}}, tels que la création de clé, la suppression de clé et l'accès aux clés, sont désormais intégrés à votre instance {{site.data.keyword.cloud_notm}} Activity Tracker. Pour plus d'informations sur KMIP for WMware on {{site.data.keyword.cloud_notm}}, voir [Présentation de KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html).
+En plus des événements d'instance VMware, les événements pour KMIP for VMware on {{site.data.keyword.cloud_notm}}, tels que la création de clé, la suppression de clé et l'accès aux clés, sont désormais intégrés à votre instance {{site.data.keyword.cloud_notm}} Activity Tracker. Pour plus d'informations sur KMIP for WMware on {{site.data.keyword.cloud_notm}}, voir [Présentation de KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html).
 
 ## Documentation nouvelle et mise à jour
 
@@ -73,7 +73,7 @@ Les documents techniques suivants sont désormais disponibles dans la section *R
 * [Guide vCenter Server et {{site.data.keyword.cloud_notm}} Private](../archiref/vcsicp/vcsicp-intro.html)
 * [Guide de maintenance de vCenter Server et IBM Kubernetes](../archiref/vcsiks/vcsiks-intro.html)
 * [Guide Concept Car pour VMware et Skate Advisor](../archiref/vcscar/vcscar-intro.html)
-* [VMware : Le parcours de modernisation de Stock Trader](../archiref/vcscontent/vcscontent-modjourney.html)
+* [VMware - Le parcours de modernisation de Stock Trader](../archiref/vcscontent/vcscontent-modjourney.html)
 
 <Certains de ces documents sur l'architecture de référence ne sont disponibles qu'en anglais.
 
@@ -81,6 +81,7 @@ Les documents techniques suivants sont désormais disponibles dans la section *R
 
 L'interface utilisateur a été mise à jour et présente les améliorations suivantes :
 
-* L'onglet **Personnalisé** d'origine sur lequel vous spécifiez le modèle d'UC et la mémoire RAM pour les paramètres de serveur {{site.data.keyword.baremetal_short_sing}} lorsque vous commandez des instances a été scindé en deux onglets, **Skylake** et **Broadwell** en fonction du type de serveur afin de vous aider à choisir un serveur. 
-* La colonne **Type** est désormais incluse dans le tableau **Instances vCenter Server** sur la page **Instances déployées** pour identifier les instances vCenter Server, vCenter Server with Hybridity Bundle et les instances d'unité de test limitée vCenter. 
+* L'onglet **Personnalisé** sur lequel vous spécifiez le modèle d'UC et la mémoire RAM pour les paramètres de serveur {{site.data.keyword.baremetal_short_sing}} lorsque vous commandez des instances a été scindé en deux onglets, **Skylake** et **Broadwell**, en fonction du type de serveur, afin de vous aider à choisir un serveur. 
+* Les options **Préconfiguré** pour la configuration de serveur bare metal ne sont plus disponibles. 
+* La colonne **Type** est désormais incluse dans le tableau **Instances vCenter Server** sur la page **Instances déployées** pour identifier les instances vCenter Server, vCenter Server with Hybridity Bundle et les instances d'unité de test limitée vCenter.
 * Diverses améliorations ont été apportées au niveau des messages d'erreur et des infobulles pour vous aider à sélectionner le paramétrage approprié sur l'interface utilisateur.

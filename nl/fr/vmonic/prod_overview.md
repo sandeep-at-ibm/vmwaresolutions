@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -116,7 +116,7 @@ Pour plus d'informations, voir [Présentation de HyTrust KeyControl on {{site.da
 
 Le service {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} fournit la puissance des microservices et des conteneurs à votre environnement VMware sur {{site.data.keyword.cloud_notm}}. Grâce à ce service, vous pouvez déployer le même modèle opérationnel et les mêmes outils VMware et {{site.data.keyword.cloud_notm}} locaux dans {{site.data.keyword.cloud_notm}}.
 
-Pour plus d'informations, voir [{{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html).
+Pour plus d'informations, voir [Présentation d'{{site.data.keyword.cloud_notm}} Private Hosted](../services/icp_overview.html).
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
