@@ -4,13 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
 # Solicitud de FortiGate Virtual Appliance on IBM Cloud
 
-Puede solicitar FortiGate Virtual Appliance en el servicio de {{site.data.keyword.cloud}}, a continuación solicite una nueva instancia con el servicio incluido o añadiendo el servicio a la instancia existente.
+Puede solicitar FortiGate Virtual Appliance en el servicio de {{site.data.keyword.cloud}} cuando solicite una nueva instancia con el servicio incluido o añadiendo el servicio a la instancia existente.
 
 ## Solicitud de FortiGate Virtual Appliance on IBM Cloud para una nueva instancia
 
@@ -28,6 +32,16 @@ Puede añadir el servicio de FortiGate Virtual Appliance on {{site.data.keyword.
 
 Al solicitar el servicio, proporcione los valores siguientes:
 
+### FortiGuard Network Connection
+
+Seleccione **Red pública** o **Red privada** para FortiGuard. Si el clúster de destino está configurado con interfaces de red solo privadas, solo está disponible la opción **Red privada**. Esta selección determina la forma en que FortiGuard contactará con el servidor de licencias Fortinet para activar la licencia y para descargar los parches de seguridad y no afecta al plano de datos de la carga de trabajo.
+
+Si selecciona **Red privada**, especifique los siguientes valores:
+* **Dirección IP de proxy:** la dirección IPv4 del servidor proxy.
+* **Número de puerto de proxy**: el número de puerto del servidor proxy, que suele ser 8080 o 3128.
+* **Nombre de usuario de proxy**: si necesita autenticación de proxy, especifique el nombre de usuario del servidor proxy.
+* **Contraseña de proxy**: si necesita autenticación de proxy, especifique la contraseña del servidor proxy.
+
 ### Nombre
 
 Especifique el nombre de servicio.
@@ -44,14 +58,18 @@ Especifique el nombre de servicio.
 El modelo de licencia de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} ofrece las siguientes opciones:
 <dl class="dl">
         <dt class="dt dlterm">Standard FW</dt>
-        <dd class="dd">Este paquete incluye Stateful Packet Inspection, VLAN Protection y Advanced Logging, Ingress and Egress Firewall Rules, SSL/IPSec VPN Termination y soporte continuo.</dd>
+        <dd class="dd">Este paquete incluye Stateful Packet Inspection, VLAN Protection y Advanced Logging, Ingress and Egress Firewall Rules, SSL/IPSec VPN Termination y soporte las 24 horas.</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
-        <dd class="dd">Este paquete incluye todos los servicios de cortafuegos estándar además de NGFW IPS y web Filtering, AntiVirus y AntiSpam, IP y Domain Reputation, y los servicios de seguridad de core FortiCare.</dd>
+        <dd class="dd">Este paquete incluye todos los servicios de cortafuegos estándar, además del servicio Advanced Malware Protection (AMP) (que incluye Antivirus, Botnet IP/Domain Service, Mobile Malware Security, FortiSandbox Cloud, Virus Outbreak Protection Service y Content Disarm & Reconstruct), así como filtrado web, IPS, Antispam, control de aplicaciones y servicios de FortiCare.</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>
-        <dd class="dd">Este paquete incluye todos los servicios de cortafuegos estándar y de UTM además de FortiSandbox Cloud y seguridad de datos móviles.</dd>
+        <dd class="dd">Este paquete incluye todos los servicios de cortafuegos estándar y los servicios UTM, además de los siguientes servicios:<ul><li>Cloud Access Security Broker (CASB): este servicio proporciona visibilidad, conformidad, seguridad de datos y protección frente a amenazas para los servicios basados en la nube.</li><li>Industrial Security: este servicio ofrece firmas para los protocolos ICS/SCADA más utilizados.</li><li>Security Rating: este servicio ofrece funciones de auditoría para identificar las principales vulnerabilidades y los puntos débiles de la configuración e implementar las recomendaciones de las mejores prácticas.</li></ul></dd>
 </dl>
 
-**Importante:** No puede cambiar el modelo de licencia después de la instalación del servicio. Para cambiar el modelo de licencia, debe eliminar el servicio existente y reinstalar el servicio seleccionando otra opción de licencia.
+En el tercer trimestre de 2018, Fortinet ha añadido tres nuevos servicios (CASB, Industrial Security y Security Rating) a su paquete Enterprise. Estos servicios solo están disponibles en FortiGate 6.0.
+{:note}
+
+No puede cambiar el modelo de licencia después de la instalación del servicio. Para cambiar el modelo de licencia, debe eliminar el servicio existente y reinstalar el servicio seleccionando otra opción de licencia.
+{:important}
 
 ### Enlaces relacionados
 

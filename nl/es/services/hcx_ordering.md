@@ -10,16 +10,16 @@ lastupdated: "2018-09-27"
 
 # Solicitud de VMware HCX on IBM Cloud
 
-Puede solicitar el servicio de VMware HCX on {{site.data.keyword.cloud}} al pedir una instancia nueva de VMware vCenter Server con paquete híbrido (Hybridity) incluida con el servicio o añadiendo el servicio a la instancia existente.
+Puede solicitar el servicio de VMware HCX on {{site.data.keyword.cloud}} al pedir una instancia nueva de VMware vCenter Server con el paquete híbrido (Hybridity) incluida con el servicio o añadiendo el servicio a la instancia existente.
 
 ## Solicitud de VMware HCX on IBM Cloud para una nueva instancia
 
-Para solicitar una nueva instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}} con paquete híbrido (Hybridity) con VMware HCX on {{site.data.keyword.cloud_notm}}, seleccione **VMware HCX on IBM Cloud** en la sección **Servicios** al solicitar la instancia desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
+Para solicitar una nueva instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity) con VMware HCX on {{site.data.keyword.cloud_notm}}, seleccione **VMware HCX on IBM Cloud** en la sección **Servicios** al solicitar la instancia desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
 
 ## Solicitud de VMware HCX on IBM Cloud para una instancia existente
 
-Para añadir el servicio de VMware HCX on {{site.data.keyword.cloud_notm}} a una instancia existente de VMware vCenter Server on {{site.data.keyword.cloud_notm}} con paquete híbrido (Hybridity), visualice la instancia para la que desea añadir el servicio, pulse **Servicios** en el panel de navegación izquierdo y pulse **Añadir**.
+Para añadir el servicio de VMware HCX on {{site.data.keyword.cloud_notm}} a una instancia existente de VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity), visualice la instancia para la que desea añadir el servicio, pulse **Servicios** en el panel de navegación izquierdo y pulse **Añadir**.
 
 ## Configuración de VMware HCX on IBM Cloud
 
@@ -44,7 +44,7 @@ Para instalar HCX on {{site.data.keyword.cloud_notm}}, siga los valores siguient
 
 ## Proceso de despliegue de HCX on IBM Cloud
 
-El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. Tanto si solicita una instancia de vCenter Server con paquete híbrido (Hybridity) con el servicio incluido como si despliega el servicio posteriormente en la instancia, los pasos siguientes se completan mediante el proceso de automatización de {{site.data.keyword.vmwaresolutions_short}}:
+El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. Tanto si solicita una instancia de vCenter Server con el paquete híbrido (Hybridity) con el servicio incluido como si despliega el servicio posteriormente en la instancia, los pasos siguientes se completan mediante el proceso de automatización de {{site.data.keyword.vmwaresolutions_short}}:
 1. Se solicitan tres subredes para HCX desde la infraestructura de {{site.data.keyword.cloud_notm}}:
    * Una subred portátil privada para la gestión de HCX.
    * Una subred portátil privada para interconexiones HCX. Esta subred se utiliza cuando se selecciona la opción **Red privada** para el **tipo de interconexión HCX**.

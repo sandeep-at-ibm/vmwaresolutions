@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visión general de F5 on IBM Cloud
 
@@ -14,7 +18,8 @@ El servicio F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) prop
 
 Puede instalar más de una instancia de este servicio según sea necesario.
 
-**Disponibilidad:** Este servicio solo está disponible para las instancias que se despliegan en releases V1.9 o posteriores.
+Este servicio sólo está disponible para las instancias desplegadas en la versión V1.9 o posterior. La versión actual de BIG-IP VE que está instalada es la v13.1.
+{:note}
 
 ## Especificaciones técnicas para F5 on IBM Cloud
 
@@ -32,7 +37,8 @@ Los componentes siguientes se incluyen con el servicio de F5 on {{site.data.keyw
 ### Licencias y tarifas
 Las tarifas de licencia para cada máquina virtual se aplican a cada ciclo de facturación en función de la opción de licencia (Good, Better o Best) y el ancho de banda seleccionado.
 
-**Importante:** No podrá cambiar el nivel de licencia después de la instalación del servicio. Para cambiar el nivel de licencia, debe eliminar el servicio existente y reinstalarlo utilizando otra opción de licencia.
+No puede cambiar el nivel de licencia después de la instalación del servicio. Para cambiar el nivel de licencia, debe eliminar el servicio existente y reinstalarlo utilizando otra opción de licencia.
+{:important}
 
 ## Consideraciones sobre la instalación para F5 en IBM Cloud
 
@@ -51,7 +57,7 @@ Tabla 1. Despliegues de CPU y de RAM para distintas las selecciones de ancho de 
 | 5 Gbps            | 8 vCPU, 16 GB de RAM   | 8 vCPU, 16 GB de RAM     | 8 vCPU, 16 GB de RAM   |
 | 10 Gbps           | 8 vCPU, 16 GB de RAM   | 8 vCPU, 16 GB de RAM     | 8 vCPU, 16 GB de RAM   |
 
-**Notas:**
+### Consideraciones adicionales
 
 * F5 BIG-IP limita el rendimiento del dispositivo en función del ancho de banda máximo elegido. Como el rendimiento de la red se ve afectado por muchos factores, no todas las configuraciones y topologías pueden alcanzar el ancho de banda máximo seleccionado.
 * El par de HA (alta disponibilidad) de las VM BIG-IP VE se solo desplegarán en el clúster predeterminado.
