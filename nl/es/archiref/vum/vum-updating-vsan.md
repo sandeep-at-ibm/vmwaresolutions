@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -21,7 +21,7 @@ La actualización del clúster de vSAN se realiza en la secuencia de tareas sigu
 * **Habilitar el flujo de trabajo de estado en línea de vSAN **: este flujo de trabajo habilita las líneas base vSAN en VUM de modo que las actualizaciones se puedan revisar y corregir. Es necesario que se lleve a cabo inicialmente solo para habilitar vSAN con VUM
 * **Requisitos previos**: Comprender los requisitos previos, el proceso y las restricciones
 * **Actualice el vCenter Server Appliance**. Para obtener más información, consulte [Actualización de VCSA y vCenters enlazados con SSO](vum-updating-vcsa.html).
-* **Actualizar los hosts ESXi de vSphere**: Para obtener más información, consulte [Crear líneas base y adjuntarlas a objetos de inventario](vum-baselines.html).
+* **Actualizar los hosts ESXi de vSphere**: Para obtener más información, consulte [Creación de líneas base y cómo adjuntarlas a objetos de inventario](vum-baselines.html).
 * **Actualizar el formato de disco de vSAN**: Consulte Actualizar el formato de disco de vSAN. La actualización del formato de disco es opcional, pero para obtener los mejores resultados, actualice los objetos para que utilicen la última versión. El formato en disco expone su entorno a todo el conjunto de características de vSAN.
 
 ## Habilitar el flujo de trabajo de estado en línea de vSAN
@@ -32,7 +32,7 @@ Seguir las tareas de esta sección hará que las líneas base vSAN estén dispon
 
 Asegúrese de que el VCSA sea vCenter 6.5 Parche 2 o versión más nueva antes de continuar, ya que esto arregla algunos problemas de uso de proxy. Para obtener más información, consulte [Actualización de VCSA y vCenters enlazados con SSO](vum-updating-vcsa.html).
 
-Para ver las actualizaciones de vSAN en VUM, se sigue el flujo de trabajo de estado en línea de vSAN. Por lo tanto, vSAN Online Health necesita conectarse a https://vcsa.vmware.com y a http://www.vmware.com para realizar estas comprobaciones de estado en línea para habilitar el flujo de trabajo de estado en línea de vSAN que necesitamos:
+Para ver las actualizaciones de vSAN en VUM, se sigue el flujo de trabajo de estado en línea de vSAN. Por lo tanto, vSAN Online Health necesita conectarse a `vcsa.vmware.com` y a `vmware.com` para realizar estas comprobaciones de estado en línea para habilitar el flujo de trabajo de estado en línea de vSAN que necesitamos:
 * Configure el VCSA para que utilice el proxy.
 * Configure vSAN para que utilice el proxy.
 * Habilitar el Programa de mejora de la experiencia del cliente (CEIP).
@@ -53,7 +53,7 @@ Tenga en cuenta que ha habido informes en los que parece que la información de 
 Si los parámetros HTTPS no están establecidos, utilice el mandato siguiente: `proxy.set -- protocol https -- server ``<proxy ip>``--port 3128`
 
 ### Configurar vSAN para utilizar el proxy
-1. Vaya a **Inicio** > **Hosts y clústeres**, seleccione el **clúster vSAN ** en el panel de navegación y, a continuación, seleccione el **separador Configurar** y vaya a **vSAN** y, a continuación, **General**. Desplácese a la sección Conectividad de Internet y pulse **Editar**.
+1. Vaya a **Inicio** > **Hosts y clústeres**, seleccione el **clúster vSAN ** en el panel de navegación y, a continuación, seleccione el **separador Configurar** y vaya a **vSAN** y, a continuación, **General**. Desplácese hasta la sección **Conectividad de Internet** y pulse **Editar**.
 2. Especifique la dirección IP y el número de puerto del proxy, pulse **Aceptar**.
 
 ### Habilitar el Programa de mejora de la experiencia del cliente (CEIP)
@@ -97,7 +97,7 @@ Para obtener más información, consulte [Actualización de VCSA y vCenters enla
 
 ##	Actualizar los hosts ESXi de vSphere
 
-Para obtener más información, consulte [Crear líneas base y adjuntar a objetos de inventario](vum-baselines.html).
+Para obtener más información, consulte [Creación de líneas base y cómo adjuntarlas a objetos de inventario](vum-baselines.html).
 
 ##	Actualizar el formato de disco de vSAN
 
@@ -128,5 +128,5 @@ Muchas tareas administrativas básicas se pueden realizar de forma mucho más ef
 
 ### Enlaces relacionados
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitectura de la solución VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)
