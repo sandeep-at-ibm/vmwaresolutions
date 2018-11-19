@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-18"
+lastupdated: "2018-10-19"
 
 ---
 
@@ -80,7 +80,7 @@ Para ver consideraciones importantes antes de seleccionar las VLAN existentes, c
 
 El release actual aplica la actualización del componente VMware NSX for vSphere 6.3.5. Para obtener más información sobre los componentes, consulte [Lista de materiales de vCenter Server](../vcenter/vc_bom.html).
 
-Para instancias de VMware vCenter Server desplegadas en V2.2 o releases posteriores, los valores de configuración de NSX y de grupos de puertos han cambiado. Para obtener más información, consulte la sección *Valores de configuración de grupos de puertos y NSX* en la Lista de materiales de software de vCenter Server](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
+Para instancias de VMware vCenter Server desplegadas en V2.2 o releases posteriores, los valores de configuración de NSX y de grupos de puertos han cambiado. Para obtener más información, consulte la sección *Valores de configuración de grupos de puertos y NSX* en [Lista de material de software de vCenter Server](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
 
 ### Nueva opción para la configuración de DNS
 
