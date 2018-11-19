@@ -4,15 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Remarques relatives aux instances VMware HCX on IBM Cloud locales
 
 Passez en revue les remarques suivantes avant d'installer ou de supprimer des instances HCX on {{site.data.keyword.cloud}} que vous avez commandées pour une utilisation locale :
 
-**Remarque :** une instance vCenter Server avec HCX on {{site.data.keyword.cloud_notm}} est limitée à trois connexions simultanées à partir des sites locaux.
+Une instance vCenter Server avec HCX on {{site.data.keyword.cloud_notm}} est limitée à trois connexions simultanées à partir des sites locaux.{:note}
 
 ## Remarques relatives à l'installation d'instances HCX on IBM Cloud locales
 
@@ -32,7 +36,8 @@ Vous devez effectuer les tâches suivantes pour installer correctement l'instanc
     3. Cliquez sur **Copier le lien**, puis utilisez ce lien pour télécharger le client HCX Enterprise sur un environnement local avec accès à votre environnement vSphere local.
 3. Dans le client Web VMware vSphere, déployez le client HCX Enterprise en tant que dispositif virtuel HCX Manager dans votre environnement local.
 
-   **Remarque :** vous devez déployer le gestionnaire HCX Manager local dans un réseau privé et l'autoriser à accéder au réseau public. Vous pouvez utiliser une passerelle NSX Edge, Vyatta ou autre pour accorder l'accès Internet au gestionnaire HCX Manager local. Si les passerelles utilisées pour l'accès au réseau privé et l'accès au réseau public sont différentes, il est recommandé d'utiliser la passerelle par défaut pour autoriser l'accès au réseau public et permettre, depuis la **console d'administration de HCX Manager**, de créer une route statique pour l'accès au réseau privé.
+   Vous devez déployer le gestionnaire HCX Manager local dans un réseau privé et l'autoriser à accéder au réseau public. Vous pouvez utiliser une passerelle NSX Edge, Vyatta ou autre pour accorder l'accès Internet au gestionnaire HCX Manager local. Si les passerelles utilisées pour l'accès au réseau privé et l'accès au réseau public sont différentes, il est recommandé d'utiliser la passerelle par défaut pour autoriser l'accès au réseau public et permettre, depuis la **console d'administration de HCX Manager**, de créer une route statique pour l'accès au réseau privé.
+   {:note}
 4. Une fois le déploiement de HCX Manager terminé, utilisez la **console d'administration de HCX Manager** pour activer le gestionnaire HCX Manager local. Pour obtenir une clé d'activation pour le gestionnaire HCX Manager local, commandez une instance HCX on {{site.data.keyword.cloud_notm}} locale dans la console {{site.data.keyword.vmwaresolutions_short}}. Pour plus d'informations, voir [Commande d'instances HCX locales](../services/standalone_orderingserviceinstances.html).
 5. Si vous utilisez un certificat SSL autosigné lors de la commande du service HCX on {{site.data.keyword.cloud_notm}}, vous devez importer le certificat dans le gestionnaire HCX Manager local en procédant comme suit :
     1. Sur la **console d'administration de HCX Manager**, cliquez sur l'onglet **Administration**.
@@ -52,7 +57,8 @@ Passez en revue les remarques suivantes avant de supprimer une instance CX on {{
     2. tous les réseaux étendus ont été supprimés ;
     3. tous les composants interconnectés aux sites de cloud appariés ont été supprimés.
 
-   **Important :** vous devez lire toutes les remarques avant de passer à l'étape suivante. Sinon, la licence de l'instance HCX on {{site.data.keyword.cloud_notm}} locale sera annulée et, de ce fait, aucune migration ne pourra être effectuée et des erreurs seront susceptibles de se produire au niveau des composants HCX.  
+   Vous devez lire toutes les remarques avant de passer à l'étape suivante. Sinon, la licence de l'instance HCX on {{site.data.keyword.cloud_notm}} locale sera annulée et, de ce fait, aucune migration ne pourra être effectuée et des erreurs seront susceptibles de se produire au niveau des composants HCX.  
+   {:important}
 2. Dans la console {{site.data.keyword.vmwaresolutions_short}}, supprimez l'instance HCX on {{site.data.keyword.cloud_notm}} HCX locale qui avait été commandée pour obtenir la clé d'activation pour le gestionnaire HCX Manager local. Vérifiez que l'instance supprimée n'est plus disponible sur la console avant de passer à l'étape suivante.
 
    Pour plus d'informations, voir [Suppression d'instances HCX on {{site.data.keyword.cloud_notm}} locales](../services/standalone_deletingserviceinstances.html).
@@ -62,6 +68,5 @@ Passez en revue les remarques suivantes avant de supprimer une instance CX on {{
 
 * [Affichage d'instances HCX on {{site.data.keyword.cloud_notm}} locales](../services/standalone_viewingserviceinstances.html)
 * [Glossaire des termes HCX](hcx_glossary.html)
-* [Documentation VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
-* [Ressources VMware HCX](https://hcx.vmware.com/#/docs)
+* [Documentation VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
 * [Contacter le support IBM](../vmonic/trbl_support.html)

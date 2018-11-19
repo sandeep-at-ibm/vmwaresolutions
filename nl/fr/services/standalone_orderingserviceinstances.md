@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -41,4 +41,4 @@ Affichez et gérez l'instance HCX on {{site.data.keyword.cloud_notm}} locale que
 * [Affichage d'instances HCX on {{site.data.keyword.cloud_notm}} locales](standalone_viewingserviceinstances.html)
 * [Suppression d'instances HCX on {{site.data.keyword.cloud_notm}} locales](standalone_deletingserviceinstances.html)
 * [Glossaire des termes HCX](hcx_glossary.html)
-* [Documentation VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentation VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

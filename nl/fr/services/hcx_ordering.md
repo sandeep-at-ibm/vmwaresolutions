@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Commande de VMware HCX on IBM Cloud
 
@@ -50,7 +54,8 @@ Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatis
    * Un sous-réseau portable privé pour les interconnexions HCX. Ce sous-réseau est utilisé si **Réseau privé** est sélectionné pour **Type d'interconnexion HCX**.
    * Un sous-réseau portable public pour l'activation et la maintenance avec VMware. Si l'option **Réseau public** est sélectionnée pour **Type d'interconnexion HCX**, ce sous-réseau est également utilisé pour les interconnexions HCX.
 
-   **Important :** les adresses IP dans les sous-réseaux qui sont commandées pour HCX sont conçues pour être gérées par les fonctions d'automatisation de VMware on {{site.data.keyword.cloud_notm}}. Ces adresses IP ne peuvent pas être affectées à des ressources VMware, telles que des machines virtuelles et des serveurs de périphérie NSX Edge, que vous créez. Si vous avez besoin d'adresses IP supplémentaires pour vos artefacts VMware, vous devez commander vos propres sous-réseaux depuis {{site.data.keyword.cloud_notm}}.
+   Les adresses IP dans les sous-réseaux qui sont commandées pour HCX sont conçues pour être gérées par les fonctions d'automatisation de VMware on {{site.data.keyword.cloud_notm}}. Ces adresses IP ne peuvent pas être affectées à des ressources VMware, telles que des machines virtuelles et des serveurs de périphérie NSX Edge, que vous créez. Si vous avez besoin d'adresses IP supplémentaires pour vos artefacts VMware, vous devez commander vos propres sous-réseaux depuis {{site.data.keyword.cloud_notm}}.
+   {:important}
 2. Si l'option **Réseau privé** a été sélectionnée comme **Type d'interconnexion HCX**, un groupe de ports nommé **SDDC-DPortGroup-HCX-Private** est créé sur le commutateur virtuel distribué (DVS) privé.
 3. Une clé d'activation HCX est commandée à partir de VMware.
 4. Trois pools de ressources et dossiers de machines virtuelles pour HCX, nécessaires pour les interconnexions HCX, les composants HCX locaux et les composants HCX distants, sont créés.
@@ -61,7 +66,8 @@ Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatis
    * Les règles et les pools de ressources d'équilibrage de charge sont configurés. Ces règles sont des pools de ressources utilisés pour réacheminer le trafic entrant lié à HCX vers les dispositifs virtuels appropriés de HCX Manager, vCenter Server et Platform Services Controller (PSC).
    * Un certificat SSL permettant de chiffrer le trafic HTTPS entrant associé à HCX en provenance des passerelles ESG est appliqué.
 
-   **Important :** le serveur de périphérie de gestion HCX est dédié au trafic de gestion HCX entre les composants HCX sur site et les composants HCX côté cloud. Ne modifiez pas le serveur de périphérie de gestion HCX et ne l'utilisez pas pour des extensions de réseau HCX. Créez plutôt des serveurs de périphérie distincts pour les extensions de réseau. Par ailleurs, l'utilisation d'un pare-feu ou la désactivation des communications de serveur de périphérie de gestion HCX sur les composants de gestion IBM privés ou l'Internet public peut avoir une incidence défavorable sur la fonctionnalité HCX.
+   Le serveur de périphérie de gestion HCX est dédié au trafic de gestion HCX entre les composants HCX sur site et les composants HCX côté cloud. Ne modifiez pas le serveur de périphérie de gestion HCX et ne l'utilisez pas pour des extensions de réseau HCX. Créez plutôt des serveurs de périphérie distincts pour les extensions de réseau. Par ailleurs, l'utilisation d'un pare-feu ou la désactivation des communications de serveur de périphérie de gestion HCX sur les composants de gestion IBM privés ou l'Internet public peut avoir une incidence défavorable sur la fonctionnalité HCX.
+   {:important}
 
 6. HCX Manager on {{site.data.keyword.cloud_notm}} est déployé, activé et configuré :
    * HCX Manager est enregistré auprès de vCenter Server.
@@ -78,4 +84,4 @@ Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatis
 * [Glossaire des termes HCX](hcx_glossary.html)
 * [Contacter le support IBM](../vmonic/trbl_support.html)
 * [Présentation de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
-* [Documentation VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentation VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

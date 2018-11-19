@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-07"
 
 ---
 
 # Commande d'IBM Cloud Private Hosted
 
-Vous pouvez commander le service {{site.data.keyword.cloud}} Private Hosted lors de la commande d'une nouvelle instance avec le service inclus ou vous pouvez ajouter le service à votre instance existante. 
+Vous pouvez commander le service {{site.data.keyword.cloud}} Private Hosted lors de la commande d'une nouvelle instance avec le service inclus ou vous pouvez ajouter le service à votre instance existante.
 
 ## Commande d'IBM Cloud Private Hosted pour une nouvelle instance
 
@@ -27,8 +27,8 @@ Vous pouvez ajouter le service {{site.data.keyword.cloud_notm}} Private Hosted d
 ## Configuration du service IBM Cloud Private Hosted
 
 Lorsque vous commandez le service, indiquez les paramètres suivants :
-* Sélectionnez **Prêt pour la production** ou **Développement/Test** selon vos besoins. 
-* Cochez la case requise pour certifier que vous possédez déjà la licence requise pour déployer le service {{site.data.keyword.cloud_notm}} Private Hosted. 
+* Sélectionnez **Prêt pour la production** ou **Développement/Test** selon vos besoins.
+* Cochez la case requise pour certifier que vous possédez déjà la licence qui est obligatoire pour déployer le service {{site.data.keyword.cloud_notm}} Private Hosted. 
 
 ### Liens connexes
 
