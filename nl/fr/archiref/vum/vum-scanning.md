@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -26,7 +26,7 @@ Lorsque vous analysez des hôtes, des machines virtuelles et des dispositifs vir
 
 ## Lancement manuel d'une analyse de machines virtuelles et de dispositifs virtuels
 
-Vous pouvez analyser des machines virtuelles et des dispositifs virtuels dans l'inventaire vSphere par rapport aux lignes de base et aux groupes de lignes de base associés. Les machines et dispositifs virtuels que vous sélectionnez sont analysés par rapport aux lignes de base associées, en fonction des options que vous avez choisies. Tous les objets enfant sont également analysés, de sorte que plus l'infrastructure virtuelle est importante et plus vous lancez l'analyse au niveau le plus haut dans la hiérarchie des objets, plus l'analyse prend du temps et plus la vue de conformité est précise.
+Vous pouvez analyser des machines virtuelles et des dispositifs virtuels dans l'inventaire vSphere par rapport aux lignes de base et aux groupes de lignes de base associés. Les machines virtuelles et les dispositifs virtuels que vous sélectionnez sont analysés par rapport aux lignes de base associées, en fonction des options que vous avez choisies. Tous les objets enfant sont également analysés, de sorte que plus l'infrastructure virtuelle est importante et plus vous lancez l'analyse au niveau le plus haut dans la hiérarchie des objets, plus l'analyse prend du temps et plus la vue de conformité est précise.
 
 1.	A l'aide du client vSphere Web Client, sélectionnez **Home** > **VMs and Templates**.
 2.	Cliquez avec le bouton droit de la souris sur une _machine virtuelle_, un _dispositif virtuel_ ou un _dossier de machines virtuelles et de dispositifs virtuels_ et cliquez sur **Scan for Updates**.
@@ -55,5 +55,5 @@ Vous pouvez configurer le client vSphere Web Client pour analyser des machines v
 
 ### Liens connexes
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)
+* [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
