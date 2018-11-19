@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -54,7 +54,8 @@ Vous pouvez également inclure dans votre commande les composants VMware suivant
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-L'option BYOL n'est pas disponible pour les partenaires commerciaux IBM.{:note}
+L'option BYOL n'est pas disponible pour les partenaires commerciaux IBM.
+{:note}
 
 ### Composants individuels pour des partenaires non commerciaux
 
@@ -79,7 +80,8 @@ Vous disposez des options d'octroi de licence suivantes pour les composants VMwa
 
 Si vous choisissez d'acheter toutes les licences, sauf pour vSphere Enterprise Plus et vCenter Server, et que vous commandez plusieurs serveurs ESXi, un ticket {{site.data.keyword.cloud_notm}} est automatiquement ouvert en votre nom afin de combiner les clés de licence. Vous êtes chargé du suivi du ticket afin de vous assurer que vous n'utilisez que les clés de licence générées par l'équipe DevOps.
 
-L'utilisation de clés de licence individuelles avec les clés de licence combinées ne répond pas aux exigences de paiement des licences dont vous aurez besoin.{:important}
+L'utilisation de clés de licence individuelles avec les clés de licence combinées ne répond pas aux exigences de paiement des licences dont vous aurez besoin.
+{:important}
 
 ## Paramètres de serveur bare metal
 
@@ -87,7 +89,10 @@ L'utilisation de clés de licence individuelles avec les clés de licence combin
 
 Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel le cluster doit être hébergé.
 
-Si vous sélectionnez un composant vSAN, la liste des emplacements est filtrée par disponibilité SSD. {:note}
+**Remarques :**
+* Si vous sélectionnez un composant vSAN, la liste des emplacements est filtrée par disponibilité SSD.
+* Le centre de données FRA05 ne prend pas en charge les serveurs bare metal Broadwell. 
+* Le centre de données LON05 ne prend pas en charge les serveurs bare metal certifiés SAP ou Broadwell. 
 
 ### Skylake
 
@@ -226,8 +231,8 @@ Selon vos configurations, le coût estimé est généré et affiché instantané
 5. Spécifiez les paramètres de serveur bare metal :
    1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger le cluster.
    2. Sélectionnez la configuration de serveur bare metal.
-      * Lorsque vous sélectionnez **Skylake** ou **Broadwell**, spécifiez le modèle d'UC et la taille de mémoire RAM. 
-      * Lorsque vous sélectionnez **Certifiés SAP**, choisissez le modèle d'UC. 
+      * Lorsque vous sélectionnez **Skylake** ou **Broadwell**, spécifiez le modèle d'UC et la taille de mémoire RAM.
+      * Lorsque vous sélectionnez **Certifiés SAP**, choisissez le modèle d'UC.
    3. Spécifiez le nombre de serveurs bare metal.
 6. Si vous avez sélectionné le composant **VMware vSAN**, procédez à la configuration de stockage vSAN. Spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 7. Spécifiez les paramètres d'interface réseau :
@@ -250,7 +255,8 @@ Si vous avez sauvegardé la configuration en tant que modèle, vous obtenez une 
 
 Si vous avez passé la commande, le déploiement du cluster démarre automatiquement et vous recevez par courrier électronique la confirmation que la commande est en cours de traitement. Lorsque le cluster est prêt pour utilisation, un courrier électronique vous en avertit.
 
-Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.{:note}
+Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.
+{:note}
 
 ### Liens connexes
 

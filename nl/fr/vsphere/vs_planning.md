@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -27,7 +27,8 @@ Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à c
 
 Un déploiement vSphere a des exigences strictes quant à l'infrastructure physique. Par conséquent, vous ne pouvez déployer des clusters que dans les {{site.data.keyword.CloudDataCents_notm}} qui répondent à ces exigences. Les {{site.data.keyword.CloudDataCent_notm}} suivants sont disponibles pour un déploiement vSphere.
 
-Si vous sélectionnez un composant vSAN, la liste des emplacements est filtrée par disponibilité SSD (Solid-State Disk).{:note}
+Si vous sélectionnez un composant vSAN, la liste des emplacements est filtrée par disponibilité SSD (Solid-State Disk).
+{:note}
 
 Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les clusters vSphere
 
@@ -41,9 +42,11 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les cluste
 | DAL13 | Dallas | Sud des Etats-Unis |
 | FRA02 | Francfort | Europe |
 | FRA04 | Francfort | Europe |
+| FRA05 | Francfort | Europe |
 | HKG02 | Hong Kong | Asie-Pacifique |
 | LON02 | Londres | Europe |
 | LON04 | Londres | Europe |
+| LON05 | Londres | Europe |
 | LON06 | Londres | Europe |
 | MEL01 | Melbourne | Asie-Pacifique |
 | MEX01 | Querétaro | Sud des Etats-Unis |

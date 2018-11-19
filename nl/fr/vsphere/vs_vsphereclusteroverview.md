@@ -26,7 +26,8 @@ Utilisez cette offre pour créer un cluster de serveurs ESXi ou en augmenter un 
 
 Passez en revue les composants VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
-La disponibilité et la tarification des configurations matérielles normalisées peuvent varier en fonction de l'{{site.data.keyword.CloudDataCent_notm}} sélectionné pour le déploiement.{:note}
+La disponibilité et la tarification des configurations matérielles normalisées peuvent varier en fonction de l'{{site.data.keyword.CloudDataCent_notm}} sélectionné pour le déploiement.
+{:note}
 
 ### Composants VMware
 
@@ -66,7 +67,8 @@ Stockage personnalisé par l'utilisateur pour la configuration vSAN lorsque le c
 
   De plus, deux disques cache de 960 Go par hôte sont également commandés.
 
-  Les unités SSD (Solid Disk) de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un centre de données.{:note}
+  Les unités SSD (Solid Disk) de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un centre de données.
+  {:note}
 * L'option Hautes performances avec Intel Optane, qui fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Cette option dépend du modèle d'UC.
 
 ## Spécifications techniques relatives aux noeuds d'extension de cluster vSphere
