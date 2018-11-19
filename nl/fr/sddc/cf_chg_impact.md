@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -38,6 +38,17 @@ Tableau 1. Opérations affectées pour l'administrateur de la connexion unique (
 | Modification du nom du commutateur virtuel distribué (DVS, Distributed Virtual Switch) public ou privé. | L'ajout d'un serveur ESXi risque d'échouer. | Important | Redonnez au DVS son nom d'origine.
 | Modification du nom du magasin de données VSAN. | L'ajout d'un serveur ESXi risque d'échouer.<br><br>La mise à niveau de l'instance risque d'échouer. | Important | Redonnez au magasin de données VSAN son nom d'origine, soit **vsanDatastore**.
 | Modification du nom d'instance ou du nom de domaine. | L'instance est inutilisable. | Critique | Non applicable
+
+Le tableau suivant répertorie les opérations susceptibles d'être affectées lorsque l'accès à SSH ou à l'interpréteur de commandes est désactivé pour différentes ressources. 
+
+Tableau 2. Opérations affectées pour l'accès à SSH et à l'interpréteur de commandes (local)
+
+| Modification  | Opérations affectées  | Gravité  | Méthode de récupération  |
+|:------------- |:------------- |:--------------|:--------------|
+| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour vCenter Server ou PSC. | L'appariement d'une instance principale et d'une instance secondaire peut échouer. L'application de correctifs aux ressources peut échouer. | Important    | Non applicable    |
+| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour ESXi. | L'ajout et le retrait d'hôtes, de services et de stockage réseau à l'instance peut échouer. L'application de correctifs aux ressources peut échouer. | Important    | Non applicable    |
+
+Si vous choisissez de désactiver l'accès à SSH ou à l'interpréteur de commandes, vous devez le réactiver temporairement avant d'effectuer les opérations indiquées. 
 
 ## Gestion de sous-réseaux pour les instances Cloud Foundation
 

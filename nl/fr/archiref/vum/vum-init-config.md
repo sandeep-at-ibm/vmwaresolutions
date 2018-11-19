@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
 # Configuration initiale
 
-L'automatisation IC4VS configure le dispositif VCSA avec une passerelle par défaut définie sur le routeur BCR (Backend Customer Router) d'IBM Cloud. Cependant, il n'y a pas de route vers Internet via le routeur BCR. La route standard vers Internet à partir de l'instance VCS passe par la passerelle Management ESG. Comme il n'est pas recommandé de modifier la configuration du dispositif VCSA ou Management ESG, l'implémentation d'un serveur proxy sur le sous-réseau du client est recommandée pour activer VUM.
+L'automatisation IC4VS configure le dispositif VCSA avec une passerelle par défaut définie sur le routeur BCR (Backend Customer Router) d'{{site.data.keyword.cloud}}. Cependant, il n'y a pas de route vers Internet via le routeur BCR. La route standard vers Internet à partir de l'instance VMware vCenter Server on {{site.data.keyword.cloud_notm}} passe par la passerelle Management ESG. Comme il n'est pas recommandé de modifier la configuration du dispositif VCSA ou Management ESG, l'implémentation d'un serveur proxy sur le sous-réseau du client est recommandée pour activer VUM.
 
 Cette approche signifie que les dispositifs VCSA ou Management ESG n'ont pas à être reconfigurés. Cependant, une machine virtuelle ou un dispositif de petite taille doit être installé. Un serveur proxy est un système, installé entre deux unités de noeud final qui fait office d'unité intermédiaire. Dans ce cas, il est placé entre VUM et les serveurs de mises à jour dans VMware.
 
@@ -36,8 +36,8 @@ Tableau 1. Valeurs de déploiement
 | Adresse | IP proxy | Une Adresse IP de secours doit être utilisée à partir du sous-réseau portable privé du client affectée lors du processus de mise à disposition. Seules deux adresses IP ont été réservées sur ce sous-réseau ; l'une pour le routeur BCR et l'autre pour le dispositif ESG du client (customer-esg)
 | Masque de réseau | 255.255.255.192 | |
 | Passerelle| Adresse IP de la liaison montante privée customer-nsx-edge | Il s'agit du paramètre de passerelle par défaut pour le serveur proxy, qui correspond à l'adresse IP de la liaison montante privée de customer-nsx-edge. L'adresse IP peut être obtenue en consultant l'onglet **Paramètres** pour **customer-nsx-edge**. |
-| Serveur DNS | Adresse IP AD/DNS | Cette adresse IP peut être obtenue sur la page **Instances déployées** dans la console IBM Cloud for VMware Solutions. |
-| IP BCR | Adresse IP du routeur BCR | Il s'agit de l'adresse IP du routeur BCR (Backend Customer Router) d'IBM Cloud qui est la passerelle pour 10.0.0.0/8 et 161.26.0.0/16. Cette adresse est utilisée dans une route statique du serveur proxy pour que le dispositif VCSA et le serveur AD/DNS puissent y accéder. |
+| Serveur DNS | Adresse IP AD/DNS | Cette adresse IP peut être obtenue sur la page d'instance **Instances déployées** dans la console {{site.data.keyword.vmwaresolutions_short}}. |
+| IP BCR | Adresse IP du routeur BCR | Il s'agit de l'adresse IP du routeur BCR (Backend Customer Router) d'{{site.data.keyword.cloud_notm}} qui est la passerelle pour 10.0.0.0/8 et 161.26.0.0/16. Cette adresse est utilisée dans une route statique du serveur proxy pour que le dispositif VCSA et le serveur AD/DNS puissent y accéder. |
 
 ## Configuration de NSX
 
@@ -73,7 +73,7 @@ Le processus suivant déploie une machine virtuelle pour héberger CentOS et Squ
 
 ### Téléchargement du fichier CentOS-Minimal ISO
 
-Dans un navigateur sur votre serveur intermédiaire, téléchargez le fichier CentOS-Minimal ISO depuis [CentOS](https://www.centos.org/download/). Notez qu'IBM Cloud conserve un miroir de nombreuses distributions Linux populaires. Ce miroir n'est disponible que sur le réseau privé et les fichiers CentOS ISO sont disponibles à l'adresse suivante : `http://mirrors.service.softlayer.com/centos/7/isos/x86_64/`
+Dans un navigateur sur votre serveur intermédiaire, téléchargez le fichier CentOS-Minimal ISO depuis [CentOS](https://www.centos.org/download/). Notez qu'{{site.data.keyword.cloud_notm}} conserve un miroir de nombreuses distributions Linux populaires. Ce miroir n'est disponible que sur le réseau privé et les fichiers CentOS ISO sont disponibles à l'adresse suivante : `http://mirrors.service.softlayer.com/centos/7/isos/x86_64/`
 
 ### Configuration d'une bibliothèque de contenu et remplissage avec le fichier CentOS ISO
 
@@ -107,7 +107,7 @@ Cette tâche permet de créer une machine virtuelle prête à l'emploi à utilis
 8.	Définissez l'**UC avec la valeur 1**, la **mémoire avec la valeur 2048 Mo** et le **nouveau disque dur avec la valeur 25 Go**. Sélectionnez **Content Library ISO File** puis **CentOS-7-x86_64-Minimal**, cliquez sur **OK** et cochez la case **Connected**.
 9.	Dans la zone New device, sélectionnez **Network** et cliquez sur **Add**.
 10.	Sélectionnez le réseau **SDDC-DPortGroup-Mgmt** et vérifiez que la case Connect est cochée avant de cliquer sur **Next**.
-11.	Révisez vos options et cliquez sur **Finish**
+11.	Vérifiez et cliquez sur **Finish**. 
 
 #### Installation de CentOS
 
@@ -122,10 +122,10 @@ Cette tâche permet d'installer et de configurer la machine virtuelle qui vient 
 7.	Dans l'écran **LOCALIZATION**, cliquez sur **INSTALLATION DESTINATION**, cliquez sur l'**icône du disque virtuel VMware**, puis sur **Done**.
 8.	Dans l'écran **LOCALIZATION**, cliquez sur **NETWORK & HOSTNAME**, remplacez le nom d'hôte par le nom d'hôte de votre choix, par exemple, Proxy01.
 9.	Cliquez sur le bouton **Configure**, puis sur **IPv4 Settings** et dans la zone **Method**, sélectionnez **Manual**.
-10.	En utilisant le bouton **Add**, insérez une _adresse et un masque de réseau_, ainsi qu'une _passerelle_ à partir du _Tableau 1 – Valeurs de déploiement_
-11.	Entrez l'_adresse IP du serveur DNS_ indiqué dans le Tableau 1 – Valeurs de déploiement
-12.	Cliquez sur le bouton **Routes** et ajoutez les routes statiques suivantes : _10.0.0.0/8 et 161.26.0.0/16_ avec une adresse IP de passerelle correspondant à l'_adresse IP BCR_ du Tableau 1 Valeurs de déploiement, comme passerelle. Cette route statique permet au serveur proxy d'accéder au serveur DNS
-13.	Cliquez sur **Save** et vérifiez que l'interface Ethernet est activée (On) et qu'elle est à l'état connecté. Cliquez sur **Done** et **Begin Installation**
+10.	En utilisant le bouton **Add**, insérez une _adresse et un masque de réseau_, ainsi qu'une _passerelle_ à partir du _Tableau 1 – Valeurs de déploiement_. 
+11.	Entrez l'_adresse IP du serveur DNS_ indiqué dans le Tableau 1 – Valeurs de déploiement.
+12.	Cliquez sur le bouton **Routes** et ajoutez les routes statiques suivantes : _10.0.0.0/8 et 161.26.0.0/16_ avec une adresse IP de passerelle correspondant à l'_adresse IP BCR_ du Tableau 1 Valeurs de déploiement, comme passerelle. Cette route statique permet au serveur proxy d'accéder au serveur DNS.
+13.	Cliquez sur **Save** et vérifiez que l'interface Ethernet est activée (On) et qu'elle est à l'état connecté. Cliquez sur **Done** et **Begin Installation**. 
 14.	Au cours du processus d'installation, définissez un mot de passe root et configurez un utilisateur.
 15.	Une fois l'installation terminée, connectez-vous en tant qu'utilisateur, puis entrez la commande _ping vmware.com_. Le nom doit être résolu avec une adresse IP et vous devez obtenir une réponse. Si vous n'obtenez pas de réponse, vérifiez les adresses IP, les règles de pare-feu et les paramètres NAT.
 
@@ -145,12 +145,12 @@ Squid n'a pas de configuration matérielle requise minimale mais la quantité de
   `yum -y update`
   `yum clean all`
 
-5. Squid est installé en exécutant la commande suivante : `yum -y install squid`
-6. Dès qu'il est installé, démarrez immédiatement Squid à l'aide de la commande suivante : `systemctl start squid`
-7. Pour lancer Squid automatiquement au démarrage, exécutez la commande suivante : `systemctl enable squid`
-8. Vérifiez que Squid est opérationnel en exécutant la commande suivante : `systemctl status squid`
-9. Le pare-feu de CentOS nécessite d'autoriser l'accès au port de Squid, TCP 3128, à l'aide de la commande suivante :  `firewall-cmd –add-port=3128/tcp –permanent`
-10.	Pour sauvegarder la règle et redémarrer le service, utilisez la commande suivante : `firewall-cmd –reload`
+5. Squid est installé à l'aide de la commande suivante : `yum -y install squid`. 
+6. Dès qu'il est installé, démarrez immédiatement Squid à l'aide de la commande suivante : `systemctl start squid`.
+7. Pour lancer Squid automatiquement au démarrage, exécutez la commande suivante : `systemctl enable squid`. 
+8. Vérifiez que Squid est opérationnel en exécutant la commande suivante : `systemctl status squid`.
+9. Le pare-feu de CentOS nécessite d'autoriser l'accès au port de Squid, TCP 3128, à l'aide de la commande suivante :  `firewall-cmd –add-port=3128/tcp –permanent`.
+10.	Pour sauvegarder la règle et redémarrer le service, utilisez la commande suivante : `firewall-cmd –reload`.
 
 ## Configuration initiale de VUM
 
@@ -163,5 +163,5 @@ Configurez VUM pour utiliser le serveur proxy afin d'accéder aux référentiels
 
 ### Liens connexes
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

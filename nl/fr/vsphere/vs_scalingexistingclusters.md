@@ -41,7 +41,8 @@ La mise à l'échelle du cluster démarre automatiquement. Une conformation par 
 
 Si le cluster que vous mettez à l'échelle n'est pas prêt à être utilisé, il se peut qu'un message d'erreur s'affiche.
 
-Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.{:note}
+Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.
+{:note}
 
 ### Liens connexes
 

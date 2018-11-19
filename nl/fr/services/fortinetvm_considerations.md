@@ -50,8 +50,7 @@ Vous ne pouvez pas modifier le niveau d'octroi de licence après installation du
 
 Passez en revue les remarques suivantes avant d'installer le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} :
 * Les machines virtuelles FortiGate ne sont déployées que dans le cluster par défaut.
-* 100 % de l'UC et de la mémoire RAM des deux machines virtuelles FortiGate sont également réservés car ces machines virtuelles se trouvent dans le plan de données des
-  communications réseau et il est essentiel que des ressources soient disponibles pour ces machines.
+* 100 % de l'UC et de la mémoire RAM des deux machines virtuelles FortiGate sont également réservés car ces machines virtuelles se trouvent dans le plan de données des communications réseau et il est essentiel que des ressources soient disponibles pour ces machines.
 
   Pour calculer la réservation d'UC et de RAM pour une seule machine virtuelle FortiGate VE, utilisez la formule suivante :
    * `réservation d'UC = vitesse d'UC du serveur ESXi * nombre d'UC virtuelles`

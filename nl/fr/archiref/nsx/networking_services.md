@@ -24,7 +24,8 @@ Figure 1. Services de mise en réseau de cloud sur Cloud Foundation
 
 Alors qu'une seule passerelle ESG peut suffire pour le trafic de gestion et de charge de travail du client, la séparation du trafic de gestion et du trafic du client est une décision en matière de conception prise pour empêcher une erreur de configuration accidentelle de la passerelle ESG de gestion.
 
-Une configuration incorrecte ou la désactivation de la passerelle ESG de gestion n'empêche pas l'instance Cloud Foundation ou vCenter Server de fonctionner, mais elle désactive toutes les fonctions de gestion du portail.{:note}
+Une configuration incorrecte ou la désactivation de la passerelle ESG de gestion n'empêche pas l'instance Cloud Foundation ou vCenter Server de fonctionner, mais elle désactive toutes les fonctions de gestion du portail.
+{:note}
 
 ## IBM Management Services NSX Edge
 
@@ -50,7 +51,7 @@ Tableau 1. Spécifications des passerelles IBM Management NSX ESG
 Accès sortant requis pour les services suivants :
 
 * Zerto Virtual Manager. Si ce service est installé, Zerto on {{site.data.keyword.cloud_notm}} nécessite un accès sortant vers Internet pour l'activation des licences et la génération des rapports d'utilisation.
-* Veeam Backup and Replication. Si ce service est installé, Veeam on {{site.data.keyword.cloud_notm}} nécessite un accès sortant vers Internet pour le téléchargement des mises à jour d produit et des licences? 
+* Veeam Backup and Replication. Si ce service est installé, Veeam on {{site.data.keyword.cloud_notm}} nécessite un accès sortant vers Internet pour le téléchargement des mises à jour d produit et des licences?
 * FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} nécessite un accès sortant vers Internet pour l'activation et le contrôle des licences.
 * F5 on {{site.data.keyword.cloud_notm}} nécessite un accès sortant vers Internet pour l'activation des licences.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-26"
 
 ## Inscription à un compte IBM Cloud
 
-Vous pouvez vous inscrire pour obtenir un compte {{site.data.keyword.cloud}} en utilisant un **IBMid** existant ou en créant un nouvel **IBMid**. Pour en savoir plus sur la procédure d'inscription à un compte {{site.data.keyword.cloud_notm}}, voir [Inscription à un compte {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
+Vous pouvez vous inscrire pour obtenir un compte {{site.data.keyword.cloud}} en utilisant un **IBMid** existant ou en créant un nouvel **IBMid**. Pour plus d'informations sur la procédure d'inscription à un compte {{site.data.keyword.cloud_notm}}, voir [Inscription à un compte {{site.data.keyword.cloud_notm}}](../../../account/adminpublic.html).
 
 ## Inscription à un compte d'infrastructure IBM Cloud (SoftLayer)
 
@@ -38,4 +38,4 @@ Le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), auparav
 * [Exigences relatives au compte d'infrastructure {{site.data.keyword.cloud_notm}}](slaccountrequirement.html)
 * [Vidéo - Comment créer un compte {{site.data.keyword.cloud_notm}}](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
-* [Passage à IBMid](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}
+* [Passage à l'IBMid et liaison des comptes](../../../admin/softlayerlink.html){:new_window}

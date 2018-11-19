@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -25,37 +25,37 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instan
 | {{site.data.keyword.CloudDataCent_notm}} | Emplacement | Région | Options de serveur |
 |:----------------------|:---------|:-------|:---------------|
 | AMS03 | Amsterdam | Europe | Skylake, Broadwell |
-| CHE01 | Chennai | Asie-Pacifique | Skylake, Broadwell |
-| DAL09 | Dallas | Sud des Etats-Unis | Skylake, Broadwell |
-| DAL10 | Dallas | Sud des Etats-Unis | Skylake, Broadwell, Petite, Moyenne, Grande |
-| DAL12 | Dallas | Sud des Etats-Unis | Skylake, Broadwell |
-| DAL13 | Dallas | Sud des Etats-Unis | Skylake, Broadwell |
-| FRA02 | Francfort | Europe | Skylake, Broadwell, Petite, Moyenne, Grande |
-| FRA04 | Francfort | Europe | Skylake, Broadwell |
+| CHE01 | Chennai | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
+| DAL09 | Dallas | Sud des Etats-Unis | Skylake, Certifié SAP, Broadwell |
+| DAL10 | Dallas | Sud des Etats-Unis | Skylake, Certifié SAP, Broadwell |
+| DAL12 | Dallas | Sud des Etats-Unis | Skylake, Certifié SAP, Broadwell |
+| DAL13 | Dallas | Sud des Etats-Unis | Skylake, Certifié SAP, Broadwell |
+| FRA02 | Francfort | Europe | Skylake, Certifié SAP, Broadwell |
+| FRA04 | Francfort | Europe | Skylake, Certifié SAP, Broadwell |
 | HKG02 | Hong Kong | Asie-Pacifique | Skylake, Broadwell |
 | LON02 | Londres | Europe | Skylake, Broadwell |
-| LON04 | Londres | Europe | Skylake, Broadwell |
-| LON06 | Londres | Europe | Skylake, Broadwell, Petite, Moyenne, Grande |
-| MEL01 | Melbourne | Asie-Pacifique | Skylake, Broadwell |
-| MEX01 | Querétaro | Sud des Etats-Unis | Skylake, Broadwell |
-| MIL01 | Milan | Europe | Skylake, Broadwell |
-| MON01 | Montréal | Est des Etats-Unis | Skylake, Broadwell |
+| LON04 | Londres | Europe | Skylake, Certifié SAP, Broadwell |
+| LON06 | Londres | Europe | Skylake, Certifié SAP, Broadwell |
+| MEL01 | Melbourne | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
+| MEX01 | Querétaro | Sud des Etats-Unis | Skylake, Certifié SAP, Broadwell |
+| MIL01 | Milan | Europe | Skylake, Certifié SAP, Broadwell |
+| MON01 | Montréal | Est des Etats-Unis | Skylake, Certifié SAP, Broadwell |
 | OSL01 | Oslo | Europe | Skylake, Broadwell |
 | PAR01 | Paris | Europe | Skylake, Broadwell |
-| SAO01 | São Paulo | Amérique du Sud | Skylake, Broadwell |
-| SEO01 | Séoul | Asie-Pacifique | Skylake, Broadwell |
-| SJC03 | San José | Ouest des Etats-Unis | Skylake, Broadwell, Petite, Moyenne, Grande |
+| SAO01 | São Paulo | Amérique du Sud | Skylake, Certifié SAP, Broadwell |
+| SEO01 | Séoul | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
+| SJC03 | San José | Ouest des Etats-Unis | Skylake, Broadwell |
 | SJC04 | San José | Ouest des Etats-Unis | Skylake, Broadwell |
 | SNG01 | Singapour | Asie-Pacifique | Skylake, Broadwell |
 | SYD01 | Sydney | Asie-Pacifique | Skylake, Broadwell |
-| SYD04 | Sydney | Asie-Pacifique | Skylake, Broadwell |
-| TOK02 | Tokyo | Asie-Pacifique | Skylake, Broadwell |
-| TOR01 | Toronto | Est des Etats-Unis | Skylake, Broadwell, Petite, Moyenne, Grande |
-| WDC04 | Washington, DC | Est des Etats-Unis | Skylake, Broadwell, Petite, Moyenne, Grande |
-| WDC06 | Washington, DC | Est des Etats-Unis | Skylake, Broadwell |
-| WDC07 | Washington, DC | Est des Etats-Unis | Skylake, Broadwell |
+| SYD04 | Sydney | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
+| TOK02 | Tokyo | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
+| TOR01 | Toronto | Est des Etats-Unis | Skylake, Certifié SAP, Broadwell |
+| WDC04 | Washington, DC | Est des Etats-Unis | Skylake, Certifié SAP, Broadwell |
+| WDC06 | Washington, DC | Est des Etats-Unis | Skylake, Certifié SAP, Broadwell |
+| WDC07 | Washington, DC | Est des Etats-Unis | Skylake, Certifié SAP, Broadwell |
 
-Un petit sous-ensemble d'{{site.data.keyword.CloudDataCents_notm}} offre des options de serveur bare metal **Petite**, **Moyenne** et **Grande** préconfigurées. Selon la disponibilité et l'approvisionnement du stock, les {{site.data.keyword.CloudDataCents_notm}} peuvent afficher un indicateur de statut sur la console {{site.data.keyword.vmwaresolutions_short}} pour vous aider à planifier vos déploiements.
+Selon la disponibilité et l'approvisionnement du stock, les {{site.data.keyword.CloudDataCents_notm}} peuvent afficher un indicateur de statut sur la console {{site.data.keyword.vmwaresolutions_short}} pour vous aider à planifier vos déploiements.
 
 Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_notm}} lors de la commande d'instances vCenter Server
 

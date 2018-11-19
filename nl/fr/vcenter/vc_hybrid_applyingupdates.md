@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -17,6 +17,9 @@ lastupdated: "2018-10-29"
 Le processus d'application de modules de correction et de mises à jour aux instances vCenter Server with Hybridity Bundle est automatisé uniquement pour les composants de gestion. Les mises à jour VMware doivent être appliquées manuellement.
 
 ## Avant de commencer
+
+A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](../vmonic/relnotes_v25.html).
+{:note}
 
 Avant d'appliquer une mise à jour, développez l'entrée de mise à jour en cliquant sur la flèche vers le bas et vérifiez les informations suivantes :
 * La version de la mise à jour. Vous devez appliquer les mises à jour par ordre chronologique, c'est-à-dire de la plus ancienne à la plus récente. Assurez-vous d'avoir appliqué toutes les mises à jour précédentes avant d'appliquer la plus récente. Par exemple, vous devez appliquer la mise à jour V2.3 avant de tenter d'appliquer la mise à jour V2.4.
@@ -45,9 +48,8 @@ Tableau 1. Niveaux de mise à jour et impact
 
    La page **Mise à jour et module de correction** ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. {{site.data.keyword.vmwaresolutions_short}} applique les mises à jour VMware dans les circonstances suivantes :
    * Lorsqu'une nouvelle instance vCenter Server est déployée
-   * Lorsque de nouveaux serveurs ESXi sont ajoutés
-   * Lorsque de nouveaux clusters sont ajoutés
-   {:note}
+   * Lorsque de nouveaux serveurs ESXi sont ajoutés, ils sont mis à disposition avec des mises à jour VMware, mais les serveurs ESXi existants ne sont pas mis à jour. 
+   * Lorsque de nouveaux clusters sont ajoutés, ils sont mis à disposition avec des mises à jour VMware, mais les clusters existants ne sont pas mis à jour. {:note}
 
 5. Pour des mises à niveau de licence, cliquez sur **Mettre à niveau**. Sélectionnez dans la liste l'édition vers laquelle vous souhaitez effectuer une mise à niveau, puis cliquez sur **Mettre à niveau**. Les rétromigrations d'édition de licence ne sont pas disponibles.
 

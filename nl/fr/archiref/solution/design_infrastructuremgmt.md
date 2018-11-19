@@ -24,7 +24,8 @@ Les instances PSC et les instances vCenter Server sont des machines virtuelles d
 
 Cette conception déploie une seule instance PSC externe en tant que dispositif virtuel sur un sous-réseau portable, sur le VLAN privé qui est associé aux machines virtuelles de gestion. Le routeur BCR (Back-end Customer Router) lui sert de passerelle par défaut. Le dispositif virtuel est configuré avec les spécifications décrites dans le tableau suivant.
 
-Ces valeurs sont définies au moment du déploiement et elles ne peuvent pas être modifiées.{:note}
+Ces valeurs sont définies au moment du déploiement et elles ne peuvent pas être modifiées.
+{:note}
 
 Tableau 1. Spécifications PSC (Platform Services Controller)
 
@@ -66,13 +67,15 @@ Cette conception vous permet de regrouper en cluster les hôtes vSphere ESXi qui
 
 Cette conception utilise la planification DRS (Distributed Resource Scheduling) vSphere dans le cluster initial pour placer les machines virtuelles et dans les autres clusters pour faire migrer dynamiquement des machines virtuelles afin d'obtenir des clusters équilibrés. La valeur "Fully Automated" est affectée au paramètre Automation Level, par conséquent, les recommandations de placement initial et de migration sont automatiquement exécutées par vSphere. En outre, le seuil de migration défini est modéré, ainsi, vCenter applique les recommandations de priorité 1, 2, 3 pour obtenir au moins une amélioration décente de l'équilibrage de charge du cluster.
 
-La gestion de l'alimentation via la fonction **Distributed Power Management** n'est pas utilisée dans cette conception.{:note}
+La gestion de l'alimentation via la fonction **Distributed Power Management** n'est pas utilisée dans cette conception.
+{:note}
 
 ### Haute disponibilité vSphere
 
 Cette conception utilise la haute disponibilité vSphere dans le cluster initial et les autres clusters pour détecter les pannes de traitement et récupérer les machines virtuelles qui s'exécutent dans un cluster. La haute disponibilité vSphere dans cette conception est configurée avec les options de **surveillance hôte** et de **contrôle d'admission** activées dans le cluster. De plus, le cluster initial réserve les ressources d'un noeud comme capacité de secours pour la règle de contrôle d'admission.
 
-Vous êtes chargé d'ajuster la règle de contrôle d'admission lorsque le cluster est développé ou réduit par la suite.{:note}
+Vous êtes chargé d'ajuster la règle de contrôle d'admission lorsque le cluster est développé ou réduit par la suite.
+{:note}
 
 Par défaut, une valeur moyenne est affectée à l'option de **priorité de redémarrage des machines virtuelles** et l'option de **réponse d'isolement hôte** est désactivée. De plus, l'option de **surveillance des machines virtuelles** est désactivée et la fonction de **pulsation de magasin de données** est configurée pour inclure n'importe lequel des magasins de données de cluster. Cette approche utilise les magasins de données NAS éventuellement présents.
 

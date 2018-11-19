@@ -34,10 +34,10 @@ Lorsque vous commandez le service, indiquez les paramètres suivants :
 
 ### Connexion d'activation de Licence F5
 
-Sélectionnez **Réseau public** ou **Réseau privé** pour l'activation de licence. Si le cluster cible est configuré avec des interfaces de réseau privé uniquement, seule l'option **Réseau privé** est disponible. Cette sélection détermine de quelle façon les serveurs virtuels F5 contacteront le serveur de licences F5 ; elle n'a aucune incidence sur le plan des données de charge de travail. 
+Sélectionnez **Réseau public** ou **Réseau privé** pour l'activation de licence. Si le cluster cible est configuré avec des interfaces de réseau privé uniquement, seule l'option **Réseau privé** est disponible. Cette sélection détermine de quelle façon les serveurs virtuels F5 contacteront le serveur de licences F5 ; elle n'a aucune incidence sur le plan des données de charge de travail.
 
 Si vous sélectionnez **Réseau privé**, spécifiez les paramètres suivants :
-* **Adresse IP du proxy** : adresse IPv4 du serveur proxy. 
+* **Adresse IP du proxy** : adresse IPv4 du serveur proxy.
 * **Numéro de port du proxy** : numéro de port du serveur proxy, généralement, 8080 ou 3128.
 
 Le proxy authentifié n'est pas pris en charge.
@@ -63,7 +63,8 @@ Le modèle de licence pour le service F5 on {{site.data.keyword.cloud_notm}} pro
         <dd class="dd">En plus des options **Bien** et **Mieux**, le module BIG-IP Application Security Manager (ASM) fournit une protection d'application intégrée contre les attaques DDos de la couche 7, les 10 principaux risques et vulnérabilités couverts par OWASP (Open Web Application Security Project), qui menacent les applications. Le module BIG-IP Access Policy Manager (APM) offre aux utilisateurs un accès simplifié sécurisé aux applications situées n'importe où dans un environnement multicloud, en intégrant des dispositifs, tels que la connexion unique (SSO - Single Sign-On) et l'authentification multi-facteur (MFA - Multi-Factor Authentication).</dd>
 </dl>
 
-Vous ne pouvez pas modifier le modèle de licence après installation du service. Pour modifier le modèle de licence, vous devez retirer le service existant, puis le réinstaller en choisissant un autre modèle de licence.{:important}
+Vous ne pouvez pas modifier le modèle de licence après installation du service. Pour modifier le modèle de licence, vous devez retirer le service existant, puis le réinstaller en choisissant un autre modèle de licence.
+{:important}
 
 ### Liens connexes
 

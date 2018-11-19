@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -61,13 +61,11 @@ Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} où l'instance doit êt
 
 ### Skylake
 
-Lorsque vous sélectionnez **Skylake**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM adaptée à vos besoins.
-
-Sélectionnez le modèle d'UC et la mémoire RAM du serveur bare metal.
+Lorsque vous sélectionnez **Skylake**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM de serveur bare metal adaptée à vos besoins.
 
 Tableau 1. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}
 
-| Options de modèle d'UC        | Options de RAM       |
+| Options de modèle d'UC  | Options de RAM       |
 |:------------- |:------------- |
 | Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
 | Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
@@ -75,25 +73,15 @@ Tableau 1. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short
 
 ### Broadwell
 
-Lorsque vous sélectionnez **Broadwell**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM adaptée à vos besoins.
+Lorsque vous sélectionnez **Broadwell**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM de serveur bare metal adaptée à vos besoins.
 
-Sélectionnez le modèle d'UC et la mémoire RAM du serveur bare metal.
-
-Tableau 1. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}
+Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}
 
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-
-### Préconfigurée
-
-Lorsque vous sélectionnez **Préconfigurée**, vous ne pouvez pas modifier les paramètres d'UC ou de mémoire RAM.
-
-En fonction de vos besoins, sélectionnez une configuration de serveur bare metal :
-  * Petite (Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz/128 Go de RAM/12 unités)
-  * Grande (Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de RAM/12 unités)
 
 ### Nombre de serveurs bare metal
 
@@ -102,10 +90,6 @@ Une instance Cloud Foundation comprend quatre serveurs bare metal lors du déplo
 ## Paramètres de stockage
 
 Pour les instances Cloud Foundation, vous pouvez commander un stockage VMware vSAN uniquement.
-
-Lorsque vous sélectionnez la configuration de serveur bare metal **Préconfigurée**, les paramètres de stockage sont normalisés et ne peuvent pas être modifiés :
-  * Pour la configuration de serveur bare metal **Petite**, deux unités de disque SED SSD de 1,9 To sont commandées.
-  * Pour la configuration de serveur bare metal **Grande**, quatre unités de disque SED SSD de 3,8 To sont commandées.
 
 Lorsque vous sélectionnez la configuration de serveur bare metal **Skylake** ou **Broadwell**, vous pouvez personnaliser le stockage vSAN pour votre instance. Spécifiez les paramètres vSAN suivants :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
@@ -148,7 +132,7 @@ La longueur maximale du nom de domaine complet des hôtes et des machines virtue
 
 Le nom de domaine et le libellé de sous-domaine sont utilisés pour générer le nom d'utilisateur et les noms de serveur de l'instance, comme illustré dans le tableau ci-après.
 
-Tableau 2. Format de valeur pour les noms d'utilisateur, les noms de domaine et les noms de serveur
+Tableau 3. Format de valeur pour les noms d'utilisateur, les noms de domaine et les noms de serveur
 
 | Nom        | Format de la valeur      |
   |:------------- |:------------- |
@@ -209,12 +193,10 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
    *  Pour utiliser votre propre licence, sélectionnez **Je fournirai** et entrez la clé de licence.  
 6. Spécifiez les paramètres de serveur bare metal :
    1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger l'instance.
-   2. Sélectionnez la configuration de serveur bare metal.
-      * Lorsque vous sélectionnez **Skylake** ou **Broadwell**, spécifiez le modèle d'UC et la taille de mémoire RAM. 
-      * Lorsque vous sélectionnez **Préconfigurée**, choisissez une configuration **Petite**, Moyenne ou **Grande**.
+   2. Sélectionnez la configuration de serveur bare metal, puis spécifiez le modèle d'UC et la taille de mémoire RAM. 
 7. Procédez à la configuration du stockage.
-   * Si vous avez sélectionné **Skylake** ou **Broadwell** pour la configuration bare metal, spécifiez les types de disque pour la capacité et les caches de disque vSAN, et le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
-   * Si vous avez sélectionné l'option **Préconfigurée** pour la configuration de serveur bare metal, les paramètres de stockage des configurations de serveur bare metal normalisées **Petite** et **Grande** ne sont pas modifiables.
+   1. Spécifiez les types de disque pour les disques de cache et de capacité vSAN, ainsi que le nombre de disques. 
+   2. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 8. Spécifiez les paramètres d'interface réseau :
    1. Renseignez les zones Préfixe de nom d'hôte, Libelle de sous-domaine et Nom de domaine racine. Pour une instance secondaire, le nom de domaine est automatiquement renseigné.
    2. Sélectionnez les paramètres VLAN :
@@ -244,8 +226,7 @@ Lorsque vous commandez une instance secondaire, le client Web VMware vSphere de 
 
 Affichez et gérez l'instance Cloud Foundation que vous avez commandée.
 
-Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console.
-Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
+Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} créés dans votre compte {{site.data.keyword.cloud_notm}} uniquement depuis la console {{site.data.keyword.vmwaresolutions_short}}, et non depuis le portail	{{site.data.keyword.slportal}} ou tout autre élément extérieur à la console. Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, les modifications ne sont pas synchronisées avec la console.
 {:important}
 
 **ATTENTION :** gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés dans votre compte {{site.data.keyword.cloud_notm}} lorsque vous avez commandé l'instance) en dehors de la console {{site.data.keyword.vmwaresolutions_short}} risque de rendre votre environnement instable. Ces activités de gestion incluent :

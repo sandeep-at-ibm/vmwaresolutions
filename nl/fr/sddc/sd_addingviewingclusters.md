@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -46,13 +46,11 @@ L'{{site.data.keyword.CloudDataCent}} du cluster est, par défaut, l'{{site.data
 
 Les centres de données dont vous disposez dépendent de la configuration de serveur bare metal qui est sélectionnée pour le déploiement. Si vous sélectionnez la configuration **Skylake** ou **Broadwell**, vous pouvez également déployer le cluster dans un autre pod de l'infrastructure {{site.data.keyword.cloud_notm}} si le centre de données sélectionné contient des pods supplémentaires. Cette configuration se révèle utile lorsque le pod de l'infrastructure {{site.data.keyword.cloud_notm}} par défaut où est déployée l'instance initiale a atteint sa capacité maximale.
 
-Les configurations de serveur bare metal **Petite** et **Grande** normalisées utilisent un pod par défaut non modifiable.{:note}
-
 Si vous déployez le cluster dans un autre centre de données ou pod, au moins trois VLAN supplémentaires sont commandés pour une utilisation avec les serveurs {{site.data.keyword.baremetal_short}} commandés.
 
 ### Paramètres de serveur bare metal
 
-Vous pouvez choisir l'option **Skylake**, **Broadwell** ou **Préconfigurée**.
+Vous pouvez choisir l'option **Skylake** ou **Broadwell**.
 
 #### Skylake
 
@@ -78,23 +76,13 @@ Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 
-#### Préconfigurée
-
-Pour l'option **Préconfigurée**, vous pouvez choisir une **configuration de serveur bare metal** adaptée à vos besoins :
-* Petite (Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz/128 Go de RAM/12 disques)
-* Grande (Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de RAM/12 disques)
-
 ### Paramètres de stockage vSAN
 
-Pour les configurations de serveur bare metal **Skylake** et **Broadwell**, vous pouvez personnaliser le stockage vSAN en spécifiant les paramètres suivants : 
+Pour les configurations de serveur bare metal **Skylake** et **Broadwell**, vous pouvez personnaliser le stockage vSAN en spécifiant les paramètres suivants :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
 * Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
-
-Pour les configurations de serveur bare metal **préconfigurées**, vous ne pouvez pas modifier les paramètres de stockage vSAN :
-* Pour la configuration de serveur bare metal **Petite**, deux unités de disque SED SSD de 1,9 To sont commandées.
-* Pour la configuration de serveur bare metal **Grande**, quatre unités de disque SED SSD de 3,8 To sont commandées.
 
 ### Paramètres d'octroi de licence
 
@@ -113,12 +101,10 @@ Vous pouvez spécifier les options d'octroi de licence pour les composants VMwar
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche et cliquez sur **Ajouter** en haut à droite du tableau **CLUSTERS**.
 4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
 5. Si vous souhaitez héberger le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui dans lequel l'instance est hébergée, sous **Serveur bare metal**, cochez la case **Sélectionner un autre emplacement** et choisissez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel héberger l'instance.
-6. Procédez à la configuration du serveur bare metal :
-   * Si vous avez sélectionné **Skylake** ou **Broadwell**, renseignez les zones **Modèle UC** et **Mémoire RAM**.
-   * Si vous avez sélectionné **Préconfigurée**, renseignez la zone **Configuration de serveur bare metal**.
+6. Sélectionnez la configuration de serveur bare metal, puis renseignez les zones **Modèle UC** et **Mémoire RAM**. 
 7. Procédez à la configuration du stockage :
-   * Si vous avez sélectionné **Skylake** ou **Broadwell** pour la configuration bare metal, spécifiez les types de disque pour la capacité et les caches de disque vSAN, et le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
-   * Si vous avez sélectionné l'option **Préconfigurée** pour la configuration de serveur bare metal, les paramètres de stockage des configurations de serveur bare metal normalisées **Petite** et **Grande** ne sont pas modifiables.
+   1. Spécifiez les types de disque pour les disques de cache et de capacité vSAN, ainsi que le nombre de disques. 
+   2. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 8. Spécifiez de quelle manière les clés de licence sont fournies :
    * Si vous êtes un partenaire commercial IBM, la licence vSphere (Enterprise Plus edition) et la licence vSAN sont incluses et achetées en votre nom. Vous devez néanmoins spécifier l'édition pour la licence vSAN.
    * Si vous n'êtes pas un partenaire commercial IBM, vous pouvez sélectionnez l'une des options suivantes :

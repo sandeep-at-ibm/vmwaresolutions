@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -32,4 +32,4 @@ Si vous ne voyez pas une mise à jour de génération que vous avez attendez, si
 * [Présentation de HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
 * [Glossaire des termes HCX](hcx_glossary.html)
 * [Présentation de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
-* [Documentation VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentation VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

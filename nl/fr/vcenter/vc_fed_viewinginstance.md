@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Affichage des instances VMware Federal
 
@@ -17,7 +21,7 @@ Affichez les informations récapitulatives et détaillées des instances VMware 
 Pour afficher un récapitulatif de toutes les instances VMware Federal qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances.
-3. Dans le tableau **Instances vCenter Server**, affichez la liste des instances qui sont mises à disposition dans le compte utilisateur sélectionné. 
+3. Dans le tableau **Instances vCenter Server**, affichez la liste des instances qui sont mises à disposition dans le compte utilisateur sélectionné.
 
 Tableau 1. Eléments d'une instance VMware Federal
 
@@ -110,7 +114,8 @@ Si des erreurs se produisent lors du déploiement ou de la suppression d'une ins
 
 Gérez vos instances depuis la console {{site.data.keyword.vmwaresolutions_short}} ou le client Web VMware vSphere.
 
-**Important :** avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client vSphere Web Client et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton **Console vCenter** et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.
+Avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client Web vSphere et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton **Console vCenter** et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.
+{:important}
 
 Passez en revue les rubriques suivantes pour obtenir des informations qui vous aideront à exécuter les instructions de connexion :
 *  Pour les exigences et procédures à effectuer avant d'accéder au client Web vSphere, voir [Dépassement du délai d'attente lors de la connexion au client Web vSphere](../vmonic/trbl_timeout_vc_console.html).

@@ -10,13 +10,13 @@ lastupdated: "2018-10-26"
 
 # Présentation de Critical VMware on IBM Cloud
 
-Mission Critical VMware on {{site.data.keyword.cloud}} fournit une architecture de cloud multi-zone qui permet aux entreprises d'empêcher les temps d'indisponibilité pour les applications en cloud et qui permet d'automatiser les basculements dans une région de cloud. 
+Mission Critical VMware on {{site.data.keyword.cloud}} fournit une architecture de cloud multi-zone qui permet aux entreprises d'empêcher les temps d'indisponibilité pour les applications en cloud et qui permet d'automatiser les basculements dans une région de cloud.
 
-Grâce à cette architecture de cloud, les clients peuvent atteindre un taux de réussite de disponibilité et de basculement plus élevé que celui obtenu par la plupart des clients VMware avec des environnements sur site ou des plateformes cloud concurrentes. 
+Grâce à cette architecture de cloud, les clients peuvent atteindre un taux de réussite de disponibilité et de basculement plus élevé que celui obtenu par la plupart des clients VMware avec des environnements sur site ou des plateformes cloud concurrentes.
 
-Cette architecture prend en charge des charges de travail existantes indispensables à la mission, y compris des applications natives non-cloud, à un taux de disponibilité en agrégat ciblée de 99,99 %. Les régions IBM Cloud multi-zone sont conçues pour maintenir les charges de travail indispensables à la mission en ligne en cas de panne sur le site. Les charges de travail sur un site en échec sont automatiquement redémarrées en temps quasi réel, tandis que les charges de travail sur les sites voisins restent en ligne et disponibles. 
+Cette architecture prend en charge des charges de travail existantes indispensables à la mission, y compris des applications natives non-cloud, à un taux de disponibilité en agrégat ciblée de 99,99 %. Les régions IBM Cloud multi-zone sont conçues pour maintenir les charges de travail indispensables à la mission en ligne en cas de panne sur le site. Les charges de travail sur un site en échec sont automatiquement redémarrées en temps quasi réel, tandis que les charges de travail sur les sites voisins restent en ligne et disponibles.
 
-L'architecture couvre divers services d'entreprise, y compris les réseaux, le stockage, la résilience et d'autres outils créés pour la surveillance et le traitement des incidents liés aux applications cloud. De plus, cette architecture peut être intégrée à IBM Services Platform with Watson, créé sur {{site.data.keyword.cloud_notm}}, afin de permettre une plus grande consommation de services. Grâce aux fonctions cognitives de la plateforme, les clients peuvent exploiter des données de manière plus efficace et obtenir de nouvelles connaissances métier permettant la continuité des opérations. 
+L'architecture couvre divers services d'entreprise, y compris les réseaux, le stockage, la résilience et d'autres outils créés pour la surveillance et le traitement des incidents liés aux applications cloud. De plus, cette architecture peut être intégrée à IBM Services Platform with Watson, créé sur {{site.data.keyword.cloud_notm}}, afin de permettre une plus grande consommation de services. Grâce aux fonctions cognitives de la plateforme, les clients peuvent exploiter des données de manière plus efficace et obtenir de nouvelles connaissances métier permettant la continuité des opérations.
 
 ## Spécifications techniques relatives à Mission Critical VMware on IBM Cloud
 

@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
 # Présentation de VMware Update Manager
 
 VMware Update Manager (VUM) utilise un processus à plusieurs étapes pour mettre à niveau des objets vSphere et appliquer des correctifs ou des extensions. Ce processus permet une procédure de mise à jour sans heurts avec un minimum d'indisponibilité du système. Avant d'examiner ce processus, vous devez comprendre les termes suivants :
-* **Objet d'inventaire** - Il s'agit d'un objet dans vCenter, tel qu'une machine virtuelle, un dispositif virtuel ou un hôte vSphere ESXi
+* **Objet d'inventaire** - Il s'agit d'un objet dans vCenter, tel qu'une machine virtuelle, un dispositif virtuel ou un hôte vSphere ESXi. 
 * **Ligne de base** - Les lignes de base contiennent une collection d'un ou plusieurs correctifs, extensions, packs de service, correctifs de bogue ou mises à niveau pouvant être classées comme lignes de base de correctifs, d'extensions ou de mises à niveau. Il existe deux classifications de lignes de base : Hôte et VM/VA (machine virtuelle ou dispositif virtuel) comportant des lignes de base prédéfinies par VMware et des lignes de base personnalisées pouvant être ajoutées si nécessaire.
   - Lignes de base d'hôte prédéfinies :
     - Correctifs d'hôte critiques
@@ -38,7 +38,7 @@ Le téléchargement des mises à niveau, des correctifs d'hôte, des extensions 
 * Notifications, alertes et rappel de correctifs pour les hôtes ESXi 5.5 et ESXi 6.x.
 * Métadonnées sur les mises à niveau de dispositifs virtuels.
 
-VUM prend en charge le rappel de correctifs pour les hôtes exécutant ESXi 5.0 ou version ultérieure. Un correctif est rappelé s'il y a des problèmes ou des erreurs dans le correctif publié. Après avoir analysé les hôtes dans votre instance VCS, VUM vous avertit en cas d'installation du correctif rappelé sur un hôte. Les correctifs rappelés ne peuvent pas être installés sur des hôtes avec VUM. VUM supprime également tous les correctifs rappelés du référentiel des correctifs. Une fois qu'un correctif avec la résolution du problème est publié, VUM télécharge le nouveau correctif dans son référentiel de correctifs. Si vous avez déjà installé le correctif qui pose problème, VUM vous envoie une notification indiquant que la correction du correctif a été publiée et vous invite à appliquer le nouveau correctif.
+VUM prend en charge le rappel de correctifs pour les hôtes exécutant ESXi 5.0 ou version ultérieure. Un correctif est rappelé s'il y a des problèmes ou des erreurs dans le correctif publié. Après avoir analysé les hôtes dans votre instance VMware vCenter Server on {{site.data.keyword.cloud}}, VUM vous avertit en cas d'installation du correctif rappelé sur un hôte. Les correctifs rappelés ne peuvent pas être installés sur des hôtes avec VUM. VUM supprime également tous les correctifs rappelés du référentiel des correctifs. Une fois qu'un correctif avec la résolution du problème est publié, VUM télécharge le nouveau correctif dans son référentiel de correctifs. Si vous avez déjà installé le correctif qui pose problème, VUM vous envoie une notification indiquant que la correction du correctif a été publiée et vous invite à appliquer le nouveau correctif.
 
 L'interface du client VUM fournit deux vues principales :
 *	La vue Administration
@@ -63,5 +63,5 @@ L'accès à la vue de conformité (Compliance) d'un objet d'inventaire sélectio
 
 ### Liens connexes
 
-* VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

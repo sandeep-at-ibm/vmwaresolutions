@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -23,7 +23,7 @@ Auparavant, le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLay
 
 Le compte d'infrastructure {{site.data.keyword.cloud_notm}} que vous utilisez doit détenir certaines autorisations pour être à même de commander les composants de vos instances et d'effectuer des opérations en votre nom. Les autorisations requises sont applicables à tous les types d'instances et services que vous commandez depuis la console {{site.data.keyword.vmwaresolutions_short}}.
 
-Les utilisateurs autorisés peuvent vérifier et mettre à jour les autorisations d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} sur le portail {{site.data.keyword.slportal}}. Pour plus d'informations, voir _Edition des autorisations de portail client d'un utilisateur_ dans [Gestion d'un profil utilisateur](../../../customer-portal/cpmanuserprof.html){:new_window}.
+Les utilisateurs autorisés peuvent vérifier et mettre à jour les autorisations d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} sur le portail {{site.data.keyword.slportal}}. Pour plus d'informations, voir [Edition des autorisations de portail client d'un utilisateur](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
 
 Tableau 1. Autorisations requises pour le compte d'infrastructure {{site.data.keyword.cloud_notm}}
 
@@ -47,7 +47,7 @@ Tableau 1. Autorisations requises pour le compte d'infrastructure {{site.data.ke
 
 ## Spanning de réseaux locaux virtuels (VLAN) pour les comptes classiques (non VRF)
 
-Si vous utilisez un compte d'infrastructure {{site.data.keyword.cloud_notm}} classique (non VRF), le spanning VLAN doit être activé. S'il ne l'est pas pour les comptes classiques, les divers composants de l'environnement de virtualisation VMware risquent de ne pas pouvoir communiquer entre eux. Pour activer le spanning VLAN dans votre compte d'infrastructure {{site.data.keyword.cloud_notm}}, voir [Activation ou désactivation du spanning VLAN](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+Si vous utilisez un compte d'infrastructure {{site.data.keyword.cloud_notm}} classique (non VRF), le spanning VLAN doit être activé. S'il ne l'est pas pour les comptes classiques, les divers composants de l'environnement de virtualisation VMware risquent de ne pas pouvoir communiquer entre eux. Pour activer le spanning VLAN dans votre compte d'infrastructure {{site.data.keyword.cloud_notm}}, voir [Spanning VLAN](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ### Liens connexes
 

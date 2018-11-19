@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -16,17 +16,18 @@ lastupdated: "2018-10-26"
 
 Le service HCX on {{site.data.keyword.cloud}} étend en toute transparence les réseaux des centres de données locaux dans {{site.data.keyword.cloud_notm}}, ce qui vous permet de migrer les machines virtuelles (VM) vers et depuis {{site.data.keyword.cloud_notm}} sans aucune conversion ni modification.
 
-Ce service est disponible uniquement pour les instances VMware vCenter Server sur {{site.data.keyword.cloud_notm}} avec Hybridity Bundle qui sont déployées dans la version 2.3 ou ultérieure.{:note}
+Ce service est disponible uniquement pour les instances VMware vCenter Server sur {{site.data.keyword.cloud_notm}} avec Hybridity Bundle qui sont déployées dans la version 2.3 ou ultérieure.
+{:note}
 
-Vous pouvez mettre à niveau votre instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle. Pour plus d'informations concernant la mise à niveau de votre instance et le déploiement du service HCX on {{site.data.keyword.cloud_notm}}, voir [Mise à niveau vers l'instance vCenter Server with Hybridity Bundle](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance).
+Vous pouvez mettre à niveau votre instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle. Pour plus d'informations concernant la mise à niveau de votre instance et le déploiement du service HCX on {{site.data.keyword.cloud_notm}}, voir [Procédure de mise à niveau vers l'instance vCenter Server with Hybridity Bundle](../vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance).
 
-**Remarque :** une instance vCenter Server avec HCX on {{site.data.keyword.cloud_notm}} est limitée à trois connexions simultanées à partir des sites locaux.
+Une instance vCenter Server avec HCX on {{site.data.keyword.cloud_notm}} est limitée à trois connexions simultanées à partir des sites locaux.{:note}
 
 ## Spécifications techniques relatives à HCX on IBM Cloud
 
 Les composants suivants sont commandés et inclus dans le service HCX on {{site.data.keyword.cloud_notm}} :
 
-**Remarque :** les instances HCX locales incluent uniquement l'octroi de licence et l'activation.
+Les instances HCX locales incluent uniquement l'octroi de licence et l'activation.{:note}
 
 ### Paire active/passive de passerelles VMware NSX Edge Services Gateway pour HCX Management
 
@@ -85,4 +86,4 @@ Passez en revue les remarques suivantes avant de supprimer le service HCX on {{s
 * [Glossaire des termes HCX](hcx_glossary.html)
 * [Contacter le support IBM](../vmonic/trbl_support.html)
 * [Présentation de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
-* [Documentation VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentation VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

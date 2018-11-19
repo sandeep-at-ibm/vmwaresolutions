@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -49,4 +49,4 @@ Voulez-vous constater par vous-même ? Expérimentez brièvement ses fonctionnal
 
 ## Documentation VMware
 
-* [Documentation VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentation VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

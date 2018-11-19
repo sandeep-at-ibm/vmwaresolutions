@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -14,7 +14,7 @@ ESXi 6.5 contient de nombreux nouveaux pilotes natifs qui remplacent les anciens
 
 ixgben est un pilote natif qui remplace le pilote vmklinux net-ixgbe mais qui ne prend pas en charge SR-IOV et SW FcOE. L'automatisation ICVS n'aura pas permis d'activer ce pilote lors de la mise à disposition de votre hôte vSphere ESXi. Il est conseillé d'activer ce pilote pour les avantages qu'il offre en matière de performances. La procédure suivante présentée dans cette annexe vous montre comment activer et désactiver les pilotes natifs à l'aide de l'interface de ligne de commande de vSphere (vCLI).
 
-Avant d'entreprendre cette tâche, récupérez les adresses IP IPMI, les ID de connexion et les mots de passe de tous les hôtes physiques sur le [portail de l'infrastructure IBM Cloud](https://control.softlayer.com/devices). C'est obligatoire dans le cadre d'un retour à l'état initial ou pour suivre la progression d'une mise à niveau lorsqu'il n'existe aucun accès réseau direct à l'hôte.
+Avant d'entreprendre cette tâche, récupérez les adresses IP IPMI, les ID de connexion et les mots de passe de tous les hôtes physiques sur le [portail de l'infrastructure {{site.data.keyword.cloud}}](https://control.softlayer.com/devices). C'est obligatoire dans le cadre d'un retour à l'état initial ou pour suivre la progression d'une mise à niveau lorsqu'il n'existe aucun accès réseau direct à l'hôte.
 
 Pour chaque hôte, procédez comme suit :
 1. Utilisez le client vSphere Web Client pour placer l'hôte vSphere ESXi en mode maintenance en cliquant sur **Home** > **Host and Clusters**. Dans le panneau de navigation, sélectionnez l'hôte vSphere ESXi et cliquez avec le bouton droit de la souris sur l'hôte et sélectionnez **Maintenance Mode** > **Enter Maintenance Mode**. Comme l'hôte fait partie d'un cluster DRS automatisé, les machines virtuelles sont migrées sur d'autres hôtes lorsque l'hôte bascule en mode maintenance.
@@ -29,12 +29,12 @@ Pour chaque hôte, procédez comme suit :
 7. Si la modification ne fonctionne pas, pour revenir à l'état antérieur, exécutez la commande suivante :
   `esxcli system module set --enabled=false --module=ixgben`
 
-8. Si vous ne pouvez pas vous connecter à l'hôte sur le réseau, exécutez la commande précédente à partir de la console à l'aide de la fenêtre de contrôle d'IBM Cloud.
+8. Si vous ne pouvez pas vous connecter à l'hôte sur le réseau, exécutez la commande précédente à partir de la console IPMI à l'aide de la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}}. 
 9. Après avoir redémarré l'hôte vSphere ESXi, vous pouvez observer que le pilote ixgbe par défaut est chargé et activé.
 
-Si vous souhaitez revenir à l'état antérieur et que vous ne pouvez pas vous connecter via SSH à l'hôte vSphere ESXi, vous devez vous connecter à la console KVM pour l'hôte qui doit être rétabli via la fenêtre de contrôle d'IBM Cloud.
+Si vous souhaitez revenir à l'état antérieur et que vous ne pouvez pas vous connecter via SSH à l'hôte vSphere ESXi, vous devez vous connecter à la console KVM pour l'hôte qui doit être rétabli via la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}}. 
 
-Utilisez l'ID et le mot de passe répertoriés dans la fenêtre de contrôle d'IBM Cloud avec l'adresse IP IPMI pour vous connecter à l'interface Web d'IPMI. Vous devez être connecté au centre de données dans lequel se trouve l'hôte via le réseau privé virtuel (VPN). Pour plus d'informations, voir [Initiation au VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
+Utilisez l'ID et le mot de passe répertoriés dans la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}} avec l'adresse IP IPMI pour vous connecter à l'interface Web d'IPMI. Vous devez être connecté au centre de données dans lequel se trouve l'hôte via le réseau privé virtuel (VPN). Pour plus d'informations, voir [Initiation au VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
 
 1. Accédez à la section Détails de l'unité, page Gestion à distance correspondant à l'hôte vSphere ESXi et sélectionnez **Actions** > **Console KVM**. Une autre fenêtre s'affiche en vous demandant le nom d'utilisateur et le mot de passe IPMI.
 2. Sélectionnez **Contrôle à distance** > **iKVM/HTML5** et cliquez sur **iKVM/HTML5** pour relancer. Vous pourrez maintenant accéder à la console de l'hôte vSphere ESXi.
@@ -47,5 +47,5 @@ Utilisez l'ID et le mot de passe répertoriés dans la fenêtre de contrôle d'I
 
 ### Liens connexes
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

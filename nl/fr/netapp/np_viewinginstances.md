@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Affichage des instances NetApp ONTAP Select
 
@@ -163,7 +167,8 @@ Tableau 6. Détails des serveurs ESXi d'un cluster NetApp ONTAP Select
 
 Gérez vos instances depuis la console {{site.data.keyword.vmwaresolutions_short}}, le client Web VMware vSphere ou la console NetApp.
 
-**Important :** avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client vSphere Web Client et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton **Console vCenter** et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.
+Avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instance pour accéder au client Web vSphere et commencer à gérer vos serveurs ESXi, vous devez vous connecter au portail VPN de l'{{site.data.keyword.CloudDataCent_notm}}. Survolez le bouton **Console vCenter** et suivez les instructions de manière à respecter toutes les exigences et à effectuer les étapes requises avant d'accéder au client Web vSphere.
+{:important}
 
 Consultez les rubriques suivantes pour plus d'informations sur l'exécution des instructions de connexion :
 

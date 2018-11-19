@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Extension et réduction de capacité pour des instances VMware Federal
 
@@ -14,7 +18,7 @@ Vous pouvez accroître ou réduire la capacité de votre instance VMware Federal
 
 Si votre cluster principal dispose d'un stockage vSAN, l'ajout d'un ou plusieurs serveurs ESXi après le déploiement permet d'augmenter la capacité de stockage du cluster.
 
-**Remarque :** cette option n'est disponible que pour les instances VMware Federal qui n'ont pas été sécurisées.
+Cette fonction n'est disponible que pour les instances VMware Federal qui n'ont pas été sécurisées.{:note}
 
 ## Ajout de serveurs ESXi à des instances VMware Federal
 
@@ -61,7 +65,8 @@ Si votre cluster principal dispose d'un stockage vSAN, l'ajout d'un ou plusieurs
 2. Un courrier électronique vous avise que votre demande de retrait de serveurs ESXi est en cours de traitement. Sur la console, le statut du cluster associé aux serveurs ESXi passe à **Modification en cours**.
 3. Les serveurs ESXi sont complètement récupérés par l'infrastructure {{site.data.keyword.cloud_notm}} à la fin de son cycle de facturation, lequel est généralement de 30 jours.
 
-   **Attention :** les serveurs ESXi retirés vous sont facturés jusqu'à échéance du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}.
+   Les serveurs ESXi retirés vous sont facturés jusqu'à échéance du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}.
+   {:note}
 
 ### Liens connexes
 

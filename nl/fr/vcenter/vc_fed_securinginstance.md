@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Sécurisation des instances VMware Federal
 
@@ -27,7 +31,7 @@ Passez en revue les informations suivantes afin de comprendre les résultats de 
 4. Cliquez sur **Sécuriser une instance**.
 5. Cliquez sur **OK** pour confirmer que vous voulez déconnecter l'instance de l'automatisation.
 
-  **Remarque :** avant d'exécuter cette étape, prenez soin de passer en revue les informations contenues dans la section **Avant de commencer**.
+  Avant d'exécuter cette étape, prenez soin de passer en revue les informations contenues dans la section **Avant de commencer**.{:note}
 
 6. Retirez de votre environnement les services de gestion face au public VMware NSX Edge Services Gateway (ESG) et éventuellement votre ESG géré par le client et qui a été déployé au cours de l'automatisation.
 7. Réinitialisez les mots de passe ou les clés pour tous les qui sont comptes utilisés par l'automatisation IBM. Pour plus d'informations, voir [How can I secure my environment to remove access by IBM automation and support?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)

@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Application de mises à jour à des instances Cloud Foundation
 
@@ -16,7 +18,8 @@ La console {{site.data.keyword.vmwaresolutions_full}} détecte et répertorie r�
 
 Une mise à jour disponible est un enregistrement dans la liste des mises à jour logicielles disponibles de l'instance, qui peut être appliquée immédiatement ou planifiée pour une application ultérieure. La mise à jour est une offre groupée qui contient un ou plusieurs packages pour la mise à jour des composants de gestion IBM et des composants VMware.
 
-A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. 
+A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](../vmonic/relnotes_v25.html).
+{:note}
 
 ## Avant de commencer
 

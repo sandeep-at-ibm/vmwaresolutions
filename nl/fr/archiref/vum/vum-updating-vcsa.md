@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-29"
 
 ## Mise à jour de dispositif VCSA
 
-VUM ne met pas à jour VCSA, donc cette section présente le processus de mise à jour de ce dispositif. Le dispositif VCSA déployé dans une instance VCS n'a pas d'accès à Internet, par conséquent, le bundle de mise à jour doit être d'abord téléchargé sur un serveur intermédiaire.
+VUM ne met pas à jour VCSA, donc cette section présente le processus de mise à jour de ce dispositif. Le dispositif VCSA déployé dans une instance VMware vCenter Server on {{site.data.keyword.cloud}} n'a pas d'accès à Internet, par conséquent, le bundle de mise à jour doit être d'abord téléchargé sur un serveur intermédiaire.
 
 VCSA est mis à jour via la console de gestion du dispositif, et non pas via vSphere Web Client. La console de gestion du dispositif VCSA est accessible en utilisant un navigateur, l'adresse IP de VCSA et le port 5480.
 
@@ -32,11 +32,11 @@ Pour mettre à jour VCSA, procédez comme suit :
 
 ## Instances vCenter liées à SSO
 
-Si vous disposez d'instances VCS principales et secondaires, vos dispositifs VCSA sont configurés pour figurer dans un seul domaine vCenter Single Sign-On (SSO). Chaque dispositif VCSA aura une instance VUM déployée. Les propriétés de configuration que vous modifiez sont appliquées uniquement à l'instance VUM que vous indiquez et ne sont pas propagées sur d'autres instances dans le groupe.
+Si vous disposez d'instances vCenter Server principales et secondaires, vos dispositifs VCSA sont configurés pour figurer dans un seul domaine vCenter Single Sign-On (SSO). Chaque dispositif VCSA aura une instance VUM déployée. Les propriétés de configuration que vous modifiez sont appliquées uniquement à l'instance VUM que vous indiquez et ne sont pas propagées sur d'autres instances dans le groupe.
 
 Vous pouvez spécifiez une instance VUM en sélectionnant le nom du dispositif VCSA avec lequel est enregistrée l'instance VUM à partir de la barre de navigation. Vous pouvez également gérer les lignes de base et les groupes de lignes de base, ainsi qu'analyser et résoudre uniquement les objets d'inventaire gérés par le dispositif VCSA avec lequel est enregistrée l'instance VUM.
 
 ### Liens connexes
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
