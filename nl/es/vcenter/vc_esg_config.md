@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Configuración de la red para que utilice NSX ESG gestionado por el cliente con las VM
 
@@ -32,13 +36,15 @@ Para aprovechar el servicio NSX para sus VM de carga de trabajo, debe configurar
    2. En el menú **nuevo dispositivo**, seleccione **Red** y pulse **Añadir**.
    3. En el adaptador de red recién añadido, seleccione el conmutador lógico de carga de trabajo en el menú. Un ejemplo de nombre de conmutador lógico de carga de trabajo sería **vxw-dvs-17-virtualwire-1-sid-6000-Workload**.
 
-   **Importante:** asegúrese de no seleccionar el conmutador **Tránsito de carga de trabajo**.
+   Asegúrese de no seleccionar el conmutador **Tránsito de carga de trabajo**.
+   {:important}
 
 2. Identifique una dirección IP disponible para la VM:
    *  La dirección IP debe estar en el rango `192.168.10.0/24`. Tenga en cuenta que la dirección IP `192.168.10.1` está reservada (consulte el **Paso 3**).
    *  Cuando configure el sistema de redes del sistema operativo que se ejecuta en la máquina virtual, utilice la dirección IP seleccionada y la máscara de `255.255.255.0`.
 
-   **Nota:** el cliente es el responsable de gestionar el rango de direcciones IP a las que ha asignado las VM.
+   El cliente es el responsable de gestionar el rango de direcciones IP a las que ha asignado las VM.
+   {:note}
 
 3. Asignar la pasarela predeterminada de la VM como `192.168.10.1`. Esta dirección es la dirección IP de NSX DLR del mismo conmutador lógico que las VM de carga de trabajo.
 
@@ -70,6 +76,7 @@ Encontrará más detalles sobre las subredes del cliente siguiendo estos pasos e
 3. Revise las notas que se muestran para las direcciones IP. Estas notas identifican cuáles de las subredes y direcciones IP se han solicitado y utilizado durante la configuración inicial.
 
    **Aviso:** no utilice las direcciones IP que se ha solicitado y utilizado durante la configuración inicial. Sin embargo, puede utilizar otras direcciones IP en estas subredes según sus requisitos. Para configurar reglas adicionales de conversión de direcciones de red, consulte [Gestión de reglas NAT](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+   {:important}
 
 ### Enlaces relacionados
 

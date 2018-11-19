@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-02"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Solicitud, visualización y eliminación de servicios para instancias de vCenter Server con el paquete híbrido (Hybridity)
 
@@ -14,7 +18,7 @@ Puede solicitar servicios para instancias de VMware vCenter Server on {{site.dat
 
 ## Servicios disponibles para instancias de vCenter Server con el paquete híbrido (Hybridity)
 
-Están disponibles los siguientes servicios para las instancias de vCenter Server con el paquete híbrido (Hybridity).
+Los siguientes servicios están disponibles para las instancias de vCenter Server con el paquete híbrido (Hybridity), junto con las versiones de servicio instaladas.
 
 Tabla 1. Servicios disponibles para instancias de vCenter Server con el paquete híbrido (Hybridity)
 
@@ -22,7 +26,7 @@ Tabla 1. Servicios disponibles para instancias de vCenter Server con el paquete 
 |----------------------------------------------------------------------------------------|------------------|
 | [F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1 | V1.9 y posterior |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | serie 300 | V1.8 y posterior |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 5.6 | V2.0 y posterior |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 6.0.3 | V2.0 y posterior |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 y posterior |
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | V2.3 y posterior |
 | [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 y posterior |
@@ -30,7 +34,7 @@ Tabla 1. Servicios disponibles para instancias de vCenter Server con el paquete 
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 y posterior |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | 9.5u3 | V1.8 y posterior |
 | [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)                        | 3.5.1 | V2.3 y posterior |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | 5.5 u4 Parche 2 | V1.2 y posterior |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                  | 6.0 actualización 3 | V1.2 y posterior |
 
 ## Procedimiento para añadir servicios a instancias de vCenter Server con el paquete híbrido (Hybridity)
 
@@ -62,7 +66,8 @@ Una vez aceptada su solicitud de eliminación del servicio, el estado del servic
 
 Cuando la eliminación del servicio finalice correctamente, recibirá una notificación por correo electrónico y el servicio se eliminará de la página **Servicios** de la instancia.
 
-**Atención:** se le facturará por los servicios eliminados hasta el final del ciclo de facturación de la infraestructura {{site.data.keyword.cloud_notm}}.
+Se le facturará por los servicios eliminados hasta el final del ciclo de facturación de la infraestructura {{site.data.keyword.cloud_notm}}.
+{:note}
 
 ### Enlaces relacionados
 
