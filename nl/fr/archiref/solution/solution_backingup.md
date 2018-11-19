@@ -36,7 +36,8 @@ VMware vCenter Server et PSC fournissent une[interface utilisateur de gestion de
 
 Vous devez sauvegarder le dispositif vCenter Server Appliance et le contrôleur PSC séparément à l'aide de cette technique. Familiarisez-vous avec cette technique et planifiez les aspects et les limitations documentés par VMware. En outre, planifiez une rotation et une expiration régulières des sauvegardes de fichiers sur votre serveur de fichiers.
 
-VMware exige que l'emplacement de sauvegarde soit un dossier vide, par conséquent, vous devez planifier votre rotation ou automatisation de sauvegarde de manière à laisser l'emplacement vacant pour chaque tâche de sauvegarde successive.{:note}
+VMware exige que l'emplacement de sauvegarde soit un dossier vide, par conséquent, vous devez planifier votre rotation ou automatisation de sauvegarde de manière à laisser l'emplacement vacant pour chaque tâche de sauvegarde successive.
+{:note}
 
 ## Sauvegarde de niveau fichier NSX
 

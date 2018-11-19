@@ -38,7 +38,7 @@
    showgrid="false"
    inkscape:zoom="1.5104"
    inkscape:cx="460.53304"
-   inkscape:cy="149.61889"
+   inkscape:cy="168.3632"
    inkscape:window-x="-9"
    inkscape:window-y="51"
    inkscape:window-maximized="1"
@@ -5543,7 +5543,6 @@
      id="tspan2122"
      style="font-size:18px;font-family:IBMPlexSans;fill:#ffffff">virtuel</tspan></text>
 
-
 <text
    id="text2130"
    x="169.23489"
@@ -5559,14 +5558,12 @@
      id="tspan2128"
      style="font-size:18px;font-family:IBMPlexSans;fill:#ffffff">     virtuel</tspan></text>
 
-
 <text
    transform="matrix(1 0 0 1 344.3784 157.312)"
    fill="#FFFFFF"
    font-family="'IBMPlexSans'"
    font-size="18"
    id="text2132">     </text>
-
 
 <text
    transform="matrix(1 0 0 1 114.9902 265.312)"
@@ -5596,13 +5593,12 @@
      font-size="18"
      id="tspan2140">e</tspan></text>
 
-
 <text
-   transform="translate(235.9858,264.3037)"
+   transform="matrix(1 0 0 1 235.9858 264.3037)"
+   fill="#FFFFFF"
+   font-family="'IBMPlexSans'"
    font-size="18"
-   id="text2144"
-   style="font-size:18px;font-family:IBMPlexSans;fill:#ffffff">VM</text>
-
+   id="text2144">MV</text>
 
 <text
    transform="matrix(1 0 0 1 237 294.3589)"
@@ -5611,14 +5607,12 @@
    font-size="14"
    id="text2146">APP</text>
 
-
 <text
    transform="matrix(1 0 0 1 346.998 295.353)"
    fill="#FFFFFF"
    font-family="'IBMPlexSans'"
    font-size="14"
    id="text2148">APP</text>
-
 
 <text
    transform="matrix(1 0 0 1 493.998 279.3511)"
@@ -5627,14 +5621,12 @@
    font-size="14"
    id="text2150">APP</text>
 
-
 <text
    transform="matrix(1 0 0 1 662.9922 279.3511)"
    fill="#FFFFFF"
    font-family="'IBMPlexSans'"
    font-size="14"
    id="text2152">APP</text>
-
 
 <text
    transform="matrix(1 0 0 1 578.9922 278.3569)"
@@ -5643,14 +5635,12 @@
    font-size="14"
    id="text2154">APP</text>
 
-
 <text
    transform="matrix(1 0 0 1 239.9961 318.3545)"
    fill="#FFFFFF"
    font-family="'IBMPlexSans'"
    font-size="14"
    id="text2156">SE</text>
-
 
 <text
    transform="matrix(1 0 0 1 349.9941 318.3545)"
@@ -5659,14 +5649,12 @@
    font-size="14"
    id="text2158">SE</text>
 
-
 <text
    transform="matrix(1 0 0 1 498.9961 301.3589)"
    fill="#FFFFFF"
    font-family="'IBMPlexSans'"
    font-size="14"
    id="text2160">SE</text>
-
 
 <text
    transform="matrix(1 0 0 1 582.9961 301.3589)"
@@ -5675,7 +5663,6 @@
    font-size="14"
    id="text2162">SE</text>
 
-
 <text
    transform="matrix(1 0 0 1 666.002 301.3589)"
    fill="#FFFFFF"
@@ -5683,13 +5670,12 @@
    font-size="14"
    id="text2164">SE</text>
 
-
 <text
-   transform="translate(346,264.3193)"
+   transform="matrix(1 0 0 1 346 264.3193)"
+   fill="#FFFFFF"
+   font-family="'IBMPlexSans'"
    font-size="18"
-   id="text2166"
-   style="font-size:18px;font-family:IBMPlexSans;fill:#ffffff">VM</text>
-
+   id="text2166">MV</text>
 
 <text
    transform="matrix(1 0 0 1 122.0078 106.3154)"
@@ -5698,14 +5684,12 @@
    font-size="18"
    id="text2168">Infrastructure de gestion/Edge</text>
 
-
 <text
    transform="matrix(1 0 0 1 537.0156 108.3135)"
    fill="#FFFFFF"
    font-family="'IBMPlexSans'"
    font-size="18"
    id="text2170">Charges de travail</text>
-
 
 <text
    transform="matrix(1 0 0 1 196.0239 391.3096)"
@@ -5714,14 +5698,12 @@
    font-size="18"
    id="text2172">Hôte ESXi</text>
 
-
 <text
    transform="matrix(1 0 0 1 548.0322 391.3096)"
    fill="#FFFFFF"
    font-family="'IBMPlexSans'"
    font-size="18"
    id="text2174">Hôte ESXi</text>
-
 
 <text
    transform="matrix(1 0 0 1 352.0298 487.3037)"
@@ -5730,14 +5712,12 @@
    font-size="18"
    id="text2176">VDS public</text>
 
-
 <text
    transform="matrix(1 0 0 1 350.0322 588.3018)"
    fill="#FFFFFF"
    font-family="'IBMPlexSans'"
    font-size="18"
    id="text2178">VDS privé</text>
-
 
 <g
    id="g2196">
@@ -5817,7 +5797,6 @@
    font-size="24"
    id="text2198">Gestion/Edge/Calcul</text>
 
-
 <g
    id="g2208">
 	<defs
@@ -5852,13 +5831,11 @@
    y="194.31979"
    style="font-size:18px;font-family:IBMPlexSans;fill:#ffffff">Machines virtuelles</text>
 
-
 <text
    transform="matrix(1 0 0 1 320.0962 177)"
    font-family="'Myriad-Roman'"
    font-size="12"
    id="text2212">       </text>
-
 
 <text
    id="text2218"
@@ -5874,6 +5851,5 @@
      font-size="18"
      id="tspan2216"
      style="font-size:18px;font-family:IBMPlexSans;fill:#ffffff">     virtuel</tspan></text>
-
 
 </svg>

@@ -24,7 +24,8 @@ Dans cette conception, Microsoft Active Directory (AD) est utilisé pour la gest
 
 Par défaut, une seule interface de serveur virtuel est déployée sur l'infrastructure {{site.data.keyword.cloud}}. La conception permet également de déployer deux serveurs Microsoft Active Directory haute disponibilité en tant que machines virtuelles Windows Server dédiées dans le cluster de gestion.
 
-Vous êtes tenu de fournir l'octroi de licence et l'activation Microsoft si vous choisissez cette option.{:note}
+Vous êtes tenu de fournir l'octroi de licence et l'activation Microsoft si vous choisissez cette option.
+{:note}
 
 Active Directory sert à authentifier les accès uniquement pour gérer l'instance VMware et non pour héberger les utilisateurs des charges de travail dans les instances déployées. Le nom de domaine racine de forêt du serveur Active Directory est identique au nom de domaine DNS que vous spécifiez. Ce nom de domaine est indiqué uniquement pour l'instance Cloud Foundation et vCenter Server si plusieurs instances sont liées. Pour les instances liées, chaque instance contient un serveur Active Directory qui se trouve dans l'anneau de réplique racine de forêt. Les fichiers de la zone DNS sont également répliqués sur les serveurs Active Directory.
 

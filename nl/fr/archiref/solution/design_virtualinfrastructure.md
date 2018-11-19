@@ -174,7 +174,8 @@ Tableau 4. Commutateurs distribués de cluster convergé
 | SDDC-Dswitch-Private | gestion ESXi, vSAN, vSphere vMotion, point d'extrémité du tunnel VXLAN, NFS (VTEP) | Activé | Route basée sur le basculement explicite (vSAN, vMotion) port virtuel d'origine (tout le reste) | 2 | 9 000<br>(Trames Jumbo) |
 | SDDC-Dswitch-Public | Trafic de gestion externe (Nord-Sud) | Activé | Route basée sur le port virtuel d'origine | 2 | 1 500<br>(par défaut) |
 
-Les noms, le nombre et l'ordre des NIC de l'hôte peuvent varier en fonction de l'{{site.data.keyword.CloudDataCent_notm}} et du matériel de l'hôte choisi.{:note}
+Les noms, le nombre et l'ordre des NIC de l'hôte peuvent varier en fonction de l'{{site.data.keyword.CloudDataCent_notm}} et du matériel de l'hôte choisi.
+{:note}
 
 Tableau 5. Paramètres de configuration de groupe de ports de commutation distribuée pour le cluster convergé
 
