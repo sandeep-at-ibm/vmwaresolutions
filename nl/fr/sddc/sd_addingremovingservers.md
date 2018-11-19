@@ -25,7 +25,7 @@ Une instance Cloud Foundation peut comporter jusqu'à cinq clusters, dont l'un e
 * N'ajoutez pas de serveurs ESXi depuis le client Web VMware vSphere. Les modifications apportées sur le client Web VMware vSphere ne sont pas synchronisées avec la console {{site.data.keyword.vmwaresolutions_full}}.
 * La plateforme de base que vous avez commandée dispose par défaut de 4 serveurs ESXi. Vous pouvez développer la plateforme jusqu'à un maximum de 32 serveurs ESXi. Cependant, le nombre de serveurs {{site.data.keyword.baremetal_short}} que vous pouvez ajouter à la fois est le suivant :
    * Pour les configurations **Petite** et **Grande**, vous pouvez ajouter de 1 à 10 serveurs ESXi à la fois.
-   * Pour les configurations **Skylake** et **Broadwell**, vous pouvez ajouter 1 à 20 serveurs ESXi à la fois. 
+   * Pour les configurations **Skylake** et **Broadwell**, vous pouvez ajouter 1 à 20 serveurs ESXi à la fois.
 
 ## Procédure d'ajout de serveurs ESXi
 
@@ -65,7 +65,8 @@ Une instance Cloud Foundation peut comporter jusqu'à cinq clusters, dont l'un e
 2. Un courrier électronique vous avise du retrait de vos serveurs ESXi.
 3. Les serveurs ESXi sont complètement récupérés par l'infrastructure {{site.data.keyword.cloud_notm}} à la fin de son cycle de facturation, lequel est généralement de 30 jours.
 
-   Les serveurs ESXi retirés vous sont facturés jusqu'à échéance du cycle de facturation d'{{site.data.keyword.cloud_notm}}.{:note}
+   Les serveurs ESXi retirés vous sont facturés jusqu'à échéance du cycle de facturation d'{{site.data.keyword.cloud_notm}}.
+   {:note}
 
 ### Liens connexes
 

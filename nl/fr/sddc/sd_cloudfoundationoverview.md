@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -47,20 +47,16 @@ Pour plus d'informations sur l'architecture, voir [Présentation de la solution]
 
 Les composants suivants sont inclus dans votre instance Cloud Foundation.
 
-Les frais encourus pour le matériel, la mise en réseau, les machines virtuelles et le stockage peuvent varier en fonction de l'{{site.data.keyword.CloudDataCent_notm}} sélectionné pour le déploiement.{:note}
+Les frais encourus pour le matériel, la mise en réseau, les machines virtuelles et le stockage peuvent varier en fonction de l'{{site.data.keyword.CloudDataCent_notm}} sélectionné pour le déploiement.
+{:note}
 
 ### Serveur bare metal
 
 Vous pouvez commander les serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} dans l'une des configurations suivantes :
-*  **Skylake** ou **Broadwell** : serveurs {{site.data.keyword.baremetal_short}} avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.    
-   * Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100)
-   * Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4)
-
+*  **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.    
+*  **Broadwell** : Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.    
    Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.
-{:note}
-* **Préconfigurée** : Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4)
-  * **Petite** (Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz/128 Go de RAM/12 disques)
-  * **Grande** (Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de RAM/12 disques)
+   {:note}
 
 ### Utilisation en réseau
 
@@ -88,8 +84,6 @@ Le stockage suivant est commandé selon la configuration des serveurs {{site.dat
 * Deux disques cache SSD (Solid-State Disk) de 960 Go
 * Un contrôleur de disque RAID
 * Pour les configurations **Skylake** et **Broadwell** uniquement, vous pouvez définir le nombre d'unités de disque ainsi que le type et la capacité des disques en fonction de vos besoins. De plus, vous disposez de l'option Hautes performances avec Intel Optane, qui fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. L'option Hautes performances avec Intel Optane dépend du modèle d'UC.
-* Pour la configuration **Préconfigurée**, **Petite** uniquement : deux disques SSD haute capacité de 1,9 To
-* Pour la configuration **Préconfigurée**, **Grande** uniquement : quatre disques SSD haute capacité de 3,8 To
 
 ### Licences (fournies par IBM ou BYOL) et frais
 
