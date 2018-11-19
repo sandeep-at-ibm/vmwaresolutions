@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Servicio de red en IBM Cloud
 
@@ -20,7 +24,8 @@ Figura 1. Servicios de red en la nube en Cloud Foundation
 
 Aunque un solo ESG puede ser suficiente para el tráfico de carga de trabajo de gestión y de cliente, la separación de gestión y tráfico de cliente es una decisión de diseño realizada para evitar una configuración incorrecta accidental del ESG de gestión.
 
-**Nota:** La falta de configuración o la inhabilitación del ESG de gestión no permite que la instancia de Cloud Foundation o vCenter Server funcione, sino que inhabilita todas las funciones de gestión de portal.
+Una configuración errónea o la inhabilitación del ESG de gestión no impiden que la instancia de Cloud Foundation o vCenter Server funcione, pero inhabilitan todas las funciones de gestión de portal.
+{:note}
 
 ## Servicios de gestión de IBM NSX Edge
 
@@ -38,14 +43,15 @@ Tabla 1. Especificaciones del NSX ESG de gestión de IBM
 
 | NSX Edge de gestión de IBM | vCPU | Memoria | Tamaño de disco | Ubicación de almacenamiento |
 |:----------------------- |:---- |:------ |:--------- |:---------------- |
-| NSX ESG de gestión de IBM 1 | 2 | 1 GB | 1 GB | vSAN Datastore (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
-| NSX ESG de gestión de IBM 2 | 2 | 1 GB | 1 GB | vSAN Datastore (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
+| NSX ESG de gestión de IBM 1 | 2 | 1 GB | 1 GB | Almacén de datos de vSAN (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
+| NSX ESG de gestión de IBM 2 | 2 | 1 GB | 1 GB | Almacén de datos de vSAN (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
 
 ### Servicios de gestión
 
 El acceso de salida es necesario para los servicios siguientes:
 
 * Zerto Virtual Manager. Si se instala, Zerto on {{site.data.keyword.cloud_notm}} requiere acceso de salida a Internet para la activación de licencias y la creación de informes de uso.
+* Copia de seguridad y replicación de Veeam. Si está instalado, Veeam on {{site.data.keyword.cloud_notm}} requiere acceso de salida a internet para descargar actualizaciones de productos y licencias.
 * FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} requiere acceso de salida a Internet para la activación y la supervisión de licencias.
 * F5 on {{site.data.keyword.cloud_notm}} requiere acceso de salida a Internet para la activación de licencias.
 
@@ -57,9 +63,9 @@ Tabla 2. Configuración de la interfaz NSX ESG
 
 | Interfaz | Tipo de interfaz | Conectado a | Descripción |
 |:--------- |:-------------- |:------------ |:----------- |
-| Enlace ascendente público | Enlace ascendente | SDDC-DportGroup-External | Interfaz destinada a Internet pública |
-| Enlace ascendente privado | Enlace ascendente | SDDC-DportGroup-Mgmt | Interfaz destinada a una red privada interna |
-| Interna | Interna | Carga de trabajo de alta disponibilidad de VXLAN | Interfaz interna utilizada para el latido de par HA de ESG; portgroup en SDDC-Dswitch-Private |
+| Enlace ascendente público | Enlace ascendente | **SDDC-DportGroup-External** | Interfaz de cara a internet pública |
+| Enlace ascendente privado | Enlace ascendente | **SDDC-DportGroup-Mgmt** | Interfaz destinada a una red privada interna |
+| Interna | Interna | Carga de trabajo de alta disponibilidad de VXLAN | Interfaz interna utilizada para el latido de par HA de ESG; portgroup en **SDDC-Dswitch-Private** |
 
 ### Subredes
 
@@ -120,6 +126,7 @@ Tabla 6. Configuración de cortafuegos de NSX ESG
 | Servicio | Fuente | Destino | Protocolo | Acción |
 |:------- |:------ |:----------- |:-------- |:------ |
 | Zerto on {{site.data.keyword.cloud_notm}} | VM de gestión de Zerto | Cualquiera | Puerto 443 | Permitir |
+| Veeam on {{site.data.keyword.cloud_notm}} | VM de copia de seguridad y réplica de Veeam | Cualquiera | Puerto 443 | Permitir |
 | FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} | VM de servicio | Cualquiera | Puerto 443 | Permitir |
 | F5 on {{site.data.keyword.cloud_notm}} | VM de servicio | Cualquiera | Puerto 443 | Permitir |
 | Cualquiera | Cualquiera | Cualquiera | Cualquiera | Denegar |
@@ -147,12 +154,12 @@ Tabla 7. Configuración de la interfaz de Edge de carga de trabajo
 
 | Interfaz | Tipo de interfaz | Conectado a | Descripción |
 |:--------- |:-------------- |:------------ |:----------- |
-| Enlace ascendente público | Enlace ascendente | SDDC-DportGroup-External | Interfaz destinada a Internet pública |
-| Enlace ascendente privado | Enlace ascendente | SDDC-DportGroup-Mgmt | Interfaz destinada a una red privada interna |
+| Enlace ascendente público | Enlace ascendente | SDDC-DportGroup-External | Interfaz de cara a internet pública |
+| Enlace ascendente privado | Enlace ascendente | SDDC-DportGroup-Mgmt | Interfaz de cara a una red privada interna |
 | Enlace ascendente de tránsito | Enlace ascendente | Carga de trabajo-Tránsito | Tránsito VXLAN entre el ESG de carga de trabajo y el DLR de carga de trabajo |
 | Interna | Interna | Carga de trabajo de alta disponibilidad de VXLAN | Interfaz interna utilizada para la pulsación del par de alta disponibilidad de ESG |
 
-En este diseño, se utiliza un DLR para permitir el direccionamiento potencial de este a oeste entre las redes L2 conectadas a la carga de trabajo local. Como esta topología está pensada para ser un ejemplo sencillo, solo se describe una red L2 destinada a las cargas de trabajo. La adición de zonas de seguridad adicionales se puede conseguir simplemente añadiendo VXLAN adicionales conectadas a las nuevas interfaces en el DLR. Las siguientes son interfaces DLR para configurar:
+En este diseño, se utiliza un DLR para permitir el direccionamiento potencial de este a oeste entre las redes L2 conectadas a la carga de trabajo local. Como esta topología está pensada para ser un ejemplo sencillo, solo se describe una red L2 destinada a las cargas de trabajo. Se pueden añadir más zonas de seguridad añadiendo más VXLAN conectadas a las nuevas interfaces en el DLR. En la tabla siguiente se muestran las interfaces de DLR que se configuran:
 
 Tabla 8. Interfaces de DLR
 
@@ -170,8 +177,8 @@ Tabla 9. Configuración de IP de DLR y ESG de carga de trabajo
 
 | Interfaz | Tipo de interfaz | Tipo de subred IP v4 | Rango | Descripción |
 |:--------- |:-------------- |:----------------- |:----- |:----------- |
-| Enlace ascendente público (ESG) | Enlace ascendente | {{site.data.keyword.cloud_notm}} portátil público | /30-representa una dirección IP asignable | Interfaz pública destinada a Internet (el cliente puede solicitar IP adicionales por separado) |
-| Enlace ascendente privado (ESG) | Enlace ascendente | {{site.data.keyword.cloud_notm}} portátil privado (gestión existente) | /26-representa 61 direcciones IP asignables | Interfaz destinada a una red privada interna |
+| Enlace ascendente público (ESG) | Enlace ascendente | {{site.data.keyword.cloud_notm}} portátil público | /30-representa una dirección IP asignable | Interfaz de cara a internet pública (el cliente puede solicitar más direcciones IP por separado) |
+| Enlace ascendente privado (ESG) | Enlace ascendente | {{site.data.keyword.cloud_notm}} portátil privado (gestión existente) | /26-representa 61 direcciones IP asignables | Interfaz de cara a una red privada interna |
 | Interna (ESG y DLR) | Interna | Local de enlace | 169.254.0.0/16 | Interfaz interna utilizada para la comunicación de par de alta disponibilidad ESG |
 | Enlace ascendente de tránsito (ESG y DLR) | Enlace ascendente | Asignado por el cliente | Por determinar. | Conexión de red de tránsito para ESG a DLR |
 | Carga de trabajo (DLR) | Enlace ascendente | Asignado por el cliente | Por determinar. | Subred de carga |
@@ -190,7 +197,7 @@ Tabla 10. Reglas de NAT de ESG de carga de trabajo
 
 ### Direccionamiento para NSX Edge de carga de trabajo de IBM
 
-Dentro de este diseño, el único requisito para las cargas de trabajo que van del DLR al ESG de carga de trabajo es acceder a Internet. Es necesario que el ESG de carga de trabajo comprenda la vía de acceso a la carga de trabajo VXLAN y a cualquier carga de trabajo futura VXLAN/subredes creadas detrás del DLR. Aunque esto se puede lograr a través de rutas estáticas en el ESG, la intención de la topología de la carga de trabajo es la de un diseño de mejores prácticas demostrado. Por lo tanto, Open Shortest Path First (OSPF) se configura entre la carga de trabajo ESG y el DLR en sentido descendente.
+Dentro de este diseño, el único requisito para las cargas de trabajo que van del DLR al ESG de carga de trabajo es acceder a internet. Es necesario que el ESG de carga de trabajo comprenda la vía de acceso a la carga de trabajo VXLAN y a cualquier carga de trabajo futura VXLAN/subredes creadas detrás del DLR. Aunque esto se puede lograr a través de rutas estáticas en el ESG, la intención de la topología de la carga de trabajo es la de un diseño de mejores prácticas demostrado. Por lo tanto, Open Shortest Path First (OSPF) se configura entre la carga de trabajo ESG y el DLR en sentido descendente.
 
 Para obtener más información sobre la configuración, consulte [Configurar protocolo OSPF](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-6E985577-3629-42FE-AC22-C4B56EFA8C9B.html).
 
@@ -217,15 +224,15 @@ Tabla 12. Reglas de cortafuegos de ESG de carga
 
 ### Definiciones de VXLAN para NSX Edge de carga de trabajo de IBM
 
-Los pares de alta disponibilidad ESG y DLR de topología de carga de trabajo requieren segmentos L2 (VXLAN) para la conexión de las interfaces internas, el tránsito de datos entre los dos y, finalmente, para las cargas de trabajo.
+Los pares de alta disponibilidad ESG y DLR de topología de carga de trabajo requieren segmentos L2 (VXLAN) para la conexión de las interfaces internas, el tránsito de datos entre los dos y para las cargas de trabajo.
 
 Tabla 13. Interfaces internas de ESG de carga de trabajo
 
 | Nombre de VXLAN | Zona de transporte de Cloud Foundation o vCenter Server | Tipo |
 |:---------- |:------------------------------------------------- |:---- |
-| Alta disponibilidad de carga de trabajo HA | transit-1 | global |
-| Tránsito de carga de trabajo | transit-1 | global |
-| Carga de trabajo | transit-1 | global |
+| Alta disponibilidad de carga de trabajo HA | transit-1 | Global |
+| Tránsito de carga de trabajo | transit-1 | Global |
+| Carga de trabajo | transit-1 | Global |
 
 ### Valores de ESG DLR para NSX Edge de carga de trabajo de IBM
 
