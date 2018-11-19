@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Pedido de instancias de Cloud Foundation
 
@@ -18,7 +22,8 @@ Asegúrese de haber realizado las tareas siguientes:
 *  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
 *  Ha revisado los requisitos y las consideraciones del apartado [Requisitos y planificación de instancias de Cloud Foundation](sd_planning.html).
 
-**Importante:** No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime. Tampoco cambie el nombre de la instancia, el nombre del dominio raíz, la etiqueta de subdominio ni el prefijo de nombre de host después de que se haya desplegado la instancia.
+No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime. Tampoco cambie el nombre de la instancia, el nombre del dominio raíz, la etiqueta de subdominio ni el prefijo de nombre de host después de que se haya desplegado la instancia.
+{:important}
 
 ## Valores del sistema
 
@@ -54,6 +59,34 @@ Para usuarios que no son Business Partner, puede utilizar las licencias de VMwar
 
 Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se alojará la instancia.
 
+### Skylake
+
+Cuando selecciona **Skylake**, puede elegir la combinación de CPU y RAM según sus necesidades.
+
+Seleccione el modelo de CPU y la RAM del servidor nativo.
+
+Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} Skylake
+
+| Opciones de modelo de CPU        | Opciones de RAM       |
+|:------------- |:------------- |
+| Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+### Broadwell
+
+Cuando selecciona **Broadwell**, puede elegir la combinación de CPU y RAM según sus necesidades.
+
+Seleccione el modelo de CPU y la RAM del servidor nativo.
+
+Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
+
+| Opciones de modelo de CPU        | Opciones de RAM       |
+|:------------- |:------------- |
+| Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+
 ### Preconfigurado
 
 Cuando selecciona **Preconfigurado**, no puede cambiar los valores de CPU o RAM.
@@ -61,23 +94,6 @@ Cuando selecciona **Preconfigurado**, no puede cambiar los valores de CPU o RAM.
 En función de sus requisitos, seleccione una configuración de servidor nativo:
   * Pequeño (Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz / 128 GB de RAM / 12 unidades)
   * Grande (Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz / 512 GB de RAM / 12 unidades)
-
-### Personalizado
-
-Cuando selecciona **Personalizado**, puede elegir la combinación de CPU y RAM según sus necesidades.
-
-Seleccione el modelo de CPU y la RAM del servidor nativo.
-
-Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} personalizados
-
-| Opciones de modelo de CPU        | Opciones de RAM       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 ### Número de servidores nativos
 
@@ -91,7 +107,7 @@ Cuando selecciona una configuración de servidor nativo **Preconfigurado**, los 
   * Para la configuración de servidor nativo **Pequeño**, se solicitan dos unidades de disco de 1,9 TB SSD SED.
   * Para la configuración de servidor nativo **Grande**, se solicitan cuatro unidades de disco de 3,8 TB SSD SED.
 
-Cuando selecciona la configuración de servidor nativo **Personalizado**, puede personalizar el almacenamiento vSAN para la instancia. Especifique los siguientes valores de vSAN:
+Cuando selecciona la configuración de servidor nativo **Skylake** o **Broadwell**, puede personalizar el almacenamiento vSAN para la instancia. Especifique los siguientes valores de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
 * Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
@@ -125,7 +141,8 @@ El nombre del dominio raíz debe cumplir los siguientes requisitos:
 * La última serie solo puede contener caracteres alfabéticos.
 * La longitud de la última serie debe estar comprendida entre 2 y 24 caracteres.
 
-**Nota:** la longitud máxima del FQDN (nombre de dominio completo) para hosts y máquinas virtuales (VM) es de 50 caracteres. Los nombres de dominio deben cumplir con esta longitud máxima.
+La longitud máxima del FQDN (nombre de dominio completo) para hosts y máquinas virtuales (VM) es de 50 caracteres. Los nombres de dominio deben cumplir con esta longitud máxima.
+{:note}
 
 ### Formato de valor de los valores de red
 
@@ -193,11 +210,11 @@ En función de la configuración seleccionada para la instancia y los servicios 
 6. Complete los valores del servidor nativo:
    1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} que va a alojar la instancia.
    2. Seleccione la configuración del servidor nativo.
+      * Si seleccione **Skylake** o **Broadwell**, especifique el modelo de CPU y el tamaño de RAM.
       * Si selecciona **Preconfigurado**, elija una configuración de **Pequeño** y **Grande**.
-      * Si seleccione **Personalizado**, especifique el modelo de CPU y el tamaño de RAM.
 7. Complete la configuración del almacenamiento.
+   * Si ha seleccionado **Skylake** o **Broadwell** para la configuración de servidor nativo, especifique los tipos de disco para la capacidad vSAN y los discos de memoria caché, y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
    * Si ha seleccionado **Preconfigurado** para la configuración de servidor nativo, los valores de almacenamiento para las configuraciones de servidor nativo **Pequeño** y **Grande** estandarizados no se pueden cambiar.
-   * Si ha seleccionado **Personalizado** para la configuración de servidor nativo, especifique los tipos de disco para la capacidad vSAN y los discos de memoria caché, y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
 8. Complete los valores de interfaz de red:
    1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio raíz. Para una instancia secundaria, el nombre de dominio se rellena automáticamente.
    2. Seleccione los valores de VLAN:
@@ -227,7 +244,8 @@ Cuando se solicita una instancia secundaria, es posible que el cliente web de VM
 
 Puede ver y gestionar la instancia de Cloud Foundation que ha solicitado.
 
-**Importante:** Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el 	{{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no a través del {{site.data.keyword.slportal}} ni por ningún otro medio fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+{:important}
 
 **ATENCIÓN:** el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 

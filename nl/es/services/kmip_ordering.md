@@ -45,7 +45,7 @@ Tabla 1. Regiones de puntos finales del servicio KMIP for VMware on {{site.data.
 | Alemania        |  `161.156.68.107:5696` |
 | Sídney         |  `130.198.73.134:5696` |
 | Reino Unido |  `158.175.93.122:5696` |
-| EE.UU. Sur       |  `169.60.185.42:5696`  |
+| EE.UU. sur       |  `169.60.185.42:5696`  |
 
 Este valor es opcional en el momento de la configuración inicial. Puede dejar este campo en blanco porque el certificado de cliente del KMS in vCenter Server se conoce después de que se despliegue la instancia. Pero debe especificar el certificado después de que se despliegue la instancia para que se pueda realizar correctamente la conexión de vCenter Server con KMS.
 

@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Aplicación de actualizaciones a instancias de vCenter Server
 
@@ -16,7 +18,8 @@ El proceso de aplicar parches y actualizaciones a instancias de vCenter Server s
 
 ## Antes de empezar
 
-**Importante:** Cuando actualice una instancia de vCenter Server a un vCenter Server con la instancia de Hybridity Bundle, primero debe aplicar al menos la actualización de software base de vCenter Server V2.3. Debe hacerlo antes de poder realizar la actualización de la licencia en el paquete híbrido (Hybridity).
+Cuando actualice una instancia de vCenter Server a un vCenter Server con la instancia de Hybridity Bundle, primero debe aplicar al menos la actualización de software base de vCenter Server V2.3. Debe hacerlo antes de poder realizar la actualización de la licencia en el paquete híbrido (Hybridity).
+{:important}
 
 Los usuarios de Business Partner no tienen la opción de actualizar una instancia de vCenter Server existente a un vCenter Server con la instancia del paquete híbrido (Hybridity).
 
@@ -24,7 +27,7 @@ Antes de intentar aplicar una actualización, expanda la entrada de la actualiza
 * La versión de la actualización. Debe aplicar las actualizaciones en secuencia cronológica, es decir, desde la primera hasta la más reciente. Asegúrese de haber aplicado todas las actualizaciones anteriores antes de aplicar la más reciente. Por ejemplo, debe aplicar la actualización V2.3 antes de intentar aplicar la actualización V2.4.
 * Si se requiere tiempo de inactividad.
 * El tiempo total estimado para completar la actualización.
-* El impacto de la actualización sobre el entorno virtual VMware. La Tabla 1 muestra cómo afectan al sistema distintos niveles de impacto.
+* El impacto de la actualización sobre el entorno virtual VMware. En la Tabla 1 se muestra cómo afectan al sistema distintos niveles de impacto.
 * Los detalles de la actualización.
 
 Tabla 1. Niveles de actualización e impacto
@@ -58,7 +61,8 @@ Este procedimiento se aplica a las instancias desplegadas en V2.1 o posterior. P
    Si no se visualizan los detalles, esto podría indicar un problema de conectividad con la Instancia de servidor virtual (VSI) de IBM CloudDriver, como resultado de una regla de cortafuegos u otro problema de la red. Resuelva el problema antes de continuar con el siguiente paso; de lo contrario, la actualización puede fallar.
 4. Pulse **Actualización y parche** en el panel de navegación izquierdo.
 
-   **Nota:** La página **Actualizar y parchear** de una instancia solo contiene los paquetes para la actualización de los componentes de gestión de IBM y no las actualizaciones de VMware. Las actualizaciones de VMware deben aplicarse manualmente.
+   La página **Actualización y parche** de una instancia solo contiene los paquetes para la actualización de los componentes de gestión de IBM y no las actualizaciones de VMware. Las actualizaciones de VMware deben aplicarse manualmente.
+   {:note}
 
    {{site.data.keyword.vmwaresolutions_short}} aplica las actualizaciones de VMware para las operaciones siguientes:
    * Cuando se despliega una instancia nueva de vCenter Server.
@@ -67,7 +71,8 @@ Este procedimiento se aplica a las instancias desplegadas en V2.1 o posterior. P
 
 5. Para las actualizaciones de licencia de NSX, pulse **Actualizar**. En la ventana **Actualizar edición de licencia de NSX**, seleccione la edición a la que desea actualizar y pulse **Actualizar**. No se permite reducir la edición de la licencia.
 
-   **Nota:** la actualización de licencia sustituye todas las licencias existentes de NSX en la instancia. Es posible que se incurra en cargos adicionales derivados de un solapamiento de licencias antiguas y nuevas si realiza la actualización a mitad del ciclo de facturación. Para evitar estos cargos adicionales, se recomienda actualizar la licencia al final del periodo de facturación.
+   La actualización de licencia sustituye todas las licencias existentes de NSX en la instancia. Es posible que se incurra en cargos adicionales derivados de un solapamiento de licencias antiguas y nuevas si realiza la actualización a mitad del ciclo de facturación. Para evitar estos cargos adicionales, se recomienda actualizar la licencia al final del periodo de facturación.
+   {:note}
 
 6. Para actualizaciones de software, pulse la flecha hacia abajo para ampliar la actualización que desea aplicar y luego siga uno de los pasos siguientes:
    *  Para comenzar la actualización de inmediato, pulse el icono de menú de desbordamiento en la columna **Acciones** de la entrada de la actualización y pulse **Actualizar ahora**.
@@ -78,7 +83,8 @@ Este procedimiento se aplica a las instancias desplegadas en V2.1 o posterior. P
 
 Durante la actualización de licencia al paquete híbrido (Hybridity), se actualizará automáticamente a la edición VMware NSX Advanced si la instancia de vCenter Server utiliza actualmente la edición Base de VMware NSX.
 
-**Nota:** Si actualiza al paquete híbrido (Hybridity) y la instancia de vCenter Server ya tiene almacenamiento de archivos NFS, no se le cargará el almacenamiento vSAN de VMware. Se le cargará la licencia de vSAN porque se incluye con el paquete híbrido (Hybridity).
+Si actualiza al paquete híbrido (Hybridity) y la instancia de vCenter Server ya tiene almacenamiento de archivos NFS, no se le cargará el almacenamiento vSAN de VMware. Se le cargará la licencia de vSAN porque se incluye con el paquete híbrido (Hybridity).
+{:note}
 
 Siga estos pasos para actualizar una instancia de vCenter Server a vCenter Server con el paquete híbrido (Hybridity).
 

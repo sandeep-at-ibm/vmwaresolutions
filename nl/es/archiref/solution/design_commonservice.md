@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Diseño de servicios comunes
 
@@ -14,15 +18,16 @@ Los servicios comunes proporcionan los servicios que utilizan otros servicios en
 
 ## Servicios de identidad y acceso
 
-En este diseño, Microsoft Active Directory (AD) se utiliza para la gestión de identidades. El diseño despliega una o dos máquinas virtuales de Windows Active Directory como parte de la automatización de despliegue de Cloud Foundation y vCenter Server. vCenter se configurará para utilizar la autenticación de AD.
+En este diseño, Microsoft Active Directory (AD) se utiliza para la gestión de identidades. El diseño despliega una o dos máquinas virtuales de Windows Active Directory como parte de la automatización de despliegue de Cloud Foundation y vCenter Server. vCenter se configura de modo que utilice la autenticación de AD.
 
 ### Microsoft Active Directory
 
 De forma predeterminada, un único VSI de Active Directory se despliega en la infraestructura de {{site.data.keyword.cloud}}. El diseño también proporciona la opción de desplegar dos servidores de Microsoft Active Directory de alta disponibilidad como VM de Windows Server dedicadas en el clúster de gestión.
 
-**Nota**: Es responsable de proporcionar la licencia y activación de Microsoft si elige esta opción.
+Es responsable de proporcionar la licencia y activación de Microsoft si elige esta opción.
+{:note}
 
-Active Directory sirve para autenticar los accesos para gestionar solo la instancia de VMware y no para alojar a los usuarios finales de las cargas de trabajo en las instancias desplegadas. El nombre de dominio raíz del bosque del servidor de Active Directory es igual al nombre de dominio DNS que especifique. Este nombre de dominio se especifica únicamente para la instancia de Cloud Foundation y vCenter Server primaria si se enlazan varias instancias. En el caso de las instancias enlazadas, cada instancia contiene un servidor de Active Directory que se encuentra en el anillo de réplica raíz del grupo. Los archivos de la zona de DNS también se replican en los servidores de Active Directory.
+Active Directory sirve para autenticar los accesos para gestionar solo la instancia de VMware y no para alojar a los usuarios de las cargas de trabajo en las instancias desplegadas. El nombre de dominio raíz del bosque del servidor de Active Directory es igual al nombre de dominio DNS que especifique. Este nombre de dominio se especifica únicamente para la instancia de Cloud Foundation y vCenter Server primaria si se enlazan varias instancias. En el caso de las instancias enlazadas, cada instancia contiene un servidor de Active Directory que se encuentra en el anillo de réplica raíz del grupo. Los archivos de la zona de DNS también se replican en los servidores de Active Directory.
 
 ### Dominio SSO de vSphere
 
@@ -40,9 +45,9 @@ DNS en este diseño es solo para los componentes de gestión de nube y de infrae
 El despliegue de vCenter Server utiliza los servidores desplegados de Active Directory como servidores DNS para la instancia. Todos los componentes desplegados (vCenter, PSC, NSX, y hosts de ESXi) están configurados para apuntar al servidor de Active Directory como su servidor DNS predeterminado. Puede personalizar la configuración de zona de DNS si la configuración no interfiere con la configuración de los componentes desplegados.
 
 Este diseño integra los servicios DNS en los servidores de Active Directory a través de la configuración siguiente:
-* Puede especificar la estructura del dominio. El nombre de dominio puede ser cualquier número de niveles (hasta el máximo que manejarán los componentes de vCenter Server). El nivel más bajo es el subdominio para la instancia.
-   * El nombre de dominio DNS que especifique se utilizará como el nombre de dominio del grupo raíz de Active Directory. Por ejemplo, si el nombre de dominio DNS es `cloud.ibm.com`, el nombre de dominio raíz del grupo de Active Directory será `cloud.ibm.com`. Este nombre de dominio de DNS y Active Directory es el mismo en todas las instancias enlazadas de vCenter Server.
-   * Adicionalmente, puede especificar un nombre de subdominio para la instancia. El nombre de subdominio debe ser exclusivo en todas las instancias enlazadas de vCenter Server.
+* Puede especificar la estructura del dominio. El nombre de dominio puede ser cualquier número de niveles (hasta el máximo que puedan manejar los componentes de vCenter Server). El nivel más bajo es el subdominio para la instancia.
+   * El nombre de dominio DNS que especifique se utiliza como el nombre de dominio del grupo raíz de Active Directory. Por ejemplo, si el nombre de dominio DNS es `cloud.ibm.com`, el nombre de dominio raíz del grupo de Active Directory será `cloud.ibm.com`. Este nombre de dominio de DNS y Active Directory es el mismo en todas las instancias enlazadas de vCenter Server.
+   * Además, puede especificar un nombre de subdominio para la instancia. El nombre de subdominio debe ser exclusivo en todas las instancias enlazadas de vCenter Server.
 * Los servidores DNS de Active Directory están configurados para ser autorizados tanto para el dominio de DNS como para el espacio de subdominio.
 * Los servidores DNS de Active Directory están configurados para que apunten a los servidores DNS de {{site.data.keyword.cloud_notm}} para todas las demás zonas.
 * Cualquier instancia que se va a integrar en una instancia de destino existente debe utilizar el mismo nombre de dominio que la instancia primaria.
@@ -56,8 +61,8 @@ Puesto que el SDDC Manager genera y mantiene los nombres de host para los compon
 Este diseño integra los servicios DNS en los servidores de Active Directory con la VM de SDDC Manager en la configuración siguiente:
 * Puede especificar la estructura del dominio. El nombre de dominio puede ser cualquier número de niveles (hasta el máximo que manejarán los componentes de Cloud Foundation).
 * El nivel más bajo es el subdominio para el que está autorizado el SDDC Manager.
-* El nombre de dominio DNS que especifique se utilizará como el nombre de dominio del grupo raíz de Active Directory. Por ejemplo, si el nombre de dominio DNS es `cloud.ibm.com`, la raíz del grupo del dominio de Active Directory será `cloud.ibm.com`. Este dominio DNS y el dominio Active Directory es el mismo en todas las instancias enlazadas de Cloud Foundation.
-* Adicionalmente, puede especificar un nombre de subdominio para la instancia. El nombre de subdominio debe ser exclusivo en todas las instancias enlazadas de Cloud Foundation.  
+* El nombre de dominio DNS que especifique se utilizará como el nombre de dominio del grupo raíz de Active Directory. Por ejemplo, si el nombre de dominio DNS es `cloud.ibm.com`, la raíz del grupo del dominio de Active Directory será `cloud.ibm.com`. Este dominio DNS y el dominio Active Directory coinciden en todas las instancias enlazadas de Cloud Foundation.
+* Además, puede especificar un nombre de subdominio para la instancia. El nombre de subdominio debe ser exclusivo en todas las instancias enlazadas de Cloud Foundation.  
 * La configuración de DNS de SDDC Manager se modifica para que apunte a los servidores de Active Directory para todas las zonas, excepto para la zona de la que es responsable.
 * Los servidores DNS de Active Directory se configuran para ser autorizados para el espacio de dominio de DNS sobre el subdominio de instancia de SDDC Manager y Cloud Foundation.
 * Los servidores DNS de Active Directory están configurados para que apunten a la dirección IP de SDDC Manager para la delegación de subdominio de la zona para la que el SDDC Manager está autorizado.

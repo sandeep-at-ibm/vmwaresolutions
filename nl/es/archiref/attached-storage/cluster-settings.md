@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -18,7 +18,7 @@ Hay dos características principales que se habilitan cuando se activa DRS de vS
 
 ### Equilibrio de carga
 
-Con el equilibrio de carga, la distribución y el uso de los recursos de CPU y memoria para todos los hosts y máquinas virtuales (VM) del clúster se supervisan continuamente. DRS compara estas métricas con una utilización de recursos ideal dados los atributos de las agrupaciones de recursos y máquinas virtuales del clúster, la demanda actual y el destino del desequilibrio. A continuación, realiza (o recomienda) migraciones de VM en consecuencia.
+Con el equilibrio de carga, la distribución y el uso de los recursos de CPU y memoria para todos los hosts y máquinas virtuales (VM) del clúster se supervisan continuamente. DRS compara estas métricas con una utilización de recursos ideal dados los atributos de las agrupaciones de recursos y máquinas virtuales del clúster y la demanda actual. A continuación, realiza o recomienda migraciones de VM en consecuencia.
 
 Cuando una VM se enciende por primera vez en el clúster, DRS intenta mantener el equilibrio de carga adecuado colocando la máquina virtual en un host apropiado o realizando una recomendación. Los valores de ubicación o de recomendación se establecen en la sección de automatización de DRS de los valores del clúster.
 

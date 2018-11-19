@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Gestión de cuentas y valores de usuario
 
 {{site.data.keyword.vmwaresolutions_full}} se comunica con la infraestructura de {{site.data.keyword.cloud_notm}} mediante llamadas de {{site.data.keyword.slapi_short}}. Para acceder a la {{site.data.keyword.slapi_short}} de forma segura, debe enlazar las credenciales de su cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) a su cuenta de {{site.data.keyword.cloud_notm}}.
 
-**Nota:** la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) se conocía anteriormente como la cuenta de IBM SoftLayer.
+La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) se conocía anteriormente como la cuenta de IBM SoftLayer.
+{:note}
 
 También puede especificar si desea recibir notificaciones por correo electrónico y por consola sobre diversos sucesos.
 

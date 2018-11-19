@@ -4,11 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
-#	Transferencia y corrección
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# Transferencia y corrección
 
 Los parches y las extensiones se pueden realizar opcionalmente antes de la corrección para asegurarse de que se descarguen de VUM al host de vSphere ESXi sin aplicar los parches o las extensiones inmediatamente. Durante la corrección, VUM aplica los parches, las extensiones y las actualizaciones a los objetos de inventario. Los parches de transferencia y las extensiones aceleran el proceso de corrección porque los parches y las extensiones ya están disponibles localmente en los hosts.
 
@@ -32,12 +36,13 @@ La corrección es el proceso en el que VUM aplica parches, extensiones y actuali
 
 Si la actualización lo requiere, los hosts se colocan en modalidad de mantenimiento antes de la corrección. El VCSA migra las máquinas virtuales a otros hosts dentro de la instancia de VCS antes de que el host se ponga en modalidad de mantenimiento.
 
-  Nota importante para los hosts de un clúster de vSAN.  Tenga en cuenta el comportamiento siguiente para los hosts que forman parte de un clúster vSAN:
-  *	El proceso de corrección del host puede tardar mucho tiempo en completarse.
-  *	Por diseño, solo el host de un clúster vSAN puede estar en modalidad de mantenimiento en cualquier momento.
-  *	VUM corrige hosts que forman parte de un clúster VSAN de forma secuencial, incluso si establece la opción de corregir los hosts en paralelo.
-  *	Las máquinas virtuales del host que utilicen una política de almacenamiento de VM con un valor para "Número de anomalías tolerables= 0", es posible que el host experimente retrasos inusuales al entrar en la modalidad de mantenimiento. El retraso se produce porque la vSAN debe migrar los datos de la máquina virtual de un disco a otro en el clúster de almacén de datos de vSAN, y esto puede tardar muchas horas. Puede solucionarlo estableciendo el "Número de anomalías tolerables" en "1" para la política de almacenamiento de la máquina virtual, lo que dará lugar a la creación de dos copias de los archivos de la máquina virtual en el almacén de datos de vSAN.
-  *	Si hay máquinas virtuales del host que utilicen una política de almacenamiento de VM con un valor para "Número de anomalías tolerable=1", la VM pasará a ser no redundante cuando el sistema principal entre en modalidad de mantenimiento. Si esto no es aceptable, consulte [redundancia de vSAN de máquina virtual](vum-vsan-redundancy.html).
+## Para hosts de un clúster vSAN
+Tenga en cuenta el comportamiento siguiente para los hosts que forman parte de un clúster vSAN:
+* El proceso de corrección del host puede tardar mucho tiempo en completarse.
+* Por diseño, solo el host de un clúster vSAN puede estar en modalidad de mantenimiento en cualquier momento.
+* VUM corrige hosts que forman parte de un clúster VSAN de forma secuencial, incluso si establece la opción de corregir los hosts en paralelo.
+* Las máquinas virtuales del host que utilicen una política de almacenamiento de VM con un valor para "Número de anomalías tolerables= 0", es posible que el host experimente retrasos inusuales al entrar en la modalidad de mantenimiento. El retraso se produce porque la vSAN debe migrar los datos de la máquina virtual de un disco a otro en el clúster de almacén de datos de vSAN, y esto puede tardar muchas horas. Puede solucionarlo estableciendo el "Número de anomalías tolerables" en "1" para la política de almacenamiento de la máquina virtual, lo que dará lugar a la creación de dos copias de los archivos de la máquina virtual en el almacén de datos de vSAN.
+* Si hay máquinas virtuales del host que utilicen una política de almacenamiento de VM con un valor para "Número de anomalías tolerable=1", la VM pasará a ser no redundante cuando el sistema principal entre en modalidad de mantenimiento. Si esto no es aceptable, consulte [Redundancia de vSAN de máquina Virtual](vum-vsan-redundancy.html).
 
 Para corregir los hosts y clústeres, siga estos pasos:
 1.	Utilice el cliente web de vSphere, seleccione **Inicio** > **Hosts y Clústeres**.
@@ -70,5 +75,5 @@ Para corregir los hosts y clústeres, siga estos pasos:
 
 ### Enlaces relacionados
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitectura de la solución VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)

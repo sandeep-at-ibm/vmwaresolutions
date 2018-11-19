@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ampliación y reducción de la capacidad para instancias de vCenter Server
 
@@ -23,7 +27,7 @@ Si el clúster inicial tiene vSAN como almacenamiento, el hecho de añadir uno o
 * Una instancia de vCenter Server con almacenamiento vSAN debe tener como mínimo 4 servidores ESXi.
 * Para instancias de vCenter Server desplegados en V2.0 o anterior, puede ampliar cada clúster para que tenga un máximo de 32 servidores ESXi. El número de {{site.data.keyword.baremetal_short}} que puede añadir simultáneamente funciona del siguiente modo:
    * Para las configuraciones de tipo **Pequeño**, **Medio** y **Grande**, puede añadir entre 1 y 10 servidores ESXi simultáneamente.
-   * Para la configuración de tipo **Personalizado**, puede añadir entre 1 y 20 servidores ESXi simultáneamente. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+   * Para la configuración de tipo **Skylake** y **Broadwell**, puede añadir entre 1 y 20 servidores ESXi simultáneamente. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Procedimiento para añadir servidores ESXi
 
@@ -64,7 +68,8 @@ Si el clúster inicial tiene vSAN como almacenamiento, el hecho de añadir uno o
 2. Se le notificará por correo electrónico de que su solicitud para eliminar servidores ESXi se está procesando. En la consola, el estado del clúster asociado con los servidores ESXi se cambia a **Modificando**.
 3. La infraestructura de {{site.data.keyword.cloud_notm}} reclama por completo los servidores ESXi al final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}, que suele ser de 30 días.
 
-   **Atención:** Se le facturará por lo servidores ESXi eliminados hasta el final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}.
+   Se le facturará por los servidores ESXi eliminados hasta el final del ciclo de facturación de la infraestructura {{site.data.keyword.cloud_notm}}.
+   {:note}
 
 ### Enlaces relacionados
 

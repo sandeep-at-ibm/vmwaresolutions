@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -16,16 +16,15 @@ Cuando explora hosts, máquinas virtuales y dispositivos virtuales, los evalúa 
 *	**Inicie manualmente una exploración de un objeto de contenedor**: inicie una exploración simultánea de hosts, máquinas y dispositivos virtuales, explorando un objeto contenedor que es un centro de datos o una carpeta de centro de datos.
 *	**Planifique una exploración**: puede configurar el cliente web de vSphere para explorar máquinas virtuales, dispositivos virtuales y hosts ESXi en momentos específicos o a los intervalos que le convengan.
 
-##	Iniciación manual de una exploración de hosts ESXi de vSphere
+## Iniciación manual de una exploración de hosts ESXi de vSphere
 
-1.	Pulse el botón **Explorar para actualizaciones** y seleccione **Parches y extensiones y actualizaciones** y, a continuación, pulse **Aceptar**.
-2.	Cuando se complete la exploración, seleccione **Parches de host críticos** y la revisión de los puntos débiles de cada host
-3.	Al pulsar el número en el Número de parches, una ventana muestra el detalle del parche.
-4.	Revíselo y repítalo para los **parches no críticos**.
+1. Pulse el botón **Explorar para actualizaciones**, seleccione **Parches y extensiones y actualizaciones** y luego pulse **Aceptar**.
+2. Cuando se complete la exploración, seleccione **Parches de host críticos**. En el panel inferior, revise los detalles del parche para cada host pulsando el número en **Número de parches**. Una ventana muestra la información del parche.
+3. Revíselo y repítalo para los **parches no críticos**.
 
-Tenga en cuenta que los archivos de registro VUM se pueden localizar en _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
+  Los archivos de registro VUM se encuentran en _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
-##	Iniciación manual de una exploración de máquinas y dispositivos virtuales
+## Iniciación manual de una exploración de máquinas y dispositivos virtuales
 
 Puede explorar máquinas y dispositivos virtuales en el inventario de vSphere frente a las líneas base y los grupos de línea base conectados. Las máquinas y los dispositivos virtuales que seleccione se exploran con las líneas base conectadas, en función de las opciones que seleccione. También se exploran todos los objetos hijo, por lo que cuanto mayor sea la infraestructura virtual y mayor en la jerarquía de objetos que inicia la exploración, más tiempo se tarda en realizar la exploración y más precisa es la vista de conformidad.
 
@@ -56,5 +55,5 @@ Puede configurar el cliente web de vSphere para explorar máquinas virtuales, di
 
 ### Enlaces relacionados
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitectura de la solución VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)

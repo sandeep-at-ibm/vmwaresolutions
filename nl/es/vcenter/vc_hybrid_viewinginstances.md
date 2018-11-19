@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visualización de instancias de vCenter Server con el paquete híbrido (Hybridity)
 
@@ -17,13 +21,14 @@ Visualice el resumen y la información detallada de las instancias de VMware vCe
 Para ver un resumen de todas las instancias de vCenter Server con el paquete híbrido (Hybridity) que se han suministrado para una cuenta de usuario, complete los pasos siguientes:
 1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En el banner de la consola, pulse el icono de la cuenta de usuario y, a continuación, pulse el campo **Cuenta** para seleccionar la cuenta de usuario para la que desea comprobar las instancias.
-3. En la tabla **vCenter Server**, visualice la lista de instancias que se han suministrado en la cuenta de usuario seleccionada.
+3. En la tabla **Instancias de vCenter Server**, visualice la lista de instancias que se han suministrado en la cuenta de usuario seleccionada.
 
 Tabla 1. Elementos de las instancias de vCenter Server con el paquete híbrido (Hybridity)
 
 | Elemento        | Descripción       |  
 |:------------- |:------------- |
 | Nombre | El nombre de la instancia |
+| Tipo | El tipo de instancia de vCenter Server |
 | Versión | La versión del release en la que se ha desplegado la instancia o a la que se ha actualizado |  
 | Ubicación | El {{site.data.keyword.CloudDataCent_notm}} en el que se aloja la instancia |  
 | Hora de creación | La fecha y hora en que se ha creado la instancia |  
@@ -58,7 +63,7 @@ Tabla 3. Propiedades de instancias de vCenter Server con el paquete híbrido (Hy
 | ID | El ID de la instancia. |
 | Ubicación | El {{site.data.keyword.CloudDataCent_notm}} en el que se aloja la instancia. |
 | Versión actual | La versión actual de {{site.data.keyword.vmwaresolutions_short}}. |
-| Versión de vCenter | La versión de VMware vCenter Server con el paquete híbrido (Hybridity).<br><br>**Nota:** hay una ligera variación entre la versión de vCenter Server que se muestra en la consola de {{site.data.keyword.vmwaresolutions_short}} y en el cliente web de VMware vSphere. Ambas son correctas. |
+| Versión de vCenter | La versión de VMware vCenter Server con el paquete híbrido (Hybridity).<br><br>Hay una ligera variación entre la versión de vCenter Server que se muestra en la consola de {{site.data.keyword.vmwaresolutions_short}} y en el cliente web de VMware vSphere. Ambas son correctas.{:note} |
 | NSX for vSphere | La versión del producto VMware NSX for vSphere. |
 | Edición de licencia de NSX | La versión y la edición de la licencia de VMware NSX. |
 | DNS, Root Domain | El nombre del dominio raíz es el nombre del dominio DNS (Sistema de nombres de dominio) y el nombre raíz del grupo Microsoft Active Directory (AD). |
@@ -109,7 +114,8 @@ Si se producen errores durante el despliegue o durante la supresión de la insta
 
 Gestione sus instancias desde la consola de {{site.data.keyword.vmwaresolutions_short}} o desde el cliente web de VMware vSphere.
 
-**Importante:** Antes de pulsar la **Consola de vCenter** en la página de resumen de la instancia para ir al cliente web de vSphere y empezar a gestionar sus servidores ESXi, debe iniciar una sesión en el portal VPN del {{site.data.keyword.CloudDataCent_notm}}. Mueva el puntero del ratón sobre el botón de la **consola de vCenter** y siga las instrucciones para asegurarse de que cumple los requisitos y de que ha realizado los pasos necesarios antes de acceder al cliente web de vSphere.
+Antes de pulsar la **Consola de vCenter** en la página de resumen de la instancia para ir al cliente web de vSphere y empezar a gestionar sus servidores ESXi, debe iniciar una sesión en el portal VPN del {{site.data.keyword.CloudDataCent_notm}}. Mueva el puntero del ratón sobre el botón de la **consola de vCenter** y siga las instrucciones para asegurarse de que cumple los requisitos y de que ha realizado los pasos necesarios antes de acceder al cliente web de vSphere.
+{:important}
 
 Revise los temas siguientes para obtener información que le ayudará a seguir las instrucciones de inicio de sesión:
 *  Para ver los requisitos y pasos necesarios antes de acceder al cliente web de vSphere, consulte [Se ha alcanzado el tiempo de espera al conectar con el cliente web de vSphere](../vmonic/trbl_timeout_vc_console.html).

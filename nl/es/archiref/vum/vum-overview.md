@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
-# Visión general de VUM
+# Visión general de VMware Update Manager
 
-VUM utiliza un proceso de varias etapas para actualizar objetos de vSphere y para aplicar parches o extensiones. Este proceso permite un procedimiento de actualización sin problemas con un mínimo de tiempo de inactividad del sistema. Antes de examinar este proceso, tenemos que comprender los términos siguientes:
+VMware Update Manager (VUM) utiliza un proceso de varias etapas para actualizar objetos de vSphere y para aplicar parches o extensiones. Este proceso permite un procedimiento de actualización sin problemas con un mínimo de tiempo de inactividad del sistema. Antes de examinar este proceso, tenemos que comprender los términos siguientes:
 * **Objeto de inventario**: un objeto dentro de vCenter, como por ejemplo máquina virtual, dispositivos virtuales o host ESXi de vSphere
 * **Línea base**: La línea base contiene una recopilación de uno o más parches, extensiones, service packs, correcciones de errores o actualizaciones que se pueden clasificar como líneas base de parche, extensión o actualización. Hay dos clasificaciones de líneas base: el host y el VM/VA; ambos tienen dos líneas base predefinidas por VMware y las personalizadas se pueden añadir según sea necesario:
   - Líneas base de hosts predefinidos:
@@ -63,5 +63,5 @@ Se accede a la vista de conformidad de un objeto de inventario seleccionado desd
 
 ### Enlaces relacionados
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* Arquitectura de la solución VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)

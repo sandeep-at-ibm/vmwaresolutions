@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Solicitud de clústeres de vSphere en función de configuraciones existentes
 
@@ -30,7 +34,8 @@ Asegúrese de haber realizado las tareas siguientes:
    * Para guardar la configuración como una plantilla sin realizar un pedido, pulse **Guardar configuración**.
    * Para realizar el pedido, asegúrese de que la cuenta a la que se va a realizar el cobro es correcta; revise y acepte los términos y, a continuación, pulse **Suministro**.
 
-   **Nota:** solo se instalan los {{site.data.keyword.baremetal_short}}. El usuario es el responsable de instalar y configurar los distintos componentes después del despliegue del clúster, como por ejemplo VMware vCenter, VMware NSX, VMware vSAN.
+   Solo se instalan los {{site.data.keyword.baremetal_short}}. El usuario es el responsable de instalar y configurar los distintos componentes después del despliegue del clúster, como por ejemplo VMware vCenter, VMware NSX, VMware vSAN.
+   {:note}
 
 ## Resultados
 
@@ -38,7 +43,8 @@ Si ha guardado la configuración del clúster como una plantilla, recibirá una 
 
 Si ha realizado un pedido, el despliegue del clúster se inicia automáticamente. El usuario recibirá una confirmación por correo electrónico de que el pedido se está procesando. Cuando el clúster esté listo para ser utilizado, también se le notificará por correo electrónico.
 
-**Nota:** a diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Instancias desplegadas**.
+A diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Instancias desplegadas**.
+{:note}
 
 ### Enlaces relacionados
 

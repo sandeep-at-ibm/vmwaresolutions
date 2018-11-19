@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -17,7 +17,7 @@ Un diferenciador de claves entre {{site.data.keyword.cloud}} y otras ofertas de 
 La función de NSX de vCenter permite enlazar en una relación primaria y secundaria de hasta nueve gestores de NSX: uno primario y ocho secundarios. Aunque no es necesario, tener los servidores vCenter en una relación de modalidad enlazada mejorada (ELM) para que la función entre vCenter NSX entre en funcionamiento proporciona las siguientes ventajas:
 
 * Creación de relaciones primarias y secundarias simplificada mediante las credenciales de inicio de sesión único (SSO)
-* La automatización de vCenter Server y Cloud Foundation configura la resolución de nombres DNS para todos los sitios que están enlazados
+* Configuración de la automatización de vCenter Server y Cloud Foundation para la resolución de nombres DNS para todos los sitios que están enlazados
 * Panel único de gestión de vidrio en todos los sitios para las funciones de NSX y vCenter normales
 
 ## Ejemplo de varios sitios

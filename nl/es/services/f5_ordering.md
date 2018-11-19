@@ -4,13 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
 # Solicitud de F5 on IBM Cloud
 
-Puede solicitar el servicio de F5 on {{site.data.keyword.cloud}} al pedir una instancia nueva incluida con BIG-IP Virtual Edition (VE) o añadiendo BIG-IP VE a la instancia existente.
+Puede solicitar el servicio de F5 on {{site.data.keyword.cloud}} al pedir una instancia nueva incluida con el servicio o añadiendo el servicio a la instancia existente.
 
 ## Solicitud de F5 on IBM Cloud para una nueva instancia
 
@@ -28,27 +32,39 @@ Puede añadir el servicio de F5 on {{site.data.keyword.cloud_notm}} en una insta
 
 Al solicitar el servicio, proporcione los valores siguientes:
 
+### Conexión de activación de licencias de F5
+
+Seleccione **Red pública** o **Red privada** para la activación de la licencia. Si el clúster de destino está configurado con interfaces de red solo privadas, solo está disponible la opción **Red privada**. Esta selección determina la forma en que los servidores virtuales F5 contactarán con el servidor de licencias F5, y no afecta al plano de datos de la carga de trabajo.
+
+Si selecciona **Red privada**, especifique los siguientes valores:
+* **Dirección IP de proxy:** la dirección IPv4 del servidor proxy.
+* **Número de puerto de proxy**: el número de puerto del servidor proxy, que suele ser 8080 o 3128.
+
+No se da soporte al proxy autenticado.
+{:note}
+
 ### Nombre
 
 Especifique el nombre de servicio.
+
+### Ancho de banda máximo
+
+Especifique el rendimiento máximo del dispositivo F5 BIG–IP.
 
 ### Modelo de licencia
 
 El modelo de licencia del servicio F5 on {{site.data.keyword.cloud_notm}} ofrece las siguientes opciones:
 <dl class="dl">
         <dt class="dt dlterm">Good</dt>
-        <dd class="dd">Esta oferta aprovecha BIG-IP Local Traffic Manager™ (LTM) VE, que funciona como arquitectura completa de proxy, para ofrecer una gestión inteligente del tráfico local, visibilidad completa del tráfico SSL y analíticas y supervisión de estado para garantizar que los servidores de aplicaciones siempre están disponibles para sus usuarios.</dd>
+        <dd class="dd">Esta oferta utiliza BIG-IP Local Traffic Manager™ (LTM) VE, que funciona como arquitectura completa de proxy, para ofrecer una gestión inteligente del tráfico local, visibilidad completa del tráfico SSL y analíticas y supervisión de estado para garantizar que los servidores de aplicaciones siempre están disponibles para sus usuarios.</dd>
         <dt class="dt dlterm">Better</dt>
         <dd class="dd">Esta oferta se basa en las ventajas de la opción **Good**, con la adición de los módulos BIG-IP DNS™, BIG-IP Advanced Firewall Manager™ (AFM) y BIG-IP Application Acceleration Manager™ (AAM). Ofrece servicios de gestión global del tráfico, optimización del rendimiento de las aplicaciones y funciones avanzadas de cortafuegos de red y de mitigación de denegación de servicio distribuida (DDoS).</dd>
         <dt class="dt dlterm">Best</dt>
-        <dd class="dd">Además de las ofertas **Good** y **Better**, BIG-IP Application Security Manager™ (ASM) ofrece una completa protección de las aplicaciones frente a las 10 principales amenazas de L7 DDoS, Open Web Application Security Project (OWASP) y a las vulnerabilidades más comunes de las aplicaciones. BIG-IP Access Policy Manager™ (APM) ofrece a los usuarios acceso seguro y simplificado a las aplicaciones situadas en cualquier punto del entorno de nube e incorpora funciones como SSO (inicio de sesión único) y MFA (Multi-Factor Authentication).</dd>
+        <dd class="dd">Además de las ofertas **Good** y **Better**, BIG-IP Application Security Manager™ (ASM) proporciona una protección completa de las aplicaciones frente a las 10 principales amenazas de L7 DDoS, Open Web Application Security Project (OWASP) y frente a vulnerabilidades comunes de las aplicaciones. BIG-IP Access Policy Manager™ (APM) ofrece a los usuarios acceso seguro y simplificado a las aplicaciones situadas en cualquier punto del entorno de nube e incorpora funciones como SSO (inicio de sesión único) y MFA (Multi-Factor Authentication).</dd>
 </dl>
 
-**Importante:** No puede cambiar el modelo de licencia después de la instalación del servicio. Para cambiar el modelo de licencia, debe eliminar el servicio existente y reinstalar el servicio utilizando otro modelo de licencia.
-
-### Ancho de banda máximo
-
-Especifique el rendimiento máximo del dispositivo F5 BIG–IP.
+No puede cambiar el modelo de licencia después de la instalación del servicio. Para cambiar el modelo de licencia, debe eliminar el servicio existente y reinstalar el servicio seleccionando otro modelo de licencia.
+{:important}
 
 ### Enlaces relacionados
 

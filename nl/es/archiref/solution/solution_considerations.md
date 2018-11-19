@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Consideraciones posteriores al despliegue para la instancia de VMware
 
@@ -14,7 +18,8 @@ Las ofertas de {{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server
 
 Revise las siguientes consideraciones para comprender las responsabilidades que tiene para gestionar y operar con la instancia antes y después de que se haya desplegado.
 
-**Nota:** La lista siguiente no es exhaustiva. Para obtener más información, consulte [Servicios gestionados por IBM](../../services/managing_imi.html).
+La lista siguiente no es exhaustiva. Para obtener más información, consulte [Servicios gestionados por IBM](../../services/managing_imi.html).
+{:note}
 
 ## Acceso a la cuenta de IBM Cloud
 

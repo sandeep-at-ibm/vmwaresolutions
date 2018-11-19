@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visión general de vCenter Server con el paquete híbrido (Hybridity)
 
@@ -61,13 +65,14 @@ En función de la VMware Hybrid Cloud Extension (HCX), puede crear interconexion
 
 Se incluyen los siguientes componentes en la instancia de vCenter Server con el paquete híbrido (Hybridity):
 
-**Nota:** La disponibilidad y los precios de las configuraciones estandarizadas de hardware pueden variar en función del {{site.data.keyword.CloudDataCent_notm}} seleccionado para el despliegue.
+La disponibilidad y los precios de las configuraciones estandarizadas de hardware pueden variar en función del {{site.data.keyword.CloudDataCent_notm}} seleccionado para el despliegue.
+{:note}
 
 ### Servidor nativo
 
-El pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity) incluye cuatro {{site.data.keyword.baremetal_short}} personalizados. Están disponibles los siguientes modelos de CPU:
-  * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
+El pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity) incluye cuatro {{site.data.keyword.baremetal_short}} **Skylake** o **Broadwell**. Están disponibles los siguientes modelos de CPU:
   * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
+  * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
 
 ### Redes
 
@@ -78,7 +83,8 @@ Se solicitan los siguientes componentes del sistema de redes:
 *  Dos VMware NSX Edge Services Gateways:
   * Una Edge Services Gateway (ESG) de NSX de VMware de servicios de gestión segura para el tráfico de gestión de HTTPS saliente, desplegado por IBM como parte de la topología del sistema de redes de gestión. Las VM de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Para obtener más información, consulte [Configuración de la red para que utilice la ESG gestionada por el cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-    **Importante:** el usuario no puede acceder ni utilizar esta ESG. Si lo modifica, es posible que no pueda gestionar la instancia de vCenter Server con el paquete híbrido (Hybridity) desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, tenga en cuenta que el uso de un cortafuegos o la inhabilitación de las comunicaciones ESG con componentes externos de gestión de IBM harán que {{site.data.keyword.vmwaresolutions_short}} quede inutilizable.
+    El usuario no puede acceder ni utilizar esta ESG. Si lo modifica, es posible que no pueda gestionar la instancia de vCenter Server con el paquete híbrido (Hybridity) desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, tenga en cuenta que el uso de un cortafuegos o la inhabilitación de las comunicaciones ESG con componentes externos de gestión de IBM harán que {{site.data.keyword.vmwaresolutions_short}} quede inutilizable.
+    {:important}
   * Una Edge Services Gateway de NSX de VMware gestionada por el cliente para el tráfico de salida y de entrada de carga de trabajo HTTPS, que IBM despliega como plantilla que puede modificar para proporcionar acceso VPN o acceso público. Para obtener más información, consulte [¿Representa NSX Edge gestionado por el cliente un riesgo para la seguridad?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
 Para obtener más información sobre los componentes de red ordenados al desplegar el servicio de HCX on {{site.data.keyword.cloud_notm}}, consulte [Visión general de HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
@@ -115,7 +121,7 @@ Cada nodo de expansión de vCenter Server con el paquete híbrido (Hybridity) de
 
 ### Hardware para nodos de expansión
 
-Un servidor nativo con la configuración personalizada.
+Un servidor nativo con la configuración presentada en [Especificaciones técnicas para instancias de vCenter Server con el paquete híbrido (Hybridity)](../vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances).
 
 ### Licencias y tarifas correspondientes a nodos de expansión
 
@@ -124,7 +130,8 @@ Un servidor nativo con la configuración personalizada.
 * Una cuota de soporte y servicios
 * VMware vSAN (Advanced o Enterprise) 6.6
 
-**Importante:** Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el 	{{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no a través del {{site.data.keyword.slportal}} ni por ningún otro medio fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+{:important}
 
 **ATENCIÓN:** el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}}, que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia, desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 *  Añadir, modificar, devolver o eliminar componentes

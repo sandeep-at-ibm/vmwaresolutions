@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visión general de FortiGate Virtual Appliance on IBM Cloud
 
@@ -14,7 +18,8 @@ El servicio de FortiGate Virtual Appliance on {{site.data.keyword.cloud}} despli
 
 Puede instalar varias instancias de este servicio si las necesita. Puede gestionar este servicio utilizando el cliente web de FortiOS o la interfaz de línea de mandatos a través de SSH.
 
-**Disponibilidad:** Este servicio solo está disponible para las instancias que se despliegan en releases V2.0 o posteriores.
+Este servicio solo está disponible para las instancias desplegadas en la versión V2.0 o posterior. La versión actual de servicio que está instalada es la 6.0.3.
+{:note}
 
 ## Especificaciones técnicas para FortiGate Virtual Appliance on IBM Cloud
 
@@ -38,7 +43,8 @@ El acceso a la consola de FortiGate® se proporciona a través de una red de ges
 
 Las tarifas de licencia para cada máquina virtual se aplican a cada ciclo de facturación en función del tamaño del despliegue seleccionado y el modelo de licencia de suscripción mensual.
 
-**Importante:** No podrá cambiar el nivel de licencia después de la instalación del servicio. Para cambiar el nivel de licencia, debe eliminar el servicio existente y reinstalarlo utilizando otra opción de licencia.
+No puede cambiar el nivel de licencia después de la instalación del servicio. Para cambiar el nivel de licencia, debe eliminar el servicio existente y reinstalarlo utilizando otra opción de licencia.
+{:important}
 
 ## Consideraciones al instalar FortiGate Virtual Appliance on IBM Cloud
 

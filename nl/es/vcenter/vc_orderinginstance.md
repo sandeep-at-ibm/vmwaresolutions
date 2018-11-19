@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Pedido de instancias de vCenter Server
 
@@ -30,7 +34,8 @@ Tabla 1. Formato del valor de nombres de instancia y de dominio
   | Nombre completo de servidor ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `<n>` es la secuencia del servidor ESXi. La longitud máxima es de 50 caracteres. |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
 
-**Importante:** No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime.
+No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime.
+{:important}
 
 ## Valores del sistema
 
@@ -59,20 +64,55 @@ Para los usuarios de Business Partners, se incluyen y se adquieren en su nombre 
 
 Para usuarios que no son Business Partner, puede utilizar las licencias de VMware que proporciona IBM para estos componentes seleccionando **Incluir con la compra** o puede traer su propia licencia (BYOL) seleccionando **Proporcionaré** e indicando sus propias claves de licencia.
 
+
 **Atención:**
 * Se necesita una licencia con un mínimo de ocho CPU, lo que equivale a cuatro servidores con dos CPU por servidor. La opción de licencia de cada componente de VMware se aplica a la instancia básica y a cualquier servidor ESXi que añada a la instancia posteriormente. Asegúrese de que su licencia da soporte a la expansión de capacidad futura en su infraestructura.
 * Las ediciones de licencia mínimas se indican en la interfaz de usuario. Si se da soporte a distintas ediciones de componentes, puede seleccionar la edición que desee. El usuario es el responsable de asegurar que la clave de licencia proporcionada es correcta para cada componente de VMware seleccionado.
 * Para vSphere, se incurre en un cargo de licencia en el momento de realizar el pedido, pero el cargo por licencia se abonará entonces a su cuenta.
 * Puede cambiar cualquier licencia que haya suministrado mediante el cliente web de VMware vSphere una vez finalizado el despliegue de la instancia.
 * El soporte para los componentes de VMware para los que suministre licencias lo ofrece VMware, no el equipo de soporte de IBM.
+{:important}
 
 ## Valores de Servidor nativo
 
-Los valores de Nativo dependen del centro de datos seleccionado y de si ha seleccionado una configuración personalizada o preconfigurada.
+Los valores del servidor nativo dependen del centro de datos seleccionado y de la configuración del servidor nativo.
 
 ### Ubicación del centro de datos
 
 Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se alojará la instancia.
+
+### Skylake
+
+Si selecciona **Skylake**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades.
+
+Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Skylake
+
+| Opciones de modelo de CPU        | Opciones de RAM       |
+|:------------- |:------------- |
+| Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+### Certificado por SAP
+
+Si selecciona **Certificado por SAP**, no puede modificar los valores de CPU o RAM.
+
+En función de sus requisitos, seleccione una configuración de servidor nativo:
+  * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 192 GB de RAM
+  * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 384 GB de RAM
+  * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 768 GB de RAM
+
+### Broadwell
+
+Si selecciona **Broadwell**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades.
+
+Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
+
+| Opciones de modelo de CPU        | Opciones de RAM       |
+|:------------- |:------------- |
+| Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 
 ### Preconfigurado
 
@@ -83,30 +123,13 @@ En función de sus requisitos, seleccione una configuración de servidor nativo:
   * Medio (Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz / 256 GB de RAM / 2 unidades)
   * Grande (Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz / 512 GB de RAM / 2 unidades)
 
-### Personalizado
-
-Cuando selecciona **Personalizado**, puede elegir la combinación de CPU y RAM según sus necesidades.
-
-Seleccione el modelo de CPU y la RAM del servidor nativo.
-
-Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} personalizado
-
-| Opciones de modelo de CPU        | Opciones de RAM       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-
 ### Número de servidores nativos
 
 Para el clúster inicial de la instancia, puede configurar el número de servidores ESXi del siguiente modo:
+* Si ha seleccionado **Skylake** o **Broadwell**, puede configurar un número de servidores ESXi comprendido entre 2 y 20.
 * Si ha seleccionado **Preconfigurado**, puede configurar un número de servidores ESXi comprendido entre 2 y 10.
-* Si ha seleccionado **Personalizado**, puede configurar un número de servidores ESXi comprendido entre 2 y 20.
 
-Todos los servidores ESXi comparten la configuración del conjunto. Después del despliegue inicial, puede añadir cuatro clústeres más. Si ha seleccionado la configuración **Personalizado** para VMware vSAN, se necesitan 4 servidores ESXi para el clúster inicial y para los posteriores al despliegue. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+Todos los servidores ESXi comparten la configuración del conjunto. Después del despliegue inicial, puede añadir cuatro clústeres más. Si ha seleccionado la configuración **Skylake** o **Broadwell** para VMware vSAN, se necesitan 4 servidores ESXi para el clúster inicial y para los posteriores al despliegue. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Valores de almacenamiento
 
@@ -114,7 +137,7 @@ Los valores de almacenamiento dependen de la opción que seleccione de configura
 
 ### Almacenamiento vSAN
 
-vSAN está disponible solo para la configuración de servidor nativo **Personalizado**. Especifique las siguientes opciones de vSAN:
+vSAN está disponible solo para la configuración de servidor nativo **Skylake** o **Broadwell**. Especifique las siguientes opciones de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
 * Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
@@ -125,7 +148,8 @@ vSAN está disponible solo para la configuración de servidor nativo **Personali
 
 Cuando seleccione **Almacenamiento de NFS**, puede añadir almacenamiento compartido a nivel de archivo para la instancia donde todas las comparticiones utilizan los mismos valores o pueden especificar distintos valores de configuración para cada compartición de archivos. Especifique las siguientes opciones de NFS:
 
-**Nota:** El número de comparticiones de archivo debe estar comprendido entre 1 y 32.
+El número de comparticiones de archivo debe estar comprendido entre 1 y 32.
+{:note}
 
 * **Configurar las comparticiones individualmente**: Seleccione para especificar distintos valores de configuración para cada compartición de archivos.
 * **Número de comparticiones**: Cuando se utiliza el mismo valor de configuración para cada compartición de archivos, especifique el número de comparticiones de archivos para el almacenamiento compartido de NFS que desee añadir.
@@ -133,7 +157,7 @@ Cuando seleccione **Almacenamiento de NFS**, puede añadir almacenamiento compar
 * **Rendimiento**: Seleccione el valor de IOPS (operaciones de entrada/salida por segundo) por GB en función de sus requisitos de carga de trabajo.
 * **AÑADIR NFS**: Seleccione para añadir comparticiones de archivos individuales que utilicen distintos valores de configuración.
 
-Tabla 3. Opciones de nivel de rendimiento de NFS
+Tabla 4. Opciones de nivel de rendimiento de NFS
 
 | Opción        | Detalles       |
   |:------------- |:------------- |
@@ -169,7 +193,8 @@ El nombre del dominio raíz debe cumplir los siguientes requisitos:
 * La última serie solo puede contener caracteres alfabéticos.
 * La longitud de la última serie debe estar comprendida entre 2 y 24 caracteres.
 
-**Nota:** la longitud máxima del nombre de dominio completo (FQDN) para hosts y VM es de 50 caracteres. Los nombres de dominio deben cumplir con esta longitud máxima.
+La longitud máxima del nombre de dominio completo (FQDN) para hosts y VM es de 50 caracteres. Los nombres de dominio deben cumplir con esta longitud máxima.
+{:note}
 
 ### Red pública o privada
 
@@ -199,9 +224,9 @@ Cuando seleccione reutilizar las VLAN públicas y privadas existentes, especifiq
 * **Subred primaria** se asigna a hosts físicos para acceder a la red pública.
 * **Subred primaria privada** se asigna a hosts físicos para el tráfico de gestión.
 
-**Importante:**
 * Asegúrese de que la configuración del cortafuegos en las VLAN seleccionadas no bloquee el tráfico de datos de gestión.
 * Asegúrese de que todas las VLAN que seleccione estén en el mismo pod. Los servidores ESXi no se pueden suministrar en VLAN en pods mixtos.
+{:important}
 
 ### Configuración DNS
 
@@ -210,7 +235,8 @@ Seleccione la configuración de DNS (sistema de nombres de dominio) para la inst
 * **Una sola VSI pública de Windows para Active Directory/DNS**: Se despliega y se puede consultar una sola VSI de Microsoft Windows Server para Microsoft Active Directory (AD), que funciona como DNS para la instancia en la que se han registrado los hosts y VM. Esta opción se despliega de forma predeterminada para V1.9 e instancias posteriores.
 * **Dos VM dedicadas y altamente disponibles de Windows Server en el clúster de gestión**: Se despliegan dos VM Microsoft Windows, que ayudan a mejorar la seguridad y la solidez.
 
-**Importante:** Debe proporcionar dos licencias de Microsoft Windows Server 2012 R2 si configura la instancia de modo que utilice las dos VM Microsoft Windows. Utilice la licencia de Microsoft Windows Server 2012 R2 Standard Edition, o la licencia de Microsoft Windows Server 2012 R2 Datacenter Edition, o ambas.
+Debe proporcionar dos licencias de Microsoft Windows Server 2012 R2 si configura la instancia de modo que utilice las dos VM Microsoft Windows. Utilice la licencia de Microsoft Windows Server 2012 R2 Standard Edition, o la licencia de Microsoft Windows Server 2012 R2 Datacenter Edition, o ambas.
+{:important}
 
 Cada licencia solo se puede asignar a un solo servidor físico y cubre un máximo de dos procesadores físicos. Una licencia de edición Standard puede ejecutar dos máquinas virtuales virtualizadas de Microsoft Windows por servidor de 2 procesadores. Por lo tanto, se necesitan dos licencias, ya que se despliegan dos VM Microsoft Windows en dos hosts distintos.
 
@@ -243,8 +269,9 @@ En función de la configuración seleccionada para la instancia y los servicios 
 6. Complete los valores del servidor nativo.
     1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} que va a alojar la instancia.
     2. Seleccione la configuración del servidor nativo.
+       * Si seleccione **Skylake** o **Broadwell**, especifique el modelo de CPU y el tamaño de RAM.
+       * Si selecciona **Certificado por SAP**, especifique el modelo de CPU.
        * Si selecciona **Preconfigurado**, elija **Pequeño**, **Medio** o **Grande** en la configuración.
-       * Si seleccione **Personalizado**, especifique el modelo de CPU y el tamaño de RAM.
     3. Especifique el número de {{site.data.keyword.baremetal_short}}. Si tiene previsto utilizar vSAN como solución de almacenamiento, se necesitan un mínimo de 4 {{site.data.keyword.baremetal_short}}.  
 7. Complete la configuración del almacenamiento.
   * Si selecciona **Almacenamiento vSAN**, especifique los tipos de disco para la capacidad y los discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
@@ -281,8 +308,9 @@ Cuando se solicita una instancia secundaria, es posible que el cliente web de VM
 
 Puede ver y gestionar la instancia de vCenter Server que ha solicitado.
 
-**Importante:** Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el 	{{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola.
+Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no a través del {{site.data.keyword.slportal}} ni por ningún otro medio fuera de la consola.
 Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+{:important}
 
 **ATENCIÓN:** el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 *  Añadir, modificar, devolver o eliminar componentes

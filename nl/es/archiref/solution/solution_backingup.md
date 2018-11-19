@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-27"
 
 Usted es responsable de la configuración, la gestión y la supervisión de todos los componentes de software, incluida la copia de seguridad y la disponibilidad de la infraestructura de gestión y las cargas de trabajo.
 
-Como parte de la solución, puede desplegar opcionalmente los servicios complementarios {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. Veeam e IBM Spectrum Protect Plus pueden ayudar a satisfacer el requisito de realizar copia de seguridad de los componentes de gestión.
+Como parte de la solución, puede desplegar opcionalmente los servicios complementarios IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. Veeam e IBM Spectrum Protect Plus pueden ayudar a satisfacer el requisito de realizar copia de seguridad de los componentes de gestión.
 
 Estos servicios complementarios se despliegan junto con el almacenamiento de Resistencia de {{site.data.keyword.cloud_notm}}. Los servicios le ayudan a realizar copia de seguridad de las cargas de trabajo y de los componentes de gestión. La [Visión general de la arquitectura de IBM Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} y la [Visión general de la arquitectura de Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} proporcionan una guía útil sobre la planificación y el dimensionamiento del despliegue. También puede solicitar [servicios gestionados](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) para el despliegue de Veeam.
 
@@ -34,7 +34,10 @@ Para alojar estas copias de seguridad, despliegue un servidor de archivos de Lin
 
 VMware vCenter Server y PSC proporcionan una [interfaz de usuario de gestión de dispositivos y una API para exportar la base de datos y la configuración a un servidor de archivos](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} utilizando varios protocolos. VMware documenta un ejemplo de cómo puede configurar esto para [ejecutarlo periódicamente como un trabajo cron](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} directamente en el vCenter Server Appliance y PSC, que puede adaptar para su uso.
 
-Debe realizar una copia de seguridad de vCenter Server Appliance y de PSC por separado utilizando esta técnica. Familiarícese con y tenga en cuenta las consideraciones y limitaciones documentadas por VMware. Además, planifique una rotación y caducidad regular de las copias de seguridad de archivos en el servidor de archivos. Tenga en cuenta que VMware requiere que la ubicación de la copia de seguridad sea una carpeta vacía, por lo que debe planificar la rotación o la automatización de la copia de seguridad para dejar la ubicación vacía para cada trabajo de copia de seguridad subsiguiente.
+Debe realizar una copia de seguridad de vCenter Server Appliance y de PSC por separado utilizando esta técnica. Familiarícese con y tenga en cuenta las consideraciones y limitaciones documentadas por VMware. Además, planifique una rotación y caducidad regular de las copias de seguridad de archivos en el servidor de archivos.
+
+VMware requiere que la ubicación de la copia de seguridad sea una carpeta vacía, por lo que debe planificar la rotación o la automatización de la copia de seguridad para dejar la ubicación vacía para cada trabajo de copia de seguridad subsiguiente.
+{:note}
 
 ## Copia de seguridad basada en archivos NSX
 

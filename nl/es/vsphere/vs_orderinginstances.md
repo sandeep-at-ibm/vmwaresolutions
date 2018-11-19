@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Solicitud de clústeres nuevos de vSphere
 
@@ -52,7 +54,8 @@ También puede incluir los siguientes componentes de VMware en su pedido:
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**Nota:** Para los usuarios de IBM Business Partner, la opción Traiga su propia licencia (BYOL) no está disponible.
+Para los usuarios de IBM Business Partner, la opción Traiga su propia licencia (BYOL) no está disponible.
+{:note}
 
 ### Componentes individuales para usuarios que no sean de Business Partner
 
@@ -66,7 +69,8 @@ Si no es un Business Partner, puede seleccionar los siguientes componentes para 
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-**Nota:** el componente VMware vSAN no está disponible cuando se solicita VMware vSphere Enterprise Plus 6.0. Si tiene previsto utilizar su propia licencia para VMware vSphere Enterprise Plus 6.0, se abrirá un tíquet de la infraestructura de {{site.data.keyword.cloud_notm}} en su nombre. El tíquet solicita que las licencias de vSphere de los {{site.data.keyword.baremetal_short}} solicitados se sustituyan por las licencias que se proporcionen.
+El componente de VMware vSAN no está disponible cuando realiza el pedido de VMware vSphere Enterprise Plus 6.0. Si tiene previsto utilizar su propia licencia para VMware vSphere Enterprise Plus 6.0, se abrirá un tíquet de la infraestructura de {{site.data.keyword.cloud_notm}} en su nombre. El tíquet solicita que las licencias de vSphere de los {{site.data.keyword.baremetal_short}} solicitados se sustituyan por las licencias que se proporcionen.
+{:note}
 
 ### Opciones de licencia
 
@@ -76,7 +80,8 @@ Tiene las siguientes opciones para las licencias de los componentes seleccionado
 
 Si elige adquirir alguna licencia, excepto para vSphere Enterprise Plus y vCenter Server, y ha solicitado varios servidores ESXi, se abre automáticamente una incidencia de {{site.data.keyword.cloud_notm}} en su nombre para combinar las claves de licencia. El usuario es el responsable de realizar el seguimiento de la incidencia para asegurarse de utilizar las claves de licencia que genera el equipo de DevOps.
 
-**Importante:** el uso de claves de licencia individuales junto con las claves de licencia combinadas no cumple los requisitos de pago de las licencias que necesitará.
+El uso de claves de licencia individuales junto con las claves de licencia combinadas no cumple los requisitos de pago de las licencias que necesitará.
+{:important}
 
 ## Valores de Servidor nativo
 
@@ -84,24 +89,41 @@ Si elige adquirir alguna licencia, excepto para vSphere Enterprise Plus y vCente
 
 Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar el clúster.
 
-**Nota:** Si selecciona un componente vSAN, la lista de ubicaciones se filtra por disponibilidad de SSD.
+Si selecciona un componente vSAN, la lista de ubicaciones se filtra por disponibilidad de SSD.
+{:note}
 
-### Modelo de CPU y RAM
+### Skylake
 
-Especifique el modelo de CPU y la RAM del servidor nativo.
+Si selecciona **Skylake**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades. Las opciones disponibles dependen de si ha seleccionado el componente VMware vSAN.
 
-Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} personalizado
+Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Skylake
+
+| Opciones de modelo de CPU        | Opciones de RAM       |
+|:------------- |:------------- |
+| Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+### Certificado por SAP
+
+El separador **Certificado por SAP** no está disponible si ha seleccionado previamente VMware vSAN. Si selecciona **Certificado por SAP**, no puede modificar los valores de CPU o RAM.
+
+En función de sus requisitos, seleccione una configuración de servidor nativo:
+  * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 192 GB de RAM
+  * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,2 GHz / 384 GB de RAM
+  * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 768 GB de RAM
+
+### Broadwell
+
+Si selecciona **Broadwell**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades. Las opciones disponibles dependen de si ha seleccionado el componente VMware vSAN.
+
+Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1,5 TB |
-| Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-
-Las opciones disponibles dependen de si ha seleccionado el componente VMware vSAN.
 
 ### Número de servidores nativos
 
@@ -206,7 +228,9 @@ En función de sus configuraciones, el coste estimado se genera y se muestra al 
     **Importante:** El usuario es el responsable de realizar el seguimiento del tíquet para que se sustituya la licencia de vSphere de los servidores ESXi recién solicitados. De esta forma, la infraestructura de {{site.data.keyword.cloud_notm}} permite la cancelación del cargo inicialmente suministrado por la licencia de vSphere de la infraestructura de {{site.data.keyword.cloud_notm}}. Para sustituir la licencia de ESXi vSphere, consulte [Configuración de valores de licencia para un host ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
 5. Complete los valores del servidor nativo:
    1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar el clúster.
-   2. Seleccione el modelo de CPU y el tamaño de RAM.
+   2. Seleccione la configuración del servidor nativo.
+      * Si seleccione **Skylake** o **Broadwell**, especifique el modelo de CPU y el tamaño de RAM.
+      * Si selecciona **Certificado por SAP**, especifique el modelo de CPU.
    3. Especifique el número de Servidores nativos.
 6. Si ha seleccionado el componente **VMware vSAN**, complete la configuración de almacenamiento de vSAN. Especifique los tipos de disco para la capacidad y los discos de memoria caché y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
 7. Complete los valores de interfaz de red:
@@ -220,7 +244,8 @@ En función de sus configuraciones, el coste estimado se genera y se muestra al 
    * Para guardar la configuración como una plantilla sin realizar un pedido, pulse **Guardar configuración**.
    * Para realizar el pedido, asegúrese de que la cuenta a la que se va a realizar el cobro es correcta; revise y acepte los términos y, a continuación, pulse **Suministro**.
 
-   **Nota:** solo se instalan los {{site.data.keyword.baremetal_short}}. El usuario es el responsable de instalar y configurar los distintos componentes después del despliegue del clúster, como por ejemplo VMware vCenter, VMware NSX, VMware vSAN.
+   Solo se instalan los {{site.data.keyword.baremetal_short}}. El usuario es el responsable de instalar y configurar los distintos componentes después del despliegue del clúster, como por ejemplo VMware vCenter, VMware NSX, VMware vSAN.
+   {:note}
 
 ### Resultados
 
@@ -228,7 +253,8 @@ Si ha guardado la configuración del clúster como una plantilla, recibirá una 
 
 Si ha realizado un pedido, el despliegue del clúster se inicia automáticamente y el usuario recibe una confirmación por correo electrónico de que el pedido se está procesando. Cuando el clúster esté listo para ser utilizado, se le notificará por correo electrónico.
 
-**Nota:** a diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Instancias desplegadas**.
+A diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Instancias desplegadas**.
+{:note}
 
 ### Enlaces relacionados
 

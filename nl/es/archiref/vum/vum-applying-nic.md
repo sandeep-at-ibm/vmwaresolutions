@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -30,7 +30,8 @@ Para cada host, de forma sucesiva:
 
 Si tiene que revertirlo y no puede hacer SSH en el host de vSphere ESXi, deberá iniciar la sesión en la consola de KVM para el host que necesita la reversión mediante la ventana de control de IBM Cloud.
 
-Utilice el ID y la contraseña que aparecen en la lista de la ventana de control de IBM Cloud con la dirección IP de IPMI para iniciar sesión en la interfaz web de IPMI. Debe estar conectado al centro de datos en el que se encuentra el host mediante una VPN. Para obtener más información, consulte [Guía de iniciación a la VPN de IBM Cloud](https://console.bluemix.net/docs/infrastructure/iaas-vpn/getting-started.html#getting-started-with-virtual-private-networking-vpn).
+Utilice el ID y la contraseña que aparecen en la lista de la ventana de control de IBM Cloud con la dirección IP de IPMI para iniciar sesión en la interfaz web de IPMI. Debe estar conectado al centro de datos en el que se encuentra el host mediante una VPN. Para obtener más información, consulte
+[Iniciación a VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
 
 1. Vaya a los detalles del dispositivo, página Gestión remota del host ESXi de vSphere y seleccione **Acciones** > **Consola de KVM**. Se abrirá otra ventana para que especifique el usuario y la contraseña de IPMI.
 2. Seleccione **Control remoto** > **iKVM/HTML5** y pulse **iKVM/HTML5** para volver a iniciar la sesión. Ahora podrá acceder a la consola del host ESXi de vSphere.
@@ -43,5 +44,5 @@ Utilice el ID y la contraseña que aparecen en la lista de la ventana de control
 
 ### Enlaces relacionados
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitectura de la solución VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)

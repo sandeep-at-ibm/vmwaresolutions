@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
-#	Actualización de VCSA y vCenters enlazados con SSO
+# Actualización de VCSA y vCenters enlazados por SSO
 
 ## Actualización de VCSA
 
@@ -30,7 +30,7 @@ Para actualizar el VCSA, siga estos pasos:
 9. Vuelva a iniciar la sesión en el cliente web de vSphere y compruebe si hay algún error. Realice una exploración manual de VUM, **Inicio** > **Hosts y Clúster** y, a continuación, seleccione un centro de datos o un clúster y seleccione el **separador Gestor de actualizaciones** y, a continuación, pulse **Explorar para actualizaciones**. Si se produce un error, consulte [Restablecimiento de la base de datos de VMware Update Manager en un dispositivo de vCenter Server 6.5 (2147284)](https://kb.vmware.com/s/article/2147284).
 10. Después de hacer pruebas, si tiene que hacer una copia de seguridad, revierta a la instantánea o restaure el vCenter con una copia de seguridad anterior.
 
-## vCenters enlazados con SSO
+## Centros enlazados por SSO
 
 Si tiene instancias de VCS primarias y secundarias, los VCSA se configuran para que estén en un único dominio de inicio de sesión único de vCenter (SSO). Cada VCSA tendrá una instancia de VUM desplegada. Las propiedades de configuración que modifique se aplicarán únicamente a la instancia de VUM que especifique y no se propagarán a las demás instancias del grupo.
 
@@ -38,5 +38,5 @@ Puede especificar una instancia de VUM seleccionando el nombre del VCSA con el q
 
 ### Enlaces relacionados
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitectura de la solución VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)

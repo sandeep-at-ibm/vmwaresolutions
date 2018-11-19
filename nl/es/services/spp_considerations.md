@@ -4,21 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visión general de IBM Spectrum Protect Plus on IBM Cloud
 
 El servicio de {{site.data.keyword.IBM}} Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} proporciona una solución eficiente y escalable para la protección de datos, la reutilización de datos y la recuperación de datos para entornos virtuales. Puede implementar el servicio como una solución autónoma o integrarlo con su entorno IBM Spectrum Protect para descargar copias para su almacenamiento y gestión de datos a largo plazo.
 
-**Disponibilidad:** Este servicio solo está disponible para las instancias que están ejecutando vSphere 6.5 y que se despliegan en (o se actualizan a) V2.2 o releases posteriores.
-
-**Notas:**
-* Si instala el servicio para instancias que se despliegan en V2.4 o releases posteriores, se instalará IBM Spectrum Protect Plus V10.1.1 Parche 1.
-* Si instala el servicio para instancias que se despliegan en V2.3, se instalará IBM Spectrum Protect Plus V10.1.1.
-* Si instala el servicio para instancias que se despliegan en V2.2, se instalará IBM Spectrum Protect Plus V10.1.0.
-
+Este servicio solo está disponible para las instancias que se ejecutan en vSphere 6.5 y que se han desplegado en, o que se han actualizado a, V2.2 o releases posteriores. La versión actual de {{site.data.keyword.IBM}} Spectrum Protect Plus que está instalada es la V10.1.1 Parche 1.
+{:note}
 
 ## Especificaciones técnicas para IBM Spectrum Protect Plus on IBM Cloud
 

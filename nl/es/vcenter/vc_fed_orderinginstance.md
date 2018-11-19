@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -66,26 +66,35 @@ Licencias proporcionadas por IBM para los siguientes componentes de VMware:
 
 ## Valores de Servidor nativo
 
-Los valores de Bare Metal dependen de su configuración personalizada. La opción de seleccionar una configuración preconfigurada no está soportada actualmente.
+Los valores del servidor nativo dependen del centro de datos seleccionado y de la configuración del servidor nativo. La opción de seleccionar una configuración preconfigurada no está soportada actualmente.
 
 ### Ubicación del centro de datos
 
 Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se alojará la instancia.
 
-### Personalizado
+### Skylake
 
 Especifique el modelo de CPU y la RAM del servidor nativo.
 
-Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} personalizado
+Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Skylake
+
+| Opciones de modelo de CPU        | Opciones de RAM       |
+|:------------- |:------------- |
+| Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+
+### Broadwell
+
+Especifique el modelo de CPU y la RAM del servidor nativo.
+
+Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
 | Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
-| Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 ### Número de servidores nativos
 
@@ -181,12 +190,12 @@ En función de la configuración seleccionada para la instancia, el coste estima
 4. Pulse **Instancia primaria** para desplegar una sola instancia en el entorno.
 5. Especifique la edición de licencia de VMware NSX.
 6. Complete la configuración del servidor nativo:
-  1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} que va a alojar la instancia.
-  2. Seleccione el modelo de CPU **Personalizado** y la cantidad de **RAM**.
+   1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} que va a alojar la instancia.
+   2. Seleccione el modelo de CPU y la cantidad de **RAM** de **Skylake** o **Broadwell**.
 7. Complete la configuración del almacenamiento.
-  * Si selecciona **Almacenamiento vSAN**, especifique los tipos de disco para la capacidad y los discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
-  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar los mismos valores para todas las comparticiones de archivos, especifique el **Número de comparticiones**, **Tamaño** y **Rendimiento**.
-  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar comparticiones de archivos individualmente, seleccione **Configurar comparticiones individualmente** y, a continuación, pulse el icono **+** junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivos individual. Debe seleccionar al menos una unidad compartida de archivo.
+   * Si selecciona **Almacenamiento vSAN**, especifique los tipos de disco para la capacidad y los discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
+   * Si selecciona **Almacenamiento NFS** y desea añadir y configurar los mismos valores para todas las comparticiones de archivos, especifique el **Número de comparticiones**, **Tamaño** y **Rendimiento**.
+   * Si selecciona **Almacenamiento NFS** y desea añadir y configurar comparticiones de archivos individualmente, seleccione **Configurar comparticiones individualmente** y, a continuación, pulse el icono **+** junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y el **Rendimiento** para cada compartición de archivos individual. Debe seleccionar al menos una unidad compartida de archivo.
 8. Complete la configuración de interfaz de red.
    1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio raíz.
    2. Seleccione la configuración de DNS.
@@ -213,7 +222,7 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 
 **ATENCIÓN:** el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 *  Añadir, modificar, devolver o eliminar componentes
-*  Ampliar o reducir la capacidad de la instancia mediante la eliminación de servidores ESXi
+*  Ampliar o reducir la capacidad de la instancia mediante la adición o eliminación de servidores ESXi
 *  Apagar componentes
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.

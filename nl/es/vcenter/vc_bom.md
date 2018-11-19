@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-26"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Lista de materiales de vCenter Server
 
@@ -39,7 +43,8 @@ Tabla 2. Lista de materiales para los componentes de software de instancias de v
 | VMware       | NSX for vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
-**Nota:** VMware vSAN es un componente opcional.
+VMware vSAN es un componente opcional.
+{:note}
 
 ## Valores de configuración avanzada para servidores ESXi
 

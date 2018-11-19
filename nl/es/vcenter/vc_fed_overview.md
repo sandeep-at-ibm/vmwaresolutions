@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -22,7 +22,7 @@ Se incluyen los siguientes componentes:
 
 ### Servidor nativo
 
-Puede solicitar dos o más {{site.data.keyword.baremetal_short}} personalizados con una de las siguientes configuraciones:
+Puede solicitar dos o más {{site.data.keyword.baremetal_short}} con una de las siguientes configuraciones:
 
 * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
 * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
@@ -42,7 +42,7 @@ Se solicitan los siguientes componentes del sistema de redes:
     **Importante:** el usuario no puede acceder ni utilizar esta ESG. Si lo modifica, es posible que no pueda gestionar la instancia de vCenter Server desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, el uso de un cortafuegos o la inhabilitación de las comunicaciones de ESG a los componentes de gestión externa de IBM hará que {{site.data.keyword.vmwaresolutions_short}} se convierta en inutilizable.
   * Una Edge Services Gateway de NSX de VMware gestionada por el cliente para el tráfico de salida y de entrada de carga de trabajo HTTPS, que IBM despliega como plantilla que puede modificar para proporcionar acceso VPN o acceso público. Para obtener más información, consulte [¿Representa NSX Edge gestionado por el cliente un riesgo para la seguridad?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
-  **Nota:** Los VMware NSX Edge Services (ESG) para el tráfico de gestión de HTTPS saliente se elimina como parte de la acción para proteger la instancia de VMware Federal desplegada. Para obtener más información, consulte [Protección de instancias de VMware Federal](vc_fed_securinginstance.html).
+  **Nota:** VMware NSX Edge Services Gateway (ESG) para el tráfico de gestión HTTPS de salida se elimina como parte de la acción para proteger la instancia de VMware Federal desplegada. Para obtener más información, consulte [Protección de instancias de VMware Federal](vc_fed_securinginstance.html).
 
 ### Instancias de servidor virtual
 

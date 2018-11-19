@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-25"
 
 ---
 
@@ -17,7 +17,7 @@ Visualice el resumen y la información detallada de las instancias de VMware Fed
 Para ver un resumen de todas las instancias de VMware Federal que se suministran para una cuenta de usuario, complete los pasos siguientes:
 1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En el banner de la consola, pulse el icono de la cuenta de usuario y, a continuación, pulse el campo **Cuenta** para seleccionar la cuenta de usuario para la que desea comprobar las instancias.
-3. En la tabla **vCenter Server**, visualice la lista de instancias que se han suministrado en la cuenta de usuario seleccionada.
+3. En la tabla **Instancias de vCenter Server**, visualice la lista de instancias que se han suministrado en la cuenta de usuario seleccionada.
 
 Tabla 1. Elementos de una instancia de VMware Federal
 

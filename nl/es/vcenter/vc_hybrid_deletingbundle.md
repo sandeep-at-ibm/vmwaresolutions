@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Eliminación del paquete híbrido (Hybridity) de una instancia de vCenter Server
 
 Para eliminar la licencia del paquete híbrido (Hybridity) de la instancia de vCenter Server, debe sustituir las claves de licencia de alquiler de VMware NSX y VMware vSAN con las claves de Traiga su propia licencia (BYOL) en el cliente web de VMware vSphere. Además, debe abrir una incidencia de soporte para cancelar los cargos de las licencias de alquiler.
 
-**Importante:** La degradación de la licencia puede hacer que falle la instancia de vCenter Server. Puede optar por degradar una licencia bajo su propio riesgo, pero en primer lugar tenga en cuenta las funciones que no están disponibles cuando degrade. Para obtener más información, consulte [Gráfico de comparación para las ediciones de componentes de VMware](../archiref/solution/appendix.html).
+La degradación de la licencia puede hacer que falle la instancia de vCenter Server. Puede optar por degradar una licencia bajo su propio riesgo, pero en primer lugar tenga en cuenta las funciones que no están disponibles cuando degrade. Para obtener más información, consulte [Gráfico de comparación para las ediciones de componentes de VMware](../archiref/solution/appendix.html).
+{:important}
 
 ## Consideraciones importantes antes de eliminar el paquete de Hybridity de un entorno de varios sitios
 
@@ -43,7 +48,8 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
    3. Pulse el icono **Añadir** y escriba la clave de licencia. Pulse **Siguiente**.
    4. Escriba el nombre de la licencia y pulse **Siguiente**. Pulse **Finalizar** para añadir la licencia.
    5. Seleccione la nueva clave de licencia.
-   6. Anote las claves de licencia completas para la licencia que se aplica y para la licencia que se ha sustituido. **Importante:** Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento.
+   6. Anote las claves de licencia completas para la licencia que se aplica y para la licencia que se ha sustituido. Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento.
+   {:important}
    7. Pulse **Aceptar** para asignar la licencia.
 5. Siga los pasos siguientes para instalar un BYOL de VMware vSAN:
    1. Pulse el separador **Clústeres**.
@@ -52,7 +58,9 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
     2. Pulse el icono **Añadir** y escriba la clave de licencia. Pulse **Siguiente**.
     3. Escriba el nombre de la licencia y pulse **Siguiente**. Pulse **Finalizar** para añadir la licencia.
     4. Seleccione la nueva clave de licencia.
-    5. Anote el nombre de clúster y las claves de licencia completas de la licencia que se aplica y de la licencia que se ha sustituido. **Importante:** Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento.
+    5. Anote el nombre de clúster y las claves de licencia completas de la licencia que se aplica y de la licencia que se ha sustituido.
+    Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento.
+    {:important}
     6. Pulse **Aceptar** para asignar la licencia.
 6. Opcionalmente, complete los pasos siguientes para instalar un BYOL de VMware vCenter Server:
    1. Pulse el separador **Sistemas de vCenter Server**.
@@ -60,7 +68,8 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
    3. Pulse el icono **Añadir** y escriba la clave de licencia. Pulse **Siguiente**.
    4. Escriba el nombre de la licencia y pulse **Siguiente**. Pulse **Finalizar** para añadir la licencia.
    5. Seleccione la nueva clave de licencia.
-   6. Anote las claves de licencia completas de la licencia que se aplica y de la licencia que se ha sustituido. **Importante:** Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento.
+   6. Anote las claves de licencia completas de la licencia que se aplica y de la licencia que se ha sustituido. Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento.
+   {:important}
    7. Pulse **Aceptar** para asignar la licencia.
 7. Opcionalmente, complete los pasos siguientes para instalar un BYOL de VMware vSphere Enterprise Plus:
   1. Pulse el separador **Hosts**.
@@ -69,7 +78,9 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
     2. Pulse el icono **Añadir** y escriba la clave de licencia. Pulse **Siguiente**.
     3. Escriba el nombre de la licencia y pulse **Siguiente**. Pulse **Finalizar** para añadir la licencia.
     4. Seleccione la nueva clave de licencia.
-    5. Anote el nombre de clúster y las claves de licencia completas de la licencia que se aplica y de la licencia que se ha sustituido. **Importante:** Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento. Si las claves de licencia no son las mismas en todos los clústeres, asegúrese de escribir el nombre del clúster asociado a cada clave de licencia.
+    5. Anote el nombre de clúster y las claves de licencia completas de la licencia que se aplica y de la licencia que se ha sustituido.
+    Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento. Si las claves de licencia no son las mismas en todos los clústeres, asegúrese de escribir el nombre del clúster asociado a cada clave de licencia.
+    {:important}
     6. Pulse **Aceptar** para asignar la licencia.
 8. Elimine las licencias de alquiler.
    1. Pulse el separador **Licencias**.
@@ -81,7 +92,8 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
   * Una lista de las claves de licencia de BYOL que ha instalado en este procedimiento. Cuando sea aplicable, proporcione la instancia y el nombre de clúster con las claves de licencia para los clústeres vSphere y vSAN.
   * Una lista de las claves de licencia de alquiler que ha eliminado en este procedimiento. Cuando sea aplicable, proporcione la instancia y el nombre de clúster con las claves de licencia para los clústeres vSphere y vSAN.
 
-  **Nota:** Los equipos de operaciones y soporte de IBM acceden a la capa de gestión de vCenter de la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) para verificar que se han eliminado las licencias de alquiler antes de cancelar los cargos de licencia de alquiler del paquete híbrido (Hybridity).
+  Los equipos de operaciones y soporte de IBM acceden a la capa de gestión de vCenter de la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) para verificar que se han eliminado las licencias de alquiler antes de cancelar los cargos de licencia de alquiler del paquete híbrido (Hybridity).
+  {:note}
 
 ### Enlaces relacionados
 

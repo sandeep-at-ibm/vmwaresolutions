@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-05"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -18,10 +18,10 @@ Cuando VUM solicita un recurso desde el servidor de actualizaciones en VMware, l
 
 En este documento se describe el uso de un servidor proxy basado en CentOS y Squid. Squid Proxy es un proxy de almacenamiento en memoria caché de código abierto para la web y admite muchos protocolos, incluidos HTTP y HTTPS. Hay varios proxies de VM y basados en dispositivos que están disponibles, y debe seleccionar el adecuado en función de los requisitos de la empresa e instalarlo y configurarlo siguiendo la guía del proveedor. Los clientes que opten por utilizar una implementación de CentOS/Squid deben continuar con el proceso siguiente.
 
-*	Descargar CentOS ISO en un servidor de saltos
-*	Crear una biblioteca vCenter
-*	Cargar la ISO a la biblioteca de vCenter
-*	Crear una VM, instalar y configurar CentOS e instalar Squid
+* Descargar CentOS ISO en un servidor de saltos
+* Crear una biblioteca vCenter
+* Cargar la ISO a la biblioteca de vCenter
+* Crear una VM, instalar y configurar CentOS e instalar Squid
 
 Antes de poder iniciar esta tarea, debe recopilar información para rellenar la Tabla 1. Revise los valores sugeridos y asegúrese de que sean apropiados para su empresa. Esta configuración se basa solo en un pequeño proxy para VUM que utiliza CentOS-Minimal y Squid.
 
@@ -31,13 +31,13 @@ Tabla 1. Valores de despliegue
 |:--------- |:-------------- |:------ |
 | CPU de proxy | 1 vCPU | Squid no tiene requisitos mínimos |
 | RAM de proxy | 2 GB | Squid no tiene requisitos mínimos |
-| Disco de proxy |	25 | GB Squid no tiene requisitos mínimos |
+| Disco de proxy | 25 | GB Squid no tiene requisitos mínimos |
 | Nombre de host | Proxy01 | |
-| Dirección |	ip proxy |	Se debe utilizar una dirección IP de repuesto desde el cliente, la subred portátil privada se asigna durante el proceso de suministro. Solo se reservarían dos direcciones IP en esta subred; una para el BCR y otra para el cliente-esg
-| Máscara de red |	255.255.255.192 | |
-| Pasarela| 	ip enlace ascendente privada customer-nsx-edge |	Este es el valor de pasarela predeterminado para el servidor proxy, que es la dirección de enlace ascendente privada del cliente-nsx-edge. La IP se puede encontrar revisando el separador Valores del cliente-nsx-edge |
-| Servidor DNS |	ip de AD/DNS | Esta dirección IP se puede encontrar en la página Instancia en [IC4VS Cloud Console](https://console.bluemix.net/infrastructure/vmware-solutions/console/vcenters/), Instancia desplegadas; |
-| IP de BCR |	ip de bcr | Es la dirección IP del direccionador de cliente de IBM Cloud Backend y es la pasarela para 10.0.0.0/8 y 161.26.0.0/16. Esta dirección se utiliza en una ruta estática en el servidor proxy para que pueda llegar a la VCSA y al servidor de AD/DNS |
+| Dirección | ip proxy | Se debe utilizar una dirección IP de repuesto desde el cliente, la subred portátil privada se asigna durante el proceso de suministro. Solo se reservarían dos direcciones IP en esta subred; una para el BCR y otra para el cliente-esg
+| Máscara de red | 255.255.255.192 | |
+| Pasarela| ip enlace ascendente privada customer-nsx-edge | Este es el valor de pasarela predeterminado para el servidor proxy, que es la dirección IP de enlace ascendente privada de customer-nsx-edge. Para encontrar la dirección IP, consulte el separador **Configuración** de **customer-nsx-edge**. |
+| Servidor DNS | ip de AD/DNS | Encontrará esta dirección IP en la página de la instancia de la consola de IBM Cloud for VMware Solutions, en la página **Instancias desplegadas**. |
+| IP de BCR | ip de bcr | Es la dirección IP del direccionador de cliente de IBM Cloud Backend y es la pasarela para 10.0.0.0/8 y 161.26.0.0/16. Esta dirección se utiliza en una ruta estática en el servidor proxy para que pueda llegar a la VCSA y al servidor de AD/DNS. |
 
 ## Configuración de NSX
 
@@ -73,7 +73,7 @@ El proceso siguiente despliega una VM para alojar CentOS y Squid desde la Biblio
 
 ### Descarga del archivo ISO CentOS-Minimal
 
-Utilice un navegador en el servidor de saltos para descargar el archivo ISO de CentOS-Minimal de [CentOS](https://www.centos.org/download/). Tenga en cuenta que IBM Cloud mantiene un duplicado de muchas distribuciones de Linux populares. Este duplicado solo está disponible en la red privada, y las ISO de CentOS están disponibles en la dirección siguiente: http://mirrors.service.softlayer.com/centos/7/isos/x86_64/.
+Utilice un navegador en el servidor de saltos para descargar el archivo ISO de CentOS-Minimal de [CentOS](https://www.centos.org/download/). Tenga en cuenta que IBM Cloud mantiene un duplicado de muchas distribuciones de Linux populares. Este duplicado solo está disponible en la red privada, y los ISO de CentOS están disponibles en la dirección siguiente: `http://mirrors.service.softlayer.com/centos/7/isos/x86_64/`
 
 ### Configurar una biblioteca de contenido y llenarla con el archivo ISO de CentOS
 
@@ -152,14 +152,13 @@ Squid no tiene ningún requisito mínimo de hardware, pero la cantidad de RAM pu
 ## Configuración inicial de VUM
 
 Configure VUM para que utilice el servidor proxy para acceder a los repositorios de Internet.
-1.	Con el cliente web de vSphere, vaya a **Inicio** > **Actualizar gestor**. Pulse el servidor de vCenter.
-2.	Seleccione el **separador Gestionar** y pulse el botón **Valores**.
-3.	Seleccione **Descargar valores** y, a continuación, en _Valores de proxy_ pulse el botón **Editar**.
-4.	Marque el recuadro **Utilizar proxy** y especifique la _dirección IP del servidor proxy_ y el _puerto 3128_, pulse **Aceptar**
-5.	El estado de conectividad debe cambiar a _Validación_ y, a continuación, a _Conectado_.
-6.	Pulse el botón **Descargar ahora** y, en el panel _Tareas recientes_, debería ver esta actividad completada.
+1. Con el cliente web de vSphere, vaya a **Inicio** > **Actualizar gestor**. Pulse el servidor de vCenter.
+2. Seleccione el **separador Gestionar** y pulse el botón **Valores**.
+3. Seleccione **Descargar valores** y, a continuación, en _Valores de proxy_ pulse **Editar**.
+4. Marque el recuadro **Utilizar proxy** y especifique la _dirección IP del servidor proxy_ y el _puerto 3128_, pulse **Aceptar**. El estado de conectividad cambia a _Validación_ y, a continuación, a _Conectado_.
+5. Pulse **Descargar ahora**. En el panel _Tareas recientes_, debería ver esta actividad completada.
 
 ### Enlaces relacionados
 
-* [VMware HCX on IBM Cloud Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitectura de la solución VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)
