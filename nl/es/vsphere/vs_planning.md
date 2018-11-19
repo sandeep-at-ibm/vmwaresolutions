@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Requisitos y planificación de VMware vSphere on IBM Cloud
 
 Revise los siguientes requisitos antes de solicitar VMware vSphere on {{site.data.keyword.cloud}}. Planifique los clústeres de VMware vSphere en función de la ubicación del {{site.data.keyword.CloudDataCent_notm}} y de sus requisitos de capacidad de la carga de trabajo.
 
-**Nota:** el usuario es el responsable de configurar el entorno y de instalar y configurar diversos componentes de VMware después de que se desplieguen los servidores ESXi. Los ejemplos siguientes son los componentes de VMware: VMware vCenter Server, VMware NSX y VMware vSAN.
+El usuario es el responsable de configurar el entorno y de instalar y configurar diversos componentes de VMware después de que se desplieguen los servidores ESXi. Los ejemplos siguientes son los componentes de VMware: VMware vCenter Server, VMware NSX y VMware vSAN.
+{:note}
 
 ## Requisitos de la cuenta de IBM Cloud
 
@@ -22,7 +27,8 @@ La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos r
 
 El despliegue de vSphere impone requisitos estrictos en cuanto a la infraestructura física. Por lo tanto, en {{site.data.keyword.CloudDataCents_notm}} solo puede desplegar clústeres que cumplan los requisitos. Están disponibles los siguientes {{site.data.keyword.CloudDataCent_notm}} para el despliegue de vSphere.
 
-**Nota:** Si selecciona un componente vSAN, la lista de ubicaciones se filtra por disponibilidad de SSD (disco en estado sólido).
+Si selecciona un componente vSAN, la lista de ubicaciones se filtra por disponibilidad de SSD (disco en estado sólido).
+{:note}
 
 Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para clústeres de vSphere
 

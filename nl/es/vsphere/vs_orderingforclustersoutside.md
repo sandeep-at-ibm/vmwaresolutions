@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Escalado de clústeres creados fuera de la consola
 
@@ -24,7 +28,8 @@ Asegúrese de haber realizado las tareas siguientes:
 2. En la página **VMware vSphere on IBM Cloud**, pulse **Crear**.  
    Asegúrese de que está en el separador **Crear nuevo** y de que se muestra **Nuevo clúster** en la lista **Configuraciones de clúster**.
 3. Cree un clúster con los mismos valores que el clúster existente que se ha creado fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}. Para obtener más información, consulte [Solicitud de clústeres nuevos de vSphere](vs_orderinginstances.html).  
-   **Nota:** para la interfaz de red, para escalar un clúster que se ha creado fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, debe seleccionar las VLAN existentes para el clúster.  
+   Para la interfaz de red, para escalar un clúster que se ha creado fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} debe seleccionar las VLAN existentes para el clúster.
+   {:note}
 4. En el panel **Resumen del pedido**, verifique la configuración del clúster y pulse **Guardar configuración**.   
 5. Luego pulse **Cómo comenzar** en la tarjeta de **VMware vSphere on IBM Cloud**.
 6. En la página **VMware vSphere on IBM Cloud**, pulse **Crear**.
@@ -37,7 +42,8 @@ Asegúrese de haber realizado las tareas siguientes:
 
 El despliegue del clúster se inicia automáticamente y el usuario recibe una confirmación por correo electrónico de que el pedido se está procesando. Cuando el clúster esté listo para ser utilizado, se le notificará por correo electrónico.
 
-**Nota:** los clústeres de vSphere no se muestran en la página **Instancias desplegadas**, junto con las instancias de vCenter Server y de Cloud Foundation.
+Los clústeres de vSphere no se muestran en la página **Instancias desplegadas**, junto con las instancias de vCenter Server y de Cloud Foundation.
+{:note}
 
 ### Enlaces relacionados
 
