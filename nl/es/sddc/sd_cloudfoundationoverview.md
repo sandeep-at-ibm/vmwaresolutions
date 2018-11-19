@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visión general de Cloud Foundation
 
@@ -43,15 +47,18 @@ Para obtener más información sobre la arquitectura, consulte [Visión general 
 
 Se incluyen los siguientes componentes en la instancia de Cloud Foundation.
 
-**Nota:** los cargos en los que se incurre en concepto de hardware, sistema de red, máquinas virtuales y almacenamiento pueden variar en función del {{site.data.keyword.CloudDataCent_notm}} seleccionado para el despliegue.
+Los cargos en los que se incurre en concepto de hardware, sistema de red, máquinas virtuales y almacenamiento pueden variar en función del {{site.data.keyword.CloudDataCent_notm}} seleccionado para el despliegue.
+{:note}
 
 ### Servidor nativo
 
 Puede solicitar {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} con una de las siguientes configuraciones:
-*  **Personalizado**: {{site.data.keyword.baremetal_short}} con el modelo de CPU y el tamaño de RAM seleccionados.   
-   * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
+*  **Skylake** o **Broadwell**: {{site.data.keyword.baremetal_short}} con el modelo de CPU y el tamaño de RAM seleccionados.   
    * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
-**Nota:** si tiene previsto utilizar almacenamiento vSAN, la configuración requiere cuatro {{site.data.keyword.baremetal_short}}.
+   * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
+
+   Si tiene pensado utilizar almacenamiento vSAN, la configuración necesita cuatro {{site.data.keyword.baremetal_short}}.
+   {:note}
 * **Preconfigurado**: 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
   * **Pequeño** (Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz / 128 GB de RAM / 12 discos)
   * **Grande** (Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz / 512 GB de RAM / 12 discos)
@@ -63,7 +70,8 @@ Se solicitan los siguientes componentes del sistema de redes:
 * Tres VLAN (LAN virtuales): una VLAN pública y dos VLAN privadas
 * Edge Services Gateway (ESG) de NSX de VMware de servicios de gestión segura para el tráfico de gestión de HTTPS saliente, desplegado por IBM como parte de la topología del sistema de redes de gestión. Las máquinas virtuales de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Para obtener más información, consulte [¿Representa NSX Edge de servicios de gestión un riesgo para la seguridad?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **Importante:** el usuario no puede acceder ni utilizar esta ESG. Si lo modifica, es posible que no pueda gestionar la instancia de Cloud Foundation desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, el uso de un cortafuegos o la inhabilitación de las comunicaciones de ESG a los componentes de gestión externa de IBM hará que {{site.data.keyword.vmwaresolutions_short}} se convierta en inutilizable.
+  El usuario no puede acceder ni utilizar esta ESG. Si lo modifica, es posible que no pueda gestionar la instancia de Cloud Foundation desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, el uso de un cortafuegos o la inhabilitación de las comunicaciones de ESG a los componentes de gestión externa de IBM hará que {{site.data.keyword.vmwaresolutions_short}} se convierta en inutilizable.
+  {:important}
 
 * La característica EVC (Enhanced vMotion Compatibility) se habilita automáticamente si tiene un clúster existente con servidores ESXi que reciben soporte de la versión actual de VMware vSphere. EVC proporciona compatibilidad con vMotion para todos los servidores ESXi de un clúster, ya que se asegura de que todos los servidores ESXi del clúster expongan el mismo conjunto de características de CPU a las máquinas virtuales. Mediante EVC, las máquinas virtuales pueden migrar entre los servidores ESXi del clúster, aunque las CPU reales de los servidores ESXi sean diferentes.
 
@@ -80,7 +88,7 @@ Se solicita el siguiente almacenamiento, en función de la configuración de {{s
 * Dos discos de arranque SATA de 1-TB
 * Dos discos de memoria caché SSD (Disco de estado sólido) de 960 GB
 * Un controlador de disco RAID
-* Solo para la configuración **Personalizado**, puede definir el número de unidades de disco y el tipo y la capacidad de los discos según sus requisitos. Además, tiene la opción de Intel Optane de alto rendimiento, que proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad. La opción de Intel Optane de alto rendimiento depende del modelo de CPU.
+* Solo para las configuraciones **Skylake** y **Broadwell**, puede definir el número de unidades de disco y el tipo y la capacidad de los discos según sus requisitos. Además, tiene la opción de Intel Optane de alto rendimiento, que proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad. La opción de Intel Optane de alto rendimiento depende del modelo de CPU.
 * Solo para la configuración **Preconfigurado**, **Pequeño**: dos discos SSD de 1,9 TB de capacidad
 * Solo para la configuración **Preconfigurado**, **Grande**: cuatro discos SSD de 3,8 TB de capacidad
 
@@ -110,7 +118,8 @@ Un servidor nativo {{site.data.keyword.cloud_notm}} con la configuración que se
 * Una licencia de SDDC Manager
 * Una cuota de soporte y servicios
 
-**Importante:** Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el 	{{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no a través del {{site.data.keyword.slportal}} ni por ningún otro medio fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+{:important}
 
 **ATENCIÓN:** el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}}, que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia, desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 *  Añadir, modificar, devolver o eliminar componentes

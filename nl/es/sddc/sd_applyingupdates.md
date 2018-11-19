@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -16,13 +16,15 @@ La consola de {{site.data.keyword.vmwaresolutions_full}} detecta y muestra peri�
 
 Una actualización disponible es un registro de la lista de actualizaciones de software de la instancia, que se puede aplicar de inmediato o se puede planificar para un momento posterior. La actualización es un paquete que a su vez contiene uno o varios paquetes para actualizar los componentes de gestión de IBM y los componentes de VMware.
 
+A partir de la V2.5, las actualizaciones de IBM CloudDriver ya no aparecen listadas porque se han habilitado las actualizaciones automáticas. 
+
 ## Antes de empezar
 
 Antes de intentar aplicar una actualización, expanda la entrada de la actualización pulsando la flecha hacia abajo y verifique la información siguiente:
 * La versión de la actualización. Debe aplicar las actualizaciones en secuencia cronológica, es decir, desde la primera hasta la más reciente. Asegúrese de haber aplicado todas las actualizaciones anteriores antes de aplicar la más reciente. Por ejemplo, debe aplicar la actualización de V2.4 antes de intentar aplicar la actualización de V2.5.
 * Si se requiere tiempo de inactividad.
 * El tiempo total estimado para completar la actualización.
-* El impacto de la actualización sobre el entorno virtual VMware. La Tabla 1 muestra cómo afectan al sistema distintos niveles de impacto.
+* El impacto de la actualización sobre el entorno virtual VMware. En la Tabla 1 se muestra cómo afectan al sistema distintos niveles de impacto.
 * Los detalles de la actualización.
 
 Tabla 1. Niveles de actualización e impacto

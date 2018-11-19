@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ampliación y reducción de la capacidad para instancias de Cloud Foundation
 
@@ -21,7 +25,7 @@ Una instancia de Cloud Foundation puede tener un máximo de cinco clústeres, un
 * No añada servidores ESXi desde el cliente web de VMware vSphere. Los cambios que realice en el cliente web de VMware vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_full}}.
 * La plataforma base que ha solicitado tiene 4 servidores ESXi de forma predeterminada. Puede ampliar la plataforma hasta un máximo de 32 servidores ESXi. Sin embargo, el número de {{site.data.keyword.baremetal_short}} que puede añadir simultáneamente funciona del siguiente modo:
    * Para la configuración de tipo **Pequeño** y **Grande**, puede añadir entre 1 y 10 servidores ESXi simultáneamente.
-   * Para la configuración de tipo **Personalizado**, puede añadir entre 1 y 20 servidores ESXi simultáneamente.
+   * Para la configuración de tipo **Skylake** y **Broadwell**, puede añadir entre 1 y 20 servidores ESXi simultáneamente.
 
 ## Procedimiento para añadir servidores ESXi
 
@@ -61,7 +65,8 @@ Una instancia de Cloud Foundation puede tener un máximo de cinco clústeres, un
 2. Se le notificará mediante correo electrónico cuando se hayan eliminado servidores ESXi.
 3. La infraestructura de {{site.data.keyword.cloud_notm}} reclama por completo los servidores ESXi al final del ciclo de facturación de {{site.data.keyword.cloud_notm}}, que suele ser de 30 días.
 
-   **Atención:** se le facturará por los servidores ESXi eliminados hasta el final del ciclo de facturación de {{site.data.keyword.cloud_notm}}.
+   Se le facturará por los servidores ESXi eliminados hasta el final del ciclo de facturación de {{site.data.keyword.cloud_notm}}.
+   {:note}
 
 ### Enlaces relacionados
 
