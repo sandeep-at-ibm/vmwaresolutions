@@ -62,7 +62,8 @@ Dans cette conception, la solution vCenter Server offre le stockage Endurance po
 
 Endurance est disponible dans trois niveaux de performance d'IOPS pour prendre en charge les divers besoins des applications.
 
-Après la mise à disposition d'un partage NFS, celui-ci peut être redimensionné ou reconfiguré pour permettre davantage ou moins d'IOPS.{:note}
+Après la mise à disposition d'un partage NFS, celui-ci peut être redimensionné ou reconfiguré pour permettre davantage ou moins d'IOPS.
+{:note}
 
 Pour connaître les options d'IOPS détaillées, voir la section _Paramètres de stockage_ dans la rubrique [Commande d'instances vCenter Server](../../vcenter/vc_orderinginstance.html).
 
