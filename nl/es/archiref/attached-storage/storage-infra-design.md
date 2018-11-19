@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Diseño de la infraestructura de almacenamiento adjunto
 
@@ -56,7 +60,10 @@ Se puede suministrar un IOPS comprendido entre 100 y 48.000 con tamaños de alma
 
 En este diseño, la solución de vCenter Server ofrece almacenamiento resistente para el almacenamiento adjunto. Como resultado, puede seleccionar y adjuntar (mediante automatización) exportaciones de NFS resistente comprendidas entre 20 GB y 12 TB. {{site.data.keyword.cloud_notm}} permite conectar un máximo de 64 hosts ESXi de vSphere a una sola exportación de NFS resistente.
 
-La resistencia está disponible en tres niveles de rendimiento de IOPS para dar soporte a requisitos de aplicaciones variables. Tenga en cuenta que, después de que se suministre un recurso compartido NFS, se puede redimensionar o volver a configurar para permitir más o menos IOPS.
+La resistencia está disponible en tres niveles de rendimiento de IOPS para dar soporte a requisitos de aplicaciones variables.
+
+Después de que se suministre un recurso compartido NFS, se puede redimensionar o volver a configurar para permitir más o menos IOPS.
+{:note}
 
 Para ver las opciones de IOPS detalladas, consulte la sección _Valores de almacenamiento_ del tema [Solicitud de instancias de vCenter Server](../../vcenter/vc_orderinginstance.html).
 

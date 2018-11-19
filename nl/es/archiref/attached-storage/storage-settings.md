@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Valores de almacenamiento
 
 Este diseño da soporte a la conexión del almacenamiento compartido mediante NFS v3 únicamente. NFS v4 y v4.1 no están soportados.
 
-**Nota**: Todo el almacenamiento adjunto para este diseño se limita al almacenamiento de {{site.data.keyword.cloud_notm}} disponible en el mismo {{site.data.keyword.CloudDataCent_notm}} que la solución vCenter Server. Además, de forma predeterminada todos los discos virtuales que se almacenan en el almacén de datos son de aprovisionamiento ligero.
+Todo el almacenamiento adjunto para este diseño se limita al almacenamiento de {{site.data.keyword.cloud_notm}} disponible en el mismo {{site.data.keyword.CloudDataCent_notm}} que la solución vCenter Server. Además, de forma predeterminada todos los discos virtuales que se almacenan en el almacén de datos son de aprovisionamiento ligero.
+{:note}
 
 La arquitectura especifica que los almacenes de datos NFS v3 se adjuntan utilizando el nombre de DNS del almacenamiento de {{site.data.keyword.cloud_notm}} para conectarse a la compartición. Además, el recurso compartido NFS se conecta a todos los hosts del clúster de vCenter Server y se coloca en un clúster de almacén de datos con el DRS de almacenamiento habilitado.
 
