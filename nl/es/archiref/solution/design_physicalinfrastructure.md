@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-25"
+lastupdated: "2018-10-29"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Diseño de infraestructura física
 
@@ -29,14 +33,17 @@ Para obtener más información sobre el almacenamiento, consulte [Arquitectura d
 
 El host físico hace referencia al {{site.data.keyword.baremetal_short}} en el entorno que sirve los recursos de cálculo. El {{site.data.keyword.baremetal_short}} aplicado en esta solución está certificado por VMware y aparece listado en el [HCG de VMware](http://www.vmware.com/resources/compatibility/search.php).
 
-Las configuraciones de servidor disponibles en la solución cumplen o exceden los requisitos mínimos para instalar, configurar y gestionar vSphere ESXi. Existen varias configuraciones disponibles para satisfacer diferentes requisitos. Para obtener una lista detallada de las especificaciones exactas utilizadas para la solución VMware on {{site.data.keyword.cloud_notm}}, consulte la Lista de materiales de la [instancia de Cloud Foundation](../../sddc/sd_bom.html) o de la [instancia de vCenter Server](../../vcenter/vc_bom.html). Tenga en cuenta que el 	{{site.data.keyword.baremetal_short}} reside en la {{site.data.keyword.cloud_notm}}.
+Las configuraciones de servidor disponibles en la solución cumplen o exceden los requisitos mínimos para instalar, configurar y gestionar vSphere ESXi. Existen varias configuraciones disponibles para satisfacer diferentes requisitos. Para obtener una lista detallada de las especificaciones exactas utilizadas para la solución VMware on {{site.data.keyword.cloud_notm}}, consulte la Lista de materiales de la [instancia de Cloud Foundation](../../sddc/sd_bom.html) o de la [instancia de vCenter Server](../../vcenter/vc_bom.html).
+
+Los {{site.data.keyword.baremetal_short}} residen en {{site.data.keyword.cloud_notm}}.
+{:note}
 
 Cada instancia de Cloud Foundation empieza por un despliegue de 4 hosts, y cada instancia de vCenter Server empieza por un despliegue de 3 o 4 hosts en función de la opción de la solución de almacenamiento.
 
-El host físico emplea dos discos conectados localmente para asignarse al hipervisor de vSphere ESXi. Puede asignar más discos utilizando vSAN tal como se describe en la sección _Diseño de almacenamiento físico_ de esta página o utilizando NetApp ONTAP, tal como se describe en [Arquitectura de selección de NetApp ONTAP](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Cada
+El host físico emplea dos discos conectados localmente para asignarse al hipervisor de vSphere ESXi. Puede asignar más discos utilizando vSAN tal como se describe en la sección _Diseño de almacenamiento físico_ o utilizando NetApp ONTAP, tal como se describe en [Arquitectura de selección de NetApp ONTAP](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Cada
 host físico tiene conexiones de red de 10 Gbps redundantes para el acceso de red público y privado.
 
-Las especificaciones técnicas del Servidor nativo son las siguientes:
+El servidor nativo tiene las especificaciones siguientes:
 * CPU: Dual Intel Xeon, configuración de núcleo y velocidad variable
 * Memoria: configuración variable, 128 GB o más
 * Red: 4 x 10 Gbps
@@ -71,7 +78,7 @@ Además de las redes públicas y privadas, cada servidor de {{site.data.keyword.
 ### Bloques de IP primarios y portátiles
 
 {{site.data.keyword.cloud_notm}} asigna dos tipos de direcciones IP que se van a utilizar en la infraestructura de {{site.data.keyword.cloud_notm}}:
-* Las direcciones IP primarias se asignan a los dispositivos, a los servidores nativos y virtuales suministrados por {{site.data.keyword.cloud_notm}}. No debe asignar ninguna dirección IP en estos bloques.
+* Las direcciones IP primarias se asignan a los dispositivos, a los servidores nativos y virtuales suministrados por {{site.data.keyword.cloud_notm}}. No asigne ninguna dirección IP en estos bloques.
 * Las direcciones IP portátiles se proporcionan para que asigne y gestione según sea necesario.
 
 Las direcciones IP primarias o portátiles se pueden convertir en direccionables a cualquier VLAN dentro de la cuenta de cliente cuando **Distribución de VLAN** esté habilitado dentro del {{site.data.keyword.slportal}} o cuando la cuenta esté configurada como una cuenta de **Direccionamiento y reenvío virtual (VRF)**.
@@ -84,13 +91,13 @@ Para permitir una conexión transparente entre varias subredes en las que reside
 
 ### Direccionamiento y reenvío virtual (VRF)
 
-También puede configurar la cuenta de {{site.data.keyword.slportal}} como una cuenta de VRF para proporcionar funcionalidad similar a la distribución de VLAN, habilitando así el direccionamiento automático entre los bloques de IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
+También puede configurar la cuenta de {{site.data.keyword.slportal}} como una cuenta de VRF para proporcionar funciones similares a la distribución de VLAN, habilitando así el direccionamiento automático entre los bloques de IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
 
 La consola de {{site.data.keyword.vmwaresolutions_short}} no puede detectar si VRF está habilitado en el {{site.data.keyword.slportal}}. Recibirá un aviso que le recordará que se asegure de que ha habilitado la **Distribución de VLAN** o VRF en su cuenta de {{site.data.keyword.slportal}}.
 
 ### Conexiones de host físico
 
-Cada host físico del diseño tiene dos pares redundantes de conexiones Ethernet de 10 Gbps en cada conmutador Top of Rack (ToR) de {{site.data.keyword.cloud_notm}} (público y privado). Los adaptadores se configuran como conexiones individuales (no enlazadas) para un total de conexiones de 4 x 10 Gbps. Esto permite que las conexiones de tarjeta de interfaz de red (NIC) funcionen de forma independiente entre sí.
+Cada host físico del diseño tiene dos pares redundantes de conexiones Ethernet de 10 Gbps en cada conmutador Top of Rack (ToR) de {{site.data.keyword.cloud_notm}} (público y privado). Los adaptadores se configuran como conexiones individuales (no enlazadas) para un total de conexiones de 4 conexiones de 10 Gbps. Esto permite que las conexiones de tarjeta de interfaz de red (NIC) funcionen de forma independiente entre sí.
 
 Figura 1. Conexiones de NIC de host físico
 

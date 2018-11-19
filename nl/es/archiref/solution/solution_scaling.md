@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-10"
+lastupdated: "2018-07-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Capacidad de escalado
 
@@ -40,7 +44,8 @@ Este método le permite realizar lo siguiente:
 * Segregación de cargas de trabajo basadas en otras características, por ejemplo, el clúster de base de datos SQL de Microsoft.
 * Despliegue de aplicaciones en topologías altamente disponibles.
 
-**Nota**: Cuando el clúster inicial se convierte en un clúster de solo gestión, la migración de cargas de trabajo existentes implicará los pasos manuales que debe tomar el usuario. Esto puede implicar la reagrupación de almacenes de datos en el nuevo clúster o, como alternativa, la migración de almacenamiento. Es posible que sea necesario cambiar las direcciones IP de las cargas de trabajo si el nuevo clúster se encuentra en un pod de {{site.data.keyword.cloud_notm}} diferente o se le asigna un ID de VLAN diferente.
+Cuando el clúster inicial se convierte en un clúster de solo gestión, la migración de cargas de trabajo existentes implicará los pasos manuales que debe tomar el usuario. Esto puede implicar la reagrupación de almacenes de datos en el nuevo clúster o, como alternativa, la migración de almacenamiento. Es posible que sea necesario cambiar las direcciones IP de las cargas de trabajo si el nuevo clúster se encuentra en un pod de {{site.data.keyword.cloud_notm}} diferente o se le asigna un ID de VLAN diferente.
+{:note}
 
 ## Adición de hosts ESXi en clústeres existentes
 
