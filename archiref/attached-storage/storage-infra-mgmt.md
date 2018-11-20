@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-13"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Attached storage infrastructure management
 
@@ -20,11 +24,12 @@ The network virtualization that is used in this design uses the existing vSphere
 
 ## vSphere Distributed Switch
 
-As stated previously, another VLAN is created within the vCenter Server solution and used to attach the NFS mount point to the ESXi hosts in the existing cluster. Since the vCenter Server solution already has a vDS associated with the private network, another port group is created and tagged with the additional VLAN number since this additional VLAN is not native.
+Another VLAN is created within the vCenter Server solution and used to attach the NFS mount point to the ESXi hosts in the existing cluster. Because the vCenter Server solution has a vSphere Distributed Switch associated with the private network, another port group is created and tagged with the additional VLAN number since this additional VLAN isn't native.
 
 The following table describes the default settings of the new port group.
 
-**Important:** Do not change these default settings.
+Dot change these default settings.
+{:important}
 
 Table 1. NFS port group summary
 
@@ -35,7 +40,7 @@ Table 1. NFS port group summary
 | Load balancing | Route base on originating virtual port |
 | Active Uplinks | Uplink1 and uplink2 |
 
-In addition to the creation of the vDS port group for NFS storage traffic, a VMkernel port is created on each vSphere ESXi host in the deployment and assigned to the SDDC-DPG-NFS port group. The VMkernel port is also assigned an IP address from the private portable subnet that is associated with the attached storage VLAN, that is, Private VLAN B and its MTU is set to 9000 to support jumbo frames.
+In addition to the creation of the vDS port group for NFS storage traffic, a VMkernel port is created on each vSphere ESXi host during the deployment and assigned to the SDDC-DPG-NFS port group. The VMkernel port is also assigned an IP address from the private portable subnet that is associated with the attached storage VLAN, that is, Private VLAN B and its MTU is set to 9000 to support jumbo frames.
 
 Figure 1. Private vDS Port groups and Uplinks
 

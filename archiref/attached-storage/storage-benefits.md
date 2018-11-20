@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -16,7 +16,7 @@ For more information about the vCenter Server design, see [Solution overview](..
 
 ## Key benefits of attached storage for vCenter Server
 
-While attached storage is not a prerequisite for VMware environments, its use as a shared storage device provides many benefits to users for IT operations. Using shared storage devices can help you achieve high availability, distributed resource scheduler, efficient use of storage capacity, and simplified management through enabling the vSphere functions described in the following table.
+While attached storage isn't a prerequisite for VMware environments, its use as a shared storage device provides many benefits to users for IT operations. Using shared storage devices can help you achieve high availability, distributed resource scheduler, efficient use of storage capacity, and simplified management through enabling the vSphere functions described in the following table.
 
 Table 1. Functions description for attached storage for vCenter Server
 
