@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-06"
+lastupdated: "2018-11-16"
 
 ---
 
 # IBM Cloud networking and infrastructure
 
 ## Virtual Routing and Forwarding (VRF)
-{{site.data.keyword.cloud}} accounts can also be configured as a VRF account. This
-provides similar functions to VLAN spanning, enabling automatic
+{{site.data.keyword.cloud}} accounts can also be configured as a VRF account. VRF accounts
+provide similar functions to VLAN spanning, enabling automatic
 routing between subnet IP blocks. All accounts with Direct-Link
 connections must be converted to, or created as, a VRF account.
 
@@ -30,21 +30,21 @@ locations.
 
 ### strongSwan VPN
 The strongSwan IPSec VPN service provides a secure end-to-end
-communication channel over the Internet that is based on the
+communication channel over the internet that is based on the
 industry-standard Internet Protocol Security (IPSec) protocol suite.
 
 ### Hybridity (HCX)
-The VCS Hybridity Bundle on {{site.data.keyword.cloud_notm}} service can seamlessly extend the
+The VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle seamlessly extends the
 networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows
 virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without
 any conversion or change.
 
 ## Physical structure
 
-The physical infrastructure required to deploy a VCS cluster, requires
+The physical infrastructure required to deploy a vCenter Server cluster, requires
 the following minimum specification.
 
-Table 1. VCS specifications
+Table 1. vCenter Server specifications
 
   | NFS Deployment | VSAN Deployment
 ---|---|---
@@ -62,7 +62,7 @@ Table 2. IKS specifications
 Number of Servers | 3 | 3
 CPU | 2 – 56 Core | 4 – 28 Core
 Memory | 4 GB - 242 GB | 32 GB - 512 GB
-Storage  | 100 GB  |  SATA: 2 TB / SSD: 960 GB
+Storage | 100 GB |  SATA: 2 TB / SSD: 960 GB
 
 ## Virtual structure
 
@@ -71,35 +71,35 @@ Figure 1. Physical structure of IKS and ICP deployments
 ![Physical Structure of IKS and ICP Deployment
 Diagram](vcsiks-phy-ics-iks-deployment.svg)
 
-Within the VCS instance, the customer VMSs are deployed to dedicated NSX
+Within the vCenter Server instance, the customer VMSs are deployed to dedicated NSX
 Edge Services Gateways (ESG) and Distributed Logical Routers (DLR).
 
 The ESG is configured with a SNAT to allow outbound traffic, enabling
-Internet connectivity to download the ICP prerequisites and connectivity
-to GitHub and Docker or a web-proxy can be used to provide the Internet
+internet connectivity to download the ICP prerequisites and connectivity
+to GitHub and Docker or a web-proxy can be used to provide the internet
 connectivity. The ESG is configured to access DNS and NTP services via
 the private network. Integration to the IKS instance is available via
-{{site.data.keyword.cloud_notm}} networking between the VCS instance and IKS.
+{{site.data.keyword.cloud_notm}} networking between the vCenter Server instance and IKS.
 
-## VCS components
+## vCenter Server components
 
-Figure 2. VCS platform components
-![VCS Environment Diagram](vcsiks-vcs-env.svg)
+Figure 2. vCenter Server platform components
+![vCenter Server Environment Diagram](vcsiks-vcs-env.svg)
 
 ### Platform Service Controller
-The VCS deployment uses a single, external platform services controller
+The vCenter Server deployment uses a single, external platform services controller
 (PSC) installed on a portable subnet in the private VLAN associated with
-management virtual machines. Its default gateway is set to the backend
+management VMs. Its default gateway is set to the backend
 customer router (BCR).
 
 ### vCenter Server
 Like the PSC, the vCenter Server is deployed as an appliance.
 Additionally, the vCenter is installed on a portable subnet in the
-private VLAN associated with management virtual machines. Its default
+private VLAN associated with management VMs. Its default
 gateway is set to the BCR.
 
 ### NSX Manager
-The NSX Manager is deployed on the initial VCS cluster. Additionally,
+The NSX Manager is deployed on the initial vCenter Server cluster. Additionally,
 the NSX Manager is assigned an IP address from the private portable
 address block that is designated for management components.
 
@@ -110,9 +110,8 @@ private portable subnet that is designated for management components.
 
 ### NSX ESGs / DLRs
 NSX Edge Services Gateway (ESG) pairs are deployed. In all cases, one
-gateway pair is used for outbound traffic from automation components
-residing on the private network. In the case of VMware vCenter Server on
-{{site.data.keyword.cloud_notm}} (VCS) and ICP, a second gateway, which is known as the
+gateway pair is used for outbound traffic from automation components that
+reside on the private network. For vCenter Server and ICP, a second gateway, which is known as the
 icp–managed edge, is deployed and configured with an uplink to the
 public network and an interface that is assigned to the private network.
 Any required NSX component such as Distributed Logical
@@ -124,7 +123,7 @@ The following tables summarize the ICP ESG / DLR specifications.
 
 Table 3. ICP ESG specifications
 
-Attribute  |  Specification
+Attribute |  Specification
 --|--
 Edge Service Gateway | Virtual appliance
 Edge size	Large | Number of vCPUs	2
@@ -153,7 +152,7 @@ your containerized apps and services are equally deployed to the worker
 nodes in the cluster.
 
 ###	Worker node
-Each worker node is a physical machine (bare metal) or a virtual machine
+Each worker node is a physical machine (bare metal) or a VM
 that runs on physical hardware in the cloud environment. When you
 provision a worker node, you determine the resources that are available
 to the containers that are hosted on that worker node. Out of the box,
@@ -164,4 +163,4 @@ and worker node security compliance.
 
 ### Related links
 
-* [VCS Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)

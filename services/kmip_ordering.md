@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-12
 
 ---
 
@@ -70,7 +70,6 @@ Click **Retrieve** to get the customer root key that is stored in your selected 
 * [Ordering, viewing, and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
 * [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](../vcenter/vc_hybrid_addingremovingservices.html)
 * [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/services/keymgmt/index.html#getting-started-with-key-protect)
-* [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect?&language=javascript_jquery#introduction)
 * [vSphere Security](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)
 * [FAQ](../vmonic/faq.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)

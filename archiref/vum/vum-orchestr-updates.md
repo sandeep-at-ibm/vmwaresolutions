@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-19"
 
 ---
 
 #	Orchestrated upgrades
 
-You can use orchestrated upgrades to upgrade the virtual hardware and VMware Tools of virtual machines in the inventory after the updating the vSphere ESXi hosts. After the hosts are updated, the VMware Tools upgrade baseline runs first, followed by the virtual machine hardware upgrade baseline. Orchestrated upgrades can be performed at a cluster, folder, or a data center level.
+You can use orchestrated upgrades to upgrade the virtual hardware and VMware Tools of virtual machines in the inventory after the updating the vSphere ESXi hosts. After the hosts are updated, the VMware Tools upgrade baseline runs first, followed by the virtual machine hardware upgrade baseline. You can use orchestrated upgrades at a cluster, folder, or a data center level.
 
 VUM allows you to perform orchestrated upgrades of hosts and then virtual machines by using baseline groups. A baseline group is used that contains a single host upgrade baseline and multiple patch or extension baselines. VUM first upgrades the hosts and then applies the patch or extension baselines. You perform an orchestrated upgrade of virtual machines by using a virtual machine baseline group that contains the following baselines:
 * VM Hardware Upgrade to Match Host
@@ -18,13 +18,13 @@ VUM allows you to perform orchestrated upgrades of hosts and then virtual machin
 
 VUM orchestrated upgrades allow you to upgrade the inventory objects in VCSA in a two-step process. First, the vSphere ESXi hosts are upgraded followed by the virtual machine upgrades. This two-step process can be configured on a cluster level or you can configure this at the individual vSphere ESXi host or virtual machine level for more granular control.
 
-In the orchestrated upgrade, the cluster is remediated first against the host baseline group, which applies patches, extensions and upgrades and once upgraded, the virtual machines in the cluster are remediated against the virtual machine upgrade baseline group containing the VM Hardware Upgrade to Match Host and VMware Tools Upgrade to Match Host baselines.
+In the orchestrated upgrade, the cluster is remediated first against the host baseline group, which applies patches, extensions and upgrades and after upgraded, the virtual machines in the cluster are remediated against the virtual machine upgrade baseline group that contains the VM Hardware Upgrade to Match Host and VMware Tools Upgrade to Match Host baselines.
 
 If the baseline group also contains an upgrade baseline, VUM first upgrades the vSphere ESXi hosts and then applies the patch and/or extension baselines as the patches are applicable to the specific host version. For the virtual machines, VMware tools are first updated, followed by the virtual hardware update.
 
-Therefore, during the VMware tools upgrade, the virtual machines are powered on if virtual machines are in a powered-off or suspended state, then VUM will power it on, run the upgrade and restore the original power state of the virtual machine. Therefore, during the virtual hardware upgrade, the VMs must be in powered-off state if there are virtual machines that are powered on, VUM will shut them down, upgrade virtual hardware, and power it back on.
+Therefore, during the VMware tools upgrade, the virtual machines are powered on if virtual machines are in a powered-off or suspended state, then VUM powers it on, run the upgrade and restore the original power state of the virtual machine. Therefore, during the virtual hardware upgrade, the VMs must be in powered-off state if there are virtual machines that are powered on, VUM shuts them down, upgrade virtual hardware, and power it back on.
 
-By default, the remediation of vSphere ESXi hosts happens in sequential manner and will remediate one host at a time. When the process is completed for one host, VUM will start remediating the next host. This default can be changed to enable parallel remediation so that more than one host can be remediated at a time, however, this is only possible if you have adequate failover capacity in your cluster.
+By default, the remediation of vSphere ESXi hosts happens in sequential manner and  remediates one host at a time. When the process is completed for one host, VUM will start remediating the next host. This default can be changed to enable parallel remediation so that more than one host can be remediated at a time, however, this is only possible if you have adequate failover capacity in your cluster.
 
 If the vSphere ESXI hosts are part of a vSAN cluster, the remediation process is always sequential even if you have selected parallel remediation in the remediation wizard, as only one host from a vSAN cluster can be in maintenance mode at any time. VUM is intelligent and carries out a calculation on how many hosts can be remediated in parallel without disrupting DRS settings.
 
@@ -44,7 +44,7 @@ The following workflow describes the process to perform an orchestrated upgrade:
 8. Optionally, create a new patch baseline by clicking **Create a new Host Patch Baseline** at the bottom of the Patches page, and complete the New Baseline wizard. Click **Next**.
 9. Select the extension baselines to include in the baseline group.
 10. Optionally, create a new extension baseline by clicking **Create a new Extension Baseline** at the bottom of the Patches page, and complete the New Baseline wizard.
-11. Review the Ready to Complete page, click **Finish** and the host baseline group is displayed in the Baseline Groups pane.
+11. Review the **Ready to Complete** page, click **Finish** and the host baseline group is displayed in the Baseline Groups pane.
 
 ## Step 2
 
@@ -61,4 +61,4 @@ You can now use these baseline groups in the scan, review, staging, and remediat
 ### Related links
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

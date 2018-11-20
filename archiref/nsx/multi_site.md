@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -14,7 +14,7 @@ One key differentiator between {{site.data.keyword.cloud}} and other cloud offer
 
 ## Cross-vCenter NSX environment
 
-The cross-vCenter NSX capability allows for linking in a primary, secondary relationship of up to nine NSX managers: one primary and eight secondary. While it is not required to have vCenter servers in an Enhanced Linked Mode (ELM) relationship for cross-vCenter NSX to function, it provides the following benefits:
+The cross-vCenter NSX capability allows for linking in a primary, secondary relationship of up to nine NSX managers: one primary and eight secondary. While it isn't required to have vCenter servers in an Enhanced Linked Mode (ELM) relationship for cross-vCenter NSX to function, it provides the following benefits:
 
 * Simplified primary, secondary relationship creation by using Single sign-on (SSO) credentials
 * vCenter Server and Cloud Foundation automation configuration for DNS name resolution for all the sites that are linked together
@@ -22,7 +22,7 @@ The cross-vCenter NSX capability allows for linking in a primary, secondary rela
 
 ## Multi-site example
 
-The following example adds an NSX universal transport zone to the basic management and workload topologies that are discussed in the previous sections, in addition to the following characteristics:
+The following example adds an NSX universal transport zone to the basic management and workload topologies that are discussed in the previous sections, and also includes the following characteristics:
 
 * The universal transport zone spans two {{site.data.keyword.CloudDataCents_notm}} or PODs within an {{site.data.keyword.CloudDataCent_notm}}.
 * After the transport zone is added, multiple VXLANs are added along with a Universal Distributed Router that spans the new VXLANs.

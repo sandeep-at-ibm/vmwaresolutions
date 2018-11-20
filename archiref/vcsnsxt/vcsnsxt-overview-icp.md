@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-06"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-06"
 
 {{site.data.keyword.cloud_notm}} Private has the following features:
 -	**Unified installer** – The installer rapidly sets up a Kubernetes based cluster with master, worker, and proxy nodes by using an Ansible based installer.
--	**{{site.data.keyword.cloud_notm}} Private management console** – Allows you to manage, monitor, and troubleshoot your applications and cluster from a single, centralized, and secure management console.
+-	**{{site.data.keyword.cloud_notm}} Private management console** – Manage, monitor, and troubleshoot your applications and cluster from a single, centralized, and secure management console.
 -	**Private Docker image registry** - This local registry has all the same features as Docker Hub but also allows you to restrict which users can view or pull images.
 -	**Catalog of containerized software and services** - The catalog provides a centralized location from which you can browse for and install packages in your cluster. Packages for extra IBM products are available from curated repositories that are included in the default {{site.data.keyword.cloud_notm}} Private repository list.
 -	**Isolated tenant networks** - Calico allows for improved performance and network isolation inside your cluster. With Calico, you can create an isolated subnet for each project inside your cluster. This network isolation provides you with added security during data transmissions and reduces the chances of compromising applications and their data. Calico also facilitates the creation of new network policies that can enable fine grained control over the sharing of objects within a single namespace.
@@ -40,4 +40,4 @@ For more information about Calico networking, see [IBM Kubernetes service](vcsns
 
 ### Related links
 
-* [VCS Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)

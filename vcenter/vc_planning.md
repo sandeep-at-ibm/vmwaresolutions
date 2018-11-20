@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -25,31 +25,31 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server 
 | {{site.data.keyword.CloudDataCent_notm}} | Location | Region | Server options |
 |:----------------------|:---------|:-------|:---------------|
 | AMS03 | Amsterdam | Europe | Skylake, Broadwell |
-| CHE01 | Chennai | Asia Pacific | Skylake, SAP-certified, Broadwell |
+| CHE01 | Chennai | Asia-Pacific | Skylake, SAP-certified, Broadwell |
 | DAL09 | Dallas | NA South | Skylake, SAP-certified, Broadwell |
 | DAL10 | Dallas | NA South | Skylake, SAP-certified, Broadwell |
 | DAL12 | Dallas | NA South | Skylake, SAP-certified, Broadwell |
 | DAL13 | Dallas | NA South | Skylake, SAP-certified, Broadwell |
 | FRA02 | Frankfurt | Europe | Skylake, SAP-certified, Broadwell |
 | FRA04 | Frankfurt | Europe | Skylake, SAP-certified, Broadwell |
-| HKG02 | Hong Kong | Asia Pacific | Skylake, Broadwell |
+| HKG02 | Hong Kong | Asia-Pacific | Skylake, Broadwell |
 | LON02 | London | Europe | Skylake, Broadwell |
 | LON04 | London | Europe | Skylake, SAP-certified, Broadwell |
 | LON06 | London | Europe | Skylake, SAP-certified, Broadwell |
-| MEL01 | Melbourne | Asia Pacific | Skylake, SAP-certified, Broadwell |
+| MEL01 | Melbourne | Asia-Pacific | Skylake, SAP-certified, Broadwell |
 | MEX01 | Queretaro | NA South | Skylake, SAP-certified, Broadwell |
 | MIL01 | Milan | Europe | Skylake, SAP-certified, Broadwell |
 | MON01 | Montreal | NA East | Skylake, SAP-certified, Broadwell |
 | OSL01 | Oslo | Europe | Skylake, Broadwell |
 | PAR01 | Paris | Europe | Skylake, Broadwell |
 | SAO01 | Sao Paulo | South America | Skylake, SAP-certified, Broadwell |
-| SEO01 | Seoul | Asia Pacific | Skylake, SAP-certified, Broadwell |
+| SEO01 | Seoul | Asia-Pacific | Skylake, SAP-certified, Broadwell |
 | SJC03 | San Jose | NA West | Skylake, Broadwell |
 | SJC04 | San Jose | NA West | Skylake, Broadwell |
-| SNG01 | Singapore | Asia Pacific | Skylake, Broadwell |
-| SYD01 | Sydney | Asia Pacific | Skylake, Broadwell |
-| SYD04 | Sydney | Asia Pacific | Skylake, SAP-certified, Broadwell |
-| TOK02 | Tokyo | Asia Pacific | Skylake, SAP-certified, Broadwell |
+| SNG01 | Singapore | Asia-Pacific | Skylake, Broadwell |
+| SYD01 | Sydney | Asia-Pacific | Skylake, Broadwell |
+| SYD04 | Sydney | Asia-Pacific | Skylake, SAP-certified, Broadwell |
+| TOK02 | Tokyo | Asia-Pacific | Skylake, SAP-certified, Broadwell |
 | TOR01 | Toronto | NA East | Skylake, SAP-certified, Broadwell |
 | WDC04 | Washington, DC | NA East | Skylake, SAP-certified, Broadwell |
 | WDC06 | Washington, DC | NA East | Skylake, SAP-certified, Broadwell |

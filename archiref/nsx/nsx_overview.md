@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -22,12 +22,12 @@ Table 1. Features available with the NSX Edge Service Gateway
 
 | Feature | Description |
 |:------- |:----------- |
-| NSX Edge Service Routing | Provides the necessary forwarding information between layer 2 broadcast domains, thereby allowing you to decrease layer 2 broadcast domains and improve network efficiency and scale. NSX extends this intelligence to where the workloads reside for doing East-West routing. This allows more direct virtual machine to virtual machine communication without the costly or timely need to extend hops. At the same time, NSX also provides North-South connectivity, thereby enabling tenants to access public networks. |
+| NSX Edge Service Routing | Provides the necessary forwarding information between layer 2 broadcast domains, allowing you to decrease layer 2 broadcast domains and improve network efficiency and scale. NSX extends this intelligence to where the workloads reside for doing East-West routing. This allows more direct virtual machine to virtual machine communication without the costly or timely need to extend hops. At the same time, NSX also provides North-South connectivity, enabling tenants to access public networks. |
 | Firewall | The supported rules of the firewall include IP 5-tuple configuration with IP and port ranges for stateful inspection for all protocols. |
-| NAT | Provides separate controls for Source and Destination IP addresses, as well as port translation. |
+| NAT | Provides separate controls for Source and Destination IP addresses and port translation. |
 | DHCP | Provides configuration of IP pools, gateways, DNS servers, and search domains. |
 | Site-to-Site VPN | Uses standardized IPSec protocol settings to inter-operate with all major VPN vendors. |
-| L2VPN | Provides the ability to stretch L2 networks across L3 topologies. |
+| L2VPN | Stretches L2 networks across L3 topologies. |
 | SSL VPN-Plus |  SSL VPN-Plus enables remote users to connect securely to private networks behind an NSX Edge gateway. |
 | Load Balancing | Provides simple and dynamically configurable virtual IP addresses and server groups. |
 | High Availability | Ensures an active NSX Edge on the network in case the primary NSX Edge virtual machine is unavailable. |

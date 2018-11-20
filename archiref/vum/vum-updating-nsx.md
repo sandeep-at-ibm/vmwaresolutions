@@ -4,29 +4,29 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
 # Updating NSX
 
-This section was added to this document to give you a flavor of the updating process for NSX. You should refer to the VMware guide for the update process for the NSX version that you are upgrading to.
+The following information is an example of the update process for NSX. Refer to the VMware guide for the update process for the NSX version that you are upgrading to.
 
 If you need to upgrade both NSX and vSphere, VMware recommends completing the NSX upgrade first, and then completing the vSphere upgrade as NSX VIBs are specific to the version of ESXi that is installed on the host. However, it is recommended to use VUM, as documented in this document if done manually use the following workflow, one host at a time:
 
-1. **Upgrade ESXi** - Once the ESXi upgrade completes, the host exits maintenance mode, however, you cannot move VMs connected to logical switches to the host until the next step has completed.
-2. **Upgrade NSX VIBs** - Once the VIBs are upgraded and the host has been removed from maintenance mode, you can move VMs connected to logical switches to the host.
+1. **Upgrade ESXi** - After the ESXi upgrade completes, the host exits maintenance mode, however, you cannot move VMs connected to logical switches to the host until the next step is complete.
+2. **Upgrade NSX VIBs** - After the VIBs are upgraded and the host is removed from maintenance mode, you can move VMs connected to logical switches to the host.
 
 NSX is updated by updating NSX Manager by using a download from _my.vmware.com_. Therefore, you need an account to the download the update. If you are consuming {{site.data.keyword.cloud}} subscription licensing with your VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance, you will not be able to download the updates with your **my.vmware.com** account. Therefore, you need to [contact IBM Support](../../vmonic/trbl_support.html).
 
-Before beginning the upgrade, check the release notes as known upgrade issues and workarounds are documented in these NSX release notes. Using the release notes, verify that vCenter meets the new system requirements for NSX.
+Before you begin the upgrade, check the NSX notes for upgrade issues and workarounds. Using the release notes, verify that vCenter meets the new system requirements for NSX.
 
-If you installed any additional software from VMware partners, consult the partner documentation for compatibility and upgrade details. If you have deployed vCenter Server primary and secondary instances and have a cross-vCenter NSX environment, refer to the release notes foe the correct upgrade process.
+If you installed any additional software from VMware business partners, consult the business partner documentation for compatibility and upgrade details. If you deployed vCenter Server primary and secondary instances and have a cross-vCenter NSX environment, refer to the release notes foe the correct upgrade process.
 
 In a cross-vCenter NSX environment, the Primary NSX Manager appliance is updated first, followed by all the secondary NSX Manager appliances.
-**Downgrades are not supported**, so take a backup of NSX Manager before proceeding with an upgrade, all NSX Edge configurations, logical routers, and edge services gateways are backed up as part of the NSX Manager backup.
+**Downgrades are not supported**, so take a backup of NSX Manager before you proceed with an upgrade, all NSX Edge configurations, logical routers, and edge services gateways are backed up as part of the NSX Manager backup.
 
-Once NSX Manager has been upgraded successfully, NSX cannot be downgraded. It is advised that any maintenance activities are carried out in an agreed maintenance window, therefore, follow your enterprise guidance. It is recommended that all NSX components are upgraded in a single outage window to minimize downtime and reduce functionality issues. The NSX upgrade process can take some time, so it is important to understand the NSX deployment upgrade order:
+After NSX Manager is upgraded successfully, NSX cannot be downgraded. It is advised that any maintenance activities are carried out in an agreed maintenance window, therefore, follow your enterprise guidance. It is recommended that all NSX components are upgraded in a single outage window to minimize downtime and reduce functionality issues. The NSX upgrade process can take some time, so it is important to understand the NSX deployment upgrade order:
 * NSX Manager
 * NSX Controller Cluster
 * NSX Host Clusters
@@ -43,11 +43,11 @@ The workflow is as follows:
   - Log in to the NSX Manager Virtual Appliance, by using the IP address and credentials that are documented in the IC4VS Console, and click the Upgrade button on the home page.
   - Log in to the NSX Manager.
   - Under **Appliance Management**, click **Backups & Restore**.
-  - Click Backup and enter an appropriate file name. Note that VMware recommends reinstalling the NSX Manager appliance before restoring NSX Manager data. While a restore operation on an existing NSX Manager appliance might work, it is not officially supported. The best practice is to take note of the IP settings for the NSX Manager appliance so that they can be used to specify IP information and backup location information for the newly deployed NSX Manager appliance.
+  - Click Backup and enter an appropriate file name. VMware recommends that you reinstall the NSX Manager appliance before you restore NSX Manager data. While a restore operation on an existing NSX Manager appliance might work, it isn't officially supported. The best practice is to take note of the IP settings for the NSX Manager appliance so that they can be used to specify IP information and backup location information for the newly deployed NSX Manager appliance.
   - On the upper-right, click the **Upload Bundle** and upload the file that you downloaded from _my.vmware.com_.
   - Read the upgrade information and select if you want to enable SSH and participate in the VMware Customer Experience Improvement Program.
   - Click **Upgrade**.
-  - When the upload completes, you will be redirected to the NSX Manager login page. Login back in and verify that the current software version displays is correct.
+  - When the upload completes, you are redirected to the NSX Manager login page. Login back in and verify that the current software version displays is correct.
 7. **Upgrade the NSX Controller Cluster**:
   - Open the vSphere Web Client and log in to the VCSA.
   - Navigate to **Home** > **Networking & Security** > **Installation**, select the **Management tab**, and click **Upgrade Available** in the Controller Cluster Status column.
@@ -64,4 +64,4 @@ The workflow is as follows:
 ### Related links
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

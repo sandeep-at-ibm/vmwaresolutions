@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -32,7 +32,7 @@ All instance types provide deployment choices for VMware virtual environments. H
 
 * When you order a VMware vCenter Server instance, you deploy a VMware virtual environment with customized compute, storage, and network resources. For more information about the deployed components, see [Technical specifications for vCenter Server instances](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 * When you order a VMware Cloud Foundation instance, you deploy a unified software-defined data center (SDDC) platform. For more information about the deployed components, see [Technical specifications for Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
-* When you order a VMware vSphere cluster, you obtain the maximum of flexibility to design and build your hosted VMware environment while incorporating VMware-compatible hardware. However, {{site.data.keyword.cloud_notm}} does not automate the installation, configuration, and bring-up of the optional VMware components for the VMware vSphere cluster.
+* When you order a VMware vSphere cluster, you obtain the maximum of flexibility to design and build your hosted VMware environment while you incorporate VMware-compatible hardware. However, {{site.data.keyword.cloud_notm}} does not automate the installation, configuration, and bring-up of the optional VMware components for the VMware vSphere cluster.
 * The functions that are supported for vCenter Server instances, Cloud Foundation instances, and vSphere clusters are different. For more information, see [Offering comparison chart](inst_comp_chart.html).
 
 ## What is included in a vCenter Server instance?
@@ -66,26 +66,33 @@ For vCenter Server instances, the first cluster that is created during deploymen
 
 **Note:** For Cloud Foundation instances, the default cluster name cannot be changed.
 
-##How are patches managed?
+## How are patches managed?
 
 IBM provides ongoing updates to the IBM code by deploying the IBM CloudDriver virtual server instance (VSI) on demand. IBM does not provide ongoing updates to add-on services such as Zerto on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}}. Obtaining and installing these updates is your responsibility.
 
-VMware updates are applied in a different manner based on the type of VMware instance you have deployed:
+VMware updates are applied in a different manner based on the instance type.
 
-* For VMware Cloud Foundation instances, the updates to vSphere ESXi, NSX, vCenter, Platform Services Controller, and SDDC Manager components are provided through the {{site.data.keyword.vmwaresolutions_short}} console.
-* For VMware vCenter Server instances:
-  * For instances deployed at, or upgraded to, V2.1 or higher, newly deployed ESXi servers and clusters will be patched with recent, but not necessarily the latest, ESXi updates from VMware.
-  * You are responsible for all other updates to VMware components, including ensuring that newly deployed ESXi servers and clusters have all the most recent updates you require.
-  * For instances that were deployed at V2.0 or higher, VMware Update Manager (VUM) is integrated into your vCenter server. You can configure VUM to download ESXi updates from VMware.
+### VMware Cloud Foundation instances
+
+The updates to vSphere ESXi, NSX, vCenter, Platform Services Controller, and SDDC Manager components are provided through the {{site.data.keyword.vmwaresolutions_short}} console.
+
+### VMware vCenter Server instances
+
+For instances deployed in or upgraded to V2.1 or higher, newly deployed ESXi servers and clusters are patched with recent, but not necessarily the latest, ESXi updates from VMware.
+
+**Important**: You are responsible for all other updates to VMware components, including ensuring that newly deployed ESXi servers and clusters have all the most recent updates you require.
+
+For instances that were deployed at V2.0 or higher, VMware Update Manager (VUM) is integrated into your vCenter server. You can configure VUM to download ESXi updates from VMware.
 
 For more information, see the following resources:
 * [VMware Support](https://www.vmware.com/support.html)
 * [Applying updates to vCenter Server instances](../vcenter/vc_applyingupdates.html)
 * [Applying updates to Cloud Foundation instances](../sddc/sd_applyingupdates.html)
+* [Applying updates to vCenter Server with Hybridity Bundle instances](../vcenter/vc_hybrid_applyingupdates.html)
 
 ## Does the management services NSX Edge pose a security risk?
 
-Although the VMware NSX Edge for management services is on a public subnet, security measures are in place to ensure that it does not pose a security risk. These measures are:
+Although the VMware NSX Edge for management services is on a public subnet, the following security measures are in place to ensure that it does not pose a security risk:
 *  The NSX Edge firewall is configured to allow only outgoing HTTPS (TCP port 443) traffic that is initiated by the management virtual machines.
 *  SNAT (source network address translation) is used so that private IP addresses are not visible outside the private network.
 *  Remote access for the management services NSX Edge appliance is disabled.

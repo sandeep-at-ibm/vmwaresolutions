@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-30"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -47,9 +47,9 @@ Varial | Inward<br>outward |
 
 ## Language rules
 
-The following ruleset constructs the language. Tricks are divided into one or more combinations of elements that are referred to as a “Combo”. There is a difference between the first Combo and subsequent Combos in the sense that the direction is assumed to be the same as in the base Combo unless otherwise specified.
+The following ruleset constructs the language. Tricks are divided into one or more combinations of elements that are referred to as a “Combo”. There's a difference between the first Combo and the following Combos in the sense that the direction is assumed to be the same as in the base Combo unless otherwise specified.
 
-For the following rules, see the Core Elements and Element Modifiers as a reference as they are used to construct the language.
+For the following rules, see the Core Elements and Element Modifiers as a reference as they're used to construct the language.
 
 ### Trick ruleset
 
@@ -62,14 +62,14 @@ For the following rules, see the Core Elements and Element Modifiers as a refere
 
 ### Trick rule engine
 
-The following is a visual summary of the rule engine.
+The following diagram is a visual summary of the rule engine.
 
 Figure 1. Skate language overview
 ![Skate Language Overview](vcscar-skate-language.svg)
 
 ## Sample trick language
 
-The following is a list of sample tricks:
+The following example is a list of sample tricks:
 
 ```
 
@@ -139,8 +139,8 @@ nollie-heelflip to frontside-boardslide
 
 ## Relevance
 
-The Trick Language is the key construct that we will use to train Watson to recognize and ingest skating documents and media and also forms the basis of conversations with the end user.
+The Trick Language is the key construct that is used to train Watson to recognize and ingest skating documents and media and also forms the basis of conversations with the user.
 
 ### Related links
 
-* [VCS Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)  
+* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)  

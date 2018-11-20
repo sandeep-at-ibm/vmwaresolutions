@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-08"
 
 ## Backup
 
-### VCS backup
+### VMware vCenter Server on IBM Cloud backup
 
 As part of {{site.data.keyword.vmwaresolutions_full}}, Veeam backup software is optionally deployed on an {{site.data.keyword.cloud_notm}} virtual server instance (VSI) by using {{site.data.keyword.cloud_notm}} Endurance storage outside the VMware cluster. The purpose of this software is to back up the management components in the solution. [Veeam on {{site.data.keyword.cloud_notm}} overview](../../services/veeam_considerations.html) provides details about offering.
 
@@ -48,7 +48,7 @@ Backup of the etcd database is provided to the customer as part of the managed s
 
 ## Scalability
 
-### VCS Scalability
+### vCenter Server Scalability
 
 After the deployment of the initial hosts, users can scale out the compute capacity from within the {{site.data.keyword.cloud_notm}} for VMware portal.
 
@@ -93,4 +93,4 @@ Application deployments into IKS are possible by using the following methods:
 
 ### Related links
 
-* [VCS Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)

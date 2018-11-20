@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -16,21 +16,9 @@ You can sign up for an {{site.data.keyword.cloud}} account by using an existing 
 
 ## Signing up for an IBM Cloud infrastructure (SoftLayer) account
 
-The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, which was previously known as the IBM SoftLayer account, is used to log in to the {{site.data.keyword.cloud_notm}} infrastructure customer portal that provides some additional function to manage infrastructure products and services. To sign up for an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, upgrade your {{site.data.keyword.cloud_notm}} account to the Pay-As-You-Go type of account.
+The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, which was previously known as the IBM SoftLayer account, is used to log in to the {{site.data.keyword.cloud_notm}} infrastructure customer portal that provides some additional function to manage infrastructure products and services.
 
-### Procedure to sign up for an IBM Cloud account
-
-1. Log in to the {{site.data.keyword.vmwaresolutions_short}} console with your **IBMid**.
-2. At the left side of the banner, click **Manage > Billing and Usage > Billing**.
-3. Click **Add Credit Card**.
-4. Enter the billing information and credit card information.
-5. Read the cloud services terms. Ensure that you agree with them before the upgrade.
-6. Select the **I accept the Cloud Services terms** check box.
-7. Click **Next**.
-8. Review the personal information, billing address, and credit card information.
-9. Click **Done**. You are notified by email when your account setup is in process.
-10. When you are notified by email that your account is ready, go to the {{site.data.keyword.slportal}} and click **Log in with IBMid**.
-    You are then automatically logged in.
+To sign up for an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, upgrade your {{site.data.keyword.cloud_notm}} account to the Pay-As-You-Go type of account. For more information, see [How do I upgrade or change my account type?](https://console.bluemix.net/docs/account/account_faq.html#changeacct)
 
 ### Related links
 
