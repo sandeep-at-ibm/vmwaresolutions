@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -40,7 +40,7 @@ Complete the following steps to manage access to your {{site.data.keyword.cloud_
 - Access instance management endpoints by using the [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) or your [{{site.data.keyword.cloud_notm}} Direct-Link connection](https://www.ibm.com/cloud/direct-link).
 - Devise a strategy for public network connectivity from within your instance. Your options include: the sample customer VMware NSX Edge Services Gateway (ESG), gateway appliances such as Vyatta and FortiGate, and proxy servers deployed in the {{site.data.keyword.cloud_notm}} network or on your own network accessed through DirectLink.
 - Plan whether to deploy your workload on {{site.data.keyword.cloud_notm}} VLANs with [{{site.data.keyword.cloud_notm}} portable IP addresses](https://console.bluemix.net/docs/infrastructure/subnets/getting-started.html) or [on NSX logical switches (VXLANs) using your own IP addresses](../nsx/nsx_overview.html). Note that using NSX software-defined networking (SDN) gives you the greatest flexibility to manage and secure your workload network in the {{site.data.keyword.cloud_notm}}.
-- Use NSX ESGs, [IBM Cloud Vyatta](https://console.bluemix.net/catalog/infrastructure/virtual-router-appliance), and DirectLink peering to plan for connectivity to workloads (Network Address Translation, Virtual Private Network, routing).
+- Use NSX ESGs, [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance), and DirectLink peering to plan for connectivity to workloads (Network Address Translation, Virtual Private Network, routing).
 - If implementing Cross-vCenter NSX, ensure that your local segment ID ranges are not overlapping before deploying any local workloads.
 
 ## Security planning and hardening
