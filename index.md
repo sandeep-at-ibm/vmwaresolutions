@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -166,7 +166,7 @@ Review and choose add-on services for your deployment offering.
 The {{site.data.keyword.vmwaresolutions_short}} console is the interface where you order and manage your deployments. Each deployment is managed as an instance in the console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.cloud_notm}} infrastructure customer portal.
 
 To access the {{site.data.keyword.vmwaresolutions_short}} console:
-1. Go to https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
+1. Go to https://console.ng.cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Log in to the console with your **IBMid**.
 
 ## Step 2: Configuring your user account and settings
