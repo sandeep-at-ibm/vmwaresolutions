@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -22,11 +22,11 @@ When you scan hosts, virtual machines (VMs), and virtual appliances, you evaluat
 2. When the scan completes, select **Critical Host Patches**. In the lower pane, review the patch details for each host by clicking the number in **Number of Patches**. A window shows the patch information.
 3. Review and repeat for **Non-Critical Patches**.
 
-  The VUM log files are located at _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
+  The VUM log files are located at the following path: _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
 ## Manually initiating a scan of virtual machines and virtual appliances
 
-You can scan VMs and virtual appliances in the vSphere inventory against attached baselines and baseline groups. The VMs and appliances that you select are scanned against the attached baselines, depending on the options that you select. All child objects are also scanned, so the larger the virtual infrastructure and the higher up in the object hierarchy that you initiate the scan, the longer the scan takes and the more accurate the compliance view is.
+You can scan VMs and virtual appliances in the vSphere inventory against attached baselines and baseline groups. The VMs and appliances that you select are scanned against the attached baselines, depending on the options that you select. All child objects are  scanned, so the larger the virtual infrastructure and the higher up in the object hierarchy that you initiate the scan, the longer the scan takes and the more accurate the compliance view is.
 
 1.	Using the vSphere Web Client, select **Home** > **VMs and Templates**.
 2.	Right-click a _virtual machine_, _virtual appliance_, or a _folder of virtual machines and appliances_ and click **Scan for Updates**.
@@ -45,7 +45,7 @@ Start a simultaneous scan of hosts, VMs, and virtual appliances, by scanning a c
 
 You can configure the vSphere Web Client to scan VMs, virtual appliances, and vSphere ESXi hosts at specific times or at intervals that are convenient for you.
 
-1.	Using the vSphere Web Client select an object from the inventory. All child objects of the object that you select are also scanned.
+1.	Using the vSphere Web Client, select an object from the inventory. All child objects of the object that you select are also scanned.
 2.	Select the **Monitor tab** and click **Task & Events**.
 3.	Select **Scheduled Tasks** and click **Schedule a New Task**.
 4.	Select **Scan for Updates** from the drop-down list that appears. The Scan for Updates wizard opens.
@@ -56,4 +56,4 @@ You can configure the vSphere Web Client to scan VMs, virtual appliances, and vS
 ### Related links
 
 * [VMware HCX on 	{{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

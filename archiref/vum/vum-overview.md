@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -34,11 +34,11 @@ Therefore, the VUM process is as follows:
 The downloading of upgrades, host patches, extensions, and related metadata is a predefined automatic process that can be modified. By default, at regular configurable intervals, VUM contacts VMware or third-party sources to gather the following about available upgrades, patches, or extensions:
 
 * Metadata about all ESXi 5.5 and ESXi 6.x patches regardless of whether you have hosts of such versions in your environment.
-* Metadata about ESXi 5.5 and ESXi 6.x patches as well as about extensions from third-party vendor URL addresses.
+* Metadata about ESXi 5.5 and ESXi 6.x patches and about extensions from third-party vendor URL addresses.
 * Notifications, alerts, and patch recalls for ESXi 5.5 and ESXi 6.x hosts.
 * Metadata about upgrades for virtual appliances.
 
-VUM supports the recall of patches for hosts that are running ESXi 5.0 or later. A patch is recalled if the released patch has problems or potential issues. After you scan the hosts in your VMware vCenter Server on {{site.data.keyword.cloud}} instance, VUM alerts you if the recalled patch has been installed on a certain host. Recalled patches cannot be installed on hosts with VUM. VUM also deletes all the recalled patches from the patch repository. After a patch fixing the problem is released, VUM downloads the new patch to its patch repository. If you have already installed the problematic patch, VUM notifies you that a fix was released and prompts you to apply the new patch.
+VUM supports the recall of patches for hosts that are running ESXi 5.0 or later. A patch is recalled if the released patch has problems or potential issues. After you scan the hosts in your VMware vCenter Server on {{site.data.keyword.cloud}} instance, VUM alerts you if the recalled patch is installed on a certain host. Recalled patches cannot be installed on hosts with VUM. VUM also deletes all the recalled patches from the patch repository. After a patch fix the problem is released, VUM downloads the new patch to its patch repository. If you have installed the problematic patch, VUM notifies you that a fix was released and prompts you to apply the new patch.
 
 The VUM client interface provides two main views:
 *	Administration View
@@ -64,4 +64,4 @@ The compliance view of a selected inventory object is accessed by navigating to 
 ### Related links
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

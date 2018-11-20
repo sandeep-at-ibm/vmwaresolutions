@@ -4,19 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-19"
 
 ---
 
 # Initial configuration
 
-The IC4VS automation configures the VCSA with a default gateway set to the {{site.data.keyword.cloud}} Backend Customer Router (BCR). However, there is no route to the Internet via the BCR. The standard route to the Internet from the VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance is via the Management ESG. As it is not advised to change the configuration of the VCSA or the Management ESG, a proxy server implementation on the customer subnet is recommended to enable VUM.
+The IC4VS automation configures the VCSA with a default gateway set to the {{site.data.keyword.cloud}} Backend Customer Router (BCR). However, there's no route to the internet via the BCR. The standard route to the internet from the VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance is via the Management ESG. As it isn't advised to change the configuration of the VCSA or the Management ESG, a proxy server implementation on the customer subnet is recommended to enable VUM.
 
-This approach means that the VCSA or the Management ESG do not have to be reconfigured, however, a small virtual machine (VM) or appliance needs to be installed. A proxy server is a system, which sits between two endpoint devices and acts as an intermediate device. In this case, it sits between VUM and the update servers at VMware.
+This approach means that you don't have to reconfigure the VCSA or the Management ESG, however, a small virtual machine (VM) or appliance must be installed. A proxy server is a system, which sits between two endpoint devices and acts as an intermediate device. In this case, it sits between VUM and the update servers at VMware.
 
-When VUM requests a resource from the update server at VMware, the request is sent to the proxy server first and the proxy server then sends the request to the update server. Once the resource is obtained by the proxy server, it sends the resource to VUM. A proxy server can be used to facilitate security, administrative controls, and caching services.
+When VUM requests a resource from the update server at VMware, the request is sent to the proxy server first and the proxy server then sends the request to the update server. After the resource is obtained by the proxy server, it sends the resource to VUM. A proxy server can be used to facilitate security, administrative controls, and caching services.
 
-This document describes the use of a proxy server based on CentOS and Squid. Squid Proxy is an open source caching proxy for the web and supports many protocols including HTTP and HTTPS. There are a number of VM and appliance-based proxies that are available, and you should select the appropriate one based on your enterprise’s requirements and install and configure following the vendor’s guidance. Clients electing to use a CentOS/Squid implementation should continue with the process below.
+This document describes the use of a proxy server based on CentOS and Squid. Squid Proxy is an open source caching proxy for the web and supports many protocols that include HTTP and HTTPS. A number of VM and appliance-based proxies are available, and you must select the appropriate one based on your enterprise’s requirements and install and configure following the vendor’s guidance. Clients electing to use a CentOS/Squid implementation should continue with the following process.
 
 * Download the CentOS ISO to a jump server
 * Create a vCenter Library
@@ -33,7 +33,7 @@ Table 1. Deployment values
 | Proxy RAM | 2 GB | Squid has no minimum requirements |
 | Proxy Disk | 25 | GB	Squid has no minimum requirements |
 | Hostname | Proxy01 | |
-| Address | proxy ip | A spare IP address should be used from the Customer, private portable subnet assigned during the provisioning process. Only two IP addresses would have been reserved on this subnet; one for the BCR and the other for the customer-esg
+| Address | proxy ip | A spare IP address must be used from the Customer, private portable subnet assigned during the provisioning process. Only two IP addresses would have been reserved on this subnet; one for the BCR and the other for the customer-esg
 | Netmask | 255.255.255.192 | |
 | Gateway| customer-nsx-edge private uplink ip | This is the default gateway setting for the proxy server, which is the private uplink IP address of customer-nsx-edge. The IP address can be found by reviewing the **Settings** tab for **customer-nsx-edge**. |
 | DNS Server | AD/DNS ip | This IP address can be found on the instance page in the {{site.data.keyword.vmwaresolutions_short}} console, the **Deployed Instances** page. |
@@ -82,8 +82,8 @@ Create a local vCenter content library. The library is accessible only in the vC
 1. Via the vSphere Web Client, navigate to **Home** > **Content library** > **Objects** > **Create a new content library** > **Create subscribed library on the vCenter**.
 2. Enter a name for the content library, for example, ISO, and in the Notes text box, enter a description for the library and click **Next**.
 3. Select **Local content library** and click **Next**.
-4. Select a datastore and then click a suitable datastore for example, vsanDatastore.
-5. Review the information on the Ready to Complete page and click **Finish**.
+4. Select a datastore and then click a suitable datastore, for example, vsanDatastore.
+5. Review the information on the **Ready to Complete** page and click **Finish**.
 
 ### Configuring the Proxy VM, install CentOS and Squid
 
@@ -97,7 +97,7 @@ This activity has the following tasks:
 
 This task creates a new VM ready for use as the proxy server. The settings from Table 1 Deployment Values should be used to populate the configuration.
 
-1.	Via the vSphere Web Client navigate to **Home** > **VMs and Templates**.
+1.	Via the vSphere Web Client, navigate to **Home** > **VMs and Templates**.
 2.	In the Navigator pane, click **datacenter1** and then right-click and select; **New Virtual Machine** > **New Virtual Machine**.
 3.	Select **Create a new Virtual Machine** and then click **Next**.
 4.	Enter a Name for the VM, for example, Proxy01, and select **datacenter1**, then click **Next**.
@@ -114,27 +114,27 @@ This task creates a new VM ready for use as the proxy server. The settings from 
 This task installs and configures the newly created VM ready for the Squid installation
 
 1.	In the Navigator pane of the vSphere Web Client select the **VM** just created, Proxy01 and then select the **Summary Tab**.
-2.	Press the **"Play"** button to power on the VM.
-3.	The VM will now power on and boot from the CentOS 7 ISO. Start either a **Remote Console or Web Console** to the VM. Please note Remote Console must be installed and the system that is running the web browser must resolve the vSphere ESXi hosts by name.
-4.	At the Welcome to CentOS 7 screen select your required language and click **Continue**.
-5.	At the **LOCALIZATION** screen, click on **DATE & TIME** and select your time zone and then click **Done**.
-6.	At the **LOCALIZATION** screen, click on **KEYBOARD** to change from the default, if required and then press **Done**.
-7.	At the **LOCALIZATION** screen, click on **INSTALLATION DESTINATION**, click on the **VMware virtual disk icon** and then click on **Done**.
-8.	At the **LOCALIZATION** screen, click on **NETWORK & HOSTNAME**, change the Host name to your chosen hostname for example, Proxy01.
-9.	Click the **Configure** button, then **IPv4 Settings** and in the **Method** box select **Manual**.
+2.	Click **"Play"** to power on the VM.
+3.	The VM powers on and boot from the CentOS 7 ISO. Start either a **Remote Console or Web Console** to the VM. You must install Remote Console and the system that is running the web browser must resolve the vSphere ESXi hosts by name.
+4.	On the Welcome to CentOS 7 screen, select your required language and click **Continue**.
+5.	At the **LOCALIZATION** screen, click **DATE & TIME** and select your time zone and then click **Done**.
+6.	At the **LOCALIZATION** screen, click **KEYBOARD** to change from the default, if required and then press **Done**.
+7.	At the **LOCALIZATION** screen, click **INSTALLATION DESTINATION**, click the **VMware virtual disk icon** and then click **Done**.
+8.	At the **LOCALIZATION** screen, click **NETWORK & HOSTNAME**, change the Host name to your chosen hostname for example, Proxy01.
+9.	Click **Configure**, then **IPv4 Settings**. In the **Method** box, select **Manual**.
 10.	Using the **Add** button insert _Address Netmask_ and _Gateway_ from _Table 1 – Deployment Values_.
 11.	Enter the _DNS server IP address_ from Table 1 – Deployment Values.
 12.	Click the **Routes** button and add the following static routes; _10.0.0.0/8 and 161.26.0.0/16_ with a gateway IP address of the _BCR IP Address_ from Table 1 Deployment Values, as the gateway. This static route allows the proxy server to reach the DNS server.
 13.	Click **Save** and then ensure that the Ethernet interface is On and showing as connected. Click **Done** and **Begin Installation**.
 14.	As the installation continues, set a root password and set up a user.
-15.	When the installation is complete, log in as the user and then enter the command _ping vmware.com_. The name should be resolved to an IP address and you should get response. If you do not get responses check; IP addresses, firewall rules and NAT settings.
+15.	When the installation is complete, log in as the user and then enter the command _ping vmware.com_. The name is resolved to an IP address and you receive a response. If you do not get responses check; IP addresses, firewall rules and NAT settings.
 
 #### Install and configure Squid
 
-Squid does not have any minimum hardware requirements, but the amount of RAM might vary according to the users accessing the Internet through your proxy and the objects that are stored in the cache. As the proxy server is accessed only by VUM and the cache is not enabled, only a small VM has been configured.
+Squid does not have any minimum hardware requirements, but the amount of RAM might vary according to the users that are accessing the internet through your proxy and the objects that are stored in the cache. As the proxy server is accessed only by VUM and the cache is not enabled, only a small VM is configured.
 
 1. Using either the Web Console or Remote Console from the vSphere Web Client, log in to the proxy server as the user and then `su` to root.
-2. Before installing any packages, it is recommended to update the system and packages by using the following command:
+2. Before you install any packages, you must use the following command to update the system and packages:
   `yum -y update`
 
 3. To install Squid, you need to install EPEL repository to the system as Squid is not available in the default yum repository. Run the following command to install the EPEL repository:
@@ -146,15 +146,15 @@ Squid does not have any minimum hardware requirements, but the amount of RAM mig
   `yum clean all`
 
 5. Squid is installed by using the following command: `yum -y install squid`.
-6. Once installed, start Squid immediately by using the following command: `systemctl start squid`.
-7. To automatically start Squid at boot time run the following command: `systemctl enable squid`.
-8. Ensure that Squid is running by running the following command: `systemctl status squid`.
+6. After installed, start Squid immediately by using the following command: `systemctl start squid`.
+7. Run the following command to automatically start Squid at boot time run the following command: `systemctl enable squid`.
+8. Run the following command to ensure that Squid is running: `systemctl status squid`.
 9. The CentOS firewall needs to allow access to the Squid port, TCP 3128 by using the following command:  `firewall-cmd –add-port=3128/tcp –permanent`.
 10.	To save the rule and restart the service, use the following command: `firewall-cmd –reload`.
 
 ## The initial setup of VUM
 
-Configure VUM to use the proxy server to access the repositories on the Internet.
+Configure VUM to use the proxy server to access the repositories on the internet.
 1. Using the vSphere Web Client navigate to **Home** > **Update Manager**. Click your vCenter Server.
 2. Select the **Manage Tab** and click the **Settings** button.
 3. Select **Download Settings** and then under _Proxy settings_ click **Edit**.
@@ -164,4 +164,4 @@ Configure VUM to use the proxy server to access the repositories on the Internet
 ### Related links
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

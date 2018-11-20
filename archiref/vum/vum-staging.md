@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -16,17 +16,17 @@ lastupdated: "2018-11-07"
 
 Patches and extensions can be optionally staged before remediation to ensure that they are downloaded from VUM to the vSphere ESXi host without applying the patches or extensions immediately. During remediation, VUM applies the patches, extensions, and upgrades to the inventory objects. Staging patches and extensions accelerates the remediation process because the patches and extensions are already available locally on the hosts.
 
-If during the remediation process any host fails to enter maintenance mode, VUM will report an error and the remediation process stops and fails. The vSphere ESXi hosts that have already been remediated remain at the updated level.
+If during the remediation process any host fails to enter maintenance mode, VUM reports an error and the remediation process stops and fails. The vSphere ESXi hosts that are already remediated remain at the updated level.
 
-For the remediation process to work smoothly, it is advisable to disable some of the cluster features such as DPM, HA Admission Control, Fault Tolerance  as well as disconnecting any removable devices from the virtual machines (VMs) so that DRS should not face any issues while migrating VMs to other hosts.
-Also, while running the remediation wizard, you can Generate Reports to verify that there are no inconsistent settings present at host/VM level that can cause the remediation process to fail.
+For the remediation process to work smoothly, it's advisable to disable some of the cluster features such as DPM, HA Admission Control, Fault Tolerance, and disconnecting any removable devices from the virtual machines (VMs) to avoid DRS issues while you migrate VMs to other hosts.
+Also, while you run the remediation wizard, you can Generate Reports to verify that there are no inconsistent settings present at host/VM level that can cause the remediation process to fail.
 
 1.	Using the vSphere Web Client, select **Home** > **Hosts and Clusters**.
 2.	Right-click a datacenter, cluster, or a host, and click **Stage Patches**.
 3.	On the Baseline Selection page of the Stage wizard, select the patch and extension baselines to stage.
-4.	Select the hosts where patches and extensions will be applied and click **Next**. If you selected to stage patches and extensions to a single host, it is selected by default.
-5.	Optionally, deselect the patches and extensions to exclude from the stage operation. To search within the list of patches and extensions, enter text in the text box in the Filter box. Click **Next**.
-6.	Review the Ready to Complete page and click **Finish**.
+4.	Select the hosts where patches and extensions are applied and click **Next**. If you selected to stage patches and extensions to a single host, it is selected by default.
+5.	Optionally, clear the patches and extensions to exclude from the stage operation. To search within the list of patches and extensions, enter text in the text box in the Filter box. Click **Next**.
+6.	Review the **Ready to Complete** page and click **Finish**.
 
 The number of the staged patches and extensions for the specific host is displayed in the Patches and Extensions columns in the bottom pane of the Update Manager tab. After a remediation is successfully completed, all staged patches and extensions, whether installed or not during the remediation, will be deleted from the host.
 Remediation is the process in which VUM applies patches, extensions, and upgrades to vSphere ESXi hosts, VMs, or virtual appliances after a scan is complete and makes the selected objects compliant. You can remediate single hosts, VMs, or virtual appliances or at a folder, cluster, or a data center level. VUM supports remediation for the following inventory objects by using either manual remediation or scheduled remediation:
@@ -41,15 +41,15 @@ Be aware of the following behavior for hosts that are part of a vSAN cluster:
 * The host remediation process might take an extensive amount of time to complete.
 * By design, only one host from a VSAN cluster can be in a maintenance mode at any time.
 * VUM remediates hosts that are part of a VSAN cluster sequentially even if you set the option to remediate the hosts in parallel.
-* Any VM on the host that uses a VM storage policy with a setting for "Number of failures to tolerate=0", the host might experience unusual delays when entering maintenance mode. The delay occurs because vSAN must migrate the VM data from one disk to another in the vSAN datastore cluster and this can take many hours. You can work around this by setting the "Number of failures to tolerate=1" for the VM storage policy, which results in creating two copies of the VM files in the vSAN datastore.
-* Any VM on the host that uses a VM storage policy with a setting for "Number of failures to tolerate=1", then the VM will become non-redundant when the host enters maintenance mode. If this is not acceptable, see [Virtual machine vSAN redundancy](vum-vsan-redundancy.html).
+* Any VM on the host that uses a VM storage policy with a setting for "Number of failures to tolerate=0", the host might experience unusual delays when it enters maintenance mode. The delay occurs because vSAN must migrate the VM data from one disk to another in the vSAN datastore cluster and this can take many hours. You can work around this by setting the "Number of failures to tolerate=1" for the VM storage policy, which results in creating two copies of the VM files in the vSAN datastore.
+* Any VM on the host that uses a VM storage policy with a setting for "Number of failures to tolerate=1", then the VM becomes non-redundant when the host enters maintenance mode. If this is not acceptable, see [Virtual machine vSAN redundancy](vum-vsan-redundancy.html).
 
 To remediate hosts and clusters, follow these steps:
 1.	Use the vSphere Web Client, select **Home** > **Hosts and Clusters**.
 2.	From the inventory object navigator, select a data center, a cluster, or a host, click the **Update Manager** tab and click **Remediate**. If you selected a container object, all hosts under the selected object are remediated. The Remediate wizard opens.
 3.	Select **Patch Baselines** or **Extension Baselines** depending on what type of update you want to perform on the host. On the Select baseline page of the Remediate wizard, select the **baseline group** and **baselines** to apply.
-4.	Select the target hosts that you want to remediate and click **Next**. If you have chosen to remediate a single host and not a container object, the host is selected by default.
-5.	Optionally, on the **Patches and Extensions** page, deselect specific patches or extensions to exclude them from the remediation process, and click **Next**.
+4.	Select the target hosts that you want to remediate and click **Next**. If you chose to remediate a single host and not a container object, the host is selected by default.
+5.	Optionally, on the **Patches and Extensions** page, clear specific patches or extensions to exclude them from the remediation process, and click **Next**.
 6.	Optionally, on the **Advanced options** page, select the option to schedule the remediation to run later and specify a unique name and an optional description for the task. The time that you set for the scheduled task is the time on the VCSA. Optionally, select the option to ignore warnings about unsupported devices on the host, or no longer supported VMFS datastore to continue with the remediation. Click **Next**.
 7.	On the Host **Remediation Options** page, from the **VM Power state** drop-down menu, you can select the change in the power state of the VMs and virtual appliances that are running on the hosts to be remediated. A host cannot enter maintenance mode until VMs on the host are powered off, suspended, or migrated with vMotion to other hosts in a DRS cluster. Some updates require that a host enters maintenance mode before remediation. VMs and appliances cannot run when a host is in maintenance mode. To reduce the host remediation downtime at the expense of VM availability, you can choose to shut down or suspend VMs and virtual appliances before remediation. In a DRS cluster, if you do not power off the VMs, the remediation takes longer but the VMs are available during the entire remediation process because they are migrated with vMotion to other hosts. The selections are as follows:
 
@@ -71,9 +71,9 @@ To remediate hosts and clusters, follow these steps:
     - You can specify a limit of the number of concurrently remediated hosts in each cluster you remediate. Note, VUM remediates concurrently only the hosts on which VMs are powered off or suspended. You can choose to power off or suspend VMs from the VM Power State menu in the Maintenance Mode Options pane on the Host Remediation Options page. By design only one host from a vSAN cluster can be in a maintenance mode at any time. VUM remediates hosts that are part of a vSAN cluster sequentially even if you select the option to remediate them in parallel.
 *	**Migrate powered off and suspended virtual machines to other hosts in the cluster**, if a host must enter maintenance mode. Update Manager migrates the suspended and powered off VMs from hosts that must enter maintenance mode to other hosts in the cluster. You can choose to power off or suspend VMs before remediation in the **Maintenance Mode Settings** pane.
 13.	On the Ready to complete page, you can optionally click **Pre-check Remediation** to generate a cluster remediation options report and click **OK**. A Cluster Remediation Options Report dialog box opens. You can export this report or copy the entries for your own record and click **Next**.
-14.	Review the Ready to Complete page and click **Finish**.
+14.	Review the **Ready to Complete** page and click **Finish**.
 
 ### Related links
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)
