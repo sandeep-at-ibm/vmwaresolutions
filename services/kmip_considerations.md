@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -56,7 +56,6 @@ Therefore, before you remove the service, ensure that no virtual machines or vSA
 
 * [Ordering KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip_ordering.html)
 * [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/services/keymgmt/index.html#getting-started-with-key-protect)
-* [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect?&language=javascript_jquery#introduction)
 * [vSphere Security](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)
 * [FAQ](../vmonic/faq.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)
