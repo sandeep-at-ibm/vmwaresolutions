@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-09"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -49,9 +49,9 @@ VMware Cloud Foundation and vCenter Server environments, which are delivered as 
 * IBM Support actively monitors instance lifecycle operations such as adding new hosts, in addition to the ordering, provisioning, and installation processes.
 * To fix issues that have arisen or may arise in the future, IBM Support may take a number of actions including but not limited to: reviewing client order details, restarting automation jobs, performing Operating System reload operations, or opening IBM Cloud tickets using the provided client IBM Cloud user name and API key.
 
-### Second day operations
+### Steady-state operations
 
-* On rare occasions, IBM Support may require access to client instances during second–day operations to proactively troubleshoot an instance issue or to verify function of provisioned services or components.
+* On rare occasions, IBM Support may require access to client instances during steady-state operations to proactively troubleshoot an instance issue or to verify function of provisioned services or components.
 * This access is through the IBM Cloud internal support network. At no time will IBM Support modify instance configuration without prior consent from the client.
 * Access is to VMware management components and/or IBM Cloud management components and never to the client virtual machines or applications.
 
@@ -111,7 +111,7 @@ VMware Cloud Foundation and vCenter Server environments, which are delivered as 
 * By submitting the order, the client agrees to these terms and thus grants consent to IBM Support to access their instances at any time without prior notification in order to swiftly resolve issues pertaining to the environment or to prevent future failures.
 * This consent applies to all instances currently being ordered throughout their lifecycle. Instances and instance components provisioned in the future may require additional consent.
 
-## Second day operations
+## Steady-state operations
 
 If the client has not granted consent to proactive support for an instance in the initial provisioning and ordering, they must include explicit consent in any future service tickets, if desired. Statements of consent must follow the set guidelines or will be considered void.
 

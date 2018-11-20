@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -25,31 +25,31 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server 
 | {{site.data.keyword.CloudDataCent_notm}} | Location | Region |
 |:-----|:----------------|
 | AMS03 | Amsterdam | Europe |
-| CHE01 | Chennai | Asia Pacific |
+| CHE01 | Chennai | Asia-Pacific |
 | DAL09 | Dallas | NA South |
 | DAL10 | Dallas | NA South |
 | DAL12 | Dallas | NA South |
 | DAL13 | Dallas | NA South |
 | FRA02 | Frankfurt | Europe |
 | FRA04 | Frankfurt | Europe |
-| HKG02 | Hong Kong | Asia Pacific |
+| HKG02 | Hong Kong | Asia-Pacific |
 | LON02 | London | Europe |
 | LON04 | London | Europe |
 | LON06 | London | Europe |
-| MEL01 | Melbourne | Asia Pacific |
+| MEL01 | Melbourne | Asia-Pacific |
 | MEX01 | Queretaro | NA South |
 | MIL01 | Milan | Europe |
 | MON01 | Montreal | NA East |
 | OSL01 | Oslo | Europe |
 | PAR01 | Paris | Europe |
 | SAO01 | Sao Paulo | South America |
-| SEO01 | Seoul | Asia Pacific |
+| SEO01 | Seoul | Asia-Pacific |
 | SJC03 | San Jose | NA West |
 | SJC04 | San Jose | NA West |
-| SNG01 | Singapore | Asia Pacific |
-| SYD01 | Sydney | Asia Pacific |
-| SYD04 | Sydney | Asia Pacific |
-| TOK02 | Tokyo | Asia Pacific |
+| SNG01 | Singapore | Asia-Pacific |
+| SYD01 | Sydney | Asia-Pacific |
+| SYD04 | Sydney | Asia-Pacific |
+| TOK02 | Tokyo | Asia-Pacific |
 | TOR01 | Toronto | NA East |
 | WDC04 | Washington, DC | NA East |
 | WDC06 | Washington, DC | NA East |
