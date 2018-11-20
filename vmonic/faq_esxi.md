@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -21,9 +21,9 @@ Find answers to frequently asked questions about the ESXi servers managed on the
 
 ## How many ESXi servers can I add to a cluster?
 
-For V2.2 and later releases, you can add a maximum of 51 ESXi servers to an initial cluster and a maximum of 59 ESXi servers to the added clusters.
+For instances deployed in V2.2 and later, you can add a maximum of 51 ESXi servers to an initial cluster and a maximum of 59 ESXi servers to the added clusters.
 
-For instances deployed in V2.1 or earlier releases, you must enable the necessary vSAN support to increase the cluster size beyond 32. Complete the following steps to enable the necessary vSAN support:
+For instances deployed in V2.1 or earlier, you must enable the necessary vSAN support to increase the cluster size beyond 32. Complete the following steps to enable the necessary vSAN support:
 
 1. On each deployed ESXi server, run the following commands:
 
@@ -37,23 +37,23 @@ For instances deployed in V2.1 or earlier releases, you must enable the necessar
 
 ## Can I change the ESXi server names and IP addresses?
 
-The ESXi server names and IP addresses cannot be changed because they are registered for Windows DNS resolution. Changes might result in failures during deployment or in failures of vCenter Server functions.
+The ESXi server names and IP addresses cannot be changed because they are registered for Windows DNS resolution. Changes might result in failure during deployment or failure of vCenter Server functions.
 
-**Note:** Don't use the **Rename Device** feature on the {{site.data.keyword.cloud_notm}} user interface to change ESXi server names. This function will indeed change the FQDN of the ESXi server, but the configured vCenter Center and the Windows VSI host registrations will be incorrect and might cause failures.
+**Note:** Don't use the **Rename Device** feature on the {{site.data.keyword.cloud_notm}} user interface to change ESXi server names. This function changes the FQDN of the ESXi server, but the configured vCenter Server and the Windows VSI host registrations will be incorrect and might cause failures.
 
 ## Can I disable root access on my ESXi servers?
 
-It is recommended to keep root access enabled on ESXi servers, otherwise failures in the {{site.data.keyword.vmwaresolutions_short}} functions might occur.
+It is recommended to keep root access enabled on ESXi servers, otherwise failure in the {{site.data.keyword.vmwaresolutions_short}} functions might occur.
 
 If necessary, you can disable root access after the ESXi servers have a status of **Ready to Use** on the {{site.data.keyword.vmwaresolutions_short}} console.
 
-You must re-enable root access for subsequent automation operations, for example, when you add or remove file shares or when installing add-on services, such as Zerto on {{site.data.keyword.cloud_notm}}.
+You must re-enable root access for subsequent automation operations, for example, when you add or remove file shares or when you install add-on services, such as Zerto on {{site.data.keyword.cloud_notm}}.
 
 ## Can I add static routes on my ESXi servers to mount storage from other locations?
 
-Static routes can be added for storage but the operations must be done with extreme care. Otherwise, the existing shares might become unmounted.
+You can add static routes for storage but you must do it with extreme care. Otherwise, the existing shares might become unmounted.
 
-**Note:** Adding static routes for vMotion is not supported. Changes in vMotion subnet configuration might result in failures in the {{site.data.keyword.vmwaresolutions_short}} functions.
+**Note:** Adding static routes for vMotion is not supported. Changes in vMotion subnet configuration might result in failure in the {{site.data.keyword.vmwaresolutions_short}} functions.
 
 ### Related links
 

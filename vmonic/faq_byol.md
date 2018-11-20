@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -14,13 +14,13 @@ Find answers to frequently asked questions about licensing, including the Bring 
 
 ## What is BYOL?
 
-Bring Your Own License, or BYOL, is a feature available to VMware Cloud Foundation instances in V1.8 and later releases, and to vCenter Server and vSphere clusters in V2.0 and later releases. With BYOL, you can use your own VMware licenses for one or more of the following VMware software components when you order instances:
+Bring Your Own License, or BYOL, is a feature available to VMware Cloud Foundation instances in V1.8 and later, and to VMware vCenter Server and VMware vSphere clusters in V2.0 and later. With BYOL, you can use your own VMware licenses for one or more of the following VMware software components:
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
 * VMware vSAN
 
-If you select to use your own license for a VMware component and provide a valid license key for it, no license is ordered from IBM for this component and no monthly license charges are incurred to your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account for this component.
+If you choose to use your own license for a VMware component and provide a valid license key for it, no license is ordered from IBM for this component and no monthly license charges are incurred to your {{site.data.keyword.cloud_notm}} infrastructure account for this component.
 
 **Note:** The BYOL feature is not available to Business Partner users.
 
@@ -28,9 +28,9 @@ If you select to use your own license for a VMware component and provide a valid
 
 After an order to create a new cluster for VMware vSphere on {{site.data.keyword.cloud_notm}} is placed, the VMware licenses, ESXi servers, and other networking components, are delivered and can be managed from the {{site.data.keyword.slportal}}.
 
-After deployment, go to the {{site.data.keyword.vmwaresolutions_short}} console to scale the new cluster by using the saved configuration. For more information about scaling, see [Scaling existing vSphere clusters](../vsphere/vs_scalingexistingclusters.html).
+After deployment, go to the {{site.data.keyword.vmwaresolutions_short}} console to scale the new cluster by using the saved configuration. For more information, see [Scaling existing vSphere clusters](../vsphere/vs_scalingexistingclusters.html).
 
-## What license editions and CPU quantities are required for BYOL?
+## What license editions and CPUs are required for BYOL?
 
 The following requirements apply to the license editions for BYOL.
 
@@ -64,36 +64,43 @@ All the license keys that you provide are validated to ensure that they are corr
 
 Yes. For each VMware component, one license per CPU is required. Currently, all vCenter Server and Cloud Foundation servers have two CPUs. Therefore, two licenses are required for each server. It is recommended that you provide a license key that can support the base instance and any expansion nodes that you want to add to the instance in the future.
 
-## Can I provide the SDDC Manager license when using the BYOL feature?
+## Can I provide the SDDC Manager license if I use the BYOL feature?
 
 No. Our agreement with VMware requires that we must accept a client’s actual license key. Although the Cloud Foundation deployment includes SDDC Manager licenses, we cannot accept SDDC Manager license key files and validate them for BYOL. Therefore, SDDC Manager licenses are charged by IBM for all instances. SDDC Manager licenses represent a small portion of the overall license charges for a Cloud Foundation instance.
 
 ## Can I use the BYOL feature for some VMware components and purchase monthly licenses for others?
 
-Yes. You can use the BYOL feature or purchase licenses for any combination of the four VMware components. The {{site.data.keyword.vmwaresolutions_short}} console makes it straightforward for you to select the licensing option when you order the vCenter Server or Cloud Foundation instance. Your licensing option at the time of initial instance order applies for the lifetime of that instance.
+Yes. You can use the BYOL feature or purchase licenses for any combination of the four VMware components. The {{site.data.keyword.vmwaresolutions_short}} console makes it straightforward for you to select the licensing option when you order your instance. Your licensing option at the time of initial instance order applies for the lifetime of that instance.
 
 ## For a specific VMware component, can I use BYOL for some licenses and buy the rest of licenses from IBM?
 
-Yes. If you selected BYOL for a specific VMware component, you have the option when creating a new cluster to enter a new BYOL key, continue using an existing BYOL key, or purchase IBM-provided licensing for that cluster. Currently, only VMware vSphere Enterprise and VMware vSAN are available for licensing per cluster.
+Yes. If you selected BYOL for a specific VMware component when you create a cluster, you have the following options:
+* Enter a new BYOL key
+* Continue to use an existing BYOL key
+* Purchase IBM-provided licensing for that cluster.
 
-## Can I use BYOL when creating a new cluster?
+Currently, only VMware vSphere Enterprise and VMware vSAN can be licensed per cluster.
 
-Yes. You can BYOL from existing BYOL licenses or enter new BYOL when creating a new cluster. Also, you can purchase an IBM-provided subscription license when you create a new cluster. Currently, only VMware vSphere Enterprise and VMware vSAN are available for licensing per cluster.
+## Can I use BYOL when I create a cluster?
 
-## How can I manage my BYOL licenses?
+Yes. You can BYOL from existing BYOL licenses or enter a new BYOL when you create a cluster. Also, you can purchase an IBM-provided subscription license when you create a cluster.
+
+Currently, only VMware vSphere Enterprise and VMware vSAN can be licensed per cluster.
+
+## How do I manage my BYOL licenses?
 
 You can manage your BYOL licenses by using the VMware vSphere Web Client after the instance deployment is completed.
 
-## When I add more ESXi servers to my instance later, does the instance validate whether the capacity of my BYOL licenses is sufficient?
+## When I add more ESXi servers to my instance later, does the instance validate if my BYOL licenses have enough capacity?
 
 Yes. When you're adding more ESXi servers to a deployed instance, the capacity of your BYOL licenses is automatically checked for the specified number of ESXi servers. If the capacity is not sufficient, the ESXi servers are not added and you get a console notification.
 
 ## How can I tell how much license capacity I have available on a cluster with BYOL?
 
 To find the number of CPUs available in your license key, complete the following steps:
-1. Go the **Deployed Instances** page.
+1. Go to the **Deployed Instances** page.
 2. Locate and click the instance.
-3. On the **Infrastructure** tab, click the cluster that you want to check the license capacity for. 
+3. On the **Infrastructure** tab, click the cluster that you want to check the license capacity for.
    The number of available CPUs is listed in the **User-Provided License** table.
 
 ## Does IBM provide support if I select the BYOL licensing option?
@@ -110,7 +117,7 @@ With the introduction of the BYOL feature, continued use of the manual process i
 
 ## Is BYOL supported for other VMware products such as VMware vRealize Automation, VMware vRealize Operations, or VMware vRealize Log Insight?
 
-No, because these VMware products are not part of the instance deployment. These VMware products might be installed in addition to the initial deployment, which requires the clients or their agents to perform the installation and licensing.
+No, because these VMware products are not part of the instance deployment. These VMware products might be installed in addition to the initial deployment, which requires the clients or their agents to install and license these products.
 
 ## Can I order NFS storage with vCenter Server with Hybridity Bundle?
 
