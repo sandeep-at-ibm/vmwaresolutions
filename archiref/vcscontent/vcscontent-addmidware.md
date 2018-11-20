@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -14,7 +14,7 @@ Now that Stock Trader is running in a container, and Jane is satisfied
 with the current micro-services, she and Todd work on how to enhance the
 application with extra capabilities. By refactoring Stock Trader
 micro-services to handle increased activity and scalability, they both
-see the need to add middleware into {{site.data.keyword.cloud}} Private. Some of the
+see the need to add middleware into {{site.data.keyword.cloud}} Private (ICP). Some of the
 middleware existed in their data center, so it becomes more of a
 replatform exercise with some new middleware added.
 
@@ -22,14 +22,14 @@ Figure 1. Refactoring of Stock Trader
 ![Stock Trader refactoring](vcscontent-refactor.svg)
 
 This refactoring of the solution brings a common platform to run the application
-and the required services, thus bringing in a simpler management
+and the required services, bringing in a simpler management
 plane.
 
 ## Content choices
 
-{{site.data.keyword.cloud_notm}} Private has a broad selection of content, and both Todd and
-Jane need to decide which will best suit their needs. As Todd sees in
-the {{site.data.keyword.cloud_notm}} Private catalog, most of this is available for him to try
+ICP has a broad selection of content, and both Todd and
+Jane need to decide which best suits their needs. As Todd sees in
+the ICP catalog, most content is available to try
 out, but some content requires purchase and download from
 Passport Advantage.
 
@@ -37,12 +37,12 @@ Passport Advantage.
   -	UrbanCode Deploy
   -	Microclimate
   -	Jenkins (open source)
-  -	IBM WebSphere Liberty (MicroProfile, web Profile, JEE Profile)
+  -	IBM WebSphere Liberty (MicroProfile, web Profile, Java Platform, Enterprise Edition Profile)
   -	Open Liberty (open source)
   -	Node.js runtime (open source)
   -	Swift runtime (open source)
   - nginx (open source)
-  -	IBM WebSphere Application Server for ICP VM Quickstarter Community ed.
+  -	IBM WebSphere Application Server for ICP VM Quickstarter Community education.
 
 * Integration
   -	IBM Integration Bus
@@ -69,7 +69,7 @@ Passport Advantage.
 * Connectivity
   -	IBM Voice Gateway Developer Trial
 
-* App Modernization Tooling
+* Application Modernization Tooling
   -	IBM Transformation Advisor
 
 * Messaging
@@ -100,7 +100,7 @@ Passport Advantage.
 * HPC / HPDA
   -	IBM Spectrum LSF Community Edition
   -	IBM Spectrum Symphony Community Edition
-  -	IBM Spectrum Conductor Tech Preview
+  -	IBM Spectrum Conductor Technical Preview
 
 * Multi-cloud Management
   -	{{site.data.keyword.cloud_notm}} Automation Manager
@@ -136,21 +136,20 @@ source)
   -	driver (open source)
   -	Rook Ceph Cluster (open source)
 
-* Tooling
+* Tools
   -	Web Terminal (open source)
   -	Skydive – network analyzer (open source)
 
-
-For Stock Trader, based on Jane’s solution architecture, he is going to start with [Db2](https://console.bluemix.net/catalog/services/db2-hosted), [MQ](https://console.bluemix.net/catalog/services/mq), and [Redis](https://console.bluemix.net/catalog/services/databases-for-redis).
+For Stock Trader, based on Jane’s solution architecture, Todd is going to start with [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://console.cloud.ibm.com/catalog/services/mq), and [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis).
 
 ## Add middleware
 
-To add middleware into {{site.data.keyword.cloud_notm}} Private, find the [helm chart](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md) in the catalog, read the readme file, then proceed to install.
+To add middleware into {{site.data.keyword.cloud_notm}} Private, find the [helm chart](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md) in the catalog, read the readme file, then continue to install.
 
 For Stock Trader, Todd decided to add all of the middleware. The following information summarizes what Todd had to perform for each middleware he wanted Jane to use.
 
-### 	Db2
-Todd starts with Db2 because they are already using Db2 and can
+### Db2
+Todd starts with Db2 because they're already using Db2 and can
 dedicate a container-based Db2 for each solution.
 
 Since Todd prepared ICP, he already has his pod security policy defined. Todd can focus on creating a docker image pull secret:
@@ -160,7 +159,7 @@ Since Todd prepared ICP, he already has his pod security policy defined. Todd ca
 --docker-password=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXX
 --docker-email=dockeruser@email.com --namespace=default`
 
-Finally, since he decided to use NFS, he created NFS volumes based on
+Finally, since Todd decided to use NFS, he created NFS volumes based on
 the readme file requirements:
 
 Go to ICP dashboard and create Persistent Volume. How large? Look in the
@@ -175,9 +174,9 @@ path = /shared/db2trader1`
 In the catalog user interface, search for “Db2” and click ibm-db2oldp-dev
 Review the readme file then click Configure.
 
-In the Configure section, there is a Quick Start section and an All
+In the Configure section, there's a Quick Start section and an All
 Parameters section. Open the All Parameters since Todd needs to enter
-additional configuration:
+more configuration:
 
 *	Release name = db2trader1
 *	namespace = default
@@ -191,14 +190,14 @@ additional configuration:
 *	pw for db2 instance name = xxxxxx
 *	Yes (check) Enable persistence for this deployment
 
-Once Db2 is running, Todd (or Jane) needs to create the tables that the
+After Db2 is running, Todd or Jane needs to create the tables that the
 Stock Trader solution uses.
 
 ### MQ
 
 Todd and Jane need messaging software, and since they already use MQ,
 this is a great option. Also, it can run in a small footprint, and
-the dev version can be spun up for each developer, saving precious
+the dev version can be spun up for each Developer, saving precious
 Production traffic. Installing MQ is fairly simple. Todd creates the
 storage just like he did with Db2, and then installs the helm chart:
 
@@ -216,75 +215,71 @@ Queue manager name = stocktrader
 Admin pw = mq1pw
 App password = LEAVE BLANK`
 
-Note that initially Todd is selecting NodePort so he can get at the
-middleware from the user interface, but eventually, he can use ClusterIP so only
+Initially Todd selects NodePort to get at the
+middleware from the user interface. Eventually, Todd can use ClusterIP so only
 pods inside the cluster can get to the middleware.
 
-To configure MQ to use Stock Trader, Todd will open the MQ Managemnet
+To configure MQ to use Stock Trader, Todd opens the MQ Management
 user interface, which is the exact same as the VM version.
 
 ### 	Redis
 
 Even though Stock Trader is running on {{site.data.keyword.cloud_notm}} Private Hosted, they
-are still worried about the stock quote service latency, when all they
+are still worried about the stock quote service latency when all they
 really care about is the end of previous day stock for most of their
-work. To help improve performance, they are going to add a Redis cache.
+work. To help improve performance, they add a Redis cache.
 
-This deployment will use the ibm-redis-ha-dev chart from ibm-charts.
+This deployment uses the ibm-redis-ha-dev chart from ibm-charts.
 
-By default, this chart installs six pods: one master, two slaves and three sentinels. This is a great example of resilience in Kubernetes where
-multiple pods can work together across many worker nodes, even when the
-worker nodes are in multiple subnets.
+By default, this chart installs six pods: one master, two slaves, and three sentinels. This is a great example of resilience in Kubernetes where
+more than one pod works together across many worker nodes, even when the
+worker nodes are in more than one subnet.
 
-The configuration is quite simple, so Todd enters which namespace to
-install it into, and performs the installation.
+The configuration is simple, so Todd enters which namespace to
+install it into, and begins the installation.
 
 ## Refactor Stock Trader
 
-This is an important step for Jane. While Todd was busy adding the
+Refactoring Stock Trader is an important step for Jane. While Todd was busy adding the
 middleware into {{site.data.keyword.cloud_notm}} Private, Jane refactored her solution
 to optimized it for Kubernetes and cloud behaviors.
 
 For example, when Jane transformed Stock Trader, she took the .war
 files and added each one into a Liberty container but used the WebSphere Application Server Network Deployment
 configuration to point to the data source. It was a
-good start and her application gets value out of Kubernetes scheduling and
+good start and Jane's application gets value out of Kubernetes scheduling and
 orchestration immediately.
 
-There are many
-other benefits from optimizing her micro-services (recode
+Many other benefits exist from optimizing Jane's micro-services (recode
 and build) for the Kubernetes world.
 
 To optimize, Jane took the following steps:
--	Updated her code in her code repo (she used GitHub Enterprise)
--	Added a pipeline (she used Jenkins)
+-	Updated her code in her code repo (Jane used GitHub Enterprise)
+-	Added a pipeline (Jane used Jenkins)
 -	Built by using Maven
 
-Here is an example of her [code
+The following is an example of Jane's [code
 repository](https://github.com/IBMStockTrader/), along with the
-Jenkins file, server.xml, and so on. With this in place, she can freely code
+Jenkins file, server.xml, and more. With this in place, Jane can freely code
 extra capabilities via secrets to access services like ODM and
 Watson, along with more micro-services as individual repositories
 in GitHub.
 
 ### Add Secrets
 
-Now that Jane has refactored the Stock Trader micro-services, she
-requires a way to abstract the service names, user IDs, and passwords, so
-her application can pick up unique details about the service when it is deployed
+Now that Jane refactored the Stock Trader micro-services, she
+requires a way to abstract the service names, user IDs, and passwords, so that her application can pick up unique details about the service when deployed
 without hardcoding specific names and rebuilding the application.
 
-Using Kubernetes secrets, she configures a well-defined secret name
-and parameters within each secret, so that when her micro-service is
-deployed it will pick up the unique host name, user ID, password, or
+Using Kubernetes secrets, Jane configures a well-defined secret name
+and parameters within each secret to ensure that when the micro-service is
+deployed it picks up the unique host name, user ID, password, or
 any other sensitive credentials, making her application portable.
 
 Jane wants a unified code base, even when Stock Trader might run on
-multiple clouds. The secret DB2 in the following figure has different
-routing details but in the same format. When her portfolio micro-service
-is deployed, it looks for the DB2 secret endpoint parameter to connect
-to the appropriate Db2 instance. The Stock Trader application doesn't really
-care if is running in a VMware virtual machine, a containerized service
+more than one cloud. The secret DB2 in the following figure has different
+routing details but in the same format. When Jane's portfolio micro-service deploys, it looks for the DB2 secret endpoint parameter to connect
+to the appropriate Db2 instance. The Stock Trader application doesn't care if it's running in a VMware virtual machine, a containerized service,
 or as a Cloud-managed service.
 
 Figure 2. Stock Trader - pivot services
@@ -292,10 +287,10 @@ Figure 2. Stock Trader - pivot services
 
 ## Result
 
-As a result of Jane committing to refactoring her Stock Trader solution,
+Because Jane committed to refactoring her Stock Trader solution,
 and Todd installing middleware into {{site.data.keyword.cloud_notm}} Private Hosted, all of the
-core Stock Trader solution is running in a private cloud. She now can
-add more micro-services such a Twitter notification service. Istio
+core Stock Trader solution is running in a private cloud. Jane now
+adds more micro-services such a Twitter notification service. Istio
 routing rules enable dynamic loyalty level messaging via an internal
 Slack channel or a public Twitter channel.
 
@@ -305,4 +300,4 @@ Figure 3. Enrichment of Stock Trader
 
 ### Related links
 
-* [VCS Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
