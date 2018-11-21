@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-19"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -20,7 +20,7 @@ VUM orchestrated upgrades allow you to upgrade the inventory objects in VCSA in 
 
 In the orchestrated upgrade, the cluster is remediated first against the host baseline group, which applies patches, extensions and upgrades and after upgraded, the virtual machines in the cluster are remediated against the virtual machine upgrade baseline group that contains the VM Hardware Upgrade to Match Host and VMware Tools Upgrade to Match Host baselines.
 
-If the baseline group also contains an upgrade baseline, VUM first upgrades the vSphere ESXi hosts and then applies the patch and/or extension baselines as the patches are applicable to the specific host version. For the virtual machines, VMware tools are first updated, followed by the virtual hardware update.
+If the baseline group also contains an upgrade baseline, VUM first upgrades the vSphere ESXi hosts and then applies the patch or extension baselines as the patches are applicable to the specific host version. For the virtual machines, VMware tools are first updated, followed by the virtual hardware update.
 
 Therefore, during the VMware tools upgrade, the virtual machines are powered on if virtual machines are in a powered-off or suspended state, then VUM powers it on, run the upgrade and restore the original power state of the virtual machine. Therefore, during the virtual hardware upgrade, the VMs must be in powered-off state if there are virtual machines that are powered on, VUM shuts them down, upgrade virtual hardware, and power it back on.
 
