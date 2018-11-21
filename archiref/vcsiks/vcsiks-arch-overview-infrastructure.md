@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-16"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -74,12 +74,7 @@ Diagram](vcsiks-phy-ics-iks-deployment.svg)
 Within the vCenter Server instance, the customer VMSs are deployed to dedicated NSX
 Edge Services Gateways (ESG) and Distributed Logical Routers (DLR).
 
-The ESG is configured with a SNAT to allow outbound traffic, enabling
-internet connectivity to download the ICP prerequisites and connectivity
-to GitHub and Docker or a web-proxy can be used to provide the internet
-connectivity. The ESG is configured to access DNS and NTP services via
-the private network. Integration to the IKS instance is available via
-{{site.data.keyword.cloud_notm}} networking between the vCenter Server instance and IKS.
+The ESG is configured with a source NAT rule (SNAT) to allow outbound traffic, which enables internet connectivity to download the ICP prerequisites and to connect to GitHub and Docker. Alternatively, you can use a web-proxy for internet connectivity. The ESG is configured to access DNS and NTP services via the private network. Integration to the IKS instance is available via {{site.data.keyword.cloud_notm}} networking between the vCenter Server instance and IKS.
 
 ## vCenter Server components
 

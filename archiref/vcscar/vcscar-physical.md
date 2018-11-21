@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-14"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -44,11 +44,9 @@ platform that runs on {{site.data.keyword.cloud_notm}} Private that allows Devel
 administrators to meet business demands. Cloud Automation Manager
 Service Composer enables you to expose hybrid cloud services in the ICP catalog.
 
-## Skate Advisor components
+## Skate Advisor physical components
 
-The following diagram describes the reference implementation of the Acme
-Skate Advisor application in an application modernization infrastructure
-implementation.
+The following diagram describes the reference implementation of the Acme Skate Advisor application in an application modernization infrastructure implementation.
 
 Figure 1. Skate Advisor physical components
 ![Skate Advisor physical components](vcscar-physical.svg)

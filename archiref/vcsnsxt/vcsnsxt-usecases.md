@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-19"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -36,7 +36,7 @@ The loosely coupled interconnectivity between on-premises and {{site.data.keywor
 
 Acme Skateboards wants to deploy a hybrid architecture on the {{site.data.keyword.cloud_notm}} consisting of vCenter Server with Hybridity Bundle and {{site.data.keyword.cloud_notm}} Private (ICP) for their journey to application modernization. Their requirements are to run their databases on VMs, the apps and web interfaces in containers, and would like to use a common set of tools for network and security management.
 
-{{site.data.keyword.vmwaresolutions_short}} provides automation to deploy VMware technology components in {{site.data.keyword.CloudDataCents_notm}} across the globe. The architecture consists of a single cloud region and supports the ability to extend into more cloud regions that are located in another geography and/or into another {{site.data.keyword.cloud_notm}} pod within the same data center.
+{{site.data.keyword.vmwaresolutions_short}} provides automation to deploy VMware technology components in {{site.data.keyword.CloudDataCents_notm}} across the globe. The architecture consists of a single cloud region and supports the ability to extend into more cloud regions that are located in another geography or into another {{site.data.keyword.cloud_notm}} pod within the same data center.
 
 The ICP and Cloud Automation Manager (CAM) products can be manually deployed into your on-premises virtualization platform enabling cloud management from the on-premises location. Alternatively, ICP and CAM are offered as a service extension to an existing or new vCenter Server deployment enabling cloud management from the {{site.data.keyword.cloud_notm}}.
 

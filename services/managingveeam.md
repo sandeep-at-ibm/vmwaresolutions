@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-06"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -39,21 +39,21 @@ When failures occur on the management components, you can restore the management
 
 You are responsible for maintaining the Veeam software to keep it updated to the most recent version.
 
-### For instances deployed with public and private network
+### Applying updates for instances deployed with public and private network
 
 If the Veeam service is installed on an instance with public and private network, you can check for and download the updates by using the Veeam software itself.
 
-### For instances deployed with private network only
+### Applying updates for instances deployed with private network only
 
 If the Veeam service is installed on an instance with private network only, because the Veeam VSI is configured with no public network access, you cannot check for or download updates by using the Veeam software itself. Instead, you must download updates from the Veeam website, transfer them to the Veeam VM, and then install them.
 
 ## Updating Veeam licenses
 
-### For instances deployed with public and private network
+### Updating Veeam licenses for instances deployed with public and private network
 
 If the Veeam service is installed on an instance with public and private network, you can update your Veeam license either automatically or manually by following the Veeam instructions at [Updating license]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html).
 
-### For instances deployed with private network only
+### Updating Veeam licenses for instances deployed with private network only
 
 If the Veeam service is installed on an instance with private network only, you must take note of the expiration date for your license and contact [IBM Support](../vmonic/trbl_support.html) to get assistance with updating the license key when the renewal is needed.
 

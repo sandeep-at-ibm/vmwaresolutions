@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-14"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -33,9 +33,9 @@ from where you can deploy, manage, monitor, and scale applications.
 -	{{site.data.keyword.cloud_notm}} Automation Manager – CAM is an enterprise-ready
 infrastructure as code platform that provides a single pane of glass to
 provision VM-based workloads alongside Kubernetes based workloads, the
-automation of workloads provisioning, whether VM and/or containers and
-their infrastructure prerequisites. 
--	Watson – Watson is IBM’s artificial intelligence and cognitive solutions platform. 
+automation of workloads provisioning, whether VM or containers and
+their infrastructure prerequisites.
+-	Watson – Watson is IBM’s artificial intelligence and cognitive solutions platform.
 -	Watson Knowledge Studio - Watson Knowledge Studio provides a model for the
 Watson Discovery to use.
 

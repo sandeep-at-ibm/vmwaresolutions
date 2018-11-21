@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-19"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-19"
 
 {{site.data.keyword.cloud}} Private is installed on several virtual machines (VMs) on a vCenter Server instance. Within the vCenter Server instance, the ICP instance is deployed with a dedicated NSX Edge Services Gateway (ESG) and Distributed Logical Router (DLR) and uses a VXLAN.
 
-The ESG is configured with a SNAT rule to allow outbound traffic, enabling internet connectivity to download the ICP prerequisites and connectivity to GitHub and Docker. A web proxy server can be used to provide the internet connectivity if wanted. The ESG is configured with private connectivity to access DNS and NTP services. The ESG is also configured with a DNAT rule to enable the ICP Master and Proxy vIPs to be accessed from the {{site.data.keyword.cloud_notm}} 10.x network.
+The ESG is configured with a source NAT rule (SNAT) to allow outbound traffic, which enables internet connectivity to download the ICP prerequisites and to connect to GitHub and Docker. Alternatively, you can use a web-proxy for internet connectivity. The ESG is configured with private connectivity to access DNS and NTP services. The ESG is also configured with a DNAT rule to enable the ICP Master and Proxy vIPs to be accessed from the {{site.data.keyword.cloud_notm}} 10.x network.
 
 ## IKS and vCenter Server integration
 

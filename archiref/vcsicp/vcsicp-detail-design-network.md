@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-16"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -12,38 +12,46 @@ lastupdated: "2018-11-16"
 
 ## Container application access – ICP
 
-Ther're three main ways to get external traffic and access into your Kubernetes cluster applications:
+There are three main ways to get external traffic and access into your Kubernetes cluster applications:
 
 - NodePort
 - LoadBalancer
 - Ingress
 
-### NodePort
+### NodePort - ICP
+
 Nodeports are a simple way of exposing external access to a workload for initial development and testing but not recommended for production. Ingress or load balancer is the recommended path.
 
-### LoadBalancer
+### LoadBalancer - ICP
+
 Currently, the ICP Platform supports an external Load Balancer for application workload.
 
-### Ingress
+### Ingress - ICP
+
 An Ingress is a collection of rules that allow inbound connections to reach the cluster services. It can be configured to give services externally reachable URLs, load balance traffic, terminate SSL, offer name-based virtual hosting, and more.  The Proxy node in ICP infrastructure performs this function.
 
 ## Container application access – IKS
-Ther're three main ways to get external traffic and access into your Kubernetes cluster applications:
+
+There are three main ways to get external traffic and access into your Kubernetes cluster applications:
 
 - NodePort
 - LoadBalancer
 - Ingress
 
-### NodePort
+### NodePort - IKS
+
 Nodeports are a simple way of exposing external access to a workload for initial development and testing but not recommended for production. Ingress or load balancer is the recommended path.
 
-### LoadBalancer
+### LoadBalancer - IKS
+
 Every IKS Cluster is provisioned with a public or private Application Load Balancer (ALB). The ALB uses a secured and unique public or private entry point to route incoming requests to your applications.
 
-### Ingress
+### Ingress - IKS
+
 An Ingress is a collection of rules that allow inbound connections to reach the cluster services. It can be configured to give services externally reachable URLs, load balance traffic, terminate SSL, offer name-based virtual hosting, and more.
 
 ## Traffic flows
+
 The following traffic flows are described:
 
 - External user on the internet to a web tier hosted in a container in {{site.data.keyword.cloud}} Private (ICP).
@@ -84,16 +92,19 @@ How the route tables in the ESG and vRouters are populated depends on the method
 7.	The VM receives the request.
 
 ## Public access network
+
 ICP and CAM by default require internet connectivity to retrieve Docker images, Helm charts, Terraform templates, and operating system package managers.
 In the latest releases, there is now support for proxy based installs for installations that are not directly connected to the internet and have options to install in an offline mode.
 
 ###	NSX firewall
+
 The ICP NSX Edge firewall, is configured with rules to allow:
 *	Enable VXLAN networks access to public access.
 *	Enable VXLAN networks access to private {{site.data.keyword.cloud_notm}} network access.
 *	Enable private {{site.data.keyword.cloud_notm}} network access to VXLAN networks.
 
 ### NSX NAT
+
 The ICP NSX NAT, is configured with the following NATs:
 *	SNAT for VXLAN networks access to public access.
 *	SNAT for VXLAN networks access to private {{site.data.keyword.cloud_notm}} network access.

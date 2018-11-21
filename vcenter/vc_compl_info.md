@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-13"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -43,13 +43,13 @@ VMware Cloud Foundation and vCenter Server environments, which are delivered as 
 
 ## Proactive support
 
-### Initial provisioning
+### Proactive support for initial provisioning
 
 * During the initial ordering and provisioning of an instance or service, IBM Support may access client instances and information without prior notification of the client to ensure that orders are properly fulfilled.
 * IBM Support actively monitors instance lifecycle operations such as adding new hosts, in addition to the ordering, provisioning, and installation processes.
 * To fix issues that have arisen or may arise in the future, IBM Support may take a number of actions including but not limited to: reviewing client order details, restarting automation jobs, performing Operating System reload operations, or opening IBM Cloud tickets using the provided client IBM Cloud user name and API key.
 
-### Steady-state operations
+### Proactive support for steady-state operations
 
 * On rare occasions, IBM Support may require access to client instances during steady-state operations to proactively troubleshoot an instance issue or to verify function of provisioned services or components.
 * This access is through the IBM Cloud internal support network. At no time will IBM Support modify instance configuration without prior consent from the client.
@@ -87,7 +87,7 @@ VMware Cloud Foundation and vCenter Server environments, which are delivered as 
 
 * Management of Cloud Service: Client is responsible for managing administration, operation, maintenance, and security of the applications, including underlying middleware.
 * Service Integrity and Availability: IBM will forward to the Client all network intrusion notifications detected for this Cloud Service. It is the Client’s responsibility to ascertain the impact of each notification reported. Client will be notified of hardware failures. Monitoring and responding to OS or software failures is the responsibility of the Client, engaging IBM support as required.
-* Activity Logging: Client is responsible for activity logging of OS/System and Database/Applications, as needed.  
+* Activity Logging: Client is responsible for activity logging of OS/System and Database/Applications, as needed.
 * Encryption: Client is responsible for configuring and managing all encryption (for both data at rest and in transit), as needed.
 * Business Continuity and Disaster Recovery: Client is responsible for configuring and managing all business continuity and disaster recovery processes, as needed.
 
