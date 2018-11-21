@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-15"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -51,7 +51,7 @@ Figure 1. Physical structure of vCenter Server and ICP deployment
 
 Within the vCenter Server instance, the ICP instance is deployed with a dedicated NSX Edge Services Gateway (ESG) and Distributed Logical Router (DLR). The ICP installation is loaded into the VXLAN subnet that is defined in the previous components.
 
-The ESG is configured with a source NAT rule (SNAT) to allow outbound traffic, enabling internet connectivity to download the ICP prerequisites and connectivity to GitHub and Docker or a web-proxy can be used to provide the internet connectivity. The ESG is also configured to provide access to DNS and NTP services.
+The ESG is configured with a source NAT rule (SNAT) to allow outbound traffic, which enables internet connectivity to download the ICP prerequisites and to connect to GitHub and Docker. Alternatively, you can use a web-proxy for internet connectivity. The ESG is also configured to provide access to DNS and NTP services.
 
 The ESG is also configured with a destination NAT rule (DNAT) to the ICP Master/Proxy virtual IP addresses from the {{site.data.keyword.cloud_notm}} 10.x network through to the VXLAN environment.
 

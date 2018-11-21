@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-15"
+lastupdated: "2018-11-21"
 
 ---
 
 # Architecture overview
 
 The {{site.data.keyword.vmwaresolutions_full}} offerings provide automation to deploy VMware technology components in {{site.data.keyword.CloudDataCents_notm}} across the globe.
-The architecture consists of a single cloud region and supports the ability to extend into more cloud regions that are located in another geography and/or into another {{site.data.keyword.cloud_notm}} pod within the same data center.
+The architecture consists of a single cloud region and supports the ability to extend into more cloud regions that are located in another geography or into another {{site.data.keyword.cloud_notm}} pod within the same data center.
 
 You can manually deploy the {{site.data.keyword.cloud_notm}} Private (ICP) and Cloud Automation Manager (CAM) products into your on-premises virtualization platform, enabling cloud management from on-premises locations. Alternatively, ICP and CAM are offered as service extensions to an existing or new VMware vCenter Server on {{site.data.keyword.cloud_notm}} deployment, through automation, enabling cloud management from {{site.data.keyword.cloud_notm}}.
 
@@ -22,7 +22,7 @@ Use Cloud Automation Manager Service Composer to display hybrid cloud services i
 
 ## IBM Cloud side cloud management platform
 
-The following diagram is an example of an ICP and CAM deployment with the {{site.data.keyword.cloud_notm} infrastructure, with connections to the on-premises vCenter and IBM Kubernetes Service (IKS) service deployed on {{site.data.keyword.cloud_notm}. Users can deploy virtual machines (VMs) on-premises and VMs into a vCenter Server instance, and containers to the ICP and IKS cluster.
+The following diagram is an example of an ICP and CAM deployment with the {{site.data.keyword.cloud_notm}} infrastructure, with connections to the on-premises vCenter and IBM Kubernetes Service (IKS) service deployed on {{site.data.keyword.cloud_notm}}. Users can deploy virtual machines (VMs) on-premises and VMs into a vCenter Server instance, and containers to the ICP and IKS cluster.
 
 Figure 1. Cloud management from cloud side
 
@@ -36,7 +36,7 @@ ICP with NSX-T, allowing users to control and configure networking, subnet, poli
 
 ## On-premise cloud management platform
 
-The following diagram in an example of an ICP and CAM deployment in the on-premises infrastructure, with connections to the vCenter and IKS deployed on {{site.data.keyword.cloud_notm}. Users can deploy VMs and containers on-premises, VMs into vCenter Server instances, and containers to the IKS cluster.
+The following diagram in an example of an ICP and CAM deployment in the on-premises infrastructure, with connections to the vCenter and IKS deployed on {{site.data.keyword.cloud_notm}}. Users can deploy VMs and containers on-premises, VMs into vCenter Server instances, and containers to the IKS cluster.
 
 Figure 2. Cloud management from on-premises side
 ![On-premises cloud management](vcsicp-onprem-cloudmgt.svg)
