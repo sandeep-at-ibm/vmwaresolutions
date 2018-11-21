@@ -4,16 +4,12 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-16"
+lastupdated: "2018-11-20"
 
 ---
 
 # Architecture overview
-The {{site.data.keyword.vmwaresolutions_full}} offerings provide automation to deploy VMware
-technology components in {{site.data.keyword.CloudDataCents_notm}} across the globe. The
-architecture consists of a single cloud region and supports the ability
-to extend into more cloud regions that are located in another
-geography and/or into another {{site.data.keyword.cloud_notm}} pod within the same data center.
+The {{site.data.keyword.vmwaresolutions_full}} offerings provide automation to deploy VMware technology components in {{site.data.keyword.CloudDataCents_notm}} across the globe. The architecture consists of a single cloud region and supports the ability to extend into more cloud regions that are located in another geography or into another {{site.data.keyword.cloud_notm}} pod within the same data center.
 
 You can manually deploy the {{site.data.keyword.cloud_notm}} Private (ICP) and Cloud Automation Manager (CAM) products into your on-premises virtualization platform,
 enabling cloud management from on-premises locations. Alternatively, ICP
