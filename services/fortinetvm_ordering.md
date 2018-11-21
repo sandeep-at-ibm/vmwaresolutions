@@ -34,7 +34,7 @@ When you order the service, provide the following settings.
 
 ### FortiGuard Network Connection
 
-Select **Public network** or **Private network** for FortiGuard. If the target cluster is configured with private-only network interfaces, only the **Private network** option is available. This selection determines how FortiGuard will contact the Fortinet license server to activate the license and to download security patches, and it does not impact the workload data plane.
+Select **Public network** or **Private network** for FortiGuard. If the target cluster is configured with private-only network interfaces, only the **Private network** option is available. This selection determines how FortiGuard will contact the Fortinet license server to activate the license and to download security patches, and it doesn't impact the workload data plane.
 
 If you select **Private network**, specify the following settings:
 * **Proxy IP Address**: The IPv4 address of the proxy server.
@@ -60,15 +60,15 @@ The license model for FortiGate Virtual Appliance on {{site.data.keyword.cloud_n
         <dt class="dt dlterm">Standard FW</dt>
         <dd class="dd">This bundle includes Stateful Packet Inspection, VLAN Protection and Advanced Logging, Ingress and Egress Firewall Rules, SSL/IPSec VPN Termination, and 24 x 7 support.</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
-        <dd class="dd">This bundle includes all standard firewall services in addition to the Advanced Malware Protection (AMP) service (including Antivirus, Botnet IP/Domain Service, Mobile Malware Security, FortiSandbox Cloud, Virus Outbreak Protection Service, and Content Disarm & Reconstruct), as well as the Web Filtering, IPS, Antispam, Application Control, and FortiCare services.</dd>
+        <dd class="dd">This bundle includes all standard firewall services in addition to the Advanced Malware Protection (AMP) service. It includes Antivirus, Botnet IP/Domain Service, Mobile Malware Security, FortiSandbox Cloud, Virus Outbreak Protection Service, and Content Disarm & Reconstruct. It also includes the Web Filtering, IPS, Antispam, Application Control, and FortiCare services.</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>
-        <dd class="dd">This bundle includes all standard firewall and UTM services in addition to the following services:<ul><li>Cloud Access Security Broker (CASB): This service provides visibility, compliance, data security, and threat protection for cloud-based services.</li><li>Industrial Security: This service provides signatures for common ICS/SCADA protocols.</li><li>Security Rating: This service provides audit capabilities to identify critical vulnerabilities and configuration weaknesses and implement best practice recommendations.</li></ul></dd>
+        <dd class="dd">This bundle includes all standard firewall and UTM services in addition to the following services:<ul><li>Cloud Access Security Broker (CASB) - This service provides visibility, compliance, data security, and threat protection for cloud-based services.</li><li>Industrial Security - This service provides signatures for common ICS/SCADA protocols.</li><li>Security Rating - This service provides audit capabilities to identify critical vulnerabilities and configuration weaknesses and implement best practice recommendations.</li></ul></dd>
 </dl>
 
 In 3Q 2018, Fortinet added three new services (CASB, Industrial Security, and Security Rating) to their Enterprise bundle. These services are available on FortiGate 6.0 only.
 {:note}
 
-You cannot change the license model after service installation. To change the license model, you must remove the existing service and reinstall the service by selecting a different license option.
+You can't change the license model after service installation. To change the license model, you must remove the existing service and reinstall the service by selecting a different license option.
 {:important}
 
 ### Related links
