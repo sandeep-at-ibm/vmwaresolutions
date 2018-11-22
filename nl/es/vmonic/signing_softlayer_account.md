@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-26"
 
 ## Registro de una cuenta de IBM Cloud
 
-Puede registrarse para una cuenta de {{site.data.keyword.cloud}} utilizando un **IBMid** existente o creando un nuevo **IBMid**. Para obtener más información sobre cómo registrarse para una cuenta de {{site.data.keyword.cloud_notm}}, consulte [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
+Puede registrarse para una cuenta de {{site.data.keyword.cloud}} utilizando un **IBMid** existente o creando un nuevo **IBMid**. Para obtener más información sobre cómo registrarse para una cuenta de {{site.data.keyword.cloud_notm}}, consulte [Registro en {{site.data.keyword.cloud_notm}} ](../../../account/adminpublic.html).
 
 ## Registro de una cuenta de infraestructura de IBM Cloud (SoftLayer)
 
@@ -38,4 +38,4 @@ La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer), co
 * [Requisitos para la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](slaccountrequirement.html)
 * [Vídeo: Cómo crear una cuenta de {{site.data.keyword.cloud_notm}}](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Pedido de instancias de vCenter Server](../vcenter/vc_orderinginstance.html)
-* [Cambio a IBMid](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}
+* [Cambio a IBMid y enlace de cuentas](../../../admin/softlayerlink.html){:new_window}

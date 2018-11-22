@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -49,4 +49,4 @@ Revise la arquitectura de todas las [Extensiones de plataforma de virtualizació
 
 ## Documentación de VMware
 
-* [Documentación de VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentación de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

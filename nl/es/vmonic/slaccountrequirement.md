@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -23,7 +23,7 @@ La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) se 
 
 La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} que utilice debe tener ciertos permisos para poder solicitar componentes en sus instancias y realizar operaciones en su nombre. Los requisitos sobre permisos se aplican a todos los tipos de instancias y servicios que solicite desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
-Los usuarios autorizados pueden verificar y actualizar los permisos para una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} en el {{site.data.keyword.slportal}}. Para obtener más información, consulte _Edición de los permisos del portal de clientes del usuario_ en [Gestión de un perfil de usuario](../../../customer-portal/cpmanuserprof.html){:new_window}.
+Los usuarios autorizados pueden verificar y actualizar los permisos para una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} en el {{site.data.keyword.slportal}}. Para obtener más información, consulte [Edición de los permisos del portal de clientes de un usuario](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
 
 Tabla 1. Permisos necesarios para la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}
 
@@ -47,7 +47,7 @@ Tabla 1. Permisos necesarios para la cuenta de infraestructura de {{site.data.ke
 
 ## Expansión de VLAN para cuentas clásicas (no VRF)
 
-Si utiliza una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} clásica (no VRF), la expansión de VLAN debe estar habilitada. Si la expansión de VLAN no está habilitada para cuentas clásicas, es posible que los diversos componentes del entorno de virtualización de VMware no se puedan comunicar entre sí. Para habilitar la expansión de VLAN en su cuenta de infraestructura de {{site.data.keyword.cloud_notm}}, consulte [Habilitación o inhabilitación de la expansión de VLAN](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+Si utiliza una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} clásica (no VRF), la expansión de VLAN debe estar habilitada. Si la expansión de VLAN no está habilitada para cuentas clásicas, es posible que los diversos componentes del entorno de virtualización de VMware no se puedan comunicar entre sí. Para habilitar la expansión de VLAN en la cuenta de la infraestructura {{site.data.keyword.cloud_notm}}, consulte [Expansión de VLAN](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ### Enlaces relacionados
 
