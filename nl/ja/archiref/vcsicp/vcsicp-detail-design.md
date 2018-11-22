@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -18,19 +18,19 @@ lastupdated: "2018-10-10"
 ![ICP 共通サービス](vcsicp-icp-commonservices.svg)
 
 ### ID およびアクセス・サービス
-VCS 自動化の一部として、ID 管理に Microsoft Active Directory (AD) が使用されます。単一の AD 仮想サーバー・インスタンス (VSI) がデプロイされます。vCenter は MS AD 認証を使用するように構成されるので、ICP を LDAP 認証用に構成することもできます。
+VCS 自動化の一部として、ID 管理に Microsoft Active Directory (AD) が使用されます。 単一の AD 仮想サーバー・インスタンス (VSI) がデプロイされます。 vCenter は MS AD 認証を使用するように構成されるので、ICP を LDAP 認証用に構成することもできます。
 
 ###	ドメイン・ネーム・サービス
-VCS デプロイメントでは、デプロイされた Microsoft Active Directory (AD) VSI をインスタンスの DNS サーバーとして使用します。デプロイされたコンポーネント (vCenter、PSC、NSX、ESXi ホスト) はすべて、MS AD をデフォルトの DNS としてポイントするように構成されます。
+VCS デプロイメントでは、デプロイされた Microsoft Active Directory (AD) VSI をインスタンスの DNS サーバーとして使用します。 デプロイされたコンポーネント (vCenter、PSC、NSX、ESXi ホスト) はすべて、MS AD をデフォルトの DNS としてポイントするように構成されます。
 
 ###	NTP サービス
-VCS デプロイメントでは、IBM Cloud インフラストラクチャーの NTP サーバーを使用します。デプロイ済みのすべてのコンポーネントは、これらの NTP サーバーを使用するように構成されます。 設計内のすべてのコンポーネントが同じ NTP サーバーを使用するようにすることは、証明書と MS AD 認証が正しく機能するうえで必要不可欠です
+VCS デプロイメントでは、{{site.data.keyword.cloud}} インフラストラクチャーの NTP サーバーを使用します。 デプロイ済みのすべてのコンポーネントは、これらの NTP サーバーを使用するように構成されます。 設計内のすべてのコンポーネントが同じ NTP サーバーを使用するようにすることは、証明書と MS AD 認証が正しく機能するうえで必要不可欠です
 
 ## ネットワーキング
 
 ### NSX-V ネットワーキング
 
-NSX-V は、単一の NSX-V マネージャー・プラットフォームが単一の vCenter Server インスタンスに結合されるように設計されています。vSphere 環境内で実行されるアプリケーションにネットワーク・サービスを提供します。
+NSX-V は、単一の NSX-V マネージャー・プラットフォームが単一の vCenter Server インスタンスに結合されるように設計されています。 vSphere 環境内で実行されるアプリケーションにネットワーク・サービスを提供します。
 
 VCS デプロイメントに含まれる NSX-V ネットワーキングを使用して、ICP を VXLAN オーバーレイ・ネットワークにデプロイできます。
 
@@ -40,7 +40,7 @@ ICP は Kubernetes のデフォルトの Calico ネットワーキング・ス�
 
 ![NSX-V を使用する場合の ICP のネットワーキング](vcsicp-nsxv-networking.svg)
 
-詳しくは、[IBM Cloud VCS ネットワーキング参照アーキテクチャー](../vcsnsxt/vcsnsxt-intro.html)を参照してください
+詳しくは、[vCenter Server ネットワーキング・ガイド](../vcsnsxt/vcsnsxt-intro.html)を参照してください。
 
 ### NSX-T ネットワーキング
 
@@ -54,4 +54,4 @@ ICP には Calico ネットワーキングを NSX-T インスタンスに置き�
 
 ### 関連リンク
 
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [VCS Hybridity Bundle の概要](../vcs/vcs-hybridity-intro.html)

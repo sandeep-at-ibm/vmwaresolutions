@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -13,7 +13,6 @@ lastupdated: "2018-10-10"
 以下の図は、Acme Skateboards 社がデプロイするアプリケーション・モダナイゼーションのリファレンス・アーキテクチャーを示しており、この文書シリーズで詳しく説明されています。
 
 図 1. アーキテクチャー概要図
-
 ![アーキテクチャー概要図](vcsicp-arch-overview.svg)
 
 このハイブリッド・アーキテクチャーにより、Acme Skateboards 社は以下のことが可能になります。
@@ -22,20 +21,20 @@ lastupdated: "2018-10-10"
 - Cloud Automation Manager (CAM) を活用して Infrastructure as Code (IaC) をスクリプト化し、VM とコンテナーの両方から作成された各種サービスを構成および調整して、DevOps ツールチェーンおよび ITSM ソリューションと統合します。
 
 このリファレンス・アーキテクチャーには以下のキー・コンポーネントがあります。
-- **オンプレミス仮想化** – これは、Acme Skateboards 社の VM を現在ホストしている VMware クラスターです。モダナイズ対象となるアプリケーションを現在ホストしているのは、これらの VM です。このクラスターは、HCX を実行するための [IBM Cloud vCenter Server with Hybridity Bundle](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) アーキテクチャーの前提条件を満たすために必要です。HCX はオンプレミス・ネットワークを IBM Cloud に拡張します。お客様は VM を、IBM Cloud 上で稼働する VMware vCenter Server on IBM Cloud (VCS) インスタンスにマイグレーションしたり、必要に応じて元に戻したりすることができます。
+- **オンプレミス仮想化** – これは、Acme Skateboards 社の VM を現在ホストしている VMware クラスターです。 モダナイズ対象となるアプリケーションを現在ホストしているのは、これらの VM です。 このクラスターは、HCX を実行するための [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) アーキテクチャーの前提条件を満たすために必要です。 HCX はオンプレミス・ネットワークを IBM Cloud に拡張します。お客様は VM を、IBM Cloud 上で稼働する VMware vCenter Server on IBM Cloud (VCS) インスタンスにマイグレーションしたり、必要に応じて元に戻したりすることができます。
 
-- **IBM Cloud for VMware Solutions** – VCS インスタンスは、VMware Software Defined Data Center (SDDC) ソリューションを自動的にデプロイするために必要な、vSphere、vCenter Server、NSX-V、および vSAN や IBM Cloud Endurance ストレージを始めとするストレージ・オプションなどの基本的な VMware ビルディング・ブロックを提供します。VMware クラスターは、マイグレーションされる VM のターゲットです。さらに、ICP がホストするコンテナー内にある一部のモダナイズ対象アプリケーションのターゲットでもあります。VCS のキー・コンポーネントは以下のとおりです。
-    - **NSX-V** - NSX-V は、Acme Skateboards 社の VM のネットワーク・オーバーレイを提供する、VCS のネットワーク仮想化層になります。NSX-V は BYOIP を使用可能にして、ワークロード・ネットワークを IBM Cloud ネットワークから分離します。NSX-V は、Acme Skateboards 社がオンプレミスから拡張するネットワークを作成するために HCX によってプログラミングされます。
+- **IBM Cloud for VMware Solutions** – VCS インスタンスは、VMware Software Defined Data Center (SDDC) ソリューションを自動的にデプロイするために必要な、vSphere、vCenter Server、NSX-V、および vSAN や IBM Cloud Endurance ストレージを始めとするストレージ・オプションなどの基本的な VMware ビルディング・ブロックを提供します。 VMware クラスターは、マイグレーションされる VM のターゲットです。さらに、ICP がホストするコンテナー内にある一部のモダナイズ対象アプリケーションのターゲットでもあります。 VCS のキー・コンポーネントは以下のとおりです。
+    - **NSX-V** - NSX-V は、Acme Skateboards 社の VM のネットワーク・オーバーレイを提供する、VCS のネットワーク仮想化層になります。 NSX-V は BYOIP を使用可能にして、ワークロード・ネットワークを IBM Cloud ネットワークから分離します。 NSX-V は、Acme Skateboards 社がオンプレミスから拡張するネットワークを作成するために HCX によってプログラミングされます。
 
-    - **NSX-T** - NSX-T は、コンテナーと VM の両方にわたるネットワーク管理とセキュリティー管理用の共通のツール・セットを提供します。NSX-T は Kubernetes Container Networking Interface (CNI) と完全に互換性があり、CNI と統合してコンテナー・ネットワーキングを提供します。NSX-T は、モダナイズされるアプリケーションが使用するオーバーレイ・ネットワークを提供し、ICP および IKS によってネイティブで使用される Calico を置き換えます。
+    - **NSX-T** - NSX-T は、コンテナーと VM の両方にわたるネットワーク管理とセキュリティー管理用の共通のツール・セットを提供します。 NSX-T は Kubernetes Container Networking Interface (CNI) と完全に互換性があり、CNI と統合してコンテナー・ネットワーキングを提供します。 NSX-T は、モダナイズされるアプリケーションが使用するオーバーレイ・ネットワークを提供し、ICP および IKS によってネイティブで使用される Calico を置き換えます。
 
-- **IBM Cloud Private** - ICP は、コンテナー化されたアプリケーションを開発して管理するためのアプリケーション・プラットフォームです。ICP は、コンテナー・オーケストレーター Kubernetes、プライベート・イメージ・リポジトリー、管理コンソール、モニター・フレームワーク、グラフィカル・ユーザー・インターフェースで構成される統合環境で、Acme Skateboards 社がアプリケーションのデプロイ、管理、モニター、スケーリングを行うことができる一元的な場所を提供します。VCS インスタンスは ICP コンポーネント、マスター・ノード、ワーカー・ノードなどをホストし、それらを VM として実行します。ICP は以下のものをホストします。
-    - **IBM Cloud Automation Manager** – CAM は、エンタープライズ対応の Infrastructure as Code (IaC) プラットフォームです。テンプレートを使用するだけで、ICP または IKS の Kubernetes ワークロードとともにオンプレミスまたは VCS の VM ワークロードをプロビジョンする単一ビューを提供します。CAM は、ICP の最上部で実行される Docker 対応アプリケーションで、役割ベースのアクセス制御 (RBAC) や許可などの機能を実行するために緊密に統合されています。
+- **IBM Cloud Private** - ICP は、コンテナー化されたアプリケーションを開発して管理するためのアプリケーション・プラットフォームです。 ICP は、コンテナー・オーケストレーター Kubernetes、プライベート・イメージ・リポジトリー、管理コンソール、モニター・フレームワーク、グラフィカル・ユーザー・インターフェースで構成される統合環境で、Acme Skateboards 社がアプリケーションのデプロイ、管理、モニター、スケーリングを行うことができる一元的な場所を提供します。 VCS インスタンスは ICP コンポーネント、マスター・ノード、ワーカー・ノードなどをホストし、それらを VM として実行します。 ICP は以下のものをホストします。
+    - **IBM Cloud Automation Manager** – CAM は、エンタープライズ対応の Infrastructure as Code (IaC) プラットフォームです。テンプレートを使用するだけで、ICP または IKS の Kubernetes ワークロードとともにオンプレミスまたは VCS の VM ワークロードをプロビジョンする単一ビューを提供します。 CAM は、ICP の最上部で実行される Docker 対応アプリケーションで、役割ベースのアクセス制御 (RBAC) や許可などの機能を実行するために緊密に統合されています。
     - この環境にデプロイする Acme Skateboards 社のコンテナー化アプリケーション。
 
-- **IBM Kubernetes Service** – IKS では、Acme Skateboards 社がモダナイズ対象アプリケーションを Docker コンテナー (Kubernetes クラスターで稼働) にデプロイできます。マスター・モードは IBM が完全に管理しますが、ワーカー・プール内のワーカー・ノードは VCS インスタンスと同じ IBM Cloud アカウントにデプロイされます。ワーカー・ノードは、ベアメタル、パブリック、専用仮想サーバーのいずれかのインスタンスになります。IKS によって Calico が自動的にインストールされて構成されます。Calico は、コンテナーにセキュアなネットワーク接続を提供します。これは IKS で構成され、サブネット間を流れるパケットに対して IP-in-IP カプセル化を使用し、コンテナーからの発信接続に NAT を使用します。
+- **IBM Kubernetes Service** – IKS では、Acme Skateboards 社がモダナイズ対象アプリケーションを Docker コンテナー (Kubernetes クラスターで稼働) にデプロイできます。 マスター・モードは IBM が完全に管理しますが、ワーカー・プール内のワーカー・ノードは VCS インスタンスと同じ IBM Cloud アカウントにデプロイされます。 ワーカー・ノードは、ベアメタル、パブリック、専用仮想サーバーのいずれかのインスタンスになります。 IKS によって Calico が自動的にインストールされて構成されます。 Calico は、コンテナーにセキュアなネットワーク接続を提供します。これは IKS で構成され、サブネット間を流れるパケットに対して IP-in-IP カプセル化を使用し、コンテナーからの発信接続に NAT を使用します。
 
-- **Direct Link** – IBM Cloud Direct Link は、Acme Skateboard 社の WAN プロバイダーを使用してデータ・センターを IBM Cloud に接続し、信頼性が高く遅延時間の少ないセキュアなネットワーク接続を提供します。この接続は以下のものを提供します。
+- **Direct Link** – IBM Cloud Direct Link は、Acme Skateboard 社の WAN プロバイダーを使用してデータ・センターを IBM Cloud に接続し、信頼性が高く遅延時間の少ないセキュアなネットワーク接続を提供します。 この接続は以下のものを提供します。
     - エンタープライズ・ユーザーからクラウド・ホスト・アプリケーションへのアクセス。
     - オンプレミス VM とクラウド VM 間の VM 間トラフィック。
     - オンプレミス・データ・センター内のレガシー・システムとクラウド VM との間のトラフィック。
@@ -51,8 +50,8 @@ IBM Cloud for VMware オファリングの機能を要約すると、次のよ�
 * 仮想化管理への完全な管理アクセス権限を付与し、デプロイされたハイブリッド・クラウドに対して一貫性のある管理およびガバナンスを行うことで、既存の VMware ツール、スクリプト、研修への投資がむだにならないように活用できます。
 * 世界 30 カ所以上の IBM Cloud データ・センターにわたる IBM プロフェッショナル・サービスおよびマネージド・サービスで、世界規模の VMware 専門知識を利用できます。
 
-ICP や IKS などのクラウド・ネイティブ・アプリケーション・プラットフォームに移行するお客様は、速度とイノベーションに注意を向けているので、セキュリティーやネットワーキングがおろそかになる傾向があります。ネットワーキング・チームやセキュリティー・チームがロード・バランサー、ファイアウォール、スイッチ、ルーターなどのサービスをプロビジョンするのを待っていると、アプリケーションが価値を生み出すまでに時間がかかってしまいます。このリファレンス・アーキテクチャーでは、VCS、ICP、IKS を利用して Acme Skateboards 社のアプリケーション・モダナイゼーションの手順を安全に進めていく方法を示します。
+ICP や IKS などのクラウド・ネイティブ・アプリケーション・プラットフォームに移行するお客様は、速度とイノベーションに注意を向けているので、セキュリティーやネットワーキングがおろそかになる傾向があります。 ネットワーキング・チームやセキュリティー・チームがロード・バランサー、ファイアウォール、スイッチ、ルーターなどのサービスをプロビジョンするのを待っていると、アプリケーションが価値を生み出すまでに時間がかかってしまいます。 このリファレンス・アーキテクチャーでは、VCS、ICP、IKS を利用して Acme Skateboards 社のアプリケーション・モダナイゼーションの手順を安全に進めていく方法を示します。
 
 ## 関連リンク
 
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [VCS Hybridity Bundle の概要](../vcs/vcs-hybridity-intro.html)
