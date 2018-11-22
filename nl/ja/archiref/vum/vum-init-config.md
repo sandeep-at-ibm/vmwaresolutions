@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
 # 初期構成
 
-IC4VS 自動化により、IBM Cloud Backend Customer Router (BCR) に設定されたデフォルト・ゲートウェイを使用して VCSA が構成されます。 ただし、BCR を介したインターネットへの経路はありません。 VCS インスタンスからインターネットへの標準経路では、管理 ESG を経由します。 VCSA または管理 ESG の構成を変更することはお勧めしません。VUM を有効にするには、カスタマー・サブネットのプロキシー・サーバー実装をお勧めします。
+IC4VS 自動化により、{{site.data.keyword.cloud}} Backend Customer Router (BCR) に設定されたデフォルト・ゲートウェイを使用して VCSA が構成されます。 ただし、BCR を介したインターネットへの経路はありません。 VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスからインターネットへの標準経路では、管理 ESG を経由します。 VCSA または管理 ESG の構成を変更することはお勧めしません。VUM を有効にするには、カスタマー・サブネットのプロキシー・サーバー実装をお勧めします。
 
-この方法では、VCSA または管理 ESG を再構成する必要はありませんが、小さい VM またはアプライアンスをインストールする必要があります。 プロキシー・サーバーは、2 つのエンドポイント・デバイス間に存在し、中間デバイスとして機能するシステムです。 この場合、これは VUM と VMware の更新サーバーの間に存在します。
+この方法では、VCSA または管理 ESG を再構成する必要はありませんが、小さい仮想マシン (VM) またはアプライアンスをインストールする必要があります。 プロキシー・サーバーは、2 つのエンドポイント・デバイス間に存在し、中間デバイスとして機能するシステムです。 この場合、これは VUM と VMware の更新サーバーの間に存在します。
 
 VUM が VMware の更新サーバーからリソースを要求すると、まず要求がプロキシー・サーバーに送信され、プロキシー・サーバーからその要求が更新サーバーに送信されます。 プロキシー・サーバーによってリソースが取得されると、そのリソースは VUM に送信されます。 プロキシー・サーバーは、セキュリティー、管理制御、およびキャッシング・サービスを容易にするために使用できます。
 
@@ -35,9 +35,9 @@ VUM が VMware の更新サーバーからリソースを要求すると、ま�
 | ホスト名 | Proxy01 | |
 | アドレス | proxy ip | 予備の IP アドレスは、プロビジョニング・プロセス中に割り当てられた顧客のプライベート・ポータブル・サブネットから使用する必要があります。 このサブネットで予約されている IP アドレスは 2 つのみです。1 つは BCR 用で、もう 1 つは customer-esg 用です。
 | ネットマスク | 255.255.255.192 | |
-| ゲートウェイ| customer-nsx-edge プライベート・アップリンク IP | これは、customer-nsx-edge のプライベート・アップリンク IP アドレスであるプロキシー・サーバーのデフォルトのゲートウェイ設定です。この IP アドレスは **customer-nsx-edge** の**「設定」**タブで確認できます。|
-| DNS サーバー | AD/DNS ip | この IP アドレスは、IBM Cloud for VMware Solutions コンソールのインスタンス・ページである**「デプロイ済みインスタンス」**ページにあります。|
-| BCR IP | bcr ip | これは、IBM Cloud Backend Customer Router の IP アドレスであり、10.0.0.0/8 および 161.26.0.0/16 のゲートウェイです。 このアドレスは、VCSA および AD/DNS サーバーに到達できるように、プロキシー・サーバーの静的ルートで使用されます。 |
+| ゲートウェイ| customer-nsx-edge プライベート・アップリンク IP | これは、customer-nsx-edge のプライベート・アップリンク IP アドレスであるプロキシー・サーバーのデフォルトのゲートウェイ設定です。 この IP アドレスは **customer-nsx-edge** の**「設定」**タブで確認できます。 |
+| DNS サーバー | AD/DNS ip | この IP アドレスは、{{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンス・ページである**「デプロイ済みインスタンス」**ページにあります。 |
+| BCR IP | bcr ip | これは、{{site.data.keyword.cloud_notm}} Backend Customer Router の IP アドレスであり、10.0.0.0/8 および 161.26.0.0/16 のゲートウェイです。 このアドレスは、VCSA および AD/DNS サーバーに到達できるように、プロキシー・サーバーの静的ルートで使用されます。 |
 
 ## NSX の構成
 
@@ -73,11 +73,11 @@ VUM が VMware の更新サーバーからリソースを要求すると、ま�
 
 ### CentOS-Minimal ISO ファイルのダウンロード
 
-ジャンプ・サーバーのブラウザーを使用して、[CentOS](https://www.centos.org/download/) から CentOS-Minimal ISO ファイルをダウンロードします。 IBM Cloud では、多くの一般的な Linux ディストリビューションのミラーが維持されることに注意してください。 このミラーはプライベート・ネットワークでのみ使用可能であり、CentOS ISO は `http://mirrors.service.softlayer.com/centos/7/isos/x86_64/` のアドレスで入手できます。
+ジャンプ・サーバーのブラウザーを使用して、[CentOS](https://www.centos.org/download/) から CentOS-Minimal ISO ファイルをダウンロードします。 {{site.data.keyword.cloud_notm}} では、多くの一般的な Linux ディストリビューションのミラーが維持されることに注意してください。 このミラーはプライベート・ネットワークでのみ使用可能であり、CentOS ISO は `http://mirrors.service.softlayer.com/centos/7/isos/x86_64/` のアドレスで入手できます。
 
 ### コンテンツ・ライブラリーの構成およびそのライブラリーへの CentOS ISO ファイルの取り込み
 
-ローカルの vCenter コンテンツ・ライブラリーを作成します。 ライブラリーは、それが作成された vCenter Server インスタンスでのみアクセス可能です。 仮想マシンのデプロイに必要なテンプレートおよび ISO をライブラリーに取り込みます。
+ローカルの vCenter コンテンツ・ライブラリーを作成します。 ライブラリーは、それが作成された vCenter Server インスタンスでのみアクセス可能です。 VM のデプロイに必要なテンプレートおよび ISO をライブラリーに取り込みます。
 
 1. vSphere Web Client から、**「Home」**>**「Content library」**>**「Objects」**>**「Create a new content library」**>**「Create subscribed library on the vCenter」**にナビゲートします。
 2. コンテンツ・ライブラリーの名前 (例えば、ISO) を入力し、「Notes」テキスト・ボックスにライブラリーの説明を入力し、**「Next」**をクリックします。
@@ -107,7 +107,7 @@ VUM が VMware の更新サーバーからリソースを要求すると、ま�
 8.	**「CPU」を 1**、**「Memory」を 2048 MB**、**「New Hard disk」を 25 GB** に設定します。 **「Content Library ISO File」**、**「CentOS-7-x86_64-Minimal」**と選択して**「OK」**をクリックし、**「Connected」**ボックスにチェック・マークを付けます。
 9.	「New device」ボックスで、**「Network」**を選択して、**「Add」**をクリックします。
 10.	**「SDDC-DPortGroup-Mgmt」**ネットワークを選択して、「Connect」チェック・ボックスにチェック・マークが付いている状態にして、**「Next」**をクリックします。
-11.	確認して**「Finish」**をクリックします
+11.	確認して**「Finish」**をクリックします。
 
 #### CentOS のインストール
 
@@ -122,10 +122,10 @@ VUM が VMware の更新サーバーからリソースを要求すると、ま�
 7.	**「LOCALIZATION」**画面で、**「INSTALLATION DESTINATION」**をクリックして、**VMware 仮想ディスク・アイコン**をクリックし、**「Done」**をクリックします。
 8.	**「LOCALIZATION」**画面で、**「NETWORK & HOSTNAME」**をクリックして、ホスト名を選択したホスト名 (例えば、Proxy01) に変更します。
 9.	**「Configure」**ボタン、**「IPv4 Settings」**をクリックして、**「Method」**ボックスで**「Manual」**を選択します。
-10.	**「Add」**ボタンを使用して、_『表 1 – デプロイメント値』_ から、_アドレス、ネットマスク_、および_ゲートウェイ_ を挿入します
-11.	『表 1 - デプロイメント値』の _DNS サーバーの IP アドレス_ を入力します
-12.	**「Routes」**ボタンをクリックして、『表 1 デプロイメント値』の _BCR IP アドレス_ のゲートウェイ IP アドレスをゲートウェイとして使用して _10.0.0.0/8 および 161.26.0.0/16_ の静的ルートを追加します。 この静的ルートにより、プロキシー・サーバーは DNS サーバーに到達できます
-13.	**「Save」**をクリックし、イーサネット・インターフェースがオンで接続済みと表示されている状態にします。 **「Done」**、**「Begin Installation」**とクリックします
+10.	**「Add」**ボタンを使用して、_『表 1 – デプロイメント値』_ から、_アドレス、ネットマスク_、および_ゲートウェイ_ を挿入します。
+11.	『表 1 - デプロイメント値』の _DNS サーバーの IP アドレス_ を入力します。
+12.	**「Routes」**ボタンをクリックして、『表 1 デプロイメント値』の _BCR IP アドレス_ のゲートウェイ IP アドレスをゲートウェイとして使用して _10.0.0.0/8 および 161.26.0.0/16_ の静的ルートを追加します。 この静的ルートにより、プロキシー・サーバーは DNS サーバーに到達できます。
+13.	**「Save」**をクリックし、イーサネット・インターフェースがオンで接続済みと表示されている状態にします。 **「Done」**、**「Begin Installation」**とクリックします。
 14.	インストールが続く中で、root パスワードを設定し、ユーザーをセットアップします。
 15.	インストールが完了したら、ユーザーとしてログインし、コマンド _ping vmware.com_ を入力します。 名前は IP アドレスに解決される必要があり、応答を受信する必要があります。 応答を受信しない場合は、IP アドレス、ファイアウォール・ルール、および NAT 設定を確認します。
 
@@ -159,9 +159,9 @@ Squid には最小ハードウェア要件はありませんが、RAM の量は�
 2. **「Manage」タブ**を選択して、**「Settings」**ボタンをクリックします。
 3. **「Download Settings」**を選択して、_「Proxy settings」_ で**「Edit」**をクリックします。
 4. **「Use Proxy」**ボックスにチェック・マークを付けて、_プロキシー・サーバーの IP アドレス_ と_ポート 3128_ を入力して、**「OK」**をクリックします。 接続状況が_「Validating」_、_「Connected」_ と変わります。
-5. **「今すぐダウンロード」**をクリックします。_「Recent Tasks」_ ペインでこのアクティビティーが完了したことを確認します。
+5. **「今すぐダウンロード」**をクリックします。 _「Recent Tasks」_ ペインでこのアクティビティーが完了したことを確認します。
 
 ### 関連リンク
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモ)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモ)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -17,11 +17,11 @@ NSX と vSphere の両方をアップグレードする必要がある場合、N
 1. **ESXi のアップグレード** - ESXi のアップグレードが完了すると、ホストは保守モードを終了しますが、次のステップが完了するまで、論理スイッチに接続されている VM をホストに移動することはできません。
 2. **NSX VIB のアップグレード** - VIB がアップグレードされ、ホストの保守モードが終了すると、論理スイッチに接続されている VM をホストに移動できます。
 
-NSX は、_my.vmware.com_ からのダウンロードを使用して NSX Manager を更新することで更新されます。 したがって、更新をダウンロードするにはアカウントが必要です。 VCS インスタンスで IBM Cloud サブスクリプション・ライセンスを使用している場合、**my.vmware.com** アカウントを使用して更新をダウンロードすることはできません。 そのため、[IBM サポートに連絡](../../vmonic/trbl_support.html)する必要があります。
+NSX は、_my.vmware.com_ からのダウンロードを使用して NSX Manager を更新することで更新されます。 したがって、更新をダウンロードするにはアカウントが必要です。 VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスで {{site.data.keyword.cloud}} サブスクリプション・ライセンスを使用している場合、**my.vmware.com** アカウントを使用して更新をダウンロードすることはできません。 そのため、[IBM サポートに連絡](../../vmonic/trbl_support.html)する必要があります。
 
 アップグレードを開始する前に、リリース・ノートを確認してください。これらの NSX リリース・ノートには、既知のアップグレードに関する問題と回避策が記載されています。 リリース・ノートを使用して、vCenter が NSX の新しいシステム要件を満たしていることを確認します。
 
-VMware パートナーから追加のソフトウェアをインストールした場合は、互換性およびアップグレードの詳細についてパートナーの資料を参照してください。 VCS のプライマリー・インスタンスとセカンダリー・インスタンスをデプロイしており、Cross-vCenter NSX 環境を使用している場合は、適切なアップグレード・プロセスについてリリース・ノートを参照してください。
+VMware パートナーから追加のソフトウェアをインストールした場合は、互換性およびアップグレードの詳細についてパートナーの資料を参照してください。 vCenter Server のプライマリー・インスタンスとセカンダリー・インスタンスをデプロイしており、Cross-vCenter NSX 環境を使用している場合は、適切なアップグレード・プロセスについてリリース・ノートを参照してください。
 
 Cross-vCenter NSX 環境では、最初に NSX Manager のプライマリー・アプライアンスが更新された後、NSX Manager のすべてのセカンダリー・アプライアンスが更新されます。
 **ダウングレードはサポートされていない**ため、アップグレードに進む前に NSX Manager のバックアップを取ります。これにより、すべての NSX Edge 構成、論理ルーター、および Edge Services Gateway が、NSX Manager のバックアップの一部としてバックアップされます。
@@ -63,5 +63,5 @@ NSX Manager が正常にアップグレードされた後に NSX をダウング
 
 ### 関連リンク
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモ)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモ)

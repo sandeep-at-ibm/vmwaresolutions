@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-29"
 
 vCenter には、ホスト・プロファイルと呼ばれる機能があります。 この機能により、事前構成の検証された参照ホスト構成を取り込み、システム管理者がクラスター内のホスト構成を管理するのに役立つプロファイルが作成されます。 ホスト・プロファイルにより、ホスト構成および構成のコンプライアンスのための自動化された集中管理メカニズムが提供されます。 ホスト・プロファイルにより、構成を管理対象オブジェクトとして扱うことができます。管理対象オブジェクトには、構成するパラメーター (ネットワーキング、ストレージ、セキュリティー、およびその他のホスト・レベルのパラメーター) のカタログが含まれます。 これらのホスト・プロファイルは、個々のホスト、クラスター、またはホスト・プロファイルに関連付けられたすべてのホストとクラスターに適用できます。
 
-元のクラスターをデプロイした IC4VS 自動化によってより多くの VCS vSphere ESXi ホストがデプロイされるため、ホストを手動で追加する方法よりも構成ドリフトが少なくなります。 ただし、自動化に含まれないシステム管理者のアクションによって、ホスト構成が異なる可能性があります。 例えば、より多くの NFS ストレージが追加されていたり、VLAN が追加されていたりします。 したがって、ホスト・プロファイルを使用して、既存のホストに対するこのホストのコンプライアンスを検査することで新規ホストの構成を検証することは、IBM Cloud 内でのこのツールの有効なユース・ケースです。
+元のクラスターをデプロイした IC4VS 自動化によってより多くの VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi ホストがデプロイされるため、ホストを手動で追加する方法よりも構成ドリフトが少なくなります。 ただし、自動化に含まれないシステム管理者のアクションによって、ホスト構成が異なる可能性があります。 例えば、より多くの NFS ストレージが追加されていたり、VLAN が追加されていたりします。 したがって、ホスト・プロファイルを使用して、既存のホストに対するこのホストのコンプライアンスを検査することで新規ホストの構成を検証することは、{{site.data.keyword.cloud_notm}} 内でのこのツールの有効なユース・ケースです。
 
 vCenter Server クラスターにさらにホストを追加するには、[vCenter Server インスタンスの容量の拡張と縮小](../../vcenter/vc_addingremovingservers.html)を参照してください。
 
@@ -62,5 +62,5 @@ vCenter Server クラスターにさらにホストを追加するには、[vCen
 
 ### 関連リンク
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモ)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモ)
