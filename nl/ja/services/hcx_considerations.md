@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -19,15 +19,17 @@ HCX on {{site.data.keyword.cloud}} サービスは、オンプレミス・デー
 このサービスは、V2.3 以降でデプロイされた VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスでのみ利用可能です。
 {:note}
 
-既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードできます。 インスタンスをアップグレードして HCX on {{site.data.keyword.cloud_notm}} サービスをデプロイする方法について詳しくは、[vCenter Server with Hybridity Bundle インスタンスへのアップグレード](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance)を参照してください。
+既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードできます。 インスタンスをアップグレードして HCX on {{site.data.keyword.cloud_notm}} サービスをデプロイする方法について詳しくは、[vCenter Server with Hybridity Bundle インスタンスへアップグレードする手順](../vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)を参照してください。
 
-**注:** vCenter Server with HCX on {{site.data.keyword.cloud_notm}} インスタンスでは、オンプレミス・サイトからの同時接続が 3 つまでに制限されています。
+vCenter Server with HCX on {{site.data.keyword.cloud_notm}} インスタンスでは、オンプレミス・サイトからの同時接続が 3 つまでに制限されています。
+{:note}
 
 ## HCX on IBM Cloud の技術仕様
 
 以下のコンポーネントが注文されて HCX on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
-**注:** オンプレミスの HCX インスタンスには、ライセンス交付とアクティベーションのみが含まれます。
+オンプレミスの HCX インスタンスには、ライセンス交付とアクティベーションのみが含まれます。
+{:note}
 
 ### HCX 管理用の VMware NSX Edge Services Gateways のアクティブ/パッシブ・ペア
 
@@ -86,4 +88,4 @@ HCX on {{site.data.keyword.cloud_notm}} サービスを削除する前に、以�
 * [HCX の用語集](hcx_glossary.html)
 * [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension の概要](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension の資料](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)

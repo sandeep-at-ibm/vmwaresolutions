@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -32,4 +32,4 @@ HCX on {{site.data.keyword.cloud_notm}} は、VMware Hybrid Cloud Extension テ�
 * [HCX on {{site.data.keyword.cloud_notm}} の概要](hcx_considerations.html)
 * [HCX の用語集](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension の概要](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension の資料](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)

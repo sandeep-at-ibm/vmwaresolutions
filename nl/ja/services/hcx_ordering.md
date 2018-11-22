@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware HCX on IBM Cloud の注文
 
@@ -50,7 +54,8 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
    * HCX 相互接続用プライベート・ポータブル・サブネットを 1 つ。 このサブネットは、**「HCX interconnect type」**として**「Private network」**オプションを選択した場合に使用されます。
    * VMware でのアクティベーションやメンテナンスで使用されるパブリック・ポータブル・サブネットを 1 つ。 **「HCX interconnect type」**として**「Public network」**オプションを選択した場合、このサブネットは HCX 相互接続用としても使用されます。
 
-   **重要:** HCX 用に注文されたサブネット内の IP アドレスは、VMware on {{site.data.keyword.cloud_notm}} の自動化機能によって管理されるようになっています。 ユーザーが作成した VMware リソース (VM や NSX Edge など) にこれらの IP アドレスを割り当てることはできません。 VMware 成果物用に追加の IP アドレスが必要な場合は、{{site.data.keyword.cloud_notm}} 上の独自のサブネットを注文する必要があります。
+   HCX 用に注文されたサブネット内の IP アドレスは、VMware on {{site.data.keyword.cloud_notm}} の自動化機能によって管理されるようになっています。 ユーザーが作成した VMware リソース (VM や NSX Edge など) にこれらの IP アドレスを割り当てることはできません。 VMware 成果物用に追加の IP アドレスが必要な場合は、{{site.data.keyword.cloud_notm}} 上の独自のサブネットを注文する必要があります。
+   {:important}
 2. **「HCX interconnect type」**に対して**「Private network」**が選択された場合、**SDDC-DPortGroup-HCX-Private** という名前のポート・グループがプライベート分散仮想スイッチ (DVS) に作成されます。
 3. HCX アクティベーション・キーが VMware から注文されます。
 4. HCX 用のリソース・プールと VM フォルダーが 3 つずつ作成されます。これらは、HCX 相互接続、ローカル HCX コンポーネント、リモート HCX コンポーネントに必要です。
@@ -61,7 +66,8 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
    * ロード・バランサー・ルールとリソース・プールが構成されます。 それらのルールとリソース・プールを使用して、HCX 関連のインバウンド・トラフィックが、HCX Manager、vCenter Server、Platform Services Controller (PSC) の該当する仮想アプライアンスに転送されます。
    * ESG を通ってくる HCX 関連のインバウンド HTTPS トラフィックを暗号化するための SSL 証明書が適用されます。
 
-   **重要:** HCX 管理エッジは、オンプレミスの HCX コンポーネントとクラウド・サイドの HCX コンポーネントの間の HCX 管理トラフィック専用です。 HCX 管理エッジは、変更したり、HCX ネットワーク拡張に使用したりしないでください。 ネットワーク拡張用には別のエッジを作成してください。 また、ファイアウォールを使用したり、プライベート IBM 管理コンポーネントやパブリック・インターネットへの HCX 管理エッジ通信を無効にしたりすると、HCX の機能に悪影響を与える恐れがあります。
+   HCX 管理エッジは、オンプレミスの HCX コンポーネントとクラウド・サイドの HCX コンポーネントの間の HCX 管理トラフィック専用です。 HCX 管理エッジは、変更したり、HCX ネットワーク拡張に使用したりしないでください。 ネットワーク拡張用には別のエッジを作成してください。 また、ファイアウォールを使用したり、プライベート IBM 管理コンポーネントやパブリック・インターネットへの HCX 管理エッジ通信を無効にしたりすると、HCX の機能に悪影響を与える恐れがあります。
+   {:important}
 
 6. {{site.data.keyword.cloud_notm}} 上の HCX Manager がデプロイされ、アクティブにされ、構成されます。
    * HCX Manager が vCenter Server に登録されます。
@@ -78,4 +84,4 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 * [HCX の用語集](hcx_glossary.html)
 * [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension の概要](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension の資料](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)
