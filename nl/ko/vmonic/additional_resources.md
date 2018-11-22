@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -49,4 +49,4 @@ lastupdated: "2018-09-28"
 
 ## VMware 문서
 
-* [VMware Hybrid Cloud Extension 문서](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources)
