@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -89,12 +89,14 @@ vSphere Enterprise Plus と vCenter Server を除き、ライセンスを購入�
 
 クラスターをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
 
-vSAN コンポーネントを選択した場合は、SSD の使用可否によってロケーション・リストがフィルタリングされます。
-{:note}
+**注:**
+* vSAN コンポーネントを選択した場合は、SSD の使用可否によってロケーション・リストがフィルタリングされます。
+* FRA05 データ・センターは、Broadwell ベアメタル・サーバーをサポートしていません。
+* LON05 データ・センターは、SAP 認証ベアメタル・サーバーも Broadwell ベアメタル・サーバーもサポートしていません。
 
 ### Skylake
 
-**「Skylake」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。使用できるオプションは、VMware vSAN コンポーネントを選択したかどうかによって異なります。
+**「Skylake」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。 使用できるオプションは、VMware vSAN コンポーネントを選択したかどうかによって異なります。
 
 表 2. Skylake {{site.data.keyword.baremetal_short}}のオプション
 
@@ -106,7 +108,7 @@ vSAN コンポーネントを選択した場合は、SSD の使用可否によ�
 
 ### SAP 認定
 
-VMware vSAN を以前に選択した場合、**「SAP 認定」**タブは使用できません。**「SAP 認定」**を選択した場合、CPU や RAM の設定は変更できません。
+VMware vSAN を以前に選択した場合、**「SAP 認定」**タブは使用できません。 **「SAP 認定」**を選択した場合、CPU や RAM の設定は変更できません。
 
 要件に基づいて、以下のベア・メタル・サーバー構成を選択します。
   * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 192 GB RAM
@@ -115,7 +117,7 @@ VMware vSAN を以前に選択した場合、**「SAP 認定」**タブは使用
 
 ### Broadwell
 
-**「Broadwell」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。使用できるオプションは、VMware vSAN コンポーネントを選択したかどうかによって異なります。
+**「Broadwell」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。 使用できるオプションは、VMware vSAN コンポーネントを選択したかどうかによって異なります。
 
 表 3. Broadwell {{site.data.keyword.baremetal_short}}のオプション
 
