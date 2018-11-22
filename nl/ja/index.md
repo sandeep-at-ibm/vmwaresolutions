@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -136,7 +136,7 @@ lastupdated: "2018-09-07"
        <td>HyTrust KeyControl on {{site.data.keyword.cloud_notm}} サービスは、暗号鍵のライフサイクルを自動化および単純化することによって、暗号化ワークロードの管理を単純化します。 このサービスでは、FIPS 140-2 準拠の暗号化を使用することで、暗号鍵を簡単に一括して管理できるようになります。</td>
     </tr>
     <tr>
-       <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
+       <td>[IBM Cloud Private Hosted](services/icp_overview.html)</td>
        <td>{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} サービスは、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。 このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。</td>
     </tr>
     <tr>
