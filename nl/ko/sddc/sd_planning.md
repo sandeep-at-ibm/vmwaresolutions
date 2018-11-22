@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -27,15 +27,15 @@ Cloud Foundation 배치에는 실제 인프라에 대한 엄격한 요구사항�
 |AMS03 |암스테르담 |유럽 | Skylake, Broadwell |
 |CHE01 |첸나이 |아시아 태평양 | Skylake, Broadwell |
 |DAL09 |댈러스 |북미 남부 | Skylake, Broadwell |
-|DAL10 |댈러스 |북미 남부 | Skylake, Broadwell, 소형, 대형 |
+|DAL10 |댈러스 |북미 남부 | Skylake, Broadwell |
 |DAL12 |댈러스 |북미 남부 | Skylake, Broadwell |
 |DAL13 |댈러스 |북미 남부 | Skylake, Broadwell |
-|FRA02 |프랑크푸르트 |유럽 | Skylake, Broadwell, 대형 |
+|FRA02 |프랑크푸르트 |유럽 | Skylake, Broadwell |
 |FRA04 |프랑크푸르트 |유럽 | Skylake, Broadwell |
 |HKG02 |홍콩 |아시아 태평양 | Skylake, Broadwell |
 |LON02 |런던 |유럽 | Skylake, Broadwell |
 |LON04 |런던 |유럽 | Skylake, Broadwell |
-|LON06 |런던 |유럽 | Skylake, Broadwell, 소형, 대형 |
+|LON06 |런던 |유럽 | Skylake, Broadwell |
 |MEL01 |멜버른 |아시아 태평양 | Skylake, Broadwell |
 |MEX01 |케레타로 |북미 남부 | Skylake, Broadwell |
 |MIL01 |밀라노 |유럽 | Skylake, Broadwell |
@@ -50,8 +50,8 @@ Cloud Foundation 배치에는 실제 인프라에 대한 엄격한 요구사항�
 |SYD01 |시드니 |아시아 태평양 | Skylake, Broadwell |
 |SYD04 |시드니 |아시아 태평양 | Skylake, Broadwell |
 |TOK02 |도쿄 |아시아 태평양 | Skylake, Broadwell |
-|TOR01 |토론토 |북미 동부 | Skylake, Broadwell, 소형, 대형 |
-|WDC04 |워싱턴, DC |북미 동부 | Skylake, Broadwell, 소형, 대형 |
+|TOR01 |토론토 |북미 동부 | Skylake, Broadwell |
+|WDC04 |워싱턴, DC |북미 동부 | Skylake, Broadwell |
 |WDC06 |워싱턴, DC |북미 동부 | Skylake, Broadwell |
 |WDC07 |워싱턴, DC |북미 동부 | Skylake, Broadwell |
 

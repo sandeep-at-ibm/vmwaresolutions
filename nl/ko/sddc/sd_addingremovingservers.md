@@ -25,7 +25,7 @@ Cloud Foundation 인스턴스에는 최대 5개의 클러스터가 포함될 수
 * VMware vSphere Web Client에서 ESXi 서버를 추가하지 마십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_full}} 콘솔과 동기화되지 않습니다.
 * 주문한 기본 플랫폼에는 기본적으로 네 개의 ESXi 서버가 있습니다. 최대 32개의 ESXi 서버까지 플랫폼을 확장할 수 있습니다. 그러나 한 번에 추가할 수 있는 {{site.data.keyword.baremetal_short}}의 수는 다음과 같습니다.
    * **소형** 및 **대형** 구성의 경우 한 번에 1 - 10개의 ESXi 서버를 추가할 수 있습니다.
-   * **Skylake** 및 **Broadwell** 구성의 경우, 한 번에 1 - 20개의 ESXi 서버를 추가할 수 있습니다. 
+   * **Skylake** 및 **Broadwell** 구성의 경우, 한 번에 1 - 20개의 ESXi 서버를 추가할 수 있습니다.
 
 ## ESXi 서버를 추가하는 프로시저
 
