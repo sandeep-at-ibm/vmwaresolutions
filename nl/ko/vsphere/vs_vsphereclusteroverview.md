@@ -57,7 +57,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}의 컴포넌트를 검토하�
 ### 네트워킹
 
 * 하나의 공용 VLAN(Virtual LAN) 및 두 개 사설 VLAN
-* (선택사항) FortiGate Security Appliance 디바이스의 HA 쌍
+* (선택사항) FortiGate Security Appliance 디바이스의 HA 이중화
 
 ### 스토리지
 

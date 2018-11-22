@@ -35,7 +35,7 @@ VMware vSphere 오퍼링을 사용하여 {{site.data.keyword.vmwaresolutions_ful
 6. **VMware vSphere on IBM Cloud** 페이지에서 **작성**을 클릭하십시오.
 7. **기존 항목 스케일링** 탭을 클릭하십시오. **클러스터 구성** 목록에서 최근에 작성한 클러스터를 선택하십시오.
 8. **{{site.data.keyword.baremetal_short}}** 섹션에서 클러스터에 추가할 {{site.data.keyword.baremetal_short}}의 수를 지정하십시오.
-9. 클러스터의 해당 공용 VLAN이 FortiGate 300 Series Security Appliance HA 쌍을 포함하지 않는 경우에는 **FortiGate Physical Appliance 300 Series HA 쌍** 아래의 **구매에 포함**을 선택하여 이를 주문할 수 있습니다.
+9. 클러스터의 해당 공용 VLAN이 FortiGate 300 Series Security Appliance HA 이중화를 포함하지 않는 경우에는 **FortiGate Physical Appliance 300 Series HA 이중화** 아래의 **구매에 포함**을 선택하여 이를 주문할 수 있습니다.
 10. **주문 요약** 분할창에서 인스턴스 구성 및 예상 비용을 확인하고, 비용이 청구될 계정이 올바른지 확인하고, 이용 약관을 검토하고 이에 동의한 후 **프로비저닝**을 클릭하십시오.
 
 ## 결과

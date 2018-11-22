@@ -14,7 +14,7 @@ lastupdated: "2018-10-29"
 
 # 기존 vSphere 클러스터 스케일링
 
-{{site.data.keyword.vmwaresolutions_full}} 콘솔에서 주문하거나 저장한 VMware vSphere 클러스터를 스케일 확장할 수 있습니다. 이렇게 하려면 ESXi 서버를 추가하거나 클러스터의 FortiGate 300 Series Security Appliance HA 쌍을 주문하십시오.
+{{site.data.keyword.vmwaresolutions_full}} 콘솔에서 주문하거나 저장한 VMware vSphere 클러스터를 스케일 확장할 수 있습니다. 이렇게 하려면 ESXi 서버를 추가하거나 클러스터의 FortiGate 300 Series Security Appliance HA 이중화를 주문하십시오.
 
 ## 요구사항
 
@@ -30,7 +30,7 @@ lastupdated: "2018-10-29"
 3. **기존 항목 스케일링** 탭을 클릭하고 **클러스터 구성** 목록에서 스케일링할 클러스터를 선택하십시오.
 4. 자동으로 완료된 클러스터 설정을 검토하십시오.
 5. **{{site.data.keyword.baremetal_short}}** 섹션에서 클러스터에 추가할 {{site.data.keyword.baremetal_short}}의 수를 지정하십시오.
-6. 클러스터가 공용 VLAN에 FortiGate 300 Series Security Appliance HA 쌍을 포함하지 않는 경우 어플라이언스를 주문할 수 있습니다. 이를 수행하려면, **FortiGate Physical Appliance 300 Series HA 쌍** 아래의 **구매에 포함** 선택란을 선택하십시오.
+6. 클러스터가 공용 VLAN에 FortiGate 300 Series Security Appliance HA 이중화를 포함하지 않는 경우 어플라이언스를 주문할 수 있습니다. 이를 수행하려면, **FortiGate Physical Appliance 300 Series HA 이중화** 아래의 **구매에 포함** 선택란을 선택하십시오.
 7. **주문 요약** 분할창에서 인스턴스 구성 및 예상 비용을 확인하십시오.
    * 주문하지 않고 구성을 템플리트로 저장하려면 **구성 저장**을 클릭하십시오.
    * 주문하려는 경우에는 비용이 청구될 계정이 올바른지 확인하고, 이용 약관을 검토하고 이에 동의한 후 **프로비저닝**을 클릭하십시오.
