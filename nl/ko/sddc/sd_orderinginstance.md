@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -61,13 +61,11 @@ Cloud Foundation 인스턴스를 주문할 때는 다음 시스템 설정을 지
 
 ### Skylake
 
-**Skylake**를 선택하는 경우 필요에 따라 CPU 및 RAM 조합을 선택할 수 있습니다.
-
-Bare Metal Server의 CPU 모델 및 RAM을 선택하십시오.
+**Skylake**를 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다.
 
 표 1. Skylake {{site.data.keyword.baremetal_short}}의 옵션
 
-| CPU 모델 옵션        |RAM 옵션       |
+| CPU 모델 옵션  |RAM 옵션       |
 |:------------- |:------------- |
 |듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
 |듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
@@ -75,25 +73,15 @@ Bare Metal Server의 CPU 모델 및 RAM을 선택하십시오.
 
 ### Broadwell
 
-**Broadwell**을 선택하는 경우 필요에 따라 CPU 및 RAM 조합을 선택할 수 있습니다.
+**Broadwell**을 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다.
 
-Bare Metal Server의 CPU 모델 및 RAM을 선택하십시오.
-
-표 1. Broadwell {{site.data.keyword.baremetal_short}}의 옵션
+표 2. Broadwell {{site.data.keyword.baremetal_short}}의 옵션
 
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
 | 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
-
-### 사전 구성됨
-
-**사전 구성됨**을 선택하는 경우에는 CPU 또는 RAM 설정을 변경할 수 없습니다.
-
-자신의 요구사항에 따라 Bare Metal Server 구성을 선택하십시오.
-  * 소형(듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz / 128GB RAM / 12개의 드라이브)
-  * 대형(듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz / 512GB RAM / 12개의 드라이브)
 
 ### Bare Metal Server 수
 
@@ -102,10 +90,6 @@ Cloud Foundation 인스턴스는 초기 배치 시 네 개의 Bare Metal Server�
 ## 스토리지 설정
 
 Cloud Foundation 인스턴스의 경우, VMware vSAN 스토리지만 주문할 수 있습니다.
-
-**사전 구성됨** Bare Metal Server 구성을 선택한 경우에는 스토리지 설정이 표준화되며 변경할 수 없습니다.
-  * **소형** Bare Metal Server 구성의 경우, 두 개의 1.9TB SSD SED 디스크 드라이브가 주문됩니다.
-  * **대형** Bare Metal Server 구성의 경우, 네 개의 3.8TB SSD SED 디스크 드라이브가 주문됩니다.
 
 **Skylake** 또는 **Broadwell** Bare Metal Server 구성을 선택하는 경우 인스턴스에 대한 vSAN 스토리지를 사용자 정의할 수 있습니다. 다음 vSAN 설정을 지정하십시오.
 * **vSAN 용량 디스크의 디스크 유형 및 크기**: 필요한 용량 디스크에 대한 옵션을 선택하십시오.
@@ -148,7 +132,7 @@ Cloud Foundation 인스턴스를 주문할 때는 다음 네트워크 인터페�
 
 다음 표에 표시되어 있는 바와 같이, 도메인 이름 및 하위 도메인 레이블은 인스턴스의 사용자 이름 및 서버 이름을 생성하는 데 사용됩니다.
 
-표 2. 사용자 이름, 도메인 이름 및 서버 이름의 값 형식
+표 3. 사용자 이름, 도메인 이름 및 서버 이름의 값 형식
 
 |이름        |값 형식      |
   |:------------- |:------------- |
@@ -209,12 +193,10 @@ Cloud Foundation 인스턴스를 주문하는 경우 추가 기능 서비스도 
    *  자신의 라이센스를 사용하려면 **라이센스를 제공함**을 선택하고 라이센스 키를 입력하십시오.  
 6. Bare Metal Server 설정을 완료하십시오.
    1. {{site.data.keyword.CloudDataCent_notm}}를 선택하여 인스턴스를 호스팅하십시오.
-   2. Bare Metal Server 구성을 선택하십시오.
-      * **Skylake** 또는 **Broadwell**을 선택하는 경우 CPU 모델 및 RAM 크기를 지정하십시오.
-      * **사전 구성됨**을 선택한 경우에는 **소형** 및 **대형** 중에서 구성을 선택하십시오.
+   2. Bare Metal Server 구성을 선택한 후 CPU 모델 및 RAM 크기를 지정하십시오.
 7. 스토리지 구성을 완료하십시오.
-   * Bare Metal Server 구성에 대해 **Skylake** 또는 **Broadwell**을 선택한 경우 vSAN 용량의 디스크 유형 및 캐시 디스크, 디스크 수를 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
-   * Bare Metal Server 구성에 대해 **사전 구성됨**을 선택한 경우에는 **소형** 및 **대형** 표준화된 Bare Metal Server 구성의 스토리지 설정을 변경할 수 없습니다.
+   1. vSAN 용량 및 캐시 디스크에 대한 디스크 유형과 디스크 수를 지정하십시오. 
+   2. 더 많은 스토리지를 원하는 경우 **Intel Optane을 사용한 고성능** 선택란을 선택하십시오.
 8. 네트워크 인터페이스 설정을 완료하십시오.
    1. 호스트 이름 접두부, 하위 도메인 레이블 및 루트 도메인 이름을 입력하십시오. 보조 인스턴스의 경우에는 도메인 이름이 자동으로 입력됩니다.
    2. VLAN 설정을 선택하십시오.
