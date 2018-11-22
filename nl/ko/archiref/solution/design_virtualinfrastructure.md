@@ -101,7 +101,7 @@ vSphere 콘솔에서 달리 지정되지 않는 한 인스턴스는 기본 정�
 
 ### vSAN 설정
 
-vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware 솔루션 배치를 위한 우수 사례를 기반으로 설정됩니다. vSAN 설정에는 SIOC 설정, 명시적 장애 복구 설정 포트 그룹 및 디스크 캐시 설정이 포함됩니다.
+vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware Solutions 배치를 위한 우수 사례를 기반으로 설정됩니다. vSAN 설정에는 SIOC 설정, 명시적 장애 복구 설정 포트 그룹 및 디스크 캐시 설정이 포함됩니다.
 * SSD 캐시 정책 설정: **미리 읽기**, **Write Through**, **직접** 없음(NRWTD)
 * 네트워크 I/O 제어 설정
    * 관리 - 20개 공유
@@ -171,7 +171,7 @@ vSphere 클러스터는 다음 표에서 처럼 구성된 2개의 vSphere 분배
 
 표 4. 통합된 교환 분배 스위치
 
-| vSphere 분배<br>스위치 이름 |기능 |네트워크<br>I/O 제어 |로드 밸런싱<br>모드 |실제 NIC<br>포트| MTU |
+| vSphere 분배<br>스위치 이름 |기능 |네트워크<br>I/O 제어 |로드 밸런싱<br>모드 |실제 NIC<br>포트 | MTU |
 |:------------- |:------------- |:------------- |:------------- |:------------- |:------------- |
 | SDDC-Dswitch-Private | ESXi 관리, vSAN, vSphere vMotion, VXLAN 터널 엔드포인트, NFS(VTEP) |사용 | 명시적 장애 복구(vSAN, vMotion)의 원래 가상 포트 기반 라우트(기타 모두) |2 | 9,000<br>(점보 프레임) |
 | SDDC-Dswitch-Public | 외부 관리 트래픽(north-south) |사용 | 원래 가상 포트 기반 라우트 |2 | 1,500<br>(기본값) |
