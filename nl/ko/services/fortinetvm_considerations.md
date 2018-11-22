@@ -27,7 +27,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 서비스는 가상 �
 
 ### 가상 머신
 
-* 모든 옵션에는 가상 머신의 고가용성(HA) 쌍이 포함됨
+* 모든 옵션에는 가상 머신의 고가용성(HA) 이중화가 포함됨
 * 배치 크기와 구독 유형에 따라 가상 머신당 2, 4 또는 8개 vCPU
 * 배치 크기와 구독 유형에 따라 가상 머신당 4, 6 또는 12GB RAM
 
@@ -55,7 +55,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 설
   단일 FortiGate VM에 대한 CPU 및 RAM 예약을 계산하려면 다음 공식을 사용하십시오.
    * `CPU 예약 = ESXi 서버의 CPU 속도 * vCPU 수`
    * `RAM 예약 = RAM 크기`
-* FortiGate Virtual Appliances의 HA 쌍을 인스턴스에 배치하는 경우, 라이센스 활성화와 최신 보안 정책 및 컨텐츠 확보를 위해 인스턴스와 공용 네트워크 간의 아웃바운드 HTTPS 통신을 허용하도록 SNAT 및 방화벽 규칙이 관리 NSX Edge Services Gateway(ESG)에서 FortiGate Virtual Appliances의 정적 라우트와 함께 정의됩니다.
+* FortiGate Virtual Appliances의 HA 이중화를 인스턴스에 배치하는 경우, 라이센스 활성화와 최신 보안 정책 및 컨텐츠 확보를 위해 인스턴스와 공용 네트워크 간의 아웃바운드 HTTPS 통신을 허용하도록 SNAT 및 방화벽 규칙이 관리 NSX Edge Services Gateway(ESG)에서 FortiGate Virtual Appliances의 정적 라우트와 함께 정의됩니다.
 * 서비스 설치 후 라이센스 레벨을 변경할 수 없습니다. 라이센스 레벨을 변경하려면 기존 서비스를 제거한 후 다른 라이센스 옵션을 선택하여 서비스를 다시 설치해야 합니다.
 * FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}가 실패하지 않으려면 다음 요구사항을 충족해야 합니다.
    * 개별 서버에 VM을 유지하는 연관관계 방지 규칙으로 두 FortiGate VM이 최소 두 개의 활성 ESXi 서버를 배치할 수 있습니다.

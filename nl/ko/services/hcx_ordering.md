@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware HCX on IBM Cloud 주문
 
@@ -50,7 +54,8 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 서비�
    * HCX 상호연결을 위한 하나의 사설 포터블 서브넷. **사설 네트워크** 옵션이 **HCX 상호연결 유형**에 대해 선택된 경우 이 서브넷이 사용됩니다.
    * VMware의 활성화와 유지보수를 위한 하나의 공인 포터블 서브넷. **공인 네트워크** 옵션이 **HCX 상호연결 유형**에 대해 선택된 경우 이 서브넷도 HCX 상호연결에 사용됩니다.
 
-   **중요:** HCX에 대해 주문된 서브넷의 IP 주소는 VMware on {{site.data.keyword.cloud_notm}} 자동화로 관리되어야 합니다. 사용자가 작성한 VMware 리소스(예: VM 및 NSX Edge)에 이 IP 주소를 지정할 수 없습니다. VMware 아티팩트에 대한 추가 IP 주소가 필요한 경우 {{site.data.keyword.cloud_notm}}에서 고유한 서브넷을 주문해야 합니다.
+   HCX에 대해 주문된 서브넷의 IP 주소는 VMware on {{site.data.keyword.cloud_notm}} 자동화로 관리되어야 합니다. 사용자가 작성한 VMware 리소스(예: VM 및 NSX Edge)에 이 IP 주소를 지정할 수 없습니다. VMware 아티팩트에 대한 추가 IP 주소가 필요한 경우 {{site.data.keyword.cloud_notm}}에서 고유한 서브넷을 주문해야 합니다.
+   {:important}
 2. **사설 네트워크**가 **HCX 상호연결 유형**으로 선택된 경우에는 사설 DVS(Distributed Virtual Switch)에서 **SDDC-DPortGroup-HCX-Private**이 작성됩니다.
 3. VMware에서 HCX 정품 인증 키가 주문됩니다.
 4. HCX 상호연결, 로컬 HCX 컴포넌트 및 원격 HCX 컴포넌트에서 필요로 하는 3개의 HCX용 리소스 풀 및 VM 폴더가 작성됩니다.
@@ -61,7 +66,8 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 서비�
    * 로드 밸런서 규칙 및 리소스 풀이 구성됩니다. 이러한 규칙은 HCX Manager, vCenter Server 및 PSC(Platform Services Controller)의 적절한 가상 어플라이언스로 HCX 관련 인바운드 트래픽을 전달하는 데 사용되는 리소스 풀입니다.
    * ESG를 통해 수신되는 HCX 관련 인바운드 HTTPS 트래픽을 암호화하는 SSL 인증서가 적용됩니다.
 
-   **중요:** HCX 관리 에지는 온프레미스 HCX 컴포넌트와 클라우드 측 HCX 컴포넌트 간의 HCX 관리 트래픽에만 사용됩니다. HCX 관리 에지를 수정하거나 HCX 네트워크 확장에 이를 사용하지 마십시오. 대신, 네트워크 확장을 위한 별도의 에지를 작성하십시오. 또한 방화벽을 사용하거나 사설 IBM 관리 컴포넌트 또는 공용 인터넷과의 HCX 관리 에지 통신을 사용 안함으로 설정하면 HCX 기능에 부정적인 영향을 줄 수 있습니다.
+   HCX 관리 에지는 온프레미스 HCX 컴포넌트와 클라우드 측 HCX 컴포넌트 간의 HCX 관리 트래픽에만 사용됩니다. HCX 관리 에지를 수정하거나 HCX 네트워크 확장에 이를 사용하지 마십시오. 대신, 네트워크 확장을 위한 별도의 에지를 작성하십시오. 또한 방화벽을 사용하거나 사설 IBM 관리 컴포넌트 또는 공용 인터넷과의 HCX 관리 에지 통신을 사용 안함으로 설정하면 HCX 기능에 부정적인 영향을 줄 수 있습니다.
+   {:important}
 
 6. HCX Manager on {{site.data.keyword.cloud_notm}}가 배치되고 활성화되고 구성됩니다.
    * HCX Manager는 vCenter Server에 등록됩니다.
@@ -78,4 +84,4 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 서비�
 * [HCX 용어집](hcx_glossary.html)
 * [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension 개요](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension 문서](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources)

@@ -10,7 +10,7 @@ lastupdated: "2018-09-26"
 
 # FortiGate Security Appliance on IBM Cloud 주문
 
-FSA 300 시리즈의 HA 쌍이 포함된 새 인스턴스를 주문할 때 또는 기존 인스턴스에 FSA 300 시리즈를 추가하여 FortiGate Security Appliance on {{site.data.keyword.cloud}} 서비스를 주문할 수 있습니다.
+FSA 300 시리즈의 HA 이중화가 포함된 새 인스턴스를 주문할 때 또는 기존 인스턴스에 FSA 300 시리즈를 추가하여 FortiGate Security Appliance on {{site.data.keyword.cloud}} 서비스를 주문할 수 있습니다.
 
 ## 새 인스턴스에 대한 FortiGate Security Appliance on IBM Cloud 주문
 

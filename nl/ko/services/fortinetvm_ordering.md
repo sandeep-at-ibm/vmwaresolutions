@@ -62,7 +62,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}에 대한 라이
         <dt class="dt dlterm">표준 FW + UTM</dt>
         <dd class="dd">이 번들에는 모든 표준 방화벽 서비스뿐만 아니라 AMP(Advanced Malware Protection) 서비스(안티바이러스, 봇넷 IP/도메인 서비스, 모바일 악성 코드 보안, FortiSandbox Cloud, Virus Outbreak Protection 서비스 및 Content Disarm & Reconstruct 포함) 및 웹 필터링, IPS, 안티스팸, 애플리케이션 제어, FortiCare 서비스가 포함되어 있습니다.</dd>
         <dt class="dt dlterm">표준 FW + 엔터프라이즈</dt>
-        <dd class="dd">이 번들에는 모든 표준 방화벽 및 UTM 서비스는 물론 다음 서비스가 포함되어 있습니다. <ul><li>CASB(Cloud Access Security Broker): 이 서비스는 클라우드 기반 서비스에 대한 가시성, 규제 준수, 데이터 보안 및 위협 보호 기능을 제공합니다. </li><li>산업 보안: 이 서비스는 공통 ICS/SCADA 프로토콜에 대한 서명을 제공합니다.</li><li>보안 등급: 이 서비스는 감사 기능을 제공하여 중요한 취약점 및 구성의 단점을 식별하고 우수 사례 권장사항을 구현합니다. </li></ul></dd>
+        <dd class="dd">이 번들에는 모든 표준 방화벽 및 UTM 서비스는 물론 다음 서비스가 포함되어 있습니다.<ul><li>CASB(Cloud Access Security Broker): 이 서비스는 클라우드 기반 서비스에 대한 가시성, 규제 준수, 데이터 보안 및 위협 보호 기능을 제공합니다.</li><li>산업 보안: 이 서비스는 공통 ICS/SCADA 프로토콜에 대한 서명을 제공합니다.</li><li>보안 등급: 이 서비스는 감사 기능을 제공하여 중요한 취약점 및 구성의 단점을 식별하고 우수 사례 권장사항을 구현합니다.</li></ul></dd>
 </dl>
 
 2018년 3분기에, Fortinet에서는 세 개의 새로운 서비스(CASB, 산업 보안 및 보안 등급)를 엔터프라이즈 번들에 추가했습니다. 이러한 서비스는 FortiGate 6.0에서만 사용할 수 있습니다.

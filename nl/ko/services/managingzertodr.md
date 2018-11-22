@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-07"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Zerto on IBM Cloud 관리
 
@@ -24,7 +28,8 @@ Zerto 복제의 구성을 관리하려면 관리자 권한으로 vCenter 인증�
 
 Zerto 복제는 NAT(Network Address Translation) 순회를 지원하지 않습니다. {{site.data.keyword.cloud_notm}} Zerto 인스턴스와 고유한 데이터 센터 간의 연결을 설정하려면 양쪽의 ZVM(Zerto Virtual Manager) 어플라이언스 또는 Zerto VRA(Virtual Replication Appliances)에서 라우트를 사용자 정의해야 할 수 있습니다. 또한 연결을 설정하려면 사이트 간의 보안 터널링이 필요할 수 있습니다. ZVM 어플라이언스에서 라우트를 구성하거나 재구성하는 경우 사용 보고를 위해 모든 ZVM 어플라이언스가 `zerto.com`에 연결해야 합니다. ZVM 어플라이언스에서 `https://www.zerto.com`에 대한 브라우저 세션을 열어 이 연결을 확인할 수 있습니다.
 
-**참고**: {{site.data.keyword.cloud_notm}}에서 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스의 관리 VMware NSX Edge Services Gateway(ESG)가 ZVM에서 시작된 아웃바운드 HTTPS(TCP 포트 443) 통신을 허용하도록 사전 구성되었습니다.
+{{site.data.keyword.cloud_notm}}에서 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스의 관리 VMware NSX ESG(Edge Services Gateway)가 ZVM에서 시작된 아웃바운드 HTTPS(TCP 포트 443) 통신을 허용하도록 사전 구성되었습니다.
+{:note}
 
 ## Zerto Virtual Replication 업데이트
 
