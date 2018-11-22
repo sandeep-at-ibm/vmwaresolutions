@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-07"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Zerto on IBM Cloud の管理
 
@@ -24,7 +28,8 @@ Zerto レプリケーションの構成を管理するには、vCenter 資格情
 
 Zerto レプリケーションでは、ネットワーク・アドレス変換 (NAT) トラバーサルはサポートされていません。 {{site.data.keyword.cloud_notm}} Zerto インスタンスとお客様所有のデータ・センターの間の接続を確立するためには、いずれかの側の Zerto Virtual Manager (ZVM) アプライアンスまたは Zerto Virtual Replication Appliance (VRA) 上の経路のカスタマイズが必要になる場合があります。 接続を確立するには、サイト間のセキュア・トンネリングが必要になる場合もあります。 ZVM アプライアンス上の経路を構成したり再構成したりするときは、使用レポートが作成されるように、すべての ZVM アプライアンスが `zerto.com` に正常に接続できるようにする必要があります。 この接続は、`https://www.zerto.com` へのブラウザー・セッションを ZVM アプライアンスから開くことによって確認できます。
 
-**注**: {{site.data.keyword.cloud_notm}} 上の Cloud Foundation インスタンスと vCenter Server インスタンスの Management VMware NSX Edge Services Gateway (ESG) は、ZVM から発信されるアウトバウンド HTTPS (TCP ポート 443) 通信を許可するように事前構成されています。
+{{site.data.keyword.cloud_notm}} 上の Cloud Foundation インスタンスと vCenter Server インスタンスの Management VMware NSX Edge Services Gateway (ESG) は、ZVM から発信されるアウトバウンド HTTPS (TCP ポート 443) 通信を許可するように事前構成されています。
+{:note}
 
 ## Zerto Virtual Replication の更新
 

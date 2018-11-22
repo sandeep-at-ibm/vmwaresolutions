@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # オンプレミスの VMware HCX on IBM Cloud インスタンスに関する考慮事項
 
 オンプレミスで使用するために注文した HCX on {{site.data.keyword.cloud}} インスタンスをインストールまたは削除する前に、以下の考慮事項を検討してください。
 
-**注:** vCenter Server with HCX on {{site.data.keyword.cloud_notm}} インスタンスでは、オンプレミス・サイトからの同時接続が 3 つまでに制限されています。
+vCenter Server with HCX on {{site.data.keyword.cloud_notm}} インスタンスでは、オンプレミス・サイトからの同時接続が 3 つまでに制限されています。
+{:note}
 
 ## オンプレミス HCX on IBM Cloud インスタンスをインストールする際の考慮事項
 
@@ -32,7 +37,8 @@ HCX の全機能を利用するには、少なくとも 5 つのプライベー�
     3. **「リンクのコピー」**をクリックし、このリンクを使用して、オンプレミス vSphere 環境へのアクセス権限によって HCX Enterprise Client をオンプレミス環境にダウンロードします。
 3. VMware vSphere Web Client で、HCX Enterprise Client を HCX Manager 仮想アプライアンス (HCX Manager) としてオンプレミス環境にデプロイします。
 
-   **注:** オンプレミス HCX Manager をプライベート・ネットワークにデプロイし、パブリック・ネットワークへのアクセスを許可する必要があります。 NSX Edge、Vyatta、または類似のゲートウェイを使用して、オンプレミス HCX Manager へのインターネット・アクセスを許可することができます。 使用するゲートウェイがプライベート・ネットワーク・アクセスとパブリック・ネットワーク・アクセスとで異なる場合は、デフォルト・ゲートウェイを使用してパブリック・ネットワーク・アクセスを許可し、オンプレミスの**「HCX Manager 管理コンソール」**を使用して、プライベート・ネットワーク・アクセス用の静的ルートを作成することをお勧めします。
+   オンプレミス HCX Manager をプライベート・ネットワークにデプロイし、パブリック・ネットワークへのアクセスを許可する必要があります。 NSX Edge、Vyatta、または類似のゲートウェイを使用して、オンプレミス HCX Manager へのインターネット・アクセスを許可することができます。 使用するゲートウェイがプライベート・ネットワーク・アクセスとパブリック・ネットワーク・アクセスとで異なる場合は、デフォルト・ゲートウェイを使用してパブリック・ネットワーク・アクセスを許可し、オンプレミスの**「HCX Manager 管理コンソール」**を使用して、プライベート・ネットワーク・アクセス用の静的ルートを作成することをお勧めします。
+   {:note}
 4. HCX Manager のデプロイメントが完了したら、**「HCX Manager 管理コンソール」**を使用して、オンプレミス HCX Manager をアクティブ化します。 オンプレミス HCX Manager のアクティベーション・キーを入手するには、{{site.data.keyword.vmwaresolutions_short}} コンソールでオンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを注文します。 詳しくは、[オンプレミス HCX インスタンスの注文](../services/standalone_orderingserviceinstances.html)を参照してください。
 5. HCX on {{site.data.keyword.cloud_notm}} サービスの注文時に自己署名 SSL 証明書を使用した場合は、以下のステップを実行して、その証明書をオンプレミス HCX Manager にインポートする必要があります。
     1. オンプレミスの**「HCX Manager 管理コンソール」**で、**「管理」**タブをクリックします。
@@ -52,7 +58,8 @@ HCX の全機能を利用するには、少なくとも 5 つのプライベー�
     2. すべての拡張ネットワークが削除されていることを確認します。
     3. ペアのクラウド・サイトとの相互接続コンポーネントがすべて削除されていることを確認します。
 
-   **重要:** 次のステップに進む前に、考慮事項をすべて完了している必要があります。 そうしないと、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスのライセンスがキャンセルされ、マイグレーションを実行できなくなります。そして、エラーが HCX コンポーネントに発生する可能性があります。  
+   次のステップに進む前に、考慮事項をすべて完了している必要があります。 そうしないと、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスのライセンスがキャンセルされ、マイグレーションを実行できなくなります。そして、エラーが HCX コンポーネントに発生する可能性があります。  
+   {:important}
 2. {{site.data.keyword.vmwaresolutions_short}} コンソールで、オンプレミス HCX Manager のアクティベーション・キーを入手するために注文した、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを削除します。 コンソールで、削除したインスタンスが使用不可になったことを確認してから、次のステップに進んでください。
 
    詳しくは、[オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの削除](../services/standalone_deletingserviceinstances.html)を参照してください。
@@ -62,6 +69,5 @@ HCX の全機能を利用するには、少なくとも 5 つのプライベー�
 
 * [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの参照](../services/standalone_viewingserviceinstances.html)
 * [HCX の用語集](hcx_glossary.html)
-* [VMware Hybrid Cloud Extension の資料](https://hcx.vmware.com/#vm-documentation)
-* [VMware HCX リソース](https://hcx.vmware.com/#/docs)
+* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)
 * [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)

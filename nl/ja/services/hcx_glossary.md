@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -22,4 +22,4 @@ lastupdated: "2018-09-26"
 
 ### 関連リンク
 
-* [VMware Hybrid Cloud Extension の資料](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)

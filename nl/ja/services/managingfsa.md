@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-076"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # FortiGate Security Appliance on IBM Cloud の管理
 
 FortiGate Security Appliance on {{site.data.keyword.cloud}} サービスが正常にインストールされると、FortiGate コンソールから FSA のファイアウォール・ルールの管理と構成を行えるようになります。
 
-**重要**: インターネットを介して {{site.data.keyword.cloud_notm}} インフラストラクチャー上の外部管理データベースと通信するために、Zerto Virtual Manager などの管理コンポーネントによって開始されるアウトバウンド HTTPS (TCP ポート 443) 通信を許可するように、FSA ファイアウォール・ルールを定義する必要があります。 アウトバウンド HTTPS (TCP ポート 443) 通信は、インスタンス内の管理サービス VMware NSX Edge Services Gateway (ESG) のパブリック IP アドレスから発信されます。
+インターネットを介して {{site.data.keyword.cloud_notm}} インフラストラクチャー上の外部管理データベースと通信するために、Zerto Virtual Manager などの管理コンポーネントによって開始されるアウトバウンド HTTPS (TCP ポート 443) 通信を許可するように、FSA ファイアウォール・ルールを定義する必要があります。 アウトバウンド HTTPS (TCP ポート 443) 通信は、インスタンス内の管理サービス VMware NSX Edge Services Gateway (ESG) のパブリック IP アドレスから発信されます。
+{:important}
 
 ## FortiGate 300 シリーズ・コンソールへのアクセス
 
