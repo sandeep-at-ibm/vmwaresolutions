@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -25,37 +25,37 @@ vCenter Server 배치에는 실제 인프라에 대한 엄격한 요구사항이
 | {{site.data.keyword.CloudDataCent_notm}} |위치 |지역 |서버 옵션 |
 |:----------------------|:---------|:-------|:---------------|
 |AMS03 |암스테르담 |유럽 | Skylake, Broadwell |
-|CHE01 |첸나이 |아시아 태평양 | Skylake, Broadwell |
-|DAL09 |댈러스 |북미 남부 | Skylake, Broadwell |
-|DAL10 |댈러스 |북미 남부 | Skylake, Broadwell, 소형, 중형, 대형 |
-|DAL12 |댈러스 |북미 남부 | Skylake, Broadwell |
-|DAL13 |댈러스 |북미 남부 | Skylake, Broadwell |
-|FRA02 |프랑크푸르트 |유럽 | Skylake, Broadwell, 소형, 중형, 대형 |
-| FRA04 |프랑크푸르트 |유럽 | Skylake, Broadwell |
+|CHE01 |첸나이 |아시아 태평양 | Skylake, SAP 인증, Broadwell |
+|DAL09 |댈러스 |북미 남부 | Skylake, SAP 인증, Broadwell |
+|DAL10 |댈러스 |북미 남부 | Skylake, SAP 인증, Broadwell |
+|DAL12 |댈러스 |북미 남부 | Skylake, SAP 인증, Broadwell |
+|DAL13 |댈러스 |북미 남부 | Skylake, SAP 인증, Broadwell |
+|FRA02 |프랑크푸르트 |유럽 | Skylake, SAP 인증, Broadwell |
+| FRA04 |프랑크푸르트 |유럽 | Skylake, SAP 인증, Broadwell |
 |HKG02 |홍콩 |아시아 태평양 | Skylake, Broadwell |
 |LON02 |런던 |유럽 | Skylake, Broadwell |
-|LON04 |런던 |유럽 | Skylake, Broadwell |
-|LON06 |런던 |유럽 | Skylake, Broadwell, 소형, 중형, 대형 |
-|MEL01 |멜버른 |아시아 태평양 | Skylake, Broadwell |
-|MEX01 |케레타로 |북미 남부 | Skylake, Broadwell |
-|MIL01 |밀라노 |유럽 | Skylake, Broadwell |
-|MON01 |몬트리올 |북미 동부 | Skylake, Broadwell |
+|LON04 |런던 |유럽 | Skylake, SAP 인증, Broadwell |
+|LON06 |런던 |유럽 | Skylake, SAP 인증, Broadwell |
+|MEL01 |멜버른 |아시아 태평양 | Skylake, SAP 인증, Broadwell |
+|MEX01 |케레타로 |북미 남부 | Skylake, SAP 인증, Broadwell |
+|MIL01 |밀라노 |유럽 | Skylake, SAP 인증, Broadwell |
+|MON01 |몬트리올 |북미 동부 | Skylake, SAP 인증, Broadwell |
 |OSL01 |오슬로 |유럽 | Skylake, Broadwell |
 |PAR01 |파리 |유럽 | Skylake, Broadwell |
-|SAO01 |상파울루 |남미 | Skylake, Broadwell |
-|SEO01 |서울 |아시아 태평양 | Skylake, Broadwell |
-|SJC03 |산호세 |북미 서부 | Skylake, Broadwell, 소형, 중형, 대형 |
+|SAO01 |상파울루 |남미 | Skylake, SAP 인증, Broadwell |
+|SEO01 |서울 |아시아 태평양 | Skylake, SAP 인증, Broadwell |
+|SJC03 |산호세 |북미 서부 | Skylake, Broadwell |
 |SJC04 |산호세 |북미 서부 | Skylake, Broadwell |
 |SNG01 |싱가포르 |아시아 태평양 | Skylake, Broadwell |
 |SYD01 |시드니 |아시아 태평양 | Skylake, Broadwell |
-|SYD04 |시드니 |아시아 태평양 | Skylake, Broadwell |
-|TOK02 |도쿄 |아시아 태평양 | Skylake, Broadwell |
-|TOR01 |토론토 |북미 동부 | Skylake, Broadwell, 소형, 중형, 대형 |
-|WDC04 |워싱턴, DC |북미 동부 | Skylake, Broadwell, 소형, 중형, 대형 |
-|WDC06 |워싱턴, DC |북미 동부 | Skylake, Broadwell |
-|WDC07 |워싱턴, DC |북미 동부 | Skylake, Broadwell |
+|SYD04 |시드니 |아시아 태평양 | Skylake, SAP 인증, Broadwell |
+|TOK02 |도쿄 |아시아 태평양 | Skylake, SAP 인증, Broadwell |
+|TOR01 |토론토 |북미 동부 | Skylake, SAP 인증, Broadwell |
+|WDC04 |워싱턴, DC |북미 동부 | Skylake, SAP 인증, Broadwell |
+|WDC06 |워싱턴, DC |북미 동부 | Skylake, SAP 인증, Broadwell |
+|WDC07 |워싱턴, DC |북미 동부 | Skylake, SAP 인증, Broadwell |
 
-{{site.data.keyword.CloudDataCents_notm}}의 소형 서브세트는 사전 구성된 **소형**, **중형** 및 **대형** Bare Metal Server 옵션을 제공합니다. 가용성 및 자원 명세 제공에 따라 {{site.data.keyword.CloudDataCents_notm}}는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 상태 표시기를 표시하여 배치를 계획할 수 있습니다.
+가용성 및 자원 명세 제공에 따라 {{site.data.keyword.CloudDataCents_notm}}는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 상태 표시기를 표시하여 배치를 계획할 수 있습니다.
 
 표 2. vCenter Server 인스턴스 주문 시 {{site.data.keyword.CloudDataCents_notm}}에 대한 상태 표시기
 

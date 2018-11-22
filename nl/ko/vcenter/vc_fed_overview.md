@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware Federal on IBM Cloud 개요
 
@@ -14,7 +18,8 @@ VMware Federal on {{site.data.keyword.cloud}}를 사용하면 미국 연방 정�
 
 vCenter Server on {{site.data.keyword.cloud_notm}} 및 vCenter Server 아키텍처에 대한 자세한 정보는 [vCenter Server 개요](vc_vcenterserveroverview.html)를 참조하십시오.
 
-**주의:** VMware Federal on {{site.data.keyword.cloud_notm}}는 vCenter Server 오퍼링의 서브세트만 제공합니다. 다중 사이트 구성, 사전 구성된 {{site.data.keyword.cloud_notm}} Bare Metal Server, BYOL(Bring Your Own License) 및 추가 기능 서비스 주문 옵션은 지원되지 않습니다.
+VMware Federal on {{site.data.keyword.cloud_notm}}는 vCenter Server 오퍼링의 서브세트만 제공합니다. 다중 사이트 구성, BYOL(Bring Your Own License) 및 추가 기능 서비스 주문 옵션은 지원되지 않습니다.
+{:note}
 
 ## VMware Federal on IBM Cloud 인스턴스의 기술 스펙
 
@@ -29,7 +34,8 @@ vCenter Server on {{site.data.keyword.cloud_notm}} 및 vCenter Server 아키텍�
 
 NFS 스토리지 구성의 경우 {{site.data.keyword.baremetal_short}}의 권장 수는 기본값인 3으로 설정됩니다.
 
-**참고:** vSAN 스토리지를 선택하는 경우 구성에는 네 개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
+vSAN 스토리지를 선택하는 경우 구성에 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
+{:note}
 
 ### 네트워킹
 
@@ -39,10 +45,12 @@ NFS 스토리지 구성의 경우 {{site.data.keyword.baremetal_short}}의 권�
 *  두 개의 VMware NSX Edge Services Gateway:
   * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 자세한 정보는 [고객 관리 ESG를 사용하도록 네트워크 구성](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)을 참조하십시오.
 
-    **중요:** 이 ESG에 액세스할 수 없고 ESG를 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
+    사용자는 이 ESG에 액세스할 수 없고 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
+    {:important}
   * VPN 액세스 또는 공용 액세스를 제공하도록 사용자가 수정할 수 있는 템플리트로 IBM에서 배치되는 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽을 위한 보안 고객 관리 VMware NSX Edge Services Gateway. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
-  **참고:** 아웃바운드 HTTPS 관리 트래픽을 위한 VMware NSX Edge Services Gateway(ESG)가 배치된 VMware Federal 인스턴스를 보호하는 조치의 일부로 제거됩니다. 자세한 정보는 [VMware Federal 인스턴스 보호](vc_fed_securinginstance.html)를 참조하십시오.
+  아웃바운드 HTTPS 관리 트래픽을 위한 VMware NSX ESG(Edge Services Gateway)가 배치된 VMware Federal 인스턴스를 보호하는 조치의 일부로 제거됩니다. 자세한 정보는 [VMware Federal 인스턴스 보호](vc_fed_securinginstance.html)를 참조하십시오.
+  {:note}
 
 ### Virtual Server 인스턴스
 
@@ -94,7 +102,8 @@ NFS 옵션을 선택한 경우 관리 컴포넌트용 하나의 2TB, 4IOPS/GB �
 * 하나의 VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4
 * (vSAN 클러스터의 경우) VMware vSAN Advanced 또는 Enterprise 6.6
 
-**중요:** {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+{{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌, {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성되는 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+{:important}
 
 **주의:** 인스턴스를 주문했을 때 {{site.data.keyword.cloud_notm}} 계정에 설치된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거

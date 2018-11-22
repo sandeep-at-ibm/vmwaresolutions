@@ -63,7 +63,7 @@ vCenter Server with Hybridity Bundle 인스턴스의 특성 세부사항을 보�
 |ID |인스턴스의 ID입니다. |
 |위치 |인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}입니다. |
 |현재 버전 |{{site.data.keyword.vmwaresolutions_short}}의 현재 버전입니다. |
-|vCenter 버전 | VMware vCenter Server with Hybridity Bundle 버전입니다.<br><br>{{site.data.keyword.vmwaresolutions_short}} 콘솔에 표시된 vCenter Server 버전과 VMware vSphere Web Client 사이에 약간의 차이점이 있습니다. 그러나 모두 올바릅니다.{:note} |
+|vCenter 버전 | VMware vCenter Server with Hybridity Bundle 버전입니다.<br><br>**참고:**: {{site.data.keyword.vmwaresolutions_short}} 콘솔에 표시된 vCenter Server 버전과 VMware vSphere Web Client 사이에 약간의 차이점이 있습니다. 그러나 모두 올바릅니다. |
 |NSX for vSphere |VMware NSX for vSphere 제품 버전입니다. |
 |NSX 라이센스 에디션 |VMware NSX 라이센스의 버전 및 에디션입니다. |
 |DNS, 루트 도메인 |루트 도메인 이름은 DNS(Domain Name System) 도메인 이름 및 Microsoft Active Directory(AD) 포리스트 루트 이름입니다. |

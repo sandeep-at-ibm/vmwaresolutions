@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -22,6 +22,9 @@ vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스
 {:important}
 
 비즈니스 파트너 사용자에게는 기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하기 위한 옵션이 없습니다.
+
+V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데이트는 더 이상 나열되지 않습니다. 호스트 추가, 클러스터 추가 및 서비스 주문과 같은 조치를 수행하면 인스턴스가 최신 버전으로 자동 업데이트됩니다. 자동 업데이트에 대한 자세한 정보는 [V2.5 릴리스 정보](../vmonic/relnotes_v25.html)에서 *IBM CloudDriver 복원성* 섹션을 참조하십시오.
+{:note}
 
 업데이트를 적용하기 전에 아래로 화살표를 클릭하여 업데이트 항목을 펼치고 다음 정보를 확인하십시오.
 * 업데이트의 버전입니다. 가장 이전 업데이트부터 최신 업데이트까지 시간 순으로 업데이트를 적용해야 합니다. 최신 업데이트를 적용하기 전에 이전 업데이트를 모두 적용했는지 확인하십시오. 예를 들면, V2.4 업데이트를 적용하기 전에 V2.3 업데이트를 적용해야 합니다.
@@ -51,7 +54,7 @@ vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스
   </tr>
 </table>
 
-## vCenter Server 인스턴스에 업데이트 및 패치를 적용하는 프로시저
+## vCenter Server 인스턴스(V2.1 이상)에 업데이트 및 패치를 적용하는 프로시저
 
 이 프로시저는 2.1 이상에 배치된 인스턴스에 적용됩니다. V2.0 이전에 배치된 인스턴스의 경우, VMware 업데이트를 수동으로 적용해야 합니다.
 
@@ -61,13 +64,11 @@ vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스
    세부사항이 표시되지 않는 경우, 이는 방화벽 규칙이나 기타 네트워킹 문제로 인한 IBM CloudDriver VSI(Virtual Server Instance)의 연결 문제점을 표시할 수 있습니다. 다음 단계를 계속하기 전에 문제점을 해결하십시오. 그렇지 않으면, 업데이트에 실패할 수 있습니다.
 4. 왼쪽 탐색 분할창에서 **업데이트 및 패치**를 클릭하십시오.
 
-   인스턴스에 대한 **업데이트 및 패치** 페이지에는 VMware 업데이트가 아닌, IBM 관리 컴포넌트 업데이트를 위한 패키지만 포함되어 있습니다. VMware 업데이트는 수동으로 적용해야 합니다.
-   {:note}
-
-   {{site.data.keyword.vmwaresolutions_short}}에서는 다음 조작에 대한 VMware 업데이트를 적용합니다.
+   인스턴스에 대한 **업데이트 및 패치** 페이지에는 VMware 업데이트가 아닌, IBM 관리 컴포넌트 업데이트를 위한 패키지만 포함되어 있습니다. VMware 업데이트는 수동으로 적용해야 합니다.   {{site.data.keyword.vmwaresolutions_short}}에서는 다음 조작에 대한 VMware 업데이트를 적용합니다.
    * 새 vCenter Server 인스턴스가 배치될 때.
-   * 새 ESXi 서버가 추가될 때.
-   * 새 클러스터가 추가될 때.
+   * 새 ESXi 서버가 추가될 때 새 ESXi 서버가 VMware 업데이트로 프로비저닝되지만 기존 ESXi 서버는 업데이트되지 않습니다.
+   * 새 클러스터가 추가될 때 새 클러스터가 VMware 업데이트로 프로비저닝되지만 기존 클러스터는 업데이트되지 않습니다.
+   {:note}
 
 5. NSX 라이센스 업그레이드의 경우 **업그레이드**를 클릭하십시오. **NSX 라이센스 에디션 업그레이드** 창에서 업그레이드할 에디션을 선택하고 **업그레이드**를 클릭하십시오. 라이센스 에디션 다운그레이드는 사용할 수 없습니다.
 

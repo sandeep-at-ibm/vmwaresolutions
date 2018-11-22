@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -75,7 +75,7 @@ vCenter Server 인스턴스를 주문할 때는 다음 시스템 설정을 지�
 
 ## Bare Metal Server 설정
 
-Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성을 기반으로 합니다. 
+Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성을 기반으로 합니다.
 
 ### 데이터 센터 위치
 
@@ -114,22 +114,11 @@ Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성
 | 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 
-### 사전 구성됨
-
-**사전 구성됨**을 선택하는 경우에는 CPU 또는 RAM 설정을 변경할 수 없습니다.
-
-자신의 요구사항에 따라 Bare Metal Server 구성을 선택하십시오.
-  * 소형(듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz / 128GB RAM / 2개의 드라이브)
-  * 중형(듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz / 256GB RAM / 2개의 드라이브)
-  * 대형(듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz / 512GB RAM / 2개의 드라이브)
-
 ### Bare Metal Server 수
 
-인스턴스에 있는 초기 클러스터의 경우 다음과 같이 ESXi 서버의 수를 구성할 수 있습니다.
-* **Skylake** 또는 **Broadwell**을 선택한 경우 ESXi 서버의 수를 2 - 20개 범위로 구성할 수 있습니다.
-* **사전 구성됨**을 선택한 경우 ESXi 서버의 수를 2 - 10의 범위로 구성할 수 있습니다.
+인스턴스에 있는 초기 클러스터의 경우 ESXi 서버의 수를 2 - 20개 범위로 구성할 수 있습니다. 모든 ESXi 서버는 설정 구성을 공유한다. 
 
-모든 ESXi 서버는 설정 구성을 공유한다. 초기 배치 후에는 네 개의 클러스터를 추가할 수 있습니다. VMware vSAN에 대해 **Skylake** 또는 **Broadwell** 구성을 선택한 경우 초기 및 사후 배치 클러스터 둘 다를 위해 네 개의 ESXi 서버가 필요합니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
+초기 배치 후에는 네 개의 클러스터를 추가할 수 있습니다. VMware vSAN에 대해 **Skylake** 또는 **Broadwell** 구성을 선택한 경우 초기 및 사후 배치 클러스터 둘 다를 위해 네 개의 ESXi 서버가 필요합니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
 
 ## 스토리지 설정
 
@@ -271,7 +260,6 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
     2. Bare Metal Server 구성을 선택하십시오.
        * **Skylake** 또는 **Broadwell**을 선택하는 경우 CPU 모델 및 RAM 크기를 지정하십시오.
        * **SAP 인증**을 선택하는 경우 CPU 모델을 선택하십시오.
-       * **사전 구성됨**을 선택한 경우에는 구성에 대해 **소형**, **중형** 또는 **대형**을 선택하십시오.
     3. {{site.data.keyword.baremetal_short}}의 수를 지정하십시오. 스토리지 솔루션으로 vSAN을 사용할 계획인 경우 최소 네 개의 {{site.data.keyword.baremetal_short}}가 필요합니다.  
 7. 스토리지 구성을 완료하십시오.
   * **vSAN 스토리지**를 선택하는 경우 용량 및 캐시 디스크의 디스크 유형과 디스크 수 및 vSAN License 에디션을 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
