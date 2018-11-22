@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-29"
 
 vCenter tiene una característica denominada Perfiles de host. Esta característica crea un perfil que captura una configuración de host de referencia preconfigurada y validada y ayuda a un administrador del sistema a gestionar las configuraciones de host en un clúster. Los perfiles de host proporcionan un mecanismo automatizado y gestionado de forma centralizada para la configuración de host y la conformidad de configuración. Los perfiles de host permiten que la configuración se trate como un objeto gestionado, que contiene un catálogo de parámetros para configurar; la red, el almacenamiento, la seguridad y otros parámetros de nivel de host. Estos perfiles de host se pueden aplicar a hosts individuales, a un clúster o a todos los hosts y clústeres asociados a un perfil de host.
 
-A medida que se despliegan más hosts VCS vSphere ESXi mediante la automatización de IC4VS que ha desplegado el clúster original, habrá menos derivación de configuración que con métodos manuales de adición de hosts. Sin embargo, las acciones de administrador del sistema, fuera de la automatización, pueden hacer que la configuración de hosts sea distinta. Por ejemplo, se han añadido más almacenamiento NFS o VLAN adicionales. Por lo tanto, el uso de Perfiles de host para validar la configuración de un nuevo host mediante la comprobación de la conformidad de este host frente a un host existente es un caso de uso válido de esta herramienta dentro de IBM Cloud.
+A medida que se despliegan más hosts VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi mediante la automatización de IC4VS que ha desplegado el clúster original, habrá menos derivación de configuración que con métodos manuales de adición de hosts. Sin embargo, las acciones de administrador del sistema, fuera de la automatización, pueden hacer que la configuración de hosts sea distinta. Por ejemplo, se han añadido más almacenamiento NFS o VLAN adicionales. Por lo tanto, el uso de Perfiles de host para validar la configuración de un nuevo host mediante la comprobación de la conformidad de este host frente a un host existente es un caso de uso válido de esta herramienta dentro de {{site.data.keyword.cloud_notm}}.
 
 Para añadir más hosts a su clúster de vCenter Server, consulte [Expandir y contratar capacidad para instancias de vCenter Server](../../vcenter/vc_addingremovingservers.html).
 
@@ -52,7 +52,7 @@ Se necesita la secuencia siguiente para comprobar la conformidad:
 2.	Pulse el icono de comprobación **Conformidad de perfil de host**.
 3.	En el **separador Objetos**, el estado de conformidad se actualiza como: _Conforme, Desconocido o _No conforme_. Un estado de no conformidad indica una incoherencia descubierta y específica entre el perfil y el nuevo host.
 
-##	Revisión de errores de conformidad y de corrección
+##	Revisión y corrección de errores de conformidad
 
 1.	Para ver más detalles sobre las anomalías de conformidad, seleccione el **Perfil de host** en el separador **Objetos ** que se utiliza en la comprobación de conformidad.
 2.	Para ver detalles específicos sobre qué parámetros difieren entre el host que no cumple con la conformidad y el Perfil de host, pulse en el **separador Supervisor ** y seleccione la **Vista de conformidad**.
@@ -62,5 +62,5 @@ Se necesita la secuencia siguiente para comprobar la conformidad:
 
 ### Enlaces relacionados
 
-* [Arquitectura de la solución VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)
+* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)

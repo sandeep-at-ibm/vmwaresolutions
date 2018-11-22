@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
 # Actualización de clústeres vSAN
 
-vSAN genera líneas base de sistema y grupos de línea base para su uso con VUM y puede utilizar estas líneas base recomendadas para actualizar software, parches y extensiones para los hosts ESXi de vSphere en la instancia VCS utilizando vSAN. vSAN 6.6.1 y posterior generan recomendaciones automáticas más adelante para clústeres vSAN. vSAN combina información en la Guía de compatibilidad de VMware y en el catálogo Release de vSAN con información sobre los releases de vSphere ESXi instalados.
+vSAN genera líneas base de sistema y grupos de línea base para su uso con VUM y puede utilizar estas líneas base recomendadas para actualizar software, parches y extensiones para los hosts vSphere ESXi de la instancia vCenter Server utilizando vSAN. vSAN 6.6.1 y posterior generan recomendaciones automáticas más adelante para clústeres vSAN. vSAN combina información en la Guía de compatibilidad de VMware y en el catálogo Release de vSAN con información sobre los releases de vSphere ESXi instalados.
 
 Estas actualizaciones recomendadas proporcionan el mejor release disponible para mantener el hardware en un estado admitido.
 * **Líneas base de sistema VSAN**: las recomendaciones de compilación de vSAN se proporcionan a través de las líneas base del sistema vSAN para VUM. vSAN genera un grupo de línea base para cada clúster vSAN, que se muestran en el panel Líneas base del separador Líneas base y grupos. VUM explora automáticamente cada clúster vSAN para comprobar la conformidad con el grupo de línea base. Sin embargo, para actualizar el clúster vSAN, debe corregir manualmente la línea base del sistema. Mediante VUM, puede solucionar la línea base del sistema vSAN en un único host o en todo el clúster.
@@ -26,7 +26,7 @@ La actualización del clúster de vSAN se realiza en la secuencia de tareas sigu
 
 ## Habilitar el flujo de trabajo de estado en línea de vSAN
 
-Seguir las tareas de esta sección hará que las líneas base vSAN estén disponibles en VUM. vSAN 6.6.1 y posterior proporciona un proceso de actualización automatizado para garantizar que un clúster de vSAN esté actualizado con el mejor release disponible para mantener la instancia de VCS en un estado soportado con:
+Seguir las tareas de esta sección hará que las líneas base vSAN estén disponibles en VUM. vSAN 6.6.1 y posterior proporciona un proceso de actualización automatizado para garantizar que un clúster de vSAN esté actualizado con el mejor release disponible para mantener la instancia de VMware vCenter Server on {{site.data.keyword.cloud}} en un estado soportado con:
 * **Recomendaciones de la versión vSAN**: se generan automáticamente mediante la información de la Guía de compatibilidad de VMware, el Catálogo de releases vSAN y detección de la configuración de hardware subyacente. Esto también incluye los controladores necesarios y las actualizaciones de parches para el release recomendado en su línea base del sistema.
 * **Recomendaciones de compilación vSAN**: garantiza que los clústeres permanezcan en el estado actual de compatibilidad de hardware o en mejores condiciones.
 
@@ -81,8 +81,8 @@ Antes de iniciar el proceso de actualización de vSAN, asegúrese de que se cump
   - No debe haber objetos vSAN inaccesibles. Esto se puede verificar con el **Servicio de estado vSAN** pulsando **Inicio** > **Hosts y clústeres** y, a continuación, seleccione el **clúster vSAN**. Pulse el **separador Supervisor**, **vSAN** y, a continuación, pulse **Estado**. Revise los resultados de la prueba.
   - No debe haber ninguna resincronización activa al principio del proceso de actualización pulsando **Inicio** > **Hosts y clústeres** y, a continuación, seleccione el **clúster vSAN**, pulse el **separador vSAN** y, a continuación, pulse ** Componentes de resincronización**. _El recuento de componentes de resincronización debería ser 0_. Tenga en cuenta que parte se espera actividad de resincronización durante el proceso de actualización, ya que nos datos deben sincronizarse después de que se haya rearrancado el host.
 * **Preparación del host ESXi de vSphere**: Cuando mueva un host a la modalidad de mantenimiento en un clúster vSAN, tiene tres opciones:
-  - **Sin migración de datos**: si selecciona esta opción, vSAN no evacuará ningún dato de este host. Si apaga o elimina el host del clúster, es posible que no pueda acceder a algunas máquinas virtuales.
-  - **Garantizar la disponibilidad**: si selecciona esta opción, vSAN le permite mover el host a la modalidad de mantenimiento más rápidamente que la migración de datos completa y permite el acceso a las máquinas virtuales del entorno.
+  - **Sin migración de datos**: si selecciona esta opción, vSAN no evacuará ningún dato de este host. Si apaga o elimina el host del clúster, es posible que no pueda acceder a algunas máquinas virtuales (VM).
+  - **Garantizar la disponibilidad**: si selecciona esta opción, vSAN le permite mover el host a la modalidad de mantenimiento más rápidamente que la migración de datos completa y permite el acceso a las VM del entorno.
   - **Migración de datos completa**
 * **Salir de la modalidad de mantenimiento y resincronización**: Cuando el host de vSphere ESXi se actualiza y se mueve fuera de la modalidad de mantenimiento, se producirá una resincronización. Puede verlo mediante el cliente web. Asegúrese de que se haya completado antes de pasar al siguiente host. Se está produciendo una resincronización, ya que el host que se ha actualizado ahora puede volver a contribuir al almacén de datos de vSAN. Es vital esperar a que esta resincronización se haya completado para asegurarse de que no haya pérdida de datos.
 * **Después de empezar una actualización del clúster vSAN**:

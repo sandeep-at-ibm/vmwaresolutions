@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
 # Configuración inicial
 
-La automatización de IC4VS configura el VCSA con una pasarela establecida en IBM Cloud Backend Customer Router (BCR). Sin embargo, no hay vía de acceso a Internet a través del BCR. La ruta estándar a Internet desde la instancia de VCS se realiza a través del ESG de gestión. Como no se aconseja cambiar la configuración del VCSA o el ESG de gestión, se recomienda implementar el servidor proxy en la subred del cliente para habilitar VUM.
+La automatización de IC4VS configura el VCSA con una pasarela establecida en {{site.data.keyword.cloud}} Backend Customer Router (BCR). Sin embargo, no hay vía de acceso a Internet a través del BCR. La ruta estándar a Internet desde la instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}} se realiza a través de Management ESG. Como no se aconseja cambiar la configuración del VCSA o el ESG de gestión, se recomienda implementar el servidor proxy en la subred del cliente para habilitar VUM.
 
-Este enfoque significa que no tienen que volverse a configurar ni el VCSA ni la ESG de gestión. Sin embargo, deben instalarse una VM o un dispositivo pequeños. Un servidor proxy es un sistema, que se encuentra entre dos dispositivos de punto final y actúa como un dispositivo intermedio. En este caso, se encuentra entre el VUM y los servidores de actualización en VMware.
+Este enfoque significa que no tienen que volverse a configurar ni el VCSA ni la ESG de gestión. Sin embargo, deben instalarse una máquina virtual (VM) o un dispositivo pequeños. Un servidor proxy es un sistema, que se encuentra entre dos dispositivos de punto final y actúa como un dispositivo intermedio. En este caso, se encuentra entre el VUM y los servidores de actualización en VMware.
 
 Cuando VUM solicita un recurso desde el servidor de actualizaciones en VMware, la solicitud se envía primero al servidor proxy y después el servidor proxy envía la solicitud al servidor de actualizaciones. Una vez que el servidor proxy ha obtenido el recurso, este lo envía a VUM. Se puede utilizar un servidor proxy para facilitar la seguridad, los controles administrativos y los servicios de almacenamiento en memoria caché.
 
@@ -36,8 +36,8 @@ Tabla 1. Valores de despliegue
 | Dirección | ip proxy | Se debe utilizar una dirección IP de repuesto desde el cliente, la subred portátil privada se asigna durante el proceso de suministro. Solo se reservarían dos direcciones IP en esta subred; una para el BCR y otra para el cliente-esg
 | Máscara de red | 255.255.255.192 | |
 | Pasarela| ip enlace ascendente privada customer-nsx-edge | Este es el valor de pasarela predeterminado para el servidor proxy, que es la dirección IP de enlace ascendente privada de customer-nsx-edge. Para encontrar la dirección IP, consulte el separador **Configuración** de **customer-nsx-edge**. |
-| Servidor DNS | ip de AD/DNS | Encontrará esta dirección IP en la página de la instancia de la consola de IBM Cloud for VMware Solutions, en la página **Instancias desplegadas**. |
-| IP de BCR | ip de bcr | Es la dirección IP del direccionador de cliente de IBM Cloud Backend y es la pasarela para 10.0.0.0/8 y 161.26.0.0/16. Esta dirección se utiliza en una ruta estática en el servidor proxy para que pueda llegar a la VCSA y al servidor de AD/DNS. |
+| Servidor DNS | ip de AD/DNS | Encontrará esta dirección IP en la página de la instancia de la consola de {{site.data.keyword.vmwaresolutions_short}}, en la página **Instancias desplegadas**. |
+| IP de BCR | ip de bcr | Es la dirección IP del direccionador de cliente de {{site.data.keyword.cloud_notm}} Backend y es la pasarela para 10.0.0.0/8 y 161.26.0.0/16. Esta dirección se utiliza en una ruta estática en el servidor proxy para que pueda llegar a la VCSA y al servidor de AD/DNS. |
 
 ## Configuración de NSX
 
@@ -73,11 +73,11 @@ El proceso siguiente despliega una VM para alojar CentOS y Squid desde la Biblio
 
 ### Descarga del archivo ISO CentOS-Minimal
 
-Utilice un navegador en el servidor de saltos para descargar el archivo ISO de CentOS-Minimal de [CentOS](https://www.centos.org/download/). Tenga en cuenta que IBM Cloud mantiene un duplicado de muchas distribuciones de Linux populares. Este duplicado solo está disponible en la red privada, y los ISO de CentOS están disponibles en la dirección siguiente: `http://mirrors.service.softlayer.com/centos/7/isos/x86_64/`
+Utilice un navegador en el servidor de saltos para descargar el archivo ISO de CentOS-Minimal de [CentOS](https://www.centos.org/download/). Tenga en cuenta que {{site.data.keyword.cloud_notm}} mantiene un duplicado de muchas distribuciones de Linux populares. Este duplicado solo está disponible en la red privada, y los ISO de CentOS están disponibles en la dirección siguiente: `http://mirrors.service.softlayer.com/centos/7/isos/x86_64/`
 
 ### Configurar una biblioteca de contenido y llenarla con el archivo ISO de CentOS
 
-Cree una biblioteca de contenido de vCenter local. Solo se puede acceder a la biblioteca en la instancia de vCenter Server en la que se crea. Rellene la biblioteca con plantillas e ISO necesarias para desplegar máquinas virtuales.
+Cree una biblioteca de contenido de vCenter local. Solo se puede acceder a la biblioteca en la instancia de vCenter Server en la que se crea. Rellene la biblioteca con plantillas e ISO necesarias para desplegar VM.
 
 1. A través del cliente web de vSphere, vaya a **Inicio** > **Biblioteca de contenido** > **Objetos** > **Crear una nueva biblioteca de contenido** > **Crear biblioteca suscrita en el vCenter**.
 2. Especifique un nombre para la biblioteca de contenido, por ejemplo, ISO y, en el recuadro de texto Notas, especifique una descripción para la biblioteca y pulse **Siguiente**.
@@ -107,7 +107,7 @@ Esta tarea crea una nueva máquina virtual lista para su uso como servidor proxy
 8.	Establezca **CPU en 1**, **Memoria en 2048 MB** y **Nuevo disco duro en 25 GB**. Seleccione **Archivo ISO de la biblioteca de contenido** y, a continuación, **CentOS-7-x86_64-Minimal**, pulse **Aceptar** y la marca del recuadro **Conectado**.
 9.	En el recuadro Nuevo dispositivo, seleccione **Red** y, a continuación, pulse **Añadir**.
 10.	Seleccione la red **SDDC-DPortGroup-Mgmt**, asegúrese de que el recuadro de selección Conectar esté marcado y pulse **Siguiente**.
-11.	Revise y pulse **Finalizar**
+11.	Revise las opciones y pulse **Finalizar**.
 
 #### Instalar CentOS
 
@@ -122,10 +122,10 @@ Esta tarea instala y configura la máquina virtual recién creada lista para la 
 7.	En la pantalla **LOCALIZACIÓN**, pulse **DESTINO DE LA INSTALACIÓN**, pulse el **icono de disco virtual de VMware** y, a continuación, pulse **Terminado**.
 8.	En la pantalla **LOCALIZACIÓN**, pulse **REDES Y NOMBRE DE HOST**, cambie el nombre de host por el nombre de host elegido; por ejemplo, Proxy01.
 9.	Pulse el botón **Configurar** y, a continuación, **Valores de IPv4** y, en el recuadro **Método**, seleccione **Manual**.
-10.	Con el botón **Añadir**, inserte _Máscara de red de dirección_ y la _Pasarela_ de la _Tabla 1-Valores de despliegue_
-11.	Especifique la _dirección IP del servidor DNS_ de la Tabla 1-Valores de despliegue
-12.	Pulse el botón **Rutas** y añada las siguientes rutas estáticas; _10.0.0.0/8 y 161.26.0.0/16_ con una dirección IP de pasarela de la _Dirección IP de BCR_ de la Tabla 1 Valores de despliegue, como la pasarela. Esta ruta estática permite al servidor proxy llegar al servidor DNS
-13.	Pulse **Guardar** y, a continuación, asegúrese de que la interfaz de Ethernet esté Activada y aparezca como conectada. Pulse **Terminado** e **Iniciar instalación**
+10.	Con el botón **Añadir**, inserte _Máscara de red de dirección_ y la _Pasarela_ de la _Tabla 1 -Valores de despliegue_.
+11.	Especifique la _dirección IP del servidor DNS_ de la Tabla 1 - Valores de despliegue.
+12.	Pulse el botón **Rutas** y añada las siguientes rutas estáticas; _10.0.0.0/8 y 161.26.0.0/16_ con una dirección IP de pasarela de la _Dirección IP de BCR_ de la Tabla 1 Valores de despliegue, como la pasarela. Esta ruta estática permite al servidor proxy llegar al servidor DNS.
+13.	Pulse **Guardar** y, a continuación, asegúrese de que la interfaz de Ethernet esté Activada y aparezca como conectada. Pulse **Terminado** e **Iniciar instalación**.
 14.	A medida que avance la instalación, defina una contraseña de root y configure un usuario.
 15.	Cuando finalice la instalación, inicie sesión como el usuario y, a continuación, escriba el mandato _ping vmware.com_. El nombre debe resolverse en una dirección IP y debe obtener una respuesta. Si no obtiene respuestas, compruebe las direcciones IP, las reglas de cortafuegos y los valores de NAT.
 
@@ -142,12 +142,12 @@ Squid no tiene ningún requisito mínimo de hardware, pero la cantidad de RAM pu
 
   `yum -y update`  `yum clean all`
 
-5. Squid se instala con el mandato siguiente: `yum -y install squid`
-6. Una vez instalado, inicie Squid inmediatamente con el mandato siguiente: `systemctl start squid`
-7. Para iniciar Squid automáticamente durante el arranque, ejecute el mandato siguiente: `systemctl enable squid`
-8. Para asegurarse de que Squid se esté ejecutando, ejecute el mandato siguiente: `systemctl status squid`
-9. El cortafuegos CentOS tiene que permitir el acceso al puerto Squid, TCP 3128 con el siguiente mandato: `firewall-cmd -add-port=3128/tcp -permanent`
-10.	Para guardar la regla y reiniciar el servicio, utilice el mandato siguiente: `firewall-cmd –reload`
+5. Squid se instala con el mandato siguiente: `yum -y install squid`.
+6. Una vez instalado, inicie Squid inmediatamente con el mandato siguiente: `systemctl start squid`.
+7. Para iniciar Squid automáticamente durante el arranque, ejecute el mandato siguiente: `systemctl enable squid`.
+8. Para asegurarse de que Squid se esté ejecutando, ejecute el mandato siguiente: `systemctl status squid`.
+9. El cortafuegos CentOS tiene que permitir el acceso al puerto Squid, TCP 3128 con el siguiente mandato: `firewall-cmd -add-port=3128/tcp -permanent`.
+10.	Para guardar la regla y reiniciar el servicio, utilice el mandato siguiente: `firewall-cmd –reload`.
 
 ## Configuración inicial de VUM
 
@@ -160,5 +160,5 @@ Configure VUM para que utilice el servidor proxy para acceder a los repositorios
 
 ### Enlaces relacionados
 
-* [Arquitectura de la solución VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)
+* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)
