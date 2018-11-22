@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
 # VMware Update Manager 개요
 
 VUM(VMware Update Manager)은 다단계 프로세스를 사용하여 vSphere 오브젝트를 업그레이드하고 패치 또는 확장을 적용합니다. 이 프로세스를 사용하면 시스템 중단 시간을 최소화하여 업데이트 프로시저를 원활하게 수행할 수 있습니다. 이 프로세스를 살펴보기 전에 다음 용어를 이해해야 합니다.
-* **인벤토리 오브젝트** - 가상 머신, 가상 어플라이언스 또는 vSphere ESXi 호스트와 같은 vCenter 내의 오브젝트
+* **인벤토리 오브젝트** - 가상 머신, 가상 어플라이언스 또는 vSphere ESXi 호스트와 같은 vCenter 내의 오브젝트입니다.
 * **기준선** - 기준선에는 하나 이상의 패치, 확장, 서비스 팩, 버그 수정 또는 업그레이드의 콜렉션이 포함되며 패치, 확장 또는 업그레이드 기준선으로 분류될 수 있습니다. 두 가지 분류의 기준선(호스트 및 VM/VA)이 있으며 둘 다 VMware에서 사전 정의된 기준선입니다. 필요에 따라 사용자 정의 기준선을 추가할 수 있습니다.
   - 사전 정의된 호스트 기준선:
     - 중요 호스트 패치
@@ -38,7 +38,7 @@ VUM(VMware Update Manager)은 다단계 프로세스를 사용하여 vSphere 오
 * ESXi 5.5 및 ESXi 6.x 호스트에 대한 알림, 경고 및 패치 재호출
 * 가상 어플라이언스의 업그레이드에 대한 메타데이터
 
-VUM은 ESXi 5.0 이상에서 실행 중인 호스트에 대한 패치의 재호출을 지원합니다. 릴리스된 패치에 문제점이나 잠재적인 문제가 있는 경우 패치가 재호출됩니다. VCS 인스턴스에서 호스트를 스캔하면 VUM이 재호출된 패치가 특정 호스트에 설치되었는지 여부를 알립니다. VUM을 사용하는 호스트에는 재호출된 패치를 설치할 수 없습니다. 또한 VUM이 재호출된 모든 패치를 패치 저장소에서 삭제합니다. 문제점을 해결하는 패치가 릴리스되면 VUM에서 새 패치를 해당 패치 저장소에 다운로드합니다. 문제가 있는 패치를 이미 설치한 경우 VUM에서 수정사항이 릴리스되었음을 알리고 새 패치를 적용하라는 프롬프트를 표시합니다.
+VUM은 ESXi 5.0 이상에서 실행 중인 호스트에 대한 패치의 재호출을 지원합니다. 릴리스된 패치에 문제점이나 잠재적인 문제가 있는 경우 패치가 재호출됩니다. VMware vCenter Server on {{site.data.keyword.cloud}} 인스턴스에서 호스트를 스캔하면 VUM이 재호출된 패치가 특정 호스트에 설치되었는지 여부를 알립니다. VUM을 사용하는 호스트에는 재호출된 패치를 설치할 수 없습니다. 또한 VUM이 재호출된 모든 패치를 패치 저장소에서 삭제합니다. 문제점을 해결하는 패치가 릴리스되면 VUM에서 새 패치를 해당 패치 저장소에 다운로드합니다. 문제가 있는 패치를 이미 설치한 경우 VUM에서 수정사항이 릴리스되었음을 알리고 새 패치를 적용하라는 프롬프트를 표시합니다.
 
 VUM 클라이언트 인터페이스는 두 가지 기본 보기를 제공합니다.
 *	관리 보기
@@ -63,5 +63,5 @@ VUM 클라이언트 인터페이스는 두 가지 기본 보기를 제공합니�
 
 ### 관련 링크
 
-* VMware HCX on IBM Cloud 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

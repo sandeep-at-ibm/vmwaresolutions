@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-29"
 
 ## VCSA 업데이트
 
-VUM은 VCSA를 업데이트하지 않으므로 이 섹션에서는 이 어플라이언스를 업데이트하는 프로세스에 대해 설명합니다. VCS 인스턴스에 배치된 VCSA에는 인터넷 액세스가 없으므로 먼저 업데이트 번들을 점프 서버에 다운로드해야 합니다.
+VUM은 VCSA를 업데이트하지 않으므로 이 섹션에서는 이 어플라이언스를 업데이트하는 프로세스에 대해 설명합니다. VMware vCenter Server on {{site.data.keyword.cloud}} 인스턴스에 배치된 VCSA에는 인터넷 액세스가 없으므로 먼저 업데이트 번들을 점프 서버에 다운로드해야 합니다.
 
 VCSA는 vSphere Web Client가 아니라 어플라이언스 관리 콘솔을 통해 업데이트됩니다. VCSA 어플라이언스 관리 콘솔은 브라우저, VCSA IP 주소 및 포트 5480을 사용하여 액세스합니다.
 
@@ -32,11 +32,11 @@ VCSA를 업데이트하려면 다음 단계를 따르십시오.
 
 ## SSO 링크된 vCenters
 
-기본 및 보조 VCS 인스턴스가 있는 경우 VCSA가 단일 vCenter 싱글 사인온(SSO) 도메인에 있도록 구성됩니다. 각 VCSA에는 배치된 VUM 인스턴스가 있습니다. 수정하는 구성 특성은 사용자가 지정하는 VLM 인스턴스에만 적용되며 그룹에 있는 다른 인스턴스에 전파되지 않습니다.
+기본 및 보조 vCenter Server 인스턴스가 있는 경우 VCSA가 단일 vCenter 싱글 사인온(SSO) 도메인에 있도록 구성됩니다. 각 VCSA에는 배치된 VUM 인스턴스가 있습니다. 수정하는 구성 특성은 사용자가 지정하는 VLM 인스턴스에만 적용되며 그룹에 있는 다른 인스턴스에 전파되지 않습니다.
 
 탐색줄에서 VUM 인스턴스가 등록된 VCSA의 이름을 선택하여 VUM 인스턴스를 지정할 수 있습니다. 기준선 및 기준선 그룹을 관리하고 VUM 인스턴스가 등록된 VCSA에서 관리되는 인벤토리 오브젝트만 스캔 및 수정할 수도 있습니다.
 
 ### 관련 링크
 
-* [VMware HCX on IBM Cloud 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

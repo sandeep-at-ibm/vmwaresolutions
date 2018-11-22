@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -17,11 +17,11 @@ NSX 및 vSphere를 모두 업그레이드해야 하는 경우 VMware에서는 �
 1. **ESXi 업그레이드** - ESXi 업그레이드가 완료되면 호스트가 유지보수 모드를 종료하지만 다음 단계가 완료될 때까지 논리 스위치에 연결된 VM을 호스트로 이동할 수 없습니다.
 2. **NSX VIB 업그레이드** - VIB가 업그레이드되고 호스트가 유지보수 모드에서 제거되면 논리 스위치에 연결된 VM을 호스트로 이동할 수 있습니다.
 
-NSX는 _my.vmware.com_에서 받은 다운로드로 NSX Manager를 업데이트하여 업데이트됩니다. 따라서 업데이트를 다운로드하려면 계정이 필요합니다. VCS 인스턴스에 IBM Cloud 구독 라이센싱을 이용하는 경우 **my.vmware.com** 계정을 사용하여 업데이트를 다운로드할 수 없습니다. 따라서 [IBM 지원 센터에 문의](../../vmonic/trbl_support.html)해야 합니다.
+NSX는 _my.vmware.com_에서 받은 다운로드로 NSX Manager를 업데이트하여 업데이트됩니다. 따라서 업데이트를 다운로드하려면 계정이 필요합니다. VMware vCenter Server on {{site.data.keyword.cloud_notm}} 인스턴스에 {{site.data.keyword.cloud}} 구독 라이센싱을 이용하는 경우 **my.vmware.com** 계정을 사용하여 업데이트를 다운로드할 수 없습니다. 따라서 [IBM 지원 센터에 문의](../../vmonic/trbl_support.html)해야 합니다.
 
 NSX 릴리스 정보에는 알려진 업그레이드 문제와 임시 해결책이 문서화되어 있으므로 업그레이드를 시작하기 전에 이러한 릴리스 정보를 확인하십시오. 릴리스 정보를 사용하여 vCenter가 NSX에 대한 새로운 시스템 요구사항을 충족하는지 확인하십시오.
 
-VMware 파트너의 추가 소프트웨어를 설치한 경우 파트너 문서를 참조하여 호환성 및 업그레이드 세부사항을 확인하십시오. VCS 기본 및 보조 인스턴스를 배치했으며 교차 vCenter NSX 환경이 있는 경우 올바른 업그레이드 프로세스는 릴리스 정보를 참조하십시오.
+VMware 파트너의 추가 소프트웨어를 설치한 경우 파트너 문서를 참조하여 호환성 및 업그레이드 세부사항을 확인하십시오. vCenter Server 기본 및 보조 인스턴스를 배치했으며 교차 vCenter NSX 환경이 있는 경우 올바른 업그레이드 프로세스는 릴리스 정보를 참조하십시오.
 
 교차 vCenter NSX 환경에서는 기본 NSX Manager 어플라이언스가 먼저 업데이트되고 다음으로 모든 보조 NSX Manager 어플라이언스가 업데이트됩니다.
 **다운그레이드는 지원되지 않습니다.** 따라서 업그레이드를 진행하기 전에 NSX Manager의 백업을 작성하십시오. 모든 NSX Edge 구성, 논리 라우터, 에지 서비스 게이트웨이가 NSX Manager 백업의 일부로 백업됩니다.
@@ -63,5 +63,5 @@ NSX Manager가 업그레이드되면 NSX를 다운그레이드할 수 없습니�
 
 ### 관련 링크
 
-* [VMware HCX on IBM Cloud 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)
