@@ -17,7 +17,7 @@ lastupdated: "2018-09-27"
 {{site.data.keyword.vmwaresolutions_short}} コンソールから IBM サポートに連絡するには、以下の手順を実行します。
 
 1. 次の URL にアクセスします。
-   https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
+   https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. **IBM ID** アカウントでコンソールにログインします。
 3. バナーの左側で、**「サポート」>「チケットの追加」**をクリックします。
 4. {{site.data.keyword.slportal_short}}・ページで**「IBM ID でログイン」**をクリックすると、自動的にポータルにログインします。

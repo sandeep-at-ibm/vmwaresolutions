@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-26"
 
 ## IBM Cloud アカウントの登録
 
-{{site.data.keyword.cloud}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。 {{site.data.keyword.cloud_notm}} アカウントを登録する方法について詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの登録](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud)を参照してください。
+{{site.data.keyword.cloud}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。 {{site.data.keyword.cloud_notm}} アカウントを登録する方法について詳しくは、[{{site.data.keyword.cloud_notm}}の登録](../../../account/adminpublic.html)を参照してください。
 
 ## IBM Cloud インフラストラクチャー (SoftLayer) アカウントの登録
 
@@ -38,4 +38,4 @@ lastupdated: "2018-09-26"
 * [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](slaccountrequirement.html)
 * [ビデオ - {{site.data.keyword.cloud_notm}} アカウントの作成方法](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
-* [IBM ID への切り替え](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}
+* [IBM ID への切り替えとアカウントのリンク](../../../admin/softlayerlink.html){:new_window}

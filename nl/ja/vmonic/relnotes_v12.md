@@ -22,7 +22,7 @@ VMware ESXi のバージョンが、前のリリースの ESXi 6.0 u2 から、�
 
 詳しくは、以下のトピックを参照してください。
 * [概説](../index.html)
-* [Bluemix へのアクセスに関するトラブルシューティング](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html){:new_window}
+* [Bluemix へのアクセスに関するトラブルシューティング](../../../account/ts_accessing.html){:new_window}
 
 ## Zerto 災害復旧
 

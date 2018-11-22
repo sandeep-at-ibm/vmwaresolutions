@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-10-26"
 
 使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントには、お客様に代わってインスタンス内でコンポーネントを注文して操作を実行できるだけの権限がなければなりません。 この権限の要件は、{{site.data.keyword.vmwaresolutions_short}} コンソールから注文するすべてのタイプのインスタンスとサービスに適用されます。
 
-許可ユーザーは、{{site.data.keyword.slportal}}で {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの権限を確認したり更新したりできます。 詳しくは、[ユーザー・プロファイルの管理](../../../customer-portal/cpmanuserprof.html){:new_window}の『_ユーザーのカスタマー・ポータル許可の編集_』を参照してください。
+許可ユーザーは、{{site.data.keyword.slportal}}で {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの権限を確認したり更新したりできます。 詳しくは、『[ユーザーのカスタマー・ポータル許可の編集](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}』を参照してください。
 
 表 1. {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントに必要な権限
 
@@ -47,7 +47,7 @@ lastupdated: "2018-10-26"
 
 ## クラシック (非 VRF) アカウントの VLAN スパンニング
 
-クラシック (非 VRF) {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを使用する場合は、VLAN スパンニングを有効にする必要があります。 クラシック・アカウントの VLAN スパンニングを有効にしないと、VMware 仮想化環境のさまざまなコンポーネントが相互通信できない可能性があります。 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの VLAN スパンニングを有効にするには、[VLAN スパンニングの有効化または無効化](../../../infrastructure/vlans/vlan-spanning.html){:new_window}を参照してください。
+クラシック (非 VRF) {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを使用する場合は、VLAN スパンニングを有効にする必要があります。 クラシック・アカウントの VLAN スパンニングを有効にしないと、VMware 仮想化環境のさまざまなコンポーネントが相互通信できない可能性があります。 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの VLAN スパンニングを有効にするには、[VLAN スパンニング](../../../infrastructure/vlans/vlan-spanning.html){:new_window}を参照してください。
 
 ### 関連リンク
 
