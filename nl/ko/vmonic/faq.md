@@ -117,7 +117,7 @@ VMware 업데이트는 배치한 VMware 인스턴스의 유형에 따라 다른 
 
 ## VMware vSphere on IBM Cloud가 VMware 스택을 설치하고 구성하고 가져오는 데 자동화를 사용합니까?
 
-아니오. VMware vSphere on {{site.data.keyword.cloud_notm}}는 Cloud Foundation 및 vCenter Server 플랫폼에 있는 고급 자동화를 사용하지 않습니다. 사용자의 주문 항목에 따라 플랫폼은 선택적 VMware 라이센스, ESXi 서버를 제공하고, 선택적으로 FortiGate 실제 방화벽의 HA 쌍을 제공합니다. 새 클러스터가 작성되는 경우 세 개의 새 VLAN(하나의 공용 VLAN 및 두 개의 사설 VLAN)도 프로비저닝됩니다.
+아니오. VMware vSphere on {{site.data.keyword.cloud_notm}}는 Cloud Foundation 및 vCenter Server 플랫폼에 있는 고급 자동화를 사용하지 않습니다. 사용자의 주문 항목에 따라 플랫폼은 선택적 VMware 라이센스, ESXi 서버를 제공하고, 선택적으로 FortiGate 실제 방화벽의 HA 이중화를 제공합니다. 새 클러스터가 작성되는 경우 세 개의 새 VLAN(하나의 공용 VLAN 및 두 개의 사설 VLAN)도 프로비저닝됩니다.
 
 VMware ESXi는 각 베어메탈 서버에 자동으로 설치되지만 vCenter Server 또는 NSX와 같은 추가 VMware 컴포넌트를 설치해야 합니다. vSphere on {{site.data.keyword.cloud_notm}}는 VMware 호환 하드웨어가 선택된 VMware 컴포넌트에 따라 주문되는지 확인하지만, VMware 환경을 구성하고 가져오기 위해 제공된 자동화가 없습니다. 사용자는 IBM 호스팅 환경을 디자인하고 설계해야 합니다.
 

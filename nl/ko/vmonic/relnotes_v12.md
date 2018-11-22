@@ -22,7 +22,7 @@ VMware ESXi의 새 버전은 이전 릴리스의 ESXi 6.0 u2에서 업데이트�
 
 자세한 정보는 다음 주제를 참조하십시오.
 * [시작하기](../index.html)
-* [Troubleshooting for accessing Bluemix](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html){:new_window}
+* [Troubleshooting for accessing Bluemix](../../../account/ts_accessing.html){:new_window}
 
 ## Zerto 재해 복구
 

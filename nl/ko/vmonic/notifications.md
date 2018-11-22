@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-09-28"
 ## 알림 보기
 
 1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **알림**을 클릭하십시오.
-2. **알림 히스토리** 테이블에서 모든 알림에 대한 요약을 보십시오.
+2. 모든 알림에 대한 요약을 보십시오.
 
    표 1. 알림 히스토리
 

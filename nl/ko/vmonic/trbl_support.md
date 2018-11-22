@@ -17,7 +17,7 @@ lastupdated: "2018-09-27"
 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 IBM 지원 센터에 문의하려면 다음 단계를 완료하십시오.
 
 1. 다음 사이트로 이동하십시오.
-   https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
+   https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. **IBM ID** 계정으로 콘솔에 로그인하십시오.
 3. 배너의 왼쪽에서 **지원 > 티켓 추가**를 클릭하십시오.
 4. {{site.data.keyword.slportal_short}} 페이지에서 **IBM ID로 로그인**을 클릭하면 포털에 자동으로 로그인됩니다.
