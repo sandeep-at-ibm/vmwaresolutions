@@ -61,7 +61,7 @@ vCenter Server の構成では、アプライアンスに含まれているロ�
 
 ### vCenter Server クラスターの仕様
 
-この設計では、ソリューションでプロビジョンされた vSphere ESXi ホストをクラスター化することができます。ただし、クラスターを作成する前に、vSphere ESXi ホストとデータ・センター内のポッドの場所を指示するデータ・センター・オブジェクトを作成します。クラスターは、データ・センター・オブジェクトが作成された後に作成されます。 クラスターは、VMware vSphere High Availability (HA) と VMware vSphere Distributed Resource Scheduler (DRS) を有効にした状態でデプロイされます。
+この設計では、ソリューションでプロビジョンされた vSphere ESXi ホストをクラスター化することができます。 ただし、クラスターを作成する前に、vSphere ESXi ホストとデータ・センター内のポッドの場所を指示するデータ・センター・オブジェクトを作成します。 クラスターは、データ・センター・オブジェクトが作成された後に作成されます。 クラスターは、VMware vSphere High Availability (HA) と VMware vSphere Distributed Resource Scheduler (DRS) を有効にした状態でデプロイされます。
 
 ### vSphere Distributed Resource Scheduler
 

@@ -69,7 +69,7 @@ vCenter Server インスタンスの場合
 ![vSAN の概念](virtual_vSAN.svg "vSAN は、vSphere クラスター内の複数の ESXi ホストそれぞれのローカル・ストレージを集約し、集約ストレージを単一の VM データ・ストアとして管理します")
 
 vSAN では、以下のコンポーネントが使用されます。
-* 2 ディスク・グループ vSAN 設計。各ディスク・グループは 2 つ以上のディスクで構成されます。グループ内の最小サイズの SSD 1 つがキャッシュ層として使用され、残りの SSD が容量層として使用されます。
+* 2 ディスク・グループ vSAN 設計。各ディスク・グループは 2 つ以上のディスクで構成されます。 グループ内の最小サイズの SSD 1 つがキャッシュ層として使用され、残りの SSD が容量層として使用されます。
 * 2 つの OS ドライブを除いて、ドライブごとにオンボード RAID コントローラーが RAID-0 レベルで構成されます。
 * すべてのストレージから単一の vSAN データ・ストアが作成されます。
 
@@ -112,7 +112,7 @@ vSAN の設定は、{{site.data.keyword.cloud_notm}} 内に VMware ソリュー�
 
 ネットワーク仮想化により、仮想レイヤー内にネットワーク・オーバーレイが存在するようになります。 ネットワーク仮想化により、オンデマンド仮想ネットワークの迅速なプロビジョニング、デプロイメント、再構成、消滅などの機能を備えたアーキテクチャーになります。 この設計では、vDS と VMware NSX for vSphere を使用して仮想ネットワーキングを実装します。
 
-この設計では、NSX Manager は初期クラスター内にデプロイされます。 NSX Manager には、管理コンポーネント用に指定されたプライベート・ポータブル・アドレス・ブロックから VLAN-backed IP アドレスが割り当てられ、[共通サービス設計](design_commonservice.html)で説明されている DNS サーバーと NTP サーバーが構成されます。NSX Manager は、表 2 に示す仕様でインストールされます。
+この設計では、NSX Manager は初期クラスター内にデプロイされます。 NSX Manager には、管理コンポーネント用に指定されたプライベート・ポータブル・アドレス・ブロックから VLAN-backed IP アドレスが割り当てられ、[共通サービス設計](design_commonservice.html)で説明されている DNS サーバーと NTP サーバーが構成されます。 NSX Manager は、表 2 に示す仕様でインストールされます。
 
 表 2. NSX Manager の属性
 
@@ -135,7 +135,7 @@ vSAN の設定は、{{site.data.keyword.cloud_notm}} 内に VMware ソリュー�
 
 コントローラーに加えて、VXLAN トンネル・エンドポイント (VTEP) を介して仮想化ネットワークを使用できるように、NSX VIBS を備えたデプロイ済み vSphere ホストが {{site.data.keyword.cloud_notm}} 自動化機能によって準備されます。 VTEP 用に指定された**プライベート A** ポータブル IP アドレス範囲 ([物理インフラストラクチャーの設計](design_physicalinfrastructure.html)の*表 1. VLAN とサブネットの要約*のリストを参照) から VLAN-backed IP アドレスが VTEP に割り当てられます。 VXLAN トラフィックはタグの外された VLAN 上に存在し、プライベート vDS に割り当てられます。
 
-続いて、セグメント ID プールが割り当てられ、クラスター内のホストがトランスポート・ゾーンに追加されます。{{site.data.keyword.cloud_notm}} 内で Internet Group Management Protocol (IGMP) スヌープが構成されないため、トランスポート・ゾーンで使用されるのはユニキャストのみです。
+続いて、セグメント ID プールが割り当てられ、クラスター内のホストがトランスポート・ゾーンに追加されます。 {{site.data.keyword.cloud_notm}} 内で Internet Group Management Protocol (IGMP) スヌープが構成されないため、トランスポート・ゾーンで使用されるのはユニキャストのみです。
 
 その後、NSX Edge Services Gateway ペアがデプロイされます。 すべての場合において、プライベート・ネットワークに常駐する自動化コンポーネントからのアウトバウンド・トラフィックにゲートウェイ・ペアが 1 つ使用されます。 vCenter Server の場合、2 つ目のゲートウェイ (カスタマー管理エッジと呼ばれる) がデプロイされ、パブリック・ネットワークへのアップリンクとプライベート・ネットワークに割り当てられるインターフェースが構成されます。 ソリューションの一部としてデプロイされる NSX Edge Services Gateway について詳しくは、[NSX Edge on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)を参照してください。
 
