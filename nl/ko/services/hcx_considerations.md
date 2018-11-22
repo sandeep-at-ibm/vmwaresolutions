@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -19,15 +19,17 @@ HCX on {{site.data.keyword.cloud}} 서비스는 온프레미스 데이터 센터
 이 서비스는 V2.3 이상에 배치된 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스에만 사용 가능합니다.
 {:note}
 
-기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 인스턴스 업그레이드 및 HCX on {{site.data.keyword.cloud_notm}} 서비스 배치에 대한 자세한 정보는 [vCenter Server with Hybridity Bundle 인스턴스로 업그레이드](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance)를 참조하십시오.
+기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 인스턴스 업그레이드 및 HCX on {{site.data.keyword.cloud_notm}} 서비스 배치에 대한 자세한 정보는 [vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하는 프로시저](../vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)를 참조하십시오.
 
-**참고:** HCX on {{site.data.keyword.cloud_notm}}의 vCenter Server 인스턴스는 온프레미스 사이트의 세 개의 동시 연결로 제한됩니다.
+HCX on {{site.data.keyword.cloud_notm}}의 vCenter Server 인스턴스는 온프레미스 사이트의 세 개의 동시 연결로 제한됩니다.
+{:note}
 
 ## HCX on IBM Cloud의 기술 스펙
 
 다음 컴포넌트가 주문되고 HCX on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
-**참고:** 온프레미스 HCX 인스턴스에는 라이센싱 및 활성화만 포함됩니다.
+온프레미스 HCX 인스턴스에는 라이센싱 및 활성화만 포함됩니다.
+{:note}
 
 ### HCX 관리를 위한 VMware NSX Edge Services Gateway의 활성/수동 쌍
 
@@ -86,4 +88,4 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 다음 
 * [HCX 용어집](hcx_glossary.html)
 * [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension 개요](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension 문서](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources)

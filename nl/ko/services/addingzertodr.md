@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -23,7 +23,8 @@ Zerto on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm
 
 다음 컴포넌트가 주문되고 Zerto on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
-**참고:** ZVM(Zerto Virtual Manager) 컴포넌트는 기본 클러스터에만 배치됩니다.
+Zerto VRA(Virtual Replication Appliance) 컴포넌트는 기본 클러스터에만 배치됩니다.
+{:note}
 
 ### VSI
 

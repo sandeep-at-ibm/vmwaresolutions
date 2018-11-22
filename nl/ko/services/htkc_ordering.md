@@ -10,7 +10,7 @@ lastupdated: "2018-09-26"
 
 # HyTrust KeyControl on IBM Cloud 주문
 
-HyTrust KeyControl 어플라이언스의 HA 쌍이 포함된 새 인스턴스를 주문할 때 또는 기존 인스턴스에 HyTrust KeyControl 어플라이언스를 추가하여 HyTrust KeyControl on {{site.data.keyword.cloud}} 서비스를 주문할 수 있습니다.
+HyTrust KeyControl 어플라이언스의 HA 이중화가 포함된 새 인스턴스를 주문할 때 또는 기존 인스턴스에 HyTrust KeyControl 어플라이언스를 추가하여 HyTrust KeyControl on {{site.data.keyword.cloud}} 서비스를 주문할 수 있습니다.
 
 ## 새 인스턴스에 대한 HyTrust KeyControl on IBM Cloud 주문
 
