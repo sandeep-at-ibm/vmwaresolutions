@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -136,7 +136,7 @@ Revise y elija los servicios de complemento para la oferta de despliegue.
        <td>El servicio HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifica la gestión de las cargas de trabajo cifradas automatizando y simplificando el ciclo de vida de las claves de cifrado. El servicio puede gestionar fácilmente las claves de cifrado a escala utilizando el cifrado compatible con FIPS 140-2.</td>
     </tr>
     <tr>
-       <td>[IBM Cloud Private Hosted](services/managing_icp.html)</td>
+       <td>[IBM Cloud Private Hosted](services/icp_overview.html)</td>
        <td>{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware y {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}.</td>
     </tr>
     <tr>
