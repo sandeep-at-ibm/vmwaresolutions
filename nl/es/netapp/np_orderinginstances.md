@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Solicitud de instancias de NetApp ONTAP Select
 
@@ -18,7 +22,8 @@ Asegúrese de haber realizado las tareas siguientes:
 *  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
 *  Ha revisado los requisitos y las consideraciones del apartado [Requisitos y planificación de las instancias de NetApp ONTAP Select](np_planning.html).
 
-**Importante**: No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Si lo hace, la instancia podría quedar inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime.
+No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Si lo hace, la instancia podría quedar inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime.
+{:important}
 
 ## Valores del sistema
 
@@ -60,7 +65,8 @@ El nombre del dominio raíz debe cumplir los siguientes requisitos:
 * La última serie solo puede incluir caracteres alfabéticos.
 * La longitud de la última serie debe estar comprendida entre 2 y 24 caracteres.
 
-**Nota:** la longitud máxima del FQDN (nombre de dominio completo) para hosts y máquinas virtuales (VM) es de 50 caracteres. Los nombres de dominio deben cumplir con esta longitud máxima.
+La longitud máxima del FQDN (nombre de dominio completo) para hosts y máquinas virtuales (VM) es de 50 caracteres. Los nombres de dominio deben cumplir con esta longitud máxima.
+{:note}
 
 ## Valores de licencia
 
@@ -79,7 +85,8 @@ Seleccione una configuración de servidor nativo en función de sus requisitos:
 * **Alto rendimiento (Grande)**: Licencia Premium / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 128 GB de RAM / Capacidad por nodo de 22S unidades SSD de 3,8 TB / Capacidad efectiva de un clúster de 4 nodos – 118 TB
 * **Alta capacidad** – Licencia Estándar / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 64 GB de RAM / Capacidad por nodo de treinta y cuatro unidades SATA de 4 TB / Capacidad efectiva de un clúster de 4 nodos – 190 TB
 
-**Nota:** Las unidades SSD (disco de estado sólido, Solid-State Disk) de 3,8 TB reciben soporte cuando estén disponibles a nivel general en un {{site.data.keyword.CloudDataCent_notm}}.
+Las unidades SSD (disco de estado sólido, Solid-State Disk) de 3,8 TB reciben soporte cuando estén disponibles a nivel general en un {{site.data.keyword.CloudDataCent_notm}}.
+{:note}
 
 ### Número de servidores nativos
 
@@ -114,7 +121,8 @@ Cuando la instancia esté lista para ser utilizada, el estado de la instancia pa
 
 Puede ver y gestionar la instancia de NetApp ONTAP Select que ha solicitado.
 
-**Importante:** Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el 	{{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no a través del {{site.data.keyword.slportal}} ni por ningún otro medio fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+{:important}
 
 **ATENCIÓN:** el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 *  Añadir, modificar, devolver o eliminar componentes

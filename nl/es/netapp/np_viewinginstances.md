@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visualización de instancias de NetApp ONTAP Select
 
@@ -163,7 +167,8 @@ Tabla 6. Detalles de servidor ESXi de un clúster de NetApp ONTAP Select
 
 Gestione sus instancias desde la consola de {{site.data.keyword.vmwaresolutions_short}}, el cliente web de VMware vSphere o la consola de NetApp.
 
-**Importante:** Antes de pulsar la **Consola de vCenter** en la página de resumen de la instancia para ir al cliente web de vSphere y empezar a gestionar sus servidores ESXi, debe iniciar una sesión en el portal VPN del {{site.data.keyword.CloudDataCent_notm}}. Mueva el puntero del ratón sobre el botón de la **consola de vCenter** y siga las instrucciones para asegurarse de que cumple los requisitos y de que ha realizado los pasos necesarios antes de acceder al cliente web de vSphere.
+Antes de pulsar la **Consola de vCenter** en la página de resumen de la instancia para ir al cliente web de vSphere y empezar a gestionar sus servidores ESXi, debe iniciar una sesión en el portal VPN del {{site.data.keyword.CloudDataCent_notm}}. Mueva el puntero del ratón sobre el botón de la **consola de vCenter** y siga las instrucciones para asegurarse de que cumple los requisitos y de que ha realizado los pasos necesarios antes de acceder al cliente web de vSphere.
+{:important}
 
 Para obtener más información que le ayudará a seguir las instrucciones de inicio de sesión, revise los temas siguientes:
 
