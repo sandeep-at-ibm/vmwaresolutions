@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Solicitud de instancias de VMware Federal
 
 Para desplegar una plataforma virtualizada de VMware flexible y personalizable que se ajuste mejor a sus necesidades de carga de trabajo, solicite una instancia de VMware Federal. Las instancias de VMware Federal le ayudan a desconectar la conexión de gestión abierta y a proteger su instancia desplegada.
 
-**Nota:** En la actualidad, solo las instancias de vCenter Server dan soporte a VMware Federal en {{site.data.keyword.cloud}}.
+En la actualidad, solo las instancias de vCenter Server dan soporte a VMware Federal en {{site.data.keyword.cloud}}.
+{:note}
 
 ## Requisitos para solicitar instancias de VMware Federal
 
@@ -32,7 +37,8 @@ Tabla 1. Formato del valor de nombres de instancia y de dominio
   | Nombre completo de servidor ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `<n>` es la secuencia del servidor ESXi. La longitud máxima es de 50 caracteres. |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
 
-**Importante:** No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime.
+No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime.
+{:important}
 
 ## Valores del sistema
 
@@ -66,7 +72,7 @@ Licencias proporcionadas por IBM para los siguientes componentes de VMware:
 
 ## Valores de Servidor nativo
 
-Los valores del servidor nativo dependen del centro de datos seleccionado y de la configuración del servidor nativo. La opción de seleccionar una configuración preconfigurada no está soportada actualmente.
+Los valores del servidor nativo dependen del centro de datos seleccionado y de la configuración del servidor nativo.
 
 ### Ubicación del centro de datos
 
@@ -119,7 +125,8 @@ Especifique las siguientes opciones de vSAN:
 
 Cuando seleccione **Almacenamiento de NFS**, puede añadir almacenamiento compartido a nivel de archivo para la instancia donde todas las comparticiones utilizan los mismos valores o pueden especificar distintos valores de configuración para cada compartición de archivos. Especifique las siguientes opciones de NFS:
 
-**Nota:** El número de comparticiones de archivo debe estar comprendido entre 1 y 32.
+El número de comparticiones de archivo debe estar comprendido entre 1 y 32.
+{:note}
 
 * **Configurar las comparticiones individualmente**: Seleccione para especificar distintos valores de configuración para cada compartición de archivos.
 * **Número de unidades compartidas**: Al utilizar el mismo valor de configuración para cada compartición de archivos, especifique el número de comparticiones de archivos para el almacenamiento compartido de NFS que desee añadir.
@@ -161,7 +168,8 @@ El nombre del dominio raíz debe cumplir los siguientes requisitos:
 * La última serie solo puede contener caracteres alfabéticos.
 * La longitud de la última serie debe estar comprendida entre 2 y 24 caracteres.
 
-**Nota:** la longitud máxima del nombre de dominio completo (FQDN) para hosts y VM es de 50 caracteres. Los nombres de dominio deben cumplir con esta longitud máxima.
+La longitud máxima del nombre de dominio completo (FQDN) para hosts y VM es de 50 caracteres. Los nombres de dominio deben cumplir con esta longitud máxima.
+{:note}
 
 ### Configuración DNS
 
@@ -170,7 +178,8 @@ Seleccione la configuración de DNS (sistema de nombres de dominio) para la inst
 * **Una sola VSI pública de Windows para Active Directory/DNS**: se despliega y se puede consultar una sola VSI de Microsoft Windows Server para Microsoft Active Directory (AD), que funciona como DNS para la instancia en la que se han registrado los hosts y máquinas virtuales.
 * **Dos VM dedicadas y altamente disponibles de Windows Server en el clúster de gestión**: Para V2.3 y futuros releases, se despliegan dos máquinas virtuales Microsoft Windows, lo que ayuda a mejorar la seguridad y la solidez.
 
-**Importante:** debe proporcionar dos licencias de Microsoft Windows Server 2012 R2 si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. Utilice la licencia de edición Microsoft Windows Server 2012 R2 Standard o la licencia de edición Microsoft Windows Server 2012 R2 Datacenter, o ambas.
+Debe proporcionar dos licencias de Microsoft Windows Server 2012 R2 si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. Utilice la licencia de edición Microsoft Windows Server 2012 R2 Standard o la licencia de edición Microsoft Windows Server 2012 R2 Datacenter, o ambas.
+{:important}
 
 Actualmente, cada licencia se puede asignar a un solo servidor físico y cubre hasta dos procesadores físicos. Al utilizar una licencia de edición Standard, puede ejecutar dos máquinas virtuales Microsoft Windows virtualizadas por servidor de 2 procesadores. Por lo tanto, se necesitan dos licencias, ya que se despliegan dos máquinas virtuales Microsoft Windows en dos hosts distintos.
 
@@ -217,8 +226,9 @@ Cuando la instancia esté lista para ser utilizada, el estado de la instancia pa
 
 Vea, gestione o proteja la instancia de VMware Federal que ha solicitado.
 
-**Importante:** Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el 	{{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola.
+Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no a través del {{site.data.keyword.slportal}} ni por ningún otro medio fuera de la consola.
 Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+{:important}
 
 **ATENCIÓN:** el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 *  Añadir, modificar, devolver o eliminar componentes

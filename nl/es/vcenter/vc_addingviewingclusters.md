@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -47,7 +47,7 @@ Si despliega el clúster en otro {{site.data.keyword.CloudDataCent_notm}} o en o
 
 ### Valores de Servidor nativo
 
-Puede elegir **Skylake**, **Certificado por SAP**, **Broadwell** o **Preconfigurado**.
+Puede elegir **Skylake**, **Certificado por SAP** o **Broadwell**.
 
 #### Skylake
 
@@ -82,22 +82,13 @@ Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 
-#### Preconfigurado
-
-Para el valor **Preconfigurado**, puede seleccionar una **configuración de servidor nativo** en función de sus requisitos:
-* Pequeño (Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz / 128 GB de RAM / 2 discos)
-* Medio (Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz / 256 GB de RAM / 2 discos)
-* Grande (Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz / 512 GB de RAM / 2 discos)
-
 #### Número de servidores nativos
 
 Los clústeres necesitan al menos dos {{site.data.keyword.baremetal_short}}.
 
 Para instancias de vCenter Server desplegadas en V2.1 o posteriores, puede añadir un máximo de 59 {{site.data.keyword.baremetal_short}} para un clúster. Puede añadir entre 1 y 59 servidores ESXi a la vez.
 
-Para instancias de vCenter Server desplegadas en V2.0 o anteriores, puede añadir un máximo de 32 {{site.data.keyword.baremetal_short}} para un clúster. El número de {{site.data.keyword.baremetal_short}} que puede añadir simultáneamente funciona del siguiente modo:
-* Para las configuraciones de servidores nativos de tipo **Pequeño**, **Medio** y **Grande**, puede añadir entre 1 y 10 servidores ESXi simultáneamente.
-* Para la configuración de servidor nativo **Skylake** o **Broadwell**, puede añadir entre 1 y 20 servidores ESXi simultáneamente.
+Para instancias de vCenter Server desplegadas en V2.0 o anteriores, puede añadir un máximo de 32 {{site.data.keyword.baremetal_short}} para un clúster. Puede añadir entre 1 y 20 servidores ESXi a la vez para la configuración de servidor nativo **Skylake**, **Certificado por SAP** y **Broadwell**.
 
 Después del despliegue, puede crear un máximo de cuatro clústeres más. Si selecciona la configuración de servidor nativo **Skylake** o **Broadwell** con el almacenamiento VMware vSAN, se necesitan cuatro servidores para el clúster inicial y los clústeres posteriores al despliegue.
 
@@ -169,7 +160,6 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 6. Complete la configuración del servidor nativo.
    * Si ha seleccionado **Skylake** o **Broadwell**, especifique el valor de **Modelo de CPU**, la cantidad de **RAM** y el valor de **Número de {{site.data.keyword.baremetal_short}}**.
    * Si ha seleccionado **Certificado por SAP**, especifique el modelo de CPU.
-   * Si ha seleccionado **Preconfigurado**, especifique el valor de **Configuración de servidor nativo** y el valor de **Número de {{site.data.keyword.baremetal_short}}**. Si tiene previsto utilizar vSAN como solución de almacenamiento, se necesitan un mínimo de cuatro {{site.data.keyword.baremetal_short}}.
 7. Complete la configuración del almacenamiento.
   * Si selecciona **Almacenamiento vSAN**, especifique los tipos de disco para la capacidad y los discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
   * Si selecciona **Almacenamiento NFS** y desea añadir y configurar los mismos valores para todas las comparticiones de archivos, especifique el **Número de comparticiones**, **Tamaño** y **Rendimiento**.

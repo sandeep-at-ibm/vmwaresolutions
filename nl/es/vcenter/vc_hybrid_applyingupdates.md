@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -17,6 +17,9 @@ lastupdated: "2018-10-29"
 El proceso de aplicar parches y actualizaciones a instancias de vCenter Server con el paquete híbrido (Hybridity) solo es automático para los componentes de gestión. Las actualizaciones de VMware deben aplicarse manualmente.
 
 ## Antes de empezar
+
+A partir de la V2.5, las actualizaciones de IBM CloudDriver ya no aparecen listadas porque se han habilitado las actualizaciones automáticas. Las acciones como la adición de un host, la adición de un clúster y la solicitud de un servicio actualizan automáticamente la instancia a la última versión. Para obtener más información sobre las actualizaciones automáticas, consulte la sección *Resiliencia de IBM CloudDriver* en las [Notas del release de V2.5](../vmonic/relnotes_v25.html).
+{:note}
 
 Antes de intentar aplicar una actualización, expanda la entrada de la actualización pulsando la flecha hacia abajo y verifique la información siguiente:
 * La versión de la actualización. Debe aplicar las actualizaciones en secuencia cronológica, es decir, desde la primera hasta la más reciente. Asegúrese de haber aplicado todas las actualizaciones anteriores antes de aplicar la más reciente. Por ejemplo, debe aplicar la actualización V2.3 antes de intentar aplicar la actualización V2.4.
@@ -45,8 +48,8 @@ Tabla 1. Niveles de actualización e impacto
 
    La página **Actualización y parche** solo contiene los paquetes para actualizar los componentes de gestión de IBM, no las actualizaciones de VMware. {{site.data.keyword.vmwaresolutions_short}} aplica las actualizaciones de VMware para las operaciones siguientes:
    * Cuando se despliega una instancia nueva de vCenter Server.
-   * Cuando se añaden nuevos servidores ESXi.
-   * Cuando se añaden nuevos clústeres.
+   * Cuando se añaden nuevos servidores ESXi, los nuevos servidores ESXi se suministran con actualizaciones de VMware, pero los servidores ESXi existentes no se actualizan.
+   * Cuando se añaden nuevos clústeres, los nuevos clústeres se suministran con actualizaciones de VMware, pero los clústeres existentes no se actualizan.
    {:note}
 
 5. Para las actualizaciones de licencia, pulse **Actualizar**. Seleccione en la lista la edición a la que desea actualizar y pulse **Actualizar**. No se permite reducir la edición de la licencia.

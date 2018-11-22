@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -51,13 +51,16 @@ Tabla 1. Operaciones que se ven afectadas por el cambio de recursos de VMware
 | Cambie el nombre del almacén de datos de vSAN en la instancia que utiliza vSAN. | La adición de un servidor ESXi puede fallar.<br><br>La actualización de la instancia puede fallar. | Importante | Vuelva a cambiar el nombre del almacén de datos de vSAN por el nombre original, **vsanDatastore**.
 | Cambie el nombre del almacén de datos de NFS de gestión en la instancia que utiliza NFS. | La adición de un servidor ESXi puede fallar.<br><br>La actualización de la instancia puede fallar. | Importante | Vuelva a cambiar el nombre del almacén de datos de NFS por el nombre original, **management-share**, y vuelva a montar el almacén de datos de NFS como de solo lectura en el servidor ESXi.
 
-En la tabla siguiente se muestran las operaciones que podrían verse afectadas si el usuario root de VC/PSC cambia recursos de vCenter Server fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}.
+En la tabla siguiente se muestran las operaciones que podrían verse afectadas si se inhabilita el acceso SSH o shell para diversos recursos.
 
-Tabla 2. Operaciones que se ven afectadas para el acceso raíz de VC/PSC (local)
+Tabla 2. Operaciones afectadas por el acceso SSH y shell (local)
 
 | Cambio intentado  | Operaciones afectadas  | Gravedad  | Método recuperación  |
 |:------------- |:------------- |:--------------|:--------------|
-| Habilitar o inhabilitar el acceso de shell.    | La aplicación de parches y la actualización correspondiente a PSC y vCenter Server podría fallar.    | Importante    | N/D    |
+| Inhabilitar el acceso SSH o shell para vCenter Server o PSC.    | El emparejamiento de una instancia primaria y secundaria puede fallar.    | Importante    | N/D    |
+| Inhabilite el acceso SSH o shell para ESXi.    | La adición y eliminación de hosts, servicios y almacenamiento de red en la instancia puede fallar.    | Importante    | N/D    |
+
+Si opta por inhabilitar el acceso SSH o shell, debe volver a habilitarlo temporalmente antes de realizar las operaciones indicadas.
 
 ## Subredes de gestión para instancias de vCenter Server
 

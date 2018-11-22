@@ -63,7 +63,7 @@ Tabla 3. Propiedades de instancias de vCenter Server con el paquete híbrido (Hy
 | ID | El ID de la instancia. |
 | Ubicación | El {{site.data.keyword.CloudDataCent_notm}} en el que se aloja la instancia. |
 | Versión actual | La versión actual de {{site.data.keyword.vmwaresolutions_short}}. |
-| Versión de vCenter | La versión de VMware vCenter Server con el paquete híbrido (Hybridity).<br><br>Hay una ligera variación entre la versión de vCenter Server que se muestra en la consola de {{site.data.keyword.vmwaresolutions_short}} y en el cliente web de VMware vSphere. Ambas son correctas.{:note} |
+| Versión de vCenter | La versión de VMware vCenter Server con el paquete híbrido (Hybridity).<br><br>**Nota:** hay una ligera variación entre la versión de vCenter Server que se muestra en la consola de {{site.data.keyword.vmwaresolutions_short}} y en el cliente web de VMware vSphere. Ambas son correctas. |
 | NSX for vSphere | La versión del producto VMware NSX for vSphere. |
 | Edición de licencia de NSX | La versión y la edición de la licencia de VMware NSX. |
 | DNS, Root Domain | El nombre del dominio raíz es el nombre del dominio DNS (Sistema de nombres de dominio) y el nombre raíz del grupo Microsoft Active Directory (AD). |

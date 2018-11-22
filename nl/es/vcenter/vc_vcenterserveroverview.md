@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -63,21 +63,15 @@ La disponibilidad y los precios de las configuraciones estandarizadas de hardwar
 ### Servidor nativo
 
 Puede solicitar tres o más {{site.data.keyword.baremetal_short}} con una de las siguientes configuraciones:
-* **Skylake** o **Broadwell**: {{site.data.keyword.baremetal_short}} con el modelo de CPU y el tamaño de RAM seleccionados.  
-  * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
-  * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
-
-     Si tiene pensado utilizar almacenamiento vSAN, la configuración necesita cuatro {{site.data.keyword.baremetal_short}}.
-     {:note}
+* **Skylake**: servidores 2-CPU Intel Skylake generation (Intel Xeon series 4100/5100/6100) con el modelo de CPU y el tamaño de RAM seleccionados.  
 * **Certificado por SAP**: {{site.data.keyword.baremetal_short}} con el modelo de CPU seleccionado.
   * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 192 GB de RAM
   * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 384 GB de RAM
   * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 768 GB de RAM
-* **Preconfigurado**: 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
-  * **Pequeño** (Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz / 128 GB de RAM / 2 discos)
-  * **Medio** (Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz / 256 GB de RAM / 2 discos)
-  * **Grande** (Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz / 512 GB de RAM / 2 discos).
-
+* **Broadwell**: servidores 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 series v4) con el modelo de CPU y el tamaño de RAM seleccionados.  
+     Si tiene pensado utilizar almacenamiento vSAN, la configuración necesita cuatro {{site.data.keyword.baremetal_short}}.
+     {:note}
+     
 ### Redes
 
 Se solicitan los siguientes componentes del sistema de redes:

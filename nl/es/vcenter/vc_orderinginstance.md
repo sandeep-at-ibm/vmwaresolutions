@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -114,22 +114,11 @@ Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 
-### Preconfigurado
-
-Cuando selecciona **Preconfigurado**, no puede modificar los valores de CPU o RAM.
-
-En función de sus requisitos, seleccione una configuración de servidor nativo:
-  * Pequeño (Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz / 128 GB de RAM / 2 unidades)
-  * Medio (Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz / 256 GB de RAM / 2 unidades)
-  * Grande (Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz / 512 GB de RAM / 2 unidades)
-
 ### Número de servidores nativos
 
-Para el clúster inicial de la instancia, puede configurar el número de servidores ESXi del siguiente modo:
-* Si ha seleccionado **Skylake** o **Broadwell**, puede configurar un número de servidores ESXi comprendido entre 2 y 20.
-* Si ha seleccionado **Preconfigurado**, puede configurar un número de servidores ESXi comprendido entre 2 y 10.
+Para el clúster inicial de la instancia, puede configurar un número de servidores ESXi comprendido entre 2 y 20. Todos los servidores ESXi comparten la configuración del conjunto. 
 
-Todos los servidores ESXi comparten la configuración del conjunto. Después del despliegue inicial, puede añadir cuatro clústeres más. Si ha seleccionado la configuración **Skylake** o **Broadwell** para VMware vSAN, se necesitan 4 servidores ESXi para el clúster inicial y para los posteriores al despliegue. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+Después del despliegue inicial, puede añadir cuatro clústeres más. Si ha seleccionado la configuración **Skylake** o **Broadwell** para VMware vSAN, se necesitan 4 servidores ESXi para el clúster inicial y para los posteriores al despliegue. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Valores de almacenamiento
 
@@ -271,7 +260,6 @@ En función de la configuración seleccionada para la instancia y los servicios 
     2. Seleccione la configuración del servidor nativo.
        * Si seleccione **Skylake** o **Broadwell**, especifique el modelo de CPU y el tamaño de RAM.
        * Si selecciona **Certificado por SAP**, especifique el modelo de CPU.
-       * Si selecciona **Preconfigurado**, elija **Pequeño**, **Medio** o **Grande** en la configuración.
     3. Especifique el número de {{site.data.keyword.baremetal_short}}. Si tiene previsto utilizar vSAN como solución de almacenamiento, se necesitan un mínimo de 4 {{site.data.keyword.baremetal_short}}.  
 7. Complete la configuración del almacenamiento.
   * Si selecciona **Almacenamiento vSAN**, especifique los tipos de disco para la capacidad y los discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.

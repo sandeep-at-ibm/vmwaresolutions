@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -22,6 +22,9 @@ Cuando actualice una instancia de vCenter Server a un vCenter Server con la inst
 {:important}
 
 Los usuarios de Business Partner no tienen la opción de actualizar una instancia de vCenter Server existente a un vCenter Server con la instancia del paquete híbrido (Hybridity).
+
+A partir de la V2.5, las actualizaciones de IBM CloudDriver ya no aparecen listadas porque se han habilitado las actualizaciones automáticas. Las acciones como la adición de un host, la adición de un clúster y la solicitud de un servicio actualizan automáticamente la instancia a la última versión. Para obtener más información sobre las actualizaciones automáticas, consulte la sección *Resiliencia de IBM CloudDriver* en las [Notas del release de V2.5](../vmonic/relnotes_v25.html).
+{:note}
 
 Antes de intentar aplicar una actualización, expanda la entrada de la actualización pulsando la flecha hacia abajo y verifique la información siguiente:
 * La versión de la actualización. Debe aplicar las actualizaciones en secuencia cronológica, es decir, desde la primera hasta la más reciente. Asegúrese de haber aplicado todas las actualizaciones anteriores antes de aplicar la más reciente. Por ejemplo, debe aplicar la actualización V2.3 antes de intentar aplicar la actualización V2.4.
@@ -51,7 +54,7 @@ Tabla 1. Niveles de actualización e impacto
   </tr>
 </table>
 
-## Procedimiento para aplicar actualizaciones y parches a las instancias de vCenter Server
+## Procedimiento para aplicar actualizaciones y parches a las instancias de vCenter Server (V2.1 o posteriores)
 
 Este procedimiento se aplica a las instancias desplegadas en V2.1 o posterior. Para instancias desplegadas en V2.0 y anteriores, debe aplicar las actualizaciones de VMware manualmente.
 
@@ -61,13 +64,11 @@ Este procedimiento se aplica a las instancias desplegadas en V2.1 o posterior. P
    Si no se visualizan los detalles, esto podría indicar un problema de conectividad con la Instancia de servidor virtual (VSI) de IBM CloudDriver, como resultado de una regla de cortafuegos u otro problema de la red. Resuelva el problema antes de continuar con el siguiente paso; de lo contrario, la actualización puede fallar.
 4. Pulse **Actualización y parche** en el panel de navegación izquierdo.
 
-   La página **Actualización y parche** de una instancia solo contiene los paquetes para la actualización de los componentes de gestión de IBM y no las actualizaciones de VMware. Las actualizaciones de VMware deben aplicarse manualmente.
-   {:note}
-
-   {{site.data.keyword.vmwaresolutions_short}} aplica las actualizaciones de VMware para las operaciones siguientes:
+   La página **Actualización y parche** de una instancia solo contiene los paquetes para la actualización de los componentes de gestión de IBM y no las actualizaciones de VMware. Las actualizaciones de VMware deben aplicarse manualmente.   {{site.data.keyword.vmwaresolutions_short}} aplica las actualizaciones de VMware para las operaciones siguientes:
    * Cuando se despliega una instancia nueva de vCenter Server.
-   * Cuando se añaden nuevos servidores ESXi.
-   * Cuando se añaden nuevos clústeres.
+   * Cuando se añaden nuevos servidores ESXi, los nuevos servidores ESXi se suministran con actualizaciones de VMware, pero los servidores ESXi existentes no se actualizan.
+   * Cuando se añaden nuevos clústeres, los nuevos clústeres se suministran con actualizaciones de VMware, pero los clústeres existentes no se actualizan.
+   {:note}
 
 5. Para las actualizaciones de licencia de NSX, pulse **Actualizar**. En la ventana **Actualizar edición de licencia de NSX**, seleccione la edición a la que desea actualizar y pulse **Actualizar**. No se permite reducir la edición de la licencia.
 
