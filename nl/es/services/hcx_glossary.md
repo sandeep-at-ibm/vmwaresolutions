@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -22,4 +22,4 @@ Este glosario proporciona definiciones para los términos que están asociados c
 
 ### Enlaces relacionados
 
-* [Documentación de VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentación de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

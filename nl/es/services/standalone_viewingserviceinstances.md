@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -41,4 +41,4 @@ Tabla 2. Descripciones de los estados de las instancias locales de HCX on {{site
 * [Solicitud de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](standalone_orderingserviceinstances.html)
 * [Supresión de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](standalone_deletingserviceinstances.html)
 * [Glosario de términos de HCX](hcx_glossary.html)
-* [Documentación de VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentación de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

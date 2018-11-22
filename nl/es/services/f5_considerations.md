@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -18,7 +18,7 @@ El servicio F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) prop
 
 Puede instalar más de una instancia de este servicio según sea necesario.
 
-Este servicio sólo está disponible para las instancias desplegadas en la versión V1.9 o posterior. La versión actual de BIG-IP VE que está instalada es la v13.1.
+Este servicio sólo está disponible para las instancias desplegadas en la versión V1.9 o posterior. La versión actual de BIG-IP VE que está instalada es la v13.1.1.2.
 {:note}
 
 ## Especificaciones técnicas para F5 on IBM Cloud
