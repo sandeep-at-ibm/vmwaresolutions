@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -13,16 +13,13 @@ lastupdated: "2018-10-25"
 En este documento se proporciona una vista del proceso de modernización de aplicaciones a IBM Cloud, que se centra en los componentes de gestión de la nube para permitir que se aproveche un entorno multinube integrado para la modernización de las aplicaciones:
 
 - **VMware vCenter Server on IBM Cloud**: VCS es una oferta de IBM Cloud for VMware Solutions y constituye una plataforma basada en VMware que se suministra automáticamente en IBM Cloud.
-
 - **IBM Cloud Private**: ICP es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones contenerizadas, diseñadas para que se desplieguen en plataformas de infraestructura virtualizada, como VMware.
-
 - **Servicios IBM Kubernetes**: IKS es un servicio gestionado en IBM Cloud que aprovecha Kubernetes como motor de orquestación para automatizar el despliegue, el escalado y el funcionamiento de los contenedores de aplicaciones de un clúster de un solo arrendatario
-
 - **IBM Multi-Cluster Cloud Manager**: MCM proporciona visibilidad de usuario, gestión centrada en aplicaciones (política, despliegues, estado, operaciones) y conformidad basada en políticas entre nubes y clústeres. Con MCM, tiene el control sobre los clústeres de Kubernetes.
-
 - **IBM Cloud Automation Manager**: CAM es una plataforma de gestión de autoservicio multinube que se ejecuta en ICP que permite a los desarrolladores y a los administradores satisfacer las necesidades de la empresa.
 
 ## Modernización de aplicaciones en IBM Cloud
+
 Modernización de aplicaciones es un término que describe el proceso de transición de las aplicaciones existentes para aprovechar los nuevos enfoques de la nube. Actualmente los clientes buscan enfoques innovadores y eficientes que les ayuden a realizar esta transición en función de la complejidad empresarial y de las aplicaciones.
 
 Las presiones de la industria exigen un plazo más rápido de salida de productos al mercado. El entorno existente no solo incluye aplicaciones, sino también datos, procesos, lógica empresarial e interfaces de usuario, y todos se deben adaptar para mantenerse al día con las nuevas necesidades de la empresa.
@@ -46,39 +43,17 @@ Debido a que su infraestructura de TI y sus necesidades empresariales son única
 
 Este documento es uno de los cinco documentos que proporcionan distintas vistas sobre las tecnologías utilizadas en el proceso de modernización de aplicaciones a IBM Cloud:
 
-Guía de arquitectura de referencia, VCS – ICP y CAM - esta sección.
-
-Una arquitectura de referencia para desplegar las siguientes plataformas:
+* _vCenter Server e IBM Cloud Private_: la guía actual, que constituye una arquitectura de referencia para desplegar las siguientes plataformas:
   - **VMware vCenter Server on IBM Cloud**: una oferta de IBM Cloud for VMware Solutions que constituye una plataforma basada en VMware que se suministra automáticamente en IBM Cloud.
   - **IBM Cloud Private**: una plataforma de aplicaciones para desarrollar y gestionar aplicaciones contenerizadas. Se trata de un entorno integrado que incluye el orquestador de contenedores Kubernetes, un repositorio de imágenes privadas, una consola de gestión, infraestructuras de supervisión y una interfaz gráfica de usuario, que proporciona una ubicación centralizada desde la que puede desplegar, gestionar, supervisar y escalar aplicaciones.
   - **IBM Cloud Automation Manager**: una plataforma de infraestructura como código (IaC) preparada para la empresa que proporciona un único panel para suministrar cargas de trabajo basadas en VM junto con cargas de trabajo basadas en Kubernetes utilizando simplemente plantillas que se almacenan en un repositorio y de las que se crean versiones.
-
-[Guía de arquitectura de referencia, VCS - IKS](../vcsiks/vcsiks-intro.html)
-
-  Una arquitectura de referencia para desplegar las siguientes plataformas:
+* [vCenter Server y servicio IBM Kubernetes](../vcsiks/vcsiks-intro.html): esta guía es una arquitectura de referencia para desplegar las siguientes plataformas:
   - **VMware vCenter Server on IBM Cloud**: una oferta de IBM Cloud for VMware Solutions que constituye una plataforma basada en VMware que se suministra automáticamente en IBM Cloud.
   - **Servicio IBM Kubernetes**: servicio gestionado en IBM Cloud que aprovecha Kubernetes como motor de orquestación para automatizar el despliegue, el escalado y el funcionamiento de los contenedores de aplicaciones de un clúster de un solo arrendatario.
-
-[Guía de arquitectura de referencia, VCS - Red](../vcsnsxt/vcsnsxt-intro.html)
-
-Este documento se centra en las tecnologías de red utilizadas en VCS, ICP e IKS, como NSX-V, NSX-T y Calico.
-
-[Guía de arquitectura de referencia, Watson y Sk8boarding Concept Car](../vcscar/vcscar-intro.html)
-
-Este documento utiliza un enfoque “concept car” para demostrar una interacción entre Watson AI y Machine Learning.
-
-En el documento se destacan las siguientes tecnologías:
-  - **Pepper**: una interfaz que incluye la capacidad de integrarse con el entorno de nube para realizar las operaciones de búsqueda y de aplicaciones.
-  - **VMware vCenter Server on IBM Cloud**: utilizado para alojar los ejemplos de la aplicación, como las cargas de trabajo  de base de datos.
-  - **Servicio IBM Cloud Kubernetes**: utilizado para alojar los elementos contenerizados de la aplicación.
-  - **IBM Cloud Private**: utilizado para proporcionar la plataforma y la orquestación de niveles de servicio, incluida la posibilidad de alojar y escalar la aplicación en plataformas de máquinas virtuales y contenedores. Este componente también permite la habilitación de los servicios de desarrollador de Watson en la plataforma, permitiendo el acceso a las prestaciones de IA.
-
-[Guía de arquitectura de referencia, VCS - Contenido](../vcscontent/vcscontent-intro.html)
-
-Este documento se centra en los siguientes tipos de contenido disponibles en IBM Cloud Automation Manager:
-- Contenido de catálogo interno, como diagramas de Helm "predefinidos", plantillas de Terraform y recetas de Chef.
-- Contenido de servicios, como servicios Blockchain y Watson.
+* [Redes de vCenter Server](../vcsnsxt/vcsnsxt-intro.html): esta guía se centra en las tecnologías de red utilizadas en VCS, ICP e IKS, como NSX-V, NSX-T y Calico.
+* [VMware y Skate Advisor Concept Car](../vcscar/vcscar-intro.html): esta arquitectura de referencia es un "concept car" (prototipo), es decir, un mecanismo para resaltar y mostrar tecnologías que solucionan problemas del mundo real. El objetivo era demostrar una interacción entre Watson AI y Machine Learning con un ejemplo real. Mediante la cultura del skateboarding demostramos de forma global los servicios de la nube de una forma única. La implementación del “concept car” constituye una extensión de la aplicación de Acme Skateboard llamada Skate Advisor. Skate Advisor es una herramienta que permite a los usuarios tener conversaciones sobre skateboarding con un motor controlado por Watson.
+* [VMware: el proceso de modernización de Stock Trader](../vcscontent/vcscontent-modjourney.html): nuestro caso de uso de referencia describe una aplicación de WebSphere Application Server clásica que se moderniza con IBM Cloud Private, contenido de IBM Middleware, el servicio Kubernetes de IBM Cloud y vCenter Server on IBM Cloud. Todos estamos en un proceso de transición a la nube, y cada uno de nosotros está en un punto diferente del proceso. Siguiendo los pasos incrementales indicados por la arquitecta de la aplicación, Jane, y el por el arquitecto de la infraestructura de nube, Todd, modernizamos una app existente denominada Stock Trader. Muestra ejemplos que pueden ayudar en cada paso del proceso y el valor que supone para la empresa, independientemente del tamaño de cada paso. Nos centramos en cuatro temas: aplicaciones, DevOps, integración y gestión. Cada uno de ellos trabaja combinación con los demás para ayudarle a alcanzar sus objetivos y, de hecho, a modernizar cada uno sin que los otros tengan problemas.
 
 ### Enlaces relacionados
 
-  * [VMware vCenter Server on IBM Cloud con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de VCS con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -27,9 +27,9 @@ Para obtener más información, consulte la sección *Configuración de {{site.d
 
 ### IBM Cloud Private Hosted
 
-El servicio {{site.data.keyword.cloud_notm}} Private Hosted está ahora disponible para VMware vCenter Server con instancias de paquete híbrido (Hybridity), además de las instancias de VMware vCenter Server que se despliegan en (o que se han actualizado a) la versión V2.5 y releases posteriores. Ahora puede solicitar una instancia de vCenter Server o una instancia de vCenter Server con el paquete híbrido (Hybridity) con el servicio incluido, o bien puede añadir el servicio a una instancia existente de vCenter Server o de vCenter Server con el paquete híbrido (Hybridity) tras el despliegue inicial.
+El servicio {{site.data.keyword.cloud_notm}} Private Hosted está ahora disponible para VMware vCenter Server con instancias de paquete híbrido (Hybridity), además de las instancias de VMware vCenter Server que se despliegan en (o que se han actualizado a) la versión V2.5 y releases posteriores. Ahora puede solicitar una instancia de vCenter Server o una instancia de vCenter Server con el paquete híbrido (Hybridity) con el servicio incluido. También puede añadir el servicio a una instancia existente de vCenter Server o de vCenter Server con el paquete híbrido (Hybridity) tras el despliegue inicial.
 
-Para más información, consulte:
+Para obtener más información, consulte los temas siguientes:
 * [Visión general de {{site.data.keyword.cloud_notm}} Private Hosted](../services/icp_overview.html)
 * [Solicitud de {{site.data.keyword.cloud_notm}} Private Hosted](../services/icp_ordering.html)
 
@@ -47,11 +47,11 @@ Ahora, cuando solicite el servicio F5 on {{site.data.keyword.cloud_notm}}, puede
 
 ### FortiGate Virtual Appliance on IBM Cloud
 
-Durante el tercer trimestre de 2018, Fortinet ha realizado cambios en sus paquetes de suscripción. Para obtener más información, consulte [Solicitud de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html).
+Durante el tercer trimestre de 2018, Fortinet ha modificado sus paquetes de suscripción. Para obtener más información, consulte [Solicitud de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html).
 
 Para el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} que se despliega en instancias de Cloud Foundation y en instancias de vCenter Server V2.7 y posteriores, se suministran FortiOS 6.0.3.
 
-Además, cuando solicite el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, puede seleccionar si desea que FortiGuard aplique la licencia y las actualizaciones de seguridad a través de la red pública o a través de la red privada con un servidor proxy. Para obtener más información, consulte [Solicitud de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html).
+Cuando solicite el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, puede seleccionar si desea que FortiGuard aplique la licencia y las actualizaciones de seguridad sobre la red pública o sobre la red privada con un servidor proxy. Para obtener más información, consulte [Solicitud de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html).
 
 ### Actualizaciones de componentes del servicio Zerto on IBM Cloud
 
@@ -59,7 +59,7 @@ Para el servicio Zerto on {{site.data.keyword.cloud_notm}} desplegado en instanc
 
 ### Integración de KMIP for VMware on IBM Cloud con IBM Cloud Activity Tracker
 
-Además de los sucesos de instancia de VMware, ahora los sucesos correspondientes a la instancia de KMIP for VMware on {{site.data.keyword.cloud_notm}}, como la creación de claves, la supresión de claves y el acceso a claves, están integrados con la instancia de {{site.data.keyword.cloud_notm}} Activity Tracker. Para obtener más información sobre KMIP for WMware on {{site.data.keyword.cloud_notm}}, consulte [Visión general de KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html).
+Además de los sucesos de instancia de VMware, ahora los sucesos correspondientes a KMIP for VMware on {{site.data.keyword.cloud_notm}}, como la creación de claves, la supresión de claves y el acceso a claves, están integrados con la instancia de {{site.data.keyword.cloud_notm}} Activity Tracker. Para obtener más información sobre KMIP for WMware on {{site.data.keyword.cloud_notm}}, consulte [Visión general de KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html).
 
 ## Documentación nueva y actualizada
 
@@ -81,6 +81,7 @@ Algunos de estos documentos de arquitectura de referencia solo están disponible
 
 La interfaz de usuario se actualiza y proporciona las mejoras siguientes:
 
-* El separador **Personalizado** original que aparecía al especificar el modelo de CPU y la RAM para los valores de {{site.data.keyword.baremetal_short_sing}} al solicitar instancias, se ha dividido en el separador **Skylake** y el separador **Broadwell**, en función del tipo de servidor, para facilitarle la selección del servidor.
+* El separador **Personalizado** que aparecía al especificar el modelo de CPU y la RAM para los valores de {{site.data.keyword.baremetal_short_sing}} al solicitar instancias se ha dividido en el separador **Skylake** y el separador **Broadwell**, en función del tipo de servidor, para ayudarle a seleccionar el servidor.
+* Las opciones **preconfiguradas** para la configuración del servidor nativo ya no están disponibles.
 * Ahora la columna **Tipo** se incluye en la tabla **Instancias de vCenter Server** en la página **Instancias desplegadas** para identificar las instancias de vCenter Server, vCenter Server con el paquete híbrido (Hybridity) y vCenter Limited Test Drive.
 * Hay varios mensajes de error y mejoras de ayuda contextual disponibles para ayudarle a seleccionar el valor adecuado en la interfaz de usuario.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -38,6 +38,17 @@ Tabla 1. Operaciones que se ven afectadas para el administrador de SSO (cliente)
 | Cambiar el nombre del conmutador virtual distribuido (DVS) público o privado. | La adición de un servidor ESXi puede fallar. | Importante | Vuelva a cambiar el nombre del DVS por el nombre original.
 | Cambie el nombre del almacén de datos de VSAN. | La adición de un servidor ESXi puede fallar.<br><br>La actualización de la instancia puede fallar. | Importante | Vuelva a cambiar el nombre del almacén de datos de VSAN por el nombre original, **vsanDatastore**.
 | Cambiar el nombre de la instancia o el nombre del dominio. | La instancia no se puede utilizar. | Crítico | N/D
+
+En la tabla siguiente se muestran las operaciones que podrían verse afectadas si se inhabilita el acceso SSH o shell para diversos recursos.
+
+Tabla 2. Operaciones afectadas por el acceso SSH y shell (local)
+
+| Cambio intentado  | Operaciones afectadas  | Gravedad  | Método recuperación  |
+|:------------- |:------------- |:--------------|:--------------|
+| Inhabilitar el acceso SSH o shell para vCenter Server o PSC.    | El emparejamiento de una instancia primaria y secundaria puede fallar. La aplicación de parches a los recursos puede fallar.    | Importante    | N/D    |
+| Inhabilite el acceso SSH o shell para ESXi.    | La adición y eliminación de hosts, servicios y almacenamiento de red en la instancia puede fallar. La aplicación de parches a los recursos puede fallar.    | Importante    | N/D    |
+
+Si opta por inhabilitar el acceso SSH o shell, debe volver a habilitarlo temporalmente antes de realizar las operaciones indicadas.
 
 ## Gestión de subredes correspondientes a instancias de Cloud Foundation
 

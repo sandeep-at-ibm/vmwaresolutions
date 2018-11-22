@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-23"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -12,20 +12,25 @@ lastupdated: "2018-10-23"
 # Redes e infraestructura de IBM Cloud
 
 ## Direccionamiento y reenvío virtual (VRF)
+
 Las cuentas de IBM Cloud también se pueden configurar como una cuenta de VRF. Esto proporciona funciones similares a la expansión de VLAN, que permite el direccionamiento automático entre bloques IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
 
 ## Direct Link
+
 IBM Cloud Direct Link Connect ofrece acceso privado a su infraestructura de IBM Cloud y a cualquier otra nube enlazada a su proveedor de servicios de red, a través de su centro de datos de IBM Cloud local. Esta opción es perfecta para crear conectividad multinube en un entorno único. Conectamos a los clientes con la red privada de IBM Cloud mediante una topología de ancho de banda compartido. Al igual que sucede con todos los productos de Direct-Link, puede añadir direccionamiento global, que permite el tráfico de red privada a todas las ubicaciones de IBM Cloud.
 
 ## Redes privadas virtuales
 
 ### strongSwan VPN
+
 El servicio strongSwan IPSec VPN ofrece un canal de comunicación seguro de extremo a extremo sobre internet que se basa en la suite de protocolos Internet Protocol Security (IPSec) estándar del sector.
 
 ### Hybridity (HCX)
+
 El servicio VCS Hybridity Bundle on IBM Cloud permite extender sin problemas las redes de centros de datos locales a IBM Cloud, lo que permite que las máquinas virtuales (VM) se migren a IBM Cloud y desde este sin conversión ni cambios.
 
 ## Estructura física
+
 La infraestructura física necesaria para desplegar una instancia de producción de IBM Cloud Private (ICP) en un clúster de VMware vCenter Server on IBM Cloud (VCS) requiere la siguiente especificación mínima.
 
 Tabla 1. Especificación de VCS para ICP
@@ -42,7 +47,6 @@ Además de los requisitos de hardware de IBM Cloud Private, debe crear volúmene
 ## Estructura virtual
 
 Figura 1. Estructura física del despliegue de VCS e ICP
-
 ![Estructura física del despliegue de VCS e ICP](vcsicp-phy-ics-icp-deployment.svg)
 
 Dentro de la instancia de VCS, la instancia de ICP se despliega con NSX Edge Services Gateway (ESG) y Distributed Logical Router (DLR) dedicados. La instalación de ICP se carga en la subred VXLAN definida en los componentes anteriores.
@@ -53,4 +57,4 @@ El ESG también se configura con una regla NAT de destino (DNAT) a las direccion
 
 ### Enlaces relacionados
 
-* [VMware vCenter Server on IBM Cloud con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de VCS con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)

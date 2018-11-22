@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ampliación y reducción de la capacidad para instancias de VMware Federal
 
@@ -14,7 +18,8 @@ Puede ampliar o reducir la capacidad de la instancia de VMware Federal según su
 
 Si el clúster primario tiene vSAN como almacenamiento, el hecho de añadir uno o varios servidores ESXi después del despliegue puede aumentar la capacidad de almacenamiento del clúster.
 
-**Nota:** esta característica solo está disponible para las instancias de VMware Federal que no se han protegido.
+Esta característica solo está disponible para las instancias de VMware Federal que no se han protegido.
+{:note}
 
 ## Adición de servidores ESXi a instancias de VMware Federal
 
@@ -61,7 +66,8 @@ Si el clúster primario tiene vSAN como almacenamiento, el hecho de añadir uno 
 2. Se le notificará por correo electrónico de que su solicitud para eliminar servidores ESXi se está procesando. En la consola, el estado del clúster asociado con los servidores ESXi se cambia a **Modificando**.
 3. La infraestructura de {{site.data.keyword.cloud_notm}} reclama por completo los servidores ESXi al final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}, que suele ser de 30 días.
 
-   **Atención:** Se le facturará por lo servidores ESXi eliminados hasta el final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}.
+   Se le facturará por los servidores ESXi eliminados hasta el final del ciclo de facturación de la infraestructura {{site.data.keyword.cloud_notm}}.
+   {:note}
 
 ### Enlaces relacionados
 

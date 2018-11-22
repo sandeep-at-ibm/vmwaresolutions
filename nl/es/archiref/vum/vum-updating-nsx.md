@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -17,11 +17,11 @@ Si tiene que actualizar NSX y vSphere, VMware recomienda completar primero la ac
 1. **Actualizar ESXi**: una vez que finalice la actualización de ESXi, el host sale de la modalidad de mantenimiento; sin embargo, no puede mover las VM conectadas a los conmutadores lógicos al host hasta que se haya completado el siguiente paso.
 2. **Actualizar VIB de NSX**: una vez que se hayan actualizado los VIB y que el host se haya eliminado de la modalidad de mantenimiento, puede mover las VM conectadas a los conmutadores lógicos al host.
 
-NSX se actualiza mediante la actualización de NSX Manager, que se descarga de _my.vmware.com_. Por lo tanto, necesita una cuenta en la descarga de la actualización. Si consume licencias de suscripción de IBM Cloud con la instancia de VCS, no podrá descargar las actualizaciones con la cuenta de **my.vmware.com**. Por lo tanto, debe [ponerse en contacto con el soporte de IBM](../../vmonic/trbl_support.html).
+NSX se actualiza mediante la actualización de NSX Manager, que se descarga de _my.vmware.com_. Por lo tanto, necesita una cuenta en la descarga de la actualización. Si consume licencias de suscripción de {{site.data.keyword.cloud}} con la instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}}, no podrá descargar las actualizaciones con la cuenta de **my.vmware.com**. Por lo tanto, debe [ponerse en contacto con el soporte de IBM](../../vmonic/trbl_support.html).
 
 Antes de empezar la actualización, compruebe las notas del release de NSX ya que allí se documentan problemas conocidos de actualización y sus soluciones temporales.release de NSX. Mediante las notas del release, verifique que vCenter cumple con los nuevos requisitos del sistema para NSX.
 
-Si ha instalado algún software adicional de los socios de VMware, consulte la documentación del socio para ver los detalles de la compatibilidad y la actualización. Si ha desplegado las instancias primaria y secundaria de VCS y tiene un entorno NSX entre varios vCenter, consulte las notas del release del proceso de actualización correcto.
+Si ha instalado algún software adicional de los socios de VMware, consulte la documentación del socio para ver los detalles de la compatibilidad y la actualización. Si ha desplegado las instancias primaria y secundaria de vCenter Server y tiene un entorno NSX entre varios vCenter, consulte las notas del release del proceso de actualización correcto.
 
 En un entorno NSX entre vCenter, el dispositivo primario NSX Manager se actualiza primero, seguido de todos los dispositivos NSX Manager secundarios.
 **No se admiten degradaciones**, por lo que debe realizar una copia de seguridad de NSX Manager antes de continuar con una actualización. Se realiza una copia de seguridad de todas las configuraciones de NSX Edge, direccionadores lógicos y pasarelas de servicios de extremo como parte de la copia de seguridad de NSX Manager.
@@ -63,5 +63,5 @@ El flujo de trabajo es el siguiente:
 
 ### Enlaces relacionados
 
-* [Arquitectura de la solución VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)
+* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)

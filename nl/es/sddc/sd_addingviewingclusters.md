@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -46,14 +46,11 @@ La ubicación del {{site.data.keyword.CloudDataCent}} del clúster está definid
 
 Los centros de datos de los que dispone dependen de la configuración del servidor nativo seleccionada para el despliegue. Si selecciona la configuración **Skylake** o **Broadwell**, también puede desplegar el clúster en un pod de infraestructura de {{site.data.keyword.cloud_notm}} diferente, si el centro de datos seleccionado contiene más pods. Esta configuración es útil cuando el pod de infraestructura de {{site.data.keyword.cloud_notm}} predeterminado en el que se ha desplegado la instancia inicial ha alcanzado su capacidad máxima.
 
-Las configuraciones de servidor nativo **Pequeño** y **Grande** estandarizadas utilizan un pod predeterminado que no se puede modificar.
-{:note}
-
 Si despliega el clúster en un centro de datos o pod diferente, se solicitan otras tres VLAN para que se utilicen con el {{site.data.keyword.baremetal_short}} solicitado.
 
 ### Valores de Servidor nativo
 
-Puede elegir **Skylake**, **Broadwell** o **Preconfigurado**.
+Puede elegir **Skylake** o **Broadwell**.
 
 #### Skylake
 
@@ -79,12 +76,6 @@ Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 
-#### Preconfigurado
-
-Para el valor **Preconfigurado**, puede seleccionar una **configuración de servidor nativo** en función de sus requisitos:
-* Pequeño (Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz / 128 GB de RAM / 12 discos)
-* Grande (Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz / 512 GB de RAM / 12 discos)
-
 ### Valores de almacenamiento vSAN
 
 Para la configuración de servidor nativo **Skylake** y **Broadwell**, puede
@@ -93,10 +84,6 @@ personalizar el almacenamiento vSAN especificando los valores siguientes:
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
 * Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
-
-En la configuración de servidor nativo **Preconfigurado**, no puede modificar los valores de almacenamiento vSAN:
-* Para la configuración **Pequeño**, se solicitan dos unidades de disco de 1,9 TB SSD SED.
-* Para la configuración **Grande**, se solicitan cuatro unidades de disco de 3,8 TB SSD SED.
 
 ### Valores de licencia
 
@@ -115,12 +102,10 @@ Puede especificar las opciones de licencia para los componentes de VMware en el 
 3. Pulse **Infraestructura** en el panel de navegación izquierdo y pulse **Añadir** en la parte superior derecha de la tabla **CLÚSTERES**.
 4. En la página **Añadir clúster**, escriba el nombre de clúster.
 5. Si desea alojar el clúster en un {{site.data.keyword.CloudDataCent_notm}} diferente al que se aloja la instancia, en **Servidor nativo**, marque el recuadro de selección **Seleccione otra ubicación** y elija el {{site.data.keyword.CloudDataCent_notm}} para alojar la instancia.
-6. Complete la configuración del servidor nativo:
-   * Si ha seleccionado **Skylake** o **Broadwell**, seleccione el **Modelo de CPU** y el tamaño de **RAM**.
-   * Si ha seleccionado **Preconfigurado**, seleccione el valor de **Configuración de servidor nativo**.
+6. Para completar la configuración nativa, especifique el **Modelo de CPU** y el tamaño de **RAM**.
 7. Complete la configuración de almacenamiento:
-   * Si ha seleccionado **Skylake** o **Broadwell** para la configuración de servidor nativo, especifique los tipos de disco para la capacidad vSAN y los discos de memoria caché, y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
-   * Si ha seleccionado **Preconfigurado** para la configuración de servidor nativo, los valores de almacenamiento para las configuraciones de servidor nativo **Pequeño** y **Grande** no se pueden cambiar.
+   1. Especifique los tipos de disco para la capacidad de vSAN y los discos de memoria caché y el número de discos.
+   2. Si desea más almacenamiento, marque el recuadro de selección **Alto rendimiento con Intel Optane**.
 8. Especifique cómo se proporcionan las claves de licencia:
    * Para los usuarios de IBM Business Partners, se incluyen y se adquieren en su nombre la licencia de vSphere (edición Enterprise Plus) y la licencia de vSAN. Sin embargo, debe especificar la edición para la licencia de vSAN.
    * Para los usuarios que no son IBM Business Partners, puede seleccionar una de las opciones siguientes:

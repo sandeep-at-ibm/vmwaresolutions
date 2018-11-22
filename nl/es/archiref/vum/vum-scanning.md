@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
 # Exploración y revisión
 
-Cuando explora hosts, máquinas virtuales y dispositivos virtuales, los evalúa frente a las líneas base y los grupos de línea base para determinar su nivel de conformidad. Se escanean los objetos de inventario y se revisan los resultados para determinar la forma en que cumplen con las líneas base y los grupos de línea base. Los resultados de la exploración se pueden filtrar por búsqueda de texto, selección de grupos, selección de línea base y selección de estado de conformidad. Puede iniciar los escaneos siguientes:
+Cuando explora hosts, máquinas virtuales (VM) y dispositivos virtuales, los evalúa frente a las líneas base y los grupos de línea base para determinar su nivel de conformidad. Se escanean los objetos de inventario y se revisan los resultados para determinar la forma en que cumplen con las líneas base y los grupos de línea base. Los resultados de la exploración se pueden filtrar por búsqueda de texto, selección de grupos, selección de línea base y selección de estado de conformidad. Puede iniciar los escaneos siguientes:
 *	**Inicie manualmente una exploración de hosts ESXi de vSphere**: puede explorar hosts de ESXi en el inventario de vSphere frente a las líneas base y los grupos de línea base conectados.
-*	**Inicie manualmente una exploración de máquinas y dispositivos virtuales**: puede explorar máquinas y dispositivos virtuales en el inventario de vSphere frente a las líneas base y los grupos de línea base conectados.
-*	**Inicie manualmente una exploración de un objeto de contenedor**: inicie una exploración simultánea de hosts, máquinas y dispositivos virtuales, explorando un objeto contenedor que es un centro de datos o una carpeta de centro de datos.
-*	**Planifique una exploración**: puede configurar el cliente web de vSphere para explorar máquinas virtuales, dispositivos virtuales y hosts ESXi en momentos específicos o a los intervalos que le convengan.
+*	**Inicie manualmente una exploración de máquinas y dispositivos virtuales**: puede explorar VM y dispositivos virtuales en el inventario de vSphere frente a las líneas base y los grupos de línea base conectados.
+*	**Inicie manualmente una exploración de un objeto de contenedor**: inicie una exploración simultánea de hosts, VM y dispositivos virtuales, explorando un objeto contenedor que es un centro de datos o una carpeta de centro de datos.
+*	**Planifique una exploración**: puede configurar el cliente web de vSphere para explorar VM, dispositivos virtuales y hosts ESXi en momentos específicos o a los intervalos que le convengan.
 
 ## Iniciación manual de una exploración de hosts ESXi de vSphere
 
@@ -26,7 +26,7 @@ Cuando explora hosts, máquinas virtuales y dispositivos virtuales, los evalúa 
 
 ## Iniciación manual de una exploración de máquinas y dispositivos virtuales
 
-Puede explorar máquinas y dispositivos virtuales en el inventario de vSphere frente a las líneas base y los grupos de línea base conectados. Las máquinas y los dispositivos virtuales que seleccione se exploran con las líneas base conectadas, en función de las opciones que seleccione. También se exploran todos los objetos hijo, por lo que cuanto mayor sea la infraestructura virtual y mayor en la jerarquía de objetos que inicia la exploración, más tiempo se tarda en realizar la exploración y más precisa es la vista de conformidad.
+Puede explorar VM y dispositivos virtuales en el inventario de vSphere frente a las líneas base y los grupos de línea base conectados. Las VM y los dispositivos que seleccione se exploran con las líneas base conectadas, en función de las opciones que seleccione. También se exploran todos los objetos hijo, por lo que cuanto mayor sea la infraestructura virtual y mayor en la jerarquía de objetos que inicia la exploración, más tiempo se tarda en realizar la exploración y más precisa es la vista de conformidad.
 
 1.	Mediante el cliente web de vSphere, seleccione **Inicio** > **Máquinas y plantillas**.
 2.	Pulse con el botón derecho del ratón en una _máquina virtual_, _ dispositivo virtual_ o una _ carpeta de máquinas y dispositivos virtuales _ y pulse **Explorar para actualizaciones**.
@@ -35,7 +35,7 @@ Puede explorar máquinas y dispositivos virtuales en el inventario de vSphere fr
 
 ##	Iniciación manual de una exploración de un objeto contenedor
 
-Iniciar una exploración simultánea de hosts, máquinas virtuales y dispositivos virtuales explorando un objeto de contenedor que es un centro de datos o una carpeta de centro de datos.
+Iniciar una exploración simultánea de hosts, VM virtuales y dispositivos virtuales explorando un objeto de contenedor que es un centro de datos o una carpeta de centro de datos.
 1.	Mediante el cliente web de vSphere, seleccione **Inicio** > **Máquinas y plantillas**.
 2.	Pulse con el botón derecho del ratón en _datacenter_ o _datacenter folder_ y pulse **explorar para actualizaciones**.
 3.	Seleccione los tipos de actualizaciones que desee explorar. Las opciones son _Actualizaciones de dispositivos virtuales, actualizaciones de hardware de máquina virtual_ y _actualizaciones de VMware Tools_.
@@ -43,7 +43,7 @@ Iniciar una exploración simultánea de hosts, máquinas virtuales y dispositivo
 
 ##	Planificación de una exploración
 
-Puede configurar el cliente web de vSphere para explorar máquinas virtuales, dispositivos virtuales y hosts ESXi de vSphere en momentos específicos o a los intervalos que le convengan.
+Puede configurar el cliente web de vSphere para explorar VM, dispositivos virtuales y hosts ESXi de vSphere en momentos específicos o a los intervalos que le convengan.
 
 1.	El uso del cliente web de vSphere selecciona un objeto del inventario. También se exploran todos los objetos hijo del objeto que seleccione.
 2.	Seleccione el **separador Supervisar** y pulse el botón **Valores**.
@@ -55,5 +55,5 @@ Puede configurar el cliente web de vSphere para explorar máquinas virtuales, di
 
 ### Enlaces relacionados
 
-* [Arquitectura de la solución VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)
+* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)

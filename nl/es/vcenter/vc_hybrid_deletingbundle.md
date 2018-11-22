@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -24,8 +24,11 @@ La degradación de la licencia puede hacer que falle la instancia de vCenter Ser
 Revise las consideraciones siguientes antes de eliminar el paquete de Hybridity de un entorno de varios sitios:
 
 * Debe aplicar las licencias BYOL a todos los despliegues de varios sitios antes de eliminar las licencias de alquiler.
-* Debe combinar las licencias NSX y tener suficiente capacidad para utilizar en todos los despliegues de varios sitios.
+* Debe combinar las licencias de VMware NSX y tener suficiente capacidad que utilizar en todos los despliegues de varios sitios.
 * Debe crear una sola incidencia de soporte para eliminar el paquete de Hybridity de todos los despliegues de varios sitios.
+
+Al eliminar el paquete de híbrido de un entorno de varios sitios, se aplican las licencias BYOL. Para todos los sitios de una configuración de varios sitios, la licencia de NSX se revierte automáticamente a la edición de licencia más baja entre todos los sitios. Debe asegurarse de que las ediciones de licencias sean coherentes entre todos los sitios de la configuración de varios sitios.
+{:note}
 
 ## Antes de eliminar el paquete híbrido (Hybridity)
 
@@ -48,7 +51,9 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
    3. Pulse el icono **Añadir** y escriba la clave de licencia. Pulse **Siguiente**.
    4. Escriba el nombre de la licencia y pulse **Siguiente**. Pulse **Finalizar** para añadir la licencia.
    5. Seleccione la nueva clave de licencia.
-   6. Anote las claves de licencia completas para la licencia que se aplica y para la licencia que se ha sustituido. Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento.
+   6. Anote las claves de licencia completas para la licencia que se aplica y para la licencia que se ha sustituido.
+
+   Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento.
    {:important}
    7. Pulse **Aceptar** para asignar la licencia.
 5. Siga los pasos siguientes para instalar un BYOL de VMware vSAN:
@@ -59,6 +64,7 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
     3. Escriba el nombre de la licencia y pulse **Siguiente**. Pulse **Finalizar** para añadir la licencia.
     4. Seleccione la nueva clave de licencia.
     5. Anote el nombre de clúster y las claves de licencia completas de la licencia que se aplica y de la licencia que se ha sustituido.
+
     Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento.
     {:important}
     6. Pulse **Aceptar** para asignar la licencia.
@@ -68,8 +74,11 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
    3. Pulse el icono **Añadir** y escriba la clave de licencia. Pulse **Siguiente**.
    4. Escriba el nombre de la licencia y pulse **Siguiente**. Pulse **Finalizar** para añadir la licencia.
    5. Seleccione la nueva clave de licencia.
-   6. Anote las claves de licencia completas de la licencia que se aplica y de la licencia que se ha sustituido. Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento.
+   6. Anote las claves de licencia completas de la licencia que se aplica y de la licencia que se ha sustituido.
+
+   Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento.
    {:important}
+
    7. Pulse **Aceptar** para asignar la licencia.
 7. Opcionalmente, complete los pasos siguientes para instalar un BYOL de VMware vSphere Enterprise Plus:
   1. Pulse el separador **Hosts**.
@@ -79,8 +88,10 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
     3. Escriba el nombre de la licencia y pulse **Siguiente**. Pulse **Finalizar** para añadir la licencia.
     4. Seleccione la nueva clave de licencia.
     5. Anote el nombre de clúster y las claves de licencia completas de la licencia que se aplica y de la licencia que se ha sustituido.
+
     Debe tener los detalles de licencia disponibles para utilizarlos más adelante en este procedimiento. Si las claves de licencia no son las mismas en todos los clústeres, asegúrese de escribir el nombre del clúster asociado a cada clave de licencia.
     {:important}
+
     6. Pulse **Aceptar** para asignar la licencia.
 8. Elimine las licencias de alquiler.
    1. Pulse el separador **Licencias**.

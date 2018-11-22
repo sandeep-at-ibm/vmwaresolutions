@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Supresión de instancias de NetApp ONTAP Select
 
@@ -20,7 +24,8 @@ Si suprime una instancia de NetApp ONTAP Select, los componentes siguientes se p
 
 Debido a las dependencias entre recursos, los componentes de la instancia no se liberan inmediatamente cuando se suprime la instancia. Por ejemplo, las subredes y las VLAN no se pueden suprimir hasta que la infraestructura de {{site.data.keyword.cloud}} haya reclamado por completo los servidores ESXi, lo cual sucede al final del ciclo de facturación de {{site.data.keyword.cloud_notm}}. Al final del ciclo de facturación, que suele ser de 30 días, se reclaman las subredes y las VLAN y se completa la supresión de la instancia.
 
-**Atención:** se le facturará por la instancia suprimida hasta el final del ciclo de facturación.
+Se le facturará por la instancia suprimida hasta el final del ciclo de facturación.
+{:note}
 
 ## Procedimiento para suprimir instancias de la página Instancias desplegadas
 

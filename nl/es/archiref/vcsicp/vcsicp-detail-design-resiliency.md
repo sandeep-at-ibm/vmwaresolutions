@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-10"
 
 ###	Copia de seguridad VCS
 
-Como parte de las soluciones IBM Cloud for VMware, el software de copia de seguridad de Veeam se puede desplegar de forma opcional en una instancia de servidor virtual de IBM Cloud (VSI) utilizando IBM Cloud Endurance Storage fuera del clúster VMware. El objetivo de este software es hacer copia de seguridad de los componentes de gestión de la solución.
+Como parte de {{site.data.keyword.vmwaresolutions_full}}, el software de copia de seguridad de Veeam se puede desplegar de forma opcional en una instancia de servidor virtual de {{site.data.keyword.cloud_notm}} (VSI) utilizando {{site.data.keyword.cloud_notm}} Endurance Storage fuera del clúster VMware. El objetivo de este software es hacer copia de seguridad de los componentes de gestión de la solución.
 
 ### Copia de seguridad NSX
 
@@ -25,7 +25,7 @@ La copia de seguridad de NSX Manager contiene toda la configuración de NSX, inc
 
 Las copias de seguridad de un despliegue de ICP resultan cruciales para restaurar el sistema a su estado de trabajo si se produce una anomalía. Sobre una copia de seguridad de VM tradicional, hay un punto de fricción: cada nodo maestro de ICP ejecuta etcd, y en la documentación de etcd se indica claramente que no se utilice la copia de seguridad de VM tradicional para restaurarlo.
 
-En IBM Cloud Private a nivel de plataforma, necesita realizar una copia de seguridad de estos componentes:
+En {{site.data.keyword.cloud_notm}} Private a nivel de plataforma, necesita realizar una copia de seguridad de estos componentes:
 
 -	**Etcd** — se utiliza para almacenar recursos de Kubernetes, así como la información de estado de Calico.
 -	**Registro de Docker** — registro de imágenes privadas que se utiliza para almacenar archivos de imágenes de contenedor en un repositorio de imágenes.
@@ -48,7 +48,7 @@ Las copias de seguridad de la base de datos etcd se proporcionan al cliente como
 
 ### Escalabilidad de VCS
 
-Después del despliegue de los hosts iniciales, el usuario tiene la capacidad de escalar la capacidad de cálculo desde dentro del portal de IBM Cloud for VMware.
+Después del despliegue de los hosts iniciales, el usuario tiene la capacidad de escalar la capacidad de cálculo desde dentro del portal de {{site.data.keyword.cloud_notm}} for VMware.
 
 Este proceso de escalada del entorno sigue uno de estos tres métodos:
 - Adición de nuevos sitios gestionados por distintos vCenter Servers.
@@ -56,7 +56,7 @@ Este proceso de escalada del entorno sigue uno de estos tres métodos:
 - Adición de nuevos hosts a un clúster existente.
 
 ####	Despliegues de varios sitios
-VMware on IBM Cloud puede aprovechar la presencia del centro de datos a nivel mundial de IBM Cloud y la red troncal integrada para permitir que varios casos de uso entre geografía se desplieguen y funcionen en una fracción del tiempo que se necesitaría para crear dicha infraestructura desde cero.
+VMware on {{site.data.keyword.cloud_notm}} puede aprovechar la presencia del centro de datos a nivel mundial de IBM Cloud y la red troncal integrada para permitir que varios casos de uso entre geografía se desplieguen y funcionen en una fracción del tiempo que se necesitaría para crear dicha infraestructura desde cero.
 
 ####	Escalada con nuevo clúster
 El usuario también tiene la opción de escalar la capacidad de cálculo creando un nuevo clúster desde dentro de la consola, solicitando los hosts, y los nuevos hosts se añaden automáticamente al nuevo clúster. Esta opción creará otro clúster en el entorno y proporcionará a los usuarios la posibilidad de segregar de forma física y lógica la gestión de cargas de trabajo desde las cargas de trabajo de la aplicación, la posibilidad de segregar las cargas de trabajo en función de otras características (por ejemplo, clúster de base de datos de Microsoft SQL) y la posibilidad de desplegar aplicaciones en topologías de alta disponibilidad.
@@ -79,7 +79,7 @@ Los nodos trabajadores de máquina virtual de ICP se escalan para ampliar la cap
 
 
 ###  Expansión de IKS
-Los usuarios pueden suministrar un entorno IKS a través de IBM Cloud Portal para ampliar/utilizar un entorno de contenedor.
+Los usuarios pueden suministrar un entorno IKS a través de {{site.data.keyword.cloud_notm}} Portal para ampliar/utilizar un entorno de contenedor.
 
 Los despliegues de aplicaciones en IKS se pueden realizar a través de:
 - La conexión o los servicios de IKS que se desarrollan en CAM y se publican en el catálogo ICP.
@@ -89,7 +89,7 @@ Los despliegues de aplicaciones en IKS se pueden realizar a través de:
 
 ### Enlaces relacionados
 * [Adición o eliminación de nodos de clúster](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/installing/modify_cluster.html)
-* [Adición de nodos trabajadores cambiando el tamaño de una agrupación de nodos trabajadores existente](https://console.bluemix.net/docs/containers/cs_clusters.html#add_workers)
-* [Cómo hacer copia de seguridad y restaurar IBM Cloud Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
-* [Copia de seguridad de ICP](https://github.com/ibm-cloud-architecture/icp-backup/)
-* [VMware vCenter Server on IBM Cloud con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Adición de nodos trabajadores cambiando el tamaño de una agrupación de nodos trabajadores existente](../../../../containers/cs_clusters.html#resize_pool)
+* [Cómo hacer copia de seguridad y restaurar {{site.data.keyword.cloud_notm}} Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
+* [GitHub de copia de seguridad de ICP](https://github.com/ibm-cloud-architecture/icp-backup/)
+* [Visión general de VCS con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)

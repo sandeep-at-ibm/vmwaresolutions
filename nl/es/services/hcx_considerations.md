@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -19,15 +19,17 @@ El servicio HCX on {{site.data.keyword.cloud}} permite ampliar fácilmente las r
 Este servicio solo está disponible para instancias de VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity) desplegadas en la V2.3 y posteriores.
 {:note}
 
-Puede actualizar la instancia existente de vCenter Server a una instancia de vCenter Server con el paquete híbrido (Hybridity). Para obtener más información sobre la actualización de la instancia y el despliegue del servicio HCX on {{site.data.keyword.cloud_notm}}, consulte [Actualización a la instancia de vCenter Server con Hybridity Bundle](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance).
+Puede actualizar la instancia existente de vCenter Server a una instancia de vCenter Server con el paquete híbrido (Hybridity). Para obtener más información sobre la actualización de la instancia y el despliegue del servicio HCX on {{site.data.keyword.cloud_notm}}, consulte [Procedimiento para actualizar a la instancia de vCenter Server con el paquete híbrido (Hybridity)](../vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance).
 
-**Nota:** Una instancia de vCenter Server con HCX on {{site.data.keyword.cloud_notm}} está limitada a tres conexiones simultáneas de sitios locales.
+Una instancia de vCenter Server con HCX on {{site.data.keyword.cloud_notm}} está limitada a tres conexiones simultáneas de sitios locales.
+{:note}
 
 ## Especificaciones técnicas para HCX on IBM Cloud
 
 Los componentes siguientes se solicitan y se incluyen en el servicio HCX on {{site.data.keyword.cloud_notm}}.
 
-**Nota:** Las instancias de HCX en premisa incluyen solo la licencia y la activación.
+Las instancias de HCX locales incluyen solo la licencia y la activación.
+{:note}
 
 ### Un par activo/pasivo de pasarelas de servicio VMware NSX Edge para la gestión de HCX
 
@@ -86,4 +88,4 @@ Revise las siguientes consideraciones antes de eliminar el servicio HCX on {{sit
 * [Glosario de términos de HCX](hcx_glossary.html)
 * [Cómo ponerse en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html)
 * [Visión general de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
-* [Documentación de VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentación de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

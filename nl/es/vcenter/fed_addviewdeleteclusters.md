@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Adición, visualización y supresión de clústeres para instancias de VMware Federal
 
@@ -89,7 +93,8 @@ Si el clúster inicial se ha añadido como un clúster vSAN, los clústeres de v
 
 Cuando seleccione **Almacenamiento de NFS**, puede añadir almacenamiento compartido a nivel de archivo para la instancia donde todas las comparticiones utilizan los mismos valores o pueden especificar distintos valores de configuración para cada compartición de archivos. Especifique las siguientes opciones de NFS:
 
-**Nota:** El número de comparticiones de archivo debe estar comprendido entre 1 y 32.
+El número de comparticiones de archivo debe estar comprendido entre 1 y 32.
+{:note}
 
 * **Configurar las comparticiones individualmente**: Seleccione para especificar distintos valores de configuración para cada compartición de archivos.
 * **Número de unidades compartidas**: Al utilizar el mismo valor de configuración para cada compartición de archivos, especifique el número de comparticiones de archivos para el almacenamiento compartido de NFS que desee añadir.
@@ -122,7 +127,8 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia a la que desea añadir clústeres.
 
-   **Nota:** asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede añadir clústeres a la instancia.
+   Asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede añadir clústeres a la instancia.
+   {:note}
 3. Pulse **Infraestructura** en el panel de navegación izquierdo y pulse **Añadir** en la esquina superior derecha de la tabla **CLÚSTERES**.
 4. En la página **Añadir clúster**, escriba el nombre de clúster.
 5. Seleccione el **Modelo de CPU**, la cantidad de **RAM** y el **Número de servidores nativos** de la configuración del servidor nativo.
@@ -142,7 +148,8 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 1. El despliegue del clúster se inicia automáticamente y el estado del clúster pasa a ser **Inicializando**. Puede comprobar el estado del despliegue consultando el historial de despliegue desde la página de resumen de la instancia.
 2. Cuando el clúster esté listo para ser utilizado, su estado pasará a ser **Listo para su uso**. El clúster recién añadido está habilitado con alta disponibilidad (HA) de vSphere y con el planificador de recursos distribuidos (DRS) de vSphere.
 
-**Importante:** No puede cambiar el nombre del clúster. Si se cambia el nombre del clúster, es posible que las operaciones de adición o eliminación de servidores ESXi en el clúster fallen.
+No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es posible que las operaciones de adición o eliminación de servidores ESXi en el clúster fallen.
+{:important}
 
 ## Procedimiento para visualizar clústeres en instancias de VMware Federal
 
@@ -223,7 +230,8 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 
 Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario.
 
-**Nota:** utilice este procedimiento para eliminar clústeres de instancias que se han desplegado en la V2.3 y posteriores releases o que se han actualizado a estos.
+Utilice este procedimiento para eliminar clústeres de instancias que se han desplegado en la V2.3 y posteriores releases o que se han actualizado a estos.
+{:note}
 
 ### Antes de suprimir
 
@@ -239,7 +247,8 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia de la que desea suprimir clústeres.
 
-   **Nota:** asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede suprimir clústeres de la instancia.
+   Asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede suprimir clústeres de la instancia.
+   {:note}
 
 3. Pulse **Infraestructura** en el panel de navegación izquierdo. En la tabla **CLÚSTERES**, localice el clúster que desea suprimir y pulse el icono **Suprimir** en la columna **Acciones**.
 

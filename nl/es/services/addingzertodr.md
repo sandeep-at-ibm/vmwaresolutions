@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -23,7 +23,8 @@ Este servicio sólo está disponible para las instancias desplegadas en la versi
 
 Los siguientes componentes se solicitan y se incluyen en el servicio Zerto on {{site.data.keyword.cloud_notm}}.
 
-**Nota:** Los componentes de Zerto Virtual Manager se despliegan solo en el clúster predeterminado.
+Los componentes de Zerto Virtual Replication Appliance (VRA) se despliegan solo en el clúster predeterminado.
+{:note}
 
 ### VSI
 

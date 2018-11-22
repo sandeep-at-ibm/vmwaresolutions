@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Supresión de instancias de VMware Federal
 
@@ -21,7 +25,8 @@ Cuando suprima una instancia de VMware Federal, los siguientes componentes se li
 
 Debido a las dependencias entre recursos, los componentes de la instancia no se liberan inmediatamente cuando se suprime la instancia. Por ejemplo, las subredes no se pueden suprimir hasta que la infraestructura de {{site.data.keyword.cloud}} haya reclamado por completo los servidores ESXi, lo cual sucede al final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}. Al final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}, que suele ser de 30 días, se suprimen las subredes y se completa la supresión de la instancia.
 
-**Atención:** Se le facturará por la instancia suprimida hasta el final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}.
+Se le facturará por la instancia suprimida hasta el final del ciclo de facturación de la infraestructura {{site.data.keyword.cloud_notm}}.
+{:note}
 
 ## Procedimiento para suprimir instancias de la página Instancias desplegadas
 

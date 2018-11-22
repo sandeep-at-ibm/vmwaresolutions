@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -24,7 +24,7 @@ Como parte de la automatización de VCS, se utiliza un Microsoft Active Director
 El despliegue de VCS utiliza las VSI de Microsoft Active Directory (AD) desplegadas como servidores DNS para la instancia. Todos los componentes desplegados (vCenter, PSC, NSX y hosts de ESXi) se configuran de modo que apunten a MS AD como su DNS predeterminado.
 
 ###	Servicios NTP
-El despliegue de VCS utiliza los servidores NTP de la infraestructura de IBM Cloud. Todos los componentes desplegados se configuran para utilizar estos servidores NTP. El hecho de que todos los componentes del diseño utilicen los mismos servidores NTP resulta crítico para que los certificados y la autenticación de MS AD funcionen correctamente
+El despliegue de VCS utiliza los servidores NTP de la infraestructura de {{site.data.keyword.cloud}}. Todos los componentes desplegados se configuran para utilizar estos servidores NTP. El hecho de que todos los componentes del diseño utilicen los mismos servidores NTP resulta crítico para que los certificados y la autenticación de MS AD funcionen correctamente
 
 ## Redes
 
@@ -40,7 +40,7 @@ Figura 2. ICP con red NSX-V
 
 ![ICP con red NSX-V](vcsicp-nsxv-networking.svg)
 
-Para obtener más información, consulte [Arquitectura de referencia de IBM Cloud VCS Networking](../vcsnsxt/vcsnsxt-intro.html)
+Para obtener más información, consulte [Guía de redes de vCenter Server](../vcsnsxt/vcsnsxt-intro.html).
 
 ### Redes NSX-T
 
@@ -54,4 +54,4 @@ Figura 3. ICP con red NSX-T
 
 ### Enlaces relacionados
 
-* [VMware vCenter Server on IBM Cloud con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de VCS con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
