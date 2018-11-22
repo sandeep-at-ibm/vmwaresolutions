@@ -18,7 +18,7 @@ lastupdated: "2018-10-29"
 
 ## ID 및 액세스 서비스
 
-이 디자인에서 Microsoft Active Directory(AD)는 ID 관리에 사용됩니다. 이 디자인은 1 - 2개의 Windows Active Directory 가상 머신을 Cloud Foundation 및 vCenter Server 배치 자동화의 일부로서 배치합니다. vCenter는 AD 인증을 사용하도록 구성됩니다. 
+이 디자인에서 Microsoft Active Directory(AD)는 ID 관리에 사용됩니다. 이 디자인은 1 - 2개의 Windows Active Directory 가상 머신을 Cloud Foundation 및 vCenter Server 배치 자동화의 일부로서 배치합니다. vCenter는 AD 인증을 사용하도록 구성됩니다.
 
 ### Microsoft Active Directory
 

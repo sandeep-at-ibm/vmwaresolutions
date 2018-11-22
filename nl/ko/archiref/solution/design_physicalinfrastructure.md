@@ -77,7 +77,7 @@ Bare Metal Server의 스펙은 다음과 같습니다.
 ### 기본 및 포터블 IP 블록
 
 {{site.data.keyword.cloud_notm}}는 {{site.data.keyword.cloud_notm}} 인프라 내에서 사용되는 두 가지 유형의 IP 주소를 할당합니다.
-* 기본 IP 주소는 디바이스, 베어메탈 및 {{site.data.keyword.cloud_notm}}에서 프로비저닝하는 가상 서버에 지정됩니다. 이러한 블록에 IP 주소를 지정하지 마십시오. 
+* 기본 IP 주소는 디바이스, 베어메탈 및 {{site.data.keyword.cloud_notm}}에서 프로비저닝하는 가상 서버에 지정됩니다. 이러한 블록에 IP 주소를 지정하지 마십시오.
 * 포터블 IP 주소는 사용자가 필요에 따라 지정 및 관리할 수 있도록 제공됩니다.
 
 기본 및 포터블 IP 주소는 **VLAN Spanning**이 {{site.data.keyword.slportal}} 내에서 사용되거나 계정이 **VRF(Virtual Routing and Forwarding)** 계정으로 구성된 경우에 고객 계정 내에서 임의의 VLAN으로 라우팅 가능합니다.

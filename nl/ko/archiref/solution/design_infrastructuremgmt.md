@@ -65,7 +65,7 @@ vCenter Server 구성에서는 어플라이언스에 포함된 로컬, 임베디
 
 ### vSphere Distributed Resource Scheduler
 
-이 디자인에서는 초기 클러스터의 vSphere DRS(Distributed Resource Scheduling)를 사용하여 VM을 배치하며, 추가 클러스터의 DRS을 사용하여 VM을 동적으로 마이그레이션함으로써 밸런스가 유지된 클러스터를 구성합니다. 자동화 레벨은 vSphere에서 초기 배치 및 마이그레이션 권장사항을 실행할 수 있도록 완전히 자동화되도록 설정됩니다. 또한 vCenter가 우선순위 1, 2, 3 권장사항을 적용하여 클러스터의 로드 밸런싱에서 최소한의 적절한 개선이 이루어질 수 있도록, 마이그레이션 임계값이 적절하게 설정됩니다. 
+이 디자인에서는 초기 클러스터의 vSphere DRS(Distributed Resource Scheduling)를 사용하여 VM을 배치하며, 추가 클러스터의 DRS을 사용하여 VM을 동적으로 마이그레이션함으로써 밸런스가 유지된 클러스터를 구성합니다. 자동화 레벨은 vSphere에서 초기 배치 및 마이그레이션 권장사항을 실행할 수 있도록 완전히 자동화되도록 설정됩니다. 또한 vCenter가 우선순위 1, 2, 3 권장사항을 적용하여 클러스터의 로드 밸런싱에서 최소한의 적절한 개선이 이루어질 수 있도록, 마이그레이션 임계값이 적절하게 설정됩니다.
 
 **Distributed Power Management** 기능을 통한 전력 관리는 이 디자인에서는 사용되지 않습니다.
 {:note}
