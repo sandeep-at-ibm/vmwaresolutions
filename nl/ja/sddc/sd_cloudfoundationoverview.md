@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -53,15 +53,10 @@ Cloud Foundation インスタンスには以下のコンポーネントが含ま
 ### ベア・メタル・サーバー
 
 以下のいずれかの構成の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}を注文できます。
-*  **「Skylake」**または**「Broadwell」**: 選択した CPU モデルと RAM サイズの{{site.data.keyword.baremetal_short}}。   
-   * 2-CPU Intel Skylake 世代 (Intel Xeon 4100/5100/6100 シリーズ)
-   * 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600 v4 シリーズ)
-
+*  **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。   
+*  **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600 v4 シリーズ)。   
    vSAN ストレージを使用する計画がある場合は、構成に 4 つの{{site.data.keyword.baremetal_short}}が必要です。
    {:note}
-* **事前構成型**: 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600 v4 シリーズ)
-  * **スモール** (Dual Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz / 128 GB RAM / 12 ディスク)
-  * **ラージ** (Dual Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz / 512 GB RAM / 12 ディスク)
 
 ### ネットワーキング
 
@@ -88,9 +83,7 @@ Cloud Foundation インスタンスには以下のコンポーネントが含ま
 * 2 台の 1 TB SATA ブート・ディスク
 * 2 台の 960 GB SSD (ソリッド・ステート・ディスク) キャッシュ・ディスク
 * RAID ディスク・コントローラー 1 つ
-* **「Skylake」**および**「Broadwell」**構成の場合のみ、要件に従って、ディスク・ドライブの数、ディスク・タイプ、ディスク容量を設定できます。また、High-Performance Intel Optane オプションもあります。このオプションは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイを提供します。 High-Performance Intel Optane オプションは、CPU モデルに応じて異なります。
-* **事前構成型**、**スモール** 構成の場合のみ: 2 台の 1.9 TB SSD キャパシティー・ディスク
-* **事前構成型**、**ラージ** 構成の場合のみ: 4 台の 3.8 TB SSD キャパシティー・ディスク
+* **「Skylake」**および**「Broadwell」**構成の場合のみ、要件に従って、ディスク・ドライブの数、ディスク・タイプ、ディスク容量を設定できます。 また、High-Performance Intel Optane オプションもあります。このオプションは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイを提供します。 High-Performance Intel Optane オプションは、CPU モデルに応じて異なります。
 
 ### ライセンス (IBM 提供または BYOL) と料金
 
