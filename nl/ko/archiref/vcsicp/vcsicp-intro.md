@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -13,17 +13,14 @@ lastupdated: "2018-10-25"
 이 문서는 통합된 다중 클라우드가 애플리케이션 현대화를 위해 활용되도록 하기 위해 클라우드 관리 컴포넌트를 중심으로 IBM Cloud에 대한 애플리케이션 현대화의 과정에 대한 보기를 제공합니다.
 
 - **VMware vCenter Server on IBM Cloud** - VCS는 IBM Cloud for VMware Solutions의 오퍼링이며 IBM Cloud에서 자동으로 프로비저닝되는 VMware 기반 플랫폼입니다.
-
 - **IBM Cloud Private** - ICP는 VMware와 같은 가상화된 인프라 플랫폼에 배치되도록 설계된 컨테이너화된 애플리케이션의 개발 및 관리를 위한 애플리케이션 플랫폼입니다.
-
-- **IBM Kubernetes Services** - IKS는 단일 테넌트 클러스터에서 애플리케이션 컨테이너의 운영, 확장 및 배치 자동화를 위한 오케스트레이션 엔진으로 Kubernetes를 활용하는 IBM Cloud의 관리 서비스입니다. 
-
+- **IBM Kubernetes Services** - IKS는 단일 테넌트 클러스터에서 애플리케이션 컨테이너의 운영, 확장 및 배치 자동화를 위한 오케스트레이션 엔진으로 Kubernetes를 활용하는 IBM Cloud의 관리 서비스입니다.
 - **IBM Multi-Cluster Manager** – MCM은 클라우드 및 클러스터에서 사용자 가시성, 애플리케이션 중심 관리(정책, 배치, 상태, 운영) 및 정책 기반 규제 준수를 제공합니다. MCM을 사용하면 Kubernetes 클러스터를 제어할 수 있습니다.
-
-- **IBM Cloud Automation Manager** – CAM은 개발자와 관리자가 비즈니스 요구를 충족시킬 수 있는 ICP에서 실행되는 다중 클라우드의 셀프 서비스 관리 플랫폼입니다. 
+- **IBM Cloud Automation Manager** – CAM은 개발자와 관리자가 비즈니스 요구를 충족시킬 수 있는 ICP에서 실행되는 다중 클라우드의 셀프 서비스 관리 플랫폼입니다.
 
 ## IBM Cloud의 애플리케이션 현대화
-애플리케이션 현대화란 클라우드에 대한 새로운 접근 방식을 활용하기 위해 기존 애플리케이션을 전환하는 프로세스를 설명하는 용어입니다. 오늘날 고객들은 비즈니스 및 애플리케이션 복잡도를 기반으로 전환하는 데 도움이 되는 혁신적이고 효율적인 접근 방식을 찾고 있습니다. 
+
+애플리케이션 현대화란 클라우드에 대한 새로운 접근 방식을 활용하기 위해 기존 애플리케이션을 전환하는 프로세스를 설명하는 용어입니다. 오늘날 고객들은 비즈니스 및 애플리케이션 복잡도를 기반으로 전환하는 데 도움이 되는 혁신적이고 효율적인 접근 방식을 찾고 있습니다.
 
 비즈니스에서는 출시 기간을 앞당기도록 요구하고 있습니다. 기존 자산에는 애플리케이션뿐만 아니라 데이터, 프로세스, 비즈니스 로직 및 사용자 인터페이스가 포함되며, 이들 모두 새로운 비즈니스 요구에 맞게 조정해야 합니다.
 
@@ -46,39 +43,17 @@ IT 인프라 및 비즈니스의 요구는 고유하기 때문에, 비즈니스 
 
 이 문서는 IBM Cloud에 대한 애플리케이션 현대화 과정에서 사용되는 기술에 대해 서로 다른 보기를 제공하는 다섯 가지 문서 중 하나입니다.
 
-참조 아키텍처 안내서, VCS - ICP 및 CAM - 현재 섹션.
-
-다음 플랫폼을 배치하기 위한 참조 아키텍처:
+* _vCenter Server 및 IBM Cloud Private_ - 최신 안내서이며 다음 플랫폼을 배치하기 위한 참조 아키텍처입니다.
   - **VMware vCenter Server on IBM Cloud** - IBM Cloud for VMware Solutions의 오퍼링이며 IBM Cloud에서 자동으로 프로비저닝되는 VMware 기반 플랫폼입니다.
   - **IBM Cloud Private** – 컨테이너화된 애플리케이션의 개발 및 관리를 위한 애플리케이션 플랫폼입니다. 컨테이너 오케스트레이터 Kubernetes뿐만 아니라 개인용 이미지 저장소, 관리 콘솔, 모니터링 프레임워크 및 애플리케이션을 배치, 관리, 모니터 및 확장할 수 있는 중앙 위치를 제공하는 그래픽 사용자 인터페이스가 포함된 통합 환경입니다. It is an integrated environment that includes the container orchestrator Kubernetes, as well as a private image repository, a management console, monitoring frameworks and a graphical user interface, which provides a centralized location from where you can deploy, manage, monitor, and scale your applications.
-  - **IBM Cloud Automation Manager** – 저장소에 저장되고 버전화된 템플리트를 간단히 사용하여 Kubernetes 기반 워크로드와 함께 VM 기반 워크로드를 프로비저닝하기 위해 단일 분할창 방식을 제공하는 엔터프라이즈용 IaC(Infrastructure as Code) 플랫폼입니다. 
-
-[참조 아키텍처 안내서, VCS - IKS](../vcsiks/vcsiks-intro.html)
-
-  다음 플랫폼을 배치하기 위한 참조 아키텍처:
+  - **IBM Cloud Automation Manager** – 저장소에 저장되고 버전화된 템플리트를 간단히 사용하여 Kubernetes 기반 워크로드와 함께 VM 기반 워크로드를 프로비저닝하기 위해 단일 분할창 방식을 제공하는 엔터프라이즈용 IaC(Infrastructure as Code) 플랫폼입니다.
+* [vCenter Server 및 IBM Kubernetes service](../vcsiks/vcsiks-intro.html) - 이 안내서는 다음 플랫폼을 배치하기 위한 참조 아키텍처입니다.
   - **VMware vCenter Server on IBM Cloud** - IBM Cloud for VMware Solutions의 오퍼링이며 IBM Cloud에서 자동으로 프로비저닝되는 VMware 기반 플랫폼입니다.
-  - **IBM Cloud Kubernetes Service** – 단일 테넌트 클러스터에서 애플리케이션 컨테이너의 운영, 확장 및 배치 자동화를 위한 오케스트레이션 엔진으로 Kubernetes를 활용하는 IBM Cloud의 관리 서비스입니다. 
-
-[참조 아키텍처 안내서, VCS - 네트워킹](../vcsnsxt/vcsnsxt-intro.html)
-
-이 문서는 NSX-V, NSX-T 및 Calico 등의 VCS, ICP 및 IKS 내에서 사용되는 네트워크 기술에 초점을 맞춥니다.
-
-[참조 아키텍처 안내서, Watson 및 Sk8boarding 컨셉트 카](../vcscar/vcscar-intro.html)
-
-이 문서는 Watson AI와 기계 학습 간의 상호작용을 보여주기 위해 “컨셉트 카” 접근 방식을 사용합니다.
-
-문서에서는 다음과 같은 기술을 강조표시합니다.
-  - **Pepper** - 애플리케이션을 수행하고 오퍼레이션을 검색하기 위해 클라우드 환경과 통합하는 기능이 포함되어 있는 인터페이스입니다. 
-  - **VMware vCenter Server on IBM Cloud** - 데이터베이스 워크로드와 같은 애플리케이션의 요소를 호스팅하기 위해 활용합니다.
-  - **IBM Cloud Kubernetes Service** - 애플리케이션의 컨테이너화된 요소를 호스팅하기 위해 활용합니다.
-  - **IBM Cloud Private** - 플랫폼 및 서비스 레벨 오케스트레이션을 제공하기 위해 활용되며, VM 및 컨테이너 플랫폼에서 애플리케이션을 호스팅하고 확장하는 기능이 포함되어 있습니다. 또한 이 컴포넌트를 통해 플랫폼에 대한 Watson 개발자 서비스를 사용할 수 있으며 AI 기능에 대한 액세스를 허용합니다.
-
-[참조 아키텍처 안내서, VCS – 컨텐츠](../vcscontent/vcscontent-intro.html)
-
-이 문서는 IBM Cloud Automation Manager에서 사용 가능한 다음의 컨텐츠 유형에 집중합니다.
-- 내부 카탈로그 컨텐츠(예: “사전 설치된” Helm 차트, Terraform 템플리트 및 Chef 레시피).
-- 서비스 컨텐츠(예: Blockchain 및 Watson 서비스).
+  - **IBM Cloud Kubernetes Service** – 단일 테넌트 클러스터에서 애플리케이션 컨테이너의 운영, 확장 및 배치 자동화를 위한 오케스트레이션 엔진으로 Kubernetes를 활용하는 IBM Cloud의 관리 서비스입니다.
+* [vCenter Server 네트워킹](../vcsnsxt/vcsnsxt-intro.html) - 이 안내서는 NSX-V, NSX-T 및 Calico 등의 VCS, ICP 및 IKS 내에서 사용되는 네트워크 기술에 초점을 맞춥니다.
+* [VMware 및 Skate Advisor Concept Car](../vcscar/vcscar-intro.html) - 이 참조 아키텍처는 "컨셉트 카", 즉 실제 문제점을 해결하는 기술을 강조표시하고 보여주기 위한 메커니즘입니다. 실질적인 방식으로 Watson AI와 기계 학습 간의 상호작용을 시연하려고 했습니다. 특히 스케이트보드 문화를 통해 고유 방식으로 클라우드 서비스를 시연합니다. "컨셉트 카" 구현은 Skate Advisor라는 Acme Skateboard 애플리케이션에 대한 확장입니다. Skate Advisor는 사용자가 Watson 구동 엔진과 스케이트보드 트릭 대화를 할 수 있도록 하는 도구입니다.
+* [VMware: Stock Trader의 현대화 과정](../vcscontent/vcscontent-modjourney.html) - 참조 유스 케이스는 IBM Cloud Private, IBM Middleware 컨텐츠, IBM Cloud Kubernetes Service 및 vCenter Server on IBM Cloud를 사용하여 현대화되는 일반 WebSphere Application Server 애플리케이션에 대해 설명합니다. 모두가 클라우드 과정 중에 있으며 이 과정의 서로 다른 지점에 있습니다. 애플리케이션 설계자 Jane과 클라우드 인프라 설계자 Todd에 의한 점진적 단계를 통해 Stock Trader라는 기존 앱을 현대화합니다. 각 단계의 규모에 관계없이 과정의 각 단계를 수행하는 데 도움을 주는 예제와 비즈니스에 실현된 가치를 보여줍니다. 애플리케이션, DevOps, 통합 및 관리 등 4개의 테마에 초점을 맞춥니다. 각각은 함께 작동하여 목표를 달성할 수 있도록 지원합니다. 실제로 다른 것 없이 하나를 현대화하면 모든 면에서 문제점이 발생합니다.
 
 ### 관련 링크
 
-  * [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [VCS Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
