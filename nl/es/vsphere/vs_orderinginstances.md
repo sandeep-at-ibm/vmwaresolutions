@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -89,8 +89,10 @@ El uso de claves de licencia individuales junto con las claves de licencia combi
 
 Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar el clúster.
 
-Si selecciona un componente vSAN, la lista de ubicaciones se filtra por disponibilidad de SSD.
-{:note}
+**Notas:**
+* Si selecciona un componente vSAN, la lista de ubicaciones se filtra por disponibilidad de SSD.
+* El centro de datos FRA05 no da soporte al servidor nativo Broadwell.
+* El centro de datos LON05 no da soporte al servidor nativo Certificado por SAP ni Broadwell.
 
 ### Skylake
 
