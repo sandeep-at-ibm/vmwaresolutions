@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -18,9 +18,9 @@ Cloud Foundation インスタンスで使用できるサービスと、インス
 
 表 1. Cloud Foundation インスタンスに使用可能なサービス
 
-| サービス名 | サービスのバージョン | インスタンスのバージョン |
+| サービス名 | 現在のサービスのバージョン | インスタンスのバージョン |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1 | V1.9 以降 |
+| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1.1.2 | V1.9 以降 |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | 300 シリーズ | V1.8 以降 |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 6.0.3 | V2.0 以降 |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 以降 |

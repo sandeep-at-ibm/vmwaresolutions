@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -27,15 +27,15 @@ Cloud Foundation のデプロイメントには、物理インフラストラク
 | AMS03 | アムステルダム | ヨーロッパ | Skylake、Broadwell |
 | CHE01 | チェンナイ | アジア太平洋 | Skylake、Broadwell |
 | DAL09 | ダラス | 北米南部 | Skylake、Broadwell |
-| DAL10 | ダラス | 北米南部 | Skylake、Broadwell、スモール、ラージ |
+| DAL10 | ダラス | 北米南部 | Skylake、Broadwell |
 | DAL12 | ダラス | 北米南部 | Skylake、Broadwell |
 | DAL13 | ダラス | 北米南部 | Skylake、Broadwell |
-| FRA02 | フランクフルト | ヨーロッパ | Skylake、Broadwell、ラージ |
+| FRA02 | フランクフルト | ヨーロッパ | Skylake、Broadwell |
 | FRA04 | フランクフルト | ヨーロッパ | Skylake、Broadwell |
 | HKG02 | 香港 | アジア太平洋 | Skylake、Broadwell |
 | LON02 | London (ロンドン) | ヨーロッパ | Skylake、Broadwell |
 | LON04 | London (ロンドン) | ヨーロッパ | Skylake、Broadwell |
-| LON06 | London (ロンドン) | ヨーロッパ | Skylake、Broadwell、スモール、ラージ |
+| LON06 | London (ロンドン) | ヨーロッパ | Skylake、Broadwell |
 | MEL01 | メルボルン | アジア太平洋 | Skylake、Broadwell |
 | MEX01 | ケレタロ | 北米南部 | Skylake、Broadwell |
 | MIL01 | ミラノ | ヨーロッパ | Skylake、Broadwell |
@@ -50,8 +50,8 @@ Cloud Foundation のデプロイメントには、物理インフラストラク
 | SYD01 | シドニー | アジア太平洋 | Skylake、Broadwell |
 | SYD04 | シドニー | アジア太平洋 | Skylake、Broadwell |
 | TOK02 | 東京 | アジア太平洋 | Skylake、Broadwell |
-| TOR01 | トロント | 北米東部 | Skylake、Broadwell、スモール、ラージ |
-| WDC04 | ワシントン、DC | 北米東部 | Skylake、Broadwell、スモール、ラージ |
+| TOR01 | トロント | 北米東部 | Skylake、Broadwell |
+| WDC04 | ワシントン、DC | 北米東部 | Skylake、Broadwell |
 | WDC06 | ワシントン、DC | 北米東部 | Skylake、Broadwell |
 | WDC07 | ワシントン、DC | 北米東部 | Skylake、Broadwell |
 
