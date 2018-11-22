@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware Federal 인스턴스 주문
 
 워크로드 요구사항에 가장 적합한 유연하고 사용자 정의할 수 있는 VMware 가상화된 플랫폼을 배치하려면 VMware Federal 인스턴스를 주문하십시오. VMware Federal 인스턴스는 열린 관리 연결을 끊고 배치된 인스턴스를 보호하는 데 도움을 줍니다.
 
-**참고:** 현재 vCenter Server 인스턴스만 VMware Federal on {{site.data.keyword.cloud}}를 지원합니다.
+현재 vCenter Server 인스턴스만 VMware Federal on {{site.data.keyword.cloud}}를 지원합니다.
+{:note}
 
 ## VMware Federal 인스턴스를 주문하기 위한 요구사항
 
@@ -32,7 +37,8 @@ lastupdated: "2018-10-29"
   |완전한 ESXi 서버 이름 | `<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `<n>`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |  
   |PSC FQDN |`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
 
-**중요:** 인스턴스 주문 또는 배치 중에 설정된 값을 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다.
+인스턴스 주문 또는 배치 중에 설정되는 값은 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다.
+{:important}
 
 ## 시스템 설정
 
@@ -66,7 +72,7 @@ VMware Federal 인스턴스를 주문할 때는 다음 시스템 설정을 지�
 
 ## Bare Metal Server 설정
 
-Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성을 기반으로 합니다. 사전 구성된 구성을 선택하는 옵션은 현재 지원되지 않습니다.
+Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성을 기반으로 합니다.
 
 ### 데이터 센터 위치
 
@@ -119,7 +125,8 @@ ESXi 서버의 수를 2 - 20의 범위로 구성할 수 있습니다.
 
 **NFS 스토리지**를 선택할 때 모든 공유가 동일한 설정을 사용하는 인스턴스에 대한 파일 레벨 공유 스토리지를 추가하거나 각 파일 공유에 서로 다른 구성 설정을 지정할 수 있습니다. 다음 NFS 옵션을 지정하십시오.
 
-**참고:** 파일 공유의 수는 1 - 32 범위에 있어야 합니다.
+파일 공유의 수는 1 - 32 사이여야 합니다.
+{:note}
 
 * **공유 개별 구성**: 각 파일 공유에 대해 서로 다른 구성 설정을 지정하려면 선택하십시오.
 * **공유 수**: 각 파일 공유에 동일한 구성 설정을 사용하는 경우 추가할 NFS 공유 스토리지에 대한 파일 공유 수를 지정하십시오.
@@ -161,7 +168,8 @@ ESXi 서버의 수를 2 - 20의 범위로 구성할 수 있습니다.
 * 마지막 문자열은 영문자만 포함할 수 있습니다.
 * 마지막 문자열의 길이는 2 - 24자 사이여야 합니다.
 
-**참고:** 호스트 및 VM의 완전한 도메인 이름(FQDN)의 최대 길이는 50자입니다. 도메인 이름은 이 최대 길이를 포함할 수 있어야 합니다.
+호스트 및 VM의 완전한 도메인 이름(FQDN)의 최대 길이는 50자입니다. 도메인 이름은 이 최대 길이를 포함할 수 있어야 합니다.
+{:note}
 
 ### DNS 구성
 
@@ -170,7 +178,8 @@ ESXi 서버의 수를 2 - 20의 범위로 구성할 수 있습니다.
 * **Active Directory/DNS용 단일 공용 Windows VSI**: 호스트 및 가상 머신이 등록된 인스턴스를 위한 DNS로 작동하는 단일 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI가 배치되고 검색될 수 있습니다.
 * **관리 클러스터에 있는 두 개의 고가용성 전용 Windows Server VM**: V2.3 이상 릴리스의 경우 두 개의 Microsoft Windows 가상 머신이 배치되어 보안 및 강력한 추진력을 향상시킵니다.
 
-**중요:** 두 개의 Microsoft Windows 가상 머신을 사용하도록 인스턴스를 구성하는 경우 두 개의 Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스, Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스 또는 둘 다 사용하십시오.
+두 개의 Microsoft Windows 가상 머신을 사용하도록 인스턴스를 구성하는 경우 두 개의 Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스, Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스 또는 둘 다 사용하십시오.
+{:important}
 
 현재 각 라이센스는 단 하나의 실제 서버에 지정될 수 있으며 최대 두 개의 실제 프로세서를 포함합니다. 하나의 Standard 에디션 라이센스를 사용하면 2 프로세서 서버당 두 개의 가상화된 Microsoft Windows 가상 머신(VM)을 실행할 수 있습니다. 따라서 두 개의 Microsoft Windows 가상 머신이 두 개의 다른 호스트에 배치되기 때문에 두 개의 라이센스가 필요합니다.
 
@@ -217,8 +226,9 @@ Windows 라이센싱 주문에 대한 자세한 정보는 [Windows Server 2012 R
 
 주문한 VMware Federal 인스턴스를 보고, 관리하고 보호하십시오.
 
-**중요:** {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성된 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
+{{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌, {{site.data.keyword.vmwaresolutions_short}} 콘솔에서만 {{site.data.keyword.cloud_notm}} 계정에 작성되는 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 관리해야 합니다.
 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항은 콘솔과 동기화되지 않습니다.
+{:important}
 
 **주의:** {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트(인스턴스 주문 시 {{site.data.keyword.cloud_notm}} 계정에 설치된)를 관리하면 환경이 불안정해질 수 있습니다. 이러한 관리 활동에는 다음이 포함됩니다.
 *  컴포넌트 추가, 수정, 리턴 또는 제거

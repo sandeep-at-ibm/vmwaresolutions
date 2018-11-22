@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2018-10-29"
 
 인스턴스에 추가할 수 있는 클러스터의 수는 인스턴스 버전에 따라 달라집니다.
 * V2.2 이상에 배치된(또는 업그레이드된) 인스턴스의 경우에는 최대 10개의 클러스터를 추가할 수 있습니다.
-* V2.1 이하에 배치된 인스턴스의 경우 최대 5개의 클러스터를 추가할 수 있습니다. 
+* V2.1 이하에 배치된 인스턴스의 경우 최대 5개의 클러스터를 추가할 수 있습니다.
 
 ### 시스템 설정
 
@@ -47,7 +47,7 @@ vCenter Server 인스턴스에 클러스터를 추가할 때는 다음 설정을
 
 ### Bare Metal Server 설정
 
-**Skylake**, **SAP 인증**, **Broadwell** 또는 **사전 구성됨**을 선택할 수 있습니다.
+**Skylake**, **SAP 인증** 또는 **Broadwell**을 선택할 수 있습니다.
 
 #### Skylake
 
@@ -82,24 +82,15 @@ vCenter Server 인스턴스에 클러스터를 추가할 때는 다음 설정을
 | 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 
-#### 사전 구성됨
-
-**사전 구성됨** 설정의 경우에는 자신의 요구사항에 따라 **Bare Metal Server 구성**을 선택할 수 있습니다.
-* 소형(듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz / 128GB RAM / 2개의 디스크)
-* 중형(듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz / 256GB RAM / 2개의 디스크)
-* 대형(듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz / 512GB RAM / 2개의 디스크)
-
 #### Bare Metal Server 수
 
 클러스터에는 최소한 두 개 이상의 {{site.data.keyword.baremetal_short}}가 필요합니다.
 
 V2.1 이하에 배치되는 vCenter Server 인스턴스의 경우, 클러스터에 대해 최대 59개의 {{site.data.keyword.baremetal_short}}를 추가할 수 있습니다. 한 번에 1 - 59개의 ESXi 서버를 추가할 수 있습니다.
 
-V2.0 이하에 배치된 vCenter Server 인스턴스의 경우, 클러스터에 대해 최대 32개의 {{site.data.keyword.baremetal_short}}를 추가할 수 있습니다. 한 번에 추가할 수 있는 {{site.data.keyword.baremetal_short}}의 수는 다음과 같습니다.
-* **소형**, **중형** 및 **대형** Bare Metal Server 구성의 경우, 한 번에 1 - 10개의 ESXi 서버를 추가할 수 있습니다.
-* **Skylake** 또는 **Broadwell** Bare Metal Server 구성의 경우, 한 번에 1 - 20개의 ESXi 서버를 추가할 수 있습니다. 
+V2.0 이하에 배치된 vCenter Server 인스턴스의 경우, 클러스터에 대해 최대 32개의 {{site.data.keyword.baremetal_short}}를 추가할 수 있습니다. **Skylake**, **SAP 인증** 및 **Broadwell** Bare Metal Server 구성의 경우에는 한 번에 1 - 20개의 서버를 추가할 수 있습니다.
 
-배치 후 최대 네 개의 추가 클러스터를 작성할 수 있습니다. VMware vSAN 스토리지를 사용하는 **Skylake** 또는 **Broadwell** Bare Metal Server 구성을 선택하는 경우 초기 클러스터 및 사후 배치 클러스터 둘 다에 대해 네 개의 서버가 필요합니다. 
+배치 후 최대 네 개의 추가 클러스터를 작성할 수 있습니다. VMware vSAN 스토리지를 사용하는 **Skylake** 또는 **Broadwell** Bare Metal Server 구성을 선택하는 경우 초기 클러스터 및 사후 배치 클러스터 둘 다에 대해 네 개의 서버가 필요합니다.
 
 ### 스토리지 설정
 
@@ -169,7 +160,6 @@ V2.0 이하에 배치된 vCenter Server 인스턴스의 경우, 클러스터에 
 6. 베어메탈 구성을 완료하십시오.
    * **Skylake** 또는 **Broadwell**을 선택한 경우 **CPU 모델**, **RAM** 크기 및 **{{site.data.keyword.baremetal_short}} 수**를 지정하십시오.
    * **SAP 인증**을 선택한 경우 CPU 모델을 지정하십시오.
-   * **사전 구성됨**을 선택한 경우 **Bare Metal Server 구성** 및 **{{site.data.keyword.baremetal_short}} 수**를 지정하십시오. 스토리지 솔루션으로 vSAN을 사용할 계획인 경우 최소 네 개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
 7. 스토리지 구성을 완료하십시오.
   * **vSAN 스토리지**를 선택하는 경우 용량 및 캐시 디스크의 디스크 유형과 디스크 수 및 vSAN License 에디션을 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
   * **NFS 스토리지**를 선택하고 모든 파일 공유에 동일한 설정을 추가하여 구성하려는 경우에는 **공유 수**, **크기** 및 **성능**을 지정하십시오.
