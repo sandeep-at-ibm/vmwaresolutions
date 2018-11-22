@@ -63,7 +63,7 @@ vCenter Server with Hybridity Bundle インスタンスのプロパティーの�
 | ID | インスタンスの ID。 |
 | ロケーション | インスタンスがホストされている {{site.data.keyword.CloudDataCent_notm}}。 |
 | 現行バージョン | {{site.data.keyword.vmwaresolutions_short}} の現行バージョン。 |
-| vCenter バージョン | VMware vCenter Server with Hybridity Bundle のバージョン。<br><br>{{site.data.keyword.vmwaresolutions_short}} コンソールと VMware vSphere Web Client では、vCenter Server バージョンの表示が若干異なります。 どちらも正しい表示です。{:note} |
+| vCenter バージョン | VMware vCenter Server with Hybridity Bundle のバージョン。<br><br>**注:** {{site.data.keyword.vmwaresolutions_short}} コンソールと VMware vSphere Web Client では、vCenter Server バージョンの表示が若干異なります。 どちらも正しい表示です。 |
 | NSX for vSphere | VMware NSX for vSphere 製品のバージョン。 |
 | NSX ライセンス・エディション | VMware NSX ライセンスのバージョンとエディション。 |
 | DNS、ルート・ドメイン | ルート・ドメイン・ネームは、DNS (ドメイン・ネーム・システム) ドメイン・ネームと Microsoft Active Directory (AD) フォレストのルート名です。 |

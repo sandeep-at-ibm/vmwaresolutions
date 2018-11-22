@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware Federal インスタンスの容量の拡張と縮小
 
@@ -14,7 +18,8 @@ ESXi サーバーを追加または削除して、VMware Federal インスタン
 
 プライマリー・クラスターのストレージが vSAN である場合は、デプロイメント後に 1 つ以上の ESXi サーバーを追加して、クラスターのストレージ容量を増加できます。
 
-**注:** この機能は、保護されていない VMware Federal インスタンスでのみ使用できます。
+この機能は、保護されていない VMware Federal インスタンスでのみ使用できます。
+{:note}
 
 ## VMware Federal インスタンスへの ESXi サーバーの追加
 
@@ -61,7 +66,8 @@ ESXi サーバーを追加または削除して、VMware Federal インスタン
 2. ESXi サーバーを削除する要求の処理中であることが、E メールで通知されます。 コンソールで、ESXi サーバーに関連付けられたクラスターの状況が、**「変更中」**に変更されます。
 3. {{site.data.keyword.cloud_notm}} インフラストラクチャーの請求サイクル (通常 30 日) の最後に、{{site.data.keyword.cloud_notm}} インフラストラクチャーによって ESXi サーバーに全面的な再利用処理が施されます。
 
-   **注意:** 削除した ESXi サーバーについては、 {{site.data.keyword.cloud_notm}} インフラストラクチャーの請求サイクルが終了するまで課金されます。
+   削除した ESXi サーバーについては、{{site.data.keyword.cloud_notm}} インフラストラクチャーの請求サイクルが終了するまで課金されます。
+   {:note}
 
 ### 関連リンク
 

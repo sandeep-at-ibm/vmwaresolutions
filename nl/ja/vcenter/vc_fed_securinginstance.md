@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware Federal インスタンスの保護
 
@@ -27,7 +31,8 @@ lastupdated: "2018-09-27"
 4. **「インスタンスを保護」**をクリックします。
 5. **「OK」**をクリックして、インスタンスを自動化から切り離すことを確認します。
 
-  **注:** この手順を完了する前に、『**始める前に**』セクションにある情報を確認してください。
+  この手順を完了する前に、**『始める前に』**セクションにある情報を確認してください。
+  {:note}
 
 6. 公開される管理サービス VMware NSX Edge Services Gateway (ESG) をご使用の環境から削除します。オプションで、自動化時にデプロイされるクライアント管理の ESG を削除します。
 7. IBM 自動化で使用されるすべてのアカウントのパスワードまたはキーをリセットします。 詳しくは、「[How can I secure my environment to remove access by IBM automation and support?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)」を参照してください。

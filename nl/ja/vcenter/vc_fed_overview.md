@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware Federal on IBM Cloud の概要
 
@@ -14,7 +18,8 @@ VMware Federal on {{site.data.keyword.cloud}} では、基本 vCenter Server イ
 
 vCenter Server on {{site.data.keyword.cloud_notm}} および vCenter Server アーキテクチャーについて詳しくは、[vCenter Server の概要](vc_vcenterserveroverview.html)を参照してください。
 
-**注意:** VMware Federal on {{site.data.keyword.cloud_notm}} は、vCenter Server オファリングの一部のみを提供しています。 マルチサイト構成、事前構成型の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー、ライセンス持ち込み (BYOL)、アドオン・サービスの注文のオプションはサポートされません。
+VMware Federal on {{site.data.keyword.cloud_notm}} は、vCenter Server オファリングの一部のみを提供しています。 マルチサイト構成、ライセンス持ち込み (BYOL)、アドオン・サービスの注文のオプションはサポートされません。
+{:note}
 
 ## VMware Federal on IBM Cloud インスタンスの技術仕様
 
@@ -29,7 +34,8 @@ vCenter Server on {{site.data.keyword.cloud_notm}} および vCenter Server ア�
 
 NFS ストレージ構成の場合、推奨する{{site.data.keyword.baremetal_short}}の数はデフォルトの 3 です。
 
-**注:** vSAN ストレージを選択する構成には、4 つの{{site.data.keyword.baremetal_short}}が必要です。
+vSAN ストレージを選択する構成には、4 つの{{site.data.keyword.baremetal_short}}が必要です。
+{:note}
 
 ### ネットワーキング
 
@@ -39,10 +45,12 @@ NFS ストレージ構成の場合、推奨する{{site.data.keyword.baremetal_s
 *  以下の 2 つの VMware NSX Edge Services Gateway
   * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX Edge Services Gateway (ESG)。これは、管理ネットワーキング・トポロジーの一部として IBM がデプロイします。 この ESG は、IBM 管理仮想マシンが、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[ユーザー管理の ESG を使用するためのネットワークの構成](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)を参照してください。
 
-    **重要:** ユーザーは、この ESG にアクセスすることはできず、使用できません。 これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなります。
+    ユーザーは、この ESG にアクセスすることはできず、使用できません。 これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなります。
+    {:important}
   * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。これは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-) を参照してください。
 
-  **注意:** アウトバウンド HTTPS 管理トラフィック用の VMware NSX Edge Services Gateway (ESG) は、デプロイされた VMware Federal インスタンスを保護するアクションの一環として削除されます。詳しくは、[VMware Federal インスタンスの保護](vc_fed_securinginstance.html)を参照してください。
+  アウトバウンド HTTPS 管理トラフィック用の VMware NSX Edge Services Gateway (ESG) は、デプロイされた VMware Federal インスタンスを保護するアクションの一環として削除されます。 詳しくは、[VMware Federal インスタンスの保護](vc_fed_securinginstance.html)を参照してください。
+  {:note}
 
 ### 仮想サーバー・インスタンス
 
@@ -94,7 +102,8 @@ vCenter Server 拡張ノードごとに、{{site.data.keyword.cloud_notm}} ア�
 * VMware NSX Service Providers Edition (Base、Advanced、Enterprise) 6.4 1 つ
 * (vSAN クラスターの場合) VMware vSAN Advanced または Enterprise 6.6
 
-**重要:** {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。 {{site.data.keyword.vmwaresolutions_short}} コンソール以外でコンポーネントを変更した場合、変更はコンソールと同期されません。
+{{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。 {{site.data.keyword.vmwaresolutions_short}} コンソール以外でコンポーネントを変更した場合、変更はコンソールと同期されません。
+{:important}
 
 **注意:** インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
 *  コンポーネントの追加、変更、返却、または削除

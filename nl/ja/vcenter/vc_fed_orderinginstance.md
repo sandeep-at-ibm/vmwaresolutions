@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware Federal インスタンスの注文
 
 ワークロードのニーズに合わせて最適化できる、柔軟でカスタマイズ可能な VMware 仮想化プラットフォームをデプロイするには、VMware Federal インスタンスを注文します。 VMware Federal インスタンスを使用すると、開かれた管理接続から切り離してデプロイ済みインスタンスを保護することができます。
 
-**注:** 現時点では、VMware Federal on {{site.data.keyword.cloud}} をサポートしているのは vCenter Server インスタンスのみです。
+現時点では、VMware Federal on {{site.data.keyword.cloud}} をサポートしているのは vCenter Server インスタンスのみです。
+{:note}
 
 ## VMware Federal インスタンスを注文するための要件
 
@@ -32,7 +37,8 @@ lastupdated: "2018-10-29"
   | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。ここで `<n>` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |  
   | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大長は 50 文字です。 |
 
-**重要:** インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
+インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
+{:important}
 
 ## システム設定
 
@@ -66,7 +72,7 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 
 ## ベア・メタル・サーバーの設定
 
-ベアメタルの設定は、選択したデータ・センターやベアメタル・サーバーの構成に基づきます。現時点では、事前構成型の構成を選択するオプションはサポートされていません。
+ベアメタルの設定は、選択したデータ・センターやベアメタル・サーバーの構成に基づきます。
 
 ### データ・センターの場所
 
@@ -119,7 +125,8 @@ ESXi サーバーの数は、2 台から 20 台の範囲内で構成できます
 
 **「NFS Storage」**を選択する場合は、インスタンスにファイル・レベルの共有ストレージを追加し、すべての共有で同じ設定を使用することも、ファイル共有ごとに別々の構成設定を指定することもできます。 以下の NFS オプションを指定します。
 
-**注**: ファイル共有の数は 1 から 32 までの範囲で指定する必要があります。
+ファイル共有の数は 1 から 32 までの範囲で指定する必要があります。
+{:note}
 
 * **Configure shares individually**: ファイル共有ごとに異なる構成設定を指定する場合に選択します。
 * **Number of Shares**: どのファイル共有でも同じ構成設定を使用する場合に、追加する NFS 共有ストレージのファイル共有の数を指定します。
@@ -161,7 +168,8 @@ ESXi サーバーの数は、2 台から 20 台の範囲内で構成できます
 * 最後の文字列には、英字しか使用できません。
 * 最後の文字列の長さは、2 文字から 24 文字までの範囲でなければなりません。
 
-**注:** ホストと VM の完全修飾ドメイン・ネーム (FQDN) の最大長は 50 文字です。 この最大長に対応するドメイン・ネームにする必要があります。
+ホストと VM の完全修飾ドメイン・ネーム (FQDN) の最大長は 50 文字です。 この最大長に対応するドメイン・ネームにする必要があります。
+{:note}
 
 ### DNS 構成
 
@@ -170,7 +178,8 @@ ESXi サーバーの数は、2 台から 20 台の範囲内で構成できます
 * **Active Directory/DNS 用の単一のパブリック Windows VSI**: Microsoft Active Directory (AD) 用の単一の Microsoft Windows Server VSI。ホストと仮想マシンが登録されたインスタンスの DNS として機能します。これがデプロイされて参照可能になります。
 * **管理クラスター上の高可用性構成の 2 つの専用 Windows Server VM**: V2.3 以降のリリースでは、2 つの Microsoft Windows 仮想マシンがデプロイされるので、セキュリティーと堅牢性が向上します。
 
-**重要:** 2 つの Microsoft Windows 仮想マシンを使用するようにインスタンスを構成する場合は、2 つの Microsoft Windows Server 2012 R2 ライセンスを提供する必要があります。 Microsoft Windows Server 2012 R2 Standard エディションのライセンスと Microsoft Windows Server 2012 R2 Datacenter エディションのライセンスのいずれかまたは両方を使用してください。
+2 つの Microsoft Windows 仮想マシンを使用するようにインスタンスを構成する場合は、2 つの Microsoft Windows Server 2012 R2 ライセンスを提供する必要があります。 Microsoft Windows Server 2012 R2 Standard エディションのライセンスと Microsoft Windows Server 2012 R2 Datacenter エディションのライセンスのいずれかまたは両方を使用してください。
+{:important}
 
 現時点では、各ライセンスは単一の物理サーバーにのみ割り当てることが可能で、最大 2 つの物理プロセッサーをカバーします。 1 つの Standard エディション・ライセンスを使用すると、2 プロセッサーのサーバーで 2 台の仮想化 Microsoft Windows 仮想マシンを実行できます。 したがって、ライセンスは 2 つ必要になります。2 つの異なるホストに 2 つの Microsoft Windows 仮想マシンがデプロイされるからです。
 
@@ -217,8 +226,9 @@ Windows ライセンスの注文方法について詳しくは、[Windows Server
 
 注文した VMware Federal インスタンスを表示し、管理して、保護します。
 
-**重要:** {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントの管理には、{{site.data.keyword.vmwaresolutions_short}} コンソールだけを使用する必要があります。{{site.data.keyword.slportal}}などのコンソール以外の手段は使用しないでください。
+{{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。
 {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されません。
+{:important}
 
 **注意:** インスタンスを注文したときに {{site.data.keyword.cloud_notm}} アカウントにインストールされた {{site.data.keyword.vmwaresolutions_short}} コンポーネントを、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で管理すると、環境が不安定になる可能性があります。 これには以下の管理アクティビティーが該当します。
 *  コンポーネントの追加、変更、返却、または削除

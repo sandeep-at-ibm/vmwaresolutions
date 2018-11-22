@@ -27,7 +27,7 @@ lastupdated: "2018-10-29"
 * vSAN ストレージのある vCenter Server インスタンスには、少なくとも 4 つの ESXi サーバーが必要です。
 * V2.0 以前にデプロイされた vCenter Server インスタンスの場合、クラスターごとに、ESXi サーバーを最大 32 個まで配置して拡張できます。 一度に追加できる{{site.data.keyword.baremetal_short}}の数は、以下のとおりです。
    * **「スモール」**、**「ミディアム」**、**「ラージ」**の各構成では、一度に 1 から 10 個の ESXi サーバーを追加できます。
-   * **「Skylake」**構成と**「Broadwell」**構成の場合、一度に 1 台から 20 台までの ESXi サーバーを追加できます。最小限の ESXi サーバーについて詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
+   * **「Skylake」**構成と**「Broadwell」**構成の場合、一度に 1 台から 20 台までの ESXi サーバーを追加できます。 最小限の ESXi サーバーについて詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
 
 ## ESXi サーバーを追加する手順
 

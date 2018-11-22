@@ -70,7 +70,7 @@ vCenter Server with Hybridity Bundle インスタンスには、以下のコン�
 
 ### ベア・メタル・サーバー
 
-vCenter Server with Hybridity Bundle インスタンスの注文では、**Skylake** または **Broadwell** の{{site.data.keyword.baremetal_short}}を 4 台注文します。次の CPU モデルが用意されています。
+vCenter Server with Hybridity Bundle インスタンスの注文では、**Skylake** または **Broadwell** の{{site.data.keyword.baremetal_short}}を 4 台注文します。 次の CPU モデルが用意されています。
   * 2-CPU Intel Skylake 世代 (Intel Xeon 4100/5100/6100 シリーズ)
   * 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600 v4 シリーズ)
 
