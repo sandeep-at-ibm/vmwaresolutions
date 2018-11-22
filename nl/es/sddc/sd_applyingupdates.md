@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Aplicación de actualizaciones a instancias de Cloud Foundation
 
@@ -16,7 +18,8 @@ La consola de {{site.data.keyword.vmwaresolutions_full}} detecta y muestra peri�
 
 Una actualización disponible es un registro de la lista de actualizaciones de software de la instancia, que se puede aplicar de inmediato o se puede planificar para un momento posterior. La actualización es un paquete que a su vez contiene uno o varios paquetes para actualizar los componentes de gestión de IBM y los componentes de VMware.
 
-A partir de la V2.5, las actualizaciones de IBM CloudDriver ya no aparecen listadas porque se han habilitado las actualizaciones automáticas. 
+A partir de la V2.5, las actualizaciones de IBM CloudDriver ya no aparecen listadas porque se han habilitado las actualizaciones automáticas. Las acciones como la adición de un host, la adición de un clúster y la solicitud de un servicio actualizan automáticamente la instancia a la última versión. Para obtener más información sobre las actualizaciones automáticas, consulte la sección *Resiliencia de IBM CloudDriver* en las [Notas del release de V2.5](../vmonic/relnotes_v25.html).
+{:note}
 
 ## Antes de empezar
 

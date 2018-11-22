@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -61,13 +61,11 @@ Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se alojará la 
 
 ### Skylake
 
-Cuando selecciona **Skylake**, puede elegir la combinación de CPU y RAM según sus necesidades.
-
-Seleccione el modelo de CPU y la RAM del servidor nativo.
+Si selecciona **Skylake**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades.
 
 Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} Skylake
 
-| Opciones de modelo de CPU        | Opciones de RAM       |
+| Opciones de modelo de CPU  | Opciones de RAM       |
 |:------------- |:------------- |
 | Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
@@ -75,25 +73,15 @@ Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} Skylake
 
 ### Broadwell
 
-Cuando selecciona **Broadwell**, puede elegir la combinación de CPU y RAM según sus necesidades.
+Si selecciona **Broadwell**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades.
 
-Seleccione el modelo de CPU y la RAM del servidor nativo.
-
-Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
+Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-
-### Preconfigurado
-
-Cuando selecciona **Preconfigurado**, no puede cambiar los valores de CPU o RAM.
-
-En función de sus requisitos, seleccione una configuración de servidor nativo:
-  * Pequeño (Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz / 128 GB de RAM / 12 unidades)
-  * Grande (Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz / 512 GB de RAM / 12 unidades)
 
 ### Número de servidores nativos
 
@@ -102,10 +90,6 @@ Una instancia de Cloud Foundation consta de cuatro servidores nativos en el desp
 ## Valores de almacenamiento
 
 Para las instancias de Cloud Foundation, solo puede solicitar almacenamiento VMware vSAN.
-
-Cuando selecciona una configuración de servidor nativo **Preconfigurado**, los valores de almacenamiento están estandarizados y no se pueden cambiar:
-  * Para la configuración de servidor nativo **Pequeño**, se solicitan dos unidades de disco de 1,9 TB SSD SED.
-  * Para la configuración de servidor nativo **Grande**, se solicitan cuatro unidades de disco de 3,8 TB SSD SED.
 
 Cuando selecciona la configuración de servidor nativo **Skylake** o **Broadwell**, puede personalizar el almacenamiento vSAN para la instancia. Especifique los siguientes valores de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
@@ -148,7 +132,7 @@ La longitud máxima del FQDN (nombre de dominio completo) para hosts y máquinas
 
 El nombre de dominio y la etiqueta de subdominio se utilizan para generar el nombre de usuario y los nombres de servidor de la instancia, tal como se muestra en la tabla siguiente.
 
-Tabla 2. Formato de valor de nombres de usuario, nombres de dominio y nombres de servidor
+Tabla 3. Formato de valor de nombres de usuario, nombres de dominio y nombres de servidor
 
 | Nombre        | Formato del valor      |
   |:------------- |:------------- |
@@ -209,12 +193,10 @@ En función de la configuración seleccionada para la instancia y los servicios 
    *  Para utilizar su propia licencia, seleccione **Proporcionaré** y escriba la clave de la licencia.  
 6. Complete los valores del servidor nativo:
    1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} que va a alojar la instancia.
-   2. Seleccione la configuración del servidor nativo.
-      * Si seleccione **Skylake** o **Broadwell**, especifique el modelo de CPU y el tamaño de RAM.
-      * Si selecciona **Preconfigurado**, elija una configuración de **Pequeño** y **Grande**.
+   2. Seleccione la configuración de servidor nativo y luego especifique el modelo de CPU y el tamaño de RAM.
 7. Complete la configuración del almacenamiento.
-   * Si ha seleccionado **Skylake** o **Broadwell** para la configuración de servidor nativo, especifique los tipos de disco para la capacidad vSAN y los discos de memoria caché, y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
-   * Si ha seleccionado **Preconfigurado** para la configuración de servidor nativo, los valores de almacenamiento para las configuraciones de servidor nativo **Pequeño** y **Grande** estandarizados no se pueden cambiar.
+   1. Especifique los tipos de disco para la capacidad de vSAN y los discos de memoria caché y el número de discos.
+   2. Si desea más almacenamiento, marque el recuadro de selección **Alto rendimiento con Intel Optane**.
 8. Complete los valores de interfaz de red:
    1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio raíz. Para una instancia secundaria, el nombre de dominio se rellena automáticamente.
    2. Seleccione los valores de VLAN:
