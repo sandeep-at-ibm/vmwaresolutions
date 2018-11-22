@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -22,14 +22,15 @@ vCenter Server with Hybridity Bundle インスタンスで使用できるサー�
 
 表 1. vCenter Server with Hybridity Bundle インスタンスに使用可能なサービス
 
-| サービス名 | サービスのバージョン | インスタンスのバージョン |
+| サービス名 | 現在のサービスのバージョン | インスタンスのバージョン |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1 | V1.9 以降 |
+| [F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1.1.2 | V1.9 以降 |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | 300 シリーズ | V1.8 以降 |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 6.0.3 | V2.0 以降 |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 以降 |
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | V2.3 以降 |
 | [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 以降 |
+| [{{site.data.keyword.cloud_notm}} Private Hosted](../services/icp_overview.html) | 3.1 | V2.7 以降 |
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.1 パッチ 1 | V2.2 以降 |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 以降 |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                           | 9.5u3 | V1.8 以降 |

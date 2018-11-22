@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -47,11 +47,11 @@ vCenter Server インスタンスにクラスターを追加するときには�
 
 ### ベア・メタル・サーバーの設定
 
-**「Skylake」**、**「SAP 認定」**、**「Broadwell」**、または**「事前構成型」**のいずれかを選択できます。
+**「Skylake」**、**「SAP 認定」**、または**「Broadwell」**のいずれかを選択できます。
 
 #### Skylake
 
-**「Skylake」**設定の場合、**「CPU モデル」**と**「RAM」**には複数のオプションがあります。利用できるオプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
+**「Skylake」**設定の場合、**「CPU モデル」**と**「RAM」**には複数のオプションがあります。 利用できるオプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
 
 表 1. Skylake {{site.data.keyword.baremetal_short}}のオプション
 
@@ -72,7 +72,7 @@ vCenter Server インスタンスにクラスターを追加するときには�
 
 #### Broadwell
 
-**「Broadwell」**設定の場合、**「CPU モデル」**と**「RAM」**には複数のオプションがあります。利用できるオプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
+**「Broadwell」**設定の場合、**「CPU モデル」**と**「RAM」**には複数のオプションがあります。 利用できるオプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
 
 表 2. Broadwell {{site.data.keyword.baremetal_short}}のオプション
 
@@ -82,22 +82,13 @@ vCenter Server インスタンスにクラスターを追加するときには�
 | デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 
-#### 事前構成型
-
-**「事前構成型」**設定の場合は、要件に応じて次の**ベア・メタル・サーバー構成**を選択できます。
-* スモール (Dual Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz / 128 GB RAM / 2 ディスク)
-* ミディアム (デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz / 256 GB RAM / 2 ディスク)
-* ラージ (Dual Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz / 512 GB RAM / 2 ディスク)
-
 #### ベア・メタル・サーバーの数
 
 クラスターには 2 台以上の{{site.data.keyword.baremetal_short}}が必要です。
 
 V2.1 以降にデプロイされた vCenter Server インスタンスの場合、1 つのクラスターに最大 59 台の{{site.data.keyword.baremetal_short}}を追加できます。 一度に 1 台から 59 台の ESXi サーバーを追加できます。
 
-V2.0 以前にデプロイされた vCenter Server インスタンスの場合、1 つのクラスターに最大 32 台の{{site.data.keyword.baremetal_short}}を追加できます。 一度に追加できる{{site.data.keyword.baremetal_short}}の数は、以下のとおりです。
-* **「スモール」**、**「ミディアム」**、**「ラージ」**の各ベア・メタル・サーバー構成では、一度に 1 から 10 個の ESXi サーバーを追加できます。
-* **「Skylake」**または**「Broadwell」**のベアメタル・サーバー構成の場合、一度に 1 台から 20 台までの ESXi サーバーを追加できます。
+V2.0 以前にデプロイされた vCenter Server インスタンスの場合、1 つのクラスターに最大 32 台の{{site.data.keyword.baremetal_short}}を追加できます。 **Skylake**、**SAP 認定**、および **Broadwell** のベア・メタル・サーバー構成に対して、一度に 1 台から 20 台の ESXi サーバーを追加できます。
 
 デプロイメント後に、最大 4 つのクラスターを追加で作成できます。 **「Skylake」**または**「Broadwell」**のベアメタル・サーバー構成と VMware vSAN ストレージを選択した場合は、初期クラスターとデプロイメント後のクラスターの両方に 4 つのサーバーが必要です。
 
@@ -169,7 +160,6 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
 6. ベア・メタル構成を次の手順で実行します。
    * **「Skylake」**または**「Broadwell」**を選択した場合は、**CPU モデル**、**RAM** 量、**{{site.data.keyword.baremetal_short}}の数**を指定します。
    * **「SAP 認定」**を選択した場合は、CPU モデルを指定します。
-   * **「事前構成型」**を選択した場合は、**ベア・メタル・サーバーの構成**および**{{site.data.keyword.baremetal_short}}の数**を指定します。 vSAN をストレージ・ソリューションとして使用する場合は、4 台以上の{{site.data.keyword.baremetal_short}}が必要です。
 7. ストレージ構成を次の手順で実行します。
   * **「vSAN Storage」**を選択した場合は、容量ディスクおよびキャッシュ・ディスクのディスク・タイプ、ディスク数、vSAN ライセンス・エディションを指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
   * **「NFS Storage」**を選択し、すべてのファイル共有に同じ設定を追加して構成する場合は、**「Number of Shares」**、**「Size」**、**「Performance」**を指定します。

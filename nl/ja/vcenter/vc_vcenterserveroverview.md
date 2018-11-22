@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -63,21 +63,15 @@ vCenter Server インスタンスには、以下のコンポーネントが含�
 ### ベア・メタル・サーバー
 
 以下のいずれかの構成で{{site.data.keyword.baremetal_short}}を 3 つ以上注文できます。
-* **「Skylake」**または**「Broadwell」**: 選択した CPU モデルと RAM サイズの{{site.data.keyword.baremetal_short}}。  
-  * 2-CPU Intel Skylake 世代 (Intel Xeon 4100/5100/6100 シリーズ)
-  * 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600 v4 シリーズ)
-
-     vSAN ストレージを使用する計画がある場合は、構成に 4 つの{{site.data.keyword.baremetal_short}}が必要です。
-     {:note}
+* **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。  
 * **SAP 認定**: 選択した CPU モデルを使用した{{site.data.keyword.baremetal_short}}。
   * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 192 GB RAM
   * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 384 GB RAM
   * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 768 GB RAM
-* **事前構成型**: 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600 v4 シリーズ)
-  * **スモール** (Dual Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz / 128 GB RAM / 2 ディスク)
-  * **ミディアム** (デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz / 256 GB RAM / 2 ディスク)
-  * **ラージ** (Dual Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz / 512 GB RAM / 2 ディスク)
-
+* **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600 v4 シリーズ)。  
+     vSAN ストレージを使用する計画がある場合は、構成に 4 つの{{site.data.keyword.baremetal_short}}が必要です。
+     {:note}
+     
 ### ネットワーキング
 
 以下のネットワーキング・コンポーネントが注文されます。
@@ -87,7 +81,7 @@ vCenter Server インスタンスには、以下のコンポーネントが含�
 *  以下の 2 つの VMware NSX Edge Services Gateway
   * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX Edge Services Gateway (ESG)。これは、管理ネットワーキング・トポロジーの一部として IBM がデプロイします。 この ESG は、IBM 管理仮想マシンが、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[ユーザー管理の ESG を使用するためのネットワークの構成](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)を参照してください。
 
-    この ESG は **mgmt-nsx-edge** という名前で、ユーザーはこの ESG にアクセスできず、使用できません。これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなる可能性があります。
+    この ESG は **mgmt-nsx-edge** という名前で、ユーザーはこの ESG にアクセスできず、使用できません。 これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなる可能性があります。
     {:important}
   * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。 このゲートウェイは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-) を参照してください。
 
@@ -153,7 +147,7 @@ vCenter Server 拡張ノードごとに、{{site.data.keyword.cloud_notm}} ア�
 *  ESXi サーバーの追加または削除によるインスタンス容量の拡張または縮小
 *  コンポーネントのパワーオフ
 *  サービスの再始動
-   {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
+   {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
    {:important}
 
 ### 関連リンク
