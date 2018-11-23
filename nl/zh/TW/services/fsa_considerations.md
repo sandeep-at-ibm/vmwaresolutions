@@ -18,7 +18,8 @@ FortiGate Security Appliance on {{site.data.keyword.cloud}} 服務會以高可�
 
 您可以透過 SSH 使用 FortiOS Web Client 或指令行介面，來管理此服務。
 
-只有在 1.8 版或更新版本中部署的實例，才能使用此服務。{:note}
+只有在 1.8 版或更新版本中部署的實例，才能使用此服務。
+{:note}
 
 ## FortiGate Security Appliance on IBM Cloud 的技術規格
 

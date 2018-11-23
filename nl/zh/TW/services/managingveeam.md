@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -45,7 +45,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 服務可以配置成使用 Veeam 主�
 
 ### 針對只部署專用網路的實例
 
-如果 Veeam 服務安裝在只有專用網路的實例上，由於 Veeam 虛擬機器 (VM) 沒有配置公用網路存取權，所以您無法使用 Veeam軟體本身來檢查或下載更新項目。您只能從 Veeam 網站下載更新項目，將其傳送至 Veeam VM，然後再加以安裝。
+如果 Veeam 服務安裝在只有專用網路的實例上，則因為 Veeam VSI 未配置任何公用網路存取權，所以您無法使用 Veeam 軟體本身來檢查或下載更新項目。您只能從 Veeam 網站下載更新項目，將其傳送至 Veeam VM，然後再加以安裝。
 
 ## 更新 Veeam 授權
 

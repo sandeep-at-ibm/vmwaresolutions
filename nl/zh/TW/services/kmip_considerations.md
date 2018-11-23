@@ -16,7 +16,8 @@ lastupdated: "2018-10-26"
 
 KMIP for VMware on {{site.data.keyword.cloud}} 服務提供全年無休高可性服務，以管理 {{site.data.keyword.cloud_notm}} 中 VMware 所使用的加密金鑰。此服務提供運行環境功能，以容許客戶建立、擷取、啟動、撤銷及毀損加密金鑰。同時提供管理功能來維護用戶端認證與加密金鑰之間的關聯。
 
-只有在 2.2 版或更新版本中部署的實例，才能使用此服務。{:note}
+只有在 2.2 版或更新版本中部署的實例，才能使用此服務。
+{:note}
 
 ## KMIP for VMware on IBM Cloud 的技術規格
 
