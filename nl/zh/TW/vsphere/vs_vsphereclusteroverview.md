@@ -26,7 +26,8 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 
 檢閱 VMware vSphere on {{site.data.keyword.cloud_notm}} 的元件。
 
-標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。{:note}
+標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+{:note}
 
 ### VMware 元件
 
@@ -66,7 +67,8 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 
   此外，還為每部主機訂購 2 個 960 GB 的快取磁碟。
 
-  當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至資料中心時，就會予以支援。{:note}
+  當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至資料中心時，就會予以支援。
+  {:note}
 * 「高效能 Intel Optane」選項，提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。這個選項取決於 CPU 型號。
 
 ## vSphere 叢集擴充節點的技術規格

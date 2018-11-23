@@ -28,7 +28,8 @@ lastupdated: "2018-10-29"
 2. 在 **VMware vSphere on IBM Cloud** 頁面上，按一下**建立**。  
    請確定您位於**建立新項目**標籤，並在**叢集配置**清單中顯示**新叢集**。
 3. 使用與現有叢集相同的設定來建立叢集，而現有叢集是在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外所建立。如需相關資訊，請參閱[訂購新的 vSphere 叢集](vs_orderinginstances.html)。  
-對於網路介面，若要擴充在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外建立的叢集，您必須為叢集選取現有的 VLAN。{:note}
+   對於網路介面，若要擴充在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外建立的叢集，您必須為叢集選取現有的 VLAN。
+   {:note}
 4. 在**訂單摘要**窗格中，驗證叢集配置，然後按一下**儲存配置**。   
 5. 在**開始使用**頁面上，按一下 **VMware vSphere on IBM Cloud** 卡片。
 6. 在 **VMware vSphere on IBM Cloud** 頁面上，按一下**建立**。
@@ -41,7 +42,8 @@ lastupdated: "2018-10-29"
 
 叢集的部署會自動啟動，且您會收到電子郵件確認，指出正在處理該訂單。當叢集已備妥可供使用時，會透過電子郵件通知您。
 
-vSphere 叢集不會連同 vCenter Server 實例及 Cloud Foundation 實例顯示在**已部署的實例**頁面上。{:note}
+vSphere 叢集不會連同 vCenter Server 實例及 Cloud Foundation 實例顯示在**已部署的實例**頁面上。
+{:note}
 
 ### 相關鏈結
 

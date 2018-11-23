@@ -34,7 +34,8 @@ lastupdated: "2018-10-29"
    * 若要將配置儲存為範本而不下訂單，請按一下**儲存配置**。
    * 若要下訂單，請確定要收費的帳戶正確，請檢閱並接受條款，然後按一下**佈建**。
 
-   僅安裝 {{site.data.keyword.baremetal_short}}。您負責在叢集部署之後安裝及配置各種元件，例如 VMware vCenter、VMware NSX、VMware vSAN。{:note}
+   僅安裝 {{site.data.keyword.baremetal_short}}。您負責在叢集部署之後安裝及配置各種元件，例如 VMware vCenter、VMware NSX、VMware vSAN。
+   {:note}
 
 ## 結果
 
@@ -42,7 +43,8 @@ lastupdated: "2018-10-29"
 
 如果您已下訂單，則會自動啟動叢集的部署。您會收到電子郵件確認，指出正在處理該訂單。當叢集已備妥可供使用時，也會透過電子郵件通知您。
 
-vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。{:note}
+vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。
+{:note}
 
 ### 相關鏈結
 
