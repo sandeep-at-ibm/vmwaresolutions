@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -45,7 +45,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 服务可以配置为使用 Veeam 控�
 
 ### 对于仅使用专用网络部署的实例
 
-如果 Veeam 服务安装在仅使用专用网络的实例上，那么由于 Veeam 虚拟机 (VM) 配置为不具有公用网络访问权，因此无法使用 Veeam 软件本身来检查或下载更新。您必须改为从 Veeam Web 站点下载更新，将其传输到 Veeam VM，然后安装这些更新。
+如果 Veeam 服务安装在仅使用专用网络的实例上，那么由于 Veeam VSI 配置为不具有公用网络访问权，因此无法使用 Veeam 软件本身来检查或下载更新。您必须改为从 Veeam Web 站点下载更新，将其传输到 Veeam VM，然后安装这些更新。
 
 ## 更新 Veeam 许可证
 

@@ -31,7 +31,7 @@ lastupdated: "2018-10-29"
    对于网络接口，要扩展在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部创建的集群，必须选择集群的现有 VLAN。
    {:note}
 4. 在**订单摘要**窗格中，验证集群配置，然后单击**保存配置**。   
-5. 在**入门**页面上，单击 **VMware vSphere on IBM Cloud** 卡。
+5. 在**开始**页面上，单击 **VMware vSphere on IBM Cloud** 卡。
 6. 在 **VMware vSphere on IBM Cloud** 页面上，单击**创建**。
 7. 单击**扩展现有**选项卡。从**集群配置**列表中，选择最近创建的集群。
 8. 在 **{{site.data.keyword.baremetal_short}}** 部分中，指定要添加到集群的 {{site.data.keyword.baremetal_short}} 数。

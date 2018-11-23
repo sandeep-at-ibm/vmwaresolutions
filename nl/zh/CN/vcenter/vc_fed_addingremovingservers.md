@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 扩展和收缩 VMware Federal 实例的容量
 
@@ -14,7 +18,8 @@ lastupdated: "2018-09-28"
 
 如果主集群将 vSAN 作为其存储器，那么在部署后添加一个或多个 ESXi 服务器可以增加集群存储容量。
 
-**注**：此功能仅可用于尚未受到保护的 VMware Federal 实例。
+此功能仅可用于尚未受到保护的 VMware Federal 实例。
+{:note}
 
 ## 向 VMware Federal 实例添加 ESXi 服务器
 
@@ -61,7 +66,8 @@ lastupdated: "2018-09-28"
 2. 系统将通过电子邮件通知您，正在处理除去 ESXi 服务器的请求。在控制台上，与 ESXi 服务器关联的集群的状态会更改为**正在修改**。
 3. {{site.data.keyword.cloud_notm}} 基础架构将在 {{site.data.keyword.cloud_notm}} 基础架构计费周期（通常为 30 天）结束时完全回收 ESXi 服务器。
 
-   **注意**：在所除去 ESXi 服务器的 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束之前，仍然会对您计费。
+   在所除去 ESXi 服务器的 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束之前，仍然会对您计费。
+   {:note}
 
 ### 相关链接
 

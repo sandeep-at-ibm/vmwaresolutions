@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-10-26"
 
 使用的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须具有特定许可权，才能订购实例中的组件并代表您执行操作。许可权需求适用于要在 {{site.data.keyword.vmwaresolutions_short}} 控制台中订购的所有类型的实例和服务。
 
-授权用户可以在 {{site.data.keyword.slportal}} 中验证和更新 {{site.data.keyword.cloud_notm}} 基础架构帐户的许可权。有关更多信息，请参阅[管理用户概要文件](../../../customer-portal/cpmanuserprof.html){:new_window}中的_编辑用户的客户门户网站许可权_。
+授权用户可以在 {{site.data.keyword.slportal}} 中验证和更新 {{site.data.keyword.cloud_notm}} 基础架构帐户的许可权。有关更多信息，请参阅[编辑用户的客户门户网站许可权](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}。
 
 表 1. {{site.data.keyword.cloud_notm}} 基础架构帐户的必需许可权
 
@@ -36,7 +36,7 @@ lastupdated: "2018-10-26"
 |管理存储器|需要此许可权来管理实例的备份存储器和共享存储器。|
 |硬件防火墙|需要此许可权来编辑或查看实例上安装的 Fortinet on {{site.data.keyword.cloud_notm}} 服务的防火墙日志和设置。|
 |使用公用网络端口添加计算|需要此许可权来订购使用公用网络端口的硬件和 VSI（虚拟服务器实例）。|
-|添加 IP 地址|需要此许可权来代表您订购可移植专用子网范围，这是管理在 vSphere 集群中运行的虚拟机时需要的子网范围。向实例添加更多服务时，会将可移植专用 IP 地址分配给 VMware ESXi 服务器以隔离并分配带宽。|
+|添加 IP 地址|需要此许可权来以您的名义订购可移植专用子网范围，这是管理在 vSphere 集群中运行的虚拟机时需要的子网范围。向实例添加更多服务时，会将可移植专用 IP 地址分配给 VMware ESXi 服务器以隔离并分配带宽。|
 |添加凭单|需要此许可权来代表您开具服务凭单。可以为以下操作创建凭单：启动复原操作，以及在发现问题时自动启动问题解决过程。|
 |编辑凭单|需要此许可权来编辑代表您创建的服务凭单。|
 |查看凭单|需要此许可权来监视与实例中的组件相关的服务凭单，以了解 {{site.data.keyword.cloud_notm}} 基础架构供应延迟和问题。|
@@ -47,7 +47,7 @@ lastupdated: "2018-10-26"
 
 ## 经典（非 VRF）帐户的 VLAN 生成
 
-如果使用的是经典（非 VRF）{{site.data.keyword.cloud_notm}} 基础架构帐户，那么必须启用 VLAN 生成。如果经典帐户未启用 VLAN 生成，那么 VMware 虚拟化环境的各种组件可能无法相互通信。要启用 {{site.data.keyword.cloud_notm}} 基础架构帐户中的 VLAN 生成，请参阅[启用或禁用 VLAN 生成](../../../infrastructure/vlans/vlan-spanning.html){:new_window}。
+如果使用的是经典（非 VRF）{{site.data.keyword.cloud_notm}} 基础架构帐户，那么必须启用 VLAN 生成。如果经典帐户未启用 VLAN 生成，那么 VMware 虚拟化环境的各种组件可能无法相互通信。要启用 {{site.data.keyword.cloud_notm}} 基础架构帐户中的 VLAN 生成，请参阅 [VLAN 生成](../../../infrastructure/vlans/vlan-spanning.html){:new_window}。
 
 ### 相关链接
 

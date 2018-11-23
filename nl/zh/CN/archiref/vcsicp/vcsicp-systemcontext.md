@@ -4,23 +4,22 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-08"
 
 ---
 
 # 系统上下文
 
 图 1. 系统上下文图
-
 ![系统上下文图 - VCS ICP CAM](vcsicp-syscontext-vcs-icp-cam.svg)
 
-四个核心组件如下所示：
+以下是核心组件：
 
 - **内部部署虚拟化** - 此组件是在客户机的内部部署或第三方位置上托管的 VMware 环境，当前托管的是运行要现代化的应用程序的 VM。这是 VM 迁移的源环境，通过 VMware Hybridity (HCX) 松散耦合到 IBM Cloud 实例。
-- **vCenter Server** - VMware vCenter Server on IBM Cloud (VCS) 是一个 IBM Cloud for VMware Services 实例，作为内部部署环境中已迁移 VM 的目标。与内部部署虚拟化环境一起构成混合环境，支持 VM 从一个站点移至另一个站点。
+- **vCenter Server** - VMware vCenter Server on IBM Cloud (VCS) 是一个 IBM Cloud for VMware Services 实例，作为内部部署环境中已迁移 VM 的目标。它与内部部署虚拟化环境一起构成混合环境，支持 VM 从一个站点移至另一个站点。
 - **IBM Cloud Kubernetes Service** - IKS 将 Kubernetes 用作容器编排解决方案。在工作程序节点部署到客户管理的基础架构期间，IBM 会对 Kubernetes 主节点进行操作和管理。IBM 为操作系统补丁部署、Docker 引擎升级和新 Kubernetes 版本提供了多种管理工具。IKS 提供了一个隔离的安全平台，用于管理可移植、可扩展且在故障转移时可自我复原的容器。
 - **IBM Cloud Private** - ICP 是一种用于开发和管理容器化应用程序的应用程序平台。这是一个集成环境，包含容器编排器 Kubernetes、专用映像存储库、管理控制台、监视框架和图形用户界面，该界面提供了一个集中位置来部署、管理、监视和扩展应用程序。
-- **IBM Cloud Automation Manager** - CAM 是一种企业就绪型基础架构即代码 (IaC) 平台，它提供了一个窗格，可供应基于 VMware 的工作负载以及基于 Kubernetes 的工作负载。工作负载的自动供应（无论是虚拟机和/或容器及其基础架构必备软件）通过 CAM 启用。
+- **IBM Cloud Automation Manager** - CAM 是一种企业就绪型基础架构即代码 (IaC) 平台，它提供了一个窗格，可供应基于 VMware 的工作负载以及基于 Kubernetes 的工作负载。对虚拟机、容器及其基础架构必备软件自动供应工作负载通过 CAM 启用。
 - **IBM Multi Cloud Manager** - MCM 为用户提供了云和集群上的可视性、以应用程序为中心的管理（策略、部署、运行状况和操作）以及基于策略的合规性。通过 MCM，您可以控制 Kubernetes 集群。
 - **IBM Cloud 服务** - IBM Cloud 服务是种类丰富的可使用服务，包括 Analytics、AI 和 IoT 产品。
 
@@ -58,4 +57,4 @@ Watson|对于此参考体系结构和 Acme Skateboards，Watson 表示“概念�
 
 ### 相关链接
 
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [VCS Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)

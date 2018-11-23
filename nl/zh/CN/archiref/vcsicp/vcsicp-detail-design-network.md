@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -47,15 +47,15 @@ Ingress 是允许入站连接访问集群服务的规则的集合。Ingress 可�
 - 从 ICP 的容器中托管的 Web 层到 VCS 的 VM 中托管的数据库层。
 - 企业网络上的企业用户对 VCS 中 VM 的访问。
 
-### 从因特网上的外部用户到 ICP 的容器中托管的 Web 层。
+### 从因特网上的外部用户到 ICP 的容器中托管的 Web 层
 1. 外部用户使用 URL 向 Web 层发出请求。
-2.	DNS 用于确定 IP 地址。此 IP 地址将是可移植子网上已分配给 VCS 实例的 IBM Cloud 公共地址。
+2.	DNS 用于确定 IP 地址。此 IP 地址将是可移植子网上已分配给 VCS 实例的 {{site.data.keyword.cloud}} 公共地址。
 3.	公用网络自动将请求转发到托管 ESG 的 vSphere ESXi 主机。
 4.	ESG 将请求转发到 ALB 或 Ingress 服务的内部集群 IP 地址和端口号。如果 ESG 和 ALB 或 Ingress 服务位于不同的 vSphere ESXi 主机上，那么 IP 包将封装在 VXLAN 帧中。此内部集群 IP 地址仅在集群内可访问。
 5.	在工作程序节点中，kube-proxy 将请求路由到 ALB 或 Ingress 服务。
 6.	如果应用程序位于同一工作程序节点上，那么将使用 iptables 来确定哪个内部接口用于转发请求。如果应用程序位于其他工作程序节点上，那么 Calico vRouter 会使用 IP-in-IP 封装来路由到适用的工作程序节点。IP-in-IP 包将封装在 VXLAN 帧中，以传输到工作程序节点所在的 vSphere ESXi 主机。
 
-### 从 ICP 的容器中托管的 Web 层到 VCS 的 VM 中托管的数据库层。
+### 从 ICP 的容器中托管的 Web 层到 VCS 的 VM 中托管的数据库层
 ESG 和 vRouter 中的路由表填充方式取决于集成方法。请参阅“ICP 和 VCS 集成”。
 1.	在 ICP 的容器中运行的 Web 层向在同一 VCS 实例中的 VM 上运行的数据库发出请求。
 2.	DNS 用于将请求解析为数据库的 IP 地址。
@@ -69,10 +69,10 @@ ESG 和 vRouter 中的路由表填充方式取决于集成方法。请参阅“I
 
 ### 	企业网络上的企业用户对 VCS 中 VM 的访问。
 1.	连接到企业内部网络的企业用户向 VCS 中托管的 VM 上的资源发出请求。
-2.	DNS 用于确定 VM 的 IP 地址。此 IP 地址位于延伸到 IBM Cloud 的网络上。
+2.	DNS 用于确定 VM 的 IP 地址。此 IP 地址位于延伸到 {{site.data.keyword.cloud_notm}} 的网络上。
 3.	内部部署路由器将流量定向到托管 L2 集中器的 vSphere 主机。
-4.	L2 集中器将请求封装在安全隧道中，然后通过内部部署路由器，使用分配给设备的专用可移植子网 IP 地址将该请求转发到 IBM Cloud 中托管的远程 L2 集中器。
-5.	内部部署路径在其路由表中进行查找，并识别到远程 L2 集中器的 IP 地址需要发送到 WAN 接口，然后会通过 BCR 经由 IBM Cloud XCR 路由器在 WAN 中进行转发。
+4.	L2 集中器将请求封装在安全隧道中，然后通过内部部署路由器，使用分配给设备的专用可移植子网 IP 地址将该请求转发到 {{site.data.keyword.cloud_notm}} 中托管的远程 L2 集中器。
+5.	内部部署路径在其路由表中进行查找，并识别到远程 L2 集中器的 IP 地址需要发送到 WAN 接口，然后会通过 BCR 经由 {{site.data.keyword.cloud_notm}} XCR 路由器在 WAN 中进行转发。
 6.	L2 集中器收到请求，并将其置于托管延伸网络的 VXLAN 上。
 7.	VM 收到请求。
 
@@ -82,15 +82,15 @@ ESG 和 vRouter 中的路由表填充方式取决于集成方法。请参阅“I
 ###	NSX 防火墙
 ICP NSX Edge 防火墙配置有允许执行以下操作的规则：
 *	启用从 VXLAN 网络访问权到公共访问权的转换。
-*	启用从 VXLAN 网络访问权到专用 IBM Cloud 网络访问权的转换。
-*	启用对 VXLAN 网络的专用 IBM Cloud 网络访问权。
+*	启用从 VXLAN 网络访问权到专用 {{site.data.keyword.cloud_notm}} 网络访问权的转换。
+*	启用对 VXLAN 网络的专用 {{site.data.keyword.cloud_notm}} 网络访问权。
 
 ### NSX NAT
 ICP NSX NAT 配置有以下 NAT：
 *	用于从 VXLAN 网络访问权转换为公共访问权的 SNAT
-*	用于从 VXLAN 网络访问权转换为专用 IBM Cloud 网络访问权的 SNAT。
+*	用于从 VXLAN 网络访问权转换为专用 {{site.data.keyword.cloud_notm}} 网络访问权的 SNAT。
 *	用于 ICP 集群 vIP 的 DNAT。
 
 ### 相关链接
 
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [VCS Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)

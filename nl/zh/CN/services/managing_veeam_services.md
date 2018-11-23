@@ -20,7 +20,7 @@ IBM Resiliency Backup as a Service 提供各种稳健的现场、非现场和基
 
 ## 请求 Veeam on IBM Cloud 的受管服务的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**入门**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**开始**。
 2. 向下滚动该页面，在**订购更多受管服务**下，单击 **Veeam on IBM Cloud 的受管服务**卡。
 3. 在 **Veeam on IBM Cloud** 页面上，查看 Veeam on {{site.data.keyword.cloud_notm}} 作为受管服务的描述和技术规范，然后单击**创建**。
 4. 根据需求指定配置设置，或者接受缺省值。

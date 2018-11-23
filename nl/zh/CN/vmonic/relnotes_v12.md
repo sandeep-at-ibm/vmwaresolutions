@@ -22,7 +22,7 @@ VMware ESXi 的新版本为 vSphere 6.0 u2 p03，是从前发行版中的 ESXi 6
 
 有关更多信息，请参阅以下主题：
 * [入门](../index.html)
-* [Bluemix 访问故障诊断](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html){:new_window}
+* [Bluemix 访问故障诊断](../../../account/ts_accessing.html){:new_window}
 
 ## Zerto 灾难恢复
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -61,9 +61,7 @@ lastupdated: "2018-10-29"
 
 ### Skylake
 
-选择 **Skylake** 时，可以根据需要选择 CPU 和 RAM 组合。
-
-选择用于裸机服务器的 CPU 型号和 RAM。
+选择 **Skylake** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。
 
 表 1. Skylake {{site.data.keyword.baremetal_short}} 的选项
 
@@ -75,25 +73,15 @@ lastupdated: "2018-10-29"
 
 ### Broadwell
 
-选择 **Broadwell** 时，可以根据需要选择 CPU 和 RAM 组合。
+选择 **Broadwell** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。
 
-选择用于裸机服务器的 CPU 型号和 RAM。
-
-表 1. Broadwell {{site.data.keyword.baremetal_short}} 的选项
+表 2. Broadwell {{site.data.keyword.baremetal_short}} 的选项
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
-
-### 预配置
-
-选择**预配置**后，无法更改 CPU 或 RAM 设置。
-
-根据需求，选择裸机服务器配置：
-  * 小型（双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz / 128 GB RAM / 12 个驱动器）
-  * 大型（双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz / 512 GB RAM / 12 个驱动器）
 
 ### 裸机服务器的数量
 
@@ -102,10 +90,6 @@ lastupdated: "2018-10-29"
 ## 存储设置
 
 对于 Cloud Foundation 实例，可以仅订购 VMware vSAN 存储器。
-
-选择**预配置**裸机服务器配置时，存储设置已标准化且无法更改：
-  * 对于**小型**裸机服务器配置，会订购 2 个 1.9 TB SSD SED 磁盘驱动器。
-  * 对于**大型**裸机服务器配置，会订购 4 个 3.8 TB SSD SED 磁盘驱动器。
 
 选择 **Skylake** 或 **Broadwell** 裸机服务器配置时，可以定制实例的 vSAN 存储器。请指定以下 vSAN 设置：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
@@ -149,7 +133,7 @@ lastupdated: "2018-10-29"
 
 域名和子域标签用于生成实例的用户名和服务器名称，如下表中所示。
 
-表 2. 用户名、域名和服务器名称的值格式
+表 3. 用户名、域名和服务器名称的值格式
 
 |名称|值格式|
   |:------------- |:------------- |
@@ -210,12 +194,10 @@ lastupdated: "2018-10-29"
    *  要使用您自己的许可证，请选择**我将提供**并输入许可证密钥。  
 6. 完成裸机服务器设置：
    1. 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
-   2. 选择裸机服务器配置。
-      * 选择 **Skylake** 或 **Broadwell** 时，请指定 CPU 型号和 RAM 大小。
-      * 选择**预配置**时，请选择**小型**或**大型**配置。
+   2. 选择裸机服务器配置，然后指定 CPU 型号和 RAM 大小。
 7. 填写存储配置。
-   * 如果对裸机配置选择的是 **Skylake** 或 **Broadwell**，请指定 vSAN 容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
-   * 如果对裸机配置选择的是**预配置**，那么无法更改**小型**和**大型**标准化裸机服务器配置的存储设置。
+   1. 指定 vSAN 容量和高速缓存磁盘的磁盘类型以及磁盘数。
+   2. 如果需要更多存储器，请选中**使用 Intel Optane 的高性能**复选框。
 8. 完成网络接口设置：
    1. 输入主机名前缀、子域标签和根域名。对于辅助实例，系统会自动填写域名。
    2. 选择 VLAN 设置：

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -53,15 +53,10 @@ Cloud Foundation 实例中包含以下组件。
 ### 裸机服务器
 
 可以使用下列其中一个配置来订购 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}：
-*  **Skylake** 或 **Broadwell**：具有所选 CPU 型号和 RAM 大小的 {{site.data.keyword.baremetal_short}}。   
-   * 2 个 Intel Skylake 代 CPU（Intel Xeon 4100/5100/6100 系列）
-   * 2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
-
-   如果计划使用 vSAN 存储器，那么配置需要 4 个 {{site.data.keyword.baremetal_short}}。
-   {:note}
-* **预配置**：2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
-  * **小型**（双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz / 128 GB RAM / 12 个磁盘）
-  * **大型**（双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz / 512 GB RAM / 12 个磁盘）
+*  **Skylake**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Skylake 代服务器（Intel Xeon 4100/5100/6100 系列）。   
+*  **Broadwell**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Broadwell 代服务器（Intel Xeon E5-2600 V4 系列）。   
+     如果计划使用 vSAN 存储器，那么配置需要 4 个 {{site.data.keyword.baremetal_short}}。
+     {:note}
 
 ### 联网
 
@@ -89,8 +84,6 @@ Cloud Foundation 实例中包含以下组件。
 * 两个 960-GB SSD（固态磁盘）高速缓存磁盘
 * 一个 RAID 磁盘控制器
 * 仅对于 **Skylake** 和 **Broadwell** 配置，可以根据需求设置磁盘驱动器数以及磁盘类型和容量。此外，还有一个高性能 Intel Optane 选项，用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘。高性能 Intel Optane 选项取决于 CPU 型号。
-* 仅对于**预配置**的**小型**配置：两个 1.9 TB SSD 容量磁盘
-* 仅对于**预配置**的**大型**配置：四个 3.8 TB SSD 容量磁盘
 
 ### 许可证（IBM 提供或 BYOL）和费用
 

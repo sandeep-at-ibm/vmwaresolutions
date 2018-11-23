@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -22,14 +22,15 @@ lastupdated: "2018-10-26"
 
 表 1. 可用于 vCenter Server 实例的服务
 
-|服务名称|版本号|实例版本|
+|服务名称|当前服务版本|实例版本|
 |----------------------------------------------------------------------------------------|------------------|
-|[F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)|BIG-IP VE V13.1| V1.9 和更高版本 |
+|[F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)|BIG-IP VE V13.1.1.2| V1.9 和更高版本 |
 |[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)|300 系列| V2.0 和更高版本 |
 |[FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)|6.0.3| V2.0 和更高版本 |
 |[HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)|5.4.0| V2.3 和更高版本 |
 |[HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)|4.2.1| V2.3 和更高版本 |
 |[HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)|4.2|V2.5 和更高版本|
+|[{{site.data.keyword.cloud_notm}} Private Hosted](../services/icp_overview.html)|3.1|V2.5 和更高版本|
 |[IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)|10.1.1 补丁 1| V2.2 和更高版本 |
 |[KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)|   | V2.2 和更高版本 |
 |[Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)|9.5u3| V1.8 和更高版本 |

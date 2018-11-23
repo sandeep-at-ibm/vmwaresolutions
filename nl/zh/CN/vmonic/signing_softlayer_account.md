@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-26"
 
 ## 注册 IBM Cloud 帐户
 
-您可以使用现有 **IBM 标识**或创建新的 **IBM 标识**来注册 {{site.data.keyword.cloud}} 帐户。有关如何注册 {{site.data.keyword.cloud_notm}} 帐户的更多信息，请参阅[注册 {{site.data.keyword.cloud_notm}} 帐户](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud)。
+您可以使用现有 **IBM 标识**或创建新的 **IBM 标识**来注册 {{site.data.keyword.cloud}} 帐户。有关如何注册 {{site.data.keyword.cloud_notm}} 帐户的更多信息，请参阅[注册 {{site.data.keyword.cloud_notm}} 帐户](../../../account/adminpublic.html)。
 
 ## 注册 IBM Cloud Infrastructure (SoftLayer) 帐户
 
@@ -37,4 +37,4 @@ lastupdated: "2018-09-26"
 * [{{site.data.keyword.cloud_notm}} 基础架构帐户的需求](slaccountrequirement.html)
 * [视频 - 如何创建 {{site.data.keyword.cloud_notm}} 帐户](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
-* [切换到 IBM 标识](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}
+* [切换到 IBM 标识并链接帐户](../../../admin/softlayerlink.html){:new_window}

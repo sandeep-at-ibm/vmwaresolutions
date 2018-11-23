@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 确保 VMware Federal 实例安全
 
@@ -28,7 +32,8 @@ lastupdated: "2018-09-27"
 5. 单击**确定**以确认要将实例与自动化断开连接。
    
 
-  **注**：在完成此步骤之前，请确保查看**开始之前**部分中的信息。
+  在完成此步骤之前，请确保查看**开始之前**部分中的信息。
+{:note}
 
 6. 除去环境中面向公众的管理服务 VMware NSX Edge Services Gateway (ESG)，也可以选择除去在自动化期间部署的由客户机管理的 ESG。
 7. 重置 IBM 自动化所使用的所有帐户的密码或密钥。有关更多信息，请参阅 [How can I secure my environment to remove access by IBM automation and support?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)。

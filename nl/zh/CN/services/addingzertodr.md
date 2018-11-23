@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -23,7 +23,8 @@ Zerto on {{site.data.keyword.cloud}} 服务用于将复制和灾难恢复功能�
 
 Zerto on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
 
-**注**：Zerto Virtual Manager 组件仅部署到缺省集群中。
+Zerto Virtual Replication Appliance (VRA) 组件将仅部署到缺省集群中。
+{:note}
 
 ### VSI
 

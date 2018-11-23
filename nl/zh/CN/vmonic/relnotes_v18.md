@@ -38,7 +38,7 @@ Fortinet on {{site.data.keyword.cloud_notm}} 服务现在可用于 Cloud Foundat
 
 ### 订购 Cloud Foundation 实例时自带 VMware 许可证 (BYOL)
 
-从 V1.8 发行版开始，订购 Cloud Foundation 实例时，会向您提供两个用于许可实例的 VMware 组件（包括 vSphere、vCenter Server、NSX 和 vSAN）的选项。您可以选择使用要代表您购买的新许可证。
+从 V1.8 发行版开始，订购 Cloud Foundation 实例时，会向您提供两个用于许可实例的 VMware 组件（包括 vSphere、vCenter Server、NSX 和 vSAN）的选项。您可以选择使用要以您的名义购买的新许可证。
 
 还可以选择对组件使用您自己的 VMware 许可证，这样就需要您提供许可证密钥。在此情况下，对于您提供了许可证的 VMware 组件，将由 VMware 而不是 IBM 支持人员来提供后续支持。
 
@@ -73,7 +73,7 @@ Fortinet on {{site.data.keyword.cloud_notm}} 服务现在可用于 Cloud Foundat
 ## 易用性增强功能
 
 对整个用户界面进行了改进：
-* 可以在左侧导航窗格中的**入门**页面上，了解有关服务的信息并订购实例。有关 {{site.data.keyword.cloud_notm}} Secure Virtualization 服务体系结构的更多信息，请参阅[安全性和合规性 - HyTrust](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust)。
+* 可以在左侧导航窗格中的**开始**页面上，了解有关服务的信息并订购实例。有关 {{site.data.keyword.cloud_notm}} Secure Virtualization 服务体系结构的更多信息，请参阅[安全性和合规性 - HyTrust](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust)。
 * 使用实例详细信息页面上的溢出菜单来删除处于**可供使用**状态的实例。
 * 现在**更新和补丁**选项卡上提供了用于升级 NSX 许可证版本的选项。许可证升级会将 IBM SoftLayer 帐户中的所有现有 NSX 许可证替换为新许可证。
 * 实例详细信息页面上的**备份和复原**选项卡不再可用。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -30,13 +30,12 @@ IBM Multi-Cluster Manager (MCM) 在各种云和集群中提供用户可视性、
 
 可以使用 NSX-V 或 NSX-T 组件来部署 ICP。通过使用 NSX-V 的 ICP，支持 ICP 虚拟机在 VXLAN 网络上运行，并利用 Kubernetes Calico 内部联网。
 
-通过使用 NSX-T 的 ICP，用户可以在中央 UI (NSX T Manager) 中控制和配置联网、子网和策略。请访问 [IBM Cloud VCS 联网参考体系结构](../vcsnsxt/vcsnsxt-intro.html)，以了解 NSX-V 和 NSX-T 之间的差异。
+通过使用 NSX-T 的 ICP，用户可以在中央 UI (NSX T Manager) 中控制和配置联网、子网和策略。请参阅 [vCenter Server 联网指南](../vcsnsxt/vcsnsxt-intro.html)，以了解 NSX-V 和 NSX-T 之间的差异。
 
 ## 内部部署云管理平台
 
 图 2. 内部部署端的云管理
-
-![内部部署 - 云管理](vcsicp-onprem-cloudmgt.svg)
+![内部部署端的云管理](vcsicp-onprem-cloudmgt.svg)
 
 上图表示内部部署基础架构中部署的 ICP 和 CAM，连接到 IBM Cloud 上部署的 vCenter 和 IKS。用户能够内部部署虚拟机和容器，也可以将虚拟机部署到 IKS 集群的 vCenter Server 实例与容器中。
 
@@ -46,4 +45,4 @@ strongSwan VPN 用于与已部署的 IKS 容器建立连接，最终可能会将
 
 ### 相关链接
 
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [VCS Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)

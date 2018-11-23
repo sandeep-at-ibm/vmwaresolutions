@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -27,15 +27,15 @@ Cloud Foundation 部署对物理基础架构有严格要求。因此，只能将
 |AMS03|阿姆斯特丹|欧洲|Skylake、Broadwell|
 |CHE01|金奈|亚太地区|Skylake、Broadwell|
 |DAL09|达拉斯|北美南部|Skylake、Broadwell|
-|DAL10|达拉斯|北美南部|Skylake、Broadwell、小型、大型|
+|DAL10|达拉斯|北美南部|Skylake、Broadwell|
 |DAL12|达拉斯|北美南部|Skylake、Broadwell|
 |DAL13|达拉斯|北美南部|Skylake、Broadwell|
-|FRA02|法兰克福|欧洲|Skylake、Broadwell、大型|
+|FRA02|法兰克福|欧洲|Skylake、Broadwell|
 |FRA04|法兰克福|欧洲|Skylake、Broadwell|
 |HKG02|中国香港特别行政区|亚太地区|Skylake、Broadwell|
 |LON02|伦敦|欧洲|Skylake、Broadwell|
 |LON04|伦敦|欧洲|Skylake、Broadwell|
-|LON06|伦敦|欧洲|Skylake、Broadwell、小型、大型|
+|LON06|伦敦|欧洲|Skylake、Broadwell|
 |MEL01|墨尔本|亚太地区|Skylake、Broadwell|
 |MEX01|克雷塔罗|北美南部|Skylake、Broadwell|
 |MIL01|米兰|欧洲|Skylake、Broadwell|
@@ -50,8 +50,8 @@ Cloud Foundation 部署对物理基础架构有严格要求。因此，只能将
 |SYD01|悉尼|亚太地区|Skylake、Broadwell|
 |SYD04|悉尼|亚太地区|Skylake、Broadwell|
 |TOK02|东京|亚太地区|Skylake、Broadwell|
-|TOR01|多伦多|北美东部|Skylake、Broadwell、小型、大型|
-|WDC04|华盛顿|北美东部|Skylake、Broadwell、小型、大型|
+|TOR01|多伦多|北美东部|Skylake、Broadwell|
+|WDC04|华盛顿|北美东部|Skylake、Broadwell|
 |WDC06|华盛顿|北美东部|Skylake、Broadwell|
 |WDC07|华盛顿|北美东部|Skylake、Broadwell|
 

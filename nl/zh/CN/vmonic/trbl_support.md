@@ -17,7 +17,7 @@ lastupdated: "2018-09-27"
 要通过 {{site.data.keyword.vmwaresolutions_short}} 控制台联系 IBM 支持人员，请完成以下步骤：
 
 1. 转至
-   https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
+   https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. 使用 **IBM 标识**帐户登录到控制台。
 3. 单击条幅左侧的**支持 > 添加凭单**。
 4. 在 {{site.data.keyword.slportal_short}} 页面上，单击**使用 IBM 标识登录**，然后您将自动登录到该门户网站。

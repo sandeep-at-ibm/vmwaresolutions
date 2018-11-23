@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-09-28"
 ## 查看通知
 
 1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**通知**。
-2. 在**通知历史记录**表中，查看有关所有通知的摘要。
+2. 查看有关所有通知的摘要。
 
    表 1. 通知历史记录
 

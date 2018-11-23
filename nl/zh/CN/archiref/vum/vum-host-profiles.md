@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-29"
 
 vCenter 具有称为“主机概要文件”的功能。此功能可创建概要文件，用于捕获预配置并已验证的参考主机配置，以及帮助系统管理员管理集群中的主机配置。主机概要文件提供了面向主机配置和配置一致性的自动化集中管理机制。通过主机概要文件，可以将配置视为受管对象，其中包含要配置的参数目录以及联网、存储、安全性和其他主机级参数。这些主机概要文件可应用于与主机概要文件关联的单个主机、一个集群或所有主机和集群。
 
-随着部署了原始集群的 IC4VS 自动化部署的 VCS vSphere ESXi 主机越来越多，配置漂移会比手动主机添加方法要少。但是，除了自动化操作外，系统管理员操作可能会使主机配置不同。例如，添加了更多 NFS 存储器或添加了额外的 VLAN。因此，使用主机概要文件通过检查新主机与现有主机的一致性来验证该主机的配置，是 IBM Cloud 中此工具的一个有效用例。
+随着部署了原始集群的 IC4VS 自动化部署的 VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi 主机越来越多，配置漂移会比手动主机添加方法要少。但是，除了自动化操作外，系统管理员操作可能会使主机配置不同。例如，添加了更多 NFS 存储器或添加了额外的 VLAN。因此，使用主机概要文件通过检查新主机与现有主机的一致性来验证该主机的配置，是 {{site.data.keyword.cloud_notm}} 中此工具的一个有效用例。
 
 要向 vCenter Server 集群添加更多主机，请参阅[扩展和收缩 vCenter Server 实例的容量](../../vcenter/vc_addingremovingservers.html)。
 
@@ -62,5 +62,5 @@ vCenter 具有称为“主机概要文件”的功能。此功能可创建概要
 
 ### 相关链接
 
-* [VMware HCX on IBM Cloud 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）
