@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -38,6 +38,17 @@ Tabelle 1. Betroffene Operationen für den SSO-Administrator (Kunde)
 | Namen des öffentlichen oder privaten verteilten virtuellen Switches (Distributed Virtual Switch, DVS) ändern. | Das Hinzufügen eines ESXi-Servers schlägt möglicherweise fehl. | Wichtig | Ändern Sie den DVS-Namen wieder in den ursprünglichen Namen.
 | Namen des VSAN-Datenspeichers ändern. | Das Hinzufügen eines ESXi-Servers schlägt möglicherweise fehl.<br><br>Das Upgrade für die Instanz kann fehlschlagen. | Wichtig | Ändern Sie den Namen des VSAN-Datenspeichers wieder in den ursprünglichen Namen **vsanDatastore**.
 | Instanznamen oder Domänennamen ändern. | Die Instanz ist nicht verwendbar. | Kritisch | Nicht verfügbar.
+
+In der folgenden Tabelle sind die Operationen aufgelistet, die betroffen sein könnten, wenn SSH- oder Shell-Zugriff für verschiedene Ressourcen inaktiviert ist.
+
+Tabelle 2. Operationen, die vom SSH und Shell-Zugriff betroffen sind (lokal)
+
+| Versuchte Änderung  | Betroffene Operationen  | Bewertung  | Wiederherstellungsmethode  |
+|:------------- |:------------- |:--------------|:--------------|
+| SSH- oder Shell-Zugriffs für vCenter Server oder PSC inaktivieren.    | Die Paarung einer primären und sekundären Instanz kann fehlschlagen. Das Anwenden von Programmkorrekturen auf die Ressourcen kann fehlschlagen.    | Wichtig    | Nicht verfügbar.    |
+| SSH- oder Shell-Zugriff für ESXi inaktivieren.    | Das Hinzufügen und Entfernen von Hosts, Services und Netzspeicher für die Instanz kann fehlschlagen. Das Anwenden von Programmkorrekturen auf die Ressourcen kann fehlschlagen.    | Wichtig    | Nicht verfügbar.    |
+
+Wenn Sie den SSH- oder Shell-Zugriff inaktivieren, sollten Sie ihn vorübergehend erneut aktivieren, bevor Sie die angegebenen Operationen ausführen.
 
 ## Managementteilnetze für Cloud Foundation-Instanzen
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -18,9 +18,9 @@ In der folgenden Tabelle sind die Services aufgeführt, die für Cloud Foundatio
 
 Tabelle 1. Verfügbare Services für Cloud Foundation-Instanzen
 
-| Servicename | Serviceversion | Instanzversion |
+| Servicename | Aktuelle Serviceversion | Instanzversion |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1 | V1.9 und höher |
+| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE V13.1.1.2 | V1.9 und höher |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | 300 Series | V1.8 und höher |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 6.0.3 | V2.0 und höher |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 und höher |
