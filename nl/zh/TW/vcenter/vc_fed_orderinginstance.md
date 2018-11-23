@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 訂購 VMware Federal 實例
 
 若要部署彈性且可自訂的 VMware 虛擬化平台，以便最符合您的工作負載需求，請訂購 VMware Federal 實例。VMware Federal 實例可協助您中斷已開啟的管理連線，並保護已部署的實例。
 
-**附註：**目前只有 vCenter Server 實例支援 VMware Federal on {{site.data.keyword.cloud}}。
+目前，只有 vCenter Server 實例支援 VMware Federal on {{site.data.keyword.cloud}}。
+{:note}
 
 ## 訂購 VMware Federal 實例的需求
 
@@ -32,7 +37,7 @@ lastupdated: "2018-10-29"
   |完整的 ESXi 伺服器名稱| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 伺服器的序號。長度上限為 50 個字元。|  
   |PSC FQDN |`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 長度上限為 50 個字元。|
 
-**重要事項：**請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
+請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。{:important}
 
 ## 系統設定
 
@@ -40,7 +45,7 @@ lastupdated: "2018-10-29"
 
 ### 實例名稱
 
-實例名稱必須符合下列需求：
+實例名稱必須滿足下列需求：
 * 只容許英數及橫線 (-) 字元。
 * 實例名稱的開頭及結尾必須是英數字元。
 * 實例名稱的長度上限為 10 個字元。
@@ -66,7 +71,7 @@ lastupdated: "2018-10-29"
 
 ## Bare Metal Server 設定
 
-Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server 配置。目前不支援選取預先配置的配置選項。
+Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server 配置。
 
 ### 資料中心位置
 
@@ -82,7 +87,7 @@ Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server �
 |:------------- |:------------- |
 |雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### Broadwell
 
@@ -111,7 +116,7 @@ Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server �
 請指定下列 vSAN 選項：
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
-* 如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
+* 如果您要新增超過所限制的 8 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
 
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
 * **vSAN 授權**：選取 vSAN 6.6 授權版本（Advanced 或 Enterprise）。
@@ -120,7 +125,7 @@ Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server �
 
 當您選取 **NFS 儲存空間**時，可以為所有共用使用相同設定的實例新增檔案層次共用儲存空間，也可以為每一個檔案共用指定不同的配置設定。請指定下列 NFS 選項：
 
-**附註：**檔案共用數目必須在 1 到 32 的範圍內。
+檔案共用數目必須在 1 到 32 的範圍內。{:note}
 
 * **個別配置共用**：選取以為每一個檔案共用指定不同的配置設定。
 * **共用數目**：為每一個檔案共用使用相同的配置設定時，請指定您要新增之 NFS 共用儲存空間的檔案共用數目。
@@ -134,20 +139,20 @@ Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server �
   |:------------- |:------------- |
   |2 IOPS/GB |這個選項是為大部分通用工作負載而設計。應用的範例包括：管理小型資料庫、備份 Web 應用程式，或是 Hypervisor 用的虛擬機器磁碟映像檔。|
   |4 IOPS/GB |這個選項是為一次擁有高百分比作用中資料的高密度工作負載而設計。應用的範例包括：交易式資料庫。|
-  |10 IOPS/GB |這個選項是為需求最大的工作負載類型而設計，例如分析。應用的範例包括：高交易量資料庫，以及其他對效能敏感的資料庫。此效能層次限制為每個檔案共用的容量上限為 4 TB。|
+  |10 IOPS/GB |這個選項是為要求最嚴苛的工作負載類型而設計，例如分析。應用的範例包括：高交易量資料庫，以及其他對效能敏感的資料庫。此效能層次限制為每個檔案共用的容量上限為 4 TB。|
 
 ## 網路介面設定
 
 ### 主機名稱字首
 
-主機名稱字首必須符合下列需求：
+主機名稱字首必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
 *  主機名稱字首的開頭及結尾必須是英數字元。
 *  主機名稱字首的長度上限為 10 個字元。
 
 ### 子網域標籤
 
-子網域標籤必須符合下列需求：
+子網域標籤必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
 *  子網域標籤的開頭及結尾必須是英數字元。
 *  子網域標籤的長度上限為 10 個字元。
@@ -155,14 +160,14 @@ Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server �
 
 ### 網域名稱
 
-根網域名稱必須符合下列需求：
+根網域名稱必須滿足下列需求：
 * 網域名稱必須包含兩個以上以句點 (.) 區隔的字串
 * 第一個字串的開頭必須是英文字母，而且結尾必須是英數字元。
 * 除了最後一個字串以外，所有字串都只能包含英數字元和橫線 (-) 字元。
 * 最後一個字串只能包含英文字母。
 * 最後一個字串的長度範圍必須在 2 到 24 個字元之間。
 
-**附註：**主機和 VM 的「完整網域名稱 (FQDN)」長度上限為 50 個字元。網域名稱必須在這個長度上限以內。
+主機和 VM 的「完整網域名稱 (FQDN)」長度上限為 50 個字元。網域名稱必須在這個長度上限以內。{:note}
 
 ### DNS 配置
 
@@ -171,7 +176,7 @@ Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server �
 * **適用於 Active Directory/DNS 的單一公用 Windows VSI**：適用於 Microsoft Active Directory (AD) 的單一 Microsoft Windows Server VSI 充當登錄主機及虛擬機器之實例的 DNS，已部署並可查閱。
 * **管理叢集上有兩部高可用性的專用 Windows Server VM**：對於 2.3 版及未來版本，會部署兩部 Microsoft Windows 虛擬機器，協助加強安全及穩健性。
 
-**重要事項：**如果您將實例配置為使用兩部 Microsoft Windows 虛擬機器，則必須提供兩份 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及（或）Microsoft Windows Server 2012 R2 Datacenter 版本授權。
+如果您將實例配置為使用兩部 Microsoft Windows 虛擬機器，則必須提供兩份 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及（或）Microsoft Windows Server 2012 R2 Datacenter 版本授權。{:important}
 
 目前，每份授權都只能指派給一部單一實體伺服器，且最多涵蓋兩個實體處理器。使用一份 Standard 版本授權，每部雙處理器伺服器都可以執行兩部虛擬化 Microsoft Windows 虛擬機器。因此，必須有兩份授權，因為兩部 Microsoft Windows 虛擬機器是部署在兩部不同的主機中。
 
@@ -218,7 +223,7 @@ Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server �
 
 檢視、管理或保護您所訂購的 VMware Federal 實例。
 
-**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。{:important}
 
 **警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外來管理您在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，會使您的環境變得不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件

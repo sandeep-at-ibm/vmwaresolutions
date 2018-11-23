@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-10-26"
 
 您使用的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須具有特定許可權，才能訂購實例中的元件，並代表您執行作業。許可權需求適用於您從 {{site.data.keyword.vmwaresolutions_short}} 主控台訂購的所有類型之實例和服務。
 
-獲授權的使用者可以在 {{site.data.keyword.slportal}} 中驗證及更新 {{site.data.keyword.cloud_notm}} 基礎架構帳戶的許可權。如需相關資訊，請參閱[管理使用者設定檔](../../../customer-portal/cpmanuserprof.html){:new_window}中的_編輯使用者的客戶入口網站許可權_。
+獲授權的使用者可以在 {{site.data.keyword.slportal}} 中驗證及更新 {{site.data.keyword.cloud_notm}} 基礎架構帳戶的許可權。如需相關資訊，請參閱[編輯使用者的客戶入口網站許可權](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}。
 
 表 1. {{site.data.keyword.cloud_notm}} 基礎架構帳戶的必要許可權
 
@@ -46,7 +46,7 @@ lastupdated: "2018-10-26"
 
 ## 典型（非 VRF）帳戶的 VLAN 跨越
 
-如果您使用典型（非 VRF）{{site.data.keyword.cloud_notm}} 基礎架構帳戶，則必須啟用 VLAN Spanning。如果未對典型帳戶啟用 VLAN 跨越，則 VMware 虛擬化環境的各種元件可能無法彼此通訊。若要在 {{site.data.keyword.cloud_notm}} 基礎架構帳戶中啟用 VLAN Spanning，請參閱[啟用或停用 VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}。
+如果您使用典型（非 VRF）{{site.data.keyword.cloud_notm}} 基礎架構帳戶，則必須啟用 VLAN Spanning。如果未對典型帳戶啟用 VLAN 跨越，則 VMware 虛擬化環境的各種元件可能無法彼此通訊。若要在 {{site.data.keyword.cloud_notm}} 基礎架構帳戶中啟用 VLAN Spanning，請參閱 [VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}。
 
 ### 相關鏈結
 

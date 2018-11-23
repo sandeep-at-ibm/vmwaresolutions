@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -18,9 +18,9 @@ lastupdated: "2018-10-25"
 
 表 1. Cloud Foundation 實例的可用服務
 
-| 服務名稱                                                                               | 服務版本 | 實例版本 |
+| 服務名稱                                                                               | 現行服務版本 | 實例版本 |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE 13.1 版 | 1.9 版以及更新版本 |
+| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE 13.1.1.2 版 | 1.9 版以及更新版本 |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | 300 系列 | 1.8 版以及更新版本 |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 6.0.3 | 2.0 版以及更新版本 |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | 2.3 版以及更新版本 |
@@ -29,7 +29,7 @@ lastupdated: "2018-10-25"
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)         | 10.1.1 Patch 1 | 2.2 版以及更新版本 |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | 2.2 版以及更新版本 |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | 9.5u3 | 1.8 版以及更新版本 |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 6.0 更新 3 | 1.2 版以及更新版本 |
+| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 6.0 Update 3 | 1.2 版以及更新版本 |
 
 ## 將服務新增至 Cloud Foundation 實例的程序
 

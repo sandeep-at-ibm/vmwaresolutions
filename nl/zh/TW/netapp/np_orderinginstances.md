@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 訂購 NetApp ONTAP Select 實例
 
@@ -18,7 +22,7 @@ lastupdated: "2018-09-27"
 *  您已在**設定**頁面上配置 {{site.data.keyword.cloud}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](../vmonic/useraccount.html)。
 *  您已檢閱 [NetApp ONTAP Select 實例的需求及規劃](np_planning.html)中的需求及考量。
 
-**重要事項**：請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
+請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。{:important}
 
 ## 系統設定
 
@@ -26,7 +30,7 @@ lastupdated: "2018-09-27"
 
 ### 實例名稱
 
-實例名稱必須符合下列需求：
+實例名稱必須滿足下列需求：
 * 只容許英數及橫線 (-) 字元。
 * 實例名稱的開頭及結尾必須是英數字元。
 * 實例名稱的長度上限為 10 個字元。
@@ -38,14 +42,14 @@ lastupdated: "2018-09-27"
 
 ### 主機名稱字首
 
-主機名稱字首必須符合下列需求：
+主機名稱字首必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
 *  主機名稱字首的開頭及結尾必須是英數字元。
 *  主機名稱字首的長度上限為 10 個字元。
 
 ### 子網域標籤
 
-子網域標籤必須符合下列需求：
+子網域標籤必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
 *  子網域標籤的開頭及結尾必須是英數字元。
 *  子網域標籤的長度上限為 10 個字元。
@@ -53,14 +57,14 @@ lastupdated: "2018-09-27"
 
 ### 網域名稱
 
-根網域名稱必須符合下列需求：
+根網域名稱必須滿足下列需求：
 * 網域名稱必須包含兩個以上以句點 (.) 區隔的字串
 * 第一個字串的開頭必須是英文字母，而且結尾必須是英數字元。
 * 除了最後一個字串以外，所有字串都只能包括英數字元和橫線 (-) 字元。
 * 最後一個字串只能包括英文字母。
 * 最後一個字串的長度範圍必須在 2 到 24 個字元之間。
 
-**附註：**主機和 VM（虛擬機器）的 FQDN（完整網域名稱）長度上限為 50 個字元。網域名稱必須在這個長度上限以內。
+主機和 VM（虛擬機器）的 FQDN（完整網域名稱）長度上限為 50 個字元。網域名稱必須在這個長度上限以內。{:note}
 
 ## 授權設定
 
@@ -79,7 +83,8 @@ lastupdated: "2018-09-27"
 * **高效能（大型）**- 超值授權 / 雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/ 128 GB RAM / 每個節點有 22S 個 3.8 TB SSD 磁碟機容量 / 4 節點叢集的有效容量 - 118 TB
 * **高容量** - 標準授權 / 雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/ 64 GB RAM / 每個節點有 34 個 4 TB SATA 磁碟機容量 / 4 節點叢集的有效容量 - 190 TB
 
-**附註：**3.8 TB SSD（固態磁碟）磁碟機在正式發行至 {{site.data.keyword.CloudDataCent_notm}} 時就會予以支援。
+當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至 {{site.data.keyword.CloudDataCent_notm}} 時，就會予以支援。
+{:note}
 
 ### Bare Metal Server 數目
 
@@ -114,7 +119,7 @@ lastupdated: "2018-09-27"
 
 檢視及管理您訂購的 NetApp ONTAP Select 實例。
 
-**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。{:important}
 
 **警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外來管理您在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，會使您的環境變得不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件

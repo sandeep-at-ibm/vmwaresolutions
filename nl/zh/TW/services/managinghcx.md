@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -32,4 +32,4 @@ HCX on {{site.data.keyword.cloud_notm}} 已部署最新已測試建置的 VMware
 * [HCX on {{site.data.keyword.cloud_notm}} 概觀](hcx_considerations.html)
 * [HCX 術語名詞解釋](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 概觀](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension 文件](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources)

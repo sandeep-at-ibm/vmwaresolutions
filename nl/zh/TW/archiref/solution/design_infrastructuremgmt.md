@@ -67,7 +67,8 @@ vCenter Server 配置會使用應用裝置隨附的本端內嵌 PostgreSQL 資�
 
 此設計使用起始叢集裡的「vSphere 分散式資源排程 (DRS)」來放置 VM，並在其他叢集裡使用 DRS 動態移轉 VM，以達到平衡的叢集。自動化層次設為完全自動化，以由 vSphere 自動執行起始放置及移轉建議。此外，移轉臨界值設為 moderate，因此 vCenter 會在叢集的負載平衡中套用優先順序 1、2、3 建議，以達到至少適當的改善。
 
-在此設計中，不使用透過**分散式電源管理**特性的電源管理。{:note}
+在此設計中，不使用透過**分散式電源管理**特性的電源管理。
+{:note}
 
 ### vSphere 高可用性
 
@@ -128,4 +129,4 @@ IBM CloudBuilder 及 IBM CloudDriver 虛擬伺服器實例 (VSI) 是您無法存
 
 * [實體基礎架構設計](design_physicalinfrastructure.html)
 * [虛擬基礎架構設計](design_virtualinfrastructure.html)
-* [常見服務設計](design_commonservice.html)
+* [共用服務設計](design_commonservice.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -18,15 +18,16 @@ HCX on {{site.data.keyword.cloud}} 服務會將內部部署資料中心的網路
 
 只有部署在 2.3 版及更新版本中的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 實例，才能使用此服務。{:note}
 
-您可以將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。如需升級實例以及部署 HCX on {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱[升級至 vCenter Server with Hybridity Bundle 實例](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance)。
+您可以將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。如需升級實例及部署 HCX on {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱[升級至 vCenter Server with Hybridity Bundle 實例的程序](../vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)。
 
-**附註：**包含 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 實例限制為來自內部部署站台的三個同時連線。
+具有 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 實例限制為來自內部部署站台只能有三個同時連線。{:note}
 
 ## HCX on IBM Cloud 的技術規格
 
 下列元件已訂購並包括在 HCX on {{site.data.keyword.cloud_notm}} 服務中。
 
-**附註：**內部部署 HCX 實例僅包括授權及啟動。
+內部部署 HCX 實例只包括授權及啟動。
+{:note}
 
 ### 用於 HCX 管理的 VMware NSX Edge Services Gateway 主動/被動配對
 
@@ -85,4 +86,4 @@ HCX on {{site.data.keyword.cloud_notm}} 服務無法安裝至預設叢集具有�
 * [HCX 術語名詞解釋](hcx_glossary.html)
 * [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension 概觀](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension 文件](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources)

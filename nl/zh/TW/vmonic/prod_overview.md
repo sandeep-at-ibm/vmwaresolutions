@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -116,7 +116,7 @@ HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 服務藉由自動化及�
 
 {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 服務為您在 {{site.data.keyword.cloud_notm}} 上的 VMware 環境帶來微服務及容器的功能。使用此服務，您可以將熟悉的相同 VMware 與 {{site.data.keyword.cloud_notm}} Private 作業模型和工具，從內部部署延伸到 {{site.data.keyword.cloud_notm}}。
 
-如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html)。
+如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}}Private Hosted 概觀](../services/icp_overview.html)。
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 

@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
 # VMware Update Manager 概觀
 
 VMware Update Manager (VUM) 使用多階段處理程序來升級 vSphere 物件以及套用修補程式或延伸規格。此處理程序會啟用具有最小系統關閉時間的順利更新程序。在我們查看此處理程序之前，必須瞭解下列術語：
-* **庫存物件** - vCenter 內的物件，例如虛擬機器、虛擬應用裝置或 vSphere ESXi 主機
+* **庫存物件** - vCenter 內的物件，例如虛擬機器、虛擬應用裝置或 vSphere ESXi 主機。
 * **基準線** - 基準線包含一個以上修補程式、延伸規格、服務套件、錯誤修正程式或升級的集合，而且可以分類為修補程式、延伸規格或升級基準線。有兩種分類的基準線：「主機」及 VM/VA，而且兩者都有 VMware 預先定義的基準線，「自訂」基準線可以新增為必要項目：
   - 預先定義的主機基準線：
     - 重要主機修補程式
@@ -38,7 +38,7 @@ VMware Update Manager (VUM) 使用多階段處理程序來升級 vSphere 物件�
 * ESXi 5.5 及 ESXi 6.x 主機的通知、警示及修補程式取消。
 * 有關虛擬應用裝置之升級的 meta 資料。
 
-VUM 支援取消執行 ESXi 5.0 或更新版本之主機的修補程式。如果發行的修補程式發生問題或潛在問題，則會取消修補程式。掃描您 VCS 實例中的主機之後，VUM 會警示您是否已在特定主機上安裝已取消的修補程式。無法在具有 VUM 的主機上安裝已取消的修補程式。VUM 也會刪除修補程式儲存庫中所有已取消的修補程式。發行修正問題的修補程式之後，VUM 會將新的修補程式下載至其修補程式儲存庫。如果您已安裝有問題的修補程式，則 VUM 會通知您已發行修正程式，並提示您套用新的修補程式。
+VUM 支援取消執行 ESXi 5.0 或更新版本之主機的修補程式。如果發行的修補程式發生問題或潛在問題，則會取消修補程式。掃描您 VMware vCenter Server on {{site.data.keyword.cloud}} 實例中的主機之後，VUM 會警示您是否已在特定主機上安裝已恢復的修補程式。無法在具有 VUM 的主機上安裝已取消的修補程式。VUM 也會刪除修補程式儲存庫中所有已取消的修補程式。發行修正問題的修補程式之後，VUM 會將新的修補程式下載至其修補程式儲存庫。如果您已安裝有問題的修補程式，則 VUM 會通知您已發行修正程式，並提示您套用新的修補程式。
 
 VUM 用戶端介面提供兩個主視圖：
 *	管理視圖
@@ -63,5 +63,5 @@ VUM 用戶端介面提供兩個主視圖：
 
 ### 相關鏈結
 
-* VMware HCX on IBM Cloud 解決方案架構 (https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（展示）
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) 上的 VMware 解決方案（示範）

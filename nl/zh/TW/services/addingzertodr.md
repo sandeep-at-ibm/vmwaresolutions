@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -16,14 +16,15 @@ lastupdated: "2018-10-25"
 
 Zerto on {{site.data.keyword.cloud}} 服務可將抄寫及災難回復功能整合到部署供應項目，以保護及回復 {{site.data.keyword.cloud_notm}} 上位於您 VMware 虛擬環境中的資料。
 
-只有在 1.2 版或更新版本中部署的實例，才能使用此服務。目前安裝的 Zerto 版本為 6.0 更新 3。
+只有在 1.2 版或更新版本中部署的實例，才能使用此服務。目前安裝的 Zerto 版本為 6.0 Update 3。
 {:note}
 
 ## Zerto on IBM Cloud 的技術規格
 
 下列元件已訂購並包括在 Zerto on {{site.data.keyword.cloud_notm}} 服務中。
 
-**附註：**Zerto Virtual Manager 元件只會部署至預設叢集。
+Zerto Virtual Replication Appliance (VRA) 元件只會部署至預設叢集。
+{:note}
 
 ### VSI
 

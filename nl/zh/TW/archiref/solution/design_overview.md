@@ -24,11 +24,11 @@ lastupdated: "2018-07-10"
 ## VMware on IBM Cloud 元件
 
 圖 1. VMware on {{site.data.keyword.cloud_notm}} 的元件
-![VMware on {{site.data.keyword.cloud_notm}} 的元件](design_overview.svg "此解決方案包含實體基礎架構、虛擬基礎架構、基礎架構管理及常見服務。")
+![VMware on {{site.data.keyword.cloud_notm}} 的元件](design_overview.svg "此解決方案包含實體基礎架構、虛擬基礎架構、基礎架構管理及共用服務。")
 
 ### 相關鏈結
 
 * [實體基礎架構設計](design_physicalinfrastructure.html)
 * [虛擬基礎架構設計](design_virtualinfrastructure.html)
-* [常見服務設計](design_commonservice.html)
+* [共用服務設計](design_commonservice.html)
 * [基礎架構管理設計](design_infrastructuremgmt.html)

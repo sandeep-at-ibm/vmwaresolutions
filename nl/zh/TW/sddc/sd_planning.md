@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -27,15 +27,15 @@ Cloud Foundation 部署具有嚴格的實體基礎架構需求。因此，您只
 |AMS03 |阿姆斯特丹|歐洲| Skylake、Broadwell |
 |CHE01 |清奈|亞太地區| Skylake、Broadwell |
 |DAL09 |達拉斯|NA 南部| Skylake、Broadwell |
-|DAL10 |達拉斯|NA 南部| Skylake、Broadwell、小型、大型 |
+|DAL10 |達拉斯|NA 南部| Skylake、Broadwell |
 |DAL12 |達拉斯|NA 南部| Skylake、Broadwell |
 |DAL13 |達拉斯|NA 南部| Skylake、Broadwell |
-|FRA02 |法蘭克福|歐洲| Skylake、Broadwell、大型 |
+|FRA02 |法蘭克福|歐洲| Skylake、Broadwell |
 |FRA04 |法蘭克福|歐洲| Skylake、Broadwell |
 |HKG02 |香港|亞太地區| Skylake、Broadwell |
 |LON02 |倫敦|歐洲| Skylake、Broadwell |
 |LON04 |倫敦|歐洲| Skylake、Broadwell |
-|LON06 |倫敦|歐洲| Skylake、Broadwell、小型、大型 |
+|LON06 |倫敦|歐洲| Skylake、Broadwell |
 |MEL01 |墨爾本|亞太地區| Skylake、Broadwell |
 |MEX01 |克雷塔羅|NA 南部| Skylake、Broadwell |
 |MIL01 |米蘭|歐洲| Skylake、Broadwell |
@@ -50,8 +50,8 @@ Cloud Foundation 部署具有嚴格的實體基礎架構需求。因此，您只
 |SYD01 |雪梨|亞太地區| Skylake、Broadwell |
 |SYD04 |雪梨|亞太地區| Skylake、Broadwell |
 |TOK02 |東京|亞太地區| Skylake、Broadwell |
-|TOR01 |多倫多|NA 東部| Skylake、Broadwell、小型、大型 |
-|WDC04 |華盛頓特區|NA 東部| Skylake、Broadwell、小型、大型 |
+|TOR01 |多倫多|NA 東部| Skylake、Broadwell |
+|WDC04 |華盛頓特區|NA 東部| Skylake、Broadwell |
 |WDC06 |華盛頓特區|NA 東部| Skylake、Broadwell |
 |WDC07 |華盛頓特區|NA 東部| Skylake、Broadwell |
 

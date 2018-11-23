@@ -16,7 +16,8 @@ lastupdated: "2018-10-25"
 
 此設計僅支援透過 NFS 第 3 版連接共用儲存空間。不支援 NFS 第 4 版及 4.1 版。
 
-此設計的所有連接儲存空間僅限於與 vCenter Server 解決方案相同 {{site.data.keyword.CloudDataCent_notm}} 中可用的 {{site.data.keyword.cloud_notm}} 儲存空間。此外，依預設，儲存至該資料儲存庫的所有虛擬磁碟都採取精簡佈建的方式。{:note}
+此設計的所有連接儲存空間僅限於與 vCenter Server 解決方案相同 {{site.data.keyword.CloudDataCent_notm}} 中可用的 {{site.data.keyword.cloud_notm}} 儲存空間。此外，依預設，儲存至該資料儲存庫的所有虛擬磁碟都採取精簡佈建的方式。
+{:note}
 
 架構指定使用 {{site.data.keyword.cloud_notm}} 儲存空間中的 DNS 名稱來連接 NFS 第 3 版資料儲存庫，以連接至共用。此外，NFS 共用會連接到 vCenter Server 叢集裡的所有主機，並放置在已啟用儲存空間 DRS 的資料儲存庫叢集裡。
 

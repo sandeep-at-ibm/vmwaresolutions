@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 將更新套用至 Cloud Foundation 實例
 
@@ -16,7 +18,7 @@ lastupdated: "2018-10-17"
 
 可用的更新是實例的軟體更新清單中的記錄，可立即套用或排定稍後進行。更新是一個組合，包含一個以上用來更新 IBM 管理元件及 VMware 元件的套件。
 
-因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。 
+因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。例如新增主機、新增叢集及訂購服務等動作，會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](../vmonic/relnotes_v25.html)中的 *IBM CloudDriver 備援* 小節。{:note}
 
 ## 開始之前
 

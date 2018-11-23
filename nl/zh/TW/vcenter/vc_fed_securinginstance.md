@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 保護 VMware Federal 實例
 
@@ -22,12 +26,13 @@ lastupdated: "2018-09-27"
 ## 保護 VMware Federal 實例的程序
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
-2. 在 **vCenter Server 實例**表格中，按一下要保護的實例。
+2. 在 **vCenter Server 實例**表格中，按一下要維護安全的實例。
 3. 按一下 **vCenter 主控台**旁的溢位功能表圖示。
-4. 按一下**保護實例**。
+4. 按一下**維護實例安全**。
 5. 按一下**確定**以確認您要中斷實例自動化。
 
-  **附註：**在完成此步驟之前，請確定已檢閱**開始之前**小節中的資訊。
+  在完成此步驟之前，請確定已檢閱**開始之前**小節中的資訊。
+  {:note}
 
 6. 從環境移除面對大眾的管理服務 VMware NSX Edge Services Gateway (ESG)，以及選擇性地移除在自動化期間部署的客戶管理 ESG。
 7. 重設 IBM 自動化所使用之所有帳戶的密碼或金鑰。如需相關資訊，請參閱 [How can I secure my environment to remove access by IBM automation and support?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)

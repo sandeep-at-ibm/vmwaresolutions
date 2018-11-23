@@ -56,7 +56,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 Fo
    * `RAM 保留 = RAM 大小`
 * 當您將 FortiGate Virtual Appliance 的 HA 配對部署至實例時，已在「管理 NSX Edge Services Gateway (ESG)」上定義 SNAT 及防火牆規則以及 FortiGate Virtual Appliance 上的靜態路徑，以容許從實例到公用網路的出埠 HTTPS 通訊來啟動授權，以及取得最新安全原則及內容。
 * 您無法在安裝服務之後變更授權層次。若要變更授權層次，您必須移除現有服務，然後選取不同的授權選項來重新安裝服務。
-* 您必須符合下列需求，才能避免 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 失敗：
+* 您必須滿足下列需求，才能避免 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 失敗：
    * 至少有兩部作用中 ESXi 伺服器，可使用在個別伺服器上保留 VM 的反親緣性規則來部署兩部 FortiGate VM。
    * 兩部作用中 ESXi 伺服器具有足夠的可用資源，因此，可以在具有 100% CPU 及 RAM 保留的每一部 ESXi 伺服器上管理一部 FortiGate VM。
    * VMware vSphere HA 具有足夠的資源，可管理兩部具有 100% CPU 及 RAM 的 FortiGate VM。

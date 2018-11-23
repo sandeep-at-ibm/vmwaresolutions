@@ -4,15 +4,15 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
 # 起始配置
 
-IC4VS 自動化會配置預設閘道設為「IBM Cloud 後端客戶路由器 (BCR)」的 VCSA。不過，無法透過 BCR 來遞送至網際網路。從 VCS 實例到網際網路的標準遞送是透過「管理 ESG」。因為不建議變更 VCSA 或「管理 ESG」的配置，所以建議在客戶子網路上實作 Proxy 伺服器，以啟用 VUM。
+IC4VS 自動化會配置將預設閘道設為「{{site.data.keyword.cloud}} 後端客戶路由器 (BCR)」的 VCSA。不過，沒有可透過 BCR 通往網際網路的路徑。從 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 實例通往網際網路的標準路徑是透過「管理 ESG」。因為不建議變更 VCSA 或「管理 ESG」的配置，所以建議在客戶子網路上實作 Proxy 伺服器，以啟用 VUM。
 
-此方式表示不需要重新配置 VCSA 或「管理 ESG」，不過，需要安裝小型 VM 或應用裝置。Proxy 伺服器是位於兩個端點裝置之間的系統，用來作為中間裝置。在此情況下，它位在 VUM 與 VMware 的更新伺服器之間。
+此方法表示不需要重新配置 VCSA 或「管理 ESG」，不過，需要安裝一個小型虛擬機器 (VM) 或應用裝置。Proxy 伺服器是位於兩個端點裝置之間的系統，用來作為中間裝置。在此情況下，它位在 VUM 與 VMware 的更新伺服器之間。
 
 VUM 從 VMware 的更新伺服器要求資源時，會先將要求傳送至 Proxy 伺服器，而 Proxy 伺服器接著會將要求傳送至更新伺服器。在 Proxy 伺服器取得資源之後，會將資源傳送至 VUM。Proxy 伺服器可以用來協助安全、管理控制及快取服務。
 
@@ -36,8 +36,8 @@ VUM 從 VMware 的更新伺服器要求資源時，會先將要求傳送至 Prox
 | 位址 |proxy ip |應該從佈建處理程序期間指派的「客戶」專用可攜式子網路使用備用 IP 位址。此子網路上只保留兩個 IP 位址；一個適用於 BCR，另一個適用於 customer-esg
 | 網路遮罩 |255.255.255.192 | |
 | 閘道 |customer-nsx-edge 專用上行鏈路 IP | 這是 Proxy 伺服器的預設閘道設定，即 customer-nsx-edge 的專用上行鏈路 IP 位址。檢閱 **customer-nsx-edge** 的**設定**標籤，即可找到此 IP 位址。|
-| DNS 伺服器 |AD/DNS IP | 在 IBM Cloud for VMware Solutions 主控台的實例頁面（**已部署的實例**頁面）上，可以找到此 IP 位址。 |
-| BCR IP |bcr ip | 這是「IBM Cloud 後端客戶路由器」的 IP 位址，並且是 10.0.0.0/8 及 161.26.0.0/16 的閘道。此位址用於 Proxy 伺服器的靜態路徑中，讓它能夠連接 VCSA 及 AD/DNS 伺服器。 |
+| DNS 伺服器 |AD/DNS IP | 在 {{site.data.keyword.vmwaresolutions_short}} 主控台的實例頁面（**已部署的實例**頁面）上，可以找到此 IP 位址。|
+| BCR IP |bcr ip | 這是「{{site.data.keyword.cloud_notm}} 後端客戶路由器」的 IP 位址，並且是 10.0.0.0/8 和 161.26.0.0/16 的閘道。此位址用於 Proxy 伺服器的靜態路徑中，讓它能夠連接 VCSA 及 AD/DNS 伺服器。 |
 
 ## 配置 NSX
 
@@ -73,11 +73,11 @@ VUM 從 VMware 的更新伺服器要求資源時，會先將要求傳送至 Prox
 
 ### 下載 CentOS-Minimal ISO 檔案
 
-在跳躍伺服器上，使用瀏覽器從 [CentOS](https://www.centos.org/download/) 下載 CentOS-Minimal ISO 檔案。請注意，IBM Cloud 會維護許多熱門 Linux 發行套件的鏡映。此鏡映僅適用於專用網路，且 CentOS ISO 位於下列位址：`http://mirrors.service.softlayer.com/centos/7/isos/x86_64/`
+在跳躍伺服器上，使用瀏覽器從 [CentOS](https://www.centos.org/download/) 下載 CentOS-Minimal ISO 檔案。請注意，{{site.data.keyword.cloud_notm}} 維護許多熱門 Linux 發行套件的鏡映。此鏡映僅適用於專用網路，且 CentOS ISO 位於下列位址：`http://mirrors.service.softlayer.com/centos/7/isos/x86_64/`
 
 ### 配置內容程式庫，並在其中移入 CentOS ISO 檔案
 
-建立本端 vCenter 內容程式庫。只有在建立程式庫的 vCenter Server 實例中，才能存取程式庫。請將部署虛擬機器所需的範本及 ISO 移入程式庫。
+建立本端 vCenter 內容程式庫。只有在建立程式庫的 vCenter Server 實例中，才能存取程式庫。請將部署 VM 所需的範本及 ISO 移入程式庫。
 
 1. 透過 vSphere Web Client，導覽至**首頁** > **內容程式庫** > **物件** > **建立新的內容程式庫** > **在 vCenter 上建立訂閱的程式庫**。
 2. 輸入內容程式庫的名稱（例如 ISO），然後在「附註」文字框中輸入程式庫的說明，然後按**下一步**。
@@ -107,7 +107,7 @@ VUM 從 VMware 的更新伺服器要求資源時，會先將要求傳送至 Prox
 8.	將 **CPU** 設為 1，並將**記憶體**設為 2048 MB，然後將**新建硬碟**設為 25 GB。選取**內容程式庫 ISO 檔案**，並選取 **CentOS-7-x86_64-Minimal**，然後按一下**確定**，再勾選**已連接**方框。
 9.	在「新建裝置」方框中，選取**網路**，然後按一下**新增**。
 10.	選取 **SDDC-DPortGroup-Mgmt** 網路，並確定已勾選「連接」勾選框，然後按**下一步**。
-11.	檢閱並按一下**完成**
+11.	檢閱後按一下**完成**。
 
 #### 安裝 CentOS
 
@@ -122,16 +122,16 @@ VUM 從 VMware 的更新伺服器要求資源時，會先將要求傳送至 Prox
 7.	在**本地化**畫面，按一下**安裝目的地**，按一下 **VMware 虛擬磁碟**圖示，然後按一下**完成**。
 8.	在**本地化**畫面，按一下**網路及主機名稱**，將「主機名稱」變更為您選擇的主機名稱（例如 Proxy01）。
 9.	按一下**配置**按鈕，然後按一下 **IPv4 設定**，在**方法**方框中選取**手動**。
-10.	使用**新增**按鈕，插入_表 1 – 部署值_ 中的_位址網路遮罩_ 及_閘道_
-11.	輸入「表 1 – 部署值」中的 _DNS 伺服器 IP 位址_。
-12.	按一下**路徑**按鈕，然後新增下列具有「表 1 部署值」中閘道 IP 位址 _BCR IP 位址_ 的靜態路徑：_10.0.0.0/8 及 161.26.0.0/16_，以作為閘道。此靜態路徑容許 Proxy 伺服器到達 DNS 伺服器
-13.	按一下**儲存**，然後確定乙太網路介面已開啟並顯示為已連接。按一下**完成**及**開始安裝**
+10.	使用**新增**按鈕，在_表 1. 部署值_ 中插入_位址網路遮罩_ 和_閘道_。
+11.	在「表 1. 部署值」中，輸入 _DNS 伺服器 IP 位址_。
+12.	按一下**路徑**按鈕，然後新增下列具有「表 1 部署值」中閘道 IP 位址 _BCR IP 位址_ 的靜態路徑：_10.0.0.0/8 及 161.26.0.0/16_，以作為閘道。此靜態路徑容許 Proxy 伺服器連接到 DNS 伺服器。
+13.	按一下**儲存**，然後確定乙太網路介面已開啟並顯示為已連接。按一下**完成**和**開始安裝**。
 14.	繼續安裝時，請設定 root 密碼並設定使用者。
 15.	安裝完成時，請以使用者身分登入，然後輸入 _ping vmware.com_ 指令。名稱應該解析為 IP 位址，而且您應該會取得回應。如果您未取得回應，請檢查：IP 位址、防火牆規則及 NAT 設定。
 
 #### 安裝及配置 Squid
 
-Squid 沒有任何最低的硬體需求，但根據透過您 Proxy 存取網際網路的使用者以及快取中所儲存的物件，RAM 數量可能會不同。因為只有 VUM 才能存取 Proxy 伺服器，而且未啟用快取，所以只會配置小型 VM。
+Squid 沒有任何最低硬體需求，但根據透過 Proxy 存取網際網路的使用者以及快取中所儲存的物件，RAM 的數量可能會不同。因為只有 VUM 才能存取 Proxy 伺服器，而且未啟用快取，所以只會配置小型 VM。
 
 1. 使用 vSphere Web Client 中的「Web 主控台」或「遠端主控台」，以使用者身分登入 Proxy 伺服器，然後 `su` 到 root。
 2. 安裝任何套件之前，建議您使用下列指令來更新系統及套件：
@@ -145,12 +145,12 @@ Squid 沒有任何最低的硬體需求，但根據透過您 Proxy 存取網際�
   `yum -y update`
   `yum clean all`
 
-5. 使用下列指令來安裝 Squid：`yum -y install squid`
-6. 安裝之後，使用下列指令立即啟動 Squid：`systemctl start squid`
-7. 若要在開機時自動啟動 Squid，請執行下列指令：`systemctl enable squid`
-8. 執行下列指令，確保 Squid 正在執行：`systemctl status squid`
-9. CentOS 防火牆需要使用下列指令，來容許存取 Squid 埠 (TCP 3128)：`firewall-cmd –add-port=3128/tcp –permanent`
-10.	若要儲存規則並重新啟動服務，請使用下列指令：`firewall-cmd –reload`
+5. 使用下列指令來安裝 Squid：`yum -y install squid`。
+6. 安裝之後，使用下列指令立即啟動 Squid：`systemctl start squid`。
+7. 若要在開機時自動啟動 Squid，請執行下列指令：`systemctl enable squid`。
+8. 執行下列指令，以確保 Squid 執行中：`systemctl status squid`。
+9. CentOS 防火牆需要使用下列指令來容許存取 Squid 埠 (TCP 3128)：`firewall-cmd -add-port=3128/tcp -permanent`。
+10.	若要儲存規則並重新啟動此服務，請使用下列指令：`firewall-cmd -reload`。
 
 ## VUM 的起始設定
 
@@ -163,5 +163,5 @@ Squid 沒有任何最低的硬體需求，但根據透過您 Proxy 存取網際�
 
 ### 相關鏈結
 
-* [VMware HCX on IBM Cloud 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（展示）
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) 上的 VMware 解決方案（示範）

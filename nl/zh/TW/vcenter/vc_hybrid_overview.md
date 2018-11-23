@@ -65,7 +65,8 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 
 下列元件已包含在 vCenter Server with Hybridity Bundle 實例中：
 
-標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。{:note}
+標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+{:note}
 
 ### Bare Metal Server
 

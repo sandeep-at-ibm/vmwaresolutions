@@ -41,7 +41,8 @@ lastupdated: "2018-10-29"
 
 如果您擴充的叢集尚無法使用，則您可能會收到錯誤訊息。
 
-vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。{:note}
+vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。
+{:note}
 
 ### 相關鏈結
 

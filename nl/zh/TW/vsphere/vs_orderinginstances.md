@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -86,7 +86,10 @@ lastupdated: "2018-10-29"
 
 選取要在其中管理叢集的 {{site.data.keyword.CloudDataCent_notm}}。
 
-如果您選取 vSAN 元件，則會依 SSD 可用性來過濾位置清單。{:note}
+**附註：**
+* 如果您選取 vSAN 元件，則會依 SSD 可用性來過濾位置清單。
+* FRA05 資料中心不支援 Broadwell Bare Metal Server。
+* LON05 資料中心不支援 SAP 認證或 Broadwell Bare Metal Server。
 
 ### Skylake
 
@@ -98,7 +101,7 @@ lastupdated: "2018-10-29"
 |:------------- |:------------- |
 |雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### SAP 認證
 
@@ -136,7 +139,7 @@ lastupdated: "2018-10-29"
 如果您選取叢集的 VMware vSAN 元件，請指定下列設定。
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
-* 如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
+* 如果您要新增超過所限制的 8 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
 
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
 
@@ -148,14 +151,14 @@ lastupdated: "2018-10-29"
 
 主機名稱使用於所有 Bare Metal Server 訂單。建議您對所有管理虛擬機器使用主機名稱（例如 vCenter Server 及 NSX）。
 
-主機名稱字首必須符合下列需求：
+主機名稱字首必須滿足下列需求：
 * 名稱的開頭及結尾必須是英數字元。
 * 只容許英數及橫線 (-) 字元。
 * 最大長度是 10 個字元。
 
 ### 子網域標籤
 
-子網域標籤必須符合下列需求：
+子網域標籤必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
 *  子網域標籤的開頭及結尾必須是英數字元。
 *  子網域標籤的長度上限為 10 個字元。
@@ -163,7 +166,7 @@ lastupdated: "2018-10-29"
 
 ### 網域名稱
 
-網域名稱使用於所有 {{site.data.keyword.baremetal_short}}，且必須符合下列需求：
+網域名稱使用於所有 {{site.data.keyword.baremetal_short}}，且必須滿足下列需求：
 * 名稱必須包含兩個以上以句點 (.) 區隔的字串
 * 只容許英數及橫線 (-) 字元。
 * 每一個字串的開頭都必須是英文字母、結尾必須是英數字元，而最後一個字串只能包含英文字母。

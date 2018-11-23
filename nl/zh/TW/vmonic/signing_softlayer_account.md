@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-26"
 
 ## 註冊 IBM Cloud 帳戶
 
-您可以使用現有 **IBM ID** 或建立新的 **IBM ID**，來註冊 {{site.data.keyword.cloud}} 帳戶。如需如何註冊 {{site.data.keyword.cloud_notm}} 帳戶的相關資訊，請參閱[註冊 {{site.data.keyword.cloud_notm}} 帳戶](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud)。
+您可以使用現有 **IBM ID** 或建立新的 **IBM ID**，來註冊 {{site.data.keyword.cloud}} 帳戶。如需如何註冊 {{site.data.keyword.cloud_notm}} 帳戶的相關資訊，請參閱[註冊 {{site.data.keyword.cloud_notm}}](../../../account/adminpublic.html)。
 
 ## 註冊 IBM Cloud 基礎架構 (SoftLayer) 帳戶
 
@@ -37,4 +37,4 @@ lastupdated: "2018-09-26"
 * [{{site.data.keyword.cloud_notm}} 基礎架構帳戶的需求](slaccountrequirement.html)
 * [視訊 - 如何建立 {{site.data.keyword.cloud_notm}} 帳戶](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)
-* [切換至 IBM ID](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}
+* [切換至 IBM ID 並鏈結帳戶](../../../admin/softlayerlink.html){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -18,7 +18,7 @@ F5 on {{site.data.keyword.cloud}} 服務 (F5 BIG-IP® Virtual Edition) 提供區
 
 您可以視需要安裝此服務的多個實例。
 
-只有在 1.9 版或更新版本中部署的實例，才能使用此服務。目前安裝的 BIG-IP VE 版本為 v13.1。
+只有在 1.9 版或更新版本中部署的實例，才能使用此服務。目前安裝的 BIG-IP VE 版本為 13.1.1.2 版。
 {:note}
 
 ## F5 on IBM Cloud 的技術規格
@@ -70,7 +70,7 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
   `RAM 保留 = RAM 大小`（從表 1）
 
 ### 規劃考量
-您必須符合下列需求，才能避免 F5 on {{site.data.keyword.cloud_notm}} 失敗：
+您必須滿足下列需求，才能避免 F5 on {{site.data.keyword.cloud_notm}} 失敗：
 * 至少有兩部作用中 ESXi 伺服器，可使用在個別伺服器上保留 VM 的反親緣性規則來部署兩部 BIG-IP VE VM。
 * 兩部作用中 ESXi 伺服器具有足夠的可用資源，因此，可以在具有 100% CPU 及 RAM 保留的每一部 ESXi 伺服器上管理一部 BIG-IP VE VM。
 * VMware vSphere HA 具有足夠的資源，可管理兩部具有 100% CPU 及 RAM 的 BIG-IP VM。

@@ -63,7 +63,7 @@ lastupdated: "2018-10-29"
 |ID |實例的 ID。|
 |位置|管理實例所在的 {{site.data.keyword.CloudDataCent_notm}}。|
 |現行版本|{{site.data.keyword.vmwaresolutions_short}} 的現行版本。|
-|vCenter 版本|VMware vCenter Server with Hybridity Bundle 版本。<br><br>{{site.data.keyword.vmwaresolutions_short}} 主控台與 VMware vSphere Web Client 上所顯示的 vCenter Server 版本之間略有不同。兩者皆正確。{:note} |
+|vCenter 版本|VMware vCenter Server with Hybridity Bundle 版本。<br><br>**附註：**在 {{site.data.keyword.vmwaresolutions_short}} 主控台及 VMware vSphere Web Client 上顯示的 vCenter Server 版本之間略有不同。兩者皆正確。|
 |NSX for vSphere |VMware NSX for vSphere 產品版本。|
 |NSX 授權版本|VMware NSX 授權的版本。|
 |DNS、根網域|根網域名稱是 DNS（網域名稱系統）網域名稱及 Microsoft Active Directory (AD) 樹系根名稱。|

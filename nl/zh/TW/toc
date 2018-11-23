@@ -51,6 +51,7 @@ IBM Cloud for VMware Solutions
         vcenter/vc_networkingonvcenterserver.md
         vcenter/vc_esg_config.md
         vcenter/vc_multisite.md
+        vcenter/vc_compl_info.md
         vcenter/vc_orderinginstance.md
         vcenter/vc_addingviewingclusters.md
         vcenter/vc_addingremovingservers.md
@@ -67,6 +68,7 @@ IBM Cloud for VMware Solutions
         vcenter/vc_hybrid_planning.md
         vcenter/vc_hybrid_networkingonvcenterserver.md
         vcenter/vc_hybrid_multisite.md
+        vcenter/vc_compl_info.md
         vcenter/vc_hybrid_orderinginstance.md
         vcenter/vc_hybrid_addingviewingclusters.md
         vcenter/vc_hybrid_addingremovingservers.md
@@ -268,6 +270,7 @@ IBM Cloud for VMware Solutions
         archiref/attached-storage/storage-infra-mgmt.md
         archiref/attached-storage/storage-settings.md
         archiref/attached-storage/cluster-settings.md
+    
 
     {: .topicgroup}
     NSX Edge Services Gateway 解決方案架構
@@ -338,9 +341,9 @@ IBM Cloud for VMware Solutions
         archiref/vcsiks/vcsiks-overview-network.md
 
     {: .topicgroup}
-    VMware 和 Skate Advisor 概念汽車手冊
-        archiref/vcscar/vcscar-preface.md
+    VMware 和 Skate Advisor 概念車手冊
         archiref/vcs/vcs-hybridity-intro.md
+        archiref/vcscar/vcscar-preface.md
         archiref/vcscar/vcscar-intro.md
         archiref/vcscar/vcscar-syscontext.md
         archiref/vcscar/vcscar-concepts.md

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -28,7 +28,7 @@ lastupdated: "2018-10-25"
 
 當您訂購此服務時，請提供下列設定：
 * 根據您的需求，選取**正式作業就緒**或**開發/測試**。
-* 選取所需的勾選框，以認證您已取得部署 {{site.data.keyword.cloud_notm}} Private Hosted 服務所需的授權。
+* 請選取必要的勾選框，以認證您已取得部署 {{site.data.keyword.cloud_notm}} Private Hosted 服務所需的授權。
 
 ### 相關鏈結
 

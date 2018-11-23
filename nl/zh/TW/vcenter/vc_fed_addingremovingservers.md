@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 擴充及縮減 VMware Federal 實例的容量
 
@@ -14,7 +18,8 @@ lastupdated: "2018-09-28"
 
 如果您的主要叢集以 vSAN 作為其儲存空間，則在部署之後新增一部以上的 ESXi 伺服器，可增加叢集儲存空間容量。
 
-**附註：**這個特性只適用於未受保護的 VMware Federal 實例。
+此特性僅適用於未受保護的 VMware Federal 實例。
+{:note}
 
 ## 將 ESXi 伺服器新增至 VMware Federal 實例
 
@@ -61,7 +66,7 @@ lastupdated: "2018-09-28"
 2. 您將會收到電子郵件，通知正在處理您的移除 ESXi 伺服器要求。在主控台上，與 ESXi 伺服器相關聯的叢集狀態會變更為**正在修改**。
 3. 在 {{site.data.keyword.cloud_notm}} 基礎架構計費週期（通常是 30 天）結束時，{{site.data.keyword.cloud_notm}} 基礎架構會完全收回 ESXi 伺服器。
 
-   **注意：**將向您收取已移除的 ESXi 伺服器到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。
+   將針對已移除的 ESXi 伺服器，向您收取到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。{:note}
 
 ### 相關鏈結
 

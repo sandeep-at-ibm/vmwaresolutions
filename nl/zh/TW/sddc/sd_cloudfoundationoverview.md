@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -52,14 +52,9 @@ Cloud Foundation 實例中包括下列元件。
 ### Bare Metal Server
 
 您可以使用下列其中一個配置來訂購 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}：
-*  **Skylake** 或 **Broadwell**：具有所選取 CPU 型號及 RAM 大小的 {{site.data.keyword.baremetal_short}}。   
-   * 2-CPU Intel Skylake Generation（Intel Xeon 4100/5100/6100 系列）
-   * 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
-
-   如果您計劃使用 vSAN 儲存空間，則配置需要四個 {{site.data.keyword.baremetal_short}}。{:note}
-* **預先配置**：2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
-  * **小型**（雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz / 128 GB RAM / 12 個磁碟）
-  * **大型**（雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz / 512 GB RAM / 12 個磁碟）
+*  **Skylake**：2-CPU Intel Skylake 產生伺服器（Intel Xeon 4100/5100/6100 系列），搭配您選取的 CPU 型號及 RAM 大小。   
+*  **Broadwell**：2-CPU Intel Broadwell 產生伺服器（Intel Xeon E5-2600 v4 系列），搭配您選取的 CPU 型號及 RAM 大小。   
+如果您計劃使用 vSAN 儲存空間，則配置需要四個 {{site.data.keyword.baremetal_short}}。{:note}
 
 ### 網路
 
@@ -83,12 +78,10 @@ Cloud Foundation 實例中包括下列元件。
 ### 儲存空間
 
 以下是已訂購的儲存空間（視您選取的 {{site.data.keyword.baremetal_short}} 配置而定）：
-* 兩個 1-TB SATA 開機磁碟
-* 兩個 960-GB SSD（固態磁碟）快取磁碟
+* 兩個 1 TB 的 SATA 開機磁碟
+* 兩個 960 GB 的 SSD（固態磁碟）快取磁碟
 * 一個 RAID 磁碟控制器
 * 僅針對 **Skylake** 和 **Broadwell** 配置，您可以根據需求來設定磁碟機數目以及磁碟類型和容量。同時，您也具有「高效能 Intel Optane」選項，可提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。「高效能 Intel Optane」選項取決於 CPU 型號。
-* 僅針對**預先配置**、**小型**配置：兩個 1.9 TB SSD 容量磁碟
-* 僅針對**預先配置**、**大型**配置：四個 3.8 TB SSD 容量磁碟
 
 ### 授權（IBM 提供或 BOYL）與費用
 
