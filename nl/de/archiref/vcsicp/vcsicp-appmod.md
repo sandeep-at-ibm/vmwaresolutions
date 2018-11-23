@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -13,7 +13,6 @@ lastupdated: "2018-10-10"
 Das folgende Diagramm zeigt die Referenzarchitektur der Anwendungsmodernisierung, die Acme Skateboards bereitstellt und die in dieser Reihe von Dokumenten eingehend beschrieben wird.
 
 Abbildung 1. Diagramm mit Architekturübersicht
-
 ![Diagramm mit Architekturübersicht](vcsicp-arch-overview.svg)
 
 Durch diese Hybridarchitektur erhält Acme Skateboards folgende Möglichkeiten:
@@ -22,7 +21,7 @@ Durch diese Hybridarchitektur erhält Acme Skateboards folgende Möglichkeiten:
 - Nutzung von Cloud Automation Manager (CAM) zum Scripten von "Infrastructure as Code" (IaC), um Services zusammenzustellen und zu orchestrieren, die aus VMs und Containern bestehen, um eine Integration mit den vorhandenen DevOps-Toolchains und der ITSM-Lösung zu ermöglichen.
 
 Die Referenzarchitektur setzt sich aus den folgenden Schlüsselkomponenten zusammen:
-- **Lokale Virtualisierung** - Dies ist ein VMware-Cluster, der momentan die VMs von Acme Skateboards hostet. Es sind diese VMs, die derzeit die zu modernisierenden Anwendungen hosten. Dieser Cluster ist erforderlich, um die Voraussetzungen der Architektur von [IBM Cloud vCenter Server with Hybridity Bundle](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) zu erfüllen, damit HCX ausgeführt werden kann. HCX erweitert die lokalen Netze in die IBM Cloud. Das ermöglicht es den Kunden, VMs in die VMware vCenter Server on IBM Cloud-Instanz (VCS) zu migrieren, die auf IBM Cloud ausgeführt wird (eine Migration zurück ist bei Bedarf ebenfalls möglich).
+- **Lokale Virtualisierung** - Dies ist ein VMware-Cluster, der momentan die VMs von Acme Skateboards hostet. Es sind diese VMs, die derzeit die zu modernisierenden Anwendungen hosten. Dieser Cluster ist erforderlich, um die Voraussetzungen der Architektur von [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) zu erfüllen, damit HCX ausgeführt werden kann. HCX erweitert die lokalen Netze in die IBM Cloud. Das ermöglicht es den Kunden, VMs in die VMware vCenter Server on IBM Cloud-Instanz (VCS) zu migrieren, die auf IBM Cloud ausgeführt wird (eine Migration zurück ist bei Bedarf ebenfalls möglich).
 
 - **IBM Cloud for VMware Solutions** - Die VCS-Instanz stellt die grundlegenden VMware-Bausteine bereit, wie z. B. vSphere, vCenter Server, NSX-V und Speicheroptionen, einschließlich vSAN oder IBM Cloud Endurance-Speicher, die für die automatische Bereitstellung einer VMware Software Defined Data Center-Lösung (SDDC) erforderlich sind. Der VMware-Cluster ist das Ziel für die migrierten VMs sowie einige der modernisierten Anwendungen in Containern, die in ICP gehostet werden. Die Schlüsselkomponenten in VCS sind:
     - **NSX-V** - NSX-V ist die Schicht zur Netzvirtualisierung in VCS, die ein Netzoverlay für die VMs von Acme Skateboards zur Verfügung stellt. NSX-V aktiviert BYOIP und isoliert die Workloadnetze von den IBM Cloud-Netzen. NSX-V wird von HCX programmiert, um die Netze zu erstellen, die bei Acme Skateboards aus der lokalen Umgebung erweitert werden sollen.
@@ -55,4 +54,4 @@ Kunden, die sich für Cloud-native Anwendungsplattformen wie ICP und IKS interes
 
 ## Zugehörige Links
 
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)

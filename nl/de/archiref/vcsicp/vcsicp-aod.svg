@@ -14,7 +14,7 @@
    style="background-color:rgb(255, 255, 255)"
    version="1.1"
    id="svg271"
-   sodipodi:docname="vcsicp-aod.svg"
+   sodipodi:docname="vcsicp-arch-overview.svg"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -25,13 +25,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="2314"
-     inkscape:window-height="1332"
+     inkscape:window-width="2218"
+     inkscape:window-height="1317"
      id="namedview273"
      showgrid="false"
      inkscape:zoom="1.4523077"
-     inkscape:cx="360.01876"
-     inkscape:cy="306.28117"
+     inkscape:cx="431.07003"
+     inkscape:cy="275.86481"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -228,7 +228,7 @@
   <g
      id="g57"
      style="font-size:medium;font-family:Helvetica;text-anchor:middle"
-     transform="translate(175.78613,15.648305)">
+     transform="translate(175.78613,14.5)">
     <text
        x="215"
        y="532.5"

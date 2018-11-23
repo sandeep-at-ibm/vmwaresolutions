@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -56,4 +56,4 @@ Abbildung 3. VCS mit ICP
 
 ### Zugehörige Links
 
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
