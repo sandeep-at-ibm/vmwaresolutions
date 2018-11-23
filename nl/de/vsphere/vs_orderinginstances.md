@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -89,8 +89,10 @@ Die Verwendung von einzelnen Lizenzschlüsseln zusammen mit den kombinierten Liz
 
 Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} aus, das als Host für den Cluster verwendet werden soll.
 
-Falls Sie eine vSAN-Komponente auswählen, wird die Liste der Standorte nach SSD-Verfügbarkeit gefiltert.
-{:note}
+**Hinweise:**
+* Falls Sie eine vSAN-Komponente auswählen, wird die Liste der Standorte nach SSD-Verfügbarkeit gefiltert.
+* Das Rechenzentrum FRA05 bietet keine Unterstützung für den Broadwell-Bare-Metal-Server.
+* Das Rechenzentrum FRA05 bietet keine Unterstützung für SAP-zertifizierte und Broadwell-Bare-Metal-Server.
 
 ### Skylake
 
