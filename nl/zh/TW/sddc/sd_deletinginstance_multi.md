@@ -26,7 +26,8 @@ lastupdated: "2018-10-29"
 
 由於資源相依關係，當您刪除實例時，不會立即釋放實例中的元件。例如，在 {{site.data.keyword.cloud}} 基礎架構完整收回 ESXi 伺服器（發生於 {{site.data.keyword.cloud_notm}} 計費週期結束時）之前，無法刪除子網路及 VLAN。在 {{site.data.keyword.cloud_notm}} 計費週期（通常為 30 天）結束時，會刪除子網路及 VLAN，並完成實例刪除。
 
-將針對已刪除的實例，向您收取到 {{site.data.keyword.cloud_notm}} 計費週期結束為止的費用。{:note}
+將針對已刪除的實例，向您收取到 {{site.data.keyword.cloud_notm}} 計費週期結束為止的費用。
+{:note}
 
 ## 刪除多站台配置中的 Cloud Foundation 實例的程序
 

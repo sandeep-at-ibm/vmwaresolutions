@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-10-29"
 
 ### 實例名稱
 
-實例名稱必須符合下列需求：
+實例名稱必須滿足下列需求：
 * 只容許英數及橫線 (-) 字元。
 * 實例名稱的開頭及結尾必須是英數字元。
 * 實例名稱的長度上限為 10 個字元。
@@ -60,9 +60,7 @@ lastupdated: "2018-10-29"
 
 ### Skylake
 
-當您選取 **Skylake** 時，可以根據需求來選擇 CPU 與 RAM 組合。
-
-選取 Bare Metal Server 的 CPU 型號及 RAM。
+當您選取 **Skylake** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。
 
 表 1. Skylake {{site.data.keyword.baremetal_short}} 的選項
 
@@ -74,25 +72,15 @@ lastupdated: "2018-10-29"
 
 ### Broadwell
 
-當您選取 **Broadwell** 時，可以根據需求來選擇 CPU 與 RAM 組合。
+當您選取 **Broadwell** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。
 
-選取 Bare Metal Server 的 CPU 型號及 RAM。
-
-表 1. Broadwell {{site.data.keyword.baremetal_short}} 的選項
+表 2. Broadwell {{site.data.keyword.baremetal_short}} 的選項
 
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
-
-### 預先配置
-
-當您選取**預先配置**時，無法變更 CPU 或 RAM 設定。
-
-根據您的需求，選取 Bare Metal Server 配置：
-  * 小型（雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz / 128 GB RAM / 12 個磁碟機）
-  * 大型（雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz / 512 GB RAM / 12 個磁碟機）
 
 ### Bare Metal Server 數目
 
@@ -102,14 +90,10 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 
 對於 Cloud Foundation 實例，您只能訂購 VMware vSAN 儲存空間。
 
-當您選取**預先配置**的 Bare Metal Server 配置時，儲存空間設定會標準化，且無法變更：
-  * 針對「**小型**裸機伺服器」配置，會訂購 1.9 TB SSD SED 的兩個磁碟機。
-  * 針對「**大型**裸機伺服器」配置，會訂購 3.8 TB SSD SED 的四個磁碟機。
-
 選取 **Skylake** 或 **Broadwell** Bare Metal Server 配置時，您可以自訂實例的 vSAN 儲存空間。請指定下列 vSAN 設定：
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
-* 如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
+* 如果您要新增超過所限制的 8 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
 
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
 
@@ -119,14 +103,14 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 
 ### 主機名稱字首
 
-主機名稱字首必須符合下列需求：
+主機名稱字首必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
 *  主機名稱字首的開頭及結尾必須是英數字元。
 *  主機名稱字首的長度上限為 10 個字元。
 
 ### 子網域標籤
 
-子網域標籤必須符合下列需求：
+子網域標籤必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
 *  子網域標籤的開頭及結尾必須是英數字元。
 *  子網域標籤的長度上限為 10 個字元。
@@ -134,7 +118,7 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 
 ### 網域名稱
 
-根網域名稱必須符合下列需求：
+根網域名稱必須滿足下列需求：
 * 網域名稱必須包含兩個以上以句點 (.) 區隔的字串
 * 第一個字串的開頭必須是英文字母，而且結尾必須是英數字元。
 * 除了最後一個字串以外，所有字串都只能包含英數字元和橫線 (-) 字元。
@@ -147,7 +131,7 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 
 網域名稱及子網域標籤用來產生實例的使用者名稱及伺服器名稱，如下表所示。
 
-表 2. 使用者名稱、網域名稱及伺服器名稱的值格式
+表 3. 使用者名稱、網域名稱及伺服器名稱的值格式
 
 |名稱        |值格式            |
   |:------------- |:------------- |
@@ -208,12 +192,10 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
    *  若要使用您自己的授權，請選取**我將提供**，然後輸入授權碼。  
 6. 完成 Bare Metal Server 設定：
    1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
-   2. 選取 Bare Metal Server 配置。
-      * 當您選取 **Skylake** 或 **Broadwell** 時，請指定 CPU 型號及 RAM 大小。
-      * 當您選取**預先配置**時，請從**小型**及**大型**中選擇一個配置。
+   2. 選取 Bare Metal Server 配置，然後指定 CPU 型號及 RAM 大小。
 7. 完成儲存空間配置。
-   * 如果您已針對 Bare Metal Server 配置選取 **Skylake** 或 **Broadwell**，請指定 vSAN 容量和快取磁碟的磁碟類型以及磁碟數目。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
-   * 如果您已針對 Bare Metal 配置選取**預先配置**，則無法變更**小型**及**大型**標準化 Bare Metal Server 配置的儲存空間設定。
+   1. 指定 vSAN 容量及快取磁碟的磁碟類型，以及磁碟數目。
+   2. 如果您想要更多儲存空間，請選取 **Intel Optane 的高效能**勾選框。
 8. 完成網路介面設定：
    1. 輸入主機名稱字首、子網域標籤及根網域名稱。對於次要實例，會自動完成網域名稱。
    2. 選取 VLAN 設定：

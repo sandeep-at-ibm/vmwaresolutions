@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -34,7 +34,7 @@ lastupdated: "2018-10-29"
 
 #### 叢集名稱
 
-叢集名稱必須符合下列需求：
+叢集名稱必須滿足下列需求：
 * 只容許英數及橫線 (-) 字元。
 * 叢集名稱的開頭及結尾必須是英數字元。
 * 叢集名稱的長度上限為 30 個字元。
@@ -46,13 +46,11 @@ lastupdated: "2018-10-29"
 
 您可以使用的資料中心取決於針對部署所選取的 Bare Metal Server 配置。如果您選取 **Skylake** 或 **Broadwell** 配置，則也可以在選取的資料中心包含其他 Pod 時，將叢集部署至不同的 {{site.data.keyword.cloud_notm}} 基礎架構 Pod。部署起始實例的預設 {{site.data.keyword.cloud_notm}} 基礎架構 Pod 達到其容量上限時，此配置非常實用。
 
-標準化的**小型**及**大型** Bare Metal Server 配置會使用無法變更的預設 Pod。{:note}
-
 如果您將叢集部署至不同的資料中心或 Pod，則會訂購其他三個 VLAN，以與已訂購的 {{site.data.keyword.baremetal_short}} 搭配使用。
 
 ### Bare Metal Server 設定
 
-您可以選擇 **Skylake**、**Broadwell** 或**預先配置**。
+您可以選擇 **Skylake** 或 **Broadwell**。
 
 #### Skylake
 
@@ -78,24 +76,14 @@ lastupdated: "2018-10-29"
 |雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
 
-#### 預先配置
-
-對於**預先配置**設定，您可以根據需求選擇 **Bare Metal Server 配置**：
-* 小型（雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz / 128 GB RAM / 12 個磁碟）
-* 大型（雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz / 512 GB RAM / 12 個磁碟）
-
 ### vSAN 儲存空間設定
 
 若為 **Skylake** 和 **Broadwell** Bare Metal Server 配置，您可以指定下列設定，以自訂 vSAN 儲存空間：
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
-* 如果您要新增超過限制 8 個的容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
+* 如果您要新增超過所限制的 8 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
 
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
-
-對於**預先配置** 的 Bare Metal Server 配置，您無法變更 vSAN 儲存空間設定：
-* 對於**小型**配置，會訂購兩個 1.9 TB SSD SED 的磁碟機。
-* 對於**大型**配置，會訂購四個 3.8 TB SSD SED 的磁碟機。
 
 ### 授權設定
 
@@ -113,12 +101,10 @@ lastupdated: "2018-10-29"
 3. 按一下左導覽窗格上的**基礎架構**，然後按一下**叢集**表格右上方的**新增**。
 4. 在**新增叢集**頁面上，輸入叢集名稱。
 5. 如果您要在與實例管理所在不同的 {{site.data.keyword.CloudDataCent_notm}} 中管理叢集，請勾選 **Bare Metal Server** 下的**選取不同的位置**勾選框，然後選擇 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
-6. 完成 Bare Metal Server 配置：
-   * 如果您已選取 **Skylake** 或 **Broadwell**，則請選取 **CPU 型號**及 **RAM** 大小。
-   * 如果您已選取**預先配置**，則請選取 **Bare Metal Server 配置**。
+6. 指定 **CPU 模型**及 **RAM** 大小，以完成「裸機」配置。
 7. 完成儲存空間配置：
-   * 如果您已針對 Bare Metal Server 配置選取 **Skylake** 或 **Broadwell**，請指定 vSAN 容量和快取磁碟的磁碟類型以及磁碟數目。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
-   * 如果您已針對 Bare Metal Server 配置選取**預先配置**，則無法變更**小型**及**大型** Bare Metal Server 配置的儲存空間設定。
+   1. 指定 vSAN 容量及快取磁碟的磁碟類型，以及磁碟數目。
+   2. 如果您想要更多儲存空間，請選取 **Intel Optane 的高效能**勾選框。
 8. 指定如何提供您的授權碼：
    * 對於「IBM 事業夥伴」使用者，包括 vSphere 授權（Enterprise Plus 版本）及 vSAN 授權，並可代表您購買。不過，您必須指定 vSAN 授權的版本。
    * 對於非「IBM 事業夥伴」的使用者，您可以選取下列其中一個選項：
@@ -127,7 +113,7 @@ lastupdated: "2018-10-29"
 9. 在**訂單摘要**窗格上，先驗證叢集配置，再新增叢集。
    1. 檢閱叢集的設定。
    2. 檢閱預估的叢集成本。按一下**定價詳細資料**以產生 PDF 摘要。若要儲存或列印訂單摘要，請按一下 PDF 視窗右上方的**列印**或**下載**圖示。
-   3. 按一下適用於您訂單的條款鏈結，並先確定您同意這些條款，再新增叢集。
+   3. 按一下適用於您訂單的條款鏈結，並先確認您同意這些條款，再新增叢集。
    4. 按一下**佈建**。
 
 ### 將叢集新增至 Cloud Foundation 實例之後的結果

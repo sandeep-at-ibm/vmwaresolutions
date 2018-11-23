@@ -65,7 +65,8 @@ Cloud Foundation 實例最多可以有五個叢集，而其中一個是預設值
 2. 移除 ESXi 伺服器時，會透過電子郵件通知您。
 3. 在 {{site.data.keyword.cloud_notm}} 計費週期（通常是 30 天）結束時，{{site.data.keyword.cloud_notm}} 基礎架構會完全收回 ESXi 伺服器。
 
-   將針對已移除的 ESXi 伺服器，向您收取到 {{site.data.keyword.cloud_notm}} 計費週期結束為止的費用。{:note}
+   將針對已移除的 ESXi 伺服器，向您收取到 {{site.data.keyword.cloud_notm}} 計費週期結束為止的費用。
+   {:note}
 
 ### 相關鏈結
 
