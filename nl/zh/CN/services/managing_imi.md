@@ -28,7 +28,7 @@ IMI 受管服务中包含以下规范：
 
 ## 向 IMI 请求受管服务的过程
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**入门**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**开始**。
 2. 向下滚动该页面，在**订购更多受管服务**下，单击 **IMI 的受管服务**卡。
 3. 在 **IMI 中的受管服务**页面上的**参与 IMI 售前服务**框中，输入您对 IMI 服务需求的描述，然后单击**请求咨询**。
 

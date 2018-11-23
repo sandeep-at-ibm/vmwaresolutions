@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-076"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 管理 FortiGate Security Appliance on IBM Cloud
 
 成功安装 FortiGate Security Appliance on {{site.data.keyword.cloud}} 服务后，可以在 FortiGate 控制台中管理和配置 FSA 的防火墙规则。
 
-**重要信息**：必须确保将 FSA 防火墙规则定义为允许通过管理组件（例如，Zerto Virtual Manager）启动的出站 HTTPS（TCP 端口 443）通信，以便通过因特网与 {{site.data.keyword.cloud_notm}} 基础架构上的外部管理数据库进行通信。出站 HTTPS（TCP 端口 443）通信从实例中的管理服务 VMware NSX Edge 服务网关 (ESG) 的公共 IP 地址发起。
+必须确保将 FSA 防火墙规则定义为允许通过管理组件（例如，Zerto Virtual Manager）启动的出站 HTTPS（TCP 端口 443）通信，以便通过因特网与 {{site.data.keyword.cloud_notm}} 基础架构上的外部管理数据库进行通信。出站 HTTPS（TCP 端口 443）通信从实例中的管理服务 VMware NSX Edge 服务网关 (ESG) 的公共 IP 地址发起。
+{:important}
 
 ## 访问 FortiGate 300 系列控制台
 

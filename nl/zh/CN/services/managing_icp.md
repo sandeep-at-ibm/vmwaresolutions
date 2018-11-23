@@ -32,7 +32,7 @@ lastupdated: "2018-09-27"
 1. 按照[订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)中的步骤订购新的 vCenter Server 实例。您还可以为现有实例请求 IBM Cloud Private Hosted。**重要信息**：请确保您的环境满足前面列出的最低需求。
 2. 确保您具有 IBM Cloud Private 授权。
 3. 在收到 vCenter Server 实例已准备就绪的确认信息后，继续以下步骤来请求 IBM Cloud Private Hosted。
-4. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**入门**。
+4. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**开始**。
 5. 向下滚动页面，然后在**订购其他服务**下，单击 **IBM Cloud Private Hosted** 卡。
 6. 在 **IBM Cloud Private Hosted on vCenter Server on IBM Cloud** 页面上的**联系 IBM Cloud Private Hosted DevOps 团队**框中，输入您的需求描述，然后单击**请求咨询**。
 

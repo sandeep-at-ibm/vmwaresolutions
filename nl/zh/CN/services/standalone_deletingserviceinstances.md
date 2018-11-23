@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -28,4 +28,4 @@ lastupdated: "2018-09-27"
 * [订购内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例](standalone_orderingserviceinstances.html)
 * [查看内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例](standalone_viewingserviceinstances.html)
 * [HCX 术语的词汇表](hcx_glossary.html)
-* [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension 文档](https://cloud.vmware.com/vmware-hcx/resources)

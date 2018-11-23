@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-07"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 管理 Zerto on IBM Cloud
 
@@ -24,7 +28,8 @@ Zerto on {{site.data.keyword.cloud}} 服务部署到实例后，可以配置或�
 
 Zerto 复制不支持网络地址转换 (NAT) 遍历。在 {{site.data.keyword.cloud_notm}} Zerto 实例与您自己的数据中心之间建立连接可能需要对任一端的 Zerto Virtual Manager (ZVM) 设备或 Zerto Virtual Replication 设备 (VRA) 上的路由进行定制。建立连接还可能需要在站点之间进行安全隧道连接。在 ZVM 设备上配置或重新配置路由时，必须确保所有 ZVM 设备都可以成功连接到 `zerto.com` 以进行使用情况报告。可以通过从 ZVM 设备建立到 `https://www.zerto.com` 的浏览器会话，以验证此连接。
 
-**注**：{{site.data.keyword.cloud_notm}} 上的 Cloud Foundation 实例和 vCenter Server 实例的“管理 VMware NSX Edge 服务网关 (ESG)”已预配置为允许源自 ZVM 的出站 HTTPS（TCP 端口 443）通信。
+{{site.data.keyword.cloud_notm}} 上的 Cloud Foundation 实例和 vCenter Server 实例的“管理 VMware NSX Edge 服务网关 (ESG)”已预配置为允许源自 ZVM 的出站 HTTPS（TCP 端口 443）通信。
+{:note}
 
 ## 更新 Zerto Virtual Replication
 

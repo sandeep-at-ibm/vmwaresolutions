@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -19,15 +19,17 @@ HCX on {{site.data.keyword.cloud}} 服务可将内部部署数据中心的网络
 此服务仅可用于在 V2.3 和更高发行版中部署的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 实例。
 {:note}
 
-可以将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例。有关升级实例和部署 HCX on {{site.data.keyword.cloud_notm}} 服务的更多信息，请参阅[升级到 vCenter Server with Hybridity Bundle 实例](../vcenter/vc_applyingupdates.html#applying-updates-to-vcenter-server-instances.html#upgrading-to-the-vcenter-server-with-hybridity-bundle-instance)。
+可以将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例。有关升级实例和部署 HCX on {{site.data.keyword.cloud_notm}} 服务的更多信息，请参阅[升级到 vCenter Server with Hybridity Bundle 实例的过程](../vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)。
 
-**注**：具有 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 实例限制为可同时从内部部署站点建立三个连接。
+具有 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 实例限制为可同时从内部部署站点建立三个连接。
+{:note}
 
 ## HCX on IBM Cloud 的技术规范
 
 HCX on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
 
-**注**：内部部署 HCX 实例仅包括许可和激活。
+内部部署 HCX 实例仅包括许可和激活。
+{:note}
 
 ### VMware NSX Edge 服务网关 (ESG) 的主动/被动对，以用于 HCX 管理
 
@@ -86,4 +88,4 @@ HCX on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件�
 * [HCX 术语的词汇表](hcx_glossary.html)
 * [联系 IBM 支持人员](../vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension 概述](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#vm-documentation)
+* [VMware Hybrid Cloud Extension 文档](https://cloud.vmware.com/vmware-hcx/resources)
