@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -23,7 +23,8 @@ Dieser Service ist nur für Instanzen verfügbar, die in V1.2 (oder höher) bere
 
 Mit dem Service "Zerto on {{site.data.keyword.cloud_notm}}" werden die folgenden Komponenten bestellt und einbezogen.
 
-**Hinweis:** Die Komponenten von Zerto Virtual Manager (ZVM) werden nur im Standardcluster bereitgestellt.
+Komponenten von Zerto Virtual Replication Appliance (VRA, Appliance für die virtuelle Replikation) werden nur in den Standardclustern bereitgestellt.
+{:note}
 
 ### VSIs
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -29,4 +29,4 @@ Lesen Sie unbedingt alle Hinweise im Abschnitt [Hinweise zum Löschen von lokale
 * [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen bestellen](standalone_orderingserviceinstances.html)
 * [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen anzeigen](standalone_viewingserviceinstances.html)
 * [Glossar der HCX-Begriffe](hcx_glossary.html)
-* [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
+* [Dokumentation zu VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
