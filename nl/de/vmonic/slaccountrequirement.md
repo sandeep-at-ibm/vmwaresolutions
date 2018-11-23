@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -23,7 +23,7 @@ Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) wu
 
 Das von Ihnen verwendete {{site.data.keyword.cloud_notm}}-Infrastrukturkonto muss bestimmte Berechtigungen besitzen, damit in Ihrem Namen die Komponenten in Ihren Instanzen bestellt und Operationen ausgeführt werden können. Die Berechtigungsanforderungen gelten für alle Typen von Instanzen und Services, die Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole bestellen.
 
-Berechtigte Benutzer können die Berechtigungen für ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto im {{site.data.keyword.slportal}} prüfen und aktualisieren. Weitere Informationen finden Sie unter _Kundenportalberechtigungen eines Benutzers bearbeiten_ im Abschnitt [Benutzerprofil verwalten](../../../customer-portal/cpmanuserprof.html){:new_window}.
+Berechtigte Benutzer können die Berechtigungen für ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto im {{site.data.keyword.slportal}} prüfen und aktualisieren. Weitere Informationen hierzu finden Sie im Abschnitt [Kundenportalberechtigungen eines Benutzers bearbeiten](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
 
 Tabelle 1. Erforderliche Berechtigungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto
 
@@ -47,7 +47,7 @@ Tabelle 1. Erforderliche Berechtigungen für das {{site.data.keyword.cloud_notm}
 
 ## VLAN Spanning für klassische Konten (ohne VRF)
 
-Wenn Sie ein klassisches {{site.data.keyword.cloud_notm}}-Infrastrukturkonto verwenden (also kein VRF-Konto), muss die VLAN Spanning-Funktion aktiviert sein. Wenn die VLAN Spanning-Funktion bei klassischen Konten nicht aktiviert ist, sind die verschiedenen Komponenten der VMware-Virtualisierungsumgebung möglicherweise nicht in der Lage, miteinander zu kommunizieren. Informationen zum Aktivieren der VLAN Spanning-Funktion in Ihrem {{site.data.keyword.cloud_notm}}-Infrastrukturkonto finden Sie unter [VLAN Spanning aktivieren oder inaktivieren](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+Wenn Sie ein klassisches {{site.data.keyword.cloud_notm}}-Infrastrukturkonto verwenden (also kein VRF-Konto), muss die VLAN Spanning-Funktion aktiviert sein. Wenn die VLAN Spanning-Funktion bei klassischen Konten nicht aktiviert ist, sind die verschiedenen Komponenten der VMware-Virtualisierungsumgebung möglicherweise nicht in der Lage, miteinander zu kommunizieren. Informationen zum Aktivieren des VLANs in Ihrem {{site.data.keyword.cloud_notm}}-Infrastrukturkonto finden Sie unter [VLAN-Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ### Zugehörige Links
 

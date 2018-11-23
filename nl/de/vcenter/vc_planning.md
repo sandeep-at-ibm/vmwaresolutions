@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -25,37 +25,37 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vCenter Se
 | {{site.data.keyword.CloudDataCent_notm}} | Standort | Region | Serveroptionen |
 |:----------------------|:---------|:-------|:---------------|
 | AMS03 | Amsterdam | Europa | Skylake, Broadwell |
-| CHE01 | Chennai | Asien/Pazifik | Skylake, Broadwell |
-| DAL09 | Dallas | NA Süd | Skylake, Broadwell |
-| DAL10 | Dallas | NA Süd | Skylake, Broadwell, S (Klein), M (Mittel), L (Groß) |
-| DAL12 | Dallas | NA Süd | Skylake, Broadwell |
-| DAL13 | Dallas | NA Süd | Skylake, Broadwell |
-| FRA02 | Frankfurt | Europa | Skylake, Broadwell, S (Klein), M (Mittel), L (Groß) |
-| FRA04 | Frankfurt | Europa | Skylake, Broadwell |
+| CHE01 | Chennai | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
+| DAL09 | Dallas | NA Süd | Skylake, SAP-zertifiziert, Broadwell |
+| DAL10 | Dallas | NA Süd | Skylake, SAP-zertifiziert, Broadwell |
+| DAL12 | Dallas | NA Süd | Skylake, SAP-zertifiziert, Broadwell |
+| DAL13 | Dallas | NA Süd | Skylake, SAP-zertifiziert, Broadwell |
+| FRA02 | Frankfurt | Europa | Skylake, SAP-zertifiziert, Broadwell |
+| FRA04 | Frankfurt | Europa | Skylake, SAP-zertifiziert, Broadwell |
 | HKG02 | Hongkong | Asien/Pazifik | Skylake, Broadwell |
 | LON02 | London | Europa | Skylake, Broadwell |
-| LON04 | London | Europa | Skylake, Broadwell |
-| LON06 | London | Europa | Skylake, Broadwell, S (Klein), M (Mittel), L (Groß) |
-| MEL01 | Melbourne | Asien/Pazifik | Skylake, Broadwell |
-| MEX01 | Queretaro | NA Süd | Skylake, Broadwell |
-| MIL01 | Mailand | Europa | Skylake, Broadwell |
-| MON01 | Montreal | NA Ost | Skylake, Broadwell |
+| LON04 | London | Europa | Skylake, SAP-zertifiziert, Broadwell |
+| LON06 | London | Europa | Skylake, SAP-zertifiziert, Broadwell |
+| MEL01 | Melbourne | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
+| MEX01 | Queretaro | NA Süd | Skylake, SAP-zertifiziert, Broadwell |
+| MIL01 | Mailand | Europa | Skylake, SAP-zertifiziert, Broadwell |
+| MON01 | Montreal | NA Ost | Skylake, SAP-zertifiziert, Broadwell |
 | OSL01 | Oslo | Europa | Skylake, Broadwell |
 | PAR01 | Paris | Europa | Skylake, Broadwell |
-| SAO01 | Sao Paulo | Südamerika | Skylake, Broadwell |
-| SEO01 | Seoul | Asien/Pazifik | Skylake, Broadwell |
-| SJC03 | San Jose | NA West | Skylake, Broadwell, S (Klein), M (Mittel), L (Groß) |
+| SAO01 | Sao Paulo | Südamerika | Skylake, SAP-zertifiziert, Broadwell |
+| SEO01 | Seoul | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
+| SJC03 | San Jose | NA West | Skylake, Broadwell |
 | SJC04 | San Jose | NA West | Skylake, Broadwell |
 | SNG01 | Singapur | Asien/Pazifik | Skylake, Broadwell |
 | SYD01 | Sydney | Asien/Pazifik | Skylake, Broadwell |
-| SYD04 | Sydney | Asien/Pazifik | Skylake, Broadwell |
-| TOK02 | Tokio | Asien/Pazifik | Skylake, Broadwell |
-| TOR01 | Toronto | NA Ost | Skylake, Broadwell, S (Klein), M (Mittel), L (Groß) |
-| WDC04 | Washington, DC | NA Ost | Skylake, Broadwell, S (Klein), M (Mittel), L (Groß) |
-| WDC06 | Washington, DC | NA Ost | Skylake, Broadwell |
-| WDC07 | Washington, DC | NA Ost | Skylake, Broadwell |
+| SYD04 | Sydney | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
+| TOK02 | Tokio | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
+| TOR01 | Toronto | NA Ost | Skylake, SAP-zertifiziert, Broadwell |
+| WDC04 | Washington, DC | NA Ost | Skylake, SAP-zertifiziert, Broadwell |
+| WDC06 | Washington, DC | NA Ost | Skylake, SAP-zertifiziert, Broadwell |
+| WDC07 | Washington, DC | NA Ost | Skylake, SAP-zertifiziert, Broadwell |
 
-Eine kleine Untergruppe der {{site.data.keyword.CloudDataCents_notm}} bietet für Bare Metal Server die vorkonfigurierten Optionen **S (Klein)**, **M (Mittel)** und **L (Groß)**. Je nach Verfügbarkeit und Bestandsangebot ist für {{site.data.keyword.CloudDataCents_notm}} möglicherweise ein Statusanzeiger in der {{site.data.keyword.vmwaresolutions_short}}-Konsole dargestellt, der Ihnen bei der Planung Ihrer Bereitstellungen hilft.
+Je nach Verfügbarkeit und Bestandsangebot ist für {{site.data.keyword.CloudDataCents_notm}} möglicherweise ein Statusanzeiger in der {{site.data.keyword.vmwaresolutions_short}}-Konsole dargestellt, der Ihnen bei der Planung Ihrer Bereitstellungen hilft.
 
 Tabelle 2. Statusanzeiger für {{site.data.keyword.CloudDataCents_notm}} bei der Bestellung von vCenter Server-Instanzen
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -32,4 +32,4 @@ Wenn ein erwartetes Build-Update nicht angezeigt wird, wenn Probleme mit HCX auf
 * [Übersicht über HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
 * [Glossar der HCX-Begriffe](hcx_glossary.html)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
+* [Dokumentation zu VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

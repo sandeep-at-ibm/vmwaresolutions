@@ -65,7 +65,7 @@ Da Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen einzelne
 3. Die ESXi-Server werden am Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur (der in der Regel 30 Tage umfasst) vollständig von der {{site.data.keyword.cloud_notm}}-Infrastruktur zurückgefordert.
 
    Die entfernten ESXi-Server werden Ihnen bis zum Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur berechnet.
-{:note}
+   {:note}
 
 ### Zugehörige Links
 

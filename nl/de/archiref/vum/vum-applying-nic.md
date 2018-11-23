@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -14,7 +14,7 @@ ESXi 6.5 enthält viele neue native Treiber, die die älteren vmklinux-Treiber e
 
 'ixgben' ist ein nativer Treiber, der den Treiber 'vmklinux net-ixgbe' ersetzt, aber keine Unterstützung für SR-IOV und SW FcOE bietet. Die ICVS-Automation hätte diesen Treiber bei der Bereitstellung des vSphere ESXi-Hosts nicht aktiviert. Es wird empfohlen, diesen Treiber zu aktivieren, da er verbesserte Leistung ermöglicht. Die im Folgenden beschriebene Prozedur zeigt, wie Sie die nativen Treiber mithilfe der vSphere-Befehlszeile (vCLI) aktivieren und inaktivieren können.
 
-Bevor Sie diese Task starten, rufen Sie alle physischen IPMI-IP-Hostadressen, Anmelde-IDs und Kennwörter aus dem [IBM Cloud-Infrastrukturportal](https://control.softlayer.com/devices) ab. Dies ist bei einem Backout erforderlich oder zum Überprüfen des Fortschritts eines Upgrades, bei dem kein direkter Netzzugriff auf den Host möglich ist.
+Bevor Sie diese Task starten, rufen Sie alle physischen IPMI-IP-Hostadressen, Anmelde-IDs und Kennwörter aus dem [{{site.data.keyword.cloud}}-Infrastrukturportal](https://control.softlayer.com/devices) ab. Dies ist bei einem Backout erforderlich oder zum Überprüfen des Fortschritts eines Upgrades, bei dem kein direkter Netzzugriff auf den Host möglich ist.
 
 Führen Sie die folgenden Schritte für jeden Host in der angegebenen Reihenfolge aus:
 1. Verwenden Sie den vSphere Web Client, um den vSphere ESXi-Host in den Wartungsmodus zu versetzen, indem Sie **Home** > **Hosts und Cluster** auswählen. Wählen Sie im Navigatorfenster den vSphere ESXi-Host aus, klicken Sie mit der rechten Maustaste auf den Host und wählen Sie **Wartungsmodus** > **In Wartungsmodus wechseln** aus. Da der Host Teil eines automatisierten DRS-Clusters ist, werden virtuelle Maschinen auf verschiedene Hosts migriert, wenn der Host in den Wartungsmodus wechselt.
@@ -29,12 +29,12 @@ Führen Sie die folgenden Schritte für jeden Host in der angegebenen Reihenfolg
 7. Wenn die Änderung nicht richtig ausgeführt wird, führen Sie den folgenden Befehl aus, um den Vorgang rückgängig zu machen:
   `esxcli system module set --enabled=false --module=ixgben`
 
-8. Wenn Sie keine Verbindung zum Host über das Netz herstellen können, führen Sie den vorherigen Befehl über die IPMI-Konsole aus, indem Sie das IBM Cloud-Steuerfenster verwenden.
+8. Wenn Sie keine Verbindung zum Host über das Netz herstellen können, führen Sie den vorherigen Befehl über die IPMI-Konsole aus, indem Sie das {{site.data.keyword.cloud_notm}}-Steuerfenster verwenden.
 9. Nachdem Sie den vSphere ESXi-Host neu gestartet haben, beobachten Sie nun den geladenen und aktivierten ixgbe-Standardtreiber.
 
-Wenn Sie den Vorgang rückgängig machen müssen und Sie nicht über SSH auf den vSphere ESXi-Host zugreifen können, müssen Sie sich bei der KVM-Konsole für den Host anmelden, der über das IBM Cloud-Steuerfenster zurückgesetzt werden muss.
+Wenn Sie den Vorgang rückgängig machen müssen und Sie nicht über SSH auf den vSphere ESXi-Host zugreifen können, müssen Sie sich bei der KVM-Konsole für den Host anmelden, der über das {{site.data.keyword.cloud_notm}}-Steuerfenster zurückgesetzt werden muss.
 
-Verwenden Sie die ID und das Kennwort, die im IBM Cloud-Steuerfenster mit der IPMI-IP-Adresse aufgelistet sind, um sich bei der IPMI-Webschnittstelle anzumelden. Sie müssen mit dem Rechenzentrum, in dem sich der Host befindet, über VPN verbunden sein. Weitere Informationen finden Sie unter [Einführung in die Arbeit mit VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
+Verwenden Sie die ID und das Kennwort, die im {{site.data.keyword.cloud_notm}}-Steuerfenster mit der IPMI-IP-Adresse aufgelistet sind, um sich an der IPMI-Webschnittstelle anzumelden. Sie müssen mit dem Rechenzentrum, in dem sich der Host befindet, über VPN verbunden sein. Weitere Informationen finden Sie unter [Einführung in die Arbeit mit VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
 
 1. Wechseln Sie zur Seite 'Gerätedetails, Fernverwaltung' für den vSphere ESXi-Host und wählen Sie **Aktionen** > **KVM-Konsole** aus. Ein anderes Fenster wird geöffnet, in dem Sie den IPMI-Benutzer und das zugehörige Kennwort eingeben können.
 2. Wählen Sie **Fernsteuerung** > **iKVM/HTML5** aus und klicken Sie auf **iKVM/HTML5**, um neu zu starten. Sie können nun auf die Konsole des vSphere ESXi-Hosts zugreifen.
@@ -47,5 +47,5 @@ Verwenden Sie die ID und das Kennwort, die im IBM Cloud-Steuerfenster mit der IP
 
 ### Zugehörige Links
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

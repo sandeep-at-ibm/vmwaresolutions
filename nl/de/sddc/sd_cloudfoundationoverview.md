@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -53,15 +53,10 @@ Die für Hardware, Netzbetrieb, virtuelle Maschinen und Speicher anfallenden Geb
 ### Bare Metal Server
 
 Sie können {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen mit einer der folgenden Konfigurationen bestellen:
-*  **Skylake** oder **Broadwell**: {{site.data.keyword.baremetal_short}}-Instanzen mit dem ausgewählten CPU-Modell und der ausgewählten RAM-Größe.   
-   * 2-CPU Intel Skylake Generation (Intel Xeon 4100/5100/6100 Series)
-   * 2-CPU Intel Broadwell Generation (Intel Xeon E5-2600 v4 Series)
-
+*  **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.   
+*  **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600 v4 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.   
    Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
    {:note}
-* **Vorkonfiguriert**: 2-CPU Intel Broadwell Generation (Intel Xeon E5-2600 v4 Series)
-  * **S (Klein)**: Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz / 128 GB RAM / 12 Platten
-  * **L (Groß)**: Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM / 12 Platten
 
 ### Vernetzung
 
@@ -89,8 +84,6 @@ Abhängig von der von Ihnen ausgewählten {{site.data.keyword.baremetal_short}}-
 * 2 Solid-State-Cacheplatten mit 960 GB
 * 1 RAID-Plattencontroller
 * Nur bei Konfigurationen des Typs **Skylake** and **Broadwell**: Sie können die Anzahl der Plattenlaufwerke sowie Plattentyp und Kapazität gemäß Ihren Anforderungen festlegen. Darüber hinaus verfügen Sie über die Option für "Hohe Leistung mit Intel Optane", die zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereitstellt. Die Option für "Hohe Leistung mit Intel Optane" hängt vom CPU-Modell ab.
-* Nur bei Konfiguration des Typs **Vorkonfiguriert** - **S (Klein)**: 2 SSD-Kapazitätsplatten mit 1,9 TB.
-* Nur bei Konfiguration des Typs **Vorkonfiguriert** - **L (Groß)**: 4 SSD-Kapazitätsplatten mit 3,8 TB.
 
 ### Lizenzen (von IBM bereitgestellt oder eigene) und Gebühren
 

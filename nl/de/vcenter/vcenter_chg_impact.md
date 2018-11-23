@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -51,13 +51,16 @@ Tabelle 1. Bei Änderungen von VMware-Ressourcen betroffene Operationen
 | Ändern Sie den Namen des vSAN-Datenspeichers in der Instanz, die vSAN verwendet. | Das Hinzufügen eines ESXi-Servers schlägt möglicherweise fehl.<br><br>Das Upgrade für die Instanz kann fehlschlagen. | Wichtig | Ändern Sie den Namen des vSAN-Datenspeichers wieder in den ursprünglichen Namen **vsanDatastore**.
 | Ändern Sie den Namen des NFS-Managementdatenspeichers in der Instanz, die NFS verwendet. | Das Hinzufügen eines ESXi-Servers schlägt möglicherweise fehl.<br><br>Das Upgrade für die Instanz kann fehlschlagen. | Wichtig | Ändern Sie den Namen des NFS-Managementdatenspeichers zurück in den ursprünglichen Namen (**management-share**) und hängen Sie den NFS-Datenspeicher wieder als schreibgeschützt an den ESXi-Server an.
 
-In der folgenden Tabelle sind die Operationen aufgelistet, die betroffen sein könnten, wenn vCenter Server-Ressourcen vom VC/PSC-Rootbenutzer außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole geändert werden.
+In der folgenden Tabelle sind die Operationen aufgelistet, die betroffen sein könnten, wenn SSH- oder Shell-Zugriff für verschiedene Ressourcen inaktiviert ist.
 
-Tabelle 2. Durch VC/PSC-Rootzugriff (lokal) betroffene Operationen
+Tabelle 2. Operationen, die vom SSH und Shell-Zugriff betroffen sind (lokal)
 
 | Versuchte Änderung  | Betroffene Operationen  | Bewertung  | Wiederherstellungsmethode  |
 |:------------- |:------------- |:--------------|:--------------|
-| Shell-Zugriff aktivieren oder inaktivieren.    | Das Anwenden von Patches und Updates für PSC und vCenter Server schlägt möglicherweise fehl.    | Wichtig    | Nicht verfügbar.    |
+| SSH- oder Shell-Zugriffs für vCenter Server oder PSC inaktivieren.    | Die Paarung einer primären und sekundären Instanz kann fehlschlagen. | Wichtig    | Nicht verfügbar.    |
+| SSH- oder Shell-Zugriff für ESXi inaktivieren.    | Das Hinzufügen und Entfernen von Hosts, Services und Netzspeicher für die Instanz kann fehlschlagen. | Wichtig    | Nicht verfügbar.    |
+
+Wenn Sie den SSH- oder Shell-Zugriff inaktivieren, sollten Sie ihn vorübergehend erneut aktivieren, bevor Sie die angegebenen Operationen ausführen.
 
 ## Managementteilnetze für vCenter Server-Instanzen
 

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Kapazität für VMware Federal-Instanzen erweitern und verringern
 
@@ -14,7 +18,8 @@ Sie können die Kapazität Ihrer VMware Federal-Instanz entsprechend Ihren Gesch
 
 Wenn Ihr primärer Cluster vSAN als Speicher verwendet, kann das Hinzufügen von einem oder mehreren ESXi-Servern nach der Bereitstellung die Speicherkapazität des Clusters erhöhen.
 
-**Hinweis:** Diese Funktion ist nur für VMware Federal-Instanzen verfügbar, die nicht geschützt sind.
+Diese Funktion ist nur für VMware Federal-Instanzen verfügbar, die nicht geschützt sind.
+{:note}
 
 ## ESXi-Server zu VMware Federal-Instanzen hinzufügen
 
@@ -61,7 +66,8 @@ Wenn Ihr primärer Cluster vSAN als Speicher verwendet, kann das Hinzufügen von
 2. Sie werden per E-Mail benachrichtigt, dass Ihre Anforderung zum Entfernen von ESXi-Servern verarbeitet wird. In der Konsole wird der Status des Clusters, der den ESXi-Servern zugeordnet ist, in **Wird geändert** geändert.
 3. Die ESXi-Server werden am Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur (der in der Regel 30 Tage umfasst) vollständig von der {{site.data.keyword.cloud_notm}}-Infrastruktur zurückgefordert.
 
-   **Achtung:** Die entfernten ESXi-Server werden Ihnen bis zum Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur berechnet.
+   Die entfernten ESXi-Server werden Ihnen bis zum Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur berechnet.
+   {:note}
 
 ### Zugehörige Links
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -61,13 +61,11 @@ Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} aus, das als Host für 
 
 ### Skylake
 
-Wenn Sie **Skylake** auswählen, dann können Sie die Kombination aus CPU und RAM entsprechend Ihren Anforderungen auswählen.
-
-Wählen Sie das CPU-Modell und den RAM (Arbeitsspeicher) für den Bare Metal Server aus.
+Wenn Sie **Skylake** auswählen, dann können Sie die Kombination aus CPU und RAM für den Bare Metal Server entsprechend Ihren Anforderungen auswählen.
 
 Tabelle 1. Optionen für Skylake {{site.data.keyword.baremetal_short}}
 
-| CPU-Modelloptionen        | RAM-Optionen       |
+| CPU-Modelloptionen  | RAM-Optionen       |
 |:------------- |:------------- |
 | Dual Intel Xeon Silver 4110-Prozessor / 16 Kerne insgesamt, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold 5120-Prozessor / 28 Kerne insgesamt, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
@@ -75,25 +73,15 @@ Tabelle 1. Optionen für Skylake {{site.data.keyword.baremetal_short}}
 
 ### Broadwell
 
-Wenn Sie **Broadwell** auswählen, dann können Sie die Kombination aus CPU und RAM entsprechend Ihren Anforderungen auswählen.
+Wenn Sie **Broadwell** auswählen, dann können Sie die Kombination aus CPU und RAM für den Bare Metal Server entsprechend Ihren Anforderungen auswählen.
 
-Wählen Sie das CPU-Modell und den RAM (Arbeitsspeicher) für den Bare Metal Server aus.
-
-Tabelle 1. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
+Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
 | Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-
-### Vorkonfiguriert
-
-Wenn Sie **Vorkonfiguriert** auswählen, dann können Sie die CPU- oder RAM-Einstellungen nicht ändern.
-
-Wählen Sie gemäß Ihren Anforderungen eine Bare Metal Server-Konfiguration aus:
-  * S (Klein): Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz / 128 GB RAM / 12 Laufwerke
-  * L (Groß): Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM / 12 Laufwerke
 
 ### Bare Metal Server-Anzahl
 
@@ -102,10 +90,6 @@ Eine Cloud Foundation-Instanz besteht in der Erstbereitstellung aus vier Bare Me
 ## Speichereinstellungen
 
 Für Cloud Foundation-Instanzen können Sie nur VMware vSAN-Speicher bestellen.
-
-Wenn Sie für die Bare Metal Server-Konfiguration die Option **Vorkonfiguriert** auswählen, dann sind die Speichereinstellungen standardisiert und können nicht geändert werden:
-  * Für die Bare Metal Server-Konfiguration vom Typ **S (Klein)** werden zwei SSD-SED-Plattenlaufwerke mit jeweils 1,9 TB bestellt.
-  * Für die Bare Metal Server-Konfiguration vom Typ **L (Groß)** werden vier SSD-SED-Plattenlaufwerke mit jeweils 3,8 TB bestellt.
 
 Wenn Sie für die Bare Metal Server-Konfiguration die Option **Skylake** oder **Broadwell** auswählen, können Sie den vSAN-Speicher für Ihre Instanz anpassen. Geben Sie folgende vSAN-Einstellungen an:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
@@ -148,7 +132,7 @@ Die maximale Länge des vollständig qualifizierten Domänennamens für Hosts un
 
 Der Domänenname und die Unterdomänenbezeichnung werden verwendet, um den Benutzernamen und die Servernamen der Instanz zu generieren. Diese Informationen sind in der folgenden Tabelle dargestellt.
 
-Tabelle 2. Wertformat für Benutzernamen, Domänennamen und Servernamen
+Tabelle 3. Wertformat für Benutzernamen, Domänennamen und Servernamen
 
 | Name        | Wertformat      |
   |:------------- |:------------- |
@@ -209,12 +193,10 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
    *  Zur Verwendung einer eigenen Lizenz müssen Sie **Lizenz selbst bereitstellen** auswählen und den Lizenzschlüssel eingeben.  
 6. Geben Sie die Bare Metal Server-Einstellungen an:
    1. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
-   2. Wählen Sie die Bare Metal Server-Konfiguration aus.
-      * Wenn Sie **Skylake** oder **Broadwell** auswählen, dann müssen Sie das CPU-Modell und die RAM-Größe angeben.
-      * Wenn Sie **Vorkonfiguriert** auswählen, dann können Sie zwischen der Konfiguration **S (Klein)** und der Konfiguration **L (Groß)** wählen.
+   2. Wählen Sie die Bare-Metal-Serverkonfiguration aus und geben Sie anschließend das CPU-Modell und die RAM-Größe an.
 7. Führen Sie die Speicherkonfiguration durch.
-   * Wenn Sie für die Bare Metal-Konfiguration die Option **Skylake** oder **Broadwell** ausgewählt haben, geben Sie die Plattentypen für die vSAN-Kapazitäts- und Cacheplatten sowie die Anzahl der Platten an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
-   * Wenn Sie für die Bare-Metal-Konfiguration die Option **Vorkonfiguriert** ausgewählt haben, können die Speichereinstellungen für die standardisierten Bare-Metal-Serverkonfigurationen **S (Klein)** und **L (Groß)** nicht geändert werden.
+   1. Geben Sie die Plattentypen für die vSAN-Kapazität und die Cacheplatten sowie die Anzahl der Platten an.
+   2. Wenn Sie mehr Speicher benötigen, aktivieren Sie das Kontrollkästchen für **Hohe Leistung mit Intel Optane**.
 8. Geben Sie die Netzschnittstelleneinstellungen an:
    1. Geben Sie das Hostnamenspräfix, die Unterdomänenbezeichnung und den Rootdomänennamen ein. Für eine sekundäre Instanz wird der Domänenname automatisch ergänzt.
    2. Wählen Sie die VLAN-Einstellungen aus:

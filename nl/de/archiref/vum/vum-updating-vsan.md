@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
 # vSAN-Cluster aktualisieren
 
-vSAN generiert Systembaselines und Baselinegruppen für die Verwendung mit VUM und Sie können diese empfohlenen Baselines verwenden, um Software, Patches und Erweiterungen für die vSphere ESXi-Hosts in Ihrer VCS-Instanz mithilfe von vSAN zu aktualisieren. vSAN 6.6.1 und höher generiert automatisierte Buildempfehlungen für vSAN-Cluster. vSAN kombiniert Informationen im VMware-Kompatibilitätshandbuch und im vSAN-Versionskatalog mit Informationen zu den installierten vSphere ESXi-Releases.
+vSAN generiert Systembaselines und Baselinegruppen für die Verwendung mit VUM; Sie können diese empfohlenen Referenzkonfigurationen verwenden, um Software, Patches und Erweiterungen für die vSphere ESXi-Hosts in Ihrer vCenter-Serverinstanz mit vSAN zu aktualisieren. vSAN 6.6.1 und höher generiert automatisierte Buildempfehlungen für vSAN-Cluster. vSAN kombiniert Informationen im VMware-Kompatibilitätshandbuch und im vSAN-Versionskatalog mit Informationen zu den installierten vSphere ESXi-Releases.
 
 Diese empfohlenen Updates bieten das beste verfügbare Release, um Ihre Hardware in einem unterstützten Status zu halten.
 * **vSAN-Systembaselines** - vSAN-Buildempfehlungen werden über vSAN-Systembaselines für VUM zur Verfügung gestellt. vSAN generiert eine Baselinegruppe für jeden vSAN-Cluster. vSAN-Systembaselines werden im Teilfenster 'Baselines' der Registerkarte 'Baselines und Gruppen' aufgelistet. VUM prüft automatisch jeden vSAN-Cluster, um die Konformität anhand der Baselinegruppe zu überprüfen. Um ein Upgrade Ihres Clusters durchzuführen, müssen Sie die Systembaseline manuell über den VUM korrigieren. Sie können die vSAN-Systembaseline auf einem einzelnen Host oder auf dem gesamten Cluster korrigieren.
@@ -26,7 +26,7 @@ Die Tasks des vSAN-Cluster-Upgrades werden in der folgenden Reihenfolge ausgefü
 
 ## vSAN Online Health Workflow aktivieren
 
-Durch Ausführung der Tasks in diesem Abschnitt werden die vSAN-Baselines in VUM verfügbar gemacht. vSAN 6.6.1 und höher bietet einen nahtlosen automatisierten Aktualisierungsprozess, der sicherstellt, dass ein vSAN-Cluster stets über das beste erhältliche Release verfügt, damit sich Ihre VCS-Instanz in einem unterstützten Status befindet:
+Durch Ausführung der Tasks in diesem Abschnitt werden die vSAN-Baselines in VUM verfügbar gemacht. vSAN 6.6.1 und höher bietet einen nahtlosen automatisierten Aktualisierungsprozess, der sicherstellt, dass ein vSAN-Cluster stets über das beste erhältliche Release verfügt, damit sich die VMware vCenter Server on {{site.data.keyword.cloud}}-Instanz in einem unterstützten Status befindet:
 * **vSAN-Versionsempfehlungen** - werden automatisch generiert, indem Informationen aus dem VMware-Kompatibilitätshandbuch, dem vSAN-Versionskatalog und Kenntnisse über die zugrunde liegende Hardwarekonfiguration verwendet werden. Dies umfasst auch die erforderlichen Treiber und Patch-Updates für das empfohlene Release in der Systembaseline.
 * **vSAN-Buildempfehlungen** - stellen sicher, dass für die Cluster der aktuelle Hardwarekompatibilitätsstatus erhalten bleibt oder verbessert wird.
 
@@ -82,8 +82,8 @@ Stellen Sie vor dem Starten des vSAN-Upgradeprozesses sicher, dass die folgenden
   - Es sollten keine nicht zugänglichen vSAN-Objekte vorhanden sein. Sie können dies mit dem **vSAN Health Service** überprüfen, indem Sie auf **Home** > **Hosts und Cluster** klicken und dann den **vSAN-Cluster** auswählen. Klicken Sie auf die Registerkarte **Überwachen**, auf **vSAN** und anschließend auf **Status**. Überprüfen Sie die Testergebnisse.
   - Es darf keine aktive Resynchronisation am Anfang des Upgradeprozesses geben. Klicken Sie auf **Home** > **Hosts und Cluster**, wählen Sie dann den **vSAN-Cluster** aus und klicken Sie auf die Registerkarte **vSAN** und anschließend auf **Komponenten resynchronisieren**. _Die Anzahl der Resynchronisationskomponenten sollte 0 sein_. Dabei ist zu beachten, dass eine gewisse Resynchronisationsaktivität während des Upgradeprozesses erwartet wird, da die Daten nach Hostwarmstarts synchronisiert werden müssen.
 * **vSphere ESXi-Hostvorbereitung** - Wenn Sie einen Host in einem vSAN-Cluster in den Wartungsmodus versetzen, stehen Ihnen drei Optionen zur Auswahl:
-  - **Keine Datenmigration** - Wenn Sie diese Option auswählen, evakuiert vSAN keine Daten von diesem Host. Wenn Sie den Host ausschalten oder aus dem Cluster entfernen, sind danach manche virtuelle Maschinen möglicherweise nicht mehr zugänglich.
-  - **Sicherstellen der Verfügbarkeit** - Wenn Sie diese Option auswählen, können Sie mit vSAN den Host schneller in den Wartungsmodus versetzen als bei der vollständigen Datenmigration und den Zugriff auf die virtuellen Maschinen in der Umgebung ermöglichen.
+  - **Keine Datenmigration** - Wenn Sie diese Option auswählen, evakuiert vSAN keine Daten von diesem Host. Wenn Sie den Host ausschalten oder aus dem Cluster entfernen, sind danach manche virtuelle Maschinen (VMs) möglicherweise nicht mehr zugänglich.
+  - **Verfügbarkeit sicherstellen** - Wenn Sie diese Option auswählen, können Sie mit vSAN den Host schneller in den Wartungsmodus versetzen als bei der vollständigen Datenmigration und den Zugriff auf die virtuellen Maschinen (VMs) in der Umgebung ermöglichen.
   - **Vollständige Datenmigration**
 * **Wartungsmodus beenden und resynchronisieren** - Wenn der vSphere ESXi-Host aufgerüstet und aus dem Wartungsmodus versetzt wurde, erfolgt eine Resynchronisation. Sie können dies über den Web-Client sehen. Stellen Sie sicher, dass der Vorgang abgeschlossen ist, bevor Sie zum nächsten Host übergehen. Eine Resynchronisation wird ausgeführt, weil der aktualisierte Host nun wieder zu dem vSAN-Datenspeicher beitragen kann. Es ist wichtig zu warten, bis die Resynchronisation abgeschlossen ist, um sicherzustellen, dass es keinen Datenverlust gibt.
 * **Gehen Sie nach dem Starten des vSAN-Cluster-Upgrades wie folgt vor**:

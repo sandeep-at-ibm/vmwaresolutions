@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-29"
 
 ## VCSA-Update
 
-VUM aktualisiert die VCSA nicht. Im folgenden Abschnitt wird der Prozess der Aktualisierung dieser Appliance beschrieben. Die VCSA, die in einer VCS-Instanz bereitgestellt wird, hat keinen Zugriff auf das Internet. Deshalb sollte das Update-Bundle zuerst auf einen Jump-Server heruntergeladen werden.
+VUM aktualisiert die VCSA nicht. Im folgenden Abschnitt wird der Prozess der Aktualisierung dieser Appliance beschrieben. Die VCSA, die in einer VMware vCenter Server on {{site.data.keyword.cloud}}-Instanz bereitgestellt wird, hat keinen Zugriff auf das Internet. Deshalb sollte das Update-Bundle zuerst auf einen Jump-Server heruntergeladen werden.
 
 Die VCSA wird über die Appliance-Managementkonsole aktualisiert, nicht über den vSphere Web Client. Der Zugriff auf die VCSA-Appliance-Managementkonsole erfolgt über einen Browser, die VCSA-IP-Adresse und den Port 5480.
 
@@ -32,11 +32,11 @@ Führen Sie die folgenden Schritte aus, um die VCSA zu aktualisieren:
 
 ## Über SSO angebundene vCenter
 
-Wenn Sie über primäre und sekundäre VCS-Instanzen verfügen, sind Ihre VCSAs für eine Single-Sign-on-Domäne (SSO) von vCenter konfiguriert. Für jede VCSA wird eine VUM-Instanz bereitgestellt. Die Konfigurationseigenschaften, die Sie ändern, werden nur auf die von Ihnen angegebene VUM-Instanz angewendet und sie werden nicht an die anderen Instanzen in der Gruppe weitergegeben.
+Wenn Sie über primäre und sekundäre vCenter Server-Instanzen verfügen, sind Ihre VCSAs für eine Single-Sign-on-Domäne (SSO) von vCenter konfiguriert. Für jede VCSA wird eine VUM-Instanz bereitgestellt. Die Konfigurationseigenschaften, die Sie ändern, werden nur auf die von Ihnen angegebene VUM-Instanz angewendet und sie werden nicht an die anderen Instanzen in der Gruppe weitergegeben.
 
 Sie können eine VUM-Instanz angeben, indem Sie den Namen der VCSA auswählen, mit dem die VUM-Instanz in der Navigationsleiste registriert ist. Sie haben außerdem die Möglichkeit, Baselines und Baselinegruppen zu verwalten, Sie können ausschließlich die Bestandsobjekte prüfen und korrigieren, die von der VCSA verwaltet werden, bei der die VUM-Instanz registriert ist.
 
 ### Zugehörige Links
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

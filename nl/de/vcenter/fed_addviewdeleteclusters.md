@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Cluster für VMware Federal-Instanzen hinzufügen, anzeigen und löschen
 
@@ -89,7 +93,8 @@ Wenn Ihr erster Cluster als vSAN-Cluster hinzugefügt wurde, verwenden alle zus�
 
 Wenn Sie **NFS-Speicher** auswählen, können Sie gemeinsam genutzten Speicher auf Dateiebene für Ihre Instanz hinzufügen, wobei für alle gemeinsam genutzten Ressourcen dieselben Einstellungen verwendet werden; alternativ können Sie für die einzelnen gemeinsam genutzten Dateiressourcen jeweils unterschiedliche Konfigurationseinstellungen angeben. Geben Sie die folgenden NFS-Optionen an:
 
-**Anmerkung:** Die Anzahl der gemeinsam genutzten Dateiressourcen muss zwischen 1 und 32 liegen.
+Die Anzahl der gemeinsam genutzten Dateiressourcen muss zwischen 1 und 32 liegen.
+{:note}
 
 * **Gemeinsam genutzte Ressourcen einzeln konfigurieren**: Wählen Sie diese Option aus, um für jede einzelne gemeinsam genutzte Dateiressource unterschiedliche Konfigurationseinstellungen anzugeben.
 * **Anzahl der gemeinsam genutzten Ressourcen**: Geben Sie bei Verwendung derselben Konfigurationseinstellung für alle gemeinsam genutzten Dateiressource die Anzahl der gemeinsam genutzten Dateiressourcen für den gemeinsam genutzten NFS-Speicher an, die Sie hinzufügen möchten.
@@ -122,7 +127,8 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanz** auf die Instanz, zu der Cluster hinzugefügt werden sollen.
 
-   **Hinweis:** Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster zur Instanz hinzufügen.
+   Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster zur Instanz hinzufügen.
+   {:note}
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur** und anschließend in der rechten oberen Ecke der Tabelle **CLUSTER** auf **Hinzufügen**.
 4. Geben Sie auf der Seite **Cluster hinzufügen** den Clusternamen ein.
 5. Wählen Sie das **CPU-Modell**, die Menge des **RAM** und die **Anzahl der Bare Metal Server** für die Bare-Metal-Konfiguration aus.
@@ -142,7 +148,8 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 1. Die Bereitstellung des Clusters wird automatisch gestartet und der Status des Clusters ändert sich in **Wird initialisiert**. Sie können den Status der Bereitstellung überprüfen, indem Sie den Bereitstellungsverlauf über die Übersichtsseite für die Instanz anzeigen.
 2. Sobald der Cluster einsatzbereit ist, ändert sich sein Status in **Bereit**. Der neu hinzugefügte Cluster wird mit vSphere High Availability (HA) und vSphere Distributed Resource Scheduler (DRS) aktiviert.
 
-**Wichtig:** Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, kann die Operation zum Hinzufügen oder Entfernen von ESXi-Servern im Cluster fehlschlagen.
+Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, kann die Operation zum Hinzufügen oder Entfernen von ESXi-Servern im Cluster fehlschlagen.
+{:important}
 
 ## Vorgehensweise zum Anzeigen von Clustern in VMware Federal-Instanzen
 
@@ -223,7 +230,8 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 
 Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werden.
 
-**Hinweis:** Gehen Sie wie folgt vor, um Cluster aus Instanzen zu entfernen, die in V2.3 oder höheren Releases bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden.
+Gehen Sie wie folgt vor, um Cluster aus Instanzen zu entfernen, die in V2.3 oder höheren Releases bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden.
+{:note}
 
 ### Vorbereitende Schritte für die Löschung
 
@@ -239,7 +247,8 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, aus der Cluster gelöscht werden sollen.
 
-   **Hinweis:** Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster aus der Instanz löschen.
+   Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster aus der Instanz löschen.
+   {:note}
 
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Suchen Sie in der Tabelle **CLUSTER** den Cluster, der gelöscht werden soll, und klicken Sie dann auf das Symbol **Löschen** in der Spalte **Aktionen**.
 

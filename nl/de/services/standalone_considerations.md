@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Hinweise zu lokalen VMware HCX on IBM Cloud-Instanzen
 
 Lesen Sie die folgenden Hinweise, bevor Sie die HCX on {{site.data.keyword.cloud}}-Instanzen installieren oder löschen, die Sie für die lokale Verwendung, also für die Verwendung in Ihrer lokalen Umgebung, bestellt haben.
 
-**Hinweis:** Eine vCenter Server-Instanz mit HCX on {{site.data.keyword.cloud_notm}} ist auf drei simultane Verbindungen von lokalen Standorten begrenzt.
+Eine vCenter Server-Instanz mit HCX on {{site.data.keyword.cloud_notm}} ist auf drei simultane Verbindungen von lokalen Standorten begrenzt.
+{:note}
 
 ## Hinweise zur Installation von lokalen HCX on IBM Cloud-Instanzen
 
@@ -32,7 +37,8 @@ Zur erfolgreichen Installation auf der lokalen HCX on {{site.data.keyword.cloud_
     3. Klicken Sie auf **LINK KOPIEREN** und verwenden Sie anschließend diesen Link, um HCX Enterprise Client in eine lokale Umgebung herunterzuladen, die Zugriff auf Ihre lokale vSphere-Umgebung besitzt.
 3. Stellen Sie HCX Enterprise Client in VMware vSphere Web Client als virtuelle Appliance für den HCX-Manager (kurz "HCX-Manager") in Ihrer lokalen Umgebung bereit.
 
-   **Hinweis:** Sie müssen den lokalen HCX-Manager in einem privaten Netz bereitstellen und ihm den Zugriff auf das öffentliche Netz ermöglichen. Sie können NSX Edge, Vyatta oder ähnliche Gateways verwenden, um dem lokalen HCX-Manager den Internetzugriff zu ermöglichen. Falls für den Zugriff auf das private Netz und auf das öffentliche Netz verschiedene Gateways verwendet werden, empfiehlt es sich, das Standardgateway für den Zugriff auf das öffentliche Netz zu verwenden und mit der lokalen **Administratorkonsole für den HCX-Manager** eine statische Route für den Zugriff auf das private Netz zu erstellen.
+   Sie müssen den lokalen HCX-Manager in einem privaten Netz bereitstellen und ihm den Zugriff auf das öffentliche Netz ermöglichen. Sie können NSX Edge, Vyatta oder ähnliche Gateways verwenden, um dem lokalen HCX-Manager den Internetzugriff zu ermöglichen. Falls für den Zugriff auf das private Netz und auf das öffentliche Netz verschiedene Gateways verwendet werden, empfiehlt es sich, das Standardgateway für den Zugriff auf das öffentliche Netz zu verwenden und mit der lokalen **Administratorkonsole für den HCX-Manager** eine statische Route für den Zugriff auf das private Netz zu erstellen.
+   {:note}
 4. Verwenden Sie nach der Bereitstellung des HCX-Managers die **Administratorkonsole für den HCX-Manager**, um den lokalen HCX-Manager zu aktivieren. Einen Aktivierungsschlüssel für den lokalen HCX-Manager erhalten Sie, wenn Sie eine lokale HCX on {{site.data.keyword.cloud_notm}}-Instanz in der {{site.data.keyword.vmwaresolutions_short}}-Konsole bestellen. Weitere Informationen finden Sie unter [Lokale HCX-Instanzen bestellen](../services/standalone_orderingserviceinstances.html).
 5. Falls Sie ein selbst signiertes SSL-Zertifikat verwendet haben, als Sie den Service "HCX on {{site.data.keyword.cloud_notm}}" bestellt haben, müssen Sie das Zertifikat in den lokalen HCX-Manager importieren, indem Sie die folgenden Schritte ausführen:
     1. Klicken Sie in der lokalen **Administratorkonsole für den HCX-Manager** auf die Registerkarte **Verwaltung**.
@@ -52,7 +58,8 @@ Lesen Sie die folgenden Hinweise, bevor Sie eine HCX on {{site.data.keyword.clou
     2. Vergewissern Sie sich, dass alle erweiterten Netze entfernt wurden.
     3. Vergewissern Sie sich, dass alle Verbindungskomponenten mit paarweise verbundenen Cloudstandorten entfernt wurden.
 
-   **Wichtig:** Sie müssen alle Überprüfungen ausführen, bevor Sie mit dem nächsten Schritt fortfahren. Andernfalls wird die Lizenz für die lokale HCX on {{site.data.keyword.cloud_notm}}-Instanz storniert, wodurch Migrationen nicht ausgeführt werden können und Fehler in den HCX-Komponenten auftreten können.  
+   Sie müssen alle Überprüfungen ausführen, bevor Sie mit dem nächsten Schritt fortfahren. Andernfalls wird die Lizenz für die lokale HCX on {{site.data.keyword.cloud_notm}}-Instanz storniert, wodurch Migrationen nicht ausgeführt werden können und Fehler in den HCX-Komponenten auftreten können.  
+   {:important}
 2. Löschen Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole die lokale HCX on {{site.data.keyword.cloud_notm}}-Instanz, die bestellt wurde, um den Aktivierungsschlüssel für den lokalen HCX-Manager zu erhalten. Stellen Sie sicher, dass die gelöschte Instanz nicht mehr in der Konsole verfügbar ist, bevor Sie mit dem nächsten Schritt fortfahren.
 
    Weitere Informationen finden Sie unter [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen löschen](../services/standalone_deletingserviceinstances.html).
@@ -62,6 +69,5 @@ Lesen Sie die folgenden Hinweise, bevor Sie eine HCX on {{site.data.keyword.clou
 
 * [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen anzeigen](../services/standalone_viewingserviceinstances.html)
 * [Glossar der HCX-Begriffe](hcx_glossary.html)
-* [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
-* [VMware HCX-Ressourcen](https://hcx.vmware.com/#/docs)
+* [Dokumentation zu VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
 * [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)

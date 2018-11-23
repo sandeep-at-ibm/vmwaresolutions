@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -45,7 +45,7 @@ Wenn der Veeam-Service auf einer Instanz mit öffentlichem und privaten Netz ins
 
 ### Instanzen, die nur mit privatem Netz bereitgestellt wurden
 
-Wenn der Veeam-Service nur auf einer Instanz mit privatem Netz installiert ist, weil die Veeam-VM ohne öffentliche Netzzugangsberechtigung konfiguriert ist, können Sie die Veeam-Software nicht verwenden, um Updates zu suchen und herunterzuladen. Stattdessen müssen Sie Updates von der Veeam-Website herunterladen, sie an die Veeam-VM übertragen und sie anschließend installieren.
+Wenn der Veeam-Service nur auf einer Instanz mit privatem Netz installiert ist, weil die Veeam-VSI ohne öffentliche Netzzugangsberechtigung konfiguriert ist, können Sie die Veeam-Software nicht verwenden, um Updates zu suchen und herunterzuladen. Stattdessen müssen Sie Updates von der Veeam-Website herunterladen, sie an die Veeam-VM übertragen und sie anschließend installieren.
 
 ## Veeam-Lizenzen aktualisieren
 

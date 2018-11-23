@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -42,9 +42,11 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vSphere-Cl
 | DAL13 | Dallas | NA Süd |
 | FRA02 | Frankfurt | Europa |
 | FRA04 | Frankfurt | Europa |
+| FRA05 | Frankfurt | Europa |
 | HKG02 | Hongkong | Asien/Pazifik |
 | LON02 | London | Europa |
 | LON04 | London | Europa |
+| LON05 | London | Europa |
 | LON06 | London | Europa |
 | MEL01 | Melbourne | Asien/Pazifik |
 | MEX01 | Queretaro | NA Süd |

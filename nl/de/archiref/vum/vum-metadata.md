@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
 #	Metadaten erfassen
 
-VUM lädt Metadaten zu den Upgrades, Patches oder Erweiterungen über einen vordefinierten automatischen Prozess herunter, den Sie ändern können. In regelmäßigen konfigurierbaren Intervallen nimmt VUM Kontakt zu VMware oder Drittanbieterquellen auf, um die aktuellen Metadaten zu verfügbaren Upgrades, Patches oder Erweiterungen zu erfassen. Die Standardeinstellungen von VMware sind für die Verwendung in der VCS-Instanz akzeptabel, Sie können sie aber bei Bedarf an die Anforderungen Ihres Unternehmens anpassen.
+VUM lädt Metadaten zu den Upgrades, Patches oder Erweiterungen über einen vordefinierten automatischen Prozess herunter, den Sie ändern können. In regelmäßigen konfigurierbaren Intervallen nimmt VUM Kontakt zu VMware oder Drittanbieterquellen auf, um die aktuellen Metadaten zu verfügbaren Upgrades, Patches oder Erweiterungen zu erfassen. Die Standardeinstellungen von VMware sind für die Verwendung in der VMware vCenter Server on {{site.data.keyword.cloud}}-Instanz akzeptabel, Sie können sie aber bei Bedarf an die Anforderungen Ihres Unternehmens anpassen.
 
 VUM zeigt systemverwaltete, von vSAN generierte Baselines an. Die systemverwalteten Baselines aktualisieren ihren Inhalt in regelmäßigen Zeitabständen automatisch. Dies setzt voraus, dass VUM permanent Zugriff auf das Internet hat. Die vSAN-Systembaselines werden normalerweise alle 24 Stunden aktualisiert.
 
@@ -24,13 +24,13 @@ Unter Updates sind Upgrades für virtuelle Appliances, Host-Patches und Erweiter
 ##	Zeitplan für Benachrichtigungen
 Benachrichtigungen sind Informationen über Patchrückrufe, neue Fixes und Alerts. Standardmäßig lädt VUM die Benachrichtigungen auf Stundenbasis herunter. Diese Änderung kann durch Zugriff auf den vSphere Web Client geändert werden. Navigieren Sie zu **Home** > **Update Manager** > **Verwalten** > **Einstellungen** und wählen Sie **Zeitplan für Benachrichtigungen** aus und klicken Sie anschließend auf **Bearbeiten**.
 
-##	VM-Einstellungen
-Um die VM-Einstellungen zu ändern, rufen Sie den vSphere Web Client auf, navigieren Sie zu **Home** > **Update Manager** > **Verwalten** > **Einstellungen** und **VM-Einstellungen** und klicken Sie dann auf **Bearbeiten**.
+##	Einstellungen für virtuelle Maschinen
+Um die Einstellungen für eine virtuelle Maschine (VM) zu ändern, rufen Sie den vSphere Web Client auf, navigieren Sie zu **Home** > **Update Manager** > **Verwalten** > **Einstellungen** und **VM-Einstellungen** und klicken Sie dann auf **Bearbeiten**.
 
 ##	Host-/Clustereinstellungen
 Um die Host-/Clustereinstellungen zu ändern, rufen Sie den vSphere Web Client auf, navigieren Sie zu **Home** > **Update Manager** > **Verwalten** > **Einstellungen** und **Host-/Clustereinstellungen** und klicken Sie dann auf **Bearbeiten**.
 
 ### Zugehörige Links
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

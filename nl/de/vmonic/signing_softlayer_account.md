@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-09-26"
 
 ## Für ein IBM Cloud-Konto registrieren
 
-Sie können sich für ein {{site.data.keyword.cloud}}-Konto registrieren, indem Sie eine vorhandene **IBMid** verwenden oder eine neue **IBMid** erstellen. Weitere Informationen zur Registrierung für ein {{site.data.keyword.cloud_notm}}-Konto finden Sie unter [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
+Sie können sich für ein {{site.data.keyword.cloud}}-Konto registrieren, indem Sie eine vorhandene **IBMid** verwenden oder eine neue **IBMid** erstellen. Weitere Informationen zur Registrierung für ein {{site.data.keyword.cloud_notm}}-Konto finden Sie unter [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](../../../account/adminpublic.html).
 
 ## Für ein IBM Cloud-Infrastrukturkonto (SoftLayer-Konto) registrieren
 
@@ -38,4 +38,4 @@ Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer), d
 * [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](slaccountrequirement.html)
 * [Video - Erstellung eines {{site.data.keyword.cloud_notm}}-Kontos](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
-* [Zur IBMid wechseln](https://console.ng.bluemix.net/docs/admin/softlayerlink.html){:new_window}
+* [Zur IBMid wechseln und Konten verknüpfen](../../../admin/softlayerlink.html){:new_window}

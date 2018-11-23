@@ -63,7 +63,7 @@ Tabelle 3. Eigenschaften der vCenter Server with Hybridity Bundle-Instanzen
 | ID | Die ID der Instanz. |
 | Standort | Das {{site.data.keyword.CloudDataCent_notm}}, in dem die Instanz gehostet wird. |
 | Aktuelle Version | Die aktuelle Version von {{site.data.keyword.vmwaresolutions_short}}. |
-| vCenter-Version | Die Version von VMware vCenter Server with Hybridity Bundle.<br><br>Die Versionen von vCenter Server, die in der {{site.data.keyword.vmwaresolutions_short}}-Konsole und in VMware vSphere Web Client angezeigt werden, weichen etwas voneinander ab. Beide Angaben sind richtig.{:note} |
+| vCenter-Version | Die Version von VMware vCenter Server with Hybridity Bundle.<br><br>**Hinweis:** Die Versionen von vCenter Server, die in der {{site.data.keyword.vmwaresolutions_short}}-Konsole und in VMware vSphere Web Client angezeigt werden, weichen etwas voneinander ab. Beide Angaben sind richtig. |
 | NSX for vSphere | Die Produktversion von VMware NSX for vSphere. |
 | NSX-Lizenzedition | Die Version und Edition der VMware NSX-Lizenz. |
 | DNS, Rootdomäne | Der Rootdomänenname ist der Domänenname von DNS (Domain Name System) und der Gesamtstrukturrootname von Microsoft Active Directory (AD). |

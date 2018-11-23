@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware HCX on IBM Cloud bestellen
 
@@ -50,7 +54,8 @@ Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert
    * Ein privates portierbares Teilnetz für HCX-Verbindungen. Dieses Teilnetz wird bei Auswahl der Option **Privates Netz** für den **HCX-Verbindungstyp** verwendet.
    * Ein öffentliches portierbares Teilnetz für die Aktivierung und Wartung mit VMware. Bei Auswahl der Option **Öffentliches Netz** für den **HCX-Verbindungstyp** wird dieses Teilnetz auch für HCX-Verbindungen verwendet.
 
-   **Wichtig:** Die IP-Adresse in den für HCX bestellten Teilnetzen sollten durch die Automatisierung von VMware on {{site.data.keyword.cloud_notm}} verwaltet werden. Diese IP-Adressen können nicht zu VMware-Ressourcen wie VMs und NSX-Edges zugeordnet werden, die von Ihnen erstellt worden sind. Wenn Sie zusätzliche IP-Adressen für Ihre VMware-Artefakte benötigen, müssen Sie Ihre eigenen Teilnetze aus {{site.data.keyword.cloud_notm}} bestellen.
+   Die IP-Adresse in den für HCX bestellten Teilnetzen sollten durch die Automatisierung von VMware on {{site.data.keyword.cloud_notm}} verwaltet werden. Diese IP-Adressen können nicht zu VMware-Ressourcen wie VMs und NSX-Edges zugeordnet werden, die von Ihnen erstellt worden sind. Wenn Sie zusätzliche IP-Adressen für Ihre VMware-Artefakte benötigen, müssen Sie Ihre eigenen Teilnetze aus {{site.data.keyword.cloud_notm}} bestellen.
+   {:important}
 2. Wenn für **HCX-Verbindungstyp** die Option **Privates Netz** ausgewählt wurde, wird auf dem privaten verteilten virtuellen Switch (Distributed Virtual Switch, DVS) eine Portgruppe namens **SDDC-DPortGroup-HCX-Private** erstellt.
 3. Es wird ein HCX-Aktivierungsschlüssel von VMware bestellt.
 4. Es werden drei Ressourcenpools und VM-Ordner für HCX erstellt. Diese werden für die HCX-Verbindungen, die lokalen HCX-Komponenten sowie die fernen HCX-Komponenten benötigt.
@@ -61,7 +66,8 @@ Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert
    * Die Regeln für den Lastausgleich und Ressourcenpools werden konfiguriert. Diese Regeln und Ressourcenpools werden für die Weiterleitung des HCX-bezogenen eingehenden Datenverkehrs an die entsprechenden virtuellen Appliances für den HCX-Manager, für vCenter Server und für Platform Services Controller (PSC) verwendet.
    * Ein SSL-Zertifikat zum Verschlüsseln des HCX-bezogenen eingehenden HTTPS-Datenverkehrs, der über die ESGs eintrifft, wird angewendet.
 
-   **Wichtig:** Das HCX-Management-Edge ist für den HCX-Managementdatenverkehr zwischen den lokalen HCX-Komponenten und den cloudseitigen HCX-Komponenten dediziert. Das HCX-Management-Edge darf weder geändert noch für HCX-Netzerweiterungen verwendet werden. Erstellen Sie für Netzerweiterungen stattdessen separate Edges. Außerdem kann die Verwendung einer Firewall oder die Inaktivierung der HCX-Edge-Kommunikation mit den privaten IBM Managementkomponenten oder dem öffentlichen Internet die HCX-Funktionalität beeinträchtigen.
+   Die HCX-Management-Edge ist für den HCX-Managementdatenverkehr zwischen den lokalen HCX-Komponenten und den cloudseitigen HCX-Komponenten dediziert. Das HCX-Management-Edge darf weder geändert noch für HCX-Netzerweiterungen verwendet werden. Erstellen Sie für Netzerweiterungen stattdessen separate Edges. Außerdem kann die Verwendung einer Firewall oder die Inaktivierung der HCX-Edge-Kommunikation mit den privaten IBM Managementkomponenten oder dem öffentlichen Internet die HCX-Funktionalität beeinträchtigen.
+   {:important}
 
 6. Der HCX-Manager on {{site.data.keyword.cloud_notm}} wird bereitgestellt, aktiviert und konfiguriert:
    * Der HCX-Manager wird bei vCenter Server registriert.
@@ -78,4 +84,4 @@ Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert
 * [Glossar der HCX-Begriffe](hcx_glossary.html)
 * [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#vm-documentation)
+* [Dokumentation zu VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Updates auf Cloud Foundation-Instanzen anwenden
 
@@ -16,7 +18,7 @@ Die {{site.data.keyword.vmwaresolutions_full}}-Konsole führt laufend Erkennunge
 
 Ein verfügbares Update ist ein Eintrag in der Liste der Software-Updates für die Instanz, das sofort angewendet oder für einen späteren Zeitpunkt geplant werden kann. Das Update ist ein Bundle, das eines oder mehrere Pakete für die Aktualisierung der IBM Managementkomponenten und der VMware-Komponenten enthält.
 
-Ab Version 2.5 werden IBM CloudDriver-Updates nicht mehr aufgelistet, da automatische Aktualisierungsfunktionalität aktiviert ist. 
+Ab Version 2.5 werden IBM CloudDriver-Updates nicht mehr aufgelistet, da automatische Aktualisierungsfunktionalität aktiviert ist. Durch Aktionen wie das Hinzufügen eines Hosts, Hinzufügen eines Clusters und Bestellen eines Service wird die Instanz automatisch auf die aktuelle Version aktualisiert. Weitere Informationen zu automatischen Aktualisierungen finden Sie im Abschnitt zur *IBM CloudDriver-Ausfallsicherheit* in den [Releaseinformationen für Version 2.5](../vmonic/relnotes_v25.html).{:note}
 
 ## Vorbereitende Schritte
 

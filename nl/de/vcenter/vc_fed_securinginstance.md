@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware Federal-Instanzen schützen
 
@@ -27,7 +31,8 @@ Lesen Sie die folgenden Informationen aufmerksam durch um die Konsequenzen zu ve
 4. Klicken Sie auf **Instanz schützen**.
 5. Klicken Sie auf **OK**, um zu bestätigen, dass Sie die Verbindung zu der Instanz von der Automation trennen möchten.
 
-  **Anmerkung:** Stellen Sie vor dem Ausführen dieses Schritts sicher, dass Sie die Informationen unter **Vorbereitende Schritte** gelesen haben.
+  Stellen Sie vor dem Ausführen dieses Schritts sicher, dass Sie die Informationen unter **Vorbereitende Schritte** gelesen haben.
+  {:note}
 
 6. Entfernen Sie die öffentlichen Management-Services für VMware NSX Edge Services Gateway (ESG) in Ihrer Umgebung und bei Bedarf auch das vom Kunden verwaltete VMware NSX Edge Services Gateway (ESG), das bei der Automatisierung bereitgestellt wird.
 7. Setzen Sie Kennwörter und Schlüssel für alle von der IBM Automatisierung verwendeten Konten zurück. Weitere Informationen hierzu finden Sie auf der Seite zum [Schützen der Umgebung durch Entfernen des IBM Automatisierungs- und Supportzugriffs](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/).

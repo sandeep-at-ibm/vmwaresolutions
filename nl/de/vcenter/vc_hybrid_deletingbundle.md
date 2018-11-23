@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -24,8 +24,10 @@ Wenn Sie für Ihre Lizenz ein Downgrade durchführen, kann dies zum Fehlschlagen
 Lesen Sie die folgenden Hinweise, bevor Sie das Hybridity Bundle aus einer Umgebung mit mehreren Standorten entfernen:
 
 * Sie müssen BYOL-Lizenzen auf alle Bereitstellungen mit mehreren Standorten anwenden, bevor Sie Mietlizenzen entfernen.
-* Sie müssen NSX-Lizenzen kombinieren und über genügend Kapazität zur Nutzung über alle Bereitstellungen mit mehreren Standorten verfügen.
+* Sie müssen VMware NSX-Lizenzen kombinieren und über genügend Kapazität zur Nutzung über alle Bereitstellungen mit mehreren Standorten verfügen.
 * Sie müssen ein einzelnes Support-Ticket erstellen, um das Hybridity Bundle aus allen Bereitstellungen mit mehreren Standorten zu entfernen.
+
+Beim Entfernen des Hybridity Bundle aus einer Umgebung mit mehreren Standorten werden BYOL-Lizenzen angewendet. Für alle Standorte in einer Konfiguration mit mehreren Standorten wird die NSX-Lizenz automatisch auf die niedrigste Lizenzeditionen unter allen Standorten zurückgesetzt. Sie müssen sicherstellen, dass die Lizenzeditionen über alle Standorten hinweg in der Konfiguration mit mehreren Standorten konsistent sind.{:note}
 
 ## Vor dem Entfernen von Hybridity Bundle
 
@@ -48,7 +50,9 @@ Lesen Sie die folgenden Hinweise, bevor Sie das Hybridity Bundle aus einer Umgeb
    3. Klicken Sie auf das Symbol für **Hinzufügen** und geben Sie den Lizenzschlüssel ein. Klicken Sie auf **Weiter**.
    4. Geben Sie den Namen für die Lizenz ein und klicken Sie auf **Weiter**. Klicken Sie auf **Fertigstellen**, um die Lizenz hinzuzufügen.
    5. Wählen Sie den neuen Lizenzschlüssel aus.
-   6. Notieren Sie sich die vollständigen Lizenzschlüssel für sowohl die angewendete Lizenz als auch die ersetzte Lizenz. Halten Sie die Lizenzdetails für eine spätere Verwendung in diesem Verfahren bereit.
+   6. Notieren Sie sich die vollständigen Lizenzschlüssel für sowohl die angewendete Lizenz als auch die ersetzte Lizenz.
+
+   Halten Sie die Lizenzdetails für eine spätere Verwendung in diesem Verfahren bereit.
    {:important}
    7. Klicken Sie auf **OK**, damit die Lizenz zugeordnet wird.
 5. Führen Sie folgende Schritte aus, um für VMware vSAN eine eigene Lizenz (BYOL) zu installieren:
@@ -59,8 +63,9 @@ Lesen Sie die folgenden Hinweise, bevor Sie das Hybridity Bundle aus einer Umgeb
     3. Geben Sie den Namen für die Lizenz ein und klicken Sie auf **Weiter**. Klicken Sie auf **Fertigstellen**, um die Lizenz hinzuzufügen.
     4. Wählen Sie den neuen Lizenzschlüssel aus.
     5. Notieren Sie sich den Clusternamen und die Volllizenzschlüssel sowohl der angewendeten als auch der ersetzten Lizenz.
+
     Halten Sie die Lizenzdetails für eine spätere Verwendung in diesem Verfahren bereit.
-   {:important}
+    {:important}
     6. Klicken Sie auf **OK**, damit die Lizenz zugeordnet wird.
 6. Führen Sie optional folgende Schritte aus, um für VMware vCenter Server eine eigene Lizenz (BYOL) zu installieren:
    1. Klicken Sie auf die Registerkarte für **vCenter Server-Systeme**.
@@ -68,8 +73,11 @@ Lesen Sie die folgenden Hinweise, bevor Sie das Hybridity Bundle aus einer Umgeb
    3. Klicken Sie auf das Symbol für **Hinzufügen** und geben Sie den Lizenzschlüssel ein. Klicken Sie auf **Weiter**.
    4. Geben Sie den Namen für die Lizenz ein und klicken Sie auf **Weiter**. Klicken Sie auf **Fertigstellen**, um die Lizenz hinzuzufügen.
    5. Wählen Sie den neuen Lizenzschlüssel aus.
-   6. Notieren Sie sich die Volllizenzschlüssel sowohl der angewendeten als auch der ersetzten Lizenz. Halten Sie die Lizenzdetails für eine spätere Verwendung in diesem Verfahren bereit.
+   6. Notieren Sie sich die Volllizenzschlüssel sowohl der angewendeten als auch der ersetzten Lizenz.
+
+   Halten Sie die Lizenzdetails für eine spätere Verwendung in diesem Verfahren bereit.
    {:important}
+
    7. Klicken Sie auf **OK**, damit die Lizenz zugeordnet wird.
 7. Führen Sie optional folgende Schritte aus, um für VMware vSphere Enterprise Plus eine eigene Lizenz (BYOL) zu installieren:
   1. Klicken Sie auf die Registerkarte für **Hosts**.
@@ -79,8 +87,10 @@ Lesen Sie die folgenden Hinweise, bevor Sie das Hybridity Bundle aus einer Umgeb
     3. Geben Sie den Namen für die Lizenz ein und klicken Sie auf **Weiter**. Klicken Sie auf **Fertigstellen**, um die Lizenz hinzuzufügen.
     4. Wählen Sie den neuen Lizenzschlüssel aus.
     5. Notieren Sie sich den Clusternamen und die Volllizenzschlüssel sowohl der angewendeten als auch der ersetzten Lizenz.
+
     Halten Sie die Lizenzdetails für eine spätere Verwendung in diesem Verfahren bereit. Schreiben Sie die den einzelnen Lizenzschlüsseln zugeordneten Clusternamen auf, falls die Lizenzschlüssel nicht für alle Cluster gleich sind.
     {:important}
+
     6. Klicken Sie auf **OK**, damit die Lizenz zugeordnet wird.
 8. Entfernen Sie die Mietlizenzen.
    1. Klicken Sie auf die Registerkarte **Lizenzen**.

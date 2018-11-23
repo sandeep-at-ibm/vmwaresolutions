@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -27,15 +27,15 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}}- und {{site.dat
 | AMS03 | Amsterdam | Europa | Skylake, Broadwell |
 | CHE01 | Chennai | Asien/Pazifik | Skylake, Broadwell |
 | DAL09 | Dallas | NA Süd | Skylake, Broadwell |
-| DAL10 | Dallas | NA Süd | Skylake, Broadwell, S (Klein), L (Groß) |
+| DAL10 | Dallas | NA Süd | Skylake, Broadwell |
 | DAL12 | Dallas | NA Süd | Skylake, Broadwell |
 | DAL13 | Dallas | NA Süd | Skylake, Broadwell |
-| FRA02 | Frankfurt | Europa | Skylake, Broadwell, L (Groß) |
+| FRA02 | Frankfurt | Europa | Skylake, Broadwell |
 | FRA04 | Frankfurt | Europa | Skylake, Broadwell |
 | HKG02 | Hongkong | Asien/Pazifik | Skylake, Broadwell |
 | LON02 | London | Europa | Skylake, Broadwell |
 | LON04 | London | Europa | Skylake, Broadwell |
-| LON06 | London | Europa | Skylake, Broadwell, S (Klein), L (Groß) |
+| LON06 | London | Europa | Skylake, Broadwell |
 | MEL01 | Melbourne | Asien/Pazifik | Skylake, Broadwell |
 | MEX01 | Queretaro | NA Süd | Skylake, Broadwell |
 | MIL01 | Mailand | Europa | Skylake, Broadwell |
@@ -50,8 +50,8 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}}- und {{site.dat
 | SYD01 | Sydney | Asien/Pazifik | Skylake, Broadwell |
 | SYD04 | Sydney | Asien/Pazifik | Skylake, Broadwell |
 | TOK02 | Tokio | Asien/Pazifik | Skylake, Broadwell |
-| TOR01 | Toronto | NA Ost | Skylake, Broadwell, S (Klein), L (Groß) |
-| WDC04 | Washington, DC | NA Ost | Skylake, Broadwell, S (Klein), L (Groß) |
+| TOR01 | Toronto | NA Ost | Skylake, Broadwell |
+| WDC04 | Washington, DC | NA Ost | Skylake, Broadwell |
 | WDC06 | Washington, DC | NA Ost | Skylake, Broadwell |
 | WDC07 | Washington, DC | NA Ost | Skylake, Broadwell |
 
