@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -15,7 +15,7 @@ Sie können Benachrichtigungen über den Status von System- oder Benutzeroperati
 ## Benachrichtigungen anzeigen
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Benachrichtigungen**.
-2. Zeigen Sie in der Tabelle **Benachrichtigungsprotokoll** die Zusammenfassung für alle Benachrichtigungen an.
+2. Zeigen Sie die Zusammenfassung zu allen Benachrichtigungen an.
 
    Tabelle 1. Benachrichtigungsprotokoll
 

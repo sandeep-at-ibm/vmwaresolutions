@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -56,7 +56,7 @@ Tabelle 2. Aktionsbeschreibungen und erforderliche Rollen
 
 Sie können dem {{site.data.keyword.cloud_notm}}-Konto neue Benutzer hinzufügen, sodass diese Benutzer die Services und Ressourcen, die für das Konto zur Verfügung gestellt werden, gemeinsam nutzen können. Weitere Informationen finden Sie unter [Benutzer für den Zugriff auf Services und Ressourcen einladen](../vmonic/iamuserinvite.html).
 
-Sie können außerdem den Zugriff für vorhandene Benutzer verwalten, indem Sie zum Beispiel den vorhandenen Zugriff ändern, einen neuen Zugriff zuweisen oder den zugewiesenen Zugriff prüfen. Zur Verwaltung des Zugriffs für Benutzer müssen Sie der Kontoeigner sein oder die Plattformmanagementrolle **Administrator** besitzen. Weitere Informationen finden Sie unter [IAM-Zugriff verwalten](../../../iam/mngiam.html).
+Sie können außerdem den Zugriff für vorhandene Benutzer verwalten, indem Sie zum Beispiel den vorhandenen Zugriff ändern, einen neuen Zugriff zuweisen oder den zugewiesenen Zugriff prüfen. Zur Verwaltung des Zugriffs für Benutzer müssen Sie der Kontoeigner sein oder die Plattformmanagementrolle **Administrator** besitzen. Weitere Informationen hierzu finden Sie im Abschnitt [Zugriff auf Ressourcen verwalten](../../../iam/mngiam.html).
 
 ## Vorhandene Instanzen auf IBM Cloud-Konten migrieren
 
