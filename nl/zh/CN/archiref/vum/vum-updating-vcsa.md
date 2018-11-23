@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-29"
 
 ## VCSA 更新
 
-VUM 不会更新 VCSA，所以此部分描述了更新此设备的过程。VCS 实例中部署的 VCSA 没有因特网访问权，因此应首先将更新捆绑软件下载到跳板机。
+VUM 不会更新 VCSA，所以此部分描述了更新此设备的过程。VMware vCenter Server on {{site.data.keyword.cloud}} 实例中部署的 VCSA 没有因特网访问权，因此应首先将更新捆绑软件下载到跳板机。
 
 VCSA 是通过设备管理控制台（而不是 vSphere Web Client）进行更新的。使用浏览器以及 VCSA IP 地址和端口 5480 来访问 VCSA 设备管理控制台。
 
@@ -32,11 +32,11 @@ VCSA 是通过设备管理控制台（而不是 vSphere Web Client）进行更�
 
 ## SSO 链接的 vCenter
 
-如果您具有主 VCS 实例和辅助 VCS 实例，说明 VCSA 已配置为位于单个 vCenter Single Sign-On (SSO) 域中。每个 VCSA 都拥有一个已部署的 VUM 实例。您修改的配置属性仅应用于指定的 VUM 实例，而不会传播到组中的其他实例。
+如果您具有主 vCenter Server 实例和辅助 vCenter Server 实例，说明 VCSA 已配置为位于单个 vCenter Single Sign-On (SSO) 域中。每个 VCSA 都拥有一个已部署的 VUM 实例。您修改的配置属性仅应用于指定的 VUM 实例，而不会传播到组中的其他实例。
 
 可以通过从导航栏中选择 VUM 实例注册到的 VCSA 的名称，从而指定 VUM 实例。还可以管理基线和基线组，以及仅扫描和修复 VUM 实例注册到的 VCSA 所管理的库存对象。
 
 ### 相关链接
 
-* [VMware HCX on IBM Cloud 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）
