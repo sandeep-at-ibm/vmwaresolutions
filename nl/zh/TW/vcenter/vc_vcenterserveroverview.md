@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -62,20 +62,14 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 ### Bare Metal Server
 
 您可以使用下列其中一項配置，訂購三部以上的 {{site.data.keyword.baremetal_short}}：
-* **Skylake** 或 **Broadwell**：具有所選取 CPU 型號及 RAM 大小的 {{site.data.keyword.baremetal_short}}。  
-  * 2-CPU Intel Skylake Generation（Intel Xeon 4100/5100/6100 系列）
-  * 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
-
-如果您計劃使用 vSAN 儲存空間，則配置需要四個 {{site.data.keyword.baremetal_short}}。{:note}
+* **Skylake**：2-CPU Intel Skylake 產生伺服器（Intel Xeon 4100/5100/6100 系列），搭配您選取的 CPU 型號及 RAM 大小。  
 * **SAP 認證**：具有所選取 CPU 型號的 {{site.data.keyword.baremetal_short}}。
   * 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 192 GB RAM
   * 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 384 GB RAM
   * 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 768 GB RAM
-* **預先配置**：2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
-  * **小型**（雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz / 128 GB RAM / 2 個磁碟）
-  * **中型**（雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz / 256 GB RAM / 2 個磁碟）
-  * **大型**（雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz / 512 GB RAM / 2 個磁碟）。
-
+* **Broadwell**：2-CPU Intel Broadwell 產生伺服器（Intel Xeon E5-2600 v4 系列），搭配您選取的 CPU 型號及 RAM 大小。  
+如果您計劃使用 vSAN 儲存空間，則配置需要四個 {{site.data.keyword.baremetal_short}}。{:note}
+     
 ### 網路
 
 訂購了下列網路元件：

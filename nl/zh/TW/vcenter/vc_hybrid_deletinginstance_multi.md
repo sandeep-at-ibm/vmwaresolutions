@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2017-10-29"
+lastupdated: "2017-11-07"
 
 ---
 
@@ -26,7 +26,8 @@ lastupdated: "2017-10-29"
 
 由於資源相依關係，當您刪除實例時，不會立即釋放實例中的元件。例如，在 {{site.data.keyword.cloud_notm}} 基礎架構完全收回 ESXi 伺服器（這發生在 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束時）之前，無法刪除子網路及 VLAN。當 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束（通常是 30 天），就會刪除子網路和 VLAN，並且完成實例刪除。
 
-將針對已刪除的實例，向您收取到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。{:note}
+將針對已刪除的實例，向您收取到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。
+{:note}
 
 ## 刪除多站台配置中的 vCenter Server with Hybridity Bundle 實例的程序
 

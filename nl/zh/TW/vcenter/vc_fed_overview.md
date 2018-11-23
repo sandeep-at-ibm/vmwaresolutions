@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware Federal on IBM Cloud 概觀
 
@@ -14,11 +18,12 @@ lastupdated: "2018-10-29"
 
 如需 vCenter Server on {{site.data.keyword.cloud_notm}} 及 vCenter Server 架構的相關資訊，請參閱 [vCenter Server 概觀](vc_vcenterserveroverview.html)。
 
-**注意：**VMware Federal on {{site.data.keyword.cloud_notm}} 僅提供一部分的 vCenter Server 供應項目。多站台配置、預先配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server、自帶授權 (BYOL)，以及訂購附加程式服務的選項，全都不受支援。
+VMware Federal on {{site.data.keyword.cloud_notm}} 僅提供 vCenter Server 供應項目子集。多站台配置、自帶授權 (BYOL)，以及訂購附加服務的選項，全都不受支援。
+{:note}
 
 ## VMware Federal on IBM Cloud 實例的技術規格
 
-已包含下列元件：
+包括下列元件：
 
 ### Bare Metal Server
 
@@ -29,7 +34,7 @@ lastupdated: "2018-10-29"
 
 對於 NFS 儲存空間配置，建議的 {{site.data.keyword.baremetal_short}} 數目是設為預設值 3。
 
-**附註：**如果您選取 vSAN 儲存空間，則配置需要四部 {{site.data.keyword.baremetal_short}}。
+如果您選取 vSAN 儲存空間，則配置需要四個 {{site.data.keyword.baremetal_short}}。{:note}
 
 ### 網路
 
@@ -39,10 +44,12 @@ lastupdated: "2018-10-29"
 *  兩個 VMware NSX Edge Services Gateway：
   * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，IBM 將它部署為管理網路拓蹼的一部分。IBM 管理虛擬機器會利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[將您的網路配置成使用客戶管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
-    **重要事項：**您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server 實例。此外，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
+您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server 實例。此外，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
+{:important}
   * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway，IBM 將它部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)。
 
-  **附註：**在執行保護已部署的 VMware Federal 實例的動作時，會移除用於出埠 HTTPS 管理資料流量的 VMware NSX Edge Services Gateway (ESG)。如需相關資訊，請參閱[保護 VMware Federal 實例](vc_fed_securinginstance.html)。
+  在執行保護已部署的 VMware Federal 實例的動作時，會移除用於出埠 HTTPS 管理資料流量的 VMware NSX Edge Services Gateway (ESG)。如需相關資訊，請參閱[保護 VMware Federal 實例](vc_fed_securinginstance.html)。
+  {:note}
 
 ### 虛擬伺服器實例
 
@@ -71,7 +78,7 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 * 效能：2、4 或 10 IOPS/GB。
 * 個別配置檔案共用。
 
-如果您選擇 NFS 選項，則會訂購用於管理元件的一個 2 TB、4 IOPS/GB 的檔案共用。
+如果您選擇 NFS 選項，則會訂購用於管理元件的一個 2 TB、4 IOPS/GB 檔案共用。
 
 ### IBM 提供的授權及費用
 
@@ -94,7 +101,7 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 * 一個 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6
 
-**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。{:important}
 
 **警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外管理已在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的所有 {{site.data.keyword.vmwaresolutions_short}} 元件，可能會讓您的環境不穩定。這些管理活動包括：
 *  新增、修改、退回或移除元件

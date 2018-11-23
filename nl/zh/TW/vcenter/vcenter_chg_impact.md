@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -51,13 +51,16 @@ lastupdated: "2018-09-27"
 |變更實例中使用 vSAN 的 vSAN 資料儲存庫名稱。|新增 ESXi 伺服器可能失敗。<br><br>升級實例可能會失敗。|重要|將 vSAN 資料儲存庫名稱變更回原始名稱 **vsanDatastore**。
 |變更實例中使用 NFS 的管理 NFS 資料儲存庫名稱。|新增 ESXi 伺服器可能失敗。<br><br>升級實例可能會失敗。|重要|將 NFS 管理資料儲存庫名稱變更回原始名稱 **management-share**，並在 ESXi 伺服器上將 NFS 資料儲存庫重新裝載為唯讀。
 
-下表列出當 VC/PSC root 使用者在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更 vCenter Server 資源時可能受到影響的作業。
+下表列出因為各種資源而停用 SSH 或 Shell 存取時可能受到影響的作業。
 
-表 2. 在 VC/PSC root 存取權（本端）方面受到影響的作業
+表 2. 受 SSH 及 Shell 存取影響的作業（本端）
 
 |嘗試的變更        |受影響的作業         |嚴重性    |回復方法         |
 |:------------- |:------------- |:--------------|:--------------|
-|啟用或停用 Shell 存取。|PSC 及 vCenter Server 的修補及更新可能失敗。|重要|N/A    |
+| 停用 vCenter Server 或 PSC 的 SSH 或 Shell 存取。| 主要及次要實例的配對可能會失敗。|重要|N/A    |
+| 停用 ESXi 的 SSH 或 Shell 存取。| 在實例中新增及移除主機、服務及網路儲存空間可能會失敗。|重要|N/A    |
+
+如果您選擇要停用 SSH 或 Shell 存取，在執行指示的作業之前您應該暫時將它重新啟用。
 
 ## vCenter Server 實例的管理子網路
 
@@ -75,5 +78,5 @@ lastupdated: "2018-09-27"
 *  在公用 VLAN 上有一個包含 16 個 IP 位址的公用可攜式子網路
 
 如果您需要使用更多子網路，您可以用下列其中一種方式取得要使用的 IP 位址：
-*  **選項 1（建議）**：使用 VMware NSX 虛擬網路套版。訂購時會提供範例的 VXLAN 範本。這個 VXLAN 可用來作為建置軟體定義網路 (SDN) 的起點。如需相關資訊，請參閱[將網路配置成使用客戶管理的 NSX Edge](vc_esg_config.html)。
+*  **選項 1（建議）**：使用 VMware NSX 虛擬網路層疊。訂購時會提供範例的 VXLAN 範本。這個 VXLAN 可用來作為建置軟體定義網路 (SDN) 的起點。如需相關資訊，請參閱[將網路配置成使用客戶管理的 NSX Edge](vc_esg_config.html)。
 *  **選項 2**：訂購您自己的可攜式公用或專用子網路來取得 IP 位址。若要區別您訂購的子網路與管理子網路，您可以將附註新增至您訂購的所有子網路。
