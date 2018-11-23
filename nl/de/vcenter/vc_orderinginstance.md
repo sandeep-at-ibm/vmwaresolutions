@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -75,7 +75,7 @@ Für Nicht-Business-Partner-Benutzer können die von IBM bereitgestellten VMware
 
 ## Einstellungen für Bare Metal Server
 
-Die Bare Metal-Einstellungen sind von Ihrer Rechenzentrumsauswahl und der Konfiguration des Bare Metal Servers abhängig. 
+Die Bare Metal-Einstellungen sind von Ihrer Rechenzentrumsauswahl und der Konfiguration des Bare Metal Servers abhängig.
 
 ### Standort des Rechenzentrums
 
@@ -114,22 +114,11 @@ Tabelle 3. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 
-### Vorkonfiguriert
-
-Wenn Sie **Vorkonfiguriert** auswählen, dann können Sie die CPU- oder RAM-Einstellungen nicht ändern.
-
-Wählen Sie gemäß Ihren Anforderungen eine Bare Metal Server-Konfiguration aus:
-  * S (Klein): Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz / 128 GB RAM / 2 Laufwerke
-  * M (Mittel): Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz / 256 GB RAM / 2 Laufwerke
-  * L (Groß): Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM / 2 Laufwerke
-
 ### Bare Metal Server-Anzahl
 
-Für den ersten Cluster in der Instanz können Sie die Anzahl der ESXi-Server wie folgt konfigurieren:
-* Falls Sie **Skylake** oder **Broadwell** ausgewählt haben, können Sie die Anzahl der ESXi-Server im Bereich von 2 bis 20 konfigurieren.
-* Falls Sie **Vorkonfiguriert** ausgewählt haben, können Sie die Anzahl der ESXi-Server im Bereich von 2 bis 10 konfigurieren.
+Für den ersten Cluster in der Instanz können Sie die Anzahl der ESXi-Server im Bereich von 2 bis 20 konfigurieren. Alle ESXi-Server nutzen die festgelegte Konfiguration gemeinsam. 
 
-Alle ESXi-Server nutzen die festgelegte Konfiguration gemeinsam. Nach der Erstbereitstellung können Sie vier weitere Cluster hinzufügen. Wenn Sie die Konfiguration **Skylake** oder **Broadwell** für VMware vSAN ausgewählt haben, werden sowohl für den ersten Cluster als auch für die Cluster nach der Bereitstellung 4 ESXi-Server benötigt. Weitere Informationen zum Minimum von ESXi-Servern finden Sie im Abschnitt [Ist eine Serverinstanz mit zwei Knoten hoch verfügbar?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+Nach der Erstbereitstellung können Sie vier weitere Cluster hinzufügen. Wenn Sie die Konfiguration **Skylake** oder **Broadwell** für VMware vSAN ausgewählt haben, werden sowohl für den ersten Cluster als auch für die Cluster nach der Bereitstellung 4 ESXi-Server benötigt. Weitere Informationen zum Minimum von ESXi-Servern finden Sie im Abschnitt [Ist eine Serverinstanz mit zwei Knoten hoch verfügbar?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Speichereinstellungen
 
@@ -271,7 +260,6 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
     2. Wählen Sie die Bare Metal Server-Konfiguration aus.
        * Wenn Sie **Skylake** oder **Broadwell** auswählen, dann müssen Sie das CPU-Modell und die RAM-Größe angeben.
        * Wenn Sie **SAP-zertifiziert** auswählen, müssen Sie das CPU-Modell wählen.
-       * Wenn Sie **Vorkonfiguriert** auswählen, dann können Sie zwischen der Konfiguration **S (Klein)**, der Konfiguration **M (Mittel)** und der Konfiguration **L (Groß)** wählen.
     3. Geben Sie die Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen an. Wenn vSAN als Speicherlösung verwendet werden soll, sind mindestens vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.  
 7. Führen Sie die Speicherkonfiguration durch.
   * Wenn Sie **vSAN-Speicher** auswählen, geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten, die Anzahl der Platten und die vSAN-Lizenzedition an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
@@ -308,7 +296,8 @@ Wenn Sie eine sekundäre Instanz bestellen, kann VMware vSphere Web Client für 
 
 Sie können nun die bestellte vCenter Server-Instanz anzeigen und verwalten.
 
-Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal}} oder über ein anderes Verfahren außerhalb der Konsole verwalten. Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert.
+Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal}} oder über ein anderes Verfahren außerhalb der Konsole verwalten.
+Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert.
 {:important}
 
 **VORSICHT:** Wenn Sie {{site.data.keyword.vmwaresolutions_short}}-Komponenten (die in Ihrem {{site.data.keyword.cloud_notm}}-Konto installiert wurden, als Sie die Instanz bestellt haben) außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwalten, kann dies zur Instabilität Ihrer Umgebung führen. Zu diesen Managementaktivitäten gehören:

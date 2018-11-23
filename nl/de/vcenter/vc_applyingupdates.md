@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -22,6 +22,8 @@ Wenn Sie ein Upgrade einer vCenter Server-Instanz auf eine vCenter Server with H
 {:important}
 
 Business Partner-Benutzer haben nicht die Option, für eine vorhandene vCenter Server-Instanz ein Upgrade auf eine vCenter Server with Hybridity Bundle-Instanz durchzuführen.
+
+Ab Version 2.5 werden IBM CloudDriver-Updates nicht mehr aufgelistet, da automatische Aktualisierungsfunktionalität aktiviert ist. Durch Aktionen wie das Hinzufügen eines Hosts, Hinzufügen eines Clusters und Bestellen eines Service wird die Instanz automatisch auf die aktuelle Version aktualisiert. Weitere Informationen zu automatischen Aktualisierungen finden Sie im Abschnitt zur *IBM CloudDriver-Ausfallsicherheit* in den [Releaseinformationen für Version 2.5](../vmonic/relnotes_v25.html).{:note}
 
 Bevor Sie versuchen, ein Update anzuwenden, erweitern Sie den Update-Eintrag, indem Sie auf den Abwärtspfeil klicken und die folgenden Informationen überprüfen:
 * Überprüfen Sie die Version des Updates. Sie müssen die Updates in chronologischer Reihenfolge anwenden, also zuerst das älteste Update und zuletzt das neueste Update. Stellen Sie sicher, dass Sie alle vorherigen Updates angewendet haben, bevor Sie das aktuelle Update anwenden. Beispielsweise müssen Sie das Update für V2.3 anwenden, bevor Sie versuchen, das Update für V2.4 anzuwenden.
@@ -51,7 +53,7 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
   </tr>
 </table>
 
-## Vorgehensweise zum Anwenden von Updates und Patches auf vCenter Server-Instanzen
+## Verfahren zum Anwenden von Aktualisierungen und Patches auf vCenter Server-Instanzen (V2.1 oder höher)
 
 Dieses Verfahren gilt für Instanzen, die in V2.1 oder höher bereitgestellt werden. Bei Instanzen, die in V2.0 und früheren Versionen bereitgestellt wurden, müssen Sie die VMware-Updates manuell anwenden.
 
@@ -61,13 +63,11 @@ Dieses Verfahren gilt für Instanzen, die in V2.1 oder höher bereitgestellt wer
    Wenn die Details nicht angezeigt werden, kann dies auf ein Konnektivitätsproblem mit der virtuellen Serverinstanz (VSI) von IBM CloudDriver hinweisen, das aufgrund eines Problems mit einer Firewallregel oder aufgrund eines anderen Netzproblems aufgetreten ist. Lösen Sie das Problem, bevor Sie mit dem nächsten Schritt fortfahren, da das Update andernfalls fehlschlagen könnte.
 4. Klicken Sie im linken Navigationsfenster auf **Update und Patch**.
 
-   Die Seite **Update und Patch** für eine Instanz enthält nur die Pakete für die Aktualisierung der IBM Managementkomponenten, nicht jedoch die VMware-Updates. VMware-Updates müssen manuell angewendet werden.
-   {:note}
-
-   {{site.data.keyword.vmwaresolutions_short}} wendet VMware-Updates für die folgenden Operationen an:
+   Die Seite **Update und Patch** für eine Instanz enthält nur die Pakete für die Aktualisierung der IBM Managementkomponenten, nicht jedoch die VMware-Updates. VMware-Updates müssen manuell angewendet werden.   {{site.data.keyword.vmwaresolutions_short}} wendet VMware-Updates für die folgenden Operationen an:
    * Wenn eine neue vCenter Server-Instanz bereitgestellt wird.
-   * Wenn neue ESXi-Server hinzugefügt werden.
-   * Wenn neue Cluster hinzugefügt werden.
+   * Wenn neue ESXi-Server hinzugefügt werden, werden die neuen ESXi-Server mit VMware-Aktualisierungen bereitgestellt, die vorhandenen ESXi-Server werden jedoch nicht aktualisiert.
+   * Wenn neue Cluster hinzugefügt werden, werden die neuen Cluster mit VMware-Aktualisierungen bereitgestellt, die vorhandenen Cluster werden jedoch nicht aktualisiert.
+   {:note}
 
 5. Klicken Sie für NSX-Lizenzaktualisierungen auf **Upgrade**. Wählen Sie im Fenster für das Upgrade von NSX-Lizenzeditionen ****die Edition aus, auf die das Upgrade durchgeführt werden soll, und klicken Sie dann auf **Upgrade**. Downgrades für Lizenzeditionen sind nicht verfügbar.
 

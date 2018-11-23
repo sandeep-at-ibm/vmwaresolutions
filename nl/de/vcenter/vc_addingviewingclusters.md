@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -47,7 +47,7 @@ Wenn Sie den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}}- 
 
 ### Einstellungen für Bare Metal Server
 
-Sie können entweder **Skylake**, **SAP-zertifiziert**, **Broadwell** oder **Vorkonfiguriert** auswählen.
+Sie können **Skylake**, **SAP-zertifiziert** oder **Broadwell** auswählen.
 
 #### Skylake
 
@@ -82,22 +82,13 @@ Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 
-#### Vorkonfiguriert
-
-Für die Einstellung **Vorkonfiguriert** können Sie abhängig von Ihren Anforderungen eine **Bare Metal Server-Konfiguration** auswählen:
-* S (Klein): Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz / 128 GB RAM / 2 Platten
-* M (Mittel): Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz / 256 GB RAM / 2 Platten
-* L (Groß): Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM / 2 Platten
-
 #### Bare Metal Server-Anzahl
 
 Für Cluster sind mindestens zwei {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
 
 Für vCenter Server-Instanzen, die in V2.1 oder früher bereitgestellt wurden, können Sie bis zu 59 {{site.data.keyword.baremetal_short}}-Instanzen für einen Cluster hinzufügen. Sie können gleichzeitig 1 bis 59 ESXi-Server hinzufügen.
 
-Für vCenter Server-Instanzen, die in V2.0 oder früher bereitgestellt wurden, können Sie bis zu 32 {{site.data.keyword.baremetal_short}}-Instanzen für einen Cluster hinzufügen. Für die Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen, die Sie jeweils hinzufügen können, gilt Folgendes:
-* Bei Konfigurationen des Typs **S (Klein)**, **M (Mittel)** und **L (Groß)** können Sie gleichzeitig 1 bis 10 ESXi-Server hinzufügen.
-* Bei Bare Metal Server-Konfigurationen des Typs **Skylake** und **Broadwell** können Sie gleichzeitig 1 bis 20 ESXi-Server hinzufügen.
+Für vCenter Server-Instanzen, die in V2.0 oder früher bereitgestellt wurden, können Sie bis zu 32 {{site.data.keyword.baremetal_short}}-Instanzen für einen Cluster hinzufügen. Sie können gleichzeitig 1 bis 59 ESXi-Server für die **Skylake**-, **SAP-zertifizierte** und **Broadwell**-Bare-Metal-Serverkonfiguration hinzufügen.
 
 Nach der Bereitstellung können Sie bis zu vier weitere Cluster erstellen. Wenn Sie die Bare Metal Server-Konfiguration **Skylake** oder **Broadwell** mit VMware vSAN-Speicher auswählen, werden für den ersten Cluster und die Cluster nach der Bereitstellung vier Server benötigt.
 
@@ -169,7 +160,6 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 6. Führen Sie die Bare-Metal-Konfiguration durch.
    * Wenn Sie **Skylake** oder **Broadwell** ausgewählt haben, geben Sie das **CPU-Modell**, die Größe des **RAM** und die **Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen** an.
    * Wenn Sie **SAP-zertifiziert** ausgewählt haben, geben Sie das CPU-Modell an.
-   * Wenn Sie **Vorkonfiguriert** ausgewählt haben, geben Sie die **Bare Metal Server-Konfiguration** und die **Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen** an. Wenn vSAN als Speicherlösung verwendet werden soll, sind mindestens vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
 7. Führen Sie die Speicherkonfiguration durch.
   * Wenn Sie **vSAN-Speicher** auswählen, geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten, die Anzahl der Platten und die vSAN-Lizenzedition an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
   * Wenn Sie **NFS-Speicher** auswählen und für alle gemeinsam genutzten Dateiressourcen dieselben Einstellungen hinzufügen und konfigurieren wollen, geben Sie die **Anzahl der gemeinsam genutzten Ressourcen**, **Größe** und **Leistung** an.

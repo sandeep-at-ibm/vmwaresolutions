@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -17,6 +17,8 @@ lastupdated: "2018-10-29"
 Der Prozess zur Anwendung von Patches und Updates auf vCenter Server with Hybridity Bundle-Instanzen ist nur für die Managementkomponenten automatisiert. Die VMware-Updates müssen hingegen manuell angewendet werden.
 
 ## Vorbereitende Schritte
+
+Ab Version 2.5 werden IBM CloudDriver-Updates nicht mehr aufgelistet, da automatische Aktualisierungsfunktionalität aktiviert ist. Durch Aktionen wie das Hinzufügen eines Hosts, Hinzufügen eines Clusters und Bestellen eines Service wird die Instanz automatisch auf die aktuelle Version aktualisiert. Weitere Informationen zu automatischen Aktualisierungen finden Sie im Abschnitt zur *IBM CloudDriver-Ausfallsicherheit* in den [Releaseinformationen für Version 2.5](../vmonic/relnotes_v25.html).{:note}
 
 Bevor Sie versuchen, ein Update anzuwenden, erweitern Sie den Update-Eintrag, indem Sie auf den Abwärtspfeil klicken und die folgenden Informationen überprüfen:
 * Überprüfen Sie die Version des Updates. Sie müssen die Updates in chronologischer Reihenfolge anwenden, also zuerst das älteste Update und zuletzt das neueste Update. Stellen Sie sicher, dass Sie alle vorherigen Updates angewendet haben, bevor Sie das aktuelle Update anwenden. Beispielsweise müssen Sie das Update für V2.3 anwenden, bevor Sie versuchen, das Update für V2.4 anzuwenden.
@@ -45,8 +47,8 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
 
    Die Seite **Update und Patch** enthält nur die Pakete für die Aktualisierung der IBM Managementkomponenten, nicht jedoch die VMware-Updates. {{site.data.keyword.vmwaresolutions_short}} wendet VMware-Updates für die folgenden Operationen an:
    * Wenn eine neue vCenter Server-Instanz bereitgestellt wird.
-   * Wenn neue ESXi-Server hinzugefügt werden.
-   * Wenn neue Cluster hinzugefügt werden.
+   * Wenn neue ESXi-Server hinzugefügt werden, werden die neuen ESXi-Server mit VMware-Aktualisierungen bereitgestellt, die vorhandenen ESXi-Server werden jedoch nicht aktualisiert.
+   * Wenn neue Cluster hinzugefügt werden, werden die neuen Cluster mit VMware-Aktualisierungen bereitgestellt, die vorhandenen Cluster werden jedoch nicht aktualisiert.
    {:note}
 
 5. Klicken Sie für Lizenzaktualisierungen auf **Upgrade**. Wählen Sie in der Liste die Edition aus, auf die das Upgrade durchgeführt werden soll, und klicken Sie dann auf **Upgrade**. Downgrades für Lizenzeditionen sind nicht verfügbar.

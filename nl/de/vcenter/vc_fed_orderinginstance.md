@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware Federal-Instanzen bestellen
 
 Um eine flexible und anpassbare virtualisierte VMware-Plattform bereitzustellen, die Ihren Workloadbedarf optimal erfüllt, bestellen Sie eine VMware Federal-Instanz. VMware Federal-Instanzen unterstützen Sie beim Trennen der offenen Managementverbindung und beim Schützen Ihrer bereitgestellten Instanz.
 
-**Anmerkung:** Aktuell wird VMware Federal on {{site.data.keyword.cloud}} nur von vCenter Server-Instanzen unterstützt.
+Aktuell wird VMware Federal on {{site.data.keyword.cloud}} nur von vCenter Server-Instanzen unterstützt.
+{:note}
 
 ## Voraussetzungen für die Bestellung von VMware Federal-Instanzen
 
@@ -32,7 +37,8 @@ Tabelle 1. Wertformat für Instanz- und Domänennamen
   | Vollständig qualifizierter Name des ESXi-Servers | `<host_prefix><n>.<subdomain_label>.<root_domain>`, hierbei steht `<n>` für die Folgenummer des ESXi-Servers. Die maximale Länge beträgt 50 Zeichen. |  
   | Vollständig qualifizierter Domänenname für PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |
 
-**Wichtig:** Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung oder Bereitstellung der Instanz festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise, wenn der öffentliche Netzbetrieb beendet wird, Server sowie virtuelle Serverinstanzen (VSIs) mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder wenn die Virtual Server-Instanz für IBM CloudBuilder gestoppt oder gelöscht wird.
+Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung oder Bereitstellung der Instanz festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise, wenn der öffentliche Netzbetrieb beendet wird, Server sowie virtuelle Serverinstanzen (VSIs) mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder wenn die Virtual Server-Instanz für IBM CloudBuilder gestoppt oder gelöscht wird.
+{:important}
 
 ## Systemeinstellungen
 
@@ -66,7 +72,7 @@ Von IBM bereitgestellte Lizenzen für folgende VMware-Komponenten:
 
 ## Einstellungen für Bare Metal Server
 
-Die Bare Metal-Einstellungen sind von Ihrer Rechenzentrumsauswahl und der Konfiguration des Bare Metal Servers abhängig. Die Option zum Auswählen einer vordefinierten Konfiguration wird aktuell nicht unterstützt.
+Die Bare Metal-Einstellungen sind von Ihrer Rechenzentrumsauswahl und der Konfiguration des Bare Metal Servers abhängig.
 
 ### Standort des Rechenzentrums
 
@@ -119,7 +125,8 @@ Geben Sie die folgenden vSAN-Optionen an:
 
 Wenn Sie **NFS-Speicher** auswählen, können Sie gemeinsam genutzten Speicher auf Dateiebene für Ihre Instanz hinzufügen, wobei für alle gemeinsam genutzten Ressourcen dieselben Einstellungen verwendet werden; alternativ können Sie für die einzelnen gemeinsam genutzten Dateiressourcen jeweils unterschiedliche Konfigurationseinstellungen angeben. Geben Sie die folgenden NFS-Optionen an:
 
-**Anmerkung:** Die Anzahl der gemeinsam genutzten Dateiressourcen muss zwischen 1 und 32 liegen.
+Die Anzahl der gemeinsam genutzten Dateiressourcen muss zwischen 1 und 32 liegen.
+{:note}
 
 * **Gemeinsam genutzte Ressourcen einzeln konfigurieren**: Wählen Sie diese Option aus, um für jede einzelne gemeinsam genutzte Dateiressource unterschiedliche Konfigurationseinstellungen anzugeben.
 * **Anzahl der gemeinsam genutzten Ressourcen**: Geben Sie bei Verwendung derselben Konfigurationseinstellung für alle gemeinsam genutzten Dateiressourcen die Anzahl der gemeinsam genutzten Dateiressourcen für den gemeinsam genutzten NFS-Speicher an, die Sie hinzufügen möchten.
@@ -161,7 +168,8 @@ Der Rootdomänenname muss die folgenden Anforderungen erfüllen:
 * Die letzte Zeichenfolge darf nur Buchstaben enthalten.
 * Die Länge der letzten Zeichenfolge muss zwischen 2 und 24 Zeichen betragen.
 
-**Hinweis:** Die maximale Länge des vollständig qualifizierten Domänennamens (FQDN = Fully Qualified Domain Name) für Hosts und VMs beträgt 50 Zeichen. Domänennamen müssen diese maximale Länge zulassen.
+Die maximale Länge des vollständig qualifizierten Domänennamens (FQDN = Fully Qualified Domain Name) für Hosts und VMs beträgt 50 Zeichen. Domänennamen müssen diese maximale Länge zulassen.
+{:note}
 
 ### DNS-Konfiguration
 
@@ -170,7 +178,8 @@ Wählen Sie die Konfiguration für DNS (Domain Name System) für Ihre Instanz au
 * **Einzelne öffentliche Windows-VSI für Active Directory/DNS**: Eine einzelne virtuelle Serverinstanz (VSI) von Microsoft Windows Server für Microsoft Active Directory (AD), die als DNS für die Instanz dient, auf der die Hosts und virtuellen Maschinen registriert sind, wird bereitgestellt und kann zur Suche verwendet werden.
 * **Zwei hoch verfügbare dedizierte Windows-Server-VMs auf dem Management-Cluster**: Für V2.3 und zukünftige Releases werden zwei virtuelle Microsoft Windows-Maschinen bereitgestellt, die Datenschutz und Leistungsfähigkeit verbessern.
 
-**Wichtig:** Sie müssen zwei Lizenzen für Microsoft Windows Server 2012 R2 bereitstellen, wenn Sie Ihre Instanz für die Verwendung der beiden virtuellen Microsoft Windows-Maschinen konfigurieren. Verwenden Sie die Lizenz für Microsoft Windows Server 2012 R2 Standard Edition und/oder die Lizenz für Microsoft Windows Server 2012 R2 Datacenter Edition.
+Sie müssen zwei Lizenzen für Microsoft Windows Server 2012 R2 bereitstellen, wenn Sie Ihre Instanz für die Verwendung der beiden virtuellen Microsoft Windows-Maschinen konfigurieren. Verwenden Sie die Lizenz für Microsoft Windows Server 2012 R2 Standard Edition und/oder die Lizenz für Microsoft Windows Server 2012 R2 Datacenter Edition.
+{:important}
 
 Derzeit kann jede Lizenz nur einem einzigen physischen Server zugeordnet werden und deckt bis zu zwei physische Prozessoren ab. Durch Verwenden einer einzigen Standard Edition-Lizenz können Sie zwei virtualisierte virtuelle Microsoft Windows-Maschinen pro 2-Prozessor-Server ausführen. Die beiden Lizenzen sind deshalb erforderlich, weil zwei virtuelle Microsoft Windows-Maschinen in zwei unterschiedlichen Hosts bereitgestellt werden.
 
@@ -217,8 +226,9 @@ Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **B
 
 Sie können nun die bestellte VMware Federal-Instanz anzeigen, verwalten und schützen.
 
-**Wichtig:** Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal}} oder über ein anderes Verfahren außerhalb der Konsole verwalten.
+Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal}} oder über ein anderes Verfahren außerhalb der Konsole verwalten.
 Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert.
+{:important}
 
 **VORSICHT:** Wenn Sie {{site.data.keyword.vmwaresolutions_short}}-Komponenten (die in Ihrem {{site.data.keyword.cloud_notm}}-Konto installiert wurden, als Sie die Instanz bestellt haben) außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwalten, kann dies zur Instabilität Ihrer Umgebung führen. Zu diesen Managementaktivitäten gehören:
 *  Komponenten hinzufügen, ändern, zurückgeben oder entfernen
