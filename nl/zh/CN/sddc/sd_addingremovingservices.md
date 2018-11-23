@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -18,9 +18,9 @@ lastupdated: "2018-10-25"
 
 表 1. 可用于 Cloud Foundation 实例的服务
 
-|服务名称|服务版本|实例版本|
+|服务名称|当前服务版本|实例版本|
 |----------------------------------------------------------------------------------------|------------------|
-|[F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)|BIG-IP VE V13.1| V1.9 和更高版本 |
+|[F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)|BIG-IP VE V13.1.1.2| V1.9 和更高版本 |
 |[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)|300 系列| V1.8 和更高版本 |
 |[FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)|6.0.3| V2.0 和更高版本 |
 |[HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)|5.4.0| V2.3 和更高版本 |
