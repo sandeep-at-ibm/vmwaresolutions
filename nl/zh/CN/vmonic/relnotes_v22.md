@@ -142,7 +142,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 服务可与 VMware 系统管理程序
 
 Zerto on {{site.data.keyword.cloud_notm}} 服务用于提供复制和灾难恢复功能，这些功能可以集成到部署产品中，以保护和恢复 {{site.data.keyword.cloud_notm}} 上 VMware 虚拟环境中的数据。可以使用 Zerto 灾难恢复 (DR) 软件和 IBM Resiliency Services 来部署完全受管的 DR 环境。
 
-可以在**入门**页面中，通过订购新实例或向现有实例添加服务，为实例请求受管服务。
+可以在**开始**页面中，通过订购新实例或向现有实例添加服务，为实例请求受管服务。
 
 有关更多信息，请参阅以下主题：
 * [为 Veeam on {{site.data.keyword.cloud_notm}} 请求服务](../services/managing_veeam_services.html)

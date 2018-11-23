@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -27,9 +27,9 @@ lastupdated: "2018-10-29"
 
 ### IBM Cloud Private Hosted
 
-现在，{{site.data.keyword.cloud_notm}} Private Hosted 服务除了可用于部署在（或已升级到）V2.5 和更高发行版中的 VMware vCenter Server 实例外，还可用于 VMware vCenter Server with Hybridity Bundle 实例。您现在可以订购包含该服务的 vCenter Server 实例或 vCenter Server with Hybridity Bundle 实例，或者在初始部署后将该服务添加到现有 vCenter Server 实例或 vCenter Server with Hybridity Bundle 实例。
+现在，{{site.data.keyword.cloud_notm}} Private Hosted 服务除了可用于部署在（或已升级到）V2.5 和更高发行版中的 VMware vCenter Server 实例外，还可用于 VMware vCenter Server with Hybridity Bundle 实例。现在，可以订购包含该服务的 vCenter Server 实例或 vCenter Server with Hybridity Bundle 实例。您还可以在初始部署后将该服务添加到现有 vCenter Server 实例或 vCenter Server with Hybridity Bundle 实例。
 
-有关更多信息，请参阅：
+有关更多信息，请参阅以下主题：
 * [{{site.data.keyword.cloud_notm}} Private Hosted 概述](../services/icp_overview.html)
 * [订购 {{site.data.keyword.cloud_notm}} Private Hosted](../services/icp_ordering.html)
 
@@ -47,11 +47,11 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 交付多专区云�
 
 ### FortiGate Virtual Appliance on IBM Cloud
 
-在 2018 年第 3 季度，Fortinet 对其预订捆绑软件进行了更改。有关更多信息，请参阅[订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)。
+在 2018 年第 3 季度，Fortinet 更改了其预订捆绑软件。有关更多信息，请参阅[订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)。
 
 对于部署在 V2.7 和更高版本 Cloud Foundation 实例和 vCenter Server 实例中的 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务，将供应 FortiOS 6.0.3。
 
-此外，订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务时，可以选择是希望 FortiGuard 通过公用网络应用许可证和安全更新，还是使用代理服务器通过专用网络应用许可证和安全更新。有关更多信息，请参阅[订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)。
+订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 时，可以选择是希望 FortiGuard 通过公用网络应用许可证和安全更新，还是使用代理服务器通过专用网络应用许可证和安全更新。有关更多信息，请参阅[订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)。
 
 ### Zerto on IBM Cloud 服务组件更新
 
@@ -59,7 +59,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 交付多专区云�
 
 ### 集成有 IBM Cloud Activity Tracker 的 KMIP for VMware on IBM Cloud
 
-现在，除了 VMware 实例事件之外，KMIP for VMware on {{site.data.keyword.cloud_notm}} 实例的事件（例如，密钥创建、密钥删除和密钥访问）也与 {{site.data.keyword.cloud_notm}} Activity Tracker 实例相集成。有关 KMIP for WMware on {{site.data.keyword.cloud_notm}} 的更多信息，请参阅 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 概述](../services/kmip_considerations.html)。
+现在，除了 VMware 实例事件之外，KMIP for VMware on {{site.data.keyword.cloud_notm}} 的事件（例如，密钥创建、密钥删除和密钥访问）也与 {{site.data.keyword.cloud_notm}} Activity Tracker 实例相集成。有关 KMIP for WMware on {{site.data.keyword.cloud_notm}} 的更多信息，请参阅 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 概述](../services/kmip_considerations.html)。
 
 ## 新增和更新的文档
 
@@ -73,7 +73,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 交付多专区云�
 * [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private 指南](../archiref/vcsicp/vcsicp-intro.html)
 * [vCenter Server 和 IBM Kubernetes 服务指南](../archiref/vcsiks/vcsiks-intro.html)
 * [VMware 和 Skate Advisor 概念车指南](../archiref/vcscar/vcscar-intro.html)
-* [VMware：Stock Trader 现代化之旅](../archiref/vcscontent/vcscontent-modjourney.html)
+* [VMware - Stock Trader 现代化之旅](../archiref/vcscontent/vcscontent-modjourney.html)
 
 其中一些参考体系结构文档仅提供英语版本。
 
@@ -81,6 +81,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 交付多专区云�
 
 用户界面已更新，并提供了以下增强功能：
 
-* 原先订购实例时，可在其中指定 {{site.data.keyword.baremetal_short_sing}} 的 CPU 型号和 RAM 设置的**定制**选项卡，现已根据服务器类型拆分为 **Skylake** 选项卡和 **Broadwell** 选项卡，以方便您选择服务器。
+* 原先订购实例时，可在其中指定 {{site.data.keyword.baremetal_short_sing}} 的 CPU 型号和 RAM 设置的**定制**选项卡，现已根据服务器类型拆分为 **Skylake** 和 **Broadwell** 选项卡，以帮助您选择服务器。
+* 裸机服务器配置的**预配置**选项不再可用。
 * 现在，**类型**列包含在**已部署的实例**页面上的 **vCenter Server 实例**表中，可用于识别 vCenter Server、vCenter Server with Hybridity Bundle 和 vCenter Limited Test Drive 实例。
 * 提供了各种错误消息和工具提示增强功能，以帮助您在用户界面上选择相应的设置。
