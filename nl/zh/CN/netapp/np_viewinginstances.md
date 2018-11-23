@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 查看 NetApp ONTAP Select 实例
 
@@ -165,7 +169,8 @@ lastupdated: "2018-09-27"
 
 通过 {{site.data.keyword.vmwaresolutions_short}} 控制台、VMware vSphere Web Client 或 NetApp 控制台来管理实例。
 
-**重要信息**：在实例摘要页面上单击 **vCenter 控制台**以转至 vSphere Web Client 并开始管理 ESXi 服务器之前，必须先登录到 {{site.data.keyword.CloudDataCent_notm}} 的 VPN 门户网站。请将鼠标悬停在 **vCenter 控制台**按钮上，并遵循指示信息以确保在访问 vSphere Web Client 之前满足所有需求并完成了必需的步骤。
+在实例摘要页面上单击 **vCenter 控制台**以转至 vSphere Web Client 并开始管理 ESXi 服务器之前，必须先登录到 {{site.data.keyword.CloudDataCent_notm}} 的 VPN 门户网站。请将鼠标悬停在 **vCenter 控制台**按钮上，并遵循指示信息以确保在访问 vSphere Web Client 之前满足所有需求并完成了必需的步骤。
+{:important}
 
 有关帮助您完成登录的指示信息的更多信息，请查看以下主题：
 

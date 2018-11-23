@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # NetApp ONTAP Select 概述
 
@@ -58,7 +62,8 @@ NetApp ONTAP Select 在 VMware 集群中运行，并对主机上的本地存储�
 
 NetApp ONTAP Select 实例中包含以下组件。
 
-**注**：标准化配置的可用性和定价可能会因选择用于部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+标准化配置的可用性和定价可能会因选择用于部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+{:note}
 
 ### 存储
 
@@ -74,7 +79,8 @@ NetApp ONTAP Select 实例中包含以下组件。
 * **高性能（大型）**- 高级许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 128 GB RAM / 每节点 22 个 3.8 TB SSD 驱动器容量 / 4 节点集群的有效容量 - 118 TB
 * **高容量** - 标准许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 64 GB RAM / 每节点 34 个 4 TB SATA 驱动器容量 / 4 节点集群的有效容量 - 190 TB
 
-**注**：3.8 TB SSD（固态磁盘）驱动器在数据中心内普遍可用后就会受到支持。
+3.8 TB SSD（固态磁盘）驱动器在数据中心内普遍可用后就会受到支持。
+{:note}
 
 ### 硬件
 
@@ -103,8 +109,8 @@ NetApp ONTAP Select 实例中包含以下组件。
 *  VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 *  支持和服务费用（每个节点一个许可证）
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。
-如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+{:important}
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回、除去组件或关闭组件电源
