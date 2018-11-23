@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -17,11 +17,11 @@ lastupdated: "2018-10-29"
 1. **升級 ESXi** - ESXi 升級完成之後，主機會結束維護模式，不過，除非下一步已完成，否則您無法將已連接邏輯交換器的 VM 移至主機。
 2. **升級 NSX VIB** - 升級 VOB 並將主機移出維護模式之後，您可以將已連接至邏輯交換器的 VM 移至主機。
 
-使用 _my.vmware.com_ 中的下載，透過更新 NSX Manager 來更新 NSX。因此，您需要一個帳戶來下載更新。如果您搭配使用 IBM Cloud 訂閱授權與您的 VCS 實例，將無法使用 **my.vmware.com** 帳戶來下載更新。因此，您需要[與 IBM 支援中心聯絡](../../vmonic/trbl_support.html)。
+使用 _my.vmware.com_ 中的下載，透過更新 NSX Manager 來更新 NSX。因此，您需要一個帳戶來下載更新。如果您搭配使用 {{site.data.keyword.cloud}} 訂閱授權與 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 實例，將無法使用 **my.vmware.com** 帳戶來下載更新項目。因此，您需要[與 IBM 支援中心聯絡](../../vmonic/trbl_support.html)。
 
-開始升級之前，請檢查版本注意事項，因為這些 NSX 版本注意事項會記載已知升級問題及暫行解決方法。使用版本注意事項，驗證 vCenter 符合 NSX 的新系統需求。
+開始升級之前，請檢查版本注意事項，因為這些 NSX 版本注意事項會記載已知升級問題及暫行解決方法。使用版本注意事項，驗證 vCenter 滿足 NSX 的新系統需求。
 
-如果您已安裝來自 VMware 夥伴的任何其他軟體，則請參閱夥伴文件，以取得相容性及升級詳細資料。如果您已部署 VCS 主要及次要實例，並且具有跨 vCenter NSX 環境，則請參閱版本注意事項，以取得正確的升級處理程序。
+如果您已安裝來自 VMware 夥伴的任何其他軟體，則請參閱夥伴文件，以取得相容性及升級詳細資料。如果您已部署 vCenter Server 主要實例及次要實例，且具有跨 vCenter NSX 環境，請參閱版本注意事項中的正確升級處理程序。
 
 在跨 vCenter NSX 環境中，會先更新「主要 NSX Manager」應用裝置，接著再更新所有次要 NNSX Manager 應用裝置。
 **不支援降級**，因此，請先備份 NSX Manager，再繼續升級，在 NSX Manager 備份期間，會備份所有 NSX Edge 配置、邏輯路由器及邊緣服務閘道。
@@ -63,5 +63,5 @@ lastupdated: "2018-10-29"
 
 ### 相關鏈結
 
-* [VMware HCX on IBM Cloud 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（展示）
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) 上的 VMware 解決方案（示範）

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-29"
 
 vCenter 具有稱為「主機設定檔」的特性。此特性會建立設定檔來擷取預先配置及已驗證的參照主機配置，並協助系統管理者管理叢集裡的主機配置。「主機設定檔」提供自動化且集中管理的機制，用於主機配置及配置法規遵循。「主機設定檔」可將配置視為受管理物件，其中包含要配置的參數型錄：網路、儲存空間、安全及其他主機層次參數。這些「主機設定檔」可以套用至個別主機、叢集，或與主機設定檔關聯的所有主機及叢集。
 
-因為部署原始叢集的 IC4VS 自動化已部署其他 VCS vSphere ESXi 主機，所以配置偏移會少於手動新增主機的方法。不過，自動化外部的系統管理者動作會讓主機配置不同。例如，新增了更多 NFS 儲存空間，或新增了額外的 VLAN。因此，使用「主機設定檔」根據現有主機來檢查此主機的法規遵循以驗證新主機的配置，是 IBM Cloud 內此工具的有效使用案例。
+由於部署原始叢集的 IC4VS 自動化已部署其他 VMware vCenter Server on  {{site.data.keyword.cloud}} vSphere ESXi 主機，因此配置偏移會少於手動新增主機的方法。不過，自動化外部的系統管理者動作會讓主機配置不同。例如，新增了更多 NFS 儲存空間，或新增了額外的 VLAN。因此，使用「主機設定檔」根據現有主機來檢查此主機的法規遵循以驗證新主機的配置，是 {{site.data.keyword.cloud_notm}} 內此工具的有效使用案例。
 
 若要將更多主機新增至 vCenter Server 叢集，請參閱[擴充及縮減 vCenter Server 實例的容量](../../vcenter/vc_addingremovingservers.html)。
 
@@ -52,7 +52,7 @@ vCenter 具有稱為「主機設定檔」的特性。此特性會建立設定檔
 2.	按一下**檢查主機設定檔法規遵循**圖示。
 3.	在**物件**標籤中，法規遵循狀態會更新為：_Compliant、Unknown 或 Non-compliant__。non-compliant 狀態指出設定檔與新主機之間發生探索到且特定的不一致。
 
-##	檢閱法規遵循失敗，並重新修補
+##	檢閱法規遵循失敗及補救
 
 1.	若要查看法規遵循失敗的其他詳細資料，請從法規遵循檢查所使用的**物件**標籤中選取**主機設定檔**。
 2.	若要查看法規遵循失敗之主機與「主機設定檔」間之不同參數的特定詳細資料，請按一下**監視**標籤，然後選取**法規遵循**視圖。
@@ -62,5 +62,5 @@ vCenter 具有稱為「主機設定檔」的特性。此特性會建立設定檔
 
 ### 相關鏈結
 
-* [VMware HCX on IBM Cloud 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（展示）
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) 上的 VMware 解決方案（示範）
