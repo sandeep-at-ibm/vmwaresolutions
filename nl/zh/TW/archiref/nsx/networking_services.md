@@ -24,7 +24,8 @@ lastupdated: "2018-10-29"
 
 雖然單一 ESG 可能就足以應付管理及客戶工作負載資料流量，但是分隔管理及客戶資料流量是一種設計決策，以期防止意外地錯誤配置管理 ESG。
 
-配置錯誤或停用管理 ESG 並不會讓 Cloud Foundation 或 vCenter Server 實例無法發揮作用，但會停用所有入口網站管理功能。{:note}
+配置錯誤或停用管理 ESG 並不會讓 Cloud Foundation 或 vCenter Server 實例無法發揮作用，但會停用所有入口網站管理功能。
+{:note}
 
 ## IBM 管理服務 NSX Edge
 
