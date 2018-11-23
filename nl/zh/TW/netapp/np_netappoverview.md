@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # NetApp ONTAP Select 概觀
 
@@ -57,13 +61,14 @@ NetApp ONTAP Select 是在 VMware 叢集裡執行，並將主機上的本端儲�
 
 NetApp ONTAP Select 實例中包含下列元件。
 
-**附註：**標準化配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+標準化配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+{:note}
 
 ### 儲存空間
 
 * 在**高效能（中型）**、**高效能（大型）**及**高容量**之間進行選擇
 * 具有緊急備用的 RAID 5
-* 兩個 1-TB SATA 磁碟機 ESXi OS - RAID 1
+* 兩個 1 TB 的 SATA 磁碟機 ESXi OS - RAID 1
 * 管理資料儲存庫 - 500 GB 用於管理 VM
 
 ### 預設配置
@@ -73,7 +78,8 @@ NetApp ONTAP Select 實例中包含下列元件。
 * **高效能（大型）**- 超值授權 / 雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/ 128 GB RAM / 每個節點有 22 個 3.8 TB SSD 磁碟機容量 / 4 節點叢集的有效容量 - 118 TB
 * **高容量** - 標準授權 / 雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/ 64 GB RAM / 每個節點有 34 個 4 TB SATA 磁碟機容量 / 4 節點叢集的有效容量 - 190 TB
 
-**附註：**當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至資料中心時就會予以支援。
+當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至資料中心時，就會予以支援。
+{:note}
 
 ### 硬體
 
@@ -102,7 +108,7 @@ NetApp ONTAP Select 實例中包含下列元件。
 *  VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 *  支援與服務費用（一個節點一份授權）
 
-**重要事項：**您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。
+您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更這些元件，則變更不會與主控台同步。{:important}
 
 **警告：**從 {{site.data.keyword.vmwaresolutions_short}} 主控台以外來管理您在訂購實例時安裝至 {{site.data.keyword.cloud_notm}} 帳戶的任何 {{site.data.keyword.vmwaresolutions_short}} 元件，會使您的環境變得不穩定。這些管理活動包括：
 *  新增、修改、退回、移除元件，或關閉元件電源

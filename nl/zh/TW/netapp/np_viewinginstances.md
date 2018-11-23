@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 檢視 NetApp ONTAP Select 實例
 
@@ -25,7 +29,7 @@ lastupdated: "2018-09-27"
 |項目        |說明       |  
 |:------------- |:--------------- |
 |名稱 |實例的名稱。|
-|版本         |實例的版本。|  
+|版本 |實例的版本。|  
 |位置|管理實例所在的資料中心。|
 |建立時間|建立實例的日期和時間。|   
 |狀態|實例的狀態。狀態可以具有下列其中一個值：
@@ -79,11 +83,11 @@ lastupdated: "2018-09-27"
 |PSC IP  |Platform Services Controller 的 IP 位址。|
 |PSC FQDN |PSC 的完整網域名稱。|
 |PSC ADMIN  |您可以用來存取 PSC Web 主控台的 VMware vCenter Single Sign-On 使用者名稱及密碼。|
-|PSC SSH  |您可以用來透過 SSH 連線存取 PSC VM 的使用者名稱及密碼。|
+|PSC SSH  |您可用來透過 SSH 連線存取 PSC VM 的使用者名稱及密碼。|
 |vCenter IP  |vCenter Server 的 IP 位址。|
 |vCenter FQDN  |vCenter Server 的完整網域名稱。|
 |vCenter ADMIN  |您可以用來使用 vSphere Web Client 登入 vCenter Server 的 VMware vCenter Single Sign-On 使用者名稱及密碼。|
-|vCenter SSH  |您可以用來透過 SSH 連線存取 vCenter Server VM 的使用者名稱及密碼。|
+|vCenter SSH  |您可用來透過 SSH 連線存取 vCenter Server VM 的使用者名稱及密碼。|
 
 ## 檢視 NetApp ONTAP Select 實例部署歷程的程序
 
@@ -101,7 +105,7 @@ lastupdated: "2018-09-27"
 ## 檢視 NetApp ONTAP Select 叢集
 
 1. 從左導覽窗格中，按一下**基礎架構**。
-2. 在**叢集**下，檢視 NetApp ONTAP Select 叢集的摘要。
+2. 在**叢集**下，檢視 NetApp ONTAP Select 叢集的相關摘要。
 
 	表 5. NetApp ONTAP Select 叢集項目
 
@@ -124,7 +128,7 @@ lastupdated: "2018-09-27"
 	   </tr>
 	   <tr>
 	      <td>有效儲存空間</td>
-	      <td>叢集裡 ESXi 伺服器的磁碟容量總計。</td>
+	      <td>叢集中的 ESXi 伺服器的磁碟容量總計。</td>
 	   </tr>
 	   <tr>
 	      <td>記憶體</td>
@@ -156,7 +160,7 @@ lastupdated: "2018-09-27"
 |項目        |說明       |  
 |:------------|:----------------- |
 |名稱 |ESXi 伺服器的名稱格式為 `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中：<br><br>`host_prefix` 是主機名稱字首、`n` 是伺服器的序列、`subdomain_label` 是子網域標籤，而 `root_domain` 是根網域名稱。|
-|版本         |ESXi 伺服器的版本。|
+|版本 |ESXi 伺服器的版本。|
 |認證|用來存取 ESXi 伺服器的使用者名稱和密碼。|
 |專用 IP |ESXi 伺服器的專用 IP 位址。|
 |狀態|ESXi 伺服器的狀態，可以是下列其中一個值：<ul><li>作用中：ESXi 伺服器已備妥可供使用。</li><li>正在刪除：正在刪除 ESXi 伺服器。</li></ul> |
@@ -165,7 +169,7 @@ lastupdated: "2018-09-27"
 
 從 {{site.data.keyword.vmwaresolutions_short}} 主控台、VMware vSphere Web Client 或 NetApp 主控台管理實例。
 
-**重要事項：**您必須先登入 {{site.data.keyword.CloudDataCent_notm}} 的 VPN 入口網站，才能在實例摘要頁面上按一下 **vCenter 主控台**，以移至 vSphere Web Client 並開始管理 ESXi 伺服器。將游標移至 **vCenter 主控台**按鈕上方，並遵循指示以確保您符合所有需求，並在存取 vSphere Web Client 之前完成必要的步驟。
+您必須先登入 {{site.data.keyword.CloudDataCent_notm}} 的 VPN 入口網站，才能在實例摘要頁面上按一下 **vCenter 主控台**，以移至 vSphere Web Client 並開始管理 ESXi 伺服器。將游標移至 **vCenter 主控台**按鈕上方，並遵循指示以確保您符合所有需求，並在存取 vSphere Web Client 之前完成必要的步驟。{:important}
 
 如需協助您完成登入指示的相關資訊，請檢閱下列主題：
 

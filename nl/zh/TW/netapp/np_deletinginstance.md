@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 刪除 NetApp ONTAP Select 實例
 
@@ -20,7 +24,8 @@ lastupdated: "2018-09-27"
 
 由於資源相依關係，當您刪除實例時，不會立即釋放實例中的元件。例如，在 {{site.data.keyword.cloud}} 基礎架構完整收回 ESXi 伺服器（發生於 {{site.data.keyword.cloud_notm}} 計費週期結束時）之前，無法刪除子網路及 VLAN。在計費週期（通常為 30 天）結束時，會收回子網路及 VLAN，並完成實例刪除。
 
-**注意：**將向您收取已刪除的實例到計費週期結束為止的費用。
+將針對已刪除的實例，向您收取到計費週期結束為止的費用。
+{:note}
 
 ## 從已部署的實例頁面刪除實例的程序
 
