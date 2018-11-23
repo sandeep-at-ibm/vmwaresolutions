@@ -16,9 +16,10 @@ lastupdated: "2018-10-29"
 
 {{site.data.keyword.vmwaresolutions_full}}、VMware vCenter Server 及 VMware Cloud Foundation 供應項目不是受管理服務。您負責配置、保護、管理及監視所有軟體元件。您具備對解決方案的完整管理存取權，因此擁有非常強大的能力和彈性，但需要跨各種領域的大量技術、管理及作業專門知識。在 {{site.data.keyword.cloud_notm}} 中管理 VMware 實例，需要與規劃內部部署實例相同的規劃及專門知識。VMware NSX 及 VMware vSAN 這類軟體定義的技術可大幅簡化實例管理的某些方面，但可能需要適當地管理及操作新的技能及工具。結合 {{site.data.keyword.cloud_notm}} 自動化 VMware 部署的能力、速度和可靠性，與適當的作業規劃和測試，可確保快速而成功地導覽至混合式雲端。
 
-請檢閱下列考量，以瞭解您在部署實例前後管理及操作實例的責任。
+請檢閱下列考量，以瞭解您在部署實例前後的實例管理及操作責任。
 
-以下並非完整清單。如需相關資訊，請參閱 [IBM 管理服務](../../services/managing_imi.html)。{:note}
+以下並非完整清單。如需相關資訊，請參閱 [IBM 管理服務](../../services/managing_imi.html)。
+{:note}
 
 ## IBM Cloud 帳戶存取
 
@@ -36,7 +37,7 @@ lastupdated: "2018-10-29"
 
 完成下列步驟，以管理對您 {{site.data.keyword.cloud_notm}} 網路及 VMware 管理元件的存取權，並規劃 {{site.data.keyword.cloud_notm}} 網路拓蹼。
 
-- 使用 [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 或 [{{site.data.keyword.cloud_notm}} Direct-Link 連線](https://www.ibm.com/cloud/direct-link)來存取實例管理端點。
+- 使用 [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 或 [{{site.data.keyword.cloud_notm}} DirectLink 連線](https://www.ibm.com/cloud/direct-link)來存取實例管理端點。
 - 設計您實例內的公用網路連線功能策略。您的選項包括：範例客戶 VMware NSX Edge Services Gateway (ESG)、閘道應用裝置（例如 Vyatta 和 FortiGate），以及在 {{site.data.keyword.cloud_notm}} 網路中或透過 DirectLink 存取的專屬網路上所部署的 Proxy 伺服器。
 - 規劃要在具有 [{{site.data.keyword.cloud_notm}} 可攜式 IP 位址](https://console.bluemix.net/docs/infrastructure/subnets/getting-started.html)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作負載，還是[在 NSX 邏輯交換器 (VXLAN) 上使用您自己的 IP 位址](../nsx/nsx_overview.html)來部署工作負載。請注意，使用 NSX 軟體定義網路 (SDN) 可讓您具有在 {{site.data.keyword.cloud_notm}} 中管理及保護工作負載網路的最大彈性。
 - 使用 NSX ESG、[IBM Cloud Vyatta](https://console.bluemix.net/catalog/infrastructure/virtual-router-appliance) 及 DirectLink 對等作業，來規劃與工作負載的連線功能（網址轉換、虛擬專用網路、遞送）。
@@ -91,7 +92,7 @@ lastupdated: "2018-10-29"
 請務必規劃並實作下列解決方案，以監視您的實例及實例元件。
 
 - 記載伺服器，包含所有實例元件的日誌轉遞或收集，以及足夠的日誌保留。
-- 警示基礎架構，包含配置 SMTP 伺服器及短訊服務 (SMS) 閘道（視需要）。
+- 警示基礎架構，包含配置 SMTP 伺服器及簡訊服務 (SMS) 閘道（視需要）。
 - 主動監視主機、磁碟機、管理軟體及網路。
 - vSAN 監視（適用時）。
 - 容量監視及規劃。您可以從 {{site.data.keyword.vmwaresolutions_short}} 主控台，在實例中[新增及移除叢集](../../vcenter/vc_addingviewingclusters.html)以及[新增及移除主機](../../vcenter/vc_addingremovingservers.html)。
@@ -113,12 +114,12 @@ lastupdated: "2018-10-29"
 
 除了容量規劃之外，也請完成下列動作，以確保您的儲存空間配置符合您的效能及可用性需求。
 
-- 儲存空間效能取決於各種因素，包括 RAID 配置及磁碟分段、網路配置、區塊大小、網路連接儲存空間的已配置 IOPS（每秒輸入/輸出作業）、儲存空間連接的 VM 硬體配置及方法、叢集處理及抄寫方法，以及儲存空間原則（例如加密、刪除重複資料及壓縮）的使用。規劃時間，以測試及調整配置來符合儲存空間效能需求。
+- 儲存空間效能取決於各種因素，包括 RAID 配置及磁碟分段、網路配置、區塊大小、網路連接儲存空間的已配置 IOPS（每秒輸入/輸出作業）、儲存空間連接的 VM 硬體配置及方法、叢集作業及抄寫方法，以及儲存空間原則（例如加密、刪除重複資料及壓縮）的使用。規劃時間，以測試及調整配置來符合儲存空間效能需求。
 - 檢閱 vSAN 儲存空間原則
   - RAID-1 相較於 RAID-5，提供更佳的效能，以及對於循序失敗的更短好發時間範圍，例如較短的重建時間。不過，RAID-5 的儲存空間額外負擔較少。
   - 相較於 RAID-5 的 4 部主機，RAID-6 提供對雙重失敗的防護，但最少需要 6 部主機。
 - 若要將更多儲存空間新增至 vSAN 叢集，您必須將新的主機新增至叢集，或改為新增「{{site.data.keyword.cloud_notm}} 耐久性」NFS 儲存空間。目前不支援將磁碟新增至現有主機。
-- 如果您將額外的「{{site.data.keyword.cloud_notm}} 耐久性」NFS 儲存空間裝載至叢集，請確定遵循架構指引，並使用 `SDDC-DPortGroup-NFS` 埠群組位址，將主機路徑配置到儲存空間。您必須將這些位址（而非主機本身）授權給儲存空間。如需相關資訊，請參閱[連接儲存空間基礎架構管理](../attached-storage/storage-infra-mgmt.html#vsphere-host-static-routing)。另請參閱 developerWorks 秘訣，它使用 IBM Spectrum Protect Plus 作為範例，顯示如何[將更多耐久性儲存空間新增至 VMware 叢集](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)。
+- 如果您將額外的「{{site.data.keyword.cloud_notm}} 耐久性」NFS 儲存空間裝載至叢集，請務必遵循架構指引，並使用 `SDDC-DPortGroup-NFS` 埠群組位址，配置連到儲存空間的主機路徑。您必須將這些位址（而非主機本身）授權給儲存空間。如需相關資訊，請參閱[連接儲存空間基礎架構管理](../attached-storage/storage-infra-mgmt.html#vsphere-host-static-routing)。另請參閱 developerWorks 秘訣，它使用 IBM Spectrum Protect Plus 作為範例，顯示如何[將更多耐久性儲存空間新增至 VMware 叢集](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)。
 
 ### 相關鏈結
 
