@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-10"
 
 ###	VCS 备份
 
-Veeam 备份软件是 IBM Cloud for VMware Solutions 的一部分，可使用 VMware 集群外部的 IBM Cloud 耐久性存储器选择性部署在 IBM Cloud 虚拟服务器实例 (VSI) 上。此软件的用途是备份此解决方案中的管理组件。
+Veeam 备份软件是 {{site.data.keyword.vmwaresolutions_full}} 的一部分，可使用 VMware 集群外部的 {{site.data.keyword.cloud_notm}} 耐久性存储器选择性部署在 {{site.data.keyword.cloud_notm}} 虚拟服务器实例 (VSI) 上。此软件的用途是备份此解决方案中的管理组件。
 
 ### NSX 备份
 
@@ -24,7 +24,7 @@ Veeam 备份软件是 IBM Cloud for VMware Solutions 的一部分，可使用 VM
 
 备份 ICP 部署至关重要，这样才能在发生故障时将系统复原到其正常运行状态。对于传统 VM 备份，存在一个症结：每个 ICP 主节点都运行 etcd，但 etcd 文档明确指出不要使用传统 VM 备份来对其进行复原。
 
-对于平台级别的 IBM Cloud Private，需要备份以下组件：
+对于平台级别的 {{site.data.keyword.cloud_notm}} Private，需要备份以下组件：
 
 -	**Etcd** — 用于存储 Kubernetes 资源以及 Calico 状态信息。
 -	**Docker 注册表** — 专用映像注册表，用于将容器映像文件存储在映像存储库中。
@@ -47,7 +47,7 @@ Veeam 备份软件是 IBM Cloud for VMware Solutions 的一部分，可使用 VM
 
 ### VCS 可扩展性
 
-部署初始主机后，用户能够在 IBM Cloud for VMware 门户网站中向外扩展计算容量。
+部署初始主机后，用户能够在 {{site.data.keyword.cloud_notm}} for VMware 门户网站中向外扩展计算容量。
 
 对环境的这种向外扩展操作采用下列三种方法中的一种方法：
 - 添加由单独 vCenter Server 管理的新站点。
@@ -55,7 +55,7 @@ Veeam 备份软件是 IBM Cloud for VMware Solutions 的一部分，可使用 VM
 - 向现有集群添加新主机。
 
 ####	多站点部署
-VMware on IBM Cloud 可以利用 IBM Cloud 遍布全球的数据中心和集成网络主干，支持部署并运行各种跨地理位置的用例，所用时间只是从头开始构建此类基础架构所需时间的零头。
+VMware on {{site.data.keyword.cloud_notm}} 可以利用 IBM Cloud 遍布全球的数据中心和集成网络主干，支持部署并运行各种跨地理位置的用例，所用时间只是从头开始构建此类基础架构所需时间的零头。
 
 ####	利用新集群向外扩展
 用户还可选择通过在控制台中创建新集群和订购主机（新主机会自动添加到新集群）来向外扩展计算容量。此选项将在环境中创建一个单独的集群，并使用户能够在物理和逻辑上将管理工作负载与应用程序工作负载相隔离，能够根据其他特征（例如，Microsoft SQL 数据库集群）来隔离工作负载，并且能够采用高可用性拓扑部署应用程序。
@@ -78,7 +78,7 @@ ICP 工作程序虚拟机节点将扩展为增加计算/应用程序：
 
 
 ###  IKS 扩展
-用户可以通过 IBM Cloud 门户网站来供应 IKS 环境，以扩展/利用容器环境。
+用户可以通过 {{site.data.keyword.cloud_notm}} 门户网站来供应 IKS 环境，以扩展/利用容器环境。
 
 可通过以下方式将应用程序部署到 IKS：
 - IKS 连接/服务在 CAM 中开发，然后发布到 ICP 目录。
@@ -88,7 +88,7 @@ ICP 工作程序虚拟机节点将扩展为增加计算/应用程序：
 
 ### 相关链接
 * [添加或除去集群节点](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/installing/modify_cluster.html)
-* [通过调整现有工作程序池的大小来添加工作程序节点](https://console.bluemix.net/docs/containers/cs_clusters.html#add_workers)
-* [如何备份和复原 IBM Cloud Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
-* [ICP 备份](https://github.com/ibm-cloud-architecture/icp-backup/)
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [通过调整现有工作程序池的大小来添加工作程序节点](../../../../containers/cs_clusters.html#resize_pool)
+* [如何备份和复原 {{site.data.keyword.cloud_notm}} Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
+* [ICP 备份 GitHub](https://github.com/ibm-cloud-architecture/icp-backup/)
+* [VCS Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-10-10"
 VCS 部署利用部署的 Microsoft Active Directory (AD) VSI 作为实例的 DNS 服务器。所有部署的组件（vCenter、PSC、NSX 和 ESXi 主机）都配置为指向作为其缺省 DNS 的 MS AD。
 
 ###	NTP 服务
-VCS 部署利用 IBM Cloud 基础架构 NTP 服务器。所有部署的组件都将配置为利用这些 NTP 服务器。使设计中的所有组件都利用相同的 NTP 服务器对于证书和 MS AD 认证正常运行至关重要。
+VCS 部署利用 {{site.data.keyword.cloud}} 基础架构 NTP 服务器。所有部署的组件都将配置为利用这些 NTP 服务器。使设计中的所有组件都利用相同的 NTP 服务器对于证书和 MS AD 认证正常运行至关重要。
 
 ## 联网
 
@@ -40,7 +40,7 @@ ICP 部署有 Kubernetes 的缺省 Calico 网络堆栈，用于提供集群内�
 
 ![使用 NSX-V 联网的 ICP](vcsicp-nsxv-networking.svg)
 
-有关更多信息，请参阅 [IBM Cloud VCS 联网参考体系结构](../vcsnsxt/vcsnsxt-intro.html)。
+有关更多信息，请参阅 [vCenter Server 联网指南](../vcsnsxt/vcsnsxt-intro.html)。
 
 ### NSX-T 联网
 
@@ -54,4 +54,4 @@ ICP 提供了一个选项，用于将 Calico 联网替换为 NSX-T 实例，从�
 
 ### 相关链接
 
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [VCS Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)

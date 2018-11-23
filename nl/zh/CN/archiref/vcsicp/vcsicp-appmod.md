@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -13,7 +13,6 @@ lastupdated: "2018-10-10"
 下图显示了 Acme Skateboards 将部署的应用程序现代化参考体系结构，在此系列文档中对该体系结构进行了深入描述。
 
 图 1. 体系结构概览图
-
 ![体系结构概览图](vcsicp-arch-overview.svg)
 
 此混合体系结构支持 Acme Skateboards 实现：
@@ -22,7 +21,7 @@ lastupdated: "2018-10-10"
 - 利用 Cloud Automation Manager (CAM) 来编写基础架构即代码 (IaC) 的脚本，以编写和编排通过 VM 和容器创建的服务，从而与其 DevOps 工具链及其 ITSM 解决方案集成。
 
 参考体系结构具有以下关键组件：
-- **内部部署虚拟化** - 这是当前托管 Acme Skateboards VM 的 VMware 集群。要现代化的正是当前托管该应用程序的这些 VM。此集群需要满足 [IBM Cloud vCenter Server with Hybridity Bundle](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) 体系结构的先决条件，才能运行 HCX。HCX 将内部部署网络扩展到 IBM Cloud 中，支持客户将 VM 迁移到在 IBM Cloud 上运行的 VMware vCenter Server on IBM Cloud (VCS) 实例中，并支持根据需要迁移回原来的位置。
+- **内部部署虚拟化** - 这是当前托管 Acme Skateboards VM 的 VMware 集群。要现代化的正是当前托管该应用程序的这些 VM。此集群需要满足 [VMware HCX on IBM Cloud 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)的先决条件，才能运行 HCX。HCX 将内部部署网络扩展到 IBM Cloud 中，支持客户将 VM 迁移到在 IBM Cloud 上运行的 VMware vCenter Server on IBM Cloud (VCS) 实例中，并支持根据需要迁移回原来的位置。
 
 - **IBM Cloud for VMware Solutions** - VCS 实例提供自动部署 VMware 软件定义的数据中心 (SDDC) 解决方案所需的基本 VMware 构建块，例如 vSphere、vCenter Server、NSX-V 和存储选项（包括 vSAN 或 IBM Cloud 耐久性存储器）。VMware 集群是已迁移 VM 的目标以及在 ICP 中托管的容器中某些现代化应用程序的目标。VCS 中的关键组件如下：
     - **NSX-V** - NSX-V 在 VCS 中提供网络虚拟化层，用于为 Acme Skateboards VM 提供网络覆盖。NSX-V 支持 BYOIP，并使工作负载网络与 IBM Cloud 网络相隔离。NSX-V 由 HCX 编程为用于创建 Acme Skateboards 将从内部部署扩展的网络。
@@ -55,4 +54,4 @@ VMware vCenter Server on IBM Cloud (VCS) 提供了灵活设计最适合客户机
 
 ## 相关链接
 
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [VCS Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)
