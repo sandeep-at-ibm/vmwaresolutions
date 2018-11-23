@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
 # Prüfung und Auswertung
 
-Wenn Sie Hosts, virtuelle Maschinen und virtuelle Appliances prüfen (scannen), werten Sie sie anhand von Baselines und Baselinegruppen aus, um ihre Konformitätsstufe zu ermitteln. Die Bestandsobjekte werden geprüft und die Ergebnisse ausgewertet, um zu ermitteln, wie sie den Baselines und Baselinegruppen entsprechen. Die Prüfergebnisse können anhand von Textsuche, Gruppenauswahl, Baselineauswahl und Konformitätsstatusauswahl gefiltert werden. Sie können die folgenden Prüfungen initiieren:
+Wenn Sie Hosts, virtuelle Maschinen (VMs) und virtuelle Einheiten scannen, bewerten Sie sie anhand von Baselines und Baselinegruppen, um deren Konformitätsstufe zu ermitteln. Die Bestandsobjekte werden geprüft und die Ergebnisse ausgewertet, um zu ermitteln, wie sie den Baselines und Baselinegruppen entsprechen. Die Prüfergebnisse können anhand von Textsuche, Gruppenauswahl, Baselineauswahl und Konformitätsstatusauswahl gefiltert werden. Sie können die folgenden Prüfungen initiieren:
 *	**Manuelles Initiieren einer Prüfung von vSphere ESXi-Hosts** - Sie können vSphere ESXi-Hosts im vSphere-Bestand anhand angehängter Baselines und Baselinegruppen prüfen.
-*	**Manuelles Initiieren einer Prüfung von virtuellen Maschinen und virtueller Appliances** - Sie können virtuelle Maschinen und virtuelle Appliances anhand angehängter Baselines und Baselinegruppen prüfen.
-*	**Manuelles Initiieren einer Prüfung eines Containerobjekts** - Sie können eine simultane Prüfung von Hosts, virtuellen Maschinen und virtuellen Appliances starten, indem Sie ein Containerobjekt prüfen, das ein Rechenzentrum oder ein Rechenzentrumsordner ist.
-*	**Planen einer Prüfung** - Sie können den vSphere Web Client so konfigurieren, dass virtuelle Maschinen, virtuelle Appliances und ESXi-Hosts zu bestimmten Zeiten oder in den gewünschten Abständen durchsucht werden.
+*	**Manuelles Initiieren einer Prüfung von virtuellen Maschinen und virtueller Appliances** - Sie können virtuelle Maschinen (VMs) und virtuelle Appliances anhand angehängter Baselines und Baselinegruppen prüfen.
+*	**Manuelles Initiieren einer Prüfung eines Containerobjekts** - Sie können eine simultane Prüfung von Hosts, virtuellen Maschinen (VMs) und virtuellen Appliances starten, indem Sie ein Containerobjekt prüfen, das ein Rechenzentrum oder ein Rechenzentrumsordner ist.
+*	**Planen einer Prüfung** - Sie können den vSphere Web Client so konfigurieren, dass virtuelle Maschinen (VMs), virtuelle Appliances und ESXi-Hosts zu bestimmten Zeiten oder in den gewünschten Abständen durchsucht werden.
 
 ## Prüfung von vSphere ESXi-Hosts manuell initiieren
 
@@ -26,7 +26,7 @@ Wenn Sie Hosts, virtuelle Maschinen und virtuelle Appliances prüfen (scannen), 
 
 ## Prüfung von virtuellen Maschinen und virtuellen Appliances manuell initiieren
 
-Sie können virtuelle Maschinen und virtuelle Appliances anhand angehängter Baselines und Baselinegruppen prüfen. Die virtuellen Maschinen und Appliances, die Sie auswählen, werden - je nach den von Ihnen ausgewählten Optionen - anhand der angehängten Baselines geprüft. Alle untergeordneten Objekte werden ebenfalls geprüft, d. h. je größer die virtuelle Infrastruktur ist und je weiter oben in der Objekthierarchie sie die Prüfung initiieren, umso länger dauert die Prüfung und umso genauer wird die Konformitätsansicht.
+Sie können virtuelle Maschinen (VMs) und virtuelle Appliances anhand angehängter Baselines und Baselinegruppen prüfen. Die VMs und Appliances, die Sie auswählen, werden - je nach den von Ihnen ausgewählten Optionen - anhand der angehängten Baselines geprüft. Alle untergeordneten Objekte werden ebenfalls geprüft, d. h. je größer die virtuelle Infrastruktur ist und je weiter oben in der Objekthierarchie sie die Prüfung initiieren, umso länger dauert die Prüfung und umso genauer wird die Konformitätsansicht.
 
 1.	Bei Verwendung des vSphere Web Client wählen Sie **Home** > **VMs und Vorlagen** aus.
 2.	Klicken Sie mit der rechten Maustaste auf eine _virtuelle Maschine_, eine _virtuelle Appliance_ oder einen _Ordner mit virtuellen Maschinen und Appliances_ und klicken Sie auf **Auf Updates prüfen**.
@@ -35,7 +35,7 @@ Sie können virtuelle Maschinen und virtuelle Appliances anhand angehängter Bas
 
 ##	Prüfung eines Containerobjekts manuell initiieren
 
-Sie können eine simultane Prüfung von Hosts, virtuellen Maschinen und virtuellen Appliances starten, indem Sie ein Containerobjekt prüfen, das ein Rechenzentrum oder ein Rechenzentrumsordner ist.
+Sie können eine simultane Prüfung von Hosts, VMs und virtuellen Appliances starten, indem Sie ein Containerobjekt prüfen, das ein Rechenzentrum oder ein Rechenzentrumsordner ist.
 1.	Bei Verwendung des vSphere Web Client wählen Sie **Home** > **VMs und Vorlagen** aus.
 2.	Klicken Sie mit der rechten Maustaste auf _Rechenzentrum_ oder _Rechenzentrumsordner_ und klicken Sie auf **Auf Updates prüfen**.
 3.	Wählen Sie die Update-Typen aus, auf die geprüft werden soll. Die Optionen sind _Upgrades virtueller Appliances, VM-Hardware-Upgrades_ und _VMware Tools-Upgrades_.
@@ -43,7 +43,7 @@ Sie können eine simultane Prüfung von Hosts, virtuellen Maschinen und virtuell
 
 ##	Prüfung planen
 
-Sie können den vSphere Web Client so konfigurieren, dass virtuelle Maschinen, virtuelle Appliances und vSphere ESXi-Hosts zu bestimmten Zeiten oder in den gewünschten Abständen geprüft werden.
+Sie können den vSphere Web Client so konfigurieren, dass VMs, virtuelle Appliances und vSphere ESXi-Hosts zu bestimmten Zeiten oder in den gewünschten Abständen geprüft werden.
 
 1.	Bei Verwendung des vSphere Web Client wählen Sie ein Objekt aus dem Bestand aus. Alle Objekte, die dem ausgewählten Objekt untergeordnet sind, werden ebenfalls geprüft.
 2.	Wählen Sie die Registerkarte **Überwachen** und klicken Sie auf **Task und Ereignisse**.
@@ -55,5 +55,5 @@ Sie können den vSphere Web Client so konfigurieren, dass virtuelle Maschinen, v
 
 ### Zugehörige Links
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

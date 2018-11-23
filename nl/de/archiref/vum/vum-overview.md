@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -38,7 +38,7 @@ Das Herunterladen von Upgrades, Host-Patches, Erweiterungen und zugehörigen Met
 * Benachrichtigungen, Alerts und Patchrückrufe für ESXi 5.5- und ESXi 6.x-Hosts.
 * Metadaten zu Upgrades für virtuelle Appliances.
 
-VUM unterstützt den Rückruf von Patches für Hosts, auf denen ESXi 5.0 oder höher ausgeführt wird. Ein Patch wird zurückgerufen, wenn bei dem freigegebenen Patch Probleme oder potenzielle Probleme auftreten. Nachdem Sie die Hosts in Ihrer VCS-Instanz geprüft haben, werden Sie von VUM benachrichtigt, wenn das zurückgerufene Patch auf einem bestimmten Host installiert wurde. Zurückgerufene Patches können nicht mit VUM auf Hosts installiert werden. VUM löscht außerdem alle zurückgerufenen Patches aus dem Patch-Repository. Nachdem ein Patch zur Behebung des Problems freigegeben wurde, lädt VUM das neue Patch in sein Patch-Repository herunter. Wenn Sie das problematische Patch bereits installiert haben, benachrichtigt VUM Sie darüber, dass ein Fix freigegeben wurde, und fordert Sie auf, das neue Patch anzuwenden.
+VUM unterstützt den Rückruf von Patches für Hosts, auf denen ESXi 5.0 oder höher ausgeführt wird. Ein Patch wird zurückgerufen, wenn bei dem freigegebenen Patch Probleme oder potenzielle Probleme auftreten. Nachdem Sie die Hosts in Ihrer VMware vCenter Server on {{site.data.keyword.cloud}}-Instanz geprüft haben, werden Sie von VUM benachrichtigt, wenn das zurückgerufene Patch auf einem bestimmten Host installiert wurde. Zurückgerufene Patches können nicht mit VUM auf Hosts installiert werden. VUM löscht außerdem alle zurückgerufenen Patches aus dem Patch-Repository. Nachdem ein Patch zur Behebung des Problems freigegeben wurde, lädt VUM das neue Patch in sein Patch-Repository herunter. Wenn Sie das problematische Patch bereits installiert haben, benachrichtigt VUM Sie darüber, dass ein Fix freigegeben wurde, und fordert Sie auf, das neue Patch anzuwenden.
 
 Die VUM-Clientschnittstelle bietet zwei Hauptansichten:
 *	Administrationsansicht
@@ -63,5 +63,5 @@ Sie rufen die Konformitätsansicht eines ausgewählten Bestandsobjekts auf, inde
 
 ### Zugehörige Links
 
-* VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
