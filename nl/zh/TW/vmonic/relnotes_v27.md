@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -27,9 +27,9 @@ lastupdated: "2018-10-29"
 
 ### IBM Cloud Private Hosted
 
-{{site.data.keyword.cloud_notm}} Private Hosted 服務不僅可用於部署在（或升級至）2.5 版或更新版本的 VMware vCenter Server 實例，現在還可用於 VMware vCenter Server with Hybridity Bundle 實例。您現在可以訂購內含該服務的 vCenter Server 實例或 vCenter Server with Hybridity Bundle 實例，也可以在起始部署之後，將該服務新增至現有的 vCenter Server 實例或 vCenter Server with Hybridity Bundle 實例。
+{{site.data.keyword.cloud_notm}} Private Hosted 服務不僅可用於部署在（或升級至）2.5 版或更新版本的 VMware vCenter Server 實例，現在還可用於 VMware vCenter Server with Hybridity Bundle 實例。您現在可以在訂購 vCenter Server 實例或 vCenter Server with Hybridity Bundle 實例時包括該服務。您也可以在起始部署之後，將該服務新增至現有 vCenter Server 實例或 vCenter Server with Hybridity Bundle 實例。
 
-如需相關資訊，請參閱：
+如需相關資訊，請參閱下列主題：
 * [{{site.data.keyword.cloud_notm}} Private Hosted 概觀](../services/icp_overview.html)
 * [訂購 {{site.data.keyword.cloud_notm}} Private Hosted](../services/icp_ordering.html)
 
@@ -47,19 +47,19 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 提供多區域雲�
 
 ### FortiGate Virtual Appliance on IBM Cloud
 
-Fortinet 已於 2018 年第三季變更其訂閱組合。如需相關資訊，請參閱[訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)。
+Fortinet 已於 2018 年第 3 季變更其訂閱組合。如需相關資訊，請參閱[訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)。
 
 對於部署在 2.7 版及更新版本 Cloud Foundation 實例和 vCenter Server 實例中的 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務，會佈建 FortiOS 6.0.3。
 
-此外，當您訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務時，可以選擇要讓 FortiGuard 透過公用網路還是透過具有 Proxy 伺服器的專用網路來套用授權和安全更新項目。如需相關資訊，請參閱[訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)。
+當您訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 時，可以選擇要 FortiGuard 透過公用網路還是透過具有 Proxy 伺服器的專用網路，來套用授權和安全更新項目。如需相關資訊，請參閱[訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)。
 
 ### Zerto on IBM Cloud 服務元件更新
 
-對於部署在 2.7 版及更新版本 Cloud Foundation 實例和 vCenter Server 實例中的 Zerto on {{site.data.keyword.cloud_notm}} 服務，會佈建 Zerto Virtual Replication 6.0 更新 3。如需相關資訊，請參閱 [Zerto on {{site.data.keyword.cloud_notm}} 概觀](../services/addingzertodr.html)。
+對於部署在 2.7 版及更新版本 Cloud Foundation 實例和 vCenter Server 實例中的 Zerto on {{site.data.keyword.cloud_notm}} 服務，會佈建 Zerto Virtual Replication 6.0 Update 3。如需相關資訊，請參閱 [Zerto on {{site.data.keyword.cloud_notm}} 概觀](../services/addingzertodr.html)。
 
 ### KMIP for VMware on IBM Cloud 與 IBM Cloud Activity Tracker 的整合
 
-除了 VMware 實例事件之外，現在 KMIP for VMware on {{site.data.keyword.cloud_notm}} 實例的事件（例如金鑰建立、金鑰刪除及金鑰存取）也會與 {{site.data.keyword.cloud_notm}} Activity Tracker 實例整合。如需 KMIP for WMware on {{site.data.keyword.cloud_notm}} 的相關資訊，請參閱 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 概觀](../services/kmip_considerations.html)。
+除了 VMware 實例事件之外，KMIP for VMware on {{site.data.keyword.cloud_notm}} 的事件（例如金鑰建立、金鑰刪除及金鑰存取）現在已與 {{site.data.keyword.cloud_notm}} Activity Tracker 實例整合。如需 KMIP for WMware on {{site.data.keyword.cloud_notm}} 的相關資訊，請參閱 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 概觀](../services/kmip_considerations.html)。
 
 ## 新文件與更新的文件
 
@@ -72,8 +72,8 @@ Fortinet 已於 2018 年第三季變更其訂閱組合。如需相關資訊，�
 * [vCenter Server 網路手冊](../archiref/vcsnsxt/vcsnsxt-intro.html)
 * [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private 手冊](../archiref/vcsicp/vcsicp-intro.html)
 * [vCenter Server 和 IBM Kubernetes 服務手冊](../archiref/vcsiks/vcsiks-intro.html)
-* [VMware 和 Skate Advisor 概念汽車手冊](../archiref/vcscar/vcscar-intro.html)
-* [VMware：Stock Trader 的現代化旅程](../archiref/vcscontent/vcscontent-modjourney.html)
+* [VMware 和 Skate Advisor 概念車手冊](../archiref/vcscar/vcscar-intro.html)
+* [VMware - Stock Trader 的現代化旅程](../archiref/vcscontent/vcscontent-modjourney.html)
 
 上述部分參照架構文件僅提供英文版。
 
@@ -81,6 +81,7 @@ Fortinet 已於 2018 年第三季變更其訂閱組合。如需相關資訊，�
 
 使用者介面已更新，並提供下列加強功能：
 
-* 當您訂購實例時，用來為 {{site.data.keyword.baremetal_short_sing}} 設定指定 CPU 型號和 RAM 的原始**自訂**標籤，會根據伺服器類型分成 **Skylake** 標籤和 **Broadwell** 標籤，以協助您選取伺服器。
+* 當您訂購實例時，供您指定 {{site.data.keyword.baremetal_short_sing}} 設定的 CPU 型號和 RAM 的**自訂**標籤，現在會根據伺服器類型而分成 **Skylake** 標籤和 **Broadwell** 標籤，以協助您進行伺服器選取。
+* Bare Metal Server 配置的**預先配置**選項已無法再使用。
 * 現在**類型**直欄內含在**已部署的實例**頁面上的 **vCenter Server 實例**表格中，用來識別 vCenter Server、vCenter Server with Hybridity Bundle 和 vCenter Limited Test Drive 實例。
 * 提供各種錯誤訊息及工具提示加強功能，以協助您在使用者介面上選取適當的設定。

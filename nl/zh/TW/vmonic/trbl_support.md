@@ -17,7 +17,7 @@ lastupdated: "2018-09-27"
 如果要從 {{site.data.keyword.vmwaresolutions_short}} 主控台與 IBM 支援中心聯絡，請完成下列步驟：
 
 1. 移至
-   https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
+   https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. 使用您的 **IBM ID** 帳戶登入主控台。
 3. 在橫幅左側，按一下**支援 > 新增問題單**。
 4. 在 {{site.data.keyword.slportal_short}} 頁面上，按一下**以 IBM ID 登入**，然後您就會自動登入到入口網站。
