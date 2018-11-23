@@ -65,7 +65,7 @@ Tabelle 2. NSX ESG-Schnittstellenkonfiguration
 |:--------- |:-------------- |:------------ |:----------- |
 | Öffentlicher Uplink | Uplink | **SDDC-DportGroup-External** | Öffentliche Internetschnittstelle |
 | Privater Uplink | Uplink | **SDDC-DportGroup-Mgmt** | Interne private Netzschnittstelle |
-| Intern | Intern | Workload-HA-VXLAN |  Interne Schnittstelle für HA-Paar-Heartbeat; Portgruppe an SDDC-Dswitch-Private **SDDC-Dswitch-Private** |
+| Intern | Intern | Workload-HA-VXLAN | Interne Schnittstelle für HA-Paar-Heartbeat; Portgruppe an SDDC-Dswitch-Private **SDDC-Dswitch-Private** |
 
 ### Teilnetze
 
