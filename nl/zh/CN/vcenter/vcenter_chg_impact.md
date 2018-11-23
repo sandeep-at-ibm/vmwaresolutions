@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -51,13 +51,16 @@ lastupdated: "2018-09-27"
 |更改使用 vSAN 的实例中的 vSAN 数据存储名称。|添加 ESXi 服务器可能会失败。<br><br>升级实例可能会失败。|重要|将 vSAN 数据存储名称更改回原始名称 **vsanDatastore**。
 |更改使用 NFS 的实例中的管理 NFS 数据存储名称。|添加 ESXi 服务器可能会失败。<br><br>升级实例可能会失败。|重要|将 NFS 管理数据存储名称更改回原始名称 **management-share**，然后在 ESXi 服务器上将 NFS 数据存储重新安装为只读。
 
-下表列出了 VC/PSC root 用户在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改 vCenter Server 资源时，可能会影响到的操作。
+下表列出了禁用对各种资源的 SSH 或 shell 访问时可能会受影响的操作。
 
-表 2. VC/PSC root 用户访问（本地）影响的操作
+表 2. 受 SSH 和 shell 访问影响的操作（本地）
 
 |尝试的更改|影响的操作|严重性|恢复方法|
 |:------------- |:------------- |:--------------|:--------------|
-|启用或禁用 shell 访问权。|对 PSC 和 vCenter Server 执行修补和更新可能会失败。|重要|不适用|
+|禁用对 vCenter Server 或 PSC 的 SSH 或 shell 访问。|对主实例和辅助实例进行配对可能会失败。|重要|不适用|
+|禁用对 ESXi 的 SSH 或 shell 访问。|在实例中添加和除去主机、服务和网络存储器可能会失败。|重要|不适用|
+
+如果选择禁用 SSH 或 shell 访问，那么应该在执行指示的操作之前，临时重新启用 SSH 或 shell 访问。
 
 ## vCenter Server 实例的管理子网
 

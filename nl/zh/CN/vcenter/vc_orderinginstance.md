@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -114,22 +114,11 @@ lastupdated: "2018-10-29"
 |双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 
-### 预配置
-
-选择**预配置**后，无法变更 CPU 或 RAM 设置。
-
-根据需求，选择裸机服务器配置：
-  * 小型（双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz / 128 GB RAM / 2 个驱动器）
-  * 中型（双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz / 256 GB RAM / 2 个驱动器）
-  * 大型（双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz / 512 GB RAM / 2 个驱动器）
-
 ### 裸机服务器的数量
 
-对于实例中的初始集群，可以按如下所示配置 ESXi 服务器数：
-* 如果选择的是 **Skylake** 或 **Broadwell**，那么可以配置的 ESXi 服务器数的范围为 2 到 20 个。
-* 如果选择的是**预配置**，那么可以配置的 ESXi 服务器数的范围为 2 到 10 个。
+对于实例中的初始集群，可以配置的 ESXi 服务器数范围为 2 到 20 个。所有 ESXi 服务器共享所设置的配置。 
 
-所有 ESXi 服务器共享所设置的配置。初始部署后，可以再添加四个集群。如果为 VMware vSAN 选择的是 **Skylake** 或 **Broadwell** 配置，那么初始集群和部署后集群都需要 4 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)。
+初始部署后，可以再添加四个集群。如果为 VMware vSAN 选择的是 **Skylake** 或 **Broadwell** 配置，那么初始集群和部署后集群都需要 4 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)。
 
 ## 存储设置
 
@@ -272,7 +261,6 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
     2. 选择裸机服务器配置。
        * 选择 **Skylake** 或 **Broadwell** 时，请指定 CPU 型号和 RAM 大小。
        * 选择的是 **SAP 认证**时，请选择 CPU 型号。
-       * 选择**预配置**时，请为配置选择**小型**、**中型**或**大型**。
     3. 指定 {{site.data.keyword.baremetal_short}} 数。如果计划将 vSAN 用作存储解决方案，那么至少需要 4 个 {{site.data.keyword.baremetal_short}}。  
 7. 填写存储配置。
   * 如果选择 **vSAN 存储器**，请指定容量和高速缓存磁盘的磁盘类型、磁盘数和 vSAN 许可证版本。如果需要更多存储器，请选中**高性能 Intel Optane** 框。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -47,7 +47,7 @@ lastupdated: "2018-10-29"
 
 ### 裸机服务器设置
 
-您可以选择 **Skylake**、**SAP 认证**、**Broadwell** 或**预配置**。
+您可以选择 **Skylake**、**SAP 认证**或 **Broadwell**。
 
 #### Skylake
 
@@ -82,22 +82,13 @@ lastupdated: "2018-10-29"
 |双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 
-#### 预配置
-
-对于**预配置**设置，可以根据需求选择**裸机服务器配置**：
-* 小型（双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz / 128 GB RAM / 2 个磁盘）
-* 中型（双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz / 256 GB RAM / 2 个磁盘）
-* 大型（双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz / 512 GB RAM / 2 个磁盘）
-
 #### 裸机服务器的数量
 
 集群至少需要两个 {{site.data.keyword.baremetal_short}}。
 
 对于在 V2.1 或更高版本中部署的 vCenter Server 实例，可以为一个集群最多添加 59 个 {{site.data.keyword.baremetal_short}}。一次可以添加 1 到 59 个 ESXi 服务器。
 
-对于在 V2.0 或更低版本中部署的 vCenter Server 实例，可以为一个集群最多添加 32 个 {{site.data.keyword.baremetal_short}}。一次可以添加的 {{site.data.keyword.baremetal_short}} 数量如下：
-* 对于**小型**、**中型**和**大型**裸机服务器配置，一次可以添加 1 到 10 个 ESXi 服务器。
-* 对于 **Skylake** 或 **Broadwell** 裸机服务器配置，一次可以添加 1 到 20 个 ESXi 服务器。
+对于在 V2.0 或更低版本中部署的 vCenter Server 实例，可以为一个集群最多添加 32 个 {{site.data.keyword.baremetal_short}}。可以一次向 **Skylake**、**SAP 认证**和 **Broadwell** 裸机服务器配置添加 1 到 20 个 ESXi 服务器。
 
 部署后，最多可以再创建四个集群。如果选择使用 VMware vSAN 存储器的 **Skylake** 或 **Broadwell** 裸机服务器配置，那么初始集群和部署后集群都需要 4 个服务器。
 
@@ -170,7 +161,6 @@ lastupdated: "2018-10-29"
 6. 填写裸机配置。
    * 如果选择的是 **Skylake** 或 **Broadwell**，请指定 **CPU 型号**、**RAM** 量和 **{{site.data.keyword.baremetal_short}} 数**。
    * 如果选择的是 **SAP 认证**，请指定 CPU 型号。
-   * 如果选择的是**预配置**，请指定**裸机服务器配置**和 **{{site.data.keyword.baremetal_short}} 数**。如果计划将 vSAN 用作存储解决方案，那么至少需要 4 个 {{site.data.keyword.baremetal_short}}。
 7. 填写存储配置。
   * 如果选择 **vSAN 存储器**，请指定容量和高速缓存磁盘的磁盘类型、磁盘数和 vSAN 许可证版本。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
   * 如果选择 **NFS 存储器**，并且要向所有文件共享添加和配置相同设置，请指定**共享数**、**大小**和**性能**。

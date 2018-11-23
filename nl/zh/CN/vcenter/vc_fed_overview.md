@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # VMware Federal on IBM Cloud 概述
 
@@ -14,7 +18,8 @@ lastupdated: "2018-10-29"
 
 有关 vCenter Server on {{site.data.keyword.cloud_notm}} 和 vCenter Server 体系结构的更多信息，请参阅 [vCenter Server 概述](vc_vcenterserveroverview.html)。
 
-**注意**：VMware Federal on {{site.data.keyword.cloud_notm}} 只是 vCenter Server 产品的一部分。不支持多站点配置、预配置的 {{site.data.keyword.cloud_notm}} 裸机服务器、自带许可证以及用于订购附加组件服务的选项。
+VMware Federal on {{site.data.keyword.cloud_notm}} 只是 vCenter Server 产品的一部分。不支持多站点配置、自带许可证以及用于订购附加组件服务的选项。
+{:note}
 
 ## VMware Federal on IBM Cloud 实例的技术规范
 
@@ -29,7 +34,8 @@ lastupdated: "2018-10-29"
 
 对于 NFS 存储配置，建议的 {{site.data.keyword.baremetal_short}} 数设置为缺省值 3。
 
-**注**：如果选择 vSAN 存储器，那么配置需要 4 个 {{site.data.keyword.baremetal_short}}。
+如果选择 vSAN 存储器，那么配置需要 4 个 {{site.data.keyword.baremetal_short}}。
+{:note}
 
 ### 联网
 
@@ -39,10 +45,12 @@ lastupdated: "2018-10-29"
 *  两个 VMware NSX Edge 服务网关：
   * 用于出站 HTTPS 管理流量的安全管理服务 VMware NSX Edge 服务网关 (ESG)，由 IBM 部署为管理联网拓扑的一部分。IBM 管理虚拟机使用此 ESG 与自动化相关的特定外部 IBM 管理组件进行通信。有关更多信息，请参阅[配置网络以使用客户管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
-    **重要信息**：此 ESG 对您不可访问，因此您无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server 实例。此外，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信将导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
+    您无法访问此 ESG，也无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server 实例。此外，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信将导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
+{:important}
   * 用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX Edge 服务网关，由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)。
 
-  **注**：在确保已部署 VMware 实例安全的操作过程中，会除去用于出站 HTTPS 管理流量的 VMware NSX Edge 服务网关 (ESG)。有关更多信息，请参阅[确保 VMware Federal 实例安全](vc_fed_securinginstance.html)。
+  在确保已部署 VMware 实例安全的操作过程中，会除去用于出站 HTTPS 管理流量的 VMware NSX Edge 服务网关 (ESG)。有关更多信息，请参阅[确保 VMware Federal 实例安全](vc_fed_securinginstance.html)。
+  {:note}
 
 ### 虚拟服务器实例
 
@@ -94,8 +102,8 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 * 一个 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。
-如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，这些更改不会与控制台同步。
+您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，这些更改不会与控制台同步。
+{:important}
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时已安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件

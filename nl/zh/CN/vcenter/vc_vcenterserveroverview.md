@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -63,21 +63,15 @@ vCenter Server 实例中包含以下组件。
 ### 裸机服务器
 
 可以使用下列其中一个配置来订购三个或更多 {{site.data.keyword.baremetal_short}}：
-* **Skylake** 或 **Broadwell**：具有所选 CPU 型号和 RAM 大小的 {{site.data.keyword.baremetal_short}}。  
-  * 2 个 Intel Skylake 代 CPU（Intel Xeon 4100/5100/6100 系列）
-  * 2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
-
-     如果计划使用 vSAN 存储器，那么配置需要 4 个 {{site.data.keyword.baremetal_short}}。
-     {:note}
+* **Skylake**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Skylake 代服务器（Intel Xeon 4100/5100/6100 系列）。  
 * **SAP 认证**：具有所选 CPU 型号的 {{site.data.keyword.baremetal_short}}。
   * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 192 GB RAM
   * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 384 GB RAM
   * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 768 GB RAM
-* **预配置**：2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
-  * **小型**（双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz / 128 GB RAM / 2 个磁盘）
-  * **中型**（双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz / 256 GB RAM / 2 个磁盘）
-  * **大型**（双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz / 512 GB RAM / 2 个磁盘）
-
+* **Broadwell**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Broadwell 代服务器（Intel Xeon E5-2600 V4 系列）。  
+     如果计划使用 vSAN 存储器，那么配置需要 4 个 {{site.data.keyword.baremetal_short}}。
+     {:note}
+     
 ### 联网
 
 订购了以下联网组件：

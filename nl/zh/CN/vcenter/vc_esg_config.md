@@ -18,7 +18,7 @@ lastupdated: "2018-10-29"
 
 VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟化，并提供多种联网服务，例如交换机、路由和防火墙。有关 NSX 的更多信息，请参阅 [NSX 概述](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}。
 
-作为 vCenter Server 实例订购过程的一部分，将代表您完成以下操作：
+作为 vCenter Server 实例订购过程的一部分，将以您的名义完成以下操作：
 * 订购专用客户子网供 VM（虚拟机）用于访问 {{site.data.keyword.cloud}} 基础架构专用网络。
 * 订购公用客户子网以允许 VM 访问因特网。
 * 在 vCenter Server 实例中部署和配置 NSX。
@@ -61,7 +61,7 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
 
 ## 确定客户子网详细信息的过程
 
-**customer-nsx-edge** 边缘旨在供您自己使用，因此您可以对其进行修改，以定义更多 NAT 规则用于入站或出站流量。这些规则必须仅使用代表您订购的公用或专用客户子网上的 IP 地址。
+**customer-nsx-edge** 边缘旨在供您自己使用，因此您可以对其进行修改，以定义更多 NAT 规则用于入站或出站流量。这些规则必须仅使用以您的名义订购的公用或专用客户子网上的 IP 地址。
 
 要确定客户子网的详细信息，以便可以使用订购的 IP 地址，请在 VMware vSphere Web Client 中完成以下步骤：
 

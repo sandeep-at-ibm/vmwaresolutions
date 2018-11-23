@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 订购 VMware Federal 实例
 
 要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware Federal 实例。VMware Federal 实例可帮助将打开的管理连接断开连接并确保已部署实例的安全。
 
-**注**：目前仅 vCenter Server 实例支持 VMware Federal on {{site.data.keyword.cloud}}。
+目前仅 vCenter Server 实例支持 VMware Federal on {{site.data.keyword.cloud}}。
+{:note}
 
 ## 订购 VMware Federal 实例的需求
 
@@ -32,7 +37,8 @@ lastupdated: "2018-10-29"
   |标准 ESXi 服务器名称| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 服务器的序列。最大长度为 50 个字符。|  
   |PSC FQDN|`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大长度为 50 个字符。|
 
-**重要信息**：不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。
+不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。
+{:important}
 
 ## 系统设置
 
@@ -66,7 +72,7 @@ lastupdated: "2018-10-29"
 
 ## 裸机服务器设置
 
-裸机设置基于您选择的数据中心以及裸机服务器配置。目前不支持用于选择预配置的配置的选项。
+裸机设置基于您选择的数据中心以及裸机服务器配置。
 
 ### 数据中心位置
 
@@ -120,7 +126,8 @@ lastupdated: "2018-10-29"
 
 选择 **NFS 存储器**时，可以为实例添加文件级别的共享存储器，其中所有共享使用相同的设置，也可以对每个文件共享指定不同的配置设置。请指定以下 NFS 选项：
 
-**注**：文件共享数必须在范围 1 到 32 之间。
+文件共享数必须在范围 1 到 32 之间。
+{:note}
 
 * **分别配置共享**：选择此项以对每个文件共享指定不同的配置设置。
 * **共享数**：对每个文件共享使用相同的配置设置时，指定要添加的 NFS 共享存储器的文件共享数。
@@ -162,7 +169,8 @@ lastupdated: "2018-10-29"
 * 最后一个字符串只能包含字母字符。
 * 最后一个字符串的长度必须在 2 到 24 个字符范围内。
 
-**注**：主机和 VM 的标准域名 (FQDN) 的最大长度为 50 个字符。域名必须符合此最大长度。
+主机和 VM 的标准域名 (FQDN) 的最大长度为 50 个字符。域名必须符合此最大长度。
+{:note}
 
 ### DNS 配置
 
@@ -171,7 +179,8 @@ lastupdated: "2018-10-29"
 * **一个用于 Active Directory/DNS 的公共 Windows VSI**：一个用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server VSI，充当在其中注册主机和虚拟机的实例的 DNS，已部署并且可进行查找。
 * **管理集群上两个高可用性专用 Windows Server VM**：对于 V2.3 和未来发行版，会部署两个 Microsoft Windows 虚拟机，以帮助增强安全性和稳健性。
 
-**重要信息**：如果将实例配置为使用两个 Microsoft Windows 虚拟机，那么必须提供两个 Microsoft Windows Server 2012 R2 许可证。使用 Microsoft Windows Server 2012 R2 Standard Edition 许可证和/或 Microsoft Windows Server 2012 R2 Datacenter Edition 许可证。
+如果将实例配置为使用两个 Microsoft Windows 虚拟机，那么必须提供两个 Microsoft Windows Server 2012 R2 许可证。使用 Microsoft Windows Server 2012 R2 Standard Edition 许可证和/或 Microsoft Windows Server 2012 R2 Datacenter Edition 许可证。
+{:important}
 
 目前，每个许可证只能分配给一个物理服务器，并且最多包含两个物理处理器。通过使用一个 Standard Edition 许可证，每个双处理器服务器可以运行两个虚拟化的 Microsoft Windows 虚拟机。因此，需要两个许可证，因为两个 Microsoft Windows 虚拟机会部署在两个不同的主机中。
 
@@ -218,8 +227,8 @@ lastupdated: "2018-10-29"
 
 查看、管理订购的 VMware Federal 实例或确保其安全。
 
-**重要信息**：您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。
-如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
+{:important}
 
 **注意**：在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件
