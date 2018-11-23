@@ -62,7 +62,8 @@ IOPS 的範圍是從 100 到 48,000，可使用範圍從 20 GB - 12 TB 的儲存
 
 耐久性提供三種 IOPS 效能層級，以支援不同的應用程式需求。
 
-在佈建 NFS 共用之後，可以調整其大小或重新配置，以容許更多或更少 IOPS。{:note}
+在佈建 NFS 共用之後，可以調整其大小或重新配置，以容許更多或更少 IOPS。
+{:note}
 
 如需詳細的 IOPS 選項，請參閱[訂購 vCenter Server 實例](../../vcenter/vc_orderinginstance.html)中的_儲存空間設定_ 一節。
 
