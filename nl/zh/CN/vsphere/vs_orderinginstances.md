@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -75,7 +75,7 @@ lastupdated: "2018-10-29"
 ### 许可选项
 
 可以选择以下选项来对所选 VMware 组件进行许可：
-* **购买时包含许可证**：选择此项时，系统将代表您为 VMware 组件购买新许可证。将生成组合 VMware 许可证以匹配订单的集群大小。
+* **购买时包含许可证**：选择此项时，系统将以您的名义为 VMware 组件购买新许可证。将生成组合 VMware 许可证以匹配订单的集群大小。
 * **我将提供许可证**：在这种情况下，将对 VMware 组件使用您自己的许可证。
 
 如果选择购买任何许可证（vSphere Enterprise Plus 和 vCenter Server 除外），并且订购了多个 ESXi 服务器，那么系统会自动代表您开具 {{site.data.keyword.cloud_notm}} 凭单以组合许可证密钥。您负责跟踪凭单以确保仅使用 DevOps 团队生成的许可证密钥。
@@ -89,8 +89,11 @@ lastupdated: "2018-10-29"
 
 选择要托管集群的 {{site.data.keyword.CloudDataCent_notm}}。
 
-如果选择的是 vSAN 组件，那么位置列表将按 SSD 可用性进行过滤。
-{:note}
+**注：**
+* 如果选择的是 vSAN 组件，那么位置列表将按 SSD 可用性进行过滤。
+
+* FRA05 数据中心不支持 Broadwell 裸机服务器。
+* LON05 数据中心不支持 SAP 认证或 Broadwell 裸机服务器。
 
 ### Skylake
 
