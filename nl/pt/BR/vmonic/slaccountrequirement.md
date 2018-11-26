@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -23,7 +23,7 @@ A conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) era co
 
 A conta de infraestrutura do {{site.data.keyword.cloud_notm}} que você está usando deve ter determinadas permissões para poder pedir os componentes em suas instâncias e executar operações em seu nome. Os requisitos de permissão são aplicáveis a todos os tipos de instâncias e serviços que você está pedindo do console do {{site.data.keyword.vmwaresolutions_short}}.
 
-Os usuários autorizados podem verificar e atualizar as permissões para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} no {{site.data.keyword.slportal}}. Para obter mais informações, veja _Editando as permissões do portal do cliente de um usuário_ em [Gerenciando um perfil do usuário](../../../customer-portal/cpmanuserprof.html){:new_window}.
+Os usuários autorizados podem verificar e atualizar as permissões para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} no {{site.data.keyword.slportal}}. Para obter mais informações, consulte [Editando permissões do portal do cliente de um usuário](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
 
 Tabela 1. Permissões necessárias para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}
 
@@ -47,7 +47,7 @@ Tabela 1. Permissões necessárias para a conta de infraestrutura do {{site.data
 
 ## Ampliação da VLAN para contas clássicas (não VRF)
 
-Se você está usando uma conta de infraestrutura clássica (não VRF) do {{site.data.keyword.cloud_notm}}, o VLAN Spanning deve ser ativado. Se a ampliação da VLAN não estiver ativada para contas clássicas, os vários componentes do ambiente de virtualização do VMware poderão não ser capazes de se comunicar entre si. Para ativar o VLAN Spanning em sua conta de infraestrutura do {{site.data.keyword.cloud_notm}}, veja [Ativar ou desativar o VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+Se você está usando uma conta de infraestrutura clássica (não VRF) do {{site.data.keyword.cloud_notm}}, o VLAN Spanning deve ser ativado. Se a ampliação da VLAN não estiver ativada para contas clássicas, os vários componentes do ambiente de virtualização do VMware poderão não ser capazes de se comunicar entre si. Para permitir a ampliação da VLAN em sua conta de infraestrutura do {{site.data.keyword.cloud_notm}}, consulte [Ampliação da VLAN](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ### Links relacionados
 

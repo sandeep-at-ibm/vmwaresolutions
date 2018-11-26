@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-09-28"
 ## Visualizando notificações
 
 1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Notificações** na área de janela de navegação esquerda.
-2. Na tabela **Histórico de Notificação**, visualize o resumo sobre todas as notificações.
+2. Visualize o resumo sobre todas as notificações.
 
    Tabela 1. Histórico de Notificação
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -56,7 +56,7 @@ Tabela 2. Descrições de ação e funções necessárias
 
 É possível incluir novos usuários na conta do {{site.data.keyword.cloud_notm}} para que esses usuários possam compartilhar os serviços e os recursos que são provisionados para a conta. Para obter mais informações, veja [Convidando usuários para acessar serviços e recursos](../vmonic/iamuserinvite.html).
 
-Também é possível gerenciar o acesso para usuários existentes, incluindo a modificação de acesso existente, a designação de novo acesso e a revisão de acesso designado. Para gerenciar o acesso para usuários, deve-se ser o proprietário da conta ou ter a função de gerenciamento de plataforma **Administrador**. Para obter mais informações, veja [Gerenciando acesso ao IAM](../../../iam/mngiam.html).
+Também é possível gerenciar o acesso para usuários existentes, incluindo a modificação de acesso existente, a designação de novo acesso e a revisão de acesso designado. Para gerenciar o acesso para usuários, deve-se ser o proprietário da conta ou ter a função de gerenciamento de plataforma **Administrador**. Para obter mais informações, consulte [Gerenciando o acesso a recursos](../../../iam/mngiam.html).
 
 ## Migrando instâncias existentes para contas do IBM Cloud
 

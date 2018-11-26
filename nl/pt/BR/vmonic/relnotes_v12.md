@@ -22,7 +22,7 @@ O {{site.data.keyword.vmwaresolutions_full}} é fornecido como uma solução de 
 
 Para obter mais informações, veja os tópicos a seguir:
 * [Iniciar](../index.html)
-* [Resolução de problemas para acessar o Bluemix](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html){:new_window}
+* [Resolução de problemas para acessar o Bluemix](../../../account/ts_accessing.html){:new_window}
 
 ## Recuperação de desastre Zerto
 
