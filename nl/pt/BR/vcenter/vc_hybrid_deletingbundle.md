@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -23,9 +23,12 @@ Fazer downgrade de sua licença pode fazer com que a instância do vCenter Serve
 
 Revise as considerações a seguir antes de remover o Hybridity Bundle de um ambiente multisite:
 
-* Deve-se aplicar licenças BYOL a todas as implementações multisite antes de remover as licenças de aluguel.
-* Deve-se combinar licenças NSX e ter capacidade suficiente para usar em todas as implementações multisite.
+* Deve-se aplicar licenças BYOL a todas as implementações multisite antes de remover licenças de aluguel.
+* Deve-se combinar licenças do VMware NSX e ter capacidade suficiente para usar em todas as implementações multisite.
 * Deve-se criar um único chamado de suporte para remover o Hybridity Bundle de todas as implementações multisite.
+
+Ao remover o Hybridity Bundle de um ambiente multisite, licenças BYOL são aplicadas. Para todos os sites de uma configuração multisite, a licença NSX é revertida automaticamente para a menor edição de licença entre todos os sites. Deve-se assegurar que as edições de licença sejam consistentes em todos os sites na configuração multisite.
+{:note}
 
 ## Antes de remover o Hybridity Bundle
 
@@ -48,7 +51,9 @@ Verifique os requisitos a seguir antes de remover o Hybridity Bundle:
    3. Clique no ícone **Incluir** e digite a chave de licença. Clique em **Avançar**.
    4. Digite o nome da licença e clique em **Avançar**. Clique em **Concluir** para incluir a licença.
    5. Selecione a nova chave de licença.
-   6. Anote as chaves de licença completas da licença aplicada e da licença substituída. Deve-se ter os detalhes da licença disponíveis para uso posterior neste procedimento.
+   6. Anote as chaves de licença completas da licença aplicada e da licença substituída.
+
+   Deve-se ter os detalhes da licença disponíveis para uso posterior neste procedimento.
    {:important}
    7. Clique em **OK** para designar a licença.
 5. Conclua as etapas a seguir para instalar um BYOL do VMware vSAN:
@@ -59,6 +64,7 @@ Verifique os requisitos a seguir antes de remover o Hybridity Bundle:
     3. Digite o nome da licença e clique em **Avançar**. Clique em **Concluir** para incluir a licença.
     4. Selecione a nova chave de licença.
     5. Anote o nome do cluster e as chaves de licença completas da licença que é aplicada e da licença que é substituída.
+
     Deve-se ter os detalhes da licença disponíveis para uso posterior neste procedimento.
     {:important}
     6. Clique em **OK** para designar a licença.
@@ -68,8 +74,11 @@ Verifique os requisitos a seguir antes de remover o Hybridity Bundle:
    3. Clique no ícone **Incluir** e digite a chave de licença. Clique em **Avançar**.
    4. Digite o nome da licença e clique em **Avançar**. Clique em **Concluir** para incluir a licença.
    5. Selecione a nova chave de licença.
-   6. Anote as chaves de licença completas da licença aplicada e da licença substituída. Deve-se ter os detalhes da licença disponíveis para uso posterior neste procedimento.
+   6. Anote as chaves de licença completas da licença aplicada e da licença substituída.
+
+   Deve-se ter os detalhes da licença disponíveis para uso posterior neste procedimento.
    {:important}
+
    7. Clique em **OK** para designar a licença.
 7. Opcionalmente, conclua as etapas a seguir para instalar um BYOL do VMware vSphere Enterprise Plus:
   1. Clique na guia **Hosts**.
@@ -79,8 +88,10 @@ Verifique os requisitos a seguir antes de remover o Hybridity Bundle:
     3. Digite o nome da licença e clique em **Avançar**. Clique em **Concluir** para incluir a licença.
     4. Selecione a nova chave de licença.
     5. Anote o nome do cluster e as chaves de licença completas da licença que é aplicada e da licença que é substituída.
+
     Deve-se ter os detalhes da licença disponíveis para uso posterior neste procedimento. Se as chaves de licença não forem iguais em todos os clusters, assegure-se de anotar o nome do cluster associado a cada chave de licença.
     {:important}
+
     6. Clique em **OK** para designar a licença.
 8. Remova as licenças de aluguel.
    1. Clique na guia **Licenças**.
