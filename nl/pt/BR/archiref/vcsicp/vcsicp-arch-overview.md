@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -32,13 +32,12 @@ No diagrama, o CAM cria logicamente conexões em nuvem para os ambientes de vCen
 
 O ICP pode ser implementado com os componentes NSX-V ou NSX-T. O ICP com NSX-V ativa as máquinas virtuais do ICP para serem executadas na rede VXLAN e utilizarem a rede interna Calico do Kubernetes.
 
-O ICP com o NSX-T permite que os usuários controlem e configurem a rede, a sub-rede, as políticas da UI central (NSX-T Manager). Visite a [Arquitetura de referência do IBM Cloud VCS Networking](../vcsnsxt/vcsnsxt-intro.html) para obter as diferenças entre o NSX-V e o NSX-T.
+O ICP com o NSX-T permite que os usuários controlem e configurem a rede, a sub-rede, as políticas da UI central (NSX-T Manager). Consulte o [Guia de rede do vCenter Server](../vcsnsxt/vcsnsxt-intro.html) para ver as diferenças entre NSX-V e NSX-T.
 
 ## Plataforma de gerenciamento de nuvem na pré-mise
 
 Figura 2. Gerenciamento de nuvem por meio do lado no local
-
-![On-premise - cloud management](vcsicp-onprem-cloudmgt.svg)
+![Gerenciamento de nuvem no local](vcsicp-onprem-cloudmgt.svg)
 
 O diagrama acima representa o ICP e o CAM implementados na infraestrutura no local, com conexões ao vCenter e ao IKS implementados no IBM Cloud. Os usuários são capazes de implementar máquinas virtuais e contêineres no local, máquinas virtuais na instância do vCenter Server e contêineres no cluster do IKS.
 
@@ -48,4 +47,4 @@ No diagrama, o CAM cria logicamente conexões em nuvem para os ambientes de vCen
 
 ### Links relacionados
 
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Visão geral do VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
