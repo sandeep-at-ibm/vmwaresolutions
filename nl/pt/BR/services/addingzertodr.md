@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -23,7 +23,8 @@ Esse serviço está disponível somente para instâncias que são implementadas 
 
 Os componentes a seguir são pedidos e incluídos no serviço Zerto on {{site.data.keyword.cloud_notm}}.
 
-**Nota:** os componentes do Zerto Virtual Manager são implementados somente no cluster padrão.
+Os componentes do Zerto Virtual Replication Appliance (VRA) são implementados apenas no cluster padrão.
+{:note}
 
 ### VSIs
 

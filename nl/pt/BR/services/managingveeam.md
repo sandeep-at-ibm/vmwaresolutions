@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -50,7 +50,7 @@ Se o serviço Veeam estiver instalado em uma instância com rede pública e priv
 
 ### Para instâncias implementadas somente com rede privada
 
-Se o serviço Veeam estiver instalado em uma instância somente com rede privada, porque a máquina virtual (VM) do Veeam está configurada sem acesso à rede pública, não será possível verificar nem fazer download de atualizações usando o próprio software Veeam. Em vez disso, deve-se fazer download das atualizações por meio do website do Veeam, transferi-las para a VM do Veeam e, em seguida, instalá-las.
+Se o serviço Veeam estiver instalado em uma instância apenas com rede privada, porque o Veeam VSI está configurado sem acesso à rede pública, não será possível procurar ou fazer download de atualizações usando o próprio software Veeam. Em vez disso, deve-se fazer download das atualizações por meio do website do Veeam, transferi-las para a VM do Veeam e, em seguida, instalá-las.
 
 ## Atualizando Licenças de Veeam
 
