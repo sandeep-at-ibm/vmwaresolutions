@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -42,9 +42,11 @@ Tabela 1. Disponível {{site.data.keyword.CloudDataCents_notm}} para clusters do
 | DAL13 | Dallas | NA Sul |
 | FRA02 | Frankfurt | Europa |
 | FRA04 | Frankfurt | Europa |
+| FRA05 | Frankfurt | Europa |
 | HKG02 | Hong Kong | Ásia Pacífico |
 | LON02 | Londres | Europa |
 | LON04 | Londres | Europa |
+| LON05 | Londres | Europa |
 | LON06 | Londres | Europa |
 | MEL01 | Melbourne | Ásia Pacífico |
 | MEX01 | Querétaro | NA Sul |
