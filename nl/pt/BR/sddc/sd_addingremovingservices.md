@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -18,9 +18,9 @@ A tabela a seguir mostra os serviços que estão disponíveis para instâncias d
 
 Tabela 1. Serviços disponíveis para instâncias do Cloud Foundation
 
-| Nome do Serviço | Versão do Serviço | Versão da instância |
+| Nome do Serviço | Versão do serviço atual | Versão da instância |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1 | V1.9 e mais recentes |
+| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1.1.2 | V1.9 e mais recentes |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | Série 300 | V1.8 e mais recentes |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 6.0.3 | V2.0 e mais recentes |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 e mais recentes |

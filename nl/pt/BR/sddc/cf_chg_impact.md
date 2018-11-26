@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -38,6 +38,17 @@ Tabela 1. Operações que são afetadas para o administrador SSO (cliente)
 | Mude o nome do Comutador virtual distribuído (DVS) público ou privado. | A inclusão de um servidor ESXi pode falhar. | Importante | Mude o nome do DVS de volta para o nome original.
 | Mude o nome do armazenamento de dados VSAN. | A inclusão de um servidor ESXi pode falhar.<br><br>Atualizando a instância poderá falhar. | Importante | Mude o nome do armazenamento de dados VSAN de volta para o nome original, **vsanDatastore**.
 | Mude o nome da instância ou o nome de domínio. | A instância está inutilizável. | Crítico | N/A
+
+A tabela a seguir lista as operações que poderão ser impactadas se o acesso de SSH ou de shell estiver desativado para vários recursos.
+
+Tabela 2. Operações que são impactadas pelo SSH e acesso de shell (local)
+
+| Mudança tentada  | Operações afetadas  | Severidade  | Método de recuperação  |
+|:------------- |:------------- |:--------------|:--------------|
+| Desative o SSH ou o acesso de shell para o vCenter Server ou o PSC.    | O emparelhamento de uma instância primária e secundária pode falhar. A aplicação de correções nos recursos pode falhar.    | Importante    | N/A    |
+| Desative o SSH ou o acesso de shell para ESXi.    | A inclusão e a remoção de hosts, serviços e armazenamento de rede na instância podem falhar. A aplicação de correções nos recursos pode falhar.    | Importante    | N/A    |
+
+Se você escolher desativar o SSH ou o acesso de shell, deverá reativá-lo temporariamente antes de executar as operações indicadas.
 
 ## Gerenciamento de sub-redes para instâncias do Cloud Foundation
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -27,15 +27,15 @@ Tabela 1. Configurações do Bare Metal Server do {{site.data.keyword.CloudDataC
 | AMS03 | Amsterdã | Europa | Skylake, Broadwell |
 | CHE01 | Chennai | Ásia Pacífico | Skylake, Broadwell |
 | DAL09 | Dallas | NA Sul | Skylake, Broadwell |
-| DAL10 | Dallas | NA Sul | Skylake, Broadwell, Small, Large |
+| DAL10 | Dallas | NA Sul | Skylake, Broadwell |
 | DAL12 | Dallas | NA Sul | Skylake, Broadwell |
 | DAL13 | Dallas | NA Sul | Skylake, Broadwell |
-| FRA02 | Frankfurt | Europa | Skylake, Broadwell, Large |
+| FRA02 | Frankfurt | Europa | Skylake, Broadwell |
 | FRA04 | Frankfurt | Europa | Skylake, Broadwell |
 | HKG02 | Hong Kong | Ásia Pacífico | Skylake, Broadwell |
 | LON02 | Londres | Europa | Skylake, Broadwell |
 | LON04 | Londres | Europa | Skylake, Broadwell |
-| LON06 | Londres | Europa | Skylake, Broadwell, Small, Large |
+| LON06 | Londres | Europa | Skylake, Broadwell |
 | MEL01 | Melbourne | Ásia Pacífico | Skylake, Broadwell |
 | MEX01 | Querétaro | NA Sul | Skylake, Broadwell |
 | MIL01 | Milão | Europa | Skylake, Broadwell |
@@ -50,8 +50,8 @@ Tabela 1. Configurações do Bare Metal Server do {{site.data.keyword.CloudDataC
 | SYD01 | Sydney | Ásia Pacífico | Skylake, Broadwell |
 | SYD04 | Sydney | Ásia Pacífico | Skylake, Broadwell |
 | TOK02 | Tóquio | Ásia Pacífico | Skylake, Broadwell |
-| TOR01 | Toronto | NA Leste | Skylake, Broadwell, Small, Large |
-| WDC04 | Washington, DC | NA Leste | Skylake, Broadwell, Small, Large |
+| TOR01 | Toronto | NA Leste | Skylake, Broadwell |
+| WDC04 | Washington, DC | NA Leste | Skylake, Broadwell |
 | WDC06 | Washington, DC | NA Leste | Skylake, Broadwell |
 | WDC07 | Washington, DC | NA Leste | Skylake, Broadwell |
 
