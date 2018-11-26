@@ -63,7 +63,7 @@ Tabela 3. Propriedades de instâncias do vCenter Server with Hybridity Bundle
 | ID | O ID da instância. |
 | Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada. |
 | Versão atual | A versão atual do {{site.data.keyword.vmwaresolutions_short}}. |
-| Versão do vCenter | A versão do VMware vCenter Server with Hybridity Bundle.<br><br>Há uma pequena variação entre a versão do vCenter Server exibida no console do {{site.data.keyword.vmwaresolutions_short}} e o VMware vSphere Web Client. Ambos estão corretos.{:note} |
+| Versão do vCenter | A versão do VMware vCenter Server with Hybridity Bundle.<br><br>**Nota:** há uma ligeira variação entre a versão do vCenter Server exibida no console do {{site.data.keyword.vmwaresolutions_short}} e o VMware vSphere Web Client. Ambos estão corretos. |
 | NSX for vSphere | A versão do produto VMware NSX for vSphere. |
 | Edição de licença NSX | A versão e a edição da licença do VMware NSX. |
 | DNS, domínio-raiz | O nome do domínio-raiz é o nome de domínio do DNS (Sistema de Nomes de Domínio) e o nome raiz da floresta do Microsoft Active Directory (AD). |

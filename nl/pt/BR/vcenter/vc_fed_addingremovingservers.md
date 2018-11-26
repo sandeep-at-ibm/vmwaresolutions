@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Expandindo e contraindo a capacidade para instâncias do VMware Federal
 
@@ -14,7 +18,8 @@ lastupdated: "2018-09-28"
 
 Se o seu cluster primário tiver vSAN como seu armazenamento, incluir um ou mais servidores ESXi após a implementação poderá aumentar a capacidade de armazenamento do cluster.
 
-**Nota:** este recurso está disponível apenas para instâncias do VMware Federal que não foram protegidas.
+Esse recurso está disponível apenas para instâncias do VMware Federal que não foram protegidas.
+{:note}
 
 ## Incluindo servidores ESXi em instâncias do VMware Federal
 
@@ -61,7 +66,8 @@ Se o seu cluster primário tiver vSAN como seu armazenamento, incluir um ou mais
 2. Você é notificado por e-mail de que sua solicitação para remover servidores ESXi está sendo processada. No console, o status do cluster associado aos servidores ESXi é mudado para **Modificando**.
 3. Os servidores ESXi são totalmente recuperados pela infraestrutura do {{site.data.keyword.cloud_notm}} no final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}}, que é tipicamente de 30 dias.
 
-   **Atenção:** você será cobrado até o fim do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}} pelos servidores ESXi removidos.
+   Você é faturado até o final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}} para os servidores ESXi removidos.
+   {:note}
 
 ### Links relacionados
 

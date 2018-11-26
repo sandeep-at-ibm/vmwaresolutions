@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
 # Atualizando clusters vSAN
 
-O vSAN gera linhas de base do sistema e grupos de linhas de base para uso com o VUM e é possível usar essas linhas de base recomendadas para atualizar software, correções e extensões para os hosts vSphere ESXi em sua instância do VCS usando vSAN. O vSAN 6.6.1 e mais recente gera recomendações de construção automatizada para clusters vSAN. O vSAN combina informações no VMware Compatibility Guide e no catálogo de liberações do vSAN com informações sobre as liberações do vSphere ESXi instaladas.
+O vSAN gera linhas de base do sistema e grupos de linha de base para uso com o VUM e é possível usar essas linhas de base recomendadas para atualizar software, correções e extensões para os hosts vSphere ESXi em sua instância do vCenter Server usando vSAN. O vSAN 6.6.1 e mais recente gera recomendações de construção automatizada para clusters vSAN. O vSAN combina informações no VMware Compatibility Guide e no catálogo de liberações do vSAN com informações sobre as liberações do vSphere ESXi instaladas.
 
 Essas atualizações recomendadas fornecem a melhor liberação disponível para manter seu hardware em um estado suportado.
 * **Linhas de base do sistema vSAN** - as recomendações de construção do vSAN são fornecidas por meio das linhas de base do sistema vSAN para VUM. O vSAN gera um grupo de linhas de base para cada cluster vSAN e elas são listadas na área de janela Linhas de base da guia Linhas de base e grupos. O VUM varre automaticamente cada cluster vSAN para verificar a conformidade com relação ao grupo de linhas de base. No entanto, para fazer upgrade do cluster vSAN, deve-se corrigir manualmente a linha de base do sistema por meio do VUM, é possível corrigir a linha de base do sistema vSAN em um único host ou no cluster inteiro.
-* **Catálogo de liberações do vSAN** - o catálogo de liberações do vSAN mantém informações sobre as liberações disponíveis, a ordem de preferência para liberações e as correções críticas necessárias para cada liberação. O vSAN requer conectividade de Internet para acessar o catálogo de liberações. Você não precisa estar inscrito no Customer Experience Improvement Program (CEIP) para vSAN para acessar o catálogo de liberações.
+* **Catálogo de liberações do vSAN** - o catálogo de liberações do vSAN mantém informações sobre as liberações disponíveis, a ordem de preferência para liberações e as correções críticas necessárias para cada liberação. O vSAN requer conectividade com a Internet para acessar o catálogo de liberação. Você não precisa estar inscrito no Customer Experience Improvement Program (CEIP) para vSAN para acessar o catálogo de liberações.
 * Trabalhando com **Recomendações de construção do vSAN** - o VUM verifica as liberações do vSphere ESXi instaladas com relação às informações no Hardware Compatibility List (HCL) no VMware Compatibility Guide. Isso determina o caminho de upgrade correto para cada cluster vSAN, com base no catálogo atual de Liberações do vSAN. O vSAN também inclui os drivers necessários e as atualizações de correção para a liberação recomendada em sua linha de base do sistema. As recomendações de construção do vSAN asseguram que cada cluster vSAN permaneça no status de compatibilidade de hardware atual ou melhor. Se o hardware no cluster vSAN não estiver incluído no HCL, o vSAN recomendará um upgrade para a liberação mais recente.
 
 O upgrade do cluster vSAN continua na sequência de tarefas a seguir:
@@ -26,7 +26,7 @@ O upgrade do cluster vSAN continua na sequência de tarefas a seguir:
 
 ## Ativar o fluxo de trabalho de funcionamento on-line do vSAN
 
-Seguir as tarefas nesta seção tornarão as linhas de base do vSAN disponíveis no VUM. O vSAN 6.6.1 e mais recente fornece um processo de atualização automatizada contínua para assegurar que um cluster vSAN esteja atualizado com a melhor liberação disponível para manter a sua instância do VCS em um estado suportado com:
+Seguir as tarefas nesta seção tornarão as linhas de base do vSAN disponíveis no VUM. O vSAN 6.6.1 e mais recente fornece um processo de atualização automatizada contínua para assegurar que um cluster vSAN esteja atualizado com a melhor liberação disponível para manter a sua instância do VMware vCenter Server on {{site.data.keyword.cloud}} em um estado suportado com:
 * **Recomendações de versão do vSAN** - geradas automaticamente usando informações do VMware Compatibility Guide, do catálogo de liberações do vSAN e do reconhecimento da configuração de hardware subjacente. Isso também inclui os drivers necessários e as atualizações de correção para a liberação recomendada em sua linha de base do sistema.
 * **Recomendações de construção do vSAN** - assegura que os clusters permaneçam no status de compatibilidade de hardware atual ou melhor.
 
@@ -82,8 +82,8 @@ Antes de iniciar o processo de upgrade do vSAN, assegure-se de que os requisitos
   - Não deve haver objetos de vSAN inacessíveis. Isso pode ser verificado com o **Serviço de funcionamento do vSAN** clicando em **Página inicial** > **Hosts e clusters** e, em seguida, selecione o **Cluster vSAN**. Clique em **guia Monitorar**, **vSAN** e, em seguida, clique em **Funcionamento**. Revise os Resultados do Teste.
   - Não deve haver nenhuma ressincronização ativa no início do processo de upgrade. Isso pode ser verificado clicando em **Página inicial** > **Hosts e clusters**, em seguida, selecione o **Cluster vSAN** e clique na **guia vSAN** e, em seguida, clique em **Ressincronizar componentes**. _A contagem de componentes de Ressincronização deve ser 0_. Observe que alguma atividade de ressincronização é esperada durante o processo de upgrade, uma vez que os dados precisam ser sincronizados após as reinicializações do host.
 * **Preparação do host vSphere ESXi** - ao mover um host para o modo de manutenção em um cluster vSAN, você tem três opções para escolher:
-  - **Sem migração de dados** - se você selecionar essa opção, o vSAN não evacuará nenhum dado desse host. Se você desligar ou remover o host do cluster, algumas máquinas virtuais poderão se tornar inacessíveis.
-  - **Assegurar disponibilidade** - se você selecionar essa opção, o vSAN permitirá mover o host para o modo de manutenção mais rápido do que a migração de dados integral e permitirá o acesso às máquinas virtuais no ambiente.
+  - **Sem migração de dados** - se você selecionar essa opção, o vSAN não evacuará nenhum dado desse host. Se você desligar ou remover o host do cluster, algumas máquinas virtuais (VMs) poderão ficar inacessíveis.
+  - **Assegurar disponibilidade** - Se você selecionar essa opção, o vSAN permitirá mover o host para o modo de manutenção mais rápido do que a migração de dados completa e permitirá acesso às VMs no ambiente.
   - ** Migração de dados completa **
 * **Sair do modo de manutenção e ressincronizar** - quando o host vSphere ESXi for submetido a upgrade e movido para fora do modo de manutenção, uma ressincronização ocorrerá. É possível ver isso por meio do Web client. Assegure-se de que isso esteja completo antes de se mover para o próximo host. Uma ressincronização está ocorrendo porque o host que foi atualizado pode agora contribuir para o armazenamento de dados vSAN novamente. É vital esperar até que essa ressincronização seja concluída para assegurar que não haja perda de dados.
 * ** Após iniciar um upgrade do cluster vSAN **:

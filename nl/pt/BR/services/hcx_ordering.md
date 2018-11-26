@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Solicitando VMware HCX on IBM Cloud
 
@@ -50,7 +54,8 @@ A implementação do HCX no {{site.data.keyword.cloud_notm}} é automatizada. Qu
    * Uma sub-rede portátil privada para interconexões HCX. Essa sub-rede é usada quando a opção **Rede privada** é selecionada para o **Tipo de interconexão HCX**.
    * Uma sub-rede portátil pública para ativação e manutenção com o VMware. Se a opção **Rede pública** estiver selecionada para o **Tipo de interconexão HCX**, essa sub-rede também será usada para interconexões HCX.
 
-   **Importante:** os endereços IP nas sub-redes que são pedidos para o HCX são destinados a serem gerenciados pela automação do VMware on {{site.data.keyword.cloud_notm}}. Esses endereços IP não podem ser designados a recursos do VMware, como VMs e NSX Edges, que são criados por você. Se você precisar de endereços IP adicionais para seus artefatos do VMware, deverá pedir suas próprias sub-redes do {{site.data.keyword.cloud_notm}}.
+   Os endereços IP nas sub-redes que são pedidos para o HCX são destinados a serem gerenciados pela automação do VMware on {{site.data.keyword.cloud_notm}}. Esses endereços IP não podem ser designados a recursos do VMware, como VMs e NSX Edges, que são criados por você. Se você precisar de endereços IP adicionais para seus artefatos do VMware, deverá pedir suas próprias sub-redes do {{site.data.keyword.cloud_notm}}.
+   {:important}
 2. Se a **Rede privada** foi selecionada para o **Tipo de interconexão do HCX**, um grupo de portas denominado **SDDC-DPortGroup-HCX-Private** será criado no Distributed Virtual Switch (DVS) privado.
 3. Uma chave de ativação do HCX é pedida por meio do VMware.
 4. Três conjuntos de recursos e pastas da VM para o HCX são criados, os quais são necessários para as interconexões do
@@ -62,7 +67,8 @@ HCX, os componentes do HCX local e os componentes do HCX remoto.
    * As regras do balanceador de carga e os conjuntos de recursos são configurados. Essas regras são conjuntos de recursos usados para encaminhar o tráfego de entrada relacionado ao HCX para os dispositivos virtuais apropriados do HCX Manager, vCenter Server e Platform Services Controller (PSC).
    * Um certificado SSL para criptografar o tráfego HTTPS de entrada relacionado ao HCX que está chegando por meio de ESGs é aplicado.
 
-   **Importante:** a borda de gerenciamento do HCX é dedicada ao tráfego de gerenciamento do HCX entre os componentes do HCX no local e os componentes do HCX do lado da nuvem. Não modifique o limite de gerenciamento do HCX ou use-o para extensões de rede do HCX. Em vez disso, crie limites separados para extensões de rede. Além disso, usar um firewall ou desativar as comunicações de borda de gerenciamento do HCX para os componentes de gerenciamento privados da IBM ou para a Internet pública pode impactar negativamente a funcionalidade do HCX.
+   A borda de gerenciamento do HCX é dedicada ao tráfego de gerenciamento do HCX entre os componentes do HCX no local e os componentes do HCX do lado da nuvem. Não modifique o limite de gerenciamento do HCX ou use-o para extensões de rede do HCX. Em vez disso, crie limites separados para extensões de rede. Além disso, usar um firewall ou desativar as comunicações de borda de gerenciamento do HCX para os componentes de gerenciamento privados da IBM ou para a Internet pública pode impactar negativamente a funcionalidade do HCX.
+   {:important}
 
 6. O HCX Manager on {{site.data.keyword.cloud_notm}} é implementado, ativado e configurado:
    * O HCX Manager é registrado com o vCenter Server.
@@ -79,4 +85,4 @@ HCX, os componentes do HCX local e os componentes do HCX remoto.
 * [Glossário de termos do HCX](hcx_glossary.html)
 * [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
 * [Visão geral do VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
-* [Documentação do VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentação do VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Incluindo, visualizando e excluindo clusters para instâncias do VMware Federal
 
@@ -42,7 +46,7 @@ O data center do cluster é configurado para o data center da instância do VMwa
 
 Especifique o modelo de CPU e RAM para o Bare Metal Server. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
 
-Tabela 1. Opções para o Skylake {{site.data.keyword.baremetal_short}}
+Tabela 1. Opções para Skylake  {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
@@ -54,7 +58,7 @@ Tabela 1. Opções para o Skylake {{site.data.keyword.baremetal_short}}
 
 Especifique o modelo de CPU e RAM para o Bare Metal Server. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
 
-Tabela 2. Opções para o Broadwell {{site.data.keyword.baremetal_short}}
+Tabela 2. Opções para Broadwell  {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
@@ -89,7 +93,8 @@ Se o seu cluster inicial tiver sido incluído como um cluster vSAN, quaisquer cl
 
 Quando você selecionar **Armazenamento do NFS**, será possível incluir armazenamento compartilhado no nível de arquivo para a sua instância na qual todas as ações usam as mesmas configurações ou será possível especificar definições de configuração diferentes para cada compartilhamento de arquivo. Especifique as seguintes opções NFS:
 
-**Nota:** o número de compartilhamentos de arquivos deve estar no intervalo de 1 a 32.
+O número de compartilhamentos de arquivo deve estar no intervalo de 1 a 32.
+{:note}
 
 * **Configurar compartilhamentos individualmente**: selecione para especificar
 diferentes definições de configuração para cada compartilhamento de arquivo.
@@ -123,7 +128,8 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instância do vCenter Server**, clique na instância na qual você deseja incluir clusters.
 
-   **Nota:** assegure-se de que a instância esteja no status **Pronto para uso**. Caso contrário, não será possível incluir clusters na instância.
+   Assegure-se de que a instância esteja no status **Pronta para uso**. Caso contrário, não será possível incluir clusters na instância.
+   {:note}
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda e clique em **Incluir** no canto superior direito da tabela **CLUSTERS**.
 4. Na página **Incluir cluster**, insira o nome do cluster.
 5. Selecione o **Modelo de CPU**, a quantia de **RAM** e o **Número de Bare Metal Servers** para a configuração do Bare Metal.
@@ -143,7 +149,8 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 1. A implementação do cluster é iniciada automaticamente e o status do cluster muda para **Inicializando**. É possível verificar o status da implementação visualizando o histórico de implementação na página de resumo da instância.
 2. Quando o cluster estiver pronto para usar, seu status mudará para **Pronto para usar**. O cluster recém-incluído é ativado com a Alta disponibilidade (HA) do vSphere e o Distributed Resource Scheduler (DRS) do vSphere.
 
-**Importante:** não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar falha das operações de inclusão ou remoção de servidores ESXi no cluster.
+Não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar falha das operações de inclusão ou remoção de servidores ESXi no cluster.
+{:important}
 
 ## Procedimento para visualizar clusters em instâncias do VMware Federal
 
@@ -224,7 +231,8 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 
 Talvez você queira excluir um cluster de uma instância quando ela não for mais necessária.
 
-**Nota:** use este procedimento para remover clusters de instâncias que são implementadas na (ou submetidas a upgrade para) V2.3 e liberações mais recentes.
+Use este procedimento para remover clusters de instâncias implementadas (ou submetidas a upgrade) na V2.3 e liberações mais recentes.
+{:note}
 
 ### Antes de excluir
 
@@ -240,7 +248,8 @@ Talvez você queira excluir um cluster de uma instância quando ela não for mai
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância da qual deseja excluir clusters.
 
-   **Nota:** assegure-se de que a instância esteja no status **Pronto para uso**. Caso contrário, não será possível excluir clusters da instância.
+   Assegure-se de que a instância esteja no status **Pronta para uso**. Caso contrário, não será possível excluir clusters da instância.
+   {:note}
 
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda. Na tabela **CLUSTERS**, localize o cluster que você deseja excluir e clique no ícone **Excluir** na coluna **Ações**.
 

@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Pedindo instâncias do VMware Federal
 
 Para implementar uma plataforma virtualizada VMware flexível e customizável que melhor atenda às suas necessidades de carga de trabalho, peça uma instância do VMware Federal. As instâncias do VMware Federal ajudam a desconectar a conexão de gerenciamento aberta e a proteger sua instância implementada.
 
-**Nota:** atualmente, somente instâncias do vCenter Server suportam o VMware Federal on {{site.data.keyword.cloud}}.
+Atualmente, apenas as instâncias do vCenter Server suportam o VMware Federal on {{site.data.keyword.cloud}}.
+{:note}
 
 ## Requisitos para pedir instâncias do VMware Federal
 
@@ -33,7 +38,8 @@ Tabela 1. Formato de valor para nomes de instância e de domínio
   | Nome do servidor ESXi totalmente qualificado | `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que `<n>` é a sequência do servidor ESXi. O comprimento máximo é de 50 caracteres. |  
   | FQDN do PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é de 50 caracteres. |
 
-**Importante:** não modifique nenhum valor definido durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
+Não modifique nenhum valor que seja configurado durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
+{:important}
 
 ## Configurações do sistema
 
@@ -67,7 +73,7 @@ Licenças fornecidas pela IBM para os seguintes componentes VMware:
 
 ## Configurações do Bare Metal Server
 
-As configurações de Bare Metal são baseadas em sua seleção de data center e na configuração do servidor bare metal. A opção para selecionar uma configuração pré-configurada não é suportada atualmente.
+As configurações de Bare Metal são baseadas em sua seleção de data center e na configuração do servidor bare metal.
 
 ### Local do datacenter
 
@@ -120,7 +126,8 @@ Especifique as seguintes opções vSAN:
 
 Quando você selecionar **Armazenamento do NFS**, será possível incluir armazenamento compartilhado no nível de arquivo para a sua instância na qual todas as ações usam as mesmas configurações ou será possível especificar definições de configuração diferentes para cada compartilhamento de arquivo. Especifique as seguintes opções NFS:
 
-**Nota:** o número de compartilhamentos de arquivos deve estar no intervalo de 1 a 32.
+O número de compartilhamentos de arquivo deve estar no intervalo de 1 a 32.
+{:note}
 
 * **Configurar compartilhamentos individualmente**: selecione para especificar
 diferentes definições de configuração para cada compartilhamento de arquivo.
@@ -163,7 +170,8 @@ O nome do domínio-raiz deve atender aos requisitos a seguir:
 * A última sequência pode conter apenas caracteres alfabéticos.
 * O comprimento da última sequência deve estar no intervalo de 2 a 24 caracteres.
 
-**Nota:** o comprimento máximo do Nome completo do domínio (FQDN) para hosts e VMs é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
+O comprimento máximo do Nome Completo do Domínio (FQDN) para hosts e VMs é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
+{:note}
 
 ### Configuração de DNS
 
@@ -172,7 +180,8 @@ Selecione a configuração do Sistema de Nomes de Domínio (DNS) para sua instâ
 * **Único VSI público do Windows para o Active Directory/DNS**: um único VSI do Microsoft Windows Server para o Microsoft Active Directory (AD), que funciona como o DNS para a instância na qual os hosts e as máquinas virtuais são registrados, é implementado e pode ser consultado.
 * **Duas VMs do Windows Server dedicadas e altamente disponíveis no cluster de gerenciamento**: para a V2.3 e liberações futuras, duas máquinas virtuais do Microsoft Windows são implementadas, ajudando a aprimorar a segurança e robustez.
 
-**Importante:** deve-se fornecer duas licenças do Microsoft Windows Server 2012 R2 se você configurar sua instância para usar as duas máquinas virtuais do Microsoft Windows. Use a licença da edição Standard do Microsoft Windows Server 2012 R2 ou a licença da edição Datacenter do Microsoft Windows Server 2012 R2 ou ambas.
+Deve-se fornecer duas licenças do Microsoft Windows Server 2012 R2 coso você configure sua instância para usar as duas máquinas virtuais do Microsoft Windows. Use a licença da edição Standard do Microsoft Windows Server 2012 R2 ou a licença da edição Datacenter do Microsoft Windows Server 2012 R2 ou ambas.
+{:important}
 
 Atualmente, cada licença pode ser designada a apenas um único servidor físico e abrange até dois processadores físicos. Usando uma licença da edição Standard, é possível executar duas máquinas virtuais virtualizadas do Microsoft Windows por servidor de 2 processadores. Portanto, duas licenças são necessárias, pois duas máquinas virtuais do Microsoft Windows são implementadas em dois hosts diferentes.
 
@@ -219,8 +228,10 @@ Quando a instância estiver pronta para usar, seu status mudará para **Pronta p
 
 Visualize, gerencie ou proteja a instância do VMware Federal que você pediu.
 
-**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados na conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não no	{{site.data.keyword.slportal}} ou por qualquer outro meio fora do console.
+Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente por meio do console do
+{{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console.
 Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+{:important}
 
 **CUIDADO:** Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes

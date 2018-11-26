@@ -70,7 +70,7 @@ Esse design usa o vSphere Distributed Resource Scheduling (DRS) no cluster inici
 O gerenciamento de energia por meio do recurso **Distributed Power Management** não é usado neste design.
 {:note}
 
-### vSphere High Availability
+### Alta Disponibilidade do vSphere
 
 Esse design usa o vSphere High Availability (HA) no cluster inicial e clusters extras para detectar falhas de cálculo e recuperar VMs que são executadas dentro de um cluster. O recurso vSphere HA neste design é configurado com as opções **Monitoramento do host** e **Controle de admissão** ativadas no cluster. Além disso, o cluster inicial reserva os recursos de um nó como a capacidade sobressalente para a política de controle de admissão.
 

@@ -80,7 +80,7 @@ Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve s
 
 Quando você seleciona **Skylake**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades.
 
-Tabela 2. Opções para Skylake  {{site.data.keyword.baremetal_short}}
+Tabela 2. Opções para o Skylake {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
@@ -92,7 +92,7 @@ Tabela 2. Opções para Skylake  {{site.data.keyword.baremetal_short}}
 
 Quando você seleciona **Broadwell**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades.
 
-Tabela 3. Opções para Broadwell  {{site.data.keyword.baremetal_short}}
+Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |

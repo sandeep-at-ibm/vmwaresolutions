@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -27,9 +27,9 @@ Para obter mais informações, veja a seção *Configurações do {{site.data.ke
 
 ### IBM Cloud Privado Hospedado
 
-O serviço {{site.data.keyword.cloud_notm}} Private Hosted está agora disponível para instâncias do VMware vCenter Server with Hybridity Bundle, além das instâncias do VMware vCenter Server que são implementadas em (ou submetidas a upgrade para) liberações da V2.5 e mais recente. Agora, é possível pedir uma instância do vCenter Server ou uma instância do vCenter Server with Hybridity Bundle com o serviço incluído ou incluir o serviço em uma instância existente do vCenter Server ou em uma instância do vCenter Server with Hybridity Bundle após a implementação inicial.
+O serviço {{site.data.keyword.cloud_notm}} Private Hosted está agora disponível para instâncias do VMware vCenter Server with Hybridity Bundle, além das instâncias do VMware vCenter Server que são implementadas em (ou submetidas a upgrade para) liberações da V2.5 e mais recente. Agora é possível pedir uma instância do vCenter Server ou uma instância do vCenter Server with Hybridity Bundle com o serviço incluído. Também é possível incluir o serviço em uma instância existente do vCenter Server ou em uma instância do vCenter Server with Hybridity Bundle após a implementação inicial.
 
-Para obter mais informações, veja:
+Para obter mais informações, veja os tópicos a seguir:
 * [ {{site.data.keyword.cloud_notm}}  Visão geral do Private Hosted ](../services/icp_overview.html)
 * [ Ordenando  {{site.data.keyword.cloud_notm}}  Privado Hospedado ](../services/icp_ordering.html)
 
@@ -47,11 +47,11 @@ Agora, ao pedir o serviço F5 on {{site.data.keyword.cloud_notm}}, é possível 
 
 ### FortiGate Virtual Appliance on IBM Cloud
 
-No 3º trimestre de 2018, o Fortinet fez mudanças em seus pacotes configuráveis de assinatura. Para obter mais informações, consulte [Pedindo o dispositivo virtual FortiGate no {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html).
+No 3Q 2018, o Fortinet mudou seus pacotes de assinaturas. Para obter mais informações, consulte [Pedindo o dispositivo virtual FortiGate no {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html).
 
 Para o serviço FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} que é implementado em instâncias do Cloud Foundation V2.7 e mais recente e em instâncias do vCenter Server, o FortiOS 6.0.3 é provisionado.
 
-Além disso, quando você pede o serviço FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, é possível selecionar se você deseja que o FortiGuard aplique atualizações de licença e segurança em rede pública ou rede privada com um servidor proxy. Para obter mais informações, consulte [Pedindo o dispositivo virtual FortiGate no {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html).
+Ao pedir o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, é possível selecionar se deseja que o FortiGuard aplique atualizações de licença e de segurança na rede pública ou na rede privada com um servidor proxy. Para obter mais informações, consulte [Pedindo o dispositivo virtual FortiGate no {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html).
 
 ### Atualizações de componentes de serviço Zerto on IBM Cloud
 
@@ -59,7 +59,7 @@ Para o serviço Zerto on {{site.data.keyword.cloud_notm}} que é implementado em
 
 ### Integração do KMIP for VMware on IBM Cloud com o IBM Cloud Activity Tracker
 
-Além de eventos de instância do VMware, os eventos para sua instância do KMIP for VMware on {{site.data.keyword.cloud_notm}}, como criação de chave, exclusão de chave e acesso à chave, estão agora integrados à sua instância do {{site.data.keyword.cloud_notm}} Activity Tracker. Para obter mais informações sobre o KMIP for WMware on {{site.data.keyword.cloud_notm}}, veja [Visão geral do KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html).
+Além dos eventos de instância do VMware, os eventos para o KMIP for VMware on {{site.data.keyword.cloud_notm}}, como criação de chave, exclusão de chave e acesso de chave, agora estão integrados à sua instância do {{site.data.keyword.cloud_notm}} Activity Tracker. Para obter mais informações sobre o KMIP for WMware on {{site.data.keyword.cloud_notm}}, veja [Visão geral do KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html).
 
 ## Documentação nova e atualizada
 
@@ -73,7 +73,7 @@ Os documentos técnicos a seguir estão agora disponíveis na seção *Referênc
 * [ vCenter Server e  {{site.data.keyword.cloud_notm}}  Guia privado ](../archiref/vcsicp/vcsicp-intro.html)
 * [Guia de serviço do vCenter Server e do IBM Kubernetes](../archiref/vcsiks/vcsiks-intro.html)
 * [Guia do VMware e do Skate Advisor Concept Car](../archiref/vcscar/vcscar-intro.html)
-* [VMware: a jornada de modernização do Stock Trader](../archiref/vcscontent/vcscontent-modjourney.html)
+* [VMware - A jornada de modernização do Stock Trader](../archiref/vcscontent/vcscontent-modjourney.html)
 
 Alguns desses documentos de arquitetura de referência estão disponíveis somente em inglês.
 
@@ -81,6 +81,7 @@ Alguns desses documentos de arquitetura de referência estão disponíveis somen
 
 A interface com o usuário é atualizada e fornece os aprimoramentos a seguir:
 
-* A guia original **Customizado** na qual você especifica o modelo de CPU e a RAM para as configurações de {{site.data.keyword.baremetal_short_sing}} ao pedir instâncias foi dividida na guia **Skylake** e na guia **Broadwell** com base no tipo de servidor para facilitar a seleção de servidor.
+* A guia **Customizado** na qual você especifica o modelo de CPU e a RAM para as configurações do {{site.data.keyword.baremetal_short_sing}} ao pedir instâncias agora é dividida nas guias **Skylake** e **Broadwell** com base no tipo de servidor para ajudá-lo na seleção do servidor.
+* As opções **Pré-configurado** para configuração do Bare Metal Server não estão mais disponíveis.
 * A coluna **Tipo** agora está incluída na tabela **Instâncias do vCenter Server** na página **Instâncias implementadas** para identificar as instâncias do vCenter Server, do vCenter Server with Hybridity Bundle e do vCenter Limited Test Drive.
 * Várias mensagens de erro e aprimoramentos de dicas de ferramenta estão disponíveis para ajudá-lo na seleção da configuração apropriada na interface com o usuário.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -24,7 +24,7 @@ Como parte da automação do VCS, um Microsoft Active Directory (AD) é empregad
 A implementação do VCS utiliza os VSIs do Microsoft Active Directory (AD) implementados como servidores DNS para a instância. Todos os componentes implementados (hosts vCenter, PSC, NSX, ESXi) são configurados para apontar para o MS AD como o seu DNS padrão.
 
 ###	Serviços NTP
-A implementação do VCS utiliza os servidores NTP de infraestrutura do IBM Cloud. Todos os componentes implementados serão configurados para utilizar esses servidores NTP. Ter todos os componentes dentro do design que utilizam os mesmos servidores NTP é crítico para que os certificados e a autenticação do MS AD funcionem corretamente
+A implementação do VCS utiliza os servidores NTP da infraestrutura do {{site.data.keyword.cloud}}. Todos os componentes implementados serão configurados para utilizar esses servidores NTP. Ter todos os componentes dentro do design que utilizam os mesmos servidores NTP é crítico para que os certificados e a autenticação do MS AD funcionem corretamente
 
 ## Rede
 
@@ -40,7 +40,7 @@ Figura 2. ICP com rede NSX-V
 
 ![ICP with NSX-V Networking](vcsicp-nsxv-networking.svg)
 
-Para obter mais informações, veja [Arquitetura de referência do IBM Cloud VCS Networking](../vcsnsxt/vcsnsxt-intro.html)
+Para obter mais informações, consulte o [Guia de rede do vCenter Server](../vcsnsxt/vcsnsxt-intro.html).
 
 ### Rede NSX-T
 
@@ -52,6 +52,6 @@ Figura 3. ICP com rede NSX-T
 
 ![ICP with NSX-T Networking](vcsicp-icp-nsxt-networking.svg)
 
-### Links Relacionados
+### Links relacionados
 
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Visão geral do VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)

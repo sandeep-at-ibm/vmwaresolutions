@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -53,15 +53,10 @@ Os encargos incorridos para o hardware, rede, máquinas virtuais e armazenamento
 ### Bare Metal Server
 
 É possível pedir o {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} com uma das configurações a seguir:
-*  **Skylake** ou **Broadwell**: {{site.data.keyword.baremetal_short}} com seu modelo de CPU e tamanho de RAM selecionados.   
-   * Geração Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100)
-   * Geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600 v4)
-
+*  **Skylake**: servidores de geração do Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100) com o seu modelo de CPU selecionado e o tamanho de RAM.   
+*  **Broadwell**: servidores de geração do Intel Broadwell de 2 CPUs (série Intel Xeon E5-2600 v4) com o seu modelo de CPU selecionado e o tamanho de RAM.   
    Se você planeja usar o armazenamento vSAN, a configuração requer quatro {{site.data.keyword.baremetal_short}}.
    {:note}
-* **Pré-configurado**: geração Intel Broadwell de 2 CPUs (série Intel Xeon E5-2600 v4)
-  * **Pequeno** (Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz/128 GB de RAM/12 discos)
-  * **Grande** (Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz/512 GB de RAM/12 discos)
 
 ### Redes
 
@@ -89,8 +84,6 @@ O armazenamento a seguir é pedido, dependendo da configuração do {{site.data.
 * Dois discos de cache SSD (Solid-State Disk) de 960 GB
 * Um controlador de disco RAID
 * Somente para a configuração **Skylake** e **Broadwell**, é possível configurar o número de unidades de disco e o tipo de disco e a capacidade de acordo com seus requisitos. Além disso, você tem a opção Intel Optane de alto desempenho, que oferece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade. A opção Intel Optane de alto desempenho depende do modelo de CPU.
-* Apenas para a configuração **Pré-configurado**, **Pequeno**: dois discos de capacidade SSD de 1,9 TB
-* Apenas para a configuração **Pré-configurado**, **Grande**: quatro discos de capacidade SSD de 3,8 TB
 
 ### Licenças (fornecidas pela IBM ou BYOL) e taxas
 

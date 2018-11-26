@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -51,13 +51,16 @@ Tabela 1. Operações que são afetadas ao mudar recursos do VMware
 | Mudar o nome do armazenamento de dados do vSAN na instância que usa o vSAN. | A inclusão de um servidor ESXi pode falhar.<br><br>Atualizando a instância poderá falhar. | Importante | Mude o nome do armazenamento de dados vSAN de volta para o nome original, **vsanDatastore**.
 | Mudar o nome do armazenamento de dados NFS de gerenciamento na instância que usa o NFS. | A inclusão de um servidor ESXi pode falhar.<br><br>Atualizando a instância poderá falhar. | Importante | Mude o nome do armazenamento de dados de gerenciamento NFS de volta para o nome original, **management-share**, e remonte o armazenamento de dados do NFS como somente leitura no servidor ESXi.
 
-A tabela a seguir lista as operações que poderão ser afetadas se o usuário raiz VC/PSC mudar os recursos do vCenter Server fora do console do {{site.data.keyword.vmwaresolutions_short}}.
+A tabela a seguir lista as operações que poderão ser impactadas se o acesso de SSH ou de shell estiver desativado para vários recursos.
 
-Tabela 2. Operações que são afetadas pelo acesso raiz VC/PSC (local)
+Tabela 2. Operações que são impactadas pelo SSH e acesso de shell (local)
 
 | Mudança tentada  | Operações afetadas  | Severidade  | Método de recuperação  |
 |:------------- |:------------- |:--------------|:--------------|
-| Ativar ou desativar o acesso de shell.    | A correção e a atualização para o PSC e o vCenter Server podem falhar.    | Importante    | N/A    |
+| Desative o SSH ou o acesso de shell para o vCenter Server ou o PSC.    | O emparelhamento de uma instância primária e secundária pode falhar.    | Importante    | N/A    |
+| Desative o SSH ou o acesso de shell para ESXi.    | A inclusão e a remoção de hosts, serviços e armazenamento de rede na instância podem falhar.    | Importante    | N/A    |
+
+Se você escolher desativar o SSH ou o acesso de shell, deverá reativá-lo temporariamente antes de executar as operações indicadas.
 
 ## Sub-redes de gerenciamento para instâncias do vCenter Server
 

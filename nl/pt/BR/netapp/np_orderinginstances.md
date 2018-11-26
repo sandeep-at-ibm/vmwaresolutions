@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Pedindo instâncias do NetApp ONTAP Select
 
@@ -18,7 +22,8 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 *  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](../vmonic/useraccount.html).
 *  Você revisou os requisitos e considerações em [Requisitos e planejamento para instâncias do NetApp ONTAP Select](np_planning.html).
 
-**Importante**: não modifique nenhum valor configurado durante o pedido ou a implementação da instância. Isso tornará a instância não utilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
+Não modifique nenhum valor configurado durante o pedido ou a implementação da instância. Isso tornará a instância não utilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
+{:important}
 
 ## Configurações do sistema
 
@@ -60,7 +65,8 @@ O nome do domínio-raiz deve atender aos requisitos a seguir:
 * A última sequência pode incluir somente caracteres alfabéticos.
 * O comprimento da última sequência deve estar no intervalo de 2 a 24 caracteres.
 
-**Nota:** o comprimento máximo do FQDN (Nome completo do domínio) para hosts e VMs (máquinas virtuais) é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
+O comprimento máximo do nome completo do domínio (FQDN) para hosts e máquinas virtuais (VMs) é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
+{:note}
 
 ## Configurações de licenciamento
 
@@ -79,7 +85,8 @@ Selecione uma configuração do Bare Metal Server com base em seus requisitos:
 * **Alto desempenho (Grande)** – Licença Premium/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2.2 GHz)/128 GB de RAM/22 unidades SSD de 3,8 TB de capacidade por nó/Capacidade efetiva de um cluster de 4 nós – 118 TB
 * **Alta capacidade** - Licença padrão/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2,2 GHz)/64 GB de RAM/Capacidade de trinta e quatro unidades SATA de 4 TB por nó/Capacidade efetiva de um cluster de 4 nós – 190 TB
 
-**Nota:** as unidades SSD (Solid-State Disk) de 3,8 TB serão suportadas quando forem disponibilizadas geralmente em um {{site.data.keyword.CloudDataCent_notm}}.
+As unidades SSD de 3,8 TB (Disco de estado sólido) são suportadas quando são disponibilizadas geralmente em um {{site.data.keyword.CloudDataCent_notm}}.
+{:note}
 
 ### Número de Bare Metal Servers
 
@@ -114,7 +121,9 @@ Quando a instância estiver pronta para usar, seu status mudará para **Pronta p
 
 Visualizar e gerenciar a instância do NetApp ONTAP Select que você pediu.
 
-**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados na conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não no	{{site.data.keyword.slportal}} ou por qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente por meio do console do
+{{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+{:important}
 
 **CUIDADO:** Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes

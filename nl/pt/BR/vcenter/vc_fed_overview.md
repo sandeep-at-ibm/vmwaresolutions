@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visão geral do VMware Federal on IBM Cloud
 
@@ -14,7 +18,8 @@ Com o VMware Federal on {{site.data.keyword.cloud}}, é possível pedir uma inst
 
 Para obter mais informações sobre o vCenter Server on {{site.data.keyword.cloud_notm}} e a arquitetura do vCenter Server, veja [Visão geral do vCenter Server](vc_vcenterserveroverview.html).
 
-**Atenção:** o VMware Federal on {{site.data.keyword.cloud_notm}} oferece somente um subconjunto das ofertas do vCenter Server. Configuração multisite, Bare Metal Servers pré-configurados do {{site.data.keyword.cloud_notm}}, Bring Your Own License e a opção de pedir serviços complementares não são suportados.
+O VMware Federal on {{site.data.keyword.cloud_notm}} oferece somente um subconjunto das ofertas do vCenter Server. A configuração multisite, Bring Your Own License e a opção para pedir serviços complementares não são suportados.
+{:note}
 
 ## Especificações técnicas para instâncias do VMware Federal on IBM Cloud
 
@@ -29,7 +34,8 @@ Os componentes a seguir estão incluídos:
 
 Para configuração de armazenamento NFS, o número recomendado de {{site.data.keyword.baremetal_short}} é configurado para o padrão de três.
 
-**Nota:** se você selecionar o armazenamento vSAN, a configuração precisará de quatro {{site.data.keyword.baremetal_short}}.
+Se você selecionar o armazenamento vSAN, a configuração exigirá quatro {{site.data.keyword.baremetal_short}}.
+{:note}
 
 ### Rede
 
@@ -39,10 +45,12 @@ Os componentes de rede a seguir são pedidos:
 *  Dois VMware NSX Edge Services Gateways:
   * Um serviço de gerenciamento seguro VMware NSX Edge Services Gateway (ESG) para tráfego de gerenciamento de saída HTTPS, que é implementado pela IBM como parte da tipologia de rede de gerenciamento. Este ESG é usado pelas máquinas virtuais de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Para obter mais informações, veja [Configurando sua rede para usar o ESG gerenciado pelo cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
-    **Importante:** esse ESG não está acessível para você e não é possível usá-lo. Se você modificá-lo, poderá não ser capaz de gerenciar a instância do vCenter Server do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externos da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
+    Este ESG não está acessível a você e não pode ser usado. Se você modificá-lo, poderá não ser capaz de gerenciar a instância do vCenter Server do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externos da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
+    {:important}
   * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
-  **Nota:** o VMware NSX Edge Services Gateway (ESG) para o tráfego de gerenciamento HTTPS de saída é removido como parte da ação para proteger sua instância do VMware Federal implementada. Para obter mais informações, veja [Protegendo as instâncias do VMware Federal](vc_fed_securinginstance.html).
+  O VMware NSX Edge Services Gateway (ESG) para o tráfego de gerenciamento HTTPS de saída foi removido como parte da ação para proteger a instância implementada do VMware Federal. Para obter mais informações, veja [Protegendo as instâncias do VMware Federal](vc_fed_securinginstance.html).
+  {:note}
 
 ### Virtual Server Instances
 
@@ -96,7 +104,9 @@ VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technic
 * Um VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * (Para clusters do vSAN) VMware vSAN Advanced ou Enterprise 6.6
 
-**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados na conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não no	{{site.data.keyword.slportal}} ou por qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente por meio do console do
+{{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+{:important}
 
 **CUIDADO:** gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}}, que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você solicitou a instância, fora do console do {{site.data.keyword.vmwaresolutions_short}} pode tornar seu ambiente instável. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes

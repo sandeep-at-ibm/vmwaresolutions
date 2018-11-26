@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -17,6 +17,9 @@ lastupdated: "2018-10-29"
 O processo de aplicação de correções e atualizações a instâncias do vCenter Server with Hybridity Bundle é automatizado somente para os componentes de gerenciamento. As atualizações do VMware devem ser aplicadas manualmente.
 
 ## Antes de iniciar
+
+Iniciando com a V2.5, as atualizações do IBM CloudDriver não são mais listadas porque as atualizações automáticas estão ativadas. Ações como a inclusão de um host, a inclusão de um cluster e a solicitação de um serviço atualizam automaticamente a instância para a versão mais recente. Para obter mais informações sobre atualizações automáticas, consulte a seção *Resiliência do IBM CloudDriver* em Notas sobre a liberação do [ para a V2.5](../vmonic/relnotes_v25.html).
+{:note}
 
 Antes de tentar aplicar uma atualização, expanda a entrada de atualização clicando na seta para baixo e verifique as informações a seguir:
 * A versão da atualização. Deve-se aplicar as atualizações em sequência cronológica que é da mais antiga para a mais recente. Assegure-se de que tenha aplicado todas as atualizações anteriores antes de aplicar a mais recente. Por exemplo, deve-se aplicar a atualização V2.3 antes de tentar aplicar a atualização V2.4.
@@ -45,8 +48,8 @@ Tabela 1. Atualize os níveis e o impacto
 
    A página **Atualização e correção** contém somente os pacotes para atualizar os componentes de gerenciamento da IBM, não as atualizações do VMware. O {{site.data.keyword.vmwaresolutions_short}} aplica atualizações do VMware às operações a seguir:
    * Quando uma nova instância do vCenter Server é implementada.
-   * Quando novos servidores ESXi são incluídos.
-   * Quando novos clusters são incluídos.
+   * Quando novos servidores do ESXi forem incluídos, os novos servidores do ESXi serão provisionados com atualizações do VMware, mas os servidores do ESXi existentes não serão atualizados.
+   * Quando novos clusters forem incluídos, os novos clusters serão provisionados com atualizações do VMware, mas os clusters existentes não serão atualizados.
    {:note}
 
 5. Para upgrades de licença, clique em  ** Atualizar **. Selecione a edição para a qual você deseja fazer upgrade na lista e clique em **Fazer upgrade**. Downgrades da edição da licença não estão disponíveis.

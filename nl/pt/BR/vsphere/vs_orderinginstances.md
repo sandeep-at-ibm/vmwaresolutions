@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -89,14 +89,16 @@ O uso de chaves de licença individuais junto com as chaves de licença combinad
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} em que o cluster deve ser hospedado.
 
-Se você selecionar um componente vSAN, a lista de locais será filtrada pela disponibilidade do SSD.
-{:note}
+**Notas:**
+* Se você selecionar um componente vSAN, a lista de locais será filtrada pela disponibilidade do SSD.
+* O data center FRA05 não suporta o servidor bare metal Broadwell.
+* O data center LON05 não suporta o servidor bare metal certificado pelo SAP ou Broadwell.
 
 ### Skylake
 
 Quando você seleciona **Skylake**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades. As opções disponíveis dependem de se você selecionou o componente vSAN do VMware.
 
-Tabela 2. Opções para Skylake  {{site.data.keyword.baremetal_short}}
+Tabela 2. Opções para o Skylake {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
@@ -117,7 +119,7 @@ Com base em seus requisitos, selecione uma configuração do Bare Metal Server:
 
 Quando você seleciona **Broadwell**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades. As opções disponíveis dependem de se você selecionou o componente vSAN do VMware.
 
-Tabela 3. Opções para Broadwell  {{site.data.keyword.baremetal_short}}
+Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
@@ -244,7 +246,7 @@ Com base em suas configurações, o custo estimado é gerado instantaneamente e 
    * Para salvar a configuração como um modelo sem fazer um pedido, clique em **Salvar configuração**.
    * Para fazer o pedido, assegure-se de que a conta a ser cobrada está correta, revise e aceite os termos e, em seguida, clique em **Provisão**.
 
-   Apenas o  {{site.data.keyword.baremetal_short}}  está instalado. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como VMware vCenter, VMware NSX, VMware vSAN.
+   Somente os {{site.data.keyword.baremetal_short}} estão instalados. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como VMware vCenter, VMware NSX, VMware vSAN.
    {:note}
 
 ### Resultados

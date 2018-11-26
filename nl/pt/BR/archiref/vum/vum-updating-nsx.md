@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -17,11 +17,11 @@ Caso seja necessário fazer upgrade do NSX e do vSphere, o VMware recomenda conc
 1. **Fazer upgrade do ESXi** - assim que o upgrade do ESXi for concluído, o host sairá do modo de manutenção, entretanto, não será possível mover as VMs conectadas a comutadores lógicos para o host até a próxima etapa ser concluída.
 2. **Fazer upgrade de VIBs do NSX** - assim que for feito upgrade dos VIBs o host tiver sido removido do modo de manutenção, será possível mover VMs conectadas a comutadores lógicos para o host.
 
-O NSX é atualizado por meio da atualização do NSX Manager usando um download em _my.vmware.com_. Portanto, você precisa de uma conta para o download da atualização. Se você estiver consumindo o licenciamento de assinatura do IBM Cloud com sua instância do VCS, não será capaz de fazer download das atualizações com sua conta **my.vmware.com**. Portanto, será necessário [entrar em contato com o Suporte IBM](../../vmonic/trbl_support.html).
+O NSX é atualizado por meio da atualização do NSX Manager usando um download em _my.vmware.com_. Portanto, você precisa de uma conta para o download da atualização. Se você estiver consumindo o licenciamento de assinatura do {{site.data.keyword.cloud}} com sua instância do VMware vCenter Server on {{site.data.keyword.cloud_notm}}, não será possível fazer download das atualizações com sua conta **my.vmware.com**. Portanto, será necessário [entrar em contato com o Suporte IBM](../../vmonic/trbl_support.html).
 
 Antes de iniciar o upgrade, verifique as notas sobre a liberação, pois problemas conhecidos de upgrade e soluções alternativas estão documentados nessas notas sobre a liberação do NSX. Usando as notas sobre a liberação, verifique se o vCenter atende aos novos requisitos do sistema para NSX.
 
-Se você instalou qualquer software adicional de parceiros do VMware, consulte a documentação do parceiro para obter detalhes de compatibilidade e upgrade. Se você tiver implementado instâncias primárias e secundárias do VCS e tiver um ambiente do cross-vCenter NSX, consulte as notas sobre a liberação para o processo de upgrade correto.
+Se você instalou qualquer software adicional de parceiros do VMware, consulte a documentação do parceiro para obter detalhes de compatibilidade e upgrade. Se você implementou instâncias primárias e secundárias do vCenter Server e tem um ambiente cruzado do vCenter NSX, consulte as notas sobre a liberação para o processo de upgrade correto.
 
 Em um ambiente do cross-vCenter NSX, o dispositivo NSX Manager primário é atualizado primeiro, seguido por todos os dispositivos NSX Manager secundários.
 **Os downgrades não são suportados**, portanto, faça um backup do NSX Manager antes de continuar com um upgrade. Todas as configurações do NSX Edge, todos os roteadores lógicos e todos os gateways de serviços de borda são submetidos a backup como parte do backup do NSX Manager.
@@ -63,5 +63,5 @@ O fluxo de trabalho é o seguinte:
 
 ### Links relacionados
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [Soluções VMware no IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX no {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Soluções de VMware no {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

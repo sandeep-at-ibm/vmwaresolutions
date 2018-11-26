@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -63,21 +63,15 @@ A disponibilidade e a precificação de configurações padronizadas de hardware
 ### Bare Metal Server
 
 É possível pedir três ou mais {{site.data.keyword.baremetal_short}} com uma das configurações a seguir:
-* **Skylake** ou **Broadwell**: {{site.data.keyword.baremetal_short}} com seu modelo de CPU e tamanho de RAM selecionados.  
-  * Geração Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100)
-  * Geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600 v4)
-
-     Se você planeja usar o armazenamento vSAN, a configuração requer quatro {{site.data.keyword.baremetal_short}}.
-     {:note}
+* **Skylake**: servidores de geração do Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100) com o seu modelo de CPU selecionado e o tamanho de RAM.  
 * **Certificado pelo SAP**: {{site.data.keyword.baremetal_short}} com seu modelo de CPU selecionado.
   * Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 192 GB de RAM
   * Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 384 GB de RAM
   * Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 768 GB de RAM
-* **Pré-configurado**: geração Intel Broadwell de 2 CPUs (série Intel Xeon E5-2600 v4)
-  * **Pequeno** (Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz/128 GB de RAM/2 discos)
-  * **Médio** (Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz/256 GB de RAM/2 discos)
-  * **Grande** (Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz/512 GB de RAM/2 discos).
-
+* **Broadwell**: servidores de geração do Intel Broadwell de 2 CPUs (série Intel Xeon E5-2600 v4) com o seu modelo de CPU selecionado e o tamanho de RAM.  
+     Se você planeja usar o armazenamento vSAN, a configuração requer quatro {{site.data.keyword.baremetal_short}}.
+     {:note}
+     
 ### Rede
 
 Os componentes de rede a seguir são pedidos:

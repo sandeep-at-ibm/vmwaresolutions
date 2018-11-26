@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -85,7 +85,7 @@ Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve s
 
 Quando você seleciona **Skylake**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades.
 
-Tabela 2. Opções para Skylake  {{site.data.keyword.baremetal_short}}
+Tabela 2. Opções para o Skylake {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
@@ -106,7 +106,7 @@ Com base em seus requisitos, selecione uma configuração do Bare Metal Server:
 
 Quando você seleciona **Broadwell**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades.
 
-Tabela 3. Opções para Broadwell  {{site.data.keyword.baremetal_short}}
+Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
@@ -114,22 +114,11 @@ Tabela 3. Opções para Broadwell  {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 
-### Pré-configurado
-
-Quando você seleciona **Pré-configurado**, não é possível alterar as configurações de CPU ou RAM.
-
-Com base em seus requisitos, selecione uma configuração do Bare Metal Server:
-  * Pequeno (Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz/128 GB de RAM/2 unidades)
-  * Médio (Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz/256 GB de RAM/2 unidades)
-  * Grande (Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz/512 GB de RAM/2 unidades)
-
 ### Número de Bare Metal Servers
 
-Para o cluster inicial na instância, é possível configurar o número de servidores ESXi da seguinte maneira:
-* Se você selecionou **Skylake** ou **Broadwell**, é possível configurar o número de servidores ESXi no intervalo de 2 a 20.
-* Se você selecionou **Pré-configurado**, poderá configurar o número de servidores ESXi no intervalo de 2 a 10.
+Para o cluster inicial na instância, é possível configurar o número de servidores ESXi no intervalo de 2 a 20. Todos os servidores ESXi compartilham a configuração configurada. 
 
-Todos os servidores ESXi compartilham a configuração configurada. Após a implementação inicial, é possível incluir mais quatro clusters. Se você tiver selecionado a configuração **Skylake** ou **Broadwell** para o VMware vSAN, 4 servidores ESXi serão necessários para os clusters iniciais e pós-implementação. Para obter mais informações sobre o mínimo de servidores ESXi, veja [É uma instância de dois nós do vCenter Server altamente disponível](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
+Após a implementação inicial, é possível incluir mais quatro clusters. Se você tiver selecionado a configuração **Skylake** ou **Broadwell** para o VMware vSAN, 4 servidores ESXi serão necessários para os clusters iniciais e pós-implementação. Para obter mais informações sobre o mínimo de servidores ESXi, veja [É uma instância de dois nós do vCenter Server altamente disponível](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Configurações de armazenamento
 
@@ -272,7 +261,6 @@ Com base em sua configuração selecionada para os serviços de instância e com
     2. Selecione a configuração do Bare Metal Server.
        * Ao selecionar **Skylake** ou **Broadwell**, especifique o modelo de CPU e o tamanho da RAM.
        * Ao selecionar **Certificado por SAP**, escolha o modelo de CPU.
-       * Quando você selecionar **Pré-configurado**, escolha **Pequeno**, **Médio** ou **Grande** para a configuração.
     3. Especifique o número de {{site.data.keyword.baremetal_short}}. Se você está planejando usar vSAN como sua solução de armazenamento, no mínimo 4 {{site.data.keyword.baremetal_short}} serão necessários.  
 7. Conclua a configuração de armazenamento.
   * Se você selecionar **Armazenamento vSAN**, especifique os tipos de disco para os discos de capacidade e de cache, o número de discos e a edição de licença vSAN. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.

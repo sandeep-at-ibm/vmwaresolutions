@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-29"
 
 ## Atualização do VCSA
 
-O VUM não atualiza o VCSA, portanto, esta seção descreve o processo de atualização desse dispositivo. O VCSA implementado em uma instância do VCS não tem acesso à Internet, portanto, o pacote configurável de atualização deve ser transferido por download para um servidor de salto primeiro.
+O VUM não atualiza o VCSA, portanto, esta seção descreve o processo de atualização desse dispositivo. O VCSA implementado em uma instância do VMware vCenter Server on {{site.data.keyword.cloud}} não tem acesso à Internet, portanto, o pacote configurável de atualização deve ser transferido por download para um servidor de salto primeiro.
 
 O VCSA é atualizado por meio do console de gerenciamento de dispositivo, não do vSphere Web Client. O console de gerenciamento de dispositivo VCSA é acessado usando um navegador, o endereço IP do VCSA e a porta 5480.
 
@@ -32,11 +32,11 @@ Para atualizar o VCSA, siga estas etapas:
 
 ## vCenters vinculados à SSO
 
-Se você tiver instâncias do VCS primárias e secundárias, seus VCSAs serão configurados para estarem em um único domínio de Conexão Única (SSO) do vCenter. Cada VCSA terá uma instância do VUM implementada. As propriedades de configuração que você modifica são aplicadas somente à instância do VUM especificada e que não são propagadas para as outras instâncias no grupo.
+Se você tiver instâncias primárias e secundárias do vCenter Server, os VCSAs serão configurados para estarem em um único domínio de Conexão única (SSO) do vCenter. Cada VCSA terá uma instância do VUM implementada. As propriedades de configuração que você modifica são aplicadas somente à instância do VUM especificada e que não são propagadas para as outras instâncias no grupo.
 
 É possível especificar uma instância do VUM selecionando o nome do VCSA com o qual a instância do VUM é registrada na barra de navegação. Também é possível gerenciar linhas de base e grupos de linhas de base, bem como varrer e corrigir somente os objetos de inventário que são gerenciados pelo VCSA com o qual a instância do VUM é registrada.
 
 ### Links relacionados
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [Soluções VMware no IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX no {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Soluções de VMware no {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
