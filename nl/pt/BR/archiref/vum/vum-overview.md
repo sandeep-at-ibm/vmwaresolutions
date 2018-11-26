@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
 # Visão geral do VMware Update Manager
 
 O VMware Update Manager (VUM) usa um processo multiestágio para fazer upgrade de objetos do vSphere e aplicar correções ou extensões. Esse processo permite um procedimento de atualização suave com um mínimo de tempo de inatividade do sistema. Antes de olharmos para este processo, precisamos entender os termos a seguir:
-* **Objeto de inventário** - um objeto dentro do vCenter, como máquina virtual, dispositivos virtuais ou host do vSphere ESXi
+* **Objeto de inventário** - um objeto no vCenter, como uma máquina virtual, dispositivos virtuais ou um host vSphere ESXi.
 * **Linha de base** - as linhas de base contêm uma coleção de uma ou mais correções, extensões, service packs, correções de bug ou upgrades e podem ser classificadas como linhas de base de correção, extensão ou upgrade. Há duas classificações de linhas de base: Host e VM/VA e ambas têm linhas de base predefinidas pelo VMware e as Customizadas podem ser incluídas conforme necessário:
   - Linhas de Base de Hosts predefinidas:
     - Correções Críticas do Host
@@ -38,7 +38,7 @@ O download de upgrades, correções de host, extensões e metadados relacionados
 * Notificações, alertas e rechamadas de correção para hosts ESXi 5.5 e ESXi 6.x.
 * Metadados sobre upgrades para dispositivos virtuais.
 
-O VUM suporta a rechamada de correções para hosts que estão executando o ESXi 5.0 ou mais recente. Uma correção será rechamada se a correção liberada tiver problemas ou potenciais problemas. Depois de varrer os hosts em sua instância do VCS, o VUM alerta você se a correção rechamada foi instalada em um determinado host. As correções rechamadas não podem ser instaladas em hosts com o VUM. O VUM também exclui todas as correções rechamadas do repositório de correção. Depois que uma correção do problema é liberada, o VUM faz download da nova correção para seu repositório de correção. Se você já tiver instalado a correção problemática, o VUM notificará que uma correção foi liberada e solicitará que aplique a nova correção.
+O VUM suporta a rechamada de correções para hosts que estão executando o ESXi 5.0 ou mais recente. Uma correção será rechamada se a correção liberada tiver problemas ou potenciais problemas. Depois que você varrer os hosts no VMware vCenter Server na instância do {{site.data.keyword.cloud}}, o VUM o alertará se a correção rechamada tiver sido instalada em um determinado host. As correções rechamadas não podem ser instaladas em hosts com o VUM. O VUM também exclui todas as correções rechamadas do repositório de correção. Depois que uma correção do problema é liberada, o VUM faz download da nova correção para seu repositório de correção. Se você já tiver instalado a correção problemática, o VUM notificará que uma correção foi liberada e solicitará que aplique a nova correção.
 
 A interface do cliente VUM fornece duas visualizações principais:
 *	Visualização de Administração
@@ -63,5 +63,5 @@ A visualização de conformidade de um objeto de inventário selecionado é aces
 
 ### Links relacionados
 
-* Arquitetura da solução VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [Soluções VMware no IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX no {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Soluções de VMware no {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

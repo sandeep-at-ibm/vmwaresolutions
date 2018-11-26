@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -56,9 +56,9 @@ O fluxo de trabalho a seguir descreve o processo para executar um upgrade orques
 * Durante um upgrade do VMware Tools, as máquinas virtuais devem ser ligadas. Se uma máquina virtual estiver em um estado desligado ou suspenso antes da correção, o VUM ligará a máquina. Após o upgrade ser concluído, o VUM reiniciará a máquina e restaurará o estado da energia original da máquina virtual.
 * Durante um upgrade de hardware da máquina virtual, as máquinas virtuais devem ser encerradas. Depois que a correção é concluída, o VUM restaura o estado da energia original das máquinas virtuais. Se uma máquina virtual estiver ligada, o VUM desligará a máquina, fará upgrade do hardware virtual e, em seguida, ligará a máquina virtual.
 
-Agora é possível usar esses grupos de linhas de base nos processos de varredura, revisão, preparação e correção.
+Agora é possível usar esses grupos de linha de base nos processos de varredura, revisão, preparação e correção.
 
 ### Links relacionados
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [Soluções VMware no IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX no {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Soluções de VMware no {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)

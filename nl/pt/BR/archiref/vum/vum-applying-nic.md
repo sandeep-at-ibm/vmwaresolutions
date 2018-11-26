@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -14,7 +14,7 @@ O ESXi 6.5 contém muitos novos drivers nativos que são uma substituição aos 
 
 O ixgben é um driver nativo que substitui o driver vmklinux net-ixgbe, mas não suporta SR-IOV e SW FcOE. A automação do ICVS não teria ativado esse driver quando o host vSphere ESXi estivesse provisionado. É aconselhável ativar esse driver para os benefícios de desempenho que ele traz. O procedimento a seguir descrito neste apêndice mostra como ativar e desativar os drivers nativos usando o vSphere Command-Line (vCLI).
 
-Antes de iniciar essa tarefa, recupere todos os endereços IP de IPMI de hosts físicos, IDs de login e senhas do [portal de infraestrutura do IBM Cloud](https://control.softlayer.com/devices). Isso é necessário em uma restauração ou para verificar o progresso de um upgrade, em que não existe acesso direto de rede ao host.
+Antes de iniciar esta tarefa, recupere todos os endereços IP, IDs de login e senhas IPMI dos hosts físicos do [portal de infraestrutura do {{site.data.keyword.cloud}}](https://control.softlayer.com/devices). Isso é necessário em uma restauração ou para verificar o progresso de um upgrade, em que não existe acesso direto de rede ao host.
 
 Para cada host, sucessivamente:
 1. Use o vSphere Web Client para colocar o host vSphere ESXi no modo de manutenção, selecionando **Página inicial** > **Hosts e clusters**. Na área de janela do Navegador, selecione o host vSphere ESXi e clique com o botão direito no host e selecione **Modo de manutenção** > **Entrar no modo de manutenção**. Como o host faz parte de um cluster DRS automatizado, as máquinas virtuais são migradas para hosts diferentes quando o host entra no modo de manutenção.
@@ -29,12 +29,12 @@ Para cada host, sucessivamente:
 7. Se a mudança não funcionar, para reverter, execute o comando a seguir:
   `esxcli system module set --enabled=false --module=ixgben`
 
-8. Se não for possível se conectar ao host por meio da rede, execute o comando anterior por meio do console do IPMI usando a janela de controle do IBM Cloud.
+8. Se não for possível se conectar ao host pela rede, execute o comando anterior por meio do console IPMI usando a janela de controle do {{site.data.keyword.cloud_notm}}.
 9. Após a reinicialização do host vSphere ESXi, você agora observa o driver ixgbe padrão que está carregado e ativado.
 
-Se for necessário reverter e não for possível usar SSH para o host vSphere ESXi, será necessário efetuar login no console do KVM para o host que precisa da reversão por meio da janela de controle do IBM Cloud.
+Se for necessário reverter e não for possível aplicar SSH ao host vSphere ESXi, será necessário efetuar login no console do KVM do host que precisa da reversão por meio da janela de controle do {{site.data.keyword.cloud_notm}}.
 
-Use o ID e a senha que são listados na janela de controle do IBM Cloud com o endereço IP do IPMI para efetuar login na interface da web do IPMI. É necessário estar conectado ao data center no qual o host está localizado por meio da VPN. Para obter mais informações, veja [Introdução à VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
+Use o ID e a senha listados na janela de controle do {{site.data.keyword.cloud_notm}} com o endereço IP IPMI para efetuar login na interface da web do IPMI. É necessário estar conectado ao data center no qual o host está localizado por meio da VPN. Para obter mais informações, veja [Introdução à VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
 
 1. Acesse a página Detalhes do dispositivo, gerenciamento remoto para o host vSphere ESXi e selecione **Ações** > **Console do KVM**. Outra janela será aberta para você inserir o Usuário e a Senha do IPMI.
 2. Selecione **Controle remoto** > **iKVM/HTML5** e clique em **iKVM/HTML5** para ativar novamente. Agora você será capaz de acessar o console do host vSphere ESXi.
@@ -47,5 +47,5 @@ Use o ID e a senha que são listados na janela de controle do IBM Cloud com o en
 
 ### Links relacionados
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [Soluções VMware no IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware HCX no {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Soluções de VMware no {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
