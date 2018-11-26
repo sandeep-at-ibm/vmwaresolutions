@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visão geral do NetApp ONTAP Select
 
@@ -57,7 +61,8 @@ O NetApp ONTAP Select é executado em um cluster VMware e virtualiza o armazenam
 
 Os componentes a seguir estão incluídos em sua instância do NetApp ONTAP Select.
 
-**Nota:** a disponibilidade e a precificação de configurações padronizadas podem variar com base no {{site.data.keyword.CloudDataCent_notm}} que está selecionado para implementação.
+A disponibilidade e a precificação de configurações padronizadas podem variar com base no {{site.data.keyword.CloudDataCent_notm}} selecionado para implementação.
+{:note}
 
 ### Armazenamento
 
@@ -73,7 +78,8 @@ Quatro {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} co
 * **Alto desempenho (Grande)** – Licença Premium/Dual Intel Xeon E5-2650 v4 (total de 24 núcleos, 2.2 GHz)/128 GB de RAM/Capacidade de 22 unidades SSD de 3,8 TB por nó/Capacidade efetiva de um cluster de 4 nós – 118 TB
 * **Alta capacidade** - Licença padrão/Dual Intel Xeon E5-2650 v4 (Total de 24 núcleos, 2,2 GHz)/64 GB de RAM/Capacidade de trinta e quatro unidades SATA de 4 TB por nó/Capacidade efetiva de um cluster de 4 nós – 190 TB
 
-**Nota:** as unidades SSD (Solid-State Disk) de 3,8 TB serão suportadas quando forem disponibilizadas geralmente em um data center.
+As unidades SSD de 3,8 TB (Disco de estado sólido) são suportadas quando são disponibilizadas geralmente em um data center.
+{:note}
 
 ### Hardware
 
@@ -102,7 +108,9 @@ Duas VSIs (Virtual Server Instances):
 *  VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 *  Taxa de suporte e serviços (uma licença por nó)
 
-**Importante:** deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} criados na conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não no	{{site.data.keyword.slportal}} ou por qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente por meio do console do
+{{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
+{:important}
 
 **CUIDADO:** Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Inclusão, modificação, retorno, remoção ou desligamento de componentes
