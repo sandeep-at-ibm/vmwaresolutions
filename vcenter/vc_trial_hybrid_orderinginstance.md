@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -21,7 +21,9 @@ This trial is ideal for a proof of concept that demonstrates the speed of IBM’
 The single-node trial is for proof of concepts only. Do not run production workloads on this environment. Management functions such as adding and removing hosts and clusters, ordering additional add-on services, and applying updates are not supported.
 {:important}
 
-This trial is intended for use up to 90 days. When you are finished with the trial, you may delete this environment and then provision a highly available environment that meets your capacity needs. For more information, see [Ordering vCenter Server with Hybridity Bundle instances](vc_hybrid_orderinginstance.html).
+This trial is intended for use up to 90 days. When you are finished with the trial, you may delete this environment and then provision a highly available environment that meets your capacity needs.
+
+For information about the architecture design, see [HCX on IBM Cloud architecture design for the Single-node Trial for vCenter Server on IBM Cloud](../archiref/trial/vc_trial_hcx_arch.html).
 
 ## Technical specifications for Single-node Trial for vCenter Server instances
 
@@ -41,37 +43,56 @@ The following networking components are ordered:
 *  Three VLANs (Virtual LANs): one public VLAN and two private VLANs
 *  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching additional VXLANs to new logical interfaces on the DLR.
 *  Two VMware NSX Edge Services Gateways:
-  * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation.
 
     This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the Single-node Trial for vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, note that using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
     {:important}
-  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
-
-For more information about networking components ordered when deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [HCX on {{site.data.keyword.cloud_notm}} overview](../services/hcx_considerations.html).
+  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access.
 
 ### Virtual Server Instances
 
 The following virtual server instances (VSIs) are ordered:
 
-* A VSI for IBM CloudBuilder, which is shut down after the instance deployment is completed.
+* A VSI for IBM CloudBuilder, which is cancelled after the instance deployment is completed.
 * A Microsoft Windows Server VSI for Microsoft Active Directory (AD) is deployed and can be looked up. The VSI functions as the DNS for the instance where the hosts and VMs are registered.
 
 ### IBM-provided licenses and fees
 
 The following licenses are included with your Single-node Trial for vCenter Server instance order.
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 
 Single-node Trial for vCenter Server instances do not support Bring Your Own License.
 {:note}
 
-Additional support and services fees can apply.
-
 ## Technical specifications for VMware HCX on IBM Cloud
 
-The Single-node Trial for vCenter Server includes HCX on {{site.data.keyword.cloud_notm}}. For information about technical specifications and considerations for HCX on {{site.data.keyword.cloud_notm}}, see [VMware HCX on IBM Cloud overview](../services/hcx_considerations.html).
+The Single-node Trial for vCenter Server includes HCX on {{site.data.keyword.cloud_notm}}. The following components are ordered and included in the HCX on {{site.data.keyword.cloud_notm}} service.
+
+On-premises HCX instances include only licensing and activation.
+{:note}
+
+### An active/passive pair of VMware NSX Edge Services Gateways for HCX Management
+
+* CPU: 6 vCPU
+* RAM: 8 GB
+* Disk: 3 GB VMDK
+
+### HCX Management Appliance - virtual machine
+
+* CPU: 4 vCPU
+* RAM: 12 GB
+* Disk: 60 GB VMDK
+
+Additional HCX appliances are deployed during configuration as necessary for L2 connectivity, WAN optimization, and gateway connections.
+
+### Networking
+
+* One public portable subnet with 16 IP addresses
+* Two private portable subnets with 64 IP addresses
+* Eight IP addresses from private portable vMotion subnet
 
 ## Requirements and planning for ordering Single-node Trial for vCenter Server instances
 
@@ -80,18 +101,17 @@ Ensure that you confirm the following requirements and complete the following ta
  * Requires VMware vSphere and vCenter 5.5 or higher.
  * The vSphere environment must have distributed switches for the VMx that will be migrated to the {{site.data.keyword.cloud_notm}}.
  * The HCX Manager Virtual Appliance must be able to be deployed on a private network in the on-premises environment and must be allowed to access the public Internet.
-* The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](../vmonic/slaccountrequirement.html).
-*  Configure the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
-* Review the instance name requirements:  
- * Only alphanumeric and dash (-) characters are allowed.
- * The instance name must start and end with an alphanumeric character.
- * The maximum length of the instance name is 10 characters.
- * The instance name must be unique within your account.
-* Review the {{site.data.keyword.CloudDataCents_notm}} that meet requirements for the physical infrastructure. For more information, see the *{{site.data.keyword.CloudDataCent_notm}} availability* section in [Requirements and planning for vCenter Server with Hybridity Bundle instances](../vcenter/vc_hybrid_planning.html#ibm-cloud-data-center-availability).
+ * To use {{site.data.keyword.vmwaresolutions_short}} to order instances, you must have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account. The cost of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
+ *  Configure the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Settings** from the left navigation pane.
+ * Review the instance name requirements:
+    * Only alphanumeric and dash (-) characters are allowed.
+    * The instance name must start and end with an alphanumeric character.
+    * The maximum length of the instance name is 10 characters.
+    * The instance name must be unique within your account.
 
 ## Procedure to order Single-node Trial for vCenter Server instances
 
-1. On the **Single-node Trial for VMware vCenter Server on {{site.data.keyword.cloud_notm}}** page, click the **vCenter Server** card and click **Continue**.
+1. On the **Single-node Trial for VMware vCenter Server on {{site.data.keyword.cloud_notm}}** page, click **Continue**.
 2. On the **Single-node Trial for VMware vCenter Server** page, complete the steps to request an {{site.data.keyword.cloud_notm}} infrastructure account or provide your existing **User Name** and **API Key** and click **Retrieve**.
 
  This section is hidden if the API key already exists.
@@ -99,7 +119,7 @@ Ensure that you confirm the following requirements and complete the following ta
 3. Enter the instance name.
 4. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.  
 
- The {{site.data.keyword.CloudDataCent_notm}} is pre-selected. Select a different {{site.data.keyword.CloudDataCent_notm}} location, if needed.
+ By default, the DAL09 {{site.data.keyword.CloudDataCent_notm}} is pre-selected. Select a different {{site.data.keyword.CloudDataCent_notm}} location, if needed.
  {:note}
 5. On the **Order Summary** pane, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
@@ -140,12 +160,9 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. The foll
 
 #### Viewing instance details
 
-You can check the status of the deployment by viewing the instance details. For information about viewing instance details, see:
+You can check the status of the deployment by viewing the instance details. Click **Deployed Instances** from the left navigation pane and locate the **vCenter Server Instances** or **On-premises HCX Instances** table to view information about the instances that you ordered.
 
-* [Viewing vCenter Server instances](vc_viewinginstances.html)
-* [Viewing on-premises VMware HCX on IBM Cloud instances](../services/standalone_viewingserviceinstances.html)
-
-When the instance is successfully deployed, the components that are described in the *Technical specifications* sections of this topic are installed on your VMware virtual platform and the on-premises HCX on {{site.data.keyword.cloud_notm}} service activation key is available on the on-premises HCX on {{site.data.keyword.cloud_notm}} details page.
+When the instance is successfully deployed, the components that are described in the *Technical specifications* sections of this topic are installed on your VMware virtual platform and the on-premises HCX on {{site.data.keyword.cloud_notm}} service activation key is listed in the **On-premises HCX Instances** table.
 
 The status of the instance changes to **Ready to Use** and you receive a notification by email.
 
@@ -155,8 +172,8 @@ Install the on-premises HCX Enterprise Manager and configure the connection to y
 
 1. Locate the on-premises activation key on the **Deployed Instances** page.
   1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
-  2. In the **vCenter Server Instances** table, review the **Type** column to locate the single-node trial instance and make note of the instance name.
-  3. Scroll to the **On-premises HCX Instances** table and review the **Name** column to locate the instance that has the same name as the single-node instance. The instance name is appended with *-OnPrem*.
+  2. In the **vCenter Server Instances** table, review the **Type** column to locate the vCenter Server Single-node Trial instance and make note of the instance name.
+  3. Scroll to the **On-premises HCX Instances** table and review the **Name** column to locate the instance that has the same name as the single-node instance that you ordered with the *-OnPrem* suffix.
   4. Make note of the key in the **Activation key** field.
 2. Obtain the on-premises HCX Enterprise Manager Open Virtual Appliance (OVA) from the HCX on {{site.data.keyword.cloud_notm}} HCX Manager console.
   1. Connect to the HCX Cloud Console.
@@ -196,14 +213,31 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 
 ## Procedure to delete Single-node Trial for vCenter Server instances
 
-To release the components that you ordered in a Single-node Trial for vCenter Server instance, delete the instance.
+When you delete a Single-node Trial for vCenter Server instance, the following components are released sequentially:
 
-For more information, see [Deleting vCenter Server instances](vc_deletinginstance.html).
+1. All deployed services
+3. VMware product licenses
+4. ESXi servers
+5. Subnets
+6. VLANs
+
+Because of resource dependencies, the components in your instance are not released immediately when you delete the instance. For example, the subnets and VLANs cannot be deleted until the ESXi servers are fully reclaimed by {{site.data.keyword.cloud_notm}} infrastructure, which happens at the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle. At the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle, which is typically 30 days, the subnets and VLANs are deleted and the instance deletion is completed.
+
+You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the deleted instance.
+{:note}
+
+Complete the following steps to delete a Single-node Trial for vCenter Server instance:
+
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+2. In the **vCenter Server Instances** table, find the instance to delete.
+3. In the **Actions** column, click the Delete icon.
+   The status of the instance is changed to **Deleting**. When the instance is deleted successfully, the components of the instance are released, and the status of the instance is changed to **Deleted**.
+4. If you want to remove the instance record from the {{site.data.keyword.vmwaresolutions_short}} console, complete the following steps:
+   1. In the **Actions** column, click the Delete icon again.
+   2. In the **Delete Instance** window, click **OK**.
 
 ### Related links
 
-* [Signing up for an {{site.data.keyword.cloud_notm}} account](../vmonic/signing_softlayer_account.html)
-* [Glossary of HCX terms](../services/hcx_glossary.html)
+* [HCX on IBM Cloud architecture design for the Single-node Trial for vCenter Server on IBM Cloud](../archiref/trial/vc_trial_hcx_arch.html)
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)
-* [Ordering vCenter Server with Hybridity Bundle instances](vc_hybrid_orderinginstance.html)

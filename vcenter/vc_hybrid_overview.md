@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -92,7 +92,7 @@ For more information on networking components ordered when deploying the HCX on 
 ### Virtual Server Instances
 
 The following virtual server instances (VSIs) are ordered:
-* A VSI for IBM CloudBuilder, which is shut down after the instance deployment is completed.
+* A VSI for IBM CloudBuilder, which is cancelled after the instance deployment is completed.
 * You can choose to deploy a single Microsoft Windows Server VSI for Microsoft Active Directory (AD) or two high availability Microsoft Windows VMs in the management cluster to help enhance security and robustness.
 
 ### vSAN storage
