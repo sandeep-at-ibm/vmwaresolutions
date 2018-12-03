@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-15"
+lastupdated: "2018-11-27"
 
 ---
 
@@ -18,7 +18,7 @@ You can sign up for an {{site.data.keyword.cloud}} account by using an existing 
 
 The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, which was previously known as the IBM SoftLayer account, is used to log in to the {{site.data.keyword.cloud_notm}} infrastructure customer portal that provides some additional function to manage infrastructure products and services.
 
-To sign up for an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, upgrade your {{site.data.keyword.cloud_notm}} account to the Pay-As-You-Go type of account. For more information, see [How do I upgrade or change my account type?](https://console.bluemix.net/docs/account/account_faq.html#changeacct)
+To sign up for an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, upgrade your {{site.data.keyword.cloud_notm}} account to the Pay-As-You-Go type of account. For more information, see [How do I upgrade or change my account type?](../../../account/account_faq.html)
 
 ### Related links
 
