@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -50,11 +50,6 @@ Additional HCX appliances are deployed during configuration as necessary for L2 
 * One public portable subnet with 16 IP addresses
 * Two private portable subnets with 64 IP addresses
 * Eight IP addresses from private portable vMotion subnet
-
-### Licenses and fees
-
-* Base license fee: required charge for service
-* Managed VM fee: charged per VM that is migrated monthly
 
 ## Considerations when you install HCX on IBM Cloud
 
