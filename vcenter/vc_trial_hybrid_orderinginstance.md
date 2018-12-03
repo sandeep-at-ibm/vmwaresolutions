@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -36,7 +36,7 @@ The availability and pricing of standardized hardware configurations might vary 
 
 A Dual Intel Xeon Gold 5120 (28 Cores, 2.20 GHz) processor with 384 GB RAM.
 
-### Networking
+### Networking specifications for Single-node Trial for vCenter Server instances
 
 The following networking components are ordered:
 *  10 Gbps dual public and private network uplinks
@@ -88,7 +88,7 @@ On-premises HCX instances include only licensing and activation.
 
 Additional HCX appliances are deployed during configuration as necessary for L2 connectivity, WAN optimization, and gateway connections.
 
-### Networking
+### Networking specifications for the HCX on IBM Cloud service
 
 * One public portable subnet with 16 IP addresses
 * Two private portable subnets with 64 IP addresses

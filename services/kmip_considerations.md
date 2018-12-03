@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-12"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -32,12 +32,12 @@ The following specifications are included with the KMIP for VMware on {{site.dat
 
 KMIP for VMware on {{site.data.keyword.cloud_notm}} uses the IBM Key Protect for {{site.data.keyword.cloud_notm}} service to create, encrypt, and decrypt encryption keys. Therefore, before you install KMIP for VMware on {{site.data.keyword.cloud_notm}}, ensure that:
 * You ordered a usable Key Protect service.
-* An {{site.data.keyword.cloud_notm}} service ID was created by following the steps in [Creating a service ID](https://console.bluemix.net/docs/iam/serviceid.html#creating-a-service-id). This service ID is used to access the Key Protect service instance that you created.
+* An {{site.data.keyword.cloud_notm}} service ID was created by following the steps in [Creating a service ID](../../../iam/serviceid.html). This service ID is used to access the Key Protect service instance that you created.
 * You granted the following access levels for the service ID:
    * At the platform access level: Viewer authority to your IBM Key Protect instance.
    * At the service access level: Writer authority to your IBM Key Protect instance.
 * You have an API key for the created service ID. The key is required when you order the service.
-* You created at least one customer root key (CRK) from the Key Protect user interface by following the steps in [Creating root keys](https://console.bluemix.net/docs/services/keymgmt/keyprotect_create_root.html#create_root_keys), or by using the REST API in [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect).
+* You created at least one customer root key (CRK) from the Key Protect user interface by following the steps in [Creating root keys](../../keymgmt/keyprotect_create_root.html), or by using the REST API in [IBM Key Protect](https://cloud.ibm.com/apidocs/key-protect).
 
    **Important:** You cannot order the service without CRKs. It is highly recommended that you use the method to create a CRK using existing key material, and back up the key material that you are creating. By doing so, you ensure that you can recover your keys if a failure of the data center where IBM Key Protect is applied to store your CRKs.
 
@@ -55,7 +55,7 @@ Therefore, before you remove the service, ensure that no virtual machines or vSA
 ### Related links
 
 * [Ordering KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip_ordering.html)
-* [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/services/keymgmt/index.html#getting-started-with-key-protect)
+* [IBM Key Protect for {{site.data.keyword.cloud_notm}}](../../keymgmt/index.html)
 * [vSphere Security](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)
 * [FAQ](../vmonic/faq.html)
 * [Contacting IBM Support](../vmonic/trbl_support.html)
