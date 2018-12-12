@@ -4,10 +4,10 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-13"
 
 ---
-# vCenter Server Hybridity Bundle の概要
+# vCenter Server on IBM Cloud with Hybridity Bundle の概要
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle は、セキュアでシームレスなインフラストラクチャー・ハイブリッド性と真のアプリケーション・モビリティーを実現するために、素早く簡単にオンプレミス・インフラストラクチャーをクラウドに拡張するために役立つ、ホステッド・プライベート・クラウドです。
 
@@ -17,7 +17,7 @@ vCenter Server Hybridity Bundle を拡張するために、多くのオプショ
 
 プラットフォーム・セキュリティー・サービスには HyTrust CloudControl on {{site.data.keyword.cloud_notm}} が含まれますが、これは、自動化されたセキュリティーおよびコンプライアンスのサポートを提供し、クラウド環境と管理者に対してより優れた可視性と制御を可能にしています。 HyTrust DataControl on {{site.data.keyword.cloud_notm}} は、強力な暗号化とスケーラブルな鍵管理によるデータ保護機能を備え、ワークロードを全ライフサイクルにわたって保護します。 {{site.data.keyword.cloud_notm}} Secure Virtualization は、コンプライアンスを簡素化し、暗号化やジオフェンシング・ポリシー、そして役割ベースのアクセス制御によってデータを保護しますが、KMIP for VMware on {{site.data.keyword.cloud_notm}} の暗号鍵ライフサイクル管理オファリングは、{{site.data.keyword.cloud_notm}} サービスやお客様の組み込みアプリケーションで使用される暗号鍵を管理します。
 
-ネットワーク・セキュリティーのオプションには、FortiGate Security Appliance デバイスの高可用性ペアをプロビジョンする FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} があります。これにより、ネットワーク・トラフィックを分析し、仮想インフラストラクチャーを保護できます。別のオプションとして、{{site.data.keyword.cloud_notm}} 上に FortiGate 仮想マシンの高可用性ペアをデプロイする FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} があります。これにより、仮想インフラストラクチャー内に重要なセキュリティー制御を実装してリスクを軽減できます。さらに多くのネットワーク・セキュリティー・オファリングを開発中です。
+ネットワーク・セキュリティーのオプションには、FortiGate Security Appliance デバイスの高可用性ペアをプロビジョンする FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} があります。これにより、ネットワーク・トラフィックを分析し、仮想インフラストラクチャーを保護できます。別のオプションとして、{{site.data.keyword.cloud_notm}} 上に FortiGate 仮想マシンの高可用性ペアをデプロイする FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} があります。これにより、仮想インフラストラクチャー内に重要なセキュリティー制御を実装してリスクを軽減できます。 さらに多くのネットワーク・セキュリティー・オファリングを開発中です。
 
 F5 on {{site.data.keyword.cloud_notm}} ネットワーク・ロード・バランサー・サービス・オファリングは、パフォーマンスを最適化し、F5 BIG-IP スイートを使用して、最も重要なアプリケーションの可用性とセキュリティーを確保します。
 
