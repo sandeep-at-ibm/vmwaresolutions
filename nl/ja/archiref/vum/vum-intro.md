@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -55,7 +55,7 @@ vSAN を使用して vCenter Server をデプロイした場合は、まず [vSA
 
 {{site.data.keyword.cloud_notm}} インフラストラクチャー管理の自動化を更新する場合は、{{site.data.keyword.vmwaresolutions_short}} コンソールを使用します。
 
-[{{site.data.keyword.vmwaresolutions_short}} コンソール](https://console.bluemix.net/infrastructure/vmware-solutions/console)を使用すると、以下のアクションを実行できます。
+[{{site.data.keyword.vmwaresolutions_short}} コンソール](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console)を使用すると、以下のアクションを実行できます。
 *	ライセンスのアップグレード (例えば、NSX Base の別のバージョンへのアップグレード)
 *	vCenter Server プラットフォームの更新の開始 (例えば、バージョン 2.5 への移行)
 *	更新の状況の表示
