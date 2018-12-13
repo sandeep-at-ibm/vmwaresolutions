@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -15,7 +15,7 @@ Lo scopo di questo documento è quello di fornirti, in qualità di amministrator
 VUM consente la gestione centralizzata e automatizzata delle patch e delle versioni per VMware vSphere e ti consente di effettuare le seguenti attività nel tuo ambiente Mware vCenter Server on {{site.data.keyword.cloud_notm}}:
 * Aggiornare e applicare patch agli host vSphere ESXi.
 * Installare e aggiornare software di terze parti sugli host.
-* Aggiornare l'hardware delle macchine virtuali, i VMware Tools e i dispositivi virtuali.
+* Aggiornare l'hardware delle macchine virtuali, i VMware Tools e le applicazioni virtuali.
 
 Questo documento descrive anche i processi per conservare i seguenti componenti della tua istanza vCenter Server:
 * vCenter Server Appliance
@@ -55,7 +55,7 @@ Se hai distribuito un vCenter Server che utilizza vSAN, vedi prima [Aggiornament
 
 Se vuoi aggiornare l'automazione della gestione dell'infrastruttura {{site.data.keyword.cloud_notm}}, utilizza la console {{site.data.keyword.vmwaresolutions_short}}.
 
-La [Console {{site.data.keyword.vmwaresolutions_short}}](https://console.bluemix.net/infrastructure/vmware-solutions/console) ti consente di portare a termine le seguenti azioni:
+La [Console {{site.data.keyword.vmwaresolutions_short}}](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console) ti consente di effettuare le seguenti azioni:
 *	Aggiornare le licenze, ad esempio aggiornare NSX Base a un'altra versione
 *	Avviare gli aggiornamenti alla piattaforma vCenter Server, ad esempio, passare alla versione 2.5
 *	Visualizzare lo stato degli aggiornamenti
