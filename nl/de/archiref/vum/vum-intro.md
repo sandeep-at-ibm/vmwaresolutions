@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -47,7 +47,7 @@ Dieses Dokument setzt sich aus folgenden Abschnitten zusammen:
   - [Sammeln von Metadaten](vum-metadata.html) - VUM lädt Metadaten zu den Upgrades, Patches oder Erweiterungen über einen vordefinierten automatischen Prozess herunter, den Sie ändern können. In regelmäßigen konfigurierbaren Intervallen nimmt VUM Kontakt zu VMware oder Drittanbieterquellen auf, um die aktuellen Metadaten zu verfügbaren Upgrades, Patches oder Erweiterungen zu erfassen.
   - [Erstellen von Baselines](vum-baselines.html) - Sie können die vordefinierten Baselines und Baselinegruppe verwenden oder neue angepasste erstellen. Baselines und Baselinegruppen werden dann an Bestandsobjekte angehängt.
   - [Prüfen und Auswerten](vum-scanning.html) - Die Bestandsobjekte werden geprüft und die Ergebnisse ausgewertet, um zu ermitteln, wie sie den Baselines und Baselinegruppen entsprechen. Die Prüfergebnisse können anhand von Textsuche, Gruppenauswahl, Baselineauswahl und Konformitätsstatusauswahl gefiltert werden.
-  - [Staging und Korrektur](vum-staging.html) - Patches und Erweiterungen können optional vor der Korrektur zwischengespeichert ('staged') werden, um sicherzustellen, dass sie auf den Host heruntergeladen werden. Bei der Korrektur ('remediation') wendet VUM die Patches, Erweiterungen und Upgrades auf die Bestandsobjekte an.
+  - [Staging und Korrektur](vum-staging.html) - Patches und Erweiterungen können optional vor der Korrektur zwischengespeichert ("staged") werden, um sicherzustellen, dass sie auf den Host heruntergeladen werden. Bei der Korrektur ("remediation") wendet VUM die Patches, Erweiterungen und Upgrades auf die Bestandsobjekte an.
 
 In diesem Dokument wird davon ausgegangen, dass Sie eine primäre vCenter Server-Instanz oder eine Reihe von separaten primären vCenter Server-Instanzen bereitgestellt haben. Wenn Sie primäre und sekundäre vCenter Server-Instanzen bereitgestellt haben und daher Single Sign-on (SSO) verwenden, finden Sie weitere Informationen hierzu unter [Über SSO angebundene vCenter](vum-updating-vcsa.html).
 
@@ -55,7 +55,7 @@ Wenn Sie eine vCenter Server-Instanz mithilfe von vSAN bereitgestellt haben, les
 
 Wenn Sie die Automatisierung des {{site.data.keyword.cloud_notm}}-Infrastrukturmanagements aktualisieren möchten, verwenden Sie die {{site.data.keyword.vmwaresolutions_short}}-Konsole.
 
-Über die [{{site.data.keyword.vmwaresolutions_short}}-Konsole](https://console.bluemix.net/infrastructure/vmware-solutions/console) können Sie die folgenden Aktionen ausführen:
+Über die [{{site.data.keyword.vmwaresolutions_short}}-Konsole](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console) können Sie die folgenden Aktionen ausführen:
 *	Durchführen von Upgrades für Lizenzen, z. B. Upgrade von NSX Base auf eine andere Version
 *	Initiieren von Updates für die vCenter Server-Plattform, z. B. Umstellen auf Version 2.5
 *	Anzeigen des Status von Updates

@@ -35,7 +35,7 @@ Tabelle 1. Werte für die Bereitstellung
 | Hostname | Proxy01 | |
 | Adresse | proxy ip | Eine Ersatz-IP-Adresse sollte aus dem privaten portierbaren Teilnetz des Kunden verwendet werden, die während des Bereitstellungsprozesses zugewiesen wird. Nur zwei IP-Adressen werden für dieses Teilnetz reserviert; eine für den BCR und die andere für das Kunden-ESG.
 | Netzmaske | 255.255.255.192 | |
-| Gateway| customer-nsx-edge private uplink ip | Dies ist die Standardgateway-Einstellung für den Proxy-Server, nämlich die private Uplink-IP-Adresse 'customer-nsx-edge'. Die IP findet sich auf der Registerkarte **Einstellungen** für **customer-nsx-edge**. |
+| Gateway| customer-nsx-edge private uplink ip | Dies ist die Standardgateway-Einstellung für den Proxy-Server, nämlich die private Uplink-IP-Adresse "customer-nsx-edge". Die IP findet sich auf der Registerkarte **Einstellungen** für **customer-nsx-edge**. |
 | DNS-Server | AD/DNS ip | Diese IP-Adresse befindet sich auf der Instanzseite in der {{site.data.keyword.vmwaresolutions_short}}-Konsole auf der Seite **Bereitgestellte Instanzen**. |
 | BCR-IP | bcr ip | Dies ist die IP-Adresse des {{site.data.keyword.cloud_notm}} Backend Customer Router und fungiert als Gateway für 10.0.0.0/8 und 161.26.0.0/16. Diese Adresse wird in einer statischen Route im Proxy-Server verwendet, sodass sie die VCSA und den AD/DNS-Server erreichen kann. |
 
@@ -46,9 +46,9 @@ Einstellungen für NSX-Kunden-ESG-Firewall und NAT sind erforderlich, um den Dat
 ### Firewall
 
 1. Wechseln Sie zu **Home** > **Vernetzung & Sicherheit**.
-2. Wählen Sie **NSX Edges**, 'customer-nsx-edge' und anschließend **Firewall** aus.
+2. Wählen Sie **NSX Edges**, "customer-nsx-edge" und anschließend **Firewall** aus.
 3. Klicken Sie auf das Symbol **+** und fügen Sie eine Firewallregel hinzu.
-4. Geben Sie die erforderlichen Parameter entsprechend den Angaben in der folgenden Tabelle an. Die neue Firewallregel muss vor der letzten Regel, der 'Default-Deny'-Regel (Standardverweigerung), stehen.
+4. Geben Sie die erforderlichen Parameter entsprechend den Angaben in der folgenden Tabelle an. Die neue Firewallregel muss vor der letzten Regel, der "Default-Deny"-Regel (Standardverweigerung), stehen.
 
 Tabelle 2. Firewallregel
 
@@ -80,10 +80,10 @@ Verwenden Sie einen Browser auf Ihrem Jump-Server, um die CentOS-Minimal-ISO-Dat
 Erstellen Sie eine lokale vCenter-Inhaltsbibliothek. Auf die Bibliothek kann nur in der vCenter-Serverinstanz zugegriffen werden, in der sie erstellt wurde. Füllen Sie die Bibliothek mit den Vorlagen und ISOs, die für die Bereitstellung virtueller Maschinen (VMs) erforderlich sind.
 
 1. Navigieren Sie über den vSphere Web Client zu **Home** > **Inhaltsbibliothek** > **Objekte** > **Neue Inhaltsbibliothek erstellen** > **Abonnierte Bibliothek in vCenter erstellen**.
-2. Geben Sie einen Namen für die Inhaltsbibliothek ein (z. B. ISO), geben Sie in das Textfeld 'Hinweise' eine Beschreibung für die Bibliothek ein und klicken Sie auf **Weiter**.
+2. Geben Sie einen Namen für die Inhaltsbibliothek ein (z. B. ISO), geben Sie in das Textfeld "Hinweise" eine Beschreibung für die Bibliothek ein und klicken Sie auf **Weiter**.
 3. Wählen Sie **Lokale Inhaltsbibliothek** aus und klicken Sie auf **Weiter**.
 4. Wählen Sie einen Datenspeicher aus und klicken Sie anschließend auf einen geeigneten Datenspeicher (z. B. vsanDatastore).
-5. Überprüfen Sie die Informationen auf der Seite 'Bereit zum Abschließen' und klicken Sie auf **Fertigstellen**.
+5. Überprüfen Sie die Informationen auf der Seite "Bereit zum Abschließen" und klicken Sie auf **Fertigstellen**.
 
 ### Proxy-VM konfigurieren und CentOS und Squid installieren
 
@@ -95,7 +95,7 @@ Diese Aktivität umfasst die folgenden Tasks:
 
 #### Neue VM erstellen
 
-Mit dieser Task wird eine neue VM erstellt, die für den sofortigen Einsatz als Proxy-Server geeignet ist. Die Einstellungen von 'Tabelle 1 - Werte für die Bereitstellung' sollten für die Konfiguration verwendet werden.
+Mit dieser Task wird eine neue VM erstellt, die für den sofortigen Einsatz als Proxy-Server geeignet ist. Die Einstellungen von "Tabelle 1 - Werte für die Bereitstellung" sollten für die Konfiguration verwendet werden.
 
 1.	Bei Verwendung des vSphere Web Client wählen Sie **Home** > **VMs und Vorlagen** aus.
 2.	Klicken Sie im Navigatorfenster auf **datacenter1**, klicken Sie anschließend mit der rechten Maustaste und wählen Sie **Neue virtuelle Maschine** > **Neue virtuelle Maschine** aus.
@@ -105,8 +105,8 @@ Mit dieser Task wird eine neue VM erstellt, die für den sofortigen Einsatz als 
 6.	Wählen Sie einen geeigneten Datenspeicher aus (z. B. vsanDatastore), klicken Sie erneut auf **Weiter** und dann nochmals auf **Weiter**.
 7.	Wählen Sie unter **Familie des Gastbetriebssystems** die Option **Linux** aus, wählen Sie unter **Version des Gastbetriebssystems** die Option **CentOS 7 (64 Bit)** aus und klicken Sie dann auf **Weiter**.
 8.	Nehmen Sie die Einstellungen **CPU auf 1**, **Speicher auf 2048 MB** und **Neue Festplatte auf 25 GB** vor. Wählen Sie **ISO-Datei für Inhaltsbibliothek** und anschließend **CentOS-7-x86_64-Minimal** aus, klicken Sie auf **OK** und aktivieren Sie das Feld **Verbunden**.
-9.	Wählen Sie im Feld 'Neues Gerät' die Option **Netz** aus und klicken Sie dann auf **Hinzufügen**.
-10.	Wählen Sie das Netz **SDDC-DPortGroup-Mgmt** aus und stellen Sie sicher, dass das Kontrollkästchen 'Verbinden' aktiviert ist. Klicken Sie auf **Weiter**.
+9.	Wählen Sie im Feld "Neues Gerät" die Option **Netz** aus und klicken Sie dann auf **Hinzufügen**.
+10.	Wählen Sie das Netz **SDDC-DPortGroup-Mgmt** aus und stellen Sie sicher, dass das Kontrollkästchen "Verbinden" aktiviert ist. Klicken Sie auf **Weiter**.
 11.	Prüfen Sie die Angaben und klicken Sie auf **Fertigstellen**.
 
 #### CentOS installieren
@@ -149,7 +149,7 @@ Bei Squid bestehen keine Mindestvoraussetzungen an die Hardware, aber die Menge 
 6. Starten Sie nach der Installation sofort Squid, indem Sie den folgenden Befehl verwenden: `systemctl start squid`.
 7. Führen Sie den folgenden Befehl aus, um Squid automatisch beim Booten zu starten: `systemctl enable squid`.
 8. Stellen Sie sicher, dass Squid ausgeführt wird, indem Sie den folgenden Befehl ausführen: `systemctl status squid`.
-9. Die CentOS-Firewall muss den Zugriff auf den Squid-Port zulassen (TCP 3128); verwenden Sie dazu den folgenden Befehl: `firewall-cmd –add-port=3128/tcp –permanent`.
+9. Die CentOS-Firewall muss den Zugriff auf den Squid-Port zulassen (TCP 3128); verwenden Sie dazu den folgenden Befehl: `firewall-cmd -add-port=3128/tcp -permanent`.
 10.	Wenn Sie die Regel speichern und den Service erneut starten möchten, verwenden Sie den folgenden Befehl: `firewall-cmd -reload`.
 
 ## Ersteinrichtung von VUM

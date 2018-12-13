@@ -13,16 +13,16 @@ lastupdated: "2018-11-07"
 vSAN generiert Systembaselines und Baselinegruppen für die Verwendung mit VUM; Sie können diese empfohlenen Referenzkonfigurationen verwenden, um Software, Patches und Erweiterungen für die vSphere ESXi-Hosts in Ihrer vCenter-Serverinstanz mit vSAN zu aktualisieren. vSAN 6.6.1 und höher generiert automatisierte Buildempfehlungen für vSAN-Cluster. vSAN kombiniert Informationen im VMware-Kompatibilitätshandbuch und im vSAN-Versionskatalog mit Informationen zu den installierten vSphere ESXi-Releases.
 
 Diese empfohlenen Updates bieten das beste verfügbare Release, um Ihre Hardware in einem unterstützten Status zu halten.
-* **vSAN-Systembaselines** - vSAN-Buildempfehlungen werden über vSAN-Systembaselines für VUM zur Verfügung gestellt. vSAN generiert eine Baselinegruppe für jeden vSAN-Cluster. vSAN-Systembaselines werden im Teilfenster 'Baselines' der Registerkarte 'Baselines und Gruppen' aufgelistet. VUM prüft automatisch jeden vSAN-Cluster, um die Konformität anhand der Baselinegruppe zu überprüfen. Um ein Upgrade Ihres Clusters durchzuführen, müssen Sie die Systembaseline manuell über den VUM korrigieren. Sie können die vSAN-Systembaseline auf einem einzelnen Host oder auf dem gesamten Cluster korrigieren.
+* **vSAN-Systembaselines** - vSAN-Buildempfehlungen werden über vSAN-Systembaselines für VUM zur Verfügung gestellt. vSAN generiert eine Baselinegruppe für jeden vSAN-Cluster. vSAN-Systembaselines werden im Teilfenster "Baselines" der Registerkarte "Baselines und Gruppen" aufgelistet. VUM prüft automatisch jeden vSAN-Cluster, um die Konformität anhand der Baselinegruppe zu überprüfen. Um ein Upgrade Ihres Clusters durchzuführen, müssen Sie die Systembaseline manuell über den VUM korrigieren. Sie können die vSAN-Systembaseline auf einem einzelnen Host oder auf dem gesamten Cluster korrigieren.
 * **vSAN-Versionskatalog** - Der vSAN-Versionskatalog verwaltet Informationen zu verfügbaren Releases, zur bevorzugten Reihenfolge der Releases und zu kritischen Patches, die für das jeweilige Release erforderlich sind. vSAN benötigt für den Zugriff auf den Versionskatalog eine Internetverbindung. Sie müssen nicht beim Customer Experience Improvement Program (CEIP) für vSAN registriert sein, um Zugriff auf den Versionskatalog zu erhalten.
 * **Mit vSAN-Buildempfehlungen arbeiten** - VUM überprüft die installierten ESXi-Releases anhand der Informationen in der HCL (Hardware Compatibility List) im VMware-Kompatibilitätshandbuch. Er bestimmt den richtigen Upgradepfad für jeden vSAN-Cluster basierend auf dem aktuellen vSAN-Versionskatalog. vSAN enthält auch die erforderlichen Treiber und Patch-Updates für das empfohlene Release in der Systembaseline. vSAN-Buildempfehlungen stellen sicher, dass für jeden vSAN-Cluster der aktuelle Hardwarekompatibilitätsstatus erhalten bleibt oder verbessert wird. Wenn Hardware im vSAN-Cluster nicht in der HCL enthalten ist, empfiehlt vSAN ein Upgrade auf das neueste Release.
 
 Die Tasks des vSAN-Cluster-Upgrades werden in der folgenden Reihenfolge ausgeführt:
-* **Aktivierung des vSAN Online Health Workflow** – Dieser Workflow aktiviert die vSAN-Baselines in VUM, sodass Updates überprüft und korrigiert werden können. Er muss zunächst nur ausgeführt werden, um vSAN mit VUM zu aktivieren.
-* **Voraussetzungen** – Ermitteln Sie die Voraussetzungen, den Prozess und eventuelle Einschränkungen.
+* **Aktivierung des vSAN Online Health Workflow** - Dieser Workflow aktiviert die vSAN-Baselines in VUM, sodass Updates überprüft und korrigiert werden können. Er muss zunächst nur ausgeführt werden, um vSAN mit VUM zu aktivieren.
+* **Voraussetzungen** - Ermitteln Sie die Voraussetzungen, den Prozess und eventuelle Einschränkungen.
 * **Upgrade der vCenter Server Appliance**. Weitere Informationen finden Sie unter [VCSA-Update und über SSO angebundene vCenter](vum-updating-vcsa.html).
-* **Upgrade der vSphere ESXi-Hosts** – Weitere Informationen finden Sie unter [Baselines erstellen und an Bestandsobjekte anhängen](vum-baselines.html).
-* **Upgrade des vSAN-Plattenformats** - Weitere Informationen finden Sie unter 'Upgrade des vSAN-Plattenformats durchführen'. Das Upgrade des Plattenformats ist optional, aber für ein bestmögliches Ergebnis sollten Sie ein Upgrade der Objekte durchführen, um die neueste Version zu verwenden. Das On-Disk-Format macht Ihre Umgebung für das gesamte Feature-Set von vSAN verfügbar.
+* **Upgrade der vSphere ESXi-Hosts** - Weitere Informationen finden Sie unter [Baselines erstellen und an Bestandsobjekte anhängen](vum-baselines.html).
+* **Upgrade des vSAN-Plattenformats** - Weitere Informationen finden Sie unter "Upgrade des vSAN-Plattenformats durchführen". Das Upgrade des Plattenformats ist optional, aber für ein bestmögliches Ergebnis sollten Sie ein Upgrade der Objekte durchführen, um die neueste Version zu verwenden. Das On-Disk-Format macht Ihre Umgebung für das gesamte Feature-Set von vSAN verfügbar.
 
 ## vSAN Online Health Workflow aktivieren
 
@@ -38,14 +38,14 @@ Um die vSAN-Updates in VUM sehen zu können, muss der vSAN Online Health Workflo
 * Customer Experience Improvement Program (CEIP) aktivieren
 * Test-Upload ausführen und prüfen, ob er erfolgreich war
 
-Der erste Schritt besteht darin, Ihre my.vmware.com-Berechtigungsnachweise zur vSAN Build Recommendation Engine hinzuzufügen. Nach erfolgreicher Anmeldung generiert vSAN eine Baselinegruppe empfohlener Updates für jeden vSAN-Cluster. vSAN-Systembaselines werden im Teilfenster 'Baselines' der Registerkarte 'Baselines und Gruppen' aufgelistet.
+Der erste Schritt besteht darin, Ihre my.vmware.com-Berechtigungsnachweise zur vSAN Build Recommendation Engine hinzuzufügen. Nach erfolgreicher Anmeldung generiert vSAN eine Baselinegruppe empfohlener Updates für jeden vSAN-Cluster. vSAN-Systembaselines werden im Teilfenster "Baselines" der Registerkarte "Baselines und Gruppen" aufgelistet.
 
 ### VCSA für die Verwendung des Proxys konfigurieren
 
 1.	Stellen Sie von Ihrem Jump-Server-Web-Browser eine Verbindung zur VCSA-Managementschnittstelle `https://<vCenter ip>:5480` her.
 2.	Melden Sie sich mit den Berechtigungsnachweisen von der IC4VS-Konsole bei der VCSA-Managementschnittstelle als Root an.
 3.	Klicken Sie in der vCenter Server Appliance-Managementschnittstelle auf **Vernetzung** und dann auf **Verwalten**.
-4.	Wenn Sie einen Proxy-Server konfigurieren möchten, klicken Sie im Teilfenster 'Proxy-Einstellungen' auf **Bearbeiten**.
+4.	Wenn Sie einen Proxy-Server konfigurieren möchten, klicken Sie im Teilfenster "Proxy-Einstellungen" auf **Bearbeiten**.
 5.	Wählen Sie **Proxy-Server verwenden** aus, geben Sie die Einstellungen für den Proxy-Server ein und klicken Sie auf **OK**.
 
 Es gibt Berichte, in denen angegeben wird, dass die Proxy-Informationen nur für HTTP und nicht für HTTPS definiert sind. Damit die Proxy-Informationen auch für den HTTPS-Datenverkehr konfiguriert werden können, muss zuerst eine entsprechende Aktivierung erfolgen. Nachdem Sie sich bei der VCSA über SSH angemeldet haben, verwenden Sie den Befehl proxy.get, um die Konfiguration anzuzeigen und sicherzustellen, dass die HTTPS-Parameter nicht definiert sind.
@@ -64,9 +64,9 @@ Dieser Schritt ist optional. Navigieren Sie mit dem vSphere-Web-Client zu **Home
 ### Test-Upload ausführen und prüfen, ob er erfolgreich war
 1. Bei Verwendung des vSphere Web Client wechseln Sie zu **Home** > **Hosts und Cluster**. Wählen Sie den erforderlichen Cluster aus und wählen Sie anschließend die Registerkarte **Überwachen** und die Seite **vSAN** aus. Klicken Sie anschließend auf **Status**. Klicken Sie auf **Onlinestatus aktivieren**.
 2. Klicken Sie auf die Schaltfläche **Erneut testen** und warten Sie, bis der Prozess abgeschlossen ist.
-3. Eine neue Option _"Onlinestatuskonnektivität"_ wird im Status angezeigt und die Schaltfläche 'Onlinestatus aktivieren' ändert sich in 'Mit Onlinestatus erneut testen' erneut.
-4. Klicken Sie auf die Schaltfläche **Mit Onlinestatus erneut testen**, um den ersten Upload auszulösen, und warten Sie, bis der Prozess abgeschlossen ist, indem Sie den Status im Teilfenster 'Letzte Tasks' überprüfen. Der Testname sollte sich in 'Onlinestatus' ändern (Letzte Prüfung: gerade eben) ändern.
-5. Wenn der Prozess abgeschlossen ist, navigieren Sie zum Fenster 'Status', erweitern Sie die vSAN-Buildempfehlung und klicken Sie auf **vSAN Build Recommendation Engine-Status**.
+3. Eine neue Option _"Onlinestatuskonnektivität"_ wird im Status angezeigt und die Schaltfläche "Onlinestatus aktivieren" ändert sich in "Mit Onlinestatus erneut testen" erneut.
+4. Klicken Sie auf die Schaltfläche **Mit Onlinestatus erneut testen**, um den ersten Upload auszulösen, und warten Sie, bis der Prozess abgeschlossen ist, indem Sie den Status im Teilfenster "Letzte Tasks" überprüfen. Der Testname sollte sich in "Onlinestatus" ändern (Letzte Prüfung: gerade eben) ändern.
+5. Wenn der Prozess abgeschlossen ist, navigieren Sie zum Fenster "Status", erweitern Sie die vSAN-Buildempfehlung und klicken Sie auf **vSAN Build Recommendation Engine-Status**.
 6. Klicken Sie auf **Anmeldung bei my.vmware.com** und geben Sie Ihre Berechtigungsnachweise ein. Wenn der Prozess abgeschlossen ist, ändert sich das **Testergebnis** in den Status **Bestanden**.
 7. Klicken Sie auf die Registerkarte **Update Manager**. Sie sollten jetzt sehen, dass der vSAN-Cluster zu den Baselines hinzugefügt wurde.
 
@@ -108,7 +108,7 @@ Viele grundlegende Verwaltungstasks können so wesentlich effizienter ausgeführ
 1. Greifen Sie über SSH auf die VCSA zu und melden Sie sich als Rootbenutzer mit dem Kennwort an, das auf der ICVS-Konsole bereitgestellt wird.
 2. Geben Sie an der Eingabeaufforderung Folgendes ein:
   `rvc Administrator@vsphere.local@localhost`. Drücken Sie anschließend die **Eingabetaste**.
-3. Geben Sie das Kennwort des Administrators ein, das auf der ICVS-Konsole bereitgestellt wird. Sie befinden sich nun im Stammverzeichnis des virtuellen Dateisystems. Geben Sie 'ls' ein und drücken Sie dann die **Eingabetaste**. Sie sollten Folgendes sehen:
+3. Geben Sie das Kennwort des Administrators ein, das auf der ICVS-Konsole bereitgestellt wird. Sie befinden sich nun im Stammverzeichnis des virtuellen Dateisystems. Geben Sie "ls" ein und drücken Sie dann die **Eingabetaste**. Sie sollten Folgendes sehen:
   `0 /
   1 localhost/``
 
@@ -128,7 +128,7 @@ Viele grundlegende Verwaltungstasks können so wesentlich effizienter ausgeführ
 
 8. Es sollen jetzt die VSAN-Befehle für diesen Cluster verwendet werden. Um den Plattenstatus zu prüfen, geben Sie `vsan.disks_stats 0` ein und drücken Sie die **Eingabetaste**.
 
-9. Stellen Sie sicher, dass der Zustand aller Platten 'OK' ist. Starten Sie anschließend das Upgrade, indem Sie `vsan.ondisk_upgrade 0` eingeben und dann die **Eingabetaste** drücken.
+9. Stellen Sie sicher, dass der Zustand aller Platten "OK" ist. Starten Sie anschließend das Upgrade, indem Sie `vsan.ondisk_upgrade 0` eingeben und dann die **Eingabetaste** drücken.
 
 10. Abhängig von der vSAN-Größe kann diese Task viel Zeit in Anspruch nehmen. Geben Sie nach Abschluss der Task `vsan.objstatusreport 0` ein und drücken Sie dann die **Eingabetaste**, um zu überprüfen, ob für die Objektversionen ein Upgrade auf das neue On-Disk-Format durchgeführt wird.
 

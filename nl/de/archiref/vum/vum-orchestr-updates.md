@@ -18,7 +18,7 @@ Mit VUM können Sie koordinierte Upgrades für Hosts und dann virtuelle Maschine
 
 Mit durch VUM koordinierten Upgrades können Sie die Bestandsobjekte in VCSA in einem zweistufigen Prozess aufrüsten. Zuerst wird für die vSphere ESXi-Hosts ein Upgrade durchgeführt, gefolgt von den Upgrades für die virtuellen Maschinen. Dieser zweistufige Prozess kann auf Clusterebene konfiguriert werden oder Sie können die Konfiguration für den individuellen vSphere ESXi-Host oder die virtuelle Maschine vornehmen, was eine differenziertere Steuerung ermöglicht.
 
-Im koordinierten Upgrade wird der Cluster zuerst anhand der Host-Baseline-Gruppe korrigiert, die Patches, Erweiterungen und Upgrades anwendet. Nach diesem Upgrade werden die virtuellen Maschinen im Cluster mit der Upgrade-Baseline-Gruppe für virtuelle Maschinen korrigiert, die die Baselines 'VM-Hardware-Upgrade übereinstimmend mit Host' und 'VMware Tools-Upgrade übereinstimmend Host' enthält.
+Im koordinierten Upgrade wird der Cluster zuerst anhand der Host-Baseline-Gruppe korrigiert, die Patches, Erweiterungen und Upgrades anwendet. Nach diesem Upgrade werden die virtuellen Maschinen im Cluster mit der Upgrade-Baseline-Gruppe für virtuelle Maschinen korrigiert, die die Baselines "VM-Hardware-Upgrade übereinstimmend mit Host" und "VMware Tools-Upgrade übereinstimmend Host" enthält.
 
 Wenn die Baselinegruppe auch eine Upgrade-Baseline enthält, führt VUM zunächst ein Upgrade der vSphere ESXi-Hosts durch und wendet dann die Patch- und/oder Erweiterungsbaselines an, da sich die Patches immer auf eine bestimmte Hostversion beziehen. Für die virtuellen Maschinen werden zuerst die VMware Tools aktualisiert, danach erfolgt die Aktualisierung der virtuellen Hardware.
 
@@ -39,16 +39,16 @@ Der folgende Workflow beschreibt den Prozess zur Durchführung eines koordiniert
 3. Klicken Sie auf die Registerkarte **Verwalten**, dann auf die Registerkarte **Host-Baselines** und klicken Sie anschließend auf **Neue Baselinegruppe**.
 4. Geben Sie einen eindeutigen Namen für die Baselinegruppe ein und klicken Sie auf **Weiter**.
 5. Wählen Sie eine Host-Upgrade-Baseline aus, um sie in die Baselinegruppe aufzunehmen.
-6. Sie können optional eine neue Host-Upgrade-Baseline erstellen, indem Sie auf **Neue Host-Upgrade-Baseline erstellen** unten auf der Seite 'Upgrades' klicken und im Assistenten 'Neue Baseline' die entsprechenden Angaben machen. Klicken Sie auf **Weiter**.
+6. Sie können optional eine neue Host-Upgrade-Baseline erstellen, indem Sie auf **Neue Host-Upgrade-Baseline erstellen** unten auf der Seite "Upgrades" klicken und im Assistenten "Neue Baseline" die entsprechenden Angaben machen. Klicken Sie auf **Weiter**.
 7. Wählen Sie die Patch-Baselines aus, die in die Baselinegruppe aufgenommen werden sollen.
-8. Sie können optional eine neue Patch-Baseline erstellen, indem Sie auf **Neue Host-Patch-Baseline erstellen** unten auf der Seite 'Patches' klicken und im Assistenten 'Neue Baseline' die entsprechenden Angaben machen. Klicken Sie auf **Weiter**.
+8. Sie können optional eine neue Patch-Baseline erstellen, indem Sie auf **Neue Host-Patch-Baseline erstellen** unten auf der Seite "Patches" klicken und im Assistenten "Neue Baseline" die entsprechenden Angaben machen. Klicken Sie auf **Weiter**.
 9. Wählen Sie die Erweiterungsbaselines aus, die in die Baselinegruppe aufgenommen werden sollen.
-10. Sie können optional eine neue Erweiterungsbaseline erstellen, indem Sie auf **Neue Erweiterungsbaseline erstellen** unten auf der Seite 'Patches' klicken und im Assistenten 'Neue Baseline' die entsprechenden Angaben machen.
-11. Überprüfen Sie die Seite 'Bereit zum Abschließen', klicken Sie auf **Fertigstellen** und die Host-Baseline-Gruppe wird im Teilfenster 'Baselinegruppen' angezeigt.
+10. Sie können optional eine neue Erweiterungsbaseline erstellen, indem Sie auf **Neue Erweiterungsbaseline erstellen** unten auf der Seite "Patches" klicken und im Assistenten "Neue Baseline" die entsprechenden Angaben machen.
+11. Überprüfen Sie die Seite "Bereit zum Abschließen", klicken Sie auf **Fertigstellen** und die Host-Baseline-Gruppe wird im Teilfenster "Baselinegruppen" angezeigt.
 
 ## Schritt 2
 
-1. Erstellen Sie eine Baselinegruppe für virtuelle Maschinen, die die Baseline 'VMware Tools-Upgrade übereinstimmend mit Host' und die Baseline 'VM-Hardware-Upgrade übereinstimmend mit Host' (Ansicht 'VUM-Verwaltung') enthält.
+1. Erstellen Sie eine Baselinegruppe für virtuelle Maschinen, die die Baseline "VMware Tools-Upgrade übereinstimmend mit Host" und die Baseline "VM-Hardware-Upgrade übereinstimmend mit Host" (Ansicht "VUM-Verwaltung") enthält.
 2. Hängen Sie die Baselinegruppe an ein vCenter-Containerobjekt an, das die virtuellen Maschinen enthält, für die Sie ein Upgrade durchführen möchten.
 3. Prüfen Sie das Containerobjekt, um den Konformitätsstatus der virtuellen Maschinen in dem Container anzuzeigen. Sie können die Prüfung manuell starten oder eine Prüftask planen.
 4. Sehen Sie sich die Suchergebnisse an, die in der Konformitätsansicht des VUM-Clients angezeigt werden.
