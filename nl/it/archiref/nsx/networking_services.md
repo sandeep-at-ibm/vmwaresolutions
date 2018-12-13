@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -24,7 +24,7 @@ Figura 1. Servizi di rete cloud su Cloud Foundation
 
 Mentre un singolo ESG può essere sufficiente per il traffico sia di gestione che del carico di lavoro del cliente, la separazione del traffico di gestione e del cliente è una decisione di progettazione per impedire l'errata configurazione accidentale dell'ESG di gestione.
 
-L'errata configurazione o la disattivazione dell'ESG di gestione non impedisce il corretto funzionamento dell'istanza Cloud Foundation o vCenter Server, ma disabilita tutte le funzioni di gestione del portale.
+L'errata configurazione o la disabilitazione dell'ESG di gestione non impedisce il corretto funzionamento dell'istanza Cloud Foundation o vCenter Server, ma disabilita tutte le funzioni di gestione del portale.
 {:note}
 
 ## Edge NSX dei servizi di gestione IBM
@@ -57,7 +57,7 @@ L'accesso in uscita è richiesto per i seguenti servizi:
 
 ### Interfacce Edge
 
-La configurazione delle interfacce ESG definisce le reti L2 a cui ha accesso l'ESG. Per la gestione del ciclo di vita di Cloud Foundation e vCenter Server, è necessario che specifiche VM posizionate sulla VLAN di gestione possano passare alla VLAN pubblica. Sulla distribuzione sono definite le seguenti interfacce:
+La configurazione delle interfacce ESG definisce le reti L2 a cui ha accesso l'ESG. Per la gestione del ciclo di vita di Cloud Foundation e vCenter Server, è necessario che a specifiche VM posizionate sulla VLAN di gestione sia consentito attraversare alla VLAN pubblica. Sulla distribuzione sono definite le seguenti interfacce:
 
 Tabella 2. Configurazione delle interfacce ESG NSX
 
@@ -81,7 +81,7 @@ Tabella 3. Configurazione IP ESG NSX
 
 ### Definizioni di NAT (Network Address Translation)
 
-NAT (Network Address Translation) viene utilizzato nell'ESG di gestione per consentire al traffico di rete di passare tra uno spazio di indirizzi IP e un altro. In genere ciò viene fatto per conservare gli IP instradabili su Internet o per nascondere gli IP interni da quelli pubblici per motivi di sicurezza. NAT viene anche utilizzato per consentire il reindirizzamento della porta TCP (Transmission Control Protocol) e UDP (User Datagram Protocol). Il traffico di gestione viene sempre avviato dall'interno dell'istanza Cloud Foundation e vCenter Server, richiedendo che solo un NAT di origine (SNAT) sia definito nell'ESG di gestione. Un singolo SNAT non viene creato per ogni VM interna che ospita un servizio che deve uscire dall'istanza.
+NAT (Network Address Translation) viene utilizzato nell'ESG di gestione per consentire al traffico di rete di eseguire l'attraversamento tra uno spazio di indirizzi IP e un altro. In genere ciò viene fatto per conservare gli indirizzi IP instradabili su Internet o per nascondere gli indirizzi IP interni da quelli pubblici per motivi di sicurezza. NAT viene anche utilizzato per consentire il reindirizzamento della porta TCP (Transmission Control Protocol) e UDP (User Datagram Protocol). Il traffico di gestione viene sempre avviato dall'interno dell'istanza Cloud Foundation e vCenter Server, richiedendo che solo un NAT di origine (SNAT) sia definito nell'ESG di gestione. Un singolo SNAT non viene creato per ogni VM interna che ospita un servizio che deve uscire dall'istanza.
 
 Tabella 4. Configurazione NAT ESG NSX
 
@@ -91,7 +91,7 @@ Tabella 4. Configurazione NAT ESG NSX
 
 ### Instradamento
 
-Poiché i servizi all'interno delle VM richieste per attraversare l'ESG di gestione potrebbero anche dover accedere ai servizi {{site.data.keyword.cloud_notm}} all'interno della rete privata {{site.data.keyword.cloud_notm}} del cliente, di seguito è riportata la configurazione richiesta per ottenere questa comunicazione.
+Poiché i servizi all'interno delle VM che devono eseguire l'attraversamento per l'ESG di gestione potrebbero anche dover accedere ai servizi {{site.data.keyword.cloud_notm}} all'interno della rete privata {{site.data.keyword.cloud_notm}} del cliente, è necessaria la seguente configurazione per ottenere questa comunicazione.
 
 Sebbene sia difficile prevedere quale sia l'intervallo IP di destinazione necessario come destinazione per le connessioni Internet, qualsiasi servizio distribuito e gestito da {{site.data.keyword.cloud_notm}} punta all'ESG di gestione come proprio gateway predefinito. È richiesta una rotta statica per forzare il traffico sul BCR di {{site.data.keyword.cloud_notm}} per le connessioni di rete esterne richieste dai servizi.
 
@@ -99,7 +99,7 @@ Le seguenti configurazioni sono consigliate per qualsiasi servizio che utilizza 
 * Il gateway predefinito è un ESG di gestione.
 * È necessaria una rotta statica per le destinazioni interne di {{site.data.keyword.cloud_notm}}.
 
-Se è necessario che il servizio o la VM acceda all'ESG del cliente, le rotte statiche devono essere mantenute all'interno del singolo servizio o VM e puntare all'ESG del cliente.
+Se è necessario che il servizio o la VM accedano all'ESG del cliente, le rotte statiche devono essere mantenute all'interno del singolo servizio o della singola VM e puntate all'ESG del cliente.
 
 Nessun protocollo di instradamento automatico è attualmente configurato per l'ESG di gestione.
 
@@ -117,7 +117,7 @@ Tabella 5. Definizioni di VXLAN ESG NSX
 
 Per impostazione predefinita, l'ESG di gestione è configurato per negare tutto il traffico.
 
-**Nega:** consente di eliminare tutto il traffico senza risposta quando tale traffico non viene autorizzato ad attraversare il firewall da una regola o serie di regole precedente (più alta nell'ordine). La generazione automatica delle regole è selezionata per consentire il traffico di controllo alla coppia ESG.
+**Nega:** per eliminare tutto il traffico senza risposta quando tale traffico non viene autorizzato ad attraversare il firewall da una regola o serie di regole precedente (più alta nell'ordine). La generazione automatica delle regole è selezionata per consentire il traffico di controllo alla coppia ESG.
 
 Sono impostate le seguenti regole del firewall, oltre alle regole generate automaticamente:
 
@@ -185,7 +185,7 @@ Tabella 9. Configurazione IP ESG del carico di lavoro e DLR
 
 ### Definizioni di NAT per l'edge NSX del carico di lavoro IBM
 
-NAT è utilizzato nell'ESG del carico di lavoro per consentire al traffico di rete di passare tra uno spazio di indirizzi IP e un altro. Per l'ESG del carico di lavoro, NAT è necessario non solo per consentire la comunicazione verso destinazioni Internet, ma anche per comunicare in qualsiasi intervallo di IP originato da {{site.data.keyword.cloud_notm}}. Per questa progettazione, il traffico del carico di lavoro può uscire su Internet, ma non sulla rete di gestione o su una qualsiasi rete di {{site.data.keyword.cloud_notm}}. Pertanto, è necessario definire solo uno SNAT sull'ESG del carico di lavoro. Nota che l'intera sottorete portatile del carico di lavoro è configurata per attraversare SNAT.
+NAT è utilizzato nell'ESG del carico di lavoro per consentire al traffico di rete di passare tra uno spazio di indirizzi IP e un altro. Per l'ESG del carico di lavoro, NAT è necessario non solo per consentire la comunicazione verso destinazioni Internet, ma anche per comunicare in qualsiasi intervallo di IP originato da {{site.data.keyword.cloud_notm}}. Per questa progettazione, il traffico del carico di lavoro può uscire su Internet, ma non sulla rete di gestione o su una qualsiasi rete di {{site.data.keyword.cloud_notm}}. Pertanto, è necessario definire solo uno SNAT sull'ESG del carico di lavoro. L'intera sottorete portatile del carico di lavoro è configurata per attraversare SNAT.
 
 Sebbene sia possibile utilizzare NAT per consentire la comunicazione del carico di lavoro tra più istanze di Cloud Foundation o vCenter Server, questo diventa poco pratico quando è necessario collegare molti carichi di lavoro tra le istanze. Per esempi di utilizzo delle funzionalità NSX avanzate per creare una rete L2 eccessivamente transitabile tra le istanze Cloud Foundation o vCenter Server, vedi [Architettura multisito](multi_site.html).
 
@@ -211,9 +211,9 @@ Tabella 11. Instradamento dinamico
 
 Per impostazione predefinita, l'ESG del carico di lavoro è configurato per negare tutto il traffico.
 
-**Nega:** consente di eliminare tutto il traffico senza risposta quando tale traffico non viene autorizzato ad attraversare il firewall da una regola o serie di regole precedente (più alta nell'ordine). La generazione automatica delle regole è selezionata per consentire il traffico di controllo alla coppia ESG.
+**Nega:** per eliminare tutto il traffico senza risposta quando tale traffico non viene autorizzato ad attraversare il firewall da una regola o serie di regole precedente (più alta nell'ordine). La generazione automatica delle regole è selezionata per consentire il traffico di controllo alla coppia ESG.
 
-Sono impostate le seguenti regole del firewall, oltre alle regole generate automaticamente:
+Sono impostate le seguenti regole del firewall, oltre alle regole generate automaticamente.
 
 Tabella 12. Regole del firewall ESG del carico di lavoro
 

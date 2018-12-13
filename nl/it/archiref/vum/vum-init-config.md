@@ -10,7 +10,7 @@ lastupdated: "2018-11-07"
 
 # Configurazione iniziale
 
-L'automazione di IC4VS configura il VCSA con un gateway predefinito impostato sul BCR (Backend Customer Router) di {{site.data.keyword.cloud}}. Tuttavia, non esiste una rotta a internet tramite il BCR. La rotta standard verso internet dall'istanza VMware vCenter Server on {{site.data.keyword.cloud_notm}} avviene tramite l'ESG di gestione. Poiché non è consigliabile modificare la configurazione di VCSA o dell'ESG di gestione, è più opportuno implementare un server proxy sulla sottorete del cliente per abilitare VUM.
+L'automazione di IC4VS configura il VCSA con un gateway predefinito impostato sul BCR (Backend Customer Router) di {{site.data.keyword.cloud}}. Tuttavia, non esiste una rotta a internet mediante il BCR. La rotta standard verso internet dall'istanza VMware vCenter Server on {{site.data.keyword.cloud_notm}} avviene tramite l'ESG di gestione. Poiché non è consigliabile modificare la configurazione di VCSA o dell'ESG di gestione, è più opportuno implementare un server proxy sulla sottorete del cliente per abilitare VUM.
 
 Questo approccio indica che il VCSA o l'ESG di gestione non devono essere riconfigurati, tuttavia è necessario installare una piccola macchina virtuale (VM) o un piccolo dispositivo. Un server proxy è un sistema che si trova tra due dispositivi endpoint e funge da dispositivo intermedio. In questo caso, si trova tra VUM e i server di aggiornamento presso VMware.
 

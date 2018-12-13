@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -22,7 +22,7 @@ La funzionalità Cross-vCenter NSX consente il collegamento in una relazione pri
 
 ## Esempio di multisito
 
-Il seguente esempio aggiunge una zona di trasporto universale NSX alle topologie di gestione e di carico di lavoro di base illustrate nelle sezioni precedenti, oltre alle seguenti caratteristiche:
+Il seguente esempio aggiunge una zona di trasporto universale NSX alle topologie di gestione e di carico di lavoro di base illustrate nelle sezioni precedenti e include anche le seguenti caratteristiche:
 
 * La zona di trasporto universale si estende su due {{site.data.keyword.CloudDataCents_notm}} o POD all'interno di un {{site.data.keyword.CloudDataCent_notm}}.
 * Una volta aggiunta la zona di trasporto, vengono aggiunte più VXLAN insieme a un Universal Distributed Router che si estende sulle nuove VXLAN.

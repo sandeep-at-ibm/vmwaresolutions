@@ -135,11 +135,11 @@ Figura 2. Panoramica della rete di NSX Manager
 
 Dopo la distribuzione iniziale, l'automazione di {{site.data.keyword.cloud_notm}} distribuisce tre controller NSX all'interno del cluster iniziale. A ciascun controller viene assegnato un indirizzo IP supportato dalla VLAN dalla sottorete portatile **Privata A** designata per i componenti di gestione. Inoltre, la progettazione crea regole anti-affinità VM-VM per separare i controller tra gli host nel cluster. Il cluster iniziale deve contenere almeno tre nodi per garantire l'alta disponibilità per i controller.
 
-Oltre ai controller, l'automazione di {{site.data.keyword.cloud_notm}} prepara gli host vSphere distribuiti con NSX VIB per abilitare l'uso di una rete virtualizzata tramite i VTEP (VXLAN Tunnel Endpoint). Ai VTEP viene assegnato un indirizzo IP supportato dalla VLAN dall'intervallo di indirizzi IP della rete portatile **Privata A** specificato per i VTEP, come indicato nella *Tabella 1. Riepilogo VLAN e sottorete* della [Progettazione dell'infrastruttura fisica](design_physicalinfrastructure.html). Il traffico VXLAN risiede sulla VLAN senza tag ed è assegnato al vDS privato.
+Oltre ai controller, l'automazione di {{site.data.keyword.cloud_notm}} prepara gli host vSphere distribuiti con NSX VIB per abilitare l'uso di una rete virtualizzata tramite i VTEP (VXLAN Tunnel Endpoint). Ai VTEP viene assegnato un indirizzo IP supportato dalla VLAN dall'intervallo di indirizzi IP della sottorete portatile **Privata A** specificato per i VTEP, come indicato nella *Tabella 1. Riepilogo VLAN e sottorete* della [Progettazione dell'infrastruttura fisica](design_physicalinfrastructure.html). Il traffico VXLAN risiede sulla VLAN senza tag ed è assegnato al vDS privato.
 
 Successivamente, viene assegnato un pool di ID segmento e gli host nel cluster vengono aggiunti alla zona di trasporto. Nella zona di trasporto viene utilizzato solo unicast poiché lo snooping IGMP (Internet Group Management Protocol) non è configurato all'interno di {{site.data.keyword.cloud_notm}}.
 
-Dopo di che, vengono distribuite le coppie di gateway dei servizi edge NSX. In tutti i casi, una coppia di gateway viene utilizzata per il traffico in uscita dai componenti di automazione che risiedono nella rete privata. Per vCenter Server, un secondo gateway noto come edge gestito dal cliente, viene distribuito e configurato con un uplink alla rete pubblica e viene assegnata un'interfaccia alla rete privata. Per ulteriori informazioni sui gateway dei servizi edge NSX che vengono distribuiti come parte della soluzione, vedi [NSX Edge on 	{{site.data.keyword.cloud_notm}} solution architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf).
+Dopo di che, vengono distribuite le coppie di gateway dei servizi edge NSX. In tutti i casi, una coppia di gateway viene utilizzata per il traffico in uscita dai componenti di automazione che risiedono nella rete privata. Per vCenter Server, un secondo gateway noto come edge gestito dal cliente, viene distribuito e configurato con un uplink alla rete pubblica e un'interfaccia che è assegnata alla rete privata. Per ulteriori informazioni sui gateway dei servizi edge NSX che vengono distribuiti come parte della soluzione, vedi [NSX Edge on 	{{site.data.keyword.cloud_notm}} solution architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf).
 
 Gli amministratori cloud possono configurare qualsiasi componente NSX richiesto, come ad esempio DLR (Distributed Logical Router), switch logici e firewall. Le funzioni NSX disponibili dipendono dall'edizione della licenza NSX che scegli quando ordini l'istanza. Per ulteriori informazioni, vedi [Confronto delle edizioni di VMware NSX](appendix.html#vmware-nsx-edition-comparison). Per le istanze vCenter Server, l'automazione di {{site.data.keyword.cloud_notm}} aggiunge vCenter Server Appliance e PSC (Platform Services Controller) all'elenco di esclusione del firewall distribuito di NSX Manager.
 
@@ -194,7 +194,7 @@ Tabella 5. Impostazioni di configurazione del gruppo di porte degli switch distr
 
 Tabella 6. Gruppi di porte e VLAN degli switch virtuali del cluster convergente
 
-| VDS (vSphere Distributed Switch) | Nome gruppo di porte | Teaming | Uplink | ID VLAN |
+| vDS (vSphere Distributed Switch) | Nome gruppo di porte | Teaming | Uplink | ID VLAN |
 |:------------- |:------------- |:------------- |:------------- |:---------- |
 | SDDC-Dswitch-Private | SDDC-DPortGroup-Mgmt | Porta virtuale di origine | Attivo: 0, 1 | VLAN1 |
 | SDDC-Dswitch-Private | SDDC-DPortGroup-vMotion | Porta virtuale di origine | Attivo: 0, 1 | VLAN2 |
@@ -205,7 +205,7 @@ Tabella 6. Gruppi di porte e VLAN degli switch virtuali del cluster convergente
 
 Tabella 7. Adattatori del kernel di VM del cluster convergente
 
-| VDS (vSphere Distributed Switch) | Scopo | Gruppo di porte connesse | Servizi abilitati | MTU |
+| vDS (vSphere Distributed Switch) | Scopo | Gruppo di porte connesse | Servizi abilitati | MTU |
 |:-------------------------- |:------- |:-------------------- |:---------------- |:--- |
 | SDDC-Dswitch-Private | Gestione | SDDC-DPortGroup-Mgmt | Traffico di gestione | 1.500<br>(predefinito) |
 | SDDC-Dswitch-Private | vMotion | SDDC-DPortGroup-vMotion | Traffico vMotion | 9.000 |

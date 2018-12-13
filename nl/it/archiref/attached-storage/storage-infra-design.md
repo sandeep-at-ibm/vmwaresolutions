@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -16,9 +16,9 @@ lastupdated: "2018-10-25"
 
 {{site.data.keyword.vmwaresolutions_full}} fornisce la tecnologia VMware che viene distribuita in modo automatizzato all'interno dei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. All'interno del portfolio di soluzioni {{site.data.keyword.cloud_notm}}, l'offerta VMware vCenter Server on {{site.data.keyword.cloud_notm}} di base comprende fino a 10 cluster, ciascuno contenente fino a 59 host vSphere, un singolo PSC (Platform Services Controller) e un vCenter Server Appliance in grado di gestire fino a 400 host e 4.000 macchine virtuali.
 
-L'architettura qui presentata integra la soluzione vCenter Server aggiungendo l'archiviazione collegata come un dispositivo di archiviazione condivisa per l'ambiente. Il dispositivo di archiviazione collegato si trova nello stesso {{site.data.keyword.CloudDataCent_notm}} della distribuzione del vCenter Server e consiste in una singola condivisione NFS (Network File System) o più esportazioni NFS da {{site.data.keyword.cloud_notm}}.
+L'architettura qui presentata integra la soluzione vCenter Server aggiungendo l'archiviazione collegata come un dispositivo di archiviazione condivisa per l'ambiente. Il dispositivo di archiviazione collegato si trova nello stesso {{site.data.keyword.CloudDataCent_notm}} della distribuzione del vCenter Server e consiste in una singola condivisione NFS (Network file system) o più esportazioni NFS da {{site.data.keyword.cloud_notm}}.
 
-Il seguente grafico illustra l'architettura generale dell'archiviazione collegata sulla distribuzione di vCenter Server.
+Il seguente grafico fornisce l'architettura generale dell'archiviazione collegata sulla distribuzione di vCenter Server.
 
 Figura 1. Architettura di alto livello dell'archiviazione collegata su {{site.data.keyword.cloud_notm}}
 
@@ -26,11 +26,11 @@ Figura 1. Architettura di alto livello dell'archiviazione collegata su {{site.da
 
 ## Progettazione dell'infrastruttura fisica
 
-L'infrastruttura fisica è costituita da tre componenti principali, compresi il calcolo fisico, l'archiviazione fisica e la rete fisica. Ciò include la rete dei servizi {{site.data.keyword.cloud_notm}} e l'archiviazione fisica utilizzata dall'infrastruttura.
+L'infrastruttura fisica è costituita da tre componenti principali: il calcolo fisico, l'archiviazione fisica e la rete fisica. L'infrastruttura fisica include la rete di servizi {{site.data.keyword.cloud_notm}} e l'archiviazione fisica utilizzata dall'infrastruttura.
 
 ## Progettazione della rete fisica
 
-La rete fisica è gestita da {{site.data.keyword.cloud_notm}}. Questa sezione descrive la rete fisica fornita da {{site.data.keyword.cloud_notm}} come si correla all'archiviazione collegata.
+La rete fisica è gestita da {{site.data.keyword.cloud_notm}}. La seguente sezione descrive la rete fisica fornita da {{site.data.keyword.cloud_notm}} come si correla all'archiviazione collegata.
 
 ### Panoramica della rete di IBM Cloud
 
@@ -42,7 +42,7 @@ Esamina le seguenti informazioni per una descrizione della rete dei servizi che 
 
 ### Rete dei servizi privata
 
-{{site.data.keyword.cloud_notm}} contiene una rete dei servizi privati che fornisce servizi comuni quali l'archiviazione blocchi, l'archiviazione file, l'archiviazione oggetti, i resolver DNS e i server NTP. Questa rete privata è separata dalla rete privata del cliente e consente agli ambienti di connettersi senza soluzione di continuità ai servizi che si trovano in {{site.data.keyword.cloud_notm}}. La rete privata è multilivello in quanto i server ed altra infrastruttura sono connessi a switch BCS (back-end customer switch) aggregati. Questi switch aggregati sono collegati a una coppia di router separati, ossia BCR (back-end customer router), per la rete L3. La rete privata supporta anche la possibilità di utilizzare i frame Jumbo, ossia MTU 9000, per connessioni all'host fisico.
+{{site.data.keyword.cloud_notm}} ha una rete dei servizi privati che fornisce servizi comuni quali l'archiviazione blocchi, l'archiviazione file, l'Object Storage, i resolver DNS e i server NTP. Questa rete privata è separata dalla rete privata del cliente e consente agli ambienti di connettersi senza soluzione di continuità ai servizi che si trovano in {{site.data.keyword.cloud_notm}}. La rete privata è multilivello in quanto i server ed altra infrastruttura sono connessi a switch BCS (back-end customer switch) aggregati. Questi switch aggregati sono collegati a una coppia di router separati, come ad esempio i BCR (back-end customer router), per la rete L3. La rete privata supporta anche la possibilità di utilizzare i frame Jumbo, come ad esempio MTU 9000, per connessioni all'host fisico.
 
 ### VLAN
 
@@ -50,19 +50,19 @@ Per ulteriori informazioni sulle VLAN, vedi la sezione _Progettazione della rete
 
 ## Progettazione dell'archiviazione fisica
 
-Questa sezione presenta la configurazione del dispositivo di archiviazione collegato che è presente in {{site.data.keyword.cloud_notm}}. Il dispositivo di archiviazione collegato integra la soluzione vCenter Server esistente. Di conseguenza, i dischi collegati localmente che sono interni agli host fisici non vengono presentati.
+La seguente sezione descrive la configurazione del dispositivo di archiviazione collegato che è presente in {{site.data.keyword.cloud_notm}}. Il dispositivo di archiviazione collegato integra la soluzione vCenter Server esistente. Di conseguenza, i dischi collegati localmente che sono interni agli host fisici non vengono presentati.
 
 ## Prestazioni dell'archiviazione collegata
 
 Le archiviazioni Performance e Endurance sono soluzioni di archiviazione {{site.data.keyword.cloud_notm}} progettate per supportare applicazioni ad elevato I/O che richiedono dei livelli prevedibili di prestazioni. Queste prestazioni prevedibili vengono raggiunte tramite l'assegnazione di IOPS (input/output operations per second) a livello di protocollo ai singoli volumi.
 
-È possibile eseguire il provisioning di IOPS da 100 a 48.000 con dimensioni di archiviazione da 20 GB a 12 TB. I volumi di archiviazione Performance ed Endurance sono disponibili sia per l'archiviazione blocchi che per l'archiviazione file.
+È possibile ordinare IOPS da 100 a 48.000 con dimensioni di archiviazione da 20 GB a 12 TB. I volumi di archiviazione Performance ed Endurance sono disponibili sia per l'archiviazione blocchi che per l'archiviazione file.
 
 In questa progettazione la soluzione vCenter Server offre l'archiviazione Endurance per l'archiviazione collegata. Di conseguenza, puoi selezionare e collegare (mediante l'automazione) le esportazioni NFS Endurance in un intervallo di dimensioni che va da 20 GB a un massimo di 12 TB. {{site.data.keyword.cloud_notm}} consente a un massimo di 64 host vSphere ESXi di connettersi a una singola esportazione NFS Endurance.
 
 Endurance è disponibile in tre livelli di prestazioni IOPS per supportare esigenze applicative diverse.
 
-Dopo il provisioning di una condivisione NFS, questa può essere ridimensionata o riconfigurata per consentire più o meno IOPS.
+Dopo essere stata ordinata, una condivisione NFS può essere ridimensionata o riconfigurata per consentire più o meno IOPS.
 {:note}
 
 Per le opzioni IOPS dettagliate, vedi la sezione _Impostazioni di archiviazione_ in [Ordine di istanze vCenter Server](../../vcenter/vc_orderinginstance.html).
