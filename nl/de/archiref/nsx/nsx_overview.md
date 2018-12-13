@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -22,12 +22,12 @@ Tabelle 1. Features, die für NSX Edge Service Gateway verfügbar sind
 
 | Feature | Beschreibung |
 |:------- |:----------- |
-| NSX Edge Service Routing | Stellt die erforderlichen Weiterleitungsinformationen zwischen Broadcastdomänen der Ebene 2 bereit, wodurch Sie die Broadcastdomänen der Ebene 2 verringern und die Netzeffizienz und -skalierung verbessern können. NSX erweitert diese Informationen und gibt an, wo sich die Workloads für das Ost-West-Routing befinden. Dies ermöglicht eine direktere Kommunikation zwischen virtuellen Maschinen ohne den Zeit- und Kostenaufwand einer Erweiterung der Hops. Gleichzeitig stellt NSX auch eine Nord-Süd-Konnektivität bereit und ermöglicht den Tenants somit den Zugriff auf öffentliche Netze. |
+| NSX Edge Service Routing | Stellt die erforderlichen Weiterleitungsinformationen zwischen Broadcastdomänen der Ebene 2 bereit, wodurch Sie die Broadcastdomänen der Ebene 2 verringern und die Netzeffizienz und -skalierung verbessern können. NSX erweitert diese Informationen und gibt an, wo sich die Workloads für das Ost-West-Routing befinden. Dies ermöglicht eine direktere Kommunikation zwischen virtuellen Maschinen ohne den Zeit- und Kostenaufwand einer Erweiterung der Hops. Gleichzeitig stellt NSX auch eine Nord-Süd-Konnektivität bereit und ermöglicht den Tenants den Zugriff auf öffentliche Netze. |
 | Firewall | Die unterstützten Regeln der Firewall umfassen die IP-5-Tupel-Konfiguration mit IP- und Portbereichen für die statusabhängige Überprüfung für alle Protokolle. |
 | NAT | Stellt separate Steuermechanismen für Quellen- und Ziel-IP-Adressen sowie für die Portübersetzung bereit. |
 | DHCP | Ermöglicht die Konfiguration von IP-Pools, Gateways, DNS-Servern und Suchdomänen. |
 | Site-to-Site VPN | Verwendet standardisierte IPSec-Protokolleinstellungen für die Interoperabilität mit allen wichtigen VPN-Anbietern. |
-| L2VPN | Bietet die Möglichkeit, L2-Netze über L3-Topologien hinweg zu erweitern. |
+| L2VPN | Erweitert L2-Netze über L3-Topologien hinweg. |
 | SSL VPN-Plus |  SSL VPN-Plus ermöglicht es fernen Benutzern, eine sichere Verbindung zu privaten Netzen hinter einem NSX Edge-Gateway herzustellen. |
 | Load Balancing | Stellt einfache und dynamisch konfigurierbare virtuelle IP-Adressen und Servergruppen bereit. |
 | High Availability | Stellt sicher, dass es eine aktive NSX Edge im Netz gibt, falls die primäre NSX Edge-Maschine nicht verfügbar ist. |
