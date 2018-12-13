@@ -81,19 +81,19 @@ Neben dem öffentlichen und dem privaten Netz ist jeder {{site.data.keyword.clou
 * Primäre IP-Adressen werden Einheiten (Geräten), Bare Metal Servern und virtuellen Servern zugeordnet, die von {{site.data.keyword.cloud_notm}} bereitgestellt werden. Weisen Sie keine IP-Adressen in diesen Blöcken zu.
 * Portierbare IP-Adressen werden zur Verfügung gestellt, die Sie nach Bedarf zuweisen und verwalten können.
 
-Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN im Kundenkonto weiterleitbar gemacht werden, wenn das **VLAN Spanning** im {{site.data.keyword.slportal}} aktiviert ist oder wenn das Konto als **VRF-Konto** (VRF - Virtual Routing and Forwarding) konfiguriert ist.
+Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN im Kundenkonto weiterleitbar gemacht werden, wenn das **VLAN-Spanning** im {{site.data.keyword.slportal}} aktiviert ist oder wenn das Konto als **VRF-Konto** (VRF - Virtual Routing and Forwarding) konfiguriert ist.
 
-### VLAN Spanning
+### VLAN-Spanning
 
-**VLAN Spanning** ist eine {{site.data.keyword.slportal}}-Kontoeinstellung, durch die der IP-Block des primären und portierbaren Teilnetzes aller VLANs im Konto untereinander weitergeleitet werden kann. Wenn die Einstellung **VLAN Spanning** inaktiviert ist, können IP-Blöcke immer noch an {{site.data.keyword.cloud_notm}}-Services weiterleiten, jedoch nicht untereinander.
+**VLAN-Spanning** ist eine {{site.data.keyword.slportal}}-Kontoeinstellung, durch die der IP-Block des primären und portierbaren Teilnetzes aller VLANs im Konto untereinander weitergeleitet werden kann. Wenn die Einstellung **VLAN-Spanning** inaktiviert ist, können IP-Blöcke immer noch an {{site.data.keyword.cloud_notm}}-Services weiterleiten, jedoch nicht untereinander.
 
-Für eine transparente Verbindung über verschiedene Teilnetze hinweg, in denen sich die Lösungskomponenten befinden, müssen Sie das **VLAN Spanning** in dem {{site.data.keyword.slportal}}-Konto aktivieren, in dem die Cloud Foundation- und die vCenter Server-Instanz bereitgestellt wurden.
+Für eine transparente Verbindung über verschiedene Teilnetze hinweg, in denen sich die Lösungskomponenten befinden, müssen Sie das **VLAN-Spanning** in dem {{site.data.keyword.slportal}}-Konto aktivieren, in dem die Cloud Foundation- und die vCenter Server-Instanz bereitgestellt wurden.
 
 ### Virtual Routing and Forwarding (VRF)
 
-Sie können das {{site.data.keyword.slportal}}-Konto auch als VRF-Konto konfigurieren, um ähnliche Funktionen wie das VLAN Spanning zur Verfügung zu stellen, sodass ein automatisches Routing zwischen IP-Teilnetzblöcken möglich wird. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
+Sie können das {{site.data.keyword.slportal}}-Konto auch als VRF-Konto konfigurieren, um ähnliche Funktionen wie das VLAN-Spanning zur Verfügung zu stellen, sodass ein automatisches Routing zwischen IP-Teilnetzblöcken möglich wird. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
 
-Die Konsole von {{site.data.keyword.vmwaresolutions_short}} kann nicht erkennen, ob VRF im {{site.data.keyword.slportal}} aktiviert ist. Sie empfangen eine Warnung, die Sie daran erinnert, sicherzustellen, dass entweder das **VLAN Spanning** oder VRF in Ihrem {{site.data.keyword.slportal}}-Konto aktiviert wird.
+Die Konsole von {{site.data.keyword.vmwaresolutions_short}} kann nicht erkennen, ob VRF im {{site.data.keyword.slportal}} aktiviert ist. Sie empfangen eine Warnung, die Sie daran erinnert, sicherzustellen, dass entweder das **VLAN-Spanning** oder VRF in Ihrem {{site.data.keyword.slportal}}-Konto aktiviert wird.
 
 ### Physische Hostverbindungen
 
@@ -105,7 +105,7 @@ Abbildung 1. Physische NIC-Hostverbindungen
 
 ### VLANs
 
-Die Angebote von {{site.data.keyword.vmwaresolutions_short}} beinhalten 3 VLANs, d. h. ein öffentliches und zwei private, die bei der Bereitstellung zugewiesen werden. Wie in Abbildung 2 zu sehen, werden das öffentliche VLAN den Verbindungen 'eth1' und 'eth3' und die privaten VLANs den Verbindungen 'eth0' und 'eth2' zugeordnet.
+Die Angebote von {{site.data.keyword.vmwaresolutions_short}} beinhalten 3 VLANs, d. h. ein öffentliches und zwei private, die bei der Bereitstellung zugewiesen werden. Wie in Abbildung 2 zu sehen, werden das öffentliche VLAN den Verbindungen "eth1" und "eth3" und die privaten VLANs den Verbindungen "eth0" und "eth2" zugeordnet.
 
 Das öffentliche VLAN und das erste private VLAN, das in diesem Design erstellt und zugeordnet wird, sind in {{site.data.keyword.cloud_notm}} standardmäßig nicht mit Tags versehen. Das weitere private VLAN wird durch einen Trunk mit den physischen Switch-Ports verbunden und mit Tags in den VMware-Portgruppen versehen, die diese Teilnetze verwenden.
 
@@ -114,7 +114,7 @@ Das private Netz besteht aus zwei VLANs in diesem Design. Drei Teilnetze werden 
 * Das zweite Teilnetz wird für virtuelle Maschinen für das Management wie vCenter Server Appliance und Platform Services Controller verwendet.
 * Das dritte Teilnetz wird für die VXLAN-Tunnelendpunkte (VTEPs) verwendet, die den einzelnen Hosts durch VMware NSX Manager zugeordnet werden.
 
-Neben dem VLAN "Privat A" ist ein zweites privates VLAN (hier als VLAN "Privat B" bezeichnet) vorhanden, um VMware-Features wie vSAN und vMotion zu unterstützen und die Konnektivität zum NAS-Speicher (NAS – Network Attached Storage) herzustellen. Das VLAN als solches ist in zwei oder drei portierbare Teilnetze unterteilt.
+Neben dem VLAN "Privat A" ist ein zweites privates VLAN (hier als VLAN "Privat B" bezeichnet) vorhanden, um VMware-Features wie vSAN und vMotion zu unterstützen und die Konnektivität zum NAS-Speicher (NAS - Network Attached Storage) herzustellen. Das VLAN als solches ist in zwei oder drei portierbare Teilnetze unterteilt.
 
 * Das erste Teilnetz wird einer Kernelportgruppe für vMotion-Datenverkehr zugeordnet.
 * Die übrigen Teilnetze werden für Speicherdatenverkehr verwendet:
