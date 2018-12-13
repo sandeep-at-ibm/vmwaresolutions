@@ -25,7 +25,7 @@ Figura 1. Panoramica di VMware on {{site.data.keyword.cloud_notm}}
 
 ## Vantaggi principali
 
-VMware Cloud Foundation e vCenter Server on {{site.data.keyword.cloud_notm}} forniscono gli elementi costitutivi fondamentali, tra cui VMware vSphere, vCenter Server, NSX e le opzioni di archiviazione condivisa, incluso  vSAN. Questi componenti sono necessari per architettare in modo flessibile una soluzione di data center definito dal software VMware che meglio si adatta ai tuoi carichi di lavoro. 
+VMware Cloud Foundation e vCenter Server on {{site.data.keyword.cloud_notm}} forniscono gli elementi costitutivi fondamentali, tra cui VMware vSphere, vCenter Server, NSX e le opzioni di archiviazione condivisa, incluso vSAN. Questi componenti sono necessari per architettare in modo flessibile una soluzione di data center definito dal software VMware che meglio si adatta ai tuoi carichi di lavoro. 
 
 Applicando l'automazione avanzata e l'infrastruttura bare metal a singolo tenant, puoi distribuire rapidamente l'intero ambiente VMware su {{site.data.keyword.cloud_notm}} in poche ore. Puoi quindi accedere e gestire l'ambiente ospitato da IBM tramite client VMware nativi, CLI (Command Line Interface), script esistenti o altri strumenti compatibili con l'API vSphere.
 
@@ -33,7 +33,7 @@ Dopo la distribuzione, puoi aggiungere i nodi host ESXi e gestire il backup e l'
 
 Le offerte VMware on {{site.data.keyword.cloud_notm}} forniscono i seguenti vantaggi:
 
-* **Accelerazione della consegna** di progetti IT per sviluppatori e linee di business riducendo il tempo necessario per approvvigionamento, architettura, implementazione e distribuzione di risorse da settimane, o anche mesi, ad alcune ore.
+* **Accelerazione della fornitura** di progetti IT per sviluppatori e linee di business riducendo il tempo necessario per approvvigionamento, architettura, implementazione e distribuzione di risorse da settimane, o anche mesi, ad alcune ore.
 * **Miglioramento della sicurezza** con server bare metal dedicati in un cloud privato ospitato, inclusa la crittografia dei dati inattivi.
 * **Abilitazione di una gestione e una governance coerenti** del cloud ibrido distribuito fornendo un accesso amministrativo completo alla gestione della virtualizzazione, preservando così gli strumenti, gli script e gli investimenti VMware esistenti nella formazione.
 * **Sfrutta le competenze VMware su scala globale** con i servizi professionali e gestiti di IBM disponibili in più di 30 {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo.

@@ -21,7 +21,7 @@ Dopo la distribuzione iniziale, puoi ridimensionare la capacità di calcolo dall
 
 ## Aggiunta di più siti
 
-{{site.data.keyword.vmwaresolutions_short}} può sfruttare la presenza di data center {{site.data.keyword.cloud_notm}} in tutto il mondo e il backbone di rete integrato per consentire la distribuzione e il funzionamento di vari casi di utilizzo di più aree geografiche in solo una frazione del tempo necessario a costruire da zero un'infrastruttura di questo tipo.
+{{site.data.keyword.vmwaresolutions_short}} può sfruttare la presenza di data center {{site.data.keyword.cloud_notm}} in tutto il mondo e il backbone di rete integrato per consentire la distribuzione e il funzionamento di vari casi di utilizzo di più aree geografiche in solo una frazione del tempo che servirebbe a costruire da zero un'infrastruttura di questo tipo.
 
 In questa progettazione, la definizione di una distribuzione multisito è composta da quanto segue:
 * Una distribuzione VMware iniziale o primaria contenente un nuovo dominio root DNS/AD, dominio secondario, dominio SSO e nome del sito SSO da fornire.
@@ -49,7 +49,7 @@ Quando il cluster iniziale viene convertito in un cluster di sola gestione, la m
 
 ## Aggiunta di host ESXi nei cluster esistenti
 
-Puoi ridimensionare un cluster esistente ordinando gli host dalla console {{site.data.keyword.vmwaresolutions_short}}.  I nuovi host vengono aggiunti automaticamente al cluster. Tieni presente che potresti dover regolare la politica di prenotazione dell'alta disponibilità (HA) per in cluster in base ai tuoi requisiti di prenotazione.
+Puoi ridimensionare un cluster esistente ordinando gli host dalla console {{site.data.keyword.vmwaresolutions_short}}.  I nuovi host vengono aggiunti automaticamente al cluster. Tieni presente che potresti dover regolare la politica di prenotazione dell'alta disponibilità (HA) per il cluster in base ai tuoi requisiti di prenotazione.
 
 ### Link correlati
 

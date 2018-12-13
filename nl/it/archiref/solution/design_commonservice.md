@@ -71,7 +71,7 @@ Questa progettazione integra i servizi DNS sui server Active Directory con la VM
 
 ## Servizi NTP
 
-Questa progettazione utilizza i server NTP dell'infrastruttura {{site.data.keyword.cloud_notm}}. Tutti i componenti distribuiti sono configurati per utilizzare questi server NTP. Per il corretto funzionamento dei certificati e dell'autenticazione di Active Directory è fondamentale che tutti i componenti all'interno della progettazione utilizzino lo stesso server NTP.
+Questa progettazione utilizza i server NTP dell'infrastruttura {{site.data.keyword.cloud_notm}}. Tutti i componenti distribuiti sono configurati per utilizzare questi server NTP. Per il corretto funzionamento dei certificati e dell'autenticazione di Active Directory, è fondamentale che tutti i componenti all'interno della progettazione utilizzino lo stesso server NTP.
 
 Figura 1. Servizi NTP
 

@@ -67,7 +67,7 @@ Questa progettazione multilivello consente alla rete di ridimensionarsi tra rack
 
 ### Rete privata
 
-Tutti i {{site.data.keyword.CloudDataCents_notm}} e i PoP sono connessi mediante il backbone di rete privata. La rete privata è separata dalla rete pubblica e consente la connettività ai servizi nei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. Lo spostamento dei dati tra i {{site.data.keyword.CloudDataCents_notm}} avviene tramite più connessioni da 10 Gbps o 40 Gbps alla rete privata.
+Tutti i {{site.data.keyword.CloudDataCents_notm}} e i PoP sono connessi mediante un backbone di rete privata. La rete privata è separata dalla rete pubblica e consente la connettività ai servizi nei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. Lo spostamento dei dati tra i {{site.data.keyword.CloudDataCents_notm}} avviene tramite più connessioni da 10 Gbps o 40 Gbps alla rete privata.
 
 Analogamente alla rete pubblica, la rete privata è multilivello in quanto i server e gli altri componenti dell'infrastruttura sono connessi a switch BCS (back-end customer switch) aggregati. Questi switch aggregati sono collegati a una coppia di router BCR (back-end customer router) separati per la rete L3. La rete privata supporta anche la possibilità di utilizzare i frame Jumbo (MTU 9000) per connessioni all'host fisico.
 
