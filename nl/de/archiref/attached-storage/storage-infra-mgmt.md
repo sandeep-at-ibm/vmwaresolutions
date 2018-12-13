@@ -4,15 +4,19 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-13"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Management der Infrastruktur für angehängten Speicher
 
 Das Infrastrukturmanagement bezieht sich auf die VMware-Komponenten, die zum Management der vSphere ESXi-Infrastruktur eingesetzt werden.
 
-Weitere Informationen zu den Komponenten finden Sie in Abbildung 2. NSX Manager-Netzübersicht in [Design der virtuellen Infrastruktur](../solution/design_virtualinfrastructure.html).
+Weitere Informationen zu den Komponenten finden Sie in Abbildung 2 "Netzübersicht für NSX Manager" unter [Design der virtuellen Infrastruktur](../solution/design_virtualinfrastructure.html).
 
 ## Design des virtuellen Netzbetriebs
 
@@ -20,11 +24,12 @@ Die Netzvirtualisierung, die in diesem Design eingesetzt wird, nutzt einen berei
 
 ## vSphere Distributed Switch (vDS)
 
-Wie bereits erwähnt, wird in der vCenter Server-Lösung ein weiteres VLAN erstellt und zum Anhängen des NFS-Mountpunkts an die ESXi-Hosts im vorhandenen Cluster verwendet. Da die vCenter Server-Lösung bereits über einen vDS verfügt, der dem privaten Netz zugeordnet ist, wird eine weitere Portgruppe erstellt und mit der Nummer für zusätzliche VLANs markiert, da es sich bei diesem zusätzlichen VLAN nicht um ein natives VLAN handelt.
+In der vCenter Server-Lösung wird ein weiteres VLAN erstellt und zum Anhängen des NFS-Mountpunkts an die ESXi-Hosts im vorhandenen Cluster verwendet. Da die vCenter Server-Lösung über einen vSphere Distributed Switch (vDS) verfügt, der dem privaten Netz zugeordnet ist, wird eine weitere Portgruppe erstellt und mit der Nummer für zusätzliche VLANs markiert, da es sich bei diesem zusätzlichen VLAN nicht um ein natives VLAN handelt.
 
 In der folgenden Tabelle werden die Standardeinstellungen für die neue Portgruppe beschrieben.
 
-**Wichtig:** Diese Standardeinstellungen dürfen nicht geändert werden.
+Diese Standardeinstellungen dürfen nicht geändert werden.
+{:important}
 
 Tabelle 1. Zusammenfassung zur NFS-Portgruppe
 
@@ -35,7 +40,7 @@ Tabelle 1. Zusammenfassung zur NFS-Portgruppe
 | Lastausgleich | Route basierend auf virtuellem Ursprungsport |
 | Aktive Uplinks | uplink1 und uplink2 |
 
-Zusätzlich zur Erstellung der vDS-Portgruppe für den NFS-Speicherdatenverkehr wird auf jedem vSphere ESXi-Host in der Bereitstellung ein VMkernel-Port erstellt und der Portgruppe SDDC-DPG-NFS zugewiesen. Darüber hinaus wird dem VMkernel-Port eine IP-Adresse aus dem privaten portierbaren Teilnetz zugewiesen, das dem VLAN für den angehängten Speicher zugeordnet ist. Dies bedeutet, dass das private VLAN B und die zugehörige MTU auf den Wert "9000" gesetzt wird, um Jumbo-Frames zu unterstützen.
+Zusätzlich zur Erstellung der vDS-Portgruppe für den NFS-Speicherdatenverkehr wird auf jedem vSphere ESXi-Host während der Bereitstellung ein VMkernel-Port erstellt und der Portgruppe SDDC-DPG-NFS zugewiesen. Darüber hinaus wird dem VMkernel-Port eine IP-Adresse aus dem privaten portierbaren Teilnetz zugewiesen, das dem VLAN für den angehängten Speicher zugeordnet ist. Dies bedeutet, dass das private VLAN B und die zugehörige MTU auf den Wert "9000" gesetzt wird, um Jumbo-Frames zu unterstützen.
 
 Abbildung 1. Private vDS-Portgruppen und Uplinks
 
