@@ -4,20 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-13"
 
 ---
-# Panoramica di vCenter Server Hybridity Bundle
+# Panoramica di vCenter Server on IBM Cloud with Hybridity Bundle
 
-VMware vCenter Server on {{site.data.keyword.cloud}} con Hybridity Bundle è un cloud privato ospitato che consente di estendere in modo semplice e rapido la tua infrastruttura in loco nel cloud per un'ibridità dell'infrastruttura senza interruzioni e sicura e una reale mobilità dell'applicazione.
+VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle è un cloud privato ospitato che consente di estendere in modo semplice e rapido la tua infrastruttura in loco nel cloud per un'ibridità dell'infrastruttura senza interruzioni e sicura e una reale mobilità dell'applicazione.
 
 vCenter Server Hybridity Bundle è distribuito su un minimo di quattro {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, offre l'archiviazione dedicata tramite una VSAN (virtual storage area network) e include la configurazione e la distribuzione automatica di un'infrastruttura di rete definita dal software di facile gestione (NSX-V). vCenter Server Hybridity Bundle è un'architettura di riferimento distribuita attraverso l'automazione, che garantisce la coerenza, le prestazioni e la conformità. In molti casi, può essere eseguito il provisioning dell'intero ambiente in meno di un giorno e l'infrastruttura bare metal può ridimensionare rapidamente ed elasticamente la capacità di calcolo a seconda delle necessità.
 
-Sono disponibili molte opzioni per valorizzare ed estendere vCenter Server Hybridity Bundle. Le offerte di servizi di {{site.data.keyword.cloud_notm}} non includono solo le opzioni di aggiunta di archiviazione e varie opzioni di connettività pubbliche e private WAN, ma coprono anche aree come la sicurezza della piattaforma, la sicurezza della rete, il bilanciamento del carico del traffico per il backup e il ripristino di emergenza.
+Sono disponibili molte opzioni per valorizzare ed estendere vCenter Server Hybridity Bundle. Le offerte di servizi di {{site.data.keyword.cloud_notm}} non includono solo le opzioni di archiviazione come componente aggiuntivo e varie opzioni di connettività WAN pubblica e privata, ma coprono anche aree come la sicurezza della piattaforma, la sicurezza della rete, il bilanciamento del carico del traffico per il backup e il ripristino di emergenza.
 
 I servizi di sicurezza della piattaforma includono HyTrust CloudControl on {{site.data.keyword.cloud_notm}}, che fornisce sicurezza automatizzata e supporto di conformità, consentendo una migliore visibilità e controllo sul tuo ambiente cloud e sugli amministratori. HyTrust DataControl on {{site.data.keyword.cloud_notm}} fornisce la protezione dei dati con una potente crittografia e la gestione delle chiavi scalabili per proteggere i tuoi carichi di lavoro in tutto il loro ciclo di vita. {{site.data.keyword.cloud_notm}} Secure Virtualization semplifica la conformità e protegge i tuoi dati con la crittografia, le politiche di fencing virtuale e i controlli di accesso basati sul ruolo, mentre KMIP for VMware on {{site.data.keyword.cloud_notm}} offre la gestione del ciclo di vita della chiave di crittografia che gestisce le chiavi di crittografia utilizzate dai servizi {{site.data.keyword.cloud_notm}} o dalle applicazioni integrate del cliente.
 
-Le opzioni di sicurezza di rete sono il FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} che fornisce una coppia altamente disponibili di dispositivi FortiGate Security Appliance per analizzare il traffico di rete e proteggere la tua infrastruttura virtuale e il FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, che distribuisce una coppia altamente disponibile di macchine virtuali FortiGate on {{site.data.keyword.cloud_notm}} per ridurre il rischio implementando i controlli di sicurezza critici all'interno della tua infrastruttura virtuale. Ulteriori offerte per la sicurezza della rete sono in sviluppo.
+Le opzioni di sicurezza di rete sono il FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} che fornisce una coppia altamente disponibili di dispositivi FortiGate Security Appliance per analizzare il traffico di rete e proteggere la tua infrastruttura virtuale e il FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, che distribuisce una coppia altamente disponibile di macchine virtuali FortiGate su {{site.data.keyword.cloud_notm}} per ridurre il rischio implementando i controlli di sicurezza critici all'interno della tua infrastruttura virtuale. Ulteriori offerte per la sicurezza della rete sono in sviluppo.
 
 L'offerta del servizio del programma di bilanciamento del carico di rete F5 on {{site.data.keyword.cloud_notm}} ottimizza le prestazioni le prestazioni e garantisce la disponibilità e la sicurezza delle tue applicazioni più critiche con la suite F5 BIG-IP.
 
