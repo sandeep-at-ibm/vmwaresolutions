@@ -10,14 +10,14 @@ lastupdated: "2018-11-06"
 
 # Lösungskomponenten
 
-## VCS-Komponenten
+## Komponenten von VMware vCenter Server on IBM Cloud
 
-Abbildung 1. Diagramm der VCS-Umgebung
+Abbildung 1. Diagramm der vCenter Server-Umgebung
 ![VCS-Umgebung](vcsicp-vcsenv.svg)
 
 ### Platform Service Controller
 
-Die VCS-Bereitstellung verwendet einen einzelnen externen Platform Services Controller, der in einem portierbaren Teilnetz im privaten VLAN installiert ist, das Management-VMs zugeordnet ist. Das zugehörige Standardgateway wird auf den Back-End-Kundenrouter (BCR - Back-end Customer Router) eingestellt.
+Die vCenter Server-Bereitstellung verwendet einen einzelnen externen Platform Services Controller, der in einem portierbaren Teilnetz im privaten VLAN installiert ist, das Management-VMs zugeordnet ist. Das zugehörige Standardgateway wird auf den Back-End-Kundenrouter (BCR - Back-end Customer Router) eingestellt.
 
 ### vCenter Server
 
@@ -33,7 +33,7 @@ Die {{site.data.keyword.cloud}}-Automatisierung stellt drei NSX-Controller im ur
 
 ### NSX Edge/DLR
 
-NSX Edge Services Gateway-Paare werden bereitgestellt. In allen Fällen wird ein Gateway-Paar für den abgehenden Datenverkehr aus Automatisierungskomponenten verwendet, die sich im privaten Netz befinden. Für vCenter Server und ICP wird ein zweites Gateway, das als ICP-verwaltete Edge bezeichnet wird, bereitgestellt und mit einem Uplink zum öffentlichen Netz sowie einer Schnittstelle, die dem privaten Netz zugeordnet ist, konfiguriert. Alle erforderlichen NSX-Komponenten, wie z. B. Distributed Logical Router (DLR), logische Switches und Firewalls, können vom Administrator konfiguriert werden. Im [vCenter Server Networking - Leitfaden](../vcsnsxt/vcsnsxt-intro.html) finden Sie weitere Details zum Netzdesign.
+NSX Edge Services Gateway-Paare werden bereitgestellt. In allen Fällen wird ein Gateway-Paar für den abgehenden Datenverkehr aus Automatisierungskomponenten verwendet, die sich im privaten Netz befinden. Für vCenter Server und {{site.data.keyword.cloud_notm}} Private (ICP) wird ein zweites Gateway, das als ICP-verwaltete Edge bezeichnet wird, bereitgestellt und mit einem Uplink zum öffentlichen Netz sowie einer Schnittstelle, die dem privaten Netz zugeordnet ist, konfiguriert. Alle erforderlichen NSX-Komponenten, wie z. B. Distributed Logical Router (DLR), logische Switches und Firewalls, können vom Administrator konfiguriert werden. Im [Leitfaden für den vCenter Server-Netzbetrieb](../vcsnsxt/vcsnsxt-intro.html) finden Sie weitere Details zum Netzdesign.
 
 In der folgenden Tabelle sind die ICP ESG/DLR-Spezifikationen zusammengefasst.
 
@@ -42,7 +42,7 @@ Tabelle 1. ICP-ESG-Spezifikationen
 Attribut  |  Spezifikation
 --|--
 Edge Service Gateway  |  Virtual Appliance
-Edge-Größe 'Large' |   Anzahl vCPUs	2
+Edge-Größe "Large" |   Anzahl vCPUs	2
 Speicher	| 1-GB-Platte	| 1000 GB auf lokalem Datenspeicher
 
 Tabelle 2. ICP-DLR-Spezifikationen
@@ -50,13 +50,13 @@ Tabelle 2. ICP-DLR-Spezifikationen
 Attribut  |  Spezifikation
 --|--|
 Distributed Logical Router | 	Virtual Appliance
-Edge-Größe 'Compact' | Anzahl vCPUs	1
+Edge-Größe "Compact" | Anzahl vCPUs	1
 Speicher	| 512-MB-Platte	| 1000 GB auf lokalem Datenspeicher
 
 ## ICP-Komponenten
-{{site.data.keyword.cloud_notm}} Private ist eine Anwendungsplattform für die Entwicklung und Verwaltung von lokalen containerisierten Anwendungen. Es handelt sich um eine integrierte Umgebung für die Verwaltung von Containern, die Kubernetes als Container-Orchestrator, ein privates Image-Repository, eine Managementkonsole und Überwachungsframeworks enthält.
+ICP ist eine Anwendungsplattform für die Entwicklung und das Management von lokalen containerisierten Anwendungen. Es handelt sich um eine integrierte Umgebung für die Verwaltung von Containern, die Kubernetes als Container-Orchestrator, ein privates Image-Repository, eine Managementkonsole und Überwachungsframeworks enthält.
 
-Abbildung 2. Virtuelle ICP-Bereitstellung mit VCS
+Abbildung 2. Virtuelle ICP-Bereitstellung mit vCenter Server
 ![Virtuelle ICP-Bereitstellung mit VCS](vcsicp-virtual-icp-deployment-vcs.svg)
 
 ###	Bootknoten
@@ -73,17 +73,17 @@ Ein Workerknoten ist ein Knoten, der eine containerisierte Umgebung für die Aus
 
 ### Proxy-Knoten
 
-Ein Proxy-Knoten ist ein Knoten, der externe Anforderungen an die Services überträgt, die in Ihrem Cluster erstellt wurden. Da eine Hochverfügbarkeitsumgebung (High Availability, HA) mehrere Proxy-Knoten enthält, übergibt die Failover-Logik bei einem Ausfall des führenden Proxy-Knotens die Proxy-Rolle automatisch an einen anderen Knoten. Sie können zwar einen einzelnen Knoten sowohl als Master als auch als Proxy verwenden, es ist aber am besten, dedizierte Proxy-Knoten zu verwenden, um die Last auf dem Masterknoten zu reduzieren. Ein Cluster muss mindestens einen Proxy-Knoten enthalten, wenn ein Lastausgleich innerhalb des Clusters erforderlich ist.
+Ein Proxy-Knoten ist ein Knoten, der externe Anforderungen an die Services überträgt, die in Ihrem Cluster erstellt wurden. Da eine Hochverfügbarkeitsumgebung (High Availability, HA) mehrere Proxy-Knoten enthält, übergibt die Failover-Logik bei einem Ausfall des führenden Proxy-Knotens die Proxy-Rolle automatisch an einen anderen Knoten. Sie können zwar einen einzelnen Knoten sowohl als Master als auch als Proxy verwenden, aber durch die Verwendung von dedizierten Proxy-Knoten eine Verringerung der Last auf dem Masterknoten erreichen. Ein Cluster muss mindestens einen Proxy-Knoten enthalten, wenn ein Lastausgleich innerhalb des Clusters erforderlich ist.
 
 ### Managementknoten
 
-Ein Managementknoten ist ein optionaler Knoten, der nur Management-Services wie Überwachung, Messung und Protokollierung bietet. Durch die Konfiguration dedizierter Managementknoten können Sie verhindern, dass der Masterknoten überlastet wird. Sie können den Managementknoten nur während der Installation von {{site.data.keyword.cloud_notm}} Private aktivieren.
+Ein Managementknoten ist ein optionaler Knoten, der nur Management-Services wie Überwachung, Messung und Protokollierung bietet. Durch die Konfiguration dedizierter Managementknoten können Sie verhindern, dass der Masterknoten überlastet wird. Sie können den Managementknoten nur während der ICP-Installation aktivieren.
 
-###	VA-Knoten
+###	Vulnerability Advisor-Knoten
 
-Ein VA-Knoten (Vulnerability Advisor) ist ein optionaler Knoten, der für die Ausführung der Vulnerability Advisor-Funktion verwendet wird. Die Vulnerability Advisor-Services sind ressourcenintensiv. Wenn Sie den Vulnerability Advisor-Service verwenden, geben Sie einen dedizierten VA-Knoten an.
+Ein Vulnerability Advisor-Knoten ist ein optionaler Knoten, der für die Ausführung der Vulnerability Advisor-Funktion verwendet wird. Die Vulnerability Advisor-Services sind ressourcenintensiv. Wenn Sie den Vulnerability Advisor-Service verwenden, geben Sie einen dedizierten VA-Knoten an.
 
-Spezifikationen für virtuelle Maschinen (VM), die für eine hoch verfügbare ICP-Instanz erforderlich sind:
+Die folgenden VMs-Spezifikationen sind für eine hoch verfügbare ICP-Instanz erforderlich:
 
 Tabelle 3. ICP-VM-Spezifikationen
 
@@ -106,7 +106,7 @@ Worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 ## CAM-Komponenten
 
-{{site.data.keyword.cloud_notm}} Automation Manager (CAM) ist eine Self-Service-Managementplattform für mehrere Clouds, die unter ICP ausgeführt wird und die Entwickler und Administratoren dabei unterstützt, die Anforderungen des Unternehmens zu erfüllen.
+{{site.data.keyword.cloud_notm}} Automation Manager (CAM) ist eine Self-Service-Managementplattform für mehrere Clouds, die unter ICP ausgeführt wird und die Entwickler und Administratoren in die Lage versetzt, die Anforderungen des Unternehmens zu erfüllen.
 
 Abb. 3. CAM-Komponentenreferenz
 ![CAM-Komponentenreferenz](vcsicp-cam-component-ref.svg)
@@ -115,13 +115,13 @@ Abb. 3. CAM-Komponentenreferenz
 
 Der CAM-Proxy bietet einen nginx-Proxy-Zugriff auf CAM.
 
-### CAM-UI
+### CAM-Benutzerschnittstelle
 
-Die UI-Komponenten werden auf mehrere Container aufgeteilt: die UI der Cloudverbindungen, die UI der Vorlagenbibliothek und die UI der bereitgestellten Instanzen.
+Die Benutzerschnittstellenkomponenten sind auf mehrere Container verteilt. Die Komponenten in der Benutzerschnittstelle für die Cloudverbindungen, die Benutzerschnittstelle der Vorlagenbibliothek und die Benutzerschnittstelle für bereitgestellte Instanzen enthalten.
 
 ### CAM-API
 
-Die CAM-APIs sind auf mehrere Container aufgeteilt.
+Die CAM-APIs sind auf mehrere Container verteilt.
 
 ### Helm
 
@@ -143,14 +143,14 @@ Die Kerndatenbank für die CAM-Anwendung.
 
 Die Redis-Datenbank wird zum Speichern von Sitzungscaching und Sperren in CAM verwendet.
 
-### Template Designer
+### Vorlagendesigner
 
-Eine grafische Benutzerschnittstelle zum Erstellen von Terraform-Vorlagen mit Drag-and-drop-Funktionen von Terraform-Modulen.
+Eine grafische Benutzerschnittstelle zum Erstellen von Terraform-Vorlagen mit Drag-Funktionen für Terraform-Module.
 
-### Maria DB
+### Maria-Datenbank
 
-Die Datenbank für die Template Designer-Anwendung.
+Die Datenbank für die Vorlagendesigneranwendung.
 
 ### Zugehörige Links
 
-* [Übersicht über VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
