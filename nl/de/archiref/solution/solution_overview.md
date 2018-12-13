@@ -10,7 +10,7 @@ lastupdated: "2018-08-14"
 
 # Lösungsübersicht
 
-Mit den Angeboten von {{site.data.keyword.vmwaresolutions_full}} können Sie Ihr bestehendes virtualisiertes VMware-Rechenzentrum auf {{site.data.keyword.cloud_notm}} ausweiten oder native Cloud-Anwendungen aufnehmen.
+Mit den Angeboten von {{site.data.keyword.vmwaresolutions_full}} können Sie Ihr bestehendes virtualisiertes VMware-Rechenzentrum auf {{site.data.keyword.cloud_notm}} ausweiten oder native Cloudanwendungen aufnehmen.
 
 Die Lösung unterstützt Anwendungsfälle wie Kapazitätserweiterung in der Cloud (und Kapazitätsverringerung, wenn kein Bedarf besteht), Migration auf die Cloud, Disaster-Recovery in der Cloud und Sicherung in der Cloud. Mit der Lösung können Sie eine dedizierte Cloudumgebung für Entwicklungs-, Test-, Schulungs-, Labor- oder Produktionszwecke erstellen.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -29,7 +29,7 @@ Berechtigen Sie zur Verwaltung des Zugriffs auf Ihr {{site.data.keyword.cloud_no
 
 Machen Sie sich mit den folgenden für Ihre Instanz geltenden Einschränkungen vertraut:
 
-- [Ändern von vCenter-Artefakten – Auswirkung](../../vcenter/vcenter_chg_impact.html)
+- [Ändern von vCenter-Artefakten - Auswirkung](../../vcenter/vcenter_chg_impact.html)
 - [Für das Netz geltende Aspekte und Einschränkungen](../../vcenter/vc_networkingonvcenterserver.html)
 - [Häufig gestellte Fragen](../../vmonic/faq.html)
 
@@ -40,7 +40,7 @@ Führen Sie folgende Schritte aus, um den Zugriff auf Ihr {{site.data.keyword.cl
 - Greifen Sie mithilfe des [{{site.data.keyword.cloud_notm}}-VPNs](https://www.softlayer.com/vpn-access) oder Ihrer [{{site.data.keyword.cloud_notm}} Direct Link-Verbindung](https://www.ibm.com/cloud/direct-link) auf die Endpunkte des Instanzmanagements zu.
 - Erarbeiten Sie eine Strategie für die Konnektivität zum öffentlichen Netz aus Ihrer Instanz heraus. Zu Ihren Optionen gehören Folgende: das VMware NSX Edge Services Beispiel-Gateway (ESG) für Kunden, Gateway-Appliances wie Vyatta und FortiGate sowie Proxy-Server, die über Direct Link im {{site.data.keyword.cloud_notm}}-Netz oder Ihrem eigenen Netz bereitgestellt werden.
 - Planen Sie, ob Ihre Workload in {{site.data.keyword.cloud_notm}}-VLANs mit [portierbaren {{site.data.keyword.cloud_notm}}-IP-Adressen](https://console.bluemix.net/docs/infrastructure/subnets/getting-started.html) oder [unter Verwendung Ihrer eigenen IP-Adresse über logische NSX-Switches (VXLANs)](../nsx/nsx_overview.html) bereitgestellt werden soll. Beachten Sie, dass die Verwendung von Software-Defined Networking (SDN) von NSX Ihnen größte Flexibilität bei der Verwaltung und Sicherung Ihres Workload-Netzes in {{site.data.keyword.cloud_notm}} bietet.
-- Verwenden Sie NSX Edge Services Gateways (ESGs), [IBM Cloud Vyatta](https://console.bluemix.net/catalog/infrastructure/virtual-router-appliance) und das Direct Link-Peering, um die Konnektivität zu Workloads (Netzadressumsetzung, Virtual Private Network, Routing) zu planen.
+- Verwenden Sie NSX Edge Services Gateways (ESGs), [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) und das Direct Link-Peering, um die Konnektivität zu Workloads (Netzadressumsetzung, Virtual Private Network, Routing) zu planen.
 - Wenn Sie Cross-vCenter NSX implementieren, müssen Sie vor der Bereitstellung lokaler Workloads sicherstellen, dass sich die Bereiche der IDs lokaler Segmente nicht überschneiden.
 
 ## Sicherheitsplanung und Abschottung des Systems
@@ -52,7 +52,7 @@ Sie selbst sind dafür verantwortlich, dass Ihre VMware-Instanz und -Workloads g
 - Beachten Sie die für die einzelnen Komponenten geltenden Verschlüsselungseinstellungen.
 - Planen und implementieren Sie geeignete physische oder virtuelle Firewalllösungen wie z. B. NSX Distributed Firewall (DFW), NSX Edge Services Gateways (ESGs), [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../../services/fortinetvm_considerations.html) und [IBM Cloud Vyatta](https://console.bluemix.net/catalog/infrastructure/virtual-router-appliance).
 - Planen und implementieren Sie geeignete Lösungen für den Anwendungslastausgleich und die Sicherheit, wie z. B. [F5 on {{site.data.keyword.cloud_notm}}](../../services/f5_considerations.html).
-- Planen und implementieren Sie geeignete SIEM-Lösungen (SIEM – Security Information and Event Management, Sicherheitsinformationen und Ereignismanagement) wie z. B. [IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence).
+- Planen und implementieren Sie geeignete SIEM-Lösungen (SIEM - Security Information and Event Management, Sicherheitsinformationen und Ereignismanagement) wie z. B. [IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence).
 - Planen und implementieren Sie geeignete Möglichkeiten zum Ermitteln von Sicherheitslücken.
 - Planen und implementieren Sie für Ihre Instanz geeignete Möglichkeiten für das Änderungsmanagement, für Genehmigungen, Überprüfungen und die Zugriffssteuerung und verwenden Sie dazu Lösungen wie z. B. [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../../services/htcc_considerations.html).
 
@@ -82,9 +82,9 @@ Führen Sie folgende Schritte aus, um eine ordnungsgemäße Konfiguration und Ve
 Führen Sie folgende Schritte aus, um eine ordnungsgemäße Planung der Softwarewartung sicherzustellen.
 
 - [Richten Sie VMware Update Manager (VUM)](../vum/vum-intro.html) über einen Proxy ein, um VMware-Aktualisierungen zu erhalten.
-- Konfigurieren Sie, falls zutreffend, vSAN über einen Proxy, um die vSAN-HCL-Datenbank (HCL – Hardware Compatibility List) zu warten.
+- Konfigurieren Sie, falls zutreffend, vSAN über einen Proxy, um die vSAN-HCL-Datenbank (HCL - Hardware Compatibility List) zu warten.
 - Planen Sie für VMware-Komponenten, die nicht von VUM unterstützt werden, eine regelmäßige Wartung ein. Beispiel: VMware vCenter, PSC und NSX.
-- Überprüfen Sie die vSphere-EVC-Konfiguration (EVC – Enhanced Motion Compatibility). Ihr Cluster wird möglicherweise nicht mit aktivierter EVC konfiguriert, wenn die aktuelle Version von vSphere EVC für Ihre Hardwarestufe nicht unterstützt.
+- Überprüfen Sie die vSphere-EVC-Konfiguration (EVC - Enhanced Motion Compatibility). Ihr Cluster wird möglicherweise nicht mit aktivierter EVC konfiguriert, wenn die aktuelle Version von vSphere EVC für Ihre Hardwarestufe nicht unterstützt.
 - Planen Sie eine regelmäßige Wartung für Add-on-Services wie Veeam on {{site.data.keyword.cloud_notm}}, Zerto on {{site.data.keyword.cloud_notm}} und F5 on {{site.data.keyword.cloud_notm}} ein.
 
 ## Überwachung
@@ -92,7 +92,7 @@ Führen Sie folgende Schritte aus, um eine ordnungsgemäße Planung der Software
 Stellen Sie sicher, dass die folgenden Lösungen zur Überwachung Ihrer Instanz- und Instanzkomponenten eingeplant und implementiert werden:
 
 - Ein Protokollierungsserver, der die Protokollweiterleitung oder -erfassung für alle Instanzkomponenten sowie eine angemessene Protokollaufbewahrung einschließt.
-- Eine Alert-Infrastruktur, die nach Bedarf die Konfiguration des SMTP-Servers und des SMS-Gateways (SMS – Short Message Service) einschließt.
+- Eine Alert-Infrastruktur, die nach Bedarf die Konfiguration des SMTP-Servers und des SMS-Gateways (SMS - Short Message Service) einschließt.
 - Proaktive Überwachung von Hosts, Laufwerken, Verwaltungssoftware und Netz.
 - vSAN-Überwachung, falls zutreffend.
 - Kapazitätsüberwachung und -planung. Sie können für Ihre Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole [Cluster hinzufügen und entfernen](../../vcenter/vc_addingviewingclusters.html) und [Hosts hinzufügen und entfernen](../../vcenter/vc_addingremovingservers.html).
@@ -114,7 +114,7 @@ Ihre VMware-Instanz wird auf Bare Metal Servern in {{site.data.keyword.cloud_not
 
 Führen Sie zusätzlich zur Kapazitätsplanung die folgenden Maßnahmen aus, um sicherzustellen, dass Ihre Speicherkonfiguration Ihren Leistungs- und Verfügbarkeitsanforderungen entspricht.
 
-- Die Speicherleistung hängt von verschiedenen Faktoren ab; dazu gehören folgende: RAID-Konfiguration, Plattenstriping, Netzkonfiguration, Blockgröße, Anzahl konfigurierte IOPS (Ein-/Ausgabeoperationen pro Sekunde) für den NAS-Speicher (NAS – Network-attached Storage), VM-Hardwarekonfiguration und Konfigurationsmethode für Speicheranhänge, Clustering- und Replikationsmethoden sowie die Verwendung von Speicherrichtlinien, wie z. B. für Verschlüsselung, Deduplizierung und Komprimierung. Planen Sie Zeit ein, um Ihre Konfiguration zu testen und zu optimieren, sodass sie Ihren Anforderungen an die Speicherleistung entspricht.
+- Die Speicherleistung hängt von verschiedenen Faktoren ab; dazu gehören folgende: RAID-Konfiguration, Plattenstriping, Netzkonfiguration, Blockgröße, Anzahl konfigurierte IOPS (Ein-/Ausgabeoperationen pro Sekunde) für den NAS-Speicher (NAS - Network-attached Storage), VM-Hardwarekonfiguration und Konfigurationsmethode für Speicheranhänge, Clustering- und Replikationsmethoden sowie die Verwendung von Speicherrichtlinien, wie z. B. für Verschlüsselung, Deduplizierung und Komprimierung. Planen Sie Zeit ein, um Ihre Konfiguration zu testen und zu optimieren, sodass sie Ihren Anforderungen an die Speicherleistung entspricht.
 - Überprüfen Sie Ihre vSAN-Speicherrichtlinie.
   - RAID 1 bietet eine bessere Leistung, ist weniger anfällig für nachfolgende Ausfälle und benötigt weniger Zeit für einen erneuten Build als RAID 5. Der Systemaufwand für den Speicher ist bei RAID 5 jedoch geringer.
   - RAID 6 bietet Schutz vor dual auftretenden Ausfällen, erfordert jedoch mindestens sechs Hosts im Vergleich zu vier Hosts für RAID 5.

@@ -49,9 +49,9 @@ Sie können den vSphere Web Client so konfigurieren, dass VMs, virtuelle Applian
 2.	Wählen Sie die Registerkarte **Überwachen** und klicken Sie auf **Task und Ereignisse**.
 3.	Wählen Sie **Geplante Tasks** aus und klicken Sie auf **Neue Task planen**.
 4.	Wählen Sie in der dann angezeigten Dropdown-Liste die Option **Auf Updates prüfen** aus. Der Assistent für das Prüfen auf Updates wird geöffnet.
-5.	Wählen Sie auf der Seite 'Einstellungen bearbeiten' die Typen von Updates aus, auf die das Bestandsobjekt geprüft werden soll. Sie müssen mindestens einen Prüftyp auswählen. Geben Sie auf der Seite 'Zeitplanungsoptionen' die Prüftask an und planen Sie sie.
+5.	Wählen Sie auf der Seite "Einstellungen bearbeiten" die Typen von Updates aus, auf die das Bestandsobjekt geprüft werden soll. Sie müssen mindestens einen Prüftyp auswählen. Geben Sie auf der Seite "Zeitplanungsoptionen" die Prüftask an und planen Sie sie.
 6.	Geben Sie einen eindeutigen Namen und optional eine Beschreibung für die Prüftask ein. Klicken Sie auf **Ändern**, um die Häufigkeit und die Startzeit für die Prüftask festzulegen. Klicken Sie auf **OK**.
-7.	Die Prüftask wird in der Ansicht 'Geplante Tasks' des vSphere Web Client aufgelistet.
+7.	Die Prüftask wird in der Ansicht "Geplante Tasks" des vSphere Web Client aufgelistet.
 
 ### Zugehörige Links
 

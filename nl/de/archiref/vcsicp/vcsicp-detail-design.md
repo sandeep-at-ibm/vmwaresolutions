@@ -4,27 +4,27 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-06"
+lastupdated: "2018-11-15"
 
 ---
 
 # Detailliertes Design
 
 ## Allgemeine Servicekomponenten
-Allgemeine Services stellen die Services bereit, die von anderen Services auf der Cloud-Management-Plattform verwendet werden. Dazu gehören Identitäts- und Zugriffsservices, Domänennamensservices und NTP-Services.
+Allgemeine Services stellen die Services bereit, die von anderen Services auf der Cloud-Management-Plattform verwendet werden. Zu den allgemeinen Services gehören Identitäts-und Zugriffsservices, Domänennamensservices und NTP-Services.
 
-Abbildung 1. Allgemeine ICP-Services
+Abbildung 1. Allgemeine Services von {{site.data.keyword.cloud_notm}} Private (ICP)
 
 ![Allgemeine ICP-Services](vcsicp-icp-commonservices.svg)
 
 ### Identitäts- und Zugriffsservices
-Im Rahmen der VCS-Automation wird Microsoft Active Directory (AD) für das Identitätsmanagement verwendet. Es wird eine einzelne AD-VSI (Virtual Server Instance) bereitgestellt. Das vCenter ist für die Verwendung der MS AD-Authentifizierung konfiguriert und ICP kann auch für die LDAP-Authentifizierung konfiguriert werden.
+Im Rahmen der Automation von VMware vCenter Server on {{site.data.keyword.cloud}} wird Microsoft Active Directory (AD) für das Identitätsmanagement verwendet. Es wird eine einzelne AD-VSI (Virtual Server Instance) bereitgestellt. Das vCenter ist für die Verwendung der AD-Authentifizierung konfiguriert und ICP kann für die LDAP-Authentifizierung konfiguriert werden.
 
 ###	Domänennamensservices
-Bei der VCS-Bereitstellung werden die bereitgestellten VSIs für Microsoft Active Directory (AD) als DNS-Server für die Instanz verwendet. Alle bereitgestellten Komponenten (vCenter, PSC, NSX und ESXi-Hosts) werden so konfiguriert, dass sie auf MS AD als Standard-DNS verweisen.
+Die vCenter Server-Bereitstellung verwendet die bereitgestellten AD-VSIs als DNS-Server für die Instanz. Alle bereitgestellten Komponenten wie vCenter, PSC, NSX und ESXi-Hosts werden so konfiguriert, dass sie auf AD als Standard-DNS verweisen.
 
 ###	NTP-Services
-Bei der VCS-Bereitstellung werden die NTP-Server der {{site.data.keyword.cloud}}-Infrastruktur verwendet. Alle bereitgestellten Komponenten werden so konfiguriert, dass sie diese NTP-Server verwenden. Dass alle Komponenten im Design dieselben NTP-Server verwenden, ist für die korrekte Funktion von Zertifikaten und die MS AD-Authentifizierung von kritischer Bedeutung.
+Bei der vCenter Server-Bereitstellung werden die NTP-Server der {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet. Alle bereitgestellten Komponenten werden so konfiguriert, dass sie diese NTP-Server verwenden. Dass alle Komponenten im Design dieselben NTP-Server verwenden, ist für die korrekte Funktion von Zertifikaten und die AD-Authentifizierung von ausschlaggebender Bedeutung.
 
 ## Netzbetrieb
 
@@ -40,7 +40,7 @@ Abbildung 2. ICP mit NSX-V-Netzbetrieb
 
 ![ICP mit NSX-V-Netzbetrieb](vcsicp-nsxv-networking.svg)
 
-Weitere Informationen finden Sie im [vCenter Server Networking - Leitfaden](../vcsnsxt/vcsnsxt-intro.html).
+Weitere Informationen finden Sie im [Leitfaden für den vCenter Server-Netzbetrieb](../vcsnsxt/vcsnsxt-intro.html).
 
 ### NSX-T-Netzbetrieb
 
@@ -54,4 +54,4 @@ Abbildung 3. ICP mit NSX-T-Netzbetrieb
 
 ### Zugehörige Links
 
-* [Übersicht über VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)

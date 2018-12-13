@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -18,9 +18,9 @@ Die Netzservices unter {{site.data.keyword.cloud}} bestehen aus zwei Paaren von 
 
 Die folgende Grafik zeigt ein vereinfachtes Netzdiagramm, in dem das Paar von Management-ESGs und das Paar von Workload-ESGs dargestellt wird. Sie zeigt außerdem einen NSX-DLR (Distributed Logical Router) und das Workload-VXLAN. Diese Komponenten sind als Einstiegslösung für Kundenworkloads konzipiert und setzen noch kein spezielles Wissen zur Einrichtung in NSX voraus. Ein DLR wird in der Regel eingesetzt, um den Datenverkehr zwischen VMware Cloud Foundation oder VMware vCenter Server und Ost-West-Datenverkehr zwischen separaten Layer-2-Netzen in der Instanz weiterzuleiten. Dies steht im Gegensatz zum Verhalten eines ESG, das den Nord-Süd-Netzverkehr vereinfacht, der die Cloud Foundation- oder vCenter Server-Instanz traversiert.
 
-Abbildung 1. Cloud-Netzservices unter Cloud Foundation
+Abbildung 1. Cloudnetzservices unter Cloud Foundation
 
-![Cloud-Netzservices unter Cloud Foundation](cloudnetworkingservicesdiagram.svg "Cloud-Netzservices unter Cloud Foundation")
+![Cloudnetzservices unter Cloud Foundation](cloudnetworkingservicesdiagram.svg "Cloudnetzservices unter Cloud Foundation")
 
 Während ein einzelnes ESG möglicherweise für den Management- und Workloaddatenverkehr beim Kunden ausreicht, kann beim Design eine Trennung von Management und Kundendatenverkehr vorgenommen werden, um eine versehentliche Fehlkonfiguration des Management-ESGs zu verhindern.
 
@@ -75,13 +75,13 @@ Tabelle 3. NSX ESX-IP-Konfiguration
 
 | Schnittstelle | Schnittstellentyp | IPv4-Teilnetztyp | Bereich | Beschreibung |
 |:--------- |:-------------- |:----------------- |:----- |:----------- |
-| Öffentlicher Uplink | Uplink | {{site.data.keyword.cloud_notm}} portierbar, öffentlich | /30 – gibt eine zuordnungsfähige IP-Adresse aus | Öffentliche Internetschnittstelle |
-| Privater Uplink | Uplink | {{site.data.keyword.cloud_notm}} portierbar, privat (vorhandenes Management) | /26 – gibt 61 zuordnungsfähige IP-Adressen aus | Interne private Netzschnittstelle |
+| Öffentlicher Uplink | Uplink | {{site.data.keyword.cloud_notm}} portierbar, öffentlich | /30 - gibt eine zuordnungsfähige IP-Adresse aus | Öffentliche Internetschnittstelle |
+| Privater Uplink | Uplink | {{site.data.keyword.cloud_notm}} portierbar, privat (vorhandenes Management) | /26 - gibt 61 zuordnungsfähige IP-Adressen aus | Interne private Netzschnittstelle |
 | Intern | Intern | Link-Local | 169.254.0.0/16 | Interne Schnittstelle für ESG-HA-Paar-Kommunikation |
 
 ### NAT-Definitionen
 
-Network Address Translation (NAT) wird im Management-ESG verwendet, um die Traversierung des Netzverkehrs zwischen zwei IP-Adressräumen zu ermöglichen. Dies geschieht normalerweise, um über das Internet weiterleitbare IPs beizubehalten oder interne IPs aus Sicherheitsgründen vor öffentlichen IPs zu verdecken. NAT wird auch für die TCP- und UDP-Portumleitung verwendet (TCP = Transmission Control Protocol, UDP = User Datagram Protocol). Der Managementdatenverkehr wird immer von innerhalb der Cloud Foundation- und vCenter Server-Instanz initiiert. Dies setzt voraus, dass nur eine Quellen-NAT (SNAT) für das Management-ESG definiert ist. Eine individuelle SNAT wird nicht für jede interne VM erstellt, die einen Service hostet, der von der Instanz ausgehen muss.
+Network Address Translation (NAT) wird im Management-ESG verwendet, um die Traversierung des Netzverkehrs zwischen zwei IP-Adressräumen zu ermöglichen. Dies geschieht normalerweise, um über das Internet weiterleitbare IP-Adressen beizubehalten oder interne IP-Adressen aus Sicherheitsgründen vor öffentlichen IP-Adressen zu verdecken. NAT wird auch für die TCP- und UDP-Portumleitung verwendet (TCP = Transmission Control Protocol, UDP = User Datagram Protocol). Der Managementdatenverkehr wird immer von innerhalb der Cloud Foundation- und vCenter Server-Instanz initiiert. Dies setzt voraus, dass nur eine Quellen-NAT (SNAT) für das Management-ESG definiert ist. Eine individuelle SNAT wird nicht für jede interne VM erstellt, die einen Service hostet, der von der Instanz ausgehen muss.
 
 Tabelle 4. NSX ESG-NAT-Konfiguration
 
@@ -133,7 +133,7 @@ Tabelle 6. NSX ESG-Firewallkonfiguration
 
 ## IBM Workload NSX Edge
 
-Das IBM Workload-ESG ist Teil einer einfachen Topologie, die für die Workload-Netzkommunikation konzipiert ist. Im folgenden Abschnitt wird beschrieben, wo Workloads designgemäß an ein Netz in einer Cloud Foundation- oder vCenter Server-Instanz angehängt werden können. Dies ist ein Ausgangspunkt für das Anhängen von lokalen Netzen und IP-Adressräumen an eine bestimmte Cloud Foundation- oder vCenter Center-Instanz und stellt die Basis für eine echte Hybrid Cloud-Architektur dar.
+Das IBM Workload-ESG ist Teil einer einfachen Topologie, die für die Workload-Netzkommunikation konzipiert ist. Im folgenden Abschnitt wird beschrieben, wo Workloads designgemäß an ein Netz in einer Cloud Foundation- oder vCenter Server-Instanz angehängt werden können. Dies ist ein Ausgangspunkt für das Anhängen von lokalen Netzen und IP-Adressräumen an eine bestimmte Cloud Foundation- oder vCenter Center-Instanz und stellt die Basis für eine echte Hybrid-Cloud-Architektur dar.
 
 Ein Kundennetz, das mit den öffentlichen und privaten {{site.data.keyword.cloud_notm}}-Netzen verbunden ist, ermöglicht den eingehenden und abgehenden Workloadzugriff auf Internetdatenverkehr, aber auch die Einrichtung eines standortübergreifenden VPN auf der Basis von öffentlichen oder privaten {{site.data.keyword.cloud_notm}}-Netzen. Dies ermöglicht eine beschleunigte Wertschöpfungszeit hinsichtlich der Anbindung lokaler Netze, da es Monate dauern kann, bis ein dediziertes Wide Area Network (WAN) aufgrund hoher Kundensicherheitsanforderungen betriebsbereit ist. Nachdem jedoch ein dedizierter Link vorhanden ist, kann das VPN zur Traversierung des Links gedreht werden, ohne dass das Overlay-Netz innerhalb des VPN-Tunnels oder in der Cloud Foundation- oder vCenter-Serverinstanz beeinträchtigt wird. Danach kann die öffentliche Schnittstelle für das Workload-ESG bei Bedarf aus einer Sicherheitsperspektive entfernt werden.
 
@@ -177,15 +177,15 @@ Tabelle 9. IP-Konfiguration für DLR und Workload-ESG
 
 | Schnittstelle | Schnittstellentyp | IPv4-Teilnetztyp | Bereich | Beschreibung |
 |:--------- |:-------------- |:----------------- |:----- |:----------- |
-| Öffentlicher Uplink (ESG) | Uplink | {{site.data.keyword.cloud_notm}} portierbar, öffentlich | /30 – gibt eine zuordnungsfähige IP-Adresse aus | Öffentliche Internetschnittstelle (der Kunde kann separat zusätzliche IPs bestellen) |
-| Privater Uplink (ESG) | Uplink | {{site.data.keyword.cloud_notm}} portierbar, privat (vorhandenes Management) | /26 – gibt 61 zuordnungsfähige IP-Adressen aus | Interne private Netzschnittstelle |
+| Öffentlicher Uplink (ESG) | Uplink | {{site.data.keyword.cloud_notm}} portierbar, öffentlich | /30 - gibt eine zuordnungsfähige IP-Adresse aus | Öffentliche Internetschnittstelle (der Kunde kann separat zusätzliche IPs bestellen) |
+| Privater Uplink (ESG) | Uplink | {{site.data.keyword.cloud_notm}} portierbar, privat (vorhandenes Management) | /26 - gibt 61 zuordnungsfähige IP-Adressen aus | Interne private Netzschnittstelle |
 | Intern (ESG und DLR) | Intern | Link-Local | 169.254.0.0/16 | Interne Schnittstelle für ESG-HA-Paar-Kommunikation |
 | Transit-Uplink (ESG und DLR) | Uplink | Zugeordnet nach Kunde | TBD | Transit-Netzverbindung für ESG zum DLR |
 | Workload (DLR) | Uplink | Zugeordnet nach Kunde | TBD | Workloadteilnetz |
 
 ### NAT-Definitionen für IBM Workload NSX Edge
 
-NAT wird im Workload-ESG verwendet, um die Traversierung des Netzverkehrs zwischen zwei IP-Adressräumen zu ermöglichen. Für das ESG muss NAT die Kommunikation nicht nur zu Internetzielen ermöglichen, sondern zu allen IP-Bereichen, die auf {{site.data.keyword.cloud_notm}} zurückgehen. Bei diesem Design kann der Workloaddatenverkehr ins Internet gelangen, aber nicht zum Management- oder einem der {{site.data.keyword.cloud_notm}}-Netze. Daher muss im Workload-ESG nur ein SNAT definiert sein. Dabei ist zu beachten, dass das gesamte Workload-portierbare Teilnetz für die Traversierung durch SNAT konfiguriert wird.
+NAT wird im Workload-ESG verwendet, um die Traversierung des Netzverkehrs zwischen zwei IP-Adressräumen zu ermöglichen. Für das ESG muss NAT die Kommunikation nicht nur zu Internetzielen ermöglichen, sondern zu allen IP-Bereichen, die auf {{site.data.keyword.cloud_notm}} zurückgehen. Bei diesem Design kann der Workloaddatenverkehr ins Internet gelangen, aber nicht zum Management- oder einem der {{site.data.keyword.cloud_notm}}-Netze. Daher muss im Workload-ESG nur ein SNAT definiert sein. Das gesamte Workload-portierbare Teilnetz wird für die Traversierung durch SNAT konfiguriert.
 
 Auch wenn es möglich ist, NAT zu verwenden, um die Workloadkommunikation über mehrere Instanzen von Cloud Foundation oder vCenter Server zu ermöglichen, ist dies nicht mehr praktikabel, wenn viele Workloads über Instanzen hinweg verbunden werden müssen. Beispiele für die Verwendung erweiterter NSX-Funktionen zum Erstellen eines L2-Overly-Transit-Netzes über Cloud Foundation- oder vCenter Server-Instanzen hinweg finden Sie unter [Architektur mit mehreren Standorten](multi_site.html).
 
@@ -213,7 +213,7 @@ Standardmäßig ist das Workload-ESG so konfiguriert, dass der gesamte Datenverk
 
 **Verweigern:** Der gesamte Datenverkehr wird ohne Antwort gelöscht, es sei denn, dieser Datenverkehr darf die Firewall aufgrund einer vorherigen (in der Reihenfolge vorgeordneten) Regel oder Regelmenge passieren. Die automatische Regelgenerierung wird ausgewählt, um den Steuerdatenverkehr zum ESG-Paar zu ermöglichen.
 
-Zusätzlich zu den automatisch generierten Regeln werden die folgenden Firewallregeln festgelegt:
+Zusätzlich zu den automatisch generierten Regeln werden die folgenden Firewallregeln festgelegt.
 
 Tabelle 12. Workload-ESG-Firewallregeln
 

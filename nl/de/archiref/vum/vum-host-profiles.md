@@ -10,7 +10,7 @@ lastupdated: "2018-11-07"
 
 #	Hostprofile
 
-vCenter beinhaltet ein Feature 'Hostprofile'. Dieses Feature erstellt ein Profil, das eine vorkonfigurierte und validierte Referenzhostkonfiguration erfasst und einem Systemadministrator hilft, die Hostkonfigurationen in einem Cluster zu verwalten. Hostprofile stellen einen automatisierten und zentral verwalteten Mechanismus für die Hostkonfiguration und die Konfigurationskonformität bereit. Hostprofile ermöglichen es, eine Konfiguration als verwaltetes Objekt zu behandeln, das einen Katalog von Parametern für die Konfiguration enthält: für den Netzbetrieb, den Speicher, die Sicherheit und andere Parameter auf der Hostebene. Diese Hostprofile können auf einzelne Hosts, einen Cluster oder auf alle Hosts und Cluster, die einem Hostprofil zugeordnet sind, angewendet werden.
+vCenter beinhaltet ein Feature "Hostprofile". Dieses Feature erstellt ein Profil, das eine vorkonfigurierte und validierte Referenzhostkonfiguration erfasst und einem Systemadministrator hilft, die Hostkonfigurationen in einem Cluster zu verwalten. Hostprofile stellen einen automatisierten und zentral verwalteten Mechanismus für die Hostkonfiguration und die Konfigurationskonformität bereit. Hostprofile ermöglichen es, eine Konfiguration als verwaltetes Objekt zu behandeln, das einen Katalog von Parametern für die Konfiguration enthält: für den Netzbetrieb, den Speicher, die Sicherheit und andere Parameter auf der Hostebene. Diese Hostprofile können auf einzelne Hosts, einen Cluster oder auf alle Hosts und Cluster, die einem Hostprofil zugeordnet sind, angewendet werden.
 
 Da mehr vSphere ESXi-Hosts für VMware vCenter Server on {{site.data.keyword.cloud}} von der IC4VS-Automatisierung implementiert werden, die den ursprünglichen Cluster bereitgestellt hat, gibt es weniger Konfigurationsabweichungen als bei manuellen Methoden zum Hinzufügen von Hosts. Systemadministratoraktionen außerhalb der Automation können die Hostkonfiguration jedoch anders gestalten. Zum Beispiel können mehr NFS-Speicher oder zusätzliche VLANs hinzugefügt werden. Daher ist die Verwendung von Hostprofilen zur Validierung der Konfiguration eines neuen Hosts durch die Überprüfung der Konformität dieses Hosts mit einem vorhandenen Host ein gültiger Anwendungsfall dieses Tools in {{site.data.keyword.cloud_notm}}.
 
@@ -30,8 +30,8 @@ Zur Prüfung der Konformität sind die folgenden Schritte in der angegebenen Rei
 
 ##	Hostprofil aus einem vorhandenen Host erstellen
 
-1.	Klicken Sie in vSphere Web Client' unter 'Home' auf **Richtlinien und Profile**.
-2.	Klicken Sie auf **Hostprofile** und navigieren Sie zu der Ansicht 'Hostprofile'.
+1.	Klicken Sie in vSphere Web Client" unter "Home" auf **Richtlinien und Profile**.
+2.	Klicken Sie auf **Hostprofile** und navigieren Sie zu der Ansicht "Hostprofile".
 3.	Klicken Sie auf das Symbol **Profil vom Host extrahieren**.
 4.	Wählen Sie einen vorhandenen Host aus, der als Referenzhost dienen soll, und klicken Sie auf **Weiter**.
 5.	Geben Sie den Namen und eine Beschreibung für das neue Profil ein und klicken Sie auf **Weiter**.
@@ -50,7 +50,7 @@ Zur Prüfung der Konformität sind die folgenden Schritte in der angegebenen Rei
 
 1.	Navigieren Sie zu dem Hostprofil, das zuvor erstellt wurde.
 2.	Klicken Sie auf das Symbol **Hostprofilübereinstimmung überprüfen**.
-3.	Auf der Registerkarte **Objekte** wird der Konformitätsstatus wie folgt aktualisiert: _Übereinstimmung, Unbekannt oder Nicht übereinstimmend_. Der Status 'Nicht übereinstimmend' bedeutet, dass eine Inkonsistenz zwischen dem Profil und dem Host besteht.
+3.	Auf der Registerkarte **Objekte** wird der Konformitätsstatus wie folgt aktualisiert: _Übereinstimmung, Unbekannt oder Nicht übereinstimmend_. Der Status "Nicht übereinstimmend" bedeutet, dass eine Inkonsistenz zwischen dem Profil und dem Host besteht.
 
 ##	Konformitätsfehler und Korrekturen überprüfen
 

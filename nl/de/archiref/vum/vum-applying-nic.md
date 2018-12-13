@@ -12,7 +12,7 @@ lastupdated: "2018-11-01"
 
 ESXi 6.5 enthält viele neue native Treiber, die die älteren vmklinux-Treiber ersetzen. Während die meisten der neuen nativen Treiber nach der Installation oder dem Upgrade standardmäßig aktiviert werden, sind drei der neuen nativen Treiber standardmäßig inaktiviert, da sie die Funktionen der entsprechenden vmklinux-Treiber nicht vollständig unterstützen.
 
-'ixgben' ist ein nativer Treiber, der den Treiber 'vmklinux net-ixgbe' ersetzt, aber keine Unterstützung für SR-IOV und SW FcOE bietet. Die ICVS-Automation hätte diesen Treiber bei der Bereitstellung des vSphere ESXi-Hosts nicht aktiviert. Es wird empfohlen, diesen Treiber zu aktivieren, da er verbesserte Leistung ermöglicht. Die im Folgenden beschriebene Prozedur zeigt, wie Sie die nativen Treiber mithilfe der vSphere-Befehlszeile (vCLI) aktivieren und inaktivieren können.
+"ixgben" ist ein nativer Treiber, der den Treiber "vmklinux net-ixgbe" ersetzt, aber keine Unterstützung für SR-IOV und SW FcOE bietet. Die ICVS-Automation hätte diesen Treiber bei der Bereitstellung des vSphere ESXi-Hosts nicht aktiviert. Es wird empfohlen, diesen Treiber zu aktivieren, da er verbesserte Leistung ermöglicht. Die im Folgenden beschriebene Prozedur zeigt, wie Sie die nativen Treiber mithilfe der vSphere-Befehlszeile (vCLI) aktivieren und inaktivieren können.
 
 Bevor Sie diese Task starten, rufen Sie alle physischen IPMI-IP-Hostadressen, Anmelde-IDs und Kennwörter aus dem [{{site.data.keyword.cloud}}-Infrastrukturportal](https://control.softlayer.com/devices) ab. Dies ist bei einem Backout erforderlich oder zum Überprüfen des Fortschritts eines Upgrades, bei dem kein direkter Netzzugriff auf den Host möglich ist.
 
@@ -23,7 +23,7 @@ Führen Sie die folgenden Schritte für jeden Host in der angegebenen Reihenfolg
   `esxcli system module set --enabled=true --module=ixgben`
 4. Führen Sie den folgenden vCLI-Befehl aus, um den vSphere ESXi-Host erneut zu starten:
   `system shutdown reboot --reason “Install ixgben driver”`
-5. Nachdem der vSphere ESXi-Host neu gestartet wurde, melden Sie sich mithilfe von SSH wieder beim Host an. Setzen Sie den folgenden vCLI-Befehl ab und prüfen Sie, ob der ixgben-Treiber 'geladen' (erste Spalte) und 'aktiviert' (zweite Spalte) wurde:
+5. Nachdem der vSphere ESXi-Host neu gestartet wurde, melden Sie sich mithilfe von SSH wieder beim Host an. Setzen Sie den folgenden vCLI-Befehl ab und prüfen Sie, ob der ixgben-Treiber "geladen" (erste Spalte) und "aktiviert" (zweite Spalte) wurde:
   `esxcli system module list |grep ixg`
 6. Wenn die Treiber aktiviert sind, wählen Sie mithilfe des vSphere Web Client den Host im Navigatorfenster aus, klicken Sie mit der rechten Maustaste und wählen Sie **Wartungsmodus** > **Wartungsmodus beenden** aus. Wählen Sie den nächsten Host aus und aktivieren Sie die Treiber, bis alle Hosts an der Reihe waren.
 7. Wenn die Änderung nicht richtig ausgeführt wird, führen Sie den folgenden Befehl aus, um den Vorgang rückgängig zu machen:
@@ -36,7 +36,7 @@ Wenn Sie den Vorgang rückgängig machen müssen und Sie nicht über SSH auf den
 
 Verwenden Sie die ID und das Kennwort, die im {{site.data.keyword.cloud_notm}}-Steuerfenster mit der IPMI-IP-Adresse aufgelistet sind, um sich an der IPMI-Webschnittstelle anzumelden. Sie müssen mit dem Rechenzentrum, in dem sich der Host befindet, über VPN verbunden sein. Weitere Informationen finden Sie unter [Einführung in die Arbeit mit VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
 
-1. Wechseln Sie zur Seite 'Gerätedetails, Fernverwaltung' für den vSphere ESXi-Host und wählen Sie **Aktionen** > **KVM-Konsole** aus. Ein anderes Fenster wird geöffnet, in dem Sie den IPMI-Benutzer und das zugehörige Kennwort eingeben können.
+1. Wechseln Sie zur Seite "Gerätedetails, Fernverwaltung" für den vSphere ESXi-Host und wählen Sie **Aktionen** > **KVM-Konsole** aus. Ein anderes Fenster wird geöffnet, in dem Sie den IPMI-Benutzer und das zugehörige Kennwort eingeben können.
 2. Wählen Sie **Fernsteuerung** > **iKVM/HTML5** aus und klicken Sie auf **iKVM/HTML5**, um neu zu starten. Sie können nun auf die Konsole des vSphere ESXi-Hosts zugreifen.
 3. Wenn der Host auf Befehle antwortet, verwenden Sie **ALT-F1** in der Konsole, um auf die ESXi-Hostkonsole zuzugreifen. Verwenden Sie die Berechtigungsnachweise des Hosts, um sich anzumelden.
 4. Wenn der Host nicht antwortet, verwenden Sie die IPMI-Menüs, um den Host aus- und wieder einzuschalten.

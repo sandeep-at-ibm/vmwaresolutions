@@ -56,15 +56,13 @@ Zur Unterstützung weiterer Benutzerworkloads kann die Umgebung wie folgt skalie
 * Bereitstellen weiterer Cluster, die von derselben vCenter Server Appliance verwaltet werden
 * Bereitstellen neuer vCenter Server- oder Cloud Foundation-Instanzen mit eigener vCenter Server Appliance
 
-Weitere Informationen zu Clustern finden Sie im [Dokument zur Architektur der VMware-Clusterlösung in
-{{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf).
+Weitere Informationen zu Clustern finden Sie im [Dokument zur Architektur der VMware-Clusterlösung in {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf).
 
 ## VMware vSAN-Design
 
 In diesem Design wird VMware vSAN-Speicher in Cloud Foundation-Instanzen und optional in vCenter Server-Instanzen verwendet, um gemeinsam genutzten Speicher für die vSphere-Hosts bereitzustellen.
 
-Wie in Abbildung 1 zu sehen ist, fasst vSAN den lokalen Speicher über mehrere ESXi-Hosts in einem vSphere-Cluster hinweg zusammen und verwaltet den zusammengefassten Speicher wie einen einzelnen VM-Datenspeicher. In diesem Design enthalten die Rechenknoten lokale Plattenlaufwerke für das ESXi-Betriebssystem (BS) und den vSAN-Datenspeicher. Unabhängig davon, zu welchem Cluster ein Knoten gehört,
-werden in jeden Knoten zwei SATA-Laufwerke mit 1 TB eingeschlossen, um die ESXi-Installation aufzunehmen.
+Wie in Abbildung 1 zu sehen ist, fasst vSAN den lokalen Speicher über mehrere ESXi-Hosts in einem vSphere-Cluster hinweg zusammen und verwaltet den zusammengefassten Speicher wie einen einzelnen VM-Datenspeicher. In diesem Design enthalten die Rechenknoten lokale Plattenlaufwerke für das ESXi-Betriebssystem (BS) und den vSAN-Datenspeicher. Unabhängig davon, zu welchem Cluster ein Knoten gehört, werden in jeden Knoten zwei SATA-Laufwerke mit 1 TB eingeschlossen, um die ESXi-Installation aufzunehmen.
 
 Abbildung 1. vSAN-Konzept
 
@@ -129,11 +127,11 @@ Tabelle 2. NSX-Manager-Attribute
 
 Die folgende Abbildung zeigt die Anordnung des NSX-Managers in Relation zu anderen Komponenten in der Architektur.
 
-Abbildung 2. Übersicht über das NSX-Manager-Netz
+Abbildung 2. Netzübersicht für NSX-Manager
 
-![Übersicht über das NSX-Manager-Netz](virtual_NSX.svg "NSX-Manager in Relation zu den anderen Komponenten in der Architektur")
+![Netzübersicht für NSX-Manager](virtual_NSX.svg "NSX-Manager in Relation zu den anderen Komponenten in der Architektur")
 
-Nach der Erstbereitstellung stellt die {{site.data.keyword.cloud_notm}}-Automatisierung drei NSX-Controller im ersten Cluster bereit. Jedem der Controller wird eine VLAN-gestützte IP-Adresse aus dem portierbaren Teilnetz **Private A** zugeordnet, das für Managementkomponenten vorgesehen ist. Ferner werden in dem Design VM-VM-Anti-Affinitätsregeln erstellt, um die Controller unter den Hosts im Cluster zu separieren. Der erste Cluster muss mindestens drei Knoten enthalten, um hohe Verfügbarkeit für die Controller sicherzustellen.
+Nach der Erstbereitstellung stellt die {{site.data.keyword.cloud_notm}}-Automatisierung drei NSX-Controller im ersten Cluster bereit. Jedem der Controller wird eine VLAN-gestützte IP-Adresse aus dem portierbaren Teilnetz **Privat A** zugeordnet, das für Managementkomponenten vorgesehen ist. Ferner werden in dem Design VM-VM-Anti-Affinitätsregeln erstellt, um die Controller unter den Hosts im Cluster zu separieren. Der erste Cluster muss mindestens drei Knoten enthalten, um hohe Verfügbarkeit für die Controller sicherzustellen.
 
 Neben den Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisierung die bereitgestellten vSphere-Hosts mit NSX-VIBs vor, um die Verwendung eines virtualisierten Netzes durch VXLAN-Tunnelendpunkte (VTEPs) einzurichten. Den VTEPs wird eine VLAN-gestützte IP-Adresse aus dem portierbaren IP-Adressbereich von **Privat A** zugeordnet, der für VTEPs angegeben ist, wie in *Tabelle 1. VLAN- und Teilnetzzusammenfassung* für das [Design der physischen Infrastruktur](design_physicalinfrastructure.html) aufgeführt. Der VXLAN-Datenverkehr befindet sich im nicht mit Tags versehenen VLAN und wird dem privaten vDS zugewiesen.
 
