@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="871px"
+   height="470px"
+   version="1.1"
+   id="svg138"
+   sodipodi:docname="vcscontent-transformation.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <defs
+     id="defs142" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     id="namedview140"
+     showgrid="false"
+     inkscape:zoom="1.47876"
+     inkscape:cx="487.02175"
+     inkscape:cy="126.53631"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg138" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g10"
+     pointer-events="none"
+     transform="translate(0.5,0.5)">
+    <rect
+       style="fill:#f5f5f5;stroke:#666666"
+       y="0"
+       x="0"
+       id="rect4"
+       height="469"
+       width="870" />
+    <rect
+       style="fill:#dae8fc;stroke:#6c8ebf"
+       id="rect6"
+       height="394"
+       width="600"
+       y="69"
+       x="130" />
+    <rect
+       style="fill:#dae8fc;stroke:#6c8ebf"
+       id="rect8"
+       height="310"
+       width="150"
+       y="149"
+       x="570" />
+  </g>
+  <g
+     style="font-size:24px;font-family:Helvetica;text-anchor:middle"
+     id="g14"
+     font-size="24px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text12"
+       y="33.5"
+       x="194.5">Stock Trader nach Transformation</text>
+  </g>
+  <rect
+     style="fill:#fff2cc;stroke:#d6b656"
+     id="rect16"
+     pointer-events="none"
+     height="310"
+     width="400"
+     y="149.5"
+     x="160.5" />
+  <g
+     style="font-size:16px;font-family:Helvetica"
+     id="g20"
+     font-size="16px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text18"
+       y="169.5"
+       x="165.5">IBM Cloud Private Hosted</text>
+  </g>
+  <rect
+     style="fill:#99ff99;stroke:#36393d"
+     id="rect22"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="104"
+     x="375" />
+  <g
+     style="font-size:10px;font-family:Helvetica;text-anchor:middle"
+     id="g26"
+     font-size="10px"
+     transform="translate(-0.65869141,3.5888672)">
+    <text
+       id="text24"
+       y="119"
+       x="415">DB2</text>
+  </g>
+  <rect
+     style="fill:#99ff99;stroke:#36393d;stroke-width:1.05367696"
+     id="rect28"
+     pointer-events="none"
+     height="29.99012"
+     width="87.737473"
+     y="169.52684"
+     x="460.52682" />
+  <g
+     style="font-size:10px;font-family:Helvetica;text-anchor:middle"
+     id="g32"
+     font-size="10px"
+     transform="translate(5.1367722,3.5399666)">
+    <text
+       id="text30"
+       y="184.5"
+       x="499">Redis</text>
+  </g>
+  <rect
+     style="fill:#99ccff;stroke:#6c8ebf"
+     id="rect34"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="278.5"
+     x="175.5" />
+  <g
+     style="font-size:10px;font-family:Helvetica;text-anchor:middle"
+     id="g38"
+     font-size="10px"
+     transform="translate(0.62402344,3.5180664)">
+    <text
+       id="text36"
+       y="293.5"
+       x="214">Händler</text>
+  </g>
+  <rect
+     style="fill:#99ccff;stroke:#6c8ebf"
+     id="rect40"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="278.5"
+     x="319.5" />
+  <g
+     style="font-size:10px;font-family:Helvetica;text-anchor:middle"
+     id="g44"
+     font-size="10px"
+     transform="translate(-0.75146484,3.5693359)">
+    <text
+       id="text42"
+       y="293.5"
+       x="359.5">Portfolio</text>
+  </g>
+  <path
+     d="m 539.5,247.5 h 50.63"
+     id="path84"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+  <rect
+     style="fill:#99ccff;stroke:#6c8ebf;stroke-width:1.05367696"
+     id="rect46"
+     pointer-events="none"
+     height="29.99012"
+     width="87.737473"
+     y="232.50609"
+     x="460.52682" />
+  <g
+     style="font-size:10px;font-family:Helvetica;text-anchor:middle"
+     id="g50"
+     font-size="10px"
+     transform="translate(5.3125534,2.4864998)">
+    <text
+       id="text48"
+       y="247.5"
+       x="499">Börsennotierung</text>
+  </g>
+  <rect
+     style="fill:#99ccff;stroke:#6c8ebf;stroke-width:1.05367696"
+     id="rect52"
+     pointer-events="none"
+     height="29.99012"
+     width="87.737473"
+     y="302.48303"
+     x="460.52682" />
+  <g
+     style="font-size:10px;font-family:Helvetica;text-anchor:middle"
+     id="g56"
+     font-size="10px"
+     transform="translate(4.2173386,3.5474281)">
+    <text
+       id="text54"
+       y="317.5"
+       x="500">Kundentreuestufe</text>
+  </g>
+  <g
+     style="stroke:#000000;stroke-miterlimit:10"
+     id="g78"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     transform="translate(0.5,0.5)">
+    <path
+       style="fill:none"
+       inkscape:connector-curvature="0"
+       id="path58"
+       d="m 254,293 h 58.63" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path60"
+       d="m 317.88,293 -7,3.5 1.75,-3.5 -1.75,-3.5 z" />
+    <path
+       style="fill:none"
+       inkscape:connector-curvature="0"
+       id="path62"
+       d="m 398,293 56.89,-42.21" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path64"
+       d="m 459.1,247.67 -3.53,6.98 -0.68,-3.86 -3.5,-1.76 z" />
+    <path
+       style="fill:none"
+       inkscape:connector-curvature="0"
+       id="path66"
+       d="m 398,293 56.06,21.7" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path68"
+       d="m 458.96,316.6 -7.79,0.73 2.89,-2.63 -0.37,-3.89 z" />
+    <path
+       style="fill:none"
+       inkscape:connector-curvature="0"
+       id="path70"
+       d="M 360,278 413.69,139.94" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path72"
+       d="m 415.59,135.04 0.73,7.79 -2.63,-2.89 -3.89,0.36 z" />
+    <path
+       style="fill:none"
+       inkscape:connector-curvature="0"
+       id="path74"
+       d="M 500,232 V 205.37" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path76"
+       d="m 500,200.12 3.5,7 -3.5,-1.75 -3.5,1.75 z" />
+  </g>
+  <g
+     style="font-size:16px;font-family:Helvetica"
+     id="g82"
+     font-size="16px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text80"
+       y="89"
+       x="135.5">IBM Cloud</text>
+  </g>
+  <path
+     style="stroke:#000000;stroke-miterlimit:10"
+     d="m 595.38,247.5 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+     id="path86"
+     inkscape:connector-curvature="0" />
+  <path
+     d="m 675.5,247.5 h 64.63"
+     id="path88"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+  <path
+     style="stroke:#000000;stroke-miterlimit:10"
+     d="m 745.38,247.5 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+     id="path90"
+     inkscape:connector-curvature="0" />
+  <g
+     style="font-size:16px;font-family:Helvetica;text-anchor:middle"
+     id="g96"
+     font-size="16px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text94"
+       y="169.5"
+       x="646.5">IBM Cloud-Services</text>
+  </g>
+  <rect
+     style="fill:#f8cecc;stroke:#b85450"
+     id="rect98"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="232.5"
+     x="596" />
+  <g
+     style="font-size:10px;font-family:Helvetica;text-anchor:middle"
+     id="g102"
+     font-size="10px"
+     transform="translate(1.0317383,3.5888672)">
+    <text
+       id="text100"
+       y="247.5"
+       x="634.5">API Connect</text>
+  </g>
+  <rect
+     style="fill:#cccccc;stroke:#666666"
+     id="rect104"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="332.5"
+     x="30.5" />
+  <g
+     style="font-size:10px;font-family:Helvetica;text-anchor:middle"
+     id="g108"
+     font-size="10px"
+     transform="translate(0.63867187,3.5180664)">
+    <text
+       id="text106"
+       y="347.5"
+       x="69">Browser</text>
+  </g>
+  <rect
+     style="fill:#cccccc;stroke:#666666"
+     id="rect110"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="272.5"
+     x="30.5" />
+  <g
+     style="font-size:10px;font-family:Helvetica;text-anchor:middle"
+     id="g114"
+     font-size="10px"
+     transform="translate(1.012207,3.5888672)">
+    <text
+       id="text112"
+       y="287.5"
+       x="69">OIDC</text>
+  </g>
+  <g
+     stroke-miterlimit="10"
+     id="g126"
+     style="stroke:#000000;stroke-miterlimit:10"
+     transform="translate(0.5,0.5)">
+    <path
+       d="m 109,347 60.78,-42.36"
+       id="path116"
+       inkscape:connector-curvature="0"
+       style="fill:none" />
+    <path
+       d="m 174.08,301.64 -3.74,6.87 -0.56,-3.87 -3.44,-1.87 z"
+       id="path118"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 115.37,286.9 53.26,-0.8"
+       id="path120"
+       inkscape:connector-curvature="0"
+       style="fill:none" />
+    <path
+       d="m 110.12,286.98 6.94,-3.6 -1.69,3.52 1.8,3.48 z"
+       id="path122"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 173.88,286.02 -6.94,3.6 1.69,-3.52 -1.8,-3.48 z"
+       id="path124"
+       inkscape:connector-curvature="0" />
+  </g>
+  <rect
+     x="746"
+     y="232.5"
+     width="79"
+     height="30"
+     id="rect128"
+     style="fill:#cccccc;stroke:#666666" />
+  <g
+     style="font-size:10px;font-family:Helvetica;text-anchor:middle"
+     id="g134"
+     font-size="10px"
+     transform="translate(0.83154297,1.0180664)">
+    <text
+       id="text132"
+       y="250"
+       x="784.5">Börsenservice</text>
+  </g>
+</svg>
