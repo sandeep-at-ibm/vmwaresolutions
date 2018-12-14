@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -14,10 +14,10 @@ lastupdated: "2018-11-29"
 
 # KMIP for VMware on IBM Cloud overview
 
-The KMIP for VMware on {{site.data.keyword.cloud}} service provides a 24x7 highly available service to manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}. This service offers runtime capability to allow customers to create, retrieve, activate, revoke, and destroy the encryption keys. It also provides management capability to maintain the associations between the client credentials and the encryption keys.
-
-This service is available only to instances deployed in V2.2 or later.
+The current version of KMIP for VMware on IBM Cloud is being deprecated. For more information, [contact IBM Support](../vmonic/trbl_support.html).
 {:note}
+
+The KMIP for VMware on {{site.data.keyword.cloud}} service provides a 24x7 highly available service to manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}. This service offers runtime capability to allow customers to create, retrieve, activate, revoke, and destroy the encryption keys. It also provides management capability to maintain the associations between the client credentials and the encryption keys.
 
 ## Technical specifications for KMIP for VMware on IBM Cloud
 
@@ -55,6 +55,7 @@ Therefore, before you remove the service, ensure that no virtual machines or vSA
 ### Related links
 
 * [Ordering KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip_ordering.html)
+* [{{site.data.keyword.cloudaccesstrailshort}} events](../vmonic/at-events.html)
 * [IBM Key Protect for {{site.data.keyword.cloud_notm}}](../../keymgmt/index.html)
 * [vSphere Security](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)
 * [FAQ](../vmonic/faq.html)
