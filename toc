@@ -177,7 +177,7 @@ IBM Cloud for VMware Solutions
         services/managingspp.md
 
     {: .topicgroup}
-    KMIP for VMware on IBM Cloud
+    KMIP for VMware on IBM Cloud - Deprecated
         services/kmip_considerations.md
         services/kmip_ordering.md
 

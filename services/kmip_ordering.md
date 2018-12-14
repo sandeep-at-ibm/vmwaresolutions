@@ -4,11 +4,18 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-27"
+lastupdated: "2018-12-14"
 
 ---
 
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
 # Ordering KMIP for VMware on IBM Cloud
+
+The current version of KMIP for VMware on IBM Cloud is being deprecated. For more information, [contact IBM Support](../vmonic/trbl_support.html).
+{:note}
 
 You can order the KMIP for VMware on {{site.data.keyword.cloud}} service while you order a new instance with the service included or by adding service to your existing instance.
 
