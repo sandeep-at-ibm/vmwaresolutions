@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -60,6 +60,10 @@ For the Zerto on {{site.data.keyword.cloud_notm}} service that is deployed in V2
 ### KMIP for VMware on IBM Cloud integration with IBM Cloud Activity Tracker
 
 In addition to VMware instance events, events for KMIP for VMware on {{site.data.keyword.cloud_notm}}, such as key creation, key deletion, and key access, are now integrated with your {{site.data.keyword.cloud_notm}} Activity Tracker instance. For more information about KMIP for WMware on {{site.data.keyword.cloud_notm}}, see [KMIP for VMware on {{site.data.keyword.cloud_notm}} overview](../services/kmip_considerations.html).
+
+### KMIP for VMware on IBM Cloud - deprecated
+
+(Updated on 14 December 2018) The current version of KMIP for VMware on {{site.data.keyword.cloud_notm}} is being deprecated. For more information, [contact IBM Support](../vmonic/trbl_support.html).
 
 ## New and updated documentation
 
