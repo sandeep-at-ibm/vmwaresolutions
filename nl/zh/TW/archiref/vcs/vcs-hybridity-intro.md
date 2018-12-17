@@ -4,10 +4,10 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-13"
 
 ---
-# vCenter Server Hybridity Bundle 概觀
+# vCenter Server on IBM Cloud with Hybridity Bundle 概觀
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是一種受管理的專用雲端，可協助您快速且輕鬆地將內部部署基礎架構擴充到雲端，以實現安全且無縫的基礎架構混合及真正的應用程式行動性。
 
@@ -23,7 +23,7 @@ F5 on {{site.data.keyword.cloud_notm}} 網路負載平衡器服務供應項目�
 
 IBM、Veeam 和 Zerto 提供的備份和災難回復供應項目可在發生災難時確保持續運作，讓您高枕無憂。IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 是虛擬環境的資料保護及可用性解決方案。Veeam on {{site.data.keyword.cloud_notm}} 可讓 Always-On Enterprise™ 與 {{site.data.keyword.cloud_notm}} 上的備份、回復和抄寫整合功能搭配使用。Zerto on {{site.data.keyword.cloud_notm}} 為內部部署客戶和 {{site.data.keyword.cloud_notm}} 客戶提供一個安全、有彈性且可擴充的「災難回復」解決方案。
 
-vCenter Server Hybridity Bundle 不是受管理服務，但您可以新增 IBM 管理的服務，來卸載虛擬化、來賓作業系統或應用程式層的日常作業及維護工作。{{site.data.keyword.cloud_notm}} Professional Services 團隊也可以透過移轉、實作、規劃及上線服務來協助您加速邁向雲端。
+vCenter Server Hybridity Bundle 不是受管理服務，但您可以新增 IBM 管理的服務來卸載虛擬化、來賓作業系統或應用程式層的日常作業及維護工作。{{site.data.keyword.cloud_notm}} Professional Services 團隊也可以透過移轉、實作、規劃及上線服務來協助您加速邁向雲端。
 
 vCenter Server Hybridity Bundle 的平台整合選項不侷限於 VMware 提供的選項（例如 vRealize Suite 或 vSphere with Operations Management），但可跨越多個 {{site.data.keyword.cloud_notm}} 服務供應項目（例如 [IBM Kubernetes 服務](../vcsiks/vcsiks-intro.html)和 [{{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html)），使用開放程式碼 Terraform 將基礎架構當作程式碼來管理及遞送。
 
