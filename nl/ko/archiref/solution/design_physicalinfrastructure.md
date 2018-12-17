@@ -142,7 +142,7 @@ vCenter Server 또는 Cloud Foundation 자동화된 배치의 일부로 구성�
 
 ## 실제 스토리지 디자인
 
-실제 스토리지 디자인은 실제 호스트에 설치된 실제 디스크의 구성 및 공유 파일 레벨 스토리지의 구성으로 이루어져 있습니다. 여기에는 vSphere ESXi 하이퍼바이저의 운영 체제 디스크와 가상 머신(VM)의 스토리지에 사용되는 디스크가 포함됩니다. VM용 스토리지는 공유 파일 레벨 스토리지로 또는 VMware vSAN에 의해 가상화된 로컬 디스크로 구성할 수 있습니다.
+실제 스토리지 디자인은 실제 호스트에 설치된 실제 디스크의 구성 및 공유 파일 스토리지의 구성으로 이루어져 있습니다. 여기에는 vSphere ESXi 하이퍼바이저의 운영 체제 디스크와 가상 머신(VM)의 스토리지에 사용되는 디스크가 포함됩니다. VM용 스토리지는 공유 파일 스토리지로 또는 VMware vSAN에 의해 가상화된 로컬 디스크로 구성할 수 있습니다.
 
 ### 운영 체제 디스크
 
@@ -158,9 +158,9 @@ vSphere ESXi 하이퍼바이저는 지속적 위치에 설치되도록 디자인
 
 지원되는 구성에 대한 자세한 정보는 [Cloud Foundation 인스턴스](../../sddc/sd_bom.html) 또는 [vCenter Server 인스턴스](../../vcenter/vc_bom.html)의 명세서를 참조하십시오.
 
-### 호스트 간의 공유 파일 레벨 스토리지
+### 호스트 간의 공유 파일 스토리지
 
-공유 파일 레벨 스토리지를 사용하는 경우에는 2TB NFS 공유가 초기 VMware 클러스터를 구성하는 호스트에 연결됩니다. 관리 공유라고 하는 이 공유는 VMware vCenter Server, Platform Services Controller 및 VMware NSX 등의 관리 컴포넌트에 사용됩니다. 이 스토리지는 NFSv3 프로토콜을 사용하여 연결되며 최대 4000 IOPS까지 지원할 수 있습니다.
+공유 파일 스토리지를 사용하는 경우에는 2TB NFS 공유가 초기 VMware 클러스터를 구성하는 호스트에 연결됩니다. 관리 공유라고 하는 이 공유는 VMware vCenter Server, Platform Services Controller 및 VMware NSX 등의 관리 컴포넌트에 사용됩니다. 이 스토리지는 NFSv3 프로토콜을 사용하여 연결되며 최대 4000 IOPS까지 지원할 수 있습니다.
 
 그림 2. VMware 배치에 연결되는 NFS 공유
 

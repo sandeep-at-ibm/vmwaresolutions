@@ -133,7 +133,7 @@ vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware Solutions 배�
 
 ![NSX Manager 네트워크 개요](virtual_NSX.svg "아키텍처의 기타 컴포넌트와 연관된 NSX Manager")
 
-초기 배치 이후 {{site.data.keyword.cloud_notm}} 자동화는 초기 클러스터 내에 3개의 NSX Controller를 배치합니다. 각 제어기에는 관리 컴포넌트용으로 지정된 **사설 A** 포터블 서브넷의 VLAN 지원 IP 주소가 지정됩니다. 또한 이 디자인은 클러스터의 호스트 간에 제어기를 분리하기 위해 VM-VM 역-친화성 규칙을 작성합니다. 초기 클러스터에는 제어기에 대한 고가용성을 보장할 수 있도록 최소한 3개의 노드가 포함되어 있어야 합니다.
+초기 배치 이후 {{site.data.keyword.cloud_notm}} 자동화는 초기 클러스터 내에 3개의 NSX Controller를 배치합니다. 각 제어기에는 관리 컴포넌트용으로 지정된 **사설 A** 포터블 서브넷의 VLAN 지원 IP 주소가 지정됩니다. 또한 이 디자인은 클러스터의 호스트 간에 제어기를 분리하기 위해 VM-VM 비유사성 규칙을 작성합니다. 초기 클러스터에는 제어기에 대한 고가용성을 보장할 수 있도록 최소한 3개의 노드가 포함되어 있어야 합니다.
 
 제어기에 추가하여, {{site.data.keyword.cloud_notm}} 자동화는 VTEP(VXLAN Tunnel Endpoint)를 통한 가상화된 네트워크의 사용이 가능하도록 NSX VIBS의 배치된 vSphere 호스트를 준비합니다. VTEP에는 [실제 인프라 디자인](design_physicalinfrastructure.html)의 *표 1. VLAN 및 서브넷 요약*에 나열된 대로 VTEP에 지정된 **사설 A** 포터블 IP 주소 범위의 VLAN 지원 IP 주소가 지정됩니다. VXLAN 트래픽은 태그가 지정되지 않은 VLAN에 상주하며 사설 vDS에 지정됩니다.
 
@@ -225,7 +225,7 @@ vSphere 클러스터는 다음 표에서 처럼 구성된 2개의 vSphere 분배
 
 다음과 같은 측면은 구성되어 있지 않습니다.
 * 가상 분배 라우터
-* 마이크로 분석 방식
+* 마이크로 세그먼트화
 * VXLAN
 * 기타 VMware 인스턴스에 링크된 NSX Management
 
