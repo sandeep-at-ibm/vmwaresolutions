@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-13"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 연결된 스토리지 인프라 관리
 
@@ -20,11 +24,12 @@ lastupdated: "2018-09-07"
 
 ## vSphere 분배 스위치
 
-이전에 언급한 대로 다른 VLAN이 vCenter Server 솔루션 내에 작성되며 기존 클러스터의 ESXi 호스트에 NFS 마운트 지점을 연결하는 데 사용됩니다. vCenter Server 솔루션에 이미 사설 네트워크와 연관된 vDS가 있으므로, 다른 포트 그룹이 작성되고 이 그룹에 추가 VLAN 번호로 태그가 지정됩니다. 이 추가 VLAN은 고유 VLAN이 아니기 때문입니다.
+다른 VLAN이 vCenter Server 솔루션 내에 작성되며 기존 클러스터의 ESXi 호스트에 NFS 마운트 지점을 연결하는 데 사용됩니다. vCenter Server 솔루션에는 사설 네트워크와 연관된 vDS(vSphere Distributed Switch)가 있으므로, 다른 포트 그룹이 작성되고 이 그룹에 추가 VLAN 번호로 태그가 지정됩니다. 이 추가 VLAN은 고유 VLAN이 아니기 때문입니다.
 
 다음 표에서는 새 포트 그룹의 기본 설정에 대해 설명합니다.
 
-**중요:** 이러한 기본 설정을 변경하지 마십시오.
+이러한 기본 설정을 변경하지 마십시오.
+{:important}
 
 표 1. NFS 포트 그룹 요약
 
@@ -35,7 +40,7 @@ lastupdated: "2018-09-07"
 |로드 밸런싱 | 원래 가상 포트 기반 라우트 |
 | 활성 업링크 | Uplink1 및 uplink2 |
 
-NFS 스토리지 트래픽에 대한 vDS 포트 그룹 작성 외에 VMkernel 포트는 배치의 각 vSphere ESXi 호스트에 작성되고 SDDC-DPG-NFS 포트 그룹에 지정됩니다. 또한 VMkernel 포트에는 연결된 스토리지 VLAN, 즉 사설 VLAN B와 연관된 사설 포터블 서브넷의 IP 주소가 지정되며 해당 MTU는 점보 프레임 지원을 위해 9000으로 설정됩니다.
+NFS 스토리지 트래픽에 대한 vDS 포트 그룹 작성 외에 VMkernel 포트는 배치 중에 각 vSphere ESXi 호스트에 작성되고 SDDC-DPG-NFS 포트 그룹에 지정됩니다. 또한 VMkernel 포트에는 연결된 스토리지 VLAN, 즉 사설 VLAN B와 연관된 사설 포터블 서브넷의 IP 주소가 지정되며 해당 MTU는 점보 프레임 지원을 위해 9000으로 설정됩니다.
 
 그림 1. 사설 vDS 포트 그룹 및 업링크
 
