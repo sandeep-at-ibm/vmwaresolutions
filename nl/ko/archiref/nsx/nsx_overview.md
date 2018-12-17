@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-21"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -16,7 +16,7 @@ Cloud Foundation 및 vCenter Server 디자인에 대한 자세한 정보는 [솔
 
 ## NSX Edge Services Gateway 개요
 
-NSX Edge Services Gateway는 DHCP(Dynamic Host Configuration Protocol), 가상 사설망(VPN), NAT(Network Address Translation), 동적 라우팅 및 로드 밸런싱과 같은 공통 게이트웨이 서비스를 제공하여 격리된 스텁 네트워크를 공유(업링크) 네트워크에 연결합니다. NSX Edge의 공통 배치에는 DMZ(DeMilitarized Zone), VPN 엑스트라넷 및 NSX Edge가 각 테넌트, 워크로드 또는 관리 컴포넌트에 대한 가상 경계를 작성하는 다중 테넌트 클라우드 환경이 포함됩니다. NSX Edge Service Gateway 내에서 다음 기능을 사용할 수 있습니다.
+NSX Edge Services Gateway는 DHCP(Dynamic Host Configuration Protocol), 가상 사설망(VPN), NAT(Network Address Translation), 동적 라우팅 및 로드 밸런싱과 같은 공통 게이트웨이 서비스를 제공하여 격리된 스텁 네트워크를 공유(업링크) 네트워크에 연결합니다. NSX Edge의 공통 배치에는 DMZ(DeMilitarized Zone), VPN 엑스트라넷 및 NSX Edge가 각 테넌트, 워크로드 또는 관리 컴포넌트에 대한 가상 경계를 작성하는 멀티 테넌트 클라우드 환경이 포함됩니다. NSX Edge Service Gateway 내에서 다음 기능을 사용할 수 있습니다.
 
 표 1. NSX Edge Service Gateway에 사용 가능한 기능
 
@@ -27,7 +27,7 @@ NSX Edge Services Gateway는 DHCP(Dynamic Host Configuration Protocol), 가상 �
 |NAT |소스 및 대상 IP 주소와 포트 변환에 대한 별도의 제어를 제공합니다. |
 |DHCP |IP 풀, 게이트웨이, DNS 서버 및 검색 도메인의 구성을 제공합니다. |
 |사이트 간 VPN |표준화된 IPSec 프로토콜 설정을 사용하여 모든 주요 VPN 공급업체와 상호 작동합니다. |
-|L2VPN |L3 토폴로지에서 L2 네트워크를 확장할 수 있는 기능을 제공합니다. |
+|L2VPN | L3 토폴로지에서 L2 네트워크를 확장합니다. |
 |SSL VPN-Plus |SSL VPN-Plus를 사용하면 원격 사용자가 NSX Edge 게이트웨이 뒤에 있는 사설 네트워크에 안전하게 연결할 수 있습니다. |
 |로드 밸런싱 |단순하고 동적으로 구성 가능한 가상 IP 주소 및 서버 그룹을 제공합니다. |
 |고가용성 |기본 NSX Edge 가상 머신이 사용 불가능한 경우 네트워크에서 NSX Edge가 활성화되도록 보장합니다. |

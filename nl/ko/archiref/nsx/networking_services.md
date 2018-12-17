@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -99,7 +99,7 @@ NAT(Network Address Translation)는 관리 ESG에서 네트워크 트래픽이 �
 * 기본 게이트웨이는 관리 ESG입니다.
 * 내부 {{site.data.keyword.cloud_notm}}에는 정적 라우트가 필요합니다.
 
-서비스 또는 VM에서 고객 ESG에 액세스해야 하는 경우 정적 라우트는 개별 서비스 또는 VM 내에서 유지보수되고 고객 ESG를 가리켜야 합니다.
+서비스 또는 VM에서 고객 ESG에 액세스해야 하는 경우 정적 라우트는 개별 서비스 또는 VM 내에서 유지보수되고 고객 ESG가 지정되어야 합니다.
 
 현재 관리 ESG에 대한 자동 라우팅 프로토콜이 구성되어 있지 않습니다.
 
