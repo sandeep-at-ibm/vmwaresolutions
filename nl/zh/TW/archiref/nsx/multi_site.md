@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-10-29"
 
 ## 多站台範例
 
-下列範例會將 NSX 通用傳輸區域新增至前幾節中討論的基本管理及工作負載拓蹼，另外還有下列特徵：
+下列範例會將 NSX 通用傳輸區域新增至前幾節中討論的基本管理及工作負載拓蹼，同時包括下列特徵：
 
 * 通用傳輸區域跨越 {{site.data.keyword.CloudDataCent_notm}} 內的兩個 {{site.data.keyword.CloudDataCents_notm}} 或 POD。
 * 新增傳輸區域之後，會新增多個 VXLAN，以及跨越新 VXLAN 的「通用分散式路由器」。
