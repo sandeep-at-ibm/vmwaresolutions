@@ -605,9 +605,9 @@
 <rect x="346" y="251" class="st63" width="38" height="15"/>
 <text transform="matrix(1 0 0 1 346 264.3193)" class="st64 st65 st66">VM</text>
 <rect x="104" y="93" class="st63" width="291" height="19"/>
-<text transform="matrix(1 0 0 1 104 106.3198)" class="st64 st65 st66">管理/邊緣基礎架構</text>
+<text transform="matrix(1 0 0 1 175 106.3198)" class="st64 st65 st66">管理/邊緣基礎架構</text>
 <rect x="546" y="95" class="st63" width="92" height="19"/>
-<text transform="matrix(1 0 0 1 546 108.3193)" class="st64 st65 st66">工作負載</text>
+<text transform="matrix(1 0 0 1 550 108.3193)" class="st64 st65 st66">工作負載</text>
 <rect x="196" y="378" class="st63" width="92" height="19"/>
 <text transform="matrix(1 0 0 1 196 391.3188)" class="st64 st65 st66">ESXi 主機</text>
 <rect x="548" y="378" class="st63" width="92" height="19"/>
@@ -628,8 +628,8 @@
 	<path class="st71" d="M87.5,62.5c0-8.6,1.8-15.5,4-15.5H766c2.2,0,4,6.9,4,15.5"/>
 </g>
 <rect x="273" y="16" class="st63" width="353" height="21"/>
-<text transform="matrix(1 0 0 1 273 33.7598)" class="st65 st72">管理/邊緣/運算</text>
+<text transform="matrix(1 0 0 1 350 33.7598)" class="st65 st72">管理/邊緣/運算</text>
 <polygon class="st1" points="500.4,172.3 680,172.3 680,205 500.4,205 500.4,172.3 "/>
 <rect x="525" y="181" class="st63" width="142" height="19"/>
-<text transform="matrix(1 0 0 1 525 194.3198)" class="st64 st65 st66">虛擬機器</text>
+<text transform="matrix(1 0 0 1 555 194.3198)" class="st64 st65 st66">虛擬機器</text>
 </svg>

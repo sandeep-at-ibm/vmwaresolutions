@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -40,7 +40,7 @@ lastupdated: "2018-10-29"
 - 使用 [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 或 [{{site.data.keyword.cloud_notm}} DirectLink 連線](https://www.ibm.com/cloud/direct-link)來存取實例管理端點。
 - 設計您實例內的公用網路連線功能策略。您的選項包括：範例客戶 VMware NSX Edge Services Gateway (ESG)、閘道應用裝置（例如 Vyatta 和 FortiGate），以及在 {{site.data.keyword.cloud_notm}} 網路中或透過 DirectLink 存取的專屬網路上所部署的 Proxy 伺服器。
 - 規劃要在具有 [{{site.data.keyword.cloud_notm}} 可攜式 IP 位址](https://console.bluemix.net/docs/infrastructure/subnets/getting-started.html)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作負載，還是[在 NSX 邏輯交換器 (VXLAN) 上使用您自己的 IP 位址](../nsx/nsx_overview.html)來部署工作負載。請注意，使用 NSX 軟體定義網路 (SDN) 可讓您具有在 {{site.data.keyword.cloud_notm}} 中管理及保護工作負載網路的最大彈性。
-- 使用 NSX ESG、[IBM Cloud Vyatta](https://console.bluemix.net/catalog/infrastructure/virtual-router-appliance) 及 DirectLink 對等作業，來規劃與工作負載的連線功能（網址轉換、虛擬專用網路、遞送）。
+- 使用 NSX ESG、[IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 及 DirectLink 對等作業，來規劃與工作負載的連線功能（網址轉換、虛擬專用網路、遞送）。
 - 如果實作「跨 vCenter NSX」，請先確定本端區段 ID 範圍未重疊，再部署任何本端工作負載。
 
 ## 安全規劃及強化
@@ -114,10 +114,10 @@ lastupdated: "2018-10-29"
 
 除了容量規劃之外，也請完成下列動作，以確保您的儲存空間配置符合您的效能及可用性需求。
 
-- 儲存空間效能取決於各種因素，包括 RAID 配置及磁碟分段、網路配置、區塊大小、網路連接儲存空間的已配置 IOPS（每秒輸入/輸出作業）、儲存空間連接的 VM 硬體配置及方法、叢集作業及抄寫方法，以及儲存空間原則（例如加密、刪除重複資料及壓縮）的使用。規劃時間，以測試及調整配置來符合儲存空間效能需求。
+- 儲存空間效能取決於各種因素，包括 RAID 配置及磁碟分段、網路配置、區塊大小、網路連接儲存空間的已配置 IOPS（每秒輸入/輸出作業）、VM 硬體配置及儲存空間連接的方法、叢集作業及抄寫方法，以及儲存空間原則（例如加密、刪除重複資料及壓縮）的使用。規劃時間，以測試及調整配置來符合儲存空間效能需求。
 - 檢閱 vSAN 儲存空間原則
   - RAID-1 相較於 RAID-5，提供更佳的效能，以及對於循序失敗的更短好發時間範圍，例如較短的重建時間。不過，RAID-5 的儲存空間額外負擔較少。
-  - 相較於 RAID-5 的 4 部主機，RAID-6 提供對雙重失敗的防護，但最少需要 6 部主機。
+  - RAID-6 提供對雙重失敗的防護，但相較於 RAID-5 的 4 部主機，最少需要 6 部主機。
 - 若要將更多儲存空間新增至 vSAN 叢集，您必須將新的主機新增至叢集，或改為新增「{{site.data.keyword.cloud_notm}} 耐久性」NFS 儲存空間。目前不支援將磁碟新增至現有主機。
 - 如果您將額外的「{{site.data.keyword.cloud_notm}} 耐久性」NFS 儲存空間裝載至叢集，請務必遵循架構指引，並使用 `SDDC-DPortGroup-NFS` 埠群組位址，配置連到儲存空間的主機路徑。您必須將這些位址（而非主機本身）授權給儲存空間。如需相關資訊，請參閱[連接儲存空間基礎架構管理](../attached-storage/storage-infra-mgmt.html#vsphere-host-static-routing)。另請參閱 developerWorks 秘訣，它使用 IBM Spectrum Protect Plus 作為範例，顯示如何[將更多耐久性儲存空間新增至 VMware 叢集](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)。
 

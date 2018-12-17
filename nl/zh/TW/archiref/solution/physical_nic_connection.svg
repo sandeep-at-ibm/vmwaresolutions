@@ -154,10 +154,10 @@
 </g>
 <rect x="351" y="16" class="st2" width="127" height="44"/>
 <text transform="matrix(1 0 0 1 379 28.7798)" class="st3 st4">IBM Cloud</text>
-<text transform="matrix(1 0 0 1 379 50.3798)" class="st3 st4">公用網路</text>
+<text transform="matrix(1 0 0 1 379 50.3798)" class="st3 st4">Public 網路</text>
 <rect x="650" y="110" class="st2" width="145" height="44"/>
 <text transform="matrix(1 0 0 1 650 122.7798)" class="st3 st4">IBM Cloud </text>
-<text transform="matrix(1 0 0 1 650 144.3798)" class="st3 st4">專用網路</text>
+<text transform="matrix(1 0 0 1 650 144.3798)" class="st3 st4">Private 網路</text>
 <rect x="84" y="110" class="st2" width="177" height="44"/>
 <text transform="matrix(1 0 0 1 84 129.7798)" class="st3 st4">IBM Cloud </text>
 <text transform="matrix(1 0 0 1 84 151.3798)" class="st3 st4">管理網路</text>
