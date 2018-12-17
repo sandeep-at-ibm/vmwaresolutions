@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-10-29"
 
 ## 다중 사이트 예
 
-다음 예에서는 다음 특성 이외에 이전 섹션에서 논의된 기본 관리 및 워크로드 토폴로지에 NSX 범용 전송 구역을 추가합니다.
+다음 예에서는 이전 섹션에서 논의된 기본 관리 및 워크로드 토폴로지에 NSX 범용 전송 구역을 추가하며, 다음과 같은 특성이 있습니다.
 
 * 범용 전송 구역은 두 개의 {{site.data.keyword.CloudDataCents_notm}} 또는 {{site.data.keyword.CloudDataCent_notm}} 내의 POD에 걸쳐 있습니다.
 * 전송 구역이 추가된 후 새 VXLAN에 걸쳐 있는 범용 분산 라우터와 함께 여러 VXLAN이 추가됩니다.
