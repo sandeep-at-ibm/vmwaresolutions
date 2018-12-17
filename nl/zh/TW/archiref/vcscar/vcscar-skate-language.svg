@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="602px" height="322px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(.5 .5)">
+  <rect x="1" y="81" width="90" height="50" rx="7.5" ry="7.5" fill="none" pointer-events="none" stroke="#7ea6e0" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="45.5" y="108.5">base_combo</text>
+  </g>
+  <rect x="181" y="81" width="90" height="50" rx="7.5" ry="7.5" fill="none" pointer-events="none" stroke="#7ea6e0" stroke-width="2"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="225.5" y="108.5">next_combo</text>
+  </g>
+  <g pointer-events="none">
+   <g stroke="#000">
+    <g stroke-miterlimit="10">
+     <path d="m131 116v192.67h381.88" fill="none"/>
+     <path d="m519.88 308.67-7 3.5v-7z"/>
+     <path d="m131 116v60q0 10 10 10h127.22" fill="none"/>
+     <path d="m275.22 186-7 3.5v-7z"/>
+    </g>
+    <ellipse cx="131" cy="106" rx="10" ry="10" stroke-width="2"/>
+    <g stroke-miterlimit="10">
+     <path d="m321 211.33v72h191.88" fill="none"/>
+     <path d="m519.88 283.33-7 3.5v-7z"/>
+     <path d="m331 106h230v157.22" fill="none"/>
+     <path d="m561 270.22-3.5-7h7z"/>
+    </g>
+   </g>
+   <rect x="276" y="161" width="90" height="50" rx="7.5" ry="7.5" fill="none" stroke="#7ea6e0" stroke-width="2"/>
+  </g>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="320.5" y="188.5">landing_combo</text>
+  </g>
+  <rect x="521" y="271" width="80" height="50" fill="none" pointer-events="none" stroke="#000" stroke-width="2"/>
+  <g transform="translate(533.5,284.5)">
+   <switch>
+    <foreignObject width="55" height="22" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="Helvetica" font-size="10px" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap;width:57px;word-wrap:normal">
+      <xhtml:div display="inline-block" text-align="inherit" text-decoration="inherit">TRICK
+       <xhtml:br/>
+COMPLETE      </xhtml:div>
+     </xhtml:div>
+    </foreignObject>
+    <text x="28" y="16" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle">
+     <tspan font-size="8px">技巧完成</tspan>
+    </text>
+   </switch>
+  </g>
+  <g pointer-events="none" stroke="#000">
+   <path d="m91 106h30" fill="none" stroke-miterlimit="10"/>
+   <path d="m140.9 105.95 40.1 0.05" fill="none" stroke-miterlimit="10"/>
+   <ellipse cx="321" cy="106" rx="10" ry="10" stroke-width="2"/>
+   <g stroke-miterlimit="10">
+    <path d="m270.9 105.45h40" fill="none"/>
+    <path d="m321 96v-25q0-10-10-10h-79q-10 0-10.1 5.44l-0.09 5.44" fill="none"/>
+    <path d="m221.69 78.88-3.38-7.06 7 0.12z"/>
+    <path d="m321 153.22v-37.22" fill="none"/>
+    <path d="m321 160.22-3.5-7h7z"/>
+    <path d="m46.33 51.33v21.89" fill="none"/>
+    <path d="m46.33 80.22-3.5-7h7z"/>
+   </g>
+   <rect x="11" y="1" width="70" height="50" fill="none" stroke-width="2"/>
+  </g>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="45.5" y="15.5">技巧</text>
+   <text x="45.5" y="29.5">開始</text>
+  </g>
+ </g>
+</svg>
