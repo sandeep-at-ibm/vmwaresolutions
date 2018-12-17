@@ -4,12 +4,12 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-13"
 
 ---
-# vCenter Server Hybridity Bundle 개요
+# vCenter Server on IBM Cloud with Hybridity Bundle 개요
 
-VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle은 호스팅되는 프라이빗 클라우드로 안전하고 원활한 인프라 하이브리디티 및 애플리케이션 이동성을 위해 온프레미스 인프라를 쉽고 빠르게 클라우드로 확장하도록 도와줍니다. 
+VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle은 호스팅되는 프라이빗 클라우드로 안전하고 원활한 인프라 하이브리디티 및 애플리케이션 이동성을 위해 온프레미스 인프라를 쉽고 빠르게 클라우드로 확장하도록 도와줍니다.
 
 vCenter Server Hybridity Bundle은 최소 4개의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}에 배치되고, 가상 스토리지 영역 네트워크(VSAN)를 통해 전용 스토리지를 제공하며, 관리하기 쉬운 소프트웨어 정의 네트워킹 인프라(NSX-V)의 자동 배치 및 구성이 포함되어 있습니다. vCenter Server Hybridity Bundle은 일관성, 성능 및 규제 준수를 보장하는 자동화를 통해 배치되는 참조 아키텍처입니다. 대부분의 경우 전체 환경은 하루 내에 프로비저닝할 수 있으며, 베어메탈 인프라는 필요에 따라 신속하고 탄력적으로 컴퓨팅 및 저장 용량을 늘리거나 줄이도록 스케일링할 수 있습니다.
 
@@ -21,11 +21,11 @@ vCenter Server Hybridity Bundle을 강화하고 확장하기 위한 여러 옵�
 
 F5 on {{site.data.keyword.cloud_notm}} 네트워크 로드 밸런서 서비스 오퍼링은 성능을 최적화하고, F5 BIG-IP 스위트를 사용하여 가장 중요한 애플리케이션의 가용성과 보안을 보장합니다.
 
-IBM, Veeam 및 Zerto의 백업 및 재해 복구 오퍼링은 재해가 발생하는 경우 마음의 안정을 찾을 수 있게 도와주며 운영 지속성을 제공합니다. IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}는 가상 환경을 위한 데이터 보호 및 가용성 솔루션입니다. Veeam on {{site.data.keyword.cloud_notm}} 를 통해 {{site.data.keyword.cloud_notm}}의 통합된 백업, 복구 및 복제 기능으로 Always-On Enterprise™에 대한 가용성을 제공합니다. Zerto on {{site.data.keyword.cloud_notm}}는 온프레미스 및 {{site.data.keyword.cloud_notm}} 고객에게 안전하고 유연하며 확장 가능한 재해 복구 솔루션을 제공합니다. 
+IBM, Veeam 및 Zerto의 백업 및 재해 복구 오퍼링은 재해가 발생하는 경우 마음의 안정을 찾을 수 있게 도와주며 운영 지속성을 제공합니다. IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}는 가상 환경을 위한 데이터 보호 및 가용성 솔루션입니다. Veeam on {{site.data.keyword.cloud_notm}} 를 통해 {{site.data.keyword.cloud_notm}}의 통합된 백업, 복구 및 복제 기능으로 Always-On Enterprise™에 대한 가용성을 제공합니다. Zerto on {{site.data.keyword.cloud_notm}}는 온프레미스 및 {{site.data.keyword.cloud_notm}} 고객에게 안전하고 유연하며 확장 가능한 재해 복구 솔루션을 제공합니다.
 
 vCenter Server Hybridity Bundle은 IBM 관리 서비스를 추가하여 일상적인 운영 및 가상화, 게스트 OS 또는 애플리케이션 계층의 유지보수를 오프로드할 수 있지만 관리 서비스는 아닙니다. 또한 {{site.data.keyword.cloud_notm}} Professional Services 팀을 활용하면 마이그레이션, 구현, 계획 및 온보딩 서비스를 사용하여 클라우드로의 이동 속도를 높이는 데 도움이 됩니다.
 
-vCenter Server Hybridity Bundle의 플랫폼 통합 옵션은 vRealize Suite 또는 vSphere with Operations Management와 같이 VMware에서 사용 가능한 옵션으로 제한되지 않지만, 오픈 소스 Terraform을 사용하여 IaC(Infrastructure as Code)를 관리하고 제공하는 [IBM Kubernetes Service](../vcsiks/vcsiks-intro.html) 및 [{{site.data.keyword.cloud_notm}}{{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html)과 같은 여러 {{site.data.keyword.cloud_notm}} 서비스 오퍼링으로 확장됩니다. 
+vCenter Hybridity Bundle의 플랫폼 통합 옵션은 vRealize Suite 또는 vSphere with Operations Management와 같이 VMware에서 사용 가능한 옵션으로 제한되지 않지만, 오픈 소스 Terraform을 사용하여 IaC(Infrastructure as Code)를 관리하고 제공하는 [IBM Kubernetes 서비스](../vcsiks/vcsiks-intro.html) 및 [{{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html)과 같은 여러 {{site.data.keyword.cloud_notm}} 서비스 오퍼링으로 확장됩니다. 
 
 vCenter Server Hybridity Bundle에 사용 가능한 서비스 및 다중 오퍼링 통합 옵션의 광범위한 포트폴리오는 서비스로서의 하이브리드를 가능하게 하는 진정한 하이브리드 플랫폼을 제공합니다.
 
