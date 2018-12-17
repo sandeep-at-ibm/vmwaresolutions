@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -17,7 +17,7 @@ VUM을 사용하면 VMware vSphere에 대한 자동화된 중앙 집중식 패�
 * 호스트에 서드파티 소프트웨어 설치 및 업데이트
 * 가상 머신 하드웨어, VMware Tools 및 가상 어플라이언스 업그레이드
 
-이 문서에서는 vCenter Server 인스턴스의 다음 컴포넌트를 유지보수하는 프로세스에 대해서도 설명합니다. 
+이 문서에서는 vCenter Server 인스턴스의 다음 컴포넌트를 유지보수하는 프로세스에 대해서도 설명합니다.
 * vCenter Server Appliance
 * NSX
 * vSAN
@@ -38,7 +38,7 @@ vCenter Server는 현재 vSphere 6.5를 배치합니다. 즉, 이제 VUM이 VCSA
 따라서 vSphere 6.5에서는 별도의 Windows 시스템에 VUM 서버를 설치하는 동안 VUM을 VCSA에 등록하는 것이 더 이상 지원되지 않으므로 vCenter Server 환경 내의 VM에 VUM을 배치할 수 없습니다.
 
 이 문서는 다음 섹션으로 구성되어 있습니다.
-* [VMware Update Manager 개요](vum-overview.html) - 이 섹션에서는 VUM 프로세스에 대해 설명하고 도구의 운영 및 UI를 이해하는 데 필요한 주요 용어를 소개합니다. 
+* [VMware Update Manager 개요](vum-overview.html) - 이 섹션에서는 VUM 프로세스에 대해 설명하고 도구의 운영 및 UI를 이해하는 데 필요한 주요 용어를 소개합니다.
 * **설치, 구성 및 사용법** - 이 섹션에서는 vCenter Server 인스턴스에서 VUM을 작동하는 데 필요한 단계에 대해 설명합니다.
   - [초기 구성](vum-init-config.html) - 다음을 수행하는 일회성 태스크입니다.
       - 인터넷에 대한 프록시 서버 액세스를 허용하도록 NSX 네트워킹 구성
@@ -55,7 +55,7 @@ vCenter Server를 사용하여 vCenter를 배치한 경우 먼저 [vSAN 클러�
 
 {{site.data.keyword.cloud_notm}} 인프라 관리 자동화를 업데이트하려면 {{site.data.keyword.vmwaresolutions_short}} 콘솔을 사용하십시오.
 
-[{{site.data.keyword.vmwaresolutions_short}} 콘솔](https://console.bluemix.net/infrastructure/vmware-solutions/console)을 사용하여 다음 조치를 수행할 수 있습니다.
+[{{site.data.keyword.vmwaresolutions_short}} 콘솔](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console)을 사용하여 다음 조치를 수행할 수 있습니다.
 *	라이센스 업그레이드(예: NSX Base를 다른 버전으로 업그레이드)
 *	vCenter Server 플랫폼에 대한 업데이트 시작(예: 버전 2.5로 이동)
 *	업데이트 상태 보기
