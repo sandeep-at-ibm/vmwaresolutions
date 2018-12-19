@@ -10,18 +10,18 @@ lastupdated: "2018-11-06"
 
 # 解决方案组件
 
-## VCS 组件
+## VMware vCenter Server on IBM Cloud 组件
 
-图 1. VCS 环境图
+图 1. vCenter Server 环境图
 ![VCS 环境](vcsicp-vcsenv.svg)
 
 ### Platform Service Controller
 
-VCS 部署使用单个外部 Platform Services Controller，后者安装在与管理虚拟机关联的专用 VLAN 中的可移植子网上。其缺省网关设置为后端客户路由器 (BCR)。
+vCenter Server 部署使用单个外部 Platform Services Controller，后者安装在与管理虚拟机 (VM) 关联的专用 VLAN 中的可移植子网上。其缺省网关设置为后端客户路由器 (BCR)。
 
 ### vCenter Server
 
-与 Platform Services Controller 类似，vCenter Server 也会部署为设备。此外，vCenter Server 还将安装在与管理虚拟机关联的专用 VLAN 上的可移植子网中。其缺省网关设置为该特定子网的 BCR 上分配的 IP 地址。
+与 Platform Services Controller 类似，vCenter Server 也会部署为设备。此外，vCenter Server 还将安装在与管理 VM 关联的专用 VLAN 上的可移植子网中。其缺省网关设置为该特定子网的 BCR 上分配的 IP 地址。
 
 ### NSX
 Manager
@@ -35,7 +35,7 @@ Controller
 
 ### NSX Edge / DLR
 
-将部署 NSX Edge 服务网关 (ESG) 对。在所有情况下，都会使用一个网关对来处理位于专用网络中的自动化组件的出站流量。对于 vCenter Server 和 ICP，将部署另一个网关（称为 ICP 管理的 Edge），并将其配置为使用上行链路连接到公用网络，还会配置一个分配给专用网络的接口。管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。[vCenter Server 联网指南](../vcsnsxt/vcsnsxt-intro.html)提供了有关网络设计的更多详细信息。
+将部署 NSX Edge 服务网关 (ESG) 对。在所有情况下，都会使用一个网关对来处理位于专用网络中的自动化组件的出站流量。对于 vCenter Server 和 {{site.data.keyword.cloud_notm}} Private (ICP)，将部署另一个网关（称为 ICP 管理的 Edge），并将其配置为使用上行链路连接到公用网络，还会配置一个分配给专用网络的接口。管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。[vCenter Server 联网指南](../vcsnsxt/vcsnsxt-intro.html)提供了有关网络设计的更多详细信息。
 
 下表总结了 ICP ESG / DLR 规范。
 
@@ -56,10 +56,10 @@ Edge 大小 - 精简|1 个 vCPU
 内存|512 MB 磁盘|本地数据存储上 1000 GB
 
 ## ICP 组件
-{{site.data.keyword.cloud_notm}} Private 是一种用于开发和管理内部部署容器化应用程序的应用程序平台。这是用于管理容器的集成环境，包括容器编排器 Kubernetes、专用映像存储库、管理控制台和监视框架。
+ICP 是一种用于开发和管理内部部署容器化应用程序的应用程序平台。这是用于管理容器的集成环境，包括容器编排器 Kubernetes、专用映像存储库、管理控制台和监视框架。
 
-图 2. 使用 VCS 的虚拟 ICP 部署
-![使用 VCS 的虚拟 ICP 部署](vcsicp-virtual-icp-deployment-vcs.svg)
+图 2. 使用 vCenter Server 的虚拟 ICP 部署
+![使用 vCenter Server 的虚拟 ICP 部署](vcsicp-virtual-icp-deployment-vcs.svg)
 
 ###	引导节点
 
@@ -75,17 +75,17 @@ Edge 大小 - 精简|1 个 vCPU
 
 ### 代理节点
 
-代理节点是将外部请求传输到集群内部创建的服务的节点。由于高可用性 (HA) 环境中包含多个代理节点，因此主导代理节点发生故障时，故障转移逻辑会自动将另一个节点提升为代理角色。尽管可以将一个节点同时用作主节点和代理节点，但最好使用专用的代理节点，这样可减少主节点上的负载。如果集群内需要进行负载均衡，那么集群必须至少包含一个代理节点。
+代理节点是将外部请求传输到集群内部创建的服务的节点。由于高可用性 (HA) 环境中包含多个代理节点，因此主导代理节点发生故障时，故障转移逻辑会自动将另一个节点提升为代理角色。尽管可以将一个节点同时用作主节点和代理节点，但还是请使用专用的代理节点，这样可减少主节点上的负载。如果集群内需要进行负载均衡，那么集群必须至少包含一个代理节点。
 
 ### 管理节点
 
-管理节点是可选节点，仅托管管理服务，例如监视、测量和日志记录。通过配置专用的管理节点，可以避免主节点超负荷。只能在 {{site.data.keyword.cloud_notm}} Private 安装期间启用管理节点。
+管理节点是可选节点，仅托管管理服务，例如监视、测量和日志记录。通过配置专用的管理节点，可以避免主节点超负荷。只能在 ICP 安装期间启用管理节点。
 
-###	VA 节点
+###	漏洞顾问程序节点
 
-VA（漏洞顾问程序）节点是可选节点，用于运行漏洞顾问程序服务。漏洞顾问程序服务属于资源密集型服务。使用漏洞顾问程序服务时，请指定专用的 VA 节点。
+漏洞顾问程序节点是可选节点，用于运行漏洞顾问程序服务。漏洞顾问程序服务属于资源密集型服务。使用漏洞顾问程序服务时，请指定专用的 VA 节点。
 
-高可用性 ICP 实例需要的虚拟机规范：
+高可用性 ICP 实例需要以下 VM 规范：
 
 表 3. ICP 虚拟机规范
 
@@ -117,9 +117,9 @@ CAM 需要工作程序节点具有更高的 vCPU 和内存配置。
 
 通过 Nginx 代理访问 CAM。
 
-### CAM UI
+### CAM 用户界面
 
-UI 组件分布在多个容器上：云连接 UI、模板库 UI 和已部署实例 UI。
+用户界面组件分布在多个容器上。这些组件包含在“云连接”用户界面、“模板库”用户界面和“已部署的实例”用户界面中。
 
 ### CAM API
 
@@ -147,12 +147,12 @@ Redis 数据库用于存储 CAM 中的会话高速缓存和锁定。
 
 ### 模板设计器
 
-一个图形用户界面，用于创建 Terraform 模板，具有 Terraform 模块的拖放功能。
+一个图形用户界面，用于创建 Terraform 模板，具有拖动 Terraform 模块的功能。
 
-### Maria DB
+### Maria 数据库
 
 模板设计器应用程序的数据库。
 
 ### 相关链接
 
-* [VCS Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)
