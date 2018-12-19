@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -55,7 +55,7 @@ vCenter Server 当前部署的是 vSphere 6.5，这意味着现在 VUM 已集成
 
 如果要更新 {{site.data.keyword.cloud_notm}} 基础架构管理自动化，请使用 {{site.data.keyword.vmwaresolutions_short}} 控制台。
 
-通过 [{{site.data.keyword.vmwaresolutions_short}} 控制台](https://console.bluemix.net/infrastructure/vmware-solutions/console)，可以执行以下操作：
+通过 [{{site.data.keyword.vmwaresolutions_short}} 控制台](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console)，可以执行以下操作：
 *	升级许可证，例如将 NSX Base 升级到其他版本
 *	启动对 vCenter Server 平台的更新，例如移至 V2.5
 *	查看更新的状态
