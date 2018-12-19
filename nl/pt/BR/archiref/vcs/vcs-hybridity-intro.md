@@ -4,10 +4,10 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-13"
 
 ---
-# Visão geral do vCenter Server Hybridity Bundle
+# Visão geral do vCenter Server on IBM Cloud with Hybridity Bundle
 
 O VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle é uma nuvem particular hospedada que ajuda a ampliar de maneira rápida e fácil sua infraestrutura local para a nuvem para um hibridismo de infraestrutura seguro e perfeito e uma verdadeira mobilidade de aplicativo.
 
@@ -23,12 +23,12 @@ A oferta de serviço de balanceador de carga de rede F5 on {{site.data.keyword.c
 
 As ofertas de backup e recuperação de desastre da IBM, do Veeam e do Zerto entregam tranquilidade e continuidade operacional caso ocorra um desastre. O IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} é uma solução de proteção de dados e de disponibilidade para ambientes virtuais. O Veeam on {{site.data.keyword.cloud_notm}} permite a disponibilidade para o Always-On Enterprise™ com backup integrado, recuperação e replicação no {{site.data.keyword.cloud_notm}}. O Zerto on {{site.data.keyword.cloud_notm}} fornece aos clientes locais e do {{site.data.keyword.cloud_notm}} uma solução de Recuperação de desastre segura, flexível e escalável.
 
-O vCenter Server Hybridity Bundle não é um serviço gerenciado, embora seja possível incluir o IBM Managed Services para transferir as operações do dia a dia e a manutenção das camadas de virtualização, do S.O. do guest ou do aplicativo. A equipe do {{site.data.keyword.cloud_notm}} Professional Services também está disponível para ajudá-lo a acelerar sua jornada para a nuvem com serviços de migração, implementação, planejamento e onboarding.
+O vCenter Server Hybridity Bundle não é um serviço gerenciado, embora seja possível incluir o IBM Managed Services para transferir as operações e manutenção diárias das camadas de virtualização, guest do S.O. ou aplicativo. A equipe do {{site.data.keyword.cloud_notm}} Professional Services também está disponível para ajudá-lo a acelerar sua jornada para a nuvem com serviços de migração, implementação, planejamento e onboarding.
 
-As opções de integração da plataforma do vCenter Server Hybridity Bundle não estão limitadas às opções disponíveis no VMware, como o vRealize Suite ou o vSphere with Operations Management, mas abrangem diversas ofertas de serviços do {{site.data.keyword.cloud_notm}}, como o serviço [IBM Kubernetes](../vcsiks/vcsiks-intro.html) e o [{{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html), que usam o Terraform de software livre para gerenciar e entregar infraestrutura como código.
+As opções de integração da plataforma do vCenter Server Hybridity Bundle não estão limitadas a opções disponíveis do VMware, como vRealize Suite ou vSphere with Operations Management, mas abrangem múltiplas ofertas de serviços do {{site.data.keyword.cloud_notm}}, como [o serviço IBM Kubernetes](../vcsiks/vcsiks-intro.html) e [{{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html), que usam o Terraform de software livre para gerenciar e entregar infraestrutura como código.
 
 O extenso portfólio de serviços e opções de integração de várias ofertas disponíveis para o vCenter Server Hybridity Bundle entregam uma plataforma realmente híbrida, tornando o Hybridity um serviço possível.
 
 ### Links relacionados
 
-* [VMware HCX no {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
