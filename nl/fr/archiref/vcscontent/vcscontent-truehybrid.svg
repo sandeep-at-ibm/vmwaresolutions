@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="871px"
+   height="470px"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="vcscontent-truehybrid.svg">
+  <defs
+     id="defs386" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1020"
+     id="namedview384"
+     showgrid="false"
+     inkscape:zoom="1.5086108"
+     inkscape:cx="435.5"
+     inkscape:cy="235"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(.5 .5)"
+     id="g6">
+    <rect
+       width="870"
+       height="469"
+       pointer-events="none"
+       id="rect8"
+       stroke="#666"
+       fill="#f5f5f5" />
+    <g
+       font-size="24px"
+       id="g10"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="178.5"
+         y="33.5"
+         id="text12">Cohérence</text>
+    </g>
+    <g
+       font-size="24px"
+       font-weight="bold"
+       id="g14"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="179.5"
+         y="73.5"
+         id="text16">Véritable application hybride</text>
+    </g>
+    <rect
+       x="10"
+       y="154"
+       width="400"
+       height="309"
+       pointer-events="none"
+       id="rect18"
+       stroke="#d6b656"
+       fill="#fff2cc" />
+    <g
+       font-size="16px"
+       id="g20"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="111.5"
+         y="175.5"
+         id="text22">IBM Cloud Private Hosted</text>
+    </g>
+    <rect
+       x="169"
+       y="224"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect24"
+       stroke="#36393d"
+       fill="#9f9" />
+    <g
+       font-size="10px"
+       id="g26"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="209.5"
+         y="239.5"
+         id="text28">DB2</text>
+    </g>
+    <rect
+       x="310"
+       y="169"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect30"
+       stroke="#36393d"
+       fill="#9f9" />
+    <g
+       font-size="10px"
+       id="g32"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="349"
+         y="184.5"
+         id="text34">VPN</text>
+    </g>
+    <rect
+       x="310"
+       y="209"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect36"
+       stroke="#36393d"
+       fill="#9f9" />
+    <g
+       font-size="10px"
+       id="g38"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="349"
+         y="224.5"
+         id="text40">Redis</text>
+    </g>
+    <rect
+       x="25"
+       y="379"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect42"
+       stroke="#36393d"
+       fill="#9f9" />
+    <g
+       font-size="10px"
+       id="g44"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="64"
+         y="390.5"
+         id="text46"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         sodipodi:linespacing="125%">
+        <tspan
+           sodipodi:role="line"
+           id="tspan8446"
+           x="64"
+           y="390.5">Pipeline de</tspan>
+        <tspan
+           sodipodi:role="line"
+           id="tspan8448"
+           x="64"
+           y="403">développement</tspan>
+      </text>
+    </g>
+    <g
+       pointer-events="none"
+       id="g48">
+      <path
+         d="m310.4 184.2-95.67 37.67"
+         stroke-miterlimit="10"
+         id="path50"
+         stroke="#000"
+         fill="none" />
+      <path
+         d="m209.84 223.79 5.23-5.82-0.34 3.9 2.91 2.61z"
+         stroke-miterlimit="10"
+         id="path52"
+         stroke="#000" />
+      <rect
+         x="169"
+         y="362.5"
+         width="79"
+         height="30"
+         id="rect54"
+         stroke="#36393d"
+         fill="#9f9" />
+    </g>
+    <g
+       font-size="10px"
+       id="g56"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="209.5"
+         y="378"
+         id="text58">MQ</text>
+    </g>
+    <rect
+       x="25"
+       y="308"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect60"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g62"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="64"
+         y="323.5"
+         id="text64">Trader</text>
+    </g>
+    <rect
+       x="169"
+       y="308"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect66"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g68"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="209.5"
+         y="323.5"
+         id="text70">Portfefeuille</text>
+    </g>
+    <rect
+       x="169"
+       y="419"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect72"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g74"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="208"
+         y="434.5"
+         id="text76">Messagerie</text>
+    </g>
+    <rect
+       x="310"
+       y="268"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect78"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g80"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="357.63147"
+         y="276.94659"
+         id="text82"
+         transform="scale(0.97688397,1.023663)"
+         style="font-size:9.76883888px">Cours des actions</text>
+    </g>
+    <rect
+       x="310"
+       y="328"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect84"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g86"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="349"
+         y="343.5"
+         id="text88">Niveau de fidélité</text>
+    </g>
+    <rect
+       x="310"
+       y="385.5"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect90"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g92"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="349"
+         y="401"
+         id="text94">Notification</text>
+      <text
+         x="349"
+         y="413"
+         id="text96">Slack</text>
+    </g>
+    <rect
+       x="310"
+       y="427"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect98"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g100"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="349"
+         y="442.5"
+         id="text102">Notification</text>
+      <text
+         x="349"
+         y="454.5"
+         id="text104">Twitter</text>
+    </g>
+    <g
+       pointer-events="none"
+       id="g106">
+      <g
+         stroke-miterlimit="10"
+         id="g108"
+         stroke="#000">
+        <path
+           d="m104 323.4h58.43"
+           id="path110"
+           fill="none" />
+        <path
+           d="m167.68 323.4-7 3.5 1.75-3.5-1.75-3.5z"
+           id="path112" />
+        <path
+           d="m248 323.4 57.04-36.56"
+           id="path114"
+           fill="none" />
+        <path
+           d="m309.46 284-4.01 6.73-0.41-3.89-3.36-2.01z"
+           id="path116" />
+        <path
+           d="m248 323.4 56.34 18.06"
+           id="path118"
+           fill="none" />
+        <path
+           d="m309.34 343.06-7.74 1.2 2.74-2.8-0.6-3.87z"
+           id="path120" />
+        <path
+           d="m210.4 308.2v-48.03"
+           id="path122"
+           fill="none" />
+        <path
+           d="m210.4 254.92 3.5 7-3.5-1.75-3.5 1.75z"
+           id="path124" />
+        <path
+           d="m349.6 268.2v-22.43"
+           id="path126"
+           fill="none" />
+        <path
+           d="m349.6 240.52 3.5 7-3.5-1.75-3.5 1.75z"
+           id="path128" />
+        <path
+           d="m349.6 357.8-95.35 18.77"
+           id="path130"
+           fill="none" />
+        <path
+           d="m249.1 377.58 6.19-4.78-1.04 3.77 2.39 3.1z"
+           id="path132" />
+        <path
+           d="m208.8 392.2 0.15 20.43"
+           id="path134"
+           fill="none" />
+        <path
+           d="m208.99 417.88-3.55-6.97 3.51 1.72 3.49-1.77z"
+           id="path136" />
+        <path
+           d="m248 433.8 56.79-30.58"
+           id="path138"
+           fill="none" />
+        <path
+           d="m309.42 400.73-4.51 6.4-0.12-3.91-3.2-2.25z"
+           id="path140" />
+        <path
+           d="m248 433.8 56.08 7.19"
+           id="path142"
+           fill="none" />
+        <path
+           d="m309.29 441.66-7.39 2.58 2.18-3.25-1.29-3.69z"
+           id="path144" />
+      </g>
+      <rect
+         x="460"
+         y="154"
+         width="400"
+         height="309"
+         id="rect146"
+         stroke="#6c8ebf"
+         fill="#dae8fc" />
+    </g>
+    <g
+       font-size="16px"
+       id="g148"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="767"
+         y="175.5"
+         id="text150">IBM Kubernetes Service</text>
+    </g>
+    <rect
+       x="619"
+       y="224"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect152"
+       stroke="#36393d"
+       fill="#9f9" />
+    <g
+       font-size="10px"
+       id="g154"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="659.5"
+         y="239.5"
+         id="text156">DB2</text>
+    </g>
+    <rect
+       x="475"
+       y="169"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect158"
+       stroke="#36393d"
+       fill="#9f9" />
+    <g
+       font-size="10px"
+       id="g160"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="514"
+         y="184.5"
+         id="text162">VPN</text>
+    </g>
+    <rect
+       x="760"
+       y="209"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect164"
+       stroke="#36393d"
+       fill="#9f9" />
+    <g
+       font-size="10px"
+       id="g166"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="799"
+         y="224.5"
+         id="text168">Redis</text>
+    </g>
+    <rect
+       x="475"
+       y="379"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect170"
+       stroke="#36393d"
+       fill="#9f9" />
+    <g
+       font-size="10px"
+       id="g172"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="514"
+         y="390.5"
+         id="text174"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         sodipodi:linespacing="125%">
+        <tspan
+           sodipodi:role="line"
+           id="tspan8454"
+           x="514"
+           y="390.5">Pipeline de</tspan>
+        <tspan
+           sodipodi:role="line"
+           id="tspan8456"
+           x="514"
+           y="403">développement</tspan>
+      </text>
+    </g>
+    <g
+       pointer-events="none"
+       id="g176">
+      <path
+         d="m554.4 184.2 98.06 37.71"
+         stroke-miterlimit="10"
+         id="path178"
+         stroke="#000"
+         fill="none" />
+      <path
+         d="m657.36 223.8-7.79 0.75 2.89-2.64-0.38-3.89z"
+         stroke-miterlimit="10"
+         id="path180"
+         stroke="#000" />
+      <rect
+         x="619"
+         y="362.5"
+         width="79"
+         height="30"
+         id="rect182"
+         stroke="#36393d"
+         fill="#9f9" />
+    </g>
+    <g
+       font-size="10px"
+       id="g184"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="659.5"
+         y="378"
+         id="text186">MQ</text>
+    </g>
+    <rect
+       x="475"
+       y="308"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect188"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g190"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="514"
+         y="323.5"
+         id="text192">Trader</text>
+    </g>
+    <rect
+       x="619"
+       y="308"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect194"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g196"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="659.5"
+         y="323.5"
+         id="text198">Portfefeuille</text>
+    </g>
+    <rect
+       x="619"
+       y="419"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect200"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g202"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="658"
+         y="434.5"
+         id="text204">Messagerie</text>
+    </g>
+    <rect
+       x="760"
+       y="268"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect206"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g208"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="819.02081"
+         y="276.94659"
+         id="text210"
+         transform="scale(0.97688393,1.0236631)"
+         style="font-size:9.76883984px">Cours des actions</text>
+    </g>
+    <rect
+       x="760"
+       y="328"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect212"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g214"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="799"
+         y="343.5"
+         id="text216">Niveau de fidélité</text>
+    </g>
+    <rect
+       x="760"
+       y="385.5"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect218"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g220"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="799"
+         y="401"
+         id="text222">Notification</text>
+      <text
+         x="799"
+         y="413"
+         id="text224">(Slack)</text>
+    </g>
+    <rect
+       x="760"
+       y="427"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect226"
+       stroke="#6c8ebf"
+       fill="#9cf" />
+    <g
+       font-size="10px"
+       id="g228"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="799"
+         y="442.5"
+         id="text230">Notification</text>
+      <text
+         x="799"
+         y="454.5"
+         id="text232">(Twitter)</text>
+    </g>
+    <g
+       pointer-events="none"
+       id="g234">
+      <g
+         stroke-miterlimit="10"
+         id="g236"
+         stroke="#000">
+        <path
+           d="m554.4 323.4h58.43"
+           id="path238"
+           fill="none" />
+        <path
+           d="m618.08 323.4-7 3.5 1.75-3.5-1.75-3.5z"
+           id="path240" />
+        <path
+           d="m698.4 323.4 56.26-36.53"
+           id="path242"
+           fill="none" />
+        <path
+           d="m759.06 284.01-3.96 6.75-0.44-3.89-3.37-1.98z"
+           id="path244" />
+        <path
+           d="m698.4 323.4 55.54 18.03"
+           id="path246"
+           fill="none" />
+        <path
+           d="m758.94 343.05-7.74 1.17 2.74-2.79-0.58-3.87z"
+           id="path248" />
+        <path
+           d="m660 308.2v-48.03"
+           id="path250"
+           fill="none" />
+        <path
+           d="m660 254.92 3.5 7-3.5-1.75-3.5 1.75z"
+           id="path252" />
+        <path
+           d="m799.2 357.8-94.55 18.76"
+           id="path254"
+           fill="none" />
+        <path
+           d="m699.5 377.58 6.18-4.79-1.03 3.77 2.39 3.09z"
+           id="path256" />
+        <path
+           d="m658.4 392.2 0.46 20.43"
+           id="path258"
+           fill="none" />
+        <path
+           d="m658.97 417.88-3.65-6.92 3.54 1.67 3.46-1.82z"
+           id="path260" />
+        <path
+           d="m698.4 433.8 56.01-30.55"
+           id="path262"
+           fill="none" />
+        <path
+           d="m759.02 400.74-4.47 6.42-0.14-3.91-3.21-2.24z"
+           id="path264" />
+        <path
+           d="m698.4 433.8 55.29 7.18"
+           id="path266"
+           fill="none" />
+        <path
+           d="m758.89 441.66-7.39 2.57 2.19-3.25-1.29-3.7z"
+           id="path268" />
+      </g>
+      <path
+         d="m399.3 186.7v10.5l-10-13 10-13v10.5h65.4v-10.5l10 13-10 13v-10.5z"
+         id="path270"
+         fill="#33f" />
+      <rect
+         x="570"
+         y="9"
+         width="290"
+         height="60"
+         id="rect272"
+         stroke="#666"
+         fill="#f5f5f5" />
+      <rect
+         x="540"
+         y="79"
+         width="320"
+         height="70"
+         id="rect274"
+         stroke="#6c8ebf"
+         fill="#dae8fc" />
+    </g>
+    <g
+       font-size="16px"
+       id="g276"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="758"
+         y="99.5"
+         id="text278">IBM Cloud Public Services</text>
+    </g>
+    <g
+       font-size="16px"
+       id="g280"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="787"
+         y="24.5"
+         id="text282">Services tiers</text>
+    </g>
+    <rect
+       x="760"
+       y="114"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect284"
+       stroke="#b85450"
+       fill="#f8cecc" />
+    <g
+       font-size="10px"
+       id="g286"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="799"
+         y="129.5"
+         id="text288">Watson</text>
+    </g>
+    <rect
+       x="660"
+       y="114"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect290"
+       stroke="#b85450"
+       fill="#f8cecc" />
+    <g
+       font-size="10px"
+       id="g292"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="699"
+         y="129.5"
+         id="text294">Fonctions</text>
+      <text
+         x="699"
+         y="141.5"
+         id="text296">(OpenWhisk)</text>
+    </g>
+    <rect
+       x="560"
+       y="114"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect298"
+       stroke="#b85450"
+       fill="#f8cecc" />
+    <g
+       font-size="10px"
+       id="g300"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="599"
+         y="129.5"
+         id="text302">API Connect</text>
+    </g>
+    <rect
+       x="760"
+       y="34"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect304"
+       stroke="#666"
+       fill="#ccc" />
+    <g
+       font-size="10px"
+       id="g306"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="799"
+         y="49.5"
+         id="text308">Twitter</text>
+    </g>
+    <rect
+       x="674.5"
+       y="34"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect310"
+       stroke="#666"
+       fill="#ccc" />
+    <g
+       font-size="10px"
+       id="g312"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="713.5"
+         y="49.5"
+         id="text314">Slack</text>
+    </g>
+    <rect
+       x="590"
+       y="34"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect316"
+       stroke="#666"
+       fill="#ccc" />
+    <g
+       font-size="10px"
+       id="g318"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="629"
+         y="45.5"
+         id="text320"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         sodipodi:linespacing="125%">
+        <tspan
+           sodipodi:role="line"
+           id="tspan8458"
+           x="629"
+           y="45.5">Service</tspan>
+        <tspan
+           sodipodi:role="line"
+           id="tspan8460"
+           x="629"
+           y="58">de courtage</tspan>
+      </text>
+    </g>
+    <rect
+       x="395.5"
+       y="88.5"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect322"
+       stroke="#666"
+       fill="#ccc" />
+    <g
+       font-size="10px"
+       id="g324"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="434.5"
+         y="104"
+         id="text326">Navigateur</text>
+    </g>
+    <rect
+       x="396"
+       y="44"
+       width="79"
+       height="30"
+       pointer-events="none"
+       id="rect328"
+       stroke="#666"
+       fill="#ccc" />
+    <g
+       font-size="10px"
+       id="g330"
+       text-anchor="middle"
+       font-family="Helvetica">
+      <text
+         x="435"
+         y="59.5"
+         id="text332">OIDC</text>
+    </g>
+    <g
+       pointer-events="none"
+       stroke-miterlimit="10"
+       id="g334"
+       stroke="#000">
+      <path
+         d="m435.2 118.6-22.58 30.11"
+         id="path336"
+         fill="none" />
+      <path
+         d="m409.47 152.91 1.4-7.7 1.75 3.5 3.85 0.7z"
+         id="path338" />
+      <path
+         d="m435.2 118.6 21.19 30.76"
+         id="path340"
+         fill="none" />
+      <path
+         d="m459.37 153.68-6.86-3.78 3.88-0.54 1.89-3.43z"
+         id="path342" />
+      <path
+         d="m104 388 34.78 7.63"
+         id="path344"
+         fill="none" />
+      <path
+         d="m143.91 396.76-7.59 1.92 2.46-3.05-0.96-3.79z"
+         id="path346" />
+      <path
+         d="m104 388 34.08 27.96"
+         id="path348"
+         fill="none" />
+      <path
+         d="m142.14 419.29-7.64-1.73 3.58-1.6 0.86-3.82z"
+         id="path350" />
+      <path
+         d="m104 388 36.21 48.88"
+         id="path352"
+         fill="none" />
+      <path
+         d="m143.33 441.1-6.97-3.54 3.85-0.68 1.77-3.49z"
+         id="path354" />
+      <path
+         d="m104 388 35.88-10.25"
+         id="path356"
+         fill="none" />
+      <path
+         d="m144.93 376.31-5.77 5.29 0.72-3.85-2.65-2.89z"
+         id="path358" />
+      <path
+         d="m104 388 34.84-25.26"
+         id="path360"
+         fill="none" />
+      <path
+         d="m143.09 359.66-3.61 6.94-0.64-3.86-3.47-1.81z"
+         id="path362" />
+      <path
+         d="m554 388 34.78 7.63"
+         id="path364"
+         fill="none" />
+      <path
+         d="m593.91 396.76-7.59 1.92 2.46-3.05-0.96-3.79z"
+         id="path366" />
+      <path
+         d="m554 388 34.08 27.96"
+         id="path368"
+         fill="none" />
+      <path
+         d="m592.14 419.29-7.64-1.73 3.58-1.6 0.86-3.82z"
+         id="path370" />
+      <path
+         d="m554 388 36.21 48.88"
+         id="path372"
+         fill="none" />
+      <path
+         d="m593.33 441.1-6.97-3.54 3.85-0.68 1.77-3.49z"
+         id="path374" />
+      <path
+         d="m554 388 35.88-10.25"
+         id="path376"
+         fill="none" />
+      <path
+         d="m594.93 376.31-5.77 5.29 0.72-3.85-2.65-2.89z"
+         id="path378" />
+      <path
+         d="m554 388 34.84-25.26"
+         id="path380"
+         fill="none" />
+      <path
+         d="m593.09 359.66-3.61 6.94-0.64-3.86-3.47-1.81z"
+         id="path382" />
+    </g>
+  </g>
+</svg>
