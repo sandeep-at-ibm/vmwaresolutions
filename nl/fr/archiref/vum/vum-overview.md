@@ -11,7 +11,7 @@ lastupdated: "2018-11-01"
 # Présentation de VMware Update Manager
 
 VMware Update Manager (VUM) utilise un processus à plusieurs étapes pour mettre à niveau des objets vSphere et appliquer des correctifs ou des extensions. Ce processus permet une procédure de mise à jour sans heurts avec un minimum d'indisponibilité du système. Avant d'examiner ce processus, vous devez comprendre les termes suivants :
-* **Objet d'inventaire** - Il s'agit d'un objet dans vCenter, tel qu'une machine virtuelle, un dispositif virtuel ou un hôte vSphere ESXi. 
+* **Objet d'inventaire** - Il s'agit d'un objet dans vCenter, tel qu'une machine virtuelle, un dispositif virtuel ou un hôte vSphere ESXi.
 * **Ligne de base** - Les lignes de base contiennent une collection d'un ou plusieurs correctifs, extensions, packs de service, correctifs de bogue ou mises à niveau pouvant être classées comme lignes de base de correctifs, d'extensions ou de mises à niveau. Il existe deux classifications de lignes de base : Hôte et VM/VA (machine virtuelle ou dispositif virtuel) comportant des lignes de base prédéfinies par VMware et des lignes de base personnalisées pouvant être ajoutées si nécessaire.
   - Lignes de base d'hôte prédéfinies :
     - Correctifs d'hôte critiques
@@ -24,7 +24,7 @@ VMware Update Manager (VUM) utilise un processus à plusieurs étapes pour mettr
 
 * **Groupe de lignes de base** - Ensemble de lignes de base non conflictuelles, qui combine différents types de ligne de base et qui analyse et résout un objet d'inventaire par rapport à toutes les lignes de base dans leur ensemble. Si un groupe de lignes de base contient à la fois des lignes de base de mises à niveau et des lignes de base de correctifs ou d'extensions, la ligne de base de mises à niveau s'exécute en premier.
 * **Analyse** - L'analyse est le processus qui consiste à évaluer un ou plusieurs objets d'inventaire par rapport à la ligne de base ou au groupe de lignes de base.
-* **Transfert** - Le transfert permet de garantir que les correctifs et les extensions sont téléchargés sur les hôtes vSphere ESXi avant l'opération de résolution. Il s'agit d'une option facultative utilisée pour réduire au maximum le temps qu'un hôte passe en mode maintenance.
+* **Transfert** - Le transfert permet de garantir que les correctifs et les extensions sont téléchargés sur les hôtes vSphere ESXi avant l'opération de résolution. Il s'agit d'une option facultative utilisée pour réduire le plus possible le temps qu'un hôte passe en mode maintenance.
 * **Résolution** - La résolution est le processus au cours duquel VUM applique des correctifs, des extensions et des mises à niveau à un ou plusieurs objets d'inventaire.
 
 Le processus VUM se présente comme suit :
