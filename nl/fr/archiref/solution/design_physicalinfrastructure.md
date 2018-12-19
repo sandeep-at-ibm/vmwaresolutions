@@ -88,7 +88,7 @@ Le **VLAN Spanning** est un paramètre de compte de portail client d'infrastruct
 
 Pour permettre des connexions transparentes entre les différents sous-réseaux sur lesquels résident les composants de solution, vous devez activer **VLAN Spanning** dans le compte de portail client d'infrastructure IBM Cloud sur lequel les instances Cloud Foundation et vCenter Server sont déployées.
 
-### Acheminement et routage virtuels (VRF)
+### Virtual Routing and Forwarding (VRF)
 
 Vous pouvez également configurer le compte {{site.data.keyword.slportal}} comme compte VRF pour fournir une fonctionnalité similaire à VLAN spanning et activer ainsi le routage automatique entre les blocs d'adresses IP de sous-réseau. Tous les comptes dotés de connexions Direct Link doivent être convertis en ou créés en tant que compte VRF.
 

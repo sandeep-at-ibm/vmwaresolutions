@@ -1,11 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 12.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 51448)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
-	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
-	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
-]>
-<svg  version="1.1" id="Calque_1" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="850" height="674" viewBox="0 0 850 674"
-	 overflow="visible" enable-background="new 0 0 850 674" xml:space="preserve">
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 850 674" style="enable-background:new 0 0 850 674;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.6706;fill-rule:evenodd;clip-rule:evenodd;fill:#00B0F0;}
+	.st1{opacity:0.6706;fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st2{opacity:0.2196;clip-path:url(#SVGID_2_);fill-rule:evenodd;clip-rule:evenodd;fill:#00B0F0;}
+	.st3{opacity:0.2196;clip-path:url(#SVGID_2_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st4{clip-path:url(#SVGID_2_);}
+	.st5{opacity:0.6706;clip-path:url(#SVGID_4_);fill-rule:evenodd;clip-rule:evenodd;fill:#00B0F0;}
+	.st6{opacity:0.6706;clip-path:url(#SVGID_4_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st7{clip-path:url(#SVGID_4_);}
+	.st8{opacity:0.2196;clip-path:url(#SVGID_6_);fill-rule:evenodd;clip-rule:evenodd;fill:#00B0F0;}
+	.st9{opacity:0.2196;clip-path:url(#SVGID_6_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st10{clip-path:url(#SVGID_6_);}
+	.st11{opacity:0.6706;clip-path:url(#SVGID_8_);fill-rule:evenodd;clip-rule:evenodd;fill:#00B0F0;}
+	.st12{opacity:0.6706;clip-path:url(#SVGID_8_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st13{clip-path:url(#SVGID_8_);}
+	.st14{opacity:0.2196;clip-path:url(#SVGID_10_);fill-rule:evenodd;clip-rule:evenodd;fill:#00B0F0;}
+	.st15{opacity:0.2196;clip-path:url(#SVGID_10_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st16{clip-path:url(#SVGID_10_);}
+	.st17{opacity:0.6706;clip-path:url(#SVGID_12_);fill-rule:evenodd;clip-rule:evenodd;fill:#2F5597;}
+	.st18{opacity:0.6706;clip-path:url(#SVGID_12_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st19{clip-path:url(#SVGID_12_);}
+	.st20{opacity:0.2196;clip-path:url(#SVGID_14_);fill-rule:evenodd;clip-rule:evenodd;fill:#8FAADC;}
+	.st21{opacity:0.2196;clip-path:url(#SVGID_14_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st22{clip-path:url(#SVGID_14_);}
+	.st23{clip-path:url(#SVGID_16_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st24{clip-path:url(#SVGID_16_);fill:none;stroke:#A5A5A5;stroke-width:2;stroke-miterlimit:8;}
+	.st25{clip-path:url(#SVGID_16_);}
+	.st26{opacity:0.502;clip-path:url(#SVGID_18_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFC000;}
+	.st27{clip-path:url(#SVGID_18_);}
+	.st28{opacity:0.502;clip-path:url(#SVGID_20_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFC000;}
+	.st29{clip-path:url(#SVGID_20_);}
+	.st30{clip-path:url(#SVGID_22_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st31{clip-path:url(#SVGID_22_);fill:none;stroke:#A5A5A5;stroke-width:2;stroke-miterlimit:8;}
+	.st32{clip-path:url(#SVGID_22_);}
+	.st33{opacity:0.502;clip-path:url(#SVGID_24_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFC000;}
+	.st34{clip-path:url(#SVGID_24_);}
+	.st35{opacity:0.502;clip-path:url(#SVGID_26_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFC000;}
+	.st36{clip-path:url(#SVGID_26_);}
+	.st37{clip-path:url(#SVGID_28_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st38{clip-path:url(#SVGID_28_);fill:none;stroke:#A5A5A5;stroke-width:2;stroke-miterlimit:8;}
+	.st39{clip-path:url(#SVGID_28_);}
+	.st40{opacity:0.502;clip-path:url(#SVGID_30_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFC000;}
+	.st41{clip-path:url(#SVGID_30_);}
+	.st42{opacity:0.502;clip-path:url(#SVGID_32_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFC000;}
+	.st43{clip-path:url(#SVGID_32_);}
+	.st44{clip-path:url(#SVGID_34_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st45{clip-path:url(#SVGID_34_);fill:none;stroke:#A5A5A5;stroke-width:2;stroke-miterlimit:8;}
+	.st46{clip-path:url(#SVGID_34_);}
+	.st47{opacity:0.502;clip-path:url(#SVGID_36_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFC000;}
+	.st48{clip-path:url(#SVGID_36_);}
+	.st49{opacity:0.502;clip-path:url(#SVGID_38_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFC000;}
+	.st50{clip-path:url(#SVGID_38_);}
+	.st51{opacity:0.6706;clip-path:url(#SVGID_40_);fill-rule:evenodd;clip-rule:evenodd;fill:#92D050;}
+	.st52{opacity:0.6706;clip-path:url(#SVGID_40_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st53{clip-path:url(#SVGID_40_);}
+	.st54{opacity:0.2196;clip-path:url(#SVGID_42_);fill-rule:evenodd;clip-rule:evenodd;fill:#92D050;}
+	.st55{opacity:0.2196;clip-path:url(#SVGID_42_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st56{clip-path:url(#SVGID_42_);}
+	.st57{clip-path:url(#SVGID_44_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st58{clip-path:url(#SVGID_44_);}
+	.st59{clip-path:url(#SVGID_46_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st60{clip-path:url(#SVGID_46_);}
+	.st61{clip-path:url(#SVGID_48_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st62{clip-path:url(#SVGID_48_);}
+	.st63{clip-path:url(#SVGID_50_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st64{clip-path:url(#SVGID_50_);}
+	.st65{clip-path:url(#SVGID_52_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st66{clip-path:url(#SVGID_52_);}
+	.st67{clip-path:url(#SVGID_54_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st68{clip-path:url(#SVGID_54_);}
+	.st69{clip-path:url(#SVGID_56_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st70{clip-path:url(#SVGID_56_);fill:none;}
+	.st71{fill-rule:evenodd;clip-rule:evenodd;fill:#B6DF8A;}
+	.st72{fill-rule:evenodd;clip-rule:evenodd;fill:#F2F2F2;}
+	.st73{fill-rule:evenodd;clip-rule:evenodd;fill:#FFDF7F;}
+	.st74{clip-path:url(#SVGID_58_);}
+	.st75{clip-path:url(#SVGID_60_);fill:#FFFFFF;}
+	.st76{fill-rule:evenodd;clip-rule:evenodd;fill:#54CAF5;}
+	.st77{clip-path:url(#SVGID_62_);}
+	.st78{clip-path:url(#SVGID_64_);fill:#FFFFFF;}
+	.st79{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st80{clip-path:url(#SVGID_66_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st81{clip-path:url(#SVGID_66_);}
+	.st82{clip-path:url(#SVGID_68_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st83{clip-path:url(#SVGID_68_);}
+	.st84{clip-path:url(#SVGID_70_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st85{clip-path:url(#SVGID_70_);}
+	.st86{clip-path:url(#SVGID_72_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st87{clip-path:url(#SVGID_72_);}
+	.st88{clip-path:url(#SVGID_74_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st89{clip-path:url(#SVGID_76_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st90{clip-path:url(#SVGID_76_);}
+	.st91{clip-path:url(#SVGID_78_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st92{clip-path:url(#SVGID_78_);}
+	.st93{clip-path:url(#SVGID_80_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st94{fill-rule:evenodd;clip-rule:evenodd;fill:#748DB9;}
+	.st95{clip-path:url(#SVGID_82_);}
+	.st96{clip-path:url(#SVGID_84_);fill:#FFFFFF;}
+	.st97{clip-path:url(#SVGID_84_);fill:none;stroke:#FFFFFF;stroke-width:0.25;stroke-miterlimit:8;}
+	.st98{fill:none;stroke:#A5A5A5;stroke-width:1.9998;stroke-miterlimit:8;}
+	.st99{fill:none;stroke:#A5A5A5;stroke-width:2;stroke-miterlimit:8;}
+	.st100{fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st101{clip-path:url(#SVGID_86_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st102{clip-path:url(#SVGID_86_);}
+	.st103{clip-path:url(#SVGID_88_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st104{clip-path:url(#SVGID_88_);}
+	.st105{clip-path:url(#SVGID_90_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st106{clip-path:url(#SVGID_90_);}
+	.st107{clip-path:url(#SVGID_92_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st108{clip-path:url(#SVGID_92_);}
+	.st109{clip-path:url(#SVGID_94_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st110{clip-path:url(#SVGID_94_);}
+	.st111{clip-path:url(#SVGID_96_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st112{clip-path:url(#SVGID_96_);}
+	.st113{clip-path:url(#SVGID_98_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st114{clip-path:url(#SVGID_98_);}
+	.st115{clip-path:url(#SVGID_100_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st116{clip-path:url(#SVGID_100_);}
+	.st117{clip-path:url(#SVGID_102_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st118{clip-path:url(#SVGID_102_);}
+	.st119{clip-path:url(#SVGID_104_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st120{clip-path:url(#SVGID_104_);}
+	.st121{clip-path:url(#SVGID_106_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st122{clip-path:url(#SVGID_106_);}
+	.st123{clip-path:url(#SVGID_108_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st124{clip-path:url(#SVGID_110_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st125{clip-path:url(#SVGID_110_);}
+	.st126{clip-path:url(#SVGID_112_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st127{clip-path:url(#SVGID_112_);}
+	.st128{clip-path:url(#SVGID_114_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st129{clip-path:url(#SVGID_114_);}
+	.st130{clip-path:url(#SVGID_116_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st131{clip-path:url(#SVGID_116_);}
+	.st132{clip-path:url(#SVGID_118_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st133{clip-path:url(#SVGID_118_);}
+	.st134{clip-path:url(#SVGID_120_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st135{clip-path:url(#SVGID_120_);}
+	.st136{clip-path:url(#SVGID_122_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st137{clip-path:url(#SVGID_122_);}
+	.st138{clip-path:url(#SVGID_124_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st139{clip-path:url(#SVGID_124_);}
+	.st140{clip-path:url(#SVGID_126_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st141{clip-path:url(#SVGID_126_);}
+	.st142{clip-path:url(#SVGID_128_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st143{clip-path:url(#SVGID_128_);}
+	.st144{clip-path:url(#SVGID_130_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st145{clip-path:url(#SVGID_130_);}
+	.st146{clip-path:url(#SVGID_132_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st147{clip-path:url(#SVGID_134_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st148{clip-path:url(#SVGID_134_);}
+	.st149{clip-path:url(#SVGID_136_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st150{clip-path:url(#SVGID_136_);}
+	.st151{clip-path:url(#SVGID_138_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st152{clip-path:url(#SVGID_138_);}
+	.st153{clip-path:url(#SVGID_140_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st154{clip-path:url(#SVGID_140_);}
+	.st155{clip-path:url(#SVGID_142_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st156{clip-path:url(#SVGID_142_);}
+	.st157{clip-path:url(#SVGID_144_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st158{clip-path:url(#SVGID_144_);}
+	.st159{clip-path:url(#SVGID_146_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st160{clip-path:url(#SVGID_146_);}
+	.st161{clip-path:url(#SVGID_148_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st162{clip-path:url(#SVGID_148_);}
+	.st163{clip-path:url(#SVGID_150_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st164{clip-path:url(#SVGID_150_);}
+	.st165{clip-path:url(#SVGID_152_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st166{clip-path:url(#SVGID_152_);}
+	.st167{clip-path:url(#SVGID_154_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st168{clip-path:url(#SVGID_154_);}
+	.st169{clip-path:url(#SVGID_156_);fill:none;stroke:#2F5597;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st170{fill:none;}
+	.st171{font-family:'IBMPlexSans';}
+	.st172{font-size:21px;}
+	.st173{font-size:13px;}
+</style>
 <font horiz-adv-x="1000">
 <!-- Hey there, greetings from Paul, Pieter, Diana, Barbara, Edgar, Jasper and Aleksandra. We miss Eliot! -->
 <!-- Copyright: Copyright 2018 Adobe System Incorporated. All rights reserved. -->
@@ -763,978 +935,985 @@
 <glyph unicode="0" horiz-adv-x="600" d="M300,-12C467,-12 540,121 540,349C540,577 467,710 300,710C133,710 60,577 60,349C60,121 133,-12 300,-12M300,61C191,61 148,157 148,292l0,114C148,541 191,637 300,637C409,637 452,541 452,406l0,-114C452,157 409,61 300,61z"/>
 </font>
 
-	<g>
-	<g>
+	<polygon class="st0" points="172.1,284.1 747.6,284.1 747.6,328.4 172.1,328.4 172.1,284.1 "/>
+<polygon class="st1" points="172.1,284.1 747.6,284.1 747.6,328.4 172.1,328.4 172.1,284.1 "/>
+<g>
+	<defs>
+		<polygon id="SVGID_1_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 		"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<polygon class="st2" points="172.1,284.1 206.8,239.8 712.9,239.8 747.6,284.1 172.1,284.1 	"/>
+	<polygon class="st3" points="172.1,284.1 206.8,239.8 712.9,239.8 747.6,284.1 172.1,284.1 	"/>
+	<g class="st4">
 		<defs>
-			<rect id="XMLID_100_" width="850" height="674"/>
+			<polygon id="SVGID_3_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 			"/>
 		</defs>
-		<clipPath id="XMLID_228_">
-			<use xlink:href="#XMLID_100_" />
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
 		</clipPath>
-		<g opacity="0.6706" clip-path="url(#XMLID_228_)">
-			<g>
+		<polygon class="st5" points="172.1,386.2 747.6,386.2 747.6,430.4 172.1,430.4 172.1,386.2 		"/>
+		<polygon class="st6" points="172.1,386.2 747.6,386.2 747.6,430.4 172.1,430.4 172.1,386.2 		"/>
+		<g class="st7">
+			<defs>
+				<polygon id="SVGID_5_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 				"/>
+			</defs>
+			<clipPath id="SVGID_6_">
+				<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+			</clipPath>
+			<polygon class="st8" points="172.1,386.2 206.8,341.9 712.9,341.9 747.6,386.2 172.1,386.2 			"/>
+			<polygon class="st9" points="172.1,386.2 206.8,341.9 712.9,341.9 747.6,386.2 172.1,386.2 			"/>
+			<g class="st10">
 				<defs>
-					<rect id="XMLID_102_" x="172.12" y="284.101" width="575.473" height="44.273"/>
+					<polygon id="SVGID_7_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 					"/>
 				</defs>
-				<clipPath id="XMLID_229_">
-					<use xlink:href="#XMLID_102_" />
+				<clipPath id="SVGID_8_">
+					<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
 				</clipPath>
-				
-					<rect x="172.12" y="284.102" clip-path="url(#XMLID_229_)" fill-rule="evenodd" clip-rule="evenodd" fill="#00B0F0" width="575.473" height="44.272"/>
+				<polygon class="st11" points="172.1,488.2 747.6,488.2 747.6,532.5 172.1,532.5 172.1,488.2 				"/>
+				<polygon class="st12" points="172.1,488.2 747.6,488.2 747.6,532.5 172.1,532.5 172.1,488.2 				"/>
+				<g class="st13">
+					<defs>
+						<polygon id="SVGID_9_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 						"/>
+					</defs>
+					<clipPath id="SVGID_10_">
+						<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+					</clipPath>
+					<polygon class="st14" points="172.1,488.2 206.8,444 712.9,444 747.6,488.2 172.1,488.2 					"/>
+					<polygon class="st15" points="172.1,488.2 206.8,444 712.9,444 747.6,488.2 172.1,488.2 					"/>
+					<g class="st16">
+						<defs>
+							<polygon id="SVGID_11_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 							"/>
+						</defs>
+						<clipPath id="SVGID_12_">
+							<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
+						</clipPath>
+						<polygon class="st17" points="172.1,602 747.6,602 747.6,646.3 172.1,646.3 172.1,602 						"/>
+						<polygon class="st18" points="172.1,602 747.6,602 747.6,646.3 172.1,646.3 172.1,602 						"/>
+						<g class="st19">
+							<defs>
+								<polygon id="SVGID_13_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 								"/>
+							</defs>
+							<clipPath id="SVGID_14_">
+								<use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
+							</clipPath>
+							<polygon class="st20" points="172.1,602 206.8,557.7 712.9,557.7 747.6,602 172.1,602 							"/>
+							<polygon class="st21" points="172.1,602 206.8,557.7 712.9,557.7 747.6,602 172.1,602 							"/>
+							<g class="st22">
+								<defs>
+									<polygon id="SVGID_15_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 									"/>
+								</defs>
+								<clipPath id="SVGID_16_">
+									<use xlink:href="#SVGID_15_"  style="overflow:visible;"/>
+								</clipPath>
+								<polygon class="st23" points="172.1,161.7 304.9,161.7 304.9,206 172.1,206 172.1,161.7 								"/>
+								<polygon class="st24" points="172.1,161.7 304.9,161.7 304.9,206 172.1,206 172.1,161.7 								"/>
+								<g class="st25">
+									<defs>
+										<polygon id="SVGID_17_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 										"/>
+									</defs>
+									<clipPath id="SVGID_18_">
+										<use xlink:href="#SVGID_17_"  style="overflow:visible;"/>
+									</clipPath>
+									<polygon class="st26" points="182,170.3 235.4,170.3 235.4,197.4 182,197.4 182,170.3 									"/>
+									<g class="st27">
+										<defs>
+											<polygon id="SVGID_19_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 											"/>
+										</defs>
+										<clipPath id="SVGID_20_">
+											<use xlink:href="#SVGID_19_"  style="overflow:visible;"/>
+										</clipPath>
+										<polygon class="st28" points="243.4,170.3 296.9,170.3 296.9,197.4 243.4,197.4 243.4,170.3 										"/>
+										<g class="st29">
+											<defs>
+												<polygon id="SVGID_21_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 												"/>
+											</defs>
+											<clipPath id="SVGID_22_">
+												<use xlink:href="#SVGID_21_"  style="overflow:visible;"/>
+											</clipPath>
+											<polygon class="st30" points="316,161.7 448.8,161.7 448.8,206 316,206 316,161.7 											"/>
+											<polygon class="st31" points="316,161.7 448.8,161.7 448.8,206 316,206 316,161.7 											"/>
+											<g class="st32">
+												<defs>
+													<polygon id="SVGID_23_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 													"/>
+												</defs>
+												<clipPath id="SVGID_24_">
+													<use xlink:href="#SVGID_23_"  style="overflow:visible;"/>
+												</clipPath>
+												<polygon class="st33" points="325.8,170.3 378.7,170.3 378.7,197.4 325.8,197.4 325.8,170.3 												"/>
+												<g class="st34">
+													<defs>
+														<polygon id="SVGID_25_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 														"/>
+													</defs>
+													<clipPath id="SVGID_26_">
+														<use xlink:href="#SVGID_25_"  style="overflow:visible;"/>
+													</clipPath>
+													<polygon class="st35" points="387.3,170.3 440.2,170.3 440.2,197.4 387.3,197.4 387.3,170.3 													"/>
+													<g class="st36">
+														<defs>
+															<polygon id="SVGID_27_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 															"/>
+														</defs>
+														<clipPath id="SVGID_28_">
+															<use xlink:href="#SVGID_27_"  style="overflow:visible;"/>
+														</clipPath>
+														<polygon class="st37" points="459.9,161.7 592.7,161.7 592.7,206 459.9,206 459.9,161.7 														"/>
+														<polygon class="st38" points="459.9,161.7 592.7,161.7 592.7,206 459.9,206 459.9,161.7 														"/>
+														<g class="st39">
+															<defs>
+																<polygon id="SVGID_29_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 																"/>
+															</defs>
+															<clipPath id="SVGID_30_">
+																<use xlink:href="#SVGID_29_"  style="overflow:visible;"/>
+															</clipPath>
+															<polygon class="st40" points="469.7,170.3 522.6,170.3 522.6,197.4 469.7,197.4 469.7,170.3 															"/>
+															<g class="st41">
+																<defs>
+																	<polygon id="SVGID_31_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 																	"/>
+																</defs>
+																<clipPath id="SVGID_32_">
+																	<use xlink:href="#SVGID_31_"  style="overflow:visible;"/>
+																</clipPath>
+																<polygon class="st42" points="531.2,170.3 584.1,170.3 584.1,197.4 531.2,197.4 531.2,170.3 																"/>
+																<g class="st43">
+																	<defs>
+																		<polygon id="SVGID_33_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 																		"/>
+																	</defs>
+																	<clipPath id="SVGID_34_">
+																		<use xlink:href="#SVGID_33_"  style="overflow:visible;"/>
+																	</clipPath>
+																	<polygon class="st44" points="603.7,161.7 736.5,161.7 736.5,206 603.7,206 603.7,161.7 																	"/>
+																	<polygon class="st45" points="603.7,161.7 736.5,161.7 736.5,206 603.7,206 603.7,161.7 																	"/>
+																	<g class="st46">
+																		<defs>
+																			<polygon id="SVGID_35_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 																			"/>
+																		</defs>
+																		<clipPath id="SVGID_36_">
+																			<use xlink:href="#SVGID_35_"  style="overflow:visible;"/>
+																		</clipPath>
+																		<polygon class="st47" points="612.9,170.3 666.4,170.3 666.4,197.4 612.9,197.4 612.9,170.3 																		
+																			"/>
+																		<g class="st48">
+																			<defs>
+																				<polygon id="SVGID_37_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 																				"/>
+																			</defs>
+																			<clipPath id="SVGID_38_">
+																				<use xlink:href="#SVGID_37_"  style="overflow:visible;"/>
+																			</clipPath>
+																			<polygon class="st49" points="675,170.3 727.9,170.3 727.9,197.4 675,197.4 675,170.3 																			"/>
+																			<g class="st50">
+																				<defs>
+																					<polygon id="SVGID_39_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 																					"/>
+																				</defs>
+																				<clipPath id="SVGID_40_">
+																					<use xlink:href="#SVGID_39_"  style="overflow:visible;"/>
+																				</clipPath>
+																				<polygon class="st51" points="357.8,68.9 539.8,68.9 539.8,113.2 357.8,113.2 357.8,68.9 																				
+																					"/>
+																				<polygon class="st52" points="357.8,68.9 539.8,68.9 539.8,113.2 357.8,113.2 357.8,68.9 																				
+																					"/>
+																				<g class="st53">
+																					<defs>
+																						<polygon id="SVGID_41_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 																						
+																							"/>
+																					</defs>
+																					<clipPath id="SVGID_42_">
+																						<use xlink:href="#SVGID_41_"  style="overflow:visible;"/>
+																					</clipPath>
+																					<polygon class="st54" points="357.8,68.9 392.5,24.6 505.1,24.6 539.8,68.9 357.8,68.9 																					
+																						"/>
+																					<polygon class="st55" points="357.8,68.9 392.5,24.6 505.1,24.6 539.8,68.9 357.8,68.9 																					
+																						"/>
+																					<g class="st56">
+																						<defs>
+																							<polygon id="SVGID_43_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 
+																																															"/>
+																						</defs>
+																						<clipPath id="SVGID_44_">
+																							<use xlink:href="#SVGID_43_"  style="overflow:visible;"/>
+																						</clipPath>
+																						<polygon class="st57" points="254.4,587.2 222.5,587.2 221.9,587 221.1,586.8 220.9,586.2 220.7,585.5 
+																							220.7,559.1 220.9,558.2 221.4,557.8 228.7,552 229.1,551.8 229.8,551.6 247.2,551.6 247.9,551.8 248.4,552 
+																							255.6,557.8 256.1,558.2 256.4,559.1 256.4,585.5 256.1,586.2 255.8,586.8 255.2,587 254.4,587.2 
+																							254.4,587.2 																						"/>
+																						<g class="st58">
+																							<defs>
+																								<polygon id="SVGID_45_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 
+																																																	"/>
+																							</defs>
+																							<clipPath id="SVGID_46_">
+																								<use xlink:href="#SVGID_45_"  style="overflow:visible;"/>
+																							</clipPath>
+																							<line class="st59" x1="220.7" y1="560.2" x2="256.4" y2="560.8"/>
+																							<g class="st60">
+																								<defs>
+																									<polygon id="SVGID_47_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 
+																																																			"/>
+																								</defs>
+																								<clipPath id="SVGID_48_">
+																									<use xlink:href="#SVGID_47_"  style="overflow:visible;"/>
+																								</clipPath>
+																								<line class="st61" x1="220.7" y1="569.4" x2="256.4" y2="570"/>
+																								<g class="st62">
+																									<defs>
+																										<polygon id="SVGID_49_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 
+																																																					"/>
+																									</defs>
+																									<clipPath id="SVGID_50_">
+																										<use xlink:href="#SVGID_49_"  style="overflow:visible;"/>
+																									</clipPath>
+																									<line class="st63" x1="220.7" y1="578" x2="256.4" y2="578.6"/>
+																									<g class="st64">
+																										<defs>
+																											<polygon id="SVGID_51_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 
+																																																							"/>
+																										</defs>
+																										<clipPath id="SVGID_52_">
+																											<use xlink:href="#SVGID_51_"  style="overflow:visible;"/>
+																										</clipPath>
+																										<line class="st65" x1="252.7" y1="565.1" x2="247.1" y2="565.7"/>
+																										<g class="st66">
+																											<defs>
+																												<polygon id="SVGID_53_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 
+																																																									"/>
+																											</defs>
+																											<clipPath id="SVGID_54_">
+																												<use xlink:href="#SVGID_53_"  style="overflow:visible;"/>
+																											</clipPath>
+																											<line class="st67" x1="252.7" y1="574.3" x2="247.1" y2="574.9"/>
+																											<g class="st68">
+																												<defs>
+																													<polygon id="SVGID_55_" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 
+																																																											"/>
+																												</defs>
+																												<clipPath id="SVGID_56_">
+																													<use xlink:href="#SVGID_55_"  style="overflow:visible;"/>
+																												</clipPath>
+																												<line class="st69" x1="252.7" y1="582.9" x2="247.1" y2="583.6"/>
+																												<polygon class="st70" points="78.1,647.5 749.4,647.5 749.4,24 78.1,24 78.1,647.5 
+																																																									"/>
+																											</g>
+																										</g>
+																									</g>
+																								</g>
+																							</g>
+																						</g>
+																					</g>
+																				</g>
+																			</g>
+																		</g>
+																	</g>
+																</g>
+															</g>
+														</g>
+													</g>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
 			</g>
 		</g>
-		<g opacity="0.6706" clip-path="url(#XMLID_228_)">
-			<g>
-				<defs>
-					<rect id="XMLID_104_" x="171.12" y="283.101" width="577.473" height="46.273"/>
-				</defs>
-				<clipPath id="XMLID_230_">
-					<use xlink:href="#XMLID_104_" />
-				</clipPath>
-				
-					<rect x="172.12" y="284.102" clip-path="url(#XMLID_230_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" width="575.473" height="44.272"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_106_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_231_">
-			<use xlink:href="#XMLID_106_" />
-		</clipPath>
-		<g opacity="0.2196" clip-path="url(#XMLID_231_)">
-			<g>
-				<defs>
-					<rect id="XMLID_108_" x="172.12" y="239.829" width="575.473" height="44.272"/>
-				</defs>
-				<clipPath id="XMLID_232_">
-					<use xlink:href="#XMLID_108_" />
-				</clipPath>
-				<polygon clip-path="url(#XMLID_232_)" fill-rule="evenodd" clip-rule="evenodd" fill="#00B0F0" points="172.12,284.102 
-					206.793,239.829 712.92,239.829 747.593,284.102 				"/>
-			</g>
-		</g>
-		<g opacity="0.2196" clip-path="url(#XMLID_231_)">
-			<g>
-				<defs>
-					<rect id="XMLID_110_" x="170.067" y="238.829" width="579.371" height="46.272"/>
-				</defs>
-				<clipPath id="XMLID_233_">
-					<use xlink:href="#XMLID_110_" />
-				</clipPath>
-				<polygon clip-path="url(#XMLID_233_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" points="
-					172.12,284.102 206.793,239.829 712.92,239.829 747.593,284.102 				"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_112_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_234_">
-			<use xlink:href="#XMLID_112_" />
-		</clipPath>
-		<g opacity="0.6706" clip-path="url(#XMLID_234_)">
-			<g>
-				<defs>
-					<rect id="XMLID_114_" x="172.12" y="386.174" width="575.473" height="44.273"/>
-				</defs>
-				<clipPath id="XMLID_235_">
-					<use xlink:href="#XMLID_114_" />
-				</clipPath>
-				
-					<rect x="172.12" y="386.174" clip-path="url(#XMLID_235_)" fill-rule="evenodd" clip-rule="evenodd" fill="#00B0F0" width="575.473" height="44.273"/>
-			</g>
-		</g>
-		<g opacity="0.6706" clip-path="url(#XMLID_234_)">
-			<g>
-				<defs>
-					<rect id="XMLID_116_" x="171.12" y="385.174" width="577.473" height="46.273"/>
-				</defs>
-				<clipPath id="XMLID_236_">
-					<use xlink:href="#XMLID_116_" />
-				</clipPath>
-				
-					<rect x="172.12" y="386.174" clip-path="url(#XMLID_236_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" width="575.473" height="44.273"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_118_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_237_">
-			<use xlink:href="#XMLID_118_" />
-		</clipPath>
-		<g opacity="0.2196" clip-path="url(#XMLID_237_)">
-			<g>
-				<defs>
-					<rect id="XMLID_120_" x="172.12" y="341.902" width="575.473" height="44.271"/>
-				</defs>
-				<clipPath id="XMLID_238_">
-					<use xlink:href="#XMLID_120_" />
-				</clipPath>
-				<polygon clip-path="url(#XMLID_238_)" fill-rule="evenodd" clip-rule="evenodd" fill="#00B0F0" points="172.12,386.174 
-					206.793,341.901 712.92,341.901 747.593,386.174 				"/>
-			</g>
-		</g>
-		<g opacity="0.2196" clip-path="url(#XMLID_237_)">
-			<g>
-				<defs>
-					<rect id="XMLID_122_" x="170.067" y="340.902" width="579.371" height="46.271"/>
-				</defs>
-				<clipPath id="XMLID_239_">
-					<use xlink:href="#XMLID_122_" />
-				</clipPath>
-				<polygon clip-path="url(#XMLID_239_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" points="
-					172.12,386.174 206.793,341.901 712.92,341.901 747.593,386.174 				"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_124_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_240_">
-			<use xlink:href="#XMLID_124_" />
-		</clipPath>
-		<g opacity="0.6706" clip-path="url(#XMLID_240_)">
-			<g>
-				<defs>
-					<rect id="XMLID_126_" x="172.12" y="488.247" width="575.473" height="44.272"/>
-				</defs>
-				<clipPath id="XMLID_241_">
-					<use xlink:href="#XMLID_126_" />
-				</clipPath>
-				
-					<rect x="172.12" y="488.247" clip-path="url(#XMLID_241_)" fill-rule="evenodd" clip-rule="evenodd" fill="#00B0F0" width="575.473" height="44.271"/>
-			</g>
-		</g>
-		<g opacity="0.6706" clip-path="url(#XMLID_240_)">
-			<g>
-				<defs>
-					<rect id="XMLID_128_" x="171.12" y="487.247" width="577.473" height="46.272"/>
-				</defs>
-				<clipPath id="XMLID_242_">
-					<use xlink:href="#XMLID_128_" />
-				</clipPath>
-				
-					<rect x="172.12" y="488.247" clip-path="url(#XMLID_242_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" width="575.473" height="44.271"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_130_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_243_">
-			<use xlink:href="#XMLID_130_" />
-		</clipPath>
-		<g opacity="0.2196" clip-path="url(#XMLID_243_)">
-			<g>
-				<defs>
-					<rect id="XMLID_132_" x="172.12" y="443.975" width="575.473" height="44.272"/>
-				</defs>
-				<clipPath id="XMLID_244_">
-					<use xlink:href="#XMLID_132_" />
-				</clipPath>
-				<polygon clip-path="url(#XMLID_244_)" fill-rule="evenodd" clip-rule="evenodd" fill="#00B0F0" points="172.12,488.247 
-					206.793,443.975 712.92,443.975 747.593,488.247 				"/>
-			</g>
-		</g>
-		<g opacity="0.2196" clip-path="url(#XMLID_243_)">
-			<g>
-				<defs>
-					<rect id="XMLID_134_" x="170.067" y="442.975" width="579.371" height="46.272"/>
-				</defs>
-				<clipPath id="XMLID_245_">
-					<use xlink:href="#XMLID_134_" />
-				</clipPath>
-				<polygon clip-path="url(#XMLID_245_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" points="
-					172.12,488.247 206.793,443.975 712.92,443.975 747.593,488.247 				"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_136_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_246_">
-			<use xlink:href="#XMLID_136_" />
-		</clipPath>
-		<g opacity="0.6706" clip-path="url(#XMLID_246_)">
-			<g>
-				<defs>
-					<rect id="XMLID_138_" x="172.12" y="602.003" width="575.473" height="44.272"/>
-				</defs>
-				<clipPath id="XMLID_247_">
-					<use xlink:href="#XMLID_138_" />
-				</clipPath>
-				
-					<rect x="172.12" y="602.003" clip-path="url(#XMLID_247_)" fill-rule="evenodd" clip-rule="evenodd" fill="#2F5597" width="575.473" height="44.272"/>
-			</g>
-		</g>
-		<g opacity="0.6706" clip-path="url(#XMLID_246_)">
-			<g>
-				<defs>
-					<rect id="XMLID_140_" x="171.12" y="601.003" width="577.473" height="46.272"/>
-				</defs>
-				<clipPath id="XMLID_248_">
-					<use xlink:href="#XMLID_140_" />
-				</clipPath>
-				
-					<rect x="172.12" y="602.003" clip-path="url(#XMLID_248_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" width="575.473" height="44.272"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_142_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_249_">
-			<use xlink:href="#XMLID_142_" />
-		</clipPath>
-		<g opacity="0.2196" clip-path="url(#XMLID_249_)">
-			<g>
-				<defs>
-					<rect id="XMLID_144_" x="172.12" y="557.731" width="575.473" height="44.271"/>
-				</defs>
-				<clipPath id="XMLID_250_">
-					<use xlink:href="#XMLID_144_" />
-				</clipPath>
-				<polygon clip-path="url(#XMLID_250_)" fill-rule="evenodd" clip-rule="evenodd" fill="#8FAADC" points="172.12,602.003 
-					206.793,557.73 712.92,557.73 747.593,602.003 				"/>
-			</g>
-		</g>
-		<g opacity="0.2196" clip-path="url(#XMLID_249_)">
-			<g>
-				<defs>
-					<rect id="XMLID_146_" x="170.067" y="556.731" width="579.371" height="46.271"/>
-				</defs>
-				<clipPath id="XMLID_251_">
-					<use xlink:href="#XMLID_146_" />
-				</clipPath>
-				<polygon clip-path="url(#XMLID_251_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" points="
-					172.12,602.003 206.793,557.73 712.92,557.73 747.593,602.003 				"/>
-			</g>
-		</g>
-	</g>
-	<rect x="172.12" y="161.737" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="132.801" height="44.272"/>
-	
-		<rect x="172.12" y="161.737" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" width="132.801" height="44.272"/>
-	<g>
-		<defs>
-			<rect id="XMLID_148_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_252_">
-			<use xlink:href="#XMLID_148_" />
-		</clipPath>
-		<g opacity="0.502" clip-path="url(#XMLID_252_)">
-			<g>
-				<defs>
-					<rect id="XMLID_150_" x="181.957" y="170.345" width="53.49" height="27.056"/>
-				</defs>
-				<clipPath id="XMLID_253_">
-					<use xlink:href="#XMLID_150_" />
-				</clipPath>
-				
-					<rect x="181.957" y="170.346" clip-path="url(#XMLID_253_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFC000" width="53.49" height="27.055"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_152_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_254_">
-			<use xlink:href="#XMLID_152_" />
-		</clipPath>
-		<g opacity="0.502" clip-path="url(#XMLID_254_)">
-			<g>
-				<defs>
-					<rect id="XMLID_154_" x="243.439" y="170.345" width="53.49" height="27.056"/>
-				</defs>
-				<clipPath id="XMLID_255_">
-					<use xlink:href="#XMLID_154_" />
-				</clipPath>
-				
-					<rect x="243.439" y="170.346" clip-path="url(#XMLID_255_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFC000" width="53.489" height="27.055"/>
-			</g>
-		</g>
-	</g>
-	<rect x="315.988" y="161.737" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="132.802" height="44.272"/>
-	
-		<rect x="315.988" y="161.737" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" width="132.802" height="44.272"/>
-	<g>
-		<defs>
-			<rect id="XMLID_156_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_256_">
-			<use xlink:href="#XMLID_156_" />
-		</clipPath>
-		<g opacity="0.502" clip-path="url(#XMLID_256_)">
-			<g>
-				<defs>
-					<rect id="XMLID_158_" x="325.825" y="170.345" width="52.875" height="27.056"/>
-				</defs>
-				<clipPath id="XMLID_257_">
-					<use xlink:href="#XMLID_158_" />
-				</clipPath>
-				
-					<rect x="325.825" y="170.346" clip-path="url(#XMLID_257_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFC000" width="52.875" height="27.055"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_160_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_258_">
-			<use xlink:href="#XMLID_160_" />
-		</clipPath>
-		<g opacity="0.502" clip-path="url(#XMLID_258_)">
-			<g>
-				<defs>
-					<rect id="XMLID_162_" x="387.307" y="170.345" width="52.875" height="27.056"/>
-				</defs>
-				<clipPath id="XMLID_259_">
-					<use xlink:href="#XMLID_162_" />
-				</clipPath>
-				
-					<rect x="387.308" y="170.346" clip-path="url(#XMLID_259_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFC000" width="52.874" height="27.055"/>
-			</g>
-		</g>
-	</g>
-	<rect x="459.856" y="161.737" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="132.802" height="44.272"/>
-	
-		<rect x="459.856" y="161.737" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" width="132.802" height="44.272"/>
-	<g>
-		<defs>
-			<rect id="XMLID_164_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_260_">
-			<use xlink:href="#XMLID_164_" />
-		</clipPath>
-		<g opacity="0.502" clip-path="url(#XMLID_260_)">
-			<g>
-				<defs>
-					<rect id="XMLID_166_" x="469.693" y="170.345" width="52.875" height="27.056"/>
-				</defs>
-				<clipPath id="XMLID_261_">
-					<use xlink:href="#XMLID_166_" />
-				</clipPath>
-				
-					<rect x="469.693" y="170.346" clip-path="url(#XMLID_261_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFC000" width="52.875" height="27.055"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_168_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_262_">
-			<use xlink:href="#XMLID_168_" />
-		</clipPath>
-		<g opacity="0.502" clip-path="url(#XMLID_262_)">
-			<g>
-				<defs>
-					<rect id="XMLID_170_" x="531.176" y="170.345" width="52.874" height="27.056"/>
-				</defs>
-				<clipPath id="XMLID_263_">
-					<use xlink:href="#XMLID_170_" />
-				</clipPath>
-				
-					<rect x="531.176" y="170.346" clip-path="url(#XMLID_263_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFC000" width="52.874" height="27.055"/>
-			</g>
-		</g>
-	</g>
-	<rect x="603.725" y="161.737" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="132.803" height="44.272"/>
-	
-		<rect x="603.725" y="161.737" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" width="132.803" height="44.272"/>
-	<g>
-		<defs>
-			<rect id="XMLID_172_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_264_">
-			<use xlink:href="#XMLID_172_" />
-		</clipPath>
-		<g opacity="0.502" clip-path="url(#XMLID_264_)">
-			<g>
-				<defs>
-					<rect id="XMLID_174_" x="612.947" y="170.345" width="53.488" height="27.056"/>
-				</defs>
-				<clipPath id="XMLID_265_">
-					<use xlink:href="#XMLID_174_" />
-				</clipPath>
-				
-					<rect x="612.947" y="170.346" clip-path="url(#XMLID_265_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFC000" width="53.488" height="27.055"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_176_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_266_">
-			<use xlink:href="#XMLID_176_" />
-		</clipPath>
-		<g opacity="0.502" clip-path="url(#XMLID_266_)">
-			<g>
-				<defs>
-					<rect id="XMLID_178_" x="675.044" y="170.345" width="52.874" height="27.056"/>
-				</defs>
-				<clipPath id="XMLID_267_">
-					<use xlink:href="#XMLID_178_" />
-				</clipPath>
-				
-					<rect x="675.044" y="170.346" clip-path="url(#XMLID_267_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFC000" width="52.875" height="27.055"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_180_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_268_">
-			<use xlink:href="#XMLID_180_" />
-		</clipPath>
-		<g opacity="0.6706" clip-path="url(#XMLID_268_)">
-			<g>
-				<defs>
-					<rect id="XMLID_182_" x="357.796" y="68.888" width="181.987" height="44.272"/>
-				</defs>
-				<clipPath id="XMLID_269_">
-					<use xlink:href="#XMLID_182_" />
-				</clipPath>
-				
-					<rect x="357.796" y="68.888" clip-path="url(#XMLID_269_)" fill-rule="evenodd" clip-rule="evenodd" fill="#92D050" width="181.987" height="44.272"/>
-			</g>
-		</g>
-		<g opacity="0.6706" clip-path="url(#XMLID_268_)">
-			<g>
-				<defs>
-					<rect id="XMLID_184_" x="356.796" y="67.888" width="183.987" height="46.272"/>
-				</defs>
-				<clipPath id="XMLID_270_">
-					<use xlink:href="#XMLID_184_" />
-				</clipPath>
-				
-					<rect x="357.796" y="68.888" clip-path="url(#XMLID_270_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" width="181.987" height="44.272"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_186_" x="78.053" y="24" width="671.384" height="623.506"/>
-		</defs>
-		<clipPath id="XMLID_271_">
-			<use xlink:href="#XMLID_186_" />
-		</clipPath>
-		<g opacity="0.2196" clip-path="url(#XMLID_271_)">
-			<g>
-				<defs>
-					<rect id="XMLID_188_" x="357.796" y="24.615" width="181.987" height="44.273"/>
-				</defs>
-				<clipPath id="XMLID_272_">
-					<use xlink:href="#XMLID_188_" />
-				</clipPath>
-				<polygon clip-path="url(#XMLID_272_)" fill-rule="evenodd" clip-rule="evenodd" fill="#92D050" points="357.796,68.888 
-					392.469,24.615 505.11,24.615 539.783,68.888 				"/>
-			</g>
-		</g>
-		<g opacity="0.2196" clip-path="url(#XMLID_271_)">
-			<g>
-				<defs>
-					<rect id="XMLID_190_" x="355.743" y="24" width="186.094" height="45.888"/>
-				</defs>
-				<clipPath id="XMLID_273_">
-					<use xlink:href="#XMLID_190_" />
-				</clipPath>
-				<polygon clip-path="url(#XMLID_273_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" points="
-					357.796,68.888 392.469,24.615 505.11,24.615 539.783,68.888 				"/>
-			</g>
-		</g>
-	</g>
-	<polygon fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="254.421,587.245 
-		222.537,587.245 221.866,587.023 221.11,586.802 220.859,586.21 220.691,585.544 220.691,559.055 220.859,558.241 221.362,557.797 
-		228.662,552.025 229.082,551.804 229.837,551.582 247.205,551.582 247.876,551.804 248.379,552.025 255.595,557.797 
-		256.099,558.241 256.351,559.055 256.351,585.544 256.099,586.21 255.847,586.802 255.176,587.023 	"/>
-	
-		<line fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="220.691" y1="560.19" x2="256.351" y2="560.805"/>
-	
-		<line fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="220.691" y1="569.414" x2="256.351" y2="570.028"/>
-	
-		<line fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="220.691" y1="578.022" x2="256.351" y2="578.637"/>
-	
-		<line fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="252.662" y1="565.109" x2="247.128" y2="565.725"/>
-	
-		<line fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="252.662" y1="574.333" x2="247.128" y2="574.947"/>
-	
-		<line fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="252.662" y1="582.941" x2="247.128" y2="583.557"/>
-	<g>
-		<defs>
-			<rect id="XMLID_192_" width="850" height="674"/>
-		</defs>
-		<clipPath id="XMLID_274_">
-			<use xlink:href="#XMLID_192_" />
-		</clipPath>
-		<path clip-path="url(#XMLID_274_)" fill-rule="evenodd" clip-rule="evenodd" fill="#B6DF8A" d="M263.114,75.847
-			c0-19.246,15.714-34.847,35.099-34.847c19.384,0,35.099,15.601,35.099,34.847s-15.715,34.847-35.099,34.847
-			C278.828,110.694,263.114,95.093,263.114,75.847"/>
-		<path clip-path="url(#XMLID_274_)" fill-rule="evenodd" clip-rule="evenodd" fill="#F2F2F2" d="M288.611,83.049h-3.895
-			l-1.193-1.193l-0.105-0.105l-0.14-0.07l-0.123-0.035h-0.141h-2.807l-0.14,0.017l-0.14,0.018l-0.106,0.088l-0.105,0.087
-			l-0.088,0.105l-0.07,0.105l-0.035,0.141l-0.018,0.123v7.037l0.018,0.122l0.035,0.158l0.07,0.105l0.088,0.106l0.105,0.07
-			l0.106,0.07l0.14,0.035l0.14,0.035h8.404l0.158-0.035l0.123-0.035l0.123-0.07l0.105-0.07l0.088-0.106l0.052-0.105l0.053-0.158
-			l0.018-0.122v-5.616l-0.018-0.158l-0.053-0.123l-0.052-0.122l-0.088-0.106l-0.105-0.087l-0.123-0.07l-0.123-0.036H288.611z
-			 M287.927,88.647h-7.018v-5.598h1.807l1.193,1.194l0.105,0.087l0.123,0.07l0.141,0.036l0.14,0.017h3.509V88.647z"/>
-		<path clip-path="url(#XMLID_274_)" fill-rule="evenodd" clip-rule="evenodd" fill="#F2F2F2" d="M315.316,83.049h-3.93
-			l-1.194-1.193l-0.105-0.105l-0.14-0.07l-0.123-0.035h-0.141h-2.789l-0.158,0.017l-0.123,0.018l-0.123,0.088l-0.105,0.087
-			l-0.088,0.105l-0.053,0.105l-0.052,0.141l-0.017,0.123v7.037l0.017,0.122l0.052,0.158l0.053,0.105l0.088,0.106l0.105,0.07
-			l0.123,0.07l0.123,0.035l0.158,0.035h8.422l0.14-0.035l0.123-0.035l0.105-0.07l0.105-0.07l0.105-0.106l0.071-0.105L316,89.489
-			v-0.122v-5.616v-0.158l-0.035-0.123l-0.071-0.122l-0.105-0.106l-0.105-0.087l-0.105-0.07l-0.123-0.036H315.316z M314.596,88.647
-			h-7.018v-5.598h1.825l1.21,1.194l0.106,0.087l0.105,0.07l0.14,0.036l0.123,0.017h3.509V88.647z"/>
-		<path clip-path="url(#XMLID_274_)" fill-rule="evenodd" clip-rule="evenodd" fill="#F2F2F2" d="M303.584,87.729h-5.878
-			l-0.509-1.035l-0.035-0.071l-0.07-0.069l-0.07-0.088l-0.07-0.035l-0.088-0.053l-0.106-0.035l-0.087-0.018h-0.105h-4.194
-			l-0.14,0.018l-0.123,0.017l-0.14,0.088l-0.106,0.088l-0.07,0.105l-0.07,0.106l-0.035,0.14l-0.017,0.123v8.423l0.017,0.14
-			l0.035,0.14l0.07,0.123l0.07,0.105l0.106,0.088l0.14,0.053l0.123,0.035l0.14,0.035h11.212l0.14-0.035l0.123-0.035l0.14-0.053
-			l0.105-0.088l0.071-0.105l0.07-0.123l0.035-0.14l0.035-0.14v-7.019l-0.035-0.141l-0.035-0.123l-0.07-0.123l-0.071-0.105
-			l-0.105-0.088l-0.14-0.07l-0.123-0.035H303.584z M302.882,94.748h-9.808v-7.019h3.071l0.508,1l0.053,0.088l0.052,0.088l0.071,0.07
-			l0.088,0.053l0.07,0.052l0.087,0.018l0.106,0.017l0.105,0.018h5.597V94.748z"/>
-		<path clip-path="url(#XMLID_274_)" fill-rule="evenodd" clip-rule="evenodd" fill="#F2F2F2" d="M290.254,73.847h7.039v2.936
-			l-0.193,0.036l-0.158,0.07l-0.193,0.089l-0.14,0.089l-0.176,0.106l-0.14,0.088l-0.158,0.106l-0.123,0.141l-0.123,0.142
-			l-0.123,0.142l-0.105,0.159l-0.088,0.141l-0.106,0.177l-0.07,0.159l-0.052,0.177l-0.07,0.195h-10.622l-0.14,0.018l-0.141,0.035
-			l-0.123,0.07l-0.105,0.089l-0.07,0.106l-0.07,0.106l-0.036,0.142l-0.035,0.141v1.397l0.035,0.16l0.036,0.124l0.07,0.124
-			l0.07,0.106l0.105,0.088l0.123,0.053l0.141,0.053l0.14,0.018l0.141-0.018l0.14-0.053l0.123-0.053l0.105-0.088l0.088-0.106
-			l0.053-0.124l0.035-0.124v-0.16v-0.689h9.937l0.07,0.194l0.052,0.16l0.07,0.176l0.106,0.159l0.088,0.16l0.105,0.159l0.123,0.124
-			l0.123,0.159l0.123,0.124l0.158,0.106l0.14,0.106l0.176,0.106l0.14,0.089l0.193,0.071l0.158,0.07l0.193,0.036v2.953v0.142
-			l0.035,0.124l0.071,0.123l0.087,0.107l0.106,0.088l0.122,0.071l0.124,0.035h0.158h0.14l0.123-0.035l0.123-0.071l0.105-0.088
-			l0.088-0.107l0.07-0.123l0.035-0.124v-0.142v-2.953l0.193-0.036l0.194-0.07l0.158-0.071l0.14-0.089l0.176-0.106l0.14-0.106
-			l0.158-0.106l0.123-0.124l0.123-0.159l0.123-0.124l0.105-0.159l0.105-0.16l0.088-0.159l0.07-0.176l0.053-0.16l0.07-0.194h9.937
-			v0.689v0.16l0.035,0.124l0.07,0.124l0.105,0.106l0.106,0.088l0.105,0.053l0.123,0.053l0.14,0.018l0.141-0.018l0.14-0.053
-			l0.123-0.053l0.106-0.088l0.088-0.106l0.052-0.124l0.053-0.124l0.017-0.16v-1.397l-0.017-0.141l-0.053-0.142l-0.052-0.106
-			l-0.088-0.106l-0.106-0.089l-0.123-0.07l-0.14-0.035L311.32,78.8h-10.621l-0.07-0.195l-0.053-0.177l-0.07-0.159l-0.088-0.177
-			l-0.105-0.141l-0.105-0.159l-0.123-0.142l-0.123-0.142l-0.123-0.141l-0.158-0.106l-0.14-0.088l-0.176-0.106l-0.14-0.089
-			l-0.158-0.089l-0.194-0.07l-0.193-0.036v-2.936h7.725h0.333l0.316-0.035l0.316-0.035l0.317-0.054l0.298-0.07l0.316-0.089
-			l0.298-0.106l0.263-0.123l0.299-0.124l0.246-0.124l0.281-0.177l0.246-0.142l0.245-0.194l0.246-0.195l0.228-0.194l0.228-0.213
-			l0.211-0.23l0.193-0.23l0.176-0.229l0.193-0.248l0.158-0.265l0.158-0.248l0.123-0.283l0.141-0.283l0.122-0.283l0.106-0.301
-			l0.07-0.318l0.07-0.283l0.07-0.318l0.035-0.319l0.018-0.318V67.48v-0.301l-0.018-0.318l-0.035-0.301l-0.052-0.301l-0.053-0.265
-			l-0.088-0.3l-0.088-0.266l-0.105-0.283l-0.105-0.283l-0.123-0.248l-0.14-0.247l-0.141-0.265l-0.158-0.23l-0.176-0.229l-0.158-0.23
-			l-0.193-0.213l-0.193-0.212l-0.21-0.194l-0.211-0.195l-0.228-0.177l-0.229-0.177l-0.228-0.141l-0.263-0.159l-0.246-0.142
-			l-0.246-0.124l-0.281-0.106l-0.263-0.106l-0.281-0.088l-0.263-0.089l-0.299-0.053l-0.298-0.053l-0.299-0.035l-0.088-0.39
-			l-0.087-0.353l-0.141-0.336l-0.158-0.336l-0.21-0.319l-0.211-0.282l-0.263-0.266l-0.246-0.265l-0.298-0.23l-0.282-0.213
-			L304.737,58l-0.351-0.159l-0.351-0.106l-0.351-0.106l-0.387-0.036l-0.403-0.017l-0.246,0.017l-0.264,0.019l-0.28-0.408
-			l-0.299-0.371l-0.333-0.389l-0.334-0.336l-0.351-0.318l-0.386-0.283l-0.404-0.266l-0.421-0.248l-0.404-0.212l-0.457-0.194
-			l-0.439-0.16l-0.456-0.141l-0.492-0.106l-0.473-0.071l-0.492-0.053l-0.474-0.018h-0.334l-0.333,0.018l-0.316,0.053l-0.334,0.036
-			l-0.316,0.071l-0.316,0.07l-0.316,0.089l-0.298,0.106l-0.299,0.106l-0.281,0.124l-0.298,0.123l-0.281,0.159l-0.264,0.16
-			l-0.28,0.177l-0.246,0.194l-0.263,0.195l-0.246,0.177l-0.228,0.212l-0.229,0.23l-0.21,0.212l-0.211,0.266l-0.211,0.229
-			l-0.192,0.266l-0.159,0.265l-0.175,0.265l-0.176,0.283l-0.14,0.301l-0.123,0.283l-0.123,0.3l-0.105,0.301l-0.106,0.319
-			l-0.087,0.336l-0.282,0.088l-0.263,0.089l-0.28,0.106l-0.264,0.123l-0.263,0.124l-0.246,0.124l-0.228,0.141l-0.246,0.16
-			l-0.246,0.159l-0.211,0.195l-0.228,0.176l-0.211,0.177l-0.175,0.213l-0.193,0.194l-0.193,0.23l-0.176,0.212l-0.158,0.23
-			l-0.175,0.248l-0.141,0.23l-0.123,0.247l-0.123,0.248l-0.14,0.266l-0.105,0.265l-0.106,0.283l-0.07,0.247l-0.088,0.301
-			l-0.07,0.283l-0.035,0.265l-0.053,0.301l-0.035,0.301l-0.017,0.283v0.3v0.354l0.035,0.372l0.053,0.353l0.052,0.336l0.088,0.337
-			l0.088,0.353l0.105,0.336l0.123,0.318l0.14,0.319l0.158,0.283l0.158,0.301l0.194,0.301L284.635,71l0.211,0.265l0.228,0.247
-			l0.229,0.248l0.245,0.248l0.264,0.23l0.246,0.212l0.298,0.195l0.263,0.176l0.299,0.177l0.298,0.142l0.316,0.159l0.316,0.124
-			l0.334,0.106l0.333,0.106l0.334,0.053l0.334,0.071l0.368,0.035l0.351,0.053H290.254z M299.4,79.507v0.124l-0.035,0.159
-			l-0.035,0.124l-0.035,0.142l-0.07,0.106l-0.088,0.141l-0.053,0.106l-0.105,0.106l-0.088,0.071l-0.123,0.088l-0.105,0.071
-			l-0.123,0.053l-0.14,0.054l-0.141,0.035l-0.123,0.017h-0.14h-0.158l-0.124-0.017l-0.14-0.035l-0.14-0.054l-0.123-0.053
-			l-0.105-0.071l-0.106-0.088l-0.105-0.071l-0.105-0.106l-0.053-0.106l-0.088-0.141l-0.07-0.106l-0.035-0.142l-0.018-0.124
-			l-0.017-0.159l-0.036-0.124l0.036-0.141l0.017-0.142l0.018-0.141l0.035-0.124l0.07-0.124l0.088-0.123l0.053-0.107l0.105-0.106
-			l0.105-0.088l0.106-0.089l0.105-0.053l0.123-0.071l0.14-0.035l0.14-0.053l0.124-0.018h0.158h0.14l0.123,0.018l0.141,0.053
-			l0.14,0.035l0.123,0.071l0.105,0.053l0.123,0.089l0.088,0.088l0.105,0.106l0.053,0.107l0.088,0.123l0.07,0.124l0.035,0.124
-			l0.035,0.141l0.035,0.142V79.507z M289.13,61.236l0.105-0.053l0.088-0.035l0.07-0.036l0.088-0.088l0.07-0.071l0.053-0.088
-			l0.052-0.107l0.018-0.105l0.053-0.266l0.07-0.283l0.088-0.265l0.087-0.266l0.106-0.265l0.123-0.247l0.123-0.248l0.122-0.247
-			l0.159-0.23l0.14-0.213l0.158-0.23l0.176-0.194l0.175-0.213l0.176-0.194l0.21-0.195l0.194-0.176l0.21-0.16l0.229-0.159l0.21-0.159
-			l0.228-0.142l0.264-0.124l0.228-0.123l0.245-0.106l0.264-0.107l0.246-0.088l0.263-0.088l0.281-0.054l0.246-0.052l0.298-0.036
-			l0.281-0.053l0.263-0.018h0.299l0.421,0.018l0.422,0.053l0.421,0.053l0.421,0.106l0.387,0.124l0.386,0.159l0.368,0.16l0.387,0.212
-			l0.333,0.212l0.334,0.266l0.333,0.265l0.299,0.301l0.298,0.318l0.246,0.318l0.263,0.354l0.211,0.389l0.053,0.088l0.087,0.071
-			l0.088,0.088l0.106,0.054l0.105,0.035l0.123,0.018h0.105l0.123-0.018l0.193-0.035l0.158-0.054l0.175-0.017h0.159l0.298,0.017
-			l0.281,0.054l0.263,0.053L304,59.22l0.245,0.106l0.229,0.141l0.21,0.177l0.211,0.177l0.175,0.212l0.159,0.213l0.157,0.23
-			l0.106,0.247l0.105,0.248l0.053,0.283l0.053,0.265l0.017,0.301v0.124l0.035,0.159l0.07,0.106l0.106,0.106l0.07,0.088l0.141,0.071
-			l0.122,0.054h0.141h0.263l0.246,0.017l0.246,0.036l0.228,0.052l0.263,0.054l0.229,0.07l0.228,0.053l0.21,0.107l0.229,0.088
-			l0.21,0.106l0.193,0.124l0.211,0.142l0.193,0.141l0.176,0.141l0.175,0.16l0.194,0.159l0.14,0.176l0.175,0.16l0.141,0.194
-			l0.123,0.195l0.123,0.212l0.14,0.213l0.105,0.212l0.106,0.212l0.07,0.23l0.088,0.23l0.07,0.23l0.035,0.23l0.07,0.265l0.018,0.23
-			l0.017,0.248v0.265v0.248l-0.017,0.247l-0.018,0.265l-0.07,0.23l-0.035,0.248l-0.07,0.23l-0.088,0.247l-0.07,0.195l-0.106,0.248
-			l-0.105,0.212l-0.14,0.177l-0.123,0.212l-0.123,0.195l-0.141,0.194l-0.175,0.159l-0.14,0.195l-0.194,0.159L309.53,71.3
-			l-0.176,0.16l-0.193,0.123l-0.211,0.124l-0.193,0.124l-0.21,0.106l-0.229,0.106l-0.21,0.089l-0.228,0.088l-0.229,0.053
-			l-0.263,0.053l-0.228,0.053l-0.246,0.018l-0.246,0.035h-0.263h-16.151h-0.264l-0.298-0.035l-0.264-0.036l-0.298-0.035l-0.264-0.07
-			l-0.263-0.089l-0.281-0.088l-0.246-0.107l-0.245-0.106l-0.246-0.124l-0.228-0.141l-0.228-0.141L286.9,71.3l-0.21-0.159
-			l-0.194-0.177l-0.21-0.194l-0.176-0.195l-0.175-0.194l-0.176-0.213l-0.14-0.247l-0.141-0.23l-0.158-0.23l-0.123-0.23l-0.105-0.247
-			l-0.106-0.266l-0.087-0.265l-0.07-0.266l-0.071-0.265l-0.035-0.301l-0.052-0.282l-0.018-0.266v-0.301v-0.247l0.018-0.266
-			l0.017-0.23l0.053-0.247l0.105-0.46l0.14-0.478l0.176-0.442l0.228-0.424l0.246-0.389l0.281-0.39l0.316-0.353l0.334-0.318
-			l0.368-0.319l0.404-0.265l0.404-0.23l0.439-0.212l0.228-0.089l0.228-0.053l0.228-0.088L289.13,61.236z"/>
-		<path clip-path="url(#XMLID_274_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFDF7F" d="M83.736,186.421
-			c0-15.696,12.63-28.421,28.21-28.421s28.209,12.725,28.209,28.421s-12.629,28.42-28.209,28.42S83.736,202.117,83.736,186.421"/>
-	</g>
-	<g>
-		<defs>
-			
-				<rect id="XMLID_194_" x="98.534" y="171.381" transform="matrix(-1 -0.0093 0.0093 -1 222.4495 370.9069)" width="27.106" height="27.111"/>
-		</defs>
-		<clipPath id="XMLID_275_">
-			<use xlink:href="#XMLID_194_" />
-		</clipPath>
-		<path clip-path="url(#XMLID_275_)" fill="#FFFFFF" d="M105.482,172.734l-0.052,5.54l-5.422-0.05l0.052-5.541L105.482,172.734z
-			 M106.909,171.332l-8.25-0.076l-0.077,8.252l8.25,0.076L106.909,171.332z M114.91,172.822l-0.052,5.54l-5.421-0.05l0.051-5.541
-			L114.91,172.822z M116.337,171.42l-8.249-0.076l-0.077,8.251l8.249,0.077L116.337,171.42z M124.338,172.909l-0.051,5.541
-			l-5.54-0.052l0.052-5.54L124.338,172.909z M125.765,171.508l-8.249-0.077l-0.077,8.252l8.25,0.077L125.765,171.508z
-			 M105.395,182.164l-0.052,5.541l-5.421-0.05l0.051-5.541L105.395,182.164z M106.821,180.763l-8.25-0.077l-0.076,8.252l8.25,0.077
-			L106.821,180.763z M114.822,182.252l-0.051,5.541l-5.422-0.051l0.052-5.54L114.822,182.252z M116.25,180.851l-8.25-0.077
-			l-0.077,8.252l8.25,0.076L116.25,180.851z M124.251,182.34l-0.052,5.54l-5.539-0.051l0.051-5.541L124.251,182.34z
-			 M125.678,180.938l-8.25-0.076l-0.077,8.252l8.25,0.076L125.678,180.938z M105.306,191.595l-0.051,5.541l-5.421-0.051l0.051-5.54
-			L105.306,191.595z M106.734,190.194l-8.25-0.077l-0.077,8.252l8.25,0.076L106.734,190.194z M114.735,191.682l-0.052,5.541
-			l-5.421-0.05l0.051-5.541L114.735,191.682z M116.162,190.281l-8.25-0.077l-0.076,8.252l8.249,0.077L116.162,190.281z
-			 M124.163,191.77l-0.052,5.541l-5.539-0.052l0.052-5.54L124.163,191.77z M125.59,190.369l-8.25-0.077l-0.076,8.252l8.249,0.076
-			L125.59,190.369z"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_196_" width="850" height="674"/>
-		</defs>
-		<clipPath id="XMLID_276_">
-			<use xlink:href="#XMLID_196_" />
-		</clipPath>
-		<path clip-path="url(#XMLID_276_)" fill-rule="evenodd" clip-rule="evenodd" fill="#54CAF5" d="M83.006,298.943
-			c0-15.985,12.957-28.943,28.94-28.943s28.939,12.958,28.939,28.943s-12.956,28.943-28.939,28.943S83.006,314.928,83.006,298.943"
-			/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_198_" x="97.051" y="283.426" width="29.79" height="31.036"/>
-		</defs>
-		<clipPath id="XMLID_277_">
-			<use xlink:href="#XMLID_198_" />
-		</clipPath>
-		<path clip-path="url(#XMLID_277_)" fill="#FFFFFF" d="M123.604,306.712v-7.762h-11.658v-7.892
-			c1.814-0.259,3.239-1.811,3.239-3.752c0-2.199-1.684-3.881-3.886-3.881c-2.202,0-3.886,1.682-3.886,3.881
-			c0,1.941,1.425,3.493,3.238,3.752v7.892h-10.362v7.892c-1.813,0.388-3.238,1.941-3.238,3.752c0,2.199,1.684,3.881,3.885,3.881
-			c2.203,0,3.886-1.682,3.886-3.881c0-1.941-1.424-3.494-3.238-3.752v-6.599h20.725v6.599c-1.814,0.258-3.239,1.941-3.239,3.752
-			c0,2.199,1.684,3.881,3.886,3.881s3.886-1.682,3.886-3.881C126.842,308.654,125.546,306.972,123.604,306.712 M108.708,287.307
-			c0-1.423,1.166-2.587,2.591-2.587c1.425,0,2.59,1.164,2.59,2.587s-1.165,2.587-2.59,2.587
-			C109.874,289.894,108.708,288.729,108.708,287.307 M103.526,310.595c0,1.423-1.166,2.587-2.591,2.587
-			c-1.424,0-2.59-1.164-2.59-2.587c0-1.424,1.166-2.588,2.59-2.588C102.36,308.007,103.526,309.17,103.526,310.595 M122.956,313.182
-			c-1.425,0-2.59-1.164-2.59-2.587c0-1.424,1.165-2.588,2.59-2.588s2.591,1.164,2.591,2.588
-			C125.546,312.018,124.38,313.182,122.956,313.182"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_200_" width="850" height="674"/>
-		</defs>
-		<clipPath id="XMLID_278_">
-			<use xlink:href="#XMLID_200_" />
-		</clipPath>
-		<path clip-path="url(#XMLID_278_)" fill-rule="evenodd" clip-rule="evenodd" fill="#54CAF5" d="M81.334,398.528
-			c0-16.785,13.706-30.392,30.612-30.392c16.906,0,30.611,13.606,30.611,30.392s-13.705,30.392-30.611,30.392
-			C95.04,428.92,81.334,415.313,81.334,398.528"/>
-		<polygon clip-path="url(#XMLID_278_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" points="
-			97.306,412.872 97.306,384.186 97.306,383.864 97.497,383.672 97.688,383.48 98.008,383.48 125.884,383.48 126.202,383.48 
-			126.394,383.672 126.585,383.864 126.585,384.186 126.585,412.872 126.585,413.257 126.394,413.385 126.202,413.577 
-			125.884,413.577 98.008,413.577 97.688,413.577 97.497,413.385 97.306,413.257 		"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_202_" x="96.899" y="383.074" width="30.092" height="30.91"/>
-		</defs>
-		<clipPath id="XMLID_279_">
-			<use xlink:href="#XMLID_202_" />
-		</clipPath>
-		
-			<line clip-path="url(#XMLID_279_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" x1="97.306" y1="387.954" x2="126.585" y2="388.36"/>
-		
-			<line clip-path="url(#XMLID_279_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" x1="99.339" y1="385.514" x2="100.56" y2="385.92"/>
-		
-			<line clip-path="url(#XMLID_279_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" x1="102.186" y1="385.514" x2="103.406" y2="385.92"/>
-		<polygon clip-path="url(#XMLID_279_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" points="
-			120.486,398.425 119.201,395.762 117.596,396.332 116.89,395.444 115.991,394.684 116.505,393.099 113.808,392.021 
-			113.102,393.479 111.882,393.479 110.79,393.479 110.084,392.021 107.387,393.099 107.901,394.684 107.002,395.444 
-			106.296,396.332 104.498,395.762 103.406,398.425 105.011,399.313 104.819,400.391 105.011,401.468 103.406,402.355 
-			104.498,405.019 106.296,404.448 107.002,405.336 107.901,406.033 107.387,407.682 110.084,408.695 110.79,407.302 
-			111.882,407.302 113.102,407.302 113.808,408.695 116.505,407.682 115.991,406.033 116.89,405.336 117.596,404.448 
-			119.201,405.019 120.486,402.355 118.881,401.468 119.009,400.391 118.881,399.313 		"/>
-		<polygon clip-path="url(#XMLID_279_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" points="
-			114.386,400.155 114.386,400.155 114.185,401.031 113.65,401.907 112.713,402.471 111.776,402.596 110.839,402.471 
-			109.903,401.907 109.3,401.031 109.099,400.155 109.3,399.279 109.903,398.403 110.839,397.902 111.776,397.715 112.713,397.902 
-			113.65,398.403 114.185,399.279 		"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_204_" width="850" height="674"/>
-		</defs>
-		<clipPath id="XMLID_280_">
-			<use xlink:href="#XMLID_204_" />
-		</clipPath>
-		<path clip-path="url(#XMLID_280_)" fill-rule="evenodd" clip-rule="evenodd" fill="#54CAF5" d="M81.003,501.473
-			c0-17.091,13.854-30.945,30.942-30.945c17.089,0,30.943,13.854,30.943,30.945c0,17.092-13.854,30.946-30.943,30.946
-			C94.857,532.419,81.003,518.564,81.003,501.473"/>
-		<polygon clip-path="url(#XMLID_280_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" points="
-			126.186,488.987 126.186,488.987 126.186,488.536 125.96,487.934 125.137,487.03 123.712,486.202 121.988,485.374 
-			119.891,484.771 117.417,484.32 114.869,483.869 111.945,483.869 109.022,483.869 106.475,484.32 104.001,484.771 
-			101.902,485.374 100.179,486.202 98.754,487.03 97.931,487.934 97.706,488.536 97.706,488.987 97.706,497.343 97.706,497.795 
-			97.931,498.397 98.754,499.301 100.179,500.129 101.902,500.957 104.001,501.559 106.475,502.011 109.022,502.462 
-			111.945,502.462 114.869,502.462 117.417,502.011 119.891,501.559 121.988,500.957 123.712,500.129 125.137,499.301 
-			125.96,498.397 126.186,497.795 126.186,497.343 		"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_206_" x="97.31" y="483.473" width="29.272" height="36"/>
-		</defs>
-		<clipPath id="XMLID_281_">
-			<use xlink:href="#XMLID_206_" />
-		</clipPath>
-		<polyline clip-path="url(#XMLID_281_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" points="
-			97.706,489.012 97.706,489.012 97.706,489.396 97.931,490.086 98.754,490.931 100.179,491.774 101.903,492.619 104.001,493.31 
-			106.475,493.693 109.022,494.154 111.946,494.154 114.869,494.154 117.417,493.693 119.891,493.31 121.989,492.619 
-			123.712,491.774 125.137,490.931 125.96,490.086 126.186,489.396 126.186,489.012 		"/>
-		<polyline clip-path="url(#XMLID_281_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" points="
-			97.706,500.88 97.706,505.788 97.706,506.228 97.931,506.813 98.754,507.691 100.179,508.499 101.903,509.305 104.001,509.891 
-			106.475,510.33 109.022,510.77 111.946,510.77 114.869,510.77 117.417,510.33 119.891,509.891 121.989,509.305 123.712,508.499 
-			125.137,507.691 125.96,506.813 126.186,506.228 126.186,505.788 126.186,500.88 		"/>
-		<polyline clip-path="url(#XMLID_281_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="8" points="
-			97.706,509.188 97.706,514.133 97.706,514.575 97.931,515.166 98.754,515.978 100.179,516.863 101.903,517.675 104.001,518.266 
-			106.475,518.709 109.022,519.077 111.946,519.077 114.869,519.077 117.417,518.709 119.891,518.266 121.989,517.675 
-			123.712,516.863 125.137,515.978 125.96,515.166 126.186,514.575 126.186,514.133 126.186,509.188 		"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_208_" width="850" height="674"/>
-		</defs>
-		<clipPath id="XMLID_282_">
-			<use xlink:href="#XMLID_208_" />
-		</clipPath>
-		<path clip-path="url(#XMLID_282_)" fill-rule="evenodd" clip-rule="evenodd" fill="#748DB9" d="M82.414,617.126
-			c0-16.432,13.222-29.752,29.532-29.752c16.31,0,29.532,13.32,29.532,29.752c0,16.433-13.222,29.753-29.532,29.753
-			C95.636,646.879,82.414,633.559,82.414,617.126"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_210_" x="98.447" y="603.626" width="26.996" height="27"/>
-		</defs>
-		<clipPath id="XMLID_283_">
-			<use xlink:href="#XMLID_210_" />
-		</clipPath>
-		<path clip-path="url(#XMLID_283_)" fill="#FFFFFF" d="M114.201,629.514H99.573v-24.762h14.628V629.514z M115.326,603.626H98.447
-			v27.013h16.879V603.626z M124.328,629.514h-5.626v-24.762h5.626V629.514z M125.453,603.626h-7.876v27.013h7.876V603.626z"/>
-		<path clip-path="url(#XMLID_283_)" fill="none" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="8" d="M114.201,629.514
-			H99.573v-24.762h14.628V629.514z M115.326,603.626H98.447v27.013h16.879V603.626z M124.328,629.514h-5.626v-24.762h5.626V629.514z
-			 M125.453,603.626h-7.876v27.013h7.876V603.626z"/>
-		<path clip-path="url(#XMLID_283_)" fill="#FFFFFF" d="M111.95,612.631h-10.127v-4.503h10.127V612.631z M113.076,607.003h-12.378
-			v6.753h12.378V607.003z M122.078,608.128h-1.125v-1.125h1.125V608.128z M123.203,605.877h-3.375v3.377h3.375V605.877z
-			 M122.078,612.631h-1.125v-1.126h1.125V612.631z M123.203,610.38h-3.375v3.376h3.375V610.38z M122.078,617.133h-1.125v-1.126
-			h1.125V617.133z M123.203,614.882h-3.375v3.376h3.375V614.882z M122.078,621.635h-1.125v-1.126h1.125V621.635z M123.203,619.384
-			h-3.375v3.376h3.375V619.384z M122.078,626.137h-1.125v-1.126h1.125V626.137z M123.203,623.886h-3.375v3.377h3.375V623.886z"/>
-		<path clip-path="url(#XMLID_283_)" fill="none" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="8" d="M111.95,612.631
-			h-10.127v-4.503h10.127V612.631z M113.076,607.003h-12.378v6.753h12.378V607.003z M122.078,608.128h-1.125v-1.125h1.125V608.128z
-			 M123.203,605.877h-3.375v3.377h3.375V605.877z M122.078,612.631h-1.125v-1.126h1.125V612.631z M123.203,610.38h-3.375v3.376
-			h3.375V610.38z M122.078,617.133h-1.125v-1.126h1.125V617.133z M123.203,614.882h-3.375v3.376h3.375V614.882z M122.078,621.635
-			h-1.125v-1.126h1.125V621.635z M123.203,619.384h-3.375v3.376h3.375V619.384z M122.078,626.137h-1.125v-1.126h1.125V626.137z
-			 M123.203,623.886h-3.375v3.377h3.375V623.886z"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_212_" width="850" height="674"/>
-		</defs>
-		<clipPath id="XMLID_284_">
-			<use xlink:href="#XMLID_212_" />
-		</clipPath>
-		<polyline clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" points="376,113 
-			376,137.5 239,137.5 239,162 		"/>
-		<polyline clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" points="524,113 
-			524,137.5 671,137.5 671,162 		"/>
-		
-			<line clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="238.504" y1="207" x2="238.504" y2="260"/>
-		
-			<line clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="380" y1="207" x2="380" y2="260"/>
-		
-			<line clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="530" y1="207" x2="530" y2="260"/>
-		
-			<line clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="671" y1="207" x2="671" y2="260"/>
-		
-			<line clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="239" y1="328" x2="239" y2="366"/>
-		
-			<line clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="380" y1="328" x2="380" y2="366"/>
-		
-			<line clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="530" y1="329" x2="530" y2="366"/>
-		
-			<line clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="671" y1="328" x2="671" y2="366"/>
-		
-			<line clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="239" y1="430" x2="239" y2="467"/>
-		
-			<line clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="380" y1="430" x2="380" y2="466"/>
-		
-			<line clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="530" y1="430" x2="530" y2="465"/>
-		
-			<line clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="671" y1="430" x2="671" y2="466"/>
-		
-			<line clip-path="url(#XMLID_284_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="239" y1="532" x2="239" y2="550"/>
-		
-			<polygon clip-path="url(#XMLID_284_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="
-			399.34,588.358 366.073,588.358 365.372,588.127 364.584,587.896 364.322,587.277 364.147,586.583 364.147,558.944 
-			364.322,558.096 364.847,557.632 372.464,551.61 372.901,551.379 373.689,551.147 391.812,551.147 392.511,551.379 
-			393.037,551.61 400.566,557.632 401.091,558.096 401.354,558.944 401.354,586.583 401.091,587.277 400.828,587.896 
-			400.128,588.127 		"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_214_" x="363.505" y="550.505" width="38.489" height="38.495"/>
-		</defs>
-		<clipPath id="XMLID_285_">
-			<use xlink:href="#XMLID_214_" />
-		</clipPath>
-		
-			<line clip-path="url(#XMLID_285_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="364.147" y1="560.129" x2="401.354" y2="560.771"/>
-		
-			<line clip-path="url(#XMLID_285_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="364.147" y1="569.111" x2="401.354" y2="569.753"/>
-		
-			<line clip-path="url(#XMLID_285_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="364.147" y1="578.734" x2="401.354" y2="579.376"/>
-		
-			<line clip-path="url(#XMLID_285_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="397.505" y1="565.262" x2="391.732" y2="565.903"/>
-		
-			<line clip-path="url(#XMLID_285_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="397.505" y1="574.244" x2="391.732" y2="574.886"/>
-		
-			<line clip-path="url(#XMLID_285_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="397.505" y1="583.867" x2="391.732" y2="584.509"/>
-		
-			<line clip-path="url(#XMLID_285_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="369.92" y1="565.262" x2="367.997" y2="565.903"/>
-		
-			<line clip-path="url(#XMLID_285_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="369.92" y1="574.244" x2="367.997" y2="574.886"/>
-		
-			<line clip-path="url(#XMLID_285_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="369.92" y1="583.867" x2="367.997" y2="584.509"/>
-		
-			<line clip-path="url(#XMLID_285_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="373.77" y1="565.262" x2="371.846" y2="565.903"/>
-		
-			<line clip-path="url(#XMLID_285_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="373.77" y1="574.244" x2="371.846" y2="574.886"/>
-		
-			<line clip-path="url(#XMLID_285_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="373.77" y1="583.867" x2="371.846" y2="584.509"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_216_" width="850" height="674"/>
-		</defs>
-		<clipPath id="XMLID_286_">
-			<use xlink:href="#XMLID_216_" />
-		</clipPath>
-		
-			<polygon clip-path="url(#XMLID_286_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="
-			546.34,588.358 513.072,588.358 512.373,588.127 511.585,587.896 511.322,587.277 511.147,586.583 511.147,558.944 
-			511.322,558.096 511.848,557.632 519.464,551.61 519.901,551.379 520.689,551.147 538.812,551.147 539.512,551.379 
-			540.037,551.61 547.565,557.632 548.091,558.096 548.354,558.944 548.354,586.583 548.091,587.277 547.828,587.896 
-			547.128,588.127 		"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_218_" x="510.506" y="550.505" width="38.489" height="38.495"/>
-		</defs>
-		<clipPath id="XMLID_287_">
-			<use xlink:href="#XMLID_218_" />
-		</clipPath>
-		
-			<line clip-path="url(#XMLID_287_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="511.147" y1="560.129" x2="548.354" y2="560.771"/>
-		
-			<line clip-path="url(#XMLID_287_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="511.147" y1="569.111" x2="548.354" y2="569.753"/>
-		
-			<line clip-path="url(#XMLID_287_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="511.147" y1="578.734" x2="548.354" y2="579.376"/>
-		
-			<line clip-path="url(#XMLID_287_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="544.505" y1="565.262" x2="538.731" y2="565.903"/>
-		
-			<line clip-path="url(#XMLID_287_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="544.505" y1="574.244" x2="538.731" y2="574.886"/>
-		
-			<line clip-path="url(#XMLID_287_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="544.505" y1="583.867" x2="538.731" y2="584.509"/>
-		
-			<line clip-path="url(#XMLID_287_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="516.921" y1="565.262" x2="514.996" y2="565.903"/>
-		
-			<line clip-path="url(#XMLID_287_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="516.921" y1="574.244" x2="514.996" y2="574.886"/>
-		
-			<line clip-path="url(#XMLID_287_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="516.921" y1="583.867" x2="514.996" y2="584.509"/>
-		
-			<line clip-path="url(#XMLID_287_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="520.77" y1="565.262" x2="518.845" y2="565.903"/>
-		
-			<line clip-path="url(#XMLID_287_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="520.77" y1="574.244" x2="518.845" y2="574.886"/>
-		
-			<line clip-path="url(#XMLID_287_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="520.77" y1="583.867" x2="518.845" y2="584.509"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_220_" width="850" height="674"/>
-		</defs>
-		<clipPath id="XMLID_288_">
-			<use xlink:href="#XMLID_220_" />
-		</clipPath>
-		
-			<polygon clip-path="url(#XMLID_288_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="
-			687.34,588.358 654.072,588.358 653.373,588.127 652.585,587.896 652.322,587.277 652.147,586.583 652.147,558.944 
-			652.322,558.096 652.848,557.632 660.464,551.61 660.901,551.379 661.689,551.147 679.812,551.147 680.512,551.379 
-			681.037,551.61 688.565,557.632 689.091,558.096 689.354,558.944 689.354,586.583 689.091,587.277 688.828,587.896 
-			688.128,588.127 		"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_222_" x="651.505" y="550.505" width="38.489" height="38.495"/>
-		</defs>
-		<clipPath id="XMLID_289_">
-			<use xlink:href="#XMLID_222_" />
-		</clipPath>
-		
-			<line clip-path="url(#XMLID_289_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="652.147" y1="560.129" x2="689.354" y2="560.771"/>
-		
-			<line clip-path="url(#XMLID_289_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="652.147" y1="569.111" x2="689.354" y2="569.753"/>
-		
-			<line clip-path="url(#XMLID_289_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="652.147" y1="578.734" x2="689.354" y2="579.376"/>
-		
-			<line clip-path="url(#XMLID_289_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="685.505" y1="565.262" x2="679.731" y2="565.903"/>
-		
-			<line clip-path="url(#XMLID_289_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="685.505" y1="574.244" x2="679.731" y2="574.886"/>
-		
-			<line clip-path="url(#XMLID_289_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="685.505" y1="583.867" x2="679.731" y2="584.509"/>
-		
-			<line clip-path="url(#XMLID_289_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="657.921" y1="565.262" x2="655.996" y2="565.903"/>
-		
-			<line clip-path="url(#XMLID_289_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="657.921" y1="574.244" x2="655.996" y2="574.886"/>
-		
-			<line clip-path="url(#XMLID_289_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="657.921" y1="583.867" x2="655.996" y2="584.509"/>
-		
-			<line clip-path="url(#XMLID_289_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="661.77" y1="565.262" x2="659.845" y2="565.903"/>
-		
-			<line clip-path="url(#XMLID_289_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="661.77" y1="574.244" x2="659.845" y2="574.886"/>
-		
-			<line clip-path="url(#XMLID_289_)" fill="none" stroke="#2F5597" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="661.77" y1="583.867" x2="659.845" y2="584.509"/>
-	</g>
-	<g>
-		<defs>
-			<rect id="XMLID_224_" width="850" height="674"/>
-		</defs>
-		<clipPath id="XMLID_290_">
-			<use xlink:href="#XMLID_224_" />
-		</clipPath>
-		
-			<line clip-path="url(#XMLID_290_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="380" y1="532" x2="380" y2="550"/>
-		
-			<line clip-path="url(#XMLID_290_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="530" y1="532" x2="530" y2="550"/>
-		
-			<line clip-path="url(#XMLID_290_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="671" y1="532" x2="671" y2="550"/>
-	</g>
-	<text transform="matrix(1 0 0 1 348.3999 631.54)" font-family="'IBMPlexSans'" font-size="21">Infrastructure physique</text>
-	<text transform="matrix(1 0 0 1 301.4019 518.5391)" font-family="'IBMPlexSans'" font-size="21">Virtualisation du stockage (facultatif)</text>
-	<text transform="matrix(1 0 0 1 340.252 416.542)" font-family="'IBMPlexSans'" font-size="21">Virtualisation du calcul</text>
-	<text transform="matrix(1 0 0 1 409.4102 97.5518)" font-family="'IBMPlexSans'" font-size="21">Gestion</text>
-	<text transform="matrix(1 0 0 1 344.5571 313.5581)" font-family="'IBMPlexSans'" font-size="21">Virtualisation du réseau</text>
-	<text transform="matrix(1 0 0 1 187 189.3198)" font-family="'IBMPlexSans'" font-size="18">Apps</text>
-	<text transform="matrix(1 0 0 1 250 189.3198)" font-family="'IBMPlexSans'" font-size="18">Apps</text>
-	<text transform="matrix(1 0 0 1 332.0078 189.3198)" font-family="'IBMPlexSans'" font-size="18">Apps</text>
-	<text transform="matrix(1 0 0 1 393.0098 189.3198)" font-family="'IBMPlexSans'" font-size="18">Apps</text>
-	<text transform="matrix(1 0 0 1 476.0078 189.3198)" font-family="'IBMPlexSans'" font-size="18">Apps</text>
-	<text transform="matrix(1 0 0 1 538 189.3198)" font-family="'IBMPlexSans'" font-size="18">Apps</text>
-	<text transform="matrix(1 0 0 1 619 189.3198)" font-family="'IBMPlexSans'" font-size="18">Apps</text>
-	<text transform="matrix(1 0 0 1 680.9922 189.3198)" font-family="'IBMPlexSans'" font-size="18">Apps</text>
-	<g>
-		<defs>
-			<rect id="XMLID_226_" width="850" height="674"/>
-		</defs>
-		<clipPath id="XMLID_291_">
-			<use xlink:href="#XMLID_226_" />
-		</clipPath>
-		
-			<line clip-path="url(#XMLID_291_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="418" y1="113" x2="418" y2="161"/>
-		
-			<line clip-path="url(#XMLID_291_)" fill="none" stroke="#A5A5A5" stroke-width="2" stroke-miterlimit="8" x1="484" y1="113" x2="484" y2="161"/>
 	</g>
 </g>
+<g>
+	<path class="st71" d="M263.1,75.8c0-19.2,15.7-34.8,35.1-34.8c19.4,0,35.1,15.6,35.1,34.8c0,19.2-15.7,34.8-35.1,34.8
+		C278.8,110.7,263.1,95.1,263.1,75.8L263.1,75.8z"/>
+	<g>
+		<path class="st72" d="M288.6,83h-3.9l-1.2-1.2l-0.1-0.1l-0.1-0.1l-0.1,0H283h-2.8l-0.1,0l-0.1,0l-0.1,0.1l-0.1,0.1l-0.1,0.1
+			l-0.1,0.1l0,0.1l0,0.1v7l0,0.1l0,0.2l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0l0.1,0h8.4l0.2,0l0.1,0l0.1-0.1l0.1-0.1l0.1-0.1
+			l0.1-0.1l0.1-0.2l0-0.1v-5.6l0-0.2l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1,0H288.6L288.6,83L288.6,83z M287.9,88.6h-7
+			V83h1.8l1.2,1.2l0.1,0.1l0.1,0.1l0.1,0l0.1,0h3.5V88.6L287.9,88.6L287.9,88.6z"/>
+		<path class="st72" d="M315.3,83h-3.9l-1.2-1.2l-0.1-0.1l-0.1-0.1l-0.1,0h-0.1h-2.8l-0.2,0l-0.1,0l-0.1,0.1l-0.1,0.1l-0.1,0.1
+			l-0.1,0.1l-0.1,0.1l0,0.1v7l0,0.1l0.1,0.2l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0l0.2,0h8.4l0.1,0l0.1,0l0.1-0.1l0.1-0.1l0.1-0.1
+			l0.1-0.1l0-0.2v-0.1v-5.6v-0.2l0-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1,0H315.3L315.3,83L315.3,83z M314.6,88.6h-7V83h1.8
+			l1.2,1.2l0.1,0.1l0.1,0.1l0.1,0l0.1,0h3.5V88.6L314.6,88.6L314.6,88.6z"/>
+		<path class="st72" d="M303.6,87.7h-5.9l-0.5-1l0-0.1l-0.1-0.1l-0.1-0.1l-0.1,0l-0.1-0.1l-0.1,0l-0.1,0h-0.1h-4.2l-0.1,0l-0.1,0
+			l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l0,0.1l0,0.1v8.4l0,0.1l0,0.1l0.1,0.1l0.1,0.1L292,96l0.1,0.1l0.1,0l0.1,0h11.2l0.1,0l0.1,0
+			L304,96l0.1-0.1l0.1-0.1l0.1-0.1l0-0.1l0-0.1v-7l0-0.1l0-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1,0H303.6L303.6,87.7
+			L303.6,87.7z M302.9,94.7h-9.8v-7h3.1l0.5,1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0l0.1,0l0.1,0h5.6V94.7L302.9,94.7
+			L302.9,94.7z"/>
+		<path class="st72" d="M290.3,73.8h7v2.9l-0.2,0l-0.2,0.1l-0.2,0.1l-0.1,0.1l-0.2,0.1l-0.1,0.1l-0.2,0.1l-0.1,0.1l-0.1,0.1
+			l-0.1,0.1l-0.1,0.2l-0.1,0.1l-0.1,0.2l-0.1,0.2l-0.1,0.2l-0.1,0.2h-10.6l-0.1,0l-0.1,0l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l0,0.1
+			l0,0.1v1.4l0,0.2l0,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0l0.1,0l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0-0.1v-0.2
+			v-0.7h9.9l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.1l0.1,0.2l0.1,0.1l0.2,0.1l0.1,0.1l0.2,0.1l0.1,0.1l0.2,0.1
+			l0.2,0.1l0.2,0v3v0.1l0,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0h0.2h0.1l0.1,0l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0-0.1v-0.1v-3
+			l0.2,0l0.2-0.1l0.2-0.1l0.1-0.1l0.2-0.1l0.1-0.1l0.2-0.1l0.1-0.1l0.1-0.2l0.1-0.1l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2l0.1-0.2
+			l0.1-0.2h9.9v0.7v0.2l0,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0l0.1,0l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1
+			l0.1-0.1l0-0.2v-1.4l0-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1,0l-0.1,0h-10.6l-0.1-0.2l-0.1-0.2l-0.1-0.2
+			l-0.1-0.2l-0.1-0.1l-0.1-0.2l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.2-0.1l-0.1-0.1l-0.2-0.1l-0.1-0.1l-0.2-0.1l-0.2-0.1l-0.2,0v-2.9h7.7
+			h0.3l0.3,0l0.3,0l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.3-0.1l0.2-0.1l0.3-0.2l0.2-0.1l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2
+			l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.3l0.2-0.2l0.1-0.3l0.1-0.3l0.1-0.3l0.1-0.3l0.1-0.3l0.1-0.3l0.1-0.3l0-0.3l0-0.3v-0.3
+			v-0.3l0-0.3l0-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.2l-0.1-0.2l-0.1-0.3l-0.2-0.2l-0.2-0.2l-0.2-0.2
+			l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.1l-0.3-0.2l-0.2-0.1l-0.2-0.1l-0.3-0.1l-0.3-0.1l-0.3-0.1
+			l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.3,0l-0.1-0.4l-0.1-0.4l-0.1-0.3l-0.2-0.3l-0.2-0.3l-0.2-0.3l-0.3-0.3l-0.2-0.3l-0.3-0.2l-0.3-0.2
+			l-0.3-0.2l-0.4-0.2l-0.4-0.1l-0.4-0.1l-0.4,0l-0.4,0l-0.2,0l-0.3,0l-0.3-0.4l-0.3-0.4l-0.3-0.4l-0.3-0.3l-0.4-0.3l-0.4-0.3
+			l-0.4-0.3l-0.4-0.2l-0.4-0.2l-0.5-0.2l-0.4-0.2l-0.5-0.1l-0.5-0.1l-0.5-0.1l-0.5-0.1l-0.5,0h-0.3l-0.3,0l-0.3,0.1l-0.3,0l-0.3,0.1
+			l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.2l-0.3,0.2l-0.3,0.2l-0.2,0.2l-0.3,0.2l-0.2,0.2l-0.2,0.2
+			l-0.2,0.2l-0.2,0.2l-0.2,0.3l-0.2,0.2l-0.2,0.3l-0.2,0.3l-0.2,0.3l-0.2,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.3
+			l-0.1,0.3l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.3,0.1l-0.2,0.1l-0.2,0.1l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2
+			l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.1,0.2l-0.1,0.2l-0.1,0.2l-0.1,0.3l-0.1,0.3l-0.1,0.3l-0.1,0.2
+			l-0.1,0.3l-0.1,0.3l0,0.3l-0.1,0.3l0,0.3l0,0.3v0.3v0.4l0,0.4l0.1,0.4l0.1,0.3l0.1,0.3l0.1,0.4l0.1,0.3l0.1,0.3l0.1,0.3l0.2,0.3
+			l0.2,0.3l0.2,0.3l0.2,0.3l0.2,0.3l0.2,0.2l0.2,0.2l0.2,0.2l0.3,0.2l0.2,0.2l0.3,0.2l0.3,0.2l0.3,0.2l0.3,0.1l0.3,0.2l0.3,0.1
+			l0.3,0.1l0.3,0.1l0.3,0.1l0.3,0.1l0.4,0l0.4,0.1H290.3L290.3,73.8L290.3,73.8z M299.4,79.5v0.1l0,0.2l0,0.1l0,0.1l-0.1,0.1
+			l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0l-0.1,0H298h-0.2l-0.1,0l-0.1,0l-0.1-0.1
+			l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1l0-0.1l0-0.1l0-0.2l0-0.1l0-0.1l0-0.1l0-0.1l0-0.1
+			l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1,0l0.1-0.1l0.1,0h0.2h0.1l0.1,0l0.1,0.1l0.1,0l0.1,0.1
+			l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0,0.1l0,0.1l0,0.1V79.5L299.4,79.5L299.4,79.5z M289.1,61.2l0.1-0.1
+			l0.1,0l0.1,0l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0-0.1l0.1-0.3l0.1-0.3l0.1-0.3l0.1-0.3l0.1-0.3l0.1-0.2l0.1-0.2l0.1-0.2l0.2-0.2
+			l0.1-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.2l0.2-0.1l0.3-0.1l0.2-0.1l0.2-0.1l0.3-0.1
+			l0.2-0.1l0.3-0.1l0.3-0.1l0.2-0.1l0.3,0l0.3-0.1l0.3,0h0.3l0.4,0l0.4,0.1l0.4,0.1l0.4,0.1l0.4,0.1l0.4,0.2l0.4,0.2l0.4,0.2
+			l0.3,0.2l0.3,0.3l0.3,0.3l0.3,0.3l0.3,0.3l0.2,0.3l0.3,0.4l0.2,0.4l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0l0.1,0h0.1l0.1,0l0.2,0
+			l0.2-0.1l0.2,0h0.2l0.3,0l0.3,0.1l0.3,0.1l0.3,0.1l0.2,0.1l0.2,0.1l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.2,0.2l0.1,0.2l0.1,0.2
+			l0.1,0.3l0.1,0.3l0,0.3v0.1l0,0.2l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1h0.1h0.3l0.2,0l0.2,0l0.2,0.1l0.3,0.1l0.2,0.1l0.2,0.1
+			l0.2,0.1l0.2,0.1l0.2,0.1l0.2,0.1l0.2,0.1l0.2,0.1l0.2,0.1l0.2,0.2l0.2,0.2l0.1,0.2l0.2,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2
+			l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0.1,0.2l0,0.2l0.1,0.3l0,0.2l0,0.2v0.3v0.2l0,0.2l0,0.3l-0.1,0.2l0,0.2l-0.1,0.2l-0.1,0.2
+			l-0.1,0.2l-0.1,0.2l-0.1,0.2l-0.1,0.2l-0.1,0.2l-0.1,0.2l-0.1,0.2l-0.2,0.2l-0.1,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.2l-0.2,0.1
+			l-0.2,0.1l-0.2,0.1l-0.2,0.1l-0.2,0.1l-0.2,0.1l-0.2,0.1l-0.2,0.1l-0.3,0.1l-0.2,0.1l-0.2,0l-0.2,0h-0.3h-16.2H290l-0.3,0l-0.3,0
+			l-0.3,0l-0.3-0.1l-0.3-0.1l-0.3-0.1l-0.2-0.1l-0.2-0.1l-0.2-0.1l-0.2-0.1l-0.2-0.1l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2l-0.2-0.2
+			l-0.2-0.2l-0.2-0.2l-0.1-0.2l-0.1-0.2l-0.2-0.2l-0.1-0.2l-0.1-0.2l-0.1-0.3l-0.1-0.3l-0.1-0.3l-0.1-0.3l0-0.3l-0.1-0.3l0-0.3v-0.3
+			v-0.2l0-0.3l0-0.2l0.1-0.2l0.1-0.5l0.1-0.5l0.2-0.4l0.2-0.4l0.2-0.4l0.3-0.4l0.3-0.4l0.3-0.3l0.4-0.3l0.4-0.3l0.4-0.2l0.4-0.2
+			l0.2-0.1l0.2-0.1l0.2-0.1L289.1,61.2L289.1,61.2L289.1,61.2z"/>
+	</g>
+</g>
+<g>
+	<path class="st73" d="M83.7,186.4c0-15.7,12.6-28.4,28.2-28.4s28.2,12.7,28.2,28.4c0,15.7-12.6,28.4-28.2,28.4
+		S83.7,202.1,83.7,186.4L83.7,186.4z"/>
+	<g>
+		<g>
+			<defs>
+				<polygon id="SVGID_57_" points="98.4,198.4 125.5,198.6 125.8,171.5 98.7,171.3 98.4,198.4 				"/>
+			</defs>
+			<clipPath id="SVGID_58_">
+				<use xlink:href="#SVGID_57_"  style="overflow:visible;"/>
+			</clipPath>
+			<g class="st74">
+				<defs>
+					<polygon id="SVGID_59_" points="98.4,198.4 125.5,198.6 125.8,171.5 98.7,171.3 98.4,198.4 					"/>
+				</defs>
+				<clipPath id="SVGID_60_">
+					<use xlink:href="#SVGID_59_"  style="overflow:visible;"/>
+				</clipPath>
+				<path class="st75" d="M105.5,172.7l-0.1,5.5l-5.4-0.1l0.1-5.5L105.5,172.7L105.5,172.7L105.5,172.7z M106.9,171.3l-8.2-0.1
+					l-0.1,8.3l8.2,0.1L106.9,171.3L106.9,171.3L106.9,171.3z M114.9,172.8l-0.1,5.5l-5.4-0.1l0.1-5.5L114.9,172.8L114.9,172.8z
+					 M116.3,171.4l-8.2-0.1l-0.1,8.3l8.2,0.1L116.3,171.4L116.3,171.4L116.3,171.4z M124.3,172.9l-0.1,5.5l-5.5-0.1l0.1-5.5
+					L124.3,172.9L124.3,172.9L124.3,172.9z M125.8,171.5l-8.2-0.1l-0.1,8.3l8.2,0.1L125.8,171.5L125.8,171.5L125.8,171.5z
+					 M105.4,182.2l-0.1,5.5l-5.4-0.1l0.1-5.5L105.4,182.2L105.4,182.2L105.4,182.2z M106.8,180.8l-8.2-0.1l-0.1,8.3l8.2,0.1
+					L106.8,180.8L106.8,180.8L106.8,180.8z M114.8,182.3l-0.1,5.5l-5.4-0.1l0.1-5.5L114.8,182.3L114.8,182.3z M116.2,180.9l-8.2-0.1
+					l-0.1,8.3l8.2,0.1L116.2,180.9L116.2,180.9L116.2,180.9z M124.3,182.3l-0.1,5.5l-5.5-0.1l0.1-5.5L124.3,182.3L124.3,182.3
+					L124.3,182.3z M125.7,180.9l-8.2-0.1l-0.1,8.3l8.2,0.1L125.7,180.9L125.7,180.9L125.7,180.9z M105.3,191.6l-0.1,5.5l-5.4-0.1
+					l0.1-5.5L105.3,191.6L105.3,191.6L105.3,191.6z M106.7,190.2l-8.2-0.1l-0.1,8.3l8.2,0.1L106.7,190.2L106.7,190.2L106.7,190.2z
+					 M114.7,191.7l-0.1,5.5l-5.4-0.1l0.1-5.5L114.7,191.7L114.7,191.7z M116.2,190.3l-8.2-0.1l-0.1,8.3l8.2,0.1L116.2,190.3
+					L116.2,190.3L116.2,190.3z M124.2,191.8l-0.1,5.5l-5.5-0.1l0.1-5.5L124.2,191.8L124.2,191.8L124.2,191.8z M125.6,190.4l-8.2-0.1
+					l-0.1,8.3l8.2,0.1L125.6,190.4L125.6,190.4L125.6,190.4z"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<path class="st76" d="M83,298.9c0-16,13-28.9,28.9-28.9s28.9,13,28.9,28.9c0,16-13,28.9-28.9,28.9S83,314.9,83,298.9L83,298.9z"/>
+	<g>
+		<g>
+			<defs>
+				<polygon id="SVGID_61_" points="97.1,314.5 126.8,314.5 126.8,283.4 97.1,283.4 97.1,314.5 				"/>
+			</defs>
+			<clipPath id="SVGID_62_">
+				<use xlink:href="#SVGID_61_"  style="overflow:visible;"/>
+			</clipPath>
+			<g class="st77">
+				<defs>
+					<polygon id="SVGID_63_" points="97.1,314.5 126.8,314.5 126.8,283.4 97.1,283.4 97.1,314.5 					"/>
+				</defs>
+				<clipPath id="SVGID_64_">
+					<use xlink:href="#SVGID_63_"  style="overflow:visible;"/>
+				</clipPath>
+				<path class="st78" d="M123.6,306.7V299h-11.7v-7.9c1.8-0.3,3.2-1.8,3.2-3.8c0-2.2-1.7-3.9-3.9-3.9c-2.2,0-3.9,1.7-3.9,3.9
+					c0,1.9,1.4,3.5,3.2,3.8v7.9h-10.4v7.9c-1.8,0.4-3.2,1.9-3.2,3.8c0,2.2,1.7,3.9,3.9,3.9c2.2,0,3.9-1.7,3.9-3.9
+					c0-1.9-1.4-3.5-3.2-3.8v-6.6h20.7v6.6c-1.8,0.3-3.2,1.9-3.2,3.8c0,2.2,1.7,3.9,3.9,3.9c2.2,0,3.9-1.7,3.9-3.9
+					C126.8,308.7,125.5,307,123.6,306.7L123.6,306.7z M108.7,287.3c0-1.4,1.2-2.6,2.6-2.6c1.4,0,2.6,1.2,2.6,2.6
+					c0,1.4-1.2,2.6-2.6,2.6C109.9,289.9,108.7,288.7,108.7,287.3L108.7,287.3z M103.5,310.6c0,1.4-1.2,2.6-2.6,2.6
+					c-1.4,0-2.6-1.2-2.6-2.6c0-1.4,1.2-2.6,2.6-2.6C102.4,308,103.5,309.2,103.5,310.6L103.5,310.6z M123,313.2
+					c-1.4,0-2.6-1.2-2.6-2.6c0-1.4,1.2-2.6,2.6-2.6c1.4,0,2.6,1.2,2.6,2.6C125.5,312,124.4,313.2,123,313.2L123,313.2z"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<path class="st76" d="M81.3,398.5c0-16.8,13.7-30.4,30.6-30.4s30.6,13.6,30.6,30.4c0,16.8-13.7,30.4-30.6,30.4
+		S81.3,415.3,81.3,398.5L81.3,398.5z"/>
+	<g>
+		<polygon class="st79" points="97.3,412.9 97.3,384.2 97.3,383.9 97.5,383.7 97.7,383.5 98,383.5 125.9,383.5 126.2,383.5 
+			126.4,383.7 126.6,383.9 126.6,384.2 126.6,412.9 126.6,413.3 126.4,413.4 126.2,413.6 125.9,413.6 98,413.6 97.7,413.6 
+			97.5,413.4 97.3,413.3 97.3,412.9 97.3,412.9 		"/>
+		<g>
+			<defs>
+				<polygon id="SVGID_65_" points="96.9,414 127,414 127,383.1 96.9,383.1 96.9,414 				"/>
+			</defs>
+			<clipPath id="SVGID_66_">
+				<use xlink:href="#SVGID_65_"  style="overflow:visible;"/>
+			</clipPath>
+			<line class="st80" x1="97.3" y1="388" x2="126.6" y2="388.4"/>
+			<g class="st81">
+				<defs>
+					<polygon id="SVGID_67_" points="96.9,414 127,414 127,383.1 96.9,383.1 96.9,414 					"/>
+				</defs>
+				<clipPath id="SVGID_68_">
+					<use xlink:href="#SVGID_67_"  style="overflow:visible;"/>
+				</clipPath>
+				<line class="st82" x1="99.3" y1="385.5" x2="100.6" y2="385.9"/>
+				<g class="st83">
+					<defs>
+						<polygon id="SVGID_69_" points="96.9,414 127,414 127,383.1 96.9,383.1 96.9,414 						"/>
+					</defs>
+					<clipPath id="SVGID_70_">
+						<use xlink:href="#SVGID_69_"  style="overflow:visible;"/>
+					</clipPath>
+					<line class="st84" x1="102.2" y1="385.5" x2="103.4" y2="385.9"/>
+					<g class="st85">
+						<defs>
+							<polygon id="SVGID_71_" points="96.9,414 127,414 127,383.1 96.9,383.1 96.9,414 							"/>
+						</defs>
+						<clipPath id="SVGID_72_">
+							<use xlink:href="#SVGID_71_"  style="overflow:visible;"/>
+						</clipPath>
+						<polygon class="st86" points="120.5,398.4 119.2,395.8 117.6,396.3 116.9,395.4 116,394.7 116.5,393.1 113.8,392 113.1,393.5 
+							111.9,393.5 110.8,393.5 110.1,392 107.4,393.1 107.9,394.7 107,395.4 106.3,396.3 104.5,395.8 103.4,398.4 105,399.3 
+							104.8,400.4 105,401.5 103.4,402.4 104.5,405 106.3,404.4 107,405.3 107.9,406 107.4,407.7 110.1,408.7 110.8,407.3 
+							111.9,407.3 113.1,407.3 113.8,408.7 116.5,407.7 116,406 116.9,405.3 117.6,404.4 119.2,405 120.5,402.4 118.9,401.5 
+							119,400.4 118.9,399.3 120.5,398.4 120.5,398.4 						"/>
+						<g class="st87">
+							<defs>
+								<polygon id="SVGID_73_" points="96.9,414 127,414 127,383.1 96.9,383.1 96.9,414 								"/>
+							</defs>
+							<clipPath id="SVGID_74_">
+								<use xlink:href="#SVGID_73_"  style="overflow:visible;"/>
+							</clipPath>
+							<polygon class="st88" points="114.4,400.2 114.4,400.2 114.2,401 113.6,401.9 112.7,402.5 111.8,402.6 110.8,402.5 
+								109.9,401.9 109.3,401 109.1,400.2 109.3,399.3 109.9,398.4 110.8,397.9 111.8,397.7 112.7,397.9 113.6,398.4 114.2,399.3 
+								114.4,400.2 114.4,400.2 							"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<path class="st76" d="M81,501.5c0-17.1,13.9-30.9,30.9-30.9s30.9,13.9,30.9,30.9c0,17.1-13.9,30.9-30.9,30.9S81,518.6,81,501.5
+		L81,501.5z"/>
+	<g>
+		<polygon class="st79" points="126.2,489 126.2,489 126.2,488.5 126,487.9 125.1,487 123.7,486.2 122,485.4 119.9,484.8 
+			117.4,484.3 114.9,483.9 111.9,483.9 109,483.9 106.5,484.3 104,484.8 101.9,485.4 100.2,486.2 98.8,487 97.9,487.9 97.7,488.5 
+			97.7,489 97.7,497.3 97.7,497.8 97.9,498.4 98.8,499.3 100.2,500.1 101.9,501 104,501.6 106.5,502 109,502.5 111.9,502.5 
+			114.9,502.5 117.4,502 119.9,501.6 122,501 123.7,500.1 125.1,499.3 126,498.4 126.2,497.8 126.2,497.3 126.2,489 126.2,489 		"/>
+		<g>
+			<defs>
+				<polygon id="SVGID_75_" points="97.3,519.5 126.6,519.5 126.6,483.5 97.3,483.5 97.3,519.5 				"/>
+			</defs>
+			<clipPath id="SVGID_76_">
+				<use xlink:href="#SVGID_75_"  style="overflow:visible;"/>
+			</clipPath>
+			<polyline class="st89" points="97.7,489 97.7,489 97.7,489.4 97.9,490.1 98.8,490.9 100.2,491.8 101.9,492.6 104,493.3 
+				106.5,493.7 109,494.2 111.9,494.2 114.9,494.2 117.4,493.7 119.9,493.3 122,492.6 123.7,491.8 125.1,490.9 126,490.1 
+				126.2,489.4 126.2,489 			"/>
+			<g class="st90">
+				<defs>
+					<polygon id="SVGID_77_" points="97.3,519.5 126.6,519.5 126.6,483.5 97.3,483.5 97.3,519.5 					"/>
+				</defs>
+				<clipPath id="SVGID_78_">
+					<use xlink:href="#SVGID_77_"  style="overflow:visible;"/>
+				</clipPath>
+				<polyline class="st91" points="97.7,500.9 97.7,505.8 97.7,506.2 97.9,506.8 98.8,507.7 100.2,508.5 101.9,509.3 104,509.9 
+					106.5,510.3 109,510.8 111.9,510.8 114.9,510.8 117.4,510.3 119.9,509.9 122,509.3 123.7,508.5 125.1,507.7 126,506.8 
+					126.2,506.2 126.2,505.8 126.2,500.9 				"/>
+				<g class="st92">
+					<defs>
+						<polygon id="SVGID_79_" points="97.3,519.5 126.6,519.5 126.6,483.5 97.3,483.5 97.3,519.5 						"/>
+					</defs>
+					<clipPath id="SVGID_80_">
+						<use xlink:href="#SVGID_79_"  style="overflow:visible;"/>
+					</clipPath>
+					<polyline class="st93" points="97.7,509.2 97.7,514.1 97.7,514.6 97.9,515.2 98.8,516 100.2,516.9 101.9,517.7 104,518.3 
+						106.5,518.7 109,519.1 111.9,519.1 114.9,519.1 117.4,518.7 119.9,518.3 122,517.7 123.7,516.9 125.1,516 126,515.2 
+						126.2,514.6 126.2,514.1 126.2,509.2 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<path class="st94" d="M82.4,617.1c0-16.4,13.2-29.8,29.5-29.8s29.5,13.3,29.5,29.8s-13.2,29.8-29.5,29.8S82.4,633.6,82.4,617.1
+		L82.4,617.1z"/>
+	<g>
+		<g>
+			<defs>
+				<polygon id="SVGID_81_" points="98.4,630.6 125.4,630.6 125.4,603.6 98.4,603.6 98.4,630.6 				"/>
+			</defs>
+			<clipPath id="SVGID_82_">
+				<use xlink:href="#SVGID_81_"  style="overflow:visible;"/>
+			</clipPath>
+			<g class="st95">
+				<defs>
+					<polygon id="SVGID_83_" points="98.4,630.6 125.4,630.6 125.4,603.6 98.4,603.6 98.4,630.6 					"/>
+				</defs>
+				<clipPath id="SVGID_84_">
+					<use xlink:href="#SVGID_83_"  style="overflow:visible;"/>
+				</clipPath>
+				<path class="st96" d="M114.2,604.8v24.8H99.6v-24.8H114.2L114.2,604.8L114.2,604.8z M115.3,603.6H98.4v27h16.9V603.6
+					L115.3,603.6L115.3,603.6z M124.3,604.8v24.8h-5.6v-24.8H124.3L124.3,604.8L124.3,604.8z M125.5,603.6h-7.9v27h7.9V603.6
+					L125.5,603.6L125.5,603.6z"/>
+				<path class="st97" d="M114.2,604.8v24.8H99.6v-24.8H114.2L114.2,604.8L114.2,604.8z M115.3,603.6H98.4v27h16.9V603.6
+					L115.3,603.6L115.3,603.6z M124.3,604.8v24.8h-5.6v-24.8H124.3L124.3,604.8L124.3,604.8z M125.5,603.6h-7.9v27h7.9V603.6
+					L125.5,603.6L125.5,603.6z"/>
+				<path class="st96" d="M112,608.1v4.5h-10.1v-4.5H112L112,608.1L112,608.1z M113.1,607h-12.4v6.8h12.4V607L113.1,607L113.1,607z
+					 M122.1,607v1.1H121V607H122.1L122.1,607L122.1,607z M123.2,605.9h-3.4v3.4h3.4V605.9L123.2,605.9L123.2,605.9z M122.1,611.5
+					v1.1H121v-1.1H122.1L122.1,611.5L122.1,611.5z M123.2,610.4h-3.4v3.4h3.4V610.4L123.2,610.4L123.2,610.4z M122.1,616v1.1H121
+					V616H122.1L122.1,616L122.1,616z M123.2,614.9h-3.4v3.4h3.4V614.9L123.2,614.9L123.2,614.9z M122.1,620.5v1.1H121v-1.1H122.1
+					L122.1,620.5L122.1,620.5z M123.2,619.4h-3.4v3.4h3.4V619.4L123.2,619.4L123.2,619.4z M122.1,625v1.1H121V625H122.1L122.1,625
+					L122.1,625z M123.2,623.9h-3.4v3.4h3.4V623.9L123.2,623.9L123.2,623.9z"/>
+				<path class="st97" d="M112,608.1v4.5h-10.1v-4.5H112L112,608.1L112,608.1z M113.1,607h-12.4v6.8h12.4V607L113.1,607L113.1,607z
+					 M122.1,607v1.1H121V607H122.1L122.1,607L122.1,607z M123.2,605.9h-3.4v3.4h3.4V605.9L123.2,605.9L123.2,605.9z M122.1,611.5
+					v1.1H121v-1.1H122.1L122.1,611.5L122.1,611.5z M123.2,610.4h-3.4v3.4h3.4V610.4L123.2,610.4L123.2,610.4z M122.1,616v1.1H121
+					V616H122.1L122.1,616L122.1,616z M123.2,614.9h-3.4v3.4h3.4V614.9L123.2,614.9L123.2,614.9z M122.1,620.5v1.1H121v-1.1H122.1
+					L122.1,620.5L122.1,620.5z M123.2,619.4h-3.4v3.4h3.4V619.4L123.2,619.4L123.2,619.4z M122.1,625v1.1H121V625H122.1L122.1,625
+					L122.1,625z M123.2,623.9h-3.4v3.4h3.4V623.9L123.2,623.9L123.2,623.9z"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<polyline class="st98" points="376,113 376,137.5 239,137.5 239,162 	"/>
+</g>
+<g>
+	<polyline class="st98" points="524,113 524,137.5 671,137.5 671,162 	"/>
+</g>
+<g>
+	<line class="st99" x1="238.5" y1="207" x2="238.5" y2="260"/>
+</g>
+<g>
+	<line class="st99" x1="380" y1="207" x2="380" y2="260"/>
+</g>
+<g>
+	<line class="st99" x1="530" y1="207" x2="530" y2="260"/>
+</g>
+<g>
+	<line class="st99" x1="671" y1="207" x2="671" y2="260"/>
+</g>
+<g>
+	<line class="st99" x1="239" y1="328" x2="239" y2="366"/>
+</g>
+<g>
+	<line class="st99" x1="380" y1="328" x2="380" y2="366"/>
+</g>
+<g>
+	<line class="st99" x1="530" y1="329" x2="530" y2="366"/>
+</g>
+<g>
+	<line class="st99" x1="671" y1="328" x2="671" y2="366"/>
+</g>
+<g>
+	<line class="st99" x1="239" y1="430" x2="239" y2="467"/>
+</g>
+<g>
+	<line class="st99" x1="380" y1="430" x2="380" y2="466"/>
+</g>
+<g>
+	<line class="st99" x1="530" y1="430" x2="530" y2="465"/>
+</g>
+<g>
+	<line class="st99" x1="671" y1="430" x2="671" y2="466"/>
+</g>
+<g>
+	<line class="st99" x1="239" y1="532" x2="239" y2="550"/>
+</g>
+<g>
+	<polygon class="st100" points="399.3,588.4 366.1,588.4 365.4,588.1 364.6,587.9 364.3,587.3 364.1,586.6 364.1,558.9 364.3,558.1 
+		364.8,557.6 372.5,551.6 372.9,551.4 373.7,551.1 391.8,551.1 392.5,551.4 393,551.6 400.6,557.6 401.1,558.1 401.4,558.9 
+		401.4,586.6 401.1,587.3 400.8,587.9 400.1,588.1 399.3,588.4 399.3,588.4 	"/>
+	<g>
+		<defs>
+			<polygon id="SVGID_85_" points="363.5,589 402,589 402,550.5 363.5,550.5 363.5,589 			"/>
+		</defs>
+		<clipPath id="SVGID_86_">
+			<use xlink:href="#SVGID_85_"  style="overflow:visible;"/>
+		</clipPath>
+		<line class="st101" x1="364.1" y1="560.1" x2="401.4" y2="560.8"/>
+		<g class="st102">
+			<defs>
+				<polygon id="SVGID_87_" points="363.5,589 402,589 402,550.5 363.5,550.5 363.5,589 				"/>
+			</defs>
+			<clipPath id="SVGID_88_">
+				<use xlink:href="#SVGID_87_"  style="overflow:visible;"/>
+			</clipPath>
+			<line class="st103" x1="364.1" y1="569.1" x2="401.4" y2="569.8"/>
+			<g class="st104">
+				<defs>
+					<polygon id="SVGID_89_" points="363.5,589 402,589 402,550.5 363.5,550.5 363.5,589 					"/>
+				</defs>
+				<clipPath id="SVGID_90_">
+					<use xlink:href="#SVGID_89_"  style="overflow:visible;"/>
+				</clipPath>
+				<line class="st105" x1="364.1" y1="578.7" x2="401.4" y2="579.4"/>
+				<g class="st106">
+					<defs>
+						<polygon id="SVGID_91_" points="363.5,589 402,589 402,550.5 363.5,550.5 363.5,589 						"/>
+					</defs>
+					<clipPath id="SVGID_92_">
+						<use xlink:href="#SVGID_91_"  style="overflow:visible;"/>
+					</clipPath>
+					<line class="st107" x1="397.5" y1="565.3" x2="391.7" y2="565.9"/>
+					<g class="st108">
+						<defs>
+							<polygon id="SVGID_93_" points="363.5,589 402,589 402,550.5 363.5,550.5 363.5,589 							"/>
+						</defs>
+						<clipPath id="SVGID_94_">
+							<use xlink:href="#SVGID_93_"  style="overflow:visible;"/>
+						</clipPath>
+						<line class="st109" x1="397.5" y1="574.2" x2="391.7" y2="574.9"/>
+						<g class="st110">
+							<defs>
+								<polygon id="SVGID_95_" points="363.5,589 402,589 402,550.5 363.5,550.5 363.5,589 								"/>
+							</defs>
+							<clipPath id="SVGID_96_">
+								<use xlink:href="#SVGID_95_"  style="overflow:visible;"/>
+							</clipPath>
+							<line class="st111" x1="397.5" y1="583.9" x2="391.7" y2="584.5"/>
+							<g class="st112">
+								<defs>
+									<polygon id="SVGID_97_" points="363.5,589 402,589 402,550.5 363.5,550.5 363.5,589 									"/>
+								</defs>
+								<clipPath id="SVGID_98_">
+									<use xlink:href="#SVGID_97_"  style="overflow:visible;"/>
+								</clipPath>
+								<line class="st113" x1="369.9" y1="565.3" x2="368" y2="565.9"/>
+								<g class="st114">
+									<defs>
+										<polygon id="SVGID_99_" points="363.5,589 402,589 402,550.5 363.5,550.5 363.5,589 										"/>
+									</defs>
+									<clipPath id="SVGID_100_">
+										<use xlink:href="#SVGID_99_"  style="overflow:visible;"/>
+									</clipPath>
+									<line class="st115" x1="369.9" y1="574.2" x2="368" y2="574.9"/>
+									<g class="st116">
+										<defs>
+											<polygon id="SVGID_101_" points="363.5,589 402,589 402,550.5 363.5,550.5 363.5,589 											"/>
+										</defs>
+										<clipPath id="SVGID_102_">
+											<use xlink:href="#SVGID_101_"  style="overflow:visible;"/>
+										</clipPath>
+										<line class="st117" x1="369.9" y1="583.9" x2="368" y2="584.5"/>
+										<g class="st118">
+											<defs>
+												<polygon id="SVGID_103_" points="363.5,589 402,589 402,550.5 363.5,550.5 363.5,589 												"/>
+											</defs>
+											<clipPath id="SVGID_104_">
+												<use xlink:href="#SVGID_103_"  style="overflow:visible;"/>
+											</clipPath>
+											<line class="st119" x1="373.8" y1="565.3" x2="371.8" y2="565.9"/>
+											<g class="st120">
+												<defs>
+													<polygon id="SVGID_105_" points="363.5,589 402,589 402,550.5 363.5,550.5 363.5,589 													"/>
+												</defs>
+												<clipPath id="SVGID_106_">
+													<use xlink:href="#SVGID_105_"  style="overflow:visible;"/>
+												</clipPath>
+												<line class="st121" x1="373.8" y1="574.2" x2="371.8" y2="574.9"/>
+												<g class="st122">
+													<defs>
+														<polygon id="SVGID_107_" points="363.5,589 402,589 402,550.5 363.5,550.5 363.5,589 														"/>
+													</defs>
+													<clipPath id="SVGID_108_">
+														<use xlink:href="#SVGID_107_"  style="overflow:visible;"/>
+													</clipPath>
+													<line class="st123" x1="373.8" y1="583.9" x2="371.8" y2="584.5"/>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<polygon class="st100" points="546.3,588.4 513.1,588.4 512.4,588.1 511.6,587.9 511.3,587.3 511.1,586.6 511.1,558.9 511.3,558.1 
+		511.8,557.6 519.5,551.6 519.9,551.4 520.7,551.1 538.8,551.1 539.5,551.4 540,551.6 547.6,557.6 548.1,558.1 548.4,558.9 
+		548.4,586.6 548.1,587.3 547.8,587.9 547.1,588.1 546.3,588.4 546.3,588.4 	"/>
+	<g>
+		<defs>
+			<polygon id="SVGID_109_" points="510.5,589 549,589 549,550.5 510.5,550.5 510.5,589 			"/>
+		</defs>
+		<clipPath id="SVGID_110_">
+			<use xlink:href="#SVGID_109_"  style="overflow:visible;"/>
+		</clipPath>
+		<line class="st124" x1="511.1" y1="560.1" x2="548.4" y2="560.8"/>
+		<g class="st125">
+			<defs>
+				<polygon id="SVGID_111_" points="510.5,589 549,589 549,550.5 510.5,550.5 510.5,589 				"/>
+			</defs>
+			<clipPath id="SVGID_112_">
+				<use xlink:href="#SVGID_111_"  style="overflow:visible;"/>
+			</clipPath>
+			<line class="st126" x1="511.1" y1="569.1" x2="548.4" y2="569.8"/>
+			<g class="st127">
+				<defs>
+					<polygon id="SVGID_113_" points="510.5,589 549,589 549,550.5 510.5,550.5 510.5,589 					"/>
+				</defs>
+				<clipPath id="SVGID_114_">
+					<use xlink:href="#SVGID_113_"  style="overflow:visible;"/>
+				</clipPath>
+				<line class="st128" x1="511.1" y1="578.7" x2="548.4" y2="579.4"/>
+				<g class="st129">
+					<defs>
+						<polygon id="SVGID_115_" points="510.5,589 549,589 549,550.5 510.5,550.5 510.5,589 						"/>
+					</defs>
+					<clipPath id="SVGID_116_">
+						<use xlink:href="#SVGID_115_"  style="overflow:visible;"/>
+					</clipPath>
+					<line class="st130" x1="544.5" y1="565.3" x2="538.7" y2="565.9"/>
+					<g class="st131">
+						<defs>
+							<polygon id="SVGID_117_" points="510.5,589 549,589 549,550.5 510.5,550.5 510.5,589 							"/>
+						</defs>
+						<clipPath id="SVGID_118_">
+							<use xlink:href="#SVGID_117_"  style="overflow:visible;"/>
+						</clipPath>
+						<line class="st132" x1="544.5" y1="574.2" x2="538.7" y2="574.9"/>
+						<g class="st133">
+							<defs>
+								<polygon id="SVGID_119_" points="510.5,589 549,589 549,550.5 510.5,550.5 510.5,589 								"/>
+							</defs>
+							<clipPath id="SVGID_120_">
+								<use xlink:href="#SVGID_119_"  style="overflow:visible;"/>
+							</clipPath>
+							<line class="st134" x1="544.5" y1="583.9" x2="538.7" y2="584.5"/>
+							<g class="st135">
+								<defs>
+									<polygon id="SVGID_121_" points="510.5,589 549,589 549,550.5 510.5,550.5 510.5,589 									"/>
+								</defs>
+								<clipPath id="SVGID_122_">
+									<use xlink:href="#SVGID_121_"  style="overflow:visible;"/>
+								</clipPath>
+								<line class="st136" x1="516.9" y1="565.3" x2="515" y2="565.9"/>
+								<g class="st137">
+									<defs>
+										<polygon id="SVGID_123_" points="510.5,589 549,589 549,550.5 510.5,550.5 510.5,589 										"/>
+									</defs>
+									<clipPath id="SVGID_124_">
+										<use xlink:href="#SVGID_123_"  style="overflow:visible;"/>
+									</clipPath>
+									<line class="st138" x1="516.9" y1="574.2" x2="515" y2="574.9"/>
+									<g class="st139">
+										<defs>
+											<polygon id="SVGID_125_" points="510.5,589 549,589 549,550.5 510.5,550.5 510.5,589 											"/>
+										</defs>
+										<clipPath id="SVGID_126_">
+											<use xlink:href="#SVGID_125_"  style="overflow:visible;"/>
+										</clipPath>
+										<line class="st140" x1="516.9" y1="583.9" x2="515" y2="584.5"/>
+										<g class="st141">
+											<defs>
+												<polygon id="SVGID_127_" points="510.5,589 549,589 549,550.5 510.5,550.5 510.5,589 												"/>
+											</defs>
+											<clipPath id="SVGID_128_">
+												<use xlink:href="#SVGID_127_"  style="overflow:visible;"/>
+											</clipPath>
+											<line class="st142" x1="520.8" y1="565.3" x2="518.8" y2="565.9"/>
+											<g class="st143">
+												<defs>
+													<polygon id="SVGID_129_" points="510.5,589 549,589 549,550.5 510.5,550.5 510.5,589 													"/>
+												</defs>
+												<clipPath id="SVGID_130_">
+													<use xlink:href="#SVGID_129_"  style="overflow:visible;"/>
+												</clipPath>
+												<line class="st144" x1="520.8" y1="574.2" x2="518.8" y2="574.9"/>
+												<g class="st145">
+													<defs>
+														<polygon id="SVGID_131_" points="510.5,589 549,589 549,550.5 510.5,550.5 510.5,589 														"/>
+													</defs>
+													<clipPath id="SVGID_132_">
+														<use xlink:href="#SVGID_131_"  style="overflow:visible;"/>
+													</clipPath>
+													<line class="st146" x1="520.8" y1="583.9" x2="518.8" y2="584.5"/>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<polygon class="st100" points="687.3,588.4 654.1,588.4 653.4,588.1 652.6,587.9 652.3,587.3 652.1,586.6 652.1,558.9 652.3,558.1 
+		652.8,557.6 660.5,551.6 660.9,551.4 661.7,551.1 679.8,551.1 680.5,551.4 681,551.6 688.6,557.6 689.1,558.1 689.4,558.9 
+		689.4,586.6 689.1,587.3 688.8,587.9 688.1,588.1 687.3,588.4 687.3,588.4 	"/>
+	<g>
+		<defs>
+			<polygon id="SVGID_133_" points="651.5,589 690,589 690,550.5 651.5,550.5 651.5,589 			"/>
+		</defs>
+		<clipPath id="SVGID_134_">
+			<use xlink:href="#SVGID_133_"  style="overflow:visible;"/>
+		</clipPath>
+		<line class="st147" x1="652.1" y1="560.1" x2="689.4" y2="560.8"/>
+		<g class="st148">
+			<defs>
+				<polygon id="SVGID_135_" points="651.5,589 690,589 690,550.5 651.5,550.5 651.5,589 				"/>
+			</defs>
+			<clipPath id="SVGID_136_">
+				<use xlink:href="#SVGID_135_"  style="overflow:visible;"/>
+			</clipPath>
+			<line class="st149" x1="652.1" y1="569.1" x2="689.4" y2="569.8"/>
+			<g class="st150">
+				<defs>
+					<polygon id="SVGID_137_" points="651.5,589 690,589 690,550.5 651.5,550.5 651.5,589 					"/>
+				</defs>
+				<clipPath id="SVGID_138_">
+					<use xlink:href="#SVGID_137_"  style="overflow:visible;"/>
+				</clipPath>
+				<line class="st151" x1="652.1" y1="578.7" x2="689.4" y2="579.4"/>
+				<g class="st152">
+					<defs>
+						<polygon id="SVGID_139_" points="651.5,589 690,589 690,550.5 651.5,550.5 651.5,589 						"/>
+					</defs>
+					<clipPath id="SVGID_140_">
+						<use xlink:href="#SVGID_139_"  style="overflow:visible;"/>
+					</clipPath>
+					<line class="st153" x1="685.5" y1="565.3" x2="679.7" y2="565.9"/>
+					<g class="st154">
+						<defs>
+							<polygon id="SVGID_141_" points="651.5,589 690,589 690,550.5 651.5,550.5 651.5,589 							"/>
+						</defs>
+						<clipPath id="SVGID_142_">
+							<use xlink:href="#SVGID_141_"  style="overflow:visible;"/>
+						</clipPath>
+						<line class="st155" x1="685.5" y1="574.2" x2="679.7" y2="574.9"/>
+						<g class="st156">
+							<defs>
+								<polygon id="SVGID_143_" points="651.5,589 690,589 690,550.5 651.5,550.5 651.5,589 								"/>
+							</defs>
+							<clipPath id="SVGID_144_">
+								<use xlink:href="#SVGID_143_"  style="overflow:visible;"/>
+							</clipPath>
+							<line class="st157" x1="685.5" y1="583.9" x2="679.7" y2="584.5"/>
+							<g class="st158">
+								<defs>
+									<polygon id="SVGID_145_" points="651.5,589 690,589 690,550.5 651.5,550.5 651.5,589 									"/>
+								</defs>
+								<clipPath id="SVGID_146_">
+									<use xlink:href="#SVGID_145_"  style="overflow:visible;"/>
+								</clipPath>
+								<line class="st159" x1="657.9" y1="565.3" x2="656" y2="565.9"/>
+								<g class="st160">
+									<defs>
+										<polygon id="SVGID_147_" points="651.5,589 690,589 690,550.5 651.5,550.5 651.5,589 										"/>
+									</defs>
+									<clipPath id="SVGID_148_">
+										<use xlink:href="#SVGID_147_"  style="overflow:visible;"/>
+									</clipPath>
+									<line class="st161" x1="657.9" y1="574.2" x2="656" y2="574.9"/>
+									<g class="st162">
+										<defs>
+											<polygon id="SVGID_149_" points="651.5,589 690,589 690,550.5 651.5,550.5 651.5,589 											"/>
+										</defs>
+										<clipPath id="SVGID_150_">
+											<use xlink:href="#SVGID_149_"  style="overflow:visible;"/>
+										</clipPath>
+										<line class="st163" x1="657.9" y1="583.9" x2="656" y2="584.5"/>
+										<g class="st164">
+											<defs>
+												<polygon id="SVGID_151_" points="651.5,589 690,589 690,550.5 651.5,550.5 651.5,589 												"/>
+											</defs>
+											<clipPath id="SVGID_152_">
+												<use xlink:href="#SVGID_151_"  style="overflow:visible;"/>
+											</clipPath>
+											<line class="st165" x1="661.8" y1="565.3" x2="659.8" y2="565.9"/>
+											<g class="st166">
+												<defs>
+													<polygon id="SVGID_153_" points="651.5,589 690,589 690,550.5 651.5,550.5 651.5,589 													"/>
+												</defs>
+												<clipPath id="SVGID_154_">
+													<use xlink:href="#SVGID_153_"  style="overflow:visible;"/>
+												</clipPath>
+												<line class="st167" x1="661.8" y1="574.2" x2="659.8" y2="574.9"/>
+												<g class="st168">
+													<defs>
+														<polygon id="SVGID_155_" points="651.5,589 690,589 690,550.5 651.5,550.5 651.5,589 														"/>
+													</defs>
+													<clipPath id="SVGID_156_">
+														<use xlink:href="#SVGID_155_"  style="overflow:visible;"/>
+													</clipPath>
+													<line class="st169" x1="661.8" y1="583.9" x2="659.8" y2="584.5"/>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<line class="st99" x1="380" y1="532" x2="380" y2="550"/>
+</g>
+<g>
+	<line class="st99" x1="530" y1="532" x2="530" y2="550"/>
+</g>
+<g>
+	<line class="st99" x1="671" y1="532" x2="671" y2="550"/>
+</g>
+<rect x="348.4" y="616" class="st170" width="225" height="28"/>
+<text transform="matrix(1 0 0 1 348.4 631.54)" class="st171 st172">Infrastructure physique</text>
+<rect x="301.4" y="503" class="st170" width="382.6" height="28"/>
+<text transform="matrix(1 0 0 1 301.4 518.54)" class="st171 st172">Virtualisation du stockage (facultatif)</text>
+<rect x="340.3" y="401" class="st170" width="282.8" height="28"/>
+<text transform="matrix(1 0 0 1 340.25 416.54)" class="st171 st172">Virtualisation du calcul</text>
+<rect x="412.4" y="82" class="st170" width="133" height="28"/>
+<text transform="matrix(1 0 0 1 412.4 97.54)" class="st171 st172">Gestion</text>
+<rect x="344.5" y="298" class="st170" width="313.5" height="28"/>
+<text transform="matrix(1 0 0 1 344.55 313.54)" class="st171 st172">Virtualisation de réseau</text>
+<rect x="183" y="174" class="st170" width="52" height="26"/>
+<text transform="matrix(1 0 0 1 183 183.6201)"><tspan x="0" y="0" class="st171 st173">Applica</tspan><tspan x="43.7" y="0" class="st171 st173">-</tspan><tspan x="0" y="12" class="st171 st173">tions</tspan></text>
+<rect x="245" y="174" class="st170" width="52" height="26"/>
+<text transform="matrix(1 0 0 1 245 183.6201)"><tspan x="0" y="0" class="st171 st173">Applica</tspan><tspan x="43.7" y="0" class="st171 st173">-</tspan><tspan x="0" y="12" class="st171 st173">tions</tspan></text>
+<rect x="332" y="176" class="st170" width="52" height="26"/>
+<rect x="393" y="176" class="st170" width="52" height="26"/>
+<rect x="476" y="176" class="st170" width="52" height="26"/>
+<rect x="538" y="176" class="st170" width="52" height="26"/>
+<rect x="619" y="176" class="st170" width="52" height="26"/>
+<rect x="681" y="176" class="st170" width="52" height="26"/>
+<g>
+	<line class="st99" x1="418" y1="113" x2="418" y2="161"/>
+</g>
+<g>
+	<line class="st99" x1="484" y1="113" x2="484" y2="161"/>
+</g>
+<rect x="327" y="174" class="st170" width="52" height="26"/>
+<text transform="matrix(1 0 0 1 327 183.6201)"><tspan x="0" y="0" class="st171 st173">Applica</tspan><tspan x="43.7" y="0" class="st171 st173">-</tspan><tspan x="0" y="12" class="st171 st173">tions</tspan></text>
+<rect x="389" y="174" class="st170" width="52" height="26"/>
+<text transform="matrix(1 0 0 1 389 183.6201)"><tspan x="0" y="0" class="st171 st173">Applica</tspan><tspan x="43.7" y="0" class="st171 st173">-</tspan><tspan x="0" y="12" class="st171 st173">tions</tspan></text>
+<rect x="472" y="174" class="st170" width="52" height="26"/>
+<text transform="matrix(1 0 0 1 472 183.6201)"><tspan x="0" y="0" class="st171 st173">Applica</tspan><tspan x="43.7" y="0" class="st171 st173">-</tspan><tspan x="0" y="12" class="st171 st173">tions</tspan></text>
+<rect x="533" y="174" class="st170" width="52" height="26"/>
+<text transform="matrix(1 0 0 1 533 183.6201)"><tspan x="0" y="0" class="st171 st173">Applica</tspan><tspan x="43.7" y="0" class="st171 st173">-</tspan><tspan x="0" y="12" class="st171 st173">tions</tspan></text>
+<rect x="615" y="174" class="st170" width="52" height="26"/>
+<text transform="matrix(1 0 0 1 615 183.6201)"><tspan x="0" y="0" class="st171 st173">Applica</tspan><tspan x="43.7" y="0" class="st171 st173">-</tspan><tspan x="0" y="12" class="st171 st173">tions</tspan></text>
+<rect x="678" y="174" class="st170" width="52" height="26"/>
+<text transform="matrix(1 0 0 1 678 183.6201)"><tspan x="0" y="0" class="st171 st173">Applica</tspan><tspan x="43.7" y="0" class="st171 st173">-</tspan><tspan x="0" y="12" class="st171 st173">tions</tspan></text>
 </svg>
