@@ -4,35 +4,35 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-06"
+lastupdated: "2018-11-15"
 
 ---
 
 # Design Detalhado
 
 ## Componentes de serviços comuns
-Os serviços comuns fornecem os serviços usados por outros serviços na plataforma de gerenciamento de nuvem. Isso inclui serviços de identidade e acesso, serviços de nomes de domínio, serviços do NTP.
+Os serviços comuns fornecem os serviços que são usados por outros serviços na plataforma de gerenciamento de nuvem. Os serviços comuns incluem serviços de identidade e acesso, serviços de nome de domínio e serviços NTP.
 
-Figura 1. Serviços Comuns do ICP
+Figura 1. Serviços comuns do {{site.data.keyword.cloud_notm}} Private (ICP)
 
 ![ICP Common Services](vcsicp-icp-commonservices.svg)
 
 ### Serviços de identidade e de acesso
-Como parte da automação do VCS, um Microsoft Active Directory (AD) é empregado para gerenciamento de identidade. Uma única instância de servidor virtual (VSI) do AD é implementada. O vCenter é configurado para utilizar a autenticação do MS AD e o ICP pode ser configurado também para a Autenticação LDAP.
+Como parte da automação do VMware vCenter Server on {{site.data.keyword.cloud}}, um Microsoft Active Directory (AD) é empregado para Gerenciamento de Identidade. Uma única instância de servidor virtual (VSI) do AD é implementada. O vCenter está configurado para usar a autenticação do AD e é possível configurar o ICP para Autenticação LDAP.
 
-###	Serviços de nome de domínio
-A implementação do VCS utiliza os VSIs do Microsoft Active Directory (AD) implementados como servidores DNS para a instância. Todos os componentes implementados (hosts vCenter, PSC, NSX, ESXi) são configurados para apontar para o MS AD como o seu DNS padrão.
+###	Domain Name Services
+A implementação do vCenter Server usa as VSIs do AD implementadas como servidores DNS para a instância. Todos os componentes implementados, como vCenter, PSC, NSX e hosts ESXi, são configurados para apontar para AD como seu DNS padrão.
 
 ###	Serviços NTP
-A implementação do VCS utiliza os servidores NTP da infraestrutura do {{site.data.keyword.cloud}}. Todos os componentes implementados serão configurados para utilizar esses servidores NTP. Ter todos os componentes dentro do design que utilizam os mesmos servidores NTP é crítico para que os certificados e a autenticação do MS AD funcionem corretamente
+A implementação do vCenter Server usa os servidores NTP de infraestrutura do {{site.data.keyword.cloud_notm}}. Todos os componentes implementados são configurados para usar esses servidores NTP. Ter todos os componentes dentro do design que usa os mesmos servidores NTP é crítico para que os certificados e a autenticação do AD funcionem corretamente.
 
 ## Rede
 
 ### Rede NSX-V
 
-O NSX-V é projetado para que uma única plataforma do gerenciador do NSX-V esteja vinculada a uma única instância do vCenter Server. Ele fornece serviços de rede para aplicativos em execução dentro de um ambiente do vSphere.
+O NSX-V foi projetado para que uma única plataforma do gerenciador NSX-V esteja ligada a uma única instância do vCenter Server. Ele fornece serviços de rede para aplicativos que são executados dentro de um ambiente do vSphere.
 
-Utilizando a rede NSX-V incluída na implementação do VCS, é possível implementar o ICP em uma rede de sobreposição VXLAN.
+Usando a rede NSX-V incluída na implementação do VCS, nós podemos implementar o ICP em uma rede de sobreposição VXLAN.
 
 O ICP é implementado com a pilha de rede Calico padrão para Kubernetes, que fornece isolamento de rede dentro de seu cluster.
 
@@ -44,7 +44,7 @@ Para obter mais informações, consulte o [Guia de rede do vCenter Server](../vc
 
 ### Rede NSX-T
 
-O NSX-T é projetado para que uma única plataforma de rede que possa se conectar a qualquer tipo de aplicativo, seja baseado em máquina virtual ou em contêiner, esteja em execução dentro ou fora de um ambiente do vSphere.
+O NSX-T foi projetado para que uma única plataforma de rede possa se conectar a qualquer tipo de aplicativo, seja baseado em máquina virtual ou em contêiner, em execução dentro ou fora de um ambiente do vSphere.
 
 O ICP fornece uma opção para substituir a rede Calico por uma instância do NSX-T, fornecendo um único local para gerenciar a rede e a segurança.
 
@@ -54,4 +54,4 @@ Figura 3. ICP com rede NSX-T
 
 ### Links relacionados
 
-* [Visão geral do VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)

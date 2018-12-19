@@ -10,18 +10,18 @@ lastupdated: "2018-11-06"
 
 # Componentes da solução
 
-## Componentes do VCS
+## Componentes do VMware vCenter Server on IBM Cloud
 
-Figura 1. Diagrama do ambiente VCS
-![Diagrama do ambiente VCS](vcsicp-vcsenv.svg)
+Figura 1. Diagrama do ambiente do vCenter Server
+![Ambiente do VCS](vcsicp-vcsenv.svg)
 
 ### Platform Service Controller
 
-A implementação do VCS usa um único controlador de serviços de plataforma externa instalado em uma sub-rede móvel na VLAN privada associada a máquinas virtuais de gerenciamento. Seu gateway padrão é configurado para o backend customer router (BCR).
+A implementação do vCenter Server usa um único controlador de serviços de plataforma externa instalado em uma sub-rede móvel na VLAN privada associada a máquinas virtuais (VMs) de gerenciamento. Seu gateway padrão é configurado para o backend customer router (BCR).
 
 ### vCenter Server
 
-Como o controlador de serviços de plataforma, o vCenter Server é implementado como um dispositivo. Além disso, o vCenter Server é instalado em uma sub-rede móvel na VLAN privada associada a máquinas virtuais de gerenciamento. Seu gateway padrão é configurado para o endereço IP designado no BCR para essa sub-rede específica.
+Como o controlador de serviços de plataforma, o vCenter Server é implementado como um dispositivo. Além disso, o vCenter Server é instalado em uma sub-rede móvel na VLAN privada associada a VMs de gerenciamento. Seu gateway padrão é configurado para o endereço IP designado no BCR para essa sub-rede específica.
 
 ### Gerenciador NSX
 
@@ -33,7 +33,7 @@ A automação do {{site.data.keyword.cloud}} implementa três Controladores NSX 
 
 ### NSX Edge / DLR
 
-Os pares do NSX Edge Services Gateway (ESG) são implementados. Em todos os casos, um par de gateway é usado para o tráfego de saída dos componentes de automação que residem na rede privada. Para o vCenter Server e o ICP, um segundo gateway, conhecido como a borda gerenciada por icp, é implementado e configurado com um uplink para a rede pública e uma interface que é designada à rede privada. Qualquer componente NSX necessário, como o Distributed Logical Router (DLR), os comutadores lógicos e os firewalls, pode ser configurado pelo administrador. O [Guia de rede do vCenter Server](../vcsnsxt/vcsnsxt-intro.html) fornece mais detalhes sobre o design da rede.
+Os pares do NSX Edge Services Gateway (ESG) são implementados. Em todos os casos, um par de gateway é usado para o tráfego de saída dos componentes de automação que residem na rede privada. Para o vCenter Server e o {{site.data.keyword.cloud_notm}} Private (ICP), um segundo gateway, que é conhecido como a borda gerenciada pelo icp, é implementado e configurado com um uplink para a rede pública e uma interface que é designada à rede privada. Qualquer componente NSX necessário, como o Distributed Logical Router (DLR), os comutadores lógicos e os firewalls, pode ser configurado pelo administrador. O [Guia de rede do vCenter Server](../vcsnsxt/vcsnsxt-intro.html) fornece mais detalhes sobre o design da rede.
 
 A tabela a seguir resume as especificações do ICP ESG/DLR.
 
@@ -54,10 +54,10 @@ Tamanho de borda	Compacto | Número de vCPUs 1
 Memória	| Disco de 512 MB	| 1000 GB no armazenamento de dados local
 
 ## Componentes do ICP
-O {{site.data.keyword.cloud_notm}} Private é uma plataforma de aplicativo para desenvolvimento e gerenciamento de aplicativos locais e conteinerizados. É um ambiente integrado para gerenciar contêineres, que inclui o orquestrador de contêiner Kubernetes, um repositório de imagem privada, um console de gerenciamento e estruturas de monitoramento.
+O ICP é uma plataforma de aplicativo para desenvolvimento e gerenciamento de aplicativos conteinerizados no local. É um ambiente integrado para gerenciar contêineres, que inclui o orquestrador de contêiner Kubernetes, um repositório de imagem privada, um console de gerenciamento e estruturas de monitoramento.
 
-Figura 2. Implementação do ICP virtual com VCS
-![Implementação do ICP virtual com VCS](vcsicp-virtual-icp-deployment-vcs.svg)
+Figura 2. Implementação do ICP virtual com o vCenter Server
+![Implementação do ICP virtual com o VCS](vcsicp-virtual-icp-deployment-vcs.svg)
 
 ###	Nó de Inicialização
 
@@ -65,7 +65,7 @@ Um nó de inicialização ou de autoinicialização (opcional) é usado para exe
 
 ### Nó Principal
 
-Um nó principal fornece serviços de gerenciamento e controla os nós do trabalhador em um cluster. Nós principais hospedam processos que são responsáveis pela alocação de recurso, manutenção de estado, planejamento e monitoramento. Como um ambiente de alta disponibilidade (HA) contém múltiplos nós principais, se o nó principal inicial falhar, a lógica de failover promoverá automaticamente um nó diferente para a função principal. Os hosts que podem agir como o principal são chamados de candidatos principais.
+Um nó principal fornece serviços de gerenciamento e controla os nós do trabalhador em um cluster. Nós principais hospedam processos que são responsáveis pela alocação de recurso, manutenção de estado, planejamento e monitoramento. Como um ambiente de alta disponibilidade (HA) tem mais de um nó principal, se o nó principal líder falhar, a lógica de failover promoverá automaticamente um nó diferente para a função principal. Os hosts que podem agir como o principal são chamados de candidatos principais.
 
 ###	Nó do Trabalhador
 
@@ -73,17 +73,17 @@ Um nó do trabalhador é um nó que fornece um ambiente conteinerizado para exec
 
 ### Nó do Proxy
 
-Um nó do proxy é um nó que transmite uma solicitação externa para os serviços criados dentro de seu cluster. Como um ambiente de alta disponibilidade (HA) contém múltiplos nós do proxy, se o nó do proxy principal falhar, a lógica de failover promoverá automaticamente um nó diferente para a função do proxy. Embora seja possível usar um único nó como o principal e o proxy, é melhor usar nós de proxy dedicados para reduzir a carga no nó principal. Um cluster deverá conter pelo menos um nó do proxy se o balanceamento de carga for necessário dentro do cluster.
+Um nó do proxy é um nó que transmite uma solicitação externa para os serviços criados dentro de seu cluster. Como um ambiente de alta disponibilidade (HA) tem mais de um nó do proxy, se o nó do proxy líder falhar, a lógica de failover promoverá automaticamente um nó diferente para a função de proxy. Embora seja possível usar um único nó como principal e proxy, use os nós de proxy dedicados para reduzir o carregamento no nó principal. Um cluster deverá ter pelo menos um nó do proxy se o balanceamento de carga for necessário dentro do cluster.
 
 ### Nó de Gerenciamento
 
-Um nó de gerenciamento é um nó opcional que hospeda somente serviços de gerenciamento, como monitoramento, medição e criação de log. Configurando os nós de gerenciamento dedicados, é possível evitar que o nó principal fique sobrecarregado. É possível ativar o nó de gerenciamento apenas durante a instalação do {{site.data.keyword.cloud_notm}} Private.
+Um nó de gerenciamento é um nó opcional que hospeda somente serviços de gerenciamento, como monitoramento, medição e criação de log. Configurando os nós de gerenciamento dedicados, é possível evitar que o nó principal fique sobrecarregado. É possível ativar o nó de gerenciamento apenas durante a instalação do ICP.
 
-###	Nó VA
+###	Nó do Vulnerability Advisor
 
-Um nó VA (Vulnerability Advisor) é um nó opcional usado para executar os serviços do Vulnerability Advisor. Os serviços do Vulnerability Advisor são intensivos em recurso. Se você usar o serviço Vulnerability Advisor, especifique um nó VA dedicado.
+Um nó do Vulnerability Advisor é um nó opcional usado para executar os serviços do Vulnerability Advisor. Os serviços do Vulnerability Advisor são intensivos em recurso. Se você usar o serviço Vulnerability Advisor, especifique um nó VA dedicado.
 
-Especificações da máquina virtual necessárias para uma instância do ICP altamente disponível:
+As especificações de VMs a seguir são necessárias para uma instância do ICP altamente disponível:
 
 Tabela 3. Especificações da máquina virtual do ICP
 
@@ -106,7 +106,7 @@ trabalhador  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 ## Componentes do CAM
 
-O {{site.data.keyword.cloud_notm}} Automation Manager (CAM) é uma plataforma de gerenciamento de autoatendimento com várias nuvens, executada no ICP, que capacita desenvolvedores e administradores a atender às demandas de negócios.
+O {{site.data.keyword.cloud_notm}} Automation Manager (CAM) é uma plataforma de gerenciamento de autoatendimento multinuvem executada no ICP que confere poderes aos Desenvolvedores e administradores para atender às demandas de negócios.
 
 Figura 3. Referência do componente CAM
 ![Referência do componente CAM](vcsicp-cam-component-ref.svg)
@@ -115,13 +115,13 @@ Figura 3. Referência do componente CAM
 
 Fornece um acesso de proxy nginx para o CAM.
 
-### UI do CAM
+### Interface com o usuário do CAM
 
-Os componentes da UI são divididos em múltiplos contêineres: UI de conexões em nuvem, UI de Biblioteca de Modelos e UI de instâncias implementadas.
+Os componentes de interface com o usuário são divididos em mais de um contêiner. Os componentes são incluídos na interface com o usuário de conexões em nuvem, na interface com o usuário de Biblioteca de Modelos e na interface com o usuário de instâncias implementadas.
 
 ### API CAM
 
-As APIs do CAM são divididas em múltiplos contêineres.
+As APIs do CAM são divididas em mais de um contêiner.
 
 ### Helm
 
@@ -129,7 +129,7 @@ Um contêiner com os binários necessários para implementar gráficos helm em c
 
 ### Terraform
 
-Um contêiner com os binários necessários para implementar recursos do Terraform em múltiplas nuvens.
+Um contêiner com os binários necessários para implementar recursos do Terraform em mais de uma nuvem.
 
 ### Registros
 
@@ -145,12 +145,12 @@ O banco de dados Redis é usado para o armazenamento em cache de sessão e os bl
 
 ### Designer de Modelo
 
-Uma interface gráfica com o usuário para criar modelos do Terraform, com os recursos arrastar e soltar de módulos Terraform.
+Uma interface gráfica com o usuário para criar modelos do Terraform, com um recurso de arrastar de módulos do Terraform.
 
-### Maria DB
+### Maria Database
 
 O banco de dados para o aplicativo de designer modelo.
 
 ### Links relacionados
 
-* [Visão geral do VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
