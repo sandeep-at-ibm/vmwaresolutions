@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="802px"
+   height="572px"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="vcsiks-phy-ics-iks-deployment.svg">
+  <defs
+     id="defs210">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 286 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="802 : 286 : 1"
+       inkscape:persp3d-origin="401 : 190.66667 : 1"
+       id="perspective212" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="838"
+     id="namedview208"
+     showgrid="false"
+     inkscape:zoom="0.58348671"
+     inkscape:cx="401"
+     inkscape:cy="148.89319"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(.5 .5)"
+     id="g6">
+    <path
+       d="m0 570h383 383v-570h-383-383v570"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#4378bb"
+       stroke-miterlimit="10"
+       id="path8" />
+    <rect
+       x="76"
+       y="252.38"
+       width="341"
+       height="74.86"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-dasharray="3 3"
+       id="rect10" />
+    <g
+       font-family="Helvetica"
+       font-size="14px"
+       text-anchor="middle"
+       id="g12">
+      <text
+         x="54"
+         y="20.5"
+         id="text14">IBM Cloud</text>
+    </g>
+    <g
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-dasharray="3 3"
+       id="g16">
+      <rect
+         x="74"
+         y="316"
+         width="344"
+         height="190"
+         id="rect18" />
+      <rect
+         x="257"
+         y="148"
+         width="160"
+         height="85"
+         id="rect20" />
+      <rect
+         x="76"
+         y="51"
+         width="341"
+         height="85"
+         id="rect22" />
+    </g>
+    <g
+       pointer-events="none"
+       id="g24">
+      <rect
+         x="87"
+         y="326"
+         width="320"
+         height="170"
+         fill="#dae8fc"
+         stroke="#6c8ebf"
+         id="rect26" />
+      <rect
+         x="76"
+         y="147"
+         width="171"
+         height="85"
+         fill="none"
+         stroke="#000"
+         stroke-dasharray="3 3"
+         id="rect28" />
+      <rect
+         x="192"
+         y="286"
+         width="110"
+         height="20"
+         fill="#dae8fc"
+         stroke="#6c8ebf"
+         id="rect30" />
+    </g>
+    <g
+       font-family="Helvetica"
+       font-size="11px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="g32">
+      <text
+         x="246.5"
+         y="299"
+         id="text34">vSphere vCenter</text>
+    </g>
+    <rect
+       x="114"
+       y="168.5"
+       width="74"
+       height="20"
+       fill="#d5e8d4"
+       pointer-events="none"
+       stroke="#82b366"
+       id="rect36" />
+    <g
+       font-family="Helvetica"
+       font-size="11px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="g38">
+      <text
+         x="150.5"
+         y="181.5"
+         id="text40">NSX-V</text>
+    </g>
+    <rect
+       x="100"
+       y="76"
+       width="108"
+       height="35"
+       fill="#f5f5f5"
+       pointer-events="none"
+       stroke="#666"
+       id="rect42" />
+    <g
+       font-family="Helvetica"
+       font-size="11px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="g44">
+      <text
+         x="153.5"
+         y="90"
+         id="text46">IBM Cloud Private</text>
+    </g>
+    <g
+       pointer-events="none"
+       id="g48">
+      <image
+         x="201.5"
+         y="425.5"
+         width="50"
+         height="50"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGXSURBVGhD7ZlBboMwEEVZwbZH6E1IMFK3vUVg1R6BHd01R+hNGolI3eYIPUJukHiGAQVjSjSIiQse6QnF/pbmKbaFRGBWeUwOH8fk4jLQI7U7XF5EEC9Ss92XP/EzZvQTfttz88MWKattQdOdgnEzKwFLpKySX5qyFszf5iXgiYwsMvMSrFsEF9IhN6s+9N2sBGwRzenzO36iCBb8hnEjJ8IUETz0eAVXalM/5Q95wyQRl/AirnGXCO5/HXQZ6JHaXUGFKjtEaX5xGeiR2h0uLyKIF2kWh0n+GqndBp6PFGaLhGn+RdOdgnEzKwFX5BzEb50Xxrb0OMwb+dlhiYwtsojPzrpFNMvYWrhwIYe9Xfzvr1/X8CKucZdIpLI9BF0GeqR2V1CL+UcwaNmXLgE9UrvD5UUEmSpyhr0ZqbzA5wPesRr4Iio/9V4c4YVRj/eyAvBFXnbWzwow3ssKwBIZW2QVn5mVi6TZnx9DYf42LwFLBBem2TtNdwrGzawEbBFEX7vtzVXfWIU1J8A0EYfwIq6xYJEguAJRDXZjkULwKAAAAABJRU5ErkJgggAACEADCCQAAAAYAAAAAhDA2wEAAAADAAAAAAAAAAAAAAAAAAAAG0ACQDQAAAAoAAAAAwAAAAIAAAAAAAC/AAAAvwAASEIAAEhCAwAAAAAAAAAyAAAAAAAyABUAAAAMAAAABAAAABUAAAAMAAAABAAAAEYAAAAUAAAACAAAAFROUFAGAQAAUQAAABACAAB9AAAAfQAAAGQBAABkAQAAfQAAAH0AAAAAAAAAAAAAADIAAAAyAAAAUAAAADAAAACAAAAAkAEAAAAAAACGAO4A6AAAAOgAAAAoAAAAMgAAADIAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAH//////wAAA///////AAAB//////8AAAP//////wAAAfB/////AAAD4D////8AAAHAH////wAAA+A/////AAABwB////8AAAPgP////wAAAfB/////AAAD+v////8AAAH//////wAAA///////AAAB//////8AAAP//////gAAAAAAAAAAAAAD//////8AAAH//////wAAA///////AAAB//////8AAAP6/////wAAAfB/////AAAD4D////8AAAHAH////wAAA+A/////AAABwB////8AAAPgf////wAAAfF/////AAAD//////8AAAH//////wAAA///////AAAB//////8AAAAAAAAAAAAAAVVVVVVVAAAD//////8AAAH//////wAAA///////AAAB/f////8AAAPwf////wAAAeA/////AAAD4D////8AAAHAH////wAAA+A/////AAAB8H////8AAAP4/////wAAAf//////AAAD//////8AAAH//////wAAA///////AAAUQAAACgGAAB9AAAAfQAAAGQBAABkAQAAfQAAAH0AAAAAAAAAAAAAADIAAAAyAAAAUAAAAGAAAACwAAAAeAUAAAAAAADGAIgA6AAAAOgAAAAoAAAAMgAAADIAAAABAAQAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAP///wBCxIcAQsSIAEHEiABBw4cAQsOHAGlEBwBoQwYAaUIGAGlEBgBnQwcAaEMHAGlDBwARERd3d3d3d3d3d3d3d3d3d3d3d3d3eBERBwcHERGHd3d3d3d3d3d3d3d3d3d3d3d3d3gREQEBARERF3d3d3d3d3d3d3d3d3d3d3d3d3d4EREHBwcREYd3d3d3d3d3d3d3d3d3d3d3d3d3eBERBwcHEREXd3cRERd3d3d3d3d3d3d3d3d3d3gREQcHBxERh3dxERERd3d3d3d3d3d3d3d3d3d4EREHBwcRERd3ERERERd3d3d3d3d3d3d3d3d3eBERBwcHERGHd4ERERGHd3d3d3d3d3d3d3d3d3gREQEBBxERF3cRERERF3d3d3d3d3d3d3d3d3d4EREHBwcREYd3cREREXd3d3d3d3d3d3d3d3d3eBERBwcHEREXd30RER13d3d3d3d3d3d3d3d3d3gREQgBARERh3d3cdF3d3d3d3d3d3d3d3d3d3d4EREHBwcRERd3d3d3d3d3d3d3d3d3d3d3d3d3eBERAa6vERGHd3d3d3d3d3d3d3d3d3d3d3d3d3gREQcHBxERF3d3d3d3d3d3d3d3d3d3d3d3d3d4EREBAQEREciIiIiIiIiIiIiIiIiIiIiIiIiIgRERBwcHEREREREREREREREREREREREREREREREREQcHBxERyIiIiIiIiIiIiIiIiIiIiIiIiIiMEREHBwcRERd3d3d3d3d3d3d3d3d3d3d3d3d3eBERDQEBERGHd3d3d3d3d3d3d3d3d3d3d3d3d3gREQcHBxERF3d3d3d3d3d3d3d3d3d3d3d3d3d4EREBBwcREYd3d4Gxh3d3d3d3d3d3d3d3d3d3eBERBwcHEREXd3oRERp3d3d3d3d3d3d3d3d3d3gREQcHBxERh3dxERERd3d3d3d3d3d3d3d3d3d4EREIAQERERd3ERERERd3d3d3d3d3d3d3d3d3eBERBwcHERGHd4ERERGHd3d3d3d3d3d3d3d3d3gREQEAABERF3cRERERF3d3d3d3d3d3d3d3d3d4EREHBwcREYd3cRERGnd3d3d3d3d3d3d3d3d3eBERAQEBEREXd3cRGRd3d3d3d3d3d3d3d3d3d3gREQgICBERh3d3d3d3d3d3d3d3d3d3d3d3d3d4EREBAQERERd3d3d3d3d3d3d3d3d3d3d3d3d3eBERAQEBERGHd3d3d3d3d3d3d3d3d3d3d3d3d3gREQgICBERF3d3d3d3d3d3d3d3d3d3d3d3d3d4EREICAgRERERERERERERERERERERERERERERERERBwcHERESEhISEhISEhISEhISEhISEhISEhQREQcHBxERIzMzMzMzMzMzMzMzMzMzMzMzMzMyEREHBwcRERMzMzMzMzMzMzMzMzMzMzMzMzMzMhERCAEBEREjMzMzMzMzMzMzMzMzMzMzMzMzMzIREQcHBxEREzMzZBRjMzMzMzMzMzMzMzMzMzMyEREBPwQRESMzMxEREzMzMzMzMzMzMzMzMzMzMhERBwcHERETMzEREREzMzMzMzMzMzMzMzMzMzIREQEBARERIzMhERERIzMzMzMzMzMzMzMzMzMyEREHBwcRERMzERERERMzMzMzMzMzMzMzMzMzMhERBwcHEREjM2ERERFjMzMzMzMzMzMzMzMzMzIREQcHBxEREzM1EREVMzMzMzMzMzMzMzMzMzMyEREBAQERESMzM0ERQzMzMzMzMzMzMzMzMzMzMhERBwcHERETMzMzMzMzMzMzMzMzMzMzMzMzMzIREQEBARERIzMzMzMzMzMzMzMzMzMzMzMzMzMyEREHBwcRERMzMzMzMzMzMzMzMzMzMzMzMzMzMhERBwcHEREjMzMzMzMzMzMzMzMzMzMzMzMzMzIREQgBAUYAAAAUAAAACAAAAFROUFAHAQAARgAAAAwBAAAAAQAARU1GKypAAAAkAAAAGAAAALACLDoAAAAAAAAAALACLDoAAPpCAAD6QiRAAAAMAAAAAAAAACtAAAAMAAAAAAAAAB5ABgAMAAAAAAAAACFABQAMAAAAAAAAAAhABAQYAAAADAAAAAIQwNsAAAAAAwAAEDRABAAMAAAAAAAAAB5ACQAMAAAAAAAAACpAAAAkAAAAGAAAALACLDoAAAAAAAAAALACLDoAAPpCAAD6QiFABwAMAAAAAAAAACpAAAAkAAAAGAAAALACLDoAAAAAAAAAALACLDoAAPpCAAD6QipAAAAkAAAAGAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAEwAAABkAAAA0f///9H///8RAgAAEQIAANH////R////QQIAAEECAAApAKoAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAADAAAAP////9GAAAAHAAAABAAAABFTUYrAkAAAAwAAAAAAAAADgAAABQAAAAAAAAAEAAAABQAAAA="
+         id="image50" />
+      <image
+         x="271.5"
+         y="460.5"
+         width="30"
+         height="30"
+         xlink:href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1OC45IDU4LjkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU4LjkgNTguOTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMzMzVEODA7fQoJLnN0MXtmaWxsOiNGRkZGRkY7fQo8L3N0eWxlPgo8dGl0bGU+SU5ESVZJRFVBTCBJQ09OUzwvdGl0bGU+CjxjaXJjbGUgY2xhc3M9InN0MCIgY3g9IjI5LjQiIGN5PSIyOS40IiByPSIyOS40Ii8+CjxlbGxpcHNlIGNsYXNzPSJzdDEiIGN4PSIyOS40IiBjeT0iMTYuOSIgcng9IjEzLjgiIHJ5PSI1LjgiLz4KPHBhdGggY2xhc3M9InN0MSIgZD0iTTQzLjcsMTguOWMtMC43LDMuMS02LjgsNS41LTE0LjMsNS41UzE1LjgsMjIsMTUuMSwxOC45aC0wLjF2MjIuOWwwLDBjMCwzLjQsNi40LDYuMSwxNC40LDYuMQoJczE0LjQtMi43LDE0LjQtNi4xTDQzLjcsMTguOUw0My43LDE4Ljl6Ii8+Cjwvc3ZnPgo="
+         id="image52" />
+      <rect
+         x="290.5"
+         y="167.5"
+         width="81"
+         height="20"
+         fill="#d5e8d4"
+         stroke="#82b366"
+         id="rect54" />
+    </g>
+    <g
+       font-family="Helvetica"
+       font-size="11px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="g56">
+      <text
+         x="330.5"
+         y="180.5"
+         id="text58">NSX-T</text>
+    </g>
+    <rect
+       x="257"
+       y="76"
+       width="148"
+       height="35"
+       fill="#f5f5f5"
+       pointer-events="none"
+       stroke="#666"
+       id="rect60" />
+    <g
+       font-family="Helvetica"
+       font-size="11px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="g62">
+      <text
+         x="330.5"
+         y="90"
+         id="text64">Cloud Automation Manager</text>
+    </g>
+    <rect
+       x="114"
+       y="188.5"
+       width="74"
+       height="20"
+       fill="#d5e8d4"
+       pointer-events="none"
+       stroke="#82b366"
+       id="rect66" />
+    <g
+       font-family="Helvetica"
+       font-size="11px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="g68">
+      <text
+         x="150.5"
+         y="201.5"
+         id="text70">VDS</text>
+    </g>
+    <rect
+       x="290.5"
+       y="187.5"
+       width="81"
+       height="20"
+       fill="#d5e8d4"
+       pointer-events="none"
+       stroke="#82b366"
+       id="rect72" />
+    <g
+       font-family="Helvetica"
+       font-size="11px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="g74">
+      <text
+         x="330.5"
+         y="200.5"
+         id="text76">N-VDS</text>
+    </g>
+    <path
+       d="m122 386v65h80"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       stroke-width="2"
+       id="path78" />
+    <rect
+       x="92"
+       y="346"
+       width="60"
+       height="40"
+       rx="6"
+       ry="6"
+       fill="#33f"
+       pointer-events="none"
+       stroke="#000"
+       id="rect80" />
+    <g
+       fill="#fff"
+       font-family="Helvetica"
+       font-size="11px"
+       text-anchor="middle"
+       id="g82">
+      <text
+         x="121.5"
+         y="369"
+         id="text84">ESXi-01</text>
+    </g>
+    <path
+       d="m197 386v20h18v20"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       stroke-width="2"
+       id="path86" />
+    <rect
+       x="167"
+       y="346"
+       width="60"
+       height="40"
+       rx="6"
+       ry="6"
+       fill="#33f"
+       pointer-events="none"
+       stroke="#000"
+       id="rect88" />
+    <g
+       fill="#fff"
+       font-family="Helvetica"
+       font-size="11px"
+       text-anchor="middle"
+       id="g90">
+      <text
+         x="196.5"
+         y="369"
+         id="text92">ESXi-02</text>
+    </g>
+    <path
+       d="m277 386v20h-37v20"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       stroke-width="2"
+       id="path94" />
+    <rect
+       x="247"
+       y="346"
+       width="60"
+       height="40"
+       rx="6"
+       ry="6"
+       fill="#33f"
+       pointer-events="none"
+       stroke="#000"
+       id="rect96" />
+    <g
+       fill="#fff"
+       font-family="Helvetica"
+       font-size="11px"
+       text-anchor="middle"
+       id="g98">
+      <text
+         x="276.5"
+         y="369"
+         id="text100">ESXi-03</text>
+    </g>
+    <path
+       d="m347 386v65h-95"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       stroke-width="2"
+       id="path102" />
+    <rect
+       x="317"
+       y="346"
+       width="60"
+       height="40"
+       rx="6"
+       ry="6"
+       fill="#33f"
+       pointer-events="none"
+       stroke="#000"
+       id="rect104" />
+    <g
+       fill="#fff"
+       font-family="Helvetica"
+       font-size="11px"
+       text-anchor="middle"
+       id="g106">
+      <text
+         x="346.5"
+         y="369"
+         id="text108">ESXi-04</text>
+    </g>
+    <g
+       font-family="Helvetica"
+       font-size="11px"
+       text-anchor="middle"
+       id="g110">
+      <g
+         font-weight="bold"
+         id="g112">
+        <text
+           x="321.5"
+           y="479"
+           id="text114">vSAN</text>
+      </g>
+      <g
+         transform="rotate(-90,54.5,411)"
+         id="g116">
+        <text
+           x="54"
+           y="414"
+           id="text118">vSphere <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3030">集群</tspan>
+</text>
+      </g>
+      <g
+         transform="rotate(-90,57,276)"
+         id="g120">
+        <text
+           x="56.5"
+           y="272.5"
+           id="text122">vSphere</text>
+        <text
+           x="56.5"
+           y="285.5"
+           id="text124">
+          <tspan
+             style="-inkscape-font-specification:SimHei;font-family:SimHei"
+             id="tspan3028">管理</tspan>
+        </text>
+      </g>
+      <g
+         transform="rotate(-90,57.5,189.5)"
+         id="g126">
+        <text
+           x="57"
+           y="186"
+           id="text128">vSphere</text>
+        <text
+           x="57"
+           y="199"
+           id="text130">
+          <tspan
+             style="-inkscape-font-specification:SimHei;font-family:SimHei"
+             id="tspan3024">联网</tspan>
+        </text>
+      </g>
+      <g
+         transform="rotate(-90,49.5,93.5)"
+         id="g132">
+        <text
+           x="49"
+           y="96.5"
+           id="text134">
+          <tspan
+             style="-inkscape-font-specification:SimHei;font-family:SimHei"
+             id="tspan3018">云管理</tspan>
+        </text>
+      </g>
+    </g>
+    <rect
+       x="96"
+       y="256"
+       width="110"
+       height="20"
+       fill="#dae8fc"
+       pointer-events="none"
+       stroke="#6c8ebf"
+       id="rect136" />
+    <g
+       font-family="Helvetica"
+       font-size="11px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="g138">
+      <text
+         x="150.5"
+         y="269"
+         id="text140">NSX-V Manager</text>
+    </g>
+    <rect
+       x="276"
+       y="256"
+       width="110"
+       height="20"
+       fill="#dae8fc"
+       pointer-events="none"
+       stroke="#6c8ebf"
+       id="rect142" />
+    <g
+       font-family="Helvetica"
+       font-size="11px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="g144">
+      <text
+         x="330.5"
+         y="269"
+         id="text146">NSX-T Manager</text>
+    </g>
+    <g
+       pointer-events="none"
+       id="g148">
+      <rect
+         x="466"
+         y="316"
+         width="261"
+         height="190"
+         fill="none"
+         stroke="#000"
+         stroke-dasharray="3 3"
+         id="rect150" />
+      <rect
+         x="479"
+         y="326"
+         width="229"
+         height="170"
+         fill="#dae8fc"
+         stroke="#6c8ebf"
+         id="rect152" />
+      <image
+         x="571.5"
+         y="425.5"
+         width="50"
+         height="50"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGXSURBVGhD7ZlBboMwEEVZwbZH6E1IMFK3vUVg1R6BHd01R+hNGolI3eYIPUJukHiGAQVjSjSIiQse6QnF/pbmKbaFRGBWeUwOH8fk4jLQI7U7XF5EEC9Ss92XP/EzZvQTfttz88MWKattQdOdgnEzKwFLpKySX5qyFszf5iXgiYwsMvMSrFsEF9IhN6s+9N2sBGwRzenzO36iCBb8hnEjJ8IUETz0eAVXalM/5Q95wyQRl/AirnGXCO5/HXQZ6JHaXUGFKjtEaX5xGeiR2h0uLyKIF2kWh0n+GqndBp6PFGaLhGn+RdOdgnEzKwFX5BzEb50Xxrb0OMwb+dlhiYwtsojPzrpFNMvYWrhwIYe9Xfzvr1/X8CKucZdIpLI9BF0GeqR2V1CL+UcwaNmXLgE9UrvD5UUEmSpyhr0ZqbzA5wPesRr4Iio/9V4c4YVRj/eyAvBFXnbWzwow3ssKwBIZW2QVn5mVi6TZnx9DYf42LwFLBBem2TtNdwrGzawEbBFEX7vtzVXfWIU1J8A0EYfwIq6xYJEguAJRDXZjkULwKAAAAABJRU5ErkJgggAACEADCCQAAAAYAAAAAhDA2wEAAAADAAAAAAAAAAAAAAAAAAAAG0ACQDQAAAAoAAAAAwAAAAIAAAAAAAC/AAAAvwAASEIAAEhCAwAAAAAAAAAyAAAAAAAyABUAAAAMAAAABAAAABUAAAAMAAAABAAAAEYAAAAUAAAACAAAAFROUFAGAQAAUQAAABACAAB9AAAAfQAAAGQBAABkAQAAfQAAAH0AAAAAAAAAAAAAADIAAAAyAAAAUAAAADAAAACAAAAAkAEAAAAAAACGAO4A6AAAAOgAAAAoAAAAMgAAADIAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAH//////wAAA///////AAAB//////8AAAP//////wAAAfB/////AAAD4D////8AAAHAH////wAAA+A/////AAABwB////8AAAPgP////wAAAfB/////AAAD+v////8AAAH//////wAAA///////AAAB//////8AAAP//////gAAAAAAAAAAAAAD//////8AAAH//////wAAA///////AAAB//////8AAAP6/////wAAAfB/////AAAD4D////8AAAHAH////wAAA+A/////AAABwB////8AAAPgf////wAAAfF/////AAAD//////8AAAH//////wAAA///////AAAB//////8AAAAAAAAAAAAAAVVVVVVVAAAD//////8AAAH//////wAAA///////AAAB/f////8AAAPwf////wAAAeA/////AAAD4D////8AAAHAH////wAAA+A/////AAAB8H////8AAAP4/////wAAAf//////AAAD//////8AAAH//////wAAA///////AAAUQAAACgGAAB9AAAAfQAAAGQBAABkAQAAfQAAAH0AAAAAAAAAAAAAADIAAAAyAAAAUAAAAGAAAACwAAAAeAUAAAAAAADGAIgA6AAAAOgAAAAoAAAAMgAAADIAAAABAAQAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAP///wBCxIcAQsSIAEHEiABBw4cAQsOHAGlEBwBoQwYAaUIGAGlEBgBnQwcAaEMHAGlDBwARERd3d3d3d3d3d3d3d3d3d3d3d3d3eBERBwcHERGHd3d3d3d3d3d3d3d3d3d3d3d3d3gREQEBARERF3d3d3d3d3d3d3d3d3d3d3d3d3d4EREHBwcREYd3d3d3d3d3d3d3d3d3d3d3d3d3eBERBwcHEREXd3cRERd3d3d3d3d3d3d3d3d3d3gREQcHBxERh3dxERERd3d3d3d3d3d3d3d3d3d4EREHBwcRERd3ERERERd3d3d3d3d3d3d3d3d3eBERBwcHERGHd4ERERGHd3d3d3d3d3d3d3d3d3gREQEBBxERF3cRERERF3d3d3d3d3d3d3d3d3d4EREHBwcREYd3cREREXd3d3d3d3d3d3d3d3d3eBERBwcHEREXd30RER13d3d3d3d3d3d3d3d3d3gREQgBARERh3d3cdF3d3d3d3d3d3d3d3d3d3d4EREHBwcRERd3d3d3d3d3d3d3d3d3d3d3d3d3eBERAa6vERGHd3d3d3d3d3d3d3d3d3d3d3d3d3gREQcHBxERF3d3d3d3d3d3d3d3d3d3d3d3d3d4EREBAQEREciIiIiIiIiIiIiIiIiIiIiIiIiIgRERBwcHEREREREREREREREREREREREREREREREREQcHBxERyIiIiIiIiIiIiIiIiIiIiIiIiIiMEREHBwcRERd3d3d3d3d3d3d3d3d3d3d3d3d3eBERDQEBERGHd3d3d3d3d3d3d3d3d3d3d3d3d3gREQcHBxERF3d3d3d3d3d3d3d3d3d3d3d3d3d4EREBBwcREYd3d4Gxh3d3d3d3d3d3d3d3d3d3eBERBwcHEREXd3oRERp3d3d3d3d3d3d3d3d3d3gREQcHBxERh3dxERERd3d3d3d3d3d3d3d3d3d4EREIAQERERd3ERERERd3d3d3d3d3d3d3d3d3eBERBwcHERGHd4ERERGHd3d3d3d3d3d3d3d3d3gREQEAABERF3cRERERF3d3d3d3d3d3d3d3d3d4EREHBwcREYd3cRERGnd3d3d3d3d3d3d3d3d3eBERAQEBEREXd3cRGRd3d3d3d3d3d3d3d3d3d3gREQgICBERh3d3d3d3d3d3d3d3d3d3d3d3d3d4EREBAQERERd3d3d3d3d3d3d3d3d3d3d3d3d3eBERAQEBERGHd3d3d3d3d3d3d3d3d3d3d3d3d3gREQgICBERF3d3d3d3d3d3d3d3d3d3d3d3d3d4EREICAgRERERERERERERERERERERERERERERERERBwcHERESEhISEhISEhISEhISEhISEhISEhQREQcHBxERIzMzMzMzMzMzMzMzMzMzMzMzMzMyEREHBwcRERMzMzMzMzMzMzMzMzMzMzMzMzMzMhERCAEBEREjMzMzMzMzMzMzMzMzMzMzMzMzMzIREQcHBxEREzMzZBRjMzMzMzMzMzMzMzMzMzMyEREBPwQRESMzMxEREzMzMzMzMzMzMzMzMzMzMhERBwcHERETMzEREREzMzMzMzMzMzMzMzMzMzIREQEBARERIzMhERERIzMzMzMzMzMzMzMzMzMyEREHBwcRERMzERERERMzMzMzMzMzMzMzMzMzMhERBwcHEREjM2ERERFjMzMzMzMzMzMzMzMzMzIREQcHBxEREzM1EREVMzMzMzMzMzMzMzMzMzMyEREBAQERESMzM0ERQzMzMzMzMzMzMzMzMzMzMhERBwcHERETMzMzMzMzMzMzMzMzMzMzMzMzMzIREQEBARERIzMzMzMzMzMzMzMzMzMzMzMzMzMyEREHBwcRERMzMzMzMzMzMzMzMzMzMzMzMzMzMhERBwcHEREjMzMzMzMzMzMzMzMzMzMzMzMzMzIREQgBAUYAAAAUAAAACAAAAFROUFAHAQAARgAAAAwBAAAAAQAARU1GKypAAAAkAAAAGAAAALACLDoAAAAAAAAAALACLDoAAPpCAAD6QiRAAAAMAAAAAAAAACtAAAAMAAAAAAAAAB5ABgAMAAAAAAAAACFABQAMAAAAAAAAAAhABAQYAAAADAAAAAIQwNsAAAAAAwAAEDRABAAMAAAAAAAAAB5ACQAMAAAAAAAAACpAAAAkAAAAGAAAALACLDoAAAAAAAAAALACLDoAAPpCAAD6QiFABwAMAAAAAAAAACpAAAAkAAAAGAAAALACLDoAAAAAAAAAALACLDoAAPpCAAD6QipAAAAkAAAAGAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAEwAAABkAAAA0f///9H///8RAgAAEQIAANH////R////QQIAAEECAAApAKoAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAADAAAAP////9GAAAAHAAAABAAAABFTUYrAkAAAAwAAAAAAAAADgAAABQAAAAAAAAAEAAAABQAAAA="
+         id="image154" />
+      <path
+         d="m522 386v65h50"
+         fill="none"
+         stroke="#000"
+         stroke-miterlimit="10"
+         stroke-width="2"
+         id="path156" />
+      <rect
+         x="492"
+         y="346"
+         width="60"
+         height="40"
+         rx="6"
+         ry="6"
+         fill="#33f"
+         stroke="#000"
+         id="rect158" />
+    </g>
+    <g
+       fill="#fff"
+       font-family="Helvetica"
+       font-size="11px"
+       text-anchor="middle"
+       id="g160">
+      <text
+         x="521.5"
+         y="369"
+         id="text162"><tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3032">工作程序</tspan>
+ 1</text>
+    </g>
+    <path
+       d="m597 386v40"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       stroke-width="2"
+       id="path164" />
+    <rect
+       x="567"
+       y="346"
+       width="60"
+       height="40"
+       rx="6"
+       ry="6"
+       fill="#33f"
+       pointer-events="none"
+       stroke="#000"
+       id="rect166" />
+    <g
+       fill="#fff"
+       font-family="Helvetica"
+       font-size="11px"
+       text-anchor="middle"
+       id="g168">
+      <text
+         x="596.5"
+         y="369"
+         id="text170"><tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3034">工作程序</tspan>
+ 2</text>
+    </g>
+    <path
+       d="m666 386v65h-44"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       stroke-width="2"
+       id="path172" />
+    <rect
+       x="635.5"
+       y="346"
+       width="60"
+       height="40"
+       rx="6"
+       ry="6"
+       fill="#33f"
+       pointer-events="none"
+       stroke="#000"
+       id="rect174" />
+    <g
+       fill="#fff"
+       font-family="Helvetica"
+       font-size="11px"
+       text-anchor="middle"
+       id="g176">
+      <text
+         x="665"
+         y="369"
+         id="text178"><tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3036">工作程序</tspan>
+ 3</text>
+    </g>
+    <g
+       transform="rotate(-90,446,411)"
+       font-family="Helvetica"
+       font-size="11px"
+       text-anchor="middle"
+       id="g180">
+      <text
+         x="445.5"
+         y="414"
+         id="text182">IBM Kubernetes Service</text>
+    </g>
+    <rect
+       x="465"
+       y="148"
+       width="263"
+       height="85"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-dasharray="3 3"
+       id="rect184" />
+    <rect
+       x="556.5"
+       y="178.5"
+       width="74"
+       height="20"
+       fill="#d5e8d4"
+       pointer-events="none"
+       stroke="#82b366"
+       id="rect186" />
+    <g
+       font-family="Helvetica"
+       font-size="11px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="g188">
+      <text
+         x="593"
+         y="191.5"
+         id="text190">Calico</text>
+    </g>
+    <g
+       transform="rotate(-90,446,190.5)"
+       font-family="Helvetica"
+       font-size="11px"
+       text-anchor="middle"
+       id="g192">
+      <text
+         x="445.5"
+         y="187"
+         id="text194">Kubernetes <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3026">联网</tspan>
+</text>
+    </g>
+    <rect
+       x="465"
+       y="52"
+       width="263"
+       height="85"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-dasharray="3 3"
+       id="rect196" />
+    <rect
+       x="522"
+       y="76"
+       width="149"
+       height="35"
+       fill="#f5f5f5"
+       pointer-events="none"
+       stroke="#666"
+       id="rect198" />
+    <g
+       font-family="Helvetica"
+       font-size="11px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="g200">
+      <text
+         x="596"
+         y="90"
+         id="text202">Kuberenetes <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3022">仪表板</tspan>
+</text>
+    </g>
+    <g
+       transform="rotate(-90,438,94.5)"
+       font-family="Helvetica"
+       font-size="11px"
+       text-anchor="middle"
+       id="g204">
+      <text
+         x="437.5"
+         y="97.5"
+         id="text206">
+        <tspan
+           style="-inkscape-font-specification:SimHei;font-family:SimHei"
+           id="tspan3020">管理</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
