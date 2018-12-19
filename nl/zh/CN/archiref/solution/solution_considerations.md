@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -40,7 +40,7 @@ lastupdated: "2018-10-29"
 - 使用 [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 或 [{{site.data.keyword.cloud_notm}}“直接链路”连接](https://www.ibm.com/cloud/direct-link)来访问实例管理端点。
 - 设计从实例内部建立公用网络连接的策略。您的选项包括：样本客户 VMware NSX Edge 服务网关 (ESG)、网关设备（例如，Vyatta 和 FortiGate）以及在 {{site.data.keyword.cloud_notm}} 网络或在通过 DirectLink 访问的您自己的网络上部署的代理服务器。
 - 规划是在具有 [{{site.data.keyword.cloud_notm}} 可移植 IP 地址](https://console.bluemix.net/docs/infrastructure/subnets/getting-started.html)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作负载，还是[使用您自己的 IP 地址在 NSX 逻辑交换机 (VXLAN) 上](../nsx/nsx_overview.html)部署工作负载。请注意，使用 NSX 软件定义的联网 (SDN) 可为您在 {{site.data.keyword.cloud_notm}} 中管理并确保工作负载网络安全提供最大的灵活性。
-- 使用 NSX ESG、[IBM Cloud Vyatta](https://console.bluemix.net/catalog/infrastructure/virtual-router-appliance) 和 DirectLink 对等连接来规划与工作负载的连接（网络地址转换、虚拟专用网和路由）。
+- 使用 NSX ESG、[IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 和 DirectLink 对等连接来规划与工作负载的连接（网络地址转换、虚拟专用网和路由）。
 - 如果要实现跨 vCenter NSX，请确保在部署任何本地工作负载之前，本地分段标识范围不重叠。
 
 ## 安全性规划和强化

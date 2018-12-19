@@ -118,7 +118,8 @@ vSAN 设置是根据在 {{site.data.keyword.cloud_notm}} 中部署 VMware 解决
 
 |属性|规范|
 |:--------------- |:------------- |
-|NSX Manager|虚拟设备|
+|NSX
+Manager|虚拟设备|
 |vCPU 数量|4|
 |内存|16 GB|
 |磁盘|管理 NFS 共享上 60 GB|
@@ -133,7 +134,7 @@ vSAN 设置是根据在 {{site.data.keyword.cloud_notm}} 中部署 VMware 解决
 
 初始部署后，{{site.data.keyword.cloud_notm}} 自动化会在初始集群中部署三个 NSX 控制器。 将从指定用于管理组件的**专用 A** 可移植子网中为每个控制器分配一个支持 VLAN 的 IP 地址。此外，此设计还会创建 VM 到 VM 反亲缘关系规则，以在集群中的各主机之间分隔控制器。初始集群必须至少包含 3 个节点，以确保控制器的高可用性。
 
-除了控制器之外，{{site.data.keyword.cloud_notm}} 自动化还会为部署的 vSphere 主机准备 NSX VIBS，以支持通过 VXLAN 隧道端点（VTEP）使用虚拟化网络。将从为 VTEP 指定的**专用 A** 可移植 IP 地址范围中为 VTEP 分配支持 VLAN 的 IP 地址，如[物理基础架构设计](design_physicalinfrastructure.html)的*表 1. VLAN 和子网摘要*中所列示。VXLAN 流量驻留在未标记的 VLAN 上，并且分配给专用 vDS。
+除了控制器之外，{{site.data.keyword.cloud_notm}} 自动化还会为部署的 vSphere 主机准备 NSX VIBS，以支持通过 VXLAN 隧道端点（VTEP）使用虚拟化网络。从为 VTEP 指定的**专用 A** 可移植 IP 地址范围中为 VTEP 分配支持 VLAN 的 IP 地址，如[物理基础架构设计](design_physicalinfrastructure.html)的*表 1. VLAN 和子网摘要*中所列示。VXLAN 流量驻留在未标记的 VLAN 上，并且分配给专用 vDS。
 
 然后，将分配分段标识池，并且将集群中的主机添加到传输区域。由于在 {{site.data.keyword.cloud_notm}} 中未配置因特网组管理协议 (IGMP) 监听，因此在传输区域中仅使用单点广播。
 
@@ -185,7 +186,7 @@ vSphere 集群使用两个 vSphere 分布式交换机，配置如以下各表中
 |故障转移检测|仅链接状态|
 |通知交换机|已启用|
 |故障恢复|否|
-|故障转移顺序|活动上行链路：Uplink1 或 Uplink2 \* |
+|故障转移顺序|活动上行链路：Uplink1 或 Uplink2 \* |
 
 \* vSAN 端口组使用采用活动或备用方式的显式故障转移，因为它不支持对 vSAN 存储器流量进行负载均衡。
 {:note}
