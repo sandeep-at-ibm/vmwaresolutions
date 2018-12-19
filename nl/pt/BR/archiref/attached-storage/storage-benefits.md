@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -16,7 +16,7 @@ Para obter mais informações sobre o design do vCenter Server, consulte [Visão
 
 ## Benefícios importantes do armazenamento conectado para o vCenter Server
 
-Embora o armazenamento conectado não seja um pré-requisito para ambientes VMware, seu uso como um dispositivo de armazenamento compartilhado fornece muitos benefícios aos usuários para operações de TI. O uso de dispositivos de armazenamento compartilhado pode ajudar a alcançar alta disponibilidade, planejador de recursos distribuídos, uso eficiente da capacidade de armazenamento e gerenciamento simplificado por meio da ativação das funções do vSphere descritas na tabela a seguir.
+Embora o armazenamento anexado não seja um pré-requisito para ambientes do VMware, seu uso como um dispositivo de armazenamento compartilhado fornece muitos benefícios aos usuários para operações de TI. O uso de dispositivos de armazenamento compartilhado pode ajudar a alcançar alta disponibilidade, planejador de recursos distribuídos, uso eficiente da capacidade de armazenamento e gerenciamento simplificado por meio da ativação das funções do vSphere descritas na tabela a seguir.
 
 Tabela 1. Descrição das funções para armazenamento conectado para o vCenter Server
 
