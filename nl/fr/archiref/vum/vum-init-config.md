@@ -107,7 +107,7 @@ Cette tâche permet de créer une machine virtuelle prête à l'emploi à utilis
 8.	Définissez l'**UC avec la valeur 1**, la **mémoire avec la valeur 2048 Mo** et le **nouveau disque dur avec la valeur 25 Go**. Sélectionnez **Content Library ISO File** puis **CentOS-7-x86_64-Minimal**, cliquez sur **OK** et cochez la case **Connected**.
 9.	Dans la zone New device, sélectionnez **Network** et cliquez sur **Add**.
 10.	Sélectionnez le réseau **SDDC-DPortGroup-Mgmt** et vérifiez que la case Connect est cochée avant de cliquer sur **Next**.
-11.	Vérifiez et cliquez sur **Finish**. 
+11.	Vérifiez et cliquez sur **Finish**.
 
 #### Installation de CentOS
 
@@ -122,10 +122,10 @@ Cette tâche permet d'installer et de configurer la machine virtuelle qui vient 
 7.	Dans l'écran **LOCALIZATION**, cliquez sur **INSTALLATION DESTINATION**, cliquez sur l'**icône du disque virtuel VMware**, puis sur **Done**.
 8.	Dans l'écran **LOCALIZATION**, cliquez sur **NETWORK & HOSTNAME**, remplacez le nom d'hôte par le nom d'hôte de votre choix, par exemple, Proxy01.
 9.	Cliquez sur le bouton **Configure**, puis sur **IPv4 Settings** et dans la zone **Method**, sélectionnez **Manual**.
-10.	En utilisant le bouton **Add**, insérez une _adresse et un masque de réseau_, ainsi qu'une _passerelle_ à partir du _Tableau 1 – Valeurs de déploiement_. 
+10.	En utilisant le bouton **Add**, insérez une _adresse et un masque de réseau_, ainsi qu'une _passerelle_ à partir du _Tableau 1 – Valeurs de déploiement_.
 11.	Entrez l'_adresse IP du serveur DNS_ indiqué dans le Tableau 1 – Valeurs de déploiement.
 12.	Cliquez sur le bouton **Routes** et ajoutez les routes statiques suivantes : _10.0.0.0/8 et 161.26.0.0/16_ avec une adresse IP de passerelle correspondant à l'_adresse IP BCR_ du Tableau 1 Valeurs de déploiement, comme passerelle. Cette route statique permet au serveur proxy d'accéder au serveur DNS.
-13.	Cliquez sur **Save** et vérifiez que l'interface Ethernet est activée (On) et qu'elle est à l'état connecté. Cliquez sur **Done** et **Begin Installation**. 
+13.	Cliquez sur **Save** et vérifiez que l'interface Ethernet est activée (On) et qu'elle est à l'état connecté. Cliquez sur **Done** et **Begin Installation**.
 14.	Au cours du processus d'installation, définissez un mot de passe root et configurez un utilisateur.
 15.	Une fois l'installation terminée, connectez-vous en tant qu'utilisateur, puis entrez la commande _ping vmware.com_. Le nom doit être résolu avec une adresse IP et vous devez obtenir une réponse. Si vous n'obtenez pas de réponse, vérifiez les adresses IP, les règles de pare-feu et les paramètres NAT.
 
@@ -145,9 +145,9 @@ Squid n'a pas de configuration matérielle requise minimale mais la quantité de
   `yum -y update`
   `yum clean all`
 
-5. Squid est installé à l'aide de la commande suivante : `yum -y install squid`. 
+5. Squid est installé à l'aide de la commande suivante : `yum -y install squid`.
 6. Dès qu'il est installé, démarrez immédiatement Squid à l'aide de la commande suivante : `systemctl start squid`.
-7. Pour lancer Squid automatiquement au démarrage, exécutez la commande suivante : `systemctl enable squid`. 
+7. Pour lancer Squid automatiquement au démarrage, exécutez la commande suivante : `systemctl enable squid`.
 8. Vérifiez que Squid est opérationnel en exécutant la commande suivante : `systemctl status squid`.
 9. Le pare-feu de CentOS nécessite d'autoriser l'accès au port de Squid, TCP 3128, à l'aide de la commande suivante :  `firewall-cmd –add-port=3128/tcp –permanent`.
 10.	Pour sauvegarder la règle et redémarrer le service, utilisez la commande suivante : `firewall-cmd –reload`.

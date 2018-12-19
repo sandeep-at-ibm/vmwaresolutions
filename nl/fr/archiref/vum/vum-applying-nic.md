@@ -29,10 +29,10 @@ Pour chaque hôte, procédez comme suit :
 7. Si la modification ne fonctionne pas, pour revenir à l'état antérieur, exécutez la commande suivante :
   `esxcli system module set --enabled=false --module=ixgben`
 
-8. Si vous ne pouvez pas vous connecter à l'hôte sur le réseau, exécutez la commande précédente à partir de la console IPMI à l'aide de la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}}. 
+8. Si vous ne pouvez pas vous connecter à l'hôte sur le réseau, exécutez la commande précédente à partir de la console IPMI à l'aide de la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}}.
 9. Après avoir redémarré l'hôte vSphere ESXi, vous pouvez observer que le pilote ixgbe par défaut est chargé et activé.
 
-Si vous souhaitez revenir à l'état antérieur et que vous ne pouvez pas vous connecter via SSH à l'hôte vSphere ESXi, vous devez vous connecter à la console KVM pour l'hôte qui doit être rétabli via la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}}. 
+Si vous souhaitez revenir à l'état antérieur et que vous ne pouvez pas vous connecter via SSH à l'hôte vSphere ESXi, vous devez vous connecter à la console KVM pour l'hôte qui doit être rétabli via la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}}.
 
 Utilisez l'ID et le mot de passe répertoriés dans la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}} avec l'adresse IP IPMI pour vous connecter à l'interface Web d'IPMI. Vous devez être connecté au centre de données dans lequel se trouve l'hôte via le réseau privé virtuel (VPN). Pour plus d'informations, voir [Initiation au VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
 
