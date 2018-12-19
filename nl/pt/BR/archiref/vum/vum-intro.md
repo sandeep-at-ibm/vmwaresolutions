@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -54,7 +54,7 @@ Se você implementou um vCenter Server usando vSAN, consulte [Atualizando cluste
 
 Se deseja atualizar a automação de gerenciamento de infraestrutura do {{site.data.keyword.cloud_notm}}, use o console do {{site.data.keyword.vmwaresolutions_short}}.
 
-O [console do {{site.data.keyword.vmwaresolutions_short}}](https://console.bluemix.net/infrastructure/vmware-solutions/console) permite executar as ações a seguir:
+O [console do {{site.data.keyword.vmwaresolutions_short}}](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console) permite executar as ações a seguir:
 *	Fazer upgrade de licenças, por exemplo, fazer upgrade do NSX Base para outra versão
 *	Iniciar atualizações para a plataforma do vCenter Server, por exemplo, mover para a versão 2.5
 *	Visualizar o status das atualizações
@@ -64,5 +64,5 @@ Esse recurso permite a atualização automatizada apenas para os componentes de 
 
 ### Links relacionados
 
-* [VMware HCX no {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [Soluções de VMware no {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
