@@ -229,7 +229,7 @@
       <xhtml:div display="inline-block" text-align="inherit" text-decoration="inherit">Multi-Cloud Manager</xhtml:div>
      </xhtml:div>
     </foreignObject>
-    <text x="56" y="12" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">Gerenciador multi-cloud</text>
+    <text x="56" y="12" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">Gerenciador multinuvem</text>
    </switch>
   </g>
  </g>
