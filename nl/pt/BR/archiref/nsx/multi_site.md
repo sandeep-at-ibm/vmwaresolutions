@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -14,7 +14,7 @@ Um diferenciador principal entre o {{site.data.keyword.cloud}} e outras ofertas 
 
 ## Ambiente do cross-vCenter NSX
 
-O recurso cross-vCenter NSX permite a vinculação em um relacionamento primário e secundário de até nove gerenciadores NSX: um primário e oito secundários. Embora não seja necessário ter servidores vCenter em um relacionamento Enhanced Linked Mode (ELM) para que o cross-vCenter NSX funcione, isso fornece os benefícios a seguir:
+O recurso cross-vCenter NSX permite a vinculação em um relacionamento primário e secundário de até nove gerenciadores NSX: um primário e oito secundários. Embora não seja necessário ter servidores vCenter em um relacionamento do Enhanced Linked Mode (ELM) para que o cross-vCenter NSX funcione, isso fornece os benefícios a seguir:
 
 * Criação simplificada de relacionamento primário e secundário usando credenciais de Conexão Única (SSO)
 * Configuração de automação do vCenter Server e do Cloud Foundation para a resolução do nome do DNS para todos os sites que estão vinculados
@@ -22,7 +22,7 @@ O recurso cross-vCenter NSX permite a vinculação em um relacionamento primári
 
 ## Exemplo de multissite
 
-O exemplo a seguir inclui uma zona de transporte universal NSX nas topologias de gerenciamento básico e de carga de trabalho discutidas nas seções anteriores, além das características a seguir:
+O exemplo a seguir inclui uma zona de transporte universal do NSX nas topologias básicas de gerenciamento e de carga de trabalho que são discutidas nas seções anteriores e também inclui as características a seguir:
 
 * A zona de transporte universal abrange dois {{site.data.keyword.CloudDataCents_notm}} ou PODs dentro de um {{site.data.keyword.CloudDataCent_notm}}.
 * Após a zona de transporte ser incluída, múltiplas VXLANs são incluídas com um Universal Distributed Router que abrange as novas VXLANs.
