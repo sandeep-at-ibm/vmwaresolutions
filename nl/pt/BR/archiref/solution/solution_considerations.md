@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -40,7 +40,7 @@ Conclua as etapas a seguir para gerenciar o acesso à rede do {{site.data.keywor
 - Acesse os terminais de gerenciamento de instância usando a [VPN do {{site.data.keyword.cloud_notm}}](https://www.softlayer.com/vpn-access) ou a sua [Conexão do {{site.data.keyword.cloud_notm}} Direct-Link](https://www.ibm.com/cloud/direct-link).
 - Conceba uma estratégia para conectividade de rede pública de dentro de sua instância. Suas opções incluem: a amostra do VMware NSX Edge Services Gateway (ESG) do cliente, dispositivos de gateway, como o Vyatta e o FortiGate, além de servidores proxy implementados na rede do {{site.data.keyword.cloud_notm}} ou em sua própria rede acessada por meio do DirectLink.
 - Planeje se deve implementar sua carga de trabalho nas VLANs do {{site.data.keyword.cloud_notm}} com [endereços IP móveis do {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/infrastructure/subnets/getting-started.html) ou [em comutadores lógicos NSX (VXLANs) usando seus próprios endereços IP](../nsx/nsx_overview.html). Observe que o uso da rede definida por software (SDN) do NSX oferece a maior flexibilidade para gerenciar e proteger sua rede de carga de trabalho no {{site.data.keyword.cloud_notm}}.
-- Use ESGs do NSX, o [IBM Cloud Vyatta](https://console.bluemix.net/catalog/infrastructure/virtual-router-appliance) e o peer DirectLink para planejar a conectividade para cargas de trabalho (Conversão de endereço de rede, Rede privada virtual, roteamento).
+- Use ESGs do NSX, o [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) e o peer DirectLink para planejar a conectividade para cargas de trabalho (Conversão de endereço de rede, Rede privada virtual, roteamento).
 - Se estiver implementando o Cross-vCenter NSX, assegure-se de que os intervalos de ID do segmento local não estejam sendo sobrepostos antes da implementação de cargas de trabalho locais.
 
 ## Planejamento e reforço da segurança

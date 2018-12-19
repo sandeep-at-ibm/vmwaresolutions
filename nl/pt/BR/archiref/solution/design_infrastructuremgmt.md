@@ -35,7 +35,7 @@ Tabela 1. Especificações do Platform Services Controller
 | Número de vCPUs              | 2                              |
 | Memória                       | 4 GB                           |
 | Disco                         | 114 GB no armazenamento de dados VMFS local |
-| Tipo de Disco                    | Thin provisioned               |
+| Tipo de disco                    | Thin provisioned               |
 
 O PSC localizado na instância primária é designado ao domínio de SSO padrão de `vsphere.local`.
 
@@ -53,7 +53,7 @@ Tabela 2. Especificações do vCenter Server Appliance
 | Número de vCPUs              | 8                                   |
 | Memória                       | 24 GB                               |
 | Disco                         | 400 GB no armazenamento de dados local           |
-| Tipo de Disco                    | Thin provisioned                    |
+| Tipo de disco                    | Thin provisioned                    |
 
 ### Banco de dados do vCenter Server
 

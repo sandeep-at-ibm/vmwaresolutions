@@ -129,17 +129,17 @@ Tabela 1. Resumo de VLAN e sub-rede
 
 | VLAN | Tipo | Descrição |
 |:---- |:---- |:----------- |
-| Público| Primário  | Designada a hosts físicos para acesso à rede pública. Não usada na implementação inicial. |
-| Privado A | Primário  | Sub-rede única designada a hosts físicos designados pelo {{site.data.keyword.cloud_notm}}. Usada pela interface de gerenciamento para o tráfego de gerenciamento do vSphere. |
-| Privado A | Portable | Sub-rede única designada a máquinas virtuais funcionando como componentes de gerenciamento |
-| Privado A | Portable | Sub-rede única designada ao NSX VTEP |
-| Privado B | Portable | Sub-rede única designada para vSAN, se em uso |
-| Privado B | Portable | Sub-rede única designada para o NAS, se em uso |
-| Privado B | Portable | Sub-rede única designada para vMotion |
+| Pública| Primária  | Designada a hosts físicos para acesso à rede pública. Não usada na implementação inicial. |
+| Privada A | Primária  | Sub-rede única designada a hosts físicos designados pelo {{site.data.keyword.cloud_notm}}. Usada pela interface de gerenciamento para o tráfego de gerenciamento do vSphere. |
+| Privada A | Móvel | Sub-rede única designada a máquinas virtuais funcionando como componentes de gerenciamento |
+| Privada A | Móvel | Sub-rede única designada ao NSX VTEP |
+| Privada B | Móvel | Sub-rede única designada para vSAN, se em uso |
+| Privada B | Móvel | Sub-rede única designada para o NAS, se em uso |
+| Privada B | Móvel | Sub-rede única designada para vMotion |
 
 Nesse design, todos os hosts e máquinas virtuais suportados por VLAN são configurados para apontar para o roteador do cliente de “rede privada” de backend do {{site.data.keyword.cloud_notm}} como a rota padrão. Embora as instâncias do vCenter Server e do Cloud Foundation permitam o uso de Rede Definida por Software (SDN), as sobreposições de rede criadas em uma instância do VMware que incluem roteamento para sub-redes internas não são conhecidas pelos roteadores gerenciados pelo {{site.data.keyword.cloud_notm}}. Portanto, talvez seja necessário criar rotas estáticas na instância do VMware em alguns ou em todos os componentes de gerenciamento.
 
-As conexões de rede privada são configuradas para usar um tamanho de MTU de quadro gigante de 9000 para melhorar o desempenho de grandes transferências de dados, como armazenamento e vMotion. Esta é a MTU máxima que é permitida dentro do VMware e pelo {{site.data.keyword.cloud_notm}}. As conexões de rede pública usam uma MTU Ethernet padrão de 1500. Isso deve ser mantido, uma vez que qualquer mudança pode causar a fragmentação do pacote pela Internet.
+As conexões de rede privada são configuradas para usar um tamanho de MTU de quadro gigante de 9000 para melhorar o desempenho de grandes transferências de dados, como armazenamento e vMotion. Esta é a MTU máxima que é permitida dentro do VMware e pelo {{site.data.keyword.cloud_notm}}. As conexões de rede pública usam uma MTU Ethernet padrão de 1500. Isso deve ser mantido, pois quaisquer mudanças podem causar fragmentação de pacotes na internet.
 
 ## Design de armazenamento físico
 

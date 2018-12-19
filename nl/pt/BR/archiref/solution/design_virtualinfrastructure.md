@@ -123,7 +123,7 @@ Tabela 2. Atributos do NSX Manager
 | Número de vCPUs | 4 |
 | Memória          | 16 GB |
 | Disco            | 60 GB no compartilhamento do NFS de gerenciamento |
-| Tipo de Disco       | Thin-provisioned |
+| Tipo de disco                    | Thin-provisioned |
 | Rede         | **Privada A** móvel designada a componentes de gerenciamento |
 
 A figura a seguir mostra o posicionamento do NSX Manager em relação a outros componentes na arquitetura.
@@ -161,9 +161,9 @@ Tabela 3. Mapeamento de VLAN para tipos de tráfego
 
 | VLAN  | Designação | Tipo de tráfego |
 |:----- |:----------- |:------------ |
-| VLAN1 | Público      | Disponível para acesso à Internet |
-| VLAN2 | Privado A   | Gerenciamento de ESXi, gerenciamento, VXLAN (VTEP) |
-| VLAN3 | Privado B   | vSAN, NFS, vMotion |
+| VLAN1 | Pública     | Disponível para acesso à Internet |
+| VLAN2 | Privada A   | Gerenciamento de ESXi, gerenciamento, VXLAN (VTEP) |
+| VLAN3 | Privada B   | vSAN, NFS, vMotion |
 
 O tráfego de cargas de trabalho circulará em comutadores lógicos suportados pelo VXLAN.
 
@@ -173,7 +173,7 @@ Tabela 4. Comutadores distribuídos de cluster convergido
 
 | vSphere Distributed<br>Nome do comutador | Função | Rede<br>Controle de E/S | Balanceamento de Car<br>Modo | NIC Físico<br>Portas | MTU |
 |:------------- |:------------- |:------------- |:------------- |:------------- |:------------- |
-| SDDC-Dswitch-Privado | Gerenciamento do ESXi, vSAN, vSphere vMotion, terminal de túnel VXLAN, NFS (VTEP) | Ativado | Rota com base em failover explícito (vSAN, vMotion) originando porta virtual (tudo o mais) | 2 | 9.000<br>(Molduras Jumbo) |
+| SDDC-Dswitch-Private | Gerenciamento do ESXi, vSAN, vSphere vMotion, terminal de túnel VXLAN, NFS (VTEP) | Ativado | Rota com base em failover explícito (vSAN, vMotion) originando porta virtual (tudo o mais) | 2 | 9.000<br>(Molduras Jumbo) |
 | SDDC-Dswitch-Public | Tráfego de gerenciamento externo (norte-sul) | Ativado | Rota com base na porta virtual de origem | 2 | 1.500<br>(padrão) |
 
 Os nomes, o número e a ordenação dos NICs do host podem variar dependendo do {{site.data.keyword.CloudDataCent_notm}} e da seleção de hardware do host.
@@ -196,22 +196,22 @@ Tabela 6. Grupos de portas do comutador virtual de cluster convergido e VLANs
 
 | Comutador distribuído vSphere | Nome do grupo de portas | Equipe | Uplinks | ID de VLAN |
 |:------------- |:------------- |:------------- |:------------- |:---------- |
-| SDDC-Dswitch-Privado | SDDC-DPortGroup-Mgmt | Porta virtual de origem | Ativo: 0, 1 | VLAN1 |
-| SDDC-Dswitch-Privado | SDDC-DPortGroup-vMotion | Porta virtual de origem | Ativo: 0, 1 | VLAN2 |
-| SDDC-Dswitch-Privado | SDDC-DPortGroup-VSAN | Failover explícito | Ativo: 0<br>Standby: 1 | VLAN2 |
-| SDDC-Dswitch-Privado | SDDC-DPortGroup-NFS | Porta virtual de origem | Ativo: 0, 1 | VLAN2 |
-| SDDC-Dswitch-Privado | Gerado Automaticamente pelo NSX | Porta virtual de origem | Ativo: 0, 1 | VLAN1 |
+| SDDC-Dswitch-Private | SDDC-DPortGroup-Mgmt | Porta virtual de origem | Ativo: 0, 1 | VLAN1 |
+| SDDC-Dswitch-Private | SDDC-DPortGroup-vMotion | Porta virtual de origem | Ativo: 0, 1 | VLAN2 |
+| SDDC-Dswitch-Private | SDDC-DPortGroup-VSAN | Failover explícito | Ativo: 0<br>Standby: 1 | VLAN2 |
+| SDDC-Dswitch-Private | SDDC-DPortGroup-NFS | Porta virtual de origem | Ativo: 0, 1 | VLAN2 |
+| SDDC-Dswitch-Private | Gerado Automaticamente pelo NSX | Porta virtual de origem | Ativo: 0, 1 | VLAN1 |
 | SDDC-Dswitch-Public | SDDC-DPortGroup-External | Porta virtual de origem | Ativo: 0, 1 | VLAN3 |
 
 Tabela 7. Adaptadores de kernel da VM de cluster convergido
 
 | Comutador distribuído vSphere | Propósito | Grupo de portas conectadas | Serviços Ativados | MTU |
 |:-------------------------- |:------- |:-------------------- |:---------------- |:--- |
-| SDDC-Dswitch-Privado | Gerenciamento | SDDC-DPortGroup-Mgmt | Tráfego de | 1.500<br>(padrão) |
-| SDDC-Dswitch-Privado | vMotion | SDDC-DPortGroup-vMotion | Tráfego vMotion | 9.000 |
-| SDDC-Dswitch-Privado | VTEP | *Gerado automaticamente pelo NSX* | \- | 9.000 |
-| SDDC-Dswitch-Privado | VSAN | SDDC-DPortGroup-VSAN | vSAN | 9.000 |
-| SDDC-Dswitch-Privado | NAS | SDDC-DPortGroup-NFS | \-  | 9.000 |
+| SDDC-Dswitch-Private | Gerenciamento | SDDC-DPortGroup-Mgmt | Tráfego de | 1.500<br>(padrão) |
+| SDDC-Dswitch-Private | vMotion | SDDC-DPortGroup-vMotion | Tráfego vMotion | 9.000 |
+| SDDC-Dswitch-Private | VTEP | *Gerado automaticamente pelo NSX* | \- | 9.000 |
+| SDDC-Dswitch-Private | VSAN | SDDC-DPortGroup-VSAN | vSAN | 9.000 |
+| SDDC-Dswitch-Private | NAS | SDDC-DPortGroup-NFS | \-  | 9.000 |
 
 ### Configuração do NSX
 
