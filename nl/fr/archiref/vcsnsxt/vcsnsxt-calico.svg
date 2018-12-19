@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="496px"
+   height="269px"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="vcsnsxt-calico.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1020"
+     id="namedview91"
+     showgrid="false"
+     inkscape:zoom="1.984461"
+     inkscape:cx="274.49325"
+     inkscape:cy="157.67512"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6">
+    <linearGradient
+       id="mx-gradient-66b2ff-1-ffffff-1-s-0"
+       x2="0%"
+       y2="100%">
+      <stop
+         stop-color="#66B2FF"
+         offset="0"
+         id="stop9" />
+      <stop
+         stop-color="#fff"
+         offset="1"
+         id="stop11" />
+    </linearGradient>
+    <linearGradient
+       id="mx-gradient-ffffff-1-009900-1-e-0"
+       x1="100%"
+       x2="0%">
+      <stop
+         stop-color="#090"
+         offset="0"
+         id="stop14" />
+      <stop
+         stop-color="#fff"
+         offset="1"
+         id="stop16" />
+    </linearGradient>
+    <linearGradient
+       id="mx-gradient-009900-1-ffffff-1-s-0"
+       x2="0%"
+       y2="100%">
+      <stop
+         stop-color="#090"
+         offset="0"
+         id="stop19" />
+      <stop
+         stop-color="#fff"
+         offset="1"
+         id="stop21" />
+    </linearGradient>
+  </defs>
+  <g
+     transform="translate(.5 .5)"
+     id="g23">
+    <rect
+       x="265"
+       width="230"
+       height="268"
+       rx="41.4"
+       ry="41.4"
+       fill="url(#mx-gradient-66b2ff-1-ffffff-1-s-0)"
+       pointer-events="none"
+       stroke="#6c8ebf"
+       id="rect25" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g27">
+      <text
+         x="379.5"
+         y="18.17"
+         id="text29">NSX-T</text>
+      <text
+         x="379.5"
+         y="88.17"
+         id="text31">L2</text>
+      <text
+         x="379.5"
+         y="102.17"
+         id="text33">L3 (Nod/Sud)</text>
+      <text
+         x="379.5"
+         y="116.17"
+         id="text35">L4 - Règle de sécurité</text>
+      <text
+         x="379.5"
+         y="130.17"
+         id="text37">Equilibrage de charge</text>
+      <text
+         x="379.5"
+         y="144.17"
+         id="text39">Connectivité VM &amp; K8s</text>
+      <text
+         x="379.5"
+         y="208.17"
+         id="text41">De bout en bout</text>
+      <text
+         x="379.5"
+         y="220.17"
+         id="text43">Configuration et traitement des incidents</text>
+      <text
+         x="379.5"
+         y="242.17001"
+         id="text45"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         sodipodi:linespacing="125%">
+        <tspan
+           sodipodi:role="line"
+           id="tspan8163"
+           x="379.5"
+           y="242.17001">Outils opérationnels et</tspan>
+        <tspan
+           sodipodi:role="line"
+           id="tspan8165"
+           x="379.5"
+           y="257.17001">statistiques centralisées</tspan>
+      </text>
+    </g>
+    <rect
+       transform="rotate(-90,131,64.5)"
+       x="69"
+       y="-66"
+       width="124"
+       height="261"
+       rx="18.6"
+       ry="18.6"
+       fill="url(#mx-gradient-ffffff-1-009900-1-e-0)"
+       pointer-events="none"
+       stroke="#82b366"
+       id="rect47" />
+    <g
+       transform="rotate(-90,8.17,64.5)"
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g49">
+      <text
+         x="7.67"
+         y="75"
+         id="text51">Canal</text>
+    </g>
+    <rect
+       x="42"
+       y="14"
+       width="210"
+       height="60"
+       rx="9"
+       ry="9"
+       fill="url(#mx-gradient-009900-1-ffffff-1-s-0)"
+       pointer-events="none"
+       stroke="#82b366"
+       id="rect53" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g55">
+      <text
+         x="146.5"
+         y="33.5"
+         id="text57">Flannel</text>
+      <text
+         x="146.5"
+         y="47.5"
+         id="text59"
+         style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.00000048px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%;"
+         sodipodi:linespacing="125%">
+        <tspan
+           sodipodi:role="line"
+           id="tspan8151">L2 uniquement </tspan>
+        <tspan
+           sodipodi:role="line"
+           id="tspan8153">(trafic de pod Est/Ouest)</tspan>
+      </text>
+    </g>
+    <rect
+       x="44"
+       y="80"
+       width="210"
+       height="40"
+       rx="6"
+       ry="6"
+       fill="url(#mx-gradient-009900-1-ffffff-1-s-0)"
+       pointer-events="none"
+       stroke="#82b366"
+       id="rect61" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g63">
+      <text
+         x="148.5"
+         y="89.5"
+         id="text65">Calico</text>
+      <text
+         x="148.5"
+         y="103.5"
+         id="text67">L3/L4 (tables IP)</text>
+    </g>
+    <rect
+       y="174"
+       width="262"
+       height="40"
+       rx="6"
+       ry="6"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#82b366"
+       id="rect69" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g71">
+      <text
+         x="130.5"
+         y="190.5"
+         id="text73">Uniquement pour Kubernetes Networking</text>
+    </g>
+    <rect
+       y="218"
+       width="262"
+       height="40"
+       rx="6"
+       ry="6"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#82b366"
+       id="rect75" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g77">
+      <text
+         x="130.5"
+         y="227.5"
+         id="text79"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:89.99999762%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         sodipodi:linespacing="80%">
+        <tspan
+           sodipodi:role="line"
+           id="tspan8155"
+           x="130.5"
+           y="227.5"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000048px;line-height:80%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;writing-mode:lr;text-anchor:middle">Nouveaux outils opérationnels +</tspan>
+        <tspan
+           sodipodi:role="line"
+           id="tspan8157"
+           x="130.5"
+           y="238.3"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000048px;line-height:80%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;writing-mode:lr;text-anchor:middle">Différents emplacements pour les statistiques</tspan>
+      </text>
+      <text
+         x="130.5"
+         y="247.5"
+         id="text81"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:80.00000119%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         sodipodi:linespacing="80.000001%">
+        <tspan
+           sodipodi:role="line"
+           id="tspan8159"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:80.00000119%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+           x="130.5"
+           y="247.5">Pas de configuration et de traitement</tspan>
+        <tspan
+           sodipodi:role="line"
+           id="tspan8161"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:80.00000119%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+           x="130.5"
+           y="257.10001">des incidents de bout en bout</tspan>
+      </text>
+    </g>
+    <rect
+       y="130"
+       width="262"
+       height="40"
+       rx="6"
+       ry="6"
+       fill="url(#mx-gradient-009900-1-ffffff-1-s-0)"
+       pointer-events="none"
+       stroke="#82b366"
+       id="rect83" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g85">
+      <text
+         x="130.5"
+         y="139.5"
+         id="text87">Proxy NGINX/HA</text>
+      <text
+         x="130.5"
+         y="153.5"
+         id="text89">Equilibrage de charge</text>
+    </g>
+  </g>
+</svg>

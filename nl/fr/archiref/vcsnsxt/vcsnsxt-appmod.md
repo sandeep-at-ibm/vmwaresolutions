@@ -1,0 +1,48 @@
+---
+
+copyright:
+
+  years:  2016, 2018
+
+lastupdated: "2018-11-01"
+
+---
+
+# Présentation de la modernisation des applications
+
+Le diagramme ci-après présente l'architecture de référence de la modernisation des applications qui est déployée par Acme Skateboards et qui est décrite en détail dans cette documentation.
+
+Figure 1. Présentation de l'architecture
+![Diagramme général de l'architecture](vcsnsxt-aod.svg)
+
+Cette architecture hybride permet à Acme Skateboards de :
+- faire migrer des machines virtuelles VMware sur site vers {{site.data.keyword.cloud}} avec peu ou aucune durée d'indisponibilité et aucune reconfiguration d'application ;
+-	démarrer le parcours de modernisation des applications en lui permettant de se focaliser sur la conteneurisation des interfaces Web et des logiciels intermédiaires plus simples tout en permettant que d'autres bases de données plus complexes conservent leur statut de machines virtuelles ;
+-	se servir de Cloud Automation Manager (CAM) pour écrire un script IaC (Infrastructure as Code) afin de composer et d'orchestrer les services qui sont réalisés à partir de machines virtuelles et de conteneurs en vue de les intégrer à ses chaînes d'outils DevOps et sa solution ITSM.
+
+Du point de vue de l'architecture de réseau, l'architecture de référence est composée des principaux composants suivants :
+- **Virtualisation sur site** – Cluster VMware qui héberge actuellement les machines virtuelles Acme Skateboards. Ce sont ces machines virtuelles qui hébergent actuellement les applications qui seront modernisées. Ce cluster doit respecter les prérequis décrits dans le document [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) de manière à pouvoir exécuter HCX. HCX étend les réseaux locaux à {{site.data.keyword.cloud_notm}} afin de permettre aux clients de faire migrer des machines virtuelles dans l'instance VCS qui s'exécute sur {{site.data.keyword.cloud_notm}}, et dans l'autre sens si besoin.
+- **VMware vCenter Server on IBM Cloud** – VCS fournit les blocs de construction VMware fondamentaux, à savoir vSphere, vCenter Server, NSX-V, et des options de stockage, telles que vSAN ou {{site.data.keyword.cloud_notm}} Endurance, nécessaires pour déployer automatiquement une solution VMware Software Defined Data Center (SDDC). Ce cluster VMware est la cible des machines virtuelles migrées ainsi que certaines des applications modernisées dans les conteneurs hébergés dans ICP. 
+
+  Les principaux composants de l'architecture sont les suivants :
+ - **NSX-V** - NSX-V fournit la couche de virtualisation de réseau dans VCS offrant un réseau dissocié pour les machines virtuelles Acme Skateboards. NSX-V permet le mode BYOIP et isole les réseaux de charge de travail des réseaux {{site.data.keyword.cloud_notm}}. NSX-V est programmé par HCX pour créer les réseaux qui seront étendus par Acme Skateboards à partir de l'environnement local.
+ - **IBM Cloud Private** - ICP est une plateforme applicative pour le développement et la gestion d'applications conteneurisées. Il s'agit d'un environnement intégré qui inclut l'orchestrateur de conteneurs Kubernetes, un référentiel d'images privé, une console de gestion, ainsi que des infrastructures préfabriquées de surveillance et une interface graphique à partir de laquelle Acme Skateboards peut déployer, gérer, surveiller et mettre à l'échelle ses applications de façon centralisée. L'instance VCS héberge les composants ICP, les noeuds maître, les noeuds worker, etc. et les exécute en tant que machines virtuelles. 
+  -	**IBM Cloud Automation Manager** – CAM est une plateforme IaC (Infrastructure as Code) prête pour l'entreprise qui permet à partir d'un point unique de mettre à disposition des charges de travail basées sur des machines virtuelles, ainsi que des charges de travail Kubernetes tout simplement en utilisant des modèles. CAM est une application Docker qui s'exécute par dessus ICP et est étroitement intégrée pour l'autorisation, le contrôle d'accès à base de rôles (RBAC) et d'autres fonctions.
+  - **IBM Kubernetes Service** – IKS permet à l'entreprise Acme Skateboards de déployer ses applications modernisées dans des conteneurs Docker qui s'exécutent dans des clusters Kubernetes. Les modes maître sont entièrement gérés par IBM tandis que les noeuds worker présents dans le pool worker sont déployés dans le même compte {{site.data.keyword.cloud_notm}} que leur instance VCS. Les noeuds worker sont des instances de serveur virtuel dédié, public ou bare metal. Calico est installé et configuré automatiquement dans IKS. Calico fournit une connectivité de réseau sécurisée pour les conteneurs et est configuré dans IKS afin d'utiliser l'encapsulation IP-in-IP pour encapsuler les paquets qui transitent par des sous-réseaux. De plus, il utilise NAT pour les connexions sortantes à partir des conteneurs.
+  - **Direct Link** – {{site.data.keyword.cloud_notm}} Direct Link utilise le fournisseur WAN d'Acme Skateboard pour connecter son centre de données à {{site.data.keyword.cloud_notm}} afin de fournir une connexion réseau sécurisée, à faible temps d'attente et fiable. Cette connexion fournit :
+      - Un accès aux applications hébergées par le cloud à partir de vos utilisateurs d'entreprise.
+      - Le trafic entre les machines virtuelles sur site et les machines virtuelles du cloud.
+      - Le trafic entre les systèmes existants du centre de données sur site et les machines virtuelles du cloud.
+
+## Principaux avantages pour l'entreprise Acme Skateboards
+
+-	Une livraison plus rapide des projets informatiques pour les développeurs et les secteurs d'activité. En effet, le temps nécessaire à l'approvisionnement, à l'architecture, à l'implémentation et au déploiement des ressources passe de quelques semaines ou quelques mois à quelques heures. Attendre que les équipes dédiées à la mise en réseau ou à la sécurité mettent à disposition des services, tels que les équilibreurs de charge, les pare-feux, les commutateurs et les routeurs, a pour conséquence de réduire leur délai de rentabilisation. 
+-	Une sécurité renforcée au moyen de serveurs bare metal dédiés dans un cloud privé hébergé, y compris le déploiement de noeud final privé dans des services {{site.data.keyword.cloud_notm}}, tels qu'IKS et KMIP.
+-	Une gestion et une gouvernance cohérentes du cloud hybride déployé grâce à des droits d'accès administrateur complets à la gestion de la virtualisation, ce qui permet de préserver vos outils et vos scripts VMware existants, ainsi que les efforts réalisés en matière de formation.
+-	Une expertise VMware à l'échelle mondiale grâce aux services professionnels et gérés d'IBM qui couvrent plus de 30 centres de données {{site.data.keyword.CloudDataCents_notm}} dans le monde entier.
+
+Les clients qui se tournent vers des plateformes applicatives natives en cloud, telles qu'ICP et IKS, se concentrent sur la vitesse et l'innovation et perdent parfois de vue la sécurité et la mise en réseau. Cette architecture de référence montre comment VCS, ICP et IKS permettent à l'entreprise Acme Skateboards de se déplacer en toute sécurité tout au long de son parcours de modernisation des applications.
+
+## Liens connexes
+
+* [Présentation de VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
