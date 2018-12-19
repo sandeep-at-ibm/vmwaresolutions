@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -19,11 +19,11 @@ Cette conception prend en charge la connexion de stockage partagé via NFS v3 un
 Tout le stockage connecté pour cette conception est limité au stockage {{site.data.keyword.cloud_notm}} disponible dans le même {{site.data.keyword.CloudDataCent_notm}} que la solution vCenter Server. De plus, tous les disques virtuels qui sont stockés dans le magasin de données sont par défaut alloués de manière dynamique.
 {:note}
 
-L'architecture indique que les magasins de données NFS v3 sont connectés à l'aide du même nom DNS à partir du stockage {{site.data.keyword.cloud_notm}} pour la connexion au partage. De plus, le partage NFS est connecté à tous les hôtes dans le cluster vCenter Server et placé dans un cluster de magasins de données pour lequel la fonction Storage DRS est activée.
+L'architecture indique que les magasins de données NFS v3 sont connectés à l'aide du même nom DNS à partir du stockage {{site.data.keyword.cloud_notm}} pour la connexion au partage. Le partage NFS est connecté à tous les hôtes dans le cluster vCenter Server et placé dans un cluster de magasins de données pour lequel la fonction Storage DRS est activée.
 
 ## vSphere Storage Distributed Resource Scheduler (Storage DRS)
 
-Storage DRS vous permet de gérer les ressources agrégées d'un cluster de magasins de données. Lorsque la fonction Storage DRS est activée, elle fournit des recommandations relatives au placement et à la migration des disques de machine virtuelle afin d'équilibrer l'espace et les ressources d'E-S entre les magasins de données du cluster de magasins de données.
+Utilisez la fonction Storage DRS pour gérer les ressources agrégées d'un cluster de magasins de données. Lorsque la fonction Storage DRS est activée, elle fournit des recommandations relatives au placement et à la migration des disques de machine virtuelle afin d'équilibrer l'espace et les ressources d'E-S entre les magasins de données du cluster de magasins de données.
 
 Les fonctions suivantes sont disponibles lorsque la fonction Storage DRS est activée :
 * Equilibrage de charge de l'espace entre les magasins de données d'un cluster de magasins de données
@@ -36,14 +36,14 @@ Dans cette conception, Storage DRS est entièrement automatisé (valeur **Fully 
 
 L'intensité de Storage DRS est déterminé en spécifiant des seuils relatifs à l'espace qui est utilisé et le temps d'attente des entrées-sorties. Storage DRS collecte des informations d'utilisation de ressource pour les magasins de données d'un cluster de magasins de données. vCenter Server utilise ces informations pour générer des recommandations relatives au placement des disques virtuels sur les magasins de données.
 
-Lorsqu'un faible niveau d'intensité est défini pour un cluster de magasins de données, Storage DRS recommande d'effectuer des migrations Storage vMotion uniquement lorsque cela est nécessaire, par exemple, si la charge des entrées-sorties, l'utilisation de l'espace ou leur déséquilibre est élevé. Lorsqu'un niveau d'intensité élevé est défini pour un cluster de magasins de données, Storage DRS recommande d'effectuer des migrations chaque fois que le cluster de magasins de données peut bénéficier de l'équilibrage de charge de l'espace ou des entrées-sorties.
+Lorsqu'un faible niveau d'intensité est défini pour un cluster de magasins de données, Storage DRS recommande d'effectuer des migrations Storage vMotion uniquement lorsque cela est nécessaire. Par exemple, si la charge des entrées-sorties, l'utilisation de l'espace ou leur déséquilibre est élevé, Storage DRS recommande d'effectuer une migration. Si un niveau d'intensité élevé est défini pour un cluster de magasins de données, Storage DRS recommande d'effectuer des migrations chaque fois que le cluster de magasins de données peut bénéficier de l'équilibrage de charge de l'espace ou des entrées-sorties.
 
 Les catégories de seuil suivantes sont disponibles dans le cluster de magasins de données :
 
 * Utilisation de l'espace : Storage DRS génère des recommandations ou effectue des migrations lorsque le pourcentage d'utilisation de l'espace sur le magasin de données est supérieur au seuil que vous avez défini dans le client Web vSphere.
 * Temps d'attente des entrées-sorties : Storage DRS génère des recommandations ou effectue des migrations lorsque le temps d'attente des entrées-sorties 90ème percentile mesuré sur une journée pour le magasin de données est supérieur au seuil.
 
-Dans cette conception, les paramètres d'exécution de Storage DRS sont activés et les valeurs par défaut respectives des seuils sont conservées. Il est vivement recommandé de modifier ces valeurs en fonction des exigences des entrées-sorties de la charge de travail et de la sensibilité de temps d'attente.
+Dans cette conception, les paramètres d'exécution de Storage DRS sont activés et les valeurs par défaut respectives des seuils sont conservées. Modifiez ces valeurs en fonction des exigences des entrées-sorties de la charge de travail et de la sensibilité de temps d'attente.
 
 Le tableau suivant présente les paramètres du client Web VMware vSphere :
 
@@ -63,7 +63,7 @@ Lorsque le paramètre SIOC (Storage I/O Control) est activé dans l'environnemen
 
 Vous devez définir un seuil pour que la fonction SIOC puisse déterminer quand une unité de stockage est saturée ou contrainte. Le temps d'attente du seuil de surcharge est différent selon les types de stockage. Cette conception recommande et implémente un temps d'attente de seuil de 10 millisecondes.
 
-Vous pouvez également limiter des disques virtuels individuels de machines virtuelles individuelles ou leur accorder des partages différents grâce à la fonction SIOC. La limitation des disques et l'octroi de différents partages vous permettent de faire correspondre et d'aligner l'environnement à la charge de travail avec le nombre d'IOPS de volume de stockage de fichier acquis. Cette limite est définie par le nombre d'IOPS et il est possible de définir une pondération différente ou des partages.
+Vous pouvez limiter des disques virtuels individuels de machines virtuelles individuelles ou leur accorder des partages différents grâce à la fonction SIOC. La limitation des disques et l'octroi de différents partages vous permettent de faire correspondre et d'aligner l'environnement à la charge de travail avec le nombre d'IOPS de volume de stockage de fichier acquis. Cette limite est définie par le nombre d'IOPS et il est possible de définir une pondération différente ou des partages.
 
 Les partages de disques virtuels ayant pour valeur **High** (2 000 partages) reçoivent deux fois plus d'entrées-sorties qu'un disque ayant pour valeur **Normal** (1 000 partages) et quatre fois plus qu'un disque ayant pour valeur **Low** (500 partages). La valeur **Normal** est définie par défaut pour toutes les machines virtuelles, par conséquent, vous devez ajuster les valeurs **Normal** pour les machines virtuelles qui l'exigent.
 
