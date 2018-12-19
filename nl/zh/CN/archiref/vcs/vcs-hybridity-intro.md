@@ -4,10 +4,10 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-13"
 
 ---
-# vCenter Server Hybridity Bundle 概述
+# vCenter Server on IBM Cloud with Hybridity Bundle 概述
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是一种托管的专用云，可帮助您快速、轻松地将内部部署基础架构扩展到云中，以实现安全、无缝的基础架构混合和真正的应用程序移动性。
 
