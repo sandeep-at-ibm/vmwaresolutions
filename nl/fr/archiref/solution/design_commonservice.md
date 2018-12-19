@@ -71,7 +71,7 @@ Cette conception intègre les services DNS sur les serveurs Active Directory ave
 
 ## Services NTP
 
-Cette conception utilise les serveurs NTP de l'infrastructure {{site.data.keyword.cloud_notm}}. Tous les composants déployés sont configurés pour utiliser ces serveurs NTP. Le fait que tous les composants de la conception utilisent le même serveur NTP est essentiel pour que les certificats et l'authentification Active Directory puissent fonctionner correctement.
+Cette conception utilise les serveurs NTP de l'infrastructure {{site.data.keyword.cloud_notm}}. Tous les composants déployés sont configurés pour utiliser ces serveurs NTP. Il est essentiel que tous les composants de la conception utilisent le même serveur NTP pour que les certificats et l'authentification Active Directory puissent fonctionner correctement.
 
 Figure 1. Services NTP
 
