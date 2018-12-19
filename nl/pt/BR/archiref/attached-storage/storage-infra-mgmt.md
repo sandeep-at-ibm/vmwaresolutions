@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-13"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Gerenciamento de infra-estrutura de armazenamento anex
 
@@ -20,11 +24,12 @@ A virtualização de rede usada neste design usa o vSphere Distributed Switch (v
 
 ## Comutador Distribuído do vSphere
 
-Conforme indicado anteriormente, outra VLAN é criada dentro da solução do vCenter Server e usada para conectar o ponto de montagem NFS aos hosts ESXi no cluster existente. Como a solução vCenter Server já tem um vDS associado à rede privada, outro grupo de portas é criado e identificado com o número de VLAN adicional, já que essa VLAN adicional não é nativa.
+Outra VLAN é criada dentro da solução vCenter Server e usada para conectar o ponto de montagem NFS aos hosts ESXi no cluster existente. Como a solução vCenter Server tem um vSphere Distributed Switch associado à rede privada, outro grupo de portas é criado e identificado com o número de VLAN adicional, já que essa VLAN adicional não é nativa.
 
 A tabela a seguir descreve as configurações padrão do novo grupo de portas.
 
-**Importante**: não mude essas configurações padrão.
+Não mude essas configurações padrão.
+{:important}
 
 Tabela 1. Resumo do grupo da porta NFS
 
@@ -35,7 +40,7 @@ Tabela 1. Resumo do grupo da porta NFS
 | Balanceamento de | Rotear base na porta virtual de origem |
 | Uplinks Ativos | Uplink1 e uplink2 |
 
-Além da criação do grupo de portas vDS para tráfego de armazenamento do NFS, uma porta VMkernel é criada em cada host do vSphere ESXi na implementação e designada ao grupo de portas SDDC-DPG-NFS. Um endereço IP também é designado à porta VMkernel por meio da sub-rede móvel privada que está associada à VLAN do armazenamento conectado, ou seja, a VLAN B privada B e sua MTU é configurada como 9000 para suportar quadros gigantes.
+Além da criação do grupo de portas do vDS para tráfego de armazenamento NFS, uma porta VMkernel é criada em cada host ESXi vSphere durante a implementação e designada ao grupo de portas SDDC-DPG-NFS. Um endereço IP também é designado à porta VMkernel por meio da sub-rede móvel privada que está associada à VLAN do armazenamento conectado, ou seja, a VLAN B privada B e sua MTU é configurada como 9000 para suportar quadros gigantes.
 
 Figura 1. Grupos de portas e uplinks do vDS privado
 

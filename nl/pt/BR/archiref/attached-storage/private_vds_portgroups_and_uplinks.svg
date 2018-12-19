@@ -137,7 +137,7 @@
 	<rect x="290.9" y="145.4" class="st4" width="2" height="0.7"/>
 	<rect x="283.4" y="141.3" class="st4" width="6.8" height="0.7"/>
 </g>
-<text transform="matrix(1 0 0 1 176.5 29)" class="st1 st7">SDDC-Dswitch-Privado</text>
+<text transform="matrix(1 0 0 1 176.5 29)" class="st1 st7">SDDC-Dswitch-Private</text>
 <text transform="matrix(1 0 0 1 317.5 96.5)" class="st1 st2">uplink1 (Adaptador 1NIC)</text>
 <text transform="matrix(1 0 0 1 318.5 145.5)" class="st1 st2">uplink2 (Adaptador 1NIC)</text>
 <text transform="matrix(1 0 0 1 271 117)" class="st1 st8">vm nic0</text>
