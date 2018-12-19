@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -18,7 +18,7 @@ La fonctionnalité cross-vCenter NSX permet d'effectuer une liaison dans des rel
 
 * La création de relations principales et secondaires en utilisant les données d'identification SSO (Single Sign-On)
 * La configuration de l'automatisation de vCenter Server et Cloud Foundation pour la résolution de nom DNS pour tous les sites qui sont reliés ensemble
-* Un seul panneau de gestion unique sur tous les sites pour NSX et les fonctions normales de vCenter
+* La gestion à partir d'un point unique sur tous les sites pour NSX et les fonctions normales de vCenter
 
 ## Exemple de topologie multisite
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -91,7 +91,7 @@ Tableau 4. Configuration de la conversion NAT pour NSX ESG
 
 ### Routage
 
-Comme les services au sein des machines virtuelles doivent passer par la passerelle Management ESG, ils peuvent aussi avoir besoin d'accéder aux services {{site.data.keyword.cloud_notm}} au sein du réseau privé {{site.data.keyword.cloud_notm}} du client. Ci-dessous figure la configuration nécessaire pour établir cette communication.
+Comme les services au sein des machines virtuelles devant passer par la passerelle ESG de gestion peuvent aussi avoir besoin d'accéder aux services {{site.data.keyword.cloud_notm}} au sein du réseau privé {{site.data.keyword.cloud_notm}} du client, la configuration décrite ci-dessous est nécessaire pour établir cette communication.
 
 Alors qu'il est difficile de prédire la plage d'adresses IP de destination nécessaire comme destination pour les connexions Internet, tout service déployé et géré par {{site.data.keyword.cloud_notm}} pointe vers la passerelle Management ESG comme passerelle par défaut. Une route statique est obligatoire pour forcer le trafic via le routeur BCR {{site.data.keyword.cloud_notm}} pour les services qui nécessitent des connexions aux réseaux externes.
 
@@ -133,7 +133,7 @@ Tableau 6. Configuration de pare-feu NSX ESG
 
 ## IBM Workload NSX Edge
 
-la passerelle IBM Workload ESG fait partie d'une topologie simple conçue pour la communication des charges de travail sur le réseau. La section suivante décrit le plan de conception pour savoir où connecter les charges de travail à un réseau au sein d'une instance Cloud Foundation ou vCenter Server. Il s'agit du point de départ pour la connexion de réseaux locaux et d'espace d'adresses IP à une instance Cloud Foundation ou vCenter Center particulière et constitue la base d'une véritable architecture de cloud hybride.
+la passerelle IBM Workload ESG fait partie d'une topologie simple conçue pour la communication des charges de travail sur le réseau. La section suivante décrit le plan de conception pour savoir où connecter les charges de travail à un réseau au sein d'une instance Cloud Foundation ou vCenter Server. Il s'agit du point de départ pour la connexion de réseaux locaux et d'espace d'adresses IP à une instance Cloud Foundation ou vCenter Server particulière et constitue la base d'une véritable architecture de cloud hybride.
 
 Un réseau client connecté à la fois à des réseaux {{site.data.keyword.cloud_notm}} publics et privés permet l'accès des charges de travail au trafic entrant et sortant sur Internet, mais permet également la création d'un VPN de site à site à partir de réseaux {{site.data.keyword.cloud_notm}} publics ou privés. Cela contribue à diminuer considérablement la rentabilité en ce qui concerne la connexion aux réseaux locaux car il peut s'écouler des mois pour activer un réseau étendu (WAN) dédié en raison des exigences des clients en matière de sécurité. Cependant, une fois qu'un lien dédié est instauré, le VPN peut être inversé pour passer à travers ce lien sans affecter le réseau dissocié dans le tunnel VPN ou dans l'instance Cloud Foundation ou vCenter Server. Une fois cette opération effectuée, l'interface publique de la passerelle Workload ESG peut être supprimée par mesure de sécurité, si nécessaire.
 
@@ -185,7 +185,7 @@ Tableau 9. Configuration du routeur DLR et de l'adresse IP de la passerelle Work
 
 ### Définitions de conversion NAT pour IBM Workload NSX Edge
 
-La conversion NAT est employée sur la passerelle Workload ESG afin d'autoriser la circulation du trafic réseau d'un espace d'adresses IP à un autre. Pour la passerelle Workload ESG, la conversion NAT est nécessaire pour permettre la communication vers les destinations Internet, mais aussi pour communiquer avec n'importe quelles plages d'adresses IP sourcées {{site.data.keyword.cloud_notm}}. Pour cette conception, le trafic des charges de travail est autorisé pour la sortie sur Internet, mais pas pour la gestion ou tout autre réseau {{site.data.keyword.cloud_notm}}. Ainsi, seule une conversion SNAT doit être définie sur la passerelle Workload ESG. Notez que le sous-réseau portable Workload complet est configuré pour passer par la conversion SNAT.
+La conversion NAT est employée sur la passerelle Workload ESG afin d'autoriser la circulation du trafic réseau d'un espace d'adresses IP à un autre. Pour la passerelle Workload ESG, la conversion NAT est nécessaire pour permettre la communication vers les destinations Internet, mais aussi pour communiquer avec n'importe quelles plages d'adresses IP sourcées {{site.data.keyword.cloud_notm}}. Pour cette conception, le trafic des charges de travail est autorisé pour la sortie sur Internet, mais pas pour la gestion ou tout autre réseau {{site.data.keyword.cloud_notm}}. Ainsi, seule une conversion SNAT doit être définie sur la passerelle Workload ESG. L'ensemble du sous-réseau portable Workload est configuré pour passer par la conversion SNAT.
 
 Alors qu'il est possible d'utiliser la conversion NAT pour autoriser la communication des charges de travail sur plusieurs instances Cloud Foundation ou vCenter Server, il n'est pas possible de l'utiliser lorsque plusieurs charges de travail doivent être connectées sur plusieurs instances. Pour consulter des exemples d'utilisation des fonctions avancées de NSX pour créer un réseau de transport de superposition L2 sur des instances Cloud Foundation ou vCenter Server, voir [Architecture multisite](multi_site.html).
 
