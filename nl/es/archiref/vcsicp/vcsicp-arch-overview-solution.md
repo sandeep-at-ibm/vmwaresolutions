@@ -10,18 +10,18 @@ lastupdated: "2018-11-06"
 
 # Componentes de la solución
 
-## Componentes de VCS
+## Componentes de VMware vCenter Server on IBM Cloud
 
-Figura 1. Diagrama del entorno VCS
+Figura 1. Diagrama del entorno de vCenter Server
 ![Entorno VCS](vcsicp-vcsenv.svg)
 
 ### Controlador de servicios de la plataforma
 
-El despliegue de VCS utiliza un único controlador externo de servicios de la plataforma, instalado en una subred portátil en la VLAN privada asociada a las máquinas virtuales de gestión. Su pasarela predeterminada se establece en el direccionador del cliente de fondo (BCR).
+El despliegue de vCenter Server utiliza un único controlador externo de servicios de la plataforma, instalado en una subred portátil en la VLAN privada asociada a las máquinas virtuales (VM) de gestión. Su pasarela predeterminada se establece en el direccionador del cliente de fondo (BCR).
 
 ### vCenter Server
 
-Al igual que el controlador de servicios de la plataforma, vCenter Server se despliega como un dispositivo. Además, vCenter Server se instala en una subred portátil en la VLAN privada asociada a las máquinas virtuales de gestión. Su pasarela predeterminada se establece en la dirección IP asignada en el BCR para dicha subred determinada.
+Al igual que el controlador de servicios de la plataforma, vCenter Server se despliega como un dispositivo. Además, el vCenter Server se instala en una subred portátil en la VLAN privada asociada con las VM de gestión. Su pasarela predeterminada se establece en la dirección IP asignada en el BCR para dicha subred determinada.
 
 ### NSX Manager
 
@@ -33,7 +33,7 @@ La automatización de {{site.data.keyword.cloud}} despliega tres controladores N
 
 ### NSX Edge / DLR
 
-Se despliegan pares NSX Edge Services Gateway (ESG). En todos los casos, se utiliza un par de pasarela para el tráfico de salida de los componentes de automatización que residen en la red privada. Para vCenter Server e ICP, una segunda pasarela, conocida como el borde gestionado por el cliente, se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada. El administrador puede configurar los componentes NSX necesarios como, por ejemplo, el direccionador lógico distribuido (DLR), los conmutadores lógicos y los cortafuegos. La [guía de red de vCenter Server](../vcsnsxt/vcsnsxt-intro.html) contiene más detalles sobre el diseño de red.
+Se despliegan pares NSX Edge Services Gateway (ESG). En todos los casos, se utiliza un par de pasarela para el tráfico de salida de los componentes de automatización que residen en la red privada. Para vCenter Server e {{site.data.keyword.cloud_notm}} Private (ICP), una segunda pasarela, conocida como el borde gestionado por el cliente, se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada. El administrador puede configurar los componentes NSX necesarios como, por ejemplo, el direccionador lógico distribuido (DLR), los conmutadores lógicos y los cortafuegos. La [guía de red de vCenter Server](../vcsnsxt/vcsnsxt-intro.html) contiene más detalles sobre el diseño de red.
 
 En la tabla siguiente se resumen las especificaciones de ICP ESG/DLR.
 
@@ -54,10 +54,10 @@ Edge tamaño Compacto | Número de vCPU	1
 Memoria	| Disco de 512 MB	| 1000 GB en almacén de datos local
 
 ## Componentes de ICP
-{{site.data.keyword.cloud_notm}} Private es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones de contenedor locales. Es un entorno integrado para gestionar contenedores que incluye el orquestador de contenedores Kubernetes,
+ICP es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones de contenedor locales. Es un entorno integrado para gestionar contenedores que incluye el coordinador de contenedores Kubernetes,
 un repositorio de imágenes privadas, una consola de gestión e infraestructuras de supervisión.
 
-Figura 2. Despliegue de ICP virtual con VCS
+Figura 2. Despliegue de ICP virtual con vCenter Server
 ![Despliegue de ICP virtual con VCS](vcsicp-virtual-icp-deployment-vcs.svg)
 
 ###	Nodo de arranque
@@ -66,7 +66,7 @@ Se utiliza un nodo de arranque o de rutina de carga (opcional) para ejecutar la 
 
 ### Nodo maestro
 
-Un nodo maestro proporciona servicios de gestión y controla los nodos trabajadores de un clúster. El nodo maestro contiene los procesos responsables de la asignación de recursos, el mantenimiento del estado, la planificación y la supervisión. Dado que un entorno de alta disponibilidad (HA) contiene varios nodos maestro, si el nodo maestro inicial falla, la lógica de la migración tras error promociona automáticamente otro nodo y le asigna el rol de maestro. Los hosts que pueden actuar como nodo maestro se denominan candidatos a maestro.
+Un nodo maestro proporciona servicios de gestión y controla los nodos trabajadores de un clúster. El nodo maestro contiene los procesos responsables de la asignación de recursos, el mantenimiento del estado, la planificación y la supervisión. Dado que un entorno de alta disponibilidad (HA) tiene más de un nodo maestro, si el nodo maestro inicial falla, la lógica de la migración tras error promociona automáticamente otro nodo y le asigna el rol de maestro. Los hosts que pueden actuar como nodo maestro se denominan candidatos a maestro.
 
 ###	Nodo trabajador
 
@@ -74,17 +74,17 @@ Un nodo trabajador es un nodo que proporciona un entorno contenerizado para ejec
 
 ### Nodo proxy
 
-Un nodo proxy es un nodo que transmite la solicitud externa a los servicios creados dentro del clúster. Dado que un entorno de alta disponibilidad (HA) contiene varios nodos proxy, si el nodo proxy inicial falla, la lógica de la migración tras error promociona automáticamente otro nodo y le asigna el rol de proxy. Aunque puede utilizar un nodo único como maestro y proxy, es mejor utilizar nodos proxy dedicados para reducir la carga en el nodo maestro. Un clúster debe contener al menos un nodo proxy si se necesita equilibrio de carga dentro del clúster.
+Un nodo proxy es un nodo que transmite la solicitud externa a los servicios creados dentro del clúster. Dado que un entorno de alta disponibilidad (HA) tiene más de un nodo proxy, si el nodo proxy inicial falla, la lógica de la migración tras error promociona automáticamente otro nodo y le asigna el rol de proxy. Aunque puede utilizar un nodo único como maestro y proxy, utilice nodos proxy dedicados para reducir la carga en el nodo maestro. Un clúster debe tener al menos un nodo proxy si se necesita equilibrio de carga dentro del clúster.
 
 ### Nodo de gestión
 
-Un nodo de gestión es un nodo opcional que aloja únicamente servicios de gestión como, por ejemplo, supervisión, calibración y registro. Mediante la configuración de nodos de gestión dedicados, puede evitar que el nodo maestro se sobrecargue. Solo puede habilitar el nodo de gestión durante la instalación de {{site.data.keyword.cloud_notm}} Private.
+Un nodo de gestión es un nodo opcional que aloja únicamente servicios de gestión como, por ejemplo, supervisión, calibración y registro. Mediante la configuración de nodos de gestión dedicados, puede evitar que el nodo maestro se sobrecargue. Solo puede habilitar el nodo de gestión durante la instalación de ICP.
 
-###	Nodo VA
+###	Nodo de Vulnerability Advisor
 
-Un nodo de VA (Vulnerability Advisor) es un nodo opcional que se utiliza para ejecutar los servicios de Vulnerability Advisor. Los servicios de Vulnerability Advisor consumen muchos recursos. Si utiliza el servicio Vulnerability Advisor, especifique un nodo VA dedicado.
+Un nodo de Vulnerability Advisor es un nodo opcional que se utiliza para ejecutar los servicios de Vulnerability Advisor. Los servicios de Vulnerability Advisor consumen muchos recursos. Si utiliza el servicio Vulnerability Advisor, especifique un nodo VA dedicado.
 
-Especificaciones de máquina virtual necesarias para una instancia ICP de alta disponibilidad:
+Se necesitan las siguientes especificaciones de VM para una instancia de ICP de alta disponibilidad:
 
 Tabla 3. Especificaciones de máquina virtual ICP
 
@@ -107,7 +107,7 @@ trabajador  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 ## Componentes de CAM
 
-{{site.data.keyword.cloud_notm}} Automation Manager (CAM) es una plataforma de gestión de autoservicio multinube que se ejecuta en ICP que permite a los desarrolladores y a los administradores satisfacer las necesidades de la empresa.
+{{site.data.keyword.cloud_notm}} Automation Manager (CAM) es una plataforma de gestión de autoservicio multinube de autoservicio que se ejecuta en ICP que permite a los desarrolladores y a los administradores a satisfacer las necesidades de la empresa.
 
 Figura 3. Referencia de componentes de CAM
 ![Referencia de componentes de CAM](vcsicp-cam-component-ref.svg)
@@ -116,13 +116,13 @@ Figura 3. Referencia de componentes de CAM
 
 Proporciona un acceso de proxy nginx a CAM.
 
-### IU de CAM
+### Interfaz de usuario de CAM
 
-Los componentes de la interfaz de usuario se dividen entre varios contenedores: IU de conexiones en la nube, IU de la biblioteca de plantillas e IU de instancias desplegadas.
+Los componentes de la interfaz de usuario se dividen en más de un contenedor. Los componentes se incluyen en la interfaz de usuario de conexiones de la nube, en la interfaz de usuario de la biblioteca de plantillas y en la interfaz de usuario de las instancias desplegadas.
 
 ### API de CAM
 
-Las API de CAM se dividen en varios contenedores.
+Las API de CAM se dividen en más de un contenedor.
 
 ### Helm
 
@@ -130,7 +130,7 @@ Un contenedor con los binarios necesarios para desplegar diagramas de helm en cl
 
 ### Terraform
 
-Un contenedor con los binarios necesarios para desplegar recursos de Terraform en varias nubes.
+Un contenedor con los archivos binarios necesarios para desplegar recursos de Terraform en varias nubes.
 
 ### Registros
 
@@ -146,7 +146,7 @@ La base de datos Redis se utiliza para almacenar la memoria caché de sesiones y
 
 ### Diseñador de plantillas
 
-Una interfaz gráfica de usuario para crear plantillas de Terraform, con capacidad de arrastrar y soltar módulos de Terraform.
+Una interfaz gráfica de usuario para crear plantillas de Terraform, con capacidad de arrastrar módulos de Terraform.
 
 ### Base de datos Maria
 
@@ -154,4 +154,4 @@ La base de datos para la aplicación del diseñador de plantillas.
 
 ### Enlaces relacionados
 
-* [Visión general de VCS con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
