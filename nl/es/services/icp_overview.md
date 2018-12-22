@@ -14,7 +14,7 @@ lastupdated: "2018-11-09"
 
 # Visión general de IBM Cloud Private Hosted
 
-El servicio {{site.data.keyword.cloud}} Private Hosted despliega automáticamente {{site.data.keyword.cloud_notm}} Private Hosted en sus instancias de VMware vCenter Server. Este servicio incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware y {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}.
+El servicio {{site.data.keyword.cloud}} Private Hosted despliega automáticamente {{site.data.keyword.cloud_notm}} Private Hosted en sus instancias de VMware vCenter Server. Este servicio incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware e {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}.
 
 Este servicio está disponible para las instancias siguientes:
 * Instancias de vCenter Server desplegadas en la versión V2.5 y posteriores o actualizadas a las mismas
