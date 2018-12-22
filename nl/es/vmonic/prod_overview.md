@@ -23,7 +23,7 @@ Puede desplegar fácilmente sus entornos virtuales de VMware y gestionar los rec
   <dt>Perfecta integración</dt>
   <dd>Permite una integración perfecta entre la nube híbrida y la infraestructura de {{site.data.keyword.cloud_notm}}.</dd>
   <dt>Suministro rápido</dt>
-  <dd>Automatiza el despliegue y la configuración del entorno VMware, lo que le permite desplegar rápidamente un entorno VMware de nivel de empresa con servidores virtuales y {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} a petición.</dd>
+  <dd>Automatiza el despliegue y la configuración del entorno VMware, lo que le permite desplegar rápidamente un entorno VMware de nivel de empresa con servidores virtuales e {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} a petición.</dd>
   <dt>Simplificación</dt>
   <dd>Puede consumir una plataforma de nube VMware sin la necesidad de identificar, adquirir, desplegar y gestionar la infraestructura física subyacente (cálculo, almacenamiento y red) y las licencias de software.</dd>
   <dt>Flexibilidad en cuanto a ampliación y reducción</dt>
@@ -114,7 +114,7 @@ Para obtener más información, consulte [Visión general de HyTrust KeyControl 
 
 ### IBM Cloud Private Hosted
 
-{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware y {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}.
+{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware e {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}.
 
 Para obtener más información, consulte [Visión general de {{site.data.keyword.cloud_notm}} Private Hosted](../services/icp_overview.html).
 

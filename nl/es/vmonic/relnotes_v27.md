@@ -70,7 +70,7 @@ Los siguientes documentos técnicos están ahora disponibles en la sección *Con
 * [Arquitectura de la solución NSX Edge Services Gateway](../archiref/nsx/nsx_overview.html)
 * [Guía de VMware Update Manager](../archiref/vum/vum-intro.html)
 * [Guía del sistema de red de vCenter Server](../archiref/vcsnsxt/vcsnsxt-intro.html)
-* [Guía de vCenter Server y {{site.data.keyword.cloud_notm}} Private](../archiref/vcsicp/vcsicp-intro.html)
+* [Guía de vCenter Server e {{site.data.keyword.cloud_notm}} Private](../archiref/vcsicp/vcsicp-intro.html)
 * [Guía de vCenter Server y del servicio IBM Kubernetes](../archiref/vcsiks/vcsiks-intro.html)
 * [Guía de VMware y Skate Advisor Concept Car](../archiref/vcscar/vcscar-intro.html)
 * [VMware: el proceso de modernización de Stock Trader](../archiref/vcscontent/vcscontent-modjourney.html)
