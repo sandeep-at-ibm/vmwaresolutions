@@ -26,7 +26,7 @@ IBM Resiliency Services Global Command Center gestiona todas las funciones media
 
 Para obtener más información, consulte [IBM Resiliency Orchestration](https://www.ibm.com/us-en/marketplace/disaster-recovery-orchestration).
 
-## IBM Managed Services para Zerto (sin orquestación)
+## IBM Managed Services para Zerto (sin coordinación)
 
 En este modelo, se suministra una solución de DR completamente gestionada para Zerto on {{site.data.keyword.cloud_notm}}. Este modelo resulta adecuado si desea un servicio gestionado solo para Zerto Virtual Replication, sin el servicio {{site.data.keyword.cloud_notm}} Resiliency Orchestration en {{site.data.keyword.cloud_notm}}.
 
