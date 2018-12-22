@@ -124,7 +124,7 @@ Tabla 2. Atributos de NSX Manager
 | Memoria          | 16 GB |
 | Disco            | 60 GB en la compartición NFS de gestión |
 | Tipo de disco       | Aprovisionamiento ligero |
-| Red         | **Privado A** portátil diseñado para los componentes de gestión |
+| Red         | **Privada A** portátil diseñada para los componentes de gestión |
 
 En la figura siguiente se muestra la ubicación del NSX Manager en relación con otros componentes de la arquitectura.
 
@@ -193,7 +193,7 @@ El grupo de puertos de vSAN utiliza la migración tras error explícita con acti
 
 Tabla 6. Grupos de puertos de conmutador virtual y VLAN de clústeres convergentes
 
-| Conmutador distribuido de vSphere | Nombre del grupo de puertos | Equipo | Enlaces ascendentes | ID de VLAN |
+| Conmutador distribuido de vSphere | Nombre del grupo de puertos | Agrupación | Enlaces ascendentes | ID de VLAN |
 |:------------- |:------------- |:------------- |:------------- |:---------- |
 | SDDC-Dswitch-Private | SDDC-DPortGroup-Mgmt | Puerto virtual de origen | Activo: 0, 1 | VLAN1 |
 | SDDC-Dswitch-Private | SDDC-DPortGroup-vMotion | Puerto virtual de origen | Activo: 0, 1 | VLAN2 |
