@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -91,15 +91,15 @@ Tabla 4. Configuración NAT de NSX ESG
 
 ### Direccionamiento
 
-Es posible que los servicios de VM que tienen que cruzar la ESG de gestión también tengan que llegar a los servicios de {{site.data.keyword.cloud_notm}} dentro de la red privada de {{site.data.keyword.cloud_notm}} del cliente. Para lograr dicha comunicación es necesaria la configuración siguiente.
+Es posible que los servicios de VM que tienen que cruzar la ESG de gestión también tengan que llegar a los servicios de {{site.data.keyword.cloud_notm}} dentro de la red privada de {{site.data.keyword.cloud_notm}} del cliente. Para conseguir dicha comunicación, se necesita la configuración siguiente.
 
-Aunque es difícil predecir qué rango de IP de destino es necesario como destino para las conexiones destinadas a Internet, cualquier servicio que esté desplegado y gestionado por {{site.data.keyword.cloud_notm}} apunta al ESG de gestión como su pasarela predeterminada. Se necesita una ruta estática para forzar el tráfico a través del BCR de {{site.data.keyword.cloud_notm}} para las conexiones de red externa necesarios para los servicios.
+Aunque es difícil predecir qué rango de IP de destino se necesita como destino para las conexiones destinadas a Internet, cualquier servicio que esté desplegado y gestionado por {{site.data.keyword.cloud_notm}} apunta al ESG de gestión como su pasarela predeterminada. Se necesita una ruta estática para forzar el tráfico a través del BCR de {{site.data.keyword.cloud_notm}} para las conexiones de red externa necesarios para los servicios.
 
 Se recomiendan las siguientes configuraciones para cualquier servicio que esté utilizando el ESG de gestión para cruzar una instancia de Cloud Foundation o vCenter Server:
 * La pasarela predeterminada es un ESG de gestión.
 * Se necesita una ruta estática para los destinos internos de {{site.data.keyword.cloud_notm}}.
 
-Si es necesario que el servicio o la VM accedan al ESG del cliente, las rutas estáticas se deben mantener dentro del servicio individual o la VM, así como apuntar al ESG del cliente.
+Si es necesario que el servicio o la VM accedan al ESG del cliente, las rutas estáticas se deben mantener dentro del servicio individual o la VM y deben apuntar al ESG del cliente.
 
 Actualmente no hay ningún protocolo de direccionamiento automático configurado para el ESG de gestión.
 
@@ -135,7 +135,7 @@ Tabla 6. Configuración de cortafuegos de NSX ESG
 
 El ESG de carga de trabajo de IBM forma parte de una topología simple que está pensada para la comunicación de red de carga de trabajo. En la sección siguiente se describe la intención de diseño de dónde adjuntar cargas de trabajo a una red dentro de una instancia de Cloud Foundation o vCenter Server. Este es un punto de partida para adjuntar redes locales y espacios IP a una instancia particular de Cloud Foundation o vCenter Center y es la base para una auténtica arquitectura de nube híbrida.
 
-Una red de cliente conectada tanto a las redes públicas y privadas de {{site.data.keyword.cloud_notm}} permite el acceso de la carga de trabajo en o desde tráfico destinado a Internet, pero también permite que se cree una VPN de sitio a sitio desde redes públicas o privadas de {{site.data.keyword.cloud_notm}}. Esto permite disminuir drásticamente el tiempo con respecto a la conexión a las redes locales, ya que puede llevar meses traer una red de área amplia dedicada (WAN) debido a los requisitos de seguridad del cliente. Sin embargo, después de que haya un enlace dedicado, la VPN se puede volcar para que cruce dicho enlace sin afectar a la red de superposición dentro del túnel VPN o dentro de la instancia de Cloud Foundation o vCenter Server. Una vez que se haya realizado esto, la interfaz pública para el ESG de carga de trabajo se puede eliminar si es necesario desde una perspectiva de seguridad.
+Una red de cliente que esté conectada tanto a las redes públicas y privadas de {{site.data.keyword.cloud_notm}} permite el acceso de la carga de trabajo en o desde tráfico destinado a Internet, pero también permite que se cree una VPN de sitio a sitio desde redes públicas o privadas de {{site.data.keyword.cloud_notm}}. Esto permite disminuir drásticamente el tiempo con respecto a la conexión a las redes locales, ya que puede llevar meses traer una red de área amplia dedicada (WAN) debido a los requisitos de seguridad del cliente. Sin embargo, después de que haya un enlace dedicado, la VPN se puede volcar para que cruce dicho enlace sin afectar a la red de superposición dentro del túnel VPN o dentro de la instancia de Cloud Foundation o vCenter Server. Una vez que se haya realizado esto, la interfaz pública para el ESG de carga de trabajo se puede eliminar si es necesario desde una perspectiva de seguridad.
 
 La topología de la figura siguiente consta de los siguientes componentes de NSX:
 * NSX Edge Appliance (ESG)
@@ -185,7 +185,7 @@ Tabla 9. Configuración de IP de DLR y ESG de carga de trabajo
 
 ### Definiciones NAT para NSX Edge de carga de trabajo de IBM
 
-NAT se utiliza en el ESG de carga de trabajo para permitir el tráfico de red entre espacios de direcciones IP. Para el ESG de carga de trabajo, se requiere NAT no solo para permitir la comunicación a destinos de Internet, sino también para comunicarse con cualquier rango de IP originada de {{site.data.keyword.cloud_notm}}. Para este diseño, el tráfico de carga de trabajo puede salir a Internet, pero no a la gestión ni a ninguna red de {{site.data.keyword.cloud_notm}}. Como tal, solo se debe definir un SNAT en el ESG de carga de trabajo. Tenga en cuenta que toda la red portátil de carga de trabajo se configura para que cruce la SNAT.
+NAT se utiliza en el ESG de carga de trabajo para permitir el tráfico de red entre espacios de direcciones IP. Para el ESG de carga de trabajo, se requiere NAT no solo para permitir la comunicación a destinos de Internet, sino también para comunicarse con cualquier rango de IP originada de {{site.data.keyword.cloud_notm}}. Para este diseño, el tráfico de carga de trabajo puede salir a Internet, pero no a la gestión ni a ninguna red de {{site.data.keyword.cloud_notm}}. Como tal, solo se debe definir un SNAT en el ESG de carga de trabajo. Toda la red portátil de carga de trabajo se configura para que cruce la SNAT.
 
 Aunque se puede utilizar NAT para permitir la comunicación de carga de trabajo entre varias instancias de Cloud Foundation o vCenter Server, es poco práctico cuando muchas cargas de trabajo tienen que estar conectadas entre instancias. Para obtener ejemplos de cómo utilizar las funciones avanzadas de NSX para crear una red de tránsito de L2 sobre Cloud Foundation o instancias de vCenter Server, consulte [Arquitectura de varios sitios](multi_site.html).
 
@@ -213,7 +213,7 @@ De forma predeterminada, el ESG de carga de trabajo está configurado para deneg
 
 **Denegar:** Para eliminar todo el tráfico sin respuesta cuando una regla o conjunto de reglas previo (en un orden superior) no permite a dicho tráfico cruzar el cortafuegos. Se selecciona la generación automática de reglas para permitir el tráfico de control en el par ESG.
 
-Se establecen las siguientes reglas de cortafuegos, además de las reglas generadas automáticamente:
+Se establecen las siguientes reglas de cortafuegos, además de las reglas generadas automáticamente.
 
 Tabla 12. Reglas de cortafuegos de ESG de carga
 
