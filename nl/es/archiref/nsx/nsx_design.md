@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -29,7 +29,7 @@ Figura 1. Cloud Networking Services en {{site.data.keyword.cloud_notm}}
 
 ## Diseño de la arquitectura dedicada
 
-La arquitectura dedicada despliega los componentes NSX Edge necesarios en un clúster de vSphere de dos nodos separados exclusivo para el uso de NSX Edge, lo que proporciona una interacción crítica con la infraestructura de red física. La arquitectura dedicada tiene las siguientes características y funciones:
+La arquitectura dedicada despliega los componentes NSX Edge necesarios en un clúster de vSphere de dos nodos separados exclusivo para el uso de NSX Edge y proporciona una interacción crítica con la infraestructura de red física. La arquitectura dedicada tiene las siguientes características y funciones:
 
 * Ofrece conectividad en rampa y fuera de rampa a las redes físicas. Por ejemplo, el direccionamiento L3 norte-sur en dispositivos virtuales NSX Edge.
 * Permite la comunicación con dispositivos físicos conectados a las VLAN en las redes físicas a través de un puente NSX L2 y aloja el direccionamiento de la máquina virtual (VM) de control para el direccionador lógico distribuido (DLR).

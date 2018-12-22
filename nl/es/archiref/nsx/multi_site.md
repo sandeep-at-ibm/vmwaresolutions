@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -22,7 +22,7 @@ La función de NSX de vCenter permite enlazar en una relación primaria y secund
 
 ## Ejemplo de varios sitios
 
-El ejemplo siguiente añade una zona de transporte universal NSX a las topologías de gestión básica y de carga de trabajo que se tratan en las secciones anteriores, además de las siguientes características:
+El ejemplo siguiente añade una zona de transporte universal NSX a las topologías de gestión básica y de carga de trabajo que se tratan en las secciones anteriores, y también incluye las siguientes características:
 
 * La zona de transporte universal abarca dos {{site.data.keyword.CloudDataCents_notm}} o POD dentro de un {{site.data.keyword.CloudDataCent_notm}}.
 * Después de añadir la zona de transporte, se añaden varias VXLAN junto con un direccionador distribuido Universal que abarca las nuevas VXLAN.
