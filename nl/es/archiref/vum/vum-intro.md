@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -55,7 +55,7 @@ Si ha desplegado un vCenter Server mediante vSAN, consulte primero [Actualizaci�
 
 Si desea actualizar la automatización de la gestión de la infraestructura de {{site.data.keyword.cloud_notm}}, utilice la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
-La [consola de {{site.data.keyword.vmwaresolutions_short}}](https://console.bluemix.net/infrastructure/vmware-solutions/console) le permite llevar a cabo las siguientes acciones:
+La [consola de {{site.data.keyword.vmwaresolutions_short}}](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console) le permite llevar a cabo las siguientes acciones:
 *	Actualizar licencias por ejemplo, actualizar NSX Base a otra versión
 *	Iniciar actualizaciones en la plataforma vCenter Server, por ejemplo pasar a la versión 2.5
 *	Ver el estado de las actualizaciones

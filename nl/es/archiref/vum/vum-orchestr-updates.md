@@ -8,17 +8,17 @@ lastupdated: "2018-11-07"
 
 ---
 
-#	Actualizaciones orquestadas
+#	Actualizaciones coordinadas
 
-Puede utilizar actualizaciones orquestadas para actualizar el hardware virtual y las herramientas de VMware de máquinas virtuales en el inventario después de actualizar los hosts ESXi de vSphere. Una vez que se han actualizado los hosts, primero se ejecuta la línea base de actualización de VMware Tools, seguido de la línea base de actualización de hardware de la máquina. Las actualizaciones orquestadas se pueden realizar en un clúster, una carpeta o un nivel de centro de datos.
+Puede utilizar actualizaciones coordinadas para actualizar el hardware virtual y las herramientas de VMware de máquinas virtuales en el inventario después de actualizar los hosts ESXi de vSphere. Una vez que se han actualizado los hosts, primero se ejecuta la línea base de actualización de VMware Tools, seguido de la línea base de actualización de hardware de la máquina. Las actualizaciones coordinadas se pueden realizar en un clúster, una carpeta o un nivel de centro de datos.
 
-VUM le permite realizar actualizaciones orquestadas de hosts y de máquinas virtuales utilizando grupos de línea base. Se utiliza un grupo de línea base que contiene una sola línea base de actualización de host y varias líneas base de parche o extensión. VUM primero actualiza los hosts y después aplica el parche o las líneas base de extensión. Para realizar una actualización orquestada de máquinas virtuales, utilice un grupo de línea base de máquina virtual que contenga las siguientes líneas base:
+VUM le permite realizar actualizaciones coordinadas de hosts y de máquinas virtuales utilizando grupos de línea base. Se utiliza un grupo de línea base que contiene una sola línea base de actualización de host y varias líneas base de parche o extensión. VUM primero actualiza los hosts y después aplica el parche o las líneas base de extensión. Para realizar una actualización coordinada de máquinas virtuales, utilice un grupo de línea base de máquina virtual que contenga las siguientes líneas base:
 * Actualización de VM Hardware para que coincida con el host
 * Actualización de VMware Tools para que coincida con el host
 
-Las actualizaciones orquestadas de VUM le permiten actualizar los objetos de inventario en VCSA en un proceso de dos pasos. En primer lugar, los hosts de vSphere ESXi se actualizan después de las actualizaciones de la máquina virtual. Este proceso de dos pasos se puede configurar en un nivel de clúster o puede configurarlo en el host de vSphere ESXi individual o en el nivel de máquina virtual para un control más granular.
+Las actualizaciones coordinadas de VUM le permiten actualizar los objetos de inventario en VCSA en un proceso de dos pasos. En primer lugar, los hosts de vSphere ESXi se actualizan después de las actualizaciones de la máquina virtual. Este proceso de dos pasos se puede configurar en un nivel de clúster o puede configurarlo en el host de vSphere ESXi individual o en el nivel de máquina virtual para un control más granular.
 
-En la actualización orquestada, el clúster se corregirá primero frente al grupo de línea base de host, que aplica parches, extensiones y actualizaciones y, una vez actualizado, las máquinas virtuales del clúster se corrigen frente al grupo de línea base de actualización de la máquina virtual que contiene la actualización de hardware de VM para que coincida con las líneas base de Host y VMware Tools.
+En la actualización coordinada, el clúster se corregirá primero frente al grupo de línea base de host, que aplica parches, extensiones y actualizaciones y, una vez actualizado, las máquinas virtuales del clúster se corrigen frente al grupo de línea base de actualización de la máquina virtual que contiene la actualización de hardware de VM para que coincida con las líneas base de Host y VMware Tools.
 
 Si el grupo de línea base también contiene una línea base de actualización, VUM actualiza primero los hosts ESXi de vSphere y después aplica el parche y/o las líneas base de extensión ya que los parches son aplicables a la versión específica del host. Para las máquinas virtuales, primero se actualizan las herramientas de VMware y después se actualiza el hardware virtual.
 
@@ -30,7 +30,7 @@ Si los hosts de vSphere ESXI forman parte de un clúster vSAN, el proceso de cor
 
 De forma alternativa, puede definir el límite para el número de hosts que se pueden corregir en paralelo durante el asistente de corrección.
 
-El flujo de trabajo siguiente describe el proceso para realizar una actualización orquestada:
+El flujo de trabajo siguiente describe el proceso para realizar una actualización coordinada:
 
 ## Paso 1
 
