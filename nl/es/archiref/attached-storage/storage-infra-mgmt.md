@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-13"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Gestión de la infraestructura de almacenamiento adjunto
 
@@ -20,11 +24,12 @@ La virtualización de red que se utiliza en este diseño usa el conmutador distr
 
 ## Conmutador distribuido de vSphere
 
-Tal como se ha indicado anteriormente, se crea otra VLAN dentro de la solución vCenter Server y se utiliza para conectar el punto de montaje NFS a los hosts ESXi del clúster existente. Puesto que la solución de vCenter Server ya tiene un vDS asociado con la red privada, se crea otro grupo de puertos y se etiqueta con el número de VLAN adicional, ya que esta VLAN adicional no es nativa.
+Se crea otra VLAN dentro de la solución vCenter Server y se utiliza para conectar el punto de montaje NFS a los hosts ESXi del clúster existente. Puesto que la solución de vCenter Server tiene un conmutador distribuido de vSphere asociado con la red privada, se crea otro grupo de puertos y se etiqueta con el número de VLAN adicional, ya que esta VLAN adicional no es nativa.
 
 En la tabla siguiente se describen los valores predeterminados del nuevo grupo de puertos.
 
-**Importante**: no cambie estos valores predeterminados.
+No cambie estos valores predeterminados.
+{:important}
 
 Tabla 1. Resumen de grupos de puertos NFS
 
@@ -35,7 +40,7 @@ Tabla 1. Resumen de grupos de puertos NFS
 | Equilibrio de carga | Ruta basada en el puerto virtual de origen |
 | Enlaces ascendentes activos | Uplink1 y uplink2 |
 
-Además de la creación del grupo de puertos vDS para el tráfico de almacenamiento NFS, se crea un puerto VMkernel en cada host ESXi de vSphere en el despliegue y se asigna al grupo de puertos SDDC-DPG-NFS. Al puerto VMkernel también se le asigna una dirección IP de la subred portátil privada asociada a la VLAN de almacenamiento adjunto, es decir, VLAN B privada, y su MTU se establece en 9000 para dar soporte a las tramas jumbo.
+Además de la creación del grupo de puertos vDS para el tráfico de almacenamiento NFS, se crea un puerto VMkernel en cada host ESXi de vSphere durante el despliegue y se asigna al grupo de puertos SDDC-DPG-NFS. Al puerto VMkernel también se le asigna una dirección IP de la subred portátil privada asociada a la VLAN de almacenamiento adjunto, es decir, VLAN B privada, y su MTU se establece en 9000 para dar soporte a las tramas jumbo.
 
 Figura 1. Grupos de puertos vDS privados y enlaces ascendentes
 

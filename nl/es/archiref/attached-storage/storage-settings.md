@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -14,16 +14,16 @@ lastupdated: "2018-10-25"
 
 # Valores de almacenamiento
 
-Este diseño da soporte a la conexión del almacenamiento compartido mediante NFS v3 únicamente. NFS v4 y v4.1 no están soportados.
+Este diseño da soporte a la conexión del almacenamiento compartido mediante NFS v3 únicamente. NFS v4 y v4.1 no reciben soporte.
 
 Todo el almacenamiento adjunto para este diseño se limita al almacenamiento de {{site.data.keyword.cloud_notm}} disponible en el mismo {{site.data.keyword.CloudDataCent_notm}} que la solución vCenter Server. Además, de forma predeterminada todos los discos virtuales que se almacenan en el almacén de datos son de aprovisionamiento ligero.
 {:note}
 
-La arquitectura especifica que los almacenes de datos NFS v3 se adjuntan utilizando el nombre de DNS del almacenamiento de {{site.data.keyword.cloud_notm}} para conectarse a la compartición. Además, el recurso compartido NFS se conecta a todos los hosts del clúster de vCenter Server y se coloca en un clúster de almacén de datos con el DRS de almacenamiento habilitado.
+La arquitectura especifica que los almacenes de datos NFS v3 se adjuntan utilizando el nombre de DNS del almacenamiento de {{site.data.keyword.cloud_notm}} para conectarse a la compartición. El recurso compartido NFS se conecta a todos los hosts del clúster de vCenter Server y se coloca en un clúster de almacén de datos con el DRS de almacenamiento habilitado.
 
 ## Planificador de recursos distribuidos de almacenamiento (DRS de almacenamiento) de vSphere
 
-DRS de almacenamiento le permite gestionar los recursos agregados de un clúster de almacén de datos. Cuando DRS de almacenamiento está habilitado, proporciona recomendaciones sobre la ubicación de disco de la máquina virtual (VM) y la migración para equilibrar el espacio y los recursos de E/S entre los almacenes de datos del clúster de almacén de datos.
+Utilice el DRS de almacenamiento para gestionar los recursos agregados de un clúster de almacén de datos. Cuando DRS de almacenamiento está habilitado, proporciona recomendaciones sobre la ubicación de disco de la máquina virtual (VM) y la migración para equilibrar el espacio y los recursos de E/S entre los almacenes de datos del clúster de almacén de datos.
 
 Las siguientes características están disponibles cuando el DRS de almacenamiento está activado:
 * Equilibrio de carga de espacio entre los almacenes de datos dentro de un clúster de almacén de datos
@@ -36,14 +36,14 @@ En este diseño, el DRS de almacenamiento se habilita con el nivel de automatiza
 
 La agresividad del DRS de almacenamiento se determina especificando umbrales para el espacio que se utiliza y la latencia de E/S. El DRS de almacenamiento recopila información de uso de recursos para los almacenes de datos en un clúster de almacén de datos. vCenter Server utiliza esta información para generar recomendaciones sobre la colocación de discos virtuales en almacenes de datos.
 
-Cuando se ha establecido un nivel de agresividad bajo para un clúster del almacén de datos, el DRS de almacenamiento solo recomienda migraciones de vMotion de almacenamiento cuando es necesario, por ejemplo cuando la carga de E/S, la utilización de espacio o el desequilibrio son altos. Cuando se ha establecido un nivel de agresividad alto para un clúster del almacén de datos, el DRS de almacenamiento recomienda migraciones siempre que el clúster del almacén de datos se puede beneficiar del espacio o del equilibrio de la carga de E/S.
+Cuando se ha establecido un nivel de agresividad bajo para un clúster del almacén de datos, el DRS de almacenamiento solo recomienda migraciones de vMotion de almacenamiento cuando es necesario. Por ejemplo, cuando la carga de E/S, la utilización de espacio o el desequilibrio son altos. Si se ha establecido un nivel de agresividad alto para un clúster del almacén de datos, el DRS de almacenamiento recomienda migraciones siempre que el clúster del almacén de datos se puede beneficiar del espacio o del equilibrio de la carga de E/S.
 
-Están disponibles las siguientes categorías de umbral en el clúster de almacén de datos:
+Están disponibles las siguientes categorías de umbral en el clúster de almacén de datos.
 
 * Utilización de espacio: el DRS de almacenamiento genera recomendaciones o realiza migraciones cuando el porcentaje de utilización de espacio en el almacén de datos es mayor que el umbral que ha establecido en el cliente web de vSphere.
 * Latencia de E/S: el DRS de almacenamiento genera recomendaciones o realiza migraciones cuando el percentil 90 de latencia de E/S durante un día correspondiente al almacén de datos es mayor que el umbral.
 
-En este diseño, los valores de tiempo de ejecución del DRS de almacenamiento están habilitados y los umbrales conservan sus respectivos valores predeterminados. Es muy recomendable cambiar estos valores en función de los requisitos de E/S de carga de trabajo y de la sensibilidad a la latencia.
+En este diseño, los valores de tiempo de ejecución del DRS de almacenamiento están habilitados y los umbrales conservan sus respectivos valores predeterminados. Cambie estos valores en función de los requisitos de E/S de carga de trabajo y de la sensibilidad a la latencia.
 
 En la tabla siguiente se muestran los valores en el cliente web de VMware vSphere.
 
@@ -63,13 +63,13 @@ Si SIOC (Control de E/S de almacenamiento, Storage I/O Control) está habilitado
 
 Para que SIOC determine si un dispositivo de almacenamiento está restringido o congestionado, necesita un umbral definido. La latencia del umbral de congestión es distinto para los diferentes tipos de almacenamiento. En este diseño se recomienda y se implementa una latencia de umbral de 10 milisegundos.
 
-También puede limitar los discos virtuales individuales para máquinas virtuales individuales u otorgarles distintas comparticiones con SIOC. Limitar los discos y otorgar distintas comparticiones le permite alinear el entorno a la carga de trabajo con el número de IOPS de volumen de almacenamiento de archivos adquirido. El límite lo establece IOPS y es posible establecer un peso o comparticiones diferentes.
+Puede limitar los discos virtuales individuales para máquinas virtuales individuales u otorgarles distintas comparticiones con SIOC. Limitar los discos y otorgar distintas comparticiones le permite alinear el entorno a la carga de trabajo con el número de IOPS de volumen de almacenamiento de archivos adquirido. El límite lo establece IOPS y es posible establecer un peso o comparticiones diferentes.
 
 Las comparticiones de discos virtuales establecidas en **Alto** (2.000 comparticiones) reciben el doble de E/S que un disco establecido en **Normal** (1.000 comparticiones) y cuatro veces el de uno establecido en **Bajo** (500 comparticiones). **Normal** es el valor predeterminado para todas las máquinas virtuales, por lo que es necesario ajustar los valores **Normal** para las máquinas virtuales que lo requieran.
 
 ## Almacenamiento adicional para NFS v3
 
-Cuando sea necesario añadir almacenamiento adicional al entorno por falta de espacio o por latencia alta, puede solicitar otra compartición NFS de la consola. Una vez solicitada la compartición, adjunte la exportación a los hosts vSphere ESXi del clúster y colóquela en el clúster de almacenamiento. El hecho de colocar la nueva compartición NFS en el clúster de almacenamiento permite escalar de forma efectiva y sin interrupciones el almacenamiento asociado al entorno sin sobrecargarle con migraciones de nivel de almacenamiento.
+Cuando sea necesario añadir más almacenamiento al entorno por falta de espacio o por latencia alta, puede solicitar otra compartición NFS de la consola. Una vez solicitada la compartición, adjunte la exportación a los hosts vSphere ESXi del clúster y colóquela en el clúster de almacenamiento. El hecho de colocar la nueva compartición NFS en el clúster de almacenamiento permite escalar de forma efectiva y sin interrupciones el almacenamiento asociado al entorno sin sobrecargarle con migraciones de nivel de almacenamiento.
 
 ## Parámetros de configuración avanzada
 
