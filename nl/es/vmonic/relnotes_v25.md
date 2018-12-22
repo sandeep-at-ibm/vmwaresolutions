@@ -72,7 +72,7 @@ Para obtener más información sobre las cuentas de usuario, consulte los temas 
 
 El servicio {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} ya está disponible para las instancias de vCenter Server desplegadas en la versión V2.5 o releases posteriores y actualizadas a las mismas.
 
-{{site.data.keyword.cloud_notm}} Private Hosted incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware y {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}.
+{{site.data.keyword.cloud_notm}} Private Hosted incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware e {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}.
 
 Puede solicitar este servicio después de solicitar la instancia de vCenter Server. Para obtener más información, consulte [Solicitud de {{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html).
 
