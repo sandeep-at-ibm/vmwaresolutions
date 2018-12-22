@@ -4,10 +4,10 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-13"
 
 ---
-# Visión general de vCenter Server con el paquete híbrido (Hybridity)
+# Visión general de vCenter Server on IBM Cloud con el paquete híbrido (Hybridity)
 
 VMware vCenter Server (VCS) on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity) es una nube privada alojada que le ayuda a extender de forma rápida y sencilla su infraestructura local a la nube para disponer de una infraestructura híbrida segura y movilidad real de las aplicaciones.
 
