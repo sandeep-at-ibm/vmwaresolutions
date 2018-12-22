@@ -4,27 +4,27 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-06"
+lastupdated: "2018-11-15"
 
 ---
 
 # Diseño detallado
 
 ## Componentes de los servicios comunes
-Los servicios comunes proporcionan los servicios que utilizan otros servicios en la plataforma de gestión de nube. Esto incluye servicios de identidad y acceso, servicios de nombres de dominio, servicios NTP.
+Los servicios comunes proporcionan los servicios que utilizan otros servicios en la plataforma de gestión de nube. Los servicios comunes incluyen servicios de identidad y acceso, servicios de nombres de dominio, servicios NTP.
 
-Figura 1. Servicios comunes de ICP
+Figura 1. Servicios comunes de {{site.data.keyword.cloud_notm}} Private (ICP)
 
 ![Servicios comunes de ICP](vcsicp-icp-commonservices.svg)
 
 ### Servicios de identidad y acceso
-Como parte de la automatización de VCS, se utiliza un Microsoft Active Directory (AD) para la gestión de identidades. Se despliega una sola instancia de servidor virtual (VSI) AD. El vCenter se configura de modo que utilice la autenticación de MS AD y el ICP también se puede configurar para la autenticación LDAP.
+Como parte de VMware vCenter Server en la automatización de {{site.data.keyword.cloud}}, se utiliza un Microsoft Active Directory (AD) para la gestión de identidades. Se despliega una sola instancia de servidor virtual (VSI) AD. El vCenter se configura de modo que utilice la autenticación de AD y puede configurar el ICP para la autenticación de LDAP.
 
 ###	Servicios de nombres de dominio
-El despliegue de VCS utiliza las VSI de Microsoft Active Directory (AD) desplegadas como servidores DNS para la instancia. Todos los componentes desplegados (vCenter, PSC, NSX y hosts de ESXi) se configuran de modo que apunten a MS AD como su DNS predeterminado.
+El despliegue de vCenter Server utiliza los AD VSI como servidores DNS para la instancia. Todos los componentes desplegados, como vCenter, PSC, NSX y hosts de ESXi, se configuran de modo que apunten a AD como su DNS predeterminado.
 
 ###	Servicios NTP
-El despliegue de VCS utiliza los servidores NTP de la infraestructura de {{site.data.keyword.cloud}}. Todos los componentes desplegados se configuran para utilizar estos servidores NTP. El hecho de que todos los componentes del diseño utilicen los mismos servidores NTP resulta crítico para que los certificados y la autenticación de MS AD funcionen correctamente
+El despliegue de vCenter Server utiliza los servidores NTP de la infraestructura de {{site.data.keyword.cloud_notm}}. Todos los componentes desplegados se configuran para utilizar estos servidores NTP. El hecho de que todos los componentes del diseño utilicen los mismos servidores NTP resulta crítico para que los certificados y la autenticación de AD funcionen correctamente.
 
 ## Redes
 
@@ -54,4 +54,4 @@ Figura 3. ICP con red NSX-T
 
 ### Enlaces relacionados
 
-* [Visión general de VCS con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
