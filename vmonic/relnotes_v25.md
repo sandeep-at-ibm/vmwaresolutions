@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-08-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Release notes for V2.5
 
@@ -34,7 +38,8 @@ Starting with the V2.5 release, the IBM Spectrum Protect Plus on {{site.data.key
 
 You are responsible for the configuration, management, and monitoring of all software components, including the backup and availability of the management infrastructure and workloads. For more information, see [Backing up components](../archiref/solution/solution_backingup.html#backing-up-components).
 
-**Note:** This change does not affect instances that are deployed before V2.5 that have the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}} service installed.
+This change does not affect instances that are deployed before V2.5 that have the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}} service installed.
+{:note}
 
 ## IBM CloudDriver resiliency
 
@@ -74,7 +79,7 @@ The {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.
 
 {{site.data.keyword.cloud_notm}} Private Hosted brings the power of microservices and containers to your VMware environment on {{site.data.keyword.cloud_notm}}. With this service, you can extend the same familiar VMware and {{site.data.keyword.cloud_notm}} Private operational model and tools from on-premises into the {{site.data.keyword.cloud_notm}}.
 
-You can request this service after you ordered your vCenter Server instance. For more information, see [Requesting {{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html).
+You can request this service after you ordered your vCenter Server instance.
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -92,7 +97,7 @@ For more information, see [KMIP for VMware on {{site.data.keyword.cloud_notm}} s
 
 ### Attached storage documentation
 
-The Attached storage for vCenter Server on IBM Cloud technical document is now available in the *Reference* section of the user documentation. This reference architecture document is available in English only. For more information, see [Attached storage for vCenter Server on IBM Cloud](../archiref/attached-storage/storage-benefits.html).
+The Attached storage for vCenter Server on IBM Cloud technical document is now available in the *Reference* section of the user documentation. For more information, see [Attached storage for vCenter Server on IBM Cloud](../archiref/attached-storage/storage-benefits.html).
 
 ### Technical specifications
 

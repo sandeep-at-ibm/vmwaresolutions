@@ -2,13 +2,21 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-09-27"
 
 ---
 
-# Requesting IBM Cloud Private Hosted
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+
+# Requesting IBM Cloud Private Hosted - Deprecated
+
+The information in this topic is being deprecated. For the most updated information about IBM Cloud Private Hosted, see [IBM Cloud Private Hosted overview](icp_overview.html).
+{:deprecated}
 
 {{site.data.keyword.cloud}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} automatically deploys {{site.data.keyword.cloud_notm}} Private Hosted on your VMware vCenter Server instances.
 
@@ -39,8 +47,3 @@ The following are the minimum requirements to request the {{site.data.keyword.cl
 6. On the **IBM Cloud Private Hosted on vCenter Server on IBM Cloud** page, in the **Contact the IBM Cloud Private Hosted DevOps Team** box, enter a description of your requirements and click **Request a consultation**.
 
 An {{site.data.keyword.cloud_notm}} Private Hosted DevOps representative contacts you through your {{site.data.keyword.cloud_notm}} contact information to get you started.
-
-### Related links
-
-* [IBM Cloud Private Hosted](https://www.ibm.com/developerworks/community/files/form/anonymous/api/library/eafb752c-55f3-4b07-9b20-b61c8ea980b9/document/af203658-30c0-40ba-81b5-46c393fb723f/media/IBM_Cloud_Private_Hosted-IBM_Cloud.pdf) (PDF download)
-* [Open a Ticket for IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US)
