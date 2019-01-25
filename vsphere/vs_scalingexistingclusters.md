@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,8 +19,8 @@ You can scale out a VMware vSphere cluster that you ordered or saved in the {{si
 ## Requirements
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
-*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](vs_planning.html).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html#managing-user-accounts-and-settings).
+*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
 *  You received an email with the confirmation that the cluster you want to scale is ready to use.
 
 ## Procedure to scale existing clusters
@@ -46,6 +46,6 @@ The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, 
 
 ### Related links
 
-* [Ordering new vSphere clusters](vs_orderinginstances.html)
-* [Ordering vSphere clusters based on existing configurations](vs_orderingbasedonexistingconfig.html)
-* [Scaling clusters created outside of the console](vs_orderingforclustersoutside.html)
+* [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Ordering vSphere clusters based on existing configurations](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [Scaling clusters created outside of the console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
