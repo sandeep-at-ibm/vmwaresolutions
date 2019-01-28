@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2018-11-15"
 
 The next step in the Stock Trader modernization journey is to transform the workload from running in virtual machines (VMs) to running in containers.
 
-To continue, Todd and Jane run Transformation Advisor to analyze the Stock Trader workload, identify any migration complexity, and recommend changes. When ready, they use Transformation Advisor to deploy Stock Trader into Liberty containers that run in {{site.data.keyword.cloud}} Private (ICP).
+To continue, Todd and Jane run Transformation Advisor to analyze the Stock Trader workload, identify any migration complexity, and recommend changes. When ready, they use Transformation Advisor to deploy Stock Trader into Liberty containers that run in {{site.data.keyword.icpfull_notm}}.
 
 ## Prepare IBM Cloud Private
 
-Todd first needs to install ICP. Since Todd has his VMware on {{site.data.keyword.cloud_notm}} environment, he decides to use the {{site.data.keyword.cloud_notm}} Private Hosted offering that gives him a complete ICP instance that runs on VMware VMs in {{site.data.keyword.cloud_notm}}.
+Todd first needs to install {{site.data.keyword.icpfull_notm}}. Since Todd has his VMware on {{site.data.keyword.cloud_notm}} environment, he decides to use the {{site.data.keyword.cloud_notm}} Private Hosted offering that gives him a complete {{site.data.keyword.icpfull_notm}} instance that runs on VMware VMs in {{site.data.keyword.cloud_notm}}.
 
 The default dashboard provides a comprehensive user interface to manage the Kubernetes cluster, security, storage, and deploy from the catalog.
 
@@ -49,7 +49,7 @@ Next, Todd adds the following line:
 
 `systemctl restart nfs-kernel-server`
 
-Todd then runs the following command on each VM to install NFS onto each ICP worker VM:
+Todd then runs the following command on each VM to install NFS onto each {{site.data.keyword.icpfull_notm}} worker VM:
 
 `sudo apt-get update`
 
@@ -69,7 +69,7 @@ Whenever a new NFS volume is needed, Todd runs the following command to create a
 
 ### Prepare image security
 
-In ICP V3.1, security is enhanced by requiring an image policy in place before any image is pulled into an ICP instance. The enhancement requires that you add an image policy for where the IBM images reside, *dockerhub/ibmcom*, and in the docker store.
+In {{site.data.keyword.icpfull_notm}} V3.1, security is enhanced by requiring an image policy in place before any image is pulled into an {{site.data.keyword.icpfull_notm}} instance. The enhancement requires that you add an image policy for where the IBM images reside, *dockerhub/ibmcom*, and in the docker store.
 
 The ibmcloud-default-cluster-image-policy is provided by default and covers any IBM images in docker.io/ibmcom/\*, but since Db2 and other IBM content is located in the Docker Store another image policy for the docker store, *docker.io/store/ibmcorp/*, is necessary.
 
@@ -80,7 +80,7 @@ Center](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/manage_cluster/
 
 ## Deploy Transformation Advisor and Microclimate
 
-After Todd has ICP running, he installs Transformation Advisor, along with Microclimate. Todd opens the [catalog](https://www.ibm.com/cloud/private/developer) and views all the available content.
+After Todd has {{site.data.keyword.icpfull_notm}} running, he installs Transformation Advisor, along with Microclimate. Todd opens the [catalog](https://www.ibm.com/cloud/private/developer) and views all the available content.
 
 Todd searches for Transformation Advisor and Microclimate and installs them using the provided readme file instructions when he clicks the helm chart.
 
@@ -100,4 +100,4 @@ Todd didn't alter the data source during the transformation step. Transformation
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

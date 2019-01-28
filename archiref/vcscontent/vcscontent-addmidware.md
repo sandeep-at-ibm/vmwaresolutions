@@ -2,47 +2,35 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2019-01-23"
 
 ---
 
 # Refactor and add middleware into IBM Cloud Private
 
-Now that Stock Trader is running in a container, and Jane is satisfied
-with the current micro-services, she and Todd work on how to enhance the
-application with extra capabilities. By refactoring Stock Trader
-micro-services to handle increased activity and scalability, they both
-see the need to add middleware into {{site.data.keyword.cloud}} Private (ICP). Some of the
-middleware existed in their data center, so it becomes more of a
-replatform exercise with some new middleware added.
+Now that Stock Trader is running in a container, and Jane is satisfied with the current micro-services, she and Todd work on how to enhance the application with extra capabilities. By refactoring Stock Trader micro-services to handle increased activity and scalability, they both see the need to add middleware into {{site.data.keyword.cloud}} Private. Some of the middleware existed in their data center, so it becomes more of a replatform exercise with some new middleware added.
 
 Figure 1. Refactoring of Stock Trader
 ![Stock Trader refactoring](vcscontent-refactor.svg)
 
-This refactoring of the solution brings a common platform to run the application
-and the required services, bringing in a simpler management
-plane.
+This refactoring of the solution brings a common platform to run the application and the required services, bringing in a simpler management plane.
 
 ## Content choices
 
-ICP has a broad selection of content, and both Todd and
-Jane need to decide which best suits their needs. As Todd sees in
-the ICP catalog, most content is available to try
-out, but some content requires purchase and download from
-Passport Advantage.
+{{site.data.keyword.cloud_notm}} Private has a broad selection of content, and both Todd and Jane need to decide which best suits their needs. As Todd sees in the {{site.data.keyword.cloud_notm}} Private catalog, most content is available to try out, but some content requires purchase and download from Passport Advantage.
 
-* Toolchain & Runtimes
-  -	UrbanCode Deploy
-  -	Microclimate
-  -	Jenkins (open source)
-  -	IBM WebSphere Liberty (MicroProfile, web Profile, Java Platform, Enterprise Edition Profile)
-  -	Open Liberty (open source)
-  -	Node.js runtime (open source)
-  -	Swift runtime (open source)
+* Toolchain and Runtimes
+  - UrbanCode Deploy
+  - Microclimate
+  - Jenkins (open source)
+  - IBM WebSphere Liberty (MicroProfile, Web Profile, Java Platform, Enterprise Edition Profile)
+  - Open Liberty (open source)
+  - Node.js runtime (open source)
+  - Swift runtime (open source)
   - nginx (open source)
-  -	IBM WebSphere Application Server for ICP VM Quickstarter Community education.
+  - IBM WebSphere Application Server for {{site.data.keyword.cloud_notm}} Private VM Quickstarter Community Edition
 
 * Integration
   -	IBM Integration Bus
@@ -110,15 +98,15 @@ Passport Advantage.
   -	Compliance Assist
 
 * Management
-  -	IBM Netcool - integration (Probe for ICP Services – Logging events and
+  -	IBM Netcool - integration (Probe for {{site.data.keyword.icpfull_notm}} Services – Logging events and
 Monitoring alerts)
   - {{site.data.keyword.cloud_notm}} App Management 2018.2.0
-  -	IBM Netcool - integration (Probe to manage ICP Events. Sold with IBM
+  -	IBM Netcool - integration (Probe to manage {{site.data.keyword.icpfull_notm}} Events. Sold with IBM
 Netcool Insights product)
   - {{site.data.keyword.cloud_notm}} Event Management for IBM
 Cloud Private (ILAN licensed for discovery and try from catalog)
   - IBM Operations Analytics Predictive Insights Mediation Pack (Manage
-ICP monitoring metrics. ILAN Licensed for discovery and try from
+{{site.data.keyword.icpfull_notm}} monitoring metrics. ILAN Licensed for discovery and try from
 catalog)  -	IBM Operations Analytics Predictive Insights Mediation Pack
 (Sold with Predictive Insights product)
 
@@ -152,7 +140,7 @@ For Stock Trader, Todd decided to add all of the middleware. The following infor
 Todd starts with Db2 because they're already using Db2 and can
 dedicate a container-based Db2 for each solution.
 
-Since Todd prepared ICP, he already has his pod security policy defined. Todd can focus on creating a docker image pull secret:
+Since Todd prepared {{site.data.keyword.icpfull_notm}}, he already has his pod security policy defined. Todd can focus on creating a docker image pull secret:
 
 `kubectl create secret docker-registry db2dockerregistry
 --docker-username=dockeruser
@@ -162,7 +150,7 @@ Since Todd prepared ICP, he already has his pod security policy defined. Todd ca
 Finally, since Todd decided to use NFS, he created NFS volumes based on
 the readme file requirements:
 
-Go to ICP dashboard and create Persistent Volume. How large? Look in the
+Go to {{site.data.keyword.icpfull_notm}} dashboard and create Persistent Volume. How large? Look in the
 readme file to find out:
 
 `capacity=20Gi
@@ -201,7 +189,7 @@ the dev version can be spun up for each Developer, saving precious
 Production traffic. Installing MQ is fairly simple. Todd creates the
 storage just like he did with Db2, and then installs the helm chart:
 
-ICP Dashboard > Catalog > start to type in MQ > select
+{{site.data.keyword.icpfull_notm}} Dashboard > Catalog > start to type in MQ > select
 ibm-mqadvanced-server-dev Review the readme file then click Configure
 Provide or verify the following input values:
 
@@ -300,4 +288,4 @@ Figure 3. Enrichment of Stock Trader
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
