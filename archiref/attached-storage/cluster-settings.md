@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -37,7 +37,7 @@ Table 1. DRS Automation settings for the vSphere DRS cluster
 
 For more information about configuring these settings in the vSphere Web Client, see [Set a Custom Automation Level for a Virtual Machine in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-C21C0609-923B-46FB-920C-887F00DBCAB9.html).
 
-Along with the automation level and migration threshold of the cluster, this design enables VM automation so that you can set overrides to individual VM. More granular control of VMs enables further prioritization of the load balancing of VMs.
+Along with the automation level and migration threshold of the cluster, this design enables VM automation so that you can override values per individual VM. More granular control of VMs enables further prioritization of the load balancing of VMs.
 
 ### Power management
 
@@ -84,10 +84,10 @@ For more information about configuring these settings in the vSphere Web Client,
 
 vCenter Server uses admission control to ensure that sufficient resources are available in a cluster to provide failover protection and to ensure that VM resource reservations are respected. In this design, the failover capacity is reserved by specifying a percentage of the cluster resources. The defined failover capacity is set to 25% CPU and 25% memory.
 
-#### Datastore for heart beating
+#### Datastore heart beating
 
 vSphere HA uses datastore heart beating to identify hosts that have failed and hosts that reside on a network partition. Datastore heart beating allows vSphere HA to monitor hosts when a management network partition occurs and to continue to respond to failures that occur. In this design, the heartbeat datastore selection policy is set to “Automatically select datastores accessible from the host”.
 
 ### Related links
 
-* [Solution overview](../solution/solution_overview.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
