@@ -2,28 +2,30 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-01-25"
 
 ---
 
 # VCSA update and SSO-linked vCenters
 
-## VCSA update
+## PSC and VCSA update
 
-VUM does not update the VCSA. The following information describes the process of updating this appliance. The VCSA deployed in a VMware vCenter Server on {{site.data.keyword.cloud}} instance has no internet access, so the update bundle must be downloaded to a jump-server first.
+This section relates to both the vCentre Server Appliance (VCSA) and the Platform Services Controller (PSC). Both appliances are VCSA appliances but with different roles. When upgrading vSphere with an external PSC, upgrade the PSC first, then the VCSA, then the ESXi hosts, and finally the hardware versions and VMware Tools in the virtual machines.
 
-The VCSA is updated via appliance management console, not the vSphere Web Client. The VCSA appliance management console is accessed by using a browser, the VCSA IP address, and port 5480.
+VUM does not update the PSC/VCSA. The following information describes the process of updating these appliances. The PSC/VCSA deployed in a VMware vCenter Server on {{site.data.keyword.cloud}} instance has no internet access, so the update bundle must be downloaded to a jump-server first.
 
-You must initiate a snapshot of the appliance or a backup of the VCSA before you update. Ensure that everything works as expected, then remove the snapshot within a few days, to avoid performance degradation. Additionally, review the release notes before you attempt any upgrade.
+The PSC/VCSA is updated via appliance management console, not the vSphere Web Client. The PSC/VCSA appliance management console is accessed by using a browser, the PSC/VCSA IP address, and port 5480.
 
-To update the VCSA, follow these steps:
+You must initiate a snapshot of the appliance or a backup of the PSC/VCSA before you update. Ensure that everything works as expected, then remove the snapshot within a few days, to avoid performance degradation. Additionally, review the VMware release notes before you attempt any upgrade to understand any specific instructions for the specified release.
+
+To update the PSC/VCSA, follow these steps:
 1. You can download updates by going to the VMware Patch [Download Center](https://my.vmware.com/group/vmware/patch#search), logging in and choosing VC from the **Search by Product** menu. Select the appropriate patch and click **Download**.
 2. Using the vSphere Web Client, upload the ISO file to the vCenter datastore repository.
 3. Mount the update ISO file to the vCenter server.
 4. Take a snapshot of your vCenter server.
-5. Log in to vCenter appliance management console at: `https://vcenterip:5480`
+5. Log in to vCenter appliance management console at: `https://pscip:5480` (for the PSC) or `https://vcenterip:5480` (for the VCSA)
 6. Go to the **Update** section and select **Check Updates** and then **Check CDROM**. The update is listed.
 7. Select **Install Updates** and **Accept** the EULA. The update installs.
 8. After the update is complete, you must go back to the appliance management console and select to restart the console.
