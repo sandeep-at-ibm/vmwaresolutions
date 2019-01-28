@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Upgrading your instances from pre-V1.4 releases
 
@@ -22,7 +26,8 @@ In V1.4 and later releases, several network topology enhancements are available 
 
 If you have not migrated or deleted your instances from pre-V1.4 releases, they might still be visible on the {{site.data.keyword.vmwaresolutions_short}} console in view-only mode. These instances are marked on the user interface as **Deprecated** with a warning symbol icon.
 
-**Note:** The information that is displayed in the instance properties reflects the data as of the V1.4 release date and it is no longer refreshed.
+The information that is displayed in the instance properties reflects the data as of the V1.4 release date and it is no longer refreshed.
+{:note}
 
 The following actions are available on the pre-V1.4 instances:
 *  View the information on the instance details page.
@@ -43,4 +48,4 @@ To move your pre-V1.4 instances to new instances, complete the following steps i
 
 For more information about exporting and importing VMs, see your VMware vSphere documentation.
 
-If you need assistance with {{site.data.keyword.vmwaresolutions_short}}, [contact IBM Support](trbl_support.html) through one of the support channels.
+If you need assistance with {{site.data.keyword.vmwaresolutions_short}}, [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) through one of the support channels.

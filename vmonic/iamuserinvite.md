@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-11"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-11"
 ## Before you begin
 
 * Ensure that you are the account owner or that your platform management role for the **VMware Solutions** service is **Administrator**.
-* Ensure that you reviewed the user roles and permissions in [Managing user access with Identity and Access Management](iam.html).
+* Ensure that you reviewed the user roles and permissions in [Managing user access with Identity and Access Management](/docs/services/vmwaresolutions/vmonic/iam.html).
 
 ## Procedure to invite users to access services and resources
 
@@ -34,12 +34,12 @@ After the added users accept your invitation, they can log in to the {{site.data
 
 ### Related links
 
-* [Inviting users and assigning access](../../../iam/iamuserinv.html)
-* [Managing identity and access](../../../iam/quickstart.html)
-* [Managing users and access](../../../iam/iamusermanage.html)
-* [What is IAM](../../../iam/index.html)
-* [Migrating pre-V2.5 vCenter Server instances to IBM Cloud accounts](../vcenter/vc_addinstancetousraccount.html)
-* [Migrating pre-V2.5 vCenter Server with Hybridity Bundle instances to IBM Cloud accounts](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [Migrating pre-V2.5 Cloud Foundation instances to IBM Cloud accounts](../sddc/sd_addinstancetousraccount.html)
-* [Migrating pre-V2.5 NetApp ONTAP Select instances to IBM Cloud accounts](../netapp/np_addinstancetousraccount.html)
-* [Migrating pre-V2.5 VMware Federal instances to IBM Cloud accounts](../vcenter/vc_fed_addinstancetousraccount.html)
+* [Inviting users and assigning access](/docs/iam/iamuserinv.html)
+* [Managing identity and access](/docs/iam/quickstart.html)
+* [Managing users and access](/docs/iam/iamusermanage.html)
+* [What is IAM](/docs/iam/index.html)
+* [Migrating pre-V2.5 vCenter Server instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [Migrating pre-V2.5 vCenter Server with Hybridity Bundle instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [Migrating pre-V2.5 Cloud Foundation instances to IBM Cloud accounts](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [Migrating pre-V2.5 NetApp ONTAP Select instances to IBM Cloud accounts](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [Migrating pre-V2.5 VMware Federal instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)

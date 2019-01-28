@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-12-11"
 
@@ -27,6 +27,6 @@ If you need help with {{site.data.keyword.vmwaresolutions_full}}, create an {{si
    2. From the **Category** list, select **VMware**.  
    3. Enter a subject for your issue.
    4. Describe your issue in detail, such as the error messages, steps to re-create, and the URL you are accessing.
-   5. To upload screen captures of the issue, click **Attach file**. 
+   5. To upload screen captures of the issue, click **Attach file**.
    6. If you want to be notified of updates on the issue, select the **Email me updates** check box.
 6. Click **Submit**.

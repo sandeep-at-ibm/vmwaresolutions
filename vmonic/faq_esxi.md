@@ -2,22 +2,29 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # FAQ about ESXi servers
 
 Find answers to frequently asked questions about the ESXi servers managed on the {{site.data.keyword.vmwaresolutions_full}} console.
 
 ## How many ESXi servers can I add to my instance?
+{: faq}
 
 * For vCenter Server instances, you can expand the default cluster to have up to 51 ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers. Since you can add up to 10 clusters to an instance, each deployed instance can have a maximum of 51 + 9x59 = 582 ESXi servers across all clusters.
 * For Cloud Foundation instances, the standard configuration has four ESXi servers. You can add a maximum of 28 servers (to a total of 32 servers). For Cloud Foundation instances in a multi-site configuration, you can have a maximum of 128 ESXi servers across all instances.
 
-  **Note:** If your Cloud Foundation configuration requires a multi-site deployment with more than 128 ESXi servers, [contact IBM Support](trbl_support.html) for assistance.
+  If your Cloud Foundation configuration requires a multi-site deployment with more than 128 ESXi servers, [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) for assistance.
+  {:note}
 
 ## How many ESXi servers can I add to a cluster?
 
@@ -39,7 +46,8 @@ For instances deployed in V2.1 or earlier, you must enable the necessary vSAN su
 
 The ESXi server names and IP addresses cannot be changed because they are registered for Windows DNS resolution. Changes might result in failure during deployment or failure of vCenter Server functions.
 
-**Note:** Don't use the **Rename Device** feature on the {{site.data.keyword.cloud_notm}} user interface to change ESXi server names. This function changes the FQDN of the ESXi server, but the configured vCenter Server and the Windows VSI host registrations will be incorrect and might cause failures.
+Don't use the **Rename Device** feature on the {{site.data.keyword.cloud_notm}} user interface to change ESXi server names. This function changes the FQDN of the ESXi server, but the configured vCenter Server and the Windows VSI host registrations will be incorrect and might cause failures.
+{:note}
 
 ## Can I disable root access on my ESXi servers?
 
@@ -53,12 +61,13 @@ You must re-enable root access for subsequent automation operations, for example
 
 You can add static routes for storage but you must do it with extreme care. Otherwise, the existing shares might become unmounted.
 
-**Note:** Adding static routes for vMotion is not supported. Changes in vMotion subnet configuration might result in failure in the {{site.data.keyword.vmwaresolutions_short}} functions.
+Adding static routes for vMotion is not supported. Changes in vMotion subnet configuration might result in failure in the {{site.data.keyword.vmwaresolutions_short}} functions.
+{:note}
 
 ### Related links
 
-* [Expanding and contracting capacity for vCenter Server instances](../vcenter/vc_addingremovingservers.html)
-* [Expanding and contracting capacity for Cloud Foundation instances](../sddc/sd_addingremovingservers.html)
-* [Adding, viewing, and deleting clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html)
-* [Adding, viewing, and deleting clusters for Cloud Foundation instances](../sddc/sd_addingviewingclusters.html)
-* [Contacting IBM Support](trbl_support.html)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Adding, viewing, and deleting clusters for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
