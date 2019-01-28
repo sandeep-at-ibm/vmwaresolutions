@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2018-11-13"
 
 Infrastructure management refers to the VMware components that are managing the vSphere ESXi infrastructure.
 
-For more information about the components, see Figure 2. NSX Manager network overview in [Virtual infrastructure design](../solution/design_virtualinfrastructure.html).
+For more information about the components, see Figure 2. NSX Manager network overview in [Virtual infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html).
 
 ## Virtual networking design
 
-The network virtualization that is used in this design uses the existing vSphere Distributed Switch (vDS) associated with the private network and specified in the [{{site.data.keyword.vmwaresolutions_full}} architecture](../solution/solution_overview.html).
+The network virtualization that is used in this design uses the existing vSphere Distributed Switch (vDS) associated with the private network and specified in the [{{site.data.keyword.vmwaresolutions_full}} architecture](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## vSphere Distributed Switch
 
@@ -28,7 +28,7 @@ Another VLAN is created within the vCenter Server solution and used to attach th
 
 The following table describes the default settings of the new port group.
 
-Dot change these default settings.
+Don't change these default settings.
 {:important}
 
 Table 1. NFS port group summary
@@ -52,4 +52,4 @@ Although the vDS is configured with a new port group and a VMkernel port is assi
 
 ### Related links
 
-* [Solution overview](../solution/solution_overview.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
