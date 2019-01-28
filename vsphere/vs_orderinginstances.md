@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,8 +21,8 @@ This procedure guides you through the selection of VMware components, {{site.dat
 ## Requirements
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
-*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](vs_planning.html).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
 
 ## System settings
 
@@ -112,8 +112,12 @@ The **SAP-certified** tab is not available if you selected VMware vSAN previousl
 
 Based on your requirements, select a Bare Metal Server configuration:
   * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 192 GB RAM
-  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.2 GHz / 384 GB RAM
+  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 384 GB RAM
   * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 768 GB RAM
+  * Dual Intel Xeon E5-2690 v4 processor / 28 cores total, 2.6 GHz / 512 GB RAM
+  * Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 1024 GB RAM
+  * Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 2048 GB RAM
+  * Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 4096 GB RAM
 
 ### Broadwell
 
@@ -123,9 +127,11 @@ Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Number of Bare Metal Servers
 
@@ -142,7 +148,11 @@ For orders with vSAN, ESXi servers are ordered with a 12-disk chassis and four d
 If you select the VMware vSAN component for the cluster, specify the following settings.
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
+* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
+
+  The **High-Performance Intel Optane** option is available only for the Skylake CPU models Dual Intel Xeon Gold 5120 and Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
 
 ## Network interface settings
@@ -210,7 +220,7 @@ Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, exi
 
 #### FortiGate Physical Appliance 300 Series HA Pair
 
-You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} overview](../services/fsa_considerations.html).
+You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/fsa_considerations.html).
 
 ## Order summary
 
@@ -260,6 +270,6 @@ The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, 
 
 ### Related links
 
-* [Ordering vSphere clusters based on existing configurations](vs_orderingbasedonexistingconfig.html)
-* [Scaling existing clusters](vs_scalingexistingclusters.html)
-* [Scaling clusters created outside of the console](vs_orderingforclustersoutside.html)
+* [Ordering vSphere clusters based on existing configurations](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [Scaling existing clusters](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [Scaling clusters created outside of the console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
