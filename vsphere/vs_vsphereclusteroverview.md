@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,8 +45,9 @@ Select licenses (IBM-provided or BYOL) for the following VMware components:
 ### Bare Metal Server
 
 Select one or more {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with your selected CPU model and RAM size:
-* 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
 * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
+* SAP-certified (Intel Xeon 6140/E5-2690/E7-8890 series)
+* 2-CPU Intel Broadwell generation (Intel Xeon E5-2600/E7-4800 series)
 
 The options available depend on whether you selected the VMware vSAN component.
 
@@ -77,23 +78,23 @@ Each vSphere cluster expansion node deploys and incurs charges for the following
 
 ### Hardware for expansion nodes
 
-One {{site.data.keyword.cloud_notm}} Bare Metal Server with the hardware configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+One {{site.data.keyword.cloud_notm}} Bare Metal Server with the hardware configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### Networking for expansion nodes
 
-One {{site.data.keyword.cloud_notm}} Bare Metal Server with the networking configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+One {{site.data.keyword.cloud_notm}} Bare Metal Server with the networking configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### VMware components for expansion nodes
 
 * One {{site.data.keyword.cloud_notm}} Bare Metal Server with VMware vSphere Enterprise Plus 6.0u2 or 6.5u1  
-* Optional VMware components presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+* Optional VMware components presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
-You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](vs_scalingexistingclusters.html).
+You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html).
 {:important}
 
 ### Related links
 
-* [VMware vSphere Software Bill of Materials](vs_bom.html)
-* [Planning vSphere clusters](vs_planning.html)
-* [Ordering vSphere clusters](vs_orderinginstances.html)
-* [Scaling existing vSphere clusters](vs_scalingexistingclusters.html)
+* [VMware vSphere Software Bill of Materials](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
+* [Planning vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
+* [Ordering vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
