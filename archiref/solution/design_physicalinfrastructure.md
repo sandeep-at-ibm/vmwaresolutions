@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ The physical infrastructure comprises the following components:
   <dd class="dd">The physical network provides the network connectivity into the environment that is then used by the network virtualization. The network is provided by the {{site.data.keyword.cloud_notm}} services network and it includes extra services such as DNS and NTP.</dd>
 </dl>
 
-For more information about the physical components, see the Bill of Materials for [Cloud Foundation instance](../../sddc/sd_bom.html) or [vCenter Server instance](../../vcenter/vc_bom.html).
+For more information about the physical components, see the Bill of Materials for [Cloud Foundation instance](/docs/services/vmwaresolutions/sddc/sd_bom.html) or [vCenter Server instance](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 For more information about storage, see [Shared storage architecture](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
@@ -33,7 +33,7 @@ For more information about storage, see [Shared storage architecture](https://ww
 
 Physical host refers to the {{site.data.keyword.baremetal_short}} in the environment that serves compute resources. The {{site.data.keyword.baremetal_short}} applied in this solution are certified by VMware and listed in the [VMware HCG](http://www.vmware.com/resources/compatibility/search.php).
 
-The server configurations available in the solution meet or exceed the minimum requirements to install, configure, and manage vSphere ESXi. Various configurations are available to satisfy different requirements. For the detailed listing of the exact specifications used for the VMware on {{site.data.keyword.cloud_notm}} solution, see the Bill of Materials for [Cloud Foundation instance](../../sddc/sd_bom.html) or [vCenter Server instance](../../vcenter/vc_bom.html).
+The server configurations available in the solution meet or exceed the minimum requirements to install, configure, and manage vSphere ESXi. Various configurations are available to satisfy different requirements. For the detailed listing of the exact specifications used for the VMware on {{site.data.keyword.cloud_notm}} solution, see the Bill of Materials for [Cloud Foundation instance](/docs/services/vmwaresolutions/sddc/sd_bom.html) or [vCenter Server instance](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 The {{site.data.keyword.baremetal_short}} reside in the {{site.data.keyword.cloud_notm}}.
 {:note}
@@ -157,7 +157,7 @@ This design allows for the option of using either VMware vSAN or shared file-lev
 
 When used, VMware vSAN is configured by using an all-flash configuration. This design allows for several configuration options, including 2U and 4U chassis, various numbers of disks, and various disk sizes. All configurations use two vSAN disk groups, with one solid-state disk (SSD) for cache and one or more SSDs for capacity. All drives that are allocated for vSAN consumption are configured in single-disk RAID-0.
 
-For more information about the supported configurations, see the Bill of Materials for [Cloud Foundation instance](../../sddc/sd_bom.html) or [vCenter Server instance](../../vcenter/vc_bom.html).
+For more information about the supported configurations, see the Bill of Materials for [Cloud Foundation instance](/docs/services/vmwaresolutions/sddc/sd_bom.html) or [vCenter Server instance](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 ### Shared File-level storage across hosts
 
@@ -173,7 +173,7 @@ You can allocate and mount more file shares for your workloads at the time of pu
 
 ### Related links
 
-* [Cloud Foundation Bill of Materials](../../sddc/sd_bom.html)
-* [vCenter Server Bill of Materials](../../vcenter/vc_bom.html)
+* [Cloud Foundation Bill of Materials](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
 * [Shared storage architecture](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
 * [NetApp ONTAP Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

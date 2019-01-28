@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -127,6 +127,6 @@ The following procedure describes the order of events when a VMware instance is 
 
 ### Related links
 
-* [Physical infrastructure design](design_physicalinfrastructure.html)
-* [Virtual infrastructure design](design_virtualinfrastructure.html)
-* [Common services design](design_commonservice.html)
+* [Physical infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [Virtual infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [Common services design](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)
