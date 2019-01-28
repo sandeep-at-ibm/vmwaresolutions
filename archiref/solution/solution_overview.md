@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-08-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ Figure 1. Overview of VMware on {{site.data.keyword.cloud_notm}}
 
 ## Key benefits
 
-VMware Cloud Foundation and vCenter Server on {{site.data.keyword.cloud_notm}} provide the fundamental building blocks, which includes VMware vSphere, vCenter Server, NSX, and shared storage options including vSAN. These components are needed to flexibly architect a VMware software-defined data center solution that best fits your workloads. 
+VMware Cloud Foundation and vCenter Server on {{site.data.keyword.cloud_notm}} provide the fundamental building blocks, which includes VMware vSphere, vCenter Server, NSX, and shared storage options including vSAN. These components are needed to flexibly architect a VMware software-defined data center solution that best fits your workloads.
 
 By applying advanced automation and single-tenant bare metal infrastructure, you can quickly deploy the entire VMware environment to the {{site.data.keyword.cloud_notm}} in hours. Then you can access and manage the IBM­-hosted environment via the native VMware clients, Command Line Interface (CLI), existing scripts, or other familiar vSphere API-compatible tools.
 
@@ -40,6 +40,6 @@ The VMware on {{site.data.keyword.cloud_notm}} offerings bring the following ben
 
 ### Related links
 
-* [Design overview](design_overview.html)
-* [Scaling capacity](solution_scaling.html)
-* [Backing up components](solution_backingup.html)
+* [Design overview](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [Scaling capacity](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
+* [Backing up components](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

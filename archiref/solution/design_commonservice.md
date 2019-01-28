@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -85,6 +85,6 @@ You can use the Windows AD servers within this design to create certificates tha
 
 ### Related links
 
-* [Physical infrastructure design](design_physicalinfrastructure.html)
-* [Virtual infrastructure design](design_virtualinfrastructure.html)
-* [Infrastructure management design](design_infrastructuremgmt.html)
+* [Physical infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [Virtual infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [Infrastructure management design](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)
