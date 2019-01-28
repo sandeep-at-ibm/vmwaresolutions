@@ -2,19 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-28"
+lastupdated: "2019-01-25"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Networking considerations for VMware Federal instances
 
 Review the following information for details about networking considerations and requirements for your VMware Federal instances. Ensure that you meet the requirements so that your instance functions properly.
 
 ## Networking components for VMware Federal instances
+{: faq}
 
-To review the networking components that are included in your VMware Federal instance, see [Technical specifications for VMware Federal on {{site.data.keyword.cloud}} instances](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
+To review the networking components that are included in your VMware Federal instance, see [Technical specifications for VMware Federal on {{site.data.keyword.cloud}} instances](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ## Firewall considerations
 
@@ -24,7 +27,7 @@ If you're using firewalls, you must configure rules for all communications from 
 
 During VMware Federal instance deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
 
-An NSX Edge Services Gateway is also deployed to be used by your workload virtual machines (VMs). For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+An NSX Edge Services Gateway is also deployed to be used by your workload virtual machines (VMs). For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
 ## Considerations when you change passwords for NSX components
 

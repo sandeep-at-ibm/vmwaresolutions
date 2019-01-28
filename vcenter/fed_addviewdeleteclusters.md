@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,7 +22,11 @@ You can add clusters to your VMware Federal instances to expand the compute and 
 
 ## Adding clusters to VMware Federal instances
 
-You can add up to 10 clusters to an instance. When you add a cluster for a VMware Federal instance, you must specify the following settings.
+The number of clusters that can be added to an instance depend on the instance version:
+* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment.
+* For instances that were deployed in (or upgraded to) V2.2 and later, you can add up to 10 clusters.
+
+For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
 
 ### System settings
 
@@ -83,7 +87,11 @@ Storage settings are based on your selection of Bare Metal Server configuration 
 Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
+* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
+
+  The **High-Performance Intel Optane** option is available only for the Skylake CPU models Dual Intel Xeon Gold 5120 and Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
 * **vSAN License**: Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
 
@@ -254,5 +262,5 @@ Use this procedure to remove clusters from instances that are deployed in (or up
 
 ### Related links
 
-* [Viewing VMware Federal instances](vc_fed_viewinginstance.html)
-* [Expanding and contracting capacity for VMware Federal instances](vc_fed_addingremovingservers.html)
+* [Viewing VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Expanding and contracting capacity for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)

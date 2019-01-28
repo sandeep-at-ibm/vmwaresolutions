@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -24,8 +24,11 @@ The delete cluster feature is available only to instances that are deployed in (
 ## Adding clusters to vCenter Server instances
 
 The number of clusters that can be added to an instance depend on the instance version:
+* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment.
 * For instances that were deployed in (or upgraded to) V2.2 and later, you can add up to 10 clusters.
 * For instances that were deployed in V2.1 or earlier, you can add up to five clusters.
+
+For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
 
 ### System settings
 
@@ -51,7 +54,7 @@ You can choose **Skylake**, **SAP-certified**, or **Broadwell**.
 
 #### Skylake
 
-For the **Skylake** setting, you have a number of options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
+For the **Skylake** setting, you have options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
 Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}
 
@@ -69,6 +72,10 @@ Based on your requirements, select a Bare Metal Server configuration:
 * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 192 GB RAM
 * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 384 GB RAM
 * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 768 GB RAM
+* Dual Intel Xeon E5-2690 v4 processor / 28 cores total, 2.6 GHz / 512 GB RAM
+* Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 1024 GB RAM
+* Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 2048 GB RAM
+* Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 4096 GB RAM
 
 #### Broadwell
 
@@ -81,6 +88,8 @@ Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 cores total, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Number of Bare Metal Servers
 
@@ -101,7 +110,11 @@ Storage settings are based on your selection of Bare Metal Server configuration 
 Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
+* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
+
+  The **High-Performance Intel Optane** option is available only for the Skylake CPU models Dual Intel Xeon Gold 5120 and Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
 * **vSAN License**: Use the IBM-provided VMware license for the vSAN component by selecting **Include with purchase**, or Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license key.
 
@@ -124,9 +137,16 @@ Table 3. NFS performance level options
 
 | Option        | Details       |
   |:------------- |:------------- |
-  | 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine disk images for a hypervisor. |
+  | 0.25 IOPS/GB | This option is designed for workloads that are not used often. Example applications include: vaulted data, hosting large databases with legacy data, or virtual disk images of virtual memory system as backup. |
+  | 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine (VM) disk images for a hypervisor. |
   | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
   | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
+
+### Local Disks
+
+The local disks option is available for the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor Bare Metal configuration only. Specify the following options:
+* **Disk Count**: Select the number of disks that you want to add.
+* **Disk type**: Select an option for the disk type that you need.
 
 ### Licensing settings
 
@@ -162,8 +182,10 @@ Based on your selected configuration for the cluster, the estimated cost is inst
    * If you selected **SAP-certified**, specify the CPU model.
 7. Complete the storage configuration.
   * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
-  * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Size**, and **Performance**.
-  * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then click the **+** icon next to the **Add NFS** label and select the **Size** and **Performance** for each  file share. You must select at least one file share.
+  * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
+  * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then click the **+** icon next to the **Add Shared Storage** label and select the  **Performance** and **Size (GB)** for each  file share. You must select at least one file share.
+  * If you select **Local Disks**, specify the disk count and disk type.
+8. Complete the network interface settings.
 8. Specify how the vSphere license key is provided:
   * For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
   * For users who aren't Business Partners, you can select one of the following options:
@@ -251,7 +273,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 * For clusters deployed in V2.2 or earlier instances, you must upgrade the instance to V2.3 if you want to delete the clusters that you added to the instance.
 * You can delete a single cluster at a time. To delete more than one cluster, you must do it in sequence. Wait for the previous cluster to be deleted before you delete the next cluster.
 * Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.
-* When you delete a cluster, all VMs (virtual machines) from the cluster are also deleted and they can't be recovered. If you want to keep the VMs, migrate them to other clusters.
+* When you delete a cluster, all VMs from the cluster are also deleted and they can't be recovered. If you want to keep the VMs, migrate them to other clusters.
 * The default cluster can't be deleted.
 
 ### Procedure to delete clusters from vCenter Server instances
@@ -263,9 +285,9 @@ You might want to delete a cluster from an instance when it's no longer needed.
    {:note}
 
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.
-4. Confirm that you completed the migration of virtual machines to other clusters, if needed, and that you want to delete the cluster.
+4. Confirm that you completed the migration of VMs to other clusters, if needed, and that you want to delete the cluster.
 
 ### Related links
 
-* [Viewing vCenter Server instances](vc_viewinginstances.html)
-* [Expanding and contracting capacity for vCenter Server instances](vc_addingremovingservers.html)
+* [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)

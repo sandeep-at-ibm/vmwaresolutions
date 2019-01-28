@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -51,8 +51,8 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 
 ### Related links
 
-* [Deleting vCenter Server with Hybridity Bundle instances in a multi-site configuration](vc_hybrid_deletinginstance_multi.html)
-* [Ordering vCenter Server with Hybridity Bundle instances](vc_hybrid_orderinginstance.html)
-* [Viewing vCenter Server with Hybridity Bundle instances](vc_hybrid_viewinginstances.html)
-* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservers.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
+* [Deleting vCenter Server with Hybridity Bundle instances in a multi-site configuration](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html)
+* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ Review the following requirements before you order your VMware vCenter Server on
 
 ## IBM Cloud account requirements
 
-The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](../vmonic/slaccountrequirement.html).
+The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## IBM Cloud Data Center availability
 
@@ -67,7 +67,7 @@ Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when or
 
 ## Backup of management components
 
-You are responsible for maintaining and ensuring the availability of all instance components. It is strongly recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](../archiref/solution/solution_backingup.html).
+You are responsible for maintaining and ensuring the availability of all instance components. It is strongly recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
 ## Services for vCenter Server with Hybridity Bundle instances
 
@@ -84,15 +84,15 @@ When you deploy this service, complete the following settings:
   * (Optional) **Reenter Password**: Enter the password for the private key again.
   * (Optional) **Hostname**: Enter the host name to be mapped to the common name (CN) of the CA certificate. HCX on {{site.data.keyword.cloud_notm}} requires the CA certificate to be in a format that is accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
 
-You can order other add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservices.html).
+You can order other add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html).
 
 ## Capacity considerations
 
-For more information about capacity considerations, see [Scaling capacity](../archiref/solution/solution_scaling.html).
+For more information about capacity considerations, see [Scaling capacity](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
 
 ### Related links
 
-* [vCenter Server with Hybridity Bundle overview](vc_hybrid_overview.html)
-* [Ordering vCenter Server with Hybridity Bundle instances](vc_hybrid_orderinginstance.html)
-* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservers.html)
-* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)

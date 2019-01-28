@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -20,7 +20,11 @@ You can add clusters to your VMware vCenter Server on {{site.data.keyword.cloud}
 
 ## Adding clusters to vCenter Server with Hybridity Bundle instances
 
-You can add up to 10 clusters to your vCenter Server with Hybridity Bundle instance.
+The number of clusters that can be added to an instance depend on the instance version:
+* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment.
+* For instances that were deployed in (or upgraded to) V2.3 and later, you can add up to 10 clusters.
+
+For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
 
 ### System settings
 
@@ -67,6 +71,8 @@ Table 2. Options for Broadwell Bare Metal Servers
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 cores total, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Number of Bare Metal Servers
 
@@ -81,7 +87,11 @@ After deployment, you can create up to four more clusters. For VMware vSAN stora
 VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
+* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
+
+  The **High-Performance Intel Optane** option is available only for the Skylake CPU models Dual Intel Xeon Gold 5120 and Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
 * **vSAN License**: Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
 
@@ -212,5 +222,5 @@ You might want to delete a cluster from an instance when it's no longer needed.
 
 ### Related links
 
-* [Viewing vCenter Server with Hybridity Bundle instances](vc_hybrid_viewinginstances.html)
-* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservers.html)
+* [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)

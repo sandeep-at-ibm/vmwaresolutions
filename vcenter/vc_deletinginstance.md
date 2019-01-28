@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -51,8 +51,8 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 
 ### Related links
 
-* [Deleting vCenter Server instances in a multi-site configuration](vc_deletinginstance_multi.html)
-* [Ordering vCenter Server instances](vc_orderinginstance.html)
-* [Viewing vCenter Server instances](vc_viewinginstances.html)
-* [Expanding and contracting capacity for vCenter Server instances](vc_addingremovingservers.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
+* [Deleting vCenter Server instances in a multi-site configuration](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance_multi.html)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

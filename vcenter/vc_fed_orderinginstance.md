@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -22,8 +22,8 @@ Currently, only vCenter Server instances support VMware Federal on {{site.data.k
 ## Requirements to order VMware Federal instances
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
-* You reviewed the information in [Requirements and planning for VMware Federal instances](vc_fed_planning.html).
+* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+* You reviewed the information in [Requirements and planning for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
 Table 1. Value format for instance and domain names
@@ -48,7 +48,7 @@ You must specify the following system settings when you order a VMware Federal i
 
 The instance name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
-* The instance name must start and end with an alphanumeric character.
+* The instance name must start with an alphabetic character and end with an alphanumeric character.
 * The maximum length of the instance name is 10 characters.
 * The instance name must be unique within your account.
 
@@ -65,7 +65,7 @@ IBM-provided licenses for the following VMware components:
 * NSX Service Providers 6.4 (Base, Advanced, or Enterprise edition)
 * (For vSAN clusters) vSAN 6.6 (Advanced or Enterprise edition)
 
-**Attention:**
+### Attention
 
 * The minimum license editions are indicated on the user interface. If different component editions are supported, you can select the edition that you want. You are responsible to ensure that the license key provided is correct for each VMware component selected.
 * For vSphere, a license charge will be incurred at time of order, but the license charge will subsequently be credited to your account.
@@ -106,7 +106,7 @@ Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
 
 You can configure the number of ESXi servers in the range 2 - 20.
 
-All ESXi servers share the same configuration. In post-deployment, you can add four more clusters. For vSAN storage settings, 4 ESXi servers are required for both the initial and post-deployment clusters. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+All ESXi servers share the same configuration. In post-deployment, you can add four more clusters. For vSAN storage settings, 4 ESXi servers are required for both the initial and post-deployment clusters. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Storage settings
 
@@ -117,7 +117,11 @@ Storage settings are based on your selection of Bare Metal Server configuration 
 Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
+* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
+
+  The **High-Performance Intel Optane** option is available only for the Skylake CPU models Dual Intel Xeon Gold 5120 and Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
 * **vSAN License**: Select the vSAN 6.6 license edition (Advanced or Enterprise).
 
@@ -155,7 +159,7 @@ The host name prefix must meet the following requirements:
 
 The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
-*  The subdomain label must start and end with an alphanumeric character.
+*  The subdomain label must start with an alphabetic character and end with an alphanumeric character.
 *  The maximum length of the subdomain label is 10 characters.
 *  The subdomain label must be unique within your account.
 
@@ -218,7 +222,7 @@ Based on your selected configuration for the instance, the estimated cost is ins
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [Technical specifications for VMware Federal on {{site.data.keyword.cloud_notm}} instances](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default.
+When the instance is successfully deployed, the components that are described in [Technical specifications for VMware Federal on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
@@ -239,10 +243,10 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 
 ### Related links
 
-* [Signing up for an {{site.data.keyword.cloud_notm}} account](../vmonic/signing_softlayer_account.html)
-* [Viewing VMware Federal instances](vc_fed_viewinginstance.html)
-* [Expanding and contracting capacity for VMware Federal instances](vc_fed_addingremovingservers.html)
-* [Adding, viewing, and deleting clusters for VMware Federal instances](fed_addviewdeleteclusters.html)
-* [Securing VMware Federal instances](vc_fed_securinginstance.html)
-* [Deleting VMware Federal instances](vc_fed_deletinginstance.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
+* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [Viewing VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Expanding and contracting capacity for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [Adding, viewing, and deleting clusters for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [Securing VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [Deleting VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

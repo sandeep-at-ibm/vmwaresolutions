@@ -2,19 +2,27 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Considerations about changing vCenter Server artifacts
 
 Changing users, resources, or subnets that are reserved for {{site.data.keyword.vmwaresolutions_full}} can impact management operations.
 
-**Important:** Do not edit the global permissions of the **ic4v-vCenter** group in the **Users and Groups** page on the VMware vSphere Web Client. Such changes include: changing the user name, deleting the user, or changing its password.
+Do not edit the global permissions of the **ic4v-vCenter** group in the **Users and Groups** page on the VMware vSphere Web Client. Such changes include: changing the user name, deleting the user, or changing its password.
+Use the **root** host user ID. The **ic4vroot** host user ID has been created for IBM use only.
+{:important}
 
 ## automation ID
+{: faq}
 
 The **automation** ID is a user account that is used by the automated operations provided in the {{site.data.keyword.vmwaresolutions_short}} console.
 
@@ -24,11 +32,13 @@ Users and passwords for the automated operations in the console must not be chan
 
 Each service creates an internal user account in vCenter Server. This account is necessary so that management operations that are associated to a service can connect to vCenter Server to perform the operations on the service.
 
-**Important:** To prevent outages and connection problems, if you change the user ID, password, or password expiration settings for this user account, ensure that you also update the information in the associated service.
+To prevent outages and connection problems, if you change the user ID, password, or password expiration settings for this user account, ensure that you also update the information in the associated service.
+{:important}
 
 The user ID for this account is in the format `<service_name>-<truncated service_uuid>@test.local` or `<service_name>-<truncated service_uuid>@example-domain.local`. For example, the user ID that the Veeam on {{site.data.keyword.cloud_notm}} service uses to connect to vCenter Server to perform scheduled backups is `Veeam-<Veeam_uuid>@test.local`.
 
-**Note:** The `<service_name>` together with the `<service_uuid>` truncates to 20 characters.
+The `<service_name>` together with the `<service_uuid>` truncates to 20 characters.
+{:note}
 
 ## VMware resources for vCenter Server instances (V1.9 and later)
 
@@ -78,5 +88,5 @@ In addition, the following management subnets are also reserved for {{site.data.
 *  A public portable subnet of 16 IP addresses on the public VLAN
 
 If you need more subnets to use, you can obtain IP addresses to use in one of the following ways:
-*  **Option 1 (recommended)**: Use VMware NSX virtual network overlays. A sample VXLAN template is provided upon order. This VXLAN can be used as a starting point for building software-defined networking (SDN). For more information, see [Configuring your network to use the customer-managed NSX Edge](vc_esg_config.html).
+*  **Option 1 (recommended)**: Use VMware NSX virtual network overlays. A sample VXLAN template is provided upon order. This VXLAN can be used as a starting point for building software-defined networking (SDN). For more information, see [Configuring your network to use the customer-managed NSX Edge](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html).
 *  **Option 2**: Order your own portable public or private subnets to obtain IP addresses. To distinguish the subnets that you order from the management subnets, you can add notes to all the subnets that you are ordering.

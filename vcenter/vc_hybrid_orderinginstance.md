@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-10-29"
 
 # Ordering vCenter Server with Hybridity Bundle instances
 
-To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instance. Your vCenter Server with Hybridity Bundle instance order includes the VMware Hybrid Cloud Extension (HCX) licensing and entitles you to the VMware HCX on {{site.data.keyword.cloud_notm}} service. You can also add services, such as [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) for disaster recovery.
+To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instance. Your vCenter Server with Hybridity Bundle instance order includes the VMware Hybrid Cloud Extension (HCX) licensing and entitles you to the VMware HCX on {{site.data.keyword.cloud_notm}} service. You can also add services, such as [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html) for disaster recovery.
 
 ## Requirements for ordering vCenter Server with Hybridity Bundle instances
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
-*  You reviewed the information in [Requirements and planning for vCenter Server with Hybridity Bundle](vc_hybrid_planning.html).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  You reviewed the information in [Requirements and planning for vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
 Table 1. Value format for instance and domain names
@@ -29,10 +29,9 @@ Table 1. Value format for instance and domain names
   |:------------- |:------------- |
   | Domain name | `<root_domain>` |  
   | vCenter Server login user name | `<user_id>@<root_domain>` (Microsoft Active Directory user) or `administrator@vsphere.local` |
-  | vCenter Server FQDN | `vcenter.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
+  | vCenter Server (with embedded PSC) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
   | Single Sign-On (SSO) site name | `<subdomain_label>` |
-  | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |  
-  | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
+  | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |
 
 Don't modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
 {:important}
@@ -45,7 +44,7 @@ You must specify the following system settings when you order a vCenter Server w
 
 The instance name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
-* The instance name must start and end with an alphanumeric character.
+* The instance name must start with an alphabetic character and end with an alphanumeric character.
 * The maximum length of the instance name is 10 characters.
 * The instance name must be unique within your account.
 
@@ -62,7 +61,8 @@ The following VMware licenses are included with your vCenter Server with Hybridi
 * NSX Service Providers 6.4 (Advanced or Enterprise edition)
 * vSAN 6.6 (Advanced or Enterprise edition)
 
-**Attention:**
+### Attention
+
 * vCenter Server with Hybridity Bundle instances do not support Bring Your Own License.
 * The minimum license editions are indicated on the user interface. If different component editions are supported, you can select the edition that you want.
 
@@ -99,6 +99,8 @@ Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Number of Bare Metal Servers
 
@@ -109,7 +111,11 @@ Four ESXi servers are selected by default and cannot be changed.
 VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput. The **High-Performance Intel Optane** option is available only for Dual Intel Xeon Gold 5120 and 6140 Processors.
+* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
+
+  The **High-Performance Intel Optane** option is available only for the Skylake CPU models Dual Intel Xeon Gold 5120 and Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
 
 ## Network interface settings
@@ -127,7 +133,7 @@ You must specify the following network interface settings when ordering a vCente
 
 The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
-*  The subdomain label must start and end with an alphanumeric character.
+*  The subdomain label must start with an alphabetic character and end with an alphanumeric character.
 *  The maximum length of the subdomain label is 10 characters.
 *  The subdomain label must be unique within your account.
 
@@ -189,7 +195,7 @@ For more information on ordering Windows licensing, see [Windows Server 2012 R2 
 
 ## Services settings
 
-When you order a vCenter Server with Hybridity Bundle instance, you can also order additional services. For more information about the services, see [Available services for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances).
+When you order a vCenter Server with Hybridity Bundle instance, you can also order additional services. For more information about the services, see [Available services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances).
 
 ## Order summary
 
@@ -204,7 +210,8 @@ Based on your selected configuration for the instance and add-on services, the e
    * Click **Primary Instance** to deploy a single instance in the environment or to deploy the first instance in a multi-site topology.
    * Click **Secondary Instance** to connect the instance with an existing (primary) instance in the environment for high availability and complete the following steps:
      1. Select the primary instance that you want the secondary instance to be connected with.
-     2. Enter the PSC administrator password for the primary instance.
+     2. For primary instances V2.8 or later, enter the vCenter Server administrator password for the primary instance.
+     3. For primary instances V2.7 or earlier, enter the PSC administrator password for the primary instance.
 5. Select the NSX license edition and the vSAN license edition.
 6. Complete the Bare Metal Server settings.
   1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
@@ -220,7 +227,7 @@ Based on your selected configuration for the instance and add-on services, the e
      *  If you want to order new public and private VLANs, click **Order New VLANs**.
      *  If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs**, and then select the public VLAN, the primary subnet, the private VLAN, the private primary subnet, and the secondary private VLAN.
   4. Select the DNS configuration.
-9. Complete the configuration for the included HCX on {{site.data.keyword.cloud_notm}} service. For more information about how to provide settings for the service, see the _VMware HCX on IBM Cloud configuration_ section in [Ordering VMware HCX on IBM Cloud](../services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration).
+9. Complete the configuration for the included HCX on {{site.data.keyword.cloud_notm}} service. For more information about how to provide settings for the service, see the _VMware HCX on IBM Cloud configuration_ section in [Ordering VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration).
 10. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.  
 For more information about how to provide settings for a service, see the corresponding service ordering topic.
 
@@ -234,7 +241,7 @@ For more information about how to provide settings for a service, see the corres
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server with Hybridity Bundle instances](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
+When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
@@ -258,10 +265,10 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 
 ### Related links
 
-* [Signing up for an {{site.data.keyword.cloud_notm}} account](../vmonic/signing_softlayer_account.html)
-* [Viewing vCenter Server with Hybridity Bundle instances](vc_hybrid_viewinginstances.html)
-* [Multi-site configuration for vCenter Server with Hybridity Bundle instances](vc_hybrid_multisite.html)
-* [Adding and viewing clusters for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingviewingclusters.html)
-* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservers.html)
-* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](vc_hybrid_addingremovingservices.html)
-* [Deleting vCenter Server with Hybridity Bundle instances](vc_hybrid_deletinginstance.html)
+* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [Multi-site configuration for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_multisite.html)
+* [Adding and viewing clusters for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Deleting vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
