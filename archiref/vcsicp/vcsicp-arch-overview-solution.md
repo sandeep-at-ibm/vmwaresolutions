@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -33,11 +33,11 @@ The {{site.data.keyword.cloud}} automation deploys three NSX Controllers within 
 
 ### NSX Edge / DLR
 
-NSX Edge Services Gateway (ESG) pairs are deployed. In all cases, one gateway pair is used for outbound traffic from automation components that reside on the private network. For vCenter Server and {{site.data.keyword.cloud_notm}} Private (ICP), a second gateway, which is known as the icp–managed edge, is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. Any required NSX component such as Distributed Logical Router (DLR), logical switches, and firewalls can be configured by the administrator. The [vCenter Server networking guide](../vcsnsxt/vcsnsxt-intro.html) provides greater detail on the network design.
+NSX Edge Services Gateway (ESG) pairs are deployed. In all cases, one gateway pair is used for outbound traffic from automation components that reside on the private network. For vCenter Server and {{site.data.keyword.icpfull_notm}}, a second gateway, which is known as the icp–managed edge, is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. Any required NSX component such as Distributed Logical Router (DLR), logical switches, and firewalls can be configured by the administrator. The [vCenter Server networking guide](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html) provides greater detail on the network design.
 
-The following table summarizes the ICP ESG / DLR specifications.
+The following table summarizes the {{site.data.keyword.icpfull_notm}} ESG / DLR specifications.
 
-Table 1. ICP ESG specifications
+Table 1. {{site.data.keyword.icpfull_notm}} ESG specifications
 
 Attribute  |  Specification
 --|--
@@ -45,7 +45,7 @@ Edge Service Gateway  |  Virtual appliance
 Edge size	Large |   Number of vCPUs	2
 Memory	| 1-GB Disk	| 1000 GB on local datastore
 
-Table 2. ICP DLR specifications
+Table 2. {{site.data.keyword.icpfull_notm}} DLR specifications
 
 Attribute  |  Specification
 --|--|
@@ -53,11 +53,11 @@ Distributed Logical Router | 	Virtual appliance
 Edge size	Compact | Number of vCPUs	1
 Memory	| 512-MB Disk	| 1000 GB on local datastore
 
-## ICP components
-ICP is an application platform for developing and managing on-premises, containerized applications. It is an integrated environment for managing containers that includes the container orchestrator Kubernetes, a private image repository, a management console, and monitoring frameworks.
+## IBM Cloud Private components
+{{site.data.keyword.icpfull_notm}} is an application platform for developing and managing on-premises, containerized applications. It is an integrated environment for managing containers that includes the container orchestrator Kubernetes, a private image repository, a management console, and monitoring frameworks.
 
-Figure 2. Virtual ICP deployment with vCenter Server
-![Virtual ICP deployment with VCS](vcsicp-virtual-icp-deployment-vcs.svg)
+Figure 2. Virtual {{site.data.keyword.icpfull_notm}} deployment with vCenter Server
+![Virtual {{site.data.keyword.icpfull_notm}} deployment with VCS](vcsicp-virtual-icp-deployment-vcs.svg)
 
 ###	Boot Node
 
@@ -77,15 +77,15 @@ A proxy node is a node that transmits external request to the services created i
 
 ### Management Node
 
-A management node is an optional node that hosts only management services such as monitoring, metering, and logging. By configuring dedicated management nodes, you can prevent the master node from becoming overloaded. You can enable the management node only during ICP installation.
+A management node is an optional node that hosts only management services such as monitoring, metering, and logging. By configuring dedicated management nodes, you can prevent the master node from becoming overloaded. You can enable the management node only during {{site.data.keyword.icpfull_notm}} installation.
 
 ###	Vulnerability Advisor Node
 
 A Vulnerability Advisor node is an optional node that is used for running the Vulnerability Advisor services. Vulnerability Advisor services are resource-intensive. If you use the Vulnerability Advisor service, specify a dedicated VA node.
 
-The following VMs specifications are required for a Highly Available ICP instance:
+The following VMs specifications are required for a Highly Available {{site.data.keyword.icpfull_notm}} instance:
 
-Table 3. ICP virtual machine specifications
+Table 3. {{site.data.keyword.icpfull_notm}} virtual machine specifications
 
 Node | 	Instances	| IP	| CPU	| RAM (GB)	| DISK (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -98,7 +98,7 @@ Worker	| 3-6	| IP (x3)	|4-8	|4	|150
 
 CAM requires worker nodes to have a higher vCPU and memory configuration.
 
-Table 4. ICP virtual machine specifications
+Table 4. {{site.data.keyword.icpfull_notm}} virtual machine specifications
 
 Node | 	Instances	| IP	| CPU	| RAM (GB)	| DISK (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -106,7 +106,7 @@ worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 ## CAM components
 
-{{site.data.keyword.cloud_notm}} Automation Manager (CAM) is a multi-cloud, self-service management platform that runs on ICP that empowers Developers and administrators to meet business demands.
+{{site.data.keyword.cloud_notm}} Automation Manager (CAM) is a multi-cloud, self-service management platform that runs on {{site.data.keyword.icpfull_notm}} that empowers Developers and administrators to meet business demands.
 
 Fig 3. CAM component reference
 ![CAM component reference](vcsicp-cam-component-ref.svg)
@@ -153,4 +153,4 @@ The database for the template designer application.
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
